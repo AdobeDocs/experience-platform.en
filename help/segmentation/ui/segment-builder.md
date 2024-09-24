@@ -135,7 +135,7 @@ If selecting a value from this list of enums, the value will be outlined with a 
 
 ![A warning that is displayed if you are inserting a value that is not part of the enum list.](../images/ui/segment-builder/enum-warning.png)
 
-If you are creating multiple values, you can add all of them at once by using the bulk upload. Select the ![plus icon](../images/ui/segment-builder/plus-icon.png) to show the **[!UICONTROL Add values in bulk]** popover.
+If you are creating multiple values, you can add all of them at once by using the bulk upload. Select the ![plus icon](/help/images/icons/add-circle.png) to show the **[!UICONTROL Add values in bulk]** popover.
 
 ![The plus icon is highlighted, showing the button that you can select to access the bulk upload popover.](../images/ui/segment-builder/add-bulk-values.png)
 
@@ -207,6 +207,90 @@ The count function is now added. You can now select the count function and the v
 
 ![A list of the count functions is displayed and highlighted.](../images/ui/segment-builder/select-count.png)
 
+### Time constraints {#time-constraints}
+
+Time constraints let you apply time restrictions on time-based attributes, events, and the sequence between the events.
+
+>[!IMPORTANT]
+>
+>If you created a segment definition with the "This month" or "This year" time constraints prior to June 2024, you will need to re-save your segment definitions. Prior to June 2024, "This month" was based off of 30 days and "This year" was based off of 365 days.
+
+The list of available time constraints are as follows:
+
++++ Available time constraints
+
+>[!NOTE]
+>
+>All time constraints are based off of UTC.
+>
+>Additionally, if the [!UICONTROL Ignore year] checkbox is enabled, the year will **not** be compared as part of the segment definition evaluation.
+
+| Time constraint | Description | Can enable ignore year | Example |
+| --------------- | ----------- | ------------------- | ------- |
+| Today | The attribute or event being compared **must** occur today. | Yes | ![An example of the "Today" time constraint being used.](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
+| Yesterday | The attribute or event being compared **must** occur yesterday. | Yes | ![An example of the "Yesterday" time constraint being used.](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
+| This month | The attribute or event being compared **must** occur this calendar month. | Yes | ![An example of the "This month" time constraint being used.](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
+| This year | The attribute or event being compared **must** occur this calendar year. | No | ![An example of the "This year" time constraint being used.](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
+| Custom date | The attribute or event being compared **must** occur on the date given. | Yes | ![An example of the "Custom date" time constraint being used.](../images/ui/segment-builder/time-constraints/custom-date.png){width="100" zoomable="yes"} |
+| In last | The attribute or event being compared **must** occur within the last period of time chosen. This period of time is **inclusive** until the evaluation time. | No | ![An example of the "In last" time constraint being used.](../images/ui/segment-builder/time-constraints/in-last.png){width="100" zoomable="yes"} |
+| From (to) | The attribute or event being compared **must** occur within the two calendar dates chosen. This period of time is **inclusive** of both dates. | Yes, if custom date | ![An example of the "From to" being used.](../images/ui/segment-builder/time-constraints/from-to.png){width="100" zoomable="yes"} |
+| During | The attribute or event being compared **must** occur within the selected month or year. If a month is selected, you need to choose both the month and a year that the attribute or event took place in.  If a year is selected, you need to just choose the year that the attribute or event took place in. If you select a month, you can also enable the [!UICONTROL Ignore year] checkbox. | Yes | ![An example of the "During" time constraint being used.](../images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
+| Within (+/-) | The attribute or event being compared **must** occur within days, weeks, months, or years of the selected date. This period of time is **inclusive** of both dates. The selected date can be today, yesterday, or another custom date of your choosing. | Yes | ![An example of the "Within" time constraint being used.](../images/ui/segment-builder/time-constraints/within.png){width="100" zoomable="yes"} |
+| Before | The attribute or event being compared **must** occur before the selected date. The selected date can be a custom date of your choosing, or a selection between days, weeks, months, or years ago. | Yes | ![An example of the "Before" time constraint being used.](../images/ui/segment-builder/time-constraints/before.png){width="100" zoomable="yes"} |
+| After | The attribute or event being compared **must** occur after the selected date. The selected date can be a custom date of your choosing, or a selection between days, weeks, months, or years ago. | Yes | ![An example of the "After" time constraint being used.](../images/ui/segment-builder/time-constraints/after.png){width="100" zoomable="yes"} |
+| Rolling range | The attribute or event being compared must occur between the two relative dates. The dates can be represented in seconds, minutes, hours, days, weeks, months, or years. | No | ![An example of the "Rolling range" time constraint being used.](../images/ui/segment-builder/time-constraints/rolling-range.png){width="100" zoomable="yes"} |
+| In next | The attribute or event being compared must occur within the next period of time selected. The selected periods of time include minutes, hours, days, weeks, months, and years. | No | ![An example of the "In next" time constraint being used.](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
+| Exists | The attribute exists. | No | ![An example of the "Exists" time constraint being used.](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
+| Does not exist | The attribute does not exist. | No | ![An example of the "Does not exist" time constraint being used.](../images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
+
++++
+
+When you're applying a time constraint on an event, you can either apply it on the canvas-level, the card-level, or between events.
+
+#### Canvas-level constraint
+
+To apply a canvas-level time constraint, select the clock icon that appears above the timeline of events.
+
+![The canvas-level time constraint selector is highlighted.](../images/ui/segment-builder/time-constraints/canvas-level.png)
+
+When you apply a time constraint on the canvas-level, this applies the time constraint to **all** events in the audience.
+
+#### Card-level constraint
+
+To apply a card-level constraint, select the card you want to apply the time constraint on, followed by the ellipses icon, and **[!UICONTROL Apply time rule]**. This lets you select a time constraint within the **[!UICONTROL Event Rules]** container.
+
+![The card-level time constraint selector is highlighted.](../images/ui/segment-builder/time-constraints/card-level.png)
+
+When you apply a time constraint on the card-level, this applies the time constraint on the **specified** event in the audience.
+
+#### Between events constraint
+
+To apply a time constraint between events, select the clock icon between the two events you want to apply the time constraint on.
+
+![The between events time constraint selector is highlighted.](../images/ui/segment-builder/time-constraints/between-event.png)
+
+When you apply a time constraint between the event, this applies the time constraint to the time **between** the events. 
+
+The list of available time constraints for this operation differs from the main list of time constraints, and are as follows:
+
++++ Available time constraints
+
+| Time constraint | Description |
+| --------------- | ----------- |
+| After | The latter event **must at least** take place after the prior event. |
+| Within | The two events **must** take place during the time period listed within the time constraint. | 
+
+>[!NOTE]
+>
+>When using the "After" time constraint, the latter event can take place more than the amount of time listed within the time constraint. >
+>For example, if you have a Page View event and a Checkout event, and you put the "After 1 hour" time constraint between these two events, a segment definition with a Checkout event 2 hours after the Page View event would qualify.
+>
+>Additionally, these two time constraints can be used in coordination with each other.
+>
+>For example, if you have a Page View event and a Checkout event, and you put both the "After 1 hour" and "Within 24 hours" time constraints, a segment definition with a Checkout event 12 hours after the Page View event would qualify, but a segment definition with a Checkout event 36 hours after the Page View event would not qualify.
+
++++
+
 ## Containers
 
 Segment rules are evaluated in the order they are listed. Containers allow control over the order of execution through the use of nested queries.
@@ -242,7 +326,7 @@ You can select a merge policy that matches your marketing purpose for this audie
 
 To select a merge policy for your segment definition, select the gear icon on the **[!UICONTROL Fields]** tab, then use the **[!UICONTROL Merge Policy]** dropdown menu to select the merge policy that you wish to use.
 
-![The merge policy selector is highlighted. This lets you choose which  merge policy to select for your segment definition.](../images/ui/segment-builder/merge-policy-selector.png)
+![The merge policy selector is highlighted. This lets you choose which merge policy to select for your segment definition.](../images/ui/segment-builder/merge-policy-selector.png)
 
 ## Segment definition properties {#segment-properties}
 
@@ -281,7 +365,7 @@ As you continue to build your segment definition, you can view a paginated previ
 >
 >More information about generating estimates for segment definitions can be found in the [estimate generation section](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) of the segment definition creation tutorial.
 
-You can also select your evaluation method. If you know what evaluation method you want to use, you can select the desired evaluation method either using the dropdown list. If you want to know what evaluation types this segment definition qualifies for, you can select the browse icon ![folder icon with a magnifying glass](../images/ui/segment-builder/segment-evaluation-select-icon.png) to see a list of the available segment definition evaluation methods.
+You can also select your evaluation method. If you know what evaluation method you want to use, you can select the desired evaluation method either using the dropdown list. If you want to know what evaluation types this segment definition qualifies for, you can select the browse icon ![folder icon with a magnifying glass](/help/images/icons/folder-search.png) to see a list of the available segment definition evaluation methods.
 
 The [!UICONTROL Evaluation method eligibility] popover appears. This popover displays the available evaluation methods, which are batch, streaming, and edge. The popover shows which evaluation methods are eligible and ineligible. Depending on the parameters you used in your segment definition, it may not qualify for certain evaluation methods. For more information on the requirements for each evaluation method, please read the [streaming segmentation](./streaming-segmentation.md#query-types) or the [edge segmentation](./edge-segmentation.md#query-types) overviews.
 

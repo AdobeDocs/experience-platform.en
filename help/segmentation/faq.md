@@ -27,14 +27,7 @@ In order to upload externally generated audiences, you need to have the "View se
 
 ### What happens when I upload an externally generated audience? 
 
-When you upload an externally generated audience, the following items are created:
-
-- Dataset
-  - The dataset will be visible within the dataset inventory, and the name of the dataset will be the **same** as the name of the externally generated audience you uploaded.
-- Batch job
-  - A batch job will **automatically** run when you upload an externally generated audience. This means that you do **not** need to wait for the daily segmentation job to run in order to activate the externally generated audience.
-- Ad hoc schema
-  - A **new** XDM schema will be created for use with the externally generated audience. The fields in this XDM schema are namespaced for usage with the dataset that was also created.
+When you upload an externally generated audience, a dataset will be created and be visible within the dataset inventory. The name of the dataset will be the **same** as the name of the externally generated audience you uploaded.
 
 ### What is an externally generated audience comprised of, and what happens to this data when it's imported to Platform?
 
@@ -49,6 +42,16 @@ While the externally generated audience can be referenced when creating audience
 ### Can I reconcile externally generated audience data with an existing profile in Platform?
 
 Yes, the externally generated audience will be merged with the existing profile in Platform if the primary identifiers match.This data can take up to 24 hours to be reconciled. If profile data does not already exist, a new profile will be created as the data is ingested.
+
+### How are customer consent preferences honored for externally generated audiences that are imported into Audience Portal?{#consent}
+
+As customer data is captured from multiple channels, identity stitching and merge policies allow this data to be consolidated in a single Real-Time Customer Profile. Information on the customers' consent preferences are stored and evaluated at the profile level.
+
+Downstream destinations check each profile for consent information prior to activation. Each profile's consent information is compared against consent requirements for a particular destination. If the profile does not satisfy the requirements, that profile is not sent to a destination.
+
+When an external audience is ingested into Audience Portal, they are joined with existing profiles using a primary ID such as email or ECID. As a result, the existing consent policies will remain in force throughout activation.
+
+Please note you should **not** include consent information with an externally generated audiences, since the payload variables are **not** stored in the Profile store but in the data lake. Instead, you **must** use an Adobe Experience Platform ingestion channels where profile data is imported.
 
 ### Can I use an externally generated audience to build other audiences?
 
@@ -74,13 +77,7 @@ The organization-specific default merge policy is automatically applied when upl
 
 ### Where can I activate externally generated audiences to? 
 
-An externally generated audience can be mapped to any RTCDP destination and can be used in Adobe Journey Optimizer campaigns.
-
-### How soon are externally generated audiences ready for activation?
-
-If activated to a streaming destination, the data from the externally generated audience will be available within two hours.
-
-If activated to a batch destination, the data from the externally generated audience will sync with the next 24 hour segmentation job.
+An externally generated audience can be mapped to any destination and can be used in Adobe Journey Optimizer campaigns.
 
 ### Can I delete an externally generated audience?
 

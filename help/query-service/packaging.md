@@ -61,9 +61,9 @@ The following table outlines the effects of the [!DNL Manage Queries] permission
 
 {style="table-layout:auto"}
 
-### Relevant Customizable Insights permissions {#customizable-insights-permissions}
+### Relevant SQL Insights permissions {#sql-insights-permissions}
 
-To create Data Distiller [Customizable Insights](./data-distiller/customizable-insights/overview.md) within dashboards, the following permissions **must** be enabled within Admin Console.
+To create Data Distiller [SQL Insights](./data-distiller/sql-insights/overview.md) within dashboards, the following permissions **must** be enabled within Admin Console.
 
 | Permission | Function |
 |---|---|

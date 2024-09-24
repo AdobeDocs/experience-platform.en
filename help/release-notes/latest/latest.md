@@ -1,130 +1,144 @@
 ---
-title: Adobe Experience Platform Release Notes June 2024
-description: The June 2024 release notes for Adobe Experience Platform.
+title: Adobe Experience Platform Release Notes August 2024
+description: The August 2024 release notes for Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 ---
 # Adobe Experience Platform release notes 
 
-**Release date: June 18, 2024**
+**Release date: August 20, 2024**
 
 >[!TIP]
 >
->[AI Assistant in Experience Platform](https://platform.adobe.com) is now available. Use AI Assistant to accelerate your workflows in Adobe applications. [Read more](#ai-assistant) about the new functionality.
+>View an [overview of sample use cases documentation](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/use-cases/overview) to learn about various use cases such as prospecting, acquisition, and more that your organization can achieve with Real-Time CDP.
 
-New features in Adobe Experience Platform:
+Updates to existing features and documentation in Experience Platform:
 
-- [AI Assistant](#ai-assistant)
-- [Authentication to Experience Platform APIs](#authentication-platform-apis)
-- [Data Prep](#data-prep)
+- [Attribute-based access control](#abac)
+- [Data Ingestion](#data-ingestion)
 - [Destinations](#destinations)
+- [Experience Data Model (XDM)](#xdm)
 - [Identity Service](#identity-service)
-- [Privacy Service](#privacy)
 - [Segmentation Service](#segmentation)
-- [Use Case Playbooks](#use-case-playbooks)
+- [Sources](#sources)
 
-## AI Assistant {#ai-assistant}
+## Attribute-based access control {#abac}
 
-AI Assistant in Adobe Experience Platform is a conversational experience that you can use to accelerate your workflows in Adobe applications. You can use AI Assistant to better understand product knowledge, troubleshoot problems, or search through information and find operational insights. AI Assistant supports Experience Platform, Real-Time Customer Data Platform, Adobe Journey Optimizer and Customer Journey Analytics.
+Attribute-based access control is a capability of Adobe Experience Platform that gives privacy-conscious brands greater flexibility to manage user access. Individual objects such as schema fields and segments can be assigned to user roles. This feature lets you grant or revoke access to individual objects for specific Platform users in your organization.
+
+Through attribute-based access control, administrators of your organization can control users' access to sensitive personal data (SPD), personally identifiable information (PII), and other customized type of data across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
 
 **New feature**
 
-| Feature | Description |
+| Feature update | Description |
 | --- | --- |
-| AI Assistant in Experience Platform | You can now use AI Assistant in Experience Platform. AI Assistant supports Experience Platform, Real-Time Customer Data Platform, Adobe Journey Optimizer, and Customer Journey Analytics. <br> ![AI Assistant in Exprience Platform.](../2024/assets/june/ai-assistant-full.png "AI Assistant in Exprience Platform."){width="100" zoomable="yes"} <br> For more information about this feature, read the [AI Assistant UI guide](../../ai-assistant/ui-guide.md). |
-| Support for product knowledge questions | [Product knowledge](../../ai-assistant/home.md#product-knowledge) are concepts and topics grounded in Experience League documentation and can be used for pointed learning, open discovery, and troubleshooting. You can ask AI Assistant product knowledge questions like: <ul><li>What are lookalike audiences?</li><li>How is Profile richness calculated?</li><li> Can I delete a profile enabled schema after data is ingested?</li></ul> |
-| [!BADGE Beta]{type=Informative} Support for operational insights questions | [Operational insights](../../ai-assistant/home.md#operational-insights) are answers AI Assistant generates about your metadata objects including counts, lookups, and lineage impact. Operational insights does not look at any data within your sandbox. You can ask AI Assistant operational insights questions like: <ul><li>Which destinations are in an active state?</li><li>How many datasets do I have?</li><li>List the audiences which are used in live journeys.</li></ul> Operational insights are supported in the following domains: attributes, audiences, dataflows, datasets, destinations, journeys, schemas, and sources. |
-| Access AI Assistant | To access AI Assistant for Experience Platform, Real-Time CDP, and Journey Optimizer, you must be added to a role that includes the **Enable AI Assistant** and **View Operational Insights** permissions. For more information, read the [feature access guide](../../ai-assistant/access.md). You must use the Admin Console for [access in Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant?lang=en#feature-access). |
-
-For more information about AI Assistant, read the [AI Assistant overview](../../ai-assistant/home.md).
-
-## Authentication to Experience Platform APIs {#authentication-platform-apis}
-
-The JWT method to obtain access tokens is now deprecated for new integrations and replaced by a simpler OAuth Server-to-Server authentication method.<p>![New OAuth authentication method to get access tokens highlighted.](/help/landing/images/api-authentication/oauth-authentication-method.png "New OAuth authentication method to get access tokens highlighted."){width="100" zoomable="yes"}</p> 
-
-While existing API integrations using the JWT authentication method will continue to work until January 1st, 2025, Adobe strongly recommends that you migrate existing integrations to the new OAuth Server-to-Server method before that date. Read the guide on [migrating from Service Account (JWT) credential to OAuth Server-to-Server credential](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/).
-
-## Data Prep {#data-prep}
-
-Use data prep to map, transform, and validate data to and from Experience Data Model (XDM).
-
-**New or updated features**
-
-| Feature | Description |
-| --- | --- |
-| Additions to reserved keywords list | The following words have been added to the data prep reserved keywords list:<ul><li>`do`</li><li>`empty`</li><li>`function`</li><li>`size`</li></ul> For more information, read the the [data prep functions guide](../../data-prep/functions.md). |
+| New Permission Manager feature | You can now utilize [Permission Manager](../../access-control/abac/permission-manager/overview.md) to generate reports using simple queries, which will help you understand access management and save time verifying access permissions across several workflows and granularity levels. For more information on creating reports for users and roles, see the [Permission Manager user guide](../../access-control/abac/permission-manager/permissions.md). ![Image Experience Platform user interface highlighting Permission Manager in the left nav.](../2024/assets/august/permission-manager-rn.png "Permission Manager in the user interface."){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
-For more information on Data Prep, read the [Data Prep overview](../../data-prep/home.md).
+For more information on attribute-based access control, see the [attribute-based access control overview](../../access-control/abac/overview.md). For a comprehensive guide on the attribute-based access control workflow, read the [attribute-based access control end-to-end guide](../../access-control/abac/end-to-end-guide.md).
+
+## Data Ingestion (updated August 23rd) {#data-ingestion}
+
+Adobe Experience Platform provides a rich set of features to ingest any type and any latency of data. You can ingest using Batch or Streaming APIs, using Adobe-built sources, data integration partners or the Adobe Experience Platform UI.
+
+**Update to date format handling in batch data ingestion**
+
+This release addresses an issue with the *date format handling* in batch data ingestion. Previously, the system transformed date fields inserted by clients as `Date` into `DateTime` format. This meant that the timezone was automatically added to fields and it caused difficulties for users who preferred or required the `Date` format. Going forward, the timezone will not automatically be added to `Date`-type fields. This update ensures that the exported format of data matches the format represented on the profile for that field as requested by customers.
+
+`Date` fields before the release : `"birthDate": "2018-01-12T00:00:00Z"`
+`Date` fields after the release: `"birthDate": "2018-01-12"`
+
+Read more about [batch ingestion](/help/ingestion/batch-ingestion/overview.md).
 
 ## Destinations {#destinations}
 
 [!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
-**New or updated functionality** {#destinations-new-updated-functionality}
+**New or updated destinations** {#new-updated-destinations}
 
-| Functionality | Description |
+| Destination | Description |
 | ----------- | ----------- |
-| Enhancement to ad-hoc export API to export external audiences | You can now use the ad-hoc export API to export external (custom upload) audiences. [Read more](/help/destinations/api/ad-hoc-activation-api.md) . |
-| (Beta) Additional functions supported in beta phase of export array support | Previously, when activating audiences to file-based destinations and selecting Use calculated field, you were limited to using a subset of the audiences available through data prep. That limitation has now been lifted and customers have access to all functions available through data prep when exporting audiences to file-based destinations. [Read more](/help/destinations/ui/export-arrays-calculated-fields.md#supported-functions). |
-| Show only fields with data in the mapping step | When mapping profile attributes to your destinations, you can now toggle between all profile attributes or only those which contain data. By default, only the fields with data are shown. See the activation guides for [batch](../../destinations/ui/activate-batch-profile-destinations.md#mapping) and [streaming](../../destinations/ui/activate-segment-streaming-destinations.md#mapping) destinations for more details. |
+| [Braze](/help/destinations/catalog/mobile-engagement/braze.md) | [!UICONTROL Braze] manages a number of different instances for their dashboard and REST endpoints. [!UICONTROL Braze] customers should use the correct REST Endpoint based on which instance you are provisioned to. This release adds a new US-07 endpoint that you can select when connecting to [!UICONTROL Braze]. |
 
 {style="table-layout:auto"}
 
-For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
+**New or updated functionality** {#destinations-new-updated-functionality}
+
+
+| Feature | Description |
+| ----------- | ----------- |
+| Exporting files on-demand to batch destinations is now generally available. | The option to export files on-demand to batch destinations is now available to all customers. See the [dedicated documentation](../../destinations/ui/export-file-now.md) for more details.|
+| Edit export schedules for multiple exported audiences in the [scheduling step](../../destinations/ui/activate-batch-profile-destinations.md#scheduling). | The option to edit the export schedules for multiple exported audiences directly from the scheduling step of the audience activation workflow is now available to all customers. ![Image of the Experience Platform user interface highlighting the Edit schedule option in the scheduling step.](../2024/assets/august/edit-schedule.png "Edit schedule option in the scheduling step."){width="250" align="center" zoomable="yes"}|
+| Edit file names for multiple exported audiences in the [scheduling step](../../destinations/ui/activate-batch-profile-destinations.md#scheduling). | The option to edit the names of multiple exported files directly from the scheduling step of the audience activation workflow is now available to all customers. ![Image of the Experience Platform user interface highlighting the Edit file name option in the scheduling step.](../2024/assets/august/edit-file-name.png "Edit file name option in the scheduling step."){width="250" align="center" zoomable="yes"}|
+| Remove multiple audiences from a dataflow from the [Destination Details](../../destinations/ui/destination-details-page.md#bulk-remove) page.  | The option to remove multiple audiences from existing dataflows from the **[!UICONTROL Destination Details]** page is now available to all customers. ![Image of the Experience Platform user interface highlighting the Remove audiences option in the Destination Details page.](../2024/assets/august/bulk-remove-audiences.png "Remove audiences option in the Destination Details page."){width="250" align="center" zoomable="yes"} |
+| Export multiple files on-demand to batch destinations from the [Destination Details](../../destinations/ui/destination-details-page.md#bulk-export) page. | The option to export multiple files on-demand to batch destinations from the **[!UICONTROL Destination Details]** page is now available to all customers. ![Image of the Experience Platform user interface highlighting the Export file now option in the Destination Details page.](../2024/assets/august/bulk-export-file-now.png "Export file now option in the Destination Details page."){width="250" align="center" zoomable="yes"} |
+| Edit file names for multiple exported audiences from the [Destination Details](../../destinations/ui/destination-details-page.md#bulk-edit-file-names) page. | You can now edit the names of multiple exported files directly from the **[!UICONTROL Destination Details]** page. ![Image of the Experience Platform user interface highlighting the Edit file name option in the destination details page.](../2024/assets/august/edit-file-name-destination-details.png "Edit file name option in the destination details page."){width="250" align="center" zoomable="yes"} |
+| Remove multiple datasets from a dataflow from the [Destination Details](../../destinations/ui/export-datasets.md#remove-dataset) page. | The option to remove multiple datasets from a dataflow is now available to all customers. ![Image of the Experience Platform user interface highlighting the Remove datasets option in the destination details page.](../2024/assets/august/bulk-remove-datasets.png "Remove datasets option in the destination details page."){width="250" align="center" zoomable="yes"} |
+
+{style="table-layout:auto"}
+
+For more information, read the [destinations overview](../../destinations/home.md).
+
+## Experience Data Model (XDM) {#xdm}
+
+XDM is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+
+**New features**
+
+| Feature | Description |
+| --- | --- |
+| ML-assisted schema creation flow |  Use advanced machine-learning algorithms to analyze your sample data files and automatically create optimized schemas using standard and custom fields.<br>Key Features:<br><ul><li>Faster Schema Creation: Generate schemas directly from sample data files using ML-recommended and generated XDM fields.</li><li>Flexible Schema Evolution: Easily add or update fields in the generated schema.</li><li>Seamless Integration: Fully integrated with the core schema creation flow in the Schema Ul, ensuring a smooth and cohesive user experience.</li><li>Efficient Review & Editing: Quickly view and update your schema using the Flat View editor, making the creation process more efficient and user-friendly.</li></ul><br>To learn more, read the [ML-assisted schema creation workflow guide](../../xdm/ui/ml-assisted-schema-creation.md). |
+
+{style="table-layout:auto"}
+
+For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md).
 
 ## Identity Service {#identity-service}
 
 Use Adobe Experience Platform Identity Service to create a comprehensive view of your customers and their behaviors by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real time.
 
-**Upcoming features**
+**Updated documentation**
 
 | Feature | Description |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} Identity graph linking rules | Participants of the beta program can use identity graph linking rules to to ensure person entity representation in the system by preventing "shared device" and other graph collapse scenarios. To achieve, this goal, participants during the beta program will have access to three features in a development sandbox environment: <ul><li>The graph simulation tool to understand how the graph algorithm functions.</li><li>The identity settings screen to configure unique namespaces and namespace priorities.</li><li>An identity dashboard to gain insight into ingested graphs.</li></ul> In addition, the beta program will include improvements in profile behavior stability. For more information, read the [identity graph linking rules](../../identity-service/identity-graph-linking-rules/overview.md) documentation. |
+| Graph configurations guide | Read the [graph configurations guide](../../identity-service/identity-graph-linking-rules/example-configurations.md) for information on common graph scenarios that you might encounter while working with identity graph linking rules and identity data. The graph configurations guide provides examples ranging from simple single-person graph scenarios to complex and hierarchical multi-person graph scenarios. You can also use the guide for examples of events and algorithm configurations that you can input in the [graph simulation UI](../../identity-service/identity-graph-linking-rules/graph-simulation.md), as well as breakdowns of how primary identities are selected given certain graph scenarios.  |
 
 {style="table-layout:auto"}
 
 For more information on Identity Service, read the [Identity Service overview](../../identity-service/home.md).
 
-## [!DNL Privacy Service] {#privacy}
-
-Several legal and organizational regulations give users the right to access or delete their personal data from your data stores upon request. Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface to help you manage these data requests from your customers. With [!DNL Privacy Service], you can submit requests to access and delete private or personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
-
-**New features**
-
-|Feature | Description|
-|--- | ---|
-| Privacy Service support for Adobe Journey Optimizer | Privacy Service capabilities are now compatible with the Adobe Journey Optimizer protocols for processing delete requests. See the [Adobe Journey Optimizer privacy requests documentation](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/privacy/requests) for more information, or the Experience Platform documentation for a list of [Experience Cloud applications that are integrated with Privacy Service](../../privacy-service/experience-cloud-apps.md). |
-
-See the [Privacy Service overview](../../privacy-service/home.md) for more information on the service.
-
 ## Segmentation Service {#segmentation}
 
-[!DNL Segmentation Service] defines a particular subset of profiles by describing the criteria that distinguishes a marketable group of people within your customer base. Segments can be based on record data (such as demographic information) or time series events representing customer interactions with your brand.
+[!DNL Segmentation Service] allows you to segment data stored in [!DNL Experience Platform] that relates to individuals (such as customers, prospects, users, or organizations) into audiences. You can create audiences through segment definitions or other sources from your [!DNL Real-Time Customer Profile] data. These audiences are centrally configured and maintained on [!DNL Platform], and are readily accessible by any Adobe solution. 
 
-**New or updated features**
+**Updated features**
 
 | Feature | Description |
 | ------- | ----------- |
-| Time constraints update | The behavior for the "This month" and "This year" has been updated, and they now represent the "month-to-date" and "year-to-date" respectively. For more information on this change, read the [Segment Builder guide](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
+| Ingestion details | For audiences with the Custom upload origin, you can more comprehensively view details of the audience's ingestion within the audience details page. Additionally, you can apply labels to the payload attributes by selecting the schema and selecting the desired attributes for labelling. More information about the ingestion details section can be found in the [Audience Portal guide](../../segmentation/ui/audience-portal.md#ingestion-details). |
 
 {style="table-layout:auto"}
 
 For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md).
 
-## Use Case Playbooks {#use-case-playbooks}
+## Sources
 
-[!DNL Use Case Playbooks] are available at no extra cost to all Adobe Experience Platform customers. To access a rich gallery of use case playbooks in the Experience Platform UI, you can now select **[!UICONTROL Playbooks]** from the left navigation.
+Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 
-[!DNL Use Case Playbooks] are designed to assist in overcoming challenges when starting with Real-Time Customer Data Platform or Adobe Journey Optimizer. They offer guidance and generate various assets that you can test and import into production environments when you're ready, even if you're not sure where to start or how to produce the correct assets for your intended use cases.
+Use sources in Experience Platform to ingest data from an Adobe application or a third-party data source.
 
-To get started, read the [Use Case Playbooks overview](/help/use-case-playbooks/playbooks/overview.md), which provides an overview of the playbooks' functionality, their purpose, and an end-to-end demonstration, including how to create instances and import generated assets into other sandbox environments.
+**Updated feature**
 
-To learn how you can access and set up an inspirational sandbox to experiment and explore various use case playbooks, see the [Navigate to Use Case Playbooks](/help/use-case-playbooks/playbooks/navigate.md) document.
+| Feature | Description |
+| --- | --- |
+| Updates to the Adobe Analytics source connector | The dataset activity page does not display information about batches since the Analytics Source Connector is entirely managed by Adobe. You can monitor that data is flowing by looking at the metrics around ingested records. Read the guide on creating a [source connection for Analytics data](../../sources/tutorials/ui/create/adobe-applications/analytics.md) for more information. | 
 
-To learn more about [!DNL Use Case Playbooks], read the following documentation pages:
+**Updated documentation**
 
-- Obtain a list of all [available playbooks](/help/use-case-playbooks/playbooks/playbooks-list.md), grouped by product (Real-Time CDP or Journey Optimizer).
-- Learn about what [permissions](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) are necessary for you ro use playbooks and the assets they create..
-- Understand the [data awareness functionality](/help/use-case-playbooks/playbooks/data-awareness.md) which allows you to duplicate generated assets to other sandbox environments.
+| Updated documentation | Description |
+| --- | --- |
+| Expanded documentation on updating dataflows | The guide on [updating existing sources dataflows in the UI](../../sources/tutorials/ui/update-dataflows.md) has been updated to provide more information on the variety of configurations you can make to an existing dataflow. The guide has also been updated to clarify the expected behavior when a disabled dataflow is re-enabled. |
+
+{style="table-layout:auto"}
+
+For more information, read the [sources overview](../../sources/home.md).

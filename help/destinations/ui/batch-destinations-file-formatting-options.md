@@ -62,17 +62,21 @@ View the examples below of the content in the exported CSV files with each of th
 >title="Quote character"
 >abstract="Use this option if you want to remove double quotes from exported strings. View the documentation for examples for each selection."
 
-Use this option if you want to remove double quotes from exported strings. Available options are:
+Use this option to control whether double quotes should be removed or kept within exported strings.
+
+The available options are:
 
 * **[!UICONTROL Null Character (\0000)]**. Use this option to remove double quotes from exported CSV files.
-* **[!UICONTROL Double Quotes (")]**. Use this option to keep double quotes in your exported CSV files.
+* **[!UICONTROL Double Quotes (")]**. Use this option when the string values contain a delimiter or double quotes. This option helps you keep the delimiters or  double quotes in your exported CSV files, so you can correctly identify which value corresponds to which field.
 
 #### Examples
 
+Consider the input value `Anna,"Doe,John"`.
+
 View the examples below of the content from exported CSV files with each of the selections in the UI.
 
-* Example output with **[!UICONTROL Null Character (\0000)]** selected: `Test,John,LastName`
-* Example output with **[!UICONTROL Double Quotes (")]** selected: `"Test","John","LastName"`
+* Example output with **[!UICONTROL Null Character (\0000)]** selected: `Anna,Doe,John`
+* Example output with **[!UICONTROL Double Quotes (")]** selected: `Anna,"Doe,John"`
 
 ### Escape character {#escape-character}
 

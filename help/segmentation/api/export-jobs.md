@@ -27,20 +27,26 @@ The `/export/jobs` endpoint supports several query parameters to help filter you
 
 ```http
 GET /export/jobs
-GET /export/jobs?limit={LIMIT}
-GET /export/jobs?offset={OFFSET}
-GET /export/jobs?status={STATUS}
+GET /export/jobs?{QUERY_PARAMETERS}
 ```
 
-| Parameter | Description |
-| --------- | ----------- |
-| `{LIMIT}` | Specifies the number of export jobs returned. |
-| `{OFFSET}` | Specifies the offset of the pages of results. | 
-| `{STATUS}` | Filters the results based on status. The supported values are "NEW", "SUCCEEDED", and "FAILED". |
+**Query parameters**
+
++++ A list of available query parameters.
+
+| Parameter | Description | Example |
+| --------- | ----------- | ------- |
+| `limit` | Specifies the number of export jobs returned. | `limit=10` |
+| `offset` | Specifies the offset of the pages of results. | `offset=1540974701302_96` |
+| `status` | Filters the results based on status. The supported values are "NEW", "SUCCEEDED", and "FAILED". | `status=NEW` |
+
++++
 
 **Request**
 
 The following request will retrieve the last two export jobs within your organization.
+
++++ A sample request to retrieve export jobs.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
@@ -50,9 +56,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Response**
 
 The following response returns HTTP status 200 with a list of successfully completed export jobs, based on the query parameter provided in the request path.
+
++++ A sample response when retrieving export jobs.
 
 ```json
 {
@@ -201,6 +211,8 @@ The following response returns HTTP status 200 with a list of successfully compl
 | `page` | Information about the pagination of the requested export jobs. | 
 | `link.next` | A link to the next page of export jobs. | 
 
++++
+
 ## Create a new export job {#create}
 
 You can create a new export job by making a POST request to the `/export/jobs` endpoint.
@@ -214,6 +226,8 @@ POST /export/jobs
 **Request**
 
 The following request creates a new export job, configured by the parameters provided in the payload.
+
++++ A sample request to create an export job.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
@@ -284,9 +298,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 | `schema.name` | **(Required)** The name of the schema associated with the dataset where data is to be exported. |
 | `evaluationInfo.segmentation` | *(Optional)* A boolean value that, if not provided, defaults to `false`. A value of `true` indicates that segmentation needs to be done on the export job. |
 
++++
+
 **Response**
 
 A successful response returns HTTP status 200 with details of your newly created export job.
+
++++ A sample response when creating an export job.
 
 ```json
 {
@@ -374,6 +392,8 @@ Alternatively, if `destination.segmentPerBatch` had been set to `true`, the `des
     }
 ```
 
++++
+
 ## Retrieve a specific export job {#get}
 
 You can retrieve detailed information about a specific export job by making a GET request to the `/export/jobs` endpoint and providing the ID of the export job you wish to retrieve in the request path.
@@ -390,6 +410,8 @@ GET /export/jobs/{EXPORT_JOB_ID}
 
 **Request**
 
++++ A sample request to retrieve an export job.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -398,9 +420,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Response**
 
 A successful response returns HTTP status 200 with detailed information about the specified export job.
+
++++ A sample response when retrieving an export job.
 
 ```json
 {
@@ -470,6 +496,8 @@ A successful response returns HTTP status 200 with detailed information about th
 | `metrics.profileExportTime` | A field indicating the time it took for the profiles to export. |
 | `totalExportedProfileCounter` | The total number of profile exported across all batches. |
 
++++
+
 ## Cancel or delete a specific export job {#delete}
 
 You can request to delete the specified export job by making a DELETE request to the `/export/jobs` endpoint and providing the ID of the export job you wish to delete in the request path.
@@ -486,6 +514,8 @@ DELETE /export/jobs/{EXPORT_JOB_ID}
 
 **Request**
 
++++ A sample request to delete an export job.
+
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_ID} \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -493,6 +523,8 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_I
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
+
++++
 
 **Response**
 

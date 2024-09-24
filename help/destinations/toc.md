@@ -39,7 +39,7 @@ role: Admin,User
         * [Activate audiences to curated destinations based on LiveRamp identifiers](./ui/activate-curated-destinations.md)
         * [Activate prospect audiences to destinations](./ui/activate-prospect-audiences.md)
         * [Activate account audiences to destinations](./ui/activate-account-audiences.md)
-        * [(Beta) Export files on-demand to batch destinations using the Experience Platform UI](./ui/export-file-now.md)
+        * [Export files on-demand to batch destinations using the Experience Platform UI](./ui/export-file-now.md)
         * [Export datasets using the Experience Platform UI](./ui/export-datasets.md)
         * [(Beta) Use the last qualification time XDM attribute in the new beta cloud storage destinations](./ui/activate-last-qualification-time.md)
         * [(Beta) Use calculated fields to export arrays in flat schema files](/help/destinations/ui/export-arrays-calculated-fields.md)
@@ -59,6 +59,7 @@ role: Admin,User
         * [Marketo Engage connection](./catalog/adobe/marketo-engage.md)
         * [Marketo Measure Ultimate connection](./catalog/adobe/marketo-measure-ultimate.md)
         * [Experience Platform audience sharing](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+        * [Federated Audience Composition connection (Limited availability)](https://www.adobe.com/go/destinations-federated-audience-composition)
     * Advertising destinations{#advertising}
         * [Advertising destinations overview](./catalog/advertising/overview.md)
         * [Adobe Advertising Cloud connection](./catalog/advertising/adobe-advertising-cloud-connection.md)

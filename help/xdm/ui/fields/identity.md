@@ -40,7 +40,7 @@ When finished, select **[!UICONTROL Apply]** to apply the change to the schema.
 
 ![](../../images/ui/fields/special/identity-config.png)
 
-The canvas updates to reflect the changes, with the selected field gaining a fingerprint symbol (![](../../images/ui/fields/special/identity-symbol.png)) to designate it as an identity. In the left rail, the identity field is now listed under the name of the class or schema field group that provides the field to the schema.
+The canvas updates to reflect the changes, with the selected field gaining a fingerprint symbol (![](/help/images/icons/identity-service.png)) to designate it as an identity. In the left rail, the identity field is now listed under the name of the class or schema field group that provides the field to the schema.
 
 If the field was also set as the primary identity, it will also be listed under **[!UICONTROL Required fields]** in the left rail. If the identity field is nested within the schema structure, all parent fields will also be listed as required.
 

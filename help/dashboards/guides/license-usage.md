@@ -8,16 +8,33 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 # License usage dashboard {#license-usage-dashboard}
 
 >[!CONTEXTUALHELP]
+>id="testy-mctestface"
+>title="Test dialog that should not be visible"
+>abstract="The object {name} is being viewed on {date}."
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_core"
+>title="Core products table"
+>abstract="The core products listed in the table have their own metrics, usage tracking, and drill-through views at the sandbox level. These core products provide the key metrics for tracking, and any add-ons are included in these metrics."
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_addons"
+>title="Add-ons table"
+>abstract="The Add-ons table lists products whose license amounts are combined with the metrics supported by core products. These add-ons do not have separate metrics but enhance the usage tracking of the core products they are associated with."
+
+>[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
 >title="License usage dashboard"
 >abstract="The license usage dashboard offers insight into the Adobe Experience Platform products that you've purchased. The dashboard overview displays the primary metrics for your products including your usage for each of the primary metrics and your contracted license amount. The details workspace displays a breakdown of your metrics for each product within specific sandboxes."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Automated dataset expirations"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Pseudonymous profiles data expiration"
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_licenseUsage_prediction"
+>id="platform_licenseusage"
 >title="License usage dashboard"
 >abstract="The license usage dashboard offers insight into the Adobe Experience Platform products that you've purchased. The dashboard overview displays the primary metrics for your products including your usage for each of the primary metrics and your contracted license amount. The details workspace displays a breakdown of your metrics for each product within specific sandboxes."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="Dataset expirations"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Pseudonymous profiles data expirations"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Automated dataset expirations"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Pseudonymous profiles data expiration"
 
 You can view important information about your organization's license usage through the Adobe Experience Platform [!UICONTROL License usage] dashboard. Information displayed here is captured during a daily snapshot of your Platform instance. 
 
@@ -58,12 +75,65 @@ This dashboard displays all of your licensed Adobe Experience Platform products,
 | **[!UICONTROL License Amount]**  | The contracted value for the maximum amount of the Primary Metric as agreed in your product license agreement.  |
 | **[!UICONTROL Usage]**  | The amount of your primary metric used. This value provides the total usage of that metric across all sandboxes, either production or development. |
 | **[!UICONTROL Usage %]**  | The percentage of your primary metric used according to your license amount. |
+| **[!UICONTROL Prediction Usage]**  | The predicted usage percentage of your primary metric according to your license amount. |
 
 >[!NOTE]
 >
 >Additions to the [!UICONTROL License Amount] as a result of add-ons are added on top of the [!UICONTROL License Amount] for the base products such as Real-Time Customer Data Platform, Adobe Journey Optimizer, and Customer Journey Analytics. The usage of that licensed amount (after the add-ons) is tracked through the base products. For example, if you buy one pack of five sandboxes, the quantity of five is added to that of the base product's. In this case, the add-on shows a [!UICONTROL License Amount] of one, and the usage for that add-on is "blank" as the usage is tracked through the base product.
 
 The table indicates the primary metric for each product, as each product can track numerous metrics.
+
+### Predicted usage {#predicted-usage}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseUsage_prediction"
+>title="Predicted usage"
+>abstract="Predictions are based on the usage during the past 6-7 months and are generated on the 15th of every month. Please note that license usage predictions are approximations based on past usage. You are responsible for understanding your organization's actual usage and ensuring that usage does not go beyond the scope of your organization's license with Adobe. To reduce usage, you can configure dataset or pseudonymous profile data expirations for sandboxes and datasets."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Automated dataset expirations"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Pseudonymous profiles data expiration"
+
+>[!CONTEXTUALHELP]
+>id="platform_licenseusage_prediction"
+>title="Predicted usage"
+>abstract="Predictions are based on the usage during the past 6-7 months and are generated on the 15th of every month. Please note that license usage predictions are approximations based on past usage. You are responsible for understanding your organization's actual usage and ensuring that usage does not go beyond the scope of your organization's license with Adobe. To reduce usage, you can configure dataset or pseudonymous profile data expirations for sandboxes and datasets."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Automated dataset expirations"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Pseudonymous profiles data expiration"
+
+Proactively manage and optimize your licensing resources based on insightful usage predictions. The [!UICONTROL Predicted Usage] column accurately predicts future license usage at the sandbox level, across all production and development sandboxes, for all of your purchased products. This alerting capability provides a forecast of license usage for six weeks in the future, based on your usage up to the 15th of this calendar month. Predictions are provided with a lower & an upper bound. 
+
+>[!IMPORTANT]
+>
+>Predictions are refreshed on a monthly basis. The date of refresh is included in an info icon (![This info icon.](../images/license-usage/info-icon.png)) above the column title.
+
+To see a summary of a products entitlement usage, select a product from the [!UICONTROL Overview] list. 
+
+![The [!UICONTROL License usage] [!UICONTROL Overview] with a product and the predicted usage column highlighted.](../images/license-usage/product-predicted-usage.png)
+
+The summary tab appears. You can use the granular predictions available on the [!UICONTROL Summary], and [!UICONTROL Details] tabs to ensure informed decision-making for efficient license use.
+
+>[!NOTE]
+>
+>Please note that license usage predictions are approximations based on past usage. You are responsible for understanding your organization's actual usage and ensuring that usage does not go beyond the scope of your organization's license with Adobe.
+
+![The summary view of a Platform Product with the predicted usage column highlighted.](../images/license-usage/summary-predicted-usage.png)
+
+The percentage of predicted usage is determined as follows:
+
+- If the lower and upper bounds are significantly different, they are displayed as a range (for example, 32% - 35%).
+- If the lower and upper bounds are nearly identical and not zero, they are displayed as an approximated value (for example, ~34%).
+- If the lower and upper bounds are nearly identical and zero, they are displayed as exactly 0%.
+
+>[!NOTE]
+>
+>"Nearly identical" in this context means that the values are statistically significant to two decimal places (for example, a lower bound of 0.342 and an upper bound of 0.344 are both rounded to 34%).
+
+The predicted usage feature supports for the following metrics:
+
+- [!UICONTROL Addressable audience]
+- [!UICONTROL Average profile richness]
+- [!UICONTROL Compute hours]
+- [!UICONTROL Customer Journey Audience number of rows]
+- [!UICONTROL Total storage]
 
 ## [!UICONTROL Summary] tab {#summary-tab}
 
@@ -95,7 +165,7 @@ To see **a particular usage metric from a specific sandbox**, navigate to the [!
 
 ![The Details tab of the License usage dashboard.](../images/license-usage/details-tab.png)
 
-From this view, you can select ![The inspect icon.](../images/license-usage/inspect-icon.png) next to a sandbox name to view the visualization for that metric. A dialog opens with a visualization for that metric. 
+From this view, you can select ![The inspect icon.](/help/images/icons/inspect.png) next to a sandbox name to view the visualization for that metric. A dialog opens with a visualization for that metric. 
 
 ### Visualizations {#visualizations}
 
@@ -129,7 +199,6 @@ The license usage dashboard reports on several unique metrics that are applicabl
 | [!UICONTROL Audience Activation Size] | The total size of profiles activated to any file-based destination in a year. Note: This does not include profiles sent through streaming destinations. |
 | [!UICONTROL Addressable Audience] | The sum of your business audience entitlement and the consumer audience entitlement. A consumer audience is defined as the number of person profiles identified as a "Consumer Audience" on the sales order. A business audience is defined as the number of business person profiles identified as the "Business Audience" on the sales order. |
 | [!UICONTROL Adhoc Query Service Users Packs]  | An add-on to increase your authorized concurrent Query Service Users entitlement by five additional concurrent Query Service users and one additional concurrently running ad hoc query per pack. Multiple additional Ad Hoc Query User packs may be licensed. |
-| [!UICONTROL Average profile richness] | The sum of all production data stored within the Hub Profile Service at any point in time, divided by five times the number of authorized business person profiles. [!UICONTROL Average profile richness] is a shared feature. |
 | [!UICONTROL CJA Rows Available] | The daily average rows of data available for analysis within Customer Journey Analytics.  |
 | [!UICONTROL Computed Attributes] | The total count of aggregated profile behavioral data. Aggregated profile behavioral data is based on experience events that are converted into a profile attribute and can be included in a person profile or business person profile. |
 | [!UICONTROL Consumer Audience] | The number of person profiles identified as "Consumer Audience" on the sales order. |
@@ -140,9 +209,10 @@ The license usage dashboard reports on several unique metrics that are applicabl
 | [!UICONTROL Look-alike Audiences] | The count of audiences that are generated by modeling an existing consumer audience to identify person profiles similar to that existing consumer audience. |
 | [!UICONTROL Number of AMM Models] | A count of the machine learning model (built in Adobe Mix Modeler) used to measure and/or predict a specified outcome based on your investments.  |
 | [!UICONTROL Number of Sandboxes] | The count of logical separations within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations. |
-| [!UICONTROL Profile Richness No of Packs] | An increase in your authorized Average Profile Richness by 25 KB per profile for each Additional Profile Richness pack. |
+| [!UICONTROL Profile Richness No of Packs] | An increase in your authorized Total Data Volume by 25 KB per profile for each Additional Profile Richness pack. |
 | [!UICONTROL Query Service Compute Hours] | A measure of the amount of time taken by the Query Service engines to read, process, and write data back into the data lake when a batch query is executed.  |
 | [!UICONTROL Streaming Segmentation No of Packs] | The packs update segment membership for a person profile as new data enters the Segmentation Service through a streaming flow. Segment membership is evaluated based on the current person profile attributes and the value of the current event, without taking historical behavior into account. Streaming Segmentation is a shared feature. |
+| [!UICONTROL Total Data Volume] | The total amount of data available for Adobe Experience Platform Profile Service to use in engagement workflows. |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
 

@@ -238,7 +238,7 @@ curl -X POST https://platform.adobe.io/data/core/ca/attributes \
         "expression": {
             "type": "PQL", 
             "format": "pql/text", 
-            "value": "xEvent[(commerce.checkouts.value > 0.0 or commerce.purchases.value > 1.0 or commerce.order.priceTotal >= 10.0)"
+            "value": "xEvent[(commerce.checkouts.value > 0.0 or commerce.purchases.value > 1.0 or commerce.order.priceTotal >= 10.0)].sum(commerce.order.priceTotal)"
         },
         "keepCurrent": false,
         "duration": {
@@ -291,7 +291,7 @@ A successful response returns HTTP status 200 with information about your newly 
     "expression": {
         "type": "PQL",
         "format": "pql/text",
-        "value": "xEvent[(commerce.checkouts.value > 0.0 or commerce.purchases.value > 1.0 or commerce.order.priceTotal >= 10.0) and (timestamp occurs <= 7 days before now)].sum(commerce.order.priceTotal)"
+        "value": "xEvent[(commerce.checkouts.value > 0.0 or commerce.purchases.value > 1.0 or commerce.order.priceTotal >= 10.0)].sum(commerce.order.priceTotal)"
     },
     "mergeFunction": {
         "value": "SUM"

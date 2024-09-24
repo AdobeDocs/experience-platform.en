@@ -51,7 +51,7 @@ A settings icon above the Query Editor input field includes an options to enable
 >
 >You can [!UICONTROL Disable syntax auto complete] while authoring a query without losing your progress.
 
-To enable dark or light themes, select the settings icon (![A settings icon.](../images/ui/query-editor/settings-icon.png)) followed by the option in the dropdown menu that appears.
+To enable dark or light themes, select the settings icon (![A settings icon.](/help/images/icons/settings.png)) followed by the option in the dropdown menu that appears.
 
 ![The Query Editor with the settings icon and Enable dark theme dropdown menu option highlighted.](../images/ui/query-editor/query-editor-settings.png)
 
@@ -217,9 +217,9 @@ After a query has been completed, the results are displayed in the **[!UICONTROL
 
 ![The Results tab of the Query Editor console displaying the results of a query run.](../images/ui/query-editor/query-results.png)
 
-## Use cases {#use-cases}
+## Examples {#examples}
 
-Query Service provides solutions to a variety of use cases across industries and business scenarios. These practical examples demonstrate the flexibility and impact of the service in addressing diverse needs. To [uncover how Query Service can bring value to your specific business needs](../use-cases/overview.md), explore the comprehensive collection of use case documents. Learn how to use Query Service to provide insights and solutions for enhanced operational efficiency and business success.
+Query Service provides solutions to a variety of use cases across industries and business scenarios. These examples demonstrate the flexibility and impact of the service in addressing diverse needs. To [uncover how Query Service can bring value to your specific business needs](../use-cases/overview.md), explore the comprehensive collection of use case documents. Learn how to use Query Service to provide insights and solutions for enhanced operational efficiency and business success.
 
 <!-- This video is from 2019. The logic is sounds but the workflow is too outdated. -->
 
