@@ -135,15 +135,15 @@ Alternatively, to view a list of a query template's scheduled runs, navigate to 
 
 The list of query runs for that scheduled query appears. 
 
-![The details section of the Scheduled Queries workspace with a list of query runs highlighted for a scheduled query.](../images/ui/query-schedules/list-of-scheduled-runs.png)
-
-### Compute hours at Job Level
+### Compute hours at job level {#compute-hours}
 
 Track compute hours consumed at the query execution level for your CTAS/ITAS batch queries. This feature offers insights into compute usage, helping you optimize resource allocation and improve query performance.
 
 >[!AVAILABILITY]
 >
 >Compute Hours functionality is exclusive to users who have purchased the [Data Distiller SKU](../data-distiller/overview.md). Contact your Adobe representative for more information.
+
+![The details section of the Scheduled Queries workspace with a list of query runs highlighted for a scheduled query.](../images/ui/query-schedules/list-of-scheduled-runs.png)
 
 The following table provides descriptions of each column available in the details section that lists scheduled query runs.
 
