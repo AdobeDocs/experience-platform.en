@@ -45,7 +45,7 @@ Using Query Editor, you can write, execute, and save queries for customer experi
 
 ### Database selector {#database-selector}
 
-You can choose the database to query from the dropdown menu in the top right of the Query Editor. Select the database dropdown menu, and choose a database to query. The current selection is displayed in the dropdown section.
+Select a database to query from the dropdown menu in the top right of the Query Editor. The selected database is shown in the dropdown.
 
 ![The Query Editor with the database dropdown menu highlighted.](../images/ui/query-editor/database-dropdown.png)
 
@@ -194,11 +194,11 @@ If a query was scheduled, then the [!UICONTROL Scheduled Queries] tab provides i
 
 >[!AVAILABILITY]
 >
->The dataset navigation rail is only available for Data Distiller customers. Your Platform UI might not contain the left dataset navigation rail.  Other images in this document might not reflect the dataset navigation rail.
+>The dataset navigation rail is only available for Data Distiller customers. Your Platform UI might not contain the left dataset navigation rail.  Other images in this document might not reflect the dataset navigation rail. Contact your Adobe representative for more information.
 
 Use the object browser to easily search and filter datasets. The object browser reduces the time spent searching for tables and datasets in large environments with numerous datasets. With streamlined access to relevant data and metadata, you can focus more on query authoring and less on navigation.
 
-To navigate your database with the Object browser, enter a table name into the search field, or select [!UICONTROL Tables] to expand the list of available datasets and tables. When using the search field, the list of available tables are dynamically filtered based on your input.
+To navigate your database with the Object browser, enter a table name into the search field, or select **[!UICONTROL Tables]** to expand the list of available datasets and tables. When using the search field, the list of available tables are dynamically filtered based on your input.
 
 >[!NOTE]
 >
