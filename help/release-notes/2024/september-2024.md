@@ -9,9 +9,12 @@ description: The September 2024 release notes for Adobe Experience Platform.
 Updates to existing features and documentation in Adobe Experience Platform:
 
 - [Alerts](#alerts)
+- [Dashboards](#dashboards)
 - [Data Prep](#data-prep)
 - [Destinations](#destinations)
+- [Experience Data Model (XDM)](#xdm)
 - [Identity Service](#identity-service)
+- [Query Service](#query-service)
 - [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
 
@@ -32,6 +35,21 @@ Experience Platform allows you to subscribe to event-based alerts for various Pl
 
 For more information about alerts, read the [[!DNL Observability Insights] overview](../../observability/home.md).
 
+## Dashboards {#dashboards}
+
+Experience Platform provides multiple dashboards through which you can view important insights about your organization's data, as captured during daily snapshots.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+|  Query Pro Mode - Global Filter Upgrades | Enhance analysis with Query Pro Mode's new date filter. Refine insights with dynamic date parameters in your SQL queries and filter data by specific time frames. Choose preset or custom date ranges with an intuitive UI, keeping dashboards relevant for all users. Simplify workflows, maintain precision, and make timely decisions. Read the [guide on creating date filters]() for more information. |
+| Query Pro Modes - Drill Throughs  | Unlock deeper insights with Query Pro Mode's Drill Through feature and seamlessly navigate from high-level charts to detailed dashboards. Use this feature to effortlessly move from summaries to in-depth analysis, and explore trends, customer behaviors, and KPIs. Automatic filter pass-throughs and multi-level drill-throughs keep data consistent, ensuring a smooth exploration. Simplify workflows, keep context, and speed up decisions. Read the [step-by-step guide on creating drill-throughs]() for more information. |
+| Query Pro Mode - Advanced Table Attributes  | Use Query Pro Mode advanced table attributes to streamline data visualization, enhance workflow efficiency, and improve data clarity. Add automatic sorting, resizing, and pagination to your tables directly from custom dashboards. Sort columns to prioritize key data, resize for optimal readability, and navigate large datasets seamlessly without modifying SQL queries. Read the '[View More]()' guide to learn how to integrate these features and elevate your data insights. |
+
+{style="table-layout:auto"}
+
+For more information on dashboards, including how to grant access permissions and create custom widgets, begin by reading the [dashboards overview](../../dashboards/home.md).
 
 ## Data Prep {#data-prep}
 
@@ -61,7 +79,6 @@ For more information on Data Prep, read the [Data Prep overview](../../data-prep
 
 **New or updated functionality** {#destinations-new-updated-functionality}
 
-
 | Feature | Description |
 | --- | --- |
 | [Dataset export](/help/destinations/ui/export-datasets.md) enhancements | The September 2024 release of Experience Platform includes several enhancements to the dataset export feature capabilities, to better support various data egress use cases. These feature enhancements include: <ul><li>New data folder configurability options, including the option to add and remove subfolders.</li><li>New export options including full file export (once) and the ability to specify end dates</li><li>Note: Adobe is also introducing a default end date of May 1st 2025 for all dataset export dataflows created prior to the September release. For any of these dataflows, customers will need to update the end date in the dataflow manually before the end date, otherwise exports will stop on this date.</li></ul> <br> ![Image of the Experience Platform user interface highlighting the Edit schedule and folders option in the scheduling step.](../2024/assets/september/edit-schedule-folders.png "Edit schedule and folders option in the scheduling step."){width="250" align="center" zoomable="yes"} |
@@ -69,6 +86,20 @@ For more information on Data Prep, read the [Data Prep overview](../../data-prep
 {style="table-layout:auto"}
 
 For more information, read the [destinations overview](../../destinations/home.md).
+
+## Experience Data Model (XDM) {#xdm}
+
+XDM is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+
+**Updated features**
+
+| Feature | Description |
+| --- | --- |
+| Enhancements to the Schema Editor | Take control of your schema relationships with an updated relationship workflow in the Schema Editor. Easily update or remove existing relationships directly from the Experience Platform UI, making schema management smoother and more intuitive. Adjust reference schemas and rename relationships with confidence, ensuring seamless data integrity across segmentation and other key processes. To learn more about efficiently managing your schema relationships, see the guides on [defining relationship fields in the UI](../../xdm/tutorials/relationship-ui.md#create-a-relationship-field-group) and for [B2B relationships](../../xdm/tutorials/relationship-b2b.md#edit-a-b2b-schema-relationship). |
+
+{style="table-layout:auto"}
+
+For more information on XDM, read the [XDM System overview](../../xdm/home.md).
 
 ## Identity Service {#identity-service}
 
@@ -84,6 +115,23 @@ Use Adobe Experience Platform Identity Service to create a comprehensive view of
 {style="table-layout:auto"}
 
 For more information on Identity Service, read the [Identity Service overview](../../identity-service/home.md).
+
+## Query Service {#query-service}
+
+Query Service allows you to use standard SQL to query data in Adobe Experience Platform [!DNL data lake]. You can join any datasets from data lake and capture the query results as a new dataset for use in reporting, Data Science Workspace, or for ingestion into Real-Time Customer Profile.
+
+**Updated features**
+
+| Feature | Description |
+| --- | --- |
+| Data Distiller Audiences | Easily create, manage, and activate audiences with the SQL audience extension in Experience Platform's Data Distiller. Define audience segments with SQL commands directly from your data lake, bypassing the need for raw data in profiles. Refine targeting strategies and automatically sync audiences to file-based destinations with this flexible, data-driven approach. Streamline workflows, optimize audience management, and unlock data's full potential. Reade the [guide on using the SQL audience extension]() to elevate your audience strategies. |
+| Data Distiller Statistics - Hypercubes | Optimize big data analysis with Hypercubes. Handle complex calculations—like distinct counts and multi-dimensional analysis—without reprocessing historical data. Incrementally update data, streamline workflows, and cut processing time while maintaining accuracy and efficiency. Get faster, scalable, and cost-effective insights that transform decision-making. Explore the [guide on using Hypercubes]() to unlock advanced analysis. |
+| Query Editor Object browser | Boost query efficiency with the new Object Browser in the Query Editor. Quickly search, filter, and access datasets to write and refine queries faster. With real-time schema updates and instant table metadata, you can streamline workflows, cut navigation time, and enhance your query experience. Unlock your data's potential and optimize analysis. Read the [guide on using the Object Browser]() for more information. |
+| Compute Hours | Gain control over resource usage with the newly visible Compute Hours metric for scheduled queries. View Comput Hours at the query execution level to monitor and optimize resource use for CTAS/ITAS batch queries. Track start times, completion status, and compute time for each query run. Fine-tune performance and reduce costs effortlessly. Read the [guide on Compute Hours]() for information on how to maximize your query efficiency. |
+
+{style="table-layout:auto"}
+
+To learn more about Query Services, read the [Query Service overview](../../query-service/home.md).
 
 ## Segmentation Service {#segmentation-service}
 
