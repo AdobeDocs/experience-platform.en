@@ -8,8 +8,66 @@ description: The September 2024 release notes for Adobe Experience Platform.
 
 Updates to existing features and documentation in Experience Platform:
 
+- [Alerts](#alerts)
+- [Data Prep](#data-prep)
+- [Destinations](#destinations)
 - [Identity Service](#identity-service)
+- [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
+
+## Alerts {#alerts}
+
+Experience Platform allows you to subscribe to event-based alerts for various Platform activities. You can subscribe to different alert rules through the [!UICONTROL Alerts] tab in the Platform user interface, and can choose to receive alert messages within the UI itself or through email notifications.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+|  Development sandbox support | You can now [subscribe to alerts](../../observability/alerts/ui.md) in both production and development sandboxes, enabling seamless monitoring across all environments. |
+|  Email templates | [Email alerts](../../observability/alerts/ui.md) now include detailed asset information, ensuring you have all the key details at your fingertips. |
+|  Enhanced Customization | You can now configure [alert thresholds](./../observability/alerts/ui.md#alert-threshold) offering greater flexibility to tailor alerts to your specific needs for the following alert types:<br><ul><li>Segment Job Delay</li><li>Segment Export Delay</li><li>Destination Flow Run Delay</li><li>Identity Service Flow Run Delay</li><li>Profile Flow Run Delay</li><li>Sources Flow Run Delay</li><li>Query Run Delay</li><li>Activation Skip Rate Exceeded</li><li>Sources Ingestion Error Rate Exceeded</ul> |
+| Expanded Alerts | Audit event information alerts are now available for subscription for the following [alert rules](./../observability/alerts/rules.md):<br><ul><li>Audience create</li><li>Audience update</li><li>Audience delete</li><li>Dataset create</li><li>Dataset update</li><li>Dataset delete</li><li>Schema create</li><li>Schema update</li><li>Schema delete. |
+
+{style="table-layout:auto"}
+
+To learn more about alerts, read the [[!DNL Observability Insights] overview](../../observability/home.md).
+
+
+## Data Prep {#data-prep}
+
+Use data prep to map, transform, and validate data to and from Experience Data Model (XDM).
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| [!BADGE Beta]{type=Informative} New Data Prep functions for use in Destinations | You can now use the following array functions for Destinations use cases:<ul><li>`array_to_string`</li><li>`filterArray`</li><li>`transformArray`</li><li>`flattenArray`</li></ul> For more information, read the the [data prep functions guide](../../data-prep/functions.md#arrays). |
+
+{style="table-layout:auto"}
+
+For more information on Data Prep, read the [Data Prep overview](../../data-prep/home.md).
+
+## Destinations {#destinations}
+
+[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+
+**New or updated destinations** {#new-updated-destinations}
+
+| Destination | Description |
+| --- | --- |
+| [Amazon Ads](/help/destinations/catalog/advertising/amazon-ads.md) | The September release adds the mapping option to export the `countryCode` parameter into Amazon Ads. Use `countryCode` in the [mapping step](/help/destinations/catalog/advertising/amazon-ads.md#map) to improve your identity match rates with Amazon. |
+
+{style="table-layout:auto"}
+
+**New or updated functionality** {#destinations-new-updated-functionality}
+
+| Feature | Description |
+| ----------- | ----------- |
+| Dataset export enhancements | The September 2024 release of Experience Platform includes several enhancements to the dataset export feature capabilities, to better support various data egress use cases. These feature enhancements include: <ul><li>New data folder configurability options, including the option to add and remove subfolders.</li><li>New export options including full file export (once) and the ability to specify end dates</li><li>Note: Adobe is also introducing a default end date of May 1st 2025 for all dataset export dataflows created prior to the September release. For any of these dataflows, customers will need to update the end date in the dataflow manually before the end date, otherwise exports will stop on this date.</li></ul> <br> ![Image of the Experience Platform user interface highlighting the Edit schedule and folders option in the scheduling step.](../2024/assets/september/edit-schedule-folders.png "Edit schedule and folders option in the scheduling step."){width="250" align="center" zoomable="yes"} |
+
+{style="table-layout:auto"}
+
+For more information, read the [destinations overview](../../destinations/home.md).
 
 ## Identity Service {#identity-service}
 
@@ -25,6 +83,20 @@ Use Adobe Experience Platform Identity Service to create a comprehensive view of
 {style="table-layout:auto"}
 
 For more information on Identity Service, read the [Identity Service overview](../../identity-service/home.md).
+
+## Segmentation Service {#segmentation-service}
+
+[!DNL Segmentation Service] defines a particular subset of profiles by describing the criteria that distinguishes a marketable group of people within your customer base. Segments can be based on record data (such as demographic information) or time series events representing customer interactions with your brand.
+
+**New or updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Unified Search implementation | Search behavior within Segment Builder will now use Unified Search. This allows for a more robust experience when managing and searching for audiences to reuse for segment membership. For more information on this change, read the [Segment Builder guide](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
+
+{style="table-layout:auto"}
+
+For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md).
 
 ## Sources {#sources}
 
