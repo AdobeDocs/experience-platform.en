@@ -7,10 +7,6 @@ exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
 ---
 # SFTP connector
 
->[!IMPORTANT]
->
->The [!DNL SFTP] server that Adobe Experience Platform connects to must be able to support chunking, which means multiple connections to a single file. If your [!DNL SFTP] server does not support chunking, then you may receive an error preventing file ingestion.
-
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
 Read this document for prerequisite steps that you need to complete in order to successfully connect your [!DNL SFTP] account to Experience Platform.
