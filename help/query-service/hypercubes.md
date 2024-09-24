@@ -25,7 +25,7 @@ Hypercubes offer several powerful functions to enhance data analysis efficiency 
 Use hypercubes to efficiently generate distinct counts for various user interactions without fully recalculating data each time. The following are some practical scenarios for their use:
 
 - Analyze unique visitors that view specific products during a defined time period.
-- Identify users who interact with multiple products in a given period to enhance cross-sell analysis
+- Identify users who interact with multiple products in a given period to enhance cross-sell analysis.
 - Distinguish users engaging with one product but not another over time to uncover preference patterns.
 - Combine online and offline interaction data to get a comprehensive view of user behavior over a given period.
 - Track user movement across different activities within an event to optimize layout and services.
