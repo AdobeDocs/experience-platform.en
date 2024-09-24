@@ -1,6 +1,6 @@
 ---
-title: Identity graph linking rules overview
-description: Learn about Identity Graph Linking Rules in Identity Service.
+title: Identity Graph Linking Rules
+description: Learn about identity graph linking rules in Identity Service.
 badge: Beta
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
 ---
@@ -10,25 +10,67 @@ exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
 >
 >Identity graph linking rules is currently in beta. Contact your Adobe account team for information on the participation criteria. The feature and documentation are subject to change.
 
-## Table of contents
+With Adobe Experience Platform Identity Service and Real-Time Customer Profile, it is easy to assume that your data is ingested perfectly and that all merged profiles represent a single individual person through a person identifier, such as a CRMID. However, there are possible scenarios where certain data could try to merge multiple disparate profiles into a single profile ("graph collapse"). To prevent these unwanted merges, you can use configurations provided through identity graph linking rules and allow for accurate personalization for your users.
 
-* [Overview](./overview.md)
+## Get started
+
+The following documents are essential in understanding identity graph linking rules.
+
 * [Identity optimization algorithm](./identity-optimization-algorithm.md)
+* [Implementation guide](./implementation-guide.md)
+* [Examples of graph configurations](./example-configurations.md)
+* [Troubleshooting and FAQ](./troubleshooting.md)
 * [Namespace priority](./namespace-priority.md)
 * [Graph simulation UI](./graph-simulation.md)
 * [Identity settings UI](./identity-settings-ui.md)
-* [Example graph configurations](./configuration.md)
-* [Example scenarios](./example-scenarios.md)
 
-With Adobe Experience Platform Identity Service and Real-Time Customer Profile, it is easy to assume that your data is ingested perfectly and that all merged profiles represent a single individual person through a person identifier, such as a CRMID. However, there are possible scenarios where certain data could try to merge multiple disparate profiles into a single profile ("graph collapse"). To prevent these unwanted merges, you can use configurations provided through identity graph linking rules and allow for accurate personalization for your users.
+## Example scenarios where graph collapse could happen {#example-scenarios-where-graph-collapse-could-happen}
 
-## Example scenarios where graph collapse could happen
+This section outlines example scenarios that you may consider when configuring identity graph linking rules.
 
-* **Shared device**: Shared device refers to devices that are used by more than one individual. Examples of a shared device include tablets, library computers, and kiosks.
-* **Bad email and phone numbers**: Bad email and phone numbers refer to end-users registering invalid contact information, such as "test<span>@test.com" for email, and "+1-111-111-1111" for phone number.
-* **Erroneous or bad identity values**: Erroneous or bad identity values refer to non-unique identity values that could merge CRMIDs. For example, while IDFA's are required to have 36 characters (32 alphanumeric characters and four hyphens), there are scenarios where an IDFA with an identity value of "user_null" can get ingested. Similarly, phone numbers only support numerical characters, but a phone namespace with an identity value of "not-specified" may get ingested.
+### Shared device
 
-For more information on use case scenarios for identity graph linking rules, read the document on [example scenarios](./example-scenarios.md).
+There are instances where multiple logins can occur on a single device:
+
+| Shared device | Description |
+| --- | --- |
+| Family computers and tablets | Husband and wife both login to their respective bank accounts. |
+| Public kiosk | Travelers at an airport logging on using their loyalty ID to check in bags and print boarding passes. |
+| Call center | Call center personnel log in on a single device on behalf of customers calling customer support to resolve issues. |
+
+![A diagram of some common shared devices.](../images/identity-settings/shared-devices.png)
+
+In these cases, from a graph standpoint, with no limits enabled, a single ECID will be linked to multiple CRMIDs. 
+
+With identity graph linking rules, you can:
+
+* Configure the ID used for login as unique identifier. For example, you can limit a graph to store just one identity with a CRMID namespace, and thus define that CRMID as the unique identifier of a shared device.
+  * By doing this, you can ensure that CRMIDs do not get merged by the ECID.
+
+### Invalid email/phone scenarios
+
+There are also instances of users who provide fake values as phone numbers and/or email addresses when registering. In these cases, if limits are not enabled, then phone/email related identities will end up being linked to multiple different CRMIDs.
+
+![A diagram that represents invalid email or phone scenarios.](../images/identity-settings/invalid-email-phone.png)
+
+With identity graph linking rules, you can:
+
+* Configure either the CRMID, phone number, or email address as the unique identifier and thus limit one person to just one CRMID, phone number, and/or email address associated with their account.
+
+### Erroneous or bad identity values
+
+There are cases where non-unique, erroneous identity values are ingested in the system, irrespective of namespace. Examples include:
+
+* IDFA namespace with the identity value of "user_null".
+  * IDFA identity values should have 36 characters: 32 alphanumeric characters and four hyphens.
+* Phone number namespace with the identity value of "not-specified".
+  * Phone numbers should not have any alphabet characters.
+
+These identities could result in the following graphs, where multiple CRMIDs are merged together with the 'bad' identity:
+
+![A graph example of identity data with erroneous or bad identity values.](../images/identity-settings/bad-data.png)
+
+With identity graph linking rules you can configure the CRMID as the unique identifier to prevent unwanted profile collapsing due to this type of data.
 
 ## Identity graph linking rules {#identity-graph-linking-rules}
 
@@ -92,6 +134,10 @@ For more information, read the guide on [namespace priority](./namespace-priorit
 
 For more information on identity graph linking rules, read the following documentation:
 
-* [Identity optimization algorithm](./identity-optimization-algorithm.md).
-* [Namespace priority](./namespace-priority.md).
-* [Example scenarios for configuring identity graph linking rules](./example-scenarios.md).
+* [Identity optimization algorithm](./identity-optimization-algorithm.md)
+* [Implementation guide](./implementation-guide.md)
+* [Examples of graph configurations](./example-configurations.md)
+* [Troubleshooting and FAQ](./troubleshooting.md)
+* [Namespace priority](./namespace-priority.md)
+* [Graph simulation UI](./graph-simulation.md)
+* [Identity settings UI](./identity-settings-ui.md)
