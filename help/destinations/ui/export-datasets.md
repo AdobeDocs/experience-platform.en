@@ -133,6 +133,16 @@ Use the check boxes to the left of the dataset names to select the datasets that
 >title="File export options for datasets"
 >abstract="Select **Export incremental files** to export only the data which was added to the dataset since the last export. <br> The first incremental file export includes all the data in the dataset, acting as a backfill. Future incremental files include only the data which was added to the dataset since the first export. <br> Select **Export full files** to export the complete membership of each dataset on each export. "
 
+>[!CONTEXTUALHELP]
+>id="dataset_dataflow_needs_schedule_end_date_header"
+>title="Update the end date for this dataflow"
+>abstract="Update the end date for this dataflow"
+
+>[!CONTEXTUALHELP]
+>id="dataset_dataflow_needs_schedule_end_date_body"
+>title="Update the end date for this dataflow body"
+>abstract="Because of recent updates to this destination, the dataflow now requires an end date. Adobe has set a default end date to May 1st 2025. Please update to your desired end date otherwise the data exports will stop on the default date."
+
 Use the **[!UICONTROL Scheduling]** step to: 
 
 * Set a start date and an end date, as well as an export cadence for your dataset exports.
@@ -167,6 +177,16 @@ The **[!UICONTROL Export incremental files]** option is selected by default. Thi
 >For dataset exports, the file names have a preset, default format, which cannot be modified. See the section [Verify successful dataset export](#verify) for more information and examples of exported files.
 
 ## Edit folder path {#edit-folder-path}
+
+>[!CONTEXTUALHELP]
+>id="destinations_folder_name_template"
+>title="Edit folder path"
+>abstract="Use several provided macros to customize the folder path where dataset are exported."
+
+>[!CONTEXTUALHELP]
+>id="destinations_folder_name_template_preview"
+>title="Dataset folder path preview"
+>abstract="Get a preview of the folder structure that gets created in your storage location based on the macros you added in this window."
 
 Select **[!UICONTROL Edit folder path]** to customize the folder structure in your storage location where exported datasets are deposited. 
 
