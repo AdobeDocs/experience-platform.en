@@ -19,7 +19,7 @@ This view is only enabled for a single client, so selecting a different client w
 
 ## Validate setup
 
-The **[!UICONTROL Validate Setup]** tab validates and provides additional details about the app's push setup. There are three panels that perform validations. They will display a green check mark if the validations all succeed. If there are three green check marks, the app has been correctly configured for push messaging, is writing push tokens to the user profile, and has an associated app surface configured.
+The **[!UICONTROL Validate Setup]** tab validates and provides additional details about the app's push setup. There are three panels that perform validations. They will display a green check mark if the validations all succeed. If there are three green check marks, the app has been correctly configured for push messaging, is writing push tokens to the user profile, and has an associated channel configuration configured.
 
 If something is not working as expected, there will be an alert with details on how to fix that problem:
 
@@ -43,11 +43,9 @@ Finally, at the bottom of the panel is a link that will open this specific profi
 
 ### AppStore credentials and configuration
 
-This panel validates that the app ID and the messaging platform that was saved in the profile has a matching app surface created. An app surface is where push credentials for the application are uploaded.
+This panel validates that the app ID and the messaging platform that was saved in the profile has a matching channel configuration created. A channel configuration is where push credentials for the application are uploaded.
 
-If valid, the profile will display the name of the app surface, the app ID, and the name of the messaging service.
-
-Finally, at the bottom of the panel is a link that will open this specific app surface in a new tab.
+If valid, the profile will display the name of the channel configuration, the app ID, and the name of the messaging service.
 
 ## Send test push
 
@@ -65,9 +63,9 @@ In the **[!UICONTROL Message]** pane, you can provide a title and body for the m
 
 ### Push target
 
-The **[!UICONTROL Push Target]** pane allows you to customize which push token and app surface to use when sending the push message.
+The **[!UICONTROL Push Target]** pane allows you to customize which push token and channel configuration to use when sending the push message.
 
-This information is provided by default if the **[!UICONTROL Validate Setup]** tab is showing three green checkmarks. However, you can provide provide your own push token and app surface, even if your app isn't fully configured.
+This information is provided by default if the **[!UICONTROL Validate Setup]** tab is showing three green checkmarks. However, you can provide provide your own push token and channel configuration, even if your app isn't fully configured.
 
 ![Target Pane](./images/push-debug-view/target-pane.png)
 
