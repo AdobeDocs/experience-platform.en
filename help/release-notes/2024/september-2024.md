@@ -6,7 +6,7 @@ description: The September 2024 release notes for Adobe Experience Platform.
 
 **Release date: September 24, 2024**
 
-Updates to existing features and documentation in Experience Platform:
+Updates to existing features and documentation in Adobe Experience Platform:
 
 - [Alerts](#alerts)
 - [Data Prep](#data-prep)
