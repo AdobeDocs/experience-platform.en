@@ -3,7 +3,7 @@ title: Sharing Packages Across Organization Using Sandbox Tooling
 description: Learn how to use Sandbox Tooling in Adobe Experience Platform to share packages across different organizations.
 badge: Beta
 ---
-# Share packages across different organizations using Sandbox Tooling
+# Share packages across organizations using Sandbox Tooling
 
 >[!NOTE]
 >
@@ -69,16 +69,16 @@ You now have the ability to share packages between your organization and the sou
 
 ### Share packages to partner organizations
 
-To share a package to an approved partner organization, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Packages]** tab. Next, select the ellipsis (`...`) next to the package, and select **[!UICONTROL Share package]** from the dropdown.
+To share a package to an approved partner organization, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Packages]** tab. Next, select the ellipsis (`...`) next to the package, and then select **[!UICONTROL Share package]** from the dropdown menu.
 
 ![List of packages showing the dropdown menu with Share package highlighted.](../images/ui/sandbox-tooling/private-share-package.png)
 
-In the **[!UICONTROL Share package]** dialog, use the **[!UICONTROL Share settings]** dropdown to select the package you want to share, then select **[!UICONTROL Confirm]**.
+In the **[!UICONTROL Share package]** dialog, pick the package to share from the **[!UICONTROL Share settings]** dropdown, then select **[!UICONTROL Confirm]**.
 
 ![Share package dialog with Share settings and Confirm highlighted.](../images/ui/sandbox-tooling/private-share-package-confirm.png)
 
 ## Next steps
 
-This document demonstrated how to use the sandbox tooling feature to share packages across different organizations. See the [sandbox tooling guide](../ui/sandbox-tooling.md) for more information.
+This document demonstrated how to use the Sandbox tooling feature to share packages across different organizations. For additional information, refer to the [sandbox tooling guide](../ui/sandbox-tooling.md).
 
 For steps on performing different operations using the Sandbox API, see the [sandbox developer guide](../api/getting-started.md). For a high-level overview of sandboxes in Experience Platform, refer to the [overview documentation](../home.md).
