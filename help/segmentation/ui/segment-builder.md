@@ -96,7 +96,7 @@ Once the report suites have been mapped, you can use these newly mapped fields w
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentBuilder_b2b_decomposition"
 >title="Complex evaluation"
->abstract="The following expression is too complicated to be expressed as a single audience. In order to use both B2B-rules and people-rules in the same segment definition, please follow the steps below.<ol><li>Create a segment definition that only refers to the people-rules, and save it as its own segment definition.</li><li>In a new segment definition, import the previously created segment definition while referring to the B2B-rules.</li></ol>"
+>abstract="The following expression is too complicated to be expressed as a single audience. In order to use both B2B-rules and people-based-events in the same segment definition, please follow the steps below.<ol><li>Create a segment definition that only refers to the people-based-events, and save it as its own segment definition.</li><li>In a new segment definition, import the previously created segment definition while referring to the B2B-rules.</li></ol>"
 
 >[!NOTE]
 >
