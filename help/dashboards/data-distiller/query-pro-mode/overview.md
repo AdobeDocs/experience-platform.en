@@ -77,7 +77,7 @@ To enable sorting for any column, check the **[!UICONTROL Sortable]** boxes.
 
 ![Table edit page with sortable check boxes highlighted.](../../images/query-pro-mode/advanced-table-sortable.png)
 
-Select the properties icon (![The properties icon.](/help/images/icons/properties.png)) in the right rail to open the [!UICONTROL Properties] panel. In the **[!UICONTROL Properties]** panel, use the drop down to select the **[!UICONTROL Default sort]** column, then use the drop down to select the **[!UICONTROL Sort direction]**. Finally, select **[!Save and close]**.
+Select the properties icon (![The properties icon.](/help/images/icons/properties.png)) in the right rail to open the [!UICONTROL Properties] panel. In the **[!UICONTROL Properties]** panel, use the drop down to select the **[!UICONTROL Default sort]** column, then use the drop down to select the **[!UICONTROL Sort direction]**. Finally, select **[!UICONTROL Save and close]**.
 
 ![The widget composer with the properties icon, default sort, sort direction and save and close highlighted.](../../images/query-pro-mode/advanced-table-properties.png)
 

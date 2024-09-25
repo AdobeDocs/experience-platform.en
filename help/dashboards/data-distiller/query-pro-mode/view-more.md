@@ -53,7 +53,7 @@ Select the sllider and drag to the left or right to adjust the column size as re
 
 Pagination is automatically applied to your tables in the [!UICONTROL View more] feature, eliminating the need for you to manually modify your SQL queries. This feature ensures that your data is presented in a more manageable format, which facilitates the process of navigating through large datasets.
 
-You can see up to 500 records per page. To navigate through the records, use the **[!UIONTROL >]** located at the bottom of the page.
+You can see up to 500 records per page. To navigate through the records, use the **[!UICONTROL >]** located at the bottom of the page.
 
 ![Tabulated results with results and pagination highlighted.](../../images/query-pro-mode/advanced-table-pagination.png)
 
