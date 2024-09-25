@@ -27,7 +27,7 @@ Before continuing with this tutorial, please read the following documents to bet
 * Create an encryption key pair using the sources workspace in the Experience Platform UI. 
   * Optionally, you may also create your own sign verification key pair to provide an additional layer of security to your encrypted data.
 * Use the public key from your encryption key pair to encrypt your data.
-* Place your encrypted data in your cloud storage provider. During this step, you must also ensure that you have a sample file that can be used as a reference to map your source data to an Experience Data Model (XDM) schema.
+* Place your encrypted data in your cloud storage. During this step, you must also ensure that you have a sample file of your data in your cloud storage that can be used as a reference to map your source data to an Experience Data Model (XDM) schema.
 * Use your cloud storage batch source and begin the data ingestion process in the sources workspace in the Experience Platform UI.
 * During the source connection creation process, provide the key ID that corresponds with the public key that you used to encrypt your data.
   * If you also used the sign verification key pair mechanism, then you must also provide the sign verification key ID that corresponds to your encrypted data.
