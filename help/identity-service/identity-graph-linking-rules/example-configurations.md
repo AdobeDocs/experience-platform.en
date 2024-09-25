@@ -4,7 +4,7 @@ description: Learn about common graph scenarios that you might encounter when wo
 badge: Beta
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
 ---
-# Examples of graph configuratoions
+# Examples of graph configurations
 
 >[!AVAILABILITY]
 >
