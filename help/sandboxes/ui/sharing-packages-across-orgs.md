@@ -73,9 +73,13 @@ To share a package to an approved partner organization, navigate to the [!UICONT
 
 ![List of packages showing the dropdown menu with Share package highlighted.](../images/ui/sandbox-tooling/private-share-package.png)
 
-In the **[!UICONTROL Share package]** dialog, pick the package to share from the **[!UICONTROL Share settings]** dropdown, then select **[!UICONTROL Confirm]**.
+In the **[!UICONTROL Share package]** dialog, select the package to share from the **[!UICONTROL Share settings]** dropdown, then select **[!UICONTROL Confirm]**.
 
 ![Share package dialog with Share settings and Confirm highlighted.](../images/ui/sandbox-tooling/private-share-package-confirm.png)
+
+>[!TIP]
+>
+>It is possible to select more than one package. Selected packages will show up beneath the [!UICONTROL Share settings] dropdown.
 
 ## Next steps
 
