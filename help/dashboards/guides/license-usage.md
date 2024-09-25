@@ -38,7 +38,7 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 
 You can view important information about your organization's license usage through the Adobe Experience Platform [!UICONTROL License usage] dashboard. Information displayed here is captured during a daily snapshot of your Platform instance. 
 
-License usage reports provide a high degree of granularity over your license usage metrics. The dashboard provides usage metrics for each purchased product, the consolidated usage of metrics in all production or development sandboxes, and the usage metric from a specific sandbox. The following Experience Platform applications can be tracked with usage metrics: Real-Time Customer Data Platform, Adobe Journey Optimizer, and Customer Journey Analytics.
+License usage reports provide a high degree of granularity over your license usage metrics. The dashboard provides usage metrics for each purchased product (and associated add-ons), the consolidated usage of metrics in all production or development sandboxes, and the usage metric from a specific sandbox. The following Experience Platform applications can be tracked with usage metrics: Real-Time Customer Data Platform, Adobe Journey Optimizer, and Customer Journey Analytics.
 
 This guide outlines how to access and work with the license usage dashboard in the UI and provides more information regarding the visualizations displayed in the dashboard.
 
@@ -46,7 +46,7 @@ For a general overview of the Platform UI, refer to the [Experience Platform UI 
 
 ## [!UICONTROL License usage] dashboard data
 
-The [!UICONTROL License usage] dashboard displays a list of all the Experience Platform products that you have purchased. From this list, you can find a snapshot of your organization's license-related data for Experience Platform across any associated sandbox.
+The [!UICONTROL License usage] dashboard displays a list of all the Experience Platform products that you have purchased and any add-ons for those products. From this dashboard, you can find a snapshot of your organization's license-related data for Experience Platform across any associated sandbox.
 
 The data in this dashboard is displayed exactly as it appears at the specific point in time when the snapshot was taken. In other words, the snapshot is not an approximation or sample of the data, and the dashboard is not updating in real time.
 
@@ -66,11 +66,11 @@ To navigate to the license usage dashboard within the Platform UI, select **[!UI
 
 ## [!UICONTROL Overview] tab {#overview-tab}
 
-The License Usage dashboard now displays two separate tables: **Core products** and **Add-ons**.
+The [!UICONTROL License Usage] dashboard displays two separate tables: **Core products** and **Add-ons**.
 
-- **Core products table**: This table lists the main Adobe Experience Platform products licensed by your organization. Each core product has its own metrics, usage tracking, and drill-through views at the sandbox level. These core products provide the key metrics for tracking, and any add-ons are included in these metrics.
+- **[!UICONTROL Core products] table**: This table lists the main Adobe Experience Platform products licensed by your organization. Each core product has its own metrics, usage tracking, and drill-through views at the sandbox level. These core products provide the key metrics for tracking, and any add-ons are included in these metrics.
 
-- **Add-ons table**: This table lists additional products whose license amounts are combined with the metrics supported by the core products. Add-ons do not have separate metrics but enhance the usage tracking of the core products they are associated with.
+- **[!UICONTROL Add-ons] table**: This table lists additional products whose license amounts are combined with the metrics supported by the core products. Add-ons do not have separate metrics but enhance the usage tracking of the core products they are associated with.
 
 | Column name  | Description |
 |---|---|
