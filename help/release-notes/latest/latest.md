@@ -44,9 +44,11 @@ Experience Platform provides multiple dashboards through which you can view impo
 
 | Feature | Description |
 | --- | --- |
+| License Usage Add-ons table | Gain granular visibility into license usage and manage your Platform resources with dedicated tables for core products and add-ons. Track and analyze key metrics for each core product with drill-through views at the sandbox level. Add-on metrics integrate seamlessly with core product metrics, offering a comprehensive view of usage. Enhanced visibility helps you optimize license management and align resources with organizational needs. See the [[!UICONTROL License Usage] dashboard guide](../../dashboards/guides/license-usage.md#overview-tab) for more details. |
 | Query Pro Mode - Global Filter Upgrades | Enhance analysis with Query Pro Mode's new date filter. Refine insights with dynamic date parameters in your SQL queries and filter data by specific time frames. Choose preset or custom date ranges with an intuitive UI, keeping dashboards relevant for all users. Simplify workflows, maintain precision, and make timely decisions. Read the [guide on creating date filters](../../dashboards/data-distiller/query-pro-mode/filters/global-filter.md) for more information. |
 | Query Pro Modes - Drill Throughs  | Unlock deeper insights with Query Pro Mode's Drill Through feature and seamlessly navigate from high-level charts to detailed dashboards. Use this feature to effortlessly move from summaries to in-depth analysis, and explore trends, customer behaviors, and KPIs. Automatic filter pass-throughs and multi-level drill-throughs keep data consistent, ensuring a smooth exploration. Simplify workflows, keep context, and speed up decisions. Read the [step-by-step guide on creating drill-throughs](../../dashboards/data-distiller/query-pro-mode/drill-through.md) for more information. |
 | Query Pro Mode - Advanced Table Attributes  | Use Query Pro Mode advanced table attributes to streamline data visualization, enhance workflow efficiency, and improve data clarity. Add automatic sorting, resizing, and pagination to your tables directly from custom dashboards. Sort columns to prioritize key data, resize for optimal readability, and navigate large datasets seamlessly without modifying SQL queries. Read the '[View More](../../dashboards/data-distiller/query-pro-mode/view-more.md)' guide to learn how to integrate these features and elevate your data insights. |
+| Total Data Volume | The "Average Profile Richness" metric has been replaced with the "Total Data Volume" metric. Total Data Volume refers to the total amount of data available that can be used with Real-Time Customer Profile for engagement and personalization workflows. More details about this change can be found in the [Total Data Volume guide](../../landing/license-usage-and-guardrails/total-data-volume.md). |
 
 {style="table-layout:auto"}
 
@@ -147,7 +149,8 @@ To learn more about Query Service, read the [Query Service overview](../../query
 **New or updated features**
 
 | Feature | Description |
-| --- | --- |
+| ------- | ----------- |
+| Streaming segmentation criteria update | Starting with the September 2024 release, the criteria for your audiences to be eligible for streaming segmentation have been updated. More information about these changes can be found in the [streaming segmentation eligibility criteria update](../../segmentation/eligibility-criteria-update.md). |
 | Unified Search implementation | Search behavior within Segment Builder will now use Unified Search. This allows for a more robust experience when managing and searching for audiences to reuse for segment membership. For more information on this change, read the [Segment Builder guide](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
 
 {style="table-layout:auto"}
