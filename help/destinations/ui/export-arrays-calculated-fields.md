@@ -1,22 +1,21 @@
 ---
-title: (Beta) Use calculated fields to export arrays in flat schema files
+title: Use calculated fields to export arrays in flat schema files
 type: Tutorial
 description: Learn how to use calculated fields to export arrays in flat schema files from Real-Time CDP to cloud storage destinations.
-badge: Beta
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 ---
-# (Beta) Use calculated fields to export arrays in flat schema files {#use-calculated-fields-to-export-arrays-in-flat-schema-files} 
+# Use calculated fields to export arrays in flat schema files {#use-calculated-fields-to-export-arrays-in-flat-schema-files} 
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
->title="(Beta) Export arrays support"
->abstract="Use the **Add calculated field** control to export simple arrays of int, string, or boolean values from Experience Platform to your desired cloud storage destination. Some limitations apply. View the documentation for extensive examples and supported functions."
+>title="Export arrays support"
+>abstract="<p>Use the **Add calculated field** control to export simple arrays of int, string, or boolean values from Experience Platform to your desired cloud storage destination.</p><p> All functions are generally available except `array_to_string`, `filterArray`, `transformArray`, and `flattenArray`. </p><p> Some limitations apply. View the documentation for extensive examples and supported functions.</p>"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="Examples"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="Known limitations"
 
 >[!AVAILABILITY]
 >
->* The functionality to export arrays through calculated fields is currently in Beta. The documentation and the functionality are subject to change.
+>* The functionality to export arrays through calculated fields is generally available, except for the functions `array_to_string`, `filterArray`, `transformArray`, and `flattenArray`, which are in Beta. Contact your Adobe representative if you would like to use those functions.
 
 Learn how to export arrays through calculated fields from Real-Time CDP in flat schema files to [cloud storage destinations](/help/destinations/catalog/cloud-storage/overview.md). Read this document to understand the use cases enabled by this functionality.
 
@@ -41,10 +40,11 @@ Other field types in Experience Platform include array fields. Read more about [
 
 ## Known limitations {#known-limitations}
 
-Note the following known limitations for the beta release of this functionality:
+Note the following known limitations that currently apply to this functionality:
 
 * Export to JSON or Parquet files with hierarchical schemas is not supported at this time. You can export arrays to flat schema CSV, JSON, and Parquet files only.
 * At this time, *you can only export simple arrays (or arrays of primitive values) to cloud storage destinations*. This means that you can export array objects which include string, int, or boolean values. You cannot export maps or arrays of maps or objects The calculated fields modal window only displays the arrays that you can export.
+* The functions `array_to_string`, `filterArray`, `transformArray`, and `flattenArray` are in Beta. Contact your Adobe representative if you would like to use those functions.
 
 ## Prerequisites {#prerequisites}
 
@@ -86,7 +86,7 @@ When ready, select **[!UICONTROL Next]** to proceed to the next step of the acti
 
 All the documented [Data Prep functions](/help/data-prep/functions.md) are supported when activating data to file-based destinations. 
 
-Note, however, that extensive use case descriptions and sample output information is currently provided for the following functions only in the beta release of calculated fields and array support for destinations: 
+Note, however, that extensive use case descriptions and sample output information is currently provided for the following functions only: 
 
 * `join`
 * `coalesce`
