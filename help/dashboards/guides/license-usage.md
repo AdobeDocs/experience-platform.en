@@ -36,7 +36,7 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Automated dataset expirations"
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Pseudonymous profiles data expiration"
 
-You can view important information about your organization's license usage through the Adobe Experience Platform [!UICONTROL License usage] dashboard. Information displayed here is captured during a daily snapshot of your Platform instance. 
+You can view important information about your organization's license usage through the Adobe Experience Platform [!UICONTROL License usage] dashboard. The information displayed here is captured during a daily snapshot of your Platform instance. 
 
 License usage reports provide a high degree of granularity over your license usage metrics. The dashboard provides usage metrics for each purchased product (and associated add-ons), the consolidated usage of metrics in all production or development sandboxes, and the usage metric from a specific sandbox. The following Experience Platform applications can be tracked with usage metrics: Real-Time Customer Data Platform, Adobe Journey Optimizer, and Customer Journey Analytics.
 
@@ -163,7 +163,7 @@ Consumption reporting for sandboxes is cumulative for all sandboxes of the same 
 >
 >1. Create a product profile in the Adobe Admin Console.
 >2. Under Permission in the Sandbox category, add all sandboxes you wish to view in the license usage dashboard.
->3. Under User Dashboard Permission category, add "View License Usage Dashboard" permission.
+>3. Under the User Dashboard Permission category, add "View License Usage Dashboard" permission.
 
 ## The [!UICONTROL Details] tab {#details-tab}
 
