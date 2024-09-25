@@ -109,8 +109,9 @@ Proactively manage and optimize your licensing resources based on insightful usa
 >
 >Predictions are refreshed on a monthly basis. The date of refresh is included in an info icon (![This info icon.](../images/license-usage/info-icon.png)) above the column title.
 
-To see a summary of a product's entitlement usage, select a product from the [!UICONTROL Overview] list.
+To see a summary of a product's entitlement usage, select a product from the [!UICONTROL Core products] table.
 
+<!-- update image ... -->
 ![The [!UICONTROL License usage] [!UICONTROL Overview] with a product and the predicted usage column highlighted.](../images/license-usage/product-predicted-usage.png)
 
 The summary tab appears. You can use the granular predictions available on the [!UICONTROL Summary] and [!UICONTROL Details] tabs to ensure informed decision-making for efficient license use.
@@ -119,6 +120,7 @@ The summary tab appears. You can use the granular predictions available on the [
 >
 >Please note that license usage predictions are approximations based on past usage. You are responsible for understanding your organization's actual usage and ensuring that usage does not go beyond the scope of your organization's license with Adobe.
 
+<!-- update image ... -->
 ![The summary view of a Platform Product with the predicted usage column highlighted.](../images/license-usage/summary-predicted-usage.png)
 
 The percentage of predicted usage is determined as follows:
