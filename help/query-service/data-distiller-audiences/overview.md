@@ -34,7 +34,7 @@ Use these parameters to define your SQL audience creation query:
 | `table_name`       | Name of the table and audience.                                  |
 | `primary_identity` | Specifies the primary identity column for the audience.          |
 | `identity_namespace` | Namespace of the identity.                                   |
-| `select_query`     | A SELECT statement defining the audience. The syntax of the SELECT query can be found in the [SELECT queries](../../sql/syntax.md#select-queries) section. |
+| `select_query`     | A SELECT statement defining the audience. The syntax of the SELECT query can be found in the [SELECT queries](../sql/syntax.md#select-queries) section. |
 
 {style="table-layout:auto"}
 
@@ -175,6 +175,6 @@ After reading this document, you have learned how to use the SQL audience extens
 
 Next, you could read the following documentation to further develop and optimize your Platform audience management strategies:
 
-- **Explore Audience Evaluation**: Learn about the [audience evaluation methods in Adobe Experience Platform](../../../segmentation/home.md#evaluate-segments): streaming segmentation for real-time updates, batch segmentation for scheduled or on-demand processing, and edge segmentation for instant evaluation on the Edge Network.
-- **Integrate with Destinations**: Read the guide on how to [export files on-demand to batch destinations](../../../destinations/ui/export-file-now.md) using the Platform Destinations UI.
-- **Review Audience Performance**: Analyze how your SQL-defined audiences perform across different channels. Use data insights to adjust and improve your audience definitions and targeting strategies. Read the document on [Audience insights](../../../dashboards/insights/audiences.md) to learn how to access and adapt the SQL queries for audience insights in Adobe Real-time Customer Data Platform. You can then create your own insights and transform raw data into actionable information by customizing the Audiences dashboard to effectively visualize and use these insights for better decision-making.
+- **Explore Audience Evaluation**: Learn about the [audience evaluation methods in Adobe Experience Platform](../../segmentation/home.md#evaluate-segments): streaming segmentation for real-time updates, batch segmentation for scheduled or on-demand processing, and edge segmentation for instant evaluation on the Edge Network.
+- **Integrate with Destinations**: Read the guide on how to [export files on-demand to batch destinations](../../destinations/ui/export-file-now.md) using the Platform Destinations UI.
+- **Review Audience Performance**: Analyze how your SQL-defined audiences perform across different channels. Use data insights to adjust and improve your audience definitions and targeting strategies. Read the document on [Audience insights](../../dashboards/insights/audiences.md) to learn how to access and adapt the SQL queries for audience insights in Adobe Real-time Customer Data Platform. You can then create your own insights and transform raw data into actionable information by customizing the Audiences dashboard to effectively visualize and use these insights for better decision-making.
