@@ -40,7 +40,7 @@ You can view important information about your organization's license usage throu
 
 License usage reports provide a high degree of granularity over your license usage metrics. The dashboard provides usage metrics for each purchased product, the consolidated usage of metrics in all production or development sandboxes, and the usage metric from a specific sandbox. The following Experience Platform applications can be tracked with usage metrics: Real-Time Customer Data Platform, Adobe Journey Optimizer, and Customer Journey Analytics.
 
-This guide outlines how to access and work with the license usage dashboard in the UI and provides more information regarding the visualizations displayed in the dashboard.  
+This guide outlines how to access and work with the license usage dashboard in the UI and provides more information regarding the visualizations displayed in the dashboard.
 
 For a general overview of the Platform UI, refer to the [Experience Platform UI guide](../../landing/ui-guide.md).
 
