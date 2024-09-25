@@ -25,26 +25,6 @@ To activate audiences to destinations, you must have successfully [connected to 
 
 ## Supported file formats for export {#supported-file-formats-export}
 
->[!CONTEXTUALHELP]
->id="dataset_dataflow_needs_schedule_end_date_header"
->title="Update the end date for this dataflow"
->abstract="Update the end date for this dataflow"
-
->[!CONTEXTUALHELP]
->id="dataset_dataflow_needs_schedule_end_date_body"
->title="Update the end date for this dataflow body"
->abstract="Because of recent updates to this destination, the dataflow now requires an end date. Adobe has set a default end date to May 1st 2025. Please update to your desired end date otherwise the data exports will stop on the default date."
-
->[!CONTEXTUALHELP]
->id="destinations_folder_name_template"
->title="Edit folder path"
->abstract="Use several provided macros to customize the folder path where dataset are exported."
-
->[!CONTEXTUALHELP]
->id="destinations_folder_name_template_preview"
->title="Dataset folder path preview"
->abstract="Get a preview of the folder structure that gets created in your storage location based on the macros you added in this window."
-
 The following file formats are supported when exporting audiences:
 
 * CSV

@@ -60,4 +60,3 @@ To open the [!UICONTROL Filters] dialog that lists all of your custom filters, s
 To clear all of your custom global filters, select **[!UICONTROL Clear all]** from the [!UICONTROL Filters] dialog.
 
 ![The Filters dialog with Clear all highlighted.](../../../images/query-pro-mode/clear-all.png)
-
