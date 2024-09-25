@@ -65,11 +65,11 @@ An organization can create a default merge policy for their organization to use 
 
 Each organization can create multiple merge policies related to a single XDM schema class, however they can only have one default merge policy declared for each class. For example, your organization could have a default merge policy related to the [!DNL XDM Individual Profile] class and a different default merge policy for a custom-built Product Inventory class. 
 
-If you create a new merge policy and set it as the default, the previous default merge policy will be automatically updated by the system to no longer be the default.
+If you create a new merge policy and set it as the default, the previous default merge policy will be automatically updated by the system to no longer be the default. Any audience created after this point in time will use this new default merge policy.
 
 >[!WARNING]
 >
->Profile counts and audiences with an existing associated default merge policy may be affected. Any audience that has a default merge policy applied will be updated to the new default merge policy.
+>Profile counts and audiences with an existing associated default merge policy may be affected. Additionally, audiences will **not** be automatically updated to use the new default merge policy, and will continue to use the previous merge policy.
 
 ## Next steps
 
