@@ -268,6 +268,12 @@ The following outlines a list of known limitations to consider when streaming up
 * The streaming upserts method does not support updating, replacing, and removing identities. New identities are created if they do not exist. Hence the `identity` operation must always be set to create. If an identity already exists, the operation is a no-op.
 * The streaming upserts method currently does not support [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) and [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
 
+### Performance guidelines {#performance-guidelines}
+
+Ingestion of upsert batches in a given day can be up to 10x slower than regular batches. You are recommended to **keep your upsert batches under two million records** in order to ensure an efficient runtime and to not block other batches from being processed in the sandbox.
+
+While you can certainly ingest batches that exceed two million records, the duration of your ingestion will be much longer, as you will be beholden to the constraints of small sandboxes.
+
 ## Next steps
 
 By reading this document, you should now understand how to stream upserts in [!DNL Data Prep] to send partial row updates to your [!DNL Real-Time Customer Profile] data, while also creating and linking identities with a single API request. For more information on other [!DNL Data Prep] features, please read the [[!DNL Data Prep] overview](./home.md). To learn how to use mapping sets within the [!DNL Data Prep] API, please read the [[!DNL Data Prep] developer guide](./api/overview.md).
