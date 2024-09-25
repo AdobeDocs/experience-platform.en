@@ -35,7 +35,7 @@ role: User,Developer
         - [AI/ML data pipeline enrichment end-to-end workflow](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
 - Data Distiller audiences {#data-distiller-audiences}
     - [Build external audiences using SQL](external-audiences/overview.md)
-- [Data Distiller Hypercubes](hypercubes.md)
+- [DATA DISTILLER HYPERCUBES](hypercubes.md)
 - Examples {#use-cases}
     - [Overview](use-cases/overview.md)
     - [Abandoned browse](use-cases/abandoned-browse.md)
