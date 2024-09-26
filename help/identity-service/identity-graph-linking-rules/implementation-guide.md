@@ -159,6 +159,10 @@ Once you have all of the items listed above, then you can begin ingesting your d
 
 For any feedback, use the **[!UICONTROL Beta feedback]** option in the Identity Service UI workspace.
 
+## Validate your graphs {#validate}
+
+Use the identity dashboard for insights on the state of your identity graphs, such as your overall identity count and graph count trends, identity count by namespace, and graph count by graph size. You can also use the identity dashboard to view trends on graphs with two or more identities, organized by namespace.
+
 ## Appendix {#appendix}
 
 Read this section for additional information that you can refer to when implementing your identity settings and unique namespaces.
