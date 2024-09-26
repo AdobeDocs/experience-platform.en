@@ -9,15 +9,16 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 
 Updates to existing features and documentation in Adobe Experience Platform:
 
-- [Alerts](#alerts)
-- [Dashboards](#dashboards)
-- [Data Prep](#data-prep)
-- [Destinations](#destinations)
-- [Experience Data Model (XDM)](#xdm)
-- [Identity Service](#identity-service)
-- [Query Service](#query-service)
-- [Segmentation Service](#segmentation-service)
-- [Sources](#sources)
+- [Adobe Experience Platform release notes](#adobe-experience-platform-release-notes)
+  - [Alerts {#alerts}](#alerts-alerts)
+  - [Dashboards {#dashboards}](#dashboards-dashboards)
+  - [Data Prep {#data-prep}](#data-prep-data-prep)
+  - [Destinations {#destinations}](#destinations-destinations)
+  - [Experience Data Model (XDM) {#xdm}](#experience-data-model-xdm-xdm)
+  - [Identity Service {#identity-service}](#identity-service-identity-service)
+  - [Query Service {#query-service}](#query-service-query-service)
+  - [Segmentation Service {#segmentation-service}](#segmentation-service-segmentation-service)
+  - [Sources {#sources}](#sources-sources)
 
 ## Alerts {#alerts}
 
@@ -132,7 +133,7 @@ Query Service allows you to use standard SQL to query data in Adobe Experience P
 | Feature | Description |
 | --- | --- |
 | Data Distiller Audiences | Easily create, manage, and activate audiences with the SQL audience extension in Experience Platform's Data Distiller. Define audience segments with SQL commands directly from your data lake, bypassing the need for raw data in profiles. Refine targeting strategies and automatically sync audiences to file-based destinations with this flexible, data-driven approach. Streamline workflows, optimize audience management, and unlock data's full potential. Read the [guide on using the SQL audience extension](../../query-service/data-distiller-audiences/overview.md) to elevate your audience strategies. |
-| Data Distiller Statistics - Hypercubes | Optimize big data analysis with Hypercubes. Handle complex calculations—like distinct counts and multi-dimensional analysis—without reprocessing historical data. Incrementally update data, streamline workflows, and cut processing time while maintaining accuracy and efficiency. Get faster, scalable, and cost-effective insights that transform decision-making. Explore the [guide on using Hypercubes](../../query-service/hypercubes.md) to unlock advanced analysis. |
+| Data Distiller Statistics - Hypercubes | Optimize big data analysis with Hypercubes. Handle complex calculations—like distinct counts and multi-dimensional analysis—without reprocessing historical data. Incrementally update data, streamline workflows, and cut processing time while maintaining accuracy and efficiency. Get faster, scalable, and cost-effective insights that transform decision-making. Explore the [guide on using Hypercubes](../../query-service/hypercubes/overview.md) to unlock advanced analysis. |
 | Query Editor Object browser | Boost query efficiency with the new Object Browser in the Query Editor. Quickly search, filter, and access datasets to write and refine queries faster. With real-time schema updates and instant table metadata, you can streamline workflows, cut navigation time, and enhance your query experience. Unlock your data's potential and optimize analysis. Read the [guide on using the Object Browser](../../query-service/ui/user-guide.md#object-browser) for more information. |
 | Compute Hours | Gain control over resource usage with the newly visible Compute Hours metric for scheduled queries. View Comput Hours at the query execution level to monitor and optimize resource use for CTAS/ITAS batch queries. Track start times, completion status, and compute time for each query run. Fine-tune performance and reduce costs effortlessly. Read the [guide on Compute Hours](../../query-service/ui/query-schedules.md#compute-hours-at-job-level) for information on how to maximize your query efficiency. |
 
