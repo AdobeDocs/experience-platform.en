@@ -53,7 +53,7 @@ Some [!DNL Acxiom Audience Distribution] destinations require additional informa
 To configure details for the destination, fill in the fields below.
 - **Segment Category**: The target category or vertical that your segment falls into. Example: financial services, automotive, health, etc.
 	
-![LG Ads destination details](../../assets/catalog/data-partner/acxiom/lg_ads_destination_details.png)
+![LG Ads destination details](../../assets/catalog/advertising/acxiom-audience-distribution/lg_ads_destination_details.png)
 
 
 ## Activate audiences to this destination {#activate} 
@@ -85,7 +85,7 @@ For the [!DNL Acxiom Audience Distribution] destination to correctly receive the
 
 
 In the **[!UICONTROL Source Field]** column, enter the name of each of the source attributes that you want to map to the corresponding target field, or select the arrow icon to open the **[!UICONTROL  Select source field]** screen.<br>
-![Mapping screen](../../assets/catalog/data-partner/acxiom/mapping_screen.png)
+![Mapping screen](../../assets/catalog/advertising/acxiom-audience-distribution/mapping_screen.png)
 
 After you have mapped all the fields, select **[!UICONTROL Next]**.
 
@@ -98,7 +98,7 @@ Once you have completed all the steps above, you have an opportunity to review y
 
 If you are happy with the results, select **[!UICONTROL Finish]** to activate your destination. 
 
-![Review your audience](../../assets/catalog/data-partner/acxiom/review_audience.png)
+![Review your audience](../../assets/catalog/advertising/acxiom-audience-distribution/review_audience.png)
 
 
 
