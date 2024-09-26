@@ -69,6 +69,10 @@ You now have the ability to share packages between your organization and the sou
 
 ### Share packages to partner organizations
 
+>[!NOTE]
+>
+>Only packages with the status **Published** can be shared.
+
 To share a package to an approved partner organization, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Packages]** tab. Next, select the ellipsis (`...`) next to the package, and then select **[!UICONTROL Share package]** from the dropdown menu.
 
 ![List of packages showing the dropdown menu with Share package highlighted.](../images/ui/sandbox-tooling/private-share-package.png)
@@ -79,7 +83,7 @@ In the **[!UICONTROL Share package]** dialog, select the package to share from t
 
 >[!TIP]
 >
->It is possible to select more than one package. Selected packages will show up beneath the [!UICONTROL Share settings] dropdown.
+>It is possible to select more than one organization. Selected organizations will show up beneath the [!UICONTROL Share settings] dropdown.
 
 ## Next steps
 
