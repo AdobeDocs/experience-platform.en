@@ -158,6 +158,10 @@ The following table provides descriptions of each column available in the detail
 
 {style="table-layout:auto"}
 
+>[!NOTE]
+>
+>Compute Hours data is available from 08/15/2024 onwards. Data before this date will appear as 'Not Available'.
+
 See the [monitor scheduled queried guide](./monitor-queries.md#inline-actions) for complete information on how to monitor the status of all query jobs through the UI. 
 
 Select a **[!UICONTROL Query run ID]** from the list to navigate to the query run overview. For a full breakdown of the information available on the [query run overview](./monitor-queries.md#query-run-overview), see the monitor scheduled queries documentation.
