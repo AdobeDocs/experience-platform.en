@@ -160,7 +160,8 @@ The following table provides descriptions of each column available in the detail
 
 >[!NOTE]
 >
->Compute Hours data is available from 08/15/2024 onwards. Data before this date will appear as 'Not Available'.
+>Compute Hours data is available from 08/15/2024. Data before this date appears as 'Not Available'.
+
 
 See the [monitor scheduled queried guide](./monitor-queries.md#inline-actions) for complete information on how to monitor the status of all query jobs through the UI. 
 
