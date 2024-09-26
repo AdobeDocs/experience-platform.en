@@ -59,9 +59,14 @@ To configure details for the destination, fill in the fields below.
 ## Activate audiences to this destination {#activate} 
 >[!IMPORTANT]
 >
->- The [!DNL Acxiom Audience Distribution] destination only supports full file exports.
+>- To activate data, you need the **View Destinations**, **Activate Destinations**, **View Profiles**, and **View Segments** ![access control permissions](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). Read the ![access control overview](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) or contact your product administrator to obtain the required permissions.<br>
+>- To export identities, you need the **View Identity Graph** ![access control permission](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions).
 
+Read ![Activate audience data to batch profile export destinations](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) for instructions on activating audiences to this destination.
 
+>[!NOTE]
+>
+>The [!DNL Acxiom Audience Distribution] destination only supports full file exports.
 
 
 ### Map attributes and identities {#map}
@@ -81,7 +86,7 @@ For the [!DNL Acxiom Audience Distribution] destination to correctly receive the
 |State|State abbreviation of primary residence|Yes|8|2|
 |Zip Code|Full zip code of primary residence|Yes|9|10|
 |Email|Primary email By default, this field is used as a deduplication key to make the records unique|No|10|255|
-|Phone|Phone number of individual (area code + number)<br> By default, this field is used as a deduplication key to make the records unique.|N|11|10|
+|Phone|Phone number of individual (area code + number)<br> By default, this field is used as a deduplication key to make the records unique.|No|11|10|
 
 
 In the **[!UICONTROL Source Field]** column, enter the name of each of the source attributes that you want to map to the corresponding target field, or select the arrow icon to open the **[!UICONTROL  Select source field]** screen.<br>
@@ -90,7 +95,6 @@ In the **[!UICONTROL Source Field]** column, enter the name of each of the sourc
 After you have mapped all the fields, select **[!UICONTROL Next]**.
 
 If you are not using [!DNL Adobe’s] standard schema, see the [Query Service UI guide](../../../query-service/ui/overview.md) documentation for information on how to use the query service to populate the [!DNL Adobe] standard schema with your field names. 
-
 
 
 ### Review {#review}
