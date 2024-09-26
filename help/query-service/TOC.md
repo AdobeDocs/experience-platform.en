@@ -33,7 +33,9 @@ role: User,Developer
         - [Engineer features for ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
         - [Export data to ML environments](data-distiller/ml-feature-pipelines/export-data.md)
         - [AI/ML data pipeline enrichment end-to-end workflow](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
-- [Data Distiller Hypercubes](hypercubes.md)
+- Data Distiller audiences {#data-distiller-audiences}
+    - [Build external audiences using SQL](data-distiller-audiences/overview.md)
+- [DATA DISTILLER HYPERCUBES](hypercubes.md)
 - Examples {#use-cases}
     - [Overview](use-cases/overview.md)
     - [Abandoned browse](use-cases/abandoned-browse.md)
