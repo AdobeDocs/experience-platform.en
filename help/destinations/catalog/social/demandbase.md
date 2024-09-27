@@ -1,6 +1,8 @@
 ---
 title: Demandbase Destination
 description: Use this documentation to integrate and activate profiles for Demandbase campaigns. This destination enables targeting, personalization, and suppression based on account audiences using Adobe Experience Platform.
+badgeB2B: label="B2B Edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="B2P Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 ---
 
 # Demandbase connection {#demandbase}
@@ -76,11 +78,7 @@ Now you're ready to activate your audiences within Demandbase.
 
 Read [Activate account audiences](/help/destinations/ui/activate-account-audiences.md) for instructions on activating account audiences to this destination.
 
-## API Throttling and Limits
-
-Demandbase applies API throttling limits. You can expect up to 1200 API calls per period (86400 seconds). Work with Demandbase to confirm the API limit for your use case.
-
 ## Additional notes and important callouts
 
 * If an account audience with the same name was activated earlier to Demandbase, you cannot activate it again through a different dataflow to the Demandbase destination.
-* Your exported accounts should typically appear within your Demandbase lists within less than an hour of the export being completed from Experience Platform. Use the [monitoring functionality](/help/dataflows/ui/monitor-destinations.md) in Experience Platform to keep track of exported dataflows.
+* If you have exported audiences to Demandbase and the exports are successful in Experience Platform, yet not all of the data reaches Demandbase, you might have encountered API throttling on the Demandbase side. Reach out to them for clarification.
