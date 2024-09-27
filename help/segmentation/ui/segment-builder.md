@@ -26,13 +26,13 @@ The basic building blocks of segment definitions are attributes and events. In a
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_summarydata"
 >title="Summary data"
->abstract="Summary data only appears for profile attributes and does <b>not</b> appear for either event or audience attributes.<br/><br/>Summary data for profile attributes may not appear under the following circumstances: <ol><li>Some of the values of the attribute are more than 100 characters long.</li><li>There are more than 3000 unique values for the attribute.</li><li>More than 10% of the values are unique values.</li></ol>"
+>abstract="Summary data only appears for profile attributes and does <b>not</b> appear for either event or audience attributes.<br/><br/>Summary data for profile attributes may not appear under the following circumstances: <ol><li>Some of the values of the attribute are more than 100 characters long.</li><li>There are more than 3000 unique values for the attribute.</li></ol>"
 
 >[!NOTE]
 >
 >If you select the information bubble of an attribute, you can view the distribution of values, also known as the summary data, of the field. These are **only** available in the attributes tab, and are not available for use in the events or audiences tab.
 >
->Summary data will appear if the attribute meets the following criteria: All the values of the attribute are 100 characters or fewer, there are 3000 or fewer unique values for the attribute, and if 10% or fewer of the values are unique.
+>Summary data will appear if the attribute meets the following criteria: All the values of the attribute are 100 characters or fewer and there are 3000 or fewer unique values for the attribute.
 >
 >However, an attribute will **not** have summary data if it is multi-entity data linked to the profile through a relationship. An example of this would be `-product-color`.
 
