@@ -34,7 +34,7 @@ The basic building blocks of segment definitions are attributes and events. In a
 >
 >Summary data will appear if the attribute meets the following criteria: All the values of the attribute are 100 characters or fewer and there are 3000 or fewer unique values for the attribute.
 >
->However, an attribute will **not** have summary data if it is multi-entity data linked to the profile through a relationship. An example of this would be `-product-color`.
+>However, an attribute will **not** have summary data if it is multi-entity data linked to the profile through a relationship. For example, if you have a custom schema called `Vehicle`, the **properties** within the `Vehicle` schema will **not** have summary data.
 
 You can see these building blocks in the **[!UICONTROL Fields]** section on the left side of the [!DNL Segment Builder] workspace. **[!UICONTROL Fields]** contains a tab for each of the main building blocks: "[!UICONTROL Attributes]", "[!UICONTROL Events]", and "[!UICONTROL Audiences]".
 
