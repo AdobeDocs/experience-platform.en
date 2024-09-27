@@ -9,7 +9,7 @@ badgeB2P: label="B2P Edition" type="Positive" url=" https://experienceleague.ado
 
 >[!AVAILABILITY]
 >
->This destination connector is available to Real-Time CDP B2B and B2P customers. More information at this [link](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview#rtcdp-editions).
+>>The functionality to activate account audiences to the Demandbase destination is available for companies purchasing the [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) and [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) editions of Real-Time Customer Data Platform.
 
 Activate profiles for your Demandbase campaigns for audience targeting, personalization, and suppression, based on [account audiences](/help/segmentation/ui/account-audiences.md) .
 
