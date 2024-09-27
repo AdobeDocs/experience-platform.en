@@ -14,16 +14,89 @@ Read this document for a step-by-step by guide that you can follow when implemen
 
 Step-by-step outline:
 
-1. [Create the necessary identity namespaces](#namespace)
-2. [Use the graph simulation tool to familiarize yourself with the identity optimization algorithm](#graph-simulation)
-3. [Use the identity settings tool to designate your unique namespaces and configure priority rankings for your namespaces](#identity-settings)
-4. [Create an Experience Data Model (XDM) schema](#schema)
-5. [Create a dataset](#dataset)
-6. [Ingest your data to Experience Platform](#ingest)
 
-## Pre-implementation prerequisites
+1. [Complete prerequisites for implementation](#prerequisites-for-implementation)
+2. [Create the necessary identity namespaces](#namespace)
+3. [Use the graph simulation tool to familiarize yourself with the identity optimization algorithm](#graph-simulation)
+4. [Use the identity settings tool to designate your unique namespaces and configure priority rankings for your namespaces](#identity-settings)
+5. [Create an Experience Data Model (XDM) schema](#schema)
+6. [Create a dataset](#dataset)
+7. [Ingest your data to Experience Platform](#ingest)
 
-Before you can get started, you must first ensure that authenticated events in your system always contain a person identifier.
+## Prerequisites for implementation {#prerequisites-for-implementation}
+
+This section outlines prerequisite steps that you must complete prior to implementing identity graph linking rules to your data.
+
+### Unique namespace
+
+#### Single person namespace requirement {#single-person-namespace-requirement}
+
+You must ensure that the unique namespace with the highest priority is always present in every profile. Doing so allows Identity Service to detect the appropriate person identifier in a given graph. 
+
++++Select to view an example of a graph without a singular person identifier namespace
+
+Without a unique namespace to represent your person identifiers, you may end up with a graph that links to disparate person identifiers to the same ECID. In this example, both B2BCRM and B2CCRM are linked to the same ECID at the same time. This graph suggests that Tom, using his B2C login account, shared a device with Summer, using her B2B login account. However, the system will recognize that this is one profile (graph collapse).
+
+![A graph scenario where two person identifiers are linked to the same ECID.](../images/graph-examples/multi_namespaces.png)
+
++++
+
++++Select to view an example of a graph with a single person identifier namespace
+
+Given a unique namespace, (in this case, a CRMID instead of two disparate namespaces), Identity Service is able to discern the person identifier that was last associated with the ECID. In this example, because a unique CRMID exists, Identity Service is able to recognize a "shared device" scenario, where two entities are sharing the same device.
+
+![A shared device graph scenario, where two person identifiers are linked to the same ECID, but the older link is removed.](../images/graph-examples/crmid_only_multi.png)
+
++++
+
+### Namespace priority configuration
+
+If you are using the [Adobe Analytics source connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md) to ingest data, then you must give your ECIDs a higher priority than Adobe Analytics ID (AAID) because Identity Service blocks AAID. By prioritizing ECID, you can instruct Real-Time Customer Profile to store unauthenticated events to ECID instead of AAID.
+
+### XDM experience events
+
+* During your pre-implementation process, you must ensure that the authenticated events that your system will send to Experience Platform always contain a person identifier, such as CRMID.
+* Do not send an empty string as an identity value when sending events using XDM experience events. Doing so will result in system errors. 
+
++++Select to view an example of a payload with an empty string
+
+The following example returns an error because the identity value for `Phone` is submitted as an empty string.
+
+```json
+    "identityMap": {
+        "ECID": [
+            {
+                "id": "24165048599243194405404369473457348936",
+                "primary": false
+            }
+        ],
+        "Phone": [
+            {
+                "id": "",
+                "primary": true
+            }
+        ]
+    }
+```
+
++++
+
+You must ensure that you have a fully qualified identity when sending events using XDM experience events.
+
++++Select to view an example of an event with  a fully qualified identity
+
+```json
+    "identityMap": {
+        "ECID": [
+            {
+                "id": "24165048599243194405404369473457348936",
+                "primary": false
+            }
+        ]
+    }
+```
+
++++
 
 ## Set permissions {#set-permissions}
 
@@ -66,12 +139,6 @@ For instructions on how to create a dataset, read the [dataset UI guide](../../c
 
 ## Ingest your data {#ingest}
 
->[!WARNING]
->
->* During your pre-implementation process, you must ensure that the authenticated events that your system will send to Experience Platform always contain a person identifier, such as CRMID.
->* During implementation, you must ensure that the unique namespace with the highest priority is always present in every profile. See the [appendix](#appendix) for examples of graph scenarios that are solved by ensuring that every profile contains the unique namespace with the highest priority.
->* If you are using the [Adobe Analytics source connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md) to ingest data, then you must give your ECIDs a higher priority than AAID because Identity Service blocks AAID. By prioritizing ECID, you can instruct Real-Time Customer Profile to store unauthenticated events to ECID instead of AAID.
-
 By this point, you should have the following:
 
 * The necessary permissions to access Identity Service features.
@@ -92,29 +159,15 @@ Once you have all of the items listed above, then you can begin ingesting your d
 
 For any feedback, use the **[!UICONTROL Beta feedback]** option in the Identity Service UI workspace.
 
+## Validate your graphs {#validate}
+
+Use the identity dashboard for insights on the state of your identity graphs, such as your overall identity count and graph count trends, identity count by namespace, and graph count by graph size. You can also use the identity dashboard to view trends on graphs with two or more identities, organized by namespace. 
+
+Select the ellipses (`...`) and then select **[!UICONTROL View more]** for further information and to validate that there are no collapsed graphs.
+
 ## Appendix {#appendix}
 
 Read this section for additional information that you can refer to when implementing your identity settings and unique namespaces.
-
-### Single person namespace requirement {#single-person-namespace-requirement}
-
-You must ensure that a single namespace is used across all profiles that represents a person. Doing so, allows Identity Service to detect the appropriate person identifier in a given graph. 
-
->[!BEGINTABS]
-
->[!TAB Without a singular person identifier namespace]
-
-Without a unique namespace to represent your person identifiers, you may end up with a graph that links to disparate person identifiers to the same ECID. In this example, both B2BCRM and B2CCRM are linked to the same ECID at the same time. This graph suggests that Tom, using his B2C login account, shared a device with Summer, using her B2B login account. However, the system will recognize that this is one profile (graph collapse).
-
-![A graph scenario where two person identifiers are linked to the same ECID.](../images/graph-examples/multi_namespaces.png)
-
->[!TAB With a singular person identifier namespace]
-
-Given a unique namespace, (in this case, a CRMID instead of two disparate namespaces), Identity Service is able to discern the person identifier that was last associated with the ECID. In this example, because a unique CRMID exists, Identity Service is able to recognize a "shared device" scenario, where two entities are sharing the same device.
-
-![A shared device graph scenario, where two person identifiers are linked to the same ECID, but the older link is removed.](../images/graph-examples/crmid_only_multi.png)
-
->[!ENDTABS]
 
 ### Dangling loginID scenario {#dangling-loginid-scenario}
 
