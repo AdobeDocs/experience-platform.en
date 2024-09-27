@@ -191,6 +191,7 @@ role: Admin,User
         * [Pega Profile connection](./catalog/personalization/pega-profile.md)
     * Social destinations{#social}
         * [Social destinations overview](./catalog/social/overview.md)
+        * [Demandbase connection](./catalog/social/demandbase.md)
         * [Facebook connection](./catalog/social/facebook.md)
         * [LinkedIn Matched Audiences connection](./catalog/social/linkedin.md)
         * [TikTok connection](./catalog/social/tiktok.md)
