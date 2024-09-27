@@ -6,7 +6,7 @@ description: Learn how to use hypercubes in Adobe Experience Platform Query Serv
 
 >[!AVAILABILITY]
 >
->This functionality is only available to users who have purchased the [Data Distiller SKU](./data-distiller/overview.md). Contact your Adobe representative for more information.
+>This functionality is only available to users who have purchased the [Data Distiller SKU](../data-distiller/overview.md). Contact your Adobe representative for more information.
 
 Learn how to use hypercubes in Adobe Experience Platform's Experience Query Service to perform advanced data analysis with enhanced efficiency. This document covers how to use advanced functions from the [[!DNL Apache Datasketches] library](https://datasketches.apache.org/) to handle distinct counts and complex calculations incrementally, without having to reprocess historical data each time.
 
@@ -40,13 +40,13 @@ Query Service can compress millions or billions of data points (for example, use
 
 The diagram below illustrates how Commerce, Product Info, and Web dimension ExperienceEvents are processed into sketches, which are then used to approximate unique counts.
 
-![Infographic showing the creation of sketches using Query Service. The diagram illustrates how ExperienceEvents with Commerce, Product Info, and Web dimensions are processed into sketches, which are then used to approximate unique counts.](./images/hypercubes/hypercube-overview.png)
+![Infographic showing the creation of sketches using Query Service. The diagram illustrates how ExperienceEvents with Commerce, Product Info, and Web dimensions are processed into sketches, which are then used to approximate unique counts.](../images/hypercubes/hypercube-overview.png)
 
 ### Merge sketches to make data analysis faster and easier
 
 To avoid recalculating and enhance processing speed, you can merge sketches from different categories or groups. Query Service also simplifies the design by organizing your data into a hypercube, where each row becomes a summary of its partition (a collection of dimensions) alongside the sketch column. Each row of the hyper-cube contains the dimension combination but does not have any raw data. When executing a query, specify the dimensional columns you want to use for building additive metrics and merge the sketches for those rows.
 
-![The diagram shows how sketches from different ExperienceEvents are merged to create approximate unique counts across various dimensions.](./images/hypercubes/merge-sketches.png)
+![The diagram shows how sketches from different ExperienceEvents are merged to create approximate unique counts across various dimensions.](../images/hypercubes/merge-sketches.png)
 
 ### Cost-effectiveness {#cost-effectiveness}
 
@@ -364,6 +364,6 @@ Currently, sketches cannot be updated once created. Future updates will introduc
 
 By reading this document, you now know how to use hypercubes and associated sketch functions to perform efficient data processing for complex, multi-dimensional analyses without the need to reprocess historical data. This approach saves time, reduces costs, and offers the flexibility required for real-time, interactive queries, making it a valuable tool for big data analysis in Adobe Experience Platform.
 
-Next, explore other key concepts such as [incremental loading](./key-concepts/incremental-load.md) and [data dedupliction](./key-concepts/deduplication.md) to deepen your understanding of how to use these functions effectively for your specific data needs.
+Next, explore other key concepts such as [incremental loading](../key-concepts/incremental-load.md) and [data dedupliction](../key-concepts/deduplication.md) to deepen your understanding of how to use these functions effectively for your specific data needs.
 
 
