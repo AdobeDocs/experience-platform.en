@@ -84,6 +84,10 @@ Experience Platform automatically sets a default schedule for each file export. 
 
 ![Edit schedule control highlighted in the Scheduling step.](../assets/ui/activate-batch-profile-destinations/edit-default-schedule.png)
 
+To edit multiple schedules at the same time, select the audiences by using the check boxes on the left side of the screen, then select **[!UICONTROL Edit schedule]**. The schedule you configure will then be applied to all the exported files for the selected audiences.
+
+![Image of the Experience Platform user interface showing the edit schedule option for multiple selected audiences.](../assets/ui/activate-batch-profile-destinations/edit-schedule.png)
+
 >[!TIP]
 >
 >You can edit audience activation schedules for existing activation flows from the **[!UICONTROL Activation data]** page. See the documentation on [bulk editing activation schedules](../ui/destination-details-page.md#bulk-edit-schedule) for details.
@@ -174,7 +178,7 @@ Select **[!UICONTROL Export incremental files]** to trigger an export where the 
 
 4. Select **[!UICONTROL Create]** to save the schedule.
 
-### Configure file names
+### Configure file names {#configure-file-names}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"
@@ -208,6 +212,10 @@ The destination name and audience ID cannot be removed from file names. In addit
 | **[!UICONTROL Sandbox name]** | The ID of the sandbox you use to export the audience. |
 
 {style="table-layout:auto"}
+
+To edit multiple file names at the same time, select the audiences by using the check boxes on the left side of the screen, then select **[!UICONTROL Edit file name]**. The file name options you configure will then be applied to all the exported files for the selected audiences.
+
+![Image of the Experience Platform user interface showing the edit file name option for multiple selected audiences.](../assets/ui/activate-batch-profile-destinations/edit-file-name.png)
 
 Select **[!UICONTROL Apply changes]** to confirm your selection.
 
@@ -320,7 +328,7 @@ Let's consider the following two profiles.
         "id": "johndoe_1@example.com"
       },
       {
-        "id": "johndoe_2@example.com"
+        "id": "doejohn_1@example.com"
       }
     ]
   },
@@ -351,10 +359,10 @@ Let's consider the following two profiles.
   "identityMap": {
     "Email": [
       {
-        "id": "johndoe_1@example.com"
+        "id": "johndoe_2@example.com"
       },
       {
-        "id": "johndoe_2@example.com"
+        "id": "doejohn_2@example.com"
       }
     ]
   },
@@ -394,8 +402,8 @@ Assuming deduplication by the [!DNL Email] namespace, the export file would cont
 
 |Email*|personalEmail|firstName|lastName|
 |---|---|---|---|
-|johndoe_1@example.com|johndoe@example.com|John|D|
 |johndoe_2@example.com|johndoe@example.com|John|D|
+|doejohn_2@example.com|johndoe@example.com|John|D|
 
 ### Deduplication use case 3: deduplication based on a single profile attribute {#deduplication-use-case-3}
 
@@ -511,7 +519,6 @@ File exports vary in the following ways, depending on whether `segmentMembership
 >id="platform_destinations_activate_exclude_enrichment_attributes"
 >title="Exclude enrichment attributes"
 >abstract="Enable this option to export the profiles from the selected custom uploaded audiences to your destination, while excluding all of their attributes."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#select-enrichment-attributes" text="Learn more in documentation"
 
 >[!IMPORTANT]
 >
