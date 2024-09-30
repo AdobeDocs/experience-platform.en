@@ -71,6 +71,7 @@ role: Admin,User
         * [Bing Ads Universal Event Tracking (UET) extension](./catalog/advertising/bing-ads.md)
         * [Branch extension](./catalog/advertising/branch.md)
         * [(Beta) Criteo connection](./catalog/advertising/criteo.md)
+        * [Demandbase connection](./catalog/advertising/demandbase.md)
         * [DoubleClick Floodlight (Beta) extension](./catalog/advertising/doubleclick-floodlight.md)
         * [Facebook Pixel extension](./catalog/advertising/facebook-pixel.md)
         * [Flashtalking OneTag extension](./catalog/advertising/flashtalking.md)
@@ -192,7 +193,6 @@ role: Admin,User
         * [Pega Profile connection](./catalog/personalization/pega-profile.md)
     * Social destinations{#social}
         * [Social destinations overview](./catalog/social/overview.md)
-        * [Demandbase connection](./catalog/social/demandbase.md)
         * [Facebook connection](./catalog/social/facebook.md)
         * [LinkedIn Matched Audiences connection](./catalog/social/linkedin.md)
         * [TikTok connection](./catalog/social/tiktok.md)
