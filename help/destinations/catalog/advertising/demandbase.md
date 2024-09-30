@@ -1,6 +1,6 @@
 ---
 title: Demandbase connection
-description: Use this destination to activate your account audiences for Account-Based Marketing (ABM) use cases, including top-of-funnel campaigns and lead nurturing through Demandbase's ad-tech DSP.
+description: Use this destination to activate your account audiences for Account-Based Marketing (ABM) use cases. Advertise to relevant personas and roles in your target accounts via DemandBase's B2B Demand Side Platform (DSP). Target accounts can also be enriched with Demandbase third-party data, for other downstream use-cases in marketing and sales.
 badgeB2B: label="B2B Edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="B2P Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 ---
@@ -15,7 +15,7 @@ Activate profiles for your Demandbase campaigns for audience targeting, personal
 
 ## Use case {#use-case}
 
-Use this destination to activate your account audiences for Account-Based Marketing (ABM) use cases, including top-of-funnel campaigns and lead nurturing through Demandbase's ad-tech DSP.
+Use this destination to activate your account audiences for Account-Based Marketing (ABM) use cases. Advertise to relevant personas and roles in your target accounts via DemandBase's B2B Demand Side Platform (DSP). Target accounts can also be enriched with Demandbase third-party data, for other downstream use-cases in marketing and sales.
 
 For instance, leverage Demandbase's ad-tech DSP to target specific personas or roles within key accounts for top-of-funnel lead generation, or create and grow buying groups. Use the Demandbase destination to explore other use cases to target your accounts effectively.
 
