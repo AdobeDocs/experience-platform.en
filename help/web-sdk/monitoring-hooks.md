@@ -3,17 +3,15 @@ title: Monitoring hooks for Adobe Experience Platform Web SDK
 description: Learn how to use the monitoring hooks provided by the Adobe Experience Platform Web SDK to debug your implementation and capture Web SDK logs.
 ---
 
-# Personalization monitoring hooks for Web SDK
+# Monitoring hooks for Web SDK
 
 The Adobe Experience Platform Web SDK includes monitoring hooks which you can use to monitor various system events. These tools are useful for developing your own debugging tools and to capture Web SDK logs.
 
-You can also use these monitoring hooks to read Adobe Target response tokens when personalization is rendered.
-
-These monitoring hooks are a programmatic way to handle events that are logged when debugging is enabled.
+The Web SDK triggers the monitoring functions regardless of whether you have enabled [debugging](commands/configure/debugenabled.md).
 
 ## `onInstanceCreated` {#onInstanceCreated}
 
-This callback function is triggered when you have successfully created a new Web SDK instance. See the sample below for details about what this function returns.
+This callback function is triggered when you have successfully created a new Web SDK instance. See the sample below for details about the function parameters.
 
 ```js
 onInstanceCreated(data) {
@@ -22,14 +20,14 @@ onInstanceCreated(data) {
 }
 ```
 
-|Parameter | Description |  
-|---------|----------|
-| `data.instanceName` | The name of the global variable where the Web SDK instance is stored. | 
-| `data.instance` | The instance function used to call Web SDK commands. |
+|Parameter | Type |Description | 
+|---------|----------|----------|
+| `data.instanceName` | | The name of the global variable where the Web SDK instance is stored. | 
+| `data.instance` | | The instance function used to call Web SDK commands. |
 
 ## `onInstanceConfigured` {#onInstanceConfigured}
 
-This callback function is triggered by the Web SDK when the [`configure`](commands/configure/overview.md) command is successfully resolved. See the sample below for details about what this function returns.
+This callback function is triggered by the Web SDK when the [`configure`](commands/configure/overview.md) command is successfully resolved. See the sample below for details about the function parameters.
 
 ```js
  onInstanceConfigured(data) {
@@ -38,14 +36,14 @@ This callback function is triggered by the Web SDK when the [`configure`](comman
  }
 ```
 
-|Parameter | Description |  
-|---------|----------|
-| `data.instanceName` | The name of the global variable where the Web SDK instance is stored. | 
-| `data.config` | The configuration you used for your Web SDK instance. These are the options passed to the [`configure`](commands/configure/overview.md) command with all the default values added. | 
+|Parameter | Type |Description | 
+|---------|----------|----------|
+| `data.instanceName` | | The name of the global variable where the Web SDK instance is stored. | 
+| `data.config` | | The configuration you used for your Web SDK instance. These are the options passed to the [`configure`](commands/configure/overview.md) command with all the default values added. | 
 
 ## `onBeforeCommand` {#onBeforeCommand}
 
-This callback function is triggered by Web SDK before any other command is executed. You can use this function to retrieve the configuration options of a specific command. See the sample below for details about what this function returns.
+This callback function is triggered by Web SDK before any other command is executed. You can use this function to retrieve the configuration options of a specific command. See the sample below for details about the function parameters.
 
 ```js
 onBeforeCommand(data) {
@@ -55,16 +53,16 @@ onBeforeCommand(data) {
 }
 ```
 
-|Parameter | Description |  
-|---------|----------|
-| `data.instanceName` | The name of the global variable where the Web SDK instance is stored. |
-| `data.commandName` | The name of the Web SDK command before which this function is executed. |
-| `data.options` | The options passed to the Web SDK command before this function is executed. |
+|Parameter | Type |Description | 
+|---------|----------|----------|
+| `data.instanceName` | | The name of the global variable where the Web SDK instance is stored. |
+| `data.commandName` | | The name of the Web SDK command before which this function is executed. |
+| `data.options` | | The options passed to the Web SDK command. |
 
 
 ## `onCommandResolved` {#onCommandResolved}
 
-This callback function is triggered before resolving command promise. You can use this function to see the command options and result. See the sample below for details about what this function returns.
+This callback function is triggered when resolving command promises. You can use this function to see the command options and result. See the sample below for details about the function parameters.
 
 ```js
 onCommandResolved(data) {
@@ -75,16 +73,16 @@ onCommandResolved(data) {
 },
 ```
 
-|Parameter | Description |  
-|---------|----------|
-| `data.instanceName` | The name of the global variable where the Web SDK instance is stored. |
-| `data.commandName` | The name of the executed Web SDK command. |
-| `data.options` | The options passed to the Web SDK command. |
-| `data.result` | The result of the Web SDK command. |
+|Parameter | Type |Description | 
+|---------|----------|----------|
+| `data.instanceName` | | The name of the global variable where the Web SDK instance is stored. |
+| `data.commandName` | | The name of the executed Web SDK command. |
+| `data.options` | | The options passed to the Web SDK command. |
+| `data.result` | | The result of the Web SDK command. |
 
 ## `onCommandRejected` {#onCommandRejected}
 
-This callback function is triggered before a command promise is rejected and it contains information about the cause of the error. See the sample below for details about what this function returns.
+This callback function is triggered before a command promise is rejected and it contains information about the reason why the command was rejected. See the sample below for details about the function parameters.
 
 ```js
 onCommandRejected(data) {
@@ -95,16 +93,16 @@ onCommandRejected(data) {
 }
 ```
 
-|Parameter | Description |  
-|---------|----------|
-| `data.instanceName` | The name of the global variable where the Web SDK instance is stored. |
-| `data.commandName` | The name of the executed Web SDK command. |
-| `data.options` | The options passed to the Web SDK command. |
-| `data.error`  | The error message returned from the browser's network call (`fetch` in most cases). |
+|Parameter | Type |Description | 
+|---------|----------|----------|
+| `data.instanceName` | | The name of the global variable where the Web SDK instance is stored. |
+| `data.commandName` | | The name of the executed Web SDK command. |
+| `data.options` | | The options passed to the Web SDK command. |
+| `data.error`  | | The error message returned from the browser's network call (`fetch` in most cases), along with the reason why the command was rejected. |
 
 ## `onBeforeNetworkRequest` {#onBeforeNetworkRequest}
 
-This callback function is triggered before a network request is executed. See the sample below for details about what this function returns.
+This callback function is triggered before a network request is executed. See the sample below for details about the function parameters.
 
 ```js
 onBeforeNetworkRequest(data) {
@@ -115,16 +113,16 @@ onBeforeNetworkRequest(data) {
 }
 ```
 
-|Parameter | Description |  
-|---------|----------|
-| `data.instanceName` | The name of the global variable where the Web SDK instance is stored. |
-| `data.requestId`  | The `requestId` generated by Web SDK to enable debugging. |
-| `data.url` | The requested URL. |
-| `data.payload` | The payload object that will be converted to JSON format and sent in the body of the request, through a `POST` method. |
+|Parameter | Type |Description | 
+|---------|----------|----------|
+| `data.instanceName` | | The name of the global variable where the Web SDK instance is stored. |
+| `data.requestId`  | | The `requestId` generated by Web SDK to enable debugging. |
+| `data.url` | | The requested URL. |
+| `data.payload` | | The network request payload object that will be converted to JSON format and sent in the body of the request, through a `POST` method. |
 
 ## `onNetworkResponse` {#onNetworkResponse}
 
-This callback function is triggered when the browser receives a response. See the sample below for details about what this function returns.
+This callback function is triggered when the browser receives a response. See the sample below for details about the function parameters.
 
 ```js
 onNetworkResponse(data) {
@@ -139,20 +137,20 @@ onNetworkResponse(data) {
 }
 ```
 
-|Parameter | Description |  
-|---------|----------|
-| `data.instanceName` | The name of the global variable where the Web SDK instance is stored. |
-| `data.requestId`  | The `requestId` generated by Web SDK to enable debugging. |
-| `data.url` | The requested URL. |
-| `data.payload` | The payload object that will be converted to JSON format and sent in the body of the request, through a `POST` method. |
-| `data.body`  | The response body in string format. |
-| `data.parsedBody` | An object containing the parsed response body. If an error occurs while parsing the response body, this parameter is undefined. |
-| `data.status` | The response code in integer format. |
-| `data.retriesAttempted` | The number of retries attempted when sending the request. Zero means the request was successful on the first try. |
+|Parameter | Type |Description | 
+|---------|----------|----------|
+| `data.instanceName` | | The name of the global variable where the Web SDK instance is stored. |
+| `data.requestId`  | | The `requestId` generated by Web SDK to enable debugging. |
+| `data.url` | | The requested URL. |
+| `data.payload` | | The payload object that will be converted to JSON format and sent in the body of the request, through a `POST` method. |
+| `data.body`  | | The response body in string format. |
+| `data.parsedBody` | | An object containing the parsed response body. If an error occurs while parsing the response body, this parameter is undefined. |
+| `data.status` | | The response code in integer format. |
+| `data.retriesAttempted` | | The number of retries attempted when sending the request. Zero means the request was successful on the first try. |
 
 ## `onNetworkError` {#onNetworkError}
 
-This callback function is triggered when the network request failed. See the sample below for details about what this function returns.
+This callback function is triggered when the network request failed. See the sample below for details about the function parameters.
 
 ```js
 onNetworkError(data) {
@@ -164,17 +162,17 @@ onNetworkError(data) {
 },
 ```
 
-|Parameter | Description |  
-|---------|----------|
-| `data.instanceName` | The name of the global variable where the Web SDK instance is stored. |
-| `data.requestId`  | The `requestId` generated by Web SDK to enable debugging. |
-| `data.url` | The requested URL. |
-| `data.payload` | The payload object that will be converted to JSON format and sent in the body of the request, through a `POST` method. |
-| `data.error`  | The error message returned from the browser's network call (`fetch` in most cases). |
+|Parameter | Type |Description | 
+|---------|----------|----------|
+| `data.instanceName` | | The name of the global variable where the Web SDK instance is stored. |
+| `data.requestId`  | | The `requestId` generated by Web SDK to enable debugging. |
+| `data.url` | | The requested URL. |
+| `data.payload` | | The payload object that will be converted to JSON format and sent in the body of the request, through a `POST` method. |
+| `data.error`  | | The error message returned from the browser's network call (`fetch` in most cases). |
 
 ## `onBeforeLog` {#onBeforeLog}
 
-This callback function is triggered before the Web SDK logs anything to the console. See the sample below for details about what this function returns.
+This callback function is triggered before the Web SDK logs anything to the console. See the sample below for details about the function parameters.
 
 ```js
 onBeforeLog(data) {
@@ -185,17 +183,17 @@ onBeforeLog(data) {
 }
 ```
 
-|Parameter | Description |  
-|---------|----------|
-| `data.instanceName` | The name of the global variable where the Web SDK instance is stored. |
-| `data.componentName` | The name of the component that generated the log message. |
-| `data.level` | The logging level. Supported levels: `log`, `info`, `warn`, `error`. |
-| `data.arguments` | The arguments of the log message. |
+|Parameter | Type |Description | 
+|---------|----------|----------|
+| `data.instanceName` | | The name of the global variable where the Web SDK instance is stored. |
+| `data.componentName` | | The name of the component that generated the log message. |
+| `data.level` | | The logging level. Supported levels: `log`, `info`, `warn`, `error`. |
+| `data.arguments` | | The arguments of the log message. |
 
 
 ## `onContentRendering` {#onContentRendering}
 
-This callback function is triggered by the `personalization` component, depending on the `status` parameter.
+This callback function is triggered by the `personalization` component at various stages of rendering. The payload can differ, depending on the `status` parameter. See the sample below for details about the function parameters.
 
 ```js
  onContentRendering(data) {
@@ -206,16 +204,16 @@ This callback function is triggered by the `personalization` component, dependin
 }
 ```
 
-|Parameter | Description |  
-|---------|----------|
-| `data.instanceName` | The name of the global variable where the Web SDK instance is stored. | 
-| `data.componentName` | The name of the component that generated the log message. |
-| `data.payload` | The payload object that will be converted to JSON format and sent in the body of the request, through a `POST` method. |
-| `data.status` | The `personalization` component notifies the Web SDK of the status of rendering. Supported values: <ul><li>`rendering-started`: Indicates that the Web SDK is about to render propositions. Before the Web SDK starts to render a decision scope or a view, in the `data` object you can see the propositions that are about to be rendered by the `personalization` component and the scope name.</li><li>`no-offers`: Indicates that no payload was received for the requested parameters.</li> <li>`rendering-failed`: Indicates that Web SDK failed to render a proposition.</li><li>`rendering-succeeded`: Indicates that rendering has completed for a decision scope.</li> <li>`rendering-redirect`: Indicates that Web SDK will render a redirect proposition.</li></ul> |
+|Parameter | Type |Description | 
+|---------|----------|----------|
+| `data.instanceName` | |The name of the global variable where the Web SDK instance is stored. | 
+| `data.componentName` | | The name of the component that generated the log message. |
+| `data.payload` | | The payload object that will be converted to JSON format and sent in the body of the request, through a `POST` method. |
+| `data.status` | | The `personalization` component notifies the Web SDK of the status of rendering.  Supported values: <ul><li>`rendering-started`: Indicates that the Web SDK is about to render propositions. Before the Web SDK starts to render a decision scope or a view, in the `data` object you can see the propositions that are about to be rendered by the `personalization` component and the scope name.</li><li>`no-offers`: Indicates that no payload was received for the requested parameters.</li> <li>`rendering-failed`: Indicates that Web SDK failed to render a proposition.</li><li>`rendering-succeeded`: Indicates that rendering has completed for a decision scope.</li> <li>`rendering-redirect`: Indicates that Web SDK will render a redirect proposition.</li></ul> |
 
 ## `onContentHiding` {#onContentHiding}
 
-This callback function is triggered before a prehiding style is applied or removed.
+This callback function is triggered when a prehiding style is applied or removed.
 
 ```js
 onContentHiding(data) {
@@ -225,11 +223,11 @@ onContentHiding(data) {
 }
 ```
 
-|Parameter | Description |  
-|---------|----------|
-| `data.instanceName` | The name of the global variable where the Web SDK instance is stored. | 
-| `data.componentName` | The name of the component that generated the log message. |
-| `data.status` | The `personalization` component notifies the Web SDK of the status of rendering. Supported values: <ul><li>`rendering-started`: Indicates that the Web SDK is about to render propositions. Before the Web SDK starts to render a decision scope or a view, in the `data` object you can see the propositions that are about to be rendered by the `personalization` component and the scope name.</li><li>`no-offers`: Indicates that no payload was received for the requested parameters.</li> <li>`rendering-failed`: Indicates that Web SDK failed to render a proposition.</li><li>`rendering-succeeded`: Indicates that rendering has completed for a decision scope.</li> <li>`rendering-redirect`: Indicates that Web SDK will render a redirect proposition.</li></ul> |
+|Parameter | Type |Description | 
+|---------|----------|----------|
+| `data.instanceName` | | The name of the global variable where the Web SDK instance is stored. | 
+| `data.componentName` | | The name of the component that generated the log message. |
+| `data.status` | | The `personalization` component notifies the Web SDK of the status of rendering. Supported values: <ul><li>`hide-containers`:</li><li>`show-containers`:</ul> |
 
 ## How to specify monitoring hooks when using the NPM package {#specify-monitoris-npm}
 
