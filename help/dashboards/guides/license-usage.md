@@ -165,7 +165,7 @@ Consumption reporting for sandboxes is cumulative for all sandboxes of the same 
 >2. Under Permission in the Sandbox category, add all sandboxes you wish to view in the license usage dashboard.
 >3. Under the User Dashboard Permission category, add "View License Usage Dashboard" permission.
 
-## The [!UICONTROL Details] tab {#details-tab}
+## [!UICONTROL Details] tab {#details-tab}
 
 To see **a particular usage metric from a specific sandbox**, navigate to the [!UICONTROL Details] tab. The [!UICONTROL Details] tab shows all the available sandboxes within either the Production or Development sandboxes.
 
