@@ -8,16 +8,15 @@ description: The September 2024 release notes for Adobe Experience Platform.
 
 Updates to existing features and documentation in Adobe Experience Platform:
 
-- [Adobe Experience Platform release notes](#adobe-experience-platform-release-notes)
-  - [Alerts {#alerts}](#alerts-alerts)
-  - [Dashboards {#dashboards}](#dashboards-dashboards)
-  - [Data Prep {#data-prep}](#data-prep-data-prep)
-  - [Destinations {#destinations}](#destinations-destinations)
-  - [Experience Data Model (XDM) {#xdm}](#experience-data-model-xdm-xdm)
-  - [Identity Service {#identity-service}](#identity-service-identity-service)
-  - [Query Service {#query-service}](#query-service-query-service)
-  - [Segmentation Service {#segmentation-service}](#segmentation-service-segmentation-service)
-  - [Sources {#sources}](#sources-sources)
+- [Alerts {#alerts}](#alerts)
+- [Dashboards {#dashboards}](#dashboards)
+- [Data Prep {#data-prep}](#data-prep)
+- [Destinations {#destinations}](#destinations)
+- [Experience Data Model (XDM) {#xdm}](#xdm)
+- [Identity Service {#identity-service}](#identity-service)
+- [Query Service {#query-service}](#query-service)
+- [Segmentation Service {#segmentation-service}](#segmentation-service)
+- [Sources {#sources}](#sources)
 
 ## Alerts {#alerts}
 
@@ -77,6 +76,7 @@ For more information on Data Prep, read the [Data Prep overview](../../data-prep
 | Destination | Description |
 | --- | --- |
 | [Amazon Ads](/help/destinations/catalog/advertising/amazon-ads.md) | The September 2024 release adds the mapping option to export the `countryCode` parameter into Amazon Ads. Use `countryCode` in the [mapping step](/help/destinations/catalog/advertising/amazon-ads.md#map) to improve your identity match rates with Amazon. |
+| [[!BADGE B2B]{type=Informative} Demandbase](/help/destinations/catalog/advertising/demandbase.md) | Use this destination to activate your account audiences for Account-Based Marketing (ABM) use cases. Advertise to relevant personas and roles in your target accounts via DemandBase's B2B Demand Side Platform (DSP). Target accounts can also be enriched with Demandbase third-party data, for other downstream use-cases in marketing and sales. |
 
 {style="table-layout:auto"}
 
