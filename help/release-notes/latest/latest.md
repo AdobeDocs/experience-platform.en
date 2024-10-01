@@ -70,6 +70,8 @@ For more information on Data Prep, read the [Data Prep overview](../../data-prep
 
 ## Destinations {#destinations}
 
+**Updated: September 30, 2024**
+
 [!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
 **New or updated destinations** {#new-updated-destinations}
