@@ -9,14 +9,11 @@ exl-id: f6745e0f-d387-45f2-9f72-054e721016ff
 >[!IMPORTANT]
 >
 > * Adobe recommends that you bookmark this page and revisit it every three months to check for the latest IP addresses. Adobe does not provide notification of new IP ranges.
-> * While Adobe supports data exports to SFTP servers, the recommended cloud storage locations to export data are [!DNL Amazon S3] and [!DNL Azure Blob].
 > * From 15-Oct-2024, new IP ranges have replaced the existing ones. Please ensure that both old and new IPs are added to your allowlist before this date to avoid any disruption in service.
 
 ## Overview {#overview}
 
-This page provides IP addresses that you can add to your allowlist to safely export data from Experience Platform to your [SFTP server](../destinations/catalog/cloud-storage/sftp.md).
-
-You can define network access controls through your network firewall. By specifying the appropriate IP range, you can allow traffic for the data transfer service.
+You can define network access controls through your network firewall. By specifying the appropriate IP range, you can allow traffic for Query Service access.
 
 As part of ongoing improvements, Adobe has updated the IP ranges used for network access to the Query Service on 15-Oct-2024. The existing IP addresses will be deprecated, and new IP addresses will take their place. It is crucial to add both the old and new IP ranges to your allowlist during the transition period to ensure uninterrupted service.
 
