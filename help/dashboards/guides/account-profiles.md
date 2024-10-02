@@ -8,9 +8,7 @@ exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_accountprofiles_customersperaccountoverview"
 >title="Customers per account overview"
->abstract="This drill-through widget provides insights into the structure of your B2B data. It helps you identify how many Account profiles have no Customer profiles linked or have one or more Customer profiles associated with them.
->Direct Customers: are customer profiles directly linked to an Account through the `personComponents` route.
->Indirect Customers: are customer profiles linked to an Account via the `Account-Person` route."
+>abstract="This drill-through widget provides insights into the structure of your B2B data. It helps you identify how many Account profiles have no Customer profiles linked or have one or more Customer profiles associated with them.<br>Direct Customers: are customer profiles directly linked to an Account through the `personComponents` route.<br>Indirect Customers: are customer profiles linked to an Account via the `Account-Person` route."
 
 The Adobe Experience Platform user interface (UI) provides a dashboard through which you can view important information about your account profiles, as captured during a daily snapshot. This guide outlines how to access and work with the [!UICONTROL Account Profiles] dashboard in the UI and provides more information regarding the visualizations displayed in the dashboard.
 
