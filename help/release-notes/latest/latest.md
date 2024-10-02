@@ -9,15 +9,15 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 
 Updates to existing features and documentation in Adobe Experience Platform:
 
-- [Alerts {#alerts}](#alerts)
-- [Dashboards {#dashboards}](#dashboards)
-- [Data Prep {#data-prep}](#data-prep)
-- [Destinations {#destinations}](#destinations)
-- [Experience Data Model (XDM) {#xdm}](#xdm)
-- [Identity Service {#identity-service}](#identity-service)
-- [Query Service {#query-service}](#query-service)
-- [Segmentation Service {#segmentation-service}](#segmentation-service)
-- [Sources {#sources}](#sources)
+- [Alerts](#alerts)
+- [Dashboards](#dashboards)
+- [Data Prep](#data-prep)
+- [Destinations](#destinations)
+- [Experience Data Model (XDM)](#xdm)
+- [Identity Service](#identity-service)
+- [Query Service](#query-service)
+- [Segmentation Service](#segmentation-service)
+- [Sources](#sources)
 
 ## Alerts {#alerts}
 
