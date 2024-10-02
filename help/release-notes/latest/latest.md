@@ -9,16 +9,15 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 
 Updates to existing features and documentation in Adobe Experience Platform:
 
-- [Adobe Experience Platform release notes](#adobe-experience-platform-release-notes)
-  - [Alerts {#alerts}](#alerts-alerts)
-  - [Dashboards {#dashboards}](#dashboards-dashboards)
-  - [Data Prep {#data-prep}](#data-prep-data-prep)
-  - [Destinations {#destinations}](#destinations-destinations)
-  - [Experience Data Model (XDM) {#xdm}](#experience-data-model-xdm-xdm)
-  - [Identity Service {#identity-service}](#identity-service-identity-service)
-  - [Query Service {#query-service}](#query-service-query-service)
-  - [Segmentation Service {#segmentation-service}](#segmentation-service-segmentation-service)
-  - [Sources {#sources}](#sources-sources)
+- [Alerts](#alerts)
+- [Dashboards](#dashboards)
+- [Data Prep](#data-prep)
+- [Destinations](#destinations)
+- [Experience Data Model (XDM)](#xdm)
+- [Identity Service](#identity-service)
+- [Query Service](#query-service)
+- [Segmentation Service](#segmentation-service)
+- [Sources](#sources)
 
 ## Alerts {#alerts}
 
@@ -71,6 +70,8 @@ For more information on Data Prep, read the [Data Prep overview](../../data-prep
 
 ## Destinations {#destinations}
 
+**Updated: September 30, 2024**
+
 [!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
 **New or updated destinations** {#new-updated-destinations}
@@ -78,6 +79,7 @@ For more information on Data Prep, read the [Data Prep overview](../../data-prep
 | Destination | Description |
 | --- | --- |
 | [Amazon Ads](/help/destinations/catalog/advertising/amazon-ads.md) | The September 2024 release adds the mapping option to export the `countryCode` parameter into Amazon Ads. Use `countryCode` in the [mapping step](/help/destinations/catalog/advertising/amazon-ads.md#map) to improve your identity match rates with Amazon. |
+| [[!BADGE B2B]{type=Informative} Demandbase](/help/destinations/catalog/advertising/demandbase.md) | Use this destination to activate your account audiences for Account-Based Marketing (ABM) use cases. Advertise to relevant personas and roles in your target accounts via DemandBase's B2B Demand Side Platform (DSP). Target accounts can also be enriched with Demandbase third-party data, for other downstream use-cases in marketing and sales. |
 
 {style="table-layout:auto"}
 
