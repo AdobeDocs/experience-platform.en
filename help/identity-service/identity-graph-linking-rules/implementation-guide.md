@@ -63,31 +63,28 @@ During your pre-implementation process, you must ensure that the authenticated e
 
 ```json
 {
-    "_id": "test_id"
-    "identityMap": {
-        "ECID": [
-            {
-                "id": "62486695051193343923965772747993477018",
-                "primary": false
-            }
-        ],
-        "CRMID": [
-            {
-                "id": "John",
-                "primary": true
-            }
-        ]
-    },
-    "timestamp": "2024-09-24T15:02:32+00:00",
-    "userAccount": {
-        "loginStatus": "authenticated"
-    },
-    "web": {
-        "webPageDetails": {
-            "URL": "https://business.adobe.com/",
-            "name": "Adobe Business"
-        }
-    }
+  "_id": "test_id",
+  "identityMap": {
+      "ECID": [
+          {
+              "id": "62486695051193343923965772747993477018",
+              "primary": false
+          }
+      ],
+      "CRMID": [
+          {
+              "id": "John",
+              "primary": true
+          }
+      ]
+  },
+  "timestamp": "2024-09-24T15:02:32+00:00",
+  "web": {
+      "webPageDetails": {
+          "URL": "https://business.adobe.com/",
+          "name": "Adobe Business"
+      }
+  }
 }
 ```
 
@@ -106,9 +103,6 @@ During your pre-implementation process, you must ensure that the authenticated e
         ]
     },
     "timestamp": "2024-09-24T15:02:32+00:00",
-    "userAccount": {
-        "loginStatus": "authenticated"
-    },
     "web": {
         "webPageDetails": {
             "URL": "https://business.adobe.com/",
