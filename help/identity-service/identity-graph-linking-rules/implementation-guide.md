@@ -232,7 +232,7 @@ Select the ellipses (`...`) and then select **[!UICONTROL View more]** for furth
 
 ![The identity dashboard in the Identity Service UI workspace.](../images/implementation/identity_dashboard.png)
 
-Use the window that appears to view information on your collapsed graphs. In this example, both email and phone are correctly marked as unique namespace, so therefore, there are no collapsed graphs in your organization.
+Use the window that appears to view information on your collapsed graphs. In this example, both email and phone are marked as unique namespace, so therefore, there are no collapsed graphs in your sandbox.
 
 ![The pop-up window for graphs with multiple identities.](../images/implementation/graphs.png)
 
