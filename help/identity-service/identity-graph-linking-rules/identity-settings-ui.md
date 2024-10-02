@@ -1,14 +1,13 @@
 ---
 title: Identity Settings UI
 description: Learn how to use the identity settings user interface.
-badge: Beta
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
 ---
 # Identity Setting UI
 
 >[!AVAILABILITY]
 >
->Identity graph linking rules is currently in beta. Contact your Adobe account team for information on the participation criteria. The feature and documentation are subject to change.
+>Identity graph linking rules is currently in Limited Availability. Contact your Adobe account team for information on how to access the feature in development sandboxes.
 
 Identity settings is a feature in the Adobe Experience Platform Identity Service UI that you can use to designate unique namespaces and configure namespace priority.
 

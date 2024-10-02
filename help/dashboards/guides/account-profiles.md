@@ -3,7 +3,7 @@ title: Account Profiles Dashboard
 description: Adobe Experience Platform provides a dashboard through which you can view important information about your organization's B2B account profiles.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
 ---
-# [!UICONTROL Account Profiles] dashboard
+# Account Profiles dashboard
 
 The Adobe Experience Platform user interface (UI) provides a dashboard through which you can view important information about your account profiles, as captured during a daily snapshot. This guide outlines how to access and work with the [!UICONTROL Account Profiles] dashboard in the UI and provides more information regarding the visualizations displayed in the dashboard.
 
@@ -58,6 +58,11 @@ Select the [!UICONTROL Profile ID] from the results displayed on the [!UICONTROL
 The account profile information displayed on the [!UICONTROL Details] tab has been merged together from multiple profile fragments to form a single view of the individual account. See the documentation on [browsing account profiles in Adobe Real-Time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) to learn more about account profile viewing capabilities in the Platform UI. 
 
 ## Standard widgets {#standard-widgets}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_accountprofiles_customersperaccountoverview"
+>title="Customers per account overview"
+>abstract="This drill-through widget provides insights into the structure of your B2B data. It helps you identify how many Account profiles have no Customer profiles linked or have one or more Customer profiles associated with them.<ul><li>Direct Customers: are customer profiles directly linked to an Account through the `personComponents` route.</li><li>Indirect Customers: are customer profiles linked to an Account via the `Account-Person` route.</li></ul>"
 
 Adobe provides standard widgets that you can use to visualize different metrics related to your account profiles.
 
