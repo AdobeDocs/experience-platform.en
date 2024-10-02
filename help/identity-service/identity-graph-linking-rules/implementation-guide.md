@@ -55,8 +55,73 @@ If you are using the [Adobe Analytics source connector](../../sources/tutorials/
 
 ### XDM experience events
 
-* During your pre-implementation process, you must ensure that the authenticated events that your system will send to Experience Platform always contain a person identifier, such as CRMID.
-* Do not send an empty string as an identity value when sending events using XDM experience events. Doing so will result in system errors. 
+During your pre-implementation process, you must ensure that the authenticated events that your system will send to Experience Platform always contain a person identifier, such as CRMID.
+
+>[!BEGINTABS]
+
+>[!TAB Authenticated events with person identifier]
+
+```json
+{
+    "_id": "test_id"
+    "identityMap": {
+        "ECID": [
+            {
+                "id": "62486695051193343923965772747993477018",
+                "primary": false
+            }
+        ],
+        "CRMID": [
+            {
+                "id": "John",
+                "primary": true
+            }
+        ]
+    },
+    "timestamp": "2024-09-24T15:02:32+00:00",
+    "userAccount": {
+        "loginStatus": "authenticated"
+    },
+    "web": {
+        "webPageDetails": {
+            "URL": "https://business.adobe.com/",
+            "name": "Adobe Business"
+        }
+    }
+}
+```
+
+>[!TAB Authenticated events without person identifier]
+
+
+```json
+{
+    "_id": "test_id"
+    "identityMap": {
+        "ECID": [
+            {
+                "id": "62486695051193343923965772747993477018",
+                "primary": false
+            }
+        ]
+    },
+    "timestamp": "2024-09-24T15:02:32+00:00",
+    "userAccount": {
+        "loginStatus": "authenticated"
+    },
+    "web": {
+        "webPageDetails": {
+            "URL": "https://business.adobe.com/",
+            "name": "Adobe Business"
+        }
+    }
+}
+```
+
+
+>[!ENDTABS]
+
+Do not send an empty string as an identity value when sending events using XDM experience events. If the identity value of the namespace with highest namespace priority is an empty string, the record will be ignored from Real-Time Customer Profile. This applies to both identityMap, as well as fields marked as an identity.
 
 +++Select to view an example of a payload with an empty string
 

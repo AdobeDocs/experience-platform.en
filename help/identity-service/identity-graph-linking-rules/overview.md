@@ -1,14 +1,13 @@
 ---
 title: Identity Graph Linking Rules
 description: Learn about identity graph linking rules in Identity Service.
-badge: Beta
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
 ---
 # Identity graph linking rules overview
 
 >[!AVAILABILITY]
 >
->Identity graph linking rules is currently in beta. Contact your Adobe account team for information on the participation criteria. The feature and documentation are subject to change.
+>Identity graph linking rules is currently in Limit Availability. Contact your Adobe account team for information on how to access the feature in a development sandbox.
 
 With Adobe Experience Platform Identity Service and Real-Time Customer Profile, it is easy to assume that your data is ingested perfectly and that all merged profiles represent a single individual person through a person identifier, such as a CRMID. However, there are possible scenarios where certain data could try to merge multiple disparate profiles into a single profile ("graph collapse"). To prevent these unwanted merges, you can use configurations provided through identity graph linking rules and allow for accurate personalization for your users.
 

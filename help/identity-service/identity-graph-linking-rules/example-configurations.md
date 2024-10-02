@@ -1,20 +1,18 @@
 ---
 title: Examples of Graph Configurations
 description: Learn about common graph scenarios that you might encounter when working with identity graph linking rules and identity data.
-badge: Beta
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
 ---
 # Examples of graph configurations
 
 >[!AVAILABILITY]
 >
->Identity graph linking rules is currently in beta. Contact your Adobe account team for information on the participation criteria. The feature and documentation are subject to change.
+>Identity graph linking rules is currently in Limit Availability. Contact your Adobe account team for information on how to access the feature in a development sandbox.
 
 >[!NOTE]
 >
 >* "CRMID" and "loginID" are custom namespaces. In this document, "CRMID" is a person identifier and "loginID" is a login identifier associated with a given person.
 >* To simulate the example graph scenarios outlined in this document, you must first create two custom namespaces, one with the identity symbol "CRMID" and another with the identity symbol "loginID". Identity symbols are case sensitive.
-
 
 This document outlines graph configuration examples of common scenarios that you might encounter when working with identity graph linking rules and identity data.
 

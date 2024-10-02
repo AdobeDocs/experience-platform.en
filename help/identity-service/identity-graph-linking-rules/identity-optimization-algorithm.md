@@ -1,14 +1,13 @@
 ---
 title: Identity optimization algorithm
 description: Learn about Identity Optimization Algorithm in Identity Service.
-badge: Beta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
 ---
 # Identity optimization algorithm
 
 >[!AVAILABILITY]
 >
->Identity graph linking rules is currently in beta. Contact your Adobe account team for information on the participation criteria. The feature and documentation are subject to change.
+>Identity graph linking rules is currently in Limit Availability. Contact your Adobe account team for information on how to access the feature in a development sandbox.
 
 The identity optimization algorithm is a graph algorithm on Identity Service that helps ensure that an identity graph is representative of a single person, and therefore, prevents the unwanted merging of identities on Real-Time Customer Profile.
 
