@@ -230,6 +230,12 @@ Use the identity dashboard for insights on the state of your identity graphs, su
 
 Select the ellipses (`...`) and then select **[!UICONTROL View more]** for further information and to validate that there are no collapsed graphs.
 
+![The identity dashboard in the Identity Service UI workspace.](../images/implementation/identity_dashboard.png)
+
+Use the window that appears to view information on your collapsed graphs. In this example, both email and phone are correctly marked as unique namespace, so therefore, there are no collapsed graphs in your organization.
+
+![The pop-up window for graphs with multiple identities.](../images/implementation/graphs.png)
+
 ## Appendix {#appendix}
 
 Read this section for additional information that you can refer to when implementing your identity settings and unique namespaces.
