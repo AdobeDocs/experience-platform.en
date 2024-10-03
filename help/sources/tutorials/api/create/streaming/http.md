@@ -464,9 +464,9 @@ POST /flows
 
 >[!BEGINTABS]
 
->[!TAB Without transformations]
+>[!TAB XDM]
 
-The following request creates a streaming dataflow for HTTP API without data transformations.
+The following request creates a streaming dataflow for XDM data.
 
 ```shell
 curl -X POST \
@@ -492,9 +492,9 @@ curl -X POST \
     }'
 ```
 
->[!TAB With transformations]
+>[!TAB RAW]
 
-The following requests creates a streaming dataflow for HTTP API with mapping transformations applied to your data.
+The following requests creates a streaming dataflow for raw data.
 
 When creating a dataflow with transformations, the `name` parameter cannot be changed. This value must always be set to `Mapping`.
 
