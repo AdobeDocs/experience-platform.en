@@ -1,14 +1,13 @@
 ---
 title: Troubleshooting Guide for Identity Graph Linking Rules
 description: Learn how to troubleshoot common issues in identity graph linking rules.
-badge: Beta
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
 ---
 # Troubleshooting guide for identity graph linking rules
 
 >[!AVAILABILITY]
 >
->The Identity graph linking rules feature is currently in beta. Contact your Adobe account team for information on the participation criteria. The feature and documentation are subject to change.
+>Identity graph linking rules is currently in Limited Availability. Contact your Adobe account team for information on how to access the feature in development sandboxes.
 
 As you test and validate identity graph linking rules, you may run into some issues related to data ingestion and graph behavior. Read this document to learn how to troubleshoot some common issues that you might encounter when working with identity graph linking rules.
 
@@ -161,7 +160,10 @@ You can also run the following query to check if ingestion to Profile is not hap
   FROM dataset_name)) WHERE (col.id = '' or _testimsorg.identification.core.email = '') and key = 'Email' 
 ```
 
-These two queries assume that one identity is sent from the identityMap and another identity is sent from an identity descriptor. **NOTE**: In Experience Data Model (XDM) schemas, the identity descriptor is the field marked as an identity.
+These two queries assume that:
+
+* One identity is sent from the identityMap, and another identity is sent from an identity descriptor. **NOTE**: In Experience Data Model (XDM) schemas, the identity descriptor is the field marked as an identity.
+* The CRMID is sent via identityMap. If the CRMID is sent as a field, remove the `key='Email'` from the WHERE clause.
 
 ### My experience event fragments are ingested, but have the "wrong" primary identity in Profile
 
@@ -392,7 +394,7 @@ Generally speaking, testing on a development sandbox should mimic the use cases 
 | Test case | Test steps | Expected outcome |
 | --- | --- | --- |
 | Accurate person entity representation | <ul><li>Mimic anonymous browsing</li><li>Mimic two people (John, Jane) logging in using the same device</li></ul> | <ul><li>Both John and Jane should be associated to their attributes and authenticated events.</li><li>The last authenticated user should be associated to the anonymous browsing events.</li></ul> |
-| Segmentation | Create four segment definitions (**NOTE**: Each pair of segment definition should have one evaluated using batch and the other streaming.) <ul><li>Segment definition A: Segment qualification based on John's authenticated events.</li><li>Segment definition B: Segment qualification based on Jane's authenticated events.</li></ul> | Regardless of shared device scenarios, John and Jane should always qualify for their respective segments. |
+| Segmentation | Create four segment definitions (**NOTE**: Each pair of segment definition should have one evaluated using batch and the other streaming.) <ul><li>Segment definition A: Segment qualification based on John's authenticated events and/or attributes.</li><li>Segment definition B: Segment qualification based on Jane's authenticated events and/or attributes.</li></ul> | Regardless of shared device scenarios, John and Jane should always qualify for their respective segments. |
 | Audience qualification / unitary journeys on Adobe Journey Optimizer | <ul><li>Create a journey starting with an audience qualification activity (such as the streaming segmentation created above).</li><li>Create a journey starting with a unitary event. This unitary event should be an authenticated event.</li><li>You must disable re-entry when creating these journeys.</li></ul> | <ul><li>Regardless of shared device scenarios, John and Jane should trigger the respective journeys that they should enter.</li><li>John and Jane should not re-enter the journey when the ECID is transferred back to them.</li></ul> |
 
 {style="table-layout:auto"}

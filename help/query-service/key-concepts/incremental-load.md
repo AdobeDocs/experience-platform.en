@@ -118,11 +118,7 @@ The steps below demonstrate how to create and incrementally load data using snap
 
 This logic can be applied to any table to perform incremental loads.
 
-## Expired Snapshots
-
->[!IMPORTANT]
->
->Snapshot metadata expires after **two** days. An expired snapshot invalidates the logic of the script provided above. 
+## Expired snapshots
 
 To resolve the issue of an expired snapshot ID, insert the following command at the beginning of the anonymous block. The following line of code overrides the `@from_snapshot_id` with the earliest available `snapshot_id` from metadata.
 

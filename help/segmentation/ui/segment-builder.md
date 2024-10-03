@@ -23,6 +23,19 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 
 The basic building blocks of segment definitions are attributes and events. In addition, the attributes and events contained in existing audiences can be used as components for new definitions. 
 
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_summarydata"
+>title="Summary data"
+>abstract="Summary data only appears for profile attributes and does <b>not</b> appear for either event or audience attributes.<br/><br/>Summary data for profile attributes may not appear under the following circumstances: <ol><li>Some of the values of the attribute are more than 100 characters long.</li><li>There are more than 3000 unique values for the attribute.</li></ol>"
+
+>[!NOTE]
+>
+>If you select the information bubble of an attribute, you can view the distribution of values, also known as the summary data, of the field. These are **only** available in the attributes tab, and are not available for use in the events or audiences tab.
+>
+>Summary data will appear if the attribute meets the following criteria: All the values of the attribute are 100 characters or fewer and there are 3000 or fewer unique values for the attribute.
+>
+>However, an attribute will **not** have summary data if it is multi-entity data linked to the profile through a relationship. For example, if you have a custom schema called `Vehicle`, the **properties** within the `Vehicle` schema will **not** have summary data.
+
 You can see these building blocks in the **[!UICONTROL Fields]** section on the left side of the [!DNL Segment Builder] workspace. **[!UICONTROL Fields]** contains a tab for each of the main building blocks: "[!UICONTROL Attributes]", "[!UICONTROL Events]", and "[!UICONTROL Audiences]".
 
 ![The fields section of the Segment Builder is highlighted.](../images/ui/segment-builder/segment-fields.png)
@@ -92,6 +105,11 @@ Once the report suites have been mapped, you can use these newly mapped fields w
 | Multiple report suites | No friendly name descriptors are included with generic variables. <br><br>**Example:** eVar2 | <ul><li>Any field with multiple descriptors appear as generic. This means that no friendly names appear in the UI.</li><li>Queries can use data from any datasets that contain the eVar, which may result in mixed or incorrect results.</li></ul> | Queries use correctly combined results from multiple datasets. |
  
 ### Audiences
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentBuilder_b2b_decomposition"
+>title="Complex evaluation"
+>abstract="The following expression is too complicated to be expressed as a single audience. In order to use both B2B-rules and people-based-events in the same segment definition, please follow the steps below.<ol><li>Create a segment definition that only refers to the people-based-events, and save it as its own segment definition.</li><li>In a new segment definition, import the previously created segment definition while referring to the B2B-rules.</li></ol>"
 
 >[!NOTE]
 >

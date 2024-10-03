@@ -61,6 +61,7 @@ role: Admin,User
         * [Experience Platform audience sharing](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
         * [Federated Audience Composition connection (Limited availability)](https://www.adobe.com/go/destinations-federated-audience-composition)
     * Advertising destinations{#advertising}
+        * [(Beta) Acxiom Audience Distribution](./catalog/advertising/acxiom-audience-distribution.md)
         * [Advertising destinations overview](./catalog/advertising/overview.md)
         * [Adobe Advertising Cloud connection](./catalog/advertising/adobe-advertising-cloud-connection.md)
         * [Adobe Advertising Cloud extension](./catalog/advertising/adobe-advertising-cloud.md)
@@ -70,6 +71,7 @@ role: Admin,User
         * [Bing Ads Universal Event Tracking (UET) extension](./catalog/advertising/bing-ads.md)
         * [Branch extension](./catalog/advertising/branch.md)
         * [(Beta) Criteo connection](./catalog/advertising/criteo.md)
+        * [Demandbase connection](./catalog/advertising/demandbase.md)
         * [DoubleClick Floodlight (Beta) extension](./catalog/advertising/doubleclick-floodlight.md)
         * [Facebook Pixel extension](./catalog/advertising/facebook-pixel.md)
         * [Flashtalking OneTag extension](./catalog/advertising/flashtalking.md)
