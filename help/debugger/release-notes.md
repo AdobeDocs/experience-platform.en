@@ -7,6 +7,12 @@ exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
 ---
 # Adobe Experience Platform Debugger release notes
 
+## Version 1.6.2 - October 1, 2024
+
+### Fixes and improvements
+
+* Fixed an issue where the Debugger was too sensitive to all CSP errors
+
 ## Version 1.6.1 - July 25, 2024
 
 ### Fixes and improvements
