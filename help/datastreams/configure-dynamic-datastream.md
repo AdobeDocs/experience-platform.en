@@ -1,6 +1,9 @@
 ---
 title: Create dynamic datastream configurations
 description: Learn how to create dynamic datastream configurations, to route your data to various Experience Cloud services, based on rules.
+hide: yes
+hidefromtoc: yes
+badge: label="Beta" type="Informative"
 ---
 
 # Create dynamic datastream configurations
@@ -11,7 +14,7 @@ description: Learn how to create dynamic datastream configurations, to route you
 
 By default, the Experience Platform Edge Network sends all the events that reach a datastream to all the Experience Cloud [services](configure.md#add-services) that you have enabled for your datastreams. This might not always be the ideal workflow for you, depending on your use cases.
 
-This is where dynamic datastream configurations come into play. A dynamic datastream configuration is a set of rules that you define for each service enabled for your datastream, which dictate what Experience Cloud solution should receive which type of data.
+Dynamic datastream configurations address this concern through user-configurable sets of rules that you define for each service enabled for your datastream, which dictate what Experience Cloud solution should receive each type of data.
 
 ## Prerequisites {#prerequisites}
 
@@ -21,10 +24,6 @@ To create a dynamic configuration for your datastream, there are two conditions 
 * You must have *at least* one Experience Cloud service added to your datastream. See the documentation on how to [add a service](configure.md#add-services) to a datastream for detailed information.
 
 After you have created a datastream and added an Experience Cloud service to it, you can then [create a dynamic configuration](#create-dynamic-configuration).
-
-
-
-## Use cases {#use-cases}
 
 ## Create a dynamic datastream configuration {#create-dynamic-configuration}
 
@@ -52,7 +51,7 @@ After you have [created a datastream](configure.md) and [added a service](config
 
     ![Image of the datastreams user interface showing the dynamic configuration rule.](assets/configure-dynamic-datastream/drag-resources.png)
 
-1. In the **[!UICONTROL Configuration]** section, toggle the service name on or off, depending on whether you want the data to be sent to this service, based on the rules that you define. If you turn the toggle off, the rule is disabled and all data will be sent to the upstream service.
+1. In the **[!UICONTROL Configuration]** section, toggle the services that you want to enable or disable for each rule, depending on whether you want the data to be sent to each service. If you turn the toggle off, the rule is disabled and *all data* will be sent to the upstream service.
 
     ![Image of the datastreams user interface showing the dynamic configuration rule.](assets/configure-dynamic-datastream/enable-service.png)
 
@@ -66,3 +65,4 @@ To achieve the desired data routing behavior, pay attention to the order in whic
 
 To configure the rule order, you can drag and drop the rule windows in the order you want.
 
+![GIF showing how to change the order of rules through drag and drop.](assets/configure-dynamic-datastream/move-rules.gif)
