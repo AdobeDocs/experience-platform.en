@@ -97,6 +97,10 @@ To configure details for the destination, fill in the required and optional fiel
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 *  **[!UICONTROL Name of your source partner]**: Your customer/company name. Only supported [!DNL Magnite Streaming] clients are available for selection.
 
+>[!NOTE]
+>
+>The source partner name must be an all-lowercase string which matches the name of the Amazon S3 delivery bucket you have configured with Magnite and set up in the [authenticate to destination](#authenticate) step. The supported characters include 'a-z', '0-9', '-'(dash), or '_'(underscore).
+
 ![destination configuration auth fields filled](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-filled.png)
 
 Once done, select the **[!UICONTROL Create]** button.
