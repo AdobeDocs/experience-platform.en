@@ -97,6 +97,10 @@ A confirmation dialog appears. Select **[!UICONTROL Confirm]** to cancel the que
 
 The Query Editor has a maximum 50,000 row output. You can choose the number of rows are displayed at one time in the Query Editor console. To change the number of rows displayed in the console, select the **[!UICONTROL Result count]** dropdown and select from the 50, 100, 150, 300, and 500 options.
 
+>[!NOTE]
+>
+>As the Platform UI can only support up to 500 rows, passing a LIMIT value over 500 is ignored.
+
 ![The Query Editor with the Result count dropdown highlighted.](../images/ui/query-editor/result-count.png)
 
 ## Writing queries {#writing-queries}
