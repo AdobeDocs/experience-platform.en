@@ -93,7 +93,7 @@ During your pre-implementation process, you must ensure that the authenticated e
 
 ```json
 {
-    "_id": "test_id"
+    "_id": "test_id",
     "identityMap": {
         "ECID": [
             {
