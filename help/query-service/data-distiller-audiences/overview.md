@@ -131,11 +131,23 @@ This section addresses frequently asked questions about creating and managing ex
 
 +++Select to reveal questions and answers
 
+**Questions**:
+
 - Is audience creation supported only for flat datasets?
+  
++++Answer
+
 - Nested datasets are also supported, but only flat attributes are available in the audience.
 
++++
+
 - Does audience creation result in a single dataset or multiple datasets, or does it vary depending on the configuration?
+
++++Answer
+
 - There is a one-to-one mapping between an audience and a dataset.
+
++++
 
 - Is the dataset created during audience creation marked for Profile?
 - No, the dataset created during audience creation is not marked for Profile.
