@@ -33,7 +33,7 @@ To create an organization partnership request, navigate to the **[!UICONTROL San
 
 ![The sandboxes UI, with the Partner orgs tab and Manage partner orgs highlighted.](../images/ui/sandbox-tooling/private-manage-partner-orgs.png)
 
-In the [!UICONTROL Package partner management] dialog, enter the organization ID into **[!UICONTROL Enter Org ID]** and press enter. The organization ID is shown in the **[!UICONTROL Selected Org IDs]** section below. After adding the IDs, select **[!UICONTROL Confirm]**.
+In the [!UICONTROL Package partner management] dialog, enter the organization ID into **[!UICONTROL Enter Org ID]** and press enter (Windows) or return (Mac). The organization ID is shown in the **[!UICONTROL Selected Org IDs]** section below. After adding the IDs, select **[!UICONTROL Confirm]**.
 
 >[!TIP]
 >
