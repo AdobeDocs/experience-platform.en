@@ -34,6 +34,8 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={STATUS}
 ```
 
+<!-- 206259 -->
+
 | Parameter | Description |
 | --- | --- |
 | `{REGULATION}` | The regulation type to query for. Accepted values include: <ul><li>`apa_aus`</li><li>`cpa_usa`</li><li>`cpra_usa`</li><li>`ctdpa_usa`</li><li>`fdbr_usa`</li><li>`gdpr` - Note: This is also used for requests related to **ccpa** regulations.</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`mhmda_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_usa`</li><li>`pdpa_tha`</li><li>`tdpsa_usa`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>See the overview on [supported regulations](../regulations/overview.md) for more information on the privacy regulations that the above values represent. |

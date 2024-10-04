@@ -11,6 +11,8 @@ This document provides an overview of the different privacy regulations supporte
 
 Through the use of [Adobe Experience Platform Privacy Service](../home.md), Experience Cloud supports access and delete requests based on the following regulations:
 
+<!-- 206259 -->
+
 | Regulation | Description |
 | --- | --- |
 | APA (Australia) | The [[!DNL Australia Privacy Act (Privacy Act)]](https://www.oaic.gov.au/privacy/the-privacy-act) promotes and protects individuals' privacy and regulates how Australian Government agencies and organizations handle personal information. The Privacy Act includes principles that apply to private-sector organizations. For example, individuals are afforded the right to understand why the personal information is being collected and how it will be used, the ability to access, erase their data, and correct personal information. | 
