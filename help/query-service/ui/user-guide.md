@@ -43,6 +43,12 @@ Queries executed from Query Editor run interactively which means that if you clo
 
 Using Query Editor, you can write, execute, and save queries for customer experience data. All queries executed, or saved in Query Editor are available to all users in your organization with access to Query Service.
 
+### Database selector {#database-selector}
+
+Select a database to query from the dropdown menu in the top right of the Query Editor. The selected database is shown in the dropdown.
+
+![The Query Editor with the database dropdown menu highlighted.](../images/ui/query-editor/database-dropdown.png)
+
 ### Settings {#settings}
 
 A settings icon above the Query Editor input field includes an options to enable/disable dark theme or disable/enable auto-complete.
@@ -60,9 +66,6 @@ To enable dark or light themes, select the settings icon (![A settings icon.](/h
 The Query Editor automatically suggests potential SQL keywords along with table or column details for the query as you write it. The auto-complete feature is enabled by default and can be disabled or enabled at any point from the Query Editor settings.
 
 The auto-complete configuration setting is per user and remembered for the consecutive logins for that user. Disabling this feature stops several metadata commands from being processed and providing recommendations that typically benefit the speed of the author when editing queries.
-
-<!-- Currently editing the auto complete setting info. -->
-
 
 
 ### Execute multiple sequential queries {#execute-multiple-sequential-queries}
@@ -94,6 +97,10 @@ A confirmation dialog appears. Select **[!UICONTROL Confirm]** to cancel the que
 
 The Query Editor has a maximum 50,000 row output. You can choose the number of rows are displayed at one time in the Query Editor console. To change the number of rows displayed in the console, select the **[!UICONTROL Result count]** dropdown and select from the 50, 100, 150, 300, and 500 options.
 
+>[!NOTE]
+>
+>As the Platform UI can only support up to 500 rows, passing a LIMIT value over 500 is ignored.
+
 ![The Query Editor with the Result count dropdown highlighted.](../images/ui/query-editor/result-count.png)
 
 ## Writing queries {#writing-queries}
@@ -106,17 +113,7 @@ To minimize your development time, you are recommended to develop your queries w
 
 ## Writing tools in Query Editor {#writing-tools}
 
-- **Automatic syntax highlighting:** Makes reading and organizing SQL easier.
-
-![An SQL statement in the Query Editor demonstrating syntax colour highlighting.](../images/ui/query-editor/syntax-highlight.png)
-
-- **SQL keyword auto-complete:** Start typing your query then use the arrow keys to navigate to the desired term and press **Enter**.
-
-![A few characters of SQL with the auto complete dropdown menu providing options from the Query Editor.](../images/ui/query-editor/syntax-auto.png)
-
-- **Table and field auto-complete:** Start typing the table name you want to `SELECT` from, then use the arrow keys to navigate to the table you are looking for, and press **Enter**. Once a table is selected, autocomplete recognizes fields in that table. 
-
-![The Query Editor input displaying drop down table name suggestions.](../images/ui/query-editor/tables-auto.png)
+Use the Query Editor's writing tools to enhance your query authoring process. Features include options to format text, copy SQL, manage query details, and save or schedule your work as you progress.
 
 ### Format text {#format-text}
 
@@ -196,6 +193,43 @@ If a query was scheduled, then the [!UICONTROL Scheduled Queries] tab provides i
 >[!NOTE]
 >
 >Queries that are not executed are not saved by the Log. In order for the query to be available in Query Service, it must be run or saved in Query Editor.
+
+### Object Browser {#object-browser}
+
+>[!AVAILABILITY]
+>
+>The dataset navigation rail is only available for Data Distiller customers. Your Platform UI might not contain the left dataset navigation rail.  Other images in this document might not reflect the dataset navigation rail. Contact your Adobe representative for more information.
+
+Use the object browser to easily search and filter datasets. The object browser reduces the time spent searching for tables and datasets in large environments with numerous datasets. With streamlined access to relevant data and metadata, you can focus more on query authoring and less on navigation.
+
+To navigate your database with the Object browser, enter a table name into the search field, or select **[!UICONTROL Tables]** to expand the list of available datasets and tables. When using the search field, the list of available tables are dynamically filtered based on your input.
+
+>[!NOTE]
+>
+>Every dataset contained in [your selected database](#database-dropdown) is listed in a navigation rail to the left of the Query Editor. 
+
+![The Query Editor dataset navigation rail with the search input highlighted.](../images/ui/query-editor/search-tables.png)
+
+The schema displayed in the object browser is an observable schema. This means that you can use it to monitor changes and updates in real time as changes are immediately visible. The observable schemas help to ensure data synchronization and assists with debugging or analytics tasks.
+
+#### Current limitations {#current-limitations}
+
+The following is a list of current limitations:
+
+- Sequential query execution: Only one query can be executed at a time. While a query is in progress, no additional tables can be opened in the left navigation, as queries are processed sequentially.
+- Extra rows in query logs: You may encounter extraneous queries labeled as "SHOW TABLES" in the logs. These will be removed in future releases.
+
+#### Access table metadata {#table-metadata}
+
+In addition to quick searches, you can now easily access metadata for any table by selecting the 'i' icon next to the table name. This provides you with detailed information about the selected table, that helps you to make informed decisions when writing queries.
+
+![The Query Editor dataset navigation rail with the search input highlighted.](../images/ui/query-editor/table-metadata.png)
+
+#### Explore child tables
+
+To explore child or linked tables, select the dropdown arrow next to a table name in the list. This expands the table to show any associated child tables, and gives a clear view of the data structure and allows for more complex query constructions. The icon next to the field name indicates the column's data type, to help you identify it during complex queries.
+
+![The Query Editor with the filtered table list displayed.](../images/ui/query-editor/child-table-list.png)
 
 ## Executing queries using Query Editor {#executing-queries}
 

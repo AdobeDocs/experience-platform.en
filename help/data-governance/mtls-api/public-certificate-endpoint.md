@@ -2,6 +2,7 @@
 title: Public Certificate Endpoint
 description: Learn how to retrieve your public certificates using the /public-certificate endpoint of the MTLS Service API.
 role: Developer
+exl-id: 8369c783-e595-476f-9546-801cf4f10f71
 ---
 # Public certificate endpoint
 
@@ -45,7 +46,7 @@ A sample request to return the public certificates associated with your organiza
 +++Sample request
 
 ```shell
-curl -X GET https://experience.adobe.io/data/core/mtls/v1/certificate/public-certificate
+curl -X GET https://platform.adobe.io/data/core/mtls/v1/certificate/public-certificate
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -105,4 +106,3 @@ After reading this guide, you now understand how to retrieve your public certifi
 <!-- To test this API call, navigate to the [MTLS API reference page]() to interact with the Experience Platform API endpoints. -->
 
 <!-- Add link after developer page is live -->
-

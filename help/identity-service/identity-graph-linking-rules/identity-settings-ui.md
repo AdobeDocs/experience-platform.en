@@ -1,14 +1,13 @@
 ---
 title: Identity Settings UI
 description: Learn how to use the identity settings user interface.
-badge: Beta
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
 ---
 # Identity Setting UI
 
 >[!AVAILABILITY]
 >
->Identity graph linking rules is currently in beta. Contact your Adobe account team for information on the participation criteria. The feature and documentation are subject to change.
+>Identity graph linking rules is currently in Limited Availability. Contact your Adobe account team for information on how to access the feature in development sandboxes.
 
 Identity settings is a feature in the Adobe Experience Platform Identity Service UI that you can use to designate unique namespaces and configure namespace priority.
 
@@ -18,8 +17,10 @@ Read this guide to learn how to configure your identity settings in the UI.
 
 Read the following documents before you start working with identity settings:
 
-* [Identity graph linking rules configuration guide](./configuration.md)
+* [Identity graph linking rules](./overview.md)
 * [Identity optimization algorithm](./identity-optimization-algorithm.md)
+* [Implementation guide](./implementation-guide.md)
+* [Examples of graph configurations](./example-configurations.md)
 * [Namespace priority](./namespace-priority.md)
 * [Graph simulation](./graph-simulation.md)
 
@@ -55,4 +56,12 @@ A warning message appears, indicating that existing graphs will only be affected
 
 ## Next steps
 
-You have now configured your namespace priorities and designated your unique namespaces using the identity settings UI page. For more information, read the [identity graph linking rules overview](./overview.md).
+For more information on identity graph linking rules, read the following documentation:
+
+* [Identity graph linking rules overview](./overview.md)
+* [Identity optimization algorithm](./identity-optimization-algorithm.md)
+* [Implementation guide](./implementation-guide.md)
+* [Examples of graph configurations](./example-configurations.md)
+* [Troubleshooting and FAQ](./troubleshooting.md)
+* [Namespace priority](./namespace-priority.md)
+* [Graph simulation UI](./graph-simulation.md)
