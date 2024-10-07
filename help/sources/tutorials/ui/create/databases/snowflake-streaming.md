@@ -1,8 +1,6 @@
 ---
 title: Stream data from your Snowflake database to Experience Platform using the UI
-type: Tutorial
 description: Learn how to stream data from your Snwoflake database to Experience Platform
-badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
 ---
 # Stream data from your [!DNL Snowflake] database to Experience Platform using the UI
@@ -48,7 +46,7 @@ When finished, select **[!UICONTROL Connect to source]** and then allow some tim
 
 | Credential | Description |
 | --- | --- |
-| Account | The name of your [!DNL Snowflake] account. |
+| Account | The name of your [!DNL Snowflake] account. For conventions on account names, read the [[!DNL Snowflake Streaming] authentication guide](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials). |
 | Warehouse | The name of your [!DNL Snowflake] warehouse. Warehouses manage the execution of queries in [!DNL Snowflake]. Each [!DNL Snowflake] warehouse is independent from one another and must be accessed individually to bring data to Experience Platform. |
 | Database | The name of your [!DNL Snowflake] database. The database contains the data that you want to bring to Experience Platform. |
 | Schema | (Optional) The database schema associated with your [!DNL Snowflake] account. |
@@ -72,7 +70,9 @@ Select **[!UICONTROL Next]** to proceed.
 
 >[!IMPORTANT]
 >
->A timestamp column must exist in your source table in order for a streaming dataflow to be created. The timestamp is required for Experience Platform to know when data will be ingested and when incremental data will be streamed. You can retroactively add a timestamp column for an existing connection and create a new dataflow.
+>* A timestamp column must exist in your source table in order for a streaming dataflow to be created. The timestamp is required for Experience Platform to know when data will be ingested and when incremental data will be streamed. You can retroactively add a timestamp column for an existing connection and create a new dataflow.
+>
+>* Ensure that the case of the data fields in your sample source data file is in accordance with [!DNL Snowflake]'s guidance on case resolution for identifiers. Read the [[!DNL Snowflake] document on identifier casing](https://docs.snowflake.com/en/sql-reference/identifiers-syntax#label-identifier-casing) for more information.
 
 The [!UICONTROL Select data] step appears. In this step, you must select the data you want to import into Experience Platform, configure timestamps and timezones, and provide a sample source data file for the ingestion of raw data.
 

@@ -533,19 +533,20 @@ alloy("sendEvent", {
         break;  
       }
     }
-      // Send a "decisioning.propositionDisplay" event signaling that the proposition has been rendered.
+    // Send a "decisioning.propositionDisplay" event signaling that the proposition has been rendered.
     alloy("sendEvent", {
-      xdm: {
-        eventType: "decisioning.propositionDisplay",
-        _experience: {
-          decisioning: {
-            propositions: [
-              {
-                id: discountProposition.id,
-                scope: discountProposition.scope,
-                scopeDetails: discountProposition.scopeDetails
-              }
-            ]
+      "xdm": {
+        "eventType": "decisioning.propositionDisplay",
+        "_experience": {
+          "decisioning": {
+            "propositions": [{
+              "id": id,
+              "scope": scope,
+              "scopeDetails": scopeDetails
+            }],
+            "propositionEventType": {
+              "display": 1
+            }
           }
         }
       }
@@ -609,20 +610,42 @@ alloy("sendEvent", {
 This example tracks an event which was fired after performing a specific action, such as clicking a button.
 You can add any additional custom parameters through the `__adobe.target` data object.
 
+You can also add the `commerce` XDM object.
+
 ```js
-//replicates an at.js trackEvent call
 alloy("sendEvent", {
-    "type": "decisioning.propositionDisplay",
     "xdm": {
         "_experience": {
             "decisioning": {
-                "propositions": [{
-                    "scope": "sumbitButtonClick" // Or any mbox/location name you want to use in Adobe Target
-                }]
+                "propositions": [
+                    {
+                        "scope": "orderConfirm" //example scope name
+                    }
+                ],
+                "propositionEventType": {
+                    "display": 1
+                }
+            }
+        },
+        "eventType": "decisioning.propositionDisplay"
+    },
+    "commerce": {
+        "order": {
+            "purchaseID": "a8g784hjq1mnp3",
+            "purchaseOrderNumber": "VAU3123",
+            "currencyCode": "USD",
+            "priceTotal": 999.98
+        }
+    },
+    "data": {
+        "__adobe": {
+            "target": {
+                "pageType": "Order Confirmation",
+                "user.categoryId": "Insurance"
             }
         }
     }
-});
+})
 ```
 
 ## How to trigger a view change in a Single Page Application
@@ -741,7 +764,7 @@ Using Web SDK the customer can set up their pre-hiding style in the configure co
 
 ```javascript
 alloy("configure", {
-  edgeConfigId: "configurationId",
+  datastreamId: "configurationId",
   orgId: "orgId@AdobeOrg",
   debugEnabled: true,
   prehidingStyle: "body { opacity: 0 !important }"

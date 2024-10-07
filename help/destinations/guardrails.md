@@ -86,7 +86,7 @@ The guardrails below apply to the [ad-hoc activation](/help/destinations/api/ad-
 
 ### Edge personalization destinations activation {#edge-destinations-activation}
 
-The guardrails below apply to activation through [edge personalization destinations](/help/destinations/destination-types.md#streaming-profile-export).
+The guardrails below apply to activation through [edge personalization destinations](/help/destinations/destination-types.md#advanced-enterprise-destinations).
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
@@ -172,7 +172,7 @@ Read more about [exporting datasets](/help/destinations/ui/export-datasets.md).
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
 | Maximum number of [private custom destinations](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5  | Performance guardrail| You can create a maximum of 5 private custom streaming or batch destinations using Destination SDK. Reach out to a custom care representative if you need to create more than 5 such destinations. |
-| Profile export policy for Destination SDK | <ul><li>`maxBatchAgeInSecs` (minimum 1.800 and maximum 3.600)</li><li>`maxNumEventsInBatch` (minimum 1.000, maximum 10.000)</li></ul> | System-enforced guardrail | When using the [configurable aggregation](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) option for your destination, be mindful of the minimum and maximum values that determine how often HTTP messages are sent to your API-based destination and how many profiles the messages should include.|
+| Profile export policy for Destination SDK | <ul><li>`maxBatchAgeInSecs` (minimum 1,800 and maximum 3,600)</li><li>`maxNumEventsInBatch` (minimum 1,000 and maximum 10,000)</li></ul> | System-enforced guardrail | When using the [configurable aggregation](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) option for your destination, be mindful of the minimum and maximum values that determine how often HTTP messages are sent to your API-based destination and how many profiles the messages should include.|
 
 {style="table-layout:auto"}
 

@@ -98,20 +98,34 @@ This clause can be used to incrementally read data on a table based on snapshot 
 #### Example 
 
 ```sql
-SELECT * FROM Customers SNAPSHOT SINCE 123;
+SELECT * FROM table_to_be_queried SNAPSHOT SINCE start_snapshot_id;
 
-SELECT * FROM Customers SNAPSHOT AS OF 345;
+SELECT * FROM table_to_be_queried SNAPSHOT AS OF end_snapshot_id;
 
-SELECT * FROM Customers SNAPSHOT BETWEEN 123 AND 345;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN start_snapshot_id AND end_snapshot_id;
 
-SELECT * FROM Customers SNAPSHOT BETWEEN HEAD AND 123;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN HEAD AND start_snapshot_id;
 
-SELECT * FROM Customers SNAPSHOT BETWEEN 345 AND TAIL;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN end_snapshot_id AND TAIL;
 
-SELECT * FROM (SELECT id FROM CUSTOMERS BETWEEN 123 AND 345) C 
+SELECT * FROM (SELECT id FROM table_to_be_queried BETWEEN start_snapshot_id AND end_snapshot_id) C 
 
-SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Customers.id = Inventory.id;
+(SELECT * FROM table_to_be_queried SNAPSHOT SINCE start_snapshot_id) a
+  INNER JOIN 
+(SELECT * from table_to_be_joined SNAPSHOT AS OF your_chosen_snapshot_id) b 
+  ON a.id = b.id;
 ```
+
+The table below explains the meaning of each syntax option within the SNAPSHOT clause.
+
+| Syntax                                                            | Meaning                                                                                  |
+|-------------------------------------------------------------------|------------------------------------------------------------------------------------------|
+| `SINCE start_snapshot_id`                                | Reads data starting from the specified snapshot ID (exclusive).                          |
+| `AS OF end_snapshot_id`                                  | Reads data as it was at the specified snapshot ID (inclusive).                                       |
+| `BETWEEN start_snapshot_id AND end_snapshot_id`          | Reads data between the specified start and end snapshot IDs. It is exclusive of the `start_snapshot_id` and inclusive of the `end_snapshot_id`.                 |
+| `BETWEEN HEAD AND start_snapshot_id`                     | Reads data from the beginning (before the first snapshot) to the specified start snapshot ID (inclusive). Note, this only returns rows in `start_snapshot_id`.|
+| `BETWEEN end_snapshot_id AND TAIL`                       | Reads data from just after the specified `end-snapshot_id` to the end of the dataset (exclusive of the snapshot ID). This means that if `end_snapshot_id` is the last snapshot in the dataset, the query will return zero rows because there are no snapshots beyond that last snapshot. |
+| `SINCE start_snapshot_id INNER JOIN table_to_be_joined AS OF your_chosen_snapshot_id ON table_to_be_queried.id = table_to_be_joined.id` | Reads data starting from the specified snapshot ID from `table_to_be_queried` and joins it with the data from `table_to_be_joined` as it was at `your_chosen_snapshot_id`. The join is based on matching IDs from the ID columns of the two tables being joined. |
 
 A `SNAPSHOT` clause works with a table or table alias but not on top of a subquery or view. A `SNAPSHOT` clause works anywhere a `SELECT` query on a table can be applied.
 
@@ -122,8 +136,6 @@ Also, you can use `HEAD` and `TAIL` as special offset values for snapshot clause
 >If you are querying between two snapshot IDs, the following two scenarios can occur if the start snapshot is expired and the optional fallback behavior flag (`resolve_fallback_snapshot_on_failure`) is set:
 >
 >- If the optional fallback behavior flag is set, Query Service chooses the earliest available snapshot, set it as the start snapshot, and return the data between the earliest available snapshot and the specified end snapshot. This data is **inclusive** of the earliest available snapshot.
->
->- If the optional fallback behavior flag is not set, an error is returned.
 
 ### WHERE clause
 
@@ -294,7 +306,9 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 | `RESTRICT` | The default value for the mode. If specified, the schema only drops if it does **not** contain any tables. |
 | `CASCADE` | If specified, the schema is dropped along with all the tables present in the schema. |
 
-## CREATE VIEW
+## CREATE VIEW {#create-view}
+
+An SQL view is a virtual table based on the result-set of an SQL statement. Create a view with the `CREATE VIEW` statement and give it a name. You can then use that name to refer back to the results of the query. This makes it easier to reuse complex queries.
 
 The following syntax defines a `CREATE VIEW` query for a dataset. This dataset can be an ADLS or accelerated store dataset.
 
@@ -687,11 +701,7 @@ The values taken from the `source_dataset` are used to populate the target table
 | product-id-2        | ("("("(AF, C, D,NULL)")")")       |      6   |  40          |
 | product-id-4        | ("("("(BM, pass, NA,NULL)")")")   |     3    |  12          |
 
-## [!DNL Spark] SQL commands 
-
-The subsection below covers the Spark SQL commands supported by Query Service.
-
-### SET
+## SET
 
 The `SET` command sets a property and either returns the value of an existing property or lists all the existing properties. If a value is provided for an existing property key, the old value is overridden.
 

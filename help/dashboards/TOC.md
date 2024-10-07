@@ -15,16 +15,18 @@ role: Developer,User
 * [Dashboards](user-defined-dashboards.md)
 * [Download dashboards to PDF](download.md)
 * Data Distiller {#data-distiller}
-  * [Overview](data-distiller/overview.md)
-  * Customizable Insights for extended app reporting {#customizable-insights}
-    * [Overview](data-distiller/customizable-insights/overview.md)
-    * [Query pro mode (SQL chart creation)](data-distiller/customizable-insights/query-pro-mode.md)
+  * SQl Insights for extended app reporting {#sql-insights}
+    * [Overview](data-distiller/sql-insights/overview.md)
+  * Query pro mode {#query-pro-mode}  
+    * [Overview](data-distiller/query-pro-mode/overview.md)
     * Filters {#filters}
-      * [Date filter](data-distiller/customizable-insights/filters/date-filter.md)
-      * [Global filter](data-distiller/customizable-insights/filters/global-filter.md) 
-    * [View more](data-distiller/customizable-insights/view-more.md)
-    * [View SQL](data-distiller/customizable-insights/view-sql.md)
-    * [Download as CSV](data-distiller/customizable-insights/download-csv.md)
+      * [Date filter](data-distiller/query-pro-mode/filters/date-filter.md)
+      * [Global filter](data-distiller/query-pro-mode/filters/global-filter.md) 
+    * [Drill through](data-distiller/query-pro-mode/drill-through.md)
+    * [View more](data-distiller/query-pro-mode/view-more.md)
+    * [View SQL](data-distiller/query-pro-mode/view-sql.md)
+    * [Download as CSV](data-distiller/query-pro-mode/download-csv.md)
+    * [Export as PDF](data-distiller/query-pro-mode/export-pdf.md)
 * Available dashboards {#guides}
   * [Profiles](guides/profiles.md)
   * [Account Profiles](guides/account-profiles.md)

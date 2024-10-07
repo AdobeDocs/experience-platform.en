@@ -53,7 +53,7 @@ With object-level access control for destinations, limit specific teams of marke
 To apply access labels to a specific dataflow: 
 
 1. Navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** and locate the destination dataflow that you are looking to limit users' access to. 
-1. Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![Edit details control](/help/access-control/images/olac/key-icon.svg) **[!UICONTROL Apply access labels]** control to add new labels and manage the existing labels for the dataflow.
+1. Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![Edit details control](/help/images/icons/key.png) **[!UICONTROL Apply access labels]** control to add new labels and manage the existing labels for the dataflow.
   ![Select Apply access labels in Browse view of destinations workspace.](/help/access-control/images/olac/apply-access-labels.png)
 1. Select the labels that you want to add to the destination dataflow and select **[!UICONTROL Save]**.
   ![Select the access labels in that should apply to the destination dataflow.](/help/access-control/images/olac/view-access-labels.png)

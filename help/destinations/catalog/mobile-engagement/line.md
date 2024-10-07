@@ -115,6 +115,7 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 To correctly send your audience data from Adobe Experience Platform to the [!DNL LINE] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the [!DNL LINE] destination fields, follow these steps:
 
 Depending on your source identity the following target identity namespace(s) must be mapped:
+
 | Target Identity | Source Field | Target Field |
 | --- | --- | --- |
 | ID for Advertisers(IFAs) | `IDFA` or `GAID` | `LineId` |

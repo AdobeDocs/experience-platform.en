@@ -167,11 +167,11 @@ To create a mapping rule, select **[!UICONTROL Add new mapping]**.
 
 ![Adding a new mapping.](assets/data-prep/add-new-mapping.png)
 
-Select the source icon (![Source icon](assets/data-prep/source-icon.png)), and in the dialog that appears select the source field that you want to map in the provided canvas. Once you have chosen a field, use the **[!UICONTROL Select]** button to continue.
+Select the source icon (![Source icon](/help/images/icons/source.png)), and in the dialog that appears select the source field that you want to map in the provided canvas. Once you have chosen a field, use the **[!UICONTROL Select]** button to continue.
 
 ![Selecting the field to be mapped in the source schema.](assets/data-prep/source-mapping.png)
 
-Next, select the schema icon (![Schema icon](assets/data-prep/schema-icon.png)) to open a similar dialog for the target event schema. Choose the field that you want to map the data to before confirming with **[!UICONTROL Select]**.
+Next, select the schema icon (![Schema icon](/help/images/icons/schema.png)) to open a similar dialog for the target event schema. Choose the field that you want to map the data to before confirming with **[!UICONTROL Select]**.
 
 ![Selecting the field to be mapped in the target schema.](assets/data-prep/target-mapping.png)
 

@@ -8,6 +8,12 @@ exl-id: d51d0eb2-b1e9-4cc1-889a-9487395703b0
 ---
 # [!DNL Sensei Machine Learning] API guide
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
+
 The [!DNL Sensei Machine Learning] API provides a mechanism for data scientists to organize and manage machine learning services, from algorithm onboarding through experimentation and to service deployment.
 
 This developer guide provides steps to help you start using the [Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml), and demonstrates API calls for performing CRUD operations on various Data Science Workspace resources.

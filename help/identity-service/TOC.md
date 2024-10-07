@@ -19,9 +19,12 @@ role: Admin,Developer
   - Identity graph linking rules {#identity-graph-linking-rules}
     - [Feature overview](./identity-graph-linking-rules/overview.md)
     - [Identity optimization algorithm](./identity-graph-linking-rules/identity-optimization-algorithm.md)
+    - [Implementation guide for identity graph linking rules](./identity-graph-linking-rules/implementation-guide.md)
+    - [Example graph configurations](./identity-graph-linking-rules/example-configurations.md)
+    - [Troubleshooting for identity graph linking rules](./identity-graph-linking-rules/troubleshooting.md)
     - [Namespace priority](./identity-graph-linking-rules/namespace-priority.md)
-    - [Example scenarios](./identity-graph-linking-rules/example-scenarios.md)
     - [Graph Simulation UI](./identity-graph-linking-rules/graph-simulation.md)
+    - [Identity settings UI](./identity-graph-linking-rules/identity-settings-ui.md)
   - [ECID overview](./features/ecid.md)
 - [Implementation guide](implementation.md)
 - [Guardrails for Identity data](guardrails.md)

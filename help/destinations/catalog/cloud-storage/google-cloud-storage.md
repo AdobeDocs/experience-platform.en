@@ -20,9 +20,9 @@ Create a live outbound connection to [!DNL Google Cloud Storage] to periodically
 This section describes which types of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
@@ -108,6 +108,22 @@ To configure details for the destination, fill in the required and optional fiel
 You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
+
+### Required [!DNL Google Cloud Storage] permissions {#required-google-cloud-storage-permission}
+
+To successfully connect and export data to your [!DNL Google Cloud Storage] storage location, you need the following [!DNL Google Cloud Storage] permissions for your buckets:
+
+* `orgpolicy.policy.get`
+* `resourcemanager.projects.get`
+* `resourcemanager.projects.list`
+* `storage.managedFolders.create`
+* `storage.multipartUploads.abort`
+* `storage.multipartUploads.create`
+* `storage.multipartUploads.listParts`
+* `storage.objects.create`
+* `storage.objects.list`
+
+Read more about [access control and permissions](https://cloud.google.com/storage/docs/access-control/iam-permissions) in [!DNL Google Cloud Storage].
 
 ## Activate audiences to this destination {#activate}
 

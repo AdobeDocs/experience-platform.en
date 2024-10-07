@@ -12,7 +12,11 @@ This document provides answers to frequently asked questions about Query Service
 The following list of answers to frequently asked questions is divided into the following categories:
 
 - [General](#general)
+- [Queries UI](#queries-ui) 
+- [Dataset Samples](#dataset-samples)
 - [Exporting data](#exporting-data)
+- [SQL Syntax](#sql-syntax) 
+- [ITAS Queries](#itas-queries) 
 - [Third-party tools](#third-party-tools)
 - [PostgreSQL API errors](#postgresql-api-errors)
 - [REST API errors](#rest-api-errors)
@@ -597,6 +601,22 @@ Yes, you can use `CREATE VIEW` command without Data Distiller access. This comma
 Yes. Although, certain third-party clients, such as DbVisualizer, may require a separate identifier before and after an SQL block to indicate that a part of a script should be handled as a single statement. More details can be found in the [anonymous block documentation](./key-concepts/anonymous-block.md) or in [the official DbVisualizer documentation](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect). 
 +++
 
+## Queries UI
+
+### The "Create query" is stuck "Initializing connection..." when trying to connect to Query Service. How do I fix the issue?
+
++++Answer
+If the "Create query" is stuck on "Initializing connection...", this is likely to be a connection or session issue. Refresh the browser if you are using the Platform UI and try again.
++++
+
+## Dataset Samples
+
+### Can I create samples on a system dataset?
+
++++Answer
+No. Write permissions are restricted on system datasets so you cannot create samples.
++++
+
 ## Exporting data {#exporting-data}
 
 This section provides information on exporting data and limits.
@@ -641,6 +661,22 @@ timestamp >= to_timestamp('2022-07-22')
 and timestamp < to_timestamp('2022-07-23');
 ```
 
++++
+
+## SQL Syntax
+
+### Is MERGE INTO supported by Data Distiller or Query Service?
+
++++Answer
+The MERGE INTO SQL construct is not supported by Data Distiller or Query Service.
++++
+
+## ITAS Queries
+
+### What are ITAS queries?
+
++++Answer
+INSERT INTO queries are called ITAS queries. Note that CREATE TABLE queries are referred to as CTAS queries.
 +++
 
 ## Third-party tools {#third-party-tools}
