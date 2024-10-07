@@ -15,7 +15,6 @@ role: Developer,User
 * [Dashboards](user-defined-dashboards.md)
 * [Download dashboards to PDF](download.md)
 * Data Distiller {#data-distiller}
-  * [Overview](data-distiller/overview.md)
   * SQl Insights for extended app reporting {#sql-insights}
     * [Overview](data-distiller/sql-insights/overview.md)
   * Query pro mode {#query-pro-mode}  
