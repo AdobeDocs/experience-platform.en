@@ -12,7 +12,7 @@ In Adobe Experience Platform, you can configure various components of existing a
 * [Enable or disable](#enable-disable-dataflows) activation dataflows;
 * [Add additional audiences and profile attributes](#add-audiences) to activation dataflows;
 * [Add additional datasets](#add-datasets) to activation workflows;
-* [Apply access labels](#apply-access-labels) data to exported data;
+* [Apply access labels](#apply-access-labels) to exported data;
 * [Edit names and descriptions](#edit-names-descriptions) for your activation dataflows;
 
 ## Browse activation dataflows {#browse-activation-dataflows}
@@ -33,7 +33,7 @@ Follow the steps below to browse your existing activation dataflows and identify
 
 4. The **[!UICONTROL Dataflow runs]** page for the destination appears, showing its available controls. Depending on the destination type, you can perform various dataflow operations. See the next sections for each supported dataflow operation.
 
-## Enable/disable activation dataflows {#enable-disable-dataflows}
+## Enable or disable activation dataflows {#enable-disable-dataflows}
 
 Use the **[!UICONTROL Enabled]/[!UICONTROL Disabled]** toggle to start or pause all data exports to the destination.
 
