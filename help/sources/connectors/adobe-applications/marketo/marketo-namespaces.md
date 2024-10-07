@@ -7,7 +7,7 @@ exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
 
 >[!AVAILABILITY]
 >
->You must have access to [Adobe Real-Time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) in order for your B2B schemas to qualify in [Real-Time Customer Profile](../../../../profile/home.md).
+>You must have access to [Adobe Real-Time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) for your B2B schemas to qualify in [Real-Time Customer Profile](../../../../profile/home.md).
 
 >[!NOTE]
 >
@@ -54,11 +54,11 @@ With your [!DNL Postman] collection and environment set up, you can now run the 
 
 In the [!DNL Postman] interface, select the root folder of the auto-generator utility and then select **[!DNL Run]** from the top header.
 
-![The root folder of the Namespaces and Schemas generator on Postman.](../images/marketo/root_folder.png)
+![The root folder of the Namespaces and Schemas generator in the Postman UI. "Runs" is highlighted in the top menu bar.](../images/marketo/root_folder.png)
 
 The [!DNL Runner] interface appears. From here, ensure that all the checkboxes are selected and then select **[!DNL Run Namespaces and Schemas Autogeneration Utility]**.
 
-![The Runner interface on Postman.](../images/marketo/run_generator.png)
+![The Runner interface of the Postman UI with several requests in the Namespaces and Schemas collection checked and the "Run Namespaces and Schemas" button highlighted on the right side.](../images/marketo/run_generator.png)
 
 A successful request creates the namespaces and schemas required for B2B.
 
