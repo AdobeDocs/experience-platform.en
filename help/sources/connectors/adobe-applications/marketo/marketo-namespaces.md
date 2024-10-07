@@ -54,11 +54,11 @@ With your [!DNL Postman] collection and environment set up, you can now run the 
 
 In the [!DNL Postman] interface, select the root folder of the auto-generator utility and then select **[!DNL Run]** from the top header.
 
-![root-folder](../images/marketo/root-folder.png)
+![The root folder of the Namespaces and Schemas generator on Postman.](../images/marketo/root_folder.png)
 
 The [!DNL Runner] interface appears. From here, ensure that all the checkboxes are selected and then select **[!DNL Run Namespaces and Schemas Autogeneration Utility]**.
 
-![run-generator](../images/marketo/run-generator.png)
+![The Runner interface on Postman.](../images/marketo/run_generator.png)
 
 A successful request creates the namespaces and schemas required for B2B.
 
