@@ -1,7 +1,6 @@
 ---
 title: Implementation guide for identity graph linking rules
 description: Learn the recommended steps to follow when implementing your data with identity graph linking rules configurations.
-badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
 ---
 # Implementation guide for identity graph linking rules
@@ -93,7 +92,7 @@ During your pre-implementation process, you must ensure that the authenticated e
 
 ```json
 {
-    "_id": "test_id"
+    "_id": "test_id",
     "identityMap": {
         "ECID": [
             {
