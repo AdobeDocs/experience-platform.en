@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;data location;Data Location;Da
 solution: Experience Platform
 title: Datasets Overview
 description: This document provides a high-level overview of datasets in Experience Platform.
+user-guide-description: Get a high-level overview of datasets in Experience Platform with this guide. Learn how to create them, enforce constraints on data and ingest data into datasets here. 
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
 ---
 # Datasets overview

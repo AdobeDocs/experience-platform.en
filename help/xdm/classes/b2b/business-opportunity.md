@@ -1,6 +1,6 @@
 ---
 title: XDM Business Opportunity Class
-description: This document provides an overview of the XDM Business Opportunity class in Experience Data Model (XDM).
+description: Learn about the XDM Business Opportunity class in Experience Data Model (XDM).
 exl-id: d816b0f9-fd37-45da-aa55-247f7f662da0
 ---
 # [!UICONTROL XDM Business Opportunity] class

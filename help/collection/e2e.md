@@ -97,7 +97,7 @@ Select **[!UICONTROL Datastreams]** in the left navigation. From here, you can s
 
 ![Datastreams](./images/e2e/datastreams.png)
 
-The configuration requirements for a datastream depend on which products and capabilities you are sending data to. For detailed information on the configuration options for each product, refer to the [datastreams overview](../edge/datastreams/overview.md).
+The configuration requirements for a datastream depend on which products and capabilities you are sending data to. For detailed information on the configuration options for each product, refer to the [datastreams overview](../datastreams/overview.md).
 
 ## Install and configure the Web SDK {#install}
 
@@ -107,8 +107,8 @@ Once you have created a schema and a datastream, the next step is to install and
 >
 >This section uses the Data Collection UI to configure the Web SDK tag extension, but you can also install and configure it using raw code instead. Refer to the following guides for more information:
 >
->* [Install the SDK](../edge/fundamentals/installing-the-sdk.md)
->* [Configure the SDK](../edge/fundamentals/configuring-the-sdk.md)
+>* [Install the SDK](/help/web-sdk/install/overview.md)
+>* [Configure the SDK](/help/web-sdk/commands/configure/overview.md)
 >
 >Also note that even if you only want to use event forwarding, you must still install and configure the SDK as described before configuring event forwarding at a [later step](#event-forwarding).
 
@@ -222,7 +222,7 @@ The action configuration page appears. To get the rule to send data to the Edge 
 
 ![Action type](./images/e2e/action-type.png)
 
-The screen updates to show additional options to configure the send event action. Under **[!UICONTROL Type]**, you can provide a custom type value to populate the `eventType` XDM field. Under **[!UICONTROL XDM data]**, provide the name of the XDM data type you created earlier (surrounded by percent signs), or select the database icon (![Database icon](./images/e2e/database-symbol.png)) to select it from a list. This is the data that will ultimately be sent to the Edge Network.
+The screen updates to show additional options to configure the send event action. Under **[!UICONTROL Type]**, you can provide a custom type value to populate the `eventType` XDM field. Under **[!UICONTROL XDM data]**, provide the name of the XDM data type you created earlier (surrounded by percent signs), or select the database icon (![Database icon](/help/images/icons/database.png)) to select it from a list. This is the data that will ultimately be sent to the Edge Network.
 
 Select **[!UICONTROL Keep Changes]** when finished.
 

@@ -13,7 +13,7 @@ All data that is brought into Adobe Experience Platform is constrained by Experi
 
 A label applied to a schema field indicates the usage policies that apply to the data contained in that specific field. 
 
-Labels can be applied to applied to individual schemas, and fields within those schemas. When labels are applied directly to a schema, those labels are propagated to all existing and future datasets that are based on that schema.
+Labels can be applied to individual schemas, and fields within those schemas. When labels are applied directly to a schema, those labels are propagated to all existing and future datasets that are based on that schema.
 
 In addition, any field label that you add in one schema propagates to all other schemas that employ the same field from a shared class or field group. This helps to ensure that usage rules for similar fields are consistent across your entire data model.
 
@@ -37,6 +37,10 @@ This guide requires a working understanding of the following components of Adobe
 To start adding labels, you must first [select an existing schema to edit](../ui/resources/schemas.md#edit) or [create a new schema](../ui/resources/schemas.md#create) to view its structure in the Schema Editor.
 
 To edit the labels for an individual field, you can select the field in the canvas and then select **[!UICONTROL Manage access]** in the right rail.
+
+>[!IMPORTANT]
+>
+>A maximum of 300 labels can be applied to any schema.
 
 ![Select a field from the Schema Editor canvas](../images/tutorials/labels/manage-access.png)
 

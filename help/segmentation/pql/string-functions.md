@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;string functions;string;
 solution: Experience Platform
 title: PQL String Functions
 description: Profile Query Language (PQL) offers functions to make interaction with strings simpler.

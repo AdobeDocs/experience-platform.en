@@ -1,6 +1,6 @@
 ---
 title: Use the Self-Identification Survey To Build Your Experience Platform Personal Profile
-description: Learn how to use the the self-identification survey UI to receive relevant content based on your job functions and related objectives.
+description: Learn how to use the self-identification survey UI to receive relevant content based on your job functions and related objectives.
 badge: Beta
 exl-id: 80b3f55f-1eab-4a99-be75-49bd091f9739
 ---

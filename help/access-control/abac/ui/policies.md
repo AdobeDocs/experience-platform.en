@@ -110,6 +110,74 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 
 ![flac-policy-delete-confirmation](../../images/flac-ui/flac-policy-delete-confirmation.png) -->
 
+## Configure policy for a sandbox
+
+>[!IMPORTANT]
+>
+>By default, the [!UICONTROL Auto-include] feature is turned on for all customers, which means all sandboxes are added to the policy.
+
+>[!NOTE]
+>
+>The **[!UICONTROL Default-Label-Based-Access-Control-Policy]** policy is currently the only one available for configuration.
+
+To view sandboxes associated to a policy, select the policy from the **[!UICONTROL Policies]** tab.
+
+![The policies page showing a list of existing policies available.](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
+
+Next, select the policy, then select **[!UICONTROL Sandboxes]** tab. A list of sandboxes associated with the policy are displayed.
+
+![The policies page showing a list of existing policies available.](../../images/flac-ui/abac-policies-sandboxes-tab.png)
+
+### Add policy to all sandboxes
+
+Use the **[!UICONTROL Auto-include]** toggle on the **[!UICONTROL Sandboxes]** tab to activate the policy for all sandboxes.
+
+![The [!UICONTROL Sandboxes] tab showing the [!UICONTROL Auto-include] toggle.](../../images/flac-ui/abac-policies-auto-include.png)
+
+The **[!UICONTROL Enable Auto-include]** dialog appears prompting you to confirm your selection. Select **[!UICONTROL Enable]** to complete the configuration setting.
+
+![The [!UICONTROL Enable Auto-include] dialog highlighting [!UICONTROL Enable].](../../images/flac-ui/abac-policies-auto-include-enable.png)
+
+>[!SUCCESS]
+>
+>The policy is activated for all existing sandboxes and will be automatically be added to any new sandboxes when they become available.
+
+### Add policy to select sandboxes
+
+>[!IMPORTANT]
+>
+>Future sandboxes will not be included in the policy by default if the [!UICONTROL Auto-include] toggle is switched off. You will need to manage and add sandboxes manually to the policy.
+
+Use the **[!UICONTROL Auto-include]** toggle on the **[!UICONTROL Sandboxes]** tab to disable the policy for all sandboxes.
+
+![The [!UICONTROL Sandboxes] tab showing the [!UICONTROL Auto-include] toggle.](../../images/flac-ui/abac-policies-auto-include.png)
+
+From the **[!UICONTROL Sandboxes]** tab, select **[!UICONTROL Add Sandboxes]** to select sandboxes that this policy will apply to.
+
+![The [!UICONTROL Sandboxes] tab showing a list of sandboxes added to the policy.](../../images/flac-ui/abac-policies-sandboxes-tab-add.png)
+
+A list of sandboxes appears. Select the sandbox you would like to add from the list. Alternatively, use the search bar to search for the sandbox. Select **[!UICONTROL Save]**.
+
+![The [!UICONTROL Add Sandboxes] page showing a list of existing sandboxes available to add to the policy.](../../images/flac-ui/abac-policies-sandboxes-list.png)
+
+>[!SUCCESS]
+>
+>The selected sandboxes have been successfully added to the policy.
+
+### Remove sandboxes from a policy
+
+To remove a sandbox, select the **X** icon next to the sandbox name.
+
+![The [!UICONTROL Sandboxes] tab showing a list of sandboxes, highlighting the [!UICONTROL X] to delete.](../../images/flac-ui/abac-policies-remove-sandbox-x.png)
+
+The **[!UICONTROL Remove]** dialog appears prompting you to confirm your selection. Select **[!UICONTROL Confirm]** to complete the removal.
+
+![The [!UICONTROL Remove] dialog highlighting [!UICONTROL Confirm].](../../images/flac-ui/abac-policies-remove-sandbox.png)
+
+>[!SUCCESS]
+>
+>The selected sandbox has been successfully removed from the policy.
+
 ## Activate a policy
 
 To activate an existing policy, select the policy from the **[!UICONTROL Policies]** tab. 

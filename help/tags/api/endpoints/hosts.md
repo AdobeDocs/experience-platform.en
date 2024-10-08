@@ -424,7 +424,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns the details of the the specified host's property.
+A successful response returns the details of the specified host's property.
 
 ```json
 {

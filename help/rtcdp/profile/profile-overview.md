@@ -2,6 +2,7 @@
 keywords: rtcdp profile;profiles rtcdp;rtcdp identities;rtcdp merge policies;real-time customer profile
 title: Understanding Real-Time Customer Profile in Real-Time CDP
 description: Learn how Adobe Real-Time Customer Data Platform enables you to drive coordinated, consistent, relevant experiences for your customers using Real-Time Customer Profile.
+feature: Get Started, Profiles
 exl-id: de70948c-ffc1-49d3-a57c-25ad415752ff
 ---
 # Real-Time Customer Profile overview

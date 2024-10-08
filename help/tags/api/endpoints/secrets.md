@@ -296,7 +296,7 @@ You can create a secret by making a POST request.
 
 >[!NOTE]
 >
->When you create a new secret, the API returns an immediate response that contains information for that resource. At the same time, a secret exchange task is triggered to test that the credential exchange is functional. This task is processed asynchronously and updates the secret’s status attribute to `succeeded` or `failed` depending on the outcome.
+>When you create a new secret, the API returns an immediate response that contains information for that resource. At the same time, a secret exchange task is triggered to test that the credential exchange is functional. This task is processed asynchronously and updates the secret's status attribute to `succeeded` or `failed` depending on the outcome.
 
 **API format**
 
@@ -466,7 +466,7 @@ curl -X PATCH \
 
 **Response**
 
-A successful response returns the details of the secret, with the the authorization service's response contained under `meta.test_exchange`.
+A successful response returns the details of the secret, with the authorization service's response contained under `meta.test_exchange`.
 
 ```json
 { 

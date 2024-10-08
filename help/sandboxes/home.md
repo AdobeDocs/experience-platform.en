@@ -17,9 +17,9 @@ This document provides a high-level overview of sandboxes in Experience Platform
 
 Sandboxes are virtual partitions within a single instance of Experience Platform, which allow for seamless integration with the development process of your digital experience applications. All content and actions taken within a sandbox are confined to only that sandbox and do not affect any other sandboxes. There are two kinds of sandboxes supported on Experience Platform:
 
-* **Production sandbox**: A production sandbox is meant to be used with profiles in your production environment. Platform allows you to create multiple production sandboxes in order to provide the right functionality for data while still maintaining operational isolation. This feature allows you to dedicate specific production sandboxes to distinct lines of business, brands, projects, or regions. Production sandboxes support a volume of production profiles up to your licensed [!DNL Profile] commitment (measured cumulatively across all of your authorized production sandboxes). You are entitled to use licensed average profile per authorized [!DNL Profile] (measured cumulatively across all of your authorized production sandboxes).
+* **Production sandbox**: A production sandbox is meant to be used with profiles in your production environment. Platform allows you to create multiple production sandboxes in order to provide the right functionality for data while still maintaining operational isolation. This feature allows you to dedicate specific production sandboxes to distinct lines of business, brands, projects, or regions. Production sandboxes support a volume of production profiles up to your licensed [!DNL Profile] commitment (measured cumulatively across all of your authorized production sandboxes). You are entitled to use your entire licensed Total Data Volume (measured cumulatively across all of your authorized production sandboxes).
+
 * **Development sandbox**: A development sandbox is a sandbox that can be used exclusively for development and testing with non-production profiles. Development sandboxes support a volume of non-production profiles up to 10% of your licensed [!DNL Profile] commitment (measured cumulatively across all of your authorized development sandboxes). You are entitled to up to:
-  * An average non-production profile richness of 75 kilobytes per authorized non-production Profile (measured cumulatively across all of your authorized development sandboxes);
   * One batch segmentation job per day, per development sandbox;
   * An average of 120 [!DNL Profile] API calls, per [!DNL Profile], per year (measured cumulatively across all of your authorized development sandboxes.
 
@@ -36,7 +36,7 @@ Finally, the default production sandbox is the first production sandbox that is 
 In summary, sandboxes provide the following benefits:
 
 * **Application lifecycle management**: Create separate virtual environments to develop and evolve digital experience applications.
-* **Project and brand management**: Allow multiple projects to run in parallel within the same organization, while providing isolation and access control. Future releases will provide support for deploying in multiple regions.
+* **Project and brand management**: Allow multiple projects to run in parallel within the same organization, while providing isolation and access control.
 * **Flexible development ecosystem**: Provide sandboxes in a seamless, scalable, and cost-effective way for exploration, enablement, and demonstration purposes.
 
 ## Access control for sandboxes

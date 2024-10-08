@@ -4,6 +4,7 @@ user-guide-title: Adobe Experience Platform Dashboards Help
 breadcrumb-title: Dashboards Guide
 user-guide-description: Learn how to visualize data in Experience Platform through customizable dashboards.
 feature: Dashboards
+role: Developer,User
 ---
 
 # Adobe Experience Platform Dashboards {#dashboards}
@@ -11,14 +12,33 @@ feature: Dashboards
 * [Dashboards overview](home.md)
 * [Dashboard access permissions](permissions.md)
 * [Dashboards inventory](inventory.md)
-* [User defined dashboards](user-defined-dashboards.md)
+* [Dashboards](user-defined-dashboards.md)
 * [Download dashboards to PDF](download.md)
+* Data Distiller {#data-distiller}
+  * [Overview](data-distiller/overview.md)
+  * SQl Insights for extended app reporting {#sql-insights}
+    * [Overview](data-distiller/sql-insights/overview.md)
+  * Query pro mode {#query-pro-mode}  
+    * [Overview](data-distiller/query-pro-mode/overview.md)
+    * Filters {#filters}
+      * [Date filter](data-distiller/query-pro-mode/filters/date-filter.md)
+      * [Global filter](data-distiller/query-pro-mode/filters/global-filter.md) 
+    * [Drill through](data-distiller/query-pro-mode/drill-through.md)
+    * [View more](data-distiller/query-pro-mode/view-more.md)
+    * [View SQL](data-distiller/query-pro-mode/view-sql.md)
+    * [Download as CSV](data-distiller/query-pro-mode/download-csv.md)
+    * [Export as PDF](data-distiller/query-pro-mode/export-pdf.md)
 * Available dashboards {#guides}
   * [Profiles](guides/profiles.md)
   * [Account Profiles](guides/account-profiles.md)
-  * [Segments](guides/segments.md)
+  * [Audiences](guides/audiences.md)
   * [Destinations](guides/destinations.md)
   * [License usage](guides/license-usage.md)
+* Available Insights {#insights}
+  * [Profiles](insights/profiles.md)
+  * [Audiences](insights/audiences.md)
+  * [Destinations](insights/destinations.md)
+  * [Account Profiles](insights/account-profiles.md)
 * Customize dashboards {#customize}  
   * [Customization overview](customize/overview.md)
   * [Modify dashboards](customize/modify.md)
@@ -26,8 +46,13 @@ feature: Dashboards
   * [Standard widgets](customize/standard-widgets.md)
   * [Custom widgets](customize/custom-widgets.md)
   * [Edit schema](customize/edit-schema.md)
+* Insights use cases {#insights-use-cases}
+  * [Consent analysis](insights-use-cases/consent-analysis.md)
+* Available data models {#data-models}
+  * [Real-Time Customer Data Platform Insights data model B2B edition](data-models/cdp-insights-data-model-b2b.md)
+  * [Real-Time Customer Data Platform Insights data model B2C edition](data-models/cdp-insights-data-model-b2c.md)
 * Application integrations {#integrations}
   * [Power BI](integrations/power-bi.md)
 * [Query dashboard datasets](query.md)
-* [Real-Time Customer Data Platform Insights Data Model](cdp-insights-data-model.md)
-* [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
+* [View insight SQL](view-sql.md)
+* [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

@@ -1,8 +1,8 @@
 ---
 description: Learn how to configure destination server specs in Adobe Experience Platform Destination SDK via the `/authoring/destination-servers` endpoint.
 title: Server specs for destinations created with Destination SDK
+exl-id: 62202edb-a954-42ff-9772-863cea37a889
 ---
-
 # Server specs for destinations created with Destination SDK
 
 Destination server specs define the type of destination platform that will receive the data from Adobe Experience Platform, and the communication parameters between Platform and your destination. For instance:

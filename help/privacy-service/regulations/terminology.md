@@ -65,6 +65,8 @@ This document provides definitions for key terms related to privacy regulations 
 
 **Filing system**: Any specific set of personal data that is accessible according to specific criteria, or able to be queried.
 
+**FDBR**: The [!DNL Florida Digital Bill of Rights] (FDBR) is legislation that provides Florida residents with the rights to access, correct, delete, and copy their personal data. It mandates transparency in data practices, allows opt-outs for data sales or targeted advertising, and prohibits unauthorized surveillance. The Florida Department of Legal Affairs enforces these rights, requiring data controllers to respond to requests within 45 days.
+
 ## G
 
 **GDPR**: The [!DNL General Data Protection Regulation] (GDPR) is a legal framework that sets guidelines for the collection and processing of personal information of individuals within the European Economic Area (EEA). The GDPR sets out the principles for data management and the rights of the individual, while also imposing fines that can be revenue-based. GDPR covers all companies that deal with the data of EEA citizens, so it is a critical regulation for corporate compliance officers at banks, insurers, and other financial companies.
@@ -95,9 +97,13 @@ This document provides definitions for key terms related to privacy regulations 
 
 **Main establishment**: The place within the Union that the main decisions surrounding data processing are made; with regard to the processor.
 
+**MHMDAa**: The [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&full=true) enhances privacy rights for consumers regarding their health data. It mandates disclosures, consumer consent, and deletion rights for health data, and prohibits the sale of health data without authorization. Additionally, the Act makes it unlawful to use geofencing around healthcare facilities.
+
 ## N
 
 ## O
+
+**OCPA**: The Oregon Consumer Privacy Act (OCPA) legislation grants Oregon residents key rights over their personal data, including the rights to know, correct, delete, and obtain a copy of their data. It imposes strict obligations on businesses, requiring them to provide detailed privacy notices, gain consent for certain data uses, and implement heightened protections for sensitive information. The legislation aims to balance consumer privacy with business interests.
 
 ## P
 
@@ -141,10 +147,14 @@ This document provides definitions for key terms related to privacy regulations 
 
 ## T
 
+**TDPSA**: The Texas Data Privacy and Security Act (TDPSA) is a comprehensive legislation that protects Texas residents' personal data rights. It grants individuals the right to access, correct, delete, and obtain copies of their data and to opt out of data sales and targeted advertising. Businesses violating this legislation can face financial penalties.
+
 **Trilogues**: Trilogues are informal negotiations between the European Commission, the European Parliament, and the Council of the European Union. These negotiations are usually held following the first readings of proposed legislation to more quickly agree to a compromise text to be adopted.
 agree on the adoption of a compromise text more quickly.
 
 ## U
+
+**UCPA**: The [!DNL Utah Consumer Privacy Act] creates the right for a consumer to know what personal data a business collects, how the business uses their personal data, and whether the business sells their personal data. Consumers can require the business to delete or stop selling their personal data.
 
 **Unambiguous consent**: Unambiguous consent is also known as implicit consent. Unambiguous consent refers to consent that was not explicitly given by the data subject, but is nonetheless unambiguous in nature. For example, during the sign-up process for a company website, a notice is given that by providing an email address, the data subject consents to receiving emails on special offers. If the data subject reads the notice, the affirmative action of entering their email is enough to be considered unambiguous consent.
 

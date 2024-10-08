@@ -8,7 +8,7 @@ exl-id: defdec30-42af-43c8-b2eb-7ce98f7871e3
 
 >[!NOTE]
 >
->The [!DNL Pendo] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
+>The [!DNL Pendo] source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 This tutorial provides steps for creating a [!DNL Pendo] source connection and dataflow using the Adobe Experience Platform user interface.
 
@@ -138,7 +138,7 @@ Once your webhook is created, navigate to the settings page of your [!DNL Pendo]
 
 >[!TIP]
 >
->You can subscribe to a variety of different events categories to determine the kind of events you want to send from your [!DNL Pendo] instance to Platform. For more information on the different events, please refer to the the [[!DNL Pendo] documentation](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks#create-a-webhook-0-4).
+>You can subscribe to a variety of different events categories to determine the kind of events you want to send from your [!DNL Pendo] instance to Platform. For more information on the different events, please refer to the [[!DNL Pendo] documentation](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks#create-a-webhook-0-4).
 
 ## Next steps {#next-steps}
 

@@ -1,8 +1,8 @@
 ---
-description: This page exemplifies the API call used to delete an existing destination server configuration through Adobe Experience Platform Destination SDK. 
+description: This page exemplifies the API call used to delete an existing destination server configuration through Adobe Experience Platform Destination SDK.
 title: Delete a destination server configuration
+exl-id: 2322a2ce-220e-4590-a553-b15152412752
 ---
-
 # Delete a destination server configuration
 
 This page exemplifies the API request and payload that you can use to delete an existing destination server configuration, using the `/authoring/destination-servers` API endpoint.
@@ -69,4 +69,3 @@ To learn more about what you can do with this endpoint, see the following articl
 * [Create a destination server configuration](create-destination-server.md)
 * [Retrieve a destination server configuration](retrieve-destination-server.md)
 * [Update a destination server configuration](update-destination-server.md)
-

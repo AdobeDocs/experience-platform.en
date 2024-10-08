@@ -5,7 +5,7 @@ exl-id: 22e94699-5b84-4a73-b007-557221d3e223
 ---
 # [!DNL Zendesk] Events API extension overview
 
-[Zendesk](https://www.zendesk.com) is a customer service solution and sales tool. The Zendesk [event forwarding](../../../ui/event-forwarding/overview.md) extension leverages the [[!DNL Zendesk Events API]](https://developer.zendesk.com/api-reference/custom-data/events-api/events-api/) to send events from the Adobe Experience Platform Edge Network to Zendesk for further processing. You can use the extension to collect customer profile interactions for use in downstream analysis and action.
+[Zendesk](https://www.zendesk.com) is a customer service solution and sales tool. The Zendesk [event forwarding](../../../ui/event-forwarding/overview.md) extension leverages the [[!DNL Zendesk Events API]](https://developer.zendesk.com/documentation/ticketing/events/about-the-events-api/) to send events from the Adobe Experience Platform Edge Network to Zendesk for further processing. You can use the extension to collect customer profile interactions for use in downstream analysis and action.
 
 This document covers how to install and configure the extension in the UI.
 
@@ -60,7 +60,7 @@ These data elements should be mapped as referenced below.
 
 ### `event` keys
 
-`event` is a JSON object that represents the event triggered by the user. Refer to the Zendesk document on the [anatomy of an event](https://developer.zendesk.com/documentation/custom-data/events/anatomy-of-an-event/) for details on the properties captured by the `event` object.
+`event` is a JSON object that represents the event triggered by the user. Refer to the Zendesk document on the [anatomy of an event](https://developer.zendesk.com/documentation/ticketing/events/anatomy-of-an-event/) for details on the properties captured by the `event` object.
 
 The following keys can be referenced within the `event` object when mapping to data elements:
 
@@ -76,11 +76,11 @@ The following keys can be referenced within the `event` object when mapping to d
 
 >[!NOTE]
 >
->Refer to the [[!DNL Zendesk Events API] documentation](https://developer.zendesk.com/api-reference/custom-data/events-api/events-api/) for additional guidance on event properties.
+>Refer to the [[!DNL Zendesk Events API] documentation](https://developer.zendesk.com/documentation/ticketing/events/about-the-events-api/) for additional guidance on event properties.
 
 ### `profile` keys
 
-`profile` is a JSON object that represents the user that triggered the event. Refer to the Zendesk document on the [anatomy of a profile](https://developer.zendesk.com/documentation/custom-data/profiles/anatomy-of-a-profile/) for details on the properties captured by the `profile` object.
+`profile` is a JSON object that represents the user that triggered the event. Refer to the Zendesk document on the [anatomy of a profile](https://developer.zendesk.com/documentation/ticketing/profiles/anatomy-of-a-profile/) for details on the properties captured by the `profile` object.
 
 The following keys can be referenced within the `profile` object when mapping to data elements:
 
@@ -90,8 +90,8 @@ The following keys can be referenced within the `profile` object when mapping to
 | `type` | String | `arc.event.xdm._extconndev.profile_type` | A name for the profile type. You can use this field to create different kinds of profiles for a given source. For example, you can create one set of company profiles for customers and another for employees. | Yes | Profile type length must not exceed 40 characters. |
 | `name` | String | `arc.event.xdm._extconndev.name` | The name of the person from the profile | No | (N/A) |
 | `user_id` | String | `arc.event.xdm._extconndev.user_id` | The person's user ID in Zendesk. | No | (N/A) |
-| `identifiers` | Array | `arc.event.xdm._extconndev.identifiers` | An array containing at least one identifier. Each identifier consists of a type and a value. | Yes | Refer to the [Zendesk documentation](https://developer.zendesk.com/api-reference/custom-data/profiles_api/profiles_api/#identifiers-array) for more information on the `identifiers` array. All fields and values must be unique. |
-| `attributes` | Object | `arc.event.xdm._extconndev.attrbutes` | An object containing user-defined properties about the person. | No | Refer to the [Zendesk documentation](https://developer.zendesk.com/documentation/custom-data/profiles/anatomy-of-a-profile/#attributes) for more information on profile attributes. |
+| `identifiers` | Array | `arc.event.xdm._extconndev.identifiers` | An array containing at least one identifier. Each identifier consists of a type and a value. | Yes | Refer to the [Zendesk documentation](https://developer.zendesk.com/api-reference/ticketing/users/profiles_api/profiles_api/#identifiers-array) for more information on the `identifiers` array. All fields and values must be unique. |
+| `attributes` | Object | `arc.event.xdm._extconndev.attrbutes` | An object containing user-defined properties about the person. | No | Refer to the [Zendesk documentation](https://developer.zendesk.com/documentation/ticketing/profiles/anatomy-of-a-profile/#attributes) for more information on profile attributes. |
 
 {style="table-layout:auto"}
 
@@ -141,10 +141,10 @@ While using or configuring the extension, the errors below might be returned by 
 
 This document covered how to install and configure the Zendesk event forwarding extension in the UI. For more information on collecting event data in Zendesk, refer to the official documentation:
 
-* [Getting Started with Events](https://developer.zendesk.com/documentation/custom-data/events/getting-started-with-events/)
-* [Zendesk Events API](https://developer.zendesk.com/api-reference/custom-data/events-api/events-api/)
-* [About the Events API](https://developer.zendesk.com/documentation/custom-data/events/about-the-events-api/)
-* [Anatomy of an event](https://developer.zendesk.com/documentation/custom-data/events/anatomy-of-an-event/)
-* [Zendesk Profiles API](https://developer.zendesk.com/api-reference/custom-data/events-api/events-api/#profile-object)
-* [About the Profiles API](https://developer.zendesk.com/documentation/custom-data/profiles/about-the-profiles-api/)
-* [Anatomy of a profile](https://developer.zendesk.com/documentation/custom-data/profiles/anatomy-of-a-profile/)
+* [Getting Started with Events](https://developer.zendesk.com/documentation/ticketing/events/getting-started-with-events/)
+* [Zendesk Events API](https://developer.zendesk.com/api-reference/ticketing/users/events-api/events-api/)
+* [About the Events API](https://developer.zendesk.com/documentation/ticketing/events/about-the-events-api/)
+* [Anatomy of an event](https://developer.zendesk.com/documentation/ticketing/events/anatomy-of-an-event/)
+* [Zendesk Profiles API](https://developer.zendesk.com/api-reference/ticketing/users/events-api/events-api/#profile-object)
+* [About the Profiles API](https://developer.zendesk.com/documentation/ticketing/profiles/about-the-profiles-api/)
+* [Anatomy of a profile](https://developer.zendesk.com/documentation/ticketing/profiles/anatomy-of-a-profile/)

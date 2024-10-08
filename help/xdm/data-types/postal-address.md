@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;address;xdm:address;datatype;data-type;data type;
 solution: Experience Platform
 title: Postal Address Data Type
-description: This document provides an overview of the Postal Address XDM data type.
+description: Learn about the Postal Address XDM data type.
 exl-id: 94457fe5-80bc-4822-9f6c-48f77d56c89b
 ---
 # [!UICONTROL Postal address] data type

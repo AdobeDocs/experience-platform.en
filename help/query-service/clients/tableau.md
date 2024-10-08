@@ -26,11 +26,15 @@ Instructions on how to [connect to a PostgreSQL server with Tableau](https://hel
 
 For more information on finding your username, password, and login credentials, please read the [credentials guide](../ui/credentials.md). To find your credentials, log in to [!DNL Platform], then select **[!UICONTROL Queries]**, followed by **[!UICONTROL Credentials]**.
 
+>[!IMPORTANT]
+>
+>As a Tableau or Power BI user, you can connect Customer Journey Analytics to your BI tools from the Query Service credentials tab. See the credentials documentation for instructions on how to [connect your BI tools to Customer Journey Analytics](../ui/credentials.md#connect-to-customer-journey-analytics).
+
 Ensure that you have checked the **[!UICONTROL Require SSL]** box before trying to connect. See the [SSL modes documentation](./ssl-modes.md) to learn about SSL support for third-party connections to Adobe Experience Platform Query Service.
     
 >[!IMPORTANT]
 >
->Nested data structures in third-party BI tools can be flattened to improve their usability and reduce the required workload to retrieve, analyze, transform and report data. See the documentation on the[`FLATTEN` feature](../essential-concepts/flatten-nested-data.md) for instructions on how to activate this setting when connecting to a database. 
+>Nested data structures in third-party BI tools can be flattened to improve their usability and reduce the required workload to retrieve, analyze, transform and report data. See the documentation on the[`FLATTEN` feature](../key-concepts/flatten-nested-data.md) for instructions on how to activate this setting when connecting to a database. 
 
 After filling in all your credentials, confirm your settings to continue. You have now connected with Adobe Experience Platform.
 

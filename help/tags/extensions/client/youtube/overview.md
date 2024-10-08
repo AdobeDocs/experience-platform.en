@@ -17,7 +17,7 @@ Each tag property in Adobe Experience Platform requires that the following exten
 * Experience Cloud Visitor ID Service
 * Core extension
 
-Use the [”Embed a player using an \<iframe\> tag”](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) code snippet from the Google developer docs in the HTML of each Web page where a video player is to render.
+Use the ["Embed a player using an \<iframe\> tag"](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) code snippet from the Google developer docs in the HTML of each Web page where a video player is to render.
 
 This extension, version 2.0.1, supports embedding one or more YouTube videos on a single Web page by inserting an `id` attribute with a unique value in the iframe script tag, and appending `enablejsapi=1` and `rel=0` to the end of the `src` attribute value, if not already included. For example:
 
@@ -69,18 +69,18 @@ One tag rule can be set for every video event (the seven events listed above). C
 Rules have three actions:
 
 * **Set variables:** Set the Adobe Analytics variables (map to all or some included data elements).
-* **Send beacon:** Send the Adobe Analytics beacon as a custom link tracking call, and provide a ”Link Name” value.
+* **Send beacon:** Send the Adobe Analytics beacon as a custom link tracking call, and provide a "Link Name" value.
 * **Clear variables:** Clear the Adobe Analytics variables.
 
-## Example tag rule for ”Video Start”
+## Example tag rule for "Video Start"
 
 The following video extension objects are to be included.
 
-* **Events**: ”Video Start” (This event causes the rule to fire when the visitor starts playing a YouTube video.)
+* **Events**: "Video Start" (This event causes the rule to fire when the visitor starts playing a YouTube video.)
 
 * **Condition**: None
 
-* **Actions**: Use the **Analytics extension** to ”Set Variables” action, to map:
+* **Actions**: Use the **Analytics extension** to "Set Variables" action, to map:
 
     * The event for Video Start,
     * A prop/eVar for the Video Duration data element
@@ -88,13 +88,13 @@ The following video extension objects are to be included.
     * A prop/eVar for the Video Name data element
     * A prop/eVar for the Video URL data element
 
-  Then, include the ”Send Beacon” action (`s.tl`) with link name ”video start," followed by a ”Clear Variables” action.
+  Then, include the "Send Beacon" action (`s.tl`) with link name "video start," followed by a "Clear Variables" action.
 
 >[!TIP]
 > 
 >For implementations where multiple eVars or props for each video element can't be used, data element values can be concatenated within Platform, parsed into classification reports using the Classification Rule Builder tool, as explained in [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html), and then applied as a segment in Analysis Workspace.
 
-To concatenate video information values, create a new data element called ”Video Meta Data,” and program it to pull in all the video data elements (listed above) and assemble them together. For example:
+To concatenate video information values, create a new data element called "Video Meta Data," and program it to pull in all the video data elements (listed above) and assemble them together. For example:
 
 ```javascript
 var r = [];
@@ -107,3 +107,5 @@ r.push(_satellite.getVar('Extension Version'));
 
 return r.join('|');
 ```
+
+For more information on how to create and leverage data elements effectively within Platform, read the [data elements](../../../ui/managing-resources/data-elements.md) documentation.

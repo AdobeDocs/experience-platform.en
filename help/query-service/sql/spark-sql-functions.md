@@ -2,14 +2,14 @@
 keywords: Experience Platform;home;popular topics;query service;Query service;spark sql;Spark sql;spark;spark sql functions;functions;
 solution: Experience Platform
 title: Spark SQL Functions in Query Service
-description: This documentation contains information on Spark SQL functions that extend SQL functionality.
+description: Learn about the supported Spark SQL functions that extend SQL functionality.
 exl-id: 59e6d82b-3317-456d-8c56-3efd5978433a
 ---
 # [!DNL Spark] SQL functions
 
-Adobe Experience Platform Query Service provides several built-in Spark SQL functions to extend SQL functionality. This document lists the Spark SQL functions that are supported by Query Service.
+You can use several built-in Spark SQL functions to extend SQL functionality with Adobe Experience Platform Query Service. This document lists the Spark SQL functions that are supported by Query Service.
 
-For more detailed information about the functions, including their syntax, usage, and examples, please read the [Spark SQL function documentation](https://spark.apache.org/docs/latest/api/sql/index.html).
+For more detailed information about the functions, including their syntax, usage, and examples, read the [Spark SQL function documentation](https://spark.apache.org/docs/latest/api/sql/index.html).
 
 >[!NOTE]
 >
@@ -64,10 +64,10 @@ For more detailed information about the functions, including their syntax, usage
 | [`percentile_approx`](https://spark.apache.org/docs/latest/api/sql/index.html#percentile_approx) | Returns the approximate percentile at a given percentage |
 | [`pi`](https://spark.apache.org/docs/latest/api/sql/index.html#pi) | Returns pi | 
 | [`pmod`](https://spark.apache.org/docs/latest/api/sql/index.html#pmod) | Returns the positive modulo between two values |
-| [`positive`](https://spark.apache.org/docs/latest/api/sql/index.html#positive) | Returns the positive balue |
+| [`positive`](https://spark.apache.org/docs/latest/api/sql/index.html#positive) | Returns the positive value |
 | [`pow`](https://spark.apache.org/docs/latest/api/sql/index.html#pow), [`power`](https://spark.apache.org/docs/latest/api/sql/index.html#power) | Returns the first value to the power of the second value |
 | [`radians`](https://spark.apache.org/docs/latest/api/sql/index.html#radians) | Converts the value to radians |
-| [`rand`](https://spark.apache.org/docs/latest/api/sql/index.html#rand) | Returns a random number between 0 and 1 |
+| [`rand`](https://spark.apache.org/docs/latest/api/sql/index.html#rand) | Returns a random number from 0 through 1 |
 | [`randn`](https://spark.apache.org/docs/latest/api/sql/index.html#randn) | Returns a random value |
 | [`rint`](https://spark.apache.org/docs/latest/api/sql/index.html#rint) | Returns the closest double value |
 | [`round`](https://spark.apache.org/docs/latest/api/sql/index.html#round) | Returns the closest rounded value |
@@ -123,10 +123,10 @@ For more detailed information about the functions, including their syntax, usage
 | [`day`](https://spark.apache.org/docs/latest/api/sql/index.html#day), [`dayofmonth`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofmonth) | Returns the day of the month |
 | [`dayofweek`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofweek) | Returns the day of week (1-7) |
 | [`dayofyear`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofyear) | Returns the day of year |
-| [`from_unixtime`](https://spark.apache.org/docs/latest/api/sql/index.html#from_unixtime) | Returns date in Unix time |
+| [`from_unixtime`](https://spark.apache.org/docs/latest/api/sql/index.html#from_unixtime) | Returns date in UNIX&reg; time |
 | [`from_utc_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#from_utc_timestamp) | Returns date in UTC time |
 | [`hour`](https://spark.apache.org/docs/latest/api/sql/index.html#hour) | Returns the hour of the input |
-| [`last_day`](https://spark.apache.org/docs/latest/api/sql/index.html#last_day) | Returns the last day of the month the date belongs to |
+| [`last_day`](https://spark.apache.org/docs/latest/api/sql/index.html#last_day) | Returns the last day of the month that the date belongs to |
 | [`minute`](https://spark.apache.org/docs/latest/api/sql/index.html#minute) | Returns the minute of the input | 
 | [`month`](https://spark.apache.org/docs/latest/api/sql/index.html#month) | Returns the month of the input |
 | [`months_between`](https://spark.apache.org/docs/latest/api/sql/index.html#months_between) | Number of months between |
@@ -135,10 +135,10 @@ For more detailed information about the functions, including their syntax, usage
 | [`second`](https://spark.apache.org/docs/latest/api/sql/index.html#second) | Returns the second of the string |
 | [`to_date`](https://spark.apache.org/docs/latest/api/sql/index.html#to_date) | Converts the string to a date. **Note:** The string **must** be in the format `yyyy-mm-ddTHH24:MM:SS`. |
 | [`to_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_timestamp) | Converts the string to a timestamp. **Note:** The string **must** be in the format `yyyy-mm-ddTHH24:MM:SS`. |
-| [`to_unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_unix_timestamp) | Converts the string to a Unix timestamp |
+| [`to_unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_unix_timestamp) | Converts the string to a UNIX&reg; timestamp |
 | [`to_utc_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_utc_timestamp) | Converts the string to a UTC timestamp |
 | [`trunc`](https://spark.apache.org/docs/latest/api/sql/index.html#trunc) | Truncates the date |
-| [`unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#unix_timestamp) | Returns the Unix timestamp |
+| [`unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#unix_timestamp) | Returns the UNIX&reg; timestamp |
 | [`weekday`](https://spark.apache.org/docs/latest/api/sql/index.html#weekday) | Day of the week (0-6) |
 | [`weekofyear`](https://spark.apache.org/docs/latest/api/sql/index.html#weekofyear) | Returns the week of the year for a given date |
 | [`year`](https://spark.apache.org/docs/latest/api/sql/index.html#year) | Returns the year of the string |
@@ -160,7 +160,7 @@ For more detailed information about the functions, including their syntax, usage
 | [`array_repeat`](https://spark.apache.org/docs/latest/api/sql/index.html#array_repeat) | Creates an array containing the value counted times |
 | [`array_sort`](https://spark.apache.org/docs/latest/api/sql/index.html#array_sort) | Sorts the array |
 | [`array_union`](https://spark.apache.org/docs/latest/api/sql/index.html#array_union) | Joins the array together, without any duplicates |
-| [`arrays_zip`](https://spark.apache.org/docs/latest/api/sql/index.html#array_zip) | Combines the values of given arrays with the values of original collection at a given index |
+| [`arrays_zip`](https://spark.apache.org/docs/latest/api/sql/index.html#array_zip) | Combines the values of given arrays with the values of the original collection at a given index |
 | [`cardinality`](https://spark.apache.org/docs/latest/api/sql/index.html#cardinality) | Return the size of the array |
 | [`element_at`](https://spark.apache.org/docs/latest/api/sql/index.html#element_at) | Return the element at position |
 | [`explode`](https://spark.apache.org/docs/latest/api/sql/index.html#explode) | Separate elements of array into multiple rows, excluding null |
@@ -169,7 +169,7 @@ For more detailed information about the functions, including their syntax, usage
 | [`flatten`](https://spark.apache.org/docs/latest/api/sql/index.html#flatten) | Flattens an array of arrays |
 | [`inline`](https://spark.apache.org/docs/latest/api/sql/index.html#inline) | Separate array of structs into a table, excluding null |
 | [`inline_outer`](https://spark.apache.org/docs/latest/api/sql/index.html#inline_outer) | Separate array of structs into a table, including null |
-| [`posexplode`](https://spark.apache.org/docs/latest/api/sql/index.html#posexplode) | Separate elements of array into multiple rows with positions, excluding null |
+| [`posexplode`](https://spark.apache.org/docs/latest/api/sql/index.html#posexplode) | Separate elements of an array into multiple rows with positions, excluding null |
 | [`reverse`](https://spark.apache.org/docs/latest/api/sql/index.html#reverse) | Reverse elements of the array |
 | [`shuffle`](https://spark.apache.org/docs/latest/api/sql/index.html#shuffle) | Return a random permutation of the array |
 | [`slice`](https://spark.apache.org/docs/latest/api/sql/index.html#slice) | Subsets an array |
@@ -211,7 +211,7 @@ For more detailed information about the functions, including their syntax, usage
 | [`from_json`](https://spark.apache.org/docs/latest/api/sql/index.html#from_json), [`get_json_object`](https://spark.apache.org/docs/latest/api/sql/index.html#get_json_object) | Get data from JSON |
 | [`hash`](https://spark.apache.org/docs/latest/api/sql/index.html#hash) | Return the hash value |
 | [`hex`](https://spark.apache.org/docs/latest/api/sql/index.html#hex) | Convert the argument to a hexadecimal value |
-| [`initcap`](https://spark.apache.org/docs/latest/api/sql/index.html#initcap) | Changes the string to be title cased |
+| [`initcap`](https://spark.apache.org/docs/latest/api/sql/index.html#initcap) | Changes the string to be title case |
 | [`lcase`](https://spark.apache.org/docs/latest/api/sql/index.html#lcase), [`lower`](https://spark.apache.org/docs/latest/api/sql/index.html#lower) | Changes the string to be all lowercase |
 | [`lpad`](https://spark.apache.org/docs/latest/api/sql/index.html#lpad) | Pads the left side of a string |
 | [`map`](https://spark.apache.org/docs/latest/api/sql/index.html#map) | Create a map |
@@ -299,7 +299,7 @@ For more detailed information about the functions, including their syntax, usage
 | [`current_date`](https://spark.apache.org/docs/latest/api/sql/index.html#current_date) | Returns current date |
 | [`current_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#current_timestamp), [`now`](https://spark.apache.org/docs/latest/api/sql/index.html#now) | Returns current timestamp |
 
-### Higher order functions {#higher-order}
+### Higher-order functions {#higher-order}
 
 | Function | Description |
 | -------- | ----------- |

@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;payment item;datatype;data-type;data type;
 solution: Experience Platform
 title: Payment Item Data Type
-description: This document provides an overview of the Payment Item Experience Data Model (XDM) data type.
+description: Learn about the Payment Item Experience Data Model (XDM) data type.
 exl-id: d25a358b-73c1-468b-a9c5-808385689932
 ---
 # [!UICONTROL Payment Item] data type

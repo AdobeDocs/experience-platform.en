@@ -61,7 +61,7 @@ TBD if we keep this link but will likely remove it
 [Legacy API tutorial to export data to cloud storage destinations](/help/destinations/api/connect-activate-batch-destinations.md) (outdated, do not use anymore)
 
 --> 
-* [API tutorial to export segments to cloud storage destinations](/help/destinations/api/activate-segments-file-based-destinations.md)
+* [API tutorial to export audiences to cloud storage destinations](/help/destinations/api/activate-segments-file-based-destinations.md)
 * [Destinations Flow Service API reference documentation](https://developer.adobe.com/experience-platform-apis/references/destinations/) 
 
 ## Summary of backwards-incompatible changes {#summary-backwards-incompatible-changes}
@@ -679,7 +679,7 @@ Find complete information about setting up the `profileMapping` object in the [A
 ```json{line-numbers="true" start-line="1" highlight="4-40, 45-53"}
 
 {
-  "segmentSelectors": { // shortened for brevity since nothing changes in the segment selectors
+  "segmentSelectors": { // shortened for brevity since nothing changes in the audience selectors
   },  
   "profileSelectors": {
     "selectors": [
@@ -749,7 +749,7 @@ Notice in the configuration example below how `profileSelectors` fields have bee
 ```json {line-numbers="true" start-line="1" highlight="4-12, 18-20"}
 
 {
-  "segmentSelectors": { // shortened for brevity since nothing changes in the segment selectors
+  "segmentSelectors": { // shortened for brevity since nothing changes in the audience selectors
   },  
   "mandatoryFields": [
     "CORE",
@@ -780,7 +780,7 @@ Notice in the configuration example below how `profileSelectors` fields have bee
 
 ## Migration timeline and action items {#timeline-and-action-items}
 
-The migration of legacy dataflows to the new destination cards for [!DNL Amazon S3], [!DNL Azure Blob], and SFTP destinations will occur as soon as your organization is ready to migrate and no later than **June 30th, 2023**.
+The migration of legacy dataflows to the new destination cards for [!DNL Amazon S3], [!DNL Azure Blob], and SFTP destinations will occur as soon as your organization is ready to migrate and no later than **July 26th, 2023**.
 
 You will receive reminder emails from Adobe as the migration date approaches. In preparation, read the Action items section below to get ready for the migration. 
 
@@ -788,11 +788,11 @@ You will receive reminder emails from Adobe as the migration date approaches. In
 
 In preparation for the migration of the [!DNL Amazon S3], [!DNL Azure Blob], and SFTP cloud storage destinations to the new cards, please prepare to update your scripts and automated API calls as suggested below. 
 
-1. Update any scripts or automated API calls for any existing [!DNL Amazon S3], [!DNL Azure Blob], or SFTP cloud storage destinations by June 30, 2023. Any automated API calls or scripts which leverage the legacy connection specs or flow specs need to be updated to the new connection specs or flow specs.
-2. Reach out to your Adobe account representative when your scripts have been updated before June 30th.
+1. Update any scripts or automated API calls for any existing [!DNL Amazon S3], [!DNL Azure Blob], or SFTP cloud storage destinations by July 26, 2023. Any automated API calls or scripts which leverage the legacy connection specs or flow specs need to be updated to the new connection specs or flow specs.
+2. Reach out to your Adobe account representative when your scripts have been updated before July 26th.
 3. For example, the `targetConnectionSpecId` can be used as a flag to determine if the dataflow has been migrated to the new destination card. You could update your scripts with an `if` condition to look at the legacy and updated target connection specs in `flow.inheritedAttributes.targetConnections[0].connectionSpec.id` and determine if your dataflow has been migrated. You can see the legacy and new connection spec IDs in the specific sections on this page for each destination.
 4. Your Adobe account team will reach out with further information about when your dataflows will be migrated.
-5. After June 30th, all dataflows will be migrated. All your exiting dataflows will now have new flow entities (connection specs, flow specs, base connections, and target connections). Any scripts or API calls on your side that use the legacy flow entities will stop working.
+5. After July 26th, all dataflows will be migrated. All your exiting dataflows will now have new flow entities (connection specs, flow specs, base connections, and target connections). Any scripts or API calls on your side that use the legacy flow entities will stop working.
 
 ## Other migration considerations {#other-considerations}
 

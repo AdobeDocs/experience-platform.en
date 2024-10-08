@@ -1,8 +1,8 @@
 ---
-description: This page exemplifies the API call used to delete an existing audience template through Adobe Experience Platform Destination SDK. 
+description: This page exemplifies the API call used to delete an existing audience template through Adobe Experience Platform Destination SDK.
 title: Delete an audience template
+exl-id: 6eb07e3c-3269-4368-9b11-04bd993cc4ab
 ---
-
 # Delete an audience template
 
 >[!IMPORTANT]

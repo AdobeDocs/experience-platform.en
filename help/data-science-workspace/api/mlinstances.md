@@ -3,9 +3,16 @@ keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;po
 solution: Experience Platform
 title: MLInstances API Endpoint
 description: An MLInstance is a pairing of an existing Engine with an appropriate set of configurations that defines any training parameters, scoring parameters, or hardware resource configurations.
+role: Developer
 exl-id: e78cda69-1ff9-47ce-b25d-915de4633e11
 ---
 # MLInstances endpoint
+
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
 
 An MLInstance is a pairing of an existing [Engine](./engines.md) with an appropriate set of configurations that defines any training parameters, scoring parameters, or hardware resource configurations.
 

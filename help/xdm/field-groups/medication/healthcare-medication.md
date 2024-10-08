@@ -1,6 +1,6 @@
 ---
 title: Healthcare Medication Schema Field Group
-description: This document provides an overview of the Healthcare medication schema field group.
+description: Learn about the Healthcare medication schema field group.
 exl-id: 3423d067-fe8c-44e5-a6f9-ce0458d26ebc
 ---
 # [!UICONTROL Healthcare medication] schema field group

@@ -1,8 +1,8 @@
 ---
 description: Learn how to configure the destination delivery settings for destinations built with Destination SDK, to indicate where the exported data goes and what authentication rule is used in the location where the data will land.
 title: Destination delivery
+exl-id: ade77b6b-4b62-4b17-a155-ef90a723a4ad
 ---
-
 # Destination delivery
 
 To offer more control over where the data exported to your destination lands, Destination SDK allows you to specify destination delivery settings.
@@ -102,7 +102,7 @@ After reading this article, you should have a better understanding of how you ca
 To learn more about the other destination components, see the following articles:
 
 * [Customer authentication](customer-authentication.md)
-* [OAuth2 authentication](oauth2-authentication.md)
+* [OAuth2 authorization](oauth2-authorization.md)
 * [UI attributes](ui-attributes.md)
 * [Customer data fields](customer-data-fields.md)
 * [Schema configuration](schema-configuration.md)

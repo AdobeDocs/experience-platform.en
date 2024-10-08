@@ -1,6 +1,6 @@
 ---
 title: Policy Class
-description: This document provides an overview of the Policy class in Experience Data Model (XDM).
+description: Learn about the Policy class in Experience Data Model (XDM).
 exl-id: 56cc8c69-84a0-493e-85c5-e0cd994e4bee
 ---
 # [!UICONTROL Policy] class

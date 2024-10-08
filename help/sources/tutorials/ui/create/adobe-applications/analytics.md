@@ -20,9 +20,9 @@ This tutorial requires a working understanding of the following components of Ex
 It is important to understand the following key terms used throughout this document:
 
 * **Standard attribute**: Standard attributes are any attribute that is pre-defined by Adobe. They contain the same meaning for all customers and are available in the [!DNL Analytics] source data and [!DNL Analytics] schema field groups.
-* **Custom attribute**: Custom attributes are any attribute in the custom variable hierarchy in [!DNL Analytics]. Custom attributes are used within an Adobe Analytics implementation to capture specific information into a report suite, and they can differ in their use from report suite to report suite. Custom attributes include eVars, props, and lists. See the following [[!DNL Analytics] documentation on conversion variables](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) for more information on eVars.
+* **Custom attribute**: Custom attributes are any attribute in the custom variable hierarchy in [!DNL Analytics]. Custom attributes are used within an Adobe Analytics implementation to capture specific information into a report suite, and they can differ in their use from report suite to report suite. Custom attributes include eVars, props, and lists. See the following [[!DNL Analytics] documentation on conversion variables](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) for more information on eVars.
 * **Any attribute in Custom field groups**: Attributes that originate from field groups created by customers are all user-defined and are considered to be neither standard nor custom attributes.
-* **Friendly names**: Friendly names are human-provided labels for custom variables in an [!DNL Analytics] implementation. See the following [[!DNL Analytics] documentation on conversion variables](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) for more information on friendly names.
+* **Friendly names**: Friendly names are human-provided labels for custom variables in an [!DNL Analytics] implementation. See the following [[!DNL Analytics] documentation on conversion variables](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) for more information on friendly names.
 
 ## Create a source connection with Adobe Analytics
 
@@ -51,7 +51,7 @@ The **[!UICONTROL Analytics source add data]** step provides you with a list of 
 
 A report suite is a container of data that forms the basis of [!DNL Analytics] reporting. An organization can have many report suites, each containing different datasets. 
 
-You can ingest report suites from any region (United States, United Kingdom, or Singapore) as long as they are mapped to the same organization as the Experience Platform sandbox instance in which the source connection is being created in. A report suite can be ingested using only a single active dataflow. A report suite that is not selectable has already been ingested, either in the the sandbox that you are using or in a different sandbox.
+You can ingest report suites from any region (United States, United Kingdom, or Singapore) as long as they are mapped to the same organization as the Experience Platform sandbox instance in which the source connection is being created in. A report suite can be ingested using only a single active dataflow. A report suite that is not selectable has already been ingested, either in the sandbox that you are using or in a different sandbox.
 
 Multiple in-bound connections can be made to bring multiple report suites into the same sandbox. If the report suites have differing schemas for variables (such as eVars or events), they should be mapped to specific fields in the custom field groups and avoid data conflicts using [Data Prep](../../../../../data-prep/ui/mapping.md). Report suites can only be added to a single sandbox.
 
@@ -162,7 +162,7 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 ![complete-custom-mapping](../../../../images/tutorials/create/analytics/complete-custom-mapping.png) -->
 
-### Filtering for Real-Time Customer Profile {#filtering-for-profile}
+## Filtering for Real-Time Customer Profile {#filtering-for-profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_data_prep_analytics_filtering"
@@ -171,7 +171,26 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 Once you have completed mappings for your [!DNL Analytics] report suite data, you can apply filtering rules and conditions to selectively include or exclude data from ingestion to the Real-Time Customer Profile. Support for filtering is only available for [!DNL Analytics] data and data is only filtered prior to entering [!DNL Profile.] All data are ingested into the data lake.
 
-#### Row-level filtering
+>[!BEGINSHADEBOX]
+
+**Additional information on Data Prep and filtering Analytics data for Real-Time Customer Profile**
+
+* You can use the filtering functionality for data that is going to Profile, but not for data going to data lake.
+* You can use filtering for live data, but you cannot filter backfill data.
+  * The [!DNL Analytics] source does not backfill data into Profile.
+* If you utilize Data Prep configurations during the initial setup of an [!DNL Analytics] flow, those changes are applied to the automatic 13-month backfill as well. 
+  * However, this is not the case for filtering because filtering is reserved only for live data.
+* Data Prep is applied to both streaming and batch ingestion paths. If you modify an existing Data Prep configuration, those changes are then applied to new incoming data across both streaming and batch ingestion pathways. 
+  * However, any Data Prep configurations do not apply to data that has already been ingested into Experience Platform, regardless of whether it is streaming or batch data.
+* Standard attributes from Analytics are always mapped automatically. Therefore, you cannot apply transformations to standard attributes.
+  * However, you can filter out standard attributes as long as they are not required in Identity Service or Profile.
+* You cannot use column-level filtering to filter required fields and identity fields.
+* While you can filter out secondary identities, specifically AAID and AACustomID, you cannot filter out ECID.
+* When a transformation error occurs, the corresponding column results in NULL.
+
+>[!ENDSHADEBOX]
+
+### Row-level filtering
 
 >[!IMPORTANT]
 >
@@ -229,7 +248,7 @@ When finished, select **[!UICONTROL Next]**.
 
 ![exclude-examples](../../../../images/tutorials/create/analytics/exclude-examples.png)
 
-#### Column-level filtering
+### Column-level filtering
 
 Select **[!UICONTROL Column filter]** from the header to apply column-level filtering. 
 
@@ -242,6 +261,14 @@ By default, all [!DNL Analytics] go to [!DNL Profile] and this process allows fo
 When finished, select **[!UICONTROL Next]**.
 
 ![columns-selected](../../../../images/tutorials/create/analytics/columns-selected.png)
+
+### Filter secondary identities
+
+Use a column filter to exclude secondary identities from Profile ingestion. To filter secondary identities, select **[!UICONTROL Column filter]** and then select **[!UICONTROL _identities]**.
+
+The filter only applies when an identity is marked as secondary. If identities are selected, but an event arrives with one of the identities marked as primary, then those do not get filtered out.
+
+![secondary-identities](../../../../images/tutorials/create/analytics/secondary-identities.png)
 
 ### Provide dataflow details
 
@@ -258,33 +285,34 @@ The [!UICONTROL Review] step appears, allowing you to review your new Analytics 
 
 ![review](../../../../images/tutorials/create/analytics/review.png)
 
-### Monitor your dataflow
+## Monitor your dataflow {#monitor-your-dataflow}
 
-Once your dataflow has been created, you can monitor the data that is being ingested through it. From the [!UICONTROL Catalog] screen, select **[!UICONTROL Dataflows]** to view a list of established flows associated with your Analytics account.
+Once your dataflow is complete, select **[!UICONTROL Dataflows]** in the sources catalog to monitor the activity and status of your data.
 
-![select-dataflows](../../../../images/tutorials/create/analytics/select-dataflows.png)
+![The sources catalog with the dataflows tab selected.](../../../../images/tutorials/create/analytics/select-dataflows.png)
 
-The **Dataflows** screen appears. On this page is a pair of dataset flows, including information about their name, source data, creation time, and status.
+A list of existing Analytics dataflows in your organization appears. From here, select a target dataset to view its respective ingestion activity.
 
-The connector instantiates two dataset flows. One flow represents backfill data and the other is for live data. Backfill data is not configured for Profile but is sent to the data lake for analytical and data-science use-cases.
+![A list of existing Adobe Analytics dataflows in your organization.](../../../../images/tutorials/create/analytics/select-target-dataset.png)
 
-For more information on backfill, live data, and their respective latencies, see the [Analytics Data Connector overview](../../../../connectors/adobe-applications/analytics.md).
+The [!UICONTROL Dataset activity] page provides information on the progress of data that is being sent from Analytics to Experience Platform. The interface displays metrics such as the total of records in the previous month, the total of ingested records in the last seven days, and the size of data in the previous month.
 
-Select the dataset flow you wish to view from the list.
+The source instantiates two dataset flows. One flow represents backfill data and the other is for live data. Backfill data is not configured for ingestion into Real-Time Customer Profile but is sent to the data lake for analytical and data-science use-cases.
 
-![select-target-dataset](../../../../images/tutorials/create/analytics/select-target-dataset.png)
+For more information on backfill, live data, and their respective latencies, read the [Analytics source overview](../../../../connectors/adobe-applications/analytics.md).
 
-The **[!UICONTROL Dataset activity]** page appears. This page displays the rate of messages being consumed in the form of a graph. Select **[!UICONTROL Data governance]** from the top header to access the labelling fields.
+![The dataset activity page for a given target dataset for Adobe Analytics data.](../../../../images/tutorials/create/analytics/dataset-activity.png)
 
-![dataset-activity](../../../../images/tutorials/create/analytics/dataset-activity.png)
+>[!NOTE]
+>
+>The dataset activity page does not display information about batches since the Analytics source connector is entirely managed by Adobe. You can monitor that data is flowing by looking at the metrics around ingested records.
 
-You can view a dataset flow's inherited labels from the [!UICONTROL Data governance] screen. For more information on how to label data coming from Analytics, visit the [data usage labels guide](../../../../../data-governance/labels/user-guide.md).
+## Delete your dataflow {#delete-dataflow}
 
-![data-gov](../../../../images/tutorials/create/analytics/data-gov.png)
+To delete your Analytics dataflow, select **[!UICONTROL Dataflows]** from the top header of the sources workspace. Use the dataflows page to locate the Analytics dataflow that you want to delete and then select the ellipses (`...`) beside it. Next, use the dropdown menu and select **[!UICONTROL Delete]**.
 
-To delete a dataflow, head to the [!UICONTROL Dataflows] page and then select the ellipses (`...`) beside the dataflow name and then select [!UICONTROL Delete].
-
-![delete](../../../../images/tutorials/create/analytics/delete.png)
+* Deleting the live Analytics dataflow will also delete its underlying dataset.
+* Deleting the backfill Analytics dataflow does not delete the underlying dataset, but will stop the backfill process for its corresponding report suite. If you delete the backfill dataflow, ingested data may still be viewed through the dataset.
 
 ## Next steps and additional resources
 

@@ -150,7 +150,7 @@ In the [!DNL Customer.io] user interface, input your [webhook URL](#get-streamin
 
 >[!TIP]
 >
->You can subscribe to a variety of different events for your reporting webhook. Each events' message will be ingested to Platform when a [!DNL Customer.io] action event trigger criteria is met. For more information on the different events, please refer to the the [[!DNL Customer.io] events documentation](https://customer.io/docs/webhooks/#events).
+>You can subscribe to a variety of different events for your reporting webhook. Each events' message will be ingested to Platform when a [!DNL Customer.io] action event trigger criteria is met. For more information on the different events, please refer to the [[!DNL Customer.io] events documentation](https://customer.io/docs/webhooks/#events).
 
 ## Next steps {#next-steps}
 

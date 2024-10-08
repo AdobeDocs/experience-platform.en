@@ -91,7 +91,7 @@ For more details, see the section on [looking up a job by its ID](api/privacy-jo
 
 On the [!DNL Privacy Service] UI dashboard, find the job you want to download from the **Job Requests** widget. Select the ID of the job to open the Job Details page. From here, select **Download** in the top-right corner to download the ZIP file. See the [Privacy Service user guide](ui/user-guide.md) for more detailed steps.
 
-## Common error messages
+## Common error messages {#common-error-messages}
 
 The following table outlines some common errors in [!DNL Privacy Service], with descriptions to help resolve their respective issues.
 
@@ -105,3 +105,4 @@ The following table outlines some common errors in [!DNL Privacy Service], with 
 | Access and permissions are required. | Access and permissions are required in order to use [!DNL Privacy Service]. Contact your administrator to gain access. |
 | There was a problem uploading and archiving the access data. | When this error occurs, re-upload the access data and try again. |
 | The workload was exceeded for the current document rate limit. | When this error occurs, reduce the submission rate and try again. |
+| Too Many Requests<br>(HTTP 429 errors) | If your submission patterns exceed the monitored limit of allowed data subject jobs, you will receive a HTTP 429 error in response to continued traffic from your organization. Privacy Service is intended for the processing of data subject privacy requests. It is not to be used for data cleanup. If you receive HTTP 429 errors, throttling and request limits are implemented to protect Adobe from abuse that could put legitimate compliance work at risk.<br>Alternative methods to minimize your data are provided by [setting dataset expiration schedules](../hygiene/ui/dataset-expiration.md) and using the [record delete feature](../hygiene/ui/record-delete.md). See their respective documentation for more information on how to apply these capabilities.   |

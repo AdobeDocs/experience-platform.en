@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;getting started;customer ai;popular topics
-solution: Experience Platform, Real-time Customer Data Platform
+solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Getting Started in Customer AI
 description: This guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads.
@@ -14,7 +14,7 @@ The guides for Customer AI require a working understanding of the various Platfo
 - [Basics of schema composition](../../xdm/schema/composition.md): This document provides an introduction to Experience Data Model (XDM) schemas and the building blocks, principles, and best practices for composing schemas to be used in [!DNL Adobe Experience Platform].
 - [Building schemas](../../xdm/tutorials/create-schema-ui.md): This tutorial covers the steps for creating a schema using the Schema Editor within Experience Platform.
 - [Real-Time Customer Profile overview](../../rtcdp/overview.md): Built on [!DNL Adobe Experience Platform], Adobe Real-Time Customer Data Platform (Real-Time CDP) helps companies bring together known and unknown data to activate customer profiles with intelligent decisioning throughout the customer journey. Real-Time CDP combines multiple enterprise data sources to create unified profiles in real time that can be used to provide one-to-one personalized customer experiences across all channels and devices.
-- [Segmentation Service overview](../../segmentation/home.md): Segmentation is the process of defining specific attributes or behaviors shared by a subset of profiles from your profile store to distinguish a marketable group of people from your customer base. For example, in an email campaign called "Did you forget to buy your sneakers?", you may want an audience of all users who searched for running shoes within the last 30 days, but who did not complete a purchase. Using different segments, you can focus on your various audiences, delivering a more customized marketing experience.
+- [Segmentation Service overview](../../segmentation/home.md): Segmentation is the process of defining specific attributes or behaviors shared by a subset of profiles from your Profile store to distinguish a marketable group of people from your customer base. For example, in an email campaign called "Did you forget to buy your sneakers?", you may want an audience of all users who searched for running shoes within the last 30 days, but who did not complete a purchase. Using different segments, you can focus on your various audiences, delivering a more customized marketing experience.
 - [Segment Builder user guide](../../segmentation/tutorials/create-a-segment.md): Platform allows you to easily create and access segments, as well as use different building blocks to further characterize your segments.
 
 ## Downloading Customer AI scores

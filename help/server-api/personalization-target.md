@@ -7,22 +7,21 @@ exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
 
 ## Overview {#overview}
 
-The Edge Network Server API can deliver and render personalized experiences created in Adobe Target, with the help of the [Form-Based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=en).
+The Edge Network Server API can deliver and render personalized experiences created in Adobe Target, with the help of the [Form-Based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html).
 
 >[!IMPORTANT]
 >
->Personalization experiences created through the [Target Visual Experience Composer (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) are not fully supported by the Server API. The Server API can **retrieve** activities created by VEC, but Server API cannot **render** activities created by VEC. If you want to render activities created by VEC, please implement [hybrid personalization](../edge/personalization/hybrid-personalization.md) using the Web SDK and the Edge Network Server API.
+>Personalization experiences created through the [Target Visual Experience Composer (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) are not fully supported by the Server API. The Server API can **retrieve** activities created by VEC, but Server API cannot **render** activities created by VEC. If you want to render activities created by VEC, please implement [hybrid personalization](../web-sdk/personalization/hybrid-personalization.md) using the Web SDK and the Edge Network Server API.
 
 ## Configure your datastream {#configure-your-datastream}
 
 Before you can use the Server API in conjunction with Adobe Target, you must enable Adobe Target personalization on your datastream configuration.
 
-See the [guide on adding services to a datastream](../edge/datastreams/overview.md#adobe-target-settings), for detailed information on how to enable Adobe Target.
+See the [guide on adding services to a datastream](../datastreams/overview.md#adobe-target-settings), for detailed information on how to enable Adobe Target.
 
 When configuring your datastream, you can (optionally) provide values for [!DNL Property Token], [!DNL Target Environment ID], and [!DNL Target Third Party ID Namespace].
 
 ![UI image showing the datastream service configuration screen, with Adobe Target selected](assets/target-datastream.png)
-
 
 ## Custom parameters {#custom-parameters}
 
@@ -45,9 +44,9 @@ Given the following XDM sample:
 
 When creating audiences in Target, the following values will be available as custom parameters:
 
-* `xdm.marketing.campaignGroup`
-* `xdm.marketing.campaignName`
-* `xdm.marketing.trackingCode`
+* `marketing.campaignGroup`
+* `marketing.campaignName`
+* `marketing.trackingCode`
 
 ## Target profile updates {#profile-update}
 
@@ -282,3 +281,9 @@ The table below explains the key elements of that portion of the response.
 | `items[].data.id` | The ID of the proposed offer. | `"id": "282484"`  |
 | `items[].data.format` | The format of the content associated with the proposed offer. | `"format: "application/json`| 
 | `items[].data.content` | Content associated with the proposed offer. This will be used for personalization of content of the calling application. | `"content": "<CONTENT CONFIGURED IN TARGET>"` |
+
+## Server-side personalization sample application {#sample}
+
+The sample application found at [this URL](https://github.com/adobe/alloy-samples/tree/main/target/personalization-server-side) demonstrates using Adobe Experience Platform to get personalization content from Adobe Target. The web page changes based on the personalization content returned.
+
+This sample does _not_ rely on client-side libraries like the [!DNL Web SDK] to get personalization content. Instead, it uses the Adobe Experience Platform APIs to fetch personalization content. Then the implementation generates the HTML server-side based on the personalization content returned.

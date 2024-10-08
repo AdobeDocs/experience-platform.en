@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;field group;field group;enduserids;end-user;end user;ids;
 solution: Experience Platform
 title: End User ID Details Schema Field Group
-description: This document provides an overview of the End User ID Details schema field group.
+description: Learn about the End User ID Details schema field group.
 exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
 ---
 

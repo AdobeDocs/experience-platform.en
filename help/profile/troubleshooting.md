@@ -41,13 +41,13 @@ There are multiple methods of viewing Profile data, depending on whether you are
 
 If you know the IDs of the Profile entities you want to access, you can use the `/entities` (Profile access) endpoint in the Profile API to look up those entities. See the section on [entities](./api/entities.md) in the developer guide for more information.
 
-You can also use the Adobe Experience Platform Segmentation Service API to access the individual profiles of customers who have qualified for a segment membership. See the [Segmentation Service overview](../segmentation/home.md) for more information.
+You can also use the Adobe Experience Platform Segmentation Service API to access the individual profiles of customers who have qualified for an audience membership. See the [Segmentation Service overview](../segmentation/home.md) for more information.
 
 #### Using the UI
 
 In the Experience Platform UI, the **[!UICONTROL Browse]** tab in the **[!UICONTROL Profiles]** workspace allows you to view the total profile count and search for individual profiles by their identity value. See the [Profile user guide](./ui/user-guide.md) for more information.
 
-You can also view a list of your segments under the **[!UICONTROL Browse]** tab in the **[!UICONTROL Segments]** workspace. After selecting a segment, a sample of profiles qualified for that segment is displayed. You can then select any of these listed profiles to view their details. See the [Segmentation UI overview](../segmentation/ui/overview.md) for more information.
+You can also view a list of your audiences under the **[!UICONTROL Browse]** tab in the **[!UICONTROL Audiences]** workspace. After selecting an audience, a sample of profiles qualified for that audience is displayed. You can then select any of these listed profiles to view their details. See the [Segmentation UI overview](../segmentation/ui/overview.md) for more information.
 
 ## Error codes
 
@@ -116,18 +116,6 @@ This error occurs when an invalid payload is provided for a delete system job. E
 ```
 
 This error occurs when a valid batch could not be found when attempting to create a delete request for Profile data. Check that you have entered the correct ID for a Profile-enabled dataset before trying again.
-
-### The projection destination has not yet been created
-
-```json
-{
-  "status":404,
-  "title":"The projection destination has not yet been created.",
-  "type":"http://ns.adobe.com/adobecloud/problem/missing-entity"
-}
-```
-
-This error occurs when the `destinationId` provided in a `POST /config/projections` request is invalid. Double-check that you have provided a valid destination ID before trying again. To create a new destination, follow the steps outlined in the [Profile developer guide](./api/edge-projections.md#create-a-destination).
 
 ### Unsupported media type
 

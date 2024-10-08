@@ -10,7 +10,7 @@ The profiles, segments, and destinations dashboards available within Adobe Exper
 
 >[!NOTE]
 >
->The widgets shown in the [!UICONTROL License usage] dashboard cannot be customized. To learn more about this unique dashboard, read the [license usage dashboard documentation](../guides/license-usage.md).
+>Any updates made to the dashboards are per organization and by sandbox.
 
 ## Modify dashboard
 

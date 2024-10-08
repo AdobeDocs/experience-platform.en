@@ -5,7 +5,7 @@ exl-id: 1e2ae095-4152-446f-8b66-dae5512d690e
 ---
 # Return and use merchandising variables from analytics data
 
-Use Query Service to manage the data ingested from Adobe Analytics into Adobe Experience Platform as datasets. The following sections provide sample queries that you can use to access the merchandising variables in your Analytics datasets. See the documentation for more information on [how to ingest and map Adobe Analytics data](https://experienceleague.adobe.com/docs/experience-platform/sources/connectors/adobe-applications/mapping/analytics.html) through the Analytics source
+Use Query Service to manage the data ingested from Adobe Analytics into Adobe Experience Platform as datasets. The following sections provide sample queries that you can use to access the merchandising variables in your Analytics datasets. See the documentation for more information on [how to ingest and map Adobe Analytics data](../../sources/connectors/adobe-applications/mapping/analytics.md) through the Analytics source
 
 ## Merchandising variables {#merchandising-variables}
 

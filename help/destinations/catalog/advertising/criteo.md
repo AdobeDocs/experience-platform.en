@@ -10,7 +10,7 @@ exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
 
 >[!IMPORTANT]
 >
->This documentation page was created by Criteo. This is currently a beta product and functionality is subject to change. For any inquiries or update requests, please contact Criteo directly [here](mailto:criteoTechnicalPartnerships@criteo.com).
+>This destination connector and documentation page are created and maintained by Criteo. This is currently a beta product and functionality is subject to change. For any inquiries or update requests, please contact Criteo directly [here](mailto:criteoTechnicalPartnerships@criteo.com).
 
 Criteo powers trusted and impactful advertising to bring richer experiences to every consumer across the open internet. With the world's largest commerce data set and best-in-class AI, Criteo ensures each touchpoint across the shopping journey is personalized to reach customers with the right ad, at the right time.
 
@@ -29,7 +29,7 @@ Criteo powers trusted and impactful advertising to bring richer experiences to e
 
 ## Supported identities {#supported-identities}
 
-Criteo supports the activation of identities described in the table below. Learn more about [identities](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
+Criteo supports the activation of identities described in the table below. Learn more about [identities](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 | Target Identity | Description | Considerations |
 | --- | --- | --- |
@@ -42,8 +42,8 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 | --- | --- | --- |
-| Export type | Segment export | You are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the [!DNL Criteo] destination. |
-| Export frequency | Streaming | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](../../destination-types.md#streaming-destinations). |
+| Export type | Audience export | You are exporting all members of an audience with the identifiers (name, phone number, or others) used in the [!DNL Criteo] destination. |
+| Export frequency | Streaming | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](../../destination-types.md#streaming-destinations). |
 
 ## Use cases {#use-cases}
 
@@ -55,13 +55,13 @@ Showcase your business with relevant product offers and flexible creatives. With
 
 ### Use case 2 : Increase website conversions
 
-When visitors leave your website, remind them what they're missing with retargeting ads that increase conversions by showing special deals and hyper-relevant offers, wherever they go next. Connect your Adobe CDP segment to re-engage existing customers or target consumers similar to your most loyal shoppers.
+When visitors leave your website, remind them what they're missing with retargeting ads that increase conversions by showing special deals and hyper-relevant offers, wherever they go next. Connect your Adobe CDP audience to re-engage existing customers or target consumers similar to your most loyal shoppers.
 
 ## Connect to Criteo {#connect}
 
 >[!IMPORTANT]
 > 
->To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
@@ -101,17 +101,18 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-## Activate segments to this destination {#activate-segments}
+## Activate audiences to this destination {#activate-segments}
 
 >[!IMPORTANT]
 > 
->To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
-Read [Activate profiles and segments to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+Read [Activate profiles and audiences to streaming audience export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
 ## Exported data {#exported-data}
 
-You can see the exported segments in the [Criteo management center](https://marketing.criteo.com/audience-manager/dashboard).
+You can see the exported audiences in the [Criteo management center](https://marketing.criteo.com/audience-manager/dashboard).
 
 The request body of adding a user profile received by the [!DNL Criteo] connection looks similar to this:
 
@@ -171,7 +172,7 @@ The request body of removing user profile  received by the [!DNL Criteo] connect
 
 ## Data usage and governance {#data-usage}
 
-All Adobe Experience Platform destinations are compliant with data usage policies when handling your data. For detailed information on how Adobe Experience Platform enforces data governance, read the [Data Governance overview](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=en).
+All Adobe Experience Platform destinations are compliant with data usage policies when handling your data. For detailed information on how Adobe Experience Platform enforces data governance, read the [Data Governance overview](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
 
 ## Additional resources
 

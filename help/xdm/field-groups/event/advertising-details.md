@@ -1,6 +1,6 @@
 ---
 title: Advertising Details Schema Field Group
-description: This document provides an overview of the Advertising Details schema field group.
+description: Learn about the Advertising Details schema field group.
 exl-id: 25de09bd-eedd-489c-9cd5-8acd0c52ddbe
 ---
 # [!UICONTROL Advertising Details] schema field group

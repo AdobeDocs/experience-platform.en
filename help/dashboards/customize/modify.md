@@ -8,11 +8,11 @@ exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
 
 Within the Adobe Experience Platform user interface (UI), you can view and interact with your organization's data using multiple dashboards. The default widgets and metrics shown in the dashboards can be adjusted at an individual user level to display preferred data, and widgets can be created and shared between users in the same organization. 
 
-This guide provides step-by-step instructions for customizing how dashboard data is displayed within the [!UICONTROL Profiles], [!UICONTROL Segments], and [!UICONTROL Destinations] dashboards in the Platform UI.
-
 >[!NOTE]
 >
->The widgets shown in the license usage dashboard cannot be customized. Please refer to the [license usage dashboard documentation](../guides/license-usage.md) to learn more about this unique dashboard.
+>Any updates made to the dashboards are per organization and by sandbox.
+
+This guide provides step-by-step instructions for customizing how dashboard data is displayed within the [!UICONTROL Profiles], [!UICONTROL Segments], and [!UICONTROL Destinations] dashboards in the Platform UI.
 
 ## Getting started
 

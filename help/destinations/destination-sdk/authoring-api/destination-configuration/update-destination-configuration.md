@@ -1,8 +1,8 @@
 ---
-description: This page exemplifies the API call used to update an existing destination configuration through Adobe Experience Platform Destination SDK. 
+description: This page exemplifies the API call used to update an existing destination configuration through Adobe Experience Platform Destination SDK.
 title: Update a destination configuration
+exl-id: d7f18689-9806-4f73-a63a-fa112569819c
 ---
-
 # Update a destination configuration
 
 This page exemplifies the API request and payload that you can use to update an existing destination configuration, using the `/authoring/destinations` API endpoint.
@@ -14,7 +14,7 @@ This page exemplifies the API request and payload that you can use to update an 
 For a detailed description of the capabilities of a destination configuration, read the following articles:
 
 * [Customer authentication configuration](../../functionality/destination-configuration/customer-authentication.md)
-* [OAuth2 authentication](../../functionality/destination-configuration/oauth2-authentication.md)
+* [OAuth2 authorization](../../functionality/destination-configuration/oauth2-authorization.md)
 * [Customer data fields](../../functionality/destination-configuration/customer-data-fields.md)
 * [UI attributes](../../functionality/destination-configuration/ui-attributes.md)
 * [Schema configuration](../../functionality/destination-configuration/schema-configuration.md)

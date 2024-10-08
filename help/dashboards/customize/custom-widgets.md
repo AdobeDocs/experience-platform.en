@@ -10,11 +10,11 @@ In Adobe Experience Platform, you can view and interact with your organization's
 
 This guide provides step-by-step instructions for creating and adding custom widgets to the [!UICONTROL Profiles], [!UICONTROL Segments], and [!UICONTROL Destinations] dashboards in the Platform UI.
 
-To learn more about standard widgets, please refer to the guide for [adding standard widgets to your dashboards](standard-widgets.md).
-
 >[!NOTE]
 >
->The widgets shown in the [!UICONTROL License usage] dashboard cannot be customized. To learn more about this unique dashboard, read the [license usage dashboard documentation](../guides/license-usage.md).
+>Any updates made to the dashboards are per organization and by sandbox.
+
+To learn more about standard widgets, please refer to the guide for [adding standard widgets to your dashboards](standard-widgets.md).
 
 ## Widget library {#widget-library}
 

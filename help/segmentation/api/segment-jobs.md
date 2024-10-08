@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;segment jobs;segment job;API;api;
 solution: Experience Platform
 title: Segment Jobs API Endpoint
 description: The segment jobs endpoint in the Adobe Experience Platform Segmentation Service API allows you to programmatically manage segment jobs for your organization.
+role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
 ---
 # Segment jobs endpoint
@@ -30,6 +30,8 @@ GET /segment/jobs?{QUERY_PARAMETERS}
 
 **Query parameters**
 
++++ A list of available query parameters.
+
 | Parameter | Description | Example |
 | --------- | ----------- | ------- |
 | `start` | Specifies the starting offset for the segment jobs returned. | `start=1` |
@@ -38,7 +40,11 @@ GET /segment/jobs?{QUERY_PARAMETERS}
 | `sort` | Orders the segment jobs returned. Is written in the format `[attributeName]:[desc|asc]`. | `sort=creationTime:desc` |
 | `property` | Filters segment jobs and gets exact matches for the filter given. It can be written in either of the following formats: <ul><li>`[jsonObjectPath]==[value]` - filtering on the object key</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` - filtering within the array</li></ul> | `property=segments~segmentId==workInUS` |
 
++++
+
 **Request**
+
++++ A sample request to view a list of segment jobs.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDED \
@@ -48,17 +54,23 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Response**
 
-A successful response returns HTTP status 200 with a list of segment jobs for the specified organization as JSON. However, the response will differ, depending on the number of segments within the segment job.
+A successful response returns HTTP status 200 with a list of segment jobs for the specified organization as JSON. However, the response will differ, depending on the number of segment definitions within the segment job.
 
-**Less than or equal to 1500 segments in your segment job**
+>[!BEGINTABS]
 
-If you have less than 1500 segments being run in your segment job, a full list of all the segments will be displayed within the `children.segments` attribute.
+>[!TAB Less than or equal to 1500 segment definitions in your segment job]
+
+If you have less than 1500 segment definitions being run in your segment job, a full list of all the segment definitions will be displayed within the `children.segments` attribute.
 
 >[!NOTE]
 >
 >The following response has been truncated for space, and will only show the first returned job.
+
++++ A sample response when retrieving a list of segment jobs. 
 
 ```json
 {
@@ -160,13 +172,17 @@ If you have less than 1500 segments being run in your segment job, a full list o
 }
 ```
 
-**More than 1500 segments**
++++
 
-If you have more than 1500 segments being run in your segment job, the `children.segments` attribute will display `*`, indicating that all the segments are being evaluated.
+>[!TAB More than 1500 segment definitions]
+
+If you have more than 1500 segment definitions being run in your segment job, the `children.segments` attribute will display `*`, indicating that all the segment definitions are being evaluated.
 
 >[!NOTE]
 >
 >The following response has been truncated for space, and will only show the first returned job.
+
++++ A sample response when viewing a list of segment jobs. 
 
 ```json
 {
@@ -266,9 +282,13 @@ If you have more than 1500 segments being run in your segment job, the `children
 | `metrics.totalTime` | An object that contains information on the times the segmentation job started and ended, as well as the total time taken. |
 | `metrics.profileSegmentationTime` | An object that contains information on the times the segmentation evaluation started and ended, as well as the total time taken. | 
 | `metrics.segmentProfileCounter` | The number of profiles qualified on a per segment basis. | 
-| `metrics.segmentedProfileByNamespaceCounter` | The number of profiles qualified for each identity namespace on a per segment basis. |
-| `metrics.segmentProfileByStatusCounter` | The count of profiles for each statuses. The following three statuses are supported: <ul><li>"realized" - The number of profiles that qualify for the segment.</li><li>"exited" - The number of profile segments that no longer exist in the segment.</li></ul>|
+| `metrics.segmentedProfileByNamespaceCounter` | The number of profiles qualified for each identity namespace on a per segment definition basis. |
+| `metrics.segmentProfileByStatusCounter` | The count of profiles for each statuses. The following three statuses are supported: <ul><li>"realized" - The number of profiles that qualify for the segment definition.</li><li>"exited" - The number of profiles  that no longer exist in the segment definition.</li></ul>|
 | `metrics.totalProfilesByMergePolicy` | The total number of merged profiles on a per merge policy basis. | 
+
++++
+
+>[!ENDTABS]
 
 ## Create a new segment job {#create}
 
@@ -280,11 +300,15 @@ You can create a new segment job by making a POST request to the `/segment/jobs`
 POST /segment/jobs
 ```
 
-When creating a new segment job, the request and response will differ depending on the number of segments within the segment job.
+When creating a new segment job, the request and response will differ depending on the number of segment definitions within the segment job.
 
-**Less than or equal to 1500 segments in your segment job**
+>[!BEGINTABS]
+
+>[!TAB Less than or equal to 1500 segments in your segment job]
 
 **Request**
+
++++A sample request for creating a new segment job
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
@@ -296,6 +320,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
  -d '[
     {
         "segmentId": "7863c010-e092-41c8-ae5e-9e533186752e"
+    },
+    {
+        "segmentId": "07d39471-05d1-4083-a310-d96978fd7c85"
     }
  ]'
 ```
@@ -304,9 +331,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 | -------- | ----------- |
 | `segmentId` | The ID of the segment definition that you want to create a segment job for. These segment definitions can belong to different merge policies. More information about segment definitions can be found in the [segment definition endpoint guide](./segment-definitions.md). |
 
++++
+
 **Response**
 
 A successful response returns HTTP status 200 with information about your newly created segment job.
+
++++ A sample response when creating a new segment job.
 
 ```json
 {
@@ -329,6 +360,22 @@ A successful response returns HTTP status 200 with information about your newly 
             "segmentId": "7863c010-e092-41c8-ae5e-9e533186752e",
             "segment": {
                 "id": "7863c010-e092-41c8-ae5e-9e533186752e",
+                "expression": {
+                    "type": "PQL",
+                    "format": "pql/json",
+                    "value": "workAddress.country = \"US\""
+                },
+                "mergePolicyId": "25c548a0-ca7f-4dcd-81d5-997642f178b9",
+                "mergePolicy": {
+                    "id": "25c548a0-ca7f-4dcd-81d5-997642f178b9",
+                    "version": 1
+                }
+            }
+        },
+        {
+            "segmentId": "07d39471-05d1-4083-a310-d96978fd7c85",
+            "segment": {
+                "id": "07d39471-05d1-4083-a310-d96978fd7c85",
                 "expression": {
                     "type": "PQL",
                     "format": "pql/json",
@@ -405,13 +452,17 @@ A successful response returns HTTP status 200 with information about your newly 
 | `segments.segment.id` | The ID of the segment definition that you provided. |
 | `segments.segment.expression` | An object that contains information about the segment definition's expression, written in PQL. |
 
-**More than 1500 segments**
++++
+
+>[!TAB More than 1500 segment definition in your segment job]
 
 **Request**
 
 >[!NOTE]
 >
->While you can create a segment job with more than 1500 segments, this is **highly not recommended**.
+>While you can create a segment job with more than 1500 segment definitions, this is **highly not recommended**.
+
++++ A sample request for creating a segment job.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
@@ -434,12 +485,16 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | Property | Description |
 | -------- | ----------- |
-| `schema.name` | The name of the schema for the segments. |
+| `schema.name` | The name of the schema for the segment definitions. |
 | `segments.segmentId` | When running a segment job with more than 1500 segments, you will need to pass `*` as the segment ID to signify that you want to run a segmentation job with all the segments. |
+
++++
 
 **Response**
 
 A successful response returns HTTP status 200 with details of your newly created segment job.
+
++++ A sample response when creating a segment job.
 
 ```json
 {
@@ -522,7 +577,12 @@ A successful response returns HTTP status 200 with details of your newly created
 | `id` | A system-generated read-only identifier for the newly created segment job. | 
 | `status` | The current status for the segment job. Since the segment job is newly created, the status will always be `NEW`. |
 | `segments` | An object that contains information about the segment definitions that this segment job is running for. |
-| `segments.segment.id` | The `*` means that this segment job is running for all the segments within your organization. |
+| `segments.segment.id` | The `*` means that this segment job is running for all the segment definitions within your organization. |
+
++++
+
+>[!ENDTABS]
+
 
 ## Retrieve a specific segment job {#get}
 
@@ -540,6 +600,8 @@ GET /segment/jobs/{SEGMENT_JOB_ID}
 
 **Request**
 
++++ A sample request for retrieving a segment job.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-43eb-9fca-557ea53771fd \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -548,13 +610,19 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Response**
 
-A successful response returns HTTP status 200 with detailed information about the specified segment job.  However, the response will differ depending on the number of segments within the segment job.
+A successful response returns HTTP status 200 with detailed information about the specified segment job.  However, the response will differ depending on the number of segment definitions within the segment job.
 
-**Less than or equal to 1500 segments in your segment job**
+>[!BEGINTABS]
 
-If you have less than 1500 segments being run in your segment job, a full list of all the segments will be displayed within the `children.segments` attribute.
+>[!TAB Less than or equal to 1500 segment definitions in your segment job]
+
+If you have less than 1500 segment definitions being run in your segment job, a full list of all the segment definitions will be displayed within the `children.segments` attribute.
+
++++ A sample response for retrieving a segment job.
 
 ```json
 {
@@ -616,9 +684,13 @@ If you have less than 1500 segments being run in your segment job, a full list o
 }
 ```
 
-**More than 1500 segments**
++++
 
-If you have more than 1500 segments being run in your segment job, the `children.segments` attribute will display `*`, indicating that all the segments are being evaluated.
+>[!TAB More than 1500 segment definitions]
+
+If you have more than 1500 segment definitions being run in your segment job, the `children.segments` attribute will display `*`, indicating that all the segment definitions are being evaluated.
+
++++ A sample response for retrieving a segment job. 
 
 ```json
 {
@@ -705,6 +777,10 @@ If you have more than 1500 segments being run in your segment job, the `children
 | `segments.segment.expression` | An object that contains information about the segment definition's expression, written in PQL. |
 | `metrics` | An object that contains diagnostic information about the segment job. |
 
++++
+
+>[!ENDTABS]
+
 ## Bulk retrieve segment jobs {#bulk-get}
 
 You can retrieve detailed information about multiple segment jobs by making a POST request to the `/segment/jobs/bulk-get` endpoint and providing the  `id` values of the segment jobs in the request body.
@@ -716,6 +792,8 @@ POST /segment/jobs/bulk-get
 ```
 
 **Request**
+
++++ A sample request for using the bulk retrieve endpoint.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
@@ -736,13 +814,17 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
     }'
 ```
 
++++
+
 **Response**
 
-A successful response returns HTTP status 207 with the requested segment jobs. However, the value of the `children.segments` attribute differs depending if the segment job is running for more than 1500 segments.
+A successful response returns HTTP status 207 with the requested segment jobs. However, the value of the `children.segments` attribute differs depending if the segment job is running for more than 1500 segment definitions.
 
 >[!NOTE]
 >
 >The following response has been truncated for space, only showing partial details of each segment job. The full response will list the full details for the segment jobs requested.
+
++++ A sample response when using the bulk get response.
 
 ```json
 {
@@ -798,6 +880,8 @@ A successful response returns HTTP status 207 with the requested segment jobs. H
 | `segments.segment.id` | The ID of the segment definition. |
 | `segments.segment.expression` | An object that contains information about the segment definition's expression, written in PQL. |
 
++++
+
 ## Cancel or delete a specific segment job {#delete}
 
 You can delete a specific segment job by making a DELETE request to the `/segment/jobs` endpoint and providing the ID of the segment job you wish to delete in the request path.
@@ -818,6 +902,8 @@ DELETE /segment/jobs/{SEGMENT_JOB_ID}
 
 **Request**
 
++++ A sample request to delete a segment job.
+
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-43eb-9fca-557ea53771fd \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -826,16 +912,11 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfe
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Response**
 
-A successful response returns HTTP status 204 with the following information.
-
-```json
-{
-    "status": true,
-    "message": "Segment job with id 'd3b4a50d-dfea-43eb-9fca-557ea53771fd' has been marked for cancelling"
-}
-```
+A successful response returns HTTP status 204 with an empty response body.
 
 ## Next steps
 

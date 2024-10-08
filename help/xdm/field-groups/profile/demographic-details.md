@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;Schema design;field group;field group;person;person details;profile person details;person;
 solution: Experience Platform
 title: Demographic Details Schema Field Group
-description: This document provides an overview of the Demographic Details schema field group.
+description: Learn about the Demographic Details schema field group.
 exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
 ---
 

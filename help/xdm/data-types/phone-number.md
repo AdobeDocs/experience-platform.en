@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;phoneNumber;xdm:phoneNumber;datatype;data-type;data type;
 solution: Experience Platform
 title: Phone Number Data Type
-description: This document provides an overview of the Phone Number XDM data type.
+description: Learn about the Phone Number XDM data type.
 exl-id: b84e48f9-bbb4-4b8b-9476-4bc1c455ecfd
 ---
 # [!UICONTROL Phone number] data type

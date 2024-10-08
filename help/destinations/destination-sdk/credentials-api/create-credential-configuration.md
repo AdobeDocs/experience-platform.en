@@ -1,8 +1,8 @@
 ---
-description: This page exemplifies the API call used to create a credential configuration Adobe Experience Platform Destination SDK. 
+description: This page exemplifies the API call used to create a credential configuration Adobe Experience Platform Destination SDK.
 title: Create a credential configuration
+exl-id: 9844c9c5-d2dc-4d4b-ae93-759bf23b87fa
 ---
-
 # Create a credential configuration
 
 >[!IMPORTANT]

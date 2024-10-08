@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;sandbox developer guide
 solution: Experience Platform
 title: Sandbox management API Endpoint
 description: The /sandboxes endpoint in the Sandbox API allows you to  programmatically manage sandboxes in Adobe Experience Platform.
+role: Developer
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
 ---
 # Sandbox management endpoint
@@ -35,7 +36,6 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Response**

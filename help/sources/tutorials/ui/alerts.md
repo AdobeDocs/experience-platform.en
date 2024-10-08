@@ -42,12 +42,15 @@ You can enable alerts for your dataflows during the [!UICONTROL Dataflow detail]
 
 The available alerts for sources dataflows are:
 
+>[!NOTE]
+>
+>Streaming sources are currently not supported by alerts. You can only subscribe to alert notifications for batch sources. 
+
 | Alerts | Description |
 | --- | --- |
-| Sources Dataflow Run Start | This alert sends you a message when your source dataflow has started. |
-| Sources Dataflow Run Success | This alert sends you a message when data from your source is successfully ingested to Platform. |
-| Sources Dataflow Run Failure | This alert sends you a message if an error occurs in your dataflow. |
-| ~~Sources Dataflow Lack of Ingestion~~ | ~~This alert sends you a message if ingestion is delayed by more than seven hours and no data gets ingested to Platform.~~ <br>**Note:** You will no longer receive alerts as this alert has been deprecated.|
+| Sources Flow Run Start | This alert sends you a message when your source dataflow has started. |
+| Sources Flow Run Success | This alert sends you a message when data from your source is successfully ingested to Platform. |
+| Sources Flow Run Failure | This alert sends you a message if an error occurs in your dataflow. |
 
 Select the alerts you would like to subscribe to and then select **[!UICONTROL Next]** to review and finish your dataflow.
 

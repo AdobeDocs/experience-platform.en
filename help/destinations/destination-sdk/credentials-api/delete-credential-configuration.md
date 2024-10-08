@@ -1,8 +1,8 @@
 ---
-description: This page exemplifies the API call used to delete a credential configuration Adobe Experience Platform Destination SDK. 
+description: This page exemplifies the API call used to delete a credential configuration Adobe Experience Platform Destination SDK.
 title: Delete a credential configuration
+exl-id: a540e349-043c-4f04-8ca8-f650b9943492
 ---
-
 # Delete a credential configuration
 
 >[!IMPORTANT]

@@ -110,7 +110,7 @@ XDM is an open-source specification that provides common structures and definiti
 
 | Component type | Name | Description |
 | --- | --- | --- |
-| Class | [[!UICONTROL AJO Entity Class]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity.schema.json) | A record-based class for creating lookup schemas for Adobe Journey Optimizer. |
+| Class | [[!UICONTROL AJO Entity Class]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity-class.schema.json) | A record-based class for creating lookup schemas for Adobe Journey Optimizer. |
 | Field group | [[!UICONTROL Workfront Work Objects]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | A wrapper field group that references all the lower level object-specific field groups for Adobe Workfront.|
 
 {style="table-layout:auto"}

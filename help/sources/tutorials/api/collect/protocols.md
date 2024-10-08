@@ -12,7 +12,7 @@ This tutorial covers the steps for retrieving data from a protocols source and b
 
 >[!NOTE]
 >
->In order to create a dataflow, you must already have a valid base connection ID with a protocols source. If you do not have this ID, then see the [sources overview](../../../home.md#protocols) for a list of protocols sources that you can create a base connection with.
+>* In order to create a dataflow, you must already have a valid base connection ID with a protocols source. If you do not have this ID, then see the [sources overview](../../../home.md#protocols) for a list of protocols sources that you can create a base connection with.
 
 ## Getting started
 
@@ -190,8 +190,8 @@ curl -X POST \
 | Property | Description |
 | -------- | ----------- |
 | `data.schema.id` | The `$id` of the target XDM schema. |
-| `params.dataSetId` | The ID of the target dataset. |
-| `connectionSpec.id` | The connection spec ID used to connect to the Data Lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `params.dataSetId` | The ID of the target dataset generated in the previous step. **Note**: You must provide a valid dataset ID when creating a target connection. An invalid dataset ID will result in an error. |
+| `connectionSpec.id` | The connection spec ID used to connect to the data lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Response**
 
@@ -678,7 +678,7 @@ curl -X POST \
 | `transformations.params.mappingId`| The mapping ID associated with your database. |
 | `scheduleParams.startTime` | The start time for the dataflow in epoch time. |
 | `scheduleParams.frequency` | The frequency at which the dataflow will collect data. Acceptable values include: `once`, `minute`, `hour`, `day`, or `week`. |
-| `scheduleParams.interval` | The interval designates the period between two consecutive flow runs. The interval's value should be a non-zero integer. Interval is not required when frequency is set as `once` and should be greater than or equal to `15` for other frequency values. |
+| `scheduleParams.interval` | The interval designates the period between two consecutive flow runs. The interval's value should be a non-zero integer. The minimum accepted interval value for each frequency is as follows:<ul><li>**Once**: n/a</li><li>**Minute**: 15</li><li>**Hour**: 1</li><li>**Day**: 1</li><li>**Week**: 1</li></ul> |
 
 **Response**
 

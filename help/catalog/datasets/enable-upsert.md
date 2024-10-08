@@ -11,7 +11,7 @@ This tutorial covers the process of enabling a dataset with "upsert" capabilitie
 
 >[!NOTE]
 >
->The upsert workflow only works for batch ingestion. Streaming ingestion is **not** supported.
+>The workflow described in this tutorial only works for batch ingestion. For streaming ingestion upserts, please refer to the guide on [sending partial row updates to Real-Time Customer Profile using Data Prep](../../data-prep/upserts.md).
 
 ## Getting started
 
@@ -159,7 +159,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27
         "createdUser": "{CREATED_BY}",
         "updatedUser": "{CREATED_BY}",
         "viewId": "{VIEW_ID}",
-        "files": "@/dataSets/5b020a27e7040801dedbf46e/views/5b020a27e7040801dedbf46f/files",
+        "files": "@/dataSetFiles?dataSetId=5b020a27e7040801dedbf46e",
         "schema": "{SCHEMA}",
         "schemaRef": {
             "id": "https://ns.adobe.com/xdm/context/experienceevent",
@@ -177,7 +177,7 @@ In order to configure a Profile-enabled dataset for updates, you must first disa
 
 >[!WARNING]
 >
->Data ingested into the dataset while it is disabled will not be ingested into the Profile Store. You should avoid ingesting data into the dataset until it has been re-enabled for Profile.
+>Data ingested into the dataset while it is disabled will not be ingested into the Profile store. You should avoid ingesting data into the dataset until it has been re-enabled for Profile.
 
 **API format**
 

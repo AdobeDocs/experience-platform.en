@@ -2,6 +2,7 @@
 keywords: identities rtcdp;rtcdp identities;real-time cdp identities
 title: Identities in Real-Time Customer Data Platform
 description: Adobe Experience Platform Identity Service helps you to gain a better view of your customers and their behavior by bridging together identities across devices and systems.
+feature: Get Started, Identities
 exl-id: 2b0d84de-9710-412e-ace7-56e3977245aa
 ---
 # Identities overview
@@ -12,13 +13,13 @@ Now, instead of five separate customers interacting with your brand across five 
 
 ## Identity namespaces
 
-Identity namespaces are a component of [!DNL Identity Service] and serve as indicators providing additional context to customer identities. An example of a commonly used ID namespace would be "Email", where the use of the same email address across multiple websites allows you to stitch together several different identities, each with a unique customer ID, as actually belonging to the same customer. [!DNL Experience Platform] allows you to use ID namespaces to search for individual profiles within the user interface. For more information on viewing profiles, please see the [profile browse overview](profile-browse.md). To learn more about identity namespaces, see the [identity namespace overview](../../identity-service/namespaces.md).
+Identity namespaces are a component of [!DNL Identity Service] and serve as indicators providing additional context to customer identities. An example of a commonly used ID namespace would be "Email", where the use of the same email address across multiple websites allows you to stitch together several different identities, each with a unique customer ID, as actually belonging to the same customer. [!DNL Experience Platform] allows you to use ID namespaces to search for individual profiles within the user interface. For more information on viewing profiles, please see the [profile browse overview](profile-browse.md). To learn more about identity namespaces, see the [identity namespace overview](../../identity-service/features/namespaces.md).
 
 ## Identity graphs
 
-An identity graph is a map of relationships between different identity namespaces, providing you with a visual representation of how your customer interacts with your brand across different channels. All customer identity graphs are collectively managed and updated by [!DNL Identity Service] in near real-time, in response to customer activity.
+An identity graph is a map of relationships between different identities, providing you with a visual representation of how your customer interacts with your brand across different channels. All customer identity graphs are collectively managed and updated by Identity Service, in response to customer activity.
 
-[!DNL Identity Service] manages an identity graph visible by only your organization and built based on your data, referred to as the private graph. [!DNL Identity Service] augments your private graph when an ingested data record contains more than one identity, adding a relationship between the identities found.
+[!DNL Identity Service] manages an identity graph visible only to your organization and built based on your data. [!DNL Identity Service] augments your graph when an ingested data record contains more than one identity, adding a relationship between the identities found.
 
 ## Next steps
 

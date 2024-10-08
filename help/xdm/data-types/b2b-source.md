@@ -1,6 +1,6 @@
 ---
 title: B2B Source Data Type
-description: This document provides an overview of the B2B Source Experience Data Model (XDM) data type.
+description: Learn about the B2B Source Experience Data Model (XDM) data type.
 exl-id: 01b7d41c-1ab6-4cbc-b9b3-77b6af69faf3
 ---
 # [!UICONTROL B2B Source] data type

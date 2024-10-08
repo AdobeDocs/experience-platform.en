@@ -1,25 +1,31 @@
 ---
 description: Learn how to configure the supported target identities for destinations built with Destination SDK.
 title: Identity namespace configuration
+exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
 ---
-
 # Identity namespace configuration
 
 Experience Platform uses identity namespaces to describe the type of specific identities. For example, an identity namespace called `Email` identifies a value like `name@email.com` as an email address.
 
-When creating a destination through Destination SDK, in addition to [configuring a partner schema](schema-configuration.md) that users can map profile attributes and identities to, you can also define identity namespaces supported by your destination platform.
+Depending on the type of destination that you create (streaming or file-based), keep in mind the following identity namespace requirements:
 
-When you do this, users have the added choice of selecting target identities, in addition to target profile attributes.
+* When creating real-time (streaming) destinations through Destination SDK, in addition to [configuring a partner schema](schema-configuration.md) to which users can map profile attributes and identities, you must also define *at least one* identity namespaces supported by your destination platform. For example, if your destination platform accepts hashed emails and [!DNL IDFA], you must define these two identities as [described further down in this document](#supported-parameters).
 
-To learn more about identity namespaces in Experience Platform, see the [identity namespaces documentation](../../../../identity-service/namespaces.md).
+   >[!IMPORTANT]
+   >
+   >When activating audiences to streaming destinations, users must also map _at least one target identity_, in addition to target profile attributes. Otherwise, the audiences will not be activated to the destination platform.
+
+* When creating file-based destinations through Destination SDK, the configuration of identity namespaces is _optional_.
+
+To learn more about identity namespaces in Experience Platform, see the [identity namespaces documentation](../../../../identity-service/features/namespaces.md).
 
 When configuring identity namespaces for your destination, you can fine tune the target identity mapping supported by your destination, such as:
 
 * Allowing users to map XDM attributes to identity namespaces.
-* Allowing users to map [standard identity namespaces](../../../../identity-service/namespaces.md#standard) to your own identity namespaces.
-* Allowing users to map [custom identity namespaces](../../../../identity-service/namespaces.md#manage-namespaces) to your own identity namespaces.
+* Allowing users to map [standard identity namespaces](../../../../identity-service/features/namespaces.md#standard) to your own identity namespaces.
+* Allowing users to map [custom identity namespaces](../../../../identity-service/features/namespaces.md#manage-namespaces) to your own identity namespaces.
 
-To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the the guide on how to [use Destination SDK to configure a file-based destination](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the guide on how to [use Destination SDK to configure a file-based destination](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
 You can configure your supported identity namespaces via the `/authoring/destinations` endpoint. See the following API reference pages for detailed API call examples where you can configure the components shown in this page.
 
@@ -38,8 +44,8 @@ Refer to the table below for details on which types of integrations support the 
 
 |Integration type| Supports functionality |
 |---|---|
-| Real-time (streaming) integrations | Yes |
-| File-based (batch) integrations | Yes |
+| Real-time (streaming) integrations | Yes (Required) |
+| File-based (batch) integrations | Yes (Optional) |
 
 ## Supported parameters {#supported-parameters}
 
@@ -49,7 +55,7 @@ When defining the target identities that your destination supports, you can use 
 |---------|----------|---|------|
 |`acceptsAttributes` | Boolean | Optional | Indicates if customers can map standard profile attributes to the identity that you are configuring. |
 |`acceptsCustomNamespaces` | Boolean | Optional | Indicates if customers can map custom identity namespaces to the identity namespace that you are configuring. |
-|`acceptedGlobalNamespaces` | - | Optional | Indicates which [standard identity namespaces](../../../../identity-service/namespaces.md#standard) (for example, [!UICONTROL IDFA]) customers can map to the identity that you are configuring. |
+|`acceptedGlobalNamespaces` | - | Optional | Indicates which [standard identity namespaces](../../../../identity-service/features/namespaces.md#standard) (for example, [!UICONTROL IDFA]) customers can map to the identity that you are configuring. |
 |`transformation` | String | Optional | Displays the [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) check box in the Platform UI, when the source field is either an XDM attribute or a custom identity namespace. Use this option to give users the ability to hash source attributes on export. To enable this option, set the value to `sha256(lower($))`. |
 |`requiredTransformation` | String | Optional | When customers select this source identity namespace, the [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) check box is automatically applied to the mapping, and customers cannot disable it. To enable this option, set the value to `sha256(lower($))`.|
 
@@ -78,7 +84,7 @@ You must indicate which [!DNL Platform] identities customers are able to export 
 Identity namespaces do not require a 1-to-1 correspondence between [!DNL Platform] and your destination.
 For instance, customers could map a [!DNL Platform] [!DNL IDFA] namespace to an [!DNL IDFA] namespace from your destination, or they can map the same [!DNL Platform] [!DNL IDFA] namespace to a [!DNL Customer ID] namespace in your destination.
 
-Read more about identities in the [identity namespace overview](../../../../identity-service/namespaces.md).
+Read more about identities in the [identity namespace overview](../../../../identity-service/features/namespaces.md).
 
 ## Mapping considerations
 
@@ -139,7 +145,7 @@ After reading this article, you should have a better understanding of how to con
 To learn more about the other destination components, see the following articles:
 
 * [Customer authentication](customer-authentication.md)
-* [OAuth2 authentication](oauth2-authentication.md)
+* [OAuth2 authorization](oauth2-authorization.md)
 * [Customer data fields](customer-data-fields.md)
 * [UI attributes](ui-attributes.md)
 * [Schema configuration](schema-configuration.md)

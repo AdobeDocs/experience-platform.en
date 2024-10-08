@@ -15,6 +15,10 @@ This document provides answers to frequently asked questions about [!DNL Experie
 
 The following is a list of answers to frequently asked questions about XDM System and use of the [!DNL Schema Registry] API.
 
+## Schema basics
+
+In this section, you can find answers to fundamental questions about schema structure, field usage, and identification in the XDM System.
+
 ### How do I add fields to a schema?
 
 You can add fields to a schema by using a schema field group. Each field group is compatible with one or more classes, allowing the field group to be used in any schema that implements one of those compatible classes. While Adobe Experience Platform provides several industry field groups with their own pre-defined fields, you can add your own fields to a schema by creating custom field groups using the API or the user interface.
@@ -33,15 +37,52 @@ All [!DNL Schema Registry] resources (schemas, field groups, data types, classes
 
 For more information, see the [resource identification](api/getting-started.md#resource-identification) section in the [!DNL Schema Registry] API guide.
 
-### When does a schema start preventing breaking changes?
-
-Breaking changes can be made to a schema as long as it has never been used in the creation of a dataset or enabled for use in [[!DNL Real-Time Customer Profile]](../profile/home.md). Once a schema has been used in dataset creation or enabled for use with [!DNL Real-Time Customer Profile], the rules of [Schema Evolution](schema/composition.md#evolution) become strictly enforced by the system.
-
 ### What is the maximum size of a long field type?
 
 A long field type is an integer with a maximum size of 53(+1) bits, giving it a potential range between -9007199254740992 and 9007199254740992. This is due to a limitation of how JavaScript implementations of JSON represent long integers.
 
 For more information on field types, see the document on [XDM field type constraints](./schema/field-constraints.md).
+
+### What is meta:AltId?
+
+`meta:altId` is a unique identifier for a schema. The `meta:altId` provides an easy to reference ID for use in API calls. This ID avoids the need to be encoded/decoded each time it is used as with the JSON URI format.
+<!-- (Needs clarification - How do I retrieve it INCOMPLETE) ... -->
+
+<!-- ### How can I generate a sample payload for a schema? -->
+
+<!-- No Answer available.  -->
+<!-- INCOMPLETE ... -->
+
+### What are the usage restrictions for a map data type?
+
+XDM places the following restrictions on the use of this data type:
+
+- Map types MUST be of type object.
+- Map types MUST NOT have properties defined (in other words, they define "empty" objects).
+- Map types MUST include an additionalProperties.type field that describes the values that may be placed within the map, either string or integer.
+- Multi-entity segmentation can only be defined based on the map keys and not the values.
+- Maps are not supported for account audiences.
+
+See the [usage restrictions for map objects](./ui/fields/map.md#restrictions) for more details.
+
+>[!NOTE]
+>
+>Multilevel maps or maps of maps are not supported.
+
+<!-- You cannot create a complex map object. However, you can define map fields in the Schema Editor. See the guide on [defining map fields in the UI](./ui/fields/map.md) for more information. -->
+
+<!-- ### How do I create a complex map object using APIs? -->
+
+<!-- You cannot create a complex map object. -->
+
+<!-- ### How can I manage schema inheritance in Adobe Experience Platform? -->
+
+<!-- No Answer available.  -->
+<!-- INCOMPLETE ... -->
+
+## Schema Identity Management
+
+This section contains answers to common questions about defining and managing identities within your schemas.
 
 ### How do I define identities for my schema?
 
@@ -49,7 +90,7 @@ In [!DNL Experience Platform], identities are used to identify a subject (typica
 
 Fields can be marked as identities using either the API or user interface.
 
-#### Defining identities in the API
+### Defining identities in the API
 
 In the API, identities are established by creating identity descriptors. Identity descriptors signal that a particular property for a schema is a unique identifier.
 
@@ -57,7 +98,7 @@ Identity descriptors are created by a POST request to the /descriptors endpoint.
 
 For more details on creating identity descriptors in the API, see the document on [descriptors](api/descriptors.md) section in the [!DNL Schema Registry] developer guide.
 
-#### Defining identities in the UI
+### Defining identities in the UI
 
 With your schema open in the Schema Editor, select the field in the **[!UICONTROL Structure]** section of the editor that you wish to mark as an identity. Under **[!UICONTROL Field Properties]** on the right-hand side, select the **[!UICONTROL Identity]** checkbox. 
 
@@ -67,22 +108,49 @@ For more details on managing identities in the UI, see the section on [defining 
 
 Primary identities are optional, since schemas may have either zero or one of them. However, a schema must have a primary identity in order for the schema to be enabled for use in [!DNL Real-Time Customer Profile]. See the [identity](./tutorials/create-schema-ui.md#identity-field) section of the Schema Editor tutorial for more information. 
 
+## Schema Profile Enablement
+
+This section provides guidance on enabling schemas for use with Real-Time Customer Profile.
+
 ### How do I enable a schema for use in [!DNL Real-Time Customer Profile]?
 
 Schemas are enabled for use in [[!DNL Real-Time Customer Profile]](../profile/home.md) through the addition of a "union" tag within the `meta:immutableTags` attribute of the schema. Enabling a schema for use with [!DNL Profile] can be done using the API or the user interface.
 
-#### Enabling an existing schema for [!DNL Profile] using the API
+### Enabling an existing schema for [!DNL Profile] using the API
 
 Make a PATCH request to update the schema and add the `meta:immutableTags` attribute as an array containing the value "union". If the update is successful, the response will show the updated schema which now contains the union tag.
 
 For more information on using the API to enable a schema for use in [!DNL Real-Time Customer Profile], see the [unions](./api/unions.md) document of the [!DNL Schema Registry] developer guide. 
 
-#### Enabling an existing schema for [!DNL Profile] using the UI
+### Enabling an existing schema for [!DNL Profile] using the UI
 
 In [!DNL Experience Platform], select **[!UICONTROL Schemas]** in the left-navigation, and select the name of the schema you wish to enable from the list of schemas. Then, on the right-hand side of the editor under **[!UICONTROL Schema Properties]**, select **[!UICONTROL Profile]** to toggle it on.
 
-
 For more information, see the section on [use in Real-Time Customer Profile](./tutorials/create-schema-ui.md#profile) in the [!UICONTROL Schema Editor] tutorial.
+
+### When Adobe Analytics data is imported as a source, is the automatically created schema enabled for Profile?
+
+The schema is not automatically enabled for for Real-Time Customer Profile. You need to explicitly enable the dataset for Profile based on which schema is enabled for Profile. See the documentation to learn the [steps and requirements needed to enable a dataset for use in Real-Time Customer Profile](../catalog/datasets/user-guide.md#enable-profile).
+
+### Can I delete Profile-enabled schemas?
+
+You cannot delete a schema after it has been enabled for Real-Time Customer Profile. Once a schema is enabled for Profile, it cannot be disabled or deleted, and fields cannot be removed from the schema. Therefore, it is crucial to carefully plan and verify the schema configuration before enabling it for Profile. You can however, delete a Profile-enabled dataset. Information is found here: <https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset> 
+
+>[!IMPORTANT]
+>
+>To remove a Profile-enabled schema you would need the help of the XDM Platform Support Team and must follow these steps:
+>
+> 1. Delete all the datasets associated with the schema (which is enabled for Profile)
+> 2. Delete the Profile export snapshot from the sandbox (this requires the help of XDM Platform Support Team)
+> 3. Force delete schema from the sandbox (this can only be done by the XDM Platform Support Team)
+
+## Schema Modification and Restrictions
+
+This section provides clarifications on schema modification rules and the prevention of breaking changes.
+
+### When does a schema start preventing breaking changes?
+
+Breaking changes can be made to a schema as long as it has never been used in the creation of a dataset or enabled for use in [[!DNL Real-Time Customer Profile]](../profile/home.md). Once a schema has been used in dataset creation or enabled for use with [!DNL Real-Time Customer Profile], the rules of [Schema Evolution](schema/composition.md#evolution) become strictly enforced by the system.
 
 ### Can I edit a union schema directly?
 
@@ -93,6 +161,10 @@ For more information on unions in XDM, see the [unions](./api/unions.md) section
 ### How should I format my datafile to ingest data into my schema?
 
 [!DNL Experience Platform] accepts datafiles in either [!DNL Parquet] or JSON format. The contents of these files must conform to the schema referenced by the dataset. For details about best practices for datafile ingestion, see the [batch ingestion overview](../ingestion/home.md).
+
+### How can I convert a schema into a read-only schema?
+
+You cannot currently convert a schema to read-only.
 
 ## Errors and troubleshooting
 
@@ -121,14 +193,14 @@ This error displays when the system could not find a particular resource. The re
 >
 >Depending on the resource type being retrieved, this error can use any of the following `type` URIs:
 >
->* `http://ns.adobe.com/aep/errors/XDM-1010-404`
->* `http://ns.adobe.com/aep/errors/XDM-1011-404`
->* `http://ns.adobe.com/aep/errors/XDM-1012-404`
->* `http://ns.adobe.com/aep/errors/XDM-1013-404`
->* `http://ns.adobe.com/aep/errors/XDM-1014-404`
->* `http://ns.adobe.com/aep/errors/XDM-1015-404`
->* `http://ns.adobe.com/aep/errors/XDM-1016-404`
->* `http://ns.adobe.com/aep/errors/XDM-1017-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1010-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1011-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1012-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1013-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1014-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1015-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1016-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1017-404`
 
 For more information on constructing lookup paths in the API, see the [container](./api/getting-started.md#container) and [resource identification](api/getting-started.md#resource-identification) sections in the [!DNL Schema Registry] developer guide.
 
@@ -176,17 +248,17 @@ Resources that are defined by your organization must namespace their fields unde
 >
 >Depending on the specific nature of the namespace error, this error can use any of the following `type` URIs along with different message details:
 >
->* `http://ns.adobe.com/aep/errors/XDM-1020-400`
->* `http://ns.adobe.com/aep/errors/XDM-1021-400`
->* `http://ns.adobe.com/aep/errors/XDM-1022-400`
->* `http://ns.adobe.com/aep/errors/XDM-1023-400`
->* `http://ns.adobe.com/aep/errors/XDM-1024-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1020-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1021-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1022-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1023-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1024-400`
 
 Detailed examples of proper data structures for XDM resources can be found in the Schema Registry API guide:
 
-* [Create a custom class](./api/classes.md#create)
-* [Create a custom field group](./api/field-groups.md#create)
-* [Create a custom data type](./api/data-types.md#create)
+- [Create a custom class](./api/classes.md#create)
+- [Create a custom field group](./api/field-groups.md#create)
+- [Create a custom data type](./api/data-types.md#create)
 
 ### Accept header invalid
 
@@ -213,10 +285,10 @@ Depending on the endpoint you are using, the `detailed-message` property indicat
 >
 >Depending on the endpoint being used, this error can use any of the following `type` URIs:
 >
->* `http://ns.adobe.com/aep/errors/XDM-1006-400`
->* `http://ns.adobe.com/aep/errors/XDM-1007-400`
->* `http://ns.adobe.com/aep/errors/XDM-1008-400`
->* `http://ns.adobe.com/aep/errors/XDM-1009-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1006-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1007-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1008-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1009-400`
 
 For lists of compatible Accept headers for different API requests, please refer to their corresponding sections in the [Schema Registry developer guide](./api/overview.md).
 
@@ -268,7 +340,7 @@ In order to enable schemas that contain relationship descriptors for use in [!DN
 
 Ensure that the `xdm:namespace` value of the reference schema's identity field matches that of the `xdm:identityNamespace` property in the source field's reference identity descriptor to resolve this issue.
 
-For a list of standard identity namespace codes, see the section on [standard namespaces](../identity-service/namespaces.md) in the identity namespace overview.
+For a list of standard identity namespace codes, see the section on [standard namespaces](../identity-service/features/namespaces.md) in the identity namespace overview.
 
 #### The schema must include an identityMap or primary identity
 

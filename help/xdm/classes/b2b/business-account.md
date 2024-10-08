@@ -1,6 +1,6 @@
 ---
 title: XDM Business Account Class
-description: This document provides an overview of the XDM Business Account class in Experience Data Model (XDM).
+description: Learn about the XDM Business Account class in Experience Data Model (XDM).
 exl-id: abe4c919-a680-4aad-918e-6e56cae8bd4d
 ---
 # [!UICONTROL XDM Business Account] class

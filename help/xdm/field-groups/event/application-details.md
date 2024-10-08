@@ -1,6 +1,6 @@
 ---
 title: Application Details Schema Field Group
-description: This document provides an overview of the Application Details schema field group.
+description: Learn about the Application Details schema field group.
 exl-id: 5df99f9a-b36a-4c2b-a4a4-d3cf054f09b8
 ---
 # [!UICONTROL Application Details] schema field group

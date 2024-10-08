@@ -3,32 +3,32 @@ keywords: Experience Platform;home;popular topics;data access;data access api;qu
 solution: Experience Platform
 title: View Dataset Data Using the Data Access API
 type: Tutorial
-description: Learn how to locate, access, and download data stored within a dataset using the Data Access API in Adobe Experience Platform. You will also be introduced to some of the unique features of the Data Access API, such as paging and partial downloads.
+description: Learn how to locate, access, and download data stored within a dataset using the Data Access API in Adobe Experience Platform. This document introduces some of the unique features of the Data Access API, such as paging and partial downloads.
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
 ---
 # View dataset data using [!DNL Data Access] API
 
-This document provides a step-by-step tutorial that covers how to locate, access, and download data stored within a dataset using the [!DNL Data Access] API in Adobe Experience Platform. You will also be introduced to some of the unique features of the [!DNL Data Access] API, such as paging and partial downloads.
+Use this step-by-step tutorial to learn how to locate, access, and download data stored within a dataset using the [!DNL Data Access] API in Adobe Experience Platform. This document introduces some of the unique features of the [!DNL Data Access] API, such as paging and partial downloads.
 
 ## Getting started
 
 This tutorial requires a working understanding on how to create and populate a dataset. See the [dataset creation tutorial](../../catalog/datasets/create.md) for more information.
 
-The following sections provide additional information that you will need to know in order to successfully make calls to the Platform APIs.
+The following sections provide additional information that you need to know to successfully make calls to the Platform APIs.
 
-### Reading sample API calls
+### Reading sample API calls {#reading-sample-api-calls}
 
 This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+To make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation takes place in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -42,19 +42,20 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 ## Sequence diagram
 
-This tutorial follows the steps outlined in the sequence diagram below, highlighting the core functionality of the [!DNL Data Access] API.</br>
-![](../images/sequence_diagram.png)
+This tutorial follows the steps outlined in the sequence diagram below, highlighting the core functionality of the [!DNL Data Access] API.
 
-The [!DNL Catalog] API allows you to retrieve information regarding batches and files. The [!DNL Data Access] API allows you to access and download these files over HTTP as either full or partial downloads, depending on the size of the file.
+![A sequence diagram of the Data Access API core functionality.](../images/sequence_diagram.png)
+
+To retrieve information regarding batches and files, use the [!DNL Catalog] API. To access and download these files over HTTP as either full or partial downloads, depending on the size of the file, use the [!DNL Data Access] API.
 
 ## Locate the data
 
-Before you can begin to use the [!DNL Data Access] API, you need to identify the location of the data that you want to access. In the [!DNL Catalog] API, there are two endpoints that you can use to browse an organization's metadata and retrieve the ID of a batch or file that you want to access:
+Before you can begin to use the [!DNL Data Access] API, you must identify the location of the data that you want to access. In the [!DNL Catalog] API, there are two endpoints that you can use to browse an organization's metadata and retrieve the ID of a batch or file that you want to access:
 
 - `GET /batches`: Returns a list of batches under your organization
 - `GET /dataSetFiles`: Returns a list of files under your organization
 
-For a comprehensive list of endpoints in the [!DNL Catalog] API, please refer to the [API Reference](https://www.adobe.io/experience-platform-apis/references/catalog/).
+For a comprehensive list of endpoints in the [!DNL Catalog] API, refer to the [API Reference](https://developer.adobe.com/experience-platform-apis/references/catalog/).
 
 ## Retrieve a list of batches under your organization
 
@@ -99,9 +100,9 @@ The response includes an object that lists of all of the batches related to the 
 }
 ```
 
-### Filter the list of batches
+### Filter the list of batches {#filter-batches-list}
 
-Filters are often required to find a particular batch in order to retrieve relevant data for a particular use case. Parameters can be added to a `GET /batches` request in order to filter the returned response. The request below will return all batches created after a specified time, within a particular data set, sorted by when they were created.
+Filters are often required to find a particular batch to retrieve relevant data for a particular use case. Parameters can be added to a `GET /batches` request to filter the returned response. The request below returns all batches created after a specified time, within a particular data set, sorted by when they were created.
 
 **API format**
 
@@ -185,7 +186,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?createdAf
 }
 ```
 
-A full list of parameters and filters can be found in the [Catalog API reference](https://www.adobe.io/experience-platform-apis/references/catalog/).
+A full list of parameters and filters can be found in the [Catalog API reference](https://developer.adobe.com/experience-platform-apis/references/catalog/).
 
 ## Retrieve a list of all files belonging to a particular batch
 
@@ -244,7 +245,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/5c6f332168
 
 The response contains a data array that lists all the files within the specified batch. Files are referenced by their file ID, which is found under the `dataSetFileId` field.
 
-## Access a file using a file ID
+## Access a file using a file ID {#access-file-with-file-id}
 
 Once you have a unique file ID, you can use the [!DNL Data Access] API to access the specific details about the file, including its name, size in bytes, and a link to download it.
 
@@ -268,7 +269,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Depending on whether the file ID points to an individual file or a directory, the data array returned may contain a single entry or a list of files belonging to that directory. Each file element will contain details such as the file's name, size in bytes, and a link to download the file.
+Depending on whether the file ID points to an individual file or a directory, the data array returned may contain a single entry or a list of files belonging to that directory. Each file element contains details such as the file's name, size in bytes, and a link to download the file.
 
 **Case 1: File ID points to a single file**
 
@@ -344,7 +345,7 @@ Depending on whether the file ID points to an individual file or a directory, th
 | -------- | ----------- | 
 | `data._links.self.href` | The URL to download the associated file. |
 
-This response returns a directory containing two separate files, with IDs `{FILE_ID_2}` and `{FILE_ID_3}`. In this scenario, you will need to follow the URL of each file in order to access the file.
+This response returns a directory containing two separate files, with IDs `{FILE_ID_2}` and `{FILE_ID_3}`. In this scenario, you must follow the URL of each file to access the file.
 
 ## Retrieve the metadata of a file
 
@@ -374,6 +375,7 @@ curl -I 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb2-44
 **Response**
 
 The response headers contain the metadata of the queried file, including:
+
 - `Content-Length`: Indicates the size of the payload in bytes
 - `Content-Type`: Indicates the type of file.
 
@@ -406,9 +408,9 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 
 A successful response returns the file's contents.
 
-## Download partial contents of a file
+## Download partial contents of a file {#download-partial-file-contents}
 
-The [!DNL Data Access] API allows for downloading files in chunks. A range header can be specified during a `GET /files/{FILE_ID}` request to download a specific range of bytes from a file. If the range is not specified, the API will download the entire file by default.
+To download a specific range of bytes from a file, specify a range header during a `GET /files/{FILE_ID}` request to the [!DNL Data Access] API. If the range is not specified, the API downloads the entire file by default.
 
 The HEAD example in the [previous section](#retrieve-the-metadata-of-a-file) gives the size of a specific file in bytes.
 
@@ -436,7 +438,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 
 | Property | Description |
 | -------- | ----------- | 
-| `Range: bytes=0-99` | Specifies the range of bytes to download. If this is not specified, the API will download the entire file. In this example, the first 100 bytes will be downloaded. |
+| `Range: bytes=0-99` | Specifies the range of bytes to download. If this is not specified, the API downloads the entire file. In this example, the first 100 bytes are downloaded. |
 
 **Response**
 
@@ -446,9 +448,9 @@ The response body includes the first 100 bytes of the file (as specified by the 
 - Content-type: application/parquet (a Parquet file was requested, therefore the response content type is `parquet`)
 - Content-Range: bytes 0-99/249058 (the range requested (0-99) out of the total number of bytes (249058))
 
-## Configure API response pagination
+## Configure API response pagination {#configure-response-pagination}
 
-Responses within the [!DNL Data Access] API are paginated. By default, the maximum number of entries per page is 100. Paging parameters can be used to modify the default behavior.
+Responses within the [!DNL Data Access] API are paginated. By default, the maximum number of entries per page is 100. You can modify the default behavior with paging parameters.
 
 - `limit`: You can specify the number of entries per page according to your requirements using the "limit" parameter.
 - `start`: The offset can be set by the "start" query parameter. 
@@ -466,7 +468,7 @@ GET /batches/{BATCH_ID}/files?start={OFFSET}&limit={LIMIT}
 | -------- | ----------- |
 | `{BATCH_ID}` | Batch identifier of the batch that you are trying to access. |
 | `{OFFSET}` | The specified index to start the result array (for example, start=0) |
-| `{LIMIT}` | Controls how many results gets returned in the result array (for example, limit=1) |
+| `{LIMIT}` | Controls how many results are returned in the result array (for example, limit=1) |
 
 **Request**
 

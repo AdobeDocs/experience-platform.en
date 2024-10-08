@@ -1,6 +1,6 @@
 ---
 title: Support Site Search Schema Field Group
-description: This document provides an overview of the Support Site Search schema field group.
+description: Learn about the Support Site Search schema field group.
 exl-id: 7bd442f0-f85c-491f-91ad-8b14b4b431eb
 ---
 # [!UICONTROL Support Site Search] schema field group

@@ -21,4 +21,4 @@ Adobe Experience Platform currently supports the following social destinations:
 
 ## Connect to a new social destination {#connect-destination}
 
-To send segments to social destinations for your campaigns, Platform must first connect to the destination. See the [destination creation tutorial](../../ui/connect-destination.md) for detailed information on setting up a new destination.
+To send audiences to social destinations for your campaigns, Platform must first connect to the destination. See the [destination creation tutorial](../../ui/connect-destination.md) for detailed information on setting up a new destination.

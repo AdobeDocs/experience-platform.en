@@ -4,7 +4,7 @@ title: Audit Logs in Attribution AI Overview
 description: Learn how to view and manage audit logs in Attribution AI.
 exl-id: 83c55dbc-f03d-4bda-ae07-68b7914483c8
 ---
-# Audit logs
+# Audit logs in Attribution AI
 
 To increase the transparency and visibility of activities performed in the system, user activity within the Attribution AI workflow is now captured in audit logs to understand any user-driven changes to the Attribution AI models. These logs form an audit trail that may help with troubleshooting issues, and help your business effectively comply with corporate data stewardship policies and regulatory requirements.  If you are subject to the Health Insurance Portability and Accountability Act (HIPAA) and are creating, receiving, maintaining, or transmitting permitted sensitive personal data through Attribution AI or Customer AI, you are responsible for executing a BAA with Adobe and licensing Healthcare Shield.
 

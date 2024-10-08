@@ -56,6 +56,10 @@ var rule = _satellite.getVar('return event rule', event);
 
 ## `setVar`
 
+>[!NOTE]
+>
+>The `setVar` code is entirely separate from a data element specified in Tags.
+
 **Code**
 
 ```javascript

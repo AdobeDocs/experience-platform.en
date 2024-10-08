@@ -18,8 +18,8 @@ This documentation section includes:
 
 * Step-by step instructions for you to create a documentation page for your new destination;
 * A template for you to fill out for your destination;
-* [General instructions on using Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en);
-* [Specific instructions for the Adobe Markdown flavor](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en#custom-markdown-extensions) (the Adobe Markdown flavor is very similar to regular Markdown).
+* [General instructions on using Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html);
+* [Specific instructions for the Adobe Markdown flavor](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions) (the Adobe Markdown flavor is very similar to regular Markdown).
 * A [best practices page](./authoring-best-practices.md) to help you author a documentation page for your destination page, which meets the Experience Platform documentation quality standards.
 
 ## Prerequisites {#prerequisites}
@@ -32,7 +32,7 @@ To create documentation for your destination according to the instructions in th
 
 ## High-level instructions to create documentation for your destination in Adobe Experience Platform {#high-level-instructions}
 
-At a high level, to create documentation for your destination, you need to [create a fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) of the Adobe Experience Platform documentation repository and edit the [provided documentation template](./self-service-template.md) in a new branch. Use the Adobe-provided template to create a new destination page. Open a pull request (PR) when you are ready. Instructions to do this are further below, in [Steps to create your new destination page](./documentation-instructions.md#steps-to-create-docs-page).
+At a high level, to create documentation for your destination, you need to [create a fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository) of the Adobe Experience Platform documentation repository and edit the [provided documentation template](./self-service-template.md) in a new branch. Use the Adobe-provided template to create a new destination page. Open a pull request (PR) when you are ready. Instructions to do this are further below, in [Steps to create your new destination page](./documentation-instructions.md#steps-to-create-docs-page).
 
 <!--
 
@@ -58,4 +58,4 @@ You can use the GitHub web interface or your local environment to create documen
 
 ## Best practices {#best-practices}
 
-Review the [authoring best practices](/help/destinations/destination-sdk/docs-framework/authoring-best-practices.md) before and while you create the destination documentation page. Make sure to also read the [writing guidance for Adobe Documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=en) for some more writing tips that the Adobe documentation team uses when authoring documentation.
+Review the [authoring best practices](/help/destinations/destination-sdk/docs-framework/authoring-best-practices.md) before and while you create the destination documentation page. Make sure to also read the [writing guidance for Adobe Documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html) for some more writing tips that the Adobe documentation team uses when authoring documentation.

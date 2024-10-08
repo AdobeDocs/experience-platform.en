@@ -45,10 +45,10 @@ The alerts available to destination dataflows are described in the table below.
 
 | Alerts | Description |
 | --- | --- |
-| Destination Flow Run Delay | This alert notifies you when a destination flow run takes longer than 150 minutes to activate a segment. |
-| Destination Flow Run Failure | This alert notifies you when an error occurs while activating a segment to a destination. |
-| Destination Flow Run Success | This alert notifies you when a segment is successfully activated to a destination. |
-| Destination Flow Run Start | This alert notifies you when a destination flow run starts activating a segment. |
+| Destination Flow Run Delay | This alert notifies you when a destination flow run takes longer than 150 minutes to activate an audience. |
+| Destination Flow Run Failure | This alert notifies you when an error occurs while activating an audience to a destination. |
+| Destination Flow Run Success | This alert notifies you when an audience is successfully activated to a destination. |
+| Destination Flow Run Start | This alert notifies you when a destination flow run starts activating an audience. |
 | Activation Skipped Rate Exceeded| This alert notifies you when the activation skip rate has exceeded 1% of total activations. Identities are skipped during activation when they have missing attributes or consent violation.|
 
 ## Receiving alerts {#receiving-alerts}

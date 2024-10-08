@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;Webpage details;datatype;data-type;data type;webpage
 solution: Experience Platform
 title: Experience Channel Data Type
-description: This document provides an overview of the Experience channel Experience Data Model (XDM) data type.
+description: Learn about the Experience channel Experience Data Model (XDM) data type.
 exl-id: 209654f7-0bde-439a-989c-ce2e41599105
 ---
 # [!UICONTROL Experience channel] data type

@@ -8,7 +8,7 @@ exl-id: 3415a85f-5678-4f5b-b7cf-e185a66d084f
 
 ## Overview {#overview}
 
-This is the [!DNL Advertising Cloud] extension for implementing [!DNL Advertising Cloud] conversion and segment tags for both the DSP and Search (DCO is not supported currently).
+This is the [!DNL Advertising Cloud] extension for implementing [!DNL Advertising Cloud] conversion and audience tags for both the DSP and Search (DCO is not supported currently).
 
 Adobe Advertising Cloud is an advertising extension in Adobe Experience Platform.
 

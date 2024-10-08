@@ -17,22 +17,78 @@ This document provides answers to frequently asked questions about Adobe Experie
 +++Answer
 This is a normal behavior due to the way Experience Platform performs segmentation.
 
-Streaming segmentation updates the profile count for streaming segments throughout the day, while batch segmentation updates the profile count for batch segments once every 24 hours.
+Streaming segmentation updates the profile count for streaming audiences throughout the day, while batch segmentation updates the profile count for batch audiences once every 24 hours.
 
-When the segment export schedule differs from the segmentation schedule, the profile counts between the UI and the exported [!DNL CSV] file will be different, especially when it comes to streaming segments.
+When the audience export schedule differs from the segmentation schedule, the profile counts between the UI and the exported [!DNL CSV] file will be different, especially when it comes to streaming audiences.
 
 See the [Segmentation Service documentation](../segmentation/home.md) for more details.
 +++
+
+### Why do I see low match rates upon de-activating and re-activating an updated audience to the same destination?
+
++++Answer
+
+The de-activation and of an audience from a streaming destination does not trigger a backfill upon audience re-activation to the same streaming destination.
+
+**Example**
+
+You activated an audience consisting of 10 profiles to a streaming destination.
+
+After activating the audience, you realize you want to change the audience configuration, so you de-activate the audience and change its population criteria, leading to an audience population of 100 profiles.
+
+You re-activate the updated audience to the same destination, but since there is no backfill triggered, your destination does not receive the additional 90 profiles.
+
+**Solution**
+
+To ensure all the profiles are sent to your destination, you must create a new audience with the new configuration, and then activate it to your destination.
+
++++
+
+### When an audience is removed from a destination, is there any signal that is sent to the destination indicating that the audience is removed?
+
++++Answer
+
+No, there is no dependency between the Experience Platform destination and the customer instance of the target system. On the receiving side, the only indication that the target system would see is that it stopped receiving that audience data.
+
++++
+
+<!--
+## [!DNL Experience Cloud Audiences] {#eca-faq}
+
+### What are the differences between the Experience Cloud Audiences and Adobe Target destinations?
+
++++Answer
+
+See the table below for a feature comparison between the Experience Cloud Audiences and Adobe Target destinations.
+
+||Experience Cloud Audiences|Adobe Target|
+|---|---|---|
+| **Supported Experience Cloud apps** | Supports audience activation to Audience Manager, Adobe Target, Adobe Analytics, Advertising Cloud, Marketo, Adobe Campaign | Supports audience activation only to Adobe Target |
+| **Supports audience activation** | ✓ | ✓ |
+| **Supports attribute activation** | X | ✓ |
+| **Latency** | Profiles begin activating in 6 hours. Full population is visible in 48 hours​. |Depends on implementation​ type. <ul><li>Web SDK enables same-page/next-page​ personalization.</li><li>AT.js enables next-session personalization.</li></ul> |
+| **DULE support** | ✓ | ✓ |
+| **Marketing actions support** | ✓ | ✓ |
+| **Supported IDs** | [!DNL ECID], [!DNL GAID], [!DNL IDFA], [!DNL email_lc_sha256] | Any ID type |
+| **Sandbox support** | One sandbox | Multiple sandboxes |
+| **Consent support** | X | Yes. Requires Privacy & Security Shield. |
+| **Edge segmentation support** | Supports activation of edge audiences. Does not support edge segmentation. | Supports edge segmentation and activation of edge audiences. |
+| **Supported audiences** | All types of audiences  | Edge merge policy required for activation.|
+
++++
+
+-->
 
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
 ### What do I need to do before I can activate audiences in [!DNL Facebook Custom Audiences]?
 
 +++Answer
-Before you can send your audience segments to [!DNL Facebook], make sure you meet the following requirements:
+Before you can send your audiences to [!DNL Facebook], make sure you meet the following requirements:
 
 * Your [!DNL Facebook] user account must have the **[!DNL Manage campaigns]** permission enabled for the Ad account that you plan to use.
 * The **Adobe Experience Cloud** business account must be added as an advertising partner in your [!DNL Facebook Ad Account]. Use `business ID=206617933627973`. See [Add Partners to Your Business Manager](https://www.facebook.com/business/help/1717412048538897) in the Facebook documentation for details.
+    
     >[!IMPORTANT]
     >
     > When configuring the permissions for Adobe Experience Cloud, you must enable the **Manage campaigns** permission. This is required for the [!DNL Adobe Experience Platform] integration.
@@ -93,10 +149,10 @@ Yes. A Facebook destination in Experience Platform is 1:1 to an ad account in Fa
 
 ## Google Customer Match {#google-customer-match}
 
-### When exporting segments to Google Customer Match, why am I seeing extra numbers appended at the end of the segment names in the Google interface?
+### When exporting audiences to Google Customer Match, why am I seeing extra numbers appended at the end of the audience names in the Google interface?
 
 +++Answer
-Google requires segment names to be unique. The numbers that you are seeing are [UNIX timestamps](https://www.unixtimestamp.com/) and they are appended to keep the segment names unique, if you mapped the same segment to multiple Google destinations.
+Google requires audience names to be unique. The numbers that you are seeing are [UNIX timestamps](https://www.unixtimestamp.com/) and they are appended to keep the audience names unique, if you mapped the same audience to multiple Google destinations.
 +++
 
 ## LinkedIn Matched Audiences {#linkedin}
@@ -127,6 +183,7 @@ For detailed explanations on the ID matching requirements, see [ID matching requ
 
 +++Answer
 [!DNL LinkedIn Matched Audiences] supports the activation of the following identities: hashed emails, [!DNL GAID], and [!DNL IDFA].
+
 +++
 
 ## Same-page and next-page personalization through the Adobe Target and Custom Personalization destinations {#same-next-page-personalization}
@@ -134,11 +191,11 @@ For detailed explanations on the ID matching requirements, see [ID matching requ
 ### Do I need to use the Experience Platform Web SDK to send audiences and attributes to Adobe Target?
 
 +++Answer
-No, [Web SDK](../edge/home.md) is not required to activate audiences to [Adobe Target](catalog/personalization/adobe-target-connection.md).
+No, [Web SDK](../web-sdk/home.md) is not required to activate audiences to [Adobe Target](catalog/personalization/adobe-target-connection.md).
 
-However, if [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=en) is used instead of Web SDK, only next-session personalization is supported.
+However, if [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html) is used instead of Web SDK, only next-session personalization is supported.
 
-For [same-page and next-page personalization](ui/activate-edge-personalization-destinations.md) use cases, you must use either [Web SDK](../edge/home.md) or the [Edge Network Server API](../server-api/overview.md). See the documentation on [activating audiences to edge destinations](ui/activate-edge-personalization-destinations.md) for more implementation details.
+For [same-page and next-page personalization](ui/activate-edge-personalization-destinations.md) use cases, you must use either [Web SDK](../web-sdk/home.md) or the [Edge Network Server API](../server-api/overview.md). See the documentation on [activating audiences to edge destinations](ui/activate-edge-personalization-destinations.md) for more implementation details.
 +++
 
 ### Is there a limit on the number of attributes that I can send from Real-time Customer Data Platform to Adobe Target or a Custom Personalization destination?
@@ -160,13 +217,13 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 ### After I create an audience in Experience Platform, how long will it take for that audience to be available for edge segmentation use cases?
 
 +++Answer
-Audience definitions are propagated to the [Edge Network](../edge/home.md) in up to one hour. However, if an audience is activated within this first hour, some visitors who would have qualified for the audience could be missed. 
+Audience definitions are propagated to the [Edge Network](../web-sdk/home.md) in up to one hour. However, if an audience is activated within this first hour, some visitors who would have qualified for the audience could be missed. 
 +++
 
 ### Where can I see the activated attributes in Adobe Target?
 
 +++Answer
-Attributes will be available to use in Target in [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) and [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=en) offers. 
+Attributes will be available to use in Target in [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) and [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html) offers. 
 +++
 
 ### Can I create a destination without a datastream and then add a datastream to the same destination at a later point?
@@ -187,7 +244,7 @@ When you delete a destination, all audiences and attributes mapped under the des
 Yes, the Edge Network Server API works with the Custom Personalization destination. Since profile attributes may contain sensitive data, in order to protect this data, the Custom Personalization destination requires you to use the Edge Network Server API for data collection. Furthermore, all API calls must be made in an [authenticated context](../server-api/authentication.md).
 +++
 
-### I can only have one merge policy that is active-on-edge. Can I build audiences that use a different merge policy and still send them to Adobe Target as streaming segments?
+### I can only have one merge policy that is active-on-edge. Can I build audiences that use a different merge policy and still send them to Adobe Target as streaming audiences?
 
 +++Answer
 No. All audiences that you want to activate to Adobe Target must use an active-on-edge [merge policy](../profile/merge-policies/ui-guide.md).
@@ -198,3 +255,20 @@ No. All audiences that you want to activate to Adobe Target must use an active-o
 +++Answer
 Yes. The [Data Governance and Consent Policies](../data-governance/home.md) created and associated with the selected marketing actions will govern the activation of the selected attributes.
 +++
+
+### Are the [!DNL Adobe Target] and [!DNL Custom Personalization] destinations [!DNL HIPAA]-compliant?
+
++++Answer
+[!DNL Adobe Target] is not [!DNL HIPPA]-compliant with [[!DNL Adobe Healthcare Shield]](https://business.adobe.com/solutions/industries/healthcare.html). Customers should check with their own legal teams regarding [!DNL HIPPA]-readiness for custom optimization channels before using edge personalization via [!DNL Adobe Target] or the [!DNL Custom Personalization] destinations.
+
+For use cases where consent policy management needs to be applied at scale, customers must purchase [!DNL Adobe Privacy & Security Shield]. [!DNL Adobe Privacy & Security Shield] features are sold as an advanced suite of capabilities and may not be purchased separately.
+
+This service includes customer-managed keys and elevated thresholds to manage the customer data lifecycle.
+
+The [!DNL Adobe Target] and [!DNL Custom Personalization] destinations are integrated with the [Experience Platform Data Usage Labels](../data-governance/labels/overview.md) and the [Consent Policy Enforcement Service](../data-governance/enforcement/overview.md). These features are available for all customers.
+
+
+
+
++++
+

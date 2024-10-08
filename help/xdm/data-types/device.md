@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;device;datatype;data-type;data type;
 solution: Experience Platform
 title: Device Data Type
-description: This document provides an overview of the Device XDM data type.
+description: Learn about the Device XDM data type.
 exl-id: 049a2ca1-6bc3-4b9c-832a-77102e8a0ed2
 ---
 # [!UICONTROL Device] data type

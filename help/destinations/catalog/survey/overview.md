@@ -14,6 +14,12 @@ Surveys platforms detect survey events, capture customer feedback in real time t
 
 Currently, Platform supports the survey destinations listed below. For information on how to connect to these destinations, see the individual links:
 
+**Destination connectors**
+
+* [Qualtrics Automations](./qualtrics-automations.md)
+
+**Extensions**
+
 * [Foresee extension](./foresee.md)
 * [InMoment extension](./inmoment.md)
 * [Qualtrics Website Feedback extension](./qualtrics.md)

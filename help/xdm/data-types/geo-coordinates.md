@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;geo;coordinates;datatype;data-type;data type;
 solution: Experience Platform
 title: Geo Coordinates Data Type
-description: This document provides an overview of the Geo Coordinates XDM data type.
+description: Learn about the Geo Coordinates XDM data type.
 exl-id: 3c80eb44-852f-4a95-bd13-b6197ffe62da
 ---
 # [!UICONTROL Geo Coordinates] data type

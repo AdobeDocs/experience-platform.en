@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;geo;circle;datatype;data-type;data type;
 solution: Experience Platform
 title: Geo Circle Data Type
-description: This document provides an overview of the Geo Circle XDM data type.
+description: Learn about the Geo Circle XDM data type.
 exl-id: fa041f4f-9955-44e9-b235-a643e07d402c
 ---
 # [!UICONTROL Geo Circle] data type

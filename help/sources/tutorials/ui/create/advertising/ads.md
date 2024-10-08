@@ -5,6 +5,10 @@ exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
 ---
 # Create a Google Ads source connection in the UI
 
+>[!WARNING]
+>
+>The [!DNL Google Ads] source is temporarily unavailable. Adobe is working to resolve issues with this source.
+
 >[!NOTE]
 >
 >The Google Ads source is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
@@ -29,7 +33,7 @@ In order to access your Google Ads account Platform, you must provide the follow
 | Credential | Description |
 | ---------- | ----------- |
 | Client customer ID | The client customer ID is the account number that  corresponds with the Google Ads client account that you want to manage with the Google Ads API. This ID follows the template of `123-456-7890`. |
-| Login customer ID | The login customer ID is the account number that corresponds with your Google Ads manager account and is used to fetch report data from a specific operating customer. For more information on the login customer ID, read the [Google Ads API documentation](https://developers.google.com/google-ads/api/docs/migration/login-customer-id). |
+| Login customer ID | The login customer ID is the account number that corresponds with your Google Ads manager account and is used to fetch report data from a specific operating customer. For more information on the login customer ID, read the [Google Ads API documentation](https://developers.google.com/search-ads/reporting/concepts/login-customer-id). |
 | Developer token | The developer token allows you to access the Google Ads API. You can use the same developer token to make requests against all of your Google Ads accounts. Retrieve your developer token by [logging in to your manager account](https://ads.google.com/home/tools/manager-accounts/) and then navigating to the API Center page. |
 | Refresh token | The refresh token is a part of [!DNL OAuth2] authentication. This token allows you to regenerate your access tokens after they expire. |
 | Client ID | The client ID is used in tandem with the client secret as part of [!DNL OAuth2] authentication. Together, the client ID and client secret enables your application to operate on behalf of your account by identifying your application to Google. |

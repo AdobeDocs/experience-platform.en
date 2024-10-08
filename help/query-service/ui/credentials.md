@@ -9,14 +9,18 @@ exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
 
 Adobe Experience Platform Query Service allows you to connect with external clients. You can connect to these external clients by using either expiring credentials or non-expiring credentials.
 
-## Expiring credentials {#expiring-credentials}
+>[!NOTE]
+>
+>The credentials panel is not automatically available to all users. Please contact your Adobe account team to request the [!UICONTROL Credentials] tab to be included in the Query Service workspace should you require it. If requested, this change is organization wide and is conducted by Adobe's engineering team. It is not a setting controlled by users.
+
+## Expiring credentials {#expiring-credentials} 
 
 >[!CONTEXTUALHELP]
 >id="platform_queryservice_credentials_expiringcredentials"
 >title="Client's SSL mode"
 >abstract="SSL must be enabled in clients connected to Query Service. Ensure the SSL mode is set to 'require'."
 
-You can use expiring credentials to quickly set up a connection to an external client.
+You can use expiring credentials to quickly set up a connection to an external client. 
 
 ![The Queries dashboard Credentials tab with the Expiring credentials section highlighted.](../images/ui/credentials/expiring-credentials.png)
 
@@ -26,7 +30,7 @@ The **[!UICONTROL Expiring credentials]** section provides the following informa
 - **[!UICONTROL Port]**: The port number of the host to connect to.
 - **[!UICONTROL Database]**: The name of the database to connect a client to.
 - **[!UICONTROL Username]**: The username used to connect to Query Service.
-- **[!UICONTROL Password]**: The password used to connect to Query Service. Passwords in the UI have been hashed for security. Select the copy icon (![The copy icon.](../images/ui/credentials/copy-icon.png)) to copy your complete, un-hashed credentials to the clipboard.
+- **[!UICONTROL Password]**: The password used to connect to Query Service. Passwords in the UI have been hashed for security. Select the copy icon (![The copy icon.](/help/images/icons/copy.png)) to copy your complete, un-hashed credentials to the clipboard.
 - **[!UICONTROL PSQL command]**: A command that automatically has inserted all the relevant information for you to connect to Query Service using PSQL on the command line.
 - **[!UICONTROL Expires]**: The expiry date and time for the expiring credentials. The default validity duration of the token is 24 hours but it can be changed in the advanced settings of the Admin Console.
 
@@ -38,13 +42,39 @@ The **[!UICONTROL Expiring credentials]** section provides the following informa
 >
 >See the Adobe Help documentation for more information on the [Advanced settings](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) offered by Admin console.
 
+### Connect to Customer Journey Analytics data within query sessions {#connect-to-customer-journey-analytics}
+
+Use the Customer Journey Analytics BI extension with Power BI or Tableau to access your Customer Journey Analytics [data views](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views) with SQL. By integrating Query Service with the BI extension, you can access your data views directly within Query Service sessions. This integration streamlines functionality for BI tools that use Query Service as their PostgreSQL interface. This functionality eliminates the need to duplicate data views in BI tools, ensures consistent reporting across platforms, and simplifies the integration of Customer Journey Analytics data with other sources in BI platforms.
+
+See the documentation to learn how to [connect Query Service to a variety of desktop client applications](../clients/overview.md) such as [Power BI](../clients/power-bi.md) or [Tableau](../clients/tableau.md)
+
+>[!IMPORTANT]
+>
+>A Customer Journey Analytics workspace project and a data view are required to use this functionality.
+
+To access your Customer Journey Analytics data in either Power BI or Tableau, select the [!UICONTROL Database] dropdown menu, then select `prod:cja` from the available options. Next, copy your [!DNL Postgres] credentials parameters (Host, Port, Database, Username, and others) for use in your Power BI or Tableau configuration. 
+
+![The Query Service credentials tab with the database dropdown highlighted.](../images/ui/credentials/database-dropdown.png)
+
+>[!NOTE]
+>
+>When you connect Power BI or Tableau to Customer Journey Analytics, the Query Service 'concurrent sessions' entitlement is consumed. If additional sessions and queries are required, an additional ad hoc query users pack add-on can be purchased to obtain five additional concurrent sessions and one additional concurrent query.
+
+You can also access your Customer Journey Analytics data directly from the Query Editor or Postgres CLI. To do this, reference the `cja` database when writing your query. See the Query Editor [query authoring guide](./user-guide.md#query-authoring) for more information on how to write, execute, and save queries. 
+
+See the [BI extension guide](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) for complete instructions on accessing your Customer Journey Analytics data views with SQL.
+
 ## Non-expiring credentials {#non-expiring-credentials}
 
 You can use non-expiring credentials to set up a more permanent connection to an external client.
 
 >[!NOTE]
 >
->Non-expiring credentials have the following limitations:<br><ul><li>Users must log in with their username and password comprised of `{technicalAccountId}:{credential}`. More information can be found in the [Generate credentials](#generate-credentials) section.</li><li>Upon the creation of expiring credentials, a new role with a set of basic permissions is created that allows users to view schemas and datasets. The 'manage queries' permission is also assigned to this role for use with Query Service.</li><li>Third-party clients may perform differently than expected when listing out query objects. For example, some third-party clients such as [!DNL DB Visualizer] will not display the view name in the left panel. However, the view name is accessible if called within a SELECT query. Similarly, [!DNL PowerUI] might not list the temporary views created through the SQL to be selected for dashboard creation.</li></ul>
+>Non-expiring credentials have the following limitations:
+>
+>- Users must log in with their username and password in the format of `{technicalAccountId}:{credential}`. More information can be found in the [Generate credentials](#generate-credentials) section.
+>- By default, non-expiring credentials are granted permissions to execute only `SELECT` queries. To run `CTAS` or `ITAS` queries, manually add the "Manage Dataset" and "Manage Schemas" permissions to the role associated with the non-expiring credential. The "Manage Schemas" permission can be found under the "Data Modeling" section, and the "Manage Datasets" permission is located under the "Data Management" section of the [Adobe Developer Console](<https://developer.adobe.com/console/>).
+>- Third-party clients may perform differently than expected when listing out query objects. For example, some third-party clients such as [!DNL DB Visualizer] will not display the view name in the left panel. However, the view name is accessible if called within a `SELECT` query. Similarly, [!DNL PowerUI] might not list the temporary views created through SQL for selection in dashboard creation.
 
 ### Prerequisites
 
@@ -94,7 +124,7 @@ After you have saved your generated credentials, select **[!UICONTROL Close]**. 
 
 ![The Queries dashboard Credentials tab with the Non-expiring Credentials section highlighted.](../images/ui/credentials/list-credentials.png)
 
-You can either edit or delete your non-expiring credentials. To edit a non-expiring credential, select the pencil icon (![A pencil icon.](../images/ui/credentials/edit-icon.png)). To delete a non-expiring credential, select the delete icon (![A trash can icon.](../images/ui/credentials/delete-icon.png)).
+You can either edit or delete your non-expiring credentials. To edit a non-expiring credential, select the pencil icon (![A pencil icon.](/help/images/icons/edit.png)). To delete a non-expiring credential, select the delete icon (![A trash can icon.](/help/images/icons/delete.png)).
 
 When editing a non-expiring credential, a modal appears. You can provide the following details to update:
 

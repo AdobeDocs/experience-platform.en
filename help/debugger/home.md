@@ -1,15 +1,15 @@
 ---
 description: Experience Platform Debugger examines your web pages and helps you find problems with how your Experience Cloud solutions are implemented.
 keywords: debugger;experience Platform Debugger extension;chrome;extension
-seo-description: Technical documentation for the Adobe Experience Platform Debugger Chrome and Firefox Extension - examine your web pages and understand problems with your Experience Cloud solution mplementations
-seo-title: Adobe Experience Platform Debugger Chrome and Firefox Extension
+seo-description: Technical documentation for the Adobe Experience Platform Debugger Chrome Extension - examine your web pages and understand problems with your Experience Cloud solution mplementations
+seo-title: Adobe Experience Platform Debugger Chrome Extension
 title: Adobe Experience Platform Debugger Extension
 uuid: 42e2c8a2-548a-4a3f-b57d-532535a0e7b9
 exl-id: e02bc318-fbff-4a19-980a-d5c0a21ca300
 ---
 # Adobe Experience Platform Debugger overview
 
-The Adobe Experience Platform Debugger extension for [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/) examines your web pages and helps you find problems with how your Adobe Experience Cloud solutions are implemented.
+The Adobe Experience Platform Debugger extension for [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) examines your web pages and helps you find problems with how your Adobe Experience Cloud solutions are implemented.
 
 You can use Platform Debugger with the other Adobe activation solutions to perform the following:
 

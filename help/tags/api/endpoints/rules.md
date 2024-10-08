@@ -852,7 +852,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns the details of the the specified rule's extension.
+A successful response returns the details of the specified rule's extension.
 
 ```json
 {
@@ -954,7 +954,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns the details of the the specified rule's property.
+A successful response returns the details of the specified rule's property.
 
 ```json
 {

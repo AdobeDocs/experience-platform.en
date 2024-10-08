@@ -1,6 +1,6 @@
 ---
 title: Sitetool Details Schema Field Group
-description: This document provides an overview of the Sitetool Details schema field group.
+description: Learn about the Sitetool Details schema field group.
 exl-id: 472c0a3f-efda-49af-9490-f2de90b348c0
 ---
 # [!UICONTROL Sitetool Details] schema field group

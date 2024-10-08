@@ -1,11 +1,14 @@
 ---
 title: Document Your Source (Streaming SDK)
 description: The final step before your new source can be made live in Adobe Experience Platform is to document your new source.
-hide: true
-hidefromtoc: true
 exl-id: 65ca7a4d-3e02-4f54-bf07-ea2c92b8dbf1
+badge: Beta
 ---
 # Document your source (Streaming SDK)
+
+>[!NOTE]
+>
+>Self-Serve Sources Streaming SDK is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 The final step before your new source can be set live in Adobe Experience Platform is to document your new source.
 
@@ -13,8 +16,8 @@ This documentation guide includes:
 
 * A tutorial that you can follow to create a documentation page for your new source;
 * A documentation template for you to fill out for your new source;
-* [Instructions on how to use Markdown for writing technical documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en);
-* [Instructions on understanding Adobe Markdown flavor](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en#custom-markdown-extensions).
+* [Instructions on how to use Markdown for writing technical documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html);
+* [Instructions on understanding Adobe Markdown flavor](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions).
 
 ## Prerequisites
 

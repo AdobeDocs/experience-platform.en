@@ -25,7 +25,7 @@ The `timeSeriesEvents` array is a list of time-series events that relate to the 
 
 ### Segment membership map
 
-The `segmentMembership` map stores the results of segment evaluations. When segment jobs are successfully run using the [Segmentation API](https://www.adobe.io/experience-platform-apis/references/segmentation/), the map is updated. `segmentMembership` also stores any pre-evaluated audience segments that are ingested into Platform, allowing for integration with other solutions like Adobe Audience Manager. See the tutorial on [creating segments using APIs](../../segmentation/tutorials/create-a-segment.md) for more information.
+The `segmentMembership` map stores the results of evaluating a segment definition. When segment jobs are successfully run using the [Segmentation API](https://www.adobe.io/experience-platform-apis/references/segmentation/), the map is updated. `segmentMembership` also stores any pre-evaluated audiences that are ingested into Platform, allowing for integration with other solutions like Adobe Audience Manager. See the tutorial on [creating audiences using APIs](../../segmentation/tutorials/create-a-segment.md) for more information.
 
 ## Retrieve a list of unions {#list}
 

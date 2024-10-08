@@ -1,6 +1,6 @@
 ---
 title: Provider Class
-description: This document provides an overview of the Provider class in Experience Data Model (XDM).
+description: Learn about the Provider class in Experience Data Model (XDM).
 exl-id: acb9b8a3-f911-49c5-9d2a-3a0d6aeebef9
 ---
 # [!UICONTROL Provider] class

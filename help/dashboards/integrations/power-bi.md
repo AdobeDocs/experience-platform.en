@@ -40,7 +40,7 @@ Next, select the **[!UICONTROL Integrations]** tab. The Power BI application int
 
 ![Power BI details screen with Install button highlighted.](../images/power-bi/details-screen.png)
 
-### Provide credentials
+### Provide credentials 
 
 The first step in the installation process is to provide non-expiring credentials for the Power BI application integration. There are two options available to provide these: [[!UICONTROL Create new credentials]](#create-new-credentials) or [[!UICONTROL Use existing credentials]](#use-existing-credentials). Select the appropriate toggle to continue.
 
@@ -138,7 +138,7 @@ Once your dashboard has the appropriate metrics and attributes contained within 
 
 ## Delete the Power BI application integration
 
-To delete the dashboard, navigate to the dashboard inventory and select the delete icon (![](../images/power-bi/delete-icon.png)) next to the dashboard name. 
+To delete the dashboard, navigate to the dashboard inventory and select the delete icon (![delete icon](/help/images/icons/delete.png)) next to the dashboard name. 
 
 >[!NOTE]
 >

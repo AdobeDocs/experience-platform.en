@@ -1199,7 +1199,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns the details of the the specified extension's origin.
+A successful response returns the details of the specified extension's origin.
 
 ```json
 {

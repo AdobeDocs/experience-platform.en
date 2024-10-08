@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;Webpage details;datatype;data-type;data type;webpage
 solution: Experience Platform
 title: Web Page Details Data Type
-description: This document provides an overview of the web page details Experience Data Model (XDM) data type.
+description: Learn about the web page details Experience Data Model (XDM) data type.
 exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
 ---
 # [!UICONTROL Web page details] data type

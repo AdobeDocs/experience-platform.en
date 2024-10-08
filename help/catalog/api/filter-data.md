@@ -29,7 +29,7 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | Parameter | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul>|
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul>|
 | `{LIMIT}` | An integer indicating the number of objects to return, ranging from 1 to 100. |
 
 **Request**
@@ -54,12 +54,12 @@ A successful response returns a list of datasets, limited to the number indicate
     "5ba9452f7de80400007fc52a": {
         "name": "Sample Dataset 1",
         "description": "Description of dataset.",
-        "files": "@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"
+        "files": "@/dataSetFiles?dataSetId=5ba9452f7de80400007fc52a"
     },
     "5bb276b03a14440000971552": {
         "name": "Sample Dataset 2",
         "description": "Description of dataset.",
-        "files": "@/dataSets/5bb276b03a14440000971552/views/5bb276b01250b012f9acc75b/files"
+        "files": "@/dataSetFiles?dataSetId=5bb276b03a14440000971552"
     },
     "5bceaa4c26c115000039b24b": {
         "name": "Sample Dataset 3"
@@ -97,7 +97,7 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Parameter | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul>|
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul>|
 | `{PROPERTY}` | The name of an attribute to include in the response body. |
 | `{OBJECT_ID}` | The unique identifier of a specific [!DNL Catalog] object being retrieved. |
 
@@ -166,7 +166,7 @@ GET /{OBJECT_TYPE}?start={OFFSET}
 
 | Parameter | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of Catalog object to be retrieved. Valid objects are: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul>|
+| `{OBJECT_TYPE}` | The type of Catalog object to be retrieved. Valid objects are: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul>|
 | `{OFFSET}` | An integer indicating the number of objects to offset the response by. |
 
 **Request**
@@ -387,7 +387,7 @@ GET /{OBJECT_TYPE}?orderBy={PROPERTY_NAME_1},desc:{PROPERTY_NAME_2}
 
 | Parameter | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of Catalog object to be retrieved. Valid objects are: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul>|
+| `{OBJECT_TYPE}` | The type of Catalog object to be retrieved. Valid objects are: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul>|
 | `{PROPERTY_NAME}` | The name of a property to sort the results by. |
 
 **Request**
@@ -468,7 +468,7 @@ GET /{OBJECT_TYPE}?{PROPERTY_NAME}=!{VALUE_1},{VALUE_2},{VALUE_3}
 
 | Parameter | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul>|
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul>|
 | `{PROPERTY_NAME}` | The name of the property whose value you want to filter by. |
 | `{VALUE}` | A property value that determines which results to include (or exclude, depending on the query). |
 
@@ -540,7 +540,7 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 
 | Parameter | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul>|
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul>|
 | `{CONDITION}` | A conditional expression that indicates which property to query for, and how its value is to be evaluated. Examples are provided below. |
 
 The value of the `property` parameter supports several different kinds of conditional expressions. The following table outlines the basic syntax for supported expressions:

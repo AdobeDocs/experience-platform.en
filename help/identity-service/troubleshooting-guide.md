@@ -25,7 +25,7 @@ Labeling certain data fields as identities in your record and time series data a
 
 ## What are known and anonymous identities?
 
-A known identity refers to an identity value that can be used on its own or with other information to identify, contact, or locate an individual person. Examples of known identities may include email addresses, phone numbers, and CRM IDs.
+A known identity refers to an identity value that can be used on its own or with other information to identify, contact, or locate an individual person. Examples of known identities may include email addresses, phone numbers, and CRMIDs.
 
 An anonymous identity refers to an identity value that cannot be used on its own or with other information to identify, contact, or locate an individual person (such as a cookie ID).
 
@@ -67,7 +67,7 @@ For step-by-step instructions for defining a namespace when creating an identity
 
 ## What are the standard identity namespaces provided by Experience Platform? {#standard-namespaces}
 
-Standard identity namespaces are namespaces available to all organizations. See the [Identity namespaces overview](./namespaces.md) for a full list of available standard namespaces.
+Standard identity namespaces are namespaces available to all organizations. See the [Identity namespaces overview](./features/namespaces.md) for a full list of available standard namespaces.
 
 ## Where can I find the list of identity namespaces available for my organization?
 

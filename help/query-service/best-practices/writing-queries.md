@@ -305,7 +305,7 @@ LIMIT 50;
 
 ## Deduplication
 
-Query Service supports data deduplication, or the removal of duplicate rows from data. For more information on deduplication, please read the [Query Service deduplication guide](../essential-concepts/deduplication.md).
+Query Service supports data deduplication, or the removal of duplicate rows from data. For more information on deduplication, please read the [Query Service deduplication guide](../key-concepts/deduplication.md).
 
 ## Time zone computations in Query Service
 

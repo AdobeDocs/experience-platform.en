@@ -10,7 +10,7 @@ exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
 
 [SendGrid](https://www.sendgrid.com) is a popular customer communication platform for transactional and marketing emails.
 
-This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL SendGrid Marketing Contacts API]](https://api.sendgrid.com/v3/marketing/contacts), which allows you to export your first-party email profiles and activate them within a new SendGrid segment for your business needs.
+This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL SendGrid Marketing Contacts API]](https://api.sendgrid.com/v3/marketing/contacts), which allows you to export your first-party email profiles and activate them within a new SendGrid audience for your business needs.
 
 SendGrid uses API bearer tokens as an authentication mechanism to communicate with the SendGrid API.
 
@@ -28,17 +28,17 @@ The following items are required before you start configuring the destination.
 
 ![](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
 
-Before activating data to the SendGrid destination, you must have a [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) created in [!DNL Experience Platform]. Refer also to the [limits](#limits) section further below on this page.
+Before activating data to the SendGrid destination, you must have a [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) created in [!DNL Experience Platform]. Refer also to the [limits](#limits) section further below on this page.
 
 >[!IMPORTANT]
 >
 >* The SendGrid API used for creating the mailing list from email profiles requires unique email addresses to be provided within each profile. This is irrespective of whether it is used as a value for *email* or *alternate email*. Because the SendGrid connection supports mappings for both email and alternate email values, please ensure that all email addresses used should be unique within each profile of the *Dataset*. Otherwise, when the email profiles are sent to SendGrid, this will result in an error and that email profile will not be present in the data export.
 >
->* Currently, there is no functionality in place to remove profiles from SendGrid when they are removed from segments in Experience Platform.
+>* Currently, there is no functionality in place to remove profiles from SendGrid when they are removed from audiences in Experience Platform.
 
 ## Supported identities {#supported-identities}
 
-SendGrid supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+SendGrid supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 |Target Identity|Description|Considerations|
 |---|---|---|
@@ -53,7 +53,7 @@ Refer to the table below for information about the destination export type and f
 | Item | Type | Notes |
 ---------|----------|---------|
 | Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes).|
-| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
 
@@ -69,7 +69,7 @@ Marketing teams using SendGrid can create a mailing list within SendGrid and pop
 
 >[!IMPORTANT]
 > 
->To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
 
@@ -92,7 +92,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 ### Fill in destination details {#destination-details}
 
-While [setting up](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) this destination, you must provide the following information:
+While [setting up](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) this destination, you must provide the following information:
 
 *  **[!UICONTROL Name]**: The name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: An optional description that will help you identify this destination in the future.
@@ -105,17 +105,18 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
 > 
->To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
-Read [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination. 
+Read [Activate profiles and audiences to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination. 
 
 Refer to the below images for details specific to this destination.
 
-1. Select one or more segments to export to SendGrid.
+1. Select one or more audiences to export to SendGrid.
 ![](../../assets/catalog/email-marketing/sendgrid/11.jpg)
 
 1. In the **[!UICONTROL Mapping]** step, after selecting **[!UICONTROL Add new mapping]**, you are shown the mapping page to map the source XDM fields to the SendGrid API target fields. The images below demonstrate how to map identity namespaces between Experience Platform and SendGrid. Please ensure the **[!UICONTROL Source field]** *Email* should be mapped to the **[!UICONTROL Target field]** *external_id* as shown below.
@@ -159,10 +160,10 @@ To validate that you have correctly set up the destination, follow the steps bel
 1. Select the destination and validate that the status is **[!UICONTROL enabled]**.
 ![](../../assets/catalog/email-marketing/sendgrid/26.jpg)
 
-1. Switch to the **[!DNL Activation data]** tab, then select a segment name.
+1. Switch to the **[!DNL Activation data]** tab, then select an audience name.
 ![](../../assets/catalog/email-marketing/sendgrid/27.jpg)
 
-1. Monitor the segment summary and check the count of profiles corresponds to the count created within the dataset.
+1. Monitor the audience summary and check the count of profiles corresponds to the count created within the dataset.
 ![](../../assets/catalog/email-marketing/sendgrid/28.jpg)
 
 1. The [SendGrid Marketing Lists > Create List API](https://docs.sendgrid.com/api-reference/lists/create-list) is used to create unique contact lists within SendGrid by joining the value of the *list_name* attribute and the timestamp of the data export. Navigate to the SendGrid site and check if the new contact list conforming to the name pattern is created.

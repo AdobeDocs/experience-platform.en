@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;field group;field group;reservation;lodging;
 title: Lodging Reservation Schema Field Group
-description: This document provides an overview of the Lodging Reservation schema field group.
+description: Learn about the Lodging Reservation schema field group.
 exl-id: f0eafc83-21f1-483d-9397-1133e3777699
 ---
 # [!UICONTROL Lodging Reservation] schema field group

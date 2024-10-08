@@ -1,6 +1,6 @@
 ---
 title: XDM Business Person Details Schema Field Group
-description: This document provides an overview of the XDM Business Person Details schema field group.
+description: Learn about the XDM Business Person Details schema field group.
 exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
 ---
 # [!UICONTROL XDM Business Person Details] schema field group

@@ -1,6 +1,6 @@
 ---
 title: Implementation Details Data Type
-description: This document provides an overview of the Implementation details Experience Data Model (XDM) data type.
+description: Learn about the Implementation details Experience Data Model (XDM) data type.
 exl-id: d3d16bae-196b-489d-8590-fd22150eedf1
 ---
 # [!UICONTROL Implementation details] data type

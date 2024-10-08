@@ -2,6 +2,8 @@
 keywords: rtcdp profile;profiles rtcdp;rtcdp identities;rtcdp merge policies;real-time customer profile
 title: Account Profile UI Guide
 description: Through the use of account profiles, Adobe Real-Time Customer Data Platform B2B Edition enables you to unify account information from multiple sources. This guide provides details for interacting with account profiles in the Adobe Experience Platform user interface.
+badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
 ---
 # Account profile UI guide
@@ -18,9 +20,9 @@ To learn more about how account profiles are created as part of the B2B workflow
 
 Select **[!UICONTROL Profiles]** under [!UICONTROL Accounts] in the left-navigation to view the overview of account profiles. Under the [!UICONTROL Overview] tab, the dashboard shows a graphic or chart displaying widgets in a single entry point.
 
-![Overview tab displaying widgets](images/b2b-account-profile-overview.png)
+![The Account Profiles Overview tab with Profiles in the left navigation and Overview highlighted.](images/b2b-account-profile-overview.png)
 
-See the documentation on the [[!UICONTROL Account Profiles]](../../dashboards/guides/account-profiles.md) dashboard to learn more.
+See the documentation on the [[!UICONTROL Account Profiles]](../../dashboards/guides/account-profiles.md) dashboard to learn more. See the documentation on [Real-time Customer Data Platform Insights data model B2B Edition](../../dashboards/data-models/cdp-insights-data-model-b2b.md) for more information on how your insights data models can be used to create custom charts for your dashboards..
 
 ## Configure lead to account matching {#configure-lead-to-account-matching}
 
@@ -30,7 +32,7 @@ See the documentation on the [[!UICONTROL Account Profiles]](../../dashboards/gu
 
 To configure lead to account matching, select **[!UICONTROL Profiles]** under [!UICONTROL Accounts] in the left navigation. On the **[!UICONTROL Overview]** tab, select **[!UICONTROL Settings]** in the top right.
 
-![Select Settings](images/b2b-configuring-accounts-profile.png) 
+![The Account Profiles Overview tab with Setting highlighted.](images/b2b-configuring-accounts-profile.png) 
 
 The **[!UICONTROL Account settings]** dialog opens. From here select the **[!UICONTROL Enable lead-to-account-matching]** toggle to enable the feature. Use the dropdown menu to select **[!UICONTROL Daily]** for the **[!UICONTROL Matching cadence]** setting. Finally, select the relevant **[!UICONTROL Matching criteria]** options followed by **[!UICONTROL Save]** to confirm your settings and return to the **[!UICONTROL Account Profiles]** screen.
 

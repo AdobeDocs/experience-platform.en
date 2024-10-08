@@ -19,8 +19,8 @@ This document provides a tutorial to manage access to sensitive data by applying
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-* [Experience Data Model (XDM) System](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html): The standardized framework by which Experience Platform organizes customer experience data.
-  * [[!DNL Schema Editor]](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/overview.html): Learn how to create and manage schemas and other resources in the Platform UI.
+* [Experience Data Model (XDM) System](../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
+  * [[!DNL Schema Editor]](../../xdm/ui/overview.md): Learn how to create and manage schemas and other resources in the Platform UI.
 * [[!DNL Data Governance]](../../data-governance/home.md): Learn how [!DNL Data Governance] allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. 
 * [Attribute-based access control](../../access-control/abac/overview.md): Attribute-based access control is a capability of Adobe Experience Platform that enables administrators to control access to specific objects and/or capabilities based on attributes. Attributes can be metadata added to an object, such as a label added to an ad hoc or regular schema field. An administrator defines access policies that include attributes to manage user access permissions.
 
@@ -36,7 +36,7 @@ To add a data label, navigate to [!UICONTROL Schemas] dashboard browse tab by se
 
 ## Discover ad hoc schemas in the schema inventory of the Platform UI {#discover-ad-hoc-schemas}
 
-To enable the display of ad hoc schemas in the Platform UI, select the filter icon (![A filter icon.](../images/data-governance/filter.png)) to the left of the search field, and then select **[!UICONTROL Show adhoc schemas] in the left-rail that appears.
+To enable the display of ad hoc schemas in the Platform UI, select the filter icon (![A filter icon.](/help/images/icons/filter.png)) to the left of the search field, and then select **[!UICONTROL Show adhoc schemas] in the left-rail that appears.
 
 ![The Schema dashboard filter options left rail with 'Show adhoc schema' toggle enabled.](../images/data-governance/adhoc-schema-toggle.png)
 
@@ -50,7 +50,7 @@ To edit data labels for your ad hoc schema, select the [!UICONTROL Labels] tab. 
 
 ## Edit labels for the schema or field
 
-To edit the labels for the entire schema, select the pencil icon (![A pencil icon.](../images/data-governance/edit-icon.png)) to the side of the schema's name under the [!UICONTROL Labels] tab.
+To edit the labels for the entire schema, select the pencil icon (![A pencil icon.](/help/images/icons/edit.png)) to the side of the schema's name under the [!UICONTROL Labels] tab.
 
 ![The labels view in the schemas workspace with the pencil icon highlighted.](../images/data-governance/edit-entire-schema-labels.png)
 
@@ -64,7 +64,7 @@ The [!UICONTROL Edit labels] popover appears. From this view you can create or e
 
 ![The Edit labels popover.](../images/data-governance/edit-labels-popover.png)
 
-See the documentation for guidance on how to [create or edit labels for the selected schema or field](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/labels.html#edit-the-labels-for-the-schema-or-field).
+See the documentation for guidance on how to [create or edit labels for the selected schema or field](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field).
 
 >[!NOTE]
 >
@@ -88,4 +88,4 @@ If an identity or primary identity is set on ad hoc schema, the system automatic
 After reading this document you have a better understanding of how to add data usage labels to ad hoc schemas created through Query Service CTAS queries. If you have not done so already, the following documents are useful to improve your understanding of data governance in Query Service:
 
 * [Ad hoc schema identities](./ad-hoc-schema-identities.md)
-* [Data governance](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html)
+* [Data governance](../../data-governance/home.md)

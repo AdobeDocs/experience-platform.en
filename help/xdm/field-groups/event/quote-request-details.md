@@ -1,6 +1,6 @@
 ---
 title: Quote Request Details Schema Field Group
-description: This document provides an overview of the Quote Request Details schema field group.
+description: Learn about the Quote Request Details schema field group.
 exl-id: 19be76fa-d212-4b00-815a-d3869c1054e2
 ---
 # [!UICONTROL Quote Request Details] schema field group

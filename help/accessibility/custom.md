@@ -37,7 +37,7 @@ With the left navigation in focus, up and down arrow keys navigate to each item 
 
 Some features within Platform are not enabled for all users. These items appear in the navigation but are not able to be selected. When navigating with a keyboard, these items are skipped during arrow navigation and cannot be selected using **Enter (Return)**.
 
-![Sections of the Experience Platform left navigation that are not enabled for the user are not able to be selected.](images/left-navigation-sections-disabled.png)
+![Sections of the Experience Platform left navigation that are not enabled for the user are not able to be selected.](images/left-navigation-sections-disabled.png)  
 
 ## Embedded video dialog
 
@@ -136,6 +136,10 @@ The following accessibility features are available in the Query Service editor:
 
 * Color contrast in the Query Service editor UI meets accessibility compliance.
 * Keyboard navigation is supported outside of the editor UI. The editor UI is an embedded Code Mirror.
+
+>[!NOTE]
+>
+>The Query editor does not handle the **Tab** key by default. To invoke **Tab** functionality while in the editor, you must press the **Escape** key, and then press **Tab** directly after it. Press **Tab** again, to move focus beyond the editor.
 
 ## System View tab in Sources and Destinations
 

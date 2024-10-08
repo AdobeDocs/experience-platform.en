@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;environment;datatype;data-type;data type;
 solution: Experience Platform
 title: Environment Data Type
-description: This document provides an overview of the Environment XDM data type.
+description: Learn about the Environment XDM data type.
 exl-id: ec806ee5-ed65-4148-9dbe-e297d9e8cd73
 ---
 # [!UICONTROL Environment] data type

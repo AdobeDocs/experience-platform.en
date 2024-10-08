@@ -1400,7 +1400,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns the details of the the specified property's company.
+A successful response returns the details of the specified property's company.
 
 ```json
 {

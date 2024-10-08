@@ -20,9 +20,9 @@ Updates to existing features in Adobe Experience Platform:
 
 ## [!DNL Dashboards] {#dashboards}
 
-Platform provides multiple dashboards through which you can view important information about your organization’s data, as captured during daily snapshots.
+Platform provides multiple dashboards through which you can view important information about your organization's data, as captured during daily snapshots.
 
-Dashboards provide pre-configured reporting options for your organization’s data and are built directly into the marketer workflow within Platform. These dashboards are available without the need for additional IT support or the time and effort it would otherwise take to export and process data with additional data warehousing design and implementation.
+Dashboards provide pre-configured reporting options for your organization's data and are built directly into the marketer workflow within Platform. These dashboards are available without the need for additional IT support or the time and effort it would otherwise take to export and process data with additional data warehousing design and implementation.
 
 The following widgets are available through the Widget library on their respective dashboards. See the documentation for more information on [how to add widgets through the Widget library](../../dashboards/customize/widget-library.md).
 
@@ -30,7 +30,7 @@ The following widgets are available through the Widget library on their respecti
 
 | Widget | Dashboard | Description |
 | ------ | --------- | ----------- |
-| [!UICONTROL Profiles added trend] | Profiles | This widget uses a line graph to illustrate the total number of merged profiles that have been added to the Profile Store daily over the last 30 days, 90 days, or 12 months. |
+| [!UICONTROL Profiles added trend] | Profiles | This widget uses a line graph to illustrate the total number of merged profiles that have been added to the Profile store daily over the last 30 days, 90 days, or 12 months. |
 | [!UICONTROL Audiences mapped to destination status] | Profiles | This widget displays the total number of both mapped and unmapped audiences in a single metric and uses a doughnut chart to illustrate the proportional difference between their totals.|
 | [!UICONTROL Audiences size] | Profiles | This widget provides a two-column table that lists up to 20 segments and the total number of audiences contained in each segment. The list is dependent on the merge policy applied and ordered from high to low according to the total number of audiences. |
 | [!UICONTROL Profile count trend] | Profiles |  This widget uses a line graph to illustrate the trend in the total number of profiles contained in the system over time. The data can be visualized over 30 days, 90 days, and 12 month periods. |
@@ -51,7 +51,7 @@ The following widgets are available through the Widget library on their respecti
 
 {style="table-layout:auto"}
 
-See the documentation for more information on [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md), and [[!DNL Segments]](../../dashboards/guides/segments.md) dashboards.
+See the documentation for more information on [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md), and [[!DNL Segments]](../../dashboards/guides/audiences.md) dashboards.
 
 ## Dataflows {#dataflows}
 
@@ -63,7 +63,7 @@ Dataflows are a representation of jobs that move data across Platform. These dat
 
 | Feature | Description |
 | ------- | ----------- |
-| Segments dashboard | You can now use the monitoring dashboard to monitor dataflows for segments. To learn more, please read the guide on [monitoring segments in the UI](../../dataflows/ui/monitor-segments.md) |
+| Segments dashboard | You can now use the monitoring dashboard to monitor dataflows for segments. To learn more, please read the guide on [monitoring segments in the UI](../../dataflows/ui/monitor-audiences.md) |
 
 For more general information on dataflows, refer to the [dataflows overview](../../dataflows/home.md). To learn more about segmentation, refer to the [segmentation overview](../../segmentation/home.md).
 
@@ -167,7 +167,7 @@ For more information on XDM in Platform, see the [XDM System overview](../../xdm
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
 
-AI/ML services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up predictions specific to a company’s needs using business-level configurations without the need for data science expertise.
+AI/ML services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up predictions specific to a company's needs using business-level configurations without the need for data science expertise.
 
 ### Attribution AI
 

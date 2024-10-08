@@ -40,12 +40,12 @@ The following table outlines which actions on which resources are recorded by au
 | Computed attribute | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
 | [Customer AI instance](../../../intelligent-services/customer-ai/overview.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Enable</li><li>Disable</li></ul> |
 | [Dataset](../../../catalog/datasets/overview.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Enable for [Real-Time Customer Profile](../../../profile/home.md)</li><li>Disable for Profile</li><li>Add data</li><li>Delete batch</li></ul> |
-| [Datastream](../../../edge/datastreams/overview.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Enable</li><li>Disable</li><li>[Edit Mapping](../../../edge/datastreams/data-prep.md)</li></ul> |
+| [Datastream](../../../datastreams/overview.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Enable</li><li>Disable</li><li>[Edit Mapping](../../../datastreams/data-prep.md)</li></ul> |
 | [Data types](../../../xdm/schema/composition.md#data-type) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
 | [Destination](../../../destinations/home.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Enable</li><li>Disable</li><li>Dataset Activate</li><li>Dataset Remove</li><li>Profile Activate</li><li>Profile Remove</li></ul> |
 | [Field group](../../../xdm/schema/composition.md#field-group) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
-| [Identity graph](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>View</li></ul> |
-| [Identity namespace](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Create</li><li>Update</li></ul> |
+| [Identity graph](../../../identity-service/features/identity-graph-viewer.md) | <ul><li>View</li></ul> |
+| [Identity namespace](../../../identity-service/features/namespaces.md) | <ul><li>Create</li><li>Update</li></ul> |
 | [Merge policy](../../../profile/merge-policies/overview.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
 | [Product profile](../../../access-control/home.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
 | [Query](../../../query-service/ui/overview.md) | <ul><li>Execute</li></ul> |
@@ -88,7 +88,7 @@ Select an event from the list to view its details in the right rail.
 >Since this a new feature, the data displayed only goes back to March 2022. Depending on the resource selected, earlier data may be available from January 2022.
 
 
-Select the funnel icon (![Filter icon](../../images/audit-logs/icon.png)) to display a list of filter controls to help narrow results. Only the last 1000 records are displayed irrespective of the various filters selected.
+Select the funnel icon (![Filter icon](/help/images/icons/filter.png)) to display a list of filter controls to help narrow results. Only the last 1000 records are displayed irrespective of the various filters selected.
 
 ![The Audits dashboard with the filtered activity log highlighted.](../../images/audit-logs/filters.png)
 
@@ -127,6 +127,22 @@ To export the current list of audit logs, select **[!UICONTROL Download log]**.
 In the dialog that appears, select your preferred format (either **[!UICONTROL CSV]** or **[!UICONTROL JSON]**), then select **[!UICONTROL Download]**. The browser downloads the generated file and saves it to your machine.
 
 ![The file format selection dialog with [!UICONTROL Download] highlighted.](../../images/audit-logs/select-download-format.png)
+
+## Enable alerts {#enable-alerts}
+
+You can enable audit alerts to receive notifications for the following rules:
+
+* Audience create
+* Audience update
+* Audience delete
+* Dataset create
+* Dataset update
+* Dataset delete
+* Schema create
+* Schema update
+* Schema delete
+
+Select the desired alert from the list to subscribe to receive notifications. For more information on alerts, see the guide on [subscribing to alerts using the UI](../../../observability/alerts/ui.md).
 
 ## Managing audit logs in the API
 

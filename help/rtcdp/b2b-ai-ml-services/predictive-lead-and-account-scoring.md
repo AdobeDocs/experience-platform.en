@@ -2,13 +2,15 @@
 title: Predictive lead and account scoring in Real-Time CDP B2B
 type: Documentation
 description: An overview and more information about the predictive lead and account scoring feature in Experience Platform CDP B2B.
+feature: Profiles, B2B
+badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: d3afbabb-005d-4537-831a-857c88043759
 ---
 # Predictive lead and account scoring in Real-Time CDP B2B
 
 B2B marketers face multiple challenges at the top of the marketing funnel. In order to be effective, B2B marketers need an automated way to qualify the large number of people so that they can focus on the high-value targets. The qualification should be aligned with the ultimate sales outcome, not just the marketing conversion.
 
-Accounts, are the ultimate entities that purchase B2B products and services. In order to market and sell effectively, B2B marketers are required to know not only the individual’s, but also the account’s, likelihood to buy. 
+Accounts, are the ultimate entities that purchase B2B products and services. In order to market and sell effectively, B2B marketers are required to know not only the individual's, but also the account's, likelihood to buy. 
 
 Account based marketing, in particular, strategize accounts as the marketing targets. Account propensity-to-buy scores greatly help the B2B marketers to prioritize among the accounts to maximize their return on investment.
 
@@ -72,7 +74,7 @@ Multiple models are supported, with the following hard limits set in place:
 
 The data quality requirements are as follows:
 
-* Ideally there is two year’s of most recent data for training purposes. 
+* Ideally there is two year's of most recent data for training purposes. 
 * The minimum length of data required is six months plus prediction window. 
 * For each prediction goal, at least 10 qualified conversion events are required.
 
@@ -90,7 +92,7 @@ After the job run, the results are saved in a new system dataset for each model 
 | Percentile | This value provides information regarding the performance of a profile relative to other similarly scored profiles. Percentiles range from 1 to 100. |
 | Model type | The selected model type, indicates whether this is a person or account score. |
 |Score date | The date on which scoring occurred. |
-|Influential factors | Predicted reasons on why a profile is likely to convert. Factors are comprised of the following attributes:<ul><li>Code: The profile or behavioral attribute which positively influences a profile’s predicted score.</li><li>Value: The value of the profile or behavioral attribute.</li><li>Importance: Indicates the weight that the profile or behavioral attribute has on the predicted score (low, medium, high).</li></ul> |
+|Influential factors | Predicted reasons on why a profile is likely to convert. Factors are comprised of the following attributes:<ul><li>Code: The profile or behavioral attribute which positively influences a profile's predicted score.</li><li>Value: The value of the profile or behavioral attribute.</li><li>Importance: Indicates the weight that the profile or behavioral attribute has on the predicted score (low, medium, high).</li></ul> |
 
 ### View customer profile scores
 

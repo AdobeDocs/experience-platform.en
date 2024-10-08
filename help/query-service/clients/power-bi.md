@@ -19,16 +19,6 @@ This guide requires that you already have access to the [!DNL Power BI] desktop 
 
 To acquire the necessary credentials for connecting [!DNL Power BI] to Experience Platform, you must have access to the Queries workspace in the Platform UI. Please contact your organization administrator if you do not currently have access to the queries workspace. 
 
-After installing [!DNL Power BI], you will need to install `Npgsql`, a .NET driver package for PostgreSQL. More information about Npgsql can be found in the [Npgsql documentation](https://www.npgsql.org/doc/index.html).
-
->[!IMPORTANT]
->
->You must download v4.0.10 or lower, as newer versions result in errors.
-
-Under "[!DNL Npgsql GAC Installation]" on the custom setup screen, select **[!DNL Will be installed on local hard drive]**. 
-
-To ensure that Npgsql has been properly installed, please restart your computer before proceeding to the next steps.
-
 ## Connect [!DNL Power BI] to Query Service {#connect-power-bi}
 
 To connect [!DNL Power BI] to Query Service, open [!DNL Power BI] and select **[!DNL Get Data]** in the top menu ribbon. Next, enter "[!DNL PostgreSQL]" in the search bar to narrow the list of data sources. From the results that appear, select **[!DNL PostgreSQL database]**, followed by **[!DNL Connect]**.
@@ -36,6 +26,10 @@ To connect [!DNL Power BI] to Query Service, open [!DNL Power BI] and select **[
 The [!DNL PostgreSQL] database dialog appears, requesting values for your server and database. Additional instructions on how to [connect to a PostgreSQL database from Power Query Desktop](https://learn.microsoft.com/en-us/power-query/connectors/postgresql#connect-to-a-postgresql-database-from-power-query-desktop) can be found in the official [!DNL PowerBI] documentation.
 
 These required values are taken from your Adobe Experience Platform credentials. To find your credentials, log in to the Platform UI and select **[!UICONTROL Queries]** from the left navigation, followed by **[!UICONTROL Credentials]**. For more information on finding your database name, host, port, and login credentials, please read the [credentials guide](../ui/credentials.md). 
+
+>[!IMPORTANT]
+>
+>As a Power BI or Tableau user, you can connect Customer Journey Analytics to your BI tools from the Query Service credentials tab. See the credentials documentation for instructions on how to [connect your BI tools to Customer Journey Analytics](../ui/credentials.md#connect-to-customer-journey-analytics).
 
 ![The Experience Platform Queries workspace with the Credentials tab and Expiring credentials highlighted.](../images/clients/power-bi/query-service-credentials-page.png)
 
@@ -45,7 +39,7 @@ The **[!DNL Database]** field can be either "all" or a dataset table name. For e
 
 >[!IMPORTANT]
 >
->Nested data structures in third-party BI tools can be flattened to improve their usability and reduce the required workload to retrieve, analyze, transform and report data. See the documentation on the[`FLATTEN` feature](../essential-concepts/flatten-nested-data.md) for instructions on how to activate this setting when connecting to a database.
+>Nested data structures in third-party BI tools can be flattened to improve their usability and reduce the required workload to retrieve, analyze, transform and report data. See the documentation on the[`FLATTEN` feature](../key-concepts/flatten-nested-data.md) for instructions on how to activate this setting when connecting to a database.
 
 ### Data Connectivity mode {#data-connectivity-mode} 
 

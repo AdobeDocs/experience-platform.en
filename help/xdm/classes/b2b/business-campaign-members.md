@@ -1,6 +1,6 @@
 ---
 title: XDM Business Campaign Members Class
-description: This document provides an overview of the XDM Business Campaign Members class in Experience Data Model (XDM).
+description: Learn about the XDM Business Campaign Members class in Experience Data Model (XDM).
 exl-id: a39eac7d-46ee-4e9c-a1c0-4dbb63f2c813
 ---
 # [!UICONTROL XDM Business Campaign Members] class

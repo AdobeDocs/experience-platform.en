@@ -8,7 +8,7 @@ exl-id: 8f18bf73-ebf1-4b4e-a12b-964faa0e24cc
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
-Adobe Campaign Managed Cloud Services provides a Managed Services platform for designing cross-channel customer experiences and provides an environment for visual campaign orchestration, real time interaction management, and cross-channel execution. Visit the [Adobe Campaign v8 documentation](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=en) for more information.
+Adobe Campaign Managed Cloud Services provides a Managed Services platform for designing cross-channel customer experiences and provides an environment for visual campaign orchestration, real time interaction management, and cross-channel execution. Visit the [Adobe Campaign v8 documentation](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html) for more information.
 
 The Adobe Campaign Managed Cloud Services source allows you to bring Adobe Campaign v8 delivery logs and tracking logs data to Adobe Experience Platform.
 
@@ -24,7 +24,7 @@ Before you can create a source connection to bring your Campaign v8 to Experienc
 
 >[!IMPORTANT]
 >
->You must have access to the Adobe Campaign v8 Client Console in order to view your log data in Campaign. Visit the [Campaign v8 documentation](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html?lang=en) for information on how to download and install the client console.
+>You must have access to the Adobe Campaign v8 Client Console in order to view your log data in Campaign. Visit the [Campaign v8 documentation](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html) for information on how to download and install the client console.
 
 Log in to your Campaign v8 instance through the Client Console. Under the [!DNL Explorer] tab, select [!DNL Administration] and then select [!DNL Configuration]. Next, select [!DNL Data schemas] and then apply the `broadLog` filter for name or label. In the list that appears, select the recipient delivery logs source schema with the name `broadLogRcp`.
 
@@ -69,3 +69,9 @@ Finally, you must create a dataset for your schemas. For detailed instructions o
 Now that you have accessed your data logs in the Campaign client console, created a schema, and a dataset, you can now proceed to create a source connection to bring your Campaign Managed Services data to Platform.
 
 For detailed instructions on how to bring your Campaign v8 delivery logs and tracking logs data to Experience Platfrom, read the guide on [creating a Campaigned Managed Services source connection in the UI](../../tutorials/ui/create/adobe-applications/campaign.md).
+
+>[!IMPORTANT]
+>
+>There is an edge-case where the interaction of a recently removed email recipient with an email could re-ingest personal information into Experience Platform. In some cases, this could re-enable marketing to that user.
+>
+>* This scenario is only active between the time a privacy request has been executed in Experience Platform and the time it has been executed in Adobe Campaign Classic. After the request is executed in Campaign, there is a check to ensure the record is not exported to Campaign. Please re-issue a GDPR request after 72 hours of the execution, to resolve this.

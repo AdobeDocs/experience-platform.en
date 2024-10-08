@@ -15,7 +15,7 @@ This guide covers how to install and configure the Adobe Privacy extension in th
 
 >[!NOTE]
 >
->If you prefer to install these functionalities without using tags, see the the [Privacy JavaScript Library overview](../../../../privacy-service/js-library.md) for steps on how to implement using raw code.
+>If you prefer to install these functionalities without using tags, see the [Privacy JavaScript Library overview](../../../../privacy-service/js-library.md) for steps on how to implement using raw code.
 
 ## Install and configure the extension
 
@@ -89,7 +89,7 @@ When configuring the action for the rule, select **[!UICONTROL Adobe Privacy]** 
 
 ![Select action type](../../../images/extensions/client/privacy/action-type.png)
 
-The right panel prompts you to select a data element that will serve as the action's callback. Select the database icon (![Database Icon](../../../images/extensions/client/privacy/database.png)) and choose the data element you created earlier from the list. Select **[!UICONTROL Keep Changes]** to continue.
+The right panel prompts you to select a data element that will serve as the action's callback. Select the database icon (![Database Icon](/help/images/icons/database.png)) and choose the data element you created earlier from the list. Select **[!UICONTROL Keep Changes]** to continue.
 
 ![Select data element](../../../images/extensions/client/privacy/add-data-element.png)
 
