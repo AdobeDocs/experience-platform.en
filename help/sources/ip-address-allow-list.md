@@ -5,11 +5,11 @@ exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
 ---
 # IP address allow list
 
-You can define network access controls through your network firewall. By specifying the appropriate source IP range, you can allow traffic for the data transfer service. The following IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources.
+You can define network access controls through your network firewall. By specifying the appropriate source IP range, you can let traffic flow for the data transfer service. The following IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources.
 
 ## IP address allow list for batch sources {#batch}
 
-You must add the following IP addresses to your allow list to allow traffic for the data transfer service for batch sources.
+You must add the following IP addresses to your allow list to let traffic flow for the data transfer service for batch sources.
 
 >[!BEGINTABS]
 
@@ -91,7 +91,7 @@ You must add the following IP addresses to your allow list to allow traffic for 
 
 ## IP address allow list for streaming sources {#streaming}
 
-You must add the following IP addresses to your allow list to allow traffic for the data transfer service for streaming sources such as [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md), and [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md).
+You must add the following IP addresses to your allow list to let traffic flow for the data transfer service for streaming sources such as [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md), and [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md).
 
 >[!BEGINTABS]
 
