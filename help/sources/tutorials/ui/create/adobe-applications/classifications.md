@@ -7,7 +7,7 @@ exl-id: d606720d-f1ca-47cc-919b-643a8fc61e07
 
 >[!TIP]
 >
->By default, Adobe Analytics classifications data is updated weekly. Data ingestion for your classifications data will be processed seven days after the initial set up of your dataflow. The first load to be ingested will be the entire data and the ensuing weekly ingestion runs will be incremental data.
+>By default, Adobe Analytics classifications data is updated weekly. Data ingestion for your classifications data will be processed seven days after the initial set up of your dataflow. The first load ingests the entire data and the ensuing weekly ingestion runs incremental data.
 
 Read this tutorial for steps on how to ingest your Adobe Analytics classifications data into Adobe Experience Platform through the user interface.
 
@@ -29,7 +29,7 @@ Under the *Adobe applications* category, select **[!UICONTROL Adobe Analytics]**
 
 >[!TIP]
 >
->Sources in the sources catalog display the **[!UICONTROL Set up]** option when a given source does not yet have an authenticated account. Once an authenticated account exists, this option changes to **[!UICONTROL Add data]**.
+>Sources in the sources catalog display the **[!UICONTROL Set up]** option if there is no authenticated account. Once an account is authenticated, the option changes to **[!UICONTROL Add data]**.
 
 ![The sources catalog in the Experience Platform UI with the Adobe Analytics source selected.](../../../../images/tutorials/create/classifications/catalog.png)
 
