@@ -33,7 +33,7 @@ Insights generated from SQL queries offer far greater flexibility and customizat
 
 ![The [!UICONTROL Create dashboard] dialog with Query pro mode and Save highlighted.](../images/sql-insights-query-pro-mode/query-pro-mode.png)
 
-# Query pro mode overview {#query-pro-mode}
+## Query pro mode overview {#query-pro-mode}
 
 Query pro mode is an SQL editor-based workflow that guides you through the process of generating insights with custom SQL queries in the Adobe Experience Platform UI. Before you can generate insights with custom SQL queries, you must first create a dashboard. 
 
