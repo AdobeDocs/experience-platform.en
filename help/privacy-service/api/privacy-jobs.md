@@ -34,7 +34,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={STATUS}
 ```
 
-<!-- 206259 -->
+<!-- 206259  -->
 
 | Parameter | Description |
 | --- | --- |
