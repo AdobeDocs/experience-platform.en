@@ -1,9 +1,9 @@
 ---
-title: Custom Dashboards
+title: Standard dashboards
 description: Learn how to build and manage custom dashboards where you can create, add, and edit bespoke widgets to visualize key metrics.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
 ---
-# Custom Dashboards
+# Standard dashboards
 
 Use Adobe Experience Platform Dashboards to expedite insights and customize visualization through the Dashboards feature. Use this feature to build and manage custom dashboards where you can create, add, and edit bespoke widgets to visualize key metrics relevant to your organization.
 
@@ -31,7 +31,7 @@ The [!UICONTROL Create dashboard] dialog appears. Enter a human-friendly, descri
 
 ![The Create dashboard dialog.](./images/user-defined-dashboards/create-dashboard-dialog.png)
 
-Users who have purchased the Data Distiller SKU have the option to use custom SQL queries to create their insights. See the [SQL Insight creation guide](./data-distiller/sql-insights/overview.md) for instructions on this workflow.  
+Users who have purchased the Data Distiller SKU have the option to use custom SQL queries to create their insights. See the [query pro mode overview](./sql-insights-query-pro-mode/overview.md) for instructions on this workflow.  
 
 The newly created blank dashboard appears with your chosen name in the top left corner of the view.
 

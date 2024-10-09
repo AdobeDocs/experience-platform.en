@@ -11,7 +11,7 @@ To create a global filter, first select **[!UICONTROL Add filter]** from your da
 >
 >Ensure you map your global filters to all your charts. This is not an automatic process. To use a global filter, you must include a [query parameter](../../../../query-service/ui/parameterized-queries.md) in the SQL of your chart, [enable the global filter](#enable-global-filter) in the widget composer, and [select a runtime value](#select-global-filter) for the parameter in the global filter dialog. See the query pro guide to learn how to edit your SQL if you need to incorporate a query parameter.
 
-![A custom dashboard with Add filter and its dropdown menu highlighted.](../../../images/query-pro-mode/add-filter.png)
+![A custom dashboard with Add filter and its dropdown menu highlighted.](../../../images/sql-insights-query-pro-mode/add-filter.png)
 
 You can quickly change the insights provided by your SQL with customized global filters.
 
@@ -23,7 +23,7 @@ The [!UICONTROL Create a global filter] dialog opens. Creating a global filter f
 
 After successfully running the query, the results tab displays the results. Select **[!UICONTROL Next]**.
 
-![The [!UICONTROL Create a global filter dialog] with the dataset dropdown menu, the run icon and Next highlighted.](../../../images/query-pro-mode/global-filter.png)
+![The [!UICONTROL Create a global filter dialog] with the dataset dropdown menu, the run icon and Next highlighted.](../../../images/sql-insights-query-pro-mode/global-filter.png)
 
 The final step of the global filter creation workflow requires you to add a label for your filter. Add a label to the **[!UICONTROL Filter label]** text field and select a filter type from the dropdown box. 
 
@@ -33,7 +33,7 @@ The final step of the global filter creation workflow requires you to add a labe
 
 Finally, select **[!UICONTROL Select]** to return to your dashboard view.
 
-![The [!UICONTROL Create a global filter dialog] with Select and the Filter label text input highlighted.](../../../images/query-pro-mode/global-filter-label.png)
+![The [!UICONTROL Create a global filter dialog] with Select and the Filter label text input highlighted.](../../../images/sql-insights-query-pro-mode/global-filter-label.png)
 
 ## Enable the global filter for each insight {#enable-global-filter}
 
@@ -43,7 +43,7 @@ Finally, select **[!UICONTROL Select]** to return to your dashboard view.
 
 After creating your global filter for your dashboard, the toggle for that global filter becomes available as part of the widget composer.
 
-![The widget composer with the Global Filter toggle highlighted.](../../../images/query-pro-mode/global-filter-consent.png)
+![The widget composer with the Global Filter toggle highlighted.](../../../images/sql-insights-query-pro-mode/global-filter-consent.png)
 
 >[!IMPORTANT]
 >
@@ -53,10 +53,10 @@ After creating your global filter for your dashboard, the toggle for that global
 
 To open the [!UICONTROL Filters] dialog that lists all of your custom filters, select the filter icon (![A filter icon.](/help/images/icons/filter.png)) on the left of your dashboard. Next, to apply the effects on your dashboard insights, choose an option from the dropdown menu of your global filter then select **[!UICONTROL Apply]**.
 
-![A custom dashboard with the filter dialog highlighted.](../../../images/query-pro-mode/custom-filters.png)
+![A custom dashboard with the filter dialog highlighted.](../../../images/sql-insights-query-pro-mode/custom-filters.png)
 
 ## Clear global filter {#clear-global-filter}
 
 To clear all of your custom global filters, select **[!UICONTROL Clear all]** from the [!UICONTROL Filters] dialog.
 
-![The Filters dialog with Clear all highlighted.](../../../images/query-pro-mode/clear-all.png)
+![The Filters dialog with Clear all highlighted.](../../../images/sql-insights-query-pro-mode/clear-all.png)
