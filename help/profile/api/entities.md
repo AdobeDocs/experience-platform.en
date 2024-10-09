@@ -14,11 +14,13 @@ Adobe Experience Platform enables you to access [!DNL Real-Time Customer Profile
 
 The API endpoint used in this guide is part of the [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
 
-## Access profile data by identity
+## Retrieve an entity {#retrieve-entity}
 
-You can access a [!DNL Profile] entity by making a GET request to the `/access/entities` endpoint and providing the entity's identity as a series of query parameters. This identity consists of an ID value (`entityId`) and the identity namespace (`entityIdNS`).
+You can retrieve either a Profile entity or its time series data by making a GET request to the `/access/entities` endpoint along with the required query parameters.
 
-Query parameters provided in the request path specify which data to access. You can include multiple parameters, separated by ampersands (&). A complete list of valid parameters is provided in the [query parameters](#query-parameters) section of the appendix.
+>[!BEGINTABS]
+
+>[!TAB Profile entity]
 
 **API format**
 
@@ -26,20 +28,37 @@ Query parameters provided in the request path specify which data to access. You 
 GET /access/entities?{QUERY_PARAMETERS}
 ```
 
+Query parameters provided in the request path specify which data to access. You can include multiple parameters, separated by ampersands (&). 
+
+To access a Profile entity, you **must** provide the following query parameters:
+
+- `schema.name`: The name of the entity's XDM schema. In this use case, the `schema.name=_xdm.context.profile`.
+- `entityId`: The ID of the entity you're trying to retrieve.
+- `entityIdNS`: The namespace of the entity you're trying to retrieve.
+
+A complete list of valid parameters is provided in the [query parameters](#query-parameters) section of the appendix.
+
 **Request**
 
-The following request retrieves a customer's email and name using an identity:
+The following request retrieves a customer's email and name using an identity.
+
++++ A sample request to retrieve an entity using an identity
 
 ```shell
-curl -X GET \
-  'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.com&entityIdNS=email&fields=identities,person.name,workEmail' \
+curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.com&entityIdNS=email&fields=identities,person.name,workEmail' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Response**
+
+A successful response returns HTTP status 200 with the requested entity.
+
++++ A sample response that contains the requested entity
 
 ```json
 {
@@ -108,13 +127,111 @@ curl -X GET \
 }
 ```
 
++++
+
 >[!NOTE]
 >
 >If a related graph links more than 50 identities, this service will return HTTP status 422 and the message "Too many related identities". If you receive this error, consider adding more query parameters to narrow your search.
 
-## Access profile data by list of identities
+>[!TAB Time series event]
 
-You can access multiple profile entities by their identities by making a POST request to the `/access/entities` endpoint and providing the identities in the payload. These identities consist of an ID value (`entityId`) and an identity namespace (`entityIdNS`).
+**API format**
+
+```http
+GET /access/entities?{QUERY_PARAMETERS}
+```
+
+Query parameters provided in the request path specify which data to access. You can include multiple parameters, separated by ampersands (&). 
+
+To access the time series events data, you **must** provide the following query parameters:
+
+- `schema.name`: The name of the entity's XDM schema. In this use case, this value is `schema.name=_xdm.context.experienceevent`.
+- `relatedSchema.name`: The name of the related schema. Since the schema name is Experience Event, the value of this **must** be `relatedSchema.name=_xdm.context.profile`.
+- `relatedEntityId`: The ID of the related entity.
+- `relatedEntityIdNS`: The namespace of the related entity.
+
+A complete list of valid parameters is provided in the [query parameters](#query-parameters) section of the appendix.
+
+**Request**
+
+The following request finds a profile entity by ID, and retrieves the values for the properties `endUserIDs`, `web`, and `channel` for all time series events associated with the entity. 
+
++++ A sample request to retrieve the time series events associated with an entity
+
+```shell
+curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
+
+**Response**
+
+A successful response returns HTTP status 200 with a paginated list of time series events and associated fields that were specified in the request query parameters. 
+
+>[!NOTE]
+>
+>The request specified a limit of one (`limit=1`), therefore the `count` in the response below is 1 and only one entity is returned.
+
++++ A sample response that contains the requested time series events data
+
+```json
+{
+    "_page": {
+        "orderby": "timestamp",
+        "start": "c8d11988-6b56-4571-a123-b6ce74236036",
+        "count": 1,
+        "next": "c8d11988-6b56-4571-a123-b6ce74236037"
+    },
+    "children": [
+        {
+            "relatedEntityId": "A29cgveD5y64e2RixjUXNzcm",
+            "entityId": "c8d11988-6b56-4571-a123-b6ce74236036",
+            "timestamp": 1531260476000,
+            "entity": {
+                "endUserIDs": {
+                    "_experience": {
+                        "ecid": {
+                            "id": "89149270342662559642753730269986316900",
+                            "namespace": {
+                                "code": "ecid"
+                            }
+                        }
+                    }
+                },
+                "channel": {
+                    "_type": "web"
+                },
+                "web": {
+                    "webPageDetails": {
+                        "name": "Fernie Snow",
+                        "pageViews": {
+                            "value": 1
+                        }
+                    }
+                }
+            },
+            "lastModifiedAt": "2018-08-21T06:49:02Z"
+        }
+    ],
+    "_links": {
+        "next": {
+            "href": "/entities?start=c8d11988-6b56-4571-a123-b6ce74236037&orderby=timestamp&schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1"
+        }
+    }
+}
+```
+
++++
+
+>[!ENDTABS]
+
+## Retrieve multiple entities {#retrieve-entities}
+
+You can retrieve multiple profile entities by their identities by making a POST request to the `/access/entities` endpoint and providing the identities in the payload. These identities consist of an ID value (`entityId`) and an identity namespace (`entityIdNS`).
 
 **API format**
 
@@ -124,7 +241,9 @@ POST /access/entities
 
 **Request**
 
-The following request retrieves the names and email addresses of several customers by a list of identities:
+The following request retrieves the names and email addresses of several customers by a list of identities.
+
++++A sample request to retrieve multiple entities
 
 ```shell
 curl -X POST \
@@ -173,21 +292,26 @@ curl -X POST \
       }'
 ```
 
-|Property|Description|
-|---|---|
-|`schema.name`| ***(Required)*** The name of the XDM schema the entity belongs to.|
-|`fields`|The XDM fields to be returned, as an array of strings. By default, all fields will be returned.|
-|`identities`| ***(Required)*** An array containing a list of identities for the entities you want to access.|
-|`identities.entityId`| The ID of an entity you wish to access.|
-|`identities.entityIdNS.code`|The namespace of an entity ID you wish to access.|
-|`timeFilter.startTime`|Start time of the time range filter, included. Should be at millisecond granularity. Default, if not specified, is the beginning of available time.|
-|`timeFilter.endTime`|End time of time range filter, excluded. Should be at millisecond granularity. Default, if not specified, is the end of available time.|
-|`limit`|Number of records to return. Only applies to the number of experience events returned. Default: 1,000.|
-|`orderby`|The sort order of retrieved experience events by timestamp, written as `(+/-)timestamp` with the default being `+timestamp`. |
-|`withCA`|Feature flag for enabling computed attributes for lookup. Default: false.|
++++
+
+| Property | Type | Description |
+| -------- |----- | ----------- |
+|`schema.name`| String | ***(Required)*** The name of the XDM schema the entity belongs to.|
+|`fields`| Array | The XDM fields to be returned, as an array of strings. By default, all fields will be returned.|
+|`identities`| Array | ***(Required)*** An array containing a list of identities for the entities you want to access.|
+|`identities.entityId`| String | The ID of an entity you wish to access.|
+|`identities.entityIdNS.code`| String | The namespace of an entity ID you wish to access.|
+|`timeFilter.startTime`| Integer | Start time of the time range filter, included. Should be at millisecond granularity. If not specified, this value is set to the beginning of available time.|
+|`timeFilter.endTime`| Integer | End time of time range filter, excluded. Should be at millisecond granularity. Default, if not specified, is the end of available time. |
+|`limit`| Integer | Number of records to return. Only applies to the number of experience events returned. Default: 1,000.|
+|`orderby`| String | The sort order of retrieved experience events by timestamp, written as `(+/-)timestamp` with the default being `+timestamp`. |
+|`withCA`| Boolean | Feature flag for enabling computed attributes for lookup. Default: false.|
 
 **Response**
-A successful response returns the requested fields of entities specified in the request body.
+
+A successful response returns HTTP status 200 with the requested fields of entities specified in the request body.
+
++++ A sample response that contains the requested entities
 
 ```json
 {
@@ -326,85 +450,9 @@ A successful response returns the requested fields of entities specified in the 
 }
 ```
 
-## Access time series events for a profile by identity
++++
 
-You can access time series events by the identity of their associated profile entity by making a GET request to the `/access/entities` endpoint. This identity consists of an ID value (`entityId`) and an identity namespace (`entityIdNS`).
 
-Query parameters provided in the request path specify which data to access. You can include multiple parameters, separated by ampersands (&). A complete list of valid parameters is provided in the [query parameters](#query-parameters) section of the appendix.
-
-**API format**
-
-```http
-GET /access/entities?{QUERY_PARAMETERS}
-```
-
-**Request**
-
-The following request finds a profile entity by ID, and retrieves the values for the properties `endUserIDs`, `web`, and `channel` for all time series events associated with the entity. 
-
-```shell
-curl -X GET \
-  'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Response**
-
-A successful response returns a paginated list of time series events and associated fields that were specified in the request query parameters. 
-
->[!NOTE]
->
->The request specified a limit of one (`limit=1`), therefore the `count` in the response below is 1 and only one entity is returned.
-
-```json
-{
-    "_page": {
-        "orderby": "timestamp",
-        "start": "c8d11988-6b56-4571-a123-b6ce74236036",
-        "count": 1,
-        "next": "c8d11988-6b56-4571-a123-b6ce74236037"
-    },
-    "children": [
-        {
-            "relatedEntityId": "A29cgveD5y64e2RixjUXNzcm",
-            "entityId": "c8d11988-6b56-4571-a123-b6ce74236036",
-            "timestamp": 1531260476000,
-            "entity": {
-                "endUserIDs": {
-                    "_experience": {
-                        "ecid": {
-                            "id": "89149270342662559642753730269986316900",
-                            "namespace": {
-                                "code": "ecid"
-                            }
-                        }
-                    }
-                },
-                "channel": {
-                    "_type": "web"
-                },
-                "web": {
-                    "webPageDetails": {
-                        "name": "Fernie Snow",
-                        "pageViews": {
-                            "value": 1
-                        }
-                    }
-                }
-            },
-            "lastModifiedAt": "2018-08-21T06:49:02Z"
-        }
-    ],
-    "_links": {
-        "next": {
-            "href": "/entities?start=c8d11988-6b56-4571-a123-b6ce74236037&orderby=timestamp&schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1"
-        }
-    }
-}
-```
 
 ### Access a subsequent page of results
 
@@ -881,6 +929,28 @@ A successful response returns a paginated list of time series events associated 
 
 Results are paginated when retrieving time series events. If there are subsequent pages of results, the `_page.next` property will contain an ID. Additionally, the `_links.next.href` property provides a request URI for retrieving the subsequent page by making additional GET requests to the `access/entities` endpoint. 
 
+## Delete an entity {#delete-entity}
+
+You can delete an entity from the Profile Store by making a DELETE request to the`/access/entities` endpoint along with the required query parameters.
+
+**API format**
+
+```http
+DELETE /access/entities?{QUERY_PARAMETERS}
+```
+
+**Request**
+
+The following request deletes the specified entity.
+
++++ A sample request to delete an entity
+
++++
+
+**Response**
+
+A successful response returns HTTP status 202 with an empty response body.
+
 ## Next steps
 
 By following this guide you have successfully accessed [!DNL Real-Time Customer Profile] data fields, profiles, and time series data. To learn how to access other data resources stored in [!DNL Platform], see the [Data Access overview](../../data-access/home.md).
@@ -893,8 +963,8 @@ The following section provides supplemental information regarding accessing [!DN
 
 The following parameters are used in the path for GET requests to the `/access/entities` endpoint. They serve to identify the profile entity you wish to access and filter the data returned in the response. Required parameters are labeled, while the rest are optional.
 
-|Parameter|Description|Example|
-|---|---|---|
+| Parameter | Description | Example |
+| --------- | ----------- | ------- |
 |`schema.name`|**(REQUIRED)** The XDM schema of the entity to retrieve|`schema.name=_xdm.context.experienceevent`|
 |`relatedSchema.name`|If `schema.name` is "_xdm.context.experienceevent", this value must specify the schema for the profile entity that the time series events are related to.|`relatedSchema.name=_xdm.context.profile`|
 |`entityId`|**(REQUIRED)** The ID of the entity. If the value of this parameter is not an XID, an identity namespace parameter must also be provided (see `entityIdNS` below).|`entityId=janedoe@example.com`|
