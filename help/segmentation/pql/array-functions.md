@@ -163,7 +163,7 @@ The `groupBy` function is used to partition values of an array or list into a gr
 **Format**
 
 ```sql
-{ARRAY}.groupBy({EXPRESSION)
+{ARRAY}.groupBy({EXPRESSION})
 ```
 
 | Argument | Description |
