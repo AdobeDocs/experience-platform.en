@@ -101,11 +101,12 @@ When ready, select **[!UICONTROL Next]** to proceed to the next step of the acti
 
 All the documented [Data Prep functions](/help/data-prep/functions.md) are supported when activating data to file-based destinations. 
 
-The array functions below are documented along with examples
+The functions below, specific to handling exports of arrays, are documented along with examples.
 
-Note, however, that extensive use case descriptions and sample output information is currently provided for the following functions only: 
-
-* `join`
+* `array_to_string`
+* `flattenArray`
+* `filterArray`
+* `transformArray`
 * `coalesce`
 * `size_of`
 * `iif`
@@ -114,8 +115,6 @@ Note, however, that extensive use case descriptions and sample output informatio
 * `to_array`
 * `first`
 * `last`
-* `sha256`
-* `md5`
 
 ## Examples of functions used to export arrays {#examples}
 
@@ -139,6 +138,52 @@ In this case, your output file looks like below. Notice how the elements of the 
 ```
 First_Name,Last_Name,Personal_Email,Organization
 John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':456,'orgName':'Superstar Inc','founded':2004,'latestInteraction':1692921600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
+```
+
+### `array_to_string` function to export arrays
+
+Use the `array_to_string` function to concatenate the elements of an array into a string, using a desired separator, such as `_` or `|`.
+
+For example, you can combine the following XDM fields below as shown in the mapping screenshot by using a `array_to_string('_',loyalty.loyaltyID)` syntax:
+
+(`array_to_string('_', organizations)` instead of `join('_', organizations)`)
+
+```
+First_Name,Last_Name,Personal_Email,Organization
+John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':456,'orgName':'Superstar Inc','founded':2004,'latestInteraction':1692921600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
+```
+
+### `flattenArray` function to export flattened arrays
+
+Use the `flattenArray` function to flatten an exported multidimensional array. You can combine this function with the `array_to_string` function described further above.
+
+Continuing with the `organizations` array object from above, you can write a function like `source: array_to_string('_', flattenArray(organizations))`. (**Important to note: array_to_string flattens the input array by default.**)
+
+***Same output as for array_to_string***
+
+
+### `filterArray` function to export filtered arrays
+
+Use the `filterArray` function to filter the elements of an exported array. You can combine this function with the `array_to_string` function described further above.
+
+Continuing with the `organizations` array object from above, you can write a function like `source: array_to_string('_', filterArray(organizations, org -> org.founded > 2024))`, returning the organizations with `latestInteraction` in year 2024.
+
+In this case, your output file looks like below. Notice how the two elements of the array that meet the criterion are concatenated into a single string using the `_` character.
+
+```
+John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
+```
+
+### `transformArray` function to export transformed arrays
+
+Use the `transformArray` function to transform the elements of an exported array. You can combine this function with the `array_to_string` function described further above.
+
+Continuing with the `organizations` array object from above, you can write a function like `source: array_to_string('_', transformArray(organizations, org -> ucase(org.orgName)))`, returning the names of the organizations converted to all uppercase.
+
+In this case, your output file looks like below. Notice how the three elements of the array are transformed and concatenated into a single string using the `_` character.
+
+```
+John,Doe,johndoe@acme.org,ACME INC_SUPERSTAR INC_ENERGY CORP
 ```
 
 ### `iif` function to export arrays {#iif-function-export-arrays}
