@@ -9,33 +9,31 @@ badge: Beta
 >
 >Sharing packages across organizations is currently in beta and only available to select beta customers.
 
-This document covers how to use sandbox tooling in Adobe Experience Platform to share packages across different organizations.
+Improve configuration accuracy across sandboxes and seamlessly export and import sandbox configurations between sandboxes across different organizations with the sandbox tooling feature. This document covers how to use sandbox tooling in Adobe Experience Platform to share packages across different organizations. There are two types of shared packages:
 
-Improve configuration accuracy across sandboxes and seamlessly export and import sandbox configurations between sandboxes across different organizations with the sandbox tooling feature. There are two types of shared packages::
+- **Private package**
 
-**Private package**
+[Private packages](#private-packages) can only be shared with organizations that have approved the sharing request from the source organization via an opt-in allow list.
 
-Private packages can only be shared with organizations that have approved the sharing request from the source organization via an opt-in allow list.
+- **Public package**
 
-**Public package**
+[Public packages](./sandbox-tooling.md/#export-and-import-an-entire-sandbox) are available to import without any additional approval. These packages can be shared on a partner's website, blog, or platform. The package payload allows packages to be copied and pasted from these channels to the target organization.
 
-Public packages are available to import without any additional approval. These packages can be shared on a partner's website, blog, or platform. The package payload allows packages to be copied and pasted from these channels to the target organization.
-
-## Private packages
+## Private packages {#private-packages}
 
 >[!NOTE]
 >
 >To initiate and approve a sharing request and share packages across organizations, you will need to have **package-share** role-based access control permission.
 
-The sandbox tooling feature provides you with the ability to create organization partnerships, track the stats of a partnership request, manage existing partnerships, and share packages with partner organizations.
+Use the Sandbox Tooling feature to create partnerships, track partnership request stats, manage existing partnerships, and share packages with partner organizations.
 
 ### Create an organization partnership request
 
-To create an organization partnership request, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Partner orgs]** tab. Next, select **[!UICONTROL Manage partner orgs]**.
+To create an organization partnership request, navigate to the **[!UICONTROL Sandboxes]** **[!UICONTROL Partner orgs]** tab. Next, select **[!UICONTROL Manage partner orgs]**.
 
 ![The sandboxes UI, with the Partner orgs tab and Manage partner orgs highlighted.](../images/ui/sandbox-tooling/private-manage-partner-orgs.png)
 
-In the [!UICONTROL Package partner management] dialog, enter the organization ID into **[!UICONTROL Enter Org ID]** and press enter. The organization ID is shown in the **[!UICONTROL Selected Org IDs]** section below. After adding the IDs, select **[!UICONTROL Confirm]**.
+In the [!UICONTROL Package partner management] dialog, enter the organization ID into **[!UICONTROL Enter Org ID]** and press enter (Windows) or return (Mac). The organization ID is shown in the **[!UICONTROL Selected Org IDs]** section below. After adding the IDs, select **[!UICONTROL Confirm]**.
 
 >[!TIP]
 >
@@ -47,13 +45,13 @@ The sharing request is successfully sent to the partner organization, and you ar
 
 ![The Partner orgs tab with Outgoing request highlighted.](../images/ui/sandbox-tooling/private-outgoing-request.png)
 
-### Authorize a partnership request
+### Authorize a partnership request {#authorize-request}
 
 To authorize an organization partnership request, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Partner orgs]** tab. Next, select **[!UICONTROL Incoming request]**.
 
 ![The sandboxes UI with the Partner orgs tab and Incoming request highlighted.](../images/ui/sandbox-tooling/private-authorise-partner-org.png)
 
-The current **[!UICONTROL Status]** for the request is **Pending**. To approve the request, select the ellipsis (`...`) next to the selected request, then select **[!UICONTROL Approve]** from the dropdown.
+The current **[!UICONTROL Status]** for the request, at this stage, is **Pending**. To approve the request, select the ellipsis (`...`) next to the selected request, then select **[!UICONTROL Approve]** from the dropdown.
 
 ![List of incoming requests showing the dropdown menu with Approve highlighted.](../images/ui/sandbox-tooling/private-approve-partner-org.png)
 
@@ -65,9 +63,9 @@ You are returned to the [!UICONTROL Incoming request] page, and the request's st
 
 ![List of incoming requests with Approved highlighted.](../images/ui/sandbox-tooling/private-approved-partner-org.png)
 
-You now have the ability to share packages between your organization and the source organization.
+Use this workflow/process to share packages between your organization and the source organization.
 
-### Share packages to partner organizations
+### Share packages to partner organizations {#share-package}
 
 >[!NOTE]
 >
@@ -79,14 +77,14 @@ To share a package to an approved partner organization, navigate to the [!UICONT
 
 In the **[!UICONTROL Share package]** dialog, select the package to share from the **[!UICONTROL Share settings]** dropdown, then select **[!UICONTROL Confirm]**.
 
-![Share package dialog with Share settings and Confirm highlighted.](../images/ui/sandbox-tooling/private-share-package-confirm.png)
-
 >[!TIP]
 >
 >It is possible to select more than one organization. Selected organizations will show up beneath the [!UICONTROL Share settings] dropdown.
 
-## Next steps
+![Share package dialog with Share settings and Confirm highlighted.](../images/ui/sandbox-tooling/private-share-package-confirm.png)
+
+## Next steps {#next-steps}
 
 This document demonstrated how to use the Sandbox tooling feature to share packages across different organizations. For additional information, refer to the [sandbox tooling guide](../ui/sandbox-tooling.md).
 
-For steps on performing different operations using the Sandbox API, see the [sandbox developer guide](../api/getting-started.md). For a high-level overview of sandboxes in Experience Platform, refer to the [overview documentation](../home.md).
+To learn how to perform different operations using the Sandbox API, see the [sandbox developer guide](../api/getting-started.md). For a high-level overview of sandboxes in Experience Platform, refer to the [overview documentation](../home.md).

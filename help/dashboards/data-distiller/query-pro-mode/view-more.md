@@ -35,7 +35,7 @@ You can sort columns by selecting the drop down menu beside the column name and 
 
 >[!NOTE]
 >
->The [!UICONTROL Sort Ascending] and [!UICONTROL Sort Descending] options will only appear for columns that have been configured with [sorting functionality](../overview.md/#advanced-attributes).
+>The [!UICONTROL Sort Ascending] and [!UICONTROL Sort Descending] options will only appear for columns that have been configured with [sorting functionality](./overview.md#advanced-attributes).
 
 ![A table column dropdown showing the Sort Ascending and Sort Descending options highlighted.](../../images/query-pro-mode/advanced-sort-dropdown.png)
 

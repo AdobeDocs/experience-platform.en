@@ -1,14 +1,13 @@
 ---
 title: Implementation guide for identity graph linking rules
 description: Learn the recommended steps to follow when implementing your data with identity graph linking rules configurations.
-badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
 ---
 # Implementation guide for identity graph linking rules
 
 >[!AVAILABILITY]
 >
->Identity graph linking rules is currently in beta. Contact your Adobe account team for information on the participation criteria. The feature and documentation are subject to change.
+>Identity graph linking rules is currently in Limited Availability. Contact your Adobe account team for information on how to access the feature in development sandboxes.
 
 Read this document for a step-by-step by guide that you can follow when implementing your data with Adobe Experience Platform Identity Service.
 
@@ -55,8 +54,67 @@ If you are using the [Adobe Analytics source connector](../../sources/tutorials/
 
 ### XDM experience events
 
-* During your pre-implementation process, you must ensure that the authenticated events that your system will send to Experience Platform always contain a person identifier, such as CRMID.
-* Do not send an empty string as an identity value when sending events using XDM experience events. Doing so will result in system errors. 
+During your pre-implementation process, you must ensure that the authenticated events that your system will send to Experience Platform always contain a person identifier, such as CRMID.
+
+>[!BEGINTABS]
+
+>[!TAB Authenticated events with person identifier]
+
+```json
+{
+  "_id": "test_id",
+  "identityMap": {
+      "ECID": [
+          {
+              "id": "62486695051193343923965772747993477018",
+              "primary": false
+          }
+      ],
+      "CRMID": [
+          {
+              "id": "John",
+              "primary": true
+          }
+      ]
+  },
+  "timestamp": "2024-09-24T15:02:32+00:00",
+  "web": {
+      "webPageDetails": {
+          "URL": "https://business.adobe.com/",
+          "name": "Adobe Business"
+      }
+  }
+}
+```
+
+>[!TAB Authenticated events without person identifier]
+
+
+```json
+{
+    "_id": "test_id",
+    "identityMap": {
+        "ECID": [
+            {
+                "id": "62486695051193343923965772747993477018",
+                "primary": false
+            }
+        ]
+    },
+    "timestamp": "2024-09-24T15:02:32+00:00",
+    "web": {
+        "webPageDetails": {
+            "URL": "https://business.adobe.com/",
+            "name": "Adobe Business"
+        }
+    }
+}
+```
+
+
+>[!ENDTABS]
+
+Do not send an empty string as an identity value when sending events using XDM experience events. If the identity value of the namespace with highest namespace priority is an empty string, the record will be ignored from Real-Time Customer Profile. This applies to both identityMap, as well as fields marked as an identity.
 
 +++Select to view an example of a payload with an empty string
 
@@ -164,6 +222,12 @@ For any feedback, use the **[!UICONTROL Beta feedback]** option in the Identity 
 Use the identity dashboard for insights on the state of your identity graphs, such as your overall identity count and graph count trends, identity count by namespace, and graph count by graph size. You can also use the identity dashboard to view trends on graphs with two or more identities, organized by namespace. 
 
 Select the ellipses (`...`) and then select **[!UICONTROL View more]** for further information and to validate that there are no collapsed graphs.
+
+![The identity dashboard in the Identity Service UI workspace.](../images/implementation/identity_dashboard.png)
+
+Use the window that appears to view information on your collapsed graphs. In this example, both email and phone are marked as unique namespace, so therefore, there are no collapsed graphs in your sandbox.
+
+![The pop-up window for graphs with multiple identities.](../images/implementation/graphs.png)
 
 ## Appendix {#appendix}
 

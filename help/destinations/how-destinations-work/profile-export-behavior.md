@@ -186,7 +186,7 @@ In the first file export after setting up the activation workflow, the entire po
 
 >[!TIP]
 >
->As a reminder, changes in attribute values or in identity maps for a profile do not qualify a profile to be included in an incremental file export.
+>As a reminder, changes in identity maps for a profile qualify it to be included in an incremental file export. Changes in attribute values *do not* qualify it to be included in an incremental file export.
 
 ## Next steps {#next-steps}
 

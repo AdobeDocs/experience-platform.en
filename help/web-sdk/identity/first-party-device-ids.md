@@ -214,6 +214,16 @@ The error response returned by the Edge Network in this case would be similar to
 }
 ```
 
+## Setting an FPID on your own domain {#setting-fpid-domain}
+
+In addition to setting the [!DNL FPID] in the identity map, you can set the [!DNL FPID] cookie on your own domain, if you have a first-party data collection [!DNL CNAME] configured.
+
+When first-party data collection is enabled using a [!DNL CNAME], all cookies for your domain will be sent on requests made to the data collection endpoint.
+
+All cookies not relevant to Adobe's data collection purposes are dropped. For [!DNL FPID], you can specify the name of the [!DNL FPID] cookie in the datastream configuration. When you do this, the Edge Network will read the contents of the [!DNL FPID] cookie instead of  looking for the [!DNL FPID] in the identity map. 
+
+To use this functionality, you need to set the [!DNL FPID] at the top level of your domain instead of a specific subdomain. If you set it on a subdomain, the cookie value will not be sent to the Edge Network and the [!DNL FPID] solution will not work as intended. 
+
 ## ID hierarchy {#id-hierarchy}
 
 When both an [!DNL ECID] and [!DNL FPID] are present, the [!DNL ECID] is prioritized in identifying the user. This ensures that when an existing [!DNL ECID] is present in the browser cookie store, it remains the primary identifier and existing visitor counts do not risk being affected. For existing users, the [!DNL FPID] will not become the primary identity until the [!DNL ECID] expires or is deleted as a result of a browser policy or manual process.
