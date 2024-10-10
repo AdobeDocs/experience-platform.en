@@ -36,7 +36,7 @@ Get extensive information about calculated fields - what these are and why they 
 
 In Experience Platform, you can use [XDM schemas](/help/xdm/home.md) to manage different field types. Previously, you were able to export simple key-value pair type fields such as strings out of Experience Platform to your desired destinations. An example of such a field that was supported for export previously is `personalEmail.address`:`johndoe@acme.org`.
 
-Other field types in Experience Platform include array fields. Read more about [managing array fields in the Experience Platform UI](/help/xdm/ui/fields/array.md). In addition to the previously supported field types, you can now export array objects such as: 
+Other field types in Experience Platform include array fields. Read more about [managing array fields in the Experience Platform UI](/help/xdm/ui/fields/array.md). In addition to the previously supported field types, you can now export array objects such as the example below, concatenated into a string by using the `array_to_string` function.
 
 ``` 
 organizations = [{
@@ -57,7 +57,7 @@ organizations = [{
 }]
 ```
 
-See further below [extensive examples](#examples) of how you can use various functions to access elements of arrays, join array elements into a string, and more.  
+See further below [extensive examples](#examples) of how you can use various functions to access elements of arrays, transform and filter arrays, join array elements into a string, and more.  
 
 ## Known limitations {#known-limitations}
 
@@ -79,13 +79,13 @@ This opens a modal window where you can select functions and fields to export at
 
 ![Modal window of the calculated field functionality with no function selected yet.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
 
-For example, use the `array_to_string` function on the `organizations` field as shown below to export an array of loyalty IDs as a string concatenated with an underscore in a CSV file. View [more information about this and other examples further below](#join-function-export-arrays). 
+For example, use the `array_to_string` function on the `organizations` field as shown below to export an array of loyalty IDs as a string concatenated with an underscore in a CSV file. View [more information about this and other examples further below](#array-to-string-function-export-arrays). 
 
-![Modal window of the calculated field functionality with the join function selected.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
+![Modal window of the calculated field functionality with the array-to-string function selected.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
 
 Select **[!UICONTROL Save]** to keep the calculated field and return to the mapping step.
 
-![Modal window of the calculated field functionality with the join function selected and the Save control highlighted.](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
+![Modal window of the calculated field functionality with the array-to-string function selected and the Save control highlighted.](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
 
 Back in the mapping step of the workflow, fill in the **[!UICONTROL Target field]** with a value of the column header you want for this field in the exported files.
 
@@ -120,33 +120,20 @@ The functions below, specific to handling exports of arrays, are documented alon
 
 See examples and further information in the sections below for some of the functions listed above. For the rest of the listed functions, refer to the [general functions documentation in the Data Prep section](/help/data-prep/functions.md).
 
-### `array_to_string` function to export arrays {#join-function-export-arrays}
+### `array_to_string` function to export arrays {#array-to-string-function-export-arrays}
 
 Use the `array_to_string` function to concatenate the elements of an array into a string, using a desired separator, such as `_` or `|`.
 
-For example, you can combine the following XDM fields below as shown in the mapping screenshot by using a `join('_',loyalty.loyaltyID)` syntax:
+For example, you can combine the following XDM fields below as shown in the mapping screenshot by using a `array_to_string('_',organizations)` syntax:
 
 * `organizations = [{id: 123, orgName: "Acme Inc", founded: 1990, latestInteraction: "2024-02-16"}, {id: 456, orgName: "Superstar Inc", founded: 2004, latestInteraction: "2023-08-25"}, {id:789, orgName: 'Energy Corp', founded: 2021, latestInteraction: "2024-09-08"}]` array 
 * `person.name.firstName` string 
 * `person.name.lastName` string
 * `personalEmail.address` string
 
-![Mapping example including the join function.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-array-to-string-function.png)
+![Mapping example including the array_to_string function.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-array-to-string-function.png)
 
 In this case, your output file looks like below. Notice how the elements of the array are concatenated into a single string using the `_` character.
-
-```
-First_Name,Last_Name,Personal_Email,Organization
-John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':456,'orgName':'Superstar Inc','founded':2004,'latestInteraction':1692921600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
-```
-
-### `array_to_string` function to export arrays
-
-Use the `array_to_string` function to concatenate the elements of an array into a string, using a desired separator, such as `_` or `|`.
-
-For example, you can combine the following XDM fields below as shown in the mapping screenshot by using a `array_to_string('_',loyalty.loyaltyID)` syntax:
-
-(`array_to_string('_', organizations)` instead of `join('_', organizations)`)
 
 ```
 First_Name,Last_Name,Personal_Email,Organization
@@ -157,16 +144,18 @@ John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'lates
 
 Use the `flattenArray` function to flatten an exported multidimensional array. You can combine this function with the `array_to_string` function described further above.
 
-Continuing with the `organizations` array object from above, you can write a function like `source: array_to_string('_', flattenArray(organizations))`. (**Important to note: array_to_string flattens the input array by default.**)
+Continuing with the `organizations` array object from above, you can write a function like `array_to_string('_', flattenArray(organizations))`. Note that the `array_to_string` function flattens the input array by default into a string.
 
-***Same output as for array_to_string***
+The resulting output is the same as for the `array_to_string` function described above.
 
 
 ### `filterArray` function to export filtered arrays
 
 Use the `filterArray` function to filter the elements of an exported array. You can combine this function with the `array_to_string` function described further above.
 
-Continuing with the `organizations` array object from above, you can write a function like `source: array_to_string('_', filterArray(organizations, org -> org.founded > 2024))`, returning the organizations with `latestInteraction` in year 2024.
+Continuing with the `organizations` array object from above, you can write a function like `array_to_string('_', filterArray(organizations, org -> org.founded > 2024))`, returning the organizations with `latestInteraction` in the year 2024.
+
+![Example of the filterArray function.](/help/destinations/assets/ui/export-arrays-calculated-fields/filter-array-function.png)
 
 In this case, your output file looks like below. Notice how the two elements of the array that meet the criterion are concatenated into a single string using the `_` character.
 
@@ -178,7 +167,9 @@ John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'lates
 
 Use the `transformArray` function to transform the elements of an exported array. You can combine this function with the `array_to_string` function described further above.
 
-Continuing with the `organizations` array object from above, you can write a function like `source: array_to_string('_', transformArray(organizations, org -> ucase(org.orgName)))`, returning the names of the organizations converted to all uppercase.
+Continuing with the `organizations` array object from above, you can write a function like `array_to_string('_', transformArray(organizations, org -> ucase(org.orgName)))`, returning the names of the organizations converted to all uppercase.
+
+![Example of the transformArray function.](/help/destinations/assets/ui/export-arrays-calculated-fields/transform-array-function.png)
 
 In this case, your output file looks like below. Notice how the three elements of the array are transformed and concatenated into a single string using the `_` character.
 
@@ -201,9 +192,9 @@ John,Doe, johndoe@acme.org, "isMarketing"
 
 ### `add_to_array` function to export arrays {#add-to-array-function-export-arrays}
 
-Use the `add_to_array` function to add elements to an exported array. You can combine this function with the `join` function described further above.
+Use the `add_to_array` function to add elements to an exported array. You can combine this function with the `array_to_string` function described further above.
 
-Continuing with the `organizations` array object from above, you can write a function like `source: join('_', add_to_array(organizations,"2023"))`, returning the organizations that a person is a member of in the year 2023.
+Continuing with the `organizations` array object from above, you can write a function like `source: array_to_string('_', add_to_array(organizations,"2023"))`, returning the organizations that a person is a member of in the year 2023.
 
 ![Mapping example including the add_to_array function.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-add-to-array-function.png)
 
@@ -278,6 +269,8 @@ In this case, your output file looks like below, exporting the first and the las
 johndoe@acme.org,"1538097126","1664327526"
 ```
 
+<!--
+
 ### Hashing functions {#hashing-functions}
 
 In addition to the functions specific for exporting arrays or elements from an array, you can use hashing functions to hash attributes in the exported files. For example, if you have any personally identifiable information in attributes, you can hash those fields when exporting them. 
@@ -296,3 +289,5 @@ The supported hashing functions are:
 | `crc32` | `crc32(organizations[0])` |
 
 {style="table-layout:auto"}
+
+-->
