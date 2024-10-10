@@ -229,6 +229,8 @@ Yes, Data Distiller Audiences appear in the Audiences inventory under the origin
 
 +++
 
++++
+
 ## Next steps
 
 After reading this document, you have learned how to use the SQL audience extension in Data Distiller to effectively create, manage, and publish audiences using SQL commands. You can now customize audience definitions based on your unique business requirements and activate them across various destinations, optimizing your marketing strategies and data-driven decisions.
