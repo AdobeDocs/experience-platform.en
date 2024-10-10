@@ -42,16 +42,15 @@ The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow 
 | [!UICONTROL FDBR_USA]               | The [!DNL Florida Digital Bill of Rights]|
 | [!UICONTROL GDPR]                   | The European Union's [!DNL General Data Protection Regulation]|
 | [!UICONTROL HIPPA_USA]              | The [!DNL Health Insurance Portability and Accountability Act] |
-| **[!UICONTROL ICDPA_USA]**  x       | The [!DNL Iowa Consumer Data Protection Act] |
+| **[!UICONTROL ICDPA_USA]**          | The [!DNL Iowa Consumer Data Protection Act] |
 | [!UICONTROL LGPD_BRA]               | Brazil's "[!DNL General Data Protection Law]" [!DNL Lei Geral de Proteção de Dados]|
 | [!UICONTROL MHMDA_USA]              | The [!DNL Washington My Health My Data Act] |
-| **[!UICONTROL MCDPA_USA]** x        | The [!DNL Montana Consumer Data Privacy Act] |
-| **[!UICONTROL NDPA_USA]** x         | The [!DNL Nebraska Data Protection Act] |
+| **[!UICONTROL MCDPA_USA]**          | The [!DNL Montana Consumer Data Privacy Act] |
+| **[!UICONTROL NDPA_USA]**           | The [!DNL Nebraska Data Protection Act] |
 | [!UICONTROL NZPA_NZL]               | New Zealand's [!DNL Privacy Act] |
-| **[!UICONTROL NHPA_USA]**  ?        | The [!DNL New Hampshire Data Privacy Act] |
-| **[!UICONTROL NJDPA_USA]** x        | The [!DNL New Jersey Data Protection Act] |
+| **[!UICONTROL NHPA_USA]**           | The [!DNL New Hampshire Data Privacy Act] |
+| **[!UICONTROL NJDPA_USA]**          | The [!DNL New Jersey Data Protection Act] |
 | [!UICONTROL OCPA_USA]               | The [!DNL Oregon Consumer Privacy Act] |
-| **[!UICONTROL PIPA_KOR]**  ?        | South Korea [!DNL Personal Information Privacy Act] |
 | [!UICONTROL PDPA_THA]               | Thailand's [!DNL Personal Data Protection Act] |
 | [!UICONTROL TDPSA_USA]              | The [!DNL Texas Data Privacy and Security Act] |
 | [!UICONTROL UCPA_USA]               | The [!DNL Utah Consumer Privacy Act] |
@@ -60,8 +59,8 @@ The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow 
 {style="table-layout:auto"}
 
 <!-- 
-Unconfirmed: Not in UI and date has passed,.. 27th sept 2023
-| [!UICONTROL pdpd_vnm]               | Vietnam Personal Data Protection Decree |
+Waiting:
+| **[!UICONTROL PIPA_KOR]**  ?        | South Korea [!DNL Personal Information Privacy Act] |
  -->
 
 >[!NOTE]
