@@ -835,6 +835,15 @@ You can delete an entity from the Profile Store by making a DELETE request to th
 DELETE /access/entities?{QUERY_PARAMETERS}
 ```
 
+Query parameters provided in the request path specify which data to access. You can include multiple parameters, separated by ampersands (&). 
+
+To delete an entity, you **must** provide the following query parameters:
+
+- `schema.name`: The name of the entity's XDM schema. In this use case, the `schema.name=_xdm.context.profile`.
+- `entityId`: The ID of the entity you're trying to retrieve.
+- `entityIdNS`: The namespace of the entity you're trying to retrieve. This value must be provided if the `entityId` is **not** an XID.
+- `mergePolicyId`: The merge policy ID of the entity. The merge policy contains information about identity stitching and key-value XDM object merging. If this value is not provided, the default merge policy will be used.
+
 **Request**
 
 The following request deletes the specified entity.
@@ -842,7 +851,7 @@ The following request deletes the specified entity.
 +++ A sample request to delete an entity
 
 ```shell
-curl -X DELETE 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.com&entityIdNS=email&fields=identities,person.name,workEmail' \
+curl -X DELETE 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.com&entityIdNS=email' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -869,17 +878,17 @@ The following parameters are used in the path for GET requests to the `/access/e
 
 | Parameter | Description | Example |
 | --------- | ----------- | ------- |
-|`schema.name`|**(REQUIRED)** The XDM schema of the entity to retrieve|`schema.name=_xdm.context.experienceevent`|
-|`relatedSchema.name`|If `schema.name` is "_xdm.context.experienceevent", this value must specify the schema for the profile entity that the time series events are related to.|`relatedSchema.name=_xdm.context.profile`|
-|`entityId`|**(REQUIRED)** The ID of the entity. If the value of this parameter is not an XID, an identity namespace parameter must also be provided (see `entityIdNS` below).|`entityId=janedoe@example.com`|
-|`entityIdNS`|If `entityId` is not provided as an XID, this field must specify the identity namespace.|`entityIdNE=email`|
-|`relatedEntityId`|If `schema.name` is "_xdm.context.experienceevent", this value must specify the related profile entity's identity namespace. This value follows the same rules as `entityId`.|`relatedEntityId=69935279872410346619186588147492736556`|
-|`relatedEntityIdNS`|If `schema.name` is "_xdm.context.experienceevent", this value must specify the identity namespace for the entity specified in `relatedEntityId`. |`relatedEntityIdNS=CRMID`|
-|`fields`|Filters the data returned in the response. Use this to specify which schema field values to include in data retrieved. For multiple fields, separate values by a comma with no spaces between|`fields=personalEmail,person.name,person.gender`|
-|`mergePolicyId`|Identifies the Merge Policy by which to govern the data returned. If one is not specified in the call, your organization's default for that schema will be used. If no default Merge Policy has been configured, the default is no profile merge and no identity stitching.|`mergePoilcyId=5aa6885fcf70a301dabdfa4a`|
-|`orderBy`|The sort order of retrieved experience events by timestamp, written as `(+/-)timestamp` with the default being `+timestamp`.|`orderby=-timestamp`|
-|`startTime`|Specify the start time to filter time-series objects (in milliseconds).|`startTime=1539838505`|
-|`endTime`|Specify the end time to filter time-series objects (in milliseconds).|`endTime=1539838510`|
-|`limit`|Numeric value specifying the maximum number of objects to return. Default: 1000|`limit=100`|
-|`property`|Filters by the property value. Supports the following evaluators: =, !=, <, <=, >, >=. Can only be used with experience events, with a maximum of three properties being supported.|`property=webPageDetails.isHomepage=true&property=localTime<="2020-07-20"`|
-|`withCA`|Feature flag for enabling computed attributes for lookup. Default: false|`withCA=true`|
+| `schema.name` | **(Required)** The name of the entity's XDM schema. | `schema.name=_xdm.context.experienceevent` |
+| `relatedSchema.name`| If `schema.name` is `_xdm.context.experienceevent`, this value **must** specify the schema for the profile entity that the time series events are related to. | `relatedSchema.name=_xdm.context.profile` |
+| `entityId` | **(Required)** The ID of the entity. If the value of this parameter is not an XID, an identity namespace parameter (`entityIdNS`) must also be provided. | `entityId=janedoe@example.com` |
+| `entityIdNS` | If `entityId` is not provided as an XID, this field **must** specify the identity namespace. | `entityIdNE=email` |
+| `relatedEntityId` | If `schema.name` is `_xdm.context.experienceevent`, this value **must** specify the related profile entity's identity namespace. This value follows the same rules as `entityId`. | `relatedEntityId=69935279872410346619186588147492736556` |
+| `relatedEntityIdNS` | If `schema.name` is "_xdm.context.experienceevent", this value must specify the identity namespace for the entity specified in `relatedEntityId`. |`relatedEntityIdNS=CRMID`|
+| `fields` | Filters the data returned in the response. Use this to specify which schema field values to include in data retrieved. For multiple fields, separate values by a comma with no spaces between. | `fields=personalEmail,person.name,person.gender` |
+| `mergePolicyId` | Identifies the merge policy by which to govern the data returned. If one is not specified in the call, your organization's default for that schema will be used. If no default merge policy has been configured, the default is no profile merge and no identity stitching. | `mergePolicyId=5aa6885fcf70a301dabdfa4a` |
+| `orderBy` | The sort order of retrieved entities by timestamp. This is written as `(+/-)timestamp`, with the default being `+timestamp`. | `orderby=-timestamp` |
+| `startTime` | Specifies the start time to filter the entities (in milliseconds). | `startTime=1539838505` |
+| `endTime` | Specifies the end time to filter entities (in milliseconds). | `endTime=1539838510` |
+| `limit` | Specifies the maximum number of entities to return. By default, this value is set to 1000. | `limit=100` |
+| `property` | Filters by the property value. This query parameter supports the following evaluators: =, !=, <, <=, >, >=. This can only be used with experience events, with a maximum of three properties being supported. | `property=webPageDetails.isHomepage=true&property=localTime<="2020-07-20"` |
+| `withCA` | Feature flag for enabling computed attributes for lookup. By default, this value is false. | `withCA=true` |
