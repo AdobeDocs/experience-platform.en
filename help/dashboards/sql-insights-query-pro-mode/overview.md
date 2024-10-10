@@ -19,7 +19,7 @@ To create a custom dashboard, select **[!UICONTROL Dashboards]** from the left n
 
 ![The Dashboard inventory with Create dashboard highlighted.](../images/sql-insights-query-pro-mode/create-dashboard.png)
 
-The **[!UICONTROL Create dashboard]** dialog appears. There are two options from which to choose your dashboard creation method. To create your insights you can either use an existing data model with the [[!UICONTROL Guided design mode]](../../user-defined-dashboards.md) or your own SQL with the [!UICONTROL Query pro mode]. 
+The **[!UICONTROL Create dashboard]** dialog appears. There are two options from which to choose your dashboard creation method. To create your insights you can either use an existing data model with the [[!UICONTROL Guided design mode]](../user-defined-dashboards.md) or your own SQL with the [!UICONTROL Query pro mode]. 
 
 <!-- Maybe reference Guided design mode in other places on UDD doc. -->
 
