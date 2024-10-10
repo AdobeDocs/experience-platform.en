@@ -34,7 +34,7 @@ To access a Profile entity, you **must** provide the following query parameters:
 
 - `schema.name`: The name of the entity's XDM schema. In this use case, the `schema.name=_xdm.context.profile`.
 - `entityId`: The ID of the entity you're trying to retrieve.
-- `entityIdNS`: The namespace of the entity you're trying to retrieve.
+- `entityIdNS`: The namespace of the entity you're trying to retrieve. This value must be provided if the `entityId` is **not** an XID.
 
 A complete list of valid parameters is provided in the [query parameters](#query-parameters) section of the appendix.
 
@@ -148,7 +148,7 @@ To access the time series events data, you **must** provide the following query 
 - `schema.name`: The name of the entity's XDM schema. In this use case, this value is `schema.name=_xdm.context.experienceevent`.
 - `relatedSchema.name`: The name of the related schema. Since the schema name is Experience Event, the value of this **must** be `relatedSchema.name=_xdm.context.profile`.
 - `relatedEntityId`: The ID of the related entity.
-- `relatedEntityIdNS`: The namespace of the related entity.
+- `relatedEntityIdNS`: The namespace of the related entity. This value must be provided if the `relatedEntityId` is **not** an XID.
 
 A complete list of valid parameters is provided in the [query parameters](#query-parameters) section of the appendix.
 
@@ -231,7 +231,11 @@ A successful response returns HTTP status 200 with a paginated list of time seri
 
 ## Retrieve multiple entities {#retrieve-entities}
 
-You can retrieve multiple profile entities by their identities by making a POST request to the `/access/entities` endpoint and providing the identities in the payload. These identities consist of an ID value (`entityId`) and an identity namespace (`entityIdNS`).
+You can retrieve multiple Profile entities or time series events by making a POST request to the `/access/entities` endpoint and providing the identities in the payload. 
+
+>[!BEGINTABS]
+
+>[!TAB Profile entities]
 
 **API format**
 
@@ -246,8 +250,7 @@ The following request retrieves the names and email addresses of several custome
 +++A sample request to retrieve multiple entities
 
 ```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/ups/access/entities \
+curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -292,20 +295,20 @@ curl -X POST \
       }'
 ```
 
-+++
-
 | Property | Type | Description |
 | -------- |----- | ----------- |
-|`schema.name`| String | ***(Required)*** The name of the XDM schema the entity belongs to.|
-|`fields`| Array | The XDM fields to be returned, as an array of strings. By default, all fields will be returned.|
-|`identities`| Array | ***(Required)*** An array containing a list of identities for the entities you want to access.|
-|`identities.entityId`| String | The ID of an entity you wish to access.|
-|`identities.entityIdNS.code`| String | The namespace of an entity ID you wish to access.|
-|`timeFilter.startTime`| Integer | Start time of the time range filter, included. Should be at millisecond granularity. If not specified, this value is set to the beginning of available time.|
-|`timeFilter.endTime`| Integer | End time of time range filter, excluded. Should be at millisecond granularity. Default, if not specified, is the end of available time. |
-|`limit`| Integer | Number of records to return. Only applies to the number of experience events returned. Default: 1,000.|
-|`orderby`| String | The sort order of retrieved experience events by timestamp, written as `(+/-)timestamp` with the default being `+timestamp`. |
-|`withCA`| Boolean | Feature flag for enabling computed attributes for lookup. Default: false.|
+| `schema.name` | String | **(Required)** The name of the XDM schema the entity belongs to.|
+| `fields` | Array | The XDM fields to be returned, as an array of strings. By default, all fields will be returned.|
+| `identities` | Array | **(Required)** An array containing a list of identities for the entities you want to access. |
+| `identities.entityId` | String | The ID of an entity you wish to access. |
+| `identities.entityIdNS.code` | String | The namespace of an entity ID you wish to access. |
+| `timeFilter.startTime` | Integer | Specifies the start time to filter Profile entities (in milliseconds). By default, this value is set as the beginning of available time. |
+| `timeFilter.endTime` | Integer | Specifies the end time to filter Profile entities (in milliseconds). By default, this value is set as the end of available time. |
+| `limit` | Integer | The maximum number of records to return. By default, this value is set to 1,000. |
+| `orderby` | String | The sort order of retrieved experience events by timestamp, written as `(+/-)timestamp` with the default being `+timestamp`. |
+| `withCA` | Boolean | A feature flag for enabling computed attributes for lookup. By default, this value is set to false. |
+
++++
 
 **Response**
 
@@ -452,93 +455,7 @@ A successful response returns HTTP status 200 with the requested fields of entit
 
 +++
 
-
-
-### Access a subsequent page of results
-
-Results are paginated when retrieving time series events. If there are subsequent pages of results, the `_page.next` property will contain an ID. Additionally, the `_links.next.href` property provides a request URI for retrieving the next page. To retrieve the results, make another GET request to the `/access/entities` endpoint, however you must be sure to replace `/entities` with the value of the provided URI.
-
->[!NOTE]
->
->Be sure that you do not accidentally repeat `/entities/` in the request path. It should only appear once like, `/access/entities?start=...`
-
-**API format**
-
-```http
-GET /access/{NEXT_URI}
-```
-
-|Parameter|Description|
-|---|---|
-|`{NEXT_URI}`|The URI value taken from `_links.next.href`.|
-
-**Request**
-
-The following request retrieves the next page of results by using the `_links.next.href` URI as the request path.
-
-```shell
-curl -X GET \
-  'https://platform.adobe.io/data/core/ups/access/entities?start=c8d11988-6b56-4571-a123-b6ce74236037&orderby=timestamp&schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Response**
-
-A successful response returns the next page of results. This response does not have subsequent pages of results, as indicated by the empty string values of `_page.next` and `_links.next.href`.
-
-```json
-{
-    "_page": {
-        "orderby": "timestamp",
-        "start": "c8d11988-6b56-4571-a123-b6ce74236037",
-        "count": 1,
-        "next": ""
-    },
-    "children": [
-        {
-            "relatedEntityId": "A29cgveD5y64e2RixjUXNzcm",
-            "entityId": "c8d11988-6b56-4571-a123-b6ce74236037",
-            "timestamp": 1531260477000,
-            "entity": {
-                "endUserIDs": {
-                    "_experience": {
-                        "ecid": {
-                            "id": "89149270342662559642753730269986316900",
-                            "namespace": {
-                                "code": "ecid"
-                            }
-                        }
-                    }
-                },
-                "channel": {
-                    "_type": "web"
-                },
-                "web": {
-                    "webPageDetails": {
-                        "name": "Fernie Snow",
-                        "pageViews": {
-                            "value": 1
-                        }
-                    }
-                }
-            },
-            "lastModifiedAt": "2018-08-21T06:50:01Z"
-        }
-    ],
-    "_links": {
-        "next": {
-            "href": ""
-        }
-    }
-}
-```
-
-## Access time series events for multiple profiles by identities
-
-You can access time series events from multiple associated profiles by making a POST request to the `/access/entities` endpoint and providing the profile identities in the payload. These identities each consist of an ID value (`entityId`) and an identity namespace (`entityIdNS`).
+>[!TAB Time series events]
 
 **API format**
 
@@ -548,11 +465,12 @@ POST /access/entities
 
 **Request**
 
-The following request retrieves user IDs, local times, and country codes for time series events associated with a list of profile identities:
+The following request retrieves user IDs, local times, and country codes for time series events associated with a list of profile identities.
+
++++ A sample request to retrieve the time series data
 
 ```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/ups/access/entities \
+curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -583,26 +501,31 @@ curl -X POST \
         "startTime": 11539838505
         "endTime": 1539838510
     },
-    "limit": 10
+    "limit": 10,
+    "orderby": "-timestamp",
+    "withCA": false
 }'
 ```
 
-|Property|Description|
-|---|---|
-|`schema.name`|**(REQUIRED)** The XDM schema of the entity to retrieve|
-|`relatedSchema.name`|If `schema.name` is `_xdm.context.experienceevent` this value must specify the schema for the profile entity that the time series events are related to.|
-|`identities`|**(REQUIRED)** An array listing of profiles to retrieve associated time series events from. Each entry in the array is set in one of two ways: 1) using a fully qualified identity consisting of ID value and namespace or 2) providing an XID.|
-|`fields`|Isolates the data returned to a specified set of fields. Use this to filter which schema fields are included in data retrieved. Example: personalEmail,person.name,person.gender|
-|`mergePolicyId`|Identifies the Merge Policy by which to govern the data returned. If one is not specified in the service call, your organization's default for that schema will be used. If no default Merge Policy has been configured, the default is no profile merge and no identity stitching.|
-|`orderby`|The sort order of retrieved experience events by timestamp, written as `(+/-)timestamp` with the default being `+timestamp`.|
-|`timeFilter.startTime`|Specify the start time to filter time-series objects (in milliseconds).|
-|`timeFilter.endTime`|Specify the end time to filter time-series objects (in milliseconds).|
-|`limit`|Numeric value specifying the maximum number of objects to return. Default: 1000|
-|`withCA`|Feature flag for enabling computed attributes for lookup. Default: false|
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `schema.name` | String | **(Required)** The name of the XDM schema the entity belongs to. |
+| `relatedSchema.name` | String | If `schema.name` is `_xdm.context.experienceevent` this value must specify the schema for the profile entity that the time series events are related to. |
+| `identities` | Array | **(Required)** An array listing of profiles to retrieve associated time series events from. Each entry in the array is set in one of two ways: <ol><li>Using a fully qualified identity consisting of ID value and namespace</li><li>Providing an XID</li></ol> |
+| `fields` | String | The XDM fields to be returned, as an array of strings. By default, all fields will be returned. |
+| `orderby` | String | The sort order of retrieved experience events by timestamp, written as `(+/-)timestamp` with the default being `+timestamp`. |
+| `timeFilter.startTime`| Integer | Specify the start time to filter time-series objects (in milliseconds). By default, this value is set as the beginning of available time. |
+| `timeFilter.endTime` | Integer | Specify the end time to filter time-series objects (in milliseconds). By default, this value is set as the end of available time. |
+| `limit` | Integer | The maximum number of records to return. By default, this value is set to 1,000. |
+| `withCA` | Boolean | A feature flag for enabling computed attributes for lookup. By default, this value is set to false. |
+
++++
 
 **Response**
 
-A successful response returns a paginated list of time series events associated with the multiple profiles specified in the request. 
+A successful response returns HTTP status 200 with a paginated list of time series events associated with the multiple profiles specified in the request. 
+
++++ A sample response that contains the time series events
 
 ```json
 {
@@ -810,110 +733,88 @@ A successful response returns a paginated list of time series events associated 
 }`
 ```
 
-In this example response, the first listed profile ("GkouAW-yD9aoRCPhRYROJ-TetAFW") provides a value for `_links.next.payload`, meaning that there are additional pages of results for this profile. See the following section on [accessing additional results](#access-additional-results) for details on how to access those additional results.
++++
 
-### Access additional results {#access-additional-results}
+>[!NOTE]
+>
+>In this example response, the first listed profile ("GkouAW-yD9aoRCPhRYROJ-TetAFW") provides a value for `_links.next.payload`, meaning that there are additional pages of results for this profile.
+>
+>To access these results, you can perform an additional POST request to the `/access/entities` endpoint with the listed payload as the request body.
 
-When retrieving time series events there may be many results being returned, therefore the results are often paginated. If there are subsequent pages of results for a particular profile, the `_links.next.payload` value for that profile will contain a payload object. 
+>[!ENDTABS]
 
-Using this payload in the request body, you can perform an additional POST request to the `access/entities` endpoint to retrieve the subsequent page of time series data for that profile.
+### Access a subsequent page of results
 
-## Access time series events in multiple schema entities
+Results are paginated when retrieving time series events. If there are subsequent pages of results, the `_page.next` property will contain an ID. Additionally, the `_links.next.href` property provides a request URI for retrieving the next page. To retrieve the results, make another GET request to the `/access/entities` endpoint, however you must be sure to replace `/entities` with the value of the provided URI.
 
-You can access multiple entities that are connected through a relationship descriptor. The following example API call assumes a relationship has already been defined between two schemas. For more information on relationship descriptors, please read the [!DNL Schema Registry] API developer guide [descriptors endpoint guide](../../xdm/api/descriptors.md).
-
-You can include query parameters in the request path in order to specify which data to access. You can include multiple parameters, separated by ampersands (&). A complete list of valid parameters is provided in the [query parameters](#query-parameters) section of the appendix.
+>[!NOTE]
+>
+>Be sure that you do not accidentally repeat `/entities/` in the request path. It should only appear once like, `/access/entities?start=...`
 
 **API format**
 
 ```http
-GET /access/entities?{QUERY_PARAMETERS}
+GET /access/{NEXT_URI}
 ```
+
+|Parameter|Description|
+|---|---|
+|`{NEXT_URI}`|The URI value taken from `_links.next.href`.|
 
 **Request**
 
-The following request retrieves an entity containing a previously established relationship descriptor to access information across different schemas.
+The following request retrieves the next page of results by using the `_links.next.href` URI as the request path.
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/ups/access/entities?relatedSchema.name=_xdm.context.profile&schema.name=_xdm.context.experienceevent&relatedEntityId=GkouAW-2Xkftzer3bBtHiW8GkaFL \
-  -H 'Content-Type: application/json' \
+  'https://platform.adobe.io/data/core/ups/access/entities?start=c8d11988-6b56-4571-a123-b6ce74236037&orderby=timestamp&schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Response**
 
-A successful response returns a paginated list of time series events associated with the multiple entities.
+A successful response returns the next page of results. This response does not have subsequent pages of results, as indicated by the empty string values of `_page.next` and `_links.next.href`.
 
 ```json
 {
     "_page": {
         "orderby": "timestamp",
-        "start": "cb10369f-a47b-4e65-afb4-06e1ad78a648",
+        "start": "c8d11988-6b56-4571-a123-b6ce74236037",
         "count": 1,
         "next": ""
     },
     "children": [
         {
-            "relatedEntityId": "GkouAW-2Xkftzer3bBtHiW8GkaFL",
-            "entityId": "cb10369f-a47b-4e65-afb4-06e1ad78a648",
-            "timestamp": 1564614939000,
+            "relatedEntityId": "A29cgveD5y64e2RixjUXNzcm",
+            "entityId": "c8d11988-6b56-4571-a123-b6ce74236037",
+            "timestamp": 1531260477000,
             "entity": {
-                "environment": {
-                    "browserDetails": {}
-                },
-                "identityMap": {
-                    "CRMId": [
-                        {
-                            "id": "78520026455138218785449796480922109723",
-                            "primary": true
-                        }
-                    ]
-                },
-
-                "commerce": {
-                    "productViews": {
-                        "value": 1
-                    }
-                },
-                "productListItems": [
-                    {
-                        "name": "Red shoe",
-                        "quantity": 85,
-                        "storesAvailableIn": [
-                            "da6dced5-9574-4dda-89b5-9dc106903f80",
-                            "981bb433-2ee5-4db0-a19a-449ec9dbf39f"
-                        ],
-                        "SKU": "8f998279-797b-4da2-9e60-88bf73a9f15a",
-                        "priceTotal": 934.8
-                    }
-                ],
-                "_id": "cb10369f-a47b-4e65-afb4-06e1ad78a648",
-                "commerce": {
-                    "order": {}
-                },
-                "placeContext": {
-                    "geo": {
-                        "_schema": {}
-                    }
-                },
-                "device": {},
-                "timestamp": "2019-07-31T23:15:39Z",
-                "_experience": {
-                    "profile": {
-                        "identityNamespaces": {
-                            "/productListItems[*]/SKU": {
-                                "namespace": {
-                                    "code": "ECID"
-                                }
+                "endUserIDs": {
+                    "_experience": {
+                        "ecid": {
+                            "id": "89149270342662559642753730269986316900",
+                            "namespace": {
+                                "code": "ecid"
                             }
+                        }
+                    }
+                },
+                "channel": {
+                    "_type": "web"
+                },
+                "web": {
+                    "webPageDetails": {
+                        "name": "Fernie Snow",
+                        "pageViews": {
+                            "value": 1
                         }
                     }
                 }
             },
-            "lastModifiedAt": "2019-10-10T00:14:19Z"
+            "lastModifiedAt": "2018-08-21T06:50:01Z"
         }
     ],
     "_links": {
@@ -922,12 +823,7 @@ A successful response returns a paginated list of time series events associated 
         }
     }
 }
-
 ```
-
-### Access a subsequent page of results
-
-Results are paginated when retrieving time series events. If there are subsequent pages of results, the `_page.next` property will contain an ID. Additionally, the `_links.next.href` property provides a request URI for retrieving the subsequent page by making additional GET requests to the `access/entities` endpoint. 
 
 ## Delete an entity {#delete-entity}
 
@@ -944,6 +840,14 @@ DELETE /access/entities?{QUERY_PARAMETERS}
 The following request deletes the specified entity.
 
 +++ A sample request to delete an entity
+
+```shell
+curl -X DELETE 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.com&entityIdNS=email&fields=identities,person.name,workEmail' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
 
 +++
 
