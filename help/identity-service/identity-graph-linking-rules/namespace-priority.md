@@ -141,9 +141,7 @@ For more information, read the [advanced lifecycle management overview](../../hy
 
 ### Computed attributes
 
-Computed attributes does not use namespace priority to compute values. If you are using computed attributes, you must ensure that the CRMID is designated as your primary identity for WebSDK. This limitation is expected to be resolved in August 2024.
-
-For more information, read the [computed attributes UI guide](../../profile/computed-attributes/ui.md).
+Computed attributes does not use namespace priority to compute values. If you are using computed attributes, you must ensure that the CRMID is designated as your primary identity for WebSDK. For more information, read the [computed attributes UI guide](../../profile/computed-attributes/ui.md).
 
 ### Data lake
 
