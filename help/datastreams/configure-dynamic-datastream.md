@@ -41,9 +41,9 @@ After you have [created a datastream](configure.md) and [added a service](config
 
     ![Image of the datastreams user interface showing the datastream configuration page.](assets/configure-dynamic-datastream/save-and-edit.png)
 
-1. Select **[!UICONTROL Add New Rule]**.
+1. Select **[!UICONTROL Add Dynamic Configuration]**.
     
-    ![Image of the datastreams user interface showing the dynamic configuration no rule added message.](assets/configure-dynamic-datastream/add-rule.png)
+    ![Image of the datastreams user interface showing the dynamic configuration no rule added message.](assets/configure-dynamic-datastream/add-dynamic-config.png)
 
 1. From the **[!UICONTROL Resources]** panel, drag and drop the items that you want to build your rule with to the right side of the window. You can combine multiple resources to build complex rules.
 
