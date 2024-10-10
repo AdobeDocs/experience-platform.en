@@ -14,7 +14,7 @@ This document covers the steps required to connect GitHub Copilot and VS Code wi
 
 ## Get started {#get-started}
 
-This guide requires that you already have access to a GitHub account and have signed up for GitHub Copilot. You can [sign up from the GitHub website](https://github.com/github-copilot/signup). You also need VS Code. You can [download VS Code from their official website](https://code.visualstudio.com/download). 
+This guide requires that you already have access to a GitHub account and have signed up for GitHub Copilot. You can [sign up from the GitHub website](https://github.com/github-copilot/signup). You also need VS Code. You can [download VS Code from their official website](https://code.visualstudio.com/download).
 
 Once you have installed VS Code and activated your Copilot subscription, acquire your connection credentials for Experience Platform. These credentials are located in the [!UICONTROL Credentials] tab of the [!UICONTROL Queries] workspace in the Platform UI. Read the credentials guide to [learn how to find these values in the Platform UI](../ui/credentials.md). Please contact your organization administrator if you do not currently have access to the [!UICONTROL Queries] workspace.
 
@@ -23,7 +23,12 @@ Once you have installed VS Code and activated your Copilot subscription, acquire
 The following Visual Studio Code extensions are required to effectively manage and query your Platform SQL databases directly within the code editor. Download and install these extensions.
 
 - [SQLTools](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools): Use the SQLTools extension to manage and query multiple SQL databases. It includes features like a query runner, SQL formatter, and connection explorer, with support for additional drivers to boost developer productivity. Read the overview on Visual Studio Marketplace for more details.
-- [SQLTools PostgreSQL/Cockroach Driver](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools-driver-pg): This extension enables you to connect, query, and manage PostgreSQL and CockroachDB databases directly within your code editor. 
+- [SQLTools PostgreSQL/Cockroach Driver](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools-driver-pg): This extension enables you to connect, query, and manage PostgreSQL and CockroachDB databases directly within your code editor.
+
+The next extensions enable GitHub Copilot and its chat features.
+
+- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot): Provides inline coding suggestions as you type.
+- [GitHub Copilot Chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat): A companion extension that provides conversational AI assistance.
 
 ## Create connection {#create-connection}
 
@@ -73,9 +78,109 @@ The [!DNL Review connection details] view appears and displays your connection c
 
 ![The Review connection details view with Connect Now highlighted.](../images/clients/github-copilot/review-and-connect.png)
 
-Your Visual Code workspace appears with a suggestion from GitHub Copilot.
+Your VS Code workspace appears with a suggestion from GitHub Copilot.
 
 ![A connected SQL session in the ](../images/clients/github-copilot/connected.png)
+
+<!--  -->
+
+## GitHub Copilot quick guide
+
+Once connected to your Platform instance, you can use Copilot as an AI coding assistant to help you write code faster and with more confidence. This section covers its key features and how to use them.
+
+## Getting started with GitHub Copilot
+
+First, ensure that you have the latest version of VS Code installed. An outdated VS Code version can prevent key Copilot features from working as intended. Next, ensure that the [!DNL Enable Auto Completions] setting is enabled. If Copilot is running correctly, the **Copilot icon** (![The Copilot icon](copilot-icon.png)) displays in your status bar (if there is an issue, the Copilot error icon displays instead). Select the **Copilot icon** to open the [!DNL GitHub Copilot Menu]. From the **[!DNL GitHub Copilot Menu]**, select **[!DNL Edit Settings]**
+
+![The VS Code editor with the GitHub Copilot Menu displayed and the Copilot icon and Edit Settings highlighted.](github-copilot-menu.png)
+
+Scroll down the options and ensure the check box is enabled for the [!DNL Enable Auto Completions] setting.
+
+![The settings panel for GitHub Copilot with the Enable Auto Completions check box selected and highlighted.](enable-auto-completions.png)
+
+### Code completions
+
+Once you install the GitHub Copilot extension and log in, it automatically activates a feature called **Ghost Text**, which suggests code completions as you type.
+
+![The VSCode UI with the GitHub Copilot icon highlighted]()
+
+>[!TIP]
+>
+>If you would like to turn off Copilot for a specific file or language, select the icon in the status bar and disable it.
+
+## 2. Accepting Ghost Text Suggestions
+
+To start using ghost text, simply type your code, and GitHub Copilot suggests completions in real-time.
+- **Press Tab** to accept the entire suggestion.
+- If you only want part of the suggestion, hold down **Control (or Command on Mac)** and press the **right arrow** to accept partial text.
+
+To dismiss a suggestion, press **Escape**.
+
+>[!NOTE]  
+>To ensure you're getting relevant suggestions, make sure Copilot is enabled in your file's language.
+
+## 3. Exploring Alternative Suggestions
+
+If the Ghost Text suggestion isn't quite what you want:
+- **Press Control (or Command) + Enter** to open a side panel showing multiple AI-generated suggestions.  
+  ![The alternative suggestions panel](./copilot-alternative-suggestions.png)
+
+This allows you to review other possible completions and select the one that fits best.
+
+## 4. Using Inline Chat
+
+You can also chat with Copilot directly in your code:
+- **Press Control (or Command) + I** to trigger **Inline Chat**.  
+  ![The inline chat window with diff view](./copilot-inline-chat.png)
+
+This feature is great for iterating on your code and refining suggestions in context. You can highlight a block of code, use Inline Chat, and see a diff view showing what changes the AI proposes before accepting them.
+
+## 5. Dedicated Chat View / Sidebar
+
+For a more traditional chat interface:
+- Select the **chat icon** in the sidebar to open a dedicated chat window.  
+  ![The GitHub Copilot chat sidebar](./copilot-chat-sidebar.png)
+
+The chat interface is perfect for brainstorming, solving coding issues, and discussing implementation details. You can also access chat history by selecting the **history icon** at the top of the chat panel.
+
+## 6. Fixing Errors with Copilot
+
+GitHub Copilot is also available when you encounter issues in your code:
+- Look for the **light bulb icon** in your editor when you see an error.  
+  ![The light bulb icon for suggestions](./copilot-error-fix.png)
+
+Select it to see if Copilot can suggest a fix or provide an explanation for the error.
+
+>[!NOTE]  
+>Copilot can help resolve many common errors, such as syntax mistakes or undefined variables.
+
+## 7. Using Copilot in Other Parts of the Editor
+
+You'll find Copilot helpful in various other places in the editor, like the Terminal or wherever you see the **sparkle icon**.  
+  ![The sparkle icon in the terminal](./copilot-sparkle-icon.png)
+
+Just select the icon to see how Copilot can assist.
+
+## Conclusion
+
+Now that you know how to use GitHub Copilot, you can let it handle much of the heavy lifting while you focus on coding. Keep experimenting with Ghost Text, Inline Chat, and other features to streamline your workflow. Happy coding!
+
+
+<!-- 
+Alt Text: "The VS Code editor showing a faint gray text suggestion from GitHub Copilot as Ghost Text next to partially typed code."
+
+Alt Text: "The VS Code editor with a highlighted suggestion being accepted after pressing Tab, showing the completion of the Ghost Text suggestion."
+
+Alt Text: "Side panel in the VS Code editor displaying multiple alternative code suggestions from GitHub Copilot after pressing Control/Command + Enter."
+
+Alt Text: "Inline Chat window within the code editor showing a conversation between the user and Copilot about refining a block of code."
+
+Alt Text: "The VS Code editor displaying a light bulb icon next to an error, with a dropdown menu of suggested fixes from GitHub Copilot."
+
+Alt Text: "Chat sidebar in the code editor with a conversation between the user and Copilot, showing chat history and an input field for brainstorming solutions."
+
+Alt Text: "Sparkle icon in the terminal, indicating GitHub Copilot assistance is available, with a tooltip highlighting the option to get help."
+ -->
 
 ## Next steps
 
