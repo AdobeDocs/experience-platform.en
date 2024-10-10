@@ -22,7 +22,7 @@ role: User,Developer
         - [Create derived datasets with SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
         - [Create decile-based derived datasets](data-distiller/derived-datasets/decile-based-derived-attributes.md)
     - SQL Insights for extended app reporting {#sql-insights}
-        - [Overview](sql-insights-query-pro-mode/overview.md)
+        - [Overview](data-distiller/sql-insights/overview.md)
         - [Query pro mode](data-distiller/sql-insights/query-pro-mode.md)
         - [Send accelerated queries](data-distiller/sql-insights/send-accelerated-queries.md)
         - [Reporting insights data model guide](data-distiller/sql-insights/reporting-insights-data-model.md)
