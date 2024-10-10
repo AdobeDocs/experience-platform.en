@@ -1,15 +1,15 @@
 ---
-title: Use calculated fields to export arrays in flat schema files
+title: Use calculated fields to export arrays as strings
 type: Tutorial
-description: Learn how to use calculated fields to export arrays in flat schema files from Real-Time CDP to cloud storage destinations.
+description: Learn how to use calculated fields to export arrays from Real-Time CDP to cloud storage destinations as strings.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 ---
-# Use calculated fields to export arrays in flat schema files {#use-calculated-fields-to-export-arrays-in-flat-schema-files} 
+# Use calculated fields to export arrays as strings{#use-calculated-fields-to-export-arrays-as-strings} 
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
 >title="Export arrays support"
->abstract="<p>Use the **Add calculated field** control to export arrays of int, string, boolean, and object values from Experience Platform to your desired cloud storage destination.</p><p> Some limitations apply. View the documentation for extensive examples and supported functions.</p>"
+>abstract="<p>Use the **Add calculated field** control to export arrays of int, string, boolean, and object values from Experience Platform to your desired cloud storage destination.</p><p> Arrays must be exported as strings by using the `array_to_string` function. View the documentation for extensive examples and more supported functions.</p>"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="Examples"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="Known limitations"
 
@@ -17,7 +17,7 @@ exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 >
 >* The functionality to export arrays through calculated fields is generally available.
 
-Learn how to export arrays through calculated fields from Real-Time CDP in flat schema files to [cloud storage destinations](/help/destinations/catalog/cloud-storage/overview.md). Read this document to understand the use cases enabled by this functionality.
+Learn how to export arrays through calculated fields from Real-Time CDP to [cloud storage destinations](/help/destinations/catalog/cloud-storage/overview.md) as strings. Read this document to understand the use cases enabled by this functionality.
 
 Get extensive information about calculated fields - what these are and why they matter. Read the pages linked below for an introduction to calculated fields in Data Prep and more information about all the available functions: 
 
@@ -63,7 +63,7 @@ See further below [extensive examples](#examples) of how you can use various fun
 
 Note the following known limitations that currently apply to this functionality:
 
-* Export to JSON or Parquet files *with hierarchical schemas* is not supported at this time. You can export arrays to flat schema CSV, JSON, and Parquet files  *as strings only*, by using the `array_to_string` function.
+* Export to JSON or Parquet files *with hierarchical schemas* is not supported at this time. You can export arrays to CSV, JSON, and Parquet files  *as strings only*, by using the `array_to_string` function.
 
 ## Prerequisites {#prerequisites}
 
@@ -79,7 +79,7 @@ This opens a modal window where you can select functions and fields to export at
 
 ![Modal window of the calculated field functionality with no function selected yet.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
 
-For example, use the `array_to_string` function on the `organizations` field as shown below to export an array of loyalty IDs as a string concatenated with an underscore in a CSV file. View [more information about this and other examples further below](#array-to-string-function-export-arrays). 
+For example, use the `array_to_string` function on the `organizations` field as shown below to export the organizations array as a string in a CSV file. View [more information about this and other examples further below](#array-to-string-function-export-arrays). 
 
 ![Modal window of the calculated field functionality with the array-to-string function selected.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
 
@@ -124,9 +124,9 @@ See examples and further information in the sections below for some of the funct
 
 Use the `array_to_string` function to concatenate the elements of an array into a string, using a desired separator, such as `_` or `|`.
 
-For example, you can combine the following XDM fields below as shown in the mapping screenshot by using a `array_to_string('_',organizations)` syntax:
+For example, you can combine the following XDM fields below as shown in the mapping screenshot by using an `array_to_string('_',organizations)` syntax:
 
-* `organizations = [{id: 123, orgName: "Acme Inc", founded: 1990, latestInteraction: "2024-02-16"}, {id: 456, orgName: "Superstar Inc", founded: 2004, latestInteraction: "2023-08-25"}, {id:789, orgName: 'Energy Corp', founded: 2021, latestInteraction: "2024-09-08"}]` array 
+* `organizations` array 
 * `person.name.firstName` string 
 * `person.name.lastName` string
 * `personalEmail.address` string
@@ -153,7 +153,7 @@ The resulting output is the same as for the `array_to_string` function described
 
 Use the `filterArray` function to filter the elements of an exported array. You can combine this function with the `array_to_string` function described further above.
 
-Continuing with the `organizations` array object from above, you can write a function like `array_to_string('_', filterArray(organizations, org -> org.founded > 2024))`, returning the organizations with `latestInteraction` in the year 2024.
+Continuing with the `organizations` array object from above, you can write a function like `array_to_string('_', filterArray(organizations, org -> org.founded > 2021))`, returning the organizations with a value for `founded` in the year 2021 or more recent.
 
 ![Example of the filterArray function.](/help/destinations/assets/ui/export-arrays-calculated-fields/filter-array-function.png)
 
