@@ -59,6 +59,6 @@ You can see up to 500 records per page. To navigate through the records, use the
 
 ## Next steps
 
-After reading this document, you now know how to view the tabulated results of your custom chart's SQL analysis and download the data as a CSV file. See the view SQL document to learn how to [view the SQL behind your custom insights](./view-more.md). 
+After reading this document, you now know how to view the tabulated results of your custom chart's SQL analysis and download the data as a CSV file. See the view SQL document to learn how to [view the SQL behind your custom insights](./view-sql.md). 
 
 You can also learn how to generate charts from existing data models in the Adobe Experience Platform UI with the [guided design mode guide](../user-defined-dashboards.md).
