@@ -117,6 +117,25 @@ After running your query, find the event record that you expected to generate a 
 >
 >If the two identities are exactly the same, and if the event is ingested via streaming, then both Identity and Profile will deduplicate the identity.
 
+
+### Post-authentication ExperienceEvents are being attributed to the wrong authenticated profile
+
+Namespace priority plays an important role in how event fragments determine primary identity.
+
+* Once you have configured and saved your [identity settings](./identity-settings-ui.md) for a given sandbox, Profile will then use [namespace priority](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events) to determine the primary identity. In the case of identityMap, Profile will then no longer use the `primary=true` flag.
+* While Profile will no longer refer to this flag, other services on Experience Platform may continue to use the `primary=true` flag.
+
+In order for [authenticated user events](implementation-guide.md#ingest-your-data) to be tied to the person namespace, all authenticated events must contain the person namespace (CRMID). This means that even after a user logs in, the person namespace must still be present on every authenticated event.
+
+You may continue to see `primary=true` 'events' flag when looking up a profile in profile viewer. However, this is ignored and will not be used by Profile.
+
+AAIDs are blocked by default. Therefore, if you are using the [Adobe Analytics source connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md), you must ensure that the ECID is prioritized higher than the ECID so that the unauthenticated events will have a primary identity of ECID.
+
+**Troubleshooting steps**
+
+* To validate that authenticated events contain both the person and cookie namespace, read the steps outlined in the section on [troubleshooting errors regarding data not being ingested to Identity Service](#my-identities-are-not-getting-ingested-into-identity-service).
+* To validate that authenticated events have the primary identity of the person namespace (e.g. CRMID), search the person namespace on profile viewer using no-stitch merge policy (this is the merge policy that does not use private graph). This search will only return events associated to the person namespace. 
+
 ### My experience event fragments are not getting ingested into Profile {#my-experience-event-fragments-are-not-getting-ingested-into-profile}
 
 There are various reasons that contribute as to why your experience event fragments are not getting ingested into Profile, including but not limited to:
@@ -165,29 +184,11 @@ These two queries assume that:
 * One identity is sent from the identityMap, and another identity is sent from an identity descriptor. **NOTE**: In Experience Data Model (XDM) schemas, the identity descriptor is the field marked as an identity.
 * The CRMID is sent via identityMap. If the CRMID is sent as a field, remove the `key='Email'` from the WHERE clause.
 
-### My experience event fragments are ingested, but have the "wrong" primary identity in Profile
-
-Namespace priority plays an important role in how event fragments determine primary identity.
-
-* Once you have configured and saved your [identity settings](./identity-settings-ui.md) for a given sandbox, Profile will then use [namespace priority](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events) to determine the primary identity. In the case of identityMap, Profile will then no longer use the `primary=true` flag.
-* While Profile will no longer refer to this flag, other services on Experience Platform may continue to use the `primary=true` flag.
-
-In order for [authenticated user events](implementation-guide.md#ingest-your-data) to be tied to the person namespace, all authenticated events must contain the person namespace (CRMID). This means that even after a user logs in, the person namespace must still be present on every authenticated event.
-
-You may continue to see `primary=true` 'events' flag when looking up a profile in profile viewer. However, this is ignored and will not be used by Profile.
-
-AAIDs are blocked by default. Therefore, if you are using the [Adobe Analytics source connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md), you must ensure that the ECID is prioritized higher than the ECID so that the unauthenticated events will have a primary identity of ECID.
-
-**Troubleshooting steps**
-
-* To validate that authenticated events contain both the person and cookie namespace, read the steps outlined in the section on [troubleshooting errors regarding data not being ingested to Identity Service](#my-identities-are-not-getting-ingested-into-identity-service).
-* To validate that authenticated events have the primary identity of the person namespace (e.g. CRMID), search the person namespace on profile viewer using no-stitch merge policy (this is the merge policy that does not use private graph). This search will only return events associated to the person namespace. 
-
 ## Graph behavior related issues {#graph-behavior-related-issues}
 
 This section outlines common issues you may encounter regarding how the identity graph behaves.
 
-### The identity is getting linked to the 'wrong' person
+### Unauthenticated ExperienceEvents are getting attached to the wrong authenticated profile
 
 The identity optimization algorithm will honor [the most recently established links and remove the oldest links](./identity-optimization-algorithm.md#identity-optimization-algorithm-details). Therefore, it is possible that once this feature is enabled, ECIDs could be reassigned (re-linked) from one person to another. To understand the history of how an identity gets linked over time, follow the steps below:
 
@@ -235,7 +236,7 @@ If you do not know the identity value of your cookie identifier and you would li
  
 >[!ENDTABS]
 
-Next, examine the association of the cookie namespace in order of timestamp by running the following query:
+Now that you've identified the cookie values linked to multiple person IDs, take one from the results and use it in the following query to get a chronological view of when that cookie value was linked to a different person identifier: 
 
 >[!BEGINTABS]
 
