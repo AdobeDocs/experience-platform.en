@@ -7,7 +7,7 @@ description: Learn how to use the RainFocus Destination Connector to syncronize 
 
 ## Overview {#overview}
 
-The RainFocus destination connector allows organizations to stream customer profiles from the Adobe Experience Platform into the RainFocus platform in order to create/update Attendee Profiles. 
+Use the RainFocus destination to stream customer profiles from Adobe Experience Platform into the RainFocus platform in order to create and update attendee profiles.
 
 >[!IMPORTANT]
 >
@@ -23,16 +23,17 @@ A large enterprise technology company is due to open registration for its upcomi
 
 ### Use case #2 {#use-case-2}
 
-A financial services brand is due to host a series of roadshows targeting new and existing customers. They have a series of audience segments with target customers in Adobe Experience Platform. Using the RainFocus Destination Connector they are able to easily send those profiles to RainFocus for activation.
+A financial services brand is due to host a series of roadshows targeting new and existing customers. They have a series of audience segments with target customers in Adobe Experience Platform. Using the RainFocus Destination Connector, they are able to easily send those profiles to RainFocus for activation.
 
 ## Prerequisites {#prerequisites}
-  
-* RainFocus API Profile with OAuth (Global)
-  * **Attendee Store** endpoint enabled 
-  * Client Id
-  * Client Secret 
 
-* Event Code for the desired event to push profiles into. 
+Before you can use the RainFocus destination, make sure to meet the following prerequisites:
+  
+* Create a RainFocus API Profile with OAuth (Global). 
+  * The **Attendee Store** endpoint must be enabled. 
+  * A **Client ID** and **Client Secret** will need to be generated.
+
+You must also have a RainFocus **event code** identifier, into which you would like profiles sent to.
 
 ## Supported identities {#supported-identities}
 
@@ -78,22 +79,22 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-![](/help/destinations/assets/catalog/events-management/rainfocus/rainfocus-destination-authentication.png)
+![Provide authentication details for the RainFocus Destination Connector](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-authentication.png)
 
-* **[!UICONTROL Client ID]**: Fill in the Client ID provided by RainFocus
-* **[!UICONTROL Client Secret]**: Fill in the Client Secret provided by RainFocus
-* **[!UICONTROL Environment]**: Specify which RainFocus environment you are connecting to e.g `dev`, `prod`
-* **[!UICONTROL Org ID]**: Provide the unique `orgid` for your instance of RainFocus 
+* **[!UICONTROL Client ID]**: Fill in the Client ID provided by RainFocus API Profile.
+* **[!UICONTROL Client Secret]**: Fill in the Client Secret provided by RainFocus API Profile.
+* **[!UICONTROL Environment]**: Specify which RainFocus environment you are connecting to, for example `dev`, `prod`.
+* **[!UICONTROL Org ID]**: Provide the unique `orgid` for your instance of RainFocus.
 
 ### Fill in destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![](/help/destinations/assets/catalog/events-management/rainfocus/rainfocus-configure-destination-details.png)
+![Provide connection details for the RainFocus Destination Connector](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-configure-destination-details.png)
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Event ID]**: Your RainFocus event code, for which you would let to send profiles to.
+*  **[!UICONTROL Event ID]**: Your RainFocus event code identifier, into which you would like profiles sent to.
 
 ### Enable alerts {#enable-alerts}
 
@@ -115,9 +116,9 @@ The following target identity namespace(s) must be mapped depending on the use c
 
 * **Email** must be mapped as a target field using **Target field > Select identity namespace > email**
 
-![](/help/destinations/assets/catalog/events-management/rainfocus/rainfocus-destination-mapping.png)
+![How to map profile and identity fields](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-mapping.png)
 
-It is also strongly recommended to map additional fields, the following target fields are available from RainFocus
+It is recommended to map additional profile fields, as this will ensure the attendee profile in RainFocus is fully populated. The following target fields are available from RainFocus
 
 | Target Field | Description |
 |------------|-------------|
@@ -136,17 +137,11 @@ It is also strongly recommended to map additional fields, the following target f
 
 ## Exported data / Validate data export {#exported-data}
 
-A sample JSON of the exported data is provided below, which uses the example mapping from the screenshot above in the Map attributes and identities section:
+Once a set of profiles has been sent to RainFocus, use the API Profile logging in RainFocus to validate that the profiles have been ingested successfully. 
 
-```
-{
-  "firstname": "John",
-  "phone": "+1 (555) 123-4567",
-  "email": "john.doe@example.com",
-  "countryId": "US",
-  "lastname": "Doe"
-}
-```
+![View logs in the API Profile in RainFocus](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-api-profile.png)
+
+![Validate that profiles have been successfully ingested](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-api-logging.png)
 
 ## Data usage and governance {#data-usage-governance}
 
