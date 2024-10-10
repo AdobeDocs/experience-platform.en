@@ -19,11 +19,11 @@ To create a custom dashboard, select **[!UICONTROL Dashboards]** from the left n
 
 ![The Dashboard inventory with Create dashboard highlighted.](../images/sql-insights-query-pro-mode/create-dashboard.png)
 
-The **[!UICONTROL Create dashboard]** dialog appears. There are two options from which to choose your dashboard creation method. To create your insights you can either use an existing data model with the [[!UICONTROL Guided design mode]](../user-defined-dashboards.md) or your own SQL with the [!UICONTROL Query pro mode]. 
+The **[!UICONTROL Create dashboard]** dialog appears. There are two options from which to choose your dashboard creation method. To create your insights you can either use an existing data model with the [[!UICONTROL Guided design mode]](../standard-dashboards.md) or your own SQL with the [!UICONTROL Query pro mode]. 
 
 <!-- Maybe reference Guided design mode in other places on UDD doc. -->
 
-Using an existing data model has the benefits of providing a structured, efficient, and scalable framework tailored to your specific business needs. To learn how to [create insights from an existing data model](../user-defined-dashboards.md#create-widget), refer to the custom dashboard guide.
+Using an existing data model has the benefits of providing a structured, efficient, and scalable framework tailored to your specific business needs. To learn how to [create insights from an existing data model](../standard-dashboards.md#create-widget), refer to the custom dashboard guide.
 
 Insights generated from SQL queries offer far greater flexibility and customization. Technical people can use query pro mode to perform complex analysis on SQL and then share this analysis with non-technical users through this dashboard capability. Select **[!UICONTROL Query pro mode]** followed by **[!UICONTROL Save]**.
 
@@ -43,7 +43,7 @@ Once you have chosen to create a dashboard with query pro mode, the **[!UICONTRO
 
 >[!NOTE]
 >
->Query pro mode is only available to users who have purchased the Data Distiller SKU. The [[!UICONTROL Guided design mode]](../user-defined-dashboards.md) is available to all users to create insights from an existing data model.
+>Query pro mode is only available to users who have purchased the Data Distiller SKU. The [[!UICONTROL Guided design mode]](../standard-dashboards.md) is available to all users to create insights from an existing data model.
 
 See the [Query Editor user guide](../../query-service/ui/user-guide.md#query-authoring) for information on its UI elements.
 
@@ -141,7 +141,7 @@ Select **[!UICONTROL Add filter]** to create either a [[!UICONTROL Date filter]]
 
 ## Edit, duplicate, or delete an insight
 
-See the Custom Dashboard guide for instructions on how to [edit, duplicate, or delete an existing widget](../user-defined-dashboards.md#duplicate).
+See the Custom Dashboard guide for instructions on how to [edit, duplicate, or delete an existing widget](../standard-dashboards.md#duplicate).
 
 ## Next steps
 

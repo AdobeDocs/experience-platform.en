@@ -12,9 +12,9 @@ role: Developer,User
 * [Dashboards overview](home.md)
 * [Dashboard access permissions](permissions.md)
 * [Dashboards inventory](inventory.md)
-* [Create dashboards](user-defined-dashboards.md)
+* [Standard dashboards](standard-dashboards.md)
 * [Download dashboards to PDF](download.md)
-* SQL insights: query pro mode {#sql-insights}
+* SQL insights: query pro mode {#sql-insights-query-pro-mode}
   * [Overview](sql-insights-query-pro-mode/overview.md)
   * Filters {#filters}
     * [Date filter](sql-insights-query-pro-mode/filters/date-filter.md)
