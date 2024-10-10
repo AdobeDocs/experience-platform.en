@@ -5,7 +5,7 @@ exl-id: 663f64aa-34a9-4b3a-bd00-7ad6e4f3b64a
 ---
 # View SQL {#view-sql}
 
-Once you have created a [custom insight](.overview.md) with [query pro mode](./overview.md#query-pro-mode), you can view the SQL that populates your charts with the View SQL capability.
+Once you have created a [custom insight](./overview.md) with [query pro mode](./overview.md#query-pro-mode), you can view the SQL that populates your charts with the View SQL capability.
 
 From your custom dashboard, select the ellipses (`...`) on any widget to access the [!UICONTROL View more] and [!UICONTROL View SQL] options.
 
