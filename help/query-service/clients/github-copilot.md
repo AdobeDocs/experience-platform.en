@@ -51,7 +51,7 @@ The [!DNL Connection Settings] view appears. Enter your Platform connection cred
 |  [!DNL Server address]  | Enter the **[!UICONTROL Host]** value provided in your Platform Postgres credentials, such as `acmeprod.platform-query.adobe.io`. |
 |  [!DNL Port]   | This value is typically `80` for Platform services.   |
 |  [!DNL Database]   | Enter the **[!UICONTROL Database]** value provided in your Platform Postgres credentials, such as `prod:all`.  |
-|  [!DNL Username]   | This property refers to your organization ID. Enter the **[!UICONTROL Username]** value provided in your Platform Postgres credentials, such as `EF34D5678F9CE01D2E3456FF@AdobeOrg`  |
+|  [!DNL Username]   | This property refers to your organization ID. Enter the **[!UICONTROL Username]** value provided in your Platform Postgres credentials.  |
 |  [!DNL Password]   | This property is your access token. Enter the **[!UICONTROL Password]** value provided in your Platform Postgres credentials. |
 
 ![The Connection Assistant workspace with several settings highlighted.](../images/clients/github-copilot/connection-settings.png)
@@ -88,7 +88,7 @@ Your VS Code workspace appears with a suggestion from GitHub Copilot.
 
 Once connected to your Platform instance, you can use Copilot as an AI coding assistant to help you write code faster and with more confidence. This section covers its key features and how to use them.
 
-## Getting started with GitHub Copilot
+## Getting started with GitHub Copilot {#get-started-with-copilot}
 
 First, ensure that you have the latest version of VS Code installed. An outdated VS Code version can prevent key Copilot features from working as intended. Next, ensure that the [!DNL Enable Auto Completions] setting is enabled. If Copilot is running correctly, the **Copilot icon** (![The Copilot icon](copilot-icon.png)) displays in your status bar (if there is an issue, the Copilot error icon displays instead). Select the **Copilot icon** to open the [!DNL GitHub Copilot Menu]. From the **[!DNL GitHub Copilot Menu]**, select **[!DNL Edit Settings]**
 
@@ -98,76 +98,48 @@ Scroll down the options and ensure the check box is enabled for the [!DNL Enable
 
 ![The settings panel for GitHub Copilot with the Enable Auto Completions check box selected and highlighted.](enable-auto-completions.png)
 
-### Code completions
+## Code completions {#code-completions}
 
-Once you install the GitHub Copilot extension and log in, it automatically activates a feature called **Ghost Text**, which suggests code completions as you type.
+Once you install the GitHub Copilot extension and log in, it automatically activates a feature called **Ghost Text**, which suggests code completions as you type. These suggestions help you write code more efficiently and with fewer interruptions. You can also use comments to guide the AI code suggestions. This means that non-technical users can convert plain speech into code to explore their data.
 
-![The VSCode UI with the GitHub Copilot icon highlighted]()
+![The VSCode UI with the GitHub Copilot icon highlighted.](code-suggestions.png)
 
 >[!TIP]
 >
 >If you would like to turn off Copilot for a specific file or language, select the icon in the status bar and disable it.
 
-## 2. Accepting Ghost Text Suggestions
+### Accept full or partial Ghost Text suggestions {#accept-suggestions}
 
-To start using ghost text, simply type your code, and GitHub Copilot suggests completions in real-time.
-- **Press Tab** to accept the entire suggestion.
-- If you only want part of the suggestion, hold down **Control (or Command on Mac)** and press the **right arrow** to accept partial text.
+When GitHub Copilot suggests code completions, you can accept either partial or the compete suggestion. Select **Tab** to accept the entire suggestion, or hold down **Control (or Command on Mac)** and press the **right arrow** to accept partial text. To dismiss a suggestion, press **Escape**.
 
-To dismiss a suggestion, press **Escape**.
+>[!TIP]
+>  
+>If you are not getting suggestions, ensure that [Copilot is enabled in your file's language](#get-started-with-copilot).
 
->[!NOTE]  
->To ensure you're getting relevant suggestions, make sure Copilot is enabled in your file's language.
+![The VS Code editor showing a faint gray text suggestion from GitHub Copilot as Ghost Text next to partially typed code.](accept-partial-suggestions.png)
 
-## 3. Exploring Alternative Suggestions
+### Alternative suggestions {#alternative-suggestions}
 
-If the Ghost Text suggestion isn't quite what you want:
-- **Press Control (or Command) + Enter** to open a side panel showing multiple AI-generated suggestions.  
-  ![The alternative suggestions panel](./copilot-alternative-suggestions.png)
+To cycle through alternative code suggestions, select the arrows in the Copilot dialog.
+ 
+![The alternative suggestions panel](./copilot-alternative-suggestions.png)
 
-This allows you to review other possible completions and select the one that fits best.
+## Use inline chat {#inline-chat}
 
-## 4. Using Inline Chat
+You can also chat with Copilot directly about your code. Use **Control (or Command) + I** to trigger the inline chat dialog. This feature is used for iterating on your code and refining suggestions in context. You can highlight a block of code and use inline chat to see a different solution proposed by the AI before you accepting them.
 
-You can also chat with Copilot directly in your code:
-- **Press Control (or Command) + I** to trigger **Inline Chat**.  
-  ![The inline chat window with diff view](./copilot-inline-chat.png)
+![The inline chat window with diff view](./copilot-inline-chat.png)
 
-This feature is great for iterating on your code and refining suggestions in context. You can highlight a block of code, use Inline Chat, and see a diff view showing what changes the AI proposes before accepting them.
+## Dedicated chat view
 
-## 5. Dedicated Chat View / Sidebar
+You can use a more traditional chat interface with a dedicated chat sidebar to form ideas and strategy, solvie coding issues, and discuss implementation details. Select the chat icon (![The Copilot Chat icon.](chat-icon.png)) in the VS Code sidebar to open a dedicated chat window.
 
-For a more traditional chat interface:
-- Select the **chat icon** in the sidebar to open a dedicated chat window.  
-  ![The GitHub Copilot chat sidebar](./copilot-chat-sidebar.png)
+![The GitHub Copilot chat sidebar with the chat icon highlighted.](./copilot-chat-sidebar.png)
 
-The chat interface is perfect for brainstorming, solving coding issues, and discussing implementation details. You can also access chat history by selecting the **history icon** at the top of the chat panel.
-
-## 6. Fixing Errors with Copilot
-
-GitHub Copilot is also available when you encounter issues in your code:
-- Look for the **light bulb icon** in your editor when you see an error.  
-  ![The light bulb icon for suggestions](./copilot-error-fix.png)
-
-Select it to see if Copilot can suggest a fix or provide an explanation for the error.
-
->[!NOTE]  
->Copilot can help resolve many common errors, such as syntax mistakes or undefined variables.
-
-## 7. Using Copilot in Other Parts of the Editor
-
-You'll find Copilot helpful in various other places in the editor, like the Terminal or wherever you see the **sparkle icon**.  
-  ![The sparkle icon in the terminal](./copilot-sparkle-icon.png)
-
-Just select the icon to see how Copilot can assist.
-
-## Conclusion
-
-Now that you know how to use GitHub Copilot, you can let it handle much of the heavy lifting while you focus on coding. Keep experimenting with Ghost Text, Inline Chat, and other features to streamline your workflow. Happy coding!
-
+You can also access chat history by selecting the history icon (![The history icon.](history-icon.png)) at the top of the chat panel.
 
 <!-- 
-Alt Text: "The VS Code editor showing a faint gray text suggestion from GitHub Copilot as Ghost Text next to partially typed code."
+Alt Text: ""
 
 Alt Text: "The VS Code editor with a highlighted suggestion being accepted after pressing Tab, showing the completion of the Ghost Text suggestion."
 
