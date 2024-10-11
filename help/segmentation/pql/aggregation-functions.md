@@ -10,7 +10,7 @@ Aggregation functions are used to group together multiple values within [!DNL Pr
 
 ## Count
 
-The `count` function returns the number of elements within the given array.
+The `count` function returns the number of elements within the given array. This function returns a number.
 
 **Format**
 
@@ -28,7 +28,7 @@ orders.count()
 
 ## Sum
 
-The `sum` function returns the sum of all the selected values within the array.
+The `sum` function returns the sum of all the selected values within the array. This function returns a number.
 
 **Format**
 
@@ -46,7 +46,7 @@ orders.sum(order.price)
 
 ## Average
 
-The `average` function returns the arithmetic mean of all the selected values within the array.
+The `average` function returns the arithmetic mean of all the selected values within the array. This function returns a number.
 
 **Format**
 
@@ -64,7 +64,7 @@ orders.average(order.price)
 
 ## Minimum
 
-The `min` function returns the smallest of all the selected values within the array.
+The `min` function returns the smallest of all the selected values within the array. This function returns a number.
 
 **Format**
 
