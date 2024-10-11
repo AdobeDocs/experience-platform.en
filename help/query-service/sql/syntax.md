@@ -571,7 +571,7 @@ The following table demonstrates the difference in results that the `auto_to_jso
 
 ### Resolve fallback snapshot on failure {#resolve-fallback-snapshot-on-failure}
 
-The `resolve_fallback_snapshot_on_failure` option is used to resolve the issue of an expired snapshot ID. Snapshot metadata expires after two days and an expired snapshot can invalidate the logic of a script. This can be a problem when using anonymous blocks.
+The `resolve_fallback_snapshot_on_failure` option is used to resolve the issue of an expired snapshot ID.
 
 Set the `resolve_fallback_snapshot_on_failure` option to true to override a snapshot with a previous snapshot ID.
 
