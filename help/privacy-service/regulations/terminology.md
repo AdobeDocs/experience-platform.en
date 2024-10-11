@@ -7,7 +7,13 @@ exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
 ---
 # Privacy regulations terminology
 
-<!-- 206259  -->
+<!-- 206259 -->
+
+| **[!UICONTROL ICDPA_USA] (Iowa)**          | The [!DNL Iowa Consumer Data Protection Act] |
+| **[!UICONTROL MCDPA_USA] (Montana)**          | The [!DNL Montana Consumer Data Privacy Act] |
+| **[!UICONTROL NDPA_USA] (Nebraska)**           | The [!DNL Nebraska Data Protection Act] |
+| **[!UICONTROL NHPA_USA] (New Hampshire)**           | The [!DNL New Hampshire Data Privacy Act] |
+| **[!UICONTROL NJDPA_USA] (New Jersey)**          | The [!DNL New Jersey Data Protection Act] |
 
 This document provides definitions for key terms related to privacy regulations supported by Adobe Experience Cloud.
 
@@ -87,6 +93,8 @@ This document provides definitions for key terms related to privacy regulations 
 
 **IMS Org ID**: Refers to an Adobe authorization token for service-to-service authentication, which does not require user login. It is issued to an IMS client, and has no associated user. An IMS client needs a service token to authorize back-channel requests between services. (The term "system token" is occasionally used to mean service token.)
 
+**[!DNL Iowa Consumer Data Protection Act]**: The Iowa Consumer Data Protection Act provides Iowa residents with rights to access, delete, and opt out of the sale of their personal data. It applies to businesses processing the data of over 100,000 Iowa residents or generating over 50% of their revenue from the sale of personal data. The ICDPA emphasizes consumer control over personal information but exempts certain organizations, including nonprofits and educational institutions. This act also offers a 90-day cure period for businesses to rectify violations before penalties are applied.
+
 ## J
 
 ## K
@@ -101,7 +109,15 @@ This document provides definitions for key terms related to privacy regulations 
 
 **MHMDAa**: The [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&full=true) enhances privacy rights for consumers regarding their health data. It mandates disclosures, consumer consent, and deletion rights for health data, and prohibits the sale of health data without authorization. Additionally, the Act makes it unlawful to use geofencing around healthcare facilities.
 
+**[!DNL Montana Consumer Data Privacy Act]**: The Montana Consumer Data Privacy Act gives residents the right to know what personal data businesses collect, share, and sell, and the purpose of its use. It also grants consumers the ability to correct, delete, or obtain a copy of their collected data. This law applies to businesses processing the data of over 50,000 Montana consumers. The Act emphasizes the protection of sensitive personal data, including biometric and genetic information.
+
 ## N
+
+**[!DNL Nebraska Data Protection Act]**: The Nebraska Data Protection Act provides Nebraskans with rights over their personal data, such as accessing, correcting, deleting, and opting out of its sale. The Act applies to businesses meeting specific thresholds for data processing and revenue from the sale of personal information. It also requires businesses to implement reasonable data security practices and provides a mandatory 30-day cure period for resolving compliance issues before penalties are imposed.
+
+**[!DNL New Hampshire Data Privacy Act]**: The New Hampshire Data Privacy Act protects the personal information of New Hampshire residents by establishing consumer rights related to data access, deletion, and portability. It requires organizations to disclose their data collection and sharing practices and allows consumers to opt out of data sales. The Act applies to businesses that meet certain data processing thresholds.
+
+**[!DNL New Jersey Data Protection Act]**: The New Jersey Data Protection Act grants New Jersey residents control over their personal data by providing rights to access, correct, and delete their information. It includes opt-out mechanisms for data sales and for targeted advertising. The Act covers businesses that process significant volumes of consumer data and mandates transparency in data usage.
 
 ## O
 
