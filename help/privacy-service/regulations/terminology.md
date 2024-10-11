@@ -7,8 +7,6 @@ exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
 ---
 # Privacy regulations terminology
 
-<!-- 206259 -->
-
 | **[!UICONTROL ICDPA_USA] (Iowa)**          | The [!DNL Iowa Consumer Data Protection Act] |
 | **[!UICONTROL MCDPA_USA] (Montana)**          | The [!DNL Montana Consumer Data Privacy Act] |
 | **[!UICONTROL NDPA_USA] (Nebraska)**           | The [!DNL Nebraska Data Protection Act] |
