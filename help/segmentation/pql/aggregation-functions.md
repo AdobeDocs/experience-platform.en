@@ -82,7 +82,7 @@ orders.min(order.price)
 
 ## Maximum
 
-The `max` function returns the largest of all the selected values within the array.
+The `max` function returns the largest of all the selected values within the array. This function returns a number.
 
 **Format**
 
