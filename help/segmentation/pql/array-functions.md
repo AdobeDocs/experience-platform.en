@@ -10,7 +10,7 @@ exl-id: 5ff2b066-8857-4cde-9932-c8bf09e273d3
 
 ## In
 
-The `in` function is used to determine if an item is a member of an array or list.
+The `in` function is used to determine if an item is a member of an array or list. This function returns a boolean.
 
 **Format**
 
@@ -28,7 +28,7 @@ person.birthMonth in [3, 6, 9]
 
 ## Not in
 
-The `notIn` function is used to determine if an item is not a member of an array or list.
+The `notIn` function is used to determine if an item is not a member of an array or list. This function returns a boolean.
 
 >[!NOTE]
 >
@@ -50,7 +50,7 @@ person.birthMonth notIn [3, 6, 9]
 
 ## Intersects
 
-The `intersects` function is used to determine if two arrays or lists have at least one common member.
+The `intersects` function is used to determine if two arrays or lists have at least one common member. This function returns a boolean.
 
 **Format**
 
@@ -68,7 +68,7 @@ person.favoriteColors.intersects(["red", "blue", "green"])
 
 ## Intersection
 
-The `intersection` function is used to determine the common members of two arrays or lists.
+The `intersection` function is used to determine the common members of two arrays or lists. This function returns a list.
 
 **Format**
 
@@ -86,7 +86,7 @@ person1.favoriteColors.intersection(person2.favoriteColors) = ["red", "blue", "g
 
 ## Subset of
 
-The `subsetOf` function is used to determine if a specific array (array A) is a subset of another array (array B). In other words, that all elements in array A are elements of array B.
+The `subsetOf` function is used to determine if a specific array (array A) is a subset of another array (array B). In other words, that all elements in array A are elements of array B. This function returns a boolean.
 
 **Format**
 
@@ -104,7 +104,7 @@ person.favoriteCities.subsetOf(person.visitedCities)
 
 ## Superset of
 
-The `supersetOf` function is used to determine if a specific array (array A) is a superset of another array (array B). In other words, that array A contains all elements in array B.
+The `supersetOf` function is used to determine if a specific array (array A) is a superset of another array (array B). In other words, that array A contains all elements in array B. This function returns a boolean.
 
 **Format**
 
@@ -122,7 +122,7 @@ person.eatenFoods.supersetOf(["sushi", "pizza"])
 
 ## Includes
 
-The `includes` function is used to determine if an array or list contains a given item.
+The `includes` function is used to determine if an array or list contains a given item. This function returns a boolean.
 
 **Format**
 
@@ -140,7 +140,7 @@ person.favoriteColors.includes("red")
 
 ## Distinct
 
-The `distinct` function is used to remove duplicate values from an array or list.
+The `distinct` function is used to remove duplicate values from an array or list. This function returns an array.
 
 **Format**
 
@@ -158,7 +158,7 @@ person.orders.storeId.distinct().count() > 1
 
 ## Group by
 
-The `groupBy` function is used to partition values of an array or list into a group based on the value of the expression.
+The `groupBy` function is used to partition values of an array or list into a group based on the value of the expression. This function returns a map from unique values of the grouping expression to arrays which are partitions of the value of the array expression.
 
 **Format**
 
@@ -176,7 +176,7 @@ The `groupBy` function is used to partition values of an array or list into a gr
 The following PQL query groups all the orders by which store the order was placed at.
 
 ```sql
-orders.groupBy(storeId)
+xEvent[type="order"].groupBy(storeId)
 ```
 
 ## Filter
