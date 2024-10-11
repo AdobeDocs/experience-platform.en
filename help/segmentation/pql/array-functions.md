@@ -181,7 +181,7 @@ xEvent[type="order"].groupBy(storeId)
 
 ## Filter
 
-The `filter` function is used to filter an array or list based on an expression.
+The `filter` function is used to filter an array or list based on an expression. This function returns an array or list, depending on the input.
 
 **Format**
 
@@ -204,7 +204,7 @@ person.filter(age >= 21)
 
 ## Map
 
-The `map` function is used to create a new array by applying an expression to each item in a given array.
+The `map` function is used to create a new array by applying an expression to each item in a given array. This function returns an array.
 
 **Format**
 
@@ -222,7 +222,7 @@ numbers.map(square)
 
 ## First `n` in array {#first-n}
 
-The `topN` function is used to return the first `N` items in an array, when sorted in ascending order based on the given numerical expression.
+The `topN` function is used to return the first `N` items in an array, when sorted in ascending order based on the given numerical expression. This function returns an array.
 
 **Format**
 
@@ -246,7 +246,7 @@ orders.topN(price, 5)
 
 ## Last `n` in array
 
-The `bottomN` function is used to return the last `N` items in an array, when sorted in ascending order based on the given numerical expression.
+The `bottomN` function is used to return the last `N` items in an array, when sorted in ascending order based on the given numerical expression. This function returns an array.
 
 **Format**
 
@@ -270,7 +270,7 @@ orders.bottomN(price, 5)
 
 ## First item
 
-The `head` function is used to return the first item in the array or list.
+The `head` function is used to return the first item in the array or list. This function returns an object.
 
 **Format**
 
