@@ -8,6 +8,12 @@ exl-id: 9bffb52d-1c16-4899-b455-ce570d76d3b4
 ---
 # Accessing data using Spark in Data Science Workspace
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
+
 The following document contains examples on how to access data using Spark for use in Data Science Workspace. For information on accessing data using JupyterLab notebooks, visit the [JupyterLab notebooks data access](../jupyterlab/access-notebook-data.md) documentation.
 
 ## Getting Started

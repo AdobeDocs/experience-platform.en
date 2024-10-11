@@ -103,7 +103,7 @@ Use this authentication method when you want to input your Amazon S3 access key 
 
 Use this authentication type if you prefer not to share account keys and secret keys with Adobe. Instead, Experience Platform connects to your Amazon S3 location using role-based access. 
 
-To do this, you need to create in the AWS console an assumed user for Adobe with the [right required permissions](#required-s3-permission) to write to your Amazon S3 buckets. Create a **[!UICONTROL Trusted entity]** in AWS with the Adobe account **[!UICONTROL 670664943635]**. For more information, refer to the [AWS documentation on creating roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html). 
+To do this, you need to create in the AWS console an assumed user for Adobe with the [right required permissions](#minimum-permissions-iam-user) to write to your Amazon S3 buckets. Create a **[!UICONTROL Trusted entity]** in AWS with the Adobe account **[!UICONTROL 670664943635]**. For more information, refer to the [AWS documentation on creating roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html). 
 
 * **[!DNL Role]**: Paste the ARN of the role that you created in AWS for the Adobe user. The pattern is similar to `arn:aws:iam::800873819705:role/destinations-role-customer`.
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
@@ -156,6 +156,40 @@ To successfully connect and export data to your [!DNL Amazon S3] storage locatio
 * `s3:ListBucket`
 * `s3:PutObject`
 * `s3:ListMultipartUploadParts`
+
+#### Minimum required permissions for IAM assumed role authentication {#minimum-permissions-iam-user}
+
+When configuring the IAM role as a customer, make sure that the permission policy associated with the role includes the required actions to the target folder in the bucket and the `s3:ListBucket` action for the root of the bucket. View below an example of the minimum permissions policy for this authentication type:
+
+```json
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:DeleteObject",
+                "s3:GetBucketLocation",
+                "s3:ListMultipartUploadParts"
+            ],
+            "Resource": "arn:aws:s3:::bucket/folder/*"
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListBucket"
+            ],
+            "Resource": "arn:aws:s3:::bucket"
+        }
+    ]
+}  
+
+```
 
 <!--
 

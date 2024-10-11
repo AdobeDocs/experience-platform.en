@@ -28,6 +28,8 @@ The following example questions are grouped by objectives that you can accomplis
 
 The following questions are grouped by data objects and are classified as either [operational insights](./home.md#operational-insights) or [product knowledge](./home.md#product-knowledge).
 
+![](./images/prompt.png)
+
 * **Audiences - Operational insights**
   * Which audiences use other audiences?
   * What is the distribution of the number of profiles across audiences?
@@ -72,7 +74,6 @@ The following questions are grouped by data objects and are classified as either
   * How are User Groups related to Roles?
   * When should I use a data type vs a field group?
   * What is the difference between an identity and a primary or foreign key?
-  * How is Profile richness calculated?
 * **Troubleshooting - Product knowledge (Real-Time CDP and Journey Optimizer)**
   * What can AI Assistant help with?
   * Can I delete a profile enabled schema after data is ingested?
@@ -108,6 +109,51 @@ The following tables outline best practices you can follow when using AI Assista
 | Omit criteria or parameters. | Show me datasets. |
 
 {style="table-layout:auto"}
+
+## Examples of unsupported questions {#unsupported-questions}
+
+The following is a list of examples of questions that are currently not supported by AI Assistant.
+
++++Select to view examples of unsupported questions
+
+### Operational insights
+
+* How many profiles in this sandbox live in California? (**Note**: for similar questions, you must provide a specific criteria to give enough context for your request, in this case, the specific criteria is "live in California").
+* What are the segments this profile {PROFILE_INFO/ATTRIBUTE_VALUE} is in?
+* How many profiles in the dataset have an email?
+* Which dataset constitutes to maximum number of profiles in this sandbox ?
+* Which dataset has the highest number of records?
+* How many segments have been deleted in {RELATIVE_DATE}?
+* Which of my datasets has the largest size?
+* Give me a profile in the {AUDIENCE_NAME}. 
+* What is the total number of profiles in my sandbox
+* How many identity namespaces are associated with the audience {AUDIENCE_NAME}?
+* Show me a report of all the audience segments that were evaluated today
+* How many segments have overlapping profiles?
+* How many batches are being loaded into {DATASET_NAME}
+* How many active offers do I have?
+* How many active campaigns do I have?
+* Where are my sources of data coming from?
+* What is the biggest dataset or data source?
+* Can I get the list of users who have created these schemas?
+
+### Troubleshooting
+
+* Why is this batch {BATCH_NAME/BATCH_ID} still processing?
+* Why is no one qualifying for this audience {AUDIENCE_NAME}?
+* I am not able to see Customer AI, why and how do I fix it?
+* I am not able to see Dataset preview, why and how do I fix it?
+* Why can't I delete {SEGMENT/DATASET/SCHEMA_NAME}?
+* Do I have access to Query Service?
+
+### Task and automation
+
+* Write a query that gives me one record from the {DATASET_NAME}.
+* Write a sample API call to /schemas/{schemaId}/fields/{fieldPath}/values.
+* Set up a source/destination for me. 
+* Create an audience for me with criteria {USER_SPECIFIC_CRITERIA}.
+
++++
 
 ## Next steps
 

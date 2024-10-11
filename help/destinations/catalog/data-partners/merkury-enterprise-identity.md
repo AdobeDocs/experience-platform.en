@@ -1,8 +1,9 @@
 ---
 title: Merkury Enterprise Identity Destination
 description: Learn how to create a Merkury Enterprise Identity destination connection using the Adobe Experience Platform UI.
+last-substantial-update: 2024-07-20
+exl-id: a5452183-289c-49c3-9574-e09b0153dc00
 ---
-
 # Merkury Enterprise Identity Destination
 
 >[!NOTE]

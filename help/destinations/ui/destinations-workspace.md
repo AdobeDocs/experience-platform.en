@@ -63,9 +63,9 @@ The **[!UICONTROL Accounts]** tab shows you details about the connections that y
 
 >[!TIP]
 >
-> * Select the ellipsis (`...`) in the [!UICONTROL Platform] column and use the ![Activate control](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate]**/**[!UICONTROL Activate audiences]**/**[!UICONTROL Export datasets]** control to export audiences or datasets to that destination.
-> * Select the ellipsis (`...`) in the [!UICONTROL Platform] column and use the ![Edit details control](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL Edit details]** control to [update](update-accounts.md) the details of an existing destination account.
-> * Select the ellipsis (`...`) in the [!UICONTROL Platform] column and use the ![Delete control](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Delete]** control to [delete](delete-destination-account.md) an existing destination account.
+> * Select the ellipsis (`...`) in the [!UICONTROL Platform] column and use the ![Activate control](/help/images/icons/data-add.png)**[!UICONTROL Activate]**/**[!UICONTROL Activate audiences]**/**[!UICONTROL Export datasets]** control to export audiences or datasets to that destination.
+> * Select the ellipsis (`...`) in the [!UICONTROL Platform] column and use the ![Edit details control](/help/images/icons/edit.png)**[!UICONTROL Edit details]** control to [update](update-accounts.md) the details of an existing destination account.
+> * Select the ellipsis (`...`) in the [!UICONTROL Platform] column and use the ![Delete control](/help/images/icons/delete.png)**[!UICONTROL Delete]** control to [delete](delete-destination-account.md) an existing destination account.
 
 ![Accounts tab](../assets/ui/workspace/destination-account-options.png)
 
@@ -85,10 +85,10 @@ The **[!UICONTROL Browse]** tab displays the destinations with which you have es
 
 >[!TIP]
 >
-> * Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![Activate audiences control](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate]** control to export audiences or datasets to that destination.
-> * Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![Delete control](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Delete]** control to [remove](delete-destinations.md) an existing connection to a destination.
-> * Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![View in monitoring control](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL View in monitoring]** control to view activation information for this destination in the [monitoring dashboard](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
-> * Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![Subscribe to alerts ](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL Subscribe to alerts]** control to subscribe to destination dataflow alerts. You can subscribe to alerts to receive messages regarding the status, success, or failure of your flow run. See [Subscribe to in-context destination alerts](alerts.md) for detailed information on destination dataflow alerts..
+> * Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![Activate audiences control](/help/images/icons/data-add.png)**[!UICONTROL Activate]** control to export audiences or datasets to that destination.
+> * Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![Delete control](/help/images/icons/delete.png)**[!UICONTROL Delete]** control to [remove](delete-destinations.md) an existing connection to a destination.
+> * Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![View in monitoring control](/help/images/icons/monitoring.png)**[!UICONTROL View in monitoring]** control to view activation information for this destination in the [monitoring dashboard](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
+> * Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![Subscribe to alerts ](/help/images/icons/alert-add.png)**[!UICONTROL Subscribe to alerts]** control to subscribe to destination dataflow alerts. You can subscribe to alerts to receive messages regarding the status, success, or failure of your flow run. See [Subscribe to in-context destination alerts](alerts.md) for detailed information on destination dataflow alerts..
 
 ![Browse Tab](../assets/ui/workspace/browse-tab.png)
 
