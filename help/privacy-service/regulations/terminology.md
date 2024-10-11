@@ -7,12 +7,6 @@ exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
 ---
 # Privacy regulations terminology
 
-| **[!UICONTROL ICDPA_USA] (Iowa)**          | The [!DNL Iowa Consumer Data Protection Act] |
-| **[!UICONTROL MCDPA_USA] (Montana)**          | The [!DNL Montana Consumer Data Privacy Act] |
-| **[!UICONTROL NDPA_USA] (Nebraska)**           | The [!DNL Nebraska Data Protection Act] |
-| **[!UICONTROL NHPA_USA] (New Hampshire)**           | The [!DNL New Hampshire Data Privacy Act] |
-| **[!UICONTROL NJDPA_USA] (New Jersey)**          | The [!DNL New Jersey Data Protection Act] |
-
 This document provides definitions for key terms related to privacy regulations supported by Adobe Experience Cloud.
 
 ## A
