@@ -194,7 +194,7 @@ If a query was scheduled, then the [!UICONTROL Scheduled Queries] tab provides i
 >
 >Queries that are not executed are not saved by the Log. In order for the query to be available in Query Service, it must be run or saved in Query Editor.
 
-### (Beta) Object browser {#object-browser}
+### [!BADGE Beta]{type=Informative} Object browser {#object-browser}
 
 >[!AVAILABILITY]
 >
