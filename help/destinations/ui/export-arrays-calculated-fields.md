@@ -34,7 +34,7 @@ Get extensive information about calculated fields - what these are and why they 
 
 ## Arrays and other object types in Platform {#arrays-strings-other-objects}
 
-In Experience Platform, you can use [XDM schemas](/help/xdm/home.md) to manage different field types. Previously, you were able to export simple key-value pair type fields such as strings out of Experience Platform to your desired destinations. An example of such a field that was supported for export previously is `personalEmail.address`:`johndoe@acme.org`.
+In Experience Platform, you can use [XDM schemas](/help/xdm/home.md) to manage different field types. Before support for array exports was added, you were able to export simple key-value pair type fields such as strings out of Experience Platform to your desired destinations. An example of such a field that was supported for export previously is `personalEmail.address`:`johndoe@acme.org`.
 
 Other field types in Experience Platform include array fields. Read more about [managing array fields in the Experience Platform UI](/help/xdm/ui/fields/array.md). In addition to the previously supported field types, you can now export array objects such as the example below, concatenated into a string by using the `array_to_string` function.
 
@@ -140,15 +140,6 @@ First_Name,Last_Name,Personal_Email,Organization
 John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':456,'orgName':'Superstar Inc','founded':2004,'latestInteraction':1692921600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
 ```
 
-### `flattenArray` function to export flattened arrays
-
-Use the `flattenArray` function to flatten an exported multidimensional array. You can combine this function with the `array_to_string` function described further above.
-
-Continuing with the `organizations` array object from above, you can write a function like `array_to_string('_', flattenArray(organizations))`. Note that the `array_to_string` function flattens the input array by default into a string.
-
-The resulting output is the same as for the `array_to_string` function described above.
-
-
 ### `filterArray` function to export filtered arrays
 
 Use the `filterArray` function to filter the elements of an exported array. You can combine this function with the `array_to_string` function described further above.
@@ -204,6 +195,14 @@ In this case, your output file looks like below. Notice how the three elements o
 `First_Name,Last_Name,Personal_Email,Organization_Member_2023
 John,Doe, johndoe@acme.org,"Marketing_Sales_Finance_2023"
 ```
+
+### `flattenArray` function to export flattened arrays
+
+Use the `flattenArray` function to flatten an exported multidimensional array. You can combine this function with the `array_to_string` function described further above.
+
+Continuing with the `organizations` array object from above, you can write a function like `array_to_string('_', flattenArray(organizations))`. Note that the `array_to_string` function flattens the input array by default into a string.
+
+The resulting output is the same as for the `array_to_string` function described further above.
 
 ### `coalesce` function to export arrays {#coalesce-function-export-arrays}
 
