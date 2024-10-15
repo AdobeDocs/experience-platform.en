@@ -90,19 +90,19 @@ Once connected to your Platform instance, you can use Copilot as an AI coding as
 
 ## Getting started with GitHub Copilot {#get-started-with-copilot}
 
-First, ensure that you have the latest version of VS Code installed. An outdated VS Code version can prevent key Copilot features from working as intended. Next, ensure that the [!DNL Enable Auto Completions] setting is enabled. If Copilot is running correctly, the **Copilot icon** (![The Copilot icon](copilot-icon.png)) displays in your status bar (if there is an issue, the Copilot error icon displays instead). Select the **Copilot icon** to open the [!DNL GitHub Copilot Menu]. From the **[!DNL GitHub Copilot Menu]**, select **[!DNL Edit Settings]**
+First, ensure that you have the latest version of VS Code installed. An outdated VS Code version can prevent key Copilot features from working as intended. Next, ensure that the [!DNL Enable Auto Completions] setting is enabled. If Copilot is running correctly, the **Copilot icon** (![The Copilot icon](../images/clients/github-copilot/copilot-icon.png)) displays in your status bar (if there is an issue, the Copilot error icon displays instead). Select the **Copilot icon** to open the [!DNL GitHub Copilot Menu]. From the **[!DNL GitHub Copilot Menu]**, select **[!DNL Edit Settings]**
 
-![The VS Code editor with the GitHub Copilot Menu displayed and the Copilot icon and Edit Settings highlighted.](github-copilot-menu.png)
+![The VS Code editor with the GitHub Copilot Menu displayed and the Copilot icon and Edit Settings highlighted.](../images/clients/github-copilot/github-copilot-menu.png)
 
 Scroll down the options and ensure the check box is enabled for the [!DNL Enable Auto Completions] setting.
 
-![The settings panel for GitHub Copilot with the Enable Auto Completions check box selected and highlighted.](enable-auto-completions.png)
+![The settings panel for GitHub Copilot with the Enable Auto Completions check box selected and highlighted.](../images/clients/github-copilot/enable-auto-completions.png)
 
 ## Code completions {#code-completions}
 
 Once you install the GitHub Copilot extension and log in, it automatically activates a feature called **Ghost Text**, which suggests code completions as you type. These suggestions help you write code more efficiently and with fewer interruptions. You can also use comments to guide the AI code suggestions. This means that non-technical users can convert plain speech into code to explore their data.
 
-![The VSCode UI with the GitHub Copilot icon highlighted.](code-suggestions.png)
+![The VSCode UI with the GitHub Copilot icon highlighted.](../images/clients/github-copilot/code-suggestions.png)
 
 >[!TIP]
 >
@@ -116,27 +116,27 @@ When GitHub Copilot suggests code completions, you can accept either partial or 
 >  
 >If you are not getting suggestions, ensure that [Copilot is enabled in your file's language](#get-started-with-copilot).
 
-![The VS Code editor showing a faint gray text suggestion from GitHub Copilot as Ghost Text next to partially typed code.](accept-partial-suggestions.png)
+![The VS Code editor showing a faint gray text suggestion from GitHub Copilot as Ghost Text next to partially typed code.](../images/clients/github-copilot/accept-partial-suggestions.png)
 
 ### Alternative suggestions {#alternative-suggestions}
 
 To cycle through alternative code suggestions, select the arrows in the Copilot dialog.
  
-![The alternative suggestions panel](./copilot-alternative-suggestions.png)
+![The alternative suggestions panel](../images/clients/github-copilot/copilot-alternative-suggestions.png)
 
 ## Use inline chat {#inline-chat}
 
-You can also chat with Copilot directly about your code. Use **Control (or Command) + I** to trigger the inline chat dialog. This feature is used for iterating on your code and refining suggestions in context. You can highlight a block of code and use inline chat to see a different solution proposed by the AI before you accepting them.
+You can also chat with Copilot directly about your code. Use **Control (or Command) + I** to trigger the inline chat dialog. This feature is used for iterating on your code and refining suggestions in context. You can highlight a block of code and use inline chat to see a different solution proposed by the AI before you accept them.
 
-![The inline chat window with diff view](./copilot-inline-chat.png)
+![The inline chat window with diff view](../images/clients/github-copilot/copilot-inline-chat.png)
 
-## Dedicated chat view
+## Dedicated chat view {#dedicated-chat}
 
-You can use a more traditional chat interface with a dedicated chat sidebar to form ideas and strategy, solvie coding issues, and discuss implementation details. Select the chat icon (![The Copilot Chat icon.](chat-icon.png)) in the VS Code sidebar to open a dedicated chat window.
+You can use a more traditional chat interface with a dedicated chat sidebar to form ideas and strategy, solve coding issues, and discuss implementation details. Select the chat icon (![The Copilot Chat icon.](../images/clients/github-copilot/chat-icon.png)) in the VS Code sidebar to open a dedicated chat window.
 
-![The GitHub Copilot chat sidebar with the chat icon highlighted.](./copilot-chat-sidebar.png)
+![The GitHub Copilot chat sidebar with the chat icon highlighted.](../images/clients/github-copilot/copilot-chat-sidebar.png)
 
-You can also access chat history by selecting the history icon (![The history icon.](history-icon.png)) at the top of the chat panel.
+You can also access chat history by selecting the history icon (![The history icon.](../images/clients/github-copilot/history-icon.png)) at the top of the chat panel.
 
 <!-- 
 Alt Text: ""
