@@ -80,7 +80,7 @@ The [!DNL Review connection details] view appears and displays your connection c
 
 Your VS Code workspace appears with a suggestion from GitHub Copilot.
 
-![A connected SQL session in the ](../images/clients/github-copilot/connected.png)
+![A connected SQL session in VS Code.](../images/clients/github-copilot/connected.png)
 
 <!--  -->
 
