@@ -15,7 +15,6 @@ role: Developer,User
 * [Dashboards](user-defined-dashboards.md)
 * [Download dashboards to PDF](download.md)
 * Data Distiller {#data-distiller}
-  * [Overview](data-distiller/overview.md)
   * SQl Insights for extended app reporting {#sql-insights}
     * [Overview](data-distiller/sql-insights/overview.md)
   * Query pro mode {#query-pro-mode}  
@@ -23,6 +22,7 @@ role: Developer,User
     * Filters {#filters}
       * [Date filter](data-distiller/query-pro-mode/filters/date-filter.md)
       * [Global filter](data-distiller/query-pro-mode/filters/global-filter.md) 
+    * [Drill through](data-distiller/query-pro-mode/drill-through.md)
     * [View more](data-distiller/query-pro-mode/view-more.md)
     * [View SQL](data-distiller/query-pro-mode/view-sql.md)
     * [Download as CSV](data-distiller/query-pro-mode/download-csv.md)

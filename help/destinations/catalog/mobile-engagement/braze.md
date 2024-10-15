@@ -2,6 +2,7 @@
 keywords: mobile; braze; messaging;
 title: Braze connection
 description: Braze is a comprehensive customer engagement platform that powers relevant and memorable experiences between customers and the brands they love.
+last-substantial-update: 2024-08-20
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
 ---
 # [!DNL Braze] connection

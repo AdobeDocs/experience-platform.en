@@ -1,14 +1,13 @@
 ---
-title: Graph Configurations Guide
+title: Examples of Graph Configurations
 description: Learn about common graph scenarios that you might encounter when working with identity graph linking rules and identity data.
-badge: Beta
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
 ---
-# Graph configurations guide
+# Examples of graph configurations
 
 >[!AVAILABILITY]
 >
->Identity graph linking rules is currently in beta. Contact your Adobe account team for information on the participation criteria. The feature and documentation are subject to change.
+>Identity graph linking rules is currently in Limited Availability. Contact your Adobe account team for information on how to access the feature in development sandboxes.
 
 >[!NOTE]
 >
@@ -473,7 +472,7 @@ In this scenario, there is a single CRMID that represents a person entity. Howev
 
 | Namespaces used | Web behavior collection method |
 | --- | --- |
-| CRMID, Email_LC_SHA256, Phone_SHA256, loginID, ECID | Adobe Analytics source connector. <br> **Note:** By default, AAIDs are blocked in Identity Service, therefore, you must place a higher priority on your ECIDs than AAIDs, when using the Analytics source. Read the [implementation guide](configuration.md#ingest-your-data) for more information.</br> |
+| CRMID, Email_LC_SHA256, Phone_SHA256, loginID, ECID | Adobe Analytics source connector. <br> **Note:** By default, AAIDs are blocked in Identity Service, therefore, you must place a higher priority on your ECIDs than AAIDs, when using the Analytics source. Read the [implementation guide](./implementation-guide.md#ingest-your-data) for more information.</br> |
 
 **Events:**
 
@@ -751,3 +750,15 @@ CRMID: Tom, ECID: 111
 ```
 
 >[!ENDTABS]
+
+## Next steps
+
+For more information on identity graph linking rules, read the following documentation:
+
+* [Identity graph linking rules overview](./overview.md)
+* [Identity optimization algorithm](./identity-optimization-algorithm.md)
+* [Implementation guide](./implementation-guide.md)
+* [Troubleshooting and FAQ](./troubleshooting.md)
+* [Namespace priority](./namespace-priority.md)
+* [Graph simulation UI](./graph-simulation.md)
+* [Identity settings UI](./identity-settings-ui.md)

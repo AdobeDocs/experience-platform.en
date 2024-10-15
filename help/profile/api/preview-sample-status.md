@@ -78,7 +78,7 @@ The response includes the details for the last successful sample job that was ru
     "status": true,
     "submissionTimestamp": "2020-08-01 17:57:57.0"
   },
-  "cosmosDocCount": "\"300803\"",
+  "docCount": "\"300803\"",
   "totalFragmentCount": 47429,
   "lastSuccessfulBatchTimestamp": "\"null\"",
   "streamingDriven": "\"false\"",
@@ -95,7 +95,7 @@ The response includes the details for the last successful sample job that was ru
 |---|---|
 |`numRowsToRead`|The total number of merged profiles in the sample.|
 |`sampleJobRunning`| A boolean value that returns `true` when a sample job is in progress. Provides transparency into the latency that occurs from when a batch file is uploaded to when it is actually added to the Profile store.|
-|`cosmosDocCount`|Total document count in Cosmos.|
+|`docCount`|Total document count in database.|
 |`totalFragmentCount`|Total number of profile fragments in the Profile store.|
 |`lastSuccessfulBatchTimestamp`|Last successful batch ingestion timestamp.|
 |`streamingDriven`| *This field has been deprecated and contains no significance to the response.*|
