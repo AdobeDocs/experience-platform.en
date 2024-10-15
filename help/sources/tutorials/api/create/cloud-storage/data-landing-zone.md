@@ -116,7 +116,9 @@ The following response returns the credential information for your data landing 
 | `SASUri` | The shared access signature URI for your landing zone. This string is a combination of the URI to the landing zone for which you are being authenticated to and its corresponding SAS token, |
 | `expiryDate` | The date when your SAS token will expire. You must refresh your token before the expiry date in order to continue using it in your application for uploading data to the Data Landing Zone. If you do not manually refresh your token before the stated expiry date, then it will automatically refresh and provide a new token when the GET credentials call is performed. |
 
-### Parsing the response
+### Retrieve the required fields using APIs
+
+After you generate your token, you can retrieve the required fields programmatically by using the request examples below:
 
 >[!BEGINTABS]
 
@@ -129,10 +131,10 @@ import requests
 url = "https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=user_drop_zone"
  
 headers = {
-    "Authorization": "<TOKEN>",
+    "Authorization": "{TOKEN}",
     "Content-Type": "application/json",
-    "x-gw-ims-org-id": "<ORG_ID>",
-    "x-api-key": "<API_KEY>"
+    "x-gw-ims-org-id": "{ORG_ID}",
+    "x-api-key": "{API_KEY}"
 }
  
 # Send GET request to the API
@@ -197,7 +199,6 @@ public class Main {
  
             final JsonNode jsonResponse = objectMapper.readTree(response.getEntity().getContent());
  
-            //Backward compatible
             System.out.println("\nOutput from API Response .... \n");
             System.out.printf("ContainerName: %s%n", jsonResponse.at("/containerName").textValue());
             System.out.printf("SASToken: %s%n", jsonResponse.at("/SASToken").textValue());
