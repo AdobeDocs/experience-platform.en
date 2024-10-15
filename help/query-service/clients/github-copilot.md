@@ -90,7 +90,7 @@ Once connected to your Platform instance, you can use [!DNL Copilot] as an AI co
 
 First, ensure that you have the latest version of [!DNL VS Code] installed. An outdated [!DNL VS Code] version can prevent key [!DNL Copilot] features from working as intended. Next, ensure that the [!DNL Enable Auto Completions] setting is enabled. If [!DNL Copilot] is running correctly, the **[!DNL Copilot] icon** (![The Copilot icon](../images/clients/github-copilot/copilot-icon.png)) appears in your status bar (if there is an issue, the [!DNL Copilot] error icon displays instead). Select the **[!DNL Copilot] icon** to open the [!DNL [!DNL GitHub Copilot] Menu]. From the **[!DNL [!DNL GitHub Copilot] Menu]**, select **[!DNL Edit Settings]**
 
-![The [!DNL VS Code] editor with the [!DNL GitHub Copilot] Menu displayed and the [!DNL Copilot] icon and Edit Settings highlighted.](../images/clients/github-copilot/github-copilot-menu.png)
+![The [!DNL VS Code] editor with the [!DNL GitHub Copilot Menu] displayed and the [!DNL Copilot] icon and Edit Settings highlighted.](../images/clients/github-copilot/github-copilot-menu.png)
 
 Scroll down the options and ensure the check box is enabled for the [!DNL Enable Auto Completions] setting.
 
@@ -104,7 +104,7 @@ Once you install the [!DNL GitHub Copilot] extension and log in, it automaticall
 
 >[!TIP]
 >
->If you would like to disable Copilot for a specific file or language, select the icon in the status bar and disable it.
+>If you would like to disable [!DNL Copilot] for a specific file or language, select the icon in the status bar and disable it.
 
 ### Accept full or partial Ghost Text suggestions {#accept-suggestions}
 
@@ -125,9 +125,14 @@ To cycle through alternative code suggestions, select the arrows in the [!DNL Co
 
 ## Use inline chat {#inline-chat}
 
-You can also chat with [!DNL Copilot] directly about your code. Use **Control (or Command) + I** to trigger the inline chat dialog. This feature is used for iterating on your code and refining suggestions in context. You can highlight a block of code and use inline chat to see a different solution proposed by the AI before you accept them.
+You can also chat with [!DNL Copilot] directly about your code. Use **Control (or Command) + I** to trigger the inline chat dialog. This feature is used for iterating on your code and refining suggestions in context. You can highlight a block of code and use inline chat to see a different solution proposed by the AI before accepting.
 
-![The inline chat window with diff view](../images/clients/github-copilot/copilot-inline-chat.png)
+![The inline chat window with diff view](../images/clients/github-copilot/inline-chat.png)
+
+<!-- THis section is poss unnecessary:
+There are inline features for chat including doc, expalin, fix and test
+![fix, document, explain](../images/clients/github-copilot/fix-document-explain.png)
+ -->
 
 ## Dedicated chat view {#dedicated-chat}
 
