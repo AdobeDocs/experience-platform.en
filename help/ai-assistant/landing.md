@@ -4,7 +4,7 @@ description: Get started with AI Assistant in Adobe Experience Platform
 ---
 # AI Assistant Documentation
 
-AI Assistant in Adobe Experience Platform is a conversational tool that you can use to accelerate your workflows with Experience Platform applications and services. You can use AI Assistant to boost your overall productivity, amplify your understanding of product knowledge and operational insights, as well as gather recommendations relevant to your queries and business use cases.
+AI Assistant in Adobe Experience Platform is a conversational tool that you can use to accelerate your workflows with Experience Platform applications and services. Use AI Assistant to boost your overall productivity, amplify your understanding of product knowledge and operational insights, as well as gather recommendations relevant to your queries and business use cases.
 
 ## Real-Time Customer Data Platform and Adobe Journey Optimizer
 
@@ -12,26 +12,46 @@ AI Assistant in Adobe Experience Platform is a conversational tool that you can 
 <table style="table-layout:fixed">
   <tr style="border: 0;">
     <td>
-    <a href="/help/rtcdp/get-started.md"><img src="assets/do-not-localize/start-quick.png"></a>
-    <div><strong>Retrieve operational insights to better analyze your data objects</strong><br/>lorem ipsum</div>
+    <a href="/help/rtcdp/overview.md#rtcdp-editions"><img src="assets/do-not-localize/start-campaign.jpeg"></a>
+    <div><strong>Understand your data objects</strong><br/>Retrieve operational insights pertaining to your data objects for a better view on their statuses, usage, and linage impact.</div><br/> <a href="./home.md#operational-insights">Read the documentation on operational insights for more information.
     </td>
     <td>
     <a href="/help/rtcdp/overview.md#rtcdp-editions"><img src="assets/do-not-localize/start-campaign.jpeg"></a>
-    <div><strong>Enhance your understanding of product knowledge</strong><br/>lorem ipsum</div>
+    <div><strong>Enhance your learning</strong><br/>Discover, troubleshoot, and amplify your understanding of product knowledge without interrupting your workflows.</div><br/> <a href="./home.md#product-knowledge">Read the documentation on product knowledge for more information.
     </td>
     <td>
     <a href="/help/landing/ui-guide.md"><img src="assets/do-not-localize/start-interface.jpeg"></a>
-    <div><strong>Apply permissions based on your usage</strong><br/>lorem ipsum.</div>
+    <div><strong>Apply permissions based on your usage</strong><br/>Grant and revoke access permissions depending on the roles of your team members.</div><br/> <a href="./access.md">Read the documentation on accessing AI Assistant for more information.
     </td>
   </tr>
   <tr style="border: 0;">
-    <td align="center"><a href="./home.md#operational-insights"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
+    <td align="center"><a href="https://video.tv.adobe.com/v/3429845?learn=on"><img src="../rtcdp/assets/do-not-localize/icon-videos.svg"></a></td>
     <td align="center"><a href="./home.md#product-knowledge"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     <td align="center"><a href="./access.md"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
 
 
-## Use case library
+## AI Assistant use case library
+
+* [Reduce onboarding time for new members of your team](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153)
+* [De-clutter  your audiences and optimize your marketing operations](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
 
 ## Customer Journey Analytics
+
+<table style="table-layout:fixed">
+  <tr style="border: 0;">
+    <td>
+    <a href="/help/rtcdp/get-started.md"><img src="assets/do-not-localize/start-quick.png"></a>
+    <div><strong>Enhance your understanding of product knowledge</strong><br/>lorem ipsum</div>
+    </td>
+    <td>
+    <a href="/help/rtcdp/overview.md#rtcdp-editions"><img src="assets/do-not-localize/start-campaign.jpeg"></a>
+    <div><strong>Apply permissions based on your usage</strong><br/>lorem ipsum</div>
+    </td>
+  </tr>
+  <tr style="border: 0;">
+    <td align="center"><a href="./home.md#operational-insights"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
+    <td align="center"><a href="./home.md#product-knowledge"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
+    </tr>
+</table>
