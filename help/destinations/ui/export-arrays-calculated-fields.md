@@ -1,24 +1,23 @@
 ---
-title: (Beta) Use calculated fields to export arrays in flat schema files
+title: Use calculated fields to export arrays as strings
 type: Tutorial
-description: Learn how to use calculated fields to export arrays in flat schema files from Real-Time CDP to cloud storage destinations.
-badge: Beta
+description: Learn how to use calculated fields to export arrays from Real-Time CDP to cloud storage destinations as strings.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 ---
-# (Beta) Use calculated fields to export arrays in flat schema files {#use-calculated-fields-to-export-arrays-in-flat-schema-files} 
+# Use calculated fields to export arrays as strings{#use-calculated-fields-to-export-arrays-as-strings} 
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
->title="(Beta) Export arrays support"
->abstract="Use the **Add calculated field** control to export simple arrays of int, string, or boolean values from Experience Platform to your desired cloud storage destination. Some limitations apply. View the documentation for extensive examples and supported functions."
+>title="Export arrays support"
+>abstract="<p>Use the **Add calculated field** control to export arrays of int, string, boolean, and object values from Experience Platform to your desired cloud storage destination.</p><p> Arrays must be exported as strings by using the `array_to_string` function. View the documentation for extensive examples and more supported functions.</p>"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="Examples"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="Known limitations"
 
 >[!AVAILABILITY]
 >
->* The functionality to export arrays through calculated fields is currently in Beta. The documentation and the functionality are subject to change.
+>* The functionality to export arrays through calculated fields is generally available.
 
-Learn how to export arrays through calculated fields from Real-Time CDP in flat schema files to [cloud storage destinations](/help/destinations/catalog/cloud-storage/overview.md). Read this document to understand the use cases enabled by this functionality.
+Learn how to export arrays through calculated fields from Real-Time CDP to [cloud storage destinations](/help/destinations/catalog/cloud-storage/overview.md) as strings. Read this document to understand the use cases enabled by this functionality.
 
 Get extensive information about calculated fields - what these are and why they matter. Read the pages linked below for an introduction to calculated fields in Data Prep and more information about all the available functions: 
 
@@ -35,16 +34,36 @@ Get extensive information about calculated fields - what these are and why they 
 
 ## Arrays and other object types in Platform {#arrays-strings-other-objects}
 
-In Experience Platform, you can use [XDM schemas](/help/xdm/home.md) to manage different field types. Previously, you were able to export simple key-value pair type fields such as strings out of Experience Platform to your desired destinations. An example of such a field that was supported for export previously is `personalEmail.address`:`johndoe@acme.org`.
+In Experience Platform, you can use [XDM schemas](/help/xdm/home.md) to manage different field types. Before support for array exports was added, you were able to export simple key-value pair type fields such as strings out of Experience Platform to your desired destinations. An example of such a field that was supported for export previously is `personalEmail.address`:`johndoe@acme.org`.
 
-Other field types in Experience Platform include array fields. Read more about [managing array fields in the Experience Platform UI](/help/xdm/ui/fields/array.md). In addition to the previously supported field types, you can now export array objects such as: `organizations:[marketing, sales, engineering]`. See further below [extensive examples](#examples) of how you can use various functions to access elements of arrays, join array elements into a string, and more.  
+Other field types in Experience Platform include array fields. Read more about [managing array fields in the Experience Platform UI](/help/xdm/ui/fields/array.md). In addition to the previously supported field types, you can now export array objects such as the example below, concatenated into a string by using the `array_to_string` function.
+
+``` 
+organizations = [{
+  id: 123,
+  orgName: "Acme Inc",
+  founded: 1990,
+  latestInteraction: "2024-02-16"
+}, {
+  id: 456,
+  orgName: "Superstar Inc",
+  founded: 2004,
+  latestInteraction: "2023-08-25"
+}, {
+  id: 789,
+  orgName: 'Energy Corp',
+  founded: 2021,
+  latestInteraction: "2024-09-08"
+}]
+```
+
+See further below [extensive examples](#examples) of how you can use various functions to access elements of arrays, transform and filter arrays, join array elements into a string, and more.  
 
 ## Known limitations {#known-limitations}
 
-Note the following known limitations for the beta release of this functionality:
+Note the following known limitations that currently apply to this functionality:
 
-* Export to JSON or Parquet files with hierarchical schemas is not supported at this time. You can export arrays to flat schema CSV, JSON, and Parquet files only.
-* At this time, *you can only export simple arrays (or arrays of primitive values) to cloud storage destinations*. This means that you can export array objects which include string, int, or boolean values. You cannot export maps or arrays of maps or objects The calculated fields modal window only displays the arrays that you can export.
+* Export to JSON or Parquet files *with hierarchical schemas* is not supported at this time. You can export arrays to CSV, JSON, and Parquet files  *as strings only*, by using the `array_to_string` function.
 
 ## Prerequisites {#prerequisites}
 
@@ -52,25 +71,21 @@ Note the following known limitations for the beta release of this functionality:
 
 ## How to export calculated fields {#how-to-export-calculated-fields}
 
-In the mapping step of the activation workflow for cloud storage destinations, select **[!UICONTROL (Beta) Add calculated field]**.
+In the mapping step of the activation workflow for cloud storage destinations, select **[!UICONTROL Add calculated field]**.
 
 ![Add calculated field highlighted in the mapping step of the batch activation workflow.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
 
-This opens a modal window where you can select attributes that you can use to export attributes out of Experience Platform.
-
->[!IMPORTANT]
->
->Only some of the fields from your XDM schema are available in the **[!UICONTROL Field]** view. You can see string values and arrays of string, int, and boolean values. For example, the `segmentMembership` array is not displayed, as it includes other array values.
+This opens a modal window where you can select functions and fields to export attributes out of Experience Platform.
 
 ![Modal window of the calculated field functionality with no function selected yet.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
 
-For example, use the `join` function on the `loyaltyID` field as shown below to export an array of loyalty IDs as a string concatenated with an underscore in a CSV file. View [more information about this and other examples further below](#join-function-export-arrays). 
+For example, use the `array_to_string` function on the `organizations` field as shown below to export the organizations array as a string in a CSV file. View [more information about this and other examples further below](#array-to-string-function-export-arrays). 
 
-![Modal window of the calculated field functionality with the join function selected.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
+![Modal window of the calculated field functionality with the array-to-string function selected.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
 
 Select **[!UICONTROL Save]** to keep the calculated field and return to the mapping step.
 
-![Modal window of the calculated field functionality with the join function selected and the Save control highlighted.](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
+![Modal window of the calculated field functionality with the array-to-string function selected and the Save control highlighted.](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
 
 Back in the mapping step of the workflow, fill in the **[!UICONTROL Target field]** with a value of the column header you want for this field in the exported files.
 
@@ -82,13 +97,16 @@ When ready, select **[!UICONTROL Next]** to proceed to the next step of the acti
 
 ![Mapping step with the target field highlighted and a target value filled in.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
 
-## Supported functions {#supported-functions}
+## Sample supported functions to export arrays {#supported-functions}
 
 All the documented [Data Prep functions](/help/data-prep/functions.md) are supported when activating data to file-based destinations. 
 
-Note, however, that extensive use case descriptions and sample output information is currently provided for the following functions only in the beta release of calculated fields and array support for destinations: 
+The functions below, specific to handling exports of arrays, are documented along with examples.
 
-* `join`
+* `array_to_string`
+* `flattenArray`
+* `filterArray`
+* `transformArray`
 * `coalesce`
 * `size_of`
 * `iif`
@@ -97,31 +115,57 @@ Note, however, that extensive use case descriptions and sample output informatio
 * `to_array`
 * `first`
 * `last`
-* `sha256`
-* `md5`
 
 ## Examples of functions used to export arrays {#examples}
 
 See examples and further information in the sections below for some of the functions listed above. For the rest of the listed functions, refer to the [general functions documentation in the Data Prep section](/help/data-prep/functions.md).
 
-### `join` function to export arrays {#join-function-export-arrays}
+### `array_to_string` function to export arrays {#array-to-string-function-export-arrays}
 
-Use the `join` function to concatenate the elements of an array into a string, using a desired separator, such as `_` or `|`.
+Use the `array_to_string` function to concatenate the elements of an array into a string, using a desired separator, such as `_` or `|`.
 
-For example, you can combine the following XDM fields below as shown in the mapping screenshot by using a `join('_',loyalty.loyaltyID)` syntax:
+For example, you can combine the following XDM fields below as shown in the mapping screenshot by using an `array_to_string('_',organizations)` syntax:
 
-* `"organizations": ["Marketing","Sales,"Finance"]` array 
+* `organizations` array 
 * `person.name.firstName` string 
 * `person.name.lastName` string
 * `personalEmail.address` string
 
-![Mapping example including the join function.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-join-function.png)
+![Mapping example including the array_to_string function.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-array-to-string-function.png)
 
-In this case, your output file looks like below. Notice how the three elements of the array are concatenated into a single string using the `_` character.
+In this case, your output file looks like below. Notice how the elements of the array are concatenated into a single string using the `_` character.
 
 ```
-`First_Name,Last_Name,Personal_Email,Organization
-John,Doe,johndoe@acme.org, "Marketing_Sales_Finance"
+First_Name,Last_Name,Personal_Email,Organization
+John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':456,'orgName':'Superstar Inc','founded':2004,'latestInteraction':1692921600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
+```
+
+### `filterArray` function to export filtered arrays
+
+Use the `filterArray` function to filter the elements of an exported array. You can combine this function with the `array_to_string` function described further above.
+
+Continuing with the `organizations` array object from above, you can write a function like `array_to_string('_', filterArray(organizations, org -> org.founded > 2021))`, returning the organizations with a value for `founded` in the year 2021 or more recent.
+
+![Example of the filterArray function.](/help/destinations/assets/ui/export-arrays-calculated-fields/filter-array-function.png)
+
+In this case, your output file looks like below. Notice how the two elements of the array that meet the criterion are concatenated into a single string using the `_` character.
+
+```
+John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
+```
+
+### `transformArray` function to export transformed arrays
+
+Use the `transformArray` function to transform the elements of an exported array. You can combine this function with the `array_to_string` function described further above.
+
+Continuing with the `organizations` array object from above, you can write a function like `array_to_string('_', transformArray(organizations, org -> ucase(org.orgName)))`, returning the names of the organizations converted to all uppercase.
+
+![Example of the transformArray function.](/help/destinations/assets/ui/export-arrays-calculated-fields/transform-array-function.png)
+
+In this case, your output file looks like below. Notice how the three elements of the array are transformed and concatenated into a single string using the `_` character.
+
+```
+John,Doe,johndoe@acme.org,ACME INC_SUPERSTAR INC_ENERGY CORP
 ```
 
 ### `iif` function to export arrays {#iif-function-export-arrays}
@@ -139,9 +183,9 @@ John,Doe, johndoe@acme.org, "isMarketing"
 
 ### `add_to_array` function to export arrays {#add-to-array-function-export-arrays}
 
-Use the `add_to_array` function to add elements to an exported array. You can combine this function with the `join` function described further above.
+Use the `add_to_array` function to add elements to an exported array. You can combine this function with the `array_to_string` function described further above.
 
-Continuing with the `organizations` array object from above, you can write a function like `source: join('_', add_to_array(organizations,"2023"))`, returning the organizations that a person is a member of in the year 2023.
+Continuing with the `organizations` array object from above, you can write a function like `source: array_to_string('_', add_to_array(organizations,"2023"))`, returning the organizations that a person is a member of in the year 2023.
 
 ![Mapping example including the add_to_array function.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-add-to-array-function.png)
 
@@ -151,6 +195,14 @@ In this case, your output file looks like below. Notice how the three elements o
 `First_Name,Last_Name,Personal_Email,Organization_Member_2023
 John,Doe, johndoe@acme.org,"Marketing_Sales_Finance_2023"
 ```
+
+### `flattenArray` function to export flattened arrays
+
+Use the `flattenArray` function to flatten an exported multidimensional array. You can combine this function with the `array_to_string` function described further above.
+
+Continuing with the `organizations` array object from above, you can write a function like `array_to_string('_', flattenArray(organizations))`. Note that the `array_to_string` function flattens the input array by default into a string.
+
+The resulting output is the same as for the `array_to_string` function described further above.
 
 ### `coalesce` function to export arrays {#coalesce-function-export-arrays}
 
@@ -216,6 +268,8 @@ In this case, your output file looks like below, exporting the first and the las
 johndoe@acme.org,"1538097126","1664327526"
 ```
 
+<!--
+
 ### Hashing functions {#hashing-functions}
 
 In addition to the functions specific for exporting arrays or elements from an array, you can use hashing functions to hash attributes in the exported files. For example, if you have any personally identifiable information in attributes, you can hash those fields when exporting them. 
@@ -234,3 +288,5 @@ The supported hashing functions are:
 | `crc32` | `crc32(organizations[0])` |
 
 {style="table-layout:auto"}
+
+-->
