@@ -100,7 +100,7 @@ Scroll down the options and ensure the check box is enabled for the [!DNL Enable
 
 Once you install the [!DNL GitHub Copilot] extension and log in, it automatically activates a feature called **Ghost Text**, which suggests code completions as you type. These suggestions help you write code more efficiently and with fewer interruptions. You can also use comments to guide the AI code suggestions. This means that non-technical users can convert plain speech into code to explore their data.
 
-![The VSCode UI with the [!DNL GitHub Copilot] icon highlighted.](../images/clients/github-copilot/code-suggestions.png)
+![The VSCode UI with a code suggestion and the [!DNL GitHub Copilot] icon highlighted.](../images/clients/github-copilot/ghost-text.png)
 
 >[!TIP]
 >
@@ -119,8 +119,9 @@ When [!DNL GitHub Copilot] suggests code completions, you can accept either part
 ### Alternative suggestions {#alternative-suggestions}
 
 To cycle through alternative code suggestions, select the arrows in the [!DNL Copilot] dialog.
- 
-![The alternative suggestions panel](../images/clients/github-copilot/copilot-alternative-suggestions.png)
+
+![The [!DNL VS Code] editor showing the Copilot alternative suggestions panel.](../images/clients/github-copilot/code-suggestions.png)
+
 
 ## Use inline chat {#inline-chat}
 
@@ -132,7 +133,7 @@ You can also chat with [!DNL Copilot] directly about your code. Use **Control (o
 
 You can use a more traditional chat interface with a dedicated chat sidebar to form ideas and strategy, solve coding issues, and discuss implementation details. Select the chat icon (![The Copilot Chat icon.](../images/clients/github-copilot/chat-icon.png)) in the [!DNL VS Code] sidebar to open a dedicated chat window.
 
-![The [!DNL GitHub Copilot] chat sidebar with the chat icon highlighted.](../images/clients/github-copilot/copilot-chat-sidebar.png)
+![The [!DNL GitHub Copilot] chat sidebar with the chat icon highlighted.](../images/clients/github-copilot/chat-sidebar.png)
 
 You can also access chat history by selecting the history icon (![The history icon.](../images/clients/github-copilot/history-icon.png)) at the top of the chat panel.
 
