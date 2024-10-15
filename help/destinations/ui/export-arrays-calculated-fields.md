@@ -71,6 +71,16 @@ Note the following known limitations that currently apply to this functionality:
 
 ## How to export calculated fields {#how-to-export-calculated-fields}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_export_arrays_control"
+>title="Enable hierarchical output schema"
+>abstract="Toggle on if you would like to export hierarchical structures like arrays."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_export_arrays_calculated_field_disabled"
+>title="Add calculated fields disabled"
+>abstract="This control is disabled because you selected to export flat structures when connecting to the destination."
+
 In the mapping step of the activation workflow for cloud storage destinations, select **[!UICONTROL Add calculated field]**.
 
 ![Add calculated field highlighted in the mapping step of the batch activation workflow.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
