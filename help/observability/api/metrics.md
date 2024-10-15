@@ -213,7 +213,7 @@ The following table outlines metrics for Adobe Experience Platform [!DNL Identit
 | ---- | ---- | ---- |
 | timeseries.identity.dataset.recordsuccess.count | Number of records written to their data source by [!DNL Identity Service], for one dataset or all datasets. | Dataset ID |
 | timeseries.identity.dataset.namespacecode.recordfailed.count | Number of Identity records failed by a namespace. | Namespace ID (**Required**) |
-| timeseries.identity.dataset.namespacecode.recordskipped.count | Number of Identity records skipped. | IMS Org ID |
+| timeseries.identity.dataset.namespacecode.recordskipped.count | Number of Identity records skipped. | Organization ID |
 | timeseries.identity.graph.imsorg.uniqueidentities.count | Number of unique identities stored in the identity graph for your organization. | N/A |
 | timeseries.identity.graph.imsorg.namespacecode.uniqueidentities.count | Number of unique identities stored in the identity graph for a namespace. | Namespace ID (**Required**) |
 | timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | Number of unique identities stored in the identity graph for your organization for a particular graph strength ("unknown", "weak", or "strong"). | Graph strength (**Required**) |
