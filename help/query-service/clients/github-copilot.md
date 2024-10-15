@@ -110,7 +110,7 @@ Once you install the GitHub Copilot extension and log in, it automatically activ
 
 ### Accept full or partial Ghost Text suggestions {#accept-suggestions}
 
-When GitHub Copilot suggests code completions, you can accept either partial or the compete suggestion. Select **Tab** to accept the entire suggestion, or hold down **Control (or Command on Mac)** and press the **right arrow** to accept partial text. To dismiss a suggestion, press **Escape**.
+When GitHub Copilot suggests code completions, you can accept either partial or compete suggestions. Select **Tab** to accept the entire suggestion, or hold down **Control (or Command on Mac)** and press the **right arrow** to accept partial text. To dismiss a suggestion, press **Escape**.
 
 >[!TIP]
 >  
