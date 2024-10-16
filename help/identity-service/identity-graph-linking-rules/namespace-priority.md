@@ -179,4 +179,4 @@ For more information, read the [Privacy service overview](../../privacy-service/
 
 ### Adobe Target 
 
-You can only activate batch and streaming segmentation to Adobe Target.
+Adobe Target may yield unexpected user targeting for shared device scenarios. 

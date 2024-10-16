@@ -19,7 +19,7 @@ See the query accelerated store reporting insights documentation to learn [how t
 
 ## Prerequisites
 
-This guide requires a working understanding of custom dashboards. Read the documentation on [how to create a custom dashboard](../user-defined-dashboards.md) before continuing with this guide.
+This guide requires a working understanding of custom dashboards. Read the documentation on [how to create a custom dashboard](../standard-dashboards.md) before continuing with this guide.
 
 ## Real-Time CDP B2B insight reports and use cases {#B2B-insight-reports-and-use-cases}
 
