@@ -188,9 +188,9 @@ Provide the appropriate values for the following credentials to authenticate you
 
 >[!IMPORTANT]
 >
->You are recommended to have an exact mapping between your source and target connections when creating a dataflow for [!DNL SFTP] data. You should not patch your existing source and target connections independently of each other, as the changes will not be reflected in the existing dataflow. If your use case requires an update of your source and target connections, you must create a new pair of source and target connections instead, as well as a new dataflow.
+>You are recommended to have an exact mapping between your source and target connections when creating a dataflow for [!DNL SFTP] data. You should not patch your existing source and target connections separately, as the changes will not be reflected in the existing dataflow. If your use case requires an update of your source and target connections, you must create a new pair of source and target connections, as well as a new dataflow.
 >
->* You do not need to create a new base connection when an update is required. Any updates that you make to your base connection get reflected to its corresponding dataflow. For more information, read the guide on [updating sources accounts using the API](../../tutorials/api/update.md).
+>* You do not need to create a new base connection when an update is required. Any changes you make to your base connection are reflected in the associated dataflow. For more information, read the guide on [updating sources accounts using the API](../../tutorials/api/update.md).
 >* For information on how to update an existing dataflow, including its mapping and ingestion schedule, read the guide on [updating sources dataflows using the API](../../tutorials/api/update-dataflows.md).
 
 ## Connect SFTP to Experience Platform
