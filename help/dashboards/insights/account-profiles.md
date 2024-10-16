@@ -13,7 +13,7 @@ With access to the SQL that powers your insights, you can better understand your
 
 <!-- Add link to new generate insights with SQL workflow doc after April release.-->
 
-The following insights are all available for you to use as part of the [Account Profiles dashboard](../guides/account-profiles.md) or a [custom dashboard](../user-defined-dashboards.md). See the [customization overview](../customize/overview.md) for instructions on how to customize your dashboard or [create and edit new widgets](../customize/custom-widgets.md) in the widget library and [user-defined dashboard](../user-defined-dashboards.md#create-widget).
+The following insights are all available for you to use as part of the [Account Profiles dashboard](../guides/account-profiles.md) or a [custom dashboard](../standard-dashboards.md). See the [customization overview](../customize/overview.md) for instructions on how to customize your dashboard or [create and edit new widgets](../customize/custom-widgets.md) in the widget library and [user-defined dashboard](../standard-dashboards.md#create-widget).
 
 ## Account profiles added {#account-profiles-added}
 
