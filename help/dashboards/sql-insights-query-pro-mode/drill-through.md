@@ -12,15 +12,15 @@ The system ensures that the analysis you begin is seamlessly continued throughou
 
 To create a drill through, first select **[!UICONTROL Edit]** from your dashboard view.
 
-![A custom dashboard with Edit highlighted.](../../images/query-pro-mode/drill-through.png)
+![A custom dashboard with Edit highlighted.](../images/sql-insights-query-pro-mode/drill-through.png)
 
 Select the ellipsis in the chart that you want to drill through, then select **[!UICONTROL Edit]**.
 
-![A chart showing the ellipsis menu with Edit highlighted.](../../images/query-pro-mode/drill-through-chart-edit.png)
+![A chart showing the ellipsis menu with Edit highlighted.](../images/sql-insights-query-pro-mode/drill-through-chart-edit.png)
 
 In the [!UICONTROL Properties] panel use the toggle to enable **[!UICONTROL Enable drill through]**, then use the drop down to select the **[!UICONTROL Target dashboard]**. Ensure the toggle for **[!UICONTROL Filter pass-through]** is enabled, then select **[!UICONTROL Save and close]**.
 
-![Chart properties panel with Enable drill through, Target dashboard, and Filter pass-through highlighted.](../../images/query-pro-mode/drill-through-chart-properties.png)
+![Chart properties panel with Enable drill through, Target dashboard, and Filter pass-through highlighted.](../images/sql-insights-query-pro-mode/drill-through-chart-properties.png)
 
 >[!INFO]
 >
@@ -30,11 +30,11 @@ In the [!UICONTROL Properties] panel use the toggle to enable **[!UICONTROL Enab
 
 To view a drill through, select ellipsis in the chart from your dashboard view, then select **[!UICONTROL Drill through]**.
 
-![A chart showing the ellipsis menu with Drill through highlighted.](../../images/query-pro-mode/drill-through-chart-view.png)
+![A chart showing the ellipsis menu with Drill through highlighted.](../images/sql-insights-query-pro-mode/drill-through-chart-view.png)
 
 The drill through target dashboard is displayed. You can repeat this step if you have multi-level drill throughs.
 
-![The target dasboard displayed with the drill through highlighted.](../../images/query-pro-mode/drill-through-target-dashboard.png)
+![The target dasboard displayed with the drill through highlighted.](../images/sql-insights-query-pro-mode/drill-through-target-dashboard.png)
 
 >[!NOTE]
 >
@@ -44,16 +44,16 @@ The drill through target dashboard is displayed. You can repeat this step if you
 
 To remove a drill through, first select **[!UICONTROL Edit]** from your dashboard view.
 
-![A custom dashboard with Edit highlighted.](../../images/query-pro-mode/drill-through.png)
+![A custom dashboard with Edit highlighted.](../images/sql-insights-query-pro-mode/drill-through.png)
 
 Select the ellipsis in the chart that you want to remove a drill through, then select **[!UICONTROL Edit]**.
 
-![A chart showing the ellipsis menu with Edit highlighted.](../../images/query-pro-mode/drill-through-chart-edit.png)
+![A chart showing the ellipsis menu with Edit highlighted.](../images/sql-insights-query-pro-mode/drill-through-chart-edit.png)
 
 In the [!UICONTROL Properties] panel, select the toggle to disable **[!UICONTROL Enable drill through]**, then select **[!UICONTROL Save and close]**.
 
-![Chart properties panel with the toggle disabled for [!UICONTROL Enable drill through] highlighted.](../../images/query-pro-mode/drill-through-disable.png)
+![Chart properties panel with the toggle disabled for [!UICONTROL Enable drill through] highlighted.](../images/sql-insights-query-pro-mode/drill-through-disable.png)
 
 ## Next steps
 
-After reading this document, you now know how to create a drill through for your dashboard. You can also learn how to generate charts from existing data models in the Adobe Experience Platform UI with the [guided design mode guide](../../user-defined-dashboards.md).
+After reading this document, you now know how to create a drill through for your dashboard. You can also learn how to generate charts from existing data models in the Adobe Experience Platform UI with the [guided design mode guide](../standard-dashboards.md).
