@@ -204,6 +204,11 @@ The list of available filters is displayed.
 
 #### Bulk actions {#bulk-actions}
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_browse_flexibleaudienceevaluation"
+>title="Flexible audience evaluation limits"
+>abstract="You can evaluate up to 20 audiences in a single flexible audience evaluation run.<br/><br/>Additionally, while the evaluation job runs as soon as possible, there may be system delays that may occur since on-demand evaluations <b>cannot</b> run simultaneously with another on-demand or batch evaluation."
+
 Additionally, you can select up to 25 different audiences, and perform various actions on these audiences. These actions include [moving to a folder](#folders), [editing or applying a tag](#tags), [applying access labels](../../access-control/abac/ui/labels.md), and [deleting](#browse).
 
 ![The available options for bulk actions are highlighted.](../images/ui/audience-portal/bulk-actions.png)
