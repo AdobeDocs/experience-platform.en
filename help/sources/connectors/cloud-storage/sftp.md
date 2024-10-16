@@ -1,6 +1,4 @@
 ---
-keywords: Experience Platform;home;popular topics;SFTP;sftp
-solution: Experience Platform
 title: SFTP Source Connector Overview
 description: Learn how to connect an SFTP server to Adobe Experience Platform using APIs or the user interface.
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
@@ -187,6 +185,13 @@ Provide the appropriate values for the following credentials to authenticate you
 | `connectionSpec.id` | (API-only) The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL SFTP] is: `b7bf2577-4520-42c9-bae9-cad01560f7bc`. |
 
 >[!ENDTABS]
+
+>[!IMPORTANT]
+>
+>You are recommended to have a 1:1 mapping between your source and target connections when creating a dataflow for [!DNL SFTP] data. You should not patch your existing source and target connections independently of each other, as the changes will not be reflected in the existing dataflow. If your use case requires an update of your source and target connections, you must create a new pair of source and target connections instead, as well as a new dataflow.
+>
+>* You do not need to create a new base connection when an update is required. Any updates that you make to your base connection get reflected to its corresponding dataflow. For more information, read the guide on [updating sources accounts using the API](../../tutorials/api/update.md).
+>* For information on how to update an existing dataflow, including its mapping and ingestion schedule, read the guide on [updating sources dataflows using the API](../../tutorials/api/update-dataflows.md).
 
 ## Connect SFTP to Experience Platform
 

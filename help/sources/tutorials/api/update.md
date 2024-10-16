@@ -1,8 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;flow service;update accounts
-solution: Experience Platform
 title: Update Accounts Using the Flow Service API
-type: Tutorial
 description: This tutorial covers the steps for updating the details and credentials of an account using the Flow Service API.
 exl-id: a93385fd-ed36-457f-8882-41e37f6f209d
 ---
