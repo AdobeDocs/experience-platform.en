@@ -1,14 +1,13 @@
 ---
 title: Namespace priority
 description: Learn about namespace priority in Identity Service.
-badge: Beta
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
 ---
 # Namespace priority
 
 >[!AVAILABILITY]
 >
->Identity graph linking rules is currently in beta. Contact your Adobe account team for information on the participation criteria. The feature and documentation are subject to change.
+>Identity graph linking rules is currently in Limited Availability. Contact your Adobe account team for information on how to access the feature in development sandboxes.
 
 Every customer implementation is unique and tailored to meet a particular organization's goals, and as such, the importance of a given namespace varies from customer to customer. Real-world examples include:
 
@@ -84,7 +83,7 @@ For relatively complex graph structures, namespace priority plays an important r
 >
 >* Primary identity is the identity in which a profile fragment is stored against. A profile fragment is a record of data that stores information about a certain user: attributes (usually ingested via CRM records) or events (usually ingested from experience events or online data).
 
-### Example graph scenario
+### Example scenario
 
 This section provides an example of how priority configuration can affect your data.
 
@@ -178,6 +177,6 @@ For more information on, read the documents on [Attribution AI](../../intelligen
 
 For more information, read the [Privacy service overview](../../privacy-service/home.md).
 
-### Adobe Target and edge personalization
+### Adobe Target 
 
-[Edge personalization](../../server-api/personalization-target.md) will continue to to refer to how you configured your "Primary" checkbox on data element type in WebSDK (which translates to `primary=true` in identityMap).
+Adobe Target may yield unexpected user targeting for shared device scenarios. 
