@@ -42,7 +42,7 @@ role: Admin,User
         * [Export files on-demand to batch destinations using the Experience Platform UI](./ui/export-file-now.md)
         * [Export datasets using the Experience Platform UI](./ui/export-datasets.md)
         * [(Beta) Use the last qualification time XDM attribute in the new beta cloud storage destinations](./ui/activate-last-qualification-time.md)
-        * [(Beta) Use calculated fields to export arrays in flat schema files](/help/destinations/ui/export-arrays-calculated-fields.md)
+        * [Use calculated fields to export arrays as strings](/help/destinations/ui/export-arrays-calculated-fields.md)
     * [View destination details](./ui/destination-details-page.md)
     * [Update destination accounts](./ui/update-accounts.md)
     * [Delete destination accounts](./ui/delete-destination-account.md)
