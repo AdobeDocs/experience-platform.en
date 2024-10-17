@@ -135,8 +135,7 @@ This section addresses frequently asked questions about creating and managing ex
   
 +++Answer
 
-<!-- Nested datasets are also supported, but only flat attributes are available in the audience. -->
-EDIT: Current release only support audience to have flat (at root level) attributes when defining the audience. This will be updated in upcoming release.
+Currently, audience creation is limited to flat (root-level) attributes when defining the audience.
 
 +++
 
@@ -160,8 +159,7 @@ No, the dataset created during audience creation is not marked for Profile.
 
 +++Answer
 
-<!-- Yes, the dataset is created on the data lake. -->
-Edit: Yes, the dataset associated with audience is created on the data lake. But the attributes in the dataset are available in audience composer and destination flow as enriched attributes.
+Yes, the dataset associated with the audience is created on the data lake. The attributes from this dataset are available in the Audience Composer and destination flow as enriched attributes.
 
 +++
 
@@ -169,7 +167,7 @@ Edit: Yes, the dataset associated with audience is created on the data lake. But
 
 +++Answer
 
-No. Enriched attributes in the audience are available for use in both enterprise batch and file-based destinations. If you encounter an error such as "The following segment IDs have namespaces that are not allowed for this destination: e917f626-a038-42f7-944c-xyxyxyx," create a new segment in Data Distiller and use this newly created segment with any available destination.
+No. Enriched attributes in the audience are available for use in both enterprise batch and file-based destinations. If you encounter an error like "The following segment IDs have namespaces that are not allowed for this destination: e917f626-a038-42f7-944c-xyxyxyx," create a new segment in Data Distiller and use it with any available destination.
 
 +++
 
@@ -189,30 +187,6 @@ Data distiller audiences are not currently available in Adobe Journey Optimizer.
 
 +++
 
-<!-- - How should I create two Data Distiller audiences with different schedules? How many datasets are created, and are they marked for Profile? 
-
-+++Answer
-
-Two datasets will be created as each audience has an underlying dataset. However, these datasets are not marked for Profile. The two datasets are managed on their own individual schedules.
-
-+++ -->
-
-<!-- - How do I delete an audience?                                                                                         
-
-+++Answer
-
-To delete an audience, you can use the [`DROP AUDIENCE` command](#delete-audience) in the command line interface or use the [Audiences workspace quick actions](../../segmentation/ui/audience-portal.md#quick-actions). NOTE: Audiences that are used in downstream destinations or are dependents in other audiences cannot be deleted.
-
-+++ -->
-
-<!-- - When I publish an audience to Profile, how soon is it available in the segment builder UI, and when does it become available in Destinations? 
-
-+++Answer
-
-Once the profile snapshot export is complete, profiles can be seen in the audience.
-
-+++ -->
-
 - Are Data Distiller audiences deleted every 30 days since they are external audiences?                              
 
 +++Answer
@@ -220,14 +194,6 @@ Once the profile snapshot export is complete, profiles can be seen in the audien
 Yes, Data Distiller audiences are deleted every 30 days since they are external audiences.
 
 +++
-
-<!-- - Do Data Distiller Audiences appear in the Audiences inventory?
-
-+++Answer
-
-Yes, Data Distiller Audiences appear in the Audiences inventory under the origin name 'Data Distiller.'
-
-+++ -->
 
 ## Next steps
 
