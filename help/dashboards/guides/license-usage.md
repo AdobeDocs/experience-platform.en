@@ -138,9 +138,6 @@ The predicted usage feature supports the following metrics:
 - [!UICONTROL Customer Journey Audience number of rows]
 - [!UICONTROL Total Data Volume]
 
-<!-- - [!UICONTROL Average profile richness]
-- [!UICONTROL Total storage] -->
-
 ## [!UICONTROL Summary] tab {#summary-tab}
 
 To view more metrics and detailed insights on your product license usage, select a product name from the list. The [!UICONTROL Summary] view for that product appears. All available metrics are displayed on the [!UICONTROL Summary] tab. The metrics available depend on the licensed product. This view provides **a consolidated view of all metrics across all production or development sandboxes**. The same level of analysis is provided for both production and development sandboxes.
