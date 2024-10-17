@@ -202,14 +202,14 @@ The list of available filters is displayed.
 
 ![The available filters are displayed and highlighted on the browse audiences page.](../images/ui/audience-portal/filter-audiences.png)
 
-#### Bulk actions {#bulk-actions}
+### Bulk actions {#bulk-actions}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_browse_flexibleaudienceevaluation"
 >title="Flexible audience evaluation limits"
 >abstract="You can evaluate up to 20 audiences in a single flexible audience evaluation run.<br/><br/>Additionally, while the evaluation job runs as soon as possible, there may be system delays that may occur since on-demand evaluations <b>cannot</b> run simultaneously with another on-demand or batch evaluation."
 
-Additionally, you can select up to 25 different audiences, and perform various actions on these audiences. These actions include [moving to a folder](#folders), [editing or applying a tag](#tags), [applying access labels](../../access-control/abac/ui/labels.md), and [deleting](#browse).
+Additionally, you can select up to 25 different audiences, and perform various actions on these audiences. These actions include [moving to a folder](#folders), [editing or applying a tag](#tags), [evaluating audiences](#flexible-audience-evaluation), and [deleting](#browse).
 
 ![The available options for bulk actions are highlighted.](../images/ui/audience-portal/bulk-actions.png)
 
@@ -218,6 +218,20 @@ When you apply bulk actions to these audiences, the following conditions apply:
 - You **can** select audiences from different pages.
 - You **cannot** delete an audience which is being used in a destination activation.
 - If you select a filter, the selected audiences **will** reset.
+
+#### [!BADGE Limited availability]{type=Informative} Flexible audience evaluation {#flexible-audience-evaluation}
+
+Flexible audience evaluation lets you run a segmentation job on an ad-hoc basis. 
+
+INSTRUCTIONS
+
+>[!IMPORTANT]
+>
+>When selecting audiences for flexible audience evaluation, the following conditions apply:
+>
+>- All the audiences **must** have an origin of "Segmentation Service" 
+>- All the audiences **must** be evaluated using batch segmentation
+>- You can only select a maximum of 20 audiences
 
 ## Audience details {#audience-details}
 
