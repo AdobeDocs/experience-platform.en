@@ -129,43 +129,69 @@ Activate your audiences by targeting them to any file-based destination, such as
 
 This section addresses frequently asked questions about creating and managing external audiences using SQL in Data Distiller.
 
-+++Select to reveal questions and answers
+**Questions**:
 
 - Is audience creation supported only for flat datasets?
-- Nested datasets are also supported, but only flat attributes are available in the audience.
+  
++++Answer
+
+Currently, audience creation is limited to flat (root-level) attributes when defining the audience.
+
++++
 
 - Does audience creation result in a single dataset or multiple datasets, or does it vary depending on the configuration?
-- There is a one-to-one mapping between an audience and a dataset.
+
++++Answer
+
+There is a one-to-one mapping between an audience and a dataset.
+
++++
 
 - Is the dataset created during audience creation marked for Profile?
-- No, the dataset created during audience creation is not marked for Profile.
+
++++Answer
+
+No, the dataset created during audience creation is not marked for Profile.
+
++++
 
 - Is the dataset created on the data lake?                                                                               
-- Yes, the dataset is created on the data lake.
 
-- Are attributes in the audience restricted to use only in enterprise batch file-based destinations? (Yes or No)             
-- Yes, attributes in the audience are restricted to use only in enterprise batch file-based destinations.
++++Answer
+
+Yes, the dataset associated with the audience is created on the data lake. The attributes from this dataset are available in the Audience Composer and destination flow as enriched attributes.
+
++++
+
+- Are attributes in the audience restricted to enterprise batch file-based destinations? (Yes or No)             
+
++++Answer
+
+No. Enriched attributes in the audience are available for use in both enterprise batch and file-based destinations. If you encounter an error like "The following segment IDs have namespaces that are not allowed for this destination: e917f626-a038-42f7-944c-xyxyxyx," create a new segment in Data Distiller and use it with any available destination.
+
++++
 
 - Can I create an audience of audiences that uses a Data Distiller audience?                                         
-- Yes, you can create an audience of audiences that uses a Data Distiller audience.
+
++++Answer
+
+Yes, you can create an audience of audiences that uses a Data Distiller audience.
+
++++
 
 - Do these audiences appear in Adobe Journey Optimizer? If not, what happens when I create a new audience in the rule builder that includes all members of this audience? 
-- Data distiller audiences are not currently available in Adobe Journey Optimizer. You must create a new audience in Adobe Journey Optimizer rule builder for it to be available in Adobe Journey Optimizer.
 
-- How should I create two Data Distiller audiences with different schedules? How many datasets are created, and are they marked for Profile? 
-- Two datasets will be created as each audience has an underlying dataset. However, these datasets are not marked for Profile. The two datasets are managed on their own individual schedules.
++++Answer
 
-- How do I delete an audience?                                                                                         
-- To delete an audience, you can use the [`DROP AUDIENCE` command](#delete-audience) in the command line interface or use the [Audiences workspace quick actions](../../segmentation/ui/audience-portal.md#quick-actions). NOTE: Audiences that are used in downstream destinations or are dependents in other audiences cannot be deleted.
+Data distiller audiences are not currently available in Adobe Journey Optimizer. You must create a new audience in Adobe Journey Optimizer rule builder for it to be available in Adobe Journey Optimizer.
 
-- When I publish an audience to Profile, how soon is it available in the segment builder UI, and when does it become available in Destinations? 
-- Once the profile snapshot export is complete, profiles can be seen in the audience.
++++
 
 - Are Data Distiller audiences deleted every 30 days since they are external audiences?                              
-- Yes, Data Distiller audiences are deleted every 30 days since they are external audiences.
 
-- Do Data Distiller Audiences appear in the Audiences inventory?                                                              
-- Yes, Data Distiller Audiences appear in the Audiences inventory under the origin name 'Data Distiller.'
++++Answer
+
+Yes, Data Distiller audiences are deleted every 30 days since they are external audiences.
 
 +++
 
