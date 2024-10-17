@@ -197,7 +197,7 @@ You can also select **[!UICONTROL Custom date]** to choose the time period that 
 
 >[!IMPORTANT]
 >
->Starting August 20th, customers licensed for products with '[!UICONTROL Average Profile Richness]' and '[!UICONTROL Total Storage]' as entitlements will instead see 'Total Data Volume' in the License Usage Dashboard. There is no change to customer entitlements, only a simplification of tracking metrics. Total Data Volume refers to the total data available in Adobe Experience Platform Profile Service for engagement and personalization workflows. This simplified metric allows for improved management and measurement of your Profile Service use. Please contact your Adobe representative if you need further clarification on this change"
+>Starting August 20th, customers with entitlements for '[!UICONTROL Average Profile Richness]' and '[!UICONTROL Total Storage]' instead saw '[!UICONTROL Total Data Volume]' in the License Usage Dashboard. There was no change to customer entitlements, only a simplification of tracking metrics. [!UICONTROL Total Data Volume] represents the data available in Adobe Experience Platform Profile Service for engagement and personalization workflows. This simplified metric improved the management and measurement of Profile Service use. Customers were encouraged to contact their Adobe representative for further clarification on this change.
 
 The license usage dashboard reports on several unique metrics that are applicable to multiple products in the organization. The available metrics are:
 
