@@ -1,12 +1,15 @@
 ---
 title: Update Dataflows Using the Flow Service API
-type: Tutorial
 description: Learn how to a dataflow, including its name, description, and schedule, using the Flow Service API.
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
 ---
 # Update dataflows using the Flow Service API
 
 This tutorial covers the steps for updating a dataflow, including its basic information, schedule, and mapping sets using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+
+>[!TIP]
+>
+>Your source connection and your target connection should be mapped to a single dataflow. You should not update your source and target connections separately, as the changes will not be reflected in their corresponding dataflow. If your use case requires an update  of your source and target connections, then you must create a new pair of source and target connections, as well as a new dataflow.
 
 ## Getting started
 
