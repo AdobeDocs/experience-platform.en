@@ -129,8 +129,6 @@ Activate your audiences by targeting them to any file-based destination, such as
 
 This section addresses frequently asked questions about creating and managing external audiences using SQL in Data Distiller.
 
-+++Select to reveal questions and answers
-
 **Questions**:
 
 - Is audience creation supported only for flat datasets?
@@ -226,8 +224,6 @@ Yes, Data Distiller audiences are deleted every 30 days since they are external 
 +++Answer
 
 Yes, Data Distiller Audiences appear in the Audiences inventory under the origin name 'Data Distiller.'
-
-+++
 
 +++
 
