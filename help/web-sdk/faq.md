@@ -3,7 +3,6 @@ title: Adobe Experience Platform Web SDK FAQ
 description: Get answers to frequently asked questions about the Adobe Experience Platform Web SDK.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
 ---
-
 # Frequently asked questions
 
 This guide provides answers to questions that are often asked about the Adobe Experience Platform Web SDK.
@@ -166,33 +165,9 @@ If you currently have both secure and non-secure sections on your website, this 
 
 ## Which browsers does the Adobe Experience Platform Web SDK support?
 
-The Adobe Experience Platform Web SDK is designed to work optimally in the latest versions of Google Chrome, Safari, Firefox, Internet Explorer 11, and Microsoft Edge Chromium. You may have trouble using certain features on older versions of browsers.
+The Adobe Experience Platform Web SDK is designed to work optimally in the latest versions of Google Chrome, Safari, Firefox, and Microsoft Edge Chromium. You may have trouble using certain features on older versions of browsers or deprecated browsers, such as Internet Explorer.
 
 ## Where can I get more info about Adobe Experience Platform Web SDK?
 
 * [Documentation](/help/web-sdk/home.md)
 * [Source Code](https://github.com/adobe/alloy)
-
-### Supporting Internet Explorer {#support-internet-explore}
-
-This SDK uses promises, which are a method of communicating the completion of asynchronous tasks. The [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) implementation used by the SDK is natively supported by all target browsers except [!DNL Internet Explorer]. To use the SDK on [!DNL Internet Explorer], you must have `window.Promise` [polyfilled](https://remysharp.com/2010/10/08/what-is-a-polyfill).
-
-To determine if you already have `window.Promise` polyfilled:
-
-1. Open your website in [!DNL Internet Explorer].
-1. Open the browser's debugging console.
-1. Type `window.Promise` into the console, then press Enter.
-
-If something other than `undefined` appears, you likely have already polyfilled `window.Promise`. Another way to determine if `window.Promise` is polyfilled is by loading your website after having completed the above installation instructions. If the SDK throws an error mentioning something about a promise, you likely have not polyfilled `window.Promise`.
-
-If you've determined you must polyfill `window.Promise`, include the following script tag above the previously provided base code:
-
-```html
-<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
-```
-
-This tag loads a script that ensures that `window.Promise` is a valid Promise implementation.
-
->[!NOTE]
->
->If you choose to load a different Promise implementation, be sure it supports `Promise.prototype.finally`.

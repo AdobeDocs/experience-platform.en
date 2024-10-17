@@ -1,6 +1,7 @@
 ---
 title: Merkury Enterprise Connections Destination
 description: Learn how to create a Merkury Enterprise Connections destination connection using the Adobe Experience Platform UI.
+last-substantial-update: 2024-07-20
 exl-id: dffc6f4d-b756-4c13-96f3-b1cc57caacdb
 ---
 # Merkury Enterprise Connections Destination

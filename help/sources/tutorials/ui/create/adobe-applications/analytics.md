@@ -295,7 +295,7 @@ A list of existing Analytics dataflows in your organization appears. From here, 
 
 ![A list of existing Adobe Analytics dataflows in your organization.](../../../../images/tutorials/create/analytics/select-target-dataset.png)
 
-The [!UICONTROL Dataset activity] page provides information on the progress of data that is being sent from Analytics to Experience Platform. The interface displays metrics such as the number of ingested records, number of ingested batches, and number of failed batches.
+The [!UICONTROL Dataset activity] page provides information on the progress of data that is being sent from Analytics to Experience Platform. The interface displays metrics such as the total of records in the previous month, the total of ingested records in the last seven days, and the size of data in the previous month.
 
 The source instantiates two dataset flows. One flow represents backfill data and the other is for live data. Backfill data is not configured for ingestion into Real-Time Customer Profile but is sent to the data lake for analytical and data-science use-cases.
 
@@ -303,35 +303,16 @@ For more information on backfill, live data, and their respective latencies, rea
 
 ![The dataset activity page for a given target dataset for Adobe Analytics data.](../../../../images/tutorials/create/analytics/dataset-activity.png)
 
-+++View individual batches using the legacy monitoring interface
+>[!NOTE]
+>
+>The dataset activity page does not display information about batches since the Analytics source connector is entirely managed by Adobe. You can monitor that data is flowing by looking at the metrics around ingested records.
 
-The dataset activity page does not display a list of individual batches. To view a list of individual batches, select a chart in the dataset activity interface.
+## Delete your dataflow {#delete-dataflow}
 
-![The dataset activity page with a chart selected.](../../../../images/tutorials/create/analytics/select-chart.png)
+To delete your Analytics dataflow, select **[!UICONTROL Dataflows]** from the top header of the sources workspace. Use the dataflows page to locate the Analytics dataflow that you want to delete and then select the ellipses (`...`) beside it. Next, use the dropdown menu and select **[!UICONTROL Delete]**.
 
-You are taken to the Monitoring dashboard. Next, select **[!UICONTROL ONLY INGEST FAILURES: YES]** to clear the filter and view a list of individual batches.
-
-![The monitoring dashboard with the failure filter selected.](../../../../images/tutorials/create/analytics/clear-filter.png)
-
-The interface updates to a list of individual batches, including information on their respective metrics. 
-
-![The legacy monitoring page for batch data.](../../../../images/tutorials/create/analytics/batch-end-to-end.png)
-
-| Metrics | Description |
-| --- | --- |
-| Batch ID | The ID of a given batch. This value is generated internally. |
-| Dataset name | The name of a given dataset used for Analytics data. |
-| Source | The source of the ingested data. |
-| Updated | The date of the most recent flow run iteration. |
-| Records in dataset | The total count of records in the dataset. **Note**: This parameter will occasionally display a status of `in-progress`. This status indicates that the record ingestion process is not yet complete. |
-| New profile fragments | The total count of new profile fragments that were ingested. |
-| Existing profile fragments | The total count of existing profile fragments. |
-| Identity records stitched | The total count of identity records that were stitched together after ingestion. |
-| Records in Profile | The total count of records that were ingested to Real-Time Customer Profile. |
-
-{style="table-layout:auto"}
-
-+++
+* Deleting the live Analytics dataflow will also delete its underlying dataset.
+* Deleting the backfill Analytics dataflow does not delete the underlying dataset, but will stop the backfill process for its corresponding report suite. If you delete the backfill dataflow, ingested data may still be viewed through the dataset.
 
 ## Next steps and additional resources
 

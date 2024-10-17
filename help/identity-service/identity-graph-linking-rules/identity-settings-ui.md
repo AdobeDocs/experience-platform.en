@@ -1,14 +1,13 @@
 ---
 title: Identity Settings UI
 description: Learn how to use the identity settings user interface.
-badge: Beta
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
 ---
 # Identity Setting UI
 
 >[!AVAILABILITY]
 >
->Identity graph linking rules is currently in beta. Contact your Adobe account team for information on the participation criteria. The feature and documentation are subject to change.
+>Identity graph linking rules is currently in Limited Availability. Contact your Adobe account team for information on how to access the feature in development sandboxes.
 
 Identity settings is a feature in the Adobe Experience Platform Identity Service UI that you can use to designate unique namespaces and configure namespace priority.
 
@@ -18,8 +17,10 @@ Read this guide to learn how to configure your identity settings in the UI.
 
 Read the following documents before you start working with identity settings:
 
-* [Identity graph linking rules configuration guide](./configuration.md)
+* [Identity graph linking rules](./overview.md)
 * [Identity optimization algorithm](./identity-optimization-algorithm.md)
+* [Implementation guide](./implementation-guide.md)
+* [Examples of graph configurations](./example-configurations.md)
 * [Namespace priority](./namespace-priority.md)
 * [Graph simulation](./graph-simulation.md)
 
@@ -43,16 +44,24 @@ To designate a unique namespace, select the [!UICONTROL Unique per graph] checkb
 
 ![Two namespaces selected and defined as unique.](../images/rules/unique-namespace.png)
 
-Once your unique namespaces are established, graphs will no longer be able to have multiple identities that contain a unique namespace. For example, if you designated CRM ID as a unique namespace, then a graph can only have one identity with the CRM ID namespace. For more information, read the [identity optimization algorithm overview](./identity-optimization-algorithm.md#unique-namespace).
+Once your unique namespaces are established, graphs will no longer be able to have multiple identities that contain a unique namespace. For example, if you designated CRMID as a unique namespace, then a graph can only have one identity with the CRMID namespace. For more information, read the [identity optimization algorithm overview](./identity-optimization-algorithm.md#unique-namespace).
 
 When you are finished with your configurations, select **[!UICONTROL Next]**. A confirmation message appears, use this opportunity to verify that your configurations are correct and then select **[!UICONTROL Finish]**.
 
 ![The validation page with Finish highlighted.](../images/rules/finish.png)
 
-A warning appears indicating that your new settings will not have any implications on existing links in an identity graph and experience event profile fragments that have already been ingested. Additionally, you are notified that it  will take up to six hours for your new settings to be reflected in the system. To confirm enter your sandbox name and then select **[!UICONTROL Confirm]**.
+A warning message appears, indicating that existing graphs will only be affected by the graph algorithm only if the graphs get updated **after saving your settings**, and that the primary identity of event fragments on Real-Time Customer Profile will not be updated even after namespace priority changes. Additionally, you are notified that it  will take up to **six hours** for your new settings to take effect. To confirm enter your sandbox name and then select **[!UICONTROL Confirm]**.
 
 ![The confirmation window that displays a warning about a six-hour delay before configurations get processed.](../images/rules/confirm-settings.png)
 
 ## Next steps
 
-You have now configured your namespace priorities and designated your unique namespaces using the identity settings UI page. For more information, read the [identity graph linking rules overview](./overview.md).
+For more information on identity graph linking rules, read the following documentation:
+
+* [Identity graph linking rules overview](./overview.md)
+* [Identity optimization algorithm](./identity-optimization-algorithm.md)
+* [Implementation guide](./implementation-guide.md)
+* [Examples of graph configurations](./example-configurations.md)
+* [Troubleshooting and FAQ](./troubleshooting.md)
+* [Namespace priority](./namespace-priority.md)
+* [Graph simulation UI](./graph-simulation.md)

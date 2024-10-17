@@ -571,7 +571,7 @@ The following table demonstrates the difference in results that the `auto_to_jso
 
 ### Resolve fallback snapshot on failure {#resolve-fallback-snapshot-on-failure}
 
-The `resolve_fallback_snapshot_on_failure` option is used to resolve the issue of an expired snapshot ID. Snapshot metadata expires after two days and an expired snapshot can invalidate the logic of a script. This can be a problem when using anonymous blocks.
+The `resolve_fallback_snapshot_on_failure` option is used to resolve the issue of an expired snapshot ID.
 
 Set the `resolve_fallback_snapshot_on_failure` option to true to override a snapshot with a previous snapshot ID.
 
@@ -701,11 +701,7 @@ The values taken from the `source_dataset` are used to populate the target table
 | product-id-2        | ("("("(AF, C, D,NULL)")")")       |      6   |  40          |
 | product-id-4        | ("("("(BM, pass, NA,NULL)")")")   |     3    |  12          |
 
-## [!DNL Spark] SQL commands 
-
-The subsection below covers the Spark SQL commands supported by Query Service.
-
-### SET
+## SET
 
 The `SET` command sets a property and either returns the value of an existing property or lists all the existing properties. If a value is provided for an existing property key, the old value is overridden.
 
