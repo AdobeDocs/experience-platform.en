@@ -53,8 +53,8 @@ Within the context of identity graph linking rules, a record may be rejected fro
 
 Consider the following event with two assumptions:
 
-* The field name CRMID is marked as an identity with the namespace CRMID.
-* The namespace CRMID is defined as a unique namespace.
+1. The field name CRMID is marked as an identity with the namespace CRMID.
+2. The namespace CRMID is defined as a unique namespace.
 
 The following event will return an error message indicating that ingestion has failed. 
 
@@ -133,8 +133,8 @@ AAIDs are blocked by default. Therefore, if you are using the [Adobe Analytics s
 
 **Troubleshooting steps**
 
-* To validate that authenticated events contain both the person and cookie namespace, read the steps outlined in the section on [troubleshooting errors regarding data not being ingested to Identity Service](#my-identities-are-not-getting-ingested-into-identity-service).
-* To validate that authenticated events have the primary identity of the person namespace (e.g. CRMID), search the person namespace on profile viewer using no-stitch merge policy (this is the merge policy that does not use private graph). This search will only return events associated to the person namespace. 
+1. To validate that authenticated events contain both the person and cookie namespace, read the steps outlined in the section on [troubleshooting errors regarding data not being ingested to Identity Service](#my-identities-are-not-getting-ingested-into-identity-service).
+2. To validate that authenticated events have the primary identity of the person namespace (e.g. CRMID), search the person namespace on profile viewer using no-stitch merge policy (this is the merge policy that does not use private graph). This search will only return events associated to the person namespace. 
 
 ### My experience event fragments are not getting ingested into Profile {#my-experience-event-fragments-are-not-getting-ingested-into-profile}
 
@@ -204,11 +204,11 @@ The identity optimization algorithm will honor [the most recently established li
 
 First, you must collect the following information:
 
-* The identity symbol (namespaceCode) of the cookie namespace (e.g. ECID) and the person namespace (e.g. CRMID) that were sent.
-  * For Web SDK implementations, these are usually the namespaces included in the identityMap.
-  * For Analytics source connector implementations, these are the cookie identifier included in the identityMap. The person identifier is an eVar field marked as an identity.
-* The dataset in which the event was sent in (dataset_name).
-* The identity value of the cookie namespace to look up (identity_value).
+1. The identity symbol (namespaceCode) of the cookie namespace (e.g. ECID) and the person namespace (e.g. CRMID) that were sent.
+  1.1. For Web SDK implementations, these are usually the namespaces included in the identityMap.
+  1.2. For Analytics source connector implementations, these are the cookie identifier included in the identityMap. The person identifier is an eVar field marked as an identity.
+2. The dataset in which the event was sent in (dataset_name).
+3. The identity value of the cookie namespace to look up (identity_value).
 
 Identity symbols (namespaceCode) are case sensitive. To retrieve all identity symbols for a given dataset in the identityMap, run the following query:
 

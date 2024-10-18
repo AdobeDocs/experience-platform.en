@@ -135,7 +135,7 @@ This section outlines how namespace priority can affect other Experience Platfor
 Data hygiene record delete requests functions in the following manner, for a given identity:
 
 * Real-Time Customer Profile: Deletes any profile fragment with specified identity as primary identity. **The primary identity on Profile will now be determined based on namespace priority.**
-* Data lake: Deletes any record with the specified identity as primary identity.
+* Data lake: Deletes any record with the specified identity as primary identity. Unlike Profile Service, primary identity on data lake is based on primary identity specified on WebSDK (`primary=true`), or a field marked as primary identity
 
 For more information, read the [advanced lifecycle management overview](../../hygiene/home.md).
 
