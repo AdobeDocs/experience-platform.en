@@ -1,27 +1,27 @@
 ---
-title: Advanced Statistics Overview
+title: Overview of Advanced Statistical Modeling with Trusted Flow
 description: Learn how to use SQL to leverage ML models and transform raw data into actionable insights with improved accuracy. Enjoy simplified and automated data preprocessing on large datasets in a timely, parallel, and scalable manner with Data Distiller Feature Engineering SQL extension functions.
 role: Developer
 ---
-# Advanced Statistics Overview
+# Overview of advanced statistical modeling with Trusted Flow
 
 >[!AVAILABILITY]
 >
 >This functionality is available to customers who have purchased the Data Distiller add on. For more information contact your Adobe representative.
 
-Write SQL queries that leverage machine learning capabilities to gain access to advanced statistics from your data analysis. Use this series of documents to learn how to use SQL to leverage ML models and transform raw data into actionable insights with improved accuracy. Then enjoy simplified and automated data preprocessing on large datasets in a timely, parallel, and scalable manner with Data Distiller Feature Engineering SQL extension functions.
+Statistical modeling is used to make predictions, detect patterns, and generate insights from data. This applies to large, high-dimensional datasets with complex structures in a distributed fashion. Use the Data Distiller SQL extension to leverage statistical models and transform raw data by simplifying and automating data preprocessing on large datasets in a timely, parallel, and scalable manner.
 
-The advanced statistics section provides a comprehensive guide on using the Data Distiller SQL extension to perform sophisticated machine learning tasks. This set of documents is designed to help you effectively implement and leverage feature engineering, model creation, and algorithmic processing using SQL. The documentation guides you through the critical aspects necessary to seamlessly integrate advanced statistical techniques into your data workflows.
+This series of documents provides a comprehensive guide on using the Data Distiller SQL extension to perform traditional feature engineering and machine learning operations on Trusted Flow. These documents are designed to help you effectively implement and leverage SQL based feature engineering, SQL based model creation, and algorithmic processing. The documentation guides you through the critical aspects necessary to seamlessly integrate advanced statistical modeling into your regular SQL data workflows.
 
 ## Capabilities {#capabilities}
 
-Data Distiller equips you with the tools necessary to transform raw data into meaningful features, build and train machine learning models, and deploy these models for predictive analysis. The documentation is organized to help you understand and apply these capabilities step by step:
+Data Distiller equips you with the tools necessary to transform raw data into meaningful features, build and train statistical models, and use these models for predictive analysis. The documentation is organized to help you understand and apply these capabilities step by step:
 
 1. **Feature engineering**: Learn how to preprocess your data by extracting, transforming, and selecting the most relevant features. Learn about the available SQL functions that simplify and automate the feature engineering process, and how to ensure your data is optimally prepared for model training.
 
-2. **Models**: Discover how to build, update, and manage machine learning models using SQL. Understand the core processes involved in training, testing, and deploying models, and the required SQL syntax needed to apply these techniques to your datasets.
+2. **Models**: Discover how to manage, evaluate and predict advances statistical models using SQL. Understand the core processes involved in SQL to defining the life cycle of these models on your datasets.
 
-3. **Algorithms**: Explore the machine learning algorithms supported by Data Distiller, including clustering, classification, and regression. This document details the available algorithms, their parameters, and how to configure them using SQL to generate accurate and efficient models.
+3. **Algorithms**: Explore the advanced statistical modeling algorithms supported by Data Distiller, including clustering, classification, and regression. This document details the process to use available algorithms, their parameters, and how to generate customer-specific models using SQL extension to meet your business needs.
 
 ### Next Steps
 
