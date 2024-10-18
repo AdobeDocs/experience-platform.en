@@ -31,7 +31,7 @@ Extract relevant information from your data, especially text data, and convert i
 
 ### Feature transformation {#feature-transformation}
 
-After extracting features, focus on modifying them to improve their quality and suitability for machine learning models. Apply scaling, normalization, or encoding to ensure that your features are on the same scale and have a similar distribution. Use the following transformers:
+In addition to extracting features, use the following general transformers to prepare your features for advanced statistical models and derived datasets. Apply scaling, normalization, or encoding to ensure your features are on the same scale and have a similar distribution.
 
 #### General transformers
 
