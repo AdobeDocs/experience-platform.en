@@ -34,10 +34,10 @@ role: User,Developer
         - [Export data to ML environments](data-distiller/ml-feature-pipelines/export-data.md)
         - [AI/ML data pipeline enrichment end-to-end workflow](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
 - Data Distiller statistics {#advanced-statistics}
-    - [Overview](data-distiller/advanced-statistics/overview.md)
-    - [Feature engineering](data-distiller/advanced-statistics/feature-engineering.md)
-    - [Models](data-distiller/advanced-statistics/models.md)
-    - [Algorithms](data-distiller/advanced-statistics/algorithms.md)
+    - [Overview](advanced-statistics/overview.md)
+    - [Feature engineering](advanced-statistics/feature-engineering.md)
+    - [Models](advanced-statistics/models.md)
+    - [Algorithms](advanced-statistics/algorithms.md)
 - Examples {#use-cases}
     - [Overview](use-cases/overview.md)
     - [Abandoned browse](use-cases/abandoned-browse.md)
