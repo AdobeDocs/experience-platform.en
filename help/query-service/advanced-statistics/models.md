@@ -84,7 +84,7 @@ To help you understand how to manage model versions and apply transformations ef
 - `UPDATE model <model_alias>`: The update command handles versioning and increases the model's version number with each update.
 - `version`: An optional keyword used only during updates to create a new version of the model.
 
-## Test {#test}
+## Evaluate models {#evaluate-model}
 
 To ensure reliable results, assess the accuracy and effectiveness of the model before deploying it for predictions with the `model_evaluate` keyword. The SQL statement below specifies a test dataset, specific columns, and the model's version to test the model by evaluating its performance.
 
@@ -122,7 +122,7 @@ FROM   dataset)
 
 ## Evaluate and manage your models
 
-The `SHOW MODELS` command is used to list all the available machine learning models in the database. Use it to view the models that have been trained and are available for testing, evaluation, or prediction. When queried, the information is fetched from the model repository which is saved at the time of model creation. The details returned are: model id, model name, version, source dataset, algorithm details, options/parameters, created/updated time, and the user who created the model. 
+Use the `SHOW MODELS` command to list all the available models you have created. Use it to view the models that have been trained and are available for evaluation or prediction. When queried, the information is fetched from the model repository which updated during model creation. The details returned are: model ID, model name, version, source dataset, algorithm details, options/parameters, created/updated time, and the user who created the model.
 
 ```sql
 SHOW MODELS;
@@ -136,7 +136,7 @@ The results appear in a table similar to the one seen below:
 
 ## Cleanup and maintain your models
 
-Use the `DROP MODELS` command to delete specified machine learning models from the database. You can use it to remove outdated, unused, or unwanted models. This frees up resources and ensuring that only relevant models are maintained. You can also include an optional model name for improved specificity. This This only drops model with the provided model version.
+Use the `DROP MODELS` command to delete the models you created from the model registry. You can use it to remove outdated, unused, or unwanted models. This frees up resources and ensuring that only relevant models are maintained. You can also include an optional model name for improved specificity. This This only drops model with the provided model version.
 
 ```sql
 DROP MODEL IF EXISTS modelName
