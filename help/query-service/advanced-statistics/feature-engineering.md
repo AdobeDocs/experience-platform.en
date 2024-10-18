@@ -15,11 +15,11 @@ To meet your feature engineering needs use the SQL transformer extension to simp
 
 ## Technique overview {#technique-overview}
 
-To streamline and enhance your data preprocessing efforts, categorize your feature engineering techniques into three main areas: Feature Extraction, Feature Transformation, and Feature Selection. Each area includes specific functions designed to extract, convert, focus and improve your data preprocessing.
+The feature engineering capabilities cover three main areas: Feature Extraction, Feature Transformation, and Feature Selection. Each area includes specific functions designed to extract, convert, focus and improve your data preprocessing.
 
 ### Feature extraction {#feature-extraction}
 
-Begin by extracting relevant information from your data, particularly text data, and convert it into a numerical format that machine learning models can easily process. Use the following functions to perform feature extraction:
+Extract relevant information from your data, especially text data, and convert it into a numerical format that the supported models can consume or transform and derive datasets. Use the following functions to perform feature extraction:
 
 - **[Textual Transformer](./algorithms.md#textual-transformations)**: Convert textual data into numerical features.
 - **[Count Vectorizer](./algorithms.md#countvectorizer)**: Transform a collection of text documents into vectors of token counts.
