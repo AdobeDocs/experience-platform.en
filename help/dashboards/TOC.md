@@ -16,6 +16,12 @@ role: Developer,User
 * [Download dashboards to PDF](download.md)
 * SQL insights: query pro mode {#sql-insights-query-pro-mode}
   * [Overview](sql-insights-query-pro-mode/overview.md)
+  * Data Distiller Templates {#templates}
+    * [Overview](templates/overview.md)
+    * [Advanced Audience Overlaps](templates/overlaps.md)
+    * [Audience Comparison](templates/comparison.md)
+    * [Audience Trends](templates/trends.md)
+    * [Audience Identity Overlaps](templates/overlaps.md)
   * Filters {#filters}
     * [Date filter](sql-insights-query-pro-mode/filters/date-filter.md)
     * [Global filter](sql-insights-query-pro-mode/filters/global-filter.md) 
