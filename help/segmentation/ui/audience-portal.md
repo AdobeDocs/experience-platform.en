@@ -221,17 +221,25 @@ When you apply bulk actions to these audiences, the following conditions apply:
 
 #### [!BADGE Limited availability]{type=Informative} Flexible audience evaluation {#flexible-audience-evaluation}
 
-Flexible audience evaluation lets you run a segmentation job on an ad-hoc basis. 
+Flexible audience evaluation lets you run a segmentation job on demand.
 
-INSTRUCTIONS
+Choose the audiences you want to have evaluated and select **[!UICONTROL Evaluate audiences]**.
+
+IMAGE
+
+The **[!UICONTROL Evaluate audiences on demand]** popover appears, displaying the list of audiences that will be evaluated with the on-demand-segment job. You can confirm that the listed audiences are the ones you want to be evaluated.
+
+IMAGE
+
+After confirming the audiences, the flexible audience evaluation will begin.
 
 >[!IMPORTANT]
 >
 >When selecting audiences for flexible audience evaluation, the following conditions apply:
 >
->- All the audiences **must** have an origin of "Segmentation Service" 
->- All the audiences **must** be evaluated using batch segmentation
->- You can only select a maximum of 20 audiences
+>- All the audiences **must** have an origin of "Segmentation Service".
+>- All the audiences **must** be evaluated using batch segmentation.
+>- You can only select a maximum of 20 audiences.
 
 ## Audience details {#audience-details}
 
