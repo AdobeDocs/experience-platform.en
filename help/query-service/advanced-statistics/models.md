@@ -1,6 +1,6 @@
 ---
 title: Models
-description: Learn how to create, train, and manage machine learning models using SQL, including key processes like model versioning, evaluation, and prediction, to derive actionable insights from your data.
+description: Model lifecycle management with the Data Distiller SQL extension. Learn how to create, train, and manage advanced statistical models using SQL, including key processes such as model versioning, evaluation, and prediction, to derive actionable insights from your data.
 role: Developer
 ---
 # Models
@@ -9,41 +9,64 @@ role: Developer
 >
 >This functionality is available to customers who have purchased the Data Distiller add on. For more information contact your Adobe representative.
 
-Query Service now supports the core processes of building and deploying a machine learning model. You can use SQL to teach the model using your data, verify its accuracy, and then apply that knowledge to make predictions on new data. You can then use the model to generalize from your past data to make informed decisions about real-world scenarios.
+Query Service now supports the core processes of building and deploying a model. You can use SQL to train the model using your data, evaluate its accuracy, and then apply train model to make predictions on new data. You can then use the model to generalize from your past data to make informed decisions about real-world scenarios.
 
-The three steps in machine learning to generate actionable insights are:
+The three steps in the model lifecycle for generating actionable insights are:
 
 1. **Training**: The model learns patterns from the provided dataset. (create or replace model)
 2. **Testing/Evaluation**: The model's performance is assessed using a separate dataset. (`model_evaluate`)
 3. **Prediction**: The trained model is used to make predictions on new, unseen data.
 
-Use custom keywords to streamline the core processes of a machine learning model while maintaining familiar syntax and closely adhering to existing SQL grammar. This document covers the SQL necessary to create a model, add constructs, train the model, and evaluate and predict insights.
+Use the model SQL extension, added to the existing SQL grammar, to manage the model lifecycle according to your business needs. This document covers the SQL required to create or replace a model, train, evaluate, retrain when necessary, and predict insights.
 
 ## Model creation and training {#create-and-train}
 
-Learn how to define, configure, and train a machine learning model using SQL commands. The SQL below demonstrates how to create a model, apply feature engineering transformations, and initiate the training process, to ensure the model is configured correctly for future use.
+Learn how to define, configure, and train a machine learning model using SQL commands. The SQL below demonstrates how to create a model, apply feature engineering transformations, and initiate the training process to ensure the model is configured correctly for future use. The following SQL commands, detail different options for model creation and management:
+
+- **CREATE MODEL**: Creates and trains a new model on a specified dataset. If a model with the same name already exists, this command will return an error.
+- **CREATE MODEL IF NOT EXISTS**: Creates and trains a new model only if a model with the same name does not already exist on the specified dataset.
+- **CREATE OR REPLACE MODEL**: Creates and trains a model, replacing the latest version of an existing model with the same name on the specified dataset.
 
 ```sql
-CREATE
-OR
-replace modelIF NOT EXISTS <model_alias> transform( one_hot_encoder(NAME) ohe_name, string_indexer(gender) gendersi) options ( type = 'LogisticRegression', label = <label-COLUMN>, ) AS
-SELECT col1,
-       col2,
-       col3
-FROM   training-dataset.
+CREATE MODEL | CREATE MODEL IF NOT EXISTS | CREATE OR REPLACE MODEL}
+model_alias
+[TRANSFORM (select_list)]
+[OPTIONS(model_option_list)]
+[AS {select_query}]
+ 
+model_option_list:
+    MODEL_TYPE = { 'LINEAR_REG' |
+                   'LOGISTIC_REG' |
+                   'KMEANS' }
+  [, MAX_ITER = int64_value ]
+ [, LABEL = string_array ]
+[, REG_PARAM = float64_value ]
+```
+
+**Example**
+
+```sql
+CREATE MODEL churn_model
+TRANSFORM (vector_assembler(array(current_customers, previous_customers)) features) 
+OPTIONS(MODEL_TYPE='linear_reg', LABEL='churn_rate') 
+AS
+SELECT *
+FROM churn_with_rate
+ORDER BY period;
 ```
 
 To help you understand the key components and configurations in the model creation and training process, the following notes explain the purpose and function of each element in the SQL example above.
 
-- `<model_alias>`: The model alias is a reusable name assigned to the model, which can be referenced later.
-- `transform`: The transform clause is used to apply feature engineering transformations (for example, one-hot encoding and string indexing) to the dataset before training the model.
+- `<model_alias>`: The model alias is a reusable name assigned to the model, which can be referenced later. It is required to give your model a name.
+- `transform`: The transform clause is used to apply feature engineering transformations (for example, one-hot encoding and string indexing) to the dataset before training the model. The last clause of the `TRANSFORM` statement should be either a `vector_assembler` with a list of columns that would compose the features for model training, or a derived type of the `vector_assembler` (such as `max_abs_scaler(feature)`, `standard_scaler(feature)`, and so on). Only the columns mentioned in the last clause will be used for training; all other columns, even if included in the `SELECT` query, will be excluded.
 - `label = <label-COLUMN>`: The label column in the training dataset that specifies the target or outcome the model aims to predict.
 - `training-dataset`: This syntax selects the data used to train the model.
 - `type = 'LogisticRegression'`: This syntax specifies the type of machine learning algorithm to use. Options include `LinearRegression`, `LogisticRegression`, and `KMeans`.
-- `options`: This keyword provides a flexible set of key-value pairs to configure the model. The values `type` and `label`, used in this example are for illustration purposes only.
-- **Model versioning**: When a model is first created, its version is set to 0.
-- **Transform clause impact**: If the transform clause is used, only the fields specified in the transform clause are used to train the model.
-- **Pipeline Stages**: Both the model and the applied transformations are saved as stages in a pipeline. This makes them reusable in a future evaluation or prediction steps.
+- `options`: This keyword provides a flexible set of key-value pairs to configure the model.
+  - `Key model_type`: `model_type = '<supported algorithm>'`: Specifies the type of machine learning algorithm to use. Supported options include `LinearRegression`, `LogisticRegression`, and `KMeans`.
+  - `Key label`: `label = <label_COLUMN>`: Defines the label column in the training dataset, which indicates the target or outcome the model is aiming to predict.
+
+Use SQL to reference the dataset used for training.
 
 ## Update a model {#update}
 
