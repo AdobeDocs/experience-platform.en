@@ -17,12 +17,7 @@ role: User,Developer
 - Data Distiller {#data-distiller}
     - [Overview](data-distiller/overview.md)
     - [License usage](data-distiller/license-usage.md)
-    - Advanced statistics {#advanced-statistics}
-        - [Overview](data-distiller/advanced-statistics/overview.md)
-        - [Feature engineering](data-distiller/advanced-statistics/feature-engineering.md)
-        - [Models](data-distiller/advanced-statistics/models.md)
-        - [Algorithms](data-distiller/advanced-statistics/algorithms.md)
-    - Derived datasets {#derived-datasets}
+        - Derived datasets {#derived-datasets}
         - [Overview](data-distiller/derived-datasets/overview.md)
         - [Create derived datasets with SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
         - [Create decile-based derived datasets](data-distiller/derived-datasets/decile-based-derived-attributes.md)
@@ -38,6 +33,11 @@ role: User,Developer
         - [Engineer features for ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
         - [Export data to ML environments](data-distiller/ml-feature-pipelines/export-data.md)
         - [AI/ML data pipeline enrichment end-to-end workflow](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
+- Data Distiller statistics {#advanced-statistics}
+    - [Overview](data-distiller/advanced-statistics/overview.md)
+    - [Feature engineering](data-distiller/advanced-statistics/feature-engineering.md)
+    - [Models](data-distiller/advanced-statistics/models.md)
+    - [Algorithms](data-distiller/advanced-statistics/algorithms.md)
 - Examples {#use-cases}
     - [Overview](use-cases/overview.md)
     - [Abandoned browse](use-cases/abandoned-browse.md)
