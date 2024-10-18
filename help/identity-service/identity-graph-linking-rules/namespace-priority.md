@@ -115,14 +115,18 @@ Given the configurations outlined above, user actions and determination of prima
 
 ![A diagram of segment membership storage](../images/namespace-priority/segment-membership-storage.png)
 
-For a given merged profile, segment memberships will be stored against the identity with the highest priority namespace.
+For a given merged profile, segment memberships will be stored against the identity with the highest namespace priority.
 
 For example, assume that there are two profiles:
 
-* The first profile represents John.
-* The second profile represents Jane.
+* Profile 1 represents John.
+  * John's profile qualifies for S1 (segment membership 1). For example, S1 could refer to a segment of customers that identify as male.
+  * John's profile also qualifies for S2 (segment membership 2). This could refer to a segment of customers that use an iOS mobile device.
+* Profile 2 represents Jane.
+  * Jane's profile qualifies for S3 (segment membership 3). This could refer to a segment of customers that identify as female.
+  * Jane's profile also qualifies for S4 (segment membership 4). This could refer to a segment of customers that use an android mobile device.
 
-If the John and Jane share a device, then the ECID (web browser) transfers from one person to another. However, this does not influence the segment membership information stored against John and Jane.
+If John and Jane share a device, then the ECID (web browser) transfers from one person to another. However, this does not influence the segment membership information stored against John and Jane.
 
 If the segment qualification criteria were solely based on anonymous events stored against the ECID, then Jane would qualify for that segment
 
