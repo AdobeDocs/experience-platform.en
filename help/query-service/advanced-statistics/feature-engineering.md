@@ -9,8 +9,6 @@ role: Developer
 >
 >This functionality is available to customers who have purchased the Data Distiller add on. For more information contact your Adobe representative.
 
-<!-- COMMENTED OUT because its review feeback to remove: Use the Data Distiller feature engineering SQL extension to transform raw data into meaningful features that improve machine learning model accuracy.  -->
-
 To meet your feature engineering needs use the SQL transformer extension to simplify and automate your data preprocessing. Use this extension to build features and enjoy seamless experimentation with different feature engineering techniques, including associating them with models. Designed for distributed computing, you can perform feature engineering on large datasets in a parallel and scalable manner, significantly reducing the time required for data preprocessing with the Data Distiller feature engineering SQL extension.
 
 ## Technique overview {#technique-overview}
