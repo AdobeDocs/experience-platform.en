@@ -204,14 +204,9 @@ The list of available filters is displayed.
 
 ### Bulk actions {#bulk-actions}
 
->[!CONTEXTUALHELP]
->id="platform_segmentation_browse_flexibleaudienceevaluation"
->title="Flexible audience evaluation limits"
->abstract="You can evaluate up to 20 audiences in a single flexible audience evaluation run.<br/><br/>Additionally, while the evaluation job runs as soon as possible, there may be system delays that may occur since on-demand evaluations <b>cannot</b> run simultaneously with another on-demand or batch evaluation."
+Additionally, you can select up to 25 different audiences, and perform various actions on these audiences. These actions include [moving to a folder](#folders), [editing or applying a tag](#tags), [evaluating audiences](#flexible-audience-evaluation), [applying access labels](../../access-control/abac/ui/labels.md),and [deleting](#browse).
 
-Additionally, you can select up to 25 different audiences, and perform various actions on these audiences. These actions include [moving to a folder](#folders), [editing or applying a tag](#tags), [evaluating audiences](#flexible-audience-evaluation), and [deleting](#browse).
-
-![The available options for bulk actions are highlighted.](../images/ui/audience-portal/bulk-actions.png)
+![The available options for bulk actions are displayed.](../images/ui/audience-portal/bulk-actions.png)
 
 When you apply bulk actions to these audiences, the following conditions apply:
 
@@ -221,15 +216,20 @@ When you apply bulk actions to these audiences, the following conditions apply:
 
 #### [!BADGE Limited availability]{type=Informative} Flexible audience evaluation {#flexible-audience-evaluation}
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_browse_flexibleaudienceevaluation"
+>title="Flexible audience evaluation limits"
+>abstract="You can evaluate up to 20 audiences in a single flexible audience evaluation run.<br/><br/>Additionally, while the evaluation job runs as soon as possible, there may be system delays that may occur since on-demand evaluations <b>cannot</b> run simultaneously with another on-demand or batch evaluation."
+
 Flexible audience evaluation lets you run a segmentation job on demand.
 
 Choose the audiences you want to have evaluated and select **[!UICONTROL Evaluate audiences]**.
 
-IMAGE
+![The audiences that you want to use flexible audience evaluation on are selected.](../images/ui/audience-portal/evaluate-audiences.png)
 
-The **[!UICONTROL Evaluate audiences on demand]** popover appears, displaying the list of audiences that will be evaluated with the on-demand-segment job. You can confirm that the listed audiences are the ones you want to be evaluated.
+The **[!UICONTROL Evaluate audiences on demand]** popover appears, displaying the list of audiences that will be evaluated with the on-demand-segment job. If an audience is ineligible to be evaluated on demand, it will automatically be removed from the evaluation job. You can confirm that the listed audiences are the ones you want to be evaluated.
 
-IMAGE
+![The audiences that can be evaluated using flexible audience evaluation are displayed.](../images/ui/audience-portal/evaluate-audiences-modal.png)
 
 After confirming the audiences, the flexible audience evaluation will begin.
 
