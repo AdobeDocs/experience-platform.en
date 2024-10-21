@@ -51,7 +51,7 @@ After you have [created a datastream](configure.md) and [added a service](config
 
     ![Image of the datastreams user interface showing the dynamic configuration rule.](assets/configure-dynamic-datastream/drag-resources.png)
 
-1. In the **[!UICONTROL Configuration]** section, toggle the services that you want to enable or disable for each rule, depending on whether you want the data to be sent to each service. If you turn the toggle off, the rule is disabled and *all data* will be sent to the upstream service.
+1. In the **[!UICONTROL Configuration]** section, toggle the services that you want to enable or disable for each rule, depending on whether you want the data to be sent to each service. If you turn the toggle off, the service routing is disabled and *no data* will be sent to the upstream service.
 
     ![Image of the datastreams user interface showing the dynamic configuration rule.](assets/configure-dynamic-datastream/enable-service.png)
 
