@@ -101,7 +101,7 @@ Suppose that the following configurations are established for a given sandbox:
 
 Given the configurations outlined above, user actions and determination of primary identity, will be resolved as such:
 
-| User action (Experience event) | Authentication state | Data source | Namespaces in event | Primary identity (primary key of profile fragment) |
+| User action (Experience event) | Authentication state | Data source | Identities in event | Primary identity (primary key of profile fragment) |
 | --- | --- | --- | --- | --- |
 | View credit card offer page | Unauthenticated (anonymous) | Web SDK | {ECID} | ECID |
 | View help page | Unauthenticated | Mobile SDK | {ECID, IDFA} | IDFA |
