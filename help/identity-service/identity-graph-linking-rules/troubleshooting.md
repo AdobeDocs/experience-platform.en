@@ -117,7 +117,6 @@ After running your query, find the event record that you expected to generate a 
 >
 >If the two identities are exactly the same, and if the event is ingested via streaming, then both Identity and Profile will deduplicate the identity.
 
-
 ### Post-authentication ExperienceEvents are being attributed to the wrong authenticated profile
 
 Namespace priority plays an important role in how event fragments determine primary identity.
@@ -369,7 +368,7 @@ The key points to highlight are as follows:
 >Journeys should look up a profile with a unique namespaces because a non-unique namespace may be re-assigned to another user.
 >
 >* ECIDs, and non-unique email/phone namespaces could move from one person to another.
->* If a journey as a wait condition and if these non-unique namespaces are used to lookup a profile on a journey, then the journey message may be sent to the incorrect person
+>* If a journey has a wait condition and if these non-unique namespaces are used to lookup a profile on a journey, then the journey message may be sent to the incorrect person.
 
 ## Namespace priority
 

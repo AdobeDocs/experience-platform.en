@@ -121,10 +121,10 @@ For example, assume that there are two profiles:
 
 * Profile 1 represents John.
   * John's profile qualifies for S1 (segment membership 1). For example, S1 could refer to a segment of customers that identify as male.
-  * John's profile also qualifies for S2 (segment membership 2). This could refer to a segment of customers whose loyalty status are gold.
+  * John's profile also qualifies for S2 (segment membership 2). This could refer to a segment of customers whose loyalty status is gold.
 * Profile 2 represents Jane.
   * Jane's profile qualifies for S3 (segment membership 3). This could refer to a segment of customers that identify as female.
-  * Jane's profile also qualifies for S4 (segment membership 4). This could refer to a segment of customers whose loyalty status are platinum.
+  * Jane's profile also qualifies for S4 (segment membership 4). This could refer to a segment of customers whose loyalty status is platinum.
 
 If John and Jane share a device, then the ECID (web browser) transfers from one person to another. However, this does not influence the segment membership information stored against John and Jane.
 
@@ -139,7 +139,7 @@ This section outlines how namespace priority can affect other Experience Platfor
 Data hygiene record delete requests functions in the following manner, for a given identity:
 
 * Real-Time Customer Profile: Deletes any profile fragment with specified identity as primary identity. **The primary identity on Profile will now be determined based on namespace priority.**
-* Data lake: Deletes any record with the specified identity as primary identity. Unlike Profile Service, primary identity on data lake is based on primary identity specified on WebSDK (`primary=true`), or a field marked as primary identity
+* Data lake: Deletes any record with the specified identity as primary identity. Unlike Real-Time Customer Profile, primary identity in data lake is based on primary identity specified on WebSDK (`primary=true`), or a field marked as primary identity
 
 For more information, read the [advanced lifecycle management overview](../../hygiene/home.md).
 
