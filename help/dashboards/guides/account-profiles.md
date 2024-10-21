@@ -73,6 +73,10 @@ Adobe provides standard widgets that you can use to visualize different metrics 
 To learn more about each of the available standard widgets, select the name of a widget from the following list:
 
 * [Account profiles added](#account-profiles-added)
+* [Customers per account overview](#customers-per-account-overview)
+  * [Opportunities per account overview](#opportunities-per-account-overview)
+  * [Opportunities per account detail](#opportunities-per-account-detail)
+  * [Customers per account detail](#customers-per-account-detail)
 * [New accounts by industry](#accounts-by-industry)
 * [New accounts by type](#accounts-by-type)
 * [New opportunities by person role](#opportunities-by-person-role)
@@ -83,18 +87,59 @@ To learn more about each of the available standard widgets, select the name of a
 * [Predictive scoring distribution](#predictive-scoring-distribution)
 * [Predictive scoring top influential factors](#predictive-scoring-top-influential-factors)
 
-<!-- 
-* [Customers per account overview](#customers-per-account-overview)
-* [Customers per account detail](#customers-per-account-detail)
-* [Accounts per opportunity](#accounts-per-opportunity)
-* [Accounts per opportunity detail](#accounts-per-opportunity-detail)
- -->
-
 ### Account profiles added {#account-profiles-added}
 
 The [!UICONTROL Account profiles added] widget uses a line graph to display the number of account profiles added each day over a period of time. Use the global date filter located at the top of your dashboard to determine the period of analysis. If no date filter is provided, the default behavior lists the account profiles added for the year prior to today. The results can be used to infer a trend in the number of account profiles added.
 
 ![The Account profiles added widget.](../images/account-profiles/account-profiles-added.png)
+
+### Customers per account overview {#customers-per-account-overview}
+
+The [!UICONTROL Customers per account overview] chart provides a summary of accounts based on their customer types. It displays a four-row table categorizing accounts as those with either direct or indirect customers, or those without. The chart helps identify the distribution of accounts that have direct versus indirect customers.
+
+![The Customers per account overview widget.](customers-per-account-overview-widget.png)
+
+To access more detailed insights, select the ellipse on the [!UICONTROL Customers per account overview] chart and choose **[!UICONTROL Drill]** through from the dropdown menu. 
+
+![The Customers per account overview widget with the ellipse dropdown menu and Drill through highlighted.](customers-per-account-overview-dropdown.png)
+
+To gain a deeper understanding of the structure of your B2B data, explore the following drill-through charts:
+
+* [[!UICONTROL Customers per account detail]](#customers-per-account-detail)
+* [[!UICONTROL Accounts per opportunity overview]](#accounts-per-opportunity-overview)
+* [[!UICONTROL Opportunities per account detail]](#accounts-per-opportunity-detail)
+
+These drill-through charts help you identify how many account profiles have no customer profiles linked or have one or more customer profiles associated with them. They also help you to identify how many direct or indirect customers are associated with your accounts.
+
+Direct customers are customer profiles that are directly linked to an account through the `personComponents` route. This relationship is more straightforward and involves a direct, explicit connection between the customer and the account. 
+
+Indirect customers are customer profiles linked to an account via the `Account-Person` route. This relationship is less straightforward and involves an intermediate entity or a more complex connection between the customer and the account, typically through other accounts or relationships.
+
+### [!UICONTROL Navigate between dashboard views] {#dashboard-view-navigation}
+
+To switch between the drill through and the Account Profiles dashboard, select the folder icon (![A folder icon.]()) followed by the correct view from the dropdown menu.
+
+![The drill though view in the Accounts Profiles dashbaord with the navigation dropdown menu highlighted.](navigation-dropdown.png)
+
+To learn more about drill throughs in the Platform UI, see the [Drill Through guide](../sql-insights-query-pro-mode/drill-through.md). 
+
+#### [!UICONTROL Customers per account detail] {#customers-per-account-detail}
+
+The [!UICONTROL Customers per account detail] chart provides more granular details about the number of customers associated with different account types. It displays a two-column table detailing accounts by customer type (direct or indirect) and the range of customers associated with them. This helps to understand how the customers are distributed across different account categories and the approximate number of customers in each.
+
+![The Customers per account detail widget.](customers-per-account-detail.png)
+
+#### [!UICONTROL Opportunities per account overview] {#opportunities-per-account-overview}
+
+The [!UICONTROL Opportunities per account overview] chart presents a summary of accounts that either have or do not have opportunities. This two-row table helps to quickly determine the number of accounts that are associated with opportunities, providing a snapshot of opportunity engagement across accounts.
+
+![The Opportunities per account overview widget.](opportunities-per-account-overview.png)
+
+#### [!UICONTROL Opportunities per account detail] {#opportunities-per-account-detail}
+
+The [!UICONTROL Opportunities per account detail] chart offers a more detailed breakdown of accounts based on the number of opportunities they have. The table displays the number of accounts grouped by opportunity count ranges, such as 1-10 opportunities or 100+ opportunities. This chart helps identify how accounts are distributed by the number of opportunities they are managing.
+
+![The Opportunities per account detail widget.](opportunities-per-account-detail.png)
 
 ### New accounts by industry {#accounts-by-industry}
 
