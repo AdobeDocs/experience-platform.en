@@ -101,7 +101,7 @@ Suppose that the following configurations are established for a given sandbox:
 
 Given the configurations outlined above, user actions and determination of primary identity, will be resolved as such:
 
-| User action (Experience event) | Authentication state | Data source | Identity map | Primary identity (primary key of profile fragment) |
+| User action (Experience event) | Authentication state | Data source | Namespaces in event | Namespace of primary identity |
 | --- | --- | --- | --- | --- |
 | View credit card offer page | Unauthenticated (anonymous) | Web SDK | {ECID} | ECID |
 | View help page | Unauthenticated | Mobile SDK | {ECID, IDFA} | IDFA |
@@ -115,14 +115,18 @@ Given the configurations outlined above, user actions and determination of prima
 
 ![A diagram of segment membership storage](../images/namespace-priority/segment-membership-storage.png)
 
-For a given merged profile, segment memberships will be stored against the identity with the highest priority namespace.
+For a given merged profile, segment memberships will be stored against the identity with the highest namespace priority.
 
 For example, assume that there are two profiles:
 
-* The first profile represents John.
-* The second profile represents Jane.
+* Profile 1 represents John.
+  * John's profile qualifies for S1 (segment membership 1). For example, S1 could refer to a segment of customers that identify as male.
+  * John's profile also qualifies for S2 (segment membership 2). This could refer to a segment of customers whose loyalty status is gold.
+* Profile 2 represents Jane.
+  * Jane's profile qualifies for S3 (segment membership 3). This could refer to a segment of customers that identify as female.
+  * Jane's profile also qualifies for S4 (segment membership 4). This could refer to a segment of customers whose loyalty status is platinum.
 
-If the John and Jane share a device, then the ECID (web browser) transfers from one person to another. However, this does not influence the segment membership information stored against John and Jane.
+If John and Jane share a device, then the ECID (web browser) transfers from one person to another. However, this does not influence the segment membership information stored against John and Jane.
 
 If the segment qualification criteria were solely based on anonymous events stored against the ECID, then Jane would qualify for that segment
 
@@ -135,15 +139,13 @@ This section outlines how namespace priority can affect other Experience Platfor
 Data hygiene record delete requests functions in the following manner, for a given identity:
 
 * Real-Time Customer Profile: Deletes any profile fragment with specified identity as primary identity. **The primary identity on Profile will now be determined based on namespace priority.**
-* Data lake: Deletes any record with the specified identity as primary identity.
+* Data lake: Deletes any record with the specified identity as primary identity. Unlike Real-Time Customer Profile, primary identity in data lake is based on primary identity specified on WebSDK (`primary=true`), or a field marked as primary identity
 
 For more information, read the [advanced lifecycle management overview](../../hygiene/home.md).
 
 ### Computed attributes
 
-Computed attributes does not use namespace priority to compute values. If you are using computed attributes, you must ensure that the CRMID is designated as your primary identity for WebSDK. This limitation is expected to be resolved in August 2024.
-
-For more information, read the [computed attributes UI guide](../../profile/computed-attributes/ui.md).
+Computed attributes does not use namespace priority to compute values. If you are using computed attributes, you must ensure that the CRMID is designated as your primary identity for WebSDK. For more information, read the [computed attributes UI guide](../../profile/computed-attributes/ui.md).
 
 ### Data lake
 
