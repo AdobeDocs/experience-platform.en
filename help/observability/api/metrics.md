@@ -62,7 +62,6 @@ curl -X POST \
               }
             ],
             "aggregator": "sum",
-            "downsample": "sum"
           }
         ]
       }'
