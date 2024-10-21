@@ -83,6 +83,13 @@ To learn more about each of the available standard widgets, select the name of a
 * [Predictive scoring distribution](#predictive-scoring-distribution)
 * [Predictive scoring top influential factors](#predictive-scoring-top-influential-factors)
 
+<!-- 
+* [Customers per account overview](#customers-per-account-overview)
+* [Customers per account detail](#customers-per-account-detail)
+* [Accounts per opportunity](#accounts-per-opportunity)
+* [Accounts per opportunity detail](#accounts-per-opportunity-detail)
+ -->
+
 ### Account profiles added {#account-profiles-added}
 
 The [!UICONTROL Account profiles added] widget uses a line graph to display the number of account profiles added each day over a period of time. Use the global date filter located at the top of your dashboard to determine the period of analysis. If no date filter is provided, the default behavior lists the account profiles added for the year prior to today. The results can be used to infer a trend in the number of account profiles added.
