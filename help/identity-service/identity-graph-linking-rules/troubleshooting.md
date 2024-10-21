@@ -364,6 +364,13 @@ The key points to highlight are as follows:
   * With this feature, ECID are no longer always associated with one profile.
   * The recommendation is to start journeys with person namespaces (CRMID).
 
+>[!TIP]
+>
+>Journeys should look up a profile with a unique namespaces because a non-unique namespace may be re-assigned to another user.
+>
+>* ECIDs, and non-unique email/phone namespaces could move from one person to another.
+>* If a journey as a wait condition and if these non-unique namespaces are used to lookup a profile on a journey, then the journey message may be sent to the incorrect person
+
 ## Namespace priority
 
 Read this section for answers to frequently asked questions about [namespace priority](./namespace-priority.md).

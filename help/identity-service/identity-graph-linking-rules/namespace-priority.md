@@ -101,7 +101,7 @@ Suppose that the following configurations are established for a given sandbox:
 
 Given the configurations outlined above, user actions and determination of primary identity, will be resolved as such:
 
-| User action (Experience event) | Authentication state | Data source | Identity map | Primary identity (primary key of profile fragment) |
+| User action (Experience event) | Authentication state | Data source | Namespaces in event | Primary identity (primary key of profile fragment) |
 | --- | --- | --- | --- | --- |
 | View credit card offer page | Unauthenticated (anonymous) | Web SDK | {ECID} | ECID |
 | View help page | Unauthenticated | Mobile SDK | {ECID, IDFA} | IDFA |
@@ -121,10 +121,10 @@ For example, assume that there are two profiles:
 
 * Profile 1 represents John.
   * John's profile qualifies for S1 (segment membership 1). For example, S1 could refer to a segment of customers that identify as male.
-  * John's profile also qualifies for S2 (segment membership 2). This could refer to a segment of customers that use an iOS mobile device.
+  * John's profile also qualifies for S2 (segment membership 2). This could refer to a segment of customers whose loyalty status are gold.
 * Profile 2 represents Jane.
   * Jane's profile qualifies for S3 (segment membership 3). This could refer to a segment of customers that identify as female.
-  * Jane's profile also qualifies for S4 (segment membership 4). This could refer to a segment of customers that use an android mobile device.
+  * Jane's profile also qualifies for S4 (segment membership 4). This could refer to a segment of customers whose loyalty status are platinum.
 
 If John and Jane share a device, then the ECID (web browser) transfers from one person to another. However, this does not influence the segment membership information stored against John and Jane.
 
