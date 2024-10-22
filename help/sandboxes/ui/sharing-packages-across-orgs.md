@@ -17,7 +17,7 @@ Improve configuration accuracy across sandboxes and seamlessly export and import
 
 - **Public package**
 
-[Public packages](./sandbox-tooling.md/#export-and-import-an-entire-sandbox) are available to import without any additional approval. These packages can be shared on a partner's website, blog, or platform. The package payload allows packages to be copied and pasted from these channels to the target organization.
+[Public packages](#public-packages) are available to import without any additional approval. These packages can be shared on a partner's website, blog, or platform. The package payload allows packages to be copied and pasted from these channels to the target organization.
 
 ## Private packages {#private-packages}
 
@@ -82,6 +82,52 @@ In the **[!UICONTROL Share package]** dialog, select the package to share from t
 >It is possible to select more than one organization. Selected organizations will show up beneath the [!UICONTROL Share settings] dropdown.
 
 ![Share package dialog with Share settings and Confirm highlighted.](../images/ui/sandbox-tooling/private-share-package-confirm.png)
+
+## Public packages {#public-packages}
+
+Use the Sandbox Tooling feature to create public packages that can be shared without any additional approval and easily imported with the use of the package's payload. 
+
+### Update a package to public {#update-package}
+
+To update a packages share type, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Packages]** tab. Next, select the ellipsis (`...`) next to the package, and then select **[!UICONTROL Update to public package]** from the dropdown menu.
+
+<!-- SCREENSHOT -->
+
+In the **[!UICONTROL Change package availability to public]** dialog, review the package name and select **Confirm**. 
+
+>[!IMPORTANT]
+>
+> Once a package has been made public, it cannot be changed back to private.
+
+<!-- SCREENSHOT -->
+
+## Share packages using their payload
+
+To share the public package, select the ellipses (`...`) next to the package, and then select **[!UICONTROL Copy package payload]**.
+
+<!-- SCREENSHOT -->
+
+In the **[!UICONTROL Copy package payload]** dialog, select **Copy package payload**.
+
+<!-- SCREENSHOT -->
+
+## Create a package from a package payload
+
+To create a package from a package payload, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Packages]** tab. Next, select **Create package**.
+
+<!-- SCREENSHOT -->
+
+In the **[!UICONTROL Create package]** dialog, select **Paste package payload**, then select **Select**.
+
+<!-- SCREENSHOT -->
+
+In the **Package payload** dialog, paste the copied package payload into the text field and select **Create**. 
+
+<!-- SCREENSHOT -->
+
+A confirmation message will appear to confirm the staus of you request. Select **View status** from pop up the screen, or navigate to **[!UICONTROL Sharing status]**. to view the current sharing status of your request.
+
+<!-- SCREENSHOT -->
 
 ## Next steps {#next-steps}
 
