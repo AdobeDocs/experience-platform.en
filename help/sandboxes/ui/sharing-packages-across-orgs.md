@@ -93,7 +93,7 @@ To update a package's share type, navigate to the [!UICONTROL Sandboxes] **[!UIC
 
 ![The Sandboxes UI with the packages tab and the dropdown option menu with Update to public package highlighted.](../images/ui/sandbox-tooling/update-to-public.png)
 
-In the **[!UICONTROL Change package availability to public]** dialog, check the package name is correct and select **Confirm**. 
+In the **[!UICONTROL Change package availability to public]** dialog, check the package name is correct and select **[!UICONTROL Confirm]**. 
 
 >[!IMPORTANT]
 >
@@ -107,21 +107,21 @@ To share the public package, select the ellipses (`...`) next to the package, an
 
 ![The Sandboxes UI showing a individual packages dropdown menu with Copy package payload highlighted.](../images/ui/sandbox-tooling/copy-package-payload.png)
 
-In the **[!UICONTROL Copy package payload]** dialog, select **Copy package payload**.
+In the **[!UICONTROL Copy package payload]** dialog, select **[!UICONTROL Copy package payload]**.
 
 ![Copy package payload dialog box showing the JSON payload with Copy package payload highlighted.](../images/ui/sandbox-tooling/confirm-payload-copy.png)
 
 ## Create a package from a package payload
 
-To create a package from a package payload, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Packages]** tab. Next, select **Create package**.
+To create a package from a package payload, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Packages]** tab. Next, select **[!UICONTROL Create package]**.
 
 ![The Sandboxes UI showing Create package highlighted.](../images/ui/sandbox-tooling/create-package.png)
 
-In the **[!UICONTROL Create package]** dialog, select **Paste package payload**, then select **Select**.
+In the **[!UICONTROL Create package]** dialog, select **[!UICONTROL Paste package payload]**, then select **[!UICONTROL Select]**.
 
 ![Create package dialog with paste package payload selected and Select highlighted.](../images/ui/sandbox-tooling/create-package-options.png)
 
-In the **Package payload** dialog, paste the copied package payload into the text field and select **Create**. 
+In the **[!UICONTROL Package payload]** dialog, paste the copied package payload into the text field and select **[!UICONTROL Create]**. 
 
 ![Create package dialog with the empty text field and Create highlighted.](../images/ui/sandbox-tooling/paste-payload.png)
 
