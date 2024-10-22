@@ -483,9 +483,9 @@ curl -X GET \
 
 +++Response
 
-A successful response returns your dataflow details, including information on its corresponding source and target connections. You must take note of the source connection ID, as this value is required in order to retrieve your source connection details in the next step.
+A successful response returns your dataflow details, including information on its corresponding source and target connections. You must take note of your source and target connection IDs, as these values are required later, in order to publish your dataflow.
 
-```json {line-numbers="true" start-line="1" highlight="23"}
+```json {line-numbers="true" start-line="1" highlight="23, 26"}
 {
     "items": [
         {
@@ -786,9 +786,140 @@ A successful response returns your source connection ID and etag (version).
 
 +++
 
-### Save and ingest your draft dataflow
+### Publish your source connection
 
-Finally, return to the UI and save and ingest the dataflow that you drafted in step 1. Doing so allows the [!DNL Marketo] provider service to trigger and register the activity type filters of your dataflow.
+With your source connection updated with your filtering conditions, you can now move on from the draft state and publish your source connection. To do so, make a POST request to the `/sourceConnections` endpoint and provide the ID of your draft source connection as well as an action operation for publishing.
+
+**API format**
+
+```http
+POST /sourceConnections/{SOURCE_CONNECTION_ID}/action?op=publish
+```
+
+| Parameter | Description |
+| --- | --- |
+| {SOURCE_CONNECTION_ID} | The ID of the source connection that you want to publish. |
+| `op` | An action operation that updates the state of the queried source connection. To publish a draft source connection, set `op` to `publish`. |
+
++++Request
+
+The following request publishes a drafted source connection.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections/56f7eb3a-b544-4eaa-b167-ef1711044c7a/action?op=publish' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+```
+
++++
+
++++Response
+
+A successful response returns your source connection ID and etag (version).
+
+```json
+{
+    "id": "56f7eb3a-b544-4eaa-b167-ef1711044c7a",
+    "etag": "\"9f007f7b-0000-0200-0000-670ef1150000\""
+}
+```
+
++++
+
+### Publish your target connection
+
+Similar to the previous step, you must also publish your target connection, in order to proceed and publish your draft dataflow. Make a POST request to the `/targetConnections` endpoint and provide the ID of the draft target connection that you want to publish, as well as an action operation for publishing.
+
+**API format**
+
+```http
+POST /targetConnections/{TARGET_CONNECTION_ID}/action?op=publish
+```
+
+| Parameter | Description |
+| --- | --- |
+| {TARGET_CONNECTION_ID} | The ID of the target connection that you want to publish. |
+| `op` | An action operation that updates the state of the queried target connection. To publish a draft target connection, set `op` to `publish`. |
+
++++Request
+
+The following request publishes the target connection with ID: `7e53e6e8-b432-4134-bb29-21fc6e8532e5`.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections/7e53e6e8-b432-4134-bb29-21fc6e8532e5/action?op=publish' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+```
+
++++
+
++++Response
+
+A successful response returns the ID and corresponding etag for your published target connection.
+
+```json
+{
+    "id": "7e53e6e8-b432-4134-bb29-21fc6e8532e5",
+    "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
+}
+```
+
++++
+
+
+### Publish your dataflow
+
+With your source and target connections both published, you can now proceed to the final step and publish your dataflow. To publish your dataflow, make a POST request to the `/flows` endpoint and provide your dataflow ID and an action operation for publishing.
+
+**API format**
+
+```http
+POST /flows/{FLOW_ID}/action?op=publish
+```
+
+| Parameter | Description |
+| --- | --- |
+| {FLOW_ID} | The ID of the dataflow that you want to publish. |
+| `op` | An action operation that updates the state of the queried dataflow. To publish a draft dataflow, set `op` to `publish`. |
+
++++Request
+
+The following request publishes your draft dataflow.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/flows/a7e88a01-40f9-4ebf-80b2-0fc838ff82ef/action?op=publish' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+```
+
++++
+
++++Response
+
+A successful response returns the ID and corresponding `etag` of your dataflow.
+
+```json
+{
+  "id": "a7e88a01-40f9-4ebf-80b2-0fc838ff82ef",
+  "etag": "\"4b0354b7-0000-0200-0000-6716ce1f0000\""
+}
+```
+
++++
+
+You can use the Experience Platform UI to verify that your draft dataflow has been published. Navigate to the dataflows page in the sources catalog and reference the **[!UICONTROL Status]** of your dataflow. If successful, the status should now be set to **Enabled**.
 
 >[!TIP]
 >
