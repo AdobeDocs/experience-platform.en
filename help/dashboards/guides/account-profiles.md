@@ -95,19 +95,23 @@ The [!UICONTROL Account profiles added] widget uses a line graph to display the 
 
 ### Customers per account overview {#customers-per-account-overview}
 
-The [!UICONTROL Customers per account overview] chart provides a summary of accounts based on their customer types. It displays a four-row table categorizing accounts as those with either direct or indirect customers, or those without. The chart helps identify the distribution of accounts that have direct versus indirect customers.
+The [!UICONTROL Customers per account overview] chart provides a summary of accounts based on their customer types. It displays a four-row table that categorizes accounts as having either direct or indirect customers, or those without. It provides the total number of accounts for each category. The chart helps identify the distribution of accounts that have direct versus indirect customers.
+
+<!-- What is the breakdown of these numbers? it says 214K account son my dashboard but these numbers only total about 13.5K -->
 
 Direct customers are customer profiles that are directly linked to an account through the `personComponents` route. This relationship is more straightforward and involves a direct, explicit connection between the customer and the account. 
 
 Indirect customers are customer profiles linked to an account via the `Account-Person` route. This relationship is less straightforward and involves an intermediate entity or a more complex connection between the customer and the account, typically through other accounts or relationships.
 
+<!-- Q. Why does the widget show '... of 10' what are the other options here? -->
+
 ![The Customers per account overview widget.](../images/account-profiles/customers-per-account-overview-widget.png)
 
-The drill through view appears. To access more detailed insights, select the ellipse (**...**) on the [!UICONTROL Customers per account overview] chart and choose **[!UICONTROL Drill]** through from the dropdown menu. 
+To access more detailed insights, select the ellipse (**...**) on the [!UICONTROL Customers per account overview] chart and choose **[!UICONTROL Drill through]** from the dropdown menu. 
 
-![The Customers per account overview widget with the ellipse dropdown menu and Drill through highlighted.](customers-per-account-overview-dropdown.png)
+![The Customers per account overview widget with the ellipse dropdown menu and Drill through highlighted.](../images/account-profiles/customers-per-account-overview-dropdown.png)
 
-Next, explore the available drill-through charts to gain a deeper understanding of the structure of your B2B data. You can use these drill-through charts to identify how many account profiles have no customer profiles linked or have one or more customer profiles associated with them. You can also use them to identify how many direct or indirect customers are associated with your accounts.
+The drill through view appears. Next, explore the available drill-through charts to gain a deeper understanding of the structure of your B2B data. You can use these drill-through charts to identify how many account profiles have no customer profiles linked or have one or more customer profiles associated with them. You can also use them to identify how many direct or indirect customers are associated with your accounts.
 
 * [[!UICONTROL Customers per account detail]](#customers-per-account-detail)
 * [[!UICONTROL Accounts per opportunity overview]](#accounts-per-opportunity-overview)
@@ -123,7 +127,9 @@ To learn more about drill throughs in the Platform UI, see the [Drill Through gu
 
 #### [!UICONTROL Customers per account detail] {#customers-per-account-detail}
 
-The [!UICONTROL Customers per account detail] chart provides more granular details about the number of customers associated with different account types. It displays a two-column table detailing accounts by customer type (direct or indirect) and the range of customers associated with them. This helps to understand how the customers are distributed across different account categories and the approximate number of customers in each.
+The [!UICONTROL Customers per account detail] chart provides more granular details about the number of accounts associated with different customer types. It displays a three-column table detailing the number of accounts by customer type (direct or indirect) and the range of customers associated with them. This helps to understand how the customers are distributed across different customer categories and the total number of accounts associated with each.
+
+<!-- Shouldn't the third column be 'Total customers'? What am I missing? I am confused. -->
 
 ![The Customers per account detail widget.](../images/account-profiles/customers-per-account-detail.png)
 
@@ -135,7 +141,7 @@ The [!UICONTROL Opportunities per account overview] chart presents a summary of 
 
 #### [!UICONTROL Opportunities per account detail] {#opportunities-per-account-detail}
 
-The [!UICONTROL Opportunities per account detail] chart offers a more detailed breakdown of accounts based on the number of opportunities they have. The table displays the number of accounts grouped by opportunity count ranges, such as 1-10 opportunities or 100+ opportunities. This chart helps identify how accounts are distributed by the number of opportunities they are managing.
+The [!UICONTROL Opportunities per account detail] chart offers a more detailed breakdown of accounts based on the number of opportunities they have. The table displays the number of accounts grouped by opportunity count ranges, such as 1-10 opportunities or 100+ opportunities. This chart helps you to identify how accounts are distributed by the number of opportunities they are managing.
 
 ![The Opportunities per account detail widget.](../images/account-profiles/opportunities-per-account-detail.png)
 
