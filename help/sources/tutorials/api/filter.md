@@ -798,7 +798,7 @@ POST /sourceConnections/{SOURCE_CONNECTION_ID}/action?op=publish
 
 | Parameter | Description |
 | --- | --- |
-| {SOURCE_CONNECTION_ID} | The ID of the source connection that you want to publish. |
+| `{SOURCE_CONNECTION_ID}` | The ID of the source connection that you want to publish. |
 | `op` | An action operation that updates the state of the queried source connection. To publish a draft source connection, set `op` to `publish`. |
 
 +++Request
@@ -842,7 +842,7 @@ POST /targetConnections/{TARGET_CONNECTION_ID}/action?op=publish
 
 | Parameter | Description |
 | --- | --- |
-| {TARGET_CONNECTION_ID} | The ID of the target connection that you want to publish. |
+| `{TARGET_CONNECTION_ID}` | The ID of the target connection that you want to publish. |
 | `op` | An action operation that updates the state of the queried target connection. To publish a draft target connection, set `op` to `publish`. |
 
 +++Request
@@ -887,7 +887,7 @@ POST /flows/{FLOW_ID}/action?op=publish
 
 | Parameter | Description |
 | --- | --- |
-| {FLOW_ID} | The ID of the dataflow that you want to publish. |
+| `{FLOW_ID}` | The ID of the dataflow that you want to publish. |
 | `op` | An action operation that updates the state of the queried dataflow. To publish a draft dataflow, set `op` to `publish`. |
 
 +++Request
