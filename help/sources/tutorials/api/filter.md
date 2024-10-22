@@ -614,13 +614,13 @@ curl -X GET \
 
 A successful response returns the details of your source connection. Take note of the version as you will need this value in the next step in order to update your source connection.
 
-```json {line-numbers="true" start-line="1" highlight="47"}
+```json {line-numbers="true" start-line="1" highlight="30"}
 {
     "items": [
         {
-            "id": "56f7eb3a-b544-4eaa-b167-ef1711044c7a",
-            "createdAt": 1728592920859,
-            "updatedAt": 1729032469150,
+            "id": "b85b895f-a289-42e9-8fe1-ae448ccc7e53",
+            "createdAt": 1729634331185,
+            "updatedAt": 1729634331185,
             "createdBy": "acme@AdobeID",
             "updatedBy": "acme@AdobeID",
             "createdClient": "exc_app",
@@ -628,87 +628,38 @@ A successful response returns the details of your source connection. Take note o
             "sandboxId": "7f3419ce-53e2-476b-b419-ce53e2376b02",
             "sandboxName": "prod",
             "imsOrgId": "acme@AdobeOrg",
-            "name": "New Source Connection - 2024-10-10T13:42:00-07:00",
+            "name": "New Source Connection - 2024-10-23T03:28:50+05:30",
             "description": "Source connection created from the workflow",
-            "baseConnectionId": "0137118b-373a-4c4e-847c-13a0abf73b33",
-            "state": "enabled",
+            "baseConnectionId": "fd9f7455-1e23-4831-9283-7717e20bee40",
+            "state": "draft",
             "data": {
-                "format": "tabular"
+                "format": "tabular",
+                "schema": null,
+                "properties": null
             },
             "connectionSpec": {
-                "id": "bf1f4218-73ce-4ff0-b744-48d78ffae2e4",
+                "id": "2d31dfd1-df1a-456b-948f-226e040ba102",
                 "version": "1.0"
             },
             "params": {
                 "columns": [],
-                "tableName": "Activity",
-                "filters": {
-                    "type": "PQL",
-                    "format": "pql/json",
-                    "value": {
-                        "nodeType": "fnApply",
-                        "fnName": "in",
-                        "params": [
-                            {
-                                "nodeType": "fieldLookup",
-                                "fieldName": "activityType"
-                            },
-                            {
-                                "nodeType": "literal",
-                                "value": [
-                                    "Change Status in Progression"
-                                ]
-                            }
-                        ]
-                    }
-                }
+                "tableName": "Activity"
             },
-            "version": "\"9f007f7b-0000-0200-0000-670ef1150000\"",
-            "etag": "\"9f007f7b-0000-0200-0000-670ef1150000\"",
+            "version": "\"210068a6-0000-0200-0000-6718201b0000\"",
+            "etag": "\"210068a6-0000-0200-0000-6718201b0000\"",
             "inheritedAttributes": {
                 "baseConnection": {
-                    "id": "0137118b-373a-4c4e-847c-13a0abf73b33",
+                    "id": "fd9f7455-1e23-4831-9283-7717e20bee40",
                     "connectionSpec": {
-                        "id": "bf1f4218-73ce-4ff0-b744-48d78ffae2e4",
+                        "id": "2d31dfd1-df1a-456b-948f-226e040ba102",
                         "version": "1.0"
                     }
                 }
             },
             "lastOperation": {
-                "started": 1729032467969,
-                "updated": 1729032469150,
-                "percentCompleted": 100.0,
-                "status": {
-                    "value": "completed",
-                    "errors": []
-                },
-                "ops": [
-                    {
-                        "op": "replace",
-                        "path": "/params/filters",
-                        "value": {
-                            "type": "PQL",
-                            "format": "pql/json",
-                            "value": {
-                                "nodeType": "fnApply",
-                                "fnName": "in",
-                                "params": [
-                                    {
-                                        "nodeType": "fieldLookup",
-                                        "fieldName": "activityType"
-                                    },
-                                    {
-                                        "nodeType": "literal",
-                                        "value": [
-                                            "Change Status in Progression"
-                                        ]
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
-                "operation": "update"
+                "started": 1729634331185,
+                "updated": 0,
+                "operation": "draft_create"
             }
         }
     ]
@@ -742,7 +693,7 @@ curl -X PATCH \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'If-Match: "9f007f7b-0000-0200-0000-670ef1150000"'
+  -H 'If-Match: "210068a6-0000-0200-0000-6718201b0000"'
   -d '
       {
         "op": "add",
@@ -780,7 +731,7 @@ A successful response returns your source connection ID and etag (version).
 ```json
 {
     "id": "56f7eb3a-b544-4eaa-b167-ef1711044c7a",
-    "etag": "\"9f007f7b-0000-0200-0000-670ef1150000\""
+    "etag": "\"210068a6-0000-0200-0000-6718201b0000\""
 }
 ```
 
