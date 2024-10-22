@@ -97,29 +97,27 @@ The [!UICONTROL Account profiles added] widget uses a line graph to display the 
 
 The [!UICONTROL Customers per account overview] chart provides a summary of accounts based on their customer types. It displays a four-row table categorizing accounts as those with either direct or indirect customers, or those without. The chart helps identify the distribution of accounts that have direct versus indirect customers.
 
+Direct customers are customer profiles that are directly linked to an account through the `personComponents` route. This relationship is more straightforward and involves a direct, explicit connection between the customer and the account. 
+
+Indirect customers are customer profiles linked to an account via the `Account-Person` route. This relationship is less straightforward and involves an intermediate entity or a more complex connection between the customer and the account, typically through other accounts or relationships.
+
 ![The Customers per account overview widget.](customers-per-account-overview-widget.png)
 
-To access more detailed insights, select the ellipse on the [!UICONTROL Customers per account overview] chart and choose **[!UICONTROL Drill]** through from the dropdown menu. 
+The drill through view appears. To access more detailed insights, select the ellipse (**...**) on the [!UICONTROL Customers per account overview] chart and choose **[!UICONTROL Drill]** through from the dropdown menu. 
 
 ![The Customers per account overview widget with the ellipse dropdown menu and Drill through highlighted.](customers-per-account-overview-dropdown.png)
 
-To gain a deeper understanding of the structure of your B2B data, explore the following drill-through charts:
+Next, explore the available drill-through charts to gain a deeper understanding of the structure of your B2B data. You can use these drill-through charts to identify how many account profiles have no customer profiles linked or have one or more customer profiles associated with them. You can also use them to identify how many direct or indirect customers are associated with your accounts.
 
 * [[!UICONTROL Customers per account detail]](#customers-per-account-detail)
 * [[!UICONTROL Accounts per opportunity overview]](#accounts-per-opportunity-overview)
 * [[!UICONTROL Opportunities per account detail]](#accounts-per-opportunity-detail)
 
-These drill-through charts help you identify how many account profiles have no customer profiles linked or have one or more customer profiles associated with them. They also help you to identify how many direct or indirect customers are associated with your accounts.
-
-Direct customers are customer profiles that are directly linked to an account through the `personComponents` route. This relationship is more straightforward and involves a direct, explicit connection between the customer and the account. 
-
-Indirect customers are customer profiles linked to an account via the `Account-Person` route. This relationship is less straightforward and involves an intermediate entity or a more complex connection between the customer and the account, typically through other accounts or relationships.
-
 ### [!UICONTROL Navigate between dashboard views] {#dashboard-view-navigation}
 
-To switch between the drill through and the Account Profiles dashboard, select the folder icon (![A folder icon.]()) followed by the correct view from the dropdown menu.
+To switch between the drill through and the Account Profiles dashboard, select the folder icon (![A folder icon.](folder-icon.png)) followed by the correct view from the dropdown menu.
 
-![The drill though view in the Accounts Profiles dashbaord with the navigation dropdown menu highlighted.](navigation-dropdown.png)
+![The drill though view in the Accounts Profiles dashboard with the navigation dropdown menu highlighted.](navigation-dropdown.png)
 
 To learn more about drill throughs in the Platform UI, see the [Drill Through guide](../sql-insights-query-pro-mode/drill-through.md). 
 
