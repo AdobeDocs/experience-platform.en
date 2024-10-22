@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;home;popular topics;flow service;Flow Service API;sources;Sources
 title: Filter Row-Level Data For A Source Using The Flow Service API
 description: This tutorial covers the steps on how to filter data at the source level using the Flow Service API
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
 ---
 # Filter row-level data for a source using the [!DNL Flow Service] API
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
 >Support for filtering row-level data is currently only available to the following sources:
 >
->* [Google BigQuery](../../connectors/databases/bigquery.md)
->* [Microsoft Dynamics](../../connectors/crm/ms-dynamics.md)
->* [Salesforce](../../connectors/crm/salesforce.md)
->* [Snowflake](../../connectors/databases/snowflake.md)
+>* [[!DNL Google BigQuery]](../../connectors/databases/bigquery.md)
+>* [[!DNL Microsoft Dynamics]](../../connectors/crm/ms-dynamics.md)
+>* [[!DNL Salesforce]](../../connectors/crm/salesforce.md)
+>* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
+>* [[!DNL Marketo Engage] standard activities](../../connectors/adobe-applications/marketo/marketo.md)
 
-This tutorial provides steps on how to filter row-level data for a source using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Read this guide for steps on how to filter row-level data for a source using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-## Getting started
+## Get started
 
 This tutorial requires you to have a working understanding of the following components of Adobe Experience Platform:
 
@@ -28,15 +28,15 @@ This tutorial requires you to have a working understanding of the following comp
 
 For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../landing/api-guide.md).
 
-## Filter source data
+## Filter source data {#filter-source-data}
 
 The following outlines steps to take in order to filter row-level data for your source.
 
-### Look up connection specifications
+### Retrieve your connection specs {#retrieve-your-connection-specs}
 
-Before you can use the API to filter row-level data for a source, you must first retrieve your source's connection specification details in order to determine the operators and language that a specific source supports.
+The first step in filtering row-level data for your source is to retrieve your source's connection specs and determine the operators and language that your source supports.
 
-To retrieve a given source's connection specification, make a GET request to the `/connectionSpecs` endpoint of the [!DNL Flow Service] API while providing the property name of your source as part of your query parameters.
+To retrieve a given source's connection spec, make a GET request to the `/connectionSpecs` endpoint of the [!DNL Flow Service] API and providing the property name of your source as part of your query parameters.
 
 **API format**
 
@@ -46,11 +46,11 @@ GET /connectionSpecs/{QUERY_PARAMS}
 
 | Parameter | Description |
 | --- | --- |
-| `{QUERY_PARAMS}` | The optional query parameters to filter results by. You can retrieve the [!DNL Google BigQuery] connection specification by applying the `name` property and specifying `"google-big-query"` in your search. |
+| `{QUERY_PARAMS}` | The optional query parameters to filter results by. You can retrieve the [!DNL Google BigQuery] connection spec by applying the `name` property and specifying `"google-big-query"` in your search. |
 
-**Request**
++++Request
 
-The following request retrieves connection specifications for [!DNL Google BigQuery]. 
+The following request retrieves the connection specs for [!DNL Google BigQuery]. 
 
 ```shell
 curl -X GET \
@@ -61,13 +61,11 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Response**
++++
 
-A successful response returns the connection specifications for [!DNL Google BigQuery], including information on its supported query language and logical operators.
++++Response
 
->[!NOTE]
->
->The API response below is truncated for brevity.
+A successful response returns the connection specs for [!DNL Google BigQuery], including information on its supported query language and logical operators.
 
 ```json
 "attributes": {
@@ -105,7 +103,9 @@ A successful response returns the connection specifications for [!DNL Google Big
 
 {style="table-layout:auto"}
 
-#### Comparison operators
++++
+
+#### Comparison operators {#comparison-operators}
 
 | Operator | Description |
 | --- | --- |
@@ -120,7 +120,7 @@ A successful response returns the connection specifications for [!DNL Google Big
 
 {style="table-layout:auto"}
 
-### Specify filtering conditions for ingestion
+### Specify filtering conditions for ingestion {#specify-filtering-conditions-for-ingestion}
 
 Once you have identified the logical operators and query language that your source supports, you can use Profile Query Language (PQL) to specify the filtering conditions you want to apply to your source data. 
 
@@ -147,7 +147,7 @@ In the example below, conditions are applied to only select data that equal the 
 }
 ```
 
-### Preview your data
+### Preview your data {#preview-your-data}
 
 You can preview your data by making a GET request to the `/explore` endpoint of the [!DNL Flow Service] API while providing `filters` as part of your query parameters and specifying your PQL input conditions in [!DNL Base64].
 
@@ -163,7 +163,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 | `{TABLE_PATH}` | The path property of the table you want to inspect. |
 | `{FILTERS}` | Your PQL filtering conditions encoded in [!DNL Base64]. |
 
-**Request**
++++Request
 
 ```shell
 curl -X GET \
@@ -174,9 +174,11 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Response**
++++
 
-A successful request returns the following response.
++++Response
+
+A successful response returns the contents and structure of your data.
 
 ```json
 {
@@ -322,9 +324,11 @@ A successful request returns the following response.
 }
 ```
 
++++
+
 ### Create a source connection for filtered data
 
-To create a source connection and ingest filtered data, make a POST request to the `/sourceConnections` endpoint while providing your filtering conditions as part of your body parameters.
+To create a source connection and ingest filtered data, make a POST request to the `/sourceConnections` endpoint and provide your filtering conditions in the request body parameters.
 
 **API format**
 
@@ -332,7 +336,7 @@ To create a source connection and ingest filtered data, make a POST request to t
 POST /sourceConnections
 ```
 
-**Request**
++++Request
 
 The following request creates a source connection to ingest data from `test1.fasTestTable` where `city` = `DDN`.
 
@@ -379,7 +383,9 @@ curl -X POST \
     }'
 ```
 
-**Response**
++++
+
++++Response
 
 A successful response returns the unique identifier (`id`) of the newly created source connection. 
 
@@ -390,13 +396,15 @@ A successful response returns the unique identifier (`id`) of the newly created 
 }
 ```
 
++++
+
 ## Filter activity entities for [!DNL Marketo Engage] {#filter-for-marketo}
 
 You can use row-level filtering to filter for activity entities when using the [[!DNL Marketo Engage] source connector](../../connectors/adobe-applications/marketo/marketo.md). Currently, you can only filter for activity entities and you can only filter for standard activity types. Custom activities remain governed under [[!DNL Marketo] field mappings](../../connectors/adobe-applications/mapping/marketo.md).
 
 ### [!DNL Marketo] standard activity types {#marketo-standard-activity-types}
 
-The follow table outlines the standard activity types for [!DNL Marketo]. Use this table as reference for your filtering criteria.
+The following table outlines the standard activity types for [!DNL Marketo]. Use this table as reference for your filtering criteria.
 
 | Activity type ID | Activity type name |
 | --- | --- |
@@ -427,23 +435,26 @@ The follow table outlines the standard activity types for [!DNL Marketo]. Use th
 | 114 | Change Nurture Track |
 | 115 | Change Nurture Cadence |
 
-### Filtering steps
+{style="table-layout:auto"}
 
 Follow the steps below to filter your standard activity entities when using the [!DNL Marketo] source connector.
 
-#### Step 1: Create a draft dataflow
+### Create a draft dataflow
 
-Create a [[!DNL Marketo] dataflow](../ui/create/adobe-applications/marketo.md) and save the dataflow as a draft. For information on how to save a dataflow as a draft, refer to the guides on [saving a draft dataflow in the UI](../ui/draft.md) and [saving a draft dataflow using the API](../api/draft.md).
+First, create a [[!DNL Marketo] dataflow](../ui/create/adobe-applications/marketo.md) and save it as a draft. Refer to the following documentation for detailed steps on how to create a draft dataflow:
 
-#### Step 2: Retrieve your dataflow ID
+* [Save a dataflow as a draft using the UI](../ui/draft.md)
+* [Save a dataflow as a draft using the API](../api/draft.md)
 
-Identify the dataflow ID that corresponds with your draft dataflow.
+### Retrieve your dataflow ID
 
-In the UI, navigate to the sources catalog and then select **[!UICONTROL Dataflows]** from the top header. Use the status column to identify all dataflows that are saved as drafts, and then select your dataflow's name. Next, use the **[!UICONTROL Properties]** panel on the right to locate your dataflow ID. 
+Once you have a drafted dataflow, you must then retrieve its corresponding ID.
 
-#### Step 3: Retrieve your dataflow details
+In the UI, navigate to the sources catalog and then select **[!UICONTROL Dataflows]** from the top header. Use the status column to identify all dataflows that were saved in draft mode, and then select your dataflow's name. Next, use the **[!UICONTROL Properties]** panel on the right to locate your dataflow ID. 
 
-Next, use your dataflow ID to retrieve your dataflow details using the [!DNL Flow Service] API. Once you have retrieved your dataflow details, take note of the `sourceConnectionsIds` value, as you will need this in the next step
+### Retrieve your dataflow details
+
+Next, you must retrieve your dataflow details, particularly the source connection ID associated with your dataflow. To retrieve your dataflow details, make a GET request to the `/flows` endpoint and provide your dataflow ID as a query parameter.
 
 **API format**
 
@@ -455,7 +466,9 @@ GET /flows/{FLOW_ID}
 | --- | --- |
 | `{FLOW_ID}` | The ID of the dataflow that you want to retrieve. |
 
-+++Select to view API request example
++++Request
+
+The following request retrieves information on dataflow ID: `a7e88a01-40f9-4ebf-80b2-0fc838ff82ef`.
 
 ```shell
 curl -X GET \
@@ -468,25 +481,25 @@ curl -X GET \
 
 +++
 
-+++Select to view API response example
++++Response
 
-A successful response returns your dataflow details, including it's inherited attributes. Take note of the `sourceConnectionsIds` value as you will need it for the next step.
+A successful response returns your dataflow details, including information on its corresponding source and target connections. You must take note of the source connection ID, as this value is required in order to retrieve your source connection details in the next step.
 
-```json {line-numbers="true" start-line="1" highlight="35"}
+```json {line-numbers="true" start-line="1" highlight="23"}
 {
     "items": [
         {
             "id": "a7e88a01-40f9-4ebf-80b2-0fc838ff82ef",
             "createdAt": 1728592929650,
             "updatedAt": 1728597187444,
-            "createdBy": "52BF198366298FE90A494023@AdobeID",
-            "updatedBy": "acp_foundation_connectors@AdobeID",
+            "createdBy": "acme@AdobeID",
+            "updatedBy": "acme@AdobeID",
             "createdClient": "exc_app",
-            "updatedClient": "acp_foundation_connectors",
+            "updatedClient": "acme",
             "sandboxId": "7f3419ce-53e2-476b-b419-ce53e2376b02",
             "sandboxName": "prod",
-            "imsOrgId": "DDEA2F045FF36C210A49421E@AdobeOrg",
-            "name": "ActivityFilterTest-Oct10",
+            "imsOrgId": "acme@AdobeOrg",
+            "name": "Marketo Engage Standard Activities ACME",
             "description": "",
             "flowSpec": {
                 "id": "15f8402c-ba66-4626-b54c-9f8e54244d61",
@@ -570,9 +583,9 @@ A successful response returns your dataflow details, including it's inherited at
 
 +++
 
-#### Step 4: Retrieve your source connection details
+### Retrieve your source connection details
 
-Next, use the source connection ID that you retrieved in the previous step and then make a GET request to the `/sourceConnections` endpoint and provide this ID as a query parameter.
+Next, use your source connection ID and make a GET request to the `/sourceConnections` endpoint to retrieve your source connection details.
 
 **API format**
 
@@ -584,7 +597,7 @@ GET /sourceConnections/{SOURCE_CONNECTION_ID}
 | --- | --- |
 | `{SOURCE_CONNECTION_ID}` | The ID of the source connection that you want to retrieve. |
 
-+++Select to view API request example
++++Request
 
 ```shell
 curl -X GET \
@@ -597,24 +610,24 @@ curl -X GET \
 
 +++
 
-+++Select to view API response example
++++Response
 
-A successful response returns the details of your source connection. Take note of the your source connection ID, as well as it's version, as you will need both values in the next step.
+A successful response returns the details of your source connection. Take note of the version as you will need this value in the next step in order to update your source connection.
 
-```json
+```json {line-numbers="true" start-line="1" highlight="47"}
 {
     "items": [
         {
             "id": "56f7eb3a-b544-4eaa-b167-ef1711044c7a",
             "createdAt": 1728592920859,
             "updatedAt": 1729032469150,
-            "createdBy": "52BF198366298FE90A494023@AdobeID",
-            "updatedBy": "marketo-b2b-cdp@AdobeID",
+            "createdBy": "acme@AdobeID",
+            "updatedBy": "acme@AdobeID",
             "createdClient": "exc_app",
-            "updatedClient": "marketo-b2b-cdp",
+            "updatedClient": "acme",
             "sandboxId": "7f3419ce-53e2-476b-b419-ce53e2376b02",
             "sandboxName": "prod",
-            "imsOrgId": "DDEA2F045FF36C210A49421E@AdobeOrg",
+            "imsOrgId": "acme@AdobeOrg",
             "name": "New Source Connection - 2024-10-10T13:42:00-07:00",
             "description": "Source connection created from the workflow",
             "baseConnectionId": "0137118b-373a-4c4e-847c-13a0abf73b33",
@@ -704,11 +717,11 @@ A successful response returns the details of your source connection. Take note o
 
 +++
 
-#### Step 5: Update your source connection with filtering conditions
+### Update your source connection with filtering conditions
 
 Now that you have your source connection ID and its corresponding version, you can now make a PATCH request with the filter conditions that specify your standard activity types. 
 
-To update your source connection, make a PATCH request to the `/sourceConnections` endpoint and provide the ID of the source connection that you want to update. Additionally, you must provide an `If-Match` header parameter, with the corresponding version of your source connection.
+To update your source connection, make a PATCH request to the `/sourceConnections` endpoint and provide your source connection ID as a query parameter. Additionally, you must provide an `If-Match` header parameter, with the corresponding version of your source connection.
 
 **API format**
 
@@ -720,7 +733,7 @@ GET /sourceConnections/{SOURCE_CONNECTION_ID}
 | --- | --- |
 | `{SOURCE_CONNECTION_ID}` | The ID of the source connection that you want to retrieve. |
 
-+++Select to view API request example
++++Request
 
 ```shell
 curl -X PATCH \
@@ -760,7 +773,9 @@ curl -X PATCH \
 
 +++
 
-+++Select to view API response example
++++Response
+
+A successful response returns your source connection ID and etag (version).
 
 ```json
 {
@@ -771,14 +786,16 @@ curl -X PATCH \
 
 +++
 
-#### Step 6: Save and ingest your draft dataflow
+### Save and ingest your draft dataflow
 
 Finally, return to the UI and save and ingest the dataflow that you drafted in step 1. Doing so allows the [!DNL Marketo] provider service to trigger and register the activity type filters of your dataflow.
 
-* A dataflow with filtering enabled will only be backfilled once. Any changes in the that you make in the filtering criteria (be it an addition or a removal) can only take effect for incremental data.
-* If you need to ingest historical data for any new activity type(s), you are recommended to create a new dataflow and define the filtering criteria with the appropriate activity types in the filter condition.
-* You cannot filter custom activity types.
-* You cannot preview filtered data.
+>[!TIP]
+>
+>* A dataflow with filtering enabled will only be backfilled once. Any changes in the that you make in the filtering criteria (be it an addition or a removal) can only take effect for incremental data.
+>* If you need to ingest historical data for any new activity type(s), you are recommended to create a new dataflow and define the filtering criteria with the appropriate activity types in the filter condition.
+>* You cannot filter custom activity types.
+>* You cannot preview filtered data.
 
 ## Appendix
 
