@@ -127,7 +127,7 @@ To learn more about drill throughs in the Platform UI, see the [Drill Through gu
 
 #### [!UICONTROL Customers per account detail] {#customers-per-account-detail}
 
-The [!UICONTROL Customers per account detail] chart provides more granular details about the number of accounts associated with different customer types. It displays a three-column table detailing the number of accounts by customer type (direct or indirect) and the range of customers associated with them. This helps to understand how the customers are distributed across different customer categories and the total number of accounts associated with each.
+The [!UICONTROL Customers per account detail] chart provides more granular details about the number of accounts associated with different customer types. It displays a three-column table detailing the number of accounts by customer type (direct or indirect), and the range of customers associated with them. This chart helps you to understand how the customers are distributed across different customer categories and the total number of accounts associated with each.
 
 <!-- Shouldn't the third column be 'Total customers'? What am I missing? I am confused. -->
 
@@ -141,7 +141,7 @@ The [!UICONTROL Opportunities per account overview] chart presents a summary of 
 
 #### [!UICONTROL Opportunities per account detail] {#opportunities-per-account-detail}
 
-The [!UICONTROL Opportunities per account detail] chart offers a more detailed breakdown of accounts based on the number of opportunities they have. The table displays the number of accounts grouped by opportunity count ranges, such as 1-10 opportunities or 100+ opportunities. This chart helps you to identify how accounts are distributed by the number of opportunities they are managing.
+The [!UICONTROL Opportunities per account detail] chart offers a more detailed breakdown of accounts based on the number of opportunities that they have. The table displays the number of accounts grouped by opportunity count ranges, such as 1-10 opportunities or 100+ opportunities. This chart helps you to identify how accounts are distributed by the number of opportunities they are managing.
 
 ![The Opportunities per account detail widget.](../images/account-profiles/opportunities-per-account-detail.png)
 
