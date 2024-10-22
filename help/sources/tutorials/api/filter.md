@@ -390,6 +390,396 @@ A successful response returns the unique identifier (`id`) of the newly created 
 }
 ```
 
+## Filter activity entities for [!DNL Marketo Engage] {#filter-for-marketo}
+
+You can use row-level filtering to filter for activity entities when using the [[!DNL Marketo Engage] source connector](../../connectors/adobe-applications/marketo/marketo.md). Currently, you can only filter for activity entities and you can only filter for standard activity types. Custom activities remain governed under [[!DNL Marketo] field mappings](../../connectors/adobe-applications/mapping/marketo.md).
+
+### [!DNL Marketo] standard activity types {#marketo-standard-activity-types}
+
+The follow table outlines the standard activity types for [!DNL Marketo]. Use this table as reference for your filtering criteria.
+
+| Activity type ID | Activity type name |
+| --- | --- |
+| 1 | Visit Webpage |
+| 2 |  Fill Out Form | 
+| 3 | Click Link | 
+| 6 | Send Email |
+| 7 | Email Delivered |
+| 8 | Email Bounced |
+| 9 | Unsubscribe Email |
+| 10 | Open Email |
+| 11 | Click Email |
+| 12 | New Lead |
+| 21 | Convert Lead |
+| 22 | Change Score |
+| 24 | Add to List |
+| 25 | Remove from List |
+| 27 | Email Bounced Soft |
+| 32 | Merge Leads |
+| 34 | Add to Opportunity |
+| 35 | Remove from Opportunity |
+| 36 | Update Opportunity |
+| 46 | Interesting Moment |
+| 101 | Change Revenue Stage |
+| 104 | Change Status in Progression |
+| 110 | Call Webhook |
+| 113 | Add to Nurture |
+| 114 | Change Nurture Track |
+| 115 | Change Nurture Cadence |
+
+### Filtering steps
+
+Follow the steps below to filter your standard activity entities when using the [!DNL Marketo] source connector.
+
+#### Step 1: Create a draft dataflow
+
+Create a [[!DNL Marketo] dataflow](../ui/create/adobe-applications/marketo.md) and save the dataflow as a draft. For information on how to save a dataflow as a draft, refer to the guides on [saving a draft dataflow in the UI](../ui/draft.md) and [saving a draft dataflow using the API](../api/draft.md).
+
+#### Step 2: Retrieve your dataflow ID
+
+Identify the dataflow ID that corresponds with your draft dataflow.
+
+In the UI, navigate to the sources catalog and then select **[!UICONTROL Dataflows]** from the top header. Use the status column to identify all dataflows that are saved as drafts, and then select your dataflow's name. Next, use the **[!UICONTROL Properties]** panel on the right to locate your dataflow ID. 
+
+#### Step 3: Retrieve your dataflow details
+
+Next, use your dataflow ID to retrieve your dataflow details using the [!DNL Flow Service] API. Once you have retrieved your dataflow details, take note of the `sourceConnectionsIds` value, as you will need this in the next step
+
+**API format**
+
+```http
+GET /flows/{FLOW_ID}
+```
+
+| Parameter | Description |
+| --- | --- |
+| `{FLOW_ID}` | The ID of the dataflow that you want to retrieve. |
+
++++Select to view API request example
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/flowservice/flows/a7e88a01-40f9-4ebf-80b2-0fc838ff82ef' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
+
++++Select to view API response example
+
+A successful response returns your dataflow details, including it's inherited attributes. Take note of the `sourceConnectionsIds` value as you will need it for the next step.
+
+```json {line-numbers="true" start-line="1" highlight="35"}
+{
+    "items": [
+        {
+            "id": "a7e88a01-40f9-4ebf-80b2-0fc838ff82ef",
+            "createdAt": 1728592929650,
+            "updatedAt": 1728597187444,
+            "createdBy": "52BF198366298FE90A494023@AdobeID",
+            "updatedBy": "acp_foundation_connectors@AdobeID",
+            "createdClient": "exc_app",
+            "updatedClient": "acp_foundation_connectors",
+            "sandboxId": "7f3419ce-53e2-476b-b419-ce53e2376b02",
+            "sandboxName": "prod",
+            "imsOrgId": "DDEA2F045FF36C210A49421E@AdobeOrg",
+            "name": "ActivityFilterTest-Oct10",
+            "description": "",
+            "flowSpec": {
+                "id": "15f8402c-ba66-4626-b54c-9f8e54244d61",
+                "version": "1.0"
+            },
+            "state": "enabled",
+            "version": "\"600290fc-0000-0200-0000-67084cc30000\"",
+            "etag": "\"600290fc-0000-0200-0000-67084cc30000\"",
+            "sourceConnectionIds": [
+                "56f7eb3a-b544-4eaa-b167-ef1711044c7a"
+            ],
+            "targetConnectionIds": [
+                "7e53e6e8-b432-4134-bb29-21fc6e8532e5"
+            ],
+            "inheritedAttributes": {
+                "properties": {
+                    "isSourceFlow": true
+                },
+                "sourceConnections": [
+                    {
+                        "id": "56f7eb3a-b544-4eaa-b167-ef1711044c7a",
+                        "connectionSpec": {
+                            "id": "bf1f4218-73ce-4ff0-b744-48d78ffae2e4",
+                            "version": "1.0"
+                        },
+                        "baseConnection": {
+                            "id": "0137118b-373a-4c4e-847c-13a0abf73b33",
+                            "connectionSpec": {
+                                "id": "bf1f4218-73ce-4ff0-b744-48d78ffae2e4",
+                                "version": "1.0"
+                            }
+                        }
+                    }
+                ],
+                "targetConnections": [
+                    {
+                        "id": "7e53e6e8-b432-4134-bb29-21fc6e8532e5",
+                        "connectionSpec": {
+                            "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
+                            "version": "1.0"
+                        }
+                    }
+                ]
+            },
+            "options": {
+                "isSampleDataflow": false,
+                "errorDiagnosticsEnabled": true
+            },
+            "transformations": [
+                {
+                    "name": "Mapping",
+                    "params": {
+                        "mappingVersion": 0,
+                        "mappingId": "f6447514ef95482889fac1818972e285"
+                    }
+                }
+            ],
+            "runs": "/runs?property=flowId==a7e88a01-40f9-4ebf-80b2-0fc838ff82ef",
+            "lastOperation": {
+                "started": 1728592929650,
+                "updated": 0,
+                "operation": "create"
+            },
+            "lastRunDetails": {
+                "id": "2d7863d5-ca4d-4313-ac52-2603eaf2cdbe",
+                "state": "success",
+                "startedAtUTC": 1728594713537,
+                "completedAtUTC": 1728597183080
+            },
+            "labels": [],
+            "recordTypes": [
+                {
+                    "type": "experienceevent",
+                    "extensions": {}
+                }
+            ]
+        }
+    ]
+}
+```
+
++++
+
+#### Step 4: Retrieve your source connection details
+
+Next, use the source connection ID that you retrieved in the previous step and then make a GET request to the `/sourceConnections` endpoint and provide this ID as a query parameter.
+
+**API format**
+
+```http
+GET /sourceConnections/{SOURCE_CONNECTION_ID}
+```
+
+| Parameter | Description |
+| --- | --- |
+| `{SOURCE_CONNECTION_ID}` | The ID of the source connection that you want to retrieve. |
+
++++Select to view API request example
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections/56f7eb3a-b544-4eaa-b167-ef1711044c7a' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
+
++++Select to view API response example
+
+A successful response returns the details of your source connection. Take note of the your source connection ID, as well as it's version, as you will need both values in the next step.
+
+```json
+{
+    "items": [
+        {
+            "id": "56f7eb3a-b544-4eaa-b167-ef1711044c7a",
+            "createdAt": 1728592920859,
+            "updatedAt": 1729032469150,
+            "createdBy": "52BF198366298FE90A494023@AdobeID",
+            "updatedBy": "marketo-b2b-cdp@AdobeID",
+            "createdClient": "exc_app",
+            "updatedClient": "marketo-b2b-cdp",
+            "sandboxId": "7f3419ce-53e2-476b-b419-ce53e2376b02",
+            "sandboxName": "prod",
+            "imsOrgId": "DDEA2F045FF36C210A49421E@AdobeOrg",
+            "name": "New Source Connection - 2024-10-10T13:42:00-07:00",
+            "description": "Source connection created from the workflow",
+            "baseConnectionId": "0137118b-373a-4c4e-847c-13a0abf73b33",
+            "state": "enabled",
+            "data": {
+                "format": "tabular"
+            },
+            "connectionSpec": {
+                "id": "bf1f4218-73ce-4ff0-b744-48d78ffae2e4",
+                "version": "1.0"
+            },
+            "params": {
+                "columns": [],
+                "tableName": "Activity",
+                "filters": {
+                    "type": "PQL",
+                    "format": "pql/json",
+                    "value": {
+                        "nodeType": "fnApply",
+                        "fnName": "in",
+                        "params": [
+                            {
+                                "nodeType": "fieldLookup",
+                                "fieldName": "activityType"
+                            },
+                            {
+                                "nodeType": "literal",
+                                "value": [
+                                    "Change Status in Progression"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "version": "\"9f007f7b-0000-0200-0000-670ef1150000\"",
+            "etag": "\"9f007f7b-0000-0200-0000-670ef1150000\"",
+            "inheritedAttributes": {
+                "baseConnection": {
+                    "id": "0137118b-373a-4c4e-847c-13a0abf73b33",
+                    "connectionSpec": {
+                        "id": "bf1f4218-73ce-4ff0-b744-48d78ffae2e4",
+                        "version": "1.0"
+                    }
+                }
+            },
+            "lastOperation": {
+                "started": 1729032467969,
+                "updated": 1729032469150,
+                "percentCompleted": 100.0,
+                "status": {
+                    "value": "completed",
+                    "errors": []
+                },
+                "ops": [
+                    {
+                        "op": "replace",
+                        "path": "/params/filters",
+                        "value": {
+                            "type": "PQL",
+                            "format": "pql/json",
+                            "value": {
+                                "nodeType": "fnApply",
+                                "fnName": "in",
+                                "params": [
+                                    {
+                                        "nodeType": "fieldLookup",
+                                        "fieldName": "activityType"
+                                    },
+                                    {
+                                        "nodeType": "literal",
+                                        "value": [
+                                            "Change Status in Progression"
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "operation": "update"
+            }
+        }
+    ]
+}
+```
+
++++
+
+#### Step 5: Update your source connection with filtering conditions
+
+Now that you have your source connection ID and its corresponding version, you can now make a PATCH request with the filter conditions that specify your standard activity types. 
+
+To update your source connection, make a PATCH request to the `/sourceConnections` endpoint and provide the ID of the source connection that you want to update. Additionally, you must provide an `If-Match` header parameter, with the corresponding version of your source connection.
+
+**API format**
+
+```http
+GET /sourceConnections/{SOURCE_CONNECTION_ID}
+```
+
+| Parameter | Description |
+| --- | --- |
+| `{SOURCE_CONNECTION_ID}` | The ID of the source connection that you want to retrieve. |
+
++++Select to view API request example
+
+```shell
+curl -X PATCH \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections/56f7eb3a-b544-4eaa-b167-ef1711044c7a' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'If-Match: "9f007f7b-0000-0200-0000-670ef1150000"'
+  -d '
+      {
+        "op": "add",
+        "path": "/params/filters",
+        "value": {
+            "type": "PQL",
+            "format": "pql/json",
+            "value": {
+                "nodeType": "fnApply",
+                "fnName": "in",
+                "params": [
+                    {
+                        "nodeType": "fieldLookup",
+                        "fieldName": "activityType"
+                    },
+                    {
+                        "nodeType": "literal",
+                        "value": [
+                            "Change Status in Progression",
+                            "Fill Out Form"
+                        ]
+                    }
+                ]
+            }
+        }
+    }'
+```
+
++++
+
++++Select to view API response example
+
+```json
+{
+    "id": "56f7eb3a-b544-4eaa-b167-ef1711044c7a",
+    "etag": "\"9f007f7b-0000-0200-0000-670ef1150000\""
+}
+```
+
++++
+
+#### Step 6: Save and ingest your draft dataflow
+
+Finally, return to the UI and save and ingest the dataflow that you drafted in step 1. Doing so allows the [!DNL Marketo] provider service to trigger and register the activity type filters of your dataflow.
+
+* A dataflow with filtering enabled will only be backfilled once. Any changes in the that you make in the filtering criteria (be it an addition or a removal) can only take effect for incremental data.
+* If you need to ingest historical data for any new activity type(s), you are recommended to create a new dataflow and define the filtering criteria with the appropriate activity types in the filter condition.
+* You cannot filter custom activity types.
+* You cannot preview filtered data.
+
 ## Appendix
 
 This section provides further examples of different payloads for filtering.
@@ -397,6 +787,8 @@ This section provides further examples of different payloads for filtering.
 ### Singular conditions
 
 You can omit the initial `fnApply` for scenarios that only require one condition.
+
++++Select to view example
 
 ```json
 {
@@ -419,9 +811,13 @@ You can omit the initial `fnApply` for scenarios that only require one condition
 }
 ```
 
++++
+
 ### Using the `in` operator
 
 See the sample payload below for an example of the operator `in`.
+
++++Select to view example
 
 ```json
 {
@@ -453,7 +849,11 @@ See the sample payload below for an example of the operator `in`.
 }
 ```
 
++++
+
 ### Using the `isNull` operator
+
++++Select to view example
 
 See the sample payload below for an example of the operator `isNull`.
 
@@ -474,9 +874,14 @@ See the sample payload below for an example of the operator `isNull`.
 }
 ```
 
++++
+
 ### Using the `NOT` operator
 
 See the sample payload below for an example of the operator `NOT`.
+
+
++++Select to view example
 
 ```json
 {
@@ -501,9 +906,13 @@ See the sample payload below for an example of the operator `NOT`.
 }
 ```
 
++++
+
 ### Example with nested conditions
 
 See the sample payload below for an example of complex nested conditions.
+
++++Select to view example
 
 ```json
 {
@@ -579,3 +988,5 @@ See the sample payload below for an example of complex nested conditions.
   }
 }
 ```
+
++++
