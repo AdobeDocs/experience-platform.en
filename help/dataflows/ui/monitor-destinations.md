@@ -93,8 +93,8 @@ Each individual dataflow run shows the following details:
   >
   >Starting with October 2024, users of the [Google Customer Match destination](../../destinations/catalog/advertising/google-customer-match.md) may see a drop in the **[!UICONTROL identities failed]** reporting. This change is expected and is caused by an update to the way Experience Platform calculates the total number of failed identities.
   > 
-  > Before the October 2024 release, this metric included all activation retries in the total number of failed identities.
-  > After the October 2024 release, only the last retry is counted as a failure, leading to an overall lower total number of failed identities.
+  >Before the October 2024 release, this metric included all activation retries in the total number of failed identities.
+  >After the October 2024 release, only the last retry is counted as a failure, leading to an overall lower total number of failed identities.
   >This change currently affects the [Google Customer Match destination](../../destinations/catalog/advertising/google-customer-match.md) but will be gradually gradually rolled out to other Experience Platform streaming destinations.
 
 - **[!UICONTROL Activation rate]**: The percentage of received identities that have either been successfully activated or skipped. The following formula demonstrates how this value is calculated:
