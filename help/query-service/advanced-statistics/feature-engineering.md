@@ -19,13 +19,13 @@ The feature engineering capabilities cover three main areas: Feature Extraction,
 
 Extract relevant information from your data, especially text data, and convert it into a numerical format that the supported models can consume or transform and derive datasets. Use the following functions to perform feature extraction:
 
-- **[Textual Transformer](./algorithms.md#textual-transformations)**: Convert textual data into numerical features.
-- **[Count Vectorizer](./algorithms.md#countvectorizer)**: Transform a collection of text documents into vectors of token counts.
-- **[N-gram](./algorithms.md#ngram)**: Generate sequences of n-grams from text data.
-- **[Stop Words Remover](./algorithms.md#stopwordsremover)**: Filter out common words that do not carry significant meaning.
-- **[TF-IDF](./algorithms.md#tf-idf)**: Measure the importance of words in a document relative to a corpus.
-- **[Tokenizer](./algorithms.md#tokenizer)**: Break down text into individual terms (words).
-- **[Word2Vec](./algorithms.md#word2vec)**: Map words to fixed-size vectors and create word embeddings.
+- **[Textual Transformer](./implement-models.md#textual-transformations)**: Convert textual data into numerical features.
+- **[Count Vectorizer](./implement-models.md#countvectorizer)**: Transform a collection of text documents into vectors of token counts.
+- **[N-gram](./implement-models.md#ngram)**: Generate sequences of n-grams from text data.
+- **[Stop Words Remover](./implement-models.md#stopwordsremover)**: Filter out common words that do not carry significant meaning.
+- **[TF-IDF](./implement-models.md#tf-idf)**: Measure the importance of words in a document relative to a corpus.
+- **[Tokenizer](./implement-models.md#tokenizer)**: Break down text into individual terms (words).
+- **[Word2Vec](./implement-models.md#word2vec)**: Map words to fixed-size vectors and create word embeddings.
 
 ### Feature transformation {#feature-transformation}
 
@@ -35,28 +35,28 @@ In addition to extracting features, use the following general transformers to pr
 
 Below is a list of tools for processing a wide range of data types to enhance your data preprocessing workflow.
 
-- **[Numeric Imputer](./algorithms.md#numeric-imputer)**: Fill missing values in numeric columns with a specified value.
-- **[String Imputer](./algorithms.md#string-imputer)**: Replace missing string values with a specified string.
-- **[Vector Assembler](./algorithms.md#vector-assembler)**: Combine multiple columns into a single vector column.
+- **[Numeric Imputer](./implement-models.md#numeric-imputer)**: Fill missing values in numeric columns with a specified value.
+- **[String Imputer](./implement-models.md#string-imputer)**: Replace missing string values with a specified string.
+- **[Vector Assembler](./implement-models.md#vector-assembler)**: Combine multiple columns into a single vector column.
 
 #### Numeric transformers
 
 Apply these techniques to effectively process and scale numerical data for improved model performance.
 
-- **[Binarizer](./algorithms.md#binarizer)**: Convert continuous features into binary values based on a threshold.
-- **[Bucketizer](./algorithms.md#bucketizer)**: Map continuous features into discrete buckets.
-- **[Min-Max Scaler](./algorithms.md#minmaxscaler)**: Rescale features to a specified range, typically [0, 1].
-- **[Max Abs Scaler](./algorithms.md#maxabsscaler)**: Rescale features to the range [-1, 1] without altering sparsity.
-- **[Normalizer](./algorithms.md#normalizer)**: Normalize vectors to have unit norm.
-- **[Quantile Discretizer](./algorithms.md#quantilediscretizer)**: Convert continuous features into categorical features by binning them into quantiles.
-- **[Standard Scaler](./algorithms.md#standardscaler)**: Normalize features to have a unit standard deviation and/or zero mean.
+- **[Binarizer](./implement-models.md#binarizer)**: Convert continuous features into binary values based on a threshold.
+- **[Bucketizer](./implement-models.md#bucketizer)**: Map continuous features into discrete buckets.
+- **[Min-Max Scaler](./implement-models.md#minmaxscaler)**: Rescale features to a specified range, typically [0, 1].
+- **[Max Abs Scaler](./implement-models.md#maxabsscaler)**: Rescale features to the range [-1, 1] without altering sparsity.
+- **[Normalizer](./implement-models.md#normalizer)**: Normalize vectors to have unit norm.
+- **[Quantile Discretizer](./implement-models.md#quantilediscretizer)**: Convert continuous features into categorical features by binning them into quantiles.
+- **[Standard Scaler](./implement-models.md#standardscaler)**: Normalize features to have a unit standard deviation and/or zero mean.
 
 #### Categorical transformers
 
 Use these transformers to convert and encode categorical data into formats suitable for machine learning models.
 
-- **[String Indexer](./algorithms.md#stringindexer)**: Convert categorical string data into numeric indices.
-- **[One Hot Encoder](./algorithms.md#onehotencoder)**: Map categorical data into binary vectors.
+- **[String Indexer](./implement-models.md#stringindexer)**: Convert categorical string data into numeric indices.
+- **[One Hot Encoder](./implement-models.md#onehotencoder)**: Map categorical data into binary vectors.
 
 ### Feature selection {#feature-selection}
 
@@ -77,7 +77,7 @@ Use logical regression to predict categorical outcomes and linear regression to 
 
 Use a clustering algorithm to group data points into distinct clusters based on their similarities.
 
-- **[`K-Means`](./algorithms.md#kmeans)**: Use `K-Means` for unsupervised learning tasks to partition data into a specified number of clusters, with each data point assigned to the cluster with the nearest mean.
+- **[`K-Means`](./implement-models.md#kmeans)**: Use `K-Means` for unsupervised learning tasks to partition data into a specified number of clusters, with each data point assigned to the cluster with the nearest mean.
 
 ## Implement the OPTIONS clause {#options-clause}
 
@@ -85,4 +85,4 @@ When you define your model, use the `OPTIONS` clause to specify the algorithm an
 
 ### Next Steps
 
-After learning the feature engineering techniques outlined in this document, progress onto the [Models](./models.md) document. It guides you through the process of creating, training, and managing machine learning models using the features you've engineered. Once you've built your models, explore the [Algorithms](./algorithms.md) document to gain insights into the various machine learning methods available and learn how to implement them effectively within your SQL workflows. These combined documents equip you to perform advanced machine learning tasks with Data Distiller.
+After learning the feature engineering techniques outlined in this document, progress onto the [Models](./models.md) document. It guides you through the process of creating, training, and managing machine learning models using the features you've engineered. Once you've built your models, explore the [Algorithms](./implement-models.md) document to gain insights into the various machine learning methods available and learn how to implement them effectively within your SQL workflows. These combined documents equip you to perform advanced machine learning tasks with Data Distiller.

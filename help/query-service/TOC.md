@@ -37,7 +37,10 @@ role: User,Developer
     - [Overview](advanced-statistics/overview.md)
     - [Feature engineering](advanced-statistics/feature-engineering.md)
     - [Models](advanced-statistics/models.md)
-    - [Algorithms](advanced-statistics/algorithms.md)
+    Implement models {#implement-models}
+        - [Regression](advanced-statistics/implement-models/regression.md)
+        - [Classification](advanced-statistics/implement-models/classification.md)
+        - [Clustering](advanced-statistics/implement-models/clustering.md)
 - Examples {#use-cases}
     - [Overview](use-cases/overview.md)
     - [Abandoned browse](use-cases/abandoned-browse.md)
