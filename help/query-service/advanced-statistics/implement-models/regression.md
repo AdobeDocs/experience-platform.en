@@ -1,11 +1,11 @@
 ---
 title: Regression Algorithms
-description: PLACEHOLDER Words.
+description: Learn how to configure and optimize various regression algorithms with key parameters, descriptions, and example code to help you implement advanced statistical models.
 role: Developer
 ---
 # Regression algorithms {#regression-algorithms}
 
-This document provides an overview of various regression algorithms, focusing on their configuration, key parameters, and practical usage in advanced statistical models. Regression algorithms are used to model the relationship between dependent and independent variables, predicting continuous outcomes based on observed data. Each section includes parameter descriptions and example code to help you implement and optimize these algorithms for different tasks, such as linear, random forest, and survival regression.
+This document provides an overview of various regression algorithms, focusing on their configuration, key parameters, and practical usage in advanced statistical models. Regression algorithms are used to model the relationship between dependent and independent variables, predicting continuous outcomes based on observed data. Each section includes parameter descriptions and example code to help you implement and optimize these algorithms for tasks such as linear, random forest, and survival regression.
 
 ## [!DNL Decision Tree] regression {#decision-tree-regression}
 
