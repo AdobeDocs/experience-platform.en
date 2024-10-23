@@ -4,3 +4,89 @@ description: PLACEHOLDER Words.
 role: Developer
 ---
 # Classification algorithms {#classification-algorithms}
+
+Introduction
+
+## [!DNL Decision Tree Classifier] {#decision-tree-classifier}
+
+[!DNL Decision Tree Classifier] is a supervised learning approach used in statistics, data mining, and machine learning. In this approach, a decision tree is used as a predictive model for classification tasks, drawing conclusions from a set of observations.
+
+**Parameters**
+
+The table below outlines key parameters for configuring and optimizing the performance of [!DNL Decision Tree Classifier].
+
+| Parameter                    | Description                | Default value | Possible Values |
+|-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|------------------|
+| `MAX_BINS`                    | The maximum number of bins determines how continuous features are divided into discrete intervals. This affects how features are split at each decision tree node. More bins provide higher granularity.    | 32            | Must be at least 2 and at least equal to the number of categories in any categorical feature. |
+| `CACHE_NODE_IDS`              | If `false`, the algorithm will pass trees to executors to match instances with nodes. If `true`, the algorithm will cache node IDs for each instance, speeding up the training of deeper trees.             | `false`         | `true`, `false` |
+| `CHECKPOINT_INTERVAL`         | Specifies how often to checkpoint the cached node IDs. For example, `10` means the cache is checkpointed every 10 iterations.                                                                               | 10            | (>= 1)            |
+| `IMPURITY`                    | The criterion used for information gain calculation (case-insensitive).                                                                                                                                     | "gini"        | `entropy`, `gini` |
+| `MAX_DEPTH`                   | The maximum depth of the tree (non-negative). For example, depth `0` means 1 leaf node, and depth `1` means 1 internal node and 2 leaf nodes.                                                               | 5             | [0, 30]           |
+| `MIN_INFO_GAIN`               | The minimum information gain required for a split to be considered at a tree node.                                                                                                                          | 0.0           | (>= 0.0)          |
+| `MIN_WEIGHT_FRACTION_PER_NODE` | The minimum fraction of the weighted sample count that each child must have after a split. If a split causes the fraction of the total weight in either child to be less than this value, it is discarded. | 0.0           | (>= 0.0, <= 0.5)  |
+| `MIN_INSTANCES_PER_NODE`      | The minimum number of instances each child must have after a split. If a split results in fewer instances than this value, the split is discarded.                                                          | 1             | (>= 1)            |
+| `MAX_MEMORY_IN_MB`            | The maximum memory, in MB, allocated to histogram aggregation. If this value is too small, only 1 node will be split per iteration, and its aggregates may exceed this size.                                | 256           |                    |
+| `PREDICTION_COL`              | The column name for prediction output.                                                                                                                                                                      | "prediction"  | Any string        |
+| `SEED`                        | The random seed.                                                                                                                                                                                            | NOT SET       | Any 64-bit number  |
+| `WEIGHT_COL`                  | The column name for instance weights. If not set or empty, all instance weights are treated as `1.0`.                                                                                                       | NOT SET       | Any string        |
+| `ONE_VS_REST`                 | Enables or disables wrapping this algorithm with One-vs-Rest, used for multiclass classification problems.                                                                                                  | `false`        | `true`, `false`   |
+
+{style="table-layout:auto"}
+
+**Example**
+
+```sql
+Create MODEL modelname OPTIONS(
+  type = 'decision_tree_classifier'
+) AS
+  select col1, col2, col3 from training-dataset
+```
+
+## [!DNL Factorization Machine Classifier] {#factorization-machine-classifier}
+
+The [!DNL Factorization Machine Classifier] is a classification algorithm that supports normal gradient descent and the AdamW solver. It is based on the work of S. Rendle (2010) on factorization machines. The FM classification model uses logistic loss, which can be optimized via gradient descent, and often includes regularization terms like L2 to prevent overfitting.
+
+**Parameters**
+
+The table below outlines key parameters for configuring and optimizing the performance of the [!DNL Factorization Machine Classifier].
+
+| Parameter              | Description                                                                                                                                                                                             | Default value | Possible Values                                                                                      |
+|------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------------------------------------|
+| `TOL`                  | The convergence tolerance, controlling the accuracy of the optimization.                                                                                                                                 | 1E-6          | (>= 0)                                                                                                |
+| `FACTOR_SIZE`          | The dimensionality of the factors.                                                                                                                                                                       | 8             | (>= 0)                                                                                                |
+| `FIT_INTERCEPT`        | Specifies whether to fit an intercept term.                                                                                                                                                              | `true`        | `true`, `false`                                                                                       |
+| `FIT_LINEAR`           | Specifies whether to fit the linear term (also known as the 1-way term).                                                                                                                                  | `true`        | `true`, `false`                                                                                       |
+| `INIT_STD`             | The standard deviation for initializing coefficients.                                                                                                                                                    | 0.01          | (>= 0)                                                                                                |
+| `MAX_ITER`             | The maximum number of iterations for the algorithm to run.                                                                                                                                               | 100           | (>= 0)                                                                                                |
+| `MINI_BATCH_FRACTION`  | The fraction of data to use in mini-batches during training. Must be in the range `(0, 1]`.                                                                                                                | 1.0           | `(0, 1]`                                                                                                |
+| `REG_PARAM`            | The regularization parameter, which helps control model complexity and prevent overfitting.                                                                                                               | 0.0           | (>= 0)                                                                                                |
+| `SEED`                 | The random seed for controlling random processes in the algorithm.                                                                                                                                         | NOT SET       | Any 64-bit number                                                                                     |
+| `SOLVER`               | The solver algorithm used for optimization. Supported options are `gd` (gradient descent) and `adamW`.                                                                                                    | "adamW"       | `gd`, `adamW`                                                                                         |
+| `STEP_SIZE`            | The initial step size for optimization, often interpreted as the learning rate.                                                                                                                           | 1.0           |                                                                                                       |
+| `PROBABILITY_COL`      | The column name for predicted class conditional probabilities. Note: not all models output well-calibrated probabilities; these should be treated as confidence scores rather than exact probabilities.     | "probability" | Any string                                                                                            |
+| `PREDICTION_COL`       | The column name for predicted class labels.                                                                                                                                                              | "prediction"  | Any string                                                                                            |
+| `RAW_PREDICTION_COL`   | The column name for raw prediction values (also known as confidence).                                                                                                                                     | "rawPrediction" | Any string                                                                                           |
+| `ONE_VS_REST`          | Specifies whether to enable One-vs-Rest for multiclass classification.                                                                                                                                   | `false`         | `true`, `false`                                                                                       |
+
+{style="table-layout:auto"}
+
+**Example**
+
+```sql
+Create MODEL modelname OPTIONS(
+  type = 'factorization_machines_classifier'
+) AS
+  select col1, col2, col3 from training-dataset
+```
+
+<!-- 
+Decision Tree Classifier
+Factorization Machine Classifier 
+Gradient Boosted Tree Classifier 
+Linear Support Vector Classifier (LinearSVC) 
+Logistic Regression 
+Multilayer Perceptron Classifier 
+Naive Bayes Classifier 
+Random Forest Classifier 
+-->
+
