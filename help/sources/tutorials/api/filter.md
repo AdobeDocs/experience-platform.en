@@ -65,7 +65,7 @@ curl -X GET \
 
 +++Response
 
-A successful response returns the connection specs for [!DNL Google BigQuery], including information on its supported query language and logical operators.
+A successful response returns the status code 200 and the connection specs for [!DNL Google BigQuery], including information on its supported query language and logical operators.
 
 ```json
 "attributes": {
@@ -400,7 +400,7 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 ## Filter activity entities for [!DNL Marketo Engage] {#filter-for-marketo}
 
-You can use row-level filtering to filter for activity entities when using the [[!DNL Marketo Engage] source connector](../../connectors/adobe-applications/marketo/marketo.md). Currently, you can only filter for activity entities and you can only filter for standard activity types. Custom activities remain governed under [[!DNL Marketo] field mappings](../../connectors/adobe-applications/mapping/marketo.md).
+You can use row-level filtering to filter for activity entities when using the [[!DNL Marketo Engage] source connector](../../connectors/adobe-applications/marketo/marketo.md). Currently, you can only filter for activity entities and standard activity types. Custom activities remain governed under [[!DNL Marketo] field mappings](../../connectors/adobe-applications/mapping/marketo.md).
 
 ### [!DNL Marketo] standard activity types {#marketo-standard-activity-types}
 
@@ -454,7 +454,7 @@ In the UI, navigate to the sources catalog and then select **[!UICONTROL Dataflo
 
 ### Retrieve your dataflow details
 
-Next, you must retrieve your dataflow details, particularly the source connection ID associated with your dataflow. To retrieve your dataflow details, make a GET request to the `/flows` endpoint and provide your dataflow ID as a query parameter.
+Next, you must retrieve your dataflow details, particularly the source connection ID associated with your dataflow. To retrieve your dataflow details, make a GET request to the `/flows` endpoint and provide your dataflow ID as a path parameter.
 
 **API format**
 
@@ -674,6 +674,10 @@ Now that you have your source connection ID and its corresponding version, you c
 
 To update your source connection, make a PATCH request to the `/sourceConnections` endpoint and provide your source connection ID as a query parameter. Additionally, you must provide an `If-Match` header parameter, with the corresponding version of your source connection.
 
+>[!TIP]
+>
+>The `If-Match` header is required when making a PATCH request. The value for this header is the unique version/etag of the dataflow you want to update. The version/etag value updates with every successful update of a dataflow.
+
 **API format**
 
 ```http
@@ -693,7 +697,7 @@ curl -X PATCH \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'If-Match: {IF_MATCH}'
+  -H 'If-Match: {VERSION_HERE}'
   -d '
       {
         "op": "add",
