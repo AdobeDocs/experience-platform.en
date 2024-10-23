@@ -5,13 +5,13 @@ role: Developer
 hide: yes
 hidefromtoc: yes
 ---
-## Feature transformation techniques
+# Feature transformation techniques
 
 Transformations are crucial preprocessing steps that convert or scale data into a format suitable for model training and analysis to ensure optimal performance and accuracy.
 
 Machine learning models cannot process string values or null values directly. Therefore, you must impute missing values, such as replacing empty cells in numeric columns with the mean or median. Similarly, convert string data into numeric formats through processes like encoding or vectorization, which allow the model to interpret and learn from textual data effectively. This section explains common techniques such as one-hot encoding and feature scaling, and their role in improving algorithm performance.
 
-### Automatic feature transformation {#automatic-transformations}
+## Automatic feature transformation {#automatic-transformations}
 
 If you choose to skip the `TRANSFORM` clause in your `CREATE MODEL` command, feature transformation occurs automatically. Automatic data preprocessing includes null replacement and standard feature transformations (based on the datatype). Numeric and text columns are automatically imputed, then feature transformations are conducted to ensure that the data is in a suitable format for machine learning model training. This process includes missing data imputation and categorical, numeric, and boolean transformations.
 
@@ -21,7 +21,7 @@ If you choose to skip the `TRANSFORM` clause in your `CREATE MODEL` command, fea
 
 The following tables explain how different data types are handled when the `TRANSFORM` clause is omitted during the `CREATE MODEL` command. 
 
-#### Null replacement {#automatic-null-replacement}
+### Null replacement {#automatic-null-replacement}
 
 | Data Type       | Null Replacement                                    |
 |-----------------|-----------------------------------------------------|
@@ -31,7 +31,7 @@ The following tables explain how different data types are handled when the `TRAN
 | Timestamp       | This is expected to be a continuous field.            |
 | Nested/STRUCT   | The replacement depends on the datatype of the leaf node.|
 
-#### Feature transformation {#automatic-feature-transformation}
+### Feature transformation {#automatic-feature-transformation}
 
 | Data Type       | Feature Transformation                              |
 |-----------------|-----------------------------------------------------|
@@ -47,11 +47,11 @@ The following tables explain how different data types are handled when the `TRAN
 CREATE model modelname options(model_type='logistic_reg', label='rating') AS SELECT * FROM movie_rating;
 ```
 
-### Manual feature transformations {#manual-transformations}
+## Manual feature transformations {#manual-transformations}
 
 To define custom data preprocessing in your `CREATE MODEL` statement, use the `TRANSFORM` clause in combination with any number of the available transformation functions. These manual preprocessing functions can also be used outside of the `TRANSFORM` clause. All the transformations discussed in the [transformer section below](#available-transformations), can be used to preprocess the data manually.
 
-#### Key Characteristics
+### Key Characteristics
 
 The following are key characteristics of feature transformation to consider when you define your preprocessing functions:
 
