@@ -5,7 +5,7 @@ role: Developer
 ---
 # Regression algorithms {#regression-algorithms}
 
-Introduction.
+This document provides an overview of various regression algorithms, focusing on their configuration, key parameters, and practical usage in advanced statistical models. Regression algorithms are used to model the relationship between dependent and independent variables, predicting continuous outcomes based on observed data. Each section includes parameter descriptions and example code to help you implement and optimize these algorithms for different tasks, such as linear, random forest, and survival regression.
 
 ## [!DNL Decision Tree] regression {#decision-tree-regression}
 
@@ -75,13 +75,13 @@ CREATE MODEL modelname OPTIONS(
   SELECT col1, col2, col3 FROM training-dataset
 ```
 
-## Generalized Linear regression {#generalized-linear-regression}
+## [!DNL Generalized Linear] regression {#generalized-linear-regression}
 
-Unlike linear regression, which assumes that the outcome follows a normal (Gaussian) distribution, generalized linear models (GLMs) allow the outcome to follow different types of distributions, such as Poisson or binomial, depending on the nature of the data.
+Unlike linear regression, which assumes that the outcome follows a normal (Gaussian) distribution, [!DNL Generalized Linear] Models (GLMs) allow the outcome to follow different types of distributions, such as [!DNL Poisson] or binomial, depending on the nature of the data.
 
 **Parameters**
 
-The table below outlines key parameters for configuring and optimizing the performance of Generalized Linear Regression.
+The table below outlines key parameters for configuring and optimizing the performance of [!DNL Generalized Linear] regression.
 
 | Parameter              | Description                                                                                                                                                                                                              | Default value | Possible Values                                                         |
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------|
@@ -267,3 +267,7 @@ CREATE MODEL modelname OPTIONS(
 ) AS
   SELECT col1, col2, col3 FROM training-dataset
 ```
+
+## Next steps
+
+After reading this document, you now know how to configure and use various regression algorithms. Next, refer to the documents on [classification](./classification.md) and [clustering](./clustering.md) to learn about other types of advanced statistical models.
