@@ -75,9 +75,40 @@ Create MODEL modelname OPTIONS(
   select col1, col2, col3 from training-dataset
 ```
 
-## Generalised Linear Regression {#generalised-linearregression}
+## Generalized Linear Regression {#generalized-linear-regression}
 
-Words.
+Unlike linear regression, which assumes that the outcome follows a normal (Gaussian) distribution, generalized linear models (GLMs) allow the outcome to follow different types of distributions, such as Poisson or binomial, depending on the nature of the data.
+
+**Parameters**
+
+The table below outlines key parameters for configuring and optimizing the performance of Generalized Linear Regression.
+
+| Parameter              | Description                                                                                                                                                                                                              | Default value | Possible Values                                                         |
+|------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------|
+| `MAX_ITER`             | Sets the maximum number of iterations (applicable when using the solver `irls`).                                                                                                                                         | 25            | (>= 0)                                                                  |
+| `REG_PARAM`            | The regularization parameter.                                                                                                                                                                                            | NOT SET       | (>= 0)                                                                  |
+| `TOL`                  | The convergence tolerance.                                                                                                                                                                                               | `1E-6`        | (>= 0)                                                                  |
+| `AGGREGATION_DEPTH`    | The suggested depth for `treeAggregate`.                                                                                                                                                                                 | 2             | (>= 2)                                                                   |
+| `FAMILY`               | The family parameter, describing the error distribution used in the model. Supported options are `gaussian`, `binomial`, `poisson`, `gamma`, and `tweedie`.                                                              | "gaussian"    | `gaussian`, `binomial`, `poisson`, `gamma`, `tweedie`                   |
+| `FIT_INTERCEPT`        | Whether to fit an intercept term.                                                                                                                                                                                        | `true`        | `true`, `false`                                                          |
+| `LINK`                 | The link function, which defines the relationship between the linear predictor and the mean of the distribution function. Supported options are `identity`, `log`, `inverse`, `logit`, `probit`, `cloglog`, and `sqrt`.  | NOT SET       | `identity`, `log`, `inverse`, `logit`, `probit`, `cloglog`, `sqrt`      |
+| `LINK_POWER`           | The index in the power link function, applicable to the [!DNL Tweedie] family. If not set, it defaults to `1 - variancePower`, following the R `statmod` package. Link powers of 0, 1, -1, and 0.5 correspond to Log, Identity, Inverse, and Sqrt link, respectively. | 1                                          |
+| `SOLVER`               | The solver algorithm used for optimization. Supported option: `irls` (iteratively reweighted least squares).                                                                                                             | "irls"        | `irls`                                                                  |
+| `VARIANCE_POWER`       | The power in the variance function of the [!DNL Tweedie] distribution, which defines the relationship between variance and mean. Supported values are 0 and [1, ∞).                                                      | 0.0           | 0, [1, Inf)                                                             |
+| `LINK_PREDICTION_COL`  | The link prediction (linear predictor) column name.                                                                                                                                                                      | NOT SET       | Any String                                                              |
+| `OFFSET_COL`           | The offset column name. If not set, all instance offsets are treated as 0.0. The offset feature has a constant coefficient of 1.0.                                                                                       | NOT SET       |                                                                        |
+| `WEIGHT_COL`           | The weight column name. If not set or empty, all instance weights are treated as `1.0`. In the Binomial family, weights correspond to the number of trials, and non-integer weights are rounded in AIC calculation.      | NOT SET       |                                                                        |
+
+{style="table-layout:auto"}
+
+**Example**
+
+```sql
+Create MODEL modelname OPTIONS(
+  type = 'generalized_linear_reg'
+) AS
+  select col1, col2, col3 from training-dataset
+```
 
 ## Gradient Boosted Tree Regression {#gradient-boosted-tree-regression}
 
