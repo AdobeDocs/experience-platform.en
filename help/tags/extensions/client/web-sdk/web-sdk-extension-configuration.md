@@ -144,9 +144,9 @@ The collected data can include information about media playbacks, pauses, comple
 * **[!UICONTROL Main ping interval]**: Frequency of pings for main content, in seconds. The default value is `10`. Values can range from `10` to `50` seconds.  If no value is specified, the default value is used when using [automatically-tracked sessions](../../../../web-sdk/commands/createmediasession.md#automatic).
 * **[!UICONTROL Ad ping interval]**: Frequency of pings for ad content, in seconds. The default value is `10`. Values can range from `1` to `10` seconds. If no value is specified, the default value is used when using [automatically-tracked sessions](../../../../web-sdk/commands/createmediasession.md#automatic)
 
-## Configure datastream overrides {#datastream-overrides}
+## Dynamic datastream configuration {#datastream-overrides}
 
-Datastream overrides allow you to define additional configurations for your datastreams, which get passed to the Edge Network via the Web SDK.
+Dynamic datastream configurations allow you to define additional configurations for your datastreams, so you can choose what services receive the event data.
 
 This helps you trigger different datastream behaviors than the default ones, without creating a new datastream or modifying your existing settings.
 
