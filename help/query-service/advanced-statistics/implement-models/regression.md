@@ -7,7 +7,7 @@ role: Developer
 
 Introduction.
 
-## Decision Tree Regression {#decision-tree-regression}
+## Decision Tree regression {#decision-tree-regression}
 
 Decision tree learning is a supervised learning method used in statistics, data mining, and machine learning. In this approach, a classification or regression decision tree is used as a predictive model to draw conclusions about a set of observations.
 
@@ -41,9 +41,39 @@ Create MODEL modelname OPTIONS(
   select col1, col2, col3 from training-dataset
 ```
 
-## Factorization Machines Regression {#factorization-machines-regression}
+## Factorization Machines regression {#factorization-machines-regression}
 
-Words.
+Factorization Machines is a regression learning algorithm that supports normal gradient descent and the AdamW solver. The algorithm is based on the paper by S. Rendle (2010), "Factorization Machines."
+
+**Parameters**
+
+The table below outlines key parameters for configuring and optimizing the performance of Factorization Machines Regression.
+
+| Parameter              | Description                                                                         | Default value | Possible Values |
+|------------------------|--------------------------------------------------------------------------------------|---------------|----------------|
+| `TOL`                  | The convergence tolerance.                                                          | `1E-6`          | (>= 0)          |
+| `FACTOR_SIZE`          | The dimensionality of the factors.                                                  | 8             | (>= 0)          |
+| `FIT_INTERCEPT`        | Whether to fit an intercept term.                                                   | `true`        | `true`, `false`  |
+| `FIT_LINEAR`           | Whether to fit the linear term (also known as the 1-way term).                      | `true`        | `true`, `false` |
+| `INIT_STD`             | The standard deviation of the initial coefficients.                                 | 0.01          | (>= 0)          |
+| `MAX_ITER`             | The number of iterations the algorithm should run.                                  | 100           | (>= 0)           |
+| `MINI_BATCH_FRACTION`  | The mini-batch fraction, which must be in the range (0, 1).                         | 1.0           | (0, 1)            |
+| `REG_PARAM`            | The regularization parameter.                                                       | 0.0           | (>= 0)            |
+| `SEED`                 | The random seed.                                                                    | NOT SET       | Any 64-bit number |
+| `SOLVER`               | The solver algorithm used for optimization.                                         | "adamW"       | `gd`, `adamW`     |
+| `STEP_SIZE`            | The initial step size for the first step (similar to learning rate).                | 1.0           |                   |
+| `PREDICTION_COL`       | The prediction column name.                                                         | "prediction"  | Any String        |
+
+{style="table-layout:auto"}
+
+**Example**
+
+```sql
+Create MODEL modelname OPTIONS(
+  type = 'factorization_machines_regression'
+) AS
+  select col1, col2, col3 from training-dataset
+```
 
 ## Generalised Linear Regression {#generalised-linearregression}
 
