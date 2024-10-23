@@ -693,7 +693,7 @@ curl -X PATCH \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'If-Match: "210068a6-0000-0200-0000-6718201b0000"'
+  -H 'If-Match: {IF_MATCH}'
   -d '
       {
         "op": "add",
