@@ -35,10 +35,10 @@ The table below outlines key parameters for configuring and optimizing the perfo
 **Example**
 
 ```sql
-Create MODEL modelname OPTIONS(
+CREATE MODEL modelname OPTIONS(
   type = 'decision_tree_regression'
 ) AS
-  select col1, col2, col3 from training-dataset
+  SELECT col1, col2, col3 FROM training-dataset
 ```
 
 ## [!DNL Factorization Machines] regression {#factorization-machines-regression}
@@ -69,10 +69,10 @@ The table below outlines key parameters for configuring and optimizing the perfo
 **Example**
 
 ```sql
-Create MODEL modelname OPTIONS(
+CREATE MODEL modelname OPTIONS(
   type = 'factorization_machines_regression'
 ) AS
-  select col1, col2, col3 from training-dataset
+  SELECT col1, col2, col3 FROM training-dataset
 ```
 
 ## Generalized Linear regression {#generalized-linear-regression}
@@ -104,10 +104,10 @@ The table below outlines key parameters for configuring and optimizing the perfo
 **Example**
 
 ```sql
-Create MODEL modelname OPTIONS(
+CREATE MODEL modelname OPTIONS(
   type = 'generalized_linear_reg'
 ) AS
-  select col1, col2, col3 from training-dataset
+  SELECT col1, col2, col3 FROM training-dataset
 ```
 
 ## [!DNL Gradient Boosted Tree] regression {#gradient-boosted-tree-regression}
@@ -144,10 +144,10 @@ The table below outlines key parameters for configuring and optimizing the perfo
 **Example**
 
 ```sql
-Create MODEL modelname OPTIONS(
+CREATE MODEL modelname OPTIONS(
   type = 'gradient_boosted_tree_regression'
 ) AS
-  select col1, col2, col3 from training-dataset
+  SELECT col1, col2, col3 FROM training-dataset
 ```
 
 ## [!DNL Isotonic] regression {#isotonic-regression}
@@ -170,10 +170,10 @@ The table below outlines key parameters for configuring and optimizing the perfo
 **Example**
 
 ```sql
-Create MODEL modelname OPTIONS(
+CREATE MODEL modelname OPTIONS(
   type = 'isotonic_regression'
 ) AS
-  select col1, col2, col3 from training-dataset
+  SELECT col1, col2, col3 FROM training-dataset
 ```
 
 ## [!DNL Linear] regression {#linear-regression}
@@ -195,10 +195,10 @@ The table below outlines key parameters for configuring and optimizing the perfo
 **Example**
 
 ```sql
-Create MODEL modelname OPTIONS(
+CREATE MODEL modelname OPTIONS(
   type = 'linear_reg'
 ) AS
-  select col1, col2, col3 from training-dataset
+  SELECT col1, col2, col3 FROM training-dataset
 ```
 
 ## [!DNL Random Forest Regression] {#random-forest-regression}
@@ -233,19 +233,37 @@ The table below outlines key parameters for configuring and optimizing the perfo
 **Example**
 
 ```sql
-Create MODEL modelname OPTIONS(
+CREATE MODEL modelname OPTIONS(
   type = 'random_forest_regression'
 ) AS
-  select col1, col2, col3 from training-dataset
+  SELECT col1, col2, col3 FROM training-dataset
 ```
 
-## Survival regression {#survival-regression}
+## [!DNL Survival Regression] {#survival-regression}
 
+[!DNL Survival Regression] is used to fit a parametric survival regression model, known as the [!DNL Accelerated Failure Time] (AFT) model, based on the [!DNL Weibull distribution]. It can stack instances into blocks for enhanced performance.
 
-<!--  Find the missing one
+**Parameters**
 
+The table below outlines key parameters for configuring and optimizing the performance of [!DNL Survival Regression].
 
-Linear Regression
-Random Forest Regression
-Survival Regression
--->
+| Parameter                | Description                                                                                                                                                                                         | Default value | Possible Values |
+|--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|-----------------|
+| `MAX_ITER`               | The maximum number of iterations that the algorithm should run.                                                                                                                                     | 100           | (>= 0)          |
+| `TOL`                    | The convergence tolerance.                                                                                                                                                                          | `1E-6`        | (>= 0)          |
+| `AGGREGATION_DEPTH`      | The suggested depth for `treeAggregate`. If the feature dimensions or the number of partitions are large, this parameter can be set to a larger value.                                              | 2             | (>= 2)          |
+| `FIT_INTERCEPT`          | Whether to fit an intercept term.                                                                                                                                                                   | TRUE          | `true`, `false` |
+| `PREDICTION_COL`         | The column name for prediction output.                                                                                                                                                              | "prediction"  | Any string      |
+| `CENSOR_COL`             | The column name for censoring. A value of `1` indicates that the event has occurred (uncensored), while `0` means the event is censored.                                                            | "censor"      | 0, 1            |
+| `MAX_BLOCK_SIZE_IN_MB`   | The maximum memory in MB for stacking input data into blocks. If the remaining data size in a partition is smaller, this value is adjusted accordingly. A value of `0` allows automatic adjustment. | 0.0           | (>= 0)          |
+
+{style="table-layout:auto"}
+
+**Example**
+
+```sql
+CREATE MODEL modelname OPTIONS(
+  type = 'survival_regression'
+) AS
+  SELECT col1, col2, col3 FROM training-dataset
+```
