@@ -139,9 +139,11 @@ In any of the export situations above, the exported files include the profiles t
 
 ### Incremental file exports {#incremental-file-exports}
 
-Not all updates on a profile qualify a profile to be included in incremental file exports. For example, if an attribute was added to or removed from a profile, that does not include the profile in the export. Only profiles for which the `segmentMembership` attribute has changed will be included in exported files. In other words, only if the profile becomes part of the audience or is removed from the audience is it included in incremental file exports.
+Not all updates on a profile qualify a profile to be included in incremental file exports. For example, if an attribute was added to or removed from a profile, that does not include the profile in the export. 
 
-Similarly, if a new identity (new email address, phone number, ECID, and so on) is added to a profile in the [identity graph](/help/identity-service/features/identity-graph-viewer.md), that does not represent a reason to include the profile in a new incremental file export. 
+However, when the `segmentMembership` attribute on a profile changes, the profile will be included in exported files. In other words, if the profile becomes part of the audience or is removed from the audience, it is included in incremental file exports.
+
+Similarly, if a new identity (new email address, phone number, ECID, and so on) is added to a profile in the [identity graph](/help/identity-service/features/identity-graph-viewer.md), that will trigger the profile to be included in a new incremental file export. 
 
 If a new audience is added to a destination mapping, that does not affect qualifications and exports for another segment. Export schedules are configured individually per audience and files are exported separately for every segment, even if the audiences have been added to the same destination dataflow.
 
@@ -151,10 +153,10 @@ For example, in the export setting illustrated below, where an audience is expor
 
 ![Export setting with several selected attributes.](/help/destinations/assets/how-destinations-work/export-selection-batch-destination.png)
 
-* A profile is included in an incremental file export when it qualifies or disqualifies for the segment.
-* A profile is *not* included in an incremental file export when a new phone number is added to the identity graph.
-* A profile is *not* included in an incremental file export when the value of any of the mapped XDM fields like `xdm: loyalty.points`, `xdm: loyalty.tier`, `xdm: personalEmail.address` is updated on a profile.
-* Whenever the `segmentMembership.status` XDM field is mapped in the destination activation workflow, profiles exiting the audience are also included in exported incremental files, with an `exited` status.
+* A profile *is* included in an incremental file export when it qualifies or disqualifies for the segment.
+* A profile *is* included in an incremental file export when a new phone number is added to the identity graph.
+* A profile *is not* included in an incremental file export when the value of any of the mapped XDM fields like `xdm: loyalty.points`, `xdm: loyalty.tier`, `xdm: personalEmail.address` is updated on a profile.
+* Whenever the `segmentMembership.status` XDM field is mapped in the destination activation workflow, profiles exiting the audience *are also included* in exported incremental files, with an `exited` status.
 
 >[!ENDSHADEBOX]
 
@@ -178,13 +180,13 @@ In the first file export after setting up the activation workflow, the entire po
 
 |What determines a destination export | What is included in the exported file |
 |---------|----------|
-|<ul><li>The export schedule set in the UI or API determines the start of a destination export.</li><li>Any changes in audience membership of a profile, whether it qualifies or disqualifies from the segment, qualify a profile to be included in incremental exports. Changes in attributes or in identity maps for a profile *do not* qualify a profile to be included in incremental exports.</li></ul> | <p>The profiles for which the audience membership has changed, along with the latest information for each XDM attribute selected for export.</p><p>Profiles with the exited status are included in destination exports, if the `segmentMembership.status` XDM field is selected in the mapping step.</p>  |
+|<ul><li>The export schedule set in the UI or API determines the start of a destination export.</li><li>Any changes in audience membership of a profile, whether it qualifies or disqualifies from the segment, or changes in identity maps, qualify a profile to be included in incremental exports. Changes in attributes for a profile *do not* qualify a profile to be included in incremental exports.</li></ul> | <p>The profiles for which the audience membership has changed, along with the latest information for each XDM attribute selected for export.</p><p>Profiles with the exited status are included in destination exports, if the `segmentMembership.status` XDM field is selected in the mapping step.</p>  |
 
 {style="table-layout:fixed"}
 
 >[!TIP]
 >
->As a reminder, changes in attribute values or in identity maps for a profile do not qualify a profile to be included in an incremental file export.
+>As a reminder, changes in identity maps for a profile qualify it to be included in an incremental file export. Changes in attribute values *do not* qualify it to be included in an incremental file export.
 
 ## Next steps {#next-steps}
 

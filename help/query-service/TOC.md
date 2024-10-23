@@ -18,14 +18,14 @@ role: User,Developer
     - [Overview](data-distiller/overview.md)
     - [License usage](data-distiller/license-usage.md)
     - Derived datasets {#derived-datasets}
-      - [Overview](data-distiller/derived-datasets/overview.md)
-      - [Create derived datasets with SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
-      - [Create decile-based derived datasets](data-distiller/derived-datasets/decile-based-derived-attributes.md)
-    - Customizable Insights for extended app reporting {#customizable-insights}
-        - [Overview](data-distiller/customizable-insights/overview.md)
-        - [Query pro mode](data-distiller/customizable-insights/query-pro-mode.md)
-        - [Send accelerated queries](data-distiller/customizable-insights/send-accelerated-queries.md)
-        - [Reporting insights data model guide](data-distiller/customizable-insights/reporting-insights-data-model.md)
+        - [Overview](data-distiller/derived-datasets/overview.md)
+        - [Create derived datasets with SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
+        - [Create decile-based derived datasets](data-distiller/derived-datasets/decile-based-derived-attributes.md)
+    - SQL Insights for extended app reporting {#sql-insights}
+        - [Overview](data-distiller/sql-insights/overview.md)
+        - [Query pro mode](data-distiller/sql-insights/query-pro-mode.md)
+        - [Send accelerated queries](data-distiller/sql-insights/send-accelerated-queries.md)
+        - [Reporting insights data model guide](data-distiller/sql-insights/reporting-insights-data-model.md)
     - AI/ML feature pipelines {#ml-feature-pipelines}
         - [Overview](data-distiller/ml-feature-pipelines/overview.md)
         - [Connect to Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)
@@ -38,9 +38,12 @@ role: User,Developer
     - [Feature engineering](advanced-statistics/feature-engineering.md)
     - [Models](advanced-statistics/models.md)
     Implement models {#implement-models}
+        - [Implement models](advanced-statistics/implement-models/implement-models.md)
         - [Regression](advanced-statistics/implement-models/regression.md)
         - [Classification](advanced-statistics/implement-models/classification.md)
         - [Clustering](advanced-statistics/implement-models/clustering.md)
+- Data Distiller audiences {#data-distiller-audiences}
+    - [Build external audiences using SQL](data-distiller-audiences/overview.md)
 - Examples {#use-cases}
     - [Overview](use-cases/overview.md)
     - [Abandoned browse](use-cases/abandoned-browse.md)
@@ -69,6 +72,8 @@ role: User,Developer
     - [Data deduplication](key-concepts/deduplication.md)
     - [Dataset samples](key-concepts/dataset-samples.md)
     - [Dataset statistics computation](key-concepts/dataset-statistics.md)
+- Data Distiller Hypercubes {#hypercubes}
+  - [Efficient big data analysis with hypercubes](hypercubes/overview.md)
 - Connect clients to Query Service {#clients}
     - [Client connections overview](clients/overview.md)
     - [SSL modes](./clients/ssl-modes.md)

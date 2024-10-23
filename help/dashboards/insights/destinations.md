@@ -11,7 +11,7 @@ Understand your destination insights by accessing the SQL that powers them, then
 
 See the [View SQL documentation](../view-sql.md) for more information on how to adapt your insights' SQL directly through the PLatform UI. 
 
-The following insights are all available for you to use as part of the [Destinations dashboard](../guides/destinations.md) or a custom [user-defined dashboard](../user-defined-dashboards.md). See the [customization overview](../customize/overview.md) for instructions on how to customize your dashboard or [create and edit new widgets](../customize/custom-widgets.md) in the widget library and [user-defined dashboard](../user-defined-dashboards.md#create-widget).
+The following insights are all available for you to use as part of the [Destinations dashboard](../guides/destinations.md) or a custom [user-defined dashboard](../standard-dashboards.md). See the [customization overview](../customize/overview.md) for instructions on how to customize your dashboard or [create and edit new widgets](../customize/custom-widgets.md) in the widget library and [user-defined dashboard](../standard-dashboards.md#create-widget).
 
 ## Activated audiences {#activated-audiences}
 

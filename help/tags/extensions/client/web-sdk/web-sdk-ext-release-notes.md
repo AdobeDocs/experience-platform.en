@@ -1,18 +1,26 @@
 ---
 title: Adobe Experience Platform Web SDK Extension Release Notes
 description: Adobe Experience Platform Web SDK Tag Extension
+exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 ---
-
 # Adobe Experience Platform Web SDK extension release notes
 
 This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Platform Web SDK release notes](/help/web-sdk/release-notes.md).
+
+## Version 2.26.1 - September 19, 2024
+
+**Fixes and improvements**
+
+- Fixed an issue where cookies were not written correctly when running the Web SDK locally.
+
+Contains version 2.23.0 of the Adobe Experience Platform Web SDK.
 
 ## Version 2.26.0 - August 22, 2024
 
 **New features**
 
 - Added monitoring hook `triggered` event.
-- [Guided events](action-types.md#instance), [Request default personalization](action-types.md#personalization), [Subscribe ruleset items](event-types.md#subscribe-ruleset-items), and [evaluate rulesets](action-types.md#evaluate-rulesets) are now generally available. 
+- [Guided events](action-types.md#instance), [Request default personalization](action-types.md#personalization), [Subscribe ruleset items](event-types.md#subscribe-ruleset-items), and [evaluate rulesets](action-types.md#evaluate-rulesets) are now generally available.
 
 **Fixes and improvements**
 

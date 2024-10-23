@@ -1,6 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes August 2024
 description: The August 2024 release notes for Adobe Experience Platform.
+exl-id: 153891e9-fd82-4894-a047-c8d82f214fef
 ---
 # Adobe Experience Platform release notes 
 
@@ -124,6 +125,12 @@ For more information on [!DNL Segmentation Service], please see the [Segmentatio
 Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 
 Use sources in Experience Platform to ingest data from an Adobe application or a third-party data source.
+
+**Updated feature**
+
+| Feature | Description |
+| --- | --- |
+| Updates to the Adobe Analytics source connector | The dataset activity page does not display information about batches since the Analytics Source Connector is entirely managed by Adobe. You can monitor that data is flowing by looking at the metrics around ingested records. Read the guide on creating a [source connection for Analytics data](../../sources/tutorials/ui/create/adobe-applications/analytics.md) for more information. | 
 
 **Updated documentation**
 

@@ -1,51 +1,51 @@
 ---
 title: First-party device IDs in Web SDK
-description: Learn how to configure first-party device IDs (FPIDs) for the Adobe Experience Platform Web SDK.
+description: Learn how to configure first-party device IDs (FPIDs) in the Adobe Experience Platform Web SDK.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
 ---
 
 # First-party device IDs in Web SDK
 
-The Adobe Experience Platform Web SDK assigns [Adobe Experience Cloud IDs (ECIDs)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html) to website visitors by using cookies, to track user behavior. To account for browser restrictions on cookie lifespans, you can opt to set and manage your own device identifiers instead. These are referred to as first-party device IDs (FPIDs).
+The Adobe Experience Platform Web SDK assigns [Adobe Experience Cloud IDs (ECIDs)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html) to website visitors by using cookies, to track user behavior. To account for browser restrictions on cookie lifespans, you can choose to set and manage your own device identifiers instead. These are referred to as first-party device IDs (`FPIDs`).
 
 >[!NOTE]
 >
->First-party device ID support is only available when sending data to the Platform Edge Network via the Platform Web SDK.
+>First-party device ID support is only available when sending data to the Experience Platform Edge Network via the Web SDK.
 
 >[!IMPORTANT]
 >
 >First-party device IDs are not compatible with the [third-party cookies](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#identity) functionality in Web SDK.
 >You can either use first-party device IDs, or you can use third-party cookies, but you cannot use both features simultaneously.
 
-This document covers how to configure first-party device IDs for your Platform Web SDK implementation.
+This document explains how to configure first-party device IDs for your Web SDK implementation.
 
 ## Prerequisites
 
 This guide assumes you are familiar with how identity data works for the Platform Web SDK, including the role of ECIDs and `identityMap`. See the overview on [identity data in the Web SDK](./overview.md) for more information.
 
-## Using FPIDs
+## Using first-party device IDs (FPIDs) {#using-fpid}
 
-FPIDs track visitors by using first-party cookies. First-party cookies are most effective when they are set using a server that uses a DNS [A record](https://datatracker.ietf.org/doc/html/rfc1035) (for IPv4) or [AAAA record](https://datatracker.ietf.org/doc/html/rfc3596) (for IPv6), as opposed to a DNS CNAME or JavaScript code.
+First-party device IDs ([!DNL FPIDs]) track visitors by using first-party cookies. First-party cookies are most effective when they are set using a server that uses a DNS [A record](https://datatracker.ietf.org/doc/html/rfc1035) (for IPv4) or [AAAA record](https://datatracker.ietf.org/doc/html/rfc3596) (for IPv6), as opposed to a DNS [!DNL CNAME] or [!DNL JavaScript] code.
 
 >[!IMPORTANT]
 >
->`A` or `AAAA` records are only supported for setting and tracking cookies. The primary method for data collection is through a DNS CNAME. In other words, FPIDs are set using an A record or AAAA record, and are then sent to Adobe using a CNAME.
+>[!DNL A] or [!DNL AAAA] records are only supported for setting and tracking cookies. The primary method for data collection is through a [!DNL DNS] [!DNL CNAME]. In other words, [!DNL FPIDs] are set using an [!DNL A] record or [!DNL AAAA] record, and are then sent to Adobe using a [!DNL CNAME].
 >
 >The [Adobe-Managed Certificate Program](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) is also still supported for first-party data collection.
 
-Once an FPID cookie is set, its value can be fetched and sent to Adobe as event data is collected. Collected FPIDs are used as seeds to generate ECIDs, which continue to be the primary identifiers in Adobe Experience Cloud applications. 
+Once an [!DNL FPID] cookie is set, its value can be fetched and sent to Adobe as event data is collected. Collected [!DNL FPIDs] are used as seeds to generate [!DNL ECIDs], which continue to be the primary identifiers in Adobe Experience Cloud applications. 
 
-To send an FPID for a website visitor to the Platform Edge Network, you must include the FPID in the `identityMap` for that visitor. See the section later in this document on [using FPIDs in `identityMap`](#identityMap) for more information.
+To send an [!DNL FPID] for a website visitor to the Edge Network, you must include the [!DNL FPID] in the `identityMap` for that visitor. See the section further down in this document on [using FPIDs in `identityMap`](#identityMap) for more information.
 
-### ID formatting requirements
+### First-party device ID formatting requirements {#formatting-requirements}
 
-The Platform Edge Network only accepts IDs that comply with the [UUIDv4 format](https://datatracker.ietf.org/doc/html/rfc4122). Device IDs that are not in UUIDv4 format will be rejected. 
+The Edge Network only accepts [!DNL IDs] that comply with the [UUIDv4 format](https://datatracker.ietf.org/doc/html/rfc4122). Device IDs that are not in [!DNL UUIDv4] format will be rejected. 
 
-Generation of a UUID will almost always result in a unique, random ID, with the probability of a collision occurring being negligible. UUIDv4 cannot be seeded using IP addresses or any other personal identifiable information (PII). UUIDs are ubiquitous and libraries can be found for virtually every programming language to generate them.
+Generation of a [!DNL UUID] will almost always result in a unique, random ID, with the probability of a collision occurring being negligible. [!DNL UUIDv4] cannot be seeded using IP addresses or any other personal identifiable information ([!DNL PII]). [!DNL UUIDs] are ubiquitous and libraries can be found for virtually every programming language to generate them.
 
-## Setting a first party ID cookie in the Datastreams UI {#setting-cookie-datastreams}
+## Setting a first-party ID cookie in the Datastreams UI {#setting-cookie-datastreams}
 
-You can specify a cookie name in the Datastreams UI, where the [!DNL FPID] can reside, rather than having to read the cookie value and include the FPID in the Identity map.
+You can specify a cookie name in the Datastreams user interface, where the [!DNL FPID] can reside, rather than having to read the cookie value and include the [!DNL FPID] in the identity map.
 
 >[!IMPORTANT]
 >
@@ -53,7 +53,7 @@ You can specify a cookie name in the Datastreams UI, where the [!DNL FPID] can r
 
 See the [datastreams documentation](../../datastreams/configure.md) for detailed information on how to configure a datastream.
 
-When configuring your datastream, enable the **[!UICONTROL First Party ID Cookie]** option. This setting tells the Edge Network to refer to a specified cookie when looking up a first-party device ID, rather than looking up this value in the [Identity Map](#identityMap).
+When configuring your datastream, enable the **[!UICONTROL First Party ID Cookie]** option. This setting tells the Edge Network to refer to a specified cookie when looking up a first-party device ID, rather than looking up this value in the [identity map](#identityMap).
 
 See the documentation on [first-party cookies](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html) for more details on how they work with Adobe Experience Cloud.
 
@@ -61,38 +61,38 @@ See the documentation on [first-party cookies](https://experienceleague.adobe.co
 
 When enabling this setting, you must provide the name of the cookie where the ID is expected to be stored.
 
-When you use first party IDs, you cannot perform third party ID syncs. Third party ID syncs rely on the [!DNL Visitor ID] service and the `UUID` generated by that service. When using the first party ID functionality, the ECID is generated without the use of the [!DNL Visitor ID] service, which makes third party ID syncs impossible.
+When you use first-party IDs, you cannot perform third-party ID syncs. Third-party ID syncs rely on the [!DNL Visitor ID] service and the `UUID` generated by that service. When using the first-party ID functionality, the [!DNL ECID] is generated without the use of the [!DNL Visitor ID] service, which makes third-party ID syncs impossible.
 
-When you use first party IDs, Audience Manager capabilities targeted towards activation in partner platforms are not supported, given that Audience Manager Partner ID syncs are mostly based on `UUIDs` or `DIDs`. The ECID that is derived off a first party ID is not linked to a `UUID`, making it un-addressable.
+When you use first-party IDs, [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager) capabilities targeted towards activation in partner platforms are not supported, given that Audience Manager Partner ID syncs are mostly based on `UUIDs` or `DIDs`. The [!DNL ECID] that is derived off a first-party ID is not linked to a `UUID`, making it unaddressable.
 
-## Setting a cookie using your own server
+## Setting a cookie using your own server {#set-cookie-server}
 
-When setting a cookie using a server that you own, various methods can be used to prevent the cookie from being restricted due to browser policies: 
+When setting a cookie using a server that you own, you can use various methods to prevent the cookie from being restricted due to browser policies: 
 
 * Generate cookies using server-side scripting languages
 * Set cookies in response to an API request made to a subdomain or other endpoint on the site
-* Generate cookies using a CMS
-* Generate cookies using a CDN
+* Generate cookies using a [!DNL CMS]
+* Generate cookies using a [!DNL CDN]
 
 >[!IMPORTANT]
 >
 >Cookies set using JavaScript's `document.cookie` method will almost never be protected from browser policies that restrict cookie durations. 
 
-### When to set the cookie
+### When to set the cookie {#when-to-set-cookie}
 
-The FPID cookie should ideally be set before making any requests to the Edge Network. However, in scenarios where that is not possible, an ECID is still generated using existing methods and acts as the primary identifier as long as the cookie exists.
+The [!DNL FPID] cookie should ideally be set before making any requests to the Edge Network. However, in scenarios where that is not possible, an [!DNL ECID] is still generated using existing methods and acts as the primary identifier as long as the cookie exists.
 
-Assuming the ECID is eventually impacted by a browser deletion policy, but the FPID is not, the FPID will become the primary identifier on the next visit and will be used to seed the ECID on each subsequent visit. 
+Assuming the [!DNL ECID] is eventually impacted by a browser deletion policy, but the [!DNL FPID] is not, the [!DNL FPID] will become the primary identifier on the next visit and will be used to seed the [!DNL ECID] on each subsequent visit. 
 
-### Setting the expiration for the cookie
+### Setting the expiration for the cookie {#set-expiration}
 
-Setting the expiration of a cookie is something that should be carefully considered as you implement the FPID functionality. When deciding this, you should consider the countries or regions in which your organization operates along with the laws and policies in each one of those regions. 
+Setting the expiration of a cookie is something that should be carefully considered as you implement the [!DNL FPID] functionality. When deciding this, you should consider the countries or regions in which your organization operates along with the laws and policies in each one of those regions. 
 
 As part of this decision, you may want to adopt a company-wide cookie-setting policy or one that varies for users in each locale where you operate. 
 
 Regardless of the setting you choose for the initial expiration of a cookie, you must ensure you include logic that extends the expiration of the cookie each time a new visit to the site occurs. 
 
-## Impact of cookie flags
+## Impact of cookie flags {#cookie-flag-impact}
 
 There are various cookie flags that impact how cookies are treated across different browsers:
 
@@ -102,27 +102,27 @@ There are various cookie flags that impact how cookies are treated across differ
 
 ### `HTTPOnly` {#http-only}
 
-Cookies set using the `HTTPOnly` flag cannot be accessed using client-side scripts. This means that if you set an `HTTPOnly` flag when setting the FPID, you must use a server-side scripting language to read the cookie value for inclusion in the `identityMap`.
+Cookies set using the `HTTPOnly` flag cannot be accessed using client-side scripts. This means that if you set an `HTTPOnly` flag when setting the [!DNL FPID], you must use a server-side scripting language to read the cookie value for inclusion in the `identityMap`.
 
-If you choose to have the Platform Edge Network read the value of the FPID cookie, setting the `HTTPOnly` flag ensures that the value is not accessible by any client-side scripts but will not have any negative impact on the Platform Edge Network's ability to read the cookie. 
+If you choose to have the Edge Network read the value of the [!DNL FPID] cookie, setting the `HTTPOnly` flag ensures that the value is not accessible by any client-side scripts but will not have any negative impact on the Edge Network's ability to read the cookie. 
 
 >[!NOTE]
 >
->Use of the `HTTPOnly` flag does not have an impact on the cookie policies that may restrict cookie lifetime. However, it is still something you should consider as you set and read the value of the FPID.
+>Use of the `HTTPOnly` flag does not have an impact on the cookie policies that may restrict cookie lifetime. However, it is still something you should consider as you set and read the value of the [!DNL FPID].
 
 ### `Secure` {#secure}
 
-Cookies set with the `Secure` attribute are only sent to the server with an encrypted request over the HTTPS protocol. Using this flag can help ensure that man-in-the-middle attackers cannot easily access the value of the cookie. When possible, it is always a good idea to set the `Secure` flag.
+Cookies set with the `Secure` attribute are only sent to the server with an encrypted request over the [!DNL HTTPS] protocol. Using this flag can help ensure that man-in-the-middle attackers cannot easily access the value of the cookie. When possible, it is always a good idea to set the `Secure` flag.
 
 ### `SameSite` {#same-site}
 
 The `SameSite` attribute lets servers determine whether cookies are sent with cross-site requests. The attribute provides some protection against cross-site forgery attacks. Three possible values exist: `Strict`, `Lax`, and `None`. Consult your internal team to determine which setting is right for your organization.
 
-If no `SameSite` attribute is specified, the default setting for some browsers is now `SameSite=Lax`. 
+If no `SameSite` attribute is specified, the default setting for some browsers is now `SameSite=Lax`.
 
 ## Using FPIDs in `identityMap` {#identityMap}
 
-Below is an example of how you would set an FPID in the `identityMap`:
+Below is an example of how you would set an [!DNL FPID] in the `identityMap`:
 
 ```json
 {
@@ -138,7 +138,7 @@ Below is an example of how you would set an FPID in the `identityMap`:
 }
 ```
 
-As with other identity types, you can include the FPID with other identities within `identityMap`. The following is an example of the FPID included with an Authenticated CRM ID:
+As with other identity types, you can include the [!DNL FPID] with other identities within `identityMap`. The following is an example of the [!DNL FPID] included with an authenticated [!DNL CRM ID]:
 
 ```json
 {
@@ -161,7 +161,7 @@ As with other identity types, you can include the FPID with other identities wit
 }
 ```
 
-If the FPID is contained in a cookie being read by the Edge Network when first-party data collection is enabled, you should capture only the authenticated CRM ID: 
+If the [!DNL FPID] is contained in a cookie being read by the Edge Network when first-party data collection is enabled, you should capture only the authenticated [!DNL CRM ID]: 
 
 ```json
 {
@@ -177,7 +177,7 @@ If the FPID is contained in a cookie being read by the Edge Network when first-p
 }
 ```
 
-The following `identityMap` would result in an error response from the Edge Network since it is missing the `primary` indicator for the FPID. At last one of the IDs present in `identityMap` must be marked as `primary`. 
+The following `identityMap` would result in an error response from the Edge Network since it is missing the `primary` indicator for the [!DNL FPID]. At last one of the IDs present in `identityMap` must be marked as `primary`. 
 
 ```json
 {
@@ -214,22 +214,32 @@ The error response returned by the Edge Network in this case would be similar to
 }
 ```
 
-## ID hierarchy
+## Setting an FPID on your own domain {#setting-fpid-domain}
 
-When both an ECID and FPID are present, the ECID is prioritized in identifying the user. This ensures that when an existing ECID is present in the browser cookie store, it remains the primary identifier and existing visitor counts do not risk being affected. For existing users, the FPID will not become the primary identity until the ECID expires or is deleted as a result of a browser policy or manual process.
+In addition to setting the [!DNL FPID] in the identity map, you can set the [!DNL FPID] cookie on your own domain, if you have a first-party data collection [!DNL CNAME] configured.
+
+When first-party data collection is enabled using a [!DNL CNAME], all cookies for your domain will be sent on requests made to the data collection endpoint.
+
+All cookies not relevant to Adobe's data collection purposes are dropped. For [!DNL FPID], you can specify the name of the [!DNL FPID] cookie in the datastream configuration. When you do this, the Edge Network will read the contents of the [!DNL FPID] cookie instead of  looking for the [!DNL FPID] in the identity map. 
+
+To use this functionality, you need to set the [!DNL FPID] at the top level of your domain instead of a specific subdomain. If you set it on a subdomain, the cookie value will not be sent to the Edge Network and the [!DNL FPID] solution will not work as intended. 
+
+## ID hierarchy {#id-hierarchy}
+
+When both an [!DNL ECID] and [!DNL FPID] are present, the [!DNL ECID] is prioritized in identifying the user. This ensures that when an existing [!DNL ECID] is present in the browser cookie store, it remains the primary identifier and existing visitor counts do not risk being affected. For existing users, the [!DNL FPID] will not become the primary identity until the [!DNL ECID] expires or is deleted as a result of a browser policy or manual process.
 
 Identities are prioritized in the following order:
 
-1. ECID included in the `identityMap`
-1. ECID stored in a cookie
-1. FPID included in the `identityMap`
-1. FPID stored in a cookie
+1. [!DNL ECID] included in the `identityMap`
+1. [!DNL ECID] stored in a cookie
+1. [!DNL FPID] included in the `identityMap`
+1. [!DNL FPID] stored in a cookie
 
-## Migrating to first-party device IDs
+## Migrating to first-party device IDs {#migrating-to-fpid}
 
-If you are migrating to using FPIDs from a previous implementation, it may be difficult to visualize what the transition might look like at a low level.
+If you are migrating to first-party device IDs from a previous implementation, it may be difficult to visualize what the transition might look like at a low level.
 
-To help illustrate this process, consider a scenario that involves a customer who has previously visited your site and what impact an FPID migration would have on how that customer is identified in Adobe solutions. 
+To help illustrate this process, consider a scenario that involves a customer who has previously visited your site and what impact an [!DNL FPID] migration would have on how that customer is identified in Adobe solutions. 
 
 ![Diagram showing how a customer's ID values are updated between visits after migrating to FPIDs](../assets/identity/tracking/visits.png)
 
@@ -239,30 +249,30 @@ To help illustrate this process, consider a scenario that involves a customer wh
 
 | Visit | Description |
 | --- | --- |
-| First Visit | Assume you have not yet started setting the FPID cookie. The ECID contained in the [AMCV cookie](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html#section-c55af54828dc4cce89f6118655d694c8) will be the identifier used to identify the visitor. |
-| Second Visit | Rollout of the First-Party Device ID solution has started. The existing ECID is still present and remains the primary identifier for visitor identification. |
-| Third Visit | Between the second and third visit, enough time has elapsed that the ECID has been deleted due to browser policy. However, because the FPID was set using a DNS A-record, the FPID persists. The FPID is now considered the primary ID and used to seed the ECID, which is written to the end-user device. The user would now be considered a new visitor in the Adobe Experience Platform and Experience Cloud solutions. |
-| Fourth Visit  | Between the third and fourth visits, enough time has elapsed that the ECID has been deleted due to browser policy. Like the previous visit, the FPID remains due to the manner in which it was set. This time, the same ECID is generated as the previous visit. The user is seen throughout the Experience Platform and Experience Cloud solutions as the same user as the previous visit. |
-| Fifth Visit | Between the fourth and fifth visits, the end user cleared all the cookies in their browser. A new FPID is generated and used to seed the creation of a new ECID. The user would now be considered a new visitor in the Adobe Experience Platform and Experience Cloud solutions. |
+| First visit | Assume you have not yet started setting the [!DNL FPID] cookie. The [!DNL ECID] contained in the [AMCV cookie](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html#section-c55af54828dc4cce89f6118655d694c8) will be the identifier used to identify the visitor. |
+| Second visit | Rollout of the [!DNL FPID] solution has started. The existing [!DNL ECID] is still present and remains the primary identifier for visitor identification. |
+| Third visit | Between the second and third visit, enough time has elapsed that the [!DNL ECID] has been deleted due to browser policy. However, because the [!DNL FPID] was set using a [!DNL DNS] [!DNL A]-record, the [!DNL FPID] persists. The [!DNL FPID] is now considered the primary ID and used to seed the [!DNL ECID], which is written to the end-user device. The user would now be considered a new visitor in the Adobe Experience Platform and Experience Cloud solutions. |
+| Fourth visit  | Between the third and fourth visits, enough time has elapsed that the [!DNL ECID] has been deleted due to browser policy. Like the previous visit, the [!DNL FPID] remains due to the manner in which it was set. This time, the same [!DNL ECID] is generated as the previous visit. The user is seen throughout the Experience Platform and Experience Cloud solutions as the same user as the previous visit. |
+| Fifth visit | Between the fourth and fifth visits, the end user cleared all the cookies in their browser. A new [!DNL FPID] is generated and used to seed the creation of a new [!DNL ECID]. The user would now be considered a new visitor in the Adobe Experience Platform and Experience Cloud solutions. |
 
 {style="table-layout:auto"}
 
-## FAQ 
+## FAQ {#faq}
 
 The following is a list of answers to frequently asked questions about first-party device IDs.
 
 ### How is seeding an ID different from simply generating an ID? 
 
-The concept of seeding is unique in that the FPID passed to Adobe Experience Cloud is converted to an ECID using a deterministic algorithm. Each time the same FPID is sent the Adobe Experience Platform Edge Network, the same ECID is seeded from the FPID. 
+The concept of seeding is unique in that the [!DNL FPID] passed to Adobe Experience Cloud is converted to an [!DNL ECID] using a deterministic algorithm. Each time the same [!DNL FPID] is sent to the Edge Network, the same [!DNL ECID] is seeded from the [!DNL FPID]. 
 
 ### When should the first-party device ID be generated?
 
-To reduce potential visitor inflation, the FPID should be generated before making your first request using the Web SDK. However, if you are unable to do this, an ECID will still be generated for that user and will be used as the primary identifier. The FPID that was generated will not become the primary identifier until the ECID is no longer present. 
+To reduce potential visitor inflation, the [!DNL FPID] should be generated before making your first request using the Web SDK. However, if you are unable to do this, an [!DNL ECID] will still be generated for that user and will be used as the primary identifier. The [!DNL FPID] that was generated will not become the primary identifier until the [!DNL ECID] is no longer present. 
 
 ### Which data collection methods support first-party device IDs?
 
-Currently only Web SDK supports FPIDs. 
+Currently only Web SDK supports first-party device IDs.
 
-### Are FPIDs stored on any Platform or Experience Cloud solutions?
+### Are first-party device IDs stored on any Platform or Experience Cloud solutions?
 
-Once the FPID has been used to seed an ECID, it is dropped from the `identityMap` and replaced with the ECID that has been generated. The FPID is not stored in any Adobe Experience Platform or Experience Cloud solutions.
+Once the [!DNL FPID] has been used to seed an [!DNL ECID], it is dropped from the `identityMap` and replaced with the [!DNL ECID] that has been generated. The [!DNL FPID] is not stored in any Adobe Experience Platform or Experience Cloud solutions.

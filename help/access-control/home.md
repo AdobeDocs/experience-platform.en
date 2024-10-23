@@ -110,7 +110,11 @@ The following table outlines the available permissions for Experience Platform i
 | [!DNL Identity Management] | [!UICONTROL Manage Identity Namespaces] | Access to read, create, edit, and delete identity namespaces. |
 | [!DNL Identity Management] | [!UICONTROL View Identity Namespaces] | Read-only access for identity namespaces. |
 | [!DNL Identity Management] | [!UICONTROL View Identity Graph] | Read-only access for identity graphs. |
-| [!DNL Profile Management] | [!UICONTROL Manage Profiles] | Access to read, create, edit, and delete datasets that are used for customer profiles. Read-only access to available profiles. |
+| [!DNL Intelligent Services] | [!UICONTROL View Attribution AI] | Read-only access for Attribution AI settings and insights. |
+| [!DNL Intelligent Services] | [!UICONTROL Manage Attribution AI] | Access to read, create, edit, and delete Attribution AI models. |
+| [!DNL Intelligent Services] | [!UICONTROL View Customer AI] | Access to read or view Customer AI models. |
+| [!DNL Intelligent Services] | [!UICONTROL Manage Customer AI] | Access to create, update, delete, enable, or disable Customer AI models. |
+| [!DNL Profile Management] | [!UICONTROL Manage Profiles] | Ingest data from multiple sources, build robust profiles for individual customers, and store profile-enabled data in the data lake and the Real-Time Customer Profile data store.|
 | [!DNL Profile Management] | [!UICONTROL View Profiles] | Read-only access to available profiles. |
 | [!DNL Profile Management] | [!UICONTROL Manage Segments] | Access to read, create, edit, and delete segments. |
 | [!DNL Profile Management] | [!UICONTROL View Segments] | Read-only access to available segments. |
