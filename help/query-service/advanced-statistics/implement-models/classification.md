@@ -44,7 +44,7 @@ Create MODEL modelname OPTIONS(
 
 ## [!DNL Factorization Machine Classifier] {#factorization-machine-classifier}
 
-The [!DNL Factorization Machine Classifier] is a classification algorithm that supports normal gradient descent and the AdamW solver. It is based on the work of S. Rendle (2010) on factorization machines. The FM classification model uses logistic loss, which can be optimized via gradient descent, and often includes regularization terms like L2 to prevent overfitting.
+The [!DNL Factorization Machine Classifier] is a classification algorithm that supports normal gradient descent and the AdamW solver. The Factorization Machine classification model uses logistic loss, which can be optimized via gradient descent, and often includes regularization terms like L2 to prevent overfitting.
 
 **Parameters**
 
@@ -73,8 +73,82 @@ The table below outlines key parameters for configuring and optimizing the perfo
 **Example**
 
 ```sql
-Create MODEL modelname OPTIONS(
+CREATE MODEL modelname OPTIONS(
   type = 'factorization_machines_classifier'
+) AS
+  SELECT col1, col2, col3 FROM training-dataset
+```
+
+## [!DNL Gradient Boosted Tree Classifier] {#gradient-boosted-tree-classifier}
+
+The [!DNL Gradient Boosted Tree Classifier] uses an ensemble of decision trees to improve the accuracy of classification tasks, combining multiple trees to enhance model performance.
+
+**Parameters**
+
+The table below outlines key parameters for configuring and optimizing the performance of the [!DNL Gradient Boosted Tree Classifier].
+
+| Parameter                    | Description                                                                                                                                                                                              | Default value | Possible Values                                                                                     |
+|-------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------------------------|
+| `MAX_BINS`                    | The maximum number of bins determines how continuous features are divided into discrete intervals. This affects how features are split at each decision tree node. More bins provide higher granularity.| 32            | Must be at least 2 and equal to or greater than the number of categories in any categorical feature.  |
+| `CACHE_NODE_IDS`              | If `false`, the algorithm passes trees to executors to match instances with nodes. If `true`, the algorithm caches node IDs for each instance, speeding up the training of deeper trees.                | `false`       | `true`, `false`                                                                                      |
+| `CHECKPOINT_INTERVAL`         | Specifies how often to checkpoint the cached node IDs. For example, `10` means the cache is checkpointed every 10 iterations.                                                                           | 10            | (>= 1)                                                                                                |
+| `MAX_DEPTH`                   | The maximum depth of the tree (non-negative). For example, depth `0` means 1 leaf node, and depth `1` means 1 internal node and 2 leaf nodes.                                                           | 5             | (>= 0)                                                                                                |
+| `MIN_INFO_GAIN`               | The minimum information gain required for a split to be considered at a tree node.                                                                                                                      | 0.0           | (>= 0.0)                                                                                             |
+| `MIN_WEIGHT_FRACTION_PER_NODE` | The minimum fraction of the weighted sample count that each child must have after a split. If a split causes the fraction of the total weight in either child to be less than this value, it is discarded. | 0.0           | (>= 0.0, <= 0.5)                                                                                     |
+| `MIN_INSTANCES_PER_NODE`      | The minimum number of instances each child must have after a split. If a split results in fewer instances than this value, the split is discarded.                                                      | 1             | (>= 1)                                                                                                |
+| `MAX_MEMORY_IN_MB`            | The maximum memory, in MB, allocated to histogram aggregation. If this value is too small, only 1 node will be split per iteration, and its aggregates may exceed this size.                            | 256           |                                                                                                      |
+| `PREDICTION_COL`              | The column name for prediction output.                                                                                                                                                                  | "prediction"  | Any string                                                                                            |
+| `VALIDATION_INDICATOR_COL`    | The column name that indicates whether each row is used for training or validation. `false` for training and `true` for validation.                                                                     | NOT SET       | Any string                                                                                            |
+| `RAW_PREDICTION_COL`          | The column name for raw prediction values (also known as confidence).                                                                                                                                   | "rawPrediction" | Any string                                                                                           |
+| `LEAF_COL`                    | The column name for leaf indices, which is the predicted leaf index of each instance in each tree, generated by preorder traversal.                                                                     | ""            | Any string                                                                                            |
+| `FEATURE_SUBSET_STRATEGY`     | The number of features considered for splitting at each tree node. Supported options: `auto`, `all`, `onethird`, `sqrt`, `log2`, and `n` (for a fraction of features).                                  | "auto"        | `auto`, `all`, `onethird`, `sqrt`, `log2`, `n` (where `n` is a fraction between 0 and 1.0)            |
+| `WEIGHT_COL`                  | The column name for instance weights. If not set or empty, all instance weights are treated as `1.0`.                                                                                                   | NOT SET       |                                                                                                      |
+| `LOSS_TYPE`                   | The loss function that the [!DNL Gradient Boosted Tree] model tries to minimize. Supported options: `logistic`.                                                                                                | "logistic"    | `logistic`                                                                                           |
+| `STEP_SIZE`                   | The step size (also known as the learning rate) in the range (0, 1], used to shrink the contribution of each estimator.                                                                                 | 0.1           | (0, 1]                                                                                                |
+| `MAX_ITER`                    | The maximum number of iterations for the algorithm.                                                                                                                                                     | 20            | (>= 0)                                                                                                |
+| `SUBSAMPLING_RATE`            | The fraction of the training data used to train each decision tree, in the range (0, 1].                                                                                                                | 1.0           | (0, 1]                                                                                                |
+| `PROBABILITY_COL`             | The column name for predicted class conditional probabilities. Note: not all models output well-calibrated probabilities; these should be treated as confidence scores rather than exact probabilities. | "probability" | Any string                                                                                            |
+| `ONE_VS_REST`                 | Enables or disables wrapping this algorithm with One-vs-Rest for multiclass classification.                                                                                                             | `false`       | `true`, `false`                                                                                       |
+
+{style="table-layout:auto"}
+
+**Example**
+
+```sql
+Create MODEL modelname OPTIONS(
+  type = 'gradient_boosted_tree_classifier'
+) AS
+  select col1, col2, col3 from training-dataset
+```
+
+## [!DNL Linear Support Vector Classifier (LinearSVC)] {#linear-support-vector-classifier}
+
+The [!DNL Linear Support Vector Classifier (LinearSVC)] constructs a hyperplane to classify data in a high-dimensional space. You can use it to maximize the margin between classes to minimize classification errors.
+
+**Parameters**
+
+The table below outlines key parameters for configuring and optimizing the performance of the [!DNL Linear Support Vector Classifier (LinearSVC)].
+
+| Parameter                | Description                                                                                                                                                                                      | Default value | Possible Values                                                                                     |
+|--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------------------------|
+| `MAX_ITER`               | The maximum number of iterations for the algorithm to run.                                                                                                                                       | 100           | (>= 0)                                                                                                |
+| `AGGREGATION_DEPTH`      | The suggested depth for tree aggregation.                                                                                                                                                        | 2             |                                                                                                      |
+| `FIT_INTERCEPT`          | Whether to fit an intercept term.                                                                                                                                                                | `true`        | `true`, `false`                                                                                       |
+| `TOL`                    | The convergence tolerance for optimization.                                                                                                                                                      | 1E-6          | (>= 0)                                                                                                |
+| `MAX_BLOCK_SIZE_IN_MB`   | The maximum memory in MB for stacking input data into blocks. Data is stacked within partitions, and if remaining data size in a partition is smaller, this value is adjusted accordingly.       | 0.0           | (>= 0)                                                                                                |
+| `REG_PARAM`              | The regularization parameter, which helps control model complexity and prevent overfitting.                                                                                                      | 0.0           | (>= 0)                                                                                                |
+| `STANDARDIZATION`        | Whether to standardize training features before fitting the model.                                                                                                                               | `true`        | `true`, `false`                                                                                       |
+| `PREDICTION_COL`         | The column name for prediction output.                                                                                                                                                           | "prediction"  | Any String                                                                                            |
+| `RAW_PREDICTION_COL`     | The column name for raw prediction values (also known as confidence).                                                                                                                            | "rawPrediction" | Any String                                                                                           |
+| `ONE_VS_REST`            | Enables or disables wrapping this algorithm with One-vs-Rest for multiclass classification.                                                                                                      | `false`       | `true`, `false`                                                                                       |
+
+{style="table-layout:auto"}
+
+**Example**
+
+```sql
+Create MODEL modelname OPTIONS(
+  type = 'linear_svc_classifier'
 ) AS
   select col1, col2, col3 from training-dataset
 ```
