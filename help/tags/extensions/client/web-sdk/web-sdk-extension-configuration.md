@@ -152,7 +152,7 @@ This helps you trigger different datastream behaviors than the default ones, wit
 
 Datastream configuration override is a two step process:
 
-1. First, you must define your datastream configuration overrides in the [datastream configuration page](/help/datastreams/configure.md).
+1. First, you must define your dynamic datastream configuration in the [datastream configuration page](/help/datastreams/configure.md).
 2. Then, you must send the overrides to the Edge Network either via a Web SDK command, or by using the Web SDK tag extension.
 
 See the datastream [configuration overrides documentation](/help/datastreams/overrides.md) for detailed instructions on how to override datastream configurations.
