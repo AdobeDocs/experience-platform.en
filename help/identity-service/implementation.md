@@ -40,6 +40,7 @@ For example, by labeling phone number fields as identity fields, Identity Servic
 >
 >* Array and map type fields are not supported and cannot be marked and labeled as identity fields.
 >* The namespace of resulting identities is provided at the time the field is labeled.
+>* A field can be marked as an identity, as long as this field is not under an array object.
 
 For more information, read the guide the guide on [defining identity fields in the UI](../xdm/ui/fields/identity.md).
 
