@@ -490,6 +490,50 @@ A successful response returns details for the queried package ID. The response i
 }
 ```
 
+## Copy package payload (#package-payload)
+
+You can copy a public package's payload by making a GET request to the `/packages/payload` endpoint that includes the corresponding ID of the package in the request path.
+
+**API format**
+
+```http
+GET /packages/payload/{PACKAGE_ID}
+```
+
+**Request**
+
+```shell
+curl --location --request GET \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/payload/{PACKAGE_ID} \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Accept: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "imsOrgId": "2E63197465A811E70A494213@AdobeOrg",
+      "packageId": "74b38d53288d4186b2977fafa622a7f4"
+  }'
+```
+
+<!-- UPDATE -->
+
+| Property | Description | Type | Required |
+| --- | --- | --- | --- |
+| `imsOrdId` | ?? | String | ?? |
+| `packageId` | ?? | String | ?? |
+
+**Response**
+
+```json
+
+{
+    "imsOrgId": "745F37C35E4B776E0A49421B@AdobeOrg",
+    "packageId": "575e86f794324af4ba4ce0dc3887dade"
+}
+```
+
 ## List packages {#list-packages}
 
 You can list all the packages in your organization, by making a GET request to the `/packages` endpoint.
