@@ -681,12 +681,12 @@ To update your source connection, make a PATCH request to the `/sourceConnection
 **API format**
 
 ```http
-GET /sourceConnections/{SOURCE_CONNECTION_ID}
+PATCH /sourceConnections/{SOURCE_CONNECTION_ID}
 ```
 
 | Parameter | Description |
 | --- | --- |
-| `{SOURCE_CONNECTION_ID}` | The ID of the source connection that you want to retrieve. |
+| `{SOURCE_CONNECTION_ID}` | The ID of the source connection that you want to update |
 
 +++Request
 
