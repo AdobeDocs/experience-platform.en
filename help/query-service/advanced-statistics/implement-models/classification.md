@@ -1,11 +1,11 @@
 ---
 title: Classification Algorithms
-description: PLACEHOLDER Words.
+description:  Learn how to configure and optimize various classification algorithms with key parameters, descriptions, and example code to help you implement advanced statistical models.
 role: Developer
 ---
 # Classification algorithms {#classification-algorithms}
 
-Introduction
+This document provides an overview of various classification algorithms, focusing on their configuration, key parameters, and practical usage in advanced statistical models. Classification algorithms are used to assign categories to data points based on input features. Each section includes parameter descriptions and example code to help you implement and optimize these algorithms for tasks such as decision trees, random forest, and naive Bayes classification.
 
 ## [!DNL Decision Tree Classifier] {#decision-tree-classifier}
 
@@ -104,9 +104,9 @@ The table below outlines key parameters for configuring and optimizing the perfo
 | `FEATURE_SUBSET_STRATEGY`     | The number of features considered for splitting at each tree node. Supported options: `auto`, `all`, `onethird`, `sqrt`, `log2`, and `n` (for a fraction of features).                                  | "auto"        | `auto`, `all`, `onethird`, `sqrt`, `log2`, `n` (where `n` is a fraction between 0 and 1.0)            |
 | `WEIGHT_COL`                  | The column name for instance weights. If not set or empty, all instance weights are treated as `1.0`.                                                                                                   | NOT SET       |                                                                                                      |
 | `LOSS_TYPE`                   | The loss function that the [!DNL Gradient Boosted Tree] model tries to minimize. Supported options: `logistic`.                                                                                                | "logistic"    | `logistic`                                                                                           |
-| `STEP_SIZE`                   | The step size (also known as the learning rate) in the range (0, 1], used to shrink the contribution of each estimator.                                                                                 | 0.1           | (0, 1]                                                                                                |
+| `STEP_SIZE`                   | The step size (also known as the learning rate) in the range `(0, 1]`, used to shrink the contribution of each estimator.                                                                               | 0.1           | `(0, 1]`                                                                                              |
 | `MAX_ITER`                    | The maximum number of iterations for the algorithm.                                                                                                                                                     | 20            | (>= 0)                                                                                                |
-| `SUBSAMPLING_RATE`            | The fraction of the training data used to train each decision tree, in the range (0, 1].                                                                                                                | 1.0           | (0, 1]                                                                                                |
+| `SUBSAMPLING_RATE`            | The fraction of the training data used to train each decision tree, in the range `(0, 1]`.                                                                                                              | 1.0           | `(0, 1]`                                                                                              |
 | `PROBABILITY_COL`             | The column name for predicted class conditional probabilities. Note: not all models output well-calibrated probabilities; these should be treated as confidence scores rather than exact probabilities. | "probability" | Any string                                                                                            |
 | `ONE_VS_REST`                 | Enables or disables wrapping this algorithm with One-vs-Rest for multiclass classification.                                                                                                             | `false`       | `true`, `false`                                                                                       |
 
@@ -207,14 +207,73 @@ CREATE MODEL modelname OPTIONS(
   select col1, col2, col3 from training-dataset
 ```
 
-<!-- 
-Decision Tree Classifier
-Factorization Machine Classifier 
-Gradient Boosted Tree Classifier 
-Linear Support Vector Classifier (LinearSVC) 
-Logistic Regression 
-Multilayer Perceptron Classifier 
-Naive Bayes Classifier 
-Random Forest Classifier 
--->
+## [!DNL Naive Bayes Classifier] {#naive-bayes-classifier}
+
+[!DNL Naive Bayes Classifier] is a simple probabilistic, multiclass classifier based on Bayes' theorem with strong (naive) independence assumptions between features. It is highly efficient in training, requiring only a single pass over the training data to compute the conditional probability distribution of each feature given each label. For predictions, it uses Bayes' theorem to compute the conditional probability distribution of each label given an observation.
+
+**Parameters**
+
+| Parameter              | Description                                                                                                                                                                  | Default value  | Possible Values                                |
+|------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|------------------------------------------------|
+| `MODEL_TYPE`           | Specifies the model type. Supported options are `"multinomial"`, `"complement"`, `"bernoulli"`, and `"gaussian"`. Model type is case-sensitive.                              | "multinomial"  | `"multinomial"`, `"complement"`, `"bernoulli"`, `"gaussian"` |
+| `SMOOTHING`            | The smoothing parameter, used to smooth categorical data and handle unseen features.                                                                                         | 1.0            | (>= 0)                                         |
+| `PROBABILITY_COL`      | The column name for predicted class conditional probabilities. These should be treated as confidence scores rather than exact probabilities.                                  | "probability"  | Any string                                     |
+| `WEIGHT_COL`           | The column name for instance weights. If not set or empty, all instance weights are treated as `1.0`.                                                                         | NOT SET        | Any string                                     |
+| `PREDICTION_COL`       | The column name for prediction output.                                                                                                                                       | "prediction"   | Any string                                     |
+| `RAW_PREDICTION_COL`   | The column name for raw prediction values (also known as confidence).                                                                                                       | "rawPrediction"| Any string                                     |
+| `ONE_VS_REST`          | Specifies whether to enable One-vs-Rest for multiclass classification.                                                                                                       | `false`        | `true`, `false`                                |
+
+{style="table-layout:auto"}
+
+**Example**
+
+```sql
+CREATE MODEL modelname OPTIONS(
+  type = 'naive_bayes_classifier'
+) AS
+  SELECT col1, col2, col3 FROM training-dataset
+```
+
+## [!DNL Random Forest Classifier] {#random-forest-classifier}
+
+[!DNL Random Forest Classifier] is an ensemble learning algorithm that builds multiple decision trees during training. It mitigates overfitting by averaging predictions and selecting the class chosen by the majority of trees for classification tasks.
+
+**Parameters**
+
+| Parameter                    | Description                                                                                                                                                                                                  | Default value   | Possible Values                                                                                      |
+|-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|------------------------------------------------------------------------------------------------------|
+| `MAX_BINS`                    | The maximum number of bins determines how continuous features are divided into discrete intervals. This affects how features are split at each decision tree node. More bins provide higher granularity.    | 32              | Must be at least 2 and equal to or greater than the number of categories in any categorical feature.  |
+| `CACHE_NODE_IDS`              | If `false`, the algorithm passes trees to executors to match instances with nodes. If `true`, the algorithm caches node IDs for each instance, speeding up training.                                        | `false`         | `true`, `false`                                                                                      |
+| `CHECKPOINT_INTERVAL`         | Specifies how often to checkpoint the cached node IDs. For example, `10` means the cache is checkpointed every 10 iterations.                                                                               | 10              | (>= 1)                                                                                                |
+| `IMPURITY`                    | The criterion used for information gain calculation (case-insensitive).                                                                                                                                     | "gini"          | `entropy`, `gini`                                                                                     |
+| `MAX_DEPTH`                   | The maximum depth of the tree (non-negative). For example, depth `0` means 1 leaf node, and depth `1` means 1 internal node and 2 leaf nodes.                                                               | 5               | (>= 0)                                                                                                |
+| `MIN_INFO_GAIN`               | The minimum information gain required for a split to be considered at a tree node.                                                                                                                          | 0.0             | (>= 0.0)                                                                                             |
+| `MIN_WEIGHT_FRACTION_PER_NODE` | The minimum fraction of the weighted sample count that each child must have after a split. If a split causes the fraction of the total weight in either child to be less than this value, it is discarded. | 0.0             | (>= 0.0, <= 0.5)                                                                                     |
+| `MIN_INSTANCES_PER_NODE`      | The minimum number of instances each child must have after a split. If a split results in fewer instances than this value, the split is discarded.                                                          | 1               | (>= 1)                                                                                                |
+| `MAX_MEMORY_IN_MB`            | The maximum memory, in MB, allocated to histogram aggregation. If this value is too small, only 1 node will be split per iteration, and its aggregates may exceed this size.                                | 256             |  (>= 1)                                                                                               |
+| `PREDICTION_COL`              | The column name for prediction output.                                                                                                                                                                      | "prediction"    | Any string                                                                                            |
+| `WEIGHT_COL`                  | The column name for instance weights. If not set or empty, all instance weights are treated as `1.0`.                                                                                                       | NOT SET         | Any string                                                                                            |
+| `SEED`                        | The random seed used for controlling random processes in the algorithm.                                                                                                                                     | -1689246527     | Any 64-bit number                                                                                     |
+| `BOOTSTRAP`                   | Whether bootstrap samples are used when building trees.                                                                                                                                                     | `true`          | `true`, `false`                                                                                      |
+| `NUM_TREES`                   | The number of trees to train. If `1`, then no bootstrapping is used. If greater than `1`, bootstrapping is applied.                                                                                         | 20              | (>= 1)                                                                                                |
+| `SUBSAMPLING_RATE`            | The fraction of the training data used for learning each decision tree.                                                                                                                                     | 1.0             | (> 0, <= 1)                                                                                           |
+| `LEAF_COL`                    | The column name for the leaf indices, which contains the predicted leaf index of each instance in each tree by preorder.                                                                                    | ""              | Any string                                                                                            |
+| `PROBABILITY_COL`             | The column name for predicted class conditional probabilities. These should be treated as confidence scores rather than exact probabilities.                                                                | "probability"   | Any string                                                                                            |
+| `RAW_PREDICTION_COL`          | The column name for raw prediction values (also known as confidence).                                                                                                                                       | "rawPrediction" | Any string                                                                                            |
+| `ONE_VS_REST`                 | Specifies whether to enable One-vs-Rest for multiclass classification.                                                                                                                                      | `false`         | `true`, `false`                                                                                       |
+
+{style="table-layout:auto"}
+
+**Example**
+
+```sql
+Create MODEL modelname OPTIONS(
+  type = 'random_forest_classifier'
+) AS
+  select col1, col2, col3 from training-dataset
+```
+
+## Next steps
+
+After reading this document, you now know how to configure and use various classification algorithms. Next, refer to the documents on [regression](./regression.md) and [clustering](./clustering.md) to learn about other types of advanced statistical models.
 
