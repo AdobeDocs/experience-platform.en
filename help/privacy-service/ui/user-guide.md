@@ -46,7 +46,7 @@ The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow 
 | [!UICONTROL MCDPA_USA (Montana)]    | The [!DNL Montana Consumer Data Privacy Act] |
 | [!UICONTROL NDPA_USA (Nebraska)]    | The [!DNL Nebraska Data Protection Act] |
 | [!UICONTROL NZPA_NZL (New Zealand)] | New Zealand's [!DNL Privacy Act] |
-| [!UICONTROL NHPA_USA (New Hampshire)]| The [!DNL New Hampshire Data Privacy Act] |
+| [!UICONTROL NHPA_USA (New Hampshire)]| The [!DNL New Hampshire Privacy Act] |
 | [!UICONTROL NJDPA_USA (New Jersey)] | The [!DNL New Jersey Data Protection Act] |
 | [!UICONTROL OCPA USA (Oregon)]      | The [!DNL Oregon Consumer Privacy Act] |
 | [!UICONTROL PDPA_THA (Thailand)]    | Thailand's [!DNL Personal Data Protection Act] |
