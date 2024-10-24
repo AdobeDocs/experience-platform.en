@@ -15,7 +15,7 @@ The Real-Time Customer Data Platform Insights Data Model for the [B2C Edition](.
 
 ## Prerequisites
 
-This guide requires a working understanding of the [user-defined dashboards feature](../user-defined-dashboards.md). Please read the documentation before continuing with this guide.
+This guide requires a working understanding of the [user-defined dashboards feature](../standard-dashboards.md). Please read the documentation before continuing with this guide.
 
 ## Real-Time CDP insight reports and use cases
 
