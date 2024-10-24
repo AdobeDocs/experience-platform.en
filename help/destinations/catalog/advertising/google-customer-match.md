@@ -219,9 +219,10 @@ After connecting to the destination and establishing a destination dataflow, you
 > Starting with October 2024, Adobe is rolling out an update to increase reporting accuracy for streaming destinations. This enhancement ensures a better alignment between the Experience Platform and the destination platforms reporting.
 >
 > Before this update, **[!UICONTROL Identities failed]** included all activation retries. After this update, only the last activation retry is included in the total count.
-> 
-> Following this enhancement, users of this destination may see an expected drop in their  **[!UICONTROL Identities failed]** count.
+>
 > This enhancement currently applies to the [Google Customer Match destination](google-customer-match.md) but will be gradually rolled out to other Experience Platform streaming destinations.
+> Following this enhancement, users of this destination may see an expected drop in their  **[!UICONTROL Identities failed]** count.
+
 
 ## Verify that audience activation was successful {#verify-activation}
 
