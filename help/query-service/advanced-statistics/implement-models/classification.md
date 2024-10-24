@@ -178,7 +178,34 @@ Create MODEL modelname OPTIONS(
   select col1, col2, col3 from training-dataset
 ```
 
+## [!DNL Multilayer Perceptron Classifier] {#multilayer-perceptron-classifier}
 
+[!DNL Multilayer Perceptron Classifier] is a feedforward artificial neural network classifier that consists of multiple fully connected layers of nodes. Each node in a layer maps inputs to outputs using a weighted linear combination of the input data, with node weights (`w`) and bias (`b`), followed by an activation function. This process helps configure and optimize advanced statistical models by adjusting key parameters, with code examples provided for further guidance. -->
+
+**Parameters**
+
+| Parameter             | Description                                                                                                                                                               | Default value  | Possible Values                          |
+|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|------------------------------------------|
+| `MAX_ITER`            | The maximum number of iterations for the algorithm to run.                                                                                                                | 100            | (>= 0)                                   |
+| `BLOCK_SIZE`          | The block size for stacking input data in matrices within partitions. If the block size exceeds remaining data in a partition, it is adjusted accordingly.                | 128            | (>= 0)                                   |
+| `STEP_SIZE`           | The step size used for each iteration of optimization (applicable only for solver `gd`).                                                                                  | 0.03           | (> 0)                                    |
+| `TOL`                 | The convergence tolerance for optimization.                                                                                                                               | `1E-6`         | (>= 0)                                   |
+| `PREDICTION_COL`      | The column name for prediction output.                                                                                                                                    | "prediction"   | Any string                               |
+| `SEED`                | The random seed for controlling random processes in the algorithm.                                                                                                        | NOT SET        | Any 64-bit number                        |
+| `PROBABILITY_COL`     | The column name for predicted class conditional probabilities. These should be treated as confidence scores rather than exact probabilities.                              | "probability"  | Any string                               |
+| `RAW_PREDICTION_COL`  | The column name for raw prediction values (also known as confidence).                                                                                                     | "rawPrediction"| Any string                               |
+| `ONE_VS_REST`         | Enables or disables wrapping this algorithm with One-vs-Rest for multiclass classification.                                                                               | `false`        | `true`, `false`                          |
+
+{style="table-layout:auto"}
+
+**Example**
+
+```sql
+CREATE MODEL modelname OPTIONS(
+  type = 'multilayer_perceptron_classifier'
+) AS
+  select col1, col2, col3 from training-dataset
+```
 
 <!-- 
 Decision Tree Classifier
