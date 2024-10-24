@@ -8,11 +8,9 @@ Sandbox tooling allows you to select different artifacts and export them into a 
 
 The `/handshake` endpoint in the sandbox tooling API allows you to partner with other organizations to share packages.
 
-## Sending a request {#send-request}
+## Sending a share request {#send-request}
 
-<!-- EXPLANATION TO BE ADDED -->
-
-a POST request to the `/handshake/bulkCreate` endpoint
+Send a request to target partner organizations for sharing approval by making a POST request to the `/handshake/bulkCreate` endpoint. This is required before you can share private packages. 
 
 **API format**
 
@@ -75,17 +73,14 @@ curl --location POST \
 }
 ```
 
-## Approving received requests {#approve-requests}
+## Approving received share requests {#approve-requests}
 
-<!-- EXPLANATION TO BE ADDED -->
-
-a POST request to the `/handshake/action` endpoint
-
+Approve share requests from target partner organizations by making a a POST request to the `/handshake/action` endpoint. After approval, source partner organizations can share private packages.
 
 **API format**
 
 ```http
-POST /handshale/action
+POST /handshake/action
 ```
 
 **Requests**
@@ -145,11 +140,9 @@ curl --location POST  \
 }
 ```
 
-## List outgoing/incoming requests {#outgoing-and-incoming-requests}
+## List outgoing/incoming share requests {#outgoing-and-incoming-requests}
 
-<!-- EXPLANATION TO BE ADDED -->
-
-a GET request to the `handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING` endpoint
+List outgoing and incoming share requests by making a GET request to the `handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING` endpoint.
 
 **Request**
 

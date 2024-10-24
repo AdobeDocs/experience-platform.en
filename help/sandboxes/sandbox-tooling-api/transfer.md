@@ -10,9 +10,7 @@ The `/transfer` endpoint in the sandbox tooling API allows you to fetch and crea
 
 ## New transfer request {#transfer-request}
 
-<!-- EXPLANATION TO BE ADDED -->
-
-a POST request to the `/transfer` endpoint
+Fetch a published source organization's package and share it with a target organization by making a POST request to the `/transfer` endpoint while providing the package ID and target organization's ID.
 
 **API format**
 
@@ -77,9 +75,7 @@ curl --location POST \
 
 ## Fetch a transfer request by ID {#fetch-transfer-by-id}
 
-<!-- EXPLANATION TO BE ADDED -->
-
-a GET request to the `/transfer/{TRANSFER_ID}` endpoint
+Fetch the details of a share request by making a GET request to the `/transfer/{TRANSFER_ID}` endpoint while providing the transfer ID.
 
 **API format**
 
@@ -136,9 +132,7 @@ curl --location GET \
 
 ## Fetch transfers list {#transfers-list}
 
-<!-- EXPLANATION TO BE ADDED -->
-
-a GET request to the `/transfer/list?property=status=={STATUS}&start={START}&limit={LIMIT}&orderBy=-createdDate` endpoint
+Fetch a list of transfer requests by making a GET request to the `/transfer/list?property=status=={STATUS}&start={START}&limit={LIMIT}&orderBy=-createdDate` endpoint, changing the search parameters as needed.
 
 **API format**
 
@@ -236,9 +230,7 @@ curl --location GET \
 
 ## Update package visibility from private to public {#update-visibility}
 
-<!-- EXPLANATION TO BE ADDED -->
-
-a GET request to the `/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC` endpoint
+Change a package from private to public by a GET request to the `/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC` endpoint. By default, a package is created with private visibility.
 
 **Request**
 
@@ -299,11 +291,9 @@ curl --location --request GET \
 }
 ```
 
-## Request to create pulled public package {#create-pulled-package}
+## Request to create a public package {#create-public-package}
 
-<!-- EXPLANATION TO BE ADDED -->
-
-a POST request to the `/transfer/pullRequest` endpoint
+Create a new package with public visibility by making a POST request to the `/transfer/pullRequest` endpoint.
 
 **API format**
 
@@ -355,11 +345,9 @@ curl --location POST \
 }
 ```
 
-## List of pulled public packages
+## List of public packages
 
-<!-- EXPLANATION TO BE ADDED -->
-
-a GET request to the `/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC&orderby=-createdDate` endpoint
+Fetch a list of packages with public visbility by making a GET request to the `/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC&orderby=-createdDate` endpoint.
 
 **API format**
 
