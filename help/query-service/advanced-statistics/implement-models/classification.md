@@ -153,6 +153,33 @@ Create MODEL modelname OPTIONS(
   select col1, col2, col3 from training-dataset
 ```
 
+## [!DNL Logistic Regression] {#logistic-regression}
+
+[!DNL Logistic Regression] is a supervised algorithm used for binary classification. It models the probability that an instance belongs to a class using the logistic function, making it suitable for tasks where the goal is to classify instances into one of two categories.
+
+**Parameters**
+
+The table below outlines key parameters for configuring and optimizing the performance of [!DNL Logistic Regression].
+
+| Parameter            | Description                                                                                                                                                               | Default value    | Possible Values|
+|----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|----------------|
+| `MAX_ITER`           | The maximum number of iterations the algorithm will run.                                                                                                                  | 100              | (>= 0)         |
+| `REGPARAM`           | The regularization parameter used to control the complexity of the model.                                                                                                 | 0.0              | (>= 0)         |
+| `ELASTICNETPARAM`    | The `ElasticNet` mixing parameter controls the balance between L1 (Lasso) and L2 (Ridge) penalties. A value of 0 applies an L2 penalty (Ridge, which reduces the size of coefficients), while a value of 1 applies an L1 penalty (Lasso, which encourages sparsity by setting some coefficients to zero). | 0.0 | (>= 0, <= 1)   |
+
+{style="table-layout:auto"}
+
+**Example**
+
+```sql
+Create MODEL modelname OPTIONS(
+  type = 'logistic_reg'
+) AS
+  select col1, col2, col3 from training-dataset
+```
+
+
+
 <!-- 
 Decision Tree Classifier
 Factorization Machine Classifier 
