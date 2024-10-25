@@ -1,19 +1,14 @@
 ---
 title: Sharing Packages Across Organization Using Sandbox Tooling
 description: Learn how to use Sandbox Tooling in Adobe Experience Platform to share packages across different organizations.
-badge: Beta
 ---
 # Share packages across organizations using Sandbox Tooling
-
->[!NOTE]
->
->Sharing packages across organizations is currently in beta and only available to select beta customers.
 
 Improve configuration accuracy across sandboxes and seamlessly export and import sandbox configurations between sandboxes across different organizations with the sandbox tooling feature. This document covers how to use sandbox tooling in Adobe Experience Platform to share packages across different organizations. There are two types of shared packages:
 
 - **Private package**
 
-[Private packages](#private-packages) can only be shared with organizations that have approved the sharing request from the source organization via an opt-in allow list.
+[Private packages](#private-packages) can only be shared with organizations that have approved the sharing request from the source organization.
 
 - **Public package**
 
@@ -87,13 +82,13 @@ In the **[!UICONTROL Share package]** dialog, select the package to share from t
 
 Use the Sandbox Tooling feature to create shareable public packages that don't require any additional approval and are easily imported with the use of the package's payload.
 
-### Update package visibility to public {#update-package}
+### Update package availability to public {#update-package}
 
-To update a package's visibility type, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Packages]** tab. Next, select the ellipsis (`...`) next to the package, and then select **[!UICONTROL Update to public package]** from the dropdown menu.
+To update a package's availability type, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Packages]** tab. Next, select the ellipsis (`...`) next to the package, and then select **[!UICONTROL Update to public package]** from the dropdown menu.
 
 ![The Sandboxes UI with the packages tab and the dropdown option menu with Update to public package highlighted.](../images/ui/sandbox-tooling/update-to-public.png)
 
-In the **[!UICONTROL Change package visibility to public]** dialog, verify the package name is correct and select **[!UICONTROL Confirm]**. 
+In the **[!UICONTROL Change package availability to public]** dialog, verify the package name is correct and select **[!UICONTROL Confirm]**. 
 
 >[!IMPORTANT]
 >
