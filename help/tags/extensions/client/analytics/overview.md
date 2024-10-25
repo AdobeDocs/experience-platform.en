@@ -291,9 +291,9 @@ You can choose between two different views in **Set Variables**:
 
 >[!BEGINTABS]
 
->[!TAB Form View]
+>[!TAB Provide individual attributes]
 
-1. **Provide individual attributes**: In this view, you can specify different variables such as `eVars`, `Props`, `Events`.
+In this view, you can specify different variables such as `eVars`, `Props`, `Events`.
 
 ![Adobe Analytics extension - 'Provide individual attributes' view](../../../images/adobe_analytics_extension_form_view.png)
 
@@ -328,7 +328,7 @@ Set one or more [events](https://experienceleague.adobe.com/docs/analytics/imple
 
 >[!TAB JSON View]
 
-1. **Provide JSON**: In this view, you can view and edit a JSON version of the **Set Variables** action.
+In this view, you can view and edit a JSON version of the **Set Variables** action.
 
 ![Adobe Analytics extension - 'Provide JSON' view](../../../images/adobe_analytics_extension_json_view.png)
 
