@@ -24,6 +24,11 @@ This guide requires a working understanding of several important [!DNL Experienc
 
 ## View merge policies {#view-merge-policies}
 
+>[!CONTEXTUALHELP]
+>id="platform_errors_uplib_101221_404"
+>title="Merge policy not found"
+>abstract="This means that Platform could not find the requested merge policy. To resolve this error, please try one of the following solutions:<ul><li>Ensure the correct merge policy ID is listed in the URL.</li><li>Ensure you have the correct Organization and sandbox combination for the merge policy you're trying to access.</li></ul>"
+
 Within the [!DNL Experience Platform] UI, you can begin working with merge policies by selecting **[!UICONTROL Profiles]** in the left navigation and then selecting the **[!UICONTROL Merge Policies]** tab. This tab includes a list of all existing merge policies for your organization, as well as details for each merge policy including the policy name, whether or not the merge policy is the default merge policy, and the schema class to which the merge policy relates. 
 
 ![Merge policies landing page](../images/merge-policies/landing.png)
