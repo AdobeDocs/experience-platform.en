@@ -326,13 +326,11 @@ Set one or more [events](https://experienceleague.adobe.com/docs/analytics/imple
 1. (Optional) Select **[!UICONTROL Add event]** to set more events.
 1. Select **[!UICONTROL Keep Changes]**.
 
-OR 
+>[!TAB JSON View]
 
-2. **Provide JSON**: In this view, you can view and edit a JSON version of the **Set Variables** action.
+1. **Provide JSON**: In this view, you can view and edit a JSON version of the **Set Variables** action.
 
 ![Adobe Analytics extension - 'Provide JSON' view](../../../images/adobe_analytics_extension_json_view.png)
-
->[!TAB JSON View]
 
 #### JSON
 
