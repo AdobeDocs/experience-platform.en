@@ -107,7 +107,7 @@ This document provides definitions for key terms related to privacy regulations 
 
 **[!DNL Nebraska Data Protection Act]**: A privacy law that provides Nebraskans the right to access, correct, delete, and opt out of the sale of their personal data. It applies to businesses that meet specific data processing and revenue thresholds. The NDPA also requires businesses to implement reasonable data security measures and offers a 30-day cure period to resolve violations before penalties are applied.
 
-**[!DNL New Hampshire Data Privacy Act]**: This regulation protects the personal data of New Hampshire residents by granting them rights to access, delete, and transfer their data. It mandates businesses to disclose their data collection and sharing practices and allows consumers to opt out of data sales. The NHDPA applies to companies that meet specified data processing thresholds.
+**[!DNL New Hampshire Privacy Act]**: This regulation protects the personal data of New Hampshire residents by granting them rights to access, delete, and transfer their data. It mandates businesses to disclose their data collection and sharing practices and allows consumers to opt out of data sales. The NHDPA applies to companies that meet specified data processing thresholds.
 
 **[!DNL New Jersey Data Protection Act]**: A comprehensive state privacy law that provides New Jersey residents with rights to access, correct, and delete personal data. It includes opt-out mechanisms for data sales and targeted advertising. The NJDPA applies to businesses processing large volumes of consumer data and requires transparency in how businesses handle personal information.
 
