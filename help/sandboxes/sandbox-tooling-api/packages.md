@@ -1558,9 +1558,9 @@ curl --location GET \
 }
 ```
 
-### Update package visibility from private to public {#update-visibility}
+### Update package availability from private to public {#update-availability}
 
-Change a package from private to public by a GET request to the `/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC` endpoint. By default, a package is created with private visibility.
+Change a package from private to public by a GET request to the `/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC` endpoint. By default, a package is created with private availability.
 
 **Request**
 
@@ -1623,7 +1623,7 @@ curl --location --request GET \
 
 ### Request to create a public package {#create-public-package}
 
-Create a new package with public visibility by making a POST request to the `/transfer/pullRequest` endpoint.
+Create a new package with public availability by making a POST request to the `/transfer/pullRequest` endpoint.
 
 **API format**
 
