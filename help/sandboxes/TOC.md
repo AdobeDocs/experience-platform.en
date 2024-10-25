@@ -24,9 +24,7 @@ feature: Sandboxes
 * Sandbox Tooling API {#sandbox-tooling-api}
   * [Overview](sandbox-tooling-api/overview.md)
   * [Getting started](sandbox-tooling-api/getting-started.md)
-  * [Handshake](sandbox-tooling-api/handshake.md)
   * [Packages](sandbox-tooling-api/packages.md)
-  * [Transfer](sandbox-tooling-api/transfer.md)
   * [Tools](sandbox-tooling-api/tools.md)
   * [Appendix](sandbox-tooling-api/appendix.md)
 * [Troubleshooting guide](troubleshooting-guide.md)
