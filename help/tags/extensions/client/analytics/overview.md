@@ -338,7 +338,7 @@ The JSON view enables you to upload, copy or download JSON data and store it on 
 
 However, some limitations do exist:
 
-* **Custom code**: If you use custom code to populate variables, it won't show up in the JSON view. Instead, you can see an alert when copying or downloading the JSON indicating that modifications via custom code will not be included. 
+* **Custom code**: If you use custom code to populate variables, it won't show up in the JSON view. Instead, you can see an alert when copying or downloading the JSON indicating that modifications made via custom code will not be included. 
 * **Copy from URL attribute**: Copying a value from a URL is not supported in the JSON view. An alert is displayed to indicate this limitation.
 * **Retired variables**: Retired or deprecated variables are not populated in the JSON view. If such variables are defined, an alert is displayed informing that retired fields are not included.
 * **Data Elements**: Data elements are represented in the JSON view. If the JSON data is copied to another Tags property, the corresponding data elements might not be defined there and will not resolve correctly when they are run. An alert is displayed when you copy or download the JSON data to serve as a reminder that the data elements must be defined in the target property in order for them to function properly. 
