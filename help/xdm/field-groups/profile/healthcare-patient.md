@@ -1,5 +1,5 @@
 ---
-title: Patient Sctema Field Group
+title: Patient Schema Field Group
 description: Learn about the Patient schema field group.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
