@@ -289,6 +289,10 @@ The Analytics extension provides the following actions:
 
 You can choose between two different views in **Set Variables**:
 
+>[!BEGINTABS]
+
+>[!TAB Form View]
+
 1. **Provide individual attributes**: In this view, you can specify different variables such as `eVars`, `Props`, `Events`.
 
 ![Adobe Analytics extension - 'Provide individual attributes' view](../../../images/adobe_analytics_extension_form_view.png)
@@ -328,6 +332,8 @@ OR
 
 ![Adobe Analytics extension - 'Provide JSON' view](../../../images/adobe_analytics_extension_json_view.png)
 
+>[!TAB JSON View]
+
 #### JSON
 
 The JSON view enables you to upload, copy or download JSON data and store it on your device with the option to include global settings. It also allows you to capture global settings that are not represented in the **Set Variables** action and are important to capture when migrating settings to the Web SDK as they would otherwise be excluded. 
@@ -338,6 +344,8 @@ However, some limitations do exist:
 * **Copy from URL attribute**: Copying a value from a URL is not supported in the JSON view. An alert is displayed to indicate this limitation.
 * **Retired variables**: Retired or deprecated variables are not populated in the JSON view. If such variables are defined, an alert is displayed informing that retired fields are not included.
 * **Data Elements**: Data elements are represented in the JSON view. If the JSON data is copied to another Tags property, the corresponding data elements might not be defined there and will not resolve correctly when they are run. An alert is displayed when you copy or download the JSON data to serve as a reminder that the data elements must be defined in the target property in order for them to function properly. 
+
+>[!ENDTABS]
 
 #### Hierarchy
 
