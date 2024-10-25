@@ -285,7 +285,7 @@ The Analytics extension provides the following actions:
 
 >[!IMPORTANT]
 >
->Using a "set variables" action won't send the beacon. You must use the "send beacon" action. 
+>You cannot send the beacon with the "set variables" action. To send the beacon, you must select the "send beacon" action.
 
 You can choose between two different views in **Set Variables**:
 
@@ -295,7 +295,7 @@ You can choose between two different views in **Set Variables**:
 
 In this view, you can specify different variables such as `eVars`, `Props`, `Events`.
 
-![Adobe Analytics extension - 'Provide individual attributes' view](../../../images/adobe_analytics_extension_form_view.png)
+![The Adobe Analytics form view page, where additional attributes are listed.](../../../images/adobe_analytics_extension_form_view.png)
 
 #### eVars
 
@@ -330,11 +330,11 @@ Set one or more [events](https://experienceleague.adobe.com/docs/analytics/imple
 
 In this view, you can view and edit a JSON version of the **Set Variables** action.
 
-![Adobe Analytics extension - 'Provide JSON' view](../../../images/adobe_analytics_extension_json_view.png)
+![The Adobe Analytics extension JSON view page, where a JSON file is provided.](../../../images/adobe_analytics_extension_json_view.png)
 
 #### JSON
 
-The JSON view enables you to upload, copy or download JSON data and store it on your device with the option to include global settings. It also allows you to capture global settings that are not represented in the **Set Variables** action and are important to capture when migrating settings to the Web SDK as they would otherwise be excluded. 
+Use the JSON view to upload, copy or download JSON data and store it on your device with the option to include global settings. You can also use it to capture global settings that are not represented in the **Set Variables** action and are important to capture when migrating settings to the Web SDK as they would otherwise be excluded. 
 
 However, some limitations do exist:
 
