@@ -283,7 +283,7 @@ The Analytics extension provides the following actions:
 
 ### Set Variables {#set-variables}
 
->[!Important]
+>[!IMPORTANT]
 >
 >Using a "set variables" action won't send the beacon. You must use the "send beacon" action. 
 
