@@ -289,7 +289,7 @@ The Analytics extension provides the following actions:
 
 You can choose between two different views in **Set Variables**:
 
-**Provide individual attributes**: In this view, you can specify different variables such as `eVars`, `Props`, `Events`.
+1. **Provide individual attributes**: In this view, you can specify different variables such as `eVars`, `Props`, `Events`.
 
 ![Adobe Analytics extension - 'Provide individual attributes' view](../../../images/adobe_analytics_extension_form_view.png)
 
@@ -324,7 +324,7 @@ Set one or more [events](https://experienceleague.adobe.com/docs/analytics/imple
 
 OR 
 
-**Provide JSON**: In this view, you can view and edit a JSON version of the **Set Variables** action.
+2. **Provide JSON**: In this view, you can view and edit a JSON version of the **Set Variables** action.
 
 ![Adobe Analytics extension - 'Provide JSON' view](../../../images/adobe_analytics_extension_json_view.png)
 
