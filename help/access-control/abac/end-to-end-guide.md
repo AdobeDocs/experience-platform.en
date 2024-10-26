@@ -39,7 +39,7 @@ You will:
 
 * [Label the roles for your users](#label-roles): Use the example of a healthcare provider (ACME Business Group) whose marketing group works with external agencies.
 * [Label your resources (schema fields and segments)](#label-resources): Assign the **[!UICONTROL PHI/ Regulated Health Data]** label to schema resources and segments.
-* * [Activate the policy that will link them together: ](#policy): Enable the default policy to prevent access to schema fields and segments by connecting the labels on your resources to the labels in your role. Users with matching labels will then be given access to the schema field and segment across all sandboxes.
+* [Activate the policy that will link them together](#policy): Enable the default policy to prevent access to schema fields and segments by connecting the labels on your resources to the labels in your role. Users with matching labels will then be given access to the schema field and segment across all sandboxes.
 
 ## Permissions
 
