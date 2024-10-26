@@ -6,7 +6,7 @@ description: Learn how to ...
 
 The Advanced Audience Overlaps template ... {describe purpose}. Users can filter specific audiences for overlap analysis.
 
-<!-- 
+
 
 From the Advanced Audience Overlaps view under the Templates section, you can easily review audience intersections and make informed decisions. You can filter specific audiences and perform overlap analysis.
 
@@ -29,9 +29,8 @@ The main section displays the [!UICONTROL Advanced audience overlaps] chart. Thi
 
 ## Export insights {#export insights}
 
-To ex[port your insights, select **[!UICONTROL Export]** on the top right of the table. The print PDF dialog appears. From this dialog you can save as a PDF or print the data shown in the table.
+To export your insights, select **[!UICONTROL Export]** on the top right of the table. The print PDF dialog appears. From this dialog you can save as a PDF or print the data shown in the table.
 
 Select **[!UICONTROL Templates]** to return to the [!UICONTROL Template] overview.
 
 ![The Advanced Audience Overlaps view with Templates highlighted.]()
- -->
