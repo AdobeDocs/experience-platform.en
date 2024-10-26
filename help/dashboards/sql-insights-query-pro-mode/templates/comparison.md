@@ -24,9 +24,13 @@ You can also filter your data by specific time periods, to see how these audienc
 
 The dialog also indicates how many filters are applied (in the screenshot below, two filters are being used: Audience A and Audience B, and today as a date range). To remove all applied filters, select **[!UICONTROL Clear all]**, if needed.
 
-After setting the audiences and date range, select **[!UICONTROL Apply]** to refresh the [!UICONTROL Audience comparison] dashboard. The dashboard now shows the comparative charts displayed side by side for each audience.
+After setting the audiences and date range, select **[!UICONTROL Apply]** to refresh the [!UICONTROL Audience comparison] dashboard.
 
 ![The Filters dialog on the Audience comparison dashboard with Apply highlighted.]()
+
+The dashboard now shows the comparative charts displayed side by side for each audience.
+
+![The Audience comparison dashboard with several charts comparing metrics for each audience.]()
 
 ## Available audience comparison charts {#available-charts}
 
