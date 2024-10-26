@@ -43,7 +43,7 @@ The dashboard provides several charts to compare insights:
 
 >[!NOTE]
 >
->The [!UICONTROL Audience size trend] and [!UICONTROL Audience size change trend] charts help you track and compare both the absolute size, and fluctuations in size between two audiences over a specified period. This information makes it easier to understand patterns and factors influencing audience changes.
+>The [!UICONTROL Audience size trend] and [!UICONTROL Audience size change trend] charts help you track and compare both the absolute size and fluctuations in size between two audiences over a specified period. This information makes it easier to understand patterns and factors influencing audience changes.
 
 ## Export insights {#export-insights}
 
