@@ -229,7 +229,7 @@ Flexible audience evaluation lets you run a segmentation job on demand. Choose t
 >
 >- All the audiences **must** have an origin of "Segmentation Service".
 >- All the audiences **must** be evaluated using batch segmentation.
->- All the audiences **must** be either people-based or account-based audiences.
+>- All the audiences **must** be people-based audiences.
 >- You can only select a maximum of 20 audiences.
 
 ![The audiences that you want to use flexible audience evaluation on are selected.](../images/ui/audience-portal/evaluate-audiences.png)
