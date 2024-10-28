@@ -120,7 +120,8 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
     
     >[!IMPORTANT]
     >
-    >The datastream ID is unique for each Adobe Target destination connection. If you need to map the same audiences to multiple datastreams, you must [create a new destination connection](../../ui/connect-destination.md) for each datastream ID, and go through the [audience activation flow](#activate).
+    >The datastream ID is unique for each Adobe Target destination connection. You cannot use the same datastream ID for multiple Adobe Target destination connections.
+    >If you need to map the same audiences to multiple datastreams, you must [create a new destination connection](../../ui/connect-destination.md) for each datastream ID, and go through the [audience activation flow](#activate).
 
     * **[!UICONTROL None]**: Select this option if you need to configure Adobe Target personalization but you cannot implement the [Experience Platform Web SDK](/help/web-sdk/home.md). When using this option, audiences exported from Experience Platform to Target only support next-session personalization, and edge segmentation is disabled. Reference the table in the [supported use cases](#supported-use-cases) section for a comparison of available use cases per implementation type.
 
