@@ -127,10 +127,6 @@ Select **[!UICONTROL Export full files]** to trigger the export of a file contai
 
 2. Use the **[!UICONTROL Time]** toggle to select whether the export should happen immediately after audience evaluation or on a scheduled basis, at a specified time. When selecting the **[!UICONTROL Scheduled]** option, you can use the selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
 
-      >[!NOTE]
-      >
-      >The **[!UICONTROL After segment evaluation]** option described below is available only to select Beta customers.
-
     Use the **[!UICONTROL After segment evaluation]** option to have the activation job run immediately after the daily Platform batch segmentation job completes. This option ensures that when the activation job runs, the most up-to-date profiles are exported to your destination. This might result in an audience being exported multiple times a day, based on your actions.
     
     >[!IMPORTANT]
