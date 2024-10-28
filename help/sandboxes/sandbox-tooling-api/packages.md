@@ -1146,13 +1146,13 @@ A successful response returns all successful import jobs.
 }
 ```
 
-## Share packages across organization {#org-linking}
+## Share packages across organizations {#org-linking}
 
 The `/handshake` endpoint in the sandbox tooling API allows you to partner with other organizations to share packages.
 
 ### Sending a share request {#send-request}
 
-Send a request to target partner organizations for sharing approval by making a POST request to the `/handshake/bulkCreate` endpoint. This is required before you can share private packages. 
+Send a request to a target partner organization for sharing approval by making a POST request to the `/handshake/bulkCreate` endpoint. This is required before you can share private packages. 
 
 **API format**
 
@@ -1179,12 +1179,13 @@ curl --location POST \
       } 
   }' 
 ```
-<!-- UPDATE -->
 
-| Property | Description | Type | Required |
+<!-- TO BE UPDATED WITH DEV INFO-->
+
+<!-- | Property | Description | Type | Required |
 | --- | --- | --- | --- |
 | `targetIMSOrgIds` | ?? | Array | ?? |
-| `sourceIMSDetails` | ?? | Object | ?? |
+| `sourceIMSDetails` | ?? | Object | ?? | -->
 
 
 **Response**
@@ -1217,7 +1218,7 @@ curl --location POST \
 
 ### Approving received share requests {#approve-requests}
 
-Approve share requests from target partner organizations by making a a POST request to the `/handshake/action` endpoint. After approval, source partner organizations can share private packages.
+Approve share requests from target partner organizations by making a POST request to the `/handshake/action` endpoint. After approval, source partner organizations can share private packages.
 
 **API format**
 
@@ -1248,14 +1249,14 @@ curl --location POST  \
   }'
 ```
 
-<!-- UPDATE -->
+<!-- TO BE UPDATED WITH DEV INFO-->
 
-| Property | Description | Type | Required |
+<!-- | Property | Description | Type | Required |
 | --- | --- | --- | --- |
 | `linkingID` | ?? | String | ?? |
 | `status` | ?? | String | ?? |
 | `reason` | ?? | String | ?? |
-| `targetIMSOrgDetails` | ?? | Object | ?? |
+| `targetIMSOrgDetails` | ?? | Object | ?? | -->
 
 **Response**
 
@@ -1368,12 +1369,12 @@ curl --location POST \
   }'
 ```
 
-<!-- UPDATE -->
+<!-- TO BE UPDATED WITH DEV INFO-->
 
-| Property | Description | Type | Required |
+<!-- | Property | Description | Type | Required |
 | --- | --- | --- | --- |
 | `packageId` | ?? | String | ?? |
-| `targets` | ?? | Array | ?? |
+| `targets` | ?? | Array | ?? | -->
 
 **Response**
 
@@ -1560,7 +1561,7 @@ curl --location GET \
 
 ### Update package availability from private to public {#update-availability}
 
-Change a package from private to public by a GET request to the `/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC` endpoint. By default, a package is created with private availability.
+Change a package from private to public by making a GET request to the `/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC` endpoint. By default, a package is created with private availability.
 
 **Request**
 
@@ -1579,13 +1580,13 @@ curl --location --request GET \
   }'
 ```
 
-<!-- UPDATE -->
+<!-- TO BE UPDATED WITH DEV INFO-->
 
-| Property | Description | Type | Required |
+<!-- | Property | Description | Type | Required |
 | --- | --- | --- | --- |
 | `id` | ?? | String | ?? |
 | `action` | ?? | String | ?? |
-| `packageVisbility` | ?? | String | ?? |
+| `packageVisbility` | ?? | String | ?? | -->
 
 **Response**
 
@@ -1648,12 +1649,12 @@ curl --location POST \
   }'
 ```
 
-<!-- UPDATE -->
+<!-- TO BE UPDATED WITH DEV INFO-->
 
-| Property | Description | Type | Required |
+<!-- | Property | Description | Type | Required |
 | --- | --- | --- | --- |
 | `imsOrgId` | ?? | String | ?? |
-| `packageId` | ?? | String | ?? |
+| `packageId` | ?? | String | ?? | -->
 
 **Response**
 
@@ -1702,12 +1703,12 @@ curl --location --request GET \
   }'
 ```
 
-<!-- UPDATE -->
+<!-- TO BE UPDATED WITH DEV INFO-->
 
-| Property | Description | Type | Required |
+<!-- | Property | Description | Type | Required |
 | --- | --- | --- | --- |
 | `imsOrgId` | ?? | String | ?? |
-| `packageId` | ?? | String | ?? |
+| `packageId` | ?? | String | ?? | -->
 
 **Response**
 
@@ -1941,6 +1942,8 @@ GET /packages/payload/{PACKAGE_ID}
 
 **Request**
 
+The following request fetches a package's payload with the ID of {PACKAGE_ID}.
+
 ```shell
 curl --location --request GET \
   https://platform-stage.adobe.io/data/foundation/exim/packages/payload/{PACKAGE_ID} \
@@ -1956,12 +1959,12 @@ curl --location --request GET \
   }'
 ```
 
-<!-- UPDATE -->
+<!-- TO BE UPDATED WITH DEV INFO-->
 
-| Property | Description | Type | Required |
+<!-- | Property | Description | Type | Required |
 | --- | --- | --- | --- |
 | `imsOrdId` | ?? | String | ?? |
-| `packageId` | ?? | String | ?? |
+| `packageId` | ?? | String | ?? | -->
 
 **Response**
 
