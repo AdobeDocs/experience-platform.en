@@ -89,3 +89,36 @@ The documentation below provides information on how to connect [!DNL Salesforce]
 
 - [Create a Salesforce source connection in the UI](../../tutorials/ui/create/crm/salesforce.md)
 - [Create a dataflow for a CRM connection in the UI](../../tutorials/ui/dataflow/crm.md)
+
+## Set up for usage in an AWS region
+
+Follow the steps below to learn how you can set up your [!DNL Salesforce] account and connect it to Experience Platform within an AWS region.
+
+### Prerequisites
+
+To connect your [!DNL Salesforce] account to Experience Platform in an AWS region, you must have the following:
+
+- A [!DNL Salesforce] account with API access.
+- A [!DNL Salesforce Connected App] that you can then use to enable JWT_BEARER OAuth flow.
+- The necessary permissions in [!DNL Salesforce] to access data.
+
+### Create a [!DNL Salesforce Connected App]
+
+First, use the following to create certificate/key pair of PEM files.
+
+```shell
+openssl req -newkey rsa:4096 -new -nodes -x509 -days 3650 -keyout key.pem -out cert.pem  
+```
+
+- Log in to your [!DNL Salesforce] account, select the settings icon (![The settings icon.](/help/images/icons/settings.png)) and then select **[!DNL Setup]**.
+- Navigate to [!DNL App Manager] and then select [!DNL New Connection App].
+- Provide a name for your app. During this step, you can allow for the rest of the fields to be auto-populated. You must also ensure to enable the box for [!DNL Enable OAuth Settings].
+- Next, you must set a callback URL. Since this will not be used for JWT, you can use `https://localhost`.
+- Ensure that you also enable the box for [!DNL Use Digital Signatures].
+- Upload the cert.pem file that was created in the first step.
+- Add the following permissions:
+  - Manage user data via APIs (api)
+  - Access custom permissions (custom_permissions)
+  - Access the identity URL service (id, profile, email, address, phone)
+  - Access unique identifiers (openid)
+  - Perform requests at any time (refresh_token, offline_access)
