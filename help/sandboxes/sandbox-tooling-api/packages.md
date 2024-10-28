@@ -1162,6 +1162,8 @@ POST /handshake/bulkCreate
 
 **Request**
 
+The following request initiates sharing approval between a target partner organization and the source organization.
+
 ```shell
 curl --location POST \
   https://platform.adobe.io/data/foundation/exim/handshake/bulkCreate \
@@ -1189,6 +1191,8 @@ curl --location POST \
 
 
 **Response**
+
+A successful response returns details regarding your share request.
 
 ```json
 {
@@ -1228,6 +1232,8 @@ POST /handshake/action
 
 **Requests**
 
+The following request approves a share request from a target partner organization.
+
 ```shell
 curl --location POST  \
   https://platform.adobe.io/data/foundation/exim/handshake/action \
@@ -1260,8 +1266,9 @@ curl --location POST  \
 
 **Response**
 
-```json
+A successful response returns details regarding the approved share request.
 
+```json
 {
     "id": "6c2ee3780fee4fbd9344e84ed2cb3fdf",
     "version": 1,
@@ -1289,6 +1296,8 @@ List outgoing and incoming share requests by making a GET request to the `handsh
 
 **Request**
 
+The following request returns a list of all outgoing and incoming share requests.
+
 ```shell
 curl --location --request GET \
   https://platform.adobe.io/data/foundation/exim/handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING \
@@ -1301,6 +1310,8 @@ curl --location --request GET \
 ```
 
 **Response**
+
+A successful response returns a list of outgoing and incoming share requests and their details.
 
 ```json
 {
@@ -1337,7 +1348,7 @@ curl --location --request GET \
 
 ## Transfer packages 
 
-The `/transfer` endpoint in the sandbox tooling API allows you to fetch and create new package sharing requests. 
+Use the `/transfer` endpoint in the sandbox tooling API to fetch and create new package sharing requests. 
 
 ### New transfer request {#transfer-request}
 
@@ -1350,6 +1361,8 @@ POST /transfer
 ```
 
 **Request**
+
+The following request fetches a source organizations package and shares it with a target organization.
 
 ```shell
 curl --location POST \
@@ -1378,6 +1391,7 @@ curl --location POST \
 
 **Response**
 
+A successful response returns details of the package requested and its share status.
 ```json
 [
     {
@@ -1433,6 +1447,8 @@ curl --location GET \
 
 **Response**
 
+A success response returns details of a share request.
+
 ```json
 {
     "id": "0c843180a64c445ca1beece339abc04b",
@@ -1480,6 +1496,8 @@ GET `/transfer/list?property=status=={STATUS}&start={START}&limit={LIMIT}&orderB
 
 **Request**
 
+The following request fetches a list of transfer requests from the search parameters provided.
+
 ```shell
 curl --location GET \
   https://platform.adobe.io/data/foundation/exim/transfer/list?property=status==COMPLETED&start=0&limit=2&orderBy=-createdDate \
@@ -1490,6 +1508,8 @@ curl --location GET \
 ```
 
 **Response**
+
+A successful response returns a list of all transfer requests from the search parameters provided.
 
 ```json
 {
@@ -1565,6 +1585,8 @@ Change a package from private to public by making a GET request to the `/transfe
 
 **Request**
 
+The following request changes a packages availability from private to public.
+
 ```shell
 curl --location --request GET \
   http://platform-stage.adobe.io/data/foundation/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC \
@@ -1589,6 +1611,8 @@ curl --location --request GET \
 | `packageVisbility` | ?? | String | ?? | -->
 
 **Response**
+
+A successful response returns details on a package and its visibility.
 
 ```json
 {
@@ -1629,10 +1653,12 @@ Create a new package with public availability by making a POST request to the `/
 **API format**
 
 ```http
-POST \transfer\pullRequest
+POST /transfer/pullRequest
 ```
 
 **Request**
+
+The following request create a new package and sets its availability to public.
 
 ```shell
 curl --location POST \
@@ -1657,6 +1683,8 @@ curl --location POST \
 | `packageId` | ?? | String | ?? | -->
 
 **Response**
+
+A succcessful response returns details on the created public package.
 
 ```json
 {
@@ -1688,6 +1716,8 @@ GET /transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC&or
 
 **Request**
 
+The following request fetches a list of packages with public availability.
+
 ```shell
 curl --location --request GET \
   https://platform.adobe.io/data/foundation/exim/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC&orderby=-createdDate \
@@ -1711,6 +1741,8 @@ curl --location --request GET \
 | `packageId` | ?? | String | ?? | -->
 
 **Response**
+
+A successful response returns a list of public packages and their details. 
 
 +++View response
 
@@ -1967,6 +1999,8 @@ curl --location --request GET \
 | `packageId` | ?? | String | ?? | -->
 
 **Response**
+
+A successful response returns the package's payload.
 
 ```json
 
