@@ -208,7 +208,7 @@ Additionally, you can select up to 25 different audiences, and perform various a
 
 ![The available options for bulk actions are displayed.](../images/ui/audience-portal/bulk-actions.png)
 
-When you apply bulk actions to these audiences, the following conditions apply:
+When you apply bulk actions to audiences, the following conditions apply:
 
 - You **can** select audiences from different pages.
 - You **cannot** delete an audience which is being used in a destination activation.
@@ -223,21 +223,26 @@ When you apply bulk actions to these audiences, the following conditions apply:
 
 Flexible audience evaluation lets you run a segmentation job on demand. Choose the audiences you want to have evaluated and select **[!UICONTROL Evaluate audiences]**.
 
-![The audiences that you want to use flexible audience evaluation on are selected.](../images/ui/audience-portal/evaluate-audiences.png)
-
-The **[!UICONTROL Evaluate audiences on demand]** popover appears, displaying the list of audiences that will be evaluated with the on-demand-segment job. If an audience is ineligible to be evaluated on demand, it will automatically be removed from the evaluation job. You can confirm that the listed audiences are the ones you want to be evaluated.
-
-![The audiences that can be evaluated using flexible audience evaluation are displayed.](../images/ui/audience-portal/evaluate-audiences-modal.png)
-
-After confirming the correct audiences are listed, proceed with the request, and the flexible audience evaluation will begin.
-
 >[!IMPORTANT]
 >
 >When selecting audiences for flexible audience evaluation, the following conditions apply:
 >
 >- All the audiences **must** have an origin of "Segmentation Service".
 >- All the audiences **must** be evaluated using batch segmentation.
+>- All the audiences **must** be either people-based or account-based audiences.
 >- You can only select a maximum of 20 audiences.
+
+![The audiences that you want to use flexible audience evaluation on are selected.](../images/ui/audience-portal/evaluate-audiences.png)
+
+The **[!UICONTROL Evaluate audiences on demand]** popover appears, displaying the list of audiences that will be evaluated with the on-demand-segment job. If an audience is ineligible to be evaluated on demand, it will automatically be removed from the evaluation job. Confirm that the listed audiences are the ones you want to be evaluated.
+
+![The audiences that can be evaluated using flexible audience evaluation are displayed.](../images/ui/audience-portal/evaluate-audiences-modal.png)
+
+After confirming the correct audiences are listed, proceed with the request, and the flexible audience evaluation will begin.
+
+>[!NOTE]
+>
+>If you run flexible audience evaluation on audiences which are already set to be activated [after segment evaluation](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), the audiences will be activated as soon as the flexible audience evaluation job finishes, regardless of any previous daily activation jobs.
 
 ## Audience details {#audience-details}
 
