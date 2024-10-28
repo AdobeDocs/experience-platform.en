@@ -8,9 +8,38 @@ description: The October 2024 release notes for Adobe Experience Platform.
 
 Updates to existing features and documentation in Adobe Experience Platform:
 
-
+- [Data Collection](#data-collection)
+- [Destinations](#destinations)
 - [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
+
+## Data collection {#collection}
+
+Adobe Experience Platform provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
+
+**New features**
+
+| Type | Feature | Description |
+| --- | --- | --- |
+| Tags and Extensions | Adobe Analytics JSON View | The Adobe Analytics tags extension now allows you to examine eVars, props, and event settings as JSON, which can be included in the Web SDK extension and exported for editing. You can also upload or copy this data and store it on your device. See the [Adobe Analytics extension documentation](../../tags/extensions/client/analytics/overview.md) for more information. |
+
+{style="table-layout:auto"}
+
+To learn more about data collections, read the [data collection overview](../../collection/home.md).
+
+## Destinations {#destinations}
+
+[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+
+**New or updated functionality** {#destinations-new-updated-functionality}
+
+| Feature | Description |
+| ----------- | ----------- |
+| [Array export support generally available](../../destinations/ui/export-arrays-calculated-fields.md) | All customers can now use the **[!UICONTROL Add calculated field]** option when exporting audiences to file-based destinations to export entire arrays or elements of arrays. Note that you still need to use the `array_to_string` function to flatten the array into a string in the target file. <br> ![Add calculated field selection with functions and fields.](../2024/assets/october/array-export.gif "Add calculated field with a selection of the array_to_string function and organizations array."){width="250" align="center" zoomable="yes"} |
+
+{style="table-layout:auto"}
+
+For more information, read the [destinations overview](../../destinations/home.md).
 
 ## Segmentation Service {#segmentation-service}
 
