@@ -330,18 +330,18 @@ Set one or more [events](https://experienceleague.adobe.com/docs/analytics/imple
 
 In this view, you can view and edit a JSON version of the **Set Variables** action.
 
-![The Adobe Analytics extension JSON view page, where a JSON file is provided.](../../../images/adobe_analytics_extension_json_view.png)
+![A view representing the current set variables configuration in JSON format in Adobe Analytics extension.](../../../images/adobe_analytics_extension_json_view.png)
 
 #### JSON
 
-Use the JSON view to upload, copy or download JSON data and store it on your device with the option to include global settings. You can also use it to capture global settings that are not represented in the **Set Variables** action and are important to capture when migrating settings to the Web SDK as they would otherwise be excluded. 
+In the **Set Variables** action, use the JSON view to upload, copy or download JSON data and store it on your device. 
 
 However, some limitations do exist:
 
-* **Custom code**: If you use custom code to populate variables, it won't show up in the JSON view. Instead, you can see an alert when copying or downloading the JSON indicating that modifications made via custom code will not be included. 
+* **Custom code**: If you use custom code to populate variables, it won't show up in the JSON view. Instead, an alert appears when viewing, copying or downloading the JSON indicating that modifications made via custom code will not be included. 
 * **Copy from URL attribute**: Copying a value from a URL is not supported in the JSON view. An alert is displayed to indicate this limitation.
-* **Retired variables**: Retired or deprecated variables are not populated in the JSON view. If such variables are defined, an alert is displayed informing that retired fields are not included.
-* **Data Elements**: Data elements are represented in the JSON view. If the JSON data is copied to another Tags property, the corresponding data elements might not be defined there and will not resolve correctly when they are run. An alert is displayed when you copy or download the JSON data to serve as a reminder that the data elements must be defined in the target property in order for them to function properly. 
+* **Retired variables**: Retired or deprecated variables are shown in the JSON view and an alert is displayed informing that retired variables have been set.
+* **Data Elements**: Data elements are represented in the JSON view. If the JSON data is copied to another Tags property, the corresponding data elements might not be defined there and will not resolve correctly when they are run.
 
 >[!ENDTABS]
 
