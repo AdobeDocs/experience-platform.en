@@ -12,7 +12,8 @@ This document provides answers to frequently asked questions about Query Service
 The following list of answers to frequently asked questions is divided into the following categories:
 
 - [General](#general)
-- [Queries UI](#queries-ui) 
+- [Queries UI](#queries-ui)
+- [Compute hours](#compute-hours) 
 - [Dataset Samples](#dataset-samples)
 - [Exporting data](#exporting-data)
 - [SQL Syntax](#sql-syntax) 
@@ -607,6 +608,22 @@ Yes. Although, certain third-party clients, such as DbVisualizer, may require a 
 
 +++Answer
 If the "Create query" is stuck on "Initializing connection...", this is likely to be a connection or session issue. Refresh the browser if you are using the Platform UI and try again.
++++
+
+## Compute hours {#compute-hours}
+
+### Why do compute hours vary for the same query in two consecutive executions?
+
++++Answer
+Compute hours for a query can fluctuate due to multiple factors. These include the data volume processed, the complexity of transformation operations within the SQL query, and so on. Data Distiller Query Service scales the cluster based on the above parameters for each query, which can lead to differences in compute hours.
+
+Additionally, backend infrastructure is constantly being improved to optimize compute hour consumption, so you may notice changes over time as performance enhancements are implemented.
++++
+
+### Why have I noticed a reduction of compute hours usage across all my queries, if nothing has changed on my end?
+
++++Answer
+Backend infrastructure is constantly improved to optimize compute hour utilization and processing time. As a result, you may notice changes over time as performance enhancements are implemented.
 +++
 
 ## Dataset Samples
