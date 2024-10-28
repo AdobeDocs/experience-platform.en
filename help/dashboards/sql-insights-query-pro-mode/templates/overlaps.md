@@ -4,14 +4,7 @@ description: Learn how to analyze audience intersections and make data-driven de
 ---
 # Advanced Audience Overlaps
 
-<!-- Still in draft -->
-
-The [!UICONTROL Advanced Audience Overlaps] dashboard helps you understand how different audience segments intersect, allowing you to make informed decisions regarding audience segmentation and targeting strategies. 
-<!-- This dashboard provides tabulated metrics to help you understand the relationships between audience groups. Which in turn, leads to better-targeted campaigns, a reduced overlap in messaging, and more efficient marketing efforts. -->
-
-From this dashboard you can 
-select specific audiences for overlap analysis and examine metrics to optimize engagement. 
-easily review audience intersections, apply filters, and perform overlap analysis.
+Gain valuable insights to optimize your audience segmentation and targeting strategies by analyzing how different audience segments intersect with the [!UICONTROL Advanced Audience Overlaps] dashboard. Examine the tabulated metrics to identify overlaps, refine segmentation, and reduce redundant messaging. Ultimately, you can use these insights to create more targeted campaigns and efficient marketing efforts. On this dashboard, you can review audience intersections, apply filters, and perform detailed overlap analysis to make data-driven decisions and improve engagement outcomes.
 
 ## Filter Audiences {#filter-audiences}
 
@@ -23,25 +16,30 @@ The [!UICONTROL Filters] dialog appears. To choose an audience for overlap analy
 
 ## Applied filters {#applied-filters}
 
-In the current example, a filter is applied for [!UICONTROL Audience: Canada - Alberta], which narrows down the audience data displayed. Any additional audiences you choose to add are displayed next to the [!UICONTROL Filtering by] tag above the advianced Audience overlap chart.
+Once a filter is applied ([!UICONTROL Audience: Canada - Alberta] in the screenshot example), the displayed audience data is narrowed down. Any additional audiences that you choose to add are displayed next to the [!UICONTROL Filtering by] tag above the [!UICONTROL Advanced Audience overlaps] chart.
 
-![The Advanced Audience Overlaps dashboard with Filtering by highlighted.]()
+![The Advanced Audience Overlaps dashboard with Filtering by Audience: Canada - Alberta highlighted.]()
 
 ## Advanced Audience Overlaps Table {#advanced-audience-overlaps-table}
 
 The main section of the dashboard displays the [!UICONTROL Advanced Audience Overlaps] table, which provides a detailed comparison of audience overlaps between different segments. The table columns are as follows:
 
-- **[!UICONTROL Source_Segment_Name]**: The original audience being analyzed (e.g., "Canada - Alberta").
-- **[!UICONTROL Overlap_Segment_Name]**: The audience with which overlaps are being compared (e.g., "Western Canada" or "Winter wear").
-- **[!UICONTROL Source_Segment_Audience_Count]**: The size of the source audience.
-- **[!UICONTROL Overlap_Segment_Audience_Count]**: The size of the overlapping audience, which varies depending on the overlap.
-- **[!UICONTROL Overlap_Audience_Count]**: The size of the actual overlapping audience between the source and overlap segments.
+| Column name                        | Description                                                                                  |
+|------------------------------------|----------------------------------------------------------------------------------------------|
+| **[!UICONTROL Source_Segment_Name]**           | The original audience being analyzed (for example, "Canada - Alberta").                   |
+| **[!UICONTROL Overlap_Segment_Name]**          | The audience which overlaps are being compared to (for example, "Blood Glucose > 100").|
+| **[!UICONTROL Source_Segment_Audience_Count]** | The total number of profiles of the source audience.                                      |
+| **[!UICONTROL Overlap_Segment_Audience_Count]**| The size of the overlapping audience, which varies depending on the overlap.               |
+| **[!UICONTROL Overlap_Audience_Count]**        | The size of the actual overlapping audience between the source and overlap audiences.      |
+
+{style="table-layout:auto"}
 
 ## Export Insights {#export-insights}
 
 After you've filtered and analyzed the audiences, you can export the data for further offline analysis or reporting purposes. To export your insights, select **[!UICONTROL Export]** on the top right of the table. The print PDF dialog appears, allowing you to save the data as a PDF or print it.
 
+![The Advanced Audience Overlaps view with Export highlighted.]()
+
 To return to the [!UICONTROL Template] overview, select **[!UICONTROL Templates]**.
 
 ![The Advanced Audience Overlaps view with Templates highlighted.]()
-
