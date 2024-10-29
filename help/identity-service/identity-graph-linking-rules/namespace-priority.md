@@ -103,11 +103,11 @@ Given the configurations outlined above, user actions and determination of prima
 
 | User action (Experience event) | Authentication state | Data source | Namespaces in event | Namespace of primary identity |
 | --- | --- | --- | --- | --- |
-| View credit card offer page | Unauthenticated (anonymous) | Web SDK | {ECID} | ECID |
-| View help page | Unauthenticated | Mobile SDK | {ECID, IDFA} | IDFA |
-| View checking account balance | Authenticated | Web SDK | {CRMID, ECID} | CRMID |
-| Sign up for home loan | Authenticated | Analytics source connector | {CRMID, ECID, AAID} | CRMID |
-| Transfer $1,000 from checking to savings | Authenticated | Mobile SDK | {CRMID, GAID, ECID} | CRMID |
+| View credit card offer page | Unauthenticated (anonymous) | Web SDK | `{ECID}` | ECID |
+| View help page | Unauthenticated | Mobile SDK | `{ECID, IDFA}` | IDFA |
+| View checking account balance | Authenticated | Web SDK | `{CRMID, ECID}` | CRMID |
+| Sign up for home loan | Authenticated | Analytics source connector | `{CRMID, ECID, AAID}` | CRMID |
+| Transfer $1,000 from checking to savings | Authenticated | Mobile SDK | `{CRMID, GAID, ECID}` | CRMID |
 
 {style="table-layout:auto"}
 
