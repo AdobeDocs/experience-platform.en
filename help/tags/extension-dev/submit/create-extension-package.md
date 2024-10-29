@@ -1,7 +1,6 @@
 ---
 title: Prepare an Extension Package Zip File
 description: Learn how to prepare an extension package zip file.
-#exl-id: >> FILL IN HERE <<
 ---
 # Upload and implement end-to-end testing
 
