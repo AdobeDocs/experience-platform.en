@@ -1195,22 +1195,22 @@ A successful response returns details regarding your share request.
 {
     "successfulRequests": {
         "acme@AdobeOrg": {
-            "id": "e3f9ae5121cc4f1d849f1535994592c4",
+            "id": "{ID}",
             "version": 0,
             "createdDate": 1724938816798,
             "modifiedDate": 1724938816798,
-            "createdBy": "29571A74665DA05A0A494112@98ff67fa661fdf6549420b.e",
-            "modifiedBy": "29571A74665DA05A0A494112@98ff67fa661fdf6549420b.e",
-            "sourceIMSOrgId": "2E63197465A811E70A494213@AdobeOrg",
-            "targetIMSOrgId": "745F37C35E4B776E0A49421B@AdobeOrg",
+            "createdBy": "{CREATED_BY}",
+            "modifiedBy": "{MODIFIED_BY}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "targetIMSOrgId": "{TARGET_ID}",
             "sourceRegion": "va6",
             "sourceIMSOrgName": "{SOURCE_NAME}",
             "status": "APPROVAL_PENDING",
             "createdByName": "{CREATED_BY}",
             "modifiedByName": "{MODIFIED_BY}",
-            "modifiedByIMSOrgId": "2E63197465A811E70A494213@AdobeOrg",
-            "statusHistory": "[{\"actionTakenBy\":\"acme@98ff67fa661fdf6549420b.e\",\"actionTakenByName\":\"29571A74665DA05A0A494112@98ff67fa661fdf6549420b.e\",\"actionTakenByImsOrgID\":\"2E63197465A811E70A494213@AdobeOrg\",\"action\":\"INITIATED\",\"actionTimeStamp\":1724938816885}]",
-            "linkingId": "f7647408-965c-4a33-86aa-640760088c53"
+            "modifiedByIMSOrgId": "{ORG_ID}",
+            "statusHistory": "[{\"actionTakenBy\":\"acme@98ff67fa661fdf6549420b.e\",\"actionTakenByName\":\"{NAME}\",\"actionTakenByImsOrgID\":\"{ORG_ID}\",\"action\":\"INITIATED\",\"actionTimeStamp\":1724938816885}]",
+            "linkingId": "{LINKIND_ID}"
         }
     },
     "failedRequests": {}
@@ -1241,7 +1241,7 @@ curl -X POST  \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "linkingID":"96e325cd387348f2baa27aafb0d291db",
+      "linkingID":"{LINKING_ID}",
       "status":"APPROVED",
       "reason":"Done",
       "targetIMSOrgDetails":{
@@ -1257,7 +1257,7 @@ curl -X POST  \
 | `linkingID` | The id of the share request you're responding to. | String | Yes |
 | `status` | The action being taken on the share request. | String | Yes |
 | `reason` | The reason the action is being taken. | String | Yes |
-| `targetIMSOrgDetails` |  Details about the target organization. | Object | Yes |
+| `targetIMSOrgDetails` |  Details about the target organization where the id value should be the target organization's **ID**, the name value should be the target organizations's **NAME**, and the region value should be the target organizations **REGION**. | Object | Yes |
 
 **Response**
 
@@ -1265,29 +1265,43 @@ A successful response returns details regarding the approved share request.
 
 ```json
 {
-    "id": "6c2ee3780fee4fbd9344e84ed2cb3fdf",
+    "id": "{ID}",
     "version": 1,
     "createdDate": 1726737474000,
     "modifiedDate": 1726737541731,
-    "createdBy": "FF0D1F43637B49710A494110@658557135fa10b860a494019",
-    "modifiedBy": "AAD819AE65B155520A494137@3ec9197a65a86f34494221.e",
-    "sourceIMSOrgId": "2E63197465A811E70A494213@AdobeOrg",
-    "targetIMSOrgId": "745F37C35E4B776E0A49421B@AdobeOrg",
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}",
+    "sourceIMSOrgId": "{ORG_ID}",
+    "targetIMSOrgId": "{TARGET_ID}",
     "sourceRegion": "va7",
     "targetRegion": "va7",
     "sourceOrgName": "{SOURCE_ORG}",
     "targetOrgName": "{TARGET_ORG}",
     "status": "APPROVED",
     "createdByName": "{CREATED_BY}",
-    "modifiedByIMSOrgId": "745F37C35E4B776E0A49421B@AdobeOrg",
-    "statusHistory": "[{\"actionTakenBy\":\"FF0D1F43637B49710A494110@658557135fa10b860a494019\",\"actionTakenByName\":\"{NAME}\",\"actionTakenByImsOrgID\":\"acme@AdobeOrg\",\"action\":\"INITIATED\",\"actionTimeStamp\":1726737474450,\"reason\":null},{\"actionTakenBy\":null,\"actionTakenByName\":null,\"actionTakenByImsOrgID\":\"745F37C35E4B776E0A49421B@AdobeOrg\",\"action\":\"APPROVED\",\"actionTimeStamp\":1726737541818,\"reason\":\"Done\"}]",
-    "linkingId": "fbbd61b7-e4f9-410d-856d-187dff4bbcb5"
+    "modifiedByIMSOrgId": "{MODIFIED_BY}",
+    "statusHistory": "[{\"actionTakenBy\":\"{ACTION_BY}\",\"actionTakenByName\":\"{NAME}\",\"actionTakenByImsOrgID\":\"acme@AdobeOrg\",\"action\":\"INITIATED\",\"actionTimeStamp\":1726737474450,\"reason\":null},{\"actionTakenBy\":null,\"actionTakenByName\":null,\"actionTakenByImsOrgID\":\"745F37C35E4B776E0A49421B@AdobeOrg\",\"action\":\"APPROVED\",\"actionTimeStamp\":1726737541818,\"reason\":\"Done\"}]",
+    "linkingId": "{LINKING_ID}"
 }
 ```
 
 ### List outgoing/incoming share requests {#outgoing-and-incoming-requests}
 
 List outgoing and incoming share requests by making a GET request to the `handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING` endpoint.
+
+**API format**
+
+```http
+POST handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING
+```
+
+| Parameter | Accepted/Default Values |
+| --- | --- |
+| `property` | Specifies the property to filter by, such as status. Acceptable values for status are: `APPROVED`, `REJECTED`, and `IN_PROGRESS`.|
+| `start` | The default value of start is `0`. |
+| `limit` | The default value of limit is `20`. |
+| `orderBy` | Sorts records in ascending or descending order. |
+| `requestType` | Accepts either `INCOMING` or `OUTGOING`. |
 
 **Request**
 
@@ -1317,13 +1331,13 @@ A successful response returns a list of outgoing and incoming share requests and
     "hasNextPage": false,
     "data": [
         {
-            "id": "b1348219e81e43b1b32b75dd51edc68f",
+            "id": "{ID}",
             "version": 1,
             "createdDate": 1724929446000,
             "modifiedDate": 1724929617000,
-            "modifiedBy": "29571A74665DA05A0A494112@98ff67fa661fdf6549420b.e",
-            "sourceIMSOrgId": "2E63197465A811E70A494213@AdobeOrg",
-            "targetIMSOrgId": "C0FA10B6661FDE6F0A494023@AdobeOrg",
+            "modifiedBy": "{MODIFIED_BY}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "targetIMSOrgId": "{TARGET_ID}",
             "sourceRegion": "va7",
             "targetRegion": "va6",
              "sourceOrgName": "{SOURCE_ORG}",
@@ -1331,9 +1345,9 @@ A successful response returns a list of outgoing and incoming share requests and
             "status": "APPROVED",
             "createdByName": "{CREATED_BY}",
             "modifiedByName": "{MODIFIED_BY}",
-            "modifiedByIMSOrgId": "C0FA10B6661FDE6F0A494023@AdobeOrg",
-            "statusHistory": "[{\"actionTakenBy\":\"AAD819AE65B155520A494137@3ec9197a65a86f34494221.e\",\"actionTakenByName\":\"{NAME}\",\"actionTakenByImsOrgID\":\"C0FA10B6661FDE6F0A494023@AdobeOrg\",\"action\":\"INITIATED\",\"actionTimeStamp\":1724929442467,\"reason\":null},{\"actionTakenBy\":null,\"actionTakenByName\":\"{NAME}\",\"actionTakenByImsOrgID\":\"C0FA10B6661FDE6F0A494023@AdobeOrg\",\"action\":\"APPROVED\",\"actionTimeStamp\":1724929617531,\"reason\":\"Done\"}]",
-            "linkingId": "f45707bc-9c87-46f8-853b-f2d177c028b6"
+            "modifiedByIMSOrgId": "{MODIFIED_BY}",
+            "statusHistory": "[{\"actionTakenBy\":\"{ACTION_BY}\",\"actionTakenByName\":\"{NAME}\",\"actionTakenByImsOrgID\":\"{ORG_ID}\",\"action\":\"INITIATED\",\"actionTimeStamp\":1724929442467,\"reason\":null},{\"actionTakenBy\":null,\"actionTakenByName\":\"{NAME}\",\"actionTakenByImsOrgID\":\"{ORG_ID}\",\"action\":\"APPROVED\",\"actionTimeStamp\":1724929617531,\"reason\":\"Done\"}]",
+            "linkingId": "{LINKING_ID}"
         }
     ],
     "nextPage": null,
@@ -1368,7 +1382,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "packageId": "99089521828a4d4f999674496f3d84f1",
+      "packageId": "{PACKAGE_ID}",
       "targets": [
           {
               "imsOrgId": "{TARGET_IMS_ORG}"
@@ -1389,15 +1403,15 @@ A successful response returns details of the package requested and its share sta
 ```json
 [
     {
-        "id": "2c0e72aac5fd41ba8c53d52fe97ab908",
+        "id": "{ID}",
         "version": 0,
         "createdDate": 1726480559313,
         "modifiedDate": 1726480559313,
-        "createdBy": "A8A119A465B1553B0A49401B@3ec9197a65a86f34494221.e",
-        "modifiedBy": "A8A119A465B1553B0A49401B@3ec9197a65a86f34494221.e",
-        "sourceIMSOrgId": "2E63197465A811E70A494213@AdobeOrg",
-        "targetIMSOrgId": "745F37C35E4B776E0A49421B@AdobeOrg",
-        "packageId": "99089521828a4d4f999674496f3d84f1",
+        "createdBy": "{CREATED_BY}",
+        "modifiedBy": "{MODIFIED_BY}",
+        "sourceIMSOrgId": "{ORG_ID}",
+        "targetIMSOrgId": "{TARGET_ID}",
+        "packageId": "{PACKAGE_ID}",
         "status": "PENDING",
         "initiatedBy": "acme@3ec9197a65a86f34494221.e",
         "transferDetails": {
@@ -1445,15 +1459,15 @@ A success response returns details of a share request.
 
 ```json
 {
-    "id": "0c843180a64c445ca1beece339abc04b",
-    "sourceIMSOrgId": "2E63197465A811E70A494213@AdobeOrg",
+    "id": "{ID}",
+    "sourceIMSOrgId": "{ORG_ID}",
     "sourceOrgName": "{SOURCE_ORG}",
-    "targetIMSOrgId": "745F37C35E4B776E0A49421B@AdobeOrg",
+    "targetIMSOrgId": "{TARGET_ID}",
     "targetOrgName": "{TARGET_ORG}",
-    "packageId": "93137e7f8f984754a0ed9e1e6cabd036",
+    "packageId": "{PACKAGE_ID}",
     "packageName": "{PACKAGE_NAME}",
     "status": "COMPLETED",
-    "initiatedBy": "A8A119A465B1553B0A49401B@3ec9197a65a86f34494221.e",
+    "initiatedBy": "{INITIATED_BY}",
     "createdDate": 1724442856000,
     "transferDetails": {
         "messages": [
@@ -1473,17 +1487,17 @@ A success response returns details of a share request.
 
 ### Fetch share list {#transfers-list}
 
-Fetch a list of transfer requests by making a GET request to the `/transfer/list?property=status=={STATUS}&start={START}&limit={LIMIT}&orderBy=-createdDate` endpoint, changing the search parameters as needed.
+Fetch a list of transfer requests by making a GET request to the `/transfer/list?{QUERY_PARAMETERS}` endpoint, changing the query parameters as needed.
 
 **API format**
 
 ```http
-GET `/transfer/list?property=status=={STATUS}&start={START}&limit={LIMIT}&orderBy=-createdDate`
+GET `/transfer/list?{QUERY_PARAMETERS}`
 ```
 
 | Parameter | Accepted/Default Values |
 | --- | --- |
-| `status` | Acceptable values for status are: `COMPLETED`, `PENDING`, `IN_PROGRESS`, `FAILED`. |
+| `property` | Specifies the property to filter by, such as status. Acceptable values for status are: `COMPLETED`, `PENDING`, `IN_PROGRESS`, `FAILED`. |
 | `start` | The default value of start is `0`. |
 | `limit` | The default value of limit is `20`. |
 | `orderBy` | The ordering only accepts the `createdDate` field. |
@@ -1514,15 +1528,15 @@ A successful response returns a list of all transfer requests from the search pa
     "hasNextPage": true,
     "data": [
         {
-            "id": "cd4605f6ae2a4e18824a5d6525c2b11c",
-            "sourceIMSOrgId": "2E63197465A811E70A494213@AdobeOrg",
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
             "sourceOrgName": "{SOURCE_ORG}",
-            "targetIMSOrgId": "745F37C35E4B776E0A49421B@AdobeOrg",
+            "targetIMSOrgId": "{TARGET_ID}",
             "targetOrgName": "{TARGET_ORG}",
-            "packageId": "99089521828a4d4f999674496f3d84f1",
+            "packageId": "{PACKAGE_ID}",
             "packageName": "{PACKAGE_NAME}",
             "status": "COMPLETED",
-            "initiatedBy": "A8A119A465B1553B0A49401B@3ec9197a65a86f34494221.e",
+            "initiatedBy": "{INITIATED_BY}",
             "completedTime": 1726129077000,
             "createdDate": 1726129062000,
             "transferDetails": {
@@ -1541,15 +1555,15 @@ A successful response returns a list of all transfer requests from the search pa
             "requestType": "PRIVATE"
         },
         {
-            "id": "5aca120a8c094f1ca1e53d988fb29721",
-            "sourceIMSOrgId": "2E63197465A811E70A494213@AdobeOrg",
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
             "sourceOrgName": "{SOURCE_ORG}",
-            "targetIMSOrgId": "745F37C35E4B776E0A49421B@AdobeOrg",
+            "targetIMSOrgId": "{TARGET_ID}",
             "targetOrgName": "{TARGET_ORG}",
-            "packageId": "99089521828a4d4f999674496f3d84f1",
+            "packageId": "{PACKAGE_ID}",
             "packageName": "{PACKAGE_NAME}",
             "status": "COMPLETED",
-            "initiatedBy": "2C661A74665DC40B0A494112@98ff67fa661fdf6549420b.e",
+            "initiatedBy": "{INITIATED_BY}",
             "completedTime": 1726066046000,
             "createdDate": 1726065936000,
             "transferDetails": {
@@ -1583,14 +1597,14 @@ The following request changes a packages availability from private to public.
 
 ```shell
 curl -X GET \
-  http://platform-stage.adobe.io/data/foundation/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC \
+  http://platform.adobe.io/data/foundation/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-type: application/json' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -d '{
-      "id":"673264e41f8b49229d61467a1a94a907",
+      "id":"{ID}",
       "action":"UPDATE",
       "packageVisibility":"PUBLIC"
   }'
@@ -1608,21 +1622,21 @@ A successful response returns details on a package and its visibility.
 
 ```json
 {
-    "id": "673264e41f8b49229d61467a1a94a907",
+    "id": "{ID}",
     "version": 7,
     "createdDate": 1729624618000,
     "modifiedDate": 1729658596340,
-    "createdBy": "05762A4260527C970A49402D@658557135fa10b860a494019",
-    "modifiedBy": "FF0D1F43637B49710A494110@658557135fa10b860a494019",
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}",
     "name": "acme",
-    "imsOrgId": "745F37C35E4B776E0A49421B@AdobeOrg",
+    "imsOrgId": "{ORG_ID}",
     "packageType": "PARTIAL",
     "expiry": 1737434596325,
     "status": "PUBLISH_FAILED",
     "packageVisibility": "PUBLIC",
     "artifactsList": [
         {
-            "id": "0ec45a79-5b07-4551-8c9f-de914a99cfca",
+            "id": "{ID}",
             "type": "PROFILE_SEGMENT",
             "found": false,
             "count": 0,
@@ -1632,7 +1646,7 @@ A successful response returns details on a package and its visibility.
     "schemaMapping": {},
     "sourceSandbox": {
         "name": "acme-sandbox",
-        "imsOrgId": "745F37C35E4B776E0A49421B@AdobeOrg",
+        "imsOrgId": "{ORG_ID}",
         "empty": false
     }
 }
@@ -1654,7 +1668,7 @@ The following request will import a package and sets its availability to public.
 
 ```shell
 curl -X POST \
-  https://platform-stage.adobe.io/data/foundation/exim/transfer/pullRequest \
+  https://platform.adobe.io/data/foundation/exim/transfer/pullRequest \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
@@ -1662,8 +1676,8 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "imsOrgId": "2E63197465A811E70A494213@AdobeOrg",
-      "packageId": "673264e41f8b49229d61467a1a94a907"
+      "imsOrgId": "{ORG_ID}",
+      "packageId": "{PACKAGE_ID}"
   }'
 ```
 
@@ -1678,31 +1692,39 @@ A succcessful response returns details on the imported public package.
 
 ```json
 {
-    "id": "e044f3a2306c490a9283404792d3cb3a",
+    "id": "{ID}",
     "version": 0,
     "createdDate": 1729658890425,
     "modifiedDate": 1729658890425,
-    "createdBy": "FF0D1F43637B49710A494110@658557135fa10b860a494019",
-    "modifiedBy": "FF0D1F43637B49710A494110@658557135fa10b860a494019",
-    "sourceIMSOrgId": "2E63197465A811E70A494213@AdobeOrg",
-    "targetIMSOrgId": "745F37C35E4B776E0A49421B@AdobeOrg",
-    "packageId": "673264e41f8b49229d61467a1a94a907",
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}",
+    "sourceIMSOrgId": "{ORG_ID}",
+    "targetIMSOrgId": "{TARGET_ID}",
+    "packageId": "{PACKAGE_ID}",
     "status": "PENDING",
-    "initiatedBy": "FF0D1F43637B49710A494110@658557135fa10b860a494019",
-    "pipelineMessageId": "aebcb05f-aa65-4a4e-9f56-e20bed0803d9",
+    "initiatedBy": "{INITIATED_BY}",
+    "pipelineMessageId": "{MESSAGE_ID}",
     "requestType": "PUBLIC"
 }
 ```
 
 ### List public packages {#list-public-packages}
 
-Fetch a list of packages with public visbility by making a GET request to the `/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC&orderby=-createdDate` endpoint.
+Fetch a list of packages with public visbility by making a GET request to the `/transfer/list?{QUERY_PARAMS}` endpoint.
 
 **API format**
 
 ```http
-GET /transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC&orderby=-createdDate
+GET /transfer/list?{QUERY_PARAMS}
 ```
+
+| Parameter | Accepted/Default Values |
+| --- | --- |
+| `property` | Specifies the property to filter by, such as status. Acceptable values for status are: `COMPLETED` and `FAILED`. |
+| `start` | The default value of start is `0`. |
+| `limit` | The default value of limit is `20`. |
+| `orderBy` | The ordering only accepts the `createdDate` field. |
+| `requestType` | Accepts either `PUBLIC` or `PRIVATE`. |
 
 **Request**
 
@@ -1734,197 +1756,197 @@ A successful response returns a list of public packages and their details.
     "hasNextPage": false,
     "data": [
         {
-            "id": "535aff3dcf254315b33dd96cba6b4893",
-            "sourceIMSOrgId": "2E63197465A811E70A494213@AdobeOrg",
-            "sourceOrgName": "2E63197465A811E70A494213@AdobeOrg",
-            "targetIMSOrgId": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "targetOrgName": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "packageId": "54cf26eb1f5141529a1cc3a0378c555f",
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_ORG}",
+            "packageId": "{PACKAGE_ID}",
             "packageName": "Public package demo",
             "status": "COMPLETED",
-            "initiatedBy": "93331E2C614330EE0A494104@658557135fa10b860a494019",
+            "initiatedBy": "{INITIATED_BY}",
             "completedTime": 1729359318000,
             "createdDate": 1729359316000,
             "requestType": "PUBLIC"
         },
         {
-            "id": "02c500ecc5424650a0d314376a0ec6a2",
-            "sourceIMSOrgId": "2E63197465A811E70A494213@AdobeOrg",
-            "sourceOrgName": "2E63197465A811E70A494213@AdobeOrg",
-            "targetIMSOrgId": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "targetOrgName": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "packageId": "54cf26eb1f5141529a1cc3a0378c555f",
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
             "packageName": "Public package demo",
             "status": "COMPLETED",
-            "initiatedBy": "93331E2C614330EE0A494104@658557135fa10b860a494019",
+            "initiatedBy": "{INITIATED_BY}",
             "completedTime": 1729359284000,
             "createdDate": 1729359283000,
             "requestType": "PUBLIC"
         },
         {
-            "id": "d6fe62af80934dea9d6813e7e9a72211",
-            "sourceIMSOrgId": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "sourceOrgName": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "targetIMSOrgId": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "targetOrgName": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "packageId": "74422bfdf3a34301b37df40ef492d8d7",
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
             "packageName": "Test Private Flow Final",
             "status": "COMPLETED",
-            "initiatedBy": "11B41FB463226F620A49411D@658557135fa10b860a494019",
+            "initiatedBy": "{INITIATED_BY}",
             "completedTime": 1729284462000,
             "createdDate": 1729275962000,
             "requestType": "PUBLIC"
         },
         {
-            "id": "e6e1e8671b0641029513bc5ff9a788ca",
-            "sourceIMSOrgId": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "sourceOrgName": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "targetIMSOrgId": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "targetOrgName": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "packageId": "ed74331873fb457f83f98863b1197f8d",
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOUCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
             "packageName": "Fest",
             "status": "FAILED",
-            "initiatedBy": "93331E2C614330EE0A494104@658557135fa10b860a494019",
+            "initiatedBy": "{INITIATED_BY}",
             "completedTime": 1729284104000,
             "createdDate": 1729253854000,
             "requestType": "PUBLIC"
         },
         {
-            "id": "b7d9fb93e3fe4e47bd895417c387e98f",
-            "sourceIMSOrgId": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "sourceOrgName": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "targetIMSOrgId": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "targetOrgName": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "packageId": "67baaec4af3648f3a02c715fed8097d1",
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
             "packageName": "PublicPackageSharing",
             "status": "COMPLETED",
-            "initiatedBy": "93331E2C614330EE0A494104@658557135fa10b860a494019",
+            "initiatedBy": "{INITIATED_BY}",
             "completedTime": 1729284835000,
             "createdDate": 1729253556000,
             "requestType": "PUBLIC"
         },
         {
-            "id": "6b475653d65f49b8a9585bab47110229",
-            "sourceIMSOrgId": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "sourceOrgName": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "targetIMSOrgId": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "targetOrgName": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "packageId": "67baaec4af3648f3a02c715fed8097d1",
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
             "packageName": "PublicPackageSharing",
             "status": "COMPLETED",
-            "initiatedBy": "93331E2C614330EE0A494104@658557135fa10b860a494019",
-            "completedTime": 1729284439000,
-            "createdDate": 1729253522000,
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284835000,
+            "createdDate": 1729253556000,
             "requestType": "PUBLIC"
         },
         {
-            "id": "c73fef7fdc81468a8f25f50251b3e6c5",
-            "sourceIMSOrgId": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "sourceOrgName": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "targetIMSOrgId": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "targetOrgName": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "packageId": "67baaec4af3648f3a02c715fed8097d1",
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
             "packageName": "PublicPackageSharing",
             "status": "COMPLETED",
-            "initiatedBy": "93331E2C614330EE0A494104@658557135fa10b860a494019",
-            "completedTime": 1729284388000,
-            "createdDate": 1729253443000,
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284835000,
+            "createdDate": 1729253556000,
             "requestType": "PUBLIC"
         },
         {
-            "id": "49f36a796bcd4fc7bd8ea8f49f9942ea",
-            "sourceIMSOrgId": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "sourceOrgName": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "targetIMSOrgId": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "targetOrgName": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "packageId": "f19d43a93414463587d21e5f907de9a6",
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
             "packageName": "Public Package Audit Test",
             "status": "COMPLETED",
-            "initiatedBy": "93331E2C614330EE0A494104@658557135fa10b860a494019",
+            "initiatedBy": "{INITIATED_BY}",
             "completedTime": 1729284667000,
             "createdDate": 1729253421000,
             "requestType": "PUBLIC"
         },
         {
-            "id": "475dfe85c2e94a8cbefca9c7e52ac95c",
-            "sourceIMSOrgId": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "sourceOrgName": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "targetIMSOrgId": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "targetOrgName": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "packageId": "f19d43a93414463587d21e5f907de9a6",
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
             "packageName": "Public Package Audit Test",
             "status": "COMPLETED",
-            "initiatedBy": "93331E2C614330EE0A494104@658557135fa10b860a494019",
+            "initiatedBy": "{INITIATED_BY}",
             "completedTime": 1729284957000,
             "createdDate": 1729253143000,
             "requestType": "PUBLIC"
         },
         {
-            "id": "1a780eaa9e1348cf85adb6d40141503f",
-            "sourceIMSOrgId": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "sourceOrgName": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "targetIMSOrgId": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "targetOrgName": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "packageId": "f19d43a93414463587d21e5f907de9a6",
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
             "packageName": "Public Package Audit Test",
             "status": "COMPLETED",
-            "initiatedBy": "93331E2C614330EE0A494104@658557135fa10b860a494019",
+            "initiatedBy": "{INITIATED_BY}",
             "completedTime": 1729284562000,
             "createdDate": 1729252975000,
             "requestType": "PUBLIC"
         },
         {
-            "id": "21dd1186fb3445c69e273f8e52e653e1",
-            "sourceIMSOrgId": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "sourceOrgName": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "targetIMSOrgId": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "targetOrgName": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "packageId": "df2ee73e5ef44351bd8d0ae62e2b1251",
+               "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
             "packageName": "Private Package Test 1",
             "status": "COMPLETED",
-            "initiatedBy": "34091FB3636DF4020A494114@658557135fa10b860a494019",
+            "initiatedBy": "{INITIATED_BY}",
             "completedTime": 1729284262000,
             "createdDate": 1729229755000,
             "requestType": "PUBLIC"
         },
         {
-            "id": "e1f2d91426514292a72a1275e60ead6b",
-            "sourceIMSOrgId": "2E63197465A811E70A494213@AdobeOrg",
-            "sourceOrgName": "2E63197465A811E70A494213@AdobeOrg",
-            "targetIMSOrgId": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "targetOrgName": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "packageId": "d30b9a93ab5e40baa298ea936b740090",
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
             "packageName": "Demo Package 1016",
             "status": "COMPLETED",
-            "initiatedBy": "11B41FB463226F620A49411D@658557135fa10b860a494019",
+            "initiatedBy": "{INITIATED_BY}",
             "completedTime": 1729284784000,
             "createdDate": 1729208888000,
             "requestType": "PUBLIC"
         },
         {
-            "id": "bd9b80d4ab514b86b8c5b35927064693",
-            "sourceIMSOrgId": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "sourceOrgName": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "targetIMSOrgId": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "targetOrgName": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "packageId": "cf1dd7583bc946c09f602839eb95db8b",
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
             "packageName": "Public Package test 1",
             "status": "COMPLETED",
-            "initiatedBy": "93331E2C614330EE0A494104@658557135fa10b860a494019",
+            "initiatedBy": "{INITIATED_BY}",
             "completedTime": 1729284934000,
             "createdDate": 1729153097000,
             "requestType": "PUBLIC"
         },
         {
-            "id": "93f32aff292d4f658f0b908f335e2b23",
-            "sourceIMSOrgId": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "sourceOrgName": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "targetIMSOrgId": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "targetOrgName": "745F37C35E4B776E0A49421B@AdobeOrg",
-            "packageId": "cf1dd7583bc946c09f602839eb95db8b",
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
             "packageName": "Public Package test 1",
             "status": "COMPLETED",
-            "initiatedBy": "93331E2C614330EE0A494104@658557135fa10b860a494019",
+            "initiatedBy": "{INITIATED_BY}",
             "completedTime": 1729284912000,
             "createdDate": 1729153043000,
             "requestType": "PUBLIC"
@@ -1957,7 +1979,7 @@ The following request fetches a package's payload with the ID of {PACKAGE_ID}.
 
 ```shell
 curl -X GET \
-  https://platform-stage.adobe.io/data/foundation/exim/packages/payload/{PACKAGE_ID} \
+  https://platform.adobe.io/data/foundation/exim/packages/payload/{PACKAGE_ID} \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
@@ -1965,8 +1987,8 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "imsOrgId": "2E63197465A811E70A494213@AdobeOrg",
-      "packageId": "74b38d53288d4186b2977fafa622a7f4"
+      "imsOrgId": "{ORG_ID}",
+      "packageId": "{PACKAGE_ID}"
   }'
 ```
 
@@ -1982,7 +2004,7 @@ A successful response returns the package's payload.
 ```json
 
 {
-    "imsOrgId": "745F37C35E4B776E0A49421B@AdobeOrg",
-    "packageId": "575e86f794324af4ba4ce0dc3887dade"
+    "imsOrgId": "{ORG_ID}",
+    "packageId": "{PACKAGE_ID}"
 }
 ```
