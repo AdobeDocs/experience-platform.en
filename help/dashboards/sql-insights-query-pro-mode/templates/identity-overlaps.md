@@ -73,4 +73,7 @@ After analyzing identity overlaps, you can export the data for offline analysis 
 
 The **Audience Identity Overlaps** dashboard provides essential insights into how different identities intersect across your selected audiences. By leveraging these insights, you can refine identity stitching strategies, reduce redundancy, and ensure that your audience segmentation is more accurate and effective.
 
+## Next steps
+
+After reading this document, you have learned how to gain valuable insights into identity overlaps for selected audiences using the **Audience Identity Overlaps** dashboard. To further enhance your understanding of audience segmentation and identity management, explore other Data Distiller templates that provide comprehensive insights. Refer to the [Audience Trends](./trends.md), [Audience Comparison](./comparison.md), and [Advanced Audience Overlaps](./overlaps.md) UI guides to continue improving your targeting and engagement strategies.
 
