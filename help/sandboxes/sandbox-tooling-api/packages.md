@@ -1165,7 +1165,7 @@ POST /handshake/bulkCreate
 The following request initiates sharing approval between a target partner organization and the source organization.
 
 ```shell
-curl --location POST \
+curl -X POST \
   https://platform.adobe.io/data/foundation/exim/handshake/bulkCreate \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -1182,13 +1182,10 @@ curl --location POST \
   }' 
 ```
 
-<!-- TO BE UPDATED WITH DEV INFO-->
-
-<!-- | Property | Description | Type | Required |
+| Property | Description | Type | Required |
 | --- | --- | --- | --- |
-| `targetIMSOrgIds` | ?? | Array | ?? |
-| `sourceIMSDetails` | ?? | Object | ?? | -->
-
+| `targetIMSOrgIds` | A list of target organizations to send share request to. | Array | Yes |
+| `sourceIMSDetails` | Details about the source organization. | Object | Yes |
 
 **Response**
 
@@ -1235,7 +1232,7 @@ POST /handshake/action
 The following request approves a share request from a target partner organization.
 
 ```shell
-curl --location POST  \
+curl -X POST  \
   https://platform.adobe.io/data/foundation/exim/handshake/action \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -1255,14 +1252,12 @@ curl --location POST  \
   }'
 ```
 
-<!-- TO BE UPDATED WITH DEV INFO-->
-
-<!-- | Property | Description | Type | Required |
+| Property | Description | Type | Required |
 | --- | --- | --- | --- |
-| `linkingID` | ?? | String | ?? |
-| `status` | ?? | String | ?? |
-| `reason` | ?? | String | ?? |
-| `targetIMSOrgDetails` | ?? | Object | ?? | -->
+| `linkingID` | The id of the share request you're responding to. | String | Yes |
+| `status` | The action being taken on the share request. | String | Yes |
+| `reason` | The reason the action is being taken. | String | Yes |
+| `targetIMSOrgDetails` |  Details about the target organization. | Object | Yes |
 
 **Response**
 
@@ -1299,7 +1294,7 @@ List outgoing and incoming share requests by making a GET request to the `handsh
 The following request returns a list of all outgoing and incoming share requests.
 
 ```shell
-curl --location --request GET \
+curl -X GET \
   https://platform.adobe.io/data/foundation/exim/handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id:{ORG_ID}' \
@@ -1365,7 +1360,7 @@ POST /transfer
 The following request fetches a source organizations package and shares it with a target organization.
 
 ```shell
-curl --location POST \
+curl -X POST \
   https://platform.adobe.io/data/foundation/exim/transfer/ \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -1382,12 +1377,10 @@ curl --location POST \
   }'
 ```
 
-<!-- TO BE UPDATED WITH DEV INFO-->
-
-<!-- | Property | Description | Type | Required |
+| Property | Description | Type | Required |
 | --- | --- | --- | --- |
-| `packageId` | ?? | String | ?? |
-| `targets` | ?? | Array | ?? | -->
+| `packageId` | The id of the package you want to share. | String | Yes |
+| `targets` | A list of organizations to share to package with. | Array | Yes |
 
 **Response**
 
@@ -1438,7 +1431,7 @@ GET /transfer/{TRANSFER_ID}
 The following request fetches a transfer with the ID of {TRANSFER_ID}.
 
 ```shell
-curl --location GET \
+curl -X GET \
   https://platform.adobe.io/data/foundation/exim/transfer/0c843180a64c445ca1beece339abc04b \
   -H 'x-api-key: {API__KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -1500,7 +1493,7 @@ GET `/transfer/list?property=status=={STATUS}&start={START}&limit={LIMIT}&orderB
 The following request fetches a list of transfer requests from the search parameters provided.
 
 ```shell
-curl --location GET \
+curl -X GET \
   https://platform.adobe.io/data/foundation/exim/transfer/list?property=status==COMPLETED&start=0&limit=2&orderBy=-createdDate \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -1589,7 +1582,7 @@ Change a package from private to public by making a GET request to the `/transfe
 The following request changes a packages availability from private to public.
 
 ```shell
-curl --location --request GET \
+curl -X GET \
   http://platform-stage.adobe.io/data/foundation/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-type: application/json' \
@@ -1603,13 +1596,11 @@ curl --location --request GET \
   }'
 ```
 
-<!-- TO BE UPDATED WITH DEV INFO-->
-
-<!-- | Property | Description | Type | Required |
+| Property | Description | Type | Required |
 | --- | --- | --- | --- |
-| `id` | ?? | String | ?? |
-| `action` | ?? | String | ?? |
-| `packageVisbility` | ?? | String | ?? | -->
+| `id` | The id of the package to update. | String | Yes |
+| `action` | To update the visibility to public, the action value should be **UPDATE**. | String | Yes |
+| `packageVisbility` |To update the visibility, the packageVisibility value should be **PUBLIC**. | String | Yes |
 
 **Response**
 
@@ -1647,9 +1638,9 @@ A successful response returns details on a package and its visibility.
 }
 ```
 
-### Request to create a public package {#create-public-package}
+### Request to Import a public package {#pull-public-package}
 
-Create a new package with public availability by making a POST request to the `/transfer/pullRequest` endpoint.
+Import a package from a source organization with public availability by making a POST request to the `/transfer/pullRequest` endpoint.
 
 **API format**
 
@@ -1659,10 +1650,10 @@ POST /transfer/pullRequest
 
 **Request**
 
-The following request create a new package and sets its availability to public.
+The following request will import a package and sets its availability to public.
 
 ```shell
-curl --location POST \
+curl -X POST \
   https://platform-stage.adobe.io/data/foundation/exim/transfer/pullRequest \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -1676,16 +1667,14 @@ curl --location POST \
   }'
 ```
 
-<!-- TO BE UPDATED WITH DEV INFO-->
-
-<!-- | Property | Description | Type | Required |
+| Property | Description | Type | Required |
 | --- | --- | --- | --- |
-| `imsOrgId` | ?? | String | ?? |
-| `packageId` | ?? | String | ?? | -->
+| `imsOrgId` | The id from the package's source organization. | String | Yes |
+| `packageId` | The id from the package to import. | String | Yes |
 
 **Response**
 
-A succcessful response returns details on the created public package.
+A succcessful response returns details on the imported public package.
 
 ```json
 {
@@ -1720,7 +1709,7 @@ GET /transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC&or
 The following request fetches a list of packages with public availability.
 
 ```shell
-curl --location --request GET \
+curl -X GET \
   https://platform.adobe.io/data/foundation/exim/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC&orderby=-createdDate \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -1733,13 +1722,6 @@ curl --location --request GET \
       "packageId": "74b38d53288d4186b2977fafa622a7f4"
   }'
 ```
-
-<!-- TO BE UPDATED WITH DEV INFO-->
-
-<!-- | Property | Description | Type | Required |
-| --- | --- | --- | --- |
-| `imsOrgId` | ?? | String | ?? |
-| `packageId` | ?? | String | ?? | -->
 
 **Response**
 
@@ -1978,7 +1960,7 @@ GET /packages/payload/{PACKAGE_ID}
 The following request fetches a package's payload with the ID of {PACKAGE_ID}.
 
 ```shell
-curl --location --request GET \
+curl -X GET \
   https://platform-stage.adobe.io/data/foundation/exim/packages/payload/{PACKAGE_ID} \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -1992,12 +1974,10 @@ curl --location --request GET \
   }'
 ```
 
-<!-- TO BE UPDATED WITH DEV INFO-->
-
-<!-- | Property | Description | Type | Required |
+| Property | Description | Type | Required |
 | --- | --- | --- | --- |
-| `imsOrdId` | ?? | String | ?? |
-| `packageId` | ?? | String | ?? | -->
+| `imsOrdId` | The id of the organization the pacakge belongs to. | String | Yes |
+| `packageId` | The id of the package who payload you're requesting. | String | Yes |
 
 **Response**
 
