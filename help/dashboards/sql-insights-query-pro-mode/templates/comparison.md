@@ -55,3 +55,7 @@ Select **[!UICONTROL Templates]** to return to the [!UICONTROL Template] overvie
 
 ![The Advanced Audience Overlaps view with Templates highlighted.]()
 
+## Next steps
+
+After reading this document, you have learned how to compare key metrics between different audience groups using the **Audience Comparison** dashboard. To continue improving your audience segmentation and targeting strategies, explore other Data Distiller templates that provide additional insights. Refer to the [Audience Trends](./trends.md), [Audience Identity Overlaps](./identity-overlaps.md), and [Advanced Audience Overlaps](./overlaps.md) UI guides to further enhance your decision-making and optimize engagement efforts.
+
