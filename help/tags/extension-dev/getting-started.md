@@ -34,13 +34,13 @@ npx @adobe/reactor-scaffold
 The scaffold tool will prompt for some initial configuration options as follows:
 
 * Display name - The visible name of the extension
-* Platform - Whether the extension is developed for web, mobile, or edge
+* Platform - Specifies whether the extension is developed for web, mobile, or edge
 * Version - The version of the extension
 * Description - A short description of the extension's purpose
 * Author - The name of the extension's author
 
 >[!NOTE]
-> For mobile extensions, several questions will be asked regarding the structure of your Android and iOS application structure.
+> For mobile extensions, several questions will be asked regarding the structure of your Android and iOS applications.
 
 The scaffold tool will then provide options for building the extension structure:
 
