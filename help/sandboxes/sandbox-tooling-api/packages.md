@@ -1350,7 +1350,7 @@ A successful response returns a list of outgoing and incoming share requests and
 
 Use the `/transfer` endpoint in the sandbox tooling API to fetch and create new package sharing requests. 
 
-### New transfer request {#transfer-request}
+### New share request {#share-request}
 
 Fetch a published source organization's package and share it with a target organization by making a POST request to the `/transfer` endpoint while providing the package ID and target organization's ID.
 
@@ -1392,6 +1392,7 @@ curl --location POST \
 **Response**
 
 A successful response returns details of the package requested and its share status.
+
 ```json
 [
     {
@@ -1418,7 +1419,7 @@ A successful response returns details of the package requested and its share sta
 ]
 ```
 
-### Fetch a transfer request by ID {#fetch-transfer-by-id}
+### Fetch a share request by ID {#fetch-transfer-by-id}
 
 Fetch the details of a share request by making a GET request to the `/transfer/{TRANSFER_ID}` endpoint while providing the transfer ID.
 
@@ -1477,7 +1478,7 @@ A success response returns details of a share request.
 }
 ```
 
-### Fetch transfers list {#transfers-list}
+### Fetch share list {#transfers-list}
 
 Fetch a list of transfer requests by making a GET request to the `/transfer/list?property=status=={STATUS}&start={START}&limit={LIMIT}&orderBy=-createdDate` endpoint, changing the search parameters as needed.
 
