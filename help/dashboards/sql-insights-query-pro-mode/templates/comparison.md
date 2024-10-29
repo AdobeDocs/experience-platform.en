@@ -34,6 +34,8 @@ The dashboard now shows the comparative charts displayed side by side for each a
 
 ## Available audience comparison charts {#available-charts}
 
+<!-- Potentially could expand this section to include images of each widget.  -->
+
 The dashboard provides several charts to compare insights:
 
 - [[!UICONTROL Audience size]](../../guides/audiences.md#audience-size): Easily track the size of each audience based on the number of profiles that they contain. This metric helps you to understand the scale of the two audiences you're comparing.

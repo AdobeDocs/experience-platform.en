@@ -52,4 +52,6 @@ After analyzing the metrics and applying relevant filters, you can export the da
 
 ![The Audience Trends dashboard with Export highlighted.]()
 
+## Next steps
+
 After reading this document, you have learned how to gain valuable insights into audience behavior over time from the **Audience Trends** dashboard. To learn about other Data Distiller templates that can help you to make informed decisions, optimize segmentation, and improve engagement strategies, refer to the [Audience Comparison](./comparison.md), [Audience Identity Overlaps](./identity-overlaps.md), and [Advanced Audience Overlaps](./overlaps.md) UI guides.
