@@ -90,7 +90,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Name of your source partner]**: Your customer/company name. Only supported Magnite Streaming clients are available for selection.
+*  **[!UICONTROL Your company name]**: Your customer/company name. Only supported Magnite Streaming clients are available for selection.
 
 >[!NOTE]
 >
