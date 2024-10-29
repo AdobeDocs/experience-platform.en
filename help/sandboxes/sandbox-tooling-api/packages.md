@@ -1717,10 +1717,6 @@ curl -X GET \
   -H 'Accept: application/json' \
   -H 'Authorization: {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
-  -d '{
-      "imsOrgId": "2E63197465A811E70A494213@AdobeOrg",
-      "packageId": "74b38d53288d4186b2977fafa622a7f4"
-  }'
 ```
 
 **Response**
