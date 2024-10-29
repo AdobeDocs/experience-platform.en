@@ -1,6 +1,6 @@
 ---
-title: Datastream configuration overrides
-description: Learn how to configure datastream overrides via the Web SDK.
+title: Dynamic datastream configurations
+description: Learn how to create dynamic datastream configurations via the Web SDK.
 exl-id: 8e327892-9520-43f5-abf4-d65a5ca34e6d
 ---
 
@@ -23,15 +23,6 @@ Datastream configuration override is a two-step process:
     * Through the Mobile SDK `sendEvent` command.
 
 If you set overrides both in the Web SDK configuration and in a specific command (such as [`sendEvent`](sendevent/overview.md)), the overrides in the specific command take priority.
-
-## Object properties
-
-The following properties are available within this object:
-
-* **Datastream override**: Send calls to a different datastream. If you set this value, other overrides that require datastream configuration must be configured in the datastream set here.
-* **Third-party ID sync container**: The ID for the destination third-party ID sync container in Adobe Audience Manager. Configuring a third-party ID container override in the datastream's settings is required before using this field.
-* **Target property token**: The token for the destination property in Adobe Target. Configuring a Target property token override in the datastream's settings is required before using this field.
-* **Report suites**: The report suite IDs to override in Adobe Analytics. Configuring report suite overrides in the datastream's settings is required before using this field.
 
 ## Send datastream overrides to the Edge Network through the Web SDK tag extension {#tag-extension}
 
@@ -158,7 +149,7 @@ The example below shows what a configuration override could look like on a `conf
 ```js
 alloy("configure", {
   orgId: "97D1F3F459CE0AD80A495CBE@AdobeOrg",
-  edgeConfigId: "db9c70a1-6f11-4563-b0e9-b5964ab3a858",
+  datastreamId: "db9c70a1-6f11-4563-b0e9-b5964ab3a858",
   edgeConfigOverrides: {
     com_adobe_experience_platform: {
       enabled: false,
@@ -205,7 +196,6 @@ alloy("configure", {
 |Parameter|Description|
 |---|---|
 |`orgId`| The IMS Org ID corresponding to your Adobe account.|
-| `edgeConfigId` | The ID of the datastream that you want to route data through. |
 |`edgeConfigOverrides.datastreamId`| Use this parameter to allow a single request to go to a different datastream than the one defined by the `configure` command. |
 | `edgeConfigOverrides.com_adobe_experience_platform` | Defines the dynamic datastream configuration for the Experience Platform service.|
 | `edgeConfigOverrides.com_adobe_experience_platform.enabled`| Defines whether the event will be sent to the Experience Platform service or not. |
