@@ -1,7 +1,6 @@
 ---
 title: Adobe Experience Platform Release Notes October 2024
 description: The October 2024 release notes for Adobe Experience Platform.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 ---
 # Adobe Experience Platform release notes 
 
@@ -34,7 +33,7 @@ Experience Platform provides multiple dashboards through which you can view impo
 
 For more information on dashboards, including how to grant access permissions and create custom widgets, begin by reading the [dashboards overview](../../dashboards/home.md).
 
-## Data collection {#data-collection}
+## Data collection {#collection}
 
 Adobe Experience Platform provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
 
