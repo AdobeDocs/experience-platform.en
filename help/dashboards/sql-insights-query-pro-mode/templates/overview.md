@@ -6,7 +6,7 @@ description: Learn how to ensure consistency and efficiency with Data Distiller 
 
 >[!AVAILABILITY]
 >
->Data Distiller Templates are exclusive to users who have purchased the [Data Distiller SKU](../data-distiller/overview.md). Contact your Adobe representative for more information.
+>Data Distiller Templates are exclusive to users who have purchased the Data Distiller SKU. Contact your Adobe representative for more information.
 
 **[!UICONTROL Data Distiller Templates]** provide a set of powerful dashboards designed to help you gain insights into your audience data. To help you make data-driven decisions and improve targeting strategies, each template offers a structured guide for analyzing specific aspects of audience behavior, segmentation, and identity management.
 
