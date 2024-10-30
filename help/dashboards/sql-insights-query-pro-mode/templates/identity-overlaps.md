@@ -2,16 +2,15 @@
 title: Audience Identity Overlaps
 description: Learn how to analyze audience identity overlaps using the Audience Identity Overlaps dashboard. Filter audiences, specify merge policies, and examine identity relationships to make data-driven decisions.
 ---
-
 # Audience identity overlaps
 
 Analyze identity overlaps for selected audiences with the [!UICONTROL Audience Identity Overlaps] dashboard. You can use insights into how different identities within an audience relate to each other to optimize stitching strategies, reduce redundancy, and improve customer segmentation accuracy. Develop effective targeting strategies and streamline customer interactions with an improved understanding of the overlap between identity types.
 
 ## Filtering audiences {#filter-audiences}
 
-Use custom filters for targeted analysis of specific audiences and identity types to ensure that the presented data aligns with your analysis goals. To start your analysis, select the filter icon (![The filter icon.]()). 
+Use custom filters for targeted analysis of specific audiences and identity types to ensure that the presented data aligns with your analysis goals. To start your analysis, select the filter icon (![The filter icon.](../../../images/icons/filter-icon-white.png)). 
 
-![The Audience Identity Overlaps dashboard with the filter icon highlighted.]()
+![The Audience Identity Overlaps dashboard with the filter icon highlighted.](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-filter-icon.png)
 
 The **[!UICONTROL Filters]** dialog appears. From this view, choose the global filters to configure your audience, merge policy, and the identities for comparison. Select your settings for analysis from each section's dropdown menu
 
@@ -20,13 +19,15 @@ The **[!UICONTROL Filters]** dialog appears. From this view, choose the global f
 3. Select an **[!UICONTROL Identity A]** and **[!UICONTROL  Identity B]** for comparison**: Choose the two identity types to compare. In the example, **Identity A** is selected as "crmId" and **Identity B** is selected as "email."
 4. **Set a date range**: Choose a predefined range like "Today" or manually set the start and end dates using the calendar fields.
 
-![The Filters dialog on the Audience Identity Overlaps dashboard.]()
+![The Filters dialog on the Audience Identity Overlaps dashboard.](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-filters-dialog.png)
 
 >[!TIP]
 >
 >To clear all of your custom global filters, select **[!UICONTROL Clear all]** from the [!UICONTROL Filters] dialog. To remove a single filter, select the '[!UICONTROL X]'to the right of the filter name.
 
 Once you have chosen the filters, select **[!UICONTROL Apply]** to refresh the dashboard.
+
+![The Filters dialog on the Audience Identity Overlaps dashboard with Apply highlighted.](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-apply-filters.png)
 
 ## Available dashboard insights {#available-insights}
 
@@ -43,7 +44,7 @@ The **[!UICONTROL Audience Identity Overlaps]** table displays identity overlaps
 | **[!UICONTROL Overlap Count]**     | The count of profiles where both identities are present. This metric provides insights into the extent of identity overlap within the audience. This information is crucial for evaluating how effectively multiple identities are being resolved into unified profiles, which in turn can improve targeting and personalization strategies. |
 | **[!UICONTROL Identity A Count]**  | The total number of profiles in the selected audience that contain **Identity A**. Use this information to understand the prevalence of the primary identity type within the audience and assess its role in the overlap analysis. |
 
-![The Audience Identity Overlaps table on the dashboard.]()
+![The Audience Identity Overlaps table on the Audience identity overlaps dashboard.](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-chart.png)
 
 ### Identity Breakdown {#identity-breakdown}
 
@@ -53,7 +54,7 @@ The **[!UICONTROL Identity Breakdown]** chart shows the relative composition of 
 >
 >Hover over the columns to see the individual count of profiles for each identity type.
 
-![The Identity Breakdown chart.]()
+![The Identity Breakdown chart.](../../images/sql-insights-query-pro-mode/templates/identity-breakdown-chart.png)
 
 ### Audience Identity Trends {#audience-identity-trends}
 
@@ -63,17 +64,17 @@ The **[!UICONTROL Audience Identity Trends]** chart provides insights into how t
 >
 >Hover over a date in the chart to see the total number of identities for the audience on a specific date.
 
-![The Audience Identity Trends chart.]()
+![The Audience Identity Trends chart.](../../images/sql-insights-query-pro-mode/templates/audience-identity-trends-chart.png)
 
 ## Export Insights {#export-insights}
 
 After analyzing identity overlaps, you can export the data for offline analysis or reporting. To export your data, select **[!UICONTROL Export]** on the top right of the table. The print PDF dialog appears, allowing you to save the visualized data as a PDF or print it.
 
-![The Audience Identity Overlaps dashboard with Export highlighted.]()
+![The Audience Identity Overlaps dashboard with Export highlighted.](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-export.png)
 
 The **Audience Identity Overlaps** dashboard provides essential insights into how different identities intersect across your selected audiences. By leveraging these insights, you can refine identity stitching strategies, reduce redundancy, and ensure that your audience segmentation is more accurate and effective.
 
 ## Next steps
 
-After reading this document, you have learned how to gain valuable insights into identity overlaps for selected audiences using the **Audience Identity Overlaps** dashboard. To further enhance your understanding of audience segmentation and identity management, explore other Data Distiller templates that provide comprehensive insights. Refer to the [Audience Trends](./trends.md), [Audience Comparison](./comparison.md), and [Advanced Audience Overlaps](./overlaps.md) UI guides to continue improving your targeting and engagement strategies.
+After reading this document, you have learned how to gain valuable insights into identity overlaps for selected audiences using the **Audience Identity Overlaps** dashboard. To further enhance your understanding of audience segmentation and identity management, explore other Data Distiller Templates that provide comprehensive insights. Refer to the [Audience Trends](./trends.md), [Audience Comparison](./comparison.md), and [Advanced Audience Overlaps](./overlaps.md) UI guides to continue improving your targeting and engagement strategies.
 

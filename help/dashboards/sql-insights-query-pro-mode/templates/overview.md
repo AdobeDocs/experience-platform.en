@@ -1,6 +1,6 @@
 ---
 title: Data Distiller Templates
-description: Learn how to ensure consistency and efficiency with Data Distiller templates that provide a structured guide for common tasks in the Adobe Experience Platform user interface.
+description: Learn how to ensure consistency and efficiency with Data Distiller Templates that provide a structured guide for common tasks in the Adobe Experience Platform user interface.
 ---
 # Data Distiller Templates
 
@@ -14,7 +14,7 @@ These templates ensure consistency and efficiency in your analysis workflows by 
 
 To get started, select the **[!UICONTROL Templates]** tab in the [!UICONTROL Dashboards] Service workspace and choose a template card from the available list.
 
-![The Dashboard Services workspace with the Templates tab highlighted.]()
+![The Dashboard Services workspace with the Templates tab highlighted.](../../images/sql-insights-query-pro-mode/templates/templates.png)
 
 ## Available templates {#available-templates}
 
@@ -26,7 +26,7 @@ Use the [!UICONTROL Advanced Audience Overlaps] dashboard to quickly analyze aud
 
 ### Audience Comparison {#audience-comparison}
 
-The [!UICONTROL Audience Comparison] dashboard allows you to compare key metrics between two audience groups side by side. Use this dashboard to analyze important KPIs, such as audience size, identity breakdown, and changes in audience size over time. These insights help you make informed decisions about audience segmentation and improve targeting strategies.
+The [!UICONTROL Audience Comparison] dashboard allows you to compare key metrics between two audience groups side-by-side. Use this dashboard to analyze important KPIs, such as audience size, identity breakdown, and changes in audience size over time. These insights help you make informed decisions about audience segmentation and improve targeting strategies.
 
 ### Audience Trends {#audience-trends}
 
