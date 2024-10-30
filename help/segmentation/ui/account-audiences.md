@@ -61,6 +61,10 @@ Under the [!UICONTROL Audiences] tab, you can add previously created people-base
 
 For more information on using the Segment Builder, please read the [Segment Builder UI guide](./segment-builder.md).
 
+### Establish relationships {#relationships}
+
+By default for account audiences, the Segment Builder UI displays the direct relationship between an account and a person. However, other relationship types are available for account audiences.
+
 ## Activate audience {#activate}
 
 >[!NOTE]
