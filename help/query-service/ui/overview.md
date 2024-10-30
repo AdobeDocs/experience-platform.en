@@ -9,6 +9,48 @@ exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
 
 The Adobe Experience Platform [!DNL Query Service] provides a user interface that can be used to write and execute queries, view previously executed queries, and access queries saved by users within your organization. To access the UI within [Adobe Experience Platform](https://platform.adobe.com), select **[!UICONTROL Queries]** in the left navigation.
 
+## Overview
+
+<!-- new content here -->
+
+SQL [!UICONTROL Create query] navigates to the Query editor
+[!UICONTROL Write queries] - navigates to the Query Service UI guide (this document)
+[!UICONTROL Discover Data Distiller] - navigates to the Data Distiller overview (doccumentation)
+
+### Data Distiller capabilities
+
+[!UICONTROL Data exploration] - navigates to a data explortation document that explains how to verify and validate records in ingested batches with SQL.
+[!UICONTROL Derived datasets for Experience Platform applications] - navigates to a documentation overview of derived datasets.
+[!UICONTROL AI/ML pipelines] - navigates to a documentation overview of  AI/ML feature pipelines
+[!UICONTROL SQL insights] - navigates to a documentation overview outlining the use cases, essential capabilities, and necessary steps to develop an SQL insights dashboard with Data Distiller. 
+
+### Recommended Data Distiller accelerators
+
+These all link to Platform UI dashboards.
+
+[!UICONTROL Advanced audience overlaps] - Links to the Data Distiller Advanced Audience Overlaps template dashboard.
+[!UICONTROL Audience comparison] - Links to the Data Distiller Audience Comparison template dashboard.
+[!UICONTROL Audience trends] - Links to the Data Distiller Audience trends template dashboard.
+[!UICONTROL Audience identity overlaps] - Links to the Data Distiller Audience identity overlaps template dashboard.
+
+### Data Distiller examples
+
+These all link to Adobe Experience League documentation.
+
+[!UICONTROL Decile-based derived datasets] - Links to a guide on how to create decile-based derived datasets for use with your Real-Time Customer Profile data
+[!UICONTROL Customer lifetime value] - Links to a guide on how you can use Real-Time Customer Data Platform to track and visualize the customer lifetime value (CLV) metric. 
+[!UICONTROL Propensity score] - Links to a guide on how to use Query Service to send data to your machine learning platform to train a model that can be applied to data using SQL to predict a customer's propensity to purchase for each visit.
+[!UICONTROL Consent analysis] - Links to a guide on how to build a consent dashboard for various marketing use cases for Real-Time CDP data.
+[!UICONTROL Fuzzy match] - Links to a guide on how to perform a 'fuzzy' match on your Adobe Experience Platform data to match strings by their degree of similarity from large separate data sources. 
+
+### Key metrics
+
+There are visulaizations of key metrics in several charts.
+
+[!UICONTROL Distiller batch queries]: Description needed
+[!UICONTROL Compute hours consumed]: Description needed
+[!UICONTROL Data exploratory queries]: Description needed
+
 ## [!DNL Query Editor]
 
 The [!DNL Query Editor] enables you to write and execute queries without using an external client. Select **[!UICONTROL Create Query]** to open the [!DNL Query Editor] and create a new query. You can also access the [!DNL Query Editor] by selecting a query from the **[!UICONTROL Log]** or **[!UICONTROL Templates]** tabs. Selecting a previously executed or saved query will open the [!DNL Query Editor] and display the SQL for the selected query.
@@ -28,6 +70,8 @@ To learn how to schedule a query through the UI, see the [scheduled queries guid
 Once a query has been scheduled it appears in the list of scheduled queries on the [!UICONTROL Scheduled Queries] tab. Full details regarding the query, runs, creator, and timings can be found by selecting a scheduled query from the list.
 
 ![The Queries workspace with the Scheduled Queries tab highlighted and displaying rows of query schedules.](../images/ui/overview/scheduled-queries.png)
+
+<!--  -->
 
 | Column | Description |
 | --- | --- |
