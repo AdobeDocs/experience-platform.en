@@ -9,12 +9,12 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 
 Updates to existing features and documentation in Adobe Experience Platform:
 
-- [Dashboards {#dashboards}](#dashboards-dashboards)<!-- omit in toc -->
-- [Data collection {#collection}](#data-collection-collection)
-- [Destinations {#destinations}](#destinations-destinations)
-- [Segmentation Service {#segmentation-service}](#segmentation-service-segmentation-service)
-- [Sandboxes {#sandboxes}](#sandboxes-sandboxes)
-- [Sources {#sources}](#sources-sources)
+- [Dashboards](#dashboards)
+- [Data collection](#data-collection-)
+- [Destinations](#destinations)
+- [Segmentation Service](#segmentation-service)
+- [Sandboxes](#sandboxes)
+- [Sources](#sources)
 
 ## Dashboards {#dashboards}
 
@@ -34,7 +34,7 @@ Experience Platform provides multiple dashboards through which you can view impo
 
 For more information on dashboards, including how to grant access permissions and create custom widgets, begin by reading the [dashboards overview](../../dashboards/home.md).
 
-## Data collection {#collection}
+## Data collection {#data-collection}
 
 Adobe Experience Platform provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
 

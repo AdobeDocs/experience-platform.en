@@ -8,12 +8,12 @@ description: The October 2024 release notes for Adobe Experience Platform.
 
 Updates to existing features and documentation in Adobe Experience Platform:
 
-- [Dashboards {#dashboards}](#dashboards-dashboards)<!-- omit in toc -->
-- [Data collection {#collection}](#data-collection-collection)
-- [Destinations {#destinations}](#destinations-destinations)
-- [Segmentation Service {#segmentation-service}](#segmentation-service-segmentation-service)
-- [Sandboxes {#sandboxes}](#sandboxes-sandboxes)
-- [Sources {#sources}](#sources-sources)
+- [Dashboards](#dashboards)
+- [Data collection](#data-collection-)
+- [Destinations](#destinations)
+- [Segmentation Service](#segmentation-service)
+- [Sandboxes](#sandboxes)
+- [Sources](#sources)
 
 ## Dashboards {#dashboards}
 
