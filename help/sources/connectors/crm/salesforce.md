@@ -110,15 +110,35 @@ First, use the following to create certificate/key pair of PEM files.
 openssl req -newkey rsa:4096 -new -nodes -x509 -days 3650 -keyout key.pem -out cert.pem  
 ```
 
-- Log in to your [!DNL Salesforce] account, select the settings icon (![The settings icon.](/help/images/icons/settings.png)) and then select **[!DNL Setup]**.
-- Navigate to [!DNL App Manager] and then select [!DNL New Connection App].
-- Provide a name for your app. During this step, you can allow for the rest of the fields to be auto-populated. You must also ensure to enable the box for [!DNL Enable OAuth Settings].
-- Next, you must set a callback URL. Since this will not be used for JWT, you can use `https://localhost`.
-- Ensure that you also enable the box for [!DNL Use Digital Signatures].
-- Upload the cert.pem file that was created in the first step.
-- Add the following permissions:
-  - Manage user data via APIs (api)
-  - Access custom permissions (custom_permissions)
-  - Access the identity URL service (id, profile, email, address, phone)
-  - Access unique identifiers (openid)
-  - Perform requests at any time (refresh_token, offline_access)
+1. In the [!DNL Salesforce] dashboard, select settings (![The settings icon.](/help/images/icons/settings.png)) and then select **[!DNL Setup]**.
+2. Navigate to [!DNL App Manager] and then select **[!DNL New Connection App]**.
+3. Provide a name for  your app and allow for the rest of the fields to be populated.
+4. Enable the box for [!DNL Enable OAuth Settings].
+5. Set a callback URL. Since this will not be used for JWT, you can use `https://localhost`.
+6. Enable the box for [!DNL Use Digital Signatures].
+7. Upload the cert.perm file that was created earlier.
+
+#### Add required permissions
+
+Add the following permissions:
+
+1. Manage user data via APIs (api)
+2. Access custom permissions (custom_permissions)
+3. Access the identity URL service (id, profile, email, address, phone)
+4. Access unique identifiers (openid)
+5. Perform requests at any time (refresh_token, offline_access)
+
+Once your permissions are added, ensure that you enable the box for **[!DNL Issue JSON Web Token (JWT)-based access tokens for named user]**.
+
+Next, select **[!DNL Save]**, **[!DNL Continue]**, and then **[!DNL Manage Customer Details]**. Use the consumer details panel to retrieve the following:
+
+- **Consumer key**: You will later use this consumer key as your client ID, when authenticating your [!DNL Salesforce] account to Experience Platform.
+- **Consumer secret**: You will later use this consumer secret as your client ID, when authenticating your [!DNL Salesforce] account to Experience Platform.
+
+### Authorize your [!DNL Salesforce] suer to the Connected App
+
+Follow the steps below to authorize a [!DNL Salesforce] user:
+
+1. Navigate to **[!DNL Manage Connected Apps]**.
+2. Select **[!DNL Edit]**.
+3. 
