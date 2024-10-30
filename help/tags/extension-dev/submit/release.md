@@ -35,7 +35,7 @@ npx @adobe/reactor-releaser
 > can be used by running `npx @adobe/reactor-releaser@v3.1.3` until deprecation on January 1, 2025. The parameters required
 > to run the `jwt-auth` version can be found [here](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5).
 
-The releaser requires you to input only a few pieces of information. The clientId and clientSecret can be retrieved from the Adobe I/O console. Navigate to the [Integrations page](https://console.adobe.io/integrations) in the I/O console. Select the correct Org from the dropdown, find the right integration, and select **[!UICONTROL View]**.
+The releaser requires you to input only a few pieces of information. The `clientId` and `clientSecret` can be retrieved from the Adobe I/O console. Navigate to the [Integrations page](https://console.adobe.io/integrations) in the I/O console. Select the correct Org from the dropdown, find the right integration, and select **[!UICONTROL View]**.
 
 - What is your `clientId`? Copy and paste this from the I/O Console.
 - What is your `clientSecret`? Copy and paste this from the I/O Console.

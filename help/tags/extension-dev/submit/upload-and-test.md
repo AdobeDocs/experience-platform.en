@@ -60,7 +60,7 @@ npx @adobe/reactor-uploader
 > can be used by running `npx @adobe/reactor-uploader@v5.2.0` until deprecation on January 1, 2025. The parameters required
 > to run the `jwt-auth` version can be found [here](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
 
-The uploader requires you to input only a few pieces of information. The clientId and clientSecret can be retrieved from the Adobe I/O console. Navigate to the [Integrations page](https://console.adobe.io/integrations) in the I/O console. Select the correct Org from the dropdown, find the right integration, and select **[!UICONTROL View]**.
+The uploader requires you to input only a few pieces of information. The `clientId` and `clientSecret` can be retrieved from the Adobe I/O console. Navigate to the [Integrations page](https://console.adobe.io/integrations) in the I/O console. Select the correct Org from the dropdown, find the right integration, and select **[!UICONTROL View]**.
 
 - What is your `clientId`? Copy and paste this from the I/O Console.
 - What is your `clientSecret`? Copy and paste this from the I/O Console.
