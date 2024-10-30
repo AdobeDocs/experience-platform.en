@@ -52,7 +52,7 @@ For example, this can return if the user’s browser is Chrome, if they're using
 * [Data element types](./web/data-element-types.md): A data element type retrieves a piece of data. This data could be in local storage, in a cookie, in a DOM element, or in a custom location.
 * [Shared modules](./web/shared.md) (web only): A shared module is a mechanism by which extensions may communicate with other extensions.
 * [Views](./web/views.md): Each event, condition, action, or data element type may provide a view allowing a user to supply settings.
-* Exchange URL (web and edge only): When an extension will be published to Adobe's public catalog, provide the listing URL here.
+* Exchange URL (web and edge only): When an extension is published to Adobe's public catalog, provide the listing URL here.
 * Icon Path: A path to an icon file for the extension.
 
 >[!NOTE]
