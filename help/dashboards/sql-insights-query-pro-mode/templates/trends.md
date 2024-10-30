@@ -47,7 +47,7 @@ The **[!UICONTROL Single identity audience size trends]** chart shows the count 
 
 ## Export Insights {#export-insights}
 
-After analyzing the metrics and applying relevant filters, you can export the data for further offline analysis or reporting purposes. To do this, select **[!UICONTROL Export]** on the top right of the table. The print PDF dialog appears. Frm that dialog you can save the visualized data as a PDF or print it.
+After analyzing the metrics and applying relevant filters, you can export the data for further offline analysis or reporting purposes. To do this, select **[!UICONTROL Export]** on the top right of the table. The print PDF dialog appears. From that dialog you can save the visualized data as a PDF or print it.
 
 ![The Audience Trends dashboard with Export highlighted.](../../images/sql-insights-query-pro-mode/templates/audience-trends-export.png)
 
