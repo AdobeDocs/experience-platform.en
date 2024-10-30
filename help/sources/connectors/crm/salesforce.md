@@ -104,7 +104,7 @@ To connect your [!DNL Salesforce] account to Experience Platform in an AWS regio
 
 ### Create a [!DNL Salesforce Connected App]
 
-First, use the following to create certificate/key pair of PEM files.
+First, use the following to create certificate/key-pair of PEM files.
 
 ```shell
 openssl req -newkey rsa:4096 -new -nodes -x509 -days 3650 -keyout key.pem -out cert.pem  
@@ -141,4 +141,112 @@ Follow the steps below to authorize a [!DNL Salesforce] user:
 
 1. Navigate to **[!DNL Manage Connected Apps]**.
 2. Select **[!DNL Edit]**.
-3. 
+3. Configure **[!DNL Permitted Users]** as **[!DNL Admin approved users are pre-authorized]** and then select **[!DNL Save]**.
+4. Navigate to **[!DNL Settings] > [!DNL Manage Users] > [!DNL Profiles]**.
+5. Edit the profile associated with your user.
+6. Navigate to **[!DNL Connected App Access]** and then select the app you created in an earlier step.
+
+### Generate JWT bearer token
+
+#### Convert key-pair into pkcs12
+
+To generate your JWT bearer token, you must first use the following command to convert your certificate/key-pair into pkcs12 format. During this step, you must also **set an export password** when prompted.
+
+```shell
+openssl pkcs12 -export -in cert.pem -inkey key.pem -name jwtcert >jwtcert.p12
+```
+
+#### Create java keystore based on pkcs12
+
+Next, use the following command to create a java keystore based on the pkcs12 that you just generated. During this step, you must also a **set a destination keystore password** when prompted. Additionally, you must provide the previous export password as your source keystore password.
+
+```shell
+keytool -importkeystore -srckeystore jwtcert.p12 -destkeystore keystore.jks -srcstoretype pkcs12 -alias jwtcert
+```
+
+#### Confirm that your keystroke.jks includes a jwtcert alias
+
+Next, use the follow command to confirm that your keystroke.jks includes a jwtcert alias. During this step, you will be prompted to provide the destination keystore password that was generated in the previous step.
+
+```shell
+keytool -keystore keystore.jks -list
+```
+
+#### Generate signed token
+
+Finally, use the java class JWTExample below to generate your signed token. 
+
+```java
+package org.example;
+ 
+import org.apache.commons.codec.binary.Base64;
+ 
+import java.io.*;
+import java.security.*;
+import java.text.MessageFormat;
+ 
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        String header = "{\"alg\":\"RS256\"}";
+        String claimTemplate = "'{'\"iss\": \"{0}\", \"sub\": \"{1}\", \"aud\": \"{2}\", \"exp\": \"{3}\"'}'";
+ 
+        try {
+            StringBuffer token = new StringBuffer();
+ 
+            //Encode the JWT Header and add it to our string to sign
+            token.append(Base64.encodeBase64URLSafeString(header.getBytes("UTF-8")));
+ 
+            //Separate with a period
+            token.append(".");
+ 
+            //Create the JWT Claims Object
+            String[] claimArray = new String[5];
+            claimArray[0] = "{CLIENT_ID}";
+            claimArray[1] = "{AUTHORIZED_SALESFORCE_USERNAME}";
+            claimArray[2] = "{SALESFORCE_LOGIN_URL}";
+            claimArray[3] = Long.toString((System.currentTimeMillis() / 1000) + 2629746*4);
+            MessageFormat claims;
+            claims = new MessageFormat(claimTemplate);
+            String payload = claims.format(claimArray);
+ 
+            //Add the encoded claims object
+            token.append(Base64.encodeBase64URLSafeString(payload.getBytes("UTF-8")));
+ 
+            //Load the private key from a keystore
+            KeyStore keystore = KeyStore.getInstance("JKS");
+            keystore.load(new FileInputStream("path/to/keystore"), "keystorepassword".toCharArray());
+            PrivateKey privateKey = (PrivateKey) keystore.getKey("jwtcert", "privatekeypassword".toCharArray());
+ 
+            //Sign the JWT Header + "." + JWT Claims Object
+            Signature signature = Signature.getInstance("SHA256withRSA");
+            signature.initSign(privateKey);
+            signature.update(token.toString().getBytes("UTF-8"));
+            String signedPayload = Base64.encodeBase64URLSafeString(signature.sign());
+ 
+            //Separate with a period
+            token.append(".");
+ 
+            //Add the encoded signature
+            token.append(signedPayload);
+ 
+            System.out.println(token.toString());
+ 
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+
+| Property | Configurations |
+| --- | --- |
+| `claimArray[0]` | Update `claimArray[0]` with your client ID. |
+| `claimArray[1]` | Update `claimArray[1]` with the [!DNL Salesforce] username that is authorized against the app. |
+| `claimArray[2]` | Update `claimArray[2]` with your [!DNL Salesforce] login URL. |
+| `claimArray[3]` | Update `claimArray[3]` with an expiration date formatted in milliseconds since epoch time. For example `3660624000000` is 12-31-2085. |
+| `/path/to/keystore` | Replace `/path/to/keystore` with the correct path to your keystore.jks |
+| `keystorepassword` |  Replace `keystorepassword` with your destination keystore password. | 
+| `privatekeypassword` | Replace `privatekeypassword` with your source keystore password. |
