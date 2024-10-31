@@ -187,7 +187,7 @@ onBeforeLog(data) {
 | `data.instanceName` | String | The name of the global variable where the Web SDK instance is stored. |
 | `data.componentName` | String | The name of the component that generated the log message. |
 | `data.level` | String | The logging level. Supported levels: `log`, `info`, `warn`, `error`. |
-| `data.arguments` | | The arguments of the log message. |
+| `data.arguments` | String array | The arguments of the log message. |
 
 
 ## `onContentRendering` {#onContentRendering}
