@@ -16,7 +16,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 - [Datastream overrides](../datastreams/overrides.md) are now supported when starting media sessions.
 
-- Added support for Adobe Target response tokens in the rendering succeeded monitoring hook.
+- Added support for Adobe Target response tokens in the [`onContentRendering`](monitoring-hooks.md#onContentRendering)monitoring hook.
 
 **Fixes and improvements**
 
