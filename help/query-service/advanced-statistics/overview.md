@@ -25,6 +25,6 @@ Data Distiller equips you with the tools necessary to transform raw data into me
 
 ### Next Steps
 
-To learn how to perform sophisticated machine learning tasks with Data Distiller capabilities, read the [Feature Engineering](./feature-engineering.md) document. It outlines how to transform your data into features that are ready for modeling. Next, proceed to the [Models](./models.md)** document, which guides you through the process of creating, training, and managing machine learning models using the features you've engineered. Finally, explore the [Algorithms](./algorithms.md) document to understand the various machine learning methods available and how to implement them within your SQL workflows.
+To learn how to perform sophisticated machine learning tasks with Data Distiller capabilities, read the [Feature Engineering](./feature-engineering.md) document. It outlines how to transform your data into features that are ready for modeling. Next, proceed to the [Models](./models.md) document, which guides you through the process of creating, training, and managing trusted models using the features you've engineered. Finally, explore the [Implement advanced statistical models document](./implement-models/implement-models.md) to learn about the various trusted models available and how to implement them within your SQL workflows.
 
 

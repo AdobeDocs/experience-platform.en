@@ -145,4 +145,4 @@ DROP MODEL IF EXISTS modelName modelVersion ;
 
 ## Next steps
 
-After reading this document, you now understand the base SQL syntax required to create, train, and manage machine learning models using Data Distiller. Next, explore the [Algorithms](./algorithms.md) document to learn about the various machine learning methods available and how to implement them effectively within your SQL workflows. If you haven't already, make sure to review the [Feature Engineering](./feature-engineering.md) document to ensure your data is optimally prepared for model training.
+After reading this document, you now understand the base SQL syntax required to create, train, and manage trusted models using Data Distiller. Next, explore the [Implement advanced statistical models document](./implement-models/implement-models.md) to learn about the various trusted models available and how to implement them effectively within your SQL workflows. If you haven't already, make sure to review the [Feature Engineering](./feature-engineering.md) document to ensure your data is optimally prepared for model training.

@@ -7,9 +7,9 @@ hidefromtoc: yes
 ---
 # Feature transformation techniques
 
-Transformations are crucial preprocessing steps that convert or scale data into a format suitable for model training and analysis to ensure optimal performance and accuracy.
+Transformations are crucial preprocessing steps that convert or scale data into a format suitable for model training and analysis, ensuring optimal performance and accuracy. This document serves as a supplementary syntax resource, providing in-depth details on key feature transformation techniques for data preprocessing.
 
-Machine learning models cannot process string values or null values directly. Therefore, you must impute missing values, such as replacing empty cells in numeric columns with the mean or median. Similarly, convert string data into numeric formats through processes like encoding or vectorization, which allow the model to interpret and learn from textual data effectively. This section explains common techniques such as one-hot encoding and feature scaling, and their role in improving algorithm performance.
+Machine learning models cannot directly process string values or null values, making data preprocessing essential. This guide explains how to use various transformations to impute missing values, convert categorical data into numerical formats, and apply feature scaling techniques such as one-hot encoding and vectorization. These methods enable models to interpret and learn effectively from the data, ultimately enhancing their performance.
 
 ## Automatic feature transformation {#automatic-transformations}
 
