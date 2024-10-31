@@ -11,8 +11,8 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 
 **New features**
 
-- Datastream configuration overrides now includes settings to disable solutions and Adobe Experience Platform products.
-- Datastream configuration overrides can now be set when creating a media session.
+- [Datastream overrides](../web-sdk/web-sdk-extension-configuration.md#datastream-overrides) now includes settings to disable Experience Cloud solutions and Adobe Experience Platform services.
+- You can now create [datastream overrides](../web-sdk/web-sdk-extension-configuration.md) for media sessions.
 
 Contains version 2.24.0 of the Adobe Experience Platform Web SDK.
 

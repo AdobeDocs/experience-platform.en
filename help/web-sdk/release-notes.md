@@ -14,16 +14,20 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 **New features**
 
-- Edge config overrides are now supported when starting a media session.
-- When multiple in-app messages are returned only the one with the highest priority is shown. The others are recorded as suppressed.
-- Adobe Target response tokens are now returned in the rendering succeeded monitoring hook.
+- [Datastream overrides](../datastreams/overrides.md) are now supported when starting media sessions.
+
+- Added support for Adobe Target response tokens in the rendering succeeded monitoring hook.
 
 **Fixes and improvements**
 
-- The "machineLearning" key has been removed from sendEvent responses.
-- Empty config overrides are not sent to Experience Edge so it does not conflict with server side custom routing configurations.
-- The following component names in logging messages has been changed to better align with other Adobe SDKs: DecisioningEngine to RulesEngine, LegacyMediaAnalytics to MediaAnalyticsBridge, and Privacy to Consent.
-- Fixed an error that occurred when default content items were rendered via applyPropositions.
+- When multiple in-app messages are returned, only the one with the highest priority is shown. The others are recorded as suppressed.
+- Empty datastream overrides are no longer sent to the Edge Network, reducing potential conflicts with server side routing configurations.
+- Renamed the following logging message component names, to align with other Adobe SDKs:
+    - `DecisioningEngine` has been renamed to `RulesEngine`
+    - `LegacyMediaAnalytics`  has been renamed to `MediaAnalyticsBridge`
+    - `Privacy` has been renamed to `Consent`
+- Fixed an error that occurred when default content items were rendered via [`applyPropositions`](../web-sdk/commands/applypropositions.md).
+- Removed the `machineLearning` key from [`sendEvent`](../web-sdk/commands/sendevent/overview.md) responses.
 
 ## Version 2.23.0 - September 19, 2024
 
