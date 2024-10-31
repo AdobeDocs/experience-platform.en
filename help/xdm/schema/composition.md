@@ -217,6 +217,10 @@ The following screenshot demonstrates how field groups are represented in the Pl
 
 For the most up-to-date list of available standard XDM field groups, refer to the [official XDM repository](https://github.com/adobe/xdm/tree/master/components/fieldgroups). Alternatively, you can refer to the guide on [exploring XDM components](../ui/explore.md) if you prefer to view resources in the UI.
 
+>[!NOTE]
+>
+> Standard XDM field groups are always evolving and some field groups have been deprecated. For the most update-to-date list of deprecated field groups, refer to the [deprecated field groups section](https://github.com/adobe/xdm/tree/master/components/fieldgroups/deprecated) in the official XDM respository.
+
 ### Data type {#data-type}
 
 Data types are used as reference field types in classes or schemas in the same way as basic literal fields. The key difference is that data types can define multiple subfields in the same way as field groups. The key difference between them, is that data types can be included anywhere in a schema by adding it as the "data type" of a field. While field groups are only compatible with certain classes, data types can be included in any parent class or field group.
@@ -232,6 +236,10 @@ The following screenshot demonstrates how data types are represented in the Plat
 ![A diagram in the Schema Editor for an individual person with the Full name object and attributes highlighted.](../images/schema-composition/data-type.png)
 
 For the most up-to-date list of available standard XDM data types, refer to the [official XDM repository](https://github.com/adobe/xdm/tree/master/components/datatypes). Alternatively, you can refer to the guide on [exploring XDM components](../ui/explore.md) if you prefer to view resources in the UI.
+
+>[!NOTE]
+>
+> Standard XDM data types are always evolving and some data types have been deprecated. For the most update-to-date list of deprecated data types, refer to the [deprecated data types section](https://github.com/adobe/xdm/tree/master/components/datatypes/deprecated) in the official XDM respository.
 
 ### Field {#field}
 
