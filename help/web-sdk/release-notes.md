@@ -10,6 +10,21 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 This document covers the release notes for the Adobe Experience Platform Web SDK.
 For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## Version 2.24.0 - October 31, 2024
+
+**New features**
+
+- Edge config overrides are now supported when starting a media session.
+- When multiple in-app messages are returned only the one with the highest priority is shown. The others are recorded as suppressed.
+- Adobe Target response tokens are now returned in the rendering succeeded monitoring hook.
+
+**Fixes and improvements**
+
+- The "machineLearning" key has been removed from sendEvent responses.
+- Empty config overrides are not sent to Experience Edge so it does not conflict with server side custom routing configurations.
+- The following component names in logging messages has been changed to better align with other Adobe SDKs: DecisioningEngine to RulesEngine, LegacyMediaAnalytics to MediaAnalyticsBridge, and Privacy to Consent.
+- Fixed an error that occurred when default content items were rendered via applyPropositions.
+
 ## Version 2.23.0 - September 19, 2024
 
 **New features**
