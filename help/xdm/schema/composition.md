@@ -233,6 +233,10 @@ The following screenshot demonstrates how data types are represented in the Plat
 
 For the most up-to-date list of available standard XDM data types, refer to the [official XDM repository](https://github.com/adobe/xdm/tree/master/components/datatypes). Alternatively, you can refer to the guide on [exploring XDM components](../ui/explore.md) if you prefer to view resources in the UI.
 
+>[!NOTE]
+>
+> Standard XDM data types are always evolving and some data types have been deprecated. For the most update-to-date list of deprecated data types, refer to the [deprecated data types section](https://github.com/adobe/xdm/tree/master/components/datatypes/deprecated) in the official XDM respository.
+
 ### Field {#field}
 
 A field is the most basic building block of a schema. Fields provide constraints regarding the type of data that they can contain by defining a specific data type. These basic data types define a single field, whereas the [data types](#data-type) previously mentioned allow you to define multiple subfields and reuse the same multi-field structure throughout various schemas. So, in addition to defining a field's "data type" as one of the data types defined in the registry, Experience Platform supports basic scalar types such as:
