@@ -2,8 +2,6 @@
 title: Feature Transformation Techniques
 description: Learn about essential preprocessing techniques like data transformation, encoding, and feature scaling, which prepare data for statistical model training. It covers the importance of handling missing values and converting categorical data to improve model performance and accuracy.
 role: Developer
-hide: yes
-hidefromtoc: yes
 ---
 # Feature transformation techniques
 

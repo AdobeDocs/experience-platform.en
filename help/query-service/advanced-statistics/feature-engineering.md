@@ -7,7 +7,7 @@ role: Developer
 
 >[!AVAILABILITY]
 >
->This functionality is available to customers who have purchased the Data Distiller add on. For more information contact your Adobe representative.
+>This functionality is available to customers who have purchased the Data Distiller add on. For more information, contact your Adobe representative.
 
 To meet your feature engineering needs use the SQL transformer extension to simplify and automate your data preprocessing. Use this extension to build features and enjoy seamless experimentation with different feature engineering techniques, including associating them with models. Designed for distributed computing, you can perform feature engineering on large datasets in a parallel and scalable manner, significantly reducing the time required for data preprocessing with the Data Distiller feature engineering SQL extension.
 
@@ -29,7 +29,7 @@ Extract relevant information from your data, especially text data, and convert i
 
 ### Feature transformation {#feature-transformation}
 
-In addition to extracting features, use the following general transformers to prepare your features for advanced statistical models and derived datasets. Apply scaling, normalization, or encoding to ensure your features are on the same scale and have a similar distribution.
+In addition to extracting features, use the following general transformers to prepare your features for advanced statistical models and derived datasets. Apply scaling, normalization, or encoding to ensure that your features are on the same scale and have a similar distribution.
 
 #### General transformers
 
@@ -86,4 +86,4 @@ When you define your model, use the `OPTIONS` clause to specify the algorithm an
 
 ### Next Steps
 
-After learning the feature engineering techniques outlined in this document, progress onto the [Models](./models.md) document. It guides you through the process of creating, training, and managing trusted models using the features you've engineered. Once your your models are built, proceed to the [Implement advanced statistical models document.](./implement-models/implement-models.md) document. This document serves as an overview, linking to in-depth guides for different modeling techniques, including clustering, classification, and regression. By following these documents, you will learn how to configure and implement various trusted models within your SQL workflows and optimize your models for advanced data analysis.
+After learning the feature engineering techniques outlined in this document, progress onto the [Models](./models.md) document. It guides you through the process of creating, training, and managing trusted models using the features you've engineered. Once your models are built, proceed to the [Implement advanced statistical models document.](./implement-models/implement-models.md). This document serves as an overview, linking to in-depth guides for different modeling techniques, including clustering, classification, and regression. By following these documents, you learn how to configure and implement various trusted models within your SQL workflows and optimize your models for advanced data analysis.

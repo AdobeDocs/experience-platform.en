@@ -42,6 +42,7 @@ role: User,Developer
         - [Regression](advanced-statistics/implement-models/regression.md)
         - [Classification](advanced-statistics/implement-models/classification.md)
         - [Clustering](advanced-statistics/implement-models/clustering.md)
+    - [Feature transformation](advanced-statistics/feature-transformation.md)
 - Data Distiller audiences {#data-distiller-audiences}
     - [Build external audiences using SQL](data-distiller-audiences/overview.md)
 - Examples {#use-cases}
