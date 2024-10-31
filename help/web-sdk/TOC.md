@@ -70,7 +70,6 @@ role: Developer
   * [Render personalized content](personalization/rendering-personalization-content.md)
   * [Personalization via hybrid implementation](personalization/hybrid-personalization.md)
   * [Manage flicker](personalization/manage-flicker.md)
-  * [Monitoring hooks](monitoring-hooks.md)
   * Adobe Target {#adobe-target}
     * [Overview](personalization/adobe-target/target-overview.md)
     * [Single-page application implementation](personalization/adobe-target/spa-implementation.md)
@@ -103,6 +102,6 @@ role: Developer
   * [Debugging methods](use-cases/debugging.md)
   * [Use multiple Web SDK instances](use-cases/multiple-instances.md)
   * [Configure top and bottom page events](use-cases/top-bottom-page-events.md)
-
+* [Monitoring hooks](monitoring-hooks.md)
 * [Frequently Asked Questions](faq.md)
 * [Resources](resources.md)
