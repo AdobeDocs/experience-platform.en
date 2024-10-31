@@ -65,6 +65,35 @@ For more information on using the Segment Builder, please read the [Segment Buil
 
 By default for account audiences, the Segment Builder UI displays the direct relationship between an account and a person. However, other relationship types are available for account audiences.
 
+To use the alternate relationship types, select ![the settings icon](../../images/icons/settings.png).
+
+IMAGE
+
+On the [!UICONTROL Settings] tab, select **[!UICONTROL Show relationship selectors]** in the **[!UICONTROL Relationship of fields]** section.
+
+IMAGE
+
+Select ![the settings icon](../../images/icons/settings.png) again to return to the [!UICONTROL Fields] tab. You can now see the **[!UICONTROL Establish relationships]** section, which lets you establish how the account is connected to the person and how the person is connected to the opportunity.
+
+IMAGE
+
+When connecting the account to the person, you can choose from the following options:
+
+| Option | Description |
+| ------ | ----------- |
+| Direct relationship | The direct connection between the account and the person. This lets you describe which account does this person work at. |
+| Account-person relation | The relationship between the account and the person. This differs from the direct relationship, since this relationship is based on the related columns between the account and the person. This also lets you describe which account does this person work at. |
+| Opportunity-person relation | The relationship between the opportunity and the person. This is based off of connection between the  |
+
+When connecting the opportunity to the person, you can choose from the following options:
+
+| Option | Description |
+| ------ | ----------- |
+| Account | |
+| Opportunity-person relation | |
+
+After establishing the desired relationship, you can add the requisite people-audiences to your segment definition.
+
 ## Activate audience {#activate}
 
 >[!NOTE]
