@@ -27,6 +27,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
     - `LegacyMediaAnalytics`  has been renamed to `MediaAnalyticsBridge`
     - `Privacy` has been renamed to `Consent`
 - Fixed an error that occurred when default content items were rendered via [`applyPropositions`](../web-sdk/commands/applypropositions.md).
+- Fixed a CSS error in Adobe Target move and resize actions.
 - Removed the `machineLearning` key from [`sendEvent`](../web-sdk/commands/sendevent/overview.md) responses.
 
 ## Version 2.23.0 - September 19, 2024
