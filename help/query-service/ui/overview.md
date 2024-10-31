@@ -11,45 +11,73 @@ The Adobe Experience Platform [!DNL Query Service] provides a user interface tha
 
 ## Overview
 
-<!-- new content here -->
+The [!DNL Query Service] Overview provides a streamlined entry point for working with queries and Data Distiller templates. Here you can access all the features needed to write queries, explore datasets, and analyze audience data, ensuring a smooth workflow for your data analytics and audience insights.
 
-SQL [!UICONTROL Create query] navigates to the Query editor
-[!UICONTROL Write queries] - navigates to the Query Service UI guide (this document)
-[!UICONTROL Discover Data Distiller] - navigates to the Data Distiller overview (doccumentation)
+![The Query Service workspace with teh Overview tab highlighted.]()
 
-### Data Distiller capabilities
+### Main panels {#main-panels}
 
-[!UICONTROL Data exploration] - navigates to a data explortation document that explains how to verify and validate records in ingested batches with SQL.
-[!UICONTROL Derived datasets for Experience Platform applications] - navigates to a documentation overview of derived datasets.
-[!UICONTROL AI/ML pipelines] - navigates to a documentation overview of  AI/ML feature pipelines
-[!UICONTROL SQL insights] - navigates to a documentation overview outlining the use cases, essential capabilities, and necessary steps to develop an SQL insights dashboard with Data Distiller. 
+The [!UICONTROL Overview] page contains several main sections to help you get started:
 
-### Recommended Data Distiller accelerators
+1. **[!UICONTROL Create query]**: Quickly navigate to the Query Editor to write and execute new queries.
+2. **[!UICONTROL Write queries]**: Learn more about how to write queries using the Query Service UI, guiding you to this detailed documentation.
+3. **[!UICONTROL Discover Data Distiller]**: Utilize pre-built templates to create dashboards based on custom data models and deploy personalized insights, with a link to the Data Distiller overview.
 
-These all link to Platform UI dashboards.
+### Data Distiller capabilities {#data-distiller-capabilities}
 
-[!UICONTROL Advanced audience overlaps] - Links to the Data Distiller Advanced Audience Overlaps template dashboard.
-[!UICONTROL Audience comparison] - Links to the Data Distiller Audience Comparison template dashboard.
-[!UICONTROL Audience trends] - Links to the Data Distiller Audience trends template dashboard.
-[!UICONTROL Audience identity overlaps] - Links to the Data Distiller Audience identity overlaps template dashboard.
+The Data Distiller capabilities section offers links to more advanced features of Adobe Experience Platform:
 
-### Data Distiller examples
+- **[!UICONTROL Data exploration]**: Explore data within Experience Platform by bringing it in as a query. This capability allows for thorough verification and validation of ingested data using SQL.
+- **[!UICONTROL Derived datasets for Experience Platform applications]**: Create derived datasets from existing datasets to support Experience Platform applications.
+- **[!UICONTROL AI/ML pipelines]**: Develop datasets from Experience Platform data to power machine learning models and artificial intelligence processes.
+- **[!UICONTROL SQL insights]**: Understand how to develop an SQL insights dashboard with Data Distiller, including use cases, essential capabilities, and necessary steps.
 
-These all link to Adobe Experience League documentation.
+### Recommended Data Distiller accelerators {#recommended-accelerators}
 
-[!UICONTROL Decile-based derived datasets] - Links to a guide on how to create decile-based derived datasets for use with your Real-Time Customer Profile data
-[!UICONTROL Customer lifetime value] - Links to a guide on how you can use Real-Time Customer Data Platform to track and visualize the customer lifetime value (CLV) metric. 
-[!UICONTROL Propensity score] - Links to a guide on how to use Query Service to send data to your machine learning platform to train a model that can be applied to data using SQL to predict a customer's propensity to purchase for each visit.
-[!UICONTROL Consent analysis] - Links to a guide on how to build a consent dashboard for various marketing use cases for Real-Time CDP data.
-[!UICONTROL Fuzzy match] - Links to a guide on how to perform a 'fuzzy' match on your Adobe Experience Platform data to match strings by their degree of similarity from large separate data sources. 
+These accelerators provide quick links to the Data Distiller dashboards available in the [!UICONTROL Templates] section:
 
-### Key metrics
+- **[!UICONTROL Advanced audience overlaps]**: Analyze intersections between multiple audience segments to uncover valuable insights and optimize segmentation strategies.
+- **[!UICONTROL Audience comparison]**: Compare key metrics between different audiences side by side to understand audience size, growth, and other important KPIs.
+- **[!UICONTROL Audience trends]**: Track audience metrics over time to monitor changes in audience size, identity growth, and overall engagement.
+- **[!UICONTROL Audience identity overlaps]**: Analyze identity overlaps within selected audiences to refine identity stitching and improve segmentation.
 
-There are visulaizations of key metrics in several charts.
+### Data Distiller examples {#data-distiller-examples}
 
-[!UICONTROL Distiller batch queries]: Description needed
-[!UICONTROL Compute hours consumed]: Description needed
-[!UICONTROL Data exploratory queries]: Description needed
+These links lead to practical guides and examples to help you make the most of Data Distiller:
+
+- **[!UICONTROL Decile-based derived datasets]**: Learn how to create decile-based derived datasets for your Real-Time Customer Profile data.
+- **[!UICONTROL Customer lifetime value]**: Discover how to track and visualize the customer lifetime value (CLV) metric using Real-Time CDP.
+- **[!UICONTROL Propensity score]**: Use Query Service to send data to an ML platform to train a model for predicting customer propensity scores, enabling targeted marketing.
+- **[!UICONTROL Consent analysis]**: Build a consent dashboard to analyze customer consent for various marketing use cases in Real-Time CDP.
+- **[!UICONTROL Fuzzy match]**: Perform a 'fuzzy' match to identify similar strings across large separate data sources in Adobe Experience Platform.
+
+### Key metrics {#key-metrics}
+
+The key metrics section displays visualizations of important data that helps you monitor Query Service usage. For each chart, you can select the ellipse (`...`) in the top right followed by [!UICONTROL View more] to view either a tabulated form of the results, or download the data as a CSV file to view in a spreadsheet. For more details, refer to the [View more guide](../../dashboards/sql-insights-query-pro-mode/view-more.md).
+
+#### Set a date filter {#set-date-filter}
+
+To apply a global date filter for these visualizations, select the **[!UICONTROL Filter]** icon and adjust the date range in the **[!UICONTROL Filters]** dialog. Applying this filter allows you to tailor the displayed metrics to a specific time frame, enhancing the relevance of your analysis.
+
+![The Filters dialog for the key metrics charts in the Query Service Workspace.]()
+
+#### [!UICONTROL Distiller batch queries]
+
+Displays the number of batch queries processed each day, including CTAS/ITAS Interactive queries and scheduled queries.
+
+<!-- ![The Audience size trends chart.](../../images/sql-insights-query-pro-mode/templates/audience-size-trends-chart.png) -->
+
+#### [!UICONTROL Compute hours consumed]
+
+The [!UICONTROL Compute hours consumed] chart tracks the compute hours consumed by your queries, helping you manage resource allocation effectively.
+
+<!-- ![The Audience size trends chart.](../../images/sql-insights-query-pro-mode/templates/audience-size-trends-chart.png) -->
+
+#### [!UICONTROL Data exploratory queries]
+
+Visualizes the count of data exploration queries processed each day, providing insights into how users are leveraging on-demand data processing.
+
+<!-- ![The Audience size trends chart.](../../images/sql-insights-query-pro-mode/templates/audience-size-trends-chart.png) -->
 
 ## [!DNL Query Editor]
 
@@ -63,7 +91,7 @@ The [!DNL Query Editor] enables you to write and execute queries without using a
 
 ## Scheduled queries {#scheduled-queries}
 
-Queries that have already been saved as a template can be scheduled to run on a regular cadence. When scheduling a query, you can choose the frequency of runs, the start and end date, the day of the week the scheduled query runs, as well as the dataset to export the query to. Query schedules are set using Query Editor. 
+Queries that have already been saved as a template can be scheduled to run on a regular cadence. When scheduling a query, you can choose the frequency of runs, the start and end date, the day of the week the scheduled query runs, as well as the dataset to export the query to. Query schedules are set using Query Editor.
 
 To learn how to schedule a query through the UI, see the [scheduled queries guide](./user-guide.md#scheduled-queries). To learn how to add schedules using the API, please read the [scheduled queries endpoint guide](../api/scheduled-queries.md).
 
