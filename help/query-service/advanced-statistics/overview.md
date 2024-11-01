@@ -7,7 +7,7 @@ role: Developer
 
 >[!AVAILABILITY]
 >
->This functionality is available to customers who have purchased the Data Distiller add on. For more information contact your Adobe representative.
+>This functionality is available to customers who have purchased the Data Distiller add on. For more information, contact your Adobe representative.
 
 Statistical modeling is used to make predictions, detect patterns, and generate insights from data. This applies to large, high-dimensional datasets with complex structures in a distributed fashion. Use the Data Distiller SQL extension to leverage statistical models and transform raw data by simplifying and automating data preprocessing on large datasets in a timely, parallel, and scalable manner.
 
@@ -19,7 +19,7 @@ Data Distiller equips you with the tools necessary to transform raw data into me
 
 1. **Feature engineering**: Learn how to preprocess your data by extracting, transforming, and selecting the most relevant features. Learn about the available SQL functions that simplify and automate the feature engineering process, and how to ensure your data is optimally prepared for model training.
 
-2. **Models**: Discover how to manage, evaluate and predict advances statistical models using SQL. Understand the core processes involved in SQL to defining the life cycle of these models on your datasets.
+2. **Models**: Discover how to manage, evaluate and predict advances statistical models using SQL. Understand the core processes involved in SQL to define the life cycle of these models on your datasets.
 
 3. **Algorithms**: Explore the advanced statistical modeling algorithms supported by Data Distiller, including clustering, classification, and regression. This document details the process to use available algorithms, their parameters, and how to generate customer-specific models using SQL extension to meet your business needs.
 

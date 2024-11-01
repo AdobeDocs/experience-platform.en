@@ -7,7 +7,7 @@ role: Developer
 
 >[!AVAILABILITY]
 >
->This functionality is available to customers who have purchased the Data Distiller add on. For more information contact your Adobe representative.
+>This functionality is available to customers who have purchased the Data Distiller add on. For more information, contact your Adobe representative.
 
 Query Service now supports the core processes of building and deploying a model. You can use SQL to train the model using your data, evaluate its accuracy, and then apply train model to make predictions on new data. You can then use the model to generalize from your past data to make informed decisions about real-world scenarios.
 
@@ -23,7 +23,7 @@ Use the model SQL extension, added to the existing SQL grammar, to manage the mo
 
 Learn how to define, configure, and train a machine learning model using SQL commands. The SQL below demonstrates how to create a model, apply feature engineering transformations, and initiate the training process to ensure the model is configured correctly for future use. The following SQL commands, detail different options for model creation and management:
 
-- **CREATE MODEL**: Creates and trains a new model on a specified dataset. If a model with the same name already exists, this command will return an error.
+- **CREATE MODEL**: Creates and trains a new model on a specified dataset. If a model with the same name already exists, this command returns an error.
 - **CREATE MODEL IF NOT EXISTS**: Creates and trains a new model only if a model with the same name does not already exist on the specified dataset.
 - **CREATE OR REPLACE MODEL**: Creates and trains a model, replacing the latest version of an existing model with the same name on the specified dataset.
 
@@ -122,7 +122,7 @@ FROM   dataset)
 
 ## Evaluate and manage your models
 
-Use the `SHOW MODELS` command to list all the available models you have created. Use it to view the models that have been trained and are available for evaluation or prediction. When queried, the information is fetched from the model repository which updated during model creation. The details returned are: model ID, model name, version, source dataset, algorithm details, options/parameters, created/updated time, and the user who created the model.
+Use the `SHOW MODELS` command to list all the available models you have created. Use it to view the models that have been trained and are available for evaluation or prediction. When queried, the information is fetched from the model repository which is updated during model creation. The details returned are: model ID, model name, version, source dataset, algorithm details, options/parameters, created/updated time, and the user who created the model.
 
 ```sql
 SHOW MODELS;
@@ -136,7 +136,7 @@ The results appear in a table similar to the one seen below:
 
 ## Cleanup and maintain your models
 
-Use the `DROP MODELS` command to delete the models you created from the model registry. You can use it to remove outdated, unused, or unwanted models. This frees up resources and ensuring that only relevant models are maintained. You can also include an optional model name for improved specificity. This This only drops model with the provided model version.
+Use the `DROP MODELS` command to delete the models you created from the model registry. You can use it to remove outdated, unused, or unwanted models. This frees up resources and ensuring that only relevant models are maintained. You can also include an optional model name for improved specificity. This only drops model with the provided model version.
 
 ```sql
 DROP MODEL IF EXISTS modelName
@@ -145,4 +145,4 @@ DROP MODEL IF EXISTS modelName modelVersion ;
 
 ## Next steps
 
-After reading this document, you now understand the base SQL syntax required to create, train, and manage trusted models using Data Distiller. Next, explore the [Implement advanced statistical models document](./implement-models/implement-models.md) to learn about the various trusted models available and how to implement them effectively within your SQL workflows. If you haven't already, make sure to review the [Feature Engineering](./feature-engineering.md) document to ensure your data is optimally prepared for model training.
+After reading this document, you now understand the base SQL syntax required to create, train, and manage trusted models using Data Distiller. Next, explore the [Implement advanced statistical models document](./implement-models/implement-models.md) to learn about the various trusted models available and how to implement them effectively within your SQL workflows. If you haven't already, make sure to review the [Feature Engineering](./feature-engineering.md) document to ensure that your data is optimally prepared for model training.
