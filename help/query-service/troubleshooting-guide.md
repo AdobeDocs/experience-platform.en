@@ -7,11 +7,23 @@ exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 ---
 # Query Service and Data Distiller frequently asked questions
 
-<!-- 
-Update Introduction: Describe the relationship between Query Service (QS) and Data Distiller (DD) in the introduction.
-Explain QS vs. DD: Add a section explaining the difference between Query Service (Ad hoc) and Data Distiller, using details from the provided link. -->
+This document answers frequently asked questions about Query Service and Data Distiller and includes the more commonly seen Query Service error codes. For questions and troubleshooting other Adobe Experience Platform services, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
 
-This document provides answers to frequently asked questions about Query Service and provides a list of commonly seen error codes when using Query Service. For questions and troubleshooting related to other services in Adobe Experience Platform, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
+To clarify how Query Service and Data Distiller work together within Adobe Experience Platform, here are two foundational questions. 
+
+## What is the relationship between Query Service and Data Distiller?
+
+Query Service and Data Distiller are two complementary components within Adobe Experience Platform that provide distinct data querying capabilities. Query Service is designed for ad hoc queries that allow users to explore, validate, and experiment with ingested data. These queries do not alter the data lake since their purpose is strictly for interactive data discovery. In contrast, Data Distiller focuses on batch queries that transform and enrich data, with results stored back into the data lake for future use. Batch queries in Data Distiller can be scheduled, monitored, and managed, supporting deeper data processing and manipulation that Query Service alone does not facilitate.
+
+Together, Query Service and Data Distiller enable a robust data workflow: Query Service for quick insights and validation, and Data Distiller for structured data transformations that persist within the data lake.
+
+## What is the difference between Query Service and Data Distiller?
+
+**Query Service**: Used for SQL queries focused on data exploration, validation, and experimentation. Outputs are not stored in the data lake, and execution time is limited to 10 minutes. Ad hoc queries are suited for lightweight, interactive data checks and analyses.
+
+**Data Distiller**: Enables batch queries that process, clean, and enrich data, with results stored back in the data lake. These queries support longer execution (up to 24 hours) and additional features like scheduling, monitoring, and accelerated reporting. Data Distiller is ideal for in-depth data manipulation and scheduled data processing tasks.
+
+## Question catagories {#catagories}
 
 The following list of answers to frequently asked questions is divided into the following categories:
 
