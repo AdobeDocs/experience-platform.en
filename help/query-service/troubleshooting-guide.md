@@ -626,7 +626,7 @@ Yes. Although, certain third-party clients, such as DbVisualizer, may require a 
 +++Answer
 If the "Create query" is stuck on "Initializing connection...", this is likely to be a connection or session issue. Refresh the browser if you are using the Platform UI and try again.
 +++
-<!-- ... -->
+
 ## Data Distiller {#data-distiller}
 
 ### How is Data Distiller's license usage tracked and where can I see this information?
