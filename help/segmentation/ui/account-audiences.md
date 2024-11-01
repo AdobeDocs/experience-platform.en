@@ -67,30 +67,30 @@ By default for account audiences, the Segment Builder UI displays the direct rel
 
 To use the alternate relationship types, select ![the settings icon](../../images/icons/settings.png).
 
-IMAGE
+![The settings icon is highlighted on the Fields section.](../images/ui/account-audiences/select-settings.png)
 
 On the [!UICONTROL Settings] tab, select **[!UICONTROL Show relationship selectors]** in the **[!UICONTROL Relationship of fields]** section.
 
-IMAGE
+![The Show relation selectors toggle is selected within the Relationship of fields section of the Settings tab.](../images/ui/account-audiences/show-relation-selectors.png)
 
 Select ![the settings icon](../../images/icons/settings.png) again to return to the [!UICONTROL Fields] tab. You can now see the **[!UICONTROL Establish relationships]** section, which lets you establish how the account is connected to the person and how the person is connected to the opportunity.
 
-IMAGE
+![The Establish relationships section is highlighted, displaying the options for how to connect an account to person and how to connect a person to an opportunity.](../images/ui/account-audiences/establish-relationships.png)
 
 When connecting the account to the person, you can choose from the following options:
 
 | Option | Description |
 | ------ | ----------- |
 | Direct relationship | The direct connection between the account and the person. This lets you describe which account does this person work at. |
-| Account-person relation | The relationship between the account and the person. This differs from the direct relationship, since this relationship is based on the related columns between the account and the person. This also lets you describe which account does this person work at. |
-| Opportunity-person relation | The relationship between the opportunity and the person. This is based off of connection between the  |
+| Account-person relation | The relationship between the account and the person. This differs from the direct relationship, since this relationship is based on the account-person object. This also lets you describe which account does this person work at. |
+| Opportunity-person relation | The relationship between the opportunity and the person, which is based off of the opportunity-person object. This connects the person to an account by going from the opportunity-person to the opportunity to the account. This lets you describe which companies the person is attached to opportunities at. |
 
 When connecting the opportunity to the person, you can choose from the following options:
 
 | Option | Description |
 | ------ | ----------- |
-| Account | |
-| Opportunity-person relation | |
+| Account | The direct connection between the account and the opportunity. This lets you describe which opportunities are owned by the account where the person works. |
+| Opportunity-person relation | The relationship between the opportunity and the person, which is based off of the opportunity-person object. This lets you describe which opportunities are attached to the person. |
 
 After establishing the desired relationship, you can add the requisite people-audiences to your segment definition.
 
