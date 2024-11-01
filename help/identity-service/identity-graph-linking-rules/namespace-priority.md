@@ -103,11 +103,11 @@ Given the configurations outlined above, user actions and determination of prima
 
 | User action (Experience event) | Authentication state | Data source | Namespaces in event | Namespace of primary identity |
 | --- | --- | --- | --- | --- |
-| View credit card offer page | Unauthenticated (anonymous) | Web SDK | {ECID} | ECID |
-| View help page | Unauthenticated | Mobile SDK | {ECID, IDFA} | IDFA |
-| View checking account balance | Authenticated | Web SDK | {CRMID, ECID} | CRMID |
-| Sign up for home loan | Authenticated | Analytics source connector | {CRMID, ECID, AAID} | CRMID |
-| Transfer $1,000 from checking to savings | Authenticated | Mobile SDK | {CRMID, GAID, ECID} | CRMID |
+| View credit card offer page | Unauthenticated (anonymous) | Web SDK | `{ECID}` | ECID |
+| View help page | Unauthenticated | Mobile SDK | `{ECID, IDFA}` | IDFA |
+| View checking account balance | Authenticated | Web SDK | `{CRMID, ECID}` | CRMID |
+| Sign up for home loan | Authenticated | Analytics source connector | `{CRMID, ECID, AAID}` | CRMID |
+| Transfer $1,000 from checking to savings | Authenticated | Mobile SDK | `{CRMID, GAID, ECID}` | CRMID |
 
 {style="table-layout:auto"}
 
@@ -144,6 +144,8 @@ Data hygiene record delete requests functions in the following manner, for a giv
 For more information, read the [advanced lifecycle management overview](../../hygiene/home.md).
 
 ### Computed attributes
+
+Computed attributes uses namespace priority to store the computed attribute value. For a given event, the identity with the highest namespace priority will have the the value of the computed attribute written against it. For more information, read the [computed attributes UI guide](../../profile/computed-attributes/ui.md).
 
 Computed attributes does not use namespace priority to compute values. If you are using computed attributes, you must ensure that the CRMID is designated as your primary identity for WebSDK. For more information, read the [computed attributes UI guide](../../profile/computed-attributes/ui.md).
 
