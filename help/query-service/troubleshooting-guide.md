@@ -7,7 +7,7 @@ exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 ---
 # Query Service and Data Distiller frequently asked questions
 
-This document answers frequently asked questions about Query Service and Data Distiller and includes the more commonly seen Query Service error codes. For questions and troubleshooting other Adobe Experience Platform services, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
+This document answers frequently asked questions about Query Service and Data Distiller. It also includes commonly seen error codes while using the "Queries" product for data validation or writing transformed data back to the data lake. For questions and troubleshooting other Adobe Experience Platform services, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
 
 To clarify how Query Service and Data Distiller work together within Adobe Experience Platform, here are two foundational questions. 
 
@@ -23,14 +23,15 @@ Together, Query Service facilitates rapid insights, while Data Distiller enables
 
 **Data Distiller**: Enables batch queries that process, clean, and enrich data, with results stored back in the data lake. These queries support longer execution (up to 24 hours) and additional features like scheduling, monitoring, and accelerated reporting. Data Distiller is ideal for in-depth data manipulation and scheduled data processing tasks.
 
+See the [Query Service packaging document](./packaging.md) for more detailed information.
+
 ## Question categories {#categories}
 
 The following list of answers to frequently asked questions is divided into the following categories:
 
 - [General](#general)
-- [Queries UI](#queries-ui)
 - [Data Distiller](#data-distiller)
-- [Compute hours](#compute-hours) 
+- [Queries UI](#queries-ui)
 - [Dataset Samples](#dataset-samples)
 - [Exporting data](#exporting-data)
 - [SQL Syntax](#sql-syntax) 
@@ -619,14 +620,6 @@ Yes, you can use `CREATE VIEW` command without Data Distiller access. This comma
 Yes. Although, certain third-party clients, such as DbVisualizer, may require a separate identifier before and after an SQL block to indicate that a part of a script should be handled as a single statement. More details can be found in the [anonymous block documentation](./key-concepts/anonymous-block.md) or in [the official DbVisualizer documentation](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect). 
 +++
 
-## Queries UI
-
-### The "Create query" is stuck "Initializing connection..." when trying to connect to Query Service. How do I fix the issue?
-
-+++Answer
-If the "Create query" is stuck on "Initializing connection...", this is likely to be a connection or session issue. Refresh the browser if you are using the Platform UI and try again.
-+++
-
 ## Data Distiller {#data-distiller}
 
 ### How is Data Distiller's license usage tracked and where can I see this information?
@@ -657,6 +650,14 @@ Compute hours for a query can fluctuate due to multiple factors. These include t
 
 +++Answer  
 Backend infrastructure is constantly improved to optimize Compute Hour utilization and processing time. As a result, you may notice changes over time as performance enhancements are implemented.
++++
+
+## Queries UI
+
+### The "Create query" is stuck "Initializing connection..." when trying to connect to Query Service. How do I fix the issue?
+
++++Answer
+If the "Create query" is stuck on "Initializing connection...", this is likely to be a connection or session issue. Refresh the browser if you are using the Platform UI and try again.
 +++
 
 ## Dataset Samples
