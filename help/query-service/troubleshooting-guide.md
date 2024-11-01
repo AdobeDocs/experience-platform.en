@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;query service;Query service;troubleshooting guide;faq;troubleshooting;
 solution: Experience Platform
 title: Query Service and Data Distiller frequently asked questions
-description: This document contains common questions and answers related to Query Service. Topics include, exporting data, third-party tools, and PSQL errors.
+description: This document contains common questions and answers related to Query Service and Data Distiller. Topics include, exporting data, third-party tools, and PSQL errors.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 ---
 # Query Service and Data Distiller frequently asked questions
@@ -13,9 +13,9 @@ To clarify how Query Service and Data Distiller work together within Adobe Exper
 
 ## What is the relationship between Query Service and Data Distiller?
 
-Query Service and Data Distiller are two complementary components within Adobe Experience Platform that provide distinct data querying capabilities. Query Service is designed for ad hoc queries that allow users to explore, validate, and experiment with ingested data. These queries do not alter the data lake since their purpose is strictly for interactive data discovery. In contrast, Data Distiller focuses on batch queries that transform and enrich data, with results stored back into the data lake for future use. Batch queries in Data Distiller can be scheduled, monitored, and managed, supporting deeper data processing and manipulation that Query Service alone does not facilitate.
+Query Service and Data Distiller are two distinct complementary components that provide specific data querying capabilities. Query Service is designed for ad hoc queries to explore, validate, and experiment with ingested data without altering the data lake. In contrast, Data Distiller focuses on batch queries that transform and enrich data, with results stored back into the data lake for future use. Batch queries in Data Distiller can be scheduled, monitored, and managed, supporting deeper data processing and manipulation that Query Service alone does not facilitate.
 
-Together, Query Service and Data Distiller enable a robust data workflow: Query Service for quick insights and validation, and Data Distiller for structured data transformations that persist within the data lake.
+Together, Query Service facilitates rapid insights, while Data Distiller enables in-depth, persistent data transformations.
 
 ## What is the difference between Query Service and Data Distiller?
 
@@ -23,7 +23,7 @@ Together, Query Service and Data Distiller enable a robust data workflow: Query 
 
 **Data Distiller**: Enables batch queries that process, clean, and enrich data, with results stored back in the data lake. These queries support longer execution (up to 24 hours) and additional features like scheduling, monitoring, and accelerated reporting. Data Distiller is ideal for in-depth data manipulation and scheduled data processing tasks.
 
-## Question catagories {#catagories}
+## Question categories {#categories}
 
 The following list of answers to frequently asked questions is divided into the following categories:
 
