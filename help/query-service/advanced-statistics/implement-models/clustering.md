@@ -122,8 +122,6 @@ Create MODEL modelname OPTIONS(
 | `TOPIC_CONCENTRATION`         | Concentration parameter ("beta" or "eta") for the prior placed on topics' distributions over terms.                                                                     | Automatic      | (>= 0)                                    |
 | `TOPIC_DISTRIBUTION_COL`      | Output column with estimates of the topic mixture distribution for each document.                                                                                       | NOT SET        | Any string                                 |
  
-{style="table-layout:auto"}
-
 **Example**
 
 ```sql
