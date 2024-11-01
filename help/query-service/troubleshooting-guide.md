@@ -13,7 +13,7 @@ To clarify how Query Service and Data Distiller work together within Adobe Exper
 
 ## What is the relationship between Query Service and Data Distiller?
 
-Query Service and Data Distiller are two distinct complementary components that provide specific data querying capabilities. Query Service is designed for ad hoc queries to explore, validate, and experiment with ingested data without altering the data lake. In contrast, Data Distiller focuses on batch queries that transform and enrich data, with results stored back into the data lake for future use. Batch queries in Data Distiller can be scheduled, monitored, and managed, supporting deeper data processing and manipulation that Query Service alone does not facilitate.
+Query Service and Data Distiller are distinct, complementary components that provide specific data querying capabilities. Query Service is designed for ad hoc queries to explore, validate, and experiment with ingested data without altering the data lake. In contrast, Data Distiller focuses on batch queries that transform and enrich data, with results stored back into the data lake for future use. Batch queries in Data Distiller can be scheduled, monitored, and managed, supporting deeper data processing and manipulation that Query Service alone does not facilitate.
 
 Together, Query Service facilitates rapid insights, while Data Distiller enables in-depth, persistent data transformations.
 
