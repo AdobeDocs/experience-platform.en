@@ -102,6 +102,6 @@ role: Developer
   * [Debugging methods](use-cases/debugging.md)
   * [Use multiple Web SDK instances](use-cases/multiple-instances.md)
   * [Configure top and bottom page events](use-cases/top-bottom-page-events.md)
-
+* [Monitoring hooks](monitoring-hooks.md)
 * [Frequently Asked Questions](faq.md)
 * [Resources](resources.md)
