@@ -1,11 +1,15 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;Query service;troubleshooting guide;faq;troubleshooting;
 solution: Experience Platform
-title: Frequently Asked Questions
+title: Query Service and Data Distiller frequently asked questions
 description: This document contains common questions and answers related to Query Service. Topics include, exporting data, third-party tools, and PSQL errors.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 ---
-# Frequently asked questions
+# Query Service and Data Distiller frequently asked questions
+
+<!-- 
+Update Introduction: Describe the relationship between Query Service (QS) and Data Distiller (DD) in the introduction.
+Explain QS vs. DD: Add a section explaining the difference between Query Service (Ad hoc) and Data Distiller, using details from the provided link. -->
 
 This document provides answers to frequently asked questions about Query Service and provides a list of commonly seen error codes when using Query Service. For questions and troubleshooting related to other services in Adobe Experience Platform, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
 
@@ -13,6 +17,7 @@ The following list of answers to frequently asked questions is divided into the 
 
 - [General](#general)
 - [Queries UI](#queries-ui)
+- [Data Distiller](#data-distiller)
 - [Compute hours](#compute-hours) 
 - [Dataset Samples](#dataset-samples)
 - [Exporting data](#exporting-data)
@@ -584,7 +589,7 @@ Yes, attribute-based access control is enforced if configured. See the [attribut
 No, Query Service does not support the "INSERT OVERWRITE INTO" command.
 +++
 
-### How frequently is the usage data on the license usage dashboard updated for Data Distiller compute hours?
+### How frequently is the usage data on the license usage dashboard updated for Data Distiller Compute Hours?
 
 +++Answer
 The license usage dashboard for Data Distiller computer hours is updated four times a day, every six hours.
@@ -609,21 +614,37 @@ Yes. Although, certain third-party clients, such as DbVisualizer, may require a 
 +++Answer
 If the "Create query" is stuck on "Initializing connection...", this is likely to be a connection or session issue. Refresh the browser if you are using the Platform UI and try again.
 +++
+<!-- ... -->
+## Data Distiller {#data-distiller}
 
-## Compute hours {#compute-hours}
+### How is Data Distiller's license usage tracked and where can I see this information?
 
-### Why do compute hours vary for the same query in two consecutive executions?
-
-+++Answer
-Compute hours for a query can fluctuate due to multiple factors. These include the data volume processed, the complexity of transformation operations within the SQL query, and so on. Data Distiller Query Service scales the cluster based on the above parameters for each query, which can lead to differences in compute hours.
-
-Additionally, backend infrastructure is constantly being improved to optimize compute hour consumption, so you may notice changes over time as performance enhancements are implemented.
++++Answer  
+The main metric used to track batch query usage is the Compute Hour. You have access to this information and your current consumption through the [License usage dashboard](../dashboards/guides/license-usage.md).
 +++
 
-### Why have I noticed a reduction of compute hours usage across all my queries, if nothing has changed on my end?
+### What is a Compute Hour?
 
-+++Answer
-Backend infrastructure is constantly improved to optimize compute hour utilization and processing time. As a result, you may notice changes over time as performance enhancements are implemented.
++++Answer  
+Compute hours are the measure of time taken by the Query Service engines to read, process, and write data back into the data lake when a batch query is executed.
++++
+
+### How are Compute Hours measured?
+
++++Answer  
+Compute Hours are measured cumulatively across all of your authorized Sandboxes.
++++
+
+### Why do I sometimes notice a variation in Compute Hour consumption even when I run the same query consecutively?
+
++++Answer  
+Compute hours for a query can fluctuate due to multiple factors. These include the data volume processed, the complexity of transformation operations within the SQL query, and so on. Query Service scales the cluster based on the above parameters for each query, which can lead to differences in Compute Hours.
++++
+
+### Is it normal to notice a reduction in Compute Hours when I run the same query using the same data over a long period of time? Why might this be happening?
+
++++Answer  
+Backend infrastructure is constantly improved to optimize Compute Hour utilization and processing time. As a result, you may notice changes over time as performance enhancements are implemented.
 +++
 
 ## Dataset Samples
