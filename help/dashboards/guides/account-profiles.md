@@ -97,13 +97,9 @@ The [!UICONTROL Account profiles added] widget uses a line graph to display the 
 
 The [!UICONTROL Customers per account overview] chart provides a summary of accounts based on their customer types. It displays a four-row table that categorizes accounts as having either direct or indirect customers, or those without. It provides the total number of accounts for each category. The chart helps identify the distribution of accounts that have direct versus indirect customers.
 
-<!-- What is the breakdown of these numbers? it says 214K account son my dashboard but these numbers only total about 13.5K -->
-
 Direct customers are customer profiles that are directly linked to an account through the `personComponents` route. This relationship is more straightforward and involves a direct, explicit connection between the customer and the account. 
 
 Indirect customers are customer profiles linked to an account via the `Account-Person` route. This relationship is less straightforward and involves an intermediate entity or a more complex connection between the customer and the account, typically through other accounts or relationships.
-
-<!-- Q. Why does the widget show '... of 10' what are the other options here? -->
 
 ![The Customers per account overview widget.](../images/account-profiles/customers-per-account-overview-widget.png)
 
@@ -128,8 +124,6 @@ To learn more about drill throughs in the Platform UI, see the [Drill Through gu
 #### [!UICONTROL Customers per account detail] {#customers-per-account-detail}
 
 The [!UICONTROL Customers per account detail] chart provides more granular details about the number of accounts associated with different customer types. It displays a three-column table detailing the number of accounts by customer type (direct or indirect), and the range of customers associated with them. This chart helps you to understand how the customers are distributed across different customer categories and the total number of accounts associated with each.
-
-<!-- Shouldn't the third column be 'Total customers'? What am I missing? I am confused. -->
 
 ![The Customers per account detail widget.](../images/account-profiles/customers-per-account-detail.png)
 
