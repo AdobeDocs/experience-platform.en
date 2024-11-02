@@ -81,9 +81,9 @@ When connecting the account to the person, you can choose from the following opt
 
 | Option | Description |
 | ------ | ----------- |
-| Direct relationship | The direct connection between the account and the person. This lets you describe which account does this person work at. |
-| Account-person relation | The relationship between the account and the person. This differs from the direct relationship, since this relationship is based on the account-person object. This also lets you describe which account does this person work at. |
-| Opportunity-person relation | The relationship between the opportunity and the person, which is based off of the opportunity-person object. This connects the person to an account by going from the opportunity-person to the opportunity to the account. This lets you describe which companies the person is attached to opportunities at. |
+| Direct relationship | The direct connection between the account and the person. This specifies which accounts each person is linked to via the array of `accountID` values in the `personComponents` array on the person schema. This path is the most frequently used. |
+| Account-person relation | The relationship between the account and the person, which is defined by the `accountPersonRelation` object. This path also allows each person to be connected to multiple accounts. It is used when your organization has defined an explicit relationship table from your source data.  |
+| Opportunity-person relation | The relationship between the opportunity and the person, which is defined by the `opportunityPersonRelation` object. This connects the person to an account by going from the opportunity-person to the opportunity to the account. This lets you describe which companies the person is attached to opportunities at. |
 
 When connecting the opportunity to the person, you can choose from the following options:
 
