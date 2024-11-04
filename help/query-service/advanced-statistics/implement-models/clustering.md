@@ -106,7 +106,7 @@ Create MODEL modelname OPTIONS(
 
 **Parameters**
 
-| Parameter                    | Description                                                                                                                                                              | Default value  | Possible Values                          |                                                                                                                                                                  | Default value  | Possible Values                          |
+| Parameter                    | Description                                                                                                                                                              | Default value  | Possible Values                          |
 |-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|------------------------------------------|
 | `MAX_ITER`                    | The maximum number of iterations the algorithm runs.                                                                                                                | 20             | (>= 0)                                   |
 | `OPTIMIZER`                   | The optimizer or inference algorithm used to estimate the LDA model. Supported options are `"online"` (Online Variational Bayes) and `"em"` (Expectation-Maximization). | "online"       | `online`, `em`                           |
