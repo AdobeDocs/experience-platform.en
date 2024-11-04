@@ -89,8 +89,8 @@ When connecting the opportunity to the person, you can choose from the following
 
 | Option | Description |
 | ------ | ----------- |
-| Account | The direct connection between the account and the opportunity. This lets you describe which opportunities are owned by the account where the person works. |
-| Opportunity-person relation | The relationship between the opportunity and the person, which is based off of the opportunity-person object. This lets you describe which opportunities are attached to the person. |
+| Account | The direct connection between the account and the opportunity. When you use this in an account audience, this path connects all people at the company to the opportunity. |
+| Opportunity-person relation | The relationship between the opportunity and the person, which is based off of the opportunity-person object. This path connects only people who have been specifically identified as involved in an opportunity to that opportunity. |
 
 After establishing the desired relationship, you can add the requisite people-audiences to your segment definition.
 
