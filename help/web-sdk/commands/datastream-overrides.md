@@ -27,15 +27,6 @@ If you set overrides both in the Web SDK configuration and in a specific command
 >
 >If you want a configuration override to *disable* an Experience Cloud service, you must make sure that the service is first *enabled* in the datastream configuration. See the documentation on how to [configure datastreams](../../datastreams/configure.md#add-services) for details on how to add services to a datastream.
 
-## Object properties
-
-The following properties are available within this object:
-
-* **Datastream override**: Send calls to a different datastream. If you set this value, other overrides that require datastream configuration must be configured in the datastream set here.
-* **Third-party ID sync container**: The ID for the destination third-party ID sync container in Adobe Audience Manager. Configuring a third-party ID container override in the datastream's settings is required before using this field.
-* **Target property token**: The token for the destination property in Adobe Target. Configuring a Target property token override in the datastream's settings is required before using this field.
-* **Report suites**: The report suite IDs to override in Adobe Analytics. Configuring report suite overrides in the datastream's settings is required before using this field.
-
 ## Send datastream overrides to the Edge Network through the Web SDK tag extension {#tag-extension}
 
 See the documentation on [configuring datastream overrides](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#datastrea-overrides) from the Web SDK tag extension for detailed configuration instructions.
@@ -119,7 +110,6 @@ alloy("sendEvent", {
       reportSuites: ["ujslconfigoverrides3"],
     },
     com_adobe_identity: {
-      enabled: false,
       idSyncContainerId: 34374,
     },
     com_adobe_target: {
@@ -149,11 +139,10 @@ alloy("sendEvent", {
 | `edgeConfigOverrides.com_adobe_experience_platform.com_adobe_edge_ajo.enabled`| Defines whether the event data is sent to Adobe Journey Optimizer service or not. |
 | `com_adobe_analytics.enabled`| Defines whether the event data is sent to Adobe Analytics or not. |
 | `com_adobe_analytics.reportSuites[]`| An array of strings that determines to which report suites you want to send Analytics data.|
-| `com_adobe_identity.enabled`|  |
-|`com_adobe_identity.idSyncContainerId`| The third-party ID sync container that you want to use in Audience Manager.|
+| `com_adobe_identity.idSyncContainerId`| The third-party ID sync container that you want to use in Audience Manager. For this ID sync container to work, you must set `com_adobe_audience_manager.enabled` to `true`. Otherwise, the Audience Manager service is disabled. |
 | `com_adobe_target.enabled`| Defines whether the event data is sent to Adobe Target. |
 | `com_adobe_target.propertyToken`| The token for the Adobe Target destination property.|
-| `com_adobe_audience_manager`| Defines whether the event data is sent to Audience Manager. |
+| `com_adobe_audience_manager.enabled`| Defines whether the event data is sent to the Audience Manager service. |
 | `com_adobe_launch_ssf`| Defines whether the event data is sent to server-side forwarding. |
 
 ### Send configuration overrides via the Web SDK `configure` command {#send-configure}
@@ -192,7 +181,6 @@ alloy("configure", {
       reportSuites: ["ujslconfigoverrides2"],
     },
     com_adobe_identity: {
-      enabled: false,
       idSyncContainerId: 34373,
     },
     com_adobe_target: {
@@ -222,10 +210,9 @@ alloy("configure", {
 | `edgeConfigOverrides.com_adobe_experience_platform.com_adobe_edge_ajo.enabled`| Defines whether the event data is sent to Adobe Journey Optimizer service or not. |
 | `com_adobe_analytics.enabled`| Defines whether the event data is sent to Adobe Analytics or not. |
 | `com_adobe_analytics.reportSuites[]`| An array of strings that determines to which report suites you want to send Analytics data.|
-| `com_adobe_identity.enabled`|  |
-|`com_adobe_identity.idSyncContainerId`| The third-party ID sync container that you want to use in Audience Manager.|
+| `com_adobe_identity.idSyncContainerId`| The third-party ID sync container that you want to use in Audience Manager. For this ID sync container to work, you must set `com_adobe_audience_manager.enabled` to `true`. Otherwise, the Audience Manager service is disabled. |
 | `com_adobe_target.enabled`| Defines whether the event data is sent to Adobe Target. |
 | `com_adobe_target.propertyToken`| The token for the Adobe Target destination property.|
-| `com_adobe_audience_manager`| Defines whether the event data is sent to Audience Manager. |
+| `com_adobe_audience_manager.enabled`| Defines whether the event data is sent to the Audience Manager service. |
 | `com_adobe_launch_ssf`| Defines whether the event data is sent to server-side forwarding. |
 
