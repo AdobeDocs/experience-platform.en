@@ -1,8 +1,9 @@
 ---
-title: Monitoring Significant Changes and Audience Forecasting
+title: Monitoring Significant Changes and Audience Forecasting with AI Assistant
 description: Learn how to use AI Assistant to monitor significant changes and forecast audiences in Adobe Experience Platform.
+badge: Alpha
 ---
-# Monitoring Significant Changes and Audience Forecasting
+# Monitoring significant changes and audience forecasting with AI Assistant
 
 >[!AVAILABILITY]
 >
@@ -114,7 +115,7 @@ Refer to the following tables for example queries that illustrate how AI Assista
 
 ## Additional information
 
-### What does "significantly" mean?
+### Understanding the "significant change" threshold
 
 You can specify a specific percentage when querying AI Assistant for information regarding significant changes. If you do not provide a specific percentage, then AI Assistant will reference a predefined set of thresholds to determine what qualifies as a significant change. The default thresholds are based on the size of a given audience. Refer to the following table for information on what constitutes a significant change, based on audience size:
 
@@ -125,7 +126,7 @@ You can specify a specific percentage when querying AI Assistant for information
 | 100k to 500k | 25% or greater |
 | Less than 100k | 30% or greater |
 
-### How does AI Assistant interpret timelines?
+### Generic timelines and specific dates
 
 AI Assistant supports both specific and generic time-based comparisons for audience sizes, interpreting them based on the context provided in the query.
 
@@ -175,9 +176,9 @@ When specific dates are mentioned, AI Assistant compares the audience sizes on t
 
 It may take 24 to 48 hours for AI Assistant to refresh data from Real-Time Customer Data Platform. Hence, for questions referencing "yesterday", AI Assistant interprets this as one day before the most recent data it has is available.
 
-## Out of scope
+## Proposed features
 
-The following capabilities are currently out of scope and are planned for future updates of AI Assistant:
+The following capabilities are currently not supported, but are being considered for future updates of AI Assistant:
 
 ### Advanced root cause analysis
 
