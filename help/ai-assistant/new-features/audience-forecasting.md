@@ -8,15 +8,15 @@ description: Learn how to use AI Assistant to monitor significant changes and fo
 >
 >This feature is in Alpha and may not be available to your organization. To participate in the Alpha program and access this feature, contact your Adobe Account Team.
 
-In today's data-driven marketing landscape, timely and accurate insights are essential. 
+In today's data-driven marketing landscape, timely and accurate insights are essential. Whether you are a business user or in marketing operations, you need the ability to consistently interact with your audiences and make swift and impactful adjustments founded on clear insights. In order to maintain alignment or achieve your business goals, you must have the actionable information needed to drive effective campaigns and optimize resources.
 
-With AI Assistant for Adobe Experience Platform, you can monitor significant changes and forecast growth for your audience and dataset sizes. Use AI Assistant to 
+You can use AI Assistant for Adobe Experience Platform to monitor significant changes and provide growth forecasts for your audience and dataset sizes. You can then use this information to ensure the integrity of your audience data and offer forward-looking projections to support data-informed decision-making.
 
-You can use AI Assistant to monitor significant changes and forecast the growth of your audience and dataset sizes. Designed for business use cases and marketing operations, you can use AI Assistant to ensure the integrity of your audience data and identify forward-looking projections to support data-informed decision-making.
+Read this document to learn how you can monitor significant changes and forecast audience growth and fluctuations using AI Assistant.
 
-This release supports professionals who interact with audiences daily, enabling them to make swift, impactful adjustments based on clear insights and to maintain alignment with business goals. Whether monitoring audience size fluctuations or projecting future growth, the AI Assistant equips users with actionable information to drive effective campaigns and optimize resources.
+## Key terminology and definitions {#key-terminology-and-definitions}
 
-## Key terminology and definitions
+Refer to the following table for a list of important terminology and their corresponding definitions.
 
 | Terminology | Definition |
 | --- | --- |
@@ -30,7 +30,7 @@ This release supports professionals who interact with audiences daily, enabling 
 
 {style="table-layout:auto"}
 
-## Who is this for?
+## Use case examples {#use-case-examples}
 
 AI Assistant's capability to monitor significant changes and forecast audiences can be particularly helpful for the following use cases:
 
@@ -127,7 +127,29 @@ You can specify a specific percentage when querying AI Assistant for information
 
 ### How does AI Assistant interpret timelines?
 
-## Frequently asked questions
+AI Assistant supports both specific and generic time-based comparisons for audience sizes, interpreting them based on the context provided in the query.
+
+>[!BEGINTABS]
+
+>[!TAB Generic timelines]
+
+Generic timelines refer to queries that use language such as "this week" or "last week". If you ask AI Assistant a question such as, "Which audiences changed by more than 20% in the last week?", then AI Assistant will calculate and compare the **average audience** size over the specified period. 
+
+Use this approach for a broader view of audience changes over time, allowing you to better understand trends within weekly or monthly intervals.
+
+>[!TAB Specific dates]
+
+If your question references a specific date, then AI Assistant will compare the **exact audience sizes** on each of your provided dates.
+
+Use this precise comparison to analyze changes between specific points in time and gain clarity on how audience size can evolve on particular days.
+
+>[!ENDTABS]
+
+You can take advantage of this flexibility to better understand audience dynamics over both broad and precise time frames. Whether you are tracking general trends or examining exact shifts between specific dates, you can use AI Assistant's adaptive mechanism to retrieve the most relative comparison for your query.
+
+## Frequently asked questions {#faq}
+
+Read this section for answers to frequently asked questions regarding monitoring significant changes and audience forecasting with AI Assistant.
 
 ### How much historical data can I look at to see audience size increases or decreases?
 
