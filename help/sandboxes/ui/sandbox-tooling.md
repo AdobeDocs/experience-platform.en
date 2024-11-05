@@ -144,7 +144,9 @@ The [!UICONTROL Package object and dependencies] page provides a list of all ass
 
 >[!NOTE]
 >
->Dependent objects can be replaced with existing ones in the target sandbox, which allows you to reuse existing objects rather than creating a new version. For example, when you import a package including schemas, you can reuse existing custom field group and identity namespaces in the target sandbox. Alternatively, when you import a package including Journeys, you can reuse existing segments in the target sandbox.
+>Dependent objects can be replaced with existing ones in the target sandbox, which allow you to reuse existing objects rather than creating a new version. For example, when you import a package including schemas, you can reuse existing custom field group and identity namespaces in the target sandbox. Alternatively, when you import a package including Journeys, you can reuse existing segments in the target sandbox.
+>
+>Sandbox tooling does not currently support updating or overwriting existing objects. You may choose to create a new object, or continue to use the existing object without modifications.
 
 To use an existing object, select the pencil icon beside the dependent object.
 
