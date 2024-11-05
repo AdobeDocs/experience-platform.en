@@ -8,6 +8,10 @@ exl-id: 33995927-8f5e-44c5-b809-4db8706bbd34
 ---
 # Create a [!DNL Zoho CRM] base connection using the [!DNL Flow Service] API
 
+>[!IMPORTANT]
+>
+>The [!DNL Zoho CRM] source will be deprecated at the end of May 2025. As an alternative, you can use the [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) source.
+
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
 This tutorial walks you through the steps to create a base connection for [!DNL Zoho CRM] using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
