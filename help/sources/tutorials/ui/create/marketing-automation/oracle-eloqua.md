@@ -5,6 +5,10 @@ exl-id: c4431d85-5948-4122-9a99-dbacdde5a09f
 ---
 # Create an [!DNL Oracle Eloqua] source connection using Platform UI
 
+>[!IMPORTANT]
+>
+>The [!DNL Oracle Eloqua] source will be deprecated at the end of May 2025. As an alternative, you can use the [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) source.
+
 This tutorial provides steps for creating an [!DNL Oracle Eloqua] source connection using the Adobe Experience Platform user interface.
 
 ## Getting started
