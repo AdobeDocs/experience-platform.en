@@ -7,7 +7,7 @@ exl-id: 866e408f-6e0b-4e81-9ad8-9d74c485c89a
 
 >[!IMPORTANT]
 >
->The [!DNL Oracle Eloqua] source will be deprecated at the end of May 2025. As an alternative, you can use the [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) source.
+>The [!DNL Oracle Eloqua] source will be deprecated at the end of May 2025. You can use the [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) in place of the [!DNL Oracle Eloqua] source.
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
