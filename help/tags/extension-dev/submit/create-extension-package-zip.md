@@ -2,7 +2,7 @@
 title: Create an Extension Package Zip File
 description: Learn how to prepare an extension package zip file.
 ---
-# Create an Extension Package Zip File
+# Create an extension package zip file.
 
 >[!NOTE]
 >
