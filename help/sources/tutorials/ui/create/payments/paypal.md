@@ -10,7 +10,7 @@ exl-id: bbd3f634-cb28-45d8-9b7b-ed3873101882
 
 >[!IMPORTANT]
 >
->The [!DNL PayPal] source will be deprecated at the end of May 2025. As an alternative, you can use the [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) source.
+>The [!DNL PayPal] source will be deprecated at the end of May 2025. You can use the [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) in place of the [!DNL PayPal] source.
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL PayPal] source connector using the Platform user interface.
 
