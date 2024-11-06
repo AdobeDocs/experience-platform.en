@@ -33,6 +33,16 @@ role: User,Developer
         - [Engineer features for ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
         - [Export data to ML environments](data-distiller/ml-feature-pipelines/export-data.md)
         - [AI/ML data pipeline enrichment end-to-end workflow](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
+- Data Distiller statistics {#advanced-statistics}
+    - [Overview](advanced-statistics/overview.md)
+    - [Feature engineering](advanced-statistics/feature-engineering.md)
+    - [Models](advanced-statistics/models.md)
+    Implement models {#implement-models}
+        - [Implement models](advanced-statistics/implement-models/implement-models.md)
+        - [Regression](advanced-statistics/implement-models/regression.md)
+        - [Classification](advanced-statistics/implement-models/classification.md)
+        - [Clustering](advanced-statistics/implement-models/clustering.md)
+    - [Feature transformation](advanced-statistics/feature-transformation.md)
 - Data Distiller audiences {#data-distiller-audiences}
     - [Build external audiences using SQL](data-distiller-audiences/overview.md)
 - Examples {#use-cases}
@@ -70,6 +80,7 @@ role: User,Developer
     - [SSL modes](./clients/ssl-modes.md)
     - [Aqua Data Studio](clients/aqua-data-studio.md)
     - [DbVisualizer](./clients/dbvisulaizer.md)
+    - [GitHub Copilot](./clients/github-copilot.md)
     - [Jupyter Notebook](clients//jupyter-notebook.md)
     - [Looker](clients/looker.md)
     - [Postico](clients/postico.md)
