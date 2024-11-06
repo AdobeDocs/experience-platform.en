@@ -106,7 +106,7 @@ Create MODEL modelname OPTIONS(
 
 **Parameters**
 
-| Parameter                    | Description                                                                                                                                                              | Default value  | Possible Values                          |                                                                                                                                                                  | Default value  | Possible Values                          |
+| Parameter                    | Description                                                                                                                                                              | Default value  | Possible Values                          |
 |-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|------------------------------------------|
 | `MAX_ITER`                    | The maximum number of iterations the algorithm runs.                                                                                                                | 20             | (>= 0)                                   |
 | `OPTIMIZER`                   | The optimizer or inference algorithm used to estimate the LDA model. Supported options are `"online"` (Online Variational Bayes) and `"em"` (Expectation-Maximization). | "online"       | `online`, `em`                           |
@@ -121,6 +121,8 @@ Create MODEL modelname OPTIONS(
 | `SUBSAMPLING_RATE`            | For the `online` optimizer: the fraction of the corpus sampled and used in each iteration of mini-batch gradient descent, in the range `(0, 1]`.                        | 0.05           | `(0, 1]`                                   |
 | `TOPIC_CONCENTRATION`         | Concentration parameter ("beta" or "eta") for the prior placed on topics' distributions over terms.                                                                     | Automatic      | (>= 0)                                    |
 | `TOPIC_DISTRIBUTION_COL`      | Output column with estimates of the topic mixture distribution for each document.                                                                                       | NOT SET        | Any string                                 |
+
+{style="table-layout:auto"}
 
 **Example**
 
