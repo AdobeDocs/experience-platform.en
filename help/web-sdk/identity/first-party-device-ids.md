@@ -35,7 +35,10 @@ First-party device IDs ([!DNL FPIDs]) track visitors by using first-party cookie
 
 Once an [!DNL FPID] cookie is set, its value can be fetched and sent to Adobe as event data is collected. Collected [!DNL FPIDs] are used as seeds to generate [!DNL ECIDs], which continue to be the primary identifiers in Adobe Experience Cloud applications. 
 
-To send an [!DNL FPID] for a website visitor to the Edge Network, you must include the [!DNL FPID] in the `identityMap` for that visitor. See the section further down in this document on [using FPIDs in `identityMap`](#identityMap) for more information.
+There are two ways in which you can send an [!DNL FPID] for a website visitor to the Edge Network:
+
+* You can configure a CNAME for your Web SDK instance and [configure your datastream](#setting-cookie-datastreams) to include the name of your FPID cookie.
+* You can [include the [!UICONTROL FPID] in the `identityMap`](#identityMap)
 
 ### First-party device ID formatting requirements {#formatting-requirements}
 
