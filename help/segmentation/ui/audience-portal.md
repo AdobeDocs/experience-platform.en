@@ -238,7 +238,7 @@ The **[!UICONTROL Evaluate audiences on demand]** popover appears, displaying th
 
 ![The audiences that can be evaluated using flexible audience evaluation are displayed.](../images/ui/audience-portal/evaluate-audiences-modal.png)
 
-After confirming the correct audiences are listed, proceed with the request, and the flexible audience evaluation will begin. You can view the status of this audience evaluation in the [evaluation job monitoring view](../../dataflows/ui/monitor-audiences.md#evaluation-job-details).
+After confirming the correct audiences are listed, you can proceed with the request, and the flexible audience evaluation will begin. You can view the status of this audience evaluation in the [evaluation job monitoring view](../../dataflows/ui/monitor-audiences.md#evaluation-job-details).
 
 >[!NOTE]
 >
