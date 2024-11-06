@@ -20,9 +20,9 @@ hidefromtoc: yes
 | [!UICONTROL Identifier] | `identifier` | Array of [[!UICONTROL Identifier]](../../data-types/healthcare/identifier.md) | An identifier for the patient. |
 | [!UICONTROL Patient Link Details] | `link` | Array of objects | A link to a patient or related person's resource that concerns the same individual. See the [section below](#link) for more information. |
 | [!UICONTROL Managing Organization] | `managingOrganization` | [[!UICONTROL Reference]](../../data-types/healthcare/reference.md) | The custodial organization of the patient's record. |
-| [!UICONTROL Marital Status] | `maritalStatus` | [[!UICONTROL Codeable concept]](../../data-types/healthcare/codeable-concept.md) | The marital status of the patient. |
+| [!UICONTROL Marital Status] | `maritalStatus` | [[!UICONTROL Codeable Concept]](../../data-types/healthcare/codeable-concept.md) | The marital status of the patient. |
 | [!UICONTROL Name] | `name` | Array of [[!UICONTROL Human name]](../../data-types/healthcare/human-name.md) | The name associated with the patient. |
-| [!UICONTROL Contact Details] | `telecom` | Array of [[!UICONTROL ContactPoint]](../../data-types/healthcare/contact-point.md) | A contact detail (e.g. a telephone number or an email address) by which the patient may be contacted. |
+| [!UICONTROL Contact Details] | `telecom` | Array of [[!UICONTROL Contact Point]](../../data-types/healthcare/contact-point.md) | A contact detail (e.g. a telephone number or an email address) by which the patient may be contacted. |
 | [!UICONTROL Is Active] | `active` | Boolean | Indicates whether the patient's record is in active use. |
 | [!UICONTROL Birth Date] | `birthDate` | Date | The date of birth for the patient. |
 | [!UICONTROL Deceased Boolean] | `deceasedBoolean` | Boolean | Indicates if the patient is deceased or not. |
@@ -46,7 +46,7 @@ For more details on the field group, refer to the public XDM repository:
 
 | Display Name | Property | Data type | Description |
 | --- | --- | --- | --- |
-| [!UICONTROL Language] | `language` | [[!UICONTROL Codeable concept]](../../data-types/healthcare/codeable-concept.md) | The language which can be used to communicate with the person about his or her health. |
+| [!UICONTROL Language] | `language` | [[!UICONTROL Codeable Concept]](../../data-types/healthcare/codeable-concept.md) | The language which can be used to communicate with the person about his or her health. |
 | [!UICONTROL Is Preferred Language] | `preferred`| Boolean | Indicates if the language is their preferred language or not. |
 
 {style="table-layout:auto"}
@@ -60,10 +60,10 @@ For more details on the field group, refer to the public XDM repository:
 | Display Name | Property | Data type | Description |
 | --- | --- | --- | --- |
 | [!UICONTROL Contact Address] | `address` | [[!UICONTROL Address]](../../data-types/healthcare/address.md) | The address of the contact person. |
-| [!UICONTROL Contact Name] | `name`| [[!UICONTROL Human name]](../../data-types/healthcare/human-name.md) | The name of the contact person. |
+| [!UICONTROL Contact Name] | `name`| [[!UICONTROL Human Name]](../../data-types/healthcare/human-name.md) | The name of the contact person. |
 | [!UICONTROL Contact Organization] | `organization` | [[!UICONTROL Reference]](../../data-types/healthcare/reference.md) | The organization that is associated with the contact person. |
 | [!UICONTROL Contact Period] | `period`| [[!UICONTROL Period]](../../data-types/healthcare/period.md) | The time period when the contact was or is in use. |
-| [!UICONTROL Relationship'] | `relationship` | [[!UICONTROL Codeable concept]](../../data-types/healthcare/codeable-concept.md) | The relationship between the patient and the contact person. |
+| [!UICONTROL Relationship'] | `relationship` | [[!UICONTROL Codeable Concept]](../../data-types/healthcare/codeable-concept.md) | The relationship between the patient and the contact person. |
 | [!UICONTROL Contact Details] | `telecom`| Array of objects | The contact details for the contact person. See the [section below](#telecom) for more information. |
 | [!UICONTROL Gender] | `gender` | String | The gender identity of the person. The value of this property must be equal to one of the following known enum values. <li> `female` </li> <li> `male` </li> <li> `other` </li> <li> `unknown`</li> |
 
