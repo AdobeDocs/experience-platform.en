@@ -205,7 +205,7 @@ role: Developer
     * [Codeable Reference](./data-types/healthcare/codeable-reference.md)
     * [Coding](./data-types/healthcare/coding.md)
     * [Contact Point](./data-types/healthcare/contact-point.md)
-    * [Dosage](./data-types/healthcare/dosage)
+    * [Dosage](./data-types/healthcare/dosage.md)
     * [Duration](./data-types/healthcare/duration.md)
     * [Extended Contact Details](./data-types/healthcare/extended-contact-detail.md)
     * [Human Name](./data-types/healthcare/human-name.md)
