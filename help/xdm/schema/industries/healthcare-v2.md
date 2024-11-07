@@ -45,7 +45,7 @@ The following table outlines the recommended classes and schema field groups for
       </td>
     </tr>
     <tr>
-      <td><a href="../../field-groups/medication/healthcare-medicationV2.md">Medication</a></td>
+      <td><a href="../../field-groups/medication/healthcare-medication-v2.md">Medication</a></td>
       <td>
         <li><a href="../../classes/medication.md">Medication</a></li>
       </td>
@@ -124,7 +124,7 @@ The following table outlines the recommended classes and schema field groups for
       </td>
     </tr>
       <tr>
-      <td><a href="../../field-groups/medication/healthcare-medicationV2.md">Medication</a></td>
+      <td><a href="../../field-groups/medication/healthcare-medication-v2.md">Medication</a></td>
       <td>
         <li><a href="../../classes/medication.md">Medication</a></li>
       </td>

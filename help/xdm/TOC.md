@@ -21,7 +21,7 @@ role: Developer
     * [Retail](./schema/industries/retail.md)
     * [Financial services](./schema/industries/financial.md)
     * [Healthcare](./schema/industries/healthcare.md)
-    * [Healthcare V2](./schema/industries/healthcareV2.md)
+    * [Healthcare V2](./schema/industries/healthcare-v2.md)
     * [Telecommunications](./schema/industries/telecom.md)
     * [Travel and hospitality](./schema/industries/travel-hospitality.md)
   * [XDM field dictionary](schema/field-dictionary.md)
@@ -107,7 +107,7 @@ role: Developer
     * [Healthcare Medication Dispense](./field-groups/medication/healthcare-medication-dispense.md)
     * [Healthcare Medication Request](./field-groups/medication/healthcare-medication-request.md)
     * [Healthcare Medication](./field-groups/medication/healthcare-medication.md)
-    * [Healthcare Medication V2](./field-groups/medication/healthcare-medicationV2.md)
+    * [Healthcare Medication V2](./field-groups/medication/healthcare-medication-v2.md)
   * Plan {#plan}
     * [Healthcare Coverage](./field-groups/plan/healthcare-coverage.md)
     * [Healthcare Plan Details](./field-groups/plan/healthcare-plan-details.md)

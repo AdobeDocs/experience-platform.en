@@ -45,7 +45,7 @@ For more details on the field group, refer to the public XDM repository:
 | Display Name | Property | Data type | Description |
 | --- | --- | --- | --- |
 | [!UICONTROL Detail Codeable Concept] | `detailCodeableConcept` | [[!UICONTROL Codeable Concept]](../../data-types/healthcare/codeable-concept.md) | The target code to be achieved to signify the fulfillment of the goal. |
-| [!UICONTROL Detail Quantity] | `detailQuantity`| [[!UICONTROL Quantity]](../../data-types/healthcare/quantity) | The target quantity to be achieved to signify the fulfillment of the goal. |
+| [!UICONTROL Detail Quantity] | `detailQuantity`| [[!UICONTROL Quantity]](../../data-types/healthcare/quantity.md) | The target quantity to be achieved to signify the fulfillment of the goal. |
 | [!UICONTROL Detail Range] | `detailRange`| [[!UICONTROL Range]](../../data-types/healthcare/range.md) | The target range to be achieved to signify the fulfillment of the goal. |
 | [!UICONTROL Detail Ratio] | `detailRatio`| [[!UICONTROL Ratio]](../../data-types/healthcare/ratio.md) | The target ratio to be achieved to signify the fulfillment of the goal. |
 | [!UICONTROL Measure] | `measure`| [[!UICONTROL Codeable Concept]](../../data-types/healthcare/codeable-concept.md) | The parameter that's value is being tracked. |

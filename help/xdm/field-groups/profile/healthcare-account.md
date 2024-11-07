@@ -9,7 +9,7 @@ hidefromtoc: yes
 
 [!UICONTROL Account] is a standard schema field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) and the [[!DNL Provider class]](../../classes/provider.md). It provides a single object-type field `healthcareAccount` which is used to record transactions, services, and other financial information related to healthcare services provided to a patient or a group of individuals (such as for an insurance policy or billing purposes).
 
-![Field group structure](../../images/field-groups/account.png)
+![Field group structure](../../images/field-groups/healthcare-account/account.png)
 
 | Display Name | Property | Data type | Description |
 | --- | --- | --- | --- |
@@ -40,7 +40,7 @@ For more details on the field group, refer to the public XDM repository:
 
 `balances` is provided as an array of objects. The structure of each object is described below.
 
-![balances structure](../../images/field-groups/healthcare-account/balances.png)
+![balances structure](../../images/field-groups/healthcare-account/balance.png)
 
 | Display Name | Property | Data type | Description |
 | --- | --- | --- | --- |
