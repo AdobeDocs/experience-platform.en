@@ -82,7 +82,7 @@ After adding a custom rule, select **[!UICONTROL Save]** to add the rule to your
 
 ## [!UICONTROL Exclude] {#exclude-block}
 
-The **[!UICONTROL Exclude]** block type allows you to exclude specified sub-audiences or attributes from your new larger audience.
+The **[!UICONTROL Exclude]** block type allows you to exclude a specified sub-audience or attributes from your new larger audience.
 
 To add an **[!UICONTROL Exclude]** block, select the **+** icon, followed by **[!UICONTROL Exclude]**.
 
@@ -94,7 +94,7 @@ The **[!UICONTROL Exclude]** block is added. When this block is selected, detail
 
 ### Exclude by audience {#exclude-audience}
 
-If you exclude by audience, you can select which audiences you want to exclude by selecting **[!UICONTROL Add Audience]**.
+If you exclude by audience, you can select which audience you want to exclude by selecting **[!UICONTROL Add Audience]**.
 
 ![The [!UICONTROL Add audience] button is selected, which lets you choose which audience you want to exclude.](../images/ui/audience-composition/add-excluded-audience.png)
 
@@ -102,7 +102,7 @@ If you exclude by audience, you can select which audiences you want to exclude b
 >
 >Only **published** audiences created using Segment Builder can be used. Audiences created using Audience Composition and externally generated audiences are **not** available.
 
-A list of audiences appears. Select **[!UICONTROL Add]** to add the audiences you want to exclude to your exclude block.
+A list of audiences appears. Select **[!UICONTROL Add]** to add the audience you want to exclude to your exclude block.
 
 ![A list of audiences appears. You can select which audience you want to add from this dialog.](../images/ui/audience-composition/select-audience.png)
 
