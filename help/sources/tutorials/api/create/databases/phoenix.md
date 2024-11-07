@@ -7,7 +7,7 @@ exl-id: b69d9593-06fe-4fff-88a9-7860e4e45eb7
 
 >[!IMPORTANT]
 >
->The [!DNL Phoenix] source will be deprecated at the end of May 2025. You can use the [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) in place of the [!DNL Phoenix] source.
+>The [!DNL Phoenix] source will be deprecated at the end of May 2025.
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
