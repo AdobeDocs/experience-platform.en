@@ -7,7 +7,7 @@ exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
 
 >[!IMPORTANT]
 >
->The [!DNL Salesforce Marketing Cloud] source will be deprecated at the end of May 2025. As an alternative, you can use the [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) source.
+>The [!DNL Salesforce Marketing Cloud] source will be deprecated at the end of May 2025. You can use the [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) in place of the [!DNL Salesforce Marketing Cloud] source.
 
 This tutorial provides steps on how to connect your [!DNL Salesforce Marketing Cloud] account to Adobe Experience Platform through the UI.
 
