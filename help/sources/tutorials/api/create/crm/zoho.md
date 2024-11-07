@@ -10,7 +10,7 @@ exl-id: 33995927-8f5e-44c5-b809-4db8706bbd34
 
 >[!IMPORTANT]
 >
->The [!DNL Zoho CRM] source will be deprecated at the end of June 2025. You can use the [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) in place of the [!DNL Zoho CRM] source.
+>The [!DNL Zoho CRM] source will be deprecated at the end of June 2025.
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
