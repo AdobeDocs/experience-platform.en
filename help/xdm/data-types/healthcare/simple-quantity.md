@@ -3,6 +3,7 @@ title: Simple Quantity Data Type
 description: Learn about the Simple Quantity Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
+hidefromtoc: yes
 ---
 # [!UICONTROL Simple Quantity] data type
 
@@ -13,11 +14,9 @@ hide: yes
 | Display Name | Property | Data type | Description |
 | --- | --- | --- | --- |
 | [!UICONTROL Code] | `code` | String | The coded form of the unit. |
-| [!UICONTROL System] | `system` | String(URI) | The system that defines coded unit form, in URI format. |
+| [!UICONTROL System] | `system` | String | The system that defines coded unit form, represented as a URI. |
 | [!UICONTROL Unit] | `unit` | String | The representation of the unit. |
 | [!UICONTROL Value] | `value` | Double | The numerical value. |
-
-{style="table-layout:auto"}
 
 For more details on the data type, refer to the public XDM repository:
 

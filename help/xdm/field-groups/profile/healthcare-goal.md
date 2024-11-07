@@ -7,7 +7,7 @@ hidefromtoc: yes
 ---
 # [!UICONTROL Goal] schema field group
 
-[!UICONTROL Goal] is a standard schema field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) and the [[!DNL Provider class]](../../classes/provider.md). It provides a single object-type field `healthcareGoal` which describes the intended objective(s) for a patient, group, or organization care. Examples include weight loss, restoring an activity of daily living, obtaining herd immunity via immunization, meeting a process improvement objective, etc 
+[!UICONTROL Goal] is a standard schema field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) and the [[!DNL Provider class]](../../classes/provider.md). It provides a single object-type field `healthcareGoal` which describes the intended objective(s) for a patient, group, or organization care.
 
 ![Field group structure](../../images/field-groups/healthcare-goal/goal.png)
 
@@ -28,10 +28,8 @@ hidefromtoc: yes
 | [!UICONTROL Continous] | `continous` | Boolean | Indicates if after meeting the goal ongoing activity is needed to sustain the goal objective. |
 | [!UICONTROL Lifecycle Status] | `lifecycleStatus` | String | The status of the goal's lifecycle. The value of this property must be equal to one of the following known enum values. <li> `proposed` </li> <li> `planned` </li> <li> `accepted` </li> <li> `active` </li> <li> `on-hold` </li> <li> `completed` </li> <li> `cancelled` </li> <li> `entered-in-error` </li> <li> `rejected` </li> |
 | [!UICONTROL Start Date] | `startDate` | Date | The date after which the goal should begin being pursued. |
-| [!UICONTROL Start Date] | `statusDate` | Date | Identifies when the status was created. |
+| [!UICONTROL Status Date] | `statusDate` | Date | Identifies when the status was created. |
 | [!UICONTROL Status Reason] | `statusReason` | String | Captures the reason for the current status. |
-
-{style="table-layout:auto"}
 
 For more details on the field group, refer to the public XDM repository:
 
@@ -46,14 +44,12 @@ For more details on the field group, refer to the public XDM repository:
 
 | Display Name | Property | Data type | Description |
 | --- | --- | --- | --- |
-| [!UICONTROL Detail Codeable Concept] | `detailCodeableConcept` | [[!UICONTROL Codeable Concept]](../../data-types/healthcare/codeable-concept.md) | ?? |
-| [!UICONTROL Detail Quantity] | `detailQuantity`| [[!UICONTROL Quantity]](../../data-types/healthcare/quantity) | ?? |
-| [!UICONTROL Detail Range] | `detailRange`| [[!UICONTROL Range]](../../data-types/healthcare/range.md) | ?? |
-| [!UICONTROL Detail Ratio] | `detailRatio`| [[!UICONTROL Ratio]](../../data-types/healthcare/ratio.md) | ?? |
+| [!UICONTROL Detail Codeable Concept] | `detailCodeableConcept` | [[!UICONTROL Codeable Concept]](../../data-types/healthcare/codeable-concept.md) | The target code to be achieved to signify the fulfillment of the goal. |
+| [!UICONTROL Detail Quantity] | `detailQuantity`| [[!UICONTROL Quantity]](../../data-types/healthcare/quantity) | The target quantity to be achieved to signify the fulfillment of the goal. |
+| [!UICONTROL Detail Range] | `detailRange`| [[!UICONTROL Range]](../../data-types/healthcare/range.md) | The target range to be achieved to signify the fulfillment of the goal. |
+| [!UICONTROL Detail Ratio] | `detailRatio`| [[!UICONTROL Ratio]](../../data-types/healthcare/ratio.md) | The target ratio to be achieved to signify the fulfillment of the goal. |
 | [!UICONTROL Measure] | `measure`| [[!UICONTROL Codeable Concept]](../../data-types/healthcare/codeable-concept.md) | The parameter that's value is being tracked. |
-| [!UICONTROL Detail Boolean] | `detailBoolean`| Boolean | ?? |
-| [!UICONTROL Detail Integer] | `detailInteger`| Integer | ?? |
-| [!UICONTROL Detail String] | `detailString`| String | ?? |
+| [!UICONTROL Detail Boolean] | `detailBoolean`| Boolean | Indicates the fulfillment of the goal. |
+| [!UICONTROL Detail Integer] | `detailInteger`| Integer | The target number to be achieved to signify the fulfillment of the goal. |
+| [!UICONTROL Detail String] | `detailString`| String | The target value to be achieved to signify the fulfillment of the goal. |
 | [!UICONTROL Due Date] | `dueDate`| Date | The date by which the target should be met. |
-
-{style="table-layout:auto"}

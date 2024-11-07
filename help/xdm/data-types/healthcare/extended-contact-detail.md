@@ -3,6 +3,7 @@ title: Extended Contact Detail Data Type
 description: Learn about the Extended Contact Detail Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
+hidefromtoc: yes
 ---
 # [!UICONTROL Extended Contact Detail] data type
 
@@ -15,11 +16,9 @@ hide: yes
 | [!UICONTROL Address] | `address` | [[!UICONTROL Address]](../healthcare/address.md) | The address of the contact. |
 | [!UICONTROL Name] |`name` | Array of [[!UICONTROL Human Name]](../healthcare/human-name.md) | The name(s) of the individual(s) to contact. |
 | [!UICONTROL Organization] | `organization` | [[!UICONTROL Reference]](../healthcare/reference.md) | The organization that handles/monitors the contact details. |
-| [!UICONTROL Period] |`period` | [[!UICONTROL Period]](../healthcare/period.md) | The period that the contact was valid for usage. |
+| [!UICONTROL Period] |`period` | [[!UICONTROL Period]](../healthcare/period.md) | The period that the contact is or was valid for usage. |
 | [!UICONTROL Purpose] |`purpose` | [[!UICONTROL Codeable Concept]](../healthcare/codeable-concept.md) | The type of contact. |
 | [!UICONTROL Telecom] |`telecom` | Array of [[!UICONTROL Contact Point]](../healthcare/contact-point.md) | The contact details. |
-
-{style="table-layout:auto"}
 
 For more details on the data type, refer to the public XDM repository:
 

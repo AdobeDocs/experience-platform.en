@@ -3,6 +3,7 @@ title: Codeable Reference Data Type
 description: Learn about the Codeable Reference Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
+hidefromtoc: yes
 ---
 # [!UICONTROL Codeable Reference] data type
 
@@ -14,8 +15,6 @@ hide: yes
 | --- | --- | --- | --- |
 | [!UICONTROL Concept] | `concept` | [[!UICONTROL Codeable Concept]](../healthcare/codeable-concept.md) | A reference to a concept (by class). |
 | [!UICONTROL Reference] |`reference` | [[!UICONTROL Reference]](../healthcare/reference.md) | A reference to a resource. |
-
-{style="table-layout:auto"}
 
 For more details on the data type, refer to the public XDM repository:
 

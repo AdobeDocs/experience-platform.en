@@ -3,6 +3,7 @@ title: Codeable Concept Data Type
 description: Learn about the Codeable Concept Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
+hidefromtoc: yes
 ---
 # [!UICONTROL Codeable Concept] data type
 
@@ -13,9 +14,7 @@ hide: yes
 | Display Name | Property | Data type | Description |
 | --- | --- | --- | --- |
 | [!UICONTROL Coding] | `coding` | Array of [[!UICONTROL Coding]](../healthcare/coding.md) | Code defined by a terminology system. |
-| [!UICONTROL Text] |`text` | String | Plain text representation of the concept. |
-
-{style="table-layout:auto"}
+| [!UICONTROL Text] |`text` | String | The plain text representation of the concept. |
 
 For more details on the data type, refer to the public XDM repository:
 

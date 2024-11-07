@@ -3,19 +3,18 @@ title: Availability Data Type
 description: Learn about the Availability Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
+hidefromtoc: yes
 ---
 # [!UICONTROL Availability] data type
 
-[!UICONTROL Availability] is a standard Experience Data Model (XDM) data type that describes availability data for an {item}. This data type is created as per HL7 FHIR Release 5 specifications.
+[!UICONTROL Availability] is a standard Experience Data Model (XDM) data type that describes availability data for an item. This data type is created as per HL7 FHIR Release 5 specifications.
 
 ![Availability data type structure](../../images/data-types/healthcare/availability/availability.png)
 
 | Display Name | Property | Data type | Description |
 | --- | --- | --- | --- |
-| [!UICONTROL Available Time] | `availableTime` | Array of objects | Times the {item} is available. See the [section below](#available-time) for more information. |
-| [!UICONTROL Not Available Time] |`notAvailableTime` | String | Times the {item} is not available, with a provided reason. See the [section below](#not-available-time) for more information. |
-
-{style="table-layout:auto"}
+| [!UICONTROL Available Time] | `availableTime` | Array of objects | The times the item is available. See the [section below](#available-time) for more information. |
+| [!UICONTROL Not Available Time] |`notAvailableTime` | String | The times the item is not available, with a provided reason. See the [section below](#not-available-time) for more information. |
 
 For more details on the data type, refer to the public XDM repository:
 
@@ -26,7 +25,7 @@ For more details on the data type, refer to the public XDM repository:
 
 `availableTime` is provided as an array of objects. The structure of each object is described below.
 
-![available time structure](../../images/data-types/healthcare/availability/available-time.png)
+![Available time structure](../../images/data-types/healthcare/availability/available-time.png)
 
 | Display Name | Property | Data type | Description |
 | --- | --- | --- | --- |
@@ -39,9 +38,9 @@ For more details on the data type, refer to the public XDM repository:
 
 `notAvailableTime` is provided as an array of objects. The structure of each object is described below.
 
-![not available time structure](../../images/data-types/healthcare/availability/not-available-time.png)
+![Not available time structure](../../images/data-types/healthcare/availability/not-available-time.png)
 
 | Display Name | Property | Data type | Description |
 | --- | --- | --- | --- |
 | [!UICONTROL During] | `during` | [[!UICONTROL Period]](../healthcare/period.md) | The period of time the item stops being available. |
-| [!UICONTROL Description] |`description` | String | The reason for not being available. |
+| [!UICONTROL Description] |`description` | String | The reason for the item not being available. |

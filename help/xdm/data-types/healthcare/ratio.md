@@ -3,6 +3,7 @@ title: Ratio Data Type
 description: Learn about the Ratio Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
+hidefromtoc: yes
 ---
 # [!UICONTROL Ratio] data type
 
@@ -14,8 +15,6 @@ hide: yes
 | --- | --- | --- | --- |
 | [!UICONTROL Denominator] | `denominator` | [[!UICONTROL Simple Quantity]](../healthcare/simple-quantity.md) | The value of the denominator. |
 | [!UICONTROL Numerator] | `numerator` | [[!UICONTROL Quantity]](../healthcare/quantity.md) | The value of the numerator. |
-
-{style="table-layout:auto"}
 
 For more details on the data type, refer to the public XDM repository:
 

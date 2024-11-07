@@ -93,10 +93,10 @@ The following table outlines the recommended classes and schema field groups for
       </td>
     </tr>
     <tr>
-      <td rowspan="7"><strong>Consumer experience for insurance</strong>: Improve digital acquisition and experience among consumers shopping for insurance. Examples include: 
-        <li> When people accessing a page containing general information (such as plans, plan names/tiers, Medicaid, wellness programs, and so on) understand the behavior and what they are looking for to send promotional emails or target them on third-party platforms with ads. 
+      <td rowspan="7"><strong>Consumer experience for insurance</strong>: Improve digital acquisition and experiences among consumers shopping for insurance. Examples include: 
+        <li> Understanding consumer behaviour to send promotional emails or targeted third-party ads to people accessing pages containing general information (such as plans, plan names/tiers, Medicaid, or wellness programs)
         </li> 
-        <li> When people search for heart health and vaccine information can receive vaccine-related info on heart health to create brand awareness or receive requests to schedule vaccines.
+        <li> Sending vaccine-related information on heart heatlh to create brand awarness or requests to schedule vaccines to people searching for heart health and vaccine information.
         </li>
       </td>
       <td><a href="../../field-groups/profile/healthcare-patient.md">Patient</a></td>
@@ -146,7 +146,7 @@ The following table outlines the recommended classes and schema field groups for
       </td>
     </tr>
     <tr>
-      <td rowspan="5"><strong>Enhanced provider experience</strong>: Using provider data from the EMR system serves up an alternative provider based on appointment availability, location, and specialty. <br> <br>Provider search to start with desired availability. Verify that the provider selected is part of the payor network and serve up a cost estimate.
+      <td rowspan="5"><strong>Enhanced provider experience</strong>: Using provider data from the EMR system to suggest alternative providers based on appointment availability, location, and specialty. <br> <br>Improving provider searches to show results with desired availability, verifying that the provider selected is part of the payor network, and providing cost estimates.
       </td>
       <td><a href="../../field-groups/profile/healthcare-patient.md">Patient</a></td>
       <td>

@@ -23,6 +23,7 @@ hidefromtoc: yes
 | [!UICONTROL Encounter] | `encounter` | [[!UICONTROL Reference]](../../data-types/healthcare/reference.md) | The encounter during which the care plan was created. |
 | [!UICONTROL Goal] | `goal` | Array of [[!UICONTROL Reference]](../../data-types/healthcare/reference.md) | The intended objective(s) of carrying out the plan. |
 | [!UICONTROL Identifier] | `identifier` | Array of [[!UICONTROL Identifier]](../../data-types/healthcare/identifier.md) | The business identifiers assigned to this care plan by the performer or other systems which remain constant as the resource is updated and propagates from server to server. |
+| [!UICONTROL Note] | `note` | Array of [[!UICONTROL Annotation]](../../data-types/healthcare/annotation.md) | General notes about the care plan not covered in other attributes. |
 | [!UICONTROL Part Of] | `partOf` | Array of [[!UICONTROL Reference]](../../data-types/healthcare/reference.md) | The larger care plan in which this particular care plan is a component or step. |
 | [!UICONTROL Period] | `period` | [[!UICONTROL Period]](../../data-types/healthcare/period.md) | Indicates when the plan did (or is intended to) come into effect and when it ends. |
 | [!UICONTROL Replaces] | `replaces` | Array of [[!UICONTROL Reference]](../../data-types/healthcare/reference.md) | The completed or terminated care plan whose function is taken over by this care plan. |
@@ -31,12 +32,10 @@ hidefromtoc: yes
 | [!UICONTROL Created] | `created` | DateTime | Represents when this care plan was created in the system, which is often a system-generated date. |
 | [!UICONTROL Description] | `description` | String | A description of the scope and nature of the plan. |
 | [!UICONTROL Instantiates Canonical] | `instantiatesCanonical` | Array of strings | The URL pointing to a FHIR-defined protocol, guideline, questionnaire, or other definition that is adhered to in whole or in part by this plan. |
-| [!UICONTROL Instantiates Uri] | `instantiatesUri` | Array of strings (URI) | The URL pointing to an externally maintained protocol, guideline, questionnaire, or other definition that is adhered to in whole or in part by this plan. |
+| [!UICONTROL Instantiates Uri] | `instantiatesUri` | Array of strings | The URL pointing to an externally maintained protocol, guideline, questionnaire, or other definition that is adhered to in whole or in part by this plan, represented as a URI. |
 | [!UICONTROL Intent] | `intent` | String | The intent of the care plan. The value of this property must be equal to one of the following known enum values. <li> `proposal` </li> <li> `plan` </li> <li> `order` </li> <li> `option` </li> <li> `directive` </li> |
 | [!UICONTROL Status] | `status` | String | The status of the care plan. The value of this property must be equal to one of the following known enum values. <li> `draft` </li> <li> `active` </li> <li> `on-hold` </li> <li> `revoked` </li> <li> `completed` </li> <li> `entered-in-error` </li> <li> `unknown` </li> |
 | [!UICONTROL Title] | `title` | String | The name of the care plan. |
-
-{style="table-layout:auto"}
 
 For more details on the field group, refer to the public XDM repository:
 
@@ -54,5 +53,3 @@ For more details on the field group, refer to the public XDM repository:
 | [!UICONTROL Performed Activity] | `performedActivity` | Array of [[!UICONTROL Codeable Reference]](../../data-types/healthcare/codeable-reference.md) | The results of the activity, such as an appointment or a procedure. |
 | [!UICONTROL Planned Activity Reference] | `plannedActivityReference`| [[!UICONTROL Reference]](../../data-types/healthcare/reference.md) | The details of the proposed activity. |
 | [!UICONTROL Progress] | `progress`| Array of [[!UICONTROL Annotation]](../../data-types/healthcare/annotation.md) | Notes about the adherence, status, or progress of the activity. |
-
-{style="table-layout:auto"}

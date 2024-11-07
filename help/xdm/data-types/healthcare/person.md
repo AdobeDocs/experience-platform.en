@@ -3,6 +3,7 @@ title: Person Data Type
 description: Learn about the Person Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
+hidefromtoc: yes
 ---
 # [!UICONTROL Person] data type
 
@@ -15,7 +16,7 @@ hide: yes
 | [!UICONTROL Address] | `address` | Array of [[!UICONTROL Address]](../healthcare/address.md) | One or more addresses for the person. |
 | [!UICONTROL Communication] | `communication` | Array of objects | A language which may be used to communicate with the person about his or her health. See the [section below](#communication) for more information. |
 | [!UICONTROL Identifier] | `identifier` | Array of [[!UICONTROL Identifier]](../healthcare/identifier.md) | A human identifier for this person. |
-| [!UICONTROL Person Link Details] | `link` | Array of objects | A link to a resource that concerns the same actual person. |
+| [!UICONTROL Person Link Details] | `link` | Array of objects | A link to a resource that concerns the same actual person. See the [section below](#link) for more information. |
 | [!UICONTROL Managing Organization] | `managingOrganization` | [[!UICONTROL Reference]](../healthcare/reference.md) | The organization that is the custodian of the patient record. |
 | [!UICONTROL Marital Status] | `maritalStatus` | [[!UICONTROL Codeable Concept]](../healthcare/codeable-concept.md) | The marital (or civil) status of a person |
 | [!UICONTROL Name] | `name` | Array of [[!UICONTROL Human Name]](../healthcare/human-name.md) | The names associated with a person. |
@@ -25,8 +26,6 @@ hide: yes
 | [!UICONTROL Deceased Indicator] | `deceasedBoolean` | Boolean | Indicates if the person is deceased or not. |
 | [!UICONTROL Deceased Date Time] | `deceasedDateTime` | DateTime | The date and time of death if the person is deceased. |
 | [!UICONTROL Gender] | `gender` | String | The gender identity of the person. The value of this property must be equal to one of the following known enum values. <li> `female` </li> <li> `male` </li> <li> `other` </li> <li> `unknown`</li>  |
-
-{style="table-layout:auto"}
 
 For more details on the data type, refer to the public XDM repository:
 
@@ -44,8 +43,6 @@ For more details on the data type, refer to the public XDM repository:
 | [!UICONTROL Language] | `language` | [[!UICONTROL Codeable concept]](../../data-types/healthcare/codeable-concept.md) | The language which can be used to communicate with the person about his or her health. |
 | [!UICONTROL Is Preferred Language] | `preferred`| Boolean | Indicates if the language is their preferred language or not. |
 
-{style="table-layout:auto"}
-
 ## `link` {#link}
 
 `link` is provided as an array of objects. The structure of each object is described below.
@@ -56,5 +53,3 @@ For more details on the data type, refer to the public XDM repository:
 | --- | --- | --- | --- |
 | [!UICONTROL Target] | `target` | [[!UICONTROL Reference]](../../data-types/healthcare/reference.md) | The resource to which this actual person is associated. |
 | [!UICONTROL Assurance] | `assurance` | String | The level of assurance associated with the link. The values of this property must be equal to one or more of the following known enum values. <li> `level1` </li> <li> `level2` </li> <li> `level3` </li> <li> `level4` </li> |
-
-{style="table-layout:auto"}

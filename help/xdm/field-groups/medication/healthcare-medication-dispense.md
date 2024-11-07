@@ -31,7 +31,7 @@ hidefromtoc: yes
 | [!UICONTROL Quantity] | `quantity` | [[!UICONTROL Simple Quantity]](../../data-types/healthcare/simple-quantity.md) | The amount of medication that has been dispensed, including the unit of measure. |
 | [!UICONTROL Receiver] | `receiver` | Array of [[!UICONTROL Reference]](../../data-types/healthcare/reference.md) | Identifies the person who picked up the medication or the location of where the medication was delivered. |
 | [!UICONTROL Subject] | `subject` | [[!UICONTROL Reference]](../../data-types/healthcare/reference.md) | A link to a resource representing the person or group to who the medication will be given. |
-| [!UICONTROL Substitution] | `substitution` | Object | Indicates whether or not substitution was made as part of the dispense. Contains four properties: <li>`wasSubstituted`: A boolean value that is true if the dispenser requested a substitution.</li> <li>`type`: A [[!UICONTROL Codeable Concept]](../../data-types/healthcare/codeable-concept.md) value that provides a code signifying whether a substitution was made.</li> <li>`reason`: An array of [[!UICONTROL Codeable Concept]](../../data-types/healthcare/codeable-concept.md) that contains the reason(s) for the substitution.</li> <li>`responsibleParty`: A [[!UICONTROL Reference]](../../data-types/healthcare/reference.md) that provides the person or party responsible for the substitution. </li> |
+| [!UICONTROL Substitution] | `substitution` | Object | Indicates whether or not substitution was made as part of the dispense. Contains four properties: <li>`wasSubstituted`: A boolean value that is true if the dispenser requested a substitution.</li> <li>`type`: A [[!UICONTROL Codeable Concept]](../../data-types/healthcare/codeable-concept.md) value that provides a code signifying whether a substitution was made.</li> <li>`reason`: An array of [[!UICONTROL Codeable Concept]](../../data-types/healthcare/codeable-concept.md) values that contains the reason(s) for the substitution.</li> <li>`responsibleParty`: A [[!UICONTROL Reference]](../../data-types/healthcare/reference.md) value that provides the person or party responsible for the substitution. </li> |
 | [!UICONTROL Supporting Information] | `supportingInformation` | Array of [[!UICONTROL Reference]](../../data-types/healthcare/reference.md) | Additional information that supports the medication being dispensed. |
 | [!UICONTROL Type] | `type` | [[!UICONTROL Codeable Concept]](../../data-types/healthcare/codeable-concept.md) | Describes the type of dispensing event that is performed such as an emergency fill or partial fill. |
 | [!UICONTROL Recorded] | `recorded` | DateTime | The date and time when the dispense activity started if `whenPrepared` or `whenHandedOver` is not populated. |
@@ -40,8 +40,6 @@ hidefromtoc: yes
 | [!UICONTROL Status Changed] | `statusChanged` | DateTime | The date and time when the status of the dispense record changed. |
 | [!UICONTROL When Handed Over] | `whenHandedOver` | DateTime | The date and time when the dispensed medication was provided to the patient. |
 | [!UICONTROL When Prepared] | `whenPrepared` | DateTime | The date and time when the dispensed medication was packaged and reviewed. |
-
-{style="table-layout:auto"}
 
 For more details on the field group, refer to the public XDM repository:
 
@@ -57,6 +55,4 @@ For more details on the field group, refer to the public XDM repository:
 | Display Name | Property | Data type | Description |
 | --- | --- | --- | --- |
 | [!UICONTROL Actor] | `actor` | [[!UICONTROL Reference]](../../data-types/healthcare/reference.md) | The practioner (or similar) who performed the action. It should be assumed that the actor is the dispenser of the medication. |
-| [!UICONTROL Function] | `function`| [[!UICONTROL Codeable Concept]](../../data-types/healthcare/codeable-concept.md) | The type of performer in the dispensing such as the date enterer, packager or final checker. |
-
-{style="table-layout:auto"}
+| [!UICONTROL Function] | `function`| [[!UICONTROL Codeable Concept]](../../data-types/healthcare/codeable-concept.md) | The type of performer in the dispensing such as the date enterer, packager, or final checker. |

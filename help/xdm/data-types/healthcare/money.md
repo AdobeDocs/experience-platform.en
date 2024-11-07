@@ -3,6 +3,7 @@ title: Money Data Type
 description: Learn about the Money Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
+hidefromtoc: yes
 ---
 # [!UICONTROL Money] data type
 
@@ -13,9 +14,7 @@ hide: yes
 | Display Name | Property | Data type | Description |
 | --- | --- | --- | --- |
 | [!UICONTROL currency] | `currency` | String | The ISO 4217 currency code. |
-| [!UICONTROL value] | `value` | String | The numerical value. |
-
-{style="table-layout:auto"}
+| [!UICONTROL value] | `value` | Double | The numerical value. |
 
 For more details on the data type, refer to the public XDM repository:
 

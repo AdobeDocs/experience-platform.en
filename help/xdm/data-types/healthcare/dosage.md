@@ -3,10 +3,11 @@ title: Dosage Data Type
 description: Learn about the Dosage Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
+hidefromtoc: yes
 ---
 # [!UICONTROL Dosage] data type
 
-[!UICONTROL Dosage] is a standard Experience Data Model (XDM) data type that describes how the medication is/was taken or should be taken.. This data type is created as per HL7 FHIR Release 5 specifications.
+[!UICONTROL Dosage] is a standard Experience Data Model (XDM) data type that describes how the medication is/was taken or should be taken. This data type is created as per HL7 FHIR Release 5 specifications.
 
 ![Dosage data type structure](../../images/data-types/healthcare/dosage/dosage.png)
 
@@ -20,14 +21,12 @@ hide: yes
 | [!UICONTROL Max Dose Per Period] |`maxDosePerPeriod` | Array of [[!UICONTROL Ratio]](../healthcare/ratio.md) | The upper limit of medication per unit of time. |
 | [!UICONTROL Method] | `method` | [[!UICONTROL Codeable Concept]](../healthcare/codeable-concept.md) | The technique for administering medication. |
 | [!UICONTROL Route] |`route` | [[!UICONTROL Codeable Concept]](../healthcare/codeable-concept.md) | How the drug should enter the body. |
-| [!UICONTROL Body Site] | `site` | [[!UICONTROL Codeable Concept]](../healthcare/codeable-concept.md) | The body site to administer the drug to. |
+| [!UICONTROL Body Site] | `site` | [[!UICONTROL Codeable Concept]](../healthcare/codeable-concept.md) | The body site to administer the drug. |
 | [!UICONTROL Timing] |`timing` | [[!UICONTROL Timing]](../healthcare/timing.md) | When medication should be administered. |
-| [!UICONTROL As Needed] | `asNeeded` | Boolean | An idicator for whether the medication should be taken as needed. |
-| [!UICONTROL Patient Instructions] |`patientInstructions` | String | Instructions in terms to be understood by the patient or consumer. |
+| [!UICONTROL As Needed] | `asNeeded` | Boolean | An indicator for whether the medication should be taken as needed. |
+| [!UICONTROL Patient Instructions] |`patientInstruction` | String | Instructions in terms to be understood by the patient or consumer. |
 | [!UICONTROL Sequence] | `Integer` | [[!UICONTROL Codeable Concept]](../healthcare/codeable-concept.md) | The order of the dosage instructions. |
 | [!UICONTROL Text] |`text` | String | Plan text dosage instructions. |
-
-{style="table-layout:auto"}
 
 For more details on the data type, refer to the public XDM repository:
 

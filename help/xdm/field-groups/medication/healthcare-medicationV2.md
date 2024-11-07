@@ -13,7 +13,7 @@ hidefromtoc: yes
 
 | Display Name | Property | Data type | Description |
 | ---|  --- | --- | --- |
-| [!UICONTROL Batch] | `batch` | Object | Details about a packaged medication. Contains two properties: <li>`lotNumber`: Identifier assigned to batch, in String format</li> <li>`expirationDate`: When the batch will expire, in DateTime format.</li> |
+| [!UICONTROL Batch] | `batch` | Object | Details about a packaged medication. Contains two properties: <li>`lotNumber`: A string value for the identifier assigned to batch.</li> <li>`expirationDate`: A DateTime value for when the batch will expire.</li> |
 | [!UICONTROL Code] | `code`| [[!UICONTROL Codeable Concept]](../../data-types/healthcare/codeable-concept.md) | The code that identifies this medication. |
 | [!UICONTROL Definition] | `definition` | [[!UICONTROL Reference]](../../data-types/healthcare/reference.md) | The definition of the medication. |
 | [!UICONTROL Dose Form] | `doseForm` | [[!UICONTROL Codeable Concept]](../../data-types/healthcare/codeable-concept.md) | Describes the dose form of the medication, such as tablets or capsules. |
@@ -22,8 +22,6 @@ hidefromtoc: yes
 | [!UICONTROL Marketing Authorization Holder] | `marketingAuthorizationHolder` | [[!UICONTROL Reference]](../../data-types/healthcare/reference.md) | The organization that has the authorization to market the medication. |
 | [!UICONTROL Total Volume] | `totalVolume` | [[!UICONTROL Quantity]](../../data-types/healthcare/quantity.md) | The amount of product provided in the medication when the product code does not infer a package size. |
 | [!UICONTROL Status] | `status` | String | The status of the medication. The value of this property must be equal to one of the following known enum values. <li> `active` </li> <li> `inactive` </li> <li> `entered-in-error` </li>  |
-
-{style="table-layout:auto"}
 
 For more details on the field group, refer to the public XDM repository:
 
@@ -43,5 +41,3 @@ For more details on the field group, refer to the public XDM repository:
 | [!UICONTROL Strength Quantity] | `strengthQuantity`| [[!UICONTROL Quantity]](../../data-types/healthcare/quantity.md) | The quantity of the ingredient present. |
 | [!UICONTROL Strength Ratio] | `strengthRatio`| [[!UICONTROL Ratio]](../../data-types/healthcare/ratio.md) | The ratio of the ingredient present. |
 | [!UICONTROL Is Active] | `isActive`| Boolean | Indicates if the ingredient is active. |
-
-{style="table-layout:auto"}

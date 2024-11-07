@@ -40,7 +40,7 @@ For more details on the field group, refer to the public XDM repository:
 
 | Display Name | Property | Data type | Description |
 | --- | --- | --- | --- |
-| [!UICONTROL Language] | `language` | [[!UICONTROL Codeable Concept]](../../data-types/healthcare/codeable-concept.md) | The language which can be used to communicate with the person about his or her health. |
+| [!UICONTROL Language] | `language` | [[!UICONTROL Codeable Concept]](../../data-types/healthcare/codeable-concept.md) | The language which can be used to communicate with the person about their health. |
 | [!UICONTROL Is Preferred Language] | `preferred`| Boolean | Indicates if the language is their preferred language or not. |
 
 {style="table-layout:auto"}

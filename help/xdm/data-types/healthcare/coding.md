@@ -3,6 +3,7 @@ title: Coding Data Type
 description: Learn about the Coding Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
+hidefromtoc: yes
 ---
 # [!UICONTROL Coding] data type
 
@@ -14,11 +15,9 @@ hide: yes
 | --- | --- | --- | --- |
 | [!UICONTROL Code] | `code` | String | The symbol in the syntax defined by the system. |
 | [!UICONTROL Display] |`display` | String | The representation defined by the system. |
-| [!UICONTROL System] | `system` | String | The namespace for the identifier value. |
-| [!UICONTROL Is Selected By User] |`userSelected` | Boolean | An idicator of whether this coding was chosen by the user. |
+| [!UICONTROL System] | `system` | String | The namespace for the identifier value, respresented as a URI. |
+| [!UICONTROL Is Selected By User] |`userSelected` | Boolean | An idicator of whether this coding was chosen by the user. The default value is false.|
 | [!UICONTROL Version] | `version` | String | The version of the system. |
-
-{style="table-layout:auto"}
 
 For more details on the data type, refer to the public XDM repository:
 

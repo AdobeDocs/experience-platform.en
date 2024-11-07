@@ -3,6 +3,7 @@ title: Annotation Data Type
 description: Learn about the Annotation Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
+hidefromtoc: yes
 ---
 # [!UICONTROL Annotation] data type
 
@@ -13,11 +14,9 @@ hide: yes
 | Display Name | Property | Data type | Description |
 | --- | --- | --- | --- |
 | [!UICONTROL Author Reference] | `authorReference` | [[!UICONTROL Reference]](../healthcare/reference.md) | A reference to the author. |
-| [!UICONTROL Author] |`authorString` | String | Individual responsible for the annotation. |
-| [!UICONTROL Text] |`text` | String | The text content of the annotation. |
-| [!UICONTROL Time] | `time` | String | When the annotation was made. |
-
-{style="table-layout:auto"}
+| [!UICONTROL Author] |`authorString` | String | The individual responsible for the annotation. |
+| [!UICONTROL Text] |`text` | String | The content of the annotation. |
+| [!UICONTROL Time] | `time` | DateTime | When the annotation was made. |
 
 For more details on the data type, refer to the public XDM repository:
 

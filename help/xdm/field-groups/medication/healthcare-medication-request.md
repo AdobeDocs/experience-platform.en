@@ -47,8 +47,6 @@ hidefromtoc: yes
 | [!UICONTROL Status] | `status` | String | The status of the dispensing. The value of this property must be equal to one of the following known enum values. <li> `preperation` </li> <li> `in-progress` </li> <li> `cancelled` </li> <li> `on-hold` </li> <li> `completed` </li> <li> `entered-in-error` </li> <li> `stopped` </li> <li> `declined` </li> <li> `unknown` </li>   |
 | [!UICONTROL Status Changed] | `statusChanged` | DateTime | The date (and optionally time) when the status of changed. |
 
-{style="table-layout:auto"}
-
 For more details on the field group, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/medicationrequest.example.1.json)
@@ -71,5 +69,3 @@ For more details on the field group, refer to the public XDM repository:
 | [!UICONTROL Quantity] | `quantity`| [[!UICONTROL Simple Quantity]](../../data-types/healthcare/simple-quantity.md) | The amount to be dispensed for a fill. |
 | [!UICONTROL Validity Period] | `validityPeriod`| [[!UICONTROL Period]](../../data-types/healthcare/period.md) | The validity period of the prescription. |
 | [!UICONTROL Number Of Repeats Allowed] | `numberOfRepeatsAllowed`| Integer | The number of refills authorized, with a minimum value of 0. |
-
-{style="table-layout:auto"}

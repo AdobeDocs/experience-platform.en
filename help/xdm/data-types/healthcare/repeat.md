@@ -3,6 +3,7 @@ title: Repeat Data Type
 description: Learn about the Repeat Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
+hidefromtoc: yes
 ---
 # [!UICONTROL Repeat] data type
 
@@ -21,16 +22,14 @@ hide: yes
 | [!UICONTROL Duration] | `duration` | Double | The length of time. |
 | [!UICONTROL Maximum Duration] | `durationMax` | Double | The maximum length of time. |
 | [!UICONTROL Duration Unit] | `durationUnit` | String| The unit of duration. The values of this property must be equal to one or more of the following known enum values. <li> `s` (seconds) </li> <li> `min` (minutes) </li> <li> `h` (hourly) </li> <li> `d` (daily) </li>  <li> `wk` (weekly) </li> <li> `mo` (monthly) </li> <li> `a` (annual)</li>|
-| [!UICONTROL Frequency] | `frequency` | String | The number of repetitions that should occur within a period, with a minumum value of `0`. |
-| [!UICONTROL Maximum Frequency] | `frequencyMax` | String | The maximum number of repetitions that should occur with a period, with a minimum value of `0`. |
-| [!UICONTROL Offset] | `offset` | Integer | The minutes until the event (before or after). |
+| [!UICONTROL Frequency] | `frequency` | Double | The number of repetitions that should occur within a period, with a minumum value of `0`. |
+| [!UICONTROL Maximum Frequency] | `frequencyMax` | Double | The maximum number of repetitions that should occur with a period, with a minimum value of `0`. |
+| [!UICONTROL Offset] | `offset` | Integer | The minute(s) until the event (before or after). |
 | [!UICONTROL Period] | `period` | Double | The duration during which the frequency applies. |
 | [!UICONTROL Maximum Period] | `periodMax` | Double | The upper limit of the period. |
 | [!UICONTROL Period Unit] | `periodUnit` | String | The unit of time. The values of this property must be equal to one or more of the following known enum values. <li> `s` (seconds) </li> <li> `min` (minutes) </li> <li> `h` (hourly) </li> <li> `d` (daily) </li>  <li> `wk` (weekly) </li> <li> `mo` (monthly) </li> <li> `a` (annual)</li> |
-| [!UICONTROL Time Of Day] | `timeOfDay` | Array of strings(Time) | The time of day for the action to occur. |
+| [!UICONTROL Time Of Day] | `timeOfDay` | Array of strings | The time of day for the action to occur. |
 | [!UICONTROL When] | `when` | Array of strings | The code for the action's time period. |
-
-{style="table-layout:auto"}
 
 For more details on the data type, refer to the public XDM repository:
 

@@ -3,6 +3,7 @@ title: Period Data Type
 description: Learn about the Period Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
+hidefromtoc: yes
 ---
 # [!UICONTROL Period] data type
 
@@ -14,8 +15,6 @@ hide: yes
 | --- | --- | --- | --- |
 | [!UICONTROL currency] | `end` | DateTime | The end date and time. |
 | [!UICONTROL value] | `start` | DateTime | The start date and time. |
-
-{style="table-layout:auto"}
 
 For more details on the data type, refer to the public XDM repository:
 

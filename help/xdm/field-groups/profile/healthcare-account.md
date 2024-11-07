@@ -31,8 +31,6 @@ hidefromtoc: yes
 | [!UICONTROL Name] | `name` | String | The account's name. |
 | [!UICONTROL Status] | `status` | String | The status of the account. The value of this property must be equal to one of the following known enum values. <li> `active` </li> <li> `inactive` </li> <li> `entered-in-error` </li> <li> `on-hold` </li> <li> `unknown`</li> |
 
-{style="table-layout:auto"}
-
 For more details on the field group, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/account.example.1.json)
@@ -51,8 +49,6 @@ For more details on the field group, refer to the public XDM repository:
 | [!UICONTROL Term] | `term` | [[!UICONTROL Codeable Concept]](../../data-types/healthcare/codeable-concept.md) | The term of the account. |
 | [!UICONTROL Estimate] | `estimate`| Boolean | If the amount is an estimated value. |
 
-{style="table-layout:auto"}
-
 ## `coverage` {#coverage}
 
 `coverage` is provided as an array of objects. The structure of each object is described below.
@@ -62,9 +58,7 @@ For more details on the field group, refer to the public XDM repository:
 | Display Name | Property | Data type | Description |
 | --- | --- | --- | --- |
 | [!UICONTROL Coverage] | `coverage` | [[!UICONTROL Reference]](../../data-types/healthcare/reference.md) | The party(s) responsible for covering the costs of this account, and in what order should they be applied. |
-| [!UICONTROL Priority] | `priority`| Integer | The priority of the coverage in the context of this account. |
-
-{style="table-layout:auto"}
+| [!UICONTROL Priority] | `priority`| Integer | The priority of the coverage in the context of this account, with a minimum value of `0`. |
 
 ## `diagnosis` {#diagnosis}
 
@@ -79,9 +73,7 @@ For more details on the field group, refer to the public XDM repository:
 | [!UICONTROL Type] | `type`| Array of [[!UICONTROL Codeable Concept]](../../data-types/healthcare/codeable-concept.md) | Type that this diagnosis has relevant to the account (e.g. admission, billing, discharge …). |
 | [!UICONTROL Date Of Diagnosis] | `dateOfDiagnosis` | DateTime | Date of the diagnosis (when coded diagnosis). |
 | [!UICONTROL On Admission] | `onAdmission`| Boolean | Whether the diagnosis was present on admission. |
-| [!UICONTROL Squence] | `sequence`| Integer | Ranking of the diagnosis (for each type). |
-
-{style="table-layout:auto"}
+| [!UICONTROL Squence] | `sequence`| Integer | Ranking of the diagnosis (for each type), with a minimum value of `0`. |
 
 ## `guarantor` {#guarantor}
 
@@ -94,8 +86,6 @@ For more details on the field group, refer to the public XDM repository:
 | [!UICONTROL Party] | `party` | [[!UICONTROL Reference]](../../data-types/healthcare/reference.md) | The entity who is responsible. |
 | [!UICONTROL Period] | `period`| [[!UICONTROL Period]](../../data-types/healthcare/period.md) | The timeframe during which the guarantor accepts responsibility for the account. |
 | [!UICONTROL On Hold] | `onHold`| Boolean | A guarantor may be placed on credit hold or otherwise have their role temporarily suspended. |
-
-{style="table-layout:auto"}
 
 ## `procedure` {#procedure}
 
@@ -110,9 +100,7 @@ For more details on the field group, refer to the public XDM repository:
 | [!UICONTROL Type] | `type`| Array of [[!UICONTROL Codeable Concept]](../../data-types/healthcare/codeable-concept.md) | How the procedure value should be used in charging the account. |
 | [!UICONTROL Package Code] | `packageCode` | Array of [[!UICONTROL Codeable Concept]](../../data-types/healthcare/codeable-concept.md) | The package code can be used to group procedures that may be priced or delivered as a single product (such as DRGs). |
 | [!UICONTROL Date Of Service] | `dateOfService`| DateTime | The date when using a coded procedure. If using a reference to a procedure, then the date of the procedure should be used. |
-| [!UICONTROL Sequence] | `sequence`| Integer | Ranking of the procedure (for each type). |
-
-{style="table-layout:auto"}
+| [!UICONTROL Sequence] | `sequence`| Integer | Ranking of the procedure (for each type), with a minimum value of `0`. |
 
 ## `relatedAccount` {#related-account}
 
@@ -124,5 +112,3 @@ For more details on the field group, refer to the public XDM repository:
 | --- | --- | --- | --- |
 | [!UICONTROL Account] | `account` | [[!UICONTROL Reference]](../../data-types/healthcare/reference.md) | Reference to an associated account. |
 | [!UICONTROL Relationship] | `relationship`| [[!UICONTROL Codeable Concept]](../../data-types/healthcare/codeable-concept.md) | Relationship of the associated account. |
-
-{style="table-layout:auto"}

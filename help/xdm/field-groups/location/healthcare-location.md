@@ -26,13 +26,11 @@ hidefromtoc: yes
 | [!UICONTROL Position] | `position` | Object | The absolute geographical location. Contains three properties in Double format: <li>`longitude`: Longitude with WGS84 datum</li> <li>`latitude`: Latitude with WGS84 datum.</li> <li>`altitude`: Altitude with WGS84 datum.</li> |
 | [!UICONTROL Type] | `type` | Array of [[!UICONTROL Codeable Concept]](../../data-types/healthcare/codeable-concept.md) | The type of function performed at the location. |
 | [!UICONTROL Virtual Service] | `virtualService` | Array of [[!UICONTROL Virtual Service Detail]](../../data-types/healthcare/virtual-service-detail.md) | The connection details of a virtual service. |
-| [!UICONTROL Alias] | `alias` | Array of Strings | A list of alternate names that the location is or was known as. |
+| [!UICONTROL Alias] | `alias` | Array of strings | A list of alternate names that the location is or was known as. |
 | [!UICONTROL Description] | `description` | String | Further information to identify the location beyond its name. |
 | [!UICONTROL Mode] | `mode` | String | The location's mode. The value of this property must be equal to one of the following known enum values. <li> `instance` </li> <li> `kind` </li> |
 | [!UICONTROL Name] | `name` | String | The name of the location. |
 | [!UICONTROL Status] | `status` | String | The status of the location. The value of this property must be equal to one of the following known enum values. <li> `active` </li> <li> `inactive` </li> <li> `suspended` </li> |
-
-{style="table-layout:auto"}
 
 For more details on the field group, refer to the public XDM repository:
 

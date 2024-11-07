@@ -3,6 +3,7 @@ title: Range Data Type
 description: Learn about the Range Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
+hidefromtoc: yes
 ---
 # [!UICONTROL Range] data type
 
@@ -14,8 +15,6 @@ hide: yes
 | --- | --- | --- | --- |
 | [!UICONTROL High] | `high` | [[!UICONTROL Simple Quantity]](../healthcare/simple-quantity.md) | The highest limit. |
 | [!UICONTROL Low] | `low` | [[!UICONTROL Simple Quantity]](../healthcare/simple-quantity.md) | The lowest limit. |
-
-{style="table-layout:auto"}
 
 For more details on the data type, refer to the public XDM repository:
 

@@ -67,7 +67,7 @@ role: Developer
     * [Telecom Subscription](./field-groups/profile/telecom-subscription.md)
     * [Work Contact Details](./field-groups/profile/work-contact-details.md)
     * [XDM Business Person Components](./field-groups/profile/business-person-components.md)
-    * [XDM Business Person Details](./field-groups/profile/business-person-details.md)   
+    * [XDM Business Person Details](./field-groups/profile/business-person-details.md)
   * XDM Individual Prospect Profile {#prospect-profile}
     * [Partner Prospect Details (Sample)](./field-groups/prospect-profile/partner-prospect-details.md)
   * XDM ExperienceEvent {#event}

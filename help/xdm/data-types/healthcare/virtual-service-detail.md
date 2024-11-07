@@ -3,6 +3,7 @@ title: Virtual Service Detail Data Type
 description: Learn about the Virtual Service Detail Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
+hidefromtoc: yes
 ---
 # [!UICONTROL Virtual Service Detail] data type
 
@@ -12,16 +13,14 @@ hide: yes
 
 | Display Name | Property | Data type | Description |
 | --- | --- | --- | --- |
-| [!UICONTROL Address Contact Point] | `addressContactPoint` | [[!UICONTROL Contact Point]](../healthcare/contact-point.md) | The details of a technology mediated contact point (i.e. phone, fax, email). |
-| [!UICONTROL Address Extended Contact Details] | `addressExtendedContactDetails` | [[!UICONTROL Extended Contact Details]](../healthcare/extended-contact-detail.md) | Extended contact information. |
-| [!UICONTROL Channel Type] | `channelType` | [[!UICONTROL Coding]](../healthcare/coding.md) | The type of virtual service to connect to (i.e. Teams, Zoom, WhatsApp). |
-| [!UICONTROL Additional Info] | `additionalInfo` | Array of Strings(URI) | The address to see alternative connection details. |
-| [!UICONTROL Address String] | `addressString` | String | The address to be used to connect to a virtual service. |
-| [!UICONTROL Address Url] | `addressUrl` | String(URI) | The URL to be used to connect to the virtual service. |
+| [!UICONTROL Address Contact Point] | `addressContactPoint` | [[!UICONTROL Contact Point]](../healthcare/contact-point.md) | The details of a technology mediated contact point such as a phone, fax, or email. |
+| [!UICONTROL Address Extended Contact Detail] | `addressExtendedContactDetail` | [[!UICONTROL Extended Contact Detail]](../healthcare/extended-contact-detail.md) | Extended contact information. |
+| [!UICONTROL Channel Type] | `channelType` | [[!UICONTROL Coding]](../healthcare/coding.md) | The type of virtual service to connect to, such as Teams, Zoom,or WhatsApp. |
+| [!UICONTROL Additional Info] | `additionalInfo` | Array of strings | The address to see alternative connection details, represented as a URI. |
+| [!UICONTROL Address String] | `addressString` | String | The address to be used to connect to the virtual service. |
+| [!UICONTROL Address Url] | `addressUrl` | String | The URL to be used to connect to the virtual service, represented as a URI. |
 | [!UICONTROL Max Participants] | `maxParticipants` | Integer | The maximum number of participants supported, with a minimum value of `0`. |
 | [!UICONTROL Session Key] | `sessionKey` | String | The session key required by the virtual service. |
-
-{style="table-layout:auto"}
 
 For more details on the data type, refer to the public XDM repository:
 
