@@ -62,7 +62,7 @@ The following table provides a description and example of the response schema pr
 |------------------|---------------------------------------------|-----------------------------------------------------------------------------------------------|
 | `imsOrg`         | Organization ID for the sandbox.                                                                         | `{ORG_ID}`                       |
 | `sandboxName`    | Name of the sandbox where IP restrictions apply.                                                         | `prod`                           |
-| `channel`        | The access mode for IP restrictions. Currently The only accepted value is `data_distiller`. This signifies that IP restrictions are applied to PSQL or JDBC connections. | `data_distiller` |
+| `channel`        | The access mode for IP restrictions. Currently The only accepted value is `data_distiller`. This value signifies that IP restrictions are applied to PSQL or JDBC connections. | `data_distiller` |
 | `allowedIpRanges`| List of permitted IPs in either CIDR or fixed IP format. Each entry may include an optional description. | `[{"ipRange": "136.23.110.0/23", "description": "VPN-1 gateway IPs"}]` |
 
 >[!NOTE]
