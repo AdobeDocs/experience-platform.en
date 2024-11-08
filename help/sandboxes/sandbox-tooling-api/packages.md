@@ -1589,7 +1589,13 @@ A successful response returns a list of all transfer requests from the search pa
 
 ### Update package availability from private to public {#update-availability}
 
-Change a package from private to public by making a GET request to the `/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC` endpoint. By default, a package is created with private availability.
+Change a package from private to public by making a GET request to the `/packages/update` endpoint. By default, a package is created with private availability.
+
+**API format**
+
+```http
+GET `/packages/update`
+```
 
 **Request**
 
@@ -1597,17 +1603,17 @@ The following request changes a packages availability from private to public.
 
 ```shell
 curl -X GET \
-  http://platform.adobe.io/data/foundation/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC \
+  http://platform-stage.adobe.io/data/foundation/exim/packages/update \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-type: application/json' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'x-api-key: {API_KEY}' \
+  -H 'x-api-key: platform_exim' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -d '{
-      "id":"{ID}",
-      "action":"UPDATE",
-      "packageVisibility":"PUBLIC"
-  }'
+--data '{
+    "id":"{ID}",
+    "action":"UPDATE",
+    "packageVisibility":"PUBLIC"
+}'
 ```
 
 | Property | Description | Type | Required |
