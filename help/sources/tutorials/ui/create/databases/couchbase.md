@@ -8,7 +8,7 @@ exl-id: 4270a48a-843c-4f1e-b280-35b620581d68
 ---
 # Create a [!DNL Couchbase] source connection in the UI
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >The [!DNL Couchbase] source will be deprecated at the end of May 2025.
 

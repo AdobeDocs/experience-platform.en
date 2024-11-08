@@ -8,7 +8,7 @@ exl-id: 33995927-8f5e-44c5-b809-4db8706bbd34
 ---
 # Create a [!DNL Zoho CRM] base connection using the [!DNL Flow Service] API
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >The [!DNL Zoho CRM] source will be deprecated at the end of June 2025.
 

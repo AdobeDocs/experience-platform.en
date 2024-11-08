@@ -8,7 +8,7 @@ exl-id: c648fc3e-beea-4030-8d36-dd8a7e2c281e
 ---
 # Create a [!DNL Zoho CRM] source connection in the UI
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >The [!DNL Zoho CRM] source will be deprecated at the end of June 2025.
 
