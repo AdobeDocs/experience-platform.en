@@ -16,6 +16,8 @@ Adobe is not responsible for performance degradation caused by exceeded usage li
 >
 >Check your license entitlements in your Sales Order and corresponding [Product Description](https://helpx.adobe.com/legal/product-descriptions.html) on actual usage limits in addition to this guardrails page.
 
+All performance guardrails described in this page apply at IMS Organization level. For users with multiple IMS Organizations configured, each organization is individually subject to the performance guardrails below. See the [Experience Platform glossary](../landing/glossary.md) for more details about [!DNL IMS Organizations].
+
 ## Definitions
 
 * **Availability** is calculated for each five-minute interval as the percentage of requests processed by the Experience Platform Edge Network that do not fail with errors and relate solely to the provisioned Edge Network APIs. If a tenant did not make any requests in a given five-minute interval, that interval is considered to be 100% available.

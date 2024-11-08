@@ -95,6 +95,10 @@ The [!UICONTROL Account profiles added] widget uses a line graph to display the 
 
 ### Customers per account overview {#customers-per-account-overview}
 
+>[!NOTE]
+>
+>The [!UICONTROL Customers per account overview] insight and it's drill-through charts ([!UICONTROL Customers per account detail], [!UICONTROL Opportunities per account overview], [!UICONTROL Opportunities per account detail]) are not impacted by any global date filters that you might have set.
+
 The [!UICONTROL Customers per account overview] chart provides a summary of accounts based on their customer types. It displays a four-row table that categorizes accounts as having either direct or indirect customers, or those without. It provides the total number of accounts for each category. The chart helps identify the distribution of accounts that have direct versus indirect customers.
 
 Direct customers are customer profiles that are directly linked to an account through the `personComponents` route. This relationship is more straightforward and involves a direct, explicit connection between the customer and the account. 

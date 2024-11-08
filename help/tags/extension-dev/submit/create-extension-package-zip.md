@@ -1,8 +1,8 @@
 ---
-title: Prepare an Extension Package Zip File
+title: Create an Extension Package Zip File
 description: Learn how to prepare an extension package zip file.
 ---
-# Upload and implement end-to-end testing
+# Create an extension package zip file.
 
 >[!NOTE]
 >
