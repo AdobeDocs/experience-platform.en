@@ -5,7 +5,7 @@ exl-id: 2ed469bc-1c72-4f04-a5f0-6a0bb519a6c2
 ---
 # Connect your [!DNL Phoenix] account to Experience Platform using the UI
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >The [!DNL Phoenix] source will be deprecated at the end of May 2025.
 

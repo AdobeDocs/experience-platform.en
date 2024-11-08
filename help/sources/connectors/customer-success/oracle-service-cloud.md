@@ -7,7 +7,7 @@ exl-id: 5c914e8a-d8ed-469f-b17a-26a85705e9ef
 ---
 # Oracle Service Cloud source
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >The [!DNL Oracle Service Cloud] source will be deprecated at the end of May 2025.
 
