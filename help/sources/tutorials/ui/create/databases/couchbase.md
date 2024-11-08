@@ -10,7 +10,7 @@ exl-id: 4270a48a-843c-4f1e-b280-35b620581d68
 
 >[!IMPORTANT]
 >
->The [!DNL Couchbase] source will be deprecated at the end of May 2025. As an alternative, you can use the [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) source.
+>The [!DNL Couchbase] source will be deprecated at the end of May 2025.
 
 Source connectors in [!DNL Adobe Experience Platform] provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating an [!DNL Couchbase] source connector using the [!DNL Platform] user interface.
 

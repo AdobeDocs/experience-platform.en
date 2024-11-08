@@ -7,7 +7,7 @@ exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
 
 >[!IMPORTANT]
 >
->The [!DNL Salesforce Marketing Cloud] source will be deprecated at the end of May 2025. As an alternative, you can use the [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) source.
+>The [!DNL Salesforce Marketing Cloud] source will be deprecated at the end of May 2025.
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 

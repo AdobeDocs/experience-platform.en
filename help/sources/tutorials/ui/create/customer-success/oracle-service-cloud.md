@@ -8,7 +8,7 @@ exl-id: e5869c09-b61e-4d23-a594-5a07769da3c4
 
 >[!IMPORTANT]
 >
->The [!DNL Oracle Service Cloud] source will be deprecated at the end of May 2025. As an alternative, you can use the [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) source.
+>The [!DNL Oracle Service Cloud] source will be deprecated at the end of May 2025.
 
 This tutorial provides steps for creating an Oracle Service Cloud source connection using the Adobe Experience Platform user interface.
 

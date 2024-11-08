@@ -10,7 +10,7 @@ exl-id: c648fc3e-beea-4030-8d36-dd8a7e2c281e
 
 >[!IMPORTANT]
 >
->The [!DNL Zoho CRM] source will be deprecated at the end of May 2025. As an alternative, you can use the [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) source.
+>The [!DNL Zoho CRM] source will be deprecated at the end of June 2025.
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced CRM data on a scheduled basis. This tutorial provides steps for creating a [!DNL Zoho CRM] source connector using the [!DNL Platform] user interface.
 
