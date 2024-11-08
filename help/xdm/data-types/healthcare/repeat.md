@@ -7,7 +7,7 @@ hidefromtoc: yes
 ---
 # [!UICONTROL Repeat] data type
 
-[!UICONTROL Repeat] is a standard Experience Data Model (XDM) data type that provides a set of rules that describe when an event is scheduled. This data type is created as per HL7 FHIR Release 5 specifications.
+[!UICONTROL Repeat] is a standard Experience Data Model (XDM) data type that provides a set of rules that describe when an event is scheduled. This data type is created as per the HL7 FHIR Release 5 specifications.
 
 ![Repeat data type structure](../../images/data-types/healthcare/reference.png)
 

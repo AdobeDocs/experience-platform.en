@@ -7,7 +7,7 @@ hidefromtoc: yes
 ---
 # [!UICONTROL Codeable Concept] data type
 
-[!UICONTROL Codeable Concept] is a standard Experience Data Model (XDM) data type that describes a reference from one resource to another. This data type is created as per HL7 FHIR Release 5 specifications.
+[!UICONTROL Codeable Concept] is a standard Experience Data Model (XDM) data type that describes a reference from one resource to another. This data type is created as per the HL7 FHIR Release 5 specifications.
 
 ![Codeable Concept data type structure](../../images/data-types/healthcare/codeable-concept.png)
 

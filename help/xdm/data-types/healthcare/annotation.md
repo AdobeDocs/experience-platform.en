@@ -7,7 +7,7 @@ hidefromtoc: yes
 ---
 # [!UICONTROL Annotation] data type
 
-[!UICONTROL Annotation] is a standard Experience Data Model (XDM) data type that contains a text node with attribution to the author. This data type is created as per HL7 FHIR Release 5 specifications.
+[!UICONTROL Annotation] is a standard Experience Data Model (XDM) data type that contains a text node with attribution to the author. This data type is created as per the HL7 FHIR Release 5 specifications.
 
 ![Annotation data type structure](../../images/data-types/healthcare/annotation.png)
 

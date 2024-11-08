@@ -13,7 +13,7 @@ hidefromtoc: yes
 
 | Display Name | Property | Data type | Description |
 | ---| --- | --- | --- |
-| [!UICONTROL Contact Details] | `contact` | Array of [[!UICONTROL Extended Contact Details]](../../data-types/healthcare/extended-contact-detail.md) | The contact details of communication devices available for the specific organization. This can include addresses, phone numbers, fax numbers, mobile numbers, email addresses, and web sites. |
+| [!UICONTROL Contact Details] | `contact` | Array of [[!UICONTROL Extended Contact Details]](../../data-types/healthcare/extended-contact-detail.md) | The contact details of communication devices available for the specific organization. This can include addresses, phone numbers, fax numbers, mobile numbers, email addresses, and websites. |
 | [!UICONTROL End Point] | `endpoint`| Array of [[!UICONTROL Reference]](../../data-types/healthcare/reference.md) | Technical endpoints providing access to services operated for the organization. |
 | [!UICONTROL Identifier] | `indentifier` | Array of [[!UICONTROL Identifier]](../../data-types/healthcare/identifier.md) | The identifier used to identify the organization across multiple disparate systems. |
 | [!UICONTROL Part Of Organization] | `partOf` | [[!UICONTROL Reference]](../../data-types/healthcare/reference.md) | The organization this organization is part of. |

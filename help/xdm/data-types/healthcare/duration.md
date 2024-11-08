@@ -7,7 +7,7 @@ hidefromtoc: yes
 ---
 # [!UICONTROL Duration] data type
 
-[!UICONTROL Duration] is a standard Experience Data Model (XDM) data type that describes a length of time. This data type is created as per HL7 FHIR Release 5 specifications.
+[!UICONTROL Duration] is a standard Experience Data Model (XDM) data type that describes a length of time. This data type is created as per the HL7 FHIR Release 5 specifications.
 
 ![Duration data type structure](../../images/data-types/healthcare/duration.png)
 

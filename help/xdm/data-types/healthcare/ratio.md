@@ -7,7 +7,7 @@ hidefromtoc: yes
 ---
 # [!UICONTROL Ratio] data type
 
-[!UICONTROL Ratio] is a standard Experience Data Model (XDM) data type that provides a ratio of two [[!UICONTROL Quantity]](../healthcare/quantity.md) values through a numerator and a denominator. This data type is created as per HL7 FHIR Release 5 specifications.
+[!UICONTROL Ratio] is a standard Experience Data Model (XDM) data type that provides a ratio of two [[!UICONTROL Quantity]](../healthcare/quantity.md) values through a numerator and a denominator. This data type is created as per the HL7 FHIR Release 5 specifications.
 
 ![Ratio data type structure](../../images/data-types/healthcare/ratio.png)
 

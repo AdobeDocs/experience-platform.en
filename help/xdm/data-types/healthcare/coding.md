@@ -7,7 +7,7 @@ hidefromtoc: yes
 ---
 # [!UICONTROL Coding] data type
 
-[!UICONTROL Coding] is a standard Experience Data Model (XDM) data type that describes a reference to a code defined by a terminology system. This data type is created as per HL7 FHIR Release 5 specifications.
+[!UICONTROL Coding] is a standard Experience Data Model (XDM) data type that describes a reference to a code defined by a terminology system. This data type is created as per the HL7 FHIR Release 5 specifications.
 
 ![Coding data type structure](../../images/data-types/healthcare/coding.png)
 

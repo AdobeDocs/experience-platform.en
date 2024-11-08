@@ -7,7 +7,7 @@ hidefromtoc: yes
 ---
 # [!UICONTROL Reference] data type
 
-[!UICONTROL Reference] is a standard Experience Data Model (XDM) data type provides a reference from one resource to another. This data type is created as per HL7 FHIR Release 5 specifications.
+[!UICONTROL Reference] is a standard Experience Data Model (XDM) data type provides a reference from one resource to another. This data type is created as per the HL7 FHIR Release 5 specifications.
 
 ![Reference data type structure](../../images/data-types/healthcare/reference.png)
 

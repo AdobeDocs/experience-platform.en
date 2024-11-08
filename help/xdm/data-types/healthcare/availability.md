@@ -7,7 +7,7 @@ hidefromtoc: yes
 ---
 # [!UICONTROL Availability] data type
 
-[!UICONTROL Availability] is a standard Experience Data Model (XDM) data type that describes availability data for an item. This data type is created as per HL7 FHIR Release 5 specifications.
+[!UICONTROL Availability] is a standard Experience Data Model (XDM) data type that describes availability data for an item. This data type is created as per the HL7 FHIR Release 5 specifications.
 
 ![Availability data type structure](../../images/data-types/healthcare/availability/availability.png)
 

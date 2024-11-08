@@ -7,7 +7,7 @@ hidefromtoc: yes
 ---
 # [!UICONTROL Dosage] data type
 
-[!UICONTROL Dosage] is a standard Experience Data Model (XDM) data type that describes how the medication is/was taken or should be taken. This data type is created as per HL7 FHIR Release 5 specifications.
+[!UICONTROL Dosage] is a standard Experience Data Model (XDM) data type that describes how the medication is/was taken or should be taken. This data type is created as per the HL7 FHIR Release 5 specifications.
 
 ![Dosage data type structure](../../images/data-types/healthcare/dosage/dosage.png)
 

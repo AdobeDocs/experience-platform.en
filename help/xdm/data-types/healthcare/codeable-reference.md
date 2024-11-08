@@ -7,7 +7,7 @@ hidefromtoc: yes
 ---
 # [!UICONTROL Codeable Reference] data type
 
-[!UICONTROL Codeable Reference] is a standard Experience Data Model (XDM) data type that describes a reference to a resource or a concept. This data type is created as per HL7 FHIR Release 5 specifications.
+[!UICONTROL Codeable Reference] is a standard Experience Data Model (XDM) data type that describes a reference to a resource or a concept. This data type is created as per the HL7 FHIR Release 5 specifications.
 
 ![Codeable Reference data type structure](../../images/data-types/healthcare/codeable-reference.png)
 

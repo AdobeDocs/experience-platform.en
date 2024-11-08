@@ -7,7 +7,7 @@ hidefromtoc: yes
 ---
 # [!UICONTROL Human Name] data type
 
-[!UICONTROL Human Name] is a standard Experience Data Model (XDM) data type that provides information about the name of a human or other living entity. This data type is created as per HL7 FHIR Release 5 specifications.
+[!UICONTROL Human Name] is a standard Experience Data Model (XDM) data type that provides information about the name of a human or other living entity. This data type is created as per the HL7 FHIR Release 5 specifications.
 
 ![Human Name data type structure](../../images/data-types/healthcare/human-name.png)
 

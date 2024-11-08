@@ -7,7 +7,7 @@ hidefromtoc: yes
 ---
 # [!UICONTROL Identifier] data type
 
-[!UICONTROL Identifier] is a standard Experience Data Model (XDM) data type that provides an identifier intended for computation. This data type is created as per HL7 FHIR Release 5 specifications.
+[!UICONTROL Identifier] is a standard Experience Data Model (XDM) data type that provides an identifier intended for computation. This data type is created as per the HL7 FHIR Release 5 specifications.
 
 ![Identifier data type structure](../../images/data-types/healthcare/identifier.png)
 

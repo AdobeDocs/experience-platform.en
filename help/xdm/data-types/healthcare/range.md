@@ -7,7 +7,7 @@ hidefromtoc: yes
 ---
 # [!UICONTROL Range] data type
 
-[!UICONTROL Range] is a standard Experience Data Model (XDM) data type that provides a set of values bound by low and high values. This data type is created as per HL7 FHIR Release 5 specifications.
+[!UICONTROL Range] is a standard Experience Data Model (XDM) data type that provides a set of values bound by low and high values. This data type is created as per the HL7 FHIR Release 5 specifications.
 
 ![Range data type structure](../../images/data-types/healthcare/range.png)
 

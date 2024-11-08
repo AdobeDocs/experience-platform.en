@@ -7,7 +7,7 @@ hidefromtoc: yes
 ---
 # [!UICONTROL Virtual Service Detail] data type
 
-[!UICONTROL Virtual Service Detail] is a standard Experience Data Model (XDM) data type that describes virtual service contact details. This data type is created as per HL7 FHIR Release 5 specifications.
+[!UICONTROL Virtual Service Detail] is a standard Experience Data Model (XDM) data type that describes virtual service contact details. This data type is created as per the HL7 FHIR Release 5 specifications.
 
 ![Virtual Service Detail data type structure](../../images/data-types/healthcare/virtual-service-detail.png)
 
@@ -15,7 +15,7 @@ hidefromtoc: yes
 | --- | --- | --- | --- |
 | [!UICONTROL Address Contact Point] | `addressContactPoint` | [[!UICONTROL Contact Point]](../healthcare/contact-point.md) | The details of a technology mediated contact point such as a phone, fax, or email. |
 | [!UICONTROL Address Extended Contact Detail] | `addressExtendedContactDetail` | [[!UICONTROL Extended Contact Detail]](../healthcare/extended-contact-detail.md) | Extended contact information. |
-| [!UICONTROL Channel Type] | `channelType` | [[!UICONTROL Coding]](../healthcare/coding.md) | The type of virtual service to connect to, such as Teams, Zoom,or WhatsApp. |
+| [!UICONTROL Channel Type] | `channelType` | [[!UICONTROL Coding]](../healthcare/coding.md) | The type of virtual service to connect to, such as Teams, Zoom, or WhatsApp. |
 | [!UICONTROL Additional Info] | `additionalInfo` | Array of strings | The address to see alternative connection details, represented as a URI. |
 | [!UICONTROL Address String] | `addressString` | String | The address to be used to connect to the virtual service. |
 | [!UICONTROL Address Url] | `addressUrl` | String | The URL to be used to connect to the virtual service, represented as a URI. |

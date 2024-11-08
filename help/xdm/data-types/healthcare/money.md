@@ -7,14 +7,14 @@ hidefromtoc: yes
 ---
 # [!UICONTROL Money] data type
 
-[!UICONTROL Money] is a standard Experience Data Model (XDM) data type that provides an amount of economic utility in some recognized currency. This data type is created as per HL7 FHIR Release 5 specifications.
+[!UICONTROL Money] is a standard Experience Data Model (XDM) data type that provides an amount of economic utility in some recognized currency. This data type is created as per the HL7 FHIR Release 5 specifications.
 
 ![Money data type structure](../../images/data-types/healthcare/money.png)
 
 | Display Name | Property | Data type | Description |
 | --- | --- | --- | --- |
-| [!UICONTROL currency] | `currency` | String | The ISO 4217 currency code. |
-| [!UICONTROL value] | `value` | Double | The numerical value. |
+| [!UICONTROL Currency] | `currency` | String | The ISO 4217 currency code. |
+| [!UICONTROL Value] | `value` | Double | The numerical value. |
 
 For more details on the data type, refer to the public XDM repository:
 

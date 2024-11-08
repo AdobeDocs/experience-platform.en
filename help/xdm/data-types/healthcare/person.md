@@ -7,7 +7,7 @@ hidefromtoc: yes
 ---
 # [!UICONTROL Person] data type
 
-[!UICONTROL Person] is a standard Experience Data Model (XDM) data type that provides information on a generic person record. This data type is created as per HL7 FHIR Release 5 specifications.
+[!UICONTROL Person] is a standard Experience Data Model (XDM) data type that provides information on a generic person record. This data type is created as per the HL7 FHIR Release 5 specifications.
 
 ![Person data type structure](../../images/data-types/healthcare/person/person.png)
 

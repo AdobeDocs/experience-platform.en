@@ -7,7 +7,7 @@ hidefromtoc: yes
 ---
 # [!UICONTROL Quantity] data type
 
-[!UICONTROL Quantity] is a standard Experience Data Model (XDM) data type that provides a measured or measurable amount. This data type is created as per HL7 FHIR Release 5 specifications.
+[!UICONTROL Quantity] is a standard Experience Data Model (XDM) data type that provides a measured or measurable amount. This data type is created as per the HL7 FHIR Release 5 specifications.
 
 ![Quantity data type structure](../../images/data-types/healthcare/quantity.png)
 

@@ -7,7 +7,7 @@ hidefromtoc: yes
 ---
 # [!UICONTROL Contact Point] data type
 
-[!UICONTROL Contact Point] is a standard Experience Data Model (XDM) data type that describes contact details for a person. This data type is created as per HL7 FHIR Release 5 specifications.
+[!UICONTROL Contact Point] is a standard Experience Data Model (XDM) data type that describes contact details for a person. This data type is created as per the HL7 FHIR Release 5 specifications.
 
 ![Contact Point data type structure](../../images/data-types/healthcare/contact-point.png)
 
