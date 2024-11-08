@@ -1,6 +1,7 @@
 ---
 title: Build Audiences using SQL
 description: Learn how to use the SQL audience extension in Adobe Experience Platform's Data Distiller to create, manage, and publish audiences using SQL commands. This guide covers all aspects of the audience lifecycle, including creation, updating and deleting profiles, and using data-driven audience definitions to target file-based destinations.
+exl-id: c35757c1-898e-4d65-aeca-4f7113173473
 ---
 # Build Audiences using SQL
 
