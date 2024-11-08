@@ -6,7 +6,7 @@ role: Developer
 ---
 # Query Service Authorization API guide
 
-The Query Service Authorization API provides organizations with tighter control over data access via the SQL interface in Adobe Experience Platform. You can use this API to define IP restrictions, limit data access to specified networks and enhance security monitoring.
+The Query Service Authorization API provides organizations with tighter control over data access via the SQL interface in Adobe Experience Platform. You can use this API to define IP restrictions, limit data access to specified networks, and enhance security monitoring.
 
 This guide outlines how to set up the authorization credentials and permissions required to make calls to the Query Service Authorization API.
 
