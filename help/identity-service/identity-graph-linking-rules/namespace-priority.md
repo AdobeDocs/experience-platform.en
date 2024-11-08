@@ -170,7 +170,16 @@ When selecting your data, you will need to specify a namespace, which will be us
 
 This configuration results in computing scores only using authenticated events.
 
-For more information on, read the documents on [Attribution AI](../../intelligent-services/attribution-ai/overview.md) and [Customer AI](../../intelligent-services/customer-ai/overview.md).
+For more information, read the documents on [Attribution AI](../../intelligent-services/attribution-ai/overview.md) and [Customer AI](../../intelligent-services/customer-ai/overview.md).
+
+### Partner-built destinations
+
+Updated audience disqualification results for profiles associated to a shared device may not be sent to downstream destinations. This may happen in certain rare occurrences where:
+
+* Audience qualification is based only on anonymous activity.
+* Logins across multiple profiles occur in a short period of time.
+
+For more information on partner-built destinations, read the [destinations overview](../../destinations/home.md#adobe-built-and-partner-built-destinations).
 
 ### Privacy Service
 
