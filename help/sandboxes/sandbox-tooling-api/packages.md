@@ -1603,7 +1603,7 @@ The following request changes a packages availability from private to public.
 
 ```shell
 curl -X GET \
-  http://platform-stage.adobe.io/data/foundation/exim/packages/update \
+  http://platform.adobe.io/data/foundation/exim/packages/update \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-type: application/json' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
