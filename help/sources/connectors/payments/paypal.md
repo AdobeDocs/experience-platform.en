@@ -7,7 +7,7 @@ exl-id: c70a9b91-b883-4e58-9ec5-6fc9b2163efd
 ---
 # [!DNL PayPal] connector
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >The [!DNL PayPal] source will be deprecated at the end of May 2025.
 

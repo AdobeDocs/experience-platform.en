@@ -6,7 +6,7 @@ exl-id: 45e6ef18-a0b7-4bb2-b099-b2a878e96637
 ---
 # [!DNL Phoenix]
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >The [!DNL Phoenix] source will be deprecated at the end of May 2025.
 

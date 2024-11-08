@@ -5,7 +5,7 @@ exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
 ---
 # Connect your [!DNL Salesforce Marketing Cloud] account to Experience Platform through the UI
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >The [!DNL Salesforce Marketing Cloud] source will be deprecated at the end of May 2025.
 

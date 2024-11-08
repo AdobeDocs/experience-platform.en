@@ -6,7 +6,7 @@ exl-id: 00c0bc9c-a740-4bab-a882-2cfed8abe758
 ---
 # Create a Oracle Service Cloud source connection using the [!DNL Flow Service] API
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >The [!DNL Oracle Service Cloud] source will be deprecated at the end of May 2025.
 
