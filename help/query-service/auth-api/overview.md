@@ -28,4 +28,4 @@ For more details on audit logging, refer to the [Audit Service documentation](ht
 
 ## Next Steps
 
-Get started with the Query Service Authorization API by reviewing the [Getting Started guide](./getting-started.md) for essential setup steps, including required headers and API call conventions. Then, explore the endpoint-specific guides on [IP Access](./ip-access.md) and [IP Validation](./ip-validation.md) for configuring and managing secure data access.
+Get started with the Query Service Authorization API by reviewing the [Getting Started guide](./getting-started.md) for essential setup steps, including required headers and API call conventions. Then, explore the endpoint-specific guides on [IP Access](./ip-access.md) and [IP Validation](./validate.md) for configuring and managing secure data access.
