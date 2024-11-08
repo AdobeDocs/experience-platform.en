@@ -1607,13 +1607,13 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-type: application/json' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'x-api-key: platform_exim' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
---data '{
-    "id":"{ID}",
-    "action":"UPDATE",
-    "packageVisibility":"PUBLIC"
-}'
+  -d '{
+      "id":"{ID}",
+      "action":"UPDATE",
+      "packageVisibility":"PUBLIC"
+  }'
 ```
 
 | Property | Description | Type | Required |
