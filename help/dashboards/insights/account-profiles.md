@@ -279,7 +279,7 @@ ORDER BY  d.date_key limit 5000;
 
 >[!NOTE]
 >
->The [!UICONTROL Customers per Account Overview] chart includes three drill-through insights: [!UICONTROL Customers per Account Detail], [!UICONTROL Opportunities per Account Overview], and [!UICONTROL Opportunities per Account Detail]. These drill-throughs offer more granular insights, breaking down customer and opportunity counts by specific categories and ranges, and are unaffected by any global date filters you may have set.
+>The [!UICONTROL Customers per Account Overview] chart includes three drill-through insights: [!UICONTROL Customers per Account Detail], [!UICONTROL Opportunities per Account Overview], and [!UICONTROL Opportunities per Account Detail]. These drill-throughs provide more granular insights, breaking down customer and opportunity counts by categories (such as direct and indirect customers) and ranges (like customer and opportunity count bands). These charts are unaffected by any global date filters you may have set.
 
 Questions answered by this insight:
 
@@ -320,6 +320,10 @@ ORDER BY ac.Account_Category;
 +++
 
 ## Customers per Account Detail {#customers-per-account-detail}
+
+>[!NOTE]
+>
+>This insight is unaffected by global date filters.
 
 Questions answered by this insight:
 
@@ -391,6 +395,10 @@ ORDER BY cr.customer_type,
 
 ## Opportunities per Account Overview {#opportunities-per-account-overview}
 
+>[!NOTE]
+>
+>This insight is unaffected by global date filters.
+
 Questions answered by this insight:
 
 - What is the distribution of accounts based on whether they have associated opportunities?
@@ -436,6 +444,10 @@ ORDER BY ac.Opportunity_Category;
 +++
 
 ## Opportunities per Account Detail {#opportunities-per-account-detail}
+
+>[!NOTE]
+>
+>This insight is unaffected by global date filters.
 
 Questions answered by this insight:
 
@@ -489,8 +501,6 @@ ORDER BY CASE opportunity_ranges.opportunity_range
 
 ## Next steps
 
-By reading this document, you now understand the SQL that generates account profile dashboard insights and what common questions this analysis solves. You can now edit and iterate on the SQL to generate your own insights.
-
-<!-- Add link above Learn how to [generate insights with SQL](). after April release -->
+By reading this document, you now understand the SQL that generates account profile dashboard insights and what common questions this analysis solves. You can now edit and iterate on the SQL to generate your own insights. Refer to the [Query Pro Mode overview](../sql-insights-query-pro-mode/overview.md) to learn how to generate custom insights with SQL.
 
 You can also read and understand the SQL that generates insights for the [Profiles](./profiles.md), [Audiences](./audiences.md), and [Destinations](./destinations.md) dashboards.
