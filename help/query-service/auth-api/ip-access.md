@@ -42,15 +42,11 @@ curl -X GET https://platform.adobe.io/data/foundation/query/security/ip-access \
 
 **Response**
 
-A successful response includes the sandbox's allowed IP ranges.
-
->[!NOTE]
->
->The `channel` value is currently `data_distiller`. This signifies that IP restrictions applied to data access modes such as PSQL or JDBC. 
+A successful response returns HTTP status 200 with a list of the sandbox's allowed IP ranges.
 
 ```json
 {
-  "imsOrg": "21CB1E5A66758BC10A495FE6@AdobeOrg",
+  "imsOrg": "{ORG_ID}",
   "sandboxName": "prod",
   "channel": "data_distiller",
   "allowedIpRanges": [
@@ -60,12 +56,18 @@ A successful response includes the sandbox's allowed IP ranges.
 }
 ```
 
-### IP range types {#ip-range-types}
+The following table provides a description and example of the response schema properties:
 
-The `allowedIpRanges` field can include two types of IP specifications:
+| Property         | Description | Example    |
+|------------------|---------------------------------------------|-----------------------------------------------------------------------------------------------|
+| `imsOrg`         | Organization ID for the sandbox.                                                                         | `{ORG_ID}`                       |
+| `sandboxName`    | Name of the sandbox where IP restrictions apply.                                                         | `prod`                           |
+| `channel`        | The access mode for IP restrictions. Currently The only accepted value is `data_distiller`. This signifies that IP restrictions are applied to PSQL or JDBC connections. | `data_distiller` |
+| `allowedIpRanges`| List of permitted IPs in either CIDR or fixed IP format. Each entry may include an optional description. | `[{"ipRange": "136.23.110.0/23", "description": "VPN-1 gateway IPs"}]` |
 
-- **CIDR**: Standard CIDR notation (for example, `"136.23.110.0/23"`) to define IP ranges.
-- **Fixed IP**: Single IPs for individual access permissions (for example, `"101.10.1.1"`).
+>[!NOTE]
+>
+>The `allowedIpRanges` field can include two types of IP specifications:<br><ul><li>**CIDR**: Standard CIDR notation (for example, `"136.23.110.0/23"`) to define IP ranges.</li><li>**Fixed IP**: Single IPs for individual access permissions (for example, `"101.10.1.1"`).</li></ul>
 
 ## Set new IP ranges
 
@@ -98,11 +100,11 @@ curl -X PUT https://platform.adobe.io/data/foundation/query/security/ip-access \
 
 **Response**
 
-A successful response includes the newly configured IP ranges.
+A successful response returns HTTP status 200 with details of the newly configured IP ranges.
 
 ```json
 {
-  "imsOrg": "21CB1E5A66758BC10A495FE6@AdobeOrg",
+  "imsOrg": "{ORG_ID}",
   "sandboxName": "prod",
   "channel": "data_distiller",
   "allowedIpRanges": [
@@ -114,9 +116,13 @@ A successful response includes the newly configured IP ranges.
 }
 ```
 
-## Delete IP Ranges
+## Delete IP ranges {#delete-ip-ranges}
 
-Remove all configured IP ranges for the sandbox. This action deletes the IP ranges and return the deleted IP list.
+Remove all configured IP ranges for the sandbox. This action deletes the IP ranges and returns the deleted IP list.
+
+>[!NOTE]
+>
+>The deletion operation applies to the organization (`imsOrg`) ID and affects all IP ranges configured for the sandbox.
 
 **API format**
 
@@ -136,11 +142,11 @@ curl -X DELETE https://platform.adobe.io/data/foundation/query/security/ip-acces
 
 **Response**
 
-A successful response includes the deleted IP ranges.
+A successful response returns HTTP status 200 with details of the deleted IP ranges.
 
 ```json
 {
-  "imsOrg": "21CB1E5A66758BC10A495FE6@AdobeOrg",
+  "imsOrg": "{ORG_ID}",
   "sandboxName": "prod",
   "channel": "data_distiller",
   "deletedIpRanges": [
@@ -152,6 +158,3 @@ A successful response includes the deleted IP ranges.
 }
 ```
 
->[!NOTE]
->
->The deletion operation applies to the IMS Org ID and affects all IP ranges configured for the sandbox.
