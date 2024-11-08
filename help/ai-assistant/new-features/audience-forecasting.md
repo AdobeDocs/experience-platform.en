@@ -3,7 +3,7 @@ title: Monitoring Significant Changes and Audience Forecasting with AI Assistant
 description: Learn how to use AI Assistant to monitor significant changes and forecast audiences in Adobe Experience Platform.
 badge: Alpha
 ---
-# Monitoring significant changes and audience forecasting with AI Assistant
+# Monitor significant changes and forecast audience growth with AI Assistant
 
 >[!AVAILABILITY]
 >
@@ -22,10 +22,10 @@ Refer to the following table for a list of important terminology and their corre
 | Terminology | Definition |
 | --- | --- |
 | Significant Change | A significant change is a large percentage-based change in audience or dataset size, defined by specific thresholds (for example, 10% for large audiences). Significant changes help identify anomalies affecting data stability. |
-| Anomalies | Anomalies are unexpected variations in data, such as a sudden 20% growth in a **High-Value Shoppers** audience. An anomaly may indicate a potential data ingestion issue or a change in audience definition. |
+| Anomalies | Anomalies are unexpected variations in data, such as a sudden 20% growth in a **High-Value Shoppers** audience. An anomaly may be caused by a potential data ingestion issue or a change in audience definition. |
 | Historical Data | Historical data refers to long-term data, usually one to three years. You can use historical data to track patterns. **Note**: During the Alpha stage, AI Assistant provides historical data of up to 13 months. |
 | Emerging/Recent Data | Emerging or recent data refer to data points observed over a short period, typically for a week, or up to 30 days. You can use emerging or recent data to highlight immediate trends and make swift adjustments. |
-| Forecast | A forecasts are predictions of future audience or dataset sizes based on past trends. You can use forecast data to support long-term planning up to one year. |
+| Forecast | A forecasts are predictions of future audience or dataset sizes based on past trends. You can use forecast data to support long-term planning. |
 | Audience Size | Audience size refers to the total number of profiles within an audience. Audience size gets updated with every iteration of data ingestion. |
 | Time frame for comparison | AI Assistant uses predefined comparison time frames. Recent anomalies default to a seven-day look back, while past anomalies cover 30 days. Historical trends span up to 13 months. |
 
@@ -45,9 +45,9 @@ As a business user and marketer, you may rely on accurate audience insights to m
 
 ## Key features
 
->[!AVAILABILITY]
+>[!IMPORTANT]
 >
->The following features are in Alpha and are focused on foundational capabilities in monitoring and forecasting.
+>The following features are in Alpha and are focused on foundational capabilities in monitoring and forecasting. As this feature is in Alpha, you must ensure that you double-check the responses that you receive from AI Assistant for accuracy.
 
 ### Monitor significant changes in audience and data
 
@@ -55,10 +55,10 @@ You can use AI Assistant to identify significant changes in audience and dataset
 
 | Audience size | Number of profiles | Description |
 | --- | --- | --- |
-| Small audiences | 1 to 100,000 profiles | Flags a change of 30% or more. |
-| Medium audiences | 100,000 to 500,000 profiles | Flags a change of 25% or more. |
-| Large audiences | 500,000 to 1 million profiles | Flags a change of 20% or more. |
-| Very large audiences | Over 1 million profiles | Flags a change of 10% or more. |
+| Small audiences | 1 to 100,000 profiles | Flags a change of 30% or more, unless a specific percentage is specified. |
+| Medium audiences | 100,000 to 500,000 profiles | Flags a change of 25% or more, unless a specific percentage is specified. |
+| Large audiences | 500,000 to 1 million profiles | Flags a change of 20% or more, unless a specific percentage is specified.  |
+| Very large audiences | Over 1 million profiles | Flags a change of 10% or more, unless a specific percentage is specified.  |
 
 {style="table-layout:auto"}
 
@@ -76,15 +76,7 @@ Significant changes indicate anomalies that may impact audience stability or dat
 
 ### Forecast audience and dataset growth
 
-You can use AI Assistant to reference historical data trends and project future audience and dataset sizes. You can then use these insights to support your resource planning and strategy adjustments. Forecasts can extend up to a year into the future, enabling long-term planning. By understanding expected audience growth or decline, you can adjust targeting strategies and allocate your resources accordingly.
-
->[!BEGINSHADEBOX]
-
-#### Example scenario
-
-If the **Engaged Subscribers** audience grows consistently by 10% each month, AI Assistant might predict that the audience will reach 600,000 profiles within six months. You can leverage this insight to plan additional engagement efforts, optimize budget allocation, or adjust campaign strategies in advance.
-
->[!ENDSHADEBOX]
+You can use AI Assistant to reference historical data trends and project future audience and dataset sizes. You can then use these insights to support your resource planning and strategy adjustments. Currently, you can use AI Assistant to forecast audience and dataset growth for 30 days. By understanding expected audience growth or decline, you can adjust targeting strategies and allocate your resources accordingly.
 
 ### Insights on historical audience sizes
 
@@ -103,7 +95,7 @@ Refer to the following tables for example queries that illustrate how AI Assista
 
 | Audience information or audience change | Example |
 | --- | --- |
-| <ul><li>What is the current size of {AUDIENCE_NAME}?</li><li>Count the number of audiences that have shown a change of {PERCENT} over {DATE_DURATION}.</li></ul> | <ul><li>What is the current size of the High-Value Shoppers audience?</li><li>Count the number of audiences that have shown a change of 20% over the last week.</li></ul> |
+| <ul><li>What is the current size of {AUDIENCE_NAME}?</li><li>Show the audiences that have shown a change of {PERCENT} over {DATE_DURATION}.</li></ul> | <ul><li>What is the current size of the High-Value Shoppers audience?</li><li>Show the audiences that have shown a change of 20% over the last week.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -176,17 +168,13 @@ When specific dates are mentioned, AI Assistant compares the audience sizes on t
 
 It may take 24 to 48 hours for AI Assistant to refresh data from Real-Time Customer Data Platform. Hence, for questions referencing "yesterday", AI Assistant interprets this as one day before the most recent data it has is available.
 
-## Proposed features
+## Out-of-scope features
 
-The following capabilities are currently not supported, but are being considered for future updates of AI Assistant:
+The following capabilities are currently not supported:
 
 ### Advanced root cause analysis
 
 While AI Assistant can identify significant changes, it cannot currently provide detailed root cause analysis for these shifts. Future iterations of AI Assistant aim to specify which datasets or attributes are contributing to significant changes in your audiences.
-
-### Real-time data comparison
-
-Real-time questions are currently not supported by AI Assistant. Currently, data insights are limited to a 24 to 48-hour delay, as AI Assistant processes daily data snapshots.
 
 ### Comprehensive historical dataset sizes
 
