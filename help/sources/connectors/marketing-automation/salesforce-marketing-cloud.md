@@ -7,7 +7,7 @@ last-substantial-update: 2023-05-25
 ---
 # [!DNL Salesforce Marketing Cloud]
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >The [!DNL Salesforce Marketing Cloud] source will be deprecated at the end of May 2025.
 

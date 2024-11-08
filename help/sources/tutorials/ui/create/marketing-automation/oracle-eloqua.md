@@ -5,7 +5,7 @@ exl-id: c4431d85-5948-4122-9a99-dbacdde5a09f
 ---
 # Create an [!DNL Oracle Eloqua] source connection using Platform UI
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >The [!DNL Oracle Eloqua] source will be deprecated at the end of May 2025.
 

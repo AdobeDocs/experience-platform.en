@@ -5,7 +5,7 @@ exl-id: ebe16bff-4c89-4d45-9973-e5aa13b61a36
 ---
 # [!DNL Oracle Eloqua] connector
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >The [!DNL Oracle Eloqua] source will be deprecated at the end of May 2025.
 

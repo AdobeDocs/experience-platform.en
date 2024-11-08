@@ -7,7 +7,7 @@ exl-id: 4b1cc352-3b1a-4015-baee-b1d42c15a400
 ---
 # [!DNL Couchbase] connector
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >The [!DNL Couchbase] source will be deprecated at the end of May 2025.
 
