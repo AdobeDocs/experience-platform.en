@@ -1,6 +1,7 @@
 ---
 title: Audience Comparison
 description: Learn how to compare key metrics between different audience groups using the Audience Comparison dashboard. Set audience filters, analyze trends, and export insights for data-driven decisions
+exl-id: cccd53f3-3d10-4044-ab4a-984f6f4a6e90
 ---
 # Audience comparison
 
@@ -56,4 +57,3 @@ Select **[!UICONTROL Templates]** to return to the [!UICONTROL Template] overvie
 ## Next steps
 
 After reading this document, you have learned how to compare key metrics between different audience groups using the **Audience Comparison** dashboard. To continue improving your audience segmentation and targeting strategies, explore other Data Distiller Templates that provide additional insights. Refer to the [Audience Trends](./trends.md), [Audience Identity Overlaps](./identity-overlaps.md), and [Advanced Audience Overlaps](./overlaps.md) UI guides to further enhance your decision-making and optimize engagement efforts.
-
