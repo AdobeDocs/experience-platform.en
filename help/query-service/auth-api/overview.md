@@ -5,17 +5,17 @@ role: Developer
 ---
 # Query Service Authorization API Guide
 
-Use the Query Service Authorization API to meet heightened data security requirements and enforce tighter control over data access via SQL in Adobe Experience Platform. You can apply IP-based restrictions with this API to ensure that data access is limited to approved networks and client machines. This gives you control over data access in compliance with security standards.
-<!-- a robust tool to manage data access. -->
-With this API you can configure, enforce, and monitor IP restrictions for accessing data via the SQL interface. This document provides a high-level overview of the API's core features, endpoint functions, and future capabilities.
+Use the Query Service Authorization API to enforce IP-based restrictions. Applying these measures ensure that only approved networks and client machines can access data via SQL in Adobe Experience Platform. These controls help you meet stringent security standards while providing real-time access monitoring and alerting.
+
+With this API, you can configure, enforce, and monitor IP restrictions for accessing data via the SQL interface. This document provides a high-level overview of the API's core features, endpoint functions, and future capabilities.
 
 ## Key Features
 
 The following features enable you to define IP-based access restrictions, monitor access attempts, and customize network security settings for Query Service:
 
-- **Restrict data access by network**: You can define allowed IP ranges from which data can be accessed using Query Service. This restriction applies specifically to SQL database connections made through Business Intelligence (BI) tools, database clients, or programming interfaces like JDBC.
-- **Enhanced monitoring and alerts**: All access attempts, including denied connections due to IP restrictions, are logged and sent to the [Adobe Experience Platform Audit Logs](../../landing/governance-privacy-security/audit-logs/overview.md) for comprehensive monitoring. You can track access patterns and identify potential security breaches promptly with this real-time auditing capability.
-- **Flexible IP restriction setup**: You can specify allowed IPs in both individual IP and CIDR block formats. These settings are applied per sandbox and offer tailored network restrictions based on your specific security needs.
+- **Define network-based data access controls**: Specify allowed IP ranges for Query Service access. This restriction applies specifically to SQL database connections, including those made through Business Intelligence (BI) tools, database clients, or programming interfaces like JDBC.
+- **Enable comprehensive monitoring and alerts**: All access attempts, including denied connections, are logged and sent to the [Adobe Experience Platform Audit Logs](../../landing/governance-privacy-security/audit-logs/overview.md) for real-time tracking. Use this capability to monitor access patterns and detect potential security breaches.
+- **Configure flexible IP restrictions**: Specify allowed IPs in both individual IP and CIDR block formats. These settings apply per sandbox, allowing you to tailor network restrictions to your specific security needs.
 
 ## Audit and monitoring capabilities
 
@@ -28,4 +28,4 @@ For more details on audit logging, refer to the [Audit Service documentation](ht
 
 ## Next Steps
 
-To begin using the Query Service Authorization API, first review the [Getting Started guide](./getting-started.md) for important setup instructions, including gathering required header values and understanding sample API calls. Then explore the endpoint-specific documentation for information on [IP Access](./ip-access.md) and [IP Validation](./ip-validation.md). Each guide provides in-depth details for configuring and managing IP restrictions, to help you enforce secure data access within Adobe Experience Platform.
+Get started with the Query Service Authorization API by reviewing the [Getting Started guide](./getting-started.md) for essential setup steps, including required headers and API call conventions. Then, explore the endpoint-specific guides on [IP Access](./ip-access.md) and [IP Validation](./ip-validation.md) for configuring and managing secure data access.
