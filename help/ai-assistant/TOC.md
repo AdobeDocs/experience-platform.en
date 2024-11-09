@@ -17,5 +17,6 @@ role: Admin,User,Developer,Leader
 * New features {#new-features}
   * [AI Assistant capabilities in Alpha and Beta](./new-features/alpha-beta.md)
   * [Monitor significant changes and forecast audiences](./new-features/audience-forecasting.md)
+  * [Natural language estimation](./new-features/natural-language.md)
 * [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
 

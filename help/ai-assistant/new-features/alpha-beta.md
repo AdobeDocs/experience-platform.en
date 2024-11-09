@@ -8,3 +8,4 @@ badge: Alpha
 Read the following documents to learn about features in AI Assistant for Adobe Experience Platform that are currently in Alpha or Beta stages:
 
 * [Monitoring significant changes and audience forecasting](./audience-forecasting.md)
+* [Natural language estimation](natural-language.md)
