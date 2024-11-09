@@ -1,13 +1,18 @@
 ---
 title: Marketo Engage Person Sync
 description: Use the Marketo Engage Person Sync connector to stream updates from a person audience to the corresponding records in your Marketo Engage.
+badgeBeta: label="Beta" type="Informative"
 ---
+
+>[!IMPORTANT]
+>
+>This destination connector is in beta and only available to select customers. To request access, contact your Adobe representative.
 
 # Marketo Engage Person Sync connection {#marketo-engage-person-sync}
 
 ## Overview {#overview}
 
-The Marketo Engage Person Sync Connector enables Marketers to stream updates from an AEP person audiences to the corresponding records in your Marketo Engage instance.
+Use the Marketo Engage Person Sync connector to stream updates from person audiences to the corresponding records in your Marketo Engage instance.
 
 ## Supported Identities and Attributes {#support-identities-and-attributes}
 
@@ -48,7 +53,7 @@ Refer to the table below for information about the destination export type and f
 >
 >* To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions).
 
-To configure a Marketo Engage instance as a destination, that instance must be in the same IMS org as your CDP instance. If you have already configured a destination, you may select an existing Marketo account to use with your new configuration. If not, click the Connector to Destination prompt, which will allow you to set the name, description, and Marketo Munchkin ID of the desired destination. Your Marketo Instance's Munchkin ID can be found in the Admin->Munchkin menu.
+To configure a Marketo Engage instance as a destination, that instance must be in the same organization as your Real-Time CDP instance. If you have already configured a destination, you may select an existing Marketo account to use with your new configuration. Navigate to the destinations catalog, find the Marketo Engage Person Sync connector, and select Connect to Destination prompt, which will allow you to set the name, description, and Marketo Munchkin ID of the desired destination. Your Marketo Instance's Munchkin ID can be found in the Admin->Munchkin menu.
 
 >[!IMPORTANT]
 >
@@ -56,19 +61,26 @@ To configure a Marketo Engage instance as a destination, that instance must be i
 
 ![Connect to Destination](../../assets/catalog/adobe/marketo-engage-person-sync/connect-to-destination.png)
 
+*  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
+*  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
+*  **[!UICONTROL Munchkin ID]**: The Munchkin ID is the unique identifier for a specific Marketo instance.
+*  **[!UICONTROL Partition]**: a concept in Marketo Engage used to separate lead records by business concern
+*  **[!UICONTROL First searchable field]**: Field to deduplicate on. The field must be present in each lead record of the input. Defaults to email
+*  **[!UICONTROL First searchable field]**: A secondary field to deduplicate on. The field must be present in each lead record of the input. Optional
+
 Once you have selected your instance, you will also need to select the Lead Partition which you want the configuration to integrate with. A [Lead Partition](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) is a concept in Marketo Engage used to separate lead records by business concern, such as a brand or a sales region. If your Marketo subscription does not have the Workspaces and Partitions feature, or if no additional partitions have been created in your subscription, then only the Default partition will be available. A single configuration can only update lead records which exist in its configured partition.
 
 >[!IMPORTANT]
 > 
->After a segment has been activated to the Marketo destination for the first time, backfilling profiles that already existed in the segment prior to Marketo destination activation can take [!UICONTROL up to 24 hours]. Going forward, any time profiles are added to the segment, they’ll be added to Marketo immediately.
+>After an audience has been activated to the Marketo destination for the first time, backfilling profiles that already existed in the audience prior to Marketo destination activation can take *up to 24 hours*. Going forward, any time profiles are added to the audience, they’ll be added to Marketo immediately.
 
 ### Deduplication Fields {#deduplication-fields}
 
 When sending updates to Marketo engage, records are selected based on the selected partition and one or two user-selected fields. If your destination is configured with the North America partition, and has Email Address and Company Name configured as deduplication fields, then all three fields must match to apply changes to an existing record. For example:
 
-- Destination is configured with the North America partition
-- Person with Email <test@example.com> and Company name Example Inc. In AEP matches the destination audience
-- Unless a record with those values already exists in the North America partition in Marketo, a new lead record will be created
+* The destination is configured with the North America partition
+* Person with Email <test@example.com> and Company name Example Inc. in Experience Platform matches the destination audience
+* Unless a record with those values already exists in the North America partition in Marketo, a new lead record will be created
 
 If no matching lead record is found, a new record will be created.
 
@@ -79,33 +91,36 @@ If no matching lead record is found, a new record will be created.
 >[!IMPORTANT]
 > 
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+
+Read [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+
 In the Activate Audiences step, you will be able to select from any person audiences which are visible to you.
 
 ![Activate Audiences](../../assets/catalog/adobe/marketo-engage-person-sync/activate-audiences.png)
 
 ## Field Mapping {#field-mapping}
 
-For changes to a particular person attribute to be sent to Marketo Engage, the field must be mapped from a CDP field to Marketo Field.
+For changes to a particular person attribute to be sent to Marketo Engage, the field must be mapped from a Real-Time CDP field to Marketo Field.
 
 ![Field Mapping](../../assets/catalog/adobe/marketo-engage-person-sync/field-mapping.png)
 
-AEP datatypes and Marketo datatypes can be mapped in the following ways:
+Experience Platform datatypes and Marketo datatypes can be mapped in the following ways:
 
-| AEP Data Type | Marketo Data Type                    |
-| ------------- | ------------------------------------ |
-| String        | String, Text Area, Url, Phone, Email |
-| Enum          | String                               |
-| Date          | Date                                 |
-| Date-time     | Datetime                             |
-| Integer       | Integer                              |
-| Short         | Integer                              |
-| Long          | Float                                |
-| Double        | Currency, Float, Percent             |
-| Boolean       | Boolean                              |
-| Array         | Not supported                        |
-| Object        | Not supported                        |
-| Map           | Not supported                        |
-| Byte          | Not supported                        |
+| Experience Platform Data Type | Marketo Data Type                    |
+| ----------------------------- | ------------------------------------ |
+| String                        | String, Text Area, Url, Phone, Email |
+| Enum                          | String                               |
+| Date                          | Date                                 |
+| Date-time                     | Datetime                             |
+| Integer                       | Integer                              |
+| Short                         | Integer                              |
+| Long                          | Float                                |
+| Double                        | Currency, Float, Percent             |
+| Boolean                       | Boolean                              |
+| Array                         | Not supported                        |
+| Object                        | Not supported                        |
+| Map                           | Not supported                        |
+| Byte                          | Not supported                        |
 
 {style="table-layout:auto"}
 
