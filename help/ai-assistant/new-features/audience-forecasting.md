@@ -2,6 +2,7 @@
 title: Monitoring Significant Changes and Audience Forecasting with AI Assistant
 description: Learn how to use AI Assistant to monitor significant changes and forecast audiences in Adobe Experience Platform.
 badge: Alpha
+exl-id: 8f34d378-a8a0-420d-8e45-39a5aafdd7b7
 ---
 # Monitor significant changes and forecast audience growth with AI Assistant
 

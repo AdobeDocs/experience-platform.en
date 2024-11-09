@@ -2,6 +2,7 @@
 title: Alpha and Beta features for AI Assistant
 description: Learn about the AI Assistant features that are currently in Alpha or Beta stages.
 badge: Alpha
+exl-id: 48e7737e-9aee-4d01-8f24-bc562e443e3a
 ---
 # Alpha and Beta features for AI Assistant
 
