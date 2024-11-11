@@ -34,6 +34,7 @@ If your business relies heavily on Microsoft cloud technology, then choosing Exp
 Similarly, if you rely more on Amazon services, then AWS might be the better option.
 
 
+
 ## Feature parity {#feature-parity}
 
 Adobe is constantly working to offer feature parity for all applications running on Experience Platform, such as [Real-Time Customer Data Platform](../rtcdp/home.md), [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/ajo-home), and [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-landing).
