@@ -27,6 +27,13 @@ Refer to the table below for detailed information about major differences betwee
 
 How do we help a customer decide what to choose?
 
+The choice between running Experience Cloud on Azure or AWS depends on multiple factors specific to your business: your organization's business and technical needs, your long-term cloud integration strategy, and your existing infrastructure.
+
+If your business relies heavily on Microsoft cloud technology, then choosing Experience Platform on Microsoft Azure might be the better fit.
+
+Similarly, if you rely more on Amazon services, then AWS might be the better option.
+
+
 ## Feature parity {#feature-parity}
 
 Adobe is constantly working to offer feature parity for all applications running on Experience Platform, such as [Real-Time Customer Data Platform](../rtcdp/home.md), [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/ajo-home), and [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-landing).
