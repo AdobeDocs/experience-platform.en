@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
-title: Adobe Experience Platform Overview
-description: Adobe Experience Platform enables organizations to centralize and standardize customer data before applying data science and machine learning to dramatically improve the design and delivery of rich, personalized experiences.
+title: Adobe Experience Platform multi-cloud overview
+description: Learn what the differences are between running Experience Platform on Microsoft Azure and Amazon Web Services.
 ---
 
 # Adobe Experience Platform multi-cloud overview
@@ -17,7 +17,7 @@ Refer to the table below for detailed information about major differences betwee
 
 | Feature / Functionality | Microsoft Azure | Amazon Web Services |
 | --- | --- | --- |
-||||
+| HIPAA compliance | Supported | Not supported |
 ||||
 ||||
 ||||
@@ -25,6 +25,7 @@ Refer to the table below for detailed information about major differences betwee
 
 ## Which cloud is right for me?
 
+How do we help a customer decide what to choose?
 
 ## Feature parity {#feature-parity}
 
