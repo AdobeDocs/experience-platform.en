@@ -1157,9 +1157,11 @@ Note the connection ID from the response. This ID will be required in the next s
 
 Next, you need to create a target connection which stores the export parameters for your datasets. Export parameters include location, file format, compression, and other details. Refer to the `targetSpec` properties provided in the destination's connection spec to understand the supported properties for each destination type. Reference the tabs below for the `targetSpec` properties of all supported destinations.
 
->[!WARNING]
+>[!IMPORTANT]
 >
 >Exports to JSON files are supported in a compressed mode only. Exports to [!DNL Parquet] files are supported in a compressed and uncompressed mode.
+>
+>The format of the exported JSON file is NDJSON, which is the standard interchange format in the big data ecosystem. Adobe recommends using an NDJSON-compatible client to read the exported files.
 
 >[!BEGINTABS]
 
