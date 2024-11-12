@@ -156,7 +156,7 @@ After signing in, select **[!UICONTROL Create new credential]** to create a new 
 
 ![Create new credentials to access Platform APIs.](././images/api-authentication/create-credentials.gif)
 
-Next, use the dropdown selector to open the credentials window, generate an access token, and get your API key and organization ID. Copy the credentials into the **[!UICONTROL Try it]** blocks on the API reference pages to start working with Platform APIs.
+Next, use the dropdown selector to open the credentials window, generate an access token, and get your API key and organization ID. Copy the credentials into the [**[!UICONTROL Try it]**](/help/release-notes/2024/may-2024.md#interactive-api-documentation) blocks on the API reference pages to start working with Platform APIs.
 
 ![Use the dropdown selector to view credentials and generate an access token.](././images/api-authentication/view-copy-credentials.gif)
 
