@@ -232,7 +232,7 @@ In the [connect to destination workflow](/help/destinations/ui/connect-destinati
 
 Note the difference in file format between the two file types, when compressed: 
 
-* When exporting compressed JSON files, the exported file format is `json.gz`
+* When exporting compressed JSON files, the exported file format is `json.gz`. The format of the exported JSON is NDJSON, which is the standard interchange format in the big data ecosystem. Adobe recommends using an NDJSON-compatible client to read the exported files.
 * When exporting compressed parquet files, the exported file format is `gz.parquet`
 
 Exports to JSON files are supported *in a compressed mode only*. Exports to Parquet files are supported in a compressed and uncompressed mode.

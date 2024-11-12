@@ -1,8 +1,9 @@
 ---
 keywords: Experience Platform; Query Service; IP access control; authorization; API; getting started
 title: Query Service Authorization API Guide
-description: Learn how to get started for authorization and IP range restrictions for secure data access within Adobe Experience Platform's Query Service. 
+description: Learn how to get started for authorization and IP range restrictions for secure data access within Adobe Experience Platform's Query Service.
 role: Developer
+exl-id: d93ce774-c8b2-4f15-a4d9-117d9aa5d9e7
 ---
 # Query Service Authorization API guide
 

@@ -1,7 +1,8 @@
 ---
 title: Query Service Authorization API Guide
-description: Learn how to use the Query Service Authorization API to enforce network-based IP restrictions for secure connections through SQL. Use this API to enhance data access control for your Adobe Experience Platform data.  
+description: Learn how to use the Query Service Authorization API to enforce network-based IP restrictions for secure connections through SQL. Use this API to enhance data access control for your Adobe Experience Platform data.
 role: Developer
+exl-id: bcc5ea0e-cb6d-4c7b-bf9f-a0336f76c4c8
 ---
 # Query Service Authorization API Guide
 
