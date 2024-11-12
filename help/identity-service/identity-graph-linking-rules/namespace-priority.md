@@ -145,6 +145,8 @@ For more information, read the [advanced lifecycle management overview](../../hy
 
 ### Computed attributes
 
+Computed attributes uses namespace priority to store the computed attribute value. For a given event, the identity with the highest namespace priority will have the the value of the computed attribute written against it. For more information, read the [computed attributes UI guide](../../profile/computed-attributes/ui.md).
+
 Computed attributes does not use namespace priority to compute values. If you are using computed attributes, you must ensure that the CRMID is designated as your primary identity for WebSDK. For more information, read the [computed attributes UI guide](../../profile/computed-attributes/ui.md).
 
 ### Data lake
@@ -168,7 +170,16 @@ When selecting your data, you will need to specify a namespace, which will be us
 
 This configuration results in computing scores only using authenticated events.
 
-For more information on, read the documents on [Attribution AI](../../intelligent-services/attribution-ai/overview.md) and [Customer AI](../../intelligent-services/customer-ai/overview.md).
+For more information, read the documents on [Attribution AI](../../intelligent-services/attribution-ai/overview.md) and [Customer AI](../../intelligent-services/customer-ai/overview.md).
+
+### Partner-built destinations
+
+Updated audience disqualification results for profiles associated to a shared device may not be sent to downstream destinations. This may happen in certain rare occurrences where:
+
+* Audience qualification is based only on anonymous activity.
+* Logins across multiple profiles occur in a short period of time.
+
+For more information on partner-built destinations, read the [destinations overview](../../destinations/home.md#adobe-built-and-partner-built-destinations).
 
 ### Privacy Service
 
