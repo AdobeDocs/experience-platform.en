@@ -8,6 +8,8 @@ AI Assistant in Adobe Experience Platform is a conversational tool that you can 
 
 ## Real-Time Customer Data Platform and Adobe Journey Optimizer
 
+Read the documentation and watch the videos linked below for information on core features and capabilities of AI Assistant.
+
 <table style="table-layout:fixed">
   <tr style="border: 0;">
     <td>
