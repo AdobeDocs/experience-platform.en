@@ -3,6 +3,7 @@ keywords: Experience Platform; security; ip-access; validation; API guide; query
 title: IP Validation Endpoint
 description: Learn how to validate IP access for sandboxes in Query Service using the IP Validation API endpoint.
 role: Developer
+exl-id: 4ce9ab1c-e333-4ed5-a430-43ffec36a46d
 ---
 # IP Validation endpoint
 
