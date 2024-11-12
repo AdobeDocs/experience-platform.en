@@ -21,8 +21,8 @@ Refer to the following table for a list of important terminology and their corre
 
 | Terminology | Definition |
 | --- | --- |
-| Audience size estimation | The process of calculating the number of members within a specific audience based on a defined criteria. You can use this insight to understand the scale of your reach for targeted campaigns. |
-| Propensity estimation | A prediction of the likelihood that members within an audience will exhibit specific behaviors (such as: making a purchase, churning) within a certain time frame. You can reference this insight when optimizing your campaigns and managing audience retention strategies. |
+| Audience size estimation | The process of calculating the number of members within a specific audience based on a defined criteria. You can base your size estimations on profile data, including profiles not in an audience. Additionally, you can retrieve audience size estimates without having to first create an audience. Use this insight to understand the scale of your reach for targeted campaigns. |
+| Propensity estimation | A prediction of the likelihood that members within an audience will exhibit specific behaviors (such as: making a purchase, churning) within a certain time frame. Propensity estimation is specific to audiences within Real-Time Customer Data Platform, but can include profile data, including profiles in in any audiences. You can reference this insight when optimizing your campaigns and managing audience retention strategies. |
 | Natural language processing | AI Assistant's ability to interpret and respond to questions asked in everyday language, allowing you to interact conversationally and receive relevant insights without using technical queries. |
 | Predefined time frames | Standard time ranges ( "last month," "next 30 days") supported by AI Assistant for estimating audience size and propensities. **Note**: Custom time frames may not be fully supported during the Alpha stage. |
 | Snapshot data | The dataset used by AI Assistant to provide estimates. This data is updated from Real-Time Customer Data Platform every 24-48 hours, and therefore, insights may not reflect real-time audience changes. |
@@ -35,7 +35,7 @@ AI Assistant's natural language estimation capabilities can be particularly help
 
 ### Marketing operations
 
-As a marketing operations professional, your responsibilities may include managing and monitoring audience data to ensure that it aligns with your business objectives. With AI Assistant's natural language estimation feature, you can quickly gather insights into audience sizes and propensities without needing extensive data analysis knowledge.
+As a marketing operations professional, your responsibilities may include managing and monitoring audience data to ensure that it aligns with your business objectives. With AI Assistant's natural language estimation feature, you can quickly gather insights into audience sizes and propensities without having to create an audience first or extensive data analysis knowledge.
 
 helping them maintain a consistent, data-driven approach in their workflows.
 
@@ -53,12 +53,16 @@ As a business user and marketer, quick access to audience data can be crucial to
 
 You can use natural language queries to ask AI Assistant to estimate the size of specific audiences. This feature can be particularly useful for gauging the reach and impact of target audiences. For example, as a marketing strategist, you may ask questions such as:
 
-* "How large is my high-value customers audience?"
+* "How many profiles live in New York?"
 * "How many profiles do I have with an email and have consented?"
 
 Use this feature to simplify the process of estimating audience sizes and get immediate answers without needing to navigate complex data filters or segment definitions. 
 
 ### Audience propensity estimation
+
+>[!TIP]
+>
+>Your Experience Platform account must be provisioned with [Customer AI](../../intelligent-services/customer-ai/overview.md) in order to use AI Assistant's propensity estimation capabilities.
 
 You can use audience propensity estimation to identify the likelihood of specific behaviors or actions within an audience. For example, you may ask questions such as:
 
@@ -98,11 +102,7 @@ Currently, AI Assistant supports predefined date ranges, such as "last month" or
 
 ### How does AI Assistant calculate propensity scores?
 
-Propensity scores are calculated based on historical data and behavioral patterns within Experience Platform. AI Assistant uses machine learning models to predict the likelihood of specific audience behaviors, such as purchases and churn, within the requested time frame.
-
-### Can AI Assistant interpret complex audience filters?
-
-AI Assistant can interpret straightforward segment definitions, but highly detailed or multi-level conditions may not be supported in the Alpha stage. For complex queries, it's best to use simple segmentation criteria or consult with data experts.
+Propensity scores are calculated using [Customer AI](../../intelligent-services/customer-ai/overview.md). AI Assistant uses machine learning models to predict the likelihood of specific audience behaviors, such as purchases and churn, within the requested time frame. During the Alpha stage, propensity score calculation in AI Assistant does not use experience events or behavioral data.
 
 ### Will AI Assistant estimate audience sizes or propensities based on real-time data?
 
@@ -119,10 +119,6 @@ The following capabilities are currently not supported:
 ### Audience Size Estimations based on event of behavioral data
 
 AI Assistant currently cannot answer questions based on behavioral data such as **"How many users have added a product to cart in last 30 days"**. However, you can create a computed attribute in Real-Time CDP that may pre-compute such values. These computed attributes are then available within AI Assistant. For more information, read the documentation on [computed attributes](../../profile/computed-attributes/overview.md).
-
-### Complex Segmentation Conditions 
-
-Queries involving highly specific segmentation criteria, such as multi-level audience filters or compound conditions, are not fully supported. AI Assistant can answer questions based on straightforward segment definitions but may not interpret highly detailed, conditional filters at this stage.
 
 ### Real-Time Data Updates
 
