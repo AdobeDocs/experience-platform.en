@@ -146,17 +146,19 @@ The next step is to generate an `{ACCESS_TOKEN}` credential for use in Platform 
 
 ## Use the Get credentials functionality in the API reference documentation to generate and retrieve authentication credentials {#get-credentials-functionality}
 
-Starting with the November 2024 release of Experience Platform, you can get credentials to use the Experience Platform APIs directly from the API reference page, without needing to go to Developer Console. View the example below from the [Flow Service API - Destinations page](https://developer.adobe.com/experience-platform-apis/references/destinations/).
+Starting with the November 2024 release of Experience Platform, you can get credentials to use the Experience Platform APIs directly from the API reference pages, without needing to go to [!UICONTROL Developer Console]. View the example below from the [Flow Service API - Destinations page](https://developer.adobe.com/experience-platform-apis/references/destinations/).
 
 ![Get credentials functionality highlighted at the top of an API reference page.](././images/api-authentication/get-credentials-highlighted.png)
 
 To get credentials to call Platform APIs, navigate to any Experience Platform API reference page and select **[!UICONTROL Sign in]** at the top of the page. Sign in with your **[!UICONTROL Personal Account]** or **[!UICONTROL Company or School Account]**.  
 
-After signing in, you can select **[!UICONTROL Create new credential]** to create a new set of credentials to access Platform APIs. 
+After signing in, select **[!UICONTROL Create new credential]** to create a new set of credentials to access Platform APIs. 
 
 ![Create new credentials to access Platform APIs.](././images/api-authentication/create-credentials.gif)
 
 Next, use the dropdown selector to open the credentials window, generate an access token, and get your API key and organization ID. Copy the credentials into the **[!UICONTROL Try it]** blocks on the API reference pages to start working with Platform APIs.
+
+![Use the dropdown selector to view credentials and generate an access token.](././images/api-authentication/view-copy-credentials.gif)
 
 >[!TIP]
 >
