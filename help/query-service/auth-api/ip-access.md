@@ -3,6 +3,7 @@ keywords: Experience Platform; security; ip-access; QS-Auth; API guide; query se
 title: IP Access Endpoint
 description: Learn how to manage IP ranges for sandbox access in Query Service using the IP Access API endpoint.
 role: Developer
+exl-id: fc15ab50-c125-4f00-a311-81fd41697c7d
 ---
 # IP Access endpoint
 
@@ -157,4 +158,3 @@ A successful response returns HTTP status 200 with details of the deleted IP ran
   ]
 }
 ```
-
