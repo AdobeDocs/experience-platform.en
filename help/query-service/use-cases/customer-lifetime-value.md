@@ -41,7 +41,7 @@ The first step in establishing your CLV is to create a derived dataset from the 
 
 ## Extend the insights data model and schedule updates {#extend-data-model-and-set-refresh-schedule}
 
-Next, you must build a custom data model or extend an existing Adobe Real-Time CDP data model to engage with your CLV reporting insights. See the documentation to learn how to [build a reporting insights data model through Query Service for use with accelerated store data and user-defined dashboards](../data-distiller/customizable-insights/reporting-insights-data-model.md#build-a-reporting-insights-data-model). The tutorial covers the following steps:
+Next, you must build a custom data model or extend an existing Adobe Real-Time CDP data model to engage with your CLV reporting insights. See the documentation to learn how to [build a reporting insights data model through Query Service for use with accelerated store data and user-defined dashboards](../data-distiller/sql-insights/reporting-insights-data-model.md#build-a-reporting-insights-data-model). The tutorial covers the following steps:
 
 * Create a model for reporting insights with Data Distiller.
 * Create tables, relationships, and populate data.
@@ -56,7 +56,7 @@ Make sure to set a schedule to refresh your custom data model on a regular caden
 
 ## Build a dashboard to capture insights {#build-a-custom-dashboard}
 
-Now that you have created your custom data model, you are ready to visualize your data with custom queries and user-defined dashboards. See the user-defined dashboards overview for full guidance on how to [build a custom dashboard](../../dashboards/user-defined-dashboards.md). The UI guide includes details on:
+Now that you have created your custom data model, you are ready to visualize your data with custom queries and user-defined dashboards. See the user-defined dashboards overview for full guidance on how to [build a custom dashboard](../../dashboards/standard-dashboards.md). The UI guide includes details on:
 
 * How to create a widget.
 * How to use the widget composer.

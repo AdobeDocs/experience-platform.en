@@ -17,10 +17,6 @@ The dashboard provides usage metrics for each purchased product, the consolidate
 
 The [!UICONTROL Compute hours] metric is only applicable to customers with the Data Distiller license for batch queries. [!UICONTROL Compute hours] are the measure of time taken by the Query Service engines to read, process, and write data back into the data lake when a batch query is executed.
 
->[!NOTE]
->
->**The [!UICONTROL Compute hours] data is available with limitations**: The data begins from Oct 1 2023 with no trends.<br>The **backfill** of data from your contract start date is a work-in-progress. It is expected to be available by the end of the calendar year.
-
 ![The license usage dashboard with the compute hours metric highlighted.](../images/data-distiller/compute-hours.png)
 
 To find more information about the metrics available for your organization based on your organization's purchased license, see the [license usage dashboard guide](../../dashboards/guides/license-usage.md).

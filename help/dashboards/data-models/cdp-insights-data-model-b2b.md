@@ -14,12 +14,12 @@ The Real-Time Customer Data Platform Insights data model for the B2B Edition exp
 >This functionality is available to customers who have purchased the Real-Time CDP Prime and Ultimate package. See the documentation on available [Real-Time CDP editions](../../rtcdp/overview.md#rtcdp-editions) for more information, or contact your Adobe representative. 
 
 <!-- 
-See the query accelerated store reporting insights documentation to learn [how to build a reporting insights data model through Query Service for use with accelerated store data and user-defined dashboards](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md).
+See the query accelerated store reporting insights documentation to learn [how to build a reporting insights data model through Query Service for use with accelerated store data and user-defined dashboards](../../query-service/data-distiller/sql-insights/reporting-insights-data-model.md).
  -->
 
 ## Prerequisites
 
-This guide requires a working understanding of custom dashboards. Read the documentation on [how to create a custom dashboard](../user-defined-dashboards.md) before continuing with this guide.
+This guide requires a working understanding of custom dashboards. Read the documentation on [how to create a custom dashboard](../standard-dashboards.md) before continuing with this guide.
 
 ## Real-Time CDP B2B insight reports and use cases {#B2B-insight-reports-and-use-cases}
 

@@ -44,7 +44,7 @@ Once you have developed, tested, and saved your segment definition, you can then
 
 [Scheduled evaluation](#scheduled-evaluation) (also known as 'scheduled segmentation') allows you to create a recurring schedule for running an export job at a specific time, whereas [on-demand evaluation](#on-demand-evaluation) involves creating a segment job to build the audience immediately. Steps for each are outlined below.
 
-If you have not yet completed the [create a segment definition using the Segmentation API](./create-a-segment.md) tutorial or created a segment definition using [Segment Builder](../ui/overview.md), please do so before proceeding with this tutorial.
+If you have not yet completed the [create a segment definition using the Segmentation API](./create-a-segment.md) tutorial or created a segment definition using [Segment Builder](../ui/segment-builder.md), please do so before proceeding with this tutorial.
 
 ## Scheduled evaluation {#scheduled-evaluation}
 

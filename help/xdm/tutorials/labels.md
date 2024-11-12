@@ -13,7 +13,7 @@ All data that is brought into Adobe Experience Platform is constrained by Experi
 
 A label applied to a schema field indicates the usage policies that apply to the data contained in that specific field. 
 
-Labels can be applied to applied to individual schemas, and fields within those schemas. When labels are applied directly to a schema, those labels are propagated to all existing and future datasets that are based on that schema.
+Labels can be applied to individual schemas, and fields within those schemas. When labels are applied directly to a schema, those labels are propagated to all existing and future datasets that are based on that schema.
 
 In addition, any field label that you add in one schema propagates to all other schemas that employ the same field from a shared class or field group. This helps to ensure that usage rules for similar fields are consistent across your entire data model.
 

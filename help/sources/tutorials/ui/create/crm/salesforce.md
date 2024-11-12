@@ -30,7 +30,7 @@ You must provide values for the following credentials to connect your [!DNL Sale
 
 | Credential | Description |
 | --- | --- |
-| Environment URL | The URL of the [!DNL Salesforce] source instance. |
+| Environment URL | The URL of the [!DNL Salesforce] source instance. The format for environment URL is `https://[domain].my.salesforce.com`. |
 | Username | The username for the [!DNL Salesforce] user account. |
 | Password | The password for the [!DNL Salesforce] user account. |
 | Security Token | The security token for the [!DNL Salesforce] user account. |
@@ -44,7 +44,7 @@ You must provide values for the following credentials to connect your [!DNL Sale
 
 | Credential | Description |
 | --- | --- |
-| Environment URL |  The URL of the [!DNL Salesforce] source instance. |
+| Environment URL |  The URL of the [!DNL Salesforce] source instance. The format for environment URL is `https://[domain].my.salesforce.com`. |
 | Client ID | The client ID is used in tandem with the client secret as part of OAuth2 authentication. Together, the client ID and client secret enable your application to operate on behalf of your account by identifying your application to [!DNL Salesforce]. |
 | Client secret | The client secret is used in tandem with the client ID as part of OAuth2 authentication. Together, the client ID and client secret enable your application to operate on behalf of your account by identifying your application to [!DNL Salesforce]. |
 | API version | The REST API version of the [!DNL Salesforce] instance that you are using. The value for the API version must be formatted with a decimal. For example, if you are using API version `52`, then you must input the value as `52.0`. If this field is left blank, then Experience Platform will automatically use the latest available version. |
@@ -112,6 +112,12 @@ When finished, select **[!UICONTROL Connect to source]**.
 ![The OAuth interface for Salesforce account creation.](../../../../images/tutorials/create/salesforce/oauth2.png)
 
 >[!ENDTABS]
+
+### Skip preview of sample data {#skip-preview-of-sample-data}
+
+During the data selection step, you may encounter a timeout when ingesting large tables or files of data. You can skip data preview to circumvent the timeout and still view your schema, albeit without sample data. To skip data preview, enable the **[!UICONTROL Skip previewing sample data]** toggle.
+
+The rest of the workflow will remain the same. The only caveat is that skipping data preview may prevent calculated and required fields from being auto-validated during the mapping step, and you will then have to manually validate those fields during mapping.
 
 ## Next steps
 

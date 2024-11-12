@@ -7,6 +7,12 @@ exl-id: 604c4739-5a07-4b5a-b3b4-a46fd69e3aeb
 ---
 # Manage Real-time Machine Learning notebooks (Alpha)
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
+
 >[!IMPORTANT]
 >
 >Real-time Machine Learning is not available to all users yet. This feature is in alpha and still being tested. This document is subject to change.

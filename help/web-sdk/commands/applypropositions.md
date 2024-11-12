@@ -40,7 +40,7 @@ Run the `applyPropositions` command when calling your configured instance of the
 * **`viewName`**: The name of the view to render in a single-page application. The display notifications for these decisions are cached and can be included in a subsequent `sendEvent` command using `personalization.includePendingDisplayNotifications`.
 
 ```js
-alloy("applyPropositiions",{
+alloy("applyPropositions",{
   "propositions": [],
   "metadata": {},
   "viewName": ""

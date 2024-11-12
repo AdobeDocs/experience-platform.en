@@ -59,6 +59,10 @@ The next screen displays a list of event types to subscribe to. Select the event
 >* [Platform notifications](./rules.md)
 >* [Privacy Service notifications](../../privacy-service/privacy-events.md)
 
+>[!IMPORTANT]
+>
+>Edge related alerts are currently in beta and only available to select beta customers.
+
 ![](../images/notifications/choose-event-subscriptions.png)
 
 The next screen prompts you to create a JSON Web Token (JWT). You are given the option to automatically generate a key pair, or upload your own public key generated in the terminal.
@@ -92,7 +96,6 @@ The details page for the newly created event registration appears, where you can
 By following this tutorial, you have registered a webhook to receive [!DNL I/O Event] notifications for [!DNL Experience Platform] and/or [!DNL Privacy Service]. For details on available events and how to interpret notification payloads for each service, refer to the following documentation:
 
 * [[!DNL Privacy Service] notifications](../../privacy-service/privacy-events.md)
-* [[!DNL Data Ingestion] notifications](../../ingestion/quality/subscribe-events.md)
 * [[!DNL Flow Service] (sources) notifications](../../sources/notifications.md)
 
 See the [[!DNL Observability Insights] overview](../home.md) for more information on how you can monitor your activities on [!DNL Experience Platform] and [!DNL Privacy Service].

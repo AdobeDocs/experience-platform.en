@@ -2,6 +2,7 @@
 keywords: mobile; braze; messaging;
 title: Braze connection
 description: Braze is a comprehensive customer engagement platform that powers relevant and memorable experiences between customers and the brands they love.
+last-substantial-update: 2024-08-20
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
 ---
 # [!DNL Braze] connection
@@ -43,9 +44,9 @@ As a marketer, I want to target users in a mobile engagement destination, with a
 This section describes which types of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 

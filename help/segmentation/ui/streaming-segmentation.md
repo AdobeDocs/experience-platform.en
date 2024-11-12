@@ -22,19 +22,17 @@ Streaming segmentation on [!DNL Adobe Experience Platform] allows customers to d
 
 >[!NOTE]
 >
->In order for streaming segmentation to work, you will need to enable scheduled segmentation for the organization. For details on enabling scheduled segmentation, please refer to [the streaming segmentation section in the Segmentation user guide](./overview.md#scheduled-segmentation).
+>In order for streaming segmentation to work, you will need to enable scheduled segmentation for the organization. For details on enabling scheduled segmentation, please refer to [the Audience Portal overview](./audience-portal.md#scheduled-segmentation).
 
 A query will be automatically evaluated with streaming segmentation if it meets any of the following criteria:
 
-| Query type | Details | Example |
-| ---------- | ------- | ------- |
-| Single event | Any segment definition that refers to a single incoming event with no time restriction. | ![An example of a single event is shown.](../images/ui/streaming-segmentation/incoming-hit.png) |
-| Single event within a relative time window | Any segment definition that refers to a single incoming event. | ![An example of a single event within a relative time window is shown.](../images/ui/streaming-segmentation/relative-hit-success.png) |
-| Single event with a time window | Any segment definition that refers to a single incoming event with a time window. | ![An example of a single event with a time window is shown.](../images/ui/streaming-segmentation/historic-time-window.png) |
-| Profile only | Any segment definition that refers to only a profile attribute. | |
-| Single event with a profile attribute within a relative time window of less than 24 hours | Any segment definition that refers to a single incoming event, with one or more profile attributes, and occurs within a relative time window of less than 24 hours. | ![An example of a single event with a profile attribute within a relative time window is shown.](../images/ui/streaming-segmentation/profile-relative-success.png) |
-| Segment of segments | Any segment definition that contains one or more batch or streaming segments. **Note:** If a segment of segments is used, profile disqualification will happen **every 24 hours**. | ![An example of a segment of segments is shown.](../images/ui/streaming-segmentation/two-batches.png) |
-| Multiple events with a profile attribute | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. | ![An example of multiple events with a profile attribute is shown.](../images/ui/streaming-segmentation/event-history-success.png) |
+| Query type | Details |
+| ---------- | ------- |
+| Single event within a time window of less than 24 hours | Any segment definition that refers to a single incoming event within a time window of less than 24 hours. |
+| Profile only | Any segment definition that refers to only a profile attribute. |
+| Single event with a profile attribute within a relative time window of less than 24 hours | Any segment definition that refers to a single incoming event, with one or more profile attributes, and occurs within a relative time window of less than 24 hours. |
+| Segment of segments | Any segment definition that contains one or more batch or streaming segments. **Note:** If a segment of segments is used, profile disqualification will happen **every 24 hours**. |
+| Multiple events with a profile attribute | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. |
 
 A segment definition will **not** be enabled for streaming segmentation in the following scenarios:
 
@@ -69,7 +67,7 @@ Underneath is a line graph that shows the number of new audiences that were upda
 >
 >A segment definition is considered qualified if it goes from having no status to realized or if it goes from exited to realized. A segment definition is considered unqualified if it goes from realized to exited.
 >
->More information about these statuses can be found in the status table within the [segmentation overview](./overview.md#browse).
+>More information about these statuses can be found in the status table within the [Audience Portal overview](./audience-portal.md#customize).
 
 ![The Profiles over time card is highlighted, showing a line graph of the profiles over time.](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
