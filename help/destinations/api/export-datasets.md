@@ -1159,7 +1159,7 @@ Next, you need to create a target connection which stores the export parameters 
 
 >[!IMPORTANT]
 >
->Exports to JSON files are supported in a compressed mode only. Exports to [!DNL Parquet] files are supported in a compressed and uncompressed mode.
+>Exports to JSON files are supported in a compressed mode only. Exports to [!DNL Parquet] files are supported in both compressed and uncompressed modes.
 >
 >The format of the exported JSON file is NDJSON, which is the standard interchange format in the big data ecosystem. Adobe recommends using an NDJSON-compatible client to read the exported files.
 
