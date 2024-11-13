@@ -7,6 +7,10 @@ exl-id: d93ce774-c8b2-4f15-a4d9-117d9aa5d9e7
 ---
 # Query Service Authorization API guide
 
+>[!AVAILABILITY]
+>
+>This functionality is available to customers who have purchased the Data Distiller add on. For more information, contact your Adobe representative.
+
 The Query Service Authorization API provides organizations with tighter control over data access via the SQL interface in Adobe Experience Platform. You can use this API to define IP restrictions, limit data access to specified networks, and enhance security monitoring.
 
 This guide outlines how to set up the authorization credentials and permissions required to make calls to the Query Service Authorization API.
