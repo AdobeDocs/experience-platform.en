@@ -7,6 +7,10 @@ exl-id: 4ce9ab1c-e333-4ed5-a430-43ffec36a46d
 ---
 # IP Validation endpoint
 
+>[!AVAILABILITY]
+>
+>This functionality is available to customers who have purchased the Data Distiller add on. For more information, contact your Adobe representative.
+
 Use the IP Validation API endpoint to verify whether a specified IP address is permitted to access a designated sandbox in Query Service. This check confirms if access restrictions apply or if an IP address is permitted to access data within a sandbox.
 
 ## Validate IP for sandbox access {#validate-ip-for-sandbox-access}
