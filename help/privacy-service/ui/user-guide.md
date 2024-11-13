@@ -5,7 +5,7 @@ title: Manage Privacy Jobs in the Privacy Service UI
 description: Learn how to use the Privacy Service user interface to coordinate and monitor privacy requests across various Experience Cloud applications.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 ---
-# Manage privacy jobs in the Privacy Service UI {#user-guide}
+# Manage privacy jobs in the Privacy Service UI {#user-guide} 
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_requests_description"
@@ -37,6 +37,7 @@ The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow 
 | [!UICONTROL CPA_USA (Colorado)]     | The [!DNL Colorado Privacy Act] |
 | [!UICONTROL CPRA_USA (California)]  | The [!DNL California Consumer Privacy Rights Act (CPRA)] |
 | [!UICONTROL CTDPA_USA (Connecticut)]| The [!DNL Connecticut Data Privacy Act] |
+| [!UICONTROL DPDPA_USA (Delaware)]   | The [!DNL Delaware Personal Data Privacy Act]   |
 | [!UICONTROL FDBR_USA (Florida)]     | The [!DNL Florida Digital Bill of Rights]|
 | [!UICONTROL GDPR (European Union)]  | The European Union's [!DNL General Data Protection Regulation]|
 | [!UICONTROL HIPPA_USA (United States)]| The [!DNL Health Insurance Portability and Accountability Act] |
@@ -46,10 +47,11 @@ The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow 
 | [!UICONTROL MCDPA_USA (Montana)]    | The [!DNL Montana Consumer Data Privacy Act] |
 | [!UICONTROL NDPA_USA (Nebraska)]    | The [!DNL Nebraska Data Protection Act] |
 | [!UICONTROL NZPA_NZL (New Zealand)] | New Zealand's [!DNL Privacy Act] |
-| [!UICONTROL NHPA_USA (New Hampshire)]| The [!DNL New Hampshire Data Privacy Act] |
+| [!UICONTROL NHPA_USA (New Hampshire)]| The [!DNL New Hampshire Privacy Act] |
 | [!UICONTROL NJDPA_USA (New Jersey)] | The [!DNL New Jersey Data Protection Act] |
 | [!UICONTROL OCPA USA (Oregon)]      | The [!DNL Oregon Consumer Privacy Act] |
 | [!UICONTROL PDPA_THA (Thailand)]    | Thailand's [!DNL Personal Data Protection Act] |
+| [!UICONTROL QL25_CAN (Quebec)]      | [!DNL Quebec Law 25]   |
 | [!UICONTROL TDPSA USA (Texas)]      | The [!DNL Texas Data Privacy and Security Act] |
 | [!UICONTROL UCPA_USA (Utah)]        | The [!DNL Utah Consumer Privacy Act] |
 | [!UICONTROL VCDPA_USA (Virginia)]   | The [!DNL Virginia Consumer Data Protection Act] |

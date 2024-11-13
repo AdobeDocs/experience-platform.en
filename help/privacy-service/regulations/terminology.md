@@ -5,7 +5,7 @@ title: Privacy Regulations Terminology
 description: This document provides definitions for key terms related to privacy regulations supported by Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
 ---
-# Privacy regulations terminology
+# Privacy regulations terminology 
 
 This document provides definitions for key terms related to privacy regulations supported by Adobe Experience Cloud.
 
@@ -46,6 +46,8 @@ This document provides definitions for key terms related to privacy regulations 
 **Data protection officer**: An expert on data privacy who works independently to ensure that an entity is adhering to the policies and procedures detailed in the GDPR.
 
 **Data subject**: A natural person whose personal data is processed by a controller or processor.
+
+**[!DNL Delaware Personal Data Privacy Act]**: The [!DNL Delaware Personal Data Privacy Act] provides Delaware residents rights to access, correct, delete, and opt out of personal data sales and targeted advertising. The Act applies to businesses processing data for at least 35,000 consumers or earning over 20% of revenue from data sales impacting 10,000+ consumers. Enforced by the Department of Justice, it includes mandatory data protection practices and a 60-day period to address violations.
 
 **Delegated acts**: Non-legislative acts enacted to supplement the existing legislation and provide criteria or clarity.
 
@@ -107,7 +109,7 @@ This document provides definitions for key terms related to privacy regulations 
 
 **[!DNL Nebraska Data Protection Act]**: A privacy law that provides Nebraskans the right to access, correct, delete, and opt out of the sale of their personal data. It applies to businesses that meet specific data processing and revenue thresholds. The NDPA also requires businesses to implement reasonable data security measures and offers a 30-day cure period to resolve violations before penalties are applied.
 
-**[!DNL New Hampshire Data Privacy Act]**: This regulation protects the personal data of New Hampshire residents by granting them rights to access, delete, and transfer their data. It mandates businesses to disclose their data collection and sharing practices and allows consumers to opt out of data sales. The NHDPA applies to companies that meet specified data processing thresholds.
+**[!DNL New Hampshire Privacy Act]**: This regulation protects the personal data of New Hampshire residents by granting them rights to access, delete, and transfer their data. It mandates businesses to disclose their data collection and sharing practices and allows consumers to opt out of data sales. The NHDPA applies to companies that meet specified data processing thresholds.
 
 **[!DNL New Jersey Data Protection Act]**: A comprehensive state privacy law that provides New Jersey residents with rights to access, correct, and delete personal data. It includes opt-out mechanisms for data sales and targeted advertising. The NJDPA applies to businesses processing large volumes of consumer data and requires transparency in how businesses handle personal information.
 
@@ -135,6 +137,8 @@ This document provides definitions for key terms related to privacy regulations 
 **Pseudonymization**: The processing of personal data such that it can no longer be attributed to a single data subject without the use of additional data, so long as that additional data stays separate to ensure non-attribution.
 
 ## Q
+
+**[!DNL Quebec Law 25]**: [!DNL Quebec Law 25] enhances privacy rights for residents, mandating explicit consent, data minimization, and rights to access, correct, delete, and transfer personal data. Organizations must appoint a privacy officer, conduct privacy impact assessments, and report breaches. Compliance deadlines and significant penalties apply for violations.
 
 ## R
 

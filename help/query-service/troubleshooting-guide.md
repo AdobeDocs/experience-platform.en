@@ -1,18 +1,37 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;Query service;troubleshooting guide;faq;troubleshooting;
 solution: Experience Platform
-title: Frequently Asked Questions
-description: This document contains common questions and answers related to Query Service. Topics include, exporting data, third-party tools, and PSQL errors.
+title: Query Service and Data Distiller frequently asked questions
+description: This document contains common questions and answers related to Query Service and Data Distiller. Topics include, exporting data, third-party tools, and PSQL errors.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 ---
-# Frequently asked questions
+# Query Service and Data Distiller frequently asked questions
 
-This document provides answers to frequently asked questions about Query Service and provides a list of commonly seen error codes when using Query Service. For questions and troubleshooting related to other services in Adobe Experience Platform, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
+This document answers frequently asked questions about Query Service and Data Distiller. It also includes commonly seen error codes while using the "Queries" product for data validation or writing transformed data back to the data lake. For questions and troubleshooting other Adobe Experience Platform services, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
+
+To clarify how Query Service and Data Distiller work together within Adobe Experience Platform, here are two foundational questions. 
+
+## What is the relationship between Query Service and Data Distiller?
+
+Query Service and Data Distiller are distinct, complementary components that provide specific data querying capabilities. Query Service is designed for ad hoc queries to explore, validate, and experiment with ingested data without altering the data lake. In contrast, Data Distiller focuses on batch queries that transform and enrich data, with results stored back into the data lake for future use. Batch queries in Data Distiller can be scheduled, monitored, and managed, supporting deeper data processing and manipulation that Query Service alone does not facilitate.
+
+Together, Query Service facilitates rapid insights, while Data Distiller enables in-depth, persistent data transformations.
+
+## What is the difference between Query Service and Data Distiller?
+
+**Query Service**: Used for SQL queries focused on data exploration, validation, and experimentation. Outputs are not stored in the data lake, and execution time is limited to 10 minutes. Ad hoc queries are suited for lightweight, interactive data checks and analyses.
+
+**Data Distiller**: Enables batch queries that process, clean, and enrich data, with results stored back in the data lake. These queries support longer execution (up to 24 hours) and additional features like scheduling, monitoring, and accelerated reporting. Data Distiller is ideal for in-depth data manipulation and scheduled data processing tasks.
+
+See the [Query Service packaging document](./packaging.md) for more detailed information.
+
+## Question categories {#categories}
 
 The following list of answers to frequently asked questions is divided into the following categories:
 
 - [General](#general)
-- [Queries UI](#queries-ui) 
+- [Data Distiller](#data-distiller)
+- [Queries UI](#queries-ui)
 - [Dataset Samples](#dataset-samples)
 - [Exporting data](#exporting-data)
 - [SQL Syntax](#sql-syntax) 
@@ -583,7 +602,7 @@ Yes, attribute-based access control is enforced if configured. See the [attribut
 No, Query Service does not support the "INSERT OVERWRITE INTO" command.
 +++
 
-### How frequently is the usage data on the license usage dashboard updated for Data Distiller compute hours?
+### How frequently is the usage data on the license usage dashboard updated for Data Distiller Compute Hours?
 
 +++Answer
 The license usage dashboard for Data Distiller computer hours is updated four times a day, every six hours.
@@ -599,6 +618,38 @@ Yes, you can use `CREATE VIEW` command without Data Distiller access. This comma
 
 +++Answer
 Yes. Although, certain third-party clients, such as DbVisualizer, may require a separate identifier before and after an SQL block to indicate that a part of a script should be handled as a single statement. More details can be found in the [anonymous block documentation](./key-concepts/anonymous-block.md) or in [the official DbVisualizer documentation](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect). 
++++
+
+## Data Distiller {#data-distiller}
+
+### How is Data Distiller's license usage tracked and where can I see this information?
+
++++Answer  
+The main metric used to track batch query usage is the Compute Hour. You have access to this information and your current consumption through the [License usage dashboard](../dashboards/guides/license-usage.md).
++++
+
+### What is a Compute Hour?
+
++++Answer  
+Compute hours are the measure of time taken by the Query Service engines to read, process, and write data back into the data lake when a batch query is executed.
++++
+
+### How are Compute Hours measured?
+
++++Answer  
+Compute Hours are measured cumulatively across all of your authorized Sandboxes.
++++
+
+### Why do I sometimes notice a variation in Compute Hour consumption even when I run the same query consecutively?
+
++++Answer  
+Compute hours for a query can fluctuate due to multiple factors. These include the data volume processed, the complexity of transformation operations within the SQL query, and so on. Query Service scales the cluster based on the above parameters for each query, which can lead to differences in Compute Hours.
++++
+
+### Is it normal to notice a reduction in Compute Hours when I run the same query using the same data over a long period of time? Why might this be happening?
+
++++Answer  
+Backend infrastructure is constantly improved to optimize Compute Hour utilization and processing time. As a result, you may notice changes over time as performance enhancements are implemented.
 +++
 
 ## Queries UI
