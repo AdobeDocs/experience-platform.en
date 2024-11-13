@@ -31,7 +31,11 @@ Choosing between Experience Platform on Azure or AWS depends on several factors 
 
 ## Feature parity {#feature-parity}
 
-We are committed to offering feature parity across both cloud platforms, for for all applications running on Experience Platform, such as [Real-Time Customer Data Platform](../rtcdp/home.md), [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/ajo-home), and [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-landing).
+We are committed to offering feature parity across both cloud platforms, for all applications running on Experience Platform, such as:
+
+* [Real-Time Customer Data Platform](../rtcdp/home.md)
+* [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/ajo-home)
+* [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-landing)
 
 However, some functionalities may differ between the Azure and AWS versions. These differences are outlined in the product documentation, where applicable.
 
