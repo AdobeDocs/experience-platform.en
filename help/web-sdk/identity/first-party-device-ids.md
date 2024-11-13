@@ -1,12 +1,12 @@
 ---
-title: First-party device IDs in Web SDK
+title: Use first-party device IDs in Web SDK
 description: Learn how to configure first-party device IDs (FPIDs) in the Adobe Experience Platform Web SDK.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
 ---
 
-# First-party device IDs in Web SDK
+# Use first-party device IDs in Web SDK
 
-The Adobe Experience Platform Web SDK assigns [Adobe Experience Cloud IDs (ECIDs)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html) to website visitors by using cookies, to track user behavior. To account for browser restrictions on cookie lifespans, you can choose to set and manage your own device identifiers instead. These are referred to as first-party device IDs (`FPIDs`).
+The Adobe Experience Platform Web SDK assigns [Adobe Experience Cloud IDs (ECIDs)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html) to website visitors using cookies to track user behavior. To address browser restrictions on cookie lifespans, you can set and manage your own device identifiers, known as first-party device IDs (FPIDs).
 
 >[!NOTE]
 >
@@ -14,14 +14,19 @@ The Adobe Experience Platform Web SDK assigns [Adobe Experience Cloud IDs (ECIDs
 
 >[!IMPORTANT]
 >
->First-party device IDs are not compatible with the [third-party cookies](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#identity) functionality in Web SDK.
->You can either use first-party device IDs, or you can use third-party cookies, but you cannot use both features simultaneously.
+>First-party device IDs are not compatible with the [third-party cookies](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#identity) functionality in Web SDK. You can use either first-party device IDs or third-party cookies, but not both simultaneously.
 
-This document explains how to configure first-party device IDs for your Web SDK implementation.
+## Prerequisites {#prerequisites}
 
-## Prerequisites
+Before you start, ensure you are familiar with how identity data works in the Web SDK, including ECIDs and `identityMap`. See the overview on [identity data in the Web SDK](./overview.md) for more information.
 
-This guide assumes you are familiar with how identity data works for the Platform Web SDK, including the role of ECIDs and `identityMap`. See the overview on [identity data in the Web SDK](./overview.md) for more information.
+## First-party device ID formatting requirements {#formatting-requirements}
+
+The Edge Network only accepts IDs that comply with the [UUIDv4 format](https://datatracker.ietf.org/doc/html/rfc4122). Device IDs not in UUIDv4 format will be rejected.
+
+* [!DNL UUIDs] are unique and random, with a negligible probability of collision.
+* [!DNL UUIDv4] cannot be seeded using IP addresses or any other personal identifiable information (PII).
+* Libraries to generate [!DNL UUIDs] are available for every programming language.
 
 ## Using first-party device IDs (FPIDs) {#using-fpid}
 
@@ -29,26 +34,27 @@ First-party device IDs ([!DNL FPIDs]) track visitors by using first-party cookie
 
 >[!IMPORTANT]
 >
->[!DNL A] or [!DNL AAAA] records are only supported for setting and tracking cookies. The primary method for data collection is through a [!DNL DNS] [!DNL CNAME]. In other words, [!DNL FPIDs] are set using an [!DNL A] record or [!DNL AAAA] record, and are then sent to Adobe using a [!DNL CNAME].
+>[!DNL A] or [!DNL AAAA] records are only supported for setting and tracking cookies. The primary method for data collection is through a [!DNL DNS CNAME]. [!DNL FPIDs] are set using an [!DNL A] or [!DNL AAAA] record and sent to Adobe using a [!DNL CNAME].
 >
->The [Adobe-Managed Certificate Program](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) is also still supported for first-party data collection.
+>The [Adobe-Managed Certificate Program](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) is also supported for first-party data collection.
 
-Once an [!DNL FPID] cookie is set, its value can be fetched and sent to Adobe as event data is collected. Collected [!DNL FPIDs] are used as seeds to generate [!DNL ECIDs], which continue to be the primary identifiers in Adobe Experience Cloud applications. 
+Once an [!DNL FPID] cookie is set, its value can be fetched and sent to Adobe as event data is collected. Collected [!DNL FPIDs] are used to generate [!DNL ECIDs], which are the primary identifiers in Adobe Experience Cloud applications.
 
+<<<<<<< Updated upstream
 There are two ways in which you can send an [!DNL FPID] for a website visitor to the Edge Network:
 
 * You can configure a CNAME for your Web SDK instance and [configure your datastream](#setting-cookie-datastreams) to include the name of your FPID cookie.
 * You can [include the [!UICONTROL FPID] in the `identityMap`](#identityMap)
+=======
+You can use [!DNL FPIDs] in two ways:
+>>>>>>> Stashed changes
 
-### First-party device ID formatting requirements {#formatting-requirements}
-
-The Edge Network only accepts [!DNL IDs] that comply with the [UUIDv4 format](https://datatracker.ietf.org/doc/html/rfc4122). Device IDs that are not in [!DNL UUIDv4] format will be rejected. 
-
-Generation of a [!DNL UUID] will almost always result in a unique, random ID, with the probability of a collision occurring being negligible. [!DNL UUIDv4] cannot be seeded using IP addresses or any other personal identifiable information ([!DNL PII]). [!DNL UUIDs] are ubiquitous and libraries can be found for virtually every programming language to generate them.
+* Configure a [!DNL CNAME] for your Web SDK calls and include the name of your [!DNL FPID] cookie in your datastream configuration. 
+* Include the [!DNL FPID] in the identity map. See the section further down in this document on [using FPIDs in `identityMap`](#identityMap) for more information.
 
 ## Setting a first-party ID cookie in the Datastreams UI {#setting-cookie-datastreams}
 
-You can specify a cookie name in the Datastreams user interface, where the [!DNL FPID] can reside, rather than having to read the cookie value and include the [!DNL FPID] in the identity map.
+You can specify a cookie name in the Datastreams user interface where the [!DNL FPID] can reside, rather than reading the cookie value and including the [!DNL FPID] in the identity map.
 
 >[!IMPORTANT]
 >
@@ -56,13 +62,13 @@ You can specify a cookie name in the Datastreams user interface, where the [!DNL
 
 See the [datastreams documentation](../../datastreams/configure.md) for detailed information on how to configure a datastream.
 
-When configuring your datastream, enable the **[!UICONTROL First Party ID Cookie]** option. This setting tells the Edge Network to refer to a specified cookie when looking up a first-party device ID, rather than looking up this value in the [identity map](#identityMap).
+When configuring your datastream, enable the **[!UICONTROL First Party ID Cookie]** option. This setting tells the Edge Network to refer to a specified cookie when looking up a first-party device ID, instead of looking up this value in the [identity map](#identityMap).
 
 See the documentation on [first-party cookies](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html) for more details on how they work with Adobe Experience Cloud.
 
 ![Platform UI image showing the datastream configuration highlighting the First Party ID Cookie setting](../assets/first-party-id-datastreams.png)
 
-When enabling this setting, you must provide the name of the cookie where the ID is expected to be stored.
+When enabling this setting, you must provide the name of the cookie where the [!DNL FPID] is expected to be stored.
 
 When you use first-party IDs, you cannot perform third-party ID syncs. Third-party ID syncs rely on the [!DNL Visitor ID] service and the `UUID` generated by that service. When using the first-party ID functionality, the [!DNL ECID] is generated without the use of the [!DNL Visitor ID] service, which makes third-party ID syncs impossible.
 
@@ -124,6 +130,8 @@ The `SameSite` attribute lets servers determine whether cookies are sent with cr
 If no `SameSite` attribute is specified, the default setting for some browsers is now `SameSite=Lax`.
 
 ## Using FPIDs in `identityMap` {#identityMap}
+
+As an alternative to storing the [!DNL FPID] in your own cookie, you can send the [!DNL FPID] to the Edge Network through the identity map.
 
 Below is an example of how you would set an [!DNL FPID] in the `identityMap`:
 
