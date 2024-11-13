@@ -1,11 +1,11 @@
 ---
-title: XDM Field Discovery For Audience Creation With AI Assistant
+title: XDM Field Discovery With AI Assistant
 description: Read this document to learn how you can use AI Assistant for Experience Data Model (XDM) field discovery.
 badge: Alpha
 hide: true
 hidefromtoc: true
 ---
-# XDM field discovery for audience creation with AI Assistant
+# XDM field discovery for with AI Assistant
 
 >[!AVAILABILITY]
 >
