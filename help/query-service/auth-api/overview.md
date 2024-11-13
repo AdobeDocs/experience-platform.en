@@ -6,6 +6,10 @@ exl-id: bcc5ea0e-cb6d-4c7b-bf9f-a0336f76c4c8
 ---
 # Query Service Authorization API Guide
 
+>[!AVAILABILITY]
+>
+>This functionality is available to customers who have purchased the Data Distiller add on. For more information, contact your Adobe representative.
+
 Use the Query Service Authorization API to enforce IP-based restrictions. Applying these measures ensure that only approved networks and client machines can access data via SQL in Adobe Experience Platform. These controls help you meet stringent security standards while providing real-time access monitoring and alerting.
 
 With this API, you can configure, enforce, and monitor IP restrictions for accessing data via the SQL interface. This document provides a high-level overview of the API's core features, endpoint functions, and future capabilities.
