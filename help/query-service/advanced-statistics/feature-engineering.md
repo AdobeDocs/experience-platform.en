@@ -2,6 +2,7 @@
 title: Feature Engineering SQL Extension
 description: Learn about the Data Distiller feature engineering SQL extension to preprocesses data for advanced statistical modeling. It covers the available feature extraction, transformation, and selection techniques.
 role: Developer
+exl-id: 622c8ef3-9651-46b3-ad22-021a93190149
 ---
 # Feature engineering SQL extension 
 

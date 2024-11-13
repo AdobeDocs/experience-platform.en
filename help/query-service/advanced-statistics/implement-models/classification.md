@@ -1,7 +1,8 @@
 ---
 title: Classification Algorithms
-description:  Learn how to configure and optimize various classification algorithms with key parameters, descriptions, and example code to help you implement advanced statistical models.
+description: Learn how to configure and optimize various classification algorithms with key parameters, descriptions, and example code to help you implement advanced statistical models.
 role: Developer
+exl-id: 9105ab04-b480-48a0-b8f7-cf0ed5e5399d
 ---
 # Classification algorithms {#classification-algorithms}
 
@@ -276,4 +277,3 @@ Create MODEL modelname OPTIONS(
 ## Next steps
 
 After reading this document, you now know how to configure and use various classification algorithms. Next, refer to the documents on [regression](./regression.md) and [clustering](./clustering.md) to learn about other types of advanced statistical models.
-
