@@ -7,6 +7,10 @@ exl-id: fc15ab50-c125-4f00-a311-81fd41697c7d
 ---
 # IP Access endpoint
 
+>[!AVAILABILITY]
+>
+>This functionality is available to customers who have purchased the Data Distiller add on. For more information, contact your Adobe representative.
+
 To secure data access within a specified Query Service sandbox, use the IP Access endpoint to manage allowed IP ranges. You can use this API to fetch, configure, or delete IP ranges associated with your organization's ID.
 
 You can perform the following actions with the IP Access API:
