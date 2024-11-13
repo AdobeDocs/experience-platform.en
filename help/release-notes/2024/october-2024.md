@@ -1,6 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes October 2024
 description: The October 2024 release notes for Adobe Experience Platform.
+exl-id: 5e2112b8-2a0a-4c1e-af3e-b00d8cc4f4cf
 ---
 # Adobe Experience Platform release notes 
 

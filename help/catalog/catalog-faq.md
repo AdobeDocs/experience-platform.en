@@ -2,6 +2,7 @@
 keywords: catalog service; questions; frequently asked questions; faq; datasets faq
 title: Frequently asked questions
 description: Answers to the most frequently asked questions about Adobe Experience Platform Catalog Service and datasets.
+exl-id: 70d2a352-75bd-4bbc-98e6-aeea16306f63
 ---
 # Frequently asked questions {#faq}
 
@@ -76,4 +77,3 @@ You can check the timestamp of the last data retention job in the [Dataset reten
 No, once the retention policy is applied, any data older than the retention period is permanently deleted and cannot be recovered.
 
 +++
-

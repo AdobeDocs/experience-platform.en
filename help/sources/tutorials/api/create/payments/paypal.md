@@ -8,7 +8,7 @@ exl-id: 5e6ca7b4-5e2f-4706-a339-ac159e2e0938
 ---
 # Create a [!DNL PayPal] base connection using the [!DNL Flow Service] API
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >The [!DNL PayPal] source will be deprecated at the end of May 2025.
 

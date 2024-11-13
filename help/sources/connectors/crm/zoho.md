@@ -7,7 +7,7 @@ exl-id: 4a010453-3d09-4a47-b04e-5789ae4af48c
 ---
 # [!DNL Zoho CRM]
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >The [!DNL Zoho CRM] source will be deprecated at the end of June 2025.
 

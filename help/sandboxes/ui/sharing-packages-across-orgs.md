@@ -1,6 +1,7 @@
 ---
 title: Sharing Packages Across Organization Using Sandbox Tooling
 description: Learn how to use Sandbox Tooling in Adobe Experience Platform to share packages across different organizations.
+exl-id: 02826a8d-f01d-44cb-9ae0-0fcde24de83e
 ---
 # Share packages across organizations using Sandbox Tooling
 
