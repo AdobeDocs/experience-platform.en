@@ -255,7 +255,7 @@ role: Developer
   * [Supported browsers](./extension-dev/browsers.md)
   * Submission process {#submit}
     * [Overview](./extension-dev/submit/overview.md)
-    * [Company setup](./extension-dev/submit/setup.md)
+    * [Organization setup](./extension-dev/submit/setup.md)
     * [Grant user access](./extension-dev/submit/access.md)
     * [Develop an extension](./extension-dev/submit/develop.md)
     * [Create an exchange listing](./extension-dev/submit/create-listing.md)
