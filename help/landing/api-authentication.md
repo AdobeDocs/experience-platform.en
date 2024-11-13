@@ -62,6 +62,10 @@ See the guide on [managing user groups in [!DNL Admin Console]](https://helpx.ad
 
 After you have been given developer and user access to Platform through [!DNL Admin Console], the next step is to generate your `{ORG_ID}` and `{API_KEY}` credentials in Adobe Developer Console. These credentials only need to be generated once and can be reused in future Platform API calls.
 
+>[!TIP]
+>
+>Instead of going to Developer Console, you can get all the authentication credentials that you need to work with Platform APIs directly from the API reference documentation pages. [Read more](#get-credentials-functionality) about the functionality.
+
 ### Add Experience Platform to a project {#add-platform-to-project}
 
 Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and sign in with your Adobe ID. Next, follow the steps outlined in the tutorial on [creating an empty project](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/) in the Adobe Developer Console documentation.
@@ -144,7 +148,7 @@ The next step is to generate an `{ACCESS_TOKEN}` credential for use in Platform 
 >
 >You can also use a Postman environment and collection to generate access tokens. For more information, read the section about [using Postman to authenticate and test API calls](#use-postman).
 
-## Use the Get credentials functionality in the API reference documentation to generate and retrieve authentication credentials {#get-credentials-functionality}
+## Create and retrieve authentication credentials directly in the API reference documentation {#get-credentials-functionality}
 
 Starting with the November 2024 release of Experience Platform, you can get credentials to use the Experience Platform APIs directly from the API reference pages, without needing to go to [!UICONTROL Developer Console]. View the example below from the [Flow Service API - Destinations page](https://developer.adobe.com/experience-platform-apis/references/destinations/).
 
