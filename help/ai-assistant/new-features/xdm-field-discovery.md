@@ -9,7 +9,7 @@ hidefromtoc: true
 
 >[!AVAILABILITY]
 >
->XDM field discovery for audience creation is in Alpha.
+>This feature is in Alpha and may not be available to your organization. To participate in the Alpha program and access this feature, contact your Adobe Account Team.
 
 You can use AI Assistant to search for and discover Experience Data Model (XDM) fields that you can then use to create targeted audiences within Experience Platform.
 
