@@ -54,12 +54,11 @@ You can use AI Assistant's natural language estimation capabilities to estimate 
 
 >[!ENDTABS]
 
-
-
 ## AI Assistant use case library
 
 * [Reduce onboarding time for new members of your team](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153)
 * [De-clutter  your audiences and optimize your marketing operations](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
+* [Check dependencies and minimize risk during data updates](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
 
 <!-- ## Customer Journey Analytics
 
