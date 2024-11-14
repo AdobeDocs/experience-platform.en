@@ -8,12 +8,12 @@ AI Assistant in Adobe Experience Platform is a conversational tool that you can 
 
 ## Real-Time Customer Data Platform and Adobe Journey Optimizer
 
-Read the documentation and watch the videos linked below for information on core features and capabilities of AI Assistant.
+Read the documentation and watch the videos linked below for information on the core features and capabilities of AI Assistant.
 
 <table style="table-layout:fixed">
   <tr style="border: 0;">
     <td>
-    <a href="https://video.tv.adobe.com/v/3429845?learn=on"><img src="./assets/landing/ai-get-started.png"></a>
+    <a href="./home.md"><img src="./assets/landing/ai-get-started.png"></a>
     <div><strong>Get started with AI Assistant</strong><br/>Retrieve operational insights pertaining to your data objects for a better view on their statuses, usage, and linage impact.</div>
     </td>
     <td>
@@ -48,16 +48,48 @@ You can use AI Assistant to monitor significant changes and provide growth forec
 
 >[!TAB Estimate audience size and propensity]
 
+### Estimate audience size and propensity
+
 You can use AI Assistant's natural language estimation capabilities to estimate audience sizes and predict audience propensities, giving you easier access to insights on your audiences.
+
+[![image](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/natural-language.md)
 
 >[!TAB XDM field discovery]
 
+### Discover XDM fields for audience creation
+
+You can use AI Assistant to help your discover of Experience Data Model (XDM) fields that you can then use to create target audiences within Experience Platform.
+
+[![image](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/xdm-field-discovery.md)
+
 >[!ENDTABS]
 
-## AI Assistant use case library
+## Video library
+
+Get to know AI Assistant
+
+>[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
+
+* Access video
+
+>[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
+
+* Clean up audiences
+
+>[!VIDEO](https://video.tv.adobe.com/v/3435532?learn=on)
+
+* AI Assistant for Audiences (youtube)
+
+>[!VIDEO]
+
+* Unlock the power of AI Assistant (youtube)
+
+
+
+## Use case library
 
 * [Reduce onboarding time for new members of your team](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153)
-* [De-clutter  your audiences and optimize your marketing operations](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
+* [De-clutter your audiences and optimize your marketing operations](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
 * [Check dependencies and minimize risk during data updates](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
 
 <!-- ## Customer Journey Analytics
