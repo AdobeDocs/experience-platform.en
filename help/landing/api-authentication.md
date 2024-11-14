@@ -62,6 +62,10 @@ See the guide on [managing user groups in [!DNL Admin Console]](https://helpx.ad
 
 After you have been given developer and user access to Platform through [!DNL Admin Console], the next step is to generate your `{ORG_ID}` and `{API_KEY}` credentials in Adobe Developer Console. These credentials only need to be generated once and can be reused in future Platform API calls.
 
+>[!TIP]
+>
+>Instead of going to Developer Console, you can get all the authentication credentials that you need to work with Platform APIs directly from the API reference documentation pages. [Read more](#get-credentials-functionality) about the functionality.
+
 ### Add Experience Platform to a project {#add-platform-to-project}
 
 Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and sign in with your Adobe ID. Next, follow the steps outlined in the tutorial on [creating an empty project](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/) in the Adobe Developer Console documentation.
@@ -143,6 +147,26 @@ The next step is to generate an `{ACCESS_TOKEN}` credential for use in Platform 
 >[!TIP]
 >
 >You can also use a Postman environment and collection to generate access tokens. For more information, read the section about [using Postman to authenticate and test API calls](#use-postman).
+
+## Create and retrieve authentication credentials directly in the API reference documentation {#get-credentials-functionality}
+
+Starting with the November 2024 release of Experience Platform, you can get credentials to use the Experience Platform APIs directly from the API reference pages, without needing to go to [!UICONTROL Developer Console]. View the example below from the [Flow Service API - Destinations page](https://developer.adobe.com/experience-platform-apis/references/destinations/).
+
+![Get credentials functionality highlighted at the top of an API reference page.](././images/api-authentication/get-credentials-highlighted.png)
+
+To get credentials to call Platform APIs, navigate to any Experience Platform API reference page and select **[!UICONTROL Sign in]** at the top of the page. Sign in with your **[!UICONTROL Personal Account]** or **[!UICONTROL Company or School Account]**.  
+
+After signing in, select **[!UICONTROL Create new credential]** to create a new set of credentials to access Platform APIs. 
+
+![Create new credentials to access Platform APIs.](././images/api-authentication/create-credentials.gif)
+
+Next, use the dropdown selector to open the credentials window, generate an access token, and get your API key and organization ID. Copy the credentials into the [**[!UICONTROL Try it]**](/help/release-notes/2024/may-2024.md#interactive-api-documentation) blocks on the API reference pages to start working with Platform APIs.
+
+![Use the dropdown selector to view credentials and generate an access token.](././images/api-authentication/view-copy-credentials.gif)
+
+>[!TIP]
+>
+>The top-of-page credentials block remains displayed as you navigate between different endpoint pages in the Experience Platform API reference documentation.
 
 ## [!BADGE Deprecated]{type=negative} Generate a JSON Web Token (JWT) {#jwt}
 
