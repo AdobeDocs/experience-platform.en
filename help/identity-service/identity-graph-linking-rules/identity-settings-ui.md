@@ -3,7 +3,7 @@ title: Identity Settings UI
 description: Learn how to use the identity settings user interface.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
 ---
-# Identity Setting UI
+# Identity Settings UI
 
 >[!AVAILABILITY]
 >
