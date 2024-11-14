@@ -1,7 +1,6 @@
 ---
 title: Magnite Batch Destination
 description: Use this destination to deliver Adobe CDP audiences to the Magnite Streaming platform in batch.
-badgeBeta: label="Beta" type="Informative"
 exl-id: 8cc3890f-84f8-49d1-a329-322c13f9e5af
 ---
 # Magnite: Batch connection {#magnite-streaming-batch}
@@ -23,8 +22,6 @@ Continue reading below for more information about the Magnite: Batch destination
 For more information about the Real-Time destination, See [this documentation page](magnite-streaming.md) instead.
 
 >[!IMPORTANT]
->
->This destination connector is in beta and only available to select customers. To request access, contact your Adobe representative.
 >
 >The destination connector and documentation page are created and maintained by the [!DNL Magnite] team. For any inquiries or update requests, please contact them directly at `adobe-tech@magnite.com`.
 
