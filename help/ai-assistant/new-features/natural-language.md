@@ -2,6 +2,7 @@
 title: Natural Language Estimation With AI Assistant
 description: Learn how to use AI Assistant's natural language estimation capabilities.
 badge: Alpha
+exl-id: 7997c84f-288b-4b48-9f88-8de4addbae36
 ---
 # Natural language estimation with AI Assistant
 
