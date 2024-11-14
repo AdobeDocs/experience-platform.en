@@ -6,10 +6,9 @@ description: Learn what the differences are between running Experience Platform 
 
 # Adobe Experience Platform multi-cloud overview
 
-Adobe Experience Platform is available on two cloud platforms, allowing you to choose the best fit for your business and technical requirements:
+Adobe Experience Platform is available in two versions, running on different cloud platforms: [[!DNL Microsoft Azure]](https://azure.microsoft.com/en-us) and [[!DNL Amazon Web Services (AWS)]](https://aws.amazon.com/). This flexibility allows you to choose the best fit for your business and technical requirements.
 
-* Experience Platform running on [!DNL Microsoft Azure]
-* Experience Platform running on [!DNL Amazon Web Services]
+This page provides a high-level overview of the two versions and includes guidance on how to choose the right version for your business.
 
 ## Differences between Microsoft Azure and AWS versions
 
