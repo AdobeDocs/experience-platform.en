@@ -4,6 +4,7 @@ description: Read this document to learn how you can use AI Assistant for Experi
 badge: Alpha
 hide: true
 hidefromtoc: true
+exl-id: 041034c6-da45-437f-ad46-f9c2ded9f82c
 ---
 # XDM field discovery for with AI Assistant
 
