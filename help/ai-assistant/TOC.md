@@ -8,6 +8,7 @@ role: Admin,User,Developer,Leader
 
 # AI Assistant in Adobe Experience Platform {#ai-assistant}
 
+* [AI Assistant product documentation](landing.md)
 * [AI Assistant overview](home.md)
 * [Feature access](access.md)
 * [Question guide for AI Assistant](questions.md)
