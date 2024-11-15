@@ -3,6 +3,7 @@ title: AI Assistant in Adobe Experience Platform Product Documentation
 description: Get started with AI Assistant in Adobe Experience Platform
 hide: true
 hidefromtoc: true
+exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
 ---
 # AI Assistant in Adobe Experience Platform product documentation
 
