@@ -114,7 +114,7 @@ Watch the following videos for additional AI Assistant use case examples:
 Browse the links below to further your understanding of AI Assistant use cases, capabilities, and much more.
 
 <table style="table-layout:fixed"><tr style="border: 0;">
-<td><strong>Real-Time CDP</strong><br/>
+<td><strong>Real-Time Customer Data Platform</strong><br/>
 <a href="./home.md" target="_blank">Documentation</a> - <a href="./ui-guide.md" target="_blank">UI guide</a> - <a href="./access.md" target="_blank">Access AI Assistant</a> - <a href="./privacy.md" target="_blank">Privacy, security, and governance</a> - <a href="./faq.md" target="_blank">FAQ</a>
 </td>
 <td><strong>Adobe Journey Optimizer</strong><br/>
