@@ -5,13 +5,13 @@ exl-id: b26ff857-5486-4391-b5a0-1e5cb05a1f11
 ---
 # User access
 
-Give users access to Assurance by completing the following steps in the [Adobe Admin Console](https://adminconsole.adobe.com/): 
+Give users access to [!UICONTROL Assurance] by adding them to any product profile in Adobe Experience Platform by completing the following steps in the [Adobe Admin Console](https://adminconsole.adobe.com/): 
 
-## Adding users to Experience Platform through a product profile
+## Adding users to Adobe Experience Platform through a product profile {#adding-product-profile}
 
 To add a user to a product profile, log into the [Adobe Admin Console](https://adminconsole.adobe.com/). From the **[!UICONTROL Overview]** tab of the Admin Console UI, select **[!UICONTROL Add users]**.
 
-![The admin console page with Add users highlighted.](./images/user-access/admin-console.png)
+![The Admin Console page with Add users highlighted.](./images/user-access/admin-console.png)
 
 The **[!UICONTROL Add users to your team]** dialog appears. Enter the email or username of the person you want to add, then select **[!UICONTROL Add as a new user]**.
 
@@ -21,21 +21,13 @@ Two text boxes appear to enter an optional **[!UICONTROL First name]** and an op
 
 ![The three name and country fields are highlighted in the Add users dialog.](./images/user-access/name-and-products.png)
 
-The **[!UICONTROL Select product]** dialog appears. Select the product you want to give the user access to.
+The **[!UICONTROL Select product]** dialog appears. Select the Adobe Experience Platform.
 
 ![Select products dialog with a list of three products and the Adobe Experience Platform option highlighted.](./images/user-access/select-products.png)
 
-The **[!UICONTROL Select product profiles]** dialog appears, with a list of profiles. Select one or more profiles to give the user access to, then select **[!UICONTROL Apply]**. You may add additional products and product profiles by repeating these steps.
+The **[!UICONTROL Select product profiles]** dialog appears, with a list of product profiles. Select any product profile, then select **[!UICONTROL Apply]**. You may add additional products and product profiles by repeating these steps.
 
-![Select product profiles dialog with an option option selected.](./images/user-access/select-product-profiles.png)
-
-From the initial **[!UICONTROL Add users to your team]** dialog, select **[!UICONTROL User groups]**. 
-
-![Add users to your team dialog with User groups selected.](./images/user-access/user-groups.png)
-
-The **[!UICONTROL Select user groups]** dialog appears. Select one or more use groups, then select **[!UICONTROL Apply]**. 
-
-![Select user group dialog with the AEP Devs option selected.](./images/user-access/select-user-groups.png)
+![An option selected and highlighted in the Select product profiles dialog.](./images/user-access/select-product-profiles.png)
 
 Double check everything is correct for the user. From here you can add additional users, or save your changes by selecting **[!UICONTROL Save]**.
 
