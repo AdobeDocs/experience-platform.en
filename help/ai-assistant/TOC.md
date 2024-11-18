@@ -8,6 +8,7 @@ role: Admin,User,Developer,Leader
 
 # AI Assistant in Adobe Experience Platform {#ai-assistant}
 
+* [AI Assistant product documentation](landing.md)
 * [AI Assistant overview](home.md)
 * [Feature access](access.md)
 * [Question guide for AI Assistant](questions.md)
@@ -17,5 +18,7 @@ role: Admin,User,Developer,Leader
 * New features {#new-features}
   * [AI Assistant capabilities in Alpha and Beta](./new-features/alpha-beta.md)
   * [Monitor significant changes and forecast audiences](./new-features/audience-forecasting.md)
+  * [Natural language estimation](./new-features/natural-language.md)
+  * [XDM field discovery for audience creation](./new-features/xdm-field-discovery.md)
 * [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
 
