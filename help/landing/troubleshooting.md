@@ -7,7 +7,7 @@ landing-page-description: Find answers to frequently asked questions and a guide
 short-description: Find answers to frequently asked questions and a guide for troubleshooting common errors in Experience Platform.
 type: Documentation
 role: Developer
-feature: API
+feature: API, Audiences, Data Ingestion, Datasets, Destinations, Privacy, Queries, Schemas, Sandboxes, Sources
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
 ---
 # [!DNL Platform] FAQ and troubleshooting guide
