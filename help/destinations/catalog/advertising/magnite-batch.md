@@ -1,6 +1,7 @@
 ---
 title: Magnite Batch Destination
 description: Use this destination to deliver Adobe CDP audiences to the Magnite Streaming platform in batch.
+last-substantial-update: 2024-11-18
 exl-id: 8cc3890f-84f8-49d1-a329-322c13f9e5af
 ---
 # Magnite: Batch connection {#magnite-streaming-batch}
