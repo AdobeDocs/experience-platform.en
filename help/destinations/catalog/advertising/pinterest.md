@@ -61,6 +61,10 @@ To connect to this destination, follow the steps described in the [destination c
 
 ### Connection parameters {#parameters}
 
+>[!WARNING]
+> 
+>Pinterest tokens expire every 30 days. Once the token is expired, data exports to Pinterest stop working. Make sure to reauthenticate. 
+
 While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
