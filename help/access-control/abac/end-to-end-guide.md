@@ -151,6 +151,11 @@ The **[!UICONTROL Edit labels]** dialog appears, allowing you to choose the labe
 
 Repeat the above steps with **[!UICONTROL Insulin <50]**.
 
+>[!NOTE]
+>
+> You can the labels created in [!UICONTROL Permissions] to various objects in Adobe Journey Optimizer using [Object Level Access Control (OLAC)](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access) to manage their data access. OLAC gives you the additional ability to create labels directly within Adobe Journey Optimizer, which can later be modified from within [!UICONTROL Permissions] and assigned to individual objects within Platform.
+
+
 ## Activate the access control policy {#policy}
 
 The default access control policy will leverage labels to define which user roles have access to specific Platform resources. In this example, access to schema fields and segments will be denied in all sandboxes for users who aren't in a role that has the corresponding labels in the schema field.
