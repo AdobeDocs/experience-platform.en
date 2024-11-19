@@ -1,6 +1,7 @@
 ---
 title: Privacy Console Overview
 description: Learn how to monitor your privacy related workflows in the Adobe Experience Platform UI.
+feature: Privacy
 ---
 # Privacy Console overview
 
