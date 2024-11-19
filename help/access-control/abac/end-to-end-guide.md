@@ -153,8 +153,7 @@ Repeat the above steps with **[!UICONTROL Insulin <50]**.
 
 >[!NOTE]
 >
-> You can the labels created in [!UICONTROL Permissions] to various objects in Adobe Journey Optimizer using [Object Level Access Control (OLAC)](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access) to manage their data access. OLAC gives you the additional ability to create labels directly within Adobe Journey Optimizer, which can later be modified from within [!UICONTROL Permissions] and assigned to individual objects within Platform.
-
+> Assign labels created in [!UICONTROL Permissions] to various objects in Adobe Journey Optimizer using [Object Level Access Control](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access). Additionally, you can create labels directly within Adobe Journey Optimizer, which can later be modified from within [!UICONTROL Permissions] and assigned to individual objects within Platform.
 
 ## Activate the access control policy {#policy}
 
