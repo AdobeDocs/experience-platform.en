@@ -59,7 +59,7 @@ The following table contains example values as well as additional information on
 | `munchkinId` | The unique ID for your [!DNL Marketo] account. See the tutorial on [authenticating your [!DNL Marketo] instance](../adobe-applications/marketo/marketo-auth.md) for information on how to retrieve your `munchkinId`. | `123-ABC-456` |
 | `sfdc_org_id` | The organization ID for your [!DNL Salesforce] account. See the following [[!DNL Salesforce] guide](https://help.salesforce.com/articleView?id=000325251&type=1&mode=1) for more information on acquiring your [!DNL Salesforce] organization ID. | `00D4W000000FgYJUA0` |
 | `has_abm` | A boolean value that indicates if you are subscribed to [!DNL Marketo Account-Based Marketing]. | `false` |
-| `has_msi` | A boolean value that indicates if you are subcscribed to [!DNL Marketo Sales Insight]. | `false` |
+| `has_msi` | A boolean value that indicates if you are subscribed to [!DNL Marketo Sales Insight]. | `false` |
 
 {style="table-layout:auto"}
 
@@ -77,20 +77,7 @@ The [!DNL Runner] interface appears. From here, ensure that all the checkboxes a
 
 A successful request creates the B2B namespaces and schemas according to beta specifications.
 
-## Connect [!DNL Salesforce] to Platform using APIs
-
-The documentation below provides information on how to connect [!DNL Salesforce] to Platform using APIs or the user interface:
-
-- [Create a Salesforce base connection using the Flow Service API](../../tutorials/api/create/crm/salesforce.md)
-- [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
-- [Create a dataflow for a CRM source using the Flow Service API](../../tutorials/api/collect/crm.md)
-
-## Connect [!DNL Salesforce] to Platform using the UI
-
-- [Create a Salesforce source connection in the UI](../../tutorials/ui/create/crm/salesforce.md)
-- [Create a dataflow for a CRM connection in the UI](../../tutorials/ui/dataflow/crm.md)
-
-## Set up for usage in an AWS region
+## Set up your [!DNL Salesforce] source for connection in an AWS region
 
 Follow the steps below to learn how you can set up your [!DNL Salesforce] account and connect it to Experience Platform within an AWS region.
 
@@ -135,7 +122,7 @@ Next, select **[!DNL Save]**, **[!DNL Continue]**, and then **[!DNL Manage Custo
 - **Consumer key**: You will later use this consumer key as your client ID, when authenticating your [!DNL Salesforce] account to Experience Platform.
 - **Consumer secret**: You will later use this consumer secret as your client ID, when authenticating your [!DNL Salesforce] account to Experience Platform.
 
-### Authorize your [!DNL Salesforce] suer to the Connected App
+### Authorize your [!DNL Salesforce] user to the Connected App
 
 Follow the steps below to authorize a [!DNL Salesforce] user:
 
@@ -250,3 +237,20 @@ public class Main {
 | `/path/to/keystore` | Replace `/path/to/keystore` with the correct path to your keystore.jks |
 | `keystorepassword` |  Replace `keystorepassword` with your destination keystore password. | 
 | `privatekeypassword` | Replace `privatekeypassword` with your source keystore password. |
+
+## Next steps
+
+Once you have completed prerequisite set up for your [!DNL Salesforce] account, you can proceed to connect your [!DNL Salesforce] account to Experience Platform and ingest your CRM data. Read the documentation below for more information:
+
+### Connect [!DNL Salesforce] to Platform using APIs
+
+The documentation below provides information on how to connect [!DNL Salesforce] to Platform using APIs or the user interface:
+
+- [Create a Salesforce base connection using the Flow Service API](../../tutorials/api/create/crm/salesforce.md)
+- [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
+- [Create a dataflow for a CRM source using the Flow Service API](../../tutorials/api/collect/crm.md)
+
+### Connect [!DNL Salesforce] to Platform using the UI
+
+- [Create a Salesforce source connection in the UI](../../tutorials/ui/create/crm/salesforce.md)
+- [Create a dataflow for a CRM connection in the UI](../../tutorials/ui/dataflow/crm.md)
