@@ -10,7 +10,7 @@ Clustering algorithms group data points into distinct clusters based on their si
 
 >[!NOTE]
 >
->Ensure you understand the parameter requirements for the chosen algorithm. Some parameters may be positional and require all preceding parameters to be specified if custom values are provided. If you choose not to customize certain parameters, the system applies default settings. Consult the relevant documentation to understand each parameter's function and default values.
+>Ensure you understand the parameter requirements for the chosen algorithm. If you choose not to customize certain parameters, the system applies default settings. Consult the relevant documentation to understand each parameter's function and default values.
 
 ## [!DNL K-Means] {#kmeans}
 

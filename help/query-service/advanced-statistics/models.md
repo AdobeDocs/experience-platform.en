@@ -74,10 +74,7 @@ Use SQL to reference the dataset used for training.
 Learn how to update an existing machine learning model by applying new feature engineering transformations and configuring options like the type of algorithm and label column. The SQL below demonstrates how to increase the model's version number with each update, and ensure that changes are tracked so the model can be reused in future evaluation or prediction steps.
 
 ```sql
-UPDATE model <model_alias> transform( one_hot_encoder(NAME) ohe_name, string_indexer(gender) gendersi) options ( type = 'LogisticRegression', label = <label-COLUMN>, ) ASSELECT col1,
-       col2,
-       col3
-FROM   training-dataset.
+UPDATE MODEL <model_alias> TRANSFORM (vector_assembler(array(current_customers, previous_customers)) features)  OPTIONS(MODEL_TYPE='logistic_reg', LABEL='churn_rate')  AS SELECT * FROM churn_with_rate ORDER BY period;
 ```
 
 To help you understand how to manage model versions and apply transformations effectively, the following notes explain the key components and options in the model update workflow.
