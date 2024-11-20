@@ -1,6 +1,8 @@
 ---
 title: Customer-Managed Keys in Adobe Experience Platform
 description: Learn how to set up your own encryption keys for data stored in Adobe Experience Platform.
+role: Developer
+feature: Privacy
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
 ---
 # Customer-managed keys in Adobe Experience Platform
