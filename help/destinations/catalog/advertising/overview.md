@@ -20,6 +20,7 @@ To understand the difference between connections and extensions, see [Connection
 
 ### Connections
 
+* [(Beta) Acxiom Audience Distribution](acxiom-audience-distribution.md)
 * [Adobe Advertising Cloud connection](adobe-advertising-cloud-connection.md)
 * [(Beta) Amazon Ads connection](amazon-ads.md)
 * [(Beta) Criteo connection](criteo.md)
@@ -28,6 +29,8 @@ To understand the difference between connections and extensions, see [Connection
 * [Google Ad Manager connection](google-ad-manager.md)
 * [(Beta) Google Ad Manager 360 connection](google-ad-manager-360-connection.md)
 * [Google Customer Match connection](google-customer-match.md)
+* [Magnite Batch connection](magnite-batch.md)
+* [Magnite Streaming Real-time connection](magnite-streaming.md)
 * [Microsoft Bing connection](bing.md)
 * [Pinterest Customer List connection](pinterest.md)
 * [PubMatic Connect destination](pubmatic.md)

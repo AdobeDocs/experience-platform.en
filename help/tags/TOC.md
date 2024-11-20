@@ -255,10 +255,11 @@ role: Developer
   * [Supported browsers](./extension-dev/browsers.md)
   * Submission process {#submit}
     * [Overview](./extension-dev/submit/overview.md)
-    * [Company setup](./extension-dev/submit/setup.md)
+    * [Organization setup](./extension-dev/submit/setup.md)
     * [Grant user access](./extension-dev/submit/access.md)
     * [Develop an extension](./extension-dev/submit/develop.md)
     * [Create an exchange listing](./extension-dev/submit/create-listing.md)
+    * [Create an extension package zip](./extension-dev/submit/create-extension-package-zip.md)
     * [Upload and implement end-to-end testing](./extension-dev/submit/upload-and-test.md)
     * [Release an extension](./extension-dev/submit/release.md)
   * [Extension configuration](./extension-dev/configuration.md)

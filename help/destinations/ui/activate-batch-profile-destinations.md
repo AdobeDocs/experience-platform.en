@@ -25,26 +25,6 @@ To activate audiences to destinations, you must have successfully [connected to 
 
 ## Supported file formats for export {#supported-file-formats-export}
 
->[!CONTEXTUALHELP]
->id="dataset_dataflow_needs_schedule_end_date_header"
->title="Update the end date for this dataflow"
->abstract="Update the end date for this dataflow"
-
->[!CONTEXTUALHELP]
->id="dataset_dataflow_needs_schedule_end_date_body"
->title="Update the end date for this dataflow body"
->abstract="Because of recent updates to this destination, the dataflow now requires an end date. Adobe has set a default end date to May 1st 2025. Please update to your desired end date otherwise the data exports will stop on the default date."
-
->[!CONTEXTUALHELP]
->id="destinations_folder_name_template"
->title="Edit folder path"
->abstract="Use several provided macros to customize the folder path where dataset are exported."
-
->[!CONTEXTUALHELP]
->id="destinations_folder_name_template_preview"
->title="Dataset folder path preview"
->abstract="Get a preview of the folder structure that gets created in your storage location based on the macros you added in this window."
-
 The following file formats are supported when exporting audiences:
 
 * CSV
@@ -147,12 +127,12 @@ Select **[!UICONTROL Export full files]** to trigger the export of a file contai
 
 2. Use the **[!UICONTROL Time]** toggle to select whether the export should happen immediately after audience evaluation or on a scheduled basis, at a specified time. When selecting the **[!UICONTROL Scheduled]** option, you can use the selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
 
-      >[!NOTE]
-      >
-      >The **[!UICONTROL After segment evaluation]** option described below is available only to select Beta customers.
-
-    Use the **[!UICONTROL After segment evaluation]** option to have the activation job run immediately after the daily Platform batch segmentation job completes. This option ensures that when the activation job runs, the most up-to-date profiles are exported to your destination.
+    Use the **[!UICONTROL After segment evaluation]** option to have the activation job run immediately after the daily Platform batch segmentation job completes. This option ensures that when the activation job runs, the most up-to-date profiles are exported to your destination. This might result in an audience being exported multiple times a day, based on your actions.
     
+    >[!IMPORTANT]
+    >
+    >If you run [flexible audience evaluation](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) on audiences which are already set to be activated after segment evaluation, the audiences will be activated as soon as the flexible audience evaluation job finishes, regardless of any previous daily activation jobs. This might result in audiences being exported multiple times a day, based on your actions.
+
     <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
 
     ![Image highlighting the After segment evaluation option in the activation flow for batch destinations.](../assets/ui/activate-batch-profile-destinations/after-segment-evaluation-option.png)

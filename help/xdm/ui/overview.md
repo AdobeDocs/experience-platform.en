@@ -11,7 +11,7 @@ The [!UICONTROL Schemas] workspace in the Adobe Experience Platform user interfa
 
 To access to the workspace in the Platform UI, select **[!UICONTROL Schemas]** in the left rail.
 
-![](../images/ui/overview/schemas-tab.png)
+![The Schemas workspace with Schemas highlighted in the Platform UI left navigation.](../images/ui/overview/schemas-tab.png)
 
 ## Getting started
 

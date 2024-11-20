@@ -1,12 +1,10 @@
 ---
 title: Magnite Real-Time destination connection
 description: Use this destination to deliver Adobe CDP audiences to the Magnite Streaming platform in real-time.
-badgeBeta: label="Beta" type="Informative"
-hide: yes
-hidefromtoc: yes
+last-substantial-update: 2024-11-18
 exl-id: 4e08a14b-6800-41e1-95a5-826a6241144d
 ---
-# (Beta) Magnite: Real-Time destination connection
+# Magnite: Real-Time destination connection
 
 ## Overview {#overview}
 
@@ -22,8 +20,6 @@ To activate your audiences to [!DNL Magnite Streaming], you must:
 Note: When using the Real-Time destination, [!DNL Magnite Streaming] will receive audiences in real-time, but Magnite can only store real-time audiences temporarily in their platform, and they will be removed from the system within a couple days. For this reason, if you want to use the Magnite: Real-Time destination, you will *also* need to use the Magnite: Batch destination - each audience that you activate to the Real-Time destination, you also need to activate to the Batch destination.
 
 >[!IMPORTANT]
->
->This destination connector is in beta and only available to select customers. To request access, contact your Adobe representative.
 >
 >The destination connector and documentation page are created and maintained by the [!DNL Magnite] team. For any inquiries or update requests, please contact them directly at `adobe-tech@magnite.com`.
 
@@ -95,7 +91,11 @@ To configure details for the destination, fill in the required and optional fiel
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Name of your source partner]**: Your customer/company name. Only supported [!DNL Magnite Streaming] clients are available for selection.
+*  **[!UICONTROL Your company name]**: Your customer/company name. Only supported [!DNL Magnite Streaming] clients are available for selection.
+
+>[!NOTE]
+>
+>The company name must be a string which matches the name of the Amazon S3 delivery bucket you have configured with Magnite and set up in the [authenticate to destination](#authenticate) step. The supported characters include 'a-z', 'A-Z', '0-9', '-'(dash), or '_'(underscore).
 
 ![destination configuration auth fields filled](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-filled.png)
 

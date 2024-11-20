@@ -99,11 +99,11 @@ Also configure channels for playbooks that contain transactional messages like o
 
 ### Push channel surface
 
-Confirm that the app surfaces are configured either from the Experience Platform or Data Collections interface. This is how app surfaces look like in the Data Collections environment. 
+Confirm that the channel configurations are configured either from the Experience Platform or Data Collections interface. This is how channel configurations look like in the Data Collections environment. 
 
-<!-- ![App surfaces in Data collections](/help/use-case-playbooks/assets/playbooks/get-started/.png) -->
+<!-- ![Channel configurations in Data collections](/help/use-case-playbooks/assets/playbooks/get-started/.png) -->
 
-Next, select the channel, platforms, and apps that you looked at in the app surface configurations. Select **Submit** to create the push channel surface.
+Next, select the channel, platforms, and apps that you looked at in the channel configurations. Select **Submit** to create the push channel surface.
 
 Read the documentation on [how to set up push channel surfaces](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html).
 

@@ -18,7 +18,7 @@ You can also use the Experience Platform APIs to export datasets. Read the [expo
 
 The datasets that you can export vary based on the Experience Platform application (Real-Time CDP, Adobe Journey Optimizer), the tier (Prime or Ultimate), and any add-ons that you purchased (for example: Data Distiller).
 
-Understand from the table below which dataset types you can export depending on your application, product tier, and any add-ons purchased:
+Use the table below to understand which dataset types you can export depending on your application, product tier, and any add-ons purchased:
 
 <table>
 <thead>
@@ -131,11 +131,29 @@ Use the check boxes to the left of the dataset names to select the datasets that
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_datasets_exportoptions"
 >title="File export options for datasets"
->abstract="Select **Export incremental files** to export only the data which was added to the dataset since the last export. <br> The first incremental file export includes all the data in the dataset, acting as a backfill. Future incremental files include only the data which was added to the dataset since the first export."
+>abstract="Select **Export incremental files** to export only the data which was added to the dataset since the last export. <br> The first incremental file export includes all the data in the dataset, acting as a backfill. Future incremental files include only the data which was added to the dataset since the first export. <br> Select **Export full files** to export the complete membership of each dataset on each export. "
 
-In the **[!UICONTROL Scheduling]** step, you can set a start date and an export cadence for your dataset exports.
+>[!CONTEXTUALHELP]
+>id="dataset_dataflow_needs_schedule_end_date_header"
+>title="Update the end date for this dataflow"
+>abstract="Update the end date for this dataflow"
 
-The **[!UICONTROL Export incremental files]** option is automatically selected. This triggers an export of one or multiple files representing a full snapshot of the dataset. Subsequent files are incremental additions to the dataset since the previous export.
+>[!CONTEXTUALHELP]
+>id="dataset_dataflow_needs_schedule_end_date_body"
+>title="Update the end date for this dataflow body"
+>abstract="Because of recent updates to this destination, the dataflow now requires an end date. Adobe has set a default end date to May 1st 2025. Please update to your desired end date otherwise the data exports will stop on the default date."
+
+Use the **[!UICONTROL Scheduling]** step to: 
+
+* Set a start date and an end date, as well as an export cadence for your dataset exports.
+* Configure if the exported dataset files should export the complete membership of the dataset or just incremental changes to the membership on each export occurrence.  
+* Customize the folder path in your storage location where datasets should be exported. Read more about how to [edit the export folder path](#edit-folder-path).
+
+Use the **[!UICONTROL Edit schedule]** control on the page to edit the export cadence of exports, as well as to select whether to export full or incremental files.
+
+![Edit schedule control highlighted in the Scheduling step.](/help/destinations/assets/ui/export-datasets/edit-schedule-control-highlight.png)
+
+The **[!UICONTROL Export incremental files]** option is selected by default. This triggers an export of one or multiple files representing a full snapshot of the dataset. Subsequent files are incremental additions to the dataset since the previous export. You can also select **[!UICONTROL Export full files]**. In this case, select the frequency **[!UICONTROL Once]** for a one-time full export of the dataset.
 
 >[!IMPORTANT]
 >
@@ -150,13 +168,37 @@ The **[!UICONTROL Export incremental files]** option is automatically selected. 
 
 2. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
 
-3. Use the **[!UICONTROL Date]** selector to choose the interval when the export should take place. Note that you currently cannot set an end date for the exports. For more information, view the [known limitations](#known-limitations) section. 
+3. Use the **[!UICONTROL Date]** selector to choose the interval when the export should take place.
 
-4. Select **[!UICONTROL Next]** to save the schedule and proceed to the **[!UICONTROL Review]** step.
+4. Select **[!UICONTROL Save]** to save the schedule and proceed to the **[!UICONTROL Review]** step.
 
 >[!NOTE] 
 > 
 >For dataset exports, the file names have a preset, default format, which cannot be modified. See the section [Verify successful dataset export](#verify) for more information and examples of exported files.
+
+## Edit folder path {#edit-folder-path}
+
+>[!CONTEXTUALHELP]
+>id="destinations_folder_name_template"
+>title="Edit folder path"
+>abstract="Use several provided macros to customize the folder path where dataset are exported."
+
+>[!CONTEXTUALHELP]
+>id="destinations_folder_name_template_preview"
+>title="Dataset folder path preview"
+>abstract="Get a preview of the folder structure that gets created in your storage location based on the macros you added in this window."
+
+Select **[!UICONTROL Edit folder path]** to customize the folder structure in your storage location where exported datasets are deposited. 
+
+![Edit folder path control highlighted in the scheduling step.](/help/destinations/assets/ui/export-datasets/edit-folder-path.png)
+
+You can use several available macros to customize a desired folder name. Double-click a macro to add it to the folder path and use `/` between the macros to separate the folders. 
+
+![Macros selection highlighted in custom folder modal window.](/help/destinations/assets/ui/export-datasets/custom-folder-path-macros.png)
+
+After selecting the desired macros, you can see a preview of the folder structure that will be created in your storage location. The first level in the folder structure represents the **[!UICONTROL Folder path]** that you indicated when you [connected to the destination](/help/destinations/ui/connect-destination.md##set-up-connection-parameters) to export datasets. 
+
+![Preview of folder path highlighted in custom folder modal window.](/help/destinations/assets/ui/export-datasets/custom-folder-path-preview.png)
 
 ## Review {#review}
 
@@ -168,7 +210,11 @@ On the **[!UICONTROL Review]** page, you can see a summary of your selection. Se
 
 When exporting datasets, Experience Platform creates one or multiple `.json` or `.parquet` files in the storage location that you provided. Expect new files to be deposited in your storage location according to the export schedule you provided.
 
-Experience Platform creates a folder structure in the storage location you specified, where it deposits the exported dataset files. A new folder is created for each export time, following the pattern below:
+Experience Platform creates a folder structure in the storage location you specified, where it deposits the exported dataset files. The default folder export pattern is shown below, but you can [customize the folder structure with your preferred macros](#edit-folder-path).
+
+>[!TIP] 
+> 
+>The first level in this folder structure - `folder-name-you-provided` -  represents the **[!UICONTROL Folder path]** that you indicated when you [connected to the destination](/help/destinations/ui/connect-destination.md##set-up-connection-parameters) to export datasets. 
 
 `folder-name-you-provided/datasetID/exportTime=YYYYMMDDHHMM`
 
@@ -186,8 +232,10 @@ In the [connect to destination workflow](/help/destinations/ui/connect-destinati
 
 Note the difference in file format between the two file types, when compressed: 
 
-* When exporting compressed JSON files, the exported file format is `json.gz`
+* When exporting compressed JSON files, the exported file format is `json.gz`. The format of the exported JSON is NDJSON, which is the standard interchange format in the big data ecosystem. Adobe recommends using an NDJSON-compatible client to read the exported files.
 * When exporting compressed parquet files, the exported file format is `gz.parquet`
+
+Exports to JSON files are supported *in a compressed mode only*. Exports to Parquet files are supported in a compressed and uncompressed mode.
 
 ## Remove datasets from destinations {#remove-dataset}
 
@@ -221,7 +269,7 @@ Note that the data export entitlements for different applications are not additi
 
 On the other hand, if you purchased add-ons such as Data Distiller, the data export limit that you are entitled to represents the sum of the product tier and the add-on. 
 
-You can view and track your profile exports against your contractual limits in the licensing dashboard. 
+You can view and track your profile exports against your contractual limits in the [license usage dashboard](/help/landing/license-usage-and-guardrails/license-usage-dashboard.md). 
 
 ## Known limitations {#known-limitations}
 
@@ -234,3 +282,59 @@ Keep in mind the following limitations for the general availability release of d
 * The UI does not currently block you from deleting a dataset that is being exported to a destination. Do not delete any datasets that are being exported to destinations. [Remove the dataset](#remove-dataset) from a destination dataflow before deleting it.
 * Monitoring metrics for dataset exports are currently mixed with numbers for profile exports so they do not reflect the true export numbers.
 * Data with a timestamp older than 365 days is excluded from dataset exports. For more information, view the [guardrails for scheduled dataset exports](/help/destinations/guardrails.md#guardrails-for-scheduled-dataset-exports)
+
+## Frequently Asked Questions {#faq}
+
+**Can we generate a file without a folder if we just save at `/` as the folder path? Also, if we don't require a folder path, how will files with duplicate names be generated in a folder or location?**
+
++++
+Starting with the September 2024 release, it is possible to customize the folder name and even use `/` for exporting files for all datasets in the same folder. Adobe does not recommend this for destinations exporting multiple datasets, as system-generated filenames belonging to different datasets will be mixed in the same folder.
++++
+
+**Can you route the manifest file to one folder and data files into another folder?**
+
++++
+No, there is no capability to copy the manifest file to a different location.
++++
+
+**Can we control the sequencing or timing of file delivery?**
+
++++
+There are options for scheduling the export. There are no options for delaying or sequencing the copy of the files. They are copied to your storage location as soon as they are generated.
++++
+
+**What formats are available for the manifest file?**
+
++++
+The manifest file is in .json format.
++++
+
+**Is there API availability for the manifest file?**
+
++++
+No API is available for the manifest file, but it includes a list of files comprising the export.
++++
+
+**Can we add additional details to the manifest file (i.e., record count)? If so, how?**
+
++++
+There is no possibility to add additional info to the manifest file. The record count is available via the `flowRun` entity (queryable via API). Read more in destinations monitoring.
++++
+
+**How are data files split? How many records per file?**
+
++++
+Data files are split per the default partitioning in the Experience Platform data lake. Larger datasets have a higher number of partitions. The default partitioning is not configurable by the user as it is optimized for reading.
++++
+
+**Can we set a threshold (number of records per file)?**
+
++++
+No, it is not possible.
++++
+
+**How do we resend a data set in the event that the initial send is bad?**
+
++++
+Retries are in place automatically for most types of system errors.
++++

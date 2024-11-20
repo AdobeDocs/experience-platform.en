@@ -1,6 +1,8 @@
 ---
 title: Audit Logs Overview
 description: Learn how audit logs allow you to see who did what actions in Adobe Experience Platform.
+role: Admin,Developer
+feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 ---
 # Audit logs {#audit-logs}
@@ -127,6 +129,22 @@ To export the current list of audit logs, select **[!UICONTROL Download log]**.
 In the dialog that appears, select your preferred format (either **[!UICONTROL CSV]** or **[!UICONTROL JSON]**), then select **[!UICONTROL Download]**. The browser downloads the generated file and saves it to your machine.
 
 ![The file format selection dialog with [!UICONTROL Download] highlighted.](../../images/audit-logs/select-download-format.png)
+
+## Enable alerts {#enable-alerts}
+
+You can enable audit alerts to receive notifications for the following rules:
+
+* Audience create
+* Audience update
+* Audience delete
+* Dataset create
+* Dataset update
+* Dataset delete
+* Schema create
+* Schema update
+* Schema delete
+
+Select the desired alert from the list to subscribe to receive notifications. For more information on alerts, see the guide on [subscribing to alerts using the UI](../../../observability/alerts/ui.md).
 
 ## Managing audit logs in the API
 
