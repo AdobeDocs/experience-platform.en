@@ -153,7 +153,7 @@ Repeat the above steps with **[!UICONTROL Insulin <50]**.
 
 >[!NOTE]
 >
-> Assign labels created in [!UICONTROL Permissions] to various objects in Adobe Journey Optimizer using [Object Level Access Control](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access). Additionally, you can create labels directly within Adobe Journey Optimizer, which can later be modified from within [!UICONTROL Permissions] and assigned to individual objects within Platform.
+> Assign labels created in [!UICONTROL Permissions] workspace to various objects in Adobe Journey Optimizer using [Object Level Access Control](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access). You can also create labels directly in Adobe Journey Optimizer and modify them later in the [!UICONTROL Permissions] workspace before assigning them to individual objects within Platform.
 
 ## Activate the access control policy {#policy}
 
