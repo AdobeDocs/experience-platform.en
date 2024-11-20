@@ -1,20 +1,19 @@
 ---
 title: Look up edge profile attributes in real-time
-description: Learn how to look up edge profile attributes in real-time, using the Custom Personalization destination and Edge Network Server API
+description: Learn how to look up edge profile attributes in real-time, using the Custom Personalization destination and Edge Network API
 type: Tutorial
 ---
 
 # Look up profile attributes on the edge in real-time
 
-Adobe Experience Platform uses the [Real-Time Customer Profile](../../profile/home.md) as the single source of truth for all profile data. 
+Adobe Experience Platform uses the [Real-Time Customer Profile](../../profile/home.md) as the single source of truth for all profile data. For quick, real-time data retrieval, it uses [edge profiles](../../profile/edge-profiles.md), which are lightweight profiles distributed throughout the [Edge Network](../../collection/home.md#edge). This allows for fast, real-time personalization use cases.
 
-Experience Platform stores all profile data in a central hub which can deliver profile information for use cases that rely on the completeness and comprehensiveness of your profile data.
+## Use Cases
 
-However, for use cases which depend on quick, real-time data retrieval, [!DNL Platform] uses [edge profiles](../../profile/edge-profiles.md). These are lightweight profiles distributed throughout the [Edge Network](../../collection/home.md#edge). Since the Edge Network is a fast and globally distributed network of servers, you can quickly retrieve profile information from edge profiles, for real-time personalization use cases, where timing is critical.
+Below are two use cases where edge profile lookup can help.
 
-One such use case could involve real-time personalization of a user's experience on your website, by quickly retrieving profile information from the edge profile and then passing the information over to a third-party personalization engine of your choice, in order to send the user an [!DNL SMS] based on their current activity on your website.
-
-Another use case could cover the need of quickly retrieving profile information in real-time, when a customer calls a support center agent.
+* **Real-Time Personalization**: Quickly retrieve profile information from the edge profile to personalize a user's experience on your website.
+* **Customer Support**: Retrieve profile information in real-time when a customer calls a support center agent.
 
 This page describes the steps that you must follow to look up edge profile data in real-time, to deliver personalization experiences or inform decisioning rules through downstream applications.
 
@@ -23,9 +22,18 @@ This page describes the steps that you must follow to look up edge profile data 
 When configuring the use case described in this page, you will use the following Platform components:
 
 * [Datastreams](../../datastreams/overview.md): A datastream receives incoming event data from Web SDK and responds with edge profile data.
-* [Merge Policies](../../segmentation/ui/segment-builder.md#merge-policies): You will create an [!UICONTROL Active-On-Edge] merge policy to ensure that the edge profiles use the correct profile data.
+* [Merge Policies](../../segmentation/ui/segment-builder.md#merge-policies): You will create an [!UICONTROL Active-On-Edge] merge policy to ensure that the edge profiles ßuse the correct profile data.
 * [Custom Personalization connection](../catalog/personalization/custom-personalization.md): You will configure a new custom personalization connection which will send the profile attributes to the Edge Network.
-* [Edge Network Server API](../../server-api/overview.md): You will use the Server API [interactive data collection](../../server-api/interactive-data-collection.md) functionality to quickly retrieve profile attributes from the edge profiles.
+* [Edge Network API](../../server-api/overview.md): You will use the Edge Network API [interactive data collection](../../server-api/interactive-data-collection.md) functionality to quickly retrieve profile attributes from the edge profiles.
+
+## Performance guardrails {#guardrails}
+
+Edge profile lookup use cases are subject to the specific performance guardrails described in the table below. For more details regarding the Edge Network API guardrails, see the guardrails [documentation page](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/).
+
+|Edge Network Service | Edge Segmentation | Requests per second | UI |
+|---------|----------|---------|---|
+| [Custom personalization destination](../catalog/personalization/custom-personalization.md) via [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/) | Yes | 1500 | Yes | |
+| [Custom personalization destination](../catalog/personalization/custom-personalization.md) via [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/) | No | 1500 | Yes |
 
 ## Step 1: Create and configure a datastream {#create-datastream}
 
@@ -151,7 +159,7 @@ The next step is to configure your personalization solution to retrieve profile 
 
 >[!IMPORTANT]
 >
->Profile attributes may contain sensitive data. To protect this data, you must retrieve the profile attributes through the [Edge Network Server API](../../server-api/overview.md). Furthermore, you must retrieve the profile attributes via the Server API [interactive data collection endpoint](../../server-api/interactive-data-collection.md), in order for the API calls to be authenticated.
+>Profile attributes may contain sensitive data. To protect this data, you must retrieve the profile attributes through the [Edge Network API](../../server-api/overview.md). Furthermore, you must retrieve the profile attributes via the Edge Network API [interactive data collection endpoint](../../server-api/interactive-data-collection.md), in order for the API calls to be authenticated.
 ><br>If you do not follow the requirements above, personalization will be based on audience membership only, and profile attributes will not be available to you.
 
 The datastream which you configured in [step 1](#create-datastream) is now ready to accept incoming event data and respond with edge profile information.
@@ -267,7 +275,7 @@ The `handle` object provides the information described in the table below.
 | `attributes` | This array includes the edge profile attributes of the audiences that you activated in [step 3](#configure-custom-personalization-connection). |
 | `segments` | This array includes the audiences that you activated in [step 3](#configure-custom-personalization-connection). |
 | `type` | `handle` objects are grouped by type. For edge profile lookup use cases, the type of the `handle` object is always `activation:pull`.|
-| `eventIndex` | The Edge Network receives events from the client in the form of arrays. The order of the events in the array is preserved during their processing and reflected by this index. Event indexing starts with `0`. |
+| `eventIndex` | The Edge Network receives events frßom the client in the form of arrays. The order of the events in the array is preserved during their processing and reflected by this index. Event indexing starts with `0`. |
 
 >[!TAB Profile does not exist on the edge]
 
@@ -299,3 +307,7 @@ The `handle` object provides the information described in the table below.
 >[!SUCCESS]
 >
 >If you have configured the integration correctly, you now have access to the edge profile data and you can use the attributes and audience membership of your edge profiles to trigger real-time personalization in your downstream personalization engine.
+
+## Conclusion {#conclusion}
+
+By following the steps above, you can efficiently look up edge profile attributes in real-time, enabling personalized experiences and informed decision-making through downstream applications.
