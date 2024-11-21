@@ -37,6 +37,8 @@ When setting a cookie through your own server, you can use various methods to pr
 * Generate cookies using a [!DNL CMS]
 * Generate cookies using a [!DNL CDN]
 
+Additionally, you should always set the FPID cookie under your domain's `A` record.
+
 >[!IMPORTANT]
 >
 >Cookies set using JavaScript's `document.cookie` method will almost never be protected from browser policies that restrict cookie durations. 
