@@ -41,7 +41,7 @@ Adobe recommends that you add the following region-specific IP ranges to an allo
 
 ## Set up IP-based restrictions {#set-ip-restrictions}
 
-Use the [Query Service Authorization API guides](./auth-api/overview.md) to set up IP-based restrictions. These IP-based restrictions ensure that only approved networks and client machines can access data via SQL in Adobe Experience Platform. Learn how to configure, enforce, and monitor IP restrictions to uphold high security standards, with capabilities for real-time access tracking and alerting.
+Use the [Data Distiller Authorization API guides](./auth-api/overview.md) to set up IP-based restrictions. These IP-based restrictions ensure that only approved networks and client machines can access data via SQL in Adobe Experience Platform. Learn how to configure, enforce, and monitor IP restrictions to uphold high security standards, with capabilities for real-time access tracking and alerting.
 
 * [Getting Started guide](./auth-api/getting-started.md)
 * [IP Access Endpoint guide](./auth-api/ip-access.md)
