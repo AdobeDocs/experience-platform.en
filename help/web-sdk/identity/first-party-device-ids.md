@@ -28,7 +28,7 @@ The Edge Network only accepts IDs that comply with the [UUIDv4 format](https://d
 * [!DNL UUIDv4] cannot be seeded using IP addresses or any other personal identifiable information (PII).
 * Libraries to generate [!DNL UUIDs] are available for every programming language.
 
-## Setting a cookie using your own server {#set-cookie-server}
+## Set the [!DNL FPID] cookie using your own server {#set-cookie-server}
 
 When setting a cookie through your own server, you can use various methods to prevent the cookie from being restricted due to browser policies: 
 
@@ -51,7 +51,7 @@ Assuming the [!DNL ECID] is eventually impacted by a browser deletion policy, bu
 
 Setting the expiration of a cookie is something that should be carefully considered as you implement the [!DNL FPID] functionality. When deciding this, you should consider the countries or regions in which your organization operates along with the laws and policies in each one of those regions. 
 
-As part of this decision, you may want to adopt a company-wide cookie-setting policy or one that varies for users in each locale where you operate. 
+As part of this decision, you may want to adopt a company-wide cookie-setting policy or one that varies for users in each locale where you operate.
 
 Regardless of the setting you choose for the initial expiration of a cookie, you must ensure you include logic that extends the expiration of the cookie each time a new visit to the site occurs. 
 
@@ -131,28 +131,38 @@ Once an [!DNL FPID] cookie is set, its value can be fetched and sent to Adobe as
 
 You can use [!DNL FPIDs] in two ways:
 
-* **Method 1**: Configure a [!DNL CNAME] for your Web SDK calls and include the name of your [!DNL FPID] cookie in your datastream configuration. 
-* **Method 2**: Include the [!DNL FPID] in the identity map. See the section further down in this document on [using FPIDs in `identityMap`](#identityMap) for more information.
+* **[Method 1](#setting-cookie-datastreams)**: Configure a [!DNL CNAME] for your Web SDK calls and include the name of your [!DNL FPID] cookie in your datastream configuration.
+* **[Method 2](#identityMap)**: Include the [!DNL FPID] in the identity map. See the section further down in this document on [using FPIDs in `identityMap`](#identityMap) for more information.
 
 ### Method 1: Configure a CNAME for your Web SDK calls and set a First Party ID Cookie in your datastream {#setting-cookie-datastreams}
 
-To set an [!DNL FPID] cookie from your own domain, you need to configure your own [!DNL CNAME] for your Web SDK calls.
+To set an [!DNL FPID] cookie from your own domain, you need to configure your own [!DNL CNAME] (Canonical Name)  for your Web SDK calls, and then enable the [!DNL First Party ID Cookie] functionality in your datastream configuration.
+
+**Step 1. Configure a CNAME for your Web SDK deployment domain**
+
+A [!DNL CNAME] record in your DNS allows you to create an alias from one domain name to another. This can help make third-party services appear as if they are part of your own domain, thus making their cookies look like first-party cookies.
+
+**Example**
+
+Let's consider you want to implement Web SDK on your website `mywebsite.com`. The Web SDK sends data to the Edge Network to the `edge.adobedc.net` domain.
+
+|Without [!DNL CNAME] | With [!DNL CNAME] |
+|---------|----------|
+| <ul><li>Your website `mywebsite.com` uses the Web SDK domain `edge.adobedc.net` to send data to the Edge Network.</li><li>Cookies set by `edge.adobedc.net` are considered third-party cookies, since they do not come from your `mywebsite.com` domain. Depending on your users browsers, third party cookies might be blocked, and your data does not reach the Edge Network.</li></ul> | <ul><li>You create a subdomain where you deploy Web SDK, such as `metrics.mywebsite.com`.</li><li>You set a [!DNL CNAME] record in your DNS system so that `metrics.mywebsite.com` points to `edge.adobedc.net`.</li><li>When your website sets cookies through `metrics.mywebsite.com`, to the browser they will appear to come from `mywebsite.com` (first-party) instead of `edge.adobedc.net` (third-party). This makes the first-party ID cookie less likely to be blocked, ensuring more accurate data collection.</li></ul> |
 
 When first-party data collection is enabled using a [!DNL CNAME], all cookies for your domain will be sent on requests made to the data collection endpoint.
 
-All cookies not relevant to Adobe's data collection purposes are dropped. For [!DNL FPID], you can specify the name of the [!DNL FPID] cookie in the datastream configuration. When you do this, the Edge Network will read the contents of the [!DNL FPID] cookie instead of  looking for the [!DNL FPID] in the identity map. 
-
-To use this functionality, you need to set the [!DNL FPID] at the top level of your domain instead of a specific subdomain. If you set it on a subdomain, the cookie value will not be sent to the Edge Network and the [!DNL FPID] solution will not work as intended. 
+To use this functionality, you need to set the [!DNL FPID] cookie at the top level of your domain instead of a specific subdomain. If you set it on a subdomain, the cookie value will not be sent to the Edge Network and the [!DNL FPID] solution will not work as intended. 
 
 >[!IMPORTANT]
 >
 >This feature requires that you have [First Party Data Collection](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=en) enabled.
 
-After you have configured your CNAME, you must enable **[!UICONTROL First Party ID Cookie]** option for your datastream.
+**Step 2. Enable **[!UICONTROL First Party ID Cookie]** functionality for your datastream**
+
+After you have configured your CNAME, you must enable **[!UICONTROL First Party ID Cookie]** option for your datastream. This setting tells the Edge Network to refer to a specified cookie when looking up a first-party device ID, instead of looking up this value in the [identity map](#identityMap).
 
 See the [datastream configuration documentation](../../datastreams/configure.md#advanced-options) to learn how to set up your datastream.
-
-This setting tells the Edge Network to refer to a specified cookie when looking up a first-party device ID, instead of looking up this value in the [identity map](#identityMap).
 
 See the documentation on [first-party cookies](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html) for more details on how they work with Adobe Experience Cloud.
 
@@ -160,9 +170,10 @@ See the documentation on [first-party cookies](https://experienceleague.adobe.co
 
 When enabling this setting, you must provide the name of the cookie where the [!DNL FPID] is expected to be stored.
 
-When you use first-party IDs, you cannot perform third-party ID syncs. Third-party ID syncs rely on the [!DNL Visitor ID] service and the `UUID` generated by that service. When using the first-party ID functionality, the [!DNL ECID] is generated without the use of the [!DNL Visitor ID] service, which makes third-party ID syncs impossible.
-
-When you use first-party IDs, [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager) capabilities targeted towards activation in partner platforms are not supported, given that Audience Manager Partner ID syncs are mostly based on `UUIDs` or `DIDs`. The [!DNL ECID] that is derived off a first-party ID is not linked to a `UUID`, making it unaddressable.
+>[!NOTE]
+>
+>When you use first-party IDs, you cannot perform third-party ID syncs. Third-party ID syncs rely on the [!DNL Visitor ID] service and the `UUID` generated by that service. When using the first-party ID functionality, the [!DNL ECID] is generated without the use of the [!DNL Visitor ID] service, which makes third-party ID syncs impossible.
+><br> When you use first-party IDs, [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager) capabilities targeted towards activation in partner platforms are not supported, given that Audience Manager Partner ID syncs are mostly based on `UUIDs` or `DIDs`. The [!DNL ECID] that is derived off a first-party ID is not linked to a `UUID`, making it unaddressable.
 
 ## Method 2: Use FPIDs in `identityMap` {#identityMap}
 
