@@ -36,6 +36,7 @@ role: Admin,User
         * [Activate audiences to streaming profile export destinations](./ui/activate-streaming-profile-destinations.md)
         * [Activate audiences to batch profile export destinations](./ui/activate-batch-profile-destinations.md)
         * [Activate audiences to edge personalization destinations](./ui/activate-edge-personalization-destinations.md)
+        * [Look up profile attributes on the edge in real-time](./ui/activate-edge-profile-lookup.md)
         * [Activate audiences to curated destinations based on LiveRamp identifiers](./ui/activate-curated-destinations.md)
         * [Activate prospect audiences to destinations](./ui/activate-prospect-audiences.md)
         * [Activate account audiences to destinations](./ui/activate-account-audiences.md)

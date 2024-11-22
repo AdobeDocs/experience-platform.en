@@ -8,7 +8,7 @@ type: Tutorial
 
 Adobe Experience Platform uses the [Real-Time Customer Profile](../../profile/home.md) as the single source of truth for all profile data. For quick, real-time data retrieval, it uses [edge profiles](../../profile/edge-profiles.md), which are lightweight profiles distributed throughout the [Edge Network](../../collection/home.md#edge). This allows for fast, real-time personalization use cases.
 
-## Use Cases
+## Use Cases {#use-cases}
 
 Below are two use cases where edge profile lookup can help.
 
@@ -30,10 +30,10 @@ When configuring the use case described in this page, you will use the following
 
 Edge profile lookup use cases are subject to the specific performance guardrails described in the table below. For more details regarding the Edge Network API guardrails, see the guardrails [documentation page](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/).
 
-|Edge Network Service | Edge Segmentation | Requests per second | UI |
-|---------|----------|---------|---|
-| [Custom personalization destination](../catalog/personalization/custom-personalization.md) via [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/) | Yes | 1500 | Yes | |
-| [Custom personalization destination](../catalog/personalization/custom-personalization.md) via [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/) | No | 1500 | Yes |
+|Edge Network Service | Edge Segmentation | Requests per second |
+|---------|----------|---------|
+| [Custom personalization destination](../catalog/personalization/custom-personalization.md) via [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/) | Yes | 1500 |
+| [Custom personalization destination](../catalog/personalization/custom-personalization.md) via [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/) | No | 1500 |
 
 ## Step 1: Create and configure a datastream {#create-datastream}
 
@@ -43,9 +43,10 @@ Follow the steps in the [datastream configuration](../../datastreams/configure.m
 * **[!UICONTROL Personalization Destinations]**: Enabled
 * **[!UICONTROL Edge Segmentation]**: If you require edge segmentation, enable this option. If you are only interested in looking up profile attributes on the edge, but do not want to perform any segmentation based on the edge profiles, then leave this option disabled.
 
-    >[!IMPORTANT]
+
+    <!-- >[!IMPORTANT]
     >
-    >Enabling edge segmentation limits the maximum number of lookup requests to 1500 request per second. If you need a higher request throughput, disable edge segmentation for your datastream. See the [guardrails documentation](../guardrails.md#edge-destinations-activation) for detailed information.
+    >Enabling edge segmentation limits the maximum number of lookup requests to 1500 request per second. If you need a higher request throughput, disable edge segmentation for your datastream. See the [guardrails documentation](../guardrails.md#edge-destinations-activation) for detailed information. -->
 
     ![Platform UI image showing the datastream configuration screen.](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
 
@@ -70,7 +71,7 @@ In order to look up edge profiles, including attributes and audience membership 
 
 Follow the [destination connection creation tutorial](../ui/connect-destination.md) for detailed instructions on how to create a new destination connection.
 
-When configuring the new destination, select the datastream which you created in [step 1](#create-datastream) in the **[!UICONTROL Datastream ID]** field.
+When configuring the new destination, select the datastream which you created in [step 1](#create-datastream) in the **[!UICONTROL Datastream ID]** field. For **[!UICONTROL Integration alias]** you can use any value that helps you identify this destination connection in the future, like the destination name.
 
 ![Experience Platform UI image showing the Custom Personalization With Attributes configuration screen.](../assets/ui/activate-edge-profile-lookup/destination-config.png)
 
@@ -168,7 +169,7 @@ Configure your integration to retrieve edge profile information as shown in the 
 
 ### Request {#request}
 
-To retrieve edge profile data, send an empty `POST` call to the `/interact` endpoint, with the primary identity included in the event, as shown below.
+To retrieve edge profile data, send an empty `POST` call to the `/interact` endpoint, with the primary identity for which you are looking up profile attributes included in the event, as shown below.
 
 ```shell
 curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_ID}" 
