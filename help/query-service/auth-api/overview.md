@@ -35,6 +35,6 @@ Refer to the [Audit logs overview](../../landing/governance-privacy-security/aud
 
 Get started with the Data Distiller Authorization API by reviewing the [Getting Started guide](./getting-started.md) for essential setup steps, including required headers and API call conventions. Then, explore the endpoint-specific guides on [IP Access](./ip-access.md) and [IP Validation](./validate.md) for configuring and managing secure data access.
 
-Refer to the [Data Distiller Authorization OpenAPI reference documentation](https://developer.adobe.com/experience-platform-apis/references/data-distiller-auth/) to view a standardized, machine-readable format that enables easier integration, testing, and exploration.
+Refer to the [Data Distiller Authorization OpenAPI reference documentation](https://developer.adobe.com/experience-platform-apis/references/data-distiller-auth/) to view a standardized, machine-readable format for easier integration, testing, and exploration.
 
 For information about the various response parameters for each returned dataset, refer to the [Datasets API developer documentation](https://developer.adobe.com/experience-platform-apis/references/catalog/#tag/Datasets/operation/listDatasets).

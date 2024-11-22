@@ -17,7 +17,7 @@ The Data Access API supports Adobe Experience Platform by providing users with a
 
 ## API specification reference
 
-Refer to the [Data Access OpenAPI reference documentation](https://developer.adobe.com/experience-platform-apis/references/data-access/) to view a standardized, machine-readable format that enables easier integration, testing, and exploration.
+Refer to the [Data Access OpenAPI reference documentation](https://developer.adobe.com/experience-platform-apis/references/data-access/) to view a standardized, machine-readable format for easier integration, testing, and exploration.
 
 ## Terminology {#terminology}
 
