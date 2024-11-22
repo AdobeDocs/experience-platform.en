@@ -60,3 +60,5 @@ With the required permissions and header values gathered, you're ready to start 
 Each API call example demonstrates how to format requests and interpret responses, helping you enforce secure access to your data in Query Service.
 
 For specific instructions on configuring and validating IP restrictions, refer to the [IP Access endpoint documentation](./ip-access.md) and the [IP Validation endpoint documentation](./validate.md).
+
+Refer to the [Data Distiller Authorization OpenAPI reference documentation](https://developer.adobe.com/experience-platform-apis/references/data-distiller-auth/) to view a standardized, machine-readable format that enables easier integration, testing, and exploration.
