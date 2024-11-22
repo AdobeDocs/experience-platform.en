@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform; Query Service; IP access control; authorization; API; getting started
-title: Query Service Authorization API Guide
+title: Data Distiller Authorization API Guide
 description: Learn how to get started for authorization and IP range restrictions for secure data access within Adobe Experience Platform's Query Service.
 role: Developer
 exl-id: d93ce774-c8b2-4f15-a4d9-117d9aa5d9e7
 ---
-# Query Service Authorization API guide
+# Get started with the Data Distiller Authorization API
 
 >[!AVAILABILITY]
 >
 >This functionality is available to customers who have purchased the Data Distiller add on. For more information, contact your Adobe representative.
 
-The Query Service Authorization API provides organizations with tighter control over data access via the SQL interface in Adobe Experience Platform. You can use this API to define IP restrictions, limit data access to specified networks, and enhance security monitoring.
+The Data Distiller Authorization API provides organizations with tighter control over data access via the SQL interface in Adobe Experience Platform. You can use this API to define IP restrictions, limit data access to specified networks, and enhance security monitoring.
 
-This guide outlines how to set up the authorization credentials and permissions required to make calls to the Query Service Authorization API.
+This guide outlines how to set up the authorization credentials and permissions required to make calls to the Data Distiller Authorization API.
 
 ## Getting started {#getting-started}
 
-The following sections provide information on preparing the required authorization values and making your first requests to the Query Service Authorization API.
+The following sections provide information on preparing the required authorization values and making your first requests to the Data Distiller Authorization API.
 
 ### Required permissions {#required-permissions}
 
@@ -35,7 +35,7 @@ The following functionalities are available with the **[!UICONTROL Manage Allowe
 
 ### Gather values for required headers {#gather-values-for-required-headers}
 
-To make calls to the Query Service Authorization API, you must complete the [Platform API authentication tutorial](../../landing/api-authentication.md), which provides values for required headers in API calls. Include the following headers in each request:
+To make calls to the Data Distiller Authorization API, you must complete the [Platform API authentication tutorial](../../landing/api-authentication.md), which provides values for required headers in API calls. Include the following headers in each request:
 
 - **Authorization**: `Bearer {ACCESS_TOKEN}`
 - **x-api-key**: `{API_KEY}`
