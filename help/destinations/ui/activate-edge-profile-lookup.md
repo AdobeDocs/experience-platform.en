@@ -2,8 +2,8 @@
 title: Look up edge profile attributes in real-time
 description: Learn how to look up edge profile attributes in real-time, using the Custom Personalization destination and Edge Network API
 type: Tutorial
+exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
 ---
-
 # Look up profile attributes on the edge in real-time
 
 Adobe Experience Platform uses the [Real-Time Customer Profile](../../profile/home.md) as the single source of truth for all profile data. For quick, real-time data retrieval, it uses [edge profiles](../../profile/edge-profiles.md), which are lightweight profiles distributed throughout the [Edge Network](../../collection/home.md#edge). This allows for fast, real-time personalization use cases.
