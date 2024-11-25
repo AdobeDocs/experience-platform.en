@@ -10,7 +10,7 @@ badgeB2P: label="B2P Edition" type="Positive" url=" https://experienceleague.ado
 >
 >The functionality to activate account audiences to the (Companies) LinkedIn destination is available for companies purchasing the [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) and [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) editions of Real-Time Customer Data Platform.
 
-Use this destination to activate your [account audiences](/help/segmentation/ui/account-audiences.md) for Account-Based Marketing (ABM) use cases. Advertise to relevant personas and roles in your target accounts via the **[!UICONTROL (Companies) LinkedIn]** business-to-business destination. 
+Use this destination to activate your [account audiences](/help/segmentation/ui/account-audiences.md) for Account-Based Marketing (ABM) use cases. Advertise to relevant personas and roles in your target accounts via the **[!UICONTROL (Companies) LinkedIn]** business-to-business destination. Visit the LinkedIn documentation to [learn more about account targeting](https://business.linkedin.com/marketing-solutions/cx/21/10/ad-targeting/account-targeting) on the LinkedIn platform.
 
 >[!TIP]
 >
@@ -50,38 +50,6 @@ Before you can use the [!UICONTROL (Companies) LinkedIn Matched Audience] destin
 
 To learn how to edit your [!DNL LinkedIn Campaign Manager] user permissions, see [Add, Edit, and Remove User Permissions on Advertising Accounts](https://www.linkedin.com/help/lms/answer/5753) in the LinkedIn documentation.
 
-### ID matching requirements {#id-matching-requirements}
-
-[!DNL LinkedIn Matched Audiences] requires that no personally identifiable information (PII) is sent in clear. Therefore, the audiences activated to the destination can be keyed off *hashed* identifiers, such as email addresses or mobile device IDs.
-
-Depending on the type of IDs that you ingest into Adobe Experience Platform, you must adhere to their corresponding requirements.
-
-### Email hashing requirements {#email-hashing-requirements}
-
-You can hash email addresses before ingesting them into Adobe Experience Platform, or use email addresses in clear in Experience Platform, and have [!DNL Platform] hash them on activation.
-
-To learn about ingesting email addresses in Experience Platform, see the [batch ingestion overview](/help/ingestion/batch-ingestion/overview.md) and the [streaming ingestion overview](/help/ingestion/streaming-ingestion/overview.md).
-
-If you select to hash the email addresses yourself, make sure to comply with the following requirements:
-
-* Trim all leading and trailing spaces from the email string. For example: `johndoe@example.com`, not `<space>johndoe@example.com<space>`;
-* When hashing the email strings, make sure to hash the lowercase string;
-  * Example: `example@email.com`, not `EXAMPLE@EMAIL.COM`;
-* Ensure that the hashed string is all lowercase
-  * Example: `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`, not `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
-* Do not salt the string.
-
->[!NOTE]
->
->Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
-> Attribute source data is not automatically hashed.
-> 
->In the [Identity Mapping](../../ui/activate-segment-streaming-destinations.md#mapping) step, when your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
-> 
-> The **[!UICONTROL Apply transformation]** option is only displayed when you select attributes as source fields. It is not displayed when you choose namespaces.
-
-![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
-
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
@@ -114,7 +82,7 @@ You are now ready to activate account audiences to LinkedIn.
 >[!IMPORTANT]
 > 
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
->* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
+>* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate account audiences to destinations.](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png "Select identity namespace highlighted in the workflow to activate account audiences to destinations."){width="100" zoomable="yes"}
 
 Read [Activate account audiences](/help/destinations/ui/activate-account-audiences.md) for instructions on activating account audiences to this destination.
 
