@@ -62,13 +62,13 @@ Read the document on [identity data for privacy requests](./identity-data.md) fo
 
 Once you have determined your business' privacy needs, and decided which identity values to send to Privacy Service, you can start making privacy requests. Use Privacy Service to send privacy requests through either the API or the UI.
 
-#### Access Requests - File Details {#access-requests}
+#### Access request file details {#access-requests}
 
-For an access request, there will be a **download URL** provided that contains multiple files, with one file per Adobe application where data was requested. Note that the **file format for each application** may differ based on the application's data structure.
+In the response to a successful access request, there is a **download URL** that contains multiple files. One file is provided for each Adobe application where data was requested. Note that the file format for each application may differ based on the application's data structure.
 
 #### Delete Requests - No Download URL {#delete-requests}
 
-For a **delete request**, there will be **no download URL** in the response, as no customer data is being retrieved.
+There is **no download URL** in the response for a **delete request**, as no customer data is being retrieved.
 
 >[!IMPORTANT]
 >
@@ -100,9 +100,9 @@ Once you have made privacy jobs, you have several options for monitoring their s
 | Privacy Service API | You can programmatically monitor the status of Privacy jobs by using the lookup endpoints provided by the Privacy Service API. See the [Privacy Service API guide](./api/overview.md) for detailed steps on how to use the API. |
 | [!DNL Privacy Events] | [!DNL Privacy Events] use Adobe I/O Events that are sent to a configured webhook to facilitate efficient job request automation. They reduce or eliminate the need to poll the Privacy Service API to check if a job is complete or if a certain milestone within a workflow has been reached. See the tutorial on [subscribing to Privacy Events](./privacy-events.md) for more information. |
 
-#### Response for Non-Existing Users {#non-existing-users}
+#### Responses for non-existing users {#non-existing-users}
 
-If the customer ID provided does not match any records, the **response will always be "success"**, whether it is an access or delete request. This means that no identifiable data was found to fulfill the request, and it was processed successfully as a result.
+When you submit an access or delete request, even if the user data is not found, the response will always return a `success` if the call was completed successfully. This means that even if the data doesn't exist, an access or deletion can complete successfully without any data being retrieved or deleted.
 
 ## Next steps
 
