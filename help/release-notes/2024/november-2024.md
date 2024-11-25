@@ -15,6 +15,7 @@ Updates to existing features and documentation in Adobe Experience Platform:
 - [AI Assistant](#ai-assistant)
 - [Destinations](#destinations)
 - [Sandboxes](#sandboxes)
+- [Documentation updates](#documentation-updates)
 
 ## AI Assistant {#ai-assistant}
 
