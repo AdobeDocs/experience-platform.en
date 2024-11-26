@@ -14,8 +14,12 @@ Updates to existing features and documentation in Adobe Experience Platform:
 
 - [AI Assistant](#ai-assistant)
 - [Destinations](#destinations)
+- [Query Service](#query-service)
 - [Sandboxes](#sandboxes)
 - [Documentation updates](#documentation-updates)
+  - [Interactive Experience Platform API documentation](#interactive-experience-platform-api-documentation)
+  - [New table of contents on Experience League](#new-table-of-contents-on-experience-league)
+  - [New AI Assistant landing page](#new-ai-assistant-landing-page)
 
 ## AI Assistant {#ai-assistant}
 
@@ -53,6 +57,18 @@ AI Assistant in Adobe Experience Platform is a conversational experience that yo
 
 For more information, read the [destinations overview](../../destinations/home.md).
 
+## Query Service {#query-service} 
+
+Query data in the Adobe Experience Platform data lake using standard SQL with Query Service. Seamlessly combine datasets and generate new ones from your query results to power reporting, enable data science workflows, or facilitate ingestion into Real-Time Customer Profile. For example, you can merge customer transaction data with behavioral data to identify high-value audiences for targeted marketing campaigns.
+
+ **Updated features** 
+
+| Feature | Description |
+| --- | --- |
+| Dater Distiller Authorization API | Manage and enforce IP-based access restrictions for Query Service sandboxes, to enhance data security and ensure compliance with organizational policies. Refer to the [Data Distiller Authorization API guide](../../query-service/auth-api/overview.md) for more information on its key features and capabilities, or the [OpenAPI documentation](https://developer.adobe.com/experience-platform-apis/references/data-distiller-auth/) for comprehensive information including endpoint details, parameter lists, request/response examples, and testing capabilities. |
+
+For more information on [!DNL Query Service], please see the [[!DNL Query Service] overview](../../query-service/home.md). 
+
 ## Sandboxes {#sandboxes}
 
 Adobe Experience Platform is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater for the development, testing, and deployment of these applications while ensuring operational compliance. To address this need, Experience Platform provides sandboxes that partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
@@ -71,10 +87,10 @@ For more information on sandboxes, read the [sandboxes overview](../../sandboxes
 
 The [Experience Platform API documentation](https://developer.adobe.com/experience-platform-apis/) is now fully interactive, allowing you to authenticate and explore APIs directly on the API reference documentation page. You can now go to the desired API reference documentation page, create or get your API authentication credentials, paste them into the **[!UICONTROL Try it]** block, and execute the call. All on one page. [Read more](/help/landing/api-authentication.md#get-credentials-functionality) about the functionality.
 
-### New table of contents on Experience League
+### New table of contents on Experience League {#new-table-of-contents-on-experience-league}
 
 The table of contents on Experience League documentation pages has been improved to provide an improved experience for readers, including a keyword filter to discover the exact page you need, the ability to expand all pages, and more. <br> ![New table of contents experience including keyword filter and ability to expand all pages.](../2024/assets/november/new-toc-experience.gif "New table of contents experience including keyword filter and ability to expand all pages."){width="250" align="center" zoomable="yes"}
 
-### New AI Assistant landing page
+### New AI Assistant landing page {#new-ai-assistant-landing-page}
 
 Use the new [AI Assistant product documentation](../../ai-assistant/landing.md) page as a hub for all things AI Assistant. Refer to the product documentation for video tutorials, technical documentation, use cases, and links to blog posts about AI Assistant.
