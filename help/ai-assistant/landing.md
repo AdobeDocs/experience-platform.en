@@ -1,15 +1,13 @@
 ---
 title: AI Assistant in Adobe Experience Platform Product Documentation
-description: Get started with AI Assistant in Adobe Experience Platform
-hide: true
-hidefromtoc: true
+description: Get started with AI Assistant in Adobe Experience Platform.
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
 ---
 # AI Assistant in Adobe Experience Platform product documentation
 
 AI Assistant in Adobe Experience Platform is a conversational tool that you can use to accelerate your workflows with Experience Platform applications and services. Use AI Assistant to boost your overall productivity, amplify your understanding of product knowledge and operational insights, as well as gather recommendations relevant to your queries and business use cases.
 
-AI Assistant supports Experience Platform, Real-Time Customer Data Platform, Adobe Journey Optimizer and Customer Journey Analytics.
+AI Assistant supports Experience Platform, Real-Time CDP, Adobe Journey Optimizer and Customer Journey Analytics.
 
 ## Get started
 
@@ -18,15 +16,15 @@ Get started by reading the material in the links below to familiarize yourself w
 <table style="table-layout:fixed">
   <tr style="border: 0;">
     <td>
-    <a href="./home.md#operational-insights"><img src="./assets/landing/ai-get-started.png"></a>
+    <a href="./home.md#operational-insights"><img src="./assets/landing/ai-get-started.png" style=width: 100%;max-height: 100%"></a>
     <div><strong>Understand your data objects</strong><br/>Retrieve operational insights pertaining to your data objects for a better view on their statuses, usage, and linage impact.</div>
     </td>
     <td>
-    <a href="./home.md#product-knowledge"><img src="./assets/landing/ai-audience.png"></a>
+    <a href="./home.md#product-knowledge"><img src="./assets/landing/ai-audience.png"  style=width: 100%;max-height: 100%"></a>
     <div><strong>Enhance your learning</strong><br/>Discover, troubleshoot, and amplify your understanding of product knowledge without interrupting your workflows.</div>
     </td>
     <td>
-    <a href="./access.md"><img src="./assets/landing/ai-access.png"></a>
+    <a href="./access.md"><img src="./assets/landing/ai-access.png"  style=width: 100%;max-height: 100%"></a>
     <div><strong>Apply permissions based on your usage</strong><br/>Grant and revoke access permissions depending on the roles of your team members.</div>
     </td>
   </tr>
@@ -36,6 +34,7 @@ Get started by reading the material in the links below to familiarize yourself w
     <td align="center"><a href="./access.md"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
+
 
 ## New features
 
@@ -113,6 +112,14 @@ Watch the following videos for additional AI Assistant use case examples:
 >[!ENDTABS]
 
 ## Additional resources 
+
+>[!BEGINSHADEBOX]
+
+**Read the AI Assistant security fact sheet**
+
+For more information about AI Assistant, read the [security fact sheet for AI Assistant in Adobe Experience Platform](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf).
+
+>[!ENDSHADEBOX]
 
 Browse the links below to further your understanding of AI Assistant use cases, capabilities, and much more.
 
