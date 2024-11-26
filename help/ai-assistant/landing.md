@@ -1,15 +1,13 @@
 ---
 title: AI Assistant in Adobe Experience Platform Product Documentation
-description: Get started with AI Assistant in Adobe Experience Platform
-hide: true
-hidefromtoc: true
+description: Get started with AI Assistant in Adobe Experience Platform.
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
 ---
 # AI Assistant in Adobe Experience Platform product documentation
 
 AI Assistant in Adobe Experience Platform is a conversational tool that you can use to accelerate your workflows with Experience Platform applications and services. Use AI Assistant to boost your overall productivity, amplify your understanding of product knowledge and operational insights, as well as gather recommendations relevant to your queries and business use cases.
 
-AI Assistant supports Experience Platform, Real-Time Customer Data Platform, Adobe Journey Optimizer and Customer Journey Analytics.
+AI Assistant supports Experience Platform, Real-Time CDP, Adobe Journey Optimizer and Customer Journey Analytics.
 
 ## Get started
 
@@ -126,7 +124,7 @@ For more information about AI Assistant, read the [security fact sheet for AI As
 Browse the links below to further your understanding of AI Assistant use cases, capabilities, and much more.
 
 <table style="table-layout:fixed"><tr style="border: 0;">
-<td><strong>Real-Time Customer Data Platform</strong><br/>
+<td><strong>Real-Time CDP</strong><br/>
 <a href="./home.md" target="_blank">Documentation</a> - <a href="./ui-guide.md" target="_blank">UI guide</a> - <a href="./access.md" target="_blank">Access AI Assistant</a> - <a href="./privacy.md" target="_blank">Privacy, security, and governance</a> - <a href="./faq.md" target="_blank">FAQ</a>
 </td>
 <td><strong>Adobe Journey Optimizer</strong><br/>
