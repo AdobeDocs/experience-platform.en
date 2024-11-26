@@ -6,7 +6,7 @@ description: The November 2024 release notes for Adobe Experience Platform.
 
 >[!TIP]
 >
->The new [AI Assistant product documentation landing page](../../ai-assistant/landing.md) is now available. Use this page as a hub for all AI Assistant-related resources.
+>The new [AI Assistant product documentation](../../ai-assistant/landing.md) is now available. Use this page as a hub for all AI Assistant-related resources.
 
 **Release date: November 26, 2024**
 
