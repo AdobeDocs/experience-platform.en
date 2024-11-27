@@ -1,12 +1,13 @@
 ---
 title: Adobe Experience Platform Release Notes November 2024
 description: The November 2024 release notes for Adobe Experience Platform.
+exl-id: e3969f8b-70b2-40f8-bb9b-5be6e3d8f722
 ---
 # Adobe Experience Platform release notes
 
 >[!TIP]
 >
->The new [AI Assistant product documentation landing page](../../ai-assistant/landing.md) is now available. Use this page as a hub for all AI Assistant-related resources.
+>The new [AI Assistant product documentation](../../ai-assistant/landing.md) is now available. Use this page as a hub for all AI Assistant-related resources.
 
 **Release date: November 26, 2024**
 
