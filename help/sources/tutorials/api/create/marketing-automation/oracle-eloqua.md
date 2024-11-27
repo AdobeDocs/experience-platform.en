@@ -7,7 +7,7 @@ exl-id: 866e408f-6e0b-4e81-9ad8-9d74c485c89a
 
 >[!WARNING]
 >
->The [!DNL Oracle Eloqua] source will be deprecated at the end of May 2025.
+>The [!DNL Oracle Eloqua] source will be deprecated at the end of June 2025.
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
