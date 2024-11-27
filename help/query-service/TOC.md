@@ -107,7 +107,7 @@ role: User,Developer
     - [Query templates](api/query-templates.md)
     - [Accelerated queries](api/accelerated-queries.md)
     - [Alert subscriptions](api/alert-subscriptions.md)
-- Query Service Auth API {#auth-api}
+- Data Distiller Authorization API {#auth-api}
     - [Overview](auth-api/overview.md)
     - [Getting started](auth-api/getting-started.md)
     - [IP access](auth-api/ip-access.md)
