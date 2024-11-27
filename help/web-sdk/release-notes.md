@@ -10,6 +10,26 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 This document covers the release notes for the Adobe Experience Platform Web SDK.
 For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## Version 2.24.0 - October 31, 2024
+
+**New features**
+
+- [Datastream overrides](../datastreams/overrides.md) are now supported when starting media sessions.
+
+- Added support for Adobe Target response tokens in the [`onContentRendering`](monitoring-hooks.md#onContentRendering)monitoring hook.
+
+**Fixes and improvements**
+
+- When multiple in-app messages are returned, only the one with the highest priority is shown. The others are recorded as suppressed.
+- Empty datastream overrides are no longer sent to the Edge Network, reducing potential conflicts with server side routing configurations.
+- Renamed the following logging message component names, to align with other Adobe SDKs:
+    - `DecisioningEngine` has been renamed to `RulesEngine`
+    - `LegacyMediaAnalytics`  has been renamed to `MediaAnalyticsBridge`
+    - `Privacy` has been renamed to `Consent`
+- Fixed an error that occurred when default content items were rendered via [`applyPropositions`](../web-sdk/commands/applypropositions.md).
+- Fixed a CSS error in Adobe Target move and resize actions.
+- Removed the `machineLearning` key from [`sendEvent`](../web-sdk/commands/sendevent/overview.md) responses.
+
 ## Version 2.23.0 - September 19, 2024
 
 **New features**

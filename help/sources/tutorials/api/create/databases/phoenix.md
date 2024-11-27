@@ -5,6 +5,10 @@ exl-id: b69d9593-06fe-4fff-88a9-7860e4e45eb7
 ---
 # Create a [!DNL Phoenix] base connection using the [!DNL Flow Service] API
 
+>[!WARNING]
+>
+>The [!DNL Phoenix] source will be deprecated at the end of June 2025.
+
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
 This tutorial provides steps on how to create a base connection and  connect your [!DNL Phoenix] account to Adobe Experience Platform using the [!DNL Flow Service] API.

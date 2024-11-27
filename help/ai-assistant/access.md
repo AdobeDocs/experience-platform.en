@@ -27,6 +27,12 @@ Once you have the necessary permissions, you can access AI Assistant by selectin
 
 ![AI Assistant with first-time user experience.](./images/ai-assistant.png)
 
+## Get access to AI Assistant
+
+Watch the following video to learn how to configure access to AI Assistant for your organizations and users.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
+
 ## Next steps
 
 Once you have complete access to AI Assistant, you can proceed to using the feature during your workflows, read the [AI Assistant UI guide](./ui-guide.md) for more information.

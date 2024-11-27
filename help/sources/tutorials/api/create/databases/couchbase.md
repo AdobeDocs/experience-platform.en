@@ -8,9 +8,9 @@ exl-id: 625e3acf-fc27-44cf-b4e6-becf1d107ff2
 ---
 # Create a [!DNL Couchbase] base connection using the [!DNL Flow Service] API
 
->[!NOTE]
+>[!WARNING]
 >
->The [!DNL Couchbase] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled connectors.
+>The [!DNL Couchbase] source will be deprecated at the end of June 2025.
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 

@@ -6,6 +6,10 @@ exl-id: 00c0bc9c-a740-4bab-a882-2cfed8abe758
 ---
 # Create a Oracle Service Cloud source connection using the [!DNL Flow Service] API
 
+>[!WARNING]
+>
+>The [!DNL Oracle Service Cloud] source will be deprecated at the end of June 2025.
+
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
 This tutorial walks you through the steps to create a base connection for Oracle Service Cloud using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
