@@ -16,6 +16,10 @@ hidefromtoc: yes
 | [!UICONTROL Denominator] | `denominator` | [[!UICONTROL Simple Quantity]](../healthcare/simple-quantity.md) | The value of the denominator. |
 | [!UICONTROL Numerator] | `numerator` | [[!UICONTROL Quantity]](../healthcare/quantity.md) | The value of the numerator. |
 
+>[!NOTE]
+>
+> The `denominator` and `numerator` have different data types due to the specification created as per the HL7 FHIR Release 5.
+
 For more details on the data type, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/ratio.example.1.json)

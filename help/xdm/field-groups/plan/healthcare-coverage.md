@@ -9,7 +9,6 @@ hidefromtoc: yes
 
 [!UICONTROL Coverage] is a standard schema field group for the [[!DNL Plan] class](../../classes/plan.md). It provides a single object-type field `healthcareCoverage` which is intended to provide the high-level identifiers and descriptors of an insurance plan, typically the information which would appear on an insurance card, which may be used to pay, in part or in whole, for the provision of health care products and services.
 
-<!-- This image will need to be replaced when the UI is updated to fix the two missing fields. -->
 ![Field group structure](../../images/field-groups/healthcare-coverage/coverage.png)
 
 | Display Name | Property | Data type | Description |
@@ -35,8 +34,6 @@ hidefromtoc: yes
 | [!UICONTROL Coverage Order] | `order` | Integer | The relative order of the coverage, with a minumum value of `0`. |
 | [!UICONTROL Status] | `status` | String | The status of the coverage. The value of this property must be equal to one of the following known enum values. <li> `active` </li> <li> `cancelled` </li> <li> `draft` </li> <li> `entered-in-error` </li> |
 | [!UICONTROL Subrogation] | `subrogation` | Boolean | When `true`, this insurance instance has been included not for adjudication, but to provide insurers with the details to recover costs. |
-| [!UICONTROL Value Money] | `valueMoney` | [[!UICONTROL Money]](../../data-types/healthcare/money.md) | The amount due from the patient for the cost category. |
-| [!UICONTROL Value Quantity] | `valueQuantity` | [[!UICONTROL Simple Quantity]](../../data-types/healthcare/simple-quantity.md) | The amount due from the patient in percentage for the cost category. |
 
 For more details on the field group, refer to the public XDM repository:
 
@@ -73,13 +70,12 @@ For more details on the field group, refer to the public XDM repository:
 
 `exception` is provided as an array of objects. The structure of each object is described below.
 
-<!-- This will need to be updated when the exception field is added to the UI. -->
-<!-- ![Exception structure](../../images/field-groups/healthcare-coverage/cost-to-beneficiary.png) -->
+![Exception structure](../../images/field-groups/healthcare-coverage/exception.png)
 
 | Display Name | Property | Data type | Description |
 | --- | --- | --- | --- |
 | [!UICONTROL Type] | `type`| [[!UICONTROL Codeable Concept]](../../data-types/healthcare/codeable-concept.md) | The code for the specific exception. |
-| [!UICONTROL Unit] | `period`| [[!UICONTROL Period]](../../data-types/healthcare/period.md) | The timeframe the exception is active. |
+| [!UICONTROL Period] | `period`| [[!UICONTROL Period]](../../data-types/healthcare/period.md) | The timeframe the exception is active. |
 
 ## `paymentBy` {#payment-by}
 

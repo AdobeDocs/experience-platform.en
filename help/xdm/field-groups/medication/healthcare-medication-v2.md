@@ -37,7 +37,7 @@ For more details on the field group, refer to the public XDM repository:
 | Display Name | Property | Data type | Description |
 | --- | --- | --- | --- |
 | [!UICONTROL Item] | `item` | [[!UICONTROL Codeable Reference]](../../data-types/healthcare/codeable-reference.md) | The ingredient being described. |
-| [!UICONTROL Strength Codeable Concept] | `strengthCodeableConcept`| [[!UICONTROL Codeable Concept]](../../data-types/healthcare/codeable-concept.md) | The quantity of the ingredient present. |
+| [!UICONTROL Strength Codeable Concept] | `strengthCodeableConcept`| [[!UICONTROL Codeable Concept]](../../data-types/healthcare/codeable-concept.md) | The quantity of the ingredient present, expressed in a system defined terminology. |
 | [!UICONTROL Strength Quantity] | `strengthQuantity`| [[!UICONTROL Quantity]](../../data-types/healthcare/quantity.md) | The quantity of the ingredient present. |
 | [!UICONTROL Strength Ratio] | `strengthRatio`| [[!UICONTROL Ratio]](../../data-types/healthcare/ratio.md) | The ratio of the ingredient present. |
 | [!UICONTROL Is Active] | `isActive`| Boolean | Indicates if the ingredient is active. |
