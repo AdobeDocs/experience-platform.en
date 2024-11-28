@@ -26,6 +26,10 @@ In order to increase the transparency and visibility of activities performed in 
 
 In a basic sense, an audit log tells **who** performed **what** action, and **when**. Each action recorded in a log contains metadata that indicates the action type, date and time, the email ID of the user who performed the action, and additional attributes relevant to the action type.
 
+>[!NOTE]
+>
+> The metadata for the actions **add user** and **remove user** within the Role resource will not contain the email ID of the user who performed the action. Instead, the email ID will be the generic email ID of system@adobe.com.
+
 This document covers audit logs in Platform, including how to view and manage them in UI or API.
 
 ## Event types captured by audit logs {#category}
