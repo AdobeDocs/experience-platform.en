@@ -5,41 +5,48 @@ title: Query Service UI Guide
 description: Adobe Experience Platform Query Service provides a user interface that can be used to write and execute queries, view previously executed queries, and access queries saved by users within your organization.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
 ---
-# [!DNL Query Service] UI guide
+# Query Service UI guide
 
-The Adobe Experience Platform [!DNL Query Service] provides a user interface that can be used to write and execute queries, view previously executed queries, and access queries saved by users within your organization. To access the UI within [Adobe Experience Platform](https://platform.adobe.com), select **[!UICONTROL Queries]** in the left navigation.
+The Adobe Experience Platform Query Service provides a user interface that can be used to write and execute queries, view previously executed queries, and access queries saved by users within your organization. To access the UI within [Adobe Experience Platform](https://platform.adobe.com), select **[!UICONTROL Queries]** in the left navigation. The [!UICONTROL Queries] [!UICONTROL Overview] appears.
+
+![The Query Service workspace with Queries and the Overview tab highlighted.]()
 
 ## Overview
 
-The [!DNL Query Service] Overview provides a streamlined entry point for working with queries and Data Distiller templates. Here you can access all the features needed to write queries, explore datasets, and analyze audience data, ensuring a smooth workflow for your data analytics and audience insights.
-
-![The Query Service workspace with teh Overview tab highlighted.]()
+The [!UICONTROL Overview] tab provides a streamlined entry point for working with queries and Data Distiller templates. Here you can access all the features needed to write queries, explore datasets, and analyze audience data, to ensure a smooth workflow for your data analytics and audience insights. use this overview to learn what you can achieve with Data Distiller and discover key metrics about your Query Service usage.
 
 ### Main panels {#main-panels}
 
 The [!UICONTROL Overview] page contains several main sections to help you get started:
 
-1. **[!UICONTROL Create query]**: Quickly navigate to the Query Editor to write and execute new queries.
-2. **[!UICONTROL Write queries]**: Learn more about how to write queries using the Query Service UI, guiding you to this detailed documentation.
-3. **[!UICONTROL Discover Data Distiller]**: Utilize pre-built templates to create dashboards based on custom data models and deploy personalized insights, with a link to the Data Distiller overview.
+1. Select **[!UICONTROL Create query]** to quickly navigate to the Query Editor to write and execute new queries.
+2. Select **[!UICONTROL Learn more]** to view detailed documentation on how to **[!UICONTROL Write queries]**.
+3. Select **[!UICONTROL Get started]** in the **[!UICONTROL Discover Data Distiller]** section to open the Data Distiller overview and learn about available features.
+
+![The Query Service workspace with Create query, Learn more, and Get started highlighted.](../images/ui/overview/main-panels.png)
 
 ### Data Distiller capabilities {#data-distiller-capabilities}
 
-The Data Distiller capabilities section offers links to more advanced features of Adobe Experience Platform:
+The [!UICONTROL Data Distiller capabilities] section provides documentation links to more advanced Data Distiller features:
 
-- **[!UICONTROL Data exploration]**: Explore data within Experience Platform by bringing it in as a query. This capability allows for thorough verification and validation of ingested data using SQL.
-- **[!UICONTROL Derived datasets for Experience Platform applications]**: Create derived datasets from existing datasets to support Experience Platform applications.
-- **[!UICONTROL AI/ML pipelines]**: Develop datasets from Experience Platform data to power machine learning models and artificial intelligence processes.
-- **[!UICONTROL SQL insights]**: Understand how to develop an SQL insights dashboard with Data Distiller, including use cases, essential capabilities, and necessary steps.
+- **[[!UICONTROL Data exploration]](https://experienceleague.adobe.com/en/docs/experience-platform/query/use-cases/data-exploration)**: Learn how to explore, troubleshoot and verify batch ingested data using SQL.
+- **[[!UICONTROL Derived datasets for Experience Platform applications]](https://experienceleague.adobe.com/en/docs/experience-platform/query/data-distiller/derived-datasets/overview)**: Learn how to create derived datasets to support complex and diverse use cases that maximize your data utility.
+- **[[!UICONTROL AI/ML pipelines]](https://experienceleague.adobe.com/en/docs/experience-platform/query/data-distiller/ml-feature-pipelines/overview)**: Learn about important concepts behind your preferred machine learning tools to and how to build custom models that support your marketing use cases. This series of guides describes the necessary steps to build feature pipelines that prepare data from Experience Platform to feed custom models in your machine learning environment.
+- **[[!UICONTROL SQL insights]](https://experienceleague.adobe.com/en/docs/experience-platform/query/data-distiller/sql-insights/overview)**: Learn about the key capabilities and required steps to develop an insights dashboard from SQL with Data Distiller.
+
+![The Query Service workspace with the Data Distiller capabilities section highlighted.](../images/ui/overview/data-distiller-capabilities.png)
 
 ### Recommended Data Distiller accelerators {#recommended-accelerators}
 
-These accelerators provide quick links to the Data Distiller dashboards available in the [!UICONTROL Templates] section:
+Select a quick link to navigate to the relevant Data Distiller dashboards [!UICONTROL Templates]. Each accelerator provides powerful tools and visualizations to help you analyze audience data, optimize segmentation, and enhance targeting strategies.
 
-- **[!UICONTROL Advanced audience overlaps]**: Analyze intersections between multiple audience segments to uncover valuable insights and optimize segmentation strategies.
-- **[!UICONTROL Audience comparison]**: Compare key metrics between different audiences side by side to understand audience size, growth, and other important KPIs.
-- **[!UICONTROL Audience trends]**: Track audience metrics over time to monitor changes in audience size, identity growth, and overall engagement.
-- **[!UICONTROL Audience identity overlaps]**: Analyze identity overlaps within selected audiences to refine identity stitching and improve segmentation.
+<!-- You can use thkkese accelerator  provide quick links to the Data Distiller dashboards available in the [!UICONTROL Templates] section: -->
+
+- **[[!UICONTROL Advanced audience overlaps]](https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/sql-insights-query-pro-mode/templates/overlaps)**: From this dashboard you can analyze audience intersections between multiple audience segments to uncover valuable insights and optimize segmentation strategies. You can also export your insights for further offline analysis or reporting purposes.
+- **[[!UICONTROL Audience comparison]](https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/sql-insights-query-pro-mode/templates/comparison)**: From this dashboard, you can compare and contrast key audience metrics side-by-side to analyze two audience groups in detail. These insights help you understand audience size, growth, and other key performance indicators, enabling you to refine segmentation and optimize targeting strategies with data-driven decisions.
+- **[[!UICONTROL Audience trends]](https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/sql-insights-query-pro-mode/templates/trends)**: Use the [!UICONTROL Audience trends] dashboard to visualize how your audiences evolve over time through key metrics like audience growth, identity counts, and single identity profiles. Track trends to uncover valuable insights into audience behavior, empowering you to refine segmentation, enhance engagement, and optimize targeting strategies for more effective campaigns.
+Track audience metrics over time to monitor changes in audience size, identity growth, and overall engagement.
+- **[[!UICONTROL Audience identity overlaps]](https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/sql-insights-query-pro-mode/templates/identity-overlaps)**: Use the Audience Identity Overlaps dashboard to analyze identity overlaps within selected audiences. Visualizations and tabulated data provide insights to optimize identity stitching, reduce redundancy, and improve segmentation. These insights enable more effective targeting, enhanced personalization, and streamlined customer interactions.
 
 ### Data Distiller examples {#data-distiller-examples}
 
@@ -79,15 +86,15 @@ Visualizes the count of data exploration queries processed each day, providing i
 
 <!-- ![The Audience size trends chart.](../../images/sql-insights-query-pro-mode/templates/audience-size-trends-chart.png) -->
 
-## [!DNL Query Editor]
+## Query Editor
 
-The [!DNL Query Editor] enables you to write and execute queries without using an external client. Select **[!UICONTROL Create Query]** to open the [!DNL Query Editor] and create a new query. You can also access the [!DNL Query Editor] by selecting a query from the **[!UICONTROL Log]** or **[!UICONTROL Templates]** tabs. Selecting a previously executed or saved query will open the [!DNL Query Editor] and display the SQL for the selected query.
+The Query Editor enables you to write and execute queries without using an external client. Select **[!UICONTROL Create Query]** to open the Query Editor and create a new query. You can also access the Query Editor by selecting a query from the **[!UICONTROL Log]** or **[!UICONTROL Templates]** tabs. Selecting a previously executed or saved query will open the Query Editor and display the SQL for the selected query.
 
-![The Queries dashboard with Create Query highlighted.](../images/ui/overview/overview.png)
+![The Queries dashboard with Create Query highlighted.](../images/ui/overview/overview-create-query.png)
 
-[!DNL Query Editor] provides editing space where you can begin typing a query. As you type, the editor automatically completes SQL reserved words, tables, and field names within tables. When finished writing your query, select the **Play** button to run the query. The **[!UICONTROL Console]** tab below the editor shows what [!DNL Query Service] is currently doing, indicating when a query has been returned. The **[!UICONTROL Result]** tab, next to the Console, displays query results. See the [Query Editor guide](./user-guide.md) for more information on using the [!DNL Query Editor].
+Query Editor provides editing space where you can begin typing a query. As you type, the editor automatically completes SQL reserved words, tables, and field names within tables. When finished writing your query, select the **Play** button to run the query. The **[!UICONTROL Console]** tab below the editor shows what Query Service is currently doing, indicating when a query has been returned. The **[!UICONTROL Result]** tab, next to the Console, displays query results. See the [Query Editor guide](./user-guide.md) for more information on using the Query Editor.
 
-![A zoomed in view of the [!DNL Query Editor].](../images/ui/overview/query-editor.png)
+![A zoomed in view of the Query Editor.](../images/ui/overview/query-editor.png)
 
 ## Scheduled queries {#scheduled-queries}
 
@@ -116,15 +123,15 @@ See the documentation for more information on how to [monitor queries through th
 
 ## Templates {#browse}
 
-The **[!UICONTROL Templates]** tab shows queries saved by users in your organization. It is useful to think of these as query projects, as queries saved here may still be under construction. Queries displayed on the **[!UICONTROL Templates]** tab also display as run queries in the **[!UICONTROL Log]** tab if they have been previously executed by [!DNL Query Service].
+The **[!UICONTROL Templates]** tab shows queries saved by users in your organization. It is useful to think of these as query projects, as queries saved here may still be under construction. Queries displayed on the **[!UICONTROL Templates]** tab also display as run queries in the **[!UICONTROL Log]** tab if they have been previously executed by Query Service.
 
 ![A zoomed in view of the Queries dashboard Templates tab displaying several saved queries.](../images/ui/overview/templates.png)
 
 | Column | Description |
 | --- | --- |
-| **[!UICONTROL Name]** | The name field is either the query name created by the user or the first few characters of your SQL query. Any query created through the UI with the Query Editor is named at inception. If the query was created through the API then the name of the query is a snippet of the initial SQL used to create the query. You can select the query name to open the query in the [!DNL Query Editor]. You can also use the search bar to search for the [!UICONTROL Name] of a query. Searches are case sensitive. |
+| **[!UICONTROL Name]** | The name field is either the query name created by the user or the first few characters of your SQL query. Any query created through the UI with the Query Editor is named at inception. If the query was created through the API then the name of the query is a snippet of the initial SQL used to create the query. You can select the query name to open the query in the Query Editor. You can also use the search bar to search for the [!UICONTROL Name] of a query. Searches are case sensitive. |
 | **[!UICONTROL SQL]** | The first few characters of the SQL query. Hovering over the code displays the full query. |
-| **[!UICONTROL Modified by]** | The last user who modified the query. Any user in your organization with access to [!DNL Query Service] can modify queries. |
+| **[!UICONTROL Modified by]** | The last user who modified the query. Any user in your organization with access to Query Service can modify queries. |
 | **[!UICONTROL Last modified]** | The date and time of the last modification to the query, in the browser's time zone. |
 
 See the [query templates](./query-templates.md) documentation for more information on templates in the Platform UI.
@@ -147,7 +154,7 @@ The **[!UICONTROL Log]** tab provides a list of queries that have previously bee
 
 >![Note]
 >
->Select the pencil icon (![A pencil icon.](/help/images/icons/edit.png)) from any row of the query log to navigate to the [!DNL Query Editor]. The query is pre-populated for convenient editing.
+>Select the pencil icon (![A pencil icon.](/help/images/icons/edit.png)) from any row of the query log to navigate to the Query Editor. The query is pre-populated for convenient editing.
 
 See the [query logs documentation](./query-logs.md) for more information on the log files automatically generated by a query event.
 
@@ -159,4 +166,4 @@ The **[!UICONTROL Credentials]** tab displays both your expiring and non-expirin
 
 ## Next steps
 
-Now that you are familiar with [!DNL Query Service] user interface on [!DNL Platform], you can access [!DNL Query Editor] to start creating your own query projects to share with other users in your organization. For more information on authoring and running queries in [!DNL Query Editor], see the [[!DNL Query Editor] user guide](./user-guide.md).
+Now that you are familiar with Query Service user interface on [!DNL Platform], you can access Query Editor to start creating your own query projects to share with other users in your organization. For more information on authoring and running queries in Query Editor, see the [Query Editor user guide](./user-guide.md).
