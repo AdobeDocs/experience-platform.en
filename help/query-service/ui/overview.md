@@ -90,13 +90,13 @@ The [!UICONTROL Data exploratory queries] chart displays the number of SELECT qu
 
 ## Query Editor
 
-The Query Editor enables you to write and execute queries without using an external client. Select **[!UICONTROL Create Query]** to open the Query Editor and create a new query. You can also access the Query Editor by selecting a query from the **[!UICONTROL Log]** or **[!UICONTROL Templates]** tabs. Selecting a previously executed or saved query opens the Query Editor and displays the SQL for the selected query.
+Use the Query Editor to write and execute queries without using an external client. Select **[!UICONTROL Create Query]** to open the Query Editor and create a new query. You can also access the Query Editor by selecting a query from the **[!UICONTROL Log]** or **[!UICONTROL Templates]** tabs. If you select a previously executed or saved query, the Query Editor opens and displays the SQL for your selected query.
 
 ![The Queries dashboard with Create Query highlighted.](../images/ui/overview/overview-create-query.png)
 
-Query Editor provides an editing space where you can begin typing a query. As you type, the editor automatically completes SQL reserved words, tables, and field names within tables. When finished writing your query, select the **Play** button to run the query. The **[!UICONTROL Console]** tab below the editor shows what Query Service is currently doing, indicating when a query has been returned. The **[!UICONTROL Result]** tab, next to the Console, displays query results. See the [Query Editor guide](./user-guide.md) for more information on using the Query Editor.
+As you type in the Query Editor, the editor automatically completes SQL reserved words, tables, and field names within tables. When you have finished writing your query, select the play icon (![The play icon.](../../images/icons/play.png)) to run the query. The **[!UICONTROL Console]** tab below the editor shows what Query Service is currently doing, and indicates when a query has been returned. The **[!UICONTROL Result]** tab, next to [!UICONTROL Console], displays the query results. See the [Query Editor guide](./user-guide.md) for more information on using the Query Editor.
 
-![A zoomed in view of the Query Editor.](../images/ui/overview/query-editor.png)
+![The Query Editor workspace.](../images/ui/overview/query-editor.png)
 
 ## Scheduled queries {#scheduled-queries}
 
