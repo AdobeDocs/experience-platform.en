@@ -52,11 +52,11 @@ Track audience metrics over time to monitor changes in audience size, identity g
 
 Select a card to open documentation guides and examples to help you make the most of Data Distiller:
 
-- **[!UICONTROL Decile-based derived datasets]**: Learn how to create decile-based derived datasets for segmentation and audience creation in Adobe Experience Platform. Using an airline loyalty scenario, it covers schema design, decile calculations, and query examples for ranking and aggregating data.
-- **[!UICONTROL Customer lifetime value]**: Discover how to track and visualize the customer lifetime value (CLV) metric using Real-Time CDP.
-- **[!UICONTROL Propensity score]**: Use Query Service to send data to an ML platform to train a model for predicting customer propensity scores, enabling targeted marketing.
-- **[!UICONTROL Consent analysis]**: Build a consent dashboard to analyze customer consent for various marketing use cases in Real-Time CDP.
-- **[!UICONTROL Fuzzy match]**: Perform a 'fuzzy' match to identify similar strings across large separate data sources in Adobe Experience Platform.
+- **[[!UICONTROL Decile-based derived datasets]](https://experienceleague.adobe.com/en/docs/experience-platform/query/use-cases/deciles-use-case)**: Learn how to create decile-based derived datasets for segmentation and audience creation in Adobe Experience Platform. Using an airline loyalty scenario, it covers schema design, decile calculations, and query examples for ranking and aggregating data.
+- **[[!UICONTROL Customer lifetime value]](https://experienceleague.adobe.com/en/docs/experience-platform/query/use-cases/customer-lifetime-value)**: Learn how to track and visualize customer lifetime value with Real-Time CDP and custom dashboards. Use these insights to develop strategies for acquiring new customers, retaining existing ones, and maximizing profit margins.
+- **[[!UICONTROL Propensity score]](https://experienceleague.adobe.com/en/docs/experience-platform/query/use-cases/propensity-score)**: Learn how to determine propensity scores using machine-learning predictive models. This guide covers sending data for training, applying trained models with SQL, and predicting customer purchase likelihood.
+- **[[!UICONTROL Consent analysis]](https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/insights-use-cases/consent-analysis)**: Learn how to analyze and track customer consent using Real-Time CDP, Query Service, and Data Distiller. This guide covers building consent dashboards, refining segmentation, tracking trends, and ensuring compliance, helping you build trust and deliver personalized experiences.
+- **[[!UICONTROL Fuzzy match]](https://experienceleague.adobe.com/en/docs/experience-platform/query/use-cases/fuzzy-match)**: Learn how to perform a 'fuzzy' match on your Experience Platform data to find approximate matches and analyze string similarity across datasets. Follow this guide to save time and make your data more accessible. The example highlights how to match hotel room attributes between two travel agency datasets, demonstrating how to manage and compare large, complex data sources effectively.
 
 ![The Query Service workspace with the Data Distiller examples section highlighted.](../images/ui/overview/data-distiller-examples.png)
 
@@ -66,27 +66,29 @@ The key metrics section displays visualizations of important data that helps you
 
 #### Set a date filter {#set-date-filter}
 
-To apply a global date filter for these visualizations, select the **[!UICONTROL Filter]** icon and adjust the date range in the **[!UICONTROL Filters]** dialog. Applying this filter allows you to tailor the displayed metrics to a specific time frame, enhancing the relevance of your analysis.
+To apply a global date filter for these visualizations, select the filter icon (![A filter icon.](../../images/icons/filter-icon-white.png)) and adjust the date range in the **[!UICONTROL Filters]** dialog. Apply this filter to tailor the displayed metrics for a specific time frame and enhance the relevance of your analysis.
 
-![The Filters dialog for the key metrics charts in the Query Service Workspace.]()
+![The Filters dialog for the key metrics charts in the Query Service Workspace.](../images/ui/overview/filters-dialog.png)
 
-#### [!UICONTROL Distiller batch queries]
+#### [!UICONTROL Distiller batch queries] {#distiller-batch-queries}
 
-Displays the number of batch queries processed each day, including CTAS/ITAS Interactive queries and scheduled queries.
+The [!UICONTROL Distiller batch queries] chart provides a breakdown of query activity by day, highlighting the number of processed CTAS and ITAS (interactive and scheduled) queries. The chart highlights patterns, such as spikes in interactive queries on certain days and the infrequent use of scheduled queries. Use these insights to optimize performance by identifying peak activity periods, refining scheduling strategies, and balancing query execution to improve workflow efficiency and resource utilization.
 
-<!-- ![The Audience size trends chart.](../../images/sql-insights-query-pro-mode/templates/audience-size-trends-chart.png) -->
+![The Distiller batch queries chart.](.png)
 
-#### [!UICONTROL Compute hours consumed]
+#### [!UICONTROL Compute hours consumed] {#compute-hours-consumed}
 
-The [!UICONTROL Compute hours consumed] chart tracks the compute hours consumed by your queries, helping you manage resource allocation effectively.
+The [!UICONTROL Compute hours consumed] chart provides a day-by-day visualization of compute hours used to process Query Service operations. Use these compute hour trends to monitor resource consumption, identify high-demand periods, and optimize query execution to ensure efficient resource allocation and performance.
 
-<!-- ![The Audience size trends chart.](../../images/sql-insights-query-pro-mode/templates/audience-size-trends-chart.png) -->
+![The Compute hours consumed chart.](.png)
 
 #### [!UICONTROL Data exploratory queries]
 
-Visualizes the count of data exploration queries processed each day, providing insights into how users are leveraging on-demand data processing.
+The [!UICONTROL Data exploratory queries] chart displays the number of SELECT queries processed on demand each day. This visualization highlights query activity trends, such as spikes in usage on specific days, to help you understand when your data exploration efforts are most active. Use these insights to monitor query usage patterns, balance workloads, and optimize resource allocation for exploratory data analysis. This ensures more efficient use of Query Service and improved planning for high-demand periods.
 
-<!-- ![The Audience size trends chart.](../../images/sql-insights-query-pro-mode/templates/audience-size-trends-chart.png) -->
+<!-- Visualizes the count of data exploration queries processed each day, providing insights into how users are leveraging on-demand data processing. -->
+
+![The Data exploratory queries chart.](.png)
 
 ## Query Editor
 
