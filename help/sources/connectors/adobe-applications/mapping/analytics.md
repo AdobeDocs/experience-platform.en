@@ -49,16 +49,16 @@ Select fields are directly mapped from Adobe Analytics to Experience Data Model 
 | `mobileplacecategory` | `placeContext.POIinteraction.POIDetail.`<br/>`category` | string | Collected from the context data variable a.loc.category. Describes the category of a specific place. |
 | `mobileplaceid` | `placeContext.POIinteraction.POIDetail.`<br/>`POIID` | string | Collected from the context data variable a.loc.id. Identifier for a given point of interest. |
 | `video` | `media.mediaTimed.primaryAssetReference.`<br/>`_id` | string | The name of the video. |
-| `videoad` | `advertising.adAssetReference._id` | string | Identifier of the ad asset. |
+| **CHANGE** `videoad` | `advertising.adAssetReference._id` | string | Identifier of the ad asset. |
 | **CHANGE** `videocontenttype` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`broadcastContentType` | string | The Video Content-Type. This is automatically set to "Video" for all video views. |
 | `videoadpod` | `advertising.adAssetViewDetails.adBreak._id` | string | The pod which the Video Ad is in. |
-| `videoadinpod` | `advertising.adAssetViewDetails.index` | integer  | The position the Video Ad is in the pod. |
+| **CHANGE** `videoadinpod` | `advertising.adAssetViewDetails.index` | integer  | The position the Video Ad is in the pod. |
 | **CHANGE** `videoplayername` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`playerName` | string | The name of the Video player. |
 | **CHANGE** `videochannel` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`broadcastChannel` | string | The Video channel. |
 | **CHANGE** `videoadplayername` | `advertising.adAssetViewDetails.playerName` | string | The name of the Video Ad player. |
-| `videochapter` | `media.mediaTimed.mediaChapter.`<br/>`chapterAssetReference._id` | string | The Video chapter's name |
+| **CHANGE** `videochapter` | `media.mediaTimed.mediaChapter.`<br/>`chapterAssetReference._id` | string | The Video chapter's name |
 | **CHANGE** `videoname` | `media.mediaTimed.primaryAssetReference.`<br/>`_dc.title` | string | The Video name. |
-| `videoadname` | `advertising.adAssetReference._dc.title` | string | The name of the Video Ad. |
+| **CHANGE** `videoadname` | `advertising.adAssetReference._dc.title` | string | The name of the Video Ad. |
 | **CHANGE** `videoshow` | `media.mediaTimed.primaryAssetReference.`<br/>`_iptc4xmpExt.Series._iptc4xmpExt.Name` | string | Video show. |
 | **CHANGE** `videoseason` | `media.mediaTimed.primaryAssetReference.`<br/>`_iptc4xmpExt.Season._iptc4xmpExt.Name` | string | Video Season. |
 | **CHANGE** `videoepisode` | `media.mediaTimed.primaryAssetReference.`<br/>`_iptc4xmpExt.Episode._iptc4xmpExt.Name` | string | Video episode. |
@@ -82,12 +82,12 @@ Select fields are directly mapped from Adobe Analytics to Experience Data Model 
 | **CHANGE** `videostart` | `media.mediaTimed.impressions` | Object | <!-- MISSING --> | {id (string), value (number)} |
 | **CHANGE** `videocomplete` | `media.mediaTimed.completes` | Object | <!-- MISSING --> | {id (string), value (number)} |
 | **CHANGE** `videosegmentviews` | `media.mediaTimed.mediaSegmentViews` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| `videoadstart` | `advertising.impressions` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| `videoadcomplete` | `advertising.completes` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| `videoadtime` | `advertising.timePlayed` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| `videochapterstart` | `media.mediaTimed.mediaChapter.`<br/>`impressions` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| `videochaptercomplete` | `media.mediaTimed.mediaChapter.`<br/>`completes` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| `videochaptertime` | `media.mediaTimed.mediaChapter.`<br/>`timePlayed` | Object | <!-- MISSING --> | {id (string), value (number)} |
+| **CHANGE** `videoadstart` | `advertising.impressions` | Object | <!-- MISSING --> | {id (string), value (number)} |
+| **CHANGE** `videoadcomplete` | `advertising.completes` | Object | <!-- MISSING --> | {id (string), value (number)} |
+| **CHANGE** `videoadtime` | `advertising.timePlayed` | Object | <!-- MISSING --> | {id (string), value (number)} |
+| **CHANGE** `videochapterstart` | `media.mediaTimed.mediaChapter.`<br/>`impressions` | Object | <!-- MISSING --> | {id (string), value (number)} |
+| **CHANGE** `videochaptercomplete` | `media.mediaTimed.mediaChapter.`<br/>`completes` | Object | <!-- MISSING --> | {id (string), value (number)} |
+| **CHANGE** `videochaptertime` | `media.mediaTimed.mediaChapter.`<br/>`timePlayed` | Object | <!-- MISSING --> | {id (string), value (number)} |
 | **CHANGE** `videoplay` | `media.mediaTimed.starts` | Object | <!-- MISSING --> | {id (string), value (number)} |
 | **CHANGE** `videototaltime` | `media.mediaTimed.totalTimePlayed` | Object | <!-- MISSING --> | {id (string), value (number)} |
 | `videoqoetimetostart` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.timeToStart` | Object | The video quality time to start. | {id (string), value (number)} |
@@ -118,7 +118,7 @@ These fields have a single source, but map to **multiple** XDM locations.
 | --------------- | --------- | -------- | ---------- |
 | `s_resolution` | `device.screenWidth`,<br/>`device.screenHeight` | integer  | Numeric ID representing the resolution of the monitor. |
 | `mobileosversion` | `environment.operatingSystem`,<br/>`environment.operatingSystemVersion` | string  | Mobile operating system version. |
-| `videoadlength` | `advertising.adAssetReference._xmpDM.duration` | integer  | Video Ad length. |
+| **CHANGE** `videoadlength` | `advertising.adAssetReference._xmpDM.duration` | integer  | Video Ad length. |
 
 {style="table-layout:auto"}
 
@@ -171,7 +171,7 @@ Select fields coming from ADC must be transformed, requiring logic beyond a dire
 | `mcvisid_low` | `identityMap` | object | The Experience Cloud Visitor ID. |
 | `sdid_high` + `sdid_low` | `_experience.target.supplementalDataID` | string | Hit Stitching ID. The analytics field sdid_high and sdid_low is the supplemental data id used to stitch two (or more) incoming hits together. |
 | `mobilebeaconproximity` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.proximity` | string | Mobile Services beacon proximity. |
-| `videochapter` | `media.mediaTimed.mediaChapter.`<br/>`chapterAssetReference._xmpDM.duration` | integer | The name of the video chapter. |
+| **CHANGE** `videochapter` | `media.mediaTimed.mediaChapter.`<br/>`chapterAssetReference._xmpDM.duration` | integer | The name of the video chapter. |
 | **CHANGE** `videolength` | `media.mediaTimed.primaryAssetReference.`<br/>`_xmpDM.duration` | integer | The length of the video. |
 
 {style="table-layout:auto"}
