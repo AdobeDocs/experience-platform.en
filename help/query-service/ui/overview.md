@@ -11,9 +11,9 @@ The Adobe Experience Platform Query Service provides a user interface that can b
 
 ![The Query Service workspace with Queries and the Overview tab highlighted.]()
 
-## Overview
+## Overview {#overview}
 
-The [!UICONTROL Overview] tab provides a streamlined entry point for working with queries and Data Distiller templates. Here you can access all the features needed to write queries, explore datasets, and analyze audience data, to ensure a smooth workflow for your data analytics and audience insights. use this overview to learn what you can achieve with Data Distiller and discover key metrics about your Query Service usage.
+The [!UICONTROL Overview] tab provides a streamlined entry point for working with queries and Data Distiller templates. Here you can access all the features needed to write queries, explore datasets, and analyze audience data, to ensure a smooth workflow for your data analytics and audience insights. Use this overview to learn what you can achieve with Data Distiller and discover key metrics about your Query Service usage.
 
 ### Main panels {#main-panels}
 
@@ -31,7 +31,7 @@ The [!UICONTROL Data Distiller capabilities] section provides documentation link
 
 - **[[!UICONTROL Data exploration]](../use-cases/data-exploration.md)**: Learn how to explore, troubleshoot and verify batch ingested data using SQL.
 - **[[!UICONTROL Derived datasets for Experience Platform applications]](../data-distiller/derived-datasets/overview.md)**: Learn how to create derived datasets to support complex and diverse use cases that maximize your data utility.
-- **[[!UICONTROL AI/ML pipelines]](../data-distiller/ml-feature-pipelines/overview.md)**: Learn about important concepts behind your preferred machine learning tools to and how to build custom models that support your marketing use cases. This series of guides describes the necessary steps to build feature pipelines that prepare data from Experience Platform to feed custom models in your machine learning environment.
+- **[[!UICONTROL AI/ML pipelines]](../data-distiller/ml-feature-pipelines/overview.md)**: Learn about important concepts behind your preferred machine learning tools and how to build custom models that support your marketing use cases. This series of guides describes the necessary steps to build feature pipelines that prepare data from Experience Platform to feed custom models in your machine learning environment.
 - **[[!UICONTROL SQL insights]](../data-distiller/sql-insights/overview.md)**: Learn about the key capabilities and required steps to develop an insights dashboard from SQL with Data Distiller.
 
 ![The Query Service workspace with the Data Distiller capabilities section highlighted.](../images/ui/overview/data-distiller-capabilities.png)
@@ -53,10 +53,10 @@ Track audience metrics over time to monitor changes in audience size, identity g
 Select a card to open documentation guides and examples to help you make the most of Data Distiller:
 
 - **[[!UICONTROL Decile-based derived datasets]](../use-cases/deciles-use-case.md)**: Learn how to create decile-based derived datasets for segmentation and audience creation in Adobe Experience Platform. Using an airline loyalty scenario, it covers schema design, decile calculations, and query examples for ranking and aggregating data.
-- **[[!UICONTROL Customer lifetime value]](../use-cases/customer-lifetime-value.md)**: Learn how to track and visualize customer lifetime value with Real-Time CDP and custom dashboards. Use these insights to develop strategies for acquiring new customers, retaining existing ones, and maximizing profit margins.
+- **[[!UICONTROL Customer lifetime value]](../use-cases/customer-lifetime-value.md)**: Learn how to track and visualize customer lifetime value with Real-Time CDP and custom dashboards. Use these insights to develop strategies for acquiring new customers, retain existing ones, and maximize profit margins.
 - **[[!UICONTROL Propensity score]](../use-cases/propensity-score.md)**: Learn how to determine propensity scores using machine-learning predictive models. This guide covers sending data for training, applying trained models with SQL, and predicting customer purchase likelihood.
 - **[[!UICONTROL Consent analysis]](../../dashboards/insights-use-cases/consent-analysis.md)**: Learn how to analyze and track customer consent using Real-Time CDP, Query Service, and Data Distiller. This guide covers building consent dashboards, refining segmentation, tracking trends, and ensuring compliance, helping you build trust and deliver personalized experiences.
-- **[[!UICONTROL Fuzzy match]](../use-cases/fuzzy-match.md)**: Learn how to perform a 'fuzzy' match on your Experience Platform data to find approximate matches and analyze string similarity across datasets. Follow this guide to save time and make your data more accessible. The example highlights how to match hotel room attributes between two travel agency datasets, demonstrating how to manage and compare large, complex data sources effectively.
+- **[[!UICONTROL Fuzzy match]](../use-cases/fuzzy-match.md)**: Learn how to perform a 'fuzzy' match on your Experience Platform data to find approximate matches and analyze string similarity across datasets. Follow this guide to save time and make your data more accessible. The example demonstrates how to match hotel room attributes between two travel agency datasets, showing how to efficiently match, compare, and reconcile large, complex datasets for consistency and accuracy.
 
 ![The Query Service workspace with the Data Distiller examples section highlighted.](../images/ui/overview/data-distiller-examples.png)
 
@@ -90,11 +90,11 @@ The [!UICONTROL Data exploratory queries] chart displays the number of SELECT qu
 
 ## Query Editor
 
-The Query Editor enables you to write and execute queries without using an external client. Select **[!UICONTROL Create Query]** to open the Query Editor and create a new query. You can also access the Query Editor by selecting a query from the **[!UICONTROL Log]** or **[!UICONTROL Templates]** tabs. Selecting a previously executed or saved query will open the Query Editor and display the SQL for the selected query.
+The Query Editor enables you to write and execute queries without using an external client. Select **[!UICONTROL Create Query]** to open the Query Editor and create a new query. You can also access the Query Editor by selecting a query from the **[!UICONTROL Log]** or **[!UICONTROL Templates]** tabs. Selecting a previously executed or saved query opens the Query Editor and displays the SQL for the selected query.
 
 ![The Queries dashboard with Create Query highlighted.](../images/ui/overview/overview-create-query.png)
 
-Query Editor provides editing space where you can begin typing a query. As you type, the editor automatically completes SQL reserved words, tables, and field names within tables. When finished writing your query, select the **Play** button to run the query. The **[!UICONTROL Console]** tab below the editor shows what Query Service is currently doing, indicating when a query has been returned. The **[!UICONTROL Result]** tab, next to the Console, displays query results. See the [Query Editor guide](./user-guide.md) for more information on using the Query Editor.
+Query Editor provides an editing space where you can begin typing a query. As you type, the editor automatically completes SQL reserved words, tables, and field names within tables. When finished writing your query, select the **Play** button to run the query. The **[!UICONTROL Console]** tab below the editor shows what Query Service is currently doing, indicating when a query has been returned. The **[!UICONTROL Result]** tab, next to the Console, displays query results. See the [Query Editor guide](./user-guide.md) for more information on using the Query Editor.
 
 ![A zoomed in view of the Query Editor.](../images/ui/overview/query-editor.png)
 
@@ -104,7 +104,7 @@ Queries that have already been saved as a template can be scheduled to run on a 
 
 To learn how to schedule a query through the UI, see the [scheduled queries guide](./user-guide.md#scheduled-queries). To learn how to add schedules using the API, please read the [scheduled queries endpoint guide](../api/scheduled-queries.md).
 
-Once a query has been scheduled it appears in the list of scheduled queries on the [!UICONTROL Scheduled Queries] tab. Full details regarding the query, runs, creator, and timings can be found by selecting a scheduled query from the list.
+Once a query has been scheduled, it appears in the list of scheduled queries on the [!UICONTROL Scheduled Queries] tab. Full details regarding the query, runs, creator, and timings can be found by selecting a scheduled query from the list.
 
 ![The Queries workspace with the Scheduled Queries tab highlighted and displaying rows of query schedules.](../images/ui/overview/scheduled-queries.png)
 
@@ -112,10 +112,10 @@ Once a query has been scheduled it appears in the list of scheduled queries on t
 
 | Column | Description |
 | --- | --- |
-| **[!UICONTROL Name]** | The name field is either the template name or the first few characters of your SQL query. Any query created through the UI with the Query Editor is named at inception. If the query was created through the API then the name of the query is a snippet of the initial SQL used to create the query. |
+| **[!UICONTROL Name]** | The name field is either the template name or the first few characters of your SQL query. Any query created through the UI with the Query Editor is named at inception. If the query was created through the API, then the name of the query is a snippet of the initial SQL used to create the query. |
 | **[!UICONTROL Template]** | The template name of the query. Select a template name to navigate to the Query Editor. The query template is displayed in the Query Editor for convenience. If there is no template name, the row is marked with a hyphen and there is no ability to redirect to the Query Editor to view the query.   |
 | **[!UICONTROL SQL]** | A snippet of the SQL query.  |
-| **[!UICONTROL Run frequency]** |  This is the cadence at which your query is set to run. The available values are `Run once` and `Scheduled`. Queries can be filtered according to their run frequency. |
+| **[!UICONTROL Run frequency]** |  This column indicates the cadence at which your query is set to run. The available values are `Run once` and `Scheduled`. Queries can be filtered according to their run frequency. |
 | **[!UICONTROL Created by]** | The name of the user who created the query.  |
 | **[!UICONTROL Created]** |  The timestamp when the query was created, in UTC format.  |
 | **[!UICONTROL Last run timestamp]** | The most recent timestamp when the query was run. This column highlights whether a query has been executed according to its current schedule. |
@@ -168,4 +168,4 @@ The **[!UICONTROL Credentials]** tab displays both your expiring and non-expirin
 
 ## Next steps
 
-Now that you are familiar with Query Service user interface on [!DNL Platform], you can access Query Editor to start creating your own query projects to share with other users in your organization. For more information on authoring and running queries in Query Editor, see the [Query Editor user guide](./user-guide.md).
+Now that you are familiar with the Query Service user interface on [!DNL Platform], you can access Query Editor to start creating your own query projects to share with other users in your organization. For more information on authoring and running queries in Query Editor, see the [Query Editor user guide](./user-guide.md).
