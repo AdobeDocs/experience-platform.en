@@ -28,7 +28,7 @@ In a basic sense, an audit log tells **who** performed **what** action, and **wh
 
 >[!NOTE]
 >
-> The metadata for the actions **add user** and **remove user** within the Role resource will not contain the email ID of the user who performed the action. Instead, the email ID will be the generic email ID of system@adobe.com.
+> The metadata for the actions **Add user** and **Remove user** within the **Role** resource will not contain the email ID of the user who performed the action. Instead, the logs will display the system generated email ID (system@adobe.com).
 
 This document covers audit logs in Platform, including how to view and manage them in UI or API.
 
