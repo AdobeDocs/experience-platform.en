@@ -40,23 +40,25 @@ The [!UICONTROL Data Distiller capabilities] section provides documentation link
 
 Select a quick link to navigate to the relevant Data Distiller dashboards [!UICONTROL Templates]. Each accelerator provides powerful tools and visualizations to help you analyze audience data, optimize segmentation, and enhance targeting strategies.
 
-<!-- You can use thkkese accelerator  provide quick links to the Data Distiller dashboards available in the [!UICONTROL Templates] section: -->
-
 - **[[!UICONTROL Advanced audience overlaps]](https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/sql-insights-query-pro-mode/templates/overlaps)**: From this dashboard you can analyze audience intersections between multiple audience segments to uncover valuable insights and optimize segmentation strategies. You can also export your insights for further offline analysis or reporting purposes.
 - **[[!UICONTROL Audience comparison]](https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/sql-insights-query-pro-mode/templates/comparison)**: From this dashboard, you can compare and contrast key audience metrics side-by-side to analyze two audience groups in detail. These insights help you understand audience size, growth, and other key performance indicators, enabling you to refine segmentation and optimize targeting strategies with data-driven decisions.
 - **[[!UICONTROL Audience trends]](https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/sql-insights-query-pro-mode/templates/trends)**: Use the [!UICONTROL Audience trends] dashboard to visualize how your audiences evolve over time through key metrics like audience growth, identity counts, and single identity profiles. Track trends to uncover valuable insights into audience behavior, empowering you to refine segmentation, enhance engagement, and optimize targeting strategies for more effective campaigns.
 Track audience metrics over time to monitor changes in audience size, identity growth, and overall engagement.
 - **[[!UICONTROL Audience identity overlaps]](https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/sql-insights-query-pro-mode/templates/identity-overlaps)**: Use the Audience Identity Overlaps dashboard to analyze identity overlaps within selected audiences. Visualizations and tabulated data provide insights to optimize identity stitching, reduce redundancy, and improve segmentation. These insights enable more effective targeting, enhanced personalization, and streamlined customer interactions.
 
+![The Query Service workspace with the Data Distiller accelerators section highlighted.](../images/ui/overview/data-distiller-accelerators.png)
+
 ### Data Distiller examples {#data-distiller-examples}
 
-These links lead to practical guides and examples to help you make the most of Data Distiller:
+Select a card to open documentation guides and examples to help you make the most of Data Distiller:
 
-- **[!UICONTROL Decile-based derived datasets]**: Learn how to create decile-based derived datasets for your Real-Time Customer Profile data.
+- **[!UICONTROL Decile-based derived datasets]**: Learn how to create decile-based derived datasets for segmentation and audience creation in Adobe Experience Platform. Using an airline loyalty scenario, it covers schema design, decile calculations, and query examples for ranking and aggregating data.
 - **[!UICONTROL Customer lifetime value]**: Discover how to track and visualize the customer lifetime value (CLV) metric using Real-Time CDP.
 - **[!UICONTROL Propensity score]**: Use Query Service to send data to an ML platform to train a model for predicting customer propensity scores, enabling targeted marketing.
 - **[!UICONTROL Consent analysis]**: Build a consent dashboard to analyze customer consent for various marketing use cases in Real-Time CDP.
 - **[!UICONTROL Fuzzy match]**: Perform a 'fuzzy' match to identify similar strings across large separate data sources in Adobe Experience Platform.
+
+![The Query Service workspace with the Data Distiller examples section highlighted.](../images/ui/overview/data-distiller-examples.png)
 
 ### Key metrics {#key-metrics}
 
