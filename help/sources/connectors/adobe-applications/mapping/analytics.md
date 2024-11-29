@@ -1,6 +1,4 @@
 ---
-keywords: Analytics mapping fields;analytics mapping
-solution: Experience Platform
 title: Mapping Fields for the Adobe Analytics Source Connector
 description: Map Adobe Analytics fields to XDM fields using the Analytics Source Connector.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
@@ -9,7 +7,7 @@ exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
 
 Adobe Experience Platform allows you to ingest Adobe Analytics data through the Analytics source. Some of the data ingested through ADC can be mapped directly from Analytics fields to Experience Data Model (XDM) fields, while other data requires transformations and specific functions to be successfully mapped.
 
-![](../images/analytics-data-experience-platform.png)
+![An illustration of the Adobe Analytics data journey from Analytics to Experience Platform.](../images/analytics-data-experience-platform.png)
 
 ## Direct mapping fields
 
@@ -52,27 +50,27 @@ Select fields are directly mapped from Adobe Analytics to Experience Data Model 
 | `mobileplaceid` | `placeContext.POIinteraction.POIDetail.`<br/>`POIID` | string | Collected from the context data variable a.loc.id. Identifier for a given point of interest. |
 | `video` | `media.mediaTimed.primaryAssetReference.`<br/>`_id` | string | The name of the video. |
 | `videoad` | `advertising.adAssetReference._id` | string | Identifier of the ad asset. |
-| `videocontenttype` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`broadcastContentType` | string | The Video Content-Type. This is automatically set to "Video" for all video views. |
+| **CHANGE** `videocontenttype` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`broadcastContentType` | string | The Video Content-Type. This is automatically set to "Video" for all video views. |
 | `videoadpod` | `advertising.adAssetViewDetails.adBreak._id` | string | The pod which the Video Ad is in. |
 | `videoadinpod` | `advertising.adAssetViewDetails.index` | integer  | The position the Video Ad is in the pod. |
-| `videoplayername` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`playerName` | string | The name of the Video player. |
-| `videochannel` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`broadcastChannel` | string | The Video channel. |
-| `videoadplayername` | `advertising.adAssetViewDetails.playerName` | string | The name of the Video Ad player. |
+| **CHANGE** `videoplayername` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`playerName` | string | The name of the Video player. |
+| **CHANGE** `videochannel` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`broadcastChannel` | string | The Video channel. |
+| **CHANGE** `videoadplayername` | `advertising.adAssetViewDetails.playerName` | string | The name of the Video Ad player. |
 | `videochapter` | `media.mediaTimed.mediaChapter.`<br/>`chapterAssetReference._id` | string | The Video chapter's name |
-| `videoname` | `media.mediaTimed.primaryAssetReference.`<br/>`_dc.title` | string | The Video name. |
+| **CHANGE** `videoname` | `media.mediaTimed.primaryAssetReference.`<br/>`_dc.title` | string | The Video name. |
 | `videoadname` | `advertising.adAssetReference._dc.title` | string | The name of the Video Ad. |
-| `videoshow` | `media.mediaTimed.primaryAssetReference.`<br/>`_iptc4xmpExt.Series._iptc4xmpExt.Name` | string | Video show. |
-| `videoseason` | `media.mediaTimed.primaryAssetReference.`<br/>`_iptc4xmpExt.Season._iptc4xmpExt.Name` | string | Video Season. |
-| `videoepisode` | `media.mediaTimed.primaryAssetReference.`<br/>`_iptc4xmpExt.Episode._iptc4xmpExt.Name` | string | Video episode. |
-| `videonetwork` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`broadcastNetwork` | string | Video network. |
+| **CHANGE** `videoshow` | `media.mediaTimed.primaryAssetReference.`<br/>`_iptc4xmpExt.Series._iptc4xmpExt.Name` | string | Video show. |
+| **CHANGE** `videoseason` | `media.mediaTimed.primaryAssetReference.`<br/>`_iptc4xmpExt.Season._iptc4xmpExt.Name` | string | Video Season. |
+| **CHANGE** `videoepisode` | `media.mediaTimed.primaryAssetReference.`<br/>`_iptc4xmpExt.Episode._iptc4xmpExt.Name` | string | Video episode. |
+| **CHANGE** `videonetwork` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`broadcastNetwork` | string | Video network. |
 | `videoshowtype` | `media.mediaTimed.primaryAssetReference.`<br/>`showType` | string | Video show type. |
 | `videoadload` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`adLoadType` | string | Video ad loads. |
-| `videofeedtype` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`sourceFeed` | string | Video feed type. |
+| **CHANGE** `videofeedtype` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`sourceFeed` | string | Video feed type. |
 | `mobilebeaconmajor` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.beaconMajor` | number | Mobile Services beacon major. |
 | `mobilebeaconminor` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.beaconMinor` | number | Mobile Services beacon minor. |
 | `mobilebeaconuuid` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.proximityUUID` | string | Mobile Services beacon UUID. |
-| `videosessionid` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`_id` | string | Video session ID. |
-| `videogenre` | `media.mediaTimed.primaryAssetReference.`<br/>`_iptc4xmpExt.Genre` | array | Video genre. | {title (Object), description (Object), type (Object), meta:xdmType (Object), items (string), meta:xdmField (Object)} |
+| **CHANGE** `videosessionid` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`_id` | string | Video session ID. |
+| **CHANGE** `videogenre` | `media.mediaTimed.primaryAssetReference.`<br/>`_iptc4xmpExt.Genre` | array | Video genre. | {title (Object), description (Object), type (Object), meta:xdmType (Object), items (string), meta:xdmField (Object)} |
 | `mobileinstalls` | `application.firstLaunches` | Object  | This is triggered at the first run after installation or reinstallation | {id (string), value (number)} |
 | `mobileupgrades` | `application.upgrades` | Object | Reports the number of app upgrades. Triggers at the first run after upgrade or any time the version number changes. | {id (string), value (number)} |
 | `mobilelaunches` | `application.launches` | Object | The number of times the app has been launched. | {id (string), value (number)} |
@@ -80,18 +78,18 @@ Select fields are directly mapped from Adobe Analytics to Experience Data Model 
 | `mobilemessageclicks` | `directMarketing.clicks` | Object | <!-- MISSING --> | {id (string), value (number)} |
 | `mobileplaceentry` | `placeContext.POIinteraction.poiEntries` | Object | <!-- MISSING --> | {id (string), value (number)} |
 | `mobileplaceexit` | `placeContext.POIinteraction.poiExits` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| `videotime` | `media.mediaTimed.timePlayed` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| `videostart` | `media.mediaTimed.impressions` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| `videocomplete` | `media.mediaTimed.completes` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| `videosegmentviews` | `media.mediaTimed.mediaSegmentViews` | Object | <!-- MISSING --> | {id (string), value (number)} |
+| **CHANGE** `videotime` | `media.mediaTimed.timePlayed` | Object | <!-- MISSING --> | {id (string), value (number)} |
+| **CHANGE** `videostart` | `media.mediaTimed.impressions` | Object | <!-- MISSING --> | {id (string), value (number)} |
+| **CHANGE** `videocomplete` | `media.mediaTimed.completes` | Object | <!-- MISSING --> | {id (string), value (number)} |
+| **CHANGE** `videosegmentviews` | `media.mediaTimed.mediaSegmentViews` | Object | <!-- MISSING --> | {id (string), value (number)} |
 | `videoadstart` | `advertising.impressions` | Object | <!-- MISSING --> | {id (string), value (number)} |
 | `videoadcomplete` | `advertising.completes` | Object | <!-- MISSING --> | {id (string), value (number)} |
 | `videoadtime` | `advertising.timePlayed` | Object | <!-- MISSING --> | {id (string), value (number)} |
 | `videochapterstart` | `media.mediaTimed.mediaChapter.`<br/>`impressions` | Object | <!-- MISSING --> | {id (string), value (number)} |
 | `videochaptercomplete` | `media.mediaTimed.mediaChapter.`<br/>`completes` | Object | <!-- MISSING --> | {id (string), value (number)} |
 | `videochaptertime` | `media.mediaTimed.mediaChapter.`<br/>`timePlayed` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| `videoplay` | `media.mediaTimed.starts` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| `videototaltime` | `media.mediaTimed.totalTimePlayed` | Object | <!-- MISSING --> | {id (string), value (number)} |
+| **CHANGE** `videoplay` | `media.mediaTimed.starts` | Object | <!-- MISSING --> | {id (string), value (number)} |
+| **CHANGE** `videototaltime` | `media.mediaTimed.totalTimePlayed` | Object | <!-- MISSING --> | {id (string), value (number)} |
 | `videoqoetimetostart` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.timeToStart` | Object | The video quality time to start. | {id (string), value (number)} |
 | `videoqoedropbeforestart` | `media.mediaTimed.dropBeforeStarts` | Object | <!-- MISSING --> | {id (string), value (number)} |
 | `videoqoebuffercount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.buffers` | Object | Video quality buffer count | {id (string), value (number)} |
@@ -100,15 +98,15 @@ Select fields are directly mapped from Adobe Analytics to Experience Data Model 
 | `videoqoebitrateaverage` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateAverage` | Object | Video quality average bit rate | {id (string), value (number)} |
 | `videoqoeerrorcount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.errors` | Object | Video quality error count | {id (string), value (number)} |
 | `videoqoedroppedframecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.droppedFrames` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| `videoprogress10` | `media.mediaTimed.progress10` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| `videoprogress25` | `media.mediaTimed.progress25` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| `videoprogress50` | `media.mediaTimed.progress50` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| `videoprogress75` | `media.mediaTimed.progress75` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| `videoprogress95` | `media.mediaTimed.progress95` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| `videoresume` | `media.mediaTimed.resumes` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| `videopausecount` | `media.mediaTimed.pauses` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| `videopausetime` | `media.mediaTimed.pauseTime` | Object | <!-- MISSING -->| {id (string), value (number)} |
-| `videosecondssincelastcall` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`sessionTimeout` | integer  |
+| **CHANGE** `videoprogress10` | `media.mediaTimed.progress10` | Object | <!-- MISSING --> | {id (string), value (number)} |
+| **CHANGE** `videoprogress25` | `media.mediaTimed.progress25` | Object | <!-- MISSING --> | {id (string), value (number)} |
+| **CHANGE** `videoprogress50` | `media.mediaTimed.progress50` | Object | <!-- MISSING --> | {id (string), value (number)} |
+| **CHANGE** `videoprogress75` | `media.mediaTimed.progress75` | Object | <!-- MISSING --> | {id (string), value (number)} |
+| **CHANGE** `videoprogress95` | `media.mediaTimed.progress95` | Object | <!-- MISSING --> | {id (string), value (number)} |
+| **CHANGE** `videoresume` | `media.mediaTimed.resumes` | Object | <!-- MISSING --> | {id (string), value (number)} |
+| **CHANGE** `videopausecount` | `media.mediaTimed.pauses` | Object | <!-- MISSING --> | {id (string), value (number)} |
+| **CHANGE** `videopausetime` | `media.mediaTimed.pauseTime` | Object | <!-- MISSING -->| {id (string), value (number)} |
+| **CHANGE** `videosecondssincelastcall` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`sessionTimeout` | integer  |
 
 {style="table-layout:auto"}
 
@@ -174,7 +172,7 @@ Select fields coming from ADC must be transformed, requiring logic beyond a dire
 | `sdid_high` + `sdid_low` | `_experience.target.supplementalDataID` | string | Hit Stitching ID. The analytics field sdid_high and sdid_low is the supplemental data id used to stitch two (or more) incoming hits together. |
 | `mobilebeaconproximity` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.proximity` | string | Mobile Services beacon proximity. |
 | `videochapter` | `media.mediaTimed.mediaChapter.`<br/>`chapterAssetReference._xmpDM.duration` | integer | The name of the video chapter. |
-| `videolength` | `media.mediaTimed.primaryAssetReference.`<br/>`_xmpDM.duration` | integer | The length of the video. |
+| **CHANGE** `videolength` | `media.mediaTimed.primaryAssetReference.`<br/>`_xmpDM.duration` | integer | The length of the video. |
 
 {style="table-layout:auto"}
 
