@@ -74,21 +74,19 @@ To apply a global date filter for these visualizations, select the filter icon (
 
 The [!UICONTROL Distiller batch queries] chart provides a breakdown of query activity by day, highlighting the number of processed CTAS and ITAS (interactive and scheduled) queries. The chart highlights patterns, such as spikes in interactive queries on certain days and the infrequent use of scheduled queries. Use these insights to optimize performance by identifying peak activity periods, refining scheduling strategies, and balancing query execution to improve workflow efficiency and resource utilization.
 
-![The Distiller batch queries chart.](.png)
+![The Distiller batch queries chart.](../images/ui/overview/distiller-batch-queries.png)
 
 #### [!UICONTROL Compute hours consumed] {#compute-hours-consumed}
 
 The [!UICONTROL Compute hours consumed] chart provides a day-by-day visualization of compute hours used to process Query Service operations. Use these compute hour trends to monitor resource consumption, identify high-demand periods, and optimize query execution to ensure efficient resource allocation and performance.
 
-![The Compute hours consumed chart.](.png)
+![The Compute hours consumed chart.](../images/ui/overview/compute-hours-consumed.png)
 
 #### [!UICONTROL Data exploratory queries]
 
-The [!UICONTROL Data exploratory queries] chart displays the number of SELECT queries processed on demand each day. This visualization highlights query activity trends, such as spikes in usage on specific days, to help you understand when your data exploration efforts are most active. Use these insights to monitor query usage patterns, balance workloads, and optimize resource allocation for exploratory data analysis. This ensures more efficient use of Query Service and improved planning for high-demand periods.
+The [!UICONTROL Data exploratory queries] chart displays the number of SELECT queries processed on demand each day. This visualization highlights query activity trends, such as spikes in usage on specific days, to help you understand when your data exploration efforts are most active. Use these insights to monitor query usage patterns, balance workloads, and optimize resource allocation for exploratory data analysis. This analysis ensures more efficient use of Query Service and improved planning for high-demand periods.
 
-<!-- Visualizes the count of data exploration queries processed each day, providing insights into how users are leveraging on-demand data processing. -->
-
-![The Data exploratory queries chart.](.png)
+![The Data exploratory queries chart.](../images/ui/overview/data-exploratory-queries.png)
 
 ## Query Editor
 
