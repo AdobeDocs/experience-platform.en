@@ -3,7 +3,7 @@ title: Build Audiences using SQL
 description: Learn how to use the SQL audience extension in Adobe Experience Platform's Data Distiller to create, manage, and publish audiences using SQL commands. This guide covers all aspects of the audience lifecycle, including creation, updating and deleting profiles, and using data-driven audience definitions to target file-based destinations.
 exl-id: c35757c1-898e-4d65-aeca-4f7113173473
 ---
-# Build Audiences using SQL
+# Build audiences using SQL
 
 This document covers how to use the SQL audience extension in Adobe Experience Platform's Data Distiller to create, manage, and publish audiences using SQL commands.
 
@@ -21,7 +21,7 @@ Use the `CREATE AUDIENCE AS SELECT` command to define a new audience. The create
 
 ```sql
 CREATE AUDIENCE table_name  
-WITH (primary_identity='IdentitycolName', identity_namespace='Namespace for the identity used', [schema='target_schema_title']) 
+WITH (primary_identity='IdentitycolName', identity_namespace='Namespace for the identity used', [schema='target_schema_title'])
 AS (select_query)
 ```
 
@@ -44,10 +44,12 @@ Use these parameters to define your SQL audience creation query:
 The following example demonstrates how to structure your SQL audience creation query:
 
 ```sql
-CREATE Audience aud_test 
-WITH (primary_identity=month, identity_namespace=queryService) 
-AS SELECT month FROM profile_dim_date LIMIT 5;
+CREATE Audience aud_test
+WITH (primary_identity=userId, identity_namespace=lumaCrmId)
+AS SELECT userId, orders, total_revenue, recency, frequency, monetization FROM profile_dim_customer;
 ```
+
+This example showcases the creation of an audience using key metrics such as `userId`, `orders`, `total_revenue`, `recency`, `frequency`, and `monetization`.
 
 **Limitations:**
 
@@ -62,7 +64,7 @@ Be aware of the following limitations when using SQL for audience creation:
 Use the `INSERT INTO` command to add profiles to an existing audience.
 
 ```sql
-INSERT INTO table_name 
+INSERT INTO table_name
 SELECT select_query
 ```
 
@@ -82,11 +84,90 @@ The table below explains the parameters required for the `INSERT INTO` command:
 The following example demonstrates how to add profiles to an existing audience with the `INSERT INTO` command:
 
 ```sql
-INSERT INTO Audience aud_test 
-SELECT month FROM profile_dim_date LIMIT 10;
+INSERT INTO Audience aud_test
+SELECT userId, orders, total_revenue, recency, frequency, monetization FROM profile_dim_customer;
 ```
 
-### Delete an audience (DROP AUDIENCE) {#delete-audience} 
+### RFM model audience example {#rfm-model-audience-example}
+
+The following example demonstrates how to create an audience using the Recency, Frequency, and Monetization (RFM) model. This example segments customers based on their recency, frequency, and monetization scores to identify key groups such as loyal customers, new customers, and high-value customers.
+
+**Create an RFM Audience:**
+
+```sql
+CREATE Audience adls_rfm_profile
+WITH (primary_identity=userId, identity_namespace=lumaCrmId) AS
+SELECT
+    cast(NULL AS string) userId,
+    cast(NULL AS integer) days_since_last_purchase,
+    cast(NULL AS integer) orders,
+    cast(NULL AS decimal(18,2)) total_revenue,
+    cast(NULL AS integer) recency,
+    cast(NULL AS integer) frequency,
+    cast(NULL AS integer) monetization,
+    cast(NULL AS string) rfm_model
+WHERE false;
+```
+
+This query creates a schema for the RFM audience, setting up fields to hold customer information such as `userId`, `days_since_last_purchase`, `orders`, `total_revenue`, `recency`, `frequency`, `monetization`, and an `rfm_model`.
+
+**Populate RFM Audience with Data:**
+
+After creating the audience, you can populate it with customer data and segment them based on their RFM scores.
+
+```sql
+INSERT INTO Audience adls_rfm_profile
+SELECT
+    userId,
+    days_since_last_purchase,
+    orders,
+    total_revenue,
+    recency,
+    frequency,
+    monetization,
+    CASE
+        WHEN Recency=1 AND Frequency=1 AND Monetization=1 THEN '1. Core - Your Best Customers'
+        WHEN Recency IN(1,2,3,4) AND Frequency=1 AND Monetization IN (1,2,3,4) THEN '2. Loyal - Your Most Loyal Customers'
+        WHEN Recency IN(1,2,3,4) AND Frequency IN (1,2,3,4) AND Monetization=1 THEN '3. Whales - Your Highest Paying Customers'
+        WHEN Recency IN(1,2,3,4) AND Frequency IN(1,2,3) AND Monetization IN(2,3,4) THEN '4. Promising - Faithful Customers'
+        WHEN Recency=1 AND Frequency=4 AND Monetization IN (1,2,3,4) THEN '5. Rookies - Your Newest Customers'
+        WHEN Recency IN (2,3,4) AND Frequency=4 AND Monetization IN (1,2,3,4) THEN '6. Slipping - Once Loyal, Now Gone'
+    END AS rfm_model
+FROM (
+    SELECT
+        userId,
+        days_since_last_purchase,
+        orders,
+        total_revenue,
+        NTILE(4) OVER (ORDER BY days_since_last_purchase) AS recency,
+        NTILE(4) OVER (ORDER BY orders DESC) AS frequency,
+        NTILE(4) OVER (ORDER BY total_revenue DESC) AS monetization
+    FROM (
+        SELECT
+            userid,
+            DATEDIFF(current_date, MAX(purchase_date)) AS days_since_last_purchase,
+            COUNT(purchaseid) AS orders,
+            CAST(SUM(total_revenue) AS double) AS total_revenue
+        FROM (
+            SELECT DISTINCT
+                ENDUSERIDS._EXPERIENCE.EMAILID.ID AS userid,
+                commerce.`ORDER`.purchaseid AS purchaseid,
+                commerce.`ORDER`.pricetotal AS total_revenue,
+                TO_DATE(timestamp) AS purchase_date
+            FROM sample_data_for_ootb_templates
+            WHERE commerce.`ORDER`.purchaseid IS NOT NULL
+        ) AS b
+        GROUP BY userId
+    )
+);
+```
+
+This example involves:
+
+- Calculating recency, frequency, and monetization using NTILE ranking functions to divide customers into quartiles.
+- Segmenting customers into various categories like Core, Loyal, Whales, Promising, Rookies, and Slipping based on their RFM scores.
+
+### Delete an audience (DROP AUDIENCE) {#delete-audience}
 
 Use the `DROP AUDIENCE` command to delete an existing audience. If the audience does not exist, an exception occurs unless `IF EXISTS` is specified.
 
