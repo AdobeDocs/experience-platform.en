@@ -5,15 +5,23 @@ exl-id: c35757c1-898e-4d65-aeca-4f7113173473
 ---
 # Build audiences using SQL
 
-This document covers how to use the SQL audience extension in Adobe Experience Platform's Data Distiller to create, manage, and publish audiences using SQL commands.
+Use the SQL audience extension to build audiences with data from the data lake, including any existing dimension entities (such as customer attributes or product information).
 
-Use the SQL audience extension to build audiences with data from the data lake, including any existing dimension entities. Dimension entities are categorical data structures, such as customer attributes or product information, that provide context for other data within the data lake. With this extension you can use SQL to define audience segments directly, improving your ability to create audiences as you don't need raw data in your profiles. Audiences created using this method are automatically registered in the Audience workspace, where you can further target them to file-based destinations.
+>[!TIP]
+>
+>Dimension entities are categorical data structures that provide context for other data within the data lake.
+
+Using this SQL extension improves your ability to create audiences as you don't need raw data in your profiles when defining audience segments. Audiences created using this method are automatically registered in the Audience workspace, where you can further target them to file-based destinations.
 
 ![Infographic showing the SQL audience extension workflow. The stages include; building audiences with the Query Service using SQL commands, managing them in the Platform UI, to activating them in file-based destinations.](../images/data-distiller/sql-audiences/sql-audience-extension-workflow.png)
 
+This document covers how to use the SQL audience extension in Adobe Experience Platform's Data Distiller to create, manage, and publish audiences using SQL commands.
+
 ## Audience creation lifecycle in Data Distiller {#audience-creation-lifecycle}
 
-Follow these steps to effectively manage your audiences. Created audiences integrate seamlessly into the audience flow, allowing you to build segments from these base audiences and target file-based destinations for customer targeting. 'Audience flow' refers to the complete process of creating, managing, and activating audiences within the platform, enabling seamless targeting and integration across destinations. Use the following SQL commands to [create](#create-audience), [modify](#add-profiles-to-audience), and [delete](#delete-audience) audiences within Adobe Experience Platform.
+Follow these steps to create, manage, and activate your audiences. Created audiences integrate seamlessly into the 'audience flow,' so you can build segments from base audiences and target file-based destinations (for example, CSV uploads or cloud storage locations) for customer outreach. 'Audience flow' refers to the complete process of creating, managing, and activating audiences, ensuring seamless integration across destinations. 
+
+As part of your 'audience flow,' use the following SQL commands to [create](#create-audience), [modify](#add-profiles-to-audience), and [delete](#delete-audience) audiences within Adobe Experience Platform.
 
 ### Create an audience {#create-audience}
 
