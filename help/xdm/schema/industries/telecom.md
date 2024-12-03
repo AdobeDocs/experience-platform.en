@@ -21,7 +21,7 @@ Use the following legend to interpret this ERD:
 * Entity relationships are marked as non-dependent, since cookie-based events often cannot determine the person or individual who did the transaction.
 
 
-![](../../images/industries/telecom.png)
+![An example ERD for a telecom industry data model](../../images/industries/telecom.png)
 
 >[!NOTE]
 >

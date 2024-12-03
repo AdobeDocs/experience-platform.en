@@ -20,7 +20,7 @@ Use the following legend to interpret this ERD:
 * All the properties that could be used to identify individual customers are marked as "identity", with one of these properties marked as a "primary identity".
 * Entity relationships are marked as non-dependent, since cookie-based events often cannot determine the person or individual who did the transaction.
 
-![](../../images/industries/retail.png)
+![An example ERD for a retail industry data model](../../images/industries/retail.png)
 
 >[!NOTE]
 >
