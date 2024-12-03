@@ -23,15 +23,10 @@ Get started by reading the material in the links below to familiarize yourself w
     <a href="./home.md#product-knowledge"><img src="./assets/landing/ai-audience.png"  style=width: 100%;max-height: 100%"></a>
     <div><strong>Enhance your learning</strong><br/>Discover, troubleshoot, and amplify your understanding of product knowledge without interrupting your workflows.</div>
     </td>
-    <td>
-    <a href="./access.md"><img src="./assets/landing/ai-access.png"  style=width: 100%;max-height: 100%"></a>
-    <div><strong>Apply permissions based on your usage</strong><br/>Grant and revoke access permissions depending on the roles of your team members.</div>
-    </td>
   </tr>
   <tr style="border: 0;">
     <td align="center"><a href="./home.md"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     <td align="center"><a href="./home.md#product-knowledge"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
-    <td align="center"><a href="./access.md"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
 
@@ -78,11 +73,23 @@ Watch the following video for an overview of AI Assistant.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
+For more information, read the [AI Assistant UI guide](ui-guide.md).
+
 ### Get access to AI Assistant
 
 Watch the following video to learn how to configure access to AI Assistant for your organizations and users.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
+
+For more information, read the [AI Assistant access guide](access.md).
+
+### Use AI Assistant product knowledge to reduce onboarding time
+
+Watch the following video to learn how you can use AI Assistant product knowledge to reduce onboarding time. 
+
+>[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
+
+For more information, read about [product knowledge in AI Assistant](home.md#product-knowledge)
 
 ### Use AI Assistant to de-clutter your audiences
 
