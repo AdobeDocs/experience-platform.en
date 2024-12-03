@@ -7,13 +7,13 @@ exl-id: c35757c1-898e-4d65-aeca-4f7113173473
 
 This document covers how to use the SQL audience extension in Adobe Experience Platform's Data Distiller to create, manage, and publish audiences using SQL commands.
 
-Use the SQL audience extension to build audiences with data from the data lake, including any existing dimension entities. This extension allows you to define audience segments directly using SQL, offering flexibility without needing raw data in your profiles. Audiences created using this method are automatically registered in the Audience workspace, where you can further target them to file-based destinations.
+Use the SQL audience extension to build audiences with data from the data lake, including any existing dimension entities. Dimension entities are categorical data structures, such as customer attributes or product information, that provide context for other data within the data lake. With this extension you can use SQL to define audience segments directly, improving your ability to create audiences as you don't need raw data in your profiles. Audiences created using this method are automatically registered in the Audience workspace, where you can further target them to file-based destinations.
 
 ![Infographic showing the SQL audience extension workflow. The stages include; building audiences with the Query Service using SQL commands, managing them in the Platform UI, to activating them in file-based destinations.](../images/data-distiller/sql-audiences/sql-audience-extension-workflow.png)
 
 ## Audience creation lifecycle in Data Distiller {#audience-creation-lifecycle}
 
-Follow these steps to effectively manage your audiences. Created audiences integrate seamlessly into the audience flow, allowing you to build segments from these base audiences and target file-based destinations for customer targeting. Use the following SQL commands to [create](#create-audience), [modify](#add-profiles-to-audience), and [delete](#delete-audience) audiences within Adobe Experience Platform.
+Follow these steps to effectively manage your audiences. Created audiences integrate seamlessly into the audience flow, allowing you to build segments from these base audiences and target file-based destinations for customer targeting. 'Audience flow' refers to the complete process of creating, managing, and activating audiences within the platform, enabling seamless targeting and integration across destinations. Use the following SQL commands to [create](#create-audience), [modify](#add-profiles-to-audience), and [delete](#delete-audience) audiences within Adobe Experience Platform.
 
 ### Create an audience {#create-audience}
 
@@ -27,7 +27,7 @@ AS (select_query)
 
 >[!IMPORTANT]
 >
->Datasets created for external audiences must be properly tagged to ensure seamless integration across services. This tagging allows external audiences to be utilized effectively in broader audience management processes. For more information on creating and managing tags, please read the [Managing Tags guide](../../administrative-tags/ui/managing-tags.md).
+>Datasets created for external audiences must be properly tagged with identifiers such as audience type, data source, or retention period to ensure seamless integration across services. Ensure that your external audiences are adequetely tagged to use them effectively in broader audience management processes. For more information on creating and managing tags, please read the [Managing Tags guide](../../administrative-tags/ui/managing-tags.md).
 
 **Parameters**
 
@@ -59,7 +59,7 @@ This example showcases the creation of an audience using key metrics such as `us
 
 Be aware of the following limitations when using SQL for audience creation:
 
-- The primary identity column **must** be at the root level.
+- The primary identity column **must** be at the highest level of the dataset, without being nested within other attributes or categories.
 - New batches overwrite existing datasets; append functionality is currently unsupported.
 - Nested attributes are not currently supported.
 
@@ -100,7 +100,7 @@ SELECT userId, orders, total_revenue, recency, frequency, monetization FROM prof
 
 The following example demonstrates how to create an audience using the Recency, Frequency, and Monetization (RFM) model. This example segments customers based on their recency, frequency, and monetization scores to identify key groups such as loyal customers, new customers, and high-value customers.
 
-<!-- Add link to new RFM document when it is published -->
+<!--  Q) Since the focus of this document is on external audiences, or should I just include this temporarily? We could simply provide a link to the separate RFM modeling documentation rather than including the full example here. (Add link to new RFM document when it is published) -->
 
 The following query creates a schema for the RFM audience. The statement sets up fields to hold customer information such as `userId`, `days_since_last_purchase`, `orders`, `total_revenue`, `recency`, `frequency`, `monetization`, and an `rfm_model`.
 
@@ -199,6 +199,8 @@ DROP AUDIENCE IF EXISTS aud_test;
 ### Auto-publish audiences {#auto-publish-audiences}
 
 Audiences created using the SQL extension automatically register under Data Distiller in the Audience workspace. Once registered, these audiences are available for targeting and can be used in file-based destinations, enhancing your segmentation and targeting strategies.
+
+<!-- Q) Do you know how long it takes for the audience to register? This info would help manage user expectations. -->
 
 ![The Audience workspace in Adobe Experience Platform, showing Data Distiller audiences automatically published and ready for use.](../images/data-distiller/sql-audiences/audiences.png)
 
