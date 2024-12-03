@@ -196,17 +196,13 @@ The following example demonstrates how to delete an audience using the DROP AUDI
 DROP AUDIENCE IF EXISTS aud_test;
 ```
 
-### Auto-publish audiences {#auto-publish-audiences}
+### Automatic audience registration and availability {#registration-and-availability}
 
-Audiences created using the SQL extension automatically register under Data Distiller in the Audience workspace. Once registered, these audiences are available for targeting and can be used in file-based destinations, enhancing your segmentation and targeting strategies.
+Audiences created using the SQL extension are automatically registered under Data Distiller in the Audience workspace. Once registered, these audiences are available for targeting in file-based destinations, enhancing segmentation and targeting strategies. This process requires no additional configuration, streamlining audience management. For more details on how to view, manage, and create audiences within the Platform UI, see the [Audience Portal overview](../../segmentation/ui/audience-portal.md).
 
 <!-- Q) Do you know how long it takes for the audience to register? This info would help manage user expectations. -->
 
 ![The Audience workspace in Adobe Experience Platform, showing Data Distiller audiences automatically published and ready for use.](../images/data-distiller/sql-audiences/audiences.png)
-
-### Dataset registration and availability {#registration-and-availability}
-
-Datasets created through SQL audience extension are automatically registered in the Audience workspace. Use the Audience workspace to access and manage external audiences directly without additional configuration, streamlining the audience management process. See the [Audience Portal overview](../../segmentation/ui/audience-portal.md) to learn how to view, manage, and create audiences within the Platform UI.
 
 ## Activate audiences to destinations {#activate-audiences}
 
