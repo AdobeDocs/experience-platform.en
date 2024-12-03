@@ -25,6 +25,10 @@ WITH (primary_identity='IdentitycolName', identity_namespace='Namespace for the 
 AS (select_query)
 ```
 
+>[!IMPORTANT]
+>
+>Datasets created for external audiences must be properly tagged to ensure seamless integration across services. This tagging allows external audiences to be utilized effectively in broader audience management processes. For more information on creating and managing tags, please read the [Managing Tags guide](../../administrative-tags/ui/managing-tags.md).
+
 **Parameters**
 
 Use these parameters to define your SQL audience creation query:
@@ -59,6 +63,10 @@ Be aware of the following limitations when using SQL for audience creation:
 - New batches overwrite existing datasets; append functionality is currently unsupported.
 - Nested attributes are not currently supported.
 
+>[!IMPORTANT]
+>
+>External audiences created using SQL commands have a retention period of 30 days. After 30 days, these audiences are automatically deleted, which is important for planning audience management strategies.
+
 ### Add Profiles to an existing audience {#add-profiles-to-audience}
 
 Use the `INSERT INTO` command to add profiles to an existing audience.
@@ -92,7 +100,9 @@ SELECT userId, orders, total_revenue, recency, frequency, monetization FROM prof
 
 The following example demonstrates how to create an audience using the Recency, Frequency, and Monetization (RFM) model. This example segments customers based on their recency, frequency, and monetization scores to identify key groups such as loyal customers, new customers, and high-value customers.
 
-**Create an RFM Audience:**
+<!-- Add link to new RFM document when it is published -->
+
+The following query creates a schema for the RFM audience. The statement sets up fields to hold customer information such as `userId`, `days_since_last_purchase`, `orders`, `total_revenue`, `recency`, `frequency`, `monetization`, and an `rfm_model`.
 
 ```sql
 CREATE Audience adls_rfm_profile
@@ -109,11 +119,7 @@ SELECT
 WHERE false;
 ```
 
-This query creates a schema for the RFM audience, setting up fields to hold customer information such as `userId`, `days_since_last_purchase`, `orders`, `total_revenue`, `recency`, `frequency`, `monetization`, and an `rfm_model`.
-
-**Populate RFM Audience with Data:**
-
-After creating the audience, you can populate it with customer data and segment them based on their RFM scores.
+After creating the audience, populate it with customer data and segment the profiles based on their RFM scores. The SQL statement below uses the `NTILE(4)` function to rank customers into quartiles based on their RFM (Recency, Frequency, Monetization) scores. These scores categorize customers into six segments, such as 'Core,' 'Loyal,' and 'Whales.' The segmented customer data is then inserted into the audience `adls_rfm_profile` table."
 
 ```sql
 INSERT INTO Audience adls_rfm_profile
@@ -162,11 +168,6 @@ FROM (
 );
 ```
 
-This example involves:
-
-- Calculating recency, frequency, and monetization using NTILE ranking functions to divide customers into quartiles.
-- Segmenting customers into various categories like Core, Loyal, Whales, Promising, Rookies, and Slipping based on their RFM scores.
-
 ### Delete an audience (DROP AUDIENCE) {#delete-audience}
 
 Use the `DROP AUDIENCE` command to delete an existing audience. If the audience does not exist, an exception occurs unless `IF EXISTS` is specified.
@@ -200,6 +201,10 @@ DROP AUDIENCE IF EXISTS aud_test;
 Audiences created using the SQL extension automatically register under Data Distiller in the Audience workspace. Once registered, these audiences are available for targeting and can be used in file-based destinations, enhancing your segmentation and targeting strategies.
 
 ![The Audience workspace in Adobe Experience Platform, showing Data Distiller audiences automatically published and ready for use.](../images/data-distiller/sql-audiences/audiences.png)
+
+### Dataset registration and availability {#registration-and-availability}
+
+Datasets created through SQL audience extension are automatically registered in the Audience workspace. Use the Audience workspace to access and manage external audiences directly without additional configuration, streamlining the audience management process. See the [Audience Portal overview](../../segmentation/ui/audience-portal.md) to learn how to view, manage, and create audiences within the Platform UI.
 
 ## Activate audiences to destinations {#activate-audiences}
 
@@ -265,7 +270,7 @@ Yes, you can create an audience of audiences that uses a Data Distiller audience
 
 +++Answer
 
-Data distiller audiences are not currently available in Adobe Journey Optimizer. You must create a new audience in Adobe Journey Optimizer rule builder for it to be available in Adobe Journey Optimizer.
+Data Distiller audiences are not currently available in Adobe Journey Optimizer. You must create a new audience in Adobe Journey Optimizer rule builder for it to be available in Adobe Journey Optimizer.
 
 +++
 
