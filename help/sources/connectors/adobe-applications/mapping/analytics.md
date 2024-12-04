@@ -48,65 +48,65 @@ Select fields are directly mapped from Adobe Analytics to Experience Data Model 
 | `mobileplaceaccuracy` | `placeContext.POIinteraction.POIDetail.`<br/>`geoInteractionDetails.deviceGeoAccuracy` | number | Collected from the context data variable a.loc.acc. Indicates the accuracy of the GPS in meters at time of collection. |
 | `mobileplacecategory` | `placeContext.POIinteraction.POIDetail.`<br/>`category` | string | Collected from the context data variable a.loc.category. Describes the category of a specific place. |
 | `mobileplaceid` | `placeContext.POIinteraction.POIDetail.`<br/>`POIID` | string | Collected from the context data variable a.loc.id. Identifier for a given point of interest. |
-| `video` | `media.mediaTimed.primaryAssetReference.`<br/>`_id` | string | The name of the video. |
-| **CHANGE** `videoad` | `advertising.adAssetReference._id` | string | Identifier of the ad asset. |
-| **CHANGE** `videocontenttype` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`broadcastContentType` | string | The Video Content-Type. This is automatically set to "Video" for all video views. |
-| `videoadpod` | `advertising.adAssetViewDetails.adBreak._id` | string | The pod which the Video Ad is in. |
-| **CHANGE** `videoadinpod` | `advertising.adAssetViewDetails.index` | integer  | The position the Video Ad is in the pod. |
-| **CHANGE** `videoplayername` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`playerName` | string | The name of the Video player. |
-| **CHANGE** `videochannel` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`broadcastChannel` | string | The Video channel. |
-| **CHANGE** `videoadplayername` | `advertising.adAssetViewDetails.playerName` | string | The name of the Video Ad player. |
-| **CHANGE** `videochapter` | `media.mediaTimed.mediaChapter.`<br/>`chapterAssetReference._id` | string | The Video chapter's name |
-| **CHANGE** `videoname` | `media.mediaTimed.primaryAssetReference.`<br/>`_dc.title` | string | The Video name. |
+| **UPDATED** `video` | `mediaReporting.sessionDetails.name` | string | The name of the video. |
+| **UPDATED** `videoad` | `mediaReporting.advertisingDetails.name` | string | |
+| **UPDATED** `videocontenttype` | `mediaReporting.sessionDetails.contentType` | string | The video content-type. This is automatically set to "Video" for all video views. Recommended values include: VOD, Live, Linear, UGC, DVOD, Radio, Podcast, Audiobook, and Song. |
+| `videoadpod` | `advertising.adAssetViewDetails.adBreak._id` | string | |
+| **UPDATED** `videoadinpod` | `mediaReporting.advertisingDetails.podPosition` | integer  | |
+| **UPDATED** `videoplayername` | `mediaReporting.sessionDetails.playerName ` | string | The name of the video player. |
+| **UPDATED** `videochannel` | `mediaReporting.sessionDetails.channel` | string | The video channel. |
+| **UPDATED** `videoadplayername` | `mediaReporting.advertisingDetails.playerName` | string | |
+| **UPDATED** `videoname` | `mediaReporting.sessionDetails.friendlyName` | string | The name of the video. |
 | **CHANGE** `videoadname` | `advertising.adAssetReference._dc.title` | string | The name of the Video Ad. |
-| **CHANGE** `videoshow` | `media.mediaTimed.primaryAssetReference.`<br/>`_iptc4xmpExt.Series._iptc4xmpExt.Name` | string | Video show. |
-| **CHANGE** `videoseason` | `media.mediaTimed.primaryAssetReference.`<br/>`_iptc4xmpExt.Season._iptc4xmpExt.Name` | string | Video Season. |
-| **CHANGE** `videoepisode` | `media.mediaTimed.primaryAssetReference.`<br/>`_iptc4xmpExt.Episode._iptc4xmpExt.Name` | string | Video episode. |
-| **CHANGE** `videonetwork` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`broadcastNetwork` | string | Video network. |
-| `videoshowtype` | `media.mediaTimed.primaryAssetReference.`<br/>`showType` | string | Video show type. |
-| `videoadload` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`adLoadType` | string | Video ad loads. |
-| **CHANGE** `videofeedtype` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`sourceFeed` | string | Video feed type. |
+| **UPDATED** `videoshow` | `mediaReporting.sessionDetails.show` | string | Video show. |
+| **UPDATED** `videoseason` | `mediaReporting.sessionDetails.season` | string | Video Season. |
+| **UPDATED** `videoepisode` | `mediaReporting.sessionDetails.episode` | string | Video episode. |
+| **UPDATED** `videonetwork` | `mediaReporting.sessionDetails.network` | string | The video network. |
+| **UPDATED** `videoshowtype` | `mediaReporting.sessionDetails.showType` | string | Video show type. |
+| **UPDATED** `videoadload` | `mediaReporting.sessionDetails.adLoad` | string | The type of ad loaded as defined by each customer's internal representation. |
+| **UPDATED** `videofeedtype` | `mediaReporting.sessionDetails.feed` | string | The feed type of the video. |
 | `mobilebeaconmajor` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.beaconMajor` | number | Mobile Services beacon major. |
 | `mobilebeaconminor` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.beaconMinor` | number | Mobile Services beacon minor. |
 | `mobilebeaconuuid` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.proximityUUID` | string | Mobile Services beacon UUID. |
-| **CHANGE** `videosessionid` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`_id` | string | Video session ID. |
-| **CHANGE** `videogenre` | `media.mediaTimed.primaryAssetReference.`<br/>`_iptc4xmpExt.Genre` | array | Video genre. | {title (Object), description (Object), type (Object), meta:xdmType (Object), items (string), meta:xdmField (Object)} |
+| **CHANGE** `videosessionid` | `mediaReporting.sessionDetails.ID  ` | string | The session ID of the video. |
+| **CHANGE** `videogenre` | `mediaReporting.sessionDetails.genre` | string[] | The genre of the video|
 | `mobileinstalls` | `application.firstLaunches` | Object  | This is triggered at the first run after installation or reinstallation | {id (string), value (number)} |
 | `mobileupgrades` | `application.upgrades` | Object | Reports the number of app upgrades. Triggers at the first run after upgrade or any time the version number changes. | {id (string), value (number)} |
 | `mobilelaunches` | `application.launches` | Object | The number of times the app has been launched. | {id (string), value (number)} |
 | `mobilecrashes` | `application.crashes` | Object | <!-- MISSING --> | {id (string), value (number)} |
 | `mobilemessageclicks` | `directMarketing.clicks` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| `mobileplaceentry` | `placeContext.POIinteraction.poiEntries` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| `mobileplaceexit` | `placeContext.POIinteraction.poiExits` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| **CHANGE** `videotime` | `media.mediaTimed.timePlayed` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| **CHANGE** `videostart` | `media.mediaTimed.impressions` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| **CHANGE** `videocomplete` | `media.mediaTimed.completes` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| **CHANGE** `videosegmentviews` | `media.mediaTimed.mediaSegmentViews` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| **CHANGE** `videoadstart` | `advertising.impressions` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| **CHANGE** `videoadcomplete` | `advertising.completes` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| **CHANGE** `videoadtime` | `advertising.timePlayed` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| **CHANGE** `videochapterstart` | `media.mediaTimed.mediaChapter.`<br/>`impressions` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| **CHANGE** `videochaptercomplete` | `media.mediaTimed.mediaChapter.`<br/>`completes` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| **CHANGE** `videochaptertime` | `media.mediaTimed.mediaChapter.`<br/>`timePlayed` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| **CHANGE** `videoplay` | `media.mediaTimed.starts` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| **CHANGE** `videototaltime` | `media.mediaTimed.totalTimePlayed` | Object | <!-- MISSING --> | {id (string), value (number)} |
+| `mobileplaceentry` | `placeContext.POIinteraction.poiEntries` | Object | | {id (string), value (number)} |
+| `mobileplaceexit` | `placeContext.POIinteraction.poiExits` | Object | | {id (string), value (number)} |
+| **UPDATED** `videotime` | `mediaReporting.sessionDetails.timePlayed` | integer | | 
+| **UPDATED** `videostart` | `mediaReporting.sessionDetails.isViewed` | boolean | A boolean value that indicates whether the video has been started or not. |
+| **UPDATED** `videocomplete` | `mediaReporting.sessionDetails.isCompleted` | integer | |
+| **UPDATED** `videosegmentviews` | `mediaReporting.sessionDetails.hasSegmentView  ` | boolean | A boolean value that indicates when at least one frame, not necessarily the first frame, has been viewed. |
+| **CHANGE** `videoadstart` | `advertising.impressions` | Object | |
+| **CHANGE** `videoadcomplete` | `advertising.completes` | Object | |
+| **CHANGE** `videoadtime` | `advertising.timePlayed` | Object | |
+| **UPDATED** `videochapter` | `mediaReporting.chapterDetails.ID` | string | The auto-generated ID of the chapter. |
+| **UPDATED** `videochapterstart` | `mediaReporting.chapterDetails.isStarted` | boolean | A boolean value that indicates whether a chapter has been started. |
+| **UPDATED** `videochaptercomplete` | `mediaReporting.chapterDetails.isCompleted` | boolean | A boolean value that indicates whether a chapter has been completed. |
+| **UPDATED** `videochaptertime` | `mediaReporting.chapterDetails.timePlayed` | integer | The time spent on a chapter, represented in seconds. |
+| **UPDATED** `videoplay` | `mediaReporting.sessionDetails.isPlayed` | boolean | A boolean value that indicates whether the video has been played or not. | {id (string), value (number)} |
+| **UPDATED** `videototaltime` | `mediaReporting.sessionDetails.totalTimePlayed` | integer | The total amount of time spent by a user on a video. This value includes the time spent watching ads. |
 | `videoqoetimetostart` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.timeToStart` | Object | The video quality time to start. | {id (string), value (number)} |
-| `videoqoedropbeforestart` | `media.mediaTimed.dropBeforeStarts` | Object | <!-- MISSING --> | {id (string), value (number)} |
+| `videoqoedropbeforestart` | `media.mediaTimed.dropBeforeStarts` | Object | | {id (string), value (number)} |
 | `videoqoebuffercount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.buffers` | Object | Video quality buffer count | {id (string), value (number)} |
 | `videoqoebuffertime` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bufferTime` | Object | Video quality buffer time | {id (string), value (number)} |
 | `videoqoebitratechangecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateChanges` | Object | Video quality change count | {id (string), value (number)} |
 | `videoqoebitrateaverage` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateAverage` | Object | Video quality average bit rate | {id (string), value (number)} |
 | `videoqoeerrorcount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.errors` | Object | Video quality error count | {id (string), value (number)} |
-| `videoqoedroppedframecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.droppedFrames` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| **CHANGE** `videoprogress10` | `media.mediaTimed.progress10` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| **CHANGE** `videoprogress25` | `media.mediaTimed.progress25` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| **CHANGE** `videoprogress50` | `media.mediaTimed.progress50` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| **CHANGE** `videoprogress75` | `media.mediaTimed.progress75` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| **CHANGE** `videoprogress95` | `media.mediaTimed.progress95` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| **CHANGE** `videoresume` | `media.mediaTimed.resumes` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| **CHANGE** `videopausecount` | `media.mediaTimed.pauses` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| **CHANGE** `videopausetime` | `media.mediaTimed.pauseTime` | Object | <!-- MISSING -->| {id (string), value (number)} |
-| **CHANGE** `videosecondssincelastcall` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`sessionTimeout` | integer  |
+| `videoqoedroppedframecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.droppedFrames` | Object | | {id (string), value (number)} |
+| **UPDATED** `videoprogress10` | `mediaReporting.sessionDetails.hasProgress10` | boolean | A boolean value that indicates whether the playhead of a given video has passed the 10% marker of the total video length. The marker is only counted once, even if seeking backwards. If seeking forward, markers that are skipped are not counted. |
+| **UPDATED** `videoprogress25` | `mediaReporting.sessionDetails.hasProgress25` | boolean | A boolean value that indicates whether the playhead of a given video has passed the 25% marker of the total video length. The marker is only counted once, even if seeking backwards. If seeking forward, markers that are skipped are not counted. |
+| **UPDATED** `videoprogress50` | `mediaReporting.sessionDetails.hasProgress50` | boolean | A boolean value that indicates whether the playhead of a given video has passed the 50% marker of the total video length. The marker is only counted once, even if seeking backwards. If seeking forward, markers that are skipped are not counted. |
+| **UPDATED** `videoprogress75` | `mediaReporting.sessionDetails.hasProgress75` | boolean | A boolean value that indicates whether the playhead of a given video has passed the 75% marker of the total video length. The marker is only counted once, even if seeking backwards. If seeking forward, markers that are skipped are not counted.|
+| **UPDATED** `videoprogress95` | `mediaReporting.sessionDetails.hasProgress95` | boolean | A boolean value that indicates whether the playhead of a given video has passed the 95% marker of the total video length. The marker is only counted once, even if seeking backwards. If seeking forward, markers that are skipped are not counted. |
+| **UPDATED** `videoresume` | `mediaReporting.sessionDetails.hasResume` | boolean | A boolean value that marks each playback that was resumed after more than 30 minutes of buffer, pause, or a stall period. |
+| **UPDATED** `videopausecount` | `mediaReporting.sessionDetails.pauseCount` | integer | The number of pause periods that occurred during video playback. | 
+| **UPDATED** `videopausetime` | `mediaReporting.sessionDetails.pauseTime` | integer | The total duration in seconds in which video playback was paused by the user. | 
+| **UPDATED** `videosecondssincelastcall` | `mediaReporting.sessionDetails.secondsSinceLastCall` | number | This value indicates the amount of time, in seconds, that has passed between the user's last known interaction and the moment the session was closed. |
 
 {style="table-layout:auto"}
 
@@ -136,10 +136,10 @@ Select fields coming from ADC must be transformed, requiring logic beyond a dire
 | `m_event_list` | `commerce.purchases`,<br/>`commerce.productViews`,<br/>`commerce.productListOpens`,<br/>`commerce.checkouts`,<br/>`commerce.productListAdds`,<br/>`commerce.productListRemovals`,<br/>`commerce.productListViews` | Object | Standard commerce events triggered on the hit.| {id (string), value (number)} |
 | `m_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | Object | Custom events triggered on the hit. | {id (Object), value (Object)} |
 | `m_geo_country` | `placeContext.geo.countryCode` | string | Abbreviation of the country where the hit came from, which is based off the IP. |
-| `m_geo_latitude` | `placeContext.geo._schema.latitude` | number | <!-- MISSING --> |
+| `m_geo_latitude` | `placeContext.geo._schema.latitude` | number | |
 | `m_geo_longitude` | `placeContext.geo._schema.longitude` | number | <!-- MISSING -->|
 | `m_java_enabled` | `environment.browserDetails.javaEnabled` | boolean | A flag indicating whether Java&trade; is enabled. |
-| `m_latitude` | `placeContext.geo._schema.latitude` | number | <!-- MISSING --> |
+| `m_latitude` | `placeContext.geo._schema.latitude` | number | |
 | `m_longitude` | `placeContext.geo._schema.longitude` | number | <!-- MISSING -->|
 | `m_page_event_var1` | `web.webInteraction.URL` | string | A variable that is only used in link tracking image requests. This variable contains the URL of the download link, exit link, or custom link clicked. |
 | `m_page_event_var2` | `web.webInteraction.name` | string | A variable that is only used in link tracking image requests. This lists the custom name of the link, if it is specified. |
@@ -171,8 +171,7 @@ Select fields coming from ADC must be transformed, requiring logic beyond a dire
 | `mcvisid_low` | `identityMap` | object | The Experience Cloud Visitor ID. |
 | `sdid_high` + `sdid_low` | `_experience.target.supplementalDataID` | string | Hit Stitching ID. The analytics field sdid_high and sdid_low is the supplemental data id used to stitch two (or more) incoming hits together. |
 | `mobilebeaconproximity` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.proximity` | string | Mobile Services beacon proximity. |
-| **CHANGE** `videochapter` | `media.mediaTimed.mediaChapter.`<br/>`chapterAssetReference._xmpDM.duration` | integer | The name of the video chapter. |
-| **CHANGE** `videolength` | `media.mediaTimed.primaryAssetReference.`<br/>`_xmpDM.duration` | integer | The length of the video. |
+| **UPDATED** `videolength` | `mediaReporting.sessionDetails.length ` | integer | The length of the video. |
 
 {style="table-layout:auto"}
 
@@ -222,8 +221,8 @@ To learn more about performing these transformations using Query Service, see [A
 | `post_event_list` | `commerce.purchases`,<br/>`commerce.productViews`,<br/>`commerce.productListOpens`,<br/>`commerce.checkouts`,<br/>`commerce.productListAdds`,<br/>`commerce.productListRemovals`,<br/>`commerce.productListViews` | Object | Standard commerce events triggered on the hit. | {id (string), value (number)} |
 | `post_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | Object | Custom events triggered on the hit.| {id (Object), value (Object)} |
 | `post_java_enabled` | `environment.browserDetails.javaEnabled` | boolean | A flag indicating whether Java&trade; is enabled. |
-| `post_latitude` | `placeContext.geo._schema.latitude` | number |   <!-- MISSING --> |
-| `post_longitude` | `placeContext.geo._schema.longitude` | number |   <!-- MISSING --> | 
+| `post_latitude` | `placeContext.geo._schema.latitude` | number |   |
+| `post_longitude` | `placeContext.geo._schema.longitude` | number |   | 
 | `post_page_event` | `web.webInteraction.type` | string | The type of hit that is sent in the image request (standard hit, download link, exit link, or custom link clicked). |
 | `post_page_event` | `web.webInteraction.linkClicks.value` | number | Equals 1 if the hit is a link click. This is similar to the Page Events metric in Adobe Analytics. |
 | `post_page_event_var1` | `web.webInteraction.URL` | string | This variable is only used in link tracking image requests. It is the URL of the download link, exit link, or custom link clicked. |
@@ -249,3 +248,52 @@ To learn more about performing these transformations using Query Service, see [A
 | `visit_start_time_gmt` | `_experience.analytics.session.`<br/>`timestamp` | integer | Timestamp of the first hit of the visit in UNIX&reg; time. |
 
 {style="table-layout:auto"}
+
+<!-- 
+## Missing fields
+
+* `videoaudioauthor` 
+* `videoaudioartist`
+* `videoaudioalbum`
+* `videostreamtype`
+* `video.videoclassificationrating` evar17
+* `video.videoclassificationoriginator` evar18
+* `video.videoclassificationairdate` evar19
+* `video.videoclassificationdigitaldate` evar20
+* `(only in ava.e2e rsid: evar9)`
+* `(only in ava.e2e rsid: evar10)`
+* `videosegment`
+* `(only in ava.e2e rsid: event52)`
+* `videouniquetimeplayed`
+* `videoaverageminuteaudience`
+* `(only in ava.e2e rsid: event8)`
+* `(only in ava.e2e rsid: event9)`
+* `(only in ava.e2e rsid: event44)`
+* `videopause`
+* `videomvpd`
+* `videoauthorized` evar21
+* `videodaypart`
+* `videoaudiolabel`
+* `videoaudiostation`
+* `videoaudiopublisher`
+
+### player state parameters
+
+* `videostatefullscreen`
+* `videostatefullscreencount`
+* `videostatefullscreentime`
+* `videostateclosedcaptioning`
+* `videostateclosedcaptioningcount`
+* `videostateclosedcaptioningtime`
+* `videostatemute`
+* `videostatemutecount`
+* `videostatemutetime`
+* `videostatepictureinpicture`
+* `videostatepictureinpicturecount`
+* `videostatepictureinpicturetime`
+* `videostateinfocus`
+* `videostateinfocuscount`
+* `videostateinfocustime`
+
+
+-->
