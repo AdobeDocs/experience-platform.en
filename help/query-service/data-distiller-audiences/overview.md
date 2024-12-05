@@ -7,10 +7,6 @@ exl-id: c35757c1-898e-4d65-aeca-4f7113173473
 
 Use the SQL audience extension to build audiences with data from the data lake, including any existing dimension entities (such as customer attributes or product information).
 
->[!TIP]
->
->Dimension entities are categorical data structures that provide context for other data within the data lake.
-
 Using this SQL extension improves your ability to create audiences as you don't need raw data in your profiles when defining audience segments. Audiences created using this method are automatically registered in the Audience workspace, where you can further target them to file-based destinations.
 
 ![Infographic showing the SQL audience extension workflow. The stages include; building audiences with the Query Service using SQL commands, managing them in the Platform UI, to activating them in file-based destinations.](../images/data-distiller/sql-audiences/sql-audience-extension-workflow.png)
@@ -51,6 +47,10 @@ Use these parameters to define your SQL audience creation query:
 
 {style="table-layout:auto"}
 
+>[!NOTE]
+>
+>To provide greater flexibility for complex data structures, you can nest enriched attributes when defining audiences.
+
 **Example:**
 
 The following example demonstrates how to structure your SQL audience creation query:
@@ -68,16 +68,11 @@ This example showcases the creation of an audience using key metrics such as `us
 Be aware of the following limitations when using SQL for audience creation:
 
 - The primary identity column **must** be at the highest level of the dataset, without being nested within other attributes or categories.
-- New batches overwrite existing datasets; append functionality is currently unsupported.
-- Nested attributes are not currently supported.
+- External audiences created using SQL commands have a retention period of 30 days. After 30 days, these audiences are automatically deleted, which is an important consideration for planning audience management strategies.
 
->[!IMPORTANT]
->
->External audiences created using SQL commands have a retention period of 30 days. After 30 days, these audiences are automatically deleted, which is important for planning audience management strategies.
+### Add profiles to an existing audience {#add-profiles-to-audience}
 
-### Add Profiles to an existing audience {#add-profiles-to-audience}
-
-Use the `INSERT INTO` command to add profiles to an existing audience.
+Use the `INSERT INTO` command to add profiles (or entire audiences) to an existing audience.
 
 ```sql
 INSERT INTO table_name
@@ -101,7 +96,7 @@ The following example demonstrates how to add profiles to an existing audience w
 
 ```sql
 INSERT INTO Audience aud_test
-SELECT userId, orders, total_revenue, recency, frequency, monetization FROM profile_dim_customer;
+SELECT userId, orders, total_revenue, recency, frequency, monetization FROM customer_ds;
 ```
 
 ### RFM model audience example {#rfm-model-audience-example}
@@ -206,7 +201,7 @@ DROP AUDIENCE IF EXISTS aud_test;
 
 ### Automatic audience registration and availability {#registration-and-availability}
 
-Audiences created using the SQL extension are automatically registered under Data Distiller in the Audience workspace. Once registered, these audiences are available for targeting in file-based destinations, enhancing segmentation and targeting strategies. This process requires no additional configuration, streamlining audience management. For more details on how to view, manage, and create audiences within the Platform UI, see the [Audience Portal overview](../../segmentation/ui/audience-portal.md).
+Audiences created using the SQL extension are automatically registered under the Data Distiller [!UICONTROL Origin] in the Audience workspace. Once registered, these audiences are available for targeting in file-based destinations, enhancing segmentation and targeting strategies. This process requires no additional configuration, streamlining audience management. For more details on how to view, manage, and create audiences within the Platform UI, see the [Audience Portal overview](../../segmentation/ui/audience-portal.md).
 
 <!-- Q) Do you know how long it takes for the audience to register? This info would help manage user expectations. -->
 
@@ -276,7 +271,7 @@ Yes, you can create an audience of audiences that uses a Data Distiller audience
 
 +++Answer
 
-Data Distiller audiences are not currently available in Adobe Journey Optimizer. You must create a new audience in Adobe Journey Optimizer rule builder for it to be available in Adobe Journey Optimizer.
+Data Distiller audiences are also available in Adobe Journey Optimizer. You can use Data Distiller audiences in Adobe Journey Optimizer and filter the results based on the enriched attributes.
 
 +++
 
@@ -297,3 +292,9 @@ Next, you could read the following documentation to further develop and optimize
 - **Explore Audience Evaluation**: Learn about the [audience evaluation methods in Adobe Experience Platform](../../segmentation/home.md#evaluate-segments): streaming segmentation for real-time updates, batch segmentation for scheduled or on-demand processing, and edge segmentation for instant evaluation on the Edge Network.
 - **Integrate with Destinations**: Read the guide on how to [export files on-demand to batch destinations](../../destinations/ui/export-file-now.md) using the Platform Destinations UI.
 - **Review Audience Performance**: Analyze how your SQL-defined audiences perform across different channels. Use data insights to adjust and improve your audience definitions and targeting strategies. Read the document on [Audience insights](../../dashboards/insights/audiences.md) to learn how to access and adapt the SQL queries for audience insights in Adobe Real-Time CDP. You can then create your own insights and transform raw data into actionable information by customizing the Audiences dashboard to effectively visualize and use these insights for better decision-making.
+<!--  -->
+
+Here's how you can incorporate the senior engineer's feedback into the **Create an audience** section of your document in a way that maintains a consistent style and voice:
+
+
+
