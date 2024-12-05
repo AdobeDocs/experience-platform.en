@@ -31,7 +31,7 @@ AS (select_query)
 
 >[!IMPORTANT]
 >
->Datasets created for external audiences must be properly tagged with identifiers such as audience type, data source, or retention period to ensure seamless integration across services. Ensure that your external audiences are adequetely tagged to use them effectively in broader audience management processes. For more information on creating and managing tags, please read the [Managing Tags guide](../../administrative-tags/ui/managing-tags.md).
+>Datasets created for external audiences must be properly tagged with identifiers such as audience type, data source, or retention period to ensure seamless integration across services. Ensure that your external audiences are adequately tagged to use them effectively in broader audience management processes. For more information on creating and managing tags, please read the [Managing Tags guide](../../administrative-tags/ui/managing-tags.md).
 
 **Parameters**
 
@@ -42,14 +42,14 @@ Use these parameters to define your SQL audience creation query:
 | `schema`           | Optional. Defines the XDM schema for the dataset created by the query. |
 | `table_name`       | Name of the table and audience.                                  |
 | `primary_identity` | Specifies the primary identity column for the audience.          |
-| `identity_namespace` | Namespace of the identity.                                   |
+| `identity_namespace` | Namespace of the identity. You can use an existing namespace or create a new one. To see available namespaces, use the `SHOW NAMESPACE` command. To create a new namespace, use `CREATE NAMESPACE`. For example: `CREATE NAMESPACE lumaCrmId WITH (code='testns', TYPE='Email')`. |
 | `select_query`     | A SELECT statement defining the audience. The syntax of the SELECT query can be found in the [SELECT queries](../sql/syntax.md#select-queries) section. |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->To provide greater flexibility for complex data structures, you can nest enriched attributes when defining audiences.
+>To provide greater flexibility for complex data structures, you can nest enriched attributes when defining audiences. Enriched attributes, such as `orders`, `total_revenue`, `recency`, `frequency`, and `monetization`, can be used to filter audiences as needed.
 
 **Example:**
 
@@ -61,7 +61,7 @@ WITH (primary_identity=userId, identity_namespace=lumaCrmId)
 AS SELECT userId, orders, total_revenue, recency, frequency, monetization FROM profile_dim_customer;
 ```
 
-This example showcases the creation of an audience using key metrics such as `userId`, `orders`, `total_revenue`, `recency`, `frequency`, and `monetization`.
+In this example, the `userId` column is identified as the identity column, and an appropriate namespace (`lumaCrmId`) is assigned. The remaining columns (`orders`, `total_revenue`, `recency`, `frequency`, and `monetization`) are enriched attributes that provide additional context for the audience.
 
 **Limitations:**
 
