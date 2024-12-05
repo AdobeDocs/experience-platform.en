@@ -9,11 +9,11 @@ exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
 
 The Adobe Experience Platform Query Service provides a user interface that can be used to write and execute queries, view previously executed queries, and access queries saved by users within your organization. To access the UI within [Adobe Experience Platform](https://platform.adobe.com), select **[!UICONTROL Queries]** in the left navigation. The [!UICONTROL Queries] [!UICONTROL Overview] appears.
 
-![The Query Service workspace with Queries and the Overview tab highlighted.]()
+![The Query Service workspace with Queries and the Overview tab highlighted.](../images/ui/overview/queries-overview.png)
 
 ## Overview {#overview}
 
-The [!UICONTROL Overview] tab provides a streamlined entry point for working with queries and Data Distiller templates. Here you can access all the features needed to write queries, explore datasets, and analyze audience data, to ensure a smooth workflow for your data analytics and audience insights. Use this overview to learn what you can achieve with Data Distiller and discover key metrics about your Query Service usage.
+The [!UICONTROL Overview] tab provides a streamlined entry point for working with queries and Data Distiller templates. Here, you can access all the features needed to write queries, explore datasets, and analyze audience data, to ensure a smooth workflow for your data analytics and audience insights. Use this overview to learn what you can achieve with Data Distiller and discover key metrics about your Query Service usage.
 
 ### Main panels {#main-panels}
 
@@ -29,7 +29,7 @@ The [!UICONTROL Overview] page contains several main sections to help you get st
 
 The [!UICONTROL Data Distiller capabilities] section provides documentation links to more advanced Data Distiller features:
 
-- **[[!UICONTROL Data exploration]](../use-cases/data-exploration.md)**: Learn how to explore, troubleshoot and verify batch ingested data using SQL.
+- **[[!UICONTROL Data exploration]](../use-cases/data-exploration.md)**: Learn how to explore, troubleshoot, and verify batch ingested data using SQL.
 - **[[!UICONTROL Derived datasets for Experience Platform applications]](../data-distiller/derived-datasets/overview.md)**: Learn how to create derived datasets to support complex and diverse use cases that maximize your data utility.
 - **[[!UICONTROL AI/ML pipelines]](../data-distiller/ml-feature-pipelines/overview.md)**: Learn about important concepts behind your preferred machine learning tools and how to build custom models that support your marketing use cases. This series of guides describes the necessary steps to build feature pipelines that prepare data from Experience Platform to feed custom models in your machine learning environment.
 - **[[!UICONTROL SQL insights]](../data-distiller/sql-insights/overview.md)**: Learn about the key capabilities and required steps to develop an insights dashboard from SQL with Data Distiller.
@@ -62,7 +62,7 @@ Select a card to open documentation guides and examples to help you make the mos
 
 ### Key metrics {#key-metrics}
 
-The key metrics section displays visualizations of important data that helps you monitor Query Service usage. For each chart, you can select the ellipse (`...`) in the top right followed by [!UICONTROL View more] to view either a tabulated form of the results, or download the data as a CSV file to view in a spreadsheet. For more details, refer to the [View more guide](../../dashboards/sql-insights-query-pro-mode/view-more.md).
+The key metrics section displays visualizations of important data that helps you monitor Query Service usage. For each chart, you can select the ellipsis (`...`) in the top right followed by [!UICONTROL View more] to view either a tabulated form of the results, or download the data as a CSV file to view in a spreadsheet. For more details, refer to the [View more guide](../../dashboards/sql-insights-query-pro-mode/view-more.md).
 
 #### Set a date filter {#set-date-filter}
 
