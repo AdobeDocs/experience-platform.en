@@ -9,6 +9,26 @@ Adobe Experience Platform allows you to ingest Adobe Analytics data through the 
 
 ![An illustration of the Adobe Analytics data journey from Analytics to Experience Platform.](../images/analytics-data-experience-platform.png)
 
+## Streaming media
+
+| Data feed | XDM field path | Data type | Description | 
+| --- | --- | --- | --- |
+| `videoname` | `mediaReporting.sessionDetails.friendlyName` | string | The friendly (human-readable) name of the video. |
+| `videoaudioauthor` | `mediaReporting.sessionDetails.author` | string | The name of the media author. |
+| `videoaudioartist` | `mediaReporting.sessionDetails.author` | string | The name of the album artist or group performing the music recording or video. |
+| `videoaudioalbum` | `mediaReporting.sessionDetails.album` | string | The name of the album that the music recording or video belongs to. |
+| `videolength` | `mediaReporting.sessionDetails.length ` | integer | The length or runtime of the video. |
+| `videoshowtype` | `mediaReporting.sessionDetails.showType` | string |
+| `video` | `mediaReporting.sessionDetails.name` | string | The ID of the video. |
+| `videoshow` | `mediaReporting.sessionDetails.show` | string | The name of the program or series. The program/series name is only required if the show is part of a series. |
+| (only in ava.e2e rsid: evar8) | mediaReporting.sessionDetails.streamFormat | string | |
+| `videostreamtype` | mediaReporting.sessionDetails.streamType | string | |
+
+
+
+
+
+
 ## Direct mapping fields
 
 Select fields are directly mapped from Adobe Analytics to Experience Data Model (XDM).  
@@ -277,7 +297,19 @@ To learn more about performing these transformations using Query Service, see [A
 * `videoaudiostation`
 * `videoaudiopublisher`
 
-### player state parameters
+
+
+## new groupings
+
+### streaming media
+
+| Data feed | XDM field path | Data type | Description | Context Data |
+| --- | --- | --- | --- | --- |
+
+
+### ads
+
+### player state parameters (missing)
 
 * `videostatefullscreen`
 * `videostatefullscreencount`
@@ -294,6 +326,8 @@ To learn more about performing these transformations using Query Service, see [A
 * `videostateinfocus`
 * `videostateinfocuscount`
 * `videostateinfocustime`
+
+### quality 
 
 
 -->
