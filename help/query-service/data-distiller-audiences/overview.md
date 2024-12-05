@@ -29,10 +29,6 @@ WITH (primary_identity='IdentitycolName', identity_namespace='Namespace for the 
 AS (select_query)
 ```
 
->[!IMPORTANT]
->
->Datasets created for external audiences must be properly tagged with identifiers such as audience type, data source, or retention period to ensure seamless integration across services. Ensure that your external audiences are adequately tagged to use them effectively in broader audience management processes. For more information on creating and managing tags, please read the [Managing Tags guide](../../administrative-tags/ui/managing-tags.md).
-
 **Parameters**
 
 Use these parameters to define your SQL audience creation query:
@@ -101,11 +97,11 @@ SELECT userId, orders, total_revenue, recency, frequency, monetization FROM cust
 
 ### RFM model audience example {#rfm-model-audience-example}
 
-The following example demonstrates how to create an audience using the Recency, Frequency, and Monetization (RFM) model. This example segments customers based on their recency, frequency, and monetization scores to identify key groups such as loyal customers, new customers, and high-value customers.
+The following example demonstrates how to create an audience using the Recency, Frequency, and Monetization (RFM) model. This example segments customers based on their recency, frequency, and monetization scores to identify key groups, such as loyal customers, new customers, and high-value customers.
 
 <!--  Q) Since the focus of this document is on external audiences, or should I just include this temporarily? We could simply provide a link to the separate RFM modeling documentation rather than including the full example here. (Add link to new RFM document when it is published) -->
 
-The following query creates a schema for the RFM audience. The statement sets up fields to hold customer information such as `userId`, `days_since_last_purchase`, `orders`, `total_revenue`, `recency`, `frequency`, `monetization`, and an `rfm_model`.
+The following query creates a schema for the RFM audience. The statement sets up fields to hold customer information such as `userId`, `days_since_last_purchase`, `orders`, `total_revenue`, and so on.
 
 ```sql
 CREATE Audience adls_rfm_profile
