@@ -208,7 +208,7 @@ The following table outlines the data types created as per the [!DNL HL7 FHIR Re
 | [[!UICONTROL Person]](../../data-types/healthcare/person.md) | Information on a generic person record. |
 | [[!UICONTROL Quantity]](../../data-types/healthcare/quantity.md) | A measured or measurable amount. |
 | [[!UICONTROL Range]](../../data-types/healthcare/range.md) | A set of values bound by low and high values. |
-| [[!UICONTROL Ratio]](../../data-types/healthcare/ratio.md) | A ratio of two [[!UICONTROL Quantity]](../healthcare/quantity.md) values through a numerator and a denominator. |
+| [[!UICONTROL Ratio]](../../data-types/healthcare/ratio.md) | A ratio of two [[!UICONTROL Quantity]](../../data-types/healthcare/quantity.md) values through a numerator and a denominator. |
 | [[!UICONTROL Reference]](../../data-types/healthcare/reference.md) | A reference from one resource to another. |
 | [[!UICONTROL Repeat]](../../data-types/healthcare/repeat.md) | A set of rules that describe when an event is scheduled. |
 | [[!UICONTROL Simple Quantity]](../../data-types/healthcare/simple-quantity.md) | A measured or measurable amount. |
