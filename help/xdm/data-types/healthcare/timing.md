@@ -9,7 +9,6 @@ hidefromtoc: yes
 
 [!UICONTROL Timing] is a standard Experience Data Model (XDM) data type that describes a timing schedule that provides information on an event that may occur multiple times. This data type is created as per the HL7 FHIR Release 5 specifications.
 
-<!-- This screenshot will need to be updated once the UI bug hiding the repeat and code fields is fixed. -->
 ![Timing data type structure](../../images/data-types/healthcare/timing.png)
 
 | Display Name | Property | Data type | Description |

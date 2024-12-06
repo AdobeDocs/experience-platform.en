@@ -1,11 +1,13 @@
 ---
-title: Healthcare V2 Use Cases
-description: Learn about some common healthcare use cases and the best classes and schema field groups to use.
+title: Healthcare Data Model V2
+description: Learn about some common healthcare use cases and the best classes, related field groups, and datatypes to use.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
 hidefromtoc: yes
 ---
-# [!UICONTROL Healthcare] V2 use cases
+# [!UICONTROL Healthcare] Data Model V2
+
+## Field groups and classes {#field-groups}
 
 The following table outlines the recommended classes and schema field groups for several common healthcare use cases.
 
@@ -182,3 +184,33 @@ The following table outlines the recommended classes and schema field groups for
     </tr>
   </tbody>
 </table>
+
+## Data types {#data-types}
+
+The following table outlines the data types created as per the HL7 FHIR Release 5 specifications.
+
+| Name | Description | 
+| --- | --- |
+| [[!UICONTROL Address]](../../data-types/healthcare/address.md) | Describes an address expressed using postal conventions (as opposed to GPS or other location definition formats). |
+| [[!UICONTROL Annotation]](../../data-types/healthcare/annotation.md) | A text node with attribution to the author. |
+| [[!UICONTROL Availability]](../../data-types/healthcare/availability.md) | Availability data for an item. |
+| [[!UICONTROL Codeable Concept]](../../data-types/healthcare/codeable-concept.md) | A reference from one resource to another. |
+| [[!UICONTROL Codeable Reference]](../../data-types/healthcare/codeable-reference.md) | A reference to a resource or a concept. |
+| [[!UICONTROL Coding]](../../data-types/healthcare/coding.md) | A reference to a code defined by a terminology system. |
+| [[!UICONTROL Contact Point]](../../data-types/healthcare/contact-point.md) | Contact details for a person. |
+| [[!UICONTROL Dosage]](../../data-types/healthcare/dosage.md) | How the medication is/was taken or should be taken. |
+| [[!UICONTROL Duration]](../../data-types/healthcare/duration.md) | A length of time. |
+| [[!UICONTROL Extended Contact Details]](../../data-types/healthcare/extended-contact-detail.md) | An extended contact's information. |
+| [[!UICONTROL Human Name]](../../data-types/healthcare/human-name.md) | Information about the name of a human or other living entity. |
+| [[!UICONTROL Identifier]](../../data-types/healthcare/identifier.md) | An identifier intended for computation. |
+| [[!UICONTROL Money]](../../data-types/healthcare/money.md) | An amount of economic utility in some recognized currency. |
+| [[!UICONTROL Period]](../../data-types/healthcare/period.md) | A time period defined by a start and end date/time. |
+| [[!UICONTROL Person]](../../data-types/healthcare/person.md) | Information on a generic person record. |
+| [[!UICONTROL Quantity]](../../data-types/healthcare/quantity.md) | A measured or measurable amount. |
+| [[!UICONTROL Range]](../../data-types/healthcare/range.md) | A set of values bound by low and high values. |
+| [[!UICONTROL Ratio]](../../data-types/healthcare/ratio.md) | A ratio of two [[!UICONTROL Quantity]](../healthcare/quantity.md) values through a numerator and a denominator. |
+| [[!UICONTROL Reference]](../../data-types/healthcare/reference.md) | A reference from one resource to another. |
+| [[!UICONTROL Repeat]](../../data-types/healthcare/repeat.md) | A set of rules that describe when an event is scheduled. |
+| [[!UICONTROL Simple Quantity]](../../data-types/healthcare/simple-quantity.md) | A measured or measurable amount. |
+| [[!UICONTROL Timing]](../../data-types/healthcare/timing.md) | Information on an event that may occur multiple times. |
+| [[!UICONTROL Virtual Service Detail]](../../data-types/healthcare/virtual-service-detail.md) | Virtual service contact details. |
