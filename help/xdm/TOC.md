@@ -139,10 +139,7 @@ role: Developer
   * XDM Business Campaign Members {#b2b-campaign-members}
     * [XDM Business Campaign Members Details](./field-groups/b2b-campaign-members/details.md)
   * Medication {#medication}
-    * [Healthcare Medication Dispense](./field-groups/medication/healthcare-medication-dispense.md)
-    * [Healthcare Medication Request](./field-groups/medication/healthcare-medication-request.md)
     * [Healthcare Medication](./field-groups/medication/healthcare-medication.md)
-    * [Healthcare Medication V2](./field-groups/medication/healthcare-medication-v2.md)
   * Plan {#plan}
     * [Healthcare Plan Details](./field-groups/plan/healthcare-plan-details.md)
   * Product {#product}
