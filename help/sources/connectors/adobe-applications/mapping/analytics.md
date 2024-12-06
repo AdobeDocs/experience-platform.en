@@ -22,7 +22,17 @@ Adobe Experience Platform allows you to ingest Adobe Analytics data through the 
 | `video` | `mediaReporting.sessionDetails.name` | string | The ID of the video. |
 | `videoshow` | `mediaReporting.sessionDetails.show` | string | The name of the program or series. The program/series name is only required if the show is part of a series. |
 | (only in ava.e2e rsid: evar8) | mediaReporting.sessionDetails.streamFormat | string | |
-| `videostreamtype` | mediaReporting.sessionDetails.streamType | string | |
+| `videostreamtype` | mediaReporting.sessionDetails.streamType | string | The type of streaming media such as "video" or "audio". |
+| `videoseason` | `mediaReporting.sessionDetails.season` | string | The season number that the show belongs to. This value is only required if the show is part of a series. |
+| `videoepisode` | `mediaReporting.sessionDetails.episode` | string | The number of the episode. |
+| `videogenre` | `mediaReporting.sessionDetails.genre` | string[] | The genre of the video. |
+| video.videoclassificationrating evar17 |
+| video.videoclassificationoriginator evar18 |
+| video.videoclassificationairdate evar19 |
+| video.videoclassificationdigitaldate evar20 |
+| `videosessionid` | `mediaReporting.sessionDetails.ID` | string | An identifier for an instance of a content stream unique to an individual playback. |
+
+
 
 
 
