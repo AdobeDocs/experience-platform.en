@@ -27,8 +27,8 @@ role: Developer
     * [Healthcare V2](./schema/industries/healthcare-v2.md)
     * Classes {#health-care-classes}
       * [Location](./classes/location.md)
-    * Field groups {#health-care-field-groups}
-      * XDM Individual Profile {#healthcare-profile}
+    * Field groups {#health-care-v2-field-groups}
+      * XDM Individual Profile {#health-care-v2-profile}
         * [Healthcare Account](./field-groups/profile/healthcare-account.md)
         * [Healthcare Care Plan](./field-groups/profile/healthcare-care-plan.md)
         * [Healthcare Goal](./field-groups/profile/healthcare-goal.md)
@@ -36,17 +36,17 @@ role: Developer
         * [Healthcare Patient](./field-groups/profile/healthcare-patient.md)
         * [Healthcare Practitioner](./field-groups/profile/healthcare-practioner.md)
         * [Healthcare Schedule](./field-groups/profile/healthcare-schedule.md)
-      * XDM Experience Event {#health-care-event}
+      * XDM Experience Event {#health-care-v2-event}
         * [Healthcare Immunization](./field-groups/event/healthcare-immunization.md)
-      * Location {#health-care-location}
+      * Location {#health-care-v2-location}
         * [Healthcare Location](./field-groups/location/healthcare-location.md)
-      * Medication {#health-care-medication}
+      * Medication {#health-care-v2-medication}
         * [Healthcare Medication Dispense](./field-groups/medication/healthcare-medication-dispense.md)
         * [Healthcare Medication Request](./field-groups/medication/healthcare-medication-request.md)
         * [Healthcare Medication](./field-groups/medication/healthcare-medication-v2.md)
-      * Plans {#health-care-plans}
+      * Plans {#health-care-v2-plans}
         * [Healthcare Coverage](./field-groups/plan/healthcare-coverage.md)
-    * Data Types {#health-care-data-types}
+    * Data Types {#health-care-v2-data-types}
       * [Address](./data-types/healthcare/address.md)
       * [Annotation](./data-types/healthcare/annotation.md)
       * [Availability](./data-types/healthcare/availability.md)

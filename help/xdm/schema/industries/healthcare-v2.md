@@ -187,7 +187,7 @@ The following table outlines the recommended classes and schema field groups for
 
 ## Data types {#data-types}
 
-The following table outlines the data types created as per the HL7 FHIR Release 5 specifications.
+The following table outlines the data types created as per the [!DNL HL7 FHIR Release 5] specifications.
 
 | Name | Description | 
 | --- | --- |
