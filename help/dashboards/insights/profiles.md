@@ -5,7 +5,7 @@ exl-id: f3792076-3e01-4e26-8788-32927202a2e5
 ---
 # Profile insights
 
-The insights derived from the analysis of your data model make your Adobe Real-time Customer Data Platform data more accessible, understandable, and impactful for decision-making.
+The insights derived from the analysis of your data model make your Adobe Real-Time CDP data more accessible, understandable, and impactful for decision-making.
  
 Understand your profile insights by accessing the SQL that powers them, then generate your own insights to further explore your customers and their consumer experiences that make up your profiles. Transform your raw data into new actionable insights by using the existing Real-Time CDP data model SQL as inspiration to create queries for your unique business needs. 
 

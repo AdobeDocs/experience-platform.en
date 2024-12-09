@@ -5,7 +5,7 @@ exl-id: 762a9960-e7a5-4796-80c7-ef745157cc04
 ---
 # Destinations insights
 
-The insights derived from the analysis of your data model make your Adobe Real-time Customer Data Platform data more accessible, understandable, and impactful for decision-making.
+The insights derived from the analysis of your data model make your Adobe Real-Time CDP data more accessible, understandable, and impactful for decision-making.
  
 Understand your destination insights by accessing the SQL that powers them, then generate your own insights to further explore the activation of data from Adobe Experience Platform to your destination platforms. Transform your raw data into new actionable insights by using the existing Real-Time CDP data model SQL as inspiration to create queries for your unique business needs. 
 

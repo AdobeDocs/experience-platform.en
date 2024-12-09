@@ -6,6 +6,10 @@ exl-id: 45e6ef18-a0b7-4bb2-b099-b2a878e96637
 ---
 # [!DNL Phoenix]
 
+>[!WARNING]
+>
+>The [!DNL Phoenix] source will be deprecated at the end of June 2025.
+
 Adobe Experience Platform Sources supports data ingestion from third-party databases such as [[!DNL Phoenix]](https://phoenix.apache.org/index.html). This document provides prerequisite information before connecting your [!DNL Phoenix] account through the [!DNL Flow Service] API or the Experience Platform user interface.
 
 ## IP address allow list
