@@ -31,13 +31,47 @@ Adobe Experience Platform allows you to ingest Adobe Analytics data through the 
 | video.videoclassificationairdate evar19 |
 | video.videoclassificationdigitaldate evar20 |
 | `videosessionid` | `mediaReporting.sessionDetails.ID` | string | An identifier for an instance of a content stream unique to an individual playback. |
+| `videoplayername` | `mediaReporting.sessionDetails.playerName ` | string | The name of the video player. |
+| `videochannel` | `mediaReporting.sessionDetails.channel` | string | The distribution channel from where the content was played. |
+| `videocontenttype` | `mediaReporting.sessionDetails.contentType` | string | The type of stream delivery used for the content. This is automatically set to "Video" for all video views. Recommended values include: VOD, Live, Linear, UGC, DVOD, Radio, Podcast, Audiobook, and Song. |
+| (only in ava.e2e rsid: evar9) |
+| (only in ava.e2e rsid: evar10) |
+| `videonetwork` | `mediaReporting.sessionDetails.network` | string | The network or channel name. |
+| `videofeedtype` | `mediaReporting.sessionDetails.feed` | string | The type of feed. This can either represent actual feed-related data such as "East HD" or "SD", or the source of the feed, such as a URL. |
+| `videosegment` | `mediaReporting.sessionDetails.segment` | string |
+| (only in ava.e2e rsid: event52) | `mediaReporting.sessionDetails.isDownloaded` |
+| N/A | `mediaReporting.sessionDetails.isFederated` |
+| `videostart` | `mediaReporting.sessionDetails.isViewed` | boolean | A boolean value that indicates whether the video has been started or not. This occurs once the user selects the play button and will count even if there are pre-roll ads, buffering, errors, and so on. |
+| `videoplay` | `mediaReporting.sessionDetails.isPlayed` | boolean | A boolean value that indicates if the first frame of the media has started. If the user drops during any ads or buffering time, then the "content start" would not qualify. |
+| `videotime` | `mediaReporting.sessionDetails.timePlayed` | integer | The duration (in seconds) for all events of `type=PLAY` on the main content. |
+| `videocomplete` | `mediaReporting.sessionDetails.isCompleted` | boolean | A boolean value that indicates if a timed media asset was watched to completion. This value does not necessarily mean the viewer has watched the entire video because this value does not account for the viewer potentially skipping ahead. |
+| `videototaltime` | `mediaReporting.sessionDetails.totalTimePlayed` | integer | The total amount of time spent by a user on a specific timed media asset, including time spent watching ads. |
+| `videouniquetimeplayed` | `mediaReporting.sessionDetails.uniqueTimePlayed` | integer | The sum of the unique intervals seen by a user on a timed media asset. In other words, the length of playback intervals viewed multiple times are only counted once. |
+| `videoaverageminuteaudience` | `mediaReporting.sessionDetails.averageMinuteAudience` | number | The average content time spent for a specific media item. In other words, the total content time spent divided by the length for all of the playback sessions. |
+| (only in ava.e2e rsid: event8) | `mediaReporting.sessionDetails.adCount` |
+| (only in ava.e2e rsid: event9) | `mediaReporting.sessionDetails.chapterCount` |
+| `videoprogress10` | `mediaReporting.sessionDetails.hasProgress10` | boolean | A boolean value that indicates whether the playhead of a given video has passed the 10% marker of the total video length. The marker is only counted once, even if seeking backwards. If seeking forward, markers that are skipped are not counted. |
+| `videoprogress25` | `mediaReporting.sessionDetails.hasProgress25` | boolean | A boolean value that indicates whether the playhead of a given video has passed the 25% marker of the total video length. The marker is only counted once, even if seeking backwards. If seeking forward, markers that are skipped are not counted. |
+| `videoprogress50` | `mediaReporting.sessionDetails.hasProgress50` | boolean | A boolean value that indicates whether the playhead of a given video has passed the 50% marker of the total video length. The marker is only counted once, even if seeking backwards. If seeking forward, markers that are skipped are not counted. |
+| `videoprogress75` | `mediaReporting.sessionDetails.hasProgress75` | boolean | A boolean value that indicates whether the playhead of a given video has passed the 75% marker of the total video length. The marker is only counted once, even if seeking backwards. If seeking forward, markers that are skipped are not counted.|
+| `videoprogress95` | `mediaReporting.sessionDetails.hasProgress95` | boolean | A boolean value that indicates whether the playhead of a given video has passed the 95% marker of the total video length. The marker is only counted once, even if seeking backwards. If seeking forward, markers that are skipped are not counted. |
+| (only in ava.e2e rsid: event44) | `mediaReporting.sessionDetails.estimatedStreams` |
+| `videopause` | `mediaReporting.sessionDetails.hasPauseImpactedStreams` | boolean | A boolean value hat indicates if one or more pauses occurred during the playback of a single media item. |
+| `videopausecount` | `mediaReporting.sessionDetails.pauseCount` | integer | The number of pause periods that occurred during playback. |
+| `videopausetime` | `mediaReporting.sessionDetails.pauseTime` | integer | The total duration (in seconds) in which playback was paused by a user. |
+| `videomvpd` | `mediaReporting.sessionDetails.mvpd` | string | An MVPD identifier provided via Adobe authentication. |
+| videoauthorized evar21 |
+| `videodaypart` | `mediaReporting.sessionDetails.dayPart` | Defines the time of the day when the content was broadcast or played. |
+| `videoresume` | `mediaReporting.sessionDetails.hasResume` | boolean | A boolean value that marks each playback that was resumed after more than 30 minutes of buffer, pause, or a stall period. |
+| `videosegmentviews` | `mediaReporting.sessionDetails.hasSegmentView` | boolean | A boolean value that indicates that at least one frame has been viewed. This frame does not have to be the first frame. |
+| `videoaudiolabel` | `mediaReporting.sessionDetails.label` | string | The name of the record label. |
+| `videoaudiostation` | `mediaReporting.sessionDetails.station` | string | The radio station or name on which  the audio is played. | 
+| `videoaudiopublisher` | `mediaReporting.sessionDetails.publisher` | string | The name of the audio content publisher. | 
+| `videosecondssincelastcall` | `mediaReporting.sessionDetails.secondsSinceLastCall` | number | Indicates the amount of time (in seconds) that passed between a user's last known interaction and the moment the session was closed. |
+| `videoadload` | `mediaReporting.sessionDetails.adLoad` | string | The type of ad loaded as defined by your own internal representation. |
+| (only in ava.e2e rsid: evar6) | `mediaReporting.sessionDetails.cdn` | string |
 
-
-
-
-
-
-
+{style="table-layout:auto"}
 
 ## Direct mapping fields
 
