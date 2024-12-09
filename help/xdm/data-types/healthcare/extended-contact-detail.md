@@ -4,6 +4,7 @@ description: Learn about the Extended Contact Detail Experience Data Model (XDM)
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
 hidefromtoc: yes
+exl-id: 4ac9b3d7-acc8-4a82-b34f-ec63a8bf12e0
 ---
 # [!UICONTROL Extended Contact Detail] data type
 

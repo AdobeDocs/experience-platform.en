@@ -4,6 +4,7 @@ description: Learn about the Timing Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
 hidefromtoc: yes
+exl-id: e1bc16ed-4dd8-4316-b3c8-88d49d393859
 ---
 # [!UICONTROL Timing] data type
 

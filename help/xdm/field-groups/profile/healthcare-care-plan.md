@@ -4,6 +4,7 @@ description: Learn about the Care Plan schema field group.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
 hidefromtoc: yes
+exl-id: e6cbf44f-6c39-42bd-b083-a975860a64db
 ---
 # [!UICONTROL Care Plan] schema field group
 

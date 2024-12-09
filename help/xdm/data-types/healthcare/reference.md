@@ -4,6 +4,7 @@ description: Learn about the Reference Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
 hidefromtoc: yes
+exl-id: eb724dbb-2918-43b5-8e50-c8aabfe6e96c
 ---
 # [!UICONTROL Reference] data type
 

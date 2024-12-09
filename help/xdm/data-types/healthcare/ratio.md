@@ -4,6 +4,7 @@ description: Learn about the Ratio Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
 hidefromtoc: yes
+exl-id: 8b530af6-0e64-4c30-a7d7-eb221b0b6181
 ---
 # [!UICONTROL Ratio] data type
 

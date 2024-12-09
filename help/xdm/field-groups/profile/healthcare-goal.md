@@ -4,6 +4,7 @@ description: Learn about the Goal schema field group.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
 hidefromtoc: yes
+exl-id: 87715274-cc9d-41da-9ca7-1634903b4e8f
 ---
 # [!UICONTROL Goal] schema field group
 

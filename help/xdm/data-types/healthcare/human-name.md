@@ -4,6 +4,7 @@ description: Learn about the Human Name Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
 hidefromtoc: yes
+exl-id: 5dd6fda4-c076-4c34-bdd9-259203b6ea73
 ---
 # [!UICONTROL Human Name] data type
 

@@ -4,6 +4,7 @@ description: Learn about some common healthcare use cases and the best classes, 
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
 hidefromtoc: yes
+exl-id: a796b58b-b36f-4277-870b-0d3939af8061
 ---
 # [!UICONTROL Healthcare] Data Model V2
 

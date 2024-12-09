@@ -4,6 +4,7 @@ description: Learn about the Person Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
 hidefromtoc: yes
+exl-id: a19823f2-25d0-45cb-86f4-7816041b27f9
 ---
 # [!UICONTROL Person] data type
 

@@ -4,6 +4,7 @@ description: Learn about the Dosage Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
 hidefromtoc: yes
+exl-id: 56eda38b-a7f7-40da-af08-73cfe9db0c7e
 ---
 # [!UICONTROL Dosage] data type
 

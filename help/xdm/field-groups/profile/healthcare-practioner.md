@@ -4,6 +4,7 @@ description: Learn about the Practioner schema field group.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
 hidefromtoc: yes
+exl-id: 71210303-a3dd-458c-9c8a-ac8b546c2b1d
 ---
 # [!UICONTROL Practioner] schema field group
 
