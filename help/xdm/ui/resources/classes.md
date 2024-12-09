@@ -14,7 +14,7 @@ exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
 
 In Adobe Experience Platform, a schema's class defines the behavioral aspects of the data that the schema will contain (record or time-series). In addition to this, classes describe the smallest number of common properties that all schemas based on that class would need to include and provide a way for multiple compatible datasets to be merged.
 
-Adobe provides several standard ("core") Experience Data Model (XDM) classes, including XDM Individual Profile and XDM ExperienceEvent. In addition to these core classes, you can also create your own custom classes to describe more specific use cases for your organization.
+Adobe provides several standard ("core") Experience Data Model (XDM) classes, including [XDM Individual Profile](../../classes/individual-profile.md) and [XDM ExperienceEvent](../../classes/experienceevent.md). In addition to these core classes, you can also create your own custom classes to describe more specific use cases for your organization.
 
 This document provides an overview of how to create, edit, and manage custom classes in the Experience Platform UI.
 
@@ -28,6 +28,8 @@ While not required for this guide, it is recommended that you also follow the tu
 
 In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation to open the [!UICONTROL Schemas] workspace, then select the **[!UICONTROL Classes]** tab. A list of available classes are displayed. 
 
+<!-- ADD SCREENSHOT HERE -->
+
 ## Filter classes {#filter}
 
 The list of classes are automatically filtered based on how they were created. The default setting displays the classes defined by Adobe. You can also filter the list to show those created by your organization. Select the radio button to choose between the [!UICONTROL Standard] and [!UICONTROL Custom] options. The [!UICONTROL Standard] option shows entities created by Adobe and the [!UICONTROL Custom] option displays entities created within your organization.
@@ -40,16 +42,25 @@ The list of classes are automatically filtered based on how they were created. T
 
 ## Create a new class {#create}
 
-There are two methods to create a class in the Platform UI. From any tab in the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]**, or from the [!UICONTROL Classes] tab select **[!UICONTROL Create class]**. 
+There are two methods to create a class in the Platform UI, through **[!UICONTROL Create class]** or **[!UICONTROL Create schema]**.
 
+<!-- From any tab in the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]**, or from the [!UICONTROL Classes] tab select **[!UICONTROL Create class]**.  -->
+
+### Create class
+
+Select **[!UICONTROL Create class]** from the [!UICONTROL Classes] tab in the [!UICONTROL Schemas] workspace.
+
+<!-- UPDATE SCREENSHOT -->
 ![The [!UICONTROL Classes] tab of the [!UICONTROL Schemas] workspace with [!UICONTROL Create schema] and [!UICONTROL Create class] highlighted](../../images/ui/resources/classes/create-class-methods.png)
 
-If you select **[!UICONTROL Create class]**, the [!UICONTROL Create class] dialog appears. Enter a [!UICONTROL Display name] and [!UICONTROL Description] for your class and choose the intended behavior of your class with the radio buttons. Classes can be of the type, record series, or time series. Select **[!UICONTROL Create]** to confirm your choices and return to the [!UICONTROL Classes] tab.
+Select **[!UICONTROL Create class]** and the [!UICONTROL Create class] dialog appears. Enter a [!UICONTROL Display name] and [!UICONTROL Description] for your class and choose the intended behavior of your class with the radio buttons. Classes can be of the type [!UICONTROL Record], or [!UICONTROL Time-series]. Select **[!UICONTROL Create]** to confirm your choices and return to the [!UICONTROL Classes] tab.
 
+<!-- UPDATE SCREENSHOT -->
 ![The [!UICONTROL Create class] dialog with [!UICONTROL Create] highlighted.](../../images/ui/resources/classes/create-class-dialog.png)
 
 The class you have created is available and listed in the [!UICONTROL Classes] view.
 
+<!-- UPDATE SCREENSHOT -->
 ![The [!UICONTROL Classes] tab of the [!UICONTROL Schemas] workspace with the recently created class highlighted.](../../images/ui/resources/classes/new-class-listing.png)
 
 ### Create or edit a class {#create-or-edit}
