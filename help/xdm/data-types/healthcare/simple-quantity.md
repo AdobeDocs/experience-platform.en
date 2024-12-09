@@ -4,6 +4,7 @@ description: Learn about the Simple Quantity Experience Data Model (XDM) data ty
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
 hidefromtoc: yes
+exl-id: 92d3d6a8-1d0f-43a4-a93f-8df79605c4e6
 ---
 # [!UICONTROL Simple Quantity] data type
 

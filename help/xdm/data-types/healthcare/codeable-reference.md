@@ -4,6 +4,7 @@ description: Learn about the Codeable Reference Experience Data Model (XDM) data
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
 hidefromtoc: yes
+exl-id: 5ac4bc82-3c8e-4622-8a4e-c954bd6e6411
 ---
 # [!UICONTROL Codeable Reference] data type
 

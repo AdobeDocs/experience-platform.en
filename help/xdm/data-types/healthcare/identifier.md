@@ -4,6 +4,7 @@ description: Learn about the Identifier Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
 hidefromtoc: yes
+exl-id: 0664f52d-bea6-4aa1-b2a5-de0bd6d5edd9
 ---
 # [!UICONTROL Identifier] data type
 

@@ -4,6 +4,7 @@ description: Learn about the Medication Request schema field group.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
 hidefromtoc: yes
+exl-id: 8502380f-9557-4ca6-84bc-65010dfc6066
 ---
 # [!UICONTROL Medication Request] schema field group
 

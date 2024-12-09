@@ -4,6 +4,7 @@ description: Learn about the Range Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
 hidefromtoc: yes
+exl-id: 66f8b574-04d9-435f-8743-4ff89c4c0079
 ---
 # [!UICONTROL Range] data type
 

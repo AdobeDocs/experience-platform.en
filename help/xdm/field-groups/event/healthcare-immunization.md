@@ -4,6 +4,7 @@ description: Learn about the Immunization schema field group.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
 hidefromtoc: yes
+exl-id: a392e26b-7631-4f54-b9ad-cc4586673ac5
 ---
 # [!UICONTROL Immunization] schema field group
 
@@ -95,4 +96,3 @@ For more details on the field group, refer to the public XDM repository:
 | [!UICONTROL Manifestation] | `manifestation` | [[!UICONTROL Codeable Reference]](../../data-types/healthcare/codeable-concept.md) | Additional information on the reaction. |
 | [!UICONTROL Date] | `date`| DateTime | When the reaction started. |
 | [!UICONTROL Reported] | `reported` | String | Indicates whether the reaction was self-reported. |
-

@@ -4,6 +4,7 @@ description: Learn about the Virtual Service Detail Experience Data Model (XDM) 
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
 hidefromtoc: yes
+exl-id: bde7363c-43b7-402d-96b2-7aa0160cd2ea
 ---
 # [!UICONTROL Virtual Service Detail] data type
 

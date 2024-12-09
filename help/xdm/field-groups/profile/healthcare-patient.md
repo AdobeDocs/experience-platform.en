@@ -4,6 +4,7 @@ description: Learn about the Patient schema field group.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
 hidefromtoc: yes
+exl-id: eba7deb3-4785-4d05-86ef-0f6691fcd2c5
 ---
 # [!UICONTROL Patient] schema field group
 

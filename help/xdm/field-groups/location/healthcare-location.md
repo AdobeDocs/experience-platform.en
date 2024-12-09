@@ -4,6 +4,7 @@ description: Learn about the Location schema field group.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
 hidefromtoc: yes
+exl-id: 99831093-89da-4329-be29-c130c1d48f63
 ---
 # [!UICONTROL Location] schema field group
 

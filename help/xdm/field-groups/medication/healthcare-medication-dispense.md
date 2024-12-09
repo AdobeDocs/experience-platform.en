@@ -4,6 +4,7 @@ description: Learn about the Medication Dispense schema field group.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
 hidefromtoc: yes
+exl-id: e897c4e0-23ad-4d79-834f-cfbe2dbec771
 ---
 # [!UICONTROL Medication Dispense] schema field group
 

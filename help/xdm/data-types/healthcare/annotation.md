@@ -4,6 +4,7 @@ description: Learn about the Annotation Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
 hidefromtoc: yes
+exl-id: f46b5fb6-d64a-4a37-91f6-b470599d9130
 ---
 # [!UICONTROL Annotation] data type
 

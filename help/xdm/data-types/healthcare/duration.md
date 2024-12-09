@@ -4,6 +4,7 @@ description: Learn about the Duration Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
 hidefromtoc: yes
+exl-id: 01aac0d0-0503-4f8b-a306-cf3c187a76e0
 ---
 # [!UICONTROL Duration] data type
 
