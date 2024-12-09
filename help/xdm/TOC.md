@@ -23,30 +23,30 @@ role: Developer
     * [Healthcare](./schema/industries/healthcare.md)
     * [Telecommunications](./schema/industries/telecom.md)
     * [Travel and hospitality](./schema/industries/travel-hospitality.md)
-  * Health Care Data Model V2 {#health-care-data-model-v2}
-    * [Healthcare V2](./schema/industries/healthcare-v2.md)
-    * Classes {#health-care-classes}
+  * Healthcare Data Model V2 {#healthcare}
+    * [Healthcare V2](./schema/healthcare-v2.md)
+    * Classes {#classes}
       * [Location](./classes/location.md)
-    * Field groups {#health-care-v2-field-groups}
-      * XDM Individual Profile {#health-care-v2-profile}
-        * [Healthcare Account](./field-groups/profile/healthcare-account.md)
-        * [Healthcare Care Plan](./field-groups/profile/healthcare-care-plan.md)
-        * [Healthcare Goal](./field-groups/profile/healthcare-goal.md)
-        * [Healthcare Organization](./field-groups/profile/healthcare-organization.md)
-        * [Healthcare Patient](./field-groups/profile/healthcare-patient.md)
-        * [Healthcare Practitioner](./field-groups/profile/healthcare-practioner.md)
-        * [Healthcare Schedule](./field-groups/profile/healthcare-schedule.md)
-      * XDM Experience Event {#health-care-v2-event}
-        * [Healthcare Immunization](./field-groups/event/healthcare-immunization.md)
-      * Location {#health-care-v2-location}
-        * [Healthcare Location](./field-groups/location/healthcare-location.md)
-      * Medication {#health-care-v2-medication}
-        * [Healthcare Medication Dispense](./field-groups/medication/healthcare-medication-dispense.md)
-        * [Healthcare Medication Request](./field-groups/medication/healthcare-medication-request.md)
-        * [Healthcare Medication](./field-groups/medication/healthcare-medication-v2.md)
-      * Plans {#health-care-v2-plans}
-        * [Healthcare Coverage](./field-groups/plan/healthcare-coverage.md)
-    * Data Types {#health-care-v2-data-types}
+    * Field groups {#field-groups}
+      * XDM Individual Profile {#profile}
+        * [Account](./field-groups/profile/healthcare-account.md)
+        * [Care Plan](./field-groups/profile/healthcare-care-plan.md)
+        * [Goal](./field-groups/profile/healthcare-goal.md)
+        * [Organization](./field-groups/profile/healthcare-organization.md)
+        * [Patient](./field-groups/profile/healthcare-patient.md)
+        * [Practitioner](./field-groups/profile/healthcare-practioner.md)
+        * [Schedule](./field-groups/profile/healthcare-schedule.md)
+      * XDM Experience Event {#event}
+        * [Immunization](./field-groups/event/healthcare-immunization.md)
+      * Location {#location}
+        * [Location](./field-groups/location/healthcare-location.md)
+      * Medication {#medication}
+        * [Medication Dispense](./field-groups/medication/healthcare-medication-dispense.md)
+        * [Medication Request](./field-groups/medication/healthcare-medication-request.md)
+        * [Medication](./field-groups/medication/healthcare-medication-v2.md)
+      * Plans {#plans}
+        * [Coverage](./field-groups/plan/healthcare-coverage.md)
+    * Data Types {#data-types}
       * [Address](./data-types/healthcare/address.md)
       * [Annotation](./data-types/healthcare/annotation.md)
       * [Availability](./data-types/healthcare/availability.md)
