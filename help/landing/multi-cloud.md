@@ -87,6 +87,7 @@ Choosing between Experience Platform on Azure or AWS depends on several factors 
 * **Business and technical needs**: Assess your organization's requirements and long-term cloud strategy.
 * **Existing infrastructure**: Consider your current cloud infrastructure and integration needs.
 * **Cloud technology reliance**: If your business relies heavily on Microsoft technologies, Azure might be the better fit. If you rely more on Amazon services, AWS could be the better option.
+* **Data residency considerations**: Evaluate the data residency requirements for your organization and ensure the chosen cloud platform offers regions that comply with these regulations.
 
 ## Feature parity {#feature-parity}
 
