@@ -23,6 +23,53 @@ role: Developer
     * [Healthcare](./schema/industries/healthcare.md)
     * [Telecommunications](./schema/industries/telecom.md)
     * [Travel and hospitality](./schema/industries/travel-hospitality.md)
+  * Healthcare Data Model V2 {#healthcare}
+    * [Healthcare V2](./schema/healthcare-v2.md)
+    * Classes {#classes}
+      * [Location](./classes/location.md)
+    * Field groups {#field-groups}
+      * XDM Individual Profile {#profile}
+        * [Account](./field-groups/profile/healthcare-account.md)
+        * [Care Plan](./field-groups/profile/healthcare-care-plan.md)
+        * [Goal](./field-groups/profile/healthcare-goal.md)
+        * [Organization](./field-groups/profile/healthcare-organization.md)
+        * [Patient](./field-groups/profile/healthcare-patient.md)
+        * [Practitioner](./field-groups/profile/healthcare-practioner.md)
+        * [Schedule](./field-groups/profile/healthcare-schedule.md)
+      * XDM Experience Event {#event}
+        * [Immunization](./field-groups/event/healthcare-immunization.md)
+      * Location {#location}
+        * [Location](./field-groups/location/healthcare-location.md)
+      * Medication {#medication}
+        * [Medication Dispense](./field-groups/medication/healthcare-medication-dispense.md)
+        * [Medication Request](./field-groups/medication/healthcare-medication-request.md)
+        * [Medication](./field-groups/medication/healthcare-medication-v2.md)
+      * Plan {#plan}
+        * [Coverage](./field-groups/plan/healthcare-coverage.md)
+    * Data Types {#data-types}
+      * [Address](./data-types/healthcare/address.md)
+      * [Annotation](./data-types/healthcare/annotation.md)
+      * [Availability](./data-types/healthcare/availability.md)
+      * [Codeable Concept](./data-types/healthcare/codeable-concept.md)
+      * [Codeable Reference](./data-types/healthcare/codeable-reference.md)
+      * [Coding](./data-types/healthcare/coding.md)
+      * [Contact Point](./data-types/healthcare/contact-point.md)
+      * [Dosage](./data-types/healthcare/dosage.md)
+      * [Duration](./data-types/healthcare/duration.md)
+      * [Extended Contact Details](./data-types/healthcare/extended-contact-detail.md)
+      * [Human Name](./data-types/healthcare/human-name.md)
+      * [Identifier](./data-types/healthcare/identifier.md)
+      * [Money](./data-types/healthcare/money.md)
+      * [Period](./data-types/healthcare/period.md)
+      * [Person](./data-types/healthcare/person.md)
+      * [Quantity](./data-types/healthcare/quantity.md)
+      * [Range](./data-types/healthcare/range.md)
+      * [Ratio](./data-types/healthcare/ratio.md)
+      * [Reference](./data-types/healthcare/reference.md)
+      * [Repeat](./data-types/healthcare/repeat.md)
+      * [Simple Quantity](./data-types/healthcare/simple-quantity.md)
+      * [Timing](./data-types/healthcare/timing.md)
+      * [Virtual Service](./data-types/healthcare/virtual-service-detail.md)
   * [XDM field dictionary](schema/field-dictionary.md)
 * Classes {#classes}
   * [XDM Individual Profile](./classes/individual-profile.md)
@@ -48,9 +95,9 @@ role: Developer
   * XDM Individual Profile {#profile}
     * [Consents and Preferences](./field-groups/profile/consents.md)
     * [Demographic Details](./field-groups/profile/demographic-details.md)
+    * [Healthcare Member Details](./field-groups/profile/healthcare-member-details.md)
     * [IAB TCF 2.0 Consent](./field-groups/profile/iab.md)
     * [IdentityMap](./field-groups/profile/identitymap.md)
-    * [Healthcare Member Details](./field-groups/profile/healthcare-member-details.md)
     * [Loyalty Details](./field-groups/profile/loyalty-details.md)
     * [Personal Contact Details](./field-groups/profile/personal-contact-details.md)
     * [Profile Partner Enrichment (Sample)](./field-groups/profile/profile-partner-enrichment.md)
