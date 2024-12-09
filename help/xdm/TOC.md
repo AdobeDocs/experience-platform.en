@@ -44,7 +44,7 @@ role: Developer
         * [Medication Dispense](./field-groups/medication/healthcare-medication-dispense.md)
         * [Medication Request](./field-groups/medication/healthcare-medication-request.md)
         * [Medication](./field-groups/medication/healthcare-medication-v2.md)
-      * Plans {#plans}
+      * Plan {#plan}
         * [Coverage](./field-groups/plan/healthcare-coverage.md)
     * Data Types {#data-types}
       * [Address](./data-types/healthcare/address.md)
