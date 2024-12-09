@@ -195,6 +195,7 @@ role: Admin,User
     * Social destinations{#social}
         * [Social destinations overview](./catalog/social/overview.md)
         * [Facebook connection](./catalog/social/facebook.md)
+        * [(Companies) LinkedIn Matched Audiences connection](./catalog/social/linkedin-b2b.md)
         * [LinkedIn Matched Audiences connection](./catalog/social/linkedin.md)
         * [TikTok connection](./catalog/social/tiktok.md)
         * [[!DNL Twitter Custom Audiences] connection](./catalog/social/twitter.md)
