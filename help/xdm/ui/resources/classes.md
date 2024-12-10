@@ -28,7 +28,7 @@ While not required for this guide, it is recommended that you also follow the tu
 
 In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation to open the [!UICONTROL Schemas] workspace, then select the **[!UICONTROL Classes]** tab. A list of available classes are displayed. 
 
-<!-- ADD SCREENSHOT HERE -->
+![The of classes inside the [!UICONTROL Classes] tab of the [!UICONTROL Schemas] workspace [!UICONTROL Classes] and [!UICONTROL Schemas] highlighted.](../../images/ui/resources/classes/available-classes.png)
 
 ## Filter classes {#filter}
 
@@ -50,22 +50,23 @@ There are two methods to create a class in the Platform UI, through **[!UICONTRO
 
 Select **[!UICONTROL Create class]** from the [!UICONTROL Classes] tab in the [!UICONTROL Schemas] workspace.
 
-<!-- UPDATE SCREENSHOT -->
-![The [!UICONTROL Classes] tab of the [!UICONTROL Schemas] workspace with [!UICONTROL Create schema] and [!UICONTROL Create class] highlighted](../../images/ui/resources/classes/create-class-methods.png)
+![The [!UICONTROL Classes] tab of the [!UICONTROL Schemas] workspace with [!UICONTROL Create class] highlighted](../../images/ui/resources/classes/create-class.png)
 
-Select **[!UICONTROL Create class]** and the [!UICONTROL Create class] dialog appears. Enter a [!UICONTROL Display name] and [!UICONTROL Description] for your class and choose the intended behavior of your class with the radio buttons. Classes can be of the type [!UICONTROL Record], or [!UICONTROL Time-series]. Select **[!UICONTROL Create]** to confirm your choices and return to the [!UICONTROL Classes] tab.
+The [!UICONTROL Create class] dialog appears. Enter a [!UICONTROL Display name] and [!UICONTROL Description] for your class and choose the intended behavior of your class with the radio buttons. Classes can be of the type [!UICONTROL Record], or [!UICONTROL Time-series]. Select **[!UICONTROL Create]** to confirm your choices and return to the [!UICONTROL Classes] tab.
 
-<!-- UPDATE SCREENSHOT -->
 ![The [!UICONTROL Create class] dialog with [!UICONTROL Create] highlighted.](../../images/ui/resources/classes/create-class-dialog.png)
 
-The class you have created is available and listed in the [!UICONTROL Classes] view.
+The class you have created is available and listed in the [!UICONTROL Classes] view. 
 
-<!-- UPDATE SCREENSHOT -->
 ![The [!UICONTROL Classes] tab of the [!UICONTROL Schemas] workspace with the recently created class highlighted.](../../images/ui/resources/classes/new-class-listing.png)
 
-### Create or edit a class {#create-or-edit}
+### Create Schema
 
-Alternatively, if you choose to manually create a schema, you can create or edit an existing class as part of that workflow. Select **[!UICONTROL Create schema]** followed by **[!UICONTROL Manual]** in the [!UICONTROL Create a schema] dialog that appears.
+Alternatively, if you may create a class by manually creating a schema. Select **[!UICONTROL Create schema]** from the [!UICONTROL Classes] tab in the [!UICONTROL Schemas] workspace.
+
+![The [!UICONTROL Classes] tab of the [!UICONTROL Schemas] workspace with [!UICONTROL Create schema] highlighted](../../images/ui/resources/classes/create-schema.png)
+
+Select **[!UICONTROL Manual]** in the [!UICONTROL Create a schema] dialog that appears.
 
 >[!NOTE]
 >
@@ -73,39 +74,27 @@ Alternatively, if you choose to manually create a schema, you can create or edit
 
 ![The Create a schema dialog with the workflow options and select highlighted.](../../images/ui/resources/classes/manually-create-a-schema.png)
 
-The schema creation workflow appears. In the [!UICONTROL Schema details] section, select **[!UICONTROL Other]**. A list of available classes appears. From here you can browse and filter pre-existing classes on which to base your new class.
-
->[!NOTE]
->
->Only custom classes defined by your organization can be fully edited and customized. For core classes defined by Adobe, only the display names for their fields can be edited within the context of individual schemas. See the section on [editing display names for schema fields](./schemas.md#display-names) for details.
->
->Once a custom class has been saved and used in data ingestion, only additive changes can be made to it thereafter. See the [rules of schema evolution](../../schema/composition.md#evolution) for more information.
+The schema creation workflow appears. In the [!UICONTROL Schema details] section, select **[!UICONTROL Other]**. A list of available classes appears. Select **[!UICONTROL Create class]**.
 
 ![The [!UICONTROL Create schema] workflow with [!UICONTROL Other] highlighted in the [!UICONTROL Schema details] section.](../../images/ui/resources/classes/other-schema-details.png)
 
-Select a radio button to filter the classes based on whether they are custom or standard classes. You can also filter the available results based on their industry, or search for a specific class using the search field.
+The [!UICONTROL Create class] dialog appears. Enter a [!UICONTROL Display name] and [!UICONTROL Description] for your class and choose the intended behavior of your class with the radio buttons. Classes can be of the type [!UICONTROL Record], or [!UICONTROL Time-series]. Select **[!UICONTROL Create]** to confirm your choices and return to the [!UICONTROL Classes] tab.
 
-![The [!UICONTROL Create schema] workflow with the search bar, [!UICONTROL Custom], and [!UICONTROL Industries] highlighted.](../../images/ui/resources/classes/filter-and-search.png)
+![The [!UICONTROL Create class] dialog with [!UICONTROL Create] highlighted.](../../images/ui/resources/classes/create-class-from-schema.png)
 
-To help you decide on the appropriate class, there are info (![An info icon.](/help/images/icons/info.png)) and preview (![An preview icon.](/help/images/icons/preview.png)) icons for each class. The info icon opens a dialog that provides a description of the class and the industry that it is associated with. The preview icon opens a preview dialog for the class that contains a schema diagram and its properties.
+The class list refreshes in the [!UICONTROL Schema details] section, and your newly created class is automatically selected. Select **[!UICONTROL Next]** to continue creating your schema.
 
-![A preview of the selected class with the schema diagram and class properties highlighted.](../../images/ui/resources/classes/class-preview.png)
+![The [!UICONTROL Schema details] section with the new class selected and [!UICONTROL Next] highlighted.](../../images/ui/resources/classes/select-new-class.png)
 
-Select any row to choose a class, then select **[!UICONTROL Next]** to confirm your choice.
+After you have selected a class, the [!UICONTROL Name and review] section appears. In this section, you provide a name and description to identify your schema. ​The schema's base structure (provided by the class) is shown in the canvas for you to review and verify your selected class and schema structure.
 
-![The [!UICONTROL Create schema] workflow with a class selected from the table of available classes and [!UICONTROL Next] highlighted.](../../images/ui/resources/classes/select-class.png)
+Enter a human-friendly [!UICONTROL Schema display name] in the text field. Next, enter a suitable description to help identify your schema. When you have reviewed your schema structure and are happy with your settings, select **[!UICONTROL Finish]** to create your schema. 
 
-The [!UICONTROL Name and review] section of the workflow appears. In this section, provide a name and description to identify your schema. ​The schema's base structure (provided by the class) is shown in the canvas for you to review and verify your selected class and schema structure.
-
-Enter a short, descriptive, unique, and user-friendly name for the class in the [!UICONTROL Schema display name] text field. Next, enter a suitable description to identify the behavior of the data that the schema defines. When you have reviewed your schema structure and are happy with your settings, select **[!UICONTROL Finish]** to create your schema. 
-
-![The [!UICONTROL Name and review] section of the [!UICONTROL Create schema] workflow with the [!UICONTROL Schema display name], [!UICONTROL Description], and [!UICONTROL Finish] highlighted.](../../images/ui/resources/classes/name-and-review-class.png)
-
-The Schema Editor appears, with the schema's structure shown in the canvas. You can now start [adding fields to the class](#add-fields).
-
-![The Schema Editor with the schema's structure shown in the canvas.](../../images/ui/resources/classes/edit.png)
+![The [!UICONTROL Name and review] section of the [!UICONTROL Create schema] workflow with the [!UICONTROL Schema display name], [!UICONTROL Description], and [!UICONTROL Finish] highlighted.](../../images/ui/resources/classes/schema-details.png)
 
 ## Add fields to a class {#add-fields}
+
+<!-- UPDATE ALL THE SCREENSHOTS HERE -->
 
 Once you have a schema that employs a custom class open in the [!UICONTROL Schema Editor], you can start adding fields to the class. To add a new field, select the **plus (+)** icon next to the schema's name.
 
@@ -128,6 +117,16 @@ See the guide on [defining fields in the UI](../fields/overview.md#define) for s
 ![The newly created schema on the canvas of the Schema Editor, with [!UICONTROL Save] highlighted.](../../images/ui/resources/classes/save.png)
 
 If you have previously created schemas that employ this class, the newly added fields will automatically appear in those schemas.
+
+## Edit a class (#edit-a-class)
+
+<!-- MAYBE MOVE THIS NOTE ???? -->
+
+<!-- >[!NOTE]
+>
+>Only custom classes defined by your organization can be fully edited and customized. For core classes defined by Adobe, only the display names for their fields can be edited within the context of individual schemas. See the section on [editing display names for schema fields](./schemas.md#display-names) for details.
+>
+>Once a custom class has been saved and used in data ingestion, only additive changes can be made to it thereafter. See the [rules of schema evolution](../../schema/composition.md#evolution) for more information. -->
 
 ## Change the class of a schema {#schema}
 

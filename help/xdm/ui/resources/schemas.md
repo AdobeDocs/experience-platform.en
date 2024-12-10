@@ -43,15 +43,45 @@ The [!UICONTROL Create schema] workflow appears. You can choose a base class for
 
 ![The [!UICONTROL Create schema] workflow with the three class options and [!UICONTROL Next] highlighted.](../../images/ui/resources/schemas/schema-class-options.png)
 
+When choosing **[!UICONTROL Other]**, a list of available classes appears. From here you can browse and filter pre-existing classes.
+
+<!-- FIX SCREENSHOT -->
+
+![The [!UICONTROL Create schema] workflow with [!UICONTROL Other] highlighted in the [!UICONTROL Schema details] section.](../../images/ui/resources/classes/other-schema-details.png)
+
+Select a radio button to filter the classes based on whether they are custom or standard classes. You can also filter the available results based on their industry, or search for a specific class using the search field.
+
+<!-- FIX SCREENSHOT -->
+
+![The [!UICONTROL Create schema] workflow with the search bar, [!UICONTROL Custom], and [!UICONTROL Industries] highlighted.](../../images/ui/resources/classes/filter-and-search.png)
+
+To help you decide on the appropriate class, there are info (![An info icon.](/help/images/icons/info.png)) and preview (![An preview icon.](/help/images/icons/preview.png)) icons for each class. The info icon opens a dialog that provides a description of the class and the industry that it is associated with. 
+
+<!-- FIX SCREENSHOT -->
+
+![The info icon and tooltip of the selected class highlighted.](../../images/ui/resources/classes/class-info.png)
+
+The preview icon opens a preview dialog for the class that contains a schema diagram and its properties.
+
+<!-- FIX SCREENSHOT -->
+
+![A preview of the selected class with the schema diagram and class properties.](../../images/ui/resources/classes/class-preview.png)
+
+Select any row to choose a class, then select **[!UICONTROL Next]** to confirm your choice.
+
+<!-- FIX SCREENSHOT -->
+
+![The [!UICONTROL Create schema] workflow with a class selected from the table of available classes and [!UICONTROL Next] highlighted.](../../images/ui/resources/classes/select-class.png)
+
 After you have selected a class, the [!UICONTROL Name and review] section appears. In this section, you provide a name and description to identify your schema. ​The schema's base structure (provided by the class) is shown in the canvas for you to review and verify your selected class and schema structure.
 
 Enter a human-friendly [!UICONTROL Schema display name] in the text field. Next, enter a suitable description to help identify your schema. When you have reviewed your schema structure and are happy with your settings, select **[!UICONTROL Finish]** to create your schema. 
 
 ![The [!UICONTROL Name and review] section of the [!UICONTROL Create schema] workflow with the [!UICONTROL Schema display name], [!UICONTROL Description], and [!UICONTROL Finish] highlighted.](../../images/ui/resources/schemas/name-and-review.png)
 
-The [!UICONTROL Schema] [!UICONTROL Browse] tab appears. Your recently created schema is now listed in the Schema Library and available to edit in the the [!DNL Schema Editor].
+The Schema Editor appears, with the schema's structure shown in the canvas. If desired, you can now start [adding fields to the class](../../ui/resources/classes.md#add-fields).
 
-![The Schemas workspace Browse tab displaying your recently created schema.](../../images/ui/resources/schemas/example-schema.png)
+![The Schema Editor with the schema's structure shown in the canvas.](../../images/ui/resources/classes/edit.png)
 
 ## Edit an existing schema {#edit}
 
@@ -68,6 +98,8 @@ To edit an existing schema, select the **[!UICONTROL Browse]** tab, and then sel
 >You can use the workspace's search and filtering capabilities to help find the schema easier. See the guide on [exploring XDM resources](../explore.md) for more information.
 
 Once you select a schema, the [!DNL Schema Editor] appears with the schema's structure shown in the canvas. You can now [add field groups](#add-field-groups) to the schema (or [add individual fields](#add-individual-fields) from those groups), [edit field display names](#display-names), or [edit existing custom field groups](./field-groups.md#edit) if the schema employs any.
+
+<!-- ADD SCREENSHOT HERE ?? -->
 
 ## More actions {#more}
 
