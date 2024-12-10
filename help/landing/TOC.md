@@ -65,6 +65,8 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
     * [Configure an Azure Key Vault](./governance-privacy-security/customer-managed-keys/azure-key-vault-config.md)
     * [Use the API to set up CMK](./governance-privacy-security/customer-managed-keys/api-set-up.md)
     * [Use the UI to set up CMK](./governance-privacy-security/customer-managed-keys/ui-set-up.md)
+  * Key Management Service {#key-management-service}
+    * [Key Management Service](./governance-privacy-security/key-management-service/overview.md)
 * License usage and guardrails {#license}
   * [Data management license entitlement best practices](./license-usage-and-guardrails/data-management-best-practices.md)    
   * [License usage dashboard](./license-usage-and-guardrails/license-usage-dashboard.md)
