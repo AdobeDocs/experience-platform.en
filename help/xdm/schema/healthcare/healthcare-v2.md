@@ -77,7 +77,7 @@ The following table outlines the recommended classes and schema field groups for
       </td>
     </tr>
     <tr>
-      <td><a href="./field-groups/location.md'">Location</a></td>
+      <td><a href="./field-groups/location.md">Location</a></td>
       <td>
         <li><a href="./classes/location.md">Location</a></li>
       </td>
