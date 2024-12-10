@@ -44,8 +44,6 @@ The list of classes are automatically filtered based on how they were created. T
 
 There are two methods to create a class in the Platform UI, through **[!UICONTROL Create class]** or **[!UICONTROL Create schema]**.
 
-<!-- From any tab in the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]**, or from the [!UICONTROL Classes] tab select **[!UICONTROL Create class]**.  -->
-
 ### Create class
 
 Select **[!UICONTROL Create class]** from the [!UICONTROL Classes] tab in the [!UICONTROL Schemas] workspace.
