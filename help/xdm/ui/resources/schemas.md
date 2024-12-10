@@ -31,7 +31,7 @@ In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in 
 
 The [!UICONTROL Create a schema] dialog appears. In this dialog, you can choose to either manually create a schema by adding fields and field groups, or you can upload a CSV file and use ML algorithms to generate a schema. Select a schema creation workflow from the dialog.
 
-![The Create a schema dialog with the workflow options and select highlighted.](../../images/tutorials/create-schema/create-a-schema-dialog.png)
+![The Create a schema dialog with the workflow options and select highlighted.](../../images/ui/resources/schemas/create-a-schema-dialog.png)
 
 ### [!BADGE Beta]{type=Informative} Manual or ML-assisted schema creation {#manual-or-assisted}
 
@@ -71,7 +71,7 @@ Enter a human-friendly [!UICONTROL Schema display name] in the text field. Next,
 
 The Schema Editor appears, with the schema's structure shown in the canvas. If desired, you can now start [adding fields to the class](../../ui/resources/classes.md#add-fields).
 
-![The Schema Editor with the schema's structure shown in the canvas.](../../images/ui/resources/classes/edit.png)
+![The Schema Editor with the schema's structure shown in the canvas.](../../images/ui/resources/schemas/edit.png)
 
 ## Edit an existing schema {#edit}
 
@@ -88,8 +88,6 @@ To edit an existing schema, select the **[!UICONTROL Browse]** tab, and then sel
 >You can use the workspace's search and filtering capabilities to help find the schema easier. See the guide on [exploring XDM resources](../explore.md) for more information.
 
 Once you select a schema, the [!DNL Schema Editor] appears with the schema's structure shown in the canvas. You can now [add field groups](#add-field-groups) to the schema (or [add individual fields](#add-individual-fields) from those groups), [edit field display names](#display-names), or [edit existing custom field groups](./field-groups.md#edit) if the schema employs any.
-
-<!-- ADD SCREENSHOT HERE ?? -->
 
 ## More actions {#more}
 
