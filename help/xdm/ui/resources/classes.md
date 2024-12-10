@@ -94,7 +94,7 @@ Enter a human-friendly [!UICONTROL Schema display name] in the text field. Next,
 
 ## Add fields to a class {#add-fields}
 
-Once you have a schema that employs a custom class open in the [!UICONTROL Schema Editor], you can start adding fields to the class. To add a new field, select the **plus (+)** icon next to the schema's name.
+Once you have a schema that employs a custom class open in the Schema Editor, you can start adding fields to the class. To add a new field, select the **plus (+)** icon next to the schema's name.
 
 >[!IMPORTANT]
 >
@@ -108,7 +108,7 @@ Once you have a schema that employs a custom class open in the [!UICONTROL Schem
 
 An **[!UICONTROL Untitled Field]** placeholder appears in in the canvas, and the right rail updates to show controls to configure the field's properties. Under **[!UICONTROL Assign to]**, select **[!UICONTROL Class]**.
 
-![An untitled field in the canvas of the schema editor with the Assign to [!UICONTROL Class] field property selected and highlighted.](../../images/ui/resources/classes/assign-to-class.png)
+![An untitled field in the canvas of the Schema Editor with the Assign to [!UICONTROL Class] field property selected and highlighted.](../../images/ui/resources/classes/assign-to-class.png)
 
 See the guide on [defining fields in the UI](../fields/overview.md#define) for specific steps on how to configure and add the field to the class. Continue to add as many fields as required to the class. When finished, select **[!UICONTROL Save]** to save both the schema and the class.
 
@@ -118,15 +118,32 @@ If you have previously created schemas that employ this class, the newly added f
 
 ## Edit a class (#edit-a-class)
 
-You can edit an existing class by editing an existing Schema that extends the class, or through the manually creating a schema workflow.
-
-<!-- MAYBE MOVE THIS NOTE ???? -->
-
-<!-- >[!NOTE]
+>[!NOTE]
 >
 >Only custom classes defined by your organization can be fully edited and customized. For core classes defined by Adobe, only the display names for their fields can be edited within the context of individual schemas. See the section on [editing display names for schema fields](./schemas.md#display-names) for details.
 >
->Once a custom class has been saved and used in data ingestion, only additive changes can be made to it thereafter. See the [rules of schema evolution](../../schema/composition.md#evolution) for more information. -->
+>Once a custom class has been saved and used in data ingestion, only additive changes can be made to it thereafter. See the [rules of schema evolution](../../schema/composition.md#evolution) for more information.
+
+You can edit a class through the schemas workflow, either by editing an existing schema that extends the class or by manually creating a schema. It is not possible to directly edit a class. From inside the [!UICONTROL Browse] tab in the [!UICONTROL Schemas] workspace, you can either select an existing class or **[!UICONTROL Create a schema]**.
+
+![The Schema Editor with an existing class and the [!UICONTROL Create a schema] highlighted.](../../images/ui/resources/classes/edit-class-options.png)
+
+If you choose to create a new schema, see the section on [creating a schema](#create-schema) for details. Once you've finished creating the schema, or after selecting an existing schema, the Schema Editor will appear. To update an existing class field, select the field. The existing information will appear in the right rail. Ensure the [!UICONTROL Assign to]
+option [!UICONTROL Class] is selected or your updates won't affect the class. 
+
+![The Schema Editor with a field selected and highlighted, and the right rail exposed, highlighting [!UICONTROL Assign to].](../../images/ui/resources/classes/edit-existing-field.png)
+
+Make any changes to the field, scrolling down in the right rail to select **[!UICONTROL Apply]** to save your changes. 
+
+>[!IMPORTANT]
+>
+> Any updated you make to fields will be applied in all schemas that employ that class, following the [rules of schema evolution](../../schema/composition.md#evolution).
+
+![The Schema Editor with a field selected and the right rail exposed, highlighting [!UICONTROL Apply].](../../images/ui/resources/classes/save-changes.png)
+
+Add a new fields, follow the [add fields to a class](#add-fields-to-a-class) guide. When finished, select **[!UICONTROL Save]** to save both the schema and the class. 
+
+![The Schema Editor with [!UICONTROL Save] highlighted.](../../images/ui/resources/classes/save-schema.png)
 
 ## Change the class of a schema {#schema}
 
