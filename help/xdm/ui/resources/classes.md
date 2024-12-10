@@ -94,8 +94,6 @@ Enter a human-friendly [!UICONTROL Schema display name] in the text field. Next,
 
 ## Add fields to a class {#add-fields}
 
-<!-- UPDATE ALL THE SCREENSHOTS HERE -->
-
 Once you have a schema that employs a custom class open in the [!UICONTROL Schema Editor], you can start adding fields to the class. To add a new field, select the **plus (+)** icon next to the schema's name.
 
 >[!IMPORTANT]
@@ -110,7 +108,7 @@ Once you have a schema that employs a custom class open in the [!UICONTROL Schem
 
 An **[!UICONTROL Untitled Field]** placeholder appears in in the canvas, and the right rail updates to show controls to configure the field's properties. Under **[!UICONTROL Assign to]**, select **[!UICONTROL Class]**.
 
-![An untitled field in the canvas of the schema editor with the Assign to Class field property selected and highlighted.](../../images/ui/resources/classes/assign-to-class.png)
+![An untitled field in the canvas of the schema editor with the Assign to [!UICONTROL Class] field property selected and highlighted.](../../images/ui/resources/classes/assign-to-class.png)
 
 See the guide on [defining fields in the UI](../fields/overview.md#define) for specific steps on how to configure and add the field to the class. Continue to add as many fields as required to the class. When finished, select **[!UICONTROL Save]** to save both the schema and the class.
 
@@ -119,6 +117,8 @@ See the guide on [defining fields in the UI](../fields/overview.md#define) for s
 If you have previously created schemas that employ this class, the newly added fields will automatically appear in those schemas.
 
 ## Edit a class (#edit-a-class)
+
+You can edit an existing class by editing an existing Schema that extends the class, or through the manually creating a schema workflow.
 
 <!-- MAYBE MOVE THIS NOTE ???? -->
 
