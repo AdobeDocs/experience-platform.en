@@ -58,9 +58,9 @@ The class you have created is available and listed in the [!UICONTROL Classes] v
 
 ![The [!UICONTROL Classes] tab of the [!UICONTROL Schemas] workspace with the recently created class highlighted.](../../images/ui/resources/classes/new-class-listing.png)
 
-### Create Schema
+### Create schema
 
-Alternatively, if you may create a class by manually creating a schema. Select **[!UICONTROL Create schema]** from the [!UICONTROL Classes] tab in the [!UICONTROL Schemas] workspace.
+Alternatively, you can create a class by manually creating a schema. Select **[!UICONTROL Create schema]** from the [!UICONTROL Classes] tab in the [!UICONTROL Schemas] workspace.
 
 ![The [!UICONTROL Classes] tab of the [!UICONTROL Schemas] workspace with [!UICONTROL Create schema] highlighted](../../images/ui/resources/classes/create-schema.png)
 
