@@ -91,7 +91,7 @@ Next, select the [!DNL Regionality] setting. You must select **[!DNL Single-Regi
 >
 >AWS enforces region restrictions for KMS keys. This means that the key must be in the same region as your Adobe account. Adobe can only access KMS keys located within your account's region. Ensure that the region you select matches the region of your Adobe single-tenant account.
 
-![]()
+![PLACEHOLDER]()
 
 Select **[!DNL Next]** to proceed onto step two.
 
