@@ -14,7 +14,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 **Fixed and improvements**
 
-- Updated @adobe/aep-rules-engine to require a minimum of v2.0.3.
+- Resolved a dependency issue related to [Adobe Experience Platform Rules Engine](https://github.com/adobe/aepsdk-rulesengine-typescript/), which was causing errors in some customer integrations. The Web SDK now requires [Adobe Experience Platform Rules Engine](https://github.com/adobe/aepsdk-rulesengine-typescript/) version 2.0.3 or later.
 
 ## Version 2.24.0 - October 31, 2024
 
