@@ -73,6 +73,67 @@ Adobe Experience Platform allows you to ingest Adobe Analytics data through the 
 
 {style="table-layout:auto"}
 
+## Advertising
+
+| Data feed | XDM field path | Data type | Description | 
+| --- | --- | --- | --- |
+| `videoad` | `mediaReporting.advertisingDetails.name` | string | The name of the ad. In reporting, "Ad Name" is the classification and "Ad Name (variable)" is the eVar. |
+| `videoadinpod` | `mediaReporting.advertisingDetails.podPosition` | integer  | The index of the ad inside the parent ad start. For example, the first ad has index 0 and the second ad has index 1. |
+| `videoadlength` | `advertising.adAssetReference._xmpDM.duration` | integer  | The length of the video ad, measured in seconds. |
+| `videoadplayername` | `mediaReporting.advertisingDetails.playerName` | string | The name of the player used to render the ad. |
+| (only in ava.e2e rsid: evar11) |
+| (only in ava.e2e rsid: event45) |
+| `videoadpod` | `mediaReporting.advertisingPodDetails.ID` | string | The ID of the ad break. |
+| `videoadname` | `mediaReporting.advertisingDetails.friendlyName` | string | The friendly (human-readable) name of the ad break. |
+| `videoadadvertiser` | `mediaReporting.advertisingDetails.advertiser` | string | The company or brand whose product is featured in the ad. |
+| `videoadcampaign` | `mediaReporting.advertisingDetails.campaignID` | string | The ID of the ad campaign. |
+| adclassificationcreative evar22 |
+| (only in ava.e2e rsid: evar12) |
+| (only in ava.e2e rsid: evar7) |
+| (only in ava.e2e rsid: evar13) |
+| `videoadstart` | `mediaReporting.advertisingDetails.isStarted` | boolean | A boolean value that indicates whether the ad has been started or not. |
+| `videoadcomplete` | `mediaReporting.advertisingDetails.isCompleted` | boolean | A boolean value that indicates whether the had has been completed or not. |
+| `videoadtime` | `mediaReporting.advertisingDetails.timePlayed` | integer | The total amount of time, measured in seconds, spent watching the ad. |
+
+{style="table-layout:auto"}
+
+## Chapter
+
+| Data feed | XDM field path | Data type | Description | 
+| --- | --- | --- | --- |
+| (only in ava.e2e rsid: evar14) |
+| (only in ava.e2e rsid: event46) |
+| (only in ava.e2e rsid: event47) |
+| (only in ava.e2e rsid: event48) |
+| `videochapter` | `mediaReporting.chapterDetails.ID` | string | The auto-generated ID of the chapter. |
+| `videochapterstart` | `mediaReporting.chapterDetails.isStarted` | boolean | A boolean value that indicates whether or not the chapter has been started. |
+| `videochaptercomplete` | `mediaReporting.chapterDetails.isCompleted` | boolean | A boolean value that indivates whether or not the chapter has been completed. |
+| `videochaptertime` | `mediaReporting.chapterDetails.timePlayed` | integer | The time, measured in seconds, spent on the chapter. |
+
+## Player state
+
+| Data feed | XDM field path | Data type | Description | 
+| --- | --- | --- | --- |
+| `videostatefullscreen` | `mediaReporting.states[].isSet` |
+| `videostatefullscreencount` | `mediaReporting.states[].count` |
+| `videostatefullscreentime` | `mediaReporting.states[].time` |
+| `videostateclosedcaptioning` | `mediaReporting.states[].isSet` |
+| `videostateclosedcaptioningcount` | `mediaReporting.states[].count` |
+| `videostateclosedcaptioningtime` | `mediaReporting.states[].time` |
+| `videostatemute` | `mediaReporting.states[].isSet` |
+| `videostatemutecount` | `mediaReporting.states[].count` |
+| `videostatemutetime` | `mediaReporting.states[].time` |
+| `videostatepictureinpicture` | `mediaReporting.states[].isSet` |
+| `videostatepictureinpicturecount` | `mediaReporting.states[].count` |
+| `videostatepictureinpicturetime` | `mediaReporting.states[].time` |
+| `videostateinfocus` | `mediaReporting.states[].isSet` |
+| `videostateinfocuscount` | `mediaReporting.states[].count` |
+| `videostateinfocustime` | `mediaReporting.states[].name` |
+
+
+
+
+<!-- 
 ## Direct mapping fields
 
 Select fields are directly mapped from Adobe Analytics to Experience Data Model (XDM).  
@@ -311,67 +372,4 @@ To learn more about performing these transformations using Query Service, see [A
 | `visit_search_engine` | `_experience.analytics.session.`<br/>`search.searchEngine` | string | Numeric ID of the first search engine of the visit. |
 | `visit_start_time_gmt` | `_experience.analytics.session.`<br/>`timestamp` | integer | Timestamp of the first hit of the visit in UNIX&reg; time. |
 
-{style="table-layout:auto"}
-
-<!-- 
-## Missing fields
-
-* `videoaudioauthor` 
-* `videoaudioartist`
-* `videoaudioalbum`
-* `videostreamtype`
-* `video.videoclassificationrating` evar17
-* `video.videoclassificationoriginator` evar18
-* `video.videoclassificationairdate` evar19
-* `video.videoclassificationdigitaldate` evar20
-* `(only in ava.e2e rsid: evar9)`
-* `(only in ava.e2e rsid: evar10)`
-* `videosegment`
-* `(only in ava.e2e rsid: event52)`
-* `videouniquetimeplayed`
-* `videoaverageminuteaudience`
-* `(only in ava.e2e rsid: event8)`
-* `(only in ava.e2e rsid: event9)`
-* `(only in ava.e2e rsid: event44)`
-* `videopause`
-* `videomvpd`
-* `videoauthorized` evar21
-* `videodaypart`
-* `videoaudiolabel`
-* `videoaudiostation`
-* `videoaudiopublisher`
-
-
-
-## new groupings
-
-### streaming media
-
-| Data feed | XDM field path | Data type | Description | Context Data |
-| --- | --- | --- | --- | --- |
-
-
-### ads
-
-### player state parameters (missing)
-
-* `videostatefullscreen`
-* `videostatefullscreencount`
-* `videostatefullscreentime`
-* `videostateclosedcaptioning`
-* `videostateclosedcaptioningcount`
-* `videostateclosedcaptioningtime`
-* `videostatemute`
-* `videostatemutecount`
-* `videostatemutetime`
-* `videostatepictureinpicture`
-* `videostatepictureinpicturecount`
-* `videostatepictureinpicturetime`
-* `videostateinfocus`
-* `videostateinfocuscount`
-* `videostateinfocustime`
-
-### quality 
-
-
--->
+{style="table-layout:auto"} -->
