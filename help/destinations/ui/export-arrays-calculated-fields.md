@@ -15,7 +15,7 @@ exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 
 >[!AVAILABILITY]
 >
->* The functionality to export arrays through calculated fields is generally available.
+>The functionality to export arrays through calculated fields is generally available.
 
 Learn how to export arrays through calculated fields from Real-Time CDP to [cloud storage destinations](/help/destinations/catalog/cloud-storage/overview.md) as strings. Read this document to understand the use cases enabled by this functionality.
 
