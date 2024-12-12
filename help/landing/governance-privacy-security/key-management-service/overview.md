@@ -75,9 +75,11 @@ The [!DNL Key Management Service (KMS)] workspace appears. Select **[!DNL Create
 
 ![The Key Management Service workspace with Create a key highlighted.](../../images/governance-privacy-security/key-management-service/create-a-key.png)
 
+## Configure your key {#configure-key}
+
 The Configure Key workflow appears. The default settings are symetric key type and encrypt and decrypt key usage. Ensure that the **[!DNL Symmetric]** key type, and **[!DNL Encrypt and Decrypt]** key usage options are selected. 
 
-![Step one of the Configure key workflow with Systemic and Encrypt and decrypt highlighted.]()
+![Step one of the Configure key workflow with Systemic and Encrypt and decrypt basic options highlighted.]()
 
 Expand the **[!DNL Advanced options]** dropdown menu. You are recommended to use the **[!DNL KMS]** option as this allows AWS to create and mange the key material. The [!DNL KMS] option is selected by default.
  
@@ -85,15 +87,27 @@ Expand the **[!DNL Advanced options]** dropdown menu. You are recommended to use
 >
 >If you already have an existing key, you can import external key material or use the AWS [!DNL CloudHSM] key store. These options are not covered in the scope of this document.
 
-Next, select the [!DNL Regionality] setting. You must select **[!DNL Single-Region key]**, 
+Next, select the [!DNL Regionality] setting. You must select **[!DNL Single-Region key]**, followed by **[!DNL Next]** to proceed onto step two.
 
 >[!IMPORTANT]
 >
 >AWS enforces region restrictions for KMS keys. This means that the key must be in the same region as your Adobe account. Adobe can only access KMS keys located within your account's region. Ensure that the region you select matches the region of your Adobe single-tenant account.
 
-![PLACEHOLDER]()
+![Step one of the Configure key workflow with the AWS region, KMS, and Single region key advanced options highlighted.](../../images/governance-privacy-security/key-management-service/configure-key-advanced-options.png)
 
-Select **[!DNL Next]** to proceed onto step two.
+## Add labels {#add-labels}
+
+Next, configure the [!DNL Alias] and [!DNL Tags] fields to help you manage and locate your encryption key from the AWS KMS console.
+
+Enter a descriptive label for your key in the **[!DNL Alias]** input field. The alias acts as a user-friendly identifier, to quickly locate the key using the search bar in the AWS KMS console. To prevent confusion, choose a meaningful name that reflects the key's purpose, such as "Adobe-AEP-Key" or "Customer-Encryption-Key,". You can also include a description of the key if the key alias is insufficient to describe its purpose.
+
+Finally, assign metadata to your key by adding key-value pairs in the [!DNL Tags] section. This is an optional step, but you are recommended to add tags to categorize and filter your AWS resources. For example, if your organization uses multiple Adobe-related resources, you can tag them with "Adobe" or "Experience-Platform." This extra step makes it simple to search for and manage all your associated resources in the AWS Management Console. Select **[!DNL Add tag]** to being the process.
+
+<!-- I do not have an AWS account with which to document the Add tag process as yet. -->
+
+When you are satisfied with your settings, select **[!DNL Next]** to continue the workflow.
+
+![Step two of the Configure key workflow with the Alias, Description, Tags and Next highlighted.](../../images/governance-privacy-security/key-management-service/add-labels.png)
 
 1. **Configure Key Details**
    - Provide the required details for the key, including a name, description, and key usage permissions.
