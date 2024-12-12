@@ -1,6 +1,6 @@
 ---
 title: AI Assistant in Customer Support
-description: 
+description: Learn how you can use AI Assistant to streamline troubleshooting and the customer support ticket filing process.
 badge: Alpha
 ---
 # AI Assistant in Customer Support
@@ -11,7 +11,9 @@ badge: Alpha
 
 You can use AI Assistant in Adobe Experience Platform to streamline customer support process by accelerating troubleshooting and ticket creation, while also providing real-time issue tracking.
 
-## E2E Workflow
+Read the following to learn how you can use AI Assistant as part of your troubleshooting process and to speed up the customer support ticket creation process.
+
+## Use AI Assistant to troubleshoot and create customer support tickets
 
 >[!BEGINSHADEBOX]
 
