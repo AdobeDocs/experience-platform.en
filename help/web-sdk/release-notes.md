@@ -10,6 +10,12 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 This document covers the release notes for the Adobe Experience Platform Web SDK.
 For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## Version 2.24.1 - December 6, 2024
+
+**Fixed and improvements**
+
+- Resolved a dependency issue related to [Adobe Experience Platform Rules Engine](https://github.com/adobe/aepsdk-rulesengine-typescript/), which was causing errors in some customer integrations. The Web SDK now requires [Adobe Experience Platform Rules Engine](https://github.com/adobe/aepsdk-rulesengine-typescript/) version 2.0.3 or later.
+
 ## Version 2.24.0 - October 31, 2024
 
 **New features**
