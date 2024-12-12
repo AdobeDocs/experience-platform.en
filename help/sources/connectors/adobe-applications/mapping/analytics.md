@@ -110,6 +110,8 @@ Adobe Experience Platform allows you to ingest Adobe Analytics data through the 
 | `videochaptercomplete` | `mediaReporting.chapterDetails.isCompleted` | boolean | A boolean value that indivates whether or not the chapter has been completed. |
 | `videochaptertime` | `mediaReporting.chapterDetails.timePlayed` | integer | The time, measured in seconds, spent on the chapter. |
 
+{style="table-layout:auto"}
+
 ## Player state
 
 | Data feed | XDM field path | Data type | Description | 
@@ -129,6 +131,8 @@ Adobe Experience Platform allows you to ingest Adobe Analytics data through the 
 | `videostateinfocus` | `mediaReporting.states[].isSet` |
 | `videostateinfocuscount` | `mediaReporting.states[].count` |
 | `videostateinfocustime` | `mediaReporting.states[].name` |
+
+{style="table-layout:auto"}
 
 ## Quality
 
@@ -155,8 +159,7 @@ Adobe Experience Platform allows you to ingest Adobe Analytics data through the 
 | (only in ava.e2e rsid: event50) | `mediaReporting.qoeDataDetails.stallCount` | integer | The number of times the playback was stalled during a playback session. |
 | (only in ava.e2e rsid: event51) | `mediaReporting.qoeDataDetails.stallTime` | integer | The total time, measured in seconds, that the playback was stalled during a playback session. |
 
-
-
+{style="table-layout:auto"}
 
 <!-- 
 ## Direct mapping fields
