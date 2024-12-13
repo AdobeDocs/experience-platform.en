@@ -97,6 +97,12 @@ Watch the following video to learn how to use AI Assistant to de-clutter your au
 
 >[!VIDEO](https://video.tv.adobe.com/v/3435532?learn=on)
 
+### Use the discoverability panel to help you get started
+
+Watch the following video to learn about the discoverability panel in AI Assistant, and how you can use it to get started with AI Assistant
+
+>[!VIDEO](https://video.tv.adobe.com/v/3440962/?learn=on)
+
 ## AI Assistant use case library
 
 >[!BEGINTABS]
@@ -127,6 +133,10 @@ Watch the following videos for additional AI Assistant use case examples:
 For more information about AI Assistant, read the [security fact sheet for AI Assistant in Adobe Experience Platform](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf).
 
 >[!ENDSHADEBOX]
+
+Watch the following video for more information on the security features of AI Assistant:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441066/?learn=on)
 
 Browse the links below to further your understanding of AI Assistant use cases, capabilities, and much more.
 
