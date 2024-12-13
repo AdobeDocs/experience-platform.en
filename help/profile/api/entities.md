@@ -290,8 +290,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
             "endTime": 1539838510
         },
         "limit": 10,
-        "orderby": "-timestamp",
-        "withCA": true
+        "orderby": "-timestamp"
       }'
 ```
 
@@ -306,7 +305,6 @@ curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
 | `timeFilter.endTime` | Integer | Specifies the end time to filter Profile entities (in milliseconds). By default, this value is set as the end of available time. |
 | `limit` | Integer | The maximum number of records to return. By default, this value is set to 1,000. |
 | `orderby` | String | The sort order of retrieved experience events by timestamp, written as `(+/-)timestamp` with the default being `+timestamp`. |
-| `withCA` | Boolean | A feature flag for enabling computed attributes for lookup. By default, this value is set to false. |
 
 +++
 
@@ -502,8 +500,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
         "endTime": 1539838510
     },
     "limit": 10,
-    "orderby": "-timestamp",
-    "withCA": false
+    "orderby": "-timestamp"
 }'
 ```
 
@@ -517,7 +514,6 @@ curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
 | `timeFilter.startTime`| Integer | Specify the start time to filter time-series objects (in milliseconds). By default, this value is set as the beginning of available time. |
 | `timeFilter.endTime` | Integer | Specify the end time to filter time-series objects (in milliseconds). By default, this value is set as the end of available time. |
 | `limit` | Integer | The maximum number of records to return. By default, this value is set to 1,000. |
-| `withCA` | Boolean | A feature flag for enabling computed attributes for lookup. By default, this value is set to false. |
 
 +++
 
@@ -891,4 +887,3 @@ The following parameters are used in the path for GET requests to the `/access/e
 | `endTime` | Specifies the end time to filter entities (in milliseconds). | `endTime=1539838510` |
 | `limit` | Specifies the maximum number of entities to return. By default, this value is set to 1000. | `limit=100` |
 | `property` | Filters by the property value. This query parameter supports the following evaluators: =, !=, <, <=, >, >=. This can only be used with experience events, with a maximum of three properties being supported. | `property=webPageDetails.isHomepage=true&property=localTime<="2020-07-20"` |
-| `withCA` | Feature flag for enabling computed attributes for lookup. By default, this value is false. | `withCA=true` |
