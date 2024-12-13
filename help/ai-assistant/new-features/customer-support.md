@@ -1,9 +1,9 @@
 ---
-title: AI Assistant in Customer Support
+title: AI Assistant for Customer Support
 description: Learn how you can use AI Assistant to streamline troubleshooting and the customer support ticket filing process.
 badge: Alpha
 ---
-# AI Assistant in Customer Support
+# AI Assistant for Customer Support
 
 >[!AVAILABILITY]
 >
@@ -11,8 +11,9 @@ badge: Alpha
 
 You can use AI Assistant in Adobe Experience Platform to streamline customer support process by accelerating troubleshooting and ticket creation, while also providing real-time issue tracking.
 
-Read the following to learn how you can use AI Assistant as part of your troubleshooting process and to speed up the customer support ticket creation process.
+AI Assistant can now help you answer common troubleshooting questions using specialized and expertly-curated knowledge in new documentation sources. If you still require creating a case with Adobe Support, you can ask AI Assistant to "create a support ticket" with all the context from your chat preserved for faster remediation.
 
+<!-- 
 ## Use AI Assistant to troubleshoot and create customer support tickets
 
 >[!BEGINSHADEBOX]
@@ -41,4 +42,4 @@ During this process, AI Assistant will initiate a new customer ticket, using you
 
 You will have the opportunity to review and edit any aspects of the ticket, including the AI-generated content that it's populated with. Additionally, you can use this step to provide or upload additional information, such as screenshots of your UI that may be aid customer support in better understanding your challenges.
 
-AI Assistant also includes your chat history and session details to the newly created customer support ticket. You may also configure the priority of the ticket prior to saving and finalizing it. Ensure that you retain your ticket number because you can reference this ticket number against AI Assistant to monitor the status of your ticket.
+AI Assistant also includes your chat history and session details to the newly created customer support ticket. You may also configure the priority of the ticket prior to saving and finalizing it. Ensure that you retain your ticket number because you can reference this ticket number against AI Assistant to monitor the status of your ticket. -->
