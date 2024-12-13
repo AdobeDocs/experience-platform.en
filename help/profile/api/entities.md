@@ -227,6 +227,38 @@ A successful response returns HTTP status 200 with a paginated list of time seri
 
 +++
 
+>[!TAB B2B Account]
+
+**API format**
+
+**Request**
+
++++
+a
++++
+
+**Response**
+
++++
+a
++++
+
+>[!TAB B2B Opportunity]
+
+**API format**
+
+**Request**
+
++++
+a
++++
+
+**Response**
+
++++
+a
++++
+
 >[!ENDTABS]
 
 ## Retrieve multiple entities {#retrieve-entities}
@@ -835,7 +867,7 @@ Query parameters provided in the request path specify which data to access. You 
 
 To delete an entity, you **must** provide the following query parameters:
 
-- `schema.name`: The name of the entity's XDM schema. In this use case, the `schema.name=_xdm.context.profile`.
+- `schema.name`: The name of the entity's XDM schema. In this use case, you can **only** use `schema.name=_xdm.context.profile`.
 - `entityId`: The ID of the entity you're trying to retrieve.
 - `entityIdNS`: The namespace of the entity you're trying to retrieve. This value must be provided if the `entityId` is **not** an XID.
 - `mergePolicyId`: The merge policy ID of the entity. The merge policy contains information about identity stitching and key-value XDM object merging. If this value is not provided, the default merge policy will be used.
