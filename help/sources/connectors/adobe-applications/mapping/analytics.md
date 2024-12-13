@@ -101,10 +101,10 @@ Adobe Experience Platform allows you to ingest Adobe Analytics data through the 
 
 | Data feed | XDM field path | Data type | Description | 
 | --- | --- | --- | --- |
-| (only in ava.e2e rsid: evar14) |
-| (only in ava.e2e rsid: event46) |
-| (only in ava.e2e rsid: event47) |
-| (only in ava.e2e rsid: event48) |
+| (only in ava.e2e rsid: evar14) | `mediaReporting.chapterDetails.friendlyName` | string | The name of the chapter and/or segment. |
+| (only in ava.e2e rsid: event46) | `mediaReporting.chapterDetails.index` | integer | The position (index) of the chapter inside the content. |
+| (only in ava.e2e rsid: event47) | `mediaReporting.chapterDetails.offset` | integer | The offset of the chapter inside the content, measured in seconds, from the start. |
+| (only in ava.e2e rsid: event48) | `mediaReporting.chapterDetails.length` | integer | The length of the chapter, measured in seconds. |
 | `videochapter` | `mediaReporting.chapterDetails.ID` | string | The auto-generated ID of the chapter. |
 | `videochapterstart` | `mediaReporting.chapterDetails.isStarted` | boolean | A boolean value that indicates whether or not the chapter has been started. |
 | `videochaptercomplete` | `mediaReporting.chapterDetails.isCompleted` | boolean | A boolean value that indivates whether or not the chapter has been completed. |
@@ -116,21 +116,21 @@ Adobe Experience Platform allows you to ingest Adobe Analytics data through the 
 
 | Data feed | XDM field path | Data type | Description | 
 | --- | --- | --- | --- |
-| `videostatefullscreen` | `mediaReporting.states[].isSet` |
-| `videostatefullscreencount` | `mediaReporting.states[].count` |
-| `videostatefullscreentime` | `mediaReporting.states[].time` |
-| `videostateclosedcaptioning` | `mediaReporting.states[].isSet` |
-| `videostateclosedcaptioningcount` | `mediaReporting.states[].count` |
-| `videostateclosedcaptioningtime` | `mediaReporting.states[].time` |
-| `videostatemute` | `mediaReporting.states[].isSet` |
-| `videostatemutecount` | `mediaReporting.states[].count` |
-| `videostatemutetime` | `mediaReporting.states[].time` |
-| `videostatepictureinpicture` | `mediaReporting.states[].isSet` |
-| `videostatepictureinpicturecount` | `mediaReporting.states[].count` |
-| `videostatepictureinpicturetime` | `mediaReporting.states[].time` |
-| `videostateinfocus` | `mediaReporting.states[].isSet` |
-| `videostateinfocuscount` | `mediaReporting.states[].count` |
-| `videostateinfocustime` | `mediaReporting.states[].name` |
+| `videostatefullscreen` | `mediaReporting.states[].isSet` | boolean | |
+| `videostatefullscreencount` | `mediaReporting.states[].count` | integer | |
+| `videostatefullscreentime` | `mediaReporting.states[].time` | integer | |
+| `videostateclosedcaptioning` | `mediaReporting.states[].isSet` | boolean | |
+| `videostateclosedcaptioningcount` | `mediaReporting.states[].count` | integer | |
+| `videostateclosedcaptioningtime` | `mediaReporting.states[].time` | integer | |
+| `videostatemute` | `mediaReporting.states[].isSet` | boolean | |
+| `videostatemutecount` | `mediaReporting.states[].count` | integer | |
+| `videostatemutetime` | `mediaReporting.states[].time` | integer | |
+| `videostatepictureinpicture` | `mediaReporting.states[].isSet` | boolean | |
+| `videostatepictureinpicturecount` | `mediaReporting.states[].count` | integer | |
+| `videostatepictureinpicturetime` | `mediaReporting.states[].time` | integer | |
+| `videostateinfocus` | `mediaReporting.states[].isSet` | boolean | |
+| `videostateinfocuscount` | `mediaReporting.states[].count` | integer | |
+| `videostateinfocustime` | `mediaReporting.states[].name` | string | |
 
 {style="table-layout:auto"}
 
@@ -400,4 +400,5 @@ To learn more about performing these transformations using Query Service, see [A
 | `visit_search_engine` | `_experience.analytics.session.`<br/>`search.searchEngine` | string | Numeric ID of the first search engine of the visit. |
 | `visit_start_time_gmt` | `_experience.analytics.session.`<br/>`timestamp` | integer | Timestamp of the first hit of the visit in UNIX&reg; time. |
 
-{style="table-layout:auto"} -->
+{style="table-layout:auto"}
+
