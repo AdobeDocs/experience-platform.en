@@ -109,3 +109,13 @@ For more information about data policy violations in the audience activation wor
 * [Activate audience data to streaming audiences export destinations](./ui/activate-segment-streaming-destinations.md#review)
 * [Activate audience data to streaming profile export destinations](./ui/activate-streaming-profile-destinations.md#review)
 * [Activate audience data to batch profile export destinations](./ui/activate-batch-profile-destinations.md#review)
+
+## Terms and conditions {#terms-and-conditions}
+
+By using any of the Destinations labeled as beta ("Beta"), You hereby acknowledge that the Beta is provided ***"as is" without warranty of any kind***.
+
+Adobe shall have no obligation to maintain, correct, update, change, modify, or otherwise support the Beta. You are advised to use Informative and not to rely in any way on the correct functioning or performance of such Beta and/or accompanying materials. The Beta is considered Confidential Information of Adobe.
+
+Any "Feedback" (information regarding the Beta including but not limited to problems or defects you encounter while using the Beta, suggestions, improvements, and recommendations) provided by You to Adobe is hereby assigned to Adobe including all rights, title, and interest in and to such Feedback.
+
+Submit Open Feedback or create a Support Ticket to share your suggestions or report a bug, seek a feature enhancement.

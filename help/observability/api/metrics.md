@@ -36,6 +36,7 @@ curl -X POST \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-sandbox-id: {SANDBOX_ID}'
   -d '{
         "start": "2020-07-14T00:00:00.000Z",
         "end": "2020-07-22T00:00:00.000Z",
@@ -50,8 +51,7 @@ curl -X POST \
                 "groupBy": true
               }
             ],
-            "aggregator": "sum",
-            "downsample": "sum"
+            "aggregator": "sum"
           },
           {
             "name": "timeseries.ingestion.dataset.dailysize",
@@ -63,7 +63,6 @@ curl -X POST \
               }
             ],
             "aggregator": "sum",
-            "downsample": "sum"
           }
         ]
       }'
@@ -73,12 +72,11 @@ curl -X POST \
 | --- | --- |
 | `start` | The earliest date/time from which to retrieve metric data. |
 | `end` | The latest date/time from which to retrieve metric data. |
-| `granularity` | An optional field that indicates the time interval to divide metric data by. For example, a value of `DAY` returns metrics for each day between the `start` and `end` date, whereas a value of `MONTH` would group metric results by month instead. When using this field, a corresponding `downsample` property must also be provided to indicate the aggregation function by which to group data. |
+| `granularity` | An optional field that indicates the time interval to divide metric data by. For example, a value of `DAY` returns metrics for each day between the `start` and `end` date, whereas a value of `MONTH` would group metric results by month instead. |
 | `metrics` | An array of objects, one for each metric you want to retrieve. |
 | `name` | The name of a metric recognized by Observability Insights. See the [appendix](#available-metrics) for a full list of accepted metric names. |
 | `filters` | An optional field that allows you to filter metrics by specific datasets. The field is an array of objects (one for each filter), with each object containing the following properties: <ul><li>`name`: The type of entity to filter metrics against. Currently, only `dataSets` is supported.</li><li>`value`: The ID of one or more datasets. Multiple dataset IDs can be provided as a single string, with each ID separated by vertical bar characters (`\|`).</li><li>`groupBy`: When set to true, indicates that the corresponding `value` represents multiple datasets whose metric results should be returned separately. If set to false, metric results for those datasets are grouped together.</li></ul> |
-| `aggregator` | Specifies the aggregation function that should be used to group multiple times-series records into single results. For detailed information on available aggregators, refer to the [OpenTSDB documentation](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
-| `downsample` | An optional field that allows you to specify an aggregation function to reduce the sampling rate of metric data by sorting fields into intervals (or "buckets"). The interval for the downsampling is determined by the `granularity` property. For detailed information on downsampling, refer to the [OpenTSDB documentation](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
+| `aggregator` | Specifies the aggregation function that should be used to group multiple times-series records into single results. The current supported aggregators are min, max, sum, and avg depending of metric's definition. |
 
 {style="table-layout:auto"}
 
@@ -215,8 +213,7 @@ The following table outlines metrics for Adobe Experience Platform [!DNL Identit
 | ---- | ---- | ---- |
 | timeseries.identity.dataset.recordsuccess.count | Number of records written to their data source by [!DNL Identity Service], for one dataset or all datasets. | Dataset ID |
 | timeseries.identity.dataset.recordfailed.count | Number of records failed by [!DNL Identity Service], for one dataset or for all datasets. | Dataset ID |
-| timeseries.identity.dataset.namespacecode.recordfailed.count | Number of Identity records failed by a namespace. | Namespace ID (**Required**) |
-| timeseries.identity.dataset.namespacecode.recordskipped.count | Number of Identity records skipped by a namespace. | Namespace ID (**Required**) |
+| timeseries.identity.dataset.namespacecode.recordskipped.count | Number of Identity records skipped. | Organization ID |
 | timeseries.identity.graph.imsorg.uniqueidentities.count | Number of unique identities stored in the identity graph for your organization. | N/A |
 | timeseries.identity.graph.imsorg.namespacecode.uniqueidentities.count | Number of unique identities stored in the identity graph for a namespace. | Namespace ID (**Required**) |
 | timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | Number of unique identities stored in the identity graph for your organization for a particular graph strength ("unknown", "weak", or "strong"). | Graph strength (**Required**) |

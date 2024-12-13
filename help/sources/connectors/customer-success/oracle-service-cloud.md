@@ -7,6 +7,10 @@ exl-id: 5c914e8a-d8ed-469f-b17a-26a85705e9ef
 ---
 # Oracle Service Cloud source
 
+>[!WARNING]
+>
+>The [!DNL Oracle Service Cloud] source will be deprecated at the end of June 2025.
+
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
 Experience Platform provides support for ingesting data from a third-party customer success system. Support for customer success providers include Oracle Service Cloud.

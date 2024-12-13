@@ -5,9 +5,9 @@ badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/le
 badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
 ---
-# Real-time Customer Data Platform Insights data model B2B Edition
+# Real-Time CDP Insights data model B2B Edition
 
-The Real-Time Customer Data Platform Insights data model for the B2B Edition exposes the data models and SQL that power the insights for [account profiles](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview). You can customize these SQL query templates to create Real-Time CDP reports for your B2B marketing and key performance indicator (KPI) use cases. These insights can then be used as custom widgets for your dashboards. 
+The Real-Time CDP Insights data model for the B2B Edition exposes the data models and SQL that power the insights for [account profiles](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview). You can customize these SQL query templates to create Real-Time CDP reports for your B2B marketing and key performance indicator (KPI) use cases. These insights can then be used as custom widgets for your dashboards. 
 
 >[!AVAILABILITY]
 >
@@ -19,7 +19,7 @@ See the query accelerated store reporting insights documentation to learn [how t
 
 ## Prerequisites
 
-This guide requires a working understanding of custom dashboards. Read the documentation on [how to create a custom dashboard](../user-defined-dashboards.md) before continuing with this guide.
+This guide requires a working understanding of custom dashboards. Read the documentation on [how to create a custom dashboard](../standard-dashboards.md) before continuing with this guide.
 
 ## Real-Time CDP B2B insight reports and use cases {#B2B-insight-reports-and-use-cases}
 

@@ -7,6 +7,10 @@ last-substantial-update: 2023-05-25
 ---
 # [!DNL Salesforce Marketing Cloud]
 
+>[!WARNING]
+>
+>The [!DNL Salesforce Marketing Cloud] source will be deprecated at the end of June 2025.
+
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
 Experience Platform provides support for ingesting data from third-party marketing automation systems. Support for marketing automation providers include [!DNL Salesforce Marketing Cloud].

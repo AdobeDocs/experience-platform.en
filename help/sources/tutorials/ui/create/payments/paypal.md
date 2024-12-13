@@ -8,6 +8,10 @@ exl-id: bbd3f634-cb28-45d8-9b7b-ed3873101882
 ---
 # Create a [!DNL PayPal] source connection in the UI
 
+>[!WARNING]
+>
+>The [!DNL PayPal] source will be deprecated at the end of June 2025.
+
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL PayPal] source connector using the Platform user interface.
 
 ## Getting started

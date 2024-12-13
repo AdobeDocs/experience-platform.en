@@ -13,7 +13,7 @@ The Real-Time CDP data model from Adobe Experience Platform provides insights on
 
 ## Prerequisites
 
-This tutorial uses user-defined dashboards to visualize data from your custom data model within the Platform UI. Please see the [user-defined dashboards documentation](../../../dashboards/user-defined-dashboards.md) to learn more about this feature.
+This tutorial uses user-defined dashboards to visualize data from your custom data model within the Platform UI. Please see the [user-defined dashboards documentation](../../../dashboards/standard-dashboards.md) to learn more about this feature.
 
 ## Getting started
 
@@ -223,4 +223,4 @@ The image below provides an example of the possible custom visualizations using 
 
 ![A match count by destination and audience widget created from the new reporting insights data model.](../../images/data-distiller/sql-insights/user-defined-dashboard-widget.png)
 
-Your custom data model can be found in the list of available data models in the user-defined dashboard workspace. See the [user-defined dashboard guide](../../../dashboards/user-defined-dashboards.md) for guidance on how to utilize your custom data model.
+Your custom data model can be found in the list of available data models in the user-defined dashboard workspace. See the [user-defined dashboard guide](../../../dashboards/standard-dashboards.md) for guidance on how to utilize your custom data model.
