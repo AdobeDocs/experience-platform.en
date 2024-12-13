@@ -231,32 +231,190 @@ A successful response returns HTTP status 200 with a paginated list of time seri
 
 **API format**
 
+```http
+GET /access/entities?{QUERY_PARAMETERS}
+```
+
+Query parameters provided in the request path specify which data to access. You can include multiple parameters, separated by ampersands (&). 
+
+To access the B2B account data, you **must** provide the following query parameters:
+
+- `schema.name`: The name of the entity's XDM schema. In this use case, this value is `schema.name=_xdm.context.account`.
+- `entityId`: The ID of the entity you're trying to retrieve.
+- `entityIdNS`: The namespace of the entity you're trying to retrieve. This value must be provided if the `entityId` is **not** an XID.
+
+A complete list of valid parameters is provided in the [query parameters](#query-parameters) section of the appendix.
+
 **Request**
 
-+++
-a
++++ A sample request to retrieve a B2B account
+
+```shell
+curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.account&entityIdNs=b2b_account&entityId=2334262' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
 +++
 
 **Response**
 
-+++
-a
+A successful response returns HTTP status 200 with the requested entity.
+
++++ A sample response that contains the requested entity
+
+```json
+{
+    "GuQ-AUFjgjaeIw": {
+        "entityId": "GuQ-AUFjgjaeIw",
+        "mergePolicy": {
+            "id": "a6150f47-a94f-4c9d-bfa0-958a370020ee"
+        },
+        "sources": [
+            "er_m_attr"
+        ],
+        "entity": {
+            "_id": "id1",
+            "extSourceSystemAudit": {
+                "lastReferencedDate": "2024-03-09 12:21:43.0",
+                "lastActivityDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedBy": "Sample value",
+                "externalKey": {
+                    "sourceID": "{SOURCE_ID}",
+                    "sourceKey": "{SOURCE_KEY}",
+                    "sourceInstanceID": "{SOURCE_INSTANCE_ID}",
+                    "sourceType": "{SOURCE_TYPE}"
+                },
+                "lastViewedDate": "2024-03-09 12:21:43.0",
+                "createdDate": "2024-03-09 12:21:43.0"
+            },
+            "accountID": "2334262",
+            "identityMap": {
+                "b2b_account": [
+                    {
+                        "id": "2334263"
+                    },
+                    {
+                        "id": "2334262"
+                    },
+                    {
+                        "id": "{SOURCE_ID}"
+                    }
+                ]
+            },
+            "isDeleted": false,
+            "accountKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            }
+        }
+    }
+}
+```
+
 +++
 
 >[!TAB B2B Opportunity]
 
 **API format**
 
+```http
+GET /access/entities?{QUERY_PARAMETERS}
+```
+
+Query parameters provided in the request path specify which data to access. You can include multiple parameters, separated by ampersands (&). 
+
+To access a B2B opportunity entity, you **must** provide the following query parameters:
+
+- `schema.name`: The name of the entity's XDM schema. In this use case, the `schema.name=_xdm.context.opportunity`.
+- `entityId`: The ID of the entity you're trying to retrieve.
+- `entityIdNS`: The namespace of the entity you're trying to retrieve. This value must be provided if the `entityId` is **not** an XID.
+
+A complete list of valid parameters is provided in the [query parameters](#query-parameters) section of the appendix.
+
 **Request**
 
-+++
-a
++++ A sample request to retrieve a B2B opportunity entity
+
+```shell
+curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.opportunity&entityIdNs=b2b_opportunity&entityId=2334262' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
 +++
 
 **Response**
 
-+++
-a
+A successful response returns HTTP status 200 with the requested entity.
+
++++ A sample response that contains the requested entity
+
+```json
+{
+  "Ggw_AUFjgjaeIw": {
+        "entityId": "Ggw_AUFjgjaeIw",
+        "mergePolicy": {
+            "id": "162824be-07f5-4cd0-aa85-2ff3c8f6c775"
+        },
+        "sources": [
+            "er_m_attr"
+        ],
+        "entity": {
+            "_id": "id1",
+            "extSourceSystemAudit": {
+                "lastReferencedDate": "2024-03-09 12:21:43.0",
+                "lastActivityDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedBy": "Sample value",
+                "externalKey": {
+                    "sourceID": "00394S0001xpG6xABE",
+                    "sourceKey": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce",
+                    "sourceInstanceID": "00DC0000000Q35nMAC",
+                    "sourceType": "Salesforce"
+                },
+                "lastViewedDate": "2024-03-09 12:21:43.0",
+                "createdDate": "2024-03-09 12:21:43.0"
+            },
+            "accountID": "2334262",
+            "identityMap": {
+                "b2b_opportunity": [
+                    {
+                        "id": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce"
+                    },
+                    {
+                        "id": "2334263"
+                    },
+                    {
+                        "id": "2334262"
+                    }
+                ]
+            },
+            "isDeleted": false,
+            "opportunityKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            },
+            "accountKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            }
+        }
+    }
+}
+```
+
 +++
 
 >[!ENDTABS]
@@ -328,7 +486,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
 
 | Property | Type | Description |
 | -------- |----- | ----------- |
-| `schema.name` | String | **(Required)** The name of the XDM schema the entity belongs to.|
+| `schema.name` | String | **(Required)** The name of the XDM schema the entity belongs to. |
 | `fields` | Array | The XDM fields to be returned, as an array of strings. By default, all fields will be returned.|
 | `identities` | Array | **(Required)** An array containing a list of identities for the entities you want to access. |
 | `identities.entityId` | String | The ID of an entity you wish to access. |
