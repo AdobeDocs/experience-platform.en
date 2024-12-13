@@ -144,7 +144,7 @@ Watch the following videos for additional AI Assistant use case examples:
 
 >[!ENDTABS]
 
-## Additional resources 
+## Additional resources {#additional-resources}
 
 >[!BEGINSHADEBOX]
 
