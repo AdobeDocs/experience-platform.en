@@ -927,6 +927,22 @@ A successful response returns HTTP status 200 with a paginated list of time seri
 >
 >To access these results, you can perform an additional POST request to the `/access/entities` endpoint with the listed payload as the request body.
 
+>[!TAB B2B Account]
+
+**API format**
+
+**Request**
+
+**Response**
+
+>[!TAB B2B Opportunity]
+
+**API format**
+
+**Request**
+
+**Response**
+
 >[!ENDTABS]
 
 ### Access a subsequent page of results
