@@ -227,7 +227,7 @@ A successful response returns HTTP status 200 with a paginated list of time seri
 
 +++
 
->[!TAB B2B Account]
+>[!TAB B2B account]
 
 **API format**
 
@@ -281,7 +281,7 @@ A successful response returns HTTP status 200 with the requested entity.
                 "lastReferencedDate": "2024-03-09 12:21:43.0",
                 "lastActivityDate": "2024-03-09 12:21:43.0",
                 "lastUpdatedDate": "2024-03-09 12:21:43.0",
-                "lastUpdatedBy": "Sample value",
+                "lastUpdatedBy": "{USER_ID}",
                 "externalKey": {
                     "sourceID": "{SOURCE_ID}",
                     "sourceKey": "{SOURCE_KEY}",
@@ -319,7 +319,7 @@ A successful response returns HTTP status 200 with the requested entity.
 
 +++
 
->[!TAB B2B Opportunity]
+>[!TAB B2B opportunity]
 
 **API format**
 
@@ -373,7 +373,7 @@ A successful response returns HTTP status 200 with the requested entity.
                 "lastReferencedDate": "2024-03-09 12:21:43.0",
                 "lastActivityDate": "2024-03-09 12:21:43.0",
                 "lastUpdatedDate": "2024-03-09 12:21:43.0",
-                "lastUpdatedBy": "Sample value",
+                "lastUpdatedBy": "{USER_ID}",
                 "externalKey": {
                     "sourceID": "00394S0001xpG6xABE",
                     "sourceKey": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce",
@@ -927,21 +927,536 @@ A successful response returns HTTP status 200 with a paginated list of time seri
 >
 >To access these results, you can perform an additional POST request to the `/access/entities` endpoint with the listed payload as the request body.
 
->[!TAB B2B Account]
+>[!TAB B2B account]
 
 **API format**
 
+```http
+POST /access/entities
+```
+
 **Request**
+
+The following request retrieves the requested B2B accounts.
+
++++A sample request to retrieve multiple entities
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+        "schema":{
+            "name":"_xdm.context.account"
+        },
+        "identities": [
+            {
+                "entityId": "2334262",
+                "entityIdNS": {
+                    "code":"b2b_account"
+                }
+            },
+            {
+                "entityId": "2334263",
+                "entityIdNS": {
+                    "code":"b2b_account"
+                }
+            },
+            {
+                "entityId": "2334264",
+                "entityIdNS": {
+                    "code":"b2b_account"
+                }
+            }
+        ]
+    }'
+```
+
+| Property | Type | Description |
+| -------- |----- | ----------- |
+| `schema.name` | String | **(Required)** The name of the XDM schema the entity belongs to. |
+| `identities` | Array | **(Required)** An array containing a list of identities for the entities you want to access. |
+| `identities.entityId` | String | The ID of an entity you wish to access. |
+| `identities.entityIdNS.code` | String | The namespace of an entity ID you wish to access. |
+
++++
 
 **Response**
 
->[!TAB B2B Opportunity]
+A successful response returns HTTP status 200 with the requested entities.
+
++++ A sample response that contains the requested entities
+
+```json
+{
+    "GuQ-AUFjgjeeIw": {
+        "requestedIdentity": {
+            "entityId": "2334263",
+            "entityIdNS": {
+                "code": "b2b_account"
+            }
+        },
+        "entityId": "GuQ-AUFjgjeeIw",
+        "mergePolicy": {
+            "id": "a6150f47-a94f-4c9d-bfa0-958a370020ee"
+        },
+        "sources": [
+            "er_m_attr"
+        ],
+        "entity": {
+            "_id": "id1",
+            "extSourceSystemAudit": {
+                "lastReferencedDate": "2024-03-09 12:21:43.0",
+                "lastActivityDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedBy": "{USER_ID}",
+                "externalKey": {
+                    "sourceID": "00394S0001xpG6xABE",
+                    "sourceKey": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce",
+                    "sourceInstanceID": "00DC0000000Q35nMAC",
+                    "sourceType": "Salesforce"
+                },
+                "lastViewedDate": "2024-03-09 12:21:43.0",
+                "createdDate": "2024-03-09 12:21:43.0"
+            },
+            "accountID": "2334262",
+            "identityMap": {
+                "b2b_account": [
+                    {
+                        "id": "2334263"
+                    },
+                    {
+                        "id": "2334262"
+                    },
+                    {
+                        "id": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce"
+                    }
+                ]
+            },
+            "isDeleted": false,
+            "accountKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            }
+        }
+    },
+    "GuQ-AUFjgjaeIw": {
+        "requestedIdentity": {
+            "entityId": "2334262",
+            "entityIdNS": {
+                "code": "b2b_account"
+            }
+        },
+        "entityId": "GuQ-AUFjgjaeIw",
+        "mergePolicy": {
+            "id": "a6150f47-a94f-4c9d-bfa0-958a370020ee"
+        },
+        "sources": [
+            "er_m_attr"
+        ],
+        "entity": {
+            "_id": "id1",
+            "extSourceSystemAudit": {
+                "lastReferencedDate": "2024-03-09 12:21:43.0",
+                "lastActivityDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedBy": "{USER_ID}",
+                "externalKey": {
+                    "sourceID": "00394S0001xpG6xABE",
+                    "sourceKey": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce",
+                    "sourceInstanceID": "00DC0000000Q35nMAC",
+                    "sourceType": "Salesforce"
+                },
+                "lastViewedDate": "2024-03-09 12:21:43.0",
+                "createdDate": "2024-03-09 12:21:43.0"
+            },
+            "accountID": "2334262",
+            "identityMap": {
+                "b2b_account": [
+                    {
+                        "id": "2334263"
+                    },
+                    {
+                        "id": "2334262"
+                    },
+                    {
+                        "id": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce"
+                    }
+                ]
+            },
+            "isDeleted": false,
+            "accountKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            }
+        }
+    },
+    "GuQ-AUFjgjmeIw": {
+        "requestedIdentity": {
+            "entityId": "2334265",
+            "entityIdNS": {
+                "code": "b2b_account"
+            }
+        },
+        "entityId": "GuQ-AUFjgjmeIw",
+        "mergePolicy": {
+            "id": "a6150f47-a94f-4c9d-bfa0-958a370020ee"
+        },
+        "sources": [
+            "er_m_attr"
+        ],
+        "entity": {
+            "_id": "id1",
+            "extSourceSystemAudit": {
+                "lastReferencedDate": "2024-03-09 12:21:43.0",
+                "lastActivityDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedBy": "{USER_ID}",
+                "externalKey": {
+                    "sourceID": "00394S0001xpG6xABE",
+                    "sourceKey": "0054c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce",
+                    "sourceInstanceID": "00DC0000000Q35nMAC",
+                    "sourceType": "Salesforce"
+                },
+                "lastViewedDate": "2024-03-09 12:21:43.0",
+                "createdDate": "2024-03-09 12:21:43.0"
+            },
+            "accountID": "2334265",
+            "identityMap": {
+            "b2b_account": [
+                {
+                    "id": "0054c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce"
+                },
+                {
+                    "id": "2334265"
+                }
+            ]
+        },
+        "isDeleted": false,
+        "accountKey": {
+            "sourceID": "2334265",
+            "sourceKey": "2334265",
+            "sourceInstanceID": "2334265",
+            "sourceType": "Random"
+        }
+    }
+}
+```
+
++++
+
+>[!TAB B2B opportunity]
 
 **API format**
 
+```http
+POST /access/entities
+```
+
 **Request**
 
+The following request retrieves the requested B2B opportunities.
+
++++ A sample request to retrieve multiple entities
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+        "schema":{
+            "name":"_xdm.context.opportunity"
+        },
+        "identities": [
+            {
+                "entityId": "2334262",
+                "entityIdNS": {
+                    "code":"b2b_opportunity"
+                }
+            },
+            {
+                "entityId": "2334263",
+                "entityIdNS": {
+                    "code":"b2b_opportunity"
+                }
+            },
+            {
+                "entityId": "2334264",
+                "entityIdNS": {
+                    "code":"b2b_opportunity"
+                }
+            },
+            {
+                "entityId": "2334265",
+                "entityIdNS": {
+                    "code":"b2b_opportunity"
+                }
+            }
+        ]
+    }'
+```
+
+| Property | Type | Description |
+| -------- |----- | ----------- |
+| `schema.name` | String | **(Required)** The name of the XDM schema the entity belongs to. |
+| `identities` | Array | **(Required)** An array containing a list of identities for the entities you want to access. |
+| `identities.entityId` | String | The ID of an entity you wish to access. |
+| `identities.entityIdNS.code` | String | The namespace of an entity ID you wish to access. |
+
++++
+
 **Response**
+
+A successful response returns HTTP status 200 with the requested entities.
+
++++ A sample response that contains the requested entities
+
+```json
+{
+    "Ggw_AUFjgjaeIw": {
+        "requestedIdentity": {
+            "entityId": "2334262",
+            "entityIdNS": {
+                "code": "b2b_opportunity"
+            }
+        },
+        "entityId": "Ggw_AUFjgjaeIw",
+        "mergePolicy": {
+            "id": "162824be-07f5-4cd0-aa85-2ff3c8f6c775"
+        },
+        "sources": [
+            "er_m_attr"
+        ],
+        "entity": {
+            "_id": "id1",
+            "extSourceSystemAudit": {
+                "lastReferencedDate": "2024-03-09 12:21:43.0",
+                "lastActivityDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedBy": "Sample value",
+                "externalKey": {
+                    "sourceID": "00394S0001xpG6xABE",
+                    "sourceKey": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce",
+                    "sourceInstanceID": "00DC0000000Q35nMAC",
+                    "sourceType": "Salesforce"
+                },
+                "lastViewedDate": "2024-03-09 12:21:43.0",
+                "createdDate": "2024-03-09 12:21:43.0"
+            },
+            "accountID": "2334262",
+            "identityMap": {
+                "b2b_opportunity": [
+                    {
+                        "id": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce"
+                    },
+                    {
+                        "id": "2334263"
+                    },
+                    {
+                        "id": "2334262"
+                    }
+                ]
+            },
+            "isDeleted": false,
+            "opportunityKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            },
+            "accountKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            }
+        }
+    },
+    "Ggw_AUFjgjieIw": {
+        "requestedIdentity": {
+            "entityId": "2334264",
+            "entityIdNS": {
+                "code": "b2b_opportunity"
+            }
+        },
+        "entityId": "Ggw_AUFjgjieIw",
+        "mergePolicy": {
+            "id": "162824be-07f5-4cd0-aa85-2ff3c8f6c775"
+        },
+        "sources": [
+            "er_m_attr"
+        ],
+        "entity": {
+            "_id": "id1",
+            "extSourceSystemAudit": {
+                "lastReferencedDate": "2024-03-09 12:21:43.0",
+                "lastActivityDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedBy": "Sample value",
+                "externalKey": {
+                    "sourceID": "00394S0001xpG6xABE",
+                    "sourceKey": "0041c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce",
+                    "sourceInstanceID": "00DC0000000Q35nMAC",
+                    "sourceType": "Salesforce"
+                },
+                "lastViewedDate": "2024-03-09 12:21:43.0",
+                "createdDate": "2024-03-09 12:21:43.0"
+            },
+            "accountID": "2334264",
+            "identityMap": {
+                "b2b_opportunity": [
+                    {
+                        "id": "2334264"
+                    },
+                    {
+                        "id": "0041c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce"
+                    }
+                ]
+            },
+            "isDeleted": false,
+            "opportunityKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            },
+            "accountKey": {
+                "sourceID": "2334264",
+                "sourceKey": "2334264",
+                "sourceInstanceID": "2334264",
+                "sourceType": "Salesforce"
+            }
+        }
+    },
+    "Ggw_AUFjgjeeIw": {
+        "requestedIdentity": {
+            "entityId": "2334263",
+            "entityIdNS": {
+                "code": "b2b_opportunity"
+            }
+        },
+        "entityId": "Ggw_AUFjgjeeIw",
+        "mergePolicy": {
+            "id": "162824be-07f5-4cd0-aa85-2ff3c8f6c775"
+        },
+        "sources": [
+            "er_m_attr"
+        ],
+        "entity": {
+            "_id": "id1",
+            "extSourceSystemAudit": {
+                "lastReferencedDate": "2024-03-09 12:21:43.0",
+                "lastActivityDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedBy": "Sample value",
+                "externalKey": {
+                    "sourceID": "00394S0001xpG6xABE",
+                    "sourceKey": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce",
+                    "sourceInstanceID": "00DC0000000Q35nMAC",
+                    "sourceType": "Salesforce"
+                },
+                "lastViewedDate": "2024-03-09 12:21:43.0",
+                "createdDate": "2024-03-09 12:21:43.0"
+            },
+            "accountID": "2334262",
+            "identityMap": {
+                "b2b_opportunity": [
+                    {
+                        "id": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce"
+                    },
+                    {
+                        "id": "2334263"
+                    },
+                    {
+                        "id": "2334262"
+                    }
+                ]
+            },
+            "isDeleted": false,
+            "opportunityKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            },
+            "accountKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            }
+        }
+    },
+    "Ggw_AUFjgjmeIw": {
+        "requestedIdentity": {
+            "entityId": "2334265",
+            "entityIdNS": {
+                "code": "b2b_opportunity"
+            }
+        },
+        "entityId": "Ggw_AUFjgjmeIw",
+        "mergePolicy": {
+            "id": "162824be-07f5-4cd0-aa85-2ff3c8f6c775"
+        },
+        "sources": [
+            "er_m_attr"
+        ],
+        "entity": {
+            "_id": "id1",
+            "extSourceSystemAudit": {
+                "lastReferencedDate": "2024-03-09 12:21:43.0",
+                "lastActivityDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedBy": "Sample value",
+                "externalKey": {
+                    "sourceID": "00394S0001xpG6xABE",
+                    "sourceKey": "0054c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce",
+                    "sourceInstanceID": "00DC0000000Q35nMAC",
+                    "sourceType": "Salesforce"
+                },
+                "lastViewedDate": "2024-03-09 12:21:43.0",
+                "createdDate": "2024-03-09 12:21:43.0"
+            },
+            "accountID": "2334265",
+            "identityMap": {
+                "b2b_opportunity": [
+                    {
+                        "id": "2334265"
+                    },
+                    {
+                        "id": "0054c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce"
+                    }
+                ]
+            },
+            "isDeleted": false,
+            "opportunityKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            },
+            "accountKey": {
+                "sourceID": "2334265",
+                "sourceKey": "2334265",
+                "sourceInstanceID": "2334265",
+                "sourceType": "Random"
+            }
+        }
+    }
+}
+```
+
++++
 
 >[!ENDTABS]
 
