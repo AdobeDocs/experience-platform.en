@@ -227,7 +227,7 @@ A successful response returns HTTP status 200 with a paginated list of time seri
 
 +++
 
->[!TAB B2B account]
+>[!TAB B2B Account]
 
 **API format**
 
@@ -237,7 +237,7 @@ GET /access/entities?{QUERY_PARAMETERS}
 
 Query parameters provided in the request path specify which data to access. You can include multiple parameters, separated by ampersands (&). 
 
-To access the B2B account data, you **must** provide the following query parameters:
+To access the B2B Account data, you **must** provide the following query parameters:
 
 - `schema.name`: The name of the entity's XDM schema. In this use case, this value is `schema.name=_xdm.context.account`.
 - `entityId`: The ID of the entity you're trying to retrieve.
@@ -247,7 +247,7 @@ A complete list of valid parameters is provided in the [query parameters](#query
 
 **Request**
 
-+++ A sample request to retrieve a B2B account
++++ A sample request to retrieve a B2B Account
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.account&entityIdNs=b2b_account&entityId=2334262' \
@@ -319,7 +319,7 @@ A successful response returns HTTP status 200 with the requested entity.
 
 +++
 
->[!TAB B2B opportunity]
+>[!TAB B2B Opportunity]
 
 **API format**
 
@@ -329,7 +329,7 @@ GET /access/entities?{QUERY_PARAMETERS}
 
 Query parameters provided in the request path specify which data to access. You can include multiple parameters, separated by ampersands (&). 
 
-To access a B2B opportunity entity, you **must** provide the following query parameters:
+To access a B2B Opportunity entity, you **must** provide the following query parameters:
 
 - `schema.name`: The name of the entity's XDM schema. In this use case, the `schema.name=_xdm.context.opportunity`.
 - `entityId`: The ID of the entity you're trying to retrieve.
@@ -339,7 +339,7 @@ A complete list of valid parameters is provided in the [query parameters](#query
 
 **Request**
 
-+++ A sample request to retrieve a B2B opportunity entity
++++ A sample request to retrieve a B2B Opportunity entity
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.opportunity&entityIdNs=b2b_opportunity&entityId=2334262' \
@@ -927,7 +927,7 @@ A successful response returns HTTP status 200 with a paginated list of time seri
 >
 >To access these results, you can perform an additional POST request to the `/access/entities` endpoint with the listed payload as the request body.
 
->[!TAB B2B account]
+>[!TAB B2B Account]
 
 **API format**
 
@@ -937,7 +937,7 @@ POST /access/entities
 
 **Request**
 
-The following request retrieves the requested B2B accounts.
+The following request retrieves the requested B2B Accounts.
 
 +++A sample request to retrieve multiple entities
 
@@ -1152,7 +1152,7 @@ A successful response returns HTTP status 200 with the requested entities.
 
 +++
 
->[!TAB B2B opportunity]
+>[!TAB B2B Opportunity]
 
 **API format**
 
@@ -1243,7 +1243,7 @@ A successful response returns HTTP status 200 with the requested entities.
                 "lastReferencedDate": "2024-03-09 12:21:43.0",
                 "lastActivityDate": "2024-03-09 12:21:43.0",
                 "lastUpdatedDate": "2024-03-09 12:21:43.0",
-                "lastUpdatedBy": "Sample value",
+                "lastUpdatedBy": "{USER_ID}",
                 "externalKey": {
                     "sourceID": "00394S0001xpG6xABE",
                     "sourceKey": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce",
@@ -1302,7 +1302,7 @@ A successful response returns HTTP status 200 with the requested entities.
                 "lastReferencedDate": "2024-03-09 12:21:43.0",
                 "lastActivityDate": "2024-03-09 12:21:43.0",
                 "lastUpdatedDate": "2024-03-09 12:21:43.0",
-                "lastUpdatedBy": "Sample value",
+                "lastUpdatedBy": "{USER_ID}",
                 "externalKey": {
                     "sourceID": "00394S0001xpG6xABE",
                     "sourceKey": "0041c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce",
@@ -1358,7 +1358,7 @@ A successful response returns HTTP status 200 with the requested entities.
                 "lastReferencedDate": "2024-03-09 12:21:43.0",
                 "lastActivityDate": "2024-03-09 12:21:43.0",
                 "lastUpdatedDate": "2024-03-09 12:21:43.0",
-                "lastUpdatedBy": "Sample value",
+                "lastUpdatedBy": "{USER_ID}",
                 "externalKey": {
                     "sourceID": "00394S0001xpG6xABE",
                     "sourceKey": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce",
@@ -1417,7 +1417,7 @@ A successful response returns HTTP status 200 with the requested entities.
                 "lastReferencedDate": "2024-03-09 12:21:43.0",
                 "lastActivityDate": "2024-03-09 12:21:43.0",
                 "lastUpdatedDate": "2024-03-09 12:21:43.0",
-                "lastUpdatedBy": "Sample value",
+                "lastUpdatedBy": "{USER_ID}",
                 "externalKey": {
                     "sourceID": "00394S0001xpG6xABE",
                     "sourceKey": "0054c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce",
