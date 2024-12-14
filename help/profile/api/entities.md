@@ -1482,6 +1482,8 @@ GET /access/{NEXT_URI}
 
 The following request retrieves the next page of results by using the `_links.next.href` URI as the request path.
 
++++ A sample request to access the next page of results
+
 ```shell
 curl -X GET \
   'https://platform.adobe.io/data/core/ups/access/entities?start=c8d11988-6b56-4571-a123-b6ce74236037&orderby=timestamp&schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1' \
@@ -1491,9 +1493,13 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Response**
 
 A successful response returns the next page of results. This response does not have subsequent pages of results, as indicated by the empty string values of `_page.next` and `_links.next.href`.
+
++++ A sample response that contains the next page of entities
 
 ```json
 {
@@ -1541,6 +1547,8 @@ A successful response returns the next page of results. This response does not h
     }
 }
 ```
+
++++
 
 ## Delete an entity {#delete-entity}
 
