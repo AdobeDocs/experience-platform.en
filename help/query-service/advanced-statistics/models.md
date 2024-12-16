@@ -71,19 +71,33 @@ Use SQL to reference the dataset used for training.
 
 ## Update a model {#update}
 
-Learn how to update an existing machine learning model by applying new feature engineering transformations and configuring options like the type of algorithm and label column. The SQL below demonstrates how to increase the model's version number with each update, and ensure that changes are tracked so the model can be reused in future evaluation or prediction steps.
+Learn how to update an existing machine learning model by applying new feature engineering transformations and configuring options such as the algorithm type and label column. Each update creates a new version of the model, incremented from the last version. This ensures changes are tracked, and the model can be reused in future evaluation or prediction steps.
+
+The following example demonstrates updating a model with new transformations and options:
 
 ```sql
-UPDATE model <model_alias> transform( one_hot_encoder(NAME) ohe_name, string_indexer(gender) gendersi) options ( type = 'LogisticRegression', label = <label-COLUMN>, ) ASSELECT col1,
-       col2,
-       col3
-FROM   training-dataset.
+UPDATE MODEL <model_alias> TRANSFORM (vector_assembler(array(current_customers, previous_customers)) features)  OPTIONS(MODEL_TYPE='logistic_reg', LABEL='churn_rate')  AS SELECT * FROM churn_with_rate ORDER BY period;
 ```
 
-To help you understand how to manage model versions and apply transformations effectively, the following notes explain the key components and options in the model update workflow.
+**Example**
 
-- `UPDATE model <model_alias>`: The update command handles versioning and increases the model's version number with each update.
-- `version`: An optional keyword used only during updates to create a new version of the model.
+To help you understand the versioning process, consider the following command:
+
+```sql
+UPDATE MODEL model_vdqbrja OPTIONS(MODEL_TYPE='logistic_reg', LABEL='Survived') AS SELECT * FROM titanic_e2e_dnd;
+```
+
+After this command is executed, the model has a new version, as shown in the table below:
+
+| Updated Model ID                           | Updated Model | New Version |
+|--------------------------------------------|---------------|-------------|
+| a8f6a254-8f28-42ec-8b26-94edeb4698e8       | model_vdqbrja | 2           |
+
+The following notes explain the key components and options in the model update workflow.
+
+- `UPDATE model <model_alias>`: The update command handles versioning and creates a new model version incremented from the last version.
+- `version`: An optional keyword used only during updates to explicitly specify that a new version should be created. If omitted, the system automatically increments the version.
+
 
 ## Evaluate models {#evaluate-model}
 
