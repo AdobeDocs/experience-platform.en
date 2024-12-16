@@ -32,24 +32,27 @@ For detailed steps on managing data lifecycle tasks in the UI, see the [data lif
 
 The [!UICONTROL Data Lifecycle] UI is built on top of the Data Hygiene API, whose endpoints are available for you to use directly if you prefer to automate your data lifecycle activities. See the [Data Hygiene API guide](./api/overview.md) for more information.
 
-## Timelines and transparency
+## Timelines and transparency {#timelines-and-transparency}
 
 [Record delete](./ui/record-delete.md) and dataset expiration requests each have their own processing timelines and provide transparency updates at key points in their respective workflows. 
-
-<!-- ### Dataset expirations {#dataset-expiration-transparency} -->
 
 The following takes place when a [dataset expiration request](./ui/dataset-expiration.md) is created:
 
 | Stage | Time after scheduled expiration | Description |
 | --- | --- | --- |
-| Request is submitted | 0 hours | A data steward or privacy analyist submits a request for a dataset to expire at a given time. The request is visible in the [!UICONTROL Data Lifecycle UI] after it has been submitted, and remains in a pending status until the scheduled expiration time, after which the request will execute. |
-| Dataset is dropped | 1 hour | The dataset is dropped from the [dataset inventory page](../catalog/datasets/user-guide.md) in the UI. The data within the data lake is only soft deleted, and will remain so until the end of the process, after which it will be hard deleted. |
-| Profile count updated | 30 hours | Depending on the contents of the dataset being deleted, some profiles may be removed from the system if all of their component attributes are tied to that dataset. 30 hours after the dataset is deleted, any resulting changes in overall profile counts are reflected in [dashboard widgets](../dashboards/guides/profiles.md#profile-count-trend) and other reports. |
-| Audiences updated | 48 hours | Once all affected profiles are updated, all related [audiences](../segmentation/home.md) are updated to reflect their new size. Depending on the dataset that was removed and the attributes that you are segmenting on, the size of each audience could increase or decrease as a result of the deletion. |
-| Journeys and destinations updated | 50 hours | [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campaigns](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html), and [destinations](../destinations/home.md) are updated according to changes in related segments. |
-| Hard deletion complete | 15 days | All data related to the dataset is hard deleted from the data lake. The [status of the data lifecycle job](./ui/browse.md#view-details) that deleted the dataset is updated to reflect this. |
+| **Request is submitted** | 0 hours | A data steward or privacy analyst submits a request for a dataset to expire at a given time. The request is visible in the [!UICONTROL Data Lifecycle UI] after it has been submitted, and remains in a pending status until the scheduled expiration time, after which the request will execute. |
+| **Dataset is flagged for deletion** | 0-2 hours | Once the request is executed, the dataset is flagged for deletion. The request is retained in the system for up to 2 hours (or until processing is complete). Operations like batch and streaming segmentation, preview or estimate, export, and access disregard this dataset during this time. |
+| **Dataset is dropped** | 1 hour | The dataset is dropped from the [dataset inventory page](../catalog/datasets/user-guide.md) in the UI. The data within the data lake is only soft deleted, and will remain so until the end of the process, after which it will be hard deleted. |
+| **Profile count updated** | 30 hours | Depending on the contents of the dataset being deleted, some profiles may be removed from the system if all of their component attributes are tied to that dataset. 30 hours after the dataset is deleted, any resulting changes in overall profile counts are reflected in [dashboard widgets](../dashboards/guides/profiles.md#profile-count-trend) and other reports. |
+| **Audiences updated** | 48 hours | Once all affected profiles are updated, all related [audiences](../segmentation/home.md) are updated to reflect their new size. Depending on the dataset that was removed and the attributes that you are segmenting on, the size of each audience could increase or decrease as a result of the deletion. |
+| **Journeys and destinations updated** | 50 hours | [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campaigns](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html), and [destinations](../destinations/home.md) are updated according to changes in related segments. |
+| **Hard deletion complete** | 15 days | All data related to the dataset is hard deleted from the data lake. The [status of the data lifecycle job](./ui/browse.md#view-details) that deleted the dataset is updated to reflect this. |
 
 {style="table-layout:auto"}
+
+>[!IMPORTANT]
+>
+>Changes are not applied immediately when a dataset is deleted from Amazon Web Services (AWS). For Platform Instances on Azure data lake, deletion requests result in immediate changes across various business functions. The AWS workflow introduces a latency of around 2 hours for some business operations, which could affect things like batch and streaming segmentation, preview/estimate, export, and access. This delay only impacts customers on the AWS platform. Users on Azure data lake, may still experience immediate changes. Adjust your expectations accordingly, as it may take up to 2 hours for the deletion request to propagate through all impacted systems if you are using AWS.
 
 <!-- ### Record deletes {#record-delete-transparency}
 
