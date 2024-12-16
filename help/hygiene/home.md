@@ -52,7 +52,7 @@ The following takes place when a [dataset expiration request](./ui/dataset-expir
 
 >[!IMPORTANT]
 >
->Changes are not applied immediately when a dataset is deleted from Amazon Web Services (AWS). For Platform Instances on Azure data lake, deletion requests result in immediate changes across various business functions. The AWS workflow introduces a latency of around 2 hours for some business operations, which could affect things like batch and streaming segmentation, preview/estimate, export, and access. This delay only impacts customers on the AWS platform. Users on Azure data lake, may still experience immediate changes. Adjust your expectations accordingly, as it may take up to 2 hours for the deletion request to propagate through all impacted systems if you are using AWS.
+>Dataset deletions in Amazon Web Services (AWS) are subject to a latency of around two hours before changes are fully applied. In contrast, deletion requests for Platform Instances that use Azure Data Lake, result in immediate changes across business functions. On AWS, this delay may impact batch segmentation, streaming segmentation, previews, estimates, exports, and data access. This latency only affects customers using AWS, as Azure Data Lake users experience immediate updates. For AWS users, it may take up to two hours for deletion requests to fully propagate through all impacted systems. Adjust your expectations accordingly.
 
 <!-- ### Record deletes {#record-delete-transparency}
 
