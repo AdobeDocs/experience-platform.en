@@ -1,17 +1,18 @@
 ---
-title: RainFocus
-description: Learn how to use the RainFocus Destination Connector to syncronize audience profiles with the RainFocus Global Attendee Profile .
+title: RainFocus Attendee Profiles
+description: Learn how to use the RainFocus Attendee Profiles destination connector to synchronize audience profiles with the RainFocus Global Attendee Profile.
+last-substantial-update: 2024-12-17
 ---
 
-# RainFocus {#rainfocus-destination}
+# RainFocus Attendee Profiles {#rainfocus-destination}
 
 ## Overview {#overview}
 
-Use the RainFocus destination to stream customer profiles from Adobe Experience Platform into the RainFocus platform in order to create and update attendee profiles.
+Use the [!DNL RainFocus Attendee Profiles] destination to stream customer profiles from Adobe Experience Platform into the [!DNL RainFocus] platform in order to create and update attendee profiles.
 
 >[!IMPORTANT]
 >
->The destination connector and documentation page are created and maintained by the RainFocus team. For any inquiries or update requests, please contact them directly at clientcare@rainfocus.com or visit the RainFocus [Help Center](https://help.rainfocus.com/hc/en-us).
+>The destination connector and documentation page are created and maintained by the [!DNL RainFocus] team. For any inquiries or update requests, please contact them directly at `clientcare@rainfocus.com` or visit the RainFocus [Help Center](https://help.rainfocus.com/hc/en-us).
 
 ## Use cases {#use-cases}
 
@@ -19,17 +20,17 @@ To help you better understand how and when you should use the RainFocus destinat
 
 ### Use case #1 {#use-case-1}
 
-A large enterprise technology company is due to open registration for its upcoming global expo and would like to push customer profiles to RainFocus in order to streamline the registration process.
+A large enterprise technology company is due to open registration for its upcoming global expo and would like to push customer profiles to [!DNL RainFocus] in order to streamline the registration process.
 
 ### Use case #2 {#use-case-2}
 
-A financial services brand is due to host a series of roadshows targeting new and existing customers. They have a series of audience segments with target customers in Adobe Experience Platform. Using the RainFocus Destination Connector, they are able to easily send those profiles to RainFocus for activation.
+A financial services brand is due to host a series of roadshows targeting new and existing customers. They have a series of audience segments with target customers in Adobe Experience Platform. Using the [!DNL RainFocus] Destination Connector, they are able to easily send those profiles to [!DNL RainFocus] for activation.
 
 ## Prerequisites {#prerequisites}
 
-Before you can use the RainFocus destination, make sure to meet the following prerequisites:
+Before you can use the [!DNL RainFocus] destination, make sure to meet the following prerequisites:
   
-* Create a RainFocus API Profile with OAuth (Global). 
+* Create a [!DNL RainFocus] API Profile with OAuth (Global). 
   * The **Attendee Store** endpoint must be enabled. 
   * A **Client ID** and **Client Secret** will need to be generated.
 
@@ -37,7 +38,7 @@ You must also have a RainFocus **event code** identifier, into which you would l
 
 ## Supported identities {#supported-identities}
 
-RainFocus supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+[!DNL RainFocus] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
 |Target Identity|Description|Considerations|
 |---|---|---|
@@ -81,8 +82,8 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 ![Provide authentication details for the RainFocus Destination Connector](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-authentication.png)
 
-* **[!UICONTROL Client ID]**: Fill in the Client ID provided by RainFocus API Profile.
-* **[!UICONTROL Client Secret]**: Fill in the Client Secret provided by RainFocus API Profile.
+* **[!UICONTROL Client ID]**: Fill in the [!DNL Client ID] provided by RainFocus API Profile.
+* **[!UICONTROL Client Secret]**: Fill in the [!DNL Client Secret] provided by RainFocus API Profile.
 * **[!UICONTROL Environment]**: Specify which RainFocus environment you are connecting to, for example `dev`, `prod`.
 * **[!UICONTROL Org ID]**: Provide the unique `orgid` for your instance of RainFocus.
 
@@ -94,7 +95,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Event ID]**: Your RainFocus event code identifier, into which you would like profiles sent to.
+*  **[!UICONTROL Event ID]**: Your [!DNL RainFocus] event code identifier, into which you would like profiles sent to.
 
 ### Enable alerts {#enable-alerts}
 
@@ -118,26 +119,28 @@ The following target identity namespace(s) must be mapped depending on the use c
 
 ![How to map profile and identity fields](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-mapping.png)
 
-It is recommended to map additional profile fields, as this will ensure the attendee profile in RainFocus is fully populated. The following target fields are available from RainFocus
+It is recommended to map additional profile fields, as this will ensure the attendee profile in [!DNL RainFocus] is fully populated. The following target fields are available from [!DNL RainFocus]:
 
 | Target Field | Description |
 |------------|-------------|
-| address1   | The first line of the street address |
-| address2   | The second line of the street address (if applicable) |
-| city       | The city name |
-| companyname| The name of the company |
-| countryid  | An ISO 3166-1 alpha-2 country code identifier for the country |
-| email      | The email address |
-| firstname  | The person's first name |
-| lastname   | The person's last name |
-| jobtitle   | The person's job title |
-| phone      | The phone number |
-| state      | The FIPS state alpha code for the state or province |
-| zip        | The postal code or ZIP code |
+| `address1`   | The first line of the street address |
+| `address2`   | The second line of the street address (if applicable) |
+| `city`       | The city name |
+| `companyname`| The name of the company |
+| `countryid`  | An ISO 3166-1 alpha-2 country code identifier for the country |
+| `email`      | The email address |
+| `firstname`  | The person's first name |
+| `lastname`   | The person's last name |
+| `jobtitle`   | The person's job title |
+| `phone`      | The phone number |
+| `state`      | The FIPS state alpha code for the state or province |
+| `zip`        | The postal code or ZIP code |
+
+{style="table-layout:auto"}
 
 ## Exported data / Validate data export {#exported-data}
 
-Once a set of profiles has been sent to RainFocus, use the API Profile logging in RainFocus to validate that the profiles have been ingested successfully. 
+Once a set of profiles has been sent to [!DNL RainFocus], use the API Profile logging in [!DNL RainFocus] to validate that the profiles have been ingested successfully. 
 
 ![View logs in the API Profile in RainFocus](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-api-profile.png)
 
