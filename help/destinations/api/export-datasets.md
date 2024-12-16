@@ -990,7 +990,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-sandbox-name: <SANDBOX-NAME>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-  "name": "Data Landing Zone(DLZ) Base Connection"
+  "name": "Data Landing Zone Base Connection",
+  "connectionSpec": {
+    "id": "3567r537-2a7b-4583-ac39-ed38d4b848e8",
+    "version": "1.0"
+  }
 }'
 ```
 
