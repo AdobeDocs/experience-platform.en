@@ -185,6 +185,8 @@ You may need to update placeholders in some instances where a suggested question
 
 Placeholders are highlighted in blue. Select the placeholder to start updating its value. For best results on numerical placeholders, ensure that you use digits instead of text. You can also use the entity autocomplete feature to update the placeholder values. You cannot a send a question that has unfilled placeholders.
 
+**NOTE**: Suggestions are enabled by default. Select the **[!UICONTROL Suggest ideas]** toggle to disable the feature.
+
 ![A suggestion from AI Assistant with updated placeholders.](./images/updated_placeholder.png)
 
 +++
