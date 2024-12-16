@@ -189,7 +189,7 @@ Placeholders are highlighted in blue. Select the placeholder to start updating i
 
 +++
 
-### Related suggestions
+### Use related suggestions {#use-related-suggestions}
 
 You can use the related suggestions section of every AI Assistant response to continue your conversation.
 
