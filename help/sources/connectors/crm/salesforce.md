@@ -63,7 +63,7 @@ The following table contains example values as well as additional information on
 
 {style="table-layout:auto"}
 
-### Running the scripts
+### Run the scripts
 
 With your [!DNL Postman] collection and environment set up, you can now run the script through the [!DNL Postman] interface.
 
@@ -77,9 +77,9 @@ The [!DNL Runner] interface appears. From here, ensure that all the checkboxes a
 
 A successful request creates the B2B namespaces and schemas according to beta specifications.
 
-## Set up your [!DNL Salesforce] source for connection in an AWS region
+## Set up your [!DNL Salesforce] source for Experience Platform on Amazon Web Services {#aws}
 
-Follow the steps below to learn how you can set up your [!DNL Salesforce] account and connect it to Experience Platform within an AWS region.
+Follow the steps below to learn how you can set up your [!DNL Salesforce] account for Experience Platform on Amazon Web Services (AWS).
 
 ### Prerequisites
 
@@ -99,7 +99,7 @@ openssl req -newkey rsa:4096 -new -nodes -x509 -days 3650 -keyout key.pem -out c
 
 1. In the [!DNL Salesforce] dashboard, select settings (![The settings icon.](/help/images/icons/settings.png)) and then select **[!DNL Setup]**.
 2. Navigate to [!DNL App Manager] and then select **[!DNL New Connection App]**.
-3. Provide a name for  your app and allow for the rest of the fields to be populated.
+3. Provide a name for  your app and allow for the rest of the fields to be auto-filled.
 4. Enable the box for [!DNL Enable OAuth Settings].
 5. Set a callback URL. Since this will not be used for JWT, you can use `https://localhost`.
 6. Enable the box for [!DNL Use Digital Signatures].
@@ -124,7 +124,7 @@ Next, select **[!DNL Save]**, **[!DNL Continue]**, and then **[!DNL Manage Custo
 
 ### Authorize your [!DNL Salesforce] user to the Connected App
 
-Follow the steps below to authorize a [!DNL Salesforce] user:
+Follow the steps below to get authorization to use the Connected App:
 
 1. Navigate to **[!DNL Manage Connected Apps]**.
 2. Select **[!DNL Edit]**.
@@ -134,6 +134,8 @@ Follow the steps below to authorize a [!DNL Salesforce] user:
 6. Navigate to **[!DNL Connected App Access]** and then select the app you created in an earlier step.
 
 ### Generate JWT bearer token
+
+Follow the steps below to generate your JWT bearer token.
 
 #### Convert key-pair into pkcs12
 
@@ -226,7 +228,6 @@ public class Main {
     }
 }
 ```
-
 
 | Property | Configurations |
 | --- | --- |
