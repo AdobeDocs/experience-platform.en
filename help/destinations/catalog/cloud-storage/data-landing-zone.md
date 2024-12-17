@@ -13,13 +13,21 @@ exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
 
 ## Overview {#overview}
 
-[!DNL Data Landing Zone] is an [!DNL Azure Blob] storage interface provisioned by Adobe Experience Platform, granting you access to a secure, cloud-based file storage facility to export files out of Platform. You have access to one [!DNL Data Landing Zone] container per sandbox, and the total data volume across all containers is limited to the total data provided with your Platform Products and Services license. All customers of Platform and its applications such as [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services], and [!DNL Real-Time Customer Data Platform] are provisioned with one [!DNL Data Landing Zone] container per sandbox. You can read and write files to your container through [!DNL Azure Storage Explorer] or your command-line interface.
+[!DNL Data Landing Zone] is a cloud storage interface provisioned by Adobe Experience Platform, granting you access to a secure, cloud-based file storage facility to export files out of Platform. You have access to one [!DNL Data Landing Zone] container per sandbox, and the total data volume across all containers is limited to the total data provided with your Platform Products and Services license. All customers of Platform and its applications such as [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services], and [!DNL Real-Time Customer Data Platform] are provisioned with one [!DNL Data Landing Zone] container per sandbox. 
+
+Platform enforces a strict seven-day time-to-live (TTL) on all files uploaded to a [!DNL Data Landing Zone] container. All files are deleted after seven days.
+
+The [!DNL Data Landing Zone] destination connector is available to customers using the Azure or Amazon Web Service cloud support. The authentication mechanism is different based on the cloud where the destination is provisioned, everything else about the destination and its use cases are the same. 
+
+
+
+You can read and write files to your container through [!DNL Azure Storage Explorer] or your command-line interface.
 
 [!DNL Data Landing Zone] supports SAS-based authentication and its data is protected with standard [!DNL Azure Blob] storage security mechanisms at rest and in transit. SAS stands for [shared access signature](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/how-to-guides/create-sas-tokens?tabs=Containers).
 
 SAS-based authentication allows you to securely access your [!DNL Data Landing Zone] container through a public internet connection. There are no network changes required for you to access your [!DNL Data Landing Zone] container, which means you do not need to configure any allow lists or cross-region setups for your network. 
 
-Platform enforces a strict seven-day time-to-live (TTL) on all files uploaded to a [!DNL Data Landing Zone] container. All files are deleted after seven days.
+
 
 ## Connect to your [!UICONTROL Data Landing Zone] storage through API or UI {#connect-api-or-ui}
 
@@ -191,6 +199,65 @@ A successful connection updates your [!DNL Azure Storage Explorer] UI with your 
 ![Summary of the DLZ user container highlighted in the Azure UI.](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
 
 With your [!DNL Data Landing Zone] container connected to [!DNL Azure Storage Explorer], you can now start exporting files from Experience Platform to your [!DNL Data Landing Zone] container. To export files, you must establish a connection to the [!DNL Data Landing Zone] destination in the Experience Platform UI, as described in the section below. 
+
+## Authenticate to the AWS-provisioned Data Landing Zone
+
+>[!AVAILABILITY]
+>
+>This section applies to implementations of Experience Platform running on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the Experience Platform multi-cloud overview.
+
+>[!BEGINSHADEBOX]
+
+### Retrieve the credentials for your [!DNL Data Landing Zone] {#retrieve-dlz-credentials-aws}
+
+You must use the Platform APIs to retrieve your [!DNL Data Landing Zone] credentials. The API call to retrieve your credentials is described below. For information about getting the required values for your headers, refer the [Getting started with Adobe Experience Platform APIs](/help/landing/api-guide.md) guide.
+
+**API format**
+
+```http
+GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination
+```
+
+| Query parameters | Description |
+| --- | --- |
+| `dlz_destination` |  The `dlz_destination` type allows the API to distinguish a landing zone destination container from the other types of containers that are available to you. |
+
+{style="table-layout:auto"}
+
+**Request**
+
+The following request example retrieves credentials for an existing landing zone.
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=dlz_destination' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+```
+
+**Response**
+
+The following response returns the credential information for your landing zone, including your current `SASToken` and `SASUri`, and the `storageAccountName` that corresponds to your landing zone container.
+
+```json
+{
+    "containerName": "dlz-destination",
+    "SASToken": "sv=2022-09-11&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D",
+    "storageAccountName": "dlblobstore99hh25i3df123",
+    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-destination?sv=2022-09-11&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D"
+}
+```
+
+| Property | Description |
+| --- | --- |
+| `containerName` | The name of your landing zone. |
+| `SASToken` | The shared access signature token for your landing zone. This string contains all the information necessary to authorize a request. |
+| `SASUri` | The shared access signature URI for your landing zone. This string is a combination of the URI to the landing zone for which you are being authenticated to and its corresponding SAS token, |
+
+{style="table-layout:auto"}
 
 ## Connect to the destination {#connect}
 
