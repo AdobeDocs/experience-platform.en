@@ -18,9 +18,9 @@ Experience Platform provides support for ingesting data from a third-party datab
 
 A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
 
-## Set up [!DNL Amazon Redshift] for usage in an AWS region
+## Set up your [!DNL Amazon Redshift] source for Experience Platform on Amazon Web Services {#aws}
 
-You must add the following IP addresses to your allowlist to use your [!DNL Amazon Redshift] source in an AWS region:
+Add the following IP addresses to your allowlist, in order to connect your [!DNL Amazon Redshift] account to Experience Platform on Amazon Web Services (AWS):
 
 - `34.193.63.59`
 - `44.217.93.240`
