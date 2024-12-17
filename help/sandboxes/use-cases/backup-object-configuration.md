@@ -29,7 +29,7 @@ When planning to create your own backup package(s) within your organization, con
 
 ### UI functionality, Platform components, and Experience Cloud products that you will use {#ui-functionality-and-elements}
 
-To successfully implement this use case, you must use multiple areas of Adobe Experience Platform. Make sure that you have the necessary [attribute-based access control permissions](../../access-control/abac/overview.md) for all these areas, or ask your system administrator to grant you the necessary permissions.
+To successfully implement this use case, you must use multiple areas of Adobe Experience Platform. Ensure you have the necessary [attribute-based access control permissions](../../access-control/abac/overview.md) for all these areas, or ask your system administrator to grant you the necessary permissions.
 
   - [Sandbox Tooling](../ui/sandbox-tooling.md)
   - [Sandbox management](../ui/user-guide.md)
@@ -41,7 +41,12 @@ To successfully implement this use case, you must use multiple areas of Adobe Ex
 
 ## How to achieve the use case: high-level overview {#achieve-the-use-case-high-level}
 
-<!-- HIGH LEVEL OVERVIEW HERE -->
+1. Define the scope of the metadata you wish to backup.
+2. Use the Sandbox Tooling user interface to export your desired objects into a **backup** package.
+3. Create new versions of the backup package regularly to ensure backup sandboxes remain aligned with the current configuration.
+4. Check your current usage in the license usage dashboard against your entitlements for non-production sandboxes.
+5. Reset non-production sandboxes to comply with entitlements, or to free up unnecessary resources and data storage.
+6. Import the backup package into the sandbox after resetting it to restore object configurations.
 
 ## How to achieve the use case: Step-by-step instructions {#step-by-step-instructions}
 
