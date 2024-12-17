@@ -11,6 +11,14 @@ The following is a list of release notes for the Adobe Analytics tag extension.
 >
 >The Analytics tag extension if often updated in response to updates to the [AppMeasurement JavaScript library](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html). Refer to the [AppMeasurement release notes](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) for details on the specific versions mentioned below.
 
+## October 28, 2024
+
+**Adobe Analytics Extension 1.9.6**
+
+**Features**:
+
+* Added a new feature to allow users to view and edit a JSON version of the [Set Variables Action](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/analytics/overview#set-variables). The Adobe Web SDK Extension also includes an action to [populate an analytics variable](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/web-sdk/data-element-types) by providing JSON. By copying JSON data from the AA Extension to the Web SDK Extension, migrating customers can easily transfer several settings at once instead of adding each variable manually.
+
 ## August 12, 2024
 
 **Adobe Analytics Extension 1.9.5**
