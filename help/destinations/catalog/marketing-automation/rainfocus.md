@@ -83,7 +83,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 ![Provide authentication details for the RainFocus Destination Connector](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-authentication.png)
 
 * **[!UICONTROL Client ID]**: Fill in the [!DNL Client ID] provided by RainFocus API Profile.
-* **[!UICONTROL Client Secret]**: Fill in the [!DNL Client Secret] provided by RainFocus API Profile.
+* **[!UICONTROL Client secret]**: Fill in the [!DNL Client Secret] provided by RainFocus API Profile.
 * **[!UICONTROL Environment]**: Specify which RainFocus environment you are connecting to, for example `dev`, `prod`.
 * **[!UICONTROL Org ID]**: Provide the unique `orgid` for your instance of RainFocus.
 
