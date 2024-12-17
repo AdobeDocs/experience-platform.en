@@ -83,6 +83,14 @@ Watch the following video to learn how to configure access to AI Assistant for y
 
 For more information, read the [AI Assistant access guide](access.md).
 
+### Understanding product knowledge in AI Assistant
+
+Watch the following video to learn about product knowledge in AI Assistant.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441024?learn=on)
+
+For more information, read about [product knowledge in AI Assistant](home.md#product-knowledge)
+
 ### Use AI Assistant product knowledge to reduce onboarding time
 
 Watch the following video to learn how you can use AI Assistant product knowledge to reduce onboarding time. 
