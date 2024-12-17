@@ -119,7 +119,7 @@ When queried with an operational insights question, AI Assistant provides an SQL
 
 ### Use entity auto-complete {#use-entity-auto-complete}
 
-You can use the autocomplete function to receive a list of data objects that exist in your sandbox. Autocomplete recommendations are available for the following domains: audiences, schemas, datasets, sources, and destinations.
+You can use the autocomplete function to receive a list of data objects that exist in your sandbox. Autocomplete recommendations are available for the following domains: audiences, schemas, datasets, journeys, sources, and destinations.
 
 +++Select to view an example of auto-complete
 
