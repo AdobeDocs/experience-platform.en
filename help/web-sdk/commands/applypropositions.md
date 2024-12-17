@@ -10,7 +10,7 @@ The `applyPropositions` command allows you to re-render propositions that were a
 This command supports the following fields:
 
 * **Propositions**: An array of proposition objects that you want to re-render.
-* **View name**: The name of the view to render. The display notifications for these decisions are cached and can be included in a subsequent `sendEvent` command using the `personalization.includePendingDisplayNotifications` option.
+* **View name**: The name of the view to render. The display notifications for these decisions are cached and can be included in a subsequent `sendEvent` command using the `personalization.includeRenderedPropositions` option.
 * **Meta data**: An object that determines how HTML offers can be applied. It contains the following properties:
   * Scope
   * Selector
@@ -37,10 +37,10 @@ Run the `applyPropositions` command when calling your configured instance of the
 * **`metadata`**: Determines how HTML offers are applied. It is a map where the key is a scope or a surface, and the value is an object containing the keys `selector` and `actionType`.
   * `selector`: A string containing a CSS selector of where to apply the HTML.
   * `actionType`: The action to take with the HTML. Valid values include `setHtml`, `replaceHtml`, and `appendHtml`.
-* **`viewName`**: The name of the view to render in a single-page application. The display notifications for these decisions are cached and can be included in a subsequent `sendEvent` command using `personalization.includePendingDisplayNotifications`.
+* **`viewName`**: The name of the view to render in a single-page application. The display notifications for these decisions are cached and can be included in a subsequent `sendEvent` command using `personalization.includeRenderedPropositions`.
 
 ```js
-alloy("applyPropositiions",{
+alloy("applyPropositions",{
   "propositions": [],
   "metadata": {},
   "viewName": ""

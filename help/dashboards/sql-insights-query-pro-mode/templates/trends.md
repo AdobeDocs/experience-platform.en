@@ -1,6 +1,7 @@
 ---
 title: Audience Trends
 description: Learn how to track and analyze audience metrics over time using the Audience Trends dashboard. Set audience filters, analyze size and identity trends, and export insights for data-driven decisions.
+exl-id: 8b2bc53a-0855-4a75-9149-79410543b4b0
 ---
 # Audience Trends
 

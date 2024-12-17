@@ -8,9 +8,9 @@ exl-id: 5e6ca7b4-5e2f-4706-a339-ac159e2e0938
 ---
 # Create a [!DNL PayPal] base connection using the [!DNL Flow Service] API
 
->[!IMPORTANT]
+>[!WARNING]
 >
->The [!DNL PayPal] source will be deprecated at the end of May 2025. You can use the [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) in place of the [!DNL PayPal] source.
+>The [!DNL PayPal] source will be deprecated at the end of June 2025.
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 

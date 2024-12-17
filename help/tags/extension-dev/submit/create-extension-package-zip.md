@@ -1,8 +1,9 @@
 ---
-title: Prepare an Extension Package Zip File
+title: Create an Extension Package Zip File
 description: Learn how to prepare an extension package zip file.
+exl-id: e66ff29a-1130-4e44-aca2-92a5398e5651
 ---
-# Upload and implement end-to-end testing
+# Create an extension package zip file
 
 >[!NOTE]
 >

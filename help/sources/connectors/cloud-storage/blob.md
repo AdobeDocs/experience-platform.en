@@ -17,7 +17,7 @@ A list of IP addresses must be added to an allow list prior to working with sour
 
 >[!IMPORTANT]
 >
->The [!DNL Azure Blob] source does not support same-region connectivity to Experience Platform. If your Azure instance is using the same network region as Experience Platform, then a connection to Experience Platform sources cannot be established. Please do not use the Azure East US 2, Azure West Europe, and Azure Australia East regions when setting up your [!DNL Azure Blob] source. Currently, only cross-region connectivity is supported.
+>The [!DNL Azure Blob] source does not support same-region connectivity to Experience Platform. If your [!DNL Azure] instance is using the same network region as Experience Platform, then a connection to Experience Platform sources cannot be established. Currently, only cross-region connectivity is supported.
 
 ## Naming constraints for files and directories
 

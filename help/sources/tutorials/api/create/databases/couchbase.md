@@ -8,9 +8,9 @@ exl-id: 625e3acf-fc27-44cf-b4e6-becf1d107ff2
 ---
 # Create a [!DNL Couchbase] base connection using the [!DNL Flow Service] API
 
->[!IMPORTANT]
+>[!WARNING]
 >
->The [!DNL Couchbase] source will be deprecated at the end of May 2025. You can use the [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) in place of the [!DNL Couchbase] source.
+>The [!DNL Couchbase] source will be deprecated at the end of June 2025.
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 

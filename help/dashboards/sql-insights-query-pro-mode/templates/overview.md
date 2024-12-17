@@ -1,6 +1,7 @@
 ---
 title: Data Distiller Templates
 description: Learn how to ensure consistency and efficiency with Data Distiller Templates that provide a structured guide for common tasks in the Adobe Experience Platform user interface.
+exl-id: 8ec86a94-be44-4122-bb53-f8fb0f7885e5
 ---
 # Data Distiller Templates
 

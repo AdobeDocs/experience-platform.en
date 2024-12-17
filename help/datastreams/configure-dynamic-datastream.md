@@ -4,8 +4,8 @@ description: Learn how to create dynamic datastream configurations, to route you
 hide: yes
 hidefromtoc: yes
 badge: label="Beta" type="Informative"
+exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
 ---
-
 # Create dynamic datastream configurations
 
 >[!AVAILABILITY]

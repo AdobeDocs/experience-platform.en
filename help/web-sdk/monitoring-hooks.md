@@ -1,8 +1,8 @@
 ---
 title: Monitoring hooks for Adobe Experience Platform Web SDK
 description: Learn how to use the monitoring hooks provided by the Adobe Experience Platform Web SDK to debug your implementation and capture Web SDK logs.
+exl-id: 56633311-2f89-4024-8524-57d45c7d38f7
 ---
-
 # Monitoring hooks for Web SDK
 
 The Adobe Experience Platform Web SDK includes monitoring hooks which you can use to monitor various system events. These tools are useful for developing your own debugging tools and to capture Web SDK logs.

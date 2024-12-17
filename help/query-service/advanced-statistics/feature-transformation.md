@@ -2,6 +2,7 @@
 title: Feature Transformation Techniques
 description: Learn about essential preprocessing techniques like data transformation, encoding, and feature scaling, which prepare data for statistical model training. It covers the importance of handling missing values and converting categorical data to improve model performance and accuracy.
 role: Developer
+exl-id: ed7fa9b7-f74e-481b-afba-8690ce50c777
 ---
 # Feature transformation techniques
 
@@ -49,14 +50,14 @@ CREATE model modelname options(model_type='logistic_reg', label='rating') AS SEL
 
 To define custom data preprocessing in your `CREATE MODEL` statement, use the `TRANSFORM` clause in combination with any number of the available transformation functions. These manual preprocessing functions can also be used outside of the `TRANSFORM` clause. All the transformations discussed in the [transformer section below](#available-transformations), can be used to preprocess the data manually.
 
-### Key Characteristics
+### Key characteristics {#key-characteristics}
 
 The following are key characteristics of feature transformation to consider when you define your preprocessing functions:
 
 - **Syntax**: `TRANSFORM(functionName(colName, parameters) <aliasNAME>)`
   - The alias name is mandatory in the syntax. You must provide an alias name or the query will fail.
-  
-- **Parameters**: The parameters are positional arguments. This means that each parameter can only take certain values. Refer to the relevant documentation for details on which function takes what argument.
+
+- **Parameters**: The parameters are positional arguments. This means that each parameter can only take certain values and require all preceding parameters to be specified if custom values are provided. Refer to the relevant documentation for details on which function takes what argument.
 
 - **Chaining transformers**: The output of one transformer can become the input to another transformer.
 
@@ -174,7 +175,7 @@ transform(string_imputer(name, 'unknown_name') as name_imputed)
 |1 | ml_unknown |
 |2 | Alice |
 
-#### Boolean imputer {#imputer}
+#### Boolean imputer {#boolean-imputer}
 
 The **Boolean imputer** transformer completes missing values in a dataset for a boolean column. The input and output columns should be of `Boolean` type.
 

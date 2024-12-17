@@ -3,6 +3,8 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Experience Platform API fundamentals
 description: This document provides a brief overview of some the underlying technologies and syntaxes involved with Experience Platform APIs.
+role: Developer
+feature: API
 exl-id: cd69ba48-f78c-4da5-80d1-efab5f508756
 ---
 # Experience Platform API fundamentals
