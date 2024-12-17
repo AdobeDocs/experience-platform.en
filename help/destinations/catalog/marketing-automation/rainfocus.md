@@ -2,8 +2,8 @@
 title: RainFocus Attendee Profiles
 description: Learn how to use the RainFocus Attendee Profiles destination connector to synchronize audience profiles with the RainFocus Global Attendee Profile.
 last-substantial-update: 2024-12-17
+exl-id: 27c3848c-411a-4305-a5d5-00b145b95287
 ---
-
 # RainFocus Attendee Profiles {#rainfocus-destination}
 
 ## Overview {#overview}
