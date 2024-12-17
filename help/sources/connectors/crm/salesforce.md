@@ -89,6 +89,12 @@ To connect your [!DNL Salesforce] account to Experience Platform in an AWS regio
 - A [!DNL Salesforce Connected App] that you can then use to enable JWT_BEARER OAuth flow.
 - The necessary permissions in [!DNL Salesforce] to access data.
 
+You must also add the following IP addresses to your allowlist, in order to connect your [!DNL Salesforce] account to Experience Platform on Amazon Web Services (AWS):
+
+- `34.193.63.59`
+- `44.217.93.240`
+- `44.194.79.229`
+
 ### Create a [!DNL Salesforce Connected App]
 
 First, use the following to create certificate/key-pair of PEM files.
