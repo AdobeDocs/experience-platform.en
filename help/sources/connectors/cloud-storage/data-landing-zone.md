@@ -1,6 +1,4 @@
 ---
-keywords: Experience Platform;home;popular topics
-solution: Experience Platform
 title: Data Landing Zone Source
 description: Learn how to connect Data Landing Zone to Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
@@ -147,7 +145,14 @@ set srcFilePath=<PATH TO LOCAL FILE(S); WORKS WITH WILDCARD PATTERNS>
 azcopy copy "%srcFilePath%" "%sasUri%" --overwrite=true --recursive=true
 ```
 
-## Connect [!DNL Data Landing Zone] to [!DNL Platform]
+## Set up your [!DNL Data Landing Zone] source for Experience Platform on Amazon Web Services {#aws}
+
+Follow the steps below to learn how you can set up your [!DNL Data Landing Zone] account for Experience Platform on Amazon Web Services (AWS).
+
+### Set up AWS CLI and Performing Operations
+
+
+## Connect [!DNL Data Landing Zone] to Experience Platform
 
 The documentation below provides information on how to bring data from your [!DNL Data Landing Zone] container to Adobe Experience Platform using APIs or the user interface.
 
