@@ -11,7 +11,7 @@ badge: Alpha
 
 AI Assistant for Customer Support is a self-serve debugging and troubleshooting capability of AI Assistant that you can use for Adobe Experience Platform features and applications.
 
-You can use AI Assistant for Customer Support to seamlessly troubleshoot without leaving your workflows. When needed, you can use AI Assistant for Customer Support to create customer support tickets, complete with context and session details from your interaction with AI Assistant. Additionally, support administrators can now use AI Assistant to create support tickets.
+You can use AI Assistant for Customer Support to seamlessly troubleshoot without leaving your workflows. When needed, support administrators can now use AI Assistant for Customer Support to create customer support tickets, complete with context and session details from your interactions with AI Assistant. Additionally, you can now check on the latest updates to your support tickets using AI Assistant.
 
 Currently, AI Assistant for Customer Support includes the following solution capabilities:
 
