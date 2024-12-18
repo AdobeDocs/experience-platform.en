@@ -4,6 +4,7 @@ description: Learn about the Appointment schema field group.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
 hidefromtoc: yes
+exl-id: 8224a2ee-51ac-4512-b0e4-5f1ab6bfddc4
 ---
 # [!UICONTROL Appointment] schema field group
 
