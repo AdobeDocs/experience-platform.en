@@ -115,3 +115,4 @@ For more details on the field group, refer to the public XDM repository:
 | [!UICONTROL nth Week Of Month] | `nthWeekOfMonth` | [[!UICONTROL Coding]](../data-types/coding.md) | Indicates the nth week of the month the appointment should reccur. |
 | [!UICONTROL Day Of Month] | `dayOfMonth` | Integer | Indicates that appointments should occur on this specific day of the month.  |
 | [!UICONTROL Month Interval] | `monthInterval` | Integer | Indicates that recurring appointments should occur every nth month. |
+
