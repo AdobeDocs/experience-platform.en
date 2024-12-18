@@ -17,17 +17,7 @@ exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
 
 Platform enforces a strict seven-day time-to-live (TTL) on all files uploaded to a [!DNL Data Landing Zone] container. All files are deleted after seven days.
 
-The [!DNL Data Landing Zone] destination connector is available to customers using the Azure or Amazon Web Service cloud support. The authentication mechanism is different based on the cloud where the destination is provisioned, everything else about the destination and its use cases are the same. 
-
-
-
-You can read and write files to your container through [!DNL Azure Storage Explorer] or your command-line interface.
-
-[!DNL Data Landing Zone] supports SAS-based authentication and its data is protected with standard [!DNL Azure Blob] storage security mechanisms at rest and in transit. SAS stands for [shared access signature](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/how-to-guides/create-sas-tokens?tabs=Containers).
-
-SAS-based authentication allows you to securely access your [!DNL Data Landing Zone] container through a public internet connection. There are no network changes required for you to access your [!DNL Data Landing Zone] container, which means you do not need to configure any allow lists or cross-region setups for your network. 
-
-
+The [!DNL Data Landing Zone] destination connector is available to customers using the Azure or Amazon Web Service cloud support. The authentication mechanism is different based on the cloud where the destination is provisioned, everything else about the destination and its use cases are the same. Read more about the two different authentication mechanisms in the sections [Authenticate to the Data Landing Zone provisioned in Azure Blob] and [Authenticate to the AWS-provisioned Data Landing Zone](#authenticate-dlz-aws)
 
 ## Connect to your [!UICONTROL Data Landing Zone] storage through API or UI {#connect-api-or-ui}
 
@@ -69,11 +59,15 @@ When exporting *audience data*, Platform creates a `.csv`, `parquet`, or `.json`
 
 When exporting *datasets*, Platform creates a `.parquet` or `.json` file in the storage location that you provided. For more information about the files, see the [verify successful dataset export](../../ui/export-datasets.md#verify) section in the export datasets tutorial.
 
-## Prerequisites {#prerequisites}
+## Authenticate to the Data Landing Zone provisioned in Azure Blob {#authenticate-dlz-azure}
 
-Note the following prerequisites that must be met before you can use the [!DNL Data Landing Zone] destination.
+You can read and write files to your container through [!DNL Azure Storage Explorer] or your command-line interface.
 
-### Connect your [!DNL Data Landing Zone] container to [!DNL Azure Storage Explorer]
+[!DNL Data Landing Zone] supports SAS-based authentication and its data is protected with standard [!DNL Azure Blob] storage security mechanisms at rest and in transit. SAS stands for [shared access signature](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/how-to-guides/create-sas-tokens?tabs=Containers).
+
+SAS-based authentication allows you to securely access your [!DNL Data Landing Zone] container through a public internet connection. There are no network changes required for you to access your [!DNL Data Landing Zone] container, which means you do not need to configure any allow lists or cross-region setups for your network. 
+
+### Connect your [!DNL Data Landing Zone] container to [!DNL Azure Storage Explorer] 
 
 You can use [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/products/storage/storage-explorer/) to manage the contents of your [!DNL Data Landing Zone] container. To start using [!DNL Data Landing Zone], you must first retrieve your credentials, input them in [!DNL Azure Storage Explorer], and connect your [!DNL Data Landing Zone] container to [!DNL Azure Storage Explorer].
 
@@ -200,7 +194,7 @@ A successful connection updates your [!DNL Azure Storage Explorer] UI with your 
 
 With your [!DNL Data Landing Zone] container connected to [!DNL Azure Storage Explorer], you can now start exporting files from Experience Platform to your [!DNL Data Landing Zone] container. To export files, you must establish a connection to the [!DNL Data Landing Zone] destination in the Experience Platform UI, as described in the section below. 
 
-## Authenticate to the AWS-provisioned Data Landing Zone
+## Authenticate to the AWS-provisioned Data Landing Zone {#authenticate-dlz-aws}
 
 >[!AVAILABILITY]
 >
