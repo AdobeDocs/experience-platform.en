@@ -14,6 +14,10 @@ badgeBeta: label="Beta" type="Informative"
 
 Use the Marketo Engage Person Sync connector to stream updates from person audiences to the corresponding records in your Marketo Engage instance.
 
+>[!IMPORTANT]
+> 
+>The Marketo V2 Audience Sync Connector should not be used in Create mode in conjunction with the Profile Update Sync Connector 
+
 ## Supported Identities and Attributes {#support-identities-and-attributes}
 
 ### Supported Identities {#supported-identities}
@@ -53,7 +57,7 @@ Refer to the table below for information about the destination export type and f
 >
 >* To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions).
 
-To configure a Marketo Engage instance as a destination, that instance must be in the same organization as your Real-Time CDP instance. If you have already configured a destination, you may select an existing Marketo account to use with your new configuration. Navigate to the destinations catalog, find the Marketo Engage Person Sync connector, and select Connect to Destination prompt, which will allow you to set the name, description, and Marketo Munchkin ID of the desired destination. Your Marketo Instance's Munchkin ID can be found in the Admin->Munchkin menu.
+If your company has access to multiple organizations, make sure that you use the same organization in both Marketo Engage and Real-Time CDP, where you are setting up the destination connector to Marketo.  If you have already configured a destination, you may select an existing Marketo account to use with your new configuration.  If not, click the Connector to Destination prompt, which will allow you to set the name, description, and Marketo Munchkin ID of the desired destination.  Your Marketo Instance's Munchkin ID can be found in the Admin->Munchkin menu. 
 
 >[!IMPORTANT]
 >
