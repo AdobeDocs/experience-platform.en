@@ -6,13 +6,13 @@ description: Learn what the differences are between running Experience Platform 
 
 # Adobe Experience Platform multi-cloud overview
 
-Adobe Experience Platform is available in two versions, running on different cloud platforms: [[!DNL Microsoft Azure]](https://azure.microsoft.com/en-us) and [[!DNL Amazon Web Services (AWS)]](https://aws.amazon.com/). This flexibility allows you to choose the best fit for your business and technical requirements.
+Adobe Experience Platform is a multi-cloud product, giving you the choice between running on [[!DNL Microsoft Azure]](https://azure.microsoft.com/en-us) or [[!DNL Amazon Web Services (AWS)]](https://aws.amazon.com/). This flexibility allows you to choose the best fit for your business and technical requirements.
 
 >[!AVAILABILITY]
 >
 >Adobe Experience Platform running on Amazon Web Services (AWS) is currently available to a limited number of customers. To learn more about Experience Platform on AWS, contact your Adobe Account Team.
 
-This page provides a high-level overview of the two versions and includes guidance on how to choose the right version for your business.
+This page provides a high-level overview of the two available cloud infrastructures and includes guidance on how to choose the right one for your business.
 
 ## Hosting locations {#available-cloud-regions}
 
@@ -39,9 +39,9 @@ Experience Platform runs on 6 Microsoft Azure data centers, 1 Amazon Web Service
 |---------|-------------|----------|
 | United States of America | VA6 | Virginia |
 
-## Differences between Microsoft Azure and AWS versions
+## Differences between running Experience Platform on Microsoft Azure and AWS
 
-The table below highlights the major differences between the Microsoft Azure and AWS versions of Experience Platform.
+The table below highlights the major differences between running Experience Platform on Microsoft Azure and AWS.
 
 | Feature / Functionality | Microsoft Azure | Amazon Web Services |
 | --- | --- | --- |
@@ -66,8 +66,8 @@ We are committed to offering feature parity across both cloud platforms, for all
 * [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/ajo-home)
 * [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-landing)
 
-However, some functionalities may differ between the Azure and AWS versions. These differences are outlined in the product documentation, where applicable.
+However, some functionalities may differ between Azure and AWS. These differences are outlined in the product documentation, where applicable.
 
 ## Conclusion {#conclusion}
 
-Experience Platform provides flexibility and choice by offering versions on both Microsoft Azure and Amazon Web Services. Evaluate your business needs and existing infrastructure to make an informed decision on which cloud platform to use.
+Experience Platform provides flexibility and choice by giving you the option to run on Microsoft Azure or Amazon Web Services. Evaluate your business needs and existing infrastructure to make an informed decision on which cloud platform to use.
