@@ -51,3 +51,4 @@ The following table outlines the data types created as per the [!DNL HL7 FHIR Re
 | [[!UICONTROL Simple Quantity]](./data-types/simple-quantity.md) | A measured or measurable amount. |
 | [[!UICONTROL Timing]](./data-types/timing.md) | Information on an event that may occur multiple times. |
 | [[!UICONTROL Virtual Service Detail]](./data-types/virtual-service-detail.md) | Virtual service contact details. |
+
