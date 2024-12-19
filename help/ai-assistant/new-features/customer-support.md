@@ -2,6 +2,7 @@
 title: AI Assistant for Customer Support
 description: Learn how you can use AI Assistant to streamline troubleshooting and the customer support ticket filing process.
 badge: Alpha
+exl-id: 263b8a44-8902-42b9-8390-d7da8e9b5129
 ---
 # AI Assistant for Customer Support
 
@@ -30,7 +31,7 @@ Get instant responses to common support questions sourced from expert-curated do
 * **Product legal documentation** that provides accurate and licensing-oriented information.
   * Example questions:
     * "What is the limit for batch segmentation jobs in Adobe Experience Platform Activation?"
-    "What is the average profile richness limit in Adobe Experience Platform Activation?"
+    * "What is the average profile richness limit in Adobe Experience Platform Activation?"
 
 ## Support case creation
 
