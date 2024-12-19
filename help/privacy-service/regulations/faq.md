@@ -81,7 +81,7 @@ Assuming that the business has collected personal information and that it can au
 | Regulation | Timeframe to respond | Notes |
 | --- | --- | --- |
 | CCPA (California) | 45 days | |
-| GDPR (European Union) | 30 days | If the request is complex, or numerous requests have been made by the same data subject, then the request can be extended to 60 days. |
+| GDPR (European Union) | 30 days | |
 | LGPD (Brazil) | 15 days | |
 | PDPA (Thailand) | 30 days | If a company cannot respond to a data subject's request within the compliance window, the company will have an additional 30 days from the date they were unable to fulfill the request to respond in writing to the data subject. |
 
