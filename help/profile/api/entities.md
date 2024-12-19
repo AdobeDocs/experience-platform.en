@@ -82,7 +82,7 @@ A successful response returns HTTP status 200 with the requested entity.
                     }
                 },
                 {
-                    "id": "janesmith@example.com",
+                    "id": "johnsmith@example.com",
                     "namespace": {
                         "code": "email"
                     }
@@ -1607,7 +1607,7 @@ The following parameters are used in the path for GET requests to the `/access/e
 | `relatedSchema.name`| If `schema.name` is `_xdm.context.experienceevent`, this value **must** specify the schema for the profile entity that the time series events are related to. | `relatedSchema.name=_xdm.context.profile` |
 | `entityId` | **(Required)** The ID of the entity. If the value of this parameter is not an XID, an identity namespace parameter (`entityIdNS`) must also be provided. | `entityId=janedoe@example.com` |
 | `entityIdNS` | If `entityId` is not provided as an XID, this field **must** specify the identity namespace. | `entityIdNE=email` |
-| `relatedEntityId` | If `schema.name` is `_xdm.context.experienceevent`, this value **must** specify the related profile entity's identity namespace. This value follows the same rules as `entityId`. | `relatedEntityId=69935279872410346619186588147492736556` |
+| `relatedEntityId` | If `schema.name` is `_xdm.context.experienceevent`, this value **must** specify the related profile entity's ID. This value follows the same rules as `entityId`. | `relatedEntityId=69935279872410346619186588147492736556` |
 | `relatedEntityIdNS` | If `schema.name` is "_xdm.context.experienceevent", this value must specify the identity namespace for the entity specified in `relatedEntityId`. |`relatedEntityIdNS=CRMID`|
 | `fields` | Filters the data returned in the response. Use this to specify which schema field values to include in data retrieved. For multiple fields, separate values by a comma with no spaces between. | `fields=personalEmail,person.name,person.gender` |
 | `mergePolicyId` | Identifies the merge policy by which to govern the data returned. If one is not specified in the call, your organization's default for that schema will be used. If no default merge policy has been configured, the default is no profile merge and no identity stitching. | `mergePolicyId=5aa6885fcf70a301dabdfa4a` |
