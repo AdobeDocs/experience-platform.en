@@ -17,7 +17,7 @@ Enhance your security with Amazon Web Services Key Management Service (KMS). Use
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform encrypts data at rest by default using system-managed keys. You gain greater control over your data security by enabling customer-managed keys,however, this is a one-way configuration. Once CMK is enabled, you cannot revert to system-managed keys. It is your responsibility to securely manage your keys to ensure uninterrupted access to your data and prevent potential inaccessibility.
+>Adobe Experience Platform encrypts data at rest by default using system-managed keys. You gain greater control over your data security by enabling customer-managed keys, however, this is a one-way configuration. Once CMK is enabled, you cannot revert to system-managed keys. It is your responsibility to securely manage your keys to ensure uninterrupted access to your data and prevent potential inaccessibility.
 
 This guides details the process to create and manage encryption keys in AWS Key Management Service (KMS) to secure your data in Adobe Experience Platform.
 
@@ -25,8 +25,8 @@ This guides details the process to create and manage encryption keys in AWS Key 
 
 Before continuing with this document, you should have a good understanding of the following key concepts and capabilities. They are described below:
 
-- **AWS Key Management Service (KMS)**: Understand the fundamentals of AWS KMS, including how to create, manage, and rotate encryption keys. RTefer to the [official KMS documentation](https://docs.aws.amazon.com/kms/) to learn more.
-- **Identity and Access Management (IAM) Policies in AWS**: IAM is a service that enables you to manage access to AWS services and resources securely. Use IAM to:
+- **AWS Key Management Service (KMS)**: Understand the fundamentals of AWS KMS, including how to create, manage, and rotate encryption keys. Refer to the [official KMS documentation](https://docs.aws.amazon.com/kms/) to learn more.
+- **Identity and Access Management (IAM) policies in AWS**: IAM is a service that enables you to manage access to AWS services and resources securely. Use IAM to:
   - Define which users, groups, and roles have access to specific resources.
   - Specify what actions they are allowed or denied to perform.
   - Implement fine-grained access control by assigning permissions using IAM policies.
@@ -60,16 +60,11 @@ If the simulation returns an error or you are unsure about your permissions, con
 >
 >Ensure the secure storage, access, and availability of the encryption keys. You are responsible for managing your keys and preventing disruptions to Platform operations.
 
-1. **Log In to AWS Account**
-   - Access your AWS account to begin managing your encryption keys.
-
-2. **Navigate to AWS Key Management Service (KMS)**
-
-Go to the AWS Management Console and select **Key Management Service (KMS)** from the services menu.
+First, log in to your AWS Account and navigate to AWS Key Management Service (KMS) to begin managing your encryption keys. From the AWS Management Console and select **Key Management Service (KMS)** from the services menu.
 
 ![The search drop down menu of the AWS Management Console with Key Management Service highlighted.](../../images/governance-privacy-security/key-management-service/navigate-to-kms.png)
 
-1. **Create a New Key**
+## Create a new key
 
 The [!DNL Key Management Service (KMS)] workspace appears. Select **[!DNL Create a key]**.
 
@@ -77,11 +72,11 @@ The [!DNL Key Management Service (KMS)] workspace appears. Select **[!DNL Create
 
 ## Configure your key {#configure-key}
 
-The Configure Key workflow appears. The default settings are symetric key type and encrypt and decrypt key usage. Ensure that the **[!DNL Symmetric]** key type, and **[!DNL Encrypt and Decrypt]** key usage options are selected. 
+The [!DNL Configure Key] workflow appears. By default, the key type is set to **[!DNL Symmetric]**, and the key usage is set to **[!DNL Encrypt and Decrypt]**. Ensure these options are selected before proceeding.
 
-![Step one of the Configure key workflow with Systemic and Encrypt and decrypt basic options highlighted.]()
+![Step one of the Configure key workflow with Systemic and Encrypt and decrypt basic options highlighted.](../../images/governance-privacy-security/key-management-service/configure-key-basic-options.png)
 
-Expand the **[!DNL Advanced options]** dropdown menu. You are recommended to use the **[!DNL KMS]** option as this allows AWS to create and mange the key material. The [!DNL KMS] option is selected by default.
+Expand the **[!DNL Advanced options]** dropdown menu. You are recommended to use the **[!DNL KMS]** option, which allows AWS to create and mange the key material. The [!DNL KMS] option is selected by default.
  
 >[!NOTE]
 >
@@ -109,10 +104,16 @@ When you are satisfied with your settings, select **[!DNL Next]** to continue th
 
 ![Step two of the Configure key workflow with the Alias, Description, Tags and Next highlighted.](../../images/governance-privacy-security/key-management-service/add-labels.png)
 
-1. **Configure Key Details**
-   - Provide the required details for the key, including a name, description, and key usage permissions.
+## Define key administrative permissions
 
-2. **Define Key Permissions**
+<!-- 
+So these are the key administrators.
+So yeah, so these are all the users.
+The administrators who can administer this key through the KMS API.
+So basically you have like a bunch of like all these are the user that are defined in IAM for this particular account. The [!DNL Key Administrators] section specifies what users have administrator access to the key. In this section you can also allow the administrators to delete this key.
+I think like there's a concept of owner and administrator.
+From here, you can assign other users as administrators and either grant or refuse them permission to delete keys. Check the box next to the username to allow that user to delete the key. If you do not check the checkbox, the user is not allowed to perform that operation.  -->
+
    - Assign users, roles, or AWS services with permission to use the key. This ensures secure and controlled access.
 
 3. **Review and Complete Key Creation**
