@@ -48,8 +48,6 @@ If the simulation returns an error or you are unsure about your permissions, con
 
 1. **Select a supported region**: AWS KMS is available in specific regions. Make sure you are operating in a region where KMS is supported. You can view a complete list of supported regions in the [AWS KMS endpoints and quotas list](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/). 
 
-<!--  -->
-
 ### Steps to Complete the Workflow:
 
 <!-- Add into paragraph -->
@@ -92,7 +90,7 @@ Next, select the [!DNL Regionality] setting. You must select **[!DNL Single-Regi
 
 ## Add labels {#add-labels}
 
-Next, configure the [!DNL Alias] and [!DNL Tags] fields to help you manage and locate your encryption key from the AWS KMS console.
+The second, [!DNL Add labels] stage of the workflow appears. Here, you configure the [!DNL Alias] and [!DNL Tags] fields to help you manage and locate your encryption key from the AWS KMS console.
 
 Enter a descriptive label for your key in the **[!DNL Alias]** input field. The alias acts as a user-friendly identifier, to quickly locate the key using the search bar in the AWS KMS console. To prevent confusion, choose a meaningful name that reflects the key's purpose, such as "Adobe-AEP-Key" or "Customer-Encryption-Key,". You can also include a description of the key if the key alias is insufficient to describe its purpose.
 
@@ -102,36 +100,114 @@ Finally, assign metadata to your key by adding key-value pairs in the [!DNL Tags
 
 When you are satisfied with your settings, select **[!DNL Next]** to continue the workflow.
 
-![Step two of the Configure key workflow with the Alias, Description, Tags and Next highlighted.](../../images/governance-privacy-security/key-management-service/add-labels.png)
+![Step two of the Configure key workflow with the Alias, Description, Tags, and Next highlighted.](../../images/governance-privacy-security/key-management-service/add-labels.png)
 
-## Define key administrative permissions
+## Define key administrative permissions {#define-key-admins}
 
-<!-- 
-So these are the key administrators.
-So yeah, so these are all the users.
-The administrators who can administer this key through the KMS API.
-So basically you have like a bunch of like all these are the user that are defined in IAM for this particular account. The [!DNL Key Administrators] section specifies what users have administrator access to the key. In this section you can also allow the administrators to delete this key.
-I think like there's a concept of owner and administrator.
-From here, you can assign other users as administrators and either grant or refuse them permission to delete keys. Check the box next to the username to allow that user to delete the key. If you do not check the checkbox, the user is not allowed to perform that operation.  -->
+Step three of the create key workflow appears. To ensures secure and controlled access, you can choose which of the IAM users and roles can manage the key. There are two options at this stage, [!DNL Key administrators] and [!DNL Key deletion]. In the **[!DNL Key administrators]** section, select the checkboxe(s) next to the name of any user, or role, that you want to grant administrator permissions for this key. 
 
-   - Assign users, roles, or AWS services with permission to use the key. This ensures secure and controlled access.
+>[!NOTE]
+>
+>You cannot create administrators at this stage of the workflow.
 
-3. **Review and Complete Key Creation**
-   - Verify the key details and permissions before completing the setup. Once done, your key will be ready for use.
+In the **[!DNL Key deletion]** section, enable the checkbox to allow key administrators the right to delete this key. If you do not check the checkbox, administrative users are not allowed to perform that operation.
 
-4. **Integrate the Key with Adobe Experience Platform**
-   - Obtain the JSON policy from the Adobe Experience Platform UI and apply it to your AWS KMS key to link it to the platform securely.
+Select **[!DNL Next]** to continue the workflow.
 
-5. **Understand Key Revocation Behavior**
-   - Be aware that revoking or disabling the key will make your Adobe Experience Platform data inaccessible. This action is irreversible and should be performed with caution.
+![The Define key administrative permissions stage of the workflow, with checkboxes and next highlighted.](../../images/governance-privacy-security/key-management-service/define-key-admins.png)
 
-6. **Monitor and Manage Key Rotation**
-   - If required, set up automatic key rotation to enhance security. Note that rotation does not affect data availability in Adobe Experience Platform.
+## Grant access to key users {#assign-key-users}
 
-7.  **Acknowledge the Irreversible Nature of Customer-Managed Encryption**
-    - Once customer-managed encryption is enabled, it cannot be reverted to system-managed encryption. This ensures you retain full control and accountability for your keys.
+In step four of the workflow, you can [!DNL Define key usage permissions]. Form the **[!DNL Key users]** list, select the checkboxes for IAM users and roles that you want to have permission to use this key. 
 
-## Key revocation
+From this view, you can also [!DNL Add another AWS account]; however, this is strongly discouraged. Adding another account can introduce risks and complicate permission management for encryption and decryption operations. By keeping the key associated with a single AWS account, Adobe ensures secure integration with AWS KMS, minimizing risks and ensuring reliable operation.
+
+Select **[!DNL Next]** to continue the workflow.
+
+![The Define key usage permissions stage of the workflow, with checkboxes and next highlighted.](../../images/governance-privacy-security/key-management-service/define-key-users.png)
+
+## Review key configuration {#review}
+
+The review stage of the key configuration appears. Verify the key details in the [!DNL Key configuration] and [!DNL Alias and description] sections.
+
+>[!NOTE]
+>
+>Ensure that the key region is the same as the AWS account.
+
+![The Review stage of the workflow with the Key configuration and Alias and description sections highlighted.](../../images/governance-privacy-security/key-management-service/review-key-configuration-details.png)
+
+### Update the key policy to integrate the key with Experience Platform
+
+Next, edit the JSON in the **[!DNL Key Policy]** section to integrate the key with Experience Platform. by default the Key policy looks similar to the JSON below.
+
+```JSON
+{
+  "Id": "key-consolepolicy-3",
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Enable IAM User Permissions",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::495760903233:root"
+      },
+      "Action": "kms:*",
+      "Resource": "*"
+    }
+  ]
+}
+```
+
+This particular key can be accessed by all the resources (`"Resource": "*"`) in the same account (`Principal.AWS`). The policy allows other services in the same account, to use the key to do encryption and decryption. The services only have permission with this account.
+
+Next, you must add a new statement to this policy. The statement adds your Platform single tenant account to access this key. 
+
+<!-- The `Principal.AWS` indicates the account associated with the key, and `Resource`  -->
+
+Obtain the JSON policy from the Adobe Experience Platform UI and apply it to your AWS KMS key to link it to the platform securely.
+
+Navigate to the Platform UI, in the **[!UICONTROL Administration]** section of the left navigation rail, select **[!UICONTROL Encryption]**. The [!UICONTROL Encryption Configuration] workspace appears. Select **[!UICONTROL Configure]** in the [!UICONTROL Customer Managed Keys] card.
+
+![The Platform Encryption Configuration workspace with Configure highlighted in the Customer Managed Keys card.](../../images/governance-privacy-security/key-management-service/encryption-configuration.png)
+
+The [!UICONTROL Customer Managed Keys configuration] appears. Select the copy icon to copy the CMK KMS policy to your clipboard. A green pop-up notification confirms that the policy was copied. 
+
+![The Customer Managed Keys configuration with the CMK KMS policy displayed and the copy icon highlighted.](../../images/governance-privacy-security/key-management-service/copy-cmk-policy.png)
+
+<!-- This part of the workflow was in contention at the time of the demo.  -->
+
+Next, return to the AWS MKS workspace and update the key policy. Overwrite the entire default policy with the policy you copied from the [Platform Encryption Configuration workspace]. Select **[!DNL Finish]** to confirm your key details with your updated policy and create the key. The key and policy have now been configured to allow your AWS account to communicate with your Adobe Experience Platform account. The effect is instantaneous.
+
+![The Review stage of the workflow with the updated policy and Finish highlighted.](../../images/governance-privacy-security/key-management-service/updated-cmk-policy.png)
+
+The [!DNL Customer managed keys] workspace of the AWS [!DNL Key Management Service] appears. 
+
+### Add AWS encryption key details to Platform 
+
+Next, to ..., you must add the .... to your Platform [!UICONTROL Customer Managed Keys configuration]. 
+
+Select the alias of your new key from the list in the [!DNL Key Management Service]. 
+
+![The AWS KMS Customer Managed Keys workspace with the new key alias highlighted.](../../images/governance-privacy-security/key-management-service/customer-managed-keys-on-aws.png)
+
+The details of your key are displayed. Everything in AWS has an Amazon Resource Name (ARN) which 
+is a unique identifier used to specify resources across AWS services. It follows a standardized format: `arn:partition:service:region:account-id:resource`.
+
+Select the copy icon to copy your ARN a confirmation dialog appears. 
+
+![The AWS KMS Customer Managed Keys key details with the ARN highlighted.](../../images/governance-privacy-security/key-management-service/keys-details-arn.png)
+
+Now, navigate back to the Platform [!UICONTROL Customer Managed Keys configuration] UI. In the [!UICONTROL Add AWS encryption key details] section, add a **[!UICONTROL Configuration name]** and the **[!UICONTROL KMS key ARN]**
+
+![The Platform Encryption Configuration workspace with Configuration name and KMS key ARN highlighted in the Add AWS encryption key details section.](../../images/governance-privacy-security/key-management-service/add-encryption-key-details.png)
+
+Next, select **[!UICONTROL SAVE]** to submit the configuration name and the KMS key ARN. This begins validation of the key.
+
+![The Platform Encryption Configuration workspace with Save highlighted.](../../images/governance-privacy-security/key-management-service/save.png)
+
+<!-- Up to 23.16 in the demo recording -->
+
+<!-- ## Key revocation -->
 
 <!-- Soon.... -->
 
@@ -143,6 +219,14 @@ Describe the propagation timelines when access to encryption keys is revoked:
 - Cached/Transient data stores: Inaccessibility occurs within up to 7 days.
 
 NOTE: It is important to understand the downstream impact before you revoke key access.
+ -->
+
+<!-- 
+**Understand Key Revocation Behavior**: Be aware that revoking or disabling the key will make your Adobe Experience Platform data inaccessible. This action is irreversible and should be performed with caution.
+
+**Monitor and Manage Key Rotation**: If required, set up automatic key rotation to enhance security. Note that rotation does not affect data availability in Adobe Experience Platform.
+
+**Acknowledge the Irreversible Nature of Customer-Managed Encryption**: Once customer-managed encryption is enabled, it cannot be reverted to system-managed encryption. This ensures you retain full control and accountability for your keys.
  -->
 
 ## Next Steps
