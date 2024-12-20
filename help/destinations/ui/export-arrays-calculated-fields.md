@@ -4,7 +4,7 @@ type: Tutorial
 description: Learn how to use calculated fields to export arrays from Real-Time CDP to cloud storage destinations as strings.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 ---
-# Export array objects from Real-Time CDP to cloud storage destinations
+# Export array objects from Real-Time CDP to cloud storage destinations {#export-arrays-cloud-storage}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
