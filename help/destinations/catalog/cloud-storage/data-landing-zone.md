@@ -17,7 +17,9 @@ exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
 
 Platform enforces a strict seven-day time-to-live (TTL) on all files uploaded to a [!DNL Data Landing Zone] container. All files are deleted after seven days.
 
-The [!DNL Data Landing Zone] destination connector is available to customers using the Azure or Amazon Web Service cloud support. The authentication mechanism is different based on the cloud where the destination is provisioned, everything else about the destination and its use cases are the same. Read more about the two different authentication mechanisms in the sections [Authenticate to the Data Landing Zone provisioned in Azure Blob] and [Authenticate to the AWS-provisioned Data Landing Zone](#authenticate-dlz-aws)
+The [!DNL Data Landing Zone] destination connector is available to customers using the Azure or Amazon Web Service cloud support. The authentication mechanism is different based on the cloud in which the destination is provisioned, everything else about the destination and its use cases are the same. Read more about the two different authentication mechanisms in the sections [Authenticate to the Data Landing Zone provisioned in Azure Blob] and [Authenticate to the AWS-provisioned Data Landing Zone](#authenticate-dlz-aws).
+
+![Diagram showing how the implementations of the Data Landing Zone destinations are different based on the cloud implementation.](/help/destinations/assets/catalog/cloud-storage/data-landing-zone/dlz-workflow-based-on-cloud-implementation.png)
 
 ## Connect to your [!UICONTROL Data Landing Zone] storage through API or UI {#connect-api-or-ui}
 
@@ -60,6 +62,10 @@ When exporting *audience data*, Platform creates a `.csv`, `parquet`, or `.json`
 When exporting *datasets*, Platform creates a `.parquet` or `.json` file in the storage location that you provided. For more information about the files, see the [verify successful dataset export](../../ui/export-datasets.md#verify) section in the export datasets tutorial.
 
 ## Authenticate to the Data Landing Zone provisioned in Azure Blob {#authenticate-dlz-azure}
+
+>[!AVAILABILITY]
+>
+>This section applies to implementations of Experience Platform running on Microsoft Azure. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
 You can read and write files to your container through [!DNL Azure Storage Explorer] or your command-line interface.
 
@@ -198,7 +204,9 @@ With your [!DNL Data Landing Zone] container connected to [!DNL Azure Storage Ex
 
 >[!AVAILABILITY]
 >
->This section applies to implementations of Experience Platform running on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the Experience Platform multi-cloud overview.
+>This section applies to implementations of Experience Platform running on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
+
+Using a client of choice, perform the operations below to get credentials and connect to your Data Landing Zone instance provisioned on AWS. 
 
 >[!BEGINSHADEBOX]
 
@@ -209,7 +217,7 @@ You must use the Platform APIs to retrieve your [!DNL Data Landing Zone] credent
 **API format**
 
 ```http
-GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination
+GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination'
 ```
 
 | Query parameters | Description |
@@ -223,13 +231,12 @@ GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination
 The following request example retrieves credentials for an existing landing zone.
 
 ```shell
-curl -X GET \
-  'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=dlz_destination' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
+curl --request GET \
+  --url 'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=dlz_destination' \
+  --header 'Authorization: Bearer ***' \
+  --header 'Content-Type: application/json' \
+  --header 'x-api-key: your_api_key' \
+  --header 'x-gw-ims-org-id: yourorg@AdobeOrg'
 ```
 
 **Response**
@@ -238,18 +245,26 @@ The following response returns the credential information for your landing zone,
 
 ```json
 {
-    "containerName": "dlz-destination",
-    "SASToken": "sv=2022-09-11&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D",
-    "storageAccountName": "dlblobstore99hh25i3df123",
-    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-destination?sv=2022-09-11&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D"
+    "credentials": {
+        "awsAccessKeyId": "ABCDW3MEC6HE2T73ZVKP",
+        "awsSecretAccessKey": "A1B2Zdxj6y4xfR0QZGtf/phj/hNMAbOGtzM/JNeE",
+        "awsSessionToken": "***"
+    },
+    "dlzPath": {
+        "bucketName": "your-bucket-name",
+        "dlzFolder": "dlz-destination"
+    },
+    "dlzProvider": "Amazon S3",
+    "expiryTime": 1734494017
 }
 ```
 
 | Property | Description |
 | --- | --- |
-| `containerName` | The name of your landing zone. |
-| `SASToken` | The shared access signature token for your landing zone. This string contains all the information necessary to authorize a request. |
-| `SASUri` | The shared access signature URI for your landing zone. This string is a combination of the URI to the landing zone for which you are being authenticated to and its corresponding SAS token, |
+| `credentials` | This object includes the `awsAccessKeyId`, `awsSecretAccessKey`, and `awsSessionToken` that Experience Platform uses to export files to your provisioned Data Landing Zone location. |
+| `dlzPath` | This object includes the path in the Adobe-provisioned AWS location where exported files are deposited. |
+| `dlzProvider` | Indicates that this is an Amazon S3-provisioned Data Landing Zone. |
+| `expiryTime` | Indicates when the credentials in the object further above will expire. You can refresh these by |
 
 {style="table-layout:auto"}
 
