@@ -61,6 +61,14 @@ You can use AI Assistant to help your discover of Experience Data Model (XDM) fi
 
 [![image](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/xdm-field-discovery.md)
 
+>[!TAB AI Assistant for Customer Support]
+
+### AI Assistant for Customer Support
+
+You can use AI Assistant for Customer Support to seamlessly troubleshoot without leaving your workflows. When needed, support administrators can now use AI Assistant for Customer Support to create customer support tickets, complete with context and session details from your interactions with AI Assistant.
+
+[![image](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/customer-support.md)
+
 >[!ENDTABS]
 
 ## Video library
@@ -82,6 +90,14 @@ Watch the following video to learn how to configure access to AI Assistant for y
 >[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
 
 For more information, read the [AI Assistant access guide](access.md).
+
+### Understanding product knowledge in AI Assistant
+
+Watch the following video to learn about product knowledge in AI Assistant.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441024?learn=on)
+
+For more information, read about [product knowledge in AI Assistant](home.md#product-knowledge)
 
 ### Use AI Assistant product knowledge to reduce onboarding time
 

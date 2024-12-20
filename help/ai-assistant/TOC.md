@@ -17,6 +17,7 @@ role: Admin,User,Developer,Leader
 * [FAQ](faq.md)
 * New features {#new-features}
   * [AI Assistant capabilities in Alpha and Beta](./new-features/alpha-beta.md)
+  * [AI Assistant for Customer Support](./new-features/customer-support.md)
   * [Monitor significant changes and forecast audiences](./new-features/audience-forecasting.md)
   * [Natural language estimation](./new-features/natural-language.md)
   * [XDM field discovery for audience creation](./new-features/xdm-field-discovery.md)
