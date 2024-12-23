@@ -1,6 +1,8 @@
 ---
 title: Process Customer Consent Data Using the Adobe Experience Platform Web SDK
 description: Learn how to integrate the Adobe Experience Platform Web SDK to process customer consent data in Adobe Experience Platform.
+role: Developer
+feature: Consent, Web SDK
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
 ---
 # Integrate the Platform Web SDK to process customer consent data

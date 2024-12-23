@@ -5,22 +5,30 @@ exl-id: b26ff857-5486-4391-b5a0-1e5cb05a1f11
 ---
 # User access
 
->[!WARNING]
->
->Please note that user access to Assurance is changing. As Assurance leaves beta (Project Griffon) to being generally available (as Assurance) to all Adobe Experience Cloud customers - access to Assurance will be managed through the [Admin Console](https://helpx.adobe.com/enterprise/using/admin-console.html).
->
->If you need assistance, please contact your company's Adobe Experience Cloud administrator.
+Give users access to [!UICONTROL Assurance] by adding them to any product profile in Adobe Experience Platform by completing the following steps in the [Adobe Admin Console](https://adminconsole.adobe.com/): 
 
-To receive or to maintain uninterrupted access to Assurance, ensure that the following steps are completed in the Admin Console:
+## Adding users to Adobe Experience Platform through a product profile {#adding-product-profile}
 
-## Adding users to Experience Platform through a product profile
+To add a user to a product profile, log into the [Adobe Admin Console](https://adminconsole.adobe.com/). From the **[!UICONTROL Overview]** tab of the Admin Console UI, select **[!UICONTROL Add users]**.
 
-To add a user to a product profile, log into the Admin Console and select **Add users**.
+![The Admin Console page with Add users highlighted.](./images/user-access/admin-console.png)
 
-![The Add users button is highlighted.](./images/get-access/product-profile-add-users.png)
+The **[!UICONTROL Add users to your team]** dialog appears. Enter the email or username of the person you want to add, then select **[!UICONTROL Add as a new user]**.
 
-The **Add users to your team** dialog appears. On this dialog, you can enter the details of the user you want to add. Enter the user's email address, first name (optional) and last name (optional).
+![The email or username textbox is highlighted in the Add users dialog.](./images/user-access/add-users.png)
 
-Select the pencil icon to choose the products and user groups. From here, select **Adobe Experience Platform**, then **AEP-Default-All-Users**, followed by **Save**.
+Two text boxes appear to enter an optional **[!UICONTROL First name]** and an optional **[!UICONTROL Last name]**. The **[!UICONTROL SSO username]** is auto-filled, along with the **[!UICONTROL Country]** inside the dropdown. Ensure both of these options are correct and make any needed adjustments. Once everything is correct, select **[!UICONTROL Products]**.
 
-![The dialog which shows how to add the product profile is displayed.](./images/get-access/product-profile-add-profile.png)
+![The three name and country fields are highlighted in the Add users dialog.](./images/user-access/name-and-products.png)
+
+The **[!UICONTROL Select product]** dialog appears. Select the Adobe Experience Platform.
+
+![Select products dialog with a list of three products and the Adobe Experience Platform option highlighted.](./images/user-access/select-products.png)
+
+The **[!UICONTROL Select product profiles]** dialog appears, with a list of product profiles. Select any product profile, then select **[!UICONTROL Apply]**. You may add additional products and product profiles by repeating these steps.
+
+![An option selected and highlighted in the Select product profiles dialog.](./images/user-access/select-product-profiles.png)
+
+Double check everything is correct for the user. From here you can add additional users, or save your changes by selecting **[!UICONTROL Save]**.
+
+![Add users to your team dialog with all the information filled in and Save selected.](./images/user-access/save-selections.png)

@@ -1,14 +1,13 @@
 ---
 title: Identity Settings UI
 description: Learn how to use the identity settings user interface.
-badge: Beta
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
 ---
-# Identity Setting UI
+# Identity Settings UI
 
 >[!AVAILABILITY]
 >
->Identity graph linking rules is currently in beta. Contact your Adobe account team for information on the participation criteria. The feature and documentation are subject to change.
+>Identity graph linking rules is currently in Limited Availability. Contact your Adobe account team for information on how to access the feature in development sandboxes.
 
 Identity settings is a feature in the Adobe Experience Platform Identity Service UI that you can use to designate unique namespaces and configure namespace priority.
 
@@ -51,7 +50,7 @@ When you are finished with your configurations, select **[!UICONTROL Next]**. A 
 
 ![The validation page with Finish highlighted.](../images/rules/finish.png)
 
-A warning message appears, indicating that existing graphs will only be affected by the graph algorithm only if the graphs get updated **after saving your settings**, and that the primary identity of event fragments on Real-Time Customer Profile will not be updated even after namespace priority changes. Additionally, you are notified that it  will take up to **six hours** for your new settings to take effect. To confirm enter your sandbox name and then select **[!UICONTROL Confirm]**.
+A warning message appears, indicating that existing graphs will only be affected by the graph algorithm only if the graphs get updated **after saving your settings**, and that the primary identity of event fragments on Real-Time Customer Profile will not be updated even after namespace priority changes. Additionally, you are notified that it  will take up to **six hours** for your new or updated settings to take effect. To confirm, enter your sandbox name and then select **[!UICONTROL Confirm]**.
 
 ![The confirmation window that displays a warning about a six-hour delay before configurations get processed.](../images/rules/confirm-settings.png)
 

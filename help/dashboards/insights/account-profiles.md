@@ -7,13 +7,13 @@ exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
 ---
 # Account Profile insights
 
-[Account profiles](../../rtcdp/accounts/account-profile-overview.md) are used to consolidate account information from various sources, including multiple marketing channels and organizational systems. This unified view enables a comprehensive understanding of customer accounts, enhancing B2B marketing campaigns. The insights derived from the analysis of your data model make your Adobe Real-time Customer Data Platform B2B data more accessible, understandable, and impactful for decision-making.
+[Account profiles](../../rtcdp/accounts/account-profile-overview.md) are used to consolidate account information from various sources, including multiple marketing channels and organizational systems. This unified view enables a comprehensive understanding of customer accounts, enhancing B2B marketing campaigns. The insights derived from the analysis of your data model make your Adobe Real-Time CDP B2B data more accessible, understandable, and impactful for decision-making.
 
 With access to the SQL that powers your insights, you can better understand your B2B data and generate your own highly customized reusable insights to further explore your customer account information. Transform your raw data into new actionable insights by using the existing Real-Time CDP data model SQL as inspiration to create queries for your unique business needs. 
 
 <!-- Add link to new generate insights with SQL workflow doc after April release.-->
 
-The following insights are all available for you to use as part of the [Account Profiles dashboard](../guides/account-profiles.md) or a [custom dashboard](../user-defined-dashboards.md). See the [customization overview](../customize/overview.md) for instructions on how to customize your dashboard or [create and edit new widgets](../customize/custom-widgets.md) in the widget library and [user-defined dashboard](../user-defined-dashboards.md#create-widget).
+The following insights are all available for you to use as part of the [Account Profiles dashboard](../guides/account-profiles.md) or a [custom dashboard](../standard-dashboards.md). See the [customization overview](../customize/overview.md) for instructions on how to customize your dashboard or [create and edit new widgets](../customize/custom-widgets.md) in the widget library and [user-defined dashboard](../standard-dashboards.md#create-widget).
 
 ## Account profiles added {#account-profiles-added}
 
@@ -275,10 +275,232 @@ ORDER BY  d.date_key limit 5000;
 
 +++
 
+## Customers per Account Overview {#customers-per-account-overview}
+
+>[!NOTE]
+>
+>The [!UICONTROL Customers per Account Overview] chart includes three drill-through insights: [!UICONTROL Customers per Account Detail], [!UICONTROL Opportunities per Account Overview], and [!UICONTROL Opportunities per Account Detail]. These drill-throughs provide more granular insights, breaking down customer and opportunity counts by categories (such as direct and indirect customers) and ranges (like customer and opportunity count bands). These charts are unaffected by any global date filters you may have set.
+
+Questions answered by this insight:
+
+- What is the distribution of accounts based on whether they have direct or indirect customers?
+
++++Select to reveal the SQL that generates this insight
+
+```sql
+WITH LatestDate AS (SELECT MAX(inserted_date) AS max_inserted_date FROM adwh_b2b_account_person_association),
+     CategorizedData AS (
+         SELECT CASE 
+                    WHEN is_direct = 'true' AND person_count = 0 THEN 'Accounts without Direct Customers' 
+                    WHEN is_direct = 'false' AND person_count = 0 THEN 'Accounts without Indirect Customers' 
+                    WHEN is_direct = 'true' AND person_count > 0 THEN 'Accounts with Direct Customers' 
+                    WHEN is_direct = 'false' AND person_count > 0 THEN 'Accounts with Indirect Customers' 
+                END AS Account_Category, 
+                account_count 
+         FROM adwh_b2b_account_person_association 
+         WHERE inserted_date = (SELECT max_inserted_date FROM LatestDate)
+     ),
+     AggregatedData AS (
+         SELECT Account_Category, SUM(account_count) AS Accounts 
+         FROM CategorizedData 
+         GROUP BY Account_Category
+     ),
+     AllCategories AS (
+         SELECT 'Accounts without Direct Customers' AS Account_Category 
+         UNION ALL SELECT 'Accounts without Indirect Customers' 
+         UNION ALL SELECT 'Accounts with Direct Customers' 
+         UNION ALL SELECT 'Accounts with Indirect Customers'
+     )
+SELECT ac.Account_Category AS Account_Category, COALESCE(ad.Accounts, 0) AS Accounts 
+FROM AllCategories ac 
+LEFT JOIN AggregatedData ad ON ac.Account_Category = ad.Account_Category 
+ORDER BY ac.Account_Category;
+```
+
++++
+
+## Customers per Account Detail {#customers-per-account-detail}
+
+>[!NOTE]
+>
+>This insight is unaffected by global date filters.
+
+Questions answered by this insight:
+
+- How many accounts have different ranges of direct or indirect customers?
+
++++Select to reveal the SQL that generates this insight
+
+```sql
+WITH customer_ranges AS (
+    SELECT 'Direct Customer' AS customer_type, '1-10 Customers' AS person_range 
+    UNION ALL
+    SELECT 'Direct Customer', '11-100 Customers' 
+    UNION ALL
+    SELECT 'Direct Customer', '101-1000 Customers' 
+    UNION ALL
+    SELECT 'Direct Customer', '1000+ Customers' 
+    UNION ALL
+    SELECT 'Indirect Customer', '1-10 Customers' 
+    UNION ALL
+    SELECT 'Indirect Customer', '11-100 Customers' 
+    UNION ALL
+    SELECT 'Indirect Customer', '101-1000 Customers' 
+    UNION ALL
+    SELECT 'Indirect Customer', '1000+ Customers'
+)
+SELECT 
+    cr.customer_type, 
+    cr.person_range, 
+    COALESCE(SUM(ap.account_count), 0) AS Accounts
+FROM customer_ranges cr
+LEFT JOIN (
+    SELECT 
+        CASE 
+            WHEN is_direct = 'true' THEN 'Direct Customer' 
+            ELSE 'Indirect Customer' 
+        END AS customer_type,
+        CASE 
+            WHEN person_count BETWEEN 1 AND 10 THEN '1-10 Customers' 
+            WHEN person_count BETWEEN 11 AND 100 THEN '11-100 Customers' 
+            WHEN person_count BETWEEN 101 AND 1000 THEN '101-1000 Customers' 
+            WHEN person_count > 1000 THEN '1000+ Customers' 
+        END AS person_range,
+        SUM(account_count) AS account_count
+    FROM adwh_b2b_account_person_association 
+    WHERE inserted_date = (SELECT MAX(inserted_date) FROM adwh_b2b_account_person_association) 
+    GROUP BY 
+        CASE 
+            WHEN is_direct = 'true' THEN 'Direct Customer' 
+            ELSE 'Indirect Customer' 
+        END,
+        CASE 
+            WHEN person_count BETWEEN 1 AND 10 THEN '1-10 Customers' 
+            WHEN person_count BETWEEN 11 AND 100 THEN '11-100 Customers' 
+            WHEN person_count BETWEEN 101 AND 1000 THEN '101-1000 Customers' 
+            WHEN person_count > 1000 THEN '1000+ Customers' 
+        END
+) ap ON cr.customer_type = ap.customer_type AND cr.person_range = ap.person_range
+GROUP BY cr.customer_type, cr.person_range
+ORDER BY cr.customer_type, 
+    CASE cr.person_range 
+        WHEN '1-10 Customers' THEN 1 
+        WHEN '11-100 Customers' THEN 2 
+        WHEN '101-1000 Customers' THEN 3 
+        WHEN '1000+ Customers' THEN 4 
+    END;
+```
+
++++
+
+## Opportunities per Account Overview {#opportunities-per-account-overview}
+
+>[!NOTE]
+>
+>This insight is unaffected by global date filters.
+
+Questions answered by this insight:
+
+- What is the distribution of accounts based on whether they have associated opportunities?
+
++++Select to reveal the SQL that generates this insight
+
+```sql
+WITH LatestDate AS (
+    SELECT MAX(inserted_date) AS max_inserted_date 
+    FROM adwh_b2b_account_opportunity_association
+),
+CategorizedData AS (
+    SELECT 
+        CASE 
+            WHEN opportunity_count = 0 THEN 'Accounts without Opportunities'
+            WHEN opportunity_count > 0 THEN 'Accounts with Opportunities'
+        END AS Opportunity_Category, 
+        account_count 
+    FROM adwh_b2b_account_opportunity_association 
+    WHERE inserted_date = (SELECT max_inserted_date FROM LatestDate)
+),
+AggregatedData AS (
+    SELECT 
+        Opportunity_Category,
+        SUM(account_count) AS Accounts 
+    FROM CategorizedData 
+    GROUP BY Opportunity_Category
+),
+AllCategories AS (
+    SELECT 'Accounts without Opportunities' AS Opportunity_Category 
+    UNION ALL 
+    SELECT 'Accounts with Opportunities'
+)
+SELECT 
+    ac.Opportunity_Category AS Opportunity_Category, 
+    COALESCE(ad.Accounts, 0) AS Accounts 
+FROM AllCategories ac 
+LEFT JOIN AggregatedData ad 
+    ON ac.Opportunity_Category = ad.Opportunity_Category 
+ORDER BY ac.Opportunity_Category;
+```
+
++++
+
+## Opportunities per Account Detail {#opportunities-per-account-detail}
+
+>[!NOTE]
+>
+>This insight is unaffected by global date filters.
+
+Questions answered by this insight:
+
+- How many accounts have different ranges of associated opportunities?
+
++++Select to reveal the SQL that generates this insight
+
+```sql
+WITH opportunity_ranges AS (
+    SELECT '1-10 Opportunities' AS opportunity_range 
+    UNION ALL 
+    SELECT '11-50 Opportunities' 
+    UNION ALL 
+    SELECT '51-100 Opportunities' 
+    UNION ALL 
+    SELECT '100+ Opportunities'
+)
+SELECT opportunity_ranges.opportunity_range AS OPPORTUNITIES, 
+       COALESCE(SUM(accounts.total_accounts), 0) AS ACCOUNTS 
+FROM opportunity_ranges 
+LEFT JOIN (
+    SELECT 
+        CASE 
+            WHEN opportunity_count BETWEEN 1 AND 10 THEN '1-10 Opportunities' 
+            WHEN opportunity_count BETWEEN 11 AND 50 THEN '11-50 Opportunities' 
+            WHEN opportunity_count BETWEEN 51 AND 100 THEN '51-100 Opportunities' 
+            WHEN opportunity_count > 100 THEN '100+ Opportunities' 
+        END AS opportunity_range, 
+        SUM(account_count) AS total_accounts 
+    FROM adwh_b2b_account_opportunity_association 
+    WHERE inserted_date = (SELECT MAX(inserted_date) FROM adwh_b2b_account_opportunity_association) 
+      AND opportunity_count > 0 
+    GROUP BY 
+        CASE 
+            WHEN opportunity_count BETWEEN 1 AND 10 THEN '1-10 Opportunities' 
+            WHEN opportunity_count BETWEEN 11 AND 50 THEN '11-50 Opportunities' 
+            WHEN opportunity_count BETWEEN 51 AND 100 THEN '51-100 Opportunities' 
+            WHEN opportunity_count > 100 THEN '100+ Opportunities' 
+        END
+) AS accounts ON opportunity_ranges.opportunity_range = accounts.opportunity_range 
+GROUP BY opportunity_ranges.opportunity_range 
+ORDER BY CASE opportunity_ranges.opportunity_range 
+            WHEN '1-10 Opportunities' THEN 1 
+            WHEN '11-50 Opportunities' THEN 2 
+            WHEN '51-100 Opportunities' THEN 3 
+            WHEN '100+ Opportunities' THEN 4 
+        END;
+```
+
++++
+
 ## Next steps
 
-By reading this document, you now understand the SQL that generates account profile dashboard insights and what common questions this analysis solves. You can now edit and iterate on the SQL to generate your own insights.
-
-<!-- Add link above Learn how to [generate insights with SQL](). after April release -->
+By reading this document, you now understand the SQL that generates account profile dashboard insights and what common questions this analysis solves. You can now edit and iterate on the SQL to generate your own insights. Refer to the [Query Pro Mode overview](../sql-insights-query-pro-mode/overview.md) to learn how to generate custom insights with SQL.
 
 You can also read and understand the SQL that generates insights for the [Profiles](./profiles.md), [Audiences](./audiences.md), and [Destinations](./destinations.md) dashboards.

@@ -52,7 +52,7 @@ curl -X POST \
 | `name` | The name of your package. | String | Yes |
 | `description` | A description to provide more information on your package. | String | No |
 | `packageType` | The package type is **PARTIAL** to indicate you are including specific artifacts in a package. | String | YES |
-| `sourceSandbox` | The source sandbox of the package. | String | No|
+| `sourceSandbox` | The source sandbox of the package. | Object | No|
 | `expiry` | The timestamp that defines the expiration date for package. The default value is 90 days from the creation date. The response expiry field will be epoch UTC time. | String (UTC Timestamp format) | No |
 | `artifacts` | A list of artifacts to be exported into the package. The `artifacts` value should be **null** or **empty**, when the `packageType` is `FULL`. | Array | No |
 
@@ -194,7 +194,6 @@ A successful response returns your updated package. The response includes the co
 
 To delete artifacts from a package, you must provide an `id` and include **DELETE** for the `action`.
 
-
 **API format**
 
 ```http
@@ -302,7 +301,7 @@ curl -X PUT \
 | `id` | The id of the package to be updated. | String | Yes |
 | `action` | To update the metadata fields in a package, the action value should be **UPDATE**. This action is supported for only **PARTIAL** package types. | String | Yes |
 | `name` | The updated name of the package. Duplicate package names are not allowed. | Array | Yes |
-| `sourceSandbox` | Source sandbox should belong to the same organization as specified in the header of the request. | String | Yes |
+| `sourceSandbox` | Source sandbox should belong to the same organization as specified in the header of the request. | Object | Yes |
 
 **Response**
 
@@ -350,7 +349,7 @@ DELETE /packages/{PACKAGE_ID}
 
 | Parameter | Description |
 | --- | --- |
-| {PACKAGE_ID} | The ID of the package you want to delete. |
+| `{PACKAGE_ID}` | The ID of the package you want to delete. |
 
 **Request**
 
@@ -362,6 +361,7 @@ curl -X DELETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
 **Response**
@@ -386,7 +386,7 @@ GET /packages/{PACKAGE_ID}/export
 
 | Parameter | Description |
 | --- | --- |
-| {PACKAGE_ID} | The ID of the package you want to publish. |
+| `{PACKAGE_ID}` | The ID of the package you want to publish. |
 
 **Request**
 
@@ -398,6 +398,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
 | Property | Description | Type | Mandatory |
@@ -419,7 +420,8 @@ A successful response returns the published package.
         "imsOrgId": "5C1328435BF324E90A49402A@AdobeOrg"
     },
     "type": "PARTIAL",
-    "correlationId": "48effe5e-1bef-4250-9c71-23b93ef5d285"
+    "correlationId": "48effe5e-1bef-4250-9c71-23b93ef5d285",
+    "jobId": "18abab44e25f40c284a4bd6e8f52fd29"
 }
 ```
 
@@ -435,7 +437,7 @@ GET /packages/{PACKAGE_ID}
 
 | Parameter | Description |
 | --- | --- |
-| {PACKAGE_ID} | The ID of the package you want to look up. |
+| `{PACKAGE_ID}` | The ID of the package you want to look up. |
 
 **Request**
 
@@ -447,6 +449,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
 **Response**
@@ -502,7 +505,7 @@ GET /packages/?{QUERY_PARAMS}
 
 | Parameter | Description |
 | --- | --- |
-| {QUERY_PARAMS} | Optional query parameters to filter results by. See the section on [query parameters](./appendix.md) for more information. |
+| `{QUERY_PARAMS}` | Optional query parameters to filter results by. See the section on [query parameters](./appendix.md) for more information. |
 
 **Request**
 
@@ -607,7 +610,7 @@ GET /packages/{PACKAGE_ID}/import?targetSandbox=targetSandboxName
 
 | Parameter | Description |
 | --- | --- |
-| {PACKAGE_ID} | The ID of the package you want to look up. |
+| `{PACKAGE_ID}` | The ID of the package you want to look up. |
 
 **Request**
 
@@ -626,7 +629,7 @@ curl -X GET \
 
 Conflicts are returned in the response. The response shows the original package plus the `alternatives` fragment as an array ordered by ranking.
 
-View response+++
++++View response
 
 ```json
 [
@@ -804,7 +807,8 @@ curl -X POST \
         "imsOrgId": "5C1328435BF324E90A49402A@AdobeOrg"
     },
     "type": "PARTIAL",
-    "correlationId": "48effe5e-1bef-4250-9c71-23b93ef5d285"
+    "correlationId": "48effe5e-1bef-4250-9c71-23b93ef5d285",
+    "jobId": "18abab44e25f40c284a4bd6e8f52fd29"
 }
 ```
 
@@ -820,7 +824,7 @@ POST /packages/{PACKAGE_ID}/children
 
 | Parameter | Description |
 | --- | --- |
-| {PACKAGE_ID} | The ID of the package. |
+| `{PACKAGE_ID}` | The ID of the package. |
 
 **Request**
 
@@ -828,10 +832,11 @@ The following request lists all dependent objects for the {PACKAGE_ID}.
 
 ```shell
 curl -X POST \
-  https://platform.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/import?targetSandbox=targetSandboxName \
+  https://platform.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/children \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d'[
       {
         "id": "4d4c874ec3344d64bf8b3160e60ac78b",
@@ -899,7 +904,7 @@ GET /packages/preflight/{packageId}?targetSandbox=<sandbox_name
 
 | Parameter | Description |
 | --- | --- |
-| {PACKAGE_ID} | The Id of the package you want to import. |
+| `{PACKAGE_ID}` | The Id of the package you want to import. |
 
 **Request**
 
@@ -918,7 +923,7 @@ curl -X GET \
 
 A successful response returns resource permissions for the target sandbox, including a list of permissions required, missing permissions, type of artifact, and a decision on whether the creation is allowed.
 
-View response+++
++++View response
 
 ```json
 {
@@ -1047,7 +1052,7 @@ GET /packages/jobs?{QUERY_PARAMS}
 
 | Parameter | Description |
 | --- | --- |
-| {QUERY_PARAMS} | Optional query parameters to filter results by. See the section on [query parameters](./appendix.md) for more information. |
+| `{QUERY_PARAMS}` | Optional query parameters to filter results by. See the section on [query parameters](./appendix.md) for more information. |
 
 **Request**
 
@@ -1059,6 +1064,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
 **Response**
@@ -1144,5 +1150,825 @@ A successful response returns all successful import jobs.
             "createdBy": "{CREATED_BY}"
         }
     ]
+}
+```
+
+## Share packages across organizations {#org-linking}
+
+The `/handshake` endpoint in the sandbox tooling API allows you to partner with other organizations to share packages.
+
+### Sending a share request {#send-request}
+
+Send a request to a target partner organization for sharing approval by making a POST request to the `/handshake/bulkCreate` endpoint. This is required before you can share private packages. 
+
+**API format**
+
+```http
+POST /handshake/bulkCreate
+```
+
+**Request**
+
+The following request initiates sharing approval between a target partner organization and the source organization.
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/foundation/exim/handshake/bulkCreate \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Accept: application/json' \
+  -H 'Authorization: {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "targetIMSOrgIds":["acme@AdobeOrg"],
+      "sourceIMSDetails":{
+        "id":"acme@AdobeOrg",
+        "name":"acme_org"
+      } 
+  }' 
+```
+
+| Property | Description | Type | Required |
+| --- | --- | --- | --- |
+| `targetIMSOrgIds` | A list of target organizations to send share request to. | Array | Yes |
+| `sourceIMSDetails` | Details about the source organization. | Object | Yes |
+
+**Response**
+
+A successful response returns details regarding your share request.
+
+```json
+{
+    "successfulRequests": {
+        "acme@AdobeOrg": {
+            "id": "{ID}",
+            "version": 0,
+            "createdDate": 1724938816798,
+            "modifiedDate": 1724938816798,
+            "createdBy": "{CREATED_BY}",
+            "modifiedBy": "{MODIFIED_BY}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "sourceRegion": "va6",
+            "sourceIMSOrgName": "{SOURCE_NAME}",
+            "status": "APPROVAL_PENDING",
+            "createdByName": "{CREATED_BY}",
+            "modifiedByName": "{MODIFIED_BY}",
+            "modifiedByIMSOrgId": "{ORG_ID}",
+            "statusHistory": "[{\"actionTakenBy\":\"acme@98ff67fa661fdf6549420b.e\",\"actionTakenByName\":\"{NAME}\",\"actionTakenByImsOrgID\":\"{ORG_ID}\",\"action\":\"INITIATED\",\"actionTimeStamp\":1724938816885}]",
+            "linkingId": "{LINKIND_ID}"
+        }
+    },
+    "failedRequests": {}
+}
+```
+
+### Approving received share requests {#approve-requests}
+
+Approve share requests from target partner organizations by making a POST request to the `/handshake/action` endpoint. After approval, source partner organizations can share private packages.
+
+**API format**
+
+```http
+POST /handshake/action
+```
+
+**Requests**
+
+The following request approves a share request from a target partner organization.
+
+```shell
+curl -X POST  \
+  https://platform.adobe.io/data/foundation/exim/handshake/action \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Accept: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "linkingID":"{LINKING_ID}",
+      "status":"APPROVED",
+      "reason":"Done",
+      "targetIMSOrgDetails":{
+          "id":"acme@AdobeOrg",
+          "name":"acme",
+          "region":"va7"
+      }
+  }'
+```
+
+| Property | Description | Type | Required |
+| --- | --- | --- | --- |
+| `linkingID` | The id of the share request you're responding to. | String | Yes |
+| `status` | The action being taken on the share request. Acceptable values are `APPROVED` or `REJECTED`. | String | Yes |
+| `reason` | The reason the action is being taken. | String | Yes |
+| `targetIMSOrgDetails` |  Details about the target organization where the id value should be the target organization's **ID**, the name value should be the target organizations's **NAME**, and the region value should be the target organizations **REGION**. | Object | Yes |
+
+**Response**
+
+A successful response returns details regarding the approved share request.
+
+```json
+{
+    "id": "{ID}",
+    "version": 1,
+    "createdDate": 1726737474000,
+    "modifiedDate": 1726737541731,
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}",
+    "sourceIMSOrgId": "{ORG_ID}",
+    "targetIMSOrgId": "{TARGET_ID}",
+    "sourceRegion": "va7",
+    "targetRegion": "va7",
+    "sourceOrgName": "{SOURCE_ORG}",
+    "targetOrgName": "{TARGET_ORG}",
+    "status": "APPROVED",
+    "createdByName": "{CREATED_BY}",
+    "modifiedByIMSOrgId": "{MODIFIED_BY}",
+    "statusHistory": "[{\"actionTakenBy\":\"{ACTION_BY}\",\"actionTakenByName\":\"{NAME}\",\"actionTakenByImsOrgID\":\"acme@AdobeOrg\",\"action\":\"INITIATED\",\"actionTimeStamp\":1726737474450,\"reason\":null},{\"actionTakenBy\":null,\"actionTakenByName\":null,\"actionTakenByImsOrgID\":\"745F37C35E4B776E0A49421B@AdobeOrg\",\"action\":\"APPROVED\",\"actionTimeStamp\":1726737541818,\"reason\":\"Done\"}]",
+    "linkingId": "{LINKING_ID}"
+}
+```
+
+### List outgoing/incoming share requests {#outgoing-and-incoming-requests}
+
+List outgoing and incoming share requests by making a GET request to the `handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING` endpoint.
+
+**API format**
+
+```http
+GET handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING
+```
+
+| Parameter | Accepted/Default Values |
+| --- | --- |
+| `property` | Specifies the property to filter by, such as status. Acceptable values for status are: `APPROVED`, `REJECTED`, and `IN_PROGRESS`.|
+| `start` | The default value of start is `0`. |
+| `limit` | The default value of limit is `20`. |
+| `orderBy` | Sorts records in ascending or descending order. |
+| `requestType` | Accepts either `INCOMING` or `OUTGOING`. |
+
+**Request**
+
+The following request returns a list of all outgoing and incoming share requests.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/foundation/exim/handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id:{ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Accept: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+```
+
+**Response**
+
+A successful response returns a list of outgoing and incoming share requests and their details.
+
+```json
+{
+    "totalElements": 1,
+    "currentPage": 0,
+    "totalPages": 1,
+    "hasPreviousPage": false,
+    "hasNextPage": false,
+    "data": [
+        {
+            "id": "{ID}",
+            "version": 1,
+            "createdDate": 1724929446000,
+            "modifiedDate": 1724929617000,
+            "modifiedBy": "{MODIFIED_BY}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "sourceRegion": "va7",
+            "targetRegion": "va6",
+             "sourceOrgName": "{SOURCE_ORG}",
+            "targetOrgName": "{TARGET_ORG}",
+            "status": "APPROVED",
+            "createdByName": "{CREATED_BY}",
+            "modifiedByName": "{MODIFIED_BY}",
+            "modifiedByIMSOrgId": "{MODIFIED_BY}",
+            "statusHistory": "[{\"actionTakenBy\":\"{ACTION_BY}\",\"actionTakenByName\":\"{NAME}\",\"actionTakenByImsOrgID\":\"{ORG_ID}\",\"action\":\"INITIATED\",\"actionTimeStamp\":1724929442467,\"reason\":null},{\"actionTakenBy\":null,\"actionTakenByName\":\"{NAME}\",\"actionTakenByImsOrgID\":\"{ORG_ID}\",\"action\":\"APPROVED\",\"actionTimeStamp\":1724929617531,\"reason\":\"Done\"}]",
+            "linkingId": "{LINKING_ID}"
+        }
+    ],
+    "nextPage": null,
+    "pageSize": null
+}
+```
+
+## Transfer packages 
+
+Use the `/transfer` endpoint in the sandbox tooling API to fetch and create new package sharing requests. 
+
+### New share request {#share-request}
+
+Fetch a published source organization's package and share it with a target organization by making a POST request to the `/transfer` endpoint while providing the package ID and target organization's ID.
+
+**API format**
+
+```http
+POST /transfer
+```
+
+**Request**
+
+The following request fetches a source organizations package and shares it with a target organization.
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/foundation/exim/transfer/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "packageId": "{PACKAGE_ID}",
+      "targets": [
+          {
+              "imsOrgId": "{TARGET_IMS_ORG}"
+          }
+      ]
+  }'
+```
+
+| Property | Description | Type | Required |
+| --- | --- | --- | --- |
+| `packageId` | The id of the package you want to share. | String | Yes |
+| `targets` | A list of organizations to share to package with. | Array | Yes |
+
+**Response**
+
+A successful response returns details of the package requested and its share status.
+
+```json
+[
+    {
+        "id": "{ID}",
+        "version": 0,
+        "createdDate": 1726480559313,
+        "modifiedDate": 1726480559313,
+        "createdBy": "{CREATED_BY}",
+        "modifiedBy": "{MODIFIED_BY}",
+        "sourceIMSOrgId": "{ORG_ID}",
+        "targetIMSOrgId": "{TARGET_ID}",
+        "packageId": "{PACKAGE_ID}",
+        "status": "PENDING",
+        "initiatedBy": "acme@3ec9197a65a86f34494221.e",
+        "requestType": "PRIVATE"
+    }
+]
+```
+
+### Fetch a share request by ID {#fetch-transfer-by-id}
+
+Fetch the details of a share request by making a GET request to the `/transfer/{TRANSFER_ID}` endpoint while providing the transfer ID.
+
+**API format**
+
+```http
+GET /transfer/{TRANSFER_ID}
+```
+
+| Parameter | Description |
+| --- | --- |
+| `{TRANSFER_ID}` | The ID of the transfer you want to fetch. |
+
+**Request**
+
+The following request fetches a transfer with the ID of {TRANSFER_ID}.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/foundation/exim/transfer/0c843180a64c445ca1beece339abc04b \
+  -H 'x-api-key: {API__KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}'
+```
+
+**Response**
+
+A success response returns details of a share request.
+
+```json
+{
+    "id": "{ID}",
+    "sourceIMSOrgId": "{ORG_ID}",
+    "sourceOrgName": "{SOURCE_ORG}",
+    "targetIMSOrgId": "{TARGET_ID}",
+    "targetOrgName": "{TARGET_ORG}",
+    "packageId": "{PACKAGE_ID}",
+    "packageName": "{PACKAGE_NAME}",
+    "status": "COMPLETED",
+    "initiatedBy": "{INITIATED_BY}",
+    "createdDate": 1724442856000,
+    "requestType": "PRIVATE"
+}
+```
+
+### Fetch share list {#transfers-list}
+
+Fetch a list of transfer requests by making a GET request to the `/transfer/list?{QUERY_PARAMETERS}` endpoint, changing the query parameters as needed.
+
+**API format**
+
+```http
+GET `/transfer/list?{QUERY_PARAMETERS}`
+```
+
+| Parameter | Accepted/Default Values |
+| --- | --- |
+| `property` | Specifies the property to filter by, such as status. Acceptable values for status are: `COMPLETED`, `PENDING`, `IN_PROGRESS`, `FAILED`. |
+| `start` | The default value of start is `0`. |
+| `limit` | The default value of limit is `20`. |
+| `orderBy` | The ordering only accepts the `createdDate` field. |
+
+**Request**
+
+The following request fetches a list of transfer requests from the search parameters provided.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/foundation/exim/transfer/list?property=status==COMPLETED&start=0&limit=2&orderBy=-createdDate \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}'
+```
+
+**Response**
+
+A successful response returns a list of all transfer requests from the search parameters provided.
+
+```json
+{
+    "totalElements": 43,
+    "currentPage": 0,
+    "totalPages": 22,
+    "hasPreviousPage": false,
+    "hasNextPage": true,
+    "data": [
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_ORG}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_ORG}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "{PACKAGE_NAME}",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1726129077000,
+            "createdDate": 1726129062000,
+            "requestType": "PRIVATE"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_ORG}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_ORG}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "{PACKAGE_NAME}",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1726066046000,
+            "createdDate": 1726065936000,
+            "requestType": "PRIVATE"
+        }
+    ],
+    "nextPage": null,
+    "pageSize": null
+}
+```
+
+### Update package availability from private to public {#update-availability}
+
+Change a package from private to public by making a GET request to the `/packages/update` endpoint. By default, a package is created with private availability.
+
+**API format**
+
+```http
+PUT `/packages/update`
+```
+
+**Request**
+
+The following request changes a packages availability from private to public.
+
+```shell
+curl -X PUT \
+  https://platform.adobe.io/data/foundation/exim/packages \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-type: application/json' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -d '{
+      "id":"{ID}",
+      "action":"UPDATE",
+      "packageVisibility":"PUBLIC"
+  }'
+```
+
+| Property | Description | Type | Required |
+| --- | --- | --- | --- |
+| `id` | The id of the package to update. | String | Yes |
+| `action` | To update the visibility to public, the action value should be **UPDATE**. | String | Yes |
+| `packageVisbility` |To update the visibility, the packageVisibility value should be **PUBLIC**. | String | Yes |
+
+**Response**
+
+A successful response returns details on a package and its visibility.
+
+```json
+{
+    "id": "{ID}",
+    "version": 7,
+    "createdDate": 1729624618000,
+    "modifiedDate": 1729658596340,
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}",
+    "name": "acme",
+    "imsOrgId": "{ORG_ID}",
+    "packageType": "PARTIAL",
+    "expiry": 1737434596325,
+    "status": "PUBLISH_FAILED",
+    "packageVisibility": "PUBLIC",
+    "artifactsList": [
+        {
+            "id": "{ID}",
+            "type": "PROFILE_SEGMENT",
+            "found": false,
+            "count": 0,
+            "title": "Acme Profile Segment"
+        }
+    ],
+    "schemaMapping": {},
+    "sourceSandbox": {
+        "name": "acme-sandbox",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    }
+}
+```
+
+### Request to Import a public package {#pull-public-package}
+
+Import a package from a source organization with public availability by making a POST request to the `/transfer/pullRequest` endpoint.
+
+**API format**
+
+```http
+POST /transfer/pullRequest
+```
+
+**Request**
+
+The following request will import a package and sets its availability to public.
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/foundation/exim/transfer/pullRequest \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Accept: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "imsOrgId": "{ORG_ID}",
+      "packageId": "{PACKAGE_ID}"
+  }'
+```
+
+| Property | Description | Type | Required |
+| --- | --- | --- | --- |
+| `imsOrgId` | The id from the package's source organization. | String | Yes |
+| `packageId` | The id from the package to import. | String | Yes |
+
+**Response**
+
+A succcessful response returns details on the imported public package.
+
+```json
+{
+    "id": "{ID}",
+    "version": 0,
+    "createdDate": 1729658890425,
+    "modifiedDate": 1729658890425,
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}",
+    "sourceIMSOrgId": "{ORG_ID}",
+    "targetIMSOrgId": "{TARGET_ID}",
+    "packageId": "{PACKAGE_ID}",
+    "status": "PENDING",
+    "initiatedBy": "{INITIATED_BY}",
+    "pipelineMessageId": "{MESSAGE_ID}",
+    "requestType": "PUBLIC"
+}
+```
+
+### List public packages {#list-public-packages}
+
+Fetch a list of packages with public visbility by making a GET request to the `/transfer/list?{QUERY_PARAMS}` endpoint.
+
+**API format**
+
+```http
+GET /transfer/list?{QUERY_PARAMS}
+```
+
+| Parameter | Accepted/Default Values |
+| --- | --- |
+| `property` | Specifies the property to filter by, such as status. Acceptable values for status are: `COMPLETED` and `FAILED`. |
+| `start` | The default value of start is `0`. |
+| `limit` | The default value of limit is `20`. |
+| `orderBy` | The ordering only accepts the `createdDate` field. |
+| `requestType` | Accepts either `PUBLIC` or `PRIVATE`. |
+
+**Request**
+
+The following request fetches a list of packages with public availability.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/foundation/exim/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC&orderby=-createdDate \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Accept: application/json' \
+  -H 'Authorization: {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+```
+
+**Response**
+
+A successful response returns a list of public packages and their details. 
+
++++View response
+
+```json
+{
+    "totalElements": 14,
+    "currentPage": 0,
+    "totalPages": 1,
+    "hasPreviousPage": false,
+    "hasNextPage": false,
+    "data": [
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_ORG}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Public package demo",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729359318000,
+            "createdDate": 1729359316000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Public package demo",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729359284000,
+            "createdDate": 1729359283000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Test Private Flow Final",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284462000,
+            "createdDate": 1729275962000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOUCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Fest",
+            "status": "FAILED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284104000,
+            "createdDate": 1729253854000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "PublicPackageSharing",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284835000,
+            "createdDate": 1729253556000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "PublicPackageSharing",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284835000,
+            "createdDate": 1729253556000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "PublicPackageSharing",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284835000,
+            "createdDate": 1729253556000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Public Package Audit Test",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284667000,
+            "createdDate": 1729253421000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Public Package Audit Test",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284957000,
+            "createdDate": 1729253143000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Public Package Audit Test",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284562000,
+            "createdDate": 1729252975000,
+            "requestType": "PUBLIC"
+        },
+        {
+               "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Private Package Test 1",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284262000,
+            "createdDate": 1729229755000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Demo Package 1016",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284784000,
+            "createdDate": 1729208888000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Public Package test 1",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284934000,
+            "createdDate": 1729153097000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Public Package test 1",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284912000,
+            "createdDate": 1729153043000,
+            "requestType": "PUBLIC"
+        }
+    ],
+    "nextPage": null,
+    "pageSize": null
+}
+```
+
++++
+
+## Copy package payload (#package-payload)
+
+You can copy a public package's payload by making a GET request to the `/packages/payload` endpoint that includes the corresponding ID of the package in the request path.
+
+**API format**
+
+```http
+GET /packages/payload/{PACKAGE_ID}
+```
+
+| Parameter | Description |
+| --- | --- |
+| `{PACKAGE_ID}` | The ID of the package you want to copy. |
+
+**Request**
+
+The following request fetches a package's payload with the ID of {PACKAGE_ID}.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/foundation/exim/packages/payload/{PACKAGE_ID} \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Accept: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+```
+
+| Property | Description | Type | Required |
+| --- | --- | --- | --- |
+| `imsOrdId` | The id of the organization the pacakge belongs to. | String | Yes |
+| `packageId` | The id of the package who payload you're requesting. | String | Yes |
+
+**Response**
+
+A successful response returns the package's payload.
+
+```json
+
+{
+    "imsOrgId": "{ORG_ID}",
+    "packageId": "{PACKAGE_ID}"
 }
 ```

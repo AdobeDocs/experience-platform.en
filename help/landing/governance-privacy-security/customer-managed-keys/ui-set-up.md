@@ -1,6 +1,8 @@
 ---
 title: Set up and Configure Customer-Managed Keys using the Platform UI
 description: Learn how to set up your CMK app with your Azure tenant and send your encryption key ID to Adobe Experience Platform.
+role: Developer
+feature: Privacy
 exl-id: 5f38997a-66f3-4f9d-9c2f-fb70266ec0a6
 ---
 # Setup and configure customer-managed keys using the Platform UI

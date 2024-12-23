@@ -61,6 +61,39 @@ Under the [!UICONTROL Audiences] tab, you can add previously created people-base
 
 For more information on using the Segment Builder, please read the [Segment Builder UI guide](./segment-builder.md).
 
+### Establish relationships {#relationships}
+
+By default for account audiences, the Segment Builder UI displays the direct relationship between an account and a person. However, other relationship types are available for account audiences.
+
+To use the alternate relationship types, select ![the settings icon](../../images/icons/settings.png).
+
+![The settings icon is highlighted on the Fields section.](../images/ui/account-audiences/select-settings.png)
+
+On the [!UICONTROL Settings] tab, select **[!UICONTROL Show relationship selectors]** in the **[!UICONTROL Relationship of fields]** section.
+
+![The Show relation selectors toggle is selected within the Relationship of fields section of the Settings tab.](../images/ui/account-audiences/show-relation-selectors.png)
+
+Select ![the settings icon](../../images/icons/settings.png) again to return to the [!UICONTROL Fields] tab. You can now see the **[!UICONTROL Establish relationships]** section, which lets you establish how the account is connected to the person and how the person is connected to the opportunity.
+
+![The Establish relationships section is highlighted, displaying the options for how to connect an account to person and how to connect a person to an opportunity.](../images/ui/account-audiences/establish-relationships.png)
+
+When connecting the account to the person, you can choose from the following options:
+
+| Option | Description |
+| ------ | ----------- |
+| Direct relationship | The direct connection between the account and the person. This specifies which accounts each person is linked to via the array of `accountID` values in the `personComponents` array on the person schema. This path is the most frequently used. |
+| Account-person relation | The relationship between the account and the person, which is defined by the `accountPersonRelation` object. This path also allows each person to be connected to multiple accounts. It is used when your organization has defined an explicit relationship table from your source data.  |
+| Opportunity-person relation | The relationship between the opportunity and the person, which is defined by the `opportunityPersonRelation` object. This connects the person to an account by going from the opportunity-person to the opportunity to the account. This lets you describe which companies the person is attached to opportunities at. |
+
+When connecting the opportunity to the person, you can choose from the following options:
+
+| Option | Description |
+| ------ | ----------- |
+| Account | The direct connection between the account and the opportunity. When you use this in an account audience, this path connects all people at the company to the opportunity. |
+| Opportunity-person relation | The relationship between the opportunity and the person, which is based off of the opportunity-person object. This path connects only people who have been specifically identified as involved in an opportunity to that opportunity. |
+
+After establishing the desired relationship, you can add the requisite people-audiences to your segment definition.
+
 ## Activate audience {#activate}
 
 >[!NOTE]
@@ -156,10 +189,6 @@ The following section provides additional information about account audiences.
 >abstract="The audience violates a constraint. Please read the linked document for more details."
 
 When using account audiences, the audience **must** comply with the following constraints:
-
->[!NOTE]
->
->The following list shows the **default** constraints for account audiences. These values **may** change, depending on the settings implemented by your organization's administrator.
 
 - The maximum lookback window for Experience Events is **30 days**.
 - The maximum depth of nested containers is **5**.
