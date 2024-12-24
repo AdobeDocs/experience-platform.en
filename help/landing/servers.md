@@ -1,41 +1,41 @@
 ---
 solution: Experience Platform
-title: Servers on Adobe Experience Platform
-description: Learn about the different server types on Adobe Experience Platform.
+title: Processing data on Adobe Experience Platform
+description: Learn about the different processing paths that are available to use on Adobe Experience Platform.
 ---
 
-# Servers on Adobe Experience Platform
+# Processing data on Adobe Experience Platform
 
-some sort of introduction blurb
+Adobe Experience Platform is the most powerful, flexible, and open system on the market for building and managing complete solutions that drive customer experience. You can use Experience Platform to centralize and standardize customer data and content from any system and apply data science and machine learning to dramatically improve the design and delivery of rich, personalized experiences. As a result, Platform has multiple ways to process your data, letting you evaluate your data in the best way possible.
 
 ## Server types
 
-On Adobe Experience Platform, data is serviced by two different types of servers - hub servers and edge servers.
+On Platform, data can be be processed in two different paths: Adobe Experience Platform hub for batch and streaming workflows and Edge Network for real-time experiences.
 
-### Hub server
+### Adobe Experience Platform hub
 
-A hub server is a main data center that is centrally located. These larger data centers contain all the data you've ingested into Platform through methods including streaming ingestion, batch ingestion, and sources.
+Hub is a main data center that is centrally located and contains all the historical data and rich profile context that has been collected in Adobe Experience Platform. This allow you to send and receive more robust and complete data to your downstream services. As a result, hub should be used in scenarios where the **thoroughness** of the data is more important.
 
-Hub servers allow you to send and receive more robust and complete data to your downstream services. As a result, hub servers should be used in scenarios where the **thoroughness** of the data is more important.
-
-Available services on hub servers include the following:
+Available services on hub include the following:
 
 - Batch segmentation
 - Streaming segmentation
 - Profiles
 - Destinations
 
-### Edge server
+### Experience Platform Edge Network
 
-An edge server is a secondary data center that is physically located closer to different geographic locations. These data centers contain all the data that you've ingested through Data Collection as well as limited projections of hub data onto edge.
+Edge Network is a secondary data center that is physically located closer to different geographic locations. These data centers process all the data collected through the SDK extensions and Edge Network APIs. The only data that lives on the Edge Network are the projected audience memberships and attributes necessary for personalization.
 
-Edge servers allow you to more quickly send and receive data to your customers due to their closer proximity to the end user. As a result, edge servers should be used in scenarios where the **speed** of the data is more important. 
+Edge Network lets you send and receive data to your customers more quickly due to their closer proximity to the end user. Additionally, you can use Edge Network to process event forwarding requests and tag management requests. As a result, Edge Network should be used in scenarios where the **speed** of the data is more important. 
 
-Available services on edge servers include the following:
+Available services on Edge Network include the following:
 
 - Edge segmentation
 - Edge profiles
 - Edge destinations
+- Data collection
+- SDK extensions
 
 ## When should I use each type of server?
 
