@@ -198,7 +198,7 @@ Select the copy icon to copy your ARN a confirmation dialog appears.
 
 ![The AWS KMS Customer Managed Keys key details with the ARN highlighted.](../../images/governance-privacy-security/key-management-service/keys-details-arn.png)
 
-Now, navigate back to the Platform [!UICONTROL Customer Managed Keys configuration] UI. In the [!UICONTROL Add AWS encryption key details] section, add a **[!UICONTROL Configuration name]** and the **[!UICONTROL KMS key ARN]**
+Now, navigate back to the Platform [!UICONTROL Customer Managed Keys configuration] UI. In the **[!UICONTROL Add AWS encryption key details]** section, add a **[!UICONTROL Configuration name]** and the **[!UICONTROL KMS key ARN]** you copied from the AWS UI.
 
 ![The Platform Encryption Configuration workspace with Configuration name and KMS key ARN highlighted in the Add AWS encryption key details section.](../../images/governance-privacy-security/key-management-service/add-encryption-key-details.png)
 
@@ -206,24 +206,29 @@ Next, select **[!UICONTROL SAVE]** to submit the configuration name and the KMS 
 
 ![The Platform Encryption Configuration workspace with Save highlighted.](../../images/governance-privacy-security/key-management-service/save.png)
 
-<!-- Up to 23.16 in the demo recording -->
+You are returned to the [!UICONTROL Encryption Configurations] workspace. The status of the encryption configuration is displayed on the bottom of the **[!UICONTROL Customer Managed Keys]** card. 
 
-<!-- ## Key revocation -->
+![The [!UICONTROL Encryption Configurations] workspace with Processing highlighted on the Customer Managed Keys card.](../../images/governance-privacy-security/key-management-service/configuration-status.png)
 
-<!-- Soon.... -->
+Once the key is validated, the key vault identifiers are added to the data lake and profile datastores for all sandboxes.
 
-<!-- 
-Implications of Key Revocation:
+>[!NOTE]
+>
+>The duration of the process depends on your data size. Typically, this should complete in less that 24 hours. Each sandbox is usually updated in two to three minutes.
 
-Describe the propagation timelines when access to encryption keys is revoked:
- - Primary data stores: Data becomes inaccessible within a few minutes to 24 hours. - fact check this.
-- Cached/Transient data stores: Inaccessibility occurs within up to 7 days.
-
-NOTE: It is important to understand the downstream impact before you revoke key access.
- -->
+## Key revocation {#key-revocation}
 
 <!-- 
-**Understand Key Revocation Behavior**: Be aware that revoking or disabling the key will make your Adobe Experience Platform data inaccessible. This action is irreversible and should be performed with caution.
+>[!IMPORTANT]
+>
+>You must understand the implications of key revocation on downstream applications before you revoke any access. 
+
+The following are key considerations:
+
+- Be aware that revoking or disabling the key will make your Adobe Experience Platform data inaccessible. This action is irreversible and should be performed with caution.
+- Consider the propagation timelines when access to encryption keys is revoked. Primary data stores data becomes inaccessible within a few minutes to 24 hours. Cached or transient data stores becomes inaccessible within, up to, 7 days.
+
+**Understand Key Revocation Behavior**: 
 
 **Monitor and Manage Key Rotation**: If required, set up automatic key rotation to enhance security. Note that rotation does not affect data availability in Adobe Experience Platform.
 
