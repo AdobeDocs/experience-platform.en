@@ -37,33 +37,17 @@ Available services on Edge Network include the following:
 - Data collection
 - SDK extensions
 
-## When should I use each type of server?
+## Locations
 
-You should use services on edge servers when
+The following section lists the locations for both hub and Edge Network.
 
-## Next steps
-
-## Appendix
-
-### Frequently asked questions
-
-The following section lists frequently asked questions about hub and edge servers:
-
-#### How does data go from hub to edge?
-
-Data is automatically sent from hub to edge to keep it eventually consistent. However, this does **not** mean that data in edge is kept perfectly in sync with data in hub. As a result, there may be differences in available data between hub and edge.
-
-### Locations
-
-The following section lists the locations for both hub and edge servers.
-
-**Hub servers**
+**Hub**
 
 - VA7
 - NLD2
 - AUS5
 
-**Edge servers**
+**Edge Network**
 
 - OR2
 - VA6
@@ -72,3 +56,28 @@ The following section lists the locations for both hub and edge servers.
 - SGP3
 - AUS3
 - JPN3
+
+## Next steps
+
+After reading this overview, you now understand the differences between processing data on Adobe Experience Platform hub and Adobe Experience Platform Edge Network.
+
+## Appendix
+
+The following section lists supplemental information about processing data on Adobe Experience Platform.
+
+### Frequently asked questions
+
+The following section lists frequently asked questions about hub and Edge Network:
+
+#### What scenarios are most appropriate for hub?
+
+Hub is best suited in scenarios where the **thoroughness** of the data is more important. For example, let's say you want to create a marketing campaign to target all customers who have abandoned carts. In that use case, you could use batch segmentation, creating an audience that matches the abandoned cart users, and export it to a batch destination.
+
+#### What scenarios are most appropriate for Edge Network?
+
+Edge Network is best suited for scenarios where **speed** of the data is more important. For example, let's say you need to create a limited flash sale to target a customer who's browsing your site with a product in their cart. In that use case, you could use edge segmentation, letting you immediately target and send a personalized notification to users with a product in their cart with a "flash sale".
+
+##### How does data go from hub to Edge Network?
+
+Data is automatically sent from hub to Edge Network to keep it eventually consistent. However, this does **not** mean that data in Edge Network is kept perfectly in sync with data in hub. As a result, there may be differences in available data between hub and Edge Network.
+
