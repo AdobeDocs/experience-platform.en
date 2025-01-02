@@ -20,6 +20,8 @@ Enhance your security with Amazon Web Services Key Management Service (KMS). Use
 >
 >Adobe Experience Platform encrypts data at rest by default using system-managed keys. You gain greater control over your data security by enabling customer-managed keys, however, this is a one-way configuration. Once CMK is enabled, you cannot revert to system-managed keys. It is your responsibility to securely manage your keys to ensure uninterrupted access to your data and prevent potential inaccessibility.
 
+<!-- Switching to customer-managed encryption is irreversible. Once you have enabled customer-managed encryption, encoding cannot be reverted to system-managed encryption. This ensures you retain full control and accountability for your keys. -->
+
 This guides details the process to create and manage encryption keys in AWS Key Management Service (KMS) to secure your data in Adobe Experience Platform.
 
 ## Prerequisites {#prerequisites}
@@ -218,22 +220,24 @@ Once the key is validated, the key vault identifiers are added to the data lake 
 
 ## Key revocation {#key-revocation}
 
-<!-- 
 >[!IMPORTANT]
 >
 >You must understand the implications of key revocation on downstream applications before you revoke any access. 
 
 The following are key considerations:
 
-- Be aware that revoking or disabling the key will make your Adobe Experience Platform data inaccessible. This action is irreversible and should be performed with caution.
-- Consider the propagation timelines when access to encryption keys is revoked. Primary data stores data becomes inaccessible within a few minutes to 24 hours. Cached or transient data stores becomes inaccessible within, up to, 7 days.
+- Revoking or disabling the key will make your Adobe Experience Platform data inaccessible. This action is irreversible and should be performed with caution.
+- Consider the propagation timelines when access to encryption keys is revoked. Primary data stores become inaccessible within a few minutes to 24 hours. Cached or transient data stores becomes inaccessible within, up to, 7 days.
 
-**Understand Key Revocation Behavior**: 
+To revoke a key, navigate to AWS KMS workspace. The Customer managed keys section displays all the available keys for your AWS account.
 
-**Monitor and Manage Key Rotation**: If required, set up automatic key rotation to enhance security. Note that rotation does not affect data availability in Adobe Experience Platform.
+<!-- 2.28 time -->
 
-**Acknowledge the Irreversible Nature of Customer-Managed Encryption**: Once customer-managed encryption is enabled, it cannot be reverted to system-managed encryption. This ensures you retain full control and accountability for your keys.
- -->
+## Key rotation {#key-rotation}
+
+If required, set up automatic key rotation to enhance security. Note that rotation does not affect data availability in Adobe Experience Platform.
+
+<!-- soon ... -->
 
 ## Next Steps
 
