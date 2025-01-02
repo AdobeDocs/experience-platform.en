@@ -80,4 +80,3 @@ Edge Network is best suited for scenarios where **speed** of the data is more im
 ##### How does data go from hub to Edge Network?
 
 Data is automatically sent from hub to Edge Network to keep it eventually consistent. However, this does **not** mean that data in Edge Network is kept perfectly in sync with data in hub. As a result, there may be differences in available data between hub and Edge Network.
-
