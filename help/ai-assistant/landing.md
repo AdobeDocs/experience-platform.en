@@ -61,6 +61,14 @@ You can use AI Assistant to help your discover of Experience Data Model (XDM) fi
 
 [![image](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/xdm-field-discovery.md)
 
+>[!TAB AI Assistant for Customer Support]
+
+### AI Assistant for Customer Support
+
+You can use AI Assistant for Customer Support to seamlessly troubleshoot without leaving your workflows. When needed, support administrators can now use AI Assistant for Customer Support to create customer support tickets, complete with context and session details from your interactions with AI Assistant.
+
+[![image](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/customer-support.md)
+
 >[!ENDTABS]
 
 ## Video library
@@ -83,6 +91,14 @@ Watch the following video to learn how to configure access to AI Assistant for y
 
 For more information, read the [AI Assistant access guide](access.md).
 
+### Understanding product knowledge in AI Assistant
+
+Watch the following video to learn about product knowledge in AI Assistant.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441024?learn=on)
+
+For more information, read about [product knowledge in AI Assistant](home.md#product-knowledge)
+
 ### Use AI Assistant product knowledge to reduce onboarding time
 
 Watch the following video to learn how you can use AI Assistant product knowledge to reduce onboarding time. 
@@ -96,6 +112,12 @@ For more information, read about [product knowledge in AI Assistant](home.md#pro
 Watch the following video to learn how to use AI Assistant to de-clutter your audience and optimize your marketing operations.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3435532?learn=on)
+
+### Use the discoverability panel to help you get started
+
+Watch the following video to learn about the discoverability panel in AI Assistant, and how you can use it to get started with AI Assistant
+
+>[!VIDEO](https://video.tv.adobe.com/v/3440962/?learn=on)
 
 ## AI Assistant use case library
 
@@ -127,6 +149,10 @@ Watch the following videos for additional AI Assistant use case examples:
 For more information about AI Assistant, read the [security fact sheet for AI Assistant in Adobe Experience Platform](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf).
 
 >[!ENDSHADEBOX]
+
+Watch the following video for more information on the security features of AI Assistant:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441066/?learn=on)
 
 Browse the links below to further your understanding of AI Assistant use cases, capabilities, and much more.
 
