@@ -493,7 +493,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
 | `identities.entityIdNS.code` | String | The namespace of an entity ID you wish to access. |
 | `timeFilter.startTime` | Integer | Specifies the start time to filter Profile entities (in milliseconds). By default, this value is set as the beginning of available time. |
 | `timeFilter.endTime` | Integer | Specifies the end time to filter Profile entities (in milliseconds). By default, this value is set as the end of available time. |
-| `limit` | Integer | The maximum number of records to return. By default, this value is set to 1,000. |
+| `limit` | Integer | The maximum number of records to return. By default, this value is set to 1000. |
 | `orderby` | String | The sort order of retrieved experience events by timestamp, written as `(+/-)timestamp` with the default being `+timestamp`. |
 
 +++
@@ -1462,11 +1462,11 @@ A successful response returns HTTP status 200 with the requested entities.
 
 ### Access a subsequent page of results
 
-Results are paginated when retrieving time series events. If there are subsequent pages of results, the `_page.next` property will contain an ID. Additionally, the `_links.next.href` property provides a request URI for retrieving the next page. To retrieve the results, make another GET request to the `/access/entities` endpoint, however you must be sure to replace `/entities` with the value of the provided URI.
+Results are paginated when retrieving time series events. If there are subsequent pages of results, the `_page.next` property will contain an ID. Additionally, the `_links.next.href` property provides a request URI for retrieving the next page. To retrieve the results, make another GET request to the `/access/entities` endpoint and replace `/entities` with the value of the provided URI.
 
 >[!NOTE]
 >
->Be sure that you do not accidentally repeat `/entities/` in the request path. It should only appear once like, `/access/entities?start=...`
+>Ensure you do not accidentally repeat `/entities/` in the request path. It should only appear once like, `/access/entities?start=...`
 
 **API format**
 
@@ -1606,7 +1606,7 @@ The following parameters are used in the path for GET requests to the `/access/e
 | `schema.name` | **(Required)** The name of the entity's XDM schema. | `schema.name=_xdm.context.experienceevent` |
 | `relatedSchema.name`| If `schema.name` is `_xdm.context.experienceevent`, this value **must** specify the schema for the profile entity that the time series events are related to. | `relatedSchema.name=_xdm.context.profile` |
 | `entityId` | **(Required)** The ID of the entity. If the value of this parameter is not an XID, an identity namespace parameter (`entityIdNS`) must also be provided. | `entityId=janedoe@example.com` |
-| `entityIdNS` | If `entityId` is not provided as an XID, this field **must** specify the identity namespace. | `entityIdNE=email` |
+| `entityIdNS` | If `entityId` is not provided as an XID, this field **must** specify the identity namespace. | `entityIdNS=email` |
 | `relatedEntityId` | If `schema.name` is `_xdm.context.experienceevent`, this value **must** specify the related profile entity's ID. This value follows the same rules as `entityId`. | `relatedEntityId=69935279872410346619186588147492736556` |
 | `relatedEntityIdNS` | If `schema.name` is "_xdm.context.experienceevent", this value must specify the identity namespace for the entity specified in `relatedEntityId`. |`relatedEntityIdNS=CRMID`|
 | `fields` | Filters the data returned in the response. Use this to specify which schema field values to include in data retrieved. For multiple fields, separate values by a comma with no spaces between. | `fields=personalEmail,person.name,person.gender` |
