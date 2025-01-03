@@ -180,7 +180,7 @@ More detailed information about the segment definition returned can be found in 
 
 You can retrieve all the audiences that are enabled for streaming segmentation within your organization by using filters in Audience Portal.
 
-Within the available filters, go to **Update frequency** and select "Streaming". 
+Within the available filters, go to **[!UICONTROL Update frequency]** and select "[!UICONTROL Streaming]". 
 
 IMAGE
 
