@@ -229,9 +229,31 @@ The following are key considerations:
 - Revoking or disabling the key will make your Adobe Experience Platform data inaccessible. This action is irreversible and should be performed with caution.
 - Consider the propagation timelines when access to encryption keys is revoked. Primary data stores become inaccessible within a few minutes to 24 hours. Cached or transient data stores becomes inaccessible within, up to, 7 days.
 
-To revoke a key, navigate to AWS KMS workspace. The Customer managed keys section displays all the available keys for your AWS account.
+To revoke a key, navigate to AWS KMS workspace. The Customer managed keys section displays all the available keys for your AWS account. Select the alias of your key from the list. 
 
-<!-- 2.28 time -->
+![The AWS KMS Customer Managed Keys workspace with the new key alias highlighted.](../../images/governance-privacy-security/key-management-service/customer-managed-keys-on-aws.png)
+
+The details of your key are displayed. To disable the key, select **[!UICONTROL Key actions]**, then **[!UICONTROL Disable]** from the dropdown menu.
+
+![The details section of the AWS key withKey actions and Disable highlighted.](../../images/governance-privacy-security/key-management-service/disable-key.png)
+
+A confirmation dialog appears. Select **[!UICONTROL Disable key]** to confirm your choice. The impact of disabling the key should reflect in the Platform applications within approximately five minutes.
+
+>[!NOTE]
+>
+>Once you have disabled the key, you can enable the key again using the same method described above should you need to. This option is available from the **[!DNL Key actions]** dropdown.
+
+![The Disable key dialog with disable key highlighted.](../../images/governance-privacy-security/key-management-service/disable-key-dialog.png)
+
+<!--  -->
+
+Alternatively, if your key used across other services, you can remove access for Experience Platform directly from the key policy. Select **[!UICONTROL Edit]** in the **[!UICONTROL Key Policy]** section. 
+
+![The details section of the AWS key with Edit highlighted in the Key policy section.](../../images/governance-privacy-security/key-management-service/edit-key-policy.png)
+
+The **[!UICONTROL Edit key policy]** page appears. Highlight and delete the policy statement copied form the platform UI to remove the permissions for the Customer Managed Keys app. Then, select **[!UICONTROL Save changes]** to complete the process. 
+
+![The Edit key policy workspace on AWS with the statement JSON object and Save changes highlighted.](../../images/governance-privacy-security/key-management-service/delete-statement-and-save-changes.png)
 
 ## Key rotation {#key-rotation}
 
