@@ -1,7 +1,7 @@
 ---
 audience: user
 user-guide-title: Sandboxes in Adobe Experience Platform Help
-breadcrumb-title: Sandoxes Guide
+breadcrumb-title: Sandboxes Guide
 user-guide-description: Find out how sandboxes work and partition a Platform instance into virtual environments for development, testing, and application deployment.
 feature: Sandboxes
 ---
@@ -13,8 +13,9 @@ feature: Sandboxes
   * [Sandbox UI overview](ui/overview.md)
   * [Sandbox user guide](ui/user-guide.md)
   * [Sandbox tooling](ui/sandbox-tooling.md)
+  * [Sharing packages across organization](ui/sharing-packages-across-orgs.md)
 * Sandbox API {#api}
-  * [Overview](api/overview.md)
+  * [Overview](api/overview.md) 
   * [Getting started](api/getting-started.md)
   * [Available sandboxes](api/available.md)
   * [Sandbox management](api/sandboxes.md)

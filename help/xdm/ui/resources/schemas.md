@@ -23,15 +23,45 @@ This guide requires a working understanding of XDM System. Refer to the [XDM ove
 
 >[!NOTE]
 >
->This section covers how to manually create a new schema in the UI. If you are ingesting CSV data into Platform, you can opt to [map that data to an XDM schema created by AI-generated recommendations](../../../ingestion/tutorials/map-csv/recommendations.md) (currently in beta) without having to manually create the schema yourself.
+>This section covers how to manually create a new schema in the UI. If you are ingesting CSV data into Platform, you can use Machine Learning (ML) algorithms to **generate a schema from sample CSV data**. This workflow matches your data format and automatically creates a new schema based on the structure and content of your CSV file. See the [ML-Assisted schema creation guide](../ml-assisted-schema-creation.md) for more information on this workflow.
 
 In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in the top-right corner.
 
 ![The Schemas workspace with [!UICONTROL Create Schema] highlighted.](../../images/ui/resources/schemas/create-schema.png)
 
-The [!UICONTROL Create schema] workflow appears. You can choose a base class for the schema by selecting either **[!UICONTROL Individual Profile]**, **[!UICONTROL Experience Event]**, or **[!UICONTROL Other]**, followed by **[!UICONTROL Next]** to confirm your choice. See the [XDM individual profile](../../classes/individual-profile.md) and [XDM ExperienceEvent](../../classes/experienceevent.md) documentation for more information on these classes.
+The [!UICONTROL Create a schema] dialog appears. In this dialog, you can choose to either manually create a schema by adding fields and field groups, or you can upload a CSV file and use ML algorithms to generate a schema. Select a schema creation workflow from the dialog.
+
+![The Create a schema dialog with the workflow options and select highlighted.](../../images/ui/resources/schemas/create-a-schema-dialog.png)
+
+### [!BADGE Beta]{type=Informative} Manual or ML-assisted schema creation {#manual-or-assisted}
+
+To learn how you can use a ML algorithm to recommend a schema structure based on a csv file, see the [machine learning-assisted schema creation guide](../ml-assisted-schema-creation.md). This UI guide focusses on the manual creation workflow. 
+
+### Manual schema creation {#manual-creation}
+
+The [!UICONTROL Create schema] workflow appears. You can choose a base class for the schema by selecting either **[!UICONTROL Individual Profile]**, **[!UICONTROL Experience Event]**, or **[!UICONTROL Other]**, followed by **[!UICONTROL Next]** to confirm your choice. See the [[!UICONTROL XDM individual profile]](../../classes/individual-profile.md) and [[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md) documentation for more information on these classes.
 
 ![The [!UICONTROL Create schema] workflow with the three class options and [!UICONTROL Next] highlighted.](../../images/ui/resources/schemas/schema-class-options.png)
+
+When choosing **[!UICONTROL Other]**, a list of available classes appears. From here you can browse and filter pre-existing classes.
+
+![The [!UICONTROL Create schema] workflow with [!UICONTROL Other] highlighted in the [!UICONTROL Schema details] section.](../../images/ui/resources/schemas/other-schema-details.png)
+
+Select a radio button to filter the classes based on whether they are custom or standard classes. You can also filter the available results based on their industry, or search for a specific class using the search field.
+
+![The [!UICONTROL Create schema] workflow with the search bar, [!UICONTROL Custom], and [!UICONTROL Industries] highlighted.](../../images/ui/resources/schemas/filter-and-search.png)
+
+To help you decide on the appropriate class, there are info and preview icons for each class. The info icon (![An info icon.](/help/images/icons/info.png)) opens a dialog that provides a description of the class and the industry that it is associated with. 
+
+![The info icon and tooltip of the selected class highlighted.](../../images/ui/resources/schemas/class-info.png)
+
+The preview icon (![An preview icon.](/help/images/icons/preview.png)) opens a preview dialog for the class that contains a schema diagram and its properties.
+
+![A preview of the selected class with the schema diagram and class properties.](../../images/ui/resources/schemas/class-preview.png)
+
+Select any row to choose a class, then select **[!UICONTROL Next]** to confirm your choice.
+
+![The [!UICONTROL Create schema] workflow with a class selected from the table of available classes and [!UICONTROL Next] highlighted.](../../images/ui/resources/schemas/select-class.png)
 
 After you have selected a class, the [!UICONTROL Name and review] section appears. In this section, you provide a name and description to identify your schema. ​The schema's base structure (provided by the class) is shown in the canvas for you to review and verify your selected class and schema structure.
 
@@ -39,9 +69,9 @@ Enter a human-friendly [!UICONTROL Schema display name] in the text field. Next,
 
 ![The [!UICONTROL Name and review] section of the [!UICONTROL Create schema] workflow with the [!UICONTROL Schema display name], [!UICONTROL Description], and [!UICONTROL Finish] highlighted.](../../images/ui/resources/schemas/name-and-review.png)
 
-The [!UICONTROL Schema] [!UICONTROL Browse] tab appears. Your recently created schema is now listed in the Schema Library and available to edit in the the [!DNL Schema Editor].
+The Schema Editor appears, with the schema's structure shown in the canvas. If desired, you can now start [adding fields to the class](../../ui/resources/classes.md#add-fields).
 
-![The Schemas workspace Browse tab displaying your recently created schema.](../../images/ui/resources/schemas/example-schema.png)
+![The Schema Editor with the schema's structure shown in the canvas.](../../images/ui/resources/schemas/edit.png)
 
 ## Edit an existing schema {#edit}
 
@@ -111,7 +141,7 @@ Select the checkbox next to the name of the field group that you wish to add to 
 
 >[!TIP]
 >
->For any listed field group, you can hover or focus on the information icon (![](../../images/ui/resources/schemas/info-icon.png)) to view a brief description of the kind of data the field group captures. You can also select the preview icon (![](../../images/ui/resources/schemas/preview-icon.png)) to view the structure of the fields that the field group provides before you decide to add it to the schema.
+>For any listed field group, you can hover or focus on the information icon (![info icon](/help/images/icons/info.png)) to view a brief description of the kind of data the field group captures. You can also select the preview icon (![preview icon](/help/images/icons/preview.png)) to view the structure of the fields that the field group provides before you decide to add it to the schema.
 
 Once you have chosen your field groups, select **[!UICONTROL Add field groups]** to add them to the schema.
 
@@ -123,7 +153,7 @@ The [!DNL Schema Editor] reappears with the field-group-provided fields represen
 
 >[!NOTE] 
 >
->Within the Schema Editor, standard (Adobe-generated) classes and field groups are indicated with the padlock icon (![A padlock icon.](../../images/ui/explore/padlock-icon.png). The padlock appears in the left rail next to the class or field group name, as well as next to any field in the schema diagram that is a part of a system-generated resource.
+>Within the Schema Editor, standard (Adobe-generated) classes and field groups are indicated with the padlock icon (![A padlock icon.](/help/images/icons/lock-closed.png). The padlock appears in the left rail next to the class or field group name, as well as next to any field in the schema diagram that is a part of a system-generated resource.
 >
 >![The Schema Editor with the padlock icon highlighted](../../images/ui/explore/schema-editor-padlock-icon.png)
 
@@ -183,7 +213,7 @@ Under **[!UICONTROL Field name]**, start typing the name of the field you wish t
 
 While some standard fields share the same name, their structure may vary depending on the field group they come from. If a standard field is nested within a parent object in the field group structure, the parent field will also be included in the schema if the child field is added.
 
-Select the preview icon (![Preview icon](../../images/ui/resources/schemas/preview-icon.png)) next to a standard field to view the structure of its field group and better understand how it might be nested. To add the standard field to the schema, select the plus icon (![Plus icon](../../images/ui/resources/schemas/add-icon.png)).
+Select the preview icon (![Preview icon](/help/images/icons/preview.png)) next to a standard field to view the structure of its field group and better understand how it might be nested. To add the standard field to the schema, select the plus icon (![Plus icon](/help/images/icons/add-circle.png)).
 
 ![Add standard field](../../images/ui/resources/schemas/add-standard-field.png)
 

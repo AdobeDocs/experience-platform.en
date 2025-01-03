@@ -49,6 +49,8 @@ If you want to check the CN or SAN to do additional third-party validation, can 
 - [The Adobe Journey Optimizer public certificate](../images/governance-privacy-security/encryption/AJO-public-certificate.pem) 
 - [The Destinations Service public certificate](../images/governance-privacy-security/encryption/destinations-public-cert.pem).
 
+You can also securely retrieve public certificates by making a GET request to the MTLS endpoint. See the [public certificate endpoint documentation](../../data-governance/mtls-api/public-certificate-endpoint.md) for more information. 
+
 ## Data at rest {#at-rest}
 
 Data that is ingested and used by Platform is stored in the data lake, a highly granular data store containing all data managed by the system, regardless of origin or file format. All data persisted in the data lake is encrypted, stored, and managed in an isolated [[!DNL Microsoft Azure Data Lake] Storage](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) instance that is unique to your organization.

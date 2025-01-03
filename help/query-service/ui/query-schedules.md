@@ -41,6 +41,10 @@ The schedules workspace appears. The UI displays a list of any scheduled runs th
 
 The schedule details page appears. On this page, you can edit a variety of details for the scheduled query. Details include the [frequency and weekday of the scheduled query](#scheduled-query-frequency) run, the start and end date, the dataset to export the results to, and [query status alerts](#alerts-for-query-status).
 
+>[!IMPORTANT]
+>
+>The queries scheduler UI does not support indefinite or perpetual scheduling. An end date must be specified. There is no upper limit for the end date.
+
 ![The Schedule details panel highlighted.](../images/ui/query-schedules/schedule-details.png)
 
 #### Scheduled query frequency {#scheduled-query-frequency}
@@ -65,7 +69,7 @@ Select **[!UICONTROL Create and append into new dataset]** to create a data set 
 
 ![The Schedule details panel with Dataset details and the [!UICONTROL Create and append into new dataset] options highlighted.](../images/ui/query-schedules/dataset-details-create-and-append.png)
 
-Alternatively, select **[!UICONTROL Append into existing dataset]** followed by the dataset icon (![The dataset icon.](../images/ui/query-schedules/dataset-icon.png)).
+Alternatively, select **[!UICONTROL Append into existing dataset]** followed by the dataset icon (![The dataset icon.](/help/images/icons/database.png)).
 
 ![The Schedule details panel with Dataset details and Append into existing dataset highlighted.](../images/ui/query-schedules/dataset-details-existing.png)
 
@@ -131,7 +135,33 @@ Alternatively, to view a list of a query template's scheduled runs, navigate to 
 
 The list of query runs for that scheduled query appears. 
 
+### Compute hours at job level {#compute-hours}
+
+Track compute hours consumed at the query execution level for your CTAS/ITAS batch queries. This feature offers insights into compute usage, helping you optimize resource allocation and improve query performance.
+
+>[!AVAILABILITY]
+>
+>The Compute Hours functionality is exclusive to users who have purchased the [Data Distiller SKU](../data-distiller/overview.md). Contact your Adobe representative for more information.
+
 ![The details section of the Scheduled Queries workspace with a list of query runs highlighted for a scheduled query.](../images/ui/query-schedules/list-of-scheduled-runs.png)
+
+The following table provides descriptions of each column available in the details section that lists scheduled query runs.
+
+| Column Title        | Description  |
+|---------------------|----------------------------------|
+| [!UICONTROL Query Run ID]        | Displays a unique identifier for each query run, allowing you to track and reference individual executions of your scheduled queries.            |
+| [!UICONTROL Query Run Start]     | Indicates the start date and time of the query run, to help you monitor when each execution began. |
+| [!UICONTROL Query Run Complete]  | Shows the completion date and time of the query run, to provide insight into execution duration and status.  |
+| [!UICONTROL Status]              | Displays the current status of the query run, such as `Completed,` `Running,` or `Failed,` to assess the outcome quickly. |
+| [!UICONTROL Datasets]            | Lists datasets used in the query run, to show which data sources were involved in the execution. |
+| [!UICONTROL Compute Hours]       | Shows the compute time used for each query run, measured in hours. This helps to track resource usage and optimize query performance. |
+
+{style="table-layout:auto"}
+
+>[!NOTE]
+>
+>Compute Hours data is available from 08/15/2024. Data before this date appears as 'Not Available'.
+
 
 See the [monitor scheduled queried guide](./monitor-queries.md#inline-actions) for complete information on how to monitor the status of all query jobs through the UI. 
 

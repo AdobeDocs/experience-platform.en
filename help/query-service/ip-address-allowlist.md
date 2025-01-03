@@ -1,7 +1,7 @@
 ---
-keywords: IP address, IP range, allow list, allowlist
+keywords: IP address, IP range, allow list, allowlist, Query Service, network access
 title: IP Address Allowlist for Query Service
-description: This page provides IP ranges that you can add to your allow list.
+description: This page provides updated IP ranges that you can add to your allowlist for secure access to the Query Service.
 exl-id: f6745e0f-d387-45f2-9f72-054e721016ff
 ---
 # IP address allowlist {#ip-address-allow-list}
@@ -9,33 +9,40 @@ exl-id: f6745e0f-d387-45f2-9f72-054e721016ff
 >[!IMPORTANT]
 >
 > * Adobe recommends that you bookmark this page and revisit it every three months to check for the latest IP addresses. Adobe does not provide notification of new IP ranges.
-> * While Adobe supports data exports to SFTP servers, the recommended cloud storage locations to export data are [!DNL Amazon S3] and [!DNL Azure Blob].
+> * As of 15-Oct-2024, only the new IP ranges are valid for Query Service access. Outdated IP addresses no longer work. Ensure that your allowlist includes only the new IPs to avoid service disruptions.
 
 ## Overview {#overview}
 
-This page provides IP addresses that you can add to your allowlist, to safely export data from Experience Platform to your [SFTP server](../destinations/catalog/cloud-storage/sftp.md).
+You can define network access controls through your network firewall. By specifying the appropriate IP range, you can allow traffic for Query Service access.
 
-You can define network access controls through your network firewall. By specifying the appropriate IP range, you can allow traffic for the data transfer service.
+As part of ongoing improvements, Adobe has updated the IP ranges for network access to the Query Service. The previous IP addresses are now deprecated, and only the new IP addresses are valid. It is essential to update your allowlist to include the following new IP ranges to maintain uninterrupted service.
 
-Adobe recommends that you add the following IP ranges to an allowlist depending on your region. Failing to add your region-specific IP range to your allowlist may lead to errors or non-performance.
+Adobe recommends that you add the following region-specific IP ranges to an allowlist depending on your region. Failing to add these region-specific IP ranges may lead to errors or service disruptions.
 
-## VA7: US and Americas customers {#us-americas}
+## VA7: US and America's customers {#us-americas}
 
-* 20.14.241.153
+**New IP:** 4.152.211.251
 
 ## NLD2: EMEA customers {#emea}
 
-* 20.101.233.128
+**New IP:** 108.141.12.47
 
 ## AUS5: APAC customers {#apac}
 
-* 20.248.220.69
+**New IP:** 40.82.220.111
 
 ## CAN2: Canadian customers {#can2}
 
-* 4.172.1.139
+**New IP:** 4.172.28.20
 
-## GBR9: United Kingdon customers {#gbr9}
+## GBR9: United Kingdom customers {#gbr9}
 
-* 20.108.200.9
+**New IP:** 20.254.80.141
 
+## Set up IP-based restrictions {#set-ip-restrictions}
+
+Use the [Data Distiller Authorization API guides](./auth-api/overview.md) to set up IP-based restrictions. These IP-based restrictions ensure that only approved networks and client machines can access data via SQL in Adobe Experience Platform. Learn how to configure, enforce, and monitor IP restrictions to uphold high security standards, with capabilities for real-time access tracking and alerting.
+
+* [Getting Started guide](./auth-api/getting-started.md)
+* [IP Access Endpoint guide](./auth-api/ip-access.md)
+* [IP Validation Endpoint guide](./auth-api/validate.md)

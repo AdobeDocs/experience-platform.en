@@ -56,7 +56,7 @@ The following metrics are available for this dashboard view:
 | **[!UICONTROL Graphs updated]** | The number of existing identity graphs updated with new edges. |
 | **[!UICONTROL Total failed dataflows]** | The number of dataflow runs that failed. |
 
-You can select the filter icon ![Filter icon](../assets/ui/monitor-identities/filter.png) beside the source name to see Identity processing information for that selected source's dataflows.
+You can select the filter icon ![Filter icon](/help/images/icons/filter.png) beside the source name to see Identity processing information for that selected source's dataflows.
 
 ![The filter icon is highlighted. Selecting this icon allows you to view the selected source's dataflows.](../assets/ui/monitor-identities/sources-filter.png)
 
@@ -81,7 +81,7 @@ The following metrics are available for this dashboard view:
 | **[!UICONTROL Graphs updated]** | The number of existing identity graphs updated with new edges. |
 | **[!UICONTROL Total failed dataflows]** | The number of dataflow runs that failed. |
 
-Select the filter icon ![filter](../assets/ui/monitor-identities/filter.png) beside the dataflow run start time to see more information on your [!DNL Identity] dataflow run.
+Select the filter icon ![filter](/help/images/icons/filter.png) beside the dataflow run start time to see more information on your [!DNL Identity] dataflow run.
 
 ![The filter icon is highlighted. Selecting this icon allows you to view details about the selected dataflow.](../assets/ui/monitor-identities/dataflows-filter.png)
 

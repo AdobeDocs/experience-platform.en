@@ -1,35 +1,31 @@
 ---
-title: Magnite Streaming Real-Time destination connection
+title: Magnite Real-Time destination connection
 description: Use this destination to deliver Adobe CDP audiences to the Magnite Streaming platform in real-time.
-badgeBeta: label="Beta" type="Informative"
-hide: yes
-hidefromtoc: yes
+last-substantial-update: 2024-11-18
+exl-id: 4e08a14b-6800-41e1-95a5-826a6241144d
 ---
-
-# (Beta) Magnite Streaming: Real-Time destination connection
+# Magnite: Real-Time destination connection
 
 ## Overview {#overview}
 
-The [!DNL Magnite Streaming: Real-Time] and the Magnite Streaming: Batch destinations in Adobe Experience Platform help you map and export audiences for targeting and activation on the Magnite Streaming platform.
+The [!DNL Magnite: Real-Time] and the [Magnite: Batch](/help/destinations/catalog/advertising/magnite-batch.md) destinations in Adobe Experience Platform help you map and export audiences for targeting and activation on the Magnite Streaming platform.
 
-Activating audiences to the [!DNL Magnite Streaming] platform is a two step process which requires you to use both the Magnite Streaming: Real-Time and the Magnite Streaming: Batch destinations.
+Activating audiences to the [!DNL Magnite Streaming] platform is a two step process which requires you to use both the Magnite: Real-Time and the Magnite: Batch destinations.
 
 To activate your audiences to [!DNL Magnite Streaming], you must:
 
-* Activate the audiences on the [!DNL Magnite Streaming: Real-Time] destination, as shown in this page.
-* Activate the same audience on the Magnite Streaming: Batch destination. The [!DNL Magnite Streaming: Batch] destination is a mandatory component. Failing to activate the audience on the [!DNL Magnite Streaming] Batch destination will result in a failed integration, and your audiences will not be activated.
+* Activate the audiences on the [!DNL Magnite: Real-Time] destination, as shown in this page.
+* Activate the same audience on the Magnite: Batch destination. The [!DNL Magnite: Batch] destination is a mandatory component. Failing to activate the audience on the [!DNL Magnite Streaming] Batch destination will result in a failed integration, and your audiences will not be activated.
 
-Note: When using the Real-Time destination, [!DNL Magnite: Streaming] will receive audiences in real-time, but we can only store real-time audiences temporarily in our platform, and they will be removed from our system within a couple days. For this reason, if you want to use the Magnite: Streaming Real-Time destination, you will *also* need to use the Magnite Streaming: Batch destination - each audience that you activate to the Real-Time destination, you also need to activate to the Batch destination.
+Note: When using the Real-Time destination, [!DNL Magnite Streaming] will receive audiences in real-time, but Magnite can only store real-time audiences temporarily in their platform, and they will be removed from the system within a couple days. For this reason, if you want to use the Magnite: Real-Time destination, you will *also* need to use the Magnite: Batch destination - each audience that you activate to the Real-Time destination, you also need to activate to the Batch destination.
 
 >[!IMPORTANT]
->
->This destination connector is in beta and only available to select customers. To request access, contact your Adobe representative.
 >
 >The destination connector and documentation page are created and maintained by the [!DNL Magnite] team. For any inquiries or update requests, please contact them directly at `adobe-tech@magnite.com`.
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the [!DNL Magnite Streaming: Real-Time] destination, here is a sample use case that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL Magnite: Real-Time] destination, here is a sample use case that Adobe Experience Platform customers can solve by using this destination.
 
 ### Activation and targeting {#activation-and-targeting}
 
@@ -42,11 +38,11 @@ If you do not have a [!DNL Magnite Streaming] account, please reach out to adobe
 
 ## Supported identities {#supported-identities}
 
-The [!DNL Magnite Streaming: Real-Time] destination supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
+The [!DNL Magnite: Real-Time] destination supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 | Target Identity   | Description                                                                                      | Considerations                                                                       |
 |-------------------|--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
-| device_id         | A unique identifier for a device or identity. We accept any device ID and first-party ID regardless of type.           | Identity types we support include but are not limited to PPUID, GAID, IDFA, and TV Device IDs.     | 
+| device_id         | A unique identifier for a device or identity. We accept any device ID and first-party ID regardless of type.           | Identity types supported by Magnite include but are not limited to PPUID, GAID, IDFA, and TV Device IDs.     | 
 
 {style="table-layout:auto"}
 
@@ -67,7 +63,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item             | Type                            | Notes                                                                                                                                                                                                                                                                                                                              |
 |------------------|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Export type      | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the [!DNL Magnite Streaming: Real-Time] destination.                                                                                                                                                            |
+| Export type      | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the [!DNL Magnite: Real-Time] destination.                                                                                                                                                            |
 | Export frequency | **[!UICONTROL Streaming]**      | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -95,7 +91,11 @@ To configure details for the destination, fill in the required and optional fiel
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Name of your source partner]**: Your customer/company name. Only supported [!DNL Magnite Streaming] clients are available for selection.
+*  **[!UICONTROL Your company name]**: Your customer/company name. Only supported [!DNL Magnite Streaming] clients are available for selection.
+
+>[!NOTE]
+>
+>The company name must be a string which matches the name of the Amazon S3 delivery bucket you have configured with Magnite and set up in the [authenticate to destination](#authenticate) step. The supported characters include 'a-z', 'A-Z', '0-9', '-'(dash), or '_'(underscore).
 
 ![destination configuration auth fields filled](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-filled.png)
 
@@ -158,11 +158,11 @@ Once your audiences have been uploaded, you may validate your audiences have bee
 
 * Post-ingest, audiences are expected to appear in [!DNL Magnite Streaming] within a few minutes and can be applied to a deal. You can confirm this by looking up the segment ID that was shared during the activation steps in the Adobe Experience Platform.
 
-## Activate the same audiences through the [!DNL Magnite Streaming: Batch ]destination
+## Activate the same audiences through the [!DNL Magnite: Batch ]destination
 
-Audiences shared with [!DNL Magnite Streaming] using the  Real-Time destination will also need to be shared using the Magnite Streaming: Batch destination. When configured correctly, segment names in the [!DNL Magnite Streaming] UI are updated to reflect those used in the Adobe Experience Platform post-daily update.
+Audiences shared with [!DNL Magnite Streaming] using the  Real-Time destination will also need to be shared using the Magnite: Batch destination. When configured correctly, segment names in the [!DNL Magnite Streaming] UI are updated to reflect those used in the Adobe Experience Platform post-daily update.
 
-Finally, if a Batch destination has not been configured for your integration, set it up now via the Magnite Streaming: Batch destination document.
+Finally, if a Batch destination has not been configured for your integration, set it up now via the Magnite: Batch destination document.
 
 ## Data usage and governance {#data-usage-governance}
 

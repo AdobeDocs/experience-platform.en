@@ -28,6 +28,8 @@ The following example questions are grouped by objectives that you can accomplis
 
 The following questions are grouped by data objects and are classified as either [operational insights](./home.md#operational-insights) or [product knowledge](./home.md#product-knowledge).
 
+![](./images/prompt.png)
+
 * **Audiences - Operational insights**
   * Which audiences use other audiences?
   * What is the distribution of the number of profiles across audiences?
@@ -72,7 +74,6 @@ The following questions are grouped by data objects and are classified as either
   * How are User Groups related to Roles?
   * When should I use a data type vs a field group?
   * What is the difference between an identity and a primary or foreign key?
-  * How is Profile richness calculated?
 * **Troubleshooting - Product knowledge (Real-Time CDP and Journey Optimizer)**
   * What can AI Assistant help with?
   * Can I delete a profile enabled schema after data is ingested?

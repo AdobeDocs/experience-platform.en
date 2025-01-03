@@ -147,11 +147,12 @@ To correctly map your XDM fields to the [!DNL Marketing Cloud Account Engagement
 1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** and select an identity or choose **[!UICONTROL Select custom attributes]** category and specify from the list of [[!DNL Prospect API fields]](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html#fields) from the available schema.
 
     * Repeat these steps to add any mappings between your XDM profile schema and [!DNL Marketing Cloud Account Engagement]:
-        | Source Field | Target Field | Mandatory |
-        | --- | --- | --- |
-        |`IdentityMap: Email`|`Identity: email`| Yes |
-        |`xdm: MailingAddress.city`|`xdm: city`| |
-        |`xdm: person.name.firstName`|`Attribute: firstName`| |
+
+      | Source Field | Target Field | Mandatory |
+      | --- | --- | --- |
+      |`IdentityMap: Email`|`Identity: email`| Yes |
+      |`xdm: MailingAddress.city`|`xdm: city`| |
+      |`xdm: person.name.firstName`|`Attribute: firstName`| |
 
     * An example with the above mappings is shown below:
     ![Platform UI screenshot example showing Target mappings.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/mappings.png)

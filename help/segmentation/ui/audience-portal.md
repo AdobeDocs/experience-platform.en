@@ -1,8 +1,8 @@
 ---
 title: Audience Portal Overview
 description: Learn how to use Audience Portal to view, manage, and create audiences within Adobe Experience Platform.
+exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
 ---
-
 # Audience Portal overview
 
 Audience Portal is a central hub, within Adobe Experience Platform, that allows you to view, manage, and create audiences.
@@ -19,6 +19,7 @@ Within Audience Portal, you can accomplish the following tasks:
 - [Create an audience](#create-audience)
   - [Use Segment Builder to create an audience](#segment-builder)
   - [Use Audience Composition to create an audience](#audience-composition)
+  - [Use Federated Audience Composition to create an audience using data from your existing data warehouse](#fac) (Limited availability)
 - [Import externally generated audiences](#import-audience)
 
 To open Audience Portal, select the **[!UICONTROL Browse]** tab within the Segmentation section. 
@@ -84,7 +85,7 @@ The pie chart appears, displaying a breakdown of the audiences by audience evalu
 
 ### Customize {#customize}
 
-You can add additional fields to Audience Portal by selecting ![the filter attribute icon](../images/ui/audience-portal/filter-attribute.png). These additional fields include lifecycle status, update frequency, last updated by, description, created by, and access labels.
+You can add additional fields to Audience Portal by selecting ![the filter attribute icon](/help/images/icons/column-settings.png). These additional fields include lifecycle status, update frequency, last updated by, description, created by, and access labels.
 
 | Field | Description | 
 | ----- | ----------- |
@@ -110,7 +111,7 @@ If breakdown is selected, the display shows a bar graph outlining the percentage
 | [!UICONTROL Existing] | The count of profiles which **remained** in the segment in the last 24 hours since the last batch segment job ran. |
 | [!UICONTROL Exiting] | The count of profiles which **exited** the segment in the last 24 hours since the last batch segment job ran. |
 
-After you select the fields you want to display, you can also re-size the width of the displayed columns. You can either do this by dragging the area between the columns or by selecting the ![arrow icon](../images/ui/audience-portal/arrow-icon.png) of the column you want to re-size, followed by **[!UICONTROL Resize column]**.
+After you select the fields you want to display, you can also re-size the width of the displayed columns. You can either do this by dragging the area between the columns or by selecting the ![arrow icon](/help/images/icons/chevron-down.png) of the column you want to re-size, followed by **[!UICONTROL Resize column]**.
 
 ![The Resize column button is highlighted.](../images/ui/audience-portal/browse-audience-resize-column.png)
 
@@ -155,6 +156,18 @@ For more information on creating and managing tags, please read the [Managing Ta
 
 You can place audiences within folders for better audience management.
 
+To create a folder to hold your audiences, select **[!UICONTROL Create folder]**.
+
+![The Create folder button is highlighted.](../images/ui/audience-portal/create-folder.png)
+
+>[!NOTE]
+>
+>You can only create a folder if you're within another folder. This means you **cannot** create a folder if you have **[!UICONTROL All Audiences]** selected on the left navigation bar.
+
+A popover appears, letting you name your newly created folder. Select **[!UICONTROL Save]** after naming your folder to finish creating the folder. Please note that names **must** be unique to the parent folder.
+
+![The Save button on the create folder dialog is highlighted.](../images/ui/audience-portal/create-folder-dialog.png)
+
 To move an audience into a folder, select **[!UICONTROL Move to folder]** on the audience you want to move.
 
 ![The [!UICONTROL Move to folder] button is selected for a specific audience.](../images/ui/audience-portal/browse-move-to-folder.png)
@@ -171,7 +184,7 @@ Once the audience is in a folder, you can choose to only display audiences that 
 
 You can also filter your audiences, based on a variety of settings.
 
-To filter the available audiences, select the ![filter icon](../images/ui/audience-portal/filter-icon.png). 
+To filter the available audiences, select the ![filter icon](/help/images/icons/filter.png). 
 
 ![The browse audiences page is displayed, with the filter icon highlighted.](../images/ui/audience-portal/browse-select-filter.png)
 
@@ -189,17 +202,48 @@ The list of available filters is displayed.
 
 ![The available filters are displayed and highlighted on the browse audiences page.](../images/ui/audience-portal/filter-audiences.png)
 
-#### Bulk actions {#bulk-actions}
+### Bulk actions {#bulk-actions}
 
-Additionally, you can select up to 25 different audiences, and perform various actions on these audiences. These actions include [moving to a folder](#folders), [editing or applying a tag](#tags), [applying access labels](../../access-control/abac/ui/labels.md), and [deleting](#browse).
+Additionally, you can select up to 25 different audiences, and perform various actions on these audiences. These actions include [moving to a folder](#folders), [editing or applying a tag](#tags), [evaluating audiences](#flexible-audience-evaluation), [applying access labels](../../access-control/abac/ui/labels.md),and [deleting](#browse).
 
-![The available options for bulk actions are highlighted.](../images/ui/audience-portal/bulk-actions.png)
+![The available options for bulk actions are displayed.](../images/ui/audience-portal/bulk-actions.png)
 
-When you apply bulk actions to these audiences, the following conditions apply:
+When you apply bulk actions to audiences, the following conditions apply:
 
 - You **can** select audiences from different pages.
 - You **cannot** delete an audience which is being used in a destination activation.
 - If you select a filter, the selected audiences **will** reset.
+
+#### [!BADGE Limited availability]{type=Informative} Flexible audience evaluation {#flexible-audience-evaluation}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_browse_flexibleaudienceevaluation"
+>title="Flexible audience evaluation limits"
+>abstract="You can evaluate up to 20 audiences in a single flexible audience evaluation run.<br/><br/>Additionally, while the evaluation job runs as soon as possible, there may be system delays that may occur since on-demand evaluations <b>cannot</b> run simultaneously with another on-demand or batch evaluation."
+
+Flexible audience evaluation lets you run a segmentation job on demand. Choose the audiences you want to have evaluated and select **[!UICONTROL Evaluate audiences]**.
+
+>[!IMPORTANT]
+>
+>When selecting audiences for flexible audience evaluation, the following conditions apply:
+>
+>- All the audiences **must** have an origin of "Segmentation Service".
+>- All the audiences **must** be evaluated using batch segmentation.
+>- All the audiences **must** be people-based audiences.
+>- The audiences can **only** be activated to destinations in Platform.
+>- You can only select a maximum of 20 audiences.
+
+![The audiences that you want to use flexible audience evaluation on are selected.](../images/ui/audience-portal/evaluate-audiences.png)
+
+The **[!UICONTROL Evaluate audiences on demand]** popover appears, displaying the list of audiences that will be evaluated with the on-demand-segment job. If an audience is ineligible to be evaluated on demand, it will automatically be removed from the evaluation job. Confirm that the listed audiences are the ones you want to be evaluated.
+
+![The audiences that can be evaluated using flexible audience evaluation are displayed.](../images/ui/audience-portal/evaluate-audiences-modal.png)
+
+After confirming the correct audiences are listed, you can proceed with the request, and the flexible audience evaluation will begin. You can view the status of this audience evaluation in the [evaluation job monitoring view](../../dataflows/ui/monitor-audiences.md#evaluation-job-details).
+
+>[!NOTE]
+>
+>If you run flexible audience evaluation, you need to ensure the frequency is set to **[!UICONTROL After segment evaluation]**. Running flexible audience evaluation on audiences which are already set to be activated [after segment evaluation](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), will activate audiences as soon as the flexible audience evaluation job finishes, regardless of any previous daily activation jobs.
 
 ## Audience details {#audience-details}
 
@@ -247,17 +291,43 @@ Selecting **[!UICONTROL Edit audience]** lets you edit your audience in the Segm
 
 Selecting **[!UICONTROL Edit properties]** will let you edit the basic details of the audience, such as the name, description, and tags.
 
-![](../images/ui/audience-portal/audience-details-edit-properties.png)
+![The edit properties button is highlighted within the audience details page.](../images/ui/audience-portal/audience-details-edit-properties.png)
 
 ### Audience total {#audience-total}
 
-The **[!UICONTROL Audience total]** section shows the total number of profiles that qualify for the audience.
+For Platform-generated audiences and compositions, the **[!UICONTROL Audience total]** section shows the total number of profiles that qualify for the audience.
 
 >[!NOTE]
 >
 >It may take up to 30 minutes for the audience total count to update after the export job is completed.
 
 Estimates are generated by using a sample size of that day's sample data. If there are less than 1 million entities in your Profile store, the full data set is used; for between 1 and 20 million entities, 1 million entities are used; and for over 20 million entities, 5% of the total entities are used. More information about generating estimates can be found in the [estimate generation section](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) of the audience creation tutorial.
+
+### Ingestion details {#ingestion-details}
+
+For audiences with an origin of **[!UICONTROL Custom upload]**, the **[!UICONTROL Ingestion details]** section shows both the profile total, as well as details of the dataset the externally generated audience was ingested into.
+
+>[!NOTE]
+>
+>It may take up to 30 minutes following the export job for the profile count of the audience to be fully updated.
+
+![The ingestion details section for the audience details page is displayed.](../images/ui/audience-portal/audience-details-ingestion-details.png)
+
+| Property | Description |
+| -------- | ----------- |
+| Profile count | The total number of profiles that qualify for the audience. |
+| Dataset name | The name of the dataset that the audience was ingested into. You can select the dataset name for more information about the dataset. To learn more about datasets, read the [dataset UI guide](../../catalog/datasets/user-guide.md). |
+| Dataset batch | The ID of the dataset that the audience was ingested into. You can select the ID of the batch for more information about the batch. To learn more about batches, read the [monitoring data ingestion guide](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
+| Profile batch | The ID of the batch that created the profiles on Platform. You can select the ID of the batch for more information about the batch. To learn more about batches, read the [monitoring data ingestion guide](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
+| Schema | The name of the schema that the audience belongs to. You can select the name of the schema to view information about the schema's structure and apply data usage labels. For more information, read the [manage data usage labels for a schema guide](../../xdm/tutorials/labels.md). |
+| Records ingested | The number of records ingested into the dataset. |
+| Records failed | The number of records that were not able to be ingested into the dataset. |
+| New profile fragments | The number of new profiles that were created. |
+| Existing profile fragments | The number of existing profiles that were updated. |
+
+>[!NOTE]
+>
+>Applying data usage labels to the schema is the best practice. You **cannot** apply a data usage label directly to the audience.
 
 ### Activated destinations {#activated-destinations}
 
@@ -334,6 +404,12 @@ Selecting **[!UICONTROL Build rule]** takes you to the Segment Builder. This wor
 
 ![The Segment Builder workspace is displayed.](../images/ui/audience-portal/segment-builder.png)
 
+### Federated Audience Composition {#fac}
+
+In addition to audience compositions and segment definitions, you can use Adobe Federated Audience Composition to build new audiences from enterprise datasets without copying underlying data and store those audiences in Adobe Experience Platform Audience Portal. You can also enrich existing audiences in Adobe Experience Platform by utilizing composed audience data that has been federated from the enterprise data warehouse. Please read the guide on [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+
+![A list of audiences created in Federated Audience Composition for your organization.](../images/ui/overview/federated-audience-composition.png)
+
 ## Importing an audience {#import-audience}
 
 >[!IMPORTANT]
@@ -351,6 +427,10 @@ The **[!UICONTROL Import audience CSV]** workflow appears. You can select a CSV 
 >[!NOTE]
 >
 >The external generated audience **must** be in CSV format, have a **maximum** of 25 columns, and be less than 1GB.
+>
+>Additionally, you **cannot** use spaces or dashes in the first row or the associated columns of the CSV.
+>
+>For example, the first row's value can be "FirstName" or "First_Name", but it cannot be "First Name" or "First-Name".
 
 After selecting the CSV file to import, a list of sample data is shown for this externally generated audience. After confirming that the sample data is correct, select **[!UICONTROL Next]**.
 
@@ -385,7 +465,9 @@ After confirming the details are correct, select **[!UICONTROL Finish]** to impo
 >
 >By default, externally generated audiences have a data expiration of 30 days. The data expiration is reset if the audience is updated or modified in any way.
 >
->Additionally, if your externally generated audience contains sensitive and/or healthcare-related information, you **must** apply the necessary data usage labels before activating it to any destination. Since variables from externally generated audiences are stored in the data lake rather than within Real-time Customer Profile, you should **not** include consent data within your CSV file. For more information on applying data usage labels, please read the documentation on [managing labels](../../access-control/abac/ui/labels.md).
+>Additionally, if your externally generated audience contains sensitive and/or healthcare-related information, you **must** apply the necessary data usage labels before activating it to any destination. Since variables from externally generated audiences are stored in the data lake rather than within Real-time Customer Profile, you should **not** include consent data within your CSV file. 
+>
+>For more information on applying data usage labels, please read the documentation on [managing labels](../../access-control/abac/ui/labels.md). To learn about data usage labels on Platform in general, please read the [data usage labels overview](../../data-governance/labels/overview.md). To learn about how consent works in externally generated audiences, please read the [audiences FAQ](../faq.md#consent).
 
 ## Next steps
 

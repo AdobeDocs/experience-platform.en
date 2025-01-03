@@ -1,6 +1,8 @@
 ---
 title: Audit Logs Overview
 description: Learn how audit logs allow you to see who did what actions in Adobe Experience Platform.
+role: Admin,Developer
+feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 ---
 # Audit logs {#audit-logs}
@@ -23,6 +25,10 @@ exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 In order to increase the transparency and visibility of activities performed in the system, Adobe Experience Platform allows you to audit user activity for various services and capabilities in the form of "audit logs". These logs form an audit trail that can help with troubleshooting issues on Platform, and help your business effectively comply with corporate data stewardship policies and regulatory requirements.
 
 In a basic sense, an audit log tells **who** performed **what** action, and **when**. Each action recorded in a log contains metadata that indicates the action type, date and time, the email ID of the user who performed the action, and additional attributes relevant to the action type.
+
+>[!NOTE]
+>
+> The metadata for the actions **Add user** and **Remove user** within the **Role** resource will not contain the email ID of the user who performed the action. Instead, the logs will display the system generated email ID (system@adobe.com).
 
 This document covers audit logs in Platform, including how to view and manage them in UI or API.
 
@@ -88,7 +94,7 @@ Select an event from the list to view its details in the right rail.
 >Since this a new feature, the data displayed only goes back to March 2022. Depending on the resource selected, earlier data may be available from January 2022.
 
 
-Select the funnel icon (![Filter icon](../../images/audit-logs/icon.png)) to display a list of filter controls to help narrow results. Only the last 1000 records are displayed irrespective of the various filters selected.
+Select the funnel icon (![Filter icon](/help/images/icons/filter.png)) to display a list of filter controls to help narrow results. Only the last 1000 records are displayed irrespective of the various filters selected.
 
 ![The Audits dashboard with the filtered activity log highlighted.](../../images/audit-logs/filters.png)
 
@@ -127,6 +133,22 @@ To export the current list of audit logs, select **[!UICONTROL Download log]**.
 In the dialog that appears, select your preferred format (either **[!UICONTROL CSV]** or **[!UICONTROL JSON]**), then select **[!UICONTROL Download]**. The browser downloads the generated file and saves it to your machine.
 
 ![The file format selection dialog with [!UICONTROL Download] highlighted.](../../images/audit-logs/select-download-format.png)
+
+## Enable alerts {#enable-alerts}
+
+You can enable audit alerts to receive notifications for the following rules:
+
+* Audience create
+* Audience update
+* Audience delete
+* Dataset create
+* Dataset update
+* Dataset delete
+* Schema create
+* Schema update
+* Schema delete
+
+Select the desired alert from the list to subscribe to receive notifications. For more information on alerts, see the guide on [subscribing to alerts using the UI](../../../observability/alerts/ui.md).
 
 ## Managing audit logs in the API
 

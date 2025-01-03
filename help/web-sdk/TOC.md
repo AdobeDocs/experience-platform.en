@@ -24,11 +24,11 @@ role: Developer
     * [clickCollectionEnabled](commands/configure/clickcollectionenabled.md)
     * [clickCollection](commands/configure/clickcollection.md)
     * [context](commands/configure/context.md)
+    * [datastreamId](commands/configure/datastreamid.md)
     * [debugEnabled](commands/configure/debugenabled.md)
     * [defaultConsent](commands/configure/defaultconsent.md)
     * [downloadLinkQualifier](commands/configure/downloadlinkqualifier.md)
     * [edgeBasePath](commands/configure/edgebasepath.md)
-    * [edgeConfigId](commands/configure/edgeconfigid.md)
     * [edgeDomain](commands/configure/edgedomain.md)
     * [idMigrationEnabled](commands/configure/idmigrationenabled.md)
     * [streamingMedia](commands/configure/streamingmedia.md)
@@ -56,7 +56,8 @@ role: Developer
   * [setConsent](commands/setconsent.md)
   * [setDebug](commands/setdebug.md)
   * [sendMediaEvent](commands/sendmediaevent.md)
-  * [Configre datastream overrides](commands/datastream-overrides.md)
+  * [subscribeRulesetItems](commands/subscriberulesetitems.md)
+  * [Configure datastream overrides](commands/datastream-overrides.md)
   * [Command responses](commands/command-responses.md)
 
 * Identity {#identity}
@@ -101,6 +102,6 @@ role: Developer
   * [Debugging methods](use-cases/debugging.md)
   * [Use multiple Web SDK instances](use-cases/multiple-instances.md)
   * [Configure top and bottom page events](use-cases/top-bottom-page-events.md)
-
+* [Monitoring hooks](monitoring-hooks.md)
 * [Frequently Asked Questions](faq.md)
 * [Resources](resources.md)

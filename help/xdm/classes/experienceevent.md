@@ -99,6 +99,7 @@ The following table outlines the accepted values for `eventType`, along with the
 |`advertising.timePlayed` | This event tracks the amount of time spent by a user on a specific timed media asset. |
 |`application.close` | This event tracks when an application was closed or sent into the background. |
 |`application.launch` | This event tracks when an application was launched or brought into the foreground. |
+| `click` | **Deprecated** Instead use `decisioning.propositionInteract`. |
 |`commerce.backofficeCreditMemoIssued` | This event tracks when a notice of credit has been issued to a customer. |
 |`commerce.backofficeOrderCancelled` | This event tracks when a previously initiated purchase process has been terminated before completion. |
 |`commerce.backofficeOrderItemsShipped` | This event tracks when the purchased items have been physically shipped to the customer. |
@@ -113,11 +114,12 @@ The following table outlines the accepted values for `eventType`, along with the
 |`commerce.productViews` | This event tracks when a product has received one or more views. |
 |`commerce.purchases` | This event tracks when an order has been accepted. This is the only required action in a commerce conversion. A purchase event must have a product list referenced. |
 |`commerce.saveForLaters` | This event tracks when a product list has been saved for future use, such a product wishlist. |
-|`decisioning.propositionDisplay` | This event tracks when a decisioning proposition was displayed to a person. |
-|`decisioning.propositionDismiss` | This event tracks when a decision has been made not to engage with the presented offer. |
-|`decisioning.propositionInteract` | This event tracks when a person interacted with a decisioning proposition. |
+|`decisioning.propositionDisplay` | This event is used when the Web SDK automatically sends information about what's being displayed on a page. However, you don't need this event type if you're already including display information in other ways, like with top and bottom of page hits. For bottom of page hits, you can choose any event type you like.|
+|`decisioning.propositionDismiss` | This event type is used when an Adobe Journey Optimizer in-application message or content card is dismissed. |
+|`decisioning.propositionFetch` | Used to indicate that an event is primarily to fetch decisioning. Adobe Analytics will drop this event automatically. |
+|`decisioning.propositionInteract` | This event type is used to track interactions, such as clicks, on personalized content. |
 |`decisioning.propositionSend` | This event tracks when it has been decided to send to a prospective customer a recommendation or offer for consideration. |
-|`decisioning.propositionTrigger` | This event tracks the activation of a proposition process. A certain condition or action has occurred to prompt the presentation of an offer. |
+|`decisioning.propositionTrigger` | Events of this type are stored in local storage by the [Web SDK](../../web-sdk/home.md) but are not sent to Experience Edge. Each time a ruleset is satisfied, an event is generated and stored in local storage (if that setting is enabled).|
 |`delivery.feedback` | This event tracks feedback events for a delivery, such as an email delivery. |
 |`directMarketing.emailBounced` | This event tracks when an email to a person bounced. |
 |`directMarketing.emailBouncedSoft` | This event tracks when an email to a person soft-bounced. |
@@ -126,6 +128,7 @@ The following table outlines the accepted values for `eventType`, along with the
 |`directMarketing.emailOpened` | This event tracks when a person opened a marketing email. |
 |`directMarketing.emailSent` | This event tracks when a marketing email has been sent to a person. |
 |`directMarketing.emailUnsubscribed` | This event tracks when a person unsubscribed from a marketing email. |
+| `display` | **Deprecated** Instead use `decisioning.propositionDisplay`. |
 |`inappmessageTracking.dismiss` | This event tracks when an in-app message was dismissed. |
 |`inappmessageTracking.display` | This event tracks when an in-app message was displayed. |
 |`inappmessageTracking.interact` | This event tracks when an in-app message was interacted with. |
@@ -140,33 +143,34 @@ The following table outlines the accepted values for `eventType`, along with the
 |`leadOperation.statusInCampaignProgressionChanged` | This event tracks when a lead's status in a campaign has changed. |
 |`listOperation.addToList` | This event tracks when a person was added to a marketing list. |
 |`listOperation.removeFromList` | This event tracks when a person was removed from a marketing list. |
-|`media.adBreakComplete` | This event tracks when an `adBreakComplete` event has occurred. This event is triggered at the start of an ad break. |
-|`media.adBreakStart` | This event tracks when an `adBreakStart` event has occurred. This event is triggered at the end of an ad break. |
-|`media.adComplete` | This event tracks when an `adComplete` event has occurred. This event is triggered when an advert has been completed.|
-|`media.adSkip` | This event tracks when an `adSkip` event has occurred. This event is triggered when an advert has been skipped. |
-|`media.adStart` | This event tracks when an `adStart` event has occurred. This event is triggered when an advert has begun.|
-|`media.bitrateChange` | This event tracks when a `bitrateChange` event has occurred. This event is triggered when there is a change in the bit rate. |
-|`media.bufferStart` |This event tracks when a `bufferStart` event has occurred. This event is triggered when media has begun to buffer. |
-|`media.chapterComplete` |This event tracks when a `chapterComplete` event has occurred. This event is triggered at the completion of a chapter in the media. |
-|`media.chapterSkip` | This event tracks when a `chapterSkip` event has occurred. This event is triggered when a user skips forward or backward to another section or chapter within the media content. |
-|`media.chapterStart` | This event tracks when a `chapterStart` event has occurred. This event is triggered at the start of a specific section or chapter within the media content. |
+|`media.adBreakComplete` | This event signals the completion of an ad break. |
+|`media.adBreakStart` | This event signals the start of an ad break. |
+|`media.adComplete` | This event signals the completion of an advert.|
+|`media.adSkip` | This event signals when an advert has been skipped. |
+|`media.adStart` | This event signals the start of an advert.|
+|`media.bitrateChange` | This event signals when there is a change in the bit rate. |
+|`media.bufferStart` | The `media.bufferStart` event type is sent when buffering begins. There is no specific `bufferResume` event type; buffering is considered to have resumed when a `play` event is sent following a `bufferStart` event. |
+|`media.chapterComplete` | This event signals the completion of a chapter. |
+|`media.chapterSkip` | This event is triggered when a user skips forward or backward to another section or chapter. |
+|`media.chapterStart` | This event signals the start of a chapter. |
 |`media.downloaded` | This event tracks when media downloaded content has occurred. |
-|`media.error` | This event tracks when an `error` event has occurred. This event is triggered when an error or issue occurs during media playback. |
-|`media.pauseStart` | This event tracks when a `pauseStart` event has occurred. This event is triggered when a user initiates a pause in the media playback. |
-|`media.ping` |This event tracks when an `ping` event has occurred. This verifies the availability of a media resource. |
-|`media.play` | This event tracks when a `play` event has occurred. This event is triggered when the media content is playing, indicating active consumption by the user. |
-|`media.sessionComplete` |This event tracks when a `sessionComplete` event has occurred. This event marks the end of a media playback session. |
-|`media.sessionEnd` | This event tracks when a `sessionEnd` event has occurred. This event indicates the conclusion of a media session. This conclusion could involve closing the media player or stopping playback. |
-|`media.sessionStart` | This event tracks when a `sessionStart` event has occurred. This event marks the beginning of a media playback session. It is triggered when a user starts playing a media file. |
-|`media.statesUpdate` | This event tracks when a `statesUpdate` event has occurred. The player state tracking capabilities can be attached to an audio or video stream. The standard states are: fullscreen, mute, closedCaptioning, pictureInPicture, and inFocus. |
+|`media.error` | This event signals when an error has occurred during media playback. |
+|`media.pauseStart` | This event tracks when a `pauseStart` event has occurred. This event is triggered when a user initiates a pause in the media playback. There is no resume event type. A resume is inferred when you send a play event after a `pauseStart`. |
+|`media.ping` | The `media.ping` event type is used to indicate ongoing playback status. For main content, this event must be sent every 10 seconds during playback, starting 10 seconds after playback begins. For ad content, it must be sent every second during ad tracking. Ping events should not include the params map in the request body. |
+|`media.play` | The `media.play` event type is sent when the player transitions to the `playing` state from another state, such as `buffering,` `paused` (when resumed by the user), or `error` (when recovered), including scenarios like autoplay. This event is triggered by the player's `on('Playing')` callback. |
+|`media.sessionComplete` | This event is sent when the end of the main content is reached. |
+|`media.sessionEnd` | The `media.sessionEnd` event type notifies the Media Analytics backend to immediately close a session when a user abandons their viewing and is unlikely to return. If this event is not sent, the session will time out after 10 minutes of inactivity or 30 minutes without playhead movement. Any subsequent media calls with that Session ID will be ignored. |
+|`media.sessionStart` | The `media.sessionStart` event type is sent with the session initiation call. Upon receiving a response, the Session ID is extracted from the Location header and used for all subsequent event calls to the Collection server. |
+|`media.statesUpdate` | This event tracks when a `statesUpdate` event has occurred. The player state tracking capabilities can be attached to an audio or video stream. The standard states are: `fullscreen`, `mute`, `closedCaptioning`, `pictureInPicture`, and `inFocus`. |
 |`opportunityEvent.addToOpportunity` | This event tracks when a person was added to an opportunity. |
 |`opportunityEvent.opportunityUpdated` | This event tracks when an opportunity was updated. |
 |`opportunityEvent.removeFromOpportunity` | This event tracks when a person was removed from an opportunity. |
+| `personalization.request` | **Deprecated** Instead use `decisioning.propositionFetch`. |
 |`pushTracking.applicationOpened` | This event tracks when a person opened an application from a push notification. |
 |`pushTracking.customAction` | This event tracks when a person selected a custom action in a push notification. |
 |`web.formFilledOut` | This event tracks when a person filled out a form on a web page. |
-|`web.webinteraction.linkClicks` | This event tracks when a link has been selected one or more times. |
-|`web.webpagedetails.pageViews` | This event tracks when a webpage has received one or more views. |
+|`web.webinteraction.linkClicks` | The event signals that a link click has been automatically recorded by the Web SDK. |
+|`web.webpagedetails.pageViews` | This event type is the standard method for marking the hit as a page view. |
 |`location.entry` | This event tracks the entry of a person or device at a specific location. |
 |`location.exit` | This event tracks the exit of a person or device from a specific location. |
 

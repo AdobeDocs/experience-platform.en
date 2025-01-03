@@ -5,15 +5,11 @@ exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
 ---
 # Manage data usage labels for a schema
 
->[!IMPORTANT]
->
->Schema-based labeling is part of [attribute-based access control](../../access-control/abac/overview.md), which is currently available in a limited release for US-based healthcare customers. This capability will be available to all Adobe Real-Time Customer Data Platform customers once it is fully released.
-
 All data that is brought into Adobe Experience Platform is constrained by Experience Data Model (XDM) schemas. This data may be subject to usage restrictions defined by your organization or by legal regulations. To account for this, the Platform allows you to restrict the usage of certain datasets and fields through the use of [data usage labels](../../data-governance/labels/overview.md).
 
 A label applied to a schema field indicates the usage policies that apply to the data contained in that specific field. 
 
-Labels can be applied to applied to individual schemas, and fields within those schemas. When labels are applied directly to a schema, those labels are propagated to all existing and future datasets that are based on that schema.
+Labels can be applied to individual schemas, and fields within those schemas. When labels are applied directly to a schema, those labels are propagated to all existing and future datasets that are based on that schema.
 
 In addition, any field label that you add in one schema propagates to all other schemas that employ the same field from a shared class or field group. This helps to ensure that usage rules for similar fields are consistent across your entire data model.
 

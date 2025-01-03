@@ -28,6 +28,7 @@ role: User
     - [Audience Portal](ui/audience-portal.md)
     - [Audience Composition](ui/audience-composition.md)
     - [Segment Builder](ui/segment-builder.md)
+    - [Federated Audience Composition (Limited availability)](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)
     - [Ignore year time constraint update](ui/ignore-year.md)
     - [Time constraints refactoring](ui/segment-refactoring.md)
     - Segment Match {#segment-match}
@@ -67,6 +68,7 @@ role: User
   - [Importing and using external audiences](tutorials/using-external-audiences.md)
   - [Create a dataset to export data](tutorials/create-dataset-export-segment.md)
   - [Enforce data usage compliance for segments](tutorials/governance.md)
+- [Eligibility criteria update](./eligibility-criteria-update.md)
 - [Frequently asked questions](./faq.md)
 - [API reference](https://www.adobe.io/experience-platform-apis/references/segmentation/)
 - [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

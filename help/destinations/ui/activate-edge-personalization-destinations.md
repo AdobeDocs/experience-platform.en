@@ -106,7 +106,7 @@ Follow the [destination connection creation tutorial](../ui/connect-destination.
 Depending on the destination that you are configuring, refer to the following articles for destination-specific prerequisites and related information:
 
 * [Adobe Target connection](../catalog/personalization/adobe-target-connection.md#parameters)
-* [Custom personalization connection](../catalog/personalization/custom-personalization.md##parameters)
+* [Custom personalization connection](../catalog/personalization/custom-personalization.md#parameters)
 
 ## Select your destination {#select-destination}
 

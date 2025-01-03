@@ -5,9 +5,9 @@ exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
 ---
 # Create a [!DNL Salesforce Marketing Cloud] base connection using the [!DNL Flow Service] API
 
->[!IMPORTANT]
+>[!WARNING]
 >
->Custom object ingestion is currently not supported by the [!DNL Salesforce Marketing Cloud] source integration.
+>The [!DNL Salesforce Marketing Cloud] source will be deprecated at the end of June 2025.
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
@@ -40,6 +40,10 @@ In order for [!DNL Flow Service] to connect with [!DNL Salesforce Marketing Clou
 For more information about getting started, refer to this [[!DNL Salesforce Marketing Cloud] document](<https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm>).
 
 ## Create a base connection
+
+>[!IMPORTANT]
+>
+>Custom object ingestion is currently not supported by the [!DNL Salesforce Marketing Cloud] source integration.
 
 A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 

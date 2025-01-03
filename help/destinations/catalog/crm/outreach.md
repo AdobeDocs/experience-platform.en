@@ -149,18 +149,20 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
     ![Platform UI screenshot showing Target mapping using OutreachId.](../../assets/catalog/crm/outreach/target-mapping.png)
 
     * Add the following mapping between your XDM profile schema and your [!DNL Outreach] instance:
-        |XDM Profile Schema|[!DNL Outreach] Instance| Mandatory|
-        |---|---|---|
-        |`Oid`|`OutreachId`| Yes |
+
+      |XDM Profile Schema|[!DNL Outreach] Instance| Mandatory|
+      |---|---|---|
+      |`Oid`|`OutreachId`| Yes |
 
     * **[!UICONTROL Select custom attributes]**: select this option to map your source field to a custom attribute that you define in the [!UICONTROL Attribute name] field. Refer to [[!DNL Outreach] prospect documentation](https://api.outreach.io/api/v2/docs#prospect) for a comprehensive list of supported attributes.
     ![Platform UI screenshot showing Target mapping using LastName.](../../assets/catalog/crm/outreach/target-mapping-lastname.png)
 
     * For instance, depending on the values you want to update, add the following mapping between your XDM profile schema and your [!DNL Outreach] instance:
-        |XDM Profile Schema|[!DNL Outreach] Instance|
-        |---|---|
-        |`person.name.firstName`|`firstName`|
-        |`person.name.lastName`|`lastName`|
+
+      |XDM Profile Schema|[!DNL Outreach] Instance|
+      |---|---|
+      |`person.name.firstName`|`firstName`|
+      |`person.name.lastName`|`lastName`|
 
     * An example using these mappings is shown below:
     ![Platform UI screenshot example showing Target mappings.](../../assets/catalog/crm/outreach/mappings.png)

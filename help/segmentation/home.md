@@ -46,6 +46,14 @@ For information on building segment definitions using the API, see the tutorial 
 >
 >Additionally, if an Experience Event expiration value is enabled on the dataset, this could affect the membership of the created segment definition. Please read the guide on [Experience Event expirations](../profile/event-expirations.md) for more information on how this feature can affect segmentation.
 
+### Federated Audience Composition {#fac}
+
+In addition to audience compositions and segment definitions, you can use Adobe Federated Audience Composition to build new audiences from enterprise datasets without copying underlying data and store those audiences in Adobe Experience Platform Audience Portal. You can also enrich existing audiences in Adobe Experience Platform by utilizing composed audience data that has been federated from the enterprise data warehouse. Please read the guide on [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+
+>[!AVAILABILITY]
+>
+>Federated Audience Composition is currently only available for a set of organizations (Limited Availability). For more information, contact your Adobe representative.
+
 ## Evaluate audiences {#evaluate-segments}
 
 >[!CONTEXTUALHELP]

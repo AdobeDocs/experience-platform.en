@@ -1,62 +1,58 @@
 ---
-title: Magnite Streaming Batch Destination
+title: Magnite Batch Destination
 description: Use this destination to deliver Adobe CDP audiences to the Magnite Streaming platform in batch.
-badgeBeta: label="Beta" type="Informative"
-hide: yes
-hidefromtoc: yes
+last-substantial-update: 2024-11-18
+exl-id: 8cc3890f-84f8-49d1-a329-322c13f9e5af
 ---
-
-# Magnite Streaming: Batch connection {#magnite-streaming-batch}
+# Magnite: Batch connection {#magnite-streaming-batch}
 
 ## Overview {#overview}
 
-This document describes the Magnite Streaming: Batch destination and provides sample use cases to help you better understand how to activate and export audiences to it.
+This document describes the Magnite: Batch destination and provides sample use cases to help you better understand how to activate and export audiences to it.
 
-Adobe Real-Time CDP audiences can be delivered to the Magnite: Streaming platform in two ways - they can be delivered once per day, or they can be delivered in real-time:
+Adobe Real-Time CDP audiences can be delivered to the Magnite Streaming platform in two ways - they can be delivered once per day, or they can be delivered in real-time:
 
-1. If you only want and/or need to deliver audiences once per day, you can use the Magnite: Streaming Batch destination, which delivers audiences to Magnite: Streaming via a daily S3 batch file delivery. These Batch audiences are stored indefinitely in our platform, unlike real-time audiences, which are only stored for a couple days.
+1. If you only want and/or need to deliver audiences once per day, you can use the Magnite: Batch destination, which delivers audiences to Magnite Streaming via a daily S3 batch file delivery. These Batch audiences are stored indefinitely in the Magnite platform, unlike real-time audiences, which are only stored for a couple days.
 
-2. However, if you want and/or need to deliver audiences in real-time, you will need to use the Magnite: Streaming Real-Time destination. When using the Real-Time destination, Magnite: Streaming will receive audiences in real-time, but we can only store real-time audiences temporarily in our platform, and they will be removed from our system within a couple days. For this reason, if you want to use the Magnite: Streaming Real-Time destination, you will ALSO need to use the Magnite: Streaming Batch destination - each audience that you activate to the Real-Time destination, you also need to activate to the Batch destination.
+2. However, if you want or need to deliver audiences more frequently, you will need to use the [Magnite Real-Time](/help/destinations/catalog/advertising/magnite-streaming.md) destination. When using the Real-Time destination, Magnite Streaming will receive audiences in real-time, but Magnite can only store real-time audiences temporarily in their platform, and they will be removed from the system within a couple days. For this reason, if you want to use the Magnite Real-Time destination, you will *also* need to use the Magnite: Batch destination - each audience that you activate to the Real-Time destination, you also need to activate to the Batch destination.
 
-To recap: If you only want to deliver Adobe Real-Time CDP audiences once per day, you will use the Magnite: Streaming Batch destination only, and audiences will be delivered once per day. If you want to deliver Adobe Real-Time CDP audiences in Real-Time, you will use BOTH the Magnite: Streaming Batch destination, and the Magnite: Streaming Real-Time destination. For more information, reach out to Magnite: Streaming.
+To recap: If you only want to deliver Adobe Real-Time CDP audiences once per day, you will use the Magnite: Batch destination only, and audiences will be delivered once per day. If you want to deliver Adobe Real-Time CDP audiences in Real-Time, you will use *both* the Magnite: Batch destination, and the Magnite Real-Time destination. For more information, reach out to Magnite: Streaming.
 
 
-Continue reading below for more information about the Magnite: Streaming Batch destination, how to connect to it, and how to activate Adobe Real-Time CDP audiences to it.
-For more information about the Real-Time destination, See [this doc](magnite-streaming.md) instead.
+Continue reading below for more information about the Magnite: Batch destination, how to connect to it, and how to activate Adobe Real-Time CDP audiences to it.
+For more information about the Real-Time destination, See [this documentation page](magnite-streaming.md) instead.
 
 >[!IMPORTANT]
->
->This destination connector is in beta and only available to select customers. To request access, contact your Adobe representative.
 >
 >The destination connector and documentation page are created and maintained by the [!DNL Magnite] team. For any inquiries or update requests, please contact them directly at `adobe-tech@magnite.com`.
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the Magnite Streaming: Batch destination, here are sample use cases that Adobe Experience Platform customers can solve using this destination.
+To help you better understand how and when you should use the Magnite: Batch destination, here are sample use cases that Adobe Experience Platform customers can solve using this destination.
 
 ### Use case #1 {#use-case-1}
 
-You have activated an audience on the Magnite Streaming: Real-Time destination.
+You have activated an audience on the Magnite Real-Time destination.
 
-Any audiences activated via the Magnite Streaming: Real-Time destination must also use the Magnite Streaming: Batch destination, as the Batch delivery's data is meant to replace/persist the Real-Time delivery's data within the Magnite Streaming platform.
+Any audiences activated via the Magnite Real-Time destination must also use the Magnite: Batch destination, as the Batch delivery's data is meant to replace/persist the Real-Time delivery's data within the Magnite Streaming platform.
 
 ### Use case #2 {#use-case-2}
 
 You want to activate an audience only in a batch/daily cadence to the Magnite Streaming platform.
 
-Any audience(s) activated via the Magnite Streaming: Batch destination will be delivered in a batch/daily cadence and will then be targettable in the Magnite Streaming platform.
+Any audience(s) activated via the Magnite: Batch destination will be delivered in a batch/daily cadence and will then be available for targeting in the Magnite Streaming platform.
 
 ## Prerequisites {#prerequisites}
 
-To use the Magnite destinations in Adobe Experience Platform, you must first have a Magnite Streaming account. If you have a [!DNL Magnite Streaming] account, please reach out to your [!DNL Magnite] account manager to be provided credentials to access [!DNL Magnite's] destinations. If you do not have a [!DNL Magnite Streaming] account, please reach out to adobe-tech@magnite.com
+To use the [!DNL Magnite] destinations in Adobe Experience Platform, you must first have a Magnite Streaming account. If you have a [!DNL Magnite Streaming] account, please reach out to your [!DNL Magnite] account manager to be provided credentials to access [!DNL Magnite's] destinations. If you do not have a [!DNL Magnite Streaming] account, please reach out to adobe-tech@magnite.com
 
 ## Supported identities {#supported-identities}
 
-The Magnite Streaming: Batch destination can receive *any* identity sources from the Adobe CDP. Currently, this destination has three Target Identity fields for you to map to.
+The Magnite: Batch destination can receive *any* identity sources from the Adobe CDP. Currently, this destination has three Target Identity fields for you to map to.
 
 >[!NOTE]
 >
->*Any* identity sources can map to any of the magnite_deviceId Target Identities.
+>*Any* identity sources can map to any of the `magnite_deviceId` target identities.
 
 | Target Identity | Description | Considerations |
 |:--------------------------- |:------------------------------------------------------------------------------------------------ |:------------------------------------------------------------------------------------- |
@@ -79,7 +75,7 @@ The Magnite Streaming: Batch destination can receive *any* identity sources from
 
 | Item | Type | Notes | 
 |-----------------------------|----------|----------|
-| Export type | Audience export | You are exporting all members of an audience with the identifiers (name, phone number, or others) used in the Magnite Streaming: Batch destination. |
+| Export type | Audience export | You are exporting all members of an audience with the identifiers (name, phone number, or others) used in the Magnite: Batch destination. |
 | Export frequency | Batch | Batch destinations export files to downstream platforms in increments of three, six, eight, twelve, or twenty-four hours. Read more about batch [file-based destinations](/help/destinations/destination-types.md). |
 
 {style="table-layout:auto"}
@@ -90,7 +86,7 @@ Once your destination usage has been approved and Magnite Streaming has shared y
 
 ### Authenticate to destination {#authenticate}
 
-Locate the Magnite Streaming: Batch destination in the Adobe Experience catalog. Click the additional options button (\...) and then configure the destination connection/instance.
+Locate the Magnite: Batch destination in the Adobe Experience catalog. Click the additional options button (\...) and then configure the destination connection/instance.
 
 If you already have an existing account, you can locate it by changing the Account type option to "Existing account". Otherwise, you will create an account below:
 
@@ -110,7 +106,11 @@ To configure details for the destination, fill in the required and optional fiel
   future.
 *  **[!UICONTROL Description]**: A description that will help you identify this
   destination connection/instance in the future.
-*  **[!UICONTROL Name of your source partner]**: The name you would like to go by as a source in Magnite Streaming's platform
+*  **[!UICONTROL Your company name]**: Your customer/company name. Only supported [!DNL Magnite Streaming] clients are available for selection. 
+  
+>[!NOTE]
+>
+>The company name must be a string which matches the name of the Amazon S3 delivery bucket you have configured with Magnite and set up in the [authenticate to destination](#authenticate) step. The supported characters include 'a-z', 'A-Z', '0-9', '-'(dash), or '_'(underscore).
 
 ![destination configuration auth fields filled](../../assets/catalog/advertising/magnite/destination-batch-config-auth-filled.png)
 
@@ -120,7 +120,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 You can then proceed by selecting **[!UICONTROL Next]**
 
-On the next screen, titled "Governance Policy and Enforcement Actions (Optional)", you can optionally select any relevant data governance policies. "Data Export" is generally selected for the Magnite Streaming Batch destination.
+On the next screen, titled "Governance Policy and Enforcement Actions (Optional)", you can optionally select any relevant data governance policies. "Data Export" is generally selected for the Magnite: Batch destination.
 
 ![Optional governance policy and enforcement actions](../../assets/catalog/advertising/magnite/destination-batch-config-grouping-policy.png)
 
@@ -169,11 +169,11 @@ On the "Configure a filename and export schedule for each audience" screen, you 
 
 Once your audiences have been uploaded, you may validate your audiences have been created and uploaded correctly.
 
-* The Magnite Streaming Batch destination delivers S3 files to Magnite Streaming at a daily cadence. After delivery and ingestion, audiences/segments are expected to appear in Magnite Streaming, and can be applied to a deal. You can confirm this by looking-up the segment ID or segment name that was shared during the activation steps in the Adobe Experience Platform.
+* The Magnite: Batch destination delivers S3 files to Magnite Streaming at a daily cadence. After delivery and ingestion, audiences/segments are expected to appear in Magnite Streaming, and can be applied to a deal. You can confirm this by looking-up the segment ID or segment name that was shared during the activation steps in the Adobe Experience Platform.
 
 >[!NOTE]
 >
->Audiences activated/delivered to the Magnite Streaming Batch destination will *replace* the same audiences that were activated/delivered via the Magnite Streaming Real-Time destination. If you are looking-up a segment using the segment name, you may not find the segment in real-time, until the batch has been ingested and processed by the Magnite Streaming platform.
+>Audiences activated/delivered to the Magnite: Batch destination will *replace* the same audiences that were activated/delivered via the Magnite Real-Time destination. If you are looking-up a segment using the segment name, you may not find the segment in real-time, until the batch has been ingested and processed by the Magnite Streaming platform.
 
 ## Data usage and governance {#data-usage-governance}
 

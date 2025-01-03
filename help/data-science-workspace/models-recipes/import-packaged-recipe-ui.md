@@ -8,6 +8,12 @@ exl-id: 2556e1f0-3f9c-4884-a699-06c041d5c4d1
 ---
 # Import a packaged recipe in the Data Science Workspace UI
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
+
 This tutorial provides insight on how to configure and import a packaged recipe using the provided Retail Sales example. By the end of this tutorial, you will be ready to create, train, and evaluate a Model in Adobe Experience Platform [!DNL Data Science Workspace].
 
 ## Prerequisites

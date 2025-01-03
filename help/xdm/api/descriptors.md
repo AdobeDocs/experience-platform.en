@@ -285,7 +285,7 @@ The following section provides additional information regarding working with des
 
 >[!NOTE]
 >
->The maximum number of descriptors that can be applied to a schema is 4000. 
+>The maximum number of descriptors that can be applied to an organization's sandbox is 4000.
 
 The following sections provide an overview of available descriptor types, including the required fields for defining a descriptor of each type.
 

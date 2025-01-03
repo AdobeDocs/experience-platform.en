@@ -29,6 +29,15 @@ For a brief overview on how to configure the Adobe Target connection in Experien
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
 
+## Supported use cases based on implementation type {#supported-use-cases}
+
+The table below displays the supported use cases for the Adobe Target destination, based on your implementation type, with or without [Web SDK](/help/web-sdk/home.md) and with or without [edge segmentation](/help/segmentation/home.md#edge) enabled. 
+
+|Adobe Target implementation *without* Web SDK| Adobe Target implementation *with* Web SDK | Adobe Target implementation *with* Web SDK *and* edge segmentation off |
+|---|---|---|
+|<ul><li>A datastream is not required. Adobe Target can be deployed through [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html), [server-side](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#server-side-implementation), or [hybrid](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#hybrid-implementation) implementation methods.</li><li>[Edge segmentation](../../../segmentation/ui/edge-segmentation.md) is not supported.</li><li>[Same-page and next-page personalization](../../ui/activate-edge-personalization-destinations.md) are not supported.</li><li>You can share audiences and profile attributes to the Adobe Target connection for the *default production sandbox* and non-default sandboxes.</li><li>To configure next-session personalization without using a datastream ID, use [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html).</li></ul>|<ul><li>A datastream with Adobe Target and Experience Platform configured as services is required.</li><li>Edge segmentation works as expected.</li><li>[Same-page and next-page personalization](../../ui/activate-edge-personalization-destinations.md#use-cases) are supported.</li><li>Sharing audiences and profile attributes from other sandboxes is supported.</li></ul>| <ul><li>A datastream with Adobe Target and Experience Platform configured as services is required.</li><li>When [configuring the datastream](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream), do not select the **Edge segmentation** checkbox.</li><li>[Next-session personalization](../../ui/activate-edge-personalization-destinations.md#next-session) is supported.</li><li>Sharing audiences and profile attributes from other sandboxes is supported.</li></ul> |
+
+
 ## Prerequisites {#prerequisites}
 
 ### Datastream ID {#datastream-id}
@@ -111,9 +120,10 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
     
     >[!IMPORTANT]
     >
-    >The datastream ID is unique for each Adobe Target destination connection. If you need to map the same audiences to multiple datastreams, you must [create a new destination connection](../../ui/connect-destination.md) for each datastream ID, and go through the [audience activation flow](#activate).
+    >The datastream ID is unique for each Adobe Target destination connection. You cannot use the same datastream ID for multiple Adobe Target destination connections.
+    >If you need to map the same audiences to multiple datastreams, you must [create a new destination connection](../../ui/connect-destination.md) for each datastream ID, and go through the [audience activation flow](#activate).
 
-    * **[!UICONTROL None]**: Select this option if you need to configure Adobe Target personalization but you cannot implement the [Experience Platform Web SDK](/help/web-sdk/home.md). When using this option, audiences exported from Experience Platform to Target only support next-session personalization, and edge segmentation is disabled. Reference the table below for a comparison of available use cases per implementation type.
+    * **[!UICONTROL None]**: Select this option if you need to configure Adobe Target personalization but you cannot implement the [Experience Platform Web SDK](/help/web-sdk/home.md). When using this option, audiences exported from Experience Platform to Target only support next-session personalization, and edge segmentation is disabled. Reference the table in the [supported use cases](#supported-use-cases) section for a comparison of available use cases per implementation type.
 
     |Adobe Target implementation *without* Web SDK| Adobe Target implementation *with* Web SDK | Adobe Target implementation *with* Web SDK *and* edge segmentation off |
     |---|---|---|
