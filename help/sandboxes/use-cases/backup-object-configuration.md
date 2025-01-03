@@ -41,7 +41,7 @@ To successfully implement this use case, you must use multiple areas of Adobe Ex
 ## How to achieve the use case: high-level overview {#achieve-the-use-case-high-level}
 
 1. Define the scope of the metadata you wish to backup.
-2. Use the Sandbox Tooling user interface to export your desired objects into a backup package.
+2. Use the sandbox tooling user interface to export your desired objects into a backup package.
 3. Regularly create new versions of the backup package to ensure backup sandboxes remain aligned with the current configuration.
 4. Check your current usage in the license usage dashboard against your entitlements for non-production sandboxes.
 5. Reset non-production sandboxes to comply with entitlements, or to free up unnecessary resources and data storage.
