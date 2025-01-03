@@ -1,9 +1,9 @@
 ---
-title: Backup object configuration and non-production environments using Sandbox Tooling
+title: Enable a center of excellence using sandbox tooling
 description: 
 feature: Use Cases, Sandbox Tooling
 ---
-# Backup object configuration and non-production environments using Sandbox Tooling
+# Enable a center of excellence using sandbox tooling
 
 <!-- GENERAL DESCRIPTION HERE -->
 
