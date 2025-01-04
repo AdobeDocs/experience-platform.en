@@ -166,15 +166,13 @@ More detailed information about the segment definition returned can be found in 
 
 >[!TAB Audience Portal]
 
-You can retrieve all the audiences that are enabled for edge segmentation within your organization by using filters in Audience Portal.
+You can retrieve all the audiences that are enabled for edge segmentation within your organization by using filters in Audience Portal. Select the ![filter icon](../../images/icons/filter.png) icon to display the list of filters.
 
-Within the available filters, go to **Update frequency** and select "Edge". 
+![The filter icon is highlighted in Audience Portal.](../images/methods/filter-audiences.png)
 
-IMAGE
+Within the available filters, go to **Update frequency** and select "Edge". Using this filter displays all audiences in your organization that are evaluated using edge segmentation.
 
-Using this filter displays all audiences in your organization that are evaluated using edge segmentation.
-
-IMAGE
+![The Edge update frequency is selected, displaying all audiences in the organization that are evaluated using edge segmentation.](../images/methods/edge/filter-edge.png)
 
 To learn more about viewing audiences in Platform, please read the [Audience Portal guide](../ui/audience-portal.md).
 
@@ -182,9 +180,9 @@ To learn more about viewing audiences in Platform, please read the [Audience Por
 
 ## Next steps
 
-This guide explains how to create a segment definition that can be evaluated using edge segmentation on Adobe Experience Platform. 
+This guide explains what edge segmentation is, as well as how to create a segment definition that can be evaluated using edge segmentation on Adobe Experience Platform. 
 
 To learn more about using the Experience Platform user interface, please read the [Segmentation user guide](./overview.md). 
 
-For frequently asked questions about edge segmentation, please read the [edge segmentation section of the FAQ](../faq.md#streaming-segmentation).
+For frequently asked questions about edge segmentation, please read the [edge segmentation section of the FAQ](../faq.md#edge-segmentation).
 

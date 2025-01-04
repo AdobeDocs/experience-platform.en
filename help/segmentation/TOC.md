@@ -39,7 +39,7 @@ role: User
   - [Streaming segmentation](methods/streaming-segmentation.md)
   - [Edge segmentation](methods/edge-segmentation.md)
 - Audience types {#types}
-  - [Customer audiences](types/customer-audiences.md)
+  - [People audiences](types/people-audiences.md)
   - [Prospect audiences](types/prospect-audiences.md)
   - [Account audiences](types/account-audiences.md)
   - [Look-alike audiences](types/lookalike-audiences.md)

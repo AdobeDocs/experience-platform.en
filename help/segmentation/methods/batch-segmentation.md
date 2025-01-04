@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Batch Segmentation Guide
-description: Learn how to use batch segmentation to ???
+description: Learn about batch segmentation including what it is, how to create an audience evaluated using batch segmentation, and how to view your audiences created using batch segmentation.
 ---
 
 # Batch segmentation guide
@@ -145,16 +145,22 @@ More detailed information about the segment definition returned can be found in 
 
 >[!TAB Audience Portal]
 
-You can retrieve all the audiences that are enabled for batch segmentation within your organization by using filters in Audience Portal.
+You can retrieve all the audiences that are enabled for batch segmentation within your organization by using filters in Audience Portal. Select the ![filter icon](../../images/icons/filter.png) icon to display the list of filters.
 
-Within the available filters, go to **Update frequency** and select "Batch". 
+![The filter icon is highlighted in Audience Portal.](../images/methods/filter-audiences.png)
 
-IMAGE
+Within the available filters, go to **Update frequency** and select "Batch". Using this filter displays all audiences in your organization that are evaluated using batch segmentation.
 
-Using this filter displays all audiences in your organization that are evaluated using batch segmentation.
-
-IMAGE
+![The Batch update frequency is selected, displaying all audiences in the organization that are evaluated using batch segmentation.](../images/methods/batch/filter-batch.png)
 
 To learn more about viewing audiences in Platform, please read the [Audience Portal guide](../ui/audience-portal.md).
 
 >[!ENDTABS]
+
+## Next steps
+
+This guide explains how to create a segment definition that can be evaluated using batch segmentation on Adobe Experience Platform.
+
+To learn more about using the Experience Platform user interface, please read the [Segmentation user guide](../ui/overview.md).
+
+For frequently asked questions about batch segmentation, please read the [batch segmentation section of the FAQ](../faq.md#batch-segmentation).

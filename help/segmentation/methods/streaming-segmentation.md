@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Streaming Segmentation Guide
-description: Learn how to use streaming segmentation to evaluate audiences in near-real time while focusing on data richness.
+description: Learn about streaming segmentation including what it is, how to create an audience evaluated using streaming segmentation, and how to view your audiences created using streaming segmentation.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
 ---
 # Streaming segmentation guide
@@ -178,15 +178,13 @@ More detailed information about the segment definition returned can be found in 
 
 >[!TAB Audience Portal]
 
-You can retrieve all the audiences that are enabled for streaming segmentation within your organization by using filters in Audience Portal.
+You can retrieve all the audiences that are enabled for streaming segmentation within your organization by using filters in Audience Portal. Select the ![filter icon](../../images/icons/filter.png) icon to display the list of filters.
 
-Within the available filters, go to **[!UICONTROL Update frequency]** and select "[!UICONTROL Streaming]". 
+![The filter icon is highlighted in Audience Portal.](../images/methods/filter-audiences.png)
 
-IMAGE
+Within the available filters, go to **[!UICONTROL Update frequency]** and select "[!UICONTROL Streaming]". Using this filter displays all audiences in your organization that are evaluated using streaming segmentation.
 
-Using this filter displays all audiences in your organization that are evaluated using streaming segmentation.
-
-IMAGE
+![The Streaming update frequency is selected, displaying all audiences in the organization that are evaluated using streaming segmentation.](../images/methods/streaming/filter-streaming.png)
 
 To learn more about viewing audiences in Platform, please read the [Audience Portal guide](../ui/audience-portal.md).
 
@@ -194,7 +192,7 @@ To learn more about viewing audiences in Platform, please read the [Audience Por
 
 ## Next steps
 
-This guide explains how streaming-enabled segment definitions work on Adobe Experience Platform and how to monitor streaming-enabled segments. 
+This guide explains how streaming-enabled segment definitions work on Adobe Experience Platform and how to monitor streaming-enabled segment definitions. 
 
 To learn more about using the Adobe Experience Platform user interface, please read the [Segmentation user guide](./overview.md).
 
