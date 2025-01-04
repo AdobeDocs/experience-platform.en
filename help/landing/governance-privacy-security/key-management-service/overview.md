@@ -10,6 +10,7 @@ hidefromtoc: yes
 >[!AVAILABILITY]
 >
 >This document applies to implementations of Experience Platform running on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
+>
 >[Customer Managed Keys](../customer-managed-keys/overview.md) (CMK) on AWS are supported for Privacy and Security Shield but are not available for Healthcare Shield. CMK on Azure are supported for both Privacy and Security Shield as well as Healthcare Shield.
 
 Use this guide to secure your data with Amazon Web Services (AWS) Key Management Service (KMS) by creating, managing, and controlling encryption keys for Adobe Experience Platform. This integration simplifies compliance, streamlines operations through automation, and eliminates the need to maintain your own key management infrastructure.
@@ -20,7 +21,7 @@ For Customer Journey Analytics-specific instructions, refer to the [Customer Jou
 >
 >Adobe Experience Platform encrypts data at rest by default using system-managed keys. By enabling Customer Managed Keys (CMK), you take full control of your data security. However, this change is irreversible, once CMK is enabled, you cannot revert to system-managed keys. You are responsible for securely managing your keys to ensure uninterrupted access to your data and prevent potential inaccessibility.
 
-This guides details the process to create and manage encryption keys in AWS Key Management Service (KMS) to secure your data in Experience Platform.
+This guides details the process to create and manage encryption keys in AWS KMS to secure your data in Experience Platform.
 
 ## Prerequisites {#prerequisites}
 
@@ -89,7 +90,7 @@ Next, select the [!DNL Regionality] setting, which specifies the region scope of
 
 The second, [!DNL Add labels] stage of the workflow appears. Here, you configure the [!DNL Alias] and [!DNL Tags] fields to help you manage and locate your encryption key from the AWS KMS console.
 
-Enter a descriptive label for your key in the **[!DNL Alias]** input field. The alias acts as a user-friendly identifier, to quickly locate the key using the search bar in the AWS KMS console. To prevent confusion, choose a meaningful name that reflects the key's purpose, such as "Adobe-AEP-Key" or "Customer-Encryption-Key." You can also include a description of the key if the key alias is insufficient to describe its purpose.
+Enter a descriptive label for your key in the **[!DNL Alias]** input field. The alias acts as a user-friendly identifier, to quickly locate the key using the search bar in the AWS KMS console. To prevent confusion, choose a meaningful name that reflects the key's purpose, such as "Adobe-Platform-Key" or "Customer-Encryption-Key." You can also include a description of the key if the key alias is insufficient to describe its purpose.
 
 Finally, assign metadata to your key by adding key-value pairs in the [!DNL Tags] section. This step is optional, but you should add tags to categorize and filter AWS resources for easier management. For example, if your organization uses multiple Adobe-related resources, you can tag them with "Adobe" or "Experience-Platform." This extra step makes it simple to search for and manage all your associated resources in the AWS Management Console. Select **[!DNL Add tag]** to begin the process.
 
@@ -157,11 +158,11 @@ Next edit the JSON in the **[!DNL Key Policy]** section to integrate the key wit
 }
 ```
 
-All the resources (`"Resource": "*"`) in the same account (`Principal.AWS`) can access this example key. The policy allows other services in the same account, to use the key to do encryption and decryption. The services only have permission with this account.
+In the example above, all the resources (`"Resource": "*"`) in the same account (`Principal.AWS`) can access this key. The policy allows other services in the same account, to use the key to do encryption and decryption. The services only have permission for this account.
 
 Next, grant your Platform single tenant account access this key by adding a new statement to this policy. You can obtain the JSON policy from the Platform UI and apply it to your AWS KMS key to link it to the platform securely.
 
-Navigate to the Platform UI, in the **[!UICONTROL Administration]** section of the left navigation rail, select **[!UICONTROL Encryption]**. The [!UICONTROL Encryption Configuration] workspace appears. Select **[!UICONTROL Configure]** in the [!UICONTROL Customer Managed Keys] card.
+Navigate to the Platform UI. In the **[!UICONTROL Administration]** section of the left navigation rail, select **[!UICONTROL Encryption]**. The [!UICONTROL Encryption Configuration] workspace appears. Then select **[!UICONTROL Configure]** in the [!UICONTROL Customer Managed Keys] card.
 
 ![The Platform Encryption Configuration workspace with Configure highlighted in the Customer Managed Keys card.](../../images/governance-privacy-security/key-management-service/encryption-configuration.png)
 
@@ -172,6 +173,8 @@ The [!UICONTROL Customer Managed Keys configuration] appears. Select the copy ic
 <!-- This part of the workflow was in contention at the time of the demo.  -->
 
 Next, return to the AWS KMS workspace and update the key policy. Overwrite the entire default policy with the policy that you copied from the [!UICONTROL Platform Encryption Configuration] workspace. Select **[!DNL Finish]** to confirm your key details with your updated policy and create the key. The key and policy have now been configured to allow your AWS account to communicate with your Experience Platform account. The effect is instantaneous.
+
+<!-- Note, the screenshot below does NOT show an updated policy. -->
 
 ![The Review stage of the workflow with the updated policy and Finish highlighted.](../../images/governance-privacy-security/key-management-service/updated-cmk-policy.png)
 
@@ -219,7 +222,7 @@ The following are key considerations for key revocation:
 - Revoking or disabling the key will make your Platform data inaccessible. This action is irreversible and should be performed with caution.
 - Consider the propagation timelines when access to encryption keys is revoked. Primary data stores become inaccessible within a few minutes to 24 hours. Cached or transient data stores becomes inaccessible within seven days.
 
-To revoke a key, navigate to the AWS KMS workspace. The Customer managed keys section displays all the available keys for your AWS account. Select the alias of your key from the list. 
+To revoke a key, navigate to the AWS KMS workspace. The **[!DNL Customer managed keys]** section displays all the available keys for your AWS account. Select the alias of your key from the list. 
 
 ![The AWS KMS Customer Managed Keys workspace with the new key alias highlighted.](../../images/governance-privacy-security/key-management-service/customer-managed-keys-on-aws.png)
 
