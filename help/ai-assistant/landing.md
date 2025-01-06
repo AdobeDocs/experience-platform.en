@@ -61,6 +61,14 @@ You can use AI Assistant to help your discover of Experience Data Model (XDM) fi
 
 [![image](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/xdm-field-discovery.md)
 
+>[!TAB AI Assistant for Customer Support]
+
+### AI Assistant for Customer Support
+
+You can use AI Assistant for Customer Support to seamlessly troubleshoot without leaving your workflows. When needed, support administrators can now use AI Assistant for Customer Support to create customer support tickets, complete with context and session details from your interactions with AI Assistant.
+
+[![image](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/customer-support.md)
+
 >[!ENDTABS]
 
 ## Video library
