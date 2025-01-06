@@ -275,7 +275,6 @@ You can view and track your profile exports against your contractual limits in t
 
 Keep in mind the following limitations for the general availability release of dataset exports:
 
-* Currently, you can only export incremental files and an end date cannot be selected for your dataset exports.
 * Experience Platform may export multiple files even for small datasets. Dataset export is designed for system-to-system integration and optimized for performance, hence the number of exported files is not customizable.
 * Exported file names are currently not customizable.
 * Datasets created via API are currently not available for export. 
