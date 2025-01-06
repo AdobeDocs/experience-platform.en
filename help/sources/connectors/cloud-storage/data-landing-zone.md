@@ -155,7 +155,7 @@ Follow the steps below to learn how you can set up your [!DNL Data Landing Zone]
 
 ### Set up AWS CLI and Performing Operations
 
-- Read the guide on [installing or updating to the latest version of the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+- Read the guide on [installing or updating to the latest version of the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
 
 ### Configure AWS CLI with temporary credentials
 
