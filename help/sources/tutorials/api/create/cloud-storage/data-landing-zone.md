@@ -54,12 +54,25 @@ curl -X GET \
 
 **Response**
 
+>[!BEGINTABS]
+
+>[!TAB Response on Azure]
+
 The following response returns information on a landing zone, including its corresponding `containerName` and `containerTTL`.
 
 ```json
+
 {
-    "containerName": "dlz-user-container",
-    "containerTTL": "7"
+  "containerName": "dlz-adf-connectors",
+  "containerTTL": "7",
+  "dlzPath": {
+    "containerName": "dlz-adf-connectors"
+  },
+  "dataTTL": {
+    "timeUnit": "days",
+    "timeQuantity": 7
+  },
+  "dlzProvider": "Azure Data Lake Storage Gen2"
 }
 ```
 
@@ -67,6 +80,26 @@ The following response returns information on a landing zone, including its corr
 | --- | --- |
 | `containerName` | The name of the landing zone you retrieved. |
 | `containerTTL` | The expiration time (in days) applied to your data within the landing zone. Any within a given landing zone is deleted after seven days. |
+
+
+>[!TAB Response on AWS]
+
+```json
+{
+  "dlzPath": {
+    "bucketName": "dlz-prod-sandboxName",
+    "dlzFolder": "dlz-adf-connectors"
+  },
+  "dataTTL": {
+    "timeUnit": "days",
+    "timeQuantity": 7
+  },
+  "dlzProvider": "Amazon S3"
+}
+```
+
+>[!ENDTABS]
+
 
 ## Retrieve [!DNL Data Landing Zone] credentials
 
@@ -94,6 +127,74 @@ curl -X GET \
 
 **Response**
 
+>[!BEGINTABS]
+
+>[!TAB Response on Azure]
+
+```json
+{
+  "containerName": "example-container",
+  "SASToken": "example-sas-token",
+  "storageAccountName": "example-storage-account",
+  "SASUri": "https://example-storage-account.blob.core.windows.net/example-container?example-sas-token",
+  "expiryDate": "2024-12-31",
+  "credentials": {
+    "SASToken": "example-sas-token",
+    "SASUri": "https://example-storage-account.blob.core.windows.net/example-container?example-sas-token"
+  },
+  "dlzPath": {
+    "containerName": "user_drop_zone"
+  },
+  "dlzProvider": "Azure Data Lake Storage Gen2",
+  "expiryTime": 1735689599
+}
+```
+
+| Property | Description |
+| --- | --- |
+| `containerName` | The name of your landing zone. |
+| `SASToken` | The shared access signature token for your landing zone. This string contains all of the information necessary to authorize a request. |
+| `storageAccountName` |
+| `SASUri` | The shared access signature URI for your landing zone. This string is a combination of the URI to the landing zone for which you are being authenticated to and its corresponding SAS token. |
+| `expiryDate` | The date when your SAS token will expire. You must refresh your token before the expiry date in order to continue using it in your application for uploading data to the Data Landing Zone. If you do not manually refresh your token before the stated expiry date, then it will automatically refresh and provide a new token when the GET credentials call is performed. |
+| `credentials.SASToken` |
+| `credentials.SASUri` |
+| `dlzPath.containerName` |
+| `dlzProvider` |
+| `expiryTime` |
+
+>[!TAB Response on AWS]
+
+```json
+{
+  "credentials": {
+    "clientId": "example-client-id",
+    "awsAccessKeyId": "example-access-key-id",
+    "awsSecretAccessKey": "example-secret-access-key",
+    "awsSessionToken": "example-session-token"
+  },
+  "dlzPath": {
+    "bucketName": "dlz-prod-sandboxName",
+    "dlzFolder": "user_drop_zone"
+  },
+  "dlzProvider": "Amazon S3",
+  "expiryTime": 1735689599
+}
+```
+
+| Property | Description |
+| --- | --- |
+| `credentials.clientId` |
+| `credentials.awsAccessKeyId` |
+| `credentials.awsSecretAccessKey` |
+| `credentials.awsSessionToken` |
+| `dlzPath.bucketName` |
+| `dlzPath.dlzFolder` |
+| `dlzProvider` |
+| `expiryTime` |
+
+>[!ENDTABS]
+
 The following response returns the credential information for your data landing zone, including your current `SASToken`, `SASUri`, `storageAccountName`, and expiry date.
 
 ```json
@@ -105,14 +206,6 @@ The following response returns the credential information for your data landing 
     "expiryDate": "2024-01-06"
 }
 ```
-
-| Property | Description |
-| --- | --- |
-| `containerName` | The name of your landing zone. |
-| `SASToken` | The shared access signature token for your landing zone. This string contains all of the information necessary to authorize a request. |
-| `SASUri` | The shared access signature URI for your landing zone. This string is a combination of the URI to the landing zone for which you are being authenticated to and its corresponding SAS token, |
-| `expiryDate` | The date when your SAS token will expire. You must refresh your token before the expiry date in order to continue using it in your application for uploading data to the Data Landing Zone. If you do not manually refresh your token before the stated expiry date, then it will automatically refresh and provide a new token when the GET credentials call is performed. |
-
 ### Retrieve the required fields using APIs
 
 After you generate your token, you can retrieve the required fields programmatically by using the request examples below:
