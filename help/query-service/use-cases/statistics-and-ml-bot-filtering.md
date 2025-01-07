@@ -4,7 +4,7 @@ description: Learn how to use Data Distiller statistics and machine learning to 
 ---
 # Bot filtering using statistics and machine learning
 
-Bot activity can skew analytics metrics and compromise data integrity in any type of clickstream or web traffic data. Analytics platforms offer bot filtering features to address this and remove unwanted traffic. Adobe Experience Platform Query Service can help maintain data quality through bot filtering. 
+To maintain accurate analytics and ensure data integrity in clickstream or web traffic data, it is essential to address bot activity. Employ bot filtering measures to remove unwanted traffic from your analytics platforms. Use Adobe Experience Platform Query Service to implement effective bot filtering and maintain high-quality data.
 
 This document provides a comprehensive guide to identifying and filtering bot activity using SQL and machine learning techniques. It presents a progression of complementary approaches, starting with basic filtering and advancing to machine learning-based detection and evaluation. Adopt this robust framework to enhance your bot detection and maintain your data integrity.
 
