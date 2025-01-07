@@ -236,6 +236,10 @@ Time constraints let you apply time restrictions on time-based attributes, event
 >
 >If you created a segment definition with the "This month" or "This year" time constraints prior to June 2024, you will need to re-save your segment definitions. Prior to June 2024, "This month" was based off of 30 days and "This year" was based off of 365 days.
 
+>[!NOTE]
+>
+>Both the [ignore year time constraint](./ignore-year.md) and [rule-level time constraints](./segment-refactoring.md) were previously refactored, with more information available in the linked overviews.
+
 The list of available time constraints are as follows:
 
 +++ Available time constraints

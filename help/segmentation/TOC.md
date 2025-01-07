@@ -35,10 +35,12 @@ role: User
       - [Segment Match overview](ui/segment-match/overview.md) 
       - [Troubleshooting](ui/segment-match/troubleshooting.md)
 - Segmentation methods {#methods}
+  - [Overview](methods/overview.md)
   - [Batch segmentation](methods/batch-segmentation.md)
   - [Streaming segmentation](methods/streaming-segmentation.md)
   - [Edge segmentation](methods/edge-segmentation.md)
 - Audience types {#types}
+  - [Overview](types/overview.md)
   - [People audiences](types/people-audiences.md)
   - [Prospect audiences](types/prospect-audiences.md)
   - [Account audiences](types/account-audiences.md)
