@@ -110,7 +110,7 @@ The [!UICONTROL Activate destination] page appears. For more information on the 
 
 ## Next steps {#next-steps}
 
-After reading this guide, you now have a better understanding of how to create and use your account audiences in Adobe Experience Platform. To learn how to use other types of audiences in Platform, please read the [Segmentation Service UI guide](./overview.md).
+After reading this guide, you now have a better understanding of how to create and use your account audiences in Adobe Experience Platform. To learn how to use other types of audiences in Platform, please read the [audience type overview](./overview.md).
 
 ## Appendix {#appendix}
 

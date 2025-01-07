@@ -8,13 +8,13 @@ exl-id: b48cc0cf-f1c4-46fe-bb1d-cad53a9439dc
 
 Adobe Experience Platform allows you to bring the full ease and sophistication of the marketer-friendly segmentation experience to [prospect profiles](../../profile/ui/prospect-profile.md). You can drastically reduce the time spent assembling audiences by creating your own prospect audiences while responsibly using partner data.
 
-## Browse {#browse}
+## Access {#access}
 
 To access prospect audiences, select **[!UICONTROL Audiences]** in the **[!UICONTROL Prospects]** section.
 
 ![The [!UICONTROL Audiences] button is highlighted within the [!UICONTROL Prospects] section.](../images/ui/prospect-audience/prospect-audiences.png)
 
-The Browse page is displayed. A list of all the prospect audiences for the organization is displayed.
+The Audience Portal is displayed, showing a list of all the prospect audiences for the organization.
 
 ![The prospect audiences belonging to the organization are highlighted.](../images/ui/prospect-audience/browse-audiences.png)
 
@@ -22,11 +22,11 @@ This view lists information about the audience including the name, profile count
 
 You can add additional fields to this display by selecting ![the filter attribute icon](/help/images/icons/column-settings.png). These additional fields include update frequency and the last updated by.
 
-More information about the browse page, including detailed information about the listed fields, can be found in the [Audience Portal overview](./audience-portal.md#list).
+More information about Audience Portal, including detailed information about the listed fields, can be found in the [Audience Portal overview](./audience-portal.md#list).
 
 ## Audience details {#details}
 
-To view details about a specific prospect audience, select an audience on the [!UICONTROL Browse] page.
+To view details about a specific prospect audience, select an audience on Audience Portal.
 
 ![A specific prospect audience is highlighted.](../images/ui/prospect-audience/select-specific-audience.png)
 
@@ -38,7 +38,7 @@ For more information about the audience details page, please read the [audience 
 
 ## Create audience {#create}
 
-To create a prospect audience, on the [!UICONTROL Browse] page, select **[!UICONTROL Create audience]**.
+To create a prospect audience, on the Audience Portal, select **[!UICONTROL Create audience]**.
 
 ![The [!UICONTROL Create audience] button is highlighted on the prospect audience browse page.](../images/ui/prospect-audience/select-create-audience.png)
 

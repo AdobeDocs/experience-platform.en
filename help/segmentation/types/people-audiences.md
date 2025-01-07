@@ -31,9 +31,21 @@ This view lists information about the audience, including name, profile count, o
 
 You can also use the search and filtering functionality to quickly search and sort for specific account audiences. More information about this feature can be found in the [Audience Portal overview](../ui/audience-portal.md#manage-audiences).
 
+## Audience details {#details}
+
+To view details about a specific people audience, select an audience on Audience Portal.
+
+IMAGE
+
+The audience details page is displayed. Information, including INFO are displayed.
+
+IMAGE
+
+For more information about the audience details page, please read the [audience details section of the Audience Portal overview](../ui/audience-portal.md#audience-details).
+
 ## Create audience {#create}
 
-To create a people audience, select Create audience on the Audience Portal.
+You can create a people audience either using Audience Composer or Segment Builder. To get started with creating a people audience, select Create audience on the Audience Portal.
 
 IMAGE
 
@@ -41,5 +53,18 @@ A popover appears, letting you choose between composing an audience or building 
 
 IMAGE
 
-More information about creating audiences can be found in the [Audience Portal overview](../ui/audience-portal.md#create-audience).
+For more detailed information about creating audiences, please read the [Audience Portal overview](../ui/audience-portal.md#create-audience).
 
+## Activate audience {#activate}
+
+After creating your people audience, you can activate this audience to other downstream services. 
+
+Select the audience you want to activate, followed by **[!UICONTROL Activate to destination]**.
+
+IMAGE
+
+The [!UICONTROL Activate destination] page appears, with the list of available destinations depending on the update frequency of the audience. For more information on the activation process, please read the ???.
+
+## Next steps
+
+After reading this guide, you know how to create and manage your people audiences in Adobe Experience Platform. To learn about the different types of audiences, please read the [audience types overview](./overview.md).
