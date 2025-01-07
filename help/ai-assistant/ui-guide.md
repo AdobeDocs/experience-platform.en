@@ -171,7 +171,7 @@ Next, select a category and then select a prompt from the list provided. You can
 
 ### Use question autocomplete {#use-question-autocomplete}
 
-You can use AI Assistant's question autocomplete feature to select a question based on a list of AI-generated questions. 
+You can use AI Assistant's question autocomplete feature to select a question from a list of recommendations from AI Assistant. 
 
 +++Select to view example of question autocomplete
 
