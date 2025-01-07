@@ -243,7 +243,7 @@ After confirming the correct audiences are listed, you can proceed with the requ
 
 >[!NOTE]
 >
->If you run flexible audience evaluation on audiences which are already set to be activated [after segment evaluation](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), the audiences will be activated as soon as the flexible audience evaluation job finishes, regardless of any previous daily activation jobs.
+>If you run flexible audience evaluation, you need to ensure the frequency is set to **[!UICONTROL After segment evaluation]**. Running flexible audience evaluation on audiences which are already set to be activated [after segment evaluation](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), will activate audiences as soon as the flexible audience evaluation job finishes, regardless of any previous daily activation jobs.
 
 ## Audience details {#audience-details}
 
