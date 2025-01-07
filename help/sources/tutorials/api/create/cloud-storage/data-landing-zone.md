@@ -54,19 +54,19 @@ curl -X GET \
 
 **Response**
 
+Depending on your provider, a successful request returns the following:
+
 >[!BEGINTABS]
 
 >[!TAB Response on Azure]
 
-The following response returns information on a landing zone, including its corresponding `containerName` and `containerTTL`.
-
 ```json
 
 {
-  "containerName": "dlz-adf-connectors",
+  "containerName": "user_drop_zone",
   "containerTTL": "7",
   "dlzPath": {
-    "containerName": "dlz-adf-connectors"
+    "containerName": "user_drop_zone"
   },
   "dataTTL": {
     "timeUnit": "days",
@@ -127,6 +127,8 @@ curl -X GET \
 
 **Response**
 
+Depending on your provider, a successful request returns the following:
+
 >[!BEGINTABS]
 
 >[!TAB Response on Azure]
@@ -152,16 +154,13 @@ curl -X GET \
 
 | Property | Description |
 | --- | --- |
-| `containerName` | The name of your landing zone. |
-| `SASToken` | The shared access signature token for your landing zone. This string contains all of the information necessary to authorize a request. |
-| `storageAccountName` |
-| `SASUri` | The shared access signature URI for your landing zone. This string is a combination of the URI to the landing zone for which you are being authenticated to and its corresponding SAS token. |
-| `expiryDate` | The date when your SAS token will expire. You must refresh your token before the expiry date in order to continue using it in your application for uploading data to the Data Landing Zone. If you do not manually refresh your token before the stated expiry date, then it will automatically refresh and provide a new token when the GET credentials call is performed. |
-| `credentials.SASToken` |
-| `credentials.SASUri` |
-| `dlzPath.containerName` |
-| `dlzProvider` |
-| `expiryTime` |
+| `containerName` | The name of your [!DNL Data Landing Zone]. |
+| `SASToken` | The shared access signature token for your [!DNL Data Landing Zone]. This string contains all of the information necessary to authorize a request. |
+| `storageAccountName` | The name of your storage account. |
+| `SASUri` | The shared access signature URI for your [!DNL Data Landing Zone]. This string is a combination of the URI to the [!DNL Data Landing Zone] for which you are being authenticated to and its corresponding SAS token. |
+| `expiryDate` | The date when your SAS token will expire. You must refresh your token before the expiry date in order to continue using it in your application for uploading data to the [!DNL Data Landing Zone]. If you do not manually refresh your token before the stated expiry date, then it will automatically refresh and provide a new token when the GET credentials call is performed. |
+| `dlzPath.containerName` | The [!DNL Data Landing Zone] provider that you are using. For Azure, this value will be [!DNL Azure Data Lake Storage Gen 2]. |
+| `expiryTime` | The expiry time in unix time. |
 
 >[!TAB Response on AWS]
 
@@ -184,28 +183,17 @@ curl -X GET \
 
 | Property | Description |
 | --- | --- |
-| `credentials.clientId` |
-| `credentials.awsAccessKeyId` |
-| `credentials.awsSecretAccessKey` |
-| `credentials.awsSessionToken` |
-| `dlzPath.bucketName` |
-| `dlzPath.dlzFolder` |
-| `dlzProvider` |
-| `expiryTime` |
+| `credentials.clientId` | The client ID of your [!DNL Data Landing Zone] in AWS. |
+| `credentials.awsAccessKeyId` | The access key ID of your [!DNL Data Landing Zone] in AWS. |
+| `credentials.awsSecretAccessKey` | The secret access key of your [!DNL Data Landing Zone] in AWS. |
+| `credentials.awsSessionToken` | Your AWS session token. |
+| `dlzPath.bucketName` | The name of your AWS bucket. |
+| `dlzPath.dlzFolder` | The [!DNL Data Landing Zone] folder that you are accessing. |
+| `dlzProvider` | The [!DNL Data Landing Zone] provider that you are using. For Amazon, this will be [!DNL Amazon S3]. |
+| `expiryTime` |  The expiry time in unix time. |
 
 >[!ENDTABS]
 
-The following response returns the credential information for your data landing zone, including your current `SASToken`, `SASUri`, `storageAccountName`, and expiry date.
-
-```json
-{
-    "containerName": "dlz-user-container",
-    "SASToken": "sv=2020-04-08&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D",
-    "storageAccountName": "dlblobstore99hh25i3dflek",
-    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D",
-    "expiryDate": "2024-01-06"
-}
-```
 ### Retrieve the required fields using APIs
 
 After you generate your token, you can retrieve the required fields programmatically by using the request examples below:
