@@ -18,11 +18,13 @@ This page provides a high-level overview of the two available cloud infrastructu
 
 Choosing the right cloud region is crucial for meeting data residency requirements and ensuring optimal performance.
 
-![Image showing the geographical distribution of hosting locations.](assets/multi-cloud/hosting-locations-map.png) {align="center" zoomable="yes"}
+![Image showing the geographical distribution of hosting locations.](assets/multi-cloud/hosting-locations-map.png){align="center" zoomable="yes"}
 
 Experience Platform runs on 6 Microsoft Azure data centers, 1 Amazon Web Services (AWS) data center, and routes data to Adobe services through 7 [Edge Network nodes](../collection/home.md#edge) distributed around the world.
 
 ### Microsoft Azure regions {#azure-regions}
+
+The table below indicates the Microsoft Azure regions where Experience Platform is hosted.
 
 | Country  | Region Code | Location |
 |---------|-------------|----------|
@@ -33,19 +35,17 @@ Experience Platform runs on 6 Microsoft Azure data centers, 1 Amazon Web Service
 | India |  IND2 | Maharashtra |
 | Australia  | AUS5 | New South Wales |
 
+{style="table-layout:auto"}
+
 ### Amazon Web Services (AWS) regions
+
+The table below indicates the AWS regions where Experience Platform is hosted.
 
 | Country | Region Code | Location |
 |---------|-------------|----------|
 | United States of America | VA6 | Virginia |
 
-## Differences between running Experience Platform on Microsoft Azure and AWS
-
-The table below highlights the major differences between running Experience Platform on Microsoft Azure and AWS.
-
-| Feature / Functionality | Microsoft Azure | Amazon Web Services |
-| --- | --- | --- |
-| [HIPAA compliance](https://www.adobe.com/trust/compliance/hipaa-ready.html) | Supported | Not supported |
+{style="table-layout:auto"}
 
 ## Which cloud is right for me?
 
@@ -56,17 +56,29 @@ Choosing between Experience Platform on Azure or AWS depends on several factors 
 * **Cloud technology reliance**: If your business relies heavily on Microsoft technologies, Azure might be the better fit. If you rely more on Amazon services, AWS could be the better option.
 * **Data residency considerations**: Evaluate the data residency requirements for your organization and ensure the chosen cloud platform offers regions that comply with these regulations.
 
-![Image showing the geographical distribution of hosting locations.](assets/multi-cloud/diagram-cloud.png) {align="center" zoomable="yes"}
+![Image showing the geographical distribution of hosting locations.](assets/multi-cloud/diagram-cloud.png){align="center" zoomable="yes"}
 
 ## Feature parity {#feature-parity}
 
-We are committed to offering feature parity across both cloud platforms, for all applications running on Experience Platform, such as:
+Adobe is committed to offering feature parity across both cloud platforms, for all applications running on Experience Platform, such as:
 
 * [Real-Time Customer Data Platform](../rtcdp/home.md)
 * [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/ajo-home)
 * [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-landing)
 
-However, some functionalities may differ between Azure and AWS. These differences are outlined in the product documentation, where applicable.
+However, some functionalities may differ between Azure and AWS. These differences are outlined in the section below and in other parts of the product documentation, where applicable.
+
+## Differences between running Experience Platform on Microsoft Azure and AWS
+
+The table below highlights the major differences between running Experience Platform on Microsoft Azure and AWS.
+
+| Feature / Functionality | Microsoft Azure | Amazon Web Services |
+| --- | --- | --- |
+| [HIPAA compliance](https://www.adobe.com/trust/compliance/hipaa-ready.html) | Supported | Not supported |
+| [Experience Platform AI Assistant](help/ai-assistant/home.md) | Supported | Not supported |
+| Catalog of source connectors | All connectors in the sources catalog are supported | A limited number of source connectors is available. Read the sources documentation for more information {add link} | 
+
+{style="table-layout:auto"}
 
 ## Conclusion {#conclusion}
 
