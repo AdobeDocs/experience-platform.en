@@ -11,7 +11,7 @@ Data stored on Adobe Experience Platform is encrypted at rest using system-level
 
 >[!AVAILABILITY]
 >
->If your implementation of Experience Platform runs on Amazon Web Services (AWS), you have the option of using the Key Management Service (KMS) for Platform data encryption. Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud). To learn how create and manage encryption keys in AWS KMS, refer to the [AWS KMS data encryption guide](../key-management-service/overview.md).
+>If your implementation of Experience Platform runs on Amazon Web Services (AWS), you have the option of using the Key Management Service (KMS) for Platform data encryption. Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud). To learn about encryption key creation and management in AWS KMS, refer to the [AWS KMS data encryption guide](../key-management-service/overview.md).
 
 >[!NOTE]
 >

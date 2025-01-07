@@ -21,7 +21,7 @@ For Customer Journey Analytics-specific instructions, refer to the [Customer Jou
 >
 >Adobe Experience Platform encrypts data at rest by default using system-managed keys. By enabling Customer Managed Keys (CMK), you take full control of your data security. However, this change is irreversible, once CMK is enabled, you cannot revert to system-managed keys. You are responsible for securely managing your keys to ensure uninterrupted access to your data and prevent potential inaccessibility.
 
-This guides details the process to create and manage encryption keys in AWS KMS to secure your data in Experience Platform.
+This guide details the process to create and manage encryption keys in AWS KMS to secure your data in Experience Platform.
 
 ## Prerequisites {#prerequisites}
 
@@ -70,9 +70,9 @@ The [!DNL Key Management Service (KMS)] workspace appears. Select **[!DNL Create
 
 The [!DNL Configure Key] workflow appears. By default, the key type is set to **[!DNL Symmetric]**, and the key usage is set to **[!DNL Encrypt and Decrypt]**. Ensure that these options are selected before proceeding.
 
-![Step one of the Configure key workflow with Systemic and Encrypt and decrypt basic options highlighted.](../../images/governance-privacy-security/key-management-service/configure-key-basic-options.png)
+![Step one of the Configure key workflow with Symmetric and Encrypt and Decrypt basic options highlighted.](../../images/governance-privacy-security/key-management-service/configure-key-basic-options.png)
 
-Expand the **[!DNL Advanced options]** dropdown menu. You are recommended to use the **[!DNL KMS]** option, which allows AWS to create and manage the key material. The [!DNL KMS] option is selected by default.
+Expand the **[!DNL Advanced options]** dropdown menu. You are recommended to use the **[!DNL KMS]** option, which allows AWS to create and manage the key material. The **[!DNL KMS]** option is selected by default.
  
 >[!NOTE]
 >
