@@ -37,9 +37,9 @@ The table below indicates the Microsoft Azure regions where Experience Platform 
 
 {style="table-layout:auto"}
 
-### Amazon Web Services (AWS) regions
+### Amazon Web Services (AWS) regions {#aws-regions}
 
-The table below indicates the AWS regions where Experience Platform is hosted.
+The table below indicates the AWS regions where Experience Platform is hosted. Check back regularly to see if additional loctions have been added.
 
 | Country | Region Code | Location |
 |---------|-------------|----------|
@@ -47,7 +47,7 @@ The table below indicates the AWS regions where Experience Platform is hosted.
 
 {style="table-layout:auto"}
 
-## Which cloud is right for me?
+## Which cloud is right for me? {#which-cloud-is-right}
 
 Choosing between Experience Platform on Azure or AWS depends on several factors specific to your business:
 
@@ -66,16 +66,16 @@ Adobe is committed to offering feature parity across both cloud platforms, for a
 * [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/ajo-home)
 * [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-landing)
 
-However, some functionalities may differ between Azure and AWS. These differences are outlined in the section below and in other parts of the product documentation, where applicable.
+However, some functionality may differ between Azure and AWS. These differences are outlined in the section below and in other parts of the product documentation, where applicable.
 
-## Differences between running Experience Platform on Microsoft Azure and AWS
+### Differences between running Experience Platform on Microsoft Azure and AWS {#azure-aws-differences}
 
 The table below highlights the major differences between running Experience Platform on Microsoft Azure and AWS.
 
 | Feature / Functionality | Microsoft Azure | Amazon Web Services |
 | --- | --- | --- |
 | [HIPAA compliance](https://www.adobe.com/trust/compliance/hipaa-ready.html) | Supported | Not supported |
-| [Experience Platform AI Assistant](help/ai-assistant/home.md) | Supported | Not supported |
+| [Experience Platform AI Assistant](/help/ai-assistant/home.md) | Supported | Not supported |
 | Catalog of source connectors | All connectors in the sources catalog are supported | A limited number of source connectors is available. Read the sources documentation for more information {add link} | 
 
 {style="table-layout:auto"}
