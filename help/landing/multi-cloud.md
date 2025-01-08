@@ -14,13 +14,26 @@ Adobe Experience Platform is a multi-cloud product, giving you the choice betwee
 
 This page provides a high-level overview of the two available cloud infrastructures and includes guidance on how to choose the right one for your business.
 
+## Which cloud implementation is right for me? {#which-cloud-is-right}
+
+Choosing between Experience Platform on Azure or AWS depends on several factors specific to your business:
+
+* **Business and technical needs**: Assess your organization's requirements and long-term cloud strategy.
+* **Existing infrastructure**: Consider your current cloud infrastructure and integration needs.
+* **Cloud technology reliance**: If your business relies heavily on Microsoft technologies, Azure might be the better fit. If you rely more on Amazon services, AWS could be the better option.
+* **Data residency considerations**: Evaluate the data residency requirements for your organization and ensure the chosen cloud platform offers regions that comply with these regulations.
+
+Considering the factors above, use this simplified decision tree to help decide on the right cloud implementation for your business needs.
+
+![Image showing the geographical distribution of hosting locations.](assets/multi-cloud/diagram-cloud.png){align="center" zoomable="yes"}
+
 ## Hosting locations {#available-cloud-regions}
 
 Choosing the right cloud region is crucial for meeting data residency requirements and ensuring optimal performance.
 
 ![Image showing the geographical distribution of hosting locations.](assets/multi-cloud/hosting-locations-map.png){align="center" zoomable="yes"}
 
-Experience Platform runs on 6 Microsoft Azure data centers, 1 Amazon Web Services (AWS) data center, and routes data to Adobe services through 7 [Edge Network nodes](../collection/home.md#edge) distributed around the world.
+Experience Platform is available in six Microsoft Azure hosting locations, one Amazon Web Services (AWS) hosting location, and routes data to Adobe services through seven [Edge Network nodes](../collection/home.md#edge) distributed around the world.
 
 ### Microsoft Azure regions {#azure-regions}
 
@@ -47,26 +60,15 @@ The table below indicates the AWS regions where Experience Platform is hosted. C
 
 {style="table-layout:auto"}
 
-## Which cloud is right for me? {#which-cloud-is-right}
-
-Choosing between Experience Platform on Azure or AWS depends on several factors specific to your business:
-
-* **Business and technical needs**: Assess your organization's requirements and long-term cloud strategy.
-* **Existing infrastructure**: Consider your current cloud infrastructure and integration needs.
-* **Cloud technology reliance**: If your business relies heavily on Microsoft technologies, Azure might be the better fit. If you rely more on Amazon services, AWS could be the better option.
-* **Data residency considerations**: Evaluate the data residency requirements for your organization and ensure the chosen cloud platform offers regions that comply with these regulations.
-
-![Image showing the geographical distribution of hosting locations.](assets/multi-cloud/diagram-cloud.png){align="center" zoomable="yes"}
-
 ## Feature parity {#feature-parity}
 
-Adobe is committed to offering feature parity across both cloud platforms, for all applications running on Experience Platform, such as:
+Adobe is committed to offering feature parity across cloud platforms, for all applications running on Experience Platform, such as:
 
 * [Real-Time Customer Data Platform](../rtcdp/home.md)
 * [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/ajo-home)
 * [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-landing)
 
-However, some functionality may differ between Azure and AWS. These differences are outlined in the section below and in other parts of the product documentation, where applicable.
+However, some functionality may differ between Azure and AWS implemetations. These differences are outlined in the section below and in other parts of the product documentation, where applicable.
 
 ### Differences between running Experience Platform on Microsoft Azure and AWS {#azure-aws-differences}
 
@@ -75,7 +77,7 @@ The table below highlights the major differences between running Experience Plat
 | Feature / Functionality | Microsoft Azure | Amazon Web Services |
 | --- | --- | --- |
 | [HIPAA compliance](https://www.adobe.com/trust/compliance/hipaa-ready.html) | Supported | Not supported |
-| [Catalog of source connectors](/help/sources/home.md) | All connectors in the sources catalog are supported | A limited number of source connectors is available. Read the sources documentation for more information {add link} | 
+| [Catalog of source connectors](/help/sources/home.md) | All connectors in the sources catalog are supported | A limited number of source connectors is available. Any source connectors available for AWS implementations are called out in a top-of-page note in their respective documentation pages.| 
 
 {style="table-layout:auto"}
 
