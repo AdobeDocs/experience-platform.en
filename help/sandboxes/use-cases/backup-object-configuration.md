@@ -1,7 +1,6 @@
 ---
 title: Backup object configurations using sandbox tooling
-description: Backup object configurations, or metadata, using sandbox tooling packages to safely reset sandboxes, add versioning support, and prevent the loss of critical configurations such as schemas, datasets, and segments, especially during development iterations.
-feature: Use Cases, Sandbox Tooling
+description: Backup object configurations using sandbox tooling packages to safely reset sandboxes, add versioning support, and prevent the loss of critical configurations such as schemas, datasets, and segments, especially during development iterations.
 ---
 # Backup object configurations using sandbox tooling
 
@@ -11,17 +10,17 @@ Backup object configurations (or metadata) using sandbox tooling packages to saf
 
 ## Why consider this use case {#why-this-use-case}
 
-Creating a backup package using sandbox tooling ensures your object configurations are stored and secured. Development sandboxes can fill quickly as you experiment and build, and creating a sandbox from scratch can be time-consuming and leave room for errors. Importing a backup package into a freshly reset sandbox returns your ideal configurations as you continue to develop. 
+Creating a backup package using sandbox tooling ensures your object configurations are stored and secured. Development sandboxes can fill quickly as you experiment and build, and building a sandbox from scratch after resetting it can be time-consuming and leave room for errors. With the power of sandbox tooling, you can import a backup package into a freshly reset sandbox to immediately return your ideal configurations so you can continue developing. 
 
-Backup packages also allow you to support versioning throughout your development process. As your sandbox changes, create additional backup packages while holding on to previous versions so you can easily restore your sandbox to a previous configuration. 
+Backup packages also allow you to support versioning throughout your development process. As your sandbox changes, create additional backup packages alongside your previous packages so you can easily restore your sandbox to any of your configurations. 
 
 Follow the steps described in this use case to create a backup package of your own.
 
 ## Prerequisites and planning {#prerequisites-and-planning}
 
-When planning to create your own backup package(s) within your organization, consider the following prerequisites in your planning process:
+When planning to create your own backup package within your organization, consider the following prerequisites in your planning process:
 
-- Evaluate the current usage of the sandboxes within your organization. Are any non-production sandboxes approaching or exceeding their license entitlement?
+- Evaluate the current usages of the sandboxes within your organization. Are any non-production sandboxes approaching or exceeding their license entitlement?
 - What is the scope of the metadata you wish to back up? You may consider backing up either a complete or partial sandbox, depending on your use case.
 - Depending on the scope metadata you wish to back up, ensure you understand how to manually [add objects to a package](../ui/sandbox-tooling.md#add-object-to-a-new-package) or how to [export an entire sandbox](../ui/sandbox-tooling.md#export-an-entire-sandbox).
 - Ensure you have access to sandbox tooling in your organization with the correct permissions.
@@ -32,7 +31,7 @@ To successfully implement this use case, you must use multiple areas of Adobe Ex
 
   - [Sandbox tooling](../ui/sandbox-tooling.md)
   - [Sandbox management](../ui/user-guide.md)
-  - [License usage dashboard](../../landing/license-usage-and-guardrails/license-usage-dashboard.md-)
+  - [License usage dashboard](../../landing/license-usage-and-guardrails/license-usage-dashboard.md)
   - [Datasets](../../catalog/datasets/overview.md)
   - [Schemas](../../xdm//home.md)
   - [Segments](../../segmentation/home.md)
@@ -42,18 +41,18 @@ To successfully implement this use case, you must use multiple areas of Adobe Ex
 
 1. Define the scope of the metadata you wish to backup.
 2. Use the sandbox tooling user interface to export your desired objects into a backup package.
-3. Regularly create new versions of the backup package to ensure backup sandboxes remain aligned with the current configuration.
+3. Regularly create new versions of the backup package to ensure sandboxes remain aligned with your current configurations.
 4. Check your current usage in the license usage dashboard against your entitlements for non-production sandboxes.
-5. Reset non-production sandboxes to comply with entitlements, or to free up unnecessary resources and data storage.
-6. Import the backup package into the sandbox after resetting it to restore object configurations.
+5. Reset non-production sandboxes to comply with entitlements or to free up unnecessary resources and data storage.
+6. Import the backup package into your sandbox after resetting it to restore object configurations.
 
 ## How to achieve the use case: Step-by-step instructions {#step-by-step-instructions}
 
-Read through the sections below which include links to further documentation, to complete each of the steps in the high-level overview above.
+Read through the sections below, which include links to further documentation, to complete each of the steps in the high-level overview above.
 
 ### Define the metadata scope
 
-Before you begin creating your backup package you should consider the package's use case. Depending on your needs, you may wish to back up a complete sandbox or select specific objects to add to a package, as mentioned in the [prerequsites](#prerequisites-and-planning). 
+Before you begin creating your backup package you should consider the package's use case. Depending on your needs, you may wish to back up a complete sandbox or select specific objects to add to your package, as mentioned in the [prerequsites](#prerequisites-and-planning). 
 
 >[!NOTE]
 >
@@ -61,11 +60,11 @@ Before you begin creating your backup package you should consider the package's 
 
 ### Export an your chosen metadata into a package
 
-At this point, you're ready to backup your sandbox using the Sandbox Tooling user interface. This step will cover backing up a sandbox in entirety, as well as backing up specific objects.
+At this point, you're ready to backup your sandbox using the sandbox tooling user interface. This step will cover both backing up a an entire sandbox and backing up specific objects.
 
 #### Export a complete sandbox
 
-To backup your sandbox in entirety, follow this guide to create and publish a new package containing the configurations of your entire sandbox.
+To backup your sandbox in entirety, follow [this guide](../ui/sandbox-tooling.md#export-an-entire-sandbox) to create and publish a new package containing the configurations of your entire sandbox.
 
 #### Export individual objects
 
@@ -77,7 +76,7 @@ You may backup individual objects into a package any of the following ways. Whil
 
 ##### Creating a multi-object package
 
-In the Platform UI, select **[!UICONTROL Sandboxes]** in the left navigation and then select **[!UICONTROL Packages]**. To begin creating a new package, select **[!UICONTROL Create package]** from the top-right corner.
+In Experience Platform, select **[!UICONTROL Sandboxes]** in the left navigation and then select **[!UICONTROL Packages]**. To begin creating a new package, select **[!UICONTROL Create package]** from the top-right corner.
 
 ![The packages tab in the sandboxes dashboard with Create package highlighted.](../images/use-cases/create-package.png)
 
@@ -91,15 +90,15 @@ Select the **[!UICONTROL Multi-object]** option. Now, you need to provide a name
 
 Your new multi-object package is created and available in the [!UICONTROL Packages] dashboard. Select the package from the list.
 
-![The Packages dashboard with the "Backup" package highlighted.](../images/use-cases/package-created.png)
+![The Packages dashboard with the package named Backup highlighted.](../images/use-cases/package-created.png)
 
-The package's information and contents appear. Currently, there are no objects in our new package. To begin adding objects, follow the [guide](../ui/sandbox-tooling.md#add-object-to-a-new-package) on adding objects to an existing package.
+The package's information and contents appear. Currently, there are no objects in our new package. To begin adding objects, follow the guide on [adding objects to an existing package](../ui/sandbox-tooling.md#add-object-to-a-new-package).
 
 ### Create new versions of the backup package as needed
 
-Now you've created your first backup package for your sandbox, be sure to create new backup versions as your sandboxes configurations change. 
+Now that you've created the first backup package for your sandbox, you'll want to create new versions of your backup package as your sandbox configurations change. 
 
-While it's possible to add new objects to your existing backup package, you are encouraged to create new packages to support versioning in your sandbox. As your development iterates, you can easily reset and import any previous version of your sandboxes.
+While it's possible to add new objects to your existing backup package, you are encouraged to create new packages to support versioning in your sandbox. This ensures you can easily reset and import any previous version of your sandboxes as you continue developing.
 
 ### Check your current usages against your license entitlements
 
@@ -107,11 +106,11 @@ Now that your backup package is ready, you can reset your sandbox to reset your 
 
 ### Reset your sandbox
 
-At this point, you can safely reset your sandbox, assuming your sandbox meets the necessary parameters. Follow [this guide](../ui/user-guide.md#reset-a-sandbox) to begin resetting your sandbox, being sure to read the warnings listing cases that may prevent you from resetting your sandbox.
+At this point, you can safely reset your sandbox, assuming your sandbox meets the necessary parameters. Follow [this guide](../ui/user-guide.md#reset-a-sandbox) to begin resetting your sandbox, being sure to read the warning listing cases that may prevent you from resetting your sandbox.
 
 ### Import the newly created backup package into your reset sandbox
 
-Now that you've reset your sandbox, we can make use of the backup package we created. Follow [this guide](../ui/sandbox-tooling.md#import-a-package-to-a-target-sandbox) for a step-by-step process on importing a package into your target sandbox.
+Now that you've reset your sandbox, you can make use of the backup package you created. Follow [this guide](../ui/sandbox-tooling.md#import-a-package-to-a-target-sandbox) for a step-by-step process on importing a package into your target sandbox.
 
 ## Other use cases acheived through sandbox toolings: {#other-use-cases}
 
