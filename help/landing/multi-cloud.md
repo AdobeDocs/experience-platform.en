@@ -75,10 +75,15 @@ The table below highlights the major differences between running Experience Plat
 | Feature / Functionality | Microsoft Azure | Amazon Web Services |
 | --- | --- | --- |
 | [HIPAA compliance](https://www.adobe.com/trust/compliance/hipaa-ready.html) | Supported | Not supported |
-| [Experience Platform AI Assistant](/help/ai-assistant/home.md) | Supported | Not supported |
-| Catalog of source connectors | All connectors in the sources catalog are supported | A limited number of source connectors is available. Read the sources documentation for more information {add link} | 
+| [Catalog of source connectors](/help/sources/home.md) | All connectors in the sources catalog are supported | A limited number of source connectors is available. Read the sources documentation for more information {add link} | 
 
 {style="table-layout:auto"}
+
+<!-- To be determined if we need to add this part about the AI Assistant 
+
+| [Experience Platform AI Assistant](/help/ai-assistant/home.md) | Supported | Not supported |
+
+-->
 
 ## Conclusion {#conclusion}
 
