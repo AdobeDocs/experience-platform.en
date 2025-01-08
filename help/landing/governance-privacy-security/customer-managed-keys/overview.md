@@ -9,6 +9,10 @@ exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
 
 Data stored on Adobe Experience Platform is encrypted at rest using system-level keys. If you are using an application built on top of Platform, you can opt to use your own encryption keys instead, giving you greater control over your data security.
 
+>[!AVAILABILITY]
+>
+>If your implementation of Experience Platform runs on Amazon Web Services (AWS), you have the option of using the Key Management Service (KMS) for Platform data encryption. Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud). To learn about encryption key creation and management in AWS KMS, refer to the [AWS KMS data encryption guide](../key-management-service/overview.md).
+
 >[!NOTE]
 >
 >Customer profile data stored in Platform's [!DNL Azure Data Lake] and the [!DNL Azure Cosmos DB] Profile store are encrypted exclusively using CMK, once enabled. Key revocation in your primary data stores can take anywhere from **a few minutes to 24 hours**, and may take longer, **up to 7 days** for transient or secondary data stores. For additional details, refer to the [implications of revoking key access section](#revoke-access).
