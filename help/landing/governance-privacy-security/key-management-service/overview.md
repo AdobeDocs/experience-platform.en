@@ -133,7 +133,7 @@ The review stage of the key configuration appears. Verify the key details in the
 
 ### Update the key policy to integrate the key with Experience Platform
 
-Next edit the JSON in the **[!DNL Key Policy]** section to integrate the key with Experience Platform. A default key policy looks similar to the JSON below.
+Next, edit the JSON in the **[!DNL Key Policy]** section to integrate the key with Experience Platform. A default key policy looks similar to the JSON below.
 
 <!-- The AWS ID below is fake. Q) Can I refer to it simply as AWS_ACCOUNT_ID ? Is that suitable? -->
 
@@ -146,7 +146,7 @@ Next edit the JSON in the **[!DNL Key Policy]** section to integrate the key wit
       "Sid": "Enable IAM User Permissions",
       "Effect": "Allow",
       "Principal": {
-        "AWS": "arn:aws:iam::435764903283:root"
+        "AWS": "arn:aws:iam::123464903283:root" // this is a mock AWS Principal ID, your ID will differ
       },
       "Action": "kms:*",
       "Resource": "*"
@@ -155,9 +155,9 @@ Next edit the JSON in the **[!DNL Key Policy]** section to integrate the key wit
 }
 ```
 
-In the example above, all the resources (`"Resource": "*"`) in the same account (`Principal.AWS`) can access this key. The policy allows other services in the same account, to use the key to do encryption and decryption. The services only have permission for this account.
+In the example above, all the resources (`"Resource": "*"`) in the same account (`Principal.AWS`) can access this key. The policy allows other services in the same account to use the key to do encryption and decryption. The services only have permission for this account.
 
-Next, grant your Platform single tenant account access this key by adding a new statement to this policy. You can obtain the JSON policy from the Platform UI and apply it to your AWS KMS key to link it to the platform securely.
+Next, grant your Platform single tenant account access to this key by adding new statements to this policy. You can obtain the JSON policy from the Platform UI and apply it to your AWS KMS key to link it to the platform securely.
 
 Navigate to the Platform UI. In the **[!UICONTROL Administration]** section of the left navigation rail, select **[!UICONTROL Encryption]**. The [!UICONTROL Encryption Configuration] workspace appears. Then select **[!UICONTROL Configure]** in the [!UICONTROL Customer Managed Keys] card.
 
@@ -169,13 +169,112 @@ The [!UICONTROL Customer Managed Keys configuration] appears. Select the copy ic
 
 <!-- This part of the workflow was in contention at the time of the demo.  -->
 
-Next, return to the AWS KMS workspace and update the key policy. Overwrite the entire default policy with the policy that you copied from the [!UICONTROL Platform Encryption Configuration] workspace. Select **[!DNL Finish]** to confirm your key details with your updated policy and create the key. The key and policy have now been configured to allow your AWS account to communicate with your Experience Platform account. The effect is instantaneous.
-
-<!-- Note, the screenshot below does NOT show an updated policy. -->
+Next, return to the AWS KMS workspace and update the key policy shown below.
 
 ![The Review stage of the workflow with the updated policy and Finish highlighted.](../../images/governance-privacy-security/key-management-service/updated-cmk-policy.png)
 
-The [!DNL Customer managed keys] workspace of the AWS [!DNL Key Management Service] appears. 
+Add to the default policy the four statements from the [!UICONTROL Platform Encryption Configuration] workspace, as seen below: `Enable IAM User Permissions`, `CJA Flow IAM User Permissions`, `CJA Integrity IAM User Permissions`, `CJA Oberon IAM User Permissions`.
+
+```json
+
+{
+    "Version": "2012-10-17",
+    "Id": "key-consolepolicy",
+    "Statement": [
+        {
+            "Sid": "Enable IAM User Permissions",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::975049898882:root" // this is a mock AWS Principal ID, your ID will differ
+            },
+            "Action": [
+                "kms:Decrypt",
+                "kms:Encrypt",
+                "kms:ReEncrypt*",
+                "kms:GenerateDataKey*",
+                "kms:DescribeKey",
+                "kms:CreateGrant"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalAccount": "975049898882" // this is a mock AWS Principal ID, your ID will differ
+                }
+            }
+        },
+        {
+            "Sid": "CJA Flow IAM User Permissions",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::767397686373:root"
+            },
+            "Action": [
+                "kms:Decrypt",
+                "kms:Encrypt",
+                "kms:ReEncrypt*",
+                "kms:GenerateDataKey*",
+                "kms:DescribeKey",
+                "kms:CreateGrant"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalAccount": "767397686373"
+                }
+            }
+        },
+        {
+            "Sid": "CJA Integrity IAM User Permissions",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::730335345392:root"
+            },
+            "Action": [
+                "kms:Decrypt",
+                "kms:Encrypt",
+                "kms:ReEncrypt*",
+                "kms:GenerateDataKey*",
+                "kms:DescribeKey",
+                "kms:CreateGrant"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalAccount": "730335345392"
+                }
+            }
+        },
+        {
+            "Sid": "CJA Oberon IAM User Permissions",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::891377157113:root"
+            },
+            "Action": [
+                "kms:Decrypt",
+                "kms:Encrypt",
+                "kms:ReEncrypt*",
+                "kms:GenerateDataKey*",
+                "kms:DescribeKey",
+                "kms:CreateGrant"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalAccount": "891377157113"
+                }
+            }
+        }
+    ]
+}
+
+```
+
+
+
+Select **[!DNL Finish]** to confirm your key details with your updated policy and create the key. The key and policy have now been configured with the total of five statements to allow your AWS account to communicate with your Experience Platform account. The effect is instantaneous.
+
+The updated [!DNL Customer managed keys] workspace of the AWS [!DNL Key Management Service] appears.
 
 ### Add AWS encryption key details to Platform 
 
