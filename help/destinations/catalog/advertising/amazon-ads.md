@@ -96,7 +96,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 *  **[!UICONTROL Advertiser Region]**: Select the appropriate region in which your Advertiser is hosted. For more information on the marketplaces supported by each region, visit the [Amazon Ads documentation](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
 
-*  **[!UICONTROL Amazon Ads Consent Signal]**: Confirm that all data sent through this connection have consented to use personal data to be used for advertising purposes. "GRANTED" indicates consent for Amazon to use the customer’s personal data for advertising. The permissible values are "GRANTED" and "DENIED".
+*  **[!UICONTROL Amazon Ads Consent Signal]**: Confirm that all data sent through this connection have consented to use personal data to be used for advertising purposes. "GRANTED" indicates consent for Amazon to use the customer’s personal data for advertising. The permissible values are "GRANTED" and "DENIED". Any records sent through connections with "DENIED" will be rejected for further use within Amazon Ads.
 
 ![Configure new destination](../../assets/catalog/advertising/amazon-ads/amazon_ads_consent_input.png)
 
