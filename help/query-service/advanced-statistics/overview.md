@@ -2,6 +2,7 @@
 title: Overview of Advanced Statistical Modeling with Trusted Flow
 description: Learn how to use SQL to leverage ML models and transform raw data into actionable insights with improved accuracy. Enjoy simplified and automated data preprocessing on large datasets in a timely, parallel, and scalable manner with Data Distiller Feature Engineering SQL extension functions.
 role: Developer
+exl-id: 52df146a-2052-4720-919b-7dd40c06f160
 ---
 # Overview of advanced statistical modeling with Trusted Flow
 
@@ -26,5 +27,3 @@ Data Distiller equips you with the tools necessary to transform raw data into me
 ### Next Steps
 
 To learn how to perform sophisticated machine learning tasks with Data Distiller capabilities, read the [Feature Engineering](./feature-engineering.md) document. It outlines how to transform your data into features that are ready for modeling. Next, proceed to the [Models](./models.md) document, which guides you through the process of creating, training, and managing trusted models using the features you've engineered. Finally, explore the [Implement advanced statistical models document](./implement-models/implement-models.md) to learn about the various trusted models available and how to implement them within your SQL workflows.
-
-

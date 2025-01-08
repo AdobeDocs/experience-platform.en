@@ -5,41 +5,37 @@ exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
 ---
 # Adobe Experience Platform Web SDK {#overview}
 
->[!IMPORTANT]
->
->At the end of April 2024, the Adobe Experience Platform Web SDK will be removing support for all versions of Internet Explorer.
+The Adobe Experience Platform Web SDK is a client-side JavaScript library that allows Adobe Experience Cloud customers to interact with its services through the Adobe Experience Platform Edge Network.
 
-The Adobe Experience Platform Web Software Development Kit (SDK) is a client-side JavaScript library that allows customers of the Adobe Experience Cloud to interact with its services through the Adobe Experience Platform Edge Network.
-
-Adobe offers two methods to implement the Web SDK:
+You can implement the Web SDK in two ways:
 
 * The [Web SDK tag extension](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). See the tutorial on how to [implement Adobe Experience Cloud with Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html) for more information.
-* Manual implementation using the Web SDK JavaScript library.
+* Manual implementation using the [Web SDK JavaScript library](install/library.md).
 
-This user guide includes instructions on interacting with the Experience Cloud solutions through both the Web SDK JavaScript library and the tag extension, where applicable.
+This guide includes instructions for interacting with Experience Cloud solutions using both the Web SDK JavaScript library and the tag extension.
 
 ## Experience Platform Edge Network {#edge-network}
 
-The Experience Platform Web SDK is part of a collection of tools which make up the Adobe Experience Platform Edge Network.
 
-The Edge Network consists of the following components:
 
-* **[Experience Platform Web SDK](#overview):** A JavaScript library and a tag extension which help you simplify the deployment of Adobe technologies.
-* **[Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/home/):** An extension to the v5 mobile SDK which allows you to use the new deployment methodology.
-* **[Edge Network Server API](../server-api/overview.md):** A server-side API which you can use for various data collection, personalization, advertising and marketing use cases. The Server API can be used on servers, IoT devices, set-top boxes, and various other devices.
+The Experience Platform Web SDK is part of the Adobe Experience Platform Edge Network, which includes:
 
-The Edge Network is a framework for low-latency data collection, pluggable computing, and rapid data activation across all addressable channels. It provides a single consolidated SDK for every channel (web, mobile, server-side), which sends data to a common Adobe domain (`adobedc.net`) and receives a single payload back for data and experience delivery.
+* **[Experience Platform Web SDK](#overview)**: A JavaScript library and tag extension for simplifying Adobe technology deployment.
+* **[Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/home/)**: An extension to the v5 mobile SDK for the new deployment methodology.
+* **[Edge Network API](../server-api/overview.md)**: A server-side API for data collection, personalization, advertising, and marketing use cases. You can use it on servers, IoT devices, set-top boxes, and other devices.
 
-On the server-side, a unified edge gateway and a common platform service framework help make it easy to deploy new capabilities into this real-time computing environment. This architecture:
+The Edge Network provides low-latency data collection, pluggable computing, and rapid data activation across all addressable channels. It offers a single consolidated SDK for web, mobile, and server-side channels, sending data to a common Adobe domain (`adobedc.net`) and receiving a single payload for data and experience delivery.
 
-* Decreases customer time to value
-* Ends the need for "point" integrations
-* Improves performance compared to the old libraries
-* Decreases costs
-* Increases the speed of innovation
-* Creates sustained competitive advantages for Adobe customers
+On the server-side, a unified edge gateway and a common platform service framework simplify the deployment of new capabilities, while providing the following benefits:
 
-A single consolidated edge system allows you to manage your advertising, marketing, or personalization campaigns across all channels as an integrated experience. It also allows Adobe to deliver services with lower total cost of ownership for customers. The edge system is designed to accommodate most types of data, allowing you to map your own data model to be ingested by multiple Experience Cloud products.
+* Decreasing customer time to value;
+* Ending the need for "point" integrations;
+* Improving performance compared to the old libraries;
+* Decreasing operating costs;
+* Increasing innovation speed;
+* Creating sustained competitive advantages for Adobe customers.
+
+A consolidated edge system lets you manage advertising, marketing, and personalization campaigns across all channels. It reduces the total cost of ownership and supports various data types, enabling you to map your data model for use with multiple Experience Cloud products.
 
 ## Video overview {#video}
 
@@ -49,36 +45,35 @@ Watch the video below for an overview of the Adobe Experience Platform [!DNL Web
 
 ## Libraries replaced by the Web SDK {#sdks}
 
-The Web SDK is not just a wrapper around existing libraries. It is a new library, written from the ground up to incorporate functionalities of existing libraries. Its purpose is to end challenges with tags having to fire in the right order, inconsistency with library versioning challenges, and better dependency management. It is a new way to implement the [!DNL Experience Cloud] and it is [open source](https://github.com/adobe/alloy).
+The Web SDK is a new, open-source library built from scratch to integrate functionalities of existing libraries. It addresses issues with tag firing order, version inconsistencies, and dependency management, offering a new, [open source](https://github.com/adobe/alloy) way to implement the [!DNL Experience Cloud].
 
-The Web SDK replaces the following SDKs:
+The Web SDK replaces:
 
 * `Visitor.js`
 * `AppMeasurement.js`
 * `AT.js`
 * `DIL.js`
 
-In addition to a new library, there is a new endpoint that streamlines the HTTP requests to Adobe solutions. Before, `Visitor.js` sent a blocking call to the visitor ID service, then `AT.js` sent a call to Adobe Target, `DIL.js` sent a call to Adobe Audience Manager, and finally `AppMeasurement.js` sent a call to Adobe Analytics. This new library and endpoint can retrieve an ID, fetch a [!DNL Target] experience, send data to [!DNL Audience Manager], and pass the data to Adobe Experience Platform in a single call.
+It also introduces a new endpoint that streamlines HTTP requests to Adobe solutions. Previously, multiple calls were needed for `Visitor.js`, `AT.js`, `DIL.js`, and `AppMeasurement.js`. Now, a single call can retrieve an ID, fetch a [!DNL Target] experience, send data to [!DNL Audience Manager], and pass data to Adobe Experience Platform.
 
-The following video demonstrates Adobe Experience Platform [!DNL Web SDK] and Adobe Experience Platform [!DNL Edge Network] in action. The video example uses a single call to Adobe which sends data to [!DNL Experience Platform], [!DNL Analytics], [!DNL Audience Manager], and [!DNL Target].
+Watch the video below to see Adobe Experience Platform [!DNL Web SDK] and [!DNL Edge Network] in action, using a single call to send data to [!DNL Experience Platform], [!DNL Analytics], [!DNL Audience Manager], and [!DNL Target].
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148)
 
 ## Migrating from existing libraries to Web SDK {#migrating-to-web-sdk}
 
-To simplify your migration from any of the [existing libraries](#sdks) to Web SDK, Adobe offers a streamlined upgrade path. This path allows you to migrate each individual page of your website to Web SDK without the need of migrating your entire website at once. You can use the Web SDK on a given page while existing libraries reside on other pages. Once you are ready, you can migrate those other pages as well.
+Adobe offers a streamlined upgrade path to simplify your migration from any of the [existing libraries](#sdks) to Web SDK. You can migrate each page of your website individually, without needing to migrate the entire site at once. You can use the Web SDK on some pages while existing libraries remain on others, allowing for a gradual transition.
 
 ### Migration of `AT.js` to Web SDK considerations {#considerations}
 
-Before migrating pages that use `AT.js` to Web SDK, make sure to enable the following Web SDK configuration options. These options ensure that the visitor profile is kept while navigating from pages with `AT.js` to pages using Web SDK.
+Before migrating pages using `AT.js` to Web SDK, enable the following Web SDK configuration options to ensure the visitor profile is maintained when navigating between pages.
 
 * [`idMigrationEnabled`](/help/web-sdk/commands/configure/idmigrationenabled.md)
 * [`targetMigrationEnabled`](/help/web-sdk/commands/configure/targetmigrationenabled.md)
 
-
 >[!IMPORTANT]
 >
->The following Target features are not supported when migrating from at.js to Web SDK:
+>The following Target features are not supported when migrating from `at.js` to Web SDK:
 >
 >* [Redirect offers](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html)
 >* [CNAME and cross-domain support](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/atjs-cookies.html)

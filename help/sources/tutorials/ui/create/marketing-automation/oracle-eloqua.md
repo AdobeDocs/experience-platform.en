@@ -5,9 +5,9 @@ exl-id: c4431d85-5948-4122-9a99-dbacdde5a09f
 ---
 # Create an [!DNL Oracle Eloqua] source connection using Platform UI
 
->[!IMPORTANT]
+>[!WARNING]
 >
->The [!DNL Oracle Eloqua] source will be deprecated at the end of May 2025.
+>The [!DNL Oracle Eloqua] source will be deprecated at the end of June 2025.
 
 This tutorial provides steps for creating an [!DNL Oracle Eloqua] source connection using the Adobe Experience Platform user interface.
 

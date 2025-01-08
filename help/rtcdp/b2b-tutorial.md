@@ -17,7 +17,7 @@ The technology company Bodea wants to combine person and account data from diffe
 
 This tutorial workflow relies on several Adobe Experience Platform services as part of the demonstration. If you want to follow along it is recommended to have a good understanding of the following services:
 
-- [Experience Data Modal (XDM)](../xdm/home.md)
+- [Experience Data Model (XDM)](../xdm/home.md)
 - [Sources](../sources/home.md)
 - [Segmentation](../segmentation/home.md)
 - [Destinations](../destinations/home.md)

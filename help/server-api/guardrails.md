@@ -53,7 +53,6 @@ The table below shows the default limit values. If you need higher request unit 
 | `/v2/interact` | 4000 |
 | `/v2/collect` | 6000 |
 
-
 ### HTTP Request size limit
 
 | Payload format | Max size for a request | Max 8 KB request fragments |

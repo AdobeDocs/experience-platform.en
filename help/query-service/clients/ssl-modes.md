@@ -24,8 +24,8 @@ The different `sslmode` parameter values provide different levels of protection.
 
 |  sslmode |  Eavesdropping protection | MITM protection  | Description  |
 |---|---|---|---|
-| `allow`  | Partial  | No  | Security is not a priority, speed and a low processing overhead are more important. This mode only opts for encryption if the server insists on it.  |
-| `prefer`  | Partial  | No  | Encryption is not required but the communication will be encrypted if the server supports it.  |
+| `allow`  | Yes  | No  | Encryption is required on all communications. The network is trusted to connect to the correct server. |
+| `prefer`  | Yes  | No  | Encryption is required on all communications. The network is trusted to connect to the correct server. |
 | `require`  | Yes  | No  | Encryption is required on all communications. The network is trusted to connect to the correct server. Server SSL certificate validation is not required. |
 | `verify-ca`  | Yes  | Depends on CA-policy  | Encryption is required on all communications. Server validation is required before data is shared. This requires you to set up a root certificate in your [!DNL PostgreSQL] home directory. [Details are provided below](#instructions) |
 | `verify-full`  | Yes  | Yes  | Encryption is required on all communications. Server validation is required before data is shared. This requires you to set up a root certificate in your [!DNL PostgreSQL] home directory. [Details are provided below](#instructions).  |
