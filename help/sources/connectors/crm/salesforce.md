@@ -79,6 +79,10 @@ A successful request creates the B2B namespaces and schemas according to beta sp
 
 ## Set up your [!DNL Salesforce] source for Experience Platform on Amazon Web Services {#aws}
 
+>[!AVAILABILITY]
+>
+>This section applies to implementations of Experience Platform running on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../../landing/multi-cloud.md).
+
 Follow the steps below to learn how you can set up your [!DNL Salesforce] account for Experience Platform on Amazon Web Services (AWS).
 
 ### Prerequisites
@@ -161,7 +165,7 @@ keytool -importkeystore -srckeystore jwtcert.p12 -destkeystore keystore.jks -src
 
 #### Confirm that your keystroke.jks includes a jwtcert alias
 
-Next, use the follow command to confirm that your keystroke.jks includes a jwtcert alias. During this step, you will be prompted to provide the destination keystore password that was generated in the previous step.
+Next, use the follow command to confirm that your `keystroke.jks` includes a `jwtcert` alias. During this step, you will be prompted to provide the destination keystore password that was generated in the previous step.
 
 ```shell
 keytool -keystore keystore.jks -list
