@@ -24,19 +24,7 @@ For Customer Journey Analytics-specific instructions, refer to the [Customer Jou
 
 This guide details the process to create and manage encryption keys in AWS KMS to secure your data in Experience Platform.
 
-<!-- configure-kms.md: 
-## Prerequisites {#prerequisites}
 
-Before continuing with this document, you should have a good understanding of the following key concepts and capabilities:
-
-- **AWS Key Management Service (KMS)**: Understand the fundamentals of AWS KMS, including how to create, manage, and rotate encryption keys. Refer to the [official KMS documentation](https://docs.aws.amazon.com/kms/) to learn more.
-- **Identity and Access Management (IAM) policies in AWS**: IAM is a service that enables you to manage access to AWS services and resources securely. Use IAM to:
-  - Define which users, groups, and roles have access to specific resources.
-  - Specify what actions users are allowed or denied performing.
-  - Implement fine-grained access control by assigning permissions using IAM policies.
-Refer to the [IAM Policies for AWS KMS official documentation](https://docs.aws.amazon.com/kms/latest/developerguide/iam-policies.html) for more information.
-- **Data Security in Experience Platform**: Explore how Platform ensures data security and integrates with external services like AWS KMS for encryption. Platform protects data with HTTPS TLS v1.2 for transit, cloud-provider encryption at rest, isolated storage, and customizable authentication and encryption options. See the [governance, privacy, and security overview](../overview.md), or the document on [data encryption in Platform](../encryption.md) for more information on how your data is kept secure.
-- **AWS Management Console**: A central hub where you can access and manage all your AWS services from one web-based application. Use the search bar to quickly find tools, check notifications, manage your account and billing, and customize your settings. Refer to the [official AWS management console documentation](https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/what-is.html) for more information. -->
 
 ## Get started {#get-started}
 
