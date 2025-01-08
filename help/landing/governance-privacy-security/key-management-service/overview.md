@@ -13,7 +13,8 @@ hidefromtoc: yes
 >
 >[Customer Managed Keys](../customer-managed-keys/overview.md) (CMK) on AWS are supported for Privacy and Security Shield but are not available for Healthcare Shield. CMK on Azure are supported for both Privacy and Security Shield as well as Healthcare Shield.
 
-Use this guide to secure your data with Amazon Web Services (AWS) Key Management Service (KMS) by creating, managing, and controlling encryption keys for Adobe Experience Platform. This integration simplifies compliance, streamlines operations through automation, and eliminates the need to maintain your own key management infrastructure.
+<!-- configure-kms.md: 
+Use this guide to secure your data with Amazon Web Services (AWS) Key Management Service (KMS) by creating, managing, and controlling encryption keys for Adobe Experience Platform. This integration simplifies compliance, streamlines operations through automation, and eliminates the need to maintain your own key management infrastructure. -->
 
 For Customer Journey Analytics-specific instructions, refer to the [Customer Journey Analytics CMK documentation](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-privacy/cmk)
 
@@ -23,6 +24,7 @@ For Customer Journey Analytics-specific instructions, refer to the [Customer Jou
 
 This guide details the process to create and manage encryption keys in AWS KMS to secure your data in Experience Platform.
 
+<!-- configure-kms.md: 
 ## Prerequisites {#prerequisites}
 
 Before continuing with this document, you should have a good understanding of the following key concepts and capabilities:
@@ -34,21 +36,24 @@ Before continuing with this document, you should have a good understanding of th
   - Implement fine-grained access control by assigning permissions using IAM policies.
 Refer to the [IAM Policies for AWS KMS official documentation](https://docs.aws.amazon.com/kms/latest/developerguide/iam-policies.html) for more information.
 - **Data Security in Experience Platform**: Explore how Platform ensures data security and integrates with external services like AWS KMS for encryption. Platform protects data with HTTPS TLS v1.2 for transit, cloud-provider encryption at rest, isolated storage, and customizable authentication and encryption options. See the [governance, privacy, and security overview](../overview.md), or the document on [data encryption in Platform](../encryption.md) for more information on how your data is kept secure.
-- **AWS Management Console**: A central hub where you can access and manage all your AWS services from one web-based application. Use the search bar to quickly find tools, check notifications, manage your account and billing, and customize your settings. Refer to the [official AWS management console documentation](https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/what-is.html) for more information.
+- **AWS Management Console**: A central hub where you can access and manage all your AWS services from one web-based application. Use the search bar to quickly find tools, check notifications, manage your account and billing, and customize your settings. Refer to the [official AWS management console documentation](https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/what-is.html) for more information. -->
 
 ## Get started {#get-started}
 
 This guide requires that you already have access to an Amazon Web Services account and access to the management console. Follow the steps below to get started:
 
+<!-- configure-kms.md: 
 1. **Verify permissions**: Ensure that you have the necessary AWS Identity and Access Management (IAM) permissions to create, manage, and use encryption keys within KMS. To verify your permissions:
    1. Access the [IAM Policy Simulator](https://policysim.aws.amazon.com/).
    1. Select your user account or role.
    1. Simulate KMS actions like `kms:CreateKey` or `kms:Encrypt`.
-If the simulation returns an error or you are unsure about your permissions, consult your AWS administrator for assistance.
+If the simulation returns an error or you are unsure about your permissions, consult your AWS administrator for assistance. -->
 
-1. **Check your AWS account configuration**: Confirm that your AWS account is enabled to use AWS KMS services. Most accounts have KMS access enabled by default, but you can review your account setup by visiting the [AWS Management Console](https://aws.amazon.com/console/). For more details, see the [AWS Key Management Service Developer guide](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html).
+<!-- configure-kms.md: 
+1. **Check your AWS account configuration**: Confirm that your AWS account is enabled to use AWS KMS services. Most accounts have KMS access enabled by default, but you can review your account setup by visiting the [AWS Management Console](https://aws.amazon.com/console/). For more details, see the [AWS Key Management Service Developer guide](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html). -->
 
-1. **Select a supported region**: AWS KMS is available in specific regions. Make sure you are operating in a region where KMS is supported. You can view a complete list of supported regions in the [AWS KMS endpoints and quotas list](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/). 
+<!-- configure-kms.md: 
+1. **Select a supported region**: AWS KMS is available in specific regions. Make sure you are operating in a region where KMS is supported. You can view a complete list of supported regions in the [AWS KMS endpoints and quotas list](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/).  -->
 
 ### Navigate to AWS KMS to begin key setup
 
@@ -56,6 +61,7 @@ If the simulation returns an error or you are unsure about your permissions, con
 >
 >Ensure the secure storage, access, and availability of the encryption keys. You are responsible for managing your keys and preventing disruptions to Platform operations.
 
+<!-- configure-kms.md:
 To begin setting up and managing your encryption key, log in to your AWS account and navigate to AWS Key Management Service (KMS). From the AWS Management Console and select **Key Management Service (KMS)** from the services menu.
 
 ![The search drop down menu of the AWS Management Console with Key Management Service highlighted.](../../images/governance-privacy-security/key-management-service/navigate-to-kms.png)
@@ -64,7 +70,7 @@ To begin setting up and managing your encryption key, log in to your AWS account
 
 The [!DNL Key Management Service (KMS)] workspace appears. Select **[!DNL Create a key]**.
 
-![The Key Management Service workspace with Create a key highlighted.](../../images/governance-privacy-security/key-management-service/create-a-key.png)
+![The Key Management Service workspace with Create a key highlighted.](../../images/governance-privacy-security/key-management-service/create-a-key.png) -->
 
 ## Configure key settings {#configure-key}
 
@@ -78,7 +84,7 @@ Expand the **[!DNL Advanced options]** dropdown menu. You are recommended to use
 >
 >If you already have an existing key, you can import external key material or use the AWS [!DNL CloudHSM] key store. These options are not covered in the scope of this document.
 
-Next, select the [!DNL Regionality] setting, which specifies the region scope of the key. Select **[!DNL Single-Region key]**, followed by **[!DNL Next]** to proceed onto step two.
+<!-- Next, select the [!DNL Regionality] setting, which specifies the region scope of the key. Select **[!DNL Single-Region key]**, followed by **[!DNL Next]** to proceed onto step two.
 
 >[!IMPORTANT]
 >
@@ -92,10 +98,11 @@ The second, [!DNL Add labels] stage of the workflow appears. Here, you configure
 
 Enter a descriptive label for your key in the **[!DNL Alias]** input field. The alias acts as a user-friendly identifier, to quickly locate the key using the search bar in the AWS KMS console. To prevent confusion, choose a meaningful name that reflects the key's purpose, such as "Adobe-Platform-Key" or "Customer-Encryption-Key." You can also include a description of the key if the key alias is insufficient to describe its purpose.
 
-Finally, assign metadata to your key by adding key-value pairs in the [!DNL Tags] section. This step is optional, but you should add tags to categorize and filter AWS resources for easier management. For example, if your organization uses multiple Adobe-related resources, you can tag them with "Adobe" or "Experience-Platform." This extra step makes it simple to search for and manage all your associated resources in the AWS Management Console. Select **[!DNL Add tag]** to begin the process.
+Finally, assign metadata to your key by adding key-value pairs in the [!DNL Tags] section. This step is optional, but you should add tags to categorize and filter AWS resources for easier management. For example, if your organization uses multiple Adobe-related resources, you can tag them with "Adobe" or "Experience-Platform." This extra step makes it simple to search for and manage all your associated resources in the AWS Management Console. Select **[!DNL Add tag]** to begin the process. -->
 
 <!-- I do not have an AWS account with which to document the Add tag process as yet. -->
 
+<!-- 
 When you are satisfied with your settings, select **[!DNL Next]** to continue the workflow.
 
 ![Step two of the Configure key workflow with the Alias, Description, Tags, and Next highlighted.](../../images/governance-privacy-security/key-management-service/add-labels.png)
@@ -132,7 +139,9 @@ The review stage of the key configuration appears. Verify the key details in the
 >
 >Ensure that the key region is the same as the AWS account.
 
-![The Review stage of the workflow with the Key configuration and Alias and description sections highlighted.](../../images/governance-privacy-security/key-management-service/review-key-configuration-details.png)
+![The Review stage of the workflow with the Key configuration and Alias and description sections highlighted.](../../images/governance-privacy-security/key-management-service/review-key-configuration-details.png) -->
+
+<!-- PLATFORM UI STUFF STARTS below -->
 
 ### Update the key policy to integrate the key with Experience Platform
 
