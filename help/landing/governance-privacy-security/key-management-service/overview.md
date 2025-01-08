@@ -277,7 +277,7 @@ Add to the default policy the four statements from the [!UICONTROL Platform Encr
 
 Select **[!DNL Finish]** to confirm your key details with your updated policy and create the key. The key and policy have now been configured with the total of five statements to allow your AWS account to communicate with your Experience Platform account. The effect is instantaneous.
 
-The updated [!DNL Customer managed keys] workspace of the AWS [!DNL Key Management Service] appears. 
+The updated [!DNL Customer managed keys] workspace of the AWS [!DNL Key Management Service] appears.
 
 ### Add AWS encryption key details to Platform 
 
