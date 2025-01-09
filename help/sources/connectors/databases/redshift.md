@@ -8,7 +8,10 @@ exl-id: 75e577dd-a0b0-4f82-a371-5ec9255544f8
 
 >[!IMPORTANT]
 >
->The [!DNL Amazon Redshift] source is available in the sources catalog to users who have purchased Real-Time Customer Data Platform Ultimate.
+>- The [!DNL Amazon Redshift] source is available in the sources catalog to users who have purchased Real-Time CDP Ultimate.
+>
+>- You can now use the [!DNL Amazon Redshift] source when running Adobe Experience Platform on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../../landing/multi-cloud.md).
+
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
