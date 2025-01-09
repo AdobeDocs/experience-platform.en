@@ -1,16 +1,16 @@
 ---
-title: Query Service Authorization API Guide
-description: Learn how to use the Query Service Authorization API to enforce network-based IP restrictions for secure connections through SQL. Use this API to enhance data access control for your Adobe Experience Platform data.
+title: Data Distiller Authorization API Guide
+description: Learn how to use the Data Distiller Authorization API to enforce network-based IP restrictions for secure connections through SQL. Use this API to enhance data access control for your Adobe Experience Platform data.
 role: Developer
 exl-id: bcc5ea0e-cb6d-4c7b-bf9f-a0336f76c4c8
 ---
-# Query Service Authorization API Guide
+# Data Distiller Authorization API Guide
 
 >[!AVAILABILITY]
 >
 >This functionality is available to customers who have purchased the Data Distiller add on. For more information, contact your Adobe representative.
 
-Use the Query Service Authorization API to enforce IP-based restrictions. Applying these measures ensure that only approved networks and client machines can access data via SQL in Adobe Experience Platform. These controls help you meet stringent security standards while providing real-time access monitoring and alerting.
+Use the Data Distiller Authorization API to enforce IP-based restrictions. Applying these measures ensure that only approved networks and client machines can access data via SQL in Adobe Experience Platform. These controls help you meet stringent security standards while providing real-time access monitoring and alerting.
 
 With this API, you can configure, enforce, and monitor IP restrictions for accessing data via the SQL interface. This document provides a high-level overview of the API's core features, endpoint functions, and future capabilities.
 
@@ -24,13 +24,17 @@ The following features enable you to define IP-based access restrictions, monito
 
 ## Audit and monitoring capabilities
 
-To support secure data access practices, Query Service logs all client IPs that access or attempt to access AEP. Audit events, including denied connections, are sent to Platform Audit Logs. This enables:
+To support secure data access practices, Query Service logs all client IPs that access or attempt to access Experience Platform. Audit events, including denied connections, are sent to Platform Audit Logs. This enables:
    
 - **Real-time Monitoring**: Track IP-based access patterns to ensure compliance.
 - **Alerting on Unauthorized Access**: Identify and respond to access attempts from unauthorized IPs.
 
-For more details on audit logging, refer to the [Audit Service documentation](https://experienceleague.adobe.com/docs/experience-platform/audit/audit-overview.html).
+Refer to the [Audit logs overview](../../landing/governance-privacy-security/audit-logs/overview.md) for more details.
 
 ## Next Steps
 
-Get started with the Query Service Authorization API by reviewing the [Getting Started guide](./getting-started.md) for essential setup steps, including required headers and API call conventions. Then, explore the endpoint-specific guides on [IP Access](./ip-access.md) and [IP Validation](./validate.md) for configuring and managing secure data access.
+Get started with the Data Distiller Authorization API by reviewing the [Getting Started guide](./getting-started.md) for essential setup steps, including required headers and API call conventions. Then, explore the endpoint-specific guides on [IP Access](./ip-access.md) and [IP Validation](./validate.md) for configuring and managing secure data access.
+
+Refer to the [Data Distiller Authorization OpenAPI reference documentation](https://developer.adobe.com/experience-platform-apis/references/data-distiller-auth/) to view a standardized, machine-readable format for easier integration, testing, and exploration.
+
+For information about the various response parameters for each returned dataset, refer to the [Datasets API developer documentation](https://developer.adobe.com/experience-platform-apis/references/catalog/#tag/Datasets/operation/listDatasets).

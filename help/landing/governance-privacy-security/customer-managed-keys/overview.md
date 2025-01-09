@@ -1,11 +1,17 @@
 ---
 title: Customer-Managed Keys in Adobe Experience Platform
 description: Learn how to set up your own encryption keys for data stored in Adobe Experience Platform.
+role: Developer
+feature: Privacy
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
 ---
 # Customer-managed keys in Adobe Experience Platform
 
 Data stored on Adobe Experience Platform is encrypted at rest using system-level keys. If you are using an application built on top of Platform, you can opt to use your own encryption keys instead, giving you greater control over your data security.
+
+>[!AVAILABILITY]
+>
+>If your implementation of Experience Platform runs on Amazon Web Services (AWS), you have the option of using the Key Management Service (KMS) for Platform data encryption. Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud). To learn about encryption key creation and management in AWS KMS, refer to the [AWS KMS data encryption guide](../key-management-service/overview.md).
 
 >[!NOTE]
 >
