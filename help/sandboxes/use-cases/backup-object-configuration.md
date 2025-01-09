@@ -1,20 +1,18 @@
 ---
-title: Backup object configurations using sandbox tooling
-description: Backup object configurations using sandbox tooling packages to safely reset sandboxes, add versioning support, and prevent the loss of critical configurations such as schemas, datasets, and segments, especially during development iterations.
+title: Back up object configurations using sandbox tooling
+description: To safely reset sandboxes and add versioning support, back up object configurations (or metadata) using sandbox tooling packages. Backup packages prevent the loss of critical configurations such as schemas, datasets, and audiences, especially during development iterations.
 ---
-# Backup object configurations using sandbox tooling
+# Back up object configurations using sandbox tooling
 
-Backup object configurations (or metadata) using sandbox tooling packages to safely reset sandboxes, add versioning support, and prevent the loss of critical configurations such as schemas, datasets, and segments, especially during development iterations.
+To safely reset sandboxes and add versioning support, back up object configurations (or metadata) using sandbox tooling packages. Backup packages prevent the loss of critical configurations such as schemas, datasets, and audiences, especially during development iterations.
 
 ![Overview showing the benefits of sandbox tooling](../images/use-cases/tooling-overview.png)
 
 ## Why consider this use case {#why-this-use-case}
 
-Creating a backup package using sandbox tooling ensures your object configurations are stored and secured. Development sandboxes can fill quickly as you experiment and build, and building a sandbox from scratch after resetting it can be time-consuming and leave room for errors. With the power of sandbox tooling, you can import a backup package into a freshly reset sandbox to immediately return your ideal configurations so you can continue developing. 
+Creating a backup package using sandbox tooling ensures your object configurations are stored and secured. Development sandboxes can fill quickly as you experiment and build, while building a sandbox from scratch after resetting it can be time-consuming and leave room for errors. With the power of sandbox tooling, you can import a backup package into a freshly reset sandbox to immediately return your ideal configurations so you can continue developing. 
 
 Backup packages also allow you to support versioning throughout your development process. As your sandbox changes, create additional backup packages alongside your previous packages so you can easily restore your sandbox to any of your configurations. 
-
-Follow the steps described in this use case to create a backup package of your own.
 
 ## Prerequisites and planning {#prerequisites-and-planning}
 
@@ -34,7 +32,7 @@ To successfully implement this use case, you must use multiple areas of Adobe Ex
   - [License usage dashboard](../../landing/license-usage-and-guardrails/license-usage-dashboard.md)
   - [Datasets](../../catalog/datasets/overview.md)
   - [Schemas](../../xdm//home.md)
-  - [Segments](../../segmentation/home.md)
+  - [Audiences](../../segmentation/home.md)
   - [Journeys from Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/journey)
 
 ## How to achieve the use case: high-level overview {#achieve-the-use-case-high-level}
@@ -60,18 +58,18 @@ Before you begin creating your backup package you should consider the package's 
 
 ### Export an your chosen metadata into a package
 
-At this point, you're ready to backup your sandbox using the sandbox tooling user interface. This step will cover both backing up a an entire sandbox and backing up specific objects.
+At this point, you're ready to back up your sandbox using the sandbox tooling user interface. This step will cover both backing up an entire sandbox and backing up specific objects.
 
 #### Export a complete sandbox
 
-To backup your sandbox in entirety, follow [this guide](../ui/sandbox-tooling.md#export-an-entire-sandbox) to create and publish a new package containing the configurations of your entire sandbox.
+To back up your sandbox in entirety, follow the [sandbox tooling guide](../ui/sandbox-tooling.md#export-an-entire-sandbox) to create and publish a new package containing the configurations of your entire sandbox.
 
 #### Export individual objects
 
-You may backup individual objects into a package any of the following ways. While these guides focus on adding a schema into the package, the same steps apply for other objects, such as datasets, segments or journeys.
+You may back up individual objects into a package any of the following ways. While these guides focus on adding a schema into the package, the same steps apply for other objects, such as datasets, audiences or journeys.
 
-- Add an individual object to a new package, following [this guide](../ui/sandbox-tooling.md#add-object-to-a-new-package). 
-- Add an individual object to an existing backup package, following [this guide](../ui/sandbox-tooling.md#add-an-object-to-an-existing-package-and-publish), making sure you publish your changes.
+- Add an individual object to a new package, following sandbox tooling's [adding objects guide](../ui/sandbox-tooling.md#add-object-to-a-new-package). 
+- Add an individual object to an existing backup package, following the [sandbox tooling guide](../ui/sandbox-tooling.md#add-an-object-to-an-existing-package-and-publish), making sure you publish your changes.
 - Create an empty multi-object package to add objects to, following the guide below.
 
 ##### Creating a multi-object package
@@ -102,15 +100,15 @@ While it's possible to add new objects to your existing backup package, you are 
 
 ### Check your current usages against your license entitlements
 
-Now that your backup package is ready, you can reset your sandbox to reset your usage. It's recommended to regularly monitor your usage so you can adjust your license entitlements or reset your sandbox as needed. You can refer to [this guide](../../dashboards/guides/license-usage.md) to learn more about the license usage dashboard. 
+Now that your backup package is ready, you can reset your sandbox to reset your usage. You should regularly monitor your usage so you can adjust your license entitlements or reset your sandbox as needed. You can refer to the [license usage guide](../../dashboards/guides/license-usage.md) to learn more about the license usage dashboard. 
 
 ### Reset your sandbox
 
-At this point, you can safely reset your sandbox, assuming your sandbox meets the necessary parameters. Follow [this guide](../ui/user-guide.md#reset-a-sandbox) to begin resetting your sandbox, being sure to read the warning listing cases that may prevent you from resetting your sandbox.
+At this point, you can safely reset your sandbox, assuming your sandbox meets the necessary parameters. Follow the [reset a sandbox guide](../ui/user-guide.md#reset-a-sandbox) to begin resetting your sandbox, being sure to read the warning listing cases that may prevent you from resetting your sandbox.
 
 ### Import the newly created backup package into your reset sandbox
 
-Now that you've reset your sandbox, you can make use of the backup package you created. Follow [this guide](../ui/sandbox-tooling.md#import-a-package-to-a-target-sandbox) for a step-by-step process on importing a package into your target sandbox.
+Now that you've reset your sandbox, you can make use of the backup package you created. Follow the [sandbox tooling guide](../ui/sandbox-tooling.md#import-a-package-to-a-target-sandbox) for a step-by-step process on importing a package into your target sandbox.
 
 ## Other use cases acheived through sandbox toolings: {#other-use-cases}
 
