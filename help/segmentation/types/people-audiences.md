@@ -37,7 +37,7 @@ To view details about a specific people audience, select an audience on Audience
 
 IMAGE
 
-The audience details page is displayed. Information, including INFO are displayed.
+The audience details page is displayed. Information, including description, origin, and lifecycle state are displayed.
 
 IMAGE
 
@@ -63,7 +63,7 @@ Select the audience you want to activate, followed by **[!UICONTROL Activate to 
 
 IMAGE
 
-The [!UICONTROL Activate destination] page appears, with the list of available destinations depending on the update frequency of the audience. For more information on the activation process, please read the ???.
+The [!UICONTROL Activate destination] page appears, with the list of available destinations depending on the update frequency of the audience. For more information on the activation process, please read the [activation overview](../../destinations/ui/activation-overview.md).
 
 ## Next steps
 
