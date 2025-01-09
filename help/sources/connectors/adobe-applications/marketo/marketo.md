@@ -7,6 +7,10 @@ exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
 ---
 # [!DNL Marketo Engage] connector
 
+>[!IMPORTANT]
+>
+>You can now use the [!DNL Marketo Engage] source when running Adobe Experience Platform on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../../../landing/multi-cloud.md).
+
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
 [[!DNL Marketo Engage]](https://www.marketo.com/software/) is a complete solution for lead management and B2B marketers looking to transform customer experiences by engaging across every stage of complex buying journeys.
