@@ -18,6 +18,8 @@ For Customer Journey Analytics-specific instructions, refer to the [Customer Jou
 >
 >Adobe Experience Platform encrypts data at rest by default using system-managed keys. By enabling Customer Managed Keys (CMK), you take full control of your data security. However, this change is irreversible, once CMK is enabled, you cannot revert to system-managed keys. You are responsible for securely managing your keys to ensure uninterrupted access to your data and prevent potential inaccessibility.
 
+This guide details the process to create and manage encryption keys in AWS KMS to secure your data in Experience Platform.
+
 <!-- **Next Step**: Expand this section to explain what AWS KMS does and its role in Adobe Experience Platform. -->
 
 ## Prerequisites {#prerequisites}
