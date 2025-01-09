@@ -2,8 +2,8 @@
 solution: Experience Platform
 title: Adobe Experience Platform multi-cloud overview
 description: Learn what the differences are between running Experience Platform on Microsoft Azure and Amazon Web Services.
+exl-id: da552311-6e50-4b09-bcc8-696a25325796
 ---
-
 # Adobe Experience Platform multi-cloud overview
 
 Adobe Experience Platform is a multi-cloud product, giving you the choice between running on [[!DNL Microsoft Azure]](https://azure.microsoft.com/en-us) or [[!DNL Amazon Web Services (AWS)]](https://aws.amazon.com/). This flexibility allows you to choose the best fit for your business and technical requirements.
