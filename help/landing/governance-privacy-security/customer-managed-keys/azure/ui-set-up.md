@@ -30,7 +30,7 @@ After you have your key vault configured, the next step is to register the CMK a
 
 To view the [!UICONTROL Encryption configurations] dashboard, select **[!UICONTROL Encryption]** under the [!UICONTROL Administration] heading of the left navigation sidebar.
 
-![The Encryption configuration dashboard with Encryption and the Customer Managed Keys card highlighted.](../../images/governance-privacy-security/customer-managed-keys/encryption-configraion.png)
+![The Encryption configuration dashboard with Encryption and the Customer Managed Keys card highlighted.](../../../images/governance-privacy-security/customer-managed-keys/encryption-configraion.png)
 
 Select **[!UICONTROL Configure]** to open the [!UICONTROL Customer Managed Keys configuration] view. This workspace contains all the necessary values to complete the steps described below and perform the integration with your Azure Key vault.
 
@@ -38,23 +38,23 @@ Select **[!UICONTROL Configure]** to open the [!UICONTROL Customer Managed Keys 
 
 To start the registration process, copy the application authentication URL for your organization from the [!UICONTROL Customer Managed Keys configuration] view and paste it into your [!DNL Azure] environment **[!DNL Key Vault Crypto Service Encryption User]**. Details on how to [assign a role](#assign-to-role) are provided in the next section. 
 
-Select the copy icon (![The copy icon.](/help/images/icons/copy.png)) by the [!UICONTROL Application authentication url].
+Select the copy icon (![The copy icon.](../../../../images/icons/copy.png)) by the [!UICONTROL Application authentication url].
 
-![The [!UICONTROL Customer Managed Keys configuration] view with the Application authentication url section highlighted.](../../images/governance-privacy-security/customer-managed-keys/application-authentication-url.png)
+![The [!UICONTROL Customer Managed Keys configuration] view with the Application authentication url section highlighted.](../../../images/governance-privacy-security/customer-managed-keys/application-authentication-url.png)
 
 Copy and paste the [!UICONTROL Application authentication url] into a browser to open an authentication dialog. Select **[!DNL Accept]** to add the CMK app service principal to your [!DNL Azure] tenant. Confirming the authentication redirects you to the Experience Cloud landing page.
 
-![A Microsoft permission request dialog with [!UICONTROL Accept] highlighted.](../../images/governance-privacy-security/customer-managed-keys/app-permission.png)
+![A Microsoft permission request dialog with [!UICONTROL Accept] highlighted.](../../../images/governance-privacy-security/customer-managed-keys/app-permission.png)
 
 >[!IMPORTANT]
 >
->If you have multiple [!DNL Microsoft Azure] subscriptions, then you could potentially connect your Platform instance to the wrong key vault. In this situation, you must swap the `common` section of the application authentication URL name for the CMK directory ID.<br>Copy the CMK directory ID from the Portal settings, Directories, and Subscriptions page of the [!DNL Microsoft Azure] application<br>![The [!DNL Microsoft Azure] application Portal settings, Directories and Subscriptions page with the Directory ID highlighted.](../../images/governance-privacy-security/customer-managed-keys/directory-id.png)<br>Next, paste it into your browser address bar.<br>![A Google browser page with the 'common' section of the Application authentication url highlighted.](../../images/governance-privacy-security/customer-managed-keys/common-url-section.png)
+>If you have multiple [!DNL Microsoft Azure] subscriptions, then you could potentially connect your Platform instance to the wrong key vault. In this situation, you must swap the `common` section of the application authentication URL name for the CMK directory ID.<br>Copy the CMK directory ID from the Portal settings, Directories, and Subscriptions page of the [!DNL Microsoft Azure] application<br>![The [!DNL Microsoft Azure] application Portal settings, Directories and Subscriptions page with the Directory ID highlighted.](../../../images/governance-privacy-security/customer-managed-keys/directory-id.png)<br>Next, paste it into your browser address bar.<br>![A Google browser page with the 'common' section of the Application authentication url highlighted.](../../../images/governance-privacy-security/customer-managed-keys/common-url-section.png)
 
 ### Assign the CMK app to a role {#assign-to-role}
 
 After completing the authentication process, navigate back to your [!DNL Azure] Key Vault and select **[!DNL Access control]** in the left navigation. From here, select **[!DNL Add]** followed by **[!DNL Add role assignment]**.
 
-![The [!DNL Microsoft Azure] dashboard with [!DNL Add] and [!DNL Add role assignment] highlighted.](../../images/governance-privacy-security/customer-managed-keys/add-role-assignment.png)
+![The [!DNL Microsoft Azure] dashboard with [!DNL Add] and [!DNL Add role assignment] highlighted.](../../../images/governance-privacy-security/customer-managed-keys/add-role-assignment.png)
 
 The next screen prompts you to choose a role for this assignment. Select **[!DNL Key Vault Crypto Service Encryption User]** before selecting **[!DNL Next]** to continue.
 
@@ -62,7 +62,7 @@ The next screen prompts you to choose a role for this assignment. Select **[!DNL
 >
 >If you have the [!DNL Managed-HSM Key Vault] tier, then you must select the **[!DNL Managed HSM Crypto Service Encryption User]** user role.
 
-![The [!DNL Microsoft Azure] dashboard with the [!DNL Key Vault Crypto Service Encryption User] highlighted.](../../images/governance-privacy-security/customer-managed-keys/select-role.png)
+![The [!DNL Microsoft Azure] dashboard with the [!DNL Key Vault Crypto Service Encryption User] highlighted.](../../../images/governance-privacy-security/customer-managed-keys/select-role.png)
 
 On the next screen, choose **[!DNL Select members]** to open a dialog in the right rail. Use the search bar to locate the service principal for the CMK application and select it from the list. When finished, select **[!DNL Save]**.
 
@@ -72,7 +72,7 @@ On the next screen, choose **[!DNL Select members]** to open a dialog in the rig
 
 You can verify the application by comparing the [!UICONTROL Application ID] provided on the [!UICONTROL Customer Managed Keys configuration] view with the [!DNL Application ID] provided on the [!DNL Microsoft Azure] application overview.
 
-![The [!UICONTROL Customer Managed Keys configuration] view with the [!UICONTROL Application ID] highlighted.](../../images/governance-privacy-security/customer-managed-keys/application-id.png)
+![The [!UICONTROL Customer Managed Keys configuration] view with the [!UICONTROL Application ID] highlighted.](../../../images/governance-privacy-security/customer-managed-keys/application-id.png)
 
 All the details necessary to verify Azure tools are included in the Platform UI. This level of granularity is provided as many users wish to uze other Azure tools to enhance their ability to monitor and log these applications access to their key vault. Understanding these identifiers is critical for that purpose and to help Adobe services to access the key.
 
@@ -80,7 +80,7 @@ All the details necessary to verify Azure tools are included in the Platform UI.
 
 After installing the CMK app on [!DNL Azure], you can send your encryption key identifier to Adobe. Select **[!DNL Keys]** in the left navigation, followed by the name of the key you want to send.
 
-![The Microsoft Azure dashboard with the [!DNL Keys] object and the key name highlighted.](../../images/governance-privacy-security/customer-managed-keys/select-key.png)
+![The Microsoft Azure dashboard with the [!DNL Keys] object and the key name highlighted.](../../../images/governance-privacy-security/customer-managed-keys/select-key.png)
 
 Select the latest version of the key and its details page appears. From here, you can optionally configure the permitted operations for the key. 
 
@@ -90,15 +90,15 @@ Select the latest version of the key and its details page appears. From here, yo
 
 The **[!UICONTROL Key Identifier]** field displays the URI identifier for the key. Copy this URI value for use in the next step.
 
-![The Microsoft Azure dashboard Key details with the [!DNL Permitted operations] and the copy key URL sections highlighted.](../../images/governance-privacy-security/customer-managed-keys/copy-key-url.png)
+![The Microsoft Azure dashboard Key details with the [!DNL Permitted operations] and the copy key URL sections highlighted.](../../../images/governance-privacy-security/customer-managed-keys/copy-key-url.png)
 
 Once you have obtained the [!DNL Key vault URI], return to the [!UICONTROL Customer Managed Keys configuration] view and enter a descriptive **[!UICONTROL Configuration name]**. Next, add the [!DNL Key Identifier] taken from the Azure Key details page into the **[!UICONTROL Key vault key identifier]** and select **[!UICONTROL  Save]**. 
 
-![The [!UICONTROL Customer Managed Keys configuration] view with the [!UICONTROL Configuration name] and the [!UICONTROL Key vault key identifier] sections highlighted.](../../images/governance-privacy-security/customer-managed-keys/configuration-name.png)
+![The [!UICONTROL Customer Managed Keys configuration] view with the [!UICONTROL Configuration name] and the [!UICONTROL Key vault key identifier] sections highlighted.](../../../images/governance-privacy-security/customer-managed-keys/configuration-name.png)
 
 You are returned to the [!UICONTROL Encryption configurations dashboard]. The status of the [!UICONTROL Customer Managed Keys] configuration displays as [!UICONTROL Processing]. 
 
-![The [!UICONTROL Encryption configurations] dashboard with [!UICONTROL Processing] highlighted on the [!UICONTROL Customer Managed Keys] card.](../../images/governance-privacy-security/customer-managed-keys/processing.png)
+![The [!UICONTROL Encryption configurations] dashboard with [!UICONTROL Processing] highlighted on the [!UICONTROL Customer Managed Keys] card.](../../../images/governance-privacy-security/customer-managed-keys/processing.png)
 
 ## Verify the configuration's status {#check-status}
 
