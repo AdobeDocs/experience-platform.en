@@ -9,7 +9,7 @@ exl-id: ed937689-e844-487e-85fb-e3536c851fe5
 
 >[!IMPORTANT]
 >
->* The [!DNL Snowflake] streaming source is available in the API to users who have purchased Real-Time Customer Data Platform Ultimate.
+>* The [!DNL Snowflake] streaming source is available in the API to users who have purchased Real-Time CDP Ultimate.
 >
 >* You can now use the [!DNL Snowflake] streaming source when running Adobe Experience Platform on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../../landing/multi-cloud.md).
 
