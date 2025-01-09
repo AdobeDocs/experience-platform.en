@@ -4,6 +4,7 @@ description: Learn how to use the Amazon Web Services Key Management Service to 
 role: Developer, Admin, User
 hide: yes
 hidefromtoc: yes
+exl-id: 64fbf94d-3519-4937-b7f0-216b14facf66
 ---
 # How to use the Amazon Web Services Key Management Service for Adobe Experience Platform data encryption
 
@@ -368,4 +369,4 @@ If the current key is compromised, select **[!DNL Rotate Now]** to rotate it imm
 
 ## Next Steps
 
-After reading this document, you have learned how to create, configure, and manage encryption keys in AWS KMS for use with Adobe Experience Platform. As a next step, consider reviewing your organization's security and compliance policies to ensure proper key management practices, such as scheduled key rotation and secure key storage. 
+After reading this document, you have learned how to create, configure, and manage encryption keys in AWS KMS for use with Adobe Experience Platform. As a next step, consider reviewing your organization's security and compliance policies to ensure proper key management practices, such as scheduled key rotation and secure key storage.
