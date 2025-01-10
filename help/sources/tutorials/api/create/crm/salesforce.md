@@ -166,6 +166,167 @@ A successful response returns your newly created base connection along with its 
 }
 ```
 
+## Create a base connection for [!DNL Salesforce] in Experience Platform on Amazon Web Services
+
+>[!AVAILABILITY]
+>
+>This section applies to implementations of Experience Platform running on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../../../../landing/multi-cloud.md).
+
+To create a base connection and connect your [!DNL Salesforce] account to Experience Platform on AWS, make a POST request to the `/connections` endpoint and provide the appropriate values for your credentials.
+
+**API format**
+
+```http
+POST /connections
+```
+
+**Request**
+
+The following request creates a base connection for the [!DNL Salesforce] source in Experience Platform on AWS.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "ACME Salesforce account on AWS",
+      "description": "ACME Salesforce account on AWS",
+      "auth": {
+          "specName": "OAuth2 JWT Token Credential",
+          "params":
+            "jwtToken": "{JWT_TOKEN},
+            "clientId": "xxxx",
+            "clientSecret": "xxxx",
+            "instanceUrl": "https://acme-enterprise-3126.my.salesforce.com"
+        }
+      },
+      "connectionSpec": {
+          "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
+          "version": "1.0"
+      }
+  }'
+```
+
+**Response**
+
+A successful response returns your newly created base connection along with its unique ID.
+
+```json
+{
+    "id": "3e908d3f-c390-482b-9f44-43d3d4f2eb82",
+    "etag": "\"1700df7b-0000-0200-0000-5e3b424f0000\""
+}
+```
+
+### Verify your connection status
+
+To verify your connection status, make a GET request to the `/connections` endpoint and provide the base connection ID that was generated in the creation step.
+
+**API format**
+
+```http
+GET /connections
+```
+
+**Request**
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/flowservice/connections/3e908d3f-c390-482b-9f44-43d3d4f2eb82' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+```
+
+**Response**
+
+>[!BEGINTABS]
+
+>[!TAB Initializing]
+
+```json
+{
+  "items": [
+    {
+      "id": "3e908d3f-c390-482b-9f44-43d3d4f2eb82",
+      "createdAt": 1736506325115,
+      "updatedAt": 1736506325717,
+      "createdBy": "1F1B1D4F66A918B10A495CCB@techacct.adobe.com",
+      "updatedBy": "1F1B1D4F66A918B10A495CCB@techacct.adobe.com",
+      "createdClient": "2b08c726a19d4795a0cf9adf2941b85c",
+      "updatedClient": "2b08c726a19d4795a0cf9adf2941b85c",
+      "sandboxId": "0f4ae261-59da-4e79-8ae2-6159dafe79a8",
+      "sandboxName": "prod",
+      "imsOrgId": "E5391D6F669E86C00A495F94@AdobeOrg",
+      "name": "JWT Token Auth Authentication E2E-1736506322",
+      "description": "Base Connection for salesforce E2E",
+      "connectionSpec": {
+        "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
+        "version": "1.0"
+      },
+      "state": "initializing",
+      "auth": {
+        "specName": "OAuth2 JWT Token Credential",
+        "params": {
+          "jwtToken": "arn:aws:secretsmanager:us-east-1:471112644566:secret:acp_security/74fb5788-62d2-4d87-b36e-5cf5dea4726e-GH7St7",
+          "clientId": "3MVG9GCMQoQ6rpzS9G2wBKFe5scFdYC5MV7vrmKHnX5x5yRe6erZPwOr4WvnOcHI8hqZfIk5yhCyryhmFCtSD",
+          "clientSecret": "arn:aws:secretsmanager:us-east-1:471112644566:secret:acp_security/2d21ed70-f75a-4421-bba4-4c9a2e51715e-UMuOtZ",
+          "instanceUrl": "https://adb8-dev-ed.develop.my.salesforce.com"
+        }
+      }
+    }
+  }
+]
+```
+
+>[!TAB Enabled]
+
+```json
+{
+  "items": [
+      {
+        "id": "3e908d3f-c390-482b-9f44-43d3d4f2eb82",
+        "createdAt": 1736506325115,
+        "updatedAt": 1736506413299,
+        "createdBy": "1F1B1D4F66A918B10A495CCB@techacct.adobe.com",
+        "updatedBy": "acp_foundation_connectors@AdobeID",
+        "createdClient": "2b08c726a19d4795a0cf9adf2941b85c",
+        "updatedClient": "acp_foundation_connectors",
+        "sandboxId": "0f4ae261-59da-4e79-8ae2-6159dafe79a8",
+        "sandboxName": "prod",
+        "imsOrgId": "E5391D6F669E86C00A495F94@AdobeOrg",
+        "name": "JWT Token Auth Authentication E2E-1736506322",
+        "description": "Base Connection for salesforce E2E",
+        "connectionSpec": {
+          "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
+          "version": "1.0"
+        },
+        "state": "enabled",
+        "auth": {
+          "specName": "OAuth2 JWT Token Credential",
+          "params": {
+            "jwtToken": "arn:aws:secretsmanager:us-east-1:471112644566:secret:acp_security/74fb5788-62d2-4d87-b36e-5cf5dea4726e-GH7St7",
+            "clientId": "3MVG9GCMQoQ6rpzS9G2wBKFe5scFdYC5MV7vrmKHnX5x5yRe6erZPwOr4WvnOcHI8hqZfIk5yhCyryhmFCtSD",
+            "clientSecret": "arn:aws:secretsmanager:us-east-1:471112644566:secret:acp_security/2d21ed70-f75a-4421-bba4-4c9a2e51715e-UMuOtZ",
+            "instanceUrl": "https://adb8-dev-ed.develop.my.salesforce.com",
+            "orgId": "00DdL000001iPRxUAM"
+          }
+        },
+        "version": "\"6d27f305-40be-41c3-97d4-a701827c34df\"",
+        "etag": "\"6d27f305-40be-41c3-97d4-a701827c34df\""
+    }
+  ]
+}
+```
+
+>[!ENDTABS]
+
 ## Next steps
 
 By following this tutorial, you have created a [!DNL Salesforce] base connection using the [!DNL Flow Service] API. You can use this base connection ID in the following tutorials:

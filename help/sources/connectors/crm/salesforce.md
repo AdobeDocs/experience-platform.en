@@ -9,7 +9,6 @@ exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
 >
 >You can now use the [!DNL Salesforce] source when running Adobe Experience Platform on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../../landing/multi-cloud.md).
 
-
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
 Experience Platform provides support for ingesting data from a third-party CRM system. Support for CRM providers include [!DNL Salesforce].
@@ -44,6 +43,8 @@ To use the [!DNL Salesforce] source as part of [!DNL B2B-CDP], you must first se
 
 With a Platform developer console and [!DNL Postman] set up, you can now start applying the appropriate environment values to your [!DNL Postman] environment.
 
++++View the variable table guide
+
 The following table contains example values as well as additional information on populating your [!DNL Postman] environment:
 
 | Variable | Description | Example |
@@ -67,6 +68,8 @@ The following table contains example values as well as additional information on
 | `has_msi` | A boolean value that indicates if you are subscribed to [!DNL Marketo Sales Insight]. | `false` |
 
 {style="table-layout:auto"}
+
++++
 
 ### Run the scripts
 
@@ -118,7 +121,7 @@ openssl req -newkey rsa:4096 -new -nodes -x509 -days 3650 -keyout key.pem -out c
 4. Enable the box for [!DNL Enable OAuth Settings].
 5. Set a callback URL. Since this will not be used for JWT, you can use `https://localhost`.
 6. Enable the box for [!DNL Use Digital Signatures].
-7. Upload the cert.perm file that was created earlier.
+7. Upload the cert.pem file that was created earlier.
 
 #### Add required permissions
 
