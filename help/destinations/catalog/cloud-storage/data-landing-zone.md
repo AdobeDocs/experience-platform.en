@@ -17,9 +17,9 @@ exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
 
 Platform enforces a strict seven-day time-to-live (TTL) on all files uploaded to a [!DNL Data Landing Zone] container. All files are deleted after seven days.
 
-The [!DNL Data Landing Zone] destination connector is available to customers using the Azure or Amazon Web Service cloud support. The authentication mechanism is different based on the cloud in which the destination is provisioned, everything else about the destination and its use cases are the same. Read more about the two different authentication mechanisms in the sections [Authenticate to the Data Landing Zone provisioned in Azure Blob] and [Authenticate to the AWS-provisioned Data Landing Zone](#authenticate-dlz-aws).
+The [!DNL Data Landing Zone] destination connector is available to customers using the Azure or Amazon Web Service cloud support. The authentication mechanism is different based on the cloud in which the destination is provisioned, everything else about the destination and its use cases are the same. Read more about the two different authentication mechanisms in the sections [Authenticate to the Data Landing Zone provisioned in Azure Blob](#authenticate-dlz-azure) and [Authenticate to the AWS-provisioned Data Landing Zone](#authenticate-dlz-aws).
 
-![Diagram showing how the implementation of the Data Landing Zone destination is different based on the cloud support.](/help/destinations/assets/catalog/cloud-storage/data-landing-zone/dlz-workflow-based-on-cloud-implementation.png)
+![Diagram showing how the implementation of the Data Landing Zone destination is different based on the cloud support.](/help/destinations/assets/catalog/cloud-storage/data-landing-zone/dlz-workflow-based-on-cloud-implementation.png "Data Landing Zone destination implementation by cloud support"){zoomable="yes"}
 
 ## Connect to your [!UICONTROL Data Landing Zone] storage through API or UI {#connect-api-or-ui}
 
@@ -71,7 +71,7 @@ You can read and write files to your container through [!DNL Azure Storage Explo
 
 [!DNL Data Landing Zone] supports SAS-based authentication and its data is protected with standard [!DNL Azure Blob] storage security mechanisms at rest and in transit. SAS stands for [shared access signature](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/how-to-guides/create-sas-tokens?tabs=Containers).
 
-SAS-based authentication allows you to securely access your [!DNL Data Landing Zone] container through a public internet connection. There are no network changes required for you to access your [!DNL Data Landing Zone] container, which means you do not need to configure any allow lists or cross-region setups for your network. 
+To protect your data over a public internet connection, use SAS-based authentication to securely access your [!DNL Data Landing Zone] container. There are no network changes required for you to access your [!DNL Data Landing Zone] container, which means you do not need to configure any allow lists or cross-region setups for your network. 
 
 ### Connect your [!DNL Data Landing Zone] container to [!DNL Azure Storage Explorer] 
 
@@ -206,7 +206,7 @@ With your [!DNL Data Landing Zone] container connected to [!DNL Azure Storage Ex
 >
 >This section applies to implementations of Experience Platform running on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
-Perform the operations below to get credentials to your Data Landing Zone instance provisioned on AWS. Then, use a client of choice to connect to your Data Landing Zone instance. 
+Perform the operations below to get credentials to your [!DNL Data Landing Zone] instance provisioned on AWS. Then, use a client of choice to connect to your [!DNL Data Landing Zone] instance. 
 
 >[!BEGINSHADEBOX]
 
@@ -222,7 +222,7 @@ GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination'
 
 | Query parameters | Description |
 | --- | --- |
-| `dlz_destination` |  The `dlz_destination` type allows the API to distinguish a landing zone destination container from the other types of containers that are available to you. |
+| `dlz_destination` |  Add the `dlz_destination` query parameter to specify that you want the [!DNL Data Landing Zone] *destination* type of container credentials to be retrieved. To connect and retrieve credentials for a Data Landing Zone *source*, view the [sources documentation](/help/sources/connectors/cloud-storage/data-landing-zone.md). |
 
 {style="table-layout:auto"}
 
@@ -264,7 +264,7 @@ The following response returns the credential information for your landing zone,
 | `credentials` | This object includes the `awsAccessKeyId`, `awsSecretAccessKey`, and `awsSessionToken` that Experience Platform uses to export files to your provisioned Data Landing Zone location. |
 | `dlzPath` | This object includes the path in the Adobe-provisioned AWS location where exported files are deposited. |
 | `dlzProvider` | Indicates that this is an Amazon S3-provisioned Data Landing Zone. |
-| `expiryTime` | Indicates when the credentials in the object further above will expire. You can refresh these by making the call again. |
+| `expiryTime` | Indicates when the credentials in the `credentials` object will expire. To refresh the credetials, perform the request again. |
 
 {style="table-layout:auto"}
 
