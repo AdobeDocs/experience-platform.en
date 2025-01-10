@@ -33,7 +33,7 @@ The steps related to identifying the applicable data sources required to carry o
 
 Once you have determined the data sources that you wish to bring into [!DNL Platform], create a high-level ERD to help guide the process of mapping your data to XDM schemas.
 
-The example below represents a simplified ERD for a company who wants to bring data into [!DNL Platform]. The diagram highlights the essential entities that should be sorted into XDM classes, including customer accounts, hotels, addresses, and several common e-commerce events.
+The example below represents a simplified ERD for a company who wants to bring data into [!DNL Platform]. The diagram highlights the essential entities that should be sorted into XDM classes, including customer accounts, hotels, and several common e-commerce events.
 
 ![A entity relational diagram that highlights the essential entities that should be sorted into XDM classes for data ingestion.](../images/best-practices/erd.png)
 
@@ -121,9 +121,9 @@ The following table outlines some common entity relationships and the categories
 
 | Relationship | Cardinality | Entity categories |
 | --- | --- | --- |
-| Customers and Cart Checkouts | One to many | A single customer may have many cart checkouts, which are events that can be tracked over time. Customers would therefore be a profile entity, while Cart Checkouts would be an event entity. |
-| Customers and Loyalty Accounts | One to one | A single customer can only have one loyalty account, and a loyalty account can only belong to one customer. Since the relationship is one-to-one, both Customers and Loyalty Accounts represent profile entities. |
-| Customers and Subscriptions | One to many | A single customer may have many subscriptions. Since the company is only concerned with a customer's current subscriptions, Customers is a profile entity, while Subscriptions is a lookup entity. |
+| Customer and Cart Checkout | One to many | A single customer may have many cart checkouts, which are events that can be tracked over time. Customer would therefore be a profile entity, while Cart Checkout would be an event entity. |
+| Customer and Loyalty Account | One to one | A single customer can only have one loyalty account, and a loyalty account can only belong to one customer. Since the relationship is one-to-one, both Customer and Loyalty Account represent profile entities. |
+| Customer and Subscription | One to many | A single customer may have many subscriptions. Since the company is only concerned with a customer's current subscriptions, Customer is a profile entity, while Subscription is a lookup entity. |
 
 {style="table-layout:auto"}
 
@@ -140,9 +140,9 @@ In this scenario, the company has two potential options for representing a custo
 
 #### Approach 1: Use profile attributes {#profile-approach}
 
-The first approach would be to include an array of subscriptions as attributes within the profile entity for Customers. Objects in this array would contain fields for `category`, `status`, `planName`, `startDate`, and `endDate`.
+The first approach would be to include an array of subscriptions as attributes within the profile entity for Customer. Objects in this array would contain fields for `category` and `planName`.
 
-![The Customers schema in the Schema Editor with the class and structure highlighted](../images/best-practices/profile-schema.png)
+![The Customer schema in the Schema Editor with the class and structure highlighted](../images/best-practices/profile-schema.png)
 
 **Pros**
 
@@ -158,7 +158,7 @@ The first approach would be to include an array of subscriptions as attributes w
 
 The second approach would be to use event schemas to represent subscriptions. This entails ingesting the same subscription fields as the first approach, with addition of a subscription ID, a customer ID, and a timestamp of when the subscription event occurred.
 
-![A diagram of the Subscription Events schema with the XDM Experience Event class and subscriptions structure highlighted.](../images/best-practices/event-schema.png)
+![A diagram of the Subscription Event schema with the XDM Experience Event class and subscriptions structure highlighted.](../images/best-practices/event-schema.png)
 
 **Pros**
 
@@ -186,7 +186,7 @@ The category that an entity has been sorted under should determine the XDM class
 >
 >While event entities are almost always represented by separate schemas, entities in the profile or lookup categories may be combined together in a single XDM schema, depending on their cardinality.
 >
->For example, since the Customers entity has a one-to-one relationship with the LoyaltyAccounts entity, the schema for the Customers entity could also include a `LoyaltyAccount` object to contain the appropriate loyalty fields for each customer. If the relationship is one to many, however, the entity that represents the "many" could be represented by a separate schema or an array of profile attributes, depending on its complexity.
+>For example, since the Customer entity has a one-to-one relationship with the LoyaltyAccount entity, the schema for the Customer entity could also include a `LoyaltyAccount` object to contain the appropriate loyalty fields for each customer. If the relationship is one to many, however, the entity that represents the "many" could be represented by a separate schema or an array of profile attributes, depending on its complexity.
 
 The sections below provide general guidance on constructing schemas based on your ERD.
 
