@@ -36,17 +36,17 @@ Next, grant your Platform single tenant account access to this key by adding new
 
 Navigate to the Platform UI. In the **[!UICONTROL Administration]** section of the left navigation rail, select **[!UICONTROL Encryption]**. The [!UICONTROL Encryption Configuration] workspace appears. Then select **[!UICONTROL Configure]** in the [!UICONTROL Customer Managed Keys] card.
 
-![The Platform Encryption Configuration workspace with Configure highlighted in the Customer Managed Keys card.](../../images/governance-privacy-security/key-management-service/encryption-configuration.png)
+![The Platform Encryption Configuration workspace with Configure highlighted in the Customer Managed Keys card.](../../../images/governance-privacy-security/key-management-service/encryption-configuration.png)
 
-The [!UICONTROL Customer Managed Keys configuration] appears. Select the copy icon (![A copy icon.](../../../images/icons/copy.png)) to copy the CMK KMS policy to your clipboard. A green pop-up notification confirms that the policy was copied. 
+The [!UICONTROL Customer Managed Keys configuration] appears. Select the copy icon (![A copy icon.](../../../../images/icons/copy.png)) to copy the CMK KMS policy to your clipboard. A green pop-up notification confirms that the policy was copied. 
 
-![The Customer Managed Keys configuration with the CMK KMS policy displayed and the copy icon highlighted.](../../../images/governance-privacy-security/key-management-service/copy-cmk-policy.png)
+![The Customer Managed Keys configuration with the CMK KMS policy displayed and the copy icon highlighted.](../../../../images/governance-privacy-security/key-management-service/copy-cmk-policy.png)
 
 <!-- This part of the workflow was in contention at the time of the demo.  -->
 
 Next, return to the AWS KMS workspace and update the key policy shown below.
 
-![The Review stage of the workflow with the updated policy and Finish highlighted.](../../../images/governance-privacy-security/key-management-service/updated-cmk-policy.png)
+![The Review stage of the workflow with the updated policy and Finish highlighted.](../../../../images/governance-privacy-security/key-management-service/updated-cmk-policy.png)
 
 Add to the default policy the four statements from the [!UICONTROL Platform Encryption Configuration] workspace, as seen below: `Enable IAM User Permissions`, `CJA Flow IAM User Permissions`, `CJA Integrity IAM User Permissions`, `CJA Oberon IAM User Permissions`.
 
@@ -153,26 +153,26 @@ The updated [!DNL Customer managed keys] workspace of the AWS [!DNL Key Manageme
 
 Next, to enable encryption, add the key's Amazon Resource Name (ARN) to your Platform [!UICONTROL Customer Managed Keys configuration]. From the [!DNL Customer Managed Keys] section of AWS, select the alias of your new key from the list in the [!DNL Key Management Service]. 
 
-![The AWS KMS Customer Managed Keys workspace with the new key alias highlighted.](../../images/governance-privacy-security/key-management-service/customer-managed-keys-on-aws.png)
+![The AWS KMS Customer Managed Keys workspace with the new key alias highlighted.](../../../images/governance-privacy-security/key-management-service/customer-managed-keys-on-aws.png)
 
 The details of your key are displayed. Everything in AWS has an Amazon Resource Name (ARN) which 
 is a unique identifier used to specify resources across AWS services. It follows a standardized format: `arn:partition:service:region:account-id:resource`.
 
 Select the copy icon to copy your ARN. A confirmation dialog appears. 
 
-![The key details of your AWS KMS Customer Managed Key with the ARN highlighted.](../../images/governance-privacy-security/key-management-service/keys-details-arn.png)
+![The key details of your AWS KMS Customer Managed Key with the ARN highlighted.](../../../images/governance-privacy-security/key-management-service/keys-details-arn.png)
 
 Now, navigate back to the Platform [!UICONTROL Customer Managed Keys configuration] UI. In the **[!UICONTROL Add AWS encryption key details]** section, add a **[!UICONTROL Configuration name]** and the **[!UICONTROL KMS key ARN]** you copied from the AWS UI.
 
-![The Platform Encryption Configuration workspace with Configuration name and KMS key ARN highlighted in the Add AWS encryption key details section.](../../images/governance-privacy-security/key-management-service/add-encryption-key-details.png)
+![The Platform Encryption Configuration workspace with Configuration name and KMS key ARN highlighted in the Add AWS encryption key details section.](../../../images/governance-privacy-security/key-management-service/add-encryption-key-details.png)
 
 Next, select **[!UICONTROL SAVE]** to submit the configuration name, the KMS key ARN, and begin validation of the key.
 
-![The Platform Encryption Configuration workspace with Save highlighted.](../../images/governance-privacy-security/key-management-service/save.png)
+![The Platform Encryption Configuration workspace with Save highlighted.](../../../images/governance-privacy-security/key-management-service/save.png)
 
 You are returned to the [!UICONTROL Encryption Configurations] workspace. The status of the encryption configuration is displayed on the bottom of the **[!UICONTROL Customer Managed Keys]** card. 
 
-![The Encryption Configurations workspace in the Platform UI with Processing highlighted on the Customer Managed Keys card.](../../images/governance-privacy-security/key-management-service/configuration-status.png)
+![The Encryption Configurations workspace in the Platform UI with Processing highlighted on the Customer Managed Keys card.](../../../images/governance-privacy-security/key-management-service/configuration-status.png)
 
 Once the key is validated, the key vault identifiers are added to the data lake and profile datastores for all sandboxes.
 
@@ -193,11 +193,11 @@ The following are key considerations for key revocation:
 
 To revoke a key, navigate to the AWS KMS workspace. The **[!DNL Customer managed keys]** section displays all the available keys for your AWS account. Select the alias of your key from the list. 
 
-![The AWS KMS Customer Managed Keys workspace with the new key alias highlighted.](../../images/governance-privacy-security/key-management-service/customer-managed-keys-on-aws.png)
+![The AWS KMS Customer Managed Keys workspace with the new key alias highlighted.](../../../images/governance-privacy-security/key-management-service/customer-managed-keys-on-aws.png)
 
 The details of your key are displayed. To disable the key, select **[!DNL Key actions]**, then **[!DNL Disable]** from the dropdown menu.
 
-![The details of your AWS key in the AWS KMS UI with Key actions and Disable highlighted.](../../images/governance-privacy-security/key-management-service/disable-key.png)
+![The details of your AWS key in the AWS KMS UI with Key actions and Disable highlighted.](../../../images/governance-privacy-security/key-management-service/disable-key.png)
 
 A confirmation dialog appears. Select **[!DNL Disable key]** to confirm your choice. The impact of disabling the key should be reflected in Platform applications and the UI within approximately five minutes.
 
@@ -205,15 +205,15 @@ A confirmation dialog appears. Select **[!DNL Disable key]** to confirm your cho
 >
 >Once you have disabled the key, you can enable the key again using the same method described above should you need to. This option is available from the **[!DNL Key actions]** dropdown.
 
-![The Disable key dialog with disable key highlighted.](../../images/governance-privacy-security/key-management-service/disable-key-dialog.png)
+![The Disable key dialog with disable key highlighted.](../../../images/governance-privacy-security/key-management-service/disable-key-dialog.png)
 
 Alternatively, if your key is used across other services, you can remove access for Experience Platform directly from the key policy. Select **[!UICONTROL Edit]** in the **[!DNL Key Policy]** section. 
 
-![The details section of the AWS key with Edit highlighted in the Key policy section.](../../images/governance-privacy-security/key-management-service/edit-key-policy.png)
+![The details section of the AWS key with Edit highlighted in the Key policy section.](../../../images/governance-privacy-security/key-management-service/edit-key-policy.png)
 
 The **[!DNL Edit key policy]** page appears. Highlight and delete the policy statement, copied form the Platform UI, to remove the permissions for the Customer Managed Keys app. Then, select **[!DNL Save changes]** to complete the process. 
 
-![The Edit key policy workspace on AWS with the statement JSON object and Save changes highlighted.](../../images/governance-privacy-security/key-management-service/delete-statement-and-save-changes.png)
+![The Edit key policy workspace on AWS with the statement JSON object and Save changes highlighted.](../../../images/governance-privacy-security/key-management-service/delete-statement-and-save-changes.png)
 
 ## Key rotation {#key-rotation}
 
@@ -223,7 +223,7 @@ AWS offers automatic and on-demand key rotation. To reduce the risk of key compr
 
 Automatic key rotation is disabled by default. To schedule automatic key rotation from the KMS workspace, select the **[!DNL Key rotation]** tab, followed by **[!DNL Edit]** in the **[!DNL Automatic key rotation section]**.
 
-![The details section of the AWS key with Key rotation and Edit highlighted.](../../images/governance-privacy-security/key-management-service/key-rotation.png)
+![The details section of the AWS key with Key rotation and Edit highlighted.](../../../images/governance-privacy-security/key-management-service/key-rotation.png)
 
 The **[!DNL Edit automatic key rotation]** workspace appears. From here, select the radio button to enable or disable automatic key rotation. Then use the text input field, or the dropdown menu, to choose a time period for the key rotation. Select **[!DNL Save]** to confirm your settings and return to the key details workspace.
 
@@ -231,13 +231,13 @@ The **[!DNL Edit automatic key rotation]** workspace appears. From here, select 
 >
 >The minimum key rotation period is 90 days, and the maximum is 2560 days.
 
-![The Edit automatic key rotation workspace with the rotation period and Save highlighted.](../../images/governance-privacy-security/key-management-service/automatic-key-rotation.png)
+![The Edit automatic key rotation workspace with the rotation period and Save highlighted.](../../../images/governance-privacy-security/key-management-service/automatic-key-rotation.png)
 
 ### On-demand key rotation {#on-demand-key-rotation}
 
 If the current key is compromised, select **[!DNL Rotate Now]** to rotate it immediately. AWS only permits 10 on-demand rotations. Use a scheduled key rotation unless security has already been compromised.
 
-![The details section of the AWS key with Rotate Now highlighted.](../../images/governance-privacy-security/key-management-service/on-demand-key-rotation.png)
+![The details section of the AWS key with Rotate Now highlighted.](../../../images/governance-privacy-security/key-management-service/on-demand-key-rotation.png)
 
 ## Next steps
 
