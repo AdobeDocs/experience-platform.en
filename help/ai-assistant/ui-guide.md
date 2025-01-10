@@ -69,10 +69,6 @@ AI Assistant updates the interface and provides you with links to documentation 
 
 ![A dropdown menu of the citations that AI Assistant provides for concept questions.](./images/citations.png)
 
-You can also use the suggestions that AI Assistant provides under **[!UICONTROL Related suggestions]** to further explore topics related to your original question.
-
-![A list of suggestions provided by AI Assistant.](./images/related-suggestions.png)
-
 +++
 
 ### Operational insights {#operational-insights}
@@ -121,9 +117,9 @@ When queried with an operational insights question, AI Assistant provides an SQL
 
 +++
 
-### Use auto-complete {#use-auto-complete}
+### Use entity auto-complete {#use-entity-auto-complete}
 
-You can use the autocomplete function to receive a list of data objects that exist in your sandbox. Autocomplete recommendations are available for the following domains: audiences, schemas, datasets, sources, and destinations.
+You can use the autocomplete function to receive a list of data objects that exist in your sandbox. Autocomplete recommendations are available for the following domains: audiences, schemas, datasets, journeys, sources, and destinations.
 
 +++Select to view an example of auto-complete
 
@@ -170,6 +166,44 @@ To view discoverability, select the lightbulb icon on the top header of the AI A
 Next, select a category and then select a prompt from the list provided. You can use this feature to get a better idea of the types of questions that AI Assistant can answer. You can also update the pre-existing prompts with specific details that pertain to your sandbox using free text or [autocomplete](#use-auto-complete).
 
 ![The AI Assistant prompts in discoverability.](./images/prompt.png)
+
++++
+
+### Use question autocomplete {#use-question-autocomplete}
+
+You can use AI Assistant's question autocomplete feature to select a question from a list of recommendations from AI Assistant. 
+
++++Select to view example of question autocomplete
+
+To view the panel of suggested questions, type at least seven (7) characters in the input box. Next, select the question that is relevant to you from the menu that appears.
+
+![The pop-up panel with suggested questions from AI Assistant.](./images/suggested_questions.png)
+
+You may need to update placeholders in some instances where a suggested question involves operational insights. For example, you may need to add the specific name of a dataset or an audience if the suggestion from AI Assistant includes placeholders.
+
+![A suggestion from AI Assistant that includes placeholders.](./images/placeholder.png)
+
+Placeholders are highlighted in blue. Select the placeholder to start updating its value. For best results on numerical placeholders, ensure that you use digits instead of text. You can also use the entity autocomplete feature to update the placeholder values. You cannot a send a question that has unfilled placeholders.
+
+**NOTE**: Suggestions are enabled by default. Select the **[!UICONTROL Suggest ideas]** toggle to disable the feature.
+
+![A suggestion from AI Assistant with updated placeholders.](./images/updated_placeholder.png)
+
++++
+
+### Use related suggestions {#use-related-suggestions}
+
+You can use the related suggestions section of every AI Assistant response to continue your conversation.
+
++++Select to view example of related suggestions
+
+Related suggestions are returned with every response from AI Assistant. To continue your conversation, select any of the suggestions in the related suggestions section.
+
+![A list of related suggestions from AI Assistant.](./images/related_suggestions.png)
+
+Similar to placeholders in question autocomplete, you will need to update placeholders that are included in related suggestions before you can submit the query.
+
+![A query from related suggestions with the placeholders updated.](./images/related_suggestions_placeholder.png)
 
 +++
 
