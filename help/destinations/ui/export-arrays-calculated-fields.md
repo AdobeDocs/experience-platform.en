@@ -21,18 +21,10 @@ Learn how to export arrays from Real-Time CDP to [cloud storage destinations](/h
 
 Arrays must currently be exported as strings, by using the `array_to_string` function.
 
-To export arrays, *unless you are exporting individual elements of an array*, you must use the calculated fields functionality in the mapping step of the export workflow. To get extensive information about calculated fields - what these are and why they matter - visit the pages linked below. These include for an introduction to calculated fields in Data Prep and more information about all the available functions: 
+To export arrays, you must use the calculated fields functionality in the mapping step of the export workflow,  *unless you are [exporting individual elements of an array](#index-based-array-access)*. For detailed information about calculated fields, visit the pages linked below. These include an introduction to calculated fields in Data Prep and more information about all the available functions: 
 
 * [UI guide and overview](/help/data-prep/ui/mapping.md#calculated-fields)
 * [Data Prep functions](/help/data-prep/functions.md)
-
-<!--
-
->[!IMPORTANT]
->
->Not all functions listed above are supported *when exporting fields to cloud storage destinations* using the calculated fields functionality. See the [supported functions section](#supported-functions) further below for more information.
-
--->
 
 ## Arrays and other object types in Platform {#arrays-strings-other-objects}
 
