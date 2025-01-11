@@ -1,5 +1,5 @@
 ---
-title: Customer-Managed Keys in Adobe Experience Platform
+title: Customer Managed Keys in Adobe Experience Platform
 description: Learn how to set up your own encryption keys for data stored in Adobe Experience Platform.
 role: Developer
 feature: Privacy
@@ -65,7 +65,7 @@ The process is as follows:
 1. [Configure an [!DNL Azure] Key Vault](./azure/azure-key-vault-config.md) based on your organization's policies, then [generate an encryption key](./azure/azure-key-vault-config.md#generate-a-key) to share with Adobe.  
 1. Set up the CMK app with your [!DNL Azure] tenant through either [API calls](./azure/api-set-up.md#register-app) or the [UI](./azure/ui-set-up.md#register-app).
 1. Send your encryption key ID to Adobe and start the enablement process for the feature, either [in the UI](./azure/ui-set-up.md#send-to-adobe) or with an [API call](./azure/api-set-up.md#send-to-adobe).
-1. Check the status of the configuration to verify whether CMK has been enabled, either [in the UI](./ui-set-up.md#check-status) or with an [API call](./azure/api-set-up.md#check-status).
+1. Check the status of the configuration to verify whether CMK has been enabled, either [in the UI](./azure/ui-set-up.md#check-status) or with an [API call](./azure/api-set-up.md#check-status).
 
 Once the setup process is complete for Azure-hosted Platform instances, all data onboarded into Platform across all sandboxes will be encrypted using your [!DNL Azure] key setup. To use CMK, you will leverage [!DNL Microsoft Azure] functionality that may be part of their [public preview program](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
 
