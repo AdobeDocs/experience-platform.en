@@ -61,8 +61,8 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
       * [Events](./governance-privacy-security/audit-logs/api/events.md)
       * [Export](./governance-privacy-security/audit-logs/api/export.md)
   * [Data encryption](./governance-privacy-security/encryption.md)
-  * Customer-managed keys {#customer-managed-keys}
-    * [Customer-managed keys](./governance-privacy-security/customer-managed-keys/overview.md)
+  * Customer Managed Keys {#customer-managed-keys}
+    * [Customer Managed Keys](./governance-privacy-security/customer-managed-keys/overview.md)
     * Azure {#azure}
       * [Configure an Azure Key Vault](./governance-privacy-security/customer-managed-keys/azure/azure-key-vault-config.md)
       * [Use the API to set up CMK](./governance-privacy-security/customer-managed-keys/azure/api-set-up.md)
