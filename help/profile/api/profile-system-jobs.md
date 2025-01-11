@@ -160,8 +160,8 @@ A successful response returns an array containing an object for each of the syst
 | Property | Description |
 | -------- | ----------- |
 | `requestId` | The ID of the system job. |
-| `requestType` | The type of the system job. Possible values include ???. |
-| `status` | The status of the system job. Possible values include `NEW`, `PROCESSING`, `COMPLETED`, and `ERROR`. |
+| `requestType` | The type of the system job. Possible values include `BACKFILL_TTL`, `DELETE_EE_BATCH`, and `TRUNCATE_DATASET`. |
+| `status` | The status of the system job. Possible values include `NEW`, `SUCCESS`, `ERROR`, and `IN-PROCESSING`. |
 | `properties` | An object that contains batch and/or dataset IDs of the system job. |
 
 +++
@@ -264,10 +264,9 @@ A successful response returns the details of the newly created system request.
 | Property | Description |
 | -------- | ----------- |
 | `requestId` | The ID of the system job. |
-| `requestType` | The type of the system job. Possible values include ???. |
-| `status` | The status of the system job. Possible values include `NEW`, `PROCESSING`, `COMPLETED`, and `ERROR`. |
+| `requestType` | The type of the system job. Possible values include `BACKFILL_TTL`, `DELETE_EE_BATCH`, and `TRUNCATE_DATASET`. |
+| `status` | The status of the system job. Possible values include `NEW`, `SUCCESS`, `ERROR`, and `IN-PROCESSING`. |
 | `properties` | An object that contains batch and/or dataset IDs of the system job. |
-
 
 >[!ENDTABS]
 
@@ -310,6 +309,14 @@ curl -X POST \
 
 **Response**
 
+>[!IMPORTANT]
+>
+>The following response differs between the Azure and AWS instances.
+
+>[!BEGINTABS]
+
+>[!TAB Microsoft Azure]
+
 A successful response returns the details of the newly created delete request, including a unique, system-generated, read-only ID for the request. This can be used to look up the request and check its status. The `"status"` for the request at time of creation is `"NEW"` until it begins processing. The `"batchId"` value in the response should match the `"batchId"` value sent in the request.
 
 ```json
@@ -329,7 +336,47 @@ A successful response returns the details of the newly created delete request, i
 | -------- | ----------- |
 | `id` | The unique, system-generated, read-only ID of the delete request. |
 | `datasetId` | The ID of the specified dataset. |
-| `batchId` | The ID of the batch, as specified in the POST request.|
+| `batchId` | The ID of the batch, as specified in the POST request. |
+
+>[!TAB Amazon Web Services (AWS)]
+
+A successful response returns the details of the newly created system request.
+
++++ A successful response for creating a delete request.
+
+```json
+{
+    "requestId": "80a9405a-21ca-4278-aedf-99367f90c055",
+    "requestType": "DELETE_EE_BATCH",
+    "imsOrgId": "{ORG_ID}",
+    "sandbox": {
+        "sandboxName": "prod",
+        "sandboxId": "8129954b-fa83-43ba-a995-4bfa8373ba2b"
+    },
+    "status": "SUCCESS",
+    "properties": {
+        "batchId": "01JFSYFDFW9JAAEKHX672JMPSB",
+        "datasetId": "66a92c5910df2d1767de13f3"
+    },
+    "createdAt": "2024-12-22T19:44:50.250006Z",
+    "updatedAt": "2024-12-22T19:52:13.380706Z"
+}
+```
+
++++
+
+| Property | Description |
+| -------- | ----------- |
+| `requestId` | The ID of the system job. |
+| `requestType` | The type of the system job. Possible values include `BACKFILL_TTL`, `DELETE_EE_BATCH`, and `TRUNCATE_DATASET`. |
+| `status` | The status of the system job. Possible values include `NEW`, `SUCCESS`, `ERROR`, and `IN-PROCESSING`. |
+| `properties` | An object that contains batch and/or dataset IDs of the system job. |
+
+>[!ENDTABS]
+
+>[!AVAILABILITY]
+>
+>The following feature is **only** available when using Platform on Microsoft Azure.
 
 If you attempt to initiate a delete request for a Record dataset batch, you will encounter a 400-level error, similar to the following:
 
@@ -357,15 +404,14 @@ To view a specific delete request, including details such as its status, you can
 GET /system/jobs/{DELETE_REQUEST_ID}
 ```
 
-|Parameter|Description|
-|---|---|
-|`{DELETE_REQUEST_ID}`|**(Required)** The ID of the delete request that you wish to view.|
+| Parameter | Description |
+| --------- | ----------- |
+|`{DELETE_REQUEST_ID}`| **(Required)** The ID of the delete request that you wish to view. |
 
 **Request**
 
 ```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
+curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -373,6 +419,14 @@ curl -X GET \
 ```
 
 **Response**
+
+>[!IMPORTANT]
+>
+>The following response differs between the Azure and AWS instances.
+
+>[!BEGINTABS]
+
+>[!TAB Microsoft Azure]
 
 The response provides the details of the delete request, including its updated status. The ID of the delete request in the response (the `"id"` value) should match the ID sent in the request path.
 
@@ -389,11 +443,47 @@ The response provides the details of the delete request, including its updated s
 }
 ```
 
-|Properties|Description|
-|---|---|
-|`jobType`|The type of job being created, in this case it will always return `"DELETE"`.|
-|`status`|The status of the delete request. Possible values: `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`.|
-|`metrics`|An array that includes the number of records that have been processed (`"recordsProcessed"`) and the time in seconds that the request has been processing, or how long the request took to complete (`"timeTakenInSec"`).|
+| Properties | Description |
+| ---------- | ----------- |
+| `jobType` | The type of job being created, in this case it will always return `"DELETE"`. |
+| `status` | The status of the delete request. Possible values include `NEW`, `PROCESSING`, `COMPLETED`, and `ERROR`. |
+| `metrics` | An array that includes the number of records that have been processed (`"recordsProcessed"`) and the time in seconds that the request has been processing, or how long the request took to complete (`"timeTakenInSec"`). |
+
+>[!TAB Amazon Web Services (AWS)]
+
+A successful response returns the details of the specified system request.
+
++++ A successful response for viewing a delete request.
+
+```json
+{
+    "requestId": "9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4",
+    "requestType": "DELETE_EE_BATCH",
+    "imsOrgId": "{ORG_ID}",
+    "sandbox": {
+        "sandboxName": "prod",
+        "sandboxId": "8129954b-fa83-43ba-a995-4bfa8373ba2b"
+    },
+    "status": "SUCCESS",
+    "properties": {
+        "batchId": "01JFSYFDFW9JAAEKHX672JMPSB",
+        "datasetId": "66a92c5910df2d1767de13f3"
+    },
+    "createdAt": "2024-12-22T19:44:50.250006Z",
+    "updatedAt": "2024-12-22T19:52:13.380706Z"
+}
+```
+
++++
+
+| Property | Description |
+| -------- | ----------- |
+| `requestId` | The ID of the system job. |
+| `requestType` | The type of the system job. Possible values include `BACKFILL_TTL`, `DELETE_EE_BATCH`, and `TRUNCATE_DATASET`. |
+| `status` | The status of the system job. Possible values include `NEW`, `SUCCESS`, `ERROR`, and `IN-PROCESSING`. |
+| `properties` | An object that contains batch and/or dataset IDs of the system job. |
+
+>[!ENDTABS]
 
 Once the delete request status is `"COMPLETED"` you can confirm that the data has been deleted by attempting to access the deleted data using the Data Access API. For instructions on how to use the Data Access API to access datasets and batches, please review the [Data Access documentation](../../data-access/home.md).
 
