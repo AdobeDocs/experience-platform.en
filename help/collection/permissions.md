@@ -21,6 +21,11 @@ The relevant permissions for Data Collection are provided through two product de
 
 ### Adobe Experience Platform permissions
 
+>[!CONTEXTUALHELP]
+>id="platform_tags_permissions"
+>title="Permissions"
+>abstract="Understand the key permissions required for working with datastreams, schemas, identities, and sandboxes within Adobe Experience Platform."
+
 Permissions under Adobe Experience Platform include access to datastreams, identities, schemas, and sandboxes. For steps on how to configure Adobe Experience Platform permissions, see the [access control user guide](../access-control/ui/overview.md).
 
 | Category | Permission | Description |

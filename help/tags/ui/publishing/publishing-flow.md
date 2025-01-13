@@ -17,6 +17,11 @@ The sections below cover the details about permissions, library state, and the u
 
 ## Permissions {#permissions}
 
+>[!CONTEXTUALHELP]
+>id="platform_tags_publishing_flow"
+>title="Publishing Flow"
+>abstract="Understand the levels of user permissions required for the publishing workflow, including Develop, Approve, and Publish rights."
+
 There are different levels of user permissions that are important for the publishing flow; specifically, the [!UICONTROL Develop], [!UICONTROL Approve], and [!UICONTROL Publish] property rights:
 
 * **[!UICONTROL Develop]**: Includes the ability to create libraries, build for development, and submit for approval.
