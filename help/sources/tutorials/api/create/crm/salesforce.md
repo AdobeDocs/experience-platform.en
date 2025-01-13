@@ -63,7 +63,9 @@ For information on how to successfully make calls to Platform APIs, see the guid
 
 A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
-To create a base connection ID, make a POST request to the `/connections` endpoint and provide your [!DNL Salesforce] authentication credentials in the request body.
+### Create a base connection for [!DNL Salesforce] in Experience Platform on [!DNL Azure] {#azure}
+
+To create a base connection and connect your [!DNL Salesforce] account to Experience Platform on [!DNL Azure], make a POST request to the `/connections` endpoint and provide your [!DNL Salesforce] authentication credentials in the request body.
 
 **API format**
 
@@ -166,7 +168,7 @@ A successful response returns your newly created base connection along with its 
 }
 ```
 
-## Create a base connection for [!DNL Salesforce] in Experience Platform on Amazon Web Services
+### Create a base connection for [!DNL Salesforce] in Experience Platform on Amazon Web Services
 
 >[!AVAILABILITY]
 >
@@ -190,7 +192,6 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
       "name": "ACME Salesforce account on AWS",
@@ -210,6 +211,8 @@ curl -X POST \
       }
   }'
 ```
+
+For information on how to retrieve your [!DNL Salesforce] `jwtToken`, read the guide on [how to set up a [!DNL Salesforce] source to connect to Experience Platform on AWS](../../../../connectors/crm/salesforce.md#aws).
 
 **Response**
 
@@ -234,13 +237,14 @@ GET /connections
 
 **Request**
 
+The following request retrieves information for base connection ID: `3e908d3f-c390-482b-9f44-43d3d4f2eb82`.
+
 ```shell
 curl -X GET \
   'https://platform.adobe.io/data/foundation/flowservice/connections/3e908d3f-c390-482b-9f44-43d3d4f2eb82' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
 ```
 
@@ -250,6 +254,8 @@ curl -X GET \
 
 >[!TAB Initializing]
 
+The following response displays information for base connection ID: `3e908d3f-c390-482b-9f44-43d3d4f2eb82` while in the `initializing` state.
+
 ```json
 {
   "items": [
@@ -257,13 +263,13 @@ curl -X GET \
       "id": "3e908d3f-c390-482b-9f44-43d3d4f2eb82",
       "createdAt": 1736506325115,
       "updatedAt": 1736506325717,
-      "createdBy": "1F1B1D4F66A918B10A495CCB@techacct.adobe.com",
-      "updatedBy": "1F1B1D4F66A918B10A495CCB@techacct.adobe.com",
-      "createdClient": "2b08c726a19d4795a0cf9adf2941b85c",
-      "updatedClient": "2b08c726a19d4795a0cf9adf2941b85c",
-      "sandboxId": "0f4ae261-59da-4e79-8ae2-6159dafe79a8",
-      "sandboxName": "prod",
-      "imsOrgId": "E5391D6F669E86C00A495F94@AdobeOrg",
+      "createdBy": "acme@techacct.adobe.com",
+      "updatedBy": "acme@techacct.adobe.com",
+      "createdClient": "{CREATED_CLIENT}",
+      "updatedClient": "{UPDATED_CLIENT}",
+      "sandboxId": "{SANDBOX_ID}",
+      "sandboxName": "{SANDBOX_NAME}",
+      "imsOrgId": "{ORG_ID}",
       "name": "JWT Token Auth Authentication E2E-1736506322",
       "description": "Base Connection for salesforce E2E",
       "connectionSpec": {
@@ -274,10 +280,10 @@ curl -X GET \
       "auth": {
         "specName": "OAuth2 JWT Token Credential",
         "params": {
-          "jwtToken": "arn:aws:secretsmanager:us-east-1:471112644566:secret:acp_security/74fb5788-62d2-4d87-b36e-5cf5dea4726e-GH7St7",
-          "clientId": "3MVG9GCMQoQ6rpzS9G2wBKFe5scFdYC5MV7vrmKHnX5x5yRe6erZPwOr4WvnOcHI8hqZfIk5yhCyryhmFCtSD",
-          "clientSecret": "arn:aws:secretsmanager:us-east-1:471112644566:secret:acp_security/2d21ed70-f75a-4421-bba4-4c9a2e51715e-UMuOtZ",
-          "instanceUrl": "https://adb8-dev-ed.develop.my.salesforce.com"
+          "jwtToken": "{JWT_TOKEN}",
+          "clientId": "{CLIENT_ID}",
+          "clientSecret": "{CLIENT_SECRET}",
+          "instanceUrl": "https://acme-enterprise-3126.my.salesforce.com"
         }
       }
     }
@@ -287,6 +293,8 @@ curl -X GET \
 
 >[!TAB Enabled]
 
+The following response displays information for base connection ID: `3e908d3f-c390-482b-9f44-43d3d4f2eb82` while in the `enabled` state.
+
 ```json
 {
   "items": [
@@ -294,13 +302,13 @@ curl -X GET \
         "id": "3e908d3f-c390-482b-9f44-43d3d4f2eb82",
         "createdAt": 1736506325115,
         "updatedAt": 1736506413299,
-        "createdBy": "1F1B1D4F66A918B10A495CCB@techacct.adobe.com",
-        "updatedBy": "acp_foundation_connectors@AdobeID",
-        "createdClient": "2b08c726a19d4795a0cf9adf2941b85c",
-        "updatedClient": "acp_foundation_connectors",
-        "sandboxId": "0f4ae261-59da-4e79-8ae2-6159dafe79a8",
-        "sandboxName": "prod",
-        "imsOrgId": "E5391D6F669E86C00A495F94@AdobeOrg",
+        "createdBy": "acme@techacct.adobe.com",
+        "updatedBy": "acme@AdobeID",
+        "createdClient": "{CREATED_CLIENT}",
+        "updatedClient": "acme",
+        "sandboxId": "{SANDBOX_ID}",
+        "sandboxName": "{SANDBOX_NAME}",
+        "imsOrgId": "{ORG_ID}",
         "name": "JWT Token Auth Authentication E2E-1736506322",
         "description": "Base Connection for salesforce E2E",
         "connectionSpec": {
@@ -311,9 +319,9 @@ curl -X GET \
         "auth": {
           "specName": "OAuth2 JWT Token Credential",
           "params": {
-            "jwtToken": "arn:aws:secretsmanager:us-east-1:471112644566:secret:acp_security/74fb5788-62d2-4d87-b36e-5cf5dea4726e-GH7St7",
-            "clientId": "3MVG9GCMQoQ6rpzS9G2wBKFe5scFdYC5MV7vrmKHnX5x5yRe6erZPwOr4WvnOcHI8hqZfIk5yhCyryhmFCtSD",
-            "clientSecret": "arn:aws:secretsmanager:us-east-1:471112644566:secret:acp_security/2d21ed70-f75a-4421-bba4-4c9a2e51715e-UMuOtZ",
+            "jwtToken": "{JWT_TOKEN}",
+            "clientId": "{CLIENT_ID}",
+            "clientSecret": "{CLIENT_SECRET}",
             "instanceUrl": "https://adb8-dev-ed.develop.my.salesforce.com",
             "orgId": "00DdL000001iPRxUAM"
           }
