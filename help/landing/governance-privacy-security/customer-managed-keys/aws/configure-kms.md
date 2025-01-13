@@ -18,9 +18,7 @@ For Customer Journey Analytics-specific instructions, refer to the [Customer Jou
 >
 >Adobe Experience Platform encrypts data at rest by default using system-managed keys. By enabling Customer Managed Keys (CMK), you take full control of your data security. However, this change is irreversible, once CMK is enabled, you cannot revert to system-managed keys. You are responsible for securely managing your keys to ensure uninterrupted access to your data and prevent potential inaccessibility.
 
-This guide details the process to create and manage encryption keys in AWS KMS to secure your data in Experience Platform.
-
-<!-- **Next Step**: Expand this section to explain what AWS KMS does and its role in Adobe Experience Platform. -->
+Use AWS KMS to enhance data security with integrated encryption key management for Adobe Experience Platform. Follow this guide to create and manage encryption keys, ensuring your data remains protected.
 
 ## Prerequisites {#prerequisites}
 
@@ -35,11 +33,15 @@ Refer to the [IAM Policies for AWS KMS official documentation](https://docs.aws.
 - **Data Security in Experience Platform**: Explore how Platform ensures data security and integrates with external services like AWS KMS for encryption. Platform protects data with HTTPS TLS v1.2 for transit, cloud-provider encryption at rest, isolated storage, and customizable authentication and encryption options. See the [governance, privacy, and security overview](../overview.md), or the document on [data encryption in Platform](../../encryption.md) for more information on how your data is kept secure.
 - **AWS Management Console**: A central hub where you can access and manage all your AWS services from one web-based application. Use the search bar to quickly find tools, check notifications, manage your account and billing, and customize your settings. Refer to the [official AWS management console documentation](https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/what-is.html) for more information.
 
-<!-- **Next Step**: Add instructions for ensuring users meet these prerequisites, including links to check their AWS account and permissions. -->
-
 ## Get started {#get-started}
 
 This guide requires that you already have access to an Amazon Web Services account and access to the management console. Follow the steps below to get started:
+
+### Select a supported region {#select-supported-region}
+
+AWS KMS is available in specific regions. Make sure you are operating in a region where KMS is supported. You can view a complete list of supported regions in the [AWS KMS endpoints and quotas list](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/).
+
+Ensure your AWS KMS encryption key is in the same region as your Adobe Experience Platform instance to maintain compliance with data residency requirements, optimize performance, and avoid additional cross-region costs. Misaligned regions can result in data inaccessibility and integration failures.
 
 ### Verify permissions {#verify-permissions}
 
@@ -51,19 +53,9 @@ Ensure that you have the necessary AWS Identity and Access Management (IAM) perm
 
 If the simulation returns an error or you are unsure about your permissions, consult your AWS administrator for assistance.
 
-<!-- **Next Step**: Confirm if this should remain in the configuration document or move to the UI/API setup. -->
-
 ### Check your AWS account configuration
 
 Confirm that your AWS account is enabled to use AWS KMS services. Most accounts have KMS access enabled by default, but you can review your account setup by visiting the [AWS Management Console](https://aws.amazon.com/console/). For more details, see the [AWS Key Management Service Developer guide](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html).
-
-<!-- **Next Step**: Consider adding specific checks or screenshots for clarity. -->
-
-### Select a supported region {#select-supported-region}
-
-AWS KMS is available in specific regions. Make sure you are operating in a region where KMS is supported. You can view a complete list of supported regions in the [AWS KMS endpoints and quotas list](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/).
-
-<!-- **Next Step**: Add details about region restrictions and their implications for Adobe Experience Platform integration. -->
 
 ### Navigate to AWS KMS to begin key setup
 
@@ -92,8 +84,6 @@ Expand the **[!DNL Advanced options]** dropdown menu. You are recommended to use
 >[!NOTE]
 >
 >If you already have an existing key, you can import external key material or use the AWS [!DNL CloudHSM] key store. These options are not covered in the scope of this document.
-
-<!-- **Next Step**: Summarize other advanced options like importing external key material or using AWS [!DNL CloudHSM], and indicate why they are excluded from the document. -->
 
 Next, select the [!DNL Regionality] setting, which specifies the region scope of the key. Select **[!DNL Single-Region key]**, followed by **[!DNL Next]** to proceed onto step two.
 
