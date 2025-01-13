@@ -7,7 +7,7 @@ exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
 ---
 # Account Profile insights
 
-[Account profiles](../../rtcdp/accounts/account-profile-overview.md) are used to consolidate account information from various sources, including multiple marketing channels and organizational systems. This unified view enables a comprehensive understanding of customer accounts, enhancing B2B marketing campaigns. The insights derived from the analysis of your data model make your Adobe Real-time Customer Data Platform B2B data more accessible, understandable, and impactful for decision-making.
+[Account profiles](../../rtcdp/accounts/account-profile-overview.md) are used to consolidate account information from various sources, including multiple marketing channels and organizational systems. This unified view enables a comprehensive understanding of customer accounts, enhancing B2B marketing campaigns. The insights derived from the analysis of your data model make your Adobe Real-Time CDP B2B data more accessible, understandable, and impactful for decision-making.
 
 With access to the SQL that powers your insights, you can better understand your B2B data and generate your own highly customized reusable insights to further explore your customer account information. Transform your raw data into new actionable insights by using the existing Real-Time CDP data model SQL as inspiration to create queries for your unique business needs. 
 

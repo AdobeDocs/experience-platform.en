@@ -36,6 +36,19 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Automated dataset expirations"
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Pseudonymous profiles data expiration"
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_predictedusage_computehours"
+>title="Predicted Compute Hours"
+>abstract="Your usage might reach the licensed amount. To assess or reduce your compute hours, navigate to Queries > Log to review your query history. If you do not have permission to access the Queries workspace, please contact your administrator."
+>additional-url="https://experience.adobe.com/#/platform/query/log" text="Queries Log workspace"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_predictedusage_addressableaudience"
+>title="Predicted Addressable Audience"
+>abstract="Your usage might reach the licensed amount. To reduce usage, you can configure dataset or pseudonymous profile data expirations for sandboxes and datasets."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/event-expirations" text="Experience Event expirations"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Pseudonymous profiles data expiration"
+
 You can view important information about your organization's license usage through the Adobe Experience Platform [!UICONTROL License usage] dashboard. The information displayed here is captured during a daily snapshot of your Platform instance. 
 
 License usage reports provide a high degree of granularity over your license usage metrics. The dashboard provides usage metrics for each purchased product (and associated add-ons), the consolidated usage of metrics in all production or development sandboxes, and the usage metric from a specific sandbox. The following Experience Platform applications can be tracked with usage metrics: Real-Time Customer Data Platform, Adobe Journey Optimizer, and Customer Journey Analytics.
