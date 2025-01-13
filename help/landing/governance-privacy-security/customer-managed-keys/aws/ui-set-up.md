@@ -40,13 +40,13 @@ Navigate to the Platform UI. In the **[!UICONTROL Administration]** section of t
 
 The [!UICONTROL Customer Managed Keys configuration] appears. Select the copy icon (![A copy icon.](../../../../images/icons/copy.png)) to copy the CMK KMS policy to your clipboard. A green pop-up notification confirms that the policy was copied. 
 
-![The Customer Managed Keys configuration with the CMK KMS policy displayed and the copy icon highlighted.](../../../../images/governance-privacy-security/key-management-service/copy-cmk-policy.png)
+![The Customer Managed Keys configuration with the CMK KMS policy displayed and the copy icon highlighted.](../../../images/governance-privacy-security/key-management-service/copy-cmk-policy.png)
 
 <!-- This part of the workflow was in contention at the time of the demo.  -->
 
 Next, return to the AWS KMS workspace and update the key policy shown below.
 
-![The Review stage of the workflow with the updated policy and Finish highlighted.](../../../../images/governance-privacy-security/key-management-service/updated-cmk-policy.png)
+![The Review stage of the workflow with the updated policy and Finish highlighted.](../../../images/governance-privacy-security/key-management-service/updated-cmk-policy.png)
 
 Add to the default policy the four statements from the [!UICONTROL Platform Encryption Configuration] workspace, as seen below: `Enable IAM User Permissions`, `CJA Flow IAM User Permissions`, `CJA Integrity IAM User Permissions`, `CJA Oberon IAM User Permissions`.
 
