@@ -5,13 +5,11 @@ last-substantial-update: 2025-01-14
 badgeBeta: label="Beta" type="Informative"
 ---
 
-# Marketo Engage Person Sync
+# Marketo Engage Person Sync connection {#marketo-engage-person-sync}
 
 >[!IMPORTANT]
 >
 >This destination connector is in beta and only available to select customers. To request access, contact your Adobe representative.
-
-# Marketo Engage Person Sync connection {#marketo-engage-person-sync}
 
 ## Overview {#overview}
 
