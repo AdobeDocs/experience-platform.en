@@ -13,7 +13,7 @@ Data stored on Adobe Experience Platform is encrypted at rest using system-level
 >
 >Adobe Experience Platform supports Customer Managed Keys (CMK) for both Microsoft Azure and Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. If your implementation runs on AWS, you have the option of using the Key Management Service (KMS) for Platform data encryption. For more information about the supported infrastructure, see the [Experience Platform multi-cloud overview](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).  
 >
->To learn about encryption key creation and management in AWS KMS, refer to the [AWS KMS data encryption guide](../key-management-service/overview.md). For Azure implementations, see the [Azure Key Vault configuration guide](./azure-key-vault-config.md).
+>To learn about encryption key creation and management in AWS KMS, refer to the [AWS KMS data encryption guide](../key-management-service/overview.md). For Azure implementations, see the [Azure Key Vault configuration guide](./azure/azure-key-vault-config.md).
 
 >[!NOTE]
 >
@@ -72,8 +72,10 @@ Once the setup process is complete for Azure-hosted Platform instances, all data
 ### For AWS {#aws-process-summary}
 
 1. [Set up AWS KMS](../key-management-service/overview.md) by configuring an encryption key to be shared with Adobe.  
-2. Follow the AWS-specific instructions in the [UI setup guide](../key-management-service/ui-set-up.md) or [API setup guide](../key-management-service/api-set-up.md).  
+2. Follow the AWS-specific instructions in the [UI setup guide](./aws/ui-set-up.md).  
 3. Validate the setup to confirm that Platform data is encrypted using the AWS-hosted key.
+
+<!--  Pending: or [API setup guide](../key-management-service/api-set-up.md) -->
 
 Once the setup process is complete for AWS-hosted Platform instances, all data onboarded into Platform across all sandboxes will be encrypted using your AWS Key Management Service (KMS) configuration. To use CMK on AWS, you will use the AWS Key Management Service to create and manage your encryption keys in alignment with your organization's security requirements.
 
@@ -107,5 +109,5 @@ For example, the Profile dashboard will continue to display data from its cache 
 
 To begin the process:
 
-- For Azure: Start by [configuring an [!DNL Azure] Key Vault](./azure/azure-key-vault-config.md) and [generate an encryption key](./azure-key-vault-config.md#generate-a-key) to share with Adobe.  
+- For Azure: Start by [configuring an [!DNL Azure] Key Vault](./azure/azure-key-vault-config.md) and [generate an encryption key](./azure/azure-key-vault-config.md#generate-a-key) to share with Adobe.  
 - For AWS: [Set up AWS KMS](./aws/configure-kms.md) and ensure proper IAM and KMS configurations before proceeding to the UI or API setup guides.  
