@@ -1,13 +1,13 @@
 ---
-title: Configure an Azure Key Vault
+title: Configure an Azure Key Vault for Customer Managed Keys
 description: Learn how to create a new enterprise account with Azure, or use an existing enterprise account and create the Key Vault.
 role: Developer
 feature: Privacy
 exl-id: 670e3ca3-a833-4b28-9ad4-73685fa5d74d
 ---
-# Configure an [!DNL Azure] Key Vault
+# Configure an [!DNL Azure] Key Vault for Customer Managed Keys
 
-Customer-managed keys (CMK) only supports keys from a [!DNL Microsoft Azure] Key Vault. To get started, you must work with [!DNL Azure] to create a new enterprise account, or use an existing enterprise account and follow the steps below to create the Key Vault.
+Customer Managed Keys (CMK) support keys from both [!DNL Microsoft Azure] Key Vaults and AWS [!DNL Key Management Service (KMS)]. If your implementation is hosted on [!DNL Azure], follow the steps below to create a Key Vault. For AWS-hosted implementations, refer to the [AWS KMS configuration guide](../aws/configure-kms.md).
 
 >[!IMPORTANT]
 >
@@ -59,7 +59,7 @@ Once you have created a Key Vault, you can generate a new key. Navigate to the *
 
 ![The [!DNL Keys] tab of [!DNL Azure] with [!DNL Generate import] highlighted.](../../../images/governance-privacy-security/customer-managed-keys/view-keys.png)
 
-Use the provided form to provide a name for the key, and select either **RSA** or **RSA-HSM** for the key type. At a minimum, the **[!DNL RSA key size]** must be at least **3072** bits as required by [!DNL Cosmos DB]. [!DNL Azure Data Lake Storage] is also compatible with RSA 3027.
+Use the provided form to provide a name for the key, and select either **RSA** or **RSA-HSM** for the key type. For [!DNL Azure]-hosted implementations, the **[!DNL RSA key size]** must be at least **3072** bits as required for [!DNL Azure Cosmos DB]. [!DNL Azure Data Lake Storage] is also compatible with RSA 3027.
 
 >[!NOTE]
 >
@@ -75,4 +75,7 @@ The configured key appears in the list of keys for the vault.
 
 ## Next steps
 
-To continue the one-time process for setting up the customer-managed keys feature, continue with either the [API](./api-set-up.md) or [UI](./ui-set-up.md) customer-managed keys setup guides.
+To continue the one-time process for setting up the Customer Managed Keys feature, follow the setup guides for your platform's hosting environment:  
+
+- For [!DNL Azure], use the [API](./api-set-up.md) or [UI](./ui-set-up.md) setup guides.  
+- For AWS, refer to the [AWS configure KMS guide](../aws/configure-kms.md) and the [UI setup guide](../aws/ui-set-up.md).
