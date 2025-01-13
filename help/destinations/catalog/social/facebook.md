@@ -146,6 +146,22 @@ The video below also demonstrates the steps to configure a [!DNL Facebook] desti
   ![Authenticate to Facebook step shown in the activation workflow.](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
 3. Enter your Facebook credentials and select **Log In**.
 
+### Refresh authentication credentials {#refresh-authentication-credentials}
+
+Facebook tokens expire every 60 days. Once the token is expired, data exports to the destination stop working. To prevent this situation, reauthenticate by performing the following steps:
+
+1. Navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**
+2. (Optional) Use the available filters on the page to display Facebook accounts only.
+    ![Filter to show Facebook accounts only](/help/destinations/assets/catalog/social/facebook/refresh-oauth-filters.png)
+3. Select the account that you want to refresh, select the ellipsis and select **[!UICONTROL Edit details]**. 
+    ![Select Edit details control](/help/destinations/assets/catalog/social/facebook/refresh-oauth-edit-details.png)
+4. In the modal window, select **[!UICONTROL Reconnect OAuth]** and reauthenticate with your Facebook credentials.
+    ![Modal window with Reconnect OAuth option](/help/destinations/assets/catalog/social/facebook/reconnect-oauth-control.png)
+
+>[!SUCCESS]
+> 
+>Your authentication credentials are refreshed and their expiration time is reset to 60 days.
+
 ### Fill in destination details {#destination-details}
 
 >[!CONTEXTUALHELP]

@@ -9,7 +9,7 @@ exl-id: 5c914e8a-d8ed-469f-b17a-26a85705e9ef
 
 >[!WARNING]
 >
->The [!DNL Oracle Service Cloud] source will be deprecated at the end of May 2025.
+>The [!DNL Oracle Service Cloud] source will be deprecated at the end of June 2025.
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 

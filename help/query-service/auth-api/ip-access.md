@@ -38,7 +38,7 @@ GET /security/ip-access
 **Request**
 
 ```shell
-curl -X GET https://platform.adobe.io/data/foundation/query/security/ip-access \
+curl -X GET https://platform.adobe.io/data/foundation/queryauth/security/ip-access \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
@@ -87,7 +87,7 @@ PUT /security/ip-access
 **Request**
 
 ```shell
-curl -X PUT https://platform.adobe.io/data/foundation/query/security/ip-access \
+curl -X PUT https://platform.adobe.io/data/foundation/queryauth/security/ip-access \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -138,7 +138,7 @@ DELETE /security/ip-access
 **Request**
 
 ```shell
-curl -X DELETE https://platform.adobe.io/data/foundation/query/security/ip-access \
+curl -X DELETE https://platform.adobe.io/data/foundation/queryauth/security/ip-access \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \

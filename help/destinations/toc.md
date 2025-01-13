@@ -168,7 +168,9 @@ role: Admin,User
         * [[!DNL Salesforce Marketing Cloud Account Engagement]](./catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md)
         * [SendGrid connection](./catalog/email-marketing/sendgrid.md)
     * Tag extensions {#launch-extensions}
-        * [Tag extension overview](./catalog/launch-extensions/overview.md)  
+        * [Tag extension overview](./catalog/launch-extensions/overview.md)
+    * Marketing automation {#marketing-automation}
+        * [RainFocus Attendee Profiles](/help/destinations/catalog/marketing-automation/rainfocus.md) 
     * Mobile engagement destinations {#mobile-engagement}
         * [Mobile engagement destinations overview](./catalog/mobile-engagement/overview.md)
         * [Airship Attributes connection](./catalog/mobile-engagement/airship-attributes.md)
@@ -195,6 +197,7 @@ role: Admin,User
     * Social destinations{#social}
         * [Social destinations overview](./catalog/social/overview.md)
         * [Facebook connection](./catalog/social/facebook.md)
+        * [(Companies) LinkedIn Matched Audiences connection](./catalog/social/linkedin-b2b.md)
         * [LinkedIn Matched Audiences connection](./catalog/social/linkedin.md)
         * [TikTok connection](./catalog/social/tiktok.md)
         * [[!DNL Twitter Custom Audiences] connection](./catalog/social/twitter.md)
