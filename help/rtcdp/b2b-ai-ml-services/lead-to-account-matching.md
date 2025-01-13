@@ -18,7 +18,7 @@ Account-based marketing is an increasingly important strategy for B2B marketing.
 - Fewer wasted resources 
 - A shorter sales cycle
 
-Account-based marketing provides the capability to link known people and anonymous web visitors to sales accounts. This allows marketing teams to engage with potential leads from the target accounts early in the customer journey to increase their chances of conversion. A known person record typically includes part or all of the following information:
+Account-based marketing provides the capability to link known customers to sales accounts. This allows marketing teams to engage with potential leads from the target accounts early in the customer journey to increase their chances of conversion. A known person record typically includes part or all of the following information:
 
 - Person name
 - Email address
@@ -27,30 +27,6 @@ Account-based marketing provides the capability to link known people and anonymo
 - Company website
 - Job title
 - Location
-
-Lead to account matching enables you to join known person profiles to account profiles. You can then segment and target data in a B2B context such as accounts, opportunities, and so on. The person profiles can be classified into the following three categories:
-
-- **Account person profile:** The person profile is already associated to at least one account profile through the relationship from a data source. This implies that there is at least one contact fragment. 
-
->[!NOTE]
->
-> Account person profiles are not matched when running lead to account matching jobs.
-
-- **Known person profile:** The person profile is NOT associated to any account profile, and at least one of the following person profile attributes has a value:
-
-    - Email address
-    - Company name
-    - Company website
-
-- **Anonymous person profile:** The person profile is NOT associated to any account profile, and none of the following person profile attributes has a value:
-  
-    - Email address
-    - Company name
-    - Company website
-
->[!NOTE]
->
-> A person profile may be related to multiple account profiles. However, the lead to account matching process will only match to the best match. If a broader set of matches is required, couple the lead to account matching with the related accounts feature.
 
 ## How it works {#how-it-works}
 
