@@ -48,7 +48,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item             | Type      | Notes                                                                                                                                                                                                                                                                                                                                                                                     |
 | ---------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Export frequency | Streaming | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types#streaming-destinations). |
+| Export frequency | Streaming | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -137,4 +137,4 @@ In some cases it is desirable to allow integrations to set the value of a field 
 
 ## Data Usage and Governance {#data-usage-and-governance}
 
-All Adobe Experience Platform destinations are compliant with data usage policies when handling your data. For detailed information on how Adobe Experience Platform enforces data governance, see the [data governance overview](/help/experience-platform/data-governance/home).
+All Adobe Experience Platform destinations are compliant with data usage policies when handling your data. For detailed information on how Adobe Experience Platform enforces data governance, see the [data governance overview](/help/data-governance/home.md).
