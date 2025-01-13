@@ -1,8 +1,8 @@
 ---
-title: Set up and Configure Customer-Managed Keys with AWS using the Platform UI
+title: Set up and Configure Customer Managed Keys with AWS using the Platform UI
 description: Learn how to set up your CMK app with your Amazon Resource Name (ARN) and send your encryption key ID to Adobe Experience Platform.
 ---
-# Set up and Configure Customer-Managed Keys with AWS using the Platform UI
+# Set up and Configure Customer Managed Keys with AWS using the Platform UI
 
 Use this guide to enable Customer Managed Keys (CMK) for Platform instances hosted on AWS through the Platform UI. 
 
@@ -34,7 +34,7 @@ To integrate your AWS key with Experience Platform, you must edit the JSON in th
 }
 ```
 
-In the example above, all resources (`"Resource": "*"`) within the same account (`Principal.AWS`) can access the key. This policy allows services in the account to perform encryption and decryption operations, restricted to the specified account. To grant your Platform single-tenant account access to this key, add new statements to the default AWS policy. You can obtain the required JSON policy from the Platform UI and apply it to your AWS KMS key to securely link it to Adobe Experience Platform.
+In the example above, all resources (`"Resource": "*"`) within the same account (`Principal.AWS`) can access the key. This policy allows services in the account to perform encryption and decryption operations, restricted to the specified account. To grant your Platform single-tenant account access to this key, add new statements to the default AWS policy. You can obtain the required JSON policy from the Platform UI and apply it to your AWS KMS key to establish a secure connection with Adobe Experience Platform.
 
 In the Platform UI, go to the **[!UICONTROL Administration]** section in the left navigation rail, and select **[!UICONTROL Encryption]**. In the [!UICONTROL Encryption Configuration] workspace, select **[!UICONTROL Configure]** in the [!UICONTROL Customer Managed Keys] card.
 
@@ -149,9 +149,9 @@ Add to the default policy the four statements from the [!UICONTROL Platform Encr
 
 ```
 
-Select **[!DNL Finish]** to confirm the updated policy and create the key. The configuration now includes five statements, enabling your AWS account to communicate with Adobe Experience Platform. Changes take effect immediately.
+Select **[!DNL Finish]** to confirm the updated policy and create the key. The configuration now includes five statements, enabling your AWS account to communicate with Adobe Experience Platform. The changes take effect immediately.
 
-The updated [!DNL Customer managed keys] workspace of the AWS [!DNL Key Management Service] appears.
+The updated [!DNL Customer Managed Keys] workspace of the AWS [!DNL Key Management Service] appears.
 
 ### Add AWS encryption key details to Platform 
 
