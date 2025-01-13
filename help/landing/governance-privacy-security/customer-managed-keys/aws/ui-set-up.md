@@ -4,11 +4,15 @@ description: Learn how to set up your CMK app with your Amazon Resource Name (AR
 ---
 # Set up and Configure Customer-Managed Keys with AWS using the Platform UI
 
-Follow this document to enable the Customer Managed Keys (CMK) feature for AWS hosted Platform instances using the Platform UI.
+Use this guide to enable Customer Managed Keys (CMK) for Platform instances hosted on AWS through the Platform UI. 
 
-## Update the key policy to integrate the key with Experience Platform
+>[!IMPORTANT]
+>
+>Before you continue with this guide, make sure you have completed the setup detailed in the ['Configure AWS KMS for CMK'](./configure-kms.md) document.
 
-Next, edit the JSON in the **[!DNL Key Policy]** section to integrate the key with Experience Platform. A default key policy looks similar to the JSON below.
+## Update the AWS key policy to integrate the key with Experience Platform
+
+To integrate your AWS key with Experience Platform, you must edit the JSON in the **[!DNL Key Policy]** section of the KMS workspace. A default key policy looks similar to the JSON below.
 
 <!-- The AWS ID below is fake. Q) Can I refer to it simply as AWS_ACCOUNT_ID ? Is that suitable? -->
 
@@ -30,17 +34,17 @@ Next, edit the JSON in the **[!DNL Key Policy]** section to integrate the key wi
 }
 ```
 
-In the example above, all the resources (`"Resource": "*"`) in the same account (`Principal.AWS`) can access this key. The policy allows other services in the same account to use the key to do encryption and decryption. The services only have permission for this account.
+In the example above, all resources (`"Resource": "*"`) within the same account (`Principal.AWS`) can access the key. This policy allows services in the account to perform encryption and decryption operations, restricted to the specified account. To grant your Platform single-tenant account access to this key, add new statements to the default AWS policy. You can obtain the required JSON policy from the Platform UI and apply it to your AWS KMS key to securely link it to Adobe Experience Platform.
 
-Next, grant your Platform single tenant account access to this key by adding new statements to this policy. You can obtain the JSON policy from the Platform UI and apply it to your AWS KMS key to link it to the platform securely.
-
-Navigate to the Platform UI. In the **[!UICONTROL Administration]** section of the left navigation rail, select **[!UICONTROL Encryption]**. The [!UICONTROL Encryption Configuration] workspace appears. Then select **[!UICONTROL Configure]** in the [!UICONTROL Customer Managed Keys] card.
+In the Platform UI, go to the **[!UICONTROL Administration]** section in the left navigation rail, and select **[!UICONTROL Encryption]**. In the [!UICONTROL Encryption Configuration] workspace, select **[!UICONTROL Configure]** in the [!UICONTROL Customer Managed Keys] card.
 
 ![The Platform Encryption Configuration workspace with Configure highlighted in the Customer Managed Keys card.](../../../images/governance-privacy-security/key-management-service/encryption-configuration.png)
 
 The [!UICONTROL Customer Managed Keys configuration] appears. Select the copy icon (![A copy icon.](../../../../images/icons/copy.png)) to copy the CMK KMS policy to your clipboard. A green pop-up notification confirms that the policy was copied. 
 
-![The Customer Managed Keys configuration with the CMK KMS policy displayed and the copy icon highlighted.](../../../images/governance-privacy-security/key-management-service/copy-cmk-policy.png)
+<!-- I cannot add the 'and the copy icon highlighted.' to the alt text below as i do not have access to this UI. -->
+
+![The Customer Managed Keys configuration with the CMK KMS policy displayed.](../../../images/governance-privacy-security/key-management-service/copy-cmk-policy.png)
 
 <!-- This part of the workflow was in contention at the time of the demo.  -->
 
@@ -145,7 +149,7 @@ Add to the default policy the four statements from the [!UICONTROL Platform Encr
 
 ```
 
-Select **[!DNL Finish]** to confirm your key details with your updated policy and create the key. The key and policy have now been configured with the total of five statements to allow your AWS account to communicate with your Experience Platform account. The effect is instantaneous.
+Select **[!DNL Finish]** to confirm the updated policy and create the key. The configuration now includes five statements, enabling your AWS account to communicate with Adobe Experience Platform. Changes take effect immediately.
 
 The updated [!DNL Customer managed keys] workspace of the AWS [!DNL Key Management Service] appears.
 
@@ -235,11 +239,10 @@ The **[!DNL Edit automatic key rotation]** workspace appears. From here, select 
 
 ### On-demand key rotation {#on-demand-key-rotation}
 
-If the current key is compromised, select **[!DNL Rotate Now]** to rotate it immediately. AWS only permits 10 on-demand rotations. Use a scheduled key rotation unless security has already been compromised.
+Select **[!DNL Rotate Now]** to perform an immediate key rotation if the current key is compromised. AWS limits this feature to 10 rotations. For regular maintenance, schedule automatic key rotations instead.
 
 ![The details section of the AWS key with Rotate Now highlighted.](../../../images/governance-privacy-security/key-management-service/on-demand-key-rotation.png)
 
 ## Next steps
 
-<!-- Improve this section -->
-After reading this document, you have learned how to create, configure, and manage encryption keys in AWS KMS for use with Adobe Experience Platform. As a next step, consider reviewing your organization's security and compliance policies to ensure proper key management practices, such as scheduled key rotation and secure key storage. 
+After reading this document, you have learned how to create, configure, and manage encryption keys in AWS KMS for Adobe Experience Platform. Next, review your organization's security and compliance policies to implement best practices, such as scheduling key rotations and ensuring secure key storage.
