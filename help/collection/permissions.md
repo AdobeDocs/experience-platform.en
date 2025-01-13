@@ -17,14 +17,14 @@ This guide assumes you are familiar with basic Admin Console concepts like produ
 
 ## Available permissions
 
-The relevant permissions for Data Collection are provided through two product designations in Admin Console: **Adobe Experience Platform** and **Adobe Experience Platform Data Collection**. The sections below outline the permissions provided under each product along with descriptions of the specific capabilities that they grant access to.
-
-### Adobe Experience Platform permissions
-
 >[!CONTEXTUALHELP]
 >id="platform_tags_permissions"
 >title="Permissions"
 >abstract="Understand the key permissions required for working with datastreams, schemas, identities, and sandboxes within Adobe Experience Platform."
+
+The relevant permissions for Data Collection are provided through two product designations in Admin Console: **Adobe Experience Platform** and **Adobe Experience Platform Data Collection**. The sections below outline the permissions provided under each product along with descriptions of the specific capabilities that they grant access to.
+
+### Adobe Experience Platform permissions
 
 Permissions under Adobe Experience Platform include access to datastreams, identities, schemas, and sandboxes. For steps on how to configure Adobe Experience Platform permissions, see the [access control user guide](../access-control/ui/overview.md).
 
