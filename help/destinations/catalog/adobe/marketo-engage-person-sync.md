@@ -1,8 +1,11 @@
 ---
 title: Marketo Engage Person Sync
 description: Use the Marketo Engage Person Sync connector to stream updates from a person audience to the corresponding records in your Marketo Engage.
+last-substantial-update: 2025-01-14
 badgeBeta: label="Beta" type="Informative"
 ---
+
+# Marketo Engage Person Sync
 
 >[!IMPORTANT]
 >
@@ -47,7 +50,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item             | Type      | Notes                                                                                                                                                                                                                                                                                                                                                                                     |
 | ---------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Export frequency | Streaming | Streaming destinations are “always on” API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types#streaming-destinations). |
+| Export frequency | Streaming | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -76,7 +79,7 @@ Once you have selected your instance, you will also need to select the Lead Part
 
 >[!IMPORTANT]
 > 
->After an audience has been activated to the Marketo destination for the first time, backfilling profiles that already existed in the audience prior to Marketo destination activation can take *up to 24 hours*. Going forward, any time profiles are added to the audience, they’ll be added to Marketo immediately.
+>After an audience has been activated to the Marketo destination for the first time, backfilling profiles that already existed in the audience prior to Marketo destination activation can take *up to 24 hours*. Going forward, any time profiles are added to the audience, they'll be added to Marketo immediately.
 
 ### Deduplication Fields {#deduplication-fields}
 
