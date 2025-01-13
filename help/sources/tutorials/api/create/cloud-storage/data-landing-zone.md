@@ -61,18 +61,9 @@ Depending on your provider, a successful request returns the following:
 >[!TAB Response on Azure]
 
 ```json
-
 {
-  "containerName": "user_drop_zone",
-  "containerTTL": "7",
-  "dlzPath": {
-    "containerName": "user_drop_zone"
-  },
-  "dataTTL": {
-    "timeUnit": "days",
-    "timeQuantity": 7
-  },
-  "dlzProvider": "Azure Data Lake Storage Gen2"
+    "containerName": "dlz-user-container",
+    "containerTTL": "7"
 }
 ```
 
@@ -135,20 +126,11 @@ Depending on your provider, a successful request returns the following:
 
 ```json
 {
-  "containerName": "example-container",
-  "SASToken": "example-sas-token",
-  "storageAccountName": "example-storage-account",
-  "SASUri": "https://example-storage-account.blob.core.windows.net/example-container?example-sas-token",
-  "expiryDate": "2024-12-31",
-  "credentials": {
-    "SASToken": "example-sas-token",
-    "SASUri": "https://example-storage-account.blob.core.windows.net/example-container?example-sas-token"
-  },
-  "dlzPath": {
-    "containerName": "user_drop_zone"
-  },
-  "dlzProvider": "Azure Data Lake Storage Gen2",
-  "expiryTime": 1735689599
+    "containerName": "dlz-user-container",
+    "SASToken": "sv=2020-04-08&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D",
+    "storageAccountName": "dlblobstore99hh25i3dflek",
+    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D",
+    "expiryDate": "2024-01-06"
 }
 ```
 
@@ -159,8 +141,6 @@ Depending on your provider, a successful request returns the following:
 | `storageAccountName` | The name of your storage account. |
 | `SASUri` | The shared access signature URI for your [!DNL Data Landing Zone]. This string is a combination of the URI to the [!DNL Data Landing Zone] for which you are being authenticated to and its corresponding SAS token. |
 | `expiryDate` | The date when your SAS token will expire. You must refresh your token before the expiry date in order to continue using it in your application for uploading data to the [!DNL Data Landing Zone]. If you do not manually refresh your token before the stated expiry date, then it will automatically refresh and provide a new token when the GET credentials call is performed. |
-| `dlzPath.containerName` | The [!DNL Data Landing Zone] provider that you are using. For Azure, this value will be [!DNL Azure Data Lake Storage Gen 2]. |
-| `expiryTime` | The expiry time in unix time. |
 
 >[!TAB Response on AWS]
 
