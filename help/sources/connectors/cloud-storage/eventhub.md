@@ -8,7 +8,9 @@ exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
 
 >[!IMPORTANT]
 >
->The [!DNL Azure Event Hubs] source is available in the sources catalog to users who have purchased Real-Time Customer Data Platform Ultimate.
+>* The [!DNL Azure Event Hubs] source is available in the sources catalog to users who have purchased Real-Time CDP Ultimate.
+>
+>* You can now use the [!DNL Azure Event Hubs] source when running Adobe Experience Platform on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../../landing/multi-cloud.md).
 
 Adobe Experience Platform provides native connectivity for cloud providers like AWS, [!DNL Google Cloud Platform], and [!DNL Azure]. You can bring your data from these systems into Platform.
 
