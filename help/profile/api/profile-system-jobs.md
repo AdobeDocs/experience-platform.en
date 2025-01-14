@@ -231,7 +231,7 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| `dataSetId` | **(Required)** The ID of the dataset you want to delete. |
+| `dataSetId` | The ID of the dataset you want to delete. |
 
 >[!TAB Amazon Web Services (AWS)]
 
@@ -254,7 +254,7 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| `dataSetId` | **(Required)** The ID of the dataset you want to delete. |
+| `dataSetId` | The ID of the dataset you want to delete. |
 
 >[!ENDTABS]
 
@@ -369,8 +369,8 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| `datasetId` | **(Required)** The ID of the dataset for the batch you wish to delete. |
-| `batchId` | **(Required)** The ID of the batch you wish to delete. |
+| `datasetId` | The ID of the dataset for the batch you wish to delete. |
+| `batchId` | The ID of the batch you wish to delete. |
 
 >[!TAB Amazon Web Services (AWS)]
 
@@ -394,8 +394,8 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| `datasetId` | **(Required)** The ID of the dataset for the batch you wish to delete. |
-| `batchId` | **(Required)** The ID of the batch you wish to delete. |
+| `datasetId` | The ID of the dataset for the batch you wish to delete. |
+| `batchId` | The ID of the batch you wish to delete. |
 
 >[!ENDTABS]
 
@@ -499,7 +499,7 @@ GET /system/jobs/{DELETE_REQUEST_ID}
 
 | Parameter | Description |
 | --------- | ----------- |
-|`{DELETE_REQUEST_ID}`| **(Required)** The ID of the delete request that you wish to view. |
+|`{DELETE_REQUEST_ID}`| The ID of the delete request that you wish to view. |
 
 **Request**
 
