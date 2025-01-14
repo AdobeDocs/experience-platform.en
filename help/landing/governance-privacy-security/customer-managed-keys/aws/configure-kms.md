@@ -69,7 +69,7 @@ To begin setting up and managing your encryption key, log in to your AWS account
 >
 >Ensure the secure storage, access, and availability of the encryption keys. You are responsible for managing your keys and preventing disruptions to Platform operations.
 
-The [!DNL Key Management Service (KMS)] workspace appears. Select **[!DNL Create a key]**.
+In the [!DNL Key Management Service (KMS)] workspace, select **[!DNL Create a key]**.
 
 ![The Key Management Service workspace with Create a key highlighted.](../../../images/governance-privacy-security/key-management-service/create-a-key.png)
 
