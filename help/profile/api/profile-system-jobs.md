@@ -185,7 +185,7 @@ A successful response returns an array containing an object for each of the syst
 | -------- | ----------- |
 | `requestId` | The ID of the system job. |
 | `requestType` | The type of the system job. Possible values include `BACKFILL_TTL`, `DELETE_EE_BATCH`, and `TRUNCATE_DATASET`. |
-| `status` | The status of the system job. Possible values include `NEW`, `SUCCESS`, `ERROR`, and `IN-PROCESSING`. |
+| `status` | The status of the system job. Possible values include `NEW`, `SUCCESS`, `ERROR`, `FAILED`, and `IN-PROGRESS`. |
 | `properties` | An object that contains batch and/or dataset IDs of the system job. |
 
 +++
@@ -322,7 +322,7 @@ A successful response returns the details of the newly created system request.
 | -------- | ----------- |
 | `requestId` | The ID of the system job. |
 | `requestType` | The type of the system job. Possible values include `BACKFILL_TTL`, `DELETE_EE_BATCH`, and `TRUNCATE_DATASET`. |
-| `status` | The status of the system job. Possible values include `NEW`, `SUCCESS`, `ERROR`, and `IN-PROCESSING`. |
+| `status` | The status of the system job. Possible values include `NEW`, `SUCCESS`, `ERROR`, `FAILED`, and `IN-PROGRESS`. |
 | `properties` | An object that contains batch and/or dataset IDs of the system job. |
 
 >[!ENDTABS]
@@ -462,7 +462,7 @@ A successful response returns the details of the newly created system request.
 | -------- | ----------- |
 | `requestId` | The ID of the system job. |
 | `requestType` | The type of the system job. Possible values include `BACKFILL_TTL`, `DELETE_EE_BATCH`, and `TRUNCATE_DATASET`. |
-| `status` | The status of the system job. Possible values include `NEW`, `SUCCESS`, `ERROR`, and `IN-PROCESSING`. |
+| `status` | The status of the system job. Possible values include `NEW`, `SUCCESS`, `ERROR`, `FAILED`, and `IN-PROGRESS`. |
 | `properties` | An object that contains batch and/or dataset IDs of the system job. |
 
 >[!ENDTABS]
@@ -598,7 +598,7 @@ A successful response returns the details of the specified system request.
 | -------- | ----------- |
 | `requestId` | The ID of the system job. |
 | `requestType` | The type of the system job. Possible values include `BACKFILL_TTL`, `DELETE_EE_BATCH`, and `TRUNCATE_DATASET`. |
-| `status` | The status of the system job. Possible values include `NEW`, `SUCCESS`, `ERROR`, and `IN-PROCESSING`. |
+| `status` | The status of the system job. Possible values include `NEW`, `SUCCESS`, `ERROR`, `FAILED`, and `IN-PROGRESS`. |
 | `properties` | An object that contains batch and/or dataset IDs of the system job. |
 
 >[!ENDTABS]
