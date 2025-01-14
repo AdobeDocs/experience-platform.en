@@ -50,6 +50,14 @@ GET /system/jobs?{QUERY_PARAMETERS}
 
 **Request**
 
+>[!IMPORTANT]
+>
+>The following request differs between the Azure and AWS instances.
+
+>[!BEGINTABS]
+
+>[!TAB Microsoft Azure]
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -57,6 +65,22 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
+
+>[!TAB Amazon Web Services (AWS)]
+
+>[!IMPORTANT]
+>
+>You **must** use the `x-sandbox-id` request header instead of the `x-sandbox-name` request header when using this endpoint with AWS. 
+
+```shell
+curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-id: {SANDBOX_ID}' \
+```
+
+>[!ENDTABS]
 
 **Response**
 
@@ -184,6 +208,14 @@ POST /system/jobs
 
 **Request**
 
+>[!IMPORTANT]
+>
+>The following request differs between the Azure and AWS instances.
+
+>[!BEGINTABS]
+
+>[!TAB Microsoft Azure]
+
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/ups/system/jobs \
@@ -200,6 +232,31 @@ curl -X POST \
 | Property | Description |
 | -------- | ----------- |
 | `dataSetId` | **(Required)** The ID of the dataset you want to delete. |
+
+>[!TAB Amazon Web Services (AWS)]
+
+>[!IMPORTANT]
+>
+>You **must** use the `x-sandbox-id` request header instead of the `x-sandbox-name` request header when using this endpoint with AWS. 
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/core/ups/system/jobs \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-id: {SANDBOX_ID}' \
+  -d '{
+        "dataSetId": "5c802d3cd83fc114b741c4b5"
+      }'
+```
+
+| Property | Description |
+| -------- | ----------- |
+| `dataSetId` | **(Required)** The ID of the dataset you want to delete. |
+
+>[!ENDTABS]
 
 **Response**
 
@@ -288,6 +345,14 @@ POST /system/jobs
 
 **Request**
 
+>[!IMPORTANT]
+>
+>The following request differs between the Azure and AWS instances.
+
+>[!BEGINTABS]
+
+>[!TAB Microsoft Azure]
+
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/ups/system/jobs \
@@ -306,6 +371,34 @@ curl -X POST \
 | -------- | ----------- |
 | `datasetId` | **(Required)** The ID of the dataset for the batch you wish to delete. |
 | `batchId` | **(Required)** The ID of the batch you wish to delete. |
+
+>[!TAB Amazon Web Services (AWS)]
+
+>[!IMPORTANT]
+>
+>You **must** use the `x-sandbox-id` request header instead of the `x-sandbox-name` request header when using this endpoint with AWS. 
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/core/ups/system/jobs \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-id: {SANDBOX_ID}' \
+  -d '{
+        "datasetId": "66a92c5910df2d1767de13f3",
+        "batchId": "8d075b5a178e48389126b9289dcfd0ac"
+      }'
+```
+
+| Property | Description |
+| -------- | ----------- |
+| `datasetId` | **(Required)** The ID of the dataset for the batch you wish to delete. |
+| `batchId` | **(Required)** The ID of the batch you wish to delete. |
+
+>[!ENDTABS]
+
 
 **Response**
 
@@ -410,6 +503,14 @@ GET /system/jobs/{DELETE_REQUEST_ID}
 
 **Request**
 
+>[!IMPORTANT]
+>
+>The following request differs between the Azure and AWS instances.
+
+>[!BEGINTABS]
+
+>[!TAB Microsoft Azure]
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -417,6 +518,23 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
+
+>[!TAB Amazon Web Services (AWS)]
+
+>[!IMPORTANT]
+>
+>You **must** use the `x-sandbox-id` request header instead of the `x-sandbox-name` request header when using this endpoint with AWS. 
+
+```shell
+curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-id: {SANDBOX_ID}' \
+```
+
+>[!ENDTABS]
+
 
 **Response**
 
@@ -507,6 +625,14 @@ DELETE /system/jobs/{DELETE_REQUEST_ID}
 
 **Request**
 
+>[!IMPORTANT]
+>
+>The following request differs between the Azure and AWS instances.
+
+>[!BEGINTABS]
+
+>[!TAB Microsoft Azure]
+
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
@@ -515,6 +641,24 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
+
+>[!TAB Amazon Web Services (AWS)]
+
+>[!IMPORTANT]
+>
+>You **must** use the `x-sandbox-id` request header instead of the `x-sandbox-name` request header when using this endpoint with AWS. 
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-id: {SANDBOX_ID}' \
+```
+
+>[!ENDTABS]
+
 
 **Response**
 
