@@ -8,28 +8,28 @@ exl-id: 64fbf94d-3519-4937-b7f0-216b14facf66
 ---
 # How to use the Amazon Web Services Key Management Service for Adobe Experience Platform data encryption
 
->[!AVAILABILITY]
+<!-- >[!AVAILABILITY]
 >
->This document applies to implementations of Experience Platform running on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
->
->[Customer Managed Keys](../customer-managed-keys/overview.md) (CMK) on AWS are supported for Privacy and Security Shield but are not available for Healthcare Shield. CMK on Azure are supported for both Privacy and Security Shield as well as Healthcare Shield.
+>This document applies to implementations of Experience Platform running on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud). -->
+<!-- >
+>[Customer Managed Keys](../customer-managed-keys/overview.md) (CMK) on AWS are supported for Privacy and Security Shield but are not available for Healthcare Shield. CMK on Azure are supported for both Privacy and Security Shield as well as Healthcare Shield. -->
 
-<!-- configure-kms.md: 
+<!-- configure-kms.md:  
 Use this guide to secure your data with Amazon Web Services (AWS) Key Management Service (KMS) by creating, managing, and controlling encryption keys for Adobe Experience Platform. This integration simplifies compliance, streamlines operations through automation, and eliminates the need to maintain your own key management infrastructure. -->
 
-For Customer Journey Analytics-specific instructions, refer to the [Customer Journey Analytics CMK documentation](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-privacy/cmk)
+<!-- For Customer Journey Analytics-specific instructions, refer to the [Customer Journey Analytics CMK documentation](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-privacy/cmk) -->
 
->[!IMPORTANT]
+<!-- >[!IMPORTANT]
 >
->Adobe Experience Platform encrypts data at rest by default using system-managed keys. By enabling Customer Managed Keys (CMK), you take full control of your data security. However, this change is irreversible, once CMK is enabled, you cannot revert to system-managed keys. You are responsible for securely managing your keys to ensure uninterrupted access to your data and prevent potential inaccessibility.
+>Adobe Experience Platform encrypts data at rest by default using system-managed keys. By enabling Customer Managed Keys (CMK), you take full control of your data security. However, this change is irreversible, once CMK is enabled, you cannot revert to system-managed keys. You are responsible for securely managing your keys to ensure uninterrupted access to your data and prevent potential inaccessibility. -->
 
-This guide details the process to create and manage encryption keys in AWS KMS to secure your data in Experience Platform.
+<!-- This guide details the process to create and manage encryption keys in AWS KMS to secure your data in Experience Platform. -->
 
 
 
-## Get started {#get-started}
+<!-- ## Get started {#get-started}
 
-This guide requires that you already have access to an Amazon Web Services account and access to the management console. Follow the steps below to get started:
+This guide requires that you already have access to an Amazon Web Services account and access to the management console. Follow the steps below to get started: -->
 
 <!-- configure-kms.md: 
 1. **Verify permissions**: Ensure that you have the necessary AWS Identity and Access Management (IAM) permissions to create, manage, and use encryption keys within KMS. To verify your permissions:
@@ -132,12 +132,12 @@ The review stage of the key configuration appears. Verify the key details in the
 
 <!-- PLATFORM UI STUFF STARTS below -->
 
-### Update the key policy to integrate the key with Experience Platform
+<!-- ### Update the key policy to integrate the key with Experience Platform
 
-Next, edit the JSON in the **[!DNL Key Policy]** section to integrate the key with Experience Platform. A default key policy looks similar to the JSON below.
+Next, edit the JSON in the **[!DNL Key Policy]** section to integrate the key with Experience Platform. A default key policy looks similar to the JSON below. -->
 
 <!-- The AWS ID below is fake. Q) Can I refer to it simply as AWS_ACCOUNT_ID ? Is that suitable? -->
-
+<!-- 
 ```JSON
 {
   "Id": "key-consolepolicy-3",
@@ -154,27 +154,27 @@ Next, edit the JSON in the **[!DNL Key Policy]** section to integrate the key wi
     }
   ]
 }
-```
+``` -->
 
-In the example above, all the resources (`"Resource": "*"`) in the same account (`Principal.AWS`) can access this key. The policy allows other services in the same account to use the key to do encryption and decryption. The services only have permission for this account.
+<!-- In the example above, all the resources (`"Resource": "*"`) in the same account (`Principal.AWS`) can access this key. The policy allows other services in the same account to use the key to do encryption and decryption. The services only have permission for this account.
 
 Next, grant your Platform single tenant account access to this key by adding new statements to this policy. You can obtain the JSON policy from the Platform UI and apply it to your AWS KMS key to link it to the platform securely.
 
 Navigate to the Platform UI. In the **[!UICONTROL Administration]** section of the left navigation rail, select **[!UICONTROL Encryption]**. The [!UICONTROL Encryption Configuration] workspace appears. Then select **[!UICONTROL Configure]** in the [!UICONTROL Customer Managed Keys] card.
 
-![The Platform Encryption Configuration workspace with Configure highlighted in the Customer Managed Keys card.](../../images/governance-privacy-security/key-management-service/encryption-configuration.png)
+![The Platform Encryption Configuration workspace with Configure highlighted in the Customer Managed Keys card.](../../images/governance-privacy-security/key-management-service/encryption-configuration.png) -->
 
-The [!UICONTROL Customer Managed Keys configuration] appears. Select the copy icon (![A copy icon.](../../../images/icons/copy.png)) to copy the CMK KMS policy to your clipboard. A green pop-up notification confirms that the policy was copied. 
+<!-- The [!UICONTROL Customer Managed Keys configuration] appears. Select the copy icon (![A copy icon.](../../../images/icons/copy.png)) to copy the CMK KMS policy to your clipboard. A green pop-up notification confirms that the policy was copied. 
 
-![The Customer Managed Keys configuration with the CMK KMS policy displayed and the copy icon highlighted.](../../images/governance-privacy-security/key-management-service/copy-cmk-policy.png)
+![The Customer Managed Keys configuration with the CMK KMS policy displayed and the copy icon highlighted.](../../images/governance-privacy-security/key-management-service/copy-cmk-policy.png) -->
 
 <!-- This part of the workflow was in contention at the time of the demo.  -->
 
-Next, return to the AWS KMS workspace and update the key policy shown below.
+<!-- Next, return to the AWS KMS workspace and update the key policy shown below.
 
-![The Review stage of the workflow with the updated policy and Finish highlighted.](../../images/governance-privacy-security/key-management-service/updated-cmk-policy.png)
+![The Review stage of the workflow with the updated policy and Finish highlighted.](../../images/governance-privacy-security/key-management-service/updated-cmk-policy.png) -->
 
-Add to the default policy the four statements from the [!UICONTROL Platform Encryption Configuration] workspace, as seen below: `Enable IAM User Permissions`, `CJA Flow IAM User Permissions`, `CJA Integrity IAM User Permissions`, `CJA Oberon IAM User Permissions`.
+<!-- Add to the default policy the four statements from the [!UICONTROL Platform Encryption Configuration] workspace, as seen below: `Enable IAM User Permissions`, `CJA Flow IAM User Permissions`, `CJA Integrity IAM User Permissions`, `CJA Oberon IAM User Permissions`.
 
 ```json
 
@@ -270,31 +270,31 @@ Add to the default policy the four statements from the [!UICONTROL Platform Encr
 }
 
 ```
+ -->
 
 
-
-Select **[!DNL Finish]** to confirm your key details with your updated policy and create the key. The key and policy have now been configured with the total of five statements to allow your AWS account to communicate with your Experience Platform account. The effect is instantaneous.
+<!-- Select **[!DNL Finish]** to confirm your key details with your updated policy and create the key. The key and policy have now been configured with the total of five statements to allow your AWS account to communicate with your Experience Platform account. The effect is instantaneous.
 
 The updated [!DNL Customer managed keys] workspace of the AWS [!DNL Key Management Service] appears.
 
 ### Add AWS encryption key details to Platform 
 
-Next, to enable encryption, add the key's Amazon Resource Name (ARN) to your Platform [!UICONTROL Customer Managed Keys configuration]. From the [!DNL Customer Managed Keys] section of AWS, select the alias of your new key from the list in the [!DNL Key Management Service]. 
+Next, to enable encryption, add the key's Amazon Resource Name (ARN) to your Platform [!UICONTROL Customer Managed Keys configuration]. From the [!DNL Customer Managed Keys] section of AWS, select the alias of your new key from the list in the [!DNL Key Management Service].  -->
 
-![The AWS KMS Customer Managed Keys workspace with the new key alias highlighted.](../../images/governance-privacy-security/key-management-service/customer-managed-keys-on-aws.png)
+<!-- ![The AWS KMS Customer Managed Keys workspace with the new key alias highlighted.](../../images/governance-privacy-security/key-management-service/customer-managed-keys-on-aws.png)
 
 The details of your key are displayed. Everything in AWS has an Amazon Resource Name (ARN) which 
 is a unique identifier used to specify resources across AWS services. It follows a standardized format: `arn:partition:service:region:account-id:resource`.
 
 Select the copy icon to copy your ARN. A confirmation dialog appears. 
 
-![The key details of your AWS KMS Customer Managed Key with the ARN highlighted.](../../images/governance-privacy-security/key-management-service/keys-details-arn.png)
+![The key details of your AWS KMS Customer Managed Key with the ARN highlighted.](../../images/governance-privacy-security/key-management-service/keys-details-arn.png) -->
 
-Now, navigate back to the Platform [!UICONTROL Customer Managed Keys configuration] UI. In the **[!UICONTROL Add AWS encryption key details]** section, add a **[!UICONTROL Configuration name]** and the **[!UICONTROL KMS key ARN]** you copied from the AWS UI.
+<!-- Now, navigate back to the Platform [!UICONTROL Customer Managed Keys configuration] UI. In the **[!UICONTROL Add AWS encryption key details]** section, add a **[!UICONTROL Configuration name]** and the **[!UICONTROL KMS key ARN]** you copied from the AWS UI.
 
-![The Platform Encryption Configuration workspace with Configuration name and KMS key ARN highlighted in the Add AWS encryption key details section.](../../images/governance-privacy-security/key-management-service/add-encryption-key-details.png)
+![The Platform Encryption Configuration workspace with Configuration name and KMS key ARN highlighted in the Add AWS encryption key details section.](../../images/governance-privacy-security/key-management-service/add-encryption-key-details.png) -->
 
-Next, select **[!UICONTROL SAVE]** to submit the configuration name, the KMS key ARN, and begin validation of the key.
+<!-- Next, select **[!UICONTROL SAVE]** to submit the configuration name, the KMS key ARN, and begin validation of the key.
 
 ![The Platform Encryption Configuration workspace with Save highlighted.](../../images/governance-privacy-security/key-management-service/save.png)
 
@@ -306,8 +306,8 @@ Once the key is validated, the key vault identifiers are added to the data lake 
 
 >[!NOTE]
 >
->The duration of the process depends on your data size. Typically, the process is completed in less than 24 hours. Each sandbox is usually updated in two to three minutes.
-
+>The duration of the process depends on your data size. Typically, the process is completed in less than 24 hours. Each sandbox is usually updated in two to three minutes. -->
+<!-- 
 ## Key revocation {#key-revocation}
 
 >[!IMPORTANT]
@@ -321,9 +321,9 @@ The following are key considerations for key revocation:
 
 To revoke a key, navigate to the AWS KMS workspace. The **[!DNL Customer managed keys]** section displays all the available keys for your AWS account. Select the alias of your key from the list. 
 
-![The AWS KMS Customer Managed Keys workspace with the new key alias highlighted.](../../images/governance-privacy-security/key-management-service/customer-managed-keys-on-aws.png)
+![The AWS KMS Customer Managed Keys workspace with the new key alias highlighted.](../../images/governance-privacy-security/key-management-service/customer-managed-keys-on-aws.png) -->
 
-The details of your key are displayed. To disable the key, select **[!DNL Key actions]**, then **[!DNL Disable]** from the dropdown menu.
+<!-- The details of your key are displayed. To disable the key, select **[!DNL Key actions]**, then **[!DNL Disable]** from the dropdown menu.
 
 ![The details of your AWS key in the AWS KMS UI with Key actions and Disable highlighted.](../../images/governance-privacy-security/key-management-service/disable-key.png)
 
@@ -333,17 +333,17 @@ A confirmation dialog appears. Select **[!DNL Disable key]** to confirm your cho
 >
 >Once you have disabled the key, you can enable the key again using the same method described above should you need to. This option is available from the **[!DNL Key actions]** dropdown.
 
-![The Disable key dialog with disable key highlighted.](../../images/governance-privacy-security/key-management-service/disable-key-dialog.png)
+![The Disable key dialog with disable key highlighted.](../../images/governance-privacy-security/key-management-service/disable-key-dialog.png) -->
 
-Alternatively, if your key is used across other services, you can remove access for Experience Platform directly from the key policy. Select **[!UICONTROL Edit]** in the **[!DNL Key Policy]** section. 
+<!-- Alternatively, if your key is used across other services, you can remove access for Experience Platform directly from the key policy. Select **[!UICONTROL Edit]** in the **[!DNL Key Policy]** section. 
 
 ![The details section of the AWS key with Edit highlighted in the Key policy section.](../../images/governance-privacy-security/key-management-service/edit-key-policy.png)
 
 The **[!DNL Edit key policy]** page appears. Highlight and delete the policy statement, copied form the Platform UI, to remove the permissions for the Customer Managed Keys app. Then, select **[!DNL Save changes]** to complete the process. 
 
-![The Edit key policy workspace on AWS with the statement JSON object and Save changes highlighted.](../../images/governance-privacy-security/key-management-service/delete-statement-and-save-changes.png)
+![The Edit key policy workspace on AWS with the statement JSON object and Save changes highlighted.](../../images/governance-privacy-security/key-management-service/delete-statement-and-save-changes.png) -->
 
-## Key rotation {#key-rotation}
+<!-- ## Key rotation {#key-rotation}
 
 AWS offers automatic and on-demand key rotation. To reduce the risk of key compromise or meet security compliance requirements, you can automatically generate new encryption keys on demand, or at regular intervals. Schedule automatic key rotation to limit the lifespan of a key and ensure that if a key is compromised, it becomes unusable after rotation. While modern encryption algorithms are highly secure, key rotation is an important security compliance measure and demonstrates adherence to security best practices.
 
@@ -369,4 +369,4 @@ If the current key is compromised, select **[!DNL Rotate Now]** to rotate it imm
 
 ## Next Steps
 
-After reading this document, you have learned how to create, configure, and manage encryption keys in AWS KMS for use with Adobe Experience Platform. As a next step, consider reviewing your organization's security and compliance policies to ensure proper key management practices, such as scheduled key rotation and secure key storage.
+After reading this document, you have learned how to create, configure, and manage encryption keys in AWS KMS for use with Adobe Experience Platform. As a next step, consider reviewing your organization's security and compliance policies to ensure proper key management practices, such as scheduled key rotation and secure key storage. -->

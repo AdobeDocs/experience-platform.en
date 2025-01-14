@@ -40,7 +40,9 @@ In the Platform UI, go to the **[!UICONTROL Administration]** section in the lef
 
 ![The Platform Encryption Configuration workspace with Configure highlighted in the Customer Managed Keys card.](../../../images/governance-privacy-security/key-management-service/encryption-configuration.png)
 
-The [!UICONTROL Customer Managed Keys configuration] appears. Select the copy icon (![A copy icon.](../../../../images/icons/copy.png)) to copy the CMK KMS policy to your clipboard. A green pop-up notification confirms that the policy was copied. 
+The [!UICONTROL Customer Managed Keys configuration] appears. Copy the `statement` object form the CMK KMS policy displayed in the [!UICONTROL Customer Managed Keys] [!UICONTROL Encryption Configuration].
+
+<!-- Select the copy icon (![A copy icon.](../../../../images/icons/copy.png)) to copy the CMK KMS policy to your clipboard. A green pop-up notification confirms that the policy was copied.  -->
 
 <!-- I cannot add the 'and the copy icon highlighted.' to the alt text below as i do not have access to this UI. -->
 
