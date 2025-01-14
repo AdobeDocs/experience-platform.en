@@ -5,7 +5,7 @@ exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
 ---
 # Connect [!DNL Salesforce] to Experience Platform using the [!DNL Flow Service] API
 
-Read this guide to learn how you can connect your [!DNL Salesforce] source account to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Read this guide to learn how you can connect your [!DNL Salesforce] source account to Adobe Experience Platform using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Get started
 
