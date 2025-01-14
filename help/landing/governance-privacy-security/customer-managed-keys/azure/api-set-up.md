@@ -1,13 +1,15 @@
 ---
-title: Set up and Configure Customer-Managed Keys using the API
+title: Set up and Configure Customer Managed Keys for Azure using the API
 description: Learn how to set up your CMK app with your Azure tenant and send your encryption key ID to Adobe Experience Platform.
 role: Developer
 feature: API, Privacy
 exl-id: c9a1888e-421f-4bb4-b4c7-968fb1d61746
 ---
-# Setup and configure customer-managed keys using the API
+# Setup and configure Customer Managed Keys for Azure using the API
 
-This document covers the process for enabling the customer-managed keys (CMK) feature in Adobe Experience Platform using the API. For instructions on how to complete this process using the UI, refer to the [UI CMK setup document](./ui-set-up.md).
+This document covers the Azure-specific instructions for enabling Customer Managed Keys (CMK) in Adobe Experience Platform using the API. For instructions on how to complete this process using the UI for Azure-hosted Platform instances, refer to the [UI CMK setup document](./ui-set-up.md). 
+
+For AWS-specific instructions, refer to the [AWS setup guide](../aws/ui-set-up.md).
 
 ## Prerequisites
 
@@ -15,7 +17,7 @@ To view and visit the [!UICONTROL Encryption] section in Adobe Experience Platfo
 
 For more information on assigning roles and permissions in Experience Platform, refer to the [configure permissions documentation](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
 
-To enable CMK, your [[!DNL Azure] Key Vault must be configured](./azure-key-vault-config.md) with the following settings:
+To enable CMK for Azure-hosted Platform instances, your [[!DNL Azure] Key Vault must be configured](./azure-key-vault-config.md) with the following settings:
 
 * [Enable purge protection](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
 * [Enable soft-delete](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
@@ -220,4 +222,6 @@ The `status` attribute can have one of four values with the following meanings:
 
 ## Next steps
 
-By completing the above steps, you have successfully enabled CMK for your organization. Data that is ingested into primary data stores will now be encrypted and decrypted using the key(s) in your [!DNL Azure] Key Vault. To learn more about data encryption in Adobe Experience Platform, see the [encryption documentation](../../encryption.md).
+By completing the above steps, you have successfully enabled CMK for your organization. For Azure-hosted Platform instances, data that is ingested into primary data stores will now be encrypted and decrypted using the key(s) in your [!DNL Azure] Key Vault.
+
+To learn more about data encryption in Adobe Experience Platform, see the [encryption documentation](../../encryption.md).
