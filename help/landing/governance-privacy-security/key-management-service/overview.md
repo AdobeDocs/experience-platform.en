@@ -61,9 +61,9 @@ The [!DNL Key Management Service (KMS)] workspace appears. Select **[!DNL Create
 
 ![The Key Management Service workspace with Create a key highlighted.](../../images/governance-privacy-security/key-management-service/create-a-key.png) -->
 
-## Configure key settings {#configure-key}
+<!-- ## Configure key settings {#configure-key} -->
 
-The [!DNL Configure Key] workflow appears. By default, the key type is set to **[!DNL Symmetric]**, and the key usage is set to **[!DNL Encrypt and Decrypt]**. Ensure that these options are selected before proceeding.
+<!-- The [!DNL Configure Key] workflow appears. By default, the key type is set to **[!DNL Symmetric]**, and the key usage is set to **[!DNL Encrypt and Decrypt]**. Ensure that these options are selected before proceeding.
 
 ![Step one of the Configure key workflow with Symmetric and Encrypt and Decrypt basic options highlighted.](../../images/governance-privacy-security/key-management-service/configure-key-basic-options.png)
 
@@ -71,7 +71,7 @@ Expand the **[!DNL Advanced options]** dropdown menu. You are recommended to use
  
 >[!NOTE]
 >
->If you already have an existing key, you can import external key material or use the AWS [!DNL CloudHSM] key store. These options are not covered in the scope of this document.
+>If you already have an existing key, you can import external key material or use the AWS [!DNL CloudHSM] key store. These options are not covered in the scope of this document. -->
 
 <!-- Next, select the [!DNL Regionality] setting, which specifies the region scope of the key. Select **[!DNL Single-Region key]**, followed by **[!DNL Next]** to proceed onto step two.
 
