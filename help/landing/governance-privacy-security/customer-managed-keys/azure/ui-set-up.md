@@ -1,13 +1,15 @@
 ---
-title: Set up and Configure Customer-Managed Keys using the Platform UI
+title: Set up and Configure Customer Managed Keys for Azure using the Platform UI
 description: Learn how to set up your CMK app with your Azure tenant and send your encryption key ID to Adobe Experience Platform.
 role: Developer
 feature: Privacy
 exl-id: 5f38997a-66f3-4f9d-9c2f-fb70266ec0a6
 ---
-# Setup and configure customer-managed keys using the Platform UI
+# Set up and Configure Customer Managed Keys for Azure using the Platform UI
 
-This document covers the process for enabling the customer-managed keys (CMK) feature in Platform using the UI. For instructions on how to complete this process using the API, refer to the [API CMK setup document](./api-set-up.md).
+This document covers the Azure-specific instructions for enabling the Customer Managed Keys (CMK) feature in Platform using the UI. For AWS-specific instructions, refer to the [AWS setup guide](../aws/ui-set-up.md).
+
+For instructions on how to complete this process for Azure-hosted Platform instances using the API, refer to the [API CMK setup document](./api-set-up.md).
 
 ## Prerequisites
 
@@ -24,7 +26,7 @@ To enable CMK, your [[!DNL Azure] Key Vault must be configured](./azure-key-vaul
 
 ## Set up the CMK app {#register-app}
 
-After you have your key vault configured, the next step is to register the CMK application that will link to your [!DNL Azure] tenant.
+After you have configured your key vault, the next step is to register the CMK application that will link to your [!DNL Azure] tenant.
 
 ### Getting started
 
@@ -113,4 +115,6 @@ There are four potential statuses of the CMK configuration. They are as follows:
 
 ## Next steps
 
-By completing the above steps, you have successfully enabled CMK for your organization. Data that is ingested into primary data stores will now be encrypted and decrypted using the key(s) in your [!DNL Azure] Key Vault.
+By completing the above steps, you have successfully enabled CMK for your Azure-hosted organization. Data that is ingested into primary data stores will now be encrypted and decrypted using the key(s) in your [!DNL Azure] Key Vault.
+
+After enabling CMK for your Azure-hosted organization, monitor key usage, implement a key rotation policy for enhanced security, and ensure compliance with your organization's policies. 
