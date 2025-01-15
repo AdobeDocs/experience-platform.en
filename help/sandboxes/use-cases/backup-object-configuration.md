@@ -60,6 +60,10 @@ Before you begin creating your backup package you should consider the package's 
 
 At this point, you're ready to back up your sandbox using the sandbox tooling user interface. This step will cover both backing up an entire sandbox and backing up specific objects.
 
+>[!NOTE]
+>
+> Not all objects are supported for sandbox tooling. Refer to the [objects supported for sandbox tooling](../ui/sandbox-tooling.md#objects-supported-for-sandbox-tooling) guide for a comprehensive list of allowable objects.
+
 #### Export a complete sandbox
 
 To back up your sandbox in entirety, follow the [sandbox tooling guide](../ui/sandbox-tooling.md#export-an-entire-sandbox) to create and publish a new package containing the configurations of your entire sandbox.

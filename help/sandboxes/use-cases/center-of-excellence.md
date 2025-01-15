@@ -20,7 +20,7 @@ Follow the steps described in this use case to create a golden sandbox package o
 
 As an example, consider a bank that operates across different regions, such as North America, Europe, and Africa. Each market or region has its own Adobe Experience Platform instance. This bank wants to maintain a centralized data model managed by a global team of architects where a single version of the data model can be pushed out across all markets.
 
-This bank chooses to levarage sandbox tooling to create and maintain a golden sandbox package. This helps ensure transparency and consistency across all regions. For example, if a specific market or region has a unique data requirement, the global data team will update the package accordingly, pushing changes to all markets.
+This bank chooses to levarage sandbox tooling to create and maintain a golden sandbox package. This helps with development efficieny, allows for consistent data models, and ensures consistency across all regions.
 
 ## Prerequisites and planning {#prerequisites-and-planning}
 
@@ -79,6 +79,10 @@ As you're importing or exporting your package, you can monitor the status of the
 ### Regularly update the golden sandbox
 
 Now that your golden sandbox package is done, you've established a standardized center of excellence you can continue to import into sandboxes or share across organizations. As your best practices change and develop, it's important to regularly update the baseline object configurations in your golden sandbox. As you make updates to the sandbox, you can create new iterations of your golden sandbox package following this same process.
+
+>[!NOTE]
+>
+> The steps above follow the process in Experience Platform's user interface. It's possible to follow the same steps using the API through various endpoints. Refer to the `sandboxes` [endpoint guide](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/api/sandboxes#create) and the `packages` [endpoint guide](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/sandbox-tooling-api/packages) for information on making each request through the API.
 
 ## Other use cases achieved through partner data support {#other-use-cases}
 
