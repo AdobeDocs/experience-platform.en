@@ -26,20 +26,20 @@ This SQL-based bot filtering example demonstrates how to use SQL queries to defi
 <!-- 
 ### Dataset overview
 
-The dataset used for bot filtering includes key attributes that help identify and categorize user behavior:
+The raw input dataset used for bot filtering should include key attributes that help identify and categorize user behavior. The attributes used in this example are as follows:
 
 - **ECID (Experience Cloud Visitor ID):** A universal, persistent identifier that uniquely identifies website visitors.
 - **Timestamp:** The time and date of an activity occurring on the website.
-- **webPageDetails.name:** A string field containing the name of the webpage visited.
+- **`webPageDetails.name`:** A string field containing the name of the webpage visited.
 
-The dataset is structured with nested fields for flexibility and enhanced querying capabilities:
-- **Nested Fields:**
+The output dataset is structured with both flat and nested fields. This structure enables flexibility when detecting anomolous traffic and supports advanced filtering strategies using SQL and machine learning. The nested fields include `count` and `web` which encapsulate granular details about activity thresholds and webpage specifics. Capturing these metrics ensures that features can be easily extracted for training and prediction tasks.
+
   - `count`: Captures activity thresholds for one-minute, five-minute, and thirty-minute intervals as integers.
   - `web`: Includes webpage details, such as the page name.
-- **Flat Fields:**
-  - `id`: Provides a straightforward reference for individual users, simplifying grouping and identification.
 
-This structure enables efficient detection of anomalous traffic and supports advanced filtering strategies using SQL and machine learning.
+The flat fields used are:
+
+  - `id`: This provides a straightforward reference for individual users to simplify grouping and identification.
 
  -->
 
@@ -140,7 +140,9 @@ FROM (
 
 In this statement, the joins combine data from `table_count_1_min`, `table_count_5_mins`, and `table_count_30_mins` using the `mcid` value. It then consolidates click counts for each user across multiple time intervals to provides a complete view of user activity. The grouping logic organizes clicks into 1-minute, 5-minute, and 30-minute intervals based on timestamps and aggregates them by user (`mcid`) and webpage. Finally, the flagging logic then identifies users that exceed 50 clicks in one minute and marks them as bots (`isBot = 1`).
 
-## Dataset for training
+### The output dataset to be used for training
+
+<!-- resultant ? -->
 
 The result of this expression might look similar to the table provided below. In the table the `isBot` column acts as a label that distinguishes between bot and non-bot activity.
 
@@ -164,17 +166,9 @@ The result of this expression might look similar to the table provided below. In
 
 <!-- {style="table-layout:auto"} -->
 
-<!-- 
-### Dataset Structure Details
+### Output dataset structure
 
-The dataset schema is designed to facilitate scalable data processing and includes both nested and flat fields:
-
-- **Nested Fields:** Fields like `count` and `web` encapsulate granular details about activity thresholds and webpage specifics, ensuring that features can be easily extracted for training and prediction tasks.
-- **Flat Fields:** Fields like `id` provide a straightforward reference for individual users, simplifying grouping and identification.
-
-By leveraging this structure, data engineers can efficiently prepare datasets for both rule-based SQL queries and machine learning workflows, improving the accuracy of bot detection. 
-
-The following schema diagram outlines the structure of the dataset, highlighting its nested and flat fields for efficient processing and bot activity detection.
+The following schema diagram outlines the structure of the resultant dataset. The diagram highlights the nested and flat fields used for efficient processing and bot activity detection.
 
 ```console
 root
@@ -189,24 +183,28 @@ root
  |-- isBot: integer (nullable = false)
 ```
 
--->
-
-
 ## Example 2: Advanced statistical functions for bot filtering {#statistical-functions-for-bot-filtering}
 
 This second example builds on basic SQL filtering by incorporating machine learning techniques to refine thresholds and improve filtering accuracy. By using advanced statistical functions, such as regression analysis or clustering algorithms, this approach introduces predictive capabilities that you can use to develop models for handling complex datasets with greater precision.
 
 ### Build a training dataset {#build-a-training-dataset}
 
-First, prepare a dataset with nested and flat structures for machine learning. Guidance on how to do this can be found in the [Working with nested data structures documentation](../key-concepts/nested-data-structures.md). Then group the data by timestamp, user ID, and webpage name to identify patterns in bot activity.
+First, prepare a dataset with nested and flat structures for machine learning (as described above). Further guidance on how to do this can be found in the [Working with nested data structures documentation](../key-concepts/nested-data-structures.md). Then group the data by timestamp, user ID, and webpage name to identify patterns in bot activity.
 
 ### Use Transform and Options clauses {#transform-and-preprocess}
 
-Apply transformations to handle null values and prepare features for the model. Use functions like `numeric_imputer`, `quantile_discretizer`, and `string_indexer` to preprocess the data. These transformations ensure compatibility with the machine learning algorithm. Refer to the [Feature transformation techniques documentation](../advanced-statistics/feature-transformation.md) to learn how to use transformation and preprocess your data.
+Apply null imputation and other general transformations to handle null values and prepare features for the model. Use functions like `numeric_imputer`, `quantile_discretizer`, and `string_indexer` to preprocess the data. These transformations ensure compatibility with the machine learning algorithm. Refer to the [Feature transformation techniques documentation](../advanced-statistics/feature-transformation.md) to learn how to use transformation and preprocess your data.
 
 ### Use SQL for model creation {#model-creation}
 
-Finally, use an SQL statement like the example below, to create a decision tree classifier model:
+Finally, use an SQL statement to create a decision tree classifier model. The key components, and their roles, of the model creation query are explained below:
+
+- **Create a name or alias for the model.** Assign a name to the model for later reference. In this case the statement uses `CREATE MODEL bot_filtering_model`.
+- **The TRANSFORM clause** Define the transformations applied to prepare the features for the model. These transofrmations should include imputing null values, discretizing data into buckets, and scaling the features.
+- **Options clause:** Specify the type of model and any other hyperparameters within this clause. For example, `decision_tree_classifier` and `max_depth=4` are were chosen as this is a classification problem. Other parameters like `MAX_DEPTH=4` are used to tune the model for better performance.
+- **Source the training data with the SELECT clause** This clause should include both the feature columns (`count_per_id`, `web`, `id`) and the label column (`isBot`), which indicates whether an action is bot-like.
+
+Your statement might look similar to the example below.
 
 ```sql
 CREATE MODEL bot_filtering_model
@@ -227,6 +225,53 @@ AS
 SELECT count_per_id, isBot, web, id FROM analytics_events_clicks_count_criteria;
 ```
 
+**Result**
+
+In the results (displayed below), the model `bot_filtering_model` is successfully created with a unique ID, name, and version. This output serves as a reference for tracking and managing models. Use these references to identify the exact configuration and version used for predictions or evaluations.
+
+```console
+
+           Created Model ID           |       Created Model       | Version
+--------------------------------------+---------------------------+---------
+ 2fb4b49e-d35c-44cf-af19-cc210e7dc72c | bot_filtering_model       |       1
+```
+
+### Evaluate the trained model {#evaluate-trained-model}
+
+After creating the model, evaluate its performance using the `MODEL_EVALUATE` command. This step ensures that the model meets accuracy and performance requirements for detecting bot activity. Use the following SQL command to evaluate the model:
+
+```sql
+SELECT *
+FROM   model_evaluate(bot_filtering_model, 1,
+                      SELECT count_per_id, isBot, web, id
+                      FROM   analytics_events_clicks_count_criteria);
+```
+
+**Result**
+
+The response includes metrics such as accuracy, precision, recall, and AUC-ROC, which indicate the model's effectiveness in identifying bot activity. 
+
+```console
+auc_roc | accuracy | precision | recall
+---------+----------+-----------+--------
+     1.0 |      1.0 |       1.0 |    1.0
+```
+
+These results confirm that the model performed well on the training data.
+
+>[!TIP]
+>
+>For use on production sandboxes, consider evaluating the model on test datasets to ensure it generalizes effectively.
+
+The table below explains each metric:
+
+| **Metric**   | **Description**                                                                                     |
+|--------------|-----------------------------------------------------------------------------------------------------|
+| `auc_roc`  | A perfect score (1.0) indicates the model is highly effective in distinguishing between bot and non-bot activity. |
+| `accuracy` | The percentage of correct predictions made by the model.                                            |
+| `precision`| The proportion of true bot predictions among all predicted bots.                                    |
+| `recall`   | The proportion of true bots detected out of all actual bots.                                        |
+
 ## Example 3: Machine learning model evaluation and predictions {#model-evaluation-and-predictions}
 
 This example demonstrates how to evaluate a trained machine learning model's performance. To measure predictive power, metrics such as accuracy and precision are used to assess its effectiveness on real-world test datasets. This step focuses on a model's practical reliability and highlights its use in identifying bot activity for fraud prevention and ensuring data integrity.
@@ -240,6 +285,26 @@ SELECT *
 FROM model_evaluate(bot_filtering_model, 1,
     SELECT count_per_id, isBot, web, id FROM analytics_events_clicks_count_criteria
 );
+```
+
+<!-- Missing:
+
+
+The first argument specifies the model name, which was created using the CREATE MODEL command.
+The second argument indicates the version of the model that should be used for evaluation.
+The final argument provides the evaluation dataset, and it's important to note that the label column is included in the SELECT query.
+
+The transformations applied during training are automatically applied during evaluation.
+ -->
+
+**Results**
+
+In the results below, the ...
+
+```console
+auc_roc | accuracy | precision | recall
+---------+----------+-----------+--------
+     1.0 |      1.0 |       1.0 |    1.0
 ```
 
 ### Predict bot activity {#predict-bot-activity}
