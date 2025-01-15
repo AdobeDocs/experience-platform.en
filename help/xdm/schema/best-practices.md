@@ -140,7 +140,7 @@ In this scenario, the company has two potential options for representing a custo
 
 #### Approach 1: Use profile attributes {#profile-approach}
 
-The first approach would be to include an array of subscriptions as attributes within the profile entity for Customer. Objects in this array would contain fields for `category` and `planName`.
+The first approach would be to include an array of `subscriptionID` within the profile entity for Customer.
 
 ![The Customer schema in the Schema Editor with the class and structure highlighted](../images/best-practices/profile-schema.png)
 
@@ -156,7 +156,7 @@ The first approach would be to include an array of subscriptions as attributes w
 
 #### Approach 2: Use event entities {#event-approach}
 
-The second approach would be to use event schemas to represent subscriptions. This entails ingesting the same subscription fields as the first approach, with addition of a subscription ID, a customer ID, and a timestamp of when the subscription event occurred.
+The second approach would be to use event schemas to represent a subscription event. This would include the subscription ID alongside a customer ID and a timestamp of when the subscription event occurred.
 
 ![A diagram of the Subscription Event schema with the XDM Experience Event class and subscriptions structure highlighted.](../images/best-practices/event-schema.png)
 
