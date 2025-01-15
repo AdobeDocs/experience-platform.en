@@ -97,7 +97,7 @@ role: Admin,User
         * [PubMatic Connect connection](./catalog/advertising/pubmatic.md)
         * [Snapchat Ads connection](./catalog/advertising/snap-inc.md)
         * [The Trade Desk connection](./catalog/advertising/tradedesk.md)
-        * [(Beta) The Trade Desk CRM connection](./catalog/advertising/tradedesk-emails.md)
+        * [The Trade Desk CRM connection](./catalog/advertising/tradedesk-emails.md)
         * [Twitter Universal Website Tag extension](./catalog/advertising/twitter-uwt.md)
         * [Yahoo/Verizon DataX connection](./catalog/advertising/datax.md)
     * Analytics destinations {#analytics}
