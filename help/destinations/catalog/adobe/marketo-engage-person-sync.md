@@ -17,7 +17,7 @@ Use the Marketo Engage Person Sync connector to stream updates from person audie
 
 >[!IMPORTANT]
 > 
->The Marketo V2 Audience Sync Connector should not be used in Create mode in conjunction with the Profile Update Sync Connector 
+>The [Marketo V2 Audience Sync Connector](/help/destinations/catalog/adobe/marketo-engage.md) should not be used in Create mode in conjunction with the Profile Update Sync Connector 
 
 ## Supported Identities and Attributes {#support-identities-and-attributes}
 
