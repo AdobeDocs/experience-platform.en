@@ -61,6 +61,14 @@ You can use AI Assistant to help your discover of Experience Data Model (XDM) fi
 
 [![image](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/xdm-field-discovery.md)
 
+>[!TAB AI Assistant for Customer Support]
+
+### AI Assistant for Customer Support
+
+You can use AI Assistant for Customer Support to seamlessly troubleshoot without leaving your workflows. When needed, support administrators can now use AI Assistant for Customer Support to create customer support tickets, complete with context and session details from your interactions with AI Assistant.
+
+[![image](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/customer-support.md)
+
 >[!ENDTABS]
 
 ## Video library
@@ -71,57 +79,59 @@ Refer to the videos below to further amplify your knowledge on AI Assistant capa
 
 Watch the following video for an overview of AI Assistant.
 
-+++Select to view an overview video of AI Assistant
-
 >[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
 For more information, read the [AI Assistant UI guide](ui-guide.md).
-
-+++
 
 ### Get access to AI Assistant
 
 Watch the following video to learn how to configure access to AI Assistant for your organizations and users.
 
-+++Select to view a video on how to get access to AI Assistant
-
 >[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
 
 For more information, read the [AI Assistant access guide](access.md).
 
-+++
+### Understanding product knowledge in AI Assistant
+
+Watch the following video to learn about product knowledge in AI Assistant.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441024?learn=on)
+
+For more information, read about [product knowledge in AI Assistant](home.md#product-knowledge)
 
 ### Use AI Assistant product knowledge to reduce onboarding time
 
 Watch the following video to learn how you can use AI Assistant product knowledge to reduce onboarding time. 
 
-+++Select to view a video on how to use AI Assistant to reduce onboarding time
-
 >[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
 
 For more information, read about [product knowledge in AI Assistant](home.md#product-knowledge)
-
-+++
 
 ### Use AI Assistant to de-clutter your audiences
 
 Watch the following video to learn how to use AI Assistant to de-clutter your audience and optimize your marketing operations.
 
-+++Select to view a video on how to use AI Assistant to de-clutter your audiences
-
 >[!VIDEO](https://video.tv.adobe.com/v/3435532?learn=on)
-
-+++
 
 ### Use the discoverability panel to help you get started
 
 Watch the following video to learn about the discoverability panel in AI Assistant, and how you can use it to get started with AI Assistant
 
-+++Select to view a video on discoverability
-
 >[!VIDEO](https://video.tv.adobe.com/v/3440962/?learn=on)
 
-+++
+### Use AI Assistant to validate responses
+
+Watch the following video to learn how you can use AI Assistant to verify and validate responses.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441738/?learn=on)
+
+For more information, read the documentation on [verifying AI Assistant answers](ui-guide.md#verify-operational-insights-responses).
+
+### Use AI Assistant for impact analysis
+
+Watch the following video to learn how you can use AI Assistant to execute more effective impact analysis before any changes are made to your data objects.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441680/?learn=on)
 
 ## AI Assistant use case library
 
@@ -134,6 +144,7 @@ Read the following for AI Assistant use case examples:
 * [Reduce onboarding time for new members of your team](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153)
 * [De-clutter your audiences and optimize your marketing operations](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
 * [Check dependencies and minimize risk during data updates](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
+* [Minimize risk during data updates by checking dependencies in seconds](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
 
 >[!TAB Additional video content]
 

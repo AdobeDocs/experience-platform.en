@@ -38,6 +38,10 @@ Under **[!UICONTROL Identity namespace]**, use the dropdown menu to select the a
 
 When finished, select **[!UICONTROL Apply]** to apply the change to the schema.
 
+>[!IMPORTANT]
+>
+>If a primary identity field is already set, you may change the primary identity field in your schema by following the steps above. However, you must disable and then re-enable any associated datasets in the profile for the change to take affect.
+
 ![](../../images/ui/fields/special/identity-config.png)
 
 The canvas updates to reflect the changes, with the selected field gaining a fingerprint symbol (![](/help/images/icons/identity-service.png)) to designate it as an identity. In the left rail, the identity field is now listed under the name of the class or schema field group that provides the field to the schema.
@@ -53,3 +57,4 @@ If you defined a primary identity for the schema, you can now proceed to [enable
 This guide covered how to define an identity field in the UI. As data is ingested using this schema, your customer identity graphs will update to reflect the schema's identity fields. See the guide on the [identity graph viewer](../../../identity-service/features/identity-graph-viewer.md) to learn how to explore your organization's private graph in the UI.
 
 See the overview on [defining fields in the UI](./overview.md#special) to learn how to define other XDM field types in the [!DNL Schema Editor].
+
