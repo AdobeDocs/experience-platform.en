@@ -3,8 +3,8 @@ title: Marketo Engage Person Sync
 description: Use the Marketo Engage Person Sync connector to stream updates from a person audience to the corresponding records in your Marketo Engage.
 last-substantial-update: 2025-01-14
 badgeBeta: label="Beta" type="Informative"
+exl-id: 2c909633-b169-4ec8-9f58-276395cb8df2
 ---
-
 # Marketo Engage Person Sync connection {#marketo-engage-person-sync}
 
 >[!IMPORTANT]
