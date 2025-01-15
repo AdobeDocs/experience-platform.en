@@ -23,6 +23,26 @@ The three examples shown below demonstrate how to use SQL and machine learning t
 
 This SQL-based bot filtering example demonstrates how to use SQL queries to define thresholds and detect bot activity based on predefined rules. This foundational approach helps identify anomalies in web traffic by removing unusual activity. By customizing detection rules with defined thresholds and intervals, you can effectively tailor bot filtering to suit your specific traffic patterns.
 
+<!-- 
+### Dataset overview
+
+The dataset used for bot filtering includes key attributes that help identify and categorize user behavior:
+
+- **ECID (Experience Cloud Visitor ID):** A universal, persistent identifier that uniquely identifies website visitors.
+- **Timestamp:** The time and date of an activity occurring on the website.
+- **webPageDetails.name:** A string field containing the name of the webpage visited.
+
+The dataset is structured with nested fields for flexibility and enhanced querying capabilities:
+- **Nested Fields:**
+  - `count`: Captures activity thresholds for one-minute, five-minute, and thirty-minute intervals as integers.
+  - `web`: Includes webpage details, such as the page name.
+- **Flat Fields:**
+  - `id`: Provides a straightforward reference for individual users, simplifying grouping and identification.
+
+This structure enables efficient detection of anomalous traffic and supports advanced filtering strategies using SQL and machine learning.
+
+ -->
+
 ### Define thresholds for bot activity {#define-thresholds}
 
 First, define bot activity thresholds to identify suspicious behavior. For instance, if a visitor performs more than 60 clicks in one minute, the user is flagged as a bot.
@@ -48,27 +68,129 @@ Next, define different time intervals for thresholds. These intervals could incl
 - **5-minute interval:** Up to 300 clicks.
 - **30-minute interval:** Up to 1800 clicks.
 
-The following SQL query creates a view to handle thresholds across multiple intervals:
+The following SQL query creates a view named `analytics_events_clicks_count_criteria` to handle thresholds across multiple intervals:
+
+### Create aggregate click count view
+
+The following query creates a view named `analytics_events_clicks_count_criteria`. This view consolidates click counts for 1-minute, 5-minute, and 30-minute intervals into a structured dataset and flags potential bot activity based on predefined thresholds.
 
 ```sql
-CREATE VIEW analytics_events_clicks_count_criteria AS  
-SELECT 
-  struct (
-    cast(count_1_min AS int) one_minute,
-    cast(count_5_mins AS int) five_minute,
-    cast(count_30_mins AS int) thirty_minute
-  ) count_per_id,
-  id,
-  struct (struct (name) webpagedetails) web,
-  CASE
-    WHEN count.one_minute > 50 THEN 1
-    ELSE 0
-  END AS isBot
+CREATE VIEW analytics_events_clicks_count_criteria as  
+SELECT struct (
+        cast(count_1_min AS int) one_minute,
+        cast(count_5_mins AS int) five_minute,
+        cast(count_30_mins AS int) thirty_minute
+       ) count_per_id,
+       id,
+      struct (
+        struct (name) webpagedetails
+      ) web,
+      CASE
+        WHEN count.one_minute > 50 THEN 1
+        ELSE 0
+      END AS isBot
 FROM (
-  SELECT table_count_1_min.mcid AS id, count_1_min, count_5_mins, count_30_mins, table_count_1_min.name AS name
-  FROM ... -- Add your SQL joins and grouping logic here.
-);
+  SELECT table_count_1_min.mcid AS id,
+         count_1_min,
+         count_5_mins,
+         count_30_mins,
+         table_count_1_min.name AS name
+  FROM (
+      -- Joins and Grouping Logic
+      (SELECT mcid, Max(count_1_min) AS count_1_min, name
+       FROM (SELECT enduserids._experience.mcid.id AS mcid,
+                    Count(*) AS count_1_min,
+                    web.webPageDetails.name AS name
+             FROM delta_table
+             WHERE TIMESTAMP BETWEEN TO_TIMESTAMP('2019-09-01 00:00:00')
+                               AND TO_TIMESTAMP('2019-09-01 23:00:00')
+             GROUP BY UNIX_TIMESTAMP(timestamp) / 60,
+                      enduserids._experience.mcid.id,
+                      web.webPageDetails.name)
+       GROUP BY mcid, name) AS table_count_1_min
+       LEFT JOIN
+       (SELECT mcid, Max(count_5_mins) AS count_5_mins, name
+        FROM (SELECT enduserids._experience.mcid.id AS mcid,
+                     Count(*) AS count_5_mins,
+                     web.webPageDetails.name AS name
+              FROM delta_table
+              WHERE TIMESTAMP BETWEEN TO_TIMESTAMP('2019-09-01 00:00:00')
+                                AND TO_TIMESTAMP('2019-09-01 23:00:00')
+              GROUP BY UNIX_TIMESTAMP(timestamp) / 300,
+                       enduserids._experience.mcid.id,
+                       web.webPageDetails.name)
+        GROUP BY mcid, name) AS table_count_5_mins
+       ON table_count_1_min.mcid = table_count_5_mins.mcid
+       LEFT JOIN
+       (SELECT mcid, Max(count_30_mins) AS count_30_mins, name
+        FROM (SELECT enduserids._experience.mcid.id AS mcid,
+                     Count(*) AS count_30_mins,
+                     web.webPageDetails.name AS name
+              FROM delta_table
+              WHERE TIMESTAMP BETWEEN TO_TIMESTAMP('2019-09-01 00:00:00')
+                                AND TO_TIMESTAMP('2019-09-01 23:00:00')
+              GROUP BY UNIX_TIMESTAMP(timestamp) / 1800,
+                       enduserids._experience.mcid.id,
+                       web.webPageDetails.name)
+        GROUP BY mcid, name) AS table_count_30_mins
+       ON table_count_1_min.mcid = table_count_30_mins.mcid
+  )
+)
 ```
+
+In this statement, the joins combine data from `table_count_1_min`, `table_count_5_mins`, and `table_count_30_mins` using the `mcid` value. It then consolidates click counts for each user across multiple time intervals to provides a complete view of user activity. The grouping logic organizes clicks into 1-minute, 5-minute, and 30-minute intervals based on timestamps and aggregates them by user (`mcid`) and webpage. Finally, the flagging logic then identifies users that exceed 50 clicks in one minute and marks them as bots (`isBot = 1`).
+
+## Dataset for training
+
+The result of this expression might look similar to the table provided below. In the table the `isBot` column acts as a label that distinguishes between bot and non-bot activity.
+
+```console
+| `id`           | `count_per_id`                                        | `isBot` | `web`                                                                                                                    |
+|--------------|-----------------------------------------------------|-------|------------------------------------------------------------------------------------------------------------------------|
+| 2.5532E+18   | {"one_minute":99,"five_minute":1,"thirty_minute":1} | 1     | {"webpagedetails":{"name":"KR+CC8TQzPyK4ord6w1PfJay1+h6snSF++xFERc4ogrEX4clJROgzkGgnSTSGWWZfNS/Ouz2K0VtkHG77vwoTg=="}} |
+| 2.5532E+18   | {"one_minute":99,"five_minute":1,"thirty_minute":1} | 1     | {"webpagedetails":{"name":"KR+CC8TQzPyK4ord6w1PfJay1+h6snSF++xFERc4ogrEX4clJROgzkGgnSTSGWWZfNS/Ouz2K0VtkHG77vwoTg=="}} |
+| 2.5532E+18   | {"one_minute":99,"five_minute":1,"thirty_minute":1} | 1     | {"webpagedetails":{"name":"KR+CC8TQzPyK4ord6w1PfJay1+h6snSF++xFERc4ogrEX4clJROgzkGgnSTSGWWZfNS/Ouz2K0VtkHG77vwoTg=="}} |
+| 2.5532E+18   | {"one_minute":99,"five_minute":1,"thirty_minute":99}| 1    | {"webpagedetails":{"name":"KR+CC8TQzPyK4ord6w1PfJay1+h6snSF++xFERc4ogrEX4clJROgzkGgnSTSGWWZfNS/Ouz2K0VtkHG77vwoTg=="}} |
+| 2.5532E+18   | {"one_minute":99,"five_minute":1,"thirty_minute":1} | 1     | {"webpagedetails":{"name":"KR+CC8TQzPyK4ord6w1PfJay1+h6snSF++xFERc4ogrEX4clJROgzkGgnSTSGWWZfNS/Ouz2K0VtkHG77vwoTg=="}} |
+| 2.5532E+18   | {"one_minute":99,"five_minute":1,"thirty_minute":1} | 1     | {"webpagedetails":{"name":"KR+CC8TQzPyK4ord6w1PfJay1+h6snSF++xFERc4ogrEX4clJROgzkGgnSTSGWWZfNS/Ouz2K0VtkHG77vwoTg=="}} |
+| 2.5532E+18   | {"one_minute":99,"five_minute":1,"thirty_minute":1} | 1     | {"webpagedetails":{"name":"KR+CC8TQzPyK4ord6w1PfJay1+h6snSF++xFERc4ogrEX4clJROgzkGgnSTSGWWZfNS/Ouz2K0VtkHG77vwoTg=="}} |
+| 2.5532E+18   | {"one_minute":99,"five_minute":1,"thirty_minute":1} | 1     | {"webpagedetails":{"name":"KR+CC8TQzPyK4ord6w1PfJay1+h6snSF++xFERc4ogrEX4clJROgzkGgnSTSGWWZfNS/Ouz2K0VtkHG77vwoTg=="}} |
+| 2.5532E+18   | {"one_minute":99,"five_minute":1,"thirty_minute":1} | 1     | {"webpagedetails":{"name":"KR+CC8TQzPyK4ord6w1PfJay1+h6snSF++xFERc4ogrEX4clJROgzkGgnSTSGWWZfNS/Ouz2K0VtkHG77vwoTg=="}} |
+| 2.5532E+18   | {"one_minute":99,"five_minute":1,"thirty_minute":1} | 1     | {"webpagedetails":{"name":"KR+CC8TQzPyK4ord6w1PfJay1+h6snSF++xFERc4ogrEX4clJROgzkGgnSTSGWWZfNS/Ouz2K0VtkHG77vwoTg=="}} |
+| 1E+18        | {"one_minute":1,"five_minute":1,"thirty_minute":1}   | 0     | {"webpagedetails":{"name":"KR+CC8TQzPyMOE/bk7EGgN3lSvP8OsxeI2aLaVrbaeLn8XK3y3zok2ryVyZoiBu3"}}                       |
+| 1.00007E+18  | {"one_minute":1,"five_minute":1,"thirty_minute":1}   | 0     | {"webpagedetails":{"name":"8DN0dM4rlvJxt4oByYLKZ/wuHyq/8CvsWNyXvGYnImytXn/bjUizfRSl86vmju7MFMXxnhTBoCWLHtyVSWro9LYg0MhN8jGbswLRLXoOIyh2wduVbc9XeN8yyQElkJm3AW3zcqC7iXNVv2eBS8vwGg=="}} |
+| 1.00008E+18  | {"one_minute":1,"five_minute":1,"thirty_minute":1}   | 0     | {"webpagedetails":{"name":"KR+CC8TQzPyMOE/bk7EGgN3lSvP8OsxeI2aLaVrbaeLn8XK3y3zok2ryVyZoiBu3"}}                       |
+```
+
+<!-- {style="table-layout:auto"} -->
+
+<!-- 
+### Dataset Structure Details
+
+The dataset schema is designed to facilitate scalable data processing and includes both nested and flat fields:
+
+- **Nested Fields:** Fields like `count` and `web` encapsulate granular details about activity thresholds and webpage specifics, ensuring that features can be easily extracted for training and prediction tasks.
+- **Flat Fields:** Fields like `id` provide a straightforward reference for individual users, simplifying grouping and identification.
+
+By leveraging this structure, data engineers can efficiently prepare datasets for both rule-based SQL queries and machine learning workflows, improving the accuracy of bot detection. 
+
+The following schema diagram outlines the structure of the dataset, highlighting its nested and flat fields for efficient processing and bot activity detection.
+
+```console
+root
+ |-- count: struct (nullable = false)
+ |    |-- one_minute: integer (nullable = true)
+ |    |-- five_minute: integer (nullable = true)
+ |    |-- thirty_minute: integer (nullable = true)
+ |-- id: string (nullable = true)
+ |-- web: struct (nullable = false)
+ |    |-- webpagedetails: struct (nullable = false)
+ |    |    |-- name: string (nullable = true)
+ |-- isBot: integer (nullable = false)
+```
+
+-->
+
 
 ## Example 2: Advanced statistical functions for bot filtering {#statistical-functions-for-bot-filtering}
 
