@@ -4,7 +4,7 @@ description: Learn how to use Data Distiller statistics and machine learning to 
 ---
 # Bot filtering using statistics and machine learning
 
-To maintain accurate analytics and ensure data integrity in clickstream or web traffic data, it is essential to address bot activity. Employ bot filtering measures to remove unwanted traffic from your analytics platforms. Use Adobe Experience Platform Query Service to implement effective bot filtering and maintain high-quality data.
+To maintain accurate analytics and ensure data integrity in clickstream or web traffic data, it is essential to address bot activity. Employ bot filtering measures to remove unwanted traffic from your analytics platforms. Use Data Distiller methods to implement effective bot filtering and maintain high-quality data.
 
 This document provides a comprehensive guide to identifying and filtering bot activity using SQL and machine learning techniques. It presents a progression of complementary approaches, starting with basic filtering and advancing to machine learning-based detection and evaluation. Adopt this robust framework to enhance your bot detection and maintain your data integrity.
 
@@ -42,7 +42,7 @@ WHERE enduserids._experience.ecid NOT IN (
 
 ### Expand to multiple intervals {#expand-to-multiple-intervals}
 
-Next, define for different time intervals for thresholds. These intervals could include:
+Next, define different time intervals for thresholds. These intervals could include:
 
 - **1-minute interval:** Up to 60 clicks.
 - **5-minute interval:** Up to 300 clicks.
@@ -72,19 +72,19 @@ FROM (
 
 ## Example 2: Advanced statistical functions for bot filtering {#statistical-functions-for-bot-filtering}
 
-This example builds on basic SQL filtering by incorporating machine learning techniques to refine thresholds and improve filtering accuracy. By using advanced statistical functions, such as regression analysis or clustering algorithms, this approach introduces predictive capabilities that you can use to develop models for handling complex datasets with greater precision.
+This second example builds on basic SQL filtering by incorporating machine learning techniques to refine thresholds and improve filtering accuracy. By using advanced statistical functions, such as regression analysis or clustering algorithms, this approach introduces predictive capabilities that you can use to develop models for handling complex datasets with greater precision.
 
-### Building a training dataset
+### Build a training dataset {#build-a-training-dataset}
 
-Prepare a dataset with nested and flat structures for machine learning. Group data by timestamp, user ID, and webpage name to identify patterns in bot activity.
+First, prepare a dataset with nested and flat structures for machine learning. Guidance on how to do this can be found in the [Working with nested data structures documentation](../key-concepts/nested-data-structures.md). Then group the data by timestamp, user ID, and webpage name to identify patterns in bot activity.
 
-### Using Transform and Options Clauses
+### Use Transform and Options clauses {#transform-and-preprocess}
 
-Apply transformations to handle null values and prepare features for the model. Use functions like `numeric_imputer`, `quantile_discretizer`, and `string_indexer` to preprocess the data. These transformations ensure compatibility with the machine learning algorithm.
+Apply transformations to handle null values and prepare features for the model. Use functions like `numeric_imputer`, `quantile_discretizer`, and `string_indexer` to preprocess the data. These transformations ensure compatibility with the machine learning algorithm. Refer to the [Feature transformation techniques documentation](../advanced-statistics/feature-transformation.md) to learn how to use transformation and preprocess your data.
 
-### SQL Code for Model Creation
+### Use SQL for model creation {#model-creation}
 
-The following SQL creates a decision tree classifier model:
+Finally, use an SQL statement like the example below, to create a decision tree classifier model:
 
 ```sql
 CREATE MODEL bot_filtering_model
@@ -141,7 +141,7 @@ The following list of examples demonstrate how bot filtering can enhance data ac
 
 ## Manage your models {#manage-models}
 
-This section explains the SQL key words you can use to manage machine learning models.
+To manage your machine learning models, use the SQL key words listed in the section below.
 
 ### List available models {#list-available-models}
 
@@ -153,9 +153,7 @@ SHOW MODELS;
 
 ### Delete models {#delete-models}
 
-Remove obsolete or unnecessary models with the `DROP MODEL` command. You can use this command to delete a specified machine learning model. In the example below, the `bot_filtering_model` is removed from the system. This is typically done to freeing up resources and ensuring that only relevant models are maintained.
-
-<!-- The `DROP MODEL` command is used to delete the specified machine learning model, in this case, `bot_filtering_model`, from the system. This is typically done to remove obsolete or unnecessary models, freeing up resources and ensuring that only relevant models are maintained. -->
+To free up resources and ensure that only relevant models are maintained, use the `DROP MODEL` command to remove obsolete or unnecessary models. This command deletes the machine learning model specified after the key words. In the example below, the `bot_filtering_model` is removed from the system.
 
 ```sql
 DROP MODEL bot_filtering_model;
