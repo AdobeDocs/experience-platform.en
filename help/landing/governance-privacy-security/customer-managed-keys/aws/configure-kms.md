@@ -1,6 +1,7 @@
 ---
 title: Configure AWS KMS for Customer Managed Keys
 description: Learn how to configure Amazon Web Services Key Management Service (KMS) for use with Customer Managed Keys in Adobe Experience Platform.
+exl-id: 0cf0deab-dc30-412f-b511-dee5504c3953
 ---
 # Configure AWS KMS for Customer Managed Keys
 
