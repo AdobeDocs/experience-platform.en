@@ -1,6 +1,7 @@
 ---
 title: Enable a center of excellence using sandbox tooling
 description: Enable a center of excellence using sandbox tooling by creating a "golden sandbox" package to standardize best practices across multiple sandboxes.
+exl-id: 6f242ad5-bb02-4a6d-b255-d196dd5fe4b8
 ---
 # Enable a center of excellence using sandbox tooling
 

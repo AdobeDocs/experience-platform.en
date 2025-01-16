@@ -1,6 +1,7 @@
 ---
 title: Back up object configurations using sandbox tooling
 description: To safely reset sandboxes and add versioning support, back up object configurations (or metadata) using sandbox tooling packages. Backup packages prevent the loss of critical configurations such as schemas, datasets, and audiences, especially during development iterations.
+exl-id: cccbaaf1-ee68-4a00-9a44-aa5db4a83a14
 ---
 # Back up object configurations using sandbox tooling
 
