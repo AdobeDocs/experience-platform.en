@@ -80,9 +80,9 @@ Once you have created a new project, select **[!UICONTROL Add API]** on the **[!
 
 ![Developer Console screen with the Add API option highlighted.](./images/api-authentication/add-api.png)
 
-The **[!UICONTROL Add an API]** screen appears. Select the product icon for Adobe Experience Platform, then choose **[!UICONTROL Experience Platform API]** before selecting **[!UICONTROL Next]**.
+The **[!UICONTROL Add an API]** screen appears. Select the product icon for **[!UICONTROL Adobe Experience Platform]**, then choose **[!UICONTROL Experience Platform API]** before selecting **[!UICONTROL Next]**.
 
-![Select Experience Platform API.](./images/api-authentication/platform-api.png)
+![Select Experience Platform API in the Add an API screen.](./images/api-authentication/platform-api.png)
 
 >[!TIP]
 >
@@ -90,7 +90,7 @@ The **[!UICONTROL Add an API]** screen appears. Select the product icon for Adob
 
 ### Select the [!UICONTROL OAuth Server-to-Server] authentication type {#select-oauth-server-to-server}
 
-Next, select the [!UICONTROL OAuth Server-to-Server] authentication type to generate access tokens and access the Experience Platform API.
+Next, select the **[!UICONTROL OAuth Server-to-Server]** authentication type to generate access tokens and access the Experience Platform API. Give your credential a clear name in the **[!UICONTROL Credential name]** text field before selecting **[!UICONTROL Next]**.
 
 >[!IMPORTANT]
 >
@@ -100,12 +100,7 @@ Next, select the [!UICONTROL OAuth Server-to-Server] authentication type to gene
 
 ### Select the product profiles for your integration {#select-product-profiles}
 
-In the **[!UICONTROL Configure API]** screen, select **[!UICONTROL AEP-Default-All-Users]**.
-
-<!--
-Your integration's service account will gain access to granular features through the product profiles selected here.
-
--->
+In the **[!UICONTROL Configure API]** screen, select **[!UICONTROL AEP-Default-All-Users]** along with any additional product profiles you wish to gain access to.
 
 >[!IMPORTANT]
 >
@@ -121,7 +116,7 @@ A walkthrough of the steps described above to set up an integration with the Exp
 
 ### Gather credentials {#gather-credentials}
 
-Once the API has been added to the project, the **[!UICONTROL Experience Platform API]** page for the project displays the following credentials that are required in all calls to Experience Platform APIs:
+Once the API has been added to the project, the **[!UICONTROL OAuth Server-to-Server]** page for the project displays the following credentials that are required in all calls to Experience Platform APIs:
 
 ![Integration information after adding an API in Developer Consle.](./images/api-authentication/api-integration-information.png)
 
@@ -142,9 +137,9 @@ In addition to the above credentials, you also need the generated **[!UICONTROL 
 
 ## Generate an access token {#generate-access-token}
 
-The next step is to generate an `{ACCESS_TOKEN}` credential for use in Platform API calls. Unlike the values for `{API_KEY}` and `{ORG_ID}`, a new token must be generated every 24 hours to continue using Platform APIs. Select **[!UICONTROL Generate access token]**, as shown below.
+The next step is to generate an `{ACCESS_TOKEN}` credential for use in Platform API calls. Unlike the values for `{API_KEY}` and `{ORG_ID}`, a new token must be generated every 24 hours to continue using Platform APIs. Select **[!UICONTROL Generate access token]** which produces your access token, as shown below.
 
-![Show how to generate access token](././images/api-authentication/generate-access-token.gif)
+![Show how to generate access token](././images/api-authentication/generate-access-token.png)
 
 >[!TIP]
 >
