@@ -9,7 +9,7 @@ Adobe Experience Platform allows you to ingest Adobe Analytics data through the 
 
 ![An illustration of the Adobe Analytics data journey from Analytics to Experience Platform.](../images/analytics-data-experience-platform.png)
 
-## Streaming media
+## Streaming media parameters
 
 | Data feed | XDM field path | Data type | Description | 
 | --- | --- | --- | --- |
@@ -73,7 +73,7 @@ Adobe Experience Platform allows you to ingest Adobe Analytics data through the 
 
 {style="table-layout:auto"}
 
-## Advertising
+## Advertising parameters
 
 | Data feed | XDM field path | Data type | Description | 
 | --- | --- | --- | --- |
@@ -97,7 +97,7 @@ Adobe Experience Platform allows you to ingest Adobe Analytics data through the 
 
 {style="table-layout:auto"}
 
-## Chapter
+## Chapter parameters
 
 | Data feed | XDM field path | Data type | Description | 
 | --- | --- | --- | --- |
@@ -107,34 +107,34 @@ Adobe Experience Platform allows you to ingest Adobe Analytics data through the 
 | (only in ava.e2e rsid: event48) | `mediaReporting.chapterDetails.length` | integer | The length of the chapter, measured in seconds. |
 | `videochapter` | `mediaReporting.chapterDetails.ID` | string | The auto-generated ID of the chapter. |
 | `videochapterstart` | `mediaReporting.chapterDetails.isStarted` | boolean | A boolean value that indicates whether or not the chapter has been started. |
-| `videochaptercomplete` | `mediaReporting.chapterDetails.isCompleted` | boolean | A boolean value that indivates whether or not the chapter has been completed. |
+| `videochaptercomplete` | `mediaReporting.chapterDetails.isCompleted` | boolean | A boolean value that indicates whether or not the chapter has been completed. |
 | `videochaptertime` | `mediaReporting.chapterDetails.timePlayed` | integer | The time, measured in seconds, spent on the chapter. |
 
 {style="table-layout:auto"}
 
-## Player state
+## Player state parameteres
 
 | Data feed | XDM field path | Data type | Description | 
 | --- | --- | --- | --- |
-| `videostatefullscreen` | `mediaReporting.states[].isSet` | boolean | |
-| `videostatefullscreencount` | `mediaReporting.states[].count` | integer | |
-| `videostatefullscreentime` | `mediaReporting.states[].time` | integer | |
-| `videostateclosedcaptioning` | `mediaReporting.states[].isSet` | boolean | |
-| `videostateclosedcaptioningcount` | `mediaReporting.states[].count` | integer | |
-| `videostateclosedcaptioningtime` | `mediaReporting.states[].time` | integer | |
-| `videostatemute` | `mediaReporting.states[].isSet` | boolean | |
-| `videostatemutecount` | `mediaReporting.states[].count` | integer | |
-| `videostatemutetime` | `mediaReporting.states[].time` | integer | |
-| `videostatepictureinpicture` | `mediaReporting.states[].isSet` | boolean | |
-| `videostatepictureinpicturecount` | `mediaReporting.states[].count` | integer | |
-| `videostatepictureinpicturetime` | `mediaReporting.states[].time` | integer | |
-| `videostateinfocus` | `mediaReporting.states[].isSet` | boolean | |
-| `videostateinfocuscount` | `mediaReporting.states[].count` | integer | |
-| `videostateinfocustime` | `mediaReporting.states[].name` | string | |
+| `videostatefullscreen` | `mediaReporting.states[].isSet` | boolean | A boolean value that indicates whether or not the video state is set to full screen. |
+| `videostatefullscreencount` | `mediaReporting.states[].count` | integer | The number of times that a video state was set to full screen. |
+| `videostatefullscreentime` | `mediaReporting.states[].time` | integer | The total duration of when the video state was set to full screen. |
+| `videostateclosedcaptioning` | `mediaReporting.states[].isSet` | boolean | A boolean value that indicates whether or not closed captioning is enabled. |
+| `videostateclosedcaptioningcount` | `mediaReporting.states[].count` | integer | The number of times that closed captioning was enabled. |
+| `videostateclosedcaptioningtime` | `mediaReporting.states[].time` | integer | The total duration of when closed captioning was enabled. |
+| `videostatemute` | `mediaReporting.states[].isSet` | boolean | A boolean value that indicates whether or not the video state was set to mute. |
+| `videostatemutecount` | `mediaReporting.states[].count` | integer | The number of times that a video was muted. |
+| `videostatemutetime` | `mediaReporting.states[].time` | integer | The total duration of the video in mute. |
+| `videostatepictureinpicture` | `mediaReporting.states[].isSet` | boolean | A boolean value that indicates whether or not picture-in-picture mode is enabled. |
+| `videostatepictureinpicturecount` | `mediaReporting.states[].count` | integer | The number of times that picture-in-picture mode is enabled. |
+| `videostatepictureinpicturetime` | `mediaReporting.states[].time` | integer | The total duration of when picture-in-picture mode was enabled. |
+| `videostateinfocus` | `mediaReporting.states[].isSet` | boolean | A boolean value that indicates whether or not in-focus mode is enabled |
+| `videostateinfocuscount` | `mediaReporting.states[].count` | integer | The number of times that in-picture mode was enabled. |
+| `videostateinfocustime` | `mediaReporting.states[].time` | integer | The total duration of when in-focus mode was enabled. |
 
 {style="table-layout:auto"}
 
-## Quality
+## Quality parameters
 
 | Data feed | XDM field path | Data type | Description | 
 | --- | --- | --- | --- |
@@ -226,8 +226,8 @@ Select fields are directly mapped from Adobe Analytics to Experience Data Model 
 | `mobileinstalls` | `application.firstLaunches` | Object  | This is triggered at the first run after installation or reinstallation | {id (string), value (number)} |
 | `mobileupgrades` | `application.upgrades` | Object | Reports the number of app upgrades. Triggers at the first run after upgrade or any time the version number changes. | {id (string), value (number)} |
 | `mobilelaunches` | `application.launches` | Object | The number of times the app has been launched. | {id (string), value (number)} |
-| `mobilecrashes` | `application.crashes` | Object | <!-- MISSING --> | {id (string), value (number)} |
-| `mobilemessageclicks` | `directMarketing.clicks` | Object | <!-- MISSING --> | {id (string), value (number)} |
+| `mobilecrashes` | `application.crashes` | Object |  | {id (string), value (number)} |
+| `mobilemessageclicks` | `directMarketing.clicks` | Object |  | {id (string), value (number)} |
 | `mobileplaceentry` | `placeContext.POIinteraction.poiEntries` | Object | | {id (string), value (number)} |
 | `mobileplaceexit` | `placeContext.POIinteraction.poiExits` | Object | | {id (string), value (number)} |
 | **UPDATED** `videotime` | `mediaReporting.sessionDetails.timePlayed` | integer | | 
@@ -261,8 +261,6 @@ Select fields are directly mapped from Adobe Analytics to Experience Data Model 
 | **UPDATED** `videopausetime` | `mediaReporting.sessionDetails.pauseTime` | integer | The total duration in seconds in which video playback was paused by the user. | 
 | **UPDATED** `videosecondssincelastcall` | `mediaReporting.sessionDetails.secondsSinceLastCall` | number | This value indicates the amount of time, in seconds, that has passed between the user's last known interaction and the moment the session was closed. |
 
-{style="table-layout:auto"}
-
 ## Split-mapping fields
 
 These fields have a single source, but map to **multiple** XDM locations.
@@ -272,8 +270,6 @@ These fields have a single source, but map to **multiple** XDM locations.
 | `s_resolution` | `device.screenWidth`,<br/>`device.screenHeight` | integer  | Numeric ID representing the resolution of the monitor. |
 | `mobileosversion` | `environment.operatingSystem`,<br/>`environment.operatingSystemVersion` | string  | Mobile operating system version. |
 | **CHANGE** `videoadlength` | `advertising.adAssetReference._xmpDM.duration` | integer  | Video Ad length. |
-
-{style="table-layout:auto"}
 
 ## Generated mapping fields
 
@@ -290,10 +286,10 @@ Select fields coming from ADC must be transformed, requiring logic beyond a dire
 | `m_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | Object | Custom events triggered on the hit. | {id (Object), value (Object)} |
 | `m_geo_country` | `placeContext.geo.countryCode` | string | Abbreviation of the country where the hit came from, which is based off the IP. |
 | `m_geo_latitude` | `placeContext.geo._schema.latitude` | number | |
-| `m_geo_longitude` | `placeContext.geo._schema.longitude` | number | <!-- MISSING -->|
+| `m_geo_longitude` | `placeContext.geo._schema.longitude` | number | |
 | `m_java_enabled` | `environment.browserDetails.javaEnabled` | boolean | A flag indicating whether Java&trade; is enabled. |
 | `m_latitude` | `placeContext.geo._schema.latitude` | number | |
-| `m_longitude` | `placeContext.geo._schema.longitude` | number | <!-- MISSING -->|
+| `m_longitude` | `placeContext.geo._schema.longitude` | number | |
 | `m_page_event_var1` | `web.webInteraction.URL` | string | A variable that is only used in link tracking image requests. This variable contains the URL of the download link, exit link, or custom link clicked. |
 | `m_page_event_var2` | `web.webInteraction.name` | string | A variable that is only used in link tracking image requests. This lists the custom name of the link, if it is specified. |
 | `m_page_type` | `web.webPageDetails.isErrorPage` | boolean | A variable that is used to populate the Pages Not Found dimension. This variable should either be empty, or contain "ErrorPage". |
@@ -391,8 +387,8 @@ To learn more about performing these transformations using Query Service, see [A
 | `first_hit_ref_type` | `_experience.analytics.endUser.`<br/>`firstWeb.webReferrer.type` | string | The numeric ID, representing the referrer type of the first referrer of the visitor. |
 | `first_hit_time_gmt` | `_experience.analytics.endUser.`<br/>`firstTimestamp` | integer | Timestamp of the first hit of the visitor in UNIX&reg; time. |
 | `geo_country` | `placeContext.geo.countryCode` | string | Abbreviation of the country the hit came from, based on IP. |
-| `geo_latitude` | `placeContext.geo._schema.latitude` | number | <!-- MISSING --> |
-| `geo_longitude` | `placeContext.geo._schema.longitude` | number | <!-- MISSING --> |
+| `geo_latitude` | `placeContext.geo._schema.latitude` | number |  |
+| `geo_longitude` | `placeContext.geo._schema.longitude` | number |  |
 | `paid_search` | `search.isPaid` | boolean | A flag that is set if the hit matches paid search detection. |
 | `ref_type` | `web.webReferrer.type` | string | A numeric ID representing the type of referral for the hit. |
 | `visit_paid_search` | `_experience.analytics.session.`<br/>`search.isPaid` | boolean | A flag (1=paid, 0=not paid) indicating if the first hit of the visit was from a paid search hit. |
@@ -400,5 +396,4 @@ To learn more about performing these transformations using Query Service, see [A
 | `visit_search_engine` | `_experience.analytics.session.`<br/>`search.searchEngine` | string | Numeric ID of the first search engine of the visit. |
 | `visit_start_time_gmt` | `_experience.analytics.session.`<br/>`timestamp` | integer | Timestamp of the first hit of the visit in UNIX&reg; time. |
 
-{style="table-layout:auto"}
-
+{style="table-layout:auto"} -->
