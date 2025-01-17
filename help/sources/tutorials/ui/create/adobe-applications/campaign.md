@@ -95,6 +95,8 @@ Platform provides intelligent recommendations for auto-mapped fields based on th
 >[!IMPORTANT]
 >
 >When mapping your source fields to target XDM fields, you must ensure that you map your designated primary identity field to its appropriate target XDM field.
+>
+>For each audience, you can add up to 20 fields to map to Adobe Campaign. You can change this limit by updating the value of the `NmsCdp_Aep_Sources_Max_Columns` option in the Administration > Platform > Options folder of Campaign explorer.
 
 Once your source data is successfully mapped, select **[!UICONTROL Next]**.
 
