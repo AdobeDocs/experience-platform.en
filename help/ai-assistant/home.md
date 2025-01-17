@@ -53,6 +53,10 @@ Product knowledge refers to concepts and topics grounded in Experience League do
 
 {style="table-layout:auto"}
 
+Watch the following video for additional information on AI Assistant product knowledge:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
+
 ### Operational insights {#operational-insights}
 
 >[!IMPORTANT]

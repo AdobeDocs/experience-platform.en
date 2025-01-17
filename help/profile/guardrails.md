@@ -61,7 +61,7 @@ The following guardrails provide recommended limits when modeling Real-Time Cust
 | JSON depth for ID field used in multi-entity relationship| 4 | Performance guardrail | The recommended maximum JSON depth for an ID field used in multi-entity relationships is 4. This means that in a highly nested schema, fields that are nested more than 4 levels deep should not be used as an ID field in a relationship.|
 | Array cardinality in a profile fragment|<=500|Performance guardrail|The optimal array cardinality in a profile fragment (time-independent data) is <=500. |
 | Array cardinality in ExperienceEvent | <=10 | Performance guardrail | The optimal array cardinality in an ExperienceEvent (time series data) is <=10. |
-| Identity count for individual profile Identity Graph | 50 | System-enforced guardrail | **The maximum number of identities in an Identity Graph for an individual profile is 50.** Any profiles with more than 50 identities are excluded from segmentation, exports, and lookups. | 
+| Identity count for individual profile Identity Graph | 50 | System-enforced guardrail | **The maximum number of identities in an Identity Graph for an individual profile is 50.** Any profiles with more than 50 identities are excluded from segmentation, exports, and lookups. For more information, read the guide on [understanding identity deletion logic](../identity-service/guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated). | 
 
 {style="table-layout:auto"}
 
@@ -168,7 +168,7 @@ In this document, there are several guardrails that refer to "profile fragments.
 
 ### Merge policies {#merge-policies}
 
-When bringing data together from multiple sources, merge policies are the rules that Platform uses to determine how data will be prioritized and what data will be combined to create that unified view. For example, if a customer interacts with your brand across several channels, your organization will have multiple profile fragments related to that single customer appearing in multiple datasets. When these fragments are ingested into Platform, they are merged together in order to create a single profile for that customer. When the data from multiple sources conflicts the merge policy determines which information to include in the profile for the individual. A maximum of five (5) merge policies is allowed per organization. To learn more about merge policies, please read the [merge policies overview](merge-policies/overview.md).
+When bringing data together from multiple sources, merge policies are the rules that Platform uses to determine how data will be prioritized and what data will be combined to create that unified view. For example, if a customer interacts with your brand across several channels, your organization will have multiple profile fragments related to that single customer appearing in multiple datasets. When these fragments are ingested into Platform, they are merged together in order to create a single profile for that customer. When the data from multiple sources conflicts the merge policy determines which information to include in the profile for the individual. A maximum of five (5) merge policies that use the `_xdm.context.profile` schema are allowed per sandbox. To learn more about merge policies, please read the [merge policies overview](merge-policies/overview.md).
 
 ### Adobe Analytics report suite datasets in Platform {#aa-datasets}
 

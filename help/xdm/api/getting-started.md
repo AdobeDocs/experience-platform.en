@@ -248,6 +248,7 @@ The following sample field illustrates a properly formatted XDM field, with furt
 * The name of a field object may contain alphanumeric, dash, or underscore characters, but **may not** start with an underscore.  
   * **Correct:** `fieldName`, `field_name2`, `Field-Name`, `field-name_3`  
   * **Incorrect:** `_fieldName`
+* Field names are case-insensitive and must have different names at the same level in your schema.
 * camelCase is preferred for the name of the field object. Example: `fieldName`
 * The field should include a `title`, written in Title Case. Example: `Field Name`
 * The field requires a `type`.  

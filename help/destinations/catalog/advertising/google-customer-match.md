@@ -1,7 +1,7 @@
 ---
 keywords: google customer match;Google customer match;Google Customer Match
 title: Google Customer Match connection
-description: Google Customer Match lets you use your online and offline data to reach and re-engage with your customers across Google's owned and operated properties, such as Search, Shopping, Gmail, and YouTube.
+description: Google Customer Match lets you use your online and offline data to reach and re-engage with your customers across Google's owned and operated properties, such as Search, Shopping, and Gmail.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
 ---
 # [!DNL Google Customer Match] connection
@@ -16,7 +16,11 @@ exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
 ><br/>
 >Customers who have not purchased Adobe Privacy & Security Shield must use the [segment definition](../../../segmentation/home.md#segment-definitions) capabilities within [Segment Builder](../../../segmentation/ui/segment-builder.md) to filter out non-consented profiles, in order to continue using the existing Real-Time CDP Google Destinations without interruption.
 
-[[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) lets you use your online and offline data to reach and re-engage with your customers across Google's owned and operated properties, such as: [!DNL Search], [!DNL Shopping], [!DNL Gmail], and [!DNL YouTube].
+[[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) lets you use your online and offline data to reach and re-engage with your customers across Google's owned and operated properties, such as: [!DNL Search], [!DNL Shopping], and [!DNL Gmail].
+
+>[!TIP]
+>
+>To reach customers on [!DNL YouTube] inventory, use the [Google Customer Match + DV360](/help/destinations/catalog/advertising/google-customer-match-dv360.md) destination, which uses the Google Audience Partner API.
 
 ![Google Customer Match destination in the Adobe Experience Platform UI.](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
@@ -29,6 +33,10 @@ To help you better understand how and when to use the [!DNL Google Customer Matc
 An athletic apparel brand wants to reach existing customers through [!DNL Google Search] and [!DNL Google Shopping] to personalize offers and items based on their past purchases and browsing history. The apparel brand can ingest email addresses from their own CRM to Experience Platform, and build audiences from their own offline data. Then, they can send these audiences to [!DNL Google Customer Match] to be used across [!DNL Search] and [!DNL Shopping], optimizing their advertising spending.  
 
 ### Use case #2
+
+>[!TIP]
+>
+>To execute this use case on [!DNL YouTube] inventory, use the new [Google Customer Match + DV360](/help/destinations/catalog/advertising/google-customer-match-dv360.md) destination, which uses the Google Audience Partner API.
 
 A prominent technology company launched a new phone. To promote this new phone model, they are looking to drive awareness of the new features and functionality of the phone to customers who own previous models of their phones. 
 
@@ -209,6 +217,20 @@ Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon ac
 Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
 
 ![Apply transformation control highlighted in the Mapping step of the activation workflow.](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
+
+## Monitor destination {#monitor-destination}
+
+After connecting to the destination and establishing a destination dataflow, you can use the [monitoring functionality](/help/dataflows/ui/monitor-destinations.md) in Real-Time CDP to get extensive information about the profile records activated to your destination in each dataflow run. 
+
+>[!IMPORTANT]
+>
+> Starting with October 2024, Adobe is rolling out an update to increase reporting accuracy for streaming destinations. This enhancement ensures a better alignment between the Experience Platform and the destination platforms reporting.
+>
+> Before this update, **[!UICONTROL Identities failed]** included all activation retries. After this update, only the last activation retry is included in the total count.
+>
+> This enhancement currently applies to the [Google Customer Match destination](google-customer-match.md) but will be gradually rolled out to other Experience Platform streaming destinations.
+> Following this enhancement, users of this destination may see an expected drop in their  **[!UICONTROL Identities failed]** count.
+
 
 ## Verify that audience activation was successful {#verify-activation}
 
