@@ -61,7 +61,7 @@ The following guardrails provide recommended limits when modeling Real-Time Cust
 | JSON depth for ID field used in multi-entity relationship| 4 | Performance guardrail | The recommended maximum JSON depth for an ID field used in multi-entity relationships is 4. This means that in a highly nested schema, fields that are nested more than 4 levels deep should not be used as an ID field in a relationship.|
 | Array cardinality in a profile fragment|<=500|Performance guardrail|The optimal array cardinality in a profile fragment (time-independent data) is <=500. |
 | Array cardinality in ExperienceEvent | <=10 | Performance guardrail | The optimal array cardinality in an ExperienceEvent (time series data) is <=10. |
-| Identity count for individual profile Identity Graph | 50 | System-enforced guardrail | **The maximum number of identities in an Identity Graph for an individual profile is 50.** Any profiles with more than 50 identities are excluded from segmentation, exports, and lookups. | 
+| Identity count for individual profile Identity Graph | 50 | System-enforced guardrail | **The maximum number of identities in an Identity Graph for an individual profile is 50.** Any profiles with more than 50 identities are excluded from segmentation, exports, and lookups. For more information, read the guide on [understanding identity deletion logic](../identity-service/guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated). | 
 
 {style="table-layout:auto"}
 
