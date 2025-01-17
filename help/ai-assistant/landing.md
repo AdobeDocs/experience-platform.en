@@ -119,6 +119,20 @@ Watch the following video to learn about the discoverability panel in AI Assista
 
 >[!VIDEO](https://video.tv.adobe.com/v/3440962/?learn=on)
 
+### Use AI Assistant to validate responses
+
+Watch the following video to learn how you can use AI Assistant to verify and validate responses.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441738/?learn=on)
+
+For more information, read the documentation on [verifying AI Assistant answers](ui-guide.md#verify-operational-insights-responses).
+
+### Use AI Assistant for impact analysis
+
+Watch the following video to learn how you can use AI Assistant to execute more effective impact analysis before any changes are made to your data objects.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441680/?learn=on)
+
 ## AI Assistant use case library
 
 >[!BEGINTABS]
@@ -130,6 +144,7 @@ Read the following for AI Assistant use case examples:
 * [Reduce onboarding time for new members of your team](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153)
 * [De-clutter your audiences and optimize your marketing operations](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
 * [Check dependencies and minimize risk during data updates](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
+* [Minimize risk during data updates by checking dependencies in seconds](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
 
 >[!TAB Additional video content]
 

@@ -1,10 +1,10 @@
 ---
-title: Use calculated fields to export arrays as strings
+title: Export array objects from Real-Time CDP to cloud storage destinations
 type: Tutorial
 description: Learn how to use calculated fields to export arrays from Real-Time CDP to cloud storage destinations as strings.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 ---
-# Use calculated fields to export arrays as strings{#use-calculated-fields-to-export-arrays-as-strings} 
+# Export array objects from Real-Time CDP to cloud storage destinations {#export-arrays-cloud-storage}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
@@ -15,22 +15,16 @@ exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 
 >[!AVAILABILITY]
 >
->The functionality to export arrays through calculated fields is generally available.
+>The functionality to export arrays to cloud storage destinations is generally available. 
 
-Learn how to export arrays through calculated fields from Real-Time CDP to [cloud storage destinations](/help/destinations/catalog/cloud-storage/overview.md) as strings. Read this document to understand the use cases enabled by this functionality.
+Learn how to export arrays from Real-Time CDP to [cloud storage destinations](/help/destinations/catalog/cloud-storage/overview.md). Read this document to understand the export workflow, the use cases enabled by this functionality, and known limitations.
 
-Get extensive information about calculated fields - what these are and why they matter. Read the pages linked below for an introduction to calculated fields in Data Prep and more information about all the available functions: 
+Arrays must currently be exported as strings, by using the `array_to_string` function.
+
+To export arrays, you must use the calculated fields functionality in the mapping step of the export workflow,  *unless you are [exporting individual elements of an array](#index-based-array-access)*. For detailed information about calculated fields, visit the pages linked below. These include an introduction to calculated fields in Data Prep and more information about all the available functions: 
 
 * [UI guide and overview](/help/data-prep/ui/mapping.md#calculated-fields)
 * [Data Prep functions](/help/data-prep/functions.md)
-
-<!--
-
->[!IMPORTANT]
->
->Not all functions listed above are supported *when exporting fields to cloud storage destinations* using the calculated fields functionality. See the [supported functions section](#supported-functions) further below for more information.
-
--->
 
 ## Arrays and other object types in Platform {#arrays-strings-other-objects}
 
@@ -253,6 +247,10 @@ johndoe@acme.org,"5"
 ```
 
 ### Index-based array access {#index-based-array-access}
+
+>[!IMPORTANT]
+>
+>Unlike the other functions described on this page, to export individual elements of an array, you *do not need* to use the **[!UICONTROL Calculated fields]** control in the UI.
 
 You can access an index of an array to export a single item from the array. For example, similar to the example above for the `size_of` function, if you are looking to access and export only the first time that a customer has purchased a certain product, you can use `purchaseTime[0]` to export the first element of the timestamp, `purchaseTime[1]` to export the second element of the timestamp, `purchaseTime[2]` to export the third element of the timestamp, and so on.
 
