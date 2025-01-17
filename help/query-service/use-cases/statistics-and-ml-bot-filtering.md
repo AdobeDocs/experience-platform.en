@@ -4,7 +4,7 @@ description: Learn how to use Data Distiller statistics and machine learning to 
 ---
 # Bot filtering using statistics and machine learning
 
-The practical applications of bot filtering span various industries. In e-commerce, it improves the reliability of conversion rate metrics, news websites can benefit from mitigating false engagement metrics, and advertising networks can ensure fair billing. To maintain accurate analytics and ensure data integrity in clickstream or web traffic data, it is essential to address bot activity. Ensure high-quality analytics data by using Data Distiller to implement effective bot filtering and eliminate unwanted traffic.
+The practical applications of bot filtering span various industries. In e-commerce, it improves the reliability of conversion rate metrics, news websites can benefit from mitigating false engagement metrics, and advertising networks can ensure fair billing. To maintain accurate analytics and ensure data integrity in clickstream or web traffic data, you must address bot activity. You can ensure high-quality analytics data by using Data Distiller to implement effective bot filtering and eliminate unwanted traffic.
 
 This document provides a comprehensive guide to identifying and filtering bot activity using SQL and machine learning techniques. It presents a progression of complementary approaches, starting with basic filtering and advancing to machine learning-based detection and evaluation. Adopt this robust framework to enhance your bot detection and maintain your data integrity.
 
@@ -15,9 +15,9 @@ Bot activity can be identified by detecting spikes in user actions within specif
 - **ECID (Experience Cloud Visitor ID):** A universal, persistent ID that identifies visitors.
 - **Timestamp:** The time and date when an activity occurs on the website.
 
-Bot filtering ensures data quality by eliminating contamination caused by non-human interactions on a website.
+<!-- Bot filtering ensures data quality by eliminating contamination caused by non-human interactions on a website. -->
 
-The three examples shown below demonstrate how to use SQL and machine learning techniques to identify, refine, and predict bot activity. Use these methods to improve your data integrity and ensure actionable analytics.
+The examples below demonstrate how to use SQL and machine learning techniques to identify, refine, and predict bot activity. Use these methods to improve your data integrity and ensure actionable analytics.
 
 ## Example 1: SQL-based bot filtering {#sql-based-bot-filtering}
 
@@ -25,7 +25,7 @@ This SQL-based bot filtering example demonstrates how to use SQL queries to defi
 
 ### Define thresholds for bot activity {#define-thresholds}
 
-Start by analyzing a pre-existing dataset containing key attributes that help identify and categorize user behavior. This example uses the ECID, timestamp, and `webPageDetails.name` (a string field that contains the name of the webpage visited) attributes to group user actions and identifying patterns indicative of bot activity.
+Start by analyzing your dataset to identify and categorize user behavior. Focus on attributes like ECID, timestamp, and `webPageDetails.name` (the name of the webpage visited) to group user actions and detect patterns that indicate bot activity.
 
 The SQL query below demonstrates how to apply the threshold of more than 60 clicks in one minute to identify suspicious activity:
 
@@ -74,7 +74,6 @@ FROM (
          count_30_mins,
          table_count_1_min.name AS name
   FROM (
-      -- Joins and Grouping Logic
       (SELECT mcid, Max(count_1_min) AS count_1_min, name
        FROM (SELECT enduserids._experience.mcid.id AS mcid,
                     Count(*) AS count_1_min,
@@ -142,21 +141,21 @@ root
 The result of this expression might look similar to the table provided below. In the table the `isBot` column acts as a label that distinguishes between bot and non-bot activity.
 
 ```console
-| `id`           | `count_per_id`                                        | `isBot` | `web`                                                                                                                    |
+| `id`         | `count_per_id`                                      |`isBot`| `web`                                                                                                                    |
 |--------------|-----------------------------------------------------|-------|------------------------------------------------------------------------------------------------------------------------|
 | 2.5532E+18   | {"one_minute":99,"five_minute":1,"thirty_minute":1} | 1     | {"webpagedetails":{"name":"KR+CC8TQzPyK4ord6w1PfJay1+h6snSF++xFERc4ogrEX4clJROgzkGgnSTSGWWZfNS/Ouz2K0VtkHG77vwoTg=="}} |
 | 2.5532E+18   | {"one_minute":99,"five_minute":1,"thirty_minute":1} | 1     | {"webpagedetails":{"name":"KR+CC8TQzPyK4ord6w1PfJay1+h6snSF++xFERc4ogrEX4clJROgzkGgnSTSGWWZfNS/Ouz2K0VtkHG77vwoTg=="}} |
 | 2.5532E+18   | {"one_minute":99,"five_minute":1,"thirty_minute":1} | 1     | {"webpagedetails":{"name":"KR+CC8TQzPyK4ord6w1PfJay1+h6snSF++xFERc4ogrEX4clJROgzkGgnSTSGWWZfNS/Ouz2K0VtkHG77vwoTg=="}} |
-| 2.5532E+18   | {"one_minute":99,"five_minute":1,"thirty_minute":99}| 1    | {"webpagedetails":{"name":"KR+CC8TQzPyK4ord6w1PfJay1+h6snSF++xFERc4ogrEX4clJROgzkGgnSTSGWWZfNS/Ouz2K0VtkHG77vwoTg=="}} |
+| 2.5532E+18   | {"one_minute":99,"five_minute":1,"thirty_minute":99}| 1     | {"webpagedetails":{"name":"KR+CC8TQzPyK4ord6w1PfJay1+h6snSF++xFERc4ogrEX4clJROgzkGgnSTSGWWZfNS/Ouz2K0VtkHG77vwoTg=="}} |
 | 2.5532E+18   | {"one_minute":99,"five_minute":1,"thirty_minute":1} | 1     | {"webpagedetails":{"name":"KR+CC8TQzPyK4ord6w1PfJay1+h6snSF++xFERc4ogrEX4clJROgzkGgnSTSGWWZfNS/Ouz2K0VtkHG77vwoTg=="}} |
 | 2.5532E+18   | {"one_minute":99,"five_minute":1,"thirty_minute":1} | 1     | {"webpagedetails":{"name":"KR+CC8TQzPyK4ord6w1PfJay1+h6snSF++xFERc4ogrEX4clJROgzkGgnSTSGWWZfNS/Ouz2K0VtkHG77vwoTg=="}} |
 | 2.5532E+18   | {"one_minute":99,"five_minute":1,"thirty_minute":1} | 1     | {"webpagedetails":{"name":"KR+CC8TQzPyK4ord6w1PfJay1+h6snSF++xFERc4ogrEX4clJROgzkGgnSTSGWWZfNS/Ouz2K0VtkHG77vwoTg=="}} |
 | 2.5532E+18   | {"one_minute":99,"five_minute":1,"thirty_minute":1} | 1     | {"webpagedetails":{"name":"KR+CC8TQzPyK4ord6w1PfJay1+h6snSF++xFERc4ogrEX4clJROgzkGgnSTSGWWZfNS/Ouz2K0VtkHG77vwoTg=="}} |
 | 2.5532E+18   | {"one_minute":99,"five_minute":1,"thirty_minute":1} | 1     | {"webpagedetails":{"name":"KR+CC8TQzPyK4ord6w1PfJay1+h6snSF++xFERc4ogrEX4clJROgzkGgnSTSGWWZfNS/Ouz2K0VtkHG77vwoTg=="}} |
 | 2.5532E+18   | {"one_minute":99,"five_minute":1,"thirty_minute":1} | 1     | {"webpagedetails":{"name":"KR+CC8TQzPyK4ord6w1PfJay1+h6snSF++xFERc4ogrEX4clJROgzkGgnSTSGWWZfNS/Ouz2K0VtkHG77vwoTg=="}} |
-| 1E+18        | {"one_minute":1,"five_minute":1,"thirty_minute":1}   | 0     | {"webpagedetails":{"name":"KR+CC8TQzPyMOE/bk7EGgN3lSvP8OsxeI2aLaVrbaeLn8XK3y3zok2ryVyZoiBu3"}}                       |
-| 1.00007E+18  | {"one_minute":1,"five_minute":1,"thirty_minute":1}   | 0     | {"webpagedetails":{"name":"8DN0dM4rlvJxt4oByYLKZ/wuHyq/8CvsWNyXvGYnImytXn/bjUizfRSl86vmju7MFMXxnhTBoCWLHtyVSWro9LYg0MhN8jGbswLRLXoOIyh2wduVbc9XeN8yyQElkJm3AW3zcqC7iXNVv2eBS8vwGg=="}} |
-| 1.00008E+18  | {"one_minute":1,"five_minute":1,"thirty_minute":1}   | 0     | {"webpagedetails":{"name":"KR+CC8TQzPyMOE/bk7EGgN3lSvP8OsxeI2aLaVrbaeLn8XK3y3zok2ryVyZoiBu3"}}                       |
+| 1E+18        | {"one_minute":1,"five_minute":1,"thirty_minute":1}  | 0     | {"webpagedetails":{"name":"KR+CC8TQzPyMOE/bk7EGgN3lSvP8OsxeI2aLaVrbaeLn8XK3y3zok2ryVyZoiBu3"}}                       |
+| 1.00007E+18  | {"one_minute":1,"five_minute":1,"thirty_minute":1}  | 0     | {"webpagedetails":{"name":"8DN0dM4rlvJxt4oByYLKZ/wuHyq/8CvsWNyXvGYnImytXn/bjUizfRSl86vmju7MFMXxnhTBoCWLHtyVSWro9LYg0MhN8jGbswLRLXoOIyh2wduVbc9XeN8yyQElkJm3AW3zcqC7iXNVv2eBS8vwGg=="}} |
+| 1.00008E+18  | {"one_minute":1,"five_minute":1,"thirty_minute":1}  | 0     | {"webpagedetails":{"name":"KR+CC8TQzPyMOE/bk7EGgN3lSvP8OsxeI2aLaVrbaeLn8XK3y3zok2ryVyZoiBu3"}}                       |
 ```
 
 <!-- {style="table-layout:auto"} -->
@@ -179,12 +178,7 @@ To transform your dataset and configure your machine learning model effectively,
 
 1. To fill null values in numeric, string, and boolean columns, use `numeric_imputer`, `string_imputer`, and `boolean_imputer` functions respectively. This step ensures the machine learning algorithm can process the data without errors.
 2. Apply feature transformations to prepare the data for modeling. Apply `binarized`, `quantile_discretizer`, or `string_indexer` to categorize or standardize the columns. Next, feed the output of the imputers (`numeric_imputer` and `string_imputer`) into subsequent transformers like `string_indexer` or `quantile_discretizer` to create meaningful features.
-3. Use the `vector_assembler` function to combine the transformed columns into a single feature column. Then scale the features using `min_max_scaler` to normalize the values for better model performance.
-
->[!NOTE]
->
->In the SQL example, the last transformation mentioned inside the TRANSFORM clause becomes the feature column used by the machine learning model.
-
+3. Use the `vector_assembler` function to combine the transformed columns into a single feature column. Then scale the features using `min_max_scaler` to normalize the values for better model performance. Note: In the SQL example, the last transformation mentioned inside the TRANSFORM clause becomes the feature column used by the machine learning model.
 4. Specify the model type and any other hyperparameters in the OPTIONS clause. For example, `decision_tree_classifier` was chosen here as this is a classification problem. Other parameters like `max_depth` are were adjusted (`MAX_DEPTH=4`) to tune the model for better performance.
 5. Combine features and label the output data. Use the SELECT clause to specify the dataset for training. This clause should include both the feature columns (`count_per_id`, `web`, `id`) and the label column (`isBot`), which indicates whether an action is likely to be a bot.
 
@@ -211,7 +205,7 @@ SELECT count_per_id, isBot, web, id FROM analytics_events_clicks_count_criteria;
 
 **Result**
 
-In the results (displayed below), the model `bot_filtering_model` is successfully created with a unique ID, name, and version. This output serves as a reference for tracking and managing models. Use these references to identify the exact configuration and version used for predictions or evaluations.
+In the results displayed below, the model `bot_filtering_model` is successfully created with a unique ID, name, and version. This output serves as a reference for tracking and managing models. Use these references to identify the exact the configuration and version required for predictions or evaluations.
 
 ```console
 
@@ -243,7 +237,7 @@ FROM   model_evaluate(bot_filtering_model, 1,
 
 **Result**
 
-The response includes metrics such as accuracy, precision, recall, and AUC-ROC, which indicate the model's effectiveness in identifying bot activity. These results confirm whether or not the model performed well.
+The response includes metrics such as accuracy, precision, recall, and AUC-ROC. The results confirm whether or not the model performed well.
 
 >[!NOTE]
 >
@@ -274,7 +268,7 @@ Use the `MODEL_PREDICT` command with the trained model to identify which users (
 
 1. Use the model name (`bot_filtering_model`) in the first argument to specify which model to use for predictions.  
 2. Specify the model version (`1`) in the second argument to ensure the correct version of the model is used.
-3. To supply the correct data for predictions, use a SELECT statement to specify the feature columns (count_per_id, web, id). Do not include the label column (`isBot`) because the model will generate predictions for this field.
+3. To supply the correct data for predictions, use a SELECT statement to specify the feature columns (`count_per_id`, `web`, `id`). Do not include the label column (`isBot`) because the model will generate predictions for this field.
 
 ```sql
 SELECT *
@@ -323,7 +317,7 @@ SHOW MODELS;
 
 ### Delete models {#delete-models}
 
-To free up resources and ensure that only relevant models are maintained, use the `DROP MODEL` command to remove obsolete or unnecessary models. This command deletes the machine learning model specified after the key words. In the example below, the `bot_filtering_model` is removed from the system.
+To free up resources and ensure that only relevant models are maintained, use the `DROP MODEL` command to remove obsolete or unnecessary models. This command deletes any machine learning model specified after the key words. In the example below, the `bot_filtering_model` is removed from the system.
 
 ```sql
 DROP MODEL bot_filtering_model;
