@@ -42,7 +42,7 @@ You must also have an Adobe ID to complete this tutorial. If you do not have an 
 
 ## Gain developer and user access for Experience Platform {#gain-developer-user-access}
 
-Before creating integrations on Adobe Developer Console, your account must have developer and user permissions for an Experience Platform product profile in Adobe Admin Console.
+ Before creating integrations on Adobe Developer Console, your account must have developer and user permissions for an Experience Platform product profile in Adobe Admin Console.
 
 ### Gain developer access {#gain-developer-access}
 
@@ -320,11 +320,11 @@ This [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentica
 
 ## System administrators: Grant developer and API access control with Experience Platform permissions {#grant-developer-and-api-access-control}
 
+Before managing API Credentials in **[!UICONTROL Permissions]**, your account must have developer permissions for an Experience Platform product profile in Adobe Admin Console.
+
 >[!NOTE]
 >
 >Only system administrators have the ability to view and manage API credentials in Permissions.
-
-Before creating integrations on Adobe Developer Console, your account must have developer and user permissions for an Experience Platform product profile in Adobe Admin Console.
 
 ### Add developers to product profile {#add-developers-to-product-profile}
 
@@ -346,35 +346,21 @@ Enter the developer's **[!UICONTROL Email or username]**. A valid [!UICONTROL Em
 
 ![Add developer using their email or username](././images/api-authentication/add-developer-email.png)
 
-The developer has been successfully added and appears on the [!UICONTROL Developers] tab.
+The developer has been successfully added and appears on the **[!UICONTROL Developers]** tab.
 
 ![Developers listed on the Developers tab](././images/api-authentication/developer-added.png)
 
-<!--
-
-Commenting out this part since it duplicates information from the section Add Experience Platform to a project
-
-### Set up an API
-
-A developer can add and configure an API within a project in the Adobe Developer Console.
-
-Select your project, then select **[!UICONTROL Add API]**.
-
-![Add API to a project](././images/api-authentication/add-api-project.png)
-
-In the **[!UICONTROL Add an API]** dialog box select **[!UICONTROL Adobe Experience Platform]**, then select **[!UICONTROL Experience Platform API]**.
-
-![Add an API in Experience Platform](././images/api-authentication/add-api-platform.png)
-
-In the **[!UICONTROL Configure API]** screen, select **[!UICONTROL AEP-Default-All-Users]**.
-
--->
-
 ### Assign API to a role
 
-A system admin can assign APIs to roles in the Experience Platform UI.
+>[!NOTE]
+>
+> Only a system administrator can assign APIs to roles in the Experience Platform UI.
 
-Select **[!UICONTROL Permissions]** and the role you want to add the API to. Select the **[!UICONTROL API credentials]** tab, then select **[!UICONTROL Add API credentials]**.
+In the Experience Platform UI, select **[!UICONTROL Permissions]** in the left Navigation and then select **[!UICONTROL Roles]** from the left panel. Next, select the role you want to add the API to.
+
+![The Role dashboard with a list of roles within Permissions](././images/api-authentication/roles.png)
+
+Select the **[!UICONTROL API credentials]** tab, then select **[!UICONTROL Add API credentials]**.
 
 ![API credentials tab in selected role](././images/api-authentication/api-credentials.png)
 
