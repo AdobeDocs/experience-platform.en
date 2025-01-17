@@ -101,6 +101,10 @@ The following video is intended to support your understanding of creating a new 
 
 ## Managing API credentials for role {#manage-api-credentials-for-role}
 
+>[!IMPORTANT]
+>
+> Only system administrators have the ability to view and manage API credentials in [!UICONTROL Permissions]. 
+
 Select the **[!UICONTROL API credentials]** tab to open the roles API credentials page, then select **[!UICONTROL Add API credentials]** to assign API credentials to the role.
 
 ![flac-api-credentials](../../images/flac-ui/flac-api-credentials.png)
@@ -122,6 +126,8 @@ The **[!UICONTROL Remove API credentials]** dialogue appears, prompting you to c
 ![flac-confirm-api-credentials-delete](../../images/flac-ui/flac-confirm-api-credentials-delete.png)
 
 You will be returned to the **[!UICONTROL API credentials]** tab.
+
+As a system administrator, you may [grant developer access](../../../landing/api-authentication.md#add-developers-to-product-profile) to a user so they can create integrations in the Adobe Developer Console. For a complete guide on the creating and assigning API Credentials, as well as the permissions needed, refer to the step-by-step tutorial in [authenticate and access Experience Platform APIs](../../../landing/api-authentication.md). 
 
 ## Managing user groups for roles
 

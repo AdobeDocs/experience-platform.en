@@ -42,7 +42,7 @@ You must also have an Adobe ID to complete this tutorial. If you do not have an 
 
 ## Gain developer and user access for Experience Platform {#gain-developer-user-access}
 
- Before creating integrations on Adobe Developer Console, your account must have developer and user permissions for an Experience Platform product profile in Adobe Admin Console.
+Before creating integrations on Adobe Developer Console, your account must have developer and user permissions for an Experience Platform product profile in Adobe Admin Console.
 
 ### Gain developer access {#gain-developer-access}
 
@@ -320,7 +320,7 @@ This [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentica
 
 ## System administrators: Grant developer and API access control with Experience Platform permissions {#grant-developer-and-api-access-control}
 
-Before managing API Credentials in **[!UICONTROL Permissions]**, your account must have developer permissions for an Experience Platform product profile in Adobe Admin Console.
+Before creating integrations on Adobe Developer Console, your account must have developer and user permissions for an Experience Platform product profile in Adobe Admin Console.
 
 >[!NOTE]
 >
