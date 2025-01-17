@@ -372,6 +372,10 @@ You are returned to the [!UICONTROL API credentials] tab, where the newly added 
 
 ![API credentials tab with newly added API](././images/api-authentication/api-credentials-with-added-api.png)
 
+A walkthrough of the steps described above for adding developers to product profiles and assigning APIs to roles is also available in the video tutorial below:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3426407/?learn=on)
+
 ## Additional resources {#additional-resources}
 
 Refer to the additional resources linked below for further help getting started with Experience Platform APIs
