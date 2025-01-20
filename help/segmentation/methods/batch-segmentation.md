@@ -139,7 +139,7 @@ A successful response returns HTTP status 200 with an array of segment definitio
 }
 ```
 
-More detailed information about the segment definition returned can be found in the [segment definitions endpoint guide](./segment-definitions.md).
+More detailed information about the segment definition returned can be found in the [segment definitions endpoint guide](../api/segment-definitions.md).
 
 +++
 

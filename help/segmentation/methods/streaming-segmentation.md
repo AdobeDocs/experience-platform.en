@@ -16,7 +16,7 @@ A query will be eligible for streaming segmentation if it meets any of the crite
 
 >[!NOTE]
 >
->In order for streaming segmentation to work, you will need to enable scheduled segmentation for the organization. For details on enabling scheduled segmentation, please refer to [the Audience Portal overview](./audience-portal.md#scheduled-segmentation).
+>In order for streaming segmentation to work, you will need to enable scheduled segmentation for the organization. For details on enabling scheduled segmentation, please refer to [the Audience Portal overview](../ui/audience-portal.md#scheduled-segmentation).
 
 | Query type | Details | Example |
 | ---------- | ------- | ------- |
@@ -172,7 +172,7 @@ A successful response returns HTTP status 200 with an array of segment definitio
 }
 ```
 
-More detailed information about the segment definition returned can be found in the [segment definitions endpoint guide](./segment-definitions.md).
+More detailed information about the segment definition returned can be found in the [segment definitions endpoint guide](../api/segment-definitions.md).
 
 +++
 
