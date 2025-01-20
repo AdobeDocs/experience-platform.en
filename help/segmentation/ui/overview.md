@@ -94,7 +94,7 @@ In addition to audience compositions and segment definitions, you can use Adobe 
 
 Streaming segmentation is the ability to do segmentation on [!DNL Platform] in near real-time, while focusing on data richness. With streaming segmentation, qualification for segmentation now happens as data lands into [!DNL Platform], alleviating the need to schedule and run segmentation jobs.
 
-More information about streaming segmentation can be found in the [streaming segmentation user guide](./streaming-segmentation.md).
+More information about streaming segmentation can be found in the [streaming segmentation user guide](../methods/streaming-segmentation.md).
 
 >[!NOTE]
 >
@@ -104,7 +104,7 @@ More information about streaming segmentation can be found in the [streaming seg
 
 Edge segmentation is the ability to evaluate audiences in Platform instantaneously on the edge, enabling same page and next page personalization use cases. 
 
-More information about edge segmentation can be found in the [edge segmentation UI guide](./edge-segmentation.md)
+More information about edge segmentation can be found in the [edge segmentation UI guide](../methods/edge-segmentation.md)
 
 ## Policy violations
 

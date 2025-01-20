@@ -55,7 +55,7 @@ Follow the steps in the [datastream configuration](../../datastreams/configure.m
 
 Looking up profile attributes on the edge requires your audiences to be configured for edge evaluation.
 
-Make sure the audiences that you plan to activate have the [Active-on-Edge Merge Policy](../../segmentation/ui/segment-builder.md#merge-policies) set as default. The [!DNL Active-On-Edge] merge policy ensures that audiences are constantly evaluated [on the edge](../../segmentation/ui/edge-segmentation.md) and are available for real-time personalization use cases.
+Make sure the audiences that you plan to activate have the [Active-on-Edge Merge Policy](../../segmentation/ui/segment-builder.md#merge-policies) set as default. The [!DNL Active-On-Edge] merge policy ensures that audiences are constantly evaluated [on the edge](../../segmentation/methods/edge-segmentation.md) and are available for real-time personalization use cases.
 
 Follow the instructions on [creating a merge policy](../../profile/merge-policies/ui-guide.md#create-a-merge-policy), and make sure to enable the **[!UICONTROL Active-On-Edge Merge Policy]** toggle.
 

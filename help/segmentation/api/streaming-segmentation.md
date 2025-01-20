@@ -9,7 +9,7 @@ exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
 
 >[!NOTE]
 >
->The following document states how to use streaming segmentation using the API. For information on using streaming segmentation using the UI, please read the [streaming segmentation UI guide](../ui/streaming-segmentation.md).
+>The following document states how to use streaming segmentation using the API. For information on using streaming segmentation using the UI, please read the [streaming segmentation UI guide](../methods/streaming-segmentation.md).
 
 Streaming segmentation on [!DNL Adobe Experience Platform] allows customers to do segmentation in near real-time while focusing on data richness. With streaming segmentation, segment qualification now happens as streaming data lands into [!DNL Platform], alleviating the need to schedule and run segmentation jobs. With this capability, most segment rules can now be evaluated as the data is passed into [!DNL Platform], meaning segment membership will be kept up-to-date without running scheduled segmentation jobs.
 
