@@ -10,3 +10,83 @@ Learn how to predict customer churn using a SQL-based logistic regression model.
 
 Follow this guide to implement a robust churn prediction model that identifies at-risk customers, optimizes retention strategies, and enhances business decision-making. The document includes step-by-step instructions, SQL queries, and explanations to help you effectively apply machine learning techniques within your data environment.
 
+## Create a model {#create-a-model}
+
+To predict customer churn, you must create a SQL-based logistic regression model that analyzes key customer features derived from purchase history and behavioral metrics. The model classifies customers as `churned` or `not churned` based on whether they have made a purchase in the last 90 days.
+
+### Define customer features {#define-customer-features}
+
+To allow for accurate churn classification, the model relies on several features that summarize customer behavior. These features provide insights into purchasing habits, spending trends, and customer lifecycle. The table below outlines the features used in the model:
+
+| Feature                   | Description                                           |
+|---------------------------|-------------------------------------------------------|
+| `total_purchases`          | The total number of purchases made by the customer.   |
+| `total_revenue`            | The total revenue generated from customer purchases.  |
+| `avg_order_value`          | The average value of a customer's purchases.          |
+| `customer_lifetime`        | The duration in days between a customer's first and last purchase. |
+| `days_since_last_purchase` | The number of days since the customer's last purchase.|
+| `purchase_frequency`       | The frequency of customer purchases per month.        |
+
+### Use SQL to create the churn prediction model {#sql-create-model}
+
+This SQL-based logistic regression model predicts customer churn by analyzing purchase behavior data from the `webevents` table. The data transformation process aggregates key metrics through the `customer_features` query to generate meaningful insights and assign churn labels based on a 90-day inactivity rule. This approach distinguishes active customers from those at risk of churning. The SQL query also applies feature engineering by selecting relevant attributes to enhance model accuracy and improve churn classification.  These insights can help your business implement proactive retention strategies, ultimately reducing churn and maximizing customer lifetime value.
+
+Use the following SQL statement to create the `retention_model_logistic_reg` model with the specified features and labels:
+
+```sql
+CREATE MODEL retention_model_logistic_reg
+TRANSFORM (
+  vector_assembler(array(total_purchases, total_revenue, avg_order_value, customer_lifetime, days_since_last_purchase, purchase_frequency)) features
+)
+OPTIONS (
+  MODEL_TYPE = 'logistic_reg',
+  LABEL = 'churned'
+)
+AS
+WITH customer_features AS (
+    SELECT
+       identityMap['ECID'][0].id AS customer_id,
+       AVG(COALESCE(productListItems.priceTotal[0], 0)) AS avg_order_value,
+       SUM(COALESCE(productListItems.priceTotal[0], 0)) AS total_revenue,
+       COUNT(COALESCE(productListItems.quantity[0], 0)) AS total_purchases,
+       DATEDIFF(MAX(timestamp), MIN(timestamp)) AS customer_lifetime,
+       DATEDIFF(CURRENT_DATE, MAX(timestamp)) AS days_since_last_purchase,
+       COUNT(DISTINCT CONCAT(YEAR(timestamp), MONTH(timestamp))) AS purchase_frequency
+    FROM
+        webevents
+    WHERE EXISTS(productListItems, value -> value.priceTotal > 0) 
+      AND commerce.`order`.purchaseID <> ''
+    GROUP BY customer_id
+),
+customer_labels AS (
+    SELECT
+      identityMap['ECID'][0].id AS customer_id,
+      CASE
+          WHEN DATEDIFF(CURRENT_DATE, MAX(timestamp)) > 90 THEN 1  -- The customer is churned if there was no purchase in the last 90 days
+          ELSE 0
+      END AS churned
+    FROM
+        webevents
+    WHERE EXISTS(productListItems, value -> value.priceTotal > 0) 
+      AND commerce.`order`.purchaseID <> ''
+    GROUP BY customer_id
+)
+SELECT
+    f.customer_id,
+    f.total_purchases,
+    f.total_revenue,
+    f.avg_order_value,
+    f.customer_lifetime,
+    f.days_since_last_purchase,
+    f.purchase_frequency,
+    l.churned
+FROM
+    customer_features f
+JOIN
+    customer_labels l
+ON f.customer_id = l.customer_id
+ORDER BY RANDOM()
+LIMIT 500000;
+```
+
+
