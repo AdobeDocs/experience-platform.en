@@ -25,7 +25,7 @@ Available services on hub include the following:
 
 ### Experience Platform Edge Network
 
-Edge Network is a secondary data center that is physically located closer to different geographic locations. These data centers process all the data collected through the SDK extensions and Edge Network APIs. The only data that lives on the Edge Network are the projected audience memberships and attributes necessary for personalization.
+Edge Network is a server that is physically located closer to different geographic locations and . These data centers process all the data collected through the SDK extensions and Edge Network APIs. The only data that lives on the Edge Network are the projected audience memberships and attributes necessary for personalization.
 
 Edge Network lets you send and receive data to your customers more quickly due to their closer proximity to the end user. Additionally, you can use Edge Network to process event forwarding requests and tag management requests. As a result, Edge Network should be used in scenarios where the **speed** of the data is more important. 
 
@@ -41,11 +41,16 @@ Available services on Edge Network include the following:
 
 The following section lists the locations for both hub and Edge Network.
 
+IMAGE
+
 **Hub**
 
 - VA7
 - NLD2
 - AUS5
+- CAN2
+- GBR9
+- IND1
 
 **Edge Network**
 
@@ -56,6 +61,8 @@ The following section lists the locations for both hub and Edge Network.
 - SGP3
 - AUS3
 - JPN3
+
+More detailed information about the available server locations can be found in the [multi-cloud overview](./multi-cloud.md#available-cloud-regions).
 
 ## Next steps
 
@@ -77,6 +84,6 @@ Hub is best suited in scenarios where the **thoroughness** of the data is more i
 
 Edge Network is best suited for scenarios where **speed** of the data is more important. For example, let's say you need to create a limited flash sale to target a customer who's browsing your site with a product in their cart. In that use case, you could use edge segmentation, letting you immediately target and send a personalized notification to users with a product in their cart with a "flash sale".
 
-##### How does data go from hub to Edge Network?
+#### What data goes from hub to Edge Network?
 
-Data is automatically sent from hub to Edge Network to keep it eventually consistent. However, this does **not** mean that data in Edge Network is kept perfectly in sync with data in hub. As a result, there may be differences in available data between hub and Edge Network.
+Only data that is needed to deliver real-time experiences on the edge is loaded from hub to Edge Network. This data is automatically sent from hub to Edge Network to keep it eventually consistent, and is only retained for up to 14 days. However, this does **not** mean that data is kept perfectly in sync with data in hub. As a result, there may be differences in available data between hub and Edge Network.
