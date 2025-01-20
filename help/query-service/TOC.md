@@ -50,7 +50,7 @@ role: User,Developer
     - [Abandoned browse](use-cases/abandoned-browse.md)
     - [Attribution analysis](use-cases/attribution-analysis.md)
     - [Bot filtering](use-cases/bot-filtering.md)
-    - [Bot Filtering using statistics and machine learning](use-cases/statistics-and-ml-bot-filtering.md)
+    - [Bot filtering using statistics and machine learning](use-cases/statistics-and-ml-bot-filtering.md)
     - [Create a trended report of events](use-cases/trended-report-of-events.md)
     - [Consent analysis](use-cases/consent-analysis.md)
     - [Customer lifetime value](use-cases/customer-lifetime-value.md)

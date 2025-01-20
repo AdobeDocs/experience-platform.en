@@ -15,11 +15,9 @@ Bot activity can be identified by detecting spikes in user actions within specif
 - **ECID (Experience Cloud Visitor ID):** A universal, persistent ID that identifies visitors.
 - **Timestamp:** The time and date when an activity occurs on the website.
 
-<!-- Bot filtering ensures data quality by eliminating contamination caused by non-human interactions on a website. -->
-
 The examples below demonstrate how to use SQL and machine learning techniques to identify, refine, and predict bot activity. Use these methods to improve your data integrity and ensure actionable analytics.
 
-## Example 1: SQL-based bot filtering {#sql-based-bot-filtering}
+## SQL-based bot filtering {#sql-based-bot-filtering}
 
 This SQL-based bot filtering example demonstrates how to use SQL queries to define thresholds and detect bot activity based on predefined rules. This foundational approach helps identify anomalies in web traffic by removing unusual activity. By customizing detection rules with defined thresholds and intervals, you can effectively tailor bot filtering to suit your specific traffic patterns.
 
@@ -39,8 +37,6 @@ WHERE enduserids._experience.ecid NOT IN (
     HAVING Count(*) > 60
 );
 ```
-
-<!-- This query groups user actions into 1-minute intervals and flags users who exceed the defined threshold of 60 clicks. -->
 
 ### Expand to multiple intervals {#expand-to-multiple-intervals}
 
@@ -115,7 +111,7 @@ FROM (
 )
 ```
 
-The statement joins data from `table_count_1_min`, `table_count_5_mins`, and `table_count_30_mins` using the `mcid` value and webpage. It then consolidates click counts for each user across multiple time intervals to provides a complete view of user activity. Finally, the flagging logic then identifies users that exceed 50 clicks in one minute and marks them as bots (`isBot = 1`).
+The statement joins data from `table_count_1_min`, `table_count_5_mins`, and `table_count_30_mins` using the `mcid` value and webpage. It then consolidates click counts for each user across multiple time intervals to provide a complete view of user activity. Finally, the flagging logic then identifies users that exceed 50 clicks in one minute and marks them as bots (`isBot = 1`).
 
 ### Output dataset structure
 
@@ -138,7 +134,7 @@ root
 
 ### The output dataset to be used for training
 
-The result of this expression might look similar to the table provided below. In the table the `isBot` column acts as a label that distinguishes between bot and non-bot activity.
+The result of this expression might look similar to the table provided below. In the table, the `isBot` column acts as a label that distinguishes between bot and non-bot activity.
 
 ```console
 | `id`         | `count_per_id`                                      |`isBot`| `web`                                                                                                                    |
@@ -158,9 +154,7 @@ The result of this expression might look similar to the table provided below. In
 | 1.00008E+18  | {"one_minute":1,"five_minute":1,"thirty_minute":1}  | 0     | {"webpagedetails":{"name":"KR+CC8TQzPyMOE/bk7EGgN3lSvP8OsxeI2aLaVrbaeLn8XK3y3zok2ryVyZoiBu3"}}                       |
 ```
 
-<!-- {style="table-layout:auto"} -->
-
-## Example 2: Advanced statistical functions for bot filtering {#statistical-functions-for-bot-filtering}
+## Advanced statistical functions for bot filtering {#statistical-functions-for-bot-filtering}
 
 This second example builds on basic SQL filtering by incorporating machine learning techniques to refine thresholds and improve filtering accuracy. By using advanced statistical functions, such as regression analysis or clustering algorithms, this approach introduces predictive capabilities that you can use to develop models for handling complex datasets with greater precision.
 
@@ -248,8 +242,6 @@ auc_roc | accuracy | precision | recall
 ---------+----------+-----------+--------
      1.0 |      1.0 |       1.0 |    1.0
 ```
-
-The table below explains each metric:
 
 | **Metric**   | **Description**                                                                                     |
 |--------------|-----------------------------------------------------------------------------------------------------|
