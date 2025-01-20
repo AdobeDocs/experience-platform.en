@@ -58,6 +58,7 @@ role: User,Developer
     - [Fuzzy match](use-cases/fuzzy-match.md)
     - [List the page views of a user](use-cases/list-visitor-sessions.md)
     - [List visitors by their page views](use-cases/visitors-by-number-of-page-views.md)
+    - [Predict customer churn using SQL-based logistic regression](use-cases/predict-customer-churn.md)
     - [Propensity score](use-cases/propensity-score.md)
     - [Retrieve similar records with higher-order functions](use-cases/retrieve-similar-records.md)
     - [Return and use merchandising variables from analytics data](use-cases/merchandising-variables.md)
