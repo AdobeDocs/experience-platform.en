@@ -41,6 +41,10 @@ The model relies on specific fields in the `webevents` table to generate custome
 
 The dataset should consist of structured historical customer transaction records, with each row representing a unique purchase event. It should include product prices, quantities, and timestamps formatted for compatibility with the SQL `DATEDIFF` function. Additionally, each record contains a valid Experience Cloud ID (ECID) in the `identityMap` field to uniquely identify customers.
 
+>[!NOTE]
+>
+>Processing large datasets with millions of records may impact performance. To optimize query execution, you can index key columns, partition the data, and use efficient aggregation functions. Additionally, filter data before aggregation to help reduce processing overhead.
+
 ## Create a model {#create-a-model}
 
 To predict customer churn, you must create a SQL-based logistic regression model that analyzes key customer features derived from purchase history and behavioral metrics. The model classifies customers as `churned` or `not churned` based on whether they have made a purchase in the last 90 days.
@@ -48,6 +52,10 @@ To predict customer churn, you must create a SQL-based logistic regression model
 ### Use SQL to create the churn prediction model {#sql-create-model}
 
 This SQL-based logistic regression model predicts customer churn by analyzing purchase behavior data from the `webevents` table. The data transformation process aggregates key metrics through the `customer_features` query to generate meaningful insights and assign churn labels based on a 90-day inactivity rule. This approach distinguishes active customers from the customers at risk of churning. The SQL query also applies feature engineering by selecting relevant attributes to enhance model accuracy and improve churn classification.  These insights can help your business implement proactive retention strategies, ultimately reducing churn and maximizing customer lifetime value.
+
+>[!NOTE]
+>
+>The churn prediction model uses a default threshold of 90 days to classify customers as churned. You can modify this threshold to better suit your business objectives and customer retention strategies. To update the threshold, modify the `DATEDIFF(CURRENT_DATE, MAX(timestamp)) > 90` condition in the SQL queries.
 
 Use the following SQL statement to create the `retention_model_logistic_reg` model with the specified features and labels:
 
@@ -195,10 +203,10 @@ The evaluation output includes key performance metrics, such as AUC-ROC, accurac
 
 | Metric     | Description                                                             |
 |------------|-------------------------------------------------------------------------|
-| `auc_roc`  | This metric indicates how effectively your model can distinguish between churned and non-churned customers. |
+| `auc_roc`  | This metric indicates how effectively your model can distinguish between churned and non-churned customers. A high AUC-ROC (close to 1) indicates the model effectively differentiates churned and non-churned customers. |
 | `accuracy` | The accuracy metric represents the proportion of correct predictions made by the model. It provides an overall measure of the model's performance. |
-| `precision`| Precision shows the proportion of correctly identified churned customers. This metric helps assess the model's reliability in predicting churn.         |
-| `recall`   | Recall measures the model's ability to identify all actual churned customers from the dataset. A higher recall indicates fewer missed churn cases.    |
+| `precision`| Precision shows the proportion of correctly identified churned customers. This metric helps assess the model's reliability in predicting churn. High precision means fewer false positives and is useful for targeted retention efforts. |
+| `recall`   | Recall measures the model's ability to identify all actual churned customers from the dataset. A high recall value indicates fewer missed churn customers which is important for broad outreach strategies.  |
 
 ## Model prediction {#model-prediction}
 
