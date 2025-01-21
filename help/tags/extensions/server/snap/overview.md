@@ -5,17 +5,19 @@ last-substantial-update: 2025-01-20
 ---
 # [!DNL Snapchat] conversions API extension overview
 
-The [!DNL Snapchat] events API is a secure [Edge Network Server API](/help/server-api/overview.md) interface that allows you to share information with [!DNL Snapchat] directly about user actions on your websites. You can leverage the event forwarding rules to send data from the [!DNL Adobe Experience Platform Edge Network] to [!DNL Snapchat] by using the [!DNL Snap] Conversion API extension.
+The [!DNL Snap] Conversion API Extension is a secure [Edge Network Server API](/help/server-api/overview.md) interface that allows you to share information with [!DNL Snapchat] directly about user actions on your websites. You can leverage the event forwarding rules to send data from the [!DNL Adobe Experience Platform Edge Network] to [!DNL Snapchat] by using the [!DNL Snap] Conversion API extension.
 
 ## [!DNL Snapchat] prerequisites {#prerequisites}
 
-To use the [!DNL Snapchat] Conversions API, you must have an Event Forwarding property set up in the Adobe Experience Platform and the appropriate permissions to edit the property. Create a Datastream and add the Event Forwarding service to it. 
+To use the [!DNL Snapchat] Conversions API, you must have an [Event Forwarding property](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/getting-started) set up in the Adobe Experience Platform and the [required permissions](https://experienceleague.adobe.com/en/docs/experience-platform/collection/permissions) to edit the property. 
 
-A [!DNL Snapchat Business Manager] account is required to use the Conversions API. Business Manager helps advertisers integrate [!DNL Snapchat]'s marketing efforts across their business and with external partners. See the [!DNL Snapchat] help center article on creating a Business Manager account if you don't have one.
+Create a [Datastream]() and add the [Event Forwarding service]() to it. 
 
-A [!DNL Snap Pixel] must be set up in the [!DNL Snapchat Ads Manager], and you must have access to view the Pixel ID. The Pixel ID can be found in the [!UICONTROL Events Manager] section. 
+A **[!DNL Snapchat]** [Business Manager](https://business.snapchat.com/) account is required to use the Conversions API. Business Manager helps advertisers integrate **[!DNL Snapchat]**'s marketing efforts across their business and with external partners. See the **[!DNL Snapchat]** [help center article]() on creating a Business Manager account if you don't have one.
 
-You need a static, long-lived API token. See the [!DNL Snapchat] Conversions API documentation to obtain this token.
+A [**[!DNL Snap Pixel]**]() must be set up in the [!DNL Snapchat Ads Manager], and you must have access to view the Pixel ID. The Pixel ID can be found in the [!UICONTROL Events Manager]() section. 
+
+You need a static, long-lived API token. See the [[**[!DNL Snapchat]**] Conversions API documentation]() to obtain this token.
 
 ## Install and configure the [!DNL Snapchat] web events API extension {#install}
 
@@ -25,6 +27,9 @@ Once the desired property is selected, follow these steps:
 
 1. In the left navigation panel, select **[!UICONTROL Extensions]**.
 2. Search for the **[!UICONTROL Snap Conversion API Extension]** and select **[!UICONTROL Install]**.
+
+    ![Image showing install button]().
+
 3. On the configuration screen, input the following values:
 
  * **[!UICONTROL Pixel Id]**  
@@ -32,95 +37,153 @@ Once the desired property is selected, follow these steps:
 
 When finished, select **[!UICONTROL Save]**.
 
+![Image showing pixel id and api token button]().
+
 ![[!DNL Snap] configuration screen for the [!DNL Snap] configuration API extension.](../../../images/extensions/server/snap/configure.png)
 
 ## Create data elements {#create-data-elements}
 
 To pass data points as parameters to the [!DNL Snapchat] Conversions API extension, you must create data elements for each data point. Follow these steps:
 
-1. Navigate to [!UICONTROL Authoring]>[!UICONTROL Data Elements] in your property's [!UICONTROL Property Info] screen, and then select [!UICONTROL Add Data Element].
+1. Navigate to **[!UICONTROL Authoring]**>[!UICONTROL Data Elements] in your property's **[!UICONTROL Property Info]** screen, and then select **[!UICONTROL Add Data Element]**.
+
+    ![Image showing add data element button]().
+
 2. Enter a name for the data element.
-3. Select [!UICONTROL Core] as the extension and [!UICONTROL Path] as the data element type. 
+
+3. Select **[!UICONTROL Core]** as the extension and [!UICONTROL Path] as the data element type. 
+
 4. From the drop-down menu, select the appropriate item, and fill in the [!UICONTROL Path] field in the right-side panel to reference the desired data in your schema. 
+
+    ![Image showing create data element screen]().
 
 For example, if you are creating a data element that references `snapClickId` in the schema shown below:
 
+![Image showing schema ]().
+
 You must configure the data element because `snapClickId` is located under `_snap.inc.exchange` in the XDM schema.
+
+![Image showing edit data element screen]().
 
 See the Event Forwarding properties documentation for more details on creating data elements.
 
-<!-- Create a new [rule](../../../ui/managing-resources/rules.md) in your event forwarding property. Under **[!UICONTROL Actions]**, add a new action and set the extension to **[!UICONTROL Snapchat Web Events API Extension]**. To send Edge Network events to [!DNL Snapchat], set the **[!UICONTROL Action Type]** to **[!UICONTROL Send Snapchat Web Events API Event].**
+## Create rules to send conversions events to snap {#create-snap-rules}
 
-![The [!UICONTROL Send Snapchat Web Events API Event] action type being selected for a [!DNL Snapchat] rule in the Data Collection UI.](../../../images/extensions/server/Snapchat/select-action.png)
+This section outlines how to create rules within your event forwarding property to send conversion events to Snap using the CAPI extension.
 
-After selection, additional controls appear to further configure the event, as outlined below. Once complete, select **[!UICONTROL Keep Changes]** to save the rule. -->
+### Create a new rule
 
-**[!UICONTROL Web Events and Parameters]**
+1. Navigate to your event forwarding property and select [!UICONTROL Rules] from the Authoring menu. Then, click [!UICONTROL Add Rule].
 
-Web events and parameters contain general information about the event. Standard events are supported across [!DNL Snapchat] integration tools and can be used for reporting , optimizing for conversions, and building audiences.
+    ![Image showing rules in left navigation]().
 
-| Input | Description |
+2. Name the rule and configure a condition for triggering the Snap event. For example, to send a `PURCHASE` event whenever an event includes an order number, set a condition to check if the user interaction contains a valid purchase order number. 
+
+    ![Image showing condition configuration screen]().
+
+3. After saving the condition, add an action to trigger the Snap Conversion API. In the left-side panel:
+
+    * Set the [!UICONTROL Extension] dropdown menu to [!UICONTROL Snap Conversions API Extension].
+
+    * Set the [!UICONTROL Action Type] dropdown menu to [!UICONTROL Report Web Conversions].
+
+    * Name the rule accordingly.
+
+    ![Image showing action configuration screen]().
+
+4. Configure the CAPI parameter values you want to send for the event in the **[!UICONTROL Data Bindings]** section on the right-side panel. The fields in the extension map to CAPI parameters as shown below. See the [Snapchat Conversions API documentation]() for more information about each parameter.
+
+| Data binding field | Snap CAPI parameter |
 | --- | --- |
-| Event Name | The name of the event. These are actions with predefined names created by [!DNL Snapchat] and is a required field. Refer to the [[!DNL Snapchat] Marketing API](https://business-api.Snapchat.com/portal/docs?id=1741601162187777) documentation for more information on supported events. |
-| Event Time | Date-time as string in ISO 8601 or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. This is a required field. |
-| Event ID | The unique ID generated by advertisers to indicate each event. This is an optional field and is used for deduplication. |
+| Event Type (required) |`event_name`|
+| Email | `em` |
+| Phone Number | `ph` |
+| User Agent | `client_user_agent` |
+| IP Address | `client_ip_address` |
+| Click ID | `sc_click_id` |
+| Cookie1 | `so_cookie1` |
+| First Name | `fn` |
+| Last Name | `ln` |
+| Gender | `ge` |
+| City | `ph` |
+| State  | `st` |
+| Zip | `zp` |
+| Country | `country` |
+| External Id  | `external_id` |
+| Partner Id | `partner_id` |
+| Subscription Id | `subscription_id` |
+| Lead Id | `lead_id` |
+| Item or Category | `content_category` |
+| Content Name  | `content_ids` |
+| Content Type  | `content_name` |
+| Contents | `contents` |
+| Description | `description` |
+| Event Tag | `event_tag` |
+| Number of Items | `num_items` |
+| Price | `value` |
+| Currency | `currency` |
+| Transaction Id | `order_id` (also sent for event_id in place of Client Dedup ID) |
+| Predicted LTV | `predicted_ltv` |
+| Search String | `search_string` |
+| Sign Up Method | `sign_up_method` |
+| Client Dedup Id | `event_id` |
+| Limited Data Use | `data_processing_options` |
+| Page Url | `event_source_url` |
 
-{style="table-layout:auto"}
 
-![The [!DNL Web Events and Parameters] section showing example data input into the fields.](../../../images/extensions/server/Snapchat/configure-web-events-parameters.png)
 
-**[!UICONTROL User Context Parameters]**
+### Required and optional fields
 
-User context parameters contain customer information that is used to match web visitor events with [!DNL Snapchat] users. Including multiple types of matching data allows you to increase the accuracy of targeting and optimization models.
+* Required fields: 
 
-| Input | Description |
+    * All events will have `event_source` set to WEB. 
+
+    * At least one of the following fields or combinations is required for matching: 
+
+        * Email
+        * Phone Number
+        * IP Address and User Agent
+
+Additional notes:
+
+* For `PURCHASE` events, the `Currency` and `Price` fields are required.
+
+* Enabling the [!UICONTROL Test Mode] checkbox sends events as Test Events, which appear in the Test Event Tool instead of standard reporting. See this business help center article for more details. 
+
+* The `contents` parameter should be a JSON string containing at least one of the following fields: 
+
+    * `id`
+    * `item_category`
+    * `brand`
+    * `delivery_category`
+    * `item_price`
+    * `quantity`
+
+Example:
+
+```json
+{
+  "id": "id1",
+  "brand": "brand1",
+  "delivery_category": "c1",
+  "item_price": 2.00,
+  "quantity": 2
+}
+```
+
+To use custom conversions value and ROAS reporting, include relevant parameters in teh `contents` field e.g., brand, item_price, id.
+
+Example Configuration for a `PURCHASE` event
+
+| Field Name | Example value |
 | --- | --- |
-| IP Address | Non-hashed public IP address of the browser. Support is provided for IPv4 and IPv6 addresses. Both the full and compressed forms of IPv6 addresses are recognized. |
-| User Agent | The non-hashed user agent from the user's device. |
-| Email | Email address of the contact associated with the conversion event. |
-| Phone | The phone number must be in E164 format [+][country code][area code][local phone number] before hashing. |
-| Cookie ID | If you are using Pixel SDK will automatically save a unique identifier in the `_ttp` cookie, if cookies are enabled. The `_ttp` value can  extracted and used for this field. |
-| External ID | Any unique identifier such as user IDs, external cookie IDs and so on and must be hashed with SHA256. |
-| Snapchat Click ID | The `ttclid` which is added to the URL of the landing page each time an advertisement is selected on [!DNL Snapchat]. |
-| Page URL | The page URL at the time of the event. |
-| Page Referrer URL | The URL of the page referrer. |
-
-{style="table-layout:auto"}
-
-![The [!DNL User Context Parameters] section showing example data input into the fields.](../../../images/extensions/server/Snapchat/configure-user-context-parameters.png)
-
-**[!UICONTROL Properties Parameters]**
-
-Use the properties parameters to configure additional supported properties.
-
-| Input | Description |
-| --- | --- |
-| Price | The cost of a single item.  |
-| Quantity | The number of items being purchased in the event. This must be a positive number greater than 0. |
-| Content Type | A value of either `product` or `product_group` must be assigned to the content_type object property, depending on how you will configure your data feed when you set up your product catalog. |
-| Content ID | A unique identifier of the product item. |
-| Content Category | Category of the page/product. |
-| Content Name | Name of the page/product. |
-| Currency | The currency of the items being purchased in the event. This is expressed in ISO-4217. |
-| Value | The total price of the order. This value will be equal to the price * quantity. |
-| Description | A description of the item or page. |
-| Query | The string of text that was used to lookup a product. |
-| Status | The status of an order, item, or service. For example, "submitted". |
-
-{style="table-layout:auto"}
-
-![The [!DNL Properties Parameters] section showing example data input into the fields.](../../../images/extensions/server/Snapchat/configure-properties-parameters.png)
-
-## Event deduplication {#deduplication}
-
-[!DNL Snapchat] pixel will need to be setup for deduplication if you use both the [!DNL Snapchat] pixel SDK and the [!DNL Snapchat] web events API extension to send the same events to [!DNL Snapchat]. 
-
-Deduplication is not required if distinct event types are being sent from the client and server without any overlap. To ensure that your reporting is not negatively impacted, you must make sure that any single event that is shared by the [!DNL Snapchat] pixel SDK and the [!DNL Snapchat] web events API extension is deduplicated.
-
-When sending shared events, make sure that every event includes a pixel ID, event ID and name. Duplicated events that arrive within five minutes of each other will be merged. If the data field was absent from the first event, it will be combined with the subsequent event. Any duplicate events received within 48 hours will be removed.
-
-See the [!DNL Snapchat] documentation on [Event Deduplication](https://ads.Snapchat.com/help/article/event-deduplication) for more details on this process.
+| `event_type` | PURCHASE |
+| `currency` | USD |
+| `price` | 100.00 |
+| `contents` | See JSON example above. |
 
 ## Next steps
 
-This guide covered how to send server-side event data to [!DNL Snapchat] using the [!DNL Snapchat] web events API extension. For more information on event forwarding capabilities in [!DNL Adobe Experience Platform], refer to the [event forwarding overview](../../../ui/event-forwarding/overview.md).
+This guide covered how to send server-side event data to [!DNL Snap] using the [!DNL Snap Conversions API] extension. For more information on event forward capabilities in [!DNL Adobe Experience Platform], refer to the event forwarding overview (../../../ui/event-forwarding/overview.md).
+
+For troubleshooting and optimizing your setup, review the Event Quality Score recommendations to ensure your events achieve the highest possible match rates and performance outcomes.
