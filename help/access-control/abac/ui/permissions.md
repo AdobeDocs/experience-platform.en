@@ -41,7 +41,7 @@ Select the role from the **[!UICONTROL Roles]** tab, which will open the role's 
 
 ![flac-details](../../images/flac-ui/flac-details.png)
 
-The details tab provides an overview of the role. The overview displays the role name, role description, the name of the user who created and modified the role, when the role was created and modified, and the permissions attached to the role. The role name, and role description can be modified, if required.
+The details tab provides an overview of the role. The overview displays the role name, role description, the name of the user who created and modified the role, when the role was created and modified, the permissions attached to the role, as well as a list of sandboxes that are assigned to the role. The role name, and role description can be modified, if required.
 
 ## Manage labels for a role
 
@@ -65,15 +65,15 @@ To remove a label from a role, select the **X** icon next to the labels's name.
 
 ## Managing sandboxes for role
 
-Select the **[!UICONTROL Sandboxes]** tab to open the roles sandboxes page. Here you can see a list of sandboxes that were added to the role.
+Select the **[!UICONTROL Details]** tab and navigate down the page until you see the **[!UICONTROL Sandboxes]** section. Select **[!UICONTROL View All]** to see the complete list of sandboxes added to the role.
 
 ![flac-sandboxes](../../images/flac-ui/flac-sandboxes.png)
 
-To add more sandboxes to a role select **[!UICONTROL Edit]**.
+To add more sandboxes to a role navigate to the top of the page and select **[!UICONTROL Edit]**.
 
 ![flac-add-sandboxes](../../images/flac-ui/flac-add-sandboxes.png)
 
-The next screen prompts you to choose which resource permissions that exist in sandboxes to include in the role using the dropdown. When finished, select **[!UICONTROL Save and exit]**.
+The next screen prompts you to choose which resource permissions that exist in sandboxes to include in the role using the dropdown. When finished, select **[!UICONTROL Save]** and then **[!UICONTROL Close]**.
 
 ![flac-add-role-permission](../../images/flac-ui/flac-add-role-permission.png)
 
@@ -161,11 +161,21 @@ To add a user to a role, log into the Admin Console and select **[!UICONTROL Add
 
 ![product-profile-add-users](../../images/flac-ui/product-profile-add-users.png)
 
-The **[!UICONTROL Add users to your team]** dialogue appears. Enter the users email address, first name (optional) and last name (optional).
+The **[!UICONTROL Add users to your team]** dialogue appears. Enter the users email address, first name (optional) and last name (optional). Then select **[!UICONTROL Products]**.
 
-Select the pencil icon to select products and user groups, select **[!UICONTROL Adobe Experience Platform]**, then select **[!UICONTROL AEP-Default-All-Users]**, then select  **[!UICONTROL Save]**.
+![](../../images/flac-ui/product-profile-add-users-to-team.png)
 
-![product-profile](../../images/flac-ui/product-profile.png)
+The **[!UICONTROL Select products]** dialogue appears. Select **[!UICONTROL Adobe Experience Platform]**.
+
+![product-profile](../../images/flac-ui/product-profile-select-product.png)
+
+The **[!UICONTROL Select product profiles]** dialogue appears. Select **[!UICONTROL AEP-Default-All-Users]** then select **[!UICONTROL Save]**.
+
+![product-profile](../../images/flac-ui/product-profile-select-product-profiles.png)
+
+Review the information and then select to **[!UICONTROL Save]** to finish adding the user.
+
+![product-profile](../../images/flac-ui/product-profile-save-user.png)
 
 ## Next steps
 
