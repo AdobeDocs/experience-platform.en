@@ -137,29 +137,29 @@ FROM model_evaluate(retention_model_logistic_reg, 1,
 WITH customer_features AS (
     SELECT
        identityMap['ECID'][0].id AS customer_id,
-       AVG(COALESCE(productListItems.priceTotal[0], 0)) AS avg_order_value,
-       SUM(COALESCE(productListItems.priceTotal[0], 0)) AS total_revenue,
-       COUNT(COALESCE(productListItems.quantity[0], 0)) AS total_purchases,
-       DATEDIFF(MAX(timestamp), MIN(timestamp)) AS customer_lifetime,
-       DATEDIFF(CURRENT_DATE, MAX(timestamp)) AS days_since_last_purchase,
-       COUNT(DISTINCT CONCAT(YEAR(timestamp), MONTH(timestamp))) AS purchase_frequency
+       AVG(COALESCE(productListItems.priceTotal[0], 0)) AS avg_order_value, -- Calculates the average order value, and handles null values with COALESCE
+       SUM(COALESCE(productListItems.priceTotal[0], 0)) AS total_revenue, -- The sum of all purchase values per customer
+       COUNT(COALESCE(productListItems.quantity[0], 0)) AS total_purchases, -- The total number of items purchased by the customer
+       DATEDIFF(MAX(timestamp), MIN(timestamp)) AS customer_lifetime, -- The days between first and last recorded purchase
+       DATEDIFF(CURRENT_DATE, MAX(timestamp)) AS days_since_last_purchase, -- The days since the last purchase event
+       COUNT(DISTINCT CONCAT(YEAR(timestamp), MONTH(timestamp))) AS purchase_frequency -- The count of unique months with purchases
     FROM
         webevents
-    WHERE EXISTS(productListItems, value -> value.priceTotal > 0) 
-      AND commerce.`order`.purchaseID <> ''
+    WHERE EXISTS(productListItems, value -> value.priceTotal > 0) -- Checks if the purchase contains a positive price total
+      AND commerce.`order`.purchaseID <> '' -- Ensures the purchase has a valid order ID
     GROUP BY customer_id
 ),
 customer_labels AS (
     SELECT
       identityMap['ECID'][0].id AS customer_id,
       CASE
-          WHEN DATEDIFF(CURRENT_DATE, MAX(timestamp)) > 90 THEN 1  -- Churned if no purchase in the last 90 days
+          WHEN DATEDIFF(CURRENT_DATE, MAX(timestamp)) > 90 THEN 1  -- Marks customer as churned if no purchase occurred in the last 90 days
           ELSE 0
       END AS churned
     FROM
         webevents
-    WHERE EXISTS(productListItems, value -> value.priceTotal > 0) 
-      AND commerce.`order`.purchaseID <> ''
+    WHERE EXISTS(productListItems, value -> value.priceTotal > 0) -- Ensures the presence of a valid purchase
+      AND commerce.`order`.purchaseID <> '' -- Checks for valid order ID
     GROUP BY customer_id
 )
 SELECT
@@ -175,7 +175,7 @@ FROM
     customer_features f
 JOIN
     customer_labels l
-ON f.customer_id = l.customer_id);
+ON f.customer_id = l.customer_id); -- Joins customer features with churn labels
 ```
 
 ### Model evaluation output
