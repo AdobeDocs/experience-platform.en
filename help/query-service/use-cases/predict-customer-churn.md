@@ -89,4 +89,80 @@ ORDER BY RANDOM()
 LIMIT 500000;
 ```
 
+## Model evaluation {#model-evaluation}
+
+Next, evaluate the churn prediction model to assess its effectiveness in identifying at-risk customers. Model evaluation provides key performance metrics that help measure the accuracy and reliability of predictions.
+
+<!-- 
+To assess the accuracy of the `retention_model_logistic_reg` model in predicting customer churn, use the `model_evaluate` function to evaluate it's performance. This function aggregates key customer metrics from the `webevents` table, assigns churn labels based on a 90-day inactivity rule, and combines features with labels to provide a comprehensive evaluation dataset. The query outputs key performance metrics such as AUC-ROC, accuracy, precision, and recall, help you assess model effectiveness, optimize retention strategies, and improve decision-making.
+
+The evaluation process uses a dataset with the same structure as the training data to calculate performance metrics. These metrics provide insights into how well the model predicts churned customers, ensuring its effectiveness and reliability.
+ -->
+
+Use the following SQL query to evaluate the `retention_model_logistic_reg` model using a dataset with the same structure as the training data:
+
+```sql
+SELECT * 
+FROM model_evaluate(retention_model_logistic_reg, 1,
+WITH customer_features AS (
+    SELECT
+       identityMap['ECID'][0].id AS customer_id,
+       AVG(COALESCE(productListItems.priceTotal[0], 0)) AS avg_order_value,
+       SUM(COALESCE(productListItems.priceTotal[0], 0)) AS total_revenue,
+       COUNT(COALESCE(productListItems.quantity[0], 0)) AS total_purchases,
+       DATEDIFF(MAX(timestamp), MIN(timestamp)) AS customer_lifetime,
+       DATEDIFF(CURRENT_DATE, MAX(timestamp)) AS days_since_last_purchase,
+       COUNT(DISTINCT CONCAT(YEAR(timestamp), MONTH(timestamp))) AS purchase_frequency
+    FROM
+        webevents
+    WHERE EXISTS(productListItems, value -> value.priceTotal > 0) 
+      AND commerce.`order`.purchaseID <> ''
+    GROUP BY customer_id
+),
+customer_labels AS (
+    SELECT
+      identityMap['ECID'][0].id AS customer_id,
+      CASE
+          WHEN DATEDIFF(CURRENT_DATE, MAX(timestamp)) > 90 THEN 1  -- Churned if no purchase in the last 90 days
+          ELSE 0
+      END AS churned
+    FROM
+        webevents
+    WHERE EXISTS(productListItems, value -> value.priceTotal > 0) 
+      AND commerce.`order`.purchaseID <> ''
+    GROUP BY customer_id
+)
+SELECT
+    f.customer_id,
+    f.total_purchases,
+    f.total_revenue,
+    f.avg_order_value,
+    f.customer_lifetime,
+    f.days_since_last_purchase,
+    f.purchase_frequency,
+    l.churned
+FROM
+    customer_features f
+JOIN
+    customer_labels l
+ON f.customer_id = l.customer_id);
+```
+
+### Evaluation results
+
+The output of the evaluation query includes key metrics such as AUC-ROC, accuracy, precision, and recall, as shown in the table below:
+
+| auc_roc | accuracy | precision | recall |
+|---------|----------|-----------|--------|
+|1       | 0.99998  |  1        |  1      |
+
+| Metric     | Description                                                             |
+|------------|-------------------------------------------------------------------------|
+| `auc_roc`  | Measures the model's ability to distinguish between churned and non-churned customers. |
+| `accuracy` | Indicates the percentage of correct predictions.                        |
+| `precision`| Shows the proportion of correctly identified churned customers.         |
+| `recall`   | Reflects the model's ability to detect all actual churned customers.    |
+
+
+<!-- Use these evaluation results to fine-tune the model and ensure it meets business requirements for churn prediction. -->
 
