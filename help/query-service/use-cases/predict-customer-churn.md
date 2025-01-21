@@ -206,49 +206,49 @@ The following SQL query predicts customer churn using the `retention_model_logis
 
 ```sql
 SELECT * 
-FROM model_predict(retention_model_logistic_reg, 1,
+FROM model_predict(retention_model_logistic_reg, 1,  -- Applies the trained model for churn prediction
 WITH customer_features AS (
     SELECT
        identityMap['ECID'][0].id AS customer_id,
-       AVG(COALESCE(productListItems.priceTotal[0], 0)) AS avg_order_value,
-       SUM(COALESCE(productListItems.priceTotal[0], 0)) AS total_revenue,
-       COUNT(COALESCE(productListItems.quantity[0], 0)) AS total_purchases,
-       DATEDIFF(MAX(timestamp), MIN(timestamp)) AS customer_lifetime,
-       DATEDIFF(CURRENT_DATE, MAX(timestamp)) AS days_since_last_purchase,
-       COUNT(DISTINCT CONCAT(YEAR(timestamp), MONTH(timestamp))) AS purchase_frequency
+       AVG(COALESCE(productListItems.priceTotal[0], 0)) AS avg_order_value,  
+       SUM(COALESCE(productListItems.priceTotal[0], 0)) AS total_revenue, 
+       COUNT(COALESCE(productListItems.quantity[0], 0)) AS total_purchases,  
+       DATEDIFF(MAX(timestamp), MIN(timestamp)) AS customer_lifetime,  
+       DATEDIFF(CURRENT_DATE, MAX(timestamp)) AS days_since_last_purchase,  
+       COUNT(DISTINCT CONCAT(YEAR(timestamp), MONTH(timestamp))) AS purchase_frequency  
     FROM
         webevents
-    WHERE EXISTS(productListItems, value -> value.priceTotal > 0) 
-      AND commerce.`order`.purchaseID <> ''
+    WHERE EXISTS(productListItems, value -> value.priceTotal > 0)  -- Ensures only valid purchase data is considered
+      AND commerce.`order`.purchaseID <> ''  
     GROUP BY customer_id
 ),
 customer_labels AS (
     SELECT
-      identityMap['ECID'][0].id AS customer_id,
+      identityMap['ECID'][0].id AS customer_id,  
       CASE
-          WHEN DATEDIFF(CURRENT_DATE, MAX(timestamp)) > 90 THEN 1  -- Churned if no purchase in the last 90 days
+          WHEN DATEDIFF(CURRENT_DATE, MAX(timestamp)) > 90 THEN 1  -- Identify customers who have not purchased in the last 90 days
           ELSE 0
       END AS churned
     FROM
         webevents
-    WHERE EXISTS(productListItems, value -> value.priceTotal > 0) 
-      AND commerce.`order`.purchaseID <> ''
+    WHERE EXISTS(productListItems, value -> value.priceTotal > 0)  
+      AND commerce.`order`.purchaseID <> ''  
     GROUP BY customer_id
 )
 SELECT
-    f.customer_id,
-    f.total_purchases,
-    f.total_revenue,
-    f.avg_order_value,
-    f.customer_lifetime,
-    f.days_since_last_purchase,
-    f.purchase_frequency,
-    l.churned
+    f.customer_id,  
+    f.total_purchases,  
+    f.total_revenue,  
+    f.avg_order_value,  
+    f.customer_lifetime,  
+    f.days_since_last_purchase,  
+    f.purchase_frequency,  
+    l.churned  
 FROM
     customer_features f
 JOIN
     customer_labels l
-ON f.customer_id = l.customer_id);
+ON f.customer_id = l.customer_id);  -- Matches features with their churn labels for prediction
 ```
 
 ### Model prediction output {#prediction-output}
