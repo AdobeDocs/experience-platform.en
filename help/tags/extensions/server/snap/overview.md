@@ -19,32 +19,41 @@ You need a static, long-lived API token. See the [!DNL Snapchat] Conversions API
 
 ## Install and configure the [!DNL Snapchat] web events API extension {#install}
 
-To install the extension, navigate to [!UICONTROL Data Collection]>[!UICONTROL Event Forwarding]. Select the property where you want to install the extension.
+To install the extension, navigate to **[!UICONTROL Data Collection]**>[!UICONTROL Event Forwarding]. Select the property where you want to install the extension.
 
 Once the desired property is selected, follow these steps:
 
-<!-- To install the extension, select **[!UICONTROL Extensions]** in the left navigation. In the **[!UICONTROL Catalog]** tab, select the **[!UICONTROL Snapchat Web Events API Extension]** and then select **[!UICONTROL Install]**.
+1. In the left navigation panel, select **[!UICONTROL Extensions]**.
+2. Search for the **[!UICONTROL Snap Conversion API Extension]** and select **[!UICONTROL Install]**.
+3. On the configuration screen, input the following values:
 
-![The extension catalog showing the [!DNL Snapchat] extension card highlighting install.](../../../images/extensions/server/Snapchat/install-extension.png)
-
-On the next screen, input the following configuration values that you previously generated from [!DNL Snapchat] Ads Manager:
-
-* **[!UICONTROL Pixel Code]**
-* **[!UICONTROL Access Token]**
+ * **[!UICONTROL Pixel Id]**  
+ * **[!UICONTROL API Token]**
 
 When finished, select **[!UICONTROL Save]**.
 
-![[!DNL Snapchat] configuration screen for the [!DNL Snapchat] web events API extension.](../../../images/extensions/server/Snapchat/configure.png) -->
+![[!DNL Snap] configuration screen for the [!DNL Snap] configuration API extension.](../../../images/extensions/server/snap/configure.png)
 
-## Configure an event forwarding rule {#config-rule}
+## Create data elements {#create-data-elements}
 
-Once all your data elements are set up, you can start creating event forwarding rules that determine when and how your events will be sent to [!DNL Snapchat].
+To pass data points as parameters to the [!DNL Snapchat] Conversions API extension, you must create data elements for each data point. Follow these steps:
 
-Create a new [rule](../../../ui/managing-resources/rules.md) in your event forwarding property. Under **[!UICONTROL Actions]**, add a new action and set the extension to **[!UICONTROL Snapchat Web Events API Extension]**. To send Edge Network events to [!DNL Snapchat], set the **[!UICONTROL Action Type]** to **[!UICONTROL Send Snapchat Web Events API Event].**
+1. Navigate to [!UICONTROL Authoring]>[!UICONTROL Data Elements] in your property's [!UICONTROL Property Info] screen, and then select [!UICONTROL Add Data Element].
+2. Enter a name for the data element.
+3. Select [!UICONTROL Core] as the extension and [!UICONTROL Path] as the data element type. 
+4. From the drop-down menu, select the appropriate item, and fill in the [!UICONTROL Path] field in the right-side panel to reference the desired data in your schema. 
+
+For example, if you are creating a data element that references `snapClickId` in the schema shown below:
+
+You must configure the data element because `snapClickId` is located under `_snap.inc.exchange` in the XDM schema.
+
+See the Event Forwarding properties documentation for more details on creating data elements.
+
+<!-- Create a new [rule](../../../ui/managing-resources/rules.md) in your event forwarding property. Under **[!UICONTROL Actions]**, add a new action and set the extension to **[!UICONTROL Snapchat Web Events API Extension]**. To send Edge Network events to [!DNL Snapchat], set the **[!UICONTROL Action Type]** to **[!UICONTROL Send Snapchat Web Events API Event].**
 
 ![The [!UICONTROL Send Snapchat Web Events API Event] action type being selected for a [!DNL Snapchat] rule in the Data Collection UI.](../../../images/extensions/server/Snapchat/select-action.png)
 
-After selection, additional controls appear to further configure the event, as outlined below. Once complete, select **[!UICONTROL Keep Changes]** to save the rule.
+After selection, additional controls appear to further configure the event, as outlined below. Once complete, select **[!UICONTROL Keep Changes]** to save the rule. -->
 
 **[!UICONTROL Web Events and Parameters]**
 
