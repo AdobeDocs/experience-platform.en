@@ -89,7 +89,7 @@ ORDER BY RANDOM()
 LIMIT 500000;
 ```
 
-### Model output
+### Model output {#model-output}
 
 The output dataset contains customer-related metrics and their churn status. Each row represents a customer, respective feature values, and whether they have churned or not. You can use this output to analyze customer behavior and train models, then take proactive actions to retain at-risk customers. An example output table is shown below:
 
@@ -107,7 +107,7 @@ The output dataset contains customer-related metrics and their churn status. Eac
 |-----------|------------------------------------------------------------------------------------|
 | `churned` | The customer's actual churn status based on whether they made a purchase in the last 90 days (0 = not churned, 1 = churned). |
 
-## Model evaluation {#model-evaluation}
+## Use SQL to evaluate the model {#model-evaluation}
 
 Next, evaluate the churn prediction model to assess its effectiveness in identifying at-risk customers. Model evaluation provides key performance metrics that help measure the accuracy and reliability of predictions.
 
@@ -232,7 +232,7 @@ JOIN
 ON f.customer_id = l.customer_id);
 ```
 
-### Model prediction output
+### Model prediction output {#prediction-output}
 
 The output dataset contains customer features along with their predicted churn status. Use this data to take targeted actions to retain customers before they churn.
 
@@ -251,3 +251,9 @@ The output dataset contains customer features along with their predicted churn s
 |---------------|-------------------------------------------------------------------------------|
 | `prediction`  | The customer's predicted churn status based on the model (0 = not churned, 1 = churned). |
 
+## Next steps
+
+By reading this document, you have learned how to create, evaluate, and use a SQL-based logistic regression model to predict customer churn. You now have the foundation to analyze customer behavior, identify at-risk customers, and implement proactive retention strategies. To further enhance and apply your churn prediction model, consider the following next steps:
+
+- Automate the process: Integrate the model into a data pipeline to enable continuous churn monitoring and real-time predictions. Learn how to [explore, verify, and process datasets with SQL](../../dashboards/query.md). 
+- Monitor model performance: Regularly evaluate the model with new data to ensure it remains accurate and relevant over time. Use [AI Assistant](../../ai-assistant/landing.md) in the Adobe Experience Platform UI for monitoring significant changes and [forecasting audiences](../../ai-assistant/new-features/audience-forecasting.md). 
