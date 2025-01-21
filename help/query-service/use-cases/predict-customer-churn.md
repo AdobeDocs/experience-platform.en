@@ -25,7 +25,7 @@ To allow for accurate churn classification, the model relies on several features
 | `avg_order_value`          | The average value of a customer's purchases.          |
 | `customer_lifetime`        | The duration in days between a customer's first and last purchase. |
 | `days_since_last_purchase` | The number of days since the customer's last purchase.|
-| `purchase_frequency`       | The frequency of customer purchases per month.        |
+| `purchase_frequency`       | The number of unique months the customer made purchases. |
 
 ### Use SQL to create the churn prediction model {#sql-create-model}
 
@@ -103,28 +103,15 @@ The output dataset contains customer-related metrics and their churn status. Eac
   100005      | 1               | 25.00         | 25.00            | 60                | 180                      | 1                  | 1       
 ```
 
-The table below provides a description of each output metric.
-
-| Column                   | Description                                                         |
-|--------------------------|---------------------------------------------------------------------|
-| **`customer_id`**          | A unique identifier for each customer.                             |
-| **`total_purchases`**      | The total number of purchases made by the customer.               |
-| **`total_revenue`**        | The total revenue generated from the customer's purchases.        |
-| **`avg_order_value`**      | The average value of an individual purchase.                      |
-| **`customer_lifetime`**    | The number of days between the first and last recorded purchase.  |
-| **`days_since_last_purchase`** | The number of days since the customer's most recent purchase.     |
-| **`purchase_frequency`**   | The number of unique months the customer made purchases.          |
-| **`churned`**              | A binary indicator (`0` = not churned, `1` = churned) based on whether the customer has made a purchase in the last 90 days. |
+| Column    | Description                                                                        |
+|-----------|------------------------------------------------------------------------------------|
+| `churned` | The customer's actual churn status based on whether they made a purchase in the last 90 days (0 = not churned, 1 = churned). |
 
 ## Model evaluation {#model-evaluation}
 
 Next, evaluate the churn prediction model to assess its effectiveness in identifying at-risk customers. Model evaluation provides key performance metrics that help measure the accuracy and reliability of predictions.
 
-To assess the accuracy of the `retention_model_logistic_reg` model in predicting customer churn, use the `model_evaluate` function to evaluate it's performance. 
-
-<!-- This function aggregates key customer metrics from the `webevents` table, assigns churn labels based on a 90-day inactivity rule, and combines features with labels to provide a comprehensive evaluation dataset.  -->
-
-The SQL example below evaluates the `retention_model_logistic_reg` model using a dataset with the same structure as the training data:
+To assess the accuracy of the `retention_model_logistic_reg` model in predicting customer churn, use the `model_evaluate` function to evaluate it's performance. The SQL example below evaluates the `retention_model_logistic_reg` model using a dataset with the same structure as the training data:
 
 ```sql
 SELECT * 
@@ -173,11 +160,9 @@ JOIN
 ON f.customer_id = l.customer_id);
 ```
 
-### Evaluation results
+### Model evaluation output
 
 The evaluation output includes key performance metrics such as AUC-ROC, accuracy, precision, and recall. Use these metrics to help you assess model effectiveness, optimize retention strategies, and improve decision-making.
-
-<!-- Use these evaluation results to fine-tune the model and ensure it meets business requirements for churn prediction. -->
 
 ```console
  auc_roc | accuracy | precision | recall 
@@ -192,5 +177,77 @@ The evaluation output includes key performance metrics such as AUC-ROC, accuracy
 | `precision`| Shows the proportion of correctly identified churned customers.         |
 | `recall`   | Reflects the model's ability to detect all actual churned customers.    |
 
+## Model prediction {#model-prediction}
 
+Once the model has been evaluated, you can use the trained model to predict customer churn for a new dataset. Use the `model_predict` function to apply the trained logistic regression model to classify customers based on their latest feature values. You can use this prediction capability to proactively identify at-risk customers and implement targeted retention strategies.
+
+### Use SQL to generate churn predictions {#sql-model-predict}
+
+The following SQL query predicts customer churn using the `retention_model_logistic_reg` model and a dataset with the same structure as the training data:
+
+```sql
+SELECT * 
+FROM model_predict(retention_model_logistic_reg, 1,
+WITH customer_features AS (
+    SELECT
+       identityMap['ECID'][0].id AS customer_id,
+       AVG(COALESCE(productListItems.priceTotal[0], 0)) AS avg_order_value,
+       SUM(COALESCE(productListItems.priceTotal[0], 0)) AS total_revenue,
+       COUNT(COALESCE(productListItems.quantity[0], 0)) AS total_purchases,
+       DATEDIFF(MAX(timestamp), MIN(timestamp)) AS customer_lifetime,
+       DATEDIFF(CURRENT_DATE, MAX(timestamp)) AS days_since_last_purchase,
+       COUNT(DISTINCT CONCAT(YEAR(timestamp), MONTH(timestamp))) AS purchase_frequency
+    FROM
+        webevents
+    WHERE EXISTS(productListItems, value -> value.priceTotal > 0) 
+      AND commerce.`order`.purchaseID <> ''
+    GROUP BY customer_id
+),
+customer_labels AS (
+    SELECT
+      identityMap['ECID'][0].id AS customer_id,
+      CASE
+          WHEN DATEDIFF(CURRENT_DATE, MAX(timestamp)) > 90 THEN 1  -- Churned if no purchase in the last 90 days
+          ELSE 0
+      END AS churned
+    FROM
+        webevents
+    WHERE EXISTS(productListItems, value -> value.priceTotal > 0) 
+      AND commerce.`order`.purchaseID <> ''
+    GROUP BY customer_id
+)
+SELECT
+    f.customer_id,
+    f.total_purchases,
+    f.total_revenue,
+    f.avg_order_value,
+    f.customer_lifetime,
+    f.days_since_last_purchase,
+    f.purchase_frequency,
+    l.churned
+FROM
+    customer_features f
+JOIN
+    customer_labels l
+ON f.customer_id = l.customer_id);
+```
+
+### Model prediction output
+
+The output dataset contains customer features along with their predicted churn status. Use this data to take targeted actions to retain customers before they churn.
+
+```console
+ total_purchases | total_revenue | avg_order_value | customer_lifetime | days_since_last_purchase | purchase_frequency | churned | prediction
+-----------------+---------------+-----------------+-------------------+--------------------------+--------------------+---------+------------
+ 2               | 299           | 149.5           | 0                 | 13                        | 1                  | 0       | 0
+ 1               | 710           | 710.00          | 0                 | 149                       | 1                  | 1       | 1
+ 1               | 19.99         | 19.99           | 0                 | 30                        | 1                  | 0       | 0
+ 1               | 4528          | 4528.00         | 0                 | 26                        | 1                  | 0       | 0
+ 1               | 21.84         | 21.84           | 0                 | 90                        | 1                  | 0       | 0
+ 1               | 16.64         | 16.64           | 0                 | 268                       | 1                  | 1       | 1
+```
+
+| Column        | Description                                                                   |
+|---------------|-------------------------------------------------------------------------------|
+| `prediction`  | The customer's predicted churn status based on the model (0 = not churned, 1 = churned). |
 
