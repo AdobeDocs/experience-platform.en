@@ -24,3 +24,4 @@ This user guide focuses on how to use the [!DNL Admin Console] to assign access 
 ## Next steps
 
 Once you have navigated the access control workspace, proceed to the next step to [create a new product profile](create-profile.md)
+

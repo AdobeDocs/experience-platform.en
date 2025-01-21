@@ -58,6 +58,7 @@ role: Admin,User
         * [Adobe destinations overview](./catalog/adobe/overview.md)
         * [Experience Cloud audiences](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
         * [Marketo Engage connection](./catalog/adobe/marketo-engage.md)
+        * [(Beta) Marketo Engage Person Sync connection](./catalog/adobe/marketo-engage-person-sync.md)
         * [Marketo Measure Ultimate connection](./catalog/adobe/marketo-measure-ultimate.md)
         * [Experience Platform audience sharing](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
         * [Federated Audience Composition connection (Limited availability)](https://www.adobe.com/go/destinations-federated-audience-composition)
@@ -168,7 +169,9 @@ role: Admin,User
         * [[!DNL Salesforce Marketing Cloud Account Engagement]](./catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md)
         * [SendGrid connection](./catalog/email-marketing/sendgrid.md)
     * Tag extensions {#launch-extensions}
-        * [Tag extension overview](./catalog/launch-extensions/overview.md)  
+        * [Tag extension overview](./catalog/launch-extensions/overview.md)
+    * Marketing automation {#marketing-automation}
+        * [RainFocus Attendee Profiles](/help/destinations/catalog/marketing-automation/rainfocus.md) 
     * Mobile engagement destinations {#mobile-engagement}
         * [Mobile engagement destinations overview](./catalog/mobile-engagement/overview.md)
         * [Airship Attributes connection](./catalog/mobile-engagement/airship-attributes.md)
@@ -195,6 +198,7 @@ role: Admin,User
     * Social destinations{#social}
         * [Social destinations overview](./catalog/social/overview.md)
         * [Facebook connection](./catalog/social/facebook.md)
+        * [(Companies) LinkedIn Matched Audiences connection](./catalog/social/linkedin-b2b.md)
         * [LinkedIn Matched Audiences connection](./catalog/social/linkedin.md)
         * [TikTok connection](./catalog/social/tiktok.md)
         * [[!DNL Twitter Custom Audiences] connection](./catalog/social/twitter.md)

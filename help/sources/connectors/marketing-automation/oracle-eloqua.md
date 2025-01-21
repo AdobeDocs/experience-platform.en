@@ -7,7 +7,7 @@ exl-id: ebe16bff-4c89-4d45-9973-e5aa13b61a36
 
 >[!WARNING]
 >
->The [!DNL Oracle Eloqua] source will be deprecated at the end of May 2025.
+>The [!DNL Oracle Eloqua] source will be deprecated at the end of June 2025.
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
