@@ -4,7 +4,7 @@ description: Learn how to predict customer churn using SQL-based logistic regres
 ---
 # Predict Customer Churn with SQL-Based Logistic Regression
 
-Predicting customer churn enables your businesses to proactively identify and retain at-risk customers which can lead to better resource allocation and increased profitability. These predictions offer actionable insights into customer behavior that you can use to drive improved satisfaction, loyalty, and sustainable growth.
+Predicting customer churn enables your businesses to proactively identify and retain at-risk customers, which can lead to better resource allocation and increased profitability. These predictions offer actionable insights into customer behavior that you can use to drive improved satisfaction, loyalty, and sustainable growth.
 
 Learn how to predict customer churn using a SQL-based logistic regression model. Use this comprehensive SQL guide to transform raw e-commerce data into meaningful customer insights, and ensure accurate churn classification based on key behavioral metrics such as purchase frequency, order value, and time since last purchase. This document outlines the end-to-end process, starting with data preparation and feature engineering, followed by model creation, evaluation, and prediction.
 
@@ -16,7 +16,7 @@ Before creating the churn prediction model, it's important to understand the key
 
 ### Define customer features {#define-customer-features}
 
-To allow for accurate churn classification, the model relies on several features that summarize customer behavior. These features provide insights into purchasing habits, spending trends, and customer lifecycle. The table below outlines the features used in the model:
+To allow for accurate churn classification, the model relies on several features that summarize customer behavior. These features provide insights into purchasing habits, spending trends, and the customer lifecycle. The table below outlines the features used in the model:
 
 | Feature                   | Description                                           |
 |---------------------------|-------------------------------------------------------|
@@ -29,7 +29,7 @@ To allow for accurate churn classification, the model relies on several features
 
 ### Assumptions and required fields {#assumptions-required-fields}
 
-The model relies on specific fields in the `webevents` table to generate customer churn predictions. Ensure your dataset includes the following required fields:
+The model relies on specific fields in the `webevents` table to generate customer churn predictions. Ensure that your dataset includes the following required fields:
 
 | Field                          | Description                                        |
 |--------------------------------|----------------------------------------------------|
@@ -47,7 +47,7 @@ To predict customer churn, you must create a SQL-based logistic regression model
 
 ### Use SQL to create the churn prediction model {#sql-create-model}
 
-This SQL-based logistic regression model predicts customer churn by analyzing purchase behavior data from the `webevents` table. The data transformation process aggregates key metrics through the `customer_features` query to generate meaningful insights and assign churn labels based on a 90-day inactivity rule. This approach distinguishes active customers from those at risk of churning. The SQL query also applies feature engineering by selecting relevant attributes to enhance model accuracy and improve churn classification.  These insights can help your business implement proactive retention strategies, ultimately reducing churn and maximizing customer lifetime value.
+This SQL-based logistic regression model predicts customer churn by analyzing purchase behavior data from the `webevents` table. The data transformation process aggregates key metrics through the `customer_features` query to generate meaningful insights and assign churn labels based on a 90-day inactivity rule. This approach distinguishes active customers from the customers at risk of churning. The SQL query also applies feature engineering by selecting relevant attributes to enhance model accuracy and improve churn classification.  These insights can help your business implement proactive retention strategies, ultimately reducing churn and maximizing customer lifetime value.
 
 Use the following SQL statement to create the `retention_model_logistic_reg` model with the specified features and labels:
 
@@ -130,7 +130,7 @@ The output dataset contains customer-related metrics and their churn status. Eac
 
 Next, evaluate the churn prediction model to assess its effectiveness in identifying at-risk customers. Model evaluation provides key performance metrics that help measure the accuracy and reliability of predictions.
 
-To assess the accuracy of the `retention_model_logistic_reg` model in predicting customer churn, use the `model_evaluate` function to evaluate it's performance. The SQL example below evaluates the `retention_model_logistic_reg` model using a dataset with the same structure as the training data:
+To assess the accuracy of the `retention_model_logistic_reg` model in predicting customer churn, use the `model_evaluate` function to evaluate its performance. The SQL example below evaluates the `retention_model_logistic_reg` model using a dataset with the same structure as the training data:
 
 ```sql
 SELECT * 
@@ -181,7 +181,11 @@ ON f.customer_id = l.customer_id); -- Joins customer features with churn labels
 
 ### Model evaluation output
 
-The evaluation output includes key performance metrics such as AUC-ROC, accuracy, precision, and recall. Use these metrics to help you assess model effectiveness, optimize retention strategies, and improve decision-making.
+The evaluation output includes key performance metrics, such as AUC-ROC, accuracy, precision, and recall. Use these metrics to help you assess model effectiveness, optimize retention strategies, and improve decision-making.
+
+>[!NOTE]
+>
+>Values in the range 0-1 represent proportions or probabilities, with 1.0 indicating perfect performance.
 
 ```console
  auc_roc | accuracy | precision | recall 
@@ -191,10 +195,10 @@ The evaluation output includes key performance metrics such as AUC-ROC, accuracy
 
 | Metric     | Description                                                             |
 |------------|-------------------------------------------------------------------------|
-| `auc_roc`  | Measures the model's ability to distinguish between churned and non-churned customers. |
-| `accuracy` | Indicates the percentage of correct predictions.                        |
-| `precision`| Shows the proportion of correctly identified churned customers.         |
-| `recall`   | Reflects the model's ability to detect all actual churned customers.    |
+| `auc_roc`  | This metric indicates how effectively your model can distinguish between churned and non-churned customers. |
+| `accuracy` | The accuracy metric represents the proportion of correct predictions made by the model. It provides an overall measure of the model's performance. |
+| `precision`| Precision shows the proportion of correctly identified churned customers. This metric helps assess the model's reliability in predicting churn.         |
+| `recall`   | Recall measures the model's ability to identify all actual churned customers from the dataset. A higher recall indicates fewer missed churn cases.    |
 
 ## Model prediction {#model-prediction}
 
