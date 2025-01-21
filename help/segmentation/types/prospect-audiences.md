@@ -34,7 +34,7 @@ The prospect audience details page is displayed. Information, including the pros
 
 ![The prospect audience details page is displayed.](../images/ui/prospect-audience/audience-details.png)
 
-For more information about the audience details page, please read the [audience details section of the Audience Portal overview](./audience-portal.md#audience-details).
+For more information about the audience details page, please read the [audience details section of the Audience Portal overview](../ui/audience-portal.md#audience-details).
 
 ## Create audience {#create}
 
