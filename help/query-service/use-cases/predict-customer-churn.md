@@ -55,39 +55,40 @@ Use the following SQL statement to create the `retention_model_logistic_reg` mod
 CREATE MODEL retention_model_logistic_reg
 TRANSFORM (
   vector_assembler(array(total_purchases, total_revenue, avg_order_value, customer_lifetime, days_since_last_purchase, purchase_frequency)) features
+  -- Combines selected customer metrics into a feature vector for model training
 )
 OPTIONS (
-  MODEL_TYPE = 'logistic_reg',
-  LABEL = 'churned'
+  MODEL_TYPE = 'logistic_reg',  -- Specifies logistic regression as the model type
+  LABEL = 'churned'             -- Defines the target label for churn classification
 )
 AS
 WITH customer_features AS (
     SELECT
-       identityMap['ECID'][0].id AS customer_id,
-       AVG(COALESCE(productListItems.priceTotal[0], 0)) AS avg_order_value,
-       SUM(COALESCE(productListItems.priceTotal[0], 0)) AS total_revenue,
-       COUNT(COALESCE(productListItems.quantity[0], 0)) AS total_purchases,
-       DATEDIFF(MAX(timestamp), MIN(timestamp)) AS customer_lifetime,
-       DATEDIFF(CURRENT_DATE, MAX(timestamp)) AS days_since_last_purchase,
-       COUNT(DISTINCT CONCAT(YEAR(timestamp), MONTH(timestamp))) AS purchase_frequency
+       identityMap['ECID'][0].id AS customer_id,  -- Extract the unique customer ID from identityMap
+       AVG(COALESCE(productListItems.priceTotal[0], 0)) AS avg_order_value,  -- Calculates the average order value, and handles null values with COALESCE
+       SUM(COALESCE(productListItems.priceTotal[0], 0)) AS total_revenue, -- The sum of all purchase values per customer
+       COUNT(COALESCE(productListItems.quantity[0], 0)) AS total_purchases,  -- The total number of items purchased by the customer
+       DATEDIFF(MAX(timestamp), MIN(timestamp)) AS customer_lifetime,  -- The days between first and last recorded purchase
+       DATEDIFF(CURRENT_DATE, MAX(timestamp)) AS days_since_last_purchase,  -- The days since the last purchase event
+       COUNT(DISTINCT CONCAT(YEAR(timestamp), MONTH(timestamp))) AS purchase_frequency  -- The count of unique months with purchases
     FROM
         webevents
-    WHERE EXISTS(productListItems, value -> value.priceTotal > 0) 
-      AND commerce.`order`.purchaseID <> ''
-    GROUP BY customer_id
+    WHERE EXISTS(productListItems, value -> value.priceTotal > 0)  -- Filters transactions with valid total price
+      AND commerce.`order`.purchaseID <> ''  -- Ensures the order has a valid purchase ID
+    GROUP BY customer_id 
 ),
 customer_labels AS (
     SELECT
-      identityMap['ECID'][0].id AS customer_id,
+      identityMap['ECID'][0].id AS customer_id,  -- Extract the unique customer ID for labeling
       CASE
-          WHEN DATEDIFF(CURRENT_DATE, MAX(timestamp)) > 90 THEN 1  -- The customer is churned if there was no purchase in the last 90 days
+          WHEN DATEDIFF(CURRENT_DATE, MAX(timestamp)) > 90 THEN 1  -- Marks the customer as churned if no purchase occurred in the last 90 days
           ELSE 0
       END AS churned
     FROM
         webevents
     WHERE EXISTS(productListItems, value -> value.priceTotal > 0) 
-      AND commerce.`order`.purchaseID <> ''
-    GROUP BY customer_id
+      AND commerce.`order`.purchaseID <> ''  
+    GROUP BY customer_id  
 )
 SELECT
     f.customer_id,
@@ -102,9 +103,9 @@ FROM
     customer_features f
 JOIN
     customer_labels l
-ON f.customer_id = l.customer_id
-ORDER BY RANDOM()
-LIMIT 500000;
+ON f.customer_id = l.customer_id  -- Join features with churn labels
+ORDER BY RANDOM()  -- Shuffles rows randomly for training
+LIMIT 500000;  -- Limit the dataset to 500,000 rows for model training
 ```
 
 ### Model output {#model-output}
@@ -137,29 +138,29 @@ FROM model_evaluate(retention_model_logistic_reg, 1,
 WITH customer_features AS (
     SELECT
        identityMap['ECID'][0].id AS customer_id,
-       AVG(COALESCE(productListItems.priceTotal[0], 0)) AS avg_order_value, -- Calculates the average order value, and handles null values with COALESCE
-       SUM(COALESCE(productListItems.priceTotal[0], 0)) AS total_revenue, -- The sum of all purchase values per customer
-       COUNT(COALESCE(productListItems.quantity[0], 0)) AS total_purchases, -- The total number of items purchased by the customer
-       DATEDIFF(MAX(timestamp), MIN(timestamp)) AS customer_lifetime, -- The days between first and last recorded purchase
-       DATEDIFF(CURRENT_DATE, MAX(timestamp)) AS days_since_last_purchase, -- The days since the last purchase event
-       COUNT(DISTINCT CONCAT(YEAR(timestamp), MONTH(timestamp))) AS purchase_frequency -- The count of unique months with purchases
+       AVG(COALESCE(productListItems.priceTotal[0], 0)) AS avg_order_value,
+       SUM(COALESCE(productListItems.priceTotal[0], 0)) AS total_revenue,
+       COUNT(COALESCE(productListItems.quantity[0], 0)) AS total_purchases, 
+       DATEDIFF(MAX(timestamp), MIN(timestamp)) AS customer_lifetime,
+       DATEDIFF(CURRENT_DATE, MAX(timestamp)) AS days_since_last_purchase,
+       COUNT(DISTINCT CONCAT(YEAR(timestamp), MONTH(timestamp))) AS purchase_frequency 
     FROM
         webevents
-    WHERE EXISTS(productListItems, value -> value.priceTotal > 0) -- Checks if the purchase contains a positive price total
-      AND commerce.`order`.purchaseID <> '' -- Ensures the purchase has a valid order ID
+    WHERE EXISTS(productListItems, value -> value.priceTotal > 0)
+      AND commerce.`order`.purchaseID <> ''
     GROUP BY customer_id
 ),
 customer_labels AS (
     SELECT
       identityMap['ECID'][0].id AS customer_id,
       CASE
-          WHEN DATEDIFF(CURRENT_DATE, MAX(timestamp)) > 90 THEN 1  -- Marks customer as churned if no purchase occurred in the last 90 days
+          WHEN DATEDIFF(CURRENT_DATE, MAX(timestamp)) > 90 THEN 1 
           ELSE 0
       END AS churned
     FROM
         webevents
-    WHERE EXISTS(productListItems, value -> value.priceTotal > 0) -- Ensures the presence of a valid purchase
-      AND commerce.`order`.purchaseID <> '' -- Checks for valid order ID
+    WHERE EXISTS(productListItems, value -> value.priceTotal > 0) 
+      AND commerce.`order`.purchaseID <> '' 
     GROUP BY customer_id
 )
 SELECT
