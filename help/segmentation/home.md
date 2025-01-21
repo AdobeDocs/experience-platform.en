@@ -163,7 +163,7 @@ By assigning a variable to the purchase state attribute, your dynamic segment de
  
 ### Multi-entity segmentation {#multi-entity}
 
-With the advanced multi-entity segmentation feature, you can extend [!DNL Real-Time Customer Profile] data with additional data based on products, stores, or other non-person, also known as "dimension" entities. As a result, [!DNL Segmentation Service] can access additional fields during segment definition as if they were native to the [!DNL Profile] data store. Multi-entity segmentation provides flexibility when identifying audiences based on data relevant to your unique business needs. For more information, including use cases and workflows, refer to the [multi-entity segmentation guide](multi-entity-segmentation.md).
+With the advanced multi-entity segmentation feature, you can extend [!DNL Real-Time Customer Profile] data with additional data based on products, stores, or other non-person, also known as "dimension" entities. As a result, [!DNL Segmentation Service] can access additional fields during segment definition as if they were native to the [!DNL Profile] data store. Multi-entity segmentation provides flexibility when identifying audiences based on data relevant to your unique business needs. For more information, including use cases and workflows, refer to the [multi-entity segmentation guide](./tutorials/multi-entity-segmentation.md).
 
 ## [!DNL Segmentation Service] data types
 
