@@ -65,7 +65,7 @@ As you complete the steps to implement the use case, you will make use of the fo
 * [Datasets](/help/catalog/datasets/overview.md)
 * [Sources](/help/sources/home.md)
 * [Prospect profiles](/help/profile/ui/prospect-profile.md)
-* [Prospect audiences](/help/segmentation/ui/prospect-audience.md)
+* [Prospect audiences](/help/segmentation/types/prospect-audiences.md)
 * [Destinations](/help/destinations/home.md)
 
 ### License third-party profile details from the partner {#license-profiles-from-partner}
@@ -207,7 +207,7 @@ Note that the audience building experience for prospect profiles differs from th
 * Batch profile evaluation only. 
 * Does not support building audiences based on time-series events. 
 
-Read more about [prospect audiences](/help/segmentation/ui/prospect-audience.md).
+Read more about [prospect audiences](/help/segmentation/types/prospect-audiences.md).
 
 ### Activate prospect profiles to destinations {#activate-to-destinations}
 

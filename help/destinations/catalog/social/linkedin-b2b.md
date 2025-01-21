@@ -11,7 +11,7 @@ exl-id: 68d2cca3-952b-49d0-8ea2-e776a233b752
 >
 >The functionality to activate account audiences to the (Companies) LinkedIn destination is available for companies purchasing the [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) and [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) editions of Real-Time Customer Data Platform.
 
-Use this destination to activate your [account audiences](/help/segmentation/ui/account-audiences.md) for Account-Based Marketing (ABM) use cases. Advertise to relevant personas and roles in your target accounts via the **[!UICONTROL (Companies) LinkedIn]** business-to-business destination. Visit the LinkedIn documentation to [learn more about account targeting](https://business.linkedin.com/marketing-solutions/cx/21/10/ad-targeting/account-targeting) on the LinkedIn platform.
+Use this destination to activate your [account audiences](/help/segmentation/types/account-audiences.md) for Account-Based Marketing (ABM) use cases. Advertise to relevant personas and roles in your target accounts via the **[!UICONTROL (Companies) LinkedIn]** business-to-business destination. Visit the LinkedIn documentation to [learn more about account targeting](https://business.linkedin.com/marketing-solutions/cx/21/10/ad-targeting/account-targeting) on the LinkedIn platform.
 
 >[!TIP]
 >

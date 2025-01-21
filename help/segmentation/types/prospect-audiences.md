@@ -22,7 +22,7 @@ This view lists information about the audience including the name, profile count
 
 You can add additional fields to this display by selecting ![the filter attribute icon](/help/images/icons/column-settings.png). These additional fields include update frequency and the last updated by.
 
-More information about Audience Portal, including detailed information about the listed fields, can be found in the [Audience Portal overview](./audience-portal.md#list).
+More information about Audience Portal, including detailed information about the listed fields, can be found in the [Audience Portal overview](../ui/audience-portal.md#list).
 
 ## Audience details {#details}
 
@@ -46,7 +46,7 @@ The Segment Builder appears. The prospect profile attributes appear on the left 
 
 ![The Segment Builder is displayed. Note that the only available attributes are for the Prospect Profile class.](../images/ui/prospect-audience/segment-builder.png)
 
-For more information on using the Segment Builder, please read the [Segment Builder UI guide](./segment-builder.md).
+For more information on using the Segment Builder, please read the [Segment Builder UI guide](../ui/segment-builder.md).
 
 ## Suggested use cases {#use-cases}
 

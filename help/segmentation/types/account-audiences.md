@@ -35,7 +35,7 @@ The [!UICONTROL Browse] page is displayed, showing a list of all the account aud
 
 This view lists information about the audience, including name, profile count, origin, lifecycle status, created date, and last updated date.
 
-You can also use the search and filtering functionality to quickly search and sort for specific account audiences. More information about this feature can be found in the [Audience Portal overview](./audience-portal.md#manage-audiences).
+You can also use the search and filtering functionality to quickly search and sort for specific account audiences. More information about this feature can be found in the [Audience Portal overview](../ui/audience-portal.md#manage-audiences).
 
 ## Create audience {#create}
 
@@ -59,7 +59,7 @@ Under the [!UICONTROL Audiences] tab, you can add previously created people-base
 
 ![The Audiences tab within the Segment Builder is highlighted.](../images/ui/account-audiences/audiences.png)
 
-For more information on using the Segment Builder, please read the [Segment Builder UI guide](./segment-builder.md).
+For more information on using the Segment Builder, please read the [Segment Builder UI guide](../ui/segment-builder.md).
 
 ### Establish relationships {#relationships}
 
