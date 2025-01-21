@@ -1,74 +1,68 @@
 ---
 title: Adobe Snapchat CAPI extension Integration
-description: This Adobe Experience Platform web events API allows you to share website interactions directly with TikTok.
-last-substantial-update: 2023-09-26
-exl-id: 14b8e498-8ed5-4330-b1fa-43fd1687c201
+description: This Adobe Experience Platform web events API allows you to share website interactions directly with Snapchatchat.
+last-substantial-update: 2025-01-20
 ---
-# [!DNL TikTok] web events API extension overview
+# [!DNL Snapchat] conversions API extension overview
 
-The [!DNL TikTok] events API is a secure [Edge Network Server API](/help/server-api/overview.md) interface that allows you to share information with [!DNL TikTok] directly about user actions on your websites. You can leverage the event forwarding rules to send data from the [!DNL Adobe Experience Platform Edge Network] to [!DNL TikTok] by using the [!DNL TikTok] Web Events API extension.
+The [!DNL Snapchat] events API is a secure [Edge Network Server API](/help/server-api/overview.md) interface that allows you to share information with [!DNL Snapchat] directly about user actions on your websites. You can leverage the event forwarding rules to send data from the [!DNL Adobe Experience Platform Edge Network] to [!DNL Snapchat] by using the [!DNL Snap] Conversion API extension.
 
-## [!DNL TikTok] prerequisites {#prerequisites}
+## [!DNL Snapchat] prerequisites {#prerequisites}
 
-To configure the [!DNL TikTok] web events API to use the [!DNL TikTok] events API, you need to generate a [!DNL TikTok] pixel code and access token. 
+To use the [!DNL Snapchat] Conversions API, you must have an Event Forwarding property set up in the Adobe Experience Platform and the appropriate permissions to edit the property. Create a Datastream and add the Event Forwarding service to it. 
 
-You must have a valid [!DNL TikTok] for business account in order to create a [!DNL TikTok] pixel using the partner setup. Go to the [[!DNL TikTok] for business registration page](https://www.tiktok.com/business/en-US/solutions/business-account) to register and create an account if you do not have one already.
+A [!DNL Snapchat Business Manager] account is required to use the Conversions API. Business Manager helps advertisers integrate [!DNL Snapchat]'s marketing efforts across their business and with external partners. See the [!DNL Snapchat] help center article on creating a Business Manager account if you don't have one.
 
-You must be logged into your business account to set up [!DNL TikTok] Pixel using partner setup. To do this, follow the steps below:
+A [!DNL Snap Pixel] must be set up in the [!DNL Snapchat Ads Manager], and you must have access to view the Pixel ID. The Pixel ID can be found in the [!UICONTROL Events Manager] section. 
 
-1. Navigate to the **[!UICONTROL Assets]** tab and select **[!UICONTROL Event]**.
-2. Under Web Events, select **[!UICONTROL Manage]**.
-3. Select **[!UICONTROL Set Up Web Events]**.
-4. Select **[!UICONTROL Partner Setup]** as your connection method.
+You need a static, long-lived API token. See the [!DNL Snapchat] Conversions API documentation to obtain this token.
 
-See the [Get Started with Pixel](https://ads.tiktok.com/help/article/get-started-pixel) guide for more information on how to setup the [!DNL TikTok] pixel.
+## Install and configure the [!DNL Snapchat] web events API extension {#install}
 
-You can generate an access token once the pixel has been successfully created. To do this navigate to the Pixel and select the **[!UICONTROL Settings]** tab. Under Events API, select **[!UICONTROL Generate Access Token]**.
+To install the extension, navigate to [!UICONTROL Data Collection]>[!UICONTROL Event Forwarding]. Select the property where you want to install the extension.
 
-See the [[!DNL TikTok] getting started guide](https://business-api.tiktok.com/portal/docs?id=1739584855420929) for more information on how to setup the pixel code and access token.
+Once the desired property is selected, follow these steps:
 
-## Install and configure the [!DNL TikTok] web events API extension {#install}
+<!-- To install the extension, select **[!UICONTROL Extensions]** in the left navigation. In the **[!UICONTROL Catalog]** tab, select the **[!UICONTROL Snapchat Web Events API Extension]** and then select **[!UICONTROL Install]**.
 
-To install the extension, select **[!UICONTROL Extensions]** in the left navigation. In the **[!UICONTROL Catalog]** tab, select the **[!UICONTROL TikTok Web Events API Extension]** and then select **[!UICONTROL Install]**.
+![The extension catalog showing the [!DNL Snapchat] extension card highlighting install.](../../../images/extensions/server/Snapchat/install-extension.png)
 
-![The extension catalog showing the [!DNL TikTok] extension card highlighting install.](../../../images/extensions/server/tiktok/install-extension.png)
-
-On the next screen, input the following configuration values that you previously generated from [!DNL TikTok] Ads Manager:
+On the next screen, input the following configuration values that you previously generated from [!DNL Snapchat] Ads Manager:
 
 * **[!UICONTROL Pixel Code]**
 * **[!UICONTROL Access Token]**
 
 When finished, select **[!UICONTROL Save]**.
 
-![[!DNL TikTok] configuration screen for the [!DNL TikTok] web events API extension.](../../../images/extensions/server/tiktok/configure.png)
+![[!DNL Snapchat] configuration screen for the [!DNL Snapchat] web events API extension.](../../../images/extensions/server/Snapchat/configure.png) -->
 
 ## Configure an event forwarding rule {#config-rule}
 
-Once all your data elements are set up, you can start creating event forwarding rules that determine when and how your events will be sent to [!DNL TikTok].
+Once all your data elements are set up, you can start creating event forwarding rules that determine when and how your events will be sent to [!DNL Snapchat].
 
-Create a new [rule](../../../ui/managing-resources/rules.md) in your event forwarding property. Under **[!UICONTROL Actions]**, add a new action and set the extension to **[!UICONTROL TikTok Web Events API Extension]**. To send Edge Network events to [!DNL TikTok], set the **[!UICONTROL Action Type]** to **[!UICONTROL Send TikTok Web Events API Event].**
+Create a new [rule](../../../ui/managing-resources/rules.md) in your event forwarding property. Under **[!UICONTROL Actions]**, add a new action and set the extension to **[!UICONTROL Snapchat Web Events API Extension]**. To send Edge Network events to [!DNL Snapchat], set the **[!UICONTROL Action Type]** to **[!UICONTROL Send Snapchat Web Events API Event].**
 
-![The [!UICONTROL Send TikTok Web Events API Event] action type being selected for a [!DNL TikTok] rule in the Data Collection UI.](../../../images/extensions/server/tiktok/select-action.png)
+![The [!UICONTROL Send Snapchat Web Events API Event] action type being selected for a [!DNL Snapchat] rule in the Data Collection UI.](../../../images/extensions/server/Snapchat/select-action.png)
 
 After selection, additional controls appear to further configure the event, as outlined below. Once complete, select **[!UICONTROL Keep Changes]** to save the rule.
 
 **[!UICONTROL Web Events and Parameters]**
 
-Web events and parameters contain general information about the event. Standard events are supported across [!DNL TikTok] integration tools and can be used for reporting , optimizing for conversions, and building audiences.
+Web events and parameters contain general information about the event. Standard events are supported across [!DNL Snapchat] integration tools and can be used for reporting , optimizing for conversions, and building audiences.
 
 | Input | Description |
 | --- | --- |
-| Event Name | The name of the event. These are actions with predefined names created by [!DNL TikTok] and is a required field. Refer to the [[!DNL TikTok] Marketing API](https://business-api.tiktok.com/portal/docs?id=1741601162187777) documentation for more information on supported events. |
+| Event Name | The name of the event. These are actions with predefined names created by [!DNL Snapchat] and is a required field. Refer to the [[!DNL Snapchat] Marketing API](https://business-api.Snapchat.com/portal/docs?id=1741601162187777) documentation for more information on supported events. |
 | Event Time | Date-time as string in ISO 8601 or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. This is a required field. |
 | Event ID | The unique ID generated by advertisers to indicate each event. This is an optional field and is used for deduplication. |
 
 {style="table-layout:auto"}
 
-![The [!DNL Web Events and Parameters] section showing example data input into the fields.](../../../images/extensions/server/tiktok/configure-web-events-parameters.png)
+![The [!DNL Web Events and Parameters] section showing example data input into the fields.](../../../images/extensions/server/Snapchat/configure-web-events-parameters.png)
 
 **[!UICONTROL User Context Parameters]**
 
-User context parameters contain customer information that is used to match web visitor events with [!DNL TikTok] users. Including multiple types of matching data allows you to increase the accuracy of targeting and optimization models.
+User context parameters contain customer information that is used to match web visitor events with [!DNL Snapchat] users. Including multiple types of matching data allows you to increase the accuracy of targeting and optimization models.
 
 | Input | Description |
 | --- | --- |
@@ -78,13 +72,13 @@ User context parameters contain customer information that is used to match web v
 | Phone | The phone number must be in E164 format [+][country code][area code][local phone number] before hashing. |
 | Cookie ID | If you are using Pixel SDK will automatically save a unique identifier in the `_ttp` cookie, if cookies are enabled. The `_ttp` value can  extracted and used for this field. |
 | External ID | Any unique identifier such as user IDs, external cookie IDs and so on and must be hashed with SHA256. |
-| TikTok Click ID | The `ttclid` which is added to the URL of the landing page each time an advertisement is selected on [!DNL TikTok]. |
+| Snapchat Click ID | The `ttclid` which is added to the URL of the landing page each time an advertisement is selected on [!DNL Snapchat]. |
 | Page URL | The page URL at the time of the event. |
 | Page Referrer URL | The URL of the page referrer. |
 
 {style="table-layout:auto"}
 
-![The [!DNL User Context Parameters] section showing example data input into the fields.](../../../images/extensions/server/tiktok/configure-user-context-parameters.png)
+![The [!DNL User Context Parameters] section showing example data input into the fields.](../../../images/extensions/server/Snapchat/configure-user-context-parameters.png)
 
 **[!UICONTROL Properties Parameters]**
 
@@ -106,18 +100,18 @@ Use the properties parameters to configure additional supported properties.
 
 {style="table-layout:auto"}
 
-![The [!DNL Properties Parameters] section showing example data input into the fields.](../../../images/extensions/server/tiktok/configure-properties-parameters.png)
+![The [!DNL Properties Parameters] section showing example data input into the fields.](../../../images/extensions/server/Snapchat/configure-properties-parameters.png)
 
 ## Event deduplication {#deduplication}
 
-[!DNL TikTok] pixel will need to be setup for deduplication if you use both the [!DNL TikTok] pixel SDK and the [!DNL TikTok] web events API extension to send the same events to [!DNL TikTok]. 
+[!DNL Snapchat] pixel will need to be setup for deduplication if you use both the [!DNL Snapchat] pixel SDK and the [!DNL Snapchat] web events API extension to send the same events to [!DNL Snapchat]. 
 
-Deduplication is not required if distinct event types are being sent from the client and server without any overlap. To ensure that your reporting is not negatively impacted, you must make sure that any single event that is shared by the [!DNL TikTok] pixel SDK and the [!DNL TikTok] web events API extension is deduplicated.
+Deduplication is not required if distinct event types are being sent from the client and server without any overlap. To ensure that your reporting is not negatively impacted, you must make sure that any single event that is shared by the [!DNL Snapchat] pixel SDK and the [!DNL Snapchat] web events API extension is deduplicated.
 
 When sending shared events, make sure that every event includes a pixel ID, event ID and name. Duplicated events that arrive within five minutes of each other will be merged. If the data field was absent from the first event, it will be combined with the subsequent event. Any duplicate events received within 48 hours will be removed.
 
-See the [!DNL TikTok] documentation on [Event Deduplication](https://ads.tiktok.com/help/article/event-deduplication) for more details on this process.
+See the [!DNL Snapchat] documentation on [Event Deduplication](https://ads.Snapchat.com/help/article/event-deduplication) for more details on this process.
 
 ## Next steps
 
-This guide covered how to send server-side event data to [!DNL TikTok] using the [!DNL TikTok] web events API extension. For more information on event forwarding capabilities in [!DNL Adobe Experience Platform], refer to the [event forwarding overview](../../../ui/event-forwarding/overview.md).
+This guide covered how to send server-side event data to [!DNL Snapchat] using the [!DNL Snapchat] web events API extension. For more information on event forwarding capabilities in [!DNL Adobe Experience Platform], refer to the [event forwarding overview](../../../ui/event-forwarding/overview.md).
