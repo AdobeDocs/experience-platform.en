@@ -10,9 +10,9 @@ Learn how to predict customer churn using a SQL-based logistic regression model.
 
 Follow this guide to implement a robust churn prediction model that identifies at-risk customers, optimizes retention strategies, and enhances business decision-making. The document includes step-by-step instructions, SQL queries, and explanations to help you effectively apply machine learning techniques within your data environment.
 
-## Create a model {#create-a-model}
+## Getting started
 
-To predict customer churn, you must create a SQL-based logistic regression model that analyzes key customer features derived from purchase history and behavioral metrics. The model classifies customers as `churned` or `not churned` based on whether they have made a purchase in the last 90 days.
+Before creating the churn prediction model, it's important to understand the key customer features that influence churn and ensure your dataset meets the necessary requirements. The following sections outline the essential customer attributes and the required data fields for accurate model training.
 
 ### Define customer features {#define-customer-features}
 
@@ -26,6 +26,24 @@ To allow for accurate churn classification, the model relies on several features
 | `customer_lifetime`        | The duration in days between a customer's first and last purchase. |
 | `days_since_last_purchase` | The number of days since the customer's last purchase.|
 | `purchase_frequency`       | The number of unique months the customer made purchases. |
+
+### Assumptions and required fields {#assumptions-required-fields}
+
+The model relies on specific fields in the `webevents` table to generate customer churn predictions. Ensure your dataset includes the following required fields:
+
+| Field                          | Description                                        |
+|--------------------------------|----------------------------------------------------|
+| `identityMap['ECID'][0].id`     | A unique customer identifier.                      |
+| `productListItems.priceTotal[0]` | The total price of items in each purchase.         |
+| `productListItems.quantity[0]`  | The quantity of items purchased.                   |
+| `timestamp`                     | The timestamp of each purchase event.              |
+| `commerce.order.purchaseID`     | A non-empty value indicating completed purchases.  |
+
+The dataset should consist of structured historical customer transaction records, with each row representing a unique purchase event. It should include product prices, quantities, and timestamps formatted for compatibility with the SQL `DATEDIFF` function. Additionally, each record contains a valid Experience Cloud ID (ECID) in the `identityMap` field to uniquely identify customers.
+
+## Create a model {#create-a-model}
+
+To predict customer churn, you must create a SQL-based logistic regression model that analyzes key customer features derived from purchase history and behavioral metrics. The model classifies customers as `churned` or `not churned` based on whether they have made a purchase in the last 90 days.
 
 ### Use SQL to create the churn prediction model {#sql-create-model}
 
