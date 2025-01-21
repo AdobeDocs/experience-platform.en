@@ -89,17 +89,42 @@ ORDER BY RANDOM()
 LIMIT 500000;
 ```
 
+### Model output
+
+The output dataset contains customer-related metrics and their churn status. Each row represents a customer, respective feature values, and whether they have churned or not. You can use this output to analyze customer behavior and train models, then take proactive actions to retain at-risk customers. An example output table is shown below:
+
+```console
+ customer_id  | total_purchases | total_revenue | avg_order_value  | customer_lifetime | days_since_last_purchase | purchase_frequency | churned |
+--------------+-----------------+---------------+------------------+-------------------+--------------------------+--------------------+----------
+  100001      | 25              | 1250.00       | 50.00            | 540               | 20                       | 10                 | 0       
+  100002      | 3               | 90.00         | 30.00            | 120               | 95                       | 1                  | 1       
+  100003      | 60              | 7200.00       | 120.00           | 800               | 5                        | 24                 | 0       
+  100004      | 15              | 750.00        | 50.00            | 365               | 60                       | 8                  | 0       
+  100005      | 1               | 25.00         | 25.00            | 60                | 180                      | 1                  | 1       
+```
+
+The table below provides a description of each output metric.
+
+| Column                   | Description                                                         |
+|--------------------------|---------------------------------------------------------------------|
+| **`customer_id`**          | A unique identifier for each customer.                             |
+| **`total_purchases`**      | The total number of purchases made by the customer.               |
+| **`total_revenue`**        | The total revenue generated from the customer's purchases.        |
+| **`avg_order_value`**      | The average value of an individual purchase.                      |
+| **`customer_lifetime`**    | The number of days between the first and last recorded purchase.  |
+| **`days_since_last_purchase`** | The number of days since the customer's most recent purchase.     |
+| **`purchase_frequency`**   | The number of unique months the customer made purchases.          |
+| **`churned`**              | A binary indicator (`0` = not churned, `1` = churned) based on whether the customer has made a purchase in the last 90 days. |
+
 ## Model evaluation {#model-evaluation}
 
 Next, evaluate the churn prediction model to assess its effectiveness in identifying at-risk customers. Model evaluation provides key performance metrics that help measure the accuracy and reliability of predictions.
 
-<!-- 
-To assess the accuracy of the `retention_model_logistic_reg` model in predicting customer churn, use the `model_evaluate` function to evaluate it's performance. This function aggregates key customer metrics from the `webevents` table, assigns churn labels based on a 90-day inactivity rule, and combines features with labels to provide a comprehensive evaluation dataset. The query outputs key performance metrics such as AUC-ROC, accuracy, precision, and recall, help you assess model effectiveness, optimize retention strategies, and improve decision-making.
+To assess the accuracy of the `retention_model_logistic_reg` model in predicting customer churn, use the `model_evaluate` function to evaluate it's performance. 
 
-The evaluation process uses a dataset with the same structure as the training data to calculate performance metrics. These metrics provide insights into how well the model predicts churned customers, ensuring its effectiveness and reliability.
- -->
+<!-- This function aggregates key customer metrics from the `webevents` table, assigns churn labels based on a 90-day inactivity rule, and combines features with labels to provide a comprehensive evaluation dataset.  -->
 
-Use the following SQL query to evaluate the `retention_model_logistic_reg` model using a dataset with the same structure as the training data:
+The SQL example below evaluates the `retention_model_logistic_reg` model using a dataset with the same structure as the training data:
 
 ```sql
 SELECT * 
@@ -150,11 +175,15 @@ ON f.customer_id = l.customer_id);
 
 ### Evaluation results
 
-The output of the evaluation query includes key metrics such as AUC-ROC, accuracy, precision, and recall, as shown in the table below:
+The evaluation output includes key performance metrics such as AUC-ROC, accuracy, precision, and recall. Use these metrics to help you assess model effectiveness, optimize retention strategies, and improve decision-making.
 
-| auc_roc | accuracy | precision | recall |
-|---------|----------|-----------|--------|
-|1       | 0.99998  |  1        |  1      |
+<!-- Use these evaluation results to fine-tune the model and ensure it meets business requirements for churn prediction. -->
+
+```console
+ auc_roc | accuracy | precision | recall 
+---------+----------+-----------+--------
+1        | 0.99998  |  1        |  1      
+```
 
 | Metric     | Description                                                             |
 |------------|-------------------------------------------------------------------------|
@@ -164,5 +193,4 @@ The output of the evaluation query includes key metrics such as AUC-ROC, accurac
 | `recall`   | Reflects the model's ability to detect all actual churned customers.    |
 
 
-<!-- Use these evaluation results to fine-tune the model and ensure it meets business requirements for churn prediction. -->
 
