@@ -12,11 +12,11 @@ Multi-entity segmentation is an advanced feature available as part of Adobe Expe
 
 Multi-entity segmentation requires a working understanding of the various Adobe Experience Platform services involved in segmentation. Before continuing with this guide, please review the following documentation:
 
-* [[!DNL Real-Time Customer Profile]](../profile/home.md): Provides a unified consumer profile in real time, based on aggregated data from multiple sources.
-  * [Profile guardrails](../profile/guardrails.md): Best practices for creating data models supported by [!DNL Profile].
-* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Allows you to build audiences from [!DNL Real-Time Customer Profile] data.
-* [[!DNL Experience Data Model (XDM)]](../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
-  * [Basics of schema composition](../xdm/schema/composition.md#union): Learn best practices for composing schemas to be used in Experience Platform. To best make use of Segmentation, please ensure your data is ingested as profiles and events according to the [best practices for data modeling](../xdm/schema/best-practices.md).
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md): Provides a unified consumer profile in real time, based on aggregated data from multiple sources.
+  * [Profile guardrails](../../profile/guardrails.md): Best practices for creating data models supported by [!DNL Profile].
+* [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Allows you to build audiences from [!DNL Real-Time Customer Profile] data.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
+  * [Basics of schema composition](../../xdm/schema/composition.md#union): Learn best practices for composing schemas to be used in Experience Platform. To best make use of Segmentation, please ensure your data is ingested as profiles and events according to the [best practices for data modeling](../../xdm/schema/best-practices.md).
 
 ## Use cases
 
@@ -40,16 +40,16 @@ Defining relationships within the structure of your Experience Data Model (XDM) 
 
 Defining relationships can be done either using the Schema Registry API or the Schema Editor. For detailed steps showing how to define a relationship between two schemas, please choose from the following tutorials:
 
-* [Defining a relationship between two schemas using the API](../xdm/tutorials/relationship-api.md)
-* [Defining a relationship between two schemas using the Schema Editor UI](../xdm/tutorials/relationship-ui.md)
+* [Defining a relationship between two schemas using the API](../../xdm/tutorials/relationship-api.md)
+* [Defining a relationship between two schemas using the Schema Editor UI](../../xdm/tutorials/relationship-ui.md)
 
 ### Build a multi-entity segment definition
 
 Once you have defined the necessary XDM relationships, you can begin to build a multi-entity segment definition. This can be done using either the Segmentation API or the Segment Builder UI. For more information, please choose from the following guides:
 
-* [Creating a segment definition using the Segmentation API](./tutorials/create-a-segment.md)
-* [Creating a segment definition using the Segment Builder UI](./ui/overview.md)
+* [Creating a segment definition using the Segmentation API](./create-a-segment.md)
+* [Creating a segment definition using the Segment Builder UI](../ui/overview.md)
 
 ## Evaluate and access multi-entity segment definitions
 
-After creating a segment definition, you can evaluate and access the results using the Segmentation API. Evaluating a multi-entity segment definition is very similar to evaluating a standard segment definition. This process can only be done using the Segmentation API. For a detailed guide showing how to use the API to evaluate and access segment definitions, please read the [evaluating and accessing segment definitions](./tutorials/evaluate-a-segment.md) tutorial.
+After creating a segment definition, you can evaluate and access the results using the Segmentation API. Evaluating a multi-entity segment definition is very similar to evaluating a standard segment definition. This process can only be done using the Segmentation API. For a detailed guide showing how to use the API to evaluate and access segment definitions, please read the [evaluating and accessing segment definitions](./evaluate-a-segment.md) tutorial.

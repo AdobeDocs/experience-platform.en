@@ -19,7 +19,7 @@ Before getting started with people audience, please review the differences betwe
 
 ## Access {#access}
 
-To access people audiences, select **Audiences** in the **Customers** section.
+To access people audiences, select **[!UICONTROL Audiences]** in the **[!UICONTROL Customers]** section.
 
 IMAGE
 
