@@ -181,6 +181,6 @@ Review the information and then select to **[!UICONTROL Save]** to finish adding
 
 ![The Add users to your team dialogue with the user information and chosen selections and the Save option highlighted.,](../../images/flac-ui/product-profile-save-user.png)
 
-## Next steps
+## Next steps 
 
 With permissions established, you can proceed to the next step to [manage users](users.md).
