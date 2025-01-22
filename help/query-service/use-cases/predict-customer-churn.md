@@ -4,62 +4,68 @@ description: Learn how to predict customer churn using SQL-based logistic regres
 ---
 # Predict Customer Churn with SQL-Based Logistic Regression
 
-Predicting customer churn helps your business retain customers, optimize resources, and increase profitability through actionable insights that improve satisfaction and loyalty.
+Predicting customer churn helps businesses retain customers, optimize resources, and boost profitability by improving satisfaction and loyalty through actionable insights.
 
-Learn how to predict customer churn using a SQL-based logistic regression model. Use this comprehensive SQL guide to transform raw e-commerce data into meaningful customer insights, and ensure accurate churn classification based on key behavioral metrics such as purchase frequency, order value, and time since last purchase. This document outlines the end-to-end process, starting with data preparation and feature engineering, followed by model creation, evaluation, and prediction.
+Discover how to use SQL-based logistic regression to predict customer churn. Use this comprehensive SQL guide to transform raw e-commerce data into meaningful customer insights based on key behavioral metrics (such as purchase frequency, average order value, and recency of last purchase). The document covers the entire process—from data preparation and feature engineering to model creation, evaluation, and prediction.
 
-Follow this guide to implement a robust churn prediction model that identifies at-risk customers, optimizes retention strategies, and enhances business decision-making. The document includes step-by-step instructions, SQL queries, and explanations to help you effectively apply machine learning techniques within your data environment.
+Use this guide to build a powerful churn prediction model that identifies at-risk customers, refines retention strategies, and drives better business decisions. It includes step-by-step instructions, SQL queries, and detailed explanations to help you confidently apply machine learning techniques within your data environment.
 
 ## Getting started
 
-Understand key customer features and data requirements before creating the churn model. The following sections outline the essential customer attributes and the required data fields for accurate model training.
+Before creating the churn model, it's important to explore key customer features and data requirements. The next sections outline essential customer attributes and required data fields for accurate model training.
 
 ### Define customer features {#define-customer-features}
 
-To classify churn accurately by analyzing purchasing habits and trends, the model relies on several key customer behavior features. The table below outlines the features used in the model:
+To accurately classify churn, the model analyzes purchasing habits and trends. The table below outlines the key customer behavior features used in the model:
 
 | Feature                   | Description                                           |
 |---------------------------|-------------------------------------------------------|
 | `total_purchases`          | The total number of purchases made by the customer.   |
 | `total_revenue`            | The total revenue generated from customer purchases.  |
 | `avg_order_value`          | The average value of a customer's purchases.          |
-| `customer_lifetime`        | The duration in days between a customer's first and last purchase. |
+| `customer_lifetime`        | The number of days between the customer's first and last purchase. |
 | `days_since_last_purchase` | The number of days since the customer's last purchase.|
-| `purchase_frequency`       | The number of unique months the customer made purchases. |
+| `purchase_frequency`       | The number of distinct months in which the customer made purchases. |
 
 ### Assumptions and required fields {#assumptions-required-fields}
 
-The model relies on specific fields in the `webevents` table to generate customer churn predictions. Ensure that your dataset includes the following required fields:
+To generate customer churn predictions, the model depends on key fields within the `webevents` table that capture customer transaction details. Your dataset must include the following fields:
 
 | Field                          | Description                                        |
 |--------------------------------|----------------------------------------------------|
-| `identityMap['ECID'][0].id`     | A unique customer identifier.                      |
-| `productListItems.priceTotal[0]` | The total price of items in each purchase.         |
-| `productListItems.quantity[0]`  | The quantity of items purchased.                   |
-| `timestamp`                     | The timestamp of each purchase event.              |
-| `commerce.order.purchaseID`     | A non-empty value indicating completed purchases.  |
+| `identityMap['ECID'][0].id`     | A unique identifier used to track customers across sessions.       |
+| `productListItems.priceTotal[0]` | The total cost of purchased items per transaction.         |
+| `productListItems.quantity[0]`  | The total number of items in a purchase.                   |
+| `timestamp`                     | The exact date and time of each purchase event.              |
+| `commerce.order.purchaseID`     | A required value that confirms a completed purchase.  |
 
-<!-- The dataset should consist of structured historical customer transaction records, with each row representing a unique purchase event. It should include product prices, quantities, and timestamps formatted for compatibility with the SQL `DATEDIFF` function.  -->
+<!-- 'Each event must include product prices, quantities, and formatted timestamps for the SQL `DATEDIFF` function.' -->
 
-The dataset must contain structured historical customer transaction records, with each row representing a purchase event. Each event must include formatted timestamps for the SQL `DATEDIFF` function. Additionally, each record must contain a valid Experience Cloud ID (ECID) in the `identityMap` field to uniquely identify customers.
+<!-- The dataset must contain structured historical customer transaction records, with each row representing a purchase event. Each event must include product prices, quantities, and formatted timestamps for the SQL `DATEDIFF` function. Additionally, each record must contain a valid Experience Cloud ID (ECID) in the `identityMap` field to uniquely identify customers. -->
 
->[!NOTE]
+The dataset must contain structured historical customer transaction records, with each row representing a purchase event. Each event must include timestamps in an appropriate date-time format compatible with the SQL `DATEDIFF` function (for example., YYYY-MM-DD HH:MI:SS). Additionally, each record must contain a valid Experience Cloud ID (`ECID`) in the `identityMap` field to uniquely identify customers.
+
+>[!TIP]
 >
 >Processing large datasets with millions of records may impact performance. To optimize query execution, you can index key columns, partition the data, and use efficient aggregation functions. Additionally, filter data before aggregation to help reduce processing overhead.
 
 ## Create a model {#create-a-model}
 
-To predict customer churn, you must create a SQL-based logistic regression model that analyzes key customer features derived from purchase history and behavioral metrics. The model classifies customers as `churned` or `not churned` based on whether they have made a purchase in the last 90 days.
+To predict customer churn, you must create a SQL-based logistic regression model that analyzes customer purchase history and behavioral metrics. The model classifies customers as `churned` or `not churned` by determining if they have made a purchase within the past 90 days.
 
 ### Use SQL to create the churn prediction model {#sql-create-model}
 
-The SQL-based model analyzes `webevents` data, aggregates key metrics, and assigns churn labels using a 90-day inactivity rule. This approach distinguishes active customers from the customers at risk of churning. The SQL query also applies feature engineering on select attributes to enhance model accuracy and improve churn classification.  These insights can help your business implement proactive retention strategies, ultimately reducing churn and maximizing customer lifetime value.
+The SQL-based model processes `webevents` data by aggregating key metrics and assigning churn labels based on a 90-day inactivity rule. This approach distinguishes active customers from at-risk customers. The SQL query also performs feature engineering to enhance model accuracy and improve churn classification. These insights empower your business to implement targeted retention strategies, reduce churn, and maximize customer lifetime value.
 
 >[!NOTE]
 >
->The churn prediction model uses a default threshold of 90 days to classify customers as churned. You can modify this threshold to better suit your business objectives and customer retention strategies. To update the threshold, modify the `DATEDIFF(CURRENT_DATE, MAX(timestamp)) > 90` condition in the SQL queries.
+>The churn prediction model uses a default threshold of 90 days to classify customers as churned. To adjust this threshold to align with your business goals and retention strategies, modify the `DATEDIFF(CURRENT_DATE, MAX(timestamp)) > 90` condition in the SQL queries.
 
 Use the following SQL statement to create the `retention_model_logistic_reg` model with the specified features and labels:
+
+>[!IMPORTANT]
+>
+>The SQL examples in this document include inline comments. Remove them before executing the SQL in your database client 
 
 ```sql
 CREATE MODEL retention_model_logistic_reg
