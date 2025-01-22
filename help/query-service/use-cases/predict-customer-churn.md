@@ -1,18 +1,18 @@
 ---
 title: Predict Customer Churn with SQL-Based Logistic Regression
-description: Learn how to predict customer churn using SQL-based logistic regression. This guide covers the entire process from model creation, evaluation, and prediction. Gain actionable insights from customer purchase behavior to implement proactive retention strategies and optimize business decisions.
+description: Learn how to predict customer churn using SQL-based logistic regression. This guide covers the entire process from model creation to evaluation and prediction. Gain actionable insights from customer purchase behavior to implement proactive retention strategies and optimize business decisions.
 ---
 # Predict Customer Churn with SQL-Based Logistic Regression
 
 Predicting customer churn helps businesses retain customers, optimize resources, and boost profitability by improving satisfaction and loyalty through actionable insights.
 
-Discover how to use SQL-based logistic regression to predict customer churn. Use this comprehensive SQL guide to transform raw e-commerce data into meaningful customer insights based on key behavioral metrics (such as purchase frequency, average order value, and recency of last purchase). The document covers the entire process—from data preparation and feature engineering to model creation, evaluation, and prediction.
+Discover how to use SQL-based logistic regression to predict customer churn. Use this comprehensive SQL guide to transform raw e-commerce data into meaningful customer insights based on key behavioral metrics (such as purchase frequency, average order value, and recency of last purchase). The document covers the entire process from data preparation and feature engineering to model creation, evaluation, and prediction.
 
 Use this guide to build a powerful churn prediction model that identifies at-risk customers, refines retention strategies, and drives better business decisions. It includes step-by-step instructions, SQL queries, and detailed explanations to help you confidently apply machine learning techniques within your data environment.
 
 ## Getting started
 
-Before creating the churn model, it's important to explore key customer features and data requirements. The next sections outline essential customer attributes and required data fields for accurate model training.
+Before creating the churn model, it's important to explore key customer features and data requirements. The following sections outline essential customer attributes and required data fields for accurate model training.
 
 ### Define customer features {#define-customer-features}
 
@@ -43,7 +43,7 @@ To generate customer churn predictions, the model depends on key fields within t
 
 <!-- The dataset must contain structured historical customer transaction records, with each row representing a purchase event. Each event must include product prices, quantities, and formatted timestamps for the SQL `DATEDIFF` function. Additionally, each record must contain a valid Experience Cloud ID (ECID) in the `identityMap` field to uniquely identify customers. -->
 
-The dataset must contain structured historical customer transaction records, with each row representing a purchase event. Each event must include timestamps in an appropriate date-time format compatible with the SQL `DATEDIFF` function (for example., YYYY-MM-DD HH:MI:SS). Additionally, each record must contain a valid Experience Cloud ID (`ECID`) in the `identityMap` field to uniquely identify customers.
+The dataset must contain structured historical customer transaction records, with each row representing a purchase event. Each event must include timestamps in an appropriate date-time format compatible with the SQL `DATEDIFF` function (for example, YYYY-MM-DD HH:MI:SS). Additionally, each record must contain a valid Experience Cloud ID (`ECID`) in the `identityMap` field to uniquely identify customers.
 
 >[!TIP]
 >
@@ -226,7 +226,7 @@ Once the model is evaluated, use `model_predict` to apply it to a new dataset an
 
 ### Use SQL to generate churn predictions {#sql-model-predict}
 
-The SQL query below uses the `retention_model_logistic_reg` model to predict customer churn with a dataset structured like the training data::
+The SQL query below uses the `retention_model_logistic_reg` model to predict customer churn with a dataset structured like the training data:
 
 ```sql
 SELECT * 
@@ -296,7 +296,7 @@ The output dataset includes key customer features and their predicted churn stat
 
 ## Next steps
 
-By reading this document, you have learned how to create, evaluate, and use a SQL-based model to predict customer churn. You now have the foundation to analyze customer behavior, identify at-risk customers, and implement proactive retention strategies. To further enhance and apply your churn prediction model, consider the following next steps:
+You have now learned how to create, evaluate, and use a SQL-based model to predict customer churn. With this foundation, you can analyze customer behavior, identify at-risk customers, and implement proactive retention strategies to improve customer retention. To further enhance and apply your churn prediction model, consider the following next steps:
 
 - Automate the process: Integrate the model into a data pipeline for continuous monitoring and real-time insights. [Explore how to verify and process datasets with SQL](../../dashboards/query.md). 
 - Monitor model performance: Continuously assess the model with new data to maintain accuracy and relevance.  Use [AI Assistant](../../ai-assistant/landing.md) in the Adobe Experience Platform UI to monitor key performance changes and [forecasting audience trends](../../ai-assistant/new-features/audience-forecasting.md). 
