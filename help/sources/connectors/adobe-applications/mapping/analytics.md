@@ -21,21 +21,21 @@ Adobe Experience Platform allows you to ingest Adobe Analytics data through the 
 | `videoshowtype` | `mediaReporting.sessionDetails.showType` | string |
 | `video` | `mediaReporting.sessionDetails.name` | string | The ID of the video. |
 | `videoshow` | `mediaReporting.sessionDetails.show` | string | The name of the program or series. The program/series name is only required if the show is part of a series. |
-| (only in ava.e2e rsid: evar8) | mediaReporting.sessionDetails.streamFormat | string | |
+| (only in ava.e2e rsid: evar8) | `mediaReporting.sessionDetails.streamFormat` | string | The format of the stream, such as HD or SD. |
 | `videostreamtype` | mediaReporting.sessionDetails.streamType | string | The type of streaming media such as "video" or "audio". |
 | `videoseason` | `mediaReporting.sessionDetails.season` | string | The season number that the show belongs to. This value is only required if the show is part of a series. |
 | `videoepisode` | `mediaReporting.sessionDetails.episode` | string | The number of the episode. |
 | `videogenre` | `mediaReporting.sessionDetails.genre` | string[] | The genre of the video. |
-| video.videoclassificationrating evar17 |
-| video.videoclassificationoriginator evar18 |
-| video.videoclassificationairdate evar19 |
-| video.videoclassificationdigitaldate evar20 |
+| video.videoclassificationrating evar17 | `mediaReporting.sessionDetails.rating` | The rating as defined by TV Parental Guidelines. |
+| video.videoclassificationoriginator evar18 | `mediaReporting.sessionDetails.originator` | The creator of the content. |
+| video.videoclassificationairdate evar19 | `mediaReporting.sessionDetails.firstAirDate` | The date when the content was first aired on television. While any date format is acceptable, the recommendation is to use YYYY-MM-DD. |
+| video.videoclassificationdigitaldate evar20 | `mediaReporting.sessionDetails.firstDigitalDate` | The date when the content first aired on any digital channel or platform. While any date format is acceptable, the recommendation is to use YYYY-MM-DD. |
 | `videosessionid` | `mediaReporting.sessionDetails.ID` | string | An identifier for an instance of a content stream unique to an individual playback. |
 | `videoplayername` | `mediaReporting.sessionDetails.playerName ` | string | The name of the video player. |
 | `videochannel` | `mediaReporting.sessionDetails.channel` | string | The distribution channel from where the content was played. |
 | `videocontenttype` | `mediaReporting.sessionDetails.contentType` | string | The type of stream delivery used for the content. This is automatically set to "Video" for all video views. Recommended values include: VOD, Live, Linear, UGC, DVOD, Radio, Podcast, Audiobook, and Song. |
-| (only in ava.e2e rsid: evar9) |
-| (only in ava.e2e rsid: evar10) |
+| (only in ava.e2e rsid: evar9) | `mediaReporting.sessionDetails.appVersion` |
+| (only in ava.e2e rsid: evar10) | `implementationDetails.version` |
 | `videonetwork` | `mediaReporting.sessionDetails.network` | string | The network or channel name. |
 | `videofeedtype` | `mediaReporting.sessionDetails.feed` | string | The type of feed. This can either represent actual feed-related data such as "East HD" or "SD", or the source of the feed, such as a URL. |
 | `videosegment` | `mediaReporting.sessionDetails.segment` | string |
