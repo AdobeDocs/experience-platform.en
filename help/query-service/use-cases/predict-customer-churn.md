@@ -126,7 +126,7 @@ LIMIT 500000;  -- Limit the dataset to 500,000 rows for model training
 
 ### Model output {#model-output}
 
-The output dataset contains customer-related metrics and their churn status. Each row represents a customer, respective feature values, and whether they have churned or not. You can use this output to analyze customer behavior and train models, then take proactive actions to retain at-risk customers. An example output table is shown below:
+The output dataset contains customer-related metrics and their churn status. Each row represents a customer, their feature values, and their churn status. You can use this output to analyze customer behavior, train predictive models, and develop targeted retention strategies to retain at-risk customers. An example output table is shown below:
 
 ```console
  customer_id  | total_purchases | total_revenue | avg_order_value  | customer_lifetime | days_since_last_purchase | purchase_frequency | churned |
@@ -140,13 +140,13 @@ The output dataset contains customer-related metrics and their churn status. Eac
 
 | Column    | Description                                                                        |
 |-----------|------------------------------------------------------------------------------------|
-| `churned` | The customer's actual churn status based on whether they made a purchase in the last 90 days (0 = not churned, 1 = churned). |
+| `churned` | The value indicates whether the customer made a purchase within the last 90 days (0 = not churned, 1 = churned). |
 
 ## Use SQL to evaluate the model {#model-evaluation}
 
-Next, evaluate the churn prediction model to assess its effectiveness in identifying at-risk customers. Evaluate model performance using key metrics to measure prediction accuracy and reliability.
+Next, assess the churn prediction model to determine its effectiveness in identifying at-risk customers. Evaluate model performance with key metrics that measure accuracy and reliability.
 
-To assess the accuracy of the `retention_model_logistic_reg` model in predicting customer churn, use the `model_evaluate` function to evaluate its performance. The SQL example below evaluates the `retention_model_logistic_reg` model using a dataset with the same structure as the training data:
+To measure the accuracy of the `retention_model_logistic_reg` model in predicting customer churn, use the `model_evaluate` function. The following SQL example evaluates the model using a dataset structured like the training data:
 
 ```sql
 SELECT * 
@@ -197,11 +197,11 @@ ON f.customer_id = l.customer_id); -- Joins customer features with churn labels
 
 ### Model evaluation output
 
-The evaluation output includes key performance metrics, such as AUC-ROC, accuracy, precision, and recall. Use these metrics to help you assess model effectiveness, optimize retention strategies, and improve decision-making.
+The evaluation output includes key performance metrics, such as AUC-ROC, accuracy, precision, and recall. These metrics provide insights into model effectiveness that you can use to refine retention strategies and make data-driven decisions.
 
 >[!NOTE]
 >
->Values in the range 0-1 represent proportions or probabilities, with 1.0 indicating perfect performance.
+>Performance values range from 0 to 1, where 1.0 represents perfect performance.
 
 ```console
  auc_roc | accuracy | precision | recall 
@@ -211,18 +211,22 @@ The evaluation output includes key performance metrics, such as AUC-ROC, accurac
 
 | Metric     | Description                                                             |
 |------------|-------------------------------------------------------------------------|
-| `auc_roc`  | This metric indicates how effectively your model can distinguish between churned and non-churned customers. A high AUC-ROC (close to 1) indicates the model effectively differentiates churned and non-churned customers. |
-| `accuracy` | The accuracy metric represents the proportion of correct predictions made by the model. It provides an overall measure of the model's performance. |
-| `precision`| Precision shows the proportion of correctly identified churned customers. This metric helps assess the model's reliability in predicting churn. High precision means fewer false positives and is useful for targeted retention efforts. |
-| `recall`   | Recall measures the model's ability to identify all actual churned customers from the dataset. A high recall value indicates fewer missed churn customers which is important for broad outreach strategies.  |
+| `auc_roc`  | This metric indicates the model's ability to distinguish between churned and non-churned customers. A value closer to 1 indicates better performance. |
+| `accuracy` | The accuracy metric represents the proportion of correct predictions, providing an overall measure of model performance. |
+| `precision`| Precision shows the proportion of correctly identified churned customers, and indicates reliability in churn prediction. A high value means fewer false positives. |
+| `recall`   | Recall measures the model's ability to identify all actual churned customers. A high recall value indicates fewer missed churn customers.  |
+
+>[!NOTE]
+>
+>The near-perfect scores in this example are for demonstration purposes. In practice, real-world data may yield lower values due to noise and variability.
 
 ## Model prediction {#model-prediction}
 
-After evaluation, use `model_predict` on a new dataset to apply the trained model to predict customer churn. You can use this prediction capability to proactively identify at-risk customers and implement targeted retention strategies.
+Once the model is evaluated, use `model_predict` to apply it to a new dataset and forecast customer churn. You can use these predictions to identify at-risk customers and implement targeted retention strategies.
 
 ### Use SQL to generate churn predictions {#sql-model-predict}
 
-The following SQL query predicts customer churn using the `retention_model_logistic_reg` model and a dataset with the same structure as the training data:
+The SQL query below uses the `retention_model_logistic_reg` model to predict customer churn with a dataset structured like the training data::
 
 ```sql
 SELECT * 
@@ -273,7 +277,7 @@ ON f.customer_id = l.customer_id);  -- Matches features with their churn labels 
 
 ### Model prediction output {#prediction-output}
 
-The output dataset contains customer features along with their predicted churn status. Use this data to take targeted actions to retain customers before they churn.
+The output dataset includes key customer features and their predicted churn status, which indicates whether a customer is likely to churn. Use these insights to implement proactive retention strategies and reduce customer churn.
 
 ```console
  total_purchases | total_revenue | avg_order_value | customer_lifetime | days_since_last_purchase | purchase_frequency | churned | prediction
@@ -294,5 +298,5 @@ The output dataset contains customer features along with their predicted churn s
 
 By reading this document, you have learned how to create, evaluate, and use a SQL-based model to predict customer churn. You now have the foundation to analyze customer behavior, identify at-risk customers, and implement proactive retention strategies. To further enhance and apply your churn prediction model, consider the following next steps:
 
-- Automate the process: Integrate the model into a data pipeline to enable continuous churn monitoring and real-time predictions. Learn how to [explore, verify, and process datasets with SQL](../../dashboards/query.md). 
-- Monitor model performance: Regularly evaluate the model with new data to ensure it remains accurate and relevant over time. Use [AI Assistant](../../ai-assistant/landing.md) in the Adobe Experience Platform UI for monitoring significant changes and [forecasting audiences](../../ai-assistant/new-features/audience-forecasting.md). 
+- Automate the process: Integrate the model into a data pipeline for continuous monitoring and real-time insights. [Explore how to verify and process datasets with SQL](../../dashboards/query.md). 
+- Monitor model performance: Continuously assess the model with new data to maintain accuracy and relevance.  Use [AI Assistant](../../ai-assistant/landing.md) in the Adobe Experience Platform UI to monitor key performance changes and [forecasting audience trends](../../ai-assistant/new-features/audience-forecasting.md). 
