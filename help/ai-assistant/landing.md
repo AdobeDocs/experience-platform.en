@@ -25,7 +25,7 @@ Get started by reading the material in the links below to familiarize yourself w
     <div><strong>Enhance your learning</strong><br/>Discover, troubleshoot, and amplify your understanding of product knowledge without interrupting your workflows.</div>
     </td>
     <td>
-    <a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="./assets/landing/ai-videos.png" style="width:100%;max-height:100%"><a>
+    <a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="./assets/landing/ai-videos.png" style="width:100%;max-height:100%"></a>
     <div><strong>Visit the AI Assistant video playlist</strong><br/>Learn about the many different challenges and use cases that you can address with AI Assistant.</div>
     </td>
   </tr>
