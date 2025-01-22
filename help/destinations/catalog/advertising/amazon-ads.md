@@ -4,7 +4,7 @@ description: Amazon Ads offers a range of options to help you achieve your adver
 last-substantial-update: 2025-01-07
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
 ---
-# (Beta) Amazon Ads connection {#amazon-ads}
+# Amazon Ads connection {#amazon-ads}
 
 ## Overview {#overview}
 
@@ -18,7 +18,7 @@ AMC brings together unique signals from across Amazon owned and operated propert
 
 >[!IMPORTANT]
 >
->This destination connector and documentation page are created and maintained by the *[!DNL Amazon Ads]* team. This is currently a beta product and functionality is subject to change. For any inquiries or update requests, please contact them directly at *`amc-support@amazon.com`.*
+>This destination connector and documentation page are created and maintained by the *[!DNL Amazon Ads]* team. For any inquiries or update requests, please contact them directly at *`amc-support@amazon.com`.*
 
 ## Use cases {#use-cases}
 
@@ -79,7 +79,6 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 You are taken to the [!DNL Amazon Ads] connection interface where you first select the advertiser accounts you wish to connect to. Upon connection, you are redirected back to Adobe Experience Platform with a new connection, provided with the ID of the Advertiser Account you selected. Select the appropriate Advertiser Account on the destination configuration screen to proceed.
 
-* **[!UICONTROL Bearer token]**: Fill in the bearer token to authenticate to the destination.
 
 ### Fill in destination details {#destination-details}
 
