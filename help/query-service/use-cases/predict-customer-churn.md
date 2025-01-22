@@ -4,7 +4,7 @@ description: Learn how to predict customer churn using SQL-based logistic regres
 ---
 # Predict Customer Churn with SQL-Based Logistic Regression
 
-Predicting customer churn enables your businesses to proactively identify and retain at-risk customers, which can lead to better resource allocation and increased profitability. These predictions offer actionable insights into customer behavior that you can use to drive improved satisfaction, loyalty, and sustainable growth.
+Predicting customer churn helps your business retain customers, optimize resources, and increase profitability through actionable insights that improve satisfaction and loyalty.
 
 Learn how to predict customer churn using a SQL-based logistic regression model. Use this comprehensive SQL guide to transform raw e-commerce data into meaningful customer insights, and ensure accurate churn classification based on key behavioral metrics such as purchase frequency, order value, and time since last purchase. This document outlines the end-to-end process, starting with data preparation and feature engineering, followed by model creation, evaluation, and prediction.
 
@@ -12,11 +12,11 @@ Follow this guide to implement a robust churn prediction model that identifies a
 
 ## Getting started
 
-Before creating the churn prediction model, it's important to understand the key customer features that influence churn and ensure your dataset meets the necessary requirements. The following sections outline the essential customer attributes and the required data fields for accurate model training.
+Understand key customer features and data requirements before creating the churn model. The following sections outline the essential customer attributes and the required data fields for accurate model training.
 
 ### Define customer features {#define-customer-features}
 
-To allow for accurate churn classification, the model relies on several features that summarize customer behavior. These features provide insights into purchasing habits, spending trends, and the customer lifecycle. The table below outlines the features used in the model:
+To classify churn accurately by analyzing purchasing habits and trends, the model relies on several key customer behavior features. The table below outlines the features used in the model:
 
 | Feature                   | Description                                           |
 |---------------------------|-------------------------------------------------------|
@@ -39,7 +39,9 @@ The model relies on specific fields in the `webevents` table to generate custome
 | `timestamp`                     | The timestamp of each purchase event.              |
 | `commerce.order.purchaseID`     | A non-empty value indicating completed purchases.  |
 
-The dataset should consist of structured historical customer transaction records, with each row representing a unique purchase event. It should include product prices, quantities, and timestamps formatted for compatibility with the SQL `DATEDIFF` function. Additionally, each record contains a valid Experience Cloud ID (ECID) in the `identityMap` field to uniquely identify customers.
+<!-- The dataset should consist of structured historical customer transaction records, with each row representing a unique purchase event. It should include product prices, quantities, and timestamps formatted for compatibility with the SQL `DATEDIFF` function.  -->
+
+The dataset must contain structured historical customer transaction records, with each row representing a purchase event. Each event must include formatted timestamps for the SQL `DATEDIFF` function. Additionally, each record must contain a valid Experience Cloud ID (ECID) in the `identityMap` field to uniquely identify customers.
 
 >[!NOTE]
 >
@@ -51,7 +53,7 @@ To predict customer churn, you must create a SQL-based logistic regression model
 
 ### Use SQL to create the churn prediction model {#sql-create-model}
 
-This SQL-based logistic regression model predicts customer churn by analyzing purchase behavior data from the `webevents` table. The data transformation process aggregates key metrics through the `customer_features` query to generate meaningful insights and assign churn labels based on a 90-day inactivity rule. This approach distinguishes active customers from the customers at risk of churning. The SQL query also applies feature engineering by selecting relevant attributes to enhance model accuracy and improve churn classification.  These insights can help your business implement proactive retention strategies, ultimately reducing churn and maximizing customer lifetime value.
+The SQL-based model analyzes `webevents` data, aggregates key metrics, and assigns churn labels using a 90-day inactivity rule. This approach distinguishes active customers from the customers at risk of churning. The SQL query also applies feature engineering on select attributes to enhance model accuracy and improve churn classification.  These insights can help your business implement proactive retention strategies, ultimately reducing churn and maximizing customer lifetime value.
 
 >[!NOTE]
 >
@@ -136,7 +138,7 @@ The output dataset contains customer-related metrics and their churn status. Eac
 
 ## Use SQL to evaluate the model {#model-evaluation}
 
-Next, evaluate the churn prediction model to assess its effectiveness in identifying at-risk customers. Model evaluation provides key performance metrics that help measure the accuracy and reliability of predictions.
+Next, evaluate the churn prediction model to assess its effectiveness in identifying at-risk customers. Evaluate model performance using key metrics to measure prediction accuracy and reliability.
 
 To assess the accuracy of the `retention_model_logistic_reg` model in predicting customer churn, use the `model_evaluate` function to evaluate its performance. The SQL example below evaluates the `retention_model_logistic_reg` model using a dataset with the same structure as the training data:
 
@@ -210,7 +212,7 @@ The evaluation output includes key performance metrics, such as AUC-ROC, accurac
 
 ## Model prediction {#model-prediction}
 
-Once the model has been evaluated, you can use the trained model to predict customer churn for a new dataset. Use the `model_predict` function to apply the trained logistic regression model to classify customers based on their latest feature values. You can use this prediction capability to proactively identify at-risk customers and implement targeted retention strategies.
+After evaluation, use `model_predict` on a new dataset to apply the trained model to predict customer churn. You can use this prediction capability to proactively identify at-risk customers and implement targeted retention strategies.
 
 ### Use SQL to generate churn predictions {#sql-model-predict}
 
@@ -284,7 +286,7 @@ The output dataset contains customer features along with their predicted churn s
 
 ## Next steps
 
-By reading this document, you have learned how to create, evaluate, and use a SQL-based logistic regression model to predict customer churn. You now have the foundation to analyze customer behavior, identify at-risk customers, and implement proactive retention strategies. To further enhance and apply your churn prediction model, consider the following next steps:
+By reading this document, you have learned how to create, evaluate, and use a SQL-based model to predict customer churn. You now have the foundation to analyze customer behavior, identify at-risk customers, and implement proactive retention strategies. To further enhance and apply your churn prediction model, consider the following next steps:
 
 - Automate the process: Integrate the model into a data pipeline to enable continuous churn monitoring and real-time predictions. Learn how to [explore, verify, and process datasets with SQL](../../dashboards/query.md). 
 - Monitor model performance: Regularly evaluate the model with new data to ensure it remains accurate and relevant over time. Use [AI Assistant](../../ai-assistant/landing.md) in the Adobe Experience Platform UI for monitoring significant changes and [forecasting audiences](../../ai-assistant/new-features/audience-forecasting.md). 
