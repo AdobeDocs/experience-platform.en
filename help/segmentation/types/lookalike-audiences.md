@@ -75,11 +75,11 @@ To confirm if you have access to Look-alike audiences, please contact your Adobe
 
 Look-alike insights is built-in with the audience details page. To look at the look-alike insights for an audience, select **[!UICONTROL Audiences]** in the left navigation bar, followed by **[!UICONTROL Browse]**, and the audience you want to view the insights for.
 
-![The Audiences button is highlighted, as well as the base audience being used for look-alike modeling.](../images/ui/lookalike-audiences/browse.png)
+![The Audiences button is highlighted, as well as the base audience being used for look-alike modeling.](../images/types/lookalike/browse.png)
 
 The audience details page appears. Select **[!UICONTROL Look-alike insights]** tab to view the audience's look-alike insights. The **[!UICONTROL Look-alike insights]** page is displayed. This page has three main elements - the similarity and reach graph, the Look-alike audiences, and the influential factors.
 
-![The Look-alike insights tab is highlighted, displaying the look-alike insights for the base audience.](../images/ui/lookalike-audiences/look-alike-insights.png)
+![The Look-alike insights tab is highlighted, displaying the look-alike insights for the base audience.](../images/types/lookalike/look-alike-insights.png)
 
 ### Similarity and reach {#similarity-and-reach}
 
@@ -90,7 +90,7 @@ The audience details page appears. Select **[!UICONTROL Look-alike insights]** t
 
 The similarity and reach section displays a graph that plots the expected reach of a Look-alike audience consisting of profiles above a given similarity score. The similarity score represents the **distance** of similarity between the base audience's profile and the look-alike insight's profile.
 
-![The similarity and reach graph is highlighted.](../images/ui/lookalike-audiences/similarity-and-reach.png)
+![The similarity and reach graph is highlighted.](../images/types/lookalike/similarity-and-reach.png)
 
 On this graph, the x-axis measures the similarity percentage between a profile and members of the selected audience. The similarity score ranges from 0% to 100%, with a higher similarity score indicating that a profile is closer, in terms of influential factor values, to members of the selected audience.
 
@@ -104,7 +104,7 @@ You can hover over a specific point in the graph to display the similarity perce
 
 The Look-alike audiences section displays a list of all the Look-alike audiences that have been previously created for the selected base audience.
 
-![The Look-alike audiences section is highlighted.](../images/ui/lookalike-audiences/select-laa.png)
+![The Look-alike audiences section is highlighted.](../images/types/lookalike/select-laa.png)
 
 ### Influential factors {#influential-factors}
 
@@ -120,7 +120,7 @@ For influential factors that are numeric, the key value pairs may be put into bu
 
 These buckets are regularly re-computed to ensure the data is kept up-to-date.
 
-![The influential factors section is highlighted.](../images/ui/lookalike-audiences/influential-factors.png)
+![The influential factors section is highlighted.](../images/types/lookalike/influential-factors.png)
 
 >[!NOTE]
 >
@@ -141,15 +141,15 @@ These buckets are regularly re-computed to ensure the data is kept up-to-date.
 
 To create a Look-alike audience, you'll need to select the audience you want to base the Look-alike audience off of. To access your list of available audiences, select **[!UICONTROL Audiences]** in the left navigation bar, followed by **[!UICONTROL Browse]**. The list of audiences appears. On this page, you can select the audience you want to use as your base audience.
 
-![The Audiences button is highlighted, as well as the base audience being used for look-alike modeling.](../images/ui/lookalike-audiences/browse.png)
+![The Audiences button is highlighted, as well as the base audience being used for look-alike modeling.](../images/types/lookalike/browse.png)
 
 On the audience details page, select **[!UICONTROL Create look-alike audience]** to begin the process of creating a Look-alike audience.
 
-![The [!UICONTROL Create look-alike audience] button is highlighted.](../images/ui/lookalike-audiences/create-look-alike-audience.png)
+![The [!UICONTROL Create look-alike audience] button is highlighted.](../images/types/lookalike/create-look-alike-audience.png)
 
 The **[!UICONTROL Create a look-alike audience]** popover appears. On this page, you can set the similarity percentage for the Look-alike audience.
 
-![The [!UICONTROL Create a look-alike audience] popover is displayed.](../images/ui/lookalike-audiences/create-audience.png)
+![The [!UICONTROL Create a look-alike audience] popover is displayed.](../images/types/lookalike/create-audience.png)
 
 You can set this similarity percentage in three different ways:
 
@@ -159,11 +159,11 @@ You can set this similarity percentage in three different ways:
 
 You can also update details about the Look-alike audience, including its name and description. By default, the Look-alike audience's name will be generated based on the base audience's name and the similarity percentage previously specified.
 
-![The basic information is highlighted within the [!UICONTROL Create a look-alike audience] popover.](../images/ui/lookalike-audiences/basic-info.png)
+![The basic information is highlighted within the [!UICONTROL Create a look-alike audience] popover.](../images/types/lookalike/basic-info.png)
 
 Select **[!UICONTROL Create]** to finish creating your Look-alike audience.
 
-![The create button is highlighted within the [!UICONTROL Create a look-alike audience] popover.](../images/ui/lookalike-audiences/create-audience.png)
+![The create button is highlighted within the [!UICONTROL Create a look-alike audience] popover.](../images/types/lookalike/create-audience.png)
 
 The newly created Look-alike audience can be accessed in the **[!UICONTROL Look-alike audiences]** section of the audience details page, and is also available in the Audience Portal and for other downstream usages. Please note that it will take some time for the Look-alike audience to be scored. Until it is scored, the profile count will be appear to be 0.
 
@@ -171,11 +171,11 @@ The newly created Look-alike audience can be accessed in the **[!UICONTROL Look-
 
 To view details of a Look-alike audience, select the Look-alike audience in the **[!UICONTROL Look-alike audiences]** section of the base audience.
 
-![The Look-alike audiences section is highlighted.](../images/ui/lookalike-audiences/select-laa.png)
+![The Look-alike audiences section is highlighted.](../images/types/lookalike/select-laa.png)
 
 The audience details page appears. For more information on this page, please read the [audience details section of the Audience Portal overview](../ui/audience-portal.md#audience-details).
 
-![Details of the Look-alike audience are displayed.](../images/ui/lookalike-audiences/laa-details.png)
+![Details of the Look-alike audience are displayed.](../images/types/lookalike/laa-details.png)
 
 ## Exclude data fields from look-alike modeling {#exclude}
 

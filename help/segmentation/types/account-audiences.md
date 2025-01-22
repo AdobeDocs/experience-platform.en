@@ -27,11 +27,11 @@ Before getting started with account audiences, please review the differences bet
 
 To access account audiences, select **[!UICONTROL Audiences]** in the **[!UICONTROL Accounts]** section.
 
-![The Audiences button is highlighted within the Accounts section.](../images/ui/account-audiences/select.png)
+![The Audiences button is highlighted within the Accounts section.](../images/types/account/select.png)
 
 The [!UICONTROL Browse] page is displayed, showing a list of all the account audiences for the organization.
 
-![The account audiences belonging to the organization are displayed.](../images/ui/account-audiences/browse.png)
+![The account audiences belonging to the organization are displayed.](../images/types/account/browse.png)
 
 This view lists information about the audience, including name, profile count, origin, lifecycle status, created date, and last updated date.
 
@@ -45,19 +45,19 @@ You can also use the search and filtering functionality to quickly search and so
 
 To create an account audience, select **[!UICONTROL Create audience]** on the [!UICONTROL Browse] page.
 
-![The [!UICONTROL Create audience] button is highlighted on the account audience browse page.](../images/ui/account-audiences/select-create-audience.png)
+![The [!UICONTROL Create audience] button is highlighted on the account audience browse page.](../images/types/account/select-create-audience.png)
 
 The Segment Builder appears. The account attributes and audiences are displayed on the left navigation bar. Under the [!UICONTROL Attributes] tab, you can add both Platform-created and custom attributes.
 
-![The Segment Builder is displayed. Note that only the attributes and audiences are displayed.](../images/ui/account-audiences/segment-builder.png)
+![The Segment Builder is displayed. Note that only the attributes and audiences are displayed.](../images/types/account/segment-builder.png)
 
 When creating account audiences, please note that events are listed under **[!UICONTROL People]**, rather than being their own tab, since these attributes are associated with people.
 
-![The location to find events, which is within the [!UICONTROL People] folder, is highlighted.](../images/ui/account-audiences/attributes.png)
+![The location to find events, which is within the [!UICONTROL People] folder, is highlighted.](../images/types/account/attributes.png)
 
 Under the [!UICONTROL Audiences] tab, you can add previously created people-based audiences to build off of when creating your own account audience.
 
-![The Audiences tab within the Segment Builder is highlighted.](../images/ui/account-audiences/audiences.png)
+![The Audiences tab within the Segment Builder is highlighted.](../images/types/account/audiences.png)
 
 For more information on using the Segment Builder, please read the [Segment Builder UI guide](../ui/segment-builder.md).
 
@@ -67,15 +67,15 @@ By default for account audiences, the Segment Builder UI displays the direct rel
 
 To use the alternate relationship types, select ![the settings icon](../../images/icons/settings.png).
 
-![The settings icon is highlighted on the Fields section.](../images/ui/account-audiences/select-settings.png)
+![The settings icon is highlighted on the Fields section.](../images/types/account/select-settings.png)
 
 On the [!UICONTROL Settings] tab, select **[!UICONTROL Show relationship selectors]** in the **[!UICONTROL Relationship of fields]** section.
 
-![The Show relation selectors toggle is selected within the Relationship of fields section of the Settings tab.](../images/ui/account-audiences/show-relation-selectors.png)
+![The Show relation selectors toggle is selected within the Relationship of fields section of the Settings tab.](../images/types/account/show-relation-selectors.png)
 
 Select ![the settings icon](../../images/icons/settings.png) again to return to the [!UICONTROL Fields] tab. You can now see the **[!UICONTROL Establish relationships]** section, which lets you establish how the account is connected to the person and how the person is connected to the opportunity.
 
-![The Establish relationships section is highlighted, displaying the options for how to connect an account to person and how to connect a person to an opportunity.](../images/ui/account-audiences/establish-relationships.png)
+![The Establish relationships section is highlighted, displaying the options for how to connect an account to person and how to connect a person to an opportunity.](../images/types/account/establish-relationships.png)
 
 When connecting the account to the person, you can choose from the following options:
 
@@ -104,7 +104,7 @@ After creating your account audience, you can activate the audience to other dow
 
 Select the audience you want to activate, followed by **[!UICONTROL Activate to destination]**.
 
-![The [!UICONTROL Activate to destination] button is highlighted in the quick actions menu for the selected audience.](../images/ui/account-audiences/activate.png)
+![The [!UICONTROL Activate to destination] button is highlighted in the quick actions menu for the selected audience.](../images/types/account/activate.png)
 
 The [!UICONTROL Activate destination] page appears. For more information on the activation process, including supported destinations and details on field mappings, please read the [activate account audiences](/help/destinations/ui/activate-account-audiences.md) tutorial.
 
