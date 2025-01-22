@@ -21,11 +21,11 @@ Before getting started with people audience, please review the differences betwe
 
 To access people audiences, select **[!UICONTROL Audiences]** in the **[!UICONTROL Customers]** section.
 
-IMAGE
+![The Audiences tab is highlighted in the Customers section.](../images/types/people/select-audiences.png)
 
 The Audience Portal is displayed, showing a list of all people audiences for the organization.
 
-IMAGE
+![The Audience Portal for people audiences is displayed.](../images/types/people/people-audiences.png)
 
 This view lists information about the audience, including name, profile count, origin, lifecycle status, created date, and last updated date.
 
@@ -35,11 +35,11 @@ You can also use the search and filtering functionality to quickly search and so
 
 To view details about a specific people audience, select an audience on Audience Portal.
 
-IMAGE
+![A specified audience is highlighted in Audience Portal.](../images/types/people/select-audience.png)
 
 The audience details page is displayed. Information, including description, origin, and lifecycle state are displayed.
 
-IMAGE
+![The audience details page is displayed, showing information about the people audience.](../images/types/people/audience-details.png)
 
 For more information about the audience details page, please read the [audience details section of the Audience Portal overview](../ui/audience-portal.md#audience-details).
 
@@ -47,11 +47,11 @@ For more information about the audience details page, please read the [audience 
 
 You can create a people audience either using Audience Composer or Segment Builder. To get started with creating a people audience, select Create audience on the Audience Portal.
 
-IMAGE
+![The Create audience button is highlighted.](../images/types/people/select-create-audience.png)
 
 A popover appears, letting you choose between composing an audience or building rules.
 
-IMAGE
+![A popover displaying a choice between composing and audience and building rules is displayed.](../images/types/people/create-audience-popover.png)
 
 For more detailed information about creating audiences, please read the [Audience Portal overview](../ui/audience-portal.md#create-audience).
 
@@ -61,7 +61,7 @@ After creating your people audience, you can activate this audience to other dow
 
 Select the audience you want to activate, followed by **[!UICONTROL Activate to destination]**.
 
-IMAGE
+![The Activate to destination button is highlighted under the quick actions menu.](../images/types/people/activate-to-destination.png)
 
 The [!UICONTROL Activate destination] page appears, with the list of available destinations depending on the update frequency of the audience. For more information on the activation process, please read the [activation overview](../../destinations/ui/activation-overview.md).
 
