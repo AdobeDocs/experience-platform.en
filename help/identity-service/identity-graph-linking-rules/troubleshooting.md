@@ -143,12 +143,8 @@ There are various reasons that contribute as to why your experience event fragme
 * [A validation failure may have occurred on Profile](../../xdm/classes/experienceevent.md).
   * For example, an experience event must contain both an `_id` and a `timestamp`.
   * Additionally, the `_id` must be unique for each event (record).
-* The namespace with the highest priority is an empty string.
 
-In the context of namespace priority, Profile will reject: 
-
-* Any event that contains two or more identities with the highest namespace priority. For example, if GAID is not marked as a unique namespace and two identities both with a GAID namespace and different identity values came in, then Profile will not store any of the events.
-* Any event where the namespace with the highest priority is an empty string.
+In the context of namespace priority, Profile will reject any event that contains two or more identities with the highest namespace priority. For example, if GAID is not marked as a unique namespace and two identities both with a GAID namespace and different identity values came in, then Profile will not store any of the events.
 
 **Troubleshooting steps**
 
@@ -169,16 +165,7 @@ If your data is sent to data lake, but not Profile, and you believe that this is
   FROM dataset_name)) WHERE col.id != _testimsorg.identification.core.email and key = 'Email' 
 ```
 
-You can also run the following query to check if ingestion to Profile is not happening due to the highest namespace having an empty string:
-
-```sql
-  SELECT identityMap, key, col.id as identityValue, _testimsorg.identification.core.email, _id, timestamp 
-  FROM (SELECT key, explode(value), * 
-  FROM (SELECT explode(identityMap), * 
-  FROM dataset_name)) WHERE (col.id = '' or _testimsorg.identification.core.email = '') and key = 'Email' 
-```
-
-These two queries assume that:
+This query assumes that:
 
 * One identity is sent from the identityMap, and another identity is sent from an identity descriptor. **NOTE**: In Experience Data Model (XDM) schemas, the identity descriptor is the field marked as an identity.
 * The CRMID is sent via identityMap. If the CRMID is sent as a field, remove the `key='Email'` from the WHERE clause.
