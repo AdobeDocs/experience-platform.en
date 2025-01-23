@@ -18,6 +18,7 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 **New Features**
 
 - Added a new feature to toggle between technical names and display names in the XDM Object.
+- Contains [version 2.25.0](../../../../web-sdk/release-notes.md#2-25-0) of the Adobe Experience Platform Web SDK.
 
 ## Version 2.27.0 - October 31, 2024
 
