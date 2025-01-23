@@ -160,7 +160,7 @@ This second example builds on basic SQL filtering by incorporating machine learn
 
 ### Build a training dataset {#build-a-training-dataset}
 
-First, prepare a dataset with flat and nested structures that the machine learning model can use (as described above). Further guidance on how to do this can be found in the [Working with nested data structures documentation](../key-concepts/nested-data-structures.md). Group the data by timestamp, user ID, and webpage name to identify patterns in bot activity.
+First, prepare a dataset with flat and nested structures that the machine learning model can use (as described above). Further guidance on how to do this can be found in the [Working with nested data structures documentation](../../key-concepts/nested-data-structures.md). Group the data by timestamp, user ID, and webpage name to identify patterns in bot activity.
 
 ### Use TRANSFORM and OPTIONS clauses for model creation {#transform-and-preprocess}
 
@@ -168,7 +168,7 @@ To transform your dataset and configure your machine learning model effectively,
 
 >[!TIP]
 >
->To learn more about using transformations and preprocessing your data, refer to the [Feature transformation techniques documentation](../advanced-statistics/feature-transformation.md).
+>To learn more about using transformations and preprocessing your data, refer to the [Feature transformation techniques documentation](../feature-transformation.md).
 
 1. To fill null values in numeric, string, and boolean columns, use `numeric_imputer`, `string_imputer`, and `boolean_imputer` functions respectively. This step ensures the machine learning algorithm can process the data without errors.
 2. Apply feature transformations to prepare the data for modeling. Apply `binarized`, `quantile_discretizer`, or `string_indexer` to categorize or standardize the columns. Next, feed the output of the imputers (`numeric_imputer` and `string_imputer`) into subsequent transformers like `string_indexer` or `quantile_discretizer` to create meaningful features.
