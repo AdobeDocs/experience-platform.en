@@ -53,7 +53,7 @@ To create a new sandbox, select **[!UICONTROL Create sandbox]** on the top-right
 
 ![create-sandbox](../images/ui/create-sandbox.png)
 
-The **[!UICONTROL Create sandbox]** dialog box appears. Select the **[!UICONTROL Type]** dropdown and choose either the Development or Production sandbox type. 
+The **[!UICONTROL Create sandbox]** dialog box appears. Select the **[!UICONTROL Type]** dropdown and choose either the [!UICONTROL Development] or [!UICONTROL Production] sandbox type. 
 
 ![The Create sandbox dialog box with the sandbox type selector highlighted.](../images/ui/sandbox-type.png)
 
@@ -133,6 +133,6 @@ In the final confirmation window, enter the name of the sandbox in the dialog bo
 
 ## Next steps
 
-This document demonstrated how to manage sandboxes within the Experience Platform UI. Improve configuration accuracy across sandboxes and seamlessly export and import sandbox configurations between sandboxes with the [sandbox tooling feature](./sandbox-tooling.md).
+This document demonstrated how to manage sandboxes within the Experience Platform UI. Now that you know how to manage sandboxes, learn how to improve configuration accuracy across sandboxes and seamlessly export and import sandbox configurations between sandboxes with the [sandbox tooling feature](./sandbox-tooling.md) guide.
 
 For information on how to manage sandboxes using the Sandbox API, see the [sandbox developer guide](../api/getting-started.md).
