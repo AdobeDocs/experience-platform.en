@@ -161,13 +161,14 @@ Adobe Experience Platform allows you to ingest Adobe Analytics data through the 
 
 {style="table-layout:auto"}
 
-<!-- 
-## Direct mapping fields
+## Deprecated fields
 
-Select fields are directly mapped from Adobe Analytics to Experience Data Model (XDM).  
+### Direct mapping fields
 
-| Analytics field | XDM field | XDM type | Description |
-| --------------- | --------- | -------- | ---------- |
++++
+
+| Data feed | XDM field | XDM type | Description |
+| --- | --- | --- | --- |
 | `m_evar1`<br/>`[...]`<br/>`m_evar250` | `_experience.analytics.customDimensions.`<br/>`eVars.eVar1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`eVars.eVar250` | string | Custom Analytics eVars. Each organization can use eVars differently. |
 | `m_prop1`<br/>`[...]`<br/>`m_prop75` | `_experience.analytics.customDimensions.`<br/>`props.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`props.prop75` | string | Custom Analytics props. Each organization can use props differently. |
 | `m_browser` | `_experience.analytics.environment.`<br/>`browserID` | integer | The number ID of the browser. |
@@ -201,28 +202,10 @@ Select fields are directly mapped from Adobe Analytics to Experience Data Model 
 | `mobileplaceaccuracy` | `placeContext.POIinteraction.POIDetail.`<br/>`geoInteractionDetails.deviceGeoAccuracy` | number | Collected from the context data variable a.loc.acc. Indicates the accuracy of the GPS in meters at time of collection. |
 | `mobileplacecategory` | `placeContext.POIinteraction.POIDetail.`<br/>`category` | string | Collected from the context data variable a.loc.category. Describes the category of a specific place. |
 | `mobileplaceid` | `placeContext.POIinteraction.POIDetail.`<br/>`POIID` | string | Collected from the context data variable a.loc.id. Identifier for a given point of interest. |
-| **UPDATED** `video` | `mediaReporting.sessionDetails.name` | string | The name of the video. |
-| **UPDATED** `videoad` | `mediaReporting.advertisingDetails.name` | string | |
-| **UPDATED** `videocontenttype` | `mediaReporting.sessionDetails.contentType` | string | The video content-type. This is automatically set to "Video" for all video views. Recommended values include: VOD, Live, Linear, UGC, DVOD, Radio, Podcast, Audiobook, and Song. |
 | `videoadpod` | `advertising.adAssetViewDetails.adBreak._id` | string | |
-| **UPDATED** `videoadinpod` | `mediaReporting.advertisingDetails.podPosition` | integer  | |
-| **UPDATED** `videoplayername` | `mediaReporting.sessionDetails.playerName ` | string | The name of the video player. |
-| **UPDATED** `videochannel` | `mediaReporting.sessionDetails.channel` | string | The video channel. |
-| **UPDATED** `videoadplayername` | `mediaReporting.advertisingDetails.playerName` | string | |
-| **UPDATED** `videoname` | `mediaReporting.sessionDetails.friendlyName` | string | The name of the video. |
-| **CHANGE** `videoadname` | `advertising.adAssetReference._dc.title` | string | The name of the Video Ad. |
-| **UPDATED** `videoshow` | `mediaReporting.sessionDetails.show` | string | Video show. |
-| **UPDATED** `videoseason` | `mediaReporting.sessionDetails.season` | string | Video Season. |
-| **UPDATED** `videoepisode` | `mediaReporting.sessionDetails.episode` | string | Video episode. |
-| **UPDATED** `videonetwork` | `mediaReporting.sessionDetails.network` | string | The video network. |
-| **UPDATED** `videoshowtype` | `mediaReporting.sessionDetails.showType` | string | Video show type. |
-| **UPDATED** `videoadload` | `mediaReporting.sessionDetails.adLoad` | string | The type of ad loaded as defined by each customer's internal representation. |
-| **UPDATED** `videofeedtype` | `mediaReporting.sessionDetails.feed` | string | The feed type of the video. |
 | `mobilebeaconmajor` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.beaconMajor` | number | Mobile Services beacon major. |
 | `mobilebeaconminor` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.beaconMinor` | number | Mobile Services beacon minor. |
 | `mobilebeaconuuid` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.proximityUUID` | string | Mobile Services beacon UUID. |
-| **CHANGE** `videosessionid` | `mediaReporting.sessionDetails.ID  ` | string | The session ID of the video. |
-| **CHANGE** `videogenre` | `mediaReporting.sessionDetails.genre` | string[] | The genre of the video|
 | `mobileinstalls` | `application.firstLaunches` | Object  | This is triggered at the first run after installation or reinstallation | {id (string), value (number)} |
 | `mobileupgrades` | `application.upgrades` | Object | Reports the number of app upgrades. Triggers at the first run after upgrade or any time the version number changes. | {id (string), value (number)} |
 | `mobilelaunches` | `application.launches` | Object | The number of times the app has been launched. | {id (string), value (number)} |
@@ -230,19 +213,6 @@ Select fields are directly mapped from Adobe Analytics to Experience Data Model 
 | `mobilemessageclicks` | `directMarketing.clicks` | Object |  | {id (string), value (number)} |
 | `mobileplaceentry` | `placeContext.POIinteraction.poiEntries` | Object | | {id (string), value (number)} |
 | `mobileplaceexit` | `placeContext.POIinteraction.poiExits` | Object | | {id (string), value (number)} |
-| **UPDATED** `videotime` | `mediaReporting.sessionDetails.timePlayed` | integer | | 
-| **UPDATED** `videostart` | `mediaReporting.sessionDetails.isViewed` | boolean | A boolean value that indicates whether the video has been started or not. |
-| **UPDATED** `videocomplete` | `mediaReporting.sessionDetails.isCompleted` | integer | |
-| **UPDATED** `videosegmentviews` | `mediaReporting.sessionDetails.hasSegmentView  ` | boolean | A boolean value that indicates when at least one frame, not necessarily the first frame, has been viewed. |
-| **CHANGE** `videoadstart` | `advertising.impressions` | Object | |
-| **CHANGE** `videoadcomplete` | `advertising.completes` | Object | |
-| **CHANGE** `videoadtime` | `advertising.timePlayed` | Object | |
-| **UPDATED** `videochapter` | `mediaReporting.chapterDetails.ID` | string | The auto-generated ID of the chapter. |
-| **UPDATED** `videochapterstart` | `mediaReporting.chapterDetails.isStarted` | boolean | A boolean value that indicates whether a chapter has been started. |
-| **UPDATED** `videochaptercomplete` | `mediaReporting.chapterDetails.isCompleted` | boolean | A boolean value that indicates whether a chapter has been completed. |
-| **UPDATED** `videochaptertime` | `mediaReporting.chapterDetails.timePlayed` | integer | The time spent on a chapter, represented in seconds. |
-| **UPDATED** `videoplay` | `mediaReporting.sessionDetails.isPlayed` | boolean | A boolean value that indicates whether the video has been played or not. | {id (string), value (number)} |
-| **UPDATED** `videototaltime` | `mediaReporting.sessionDetails.totalTimePlayed` | integer | The total amount of time spent by a user on a video. This value includes the time spent watching ads. |
 | `videoqoetimetostart` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.timeToStart` | Object | The video quality time to start. | {id (string), value (number)} |
 | `videoqoedropbeforestart` | `media.mediaTimed.dropBeforeStarts` | Object | | {id (string), value (number)} |
 | `videoqoebuffercount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.buffers` | Object | Video quality buffer count | {id (string), value (number)} |
@@ -251,15 +221,19 @@ Select fields are directly mapped from Adobe Analytics to Experience Data Model 
 | `videoqoebitrateaverage` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateAverage` | Object | Video quality average bit rate | {id (string), value (number)} |
 | `videoqoeerrorcount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.errors` | Object | Video quality error count | {id (string), value (number)} |
 | `videoqoedroppedframecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.droppedFrames` | Object | | {id (string), value (number)} |
-| **UPDATED** `videoprogress10` | `mediaReporting.sessionDetails.hasProgress10` | boolean | A boolean value that indicates whether the playhead of a given video has passed the 10% marker of the total video length. The marker is only counted once, even if seeking backwards. If seeking forward, markers that are skipped are not counted. |
-| **UPDATED** `videoprogress25` | `mediaReporting.sessionDetails.hasProgress25` | boolean | A boolean value that indicates whether the playhead of a given video has passed the 25% marker of the total video length. The marker is only counted once, even if seeking backwards. If seeking forward, markers that are skipped are not counted. |
-| **UPDATED** `videoprogress50` | `mediaReporting.sessionDetails.hasProgress50` | boolean | A boolean value that indicates whether the playhead of a given video has passed the 50% marker of the total video length. The marker is only counted once, even if seeking backwards. If seeking forward, markers that are skipped are not counted. |
-| **UPDATED** `videoprogress75` | `mediaReporting.sessionDetails.hasProgress75` | boolean | A boolean value that indicates whether the playhead of a given video has passed the 75% marker of the total video length. The marker is only counted once, even if seeking backwards. If seeking forward, markers that are skipped are not counted.|
-| **UPDATED** `videoprogress95` | `mediaReporting.sessionDetails.hasProgress95` | boolean | A boolean value that indicates whether the playhead of a given video has passed the 95% marker of the total video length. The marker is only counted once, even if seeking backwards. If seeking forward, markers that are skipped are not counted. |
-| **UPDATED** `videoresume` | `mediaReporting.sessionDetails.hasResume` | boolean | A boolean value that marks each playback that was resumed after more than 30 minutes of buffer, pause, or a stall period. |
-| **UPDATED** `videopausecount` | `mediaReporting.sessionDetails.pauseCount` | integer | The number of pause periods that occurred during video playback. | 
-| **UPDATED** `videopausetime` | `mediaReporting.sessionDetails.pauseTime` | integer | The total duration in seconds in which video playback was paused by the user. | 
-| **UPDATED** `videosecondssincelastcall` | `mediaReporting.sessionDetails.secondsSinceLastCall` | number | This value indicates the amount of time, in seconds, that has passed between the user's last known interaction and the moment the session was closed. |
+
+{style="table-layout:auto"}
+
++++
+
+<!-- 
+## Direct mapping fields
+
+Select fields are directly mapped from Adobe Analytics to Experience Data Model (XDM).  
+
+| Analytics field | XDM field | XDM type | Description |
+| --------------- | --------- | -------- | ---------- |
+
 
 ## Split-mapping fields
 
