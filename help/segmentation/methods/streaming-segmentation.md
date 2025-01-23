@@ -20,13 +20,11 @@ A query will be eligible for streaming segmentation if it meets any of the crite
 
 | Query type | Details | Example |
 | ---------- | ------- | ------- |
-| Single event | Any segment definition that refers to a single incoming event with no time restriction. | ![An example of a single event is shown.](../images/ui/streaming-segmentation/incoming-hit.png) |
-| Single event within a relative time window | Any segment definition that refers to a single incoming event. | ![An example of a single event within a relative time window is shown.](../images/ui/streaming-segmentation/relative-hit-success.png) |
-| Single event with a time window | Any segment definition that refers to a single incoming event with a time window. | ![An example of a single event with a time window is shown.](../images/ui/streaming-segmentation/historic-time-window.png) |
-| Profile only | Any segment definition that refers to only a profile attribute. | |
-| Single event with a profile attribute within a relative time window of less than 24 hours | Any segment definition that refers to a single incoming event, with one or more profile attributes, and occurs within a relative time window of less than 24 hours. | ![An example of a single event with a profile attribute within a relative time window is shown.](../images/ui/streaming-segmentation/profile-relative-success.png) |
-| Segment of segments | Any segment definition that contains one or more batch or streaming segments. **Note:** If a segment of segments is used, profile disqualification will happen **every 24 hours**. | ![An example of a segment of segments is shown.](../images/ui/streaming-segmentation/two-batches.png) |
-| Multiple events with a profile attribute | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. | ![An example of multiple events with a profile attribute is shown.](../images/ui/streaming-segmentation/event-history-success.png) |
+| Single event within a time window of less than 24 hours | Any segment definition that refers to a single incoming event within a time window of less than 24 hours. | ![An example of a single event within a relative time window is shown.](../images/methods/streaming/single-event.png) |
+| Profile only | Any segment definition that refers to only a profile attribute. | ![An example of a profile attribute shown.](../images/methods/streaming/profile-attribute.png) |
+| Single event with a profile attribute within a relative time window of less than 24 hours | Any segment definition that refers to a single incoming event, with one or more profile attributes, and occurs within a relative time window of less than 24 hours. | ![An example of a single event with a profile attribute within a relative time window is shown.](../images/methods/streaming/single-event-with-profile-attribute.png) |
+| Segment of segments | Any segment definition that contains one or more batch or streaming segments. **Note:** If a segment of segments is used, profile disqualification will happen **every 24 hours**. | ![An example of a segment of segments is shown.](../images/methods/streaming/segment-of-segments.png) |
+| Multiple events with a profile attribute | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. | ![An example of multiple events with a profile attribute is shown.](../images/methods/streaming/multiple-events-with-profile-attribute.png) |
 
 A segment definition will **not** be eligible for streaming segmentation in the following scenarios:
 
@@ -189,6 +187,12 @@ Within the available filters, go to **[!UICONTROL Update frequency]** and select
 To learn more about viewing audiences in Platform, please read the [Audience Portal guide](../ui/audience-portal.md).
 
 >[!ENDTABS]
+
+## Audience details {#audience-details}
+
+You can view details
+
+INFO
 
 ## Next steps
 

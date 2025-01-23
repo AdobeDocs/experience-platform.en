@@ -22,13 +22,13 @@ A query can be evaluated with edge segmentation if it meets any of the criteria 
 >
 >If the query matches any of the query types in the following table, it will automatically be evaluated using edge segmentation. The system determines this ability automatically based on the query expression.
 
-| Query type | Details |
-| ---------- | ------- |
-| Single event within a time window of less than 24 hours | Any segment definition that refers to a single incoming event within a time window of less than 24 hours. |
-| Profile only | Any segment definition that refers to only a profile attribute. |
-| Single event with a profile attribute within a relative time window of less than 24 hours | Any segment definition that refers to a single incoming event, with one or more profile attributes, and occurs within a relative time window of less than 24 hours. |
-| Segment of segments | Any segment definition that contains one or more batch or streaming segment definitions. **Note:** If segment of segments is used with **batch** segment definitions, profile disqualification can take **up to 24 hours** to occur. If segment of segments is used with **streaming** segment definitions, profile disqualification will occur in a streaming manner. |
-| Multiple events with a profile attribute | Any segment definition that refers to multiple non-sequential events **within the last 24 hours** and (optionally) has one or more profile attributes. |
+| Query type | Details | Example |
+| ---------- | ------- | ------- |
+| Single event within a time window of less than 24 hours | Any segment definition that refers to a single incoming event within a time window of less than 24 hours. | ![An example of a single event within a relative time window is shown.](../images/methods/streaming/single-event.png) |
+| Profile only | Any segment definition that refers to only a profile attribute. | ![An example of a profile attribute shown.](../images/methods/streaming/profile-attribute.png) |
+| Single event with a profile attribute within a relative time window of less than 24 hours | Any segment definition that refers to a single incoming event, with one or more profile attributes, and occurs within a relative time window of less than 24 hours. | ![An example of a single event with a profile attribute within a relative time window is shown.](../images/methods/streaming/single-event-with-profile-attribute.png) |
+| Segment of segments | Any segment definition that contains one or more batch or streaming segments. **Note:** If a segment of segments is used, profile disqualification will happen **every 24 hours**. | ![An example of a segment of segments is shown.](../images/methods/streaming/segment-of-segments.png) |
+| Multiple events with a profile attribute | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. | ![An example of multiple events with a profile attribute is shown.](../images/methods/streaming/multiple-events-with-profile-attribute.png) |
 
 Additionally, the segment **must** be tied to a merge policy that is active on edge. For more information about merge policies, please read the [merge policies guide](../../profile/api/merge-policies.md).
 
