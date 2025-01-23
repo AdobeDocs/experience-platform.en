@@ -43,6 +43,8 @@ role: User,Developer
         - [Classification](advanced-statistics/implement-models/classification.md)
         - [Clustering](advanced-statistics/implement-models/clustering.md)
     - [Feature transformation](advanced-statistics/feature-transformation.md)
+    Examples (#examples)
+        - [Predict customer churn using SQL-based logistic regression](advanced-statistics/examples/predict-customer-churn.md)
 - Data Distiller audiences {#data-distiller-audiences}
     - [Build external audiences using SQL](data-distiller-audiences/overview.md)
 - Examples {#use-cases}
@@ -58,7 +60,7 @@ role: User,Developer
     - [Fuzzy match](use-cases/fuzzy-match.md)
     - [List the page views of a user](use-cases/list-visitor-sessions.md)
     - [List visitors by their page views](use-cases/visitors-by-number-of-page-views.md)
-    - [Predict customer churn using SQL-based logistic regression](use-cases/predict-customer-churn.md)
+    - [Predict customer churn using SQL](use-cases/predict-customer-churn.md)
     - [Propensity score](use-cases/propensity-score.md)
     - [Retrieve similar records with higher-order functions](use-cases/retrieve-similar-records.md)
     - [Return and use merchandising variables from analytics data](use-cases/merchandising-variables.md)

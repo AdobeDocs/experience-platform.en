@@ -290,5 +290,5 @@ The output dataset includes key customer features and their predicted churn stat
 
 You have now learned how to create, evaluate, and use a SQL-based model to predict customer churn. With this foundation, you can analyze customer behavior, identify at-risk customers, and implement proactive retention strategies to improve customer retention. To further enhance and apply your churn prediction model, consider the following next steps:
 
-- Automate the process: Integrate the model into a data pipeline for continuous monitoring and real-time insights. [Explore how to verify and process datasets with SQL](../../dashboards/query.md). 
-- Monitor model performance: Continuously assess the model with new data to maintain accuracy and relevance.  Use [AI Assistant](../../ai-assistant/landing.md) in the Adobe Experience Platform UI to monitor key performance changes and [forecasting audience trends](../../ai-assistant/new-features/audience-forecasting.md). 
+- Automate the process: Integrate the model into a data pipeline for continuous monitoring and real-time insights. [Explore how to verify and process datasets with SQL](../../../dashboards/query.md). 
+- Monitor model performance: Continuously assess the model with new data to maintain accuracy and relevance.  Use [AI Assistant](../../../ai-assistant/landing.md) in the Adobe Experience Platform UI to monitor key performance changes and [forecasting audience trends](../../../ai-assistant/new-features/audience-forecasting.md). 
