@@ -165,7 +165,7 @@ If your data is sent to data lake, but not Profile, and you believe that this is
   FROM dataset_name)) WHERE col.id != _testimsorg.identification.core.email and key = 'Email' 
 ```
 
-These query assumes that:
+This query assumes that:
 
 * One identity is sent from the identityMap, and another identity is sent from an identity descriptor. **NOTE**: In Experience Data Model (XDM) schemas, the identity descriptor is the field marked as an identity.
 * The CRMID is sent via identityMap. If the CRMID is sent as a field, remove the `key='Email'` from the WHERE clause.
