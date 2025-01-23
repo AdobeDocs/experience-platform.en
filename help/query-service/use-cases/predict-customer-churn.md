@@ -39,15 +39,11 @@ To generate customer churn predictions, the model depends on key fields within t
 | `timestamp`                     | The exact date and time of each purchase event.              |
 | `commerce.order.purchaseID`     | A required value that confirms a completed purchase.  |
 
-<!-- 'Each event must include product prices, quantities, and formatted timestamps for the SQL `DATEDIFF` function.' -->
-
-<!-- The dataset must contain structured historical customer transaction records, with each row representing a purchase event. Each event must include product prices, quantities, and formatted timestamps for the SQL `DATEDIFF` function. Additionally, each record must contain a valid Experience Cloud ID (ECID) in the `identityMap` field to uniquely identify customers. -->
-
 The dataset must contain structured historical customer transaction records, with each row representing a purchase event. Each event must include timestamps in an appropriate date-time format compatible with the SQL `DATEDIFF` function (for example, YYYY-MM-DD HH:MI:SS). Additionally, each record must contain a valid Experience Cloud ID (`ECID`) in the `identityMap` field to uniquely identify customers.
 
 >[!TIP]
 >
->Processing large datasets with millions of records may impact performance. To optimize query execution, you can index key columns, partition the data, and use efficient aggregation functions. Additionally, filter data before aggregation to help reduce processing overhead.
+>Processing large datasets with millions of records can significantly impact performance. To optimize query execution, partition the experience dataset by timestamp, perform incremental processing using snapshots, and apply efficient aggregation functions as needed. Additionally, filter data before aggregation to reduce processing overhead.
 
 ## Create a model {#create-a-model}
 
@@ -62,10 +58,6 @@ The SQL-based model processes `webevents` data by aggregating key metrics and as
 >The churn prediction model uses a default threshold of 90 days to classify customers as churned. To adjust this threshold to align with your business goals and retention strategies, modify the `DATEDIFF(CURRENT_DATE, MAX(timestamp)) > 90` condition in the SQL queries.
 
 Use the following SQL statement to create the `retention_model_logistic_reg` model with the specified features and labels:
-
->[!IMPORTANT]
->
->The SQL examples in this document include inline comments. Remove them before executing the SQL in your database client 
 
 ```sql
 CREATE MODEL retention_model_logistic_reg

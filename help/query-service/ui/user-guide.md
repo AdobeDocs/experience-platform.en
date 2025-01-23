@@ -211,12 +211,9 @@ Every dataset contained in [your selected database](#database-dropdown) is liste
 
 The schema displayed in the object browser is an observable schema. This means that you can use it to monitor changes and updates in real time as changes are immediately visible. The observable schemas help to ensure data synchronization and assists with debugging or analytics tasks.
 
-#### Current limitations {#current-limitations}
+#### Current limitation {#current-limitation}
 
-The following is a list of current limitations:
-
-- Sequential query execution: Only one query can be executed at a time. While a query is in progress, no additional tables can be opened in the left navigation, as queries are processed sequentially.
-- Extra rows in query logs: You may encounter extraneous queries labeled as "SHOW TABLES" in the logs. These will be removed in future releases.
+The system processes queries sequentially, meaning only one query can run at a time. While a query is in progress, additional tables cannot be accessed in the left navigation.
 
 #### Access table metadata {#table-metadata}
 
