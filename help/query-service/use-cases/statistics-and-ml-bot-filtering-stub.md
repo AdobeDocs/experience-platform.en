@@ -1,6 +1,7 @@
 ---
 title: Bot Filtering Using Statistics and Machine Learning Introduction
 description: A brief introduction to filtering bot activity using SQL and machine learning techniques. Learn about data preparation, threshold definition, and model evaluation to enhance data integrity and analytics. This placeholder document directs you to a more comprehensive guide.
+exl-id: 56eee349-4f52-4e3c-9e23-5f7fc5344f5f
 ---
 # Bot filtering using statistics and machine learning introduction
 

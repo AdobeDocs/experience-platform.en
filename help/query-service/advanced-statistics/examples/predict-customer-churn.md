@@ -1,6 +1,7 @@
 ---
 title: Predict Customer Churn with SQL-Based Logistic Regression
 description: Learn how to predict customer churn using SQL-based logistic regression. This guide covers the entire process from model creation to evaluation and prediction. Gain actionable insights from customer purchase behavior to implement proactive retention strategies and optimize business decisions.
+exl-id: 3b18870d-104c-4dce-8549-a6818dc40d24
 ---
 # Predict Customer Churn with SQL-Based Logistic Regression
 
@@ -291,4 +292,4 @@ The output dataset includes key customer features and their predicted churn stat
 You have now learned how to create, evaluate, and use a SQL-based model to predict customer churn. With this foundation, you can analyze customer behavior, identify at-risk customers, and implement proactive retention strategies to improve customer retention. To further enhance and apply your churn prediction model, consider the following next steps:
 
 - Automate the process: Integrate the model into a data pipeline for continuous monitoring and real-time insights. [Explore how to verify and process datasets with SQL](../../../dashboards/query.md). 
-- Monitor model performance: Continuously assess the model with new data to maintain accuracy and relevance.  Use [AI Assistant](../../../ai-assistant/landing.md) in the Adobe Experience Platform UI to monitor key performance changes and [forecasting audience trends](../../../ai-assistant/new-features/audience-forecasting.md). 
+- Monitor model performance: Continuously assess the model with new data to maintain accuracy and relevance.  Use [AI Assistant](../../../ai-assistant/landing.md) in the Adobe Experience Platform UI to monitor key performance changes and [forecasting audience trends](../../../ai-assistant/new-features/audience-forecasting.md).
