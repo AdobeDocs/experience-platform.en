@@ -190,9 +190,21 @@ To learn more about viewing audiences in Platform, please read the [Audience Por
 
 ## Audience details {#audience-details}
 
-You can view details
+You can view details of a specific audience evaluated using streaming segmentation by selecting it within Audience Portal.
 
-INFO
+After selecting an audience on Audience Portal, the audience details page appears. This displays information about the audience, including STUFF
+
+IMAGE
+
+For streaming-enabled audiences, the **Profiles over time** card is displayed, which shows the total qualified and the nwe audience updated metrics.
+
+The **Total qualified** metric represents the total number of qualified audiences, based on batch and streaming evaluations for this audience.
+
+The **New audience updated** metric is represented by a line graph that shows the change in audience size through streaming segmentation. You can adjust the dropdown to show the last 24 hours, last week, or last 30 days.
+
+IMAGE
+
+For more details on audience details, please read the [Audience Portal overview](../ui/audience-portal.md#audience-details).
 
 ## Next steps
 
