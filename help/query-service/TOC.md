@@ -43,7 +43,7 @@ role: User,Developer
         - [Regression](advanced-statistics/implement-models/regression.md)
         - [Classification](advanced-statistics/implement-models/classification.md)
         - [Clustering](advanced-statistics/implement-models/clustering.md)
-    Examples (#examples)
+    Examples {#examples}
         - [Predict customer churn using SQL-based logistic regression](advanced-statistics/examples/predict-customer-churn.md)
 - Data Distiller audiences {#data-distiller-audiences}
     - [Build external audiences using SQL](data-distiller-audiences/overview.md)
