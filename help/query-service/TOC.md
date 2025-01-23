@@ -44,6 +44,7 @@ role: User,Developer
         - [Classification](advanced-statistics/implement-models/classification.md)
         - [Clustering](advanced-statistics/implement-models/clustering.md)
     Examples {#examples}
+        - [Bot filtering using statistics and machine learning](advanced-statistics/examples/statistics-and-ml-bot-filtering.md)
         - [Predict customer churn using SQL-based logistic regression](advanced-statistics/examples/predict-customer-churn.md)
 - Data Distiller audiences {#data-distiller-audiences}
     - [Build external audiences using SQL](data-distiller-audiences/overview.md)
@@ -52,6 +53,7 @@ role: User,Developer
     - [Abandoned browse](use-cases/abandoned-browse.md)
     - [Attribution analysis](use-cases/attribution-analysis.md)
     - [Bot filtering](use-cases/bot-filtering.md)
+    - [Bot filtering using statistics and machine learning introduction](use-cases/statistics-and-ml-bot-filtering-stub.md)
     - [Create a trended report of events](use-cases/trended-report-of-events.md)
     - [Consent analysis](use-cases/consent-analysis.md)
     - [Customer lifetime value](use-cases/customer-lifetime-value.md)
