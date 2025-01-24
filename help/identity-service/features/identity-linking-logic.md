@@ -5,11 +5,6 @@ exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
 ---
 # Identity Service linking logic
 
->[!CONTEXTUALHELP]
->id="platform_identities_simulatedgraph"
->title="Simulated Graph"
->abstract="Identities are linked when the identity namespace and identity value match."
-
 A link between two identities are established when the identity namespace and the identity values match.
 
 There are two types of identities that get linked:
@@ -28,7 +23,12 @@ An identity represents a real-world entity. If there is a link established betwe
 | An end user logs in using Google Chrome, and then Firefox. | CRMID is linked with two different ECIDs. | A person (CRMID) is associated to 2 web browsers (**Note**: Each browser will have its own ECID). |
 | A data engineer ingests a CRM record that includes two fields marked as an identity: CRMID and Email.| CRMID and Email are linked. | A person (CRMID) is associated to the email address. |
 
-## Understanding the Identity Service linking logic
+## Understanding the Identity Service linking logic {#identity-linking-logic}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_simulatedgraph"
+>title="Simulated Graph"
+>abstract="Identities are linked when the identity namespace and identity value match."
 
 An identity consists of an identity namespace and an identity value.
 
