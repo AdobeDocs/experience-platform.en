@@ -169,7 +169,7 @@ Next, use the dropdown selector to open the credentials window, generate an acce
 
 >[!WARNING]
 >
->The JWT method to generate access tokens has been deprecated. All new integrations must be created using the [OAuth Server-to-Server authentication method](#select-oauth-server-to-server). Adobe also requires that you migrate your existing integrations to the OAuth method by January 1st, 2025 for your integrations to continue to work. Read the following important documentation:
+>The JWT method to generate access tokens has been deprecated. All new integrations must be created using the [OAuth Server-to-Server authentication method](#select-oauth-server-to-server). Adobe also requires that you migrate your existing integrations to the OAuth method by June 30th, 2025 for your integrations to continue to work. Read the following important documentation:
 > 
 > * [Migration guide for your applications from JWT to OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
 > * [Implementation guide for new and old applications with OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)

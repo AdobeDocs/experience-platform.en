@@ -63,7 +63,7 @@ To remove a label from a role, select the label and then select **[!UICONTROL Re
 
 ![The role's Labels workspace with a role selected and the Remove labels option highlighted.](../../images/flac-ui/flac-delete-labels.png)
 
-## Managing sandboxes for role
+## Manage sandboxes for a role
 
 Select the **[!UICONTROL Details]** tab and navigate to the **[!UICONTROL Sandboxes]** section. Select **[!UICONTROL View All]** to see the complete list of sandboxes added to the role.
 
@@ -77,7 +77,7 @@ The next screen prompts you to choose which sandboxes resources to include in th
 
 ![The role's Resources dashboard with the sandbox resources dropdown menu highlighted.](../../images/flac-ui/flac-add-role-permission.png)
 
-## Managing users for role
+## Manage users for a role
 
 Select the **[!UICONTROL Users]** tab to open the roles [!UICONTROL Users] workspace, then select **[!UICONTROL Add Users]** to assign users to the role.
 
@@ -99,11 +99,11 @@ The following video is intended to support your understanding of creating a new 
 
 >[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
 
-## Managing API credentials for role {#manage-api-credentials-for-role}
+## Manage API credentials for a role {#manage-api-credentials-for-role}
 
 >[!IMPORTANT]
 >
-> Only system administrators have the ability to view and manage API credentials in [!UICONTROL Permissions]. 
+> To use and manage API credentials in [!UICONTROL Permissions], users must have system administrator privileges.
 
 Select the **[!UICONTROL API credentials]** tab to open the roles API credentials workspace, then select **[!UICONTROL Add API credentials]** to assign API credentials to the role.
 
@@ -127,13 +127,7 @@ The **[!UICONTROL Remove API credentials]** dialog appears, prompting you to con
 
 You will be returned to the **[!UICONTROL API credentials]** tab.
 
->[!NOTE]
->
->As a system administrator, you may [grant developer access](../../../landing/api-authentication.md#add-developers-to-product-profile) to a user so they can create integrations in the Adobe Developer Console.
->
->For a complete guide on the creating and assigning API credentials, as well as the permissions needed, refer to the step-by-step tutorial in [authenticate and access Experience Platform APIs](../../../landing/api-authentication.md). 
-
-## Managing user groups for roles
+## Manage user groups for a role
 
 User groups are multiple users that have been grouped together and have access to execute the same functions.
 
@@ -159,9 +153,11 @@ The **[!UICONTROL Remove user group]** dialog appears, prompting you to confirm 
 
 You will be returned to the **[!UICONTROL User groups]** tab.
 
-## Adding users to Experience Platform through a role
+## Add users to Experience Platform
 
-To add a user to a role, log in to the [Admin Console](https://adminconsole.adobe.com) and select **[!UICONTROL Add users]**
+As a system administrator, you may grant developer access to a user so they can [create integrations](../../../landing/api-authentication.md#generate-credentials) in the Adobe Developer Console.
+
+To add a user Experience Platform, log in to the [Admin Console](https://adminconsole.adobe.com) and select **[!UICONTROL Add users]**.
 
 ![The Adobe Admin Console dashboard with the Add users option highlighted.](../../images/flac-ui/product-profile-add-users.png)
 
@@ -180,6 +176,8 @@ The **[!UICONTROL Select product profiles]** dialog appears. Select **[!UICONTRO
 Review the information and then select **[!UICONTROL Save]** to add the user.
 
 ![The Add users to your team dialog with the user information and chosen selections and the Save option highlighted.,](../../images/flac-ui/product-profile-save-user.png)
+
+For a complete guide on creating and assigning API credentials, as well as the permissions needed, refer to the step-by-step tutorial in [authenticate and access Experience Platform APIs](../../../landing/api-authentication.md). 
 
 ## Next steps 
 
