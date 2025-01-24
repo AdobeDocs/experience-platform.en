@@ -160,10 +160,6 @@ The **[!UICONTROL Audit trail]** section provides a detailed and chronological r
 
 The **[!UICONTROL Federated databases]** section lets you connect Adobe Experience Platform to your enterprise data warehouse. You can find more information about connection to federated databases in the [Federated Audience Composition user guide](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/federated-db).
 
->[!AVAILABILITY]
->
->Federated Audience Composition is currently only available for a set of organizations (Limited Availability). For more information, contact your Adobe representative.
-
 ### [!UICONTROL Decisioning]
 
 Adobe Journey Optimizer is an application service built on top of Experience Platform. It allows you to use powerful decisioning technologies to deliver the best offer and experience to your customers across all touch points at the right time. To learn more about Journey Optimizer, including working with [!UICONTROL Offers] and [!UICONTROL Activities] visit the [Journey Optimizer documentation](https://experienceleague.adobe.com/docs/journey-optimizer.html).
