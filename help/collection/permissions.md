@@ -5,6 +5,11 @@ exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
 ---
 # Permission management for data collection in Experience Platform
 
+>[!CONTEXTUALHELP]
+>id="platform_tags_permissions"
+>title="Permissions"
+>abstract="Understand the key permissions required for working with datastreams, schemas, identities, and sandboxes within Adobe Experience Platform."
+
 [Data collection in Adobe Experience Platform](./home.md) is comprised of several different technologies which work together to collect and transfer your data. Access to these technologies is controlled through granular role-based permissions in Adobe Admin Console.
 
 This guide shows you how to manage permissions for data collection features.
@@ -16,11 +21,6 @@ In order to configure access control for data collection, you must have administ
 This guide assumes you are familiar with basic Admin Console concepts like product profiles and how they grant product permissions to individual users and groups. For more information, see the [Admin Console user guide](https://helpx.adobe.com/enterprise/using/admin-console.html).
 
 ## Available permissions
-
->[!CONTEXTUALHELP]
->id="platform_tags_permissions"
->title="Permissions"
->abstract="Understand the key permissions required for working with datastreams, schemas, identities, and sandboxes within Adobe Experience Platform."
 
 The relevant permissions for Data Collection are provided through two product designations in Admin Console: **Adobe Experience Platform** and **Adobe Experience Platform Data Collection**. The sections below outline the permissions provided under each product along with descriptions of the specific capabilities that they grant access to.
 
