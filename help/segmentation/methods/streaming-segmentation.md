@@ -82,10 +82,10 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
         },
         "evaluationInfo": {
             "batch": {
-                "enabled": true
+                "enabled": false
             },
             "continuous": {
-                "enabled": false
+                "enabled": true
             },
             "synchronous": {
                 "enabled": false
@@ -101,9 +101,52 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 **Response**
 
-```json
+A successful response returns HTTP status 200 with details of your newly created segment definition.
 
++++A sample response when creating a segment definition.
+
+```json
+{
+    "id": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "profileInstanceId": "ups",
+    "imsOrgId": "{ORG_ID}",
+    "sandbox": {
+        "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "name": "People in the USA",
+    "description": "An audience that looks for people who live in the USA",
+    "expression": {
+        "type": "PQL",
+        "format": "pql/text",
+        "value": "workAddress.country = \"US\""
+    },
+    "evaluationInfo": {
+        "batch": {
+            "enabled": false
+        },
+        "continuous": {
+            "enabled": true
+        },
+        "synchronous": {
+            "enabled": false
+        }
+    },
+    "dataGovernancePolicy": {
+        "excludeOptOut": true
+    },
+    "creationTime": 0,
+    "updateEpoch": 1579292094,
+    "updateTime": 1579292094000
+}
 ```
+
++++
 
 More information about using this endpoint can be found in the [segment definition endpoint guide](../api/segment-definitions.md).
 
