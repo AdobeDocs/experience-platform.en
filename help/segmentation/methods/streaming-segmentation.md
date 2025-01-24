@@ -45,6 +45,40 @@ If a segment definition is modified so it no longer meets the criteria for strea
 
 Additionally, segment unqualification, similarly to segment qualification, happens in real-time. As a result, if an audience no longer qualifies for a segment, it will be immediately unqualified. For example, if the segment definition asks for "All users who bought red shoes in the last three hours", after three hours, all the profiles that initially qualified for the segment definition will be unqualified.
 
+## Create audience {#create-audience}
+
+You can create an audience that is evaluated using streaming segmentation using either the Segmentation Service API or through Audience Portal in the UI.
+
+>[!BEGINTABS]
+
+>[!TAB Segmentation Service API]
+
+A segment definition will be streaming-enabled if it matches one of the [eligible query types](#eligible-query-types).
+
+**API format**
+
+```http
+POST /segment/definitions
+```
+
+**Request**
+
+```shell
+
+```
+
+**Response**
+
+```json
+
+```
+
+>[!TAB Audience Portal]
+
+>[!ENDTABS]
+
+
+
 ## Retrieve audiences {#retrieve-audiences}
 
 You can retrieve all audiences that are evaluated using streaming segmentation using either the Segmentation Service API or through Audience Portal in the UI.
@@ -52,6 +86,10 @@ You can retrieve all audiences that are evaluated using streaming segmentation u
 >[!BEGINTABS]
 
 >[!TAB Segmentation Service API]
+
+>[!TAB Audience Portal]
+
+>[!ENDTABS]
 
 Retrieve a list of all segment definitions that are evaluated using streaming segmentation within your organization by making a GET request to the `/segment/definitions` endpoint.
 
