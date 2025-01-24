@@ -24,13 +24,13 @@ A query can be evaluated with edge segmentation if it meets any of the criteria 
 
 | Query type | Details | Example |
 | ---------- | ------- | ------- |
-| Single event within a time window of less than 24 hours | Any segment definition that refers to a single incoming event within a time window of less than 24 hours. | ![An example of a single event within a relative time window is shown.](../images/methods/streaming/single-event.png) |
-| Profile only | Any segment definition that refers to only a profile attribute. | ![An example of a profile attribute shown.](../images/methods/streaming/profile-attribute.png) |
-| Single event with a profile attribute within a relative time window of less than 24 hours | Any segment definition that refers to a single incoming event, with one or more profile attributes, and occurs within a relative time window of less than 24 hours. | ![An example of a single event with a profile attribute within a relative time window is shown.](../images/methods/streaming/single-event-with-profile-attribute.png) |
-| Segment of segments | Any segment definition that contains one or more batch or streaming segments. **Note:** If a segment of segments is used, profile disqualification will happen **every 24 hours**. | ![An example of a segment of segments is shown.](../images/methods/streaming/segment-of-segments.png) |
-| Multiple events with a profile attribute | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. | ![An example of multiple events with a profile attribute is shown.](../images/methods/streaming/multiple-events-with-profile-attribute.png) |
+| Single event within a time window of less than 24 hours | Any segment definition that refers to a single incoming event within a time window of less than 24 hours. | ![An example of a single event within a relative time window is shown.](../images/methods/edge/single-event.png) |
+| Profile only | Any segment definition that refers to only a profile attribute. | ![An example of a profile attribute shown.](../images/methods/edge/profile-attribute.png) |
+| Single event with a profile attribute within a relative time window of less than 24 hours | Any segment definition that refers to a single incoming event, with one or more profile attributes, and occurs within a relative time window of less than 24 hours. | ![An example of a single event with a profile attribute within a relative time window is shown.](../images/methods/edge/single-event-with-profile-attribute.png) |
+| Segment of segments | Any segment definition that contains one or more batch or edge segments. **Note:** If a segment of segments is used, profile disqualification will happen **every 24 hours**. | ![An example of a segment of segments is shown.](../images/methods/edge/segment-of-segments.png) |
+| Multiple events with a profile attribute | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. | ![An example of multiple events with a profile attribute is shown.](../images/methods/edge/multiple-events-with-profile-attribute.png) |
 
-Additionally, the segment **must** be tied to a merge policy that is active on edge. For more information about merge policies, please read the [merge policies guide](../../profile/api/merge-policies.md).
+Additionally, the segment definition **must** be tied to a merge policy that is active on edge. For more information about merge policies, please read the [merge policies guide](../../profile/api/merge-policies.md).
 
 A segment definition will **not** be eligible for edge segmentation in the following scenario:
 
@@ -177,6 +177,24 @@ Within the available filters, go to **Update frequency** and select "Edge". Usin
 To learn more about viewing audiences in Platform, please read the [Audience Portal guide](../ui/audience-portal.md).
 
 >[!ENDTABS]
+
+## Audience details {#audience-details}
+
+You can view details of a specific audience evaluated using edge segmentation by selecting it within Audience Portal.
+
+After selecting an audience on Audience Portal, the audience details page appears. This displays information about the audience, including a summary of the audience details, the amount of qualified profiles over time, as well as the destinations the audience has been activated to.
+
+![The audience details page is displayed for an audience evaluated using edge segmentation.](../images/methods/edge/audience-details.png)
+
+For edge-enabled audiences, the **[!UICONTROL Profiles over time]** card is displayed, which shows the total qualified and the nwe audience updated metrics.
+
+The **[!UICONTROL Total qualified]** metric represents the total number of qualified audiences, based on edge evaluations for this audience.
+
+The **[!UICONTROL New audience updated]** metric is represented by a line graph that shows the change in audience size through edge segmentation. You can adjust the dropdown to show the last 24 hours, last week, or last 30 days.
+
+![The Profiles over time card is highlighted.](../images/methods/edge/profiles-over-time.png)
+
+For more details on audience details, please read the [Audience Portal overview](../ui/audience-portal.md#audience-details).
 
 ## Next steps
 

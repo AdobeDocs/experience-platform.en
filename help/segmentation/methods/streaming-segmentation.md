@@ -192,17 +192,17 @@ To learn more about viewing audiences in Platform, please read the [Audience Por
 
 You can view details of a specific audience evaluated using streaming segmentation by selecting it within Audience Portal.
 
-After selecting an audience on Audience Portal, the audience details page appears. This displays information about the audience, including STUFF
+After selecting an audience on Audience Portal, the audience details page appears. This displays information about the audience, including a summary of the audience details, the amount of qualified profiles over time, as well as the destinations the audience has been activated to.
 
-IMAGE
+![The audience details page is displayed for an audience evaluated using streaming segmentation.](../images/methods/streaming/audience-details.png)
 
-For streaming-enabled audiences, the **Profiles over time** card is displayed, which shows the total qualified and the nwe audience updated metrics.
+For streaming-enabled audiences, the **[!UICONTROL Profiles over time]** card is displayed, which shows the total qualified and the nwe audience updated metrics.
 
-The **Total qualified** metric represents the total number of qualified audiences, based on batch and streaming evaluations for this audience.
+The **[!UICONTROL Total qualified]** metric represents the total number of qualified audiences, based on batch and streaming evaluations for this audience.
 
-The **New audience updated** metric is represented by a line graph that shows the change in audience size through streaming segmentation. You can adjust the dropdown to show the last 24 hours, last week, or last 30 days.
+The **[!UICONTROL New audience updated]** metric is represented by a line graph that shows the change in audience size through streaming segmentation. You can adjust the dropdown to show the last 24 hours, last week, or last 30 days.
 
-IMAGE
+![The Profiles over time card is highlighted.](../images/methods/streaming/profiles-over-time.png)
 
 For more details on audience details, please read the [Audience Portal overview](../ui/audience-portal.md#audience-details).
 
