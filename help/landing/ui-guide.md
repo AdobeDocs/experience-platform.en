@@ -151,7 +151,7 @@ The **[!UICONTROL Queries]** section lets you create and manage queries, log SQL
 
 The **[!UICONTROL Monitoring]** section lets you monitor batch and streaming ingestion. You can find more information about monitoring in the [monitoring data ingestion user guide](../ingestion/quality/monitor-data-ingestion.md).
 
-### [!UICONTROL Federated data] (Limited availability)
+### [!UICONTROL Federated data]
 
 The **[!UICONTROL Models]** section lets you design and create data models and schemas that define the structure, relationships, and constraints of your data. You can find more information about the data models and schemas in the [Federated Audience Composition user guide](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/datamodel/schemas).
 
