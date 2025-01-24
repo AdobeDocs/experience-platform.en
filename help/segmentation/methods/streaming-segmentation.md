@@ -18,13 +18,13 @@ A query will be eligible for streaming segmentation if it meets any of the crite
 >
 >In order for streaming segmentation to work, you will need to enable scheduled segmentation for the organization. For details on enabling scheduled segmentation, please refer to [the Audience Portal overview](../ui/audience-portal.md#scheduled-segmentation).
 
-| Query type | Details | Example |
-| ---------- | ------- | ------- |
-| Single event within a time window of less than 24 hours | Any segment definition that refers to a single incoming event within a time window of less than 24 hours. | ![An example of a single event within a relative time window is shown.](../images/methods/streaming/single-event.png) |
-| Profile only | Any segment definition that refers to only a profile attribute. | ![An example of a profile attribute shown.](../images/methods/streaming/profile-attribute.png) |
-| Single event with a profile attribute within a relative time window of less than 24 hours | Any segment definition that refers to a single incoming event, with one or more profile attributes, and occurs within a relative time window of less than 24 hours. | ![An example of a single event with a profile attribute within a relative time window is shown.](../images/methods/streaming/single-event-with-profile-attribute.png) |
-| Segment of segments | Any segment definition that contains one or more batch or streaming segments. **Note:** If a segment of segments is used, profile disqualification will happen **every 24 hours**. | ![An example of a segment of segments is shown.](../images/methods/streaming/segment-of-segments.png) |
-| Multiple events with a profile attribute | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. | ![An example of multiple events with a profile attribute is shown.](../images/methods/streaming/multiple-events-with-profile-attribute.png) |
+| Query type | Details | Query | Example |
+| ---------- | ------- | ----- | ------- |
+| Single event within a time window of less than 24 hours | Any segment definition that refers to a single incoming event within a time window of less than 24 hours. | `CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![An example of a single event within a relative time window is shown.](../images/methods/streaming/single-event.png) |
+| Profile only | Any segment definition that refers to only a profile attribute. | `homeAddress.country.equals("US", false)`  | ![An example of a profile attribute shown.](../images/methods/streaming/profile-attribute.png) |
+| Single event with a profile attribute within a relative time window of less than 24 hours | Any segment definition that refers to a single incoming event, with one or more profile attributes, and occurs within a relative time window of less than 24 hours. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![An example of a single event with a profile attribute within a relative time window is shown.](../images/methods/streaming/single-event-with-profile-attribute.png) |
+| Segment of segments | Any segment definition that contains one or more batch or streaming segments. **Note:** If a segment of segments is used, profile disqualification will happen **every 24 hours**. | `inSegment("a730ed3f-119c-415b-a4ac-27c396ae2dff") and inSegment("8fbbe169-2da6-4c9d-a332-b6a6ecf559b9")` | ![An example of a segment of segments is shown.](../images/methods/streaming/segment-of-segments.png) |
+| Multiple events with a profile attribute | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("directMarketing.emailClicked", false)) WHEN(today), C1: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![An example of multiple events with a profile attribute is shown.](../images/methods/streaming/multiple-events-with-profile-attribute.png) |
 
 A segment definition will **not** be eligible for streaming segmentation in the following scenarios:
 
@@ -63,15 +63,49 @@ POST /segment/definitions
 
 **Request**
 
-```shell
++++ A sample request to create a segment definition that is enabled for streaming segmentation
 
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -d '{
+        "name": "People in the USA",
+        "description: "An audience that looks for people who live in the USA",
+        "expression": {
+            "type": "PQL",
+            "format": "pql/text",
+            "value": "homeAddress.country = \"US\""
+        },
+        "evaluationInfo": {
+            "batch": {
+                "enabled": true
+            },
+            "continuous": {
+                "enabled": false
+            },
+            "synchronous": {
+                "enabled": false
+            }
+        },
+        "schema": {
+            "name": "_xdm.context.profile"
+        }
+     }'
 ```
+
++++
 
 **Response**
 
 ```json
 
 ```
+
+More information about using this endpoint can be found in the [segment definition endpoint guide](../api/segment-definitions.md).
 
 >[!TAB Audience Portal]
 
