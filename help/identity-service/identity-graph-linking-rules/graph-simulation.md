@@ -49,7 +49,6 @@ Simulated graph viewer: The simulated graph viewer displays the resulting graph 
 >id="platform_identities_graphsimulation"
 >title="Add events"
 >abstract="Simulate graphs to understand how Identity Service links identities, and how the identity optimization algorithm works."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#understanding-data-usage-labels" text="Data usage labels overview"
 
 To begin, select **[!UICONTROL Add events]**.
 
