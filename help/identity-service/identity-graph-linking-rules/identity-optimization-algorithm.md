@@ -17,6 +17,11 @@ Read this section for information on unique namespaces and namespace priority. T
 
 ### Unique namespace {#unique-namespace}
 
+>[!CONTEXTUALHELP]
+>id="platform_identities_uniquenamespace"
+>title="Algorithm Configuration"
+>abstract="A graph cannot have 2 identities with a unique namespace. If a graph tries to exceed this limit, the most recent links are kept, and the oldest links are removed."
+
 A unique namespace determines the links that get removed if graph collapse happens.
 
 A single merged profile and its corresponding identity graph should represent a single individual (person entity). A single individual is usually represented by CRMIDs and/or Login IDs. The expectation is that no two individuals (CRMIDs) are merged into a single profile or graph.
