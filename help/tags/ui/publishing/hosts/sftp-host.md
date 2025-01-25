@@ -68,7 +68,7 @@ The dialog expands to include additional configuration options for the SFTP host
 | [!UICONTROL Username] | The username to be used when accessing the server. |
 | [!UICONTROL Encrypted Private Key] | The encrypted private key that you created in a [previous step](#access-key). |
 
-<!-- Select **[!UICONTROL Save]** to create the host with the selected configuration. -->
+Select **[!UICONTROL Save]** to create the host with the selected configuration.
 
 ![Image showing the SFTP host being saved](../../../images/ui/publishing/sftp-hosts/save-host.png)
 
