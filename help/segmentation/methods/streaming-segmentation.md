@@ -49,11 +49,11 @@ Additionally, segment unqualification, similarly to segment qualification, happe
 
 You can create an audience that is evaluated using streaming segmentation using either the Segmentation Service API or through Audience Portal in the UI.
 
+A segment definition can be streaming-enabled if it matches one of the [eligible query types](#eligible-query-types).
+
 >[!BEGINTABS]
 
 >[!TAB Segmentation Service API]
-
-A segment definition will be streaming-enabled if it matches one of the [eligible query types](#eligible-query-types).
 
 **API format**
 
@@ -124,7 +124,7 @@ A successful response returns HTTP status 200 with details of your newly created
     "expression": {
         "type": "PQL",
         "format": "pql/text",
-        "value": "workAddress.country = \"US\""
+        "value": "homeAddress.country = \"US\""
     },
     "evaluationInfo": {
         "batch": {
@@ -152,9 +152,25 @@ More information about using this endpoint can be found in the [segment definiti
 
 >[!TAB Audience Portal]
 
+In Audience Portal, select **[!UICONTROL Create audience]**.
+
+IMAGE
+
+A popover appears. Select **[!UICONTROL Build rules]** to enter Segment Builder.
+
+IMAGE
+
+Within Segment Builder, create a segment definition that matches one of the [eligible query types](#eligible-query-types).
+
+IMAGE
+
+If the segment definition qualifies for streaming segmentation, you'll be able to select **[!UICONTROL Streaming]** as the **[!UICONTROL Evaluation method]**.
+
+IMAGE
+
+To learn more about creating segment definitions, please read the [Segment Builder guide](../ui/segment-builder.md)
+
 >[!ENDTABS]
-
-
 
 ## Retrieve audiences {#retrieve-audiences}
 
