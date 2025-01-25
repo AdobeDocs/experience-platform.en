@@ -45,6 +45,11 @@ Simulated graph viewer: The simulated graph viewer displays the resulting graph 
 
 ## Add events {#add-events}
 
+>[!CONTEXTUALHELP]
+>id="platform_identities_graphsimulation"
+>title="Add events"
+>abstract="Simulate graphs to understand how Identity Service links identities, and how the identity optimization algorithm works."
+
 To begin, select **[!UICONTROL Add events]**.
 
 ![The Add events button selected.](../images/graph-simulation/add-events.png)
@@ -120,6 +125,16 @@ To delete an event, select the ellipses (`...`) beside a given event, and then s
 ![The delete event icon selected.](../images/graph-simulation/delete.png)
 
 ## Configure algorithm {#configure-algorithm}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_algorithmconfiguration"
+>title="Algorithm Configuration"
+>abstract="Configure unique namespace and namespace priority tailored to your ingested identities."
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_namespacepriority"
+>title="Algorithm Configuration"
+>abstract="Namespace priority determines how links are removed from the identity graph."
 
 >[!IMPORTANT]
 >

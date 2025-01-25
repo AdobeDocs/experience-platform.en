@@ -34,6 +34,11 @@ You must add the following IP addresses to your allow list to let traffic flow f
 - `20.232.89.104/29`
 - `20.98.195.172/32`
 - `172.210.218.144/28`
+- `48.211.4.136/29`
+- `48.211.4.144/28`
+- `48.211.4.160/29`
+- `40.84.85.144/28`
+- `40.84.85.192/28`
 
 >[!TAB NLD2: Europe]
 
@@ -59,6 +64,8 @@ You must add the following IP addresses to your allow list to let traffic flow f
 - `20.53.46.0/26`
 - `40.79.163.80/28`
 - `40.79.171.160/28`
+- `20.213.194.144/29`
+- `20.227.120.32/27`
 
 >[!TAB CAN2: Canada]
 

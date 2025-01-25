@@ -275,7 +275,6 @@ You can view and track your profile exports against your contractual limits in t
 
 Keep in mind the following limitations for the general availability release of dataset exports:
 
-* Currently, you can only export incremental files and an end date cannot be selected for your dataset exports.
 * Experience Platform may export multiple files even for small datasets. Dataset export is designed for system-to-system integration and optimized for performance, hence the number of exported files is not customizable.
 * Exported file names are currently not customizable.
 * Datasets created via API are currently not available for export. 
@@ -287,54 +286,54 @@ Keep in mind the following limitations for the general availability release of d
 
 **Can we generate a file without a folder if we just save at `/` as the folder path? Also, if we don't require a folder path, how will files with duplicate names be generated in a folder or location?**
 
-+++
++++Answer
 Starting with the September 2024 release, it is possible to customize the folder name and even use `/` for exporting files for all datasets in the same folder. Adobe does not recommend this for destinations exporting multiple datasets, as system-generated filenames belonging to different datasets will be mixed in the same folder.
 +++
 
 **Can you route the manifest file to one folder and data files into another folder?**
 
-+++
++++Answer
 No, there is no capability to copy the manifest file to a different location.
 +++
 
 **Can we control the sequencing or timing of file delivery?**
 
-+++
++++Answer
 There are options for scheduling the export. There are no options for delaying or sequencing the copy of the files. They are copied to your storage location as soon as they are generated.
 +++
 
 **What formats are available for the manifest file?**
 
-+++
++++Answer
 The manifest file is in .json format.
 +++
 
 **Is there API availability for the manifest file?**
 
-+++
++++Answer
 No API is available for the manifest file, but it includes a list of files comprising the export.
 +++
 
 **Can we add additional details to the manifest file (i.e., record count)? If so, how?**
 
-+++
++++Answer
 There is no possibility to add additional info to the manifest file. The record count is available via the `flowRun` entity (queryable via API). Read more in destinations monitoring.
 +++
 
 **How are data files split? How many records per file?**
 
-+++
++++Answer
 Data files are split per the default partitioning in the Experience Platform data lake. Larger datasets have a higher number of partitions. The default partitioning is not configurable by the user as it is optimized for reading.
 +++
 
 **Can we set a threshold (number of records per file)?**
 
-+++
++++Answer
 No, it is not possible.
 +++
 
 **How do we resend a data set in the event that the initial send is bad?**
 
-+++
++++Answer
 Retries are in place automatically for most types of system errors.
 +++

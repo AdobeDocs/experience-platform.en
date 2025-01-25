@@ -10,7 +10,7 @@ exl-id: 5e6ca7b4-5e2f-4706-a339-ac159e2e0938
 
 >[!WARNING]
 >
->The [!DNL PayPal] source will be deprecated at the end of May 2025.
+>The [!DNL PayPal] source will be deprecated at the end of June 2025.
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
