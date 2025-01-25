@@ -36,9 +36,10 @@ In addition to extracting features, use the following general transformers to pr
 
 Below is a list of tools for processing a wide range of data types to enhance your data preprocessing workflow.
 
-- **[Numeric Imputer](./feature-transformation.md#numeric-imputer)**: Fill missing values in numeric columns with a 
-- **[String Imputer](./feature-transformation.md#string-imputer)**: Replace missing string values with a specified 
-- **[Vector Assembler](./feature-transformation.md#vector-assembler)**: Combine multiple columns into a single vector column.
+- **[Numeric Imputer](./feature-transformation.md#numeric-imputer)**: Fill missing values in numeric columns with a specified value, such as the mean or median.
+- **[String Imputer](./feature-transformation.md#string-imputer)**: Replace missing string values with a specified value, such as the most frequent string in the column.
+- **[Vector Assembler](./feature-transformation.md#vector-assembler)**: Combine multiple columns into a single vector column to prepare data for machine learning models.
+- **[Boolean Imputer](./feature-transformation.md#boolean-imputer)**: Fill missing boolean values with a specified value, such as `true` or `false`.
 
 #### Numeric transformers
 
@@ -83,7 +84,7 @@ Use a clustering algorithm to group data points into distinct clusters based on 
 
 ## Implement the OPTIONS clause {#options-clause}
 
-When you define your model, use the `OPTIONS` clause to specify the algorithm and its parameters. Begin by setting the `type` parameter to indicate the algorithm you are using, such as `K-Means`. Then, define the relevant parameters in the `OPTIONS` clause as key-value pairs to fine-tune your model. Understand that some parameters may be positional and require all preceding parameters to be specified if custom values are provided. If you choose not to customize certain parameters, the system applies default settings. Refer to the relevant documentation to understand each parameter's function and default values.
+When you define your model, use the `OPTIONS` clause to specify the algorithm and its parameters. Begin by setting the `type` parameter to indicate the algorithm you are using, such as `K-Means`. Then, define the relevant parameters in the `OPTIONS` clause as key-value pairs to fine-tune your model. If you choose not to customize certain parameters, the system applies default settings. Refer to the relevant documentation to understand each parameter's function and default values.
 
 ### Next Steps
 
