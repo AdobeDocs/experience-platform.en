@@ -27,7 +27,7 @@ The following documents are essential in understanding identity graph linking ru
 
 This section outlines example scenarios that you may consider when configuring identity graph linking rules.
 
-### Shared device {#shared device}
+### Shared device {#shared-device}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphcollapsescenarios"
