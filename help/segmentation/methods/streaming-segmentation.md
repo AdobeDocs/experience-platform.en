@@ -180,10 +180,6 @@ You can retrieve all audiences that are evaluated using streaming segmentation u
 
 >[!TAB Segmentation Service API]
 
->[!TAB Audience Portal]
-
->[!ENDTABS]
-
 Retrieve a list of all segment definitions that are evaluated using streaming segmentation within your organization by making a GET request to the `/segment/definitions` endpoint.
 
 **API format**

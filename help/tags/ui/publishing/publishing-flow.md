@@ -3,7 +3,12 @@ title: Publishing Flow
 description: Learn about the process of creating libraries, testing builds, and approving them for production in Adobe Experience Platform.
 exl-id: 4885f60b-6401-4ec7-aa1a-29c135087847
 ---
-# Publishing flow
+# Publishing flow {#publishing-flow}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_publishing_flow"
+>title="Publishing flow"
+>abstract="Understand the levels of user permissions required for the publishing flow, including Develop, Approve, and Publish rights."
 
 >[!NOTE]
 >

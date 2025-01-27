@@ -7,7 +7,7 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 
 This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Platform Web SDK release notes](/help/web-sdk/release-notes.md).
 
-## Version 2.28.0 - January 23, 2024
+## Version 2.28.0 - January 23, 2025
 
 **Fixes and improvements**
 
