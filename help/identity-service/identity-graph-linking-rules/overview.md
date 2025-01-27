@@ -33,6 +33,7 @@ This section outlines example scenarios that you may consider when configuring i
 >id="platform_identities_graphcollapsescenarios"
 >title="Graph Collapse Scenarios"
 >abstract="There are multiple reasons why graphs could "collapse", or represent multiple person entities."
+>text="Learn more"
 
 There are instances where multiple logins can occur on a single device:
 
