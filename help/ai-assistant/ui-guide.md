@@ -95,10 +95,6 @@ When prompted with an operational insights question, AI Assistant provides an ex
 
 You can also provide filters and modifications to your questions, and you can instruct AI Assistant to render its findings based on the filters that you include. For example, you can ask AI Assistant to show you a trend of the count of segment definitions in the order of their created date, remove segment definitions with zero total profiles, and use month names instead of integers when displaying the data.
 
-**Note:** Operational insights answers are currently in beta. Select the tooltip icon in the AI Assistant user interface to view the Beta notice and for a link to the documentation.
-
-![AI Assistant tooltip icon selected.](./images/op-insights-beta-note.png)
-
 +++
 
 ### Verify operational insights responses {#verify-responses}
