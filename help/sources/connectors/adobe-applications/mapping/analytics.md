@@ -11,6 +11,8 @@ Adobe Experience Platform allows you to ingest Adobe Analytics data through the 
 
 ## Streaming media parameters
 
+Read the following table for information on streaming media parameters.
+
 | Data feed | XDM field path | Data type | Description | 
 | --- | --- | --- | --- |
 | `videoname` | `mediaReporting.sessionDetails.friendlyName` | string | The friendly (human-readable) name of the video. |
@@ -34,13 +36,13 @@ Adobe Experience Platform allows you to ingest Adobe Analytics data through the 
 | `videoplayername` | `mediaReporting.sessionDetails.playerName ` | string | The name of the video player. |
 | `videochannel` | `mediaReporting.sessionDetails.channel` | string | The distribution channel from where the content was played. |
 | `videocontenttype` | `mediaReporting.sessionDetails.contentType` | string | The type of stream delivery used for the content. This is automatically set to "Video" for all video views. Recommended values include: VOD, Live, Linear, UGC, DVOD, Radio, Podcast, Audiobook, and Song. |
-| (only in ava.e2e rsid: evar9) | `mediaReporting.sessionDetails.appVersion` |
-| (only in ava.e2e rsid: evar10) | `implementationDetails.version` |
+| (only in ava.e2e rsid: evar9) | `mediaReporting.sessionDetails.appVersion` | string | The SDK version used by the player. You can customize this value to fit your player type. |
+| (only in ava.e2e rsid: evar10) | `implementationDetails.version` | string |
 | `videonetwork` | `mediaReporting.sessionDetails.network` | string | The network or channel name. |
 | `videofeedtype` | `mediaReporting.sessionDetails.feed` | string | The type of feed. This can either represent actual feed-related data such as "East HD" or "SD", or the source of the feed, such as a URL. |
 | `videosegment` | `mediaReporting.sessionDetails.segment` | string |
 | (only in ava.e2e rsid: event52) | `mediaReporting.sessionDetails.isDownloaded` |
-| N/A | `mediaReporting.sessionDetails.isFederated` |
+| N/A | `mediaReporting.sessionDetails.isFederated` | boolean | A boolean value that indicates whether the hit is federated or not. Federated hits are received by customers as part of a federated data share, instead of their own implementation. |
 | `videostart` | `mediaReporting.sessionDetails.isViewed` | boolean | A boolean value that indicates whether the video has been started or not. This occurs once the user selects the play button and will count even if there are pre-roll ads, buffering, errors, and so on. |
 | `videoplay` | `mediaReporting.sessionDetails.isPlayed` | boolean | A boolean value that indicates if the first frame of the media has started. If the user drops during any ads or buffering time, then the "content start" would not qualify. |
 | `videotime` | `mediaReporting.sessionDetails.timePlayed` | integer | The duration (in seconds) for all events of `type=PLAY` on the main content. |
@@ -48,8 +50,8 @@ Adobe Experience Platform allows you to ingest Adobe Analytics data through the 
 | `videototaltime` | `mediaReporting.sessionDetails.totalTimePlayed` | integer | The total amount of time spent by a user on a specific timed media asset, including time spent watching ads. |
 | `videouniquetimeplayed` | `mediaReporting.sessionDetails.uniqueTimePlayed` | integer | The sum of the unique intervals seen by a user on a timed media asset. In other words, the length of playback intervals viewed multiple times are only counted once. |
 | `videoaverageminuteaudience` | `mediaReporting.sessionDetails.averageMinuteAudience` | number | The average content time spent for a specific media item. In other words, the total content time spent divided by the length for all of the playback sessions. |
-| (only in ava.e2e rsid: event8) | `mediaReporting.sessionDetails.adCount` |
-| (only in ava.e2e rsid: event9) | `mediaReporting.sessionDetails.chapterCount` |
+| (only in ava.e2e rsid: event8) | `mediaReporting.sessionDetails.adCount` | integer | The number of ads started during playback. |
+| (only in ava.e2e rsid: event9) | `mediaReporting.sessionDetails.chapterCount` | integer | The number of chapters started during playback. |
 | `videoprogress10` | `mediaReporting.sessionDetails.hasProgress10` | boolean | A boolean value that indicates whether the playhead of a given video has passed the 10% marker of the total video length. The marker is only counted once, even if seeking backwards. If seeking forward, markers that are skipped are not counted. |
 | `videoprogress25` | `mediaReporting.sessionDetails.hasProgress25` | boolean | A boolean value that indicates whether the playhead of a given video has passed the 25% marker of the total video length. The marker is only counted once, even if seeking backwards. If seeking forward, markers that are skipped are not counted. |
 | `videoprogress50` | `mediaReporting.sessionDetails.hasProgress50` | boolean | A boolean value that indicates whether the playhead of a given video has passed the 50% marker of the total video length. The marker is only counted once, even if seeking backwards. If seeking forward, markers that are skipped are not counted. |
@@ -60,7 +62,7 @@ Adobe Experience Platform allows you to ingest Adobe Analytics data through the 
 | `videopausecount` | `mediaReporting.sessionDetails.pauseCount` | integer | The number of pause periods that occurred during playback. |
 | `videopausetime` | `mediaReporting.sessionDetails.pauseTime` | integer | The total duration (in seconds) in which playback was paused by a user. |
 | `videomvpd` | `mediaReporting.sessionDetails.mvpd` | string | An MVPD identifier provided via Adobe authentication. |
-| videoauthorized evar21 |
+| videoauthorized evar21 | `mediaReporting.sessionDetails.authorized` | string |  Defines that the user has been authorized via Adobe authentication. |
 | `videodaypart` | `mediaReporting.sessionDetails.dayPart` | Defines the time of the day when the content was broadcast or played. |
 | `videoresume` | `mediaReporting.sessionDetails.hasResume` | boolean | A boolean value that marks each playback that was resumed after more than 30 minutes of buffer, pause, or a stall period. |
 | `videosegmentviews` | `mediaReporting.sessionDetails.hasSegmentView` | boolean | A boolean value that indicates that at least one frame has been viewed. This frame does not have to be the first frame. |
@@ -69,11 +71,13 @@ Adobe Experience Platform allows you to ingest Adobe Analytics data through the 
 | `videoaudiopublisher` | `mediaReporting.sessionDetails.publisher` | string | The name of the audio content publisher. | 
 | `videosecondssincelastcall` | `mediaReporting.sessionDetails.secondsSinceLastCall` | number | Indicates the amount of time (in seconds) that passed between a user's last known interaction and the moment the session was closed. |
 | `videoadload` | `mediaReporting.sessionDetails.adLoad` | string | The type of ad loaded as defined by your own internal representation. |
-| (only in ava.e2e rsid: evar6) | `mediaReporting.sessionDetails.cdn` | string |
+| (only in ava.e2e rsid: evar6) | `mediaReporting.sessionDetails.cdn` | string | The content delivery network of the content played. |
 
 {style="table-layout:auto"}
 
 ## Advertising parameters
+
+Read the following table for information on advertising parameters.
 
 | Data feed | XDM field path | Data type | Description | 
 | --- | --- | --- | --- |
@@ -81,16 +85,16 @@ Adobe Experience Platform allows you to ingest Adobe Analytics data through the 
 | `videoadinpod` | `mediaReporting.advertisingDetails.podPosition` | integer  | The index of the ad inside the parent ad start. For example, the first ad has index 0 and the second ad has index 1. |
 | `videoadlength` | `advertising.adAssetReference._xmpDM.duration` | integer  | The length of the video ad, measured in seconds. |
 | `videoadplayername` | `mediaReporting.advertisingDetails.playerName` | string | The name of the player used to render the ad. |
-| (only in ava.e2e rsid: evar11) |
-| (only in ava.e2e rsid: event45) |
+| (only in ava.e2e rsid: evar11) | `mediaReporting.advertisingPodDetails.friendlyName` | string | The friendly (human-readable) name of the ad break. |
+| (only in ava.e2e rsid: event45) | `mediaReporting.advertisingPodDetails.offset` | integer |  The offset of the ad break inside the content, measured in seconds. |
 | `videoadpod` | `mediaReporting.advertisingPodDetails.ID` | string | The ID of the ad break. |
 | `videoadname` | `mediaReporting.advertisingDetails.friendlyName` | string | The friendly (human-readable) name of the ad break. |
 | `videoadadvertiser` | `mediaReporting.advertisingDetails.advertiser` | string | The company or brand whose product is featured in the ad. |
 | `videoadcampaign` | `mediaReporting.advertisingDetails.campaignID` | string | The ID of the ad campaign. |
-| adclassificationcreative evar22 |
-| (only in ava.e2e rsid: evar12) |
-| (only in ava.e2e rsid: evar7) |
-| (only in ava.e2e rsid: evar13) |
+| adclassificationcreative evar22 | `mediaReporting.advertisingDetails.creativeID` | string | The ID of the ad creative. |
+| (only in ava.e2e rsid: evar12) | `mediaReporting.advertisingDetails.siteID` | string | The ID of the ad site. |
+| (only in ava.e2e rsid: evar7) | `mediaReporting.advertisingDetails.creativeURL` | string | The URL of the ad creative. This value is formatted as: `"format": "uri"`. |
+| (only in ava.e2e rsid: evar13) | `mediaReporting.advertisingDetails.placementID` | string | The placement ID of the ad. |
 | `videoadstart` | `mediaReporting.advertisingDetails.isStarted` | boolean | A boolean value that indicates whether the ad has been started or not. |
 | `videoadcomplete` | `mediaReporting.advertisingDetails.isCompleted` | boolean | A boolean value that indicates whether the had has been completed or not. |
 | `videoadtime` | `mediaReporting.advertisingDetails.timePlayed` | integer | The total amount of time, measured in seconds, spent watching the ad. |
@@ -98,6 +102,8 @@ Adobe Experience Platform allows you to ingest Adobe Analytics data through the 
 {style="table-layout:auto"}
 
 ## Chapter parameters
+
+Read the following table for information on chapter parameters.
 
 | Data feed | XDM field path | Data type | Description | 
 | --- | --- | --- | --- |
@@ -113,6 +119,8 @@ Adobe Experience Platform allows you to ingest Adobe Analytics data through the 
 {style="table-layout:auto"}
 
 ## Player state parameteres
+
+Read the following table for information on player state parameters.
 
 | Data feed | XDM field path | Data type | Description | 
 | --- | --- | --- | --- |
@@ -135,6 +143,8 @@ Adobe Experience Platform allows you to ingest Adobe Analytics data through the 
 {style="table-layout:auto"}
 
 ## Quality parameters
+
+Read the following table for information on quality parameters.
 
 | Data feed | XDM field path | Data type | Description | 
 | --- | --- | --- | --- |
@@ -163,9 +173,11 @@ Adobe Experience Platform allows you to ingest Adobe Analytics data through the 
 
 ## Deprecated fields
 
+Read this section for information on deprecated Analytics mapping fields.
+
 ### Direct mapping fields
 
-+++
++++Select to view a table of deprecated direct mapping fields
 
 | Data feed | XDM field | XDM type | Description |
 | --- | --- | --- | --- |
@@ -226,31 +238,14 @@ Adobe Experience Platform allows you to ingest Adobe Analytics data through the 
 
 +++
 
-<!-- 
-## Direct mapping fields
-
-Select fields are directly mapped from Adobe Analytics to Experience Data Model (XDM).  
-
-| Analytics field | XDM field | XDM type | Description |
-| --------------- | --------- | -------- | ---------- |
-
-
-## Split-mapping fields
-
-These fields have a single source, but map to **multiple** XDM locations.
-
-| Analytics field | XDM field | XDM type | Description |
-| --------------- | --------- | -------- | ---------- |
-| `s_resolution` | `device.screenWidth`,<br/>`device.screenHeight` | integer  | Numeric ID representing the resolution of the monitor. |
-| `mobileosversion` | `environment.operatingSystem`,<br/>`environment.operatingSystemVersion` | string  | Mobile operating system version. |
-| **CHANGE** `videoadlength` | `advertising.adAssetReference._xmpDM.duration` | integer  | Video Ad length. |
-
 ## Generated mapping fields
 
 Select fields coming from ADC must be transformed, requiring logic beyond a direct copy from Adobe Analytics to be generated in XDM.
 
-| Analytics field | XDM field | XDM type | Description |
-| --------------- | --------- | -------- | ----------- |
++++Select to view a table of deprecated generated mapping fields
+
+| Data feed | XDM field | XDM type | Description |
+| --- | --- | --- | --- |
 | `m_prop1`<br/>`[...]`<br/>`m_prop75` | `_experience.analytics.customDimensions`<br/>`.listprops.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`listprops.prop75` | Object | Custom Analytics props, configured to be list props. It contains a delimited list of values. | {} |
 | `m_hier1`<br/>`[...]`<br/>`m_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | Object | Used by hierarchy variables. It contains a delimited list of values. | {values (array), delimiter (string)} |
 | `m_mvvar1`<br/>`[...]`<br/>`m_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | array | Custom Analytics list variables. Contains a delimited list of values. | {value (string), key (string)} |
@@ -294,9 +289,25 @@ Select fields coming from ADC must be transformed, requiring logic beyond a dire
 | `mcvisid_low` | `identityMap` | object | The Experience Cloud Visitor ID. |
 | `sdid_high` + `sdid_low` | `_experience.target.supplementalDataID` | string | Hit Stitching ID. The analytics field sdid_high and sdid_low is the supplemental data id used to stitch two (or more) incoming hits together. |
 | `mobilebeaconproximity` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.proximity` | string | Mobile Services beacon proximity. |
-| **UPDATED** `videolength` | `mediaReporting.sessionDetails.length ` | integer | The length of the video. |
 
 {style="table-layout:auto"}
+
++++
+
+## Split-mapping fields
+
+These fields have a single source, but map to **multiple** XDM locations.
+
++++Select to view a table of deprecated split mapping fields
+
+| Data feed | XDM field | XDM type | Description |
+| --- | --- | --- | --- |
+| `s_resolution` | `device.screenWidth`,<br/>`device.screenHeight` | integer  | Numeric ID representing the resolution of the monitor. |
+| `mobileosversion` | `environment.operatingSystem`,<br/>`environment.operatingSystemVersion` | string  | Mobile operating system version. |
+
+{style="table-layout:auto"}
+
++++
 
 ## Advanced mapping fields
 
@@ -304,8 +315,10 @@ Select fields (known as "post values") contain data after Adobe has adjusted the
 
 To learn more about performing these transformations using Query Service, see [Adobe-defined functions](/help/query-service/sql/adobe-defined-functions.md) in the Query Service user guide.
 
-| Analytics field | XDM field | XDM type | Description |
-| --------------- | --------- | -------- | ---------- |
++++Select to view a table of deprecated advanced mapping fields
+
+| Data feed | XDM field | XDM type | Description |
+| --- | --- | --- | --- ||
 | `post_evar1`<br/>`[...]`<br/>`post_evar250` | `_experience.analytics.customDimensions.`<br/>`eVars.eVar1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`eVars.eVar250` | string | Custom Analytics eVars. Each organization can use eVars differently. |
 | `post_prop1`<br/>`[...]`<br/>`post_prop75` | `_experience.analytics.customDimensions.`<br/>`props.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`props.prop75` | string | Custom Analytics props. Each organization can use props differently. | 
 | `post_browser_height` | `environment.browserDetails.viewportHeight` | integer | The height of the browser, in pixels. |
@@ -370,4 +383,6 @@ To learn more about performing these transformations using Query Service, see [A
 | `visit_search_engine` | `_experience.analytics.session.`<br/>`search.searchEngine` | string | Numeric ID of the first search engine of the visit. |
 | `visit_start_time_gmt` | `_experience.analytics.session.`<br/>`timestamp` | integer | Timestamp of the first hit of the visit in UNIX&reg; time. |
 
-{style="table-layout:auto"} -->
+{style="table-layout:auto"}
+
++++
