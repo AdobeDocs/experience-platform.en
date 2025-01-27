@@ -2,14 +2,9 @@
 title: Content API Endpoint
 description: Learn how to retrieve your access data using the Privacy Service API.
 role: Developer
-badgePrivateBeta: label="Private Beta" type="Informative"
 exl-id: b3b7ea0f-957d-4e51-bf92-121e9ae795f5
 ---
 # Content endpoint
-
->[!IMPORTANT]
->
->The `/content` endpoint is currently in beta and your organization may not yet have access to it yet. The functionality and documentation are subject to change.
 
 Use the `/content` endpoint to securely retrieve *access information* (the information that a privacy subject can rightfully request to access) for your customers. The download URL provided in the response to a `/jobs/{JOB_ID}` GET request points to an Adobe service endpoint. You can then make a GET request to `/jobs/:JOB_ID/content` to return your customer data in JSON format. This access method implements multiple layers of authentication and access control to enhance security.
 
