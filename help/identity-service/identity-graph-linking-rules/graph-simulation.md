@@ -134,7 +134,7 @@ To delete an event, select the ellipses (`...`) beside a given event, and then s
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_namespacepriority"
->title="Algorithm Configuration"
+>title="Namespace Priority"
 >abstract="Namespace priority determines how links are removed from the identity graph."
 
 >[!IMPORTANT]
