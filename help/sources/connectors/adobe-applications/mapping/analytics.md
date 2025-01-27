@@ -383,6 +383,4 @@ To learn more about performing these transformations using Query Service, see [A
 | `visit_search_engine` | `_experience.analytics.session.`<br/>`search.searchEngine` | string | Numeric ID of the first search engine of the visit. |
 | `visit_start_time_gmt` | `_experience.analytics.session.`<br/>`timestamp` | integer | Timestamp of the first hit of the visit in UNIX&reg; time. |
 
-{style="table-layout:auto"}
-
 +++
