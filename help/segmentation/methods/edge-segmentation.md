@@ -22,13 +22,13 @@ A query can be evaluated with edge segmentation if it meets any of the criteria 
 >
 >If the query matches any of the query types in the following table, it will automatically be evaluated using edge segmentation. The system determines this ability automatically based on the query expression.
 
-| Query type | Details | Example |
-| ---------- | ------- | ------- |
-| Single event within a time window of less than 24 hours | Any segment definition that refers to a single incoming event within a time window of less than 24 hours. | ![An example of a single event within a relative time window is shown.](../images/methods/edge/single-event.png) |
-| Profile only | Any segment definition that refers to only a profile attribute. | ![An example of a profile attribute shown.](../images/methods/edge/profile-attribute.png) |
-| Single event with a profile attribute within a relative time window of less than 24 hours | Any segment definition that refers to a single incoming event, with one or more profile attributes, and occurs within a relative time window of less than 24 hours. | ![An example of a single event with a profile attribute within a relative time window is shown.](../images/methods/edge/single-event-with-profile-attribute.png) |
-| Segment of segments | Any segment definition that contains one or more batch or edge segments. **Note:** If a segment of segments is used, profile disqualification will happen **every 24 hours**. | ![An example of a segment of segments is shown.](../images/methods/edge/segment-of-segments.png) |
-| Multiple events with a profile attribute | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. | ![An example of multiple events with a profile attribute is shown.](../images/methods/edge/multiple-events-with-profile-attribute.png) |
+| Query type | Details | Query | Example |
+| ---------- | ------- | ----- | ------- |
+| Single event within a time window of less than 24 hours | Any segment definition that refers to a single incoming event within a time window of less than 24 hours. | `CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![An example of a single event within a relative time window is shown.](../images/methods/edge/single-event.png) |
+| Profile only | Any segment definition that refers to only a profile attribute. | `homeAddress.country.equals("US", false)` | ![An example of a profile attribute shown.](../images/methods/edge/profile-attribute.png) |
+| Single event with a profile attribute within a relative time window of less than 24 hours | Any segment definition that refers to a single incoming event, with one or more profile attributes, and occurs within a relative time window of less than 24 hours. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![An example of a single event with a profile attribute within a relative time window is shown.](../images/methods/edge/single-event-with-profile-attribute.png) |
+| Segment of segments | Any segment definition that contains one or more batch or edge segments. **Note:** If a segment of segments is used, profile disqualification will happen **every 24 hours**. | `inSegment("a730ed3f-119c-415b-a4ac-27c396ae2dff") and inSegment("8fbbe169-2da6-4c9d-a332-b6a6ecf559b9")` | ![An example of a segment of segments is shown.](../images/methods/edge/segment-of-segments.png) |
+| Multiple events with a profile attribute | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("directMarketing.emailClicked", false)) WHEN(today), C1: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![An example of multiple events with a profile attribute is shown.](../images/methods/edge/multiple-events-with-profile-attribute.png) |
 
 Additionally, the segment definition **must** be tied to a merge policy that is active on edge. For more information about merge policies, please read the [merge policies guide](../../profile/api/merge-policies.md).
 
@@ -37,6 +37,115 @@ A segment definition will **not** be eligible for edge segmentation in the follo
 - The segment definition includes a combination of a single event and an `inSegment` event.
   - However, if the segment definition contained in the `inSegment` event is profile only, the segment definition **will** be enabled for edge segmentation.
 - The segment definition uses "Ignore year" as part of its time constraints.
+
+## Create audience {#create-audience}
+
+You can create an audience that is evaluated using edge segmentation using either the Segmentation Service API or through Audience Portal in the UI.
+
+A segment definition can be edge-enabled if it matches one of the [eligible query types](#eligible-query-types).
+
+>[!BEGINTABS]
+
+>[!TAB Segmentation Service API]
+
+**API format**
+
+```http
+POST /segment/definitions
+```
+
+**Request**
+
++++ A sample request to create a segment definition that is enabled for edge segmentation
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -d '{
+        "name": "People in the USA",
+        "description: "An audience that looks for people who live in the USA",
+        "expression": {
+            "type": "PQL",
+            "format": "pql/text",
+            "value": "homeAddress.country = \"US\""
+        },
+        "evaluationInfo": {
+            "batch": {
+                "enabled": false
+            },
+            "continuous": {
+                "enabled": false
+            },
+            "synchronous": {
+                "enabled": true
+            }
+        },
+        "schema": {
+            "name": "_xdm.context.profile"
+        }
+     }'
+```
+
++++
+
+**Response**
+
+A successful response returns HTTP status 200 with details of your newly created segment definition.
+
++++A sample response when creating a segment definition.
+
+```json
+{
+    "id": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "profileInstanceId": "ups",
+    "imsOrgId": "{ORG_ID}",
+    "sandbox": {
+        "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "name": "People in the USA",
+    "description": "An audience that looks for people who live in the USA",
+    "expression": {
+        "type": "PQL",
+        "format": "pql/text",
+        "value": "homeAddress.country = \"US\""
+    },
+    "evaluationInfo": {
+        "batch": {
+            "enabled": false
+        },
+        "continuous": {
+            "enabled": false
+        },
+        "synchronous": {
+            "enabled": true
+        }
+    },
+    "dataGovernancePolicy": {
+        "excludeOptOut": true
+    },
+    "creationTime": 0,
+    "updateEpoch": 1579292094,
+    "updateTime": 1579292094000
+}
+```
+
++++
+
+More information about using this endpoint can be found in the [segment definition endpoint guide](../api/segment-definitions.md).
+
+>[!TAB Audience Portal]
+
+>[!ENDTABS]
 
 ## Retrieve audiences evaluated using edge segmentation {#retrieve-audiences}
 
