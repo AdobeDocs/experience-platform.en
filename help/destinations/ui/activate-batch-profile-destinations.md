@@ -433,25 +433,32 @@ When exporting profiles to file-based destinations, deduplication ensures that o
 
 * **Deterministic selection**: When multiple profiles have identical deduplication keys and the same reference timestamp, the deduplication logic determines which profile to export by sorting the values of other selected columns (excluding complex types such as arrays, maps, or objects). The sorted values are evaluated in lexicographical order, and the first profile is selected.
 
-* **Example scenario**:  
-  Consider the following data, where the deduplication key is the `Email` column:  
-  |Email*|first_name|last_name|timestamp|  
-  |---|---|---|---|  
-  |test1@test.com|John|Morris|2024-10-12T09:50|  
-  |test1@test.com|John|Doe|2024-10-12T09:50|  
-  |test2@test.com|Frank|Smith|2024-10-12T09:50|  
+* **Example scenario**
 
-  After deduplication, the export file will contain:  
-  |Email*|first_name|last_name|timestamp|  
-  |---|---|---|---|  
-  |test1@test.com|John|Doe|2024-10-12T09:50|  
-  |test2@test.com|Frank|Smith|2024-10-12T09:50|  
+Consider the following data, where the deduplication key is the `Email` column:
 
-  **Explanation**: For `test1@test.com`, both profiles share the same deduplication key and timestamp. The algorithm sorts the `first_name` and `last_name` column values lexicographically. Since the first names are identical, the tie is resolved using the `last_name` column, where "Doe" comes before "Morris."
+|Email*|first_name|last_name|timestamp|  
+|---|---|---|---|  
+|`test1@test.com`|John|Morris|2024-10-12T09:50|  
+|`test1@test.com`|John|Doe|2024-10-12T09:50|  
+|`test2@test.com`|Frank|Smith|2024-10-12T09:50|  
 
-* **Improved reliability**: This updated deduplication process ensures that successive runs with the same coordinates will always produce the same results, improving consistency.
+{style="table-layout:auto"}
 
-### [!BADGE Beta]{type=Informative} Export arrays through calculated fields {#export-arrays-calculated-fields}
+After deduplication, the export file will contain:
+
+|Email*|first_name|last_name|timestamp|  
+|---|---|---|---|  
+|`test1@test.com`|John|Doe|2024-10-12T09:50|  
+|`test2@test.com`|Frank|Smith|2024-10-12T09:50|  
+
+{style="table-layout:auto"}
+
+**Explanation**: For `test1@test.com`, both profiles share the same deduplication key and timestamp. The algorithm sorts the `first_name` and `last_name` column values lexicographically. Since the first names are identical, the tie is resolved using the `last_name` column, where "Doe" comes before "Morris."
+
+**Improved reliability**: This updated deduplication process ensures that successive runs with the same coordinates will always produce the same results, improving consistency.
+
+### Export arrays through calculated fields {#export-arrays-calculated-fields}
 
 Select beta customers can export array objects from Experience Platform to cloud storage destinations. Read more about [exporting arrays and calculated fields](/help/destinations/ui/export-arrays-calculated-fields.md) and contact your Adobe representative to get access to the functionality. 
 
