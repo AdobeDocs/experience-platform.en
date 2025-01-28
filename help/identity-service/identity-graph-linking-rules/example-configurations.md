@@ -3,7 +3,12 @@ title: Examples of Graph Configurations
 description: Learn about common graph scenarios that you might encounter when working with identity graph linking rules and identity data.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
 ---
-# Examples of graph configurations
+# Examples of graph configurations {#examples-of-graph-configurations}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_algorithmconfiguration"
+>title="Algorithm Configuration"
+>abstract="Configure unique namespace and namespace priority tailored to your ingested identities."
 
 >[!AVAILABILITY]
 >

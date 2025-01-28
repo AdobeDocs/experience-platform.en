@@ -3,7 +3,12 @@ title: Namespace priority
 description: Learn about namespace priority in Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
 ---
-# Namespace priority
+# Namespace priority {#namespace-priority}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_namespacepriority"
+>title="Namespace Priority"
+>abstract="Namespace priority determines how links are removed from the identity graph."
 
 >[!AVAILABILITY]
 >

@@ -1,6 +1,7 @@
 ---
 title: Set up and Configure Customer Managed Keys with AWS using the Platform UI
 description: Learn how to set up your CMK app with your Amazon Resource Name (ARN) and send your encryption key ID to Adobe Experience Platform.
+exl-id: f0e38a60-d448-4975-977e-1367fca10515
 ---
 # Set up and Configure Customer Managed Keys with AWS using the Platform UI
 
