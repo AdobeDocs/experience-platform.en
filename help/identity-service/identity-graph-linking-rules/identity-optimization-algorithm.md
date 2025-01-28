@@ -3,7 +3,12 @@ title: Identity optimization algorithm
 description: Learn about Identity Optimization Algorithm in Identity Service.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
 ---
-# Identity optimization algorithm
+# Identity optimization algorithm {#identity-optimization-algorithm}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_uniquenamespace"
+>title="Unique Namespace"
+>abstract="A graph cannot have two identities with a unique namespace. If a graph tries to exceed this limit, the most recent links are kept, and the oldest links are removed."
 
 >[!AVAILABILITY]
 >
@@ -16,11 +21,6 @@ The identity optimization algorithm is a graph algorithm on Identity Service tha
 Read this section for information on unique namespaces and namespace priority. These two concepts serve as input parameters required by the identity optimization algorithm.
 
 ### Unique namespace {#unique-namespace}
-
->[!CONTEXTUALHELP]
->id="platform_identities_uniquenamespace"
->title="Unique Namespace"
->abstract="A graph cannot have two identities with a unique namespace. If a graph tries to exceed this limit, the most recent links are kept, and the oldest links are removed."
 
 A unique namespace determines the links that get removed if graph collapse happens.
 

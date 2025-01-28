@@ -424,17 +424,41 @@ Assuming deduplication by the composite key `personalEmail + lastName`, the expo
 |johndoe@example.com|Doe|John|
 
 Adobe recommends selecting an identity namespace such as a [!DNL CRM ID] or email address as a deduplication key, to ensure all profile records are uniquely identified.
-   
->[!NOTE] 
-> 
->If any data usage labels have been applied to certain fields within a dataset (rather than the entire dataset), enforcement of those field-level labels on activation occurs under the following conditions:
->
->* The fields are used in the audience definition.
->* The fields are configured as projected attributes for the target destination.
->
-> For example, if the field `person.name.firstName` has certain data usage labels that conflict with the destination's marketing action, you would be shown a data usage policy violation in the review step. For more information, see [Data Governance in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
-### [!BADGE Beta]{type=Informative} Export arrays through calculated fields {#export-arrays-calculated-fields}
+### Deduplication behavior for profiles with the same timestamp {#deduplication-same-timestamp}
+
+When exporting profiles to file-based destinations, deduplication ensures that only one profile is exported when multiple profiles share the same deduplication key and the same reference timestamp. This timestamp represents the moment a profile's audience membership or identity graph was last updated. For more information on how profiles are updated and exported, see the [profile export behavior](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2) document.
+
+#### Key considerations
+
+* **Deterministic selection**: When multiple profiles have identical deduplication keys and the same reference timestamp, the deduplication logic determines which profile to export by sorting the values of other selected columns (excluding complex types such as arrays, maps, or objects). The sorted values are evaluated in lexicographical order, and the first profile is selected.
+
+* **Example scenario**
+
+Consider the following data, where the deduplication key is the `Email` column:
+
+|Email*|first_name|last_name|timestamp|  
+|---|---|---|---|  
+|`test1@test.com`|John|Morris|2024-10-12T09:50|  
+|`test1@test.com`|John|Doe|2024-10-12T09:50|  
+|`test2@test.com`|Frank|Smith|2024-10-12T09:50|  
+
+{style="table-layout:auto"}
+
+After deduplication, the export file will contain:
+
+|Email*|first_name|last_name|timestamp|  
+|---|---|---|---|  
+|`test1@test.com`|John|Doe|2024-10-12T09:50|  
+|`test2@test.com`|Frank|Smith|2024-10-12T09:50|  
+
+{style="table-layout:auto"}
+
+**Explanation**: For `test1@test.com`, both profiles share the same deduplication key and timestamp. The algorithm sorts the `first_name` and `last_name` column values lexicographically. Since the first names are identical, the tie is resolved using the `last_name` column, where "Doe" comes before "Morris."
+
+**Improved reliability**: This updated deduplication process ensures that successive runs with the same coordinates will always produce the same results, improving consistency.
+
+### Export arrays through calculated fields {#export-arrays-calculated-fields}
 
 Select beta customers can export array objects from Experience Platform to cloud storage destinations. Read more about [exporting arrays and calculated fields](/help/destinations/ui/export-arrays-calculated-fields.md) and contact your Adobe representative to get access to the functionality. 
 
@@ -546,6 +570,15 @@ If you want to activate external audiences to your destinations without exportin
 Select **[!UICONTROL Next]** to move to the [Review](#review) step.
 
 ## Review {#review}
+
+>[!NOTE] 
+> 
+>If any data usage labels have been applied to certain fields within a dataset (rather than the entire dataset), enforcement of those field-level labels on activation occurs under the following conditions:
+>
+>* The fields are used in the audience definition.
+>* The fields are configured as projected attributes for the target destination.
+>
+> For example, if the field `person.name.firstName` has certain data usage labels that conflict with the destination's marketing action, you would be shown a data usage policy violation in the review step. For more information, see [Data Governance in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
 On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
