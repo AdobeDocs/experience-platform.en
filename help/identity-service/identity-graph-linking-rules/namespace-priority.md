@@ -9,7 +9,6 @@ exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
 >id="platform_identities_namespacepriority"
 >title="Namespace Priority"
 >abstract="Namespace priority determines how links are removed from the identity graph."
->additional-url="http://www.adobe.com/go/identity-namespace-priority" text="Learn more"
 
 >[!AVAILABILITY]
 >

@@ -9,7 +9,6 @@ exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
 >id="platform_identities_uniquenamespace"
 >title="Unique Namespace"
 >abstract="A graph cannot have two identities with a unique namespace. If a graph tries to exceed this limit, the most recent links are kept, and the oldest links are removed."
->additional-url="http://www.adobe.com/go/identity-ido-algo" text="Learn more"
 
 >[!AVAILABILITY]
 >

@@ -9,7 +9,6 @@ exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
 >id="platform_identities_graphsimulation"
 >title="Graph Simulation"
 >abstract="Simulate graphs to understand how Identity Service links identities, and how the identity optimization algorithm works."
->additional-url="http://www.adobe.com/go/identity-graph-simulation" text="Learn more"
 
 >[!AVAILABILITY]
 >
