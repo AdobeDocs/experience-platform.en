@@ -9,7 +9,6 @@ exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
 >id="platform_identities_simulatedgraph"
 >title="Simulated Graph"
 >abstract="Identities are linked when the identity namespace and identity value match."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/identity-linking-logic" text="Learn more"
 
 A link between two identities are established when the identity namespace and the identity values match.
 

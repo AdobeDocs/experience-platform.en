@@ -9,7 +9,6 @@ exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
 >id="platform_identities_algorithmconfiguration"
 >title="Algorithm Configuration"
 >abstract="Configure unique namespace and namespace priority tailored to your ingested identities."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/identity-graph-linking-rules/example-configurations" text="Learn more"
 
 >[!AVAILABILITY]
 >
