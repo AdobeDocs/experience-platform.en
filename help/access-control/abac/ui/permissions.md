@@ -105,7 +105,7 @@ The following video is intended to support your understanding of creating a new 
 >
 > To use and manage API credentials in [!UICONTROL Permissions], users must have system administrator privileges.
 
-To use Experience Platform APIs, a system administrator needs to add API credentials in addition to a role's given set of permissions. For a complete guide on creating and assigning API credentials, as well as the permissions needed, refer to the step-by-step tutorial in [authenticate and access Experience Platform APIs](../../../landing/api-authentication.md#generate-credentials). 
+To use Experience Platform APIs as a user or developer, a system administrator needs to add API credentials in addition to a role's given set of permissions. For a complete guide on creating and assigning API credentials, as well as the permissions needed, refer to the step-by-step tutorial in [authenticate and access Experience Platform APIs](../../../landing/api-authentication.md#generate-credentials). 
 
 Select the **[!UICONTROL API credentials]** tab to open the roles API credentials workspace, then select **[!UICONTROL Add API credentials]** to assign API credentials to the role.
 
