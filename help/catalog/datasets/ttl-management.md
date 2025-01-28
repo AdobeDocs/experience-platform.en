@@ -1,136 +1,115 @@
 ---
-title: Manage your Data Lifecycle with TTL API Use Cases and Best Practices
+title: Manage Your Data Lifecycle with TTL API Use Cases and Best Practices
 description:
 ---
-# Manage your data lifecycle with TTL: API use cases and best practices
+# Manage Your data lifecycle with TTL: API use cases and best practices
 
-<!-- # A practical API guide to dataset retention and TTL management -->
-
+Briefly introduce the document's purpose: to guide users in evaluating, setting, and managing row-level TTL for datasets using APIs. Highlight benefits such as improved data hygiene and cost efficiency.
 <!-- What does it do? -->
 <!-- why does a user want to do that? -->
 
-<!-- ## So you think you want to set a TTL -->
+>[!IMPORTANT]
+>
+> TTL is designed to help users optimize data lifecycle management and improve storage efficiency. It is not a tool for compliance purposes. Compliance may require broader strategies beyond TTL settings.
 
-## Why consider this use case
+## Why use TTL for row-level data management
 
-<!-- 1. Highlight use cases and value realization:
-    Explain when and why customers should set TTL. (This section should focus on explaining the concept of TTL (Time-To-Live) and its impact on data lifecycle management.)
-    What TTL should be set. Illustrate scenarios where TTL improves data management outcomes. -->
-
-<!-- Explain the benefit of the use case  -->
-<!-- Explain the scenario of the use case and shy readers wold find themselves in that situation -->
-<!-- Explain the benefit of the use case in more detail  -->
-<!-- Sell it. mention other features /aspects of the tool. -->
+- Explain **when and why** customers should consider using TTL for datasets.  
+- Highlight scenarios where TTL adds value:
+  - Managing storage costs by expiring outdated rows.
+  - Optimizing dataset performance by removing irrelevant data.
+  - Simplifying data hygiene workflows.  
+- **Avoid mentioning compliance** here, per ARB feedback.
 
 ## Prerequisites and planning
 
-<!-- What do you as a user need to consider 
-1. Guide users on pre-API evaluation steps:
-     Help users evaluate their datasets to decide if TTL is appropriate. (What queries to use.)
-     Explain considerations such as compliance, storage costs, and data hygiene.
--->
+- **Pre-API Evaluation Steps**:
+  - Questions users should ask before setting TTL:
+    - Is this dataset suitable for TTL?
+    - How frequently is the dataset queried, and does historical data matter?  
+  - **Considerations**:  
+    - Dataset relevance over time.  
+    - Impact of TTL on downstream processes.  
+    - Storage cost vs. retention value.  
+- **Planning Queries**:  
+  - Provide examples of queries to assess dataset size or relevance:
 
-## Why you DO
+    ```sql
+    SELECT COUNT(1) FROM [datasetName] WHERE timestamp > date_sub(now(), INTERVAL 30 DAY);
+    ```
+  
+  - Explain how these queries help users determine appropriate TTL values.
 
-Setting TTL can be beneficial for various reasons, including:
+## Get started with TTL management
 
-- Compliance with data retention policies.
-- Cost management by reducing storage needs.
-- Ensuring outdated data does not impact analytics.
+Section intro.
 
-This section should provide insight into when TTL should be considered and its strategic benefits.
+### How to Check Current TTL Settings
 
-<!-- 
-1. Provide query examples for decision-making:
-    Include API examples to:
-    Check if a TTL is already applied to a dataset. 
-    Retrieve current TTL settings.
-    Perform TTL forecasting to predict the impact of retention policies.
- -->
+- **Endpoint**: `GET /v2/datasets/{ID}`  
+- Provide an example API call to retrieve TTL settings, showing where `rowExpiration` is located in the metadata:  
+  
+  ```console
+  GET https://platform.adobe.io/data/foundation/catalog/v2/datasets/{datasetID}
+  ```
 
-## Why you DONT
+### How to set TTL for a dataset
 
-Setting a TTL might not be suitable in cases such as:
+- **Endpoint**: `PATCH /v2/datasets/{ID}`  
+- Provide a clear, real-world example of setting TTL, such as:  
+  
+  ```json
+  {
+      "extensions": {
+          "adobe_lakeHouse": {
+              "rowExpiration": {
+                  "ttlValue": "P3M"  // 3 months
+              }
+          }
+      }
+  }
+  ```  
 
-- Data that must be retained indefinitely for regulatory reasons.
-- Use cases where historical analysis is critical.
-- Risk of accidental data loss due to misconfiguration.
+- **Explain what this does** and how users can adapt it for their needs.
 
-Referencing TTL retrieval methods can help users make informed decisions.
+### How to Update TTL
 
-## What should your TTL for Lake be?
+- Clarify that updating TTL uses the same `PATCH` method. Include example scenarios where TTL might need to be extended or shortened.  
+- Example:
+    
+  ```json
+  "ttlValue": "P6M"  // Extend to 6 months
+  ```
 
-When determining the appropriate TTL, consider:
+## Best practices for setting TTL
 
-- The data's relevance over time.
-- Compliance requirements.
-- Storage cost vs. retention value.
+- Provide recommendations on TTL duration based on dataset usage:
+  - Frequently accessed datasets: shorter TTL (e.g., 30-90 days).  
+  - Archival datasets: longer TTL (e.g., 1 year).  
+- Mention common pitfalls to avoid (e.g., setting TTL too short and losing valuable data).
 
-Provide recommendations based on industry best practices and use cases.
+## Limitations of TTL
 
-<!-- 
-1. Detail API workflows for TTL management:
-    Provide clear instructions for:
-    Setting a new TTL for a dataset.
-    Updating existing TTL settings. (PATCH /v2/dataSets/{id})
-    Verifying configurations post-implementation.
- -->
+- Explicitly call out what TTL cannot do:
+  - TTL is for row-level expiration, not full dataset deletion.  
+  - TTL cannot be removed once set; it can only be updated.  
+  - Explain that TTL is not suitable for compliance requirements.  
 
-## How do you set it?
+## FAQs and Common Use Cases
 
-**Endpoint:** `PATCH /v2/datasets/{ID}`  
+- FAQs:
+  - Can I remove a TTL? (Answer: No, but you can update it.)
+  - What happens if I don't set TTL? (Answer: Rows are retained indefinitely.)  
+- Use Cases:
+  - Highlight scenarios like "Managing log data for cost efficiency" or "Cleaning up irrelevant event data in the Data Lake."
 
-**Example API Call:**  
+<!-- ## References and Related Resources**   -->
+## Next steps
 
-```console
-PATCH https://platform.adobe.io/data/foundation/catalog/v2/datasets/{datasetID} 
-Authorization: Bearer {ACCESS_TOKEN}
-x-api-key: {API_KEY}
-Content-Type: application/json
-
-{ 
-    "ttlInSeconds": 5184000 // Example: Extending to 60 days in seconds 
-}
-```
-
-**Explanation:**  
-
-Updating TTL follows the same process as setting it initially. Users should review compliance policies before making changes.
-
-## How do you check what it is?
-
-**Endpoint:** `GET /v2/datasets/{ID}`  
-
-**Example API Call:**  
-
-```console
-GET https://platform.adobe.io/data/foundation/catalog/v2/datasets/{datasetID} 
-Authorization: Bearer {ACCESS_TOKEN} 
-x-api-key: {API_KEY}
-```
-
-**Sample Response:**  
-
-```json
-{ 
-    "id": "12345", 
-    "name": "Sample Dataset", 
-    "ttlInSeconds": 2592000, 
-    "created": "2023-01-01T00:00:00Z" 
-}
-```
-
-
-**Explanation:**  
-The response includes the `ttlInSeconds` value, which indicates the current TTL setting. Convert this to human-readable format when reviewing TTL configurations.
-
-## How do you remove it? (Spoiler, you can't)
-
-No API call available.
-
-TTL values cannot be removed once set. Users can modify the TTL duration but not delete it entirely. 
-
-Consider providing workarounds or best practices to manage dataset expiration effectively.
+- Include links to:  
+  - Catalog API documentation.  
+  - Internal wiki resources on TTL.  
+  - Related Experience League articles.
 
 <!-- 
 Limitations
