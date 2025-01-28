@@ -23,7 +23,7 @@ The sandbox indicator is located in the top header of the Platform UI and displa
 
 To switch between sandboxes, select the sandbox indicator and then select the desired sandbox from the dropdown list. Alternatively, you can search for your desired sandbox using the search feature within the dropdown menu.
 
-![The sandbox indicator dropdown menu is displayed, showing a list of sandboxes.](../images/ui/switcher-interface.png)
+![The sandbox indicator dropdown menu is displayed, showing a list of sandboxes you have access to.](../images/ui/switcher-interface.png)
 
 Once a sandbox is selected, the screen refreshes and updates to the sandbox you selected.
 
@@ -41,7 +41,7 @@ Once a sandbox is selected, the screen refreshes and updates to the sandbox you 
 >title="Sandbox Title"
 >abstract="The sandbox title is the display name that will represent the sandbox in menus and dropdowns throughout the Experience Platform UI."
 
->[!NOTE]
+>[!WARNING]
 >
 >The creation of a new sandbox requires you to add it to a role in [[!UICONTROL Permissions]](../../access-control/abac/ui/permissions.md) before you can begin using it. To learn how to provision a sandbox for a role, refer to the [managing sandboxes for a role](../../access-control/abac/ui/permissions.md#managing-sandboxes-for-role) documentation.
 
@@ -73,9 +73,6 @@ Once you have finished creating the sandbox, refresh the page and the new sandbo
 >
 >The following is a list of exceptions that can prevent you from resetting the default production sandbox or a user-created production sandbox: 
 >
->* The default production sandbox cannot be reset if the identity graph hosted in the sandbox is also being used by Adobe Analytics for the [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) feature.
->* The default production sandbox cannot be reset if the identity graph hosted in the sandbox is also being used by Adobe Audience Manager for the [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html).
->* The default production sandbox cannot be reset if it contains data for both CDA and PBD features.
 >* A user-created production sandbox that is used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service can be reset after a warning message.
 >* Before initiating a sandbox reset, you will be required to delete your compositions manually to ensure that the associated audience data is cleaned up properly.
 
