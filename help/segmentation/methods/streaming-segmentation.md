@@ -154,19 +154,15 @@ More information about using this endpoint can be found in the [segment definiti
 
 In Audience Portal, select **[!UICONTROL Create audience]**.
 
-IMAGE
+![The Create audience button is highlighted in Audience Portal.](../images/methods/streaming/select-create-audience.png)
 
 A popover appears. Select **[!UICONTROL Build rules]** to enter Segment Builder.
 
-IMAGE
+![The Build rules button is highlighted in the create audience popover.](../images/methods/streaming/select-build-rules.png)
 
-Within Segment Builder, create a segment definition that matches one of the [eligible query types](#eligible-query-types).
+Within Segment Builder, create a segment definition that matches one of the [eligible query types](#eligible-query-types). If the segment definition qualifies for streaming segmentation, you'll be able to select **[!UICONTROL Streaming]** as the **[!UICONTROL Evaluation method]**.
 
-IMAGE
-
-If the segment definition qualifies for streaming segmentation, you'll be able to select **[!UICONTROL Streaming]** as the **[!UICONTROL Evaluation method]**.
-
-IMAGE
+![The segment definition is displayed. The evaluation type is highlighted, showing the segment definition can be evaluated using streaming segmentation.](../images/methods/streaming/streaming-evaluation-method.png)
 
 To learn more about creating segment definitions, please read the [Segment Builder guide](../ui/segment-builder.md)
 
@@ -195,8 +191,7 @@ GET /segment/definitions?evaluationInfo.continuous.enabled=true
 +++ A sample request to list all the streaming-enabled segment definitions
 
 ```shell
-curl -X GET \
-  'https://platform.adobe.io/data/core/ups/segment/definitions?evaluationInfo.continuous.enabled=true' \
+curl -X GET 'https://platform.adobe.io/data/core/ups/segment/definitions?evaluationInfo.continuous.enabled=true' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \

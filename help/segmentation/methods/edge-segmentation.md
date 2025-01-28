@@ -145,6 +145,20 @@ More information about using this endpoint can be found in the [segment definiti
 
 >[!TAB Audience Portal]
 
+In Audience Portal, select **[!UICONTROL Create audience]**.
+
+![The Create audience button is highlighted in Audience Portal.](../images/methods/edge/select-create-audience.png)
+
+A popover appears. Select **[!UICONTROL Build rules]** to enter Segment Builder.
+
+![The Build rules button is highlighted in the create audience popover.](../images/methods/edge/select-build-rules.png)
+
+Within Segment Builder, create a segment definition that matches one of the [eligible query types](#eligible-query-types). If the segment definition qualifies for edge segmentation, you'll be able to select **[!UICONTROL Edge]** as the **[!UICONTROL Evaluation method]**.
+
+![The segment definition is displayed. The evaluation type is highlighted, showing the segment definition can be evaluated using edge segmentation.](../images/methods/edge/edge-evaluation-method.png)
+
+To learn more about creating segment definitions, please read the [Segment Builder guide](../ui/segment-builder.md)
+
 >[!ENDTABS]
 
 ## Retrieve audiences evaluated using edge segmentation {#retrieve-audiences}

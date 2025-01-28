@@ -14,6 +14,127 @@ With batch segmentation, you can create detailed and rich audiences, running seg
 
 All queries are eligible for batch segmentation.
 
+## Create audience {#create-audience}
+
+You can create an audience that is evaluated using batch segmentation using either the Segmentation Service API or through Audience Portal in the UI.
+
+>[!BEGINTABS]
+
+>[!TAB Segmentation Service API]
+
+**API format**
+
+```http
+POST /segment/definitions
+```
+
+**Request**
+
++++ A sample request to create a segment definition that is enabled for batch segmentation
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -d '{
+        "name": "People in the USA",
+        "description: "An audience that looks for people who live in the USA",
+        "expression": {
+            "type": "PQL",
+            "format": "pql/text",
+            "value": "homeAddress.country = \"US\""
+        },
+        "evaluationInfo": {
+            "batch": {
+                "enabled": true
+            },
+            "continuous": {
+                "enabled": false
+            },
+            "synchronous": {
+                "enabled": false
+            }
+        },
+        "schema": {
+            "name": "_xdm.context.profile"
+        }
+     }'
+```
+
++++
+
+**Response**
+
+A successful response returns HTTP status 200 with details of your newly created segment definition.
+
++++A sample response when creating a segment definition.
+
+```json
+{
+    "id": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "profileInstanceId": "ups",
+    "imsOrgId": "{ORG_ID}",
+    "sandbox": {
+        "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "name": "People in the USA",
+    "description": "An audience that looks for people who live in the USA",
+    "expression": {
+        "type": "PQL",
+        "format": "pql/text",
+        "value": "homeAddress.country = \"US\""
+    },
+    "evaluationInfo": {
+        "batch": {
+            "enabled": true
+        },
+        "continuous": {
+            "enabled": false
+        },
+        "synchronous": {
+            "enabled": false
+        }
+    },
+    "dataGovernancePolicy": {
+        "excludeOptOut": true
+    },
+    "creationTime": 0,
+    "updateEpoch": 1579292094,
+    "updateTime": 1579292094000
+}
+```
+
++++
+
+More information about using this endpoint can be found in the [segment definition endpoint guide](../api/segment-definitions.md).
+
+>[!TAB Audience Portal]
+
+In Audience Portal, select **[!UICONTROL Create audience]**.
+
+![The Create audience button is highlighted in Audience Portal.](../images/methods/batch/select-create-audience.png)
+
+A popover appears. Select **[!UICONTROL Build rules]** to enter Segment Builder.
+
+![The Build rules button is highlighted in the create audience popover.](../images/methods/batch/select-build-rules.png)
+
+After creating your segment definition, select **[!UICONTROL Batch]** as the **[!UICONTROL Evaluation method]**.
+
+![The segment definition is displayed. The evaluation type is highlighted, showing the segment definition can be evaluated using streaming segmentation.](../images/methods/batch/batch-evaluation-method.png)
+
+To learn more about creating segment definitions, please read the [Segment Builder guide](../ui/segment-builder.md)
+
+>[!ENDTABS]
+
 ## Retrieve audiences {#retrieve-audiences}
 
 You can retrieve all audiences that are evaluated using batch segmentation using either the Segmentation Service API or through Audience Portal in the UI.
@@ -149,7 +270,7 @@ You can retrieve all the audiences that are enabled for batch segmentation withi
 
 ![The filter icon is highlighted in Audience Portal.](../images/methods/filter-audiences.png)
 
-Within the available filters, go to **Update frequency** and select "Batch". Using this filter displays all audiences in your organization that are evaluated using batch segmentation.
+Within the available filters, go to **[!UICONTROL Update frequency]** and select "[!UICONTROL Batch]". Using this filter displays all audiences in your organization that are evaluated using batch segmentation.
 
 ![The Batch update frequency is selected, displaying all audiences in the organization that are evaluated using batch segmentation.](../images/methods/batch/filter-batch.png)
 
