@@ -17,21 +17,16 @@ Read the following table for information on streaming media parameters.
 | --- | --- | --- | --- |
 | `videoname` | `mediaReporting.sessionDetails.friendlyName` | string | The friendly (human-readable) name of the video. |
 | `videoaudioauthor` | `mediaReporting.sessionDetails.author` | string | The name of the media author. |
-| `videoaudioartist` | `mediaReporting.sessionDetails.author` | string | The name of the album artist or group performing the music recording or video. |
+| `videoaudioartist` | `mediaReporting.sessionDetails.artist` | string | The name of the album artist or group performing the music recording or video. |
 | `videoaudioalbum` | `mediaReporting.sessionDetails.album` | string | The name of the album that the music recording or video belongs to. |
 | `videolength` | `mediaReporting.sessionDetails.length ` | integer | The length or runtime of the video. |
 | `videoshowtype` | `mediaReporting.sessionDetails.showType` | string |
 | `video` | `mediaReporting.sessionDetails.name` | string | The ID of the video. |
 | `videoshow` | `mediaReporting.sessionDetails.show` | string | The name of the program or series. The program/series name is only required if the show is part of a series. |
-| (only in ava.e2e rsid: evar8) | `mediaReporting.sessionDetails.streamFormat` | string | The format of the stream, such as HD or SD. |
 | `videostreamtype` | mediaReporting.sessionDetails.streamType | string | The type of streaming media such as "video" or "audio". |
 | `videoseason` | `mediaReporting.sessionDetails.season` | string | The season number that the show belongs to. This value is only required if the show is part of a series. |
 | `videoepisode` | `mediaReporting.sessionDetails.episode` | string | The number of the episode. |
-| `videogenre` | `mediaReporting.sessionDetails.genre` | string[] | The genre of the video. |
-| video.videoclassificationrating evar17 | `mediaReporting.sessionDetails.rating` | The rating as defined by TV Parental Guidelines. |
-| video.videoclassificationoriginator evar18 | `mediaReporting.sessionDetails.originator` | The creator of the content. |
-| video.videoclassificationairdate evar19 | `mediaReporting.sessionDetails.firstAirDate` | The date when the content was first aired on television. While any date format is acceptable, the recommendation is to use YYYY-MM-DD. |
-| video.videoclassificationdigitaldate evar20 | `mediaReporting.sessionDetails.firstDigitalDate` | The date when the content first aired on any digital channel or platform. While any date format is acceptable, the recommendation is to use YYYY-MM-DD. |
+| `videogenre` | `mediaReporting.sessionDetails.genreList[]` | string[] | The genre of the video. |
 | `videosessionid` | `mediaReporting.sessionDetails.ID` | string | An identifier for an instance of a content stream unique to an individual playback. |
 | `videoplayername` | `mediaReporting.sessionDetails.playerName ` | string | The name of the video player. |
 | `videochannel` | `mediaReporting.sessionDetails.channel` | string | The distribution channel from where the content was played. |
@@ -41,8 +36,6 @@ Read the following table for information on streaming media parameters.
 | `videonetwork` | `mediaReporting.sessionDetails.network` | string | The network or channel name. |
 | `videofeedtype` | `mediaReporting.sessionDetails.feed` | string | The type of feed. This can either represent actual feed-related data such as "East HD" or "SD", or the source of the feed, such as a URL. |
 | `videosegment` | `mediaReporting.sessionDetails.segment` | string |
-| (only in ava.e2e rsid: event52) | `mediaReporting.sessionDetails.isDownloaded` |
-| N/A | `mediaReporting.sessionDetails.isFederated` | boolean | A boolean value that indicates whether the hit is federated or not. Federated hits are received by customers as part of a federated data share, instead of their own implementation. |
 | `videostart` | `mediaReporting.sessionDetails.isViewed` | boolean | A boolean value that indicates whether the video has been started or not. This occurs once the user selects the play button and will count even if there are pre-roll ads, buffering, errors, and so on. |
 | `videoplay` | `mediaReporting.sessionDetails.isPlayed` | boolean | A boolean value that indicates if the first frame of the media has started. If the user drops during any ads or buffering time, then the "content start" would not qualify. |
 | `videotime` | `mediaReporting.sessionDetails.timePlayed` | integer | The duration (in seconds) for all events of `type=PLAY` on the main content. |
@@ -50,8 +43,6 @@ Read the following table for information on streaming media parameters.
 | `videototaltime` | `mediaReporting.sessionDetails.totalTimePlayed` | integer | The total amount of time spent by a user on a specific timed media asset, including time spent watching ads. |
 | `videouniquetimeplayed` | `mediaReporting.sessionDetails.uniqueTimePlayed` | integer | The sum of the unique intervals seen by a user on a timed media asset. In other words, the length of playback intervals viewed multiple times are only counted once. |
 | `videoaverageminuteaudience` | `mediaReporting.sessionDetails.averageMinuteAudience` | number | The average content time spent for a specific media item. In other words, the total content time spent divided by the length for all of the playback sessions. |
-| (only in ava.e2e rsid: event8) | `mediaReporting.sessionDetails.adCount` | integer | The number of ads started during playback. |
-| (only in ava.e2e rsid: event9) | `mediaReporting.sessionDetails.chapterCount` | integer | The number of chapters started during playback. |
 | `videoprogress10` | `mediaReporting.sessionDetails.hasProgress10` | boolean | A boolean value that indicates whether the playhead of a given video has passed the 10% marker of the total video length. The marker is only counted once, even if seeking backwards. If seeking forward, markers that are skipped are not counted. |
 | `videoprogress25` | `mediaReporting.sessionDetails.hasProgress25` | boolean | A boolean value that indicates whether the playhead of a given video has passed the 25% marker of the total video length. The marker is only counted once, even if seeking backwards. If seeking forward, markers that are skipped are not counted. |
 | `videoprogress50` | `mediaReporting.sessionDetails.hasProgress50` | boolean | A boolean value that indicates whether the playhead of a given video has passed the 50% marker of the total video length. The marker is only counted once, even if seeking backwards. If seeking forward, markers that are skipped are not counted. |
@@ -71,7 +62,6 @@ Read the following table for information on streaming media parameters.
 | `videoaudiopublisher` | `mediaReporting.sessionDetails.publisher` | string | The name of the audio content publisher. | 
 | `videosecondssincelastcall` | `mediaReporting.sessionDetails.secondsSinceLastCall` | number | Indicates the amount of time (in seconds) that passed between a user's last known interaction and the moment the session was closed. |
 | `videoadload` | `mediaReporting.sessionDetails.adLoad` | string | The type of ad loaded as defined by your own internal representation. |
-| (only in ava.e2e rsid: evar6) | `mediaReporting.sessionDetails.cdn` | string | The content delivery network of the content played. |
 
 {style="table-layout:auto"}
 
@@ -83,18 +73,12 @@ Read the following table for information on advertising parameters.
 | --- | --- | --- | --- |
 | `videoad` | `mediaReporting.advertisingDetails.name` | string | The name of the ad. In reporting, "Ad Name" is the classification and "Ad Name (variable)" is the eVar. |
 | `videoadinpod` | `mediaReporting.advertisingDetails.podPosition` | integer  | The index of the ad inside the parent ad start. For example, the first ad has index 0 and the second ad has index 1. |
-| `videoadlength` | `advertising.adAssetReference._xmpDM.duration` | integer  | The length of the video ad, measured in seconds. |
+| `videoadlength` | `mediaReporting.advertisingDetails.length` | integer  | The length of the video ad, measured in seconds. |
 | `videoadplayername` | `mediaReporting.advertisingDetails.playerName` | string | The name of the player used to render the ad. |
-| (only in ava.e2e rsid: evar11) | `mediaReporting.advertisingPodDetails.friendlyName` | string | The friendly (human-readable) name of the ad break. |
-| (only in ava.e2e rsid: event45) | `mediaReporting.advertisingPodDetails.offset` | integer |  The offset of the ad break inside the content, measured in seconds. |
 | `videoadpod` | `mediaReporting.advertisingPodDetails.ID` | string | The ID of the ad break. |
 | `videoadname` | `mediaReporting.advertisingDetails.friendlyName` | string | The friendly (human-readable) name of the ad break. |
 | `videoadadvertiser` | `mediaReporting.advertisingDetails.advertiser` | string | The company or brand whose product is featured in the ad. |
 | `videoadcampaign` | `mediaReporting.advertisingDetails.campaignID` | string | The ID of the ad campaign. |
-| adclassificationcreative evar22 | `mediaReporting.advertisingDetails.creativeID` | string | The ID of the ad creative. |
-| (only in ava.e2e rsid: evar12) | `mediaReporting.advertisingDetails.siteID` | string | The ID of the ad site. |
-| (only in ava.e2e rsid: evar7) | `mediaReporting.advertisingDetails.creativeURL` | string | The URL of the ad creative. This value is formatted as: `"format": "uri"`. |
-| (only in ava.e2e rsid: evar13) | `mediaReporting.advertisingDetails.placementID` | string | The placement ID of the ad. |
 | `videoadstart` | `mediaReporting.advertisingDetails.isStarted` | boolean | A boolean value that indicates whether the ad has been started or not. |
 | `videoadcomplete` | `mediaReporting.advertisingDetails.isCompleted` | boolean | A boolean value that indicates whether the had has been completed or not. |
 | `videoadtime` | `mediaReporting.advertisingDetails.timePlayed` | integer | The total amount of time, measured in seconds, spent watching the ad. |
@@ -107,10 +91,6 @@ Read the following table for information on chapter parameters.
 
 | Data feed | XDM field path | Data type | Description | 
 | --- | --- | --- | --- |
-| (only in ava.e2e rsid: evar14) | `mediaReporting.chapterDetails.friendlyName` | string | The name of the chapter and/or segment. |
-| (only in ava.e2e rsid: event46) | `mediaReporting.chapterDetails.index` | integer | The position (index) of the chapter inside the content. |
-| (only in ava.e2e rsid: event47) | `mediaReporting.chapterDetails.offset` | integer | The offset of the chapter inside the content, measured in seconds, from the start. |
-| (only in ava.e2e rsid: event48) | `mediaReporting.chapterDetails.length` | integer | The length of the chapter, measured in seconds. |
 | `videochapter` | `mediaReporting.chapterDetails.ID` | string | The auto-generated ID of the chapter. |
 | `videochapterstart` | `mediaReporting.chapterDetails.isStarted` | boolean | A boolean value that indicates whether or not the chapter has been started. |
 | `videochaptercomplete` | `mediaReporting.chapterDetails.isCompleted` | boolean | A boolean value that indicates whether or not the chapter has been completed. |
@@ -150,24 +130,19 @@ Read the following table for information on quality parameters.
 | --- | --- | --- | --- |
 | `videoqoebitrateaverage` | `mediaReporting.qoeDataDetails.bitrateAverage` | number | The average bitrate (in kbps, integer). This metric is computed as a weighted average of all bitrate values related to the play duration that occurred during a playback session. |
 | `videoqoebitratechange` | `mediaReporting.qoeDataDetails.hasBitrateChangeImpactedStreams` | boolean | A boolean value that indicates the number of streams in which bitrate changes occurred. This metric is set to true only if at least one bitrate change event occurred during a playback session. |
-| <ul><li>Dimension: `videoqoebitratechangecountevar` </li><li>`videoqoebitratechangecount`</li></ul> | `mediaReporting.qoeDataDetails.bitrateChangeCount` | integer |
+| `videoqoebitratechangecount` | `mediaReporting.qoeDataDetails.bitrateChangeCount` | integer |
 | `videoqoebitrateaverageevar` | `mediaReporting.qoeDataDetails.bitrateAverageBucket` | string | The number of bitrate changes. This value is computed as a sum of all bitrate change events that occurred during a playback session. |
-| <ul><li>Dimension: `videoqoetimetostartevar` </li><li>`videoqoetimetostart`</li></ul> | `mediaReporting.qoeDataDetails.timeToStart` | integer | The duration, measured in seconds, that passed between video load and video start. |
+| `videoqoetimetostart`| `mediaReporting.qoeDataDetails.timeToStart` | integer | The duration, measured in seconds, that passed between video load and video start. |
 | `videoqoedroppedframes` | `mediaReporting.qoeDataDetails.hasDroppedFrameImpactedStreams` | boolean | A boolean value that indicates the number of streams in which frames were dropped. This metric is set to true only if at least one frame was dropped during a playback session. |
-| <ul><li>Dimension: `videoqoedroppedframecountevar` </li><li>`videoqoedroppedframecount`</li></ul> | `mediaReporting.qoeDataDetails.droppedFrames` | integer | The number of frames dropped during playback of the main content. |
-| (only in ava.e2e rsid: metric: event53, dimension: evar15) | `mediaReporting.qoeDataDetails.framesPerSecond` | integer | The current value of the stream frame-rate (in frames per second). The field is mapped to the fps field on the close call and can be accessed through processing rules. |
-| <ul><li>Dimension: `videoqoebuffercountevar` </li><li>`videoqoebuffercount`</li></ul> | `mediaReporting.qoeDataDetails.bufferCount` | integer | he number of buffer events. This metric is computed as a count of the different buffer states that occurred during a playback session. This is a count of how many times the player enters a buffer state from other states, such as playing or pausing. |
-| <ul><li>Dimension: `videoqoebuffertimeevar` </li><li>`videoqoebuffertime`</li></ul> | `mediaReporting.qoeDataDetails.bufferTime` | integer | The total amount of time, measured in seconds, spent buffering. This value is computed as a sum of all buffer events durations that occurred during a playback session. |
+| `videoqoedroppedframecount`| `mediaReporting.qoeDataDetails.droppedFrames` | integer | The number of frames dropped during playback of the main content. |
+| `videoqoebuffercount` | `mediaReporting.qoeDataDetails.bufferCount` | integer | he number of buffer events. This metric is computed as a count of the different buffer states that occurred during a playback session. This is a count of how many times the player enters a buffer state from other states, such as playing or pausing. |
+| `videoqoebuffertime` | `mediaReporting.qoeDataDetails.bufferTime` | integer | The total amount of time, measured in seconds, spent buffering. This value is computed as a sum of all buffer events durations that occurred during a playback session. |
 | `videoqoebuffer` | `mediaReporting.qoeDataDetails.hasBufferImpactedStreams` | boolean | A boolean value that indicates the number of streams impacted by buffering. This metric is set to true only if at least one buffer event occurred during a playback session. |
 | `videoqoeerror` | `mediaReporting.qoeDataDetails.hasErrorImpactedStreams` | boolean |  A boolean value that indicates the number of streams in which an error event occurred. For example, if a trackError was called during the playback session, and a type=error heartbeat call was generated. This metric is set to true only if at least one error occurred during playback. |
-| <ul><li>Dimension: `videoqoeerrorcountevar` </li><li>`videoqoeerrorcount`</li></ul> | `mediaReporting.qoeDataDetails.errorCount` | integer | The number of errors that occurred. This value is computed as a sum of all error events that occurred during a playback session. |
+| `videoqoeerrorcount` | `mediaReporting.qoeDataDetails.errorCount` | integer | The number of errors that occurred. This value is computed as a sum of all error events that occurred during a playback session. |
 | `videoqoeplayersdkerrors` | `mediaReporting.qoeDataDetails.playerSdkErrors` | array of string | The unique error IDs generated by the player SDK. You must provide the error codes or IDs at implementation time via provided error APIs. |
 | `videoqoeextneralerrors` | `mediaReporting.qoeDataDetails.externalErrors` | array of string | The unique error IDs from any external source, such as CDN errors. You must provide the error codes or IDs at implementation time via provided error APIs. |
-| | `mediaReporting.qoeDataDetails.mediaSdkErrors` | array of string |
 | `videoqoedropbeforestart` | `mediaReporting.qoeDataDetails.isDroppedBeforeStart` | boolean | The unique error IDs generated by Media SDK during playback. |
-| (only in ava.e2e rsid: event49) | `mediaReporting.qoeDataDetails.hasStallImpactedStreams` | boolean | A boolean value that indicates the number of streams in which a stalled event occurred. This metric is set to true only if at least one stall occurred during playback. |
-| (only in ava.e2e rsid: event50) | `mediaReporting.qoeDataDetails.stallCount` | integer | The number of times the playback was stalled during a playback session. |
-| (only in ava.e2e rsid: event51) | `mediaReporting.qoeDataDetails.stallTime` | integer | The total time, measured in seconds, that the playback was stalled during a playback session. |
 
 {style="table-layout:auto"}
 
