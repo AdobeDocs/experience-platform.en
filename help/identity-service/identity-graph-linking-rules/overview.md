@@ -27,12 +27,13 @@ The following documents are essential in understanding identity graph linking ru
 
 This section outlines example scenarios that you may consider when configuring identity graph linking rules.
 
-### Shared device
+### Shared device {#shared-device}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphcollapsescenarios"
->title="Graph collapse scenarios"
+>title="Graph Collapse Scenarios"
 >abstract="There are multiple reasons why graphs could "collapse", or represent multiple person entities."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/identity-graph-linking-rules/overview" text="Learn more"
 
 There are instances where multiple logins can occur on a single device:
 

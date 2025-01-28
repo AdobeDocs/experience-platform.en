@@ -24,7 +24,7 @@ To understand the difference between connections and extensions, see [Connection
 * [(Beta) Experience Cloud audiences](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
 * [Marketo Engage connection](/help/destinations/catalog/adobe/marketo-engage.md)
 * [Marketo Measure Ultimate connection](/help/destinations/catalog/adobe/marketo-measure-ultimate.md)
-* [Federated Audience Composition connection](https://www.adobe.com/go/destinations-federated-audience-composition){target="_blank"} (Limited availability)
+* [Federated Audience Composition connection](https://www.adobe.com/go/destinations-federated-audience-composition){target="_blank"}
 
 ### Extensions
 
