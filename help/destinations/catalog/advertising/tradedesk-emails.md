@@ -1,24 +1,22 @@
 ---
-title: (Beta) The Trade Desk - CRM connection
+title: The Trade Desk - CRM connection
 description: Activate profiles to your Trade Desk account for audience targeting and suppression based on CRM data.
-last-substantial-update: 2023-01-25
+last-substantial-update: 2025-01-16
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
 ---
-# (Beta) The [!DNL Trade Desk] - CRM connection
+# The [!DNL Trade Desk] - CRM connection
 
 >[!IMPORTANT]
->
->[!DNL The Trade Desk - CRM] destination in Platform is currently in beta. The documentation and functionality are subject to change. 
 >
 >With the release of EUID (European Unified ID), you are now seeing two [!DNL The Trade Desk - CRM] destinations in the [destinations catalog](/help/destinations/catalog/overview.md).
 >* If you source data in the EU, please use the **[!DNL The Trade Desk - CRM (EU)]** destination. 
 >* If you source data in the APAC or NAMER regions, please use the **[!DNL The Trade Desk - CRM (NAMER & APAC)]** destination. 
 >
->Both destinations in Experience Platform are currently in beta. This destination connector and documentation page are created and maintained by the *[!DNL Trade Desk]* team. For any inquiries or update requests, please contact your [!DNL Trade Desk] representative, the documentation and functionality are subject to change. 
+>This destination connector and documentation page are created and maintained by the *[!DNL Trade Desk]* team. For any inquiries or update requests, please contact your [!DNL Trade Desk] representative. 
 
 ## Overview {#overview}
 
-This document is designed to help you activate profiles to your [!DNL Trade Desk] account for audience targeting and suppression based on CRM data.
+Understand how you can activate profiles to your [!DNL Trade Desk] account for audience targeting and suppression based on CRM data.
 
 This connector sends data to the [!DNL The Trade Desk] first-party endpoint. The integration between Adobe Experience Platform and [!DNL The Trade Desk] does not support exporting data to the [!DNL The Trade Desk] third-party endpoint.
 
@@ -30,7 +28,9 @@ This connector sends data to the [!DNL The Trade Desk] first-party endpoint. The
 
 ## Prerequisites {#prerequisites}
 
-Before you can activate audiences to [!DNL The Trade Desk], you must contact your [!DNL The Trade Desk] account manager to sign the CRM Onboarding contract. [!DNL The Trade Desk] will then give permission and share your advertiser ID to configure your destination.  
+>[!IMPORTANT]
+>
+>Before you can activate audiences to The Trade Desk, you must contact your [!DNL Trade Desk] account manager to sign the CRM Onboarding contract. [!DNL The Trade Desk] will enable use of UID2 / EUID and share other details to help you configure your destination.
 
 ## ID Matching Requirements {#id-matching-requirements}
 
