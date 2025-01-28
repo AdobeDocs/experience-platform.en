@@ -28,6 +28,7 @@ role: Developer
   * [Create and populate a dataset using APIs](datasets/create.md)
   * [Enable a dataset for Profile and Identity](datasets/enable-for-profile.md)
   * [Enable a dataset for Profile updates (upsert)](datasets/enable-upsert.md)
+  * [Dataset retention and TTL management](datasets/ttl-management.md)
 * [Privacy request processing in the Data Lake](privacy.md)
 * [API reference](https://www.adobe.io/experience-platform-apis/references/catalog/)
 * [Frequently asked questions](catalog-faq.md)
