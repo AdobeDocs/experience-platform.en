@@ -439,20 +439,24 @@ Consider the following data, where the deduplication key is the `Email` column:
 
 |Email*|first_name|last_name|timestamp|  
 |---|---|---|---|  
-|test1@test.com|John|Morris|2024-10-12T09:50|  
-|test1@test.com|John|Doe|2024-10-12T09:50|  
-|test2@test.com|Frank|Smith|2024-10-12T09:50|  
+|`test1@test.com`|John|Morris|2024-10-12T09:50|  
+|`test1@test.com`|John|Doe|2024-10-12T09:50|  
+|`test2@test.com`|Frank|Smith|2024-10-12T09:50|  
+
+{style="table-layout:auto"}
 
 After deduplication, the export file will contain:
 
 |Email*|first_name|last_name|timestamp|  
 |---|---|---|---|  
-|test1@test.com|John|Doe|2024-10-12T09:50|  
-|test2@test.com|Frank|Smith|2024-10-12T09:50|  
+|`test1@test.com`|John|Doe|2024-10-12T09:50|  
+|`test2@test.com`|Frank|Smith|2024-10-12T09:50|  
+
+{style="table-layout:auto"}
 
 **Explanation**: For `test1@test.com`, both profiles share the same deduplication key and timestamp. The algorithm sorts the `first_name` and `last_name` column values lexicographically. Since the first names are identical, the tie is resolved using the `last_name` column, where "Doe" comes before "Morris."
 
-* **Improved reliability**: This updated deduplication process ensures that successive runs with the same coordinates will always produce the same results, improving consistency.
+**Improved reliability**: This updated deduplication process ensures that successive runs with the same coordinates will always produce the same results, improving consistency.
 
 ### Export arrays through calculated fields {#export-arrays-calculated-fields}
 
