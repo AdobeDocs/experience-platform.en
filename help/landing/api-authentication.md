@@ -350,27 +350,13 @@ The developer has been successfully added and appears on the **[!UICONTROL Devel
 
 ![The developers tab displaying the list of all added developers with the newly added developer highlighted.](././images/api-authentication/developer-added.png)
 
-### Assign API to a role
+### Assign API credentials to a role
 
 >[!NOTE]
 >
 > Only a system administrator can assign APIs to roles in the Experience Platform UI.
 
-In the Experience Platform UI, select **[!UICONTROL Permissions]** in the left navigation and then select **[!UICONTROL Roles]** from the left panel. Next, select the role you want to add the API to.
-
-![The Role page within Permissions is displayed with a list of roles.](././images/api-authentication/roles.png)
-
-Select the **[!UICONTROL API credentials]** tab, then select **[!UICONTROL Add API credentials]**.
-
-![The API credentials tab in the selected role is displayed with the Add API credentials option highlighted.](././images/api-authentication/api-credentials.png)
-
-The **[!UICONTROL Add API credentials]** dialog appears. Select the API you would like to add to the role then select **[!UICONTROL Save]**.
-
-![The Add API credentials dialog with a credential selected and the save option highlighted.](././images/api-authentication/select-api.png)
-
-You are returned to the [!UICONTROL API credentials] tab, where the newly added API is listed.
-
-![The role's API credentials tab with the newly added credential highlighted.](././images/api-authentication/api-credentials-with-added-api.png)
+To use and perform operations on Experience Platform APIs, a system administrator needs to add the API credentials in addition to a role's given set of permissions. Get more information in the section about [managing API credentials for a role](../access-control/abac/ui/permissions.md#manage-api-credentials-for-a-role).
 
 A walkthrough of the steps described above for adding developers to product profiles and assigning APIs to roles is also available in the video tutorial below:
 
