@@ -6,8 +6,6 @@ description: Learn how to evaluate, set, and manage row-level TTL for datasets u
 
 Managing data efficiently is critical to maintaining performance, controlling costs, and ensuring clean datasets. You can perform row-level expiration Time-To-Live (TTL) to automatically remove outdated data from your Adobe Experience Platform datasets, keeping your storage optimized and relevant. 
 
-<!-- By automating data cleanup, you can reduce storage costs, improve system performance, and minimize the manual effort required to manage data retention. -->
-
 This guide explains how to evaluate, set, and manage TTL with the Catalog API to streamline data lifecycle management. By implementing TTL, you can reduce storage costs by automatically removing outdated data, maintain data hygiene by keeping datasets focused and relevant, and enhance query performance by minimizing outdated records. Effective TTL management also helps optimize data retention to align with business needs, keeping your datasets efficient and cost-effective.
 
 In this guide, you'll learn when and why to apply TTL to your datasets so you can configure the optimal settings for your data lifecycle. You'll also learn how to check, set, and update TTL values using API calls for seamless workflow integration. Additionally, this guide covers best practices to help you avoid common pitfalls and implement TTL effectively, keeping your data optimized and well-managed. 
@@ -18,12 +16,26 @@ In this guide, you'll learn when and why to apply TTL to your datasets so you ca
 
 ## Why use TTL for row-level data management
 
-- Explain **when and why** customers should consider using TTL for datasets.  
+As datasets grow, efficient data management is crucial for maintaining performance, controlling costs, and retaining only relevant information. Use row-level data expiration to automatically remove outdated records, optimize storage, and automate data workflows, eliminating the need for manual intervention.
+
+You should consider using row-level data expiration if your datasets contain time-sensitive data that becomes less useful after a certain period. TTL helps you:  
+
+- **Reduce storage costs** by automatically expiring outdated records, preventing unnecessary data accumulation.  
+- **Improve system performance** by minimizing the volume of irrelevant data that can slow down queries and increase processing time.  
+- **Simplify data hygiene** by ensuring that datasets remain lean and manageable, reducing the risk of outdated or inaccurate information affecting decision-making.  
+
+### Industry example
+
+As an example, consider a video streaming platform that tracks user interactions, such as video views, searches, and recommendations. Recent engagement data is crucial for personalization, whereas older activity logs (for example, interactions from over a year ago) are likely no longer relevant. Using row expiration, the streaming platform can automatically remove outdated logs, to ensure that only the most relevant data is used for analytics and recommendations.
+
+
+<!--  -->
+<!-- - Explain **when and why** customers should consider using TTL for datasets.  
 - Highlight scenarios where TTL adds value:
   - Managing storage costs by expiring outdated rows.
   - Optimizing dataset performance by removing irrelevant data.
   - Simplifying data hygiene workflows.  
-- **Avoid mentioning compliance** here, per ARB feedback.
+- **Avoid mentioning compliance** here, per ARB feedback. -->
 
 ## Prerequisites and planning
 
