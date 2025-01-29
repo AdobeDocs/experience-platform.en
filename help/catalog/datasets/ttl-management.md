@@ -130,6 +130,7 @@ Section intro.
   - Highlight scenarios like "Managing log data for cost efficiency" or "Cleaning up irrelevant event data in the Data Lake."
 
 <!-- ## References and Related Resources**   -->
+
 ## Next steps
 
 - Include links to:  
