@@ -23,16 +23,16 @@ The following documents are essential in understanding identity graph linking ru
 * [Graph simulation UI](./graph-simulation.md)
 * [Identity settings UI](./identity-settings-ui.md)
 
-## Example scenarios where graph collapse could happen {#example-scenarios-where-graph-collapse-could-happen}
-
-This section outlines example scenarios that you may consider when configuring identity graph linking rules.
-
-### Shared device
+## Graph collapse scenarios {#graph-collapse-scenarios}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphcollapsescenarios"
 >title="Graph Collapse Scenarios"
 >abstract="There are multiple reasons why graphs could "collapse", or represent multiple person entities."
+
+This section outlines example scenarios that you may consider when configuring identity graph linking rules.
+
+### Shared device
 
 There are instances where multiple logins can occur on a single device:
 
