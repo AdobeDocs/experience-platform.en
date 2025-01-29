@@ -110,7 +110,7 @@ The following tables outline best practices you can follow when using AI Assista
 
 {style="table-layout:auto"}
 
-## Dataset insights
+## Dataset insights {#dataset-insights}
 
 AI Assistant can now answer questions about specific dataset metrics such as storage size and row count.
 
@@ -119,13 +119,15 @@ AI Assistant can now answer questions about specific dataset metrics such as sto
 * How many datasets are empty?
 * Which datasets are empty?
 
+Additionally, you can convey similar intent through a number of different variations to the four aforementioned questions.
+
 +++Select to view accepted variations of dataset insights questions
 
-* What are the top 5 datasets by size?
+* What are the top five datasets by size?
 * Which dataset has the largest number of rows?
 * How many datasets have no data in them?
 * List the datasets with size >10 MB?
-* List the datasets with rows less than 10
+* List the datasets with rows less than 10.
 * Can you show me the datasets that are completely empty?
 * Which dataset is the largest by storage size?
 * What's the smallest dataset in terms of row count?
@@ -138,6 +140,8 @@ AI Assistant can now answer questions about specific dataset metrics such as sto
 * Can you list the largest and smallest datasets by storage size?
 
 +++
+
+You can also format your data insights questions with a qualifier to filter your query by a certain time period:
 
 * Datasets receiving batches in last (x) days
 * Datasets not receiving batches in last (x) days
