@@ -71,8 +71,6 @@ Add this action to your tag rule where it makes sense to load Target with [on-de
 >
 >Page Load Request with On-Device Decisioning should only be used if you have already configured it. Note that adding this action to your rule will increase the size of your final Launch bundle as it includes the On-Device Decisioning rules engine.
 
-No configuration is needed.
-
 ### Add Params to All Requests
 
 This action type allows parameters to be added to all Target requests. The Load Target action must be used earlier.
