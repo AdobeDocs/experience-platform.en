@@ -69,7 +69,7 @@ Add this action to your tag rule where it makes sense to load Target with [on-de
 
 >[!IMPORTANT]
 >
->Only use a Page Load Request with On-Device Decisioning if it is already configured. Adding this action to your rule will increase the size of your final Launch bundle because it includes the On-Device Decisioning rules engine.
+>Only use a Page Load Request with On-Device Decisioning if it is already configured. Adding this action to your rule will increase the size of your final launch bundle because it includes the On-Device Decisioning rules engine.
 
 ### Add Params to All Requests
 
