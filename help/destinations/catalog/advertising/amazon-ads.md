@@ -79,7 +79,6 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 You are taken to the [!DNL Amazon Ads] connection interface where you first select the advertiser accounts you wish to connect to. Upon connection, you are redirected back to Adobe Experience Platform with a new connection, provided with the ID of the Advertiser Account you selected. Select the appropriate Advertiser Account on the destination configuration screen to proceed.
 
-
 ### Fill in destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
@@ -88,14 +87,17 @@ To configure details for the destination, fill in the required and optional fiel
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 *  **[!UICONTROL Amazon Ads Connection]**: Select the ID for the target [!DNL Amazon Ads] account used for the destination.
 
-
 >[!NOTE]
 >
 >After saving the destination configuration, you will not be able to change the [!DNL Amazon Ads] Advertiser ID, even if you reauthenticate through your Amazon account. To use a different [!DNL Amazon Ads] Advertiser ID, you must create a new destination connection. Advertisers who are already set up on an integration with ADSP to must create a new destination flow if they want their audiences to be delivered to AMC or to a different ADSP account.
 
 *  **[!UICONTROL Advertiser Region]**: Select the appropriate region in which your Advertiser is hosted. For more information on the marketplaces supported by each region, visit the [Amazon Ads documentation](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
 
-*  **[!UICONTROL Amazon Ads Consent Signal]**: Confirm that all data sent through this connection have consented to use personal data to be used for advertising purposes. "GRANTED" indicates consent for Amazon to use the customer’s personal data for advertising. The permissible values are "GRANTED" and "DENIED". Any records sent through connections with "DENIED" will be rejected for further use within Amazon Ads.
+>[!IMPORTANT]
+>
+>The update to include the **[!UICONTROL Amazon Ads Consent Signal]** is scheduled to go live by February 7th, 2025.
+
+*  **[!UICONTROL Amazon Ads Consent Signal]**: Confirm that all data sent through this connection have consented to use personal data to be used for advertising purposes. "GRANTED" indicates consent for Amazon to use the customer's personal data for advertising. The permissible values are "GRANTED" and "DENIED". Any records sent through connections with "DENIED" will be rejected for further use within Amazon Ads.
 
 ![Configure new destination](../../assets/catalog/advertising/amazon-ads/amazon_ads_consent_input.png)
 
@@ -147,7 +149,6 @@ In the left-hand schema browser, find your audience under **[!UICONTROL Advertis
 
 ![Amazon Marketing Cloud audience creation validation](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_5.png)
 
-
 ## Data usage and governance {#data-usage-governance}
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).
@@ -166,6 +167,7 @@ This section captures the functionality and significant documentation updates ma
 
 |Release month|Update type|Description|
 |---|---|---|
+|February 2025|Added the requirement to add **[!UICONTROL Amazon Ads Consent Signal]** to export dataflows and promoted the destination from beta to generally available. |
 |May 2024|Functionality and documentation update| Added the mapping option to export `countryCode` parameter into Amazon Ads. Use `countryCode` in the [mapping step](#map) to improve your identity match rates with Amazon. |
 |March 2024|Functionality and documentation update| Added the option to export audiences to be used in [!DNL Amazon Marketing Cloud] (AMC).|
 |May 2023|Functionality and documentation update| <ul><li>Added support for Advertiser Region selection in the [destination connection workflow](#destination-details).</li><li>Updated documentation to reflect the addition of Advertiser Region selection. For more information on selecting the correct Advertiser Region, see the [Amazon documentation](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
