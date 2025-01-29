@@ -3,7 +3,12 @@ title: Graph Simulation UI Guide
 description: Learn how to use the Graph Simulation in the Identity Service UI.
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
 ---
-# [!DNL Graph Simulation] UI guide
+# [!DNL Graph Simulation] UI guide {#graph-simulation}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_graphsimulation"
+>title="Graph Simulation"
+>abstract="Simulate graphs to understand how Identity Service links identities, and how the identity optimization algorithm works."
 
 >[!AVAILABILITY]
 >
@@ -44,11 +49,6 @@ Simulated graph viewer: The simulated graph viewer displays the resulting graph 
 >[!ENDTABS]
 
 ## Add events {#add-events}
-
->[!CONTEXTUALHELP]
->id="platform_identities_graphsimulation"
->title="Add events"
->abstract="Simulate graphs to understand how Identity Service links identities, and how the identity optimization algorithm works."
 
 To begin, select **[!UICONTROL Add events]**.
 
@@ -125,16 +125,6 @@ To delete an event, select the ellipses (`...`) beside a given event, and then s
 ![The delete event icon selected.](../images/graph-simulation/delete.png)
 
 ## Configure algorithm {#configure-algorithm}
-
->[!CONTEXTUALHELP]
->id="platform_identities_algorithmconfiguration"
->title="Algorithm Configuration"
->abstract="Configure unique namespace and namespace priority tailored to your ingested identities."
-
->[!CONTEXTUALHELP]
->id="platform_identities_namespacepriority"
->title="Algorithm Configuration"
->abstract="Namespace priority determines how links are removed from the identity graph."
 
 >[!IMPORTANT]
 >
