@@ -67,6 +67,10 @@ No configuration is needed.
 
 Add this action to your tag rule where it makes sense to load Target with [on-device decisioning](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html) enabled in the context of your rule. This loads the at.js library with on-device decisioning enabled into the page. In most implementations, Target should be loaded on every page of your site. Adobe recommends using the Load Target with On-Device Decisioning action only if it is preceded by a Target call. Otherwise, you might run into issues like the Analytics call being delayed.
 
+> [!IMPORTANT]
+>
+> Page Load Request with On-Device Decisioning should only be used if you have already configured On-Device Decisioning. Keep in mind that adding this action to your rule will increase the size of your final Launch bundle, as it includes the On-Device Decisioning rules engine.
+
 No configuration is needed.
 
 ### Add Params to All Requests
