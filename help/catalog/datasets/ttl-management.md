@@ -1,12 +1,16 @@
 ---
 title: Manage Your Data Lifecycle with TTL API Use Cases and Best Practices
-description:
+description: Learn how to evaluate, set, and manage row-level TTL for datasets using APIs in Adobe Experience Platform. This guide provides best practices, use cases, and step-by-step instructions to optimize data hygiene and storage efficiency while ensuring effective data lifecycle management.
 ---
 # Manage Your data lifecycle with TTL: API use cases and best practices
 
-Briefly introduce the document's purpose: to guide users in evaluating, setting, and managing row-level TTL for datasets using APIs. Highlight benefits such as improved data hygiene and cost efficiency.
-<!-- What does it do? -->
-<!-- why does a user want to do that? -->
+Managing data efficiently is critical to maintaining performance, controlling costs, and ensuring clean datasets. You can perform row-level expiration Time-To-Live (TTL) to automatically remove outdated data from your Adobe Experience Platform datasets, keeping your storage optimized and relevant. 
+
+<!-- By automating data cleanup, you can reduce storage costs, improve system performance, and minimize the manual effort required to manage data retention. -->
+
+This guide explains how to evaluate, set, and manage TTL with the Catalog API to streamline data lifecycle management. By implementing TTL, you can reduce storage costs by automatically removing outdated data, maintain data hygiene by keeping datasets focused and relevant, and enhance query performance by minimizing outdated records. Effective TTL management also helps optimize data retention to align with business needs, keeping your datasets efficient and cost-effective.
+
+In this guide, you'll learn when and why to apply TTL to your datasets so you can configure the optimal settings for your data lifecycle. You'll also learn how to check, set, and update TTL values using API calls for seamless workflow integration. Additionally, this guide covers best practices to help you avoid common pitfalls and implement TTL effectively, keeping your data optimized and well-managed. 
 
 >[!IMPORTANT]
 >
@@ -43,6 +47,10 @@ Briefly introduce the document's purpose: to guide users in evaluating, setting,
 ## Get started with TTL management
 
 Section intro.
+
+>[!NOTE]
+>
+>This document covers row-level expiration, which deletes individual expired rows within a dataset while keeping the dataset itself intact. It does not apply to dataset expiration, which removes entire datasets and is managed by a separate feature. For dataset-level expiration, refer to the [dataset expiration API documentation](../../hygiene/api/dataset-expiration.md).
 
 ### How to Check Current TTL Settings
 
