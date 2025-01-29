@@ -28,13 +28,13 @@ When planning to create your own backup package within your organization, consid
 
 To successfully implement this use case, you must use multiple areas of Adobe Experience Platform. Ensure you have the necessary [attribute-based access control permissions](../../access-control/abac/overview.md) for all these areas, or ask your system administrator to grant you the necessary permissions.
 
-  - [Sandbox tooling](../ui/sandbox-tooling.md)
-  - [Sandbox management](../ui/user-guide.md)
-  - [License usage dashboard](../../landing/license-usage-and-guardrails/license-usage-dashboard.md)
-  - [Datasets](../../catalog/datasets/overview.md)
-  - [Schemas](../../xdm//home.md)
-  - [Audiences](../../segmentation/home.md)
-  - [Journeys from Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/journey)
+- [Sandbox tooling](../ui/sandbox-tooling.md)
+- [Sandbox management](../ui/user-guide.md)
+- [License usage dashboard](../../landing/license-usage-and-guardrails/license-usage-dashboard.md)
+- [Datasets](../../catalog/datasets/overview.md)
+- [Schemas](../../xdm//home.md)
+- [Audiences](../../segmentation/home.md)
+- [Journeys from Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/journey)
 
 ## How to achieve the use case: high-level overview {#achieve-the-use-case-high-level}
 
