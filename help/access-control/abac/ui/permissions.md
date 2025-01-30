@@ -4,7 +4,7 @@ title: Attribute-based Access Control Manage Role Permissions
 description: This document provides information on configuring permissions for a role through the Permissions interface in Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 ---
-# Manage permissions for a role
+# Manage permissions for a role {#manage-role-permissions}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about"
@@ -41,7 +41,7 @@ To remove a filter, select the "X" on the pill icon for the filter in question, 
 
 ![The Roles dashboard in the Permissions UI with the X and Clear all selections highlighted on the chosen filters.](../../images/flac-ui/flac-clear-filters.png)
 
-## Role details
+## Role details {#role-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_details"

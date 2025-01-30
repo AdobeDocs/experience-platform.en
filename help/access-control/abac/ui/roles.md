@@ -8,7 +8,7 @@ exl-id: 85699716-339d-4992-8390-95563c7ea7fe
 
 Roles define the access that an administrator, a specialist, or an end-user has to resources in your organization. In a role-based access control environment, user access provisioning is group through common responsibilities and needs. A role has a given set of permissions and members of your organization can be assigned to one or more roles, depending on the scope of view or write access they need.
 
-## Create a new role
+## Create a new role {#create-new-role}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about_create"
