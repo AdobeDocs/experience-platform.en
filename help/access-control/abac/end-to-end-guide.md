@@ -63,14 +63,6 @@ The Permissions workspace for Platform UI appears, opening on the **[!UICONTROL 
 >abstract="Labels allow you to categorize datasets and fields according to usage and access policies that apply to that data. Platform provides several Adobe-defined "core" data usage labels, which cover a wide variety of common restrictions applicable to data governance. For example, Sensitive "S" labels such as RHD (Regulated Health Data) allow you to categorize data that refers to Protected Health Information (PHI). You can also define your own custom labels that fit your organization's needs."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#understanding-data-usage-labels" text="Data usage labels overview"
 
->[!CONTEXTUALHELP]
->id="platform_permissions_roles_details"
->title="Role overview"
->abstract="The role overview dialog displays the role's details including the resources and sandboxes that a given role is permitted to access. You can manage labels, users, user groups, and API credentials for the role by navigating to the corresponding tab within the role's workspace."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#understanding-data-usage-labels" text="Data usage labels overview"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#understanding-data-usage-labels" text="Data usage labels overview"
-
-
 Roles are ways to categorize the types of users interacting with your Platform instance and are building blocks of access control policies. A role has a given set of permissions, and members of your organization can be assigned to one or more roles, depending on the scope of access they need.
 
 To get started, select **[!UICONTROL Roles]** from the left navigation and then select **[!UICONTROL ACME Business Group]**.

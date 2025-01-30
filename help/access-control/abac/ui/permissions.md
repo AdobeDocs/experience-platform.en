@@ -6,6 +6,12 @@ exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 ---
 # Manage permissions for a role
 
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about"
+>title="What are roles?"
+>abstract="Roles define the access that an administrator, a specialist, or an end-user has to resources in your organization. They categorize the users interacting with your Platform instance and are the building blocks of access control policies. A role has a given set of permissions and members of your organization can be assigned to one or more roles, depending on the scope of view or write access they need."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html" text="Manage roles"
+
 >[!IMPORTANT]
 >
 >Access control uses user ID (an internal unique id assigned to a user) for granting permissions. When an organization is migrated from Adobe ID to Business ID, all permissions set for its users will be lost because the user ID changes and access control will use the newly generated user ID. If your organization is migrated to Business ID, please contact your Adobe representative to migrate your user ID from Adobe ID to Business ID.
@@ -15,12 +21,6 @@ Permissions is the area of Experience Cloud where administrators can define user
 Through Permissions, you can create and manage roles, as well as assign the desired resource permissions for these roles. Permissions also allow you to manage the labels, sandboxes, and users associated with a specific role.
 
 Immediately after [creating a new role](#create-a-new-role), you are returned to the **[!UICONTROL Roles]** tab. If you are editing permissions for an existing role, select the role from the **[!UICONTROL Roles]** tab. Alternatively, use the filter option to filter the results to find a role.
-
->[!CONTEXTUALHELP]
->id="platform_permissions_roles_about"
->title="What are roles?"
->abstract="Roles define the access that an administrator, a specialist, or an end-user has to resources in your organization. They categorize the users interacting with your Platform instance and are the building blocks of access control policies. A role has a given set of permissions and members of your organization can be assigned to one or more roles, depending on the scope of view or write access they need."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html" text="Manage roles"
 
 ## Filter roles
 
@@ -43,18 +43,18 @@ To remove a filter, select the "X" on the pill icon for the filter in question, 
 
 ## Role details
 
-Select the role from the **[!UICONTROL Roles]** tab, which will open the role's [!UICONTROL Details] dashboard.
-
-![The Details workspace for the selected role is displayed with the overview information highlighted.](../../images/flac-ui/flac-details.png)
-
-The [!UICONTROL Details] dashboard provides an overview of the role. The overview displays the role name, description, creator, and last modifier, along with the creation and modification dates. It also shows the permissions attached to the role and the list of assigned sandboxes. The role name and description can be modified, if required.
-
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_details"
 >title="Role overview"
 >abstract="The role overview dialog displays the role's details including the resources and sandboxes that a given role is permitted to access. You can manage labels, users, user groups, and API credentials for the role by navigating to the corresponding tab within the role's workspace."
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-labels-for-a-role" text="Manage labels for a role"
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-users-for-a-role" text="Manage users for a role"
+
+Select the role from the **[!UICONTROL Roles]** tab, which will open the role's [!UICONTROL Details] dashboard.
+
+![The Details workspace for the selected role is displayed with the overview information highlighted.](../../images/flac-ui/flac-details.png)
+
+The [!UICONTROL Details] dashboard provides an overview of the role. The overview displays the role name, description, creator, and last modifier, along with the creation and modification dates. It also shows the permissions attached to the role and the list of assigned sandboxes. The role name and description can be modified, if required.
 
 ## Manage labels for a role
 
