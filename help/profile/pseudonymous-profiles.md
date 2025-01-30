@@ -7,7 +7,7 @@ exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
 ---
 # Pseudonymous profiles data expiration
 
-In Adobe Experience Platform, you can configure expiration times for Pseudonymous profiles, allowing you to automatically remove data from the Profile store that is no longer valid or useful for your use cases.
+In Adobe Experience Platform, you can configure data expiration times for Pseudonymous profiles, allowing you to automatically remove data from the Profile store that is no longer valid or useful for your use cases.
 
 ## Pseudonymous profile {#pseudonymous-profile}
 
