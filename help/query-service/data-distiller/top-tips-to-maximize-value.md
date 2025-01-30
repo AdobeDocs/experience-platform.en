@@ -3,6 +3,7 @@ title: Top Tips to Maximize Value with Adobe Experience Platform Data Distiller
 description: Learn to maximize value with Adobe Experience Platform Data Distiller by enriching Real-Time Customer Profile data and leveraging behavioral insights to build targeted audiences. This resource includes a sample dataset and a case study demonstrating how to apply the Recency, Frequency, Monetary (RFM) model for customer segmentation.
 hide: true
 hidefromtoc: true
+exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
 ---
 # Top tips to maximize value with Adobe Experience Platform Data Distiller
 
