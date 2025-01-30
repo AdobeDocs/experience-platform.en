@@ -60,31 +60,16 @@ The Permissions workspace for Platform UI appears, opening on the **[!UICONTROL 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="What are labels?"
->abstract="Labels allow you to categorize datasets and fields according to usage policies that apply to that data. Platform provides several Adobe-define "core" data usage labels, which cover a wide variety of common restrictions applicable to data governance. For example, Sensitive "S" labels such as RHD (Regulated Health Data) allow you to categorize data that refers to Protected Health Information (PHI). You can also define your own custom labels that fit your organization's needs."
+>abstract="Labels allow you to categorize datasets and fields according to usage and access policies that apply to that data. Platform provides several Adobe-defined "core" data usage labels, which cover a wide variety of common restrictions applicable to data governance. For example, Sensitive "S" labels such as RHD (Regulated Health Data) allow you to categorize data that refers to Protected Health Information (PHI). You can also define your own custom labels that fit your organization's needs."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#understanding-data-usage-labels" text="Data usage labels overview"
-
->[!CONTEXTUALHELP]
->id="platform_permissions_labels_about_create"
->title="Create new label"
->abstract="You can create your own custom labels to fit the needs of your organization. Custom labels can be used to apply both data governance and access control configurations to your data."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#manage-labels" text="Manage custom labels"
-
->[!CONTEXTUALHELP]
->id="platform_permissions_roles_about"
->title="What are roles?"
->abstract="Roles are ways to categorize the types of users that are interacting with your Platform instance and are building blocks of access control policies. A role has a given set of permissions and members of your organization can be assigned to one or more roles, depending on the scope of view or write access they need."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html" text="Manage roles"
-
->[!CONTEXTUALHELP]
->id="platform_permissions_roles_about_create"
->title="Create new role"
->abstract="You can create a new role to better categorize users that are accessing your Platform instance. For example, you can create a role for an Internal Marketing Team and apply the RHD label to that role, allowing your Internal Marketing Team to access Protected Health Information (PHI). Alternatively, you can also create a role for an External Agency and deny that role access to PHI data by not applying the RHD label to that role."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html#create-a-new-role" text="Create a new role"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_details"
 >title="Role overview"
->abstract="The role overview dialog displays the resources and sandboxes that a given role is permitted to access."
+>abstract="The role overview dialog displays the role's details including the resources and sandboxes that a given role is permitted to access. You can manage labels, users, user groups, and API credentials for the role by navigating to the corresponding tab within the role's workspace."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#understanding-data-usage-labels" text="Data usage labels overview"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#understanding-data-usage-labels" text="Data usage labels overview"
+
 
 Roles are ways to categorize the types of users interacting with your Platform instance and are building blocks of access control policies. A role has a given set of permissions, and members of your organization can be assigned to one or more roles, depending on the scope of access they need.
 

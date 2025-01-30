@@ -46,6 +46,12 @@ The following video is intended to support your understanding of creating a new 
 
 >[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
 
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about_create"
+>title="Create new role"
+>abstract="Create new roles to better categorize users interacting with your Platform instance. For example, you can create a role for an internal marketing team and apply the RHD label to that role, allowing your internal marketing team to access Protected Health Information (PHI). Alternatively, you can also create a role for an external agency and deny that role access to PHI data by not applying the RHD label to that role."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html" text="Manage a role"
+
 ## Duplicate a role
 
 To duplicate an existing role, select the role from the **[!UICONTROL Roles]** tab. Alternatively, use the filter option to filter the results to find the role you want to duplicate.
