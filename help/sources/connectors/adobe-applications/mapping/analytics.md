@@ -31,8 +31,6 @@ Read the following table for information on streaming media parameters.
 | `videoplayername` | `mediaReporting.sessionDetails.playerName ` | string | The name of the video player. |
 | `videochannel` | `mediaReporting.sessionDetails.channel` | string | The distribution channel from where the content was played. |
 | `videocontenttype` | `mediaReporting.sessionDetails.contentType` | string | The type of stream delivery used for the content. This is automatically set to "Video" for all video views. Recommended values include: VOD, Live, Linear, UGC, DVOD, Radio, Podcast, Audiobook, and Song. |
-| (only in ava.e2e rsid: evar9) | `mediaReporting.sessionDetails.appVersion` | string | The SDK version used by the player. You can customize this value to fit your player type. |
-| (only in ava.e2e rsid: evar10) | `implementationDetails.version` | string |
 | `videonetwork` | `mediaReporting.sessionDetails.network` | string | The network or channel name. |
 | `videofeedtype` | `mediaReporting.sessionDetails.feed` | string | The type of feed. This can either represent actual feed-related data such as "East HD" or "SD", or the source of the feed, such as a URL. |
 | `videosegment` | `mediaReporting.sessionDetails.segment` | string |
@@ -48,12 +46,11 @@ Read the following table for information on streaming media parameters.
 | `videoprogress50` | `mediaReporting.sessionDetails.hasProgress50` | boolean | A boolean value that indicates whether the playhead of a given video has passed the 50% marker of the total video length. The marker is only counted once, even if seeking backwards. If seeking forward, markers that are skipped are not counted. |
 | `videoprogress75` | `mediaReporting.sessionDetails.hasProgress75` | boolean | A boolean value that indicates whether the playhead of a given video has passed the 75% marker of the total video length. The marker is only counted once, even if seeking backwards. If seeking forward, markers that are skipped are not counted.|
 | `videoprogress95` | `mediaReporting.sessionDetails.hasProgress95` | boolean | A boolean value that indicates whether the playhead of a given video has passed the 95% marker of the total video length. The marker is only counted once, even if seeking backwards. If seeking forward, markers that are skipped are not counted. |
-| (only in ava.e2e rsid: event44) | `mediaReporting.sessionDetails.estimatedStreams` |
 | `videopause` | `mediaReporting.sessionDetails.hasPauseImpactedStreams` | boolean | A boolean value hat indicates if one or more pauses occurred during the playback of a single media item. |
 | `videopausecount` | `mediaReporting.sessionDetails.pauseCount` | integer | The number of pause periods that occurred during playback. |
 | `videopausetime` | `mediaReporting.sessionDetails.pauseTime` | integer | The total duration (in seconds) in which playback was paused by a user. |
 | `videomvpd` | `mediaReporting.sessionDetails.mvpd` | string | An MVPD identifier provided via Adobe authentication. |
-| videoauthorized evar21 | `mediaReporting.sessionDetails.authorized` | string |  Defines that the user has been authorized via Adobe authentication. |
+| `videoauthorized` | `mediaReporting.sessionDetails.authorized` | string |  Defines that the user has been authorized via Adobe authentication. |
 | `videodaypart` | `mediaReporting.sessionDetails.dayPart` | Defines the time of the day when the content was broadcast or played. |
 | `videoresume` | `mediaReporting.sessionDetails.hasResume` | boolean | A boolean value that marks each playback that was resumed after more than 30 minutes of buffer, pause, or a stall period. |
 | `videosegmentviews` | `mediaReporting.sessionDetails.hasSegmentView` | boolean | A boolean value that indicates that at least one frame has been viewed. This frame does not have to be the first frame. |
