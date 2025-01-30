@@ -141,7 +141,7 @@ Watch the following video to learn how you can use AI Assistant to execute more 
 
 ### Use AI Assistant for Customer Support
 
-Watch the following video to learn how you can use AI Assistant for Customer Support.
+Watch the following video to learn how you can use AI Assistant for Customer Support to seamlessly troubleshoot without leaving your workflows.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3443183?learn=on)
 
