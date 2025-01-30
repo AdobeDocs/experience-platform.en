@@ -17,6 +17,7 @@ role: User,Developer
 - Data Distiller {#data-distiller}
     - [Overview](data-distiller/overview.md)
     - [License usage](data-distiller/license-usage.md)
+    - [Top tips to maximize value](data-distiller/top-tips-to-maximize-value.md)
     - Derived datasets {#derived-datasets}
         - [Overview](data-distiller/derived-datasets/overview.md)
         - [Create derived datasets with SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
@@ -38,12 +39,12 @@ role: User,Developer
     - [Feature engineering](advanced-statistics/feature-engineering.md)
     - [Models](advanced-statistics/models.md)
     - [Feature transformation](advanced-statistics/feature-transformation.md)
-    Implement models {#implement-models}
+    - Implement models {#implement-models}
         - [Implement models](advanced-statistics/implement-models/implement-models.md)
         - [Regression](advanced-statistics/implement-models/regression.md)
         - [Classification](advanced-statistics/implement-models/classification.md)
         - [Clustering](advanced-statistics/implement-models/clustering.md)
-    Examples {#examples}
+    - Examples {#examples}
         - [Bot filtering using statistics and machine learning](advanced-statistics/examples/statistics-and-ml-bot-filtering.md)
         - [Predict customer churn using SQL-based logistic regression](advanced-statistics/examples/predict-customer-churn.md)
 - Data Distiller audiences {#data-distiller-audiences}
