@@ -7,6 +7,10 @@ exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
 ---
 # Google Cloud Storage connector
 
+>[!IMPORTANT]
+>
+>You can now use the [!DNL Google Cloud Storage] source when running Adobe Experience Platform on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../../landing/multi-cloud.md).
+
 Adobe Experience Platform provides native connectivity for cloud providers like AWS, [!DNL Google Cloud Platform], and [!DNL Azure], allowing you to bring your data from these systems.
 
 Cloud storage sources can bring your own data into Platform without the need to download, format, or upload. Ingested data can be formatted as JSON or Parquet that is compliant with Experience Data Model (XDM), or in a delimited format. Every step of the process is integrated into the sources workflow. Platform allows you to bring in data from [!DNL Google Cloud Storage] through batches.

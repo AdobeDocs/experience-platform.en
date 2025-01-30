@@ -7,7 +7,7 @@ exl-id: ba131442-ff20-4854-87fe-918aa313382d
 ---
 # Getting Started with Self-Serve Sources (Batch SDK)
 
-Self-Serve Sources (Batch SDK) allows you to integrate your own REST-based source to bring batch data to Adobe Experience Platform. This document provides an introduction to the core concepts you need to know before attempting to make calls to the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Self-Serve Sources (Batch SDK) allows you to integrate your own REST-based source to bring batch data to Adobe Experience Platform. This document provides an introduction to the core concepts you need to know before attempting to make calls to the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Prerequisites
 
