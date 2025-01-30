@@ -12,3 +12,4 @@ Through a case study, you will analyze user behavioral data and create a Recency
 
 [Select the link to download the sample CSV data](../resources/movie-data.csv)
 
+<!-- This page was published as a proof of concept. Requested by the Query Service PM -->
