@@ -9,7 +9,7 @@ exl-id: d25a358b-73c1-468b-a9c5-808385689932
 
 [!UICONTROL Payment Item] is a standard Experience Data Model (XDM) data type that describes a payment associated with an order that defines the type of payment, the amount, and the associated currency.
 
-<img src='../images/data-types/payment-item.PNG' width=400 /><br />
+![payment item image](../images/data-types/payment-item.PNG){width=400}
 
 | Property | Data type | Description |
 | --- | --- | --- |
