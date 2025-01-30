@@ -9,15 +9,23 @@ The Experience Platform Web SDK library contains multiple modules which enable t
 
 When you create a custom Web SDK build, you select only the modules that you need for your specific implementation. This reduces the size of the Web SDK library and increases performance.
 
-## Use case {#use-case}
+## Use cases {#use-case}
 
-The main use case of creating your own custom Web SDK build is aimed towards reducing the size of the library and increasing performance.
+The main goal of creating your own custom Web SDK build is reducing the size of the library and increasing performance.
 
-For instance, let's consider you want to deploy Web SDK on your website, but you have no media for which to collect data.
+Below are sample use cases where custom builds can help.
 
-By creating a custom Web SDK build, you can exclude the [!DNL Media Analytics] and the [!DNL Streaming Media] modules from the build, which can decrease the size of your Web SDK build by up to 50% and increase loading speed.
+### Media Analytics removal {#media-analytics-removal}
 
+A company wants to deploy Web SDK on their website, but they have no media for which to collect data.
 
+By creating a custom Web SDK build, they can exclude the [!DNL Media Analytics] and the [!DNL Streaming Media] modules from the build, which can decrease the size of the Web SDK build by up to 50% and increase loading speed.
+
+### Personalization removal {#personalization}
+
+A company wants to deploy Web SDK on their website to collect user metrics, but has no plans to use Adobe Target or Journey Optimizer to personalize the user experience.
+
+By creating a custom Web SDK build, they can exclude the [!DNL Personalization] module from the Web SDK build and decrease the size of the library while still collecting the metrics they need.
 
 ## Prerequisites {#prerequisites}
 
