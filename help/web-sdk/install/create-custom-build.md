@@ -41,20 +41,19 @@ Some Web SDK commands depend on certain modules being included in the build.
 
 The table below shows the correspondence between Web SDK modules and the commands they include.
 
-| Module dependency | Configuration parameters | Commands |
-|---------|----------|---------|
-| Activity Collector | [`clickCollectionEnabled`](../commands/configure/clickcollectionenabled.md) | N/A |
-| Audiences | N/A | N/A |
-| Context | [`context`](../commands/configure/context.md) | M/A |
-| Rules Engine | `personalizationStorageEnabled` | <ul><li>`evaluateRulesets`</li><li>[`subscribeRulesetItems`](../commands/subscriberulesetitems.md)</li></ul> |
-| Event Merge | N/A | `createEventMergeId` |
-| Media Analytics Bridge | N/A | [`getMediaAnalyticsTracker`](../commands/getmediaanalyticstracker.md) |
-| Personalization | <ul><li>[`prehidingStyle`](../commands/configure/prehidingstyle.md)</li><li>[`targetMigrationEnabled`](../commands/configure/targetmigrationenabled.md)</li><li>[`autoTrackPropositionInteractions`](../commands/configure/autotrackpropositioninteractionsenabled.md)</li></ul>  | N/A |
-| Consent | [`defaultConsent`](../commands/configure/defaultconsent.md) | [`setConsent`](../commands/setconsent.md) |
-| Streaming Media | [`streamingMedia`](../commands/configure/streamingmedia.md) | <ul><li>[`createMediaSession`](../commands/createmediasession.md)</li><li>[`sendMediaEvent`](../commands/sendmediaevent.md)</li></ul> |
+| Module dependency | Configuration parameters | Commands | Size category |
+|---------|----------|---------|---------|
+| Activity Collector | [`clickCollectionEnabled`](../commands/configure/clickcollectionenabled.md) | N/A | Medium |
+| Audiences | N/A | N/A | Small |
+| Context | [`context`](../commands/configure/context.md) | N/A | Small |
+| Rules Engine | `personalizationStorageEnabled` | |<ul><li>`evaluateRulesets`</li><li>[`subscribeRulesetItems`](../commands/subscriberulesetitems.md)</li></ul> | Medium |
+| Event Merge | N/A | `createEventMergeId` | Small |
+| Media Analytics Bridge | N/A | [`getMediaAnalyticsTracker`](../commands/getmediaanalyticstracker.md) | Large |
+| Personalization | <ul><li>[`prehidingStyle`](../commands/configure/prehidingstyle.md)</li><li>[`targetMigrationEnabled`](../commands/configure/targetmigrationenabled.md)</li><li>[`autoTrackPropositionInteractions`](../commands/configure/autotrackpropositioninteractionsenabled.md)</li></ul>  | N/A | Large |
+| Consent | [`defaultConsent`](../commands/configure/defaultconsent.md) | [`setConsent`](../commands/setconsent.md) | Small |
+| Streaming Media | [`streamingMedia`](../commands/configure/streamingmedia.md) | <ul><li>[`createMediaSession`](../commands/createmediasession.md)</li><li>[`sendMediaEvent`](../commands/sendmediaevent.md)</li></ul> | Large |
 
 ## Create a custom Web SDK build using the NPM package {#create-custom-build}
-
 
 1. Open your terminal and run `npx @adobe/alloy`. You are asked to select the Web SDK components that you would like your custom build to include.
 
