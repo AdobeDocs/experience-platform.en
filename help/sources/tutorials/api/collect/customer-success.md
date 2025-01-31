@@ -138,7 +138,7 @@ For detailed steps on how to create a target XDM schema, see the tutorial on [cr
 
 ## Create a target dataset {#target-dataset}
 
-A target dataset can be created by performing a POST request to the [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), providing the ID of the target schema within the payload.
+A target dataset can be created by performing a POST request to the [Catalog Service API](https://developer.adobe.com/experience-platform-apis/references/catalog/), providing the ID of the target schema within the payload.
 
 For detailed steps on how to create a target dataset, see the tutorial on [creating a dataset using the API](../../../../catalog/api/create-dataset.md).
 
@@ -204,7 +204,7 @@ A successful response returns the new target connection's unique identifier (`id
 
 In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema that the target dataset adheres to.
 
-To create a mapping set, make a POST request to the `mappingSets` endpoint of the [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) while providing your target XDM schema `$id` and the details of the mapping sets you want to create.
+To create a mapping set, make a POST request to the `mappingSets` endpoint of the [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/) while providing your target XDM schema `$id` and the details of the mapping sets you want to create.
 
 **API format**
 

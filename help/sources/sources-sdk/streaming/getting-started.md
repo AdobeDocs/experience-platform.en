@@ -10,7 +10,7 @@ badge: Beta
 >
 >Self-Serve Sources Streaming SDK is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
-Self-Serve Sources (Streaming SDK) allows you to integrate your own source to bring streaming data to Adobe Experience Platform. This document provides an introduction to the core concepts you need to know before attempting to make calls to the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Self-Serve Sources (Streaming SDK) allows you to integrate your own source to bring streaming data to Adobe Experience Platform. This document provides an introduction to the core concepts you need to know before attempting to make calls to the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## High-level process
 

@@ -40,6 +40,14 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 >id="platform_dashboards_licenseusage_predictedusage_computehours"
 >title="Predicted Compute Hours"
 >abstract="Your usage might reach the licensed amount. To assess or reduce your compute hours, navigate to Queries > Log to review your query history. If you do not have permission to access the Queries workspace, please contact your administrator."
+>additional-url="https://experience.adobe.com/#/platform/query/log" text="Queries Log workspace"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_predictedusage_addressableaudience"
+>title="Predicted Addressable Audience"
+>abstract="Your usage might reach the licensed amount. To reduce usage, you can configure dataset or pseudonymous profile data expirations for sandboxes and datasets."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/event-expirations" text="Experience Event expirations"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Pseudonymous profiles data expiration"
 
 You can view important information about your organization's license usage through the Adobe Experience Platform [!UICONTROL License usage] dashboard. The information displayed here is captured during a daily snapshot of your Platform instance. 
 

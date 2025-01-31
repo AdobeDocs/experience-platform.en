@@ -38,7 +38,7 @@ Use these parameters to define your SQL audience creation query:
 | `schema`           | Optional. Defines the XDM schema for the dataset created by the query. |
 | `table_name`       | Name of the table and audience.                                  |
 | `primary_identity` | Specifies the primary identity column for the audience.          |
-| `identity_namespace` | Namespace of the identity. You can use an existing namespace or create a new one. To see available namespaces, use the `SHOW NAMESPACE` command. To create a new namespace, use `CREATE NAMESPACE`. For example: `CREATE NAMESPACE lumaCrmId WITH (code='testns', TYPE='Email')`. |
+| `identity_namespace` | Namespace of the identity. You can use an existing namespace or create a new one. To see available namespaces, use the `SHOW NAMESPACES` command. To create a new namespace, use `CREATE NAMESPACE`. For example: `CREATE NAMESPACE lumaCrmId WITH (code='testns', TYPE='Email')`. |
 | `select_query`     | A SELECT statement defining the audience. The syntax of the SELECT query can be found in the [SELECT queries](../sql/syntax.md#select-queries) section. |
 
 {style="table-layout:auto"}

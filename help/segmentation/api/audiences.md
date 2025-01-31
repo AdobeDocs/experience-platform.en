@@ -39,6 +39,7 @@ The following query parameters can be used when retrieving a list of audiences:
 | `property` | A filter that allows you to specify audiences that **exactly** match an attribute's value. This is written in the format `property=` | `property=audienceId==test-audience-id` |
 | `name` | A filter that allows you to specify audiences whose names **contain** the provided value. This value is case insensitive. | `name=Sample` |
 | `description` | A filter that allows you to specify audiences whose descriptions **contain** the provided value. This value is case insensitive.  | `description=Test Description` |
+| `entityType` | A filter that allows you to specify the type of audience you're looking for. | `entityType=_xdm.context.account` |
 
 **Request**
 

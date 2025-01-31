@@ -990,7 +990,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-sandbox-name: <SANDBOX-NAME>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-  "name": "Data Landing Zone(DLZ) Base Connection"
+  "name": "Data Landing Zone Base Connection",
+  "connectionSpec": {
+    "id": "3567r537-2a7b-4583-ac39-ed38d4b848e8",
+    "version": "1.0"
+  }
 }'
 ```
 
@@ -2459,6 +2463,10 @@ Note the difference in file format between the two file types, when compressed:
 ## API error handling {#api-error-handling}
 
 The API endpoints in this tutorial follow the general Experience Platform API error message principles. Refer to [API status codes](/help/landing/troubleshooting.md#api-status-codes) and [request header errors](/help/landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide for more information on interpreting error responses.
+
+## Known limitations {#known-limitations}
+
+View [known limitations](/help/destinations/ui/export-datasets.md#known-limitations) about dataset exports.
 
 ## Frequently Asked Questions {#faq}
 
