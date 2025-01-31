@@ -110,7 +110,7 @@ The following tables outline best practices you can follow when using AI Assista
 
 {style="table-layout:auto"}
 
-## Dataset insights {#dataset-insights}
+## Dataset Observability {#dataset-observability}
 
 AI Assistant can now answer questions about specific dataset metrics such as storage size and row count.
 
@@ -121,7 +121,7 @@ AI Assistant can now answer questions about specific dataset metrics such as sto
 
 Additionally, you can convey similar intent through a number of different variations to the four aforementioned questions.
 
-+++Select to view accepted variations of dataset insights questions
++++Select to view accepted variations of dataset observability questions
 
 * What are the top five datasets by size?
 * Which dataset has the largest number of rows?
@@ -141,14 +141,14 @@ Additionally, you can convey similar intent through a number of different variat
 
 +++
 
-You can also format your data insights questions with a qualifier to filter your query by a certain time period:
+You can also refine your data observability questions with a qualifier to filter your query by a certain time period:
 
 * Datasets receiving batches in last (x) days
 * Datasets not receiving batches in last (x) days
 * Datasets with the most data ingested in last (x) days
 * Record count for a specific dataset in the last (x) days
 
-+++Select to view accepted variations of dataset insights questions
++++Select to view accepted variations of dataset observability questions
 
 * How many datasets received batches in the last (x) days?
 * Which datasets have received batches in the past (x) days?
