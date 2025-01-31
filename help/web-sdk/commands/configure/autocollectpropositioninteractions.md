@@ -117,11 +117,11 @@ alloy("sendEvent", {
 ## Enable automatic propositions and interactions click tracking through the Web SDK tag extension {#tag-extension}
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credential.
-2. Navigate to **Data Collection** > **Tags**.
-3. Select the desire tag property.
-4. Navigate to **Extensions**, then select **Configure** on the Adobe Experience Platform Web SDK card.
-5. Scroll down to the **[!UICONTROL Data Collection]** section, then select the checkbox **Enable propositions and interaction link tracking**.
-6. Select **Save**, then publish your changes.
+1. Navigate to **Data Collection** > **Tags**.
+1. Select the desire tag property.
+1. Navigate to **Extensions**, then select **Configure** on the Adobe Experience Platform Web SDK card.
+1. Scroll down to the **[!UICONTROL Data Collection]** section, then select the checkbox **Enable propositions and interaction link tracking**.
+1. Select **Save**, then publish your changes.
 
 ## Enable automatic propositions and interactions link tracking through the Web SDK JavaScript library {#library}
 
