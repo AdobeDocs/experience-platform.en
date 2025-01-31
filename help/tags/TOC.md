@@ -200,9 +200,9 @@ role: Developer
     * [Vimeo Playback](https://exchange.adobe.com/apps/ec/108937)
     * [Web Vitals](https://exchange.adobe.com/apps/ec/106769)
     * [XDM Composer](https://exchange.adobe.com/apps/ec/106062)
-    * [Yahoo Dot](https://exchange.adobe.com/apps/ec/106062)
+    <!-- * [Yahoo Dot](https://exchange.adobe.com/apps/ec/106062) -->
     * [Yext Conversion Tracking](https://exchange.adobe.com/apps/ec/103174)
-    * [[!DNL Youtube] Playback](https://exchange.adobe.com/apps/ec/103174)
+    * [[!DNL Youtube] Playback](https://exchange.adobe.com/apps/ec/104160)
     * [!DNL YouTube] video tracking {#youtube}
       * [Overview](./extensions/client/youtube/overview.md)
       * [Release notes](./extensions/client/youtube/release-notes.md)
