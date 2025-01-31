@@ -1,8 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;
-solution: Experience Platform
 title: Connect Data Landing Zone to Adobe Experience Platform using the Flow Service API
-type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Data Landing Zone using the Flow Service API.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
 ---
@@ -23,9 +20,9 @@ This guide requires a working understanding of the following components of Exper
 * [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to successfully create a [!DNL Data Landing Zone] source connection using the [!DNL Flow Service] API.
-
 This tutorial also requires you to read the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md) to learn how to authenticate to Platform APIs and interpret the example calls provided in the documentation.
+
+The following sections provide additional information that you will need to know in order to successfully create a [!DNL Data Landing Zone] source connection using the [!DNL Flow Service] API.
 
 ## Retrieve a usable landing zone
 
@@ -57,7 +54,11 @@ curl -X GET \
 
 **Response**
 
-The following response returns information on a landing zone, including its corresponding `containerName` and `containerTTL`.
+Depending on your provider, a successful request returns the following:
+
+>[!BEGINTABS]
+
+>[!TAB Response on Azure]
 
 ```json
 {
@@ -70,6 +71,26 @@ The following response returns information on a landing zone, including its corr
 | --- | --- |
 | `containerName` | The name of the landing zone you retrieved. |
 | `containerTTL` | The expiration time (in days) applied to your data within the landing zone. Any within a given landing zone is deleted after seven days. |
+
+
+>[!TAB Response on AWS]
+
+```json
+{
+  "dlzPath": {
+    "bucketName": "dlz-prod-sandboxName",
+    "dlzFolder": "dlz-adf-connectors"
+  },
+  "dataTTL": {
+    "timeUnit": "days",
+    "timeQuantity": 7
+  },
+  "dlzProvider": "Amazon S3"
+}
+```
+
+>[!ENDTABS]
+
 
 ## Retrieve [!DNL Data Landing Zone] credentials
 
@@ -97,7 +118,11 @@ curl -X GET \
 
 **Response**
 
-The following response returns the credential information for your data landing zone, including your current `SASToken`, `SASUri`, `storageAccountName`, and expiry date.
+Depending on your provider, a successful request returns the following:
+
+>[!BEGINTABS]
+
+>[!TAB Response on Azure]
 
 ```json
 {
@@ -111,10 +136,43 @@ The following response returns the credential information for your data landing 
 
 | Property | Description |
 | --- | --- |
-| `containerName` | The name of your landing zone. |
-| `SASToken` | The shared access signature token for your landing zone. This string contains all of the information necessary to authorize a request. |
-| `SASUri` | The shared access signature URI for your landing zone. This string is a combination of the URI to the landing zone for which you are being authenticated to and its corresponding SAS token, |
-| `expiryDate` | The date when your SAS token will expire. You must refresh your token before the expiry date in order to continue using it in your application for uploading data to the Data Landing Zone. If you do not manually refresh your token before the stated expiry date, then it will automatically refresh and provide a new token when the GET credentials call is performed. |
+| `containerName` | The name of your [!DNL Data Landing Zone]. |
+| `SASToken` | The shared access signature token for your [!DNL Data Landing Zone]. This string contains all of the information necessary to authorize a request. |
+| `storageAccountName` | The name of your storage account. |
+| `SASUri` | The shared access signature URI for your [!DNL Data Landing Zone]. This string is a combination of the URI to the [!DNL Data Landing Zone] for which you are being authenticated to and its corresponding SAS token. |
+| `expiryDate` | The date when your SAS token will expire. You must refresh your token before the expiry date in order to continue using it in your application for uploading data to the [!DNL Data Landing Zone]. If you do not manually refresh your token before the stated expiry date, then it will automatically refresh and provide a new token when the GET credentials call is performed. |
+
+>[!TAB Response on AWS]
+
+```json
+{
+  "credentials": {
+    "clientId": "example-client-id",
+    "awsAccessKeyId": "example-access-key-id",
+    "awsSecretAccessKey": "example-secret-access-key",
+    "awsSessionToken": "example-session-token"
+  },
+  "dlzPath": {
+    "bucketName": "dlz-prod-sandboxName",
+    "dlzFolder": "user_drop_zone"
+  },
+  "dlzProvider": "Amazon S3",
+  "expiryTime": 1735689599
+}
+```
+
+| Property | Description |
+| --- | --- |
+| `credentials.clientId` | The client ID of your [!DNL Data Landing Zone] in AWS. |
+| `credentials.awsAccessKeyId` | The access key ID of your [!DNL Data Landing Zone] in AWS. |
+| `credentials.awsSecretAccessKey` | The secret access key of your [!DNL Data Landing Zone] in AWS. |
+| `credentials.awsSessionToken` | Your AWS session token. |
+| `dlzPath.bucketName` | The name of your AWS bucket. |
+| `dlzPath.dlzFolder` | The [!DNL Data Landing Zone] folder that you are accessing. |
+| `dlzProvider` | The [!DNL Data Landing Zone] provider that you are using. For Amazon, this will be [!DNL Amazon S3]. |
+| `expiryTime` |  The expiry time in unix time. |
+
+>[!ENDTABS]
 
 ### Retrieve the required fields using APIs
 

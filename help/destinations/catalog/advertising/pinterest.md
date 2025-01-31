@@ -61,11 +61,27 @@ To connect to this destination, follow the steps described in the [destination c
 
 ### Connection parameters {#parameters}
 
-While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
+When [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 *  **[!UICONTROL Ad Account ID]**: Your Pinterest advertiser ID.
+
+### Refresh authentication credentials {#refresh-authentication-credentials}
+
+Pinterest tokens expire every 30 days. Once the token is expired, data exports to the destination stop working. To prevent this situation, reauthenticate by performing the following steps:
+
+1. Navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**
+2. (Optional) Use the available filters on the page to display Pinterest accounts only.
+    ![Filter to show Pinterest accounts only](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-filters.png)
+3. Select the account that you want to refresh, select the ellipsis and select **[!UICONTROL Edit details]**. 
+    ![Select Edit details control](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-edit-details.png)
+4. In the modal window, select **[!UICONTROL Reconnect OAuth]** and reauthenticate with your Pinterest credentials.
+    ![Modal window with Reconnect OAuth option](/help/destinations/assets/catalog/advertising/pinterest-customer-list/reconnect-oauth-control.png)
+
+>[!SUCCESS]
+> 
+>Your authentication credentials are refreshed and their expiration time is reset to 30 days.
 
 ### Enable alerts {#enable-alerts}
 

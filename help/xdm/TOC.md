@@ -29,6 +29,7 @@ role: Developer
       * [Location](./schema/healthcare/classes/location.md)
     * Field groups {#field-groups}
       * [Account](./schema/healthcare/field-groups/account.md)
+      * [Appointment](./schema/healthcare/field-groups/appointment.md)
       * [Care Plan](./schema/healthcare/field-groups/care-plan.md)
       * [Coverage](./schema/healthcare/field-groups/coverage.md)
       * [Goal](./schema/healthcare/field-groups/goal.md)
