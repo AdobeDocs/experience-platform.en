@@ -19,7 +19,7 @@ Within Audience Portal, you can accomplish the following tasks:
 - [Create an audience](#create-audience)
   - [Use Segment Builder to create an audience](#segment-builder)
   - [Use Audience Composition to create an audience](#audience-composition)
-  - [Use Federated Audience Composition to create an audience using data from your existing data warehouse](#fac) (Limited availability)
+  - [Use Federated Audience Composition to create an audience using data from your existing data warehouse](#fac)
 - [Import externally generated audiences](#import-audience)
 
 To open Audience Portal, select the **[!UICONTROL Browse]** tab within the Segmentation section. 

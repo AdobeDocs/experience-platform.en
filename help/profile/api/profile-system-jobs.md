@@ -58,6 +58,8 @@ GET /system/jobs?{QUERY_PARAMETERS}
 
 >[!TAB Microsoft Azure]
 
++++ A sample request to view your system jobs.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -66,11 +68,15 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
++++
+
 >[!TAB Amazon Web Services (AWS)]
 
 >[!IMPORTANT]
 >
 >You **must** use the `x-sandbox-id` request header instead of the `x-sandbox-name` request header when using this endpoint with AWS. 
+
++++ A sample request to view your system jobs.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
@@ -79,6 +85,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-id: {SANDBOX_ID}' \
 ```
+
++++
 
 >[!ENDTABS]
 
@@ -127,8 +135,6 @@ A successful response includes a "children" array with an object for each delete
 }
 ```
 
-+++
-
 | Property | Description |
 | -------- | ----------- |
 | `_page.count` | The total number of requests. This response has been truncated for space. |
@@ -136,6 +142,8 @@ A successful response includes a "children" array with an object for each delete
 | `jobType` | The type of job being created. In this case, it will always return `"DELETE"`. |
 | `status` | The status of the delete request. Possible values include `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, and `"ERROR"`. |
 | `metrics` | An object that includes the number of records that have been processed (`"recordsProcessed"`) and the time in seconds that the request has been processing, or how long the request took to complete (`"timeTakenInSec"`). |
+
++++
 
 >[!TAB Amazon Web Services (AWS)]
 
@@ -216,6 +224,8 @@ POST /system/jobs
 
 >[!TAB Microsoft Azure]
 
++++ A sample request to delete a dataset.
+
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/ups/system/jobs \
@@ -229,6 +239,8 @@ curl -X POST \
       }'
 ```
 
++++
+
 | Property | Description |
 | -------- | ----------- |
 | `dataSetId` | The ID of the dataset you want to delete. |
@@ -238,6 +250,8 @@ curl -X POST \
 >[!IMPORTANT]
 >
 >You **must** use the `x-sandbox-id` request header instead of the `x-sandbox-name` request header when using this endpoint with AWS. 
+
++++ A sample request to delete a dataset.
 
 ```shell
 curl -X POST \
@@ -251,6 +265,8 @@ curl -X POST \
         "dataSetId": "5c802d3cd83fc114b741c4b5"
       }'
 ```
+
++++
 
 | Property | Description |
 | -------- | ----------- |
@@ -284,12 +300,12 @@ A successful response returns the details of the newly created delete request, i
 }
 ```
 
-+++
-
 | Property | Description |
 | -------- | ----------- |
 | `id` | The unique, system-generated, read-only ID of the delete request. |
 | `dataSetId` | The ID of the dataset, as specified in the POST request. |
+
++++
 
 >[!TAB Amazon Web Services (AWS)]
 
@@ -316,14 +332,14 @@ A successful response returns the details of the newly created system request.
 }
 ```
 
-+++
-
 | Property | Description |
 | -------- | ----------- |
 | `requestId` | The ID of the system job. |
 | `requestType` | The type of the system job. Possible values include `BACKFILL_TTL`, `DELETE_EE_BATCH`, and `TRUNCATE_DATASET`. |
 | `status` | The status of the system job. Possible values include `NEW`, `SUCCESS`, `ERROR`, `FAILED`, and `IN-PROGRESS`. |
 | `properties` | An object that contains batch and/or dataset IDs of the system job. |
+
++++
 
 >[!ENDTABS]
 
@@ -353,6 +369,8 @@ POST /system/jobs
 
 >[!TAB Microsoft Azure]
 
++++ A sample request to delete a batch.
+
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/ups/system/jobs \
@@ -367,6 +385,8 @@ curl -X POST \
       }'
 ```
 
++++
+
 | Property | Description |
 | -------- | ----------- |
 | `datasetId` | The ID of the dataset for the batch you wish to delete. |
@@ -377,6 +397,8 @@ curl -X POST \
 >[!IMPORTANT]
 >
 >You **must** use the `x-sandbox-id` request header instead of the `x-sandbox-name` request header when using this endpoint with AWS. 
+
++++ A sample request to delete a batch.
 
 ```shell
 curl -X POST \
@@ -392,13 +414,14 @@ curl -X POST \
       }'
 ```
 
++++
+
 | Property | Description |
 | -------- | ----------- |
 | `datasetId` | The ID of the dataset for the batch you wish to delete. |
 | `batchId` | The ID of the batch you wish to delete. |
 
 >[!ENDTABS]
-
 
 **Response**
 
@@ -411,6 +434,8 @@ curl -X POST \
 >[!TAB Microsoft Azure]
 
 A successful response returns the details of the newly created delete request, including a unique, system-generated, read-only ID for the request. This can be used to look up the request and check its status. The `"status"` for the request at time of creation is `"NEW"` until it begins processing. The `"batchId"` value in the response should match the `"batchId"` value sent in the request.
+
++++ A successful response for creating a delete request.
 
 ```json
 {
@@ -430,6 +455,8 @@ A successful response returns the details of the newly created delete request, i
 | `id` | The unique, system-generated, read-only ID of the delete request. |
 | `datasetId` | The ID of the specified dataset. |
 | `batchId` | The ID of the batch, as specified in the POST request. |
+
++++
 
 >[!TAB Amazon Web Services (AWS)]
 
@@ -456,14 +483,14 @@ A successful response returns the details of the newly created system request.
 }
 ```
 
-+++
-
 | Property | Description |
 | -------- | ----------- |
 | `requestId` | The ID of the system job. |
 | `requestType` | The type of the system job. Possible values include `BACKFILL_TTL`, `DELETE_EE_BATCH`, and `TRUNCATE_DATASET`. |
 | `status` | The status of the system job. Possible values include `NEW`, `SUCCESS`, `ERROR`, `FAILED`, and `IN-PROGRESS`. |
 | `properties` | An object that contains batch and/or dataset IDs of the system job. |
+
++++
 
 >[!ENDTABS]
 
@@ -511,13 +538,17 @@ GET /system/jobs/{DELETE_REQUEST_ID}
 
 >[!TAB Microsoft Azure]
 
++++ A sample request to view a profile job.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
+
++++
 
 >[!TAB Amazon Web Services (AWS)]
 
@@ -525,13 +556,17 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46
 >
 >You **must** use the `x-sandbox-id` request header instead of the `x-sandbox-name` request header when using this endpoint with AWS. 
 
++++ A sample request to view a profile job.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-id: {SANDBOX_ID}' \
+  -H 'x-sandbox-id: {SANDBOX_ID}'
 ```
+
++++
 
 >[!ENDTABS]
 
@@ -547,6 +582,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46
 >[!TAB Microsoft Azure]
 
 The response provides the details of the delete request, including its updated status. The ID of the delete request in the response (the `"id"` value) should match the ID sent in the request path.
+
++++ A successful response for viewing a delete request.
 
 ```json
 {
@@ -566,6 +603,8 @@ The response provides the details of the delete request, including its updated s
 | `jobType` | The type of job being created, in this case it will always return `"DELETE"`. |
 | `status` | The status of the delete request. Possible values include `NEW`, `PROCESSING`, `COMPLETED`, and `ERROR`. |
 | `metrics` | An array that includes the number of records that have been processed (`"recordsProcessed"`) and the time in seconds that the request has been processing, or how long the request took to complete (`"timeTakenInSec"`). |
+
++++
 
 >[!TAB Amazon Web Services (AWS)]
 
@@ -592,14 +631,14 @@ A successful response returns the details of the specified system request.
 }
 ```
 
-+++
-
 | Property | Description |
 | -------- | ----------- |
 | `requestId` | The ID of the system job. |
 | `requestType` | The type of the system job. Possible values include `BACKFILL_TTL`, `DELETE_EE_BATCH`, and `TRUNCATE_DATASET`. |
 | `status` | The status of the system job. Possible values include `NEW`, `SUCCESS`, `ERROR`, `FAILED`, and `IN-PROGRESS`. |
 | `properties` | An object that contains batch and/or dataset IDs of the system job. |
+
++++
 
 >[!ENDTABS]
 
@@ -619,46 +658,19 @@ Once the delete request status is `"COMPLETED"` you can confirm that the data ha
 DELETE /system/jobs/{DELETE_REQUEST_ID}
 ```
 
-|Parameter|Description|
-|---|---|
-|{DELETE_REQUEST_ID}|The ID of the delete request that you wish to remove.|
+| Parameter | Description |
+| --------- | ----------- |
+|{DELETE_REQUEST_ID} | The ID of the delete request that you wish to remove. |
 
 **Request**
 
->[!IMPORTANT]
->
->The following request differs between the Azure and AWS instances.
-
->[!BEGINTABS]
-
->[!TAB Microsoft Azure]
-
 ```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
+curl -X POST https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
-
->[!TAB Amazon Web Services (AWS)]
-
->[!IMPORTANT]
->
->You **must** use the `x-sandbox-id` request header instead of the `x-sandbox-name` request header when using this endpoint with AWS. 
-
-```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-id: {SANDBOX_ID}' \
-```
-
->[!ENDTABS]
-
 
 **Response**
 
