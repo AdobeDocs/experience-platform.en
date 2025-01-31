@@ -131,6 +131,12 @@ This page also provides you with an interface to update the metadata description
 
 ![An interface with graphs representing the ingestion rate of a selected dataset.](../../../../images/tutorials/create/campaign/dataset-activity.png)
 
+
+>[!IMPORTANT]
+>
+>Backfill of old event logs is not supported with the Adobe Campaign Managed Cloud Services Source Connector. In case backfill is required, please use custom workflow or custom implementation to export data to Amazon S3/Azure Blob and from Amazon S3/Azure Blob to Adobe Experience Platform dataset.
+>
+
 ## Next steps
 
 By following this tutorial, you have successfully created a dataflow to bring your Campaign v8 delivery logs and tracking logs data to Platform. Incoming data can now be used by downstream Platform services such as [!DNL Real-Time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
