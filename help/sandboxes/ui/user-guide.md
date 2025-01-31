@@ -76,6 +76,7 @@ Once you have finished creating the sandbox, refresh the page and the new sandbo
 >* A user-created production sandbox that is used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service can be reset after a warning message.
 >* Before initiating a sandbox reset, you will be required to delete your compositions manually to ensure that the associated audience data is cleaned up properly.
 >* The sandbox ID will change after the reset is complete.
+>* For Journey Optimizer B2B Edition, sandbox reset is **not currently supported**. Resetting or deleting a sandbox that is mapped to Journey Optimizer B2B Edition may result in permanent loss of data in Journey Optimizer B2B Edition and could require provisioning of a new Journey Optimizer B2B Edition instance.
 
 ### Delete audience compositions
 
