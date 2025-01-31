@@ -7,7 +7,6 @@ description: Create a custom Web SDK build which only contains the modules that 
 
 The Experience Platform Web SDK library includes multiple modules for various features like personalization, identity, link tracking, and more. Depending on your use cases, you might only need specific features instead of the entire library. Creating a custom Web SDK build allows you to select only the modules you need, reducing the library size and improving performance.
 
-
 ## Use cases {#use-case}
 
 Creating a custom Web SDK build helps reduce the library size and increase performance. Here are some examples:
