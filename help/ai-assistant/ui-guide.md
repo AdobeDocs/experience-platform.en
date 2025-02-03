@@ -81,7 +81,7 @@ In the example below, AI Assistant is asked the following query: **"Show me data
 
 ![A question about operational insights.](./images/op-insights-question.png)
 
-AI Assistant then responds with a table listing your dataflows and their corresponding IDs. To view the whole table of data, select the expand icon on the top right.
+AI Assistant then responds with a table listing your dataflows and their corresponding IDs. Select the download icon (![Download icon](/help/images/icons/download.png)) to download the table. To view the entire table, select the expand icon (![Expand icon](/help/images/icons/expand.png)).
 
 ![An operational insights answer](./images/op-insights-answer.png)
 
