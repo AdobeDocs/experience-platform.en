@@ -15,7 +15,7 @@ Customer AI displays errors when model training, scoring, and configuration fail
 
 In the event that **[!UICONTROL Failed]** or **[!UICONTROL Training issue]** is displayed, you can select the run status to open a side panel. The side panel  contains your **[!UICONTROL Last run status]** and **[!UICONTROL Last run details]**. **[!UICONTROL Last run details]** contains information on why the run failed. In the event that Customer AI is not able to provide details on your error, contact support with the error code thats provided.
 
-<img src='./images/errors/last-run-details.png' width=300 /><br />
+![](./images/errors/last-run-details.png){width=300}
 
 ## Unable to access Customer AI in Chrome incognito
 
@@ -33,7 +33,7 @@ To workaround this issue you need to add experience.adobe.com as a site that can
 
 If you receive the error "[!UICONTROL Model Quality is poor. We recommend creating a new app with the modified configuration]". Follow the recommended steps below to help troubleshoot.
 
-<img src='./images/errors/model-quality.png' width=300 /><br />
+![](./images/errors/model-quality.png){width=300}
 
 ### Recommended fix
 

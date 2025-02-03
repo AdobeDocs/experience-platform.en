@@ -9,7 +9,7 @@ exl-id: b84e48f9-bbb4-4b8b-9476-4bc1c455ecfd
 
 [!UICONTROL Phone number] is a standard XDM data type that describes the details of a phone number.
 
-<img src='../images/data-types/phone-number.png' width=600 /><br />
+![](../images/data-types/phone-number.png){width=600}
 
 | Property | Description |
 | --- | --- |
