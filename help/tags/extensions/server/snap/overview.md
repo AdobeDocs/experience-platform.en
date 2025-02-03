@@ -1,5 +1,5 @@
 ---
-title: Adobe Snapchat CAPI extension Integration
+title: Adobe Snapchat Conversions API extension Integration
 description: This Adobe Experience Platform web events API allows you to share website interactions directly with Snapchat.
 last-substantial-update: 2025-01-20
 ---
@@ -69,7 +69,7 @@ See the [Event Forwarding properties documentation](/help/tags/ui/event-forwardi
 
 ## Create rules to send conversions events to snap {#create-snap-rules}
 
-[Rules](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule) are used to trigger extensions in Platform. This section outlines how to create rules within your event forwarding property to send conversion events to Snap using the CAPI extension.
+[Rules](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule) are used to trigger extensions in Platform. This section outlines how to create rules within your event forwarding property to send conversion events to Snap using the Conversions API extension.
 
 ### Create a new rule
 
@@ -112,7 +112,7 @@ See the [Event Forwarding properties documentation](/help/tags/ui/event-forwardi
 | External Id  | `external_id` |
 | Partner Id | `partner_id` |
 | Subscription Id | `subscription_id` |
-| Lead Id | `lead_id` |
+| Lead ID | `lead_id` |
 | Item or Category | `content_category` |
 | Content Name  | `content_ids` |
 | Content Type  | `content_name` |
@@ -122,7 +122,7 @@ See the [Event Forwarding properties documentation](/help/tags/ui/event-forwardi
 | Number of Items | `num_items` |
 | Price | `value` |
 | Currency | `currency` |
-| Transaction Id | `order_id` (also sent for `event_id` in place of `client dedup idD`) |
+| Transaction ID | `order_id` (also sent for `event_id` in place of `client dedup idD`) |
 | Predicted LTV | `predicted_ltv` |
 | Search String | `search_string` |
 | Sign Up Method | `sign_up_method` |
@@ -132,7 +132,7 @@ See the [Event Forwarding properties documentation](/help/tags/ui/event-forwardi
 
 ### Required and optional fields
 
-* Required fields: 
+* Required fields:
 
     * All events will have `event_source` set to `WEB`. 
 
