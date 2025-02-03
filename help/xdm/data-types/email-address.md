@@ -9,7 +9,7 @@ exl-id: 1364df42-f89f-4f48-bcda-5332f3828326
 
 [!UICONTROL Email address] is a standard Experience Data Model (XDM) data type that describes the details of an email address.
 
-<img src='../images/data-types/email-address.png' width=450 /><br />
+![](../images/data-types/email-address.png){width=450}
 
 | Property | Description |
 | --- | --- |
