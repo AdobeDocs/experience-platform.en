@@ -7,7 +7,7 @@ exl-id: cccbaaf1-ee68-4a00-9a44-aa5db4a83a14
 
 To safely reset sandboxes and add versioning support, back up object configurations (or metadata) using sandbox tooling packages. Backup packages prevent the loss of critical configurations such as schemas, datasets, and audiences, especially during development iterations.
 
-![Overview showing the benefits of sandbox tooling](../images/use-cases/tooling-overview.png)
+![Overview showing the benefits of sandbox tooling](../images/use-cases/tooling-overview.png){zoomable="yes"}
 
 ## Why consider this use case {#why-this-use-case}
 
@@ -28,13 +28,13 @@ When planning to create your own backup package within your organization, consid
 
 To successfully implement this use case, you must use multiple areas of Adobe Experience Platform. Ensure you have the necessary [attribute-based access control permissions](../../access-control/abac/overview.md) for all these areas, or ask your system administrator to grant you the necessary permissions.
 
-  - [Sandbox tooling](../ui/sandbox-tooling.md)
-  - [Sandbox management](../ui/user-guide.md)
-  - [License usage dashboard](../../landing/license-usage-and-guardrails/license-usage-dashboard.md)
-  - [Datasets](../../catalog/datasets/overview.md)
-  - [Schemas](../../xdm//home.md)
-  - [Audiences](../../segmentation/home.md)
-  - [Journeys from Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/journey)
+- [Sandbox tooling](../ui/sandbox-tooling.md)
+- [Sandbox management](../ui/user-guide.md)
+- [License usage dashboard](../../landing/license-usage-and-guardrails/license-usage-dashboard.md)
+- [Datasets](../../catalog/datasets/overview.md)
+- [Schemas](../../xdm//home.md)
+- [Audiences](../../segmentation/home.md)
+- [Journeys from Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/journey)
 
 ## How to achieve the use case: high-level overview {#achieve-the-use-case-high-level}
 
@@ -57,9 +57,9 @@ Before you begin creating your backup package you should consider the package's 
 >
 > If you're considering backing up your sandbox to reset it, be aware of the [limitations](../ui/user-guide.md#reset-a-sandbox) surrounding resetting sandboxes.
 
-### Export an your chosen metadata into a package
+### Export your chosen metadata into a package
 
-At this point, you're ready to back up your sandbox using the sandbox tooling user interface. This step will cover both backing up an entire sandbox and backing up specific objects.
+At this point, you're ready to back up your sandbox using the sandbox tooling user interface. This step covers both backing up an entire sandbox and backing up specific objects.
 
 >[!NOTE]
 >

@@ -50,3 +50,8 @@ Seamlessly track he status of support issues.
   * "What's the update on ticket E-67890?"
 
 To gain access to AI Assistant for Customer Support, contact your Adobe Account Team.
+
+For more information, watch the following video to learn how you can use AI Assistant for Customer Support to seamlessly troubleshoot without leaving your workflows.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3443183?learn=on)
+

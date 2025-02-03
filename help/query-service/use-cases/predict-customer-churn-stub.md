@@ -1,6 +1,7 @@
 ---
 title: Predict Customer Churn with SQL
 description: A brief introduction to predicting customer churn using SQL-based logistic regression. Learn about data preparation, model building, and evaluation to optimize customer retention strategies. This placeholder document directs you to a more comprehensive resource in another location.
+exl-id: dbc38a2d-8e21-40db-8b80-7b2848dd33d0
 ---
 # Predict customer churn with SQL
 
