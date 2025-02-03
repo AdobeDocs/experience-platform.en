@@ -25,6 +25,14 @@ To create a dynamic configuration for your datastream, there are two conditions 
 
 After you have created a datastream and added an Experience Cloud service to it, you can then [create a dynamic configuration](#create-dynamic-configuration).
 
+## Dynamic datastream configurations versus datastream configuration overrides {#dynamic-versus-overrides}
+
+Dynamic datastream configurations and [datastream configuration overrides](overrides.md) are mutually exclusive functionalities.
+
+This means that you cannot use dynamic datastream configurations along with datastream configuration overrides. You must choose one or the other.
+
+If you enable both dynamic datastream configurations and datastream configuration overrides, the configuration overrides will take precedence and the dynamic datastream configuration rules will be ignored.
+
 ## Create a dynamic datastream configuration {#create-dynamic-configuration}
 
 After you have [created a datastream](configure.md) and [added a service](configure.md#add-services) to it, follow the steps below to add a dynamic configuration to the service.

@@ -1,11 +1,11 @@
 ---
-title: autoTrackPropositionInteractionsEnabled
+title: autoCollectPropositionInteractions
 description: Learn how to configure Experience Platform Web SDK to automatically collect link data.
 exl-id: c70db76a-3f2f-45a6-86ab-36efcb18d20f
 ---
-# `autoTrackPropositionInteractionsEnabled`
+# `autoCollectPropositionInteractions`
 
-The `autoTrackPropositionInteractionsEnabled` property is an optional setting that determines if the Web SDK should automatically collect proposition interactions.
+The `autoCollectPropositionInteractions` property is an optional setting that determines if the Web SDK should automatically collect proposition interactions.
 
 The value is a map of decision providers, each with value that indicates how automatic proposition interactions should be handled.
 
@@ -117,15 +117,15 @@ alloy("sendEvent", {
 ## Enable automatic propositions and interactions click tracking through the Web SDK tag extension {#tag-extension}
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credential.
-2. Navigate to **Data Collection** > **Tags**.
-3. Select the desire tag property.
-4. Navigate to **Extensions**, then select **Configure** on the Adobe Experience Platform Web SDK card.
-5. Scroll down to the **[!UICONTROL Data Collection]** section, then select the checkbox **Enable propositions and interaction link tracking**.
-6. Select **Save**, then publish your changes.
+1. Navigate to **Data Collection** > **Tags**.
+1. Select the desire tag property.
+1. Navigate to **Extensions**, then select **Configure** on the Adobe Experience Platform Web SDK card.
+1. Scroll down to the **[!UICONTROL Data Collection]** section, then select the checkbox **Enable propositions and interaction link tracking**.
+1. Select **Save**, then publish your changes.
 
 ## Enable automatic propositions and interactions link tracking through the Web SDK JavaScript library {#library}
 
-Proposition tracking is enabled by default in [!DNL Web SDK]. However, you can configure it further using the `autoTrackPropositionInteractionsEnabled` value when running the [`configure`](../configure/overview.md) command.
+Proposition tracking is enabled by default in [!DNL Web SDK]. However, you can configure it further using the `autoCollectPropositionInteractions` value when running the [`configure`](../configure/overview.md) command.
 
 If you omit this property when configuring the Web SDK, it defaults to `{"AJO": "always", "TGT": "never"}`. If you prefer not to automatically track proposition interactions, set the value to `{"AJO": "never", "TGT": "never"}`.
 
@@ -133,6 +133,6 @@ If you omit this property when configuring the Web SDK, it defaults to `{"AJO": 
 alloy("configure", {
    "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
    "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-   "autoTrackPropositionInteractionsEnabled": {"AJO": "always", "TGT": "never"}
+   "autoCollectPropositionInteractions": {"AJO": "always", "TGT": "never"}
 });
 ```

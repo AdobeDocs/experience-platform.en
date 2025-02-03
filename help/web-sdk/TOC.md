@@ -20,7 +20,7 @@ role: Developer
 * Commands {#commands}
   * configure {#configure}
     * [Overview](commands/configure/overview.md)
-    * [autoTrackPropositionInteractionsEnabled](commands/configure/autotrackpropositioninteractionsenabled.md)
+    * [autoCollectPropositionInteractions](commands/configure/autocollectpropositioninteractions.md)
     * [clickCollectionEnabled](commands/configure/clickcollectionenabled.md)
     * [clickCollection](commands/configure/clickcollection.md)
     * [context](commands/configure/context.md)
