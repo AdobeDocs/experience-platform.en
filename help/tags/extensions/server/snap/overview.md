@@ -32,8 +32,8 @@ Once the desired property is selected, follow these steps:
 
 3. On the configuration screen, input the following values:
 
- * **[!UICONTROL Pixel Id]**  
- * **[!UICONTROL API Token]**
+* **[!UICONTROL Pixel Id]**
+* **[!UICONTROL API Token]**
 
 When finished, select **[!UICONTROL Save]**.
 
