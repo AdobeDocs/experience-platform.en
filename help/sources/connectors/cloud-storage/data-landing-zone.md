@@ -291,9 +291,9 @@ Finally, navigate to the generated URL to directly log in to the AWS Console wit
 
 >[!IMPORTANT]
 >
->* To connect to the source, you need the **[!UICONTROL View Sources]** and **[!UICONTROL Manage Sources]** access control permissions. Read the [access control overview](../../../access-control/home.md) or contact your product administrator to obtain the required permissions.
+>- To connect to the source, you need the **[!UICONTROL View Sources]** and **[!UICONTROL Manage Sources]** access control permissions. Read the [access control overview](../../../access-control/home.md) or contact your product administrator to obtain the required permissions.
 >
->* Private links are currently not supported when connecting to Experience Platform using the [!DNL Data Landing Zone]. The only supported methods for access are the methods listed [here](#manage-the-contents-of-your-data-landing-zone).
+>- Private links are currently not supported when connecting to Experience Platform using the [!DNL Data Landing Zone]. The only supported methods for access are the methods listed [here](#manage-the-contents-of-your-data-landing-zone).
 
 The documentation below provides information on how to bring data from your [!DNL Data Landing Zone] container to Adobe Experience Platform using APIs or the user interface.
 
