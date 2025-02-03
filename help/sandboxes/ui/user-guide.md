@@ -75,6 +75,7 @@ Once you have finished creating the sandbox, refresh the page and the new sandbo
 >
 >* A user-created production sandbox that is used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service can be reset after a warning message.
 >* Before initiating a sandbox reset, you will be required to delete your compositions manually to ensure that the associated audience data is cleaned up properly.
+>* The sandbox ID will change after the reset is complete.
 
 ### Delete audience compositions
 
