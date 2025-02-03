@@ -289,6 +289,12 @@ Finally, navigate to the generated URL to directly log in to the AWS Console wit
 
 ## Connect [!DNL Data Landing Zone] to Experience Platform
 
+>[!IMPORTANT]
+>
+>* To connect to the source, you need the **[!UICONTROL View Sources]** and **[!UICONTROL Manage Sources]** access control permissions. Read the [access control overview](../../../access-control/home.md) or contact your product administrator to obtain the required permissions.
+>
+>* Private links are currently not supported when connecting to Experience Platform using the [!DNL Data Landing Zone]. The only supported methods for access are the methods listed [here](#manage-the-contents-of-your-data-landing-zone).
+
 The documentation below provides information on how to bring data from your [!DNL Data Landing Zone] container to Adobe Experience Platform using APIs or the user interface.
 
 ### Using APIs
@@ -300,8 +306,4 @@ The documentation below provides information on how to bring data from your [!DN
 
 - [Connect [!DNL Data Landing Zone] to Platform using the UI](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
 - [Create a dataflow for a cloud storage connection in the UI](../../tutorials/ui/dataflow/batch/cloud-storage.md)
-
->[!IMPORTANT]
->
->Private links are currently not supported when connecting to Experience Platform using the [!DNL Data Landing Zone]. The only supported methods for access are the methods listed [here](#manage-the-contents-of-your-data-landing-zone).
 
