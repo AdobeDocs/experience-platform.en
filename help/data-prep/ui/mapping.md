@@ -6,9 +6,9 @@ exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
 ---
 # Data Prep UI Guide
 
-This document provides directions on how to use data prep functions in the Adobe Experience Platform user interface to map CSV files to an XDM schema.
+Read this guide to learn how to use data prep mapping functions in the Adobe Experience Platform user interface to map CSV files to an Experience Data Model (XDM) schema.
 
-## Getting started
+## Get Started
 
 This tutorial requires a working understanding of the following Platform components:
 
@@ -19,6 +19,14 @@ This tutorial requires a working understanding of the following Platform compone
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [Sources](../../sources/home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
 
+## Access the mapping interface in the UI
+
+You can access the mapping interface in the UI through two different pathways.
+
+1. In the Experience Platform UI, select **[!UICONTROL Workflows]** from the left-navigation and then select **[!UICONTROL Map CSV to XDM schema]**. Next, provide your dataflow details and select the data that you want to ingest. Once that is complete, you are taken to the mapping interface where you can configure mapping between your source data and an XDM schema.
+2. You can also access the mapping interface through the sources workspace.
+
+<!-- 
 ## Dataflow detail
 
 >[!TIP]
@@ -65,11 +73,11 @@ Depending on your file, you can select a column delimiter such as tabs, commas, 
 
 When finished, select **[!UICONTROL Next]**.
 
-![delimiter](../images/ui/mapping/delimiter.png)
+![delimiter](../images/ui/mapping/delimiter.png) -->
 
-## Mapping
+## Map CSV files into an XDM schema
 
-The **[!UICONTROL mapping]** interface provides you with a comprehensive tool to map source fields from your source schema to their appropriate target XDM fields in the target schema.
+Use the mapping interface and the comprehensive tool set that it provides to successfully map data fields from your source schema to their appropriate target XDM fields in the target schema.
 
 ![map-csv-to-xdm](../images/ui/mapping/map-csv-to-xdm.png)
 
