@@ -1,10 +1,10 @@
 ---
 title: Amazon Ads
 description: Amazon Ads offers a range of options to help you achieve your advertising goals to registered sellers, vendors, book vendors, Kindle Direct Publishing (KDP) authors, app developers, and/or agencies. The Amazon Ads integration with Adobe Experience Platform provides turn-key integration to Amazon Ads products, including the Amazon DSP (ADSP). Using the Amazon Ads destination in Adobe Experience Platform, users are able to define advertiser audiences for targeting and activation on the Amazon DSP.
-last-substantial-update: 2024-09-20
+last-substantial-update: 2025-01-07
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
 ---
-# (Beta) Amazon Ads connection {#amazon-ads}
+# Amazon Ads connection {#amazon-ads}
 
 ## Overview {#overview}
 
@@ -18,7 +18,7 @@ AMC brings together unique signals from across Amazon owned and operated propert
 
 >[!IMPORTANT]
 >
->This destination connector and documentation page are created and maintained by the *[!DNL Amazon Ads]* team. This is currently a beta product and functionality is subject to change. For any inquiries or update requests, please contact them directly at *`amc-support@amazon.com`.*
+>This destination connector and documentation page are created and maintained by the *[!DNL Amazon Ads]* team. For any inquiries or update requests, please contact them directly at *`amc-support@amazon.com`.*
 
 ## Use cases {#use-cases}
 
@@ -79,8 +79,6 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 You are taken to the [!DNL Amazon Ads] connection interface where you first select the advertiser accounts you wish to connect to. Upon connection, you are redirected back to Adobe Experience Platform with a new connection, provided with the ID of the Advertiser Account you selected. Select the appropriate Advertiser Account on the destination configuration screen to proceed.
 
-* **[!UICONTROL Bearer token]**: Fill in the bearer token to authenticate to the destination.
-
 ### Fill in destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
@@ -95,9 +93,13 @@ To configure details for the destination, fill in the required and optional fiel
 
 *  **[!UICONTROL Advertiser Region]**: Select the appropriate region in which your Advertiser is hosted. For more information on the marketplaces supported by each region, visit the [Amazon Ads documentation](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
 
+>[!IMPORTANT]
+>
+>The update to include the **[!UICONTROL Amazon Ads Consent Signal]** is scheduled to go live by February 7th, 2025.
 
+*  **[!UICONTROL Amazon Ads Consent Signal]**: Confirm that all data sent through this connection have consented to use personal data to be used for advertising purposes. "GRANTED" indicates consent for Amazon to use the customer's personal data for advertising. The permissible values are "GRANTED" and "DENIED". Any records sent through connections with "DENIED" will be rejected for further use within Amazon Ads.
 
-![Configure new destination](../../assets/catalog/advertising/amazon_ads_image_4.png)
+![Configure new destination](../../assets/catalog/advertising/amazon-ads/amazon_ads_consent_input.png)
 
 ### Enable alerts {#enable-alerts}
 
@@ -118,7 +120,7 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 
 The [!DNL Amazon Ads] connection supports hashed email address and hashed phone numbers for identity matching purposes. The screenshot below provides an example matching that is compatible with the [!DNL Amazon Ads] connection:
 
-![Adobe to Amazon Ads mapping](../../assets/catalog/advertising/amazon_ads_image_2.png)
+![Adobe to Amazon Ads mapping](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_2.png)
 
 * To map hashed email addresses, select the `Email_LC_SHA256` identity namespace as a source field.
 * To map hashed phone numbers, select the `Phone_SHA256` identity namespace as a source field.
@@ -137,7 +139,7 @@ Once your audience has been uploaded, you may validate your audience has been cr
 
 Navigate to your **[!UICONTROL Advertiser ID]** > **[!UICONTROL Audiences]** > **[!UICONTROL Advertiser Audiences]**. If your audience was created successfully and meets the minimum number of audience members, you will see a Status of `Active`. Additional details about your audience size and reach can be found in the Forecasted Reach panel on the right side of the Amazon DSP user interface. 
 
-![Amazon DSP audience creation validation](../../assets/catalog/advertising/amazon_ads_image_3.png)
+![Amazon DSP audience creation validation](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_3.png)
 
 **For [!DNL Amazon Marketing Cloud]**
 
@@ -145,8 +147,7 @@ In the left-hand schema browser, find your audience under **[!UICONTROL Advertis
 
 `select count(user_id) from adobeexperienceplatf_audience_view_000xyz where external_audience_segment_name = '1234567'`
 
-![Amazon Marketing Cloud audience creation validation](../../assets/catalog/advertising/amazon_ads_image_5.png)
-
+![Amazon Marketing Cloud audience creation validation](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_5.png)
 
 ## Data usage and governance {#data-usage-governance}
 
@@ -166,6 +167,7 @@ This section captures the functionality and significant documentation updates ma
 
 |Release month|Update type|Description|
 |---|---|---|
+|February 2025|Added the requirement to add **[!UICONTROL Amazon Ads Consent Signal]** to export dataflows and promoted the destination from beta to generally available. |
 |May 2024|Functionality and documentation update| Added the mapping option to export `countryCode` parameter into Amazon Ads. Use `countryCode` in the [mapping step](#map) to improve your identity match rates with Amazon. |
 |March 2024|Functionality and documentation update| Added the option to export audiences to be used in [!DNL Amazon Marketing Cloud] (AMC).|
 |May 2023|Functionality and documentation update| <ul><li>Added support for Advertiser Region selection in the [destination connection workflow](#destination-details).</li><li>Updated documentation to reflect the addition of Advertiser Region selection. For more information on selecting the correct Advertiser Region, see the [Amazon documentation](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |

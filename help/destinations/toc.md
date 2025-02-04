@@ -67,7 +67,7 @@ role: Admin,User
         * [Advertising destinations overview](./catalog/advertising/overview.md)
         * [Adobe Advertising Cloud connection](./catalog/advertising/adobe-advertising-cloud-connection.md)
         * [Adobe Advertising Cloud extension](./catalog/advertising/adobe-advertising-cloud.md)
-        * [(Beta) Amazon Ads connection](./catalog/advertising/amazon-ads.md)
+        * [Amazon Ads connection](./catalog/advertising/amazon-ads.md)
         * [Awin Advertiser Conversion Tag extension](./catalog/advertising/awin-conversiontag.md)
         * [Awin Advertiser Mastertag extension](./catalog/advertising/awin-mastertag.md)
         * [Bing Ads Universal Event Tracking (UET) extension](./catalog/advertising/bing-ads.md)
@@ -97,7 +97,7 @@ role: Admin,User
         * [PubMatic Connect connection](./catalog/advertising/pubmatic.md)
         * [Snapchat Ads connection](./catalog/advertising/snap-inc.md)
         * [The Trade Desk connection](./catalog/advertising/tradedesk.md)
-        * [(Beta) The Trade Desk CRM connection](./catalog/advertising/tradedesk-emails.md)
+        * [The Trade Desk CRM connection](./catalog/advertising/tradedesk-emails.md)
         * [Twitter Universal Website Tag extension](./catalog/advertising/twitter-uwt.md)
         * [Yahoo/Verizon DataX connection](./catalog/advertising/datax.md)
     * Analytics destinations {#analytics}
