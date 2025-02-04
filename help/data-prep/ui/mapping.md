@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;data prep;data preparation;preparing data;
 title: Data Prep UI Guide
-description: This document provides directions on how to use data prep functions in the Platform UI to map CSV files to an XDM schema.
+description: Learn how to use data prep functions in the Experience Platform UI to map CSV files to an XDM schema.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
 ---
 # Data Prep UI Guide
