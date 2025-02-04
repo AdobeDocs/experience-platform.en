@@ -9,7 +9,7 @@ exl-id: 398f56d9-1802-458d-b565-4096beb5b014
 
 [!UICONTROL Point of interest interaction] is a standard XDM data type that describes the wireless device that communicates identity information to mobile applications as mobile devices come within range.
 
-<img src='../images/data-types/poi-interaction.png' width=400 /><br />
+![](../images/data-types/poi-interaction.png){width=400}
 
 | Property | Data type | Description |
 | --- | --- | --- |
