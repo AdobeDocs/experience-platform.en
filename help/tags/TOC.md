@@ -236,7 +236,7 @@ role: Developer
     * [!DNL Pinterest] {#pinterest}
       * [Overview](./extensions/server/pinterest/overview.md)
     * [!DNL Snap CAPI] {#pinterest}
-    * [Overview](./extensions/server/snap/overview.md)
+      * [Overview](./extensions/server/snap/overview.md)
     * [!DNL Snowflake] {#snowflake}
       * [Overview](./extensions/server/snowflake/overview.md)
     * [!DNL Splunk] {#splunk}
