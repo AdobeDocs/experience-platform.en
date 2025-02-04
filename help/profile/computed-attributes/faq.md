@@ -53,6 +53,10 @@ Before disabling your computed attribute, you **should** remove them from your d
 
 When a computed attribute is disabled or made inactive, it is no longer updated. As a result, this computed attribute **cannot** be used in profile lookup or other downstream usages.
 
+## Does the guardrail for the maximum number of computed attributes per sandbox in Adobe Experience Platform include enabled and processing Computed Attributes or also disabled ones?
+
+Only active Computed Attributes count towards the maximum number of computed attributes allowed, not disabled ones.
+
 ## How do computed attributes help drive engagement?
 
 Computed attributes drive Profile enrichment by aggregating your event attributes at a merged profile level. For example, you can personalize marketing emails with the latest viewed product.
