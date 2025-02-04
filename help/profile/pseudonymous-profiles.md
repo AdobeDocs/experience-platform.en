@@ -11,6 +11,12 @@ In Adobe Experience Platform, you can configure data expiration times for Pseudo
 
 ## Pseudonymous profile {#pseudonymous-profile}
 
+>[!CONTEXTUALHELP]
+>id="platform_profile_pseudonymousprofile"
+>title="What's a Pseudonymous profile?"
+>abstract="A Pseudonymous profile is a profile that has a pseudonymous or unknown identity namespace or a profile that has had no activity take place for a given amount of time."
+>text="Learn more in documentation"
+
 A profile is considered for Pseudonymous data expiration if it meets the following conditions: 
 
 - The stitched profile's identity namespaces match what the customer has specified as a pseudonymous or unknown identity namespace. 
