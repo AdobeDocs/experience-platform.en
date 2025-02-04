@@ -36,6 +36,7 @@ When you create a custom Web SDK build, the build is used by all of your Web SDK
 >[!IMPORTANT]
 >
 >Disabling Web SDK components can break your existing implementation. Each time you disable a component, make sure to test your implementation thoroughly to make sure that all functionalities that you need are working as expected.
+>When you disable a component, you can no longer edit the settings of that component.
 
 To create a custom Web SDK build by using the Web SDK tag extension, follow the steps below.
 
