@@ -184,7 +184,7 @@ Once you set the rule's name, condition and action as described above, save the 
 
 ![Image showing enabled rule](../../../images/extensions/server/snap/enabled_rule.png)
 
-You can now publish these changes to your property. See the documentation on [publishing flow]()(https://experienceleague.adobe.com/en/docs/experience-platform/tags/publish/overview) for more information.
+You can now publish these changes to your property. See the documentation on [publishing flow](/help/tags/ui/publishing/overview.md)(https://experienceleague.adobe.com/en/docs/experience-platform/tags/publish/overview) for more information.
 
 ## Troubleshoot {#troubleshoot}
 
