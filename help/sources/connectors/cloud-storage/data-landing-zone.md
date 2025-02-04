@@ -38,7 +38,7 @@ You can use [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/fe
 
 In the [!DNL Azure Storage Explorer] UI, select the connection icon in the left-navigation. The **Select Resource** window appears, providing you with options to connect to. Select **[!DNL Blob container]** to connect to [!DNL Data Landing Zone].
 
-![The select resource page on Azure Explorer.](../../images/tutorials/create/dlz/select-resource.png)
+![The select resource workspace on Azure Explorer.](../../images/tutorials/create/dlz/select-resource.png)
 
 Next, select **Shared access signature URL (SAS)** as your connection method, and then select **Next**.
 
@@ -52,19 +52,19 @@ After selecting your connection method, you must next provide a **display name**
 
 Provide your [!DNL Data Landing Zone] SAS URL and then select **Next**
 
-![The enter connection info page on Azure Explorer where the display name and SAS URL are inputted.](../../images/tutorials/create/dlz/enter-connection-info.png)
+![The enter connection info workspace on Azure Explorer where the display name and SAS URL are inputted.](../../images/tutorials/create/dlz/enter-connection-info.png)
 
 The **Summary** window appears, providing you with an overview of your settings, including information on your [!DNL Blob] endpoint and permissions. When ready, select **Connect**.
 
-![The Azure Explorer summary page that recaps the settings of your resource connection.](../../images/tutorials/create/dlz/summary.png)
+![The Azure Explorer summary workspace that recaps the settings of your resource connection.](../../images/tutorials/create/dlz/summary.png)
 
 A successful connection updates your [!DNL Azure Storage Explorer] UI with your [!DNL Data Landing Zone] container.
 
-![The data landing zone navigation page on Azure Explorer.](../../images/tutorials/create/dlz/dlz-user-container.png)
+![The data landing zone navigation workspace on Azure Explorer.](../../images/tutorials/create/dlz/dlz-user-container.png)
 
 With your [!DNL Data Landing Zone] container connected to [!DNL Azure Storage Explorer], you can now start uploading files to your [!DNL Data Landing Zone] container. To upload, select **Upload** and then select **Upload Files**.
 
-![The upload files page of Azure Explorer.](../../images/tutorials/create/dlz/upload.png)
+![The upload files workspace of Azure Explorer.](../../images/tutorials/create/dlz/upload.png)
 
 Once you have selected the file you want to upload, you must then identify the [!DNL Blob] type that you want to upload it as and your desired destination directory. When finished, select **Upload**.
 
