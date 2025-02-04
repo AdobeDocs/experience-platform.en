@@ -14,7 +14,7 @@ To use the [!DNL Snapchat] Conversions API:
 * You must have an [Event Forwarding property](/help/tags/ui/event-forwarding/getting-started.md) set up in Adobe Experience Platform.
 * You must also have the [required permissions](/help/collection/permissions.md) to edit the property. 
 
-Create a [Datastream](/help/tags/ui/event-forwarding/getting-started.md) and add the [Event Forwarding service](/help/tags/ui/event-forwarding/getting-started#enable-event-forwarding) to it. 
+Create a [Datastream](/help/tags/ui/event-forwarding/getting-started.md) and add the [Event Forwarding service](/help/tags/ui/event-forwarding/getting-started.md#enable-event-forwarding) to it. 
 
 A **[!DNL Snapchat]** [Business Manager](https://business.snapchat.com/) account is required to use the Conversions API. Business Manager helps advertisers integrate **[!DNL Snapchat]**'s marketing efforts across their business and with external partners. See the **[!DNL Snapchat]** [help center article](https://businesshelp.snapchat.com/s/article/get-started?language=en_US) on creating a Business Manager account if you don't have one.
 
@@ -68,7 +68,7 @@ You must configure the data element because `snapClickId` is located under `_sna
 
 ![Image showing edit data element screen](../../../images/extensions/server/snap/edit_data_element.png)
 
-See the [Event Forwarding properties documentation](/help/tags/ui/event-forwarding/overview#data-elements.md) for more details on creating data elements.
+See the [Event Forwarding properties documentation](/help/tags/ui/event-forwarding/overview.md#data-elements) for more details on creating data elements.
 
 ## Create rules to send conversion events to Snap {#create-snap-rules}
 
