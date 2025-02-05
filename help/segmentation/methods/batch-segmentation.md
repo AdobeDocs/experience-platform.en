@@ -1,5 +1,4 @@
 ---
-solution: Experience Platform
 title: Batch Segmentation Guide
 description: Learn about batch segmentation including what it is, how to create an audience evaluated using batch segmentation, and how to view your audiences created using batch segmentation.
 ---
@@ -8,7 +7,7 @@ description: Learn about batch segmentation including what it is, how to create 
 
 Batch segmentation is a segmentation evaluation method that lets you move profile data all at once to create corresponding audiences. 
 
-With batch segmentation, you can create detailed and rich audiences, running segmentation jobs to determine when you want this data propagated to downstream services.
+With batch segmentation, you can create detailed and rich audiences, and run segmentation jobs to determine when you want this data propagated to downstream services.
 
 ## Eligible query types {#query-types}
 

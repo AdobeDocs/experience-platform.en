@@ -1,5 +1,4 @@
 ---
-solution: Experience Platform
 title: Edge Segmentation Guide
 description: Learn how to use edge segmentation to evaluate audiences in Platform instantaneously on the edge, enabling same page and next page personalization use cases.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
@@ -10,7 +9,7 @@ Edge segmentation is the ability to evaluate segment definitions in Adobe Experi
 
 >[!IMPORTANT]
 >
-> The edge data will be stored in an edge server location closest to where it was collected and may be stored in a location other than the one designated as the hub (or principal) Adobe Experience Platform data center.
+> The edge data will be stored in an edge server location closest to where it was collected. This data may also be stored in a location other than the one designated as the hub (or principal) Adobe Experience Platform data center.
 >
 > Additionally, the edge segmentation engine will only honor requests on the edge where there is **one** primary marked identity, which is consistent with non-edge-based primary identities.
 
