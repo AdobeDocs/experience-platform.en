@@ -59,9 +59,9 @@ Before you can evaluate, set, and manage TTL using the Catalog API, you must kno
 
 ### How to check current TTL settings
 
-<!-- Make a GET request to the `/ttl/{datasetId}` endpoint to retrieve the default, maximum and minimum TTL settings for a dataset. This is necessary because TTL rules can vary based on the dataset type. -->
+To begin your TTL management, first check current TTL settings. Make a GET request to the `/ttl/{datasetId}` endpoint to retrieve the default, maximum, and minimum TTL settings for a dataset. This is necessary because TTL rules can vary based on the dataset type.
 
-To begin your TTL management, first check current TTL settings. Make a GET request to retrieve your organization's TTL settings for a particular dataset. 
+<!-- Make a GET request to retrieve your organization's TTL settings for a particular dataset.  -->
 
 >[!TIP]
 >
@@ -184,7 +184,6 @@ Shouldnt a response look like this:
 >Row-expiration can only be applied to event datasets that use a time-series schema. Before setting TTL, verify that the dataset's schema extends `https://ns.adobe.com/xdm/data/time-series` to ensure the API request succeeds. Use the Schema Registry API to retrieve the schema details and verify the `meta:extends` property. Refer to the [Schema endpoint documentation](../../xdm/api/schemas.md#lookup) for guidance on how to do this.
 
 To set a new TTL value for your dataset, make a PATCH request to the `/v2/datasets/{ID}` endpoint. 
-<!-- - Provide a clear, real-world example of setting TTL, such as:   -->
 
 **API format**
 
@@ -218,14 +217,9 @@ curl -X PATCH \
 }
 ```  
 
-| Property                         | Description |
-|----------------------------------|-------------|
-| `extensions`                     | A container for additional metadata related to the dataset. |
-| `extensions.adobe_lakeHouse`     | Specifies settings related to storage architecture, including row expiration configurations |
-| `extensions.adobe_lakeHouse.rowExpiration` | Contains TTL settings that define the retention period for the dataset. |
-| `extensions.adobe_lakeHouse.rowExpiration.ttlValue` | Defines the duration before records in the dataset are automatically removed. Uses the ISO-8601 period format (for example, `"P3M"` for 3 months). Accepted values include `P3M`, `P6M`, and `P12M`. |
-
 **Response**
+
+A successful response shows the TTL configuration for the dataset. It includes details on row expiration settings for both `adobe_lakeHouse` and `adobe_unifiedProfile` storage.
 
 ```JSON
 {  "extensions": {
@@ -237,7 +231,7 @@ curl -X PATCH \
                 "updated": <timestamp>
             }
         },
-        adobe_unifiedProfile": {  
+        "adobe_unifiedProfile": {  
             "rowExpiration": {
                 "ttlValue": <Period> ("P7D", "P15D", "P12M"),
                 "valueStatus": <enum> (default, custom),
@@ -249,14 +243,73 @@ curl -X PATCH \
 }
 ```
 
-### How to Update TTL
+| Property                         | Description |
+|----------------------------------|-------------|
+| `extensions`                     | A container for additional metadata related to the dataset. |
+| `extensions.adobe_lakeHouse`     | Specifies settings related to storage architecture, including row expiration configurations |
+| `rowExpiration` | Contains TTL settings that define the retention period for the dataset. |
+| `rowExpiration.ttlValue` | Defines the duration before records in the dataset are automatically removed. Uses the ISO-8601 period format (for example, `P3M` for 3 months, or `P7D` for one week). |
+| `rowExpiration.valueStatus` | Indicates whether the TTL setting is a default system value or a custom value set by a user. Possible values are: `default`, `custom`. |
+| `rowExpiration.setBy` | Specifies who last modified the TTL setting. Possible values include: `user` (manually set) or `service` (automatically assigned). |
+| `rowExpiration.updated` | The timestamp of the last TTL update. This value indicates when the TTL setting was last modified. |
 
-- Clarify that updating TTL uses the same `PATCH` method. Include example scenarios where TTL might need to be extended or shortened.  
-- Example:
-    
-  ```json
-  "ttlValue": "P6M"  // Extend to 6 months
-  ```
+### How to update TTL
+
+Extend or shorten the retention period to suit your business needs by adjusting the TTL. For example, the video streaming platform mentioned earlier, may initially set TTL to three months to ensure fresh engagement data for personalization. However, if analysis shows that interaction patterns older than three months still provide valuable insights, the TTL can be extended to six months to keep older records for better recommendation models.  
+
+To modify an existing TTL value, use the `PATCH` method on the `/v2/datasets/{DATASET_ID}` endpoint.
+
+#### API format  
+
+```http
+PATCH /v2/datasets/{DATASET_ID}
+```
+
+**Request**  
+
+In the following request, the TTL is updated to six months (`P6M`) extending the record retention period before automatic deletion.
+
+```shell
+curl -X PATCH \
+  'https://platform-int.adobe.io/data/foundation/catalog/v2/datasets/{DATASET_ID}' \
+  -h 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -h 'Content-Type: application/json' \
+  -h 'x-api-key: {API_KEY}' \
+  -h 'x-gw-ims-org-id: {ORG_ID}' \
+  -d '{
+    "extensions": {
+        "adobe_lakeHouse": {
+            "rowExpiration": {
+                "ttlValue": "P6M"  // Extend to 6 months
+            }
+        }
+    }
+}
+```
+
+**Response**
+
+```JSON
+{  "extensions": {
+        "adobe_lakeHouse": {  
+            "rowExpiration": {
+              "ttlValue": "P6M",
+              "valueStatus": "custom",
+              "setBy": "user",
+              "updated": "1737977766499"
+            }
+        },
+        "adobe_unifiedProfile": {  
+            "rowExpiration": {
+                "ttlValue": "P3M",
+                "valueStatus": "custom",
+                "setBy": "user",
+                "updated": "17379754766355"
+            }
+        }
+    }
+}
+```
 
 ## Best practices for setting TTL
 
