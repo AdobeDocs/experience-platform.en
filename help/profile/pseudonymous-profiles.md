@@ -20,7 +20,7 @@ In Adobe Experience Platform, you can configure data expiration times for Pseudo
 >[!CONTEXTUALHELP]
 >id="platform_profile_pseudonymousprofile_dataexpiration"
 >title="Pseudonymous profile data expiration"
->abstract="The Pseudonymous profile data expiration represents the number of days a Pseudonymous profile will remain in Adobe Experience Platform before being removed."
+>abstract="The Pseudonymous profile data expiration represents the number of days a Pseudonymous profile will remain in Adobe Experience Platform before being removed. This value must be set to at least 1. Please note that it may take up to three days for the Pseudonymous profile to be removed."
 
 A profile is considered for Pseudonymous data expiration if it meets the following conditions: 
 
