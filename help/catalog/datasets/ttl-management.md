@@ -29,7 +29,25 @@ As an example, consider a video streaming platform that tracks user interactions
 
 ## Prerequisites and planning
 
-- **Pre-API Evaluation Steps**:
+Before setting TTL, determine whether your dataset is a good candidate for row expiration by assessing its query frequency, historical data importance, and overall relevance to your use case.
+
+### Considerations
+
+TTL helps optimize storage costs and data hygiene by automatically removing outdated records. However, applying TTL affects data relevance, downstream processes, and storage value. If historical records are critical for analysis or business operations, TTL may not be the right approach. Review these factors carefully to ensure TTL aligns with your data retention needs.
+
+### Plan your queries
+
+Use queries to analyze dataset size and relevance before applying TTL. Running targeted queries helps determine how much data would be retained or removed based on different TTL values.
+
+For example, the following SQL query counts the number of records created within the last 30 days:
+
+```sql
+SELECT COUNT(1) FROM [datasetName] WHERE timestamp > date_sub(now(), INTERVAL 30 DAY);
+```
+
+Running similar queries for different time intervals helps validate TTL configurations and ensure they balance storage efficiency and data accessibility.
+
+<!-- - **Pre-API Evaluation Steps**:
   - Questions users should ask before setting TTL:
     - Is this dataset suitable for TTL?
     - How frequently is the dataset queried, and does historical data matter?  
@@ -44,7 +62,7 @@ As an example, consider a video streaming platform that tracks user interactions
     SELECT COUNT(1) FROM [datasetName] WHERE timestamp > date_sub(now(), INTERVAL 30 DAY);
     ```
   
-  - Explain how these queries help users determine appropriate TTL values.
+  - Explain how these queries help users determine appropriate TTL values. -->
 
 ## Get started with TTL management
 
