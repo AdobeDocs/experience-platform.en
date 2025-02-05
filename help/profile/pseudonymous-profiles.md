@@ -31,11 +31,7 @@ A profile is considered for Pseudonymous data expiration if it meets the followi
 
 ## Access {#access}
 
-Pseudonymous Profile data expiration cannot be configured through the Platform UI or APIs. Instead, you must contact support in order to enable this feature. When contacting support, please include the following information: 
-
-- The identity namespaces to be considered for Pseudonymous profile deletes. 
-  - For example: `ECID` only, `AAID` only, or a combination of `ECID` and `AAID`.
-- The amount of time to wait before deleting a pseudonymous profile. The default recommendation for customers is 14 days. However, this value may differ based on your use case.
+Update this part!
 
 ## Frequently asked questions {#faq}
 
