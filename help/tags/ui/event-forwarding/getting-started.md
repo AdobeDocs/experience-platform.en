@@ -76,7 +76,7 @@ To create your datastream in Adobe Experience Platform, use the Environment ID g
 
 1. Select **[!UICONTROL Save]**.
 
-## Enable event forwarding
+## Enable event forwarding {#enable-event-forwarding}
 
 Next, configure Edge Network to send data to event forwarding, and to other Adobe products.
 

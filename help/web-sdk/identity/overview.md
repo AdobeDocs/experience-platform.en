@@ -65,7 +65,7 @@ To account for the effects of cookie lifespans as outlined above, you can choose
 Depending on your use case, there are two ways in which you can access the [!DNL ECID]:
 
 * [Retrieve the [!DNL ECID] through Data Prep for Data Collection](#retrieve-ecid-data-prep): This is the recommended method that you should use.
-* [Retrieve the [!DNL ECID] through the `getIdentity()` command](#retrieve-ecid-getidentity): Only use this metod when you require the [!DNL ECID] information on the client-side.
+* [Retrieve the [!DNL ECID] through the `getIdentity()` command](#retrieve-ecid-getidentity): Only use this method when you require the [!DNL ECID] information on the client-side.
 
 ### Retrieve the [!DNL ECID] through Data Prep for Data Collection {#retrieve-ecid-data-prep}
 
