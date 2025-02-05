@@ -2,50 +2,52 @@
 title: Manage Your Data Lifecycle with TTL API Use Cases and Best Practices
 description: Learn how to evaluate, set, and manage row-level TTL for datasets using APIs in Adobe Experience Platform. This guide provides best practices, use cases, and step-by-step instructions to optimize data hygiene and storage efficiency while ensuring effective data lifecycle management.
 ---
-# Manage your data lifecycle with TTL: API use cases and best practices
 
-Managing data efficiently is essential to maintain performance, control costs, and ensure clean datasets. You can perform row-level expiration (Time-To-Live, TTL) to automatically remove outdated records from Adobe Experience Platform datasets, keeping storage optimized and relevant.  
+# Manage your data lifecycle with TTL: API use cases and best practices  
 
-This guide explains how to evaluate, set, and manage TTL using the Catalog API to streamline data lifecycle management. You'll learn when and why to apply TTL, how to configure and update TTL values using API calls, and best practices to avoid common pitfalls and implement TTL effectively.
+Managing data efficiently is essential to maintain performance, control costs, and ensure clean datasets. Perform row-level expiration (Time-To-Live, TTL) to automatically remove outdated records from Adobe Experience Platform datasets, keeping storage optimized and relevant.  
+
+This guide explains how to evaluate, set, and manage TTL using the Catalog API. You'll learn when and why to apply TTL, how to configure and update TTL values using API calls, and best practices to ensure effective implementation.  
 
 >[!IMPORTANT]  
->
 > TTL is designed to optimize data lifecycle management and storage efficiency. It is not a compliance tool and should not be relied upon for regulatory requirements. Compliance often necessitates broader data governance strategies.
 
-## Why use TTL for row-level data management
+## Why use TTL for row-level data management  
 
-As datasets grow, efficient data management preserves performance, controls costs, and keeps data relevant. Row-level data expiration automates data cleanup by removing outdated records without manual intervention, ensuring efficient storage.
+As datasets grow, efficient data management becomes increasingly important to preserve performance, control costs, and keeps data relevant. Row-level data expiration automates data cleanup by removing outdated records without manual intervention to help optimize storage and improve system efficiency.  
 
-Consider using TTL if your datasets contain time-sensitive data that loses relevance over time. By implementing TTL, you can: 
+TTL is useful when managing time-sensitive data that loses relevance over time. Consider implementing TTL if you need to:  
 
-- Reduce storage costs by automatically removing outdated records.  
-- Improve query performance by minimizing irrelevant data.  
-- Maintain data hygiene by ensuring datasets remain focussed and relevant.  
-- Optimize data retention to align with business needs.  
+- Reduce storage costs by automatically expiring outdated records.  
+- Improve query performance by minimizing irrelevant data to reduce processing time.  
+- Maintain data hygiene by ensuring datasets contain only relevant information.  
+- Optimize data retention to align with business objectives.  
 
-### Industry Example  
+### Industry example  
 
-As an example, consider a video streaming platform that tracks user interactions, such as video views, searches, and recommendations. While recent engagement data is crucial for personalization, older activity logs (like interactions from over a year ago) lose relevance. By using row expiration, the platform automatically removes outdated logs, ensuring that only fresh, meaningful data is used for analytics and recommendations.
+As an example, consider a video streaming platform tracks user interactions, such as video views, searches, and recommendations. While recent engagement data is crucial for personalization, older activity logs (for example, interactions from over a year ago) lose relevance. By using row expiration, Platform automatically removes outdated logs, ensuring only current and meaningful data is used for analytics and recommendations.  
 
-## Prerequisites and planning
+## Evaluate TTL suitability  
 
-Before setting TTL, determine whether your dataset is a good candidate for row expiration by assessing its query frequency, historical data importance, and overall relevance to your use case.
+Before applying TTL, assess whether your dataset is a good candidate for row expiration. Consider the following:  
 
-### Considerations
+- Data relevance over time:  Does older data provide value, or does it become obsolete?  
+- Impact on downstream processes: Will removing data affect reporting, analytics, or integrations?  
+- Storage cost versus retention value: Does the cost of storing older data justify its usefulness?  
 
-TTL helps optimize storage costs and data hygiene by automatically removing outdated records. However, applying TTL affects data relevance, downstream processes, and storage value. If historical records are critical for analysis or business operations, TTL may not be the right approach. Review these factors carefully to ensure TTL aligns with your data retention needs.
+If historical records are essential for long-term analysis or business operations, TTL may not be the right approach. Reviewing these factors ensures that TTL aligns with your data retention needs without negatively affecting data availability.
 
-### Plan your queries
+## Plan your queries  
 
-Use queries to analyze dataset size and relevance before applying TTL. Running targeted queries helps determine how much data would be retained or removed based on different TTL values.
+Before applying TTL, use queries to analyze dataset size and relevance. Running targeted queries helps determine how much data would be retained or removed under different TTL configurations.  
 
-For example, the following SQL query counts the number of records created within the last 30 days:
+For example, the following SQL query counts the number of records created within the last 30 days:  
 
 ```sql
 SELECT COUNT(1) FROM [datasetName] WHERE timestamp > date_sub(now(), INTERVAL 30 DAY);
 ```
 
-Running similar queries for different time intervals helps validate TTL configurations and ensure they balance storage efficiency and data accessibility.
+Running similar queries for different time intervals helps validate TTL settings and ensure they balance storage efficiency and data accessibility.
 
 <!-- - **Pre-API Evaluation Steps**:
   - Questions users should ask before setting TTL:
