@@ -41,7 +41,7 @@ Available services on Edge Network include the following:
 
 The following section lists the locations for both hub and Edge Network.
 
-IMAGE
+![A diagram that lists the different locations for both hub and Edge Network servers.](./images/servers/platform-server-locations.png)
 
 **Hub**
 
