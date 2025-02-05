@@ -1,10 +1,10 @@
 ---
-title: Export array objects from Real-Time CDP to cloud storage destinations
+title: Export arrays, maps, and objects from Real-Time CDP to cloud storage destinations
 type: Tutorial
-description: Learn how to use calculated fields to export arrays from Real-Time CDP to cloud storage destinations as strings.
+description: Learn how to export arrays, maps, and objects from Real-Time CDP to cloud storage destinations.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 ---
-# Export array objects from Real-Time CDP to cloud storage destinations {#export-arrays-cloud-storage}
+# Export array, maps, and objects from Real-Time CDP to cloud storage destinations {#export-arrays-cloud-storage}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
@@ -19,7 +19,12 @@ exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 
 Learn how to export arrays from Real-Time CDP to [cloud storage destinations](/help/destinations/catalog/cloud-storage/overview.md). Read this document to understand the export workflow, the use cases enabled by this functionality, and known limitations.
 
-Arrays must currently be exported as strings, by using the `array_to_string` function.
+Consider this page your go-to place around anything you want to know about exporting arrays, maps, and other object types from Experience Platform.
+
+## Bottom line up front
+
+* The ability to export arrays, maps, and objects depends on your selection of the toggle
+
 
 To export arrays, you must use the calculated fields functionality in the mapping step of the export workflow,  *unless you are [exporting individual elements of an array](#index-based-array-access)*. For detailed information about calculated fields, visit the pages linked below. These include an introduction to calculated fields in Data Prep and more information about all the available functions: 
 
@@ -63,17 +68,33 @@ Note the following known limitations that currently apply to this functionality:
 
 [Connect](/help/destinations/ui/connect-destination.md) to a desired cloud storage destination, progress through the [activation steps for cloud storage destinations](/help/destinations/ui/activate-batch-profile-destinations.md) and get to the [mapping](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) step. 
 
+## Export arrays, maps, objects toggle
+
+The ability to export arrays, maps, objects depends on your selection in the toggle. Read the sections below for extensive information
+
+## Export arrays, maps, objects toggle *on*
+
+This setting allows you to export out entire objects(ex: person.name) and arrays(all kinds of arrays) by allowing you to select them via the Source Field Selector in the mapping step of the activation workflow.
+
+With this option selected, the UI will block users from utilizing calculated fields. This restriction prevents users from transforming profile data prior to exporting. Currently, we face a limitation where the actual structure of the calculated expression cannot be determined for inclusion in the output schema, which is essential for generating accurate exports.
+
+## Export arrays, maps, objects toggle *off*
+
+With this option selected, you are not able to export out entire objects (ex: person.name) and arrays(all kinds of arrays) via the Source Field Selector. However, you can export arrays as strings via the calculated fields toggle still enabled
+
+Arrays must currently be exported as strings, by using the `array_to_string` function.
+
 ## How to export calculated fields {#how-to-export-calculated-fields}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_control"
 >title="Enable hierarchical output schema"
->abstract="Toggle on if you would like to export hierarchical structures like arrays."
+>abstract="Toggle this setting on to enable the export of arrays, maps, and objects to JSON or Parquet files."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"
 >title="Add calculated fields disabled"
->abstract="This control is disabled because you selected to export flat structures when connecting to the destination."
+>abstract="This control is disabled because you selected the Export arrays, maps, objects toggle on when setting up this destination connection. To use calculated fields and the functions available within, set up a new destination connection with the Export arrays, maps, objects toggle *on*."
 
 In the mapping step of the activation workflow for cloud storage destinations, select **[!UICONTROL Add calculated field]**.
 
