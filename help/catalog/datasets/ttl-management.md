@@ -49,58 +49,205 @@ SELECT COUNT(1) FROM [datasetName] WHERE timestamp > date_sub(now(), INTERVAL 30
 
 Running similar queries for different time intervals helps validate TTL settings and ensure they balance storage efficiency and data accessibility.
 
-<!-- - **Pre-API Evaluation Steps**:
-  - Questions users should ask before setting TTL:
-    - Is this dataset suitable for TTL?
-    - How frequently is the dataset queried, and does historical data matter?  
-  - **Considerations**:  
-    - Dataset relevance over time.  
-    - Impact of TTL on downstream processes.  
-    - Storage cost vs. retention value.  
-- **Planning Queries**:  
-  - Provide examples of queries to assess dataset size or relevance:
-
-    ```sql
-    SELECT COUNT(1) FROM [datasetName] WHERE timestamp > date_sub(now(), INTERVAL 30 DAY);
-    ```
-  
-  - Explain how these queries help users determine appropriate TTL values. -->
-
 ## Get started with TTL management
 
-Section intro.
+Before you can evaluate, set, and manage TTL using the Catalog API, you must know how to properly format your requests. This includes the paths, required headers, and any request payloads. Refer to the Catalog Service API getting started guide for this essential information, including how to  gather values for required headers, best practices for Catalog API calls, and a link to the authentication tutorial.
 
 >[!NOTE]
 >
 >This document covers row-level expiration, which deletes individual expired rows within a dataset while keeping the dataset itself intact. It does not apply to dataset expiration, which removes entire datasets and is managed by a separate feature. For dataset-level expiration, refer to the [dataset expiration API documentation](../../hygiene/api/dataset-expiration.md).
 
-### How to Check Current TTL Settings
+### How to check current TTL settings
 
-- **Endpoint**: `GET /v2/datasets/{ID}`  
-- Provide an example API call to retrieve TTL settings, showing where `rowExpiration` is located in the metadata:  
-  
-  ```console
-  GET https://platform.adobe.io/data/foundation/catalog/v2/datasets/{datasetID}
-  ```
+<!-- Make a GET request to the `/ttl/{datasetId}` endpoint to retrieve the default, maximum and minimum TTL settings for a dataset. This is necessary because TTL rules can vary based on the dataset type. -->
+
+To begin your TTL management, first check current TTL settings. Make a GET request to retrieve your organization's TTL settings for a particular dataset. 
+
+>[!TIP]
+>
+>The Platform Gateway URL and base path for the Catalog Service API is: `https://platform.adobe.io/data/foundation/catalog`.
+>
+>If you do not know the relevant dataset ID, you can retrieve a list of all available objects of a specific type through a single API call. Be sure to include filters that limit the size of the response. See the [List catalog objects API guide](../api/list-objects.md) for more details.
+
+**API format**
+
+```http
+GET /ttl/{DATASET_ID}
+```
+
+| Parameter | Description |
+| --- | --- |
+| `{DATASET_ID}` | The dataset ID is a read-only, system-generated string used to reference the dataset in API calls. |
+
+**Request**
+
+The following request retrieves your organization's TTL settings for a particular dataset.
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/catalog/ttl/5ba9452f7de80408007fc52a' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+  -H 'x-sandbox-id: {SANDBOX_ID}'
+```
+
+**Response**
+
+A successful response returns the TTL configuration for the dataset, including the default, maximum, and minimum TTL values for both `adobe_lakeHouse` and `adobe_unifiedProfile` storage.
+
+```json
+{  "extensions": {
+        "adobe_lakeHouse": {  
+            "rowExpiration": {
+                "defaultValue": <Period> ("P7D", "P15D", "P12M"),
+                "maxValue": <Period> ("P7D", "P15D", "P12M"),
+                "minValue": <Period> ("P7D", "P15D", "P12M")
+            }
+        },
+        "adobe_unifiedProfile": {  
+            "rowExpiration": {
+                "defaultValue": <Period> ("P7D", "P15D", "P12M"),
+                "maxValue": null,
+                "minValue": <Period> ("P7D", "P15D", "P12M")
+            }
+        }
+    }
+}
+```
+
+<!-- 
+Q) Can i include this bit?
+For easy comparison and manipulation of time durations, TTL values are stored using the `Period` class.  -->
+
+<!-- 
+Shouldnt a response look like this:
+```json
+{
+    "67976f0b4878252ab887ccd9": {
+        "name": "Test dataset",
+        "description": "This is just a test dataset",
+        "imsOrg": "033A229F5A7B915B0A494028@AdobeOrg",
+        "sandboxId": "73d54130-c5bc-11e9-949c-0da8d50fcac1",
+        "tags": {
+            "adobe/pqs/table": [
+                "test_dataset_20250127_113331_106"
+            ],
+            "adobe/siphon/table/format": [
+                "delta"
+            ],
+            "custom_tag": [
+                "patched_with_v2"
+            ]
+        },
+        "extensions": {
+            "adobe_lakeHouse": {  
+                "rowExpiration": {
+                    "defaultValue": <Period> ("P7D", "P15D", "P12M"),
+                    "maxValue": <Period> ("P7D", "P15D", "P12M"),
+                    "minValue": <Period> ("P7D", "P15D", "P12M")
+                }
+            },
+            "adobe_unifiedProfile": {  
+                "rowExpiration": {
+                    "defaultValue": <Period> ("P7D", "P15D", "P12M"),
+                    "maxValue": null,
+                    "minValue": <Period> ("P7D", "P15D", "P12M")
+                }
+            }
+        },
+        "version": "1.0.1",
+        "created": 1737977611118,
+        "updated": 1737977766499,
+        "createdClient": "acp_foundation_catalog",
+        "createdUser": "acp_foundation_catalog@AdobeID",
+        "updatedUser": "acp_foundation_catalog@AdobeID",
+        "classification": {
+            "managedBy": "CUSTOMER"
+        }
+    }
+}
+```
+ -->
+
+| Property      | Description |
+|--------------|-------------|
+| `defaultValue` | The preconfigured TTL period applied to a dataset if no custom TTL is set. This represents the standard retention duration assigned by default when row expiration is enabled. |
+| `maxValue`    | The maximum TTL period that can be assigned to a dataset. This defines the longest allowable retention duration, ensuring TTL values do not exceed platform or policy limits. If `null`, there is no enforced maximum. |
+| `minValue`    | The minimum TTL period that can be set for a dataset. This prevents users from configuring TTL values below the defined retention threshold, ensuring compliance with system requirements or business policies. |
 
 ### How to set TTL for a dataset
 
-- **Endpoint**: `PATCH /v2/datasets/{ID}`  
-- Provide a clear, real-world example of setting TTL, such as:  
-  
-  ```json
-  {
-      "extensions": {
-          "adobe_lakeHouse": {
-              "rowExpiration": {
-                  "ttlValue": "P3M"  // 3 months
-              }
-          }
-      }
-  }
-  ```  
+>[!IMPORTANT]  
+>
+>Row-expiration can only be applied to event datasets that use a time-series schema. Before setting TTL, verify that the dataset's schema extends `https://ns.adobe.com/xdm/data/time-series` to ensure the API request succeeds. Use the Schema Registry API to retrieve the schema details and verify the `meta:extends` property. Refer to the [Schema endpoint documentation](../../xdm/api/schemas.md#lookup) for guidance on how to do this.
 
-- **Explain what this does** and how users can adapt it for their needs.
+To set a new TTL value for your dataset, make a PATCH request to the `/v2/datasets/{ID}` endpoint. 
+<!-- - Provide a clear, real-world example of setting TTL, such as:   -->
+
+**API format**
+
+```http
+PATCH /v2/datasets/{DATASET_ID}
+```
+
+| Parameter | Description |
+| --- | --- |
+| `{DATASET_ID}` | The ID of the dataset you want to update the TTL value for. |
+
+**Request**  
+
+In the example request below, the `ttlValue` is set to `P3M`. This means that the system automatically deletes records older than three months. You can adjust the retention period to suit your business needs using values such as `P6M` for six months or `P12M` for one year.
+
+```shell
+curl -X PATCH \
+  'https://platform-int.adobe.io/data/foundation/catalog/v2/datasets/{DATASET_ID}' \
+  -h 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -h 'Content-Type: application/json' \
+  -h 'x-api-key: {API_KEY}' \
+  -h 'x-gw-ims-org-id: {ORG_ID}' \
+  -d '{
+    "extensions": {
+        "adobe_lakeHouse": {
+            "rowExpiration": {
+                "ttlValue": "P3M"  // A 3 month retention period
+            }
+        }
+    }
+}
+```  
+
+| Property                         | Description |
+|----------------------------------|-------------|
+| `extensions`                     | A container for additional metadata related to the dataset. |
+| `extensions.adobe_lakeHouse`     | Specifies settings related to storage architecture, including row expiration configurations |
+| `extensions.adobe_lakeHouse.rowExpiration` | Contains TTL settings that define the retention period for the dataset. |
+| `extensions.adobe_lakeHouse.rowExpiration.ttlValue` | Defines the duration before records in the dataset are automatically removed. Uses the ISO-8601 period format (for example, `"P3M"` for 3 months). Accepted values include `P3M`, `P6M`, and `P12M`. |
+
+**Response**
+
+```JSON
+{  "extensions": {
+        "adobe_lakeHouse": {  
+            "rowExpiration": {
+              "ttlValue": <Period> ("P7D", "P15D", "P12M"),
+                "valueStatus": <enum> (default, custom),
+                "setBy": <enum> (user, service)
+                "updated": <timestamp>
+            }
+        },
+        adobe_unifiedProfile": {  
+            "rowExpiration": {
+                "ttlValue": <Period> ("P7D", "P15D", "P12M"),
+                "valueStatus": <enum> (default, custom),
+                "setBy": <enum> (user, service)
+                "updated": <timestamp>
+            }
+        }
+    }
+}
+```
 
 ### How to Update TTL
 
@@ -148,54 +295,3 @@ Limitations
 'Can you remove it? No
  -->
 
-<!--  -->
-<!-- 
-The ask is to create an **API-based use case playbook** focused on **helping users evaluate and implement a data retention policy using TTL**. Beyond just documenting API calls, the playbook should guide users through **strategic decision-making** and provide actionable steps. Here's what Adam likely envisions:
-
-### **Key Aspects of the API-Based Playbook:**
-
-1. **Pre-API Evaluation Steps:**
-   - Guidance on **how users should evaluate their datasets** to decide if TTL is appropriate.
-   - Considerations for **compliance, storage costs, and data lifecycle needs.**
-   - Examples of questions users should answer:
-     - "Does this dataset need a retention policy?"
-     - "What is the most appropriate TTL value for this dataset?"
-     - "How would TTL impact downstream processes?"
-
-2. **Query Examples for Decision-Making:**
-   - Examples of **API queries users should make to assess their current dataset state** before applying or modifying TTL:
-     - **Check if a TTL is already applied** to a dataset.
-     - **Retrieve current TTL settings.**
-   - Queries for **TTL forecasting** or predicting the impact of a proposed TTL.
-
-3. **API Steps to Manage TTL:**
-   - Detailed **step-by-step guidance** for:
-     - **Setting a new TTL** for a dataset.
-     - **Updating an existing TTL.**
-     - Verifying the TTL configuration after applying changes.
-   - A note on **why TTL cannot be removed** and how users can manage this limitation.
-
-4. **Value Realization and Use Case Scenarios:**
-   - **Why and when users should set TTL.**
-   - Use cases highlighting the **value of automating data retention policies** (e.g., cost efficiency, compliance, data hygiene).
-   - Best practices for setting TTL for **event datasets in the Data Lake.**
-
-5. **Collaboration and Refinement:**
-   - Adam suggests working with @fdiao to refine the document. This implies that **Fdiao has expertise or oversight** on either the API or the strategic use case approach and should be consulted for alignment and accuracy.
-
-### **Additional Considerations Based on Adam's Notes:**
-- The **focus is on customer use cases** and **value realization**, not just technical API instructions.
-- The playbook should bridge the gap between **strategic use case guidance** and **API implementation details.**
-- It needs to **remain actionable and followable**, making it clear how users can make decisions and execute them step-by-step with the API.
-
----
-
-### **Summary of What Adam Wants:**
-Adam is asking for an **API-based use case playbook** that helps users:
-1. Understand the **value of TTL** and decide when and how to use it.
-2. Perform **queries to assess the dataset's current state** and evaluate TTL needs.
-3. Follow **step-by-step API instructions** to set, update, and verify TTL configurations.
-4. Integrate **examples and guidance** to help customers strategically manage data retention policies.
-
-By focusing on both **decision-making (the why)** and **execution (the how)**, this document should empower users to optimize their data lifecycle with TTL effectively.
- -->
