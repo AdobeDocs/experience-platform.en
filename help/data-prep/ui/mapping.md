@@ -72,15 +72,15 @@ To add a new mapping field, select **[!UICONTROL New field type]** and then sele
 
 Next, select the source field you would like to add from the source schema tree that appears and then select **[!UICONTROL Select]**.
 
-![The source schema with "country" selected as an additional new field.](../images/ui/mapping/)
+![The source schema with "country" selected as an additional new field.](../images/ui/mapping/source_field.png)
 
 The mapping interface updates with the source field you selected and an empty target field. Select **[!UICONTROL Map target field]** to start mapping the new source field to its appropriate target XDM field.
 
-![The mapping interface with a new and unmapped source field.](../images/ui/mapping/)
+![The mapping interface with a new and unmapped source field.](../images/ui/mapping/new_field_added.png)
 
 An interactive target schema tree appears, allowing you to manually traverse through the target schema and find the appropriate target XDM field for your source field.
 
-![The interactive target scheme tree with a new target field selected.](../images/ui/mapping/)
+![The interactive target scheme tree with a new target field selected.](../images/ui/mapping/add_target_field.png)
 
 #### Calculated fields {#calculated-fields}
 
@@ -88,9 +88,9 @@ Calculated fields allow for values to be created based on the attributes in the 
 
 To create a calculated field, select **[!UICONTROL New field type]** and then select **[!UICONTROL Add calculated field]**
 
-![add-calculated-field](../images/ui/mapping/)
+![The mapping interface with the "add calculated field" button selected.](../images/ui/mapping/new_calculated_field.png)
 
-The **[!UICONTROL Create calculated field]** panel appears. The left dialog box contains the fields, functions, and operators supported in calculated fields. Select one of the tabs to start adding functions, fields, or operators to the expression editor.
+The **[!UICONTROL Create calculated field]** window appears. Use the interface to input your calculated fields and refer to the dialog box on the left for supported fields, functions, and operators. 
 
 | Tab | Description |
 | --- | ----------- |
@@ -98,11 +98,9 @@ The **[!UICONTROL Create calculated field]** panel appears. The left dialog box 
 | [!UICONTROL Field] | The fields tab lists fields and attributes available in the source schema. |
 | [!UICONTROL Operator] | The operators tab lists the operators that are available to transform the data. |
 
-![tabs](../images/ui/mapping/)
+![The calculated field interface](../images/ui/mapping/calculated_field.png)
 
 You can manually add fields, functions, and operators using the expression editor at the center. Select the editor to start creating an expression. Once you are finished, select **[!UICONTROL Save]** to proceed.
-
-![create-calculated-field](../images/ui/mapping/)
 
 ### Import mapping {#import-mapping}
 
