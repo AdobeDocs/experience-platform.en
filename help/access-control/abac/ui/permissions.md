@@ -4,7 +4,13 @@ title: Attribute-based Access Control Manage Role Permissions
 description: This document provides information on configuring permissions for a role through the Permissions interface in Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 ---
-# Manage permissions for a role
+# Manage permissions for a role {#manage-role-permissions}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about"
+>title="What are roles?"
+>abstract="Roles define the access that an administrator, a specialist, or an end-user has to resources in your organization. They categorize the users interacting with your Platform instance and are the building blocks of access control policies. A role has a given set of permissions and members of your organization can be assigned to one or more roles, depending on the scope of view or write access they need."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html" text="Manage roles"
 
 >[!IMPORTANT]
 >
@@ -35,7 +41,14 @@ To remove a filter, select the "X" on the pill icon for the filter in question, 
 
 ![The Roles dashboard in the Permissions UI with the X and Clear all selections highlighted on the chosen filters.](../../images/flac-ui/flac-clear-filters.png)
 
-## Role details
+## Role details {#role-details}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_details"
+>title="Role overview"
+>abstract="The role overview dialog displays the role's details including the resources and sandboxes that a given role is permitted to access. You can manage labels, users, user groups, and API credentials for the role by navigating to the corresponding tab within the role's workspace."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-labels-for-a-role" text="Manage labels for a role"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-users-for-a-role" text="Manage users for a role"
 
 Select the role from the **[!UICONTROL Roles]** tab, which will open the role's [!UICONTROL Details] dashboard.
 

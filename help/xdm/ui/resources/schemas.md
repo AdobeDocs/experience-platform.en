@@ -348,7 +348,7 @@ Once you have assigned a class and added field groups to a schema, you can edit 
 >
 >Once you make changes the display names for a schema's fields, those changes are immediately reflected in any existing datasets based on that schema.
 
-To edit the display name of a schema field, select the field in the canvas. In the right rail, provide the new name under **[!UICONTROL Display name]**.
+Change the field names to the display names by toggling on **[!UICONTROL Show display names for fields]**. To edit the display name of a schema field, select the field in the canvas. In the right rail, provide the new name under **[!UICONTROL Display name]**.
 
 ![](../../images/ui/resources/schemas/display-name.png)
 

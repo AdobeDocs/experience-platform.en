@@ -2,6 +2,7 @@
 title: Snapchat Conversions API extension overview
 description: Use the Snapchat conversion to send server-side event data to Snap.
 last-substantial-update: 2025-01-20
+exl-id: 1c2d7243-5bcd-40a0-8515-9ab72613c5f3
 ---
 # [!DNL Snapchat] Conversions API extension overview
 
