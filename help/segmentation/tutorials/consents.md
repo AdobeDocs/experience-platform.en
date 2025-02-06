@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Honoring Consent in Segment Definitions
-description: Learn how to honor customer consent preferences for personal data collection and sharing in segment operations.
+description: Learn how to honor customer consent preferences for personal data collection and sharing in segmentation operations.
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
 ---
 # Honoring consent in segment definitions
@@ -43,7 +43,7 @@ The steps below demonstrate how to add the appropriate fields for two types of o
 >
 >While this guide focuses on the two opt-out flags above, you can configure your segment definitions to incorporate additional consent signals as well. The [consents and preferences reference guide](../../xdm/field-groups/profile/consents.md) provides more information on each of these options and their intended use cases.
 
-When building a segment definition in the UI, under **[!UICONTROL Attributes]**, navigate to **[!UICONTROL XDM Individual Profile]**, then select **[!UICONTROL Consents and Preferences]**. From here, you can see the options for **[!UICONTROL Data Collection]** and **[!UICONTROL Share Data]**.
+When building a segment definition in the UI, under **[!UICONTROL Attributes]**, navigate to **[!UICONTROL XDM Individual Profile]**, then select **[!UICONTROL Consents and Preferences]**, followed by **[!UICONTROL Id Specific]**. From here, you can see the options for **[!UICONTROL Data Collection]** and **[!UICONTROL Share Data]**.
 
 ![](../images/tutorials/opt-outs/consents.png)
 
