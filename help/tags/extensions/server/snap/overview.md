@@ -19,7 +19,7 @@ Create a [Datastream](/help/tags/ui/event-forwarding/getting-started.md) and add
 
 A **[!DNL Snapchat]** [Business Manager](https://business.snapchat.com/) account is required to use the Conversions API. Business Manager helps advertisers integrate **[!DNL Snapchat]**'s marketing efforts across their business and with external partners. See the **[!DNL Snapchat]** [help center article](https://businesshelp.snapchat.com/s/article/get-started?language=en_US) on creating a Business Manager account if you don't have one.
 
-A **[!DNL Snap Pixel]**(https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US) must be set up in the Snapchat Ads Manager, and you must have access to view the `Pixel ID`. The `Pixel ID` can be found in the **[!UICONTROL Events Manager]**(https://businesshelp.snapchat.com/s/article/events-manager?language=en_US) section.
+A [!DNL [Snap Pixel]](https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US) must be set up in the Snapchat Ads Manager, and you must have access to view the `Pixel ID`. The `Pixel ID` can be found in the [!UICONTROL [Events Manager]](https://businesshelp.snapchat.com/s/article/events-manager?language=en_US) section.
 
 You need a static, long-lived API token. See the [[!DNL Snapchat] Conversions API documentation](https://developers.snap.com/api/marketing-api/Conversions-API/GetStarted#access-token) to obtain this token.
 
@@ -185,7 +185,7 @@ Once you set the rule's name, condition and action as described above, save the 
 
 ![Image showing enabled rule](../../../images/extensions/server/snap/enabled_rule.png)
 
-You can now publish these changes to your property. See the documentation on [publishing flow](/help/tags/ui/publishing/overview.md)(https://experienceleague.adobe.com/en/docs/experience-platform/tags/publish/overview) for more information.
+You can now publish these changes to your property. See the documentation on [publishing flow](/help/tags/ui/publishing/overview.md) for more information.
 
 ## Troubleshoot {#troubleshoot}
 
