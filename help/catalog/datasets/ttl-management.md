@@ -406,12 +406,9 @@ No, once a retention policy is applied, any data older than the retention period
 ## Next steps {#next-steps}
 
 Now that you've learned how to manage TTL settings for row-level expiration, review the following documentation to further your understanding of TTL management:
-<!--  -->
 
-- Retention jobs: This document covers how to schedule and automate dataset expirations in the Platform UI.  
-  
-  <!-- relates to checking dataset retention configurations and confirming expired records are deleted. -->
-- Dataset Expiration API endpoint guide: Discover how to delete entire datasets rather than just rows.
-- Data Governance Policies: Read this documentation to align your retention policies with broader governance requirements.
+- Retention jobs: The [data lifecycle UI guide](https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration) covers how to schedule and automate dataset expirations in the Platform UI. <!-- relates to checking dataset retention configurations and confirming expired records are deleted. --> 
+- [Dataset Expiration API endpoint guide](https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/api/dataset-expiration): Discover how to delete entire datasets rather than just rows.
+- [Data usage policies overview](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/policies/overview): Learn how to align your retention policies with broader governance requirements.
 
 
