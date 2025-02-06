@@ -82,6 +82,10 @@ You can ask AI Assistant questions about your operational insights in the follow
 
 For operational insights questions, answers may not reflect the current state of the UI. The data that backs these questions is updated once every 24 hours. For example, changes that users make in Real-Time CDP during the daytime are synced with the data stores at night, and then they become available for user questions in the morning. You will need to log into a sandbox to inquire about specific data related to objects.
 
+Watch the following video for additional information on AI Assistant operational insights:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
+
 ### Feature scope {#feature-scope}
 
 Currently, the scope of AI Assistant is as follows:
