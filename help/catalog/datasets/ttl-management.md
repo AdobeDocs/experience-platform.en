@@ -2,7 +2,6 @@
 title: Manage Your Data Lifecycle with TTL API Use Cases and Best Practices
 description: Learn how to evaluate, set, and manage row-level TTL for datasets using APIs in Adobe Experience Platform. This guide provides best practices, use cases, and step-by-step instructions to optimize data hygiene and storage efficiency while ensuring effective data lifecycle management.
 ---
-
 # Manage your data lifecycle with TTL: API use cases and best practices
 
 Managing data efficiently is essential to maintain performance, control costs, and ensure clean datasets. Perform row-level expiration (Time-To-Live, TTL) to automatically remove outdated records from Adobe Experience Platform datasets, keeping storage optimized and relevant.
@@ -15,7 +14,7 @@ This guide explains how to evaluate, set, and manage TTL using the Catalog Servi
 
 ## Why use TTL for row-level data management
 
-As datasets grow, efficient data management becomes increasingly important to preserve performance, control costs, and keeps data relevant. Row-level data expiration automates data cleanup by removing outdated records without manual intervention to help optimize storage and improve system efficiency.
+As datasets grow, efficient data management becomes increasingly important to preserve performance, control costs, and keep data relevant. Row-level data expiration automates data cleanup by removing outdated records without manual intervention to help optimize storage and improve system efficiency.
 
 TTL is useful when managing time-sensitive data that loses relevance over time. Consider implementing TTL if you need to:
 
@@ -34,7 +33,7 @@ Before applying TTL, assess whether your dataset is a good candidate for row exp
 
 - Data relevance over time: Does older data provide value, or does it become obsolete?
 - Impact on downstream processes: Will removing data affect reporting, analytics, or integrations?
-- Storage cost versus retention value: Does the cost of storing older data justify its usefulness?
+- Storage cost versus retention value: Does the value of older data justify the cost of storing it?
 
 If historical records are essential for long-term analysis or business operations, TTL may not be the right approach. Reviewing these factors ensures that TTL aligns with your data retention needs without negatively affecting data availability.
 
@@ -52,8 +51,8 @@ Running similar queries for different time intervals helps validate TTL settings
 
 ## Get started with TTL management
 
-Before you can evaluate, set, and manage TTL using the Catalog API, you must know how to properly format your requests. This includes understanding the paths, providing required headers, and formatting any request payloads. Refer to the [Catalog Service API getting started guide](../api/getting-started.md) for this essential information.
-<!-- , including how to  gather values for required headers, best practices for Catalog API calls, and a link to the authentication tutorial. -->
+Before you can evaluate, set, and manage TTL using the Catalog Service API, you must know how to properly format your requests. This includes understanding the paths, providing required headers, and formatting any request payloads. Refer to the [Catalog Service API getting started guide](../api/getting-started.md) for this essential information.
+<!-- , including how to  gather values for required headers, best practices for Catalog Service API calls, and a link to the authentication tutorial. -->
 
 >[!NOTE]
 >
@@ -68,8 +67,8 @@ To begin your TTL management, first check current TTL settings. Make a GET reque
 >[!TIP]
 >
 >The Platform Gateway URL and base path for the Catalog Service API is: `https://platform.adobe.io/data/foundation/catalog`.
->
->If you do not know the relevant dataset ID, you can retrieve a list of all available objects of a specific type through a single API call. Be sure to include filters that limit the size of the response. See the [List catalog objects API guide](../api/list-objects.md) for more details.
+
+<!-- >If you do not know the relevant dataset ID, you can retrieve a list of all available objects of a specific type through a single API call. Be sure to include filters that limit the size of the response. See the [List catalog objects API guide](../api/list-objects.md) for more details. -->
 
 **API format**
 
@@ -79,7 +78,7 @@ GET /ttl/{DATASET_ID}
 
 | Parameter | Description |
 | --- | --- |
-| `{DATASET_ID}` | The dataset ID is a read-only, system-generated string used to reference the dataset in API calls. |
+| `{DATASET_ID}` | A system-generated string that uniquely identifies a dataset. Use the `/datasets` endpoint to retrieve dataset IDs. See the [List catalog objects API guide](../api/list-objects.md) for instructions.  |
 
 **Request**
 
@@ -197,7 +196,7 @@ PATCH /v2/datasets/{DATASET_ID}
 
 **Request**
 
-In the example request below, the `ttlValue` is set to `P3M`. This means that the system automatically deletes records older than three months. You can adjust the retention period to suit your business needs using values such as `P6M` for six months or `P12M` for one year.
+In the example request below, the `ttlValue` is set to `P3M`. This ensures that records older than three months are automatically deleted. You can adjust the retention period to suit your business needs using values such as `P6M` for six months or `P12M` for one year.
 
 ```shell
 curl -X PATCH \
@@ -315,7 +314,7 @@ curl -X PATCH \
 
 ## Best practices for setting TTL {#best-practices}
 
-Choosing the right TTL value is crucial for balancing data retention, storage efficiency, and analytical needs. If the TTL is too short, it may cause data loss and affect historical analysis and forecasting. If it's too long, it can lead to excessive storage costs and unnecessary data accumulation. Ensure the TTL aligns with your dataset's purpose by considering how often the data is accessed and how long it remains relevant.
+Choosing the right TTL value is crucial for balancing data retention, storage efficiency, and analytical needs. Setting TTL too short may result in data loss and affect historical analysis and forecasting. If TTl is too long may increase storage costs and data accumulation. Ensure the TTL aligns with your dataset's purpose by considering how often the data is accessed and how long it remains relevant.
 
 The table below provides common TTL recommendations based on dataset type and usage patterns:
 
@@ -332,9 +331,11 @@ You should review TTL settings periodically to ensure they continue to align wit
 
 >[!NOTE]
 >
-> Before applying TTL, verify that the dataset supports row expiration. TTL is only available for event datasets that use a time-series schema. Additionally, some datasets have system-imposed TTL limits (for example, a maximum of 24 months for app-managed datasets).
+> Before applying TTL, verify that the dataset supports row expiration. TTL is only available for event datasets that use a time-series schema. 
 
-<!-- Q) Are the limits: 90 days for data in the profile store and 13 months for data in the data lake? This is true for Journey Optimizer. -->
+<!-- The default TTL limits for system-generated Profile Store and data lake datasets are ... respectively. -->
+
+<!-- Q) Are the limits: 90 days for data in the Profile store and 13 months for data in the data lake? This is true for Journey Optimizer. -->
 
 Follow these best practices to ensure TTL settings align with your data retention strategy:
 
@@ -410,7 +411,7 @@ No, once a retention policy is applied, any data older than the retention period
 
 Now that you've learned how to manage TTL settings for row-level expiration, review the following documentation to further your understanding of TTL management:
 
-- Retention jobs: The [data lifecycle UI guide](../../hygiene/ui/dataset-expiration.md) covers how to schedule and automate dataset expirations in the Platform UI. Discover how to check dataset retention configurations and confirming expired records are deleted.
+- Retention jobs: The [data lifecycle UI guide](../../hygiene/ui/dataset-expiration.md) explains how to schedule and automate dataset expirations in the Platform UI. Learn how to check dataset retention configurations and confirm expired records are deleted.
 - [Dataset Expiration API endpoint guide](../../hygiene/api/dataset-expiration.md): Discover how to delete entire datasets rather than just rows. Learn how to schedule, manage, and automate dataset expiration using the API to ensure efficient data retention.
 - [Data usage policies overview](../../data-governance/policies/overview.md): Learn how to align your data retention strategy with broader compliance requirements and marketing use restrictions. 
 
