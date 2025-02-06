@@ -178,7 +178,7 @@ Shouldnt a response look like this:
 | `maxValue`    | The maximum TTL period that can be assigned to a dataset. This defines the longest allowable retention duration, ensuring TTL values do not exceed platform or policy limits. If `null`, there is no enforced maximum. |
 | `minValue`    | The minimum TTL period that can be set for a dataset. This prevents users from configuring TTL values below the defined retention threshold, ensuring compliance with system requirements or business policies. |
 
-### How to set TTL for a dataset
+### How to set TTL for a dataset {#set-ttl}
 
 >[!IMPORTANT]
 >
@@ -254,7 +254,7 @@ A successful response shows the TTL configuration for the dataset. It includes d
 | `rowExpiration.setBy` | Specifies who last modified the TTL setting. Possible values include: `user` (manually set) or `service` (automatically assigned). |
 | `rowExpiration.updated` | The timestamp of the last TTL update. This value indicates when the TTL setting was last modified. |
 
-### How to update TTL
+### How to update TTL {#update-ttl}
 
 Extend or shorten the retention period to suit your business needs by adjusting the TTL. For example, the video streaming platform mentioned earlier, may initially set TTL to three months to ensure fresh engagement data for personalization. However, if analysis shows that interaction patterns older than three months still provide valuable insights, the TTL can be extended to six months to keep older records for better recommendation models.
 
@@ -339,33 +339,79 @@ Follow these best practices to ensure TTL settings align with your data retentio
 - Audit TTL changes regularly. Every TTL update triggers an audit event. Use audit logs to track TTL modifications for compliance, data governance, and troubleshooting purposes.
 - Remove TTL if data must be retained indefinitely. To disable TTL, set `ttlValue` to `null`. This will prevent automatic expiration and retain all records permanently, so consider storage implications before making this change. 
 
-## Limitations of TTL
+## Limitations of TTL {#limitations}
 
-- Explicitly call out what TTL cannot do:
-  - TTL is for row-level expiration, not full dataset deletion.
-  - TTL cannot be removed once set; it can only be updated.
-  - Explain that TTL is not suitable for compliance requirements.
+Be aware of the following limitations when using TTL:
 
-## FAQs and Common Use Cases
+- **TTL applies to row-level expiration**, not dataset deletion. TTL removes records based on a defined retention period but does not delete entire datasets. To remove a dataset, use the [dataset expiration endpoint](../../hygiene/api/dataset-expiration.md) or manual deletion.
+- **TTL cannot be removed**, only updated. Once applied, TTL cannot be deleted, but you can [modify the retention period](#update-ttl) to extend or shorten it. To retain data indefinitely, set a sufficiently long TTL instead of attempting to remove it.
+- **TTL is not a compliance tool**. TTL optimizes storage and data lifecycle management but does not meet regulatory data retention requirements. For compliance, implement broader data governance strategies.
 
-- FAQs:
-  - Can I remove a TTL? (Answer: No, but you can update it.)
-  - What happens if I don't set TTL? (Answer: Rows are retained indefinitely.)
-- Use Cases:
-  - Highlight scenarios like "Managing log data for cost efficiency" or "Cleaning up irrelevant event data in the Data Lake."
+## Dataset retention policy FAQs {#faqs}
 
-<!-- ## References and Related Resources** -->
+This section provides answers for commonly asked questions about dataset retention policies in Adobe Experience Platform.
 
-## Next steps
+### What types of datasets can I apply retention policy rules to?
 
-- Include links to:
-  - Catalog API documentation.
-  - Internal wiki resources on TTL.
-  - Related Experience League articles.
++++Answer
+You can apply retention policies to datasets created using the ExperienceEvent XDM class. For Profile services, retention policies are only applicable to ExperienceEvent datasets that have been Profile-enabled.
++++
 
-<!-- 
-Limitations
-'How does a customer update Event Dataset Lake TTL?'
-'Can you remove it? No
- -->
+### How soon will the dataset retention job delete data from Datalake services?
+
++++Answer
+Dataset TTLs are evaluated and processed weekly, deleting all expired records. An event is considered expired if it was ingested into Platform more than 30 days ago (ingestion date > 30 days) and its event date exceeds the defined retention period (TTL).
++++
+
+### How soon will the dataset retention job delete data from Profile services?
+
++++Answer
+Once a retention policy is set, existing events in Adobe Experience Platform are immediately deleted if their event timestamp exceeds the retention period (TTL). New events are deleted once their timestamp surpasses the retention period.
+
+For example, if you apply a 30-day expiration policy on May 15th, the following occurs:
+
+- New events receive a 30-day expiration as they are ingested.
+- Existing events with a timestamp older than April 15th are immediately deleted.
+- Existing events with a timestamp after April 15th are set to expire 30 days after their timestamp (for example, an event from April 18th would be deleted on May 18th).
++++
+
+### Can I set different retention policies for data lake and Profile services?
+
++++Answer
+Yes, you can set different retention policies for data lake and Profile services. However, the retention period for Profile must not be shorter than the one set for data lake.
++++
+
+### How can I check my current dataset usage?
+
++++Answer
+You can check the latest dataset storage size for data lake and Profile stores as separate metrics on the Dataset inventory page. Sort the columns to identify the largest datasets and verify that retention policies are applied.
+
+For sandbox-level usage, refer to the License Usage dashboard. See the [License Usage documentation](../../dashboards/guides/license-usage.md) for details.
++++
+
+### How can I verify if the data retention job was successful?
+
++++Answer
+You can verify the last data retention job by checking its timestamp in the [Dataset Retention Configuration UI](./user-guide.md#data-retention-policy) or on the Data Inventory page.
+
+Historical dataset usage reporting is currently unavailable.
++++
+
+### Can I recover deleted data?
+
++++Answer
+No, once a retention policy is applied, any data older than the retention period is permanently deleted and cannot be recovered.
++++
+
+## Next steps {#next-steps}
+
+Now that you've learned how to manage TTL settings for row-level expiration, review the following documentation to further your understanding of TTL management:
+<!--  -->
+
+- Retention jobs: This document covers how to schedule and automate dataset expirations in the Platform UI.  
+  
+  <!-- relates to checking dataset retention configurations and confirming expired records are deleted. -->
+- Dataset Expiration API endpoint guide: Discover how to delete entire datasets rather than just rows.
+- Data Governance Policies: Read this documentation to align your retention policies with broader governance requirements.
+
 
