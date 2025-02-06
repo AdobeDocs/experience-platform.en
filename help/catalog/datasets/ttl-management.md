@@ -311,6 +311,33 @@ curl -X PATCH \
 }
 ```
 
+## Best practices for setting TTL {#best-practices}
+
+Choosing the right TTL value is essential for balancing data retention, storage efficiency, and analytical needs. If you set TTL too short, it can result in data loss, while setting it too long can lead to excessive storage costs. Ensure the TTL aligns with your dataset's purpose by considering how frequently the data is accessed and how long it remains relevant.
+
+The table below provides some common TTL recommendations based on dataset type and usage patterns: 
+
+| Dataset Type                | Recommended TTL        | Typical Use Cases |
+|-----------------------------|------------------------|-------------------|
+| Frequently accessed datasets| 30-90 days             | User engagement logs, website clickstream data, short-term campaign performance data. |
+| Archival datasets           | 1 year or more         | Financial transaction logs, compliance data, long-term trend analysis, machine learning training datasets. |
+| App-managed datasets        | Up to 13 months        | System-managed datasets have predefined TTL restrictions, which are automatically enforced to comply with system-imposed limits. |
+| Customer-managed datasets   | 30 days – Max TTL      | Datasets created through the UI, APIs, or Data Distiller. The TTL must be at least 30 days and within the defined max TTL. |
+
+You should also review TTL settings periodically to ensure they continue to align with your business needs. 
+
+### Key considerations when setting TTL
+
+>[!NOTE]
+>
+>Before applying TTL, verify that the dataset supports row expiration. TTL is only available for event datasets using a time-series schema. Additionally, some datasets have system-imposed TTL limits (e.g., a maximum of 24 months for app-managed datasets).
+
+Consider these best practices to ensure TTL settings align with your data retention strategy
+
+- Avoid setting TTL too short. Unless data is only needed for real-time analysis. Deleting records prematurely can impact long-term insights.  
+- Audit TTL changes regularly. Every TTL update triggers an audit event, making it important to track modifications for compliance and data governance.  
+- Remove TTL if a dataset no longer requires automatic expiration. You can set `ttlValue` to `null` to disable TTL.  
+
 ## Best practices for setting TTL
 
 - Provide recommendations on TTL duration based on dataset usage:
