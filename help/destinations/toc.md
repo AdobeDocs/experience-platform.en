@@ -58,15 +58,16 @@ role: Admin,User
         * [Adobe destinations overview](./catalog/adobe/overview.md)
         * [Experience Cloud audiences](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
         * [Marketo Engage connection](./catalog/adobe/marketo-engage.md)
+        * [(Beta) Marketo Engage Person Sync connection](./catalog/adobe/marketo-engage-person-sync.md)
         * [Marketo Measure Ultimate connection](./catalog/adobe/marketo-measure-ultimate.md)
         * [Experience Platform audience sharing](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
-        * [Federated Audience Composition connection (Limited availability)](https://www.adobe.com/go/destinations-federated-audience-composition)
+        * [Federated Audience Composition connection](https://www.adobe.com/go/destinations-federated-audience-composition)
     * Advertising destinations{#advertising}
         * [(Beta) Acxiom Audience Distribution](./catalog/advertising/acxiom-audience-distribution.md)
         * [Advertising destinations overview](./catalog/advertising/overview.md)
         * [Adobe Advertising Cloud connection](./catalog/advertising/adobe-advertising-cloud-connection.md)
         * [Adobe Advertising Cloud extension](./catalog/advertising/adobe-advertising-cloud.md)
-        * [(Beta) Amazon Ads connection](./catalog/advertising/amazon-ads.md)
+        * [Amazon Ads connection](./catalog/advertising/amazon-ads.md)
         * [Awin Advertiser Conversion Tag extension](./catalog/advertising/awin-conversiontag.md)
         * [Awin Advertiser Mastertag extension](./catalog/advertising/awin-mastertag.md)
         * [Bing Ads Universal Event Tracking (UET) extension](./catalog/advertising/bing-ads.md)
@@ -96,7 +97,7 @@ role: Admin,User
         * [PubMatic Connect connection](./catalog/advertising/pubmatic.md)
         * [Snapchat Ads connection](./catalog/advertising/snap-inc.md)
         * [The Trade Desk connection](./catalog/advertising/tradedesk.md)
-        * [(Beta) The Trade Desk CRM connection](./catalog/advertising/tradedesk-emails.md)
+        * [The Trade Desk CRM connection](./catalog/advertising/tradedesk-emails.md)
         * [Twitter Universal Website Tag extension](./catalog/advertising/twitter-uwt.md)
         * [Yahoo/Verizon DataX connection](./catalog/advertising/datax.md)
     * Analytics destinations {#analytics}
@@ -168,7 +169,9 @@ role: Admin,User
         * [[!DNL Salesforce Marketing Cloud Account Engagement]](./catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md)
         * [SendGrid connection](./catalog/email-marketing/sendgrid.md)
     * Tag extensions {#launch-extensions}
-        * [Tag extension overview](./catalog/launch-extensions/overview.md)  
+        * [Tag extension overview](./catalog/launch-extensions/overview.md)
+    * Marketing automation {#marketing-automation}
+        * [RainFocus Attendee Profiles](/help/destinations/catalog/marketing-automation/rainfocus.md) 
     * Mobile engagement destinations {#mobile-engagement}
         * [Mobile engagement destinations overview](./catalog/mobile-engagement/overview.md)
         * [Airship Attributes connection](./catalog/mobile-engagement/airship-attributes.md)
@@ -195,6 +198,7 @@ role: Admin,User
     * Social destinations{#social}
         * [Social destinations overview](./catalog/social/overview.md)
         * [Facebook connection](./catalog/social/facebook.md)
+        * [(Companies) LinkedIn Matched Audiences connection](./catalog/social/linkedin-b2b.md)
         * [LinkedIn Matched Audiences connection](./catalog/social/linkedin.md)
         * [TikTok connection](./catalog/social/tiktok.md)
         * [[!DNL Twitter Custom Audiences] connection](./catalog/social/twitter.md)

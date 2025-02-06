@@ -7,7 +7,7 @@ exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
 
 >[!WARNING]
 >
->The [!DNL Salesforce Marketing Cloud] source will be deprecated at the end of May 2025.
+>The [!DNL Salesforce Marketing Cloud] source will be deprecated at the end of June 2025.
 
 This tutorial provides steps on how to connect your [!DNL Salesforce Marketing Cloud] account to Adobe Experience Platform through the UI.
 

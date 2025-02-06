@@ -10,7 +10,7 @@ exl-id: 625e3acf-fc27-44cf-b4e6-becf1d107ff2
 
 >[!WARNING]
 >
->The [!DNL Couchbase] source will be deprecated at the end of May 2025.
+>The [!DNL Couchbase] source will be deprecated at the end of June 2025.
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 

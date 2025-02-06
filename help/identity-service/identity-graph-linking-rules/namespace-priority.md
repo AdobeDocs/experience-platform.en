@@ -3,7 +3,12 @@ title: Namespace priority
 description: Learn about namespace priority in Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
 ---
-# Namespace priority
+# Namespace priority {#namespace-priority}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_namespacepriority"
+>title="Namespace Priority"
+>abstract="Namespace priority determines how links are removed from the identity graph."
 
 >[!AVAILABILITY]
 >
@@ -42,7 +47,7 @@ An identity represents a real-world object. There are three objects that are rep
 
 Person namespaces are relatively immutable compared to hardware devices (such as IDFA, GAID), which are relatively immutable compared to web browsers. Basically, you (person) will always be a single entity, who can have multiple hardware devices (phone, laptop, tablet, etc.), and use multiple browsers (Google Chrome, Safari, FireFox, etc.)
 
-Another way to approach this topic is through cardinality. For a given person entity, how many identities will be created? In most cases, a person will have one CRMID, a handful of hardware device identifiers (IDFA/GAID resets should not happen often), and even more cookies (an individual could conceivably brows on multiple devices, use incognito mode, or reset cookies at any given time). Generally, **lower cardinality indicates a namespace with a higher value**.
+Another way to approach this topic is through cardinality. For a given person entity, how many identities will be created? In most cases, a person will have one CRMID, a handful of hardware device identifiers (IDFA/GAID resets should not happen often), and even more cookies (an individual could conceivably browse on multiple devices, use incognito mode, or reset cookies at any given time). Generally, **lower cardinality indicates a namespace with a higher value**.
 
 ## Validate your namespace priority settings
 
@@ -54,7 +59,7 @@ Namespace priority can be configured using the [identity settings UI](./identity
 
 >[!IMPORTANT]
 >
->You cannot prioritize device/cookie namespaces over person namespaces. This restriction ensures that misconfigurations does not happen.
+>You cannot prioritize device/cookie namespaces over person namespaces. This restriction ensures that misconfigurations do not happen.
 
 ## Namespace priority usage
 
@@ -145,7 +150,7 @@ For more information, read the [advanced lifecycle management overview](../../hy
 
 ### Computed attributes
 
-If identity settings is enabled, then computed attributes will use namespace priority to store the computed attribute value. For a given event, the identity with the highest namespace priority will have the the value of the computed attribute written against it. For more information, read the [computed attributes UI guide](../../profile/computed-attributes/ui.md).
+If identity settings is enabled, then computed attributes will use namespace priority to store the computed attribute value. For a given event, the identity with the highest namespace priority will have the value of the computed attribute written against it. For more information, read the [computed attributes UI guide](../../profile/computed-attributes/ui.md).
 
 ### Data lake
 

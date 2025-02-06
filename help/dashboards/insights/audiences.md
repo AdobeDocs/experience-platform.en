@@ -5,7 +5,7 @@ exl-id: 99624234-c4e1-44bb-9567-505bc0c4723e
 ---
 # Audiences insights
 
-The insights derived from the analysis of your data model make your Adobe Real-time Customer Data Platform data more accessible, understandable, and impactful for decision-making.
+The insights derived from the analysis of your data model make your Adobe Real-Time CDP data more accessible, understandable, and impactful for decision-making.
  
 Understand your audience insights by accessing the SQL that powers them, then generate your own insights to further explore the identities and profiles that make up your audiences. Transform your raw data into new actionable insights by using the existing Real-Time CDP data model SQL as inspiration to create queries for your unique business needs. 
 

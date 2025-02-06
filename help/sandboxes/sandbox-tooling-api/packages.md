@@ -361,6 +361,7 @@ curl -X DELETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
 **Response**
@@ -397,6 +398,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
 | Property | Description | Type | Mandatory |
@@ -418,7 +420,8 @@ A successful response returns the published package.
         "imsOrgId": "5C1328435BF324E90A49402A@AdobeOrg"
     },
     "type": "PARTIAL",
-    "correlationId": "48effe5e-1bef-4250-9c71-23b93ef5d285"
+    "correlationId": "48effe5e-1bef-4250-9c71-23b93ef5d285",
+    "jobId": "18abab44e25f40c284a4bd6e8f52fd29"
 }
 ```
 
@@ -446,6 +449,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
 **Response**
@@ -803,7 +807,8 @@ curl -X POST \
         "imsOrgId": "5C1328435BF324E90A49402A@AdobeOrg"
     },
     "type": "PARTIAL",
-    "correlationId": "48effe5e-1bef-4250-9c71-23b93ef5d285"
+    "correlationId": "48effe5e-1bef-4250-9c71-23b93ef5d285",
+    "jobId": "18abab44e25f40c284a4bd6e8f52fd29"
 }
 ```
 
@@ -827,10 +832,11 @@ The following request lists all dependent objects for the {PACKAGE_ID}.
 
 ```shell
 curl -X POST \
-  https://platform.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/import?targetSandbox=targetSandboxName \
+  https://platform.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/children \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d'[
       {
         "id": "4d4c874ec3344d64bf8b3160e60ac78b",
@@ -1058,6 +1064,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
 **Response**
@@ -1255,7 +1262,7 @@ curl -X POST  \
 | Property | Description | Type | Required |
 | --- | --- | --- | --- |
 | `linkingID` | The id of the share request you're responding to. | String | Yes |
-| `status` | The action being taken on the share request. | String | Yes |
+| `status` | The action being taken on the share request. Acceptable values are `APPROVED` or `REJECTED`. | String | Yes |
 | `reason` | The reason the action is being taken. | String | Yes |
 | `targetIMSOrgDetails` |  Details about the target organization where the id value should be the target organization's **ID**, the name value should be the target organizations's **NAME**, and the region value should be the target organizations **REGION**. | Object | Yes |
 
@@ -1292,7 +1299,7 @@ List outgoing and incoming share requests by making a GET request to the `handsh
 **API format**
 
 ```http
-POST handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING
+GET handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING
 ```
 
 | Parameter | Accepted/Default Values |
@@ -1414,13 +1421,6 @@ A successful response returns details of the package requested and its share sta
         "packageId": "{PACKAGE_ID}",
         "status": "PENDING",
         "initiatedBy": "acme@3ec9197a65a86f34494221.e",
-        "transferDetails": {
-            "messages": [
-                "Fetched Package",
-                "Fetched Manifest"
-            ],
-            "additionalMetadata": null
-        },
         "requestType": "PRIVATE"
     }
 ]
@@ -1469,18 +1469,6 @@ A success response returns details of a share request.
     "status": "COMPLETED",
     "initiatedBy": "{INITIATED_BY}",
     "createdDate": 1724442856000,
-    "transferDetails": {
-        "messages": [
-            "Fetched Package",
-            "Fetched Manifest",
-            "Tenant Identified",
-            "Fetched Sandbox Id",
-            "Fetched Blob Files",
-            "Message Published to Kafka",
-            "Completed Transfer"
-        ],
-        "additionalMetadata": null
-    },
     "requestType": "PRIVATE"
 }
 ```
@@ -1539,19 +1527,6 @@ A successful response returns a list of all transfer requests from the search pa
             "initiatedBy": "{INITIATED_BY}",
             "completedTime": 1726129077000,
             "createdDate": 1726129062000,
-            "transferDetails": {
-                "messages": [
-                    "Fetched Package",
-                    "Fetched Manifest",
-                    "Tenant Identified",
-                    "Fetched Sandbox Id",
-                    "Fetched Blob Files",
-                    "Message Published to Kafka",
-                    "Completed Transfer",
-                    "Finished with status: COMPLETED"
-                ],
-                "additionalMetadata": null
-            },
             "requestType": "PRIVATE"
         },
         {
@@ -1566,19 +1541,6 @@ A successful response returns a list of all transfer requests from the search pa
             "initiatedBy": "{INITIATED_BY}",
             "completedTime": 1726066046000,
             "createdDate": 1726065936000,
-            "transferDetails": {
-                "messages": [
-                    "Fetched Package",
-                    "Fetched Manifest",
-                    "Tenant Identified",
-                    "Fetched Sandbox Id",
-                    "Fetched Blob Files",
-                    "Message Published to Kafka",
-                    "Completed Transfer",
-                    "Finished with status: COMPLETED"
-                ],
-                "additionalMetadata": null
-            },
             "requestType": "PRIVATE"
         }
     ],
@@ -1594,7 +1556,7 @@ Change a package from private to public by making a GET request to the `/package
 **API format**
 
 ```http
-GET `/packages/update`
+PUT `/packages/update`
 ```
 
 **Request**
@@ -1602,8 +1564,8 @@ GET `/packages/update`
 The following request changes a packages availability from private to public.
 
 ```shell
-curl -X GET \
-  http://platform.adobe.io/data/foundation/exim/packages/update \
+curl -X PUT \
+  https://platform.adobe.io/data/foundation/exim/packages \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-type: application/json' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
@@ -1992,10 +1954,6 @@ curl -X GET \
   -H 'Accept: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
-  -d '{
-      "imsOrgId": "{ORG_ID}",
-      "packageId": "{PACKAGE_ID}"
-  }'
 ```
 
 | Property | Description | Type | Required |

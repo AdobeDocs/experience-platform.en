@@ -114,31 +114,6 @@ During your pre-implementation process, you must ensure that the authenticated e
 
 >[!ENDTABS]
 
-Do not send an empty string as an identity value when sending events using XDM experience events. If the identity value of the namespace with highest namespace priority is an empty string, the record will be ignored from Real-Time Customer Profile. This applies to both identityMap, as well as fields marked as an identity.
-
-+++Select to view an example of a payload with an empty string
-
-The following example returns an error because the identity value for `Phone` is submitted as an empty string.
-
-```json
-    "identityMap": {
-        "ECID": [
-            {
-                "id": "24165048599243194405404369473457348936",
-                "primary": false
-            }
-        ],
-        "Phone": [
-            {
-                "id": "",
-                "primary": true
-            }
-        ]
-    }
-```
-
-+++
-
 You must ensure that you have a fully qualified identity when sending events using XDM experience events.
 
 +++Select to view an example of an event with  a fully qualified identity

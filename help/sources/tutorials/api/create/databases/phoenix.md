@@ -7,7 +7,7 @@ exl-id: b69d9593-06fe-4fff-88a9-7860e4e45eb7
 
 >[!WARNING]
 >
->The [!DNL Phoenix] source will be deprecated at the end of May 2025.
+>The [!DNL Phoenix] source will be deprecated at the end of June 2025.
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 

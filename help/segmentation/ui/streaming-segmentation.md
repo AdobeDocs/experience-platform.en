@@ -31,7 +31,7 @@ A query will be automatically evaluated with streaming segmentation if it meets 
 | Single event within a time window of less than 24 hours | Any segment definition that refers to a single incoming event within a time window of less than 24 hours. |
 | Profile only | Any segment definition that refers to only a profile attribute. |
 | Single event with a profile attribute within a relative time window of less than 24 hours | Any segment definition that refers to a single incoming event, with one or more profile attributes, and occurs within a relative time window of less than 24 hours. |
-| Segment of segments | Any segment definition that contains one or more batch or streaming segments. **Note:** If a segment of segments is used, profile disqualification will happen **every 24 hours**. |
+| Segment of segments | Any segment definition that contains one or more batch or streaming segment definitions. **Note:** If segment of segments is used with **batch** segment definitions, profile disqualification can take **up to 24 hours** to occur. If segment of segments is used with **streaming** segment definitions, profile disqualification will occur in a streaming manner. |
 | Multiple events with a profile attribute | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. |
 
 A segment definition will **not** be enabled for streaming segmentation in the following scenarios:

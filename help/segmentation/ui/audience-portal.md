@@ -19,7 +19,7 @@ Within Audience Portal, you can accomplish the following tasks:
 - [Create an audience](#create-audience)
   - [Use Segment Builder to create an audience](#segment-builder)
   - [Use Audience Composition to create an audience](#audience-composition)
-  - [Use Federated Audience Composition to create an audience using data from your existing data warehouse](#fac) (Limited availability)
+  - [Use Federated Audience Composition to create an audience using data from your existing data warehouse](#fac)
 - [Import externally generated audiences](#import-audience)
 
 To open Audience Portal, select the **[!UICONTROL Browse]** tab within the Segmentation section. 
@@ -230,6 +230,7 @@ Flexible audience evaluation lets you run a segmentation job on demand. Choose t
 >- All the audiences **must** have an origin of "Segmentation Service".
 >- All the audiences **must** be evaluated using batch segmentation.
 >- All the audiences **must** be people-based audiences.
+>- The audiences can **only** be activated to destinations in Platform.
 >- You can only select a maximum of 20 audiences.
 
 ![The audiences that you want to use flexible audience evaluation on are selected.](../images/ui/audience-portal/evaluate-audiences.png)
@@ -242,7 +243,7 @@ After confirming the correct audiences are listed, you can proceed with the requ
 
 >[!NOTE]
 >
->If you run flexible audience evaluation on audiences which are already set to be activated [after segment evaluation](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), the audiences will be activated as soon as the flexible audience evaluation job finishes, regardless of any previous daily activation jobs.
+>If you run flexible audience evaluation, you need to ensure the frequency is set to **[!UICONTROL After segment evaluation]**. Running flexible audience evaluation on audiences which are already set to be activated [after segment evaluation](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), will activate audiences as soon as the flexible audience evaluation job finishes, regardless of any previous daily activation jobs.
 
 ## Audience details {#audience-details}
 

@@ -10,6 +10,24 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 This document covers the release notes for the Adobe Experience Platform Web SDK.
 For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## Version 2.25.0 - January 23, 2025
+
+**Fixed and improvements**
+
+- Added option validation to the `setDebug` command.
+- Added a warning when configuring either an `onBeforeLinkClickSend` function or a download link qualifier when click collection is disabled.
+- Fixed an issue where rendered propositions were not included in display notifications.
+
+**New Features**
+
+- Implemented a fallback to the configured Edge domain when third-party cookies are enabled and requests to adobedc.demdex.net are blocked.
+
+## Version 2.24.1 - December 6, 2024
+
+**Fixed and improvements**
+
+- Resolved a dependency issue related to [Adobe Experience Platform Rules Engine](https://github.com/adobe/aepsdk-rulesengine-typescript/), which was causing errors in some customer integrations. The Web SDK now requires [Adobe Experience Platform Rules Engine](https://github.com/adobe/aepsdk-rulesengine-typescript/) version 2.0.3 or later.
+
 ## Version 2.24.0 - October 31, 2024
 
 **New features**
