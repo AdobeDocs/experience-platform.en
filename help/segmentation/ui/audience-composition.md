@@ -242,6 +242,10 @@ For example, you could have three paths, each with a differing percentage of pro
 
 ![The breakdown in number of saved audiences and percentages is shown.](../images/ui/audience-composition/percentages.png)
 
+Alternatively, you can also provide an identity, which would make the percentage-based split persistent. Available identity types include ???.
+
+IMAGE
+
 ### Split by attribute {#split-attribute}
 
 When splitting by attribute, the audiences will be split based on the provided attributes. To select the attribute to split by, select the **[!UICONTROL Split]** block, followed by the ![filter](/help/images/icons/project-edit.png) icon. 
