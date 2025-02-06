@@ -94,7 +94,7 @@ Arrays must currently be exported as strings, by using the `array_to_string` fun
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"
 >title="Add calculated fields disabled"
->abstract="This control is disabled because you selected the Export arrays, maps, objects toggle on when setting up this destination connection. To use calculated fields and the functions available within, set up a new destination connection with the Export arrays, maps, objects toggle *on*."
+>abstract="This control is disabled because you selected the **Export arrays, maps, objects** toggle *on* when setting up this destination connection. To use calculated fields and the functions available within, set up a new destination connection with the **Export arrays, maps, objects** toggle *off*."
 
 In the mapping step of the activation workflow for cloud storage destinations, select **[!UICONTROL Add calculated field]**.
 
