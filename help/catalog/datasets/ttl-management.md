@@ -4,7 +4,7 @@ description: Learn how to evaluate, set, and manage row-level TTL for datasets u
 ---
 # Manage your data lifecycle with TTL: API use cases and best practices
 
-Managing data efficiently is essential to maintain performance, control costs, and ensure clean datasets. Perform row-level expiration (Time-To-Live, TTL) to automatically remove outdated records from Adobe Experience Platform datasets, keeping storage optimized and relevant.
+Efficient data management is critical for optimum performance, cost control, and data cleanliness. Use Time-To-Live (TTL) row-level expiration to automatically remove outdated records from Adobe Experience Platform datasets, and ensure optimal storage and relevance.
 
 This guide explains how to evaluate, set, and manage TTL using the Catalog Service API. You'll learn when and why to apply TTL, how to configure and update TTL values using API calls, and best practices to ensure effective implementation.
 
@@ -18,10 +18,10 @@ As datasets grow, efficient data management becomes increasingly important to pr
 
 TTL is useful when managing time-sensitive data that loses relevance over time. Consider implementing TTL if you need to:
 
-- Reduce storage costs by automatically expiring outdated records.
-- Improve query performance by minimizing irrelevant data to reduce processing time.
-- Maintain data hygiene by ensuring datasets contain only relevant information.
-- Optimize data retention to align with business objectives.
+- Reduce storage costs by automatically removing outdated records.
+- Improve query performance by minimizing irrelevant data.
+- Maintain data hygiene by keeping only relevant information
+- Optimize data retention to support business objectives.
 
 ### Industry example
 
@@ -52,7 +52,6 @@ Running similar queries for different time intervals helps validate TTL settings
 ## Get started with TTL management
 
 Before you can evaluate, set, and manage TTL using the Catalog Service API, you must know how to properly format your requests. This includes understanding the paths, providing required headers, and formatting any request payloads. Refer to the [Catalog Service API getting started guide](../api/getting-started.md) for this essential information.
-<!-- , including how to  gather values for required headers, best practices for Catalog Service API calls, and a link to the authentication tutorial. -->
 
 >[!NOTE]
 >
@@ -62,13 +61,9 @@ Before you can evaluate, set, and manage TTL using the Catalog Service API, you 
 
 To begin your TTL management, first check current TTL settings. Make a GET request to the `/ttl/{datasetId}` endpoint to retrieve the default, maximum, and minimum TTL settings for a dataset. This is necessary because TTL rules can vary based on the dataset type.
 
-<!-- Make a GET request to retrieve your organization's TTL settings for a particular dataset.  -->
-
 >[!TIP]
 >
 >The Platform Gateway URL and base path for the Catalog Service API is: `https://platform.adobe.io/data/foundation/catalog`.
-
-<!-- >If you do not know the relevant dataset ID, you can retrieve a list of all available objects of a specific type through a single API call. Be sure to include filters that limit the size of the response. See the [List catalog objects API guide](../api/list-objects.md) for more details. -->
 
 **API format**
 
@@ -78,7 +73,7 @@ GET /ttl/{DATASET_ID}
 
 | Parameter | Description |
 | --- | --- |
-| `{DATASET_ID}` | A system-generated string that uniquely identifies a dataset. Use the `/datasets` endpoint to retrieve dataset IDs. See the [List catalog objects API guide](../api/list-objects.md) for instructions.  |
+| `{DATASET_ID}` | A system-generated string that uniquely identifies a dataset. To find a dataset ID, use the `/datasets` endpoint. See the [List catalog objects API guide](../api/list-objects.md) for instructions on filtering responses for relevant datasets.  |
 
 **Request**
 
@@ -170,9 +165,9 @@ Shouldnt a response look like this:
 
 | Property      | Description |
 |--------------|-------------|
-| `defaultValue` | The preconfigured TTL period applied to a dataset if no custom TTL is set. This represents the standard retention duration assigned by default when row expiration is enabled. |
-| `maxValue`    | The maximum TTL period that can be assigned to a dataset. This defines the longest allowable retention duration, ensuring TTL values do not exceed platform or policy limits. If `null`, there is no enforced maximum. |
-| `minValue`    | The minimum TTL period that can be set for a dataset. This prevents users from configuring TTL values below the defined retention threshold, ensuring compliance with system requirements or business policies. |
+| `defaultValue` | The default TTL period applied if no custom TTL is set. |
+| `maxValue`    | The longest TTL allowed for the dataset. If null, there is no maximum limit. |
+| `minValue`    | The shortest TTL allowed to ensure compliance with system policies. |
 
 <!-- Q) what is the default Max and Min values? -->
 
@@ -314,7 +309,7 @@ curl -X PATCH \
 
 ## Best practices for setting TTL {#best-practices}
 
-Choosing the right TTL value is crucial for balancing data retention, storage efficiency, and analytical needs. Setting TTL too short may result in data loss and affect historical analysis and forecasting. If TTl is too long may increase storage costs and data accumulation. Ensure the TTL aligns with your dataset's purpose by considering how often the data is accessed and how long it remains relevant.
+Choosing the right TTL value is crucial for balancing data retention, storage efficiency, and analytical needs. A TTL that is too short may cause data loss, while one that is too long can increase storage costs and unnecessary data accumulation. Ensure the TTL aligns with your dataset's purpose by considering how often the data is accessed and how long it remains relevant.
 
 The table below provides common TTL recommendations based on dataset type and usage patterns:
 
@@ -333,7 +328,7 @@ You should review TTL settings periodically to ensure they continue to align wit
 >
 > Before applying TTL, verify that the dataset supports row expiration. TTL is only available for event datasets that use a time-series schema. 
 
-<!-- The default TTL limits for system-generated Profile Store and data lake datasets are ... respectively. -->
+<!-- What are the default TTL limits for system-generated Profile Store and data lake datasets? -->
 
 <!-- Q) Are the limits: 90 days for data in the Profile store and 13 months for data in the data lake? This is true for Journey Optimizer. -->
 
@@ -411,7 +406,7 @@ No, once a retention policy is applied, any data older than the retention period
 
 Now that you've learned how to manage TTL settings for row-level expiration, review the following documentation to further your understanding of TTL management:
 
-- Retention jobs: The [data lifecycle UI guide](../../hygiene/ui/dataset-expiration.md) explains how to schedule and automate dataset expirations in the Platform UI. Learn how to check dataset retention configurations and confirm expired records are deleted.
+- Retention jobs: Learn to schedule and automate dataset expirations in the Platform UI with the [data lifecycle UI guide](../../hygiene/ui/dataset-expiration.md), or check dataset retention configurations and verify expired records are deleted.
 - [Dataset Expiration API endpoint guide](../../hygiene/api/dataset-expiration.md): Discover how to delete entire datasets rather than just rows. Learn how to schedule, manage, and automate dataset expiration using the API to ensure efficient data retention.
 - [Data usage policies overview](../../data-governance/policies/overview.md): Learn how to align your data retention strategy with broader compliance requirements and marketing use restrictions. 
 
