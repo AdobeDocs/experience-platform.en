@@ -34,7 +34,7 @@ To create a private endpoint, make a POST request to the `/privateEndpoints` end
 **API format**
 
 ```http
-POST /data/foundation/connectors/privateEndpoints
+POST /privateEndpoints
 ```
 
 **Request**
@@ -98,4 +98,220 @@ A successful response returns the following:
 }
 ```
 
+| Property | Description |
+| --- | --- |
+| `id` |
+| `name` |
+| `resourceGroupName` |
+| `resourceName` |
+| `fqdns` |
+| `connectionSpec.id` |
+| `connectionSpec.version` |
+| `state` |
+
 +++
+
+## List all private endpoints
+
+To retrieve a list of all private endpoints in a given organization, make a GET request to the `/privateEndpoints` endpoint of the [!DNL Connectors] API.
+
+**API format**
+
+```http
+GET /privateEndpoints
+```
+
+**Request**
+
++++Select to view request example
+
+The following request retrieves a list of all private endpoints that exist in your organization.
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/privateEndpoints' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+```
+
++++
+
+
+**Response**
+
++++Select to view response example
+
+```json
+{
+  "items": [
+       {
+      "id": "ac9eb695-0d1a-42d4-bc45-0842aeaa1eff",
+      "name": "TEST_E2E_29_Jan",
+      "subscriptionId": "4bd65337-f5e4-499e-9cd8-b018e1f7d9f7",
+      "resourceGroupName": "aep-noid-rg",
+      "resourceName": "testprivatelinkhg",
+      "fqdns": [
+         
+      ],
+      "state": "Approved",
+      "connectionSpec": {
+        "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+        "version": "1.0"
+      }
+    },
+          {
+      "id": "4c9eb695-0d1a-42d4-bc45-0842aeaa1efr",
+      "name": "TEST_E2E_29_Jan",
+      "subscriptionId": "25a08a99-7b80-433c-ba62-252f7e23795a",
+      "resourceGroupName": "acp-int-va7-connectors-e2e",
+      "resourceName": "acpconnectorse2e",
+      "fqdns": [
+         
+      ],
+      "state": "Pending",
+      "connectionSpec": {
+        "id": "b3ba5556-48be-44b7-8b85-ff2b69b46dc4",
+        "version": "1.0"
+      }
+    } 
+  ]
+}
+```
+
++++
+
+## List all private endpoints for a given source
+
+To retrieve a list of all private endpoints that correspond to a specific source, make a GET request to the `/privateEndpoints` endpoint and provide the `connectionSpec.id` of the source.
+
+**API format**
+
+```http
+GET /privateEndpoints?property=connectionSpec.id=={CONNECTION_SPEC_ID}
+```
+
+**Request**
+
++++Select to view request example
+
+The following request retrieves a list of all private endpoints that correspond to a specific source.
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/privateEndpoints?property=connectionSpec.id==4c10e202-c428-4796-9208-5f1f5732b1cf' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+```
+
++++
+
+**Response**
+
++++Select to view response example
+
+A successful response returns a list of all private endpoints that correspond with the [!DNL Azure Blob] source.
+
+```json
+{
+  "items": [
+       {
+      "id": "ac9eb695-0d1a-42d4-bc45-0842aeaa1eff",
+      "name": "TEST_E2E_29_Jan",
+      "subscriptionId": "4bd65337-f5e4-499e-9cd8-b018e1f7d9f7",
+      "resourceGroupName": "aep-noid-rg",
+      "resourceName": "testprivatelinkhg",
+      "fqdns": [
+         
+      ],
+      "state": "Approved",
+      "connectionSpec": {
+        "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "4c9eb695-0d1a-42d4-bc45-0842aeaa1efr",
+      "name": "TEST_E2E_29_Jan",
+      "subscriptionId": "25a08a99-7b80-433c-ba62-252f7e23795a",
+      "resourceGroupName": "acp-int-va7-connectors-e2e",
+      "resourceName": "acpconnectorse2e",
+      "fqdns": [
+         
+      ],
+      "state": "Pending",
+      "connectionSpec": {
+        "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+        "version": "1.0"
+      }
+    } 
+  ]
+}
+```
+
++++
+
+## Retrieve a private endpoint
+
+To retrieve a specific private endpoint, make a GET request to `/privateEndpoints` and provide the ID of the private endpoint that you want to retrieve.
+
+**API format**
+
+```http
+GET /privateEndpoints/{PRIVATE_ENDPOINT_ID}
+```
+
+**Request**
+
++++Select to view request example
+
+The following request retrieves the private endpoint with the ID:`2c5699b0-b9b6-486f-8877-ee5e21fe9a9d`
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/privateEndpoints/2c5699b0-b9b6-486f-8877-ee5e21fe9a9d' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+```
+
++++
+
+**Response**
+
++++Select to view response example
+
+A successful response returns the private endpoint with ID: `2c5699b0-b9b6-486f-8877-ee5e21fe9a9d`
+
+```json
+{
+  "items": [
+       {
+      "id": "2c5699b0-b9b6-486f-8877-ee5e21fe9a9d",
+      "name": "TEST_E2E_29_Jan",
+      "subscriptionId": "4bd65337-f5e4-499e-9cd8-b018e1f7d9f7",
+      "resourceGroupName": "aep-noid-rg",
+      "resourceName": "testprivatelinkhg",
+      "fqdns": [
+         
+      ],
+      "state": "Approved",
+      "connectionSpec": {
+        "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+        "version": "1.0"
+      }
+    }
+  ]
+}
+```
+
++++
+
+## Resolve a private endpoint
