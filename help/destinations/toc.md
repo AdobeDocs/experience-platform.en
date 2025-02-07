@@ -74,6 +74,7 @@ role: Admin,User
         * [Branch extension](./catalog/advertising/branch.md)
         * [(Beta) Criteo connection](./catalog/advertising/criteo.md)
         * [Demandbase connection](./catalog/advertising/demandbase.md)
+        * [Demandbase People connection](./catalog/advertising/demandbase-people.md)
         * [DoubleClick Floodlight (Beta) extension](./catalog/advertising/doubleclick-floodlight.md)
         * [Facebook Pixel extension](./catalog/advertising/facebook-pixel.md)
         * [Flashtalking OneTag extension](./catalog/advertising/flashtalking.md)
