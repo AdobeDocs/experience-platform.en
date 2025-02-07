@@ -28,7 +28,7 @@ The following sections provide additional information that you will need to know
 
 >[!IMPORTANT]
 >
->You must have the **[!UICONTROL Manage Sources]** access control permission in order to use the [!DNL Data Landing Zone] APIs and retrieve `type=user_drop_zone`. Read the [access control overview](../../../../../access-control/home.md) or contact your product administrator to obtain the required permissions.
+>You must have the **[!UICONTROL Manage Sources]** access control permission in order to use the [!DNL Data Landing Zone] APIs and retrieve `type=user_drop_zone`. For more information, read the [access control overview](../../../../../access-control/home.md) or contact your product administrator to obtain the required permissions.
 
 The first step in using APIs to access [!DNL Data Landing Zone] is to make a GET request to the `/landingzone` endpoint of the [!DNL Connectors] API while providing `type=user_drop_zone` as part of your request header.
 
