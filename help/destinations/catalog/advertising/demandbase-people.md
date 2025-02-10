@@ -80,7 +80,7 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 
 ## Additional notes and important callouts {#additional-notes}
 
-* **Demandbase API guardrails**: Work with your Demandbase contact to understand your API guardrails. The Import API allows for a maximum number of 1200 API calls per time period (86400 seconds).
+* **Demandbase API guardrails**: If you have exported audiences to Demandbase and the exports are successful in Experience Platform, yet not all of the data reaches Demandbase, you might have encountered API throttling on the Demandbase side. Reach out to them for clarification.
 * **List deletion**: People lists are unique, so you cannot re-create a new list with a name already in use. When you remove people from a list, they will no longer be available, but they will not be deleted.
-* **Activation time**: Data loading in Demandbase is subject to overnight processing. The cut-off time is 4PM PST. You should see your data in Demandbase by 8AM PST.
-* **Audience naming**: If an audience with the same name was activated earlier in Demandbase, yo will receive an error if you try to activate the same audience on the same or on another activation dataflow.
+* **Activation time**: Data loading in Demandbase is subject to overnight processing.
+* **Audience naming**: If an account audience with the same name was activated earlier to Demandbase, you cannot activate it again through a different dataflow to the Demandbase destination.
