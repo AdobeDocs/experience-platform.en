@@ -17,7 +17,11 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 Experience Platform provides support for ingesting data from a third-party database. Platform can connect to different types of databases such as relational, NoSQL, or data warehouses. Support for database providers include [!DNL Amazon Redshift].
 
-## IP address allow list
+## Set up your [!DNL Amazon Redshift] source for Experience Platform on Azure {#azure}
+
+Follow the steps below to learn how you can set up your [!DNL Amazon Redshift] account for Experience Platform on Azure.
+
+### IP address allow list
 
 A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
 
@@ -35,7 +39,7 @@ Add the following IP addresses to your allowlist, in order to connect your [!DNL
 
 ## Connect [!DNL Amazon Redshift] to Platform using APIs
 
-- [Create an Amazon Redshift base connection using the Flow Service API](../../tutorials/api/create/databases/redshift.md)
+- [Connect Amazon Redshift to Experience Platform using the Flow Service API](../../tutorials/api/create/databases/redshift.md)
 - [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
 - [Create a dataflow for a database source using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
 

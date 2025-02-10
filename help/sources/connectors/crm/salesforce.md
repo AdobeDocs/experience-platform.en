@@ -13,11 +13,15 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 Experience Platform provides support for ingesting data from a third-party CRM system. Support for CRM providers include [!DNL Salesforce].
 
-## IP address allow list
+## Set up your [!DNL Salesforce] source for Experience Platform on Azure {#azure}
+
+Follow the steps below to learn how you can set up your [!DNL Salesforce] account for Experience Platform on Azure.
+
+### IP address allow list
 
 A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
 
-## Field mapping from [!DNL Salesforce] to XDM
+### Field mapping from [!DNL Salesforce] to XDM
 
 To establish a source connection between [!DNL Salesforce] and Platform, the [!DNL Salesforce] source data fields must be mapped to their appropriate target XDM fields prior to being ingested into Platform.
 
@@ -32,7 +36,7 @@ See the following for detailed information on the field mapping rules between [!
 - [Campaign members](../adobe-applications/mapping/salesforce.md#campaign-member)
 - [Account contact relation](../adobe-applications/mapping/salesforce.md#account-contact-relation)
 
-## Set up the [!DNL Salesforce] namespace and schema auto-generation utility
+### Set up the [!DNL Salesforce] namespace and schema auto-generation utility
 
 To use the [!DNL Salesforce] source as part of [!DNL B2B-CDP], you must first set up a [!DNL Postman] utility to auto-generate your [!DNL Salesforce] namespaces and schemas. The following documentation provides additional information on setting up the [!DNL Postman] utility:
 
@@ -265,7 +269,7 @@ Once you have completed prerequisite set up for your [!DNL Salesforce] account, 
 
 The documentation below provides information on how to connect [!DNL Salesforce] to Platform using APIs or the user interface:
 
-- [Create a Salesforce base connection using the Flow Service API](../../tutorials/api/create/crm/salesforce.md)
+- [Connect Salesforce to Experience Platform using the Flow Service API](../../tutorials/api/create/crm/salesforce.md)
 - [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
 - [Create a dataflow for a CRM source using the Flow Service API](../../tutorials/api/collect/crm.md)
 
