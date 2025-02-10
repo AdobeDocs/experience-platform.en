@@ -625,7 +625,7 @@ Use an ampersand (`&`) to combine multiple parameters in a single request. When 
 GET /{OBJECT_TYPE}?{FILTER_1}={VALUE}&{FILTER_2}={VALUE}&{FILTER_3}={VALUE}
 ```
 
-If you want to specify **multiple parameters for the same non-array field**, only the last parameter is considered. For example, the query below **only** returns documents where `name==bar`, because the second filter overrides the first.
+If you specify **multiple parameters for the same non-array field**, only the last parameter is considered. For example, the query below **only** returns documents where `name==bar`, because the second parameter overrides the first.
 
 **API format**
 
@@ -633,9 +633,9 @@ If you want to specify **multiple parameters for the same non-array field**, onl
 GET /{OBJECT_TYPE}?property=name==foo&property=name==bar
 ```
 
-### Example of multiple parameter filtering {#multiple-allowed-parameters}
+### Example of multiple allowed parameters {#multiple-allowed-parameters}
 
-You can use multiple property parameters in the same query if at least one filters by `id` or `created` fields. This query returns objects where `id` is greater than `foo` AND `name` is `bar`.
+You can use multiple `property` parameters in the same query **if at least one parameter applies to the `id` or `created` field**. The following query returns objects where `id` is greater than `foo` **AND** `name` is `bar`:
 
 **API format**
 
@@ -645,7 +645,7 @@ GET /{OBJECT_TYPE}?property=id>foo&property=name==bar
 
 ### Example of unsupported multiple parameter use
 
-A single `property` parameter cannot be used to filter multiple fields simultaneously. The following example (`property=id>abc,name==myDataset`) **is not allowed** because it attempts to apply conditions to `id` and `name` within a **single `property` parameter**:
+You **cannot** use a single `property` parameter to filter multiple fields at once. The following example (`property=id>abc,name==myDataset`) **is not allowed** because it tries to apply conditions to `id` and `name` within a **single `property` parameter**:
 
 **API format**
 
