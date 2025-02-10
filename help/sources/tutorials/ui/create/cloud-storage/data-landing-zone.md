@@ -22,6 +22,10 @@ This tutorial requires a working understanding of the following components of Ad
 
 ## Bring your files from [!DNL Data Landing Zone] to Platform
 
+>[!IMPORTANT]
+>
+> To connect to the source, you need the **[!UICONTROL View Sources]** and **[!UICONTROL Manage Sources]** access control permissions. Read the [access control overview](../../../../../access-control/home.md) or contact your product administrator to obtain the required permissions.
+
 In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources that you can create an account with.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search bar.
