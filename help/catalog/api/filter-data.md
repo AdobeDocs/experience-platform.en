@@ -2,24 +2,26 @@
 keywords: Experience Platform;home;popular topics;filter;Filter;filter data;Filter data;date range
 solution: Experience Platform
 title: Filter Catalog Data Using Query Parameters
-description: The Catalog Service API allows response data to be filtered through the use of request query parameters. Part of best practices for Catalog is to use filters in all API calls, as they reduce the load on the API and help to improve overall performance.
+description: The Catalog Service API allows response data to be filtered through the use of request query parameters. As a best practice, use filters in all API calls to reduce API load and improve overall performance.
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
 ---
 # Filter [!DNL Catalog] data using query parameters
 
-The [!DNL Catalog Service] API allows response data to be filtered through the use of request query parameters. Part of best practices for [!DNL Catalog] is to use filters in all API calls, as they reduce the load on the API and help to improve overall performance.
+To improve performance and retrieve relevant results, use query parameters to filter [!DNL Catalog Service] API response data. 
 
-This document outlines the most common methods for filtering [!DNL Catalog] objects in the API. It is recommended that you reference this document while reading the [Catalog developer guide](getting-started.md) to learn more about how to interact with the [!DNL Catalog] API. For more general information on [!DNL Catalog Service], see the [[!DNL Catalog] overview](../home.md).
+This document outlines common filtering methods for [!DNL Catalog] objects in the API. Reference this document alongside the [Catalog developer guide](getting-started.md) for more details on API interactions. For general [!DNL Catalog Service] information, see the [[!DNL Catalog] overview](../home.md).
 
 ## Limit returned objects
 
-The `limit` query parameter constrains the number of objects returned in a response. [!DNL Catalog] responses are automatically metered according to configured limits:
+The `limit` query parameter restricts the number of objects returned in a response. [!DNL Catalog] responses follow predefined limits:
 
-* If a `limit` parameter is not specified, the maximum number of objects per response payload is 20.
+* If the `limit` parameter is not specified, the maximum number of objects per response is 20.
 * For dataset queries, if `observableSchema` is requested using the `properties` query parameter, the maximum number of datasets returned is 20.
-* The global limit for all other Catalog queries is 100 objects.
-* Invalid `limit` parameters (including `limit=0`) result in 400-level error responses that outline proper ranges.
-* Limits or offsets that are passed as query parameters take precedence over those that are passed as headers.
+* For user tokens, the maximum limit is 1.
+* For service tokens, the maximum limit is 20.
+* The global limit for other Catalog queries is 100 objects.
+* Invalid `limit` values (including `limit=0`) result in 400-level error responses specifying proper ranges.
+* Limits or offsets passed as query parameters take precedence over those in headers.
 
 **API format**
 
@@ -29,8 +31,8 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | Parameter | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul>|
-| `{LIMIT}` | An integer indicating the number of objects to return, ranging from 1 to 100. |
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to retrieve. Valid objects: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul>|
+| `{LIMIT}` | An integer specifying the number of objects to return (range: 1-100). |
 
 **Request**
 
@@ -613,12 +615,91 @@ A successful response contains a list of datasets whose version numbers are grea
 }
 ```
 
-## Combine multiple filters
+## Combine multiple parameters {#combine-multiple-parameters}
 
-Using an ampersand (`&`), you can combine multiple filters in a single request. When additional conditions are added to a request, an AND relationship is assumed. 
+Use an ampersand (`&`) to combine multiple parameters in a single request. When you apply parameters to **different fields**, an **AND relationship** is assumed between the conditions.
 
 **API format**
 
 ```http
 GET /{OBJECT_TYPE}?{FILTER_1}={VALUE}&{FILTER_2}={VALUE}&{FILTER_3}={VALUE}
 ```
+
+If you want to specify **multiple parameters for the same non-array field**, only the last parameter is considered. For example, the query below **only** returns documents where `name==bar`, because the second filter overrides the first.
+
+**API format**
+
+```http
+GET /{OBJECT_TYPE}?property=name==foo&property=name==bar
+```
+
+### Example of multiple parameter filtering {#multiple-allowed-parameters}
+
+You can use multiple property parameters in the same query if at least one filters by `id` or `created` fields. This query returns objects where `id` is greater than `foo` AND `name` is `bar`.
+
+**API format**
+
+```http
+GET /{OBJECT_TYPE}?property=id>foo&property=name==bar
+```
+
+### Example of unsupported multiple parameter use
+
+A single `property` parameter cannot be used to filter multiple fields simultaneously. The following example (`property=id>abc,name==myDataset`) **is not allowed** because it attempts to apply conditions to `id` and `name` within a **single `property` parameter**:
+
+**API format**
+
+```http
+GET /{OBJECT_TYPE}?property=id>abc,name==myDataset
+```
+
+## Filter arrays with the property parameter
+
+<!-- Explain the difference ... -->
+
+### Equality Filtering
+
+Using multiple property parameters for an array field filters documents where the array contains all specified values.
+
+**API format**
+
+```http
+GET /{OBJECT_TYPE}?property=arrayField=val1&property=arrayField=val2
+```
+
+This query returns documents where arrayField contains both val1 and val2.
+
+### Inequality Filtering
+
+Using inequality operators (`!=`) for an array field excludes documents where the array contains any specified values.
+
+**API format**
+
+```http
+GET /{OBJECT_TYPE}?property=arrayField!=val1&property=arrayField!=val2
+```
+
+This query returns documents where arrayField does not contain `val1` or `val2`.
+
+### Combining Equality and Inequality
+
+You cannot combine both equality (`=`) and inequality (`!=`) in the same query for mixed filtering.
+
+
+<!-- Considering ths is an example for filtering batches,dataSets, or dataSetFiles can we get a better example -->
+<!-- Can we get a response here to demonstrate better -->
+
+<!-- **Request**
+
+The following request ....
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/foundation/catalog/dataSets?property=version>1.0.3&property=name!=test \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+``` -->
+
+<!-- ## Handling multiple  for the same field -->
