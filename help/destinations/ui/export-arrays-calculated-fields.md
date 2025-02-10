@@ -23,19 +23,15 @@ Consider this page your go-to place around anything you want to know about expor
 
 ## Bottom line up front
 
-* The ability to export arrays, maps, and objects depends on your selection of the toggle
-
-
-To export arrays, you must use the calculated fields functionality in the mapping step of the export workflow,  *unless you are [exporting individual elements of an array](#index-based-array-access)*. For detailed information about calculated fields, visit the pages linked below. These include an introduction to calculated fields in Data Prep and more information about all the available functions: 
-
-* [UI guide and overview](/help/data-prep/ui/mapping.md#calculated-fields)
-* [Data Prep functions](/help/data-prep/functions.md)
+* The ability to export arrays, maps, and objects depends on your selection of the **Export arrays, maps, objects toggle** toggle. Read more about it further down on the page.
+* You can export arrays, maps, and objects to cloud storage destinations, in `JSON` and `Parquet` files. People and prospect audiences are supported, account audiences and datasets are not.
+* You can export arrays, maps, and objects to CSV files, but you need to use the calcuated fields functionality and concatenate them into a string by using the `array_to_string` function.
 
 ## Arrays and other object types in Platform {#arrays-strings-other-objects}
 
 In Experience Platform, you can use [XDM schemas](/help/xdm/home.md) to manage different field types. Before support for array exports was added, you were able to export simple key-value pair type fields such as strings out of Experience Platform to your desired destinations. An example of such a field that was supported for export previously is `personalEmail.address`:`johndoe@acme.org`.
 
-Other field types in Experience Platform include array fields. Read more about [managing array fields in the Experience Platform UI](/help/xdm/ui/fields/array.md). In addition to the previously supported field types, you can now export array objects such as the example below, concatenated into a string by using the `array_to_string` function.
+Other field types in Experience Platform include array fields. Read more about [managing array fields in the Experience Platform UI](/help/xdm/ui/fields/array.md). In addition to the previously supported field types, you can now export array objects such as the example below.
 
 ``` 
 organizations = [{
@@ -58,11 +54,21 @@ organizations = [{
 
 See further below [extensive examples](#examples) of how you can use various functions to access elements of arrays, transform and filter arrays, join array elements into a string, and more.  
 
+Maps are 
+https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/fields/map 
+
+Objects are 
+https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/fields/object
+
+
 ## Known limitations {#known-limitations}
 
 Note the following known limitations that currently apply to this functionality:
 
-* Export to JSON or Parquet files *with hierarchical schemas* is not supported at this time. You can export arrays to CSV, JSON, and Parquet files  *as strings only*, by using the `array_to_string` function.
+To export arrays, you must use the calculated fields functionality in the mapping step of the export workflow,  *unless you are [exporting individual elements of an array](#index-based-array-access)*. For detailed information about calculated fields, visit the pages linked below. These include an introduction to calculated fields in Data Prep and more information about all the available functions: 
+
+* [UI guide and overview](/help/data-prep/ui/mapping.md#calculated-fields)
+* [Data Prep functions](/help/data-prep/functions.md)
 
 ## Prerequisites {#prerequisites}
 
@@ -84,7 +90,7 @@ With this option selected, you are not able to export out entire objects (ex: pe
 
 Arrays must currently be exported as strings, by using the `array_to_string` function.
 
-## How to export calculated fields {#how-to-export-calculated-fields}
+## How to work with calculated fields {#how-to-export-calculated-fields}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_control"
