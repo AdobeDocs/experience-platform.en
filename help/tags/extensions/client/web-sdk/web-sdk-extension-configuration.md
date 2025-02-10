@@ -44,13 +44,21 @@ To create a custom Web SDK build by using the Web SDK tag extension, follow the 
 1. Enable or disable the components, based on your needs. You can select from the following components:
     * **[!UICONTROL Activity collector]**: This component enables automatic link collection and activity map tracking.
     * **[!UICONTROL Audiences]**: This components enables Audience Manager integration, including URL and cookie-based destinations, and ID syncs.
-    * **[!UICONTROL Consent]**: This component enables consent integrations. Enable this component if you plan to use the [Set consent](action-types.md#set-consent) action type.
+    * **[!UICONTROL Consent]**: This component enables consent integrations. Disabling this component disables the following elements:
+      * [Set consent](action-types.md#set-consent) action type
     * **[!UICONTROL Context]**: This component enables automatic collection of context data.
-    * **[!UICONTROL Event merge]**: _Deprecated_. Enable this component if you use the [Event merge ID data element](action-types.md#data) or **[!UICONTROL Reset event merge ID]** action type.
-    * **[!UICONTROL Media analytics bridge]**: This component enables Edge Network Streaming Media using the media analytics interface. Enable this component if you are using the [Get Media Analytics Tracker](action-types.md#get-media-analytics-tracker) action type.
-    * **[!UICONTROL Personalization]**: This component enables the Adobe Target and Adobe Journey Optimizer integrations.
-    * **[!UICONTROL Rules engine]**: This component enables the Adobe Journey Optimizer on-device decisioning. Enable this component if you are using the [Evaluate rulesets](action-types.md#evaluate-rulesets) action type or the [Subscribe ruleset items](event-types.md#subscribe-ruleset-items) event type.
-    * **[!UICONTROL Streaming media]**: This component enables Edge Network Streaming Media. Enable this component if you are using the [Send media event](action-types.md#send-media-event) action type.
+    * **[!UICONTROL Event merge]**: _Deprecated_. Disabling this component disables the following elements:
+      * [Event merge ID](action-types.md#data) data element
+      * **[!UICONTROL Reset event merge ID]** action type
+    * **[!UICONTROL Media analytics bridge]**: This component enables Edge Network Streaming Media using the media analytics interface. Disabling this component disables the following elements:
+      * [Get Media Analytics Tracker](action-types.md#get-media-analytics-tracker) action type
+    * **[!UICONTROL Personalization]**: This component enables the Adobe Target and Adobe Journey Optimizer integrations. Disabling this component disables the following elements:
+      * [Apply propositions action](action-types.md) type
+    * **[!UICONTROL Rules engine]**: This component enables the Adobe Journey Optimizer on-device decisioning. Disabling this component disables the following elements:
+      * [Evaluate rulesets](action-types.md#evaluate-rulesets) action type
+      * [Subscribe ruleset items](event-types.md#subscribe-ruleset-items) event type
+    * **[!UICONTROL Streaming media]**: This component enables Edge Network Streaming Media. Disabling this component disables the following elements:
+      * [Send media event](action-types.md#send-media-event) action type
 
 ## Configure instance settings {#general}
 
