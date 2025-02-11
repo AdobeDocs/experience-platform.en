@@ -115,7 +115,12 @@ The details page also displays a list of identities that failed and identities t
 
 #### (Beta) Audience-level dataflow run monitoring for streaming destinations {#audience-level-dataflow-runs-for-streaming-destinations}
 
-You can view information about the activated, excluded, or failed identities broken down on an audience level, for each audience that is part of the dataflow. Audience-level monitoring for streaming destinations is currently available for the [[!DNL Google Customer Match + Display & Video 360] destination](/help/destinations/catalog/advertising/google-customer-match-dv360.md) only. 
+You can view information about the activated, excluded, or failed identities broken down on an audience level, for each audience that is part of the dataflow.
+
+Audience-level monitoring for streaming destinations is currently available only for the following destinations:
+
+* [[!DNL Google Customer Match + Display & Video 360]](/help/destinations/catalog/advertising/google-customer-match-dv360.md)
+* [[!DNL Marketo Engage]](/help/destinations/catalog/adobe/marketo-engage.md)
 
 ![Audience-level monitoring for streaming destinations.](/help/dataflows/assets/ui/monitor-destinations/audience-level-monitoring-streaming.png)
 
