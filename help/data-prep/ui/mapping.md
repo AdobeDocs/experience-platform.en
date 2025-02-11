@@ -104,7 +104,26 @@ You can manually add fields, functions, and operators using the expression edito
 
 ### Import mapping {#import-mapping}
 
-You can reuse the mapping of an existing dataflow to reduce the manual configuration time of your data ingestion and limit mistakes. Select **[!UICONTROL Import mapping]** to reuse an existing mapping.
+You can reduce the manual configuration time of your data ingestion process and limit mistakes by using the import mapping functionality of data prep. You can import mappings from an existing flow or from an exported file.
+
+>[!BEGINTABS]
+
+>[!TAB Import mapping from flow]
+
+To import mapping from an existing dataflow, select **[!UICONTROL Import mappings]** and then select **[!UICONTROL Import mapping from flow]**.
+
+![import mapping from flow]
+
+![select dataflow from import mapping window]
+
+>[!TAB Import mapping from file]
+
+To import mapping from an existing dataflow, select **[!UICONTROL Import mappings]** and then select **[!UICONTROL Import mapping from file]**.
+
+![import mapping from file]
+
+>[!ENDTABS]
+
 
 ![import-mapping](../images/ui/mapping/)
 
