@@ -118,12 +118,11 @@ To import mapping from an existing dataflow, select **[!UICONTROL Import mapping
 
 >[!TAB Import mapping from file]
 
-To import mapping from an existing dataflow, select **[!UICONTROL Import mappings]** and then select **[!UICONTROL Import mapping from file]**.
+To import mapping from an exported file, select **[!UICONTROL Import mappings]** and then select **[!UICONTROL Import mapping from file]**.
 
 ![import mapping from file]
 
 >[!ENDTABS]
-
 
 ![import-mapping](../images/ui/mapping/)
 
