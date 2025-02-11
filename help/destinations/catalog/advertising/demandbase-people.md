@@ -9,9 +9,13 @@ Activate profiles for your Demandbase campaigns for audience targeting, personal
 
 ## Use case {#use-case}
 
-As a marketer, after running an [account-based campaign](../../ui/activate-account-audiences.md), I can analyze engagement data to identify key individuals for retargeting. I can create a People List of engaged contacts, decision-makers, and high-value personas, then launch a nurture campaign through email, paid media, or personalized content to deepen engagement.
+A B2B marketer uses the [Demandbase B2B](demandbase.md) destination for account-based marketing to focus campaigns on high-value accounts rather than broad audiences. This approach maximizes impact by targeting companies that exhibit strong buying intent or have meaningfully engaged with their brand. Using account signals, they identify accounts actively interested in their products or services. The marketer can then run an account-based campaign and analyze engagement data to determine which accounts show the highest levels of interest. This analysis helps pinpoint key individuals within those accounts, such as decision-makers, influencers, and stakeholders who have interacted with the campaigns by downloading content, attending webinars, or visiting the website. These individuals are critical for follow-up efforts to advance the deal.
 
-Additionally, I can segment individuals by job title, industry, or engagement level to create targeted campaigns with personalized messaging, driving higher engagement and conversions.
+Next, marketers can shift from an account-focused strategy to a people-based strategy by creating a People List of engaged contacts. This list includes individuals who have demonstrated intent or responded positively to the campaign, making them ideal for retargeting and nurturing efforts. By segmenting them based on job title, industry, or engagement level, marketers can tailor follow-up messaging to address specific needs and pain points.
+
+With the People List created, marketers can launch a nurture campaign to keep these high-value prospects engaged. This may include targeted email sequences, personalized paid media ads, or one-on-one sales outreach with personalized messaging. By leveraging engagement insights, messaging can be refined to align with each contact's interests and behaviors, increasing the likelihood of conversion.
+
+This multi-stage approach, beginning with account-level targeting and transitioning to people-based engagement, ensures my marketing efforts remain precise and effective. By leveraging insights from Demandbase, you can identify and engage high-potential accounts while fostering deeper relationships with key stakeholders, accelerating pipeline velocity, and improving conversion rates.
 
 ## Supported audiences {#supported-audiences}
 
