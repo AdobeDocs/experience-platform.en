@@ -635,12 +635,12 @@ GET /{OBJECT_TYPE}?property=name==foo&property=name==bar
 
 ### Example of multiple allowed parameters {#multiple-allowed-parameters}
 
-You can use multiple `property` parameters in the same query **if at least one parameter applies to the `id` or `created` field**. The following query returns objects where `id` is greater than `foo` **AND** `name` is `bar`:
+You can use multiple `property` parameters in the same query **if at least one parameter applies to the `id` or `created` field**. The following query returns objects where `id` is `abc123` **AND** `name` is not `test`:
 
 **API format**
 
 ```http
-GET /{OBJECT_TYPE}?property=id>foo&property=name==bar
+GET /{OBJECT_TYPE}?property=id==abc123&property=name!=test
 ```
 
 ### Example of unsupported multiple parameter use
@@ -655,11 +655,17 @@ GET /{OBJECT_TYPE}?property=id>abc,name==myDataset
 
 ## Filter arrays with the property parameter
 
-<!-- Explain the difference ... -->
+Equality filtering requires the array to contain all the specified values, while inequality filtering excludes arrays that contain any specified values.
 
-### Equality Filtering
+### Equality filtering
 
-Using multiple property parameters for an array field filters documents where the array contains all specified values.
+To filter an array field by multiple values, use separate property parameters for each value. Use equality filters to return only the entries in the array data that match the specified values.
+
+>[!NOTE]
+>
+>The requirement to include `id` or `created` when filtering multiple fields does not apply to filtering multiple values within an array field.
+
+The example query below only returns results from the array that includes both `val1` and `val2`.
 
 **API format**
 
@@ -667,11 +673,9 @@ Using multiple property parameters for an array field filters documents where th
 GET /{OBJECT_TYPE}?property=arrayField=val1&property=arrayField=val2
 ```
 
-This query returns documents where arrayField contains both val1 and val2.
-
 ### Inequality Filtering
 
-Using inequality operators (`!=`) for an array field excludes documents where the array contains any specified values.
+Use inequality operators (`!=`) on an array field to exclude any entries in the data where the array contains the specified values.
 
 **API format**
 
@@ -683,8 +687,7 @@ This query returns documents where arrayField does not contain `val1` or `val2`.
 
 ### Combining Equality and Inequality
 
-You cannot combine both equality (`=`) and inequality (`!=`) in the same query for mixed filtering.
-
+You cannot apply both equality (`=`) and inequality (`!=`) to the same field in a single query
 
 <!-- Considering ths is an example for filtering batches,dataSets, or dataSetFiles can we get a better example -->
 <!-- Can we get a response here to demonstrate better -->
