@@ -1,14 +1,14 @@
 ---
-title: Apply access labels to manage user access to sources dataflows in the API
-description: Read this tutorial to learn how you can use the API to apply access labels and manage user access to your sources dataflows.
+title: Apply access labels to manage user access to sources dataflows using the API
+description: Learn how to use use the Flow Service API to apply access labels and manage user access to your sources dataflows.
 ---
-# Apply access labels to manage user access to sources dataflows in the API
+# Apply access labels to manage user access to sources dataflows using the API
 
 You can use the functionalities provided by [attribute-based access control](../../../access-control/abac/overview.md) in Real-Time CDP to apply labels to your sources dataflows. With this feature, you can ensure that only a subset of users in your organization get access to specific sources dataflows.
 
 When you add an access label to a particular dataflow, only users who have access to a role that is assigned that label are able to view and edit that dataflow. If a sources dataflow is not marked with any labels, it is visible to all users belonging to your organization. For example, if you apply the C12 label to a dataflow, users assigned to a role that does not have the C12 label, will not be able to view and edit the dataflow with the C12 label.
 
-Read this guide for information on how you can apply access labels to your sources dataflows using the API.
+Read this guide for information on how to apply access labels to your sources dataflows using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Get started
 
@@ -21,9 +21,9 @@ Before working with access control labels, ensure that you first familiarize you
 
 ## Apply access labels to sources dataflows
 
->[!IMPORTANT]
+>[!NOTE]
 >
->* You cannot apply labels to a flow run. However, flow runs will inherit any labels that you apply to the parent dataflow.
+>* You cannot apply labels to a flow run. However, flow runs inherit any labels that you apply to the parent dataflow.
 >
 >* If you do not have view access to a dataflow, then you will also be unable to view it's corresponding flow runs.
 
@@ -120,7 +120,7 @@ Similarly, users without access to the C12 label will be unable to make any PATC
 
 ## Next steps
 
-By reading this document, you now know how to apply access labels to your sources dataflows. You can now ensure that only a specific group of users in your organization can access certain sources dataflows. Read the following documentation for additional information:
+You now know how to apply access labels to your sources dataflows. You can now ensure that only a specific group of users in your organization can access certain sources dataflows. Read the following documentation for additional information:
 
 * [Apply access labels to sources dataflows in the UI](../ui/labels.md)
 * [Access control overview](../../../access-control/home.md)

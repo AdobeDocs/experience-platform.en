@@ -1,6 +1,6 @@
 ---
 title: Apply access labels to manage user access to sources dataflows in the UI
-description: Read this tutorial to learn how you can use the Experience Platform UI to apply access labels and manage user access to your sources dataflows.
+description: Learn how to use the Experience Platform UI to apply access labels and manage user access to your sources dataflows.
 ---
 # Apply access labels to manage user access to sources dataflows in the UI
 
@@ -8,7 +8,7 @@ You can use the functionalities provided by [attribute-based access control](../
 
 When you add an access label to a particular dataflow, only users who have access to a role that is assigned that label are able to view and edit that dataflow. If a sources dataflow is not marked with any labels, it is visible to all users belonging to your organization. For example, if you apply the C12 label to a dataflow, users assigned to a role that does not have the C12 label, will not be able to view and edit the dataflow with the C12 label.
 
-Read this guide for information on how you can apply access labels to your sources dataflows using the Adobe Experience Platform user interface.
+Read this guide for information on how to apply access labels to your sources dataflows using the Adobe Experience Platform user interface.
 
 ## Get started
 
@@ -21,9 +21,9 @@ Before working with access control labels, ensure that you first familiarize you
 
 ## Apply access labels to sources dataflows
 
->[!IMPORTANT]
+>[!NOTE]
 >
->* You cannot apply labels to a flow run. However, flow runs will inherit any labels that you apply to the parent dataflow.
+>* You cannot apply labels to a flow run. However, flow runs inherit any labels that you apply to the parent dataflow.
 >
 >* If you do not have view access to a dataflow, then you will also be unable to view it's corresponding flow runs.
 
@@ -37,11 +37,11 @@ The [!UICONTROL Apply access and data governance labels] window appears. Use thi
 
 ![The data governance labels window with the C2 label selected.](../../images/tutorials/labels/labels_window.png)
 
-Once you have successfully configured access labels to your dataflow, any user that does not have access to that label will no longer be able to retrieve the dataflow. You can also use the [!UICONTROL Access Labels] column to view the labels that are applied to a given dataflow.
+Once you have successfully configured access labels to your dataflow, any user that does not have access to that label is no longer be able to retrieve the dataflow. You can also use the [!UICONTROL Access Labels] column to view the labels that are applied to a given dataflow.
 
 ## Next steps
 
-By reading this document, you now know how to apply access labels to your sources dataflows. You can now ensure that only a specific group of users in your organization can access certain sources dataflows. Read the following documentation for additional information:
+You now know how to apply access labels to your sources dataflows. You can now ensure that only a specific group of users in your organization can access certain sources dataflows. Read the following documentation for additional information:
 
 * [Apply access labels to sources dataflows in the API](../api/labels.md)
 * [Access control overview](../../../access-control/home.md)
