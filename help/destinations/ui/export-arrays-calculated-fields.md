@@ -67,8 +67,8 @@ Note the following known limitations that currently apply to this functionality:
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_maps_objects"
->title="Enable hierarchical output schema"
->abstract="<p> Toggle this setting **on** to enable the export of arrays, maps, and objects to JSON or Parquet files.</p><p>With this toggle off, you can use the calculated fieds option when activting audiences, but can not export arrays, maps, and objects to JSON or Parquet files</p>"
+>title="Export arrays, maps, and objects"
+>abstract="<p> Toggle this setting <b>on</b> to enable the export of arrays, maps, and objects to JSON or Parquet files. You can select these object types in the source field view of the mapping step.</p><p>With this toggle <b>off</b>, you can use the calculated fieds option and apply various data transformation functions when activating audiences. However, you can <i>not</i> export arrays, maps, and objects to JSON or Parquet files and must configure a separate destination for that purpose.</p>"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_control"
