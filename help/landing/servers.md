@@ -28,7 +28,7 @@ Available services on hub include the following:
 
 ### Experience Platform Edge Network
 
-Edge Network is a server that is physically located closer to different geographic locations and . These data centers process all the data collected through the SDK extensions and Edge Network APIs. The only data that lives on the Edge Network are the projected audience memberships and attributes necessary for personalization.
+Edge Network is a server that is physically located closer to different geographic locations. These data centers process all the data collected through the SDK extensions and Edge Network APIs. The only data that lives on the Edge Network are the audience memberships, profile identities, and attributes necessary for personalization.
 
 Edge Network lets you send and receive data to your customers more quickly due to their closer proximity to the end user. Additionally, you can use Edge Network to process event forwarding requests and tag management requests. As a result, Edge Network should be used in scenarios where the **speed** of the data is more important. 
 
