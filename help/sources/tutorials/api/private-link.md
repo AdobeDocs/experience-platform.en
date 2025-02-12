@@ -9,27 +9,29 @@ hidefromtoc: true
 
 >[!AVAILABILITY]
 >
->This feature is in Limited Availability.
+>This feature is in Limited Availability and is currently only supported by the following sources:
+>
+>* [[!DNL Azure Blob]](../../connectors/cloud-storage/blob.md)
+>* [[!DNL Azure Data Lake Gen2]](../../connectors/cloud-storage/adls-gen2.md)
+>* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
+>* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 
 Read this guide to learn how you can establish a private endpoint connection to Azure-based sources through a private link, and allow for a more secure transfer mechanism for your data. 
 
-## Outline of API steps
+## Get started 
 
-1. Create a private endpoint
-2. Get all private endpoint(s)
-3. Get all private endpoint(s) for a given source
-4. Retrieve a private endpoint
-5. Resolve (?) a private endpoint
-6. Enable the interactive authoring API
-7. Retrieve interactive authoring status API
-8. Delete a private endpoint
-9. Create connection (Flow Service)
-10. Get connection(s) tied to a given private endpoint (Flow Service)
-11. Get connection(s) using private endpoint (Flow Service)
+This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-## Create a private endpoint
+* [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
+* [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-To create a private endpoint, make a POST request to the `/privateEndpoints` endpoint of the [!DNL Connectors] API.
+### Using Platform APIs
+
+For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../landing/api-guide.md).
+
+## Create a private endpoint {#create-private-endpoint}
+
+To create a private endpoint, make a POST request to `/privateEndpoints`.
 
 **API format**
 
@@ -39,7 +41,7 @@ POST /privateEndpoints
 
 **Request**
 
-The following request creates a private endpoint.
+The following request creates a private endpoint:
 
 +++Select to view request example
 
@@ -52,27 +54,27 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-    "name": "ACME Endpoint",
-    "subscriptionId": "25a08a99-7b80-433c-ba62-252f7e23795a",
-    "resourceGroupName": "acp-int-va7-connectors-e2e",
-    "resourceName": "acpconnectorse2e",
-    "fqdns": [],
-    "connectionSpec": {
-        "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
-        "version": "1.0"
+      "name": "TEST_E2E_25_Jan",
+      "subscriptionId": "25a08a99-7b80-433c-ba62-252f7e23795a",
+      "resourceGroupName": "acp-int-va7-connectors-e2e",
+      "resourceName": "acpconnectorse2e",
+      "fqdns": [],
+      "connectionSpec": {
+          "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+          "version": "1.0"
     }
-}'
+  }'
 ```
 
 | Property | Description |
 | --- | --- |
 | `name` | The name of your private endpoint. |
-| `subscriptionId` | |
-| `resourceGroupName` |
-| `resourceName` |
-| `fqdns` |
-| `connectionSpec.id` |
-| `connectionSpec.version` |
+| `subscriptionId` | The ID associated with your [!DNL Azure] subscription. For more information, read the [!DNL Azure] guide on [retrieving your subscription and tenant IDs from the [!DNL Azure Portal]](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id). |
+| `resourceGroupName` | The name of your resource group on [!DNL Azure]. A resource group contains related resources for an [!DNL Azure] solution. For more information, read the [!DNL Azure] guide on [managing resource groups](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal). |
+| `resourceName` | The name of your resource. In [!DNL Azure], a resource refers to instances like virtual machines, web apps, and databases. For more information, read the [!DNL Azure] guide on [understanding the [!DNL Azure] resource manager](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview). |
+| `fqdns` | The fully-qualified domain names for your source. This property is required only when using the [!DNL Snowflake] source. |
+| `connectionSpec.id` | The connection spec ID of the source you are using. |
+| `connectionSpec.version` | The version of the connection spec ID that yo are using. |
 
 +++
 
@@ -100,20 +102,21 @@ A successful response returns the following:
 
 | Property | Description |
 | --- | --- |
-| `id` |
-| `name` |
-| `resourceGroupName` |
-| `resourceName` |
-| `fqdns` |
-| `connectionSpec.id` |
-| `connectionSpec.version` |
-| `state` |
+| `id` | The ID of your newly created private endpoint. |
+| `name` | The name of your private endpoint. |
+| `subscriptionId` | The ID associated with your [!DNL Azure] subscription. For more information, read the [!DNL Azure] guide on [retrieving your subscription and tenant IDs from the [!DNL Azure Portal]](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id). |
+| `resourceGroupName` | The name of your resource group on [!DNL Azure]. A resource group contains related resources for an [!DNL Azure] solution. For more information, read the [!DNL Azure] guide on [managing resource groups](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal). |
+| `resourceName` | The name of your resource. In [!DNL Azure], a resource refers to instances like virtual machines, web apps, and databases. For more information, read the [!DNL Azure] guide on [understanding the [!DNL Azure] resource manager](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview). |
+| `fqdns` | The fully-qualified domain names for your source. This property is required only when using the [!DNL Snowflake] source. |
+| `connectionSpec.id` | The connection spec ID of the source you are using. |
+| `connectionSpec.version` | The version of the connection spec ID that yo are using. |
+| `state` | The current state of your private endpoint. Valid states include: <ul><li>`Pending`</li><li>`Failed`</li><li>`Approved`</li><li>`Rejected`</li></ul> |
 
 +++
 
-## List all private endpoints
+## Retrieve a list of private endpoints {#retrieve-private-endpoints}
 
-To retrieve a list of all private endpoints in a given organization, make a GET request to the `/privateEndpoints` endpoint of the [!DNL Connectors] API.
+To retrieve a list of private endpoints from a given sandbox in your organization, make a GET request to `/privateEndpoints`.
 
 **API format**
 
@@ -123,9 +126,9 @@ GET /privateEndpoints
 
 **Request**
 
-+++Select to view request example
-
 The following request retrieves a list of all private endpoints that exist in your organization.
+
++++Select to view request example
 
 ```shell
 curl -X GET \
@@ -139,8 +142,9 @@ curl -X GET \
 
 +++
 
-
 **Response**
+
+A successful response returns a list of private endpoints in your organization.
 
 +++Select to view response example
 
@@ -183,9 +187,9 @@ curl -X GET \
 
 +++
 
-## List all private endpoints for a given source
+## Retrieve a list of private endpoints for a given source {#retrieve-private-endpoints-by-source}
 
-To retrieve a list of all private endpoints that correspond to a specific source, make a GET request to the `/privateEndpoints` endpoint and provide the `connectionSpec.id` of the source.
+To retrieve a list of private endpoints that correspond to a specific source, make a GET request to the `/privateEndpoints` endpoint and provide the `connectionSpec.id` of the source.
 
 **API format**
 
@@ -193,11 +197,15 @@ To retrieve a list of all private endpoints that correspond to a specific source
 GET /privateEndpoints?property=connectionSpec.id=={CONNECTION_SPEC_ID}
 ```
 
+| Query parameter | Description |
+| --- | --- |
+| `{CONNECTION_SPEC_ID}` | The connection spec ID of the source that which you want to search private endpoints for. |
+
 **Request**
 
-+++Select to view request example
+The following request retrieves a list of all private endpoints that correspond to the source with connection spec ID: `4c10e202-c428-4796-9208-5f1f5732b1cf`.
 
-The following request retrieves a list of all private endpoints that correspond to a specific source.
++++Select to view request example
 
 ```shell
 curl -X GET \
@@ -213,9 +221,9 @@ curl -X GET \
 
 **Response**
 
-+++Select to view response example
+A successful response returns a list of all private endpoints that correspond to the source with connection spec ID: `4c10e202-c428-4796-9208-5f1f5732b1cf`.
 
-A successful response returns a list of all private endpoints that correspond with the [!DNL Azure Blob] source.
++++Select to view response example
 
 ```json
 {
@@ -256,7 +264,7 @@ A successful response returns a list of all private endpoints that correspond wi
 
 +++
 
-## Retrieve a private endpoint
+## Retrieve a private endpoint {#retrieve-specific-private-endpoint}
 
 To retrieve a specific private endpoint, make a GET request to `/privateEndpoints` and provide the ID of the private endpoint that you want to retrieve.
 
@@ -266,11 +274,15 @@ To retrieve a specific private endpoint, make a GET request to `/privateEndpoint
 GET /privateEndpoints/{PRIVATE_ENDPOINT_ID}
 ```
 
+| Query parameter | Description |
+| --- | --- |
+| `{PRIVATE_ENDPOINT_ID}` | The ID of the private endpoint that you want to retrieve. |
+
 **Request**
 
-+++Select to view request example
+The following request retrieves the private endpoint with the ID:`2c5699b0-b9b6-486f-8877-ee5e21fe9a9d`.
 
-The following request retrieves the private endpoint with the ID:`2c5699b0-b9b6-486f-8877-ee5e21fe9a9d`
++++Select to view request example
 
 ```shell
 curl -X GET \
@@ -286,9 +298,9 @@ curl -X GET \
 
 **Response**
 
-+++Select to view response example
-
 A successful response returns the private endpoint with ID: `2c5699b0-b9b6-486f-8877-ee5e21fe9a9d`
+
++++Select to view response example
 
 ```json
 {
@@ -314,7 +326,7 @@ A successful response returns the private endpoint with ID: `2c5699b0-b9b6-486f-
 
 +++
 
-## Resolve a private endpoint
+## Resolve a private endpoint {#resolve-private-endpoint}
 
 **API format**
 
@@ -349,6 +361,14 @@ curl -X GET \
   }'
 ```
 
+| Property | Description |
+| --- | --- |
+| `auth.specName` |
+| `auth.params.usePrivateLink` |
+| `auth.params.connectionString` |
+| `connectionSpec.id` |
+| `connectionSpec.version` |
+
 +++
 
 **Response**
@@ -379,7 +399,9 @@ curl -X GET \
 
 +++
 
-## Enable interactive authoring
+## Enable interactive authoring {#enable-interactive-authoring}
+
+Interactive authoring is used for functionalities like exploring a connection or account and previewing data. To enable interactive authoring, make a POST request to `/privateEndpoints/interactiveAuthoring` and specify `enable` as an operator in your query parameters.
 
 **API format**
 
@@ -387,7 +409,13 @@ curl -X GET \
 POST /privateEndpoints/interactiveAuthoring?op=enable
 ```
 
+| Query parameter | Description |
+| --- | --- |
+| `op` | The operation that you want to perform. To enable interactive authoring, set the `op` value to `enable`. |
+
 **Request**
+
+The following request enables interactive authoring for your private endpoint and sets the TTL to 60 minutes.
 
 +++Select to view request example
 
@@ -414,7 +442,9 @@ curl -X POST \
 
 A successful response returns HTTP status 202 (Accepted).
 
-## Retrieve interactive authoring status
+## Retrieve interactive authoring status {#retrieve-interactive-authoring-status}
+
+To view the current status of interactive authoring for your private endpoint, make a GET request to `/privateEndpoints/interactiveAuthoring`.
 
 **API format**
 
@@ -424,8 +454,9 @@ GET /privateEndpoints/interactiveAuthoring
 
 **Request**
 
-+++Select to view request example
+The following request retrieves the status of interactive authoring:
 
++++Select to view request example
 
 ```shell
 curl -X GET \
@@ -455,9 +486,9 @@ curl -X GET \
 
 +++
 
-## Delete private endpoint
+## Delete private endpoint {#delete-private-endpoint}
 
-To delete your private endpoint, make a DELETE request to the `/privateEndpoints` endpoint and provide the ID of the endpoint that you want to delete.
+To delete your private endpoint, make a DELETE request to `/privateEndpoints` and provide the ID of the endpoint that you want to delete.
 
 **API format**
 
@@ -471,8 +502,9 @@ DELETE /privateEndpoints/{PRIVATE_ENDPOINT_ID}
 
 **Request**
 
-+++Select to view request example
+The following request deletes private endpoint with ID: `02a74b31-a566-4a86-9cea-309b101a7f24`.
 
++++Select to view request example
 
 ```shell
 curl -X DELETE \
@@ -490,9 +522,11 @@ curl -X DELETE \
 
 A successful response returns HTTP status 200 (Success). You can verify deletion by making a GET request and to `/privateEndpoints` and providing the deleted ID as a query parameter.
 
-## Flow Service
+## Flow Service {#flow-service}
 
-### Create a connection with a private endpoint
+Read the following sections for information on how you can use private endpoints in conjunction with the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+
+### Create a connection with a private endpoint {#create-base-connection}
 
 To create a connection with a private endpoint in Experience Platform, make a POST request to the `/connections` endpoint of the [!DNL Flow Service] API.
 
@@ -503,6 +537,8 @@ POST /connections/
 ```
 
 **Request**
+
+The following request creates an authenticated base connection for [!DNL Snowflake], while also using a private endpoint.
 
 +++Select to view request example
 
@@ -516,11 +552,11 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
       "name": "Snowflake base connection",
-      "description": "Snowflake base connection",
+      "description": "A base connection for a Snowflake source that uses a private link.",
       "auth": {
           "specName": "ConnectionString",
           "params": {
-              "connectionString": "jdbc:snowflake://megwkdb-rq66951.snowflakecomputing.com/?user=connectorsnoida1&pwd=Welcome02*&db=DEMO_DB&warehouse=COMPUTE_WH",
+              "connectionString": "jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}",
               "usePrivateLink" : true
           }
       },
@@ -533,17 +569,32 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `name` |
-| `description` |
-| `auth.specName` |
-| `auth.params.connectionString` |
-| `auth.params.usePrivateLink` |
-| `connectionSpec.id` |
-| `connectionSpec.version` |
+| `name` | The name of your base connection. |
+| `description` | (Optional) A description that provides additional information on your connection. |
+| `auth.specName` | The authentication being used to connect your source to Experience Platform. |
+| `auth.params.connectionString` | The [!DNL Snowflake] connection string. For more information, read the [[!DNL Snowflake] API authentication guide](../api/create/databases/snowflake.md).  |
+| `auth.params.usePrivateLink` | A boolean value that determines whether or not you are using a private endpoint. Set this value to `true` if you are using a private endpoint. |
+| `connectionSpec.id` | The connection spec ID of [!DNL Snowflake]. |
+| `connectionSpec.version` | The version of your [!DNL Snowflake] connection spec ID. |
 
 +++
 
-### Retrieve connections tied to a given a private endpoint
+**Response**
+
+A successful response returns your newly generated base connection ID and etag.
+
++++Select to view response example
+
+```json
+{
+  "id": "a59d368a-1152-4673-a46e-bd52e8cdb9a9",
+  "etag": "\"f50185ed-0000-0200-0000-637e8fad0000\""
+}
+```
+
++++
+
+### Retrieve connections tied to a given a private endpoint {#retrieve-connections-by-endpoint}
 
 To retrieve connections tied to a particular private endpoint, make a GET request to the `/connections` endpoint and provide the ID of the private endpoint as a query parameter.
 
@@ -558,6 +609,8 @@ GET /connections?property=auth.params.privateEndpointId=={PRIVATE_ENDPOINT_ID}
 | {PRIVATE_ENDPOINT_ID} | The ID of the private endpoint tied to the connections that you want to retrieve. |
 
 **Request**
+
+The following request retrieves existing connections tied to private endpoint with ID: `02a74b31-a566-4a86-9cea-309b101a7f24`.
 
 +++Select to view request example
 
@@ -657,7 +710,7 @@ A successful response returns a list of connections tied to the queried private 
 
 +++
 
-### Retrieve connections associated with any private endpoint
+### Retrieve connections associated with any private endpoint {#retrieve-connections}
 
 To retrieve connections associated with any private endpoint, make a GET request to the `/connections` endpoint and provide `property=auth.params.usePrivateLink==true` as a query parameter.
 
@@ -668,6 +721,8 @@ GET /connections?property=auth.params.usePrivateLink==true
 ```
 
 **Request**
+
+The following request retrieves all connections in your organization that are using private endpoints.
 
 +++Select to view request example
 
@@ -684,6 +739,8 @@ curl -X GET \
 +++
 
 **Response**
+
+A successful response returns all connections that are tied to private endpoints.
 
 +++Select to view response example
 
