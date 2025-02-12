@@ -9,13 +9,21 @@ Activate profiles for your Demandbase campaigns for audience targeting, personal
 
 ## Use case {#use-case}
 
-A B2B marketer uses the [Demandbase B2B](demandbase.md) destination for account-based marketing to focus campaigns on high-value accounts rather than broad audiences. This approach maximizes impact by targeting companies that exhibit strong buying intent or have meaningfully engaged with their brand. Using account signals, they identify accounts actively interested in their products or services. The marketer can then run an account-based campaign and analyze engagement data to determine which accounts show the highest levels of interest. This analysis helps pinpoint key individuals within those accounts, such as decision-makers, influencers, and stakeholders who have interacted with the campaigns by downloading content, attending webinars, or visiting the website. These individuals are critical for follow-up efforts to advance the deal.
+Marketers can use Adobe Real-Time CDP to create a People List of first-party contacts and activate it in Demandbase for optimized and orchestrated engagement across its demand-side platform (DSP) and other channels such as LinkedIn.
 
-Next, marketers can shift from an account-focused strategy to a people-based strategy by creating a People List of engaged contacts. This list includes individuals who have demonstrated intent or responded positively to the campaign, making them ideal for retargeting and nurturing efforts. By segmenting them based on job title, industry, or engagement level, marketers can tailor follow-up messaging to address specific needs and pain points.
+This approach allows marketers to prioritize campaign spending on known individuals sourced from their own CRM or marketing automation system, ensuring that marketing efforts focus on high-value prospects.
 
-With the People List created, marketers can launch a nurture campaign to keep these high-value prospects engaged. This may include targeted email sequences, personalized paid media ads, or one-on-one sales outreach with personalized messaging. By leveraging engagement insights, messaging can be refined to align with each contact's interests and behaviors, increasing the likelihood of conversion.
+Once activated, Demandbase optimizes ad delivery, refining targeting strategies to maximize engagement, reach, and conversion rates, ultimately improving campaign efficiency.
 
-This multi-stage approach, beginning with account-level targeting and transitioning to people-based engagement, ensures my marketing efforts remain precise and effective. By leveraging insights from Demandbase, you can identify and engage high-potential accounts while fostering deeper relationships with key stakeholders, accelerating pipeline velocity, and improving conversion rates.
+## Supported identities {#supported-identities}
+
+The [!DNL Demandbase People] connection supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
+
+|Target Identity|Description|Considerations|
+|---|---|---|
+|email|Plain text email addresses | Only plain text email addresses are supported by the [!DNL Demandbase People] connection.|
+
+{style="table-layout:auto"}
 
 ## Supported audiences {#supported-audiences}
 
