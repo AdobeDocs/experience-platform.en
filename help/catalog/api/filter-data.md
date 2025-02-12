@@ -2,14 +2,14 @@
 keywords: Experience Platform;home;popular topics;filter;Filter;filter data;Filter data;date range
 solution: Experience Platform
 title: Filter Catalog Data Using Query Parameters
-description: The Catalog Service API allows response data to be filtered through the use of request query parameters. As a best practice, use filters in all API calls to reduce API load and improve overall performance.
+description: Use query parameters to filter response data in the Catalog Service API and retrieve only the information you need. Apply filters to your API calls to reduce load and improves performance, ensuring faster and more efficient data retrieval.
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
 ---
 # Filter [!DNL Catalog] data using query parameters
 
 To improve performance and retrieve relevant results, use query parameters to filter [!DNL Catalog Service] API response data. 
 
-This document outlines common filtering methods for [!DNL Catalog] objects in the API. Reference this document alongside the [Catalog developer guide](getting-started.md) for more details on API interactions. For general [!DNL Catalog Service] information, see the [[!DNL Catalog] overview](../home.md).
+Learn about common filtering methods for [!DNL Catalog] objects in the API. Use this document alongside the [Catalog Developer Guide](getting-started.md) for more details on API interactions. For general [!DNL Catalog Service] information, see the [[!DNL Catalog] overview](../home.md).
 
 ## Limit returned objects {#limit-returned-objects}
 
@@ -619,7 +619,7 @@ A successful response contains a list of datasets whose version numbers are grea
 }
 ```
 
-## Combine multiple parameters {#combine-multiple-parameters}
+## Combine multiple filters {#combine-multiple-filters}
 
 Use an ampersand (`&`) to combine multiple filters and refine your query in a single request. When you filter by multiple fields, an `AND` relationship is applied by default.
 
