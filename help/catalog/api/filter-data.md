@@ -637,7 +637,7 @@ When you apply multiple filters to the same non-array field, only the last speci
 GET /{OBJECT_TYPE}?property=name==foo&property=name==bar
 ```
 
-### Multiple filters example {#multiple-filters-example} 
+#### Multiple filters example {#multiple-filters-example}
 
 You can combine multiple `property` filters in a single query, but at least one must apply to the `id` or `created` field. The following query returns objects where `id` is `abc123` **AND** `name` is not `test`:
 
@@ -647,9 +647,9 @@ You can combine multiple `property` filters in a single query, but at least one 
 GET /{OBJECT_TYPE}?property=id==abc123&property=name!=test
 ```
 
-### Multiple filter limitations {#multiple-filter-limitations}
+#### Multiple filter limitations {#multiple-filter-limitations}
 
-You **cannot** use a single `property` parameter to filter multiple fields at once. The following example (`property=id>abc,name==myDataset`) **is not allowed** because it tries to apply conditions to `id` and `name` within a **single `property` parameter**:
+You **cannot** use a single `property` parameter to filter multiple fields at once. The following example (`property=id>abc,name==myDataset`) is **not** allowed because it tries to apply conditions to `id` and `name` within a **single `property` parameter**:
 
 **API format**
 
@@ -667,7 +667,7 @@ To filter an array field by multiple values, use separate property parameters fo
 
 >[!NOTE]
 >
->The requirement to include `id` or `created` when filtering multiple fields does not apply when filtering multiple values within an array field.
+>The requirement to include `id` or `created` when filtering multiple fields does **not** apply when filtering multiple values within an array field.
 
 The example query below only returns results from the array that includes both `val1` and `val2`.
 
