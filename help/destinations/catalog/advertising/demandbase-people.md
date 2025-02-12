@@ -7,6 +7,10 @@ description: Use this destination to activate your audiences and enrich them wit
 
 Activate profiles for your Demandbase campaigns for audience targeting, personalization, and suppression.
 
+>[!IMPORTANT]
+>
+>For B2B use cases where you need to [activate account audiences](../../ui/activate-account-audiences.md), use the [Demandbase](demandbase.md) destination connector instead.
+
 ## Use case {#use-case}
 
 Marketers can use Adobe Real-Time CDP to create a People List of first-party contacts and activate it in Demandbase for optimized and orchestrated engagement across its demand-side platform (DSP) and other channels such as LinkedIn.
