@@ -30,7 +30,7 @@ Available services on hub include the following:
 
 Edge Network is a server that is physically located closer to different geographic locations. These data centers process all the data collected through the SDK extensions and Edge Network APIs. The only data that lives on the Edge Network are the audience memberships, profile identities, and attributes necessary for personalization.
 
-Edge Network lets you send and receive data to your customers more quickly due to their closer proximity to the end user. Additionally, you can use Edge Network to process event forwarding requests and tag management requests. As a result, Edge Network should be used in scenarios where the **speed** of the data is more important. 
+Edge Network lets you send and receive data to your customers more quickly due to their closer proximity to the end user. Additionally, you can use Edge Network to process event forwarding requests and tag management requests. However, Edge Network only processes **behavioral** data. As a result, Edge Network should be used in scenarios where the **speed** of the data is more important. 
 
 Available services on Edge Network include the following:
 
