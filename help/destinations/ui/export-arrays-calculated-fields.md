@@ -96,6 +96,11 @@ Arrays must currently be exported as strings, by using the `array_to_string` fun
 ## How to work with calculated fields {#how-to-export-calculated-fields}
 
 >[!CONTEXTUALHELP]
+>id="platform_destinations_export_arrays_maps_objects"
+>title="Export arrays, maps, and objects"
+>abstract="<p> Toggle this setting <b>on</b> to enable the export of arrays, maps, and objects to JSON or Parquet files. You can select these object types in the source field view of the mapping step.</p><p>With this toggle <b>off</b>, you can use the calculated fieds option and apply various data transformation functions when activating audiences. However, you can <i>not</i> export arrays, maps, and objects to JSON or Parquet files and must configure a separate destination for that purpose.</p>"
+
+>[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_control"
 >title="Enable hierarchical output schema"
 >abstract="Toggle this setting on to enable the export of arrays, maps, and objects to JSON or Parquet files."
