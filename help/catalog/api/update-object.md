@@ -103,3 +103,91 @@ A successful response returns an array containing the ID of the updated object. 
     "@/dataSets/5ba9452f7de80400007fc52a"
 ]
 ```
+
+<!-- ... -->
+## Update using PATCH v2
+
+The `PATCH v2` endpoint provides a more flexible way to update dataset attributes using **merge patch** as defined in [RFC-7386](https://datatracker.ietf.org/doc/html/rfc7386).
+
+**API format**
+
+```http
+PATCH /V2/DATASETS/{DATASET_ID}
+```
+
+| Parameter | Description |
+| --- | --- |
+| `{DATASET_ID}` | The identifier of the dataset to update. |
+
+### Headers
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `if-match` | string | Verifies the valid versions of a document by matching the updated date. |
+| `if-none-match` | string | Verifies the invalid versions of a document by matching the updated date. |
+| `x-api-key` | string | The API key of the calling client. *(Required)* |
+| `x-gw-ims-org-id` | string | The owning IMS organization identifier. *(Required)* |
+| `x-sandbox-id` | string | The sandbox ID of resources. |
+| `x-sandbox-name` | string | The sandbox name of resources. *(Required for service tokens)* |
+| `accept-encoding` | string | Specifies compressed response bodies. Supported encoding: `gzip`. |
+
+**Request**
+
+```shell
+curl --request PATCH \
+  --url https://platform-int.adobe.io/data/foundation/catalog/v2/dataSets/67976f0b4878252ab887ccd9 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "tags": {
+            "custom_tag": ["patched_with_v2"]
+        }
+      }'
+```
+
+**Response**
+
+A successful response returns ...
+
+```json
+[
+    "@/dataSets/67976f0b4878252ab887ccd9"
+]
+```
+
+### Example: Dataset before and after update
+
+**Before PATCH v2 request:**
+
+```JSON
+{
+    "67976f0b4878252ab887ccd9": {
+        "name": "Test dataset",
+        "description": "This is just a test dataset",
+        "tags": {
+            "adobe/pqs/table": ["test_dataset_20250127_113331_106"],
+            "adobe/siphon/table/format": ["delta"]
+        }
+    }
+}
+```
+
+**After PATCH v2 request:**
+
+```JSON
+{
+    "67976f0b4878252ab887ccd9": {
+        "name": "Test dataset",
+        "description": "This is just a test dataset",
+        "tags": {
+            "adobe/pqs/table": ["test_dataset_20250127_113331_106"],
+            "adobe/siphon/table/format": ["delta"],
+            "custom_tag": ["patched_with_v2"]
+        },
+        "version": "1.0.1"
+    }
+}
+```
