@@ -14,7 +14,7 @@ On Platform, data can be be processed in two different paths: Adobe Experience P
 
 ### Adobe Experience Platform hub
 
-Hub is a main data center that is centrally located and contains all the historical data and rich profile context that has been collected in Adobe Experience Platform. This allow you to send and receive more robust and complete data to your downstream services. As a result, hub should be used in scenarios where the **thoroughness** of the data is more important.
+Hub is a main data center that is centrally located and contains all the historical data and rich profile context that has been collected in Adobe Experience Platform. This allows you to send and receive more robust and complete data to your downstream services. As a result, hub should be used in scenarios where the **thoroughness** of the data is more important.
 
 Available services on hub include the following:
 
@@ -22,6 +22,9 @@ Available services on hub include the following:
 - Streaming segmentation
 - Profiles
 - Destinations
+- Identity Graph
+- Data Distiller - Query Service
+- Source connectors
 
 ### Experience Platform Edge Network
 
