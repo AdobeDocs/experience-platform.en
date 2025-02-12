@@ -23,9 +23,11 @@ Consider this page your go-to place around anything you want to know about expor
 
 ## Bottom line up front
 
+Get the most important information about the funcitonality in this section, and continue below to the other sections in the document for detailed information.
+
 * The ability to export arrays, maps, and objects depends on your selection of the **Export arrays, maps, objects toggle** toggle. Read more about it further down on the page.
-* You can export arrays, maps, and objects to cloud storage destinations, in `JSON` and `Parquet` files. People and prospect audiences are supported, account audiences and datasets are not.
-* You can export arrays, maps, and objects to CSV files, but you need to use the calcuated fields functionality and concatenate them into a string by using the `array_to_string` function.
+* You can export arrays, maps, and objects to cloud storage destinations only, in `JSON` and `Parquet` files. People and prospect audiences are supported, account audiences and datasets are not.
+* You *can* export arrays, maps, and objects to CSV files, but you need to use the calcuated fields functionality and concatenate them into a string by using the `array_to_string` function.
 
 ## Arrays and other object types in Platform {#arrays-strings-other-objects}
 
@@ -54,12 +56,7 @@ organizations = [{
 
 See further below [extensive examples](#examples) of how you can use various functions to access elements of arrays, transform and filter arrays, join array elements into a string, and more.  
 
-Maps are 
-https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/fields/map 
-
-Objects are 
-https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/fields/object
-
+In addition to arrays, you can also export maps and objects from Experience Platform to your desired cloud storage destination. Read more about [maps](/help/xdm/ui/fields/map.md) and [objects](/help/xdm/ui/fields/object.md) in Experience Platform.
 
 ## Known limitations {#known-limitations}
 
@@ -74,9 +71,15 @@ To export arrays, you must use the calculated fields functionality in the mappin
 
 [Connect](/help/destinations/ui/connect-destination.md) to a desired cloud storage destination, progress through the [activation steps for cloud storage destinations](/help/destinations/ui/activate-batch-profile-destinations.md) and get to the [mapping](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) step. 
 
-## Export arrays, maps, objects toggle
+## Export arrays, maps, objects toggle {#export-arrays-maps-objects-toggle}
 
-The ability to export arrays, maps, objects depends on your selection in the toggle. Read the sections below for extensive information
+When connecting to a cloud storage destination, you can set the **[!UICONTROL Export arrays, maps, objects]** toggle on or off.
+
+![Export arrays, maps, objects toggle shown with an on or off setting, as well as highlighting the popover.](/help/destinations/assets/ui/export-arrays-calculated-fields/export-objects-toggle.gif)
+
+Toggle this setting **on** to enable the export of arrays, maps, and objects to JSON or Parquet files. You can select these object types in the source field view of the mapping step when activating audiences to cloud storage destinations. However, with this setting on, you cannot use the calculated fields option to transform data on activation.
+
+With this toggle **off**, you can use the calculated fieds option and apply various data transformation functions when activating audiences. However, you can not export arrays, maps, and objects to JSON or Parquet files and must configure a separate destination for that purpose.
 
 ## Export arrays, maps, objects toggle *on*
 
