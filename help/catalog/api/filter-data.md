@@ -11,7 +11,7 @@ To improve performance and retrieve relevant results, use query parameters to fi
 
 This document outlines common filtering methods for [!DNL Catalog] objects in the API. Reference this document alongside the [Catalog developer guide](getting-started.md) for more details on API interactions. For general [!DNL Catalog Service] information, see the [[!DNL Catalog] overview](../home.md).
 
-## Limit returned objects
+## Limit returned objects {#limit-returned-objects}
 
 The `limit` query parameter restricts the number of objects returned in a response. [!DNL Catalog] responses follow predefined limits:
 
@@ -69,7 +69,7 @@ A successful response returns a list of datasets, limited to the number indicate
 }
 ```
 
-## Limit displayed properties
+## Limit displayed properties {#limit-displayed-properties}
 
 Even when filtering the number of objects returned using the `limit` parameter, the returned objects themselves can often contain more information than you actually need. To further reduce the load on the system, it is best practice to filter responses to include only the properties that you need.
 
@@ -154,7 +154,7 @@ Based on the response above, the following can be inferred:
 >
 >In the `schemaRef` property for each dataset, the version number indicates the latest minor version of the schema. See the section on [schema versioning](../../xdm/api/getting-started.md#versioning) in the XDM API guide for more information.
 
-## Offset starting index of response list
+## Offset starting index of response list {#offset-starting-index}
 
 The `start` query parameter offsets the response list forward by a specified number, using zero-based numbering. For example, `start=2` would offset the response to start on the third listed object.
 
@@ -451,6 +451,10 @@ A successful response contains a list of [!DNL Catalog] objects that are sorted 
 * [Using simple filters](#using-simple-filters): Filter by whether a specific property matches a specific value.
 * [Using the property parameter](#using-the-property-parameter): Use conditional expressions to filter based whether a property exists, or if a property's value matches, approximates, or compares to another specified value or regular expression.
 
+>[!NOTE]
+>
+>Any attribute of a Catalog object can be used to filter results in the Catalog Service API.
+
 ### Using simple filters {#using-simple-filters}
 
 Simple filters allow you to filter responses based on specific property values. A simple filter takes the form of `{PROPERTY_NAME}={VALUE}`.
@@ -617,7 +621,7 @@ A successful response contains a list of datasets whose version numbers are grea
 
 ## Combine multiple parameters {#combine-multiple-parameters}
 
-Use an ampersand (`&`) to combine multiple parameters in a single request. When you apply parameters to **different fields**, an **AND relationship** is assumed between the conditions.
+Use an ampersand (`&`) to combine multiple filters and refine your query in a single request. When you filter by multiple fields, an `AND` relationship is applied by default.
 
 **API format**
 
@@ -625,7 +629,7 @@ Use an ampersand (`&`) to combine multiple parameters in a single request. When 
 GET /{OBJECT_TYPE}?{FILTER_1}={VALUE}&{FILTER_2}={VALUE}&{FILTER_3}={VALUE}
 ```
 
-If you specify **multiple parameters for the same non-array field**, only the last parameter is considered. For example, the query below **only** returns documents where `name==bar`, because the second parameter overrides the first.
+When you apply multiple filters to the same non-array field, only the last specified filter takes effect. For example, in the query below, `name==bar` overrides the previous filter. Only results that match `bar` are returned."
 
 **API format**
 
@@ -633,9 +637,9 @@ If you specify **multiple parameters for the same non-array field**, only the la
 GET /{OBJECT_TYPE}?property=name==foo&property=name==bar
 ```
 
-### Example of multiple allowed parameters {#multiple-allowed-parameters}
+### Multiple filters example {#multiple-filters-example} 
 
-You can use multiple `property` parameters in the same query **if at least one parameter applies to the `id` or `created` field**. The following query returns objects where `id` is `abc123` **AND** `name` is not `test`:
+You can combine multiple `property` filters in a single query, but at least one must apply to the `id` or `created` field. The following query returns objects where `id` is `abc123` **AND** `name` is not `test`:
 
 **API format**
 
@@ -643,7 +647,7 @@ You can use multiple `property` parameters in the same query **if at least one p
 GET /{OBJECT_TYPE}?property=id==abc123&property=name!=test
 ```
 
-### Example of unsupported multiple parameter use
+### Multiple filter limitations {#multiple-filter-limitations}
 
 You **cannot** use a single `property` parameter to filter multiple fields at once. The following example (`property=id>abc,name==myDataset`) **is not allowed** because it tries to apply conditions to `id` and `name` within a **single `property` parameter**:
 
@@ -653,17 +657,17 @@ You **cannot** use a single `property` parameter to filter multiple fields at on
 GET /{OBJECT_TYPE}?property=id>abc,name==myDataset
 ```
 
-## Filter arrays with the property parameter
+## Filter arrays with the property parameter {#filter-arrays}
 
-Equality filtering requires the array to contain all the specified values, while inequality filtering excludes arrays that contain any specified values.
+Use equality and inequality operators to include or exclude specific values when filtering results based on array properties.
 
-### Equality filtering
+### Equality filters {#equality-filters}
 
 To filter an array field by multiple values, use separate property parameters for each value. Use equality filters to return only the entries in the array data that match the specified values.
 
 >[!NOTE]
 >
->The requirement to include `id` or `created` when filtering multiple fields does not apply to filtering multiple values within an array field.
+>The requirement to include `id` or `created` when filtering multiple fields does not apply when filtering multiple values within an array field.
 
 The example query below only returns results from the array that includes both `val1` and `val2`.
 
@@ -673,7 +677,7 @@ The example query below only returns results from the array that includes both `
 GET /{OBJECT_TYPE}?property=arrayField=val1&property=arrayField=val2
 ```
 
-### Inequality Filtering
+### Inequality filters {#inequality-filters}
 
 Use inequality operators (`!=`) on an array field to exclude any entries in the data where the array contains the specified values.
 
@@ -685,24 +689,6 @@ GET /{OBJECT_TYPE}?property=arrayField!=val1&property=arrayField!=val2
 
 This query returns documents where arrayField does not contain `val1` or `val2`.
 
-### Combining Equality and Inequality
+### Equality and inequality filter limitations {#equality-inequality-limitations}
 
-You cannot apply both equality (`=`) and inequality (`!=`) to the same field in a single query
-
-<!-- Considering ths is an example for filtering batches,dataSets, or dataSetFiles can we get a better example -->
-<!-- Can we get a response here to demonstrate better -->
-
-<!-- **Request**
-
-The following request ....
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/foundation/catalog/dataSets?property=version>1.0.3&property=name!=test \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-``` -->
-
-<!-- ## Handling multiple  for the same field -->
+You cannot apply both equality (`=`) and inequality (`!=`) to the same field in a single query.
