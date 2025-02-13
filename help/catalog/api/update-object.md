@@ -104,10 +104,20 @@ A successful response returns an array containing the ID of the updated object. 
 ]
 ```
 
-<!-- ... -->
 ## Update using PATCH v2
 
-The `PATCH v2` endpoint provides a more flexible way to update dataset attributes using **merge patch** as defined in [RFC-7386](https://datatracker.ietf.org/doc/html/rfc7386).
+The `/v2/DATASETS/{DATASET_ID}` endpoint provides a more flexible way to update complex or deeply nested dataset attributes.
+
+Normally, if you want to update a deeply nested field (like `a.b.c.d`), every level in the path must already exist. If any part is missing in the request, you would have to manually create each missing level before setting the final value. This task might require multiple separate operations, which adds complexity and increases the chance of mistakes.
+
+The `/v2/DATASETS/{DATASET_ID}` endpoint automatically creates any missing levels in the path. So instead of having to check and manually add b and c before setting d, PATCH v2 does it for you.
+
+When you make a PATCH request to the `/v2/DATASETS/{DATASET_ID}` endpoint, you can simply send the final structure, and the system fills in the missing parts before applying the update.
+
+>[!NOTE]
+>
+>`If-Match` and `If-None-Match` headers are optional for the `/v2/dataSets/{id}` endpoint. PATCH requests to this endpoint merge updates dynamically, allowing modifications without retrieving the latest dataset version. While this reduces the risk of data loss from concurrent updates, you can use `If-Match` with the latest `etag` to ensure changes apply only to a specific version. `If-None-Match` can be used to prevent updates if the dataset has not changed since the last known version.
+
 
 **API format**
 
@@ -118,18 +128,6 @@ PATCH /V2/DATASETS/{DATASET_ID}
 | Parameter | Description |
 | --- | --- |
 | `{DATASET_ID}` | The identifier of the dataset to update. |
-
-### Headers
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `if-match` | string | Verifies the valid versions of a document by matching the updated date. |
-| `if-none-match` | string | Verifies the invalid versions of a document by matching the updated date. |
-| `x-api-key` | string | The API key of the calling client. *(Required)* |
-| `x-gw-ims-org-id` | string | The owning IMS organization identifier. *(Required)* |
-| `x-sandbox-id` | string | The sandbox ID of resources. |
-| `x-sandbox-name` | string | The sandbox name of resources. *(Required for service tokens)* |
-| `accept-encoding` | string | Specifies compressed response bodies. Supported encoding: `gzip`. |
 
 **Request**
 
@@ -142,15 +140,17 @@ curl --request PATCH \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-        "tags": {
-            "custom_tag": ["patched_with_v2"]
+        "observability": {
+            "metrics": {
+                "rowCount": 500000
+            }
         }
       }'
 ```
 
 **Response**
 
-A successful response returns ...
+A successful response returns an array containing ID of the updated dataset. This ID should match the one sent in the PATCH request. Performing a GET request for this object now shows that only the `tags` object has been updated while all other values remain unchanged.
 
 ```json
 [
@@ -158,18 +158,37 @@ A successful response returns ...
 ]
 ```
 
-### Example: Dataset before and after update
+### An example dataset before and after update
 
-**Before PATCH v2 request:**
+The example dataset below **Before PATCH v2 request:**
 
 ```JSON
 {
     "67976f0b4878252ab887ccd9": {
-        "name": "Test dataset",
-        "description": "This is just a test dataset",
+        "name": "Acme Sales Data",
+        "description": "This dataset contains sales transaction records for Acme Corporation.",
+        "imsOrg": "{ORG_ID}",
+        "sandboxId": "{SANDBOX_ID}",
         "tags": {
-            "adobe/pqs/table": ["test_dataset_20250127_113331_106"],
-            "adobe/siphon/table/format": ["delta"]
+            "adobe/pqs/table": [
+                "acme_sales_20250127_113331_106"
+            ],
+            "adobe/siphon/table/format": [
+                "delta"
+            ]
+        },
+        "extensions": {
+            "adobe_lakeHouse": {},
+            "adobe_unifiedProfile": {}
+        },
+        "version": "1.0.0",
+        "created": 1737977611118,
+        "updated": 1737977611118,
+        "createdClient": "acme_data_pipeline",
+        "createdUser": "john.snow@acmecorp.com",
+        "updatedUser": "arya.stark@acmecorp.com",
+        "classification": {
+            "managedBy": "CUSTOMER"
         }
     }
 }
@@ -180,14 +199,34 @@ A successful response returns ...
 ```JSON
 {
     "67976f0b4878252ab887ccd9": {
-        "name": "Test dataset",
-        "description": "This is just a test dataset",
+        "name": "Acme Sales Data",
+        "description": "This dataset contains sales transaction records for Acme Corporation.",
+        "imsOrg": "{ORG_ID}",
+        "sandboxId": "{SANDBOX_ID}",
         "tags": {
-            "adobe/pqs/table": ["test_dataset_20250127_113331_106"],
-            "adobe/siphon/table/format": ["delta"],
-            "custom_tag": ["patched_with_v2"]
+            "adobe/pqs/table": [
+                "acme_sales_20250201_101500_200"
+            ],
+            "adobe/siphon/table/format": [
+                "parquet"
+            ],
+            "custom_tag": [
+                "patched_with_v2"
+            ]
         },
-        "version": "1.0.1"
+        "extensions": {
+            "adobe_lakeHouse": {},
+            "adobe_unifiedProfile": {}
+        },
+        "version": "1.0.1",
+        "created": 1737977611118,
+        "updated": 1737977766499,
+        "createdClient": "acme_data_pipeline",
+        "createdUser": "john.snow@acmecorp.com",
+        "updatedUser": "arya.stark@acmecorp.com",
+        "classification": {
+            "managedBy": "CUSTOMER"
+        }
     }
 }
 ```
