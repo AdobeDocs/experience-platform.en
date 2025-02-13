@@ -482,7 +482,7 @@ curl -X GET \
 
 | Property | Description |
 | --- | --- |
-| `status` | The status of interactive authoring. Valid values include: `disabled`, `enabling`, `enabled`.
+| `status` | The status of interactive authoring. Valid values include: `disabled`, `enabling`, `enabled`. |
 
 +++
 
