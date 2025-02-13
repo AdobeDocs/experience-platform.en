@@ -10,6 +10,7 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
 * [Platform overview](home.md)
 * [Platform overview (Video)](video/platform-overview.md)
 * [Multi-cloud overview](multi-cloud.md)
+* [Edge and Hub comparison](./edge-and-hub-comparison.md)
 * [Platform tutorials](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [A customer experience powered by Platform (Video)](video/customer-experience.md)
 * [Behind the scenes of a customer experience powered by Platform (Video)](video/customer-experience-bts.md)

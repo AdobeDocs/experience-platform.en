@@ -1,10 +1,10 @@
 ---
 solution: Experience Platform
-title: Processing data on Adobe Experience Platform
+title: Edge and Hub comparison
 description: Learn about the different processing paths that are available to use on Adobe Experience Platform.
 ---
 
-# Processing data on Adobe Experience Platform
+# Edge and Hub comparison
 
 Adobe Experience Platform is the most powerful, flexible, and open system on the market for building and managing complete solutions that drive customer experience. You can use Experience Platform to centralize and standardize customer data and content from any system and apply data science and machine learning to dramatically improve the design and delivery of rich, personalized experiences. As a result, Platform has multiple ways to process your data, letting you evaluate your data in the best way possible.
 
@@ -48,22 +48,22 @@ The following section lists the locations for both hub and Edge Network.
 
 **Hub**
 
-- VA7
-- NLD2
-- AUS5
-- CAN2
-- GBR9
-- IND1
+- VA7 (Virginia, USA)
+- NLD2 (The Netherlands)
+- AUS5 (Australia)
+- CAN2 (Canada)
+- GBR9 (United Kingdom)
+- IND1 (India)
 
 **Edge Network**
 
-- OR2
-- VA6
-- IRL1
-- IND1
-- SGP3
-- AUS3
-- JPN3
+- OR2 (Oregon, USA)
+- VA6 (Virginia, USA)
+- IRL1 (Ireland)
+- IND1 (India)
+- SGP3 (Singapore)
+- AUS3 (Australia)
+- JPN3 (Japan)
 
 More detailed information about the available server locations can be found in the [multi-cloud overview](./multi-cloud.md#available-cloud-regions).
 
