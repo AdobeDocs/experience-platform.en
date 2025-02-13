@@ -34,7 +34,7 @@ Use the mapping interface and the comprehensive toolset that it provides to succ
 
 ### Understanding the mapping interface {#mapping-interface}
 
-Refer to the dashboard at the top of the interface for information on thea health of your mapping fields within the context of the ingestion workflow. The dashboard displays the following details regarding your mapping fields:
+Refer to the dashboard at the top of the interface for information on the health of your mapping fields within the context of the ingestion workflow. The dashboard displays the following details regarding your mapping fields:
 
 | Property | Description |
 | --- | --- |
@@ -52,7 +52,7 @@ Next, you can use the options listed in the header to better interact or filter 
 | [!UICONTROL Search source fields] | Use the search bar to navigate to a specific source field. |
 | [!UICONTROL All fields] | Select **[!UICONTROL All fields]** to view a dropdown menu of options to filter your mappings by. The available filtering options include:<ul><li>**[!UICONTROL Required fields]**: Filters the interface to display only fields required to complete the workflow.</li><li> **[!UICONTROL Identity fields]**: Filters the interface to display only fields marked as identities.</li><li>**[!UICONTROL Mapped fields]**: Filters the interface to display only fields that have already been mapped.</li><li>**[!UICONTROL Unmapped fields]**: Filters the interface to display only fields that have yet to be mapped.</li><li>**[!UICONTROL Fields with errors]**: Filters the interface to display only fields that have errors.</li></ul> |
 | [!UICONTROL New field type] | Select **[!UICONTROL New field type]** to either add a new field or a calculated field. For more information, read the section on [adding a new field type](#add-a-new-field-type). |
-| [!UICONTROL Import mappings] | Select **[!UICONTROL Import mappings]** to import mappings from an existing file or dataflow. For more information, read the esection on [importing mappings](#import-mapping). |
+| [!UICONTROL Import mappings] | Select **[!UICONTROL Import mappings]** to import mappings from an existing file or dataflow. For more information, read the section on [importing mappings](#import-mapping). |
 | [!UICONTROL Validate] | Select **[!UICONTROL Validate]** to check for errors in your mappings. |
 | [!UICONTROL Download template] | Select **[!UICONTROL Download template]** to export and download a CSV file of your mappings. |
 | [!UICONTROL Preview data] | Select **[!UICONTROL Preview data]** to use the preview panel and inspect the structure and contents of your source dataset. |
@@ -110,89 +110,47 @@ You can reduce the manual configuration time of your data ingestion process and 
 
 >[!TAB Import mapping from flow]
 
+If you have several dataflows based on similar source files and target schemas, then you can import existing mapping and reuse them for new dataflows.
+
 To import mapping from an existing dataflow, select **[!UICONTROL Import mappings]** and then select **[!UICONTROL Import mapping from flow]**.
 
-![import mapping from flow](../images/ui/mapping/import_from_flow.png)
+![The mapping interface with "import mapping" and "import mapping from flow" selected.](../images/ui/mapping/import_from_flow.png)
 
-![select dataflow from import mapping window](../images/ui/mapping/import_flow_window.png)
+Next, use the pop-up window to locate the dataflow whose mapping you want to import. During this step, you can also use the search function to isolate a specific dataflow and retrieve it's mappings. When finished, select **[!UICONTROL Select]**.
+
+![A list of existing dataflows whose corresponding mappings can be imported.](../images/ui/mapping/import_flow_window.png)
 
 >[!TAB Import mapping from file]
 
+In some cases, you may need to implement a large number of mappings for your data. You can do this manually with the mapping interface, but you can also export your mapping template and configure your mappings on an offline spreadsheet to save time and avoid user timeouts on Experience Platform.
+
 To import mapping from an exported file, select **[!UICONTROL Import mappings]** and then select **[!UICONTROL Import mapping from file]**.
 
-![import mapping from file](../images/ui/mapping/import_from_file.png)
+![The mapping interface with "import mapping" and "import mapping from file" selected.](../images/ui/mapping/import_from_file.png)
 
-![import-mapping](../images/ui/mapping/upload_template.png)
+Next, use [!UICONTROL Upload template] window to download a CSV copy of your mappings. You can then configure your mappings locally on your device, using any software that support editing CSV file types. During this step, you must ensure that you are using only the fields that are provided in your source file and target schema. 
+
+![The upload template window that displays options to both download and upload an exported csv file of the mappings.](../images/ui/mapping/upload_template.png)
+
++++Select to view an example of an exported mapping file
+
+![The downloaded csv file of the mapping template.](../images/ui/mapping/mapping_csv_file.png)
+
++++
+
+When finished, select **[!UICONTROL Upload file]** and select the updated csv file of your mappings. Allow for a brief moment for the system to process, and then select **[!UICONTROL Done]**.
+
+![The upload template window with a a new file uploaded.](../images/ui/mapping/upload_successful.png)
 
 >[!ENDTABS]
 
+With your mappings complete, you can now select **[!UICONTROL Finish]** and proceed to the next step to complete your dataflow.
 
-
-The [!UICONTROL Import mapping] window appears, providing you with a list of dataflows to choose from. 
-
-Select the preview icon to preview the mapping of the dataflow you selected.
-
-![list-mapping](../images/ui/mapping/)
-
-The preview window allows you to inspect existing mapping before importing to your dataflow. Once you verify the mapping, you can select **[!UICONTROL Back]** to return to the list of dataflows and inspect another set of mapping, or you can select **[!UICONTROL Select]** to proceed.
-
-![preview-mapping](../images/ui/mapping/)
-
-Alternatively, you can select the mapping you want to import from the list of dataflows window. Select the dataflow that contains the mapping you want to import and then select **[!UICONTROL Select]** to proceed.
-
-![select-mapping](../images/ui/mapping/)
-
-The interface updates with the mapping you imported.
-
->[!NOTE]
->
->Any existing mapping sets that you establish or ML mapping recommendations are replaced by the mapping that you imported from an existing dataflow.
-
-![mapping-imported](../images/ui/mapping/)
-
-Select **[!UICONTROL Preview data]** to see mapping results of up to 100 rows of sample data from the selected dataset.
-
-![preview-data](../images/ui/mapping/)
-
-During the preview, the identity column is prioritized as the first field, as it is the key information necessary when validating mapping results. When finished, select **[!UICONTROL Close]**.
-
-![preview-screen](../images/ui/mapping/)
-
-To remove all mapping fields, select **[!UICONTROL Clear all mappings]**.
-
-![clear-all](../images/ui/mapping/)
-
-### Using the mapping interface
-
-Platform automatically provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases or fix any duplicated mapping fields to clear any errors.
-
-![mapping-interface](../images/ui/mapping/)
-
-Select the lightbulb icon in the target field that you want to adjust.
-
-![mapping-recc](../images/ui/mapping/)
-
-The [!UICONTROL Mapping recommendations] pop up panel appears, displaying a list of recommended target fields that can be mapped to a particular source field. By default the first recommendation is automatically applied.
-
-Sometimes, more than one recommendation is available for the source schema. When this happens, the mapping card displays the most prominent recommendation, followed by an icon  that contains the number of additional recommendations available. Selecting the light bulb icon will show a list of the additional recommendations. You can choose one of the alternate recommendations by selecting the checkbox next to the recommendation you want to map to instead.
-
-From here, you can change the selected target field to fix an error or match your use case.
-
-Alternatively, you can select **[!UICONTROL Select manually]** to manually use the interactive target schema mapping tree.
-
-![recc-panel](../images/ui/mapping/)
-
-The target schema mapping interface appears in the same view as your mapping fields, allowing you to modify mapping pairs within the same screen. Select the target field that fits your use case or fixes your errors.
-
-![select-target-field](../images/ui/mapping/)
-
-When finished, select **[!UICONTROL Finish]** to proceed.
-
-![finish](../images/ui/mapping/)
+![The mapping interface with a complete set of mappings.](../images/ui/mapping/completed_mappings.png)
 
 ## Next steps
 
-By reading this document, you have successfully mapped a CSV file to a target XDM schema using the mapping interface in Platform UI. See the following documents for more information:
+You now can successfully map a CSV file to a target XDM schema using the mapping interface in the Experience Platform UI. For more information, read the following documents:
 
 * [Data Prep overview](../home.md)
 * [Sources overview](../../sources/home.md)
