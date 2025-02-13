@@ -1,10 +1,10 @@
 ---
 solution: Experience Platform
-title: Edge and Hub comparison
+title: Edge Network and hub comparison
 description: Learn about the different processing paths that are available to use on Adobe Experience Platform.
 ---
 
-# Edge and Hub comparison
+# Edge Network and hub comparison
 
 Adobe Experience Platform is the most powerful, flexible, and open system on the market for building and managing complete solutions that drive customer experience. You can use Experience Platform to centralize and standardize customer data and content from any system and apply data science and machine learning to dramatically improve the design and delivery of rich, personalized experiences. As a result, Platform has multiple ways to process your data, letting you evaluate your data in the best way possible.
 
