@@ -73,32 +73,38 @@ To export arrays, you must use the calculated fields functionality in the mappin
 
 ## Export arrays, maps, objects toggle {#export-arrays-maps-objects-toggle}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_export_arrays_maps_objects"
+>title="Export arrays, maps, and objects"
+>abstract="<p> Toggle this setting <b>on</b> to enable the export of arrays, maps, and objects to JSON or Parquet files. You can select these object types in the source field view of the mapping step.</p><p>With this toggle <b>off</b>, you can use the calculated fieds option and apply various data transformation functions when activating audiences. However, you can <i>not</i> export arrays, maps, and objects to JSON or Parquet files and must configure a separate destination for that purpose.</p>"
+
 When connecting to a cloud storage destination, you can set the **[!UICONTROL Export arrays, maps, objects]** toggle on or off.
 
 ![Export arrays, maps, objects toggle shown with an on or off setting, as well as highlighting the popover.](/help/destinations/assets/ui/export-arrays-calculated-fields/export-objects-toggle.gif)
 
-Toggle this setting **on** to enable the export of arrays, maps, and objects to JSON or Parquet files. You can select these object types in the source field view of the mapping step when activating audiences to cloud storage destinations. However, with this setting on, you cannot use the calculated fields option to transform data on activation.
+Toggle this setting **on** to enable the export of arrays, maps, and objects to JSON or Parquet files. You can select these object types in the source field view of the [mapping step](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) when activating audiences to cloud storage destinations. However, with this setting on, you cannot use the calculated fields option to transform data on activation.
 
 With this toggle **off**, you can use the calculated fieds option and apply various data transformation functions when activating audiences. However, you can not export arrays, maps, and objects to JSON or Parquet files and must configure a separate destination for that purpose.
 
 ## Export arrays, maps, objects toggle *on*
 
-This setting allows you to export out entire objects(ex: person.name) and arrays(all kinds of arrays) by allowing you to select them via the Source Field Selector in the mapping step of the activation workflow.
+With this setting on, you can export entire objects (for example `person.name`) and arrays by selecting them via the source field selector in the mapping step of the activation workflow.
 
-With this option selected, the UI will block users from utilizing calculated fields. This restriction prevents users from transforming profile data prior to exporting. Currently, we face a limitation where the actual structure of the calculated expression cannot be determined for inclusion in the output schema, which is essential for generating accurate exports.
+![Select objects via source field selector in the mapping step of the activation workflow.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-object.gif)
+
+With this option selected, the user interface blocks users from utilizing calculated fields, and the Calculated fields control is disabled, as shown below. To use calculated fields for data transformations, set up a destination connection with the toggle off.
+
+![Calculated fields control disabled.](/help/destinations/assets/ui/export-arrays-calculated-fields/calculated-fields-disabled.png)
 
 ## Export arrays, maps, objects toggle *off*
 
-With this option selected, you are not able to export out entire objects (ex: person.name) and arrays(all kinds of arrays) via the Source Field Selector. However, you can export arrays as strings via the calculated fields toggle still enabled
+With this option selected, you can use the calculated fieds option and apply various data transformation functions when activating audiences. However, you can not export arrays, maps, and objects to JSON or Parquet files and must configure a separate destination for that purpose.
 
-Arrays must currently be exported as strings, by using the `array_to_string` function.
+You *can* export arrays, maps, and objects to CSV files by using the calcuated fields functionality and concatenate them into a string by using the `array_to_string` function. [Read more](#array-to-string-function-export-arrays) about using that function.
+
+Read more in the sections below about working with calculated fields and 
 
 ## How to work with calculated fields {#how-to-export-calculated-fields}
-
->[!CONTEXTUALHELP]
->id="platform_destinations_export_arrays_maps_objects"
->title="Export arrays, maps, and objects"
->abstract="<p> Toggle this setting <b>on</b> to enable the export of arrays, maps, and objects to JSON or Parquet files. You can select these object types in the source field view of the mapping step.</p><p>With this toggle <b>off</b>, you can use the calculated fieds option and apply various data transformation functions when activating audiences. However, you can <i>not</i> export arrays, maps, and objects to JSON or Parquet files and must configure a separate destination for that purpose.</p>"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_control"
@@ -136,7 +142,7 @@ When ready, select **[!UICONTROL Next]** to proceed to the next step of the acti
 
 ![Mapping step with the target field highlighted and a target value filled in.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
 
-## Sample supported functions to export arrays {#supported-functions}
+## Sample supported functions to perform data transfomations {#supported-functions}
 
 All the documented [Data Prep functions](/help/data-prep/functions.md) are supported when activating data to file-based destinations. 
 
@@ -155,7 +161,7 @@ The functions below, specific to handling exports of arrays, are documented alon
 * `first`
 * `last`
 
-## Examples of functions used to export arrays {#examples}
+## Examples of functions used to perform data transformations {#examples}
 
 See examples and further information in the sections below for some of the functions listed above. For the rest of the listed functions, refer to the [general functions documentation in the Data Prep section](/help/data-prep/functions.md).
 
