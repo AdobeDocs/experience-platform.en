@@ -108,16 +108,15 @@ A successful response returns an array containing the ID of the updated object. 
 
 The `/v2/DATASETS/{DATASET_ID}` endpoint provides a more flexible way to update complex or deeply nested dataset attributes.
 
-Normally, if you want to update a deeply nested field (like `a.b.c.d`), every level in the path must already exist. If any part is missing in the request, you would have to manually create each missing level before setting the final value. This task might require multiple separate operations, which adds complexity and increases the chance of mistakes.
+Typically, when you update a deeply nested field (such as `a.b.c.d`), each level in the path must already exist. If any level is missing, you must manually create each one before setting the final value. This often requires multiple operations, which adds complexity and increases the chance of mistakes.
 
-The `/v2/DATASETS/{DATASET_ID}` endpoint automatically creates any missing levels in the path. So instead of having to check and manually add b and c before setting d, PATCH v2 does it for you.
+The `/v2/DATASETS/{DATASET_ID}` endpoint automatically creates any missing levels in the path. Instead of manually checking and adding `b` and `c` before setting `d`, the PATCH `v2` operation does this for you.
 
-When you make a PATCH request to the `/v2/DATASETS/{DATASET_ID}` endpoint, you can simply send the final structure, and the system fills in the missing parts before applying the update.
+When you send a PATCH request to the `/v2/DATASETS/{DATASET_ID}` endpoint, you only need to send the final structure, and the system fills in the missing parts before applying the update.
 
 >[!NOTE]
 >
->`If-Match` and `If-None-Match` headers are optional for the `/v2/dataSets/{id}` endpoint. PATCH requests to this endpoint merge updates dynamically, allowing modifications without retrieving the latest dataset version. While this reduces the risk of data loss from concurrent updates, you can use `If-Match` with the latest `etag` to ensure changes apply only to a specific version. `If-None-Match` can be used to prevent updates if the dataset has not changed since the last known version.
-
+>`If-Match` and `If-None-Match` headers are optional for the `/v2/dataSets/{id}` endpoint. PATCH requests to this endpoint dynamically merge updates, allowing modifications without retrieving the latest dataset version. While this reduces the risk of data loss from concurrent updates, you can use `If-Match` with the latest `etag` to ensure changes apply only to a specific version. Alternatively, `If-None-Match` prevents updates if the dataset has not changed since the last known version.
 
 **API format**
 
@@ -150,7 +149,7 @@ curl --request PATCH \
 
 **Response**
 
-A successful response returns an array containing ID of the updated dataset. This ID should match the one sent in the PATCH request. Performing a GET request for this object now shows that only the `tags` object has been updated while all other values remain unchanged.
+A successful response returns an array containing the ID of the updated dataset, which should match the ID sent in the PATCH request. Performing a GET request for this object now shows that the `observability.metrics` object has been created without requiring prior manual creation steps.
 
 ```json
 [
@@ -160,7 +159,7 @@ A successful response returns an array containing ID of the updated dataset. Thi
 
 ### An example dataset before and after update
 
-The example JSON below illustrates the dataset structure **before** PATCH request. The `observability.metrics` field does not exist in the dataset.
+The example JSON below illustrates the dataset structure **before** the PATCH request. The `observability.metrics` object is not present in the dataset.
 
 ```JSON
 {
@@ -194,7 +193,7 @@ The example JSON below illustrates the dataset structure **before** PATCH reques
 }
 ```
 
-The following JSON is the data structure **after** the PATCH request. The update automatically creates the missing structure (`observability.metrics`) without previous manual creation steps. The example illustrates how the `/v2/` PATCH request removes the need for multiple separate operations, making updates simpler and more efficient.
+The following JSON shows the dataset structure **after** the PATCH request. The update automatically creates the missing structure (`observability.metrics`) without prior manual creation steps. This example demonstrates how the `/v2/` PATCH request eliminates the need for multiple operations, making updates simpler and more efficient.
 
 ```JSON
 {
