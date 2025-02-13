@@ -59,7 +59,7 @@ A successful response returns an array containing ID of the updated dataset. Thi
 ]
 ```
 
-## Update using JSON Patch notation
+## Update using JSON Patch notation {#patch-notation}
 
 The following example call demonstrates how to update an object using JSON Patch, as outlined in [RFC-6902](https://tools.ietf.org/html/rfc6902). 
 
@@ -104,7 +104,7 @@ A successful response returns an array containing the ID of the updated object. 
 ]
 ```
 
-## Update using PATCH v2
+## Update using PATCH v2 notation {#patch-v2-notation}
 
 The `/v2/DATASETS/{DATASET_ID}` endpoint provides a more flexible way to update complex or deeply nested dataset attributes.
 
@@ -160,7 +160,7 @@ A successful response returns an array containing ID of the updated dataset. Thi
 
 ### An example dataset before and after update
 
-The example dataset below **Before PATCH v2 request:**
+The example JSON below illustrates the dataset structure **before** PATCH request. The `observability.metrics` field does not exist in the dataset.
 
 ```JSON
 {
@@ -194,7 +194,7 @@ The example dataset below **Before PATCH v2 request:**
 }
 ```
 
-**After PATCH v2 request:**
+The following JSON is the data structure **after** the PATCH request. The update automatically creates the missing structure (`observability.metrics`) without previous manual creation steps. The example illustrates how the `/v2/` PATCH request removes the need for multiple separate operations, making updates simpler and more efficient.
 
 ```JSON
 {
@@ -217,6 +217,11 @@ The example dataset below **Before PATCH v2 request:**
         "extensions": {
             "adobe_lakeHouse": {},
             "adobe_unifiedProfile": {}
+        },
+        "observability": {
+            "metrics": {
+                "rowCount": 500000
+            }
         },
         "version": "1.0.1",
         "created": 1737977611118,
