@@ -69,6 +69,8 @@ To create a [!DNL Dynamics] base connection using basic authentication, make a P
 
 **Request**
 
+The following request creates a base connection for a [!DNL Dynamics] source using basic authentication.
+
 +++Select to view request example
 
 ```shell
@@ -108,9 +110,9 @@ curl -X POST \
 
 **Response**
 
-+++Select to view response example
+A successful response returns the newly created base connection, including its unique identifier (`id`).
 
-A successful response returns the newly created connection, including its unique identifier (`id`). This ID is required to explore your CRM system in the next step.
++++Select to view response example
 
 ```json
 {
@@ -126,6 +128,8 @@ A successful response returns the newly created connection, including its unique
 To create a [!DNL Dynamics] base connection using service principal key-based authentication, make a POST request to the [!DNL Flow Service] API while providing values for your connection's `serviceUri`, `servicePrincipalId`, and `servicePrincipalKey`.
 
 **Request**
+
+The following request creates a base connection for a [!DNL Dynamics] source using basic service principal key-based authentication.
 
 +++Select to view request example
 
@@ -166,9 +170,9 @@ curl -X POST \
 
 **Response**
 
-+++Select to view response example
+A successful response returns the newly created connection, including its unique identifier (`id`).
 
-A successful response returns the newly created connection, including its unique identifier (`id`). This ID is required to explore your CRM system in the next step.
++++Select to view response example
 
 ```json
 {
@@ -197,9 +201,9 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
 
 **Request**
 
-+++Select to view request example
+The following request retrieves the list of available tables and views for a [!DNL Dynamics] source with the base connection ID: `dd668808-25da-493f-8782-f3433b976d1e`.
 
-The following request retrieves the table directory for a [!DNL Dynamics] source with base connection ID: `dd668808-25da-493f-8782-f3433b976d1e`.
++++Select to view request example
 
 ```shell
 curl -X GET \
@@ -215,9 +219,9 @@ curl -X GET \
 
 **Response**
 
-+++Select to view response example
+A successful response returns the [!DNL Dynamics] tables and views directory at the root level.
 
-A successful response returns the [!DNL Dynamics] directory at the root level.
++++Select to view response example
 
 ```json
 [
@@ -268,13 +272,13 @@ GET /connections/{BASE_CONNECTION_ID}/explore?object={TABLE_PATH}&objectType=tab
 | Query parameter | Description |
 | --- | --- |
 | `{BASE_CONNECTION_ID}` | The ID of the base connection. Use this ID to explore the contents and structure of your source. |
-| `{TABLE_PATH}` | The path to the particular table that you want to explore.
+| `{TABLE_PATH}` | The path to the particular table that you want to explore. |
 
 **Request**
 
-+++Select to view request example
-
 The following request retrieves the structure and contents of a [!DNL Dynamics] table with path `workflowdependency`.
+
++++Select to view request example
 
 ```shell
 curl -X GET \
@@ -290,9 +294,9 @@ curl -X GET \
 
 **Response**
 
-+++Select to view response example
-
 A successful response returns the contents of path `workflowdependency`.
+
++++Select to view response example
 
 ```json
 {
@@ -346,9 +350,9 @@ GET /connections/{BASE_CONNECTION_ID}/explore?object={VIEW_PATH}&objectType=view
 
 **Request**
 
-+++Select to view request example
-
 The following request retrieves `accountView1`.
+
++++Select to view request example
 
 ```shell
 curl -X GET \
@@ -364,9 +368,9 @@ curl -X GET \
 
 **Response**
 
-+++Select to view response example
-
 A successful response returns the structure of `accountView1`.
+
++++Select to view response example
 
 ```json
 {
@@ -440,9 +444,9 @@ GET /connections/{BASE_CONNECTION_ID}/explore?object={VIEW_PATH}&preview=true&ob
 
 **Request**
 
-+++Select to view request example
-
 The following request previews the contents of `accountView1`.
+
++++Select to view request example
 
 ```shell
 curl -X GET \
@@ -458,9 +462,9 @@ curl -X GET \
 
 **Response**
 
-+++Select to view response example
-
 A successful response returns the contents of `accountView1`.
+
++++Select to view response example
 
 ```json
 {
@@ -523,6 +527,8 @@ POST /sourceConnections
 
 **Request**
 
+The following request creates a [!DNL Dynamics] source connection and ingests views.
+
 +++Select to view request example
 
 ```shell
@@ -557,9 +563,9 @@ curl -X POST \
 
 **Response**
 
-+++Select to view response example
-
 A successful response returns the newly generated source connection ID and it's corresponding etag.
+
++++Select to view response example
 
 ```json
 {
