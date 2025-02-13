@@ -15,11 +15,11 @@ There are two destinations available that let you send audience data to the PubM
 
 1. PubMatic Connect
 
-   During the initial activation, this destination will automatically register the segments in the PubMatic platform and use the internal Adobe Experience Platform ID for mapping.
+   During the initial activation, this destination will automatically register the audiences in the PubMatic platform and use the internal Adobe Experience Platform ID for mapping.
 
-2. PubMatic Connect (User Input for Segment Mapping)
+2. PubMatic Connect (Custom Audience ID Mapping)
 
-   This destination will let you choose to manually add a mapping ID during the activation workflow. This is used in case data should be sent to existing audiences in the PubMatic platform or if a custom 'Source Audience ID' is required.
+   This destination will let you choose to manually add a mapping ID during the activation workflow. Use this destination when data should be sent to existing audiences in the PubMatic platform or if a custom 'Source Audience ID' is required.
 
 > [!IMPORTANT]
 >
@@ -134,7 +134,7 @@ Selecting target fields:
 
 ### Audience scheduling
 
-If you are using the PubMatic Connect (User Input for Segment Mapping) destination, you have to provide a mapping ID for each segment that corresponds to the 'Source Audience ID' in the PubMatic platform.
+If you are using the PubMatic Connect (Custom Audience ID Mapping) destination, you have to provide a mapping ID for each audience that corresponds to the 'Source Audience ID' in the PubMatic platform.
 
 ![Audience scheduling](../..//assets/catalog/advertising/pubmatic/audience-scheduling-mapping-id.png)
 
