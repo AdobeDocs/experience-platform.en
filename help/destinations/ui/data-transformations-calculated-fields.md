@@ -2,7 +2,6 @@
 title: Perform transformations on data exported to cloud storage destinations using calculated fields
 type: Tutorial
 description: Understand how to use the calculated fields functionality to perform transformations on data exported to cloud storage destinations
-exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 ---
 # Perform transformations on data exported to cloud storage destinations using calculated fields {#data-transformation-calculated-fields}
 
