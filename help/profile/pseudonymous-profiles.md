@@ -7,9 +7,20 @@ exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
 ---
 # Pseudonymous profiles data expiration
 
-In Adobe Experience Platform, you can configure expiration times for Pseudonymous profiles, allowing you to automatically remove data from the Profile store that is no longer valid or useful for your use cases.
+In Adobe Experience Platform, you can configure data expiration times for Pseudonymous profiles, allowing you to automatically remove data from the Profile store that is no longer valid or useful for your use cases.
 
 ## Pseudonymous profile {#pseudonymous-profile}
+
+>[!CONTEXTUALHELP]
+>id="platform_profile_pseudonymousprofile"
+>title="What's a Pseudonymous profile?"
+>abstract="A Pseudonymous profile is a profile that has a pseudonymous or unknown identity namespace or a profile that has had no activity take place for a given amount of time."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_profile_pseudonymousprofile_dataexpiration"
+>title="Pseudonymous profile data expiration"
+>abstract="The Pseudonymous profile data expiration represents the number of days a Pseudonymous profile will remain in Adobe Experience Platform before being removed."
 
 A profile is considered for Pseudonymous data expiration if it meets the following conditions: 
 
@@ -30,15 +41,15 @@ Pseudonymous Profile data expiration cannot be configured through the Platform U
 
 The following section lists frequently asked questions regarding Pseudonymous profiles data expiration:
 
-### How does Pseudonymous Profile data expiry differ from  Experience Event data expiry?
+### How does Pseudonymous Profile data expiration differ from  Experience Event data expiration?
 
-Pseudonymous Profile data expiry and Experience Event data expiry are complementary features.
+Pseudonymous Profile data expiration and Experience Event data expiration are complementary features.
 
 #### Granularity
 
 Pseudonymous Profile data expiration works on a **sandbox** level. As a result, the data expiration will affect all profiles in the sandbox.
 
-Experience Event data expiration works on a **dataset** level. As a result, each dataset can have a different data expiry setting.
+Experience Event data expiration works on a **dataset** level. As a result, each dataset can have a different data expiration setting.
 
 #### Identity types
 
@@ -52,13 +63,13 @@ Pseudonymous Profile data expiration removes **both** event and profile records.
 
 Experience Event data expiration **only** removes events and does **not** remove profile class data. The profile class data is only removed when all the data is removed across **all** datasets and there are **no** profile class records remaining for the profile.
 
-### How can Pseudonymous Profile data expiry be used in conjunction with Experience Event data expiry?
+### How can Pseudonymous Profile data expiration be used in conjunction with Experience Event data expiration?
 
-Pseudonymous Profile data expiry and Experience Event data expiry can be used to complement each other.
+Pseudonymous Profile data expiration and Experience Event data expiration can be used to complement each other.
 
-You should **always** set up Experience Event data expiry in your datasets, based on your needs of retaining data about your known customers. Once Experience Event data expiry is set up, you can use Pseudonymous Profile data expiry to automatically remove Pseudonymous Profiles. Typically, the data expiry period for Pseudonymous Profiles is less than the data expiry period for Experience Events.
+You should **always** set up Experience Event data expiration in your datasets, based on your needs of retaining data about your known customers. Once Experience Event data expiration is set up, you can use Pseudonymous Profile data expiration to automatically remove Pseudonymous Profiles. Typically, the data expiration period for Pseudonymous Profiles is less than the data expiration period for Experience Events.
 
-For a typical use case, you can set your Experience Event data expiry based on the values of your known user data and you can set your Pseudonymous Profile data expiry to a much shorter duration to limit the impact of Pseudonymous profiles on your Platform license compliance.
+For a typical use case, you can set your Experience Event data expiration based on the values of your known user data and you can set your Pseudonymous Profile data expiration to a much shorter duration to limit the impact of Pseudonymous profiles on your Platform license compliance.
 
 ### What users should be using Pseudonymous profiles data expiration?
 
@@ -71,7 +82,7 @@ For a typical use case, you can set your Experience Event data expiry based on t
 
 - Pseudonymous profile data expiration runs at a **sandbox** level. You can choose to have different configurations for production and development sandboxes.
 - Once you have activated this feature, the deletion of profiles is **permanent**. There is **no** way to roll back or restore the deleted profiles.
-- This is **not** a one-time cleanup job. Pseudonymous profile data expiry will run once per day and delete profiles that match the customer's input.
+- This is **not** a one-time cleanup job. Pseudonymous profile data expiration will run once per day and delete profiles that match the customer's input.
 - **All** profiles that are defined as Pseudonymous profiles will be affected by the Pseudonymous profile data expiration. It does **not** matter if the profile is Experience Event only or if it only contains profile attributes.
 - This cleanup will **only** occur in Profile. Identity Service may continue to show the deleted identities within the graph after the cleanup in cases where the profile has two or more associated pseudonymous identities (such as `AAID` and `ECID`). This discrepancy will be addressed in the near future.
 - Pseudonymous profile data expiration does **not** run immediately, and may take up to three days to process.

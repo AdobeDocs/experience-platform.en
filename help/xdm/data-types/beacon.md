@@ -9,7 +9,7 @@ exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
 
 [!UICONTROL Beacon] is a standard XDM data type that describes the wireless device that communicates identity information to mobile applications as mobile devices come within range.
 
-<img src='../images/data-types/beacon.png' width=450 /><br />
+![](../images/data-types/beacon.png){width=450}
 
 | Property | Data type | Description |
 | --- | --- | --- |
