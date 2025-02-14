@@ -116,9 +116,9 @@ The following video is intended to support your understanding of creating a new 
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_apicredentials_about"
->title="What are API Credentials?"
->abstract="API credentials are assigned to roles to provide users and developers access to Platform APIs. Using Platform APIs, you can programmatically perform basic CRUD (Create, Read, Update, Delete) operations against data, such as configuring computed attributes, accessing data/entities, exporting data, deleting unneeded data or batches, and more."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-apis/api-guide" text="API guide"
+>title="What are API credentials?"
+>abstract="API credentials are assigned to roles to grant users and developers access to Platform APIs. Using Platform APIs, you can programmatically perform basic CRUD (Create, Read, Update, Delete) operations on data, such as configuring computed attributes, accessing data/entities, exporting data, deleting unneeded data or batches, and more."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-apis/api-guide" text="Platform API guide"
 
 >[!IMPORTANT]
 >
@@ -148,12 +148,12 @@ The **[!UICONTROL Remove API credentials]** dialog appears, prompting you to con
 
 You will be returned to the **[!UICONTROL API credentials]** tab.
 
-## Manage user groups for a role
+## Manage user groups for a role {#manage-user-groups}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_usergroups_about"
 >title="What are user groups?"
->abstract="User groups are multiple users that have been grouped together and have access to execute the same functions. User groups access to resources within an organization is managed through roles."
+>abstract="User groups are collections of multiple users who share access to the same functions. Access to resources within an organization is managed through roles assigned to user groups."
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles" text="Manage roles"
 
 User groups are multiple users that have been grouped together and have access to execute the same functions.
