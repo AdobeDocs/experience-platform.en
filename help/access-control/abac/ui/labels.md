@@ -19,6 +19,12 @@ Labels allow you to categorize datasets and fields according to usage and access
 >title="Label usage"
 >abstract="You can use custom labels to apply data governance and access control configurations to your data."
 
+>[!CONTEXTUALHELP]
+>id="platform_permissions_labels_about_create"
+>title="Create new label"
+>abstract="You can create your own custom labels to fit the needs of your organization. Custom labels can be used to apply both data governance and access control configurations to your data."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#manage-labels" text="Manage custom labels"
+
 >[!NOTE]
 >
 >There is one single list of labels for a whole organization. To create a custom label, you will need **[!UICONTROL Manage Usage Labels]** permissions on the production sandbox. Label deletion is currently not supported.
