@@ -180,6 +180,12 @@ The **[!UICONTROL Remove]** dialog appears prompting you to confirm your selecti
 
 ## Activate a policy
 
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_about"
+>title="What are policies?"
+>abstract="Policies are statements that bring attributes together to establish permissible and impermissible actions. Every organization comes with a default policy that you must activate to start controlling access to specific objects based on labels. Labels applied to resources deny access unless users are in a role with a matching label. Default policies can't be edited or deleted. However, default policies can be activated or deactivated."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/labels" text="Manage labels"
+
 To activate an existing policy, select the policy from the **[!UICONTROL Policies]** tab. 
 
 ![flac-policy-select](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
