@@ -232,11 +232,11 @@ When splitting your audience, you can either split by percentage or split by att
 
 When splitting by percentage, the audiences will be randomly split, based on the number of paths and percentages provided.
 
-![The breakdown in number of saved audiences and percentages is shown.](../images/ui/audience-composition/split-by-percentage.png)
+![The percent split is highlighted.](../images/ui/audience-composition/split-by-percentage.png)
 
 Alternatively, you can also provide an identity, which would make the percentage-based split persistent. Available identity types include all the identity namespace available on your organization.
 
-![](../images/ui/audience-composition/split-by-identity.png)
+![The Split by identity checkbox is highlighted. Additionally, the dropdown that lets you select with identity to split by is highlighted.](../images/ui/audience-composition/split-by-identity.png)
 
 ### Split by attribute {#split-attribute}
 
