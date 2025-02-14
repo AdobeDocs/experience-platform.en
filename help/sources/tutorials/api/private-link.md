@@ -54,10 +54,10 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "TEST_E2E_25_Jan",
-      "subscriptionId": "25a08a99-7b80-433c-ba62-252f7e23795a",
-      "resourceGroupName": "acp-int-va7-connectors-e2e",
-      "resourceName": "acpconnectorse2e",
+      "name": "ACME Private Endpoint",
+      "subscriptionId": "4281a16a-696f-4993-a7d3-a3da32b846f3",
+      "resourceGroupName": "acme-sources-experience-platform",
+      "resourceName": "acmeexperienceplatform",
       "fqdns": [],
       "connectionSpec": {
           "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
@@ -87,10 +87,10 @@ A successful response returns the following:
 ```json
 {
   "id": "2c7f6574-299a-4832-aec5-886e875872e2",
-  "name": "TEST_E2E_25_Jan",
-  "subscriptionId": "25a08a99-7b80-433c-ba62-252f7e23795a",
-  "resourceGroupName": "acp-int-va7-connectors-e2e",
-  "resourceName": "acpconnectorse2e",
+  "name": "ACME Private Endpoint",
+  "subscriptionId": "4281a16a-696f-4993-a7d3-a3da32b846f3",
+  "resourceGroupName": "acme-sources-experience-platform",
+  "resourceName": "acmeexperienceplatform",
   "fqdns": [],
   "connectionSpec": {
       "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
@@ -154,9 +154,9 @@ A successful response returns a list of private endpoints in your organization.
        {
       "id": "ac9eb695-0d1a-42d4-bc45-0842aeaa1eff",
       "name": "TEST_E2E_29_Jan",
-      "subscriptionId": "4bd65337-f5e4-499e-9cd8-b018e1f7d9f7",
-      "resourceGroupName": "aep-noid-rg",
-      "resourceName": "testprivatelinkhg",
+      "subscriptionId": "4281a16a-696f-4993-a7d3-a3da32b846f3",
+      "resourceGroupName": "acme-noid-experience-platform",
+      "resourceName": "acmeprivatelinking",
       "fqdns": [
          
       ],
@@ -169,9 +169,9 @@ A successful response returns a list of private endpoints in your organization.
           {
       "id": "4c9eb695-0d1a-42d4-bc45-0842aeaa1efr",
       "name": "TEST_E2E_29_Jan",
-      "subscriptionId": "25a08a99-7b80-433c-ba62-252f7e23795a",
-      "resourceGroupName": "acp-int-va7-connectors-e2e",
-      "resourceName": "acpconnectorse2e",
+      "subscriptionId": "5a0ff2f3-53d6-47e4-abb5-10a18bd3fff0",
+      "resourceGroupName": "acme-sources-experience-platform",
+      "resourceName": "acmeexperienceplatform",
       "fqdns": [
          
       ],
@@ -231,9 +231,9 @@ A successful response returns a list of all private endpoints that correspond to
        {
       "id": "ac9eb695-0d1a-42d4-bc45-0842aeaa1eff",
       "name": "TEST_E2E_29_Jan",
-      "subscriptionId": "4bd65337-f5e4-499e-9cd8-b018e1f7d9f7",
-      "resourceGroupName": "aep-noid-rg",
-      "resourceName": "testprivatelinkhg",
+      "subscriptionId": "4281a16a-696f-4993-a7d3-a3da32b846f3",
+      "resourceGroupName": "acme-noid-experience-platform",
+      "resourceName": "acmeprivatelinkhg",
       "fqdns": [
          
       ],
@@ -246,9 +246,9 @@ A successful response returns a list of all private endpoints that correspond to
     {
       "id": "4c9eb695-0d1a-42d4-bc45-0842aeaa1efr",
       "name": "TEST_E2E_29_Jan",
-      "subscriptionId": "25a08a99-7b80-433c-ba62-252f7e23795a",
-      "resourceGroupName": "acp-int-va7-connectors-e2e",
-      "resourceName": "acpconnectorse2e",
+      "subscriptionId": "5a0ff2f3-53d6-47e4-abb5-10a18bd3fff0",
+      "resourceGroupName": "acme-sources-experience-platform",
+      "resourceName": "acmeexperienceplatform",
       "fqdns": [
          
       ],
@@ -308,9 +308,9 @@ A successful response returns the private endpoint with ID: `2c5699b0-b9b6-486f-
        {
       "id": "2c5699b0-b9b6-486f-8877-ee5e21fe9a9d",
       "name": "TEST_E2E_29_Jan",
-      "subscriptionId": "4bd65337-f5e4-499e-9cd8-b018e1f7d9f7",
-      "resourceGroupName": "aep-noid-rg",
-      "resourceName": "testprivatelinkhg",
+      "subscriptionId": "5a0ff2f3-53d6-47e4-abb5-10a18bd3fff0",
+      "resourceGroupName": "acme-noid-experience-platform",
+      "resourceName": "acmeprivatelinkhg",
       "fqdns": [
          
       ],
@@ -351,7 +351,7 @@ curl -X GET \
           "specName": "ConnectionString",
           "params": {
               "usePrivateLink": true,
-              "connectionString": "DefaultEndpointsProtocol=https;AccountName=acpconnectorse2e;AccountKey=0icsOezXX7CEm*****fQ2nIxPOeAPdEEUU8p9ODXB2bTQ==;EndpointSuffix=core.windows.net"
+              "connectionString": "{CONNECTION_STRING}"
           }
       },
       "connectionSpec": {
@@ -360,14 +360,6 @@ curl -X GET \
       }
   }'
 ```
-
-| Property | Description |
-| --- | --- |
-| `auth.specName` |
-| `auth.params.usePrivateLink` |
-| `auth.params.connectionString` |
-| `connectionSpec.id` |
-| `connectionSpec.version` |
 
 +++
 
@@ -381,9 +373,9 @@ curl -X GET \
         {
       "id": "4c9eb695-0d1a-42d4-bc45-0842aeaa1efr",
       "name": "TEST_E2E_29_Jan",
-      "subscriptionId": "25a08a99-7b80-433c-ba62-252f7e23795a",
-      "resourceGroupName": "acp-int-va7-connectors-e2e",
-      "resourceName": "acpconnectorse2e",
+      "subscriptionId": "5a0ff2f3-53d6-47e4-abb5-10a18bd3fff0",
+      "resourceGroupName": "acme-sources-experience-platform",
+      "resourceName": "acmeexperienceplatform",
       "fqdns": [
          
       ],
@@ -556,7 +548,7 @@ curl -X POST \
       "auth": {
           "specName": "ConnectionString",
           "params": {
-              "connectionString": "jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}",
+              "connectionString": "{CONNECTION_STRING}",
               "usePrivateLink" : true
           }
       },
@@ -639,14 +631,14 @@ A successful response returns a list of connections tied to the queried private 
       "id": "42a27b1f-8e3f-48ce-8c29-7e474b29a015",
       "createdAt": 1729154379292,
       "updatedAt": 1729154382031,
-      "createdBy": "698B651762BE85500A494117@AdobeID",
-      "updatedBy": "698B651762BE85500A494117@AdobeID",
-      "createdClient": "exc_app",
-      "updatedClient": "exc_app",
-      "sandboxId": "8e3dca60-6daf-11ea-aee0-4db17ee10871",
-      "sandboxName": "crosstest1",
-      "imsOrgId": "7DC732555AECDB4C0A494036@AdobeOrg",
-      "name": "udayinTest",
+      "createdBy": "{CREATED_BY}",
+      "updatedBy": "{UPDATED_BY}",
+      "createdClient": "{CREATED_CLIENT}",
+      "updatedClient": "{UPDATED_CLIENT}",
+      "sandboxId": "{SANDBOX_ID}",
+      "sandboxName": "{SANDBOX_NAME}",
+      "imsOrgId": "{ORG_NAME}",
+      "name": "acme-e2e",
       "connectionSpec": {
         "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
         "version": "1.0"
@@ -655,7 +647,7 @@ A successful response returns a list of connections tied to the queried private 
       "auth": {
         "specName": "ConnectionString",
         "params": {
-          "connectionString": "https://keyvaulte4ppi4dxvmob.vault.azure.net/secrets/968adb09-c126-4561-85d2-3b67a3827feb",
+          "connectionString": "{CONNECTION_STRING}",
           "usePrivateLink": true,
           "privateEndpointId": "02a74b31-a566-4a86-9cea-309b101a7f24"
         }
@@ -672,14 +664,14 @@ A successful response returns a list of connections tied to the queried private 
       "id": "6350311a-664c-4b08-aad4-4065781aac81",
       "createdAt": 1718199941102,
       "updatedAt": 1718199945147,
-      "createdBy": "0BE761626273729D0A49420F@AdobeID",
-      "updatedBy": "0BE761626273729D0A49420F@AdobeID",
-      "createdClient": "exc_app",
-      "updatedClient": "exc_app",
-      "sandboxId": "8e3dca60-6daf-11ea-aee0-4db17ee10871",
-      "sandboxName": "crosstest1",
-      "imsOrgId": "7DC732555AECDB4C0A494036@AdobeOrg",
-      "name": "dhruba edi test",
+      "createdBy": "{CREATED_BY}",
+      "updatedBy": "{UPDATED_BY}",
+      "createdClient": "{CREATED_CLIENT}",
+      "updatedClient": "{UPDATED_CLIENT}",
+      "sandboxId": "{SANDBOX_ID}",
+      "sandboxName": "{SANDBOX_NAME}",
+      "imsOrgId": "{ORG_NAME}",
+      "name": "acme demo",
       "connectionSpec": {
         "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
         "version": "1.0"
@@ -688,7 +680,7 @@ A successful response returns a list of connections tied to the queried private 
       "auth": {
         "specName": "ConnectionString",
         "params": {
-          "connectionString": "https://keyvaulte4ppi4dxvmob.vault.azure.net/secrets/70135fc8-b5bd-4730-bdc7-356fcb867b8b",
+          "connectionString": "{CONNECTION_STRING}",
           "usePrivateLink": true,
           "privateEndpointId": "02a74b31-a566-4a86-9cea-309b101a7f24"
         }
@@ -751,14 +743,14 @@ A successful response returns all connections that are tied to private endpoints
       "id": "42a27b1f-8e3f-48ce-8c29-7e474b29a015",
       "createdAt": 1729154379292,
       "updatedAt": 1729154382031,
-      "createdBy": "698B651762BE85500A494117@AdobeID",
-      "updatedBy": "698B651762BE85500A494117@AdobeID",
-      "createdClient": "exc_app",
-      "updatedClient": "exc_app",
-      "sandboxId": "8e3dca60-6daf-11ea-aee0-4db17ee10871",
-      "sandboxName": "crosstest1",
-      "imsOrgId": "7DC732555AECDB4C0A494036@AdobeOrg",
-      "name": "udayinTest",
+      "createdBy": "{CREATED_BY}",
+      "updatedBy": "{UPDATED_BY}",
+      "createdClient": "{CREATED_CLIENT}",
+      "updatedClient": "{UPDATED_CLIENT}",
+      "sandboxId": "{SANDBOX_ID}",
+      "sandboxName": "{SANDBOX_NAME}",
+      "imsOrgId": "{ORG_NAME}",
+      "name": "acme-e2e",
       "connectionSpec": {
         "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
         "version": "1.0"
@@ -767,7 +759,7 @@ A successful response returns all connections that are tied to private endpoints
       "auth": {
         "specName": "ConnectionString",
         "params": {
-          "connectionString": "https://keyvaulte4ppi4dxvmob.vault.azure.net/secrets/968adb09-c126-4561-85d2-3b67a3827feb",
+          "connectionString": "{CONNECTION_STRING}",
           "usePrivateLink": true,
           "privateEndpointId": "02a74b31-a566-4a86-9cea-309b101a7f24"
         }
@@ -784,14 +776,14 @@ A successful response returns all connections that are tied to private endpoints
       "id": "6350311a-664c-4b08-aad4-4065781aac81",
       "createdAt": 1718199941102,
       "updatedAt": 1718199945147,
-      "createdBy": "0BE761626273729D0A49420F@AdobeID",
-      "updatedBy": "0BE761626273729D0A49420F@AdobeID",
-      "createdClient": "exc_app",
-      "updatedClient": "exc_app",
-      "sandboxId": "8e3dca60-6daf-11ea-aee0-4db17ee10871",
-      "sandboxName": "crosstest1",
-      "imsOrgId": "7DC732555AECDB4C0A494036@AdobeOrg",
-      "name": "dhruba edi test",
+      "createdBy": "{CREATED_BY}",
+      "updatedBy": "{UPDATED_BY}",
+      "createdClient": "{CREATED_CLIENT}",
+      "updatedClient": "{UPDATED_CLIENT}",
+      "sandboxId": "{SANDBOX_ID}",
+      "sandboxName": "{SANDBOX_NAME}",
+      "imsOrgId": "{ORG_NAME}",
+      "name": "acme demo",
       "connectionSpec": {
         "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
         "version": "1.0"
@@ -800,7 +792,7 @@ A successful response returns all connections that are tied to private endpoints
       "auth": {
         "specName": "ConnectionString",
         "params": {
-          "connectionString": "https://keyvaulte4ppi4dxvmob.vault.azure.net/secrets/70135fc8-b5bd-4730-bdc7-356fcb867b8b",
+          "connectionString": "{CONNECTION_STRING}",
           "usePrivateLink": true
         }
       },
