@@ -19,7 +19,7 @@ Consider this page your go-to place around anything you want to know about expor
 Get the most important information about the functionality in this section, and continue below to the other sections in the document for detailed information.
 
 * The ability to export arrays, maps, and objects depends on your selection of the **Export arrays, maps, objects toggle** toggle. Read more about it [further down on the page](#export-arrays-maps-objects-toggle).
-* You can export arrays, maps, and objects to cloud storage destinations only, in `JSON` and `Parquet` files. People and [prospect audiences](/help/segmentation/ui/prospect-audience.md) are supported, [account audiences](/help/segmentation/ui/account-audiences.md) and [datasets](/help/destinations/ui/export-datasets.md) are not.
+* You can export arrays, maps, and objects to cloud storage destinations only, in `JSON` and `Parquet` files. People and prospect audiences are supported, account audiences and datasets are not.
 * You *can* export arrays, maps, and objects to CSV files, but only by using the calcuated fields functionality and concatenating them into a string by using the `array_to_string` function.
 
 ## Arrays and other object types in Platform {#arrays-strings-other-objects}
