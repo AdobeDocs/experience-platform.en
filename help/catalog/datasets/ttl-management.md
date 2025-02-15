@@ -1,8 +1,8 @@
 ---
-title: Manage Your Data Lifecycle with TTL API Use Cases and Best Practices
-description: Learn how to evaluate, set, and manage row-level TTL for datasets using APIs in Adobe Experience Platform. This guide provides best practices, use cases, and step-by-step instructions to optimize data hygiene and storage efficiency while ensuring effective data lifecycle management.
+title: Manage Your Data Lifecycle with Experience Event Dataset Retention in the Data Lake
+description: Learn how to evaluate, set, and manage Experience Event dataset retention by applying TTL configurations with Adobe Experience Platform APIs. This guide offers best practices, use cases, and step-by-step instructions to optimize data hygiene, improve storage efficiency, and ensure effective data lifecycle management.
 ---
-# Manage your data lifecycle with TTL: API use cases and best practices
+# Manage your data lifecycle with Experience Event dataset retention on the data lake
 
 Efficient data management is critical for optimum performance, cost control, and data cleanliness. Use Time-To-Live (TTL) row-level expiration to automatically remove outdated records from Adobe Experience Platform datasets, and ensure optimal storage and relevance.
 
@@ -25,11 +25,11 @@ TTL is useful when managing time-sensitive data that loses relevance over time. 
 
 ### Industry example
 
-As an example, consider a video streaming platform that tracks user interactions, such as video views, searches, and recommendations. While recent engagement data is crucial for personalization, older activity logs (for example, interactions from over a year ago) lose relevance. By using row expiration, Platform automatically removes outdated logs, ensuring only current and meaningful data is used for analytics and recommendations.
+As an example, consider a video streaming platform that tracks user interactions, such as video views, searches, and recommendations. While recent engagement data is crucial for personalization, older activity logs (for example, interactions from over a year ago) lose relevance. By using row-level expiration, Platform automatically removes outdated logs, ensuring only current and meaningful data is used for analytics and recommendations.
 
 ## Evaluate TTL suitability
 
-Before applying TTL, assess whether your dataset is a good candidate for row expiration. Consider the following:
+Before applying TTL, assess whether your dataset is a good candidate for applying a retention policy.. Consider the following:
 
 - Data relevance over time: Does older data provide value, or does it become obsolete?
 - Impact on downstream processes: Will removing data affect reporting, analytics, or integrations?
@@ -51,7 +51,7 @@ Running similar queries for different time intervals helps validate TTL settings
 
 ## Get started with TTL management
 
-Before you can evaluate, set, and manage TTL using the Catalog Service API, you must know how to properly format your requests. This includes understanding the paths, providing required headers, and formatting any request payloads. Refer to the [Catalog Service API getting started guide](../api/getting-started.md) for this essential information.
+Before you can evaluate, set, and manage TTL using the Catalog Service API, you must understand how to format your requests correctly. This includes knowing the API paths, providing required headers, and formatting request payloads. Refer to the [Catalog Service API getting started guide](../api/getting-started.md) for this essential information.
 
 >[!NOTE]
 >
@@ -73,7 +73,7 @@ GET /ttl/{DATASET_ID}
 
 | Parameter | Description |
 | --- | --- |
-| `{DATASET_ID}` | A system-generated string that uniquely identifies a dataset. To find a dataset ID, use the `/datasets` endpoint. See the [List catalog objects API guide](../api/list-objects.md) for instructions on filtering responses for relevant datasets.  |
+| `{DATASET_ID}` | A system-generated string that uniquely identifies a dataset. To find a dataset ID, use the `/datasets` endpoint. See the [list catalog objects API guide](../api/list-objects.md) for instructions on filtering responses for relevant datasets.  |
 
 **Request**
 
@@ -94,43 +94,18 @@ curl -X GET \
 A successful response returns the TTL configuration for the dataset, including the default, maximum, and minimum TTL values for both `adobe_lakeHouse` and `adobe_unifiedProfile` storage.
 
 ```json
-{  "extensions": {
-        "adobe_lakeHouse": {  
-            "rowExpiration": {
-                "defaultValue": "P12M",
-                "maxValue": "P12M",
-                "minValue": "P7D"
-            }
-        },
-        "adobe_unifiedProfile": {  
-            "rowExpiration": {
-                "defaultValue": "P12M",
-                "maxValue": "P12M",
-                "minValue": "P7D"
-            }
-        }
-    }
-}
-```
-
-<!-- 
-Shouldnt a response look like this:
-```json
 {
     "67976f0b4878252ab887ccd9": {
-        "name": "Test dataset",
-        "description": "This is just a test dataset",
-        "imsOrg": "033A229F5A7B915B0A494028@AdobeOrg",
-        "sandboxId": "73d54130-c5bc-11e9-949c-0da8d50fcac1",
+        "name": "Acme Sales Data",
+        "description": "This dataset contains sales transaction records for Acme Corporation.",
+        "imsOrg": "{ORG_ID}",
+        "sandboxId": "{SANDBOX_ID}",
         "tags": {
             "adobe/pqs/table": [
-                "test_dataset_20250127_113331_106"
+                "acme_sales_20250127_113331_106"
             ],
             "adobe/siphon/table/format": [
                 "delta"
-            ],
-            "custom_tag": [
-                "patched_with_v2"
             ]
         },
         "extensions": {
@@ -149,19 +124,18 @@ Shouldnt a response look like this:
                 }
             }
         },
-        "version": "1.0.1",
+        "version": "1.0.0",
         "created": 1737977611118,
-        "updated": 1737977766499,
-        "createdClient": "acp_foundation_catalog",
-        "createdUser": "acp_foundation_catalog@AdobeID",
-        "updatedUser": "acp_foundation_catalog@AdobeID",
+        "updated": 1737977611118,
+        "createdClient": "acme_data_pipeline",
+        "createdUser": "john.snow@acmecorp.com",
+        "updatedUser": "arya.stark@acmecorp.com",
         "classification": {
             "managedBy": "CUSTOMER"
         }
     }
 }
 ```
- -->
 
 | Property      | Description |
 |--------------|-------------|
@@ -195,7 +169,7 @@ In the example request below, the `ttlValue` is set to `P3M`. This ensures that 
 
 ```shell
 curl -X PATCH \
-  'https://platform-int.adobe.io/data/foundation/catalog/v2/datasets/{DATASET_ID}' \
+  'https://platform.adobe.io/data/foundation/catalog/v2/datasets/{DATASET_ID}' \
   -h 'Authorization: Bearer {ACCESS_TOKEN}' \
   -h 'Content-Type: application/json' \
   -h 'x-api-key: {API_KEY}' \
@@ -213,25 +187,49 @@ curl -X PATCH \
 
 **Response**
 
-A successful response shows the TTL configuration for the dataset. It includes details on row expiration settings for both `adobe_lakeHouse` and `adobe_unifiedProfile` storage.
+A successful response shows the TTL configuration for the dataset. It includes details on row-level expiration settings for both `adobe_lakeHouse` and `adobe_unifiedProfile` storage.
 
 ```JSON
-{  "extensions": {
-        "adobe_lakeHouse": {
-            "rowExpiration": {
-              "ttlValue": "P3M",
-                "valueStatus": "custom",
-                "setBy": "user",
-                "updated": 1737977766499
+{
+    "67976f0b4878252ab887ccd9": {
+        "name": "Acme Sales Data",
+        "description": "This dataset contains sales transaction records for Acme Corporation.",
+        "imsOrg": "{ORG_ID}",
+        "sandboxId": "{SANDBOX_ID}",
+        "tags": {
+            "adobe/pqs/table": [
+                "acme_sales_20250127_113331_106"
+            ],
+            "adobe/siphon/table/format": [
+                "delta"
+            ]
+        },
+        "extensions": {
+            "adobe_lakeHouse": {
+                "rowExpiration": {
+                "ttlValue": "P3M",
+                    "valueStatus": "custom",
+                    "setBy": "user",
+                    "updated": 1737977766499
+                }
+            },
+            "adobe_unifiedProfile": {  
+                "rowExpiration": {
+                    "ttlValue": "P3M",
+                    "valueStatus": "custom",
+                    "setBy": "user",
+                    "updated": 1737977766499
+                }
             }
         },
-        "adobe_unifiedProfile": {  
-            "rowExpiration": {
-                "ttlValue": "P3M",
-                "valueStatus": "custom",
-                "setBy": "user",
-                "updated": 1737977766499
-            }
+        "version": "1.0.0",
+        "created": 1737977611118,
+        "updated": 1737977611118,
+        "createdClient": "acme_data_pipeline",
+        "createdUser": "john.snow@acmecorp.com",
+        "updatedUser": "arya.stark@acmecorp.com",
+        "classification": {
+            "managedBy": "CUSTOMER"
         }
     }
 }
@@ -240,7 +238,7 @@ A successful response shows the TTL configuration for the dataset. It includes d
 | Property                         | Description |
 |----------------------------------|-------------|
 | `extensions`                     | A container for additional metadata related to the dataset. |
-| `extensions.adobe_lakeHouse`     | Specifies settings related to storage architecture, including row expiration configurations |
+| `extensions.adobe_lakeHouse`     | Specifies settings related to storage architecture, including row-level expiration configurations |
 | `rowExpiration` | The object contains TTL settings that define the retention period for the dataset. |
 | `rowExpiration.ttlValue` | Defines the duration before records in the dataset are automatically removed. Uses the ISO-8601 period format (for example, `P3M` for 3 months, or `P7D` for one week). |
 | `rowExpiration.valueStatus` | The string indicates whether the TTL setting is a default system value or a custom value set by a user. Possible values are: `default`, `custom`. |
@@ -249,7 +247,7 @@ A successful response shows the TTL configuration for the dataset. It includes d
 
 ### How to update TTL {#update-ttl}
 
-Extend or shorten the retention period to suit your business needs by adjusting the TTL. For example, the video streaming platform mentioned earlier, may initially set the TTL to three months to ensure fresh engagement data for personalization. However, if their analysis shows that interaction patterns older than three months still provide valuable insights, they can extended the TTL period to six months to keep older records for better recommendation models.
+Extend or shorten the retention period to suit your business needs by adjusting the TTL. For example, when considering the video streaming platform mentioned earlier, the platform may initially set the TTL to three months to ensure fresh engagement data for personalization. However, if their analysis shows that interaction patterns older than three months still provide valuable insights, they can extend the TTL period to six months to keep older records for better recommendation models.
 
 To modify an existing TTL value, use the `PATCH` method on the `/v2/datasets/{DATASET_ID}` endpoint.
 
@@ -265,7 +263,7 @@ In the following request, the TTL is updated to six months (`P6M`) extending the
 
 ```shell
 curl -X PATCH \
-  'https://platform-int.adobe.io/data/foundation/catalog/v2/datasets/{DATASET_ID}' \
+  'https://platform.adobe.io/data/foundation/catalog/v2/datasets/{DATASET_ID}' \
   -h 'Authorization: Bearer {ACCESS_TOKEN}' \
   -h 'Content-Type: application/json' \
   -h 'x-api-key: {API_KEY}' \
@@ -326,7 +324,7 @@ Review TTL settings periodically to ensure they continue to align with your stor
 
 >[!NOTE]
 >
-> Before applying TTL, verify that the dataset supports row expiration. TTL is only available for event datasets that use a time-series schema. 
+> Before applying TTL, verify that the dataset supports row-level expiration. TTL is only available for event datasets that use a time-series schema. 
 
 <!-- What are the default TTL limits for system-generated Profile Store and data lake datasets? -->
 
@@ -334,7 +332,6 @@ Review TTL settings periodically to ensure they continue to align with your stor
 
 Follow these best practices to ensure that TTL settings align with your data retention strategy:
 
-- Avoid setting TTL too short. Deleting records too quickly can make it difficult to analyze historical trends, customer behaviors, or compliance records. Ensure that datasets requiring long-term insights have an appropriate TTL.
 - Audit TTL changes regularly. Every TTL update triggers an audit event. Use audit logs to track TTL modifications for compliance, data governance, and troubleshooting purposes.
 - Remove TTL if data must be retained indefinitely. To disable TTL, set `ttlValue` to `null`. This prevents automatic expiration and retains all records permanently. Consider the storage implications before making this change. 
 
@@ -353,7 +350,7 @@ This section provides answers for commonly asked questions about dataset retenti
 ### What types of datasets can I apply retention policy rules to?
 
 +++Answer
-You can apply retention policies to datasets created using the ExperienceEvent XDM class. For Profile services, retention policies are only applicable to ExperienceEvent datasets that have been Profile-enabled.
+You can apply retention policies to datasets created using the XDM ExperienceEvent class. For Profile services, retention policies are only applicable to Experience Event datasets that have been Profile-enabled.
 +++
 
 ### How soon will the dataset retention job delete data from data lake services?
@@ -365,7 +362,7 @@ Dataset TTLs are evaluated and processed weekly, deleting all expired records. A
 ### How soon will the dataset retention job delete data from Profile services?
 
 +++Answer
-Once a retention policy is set, existing events in Adobe Experience Platform are immediately deleted if their event timestamp exceeds the retention period (TTL). New events are deleted once their timestamp surpasses the retention period.
+Once a retention policy is set, existing events in Platform are immediately deleted if their event timestamp exceeds the retention period (TTL). New events are deleted once their timestamp surpasses the retention period.
 
 For example, if you apply a 30-day expiration policy on May 15th, the following occurs:
 
@@ -383,7 +380,7 @@ Yes, you can set different retention policies for data lake and Profile services
 ### How can I check my current dataset usage?
 
 +++Answer
-You can check the latest dataset storage size for data lake and Profile stores as separate metrics on the Dataset inventory page. Sort the columns to identify the largest datasets and verify that retention policies are applied.
+You can check the latest dataset storage size for data lake and Profile stores as separate metrics on the [!UICONTROL Dataset] inventory workspace. Sort the columns to identify the largest datasets and verify that retention policies are applied.
 
 For sandbox-level usage, refer to the License Usage dashboard. See the [License Usage documentation](../../dashboards/guides/license-usage.md) for details.
 +++
