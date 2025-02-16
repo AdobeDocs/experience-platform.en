@@ -29,7 +29,7 @@ As an example, consider a video streaming platform that tracks user interactions
 
 ## Evaluate TTL suitability
 
-Before applying TTL, assess whether your dataset is a good candidate for applying a retention policy.. Consider the following:
+Before applying TTL, assess whether your dataset is a good candidate for applying a retention policy. Consider the following:
 
 - Data relevance over time: Does older data provide value, or does it become obsolete?
 - Impact on downstream processes: Will removing data affect reporting, analytics, or integrations?
