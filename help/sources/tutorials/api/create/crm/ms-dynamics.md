@@ -563,7 +563,7 @@ curl -X POST \
 
 **Response**
 
-A successful response returns the newly generated source connection ID and it's corresponding etag.
+A successful response returns the newly generated source connection ID and its corresponding etag.
 
 +++Select to view response example
 
