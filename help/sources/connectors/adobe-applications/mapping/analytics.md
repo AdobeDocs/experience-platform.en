@@ -95,7 +95,7 @@ Read the following table for information on chapter parameters.
 
 {style="table-layout:auto"}
 
-## Player state parameteres
+## Player state parameters
 
 Read the following table for information on player state parameters.
 
