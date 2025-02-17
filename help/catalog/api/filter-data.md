@@ -619,14 +619,14 @@ A successful response contains a list of datasets whose version numbers are grea
 }
 ```
 
-## Combine multiple filters {#combine-multiple-filters}
+#### Combine multiple property parameters {#combine-multiple-property-parameters}
 
 Use an ampersand (`&`) to combine multiple filters and refine your query in a single request. When you filter by multiple fields, an `AND` relationship is applied by default.
 
 **API format**
 
 ```http
-GET /{OBJECT_TYPE}?{FILTER_1}={VALUE}&{FILTER_2}={VALUE}&{FILTER_3}={VALUE}
+GET /{OBJECT_TYPE}?property={CONDITION_1}&property={CONDITION_2}
 ```
 
 When you apply multiple filters to the same non-array field, only the last specified filter takes effect. For example, in the query below, `name==bar` overrides the previous filter. Only results that match `bar` are returned."
@@ -637,9 +637,9 @@ When you apply multiple filters to the same non-array field, only the last speci
 GET /{OBJECT_TYPE}?property=name==foo&property=name==bar
 ```
 
-### Multiple filters example {#multiple-filters-example}
+**Example**
 
-You can combine multiple `property` filters in a single query, but at least one must apply to the `id` or `created` field. The following query returns objects where `id` is `abc123` **AND** `name` is not `test`:
+You can combine multiple `property` parameters in a single query, but at least one must apply to the `id` or `created` field. The following query returns objects where `id` is `abc123` **AND** `name` is not `test`:
 
 **API format**
 
@@ -647,7 +647,7 @@ You can combine multiple `property` filters in a single query, but at least one 
 GET /{OBJECT_TYPE}?property=id==abc123&property=name!=test
 ```
 
-### Multiple filter limitations {#multiple-filter-limitations}
+**Limitations**
 
 You **cannot** use a single `property` parameter to filter multiple fields at once. The following example (`property=id>abc,name==myDataset`) is **not** allowed because it tries to apply conditions to `id` and `name` within a **single `property` parameter**:
 
