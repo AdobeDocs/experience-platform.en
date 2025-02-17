@@ -1,10 +1,10 @@
 ---
-title: Manage Your Data Lifecycle with Experience Event Dataset Retention in the Data Lake
+title: Manage Experience Event Dataset Retention in the Data Lake
 description: Learn how to evaluate, set, and manage Experience Event dataset retention by applying TTL configurations with Adobe Experience Platform APIs. This guide offers best practices, use cases, and step-by-step instructions to optimize data hygiene, improve storage efficiency, and ensure effective data lifecycle management.
 ---
-# Manage your data lifecycle with Experience Event dataset retention on the data lake
+# Manage Experience Event dataset retention in the data lake
 
-Efficient data management is critical for optimum performance, cost control, and data cleanliness. Use Time-To-Live (TTL) row-level expiration to automatically remove outdated records from Adobe Experience Platform datasets, and ensure optimal storage and relevance.
+Efficient data management is critical for optimal performance, cost control, and data cleanliness. Use Time-To-Live (TTL) row-level expiration to automatically remove outdated records from Adobe Experience Platform datasets, and ensure optimal storage and relevance.
 
 This guide explains how to evaluate, set, and manage TTL using the Catalog Service API. You'll learn when and why to apply TTL, how to configure and update TTL values using API calls, and best practices to ensure effective implementation.
 
@@ -20,16 +20,16 @@ TTL is useful when managing time-sensitive data that loses relevance over time. 
 
 - Reduce storage costs by automatically removing outdated records.
 - Improve query performance by minimizing irrelevant data.
-- Maintain data hygiene by keeping only relevant information
+- Maintain data hygiene by keeping only relevant information.
 - Optimize data retention to support business objectives.
 
-### Industry example
+### Industry example {#industry-example}
 
-As an example, consider a video streaming platform that tracks user interactions, such as video views, searches, and recommendations. While recent engagement data is crucial for personalization, older activity logs (for example, interactions from over a year ago) lose relevance. By using row-level expiration, Platform automatically removes outdated logs, ensuring only current and meaningful data is used for analytics and recommendations.
+As an example, consider a video streaming service that tracks user interactions, such as video views, searches, and recommendations. While recent engagement data is crucial for personalization, older activity logs (for example, interactions from over a year ago) lose relevance. By using row-level expiration, Platform automatically removes outdated logs, ensuring only current and meaningful data is used for analytics and recommendations.
 
 ## Evaluate TTL suitability
 
-Before applying TTL, assess whether your dataset is a good candidate for applying a retention policy. Consider the following:
+Before applying a retention policy, assess whether your dataset is a good candidate for row-level expiration. Consider the following:
 
 - Data relevance over time: Does older data provide value, or does it become obsolete?
 - Impact on downstream processes: Will removing data affect reporting, analytics, or integrations?
@@ -143,7 +143,7 @@ A successful response returns the TTL configuration for the dataset, including t
 | `maxValue`    | The longest TTL allowed for the dataset. If null, there is no maximum limit. |
 | `minValue`    | The shortest TTL allowed to ensure compliance with system policies. |
 
-<!-- Q) what is the default Max and Min values? -->
+<!-- Q) what is the default Max and Min values and are they system-imposed? -->
 
 ### How to set TTL for a dataset {#set-ttl}
 
@@ -322,10 +322,6 @@ Review TTL settings periodically to ensure they continue to align with your stor
 
 ### Key considerations when setting TTL
 
->[!NOTE]
->
-> Before applying TTL, verify that the dataset supports row-level expiration. TTL is only available for event datasets that use a time-series schema. 
-
 <!-- What are the default TTL limits for system-generated Profile Store and data lake datasets? -->
 
 <!-- Q) Are the limits: 90 days for data in the Profile store and 13 months for data in the data lake? This is true for Journey Optimizer. -->
@@ -334,6 +330,8 @@ Follow these best practices to ensure that TTL settings align with your data ret
 
 - Audit TTL changes regularly. Every TTL update triggers an audit event. Use audit logs to track TTL modifications for compliance, data governance, and troubleshooting purposes.
 - Remove TTL if data must be retained indefinitely. To disable TTL, set `ttlValue` to `null`. This prevents automatic expiration and retains all records permanently. Consider the storage implications before making this change. 
+
+<!-- Q) Are there any specific system constraints or impacts of setting TTL to null? -->
 
 ## Limitations of TTL {#limitations}
 
