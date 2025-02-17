@@ -36,7 +36,6 @@ Get started by reading the material in the links below to familiarize yourself w
     </tr>
 </table>
 
-
 ## New features
 
 Get a glimpse of the newest enhancements in AI Assistant, including capabilities currently in the Alpha or Beta stages.
@@ -77,6 +76,21 @@ You can use AI Assistant for Customer Support to seamlessly troubleshoot without
 
 >[!ENDTABS]
 
+## Security features of AI Assistant {#security}
+
+
+Watch the following video for more information on the security features of AI Assistant:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441066/?learn=on)
+
+>[!BEGINSHADEBOX]
+
+**Read the AI Assistant security fact sheet**
+
+For more information about AI Assistant, read the [security fact sheet for AI Assistant in Adobe Experience Platform](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf).
+
+>[!ENDSHADEBOX]
+
 ## Video library
 
 Refer to the videos below to further amplify your knowledge on AI Assistant capabilities and use cases:
@@ -103,7 +117,15 @@ Watch the following video to learn about product knowledge in AI Assistant.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3441024?learn=on)
 
-For more information, read about [product knowledge in AI Assistant](home.md#product-knowledge)
+For more information, read about [product knowledge in AI Assistant](home.md#product-knowledge).
+
+### Operational insights in AI Assistant
+
+Watch the following video to learn how you can use AI Assistant to retrieve your operational insights and gain a comprehensive view on your data objects.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
+
+For more information, read about [operational insights in AI Assistant](home.md#operational-insights).
 
 ### Use AI Assistant product knowledge to reduce onboarding time
 
@@ -159,6 +181,7 @@ Read the following for AI Assistant use case examples:
 * [De-clutter your audiences and optimize your marketing operations](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
 * [Check dependencies and minimize risk during data updates](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
 * [Discover and deploy new features faster](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/discover-and-deploy-new-features-faster-with-ai-assistant-in/ba-p/731125)
+* [Revolutionize customer support with AI Assistant](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-in-adobe-experience-platform-revolutionizing/ba-p/735416)
 
 >[!TAB Additional video content]
 
@@ -168,20 +191,6 @@ Watch the following videos for additional AI Assistant use case examples:
 * [Get to know AI Assistant for Audiences](https://www.youtube.com/live/DYsyii7ldck)
 
 >[!ENDTABS]
-
-## Additional resources 
-
->[!BEGINSHADEBOX]
-
-**Read the AI Assistant security fact sheet**
-
-For more information about AI Assistant, read the [security fact sheet for AI Assistant in Adobe Experience Platform](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf).
-
->[!ENDSHADEBOX]
-
-Watch the following video for more information on the security features of AI Assistant:
-
->[!VIDEO](https://video.tv.adobe.com/v/3441066/?learn=on)
 
 Browse the links below to further your understanding of AI Assistant use cases, capabilities, and much more.
 
