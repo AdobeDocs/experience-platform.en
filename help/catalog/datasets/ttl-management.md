@@ -59,7 +59,7 @@ Before you can evaluate, set, and manage TTL using the Catalog Service API, you 
 
 ### How to check current TTL settings
 
-To begin your TTL management, first check current TTL settings. Make a GET request to the `/ttl/{datasetId}` endpoint to retrieve the default, maximum, and minimum TTL settings for a dataset. This is necessary because TTL rules can vary based on the dataset type.
+To begin your TTL management, first check current TTL settings. Make a GET request to the `/ttl/{datasetId}` endpoint to retrieve the default, maximum, and minimum TTL settings for a dataset. This step is necessary because TTL rules can vary based on the dataset type.
 
 >[!TIP]
 >
@@ -149,7 +149,7 @@ A successful response returns the TTL configuration for the dataset, including t
 
 >[!IMPORTANT]
 >
->Row-expiration can only be applied to event datasets that use a time-series schema. Before setting TTL, verify that the dataset's schema extends `https://ns.adobe.com/xdm/data/time-series` to ensure that the API request succeeds. Use the Schema Registry API to retrieve the schema details and verify the `meta:extends` property. Refer to the [Schema endpoint documentation](../../xdm/api/schemas.md#lookup) for guidance on how to do this.
+>Row-expiration can only be applied to event datasets that use a time-series schema. Before setting TTL, verify that the dataset's schema extends `https://ns.adobe.com/xdm/data/time-series` to ensure the API request succeeds. Use the Schema Registry API to retrieve the schema details and verify the `meta:extends` property. Refer to the [Schema endpoint documentation](../../xdm/api/schemas.md#lookup) for guidance on how to do this.
 
 To set a new TTL value for your dataset, make a PATCH request to the `/v2/datasets/{ID}` endpoint. 
 
