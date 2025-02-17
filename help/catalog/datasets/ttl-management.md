@@ -94,6 +94,8 @@ curl -X GET \
 
 A successful response returns the TTL configuration for the dataset, including the default, maximum, and minimum TTL values for both `adobe_lakeHouse` and `adobe_unifiedProfile` storage.
 
++++Select to view the response
+
 ```json
 {
     "67976f0b4878252ab887ccd9": {
@@ -137,6 +139,8 @@ A successful response returns the TTL configuration for the dataset, including t
     }
 }
 ```
+
++++
 
 | Property      | Description |
 |--------------|-------------|
@@ -190,6 +194,8 @@ curl -X PATCH \
 
 A successful response shows the TTL configuration for the dataset. It includes details on row-level expiration settings for both `adobe_lakeHouse` and `adobe_unifiedProfile` storage.
 
++++Select to view the response
+
 ```JSON
 {
     "67976f0b4878252ab887ccd9": {
@@ -235,6 +241,8 @@ A successful response shows the TTL configuration for the dataset. It includes d
     }
 }
 ```
+
++++
 
 | Property                         | Description |
 |----------------------------------|-------------|
