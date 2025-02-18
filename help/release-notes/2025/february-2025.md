@@ -94,8 +94,8 @@ For more information, read the [Data Prep overview](../../data-prep/home.md).
 
 **Fixes and enhancements** {#destinations-fixes-and-enhancements}
 
-* We have fixed an issue in Destination SDK testing tools. Some customers or partners were encountering issues with the [sample profile generation tool](/help/destinations/destination-sdk/testing-api/streaming-destinations/sample-profile-generation-api.md) due to an unsupported format when the schema used for generating profiles included data types with a `No format` selector.
-* We have fixed an issue when updating the `targetConnection` spec of destinations, using the Flow Service API. In some cases, the PATCH operation would behave similar to a POST operation, corrupting existing dataflows. This issue is now fixed and all customers can use the Flow Service API to update their `targetConnection` spec. [Read more](/help/destinations/api/edit-destination.md#patch-target-connection).
+- We have fixed an issue in Destination SDK testing tools. Some customers or partners were encountering issues with the [sample profile generation tool](/help/destinations/destination-sdk/testing-api/streaming-destinations/sample-profile-generation-api.md) due to an unsupported format when the schema used for generating profiles included data types with a `No format` selector.
+- We have fixed an issue when updating the `targetConnection` spec of destinations, using the Flow Service API. In some cases, the PATCH operation would behave similar to a POST operation, corrupting existing dataflows. This issue is now fixed and all customers can use the Flow Service API to update their `targetConnection` spec. [Read more](/help/destinations/api/edit-destination.md#patch-target-connection).
 
 ## Sources {#sources}
 
