@@ -524,6 +524,22 @@ A successful response contains a list of datasets, excluding any datasets whose 
 
 The `property` query parameter provides more flexibility for property-based filtering than simple filters. In addition to filtering based on whether a property has a specific value, the `property` parameter can use other comparison operators (such as "more-than" (`>`) and "less-than" (`<`)) as well as regular expressions to filter by property values. It can also filter by whether or not a property exists, regardless of its value.
 
+Use an ampersand (`&`) to combine multiple filters and refine your query in a single request. When you filter by multiple fields, an `AND` relationship is applied by default.
+
+>[!NOTE]
+>
+>If you combine multiple `property` parameters in a single query, at least one must apply to the `id` or `created` field. The following query returns objects where `id` is `abc123` **AND** `name` is not `test`:
+>
+>```http
+>GET /datasets?property=id==abc123&property=name!=test
+>```
+
+If you use multiple `property` parameters on the same field, only the last specified parameter takes effect. 
+
+>[!IMPORTANT]
+>
+>You **cannot** use a single `property` parameter to filter multiple fields at once. Each field must have its own `property` parameter. The following example (`property=id>abc,name==myDataset`) is **not** allowed because it tries to apply conditions to `id` and `name` within a **single `property` parameter**.
+
 The `property` parameter can accept any level object properties. `sampleKey` can be used for filtering using `?properties=subItem.sampleKey`.
 
 ```json
@@ -562,6 +578,8 @@ The value of the `property` parameter supports several different kinds of condit
 | <= | Returns only objects whose property values are less than (or equal to) a stated amount. | `property=version<=1.0.0` |
 | > | Returns only objects whose property values are greater than (but not equal to) a stated amount. | `property=version>1.0.0` |
 | >= | Returns only objects whose property values are greater than (or equal to) a stated amount. | `property=version>=1.0.0` |
+| * | A wildcard applies to any string property and matches any sequence of characters. Use `**` to escape a literal asterisk. |  `property=name==te*st` |
+| & | Combines multiple `property` parameters with an `AND` relationship between them. |   `property=id==abc&property=name!=test` |
 
 >[!NOTE]
 >
@@ -617,44 +635,6 @@ A successful response contains a list of datasets whose version numbers are grea
             "updatedUser": "{USER_ID}",
     }
 }
-```
-
-#### Combine multiple property parameters {#combine-multiple-property-parameters}
-
-Use an ampersand (`&`) to combine multiple filters and refine your query in a single request. When you filter by multiple fields, an `AND` relationship is applied by default.
-
-**API format**
-
-```http
-GET /{OBJECT_TYPE}?property={CONDITION_1}&property={CONDITION_2}
-```
-
-When you apply multiple filters to the same non-array field, only the last specified filter takes effect. For example, in the query below, `name==bar` overrides the previous filter. Only results that match `bar` are returned.
-
-**API format**
-
-```http
-GET /{OBJECT_TYPE}?property=name==foo&property=name==bar
-```
-
-**Example**
-
-You can combine multiple `property` parameters in a single query, but at least one must apply to the `id` or `created` field. The following query returns objects where `id` is `abc123` **AND** `name` is not `test`:
-
-**API format**
-
-```http
-GET /{OBJECT_TYPE}?property=id==abc123&property=name!=test
-```
-
-**Limitations**
-
-You **cannot** use a single `property` parameter to filter multiple fields at once. Each field must have its own `property` parameter. The following example (`property=id>abc,name==myDataset`) is **not** allowed because it tries to apply conditions to `id` and `name` within a **single `property` parameter**:
-
-**API format**
-
-```http
-GET /{OBJECT_TYPE}?property=id>abc,name==myDataset
 ```
 
 ## Filter arrays with the property parameter {#filter-arrays}
