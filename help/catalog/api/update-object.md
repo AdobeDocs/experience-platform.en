@@ -160,7 +160,7 @@ A successful response returns an array containing the ID of the updated dataset,
 
 ### An example dataset before and after update
 
-The example JSON below illustrates the dataset structure **before** the PATCH request. The `observability.metrics` object is not present in the dataset.
+The example JSON below illustrates the dataset structure **before** the PATCH request, where the `extensions.adobe_lakeHouse.rowExpiration` object is not present in the dataset.
 
 +++Select to view example
 
@@ -214,7 +214,8 @@ The example JSON below illustrates the dataset structure **before** the PATCH re
 
 +++
 
-The following JSON shows the dataset structure **after** the PATCH request. The update automatically creates the missing structure (`observability.metrics`) without prior manual creation steps. This example demonstrates how the `/v2/` PATCH request eliminates the need for multiple operations, making updates simpler and more efficient.
+The following JSON shows the dataset structure **after** the PATCH request. The update automatically creates the missing `extensions.adobe_lakeHouse.rowExpiration` object without prior manual creation steps. This example demonstrates how the `/v2/` PATCH request eliminates the need for multiple operations, making updates simpler and more efficient.
+
 
 +++Select to view example
 
