@@ -629,7 +629,7 @@ Use an ampersand (`&`) to combine multiple filters and refine your query in a si
 GET /{OBJECT_TYPE}?property={CONDITION_1}&property={CONDITION_2}
 ```
 
-When you apply multiple filters to the same non-array field, only the last specified filter takes effect. For example, in the query below, `name==bar` overrides the previous filter. Only results that match `bar` are returned."
+When you apply multiple filters to the same non-array field, only the last specified filter takes effect. For example, in the query below, `name==bar` overrides the previous filter. Only results that match `bar` are returned.
 
 **API format**
 
@@ -649,7 +649,7 @@ GET /{OBJECT_TYPE}?property=id==abc123&property=name!=test
 
 **Limitations**
 
-You **cannot** use a single `property` parameter to filter multiple fields at once. The following example (`property=id>abc,name==myDataset`) is **not** allowed because it tries to apply conditions to `id` and `name` within a **single `property` parameter**:
+You **cannot** use a single `property` parameter to filter multiple fields at once. Each field must have its own `property` parameter. The following example (`property=id>abc,name==myDataset`) is **not** allowed because it tries to apply conditions to `id` and `name` within a **single `property` parameter**:
 
 **API format**
 
