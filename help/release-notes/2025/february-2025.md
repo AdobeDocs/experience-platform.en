@@ -26,13 +26,13 @@ Updates to existing features and documentation in Adobe Experience Platform:
 
 ## AI Assistant {#ai-assistant}
 
-AI Assistant in Adobe Experience Platform is a conversational experience that you can use to accelerate your workflows in Adobe applications. You can use AI Assistant to better understand product knowledge, troubleshoot problems, or search through information and find operational insights. AI Assistant supports Experience Platform, Real-Time Customer Data Platform, Adobe Journey Optimizer and Customer Journey Analytics.
+AI Assistant in Adobe Experience Platform is a conversational experience that you can use to accelerate your workflows in Adobe applications. You can use AI Assistant to better understand product knowledge, troubleshoot problems, or search through information and find operational insights. AI Assistant supports Experience Platform, Real-Time Customer Data Platform, Adobe Journey Optimizer, and Customer Journey Analytics.
 
 **New features**
 
 | Feature | Description |
 | --- | --- |
-| General availability of operational insights | Operational insights in AI Assistant are now in GA. Operational insights refer to answers AI Assistant generates about your meta data objects (attributes, audiences, dataflows, datasets, destinations, journeys, schemas, and sources), including counts, lookups, and lineage impact. Operational insights does not look at any data within the sandbox. For more information, read the [AI Assistant UI guide](../../ai-assistant/ui-guide.md). |
+| General availability of operational insights | Operational insights in AI Assistant are now in GA. Operational insights refer to answers AI Assistant generates about your metadata objects (attributes, audiences, dataflows, datasets, destinations, journeys, schemas, and sources), including counts, lookups, and lineage impact. Operational insights does not look at any data within the sandbox. For more information, read the [AI Assistant UI guide](../../ai-assistant/ui-guide.md). |
 | Support for question autocomplete | When inputting a question to AI Assistant, you can now select from a list of recommended questions that AI Assistant provides. Use this feature to further accelerate your workflows with AI Assistant. For more information, read the guide on [using question autocomplete with AI Assistant](../../ai-assistant/ui-guide.md#use-question-autocomplete). |
 | Support for dataset observability | You can now use AI Assistant to answer questions about specific dataset metrics such as storage sizes and row counts. Data observability questions support qualifiers that you can use to filter your queries by a certain time period. For more information, read the [AI Assistant questions guide](../../ai-assistant/questions.md). |
 
@@ -42,7 +42,7 @@ For more information, read the [AI Assistant overview](../../ai-assistant/home.m
 
 ## Catalog Service {#catalog-service}
 
-Catalog Service is the system of record for data location and lineage within Adobe Experience Platform. While all data that is ingested into Experience Platform is stored in the Data Lake as files and directories, Catalog holds the metadata and description of those files and directories for lookup and monitoring purposes.
+Catalog Service is the system of record for data location and lineage within Adobe Experience Platform. While all data that is ingested into Experience Platform is stored in the data lake as files and directories, Catalog holds the metadata and description of those files and directories for lookup and monitoring purposes.
 
 | Feature | Description |
 | --- | --- |
@@ -94,8 +94,8 @@ For more information, read the [Data Prep overview](../../data-prep/home.md).
 
 **Fixes and enhancements** {#destinations-fixes-and-enhancements}
 
-- We have fixed an issue in Destination SDK testing tools. Some customers or partners were encountering issues with the [sample profile generation tool](/help/destinations/destination-sdk/testing-api/streaming-destinations/sample-profile-generation-api.md) due to an unsupported format when the schema used for generating profiles included data types with a `No format` selector.
-- We have fixed an issue when updating the `targetConnection` spec of destinations, using the Flow Service API. In some cases, the PATCH operation would behave similar to a POST operation, corrupting existing dataflows. This issue is now fixed and all customers can use the Flow Service API to update their `targetConnection` spec. [Read more](/help/destinations/api/edit-destination.md#patch-target-connection).
+- An issue in the Destination SDK testing tools has been fixed. Some customers or partners were encountering issues with the [sample profile generation tool](/help/destinations/destination-sdk/testing-api/streaming-destinations/sample-profile-generation-api.md) due to an unsupported format when the schema used for generating profiles included data types with a `No format` selector.
+- An issue when updating the `targetConnection` spec of destinations, using the Flow Service API, has been fixed. In some cases, the PATCH operation would behave similarly to a POST operation, corrupting existing dataflows. This issue is now fixed and all customers can use the Flow Service API to update their `targetConnection` spec. [Read more](/help/destinations/api/edit-destination.md#patch-target-connection).
 
 ## Sources {#sources}
 
