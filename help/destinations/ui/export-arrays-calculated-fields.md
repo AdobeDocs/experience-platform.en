@@ -19,14 +19,14 @@ Consider this page your go-to place around anything you want to know about expor
 Get the most important information about the functionality in this section, and continue below to the other sections in the document for detailed information.
 
 * The ability to export arrays, maps, and objects depends on your selection of the **Export arrays, maps, objects toggle** toggle. Read more about it [further down on the page](#export-arrays-maps-objects-toggle).
-* You can export arrays, maps, and objects to cloud storage destinations only, in `JSON` and `Parquet` files. People and prospect audiences are supported, account audiences and datasets are not.
+* You can export arrays, maps, and objects to cloud storage destinations only, in `JSON` and `Parquet` files. People and prospect audiences are supported, account audiences are not.
 * You *can* export arrays, maps, and objects to CSV files, but only by using the calcuated fields functionality and concatenating them into a string by using the `array_to_string` function.
 
 ## Arrays and other object types in Platform {#arrays-strings-other-objects}
 
 In Experience Platform, you can use [XDM schemas](/help/xdm/home.md) to manage different field types. Before support for array exports was added, you were able to export simple key-value pair type fields such as strings out of Experience Platform to your desired destinations. An example of such a field that was supported for export previously is `personalEmail.address`:`johndoe@acme.org`.
 
-Other field types in Experience Platform include array fields. Read more about [managing array fields in the Experience Platform UI](/help/xdm/ui/fields/array.md). In addition to the previously supported field types, you can now export array objects such as the example below.
+Other field types in Experience Platform include array fields. Read more about [managing array fields in the Experience Platform UI](/help/xdm/ui/fields/array.md). You can now export array objects such as the example below.
 
 ``` 
 organizations = [{

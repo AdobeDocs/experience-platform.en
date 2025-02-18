@@ -16,7 +16,7 @@ description: Understand how to use the calculated fields functionality to perfor
 >
 >The functionality to perform transformations on data exported to cloud storage destinations is generally available for the following destinations: [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md), as well as any custom partner-authored cloud storage destiations authored through [Destination SDK](/help/destinations/destination-sdk/overview.md).
 
-To peform various transformations on data exported to cloud storage destinations, you must use the calculated fields functionality in the mapping step of the export workflow. For detailed information about calculated fields, visit the pages linked below. These include an introduction to calculated fields in Data Prep and more information about all the available functions: 
+To perform various transformations on data exported to cloud storage destinations, you must use the calculated fields functionality in the mapping step of the export workflow. For detailed information about calculated fields, visit the pages linked below. These include an introduction to calculated fields in Data Prep and more information about all the available functions: 
 
 * [UI guide and overview](/help/data-prep/ui/mapping.md#calculated-fields)
 * [Data Prep functions](/help/data-prep/functions.md)
@@ -25,8 +25,8 @@ To peform various transformations on data exported to cloud storage destinations
 
 To use calculated fields for data transformations:
 
-1. [Connect](/help/destinations/ui/connect-destination.md) to a desired cloud storage destination. When connecting to the desired cloud destination, you must select the **[!UICONTROL Export arrays, maps, objects]** [toggle off](/help/destinations/ui/export-arrays-calculated-fields.md##export-arrays-maps-objects-toggle).
-2. Progress through the [activation steps for cloud storage destinations](/help/destinations/ui/activate-batch-profile-destinations.md) and get to the [mapping](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) step. 
+1. [Connect](/help/destinations/ui/connect-destination.md) to a desired cloud storage destination. When connecting to the desired cloud destination, toggle the **[!UICONTROL Export arrays, maps, objects]** [option off](/help/destinations/ui/export-arrays-calculated-fields.md##export-arrays-maps-objects-toggle).
+2. Go through the [activation steps for cloud storage destinations](/help/destinations/ui/activate-batch-profile-destinations.md) and get to the [mapping](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) step. 
  
 ## How to work with calculated fields {#how-to-export-calculated-fields}
 
@@ -44,7 +44,7 @@ In the mapping step of the activation workflow for cloud storage destinations, s
 
 >[!TIP]
 >
->The add calculated field control is disabled for destination connections where the **[!UICONTROL Export arrays, maps, and objects]** control was toggled off. [Read more](/help/destinations/ui/export-arrays-calculated-fields.md#export-arrays-maps-objects-toggle).
+>The **[!UICONTROL Add calculated field]** control is disabled for destination connections where the **[!UICONTROL Export arrays, maps, and objects]** control was toggled off. [Read more](/help/destinations/ui/export-arrays-calculated-fields.md#export-arrays-maps-objects-toggle).
 
 ![Add calculated field highlighted in the mapping step of the batch activation workflow.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
 
@@ -70,11 +70,11 @@ When ready, select **[!UICONTROL Next]** to proceed to the next step of the acti
 
 ![Mapping step with the target field highlighted and a target value filled in.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
 
-## Sample supported functions to perform data transfomations {#supported-functions}
+## Sample supported functions to perform data transformations {#supported-functions}
 
 All the documented [Data Prep functions](/help/data-prep/functions.md) are supported when activating data to file-based destinations. 
 
-The functions below, specific to handling exports of arrays, are documented along with examples.
+The functions below, specific to handling exports of arrays, or applying hashing to fields, are documented along with examples.
 
 * `array_to_string`
 * `flattenArray`
@@ -95,7 +95,7 @@ See examples and further information in the sections below for some of the funct
 
 ### `array_to_string` function to export arrays {#array-to-string-function-export-arrays}
 
-Use the `array_to_string` function to concatenate the elements of an array into a string, using a desired separator, such as `_` or `|`.
+Use the `array_to_string` function to concatenate the elements of an array into a string, using a desired separator, such as `_` or `|`. This function is useful when you want to export the elements of an array from Experience Platform into a CSV file.
 
 For example, you can combine the following XDM fields below as shown in the mapping screenshot by using an `array_to_string('_',organizations)` syntax:
 
@@ -113,7 +113,7 @@ First_Name,Last_Name,Personal_Email,Organization
 John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':456,'orgName':'Superstar Inc','founded':2004,'latestInteraction':1692921600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
 ```
 
-### `filterArray` function to export filtered arrays
+### `filterArray` function to export filtered arrays {#filter-array}
 
 Use the `filterArray` function to filter the elements of an exported array. You can combine this function with the `array_to_string` function described further above.
 
@@ -127,7 +127,7 @@ In this case, your output file looks like below. Notice how the two elements of 
 John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
 ```
 
-### `transformArray` function to export transformed arrays
+### `transformArray` function to export transformed arrays {#transform-array}
 
 Use the `transformArray` function to transform the elements of an exported array. You can combine this function with the `array_to_string` function described further above.
 
@@ -169,7 +169,7 @@ In this case, your output file looks like below. Notice how the three elements o
 John,Doe, johndoe@acme.org,"Marketing_Sales_Finance_2023"
 ```
 
-### `flattenArray` function to export flattened arrays
+### `flattenArray` function to export flattened arrays {#flatten-array}
 
 Use the `flattenArray` function to flatten an exported multidimensional array. You can combine this function with the `array_to_string` function described further above.
 
