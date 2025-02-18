@@ -89,22 +89,13 @@ The video below also demonstrates the steps to configure a Marketo destination a
 
 >[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
-<!--
+## Monitor destination {#monitor-destination}
 
-## Connect to the destination {#connect}
+After connecting to the destination and establishing a destination dataflow, you can use the [monitoring functionality](/help/dataflows/ui/monitor-destinations.md) in Real-Time CDP to get extensive information about the profile records activated to your destination in each dataflow run. 
 
-To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
-
--->
+The monitoring information for the [!DNL Marketo Engage] connection includes audience-level information related to activated, excluded, and failed identities in each dataflow and dataflow run. [Read more](/help/dataflows/ui/monitor-destinations.md#segment-level-view) about the functionality.
 
 ## Data usage and governance {#data-usage-governance}
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, see the [data governance overview](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
 
-<!--
-
-## Activate audiences to this destination {#activate}
-
-See [Activate audience data to streaming audience export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
-
--->
