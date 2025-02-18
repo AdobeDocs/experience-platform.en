@@ -4,6 +4,10 @@ description: The February 2025 release notes for Adobe Experience Platform.
 ---
 # Adobe Experience Platform release notes 
 
+>[!TIP]
+>
+>This release includes improvements to the Federated Audience Composition add-on. For more information, read the [Federated Audience Composition release notes](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes).
+
 **Release date: February 18, 2025**
 
 Updates to existing features and documentation in Adobe Experience Platform:
