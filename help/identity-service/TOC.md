@@ -38,7 +38,6 @@ role: Admin,Developer
   - [Create a custom namespace](api/create-custom-namespace.md)
   - [List the native ID for an identity](api/list-native-id.md)
   - [API reference](https://www.adobe.io/experience-platform-apis/references/identity-service)
-- [Shared device detection](shared-device-detection.md)
 - [Define identity fields in the UI](label-identities.md)
 - [Privacy request processing](privacy.md)
 - [Troubleshooting guide](troubleshooting-guide.md)
