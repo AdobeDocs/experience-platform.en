@@ -58,7 +58,6 @@ Before you can evaluate, set, and manage Experience Event Dataset Retention usin
 >This document covers row-level expiration, which deletes individual expired rows within a dataset while keeping the dataset itself intact. It does not apply to dataset expiration, which removes entire datasets and is managed by a separate feature. For dataset-level expiration, refer to the [dataset expiration API documentation](../../hygiene/api/dataset-expiration.md).
 
 ### How to check current TTL settings
-<!-- Experience Event Dataset Retention using TTL ? -->
 
 To begin your TTL management, first check current TTL settings. Make a GET request to the `/ttl/{datasetId}` endpoint to retrieve the default, maximum, and minimum TTL settings for a dataset. This step is necessary because TTL rules can vary based on the dataset type.
 
