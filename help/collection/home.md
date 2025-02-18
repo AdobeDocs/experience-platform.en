@@ -46,10 +46,6 @@ In addition, datastreams are integrated with several Platform capabilities that 
 
 ![Datastreams and Adobe solutions](./images/home/adobe-solutions.png)
 
->[!NOTE]
->
->For a high-level introduction to the Platform Edge Network, refer to the following [interactive product tour](https://adobe-ideacloud.forgedx.com/adobe-adobe-edge-collection/adobe-experience-edge/public/mx?SUID=hgb1a48ICSCpbM6MzBYHbxnsh9DgjUy1).
-
 ## Event forwarding
 
 [Event forwarding](../tags/ui/event-forwarding/overview.md) can tap into any Experience Platform datastream, allowing you to transform, enrich, and send data to any non-Adobe destination with extreme low latency and without adding any third-party code to the client device.

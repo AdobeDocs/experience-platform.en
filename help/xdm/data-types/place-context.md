@@ -9,7 +9,7 @@ exl-id: d7cf7366-0136-49ee-84d2-ec663db66eb4
 
 [!UICONTROL Place context] is a standard XDM data type that describes the location of an observed event, including point-of-interest information and geographical coordinates.
 
-<img src='../images/data-types/place-context.png' width=500 /><br />
+![](../images/data-types/place-context.png){width=500}
 
 | Property | Data type | Description |
 | --- | --- | --- |

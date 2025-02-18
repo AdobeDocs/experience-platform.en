@@ -19,7 +19,7 @@ Within Audience Portal, you can accomplish the following tasks:
 - [Create an audience](#create-audience)
   - [Use Segment Builder to create an audience](#segment-builder)
   - [Use Audience Composition to create an audience](#audience-composition)
-  - [Use Federated Audience Composition to create an audience using data from your existing data warehouse](#fac) (Limited availability)
+  - [Use Federated Audience Composition to create an audience using data from your existing data warehouse](#fac)
 - [Import externally generated audiences](#import-audience)
 
 To open Audience Portal, select the **[!UICONTROL Browse]** tab within the Segmentation section. 
@@ -227,6 +227,8 @@ Flexible audience evaluation lets you run a segmentation job on demand. Choose t
 >
 >When selecting audiences for flexible audience evaluation, the following conditions apply:
 >
+>- You can only use flexible audience evaluation **twice** per day. This limit resets at midnight (UTC).
+>- You have a **maximum** of 50 flexible audience evaluation runs per year.
 >- All the audiences **must** have an origin of "Segmentation Service".
 >- All the audiences **must** be evaluated using batch segmentation.
 >- All the audiences **must** be people-based audiences.
