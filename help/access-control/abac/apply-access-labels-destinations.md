@@ -73,6 +73,10 @@ You cannot apply an access label to a destination dataflow if you do not have ac
 
 When adding multiple labels to a destination dataflow, users who should be able to view and edit the dataflow must be added to a role with at least the same combination of labels. For example, if you apply the labels C1, I2, and another custom label to a destination dataflow, only users added to roles with access to the combination of these three labels are able to view and edit this specific destination dataflow.
 
+>[!NOTE]
+>
+> When searching for destination dataflows using the search box at the top of the Experience Platform user interface, the results may include destination dataflows which your user access labels restrict you from seeing. This behavior will be corrected in a future update.
+
 ![Venn diagram showing how only certain users have access to destinations with multiple labels applied.](/help/access-control/images/olac/multiple-labels-venn.png)
 
 ## Next steps {#next-steps}
