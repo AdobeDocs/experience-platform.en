@@ -9,10 +9,16 @@ description: The February 2025 release notes for Adobe Experience Platform.
 Updates to existing features and documentation in Adobe Experience Platform:
 
 - [AI Assistant](#ai-assistant)
+- [Catalog Service](#catalog-service)
 - [Data Prep](#data-prep)
 - [Destinations](#destinations)
 - [Sources](#sources)
 - [Documentation updates](#documentation-updates)
+  - [Edge network and hub comparison](#edge)
+  - [Expanded Flow Service API for sources](#flow-service)
+  - [Back up object configurations using sandbox tooling](#back-up-object-configurations)
+  - [Enable a center of excellence using sandbox tooling](#center-of-excellence)
+  - [Experience Event Dataset Retention in the data lake](#experience-event-dataset-retention)
 
 ## AI Assistant {#ai-assistant}
 
@@ -29,6 +35,18 @@ AI Assistant in Adobe Experience Platform is a conversational experience that yo
 {style="table-layout:auto"}
 
 For more information, read the [AI Assistant overview](../../ai-assistant/home.md).
+
+## Catalog Service {#catalog-service}
+
+Catalog Service is the system of record for data location and lineage within Adobe Experience Platform. While all data that is ingested into Experience Platform is stored in the Data Lake as files and directories, Catalog holds the metadata and description of those files and directories for lookup and monitoring purposes.
+
+| Feature | Description |
+| --- | --- |
+| New API endpoint | Manage your Adobe Experience Platform dataset metadata more efficiently with the new [Catalog Service API /v2/dataSets/{DATASET_ID} endpoint](../../catalog/api/update-object.md#patch-v2-notation). Easily update complex, deeply nested dataset attributes as the system automatically creates missing path levels to save you time, reduce manual steps, and minimize errors. |
+
+{style="table-layout:auto"}
+
+For more information on Catalog Service, read the [Catalog Service overview](../../catalog/home.md).
 
 ## Data Prep {#data-prep}
 
@@ -93,14 +111,22 @@ For more information, read the [sources overview](../../sources/home.md).
 
 ## Documentation updates {#documentation-updates}
 
-### Edge Network and hub comparison
+### Edge Network and hub comparison {#edge}
 
 The [Edge Network and hub comparison](../../landing/edge-and-hub-comparison.md) provides an overview detailing the differences between the two server types for Adobe Experience Platform (hub and Edge Network), including what services are available on each server type, locations of the servers, as well as recommended scenarios for using each server type. 
 
-### Back up object configurations using sandbox tooling
+### Expanded Flow Service API reference for sources {#flow-service}
 
-The [back up object configuration guide](../../sandboxes/use-cases/backup-object-configuration.md) provides step-by-step instructions on creating a backup package using sandbox tooling to ensure your object configurations are stored and secured.
+The [[!DNL Flow Service] API reference](https://developer.adobe.com/experience-platform-apis/references/flow-service/#tag/Source-connections) for sources has been updated with new API request and response examples. Use the expanded API reference to create and update connection specs when integrating your own source to Experience Platform. You can also use the expanded API reference to perform state transitions on your sources entities, update existing source and target connections, and retrieve flows and flow specs given a specific filtering criteria.
 
-### Enable a center of excellence using sandbox tooling
+### Back up object configurations using sandbox tooling {#back-up-object-configurations}
 
-The [center of excellence guide](../../sandboxes/use-cases/center-of-excellence.md) provides step-by-step instructions on creating a "golden sandbox" package that acts as a center of excellence to efficiently share key configurations.
+Read the [back up object configuration guide](../../sandboxes/use-cases/backup-object-configuration.md) for step-by-step instructions on creating a backup package using sandbox tooling to ensure your object configurations are stored and secured.
+
+### Enable a center of excellence using sandbox tooling {#center-of-excellence}
+
+Read the [center of excellence guide](../../sandboxes/use-cases/center-of-excellence.md) for step-by-step instructions on creating a "golden sandbox" package that acts as a center of excellence to efficiently share key configurations.
+
+### Experience Event Dataset Retention in the data lake {#experience-event-dataset-retention}
+
+Take control of Experience Event Dataset Retention in Adobe Experience Platform using Time-To-Live (TTL). [This guide](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) walks you through evaluating, configuring, and managing TTL settings to automatically remove outdated records, optimize storage, and keep your data relevant. Discover best practices, real-world use cases, and key considerations to enhance your data lifecycle management.
