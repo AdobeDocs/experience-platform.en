@@ -81,7 +81,7 @@ In the example below, AI Assistant is asked the following query: **"Show me data
 
 ![A question about operational insights.](./images/op-insights-question.png)
 
-AI Assistant then responds with a table listing your dataflows and their corresponding IDs. To view the whole table of data, select the expand icon on the top right.
+AI Assistant then responds with a table listing your dataflows and their corresponding IDs. Select the download icon (![Download icon](/help/images/icons/download.png)) to download the table as a CSV file. To view the entire table, select the expand icon (![Expand icon](/help/images/icons/expand.png)).
 
 ![An operational insights answer](./images/op-insights-answer.png)
 
@@ -94,10 +94,6 @@ When prompted with an operational insights question, AI Assistant provides an ex
 ![AI Assistant providing an explanation on how it computed its answer.](./images/answer-explained.png)
 
 You can also provide filters and modifications to your questions, and you can instruct AI Assistant to render its findings based on the filters that you include. For example, you can ask AI Assistant to show you a trend of the count of segment definitions in the order of their created date, remove segment definitions with zero total profiles, and use month names instead of integers when displaying the data.
-
-**Note:** Operational insights answers are currently in beta. Select the tooltip icon in the AI Assistant user interface to view the Beta notice and for a link to the documentation.
-
-![AI Assistant tooltip icon selected.](./images/op-insights-beta-note.png)
 
 +++
 
