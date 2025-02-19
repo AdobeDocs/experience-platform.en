@@ -1,6 +1,6 @@
 ---
 title: Data preparation and ingestion blueprint
-description: Learn the methods by which data can be ingested and prepared in Adobe Experience Platform.
+description: Learn the methods by which data can be prepared and ingested into Adobe Experience Platform.
 ---
 # Data preparation and ingestion blueprint
 
