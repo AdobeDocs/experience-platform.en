@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;data prep;data preparation;preparing data;
 title: Data Prep UI Guide
-description: This document provides directions on how to use data prep functions in the Platform UI to map CSV files to an XDM schema.
+description: Learn how to use data prep functions in the Experience Platform UI to map CSV files to an XDM schema.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
 ---
 # Data Prep UI Guide
 
-This document provides directions on how to use data prep functions in the Adobe Experience Platform user interface to map CSV files to an XDM schema.
+Read this guide to learn how to use [data prep](../home.md) mapping functions in the Adobe Experience Platform user interface to map CSV files to an [Experience Data Model (XDM) schema](../../xdm/home.md).
 
-## Getting started
+## Get Started
 
 This tutorial requires a working understanding of the following Platform components:
 
@@ -19,63 +19,22 @@ This tutorial requires a working understanding of the following Platform compone
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [Sources](../../sources/home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
 
-## Dataflow detail
+## Access the mapping interface in the UI
 
->[!TIP]
->
->You can access dataflow detail by selecting any source from the sources catalog. For more information, see the [sources overview](../../sources/home.md).
+You can access the mapping interface in the UI through two different pathways.
 
-Before you can map your CSV data to an XDM schema, you must first establish the details of your dataflow.
+1. In the Experience Platform UI, select **[!UICONTROL Workflows]** from the left-navigation and then select **[!UICONTROL Map CSV to XDM schema]**. Next, provide your dataflow details and select the data that you want to ingest. When finished, you are taken to the mapping interface where you can configure mapping between your source data and an XDM schema.
+2. You can also access the mapping interface through the sources workspace.
 
-The [!UICONTROL Dataflow detail] page allows you to select whether you want to ingest your CSV data into an existing target dataset or a new target dataset. An existing dataset comes with a pre-built target schema to map your data to, while a new dataset requires you to select an existing schema, or create a new schema, to map your data to.
+## Map CSV files into an XDM schema
 
-### Use an existing target dataset
+Use the mapping interface and the comprehensive toolset that it provides to successfully map data fields from your source schema to their appropriate target XDM fields in the target schema.
 
-To ingest your CSV data into an existing dataset, select **[!UICONTROL Existing dataset]**. You can either retrieve an existing dataset using the [!UICONTROL Advanced search] option or by scrolling through the list of existing datasets in the dropdown menu.
-
-With a dataset selected, provide a name for your dataflow and an optional description.
-
-During this process, you can also enable [!UICONTROL Error diagnostics] and [!UICONTROL Partial ingestion]. [!UICONTROL Error diagnostics] enables detailed error message generation for any erroneous records that occur in your dataflow, while [!UICONTROL Partial ingestion] allows you to ingest data containing errors, up to a certain threshold that you manually define. See the [partial batch ingestion overview](../../ingestion/batch-ingestion/partial.md) for more information.
-
-![existing-dataset](../images/ui/mapping/existing-dataset.png)
-
-### Use a new target dataset
-
-To ingest your CSV data into a new dataset, select **[!UICONTROL New dataset]** and then provide an output dataset name and an optional description. Next, select a schema to map to using the [!UICONTROL Advanced search] option or by scrolling through the list of existing schemas in the dropdown menu.
-
-With a schema selected, provide a name for your dataflow and an optional description, and then apply the [!UICONTROL Error diagnostics] and [!UICONTROL Partial ingestion] settings you want for your dataflow. When finished, select **[!UICONTROL Next]**.
-
-![new-dataset](../images/ui/mapping/new-dataset.png)
-
-## Select Data
-
-The [!UICONTROL Select data] step appears, providing you an interface to upload your local files and preview their structure and contents. Select **[!UICONTROL Choose files]** to upload a CSV file from your local system. Alternatively, you can drag and drop the CSV file you want to upload into the [!UICONTROL Drag and drop files] panel.
-
->[!TIP]
->
->Only CSV files are currently supported by local file upload. The maximum file size for each file is 1 GB.
-
-![choose-files](../images/ui/mapping/choose-files.png)
-
-Once your file is uploaded, the preview interface updates to display the contents and structure of the file.
-
-![preview-sample-data](../images/ui/mapping/preview-sample-data.png)
-
-Depending on your file, you can select a column delimiter such as tabs, commas, pipes, or a custom column delimiter for your source data. Select the **[!UICONTROL Delimiter]** dropdown arrow and then select the appropriate delimiter from the menu.
-
-When finished, select **[!UICONTROL Next]**.
-
-![delimiter](../images/ui/mapping/delimiter.png)
-
-## Mapping
-
-The **[!UICONTROL mapping]** interface provides you with a comprehensive tool to map source fields from your source schema to their appropriate target XDM fields in the target schema.
-
-![map-csv-to-xdm](../images/ui/mapping/map-csv-to-xdm.png)
+![The mapping interface in the Experience Platform UI.](../images/ui/mapping/base_mapping.png)
 
 ### Understanding the mapping interface {#mapping-interface}
 
-The mapping interface includes a dashboard that provides information on the health of your mapping fields within the context of the ingestion workflow. The dashboard displays the following details regarding your mapping fields:
+Refer to the dashboard at the top of the interface for information on the health of your mapping fields within the context of the ingestion workflow. The dashboard displays the following details regarding your mapping fields:
 
 | Property | Description |
 | --- | --- |
@@ -84,38 +43,24 @@ The mapping interface includes a dashboard that provides information on the heal
 | [!UICONTROL Identity fields] | Displays the total number of mapping fields defined as identity. These mapping fields are represented by a fingerprint icon. |
 | [!UICONTROL Errors] | Displays the number of erroneous mapping fields. |
 
-![top-panel](../images/ui/mapping/top-panel.png)
+{style="table-layout:auto"}
 
-The mapping interface also provides a panel of options that you can choose from to better interact or filter through your mapping fields.
+Next, you can use the options listed in the header to better interact or filter through your mapping fields.
 
-![second-panel](../images/ui/mapping/second-panel.png)
-
-To search for a particular mapping set, select **[!UICONTROL Search source fields]** and enter the name of the source data that you want to isolate.
-
-![search](../images/ui/mapping/search.png)
-
-Select **[!UICONTROL All source fields]** to see a dropdown menu of filtering options to better narrow down your view of the mapping interface.
-
-The filtering options are:
-
-| Source fields | Description |
+| Option | Description |
 | --- | --- |
-| [!UICONTROL All source fields] | This option displays all of the source fields of your source schema. This option is displayed by default. |
-| [!UICONTROL Required fields] | This option filters the source schema to only display the fields required to complete the mapping. |
-| [!UICONTROL Identity fields] | This option filters the source schema to only display the fields marked for Identity. |
-| [!UICONTROL Mapped fields] | This option filters the source schema to only display the fields that have already been mapped. |
-| [!UICONTROL Unmapped fields] | This option filters the source schema to only display the fields that have yet to be mapped. |
-| [!UICONTROL Fields with recommendation] | This option filters the source schema to only display the fields that contain mapping recommendations. |
+| [!UICONTROL Search source fields] | Use the search bar to navigate to a specific source field. |
+| [!UICONTROL All fields] | Select **[!UICONTROL All fields]** to view a dropdown menu of options to filter your mappings by. The available filtering options include:<ul><li>**[!UICONTROL Required fields]**: Filters the interface to display only fields required to complete the workflow.</li><li> **[!UICONTROL Identity fields]**: Filters the interface to display only fields marked as identities.</li><li>**[!UICONTROL Mapped fields]**: Filters the interface to display only fields that have already been mapped.</li><li>**[!UICONTROL Unmapped fields]**: Filters the interface to display only fields that have yet to be mapped.</li><li>**[!UICONTROL Fields with errors]**: Filters the interface to display only fields that have errors.</li></ul> |
+| [!UICONTROL New field type] | Select **[!UICONTROL New field type]** to either add a new field or a calculated field. For more information, read the section on [adding a new field type](#add-a-new-field-type). |
+| [!UICONTROL Import mappings] | Select **[!UICONTROL Import mappings]** to import mappings from an existing file or dataflow. For more information, read the section on [importing mappings](#import-mapping). |
+| [!UICONTROL Validate] | Select **[!UICONTROL Validate]** to check for errors in your mappings. |
+| [!UICONTROL Download template] | Select **[!UICONTROL Download template]** to export and download a CSV file of your mappings. |
+| [!UICONTROL Preview data] | Select **[!UICONTROL Preview data]** to use the preview panel and inspect the structure and contents of your source dataset. |
+| [!UICONTROL Clear all] | Select **[!UICONTROL Clear all]** to delete all mappings in the interface. |
 
-Select **[!UICONTROL Fields with errors]** to see all mapping fields with errors.
+{style="table-layout:auto"}
 
-![filter](../images/ui/mapping/filter.png)
-
-An isolated view of erroneous mapping fields appears, allowing you to address errors through intelligent mapping recommendations or through the manual mapping tree.
-
-![fields-with-errors](../images/ui/mapping/fields-with-errors.png)
-
-### Add a new field type
+### Add a new field type {#add-a-new-field-type}
 
 You can add a new mapping field or a calculated field by selecting **[!UICONTROL New field type]**.
 
@@ -123,23 +68,19 @@ You can add a new mapping field or a calculated field by selecting **[!UICONTROL
 
 To add a new mapping field, select **[!UICONTROL New field type]** and then select **[!UICONTROL Add new field]** from the dropdown menu that appears.
 
-![add-new-field](../images/ui/mapping/add-new-field.png)
+![The mapping interface with the "add new field" button selected.](../images/ui/mapping/add_new_field.png)
 
 Next, select the source field you would like to add from the source schema tree that appears and then select **[!UICONTROL Select]**.
 
-![select-new-field](../images/ui/mapping/select-new-field.png)
+![The source schema with "country" selected as an additional new field.](../images/ui/mapping/source_field.png)
 
 The mapping interface updates with the source field you selected and an empty target field. Select **[!UICONTROL Map target field]** to start mapping the new source field to its appropriate target XDM field.
 
-![map-target-field](../images/ui/mapping/map-target-field.png)
+![The mapping interface with a new and unmapped source field.](../images/ui/mapping/new_field_added.png)
 
 An interactive target schema tree appears, allowing you to manually traverse through the target schema and find the appropriate target XDM field for your source field.
 
-![manual-mapping](../images/ui/mapping/manual-mapping.png)
-
-When finished, select the schema icon to close the target schema interface. 
-
-![schema-tree](../images/ui/mapping/schema-tree.png)
+![The interactive target scheme tree with a new target field selected.](../images/ui/mapping/add_target_field.png)
 
 #### Calculated fields {#calculated-fields}
 
@@ -147,9 +88,9 @@ Calculated fields allow for values to be created based on the attributes in the 
 
 To create a calculated field, select **[!UICONTROL New field type]** and then select **[!UICONTROL Add calculated field]**
 
-![add-calculated-field](../images/ui/mapping/add-calculated-field.png)
+![The mapping interface with the "add calculated field" button selected.](../images/ui/mapping/new_calculated_field.png)
 
-The **[!UICONTROL Create calculated field]** panel appears. The left dialog box contains the fields, functions, and operators supported in calculated fields. Select one of the tabs to start adding functions, fields, or operators to the expression editor.
+The **[!UICONTROL Create calculated field]** window appears. Use the interface to input your calculated fields and refer to the dialog box on the left for supported fields, functions, and operators. 
 
 | Tab | Description |
 | --- | ----------- |
@@ -157,83 +98,59 @@ The **[!UICONTROL Create calculated field]** panel appears. The left dialog box 
 | [!UICONTROL Field] | The fields tab lists fields and attributes available in the source schema. |
 | [!UICONTROL Operator] | The operators tab lists the operators that are available to transform the data. |
 
-![tabs](../images/ui/mapping/tabs.png)
+![The calculated field interface](../images/ui/mapping/calculated_field.png)
 
 You can manually add fields, functions, and operators using the expression editor at the center. Select the editor to start creating an expression. Once you are finished, select **[!UICONTROL Save]** to proceed.
 
-![create-calculated-field](../images/ui/mapping/create-calculated-field.png)
+### Import mapping {#import-mapping}
 
-### Import mapping {#import}
+You can reduce the manual configuration time of your data ingestion process and limit mistakes by using the import mapping functionality of data prep. You can import mappings from an existing flow or from an exported file.
 
-You can reuse the mapping of an existing dataflow to reduce the manual configuration time of your data ingestion and limit mistakes. Select **[!UICONTROL Import mapping]** to reuse an existing mapping.
+>[!BEGINTABS]
 
-![import-mapping](../images/ui/mapping/import-mapping.png)
+>[!TAB Import mapping from flow]
 
-The [!UICONTROL Import mapping] window appears, providing you with a list of dataflows to choose from. 
+If you have several dataflows based on similar source files and target schemas, then you can import existing mapping and reuse them for new dataflows.
 
-Select the preview icon to preview the mapping of the dataflow you selected.
+To import mapping from an existing dataflow, select **[!UICONTROL Import mappings]** and then select **[!UICONTROL Import mapping from flow]**.
 
-![list-mapping](../images/ui/mapping/list-mapping.png)
+![The mapping interface with "import mapping" and "import mapping from flow" selected.](../images/ui/mapping/import_from_flow.png)
 
-The preview window allows you to inspect existing mapping before importing to your dataflow. Once you verify the mapping, you can select **[!UICONTROL Back]** to return to the list of dataflows and inspect another set of mapping, or you can select **[!UICONTROL Select]** to proceed.
+Next, use the pop-up window to locate the dataflow whose mapping you want to import. During this step, you can also use the search function to isolate a specific dataflow and retrieve it's mappings. When finished, select **[!UICONTROL Select]**.
 
-![preview-mapping](../images/ui/mapping/preview-mapping.png)
+![A list of existing dataflows whose corresponding mappings can be imported.](../images/ui/mapping/import_flow_window.png)
 
-Alternatively, you can select the mapping you want to import from the list of dataflows window. Select the dataflow that contains the mapping you want to import and then select **[!UICONTROL Select]** to proceed.
+>[!TAB Import mapping from file]
 
-![select-mapping](../images/ui/mapping/select-mapping.png)
+In some cases, you may need to implement a large number of mappings for your data. You can do this manually with the mapping interface, but you can also export your mapping template and configure your mappings on an offline spreadsheet to save time and avoid user timeouts on Experience Platform.
 
-The interface updates with the mapping you imported.
+To import mapping from an exported file, select **[!UICONTROL Import mappings]** and then select **[!UICONTROL Import mapping from file]**.
 
->[!NOTE]
->
->Any existing mapping sets that you establish or ML mapping recommendations are replaced by the mapping that you imported from an existing dataflow.
+![The mapping interface with "import mapping" and "import mapping from file" selected.](../images/ui/mapping/import_from_file.png)
 
-![mapping-imported](../images/ui/mapping/mapping-imported.png)
+Next, use [!UICONTROL Upload template] window to download a CSV copy of your mappings. You can then configure your mappings locally on your device, using any software that support editing CSV file types. During this step, you must ensure that you are using only the fields that are provided in your source file and target schema. 
 
-Select **[!UICONTROL Preview data]** to see mapping results of up to 100 rows of sample data from the selected dataset.
+![The upload template window that displays options to both download and upload an exported csv file of the mappings.](../images/ui/mapping/upload_template.png)
 
-![preview-data](../images/ui/mapping/preview-data.png)
++++Select to view an example of an exported mapping file
 
-During the preview, the identity column is prioritized as the first field, as it is the key information necessary when validating mapping results. When finished, select **[!UICONTROL Close]**.
+![The downloaded csv file of the mapping template.](../images/ui/mapping/mapping_csv_file.png)
 
-![preview-screen](../images/ui/mapping/preview-screen.png)
++++
 
-To remove all mapping fields, select **[!UICONTROL Clear all mappings]**.
+When finished, select **[!UICONTROL Upload file]** and select the updated csv file of your mappings. Allow for a brief moment for the system to process, and then select **[!UICONTROL Done]**.
 
-![clear-all](../images/ui/mapping/clear-all.png)
+![The upload template window with a a new file uploaded.](../images/ui/mapping/upload_successful.png)
 
-### Using the mapping interface
+>[!ENDTABS]
 
-Platform automatically provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases or fix any duplicated mapping fields to clear any errors.
+With your mappings complete, you can now select **[!UICONTROL Finish]** and proceed to the next step to complete your dataflow.
 
-![mapping-interface](../images/ui/mapping/mapping-interface.png)
-
-Select the lightbulb icon in the target field that you want to adjust.
-
-![mapping-recc](../images/ui/mapping/mapping-recc.png)
-
-The [!UICONTROL Mapping recommendations] pop up panel appears, displaying a list of recommended target fields that can be mapped to a particular source field. By default the first recommendation is automatically applied.
-
-Sometimes, more than one recommendation is available for the source schema. When this happens, the mapping card displays the most prominent recommendation, followed by an icon  that contains the number of additional recommendations available. Selecting the light bulb icon will show a list of the additional recommendations. You can choose one of the alternate recommendations by selecting the checkbox next to the recommendation you want to map to instead.
-
-From here, you can change the selected target field to fix an error or match your use case.
-
-Alternatively, you can select **[!UICONTROL Select manually]** to manually use the interactive target schema mapping tree.
-
-![recc-panel](../images/ui/mapping/recc-panel.png)
-
-The target schema mapping interface appears in the same view as your mapping fields, allowing you to modify mapping pairs within the same screen. Select the target field that fits your use case or fixes your errors.
-
-![select-target-field](../images/ui/mapping/select-target-field.png)
-
-When finished, select **[!UICONTROL Finish]** to proceed.
-
-![finish](../images/ui/mapping/finish.png)
+![The mapping interface with a complete set of mappings.](../images/ui/mapping/completed_mappings.png)
 
 ## Next steps
 
-By reading this document, you have successfully mapped a CSV file to a target XDM schema using the mapping interface in Platform UI. See the following documents for more information:
+You now can successfully map a CSV file to a target XDM schema using the mapping interface in the Experience Platform UI. For more information, read the following documents:
 
 * [Data Prep overview](../home.md)
 * [Sources overview](../../sources/home.md)
