@@ -5,7 +5,7 @@ exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 ---
 # Edge segmentation guide
 
-Edge segmentation is the ability to evaluate segment definitions in Adobe Experience Platform instantaneously [on the edge](../../web-sdk/home.md), enabling same page and next page personalization use cases. 
+Edge segmentation is the ability to evaluate segment definitions in Adobe Experience Platform instantaneously [on the edge](../../landing/edge-and-hub-comparison.md), enabling same page and next page personalization use cases. 
 
 >[!IMPORTANT]
 >
