@@ -61,7 +61,7 @@ In addition to audience compositions and segment definitions, you can use Adobe 
 >id="platform_segments_evaluation_streaming"
 >title="Streaming evaluation"
 >abstract="Streaming segmentation is an ongoing data selection process that updates your audiences in response to user activity."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html" text="Evaluate events in near real-time with streaming segmentation"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/streaming-segmentation.html" text="Evaluate events in near real-time with streaming segmentation"
 
 Platform currently supports three methods of evaluating audiences: streaming segmentation, batch segmentation, and edge segmentation.
 
@@ -88,7 +88,7 @@ Batch audiences are automatically evaluated every 24 hours. If you want to evalu
 >id="platform_segments_evaluation_edge"
 >title="Edge evaluation"
 >abstract="Edge segmentation is the ability to evaluate segments in Platform instantaneously on the Edge Network, enabling same-page and next-page personalization use cases."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html" text="Edge segmentation UI guide"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/edge-segmentation.html" text="Edge segmentation guide"
 
 Edge segmentation is the ability to evaluate segments in Platform instantaneously [on the Edge Network](../web-sdk/home.md), enabling same-page and next-page personalization use cases. 
 
