@@ -66,6 +66,11 @@ Note the following known limitations that currently apply to this functionality:
 ## How to export calculated fields {#how-to-export-calculated-fields}
 
 >[!CONTEXTUALHELP]
+>id="platform_destinations_export_arrays_maps_objects"
+>title="Export arrays, maps, and objects"
+>abstract="<p> Toggle this setting <b>on</b> to enable the export of arrays, maps, and objects to JSON or Parquet files. You can select these object types in the source field view of the mapping step.</p><p>With this toggle <b>off</b>, you can use the calculated fieds option and apply various data transformation functions when activating audiences. However, you can <i>not</i> export arrays, maps, and objects to JSON or Parquet files and must configure a separate destination for that purpose.</p>"
+
+>[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_control"
 >title="Enable hierarchical output schema"
 >abstract="Toggle on if you would like to export hierarchical structures like arrays."
@@ -73,7 +78,7 @@ Note the following known limitations that currently apply to this functionality:
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"
 >title="Add calculated fields disabled"
->abstract="This control is disabled because you selected to export flat structures when connecting to the destination."
+>abstract="This control is disabled because you selected the **Export arrays, maps, objects** toggle *on* when setting up this destination connection. To use calculated fields and the functions available within, set up a new destination connection with the **Export arrays, maps, objects** toggle *off*."
 
 In the mapping step of the activation workflow for cloud storage destinations, select **[!UICONTROL Add calculated field]**.
 
