@@ -14,9 +14,9 @@ description: Understand how to use the calculated fields functionality to perfor
 
 >[!AVAILABILITY]
 >
->The functionality to perform transformations on data exported to cloud storage destinations is generally available for the following destinations: [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md), as well as any custom partner-authored cloud storage destiations authored through [Destination SDK](/help/destinations/destination-sdk/overview.md).
+>The functionality to perform transformations on data exported to cloud storage destinations is generally available for the following destinations: [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md), as well as any custom partner-authored cloud storage destinations authored through [Destination SDK](/help/destinations/destination-sdk/overview.md).
 
-To perform various transformations on data exported to cloud storage destinations, you must use the calculated fields functionality in the mapping step of the export workflow. For detailed information about calculated fields, visit the pages linked below. These include an introduction to calculated fields in Data Prep and more information about all the available functions: 
+To perform various transformations on data exported to cloud storage destinations, you must use the calculated fields functionality in the mapping step of the export workflow. For detailed information about calculated fields, visit the pages linked below. These pages include an introduction to calculated fields in Data Prep and more information about all the available functions: 
 
 * [UI guide and overview](/help/data-prep/ui/mapping.md#calculated-fields)
 * [Data Prep functions](/help/data-prep/functions.md)
@@ -117,7 +117,7 @@ John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'lates
 
 Use the `filterArray` function to filter the elements of an exported array. You can combine this function with the `array_to_string` function described further above.
 
-Continuing with the `organizations` array object from above, you can write a function like `array_to_string('_', filterArray(organizations, org -> org.founded > 2021))`, returning the organizations with a value for `founded` in the year 2021 or more recent.
+Continuing with the `organizations` array object from above, you can write a function like `array_to_string('_', filterArray(organizations, org -> org.founded > 2021))`, which returns the organizations with a value for `founded` in the year 2021 or more recent.
 
 ![Example of the filterArray function.](/help/destinations/assets/ui/export-arrays-calculated-fields/filter-array-function.png)
 

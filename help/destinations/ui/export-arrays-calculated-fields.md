@@ -4,7 +4,7 @@ type: Tutorial
 description: Learn how to export arrays, maps, and objects from Real-Time CDP to cloud storage destinations.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 ---
-# Export array, maps, and objects from Real-Time CDP to cloud storage destinations {#export-arrays-cloud-storage}
+# Export arrays, maps, and objects from Real-Time CDP to cloud storage destinations {#export-arrays-cloud-storage}
 
 >[!AVAILABILITY]
 >
@@ -12,15 +12,15 @@ exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 
 Learn how to export arrays from Real-Time CDP to [cloud storage destinations](/help/destinations/catalog/cloud-storage/overview.md). Read this document to understand the export workflow, the use cases enabled by this functionality, and known limitations.
 
-Consider this page your go-to place around anything you want to know about exporting arrays, maps, and other object types from Experience Platform.
+Consider this page your go-to place for anything that you want to know about exporting arrays, maps, and other object types from Experience Platform.
 
 ## Bottom line up front
 
 Get the most important information about the functionality in this section, and continue below to the other sections in the document for detailed information.
 
-* The ability to export arrays, maps, and objects depends on your selection of the **Export arrays, maps, objects toggle** toggle. Read more about it [further down on the page](#export-arrays-maps-objects-toggle).
+* The ability to export arrays, maps, and objects depends on your selection of the **Export arrays, maps, objects** toggle. Read more about it [further down on the page](#export-arrays-maps-objects-toggle).
 * You can export arrays, maps, and objects to cloud storage destinations only, in `JSON` and `Parquet` files. People and prospect audiences are supported, account audiences are not.
-* You *can* export arrays, maps, and objects to CSV files, but only by using the calcuated fields functionality and concatenating them into a string by using the `array_to_string` function.
+* You *can* export arrays, maps, and objects to CSV files, but only by using the calculated fields functionality and concatenating them into a string by using the `array_to_string` function.
 
 ## Arrays and other object types in Platform {#arrays-strings-other-objects}
 
@@ -60,7 +60,7 @@ In addition to arrays, you can also export maps and objects from Experience Plat
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_maps_objects"
 >title="Export arrays, maps, and objects"
->abstract="<p> Toggle this setting <b>on</b> to enable the export of arrays, maps, and objects to JSON or Parquet files. You can select these object types in the source field view of the mapping step. With the toggle on, you cannot use the calculated fields option in the mapping step.</p><p>With this toggle <b>off</b>, you can use the calculated fieds option and apply various data transformation functions when activating audiences. However, you can <i>not</i> export arrays, maps, and objects to JSON or Parquet files and must configure a separate destination for that purpose.</p>"
+>abstract="<p> Toggle this setting <b>on</b> to enable the export of arrays, maps, and objects to JSON or Parquet files. You can select these object types in the source field view of the mapping step. With the toggle on, you cannot use the calculated fields option in the mapping step.</p><p>With this toggle <b>off</b>, you can use the calculated fields option and apply various data transformation functions when activating audiences. However, you can <i>not</i> export arrays, maps, and objects to JSON or Parquet files and must configure a separate destination for that purpose.</p>"
 
 When connecting to a cloud storage destination, you can set the **[!UICONTROL Export arrays, maps, objects]** toggle on or off.
 
@@ -68,7 +68,7 @@ When connecting to a cloud storage destination, you can set the **[!UICONTROL Ex
 
 Toggle this setting **on** to enable the export of arrays, maps, and objects to JSON or Parquet files. You can select these object types in the source field view of the [mapping step](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) when activating audiences to cloud storage destinations. However, with this setting on, you cannot use the calculated fields option to transform data on activation.
 
-With this toggle **off**, you can use the calculated fieds option and apply various data transformation functions when activating audiences. However, you can not export arrays, maps, and objects to JSON or Parquet files and must configure a separate destination for that purpose.
+With this toggle **off**, you can use the calculated fields option and apply various data transformation functions when activating audiences. However, you can not export arrays, maps, and objects to JSON or Parquet files and must configure a separate destination for that purpose.
 
 ## Export arrays, maps, objects toggle *on* {#export-arrays-maps-objects-toggle-on}
 
@@ -76,21 +76,21 @@ With this setting on, you can export entire objects (for example `person.name`) 
 
 ![Select objects via source field selector in the mapping step of the activation workflow.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-object.gif)
 
-With this option selected, the user interface blocks users from utilizing calculated fields, and the **[!UICONTROL Add calculated fields]** control is disabled, as shown below. To use calculated fields for data transformations, set up a destination connection with the toggle off.
+With this option selected, the user interface blocks users from using calculated fields, and the **[!UICONTROL Add calculated fields]** control is disabled, as shown below. To use calculated fields for data transformations, set up a destination connection with the toggle off.
 
 ![Calculated fields control disabled.](/help/destinations/assets/ui/export-arrays-calculated-fields/calculated-fields-disabled.png)
 
 ## Export arrays, maps, objects toggle *off* {#export-arrays-maps-objects-toggle-off}
 
-With this option selected, you can use the calculated fieds option and apply various data transformation functions when activating audiences. However, you can not export arrays, maps, and objects to JSON or Parquet files and must configure a separate destination for that purpose.
+With this option set to *off*, you can use the calculated fields option and apply various data transformation functions when activating audiences. However, you can not export arrays, maps, and objects to JSON or Parquet files and must configure a separate destination for that purpose.
 
-You *can* export arrays, maps, and objects to CSV files by using the calcuated fields functionality and concatenate them into a string by using the `array_to_string` function. [Read more](#array-to-string-function-export-arrays) about using that function.
+You *can* export arrays, maps, and objects to CSV files by using the calculated fields functionality and concatenate them into a string by using the `array_to_string` function. [Read more](#array-to-string-function-export-arrays) about using that function.
 
 Read more about working with calculated fields to [perform transformations on data exported to cloud storage destinations](/help/destinations/ui/data-transformations-calculated-fields.md).
 
 ## Sample exported files {#sample-exported-files}
 
-By using this funcionality, you can export Parquet and JSON files where the data preserves the stucture from Experience Platform. View below an example of an exported JSON file.
+By using this functionality, you can export Parquet and JSON files where the data preserves the structure from Experience Platform. View below an example of an exported JSON file.
 
 +++ Select to view exported JSON file.
 
