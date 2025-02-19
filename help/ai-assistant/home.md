@@ -59,10 +59,6 @@ Watch the following video for additional information on AI Assistant product kno
 
 ### Operational insights {#operational-insights}
 
->[!IMPORTANT]
->
->Operational insights answers are in beta. Anyone that has access to the **View Operational Insights** permission will have access to operational insights answers.
-
 Operational insights refer to answers AI Assistant generates about your meta data objects (attributes, audiences, dataflows, datasets, destinations, journeys, schemas, and sources), including counts, lookups, and lineage impact. It does not look at any data within the sandbox. 
 
 * How many datasets do I have?
