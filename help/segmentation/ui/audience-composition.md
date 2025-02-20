@@ -345,7 +345,7 @@ Additionally, you can enable the **[!UICONTROL Other profiles]** toggle to creat
 
 ![The Other profiles toggle is highlighted.](../images/ui/audience-composition/split-other-profiles.png)
 
-## Publishing your audience
+## Publishing your audience {#publish}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_publish"
