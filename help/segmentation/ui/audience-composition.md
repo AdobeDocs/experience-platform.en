@@ -30,7 +30,17 @@ The audience composition canvas is comprised of four different types of blocks: 
 
 ## [!UICONTROL Audience] {#audience-block}
 
-The **[!UICONTROL Audience]** block type allows you to add the sub-audiences that you want to compose your new larger audience. By default, an **[!UICONTROL Audience]** block is included at the top of the composition canvas.
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_audience"
+>title="Audience block"
+>abstract="The Audience block allows you to the sub-audiences that you want to use to compose your new audience."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_merge_types"
+>title="Merge types"
+>abstract="The merge types determine how the selected sub-audiences are combined. Supported values include Union, Intersection, and Exclude overlap."
+
+The **[!UICONTROL Audience]** block type allows you to add the sub-audiences that you want to use to compose your new larger audience. By default, an **[!UICONTROL Audience]** block is included at the top of the composition canvas.
 
 When you select the **[!UICONTROL Audience]** block, the right rail displays controls for labeling the audience, adding audiences to the block, as well as building custom rules for the audience block.
 
@@ -82,6 +92,15 @@ After adding a custom rule, select **[!UICONTROL Save]** to add the rule to your
 
 ## [!UICONTROL Exclude] {#exclude-block}
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_exclude"
+>title="Exclude block"
+>abstract="The Exclude block lets you exclude specified audiences or attributes from your composition."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_exclude_type"
+>abstract="You can either exclude profiles belonging to a specific audience (Exclude by audience) or exclude profiles based on a specific attribute (Exclude by attribute)."
+
 The **[!UICONTROL Exclude]** block type allows you to exclude a specified sub-audience or attributes from your new larger audience.
 
 To add an **[!UICONTROL Exclude]** block, select the **+** icon, followed by **[!UICONTROL Exclude]**.
@@ -121,6 +140,26 @@ A list of profile attributes appears. Select the attribute type you want to excl
 >When excluding by attribute, you can only specify **one** value to exclude. Using any sort of separator, like a comma or semicolon, will only result in excluding that exact value. For example, setting the value as `red, blue` will result in excluding the term `red, blue` from the attribute, but will **not** result in excluding either the term `red` or `blue`.
 
 ## [!UICONTROL Enrich] {#enrich-block}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_enrich"
+>title="Enrich block"
+>abstract="The Enrich block lets you enrich your audience with additional attributes coming from Adobe Experience Platform datasets."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_dataset"
+>title="Enrichment dataset"
+>abstract="The enrichment dataset contains the data you want to associate with the composition."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_enrich_criteria"
+>title="Enrichment criteria"
+>abstract="The enrichment criteria includes the Source join key and the Enrichment dataset join key. These two keys reconcile the source dataset and the enrichment dataset."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_enrich_attributes"
+>title="Enrichment attributes"
+>abstract="The enrichment attributes are the attributes you want to have associated with the composition."
 
 >[!IMPORTANT]
 >
@@ -200,6 +239,16 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ## [!UICONTROL Rank] {#rank-block}
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_ranking"
+>title="Rank block"
+>abstract="The Rank block lets you rank profiles based on a specific attribute and include them in your composition."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_rank_profilelimit_text"
+>title="Add profile limit"
+>abstract="The Add profile limit toggle lets you specify a maximum number of profiles to include as part of the ranking process."
+
 The **[!UICONTROL Rank]** block type allows you to rank and sort profiles based on a specified attribute and include these ranked profiles to your composition.
 
 To add a **[!UICONTROL Rank]** block, select the **+** icon, followed by **[!UICONTROL Rank]**.
@@ -225,6 +274,21 @@ Additionally, you can limit the number of profiles returned by enabling the **[!
 ![The Add profile limit toggle is highlighted, which lets you limit the number of profiles returned.](../images/ui/audience-composition/add-profile-limit.png)
 
 ## [!UICONTROL Split] {#split-block}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split"
+>title="Split block"
+>abstract="The Split block lets you divide your composition into multiple paths."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split_type"
+>title="Split type"
+>abstract="You can split your composition by Percent split or Attribute split. Percent split randomly splits profiles into multiple paths. Attribute split lets you split profiles based on a specified attribute."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split_otherprofiles_text"
+>title="Other profiles"
+>abstract="The Other profiles toggle lets you create an additional path with the remaining profiles that do not match any of the other paths' specified conditions."
 
 The **[!UICONTROL Split]** block type allows you to split your new audience into various sub-audiences. You can either split this audience based on percentage or by an attribute. When splitting your audience into sub-audiences, this split is **not** persistent. This means that the profiles may be in different sub-audiences for each evaluation.
 
