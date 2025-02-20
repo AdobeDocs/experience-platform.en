@@ -99,6 +99,7 @@ After adding a custom rule, select **[!UICONTROL Save]** to add the rule to your
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_exclude_type"
+>title="Exclude type"
 >abstract="You can either exclude profiles belonging to a specific audience (Exclude by audience) or exclude profiles based on a specific attribute (Exclude by attribute)."
 
 The **[!UICONTROL Exclude]** block type allows you to exclude a specified sub-audience or attributes from your new larger audience.
