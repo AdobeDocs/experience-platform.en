@@ -2,9 +2,9 @@
 title: Data Prep And Ingestion Blueprint
 description: Learn the methods by which data can be prepared and ingested into Adobe Experience Platform.
 ---
-# Data Prep and ingestion blueprint
+# Data prep and ingestion blueprint
 
-Data Prep includes the mapping of source data to an Experience Data Model (XDM) schema. It also includes performing transformations on data, including date formatting, field splitting/concatenation/conversions, and joining/merging/re-keying of records. Data Prep helps unify customer data to provide aggregated or filtered analysis, including reporting or preparing data for customer profile assembly/data science/activation.
+Data prep includes the mapping of source data to an Experience Data Model (XDM) schema. It also includes performing transformations on data, including date formatting, field splitting/concatenation/conversions, and joining/merging/re-keying of records. Data prep helps unify customer data to provide aggregated or filtered analysis, including reporting or preparing data for customer profile assembly/data science/activation.
 
 Read this document for all of the methods by which you can prepare your data for ingestion into Adobe Experience Platform.
 
@@ -257,7 +257,7 @@ View the following diagram for an illustration of the average performance guardr
 
 For more information, read the following documentation:
 
-* [Data Prep overview](../data-prep/home.md)
-* [Batch Ingestion overview](./batch-ingestion/overview.md)
+* [Data prep overview](../data-prep/home.md)
+* [Batch ingestion overview](./batch-ingestion/overview.md)
 * [Streaming ingestion overview](./streaming-ingestion/overview.md)
 * [Sources overview](../sources/home.md)
