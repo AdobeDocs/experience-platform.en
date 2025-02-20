@@ -20,6 +20,8 @@ View the following diagram for an illustration of the average performance guardr
 
 <img src="./images/blueprints/aep_data_flow_guardrails.svg" alt="[!DNL Experience Platform] Data Flow" style="border:1px solid #4a4a4a; margin-bottom: 15px;" width="90%" class="modal-image" />
 
+For more information, read the [data ingestion guardrails](./guardrails.md).
+
 ## Data ingestion methods
 
 <table cellspacing="0" class="Table" style="border-collapse:collapse; width:1123px">
