@@ -1,18 +1,18 @@
 ---
-title: Data preparation and ingestion blueprint
+title: Data Prep And Ingestion Blueprint
 description: Learn the methods by which data can be prepared and ingested into Adobe Experience Platform.
 ---
-# Data preparation and ingestion blueprint
+# Data Prep and ingestion blueprint
 
-Data preparation and ingestion blueprint encompasses all the methods by which data can be prepared and ingested into Adobe Experience Platform.
+Data Prep includes the mapping of source data to an Experience Data Model (XDM) schema. It also includes performing transformations on data, including date formatting, field splitting/concatenation/conversions, and joining/merging/re-keying of records. Data Prep helps unify customer data to provide aggregated or filtered analysis, including reporting or preparing data for customer profile assembly/data science/activation.
 
-Data preparation includes the mapping of source data to an Experience Data Model (XDM) schema. It also includes performing transformations on data, including date formatting, field splitting/concatenation/conversions, and joining/merging/re-keying of records. Data preparation helps unify customer data to provide aggregated or filtered analysis, including reporting or preparing data for customer profile assembly/data science/activation.
+Read this document for all of the methods by which you can prepare your data for ingestion into Adobe Experience Platform.
 
 ## Architecture
 
 View the following diagram for a visual breakdown of the Experience Platform and Real-Time CDP ingestion architecture.
 
-<img src="./images/blueprints/aep_data_flow.svg" alt="Reference architecture for the Data Preparation and Ingestion Blueprint" style="width:90%; border:1px solid #4a4a4a; margin-bottom: 15px;" class="modal-image" />
+<img src="./images/blueprints/aep_data_flow.svg" alt="Reference architecture for the Data Prep and Ingestion Blueprint" style="width:90%; border:1px solid #4a4a4a; margin-bottom: 15px;" class="modal-image" />
 
 ## Data ingestion guardrails
 
@@ -252,3 +252,12 @@ View the following diagram for an illustration of the average performance guardr
 </tr>
 </tbody>
 </table>
+
+## Next steps
+
+For more information, read the following documentation:
+
+* [Data Prep overview](../data-prep/home.md)
+* [Batch Ingestion overview](./batch-ingestion/overview.md)
+* [Streaming ingestion overview](./streaming-ingestion/overview.md)
+* [Sources overview](../sources/home.md)
