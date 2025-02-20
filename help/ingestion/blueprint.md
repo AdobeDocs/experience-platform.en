@@ -246,7 +246,7 @@ For more information, read the [data ingestion guardrails](./guardrails.md).
 </td>
 <td style="background-color:#cddbff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:62px; vertical-align:top; width:277px">
 <ul>
-<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Examples: MailChimp, One Trust, Zendesk</span></span></span></li>
+<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Examples: [[!DNL Mailchimp]](../sources/connectors/marketing-automation/mailchimp.md), [[!DNL OneTrust]](../sources/connectors/consent-and-preferences/onetrust.md), [[!DNL Zendesk]](../sources/connectors/customer-success/zendesk.md)</span></span></span></li>
 </ul>
 
 <p>&nbsp;</p>

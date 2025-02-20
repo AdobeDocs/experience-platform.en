@@ -38,6 +38,7 @@ role: Developer
   - [Retrieve error diagnostics](quality/error-diagnostics.md)
   - [Retrieve failed batches](quality/retrieve-failed-batches.md)
   - [Streaming ingestion validation](quality/streaming-validation.md)
+- [Data prep and ingestion blueprint](blueprint.md)
 - [Guardrails for data ingestion](guardrails.md)
 - [Source connectors](source-connectors.md)
 - [Batch Ingestion API reference](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
