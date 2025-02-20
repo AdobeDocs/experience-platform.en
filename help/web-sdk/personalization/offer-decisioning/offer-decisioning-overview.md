@@ -6,10 +6,6 @@ exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
 ---
 # Using Offer Decisioning with the Platform Web SDK
 
->[!NOTE]
->
->The use of Offer Decisioning in Adobe Experience Platform Web SDK is available in early access to select users. This functionality is not available to all organizations.
-
 Adobe Experience Platform [!DNL Web SDK] can deliver and render personalized offers that are managed in Offer Decisioning. You can create your offers and other related objects using the Offer Decisioning user interface (UI) or APIs.
 
 ## Prerequisites
