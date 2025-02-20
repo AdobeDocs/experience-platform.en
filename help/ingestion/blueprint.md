@@ -78,7 +78,7 @@ For more information, read the [data ingestion guardrails](./guardrails.md).
 </td>
 <td style="background-color:#cddbff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:39px; vertical-align:top; width:282px">
 <ul>
-<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Data is streamed directly to the hub so no real-time Edge segmentation or event forwarding.</span></span></span></li>
+<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Data is streamed directly to the hub, with no real-time Edge segmentation or event forwarding.</span></span></span></li>
 </ul>
 </td>
 </tr>
@@ -114,7 +114,7 @@ For more information, read the [data ingestion guardrails](./guardrails.md).
 </td>
 <td style="background-color:#cddbff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:39px; vertical-align:top; width:282px">
 <ul>
-<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Recommended approach is migration to Web/Mobile SDK over traditional application SDKs.</span></span></span></li>
+<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">The recommended approach is to migrate to the Web/Mobile SDK instead of using traditional application SDKs.</span></span></span></li>
 </ul>
 </td>
 </tr>
@@ -124,7 +124,7 @@ For more information, read the [data ingestion guardrails](./guardrails.md).
 </td>
 <td style="background-color:#e8eeff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:39px; vertical-align:top; width:401px">
 <ul style="list-style-type:square">
-<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Ingestion of a enterprise event stream, typically used for sharing enterprise data to multiple down-stream applications. </span></span></span></li>
+<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Ingestion of an enterprise event stream, typically used for sharing enterprise data to multiple downstream applications. </span></span></span></li>
 </ul>
 </td>
 <td style="background-color:#e8eeff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:39px; vertical-align:top; width:218px">
@@ -132,7 +132,7 @@ For more information, read the [data ingestion guardrails](./guardrails.md).
 </td>
 <td style="background-color:#e8eeff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:39px; vertical-align:top; width:282px">
 <ul>
-<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Must be streamed in XDM format.</span></span></span></li>
+<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Data must be streamed in XDM format.</span></span></span></li>
 </ul>
 </td>
 </tr>
@@ -192,7 +192,7 @@ For more information, read the [data ingestion guardrails](./guardrails.md).
 </td>
 <td style="background-color:#e8eeff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:62px; vertical-align:top; width:277px">
 <ul>
-<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Must manage batches and files for ingestion</span></span></span></li>
+<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Must manage batches and files for ingestion.</span></span></span></li>
 </ul>
 </td>
 </tr>
@@ -246,7 +246,7 @@ For more information, read the [data ingestion guardrails](./guardrails.md).
 </td>
 <td style="background-color:#cddbff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:62px; vertical-align:top; width:277px">
 <ul>
-<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Examples: [[!DNL Mailchimp]](../sources/connectors/marketing-automation/mailchimp.md), [[!DNL OneTrust]](../sources/connectors/consent-and-preferences/onetrust.md), [[!DNL Zendesk]](../sources/connectors/customer-success/zendesk.md)</span></span></span></li>
+<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Mailchimp, OneTrust, Zendesk</span></span></span></li>
 </ul>
 
 <p>&nbsp;</p>
@@ -257,7 +257,7 @@ For more information, read the [data ingestion guardrails](./guardrails.md).
 
 ## Next steps
 
-For more information, read the following documentation:
+Now that you've learned how data can be prepared and ingested into Adobe Experience Platform, explore ingestion methods, data transformation, and source integration to enhance customer insights with the following documentation:
 
 * [Data prep overview](../data-prep/home.md)
 * [Batch ingestion overview](./batch-ingestion/overview.md)
