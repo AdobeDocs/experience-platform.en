@@ -33,7 +33,7 @@ The audience composition canvas is comprised of four different types of blocks: 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_audience"
 >title="Audience block"
->abstract="The Audience block allows you to the sub-audiences that you want to use to compose your new audience."
+>abstract="The Audience block lets you add the sub-audiences that you want to use to compose your new audience."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_merge_types"
@@ -77,6 +77,11 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 | [!UICONTROL Exclude overlap] | The audiences are combined, with only the audiences that are shared in **one, but not all** of them being added. This would be the equivalent of a XOR operation. |
 
 ### [!UICONTROL Build rule] {#build-rule}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_rule_builder"
+>title="Segment Builder"
+>abstract="You can use Segment Builder to add a custom rule for your composition."
 
 To add a custom rule to the Audience block, select **[!UICONTROL Build rule]**.
 
@@ -128,7 +133,12 @@ A list of audiences appears. Select **[!UICONTROL Add]** to add the audience you
 
 ### Exclude by attribute {#exclude-attribute}
 
-If you exclude by attribute, you can select which attributes you want to exclude by selecting the ![filter](/help/images/icons/project-edit.png) icon within the **[!UICONTROL Exclusion rule]** section.
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_exclude_attribute"
+>title="Exclude by attribute"
+>abstract="When you exclude by attribute, you can exclude specific profiles from appearing in your composition based on the attributes selected."
+
+If you exclude by attribute, you can select which attributes you want to exclude by selecting the ![filter](/help/images/icons/project-edit.png) icon within the **[!UICONTROL Exclusion rule]** section. Excluding the attribute lets you exclude any profile that contains this attribute from your resulting audience.
 
 ![The attribute section is highlighted, showing you where to select to choose the attribute to exclude.](../images/ui/audience-composition/exclude-attribute.png)
 
@@ -301,6 +311,16 @@ When splitting your audience, you can either split by percentage or split by att
 
 ### Split by percentage {#split-percentage}
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split_percentage"
+>title="Split by percentage"
+>abstract="You can randomly split the audience into multiple audiences, based on the number of paths and percentages provided."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split_persistent"
+>title="Persistent split"
+>abstract="You can make the percentage split persistent by enabling this option and selecting which identity namespace to persist the split on."
+
 When splitting by percentage, the audiences will be randomly split, based on the number of paths and percentages provided.
 
 For example, you could have three paths, each with a differing percentage of profiles.
@@ -326,6 +346,11 @@ Additionally, you can enable the **[!UICONTROL Other profiles]** toggle to creat
 ![The Other profiles toggle is highlighted.](../images/ui/audience-composition/split-other-profiles.png)
 
 ## Publishing your audience
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_publish"
+>title="Publish"
+>abstract="You can publish your composition to create the resulting audience(s) in Adobe Experience Platform."
 
 >[!IMPORTANT]
 >
