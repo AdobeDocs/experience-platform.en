@@ -61,7 +61,6 @@ In addition to audience compositions and segment definitions, you can use Adobe 
 >id="platform_segments_evaluation_streaming"
 >title="Streaming evaluation"
 >abstract="Streaming segmentation is an ongoing data selection process that updates your audiences in response to user activity."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html" text="Evaluate events in near real-time with streaming segmentation"
 
 Platform currently supports three methods of evaluating audiences: streaming segmentation, batch segmentation, and edge segmentation.
 
@@ -69,7 +68,7 @@ Platform currently supports three methods of evaluating audiences: streaming seg
 
 Streaming segmentation is an ongoing data selection process that updates your audiences in response to user activity. Once an audience has been built and saved, the segment definition is applied against incoming data to [!DNL Real-Time Customer Profile]. Additions and removals to the audience are processed regularly, ensuring your target audience remains relevant. 
 
-To learn more about streaming segmentation, please read the [streaming segmentation documentation](./api/streaming-segmentation.md).
+To learn more about streaming segmentation, please read the [streaming segmentation documentation](./methods/streaming-segmentation.md).
 
 ### Batch segmentation {#batch}
 
@@ -88,11 +87,10 @@ Batch audiences are automatically evaluated every 24 hours. If you want to evalu
 >id="platform_segments_evaluation_edge"
 >title="Edge evaluation"
 >abstract="Edge segmentation is the ability to evaluate segments in Platform instantaneously on the Edge Network, enabling same-page and next-page personalization use cases."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html" text="Edge segmentation UI guide"
 
-Edge segmentation is the ability to evaluate segments in Platform instantaneously [on the Edge Network](../web-sdk/home.md), enabling same-page and next-page personalization use cases. 
+Edge segmentation is the ability to evaluate segments in Platform instantaneously [on the Edge Network](../landing/edge-and-hub-comparison.md), enabling same-page and next-page personalization use cases. 
 
-To learn more about edge segmentation, please read either the [API documentation](./api/edge-segmentation.md) or the [UI documentation](./ui/edge-segmentation.md).
+To learn more about edge segmentation, please read either the [API documentation](./methods/edge-segmentation.md) or the [UI documentation](./methods/edge-segmentation.md).
 
 ## Access segmentation results
 
@@ -159,7 +157,7 @@ By assigning a variable to the purchase state attribute, your dynamic segment de
  
 ### Multi-entity segmentation {#multi-entity}
 
-With the advanced multi-entity segmentation feature, you can extend [!DNL Real-Time Customer Profile] data with additional data based on products, stores, or other non-person, also known as "dimension" entities. As a result, [!DNL Segmentation Service] can access additional fields during segment definition as if they were native to the [!DNL Profile] data store. Multi-entity segmentation provides flexibility when identifying audiences based on data relevant to your unique business needs. For more information, including use cases and workflows, refer to the [multi-entity segmentation guide](multi-entity-segmentation.md).
+With the advanced multi-entity segmentation feature, you can extend [!DNL Real-Time Customer Profile] data with additional data based on products, stores, or other non-person, also known as "dimension" entities. As a result, [!DNL Segmentation Service] can access additional fields during segment definition as if they were native to the [!DNL Profile] data store. Multi-entity segmentation provides flexibility when identifying audiences based on data relevant to your unique business needs. For more information, including use cases and workflows, refer to the [multi-entity segmentation guide](./tutorials/multi-entity-segmentation.md).
 
 ## [!DNL Segmentation Service] data types
 
