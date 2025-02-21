@@ -156,7 +156,7 @@ Time-independent attributes, also known as "record data" are modeled using [!DNL
 
 While the Profile data store maintaining profile data is not a relational store, Profile permits integration with small dimension entities in order to create audiences in a simplified and intuitive manner. This integration is known as [multi-entity segmentation](../segmentation/tutorials/multi-entity-segmentation.md).
 
-Your organization may also define XDM classes to describe things other than individuals, such as stores, products, or properties. These schemas, which are modeled using XDM classes other than the XDM Individual Profile class are called "dimension entities" (also known as "lookup entities") and do not contain time-series data. Schemas that represent dimension entities are linked to profile entities through the use of [schema relationships](../xdm/tutorials/relationship-ui.md).
+Your organization may also define XDM classes to describe things other than individuals, such as stores, products, or properties. These schemas, which are modeled using XDM classes other than the XDM Individual Profile class, are called "dimension entities" (also known as "lookup entities") and do not contain time-series data. Schemas that represent dimension entities are linked to profile entities through the use of [schema relationships](../xdm/tutorials/relationship-ui.md).
 
 Dimension entities provide lookup data which aids and simplifies multi-entity segment definitions and must be small enough that the segmentation engine can load the entire data set into memory for optimal processing (fast point lookup).
 
