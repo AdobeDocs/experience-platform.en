@@ -30,6 +30,7 @@ Select the **[!UICONTROL Catalog]** tab. From the list of available extensions, 
 After selecting **[!UICONTROL Install]**, you must configure the Adobe Content Analytics tag extension and save the configuration.
 
 
+<!--
 ## Configure schema
 
 The [Content Analytics guided configuration wizard](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) automatically populates the proper value for the **[!UICONTROL Tenant Schema Name]**. 
@@ -40,6 +41,7 @@ The [Content Analytics guided configuration wizard](https://experienceleague.ado
 >
 >Do not modify the value for **[!UICONTROL Tenant Schema Name]**.
 
+-->
 
 ## Configure datastreams
 
