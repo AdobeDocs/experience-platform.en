@@ -129,7 +129,7 @@ Data Governance is managed at several points. These include deciding what data i
 
 ### Handling opt-out and data privacy requests
 
-[!DNL Experience Platform] enables your customers to send opt-out requests related to the usage and storage of their data within [!DNL Real-Time Customer Profile]. For more information on how opt-out requests are handled, please see the documentation on [honoring opt-out requests](../segmentation/consents.md).
+[!DNL Experience Platform] enables your customers to send opt-out requests related to the usage and storage of their data within [!DNL Real-Time Customer Profile]. For more information on how opt-out requests are handled, please see the documentation on [honoring opt-out requests](../segmentation/tutorials/consents.md).
 
 ## Next steps and additional resources
 
