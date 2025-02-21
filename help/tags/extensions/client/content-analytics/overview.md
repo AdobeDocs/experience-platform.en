@@ -19,9 +19,9 @@ This document explains how to configure the tag extension in the Tags UI.
 
 ### Manual installation
 
-In case of a manual configuration, the Adobe Content Analytics tag extension needs a property to be installed on. If you have not done so already, see the documentation on [creating a tag property](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html).
+In case of a manual configuration, the Adobe Content Analytics tag extension needs a property to be installed on. If you have not done so already, see the documentation on [creating a tag property](https://experienceleague.adobe.com/en/docs/platform-learn/implement-in-websites/configure-tags/create-a-property).
 
-After you have created a property or when you select the propery created using the [Content Analytics guided configuration wizard](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided), open the property and select the **[!UICONTROL Extensions]** tab on the left side bar.
+After you have created a property or when you select the property created using the [Content Analytics guided configuration wizard](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided), open the property and select the **[!UICONTROL Extensions]** tab on the left side bar.
 
 Select the **[!UICONTROL Catalog]** tab. From the list of available extensions, find the **[!DNL Adobe Content Analytics]** extension and select **[!UICONTROL Install]**.
 
@@ -32,13 +32,13 @@ After selecting **[!UICONTROL Install]**, you must configure the Adobe Content A
 
 ## Configure schema
 
-The [Content Analytics guided configuration wizard](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) automatically populates the proper value for **[!UICONTROL Tenant Schema Name]**. 
+The [Content Analytics guided configuration wizard](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) automatically populates the proper value for the **[!UICONTROL Tenant Schema Name]**. 
 
 ![Image that shows the Schema configuration of the Adobe Content Analytics tag extension in the Tags UI](assets/aca-tag-schema.png)
 
 >[!WARNING]
 >
->You should not modify the value for **[!UICONTROL Tenant Schema Name]**.
+>Do not modify the value for **[!UICONTROL Tenant Schema Name]**.
 
 
 ## Configure datastreams
@@ -62,7 +62,7 @@ See the guide on [datastreams](../../../../datastreams/overview.md) to learn how
 
 ## Configure Event Filtering
 
-In the **[!UICONTROL Event Filtering]** section you can modify the regular expressions to filter **[!UICONTROL Page URLs]** and **[!UICONTROL Assets URLs]** when collecting data for Content Analytics. The regular expressions you have defined in the [Content Analytics guided configuration wizard](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) are populated automatically.
+In the **[!UICONTROL Event Filtering]** section, you can modify the regular expressions to filter **[!UICONTROL Page URLs]** and **[!UICONTROL Assets URLs]** when collecting data for Content Analytics. The regular expressions that you have defined in the [Content Analytics guided configuration wizard](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) are populated automatically.
 
 ![Image showing the event filtering settings of the Adobe Content Analytics tag extension in the Tags UI](assets/aca-tag-eventfiltering.png)
 
