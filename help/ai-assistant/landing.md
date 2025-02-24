@@ -36,7 +36,6 @@ Get started by reading the material in the links below to familiarize yourself w
     </tr>
 </table>
 
-
 ## New features
 
 Get a glimpse of the newest enhancements in AI Assistant, including capabilities currently in the Alpha or Beta stages.
@@ -76,6 +75,21 @@ You can use AI Assistant for Customer Support to seamlessly troubleshoot without
 [![image](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/customer-support.md)
 
 >[!ENDTABS]
+
+## Security features of AI Assistant {#security}
+
+
+Watch the following video for more information on the security features of AI Assistant:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441066/?learn=on)
+
+>[!BEGINSHADEBOX]
+
+**Read the AI Assistant security fact sheet**
+
+For more information about AI Assistant, read the [security fact sheet for AI Assistant in Adobe Experience Platform](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf).
+
+>[!ENDSHADEBOX]
 
 ## Video library
 
@@ -177,20 +191,6 @@ Watch the following videos for additional AI Assistant use case examples:
 * [Get to know AI Assistant for Audiences](https://www.youtube.com/live/DYsyii7ldck)
 
 >[!ENDTABS]
-
-## Additional resources 
-
->[!BEGINSHADEBOX]
-
-**Read the AI Assistant security fact sheet**
-
-For more information about AI Assistant, read the [security fact sheet for AI Assistant in Adobe Experience Platform](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf).
-
->[!ENDSHADEBOX]
-
-Watch the following video for more information on the security features of AI Assistant:
-
->[!VIDEO](https://video.tv.adobe.com/v/3441066/?learn=on)
 
 Browse the links below to further your understanding of AI Assistant use cases, capabilities, and much more.
 

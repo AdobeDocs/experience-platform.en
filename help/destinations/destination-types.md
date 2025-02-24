@@ -75,7 +75,7 @@ You can export three types of audiences from Experience Platform to various dest
 * Account audiences
 * Prospect audiences
 
-Learn more about the [various audience types](/help/segmentation/ui/account-audiences.md#terminology).
+Learn more about the [various audience types](/help/segmentation/types/account-audiences.md#terminology).
 
 A symbol on the destination card shows which types of audiences you can export to each destination. 
 
