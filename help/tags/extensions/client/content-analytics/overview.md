@@ -1,6 +1,8 @@
 ---
 title: Adobe Content Analytics Extension Overview
 description: Learn about the Adobe Content Analytics tag extension in Adobe Experience Platform.
+hide: yes
+hidefromtoc: yes
 ---
 # Adobe Content Analytics extension overview
 
