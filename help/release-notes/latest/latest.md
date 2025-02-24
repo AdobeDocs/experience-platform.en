@@ -68,7 +68,7 @@ Use data prep to map, transform, and validate data to and from Experience Data M
 
 For more information, read the [Data Prep overview](../../data-prep/home.md).
 
-## Destinations {#destinations}
+## Destinations (updated February 20) {#destinations}
 
 [!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
@@ -91,6 +91,7 @@ For more information, read the [Data Prep overview](../../data-prep/home.md).
 | Use access labels to manage user access to destination dataflows | As part of the [[!UICONTROL attribute-based access control]](/help/access-control/abac/overview.md) functionality in Real-Time CDP, you can now apply access labels to [destination dataflows](/help/dataflows/ui/monitor-destinations.md). This way, you can ensure that only a subset of users in your organization get access to specific destination dataflows. <br> **Important**: When searching for destination dataflows using the search box at the top of the Experience Platform user interface, the results may include destination dataflows which your user access labels restrict you from seeing. This behavior will be corrected in a future update. |
 | [Audience-level reporting](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) for the [Marketo Engage connection](/help/destinations/catalog/adobe/marketo-engage.md) | You can now [view information](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) about the activated, excluded, or failed identities broken down on an audience level, for each audience that is part of the dataflows for this destination.|
 | External audiences support for the [TikTok](/help/destinations/catalog/social/tiktok.md) and [Snap Inc](/help/destinations/catalog/advertising/snap-inc.md) connections | You can activate external audiences to these destinations from [custom uploads](../../segmentation/ui/audience-portal.md#import-audience) and [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences). |
+| Export arrays, maps, and objects to cloud storage destinations | By using the new **[!UICONTROL Export arrays, maps, objects]** toggle when connecting to a cloud storage destination, you can new export complex objects to select destinations. [Read more](/help/destinations/ui/export-arrays-calculated-fields.md) about the functionality. |
 
 {style="table-layout:auto"}
 
@@ -98,6 +99,9 @@ For more information, read the [Data Prep overview](../../data-prep/home.md).
 
 - An issue in the Destination SDK testing tools has been fixed. Some customers or partners were encountering issues with the [sample profile generation tool](/help/destinations/destination-sdk/testing-api/streaming-destinations/sample-profile-generation-api.md) due to an unsupported format when the schema used for generating profiles included data types with a `No format` selector.
 - An issue when updating the `targetConnection` spec of destinations, using the Flow Service API, has been fixed. In some cases, the PATCH operation would behave similarly to a POST operation, corrupting existing dataflows. This issue is now fixed and all customers can use the Flow Service API to update their `targetConnection` spec. [Read more](/help/destinations/api/edit-destination.md#patch-target-connection).
+- When exporting profiles to file-based destinations, deduplication ensures that only one profile is exported when multiple profiles share the same deduplication key and the same reference timestamp. This release includes an update to the deduplication process, ensuring that successive runs with the same coordinates will always produce the same results, improving consistency. [Read more](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-same-timestamp). 
+
+For more information, read the [destinations overview](../../destinations/home.md).
 
 ## Sources {#sources}
 
