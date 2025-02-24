@@ -31,7 +31,13 @@ A profile is considered for Pseudonymous data expiration if it meets the followi
 
 ## Access {#access}
 
-Update this part!
+To add Pseudonymous profile data expiration to your organization, go the Profile dashboard and select **[!UICONTROL Settings]**.
+
+![The Settings button on the Profile dashboard is highlighted.](./images/pseudonymous-profiles/profile-settings.png)
+
+The [!UICONTROL Profile settings] popover appears. On this popover, you can set the number of days for the Pseudonymous profile data expiration as well as the identity namespace used for the data expiration. Select **[!UICONTROL Apply]** to save your data expiration settings.
+
+![The popover for adding Pseudonymous profile data expiration to your organization's profiles. The Apply button is highlighted.](./images/pseudonymous-profiles/profile-settings-data-expiry.png)
 
 ## Frequently asked questions {#faq}
 

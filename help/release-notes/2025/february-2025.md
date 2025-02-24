@@ -16,6 +16,7 @@ Updates to existing features and documentation in Adobe Experience Platform:
 - [Catalog Service](#catalog-service)
 - [Data Prep](#data-prep)
 - [Destinations](#destinations)
+- [Real-Time Customer Profile](#profile)
 - [Sources](#sources)
 - [Documentation updates](#documentation-updates)
   - [Edge network and hub comparison](#edge)
@@ -102,6 +103,17 @@ For more information, read the [Data Prep overview](../../data-prep/home.md).
 
 For more information, read the [destinations overview](../../destinations/home.md).
 
+## Real-Time Customer Profile {#profile}
+
+Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-Time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. Profile allows you to consolidate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
+
+| Feature | Description |
+| ------- | ----------- |
+| Pseudonymous profile data expiration | Manage your Pseudonymous profile data expiration in the Profile dashboard. To learn more about this feature and Pseudonymous Profiles, please read the [Pseudonymous Profile data expiration guide](../../profile/pseudonymous-profiles.md). |
+
+{style="table-layout:auto"}
+
+To learn more about Real-Time Customer Profile, read the [Profile overview](../../profile/home.md)
 
 ## Sources {#sources}
 
