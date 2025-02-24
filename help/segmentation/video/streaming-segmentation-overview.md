@@ -13,12 +13,12 @@ exl-id: 8092a614-4888-43e3-a02c-b1cf0eb45256
 ---
 # Streaming segmentation in the Experience Platform UI
 
-The following video is intended to support your understanding of streaming segmentation. It shows an example customer experience followed by a quick tour of key features in the [!DNL Platform] interface. To learn more about streaming segmentation and how to do streaming segmentation in the UI, please read the [streaming segmentation UI guide](../ui/streaming-segmentation.md).
+The following video is intended to support your understanding of streaming segmentation. It shows an example customer experience followed by a quick tour of key features in the [!DNL Platform] interface. To learn more about streaming segmentation and how to do streaming segmentation in the UI, please read the [streaming segmentation UI guide](../methods/streaming-segmentation.md).
 
-If you are interested in streaming segmentation using the Segmentation API, please read the [streaming segmentation API guide](../api/streaming-segmentation.md).
+If you are interested in streaming segmentation using the Segmentation API, please read the [streaming segmentation API guide](../methods/streaming-segmentation.md).
 
 >[!NOTE]
 >
->The Experience Platform user interface is frequently updated and may have changed since the recording of this video. For the most up-to-date information, please refer to the [streaming segmentation UI guide](../ui/streaming-segmentation.md).
+>The Experience Platform user interface is frequently updated and may have changed since the recording of this video. For the most up-to-date information, please refer to the [streaming segmentation UI guide](../methods/streaming-segmentation.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/36184?quality=12&learn=on)

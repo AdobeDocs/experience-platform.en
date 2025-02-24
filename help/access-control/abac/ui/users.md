@@ -4,7 +4,13 @@ title: Attribute-based Access Control Manage Users
 description: This document provides information on managing users and user groups through the Permissions interface in Adobe Experience Cloud
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
 ---
-# Manage users
+# Manage users {#manage-users}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_users_about"
+>title="What are users?"
+>abstract="Users are the individuals that have access to Experience Platform. An individual user's access to an organization's resources is managed through roles."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles" text="Manage roles"
 
 If you would like to view user details and roles they are assigned to, select the **[!UICONTROL Users]** tab. 
 

@@ -2,6 +2,7 @@
 solution: Experience Platform
 title: Refactored Segmentation Time Constraints UI Guide
 description: Segment Builder provides a rich workspace that allows you to interact with Profile data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties.
+hidefromtoc: true
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
 ---
 # Time constraints refactorization {#refactorization}

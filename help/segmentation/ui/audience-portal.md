@@ -227,6 +227,8 @@ Flexible audience evaluation lets you run a segmentation job on demand. Choose t
 >
 >When selecting audiences for flexible audience evaluation, the following conditions apply:
 >
+>- You can only use flexible audience evaluation **twice** per day. This limit resets at midnight (UTC).
+>- You have a **maximum** of 50 flexible audience evaluation runs per year.
 >- All the audiences **must** have an origin of "Segmentation Service".
 >- All the audiences **must** be evaluated using batch segmentation.
 >- All the audiences **must** be people-based audiences.
