@@ -1,6 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes February 2025
 description: The February 2025 release notes for Adobe Experience Platform.
+exl-id: 734a9484-516e-4dd7-9503-8fcdc50cbaac
 ---
 # Adobe Experience Platform release notes 
 
