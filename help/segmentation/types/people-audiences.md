@@ -2,6 +2,7 @@
 solution: Experience Platform
 title: People Audiences
 description: Learn how to target people using people audiences.
+exl-id: 922d1051-c93b-4213-bfae-579fe0ab67d3
 ---
 # People audiences guide
 
