@@ -111,7 +111,7 @@ For more information, read the [destinations overview](../../destinations/home.m
 
 | Feature | Description |
 | ------- | ----------- |
-| Persistent split | Audience Composer now supports persistent splits. You can have your split audiences remain constant when splitting by profile by adding an identity namespace to your Split block. More information about this feature can be found in the [Audience Composition documentation](../../segmentation/ui/audience-composition.md). |
+| Persistent split | Audience Composition now supports persistent splits. You can have your split audiences remain constant when splitting by profile by adding an identity namespace to your Split block. More information about this feature can be found in the [Audience Composition documentation](../../segmentation/ui/audience-composition.md). |
 
 For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md).
 
