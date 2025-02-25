@@ -16,6 +16,7 @@ Updates to existing features and documentation in Adobe Experience Platform:
 - [Catalog Service](#catalog-service)
 - [Data Prep](#data-prep)
 - [Destinations](#destinations)
+- [Segmentation Service](#segmentation)
 - [Sources](#sources)
 - [Documentation updates](#documentation-updates)
   - [Edge network and hub comparison](#edge)
@@ -101,6 +102,17 @@ For more information, read the [Data Prep overview](../../data-prep/home.md).
 
 For more information, read the [destinations overview](../../destinations/home.md).
 
+## Segmentation Service {#segmentation-service}
+
+[!DNL Segmentation Service] defines a particular subset of profiles by describing the criteria that distinguishes a marketable group of people within your customer base. Segments can be based on record data (such as demographic information) or time series events representing customer interactions with your brand.
+
+**New or updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Persistent split | Audience Composer now supports persistent splits. You can have your split audiences remain constant when splitting by profile by adding an identity namespace to your Split block. More information about this feature can be found in the [Audience Composition documentation](../../segmentation/ui/audience-composition.md). |
+
+For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md).
 
 ## Sources {#sources}
 

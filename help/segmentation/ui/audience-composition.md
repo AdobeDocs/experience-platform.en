@@ -313,7 +313,7 @@ When splitting your audience, you can either split by percentage or split by att
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_persistent"
 >title="Persistent split"
->abstract="You can make the percentage split persistent by enabling this option and selecting which identity namespace to persist the split on."
+>abstract="You can make the percentage split persistent by enabling this option and selecting an identity namespace."
 
 When splitting by percentage, the audiences will be randomly split, based on the number of paths and percentages provided.
 
