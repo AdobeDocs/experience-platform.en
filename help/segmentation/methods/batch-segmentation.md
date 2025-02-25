@@ -1,8 +1,8 @@
 ---
 title: Batch Segmentation Guide
 description: Learn about batch segmentation including what it is, how to create an audience evaluated using batch segmentation, and how to view your audiences created using batch segmentation.
+exl-id: b6fba2fb-8eec-4429-92fd-ece5c79d379d
 ---
-
 # Batch segmentation guide
 
 Batch segmentation is a segmentation evaluation method that lets you move profile data all at once to create corresponding audiences. 

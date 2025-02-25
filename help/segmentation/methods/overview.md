@@ -1,8 +1,8 @@
 ---
 title: Audience evaluation methods
 description: Learn about the different types of evaluation methods available on Adobe Experience Platform.
+exl-id: 54513369-42fa-4bab-803a-21d6dcd87660
 ---
-
 # Audience evaluation methods
 
 Adobe Experience Platform offers a variety of evaluation methods for segmenting your profiles into audiences.
