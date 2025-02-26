@@ -84,7 +84,7 @@ role: Developer
     * Adobe Client Data Layer {#client-data-layer}
       * [Overview](./extensions/client/client-data-layer/overview.md)
       * [Release notes](./extensions/client/client-data-layer/release-notes.md)
-    * Adobe Content Analytics {#contentanalytics}
+    * Adobe Content Analytics {#content-analytics}
       * [Overview](./extensions/client/content-analytics/overview.md)
     * Adobe ContextHub {#contexthub}
       * [Overview](./extensions/client/contexthub/overview.md)

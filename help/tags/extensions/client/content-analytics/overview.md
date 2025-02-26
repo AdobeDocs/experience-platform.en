@@ -3,6 +3,7 @@ title: Adobe Content Analytics Extension Overview
 description: Learn about the Adobe Content Analytics tag extension in Adobe Experience Platform.
 hide: yes
 hidefromtoc: yes
+exl-id: fcc46c86-e765-4bc7-bfdf-b8b10e8afacc
 ---
 # Adobe Content Analytics extension overview
 
@@ -79,4 +80,3 @@ In the **[!UICONTROL Event Filtering]** section, you can modify the regular expr
 You can use **[!UICONTROL Test Regex]** to test your regular expression in the **[!UICONTROL Regular Expression Tester]**.
 
 ![Image showing the regular expression tester of the Adobe Content Analytics tag extension in the Tags UI](assets/aca-tag-regextester.png)
-
