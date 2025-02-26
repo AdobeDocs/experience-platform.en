@@ -111,12 +111,14 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
          "acceptsCustomNamespaces":true
       }
    },
-   "audienceMetadataConfig":{
+   "segmentMappingConfig":{
       "mapExperiencePlatformSegmentName":false,
       "mapExperiencePlatformSegmentId":false,
-      "mapUserInput":false,
+      "mapUserInput":false
+   },
+   "audienceMetadataConfig":{
       "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
-   },   
+   },  
    "aggregation":{
       "aggregationType":"CONFIGURABLE_AGGREGATION",
       "configurableAggregation":{
@@ -223,10 +225,12 @@ If you use an audience metadata configuration, you must connect it to the destin
          "acceptsCustomNamespaces":true
       }
    },
-   "audienceMetadataConfig":{
+   "segmentMappingConfig":{
       "mapExperiencePlatformSegmentName":false,
       "mapExperiencePlatformSegmentId":false,
-      "mapUserInput":false,
+      "mapUserInput":false
+   },
+   "audienceMetadataConfig":{
       "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
    },   
    "aggregation":{

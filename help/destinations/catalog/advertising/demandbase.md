@@ -12,7 +12,7 @@ exl-id: a84609a2-f1d3-4998-9db4-ad59c0a0b631
 >
 >>The functionality to activate account audiences to the Demandbase destination is available for companies purchasing the [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) and [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) editions of Real-Time Customer Data Platform.
 
-Activate profiles for your Demandbase campaigns for audience targeting, personalization, and suppression, based on [account audiences](/help/segmentation/ui/account-audiences.md) .
+Activate profiles for your Demandbase campaigns for audience targeting, personalization, and suppression, based on [account audiences](/help/segmentation/types/account-audiences.md) .
 
 ## Use case {#use-case}
 

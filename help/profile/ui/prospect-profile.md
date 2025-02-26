@@ -56,4 +56,4 @@ To learn how you can use the prospect profiles functionality in Experience Platf
 
 ## Next steps
 
-After reading this guide, you now understand how prospect profiles can be used in Adobe Experience Platform. To learn how these prospect profiles can be used in audiences, please read the [prospect audiences guide](../../segmentation/ui/prospect-audience.md).
+After reading this guide, you now understand how prospect profiles can be used in Adobe Experience Platform. To learn how these prospect profiles can be used in audiences, please read the [prospect audiences guide](../../segmentation/types/prospect-audiences.md).

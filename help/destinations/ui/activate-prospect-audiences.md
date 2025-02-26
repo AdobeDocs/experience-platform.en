@@ -10,7 +10,7 @@ exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
 >
 >This functionality is available to customers who have purchased the Real-Time CDP Prime and Ultimate package. Contact your Adobe representative for more information. 
 
-This article explains the workflow required to export [prospect audiences](/help/segmentation/ui/prospect-audience.md) from Adobe Experience Platform to your preferred destination. 
+This article explains the workflow required to export [prospect audiences](/help/segmentation/types/prospect-audiences.md) from Adobe Experience Platform to your preferred destination. 
 
 ## Supported destinations {#supported-destinations}
 
@@ -20,7 +20,7 @@ Go to **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, and select t
 
 ## Prerequisites {#prerequisites}
 
-* You must first ingest [prospect profiles](/help/profile/ui/prospect-profile.md) and create [prospect audiences](/help/segmentation/ui/prospect-audience.md) before you can activate them to downstream destinations.
+* You must first ingest [prospect profiles](/help/profile/ui/prospect-profile.md) and create [prospect audiences](/help/segmentation/types/prospect-audiences.md) before you can activate them to downstream destinations.
 * To activate prospect audiences to destinations, you must have successfully connected to a destination. If you haven't done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported destinations, and configure the destination that you want to use. Read the UI tutorial on [connecting to destinations](./connect-destination.md) for more information.
 
 ### Required permissions {#permissions}
