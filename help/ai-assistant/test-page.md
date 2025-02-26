@@ -35,11 +35,16 @@ description: this is a page for testing
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="https://video.tv.adobe.com/v/3429845?learn=on" target="_blank" rel="referrer" title="Get to know AI Assistant">Get to know AI Assistant</a>
                     </p>
-                    <p class="is-size-6">Watch this video for an overview of AI Assistant in Adobe Experience Platform.</p>
+                    <p class="is-size-6">Watch this video for an introduction to AI Assistant in Adobe Experience Platform and for a breakdown of how you can use it to enhance productivity, accelerate workflows, and improve product understanding.</p>
                 </div>
-                <a href="https://video.tv.adobe.com/v/3429845?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
-                </a>
+                <div style="display: flex; flex-direction; row;">
+                  <a href="https://video.tv.adobe.com/v/3429845?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
+                  </a>
+                  <a href="landing.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Read</span>
+                  </a>
+                </div>
             </div>
         </div>
     </div>
@@ -47,7 +52,7 @@ description: this is a page for testing
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href=".https://video.tv.adobe.com/v/3441066/?learn=on" title="AI Assistant security overview" target="_blank" rel="referrer">
+                    <a href="https://video.tv.adobe.com/v/3441066/?learn=on" title="AI Assistant security overview" target="_blank" rel="referrer">
                         <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441066/?format=jpeg&nocache=1732633205785" alt="AI Assistant security overview"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -58,7 +63,7 @@ description: this is a page for testing
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="https://video.tv.adobe.com/v/3441066/?learn=on" target="_blank" rel="referrer" title="AI Assistant security overview">AI Assistant security overview</a>
                     </p>
-                    <p class="is-size-6">Watch this video for a comprehensive overview of the security features and processes of AI Assistant.</p>
+                    <p class="is-size-6">Watch this video for a comprehensive overview of the security features and processes of AI Assistant. Additionally, you can read the AI Assistant security fact sheet for more information on the security architecture of AI Assistant.</p>
                 </div>
                 <div style="display: flex; flex-direction: row;">
                   <a href="https://video.tv.adobe.com/v/3441066/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
@@ -88,11 +93,16 @@ description: this is a page for testing
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="https://video.tv.adobe.com/v/3441024?learn=on" target="_blank" rel="referrer" title="AI Assistant product knowledge">AI Assistant product knowledge</a>
                     </p>
-                    <p class="is-size-6">lorem ipsum</p>
+                    <p class="is-size-6">In AI Assistant, product knowledge refers to concepts and topics grounded in Experience League documentation. Watch this video for information on how you can use AI Assistant product knowledge to guide your tasks without leaving your workflows. </p>
                 </div>
-                <a href="https://video.tv.adobe.com/v/3441024?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
-                </a>
+                <div style="display: flex; flex-direction: row;">
+                  <a href="https://video.tv.adobe.com/v/3441024?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
+                  </a>
+                    <a href="home.md#product-knowledge" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Read</span>
+                  </a>
+                </div>
             </div>
         </div>
     </div>
@@ -111,7 +121,7 @@ description: this is a page for testing
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="https://video.tv.adobe.com/v/3444031/?learn=on" target="_blank" rel="referrer" title="AI Assistant operational insights">AI Assistant operational insights</a>
                     </p>
-                    <p class="is-size-6">lorem ipsum.</p>
+                    <p class="is-size-6">Operational insights refer to the answers that AI Assistant generates when queried about the metadata of your objects. Watch this video to learn how you can use operational insights to to discover usage, lineage, and hygiene insights on the data objects in your organization.</p>
                 </div>
                 <div style="display: flex; flex-direction: row;">
                   <a href="https://video.tv.adobe.com/v/3444031/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
@@ -141,11 +151,16 @@ description: this is a page for testing
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="https://video.tv.adobe.com/v/3436470/?learn=on" target="_blank" rel="referrer" title="Get access to AI Assistant">Get access to AI Assistant</a>
                     </p>
-                    <p class="is-size-6">lorem ipsum</p>
+                    <p class="is-size-6">Watch this video to learn how you can use the [!DNL Permissions] interface to gain access to AI Assistant.</p>
                 </div>
-                <a href="https://video.tv.adobe.com/v/3436470/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
-                </a>
+                <div style="display: flex; flex-direction: row;">
+                  <a href="https://video.tv.adobe.com/v/3436470/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
+                  </a>
+                  <a href="./access.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Read</span>
+                  </a>
+                </div>
             </div>
         </div>
     </div>
