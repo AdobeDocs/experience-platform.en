@@ -301,6 +301,3 @@ The following table outlines the available permissions for Experience Platform i
 ## Next steps
 
 By reading this guide, you have been introduced to the main principles of access control in Experience Platform. You can now continue to the [attribute based access control user guide](./abac/overview.md) for detailed steps on how use Experience Cloud to create roles and assign permissions for Experience Platform.
-
-
-https://git.corp.adobe.com/experience-platform/access-control-service/blob/master/rest/src/main/resources/permission-mappings/prod/permission-mappings-v3.json#L8404
