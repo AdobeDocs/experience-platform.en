@@ -18,6 +18,7 @@ Updates to existing features and documentation in Adobe Experience Platform:
 - [Data Prep](#data-prep)
 - [Destinations](#destinations)
 - [Sources](#sources)
+- [Segmentation Service](#segmentation)
 - [Documentation updates](#documentation-updates)
   - [Edge network and hub comparison](#edge)
   - [Expanded Flow Service API for sources](#flow-service)
@@ -101,6 +102,18 @@ For more information, read the [Data Prep overview](../../data-prep/home.md).
 - When exporting profiles to file-based destinations, deduplication ensures that only one profile is exported when multiple profiles share the same deduplication key and the same reference timestamp. This release includes an update to the deduplication process, ensuring that successive runs with the same coordinates will always produce the same results, improving consistency. [Read more](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-same-timestamp). 
 
 For more information, read the [destinations overview](../../destinations/home.md).
+
+## Segmentation Service {#segmentation-service}
+
+[!DNL Segmentation Service] defines a particular subset of profiles by describing the criteria that distinguishes a marketable group of people within your customer base. Segments can be based on record data (such as demographic information) or time series events representing customer interactions with your brand.
+
+**New or updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Persistent split | Audience Composition now supports persistent splits. You can have your split audiences remain constant when splitting by profile by adding an identity namespace to your Split block. More information about this feature can be found in the [Audience Composition documentation](../../segmentation/ui/audience-composition.md). |
+
+For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md).
 
 ## Sources {#sources}
 
