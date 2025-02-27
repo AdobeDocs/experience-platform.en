@@ -17,8 +17,18 @@ The Playbook Authoring Framework is designed to enable marketing analysts and Ma
 
 On the use case playbooks home page, select the "New Playbook" button. Then select "Generate playbook with Adobe AI" to create a playbook. As a sample prompt, enter "engage customers of Nike who browsed running shoes but did not complete the purchase." Select "Generate." The playbook is being generated using Adobe's R2D2 framework. Select the "Edit" button to modify the generated title and description. 
 
-Once the 
+## Playbook distribution
 
-Two future innovations:
+Sandbox tooling - add mocks. This leverages some part of sandbox tooling. Context is sharing of objects between IMS Orgs.
+
+## Do's and don'ts
+
+Some pre-requisites
+
+## Known limitations
+
+## Next steps
+
+<!-- Two future innovations:
 1. Persona service will replace static target audience and cohort service. It will identify the right cohort for a particular playbook and dynamically link audiences present in Platform to the playbook. Persona service is where 
-2. We are doing to introduce an innovation which will generate a journey directly basis the mind map. 
+2. We are doing to introduce an innovation which will generate a journey directly basis the mind map.  -->
