@@ -1,28 +1,16 @@
 ---
-title: Data Prep And Ingestion Blueprint
-description: Learn the methods by which data can be prepared and ingested into Adobe Experience Platform.
+title: Data Prep And Ingestion Methods Overview
+description: Learn about the different ways that you can prepare and ingest your data into Adobe Experience Platform.
 ---
-# Data prep and ingestion blueprint
+# Data prep and ingestion methods overview
+
+Data ingestion in Adobe Experience Platform can be divided into two main categories: streaming ingestion and batch ingestion. 
 
 Data prep includes the mapping of source data to an Experience Data Model (XDM) schema. It also includes performing transformations on data, including date formatting, field splitting/concatenation/conversions, and joining/merging/re-keying of records. Data prep helps unify customer data to provide aggregated or filtered analysis, including reporting or preparing data for customer profile assembly/data science/activation.
 
 Read this document for all of the methods by which you can prepare your data for ingestion into Adobe Experience Platform.
 
-## Architecture
-
-View the following diagram for a visual breakdown of the Experience Platform and Real-Time CDP ingestion architecture.
-
-<img src="./images/blueprints/aep_data_flow.svg" alt="Reference architecture for the Data Prep and Ingestion Blueprint" style="width:90%; border:1px solid #4a4a4a; margin-bottom: 15px;" class="modal-image" />
-
-## Data ingestion guardrails
-
-View the following diagram for an illustration of the average performance guardrails and latency for data ingestion into Experience Platform.
-
-<img src="./images/blueprints/aep_data_flow_guardrails.svg" alt="[!DNL Experience Platform] Data Flow" style="border:1px solid #4a4a4a; margin-bottom: 15px;" width="90%" class="modal-image" />
-
-For more information, read the [data ingestion guardrails](./guardrails.md).
-
-## Data ingestion methods
+## Streaming ingestion
 
 <table cellspacing="0" class="Table" style="border-collapse:collapse; width:1123px">
 <tbody>
@@ -156,6 +144,8 @@ For more information, read the [data ingestion guardrails](./guardrails.md).
 </tr>
 </tbody>
 </table>
+
+## Batch ingestion
 
 <table cellspacing="0" class="Table" style="border-collapse:collapse; width:1105px">
 <tbody>
