@@ -124,7 +124,7 @@ The following table outlines the available permissions for Experience Platform i
 | [!DNL Adobe Mix Modeler] | [!UICONTROL Manage Adobe Mix Modeler Models Configurations] | The ability to view and modify models configurations. |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL View Adobe Mix Modeler Models Configurations] | Read-only access to models configurations. |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL Manage Adobe Mix Modeler Models Plans Configurations] | The ability to view and modify plans configurations. |
-| [!DNL Adobe Mix Modeler] | [!UICONTROL View Adobe Mix Modeler Models Plans Configurations] | Read-only access to pClans configurations. |
+| [!DNL Adobe Mix Modeler] | [!UICONTROL View Adobe Mix Modeler Models Plans Configurations] | Read-only access to plans configurations. |
 | [!DNL AI Assistant] | [!UICONTROL Enable AI Assistant] | Ability to ask the [AI assistant](../ai-assistant/access.md) questions. |
 | [!DNL AI Assistant] | [!UICONTROL View Operational Insights] | Access to obtain responses to [operational insights](../ai-assistant/home.md##operational-insights) queries. |
 <!-- | [!DNL AI Assistant] | [!UICONTROL Generate Content] | Enable users to generate content using the Varys service. | -->
@@ -142,114 +142,113 @@ The following table outlines the available permissions for Experience Platform i
 | [!DNL B2B Dashboards] | [!UICONTROL Manage B2B Engagement Dashboards] | Ability to view and access **[!UICONTROL Dashboard]** in the left nav. |
 | [!DNL B2B Channel Configurations] | [!UICONTROL Manage B2B Channels Configurations] | Ability to view and access **[!UICONTROL Channels]** in the left nav. Users with access to **[!UICONTROL Channels]** should have access to all Channels CRUD functions. |
 | [!DNL B2B Journeys] | [!UICONTROL Manage B2B Account Journeys] | Ability to view and access **[!UICONTROL Account Journeys]** in the left nav. Users with access to **[!UICONTROL Account Journeys]** should have access to all Account Journeys CRUD functions. |
-<!-- | [!DNL Campaigns] | [!UICONTROL Manage Campaigns] | MISSING DESCRIPTION | -->
+| [!DNL Campaigns] | [!UICONTROL Manage Campaigns] | Access to read, create, edit, and delete campaigns. |
 <!-- | [!DNL Campaigns] | [!UICONTROL Approve and Publish Campaigns] | MISSING DESCRIPTION |  -->
-<!-- | [!DNL Campaigns] | [!UICONTROL Publish Campaigns] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Campaigns] | [!UICONTROL View Campaigns] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Campaigns] | [!UICONTROL View Campaigns Report] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Channel Configurations] | [!UICONTROL View Messages General Settings] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Channel Configurations] | [!UICONTROL Manage Subdomains Delegations] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Channel Configurations] | [!UICONTROL Manage IP Pools] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Channel Configurations] | [!UICONTROL Manage Messages General Settings] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Channel Configurations] | [!UICONTROL Manage Messages Presets] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Channel Configurations] | [!UICONTROL View Messages Presets] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Channel Configurations] | [!UICONTROL Manage PTR Records] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Channel Configurations] | [!UICONTROL View PTR Records] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Channel Configurations] | [!UICONTROL Manage Suppression] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Channel Configurations] | [!UICONTROL View Suppression List] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Channel Configurations] | [!UICONTROL Export Suppression List] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Channel Configurations] | [!UICONTROL Manage Landing Page Settings] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Channel Configurations] | [!UICONTROL Manage SMS Settings] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Channel Configurations] | [!UICONTROL Manage SMS Subdomains] | MISSING DESCRIPTION | -->
+| [!DNL Campaigns] | [!UICONTROL Publish Campaigns] | Ability to publish campaigns. |
+| [!DNL Campaigns] | [!UICONTROL View Campaigns] | Read-only access to campaigns. |
+| [!DNL Campaigns] | [!UICONTROL View Campaigns Report] | Read-only access to campaign reports. |
+| [!DNL Channel Configurations] | [!UICONTROL View Messages General Settings] | Read-only access to messages general settings. |
+| [!DNL Channel Configurations] | [!UICONTROL Manage Subdomains Delegations] | Access to read, create, edit, and delete subdomain delegations. |
+| [!DNL Channel Configurations] | [!UICONTROL Manage IP Pools] | Access to read, create, and edit IP pools. |
+| [!DNL Channel Configurations] | [!UICONTROL Manage Messages General Settings] | Access to read, create, edit, and delete messages general settings. |
+| [!DNL Channel Configurations] | [!UICONTROL Manage Messages Presets] | Access to read, create, edit, and delete messages presets. |
+| [!DNL Channel Configurations] | [!UICONTROL View Messages Presets] | Read-only access to messages presets. |
+| [!DNL Channel Configurations] | [!UICONTROL Manage PTR Records] | Access to read and edit PTR records. |
+| [!DNL Channel Configurations] | [!UICONTROL View PTR Records] | Read-only access to PTR records. |
+| [!DNL Channel Configurations] | [!UICONTROL Manage Suppression] | Access to read, create, edit, and delete suppression rules. |
+| [!DNL Channel Configurations] | [!UICONTROL View Suppression List] | Read-only access to the suppression list. |
+| [!DNL Channel Configurations] | [!UICONTROL Export Suppression List] | Access to export the suppression list as a CSV file. |
+| [!DNL Channel Configurations] | [!UICONTROL Manage Landing Page Settings] | Read, create, edit, and delete landing page settings. |
+| [!DNL Channel Configurations] | [!UICONTROL Manage SMS Settings] | Read, create, edit, and delete SMS settings. |
+| [!DNL Channel Configurations] | [!UICONTROL Manage SMS Subdomains] | Read, create, edit, and delete SMS subdomains. |
 <!-- | [!DNL Channel Configurations] | [!UICONTROL Manage File Routing] | MISSING DESCRIPTION | -->
 <!-- | [!DNL Channel Configurations] | [!UICONTROL View File Routing] | MISSING DESCRIPTION | -->
-| [!DNL Channel Configurations] | [!UICONTROL Manage Seedlist] | The ability to create and edit the Seedlist. | *
-| [!DNL Channel Configurations] | [!UICONTROL Manage Language Settings] | The ability to create and edit language settings. | *
-| [!DNL Channel Configurations] | [!UICONTROL Manage Web Subdomains] | The ability to create and edit CJM web domains. | *
-| [!DNL Channel Configurations] | [!UICONTROL Manage Push Credentials] | The ability to create, edit, and delete push credentials. | *
-| [!DNL Collaborations] | [!UICONTROL Manage Collaboration Instances] | View, create, update, and delete an organization's collaboration instances. Discover other organizations' collaboration instances. | *
-| [!DNL Collaborations] | [!UICONTROL Read Collaboration Instances] | Read an organization's collaboration instances and discover other organizations' collaboration instances. | *
-| [!DNL Collaborations] | [!UICONTROL Manage Connection Invites] | View, create, and delete connection invites initiated by your organization. Accept and decline connection invite initiated by other organizations. | *
-| [!DNL Collaborations] | [!UICONTROL Read Connection Invites] | Read-only access to connection invites. | *
-| [!DNL Collaborations] | [!UICONTROL Manage Collaboration Connections] | An advertiser can view, create, and update settings as well as submit and delete connections. A publisher can view, accept, or decline connections. | *
-| [!DNL Collaborations] | [!UICONTROL Read Collaboration Connections] | Read-only access to connections. | *
-| [!DNL Collaborations] | [!UICONTROL Manage Audience Data] | Onboard and discover audiences. Update public, private, and custom audiences and manage Audience Inventory metadata settings. | *
-| [!DNL Collaborations] | [!UICONTROL Read Audience Data] | Read and discover audiences. | *
-| [!DNL Collaborations] | [!UICONTROL Manage Measurement Data] | Onboard, update, and delete measurement data. | *
-| [!DNL Collaborations] | [!UICONTROL Read Measurement Data] | Read-only access to measurement data. | *
-| [!DNL Collaborations] | [!UICONTROL Manage Projects] | View, create, update, and delete projects for any of the discover, share, activate, and measurement activities. | *
-| [!DNL Collaborations] | [!UICONTROL Read Projects] | View projects for any of the discover, share, activate, and measurement activities. | *
-| [!DNL Collaborations] | [!UICONTROL Read User Activities] | Read-only access to user activities. | *
-| [!DNL Collaborations] | [!UICONTROL Export User Activities] | Export user activities. | *
-| [!DNL Collaborations] | [!UICONTROL Read Collaboration Credit Monitoring] | Credit monitoring at the organization and instance level. | *
-| [!DNL Computed Attributes] | [!UICONTROL View Computed attributes] | Read-only access for computed attributes tab, inventory, and details. | *
-| [!DNL Computed Attributes] | [!UICONTROL Manage Computed attributes] | Access to read, create, delete drafts, and deactivate computed attributes. | *
-<!-- | [!DNL Customer Managed Keys] [!UICONTROL Manage Customer Managed Keys] MISSING DESCRIPTION | -->
-| [!DNL Dashboards] | [!UICONTROL View License Usage Dashboard] | Read-only access to view the license usage dashboard. | *
-| [!DNL Dashboards] | [!UICONTROL Manage Standard Dashboards] | Add custom attributes that are not yet in the data warehouse. | *
-| [!DNL Dashboards] | [!UICONTROL View Standard Dashboards] | Read-only access to view the license usage dashboard. | *
-<!-- | [!DNL Dashboards] | [!UICONTROL Manage Custom Dashboards] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Dashboards] | [!UICONTROL View Custom Dashboards] | MISSING DESCRIPTION | -->
-| [!DNL Dashboards] | [!UICONTROL Manage Report Schedules] | Ability to create schedules. | *
-<!-- | [!DNL Data Collection] | [!UICONTROL Manage Datastreams] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Data Collection] | [!UICONTROL View Datastreams] | MISSING DESCRIPTION | -->
-| [!DNL Data Governance] | [!UICONTROL Manage Usage Labels] | Access to read, create, and delete usage labels. | *
-| [!DNL Data Governance] | [!UICONTROL Manage Data Usage Policies] | Access to read, create, edit, and delete data usage policies. | *
-| [!DNL Data Governance] | [!UICONTROL View Data Usage Policies] | Read-only access for data usage policies belonging to your organization. | *
-| [!DNL Data Governance] | [!UICONTROL View User Activity Log] | Read-only access to view recorded [audit logs](../landing/governance-privacy-security/audit-logs/overview.md) of Platform activities. | *
+| [!DNL Channel Configurations] | [!UICONTROL Manage Seedlist] | The ability to create and edit the Seedlist. |
+| [!DNL Channel Configurations] | [!UICONTROL Manage Language Settings] | The ability to create and edit the language settings. |
+| [!DNL Channel Configurations] | [!UICONTROL Manage Web Subdomains] | The ability to create and edit CJM web subdomains. |
+| [!DNL Channel Configurations] | [!UICONTROL Manage Push Credentials] | The ability to create, edit, and delete push credentials. |
+| [!DNL Collaborations] | [!UICONTROL Manage Collaboration Instances] | View, create, update, and delete an organization's collaboration instances. Discover other organizations' collaboration instances. |
+| [!DNL Collaborations] | [!UICONTROL Read Collaboration Instances] | Read an organization's collaboration instances and discover other organizations' collaboration instances. |
+| [!DNL Collaborations] | [!UICONTROL Manage Connection Invites] | View, create, and delete connection invites initiated by your organization. Accept and decline connection invite initiated by other organizations. |
+| [!DNL Collaborations] | [!UICONTROL Read Connection Invites] | Read-only access to connection invites. |
+| [!DNL Collaborations] | [!UICONTROL Manage Collaboration Connections] | An advertiser can view, create, and update settings as well as submit and delete connections. A publisher can view, accept, or decline connections. |
+| [!DNL Collaborations] | [!UICONTROL Read Collaboration Connections] | Read-only access to connections. |
+| [!DNL Collaborations] | [!UICONTROL Manage Audience Data] | Onboard and discover audiences. Update public, private, and custom audiences and manage Audience Inventory metadata settings. |
+| [!DNL Collaborations] | [!UICONTROL Read Audience Data] | Read and discover audiences. |
+| [!DNL Collaborations] | [!UICONTROL Manage Measurement Data] | Onboard, update, and delete measurement data. |
+| [!DNL Collaborations] | [!UICONTROL Read Measurement Data] | Read-only access to measurement data. |
+| [!DNL Collaborations] | [!UICONTROL Manage Projects] | View, create, update, and delete projects for any of the discover, share, activate, and measurement activities. |
+| [!DNL Collaborations] | [!UICONTROL Read Projects] | View projects for any of the discover, share, activate, and measurement activities. |
+| [!DNL Collaborations] | [!UICONTROL Read User Activities] | Read-only access to user activities. |
+| [!DNL Collaborations] | [!UICONTROL Export User Activities] | Export user activities. |
+| [!DNL Collaborations] | [!UICONTROL Read Collaboration Credit Monitoring] | Credit monitoring at the organization and instance level. |
+| [!DNL Computed Attributes] | [!UICONTROL View Computed attributes] | Read-only access for computed attributes tab, inventory, and details. |
+| [!DNL Computed Attributes] | [!UICONTROL Manage Computed attributes] | Access to read, create, delete drafts, and deactivate computed attributes. |
+| [!DNL Customer Managed Keys] | [!UICONTROL Manage Customer Managed Keys] | Access to view and configure customer managed keys. |
+| [!DNL Dashboards] | [!UICONTROL View License Usage Dashboard] | Read-only access to view the license usage dashboard. |
+| [!DNL Dashboards] | [!UICONTROL Manage Standard Dashboards] | Add custom attributes that are not yet in the data warehouse. |
+| [!DNL Dashboards] | [!UICONTROL View Standard Dashboards] | Read-only access to view the license usage dashboard. |
+| [!DNL Dashboards] | [!UICONTROL Manage Custom Dashboards] | Access to create or edit a dashboard. |
+| [!DNL Dashboards] | [!UICONTROL View Custom Dashboards] | Read-only access to user defined dashboards. |
+| [!DNL Dashboards] | [!UICONTROL Manage Report Schedules] | Ability to create schedules. |
+| [!DNL Data Collection] | [!UICONTROL Manage Datastreams] | Access to read, create, and edit datastreams. |
+| [!DNL Data Collection] | [!UICONTROL View Datastreams] | Read-only access to datastreams. |
+| [!DNL Data Governance] | [!UICONTROL Manage Usage Labels] | Access to read, create, and delete usage labels. |
+| [!DNL Data Governance] | [!UICONTROL Manage Data Usage Policies] | Access to read, create, edit, and delete data usage policies. |
+| [!DNL Data Governance] | [!UICONTROL View Data Usage Policies] | Read-only access for data usage policies belonging to your organization. |
+| [!DNL Data Governance] | [!UICONTROL View User Activity Log] | Read-only access to view recorded [audit logs](../landing/governance-privacy-security/audit-logs/overview.md) of Platform activities. |
 <!-- | [!DNL Data Governance] | [!UICONTROL View Privacy Console] | MISSING DESCRIPTION | -->
-| [!DNL Data Ingestion] | [!UICONTROL Manage Sources] | Access to read, create, edit, and disable sources. | *
-| [!DNL Data Ingestion] | [!UICONTROL View Sources] | Read-only access to available sources in the **[!UICONTROL Catalog]** tab and authenticated sources in the **[!UICONTROL Browse]** tab. | *
-| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Access to create, accept, and decline partner sharing to connect two organizations and enable [!DNL Segment Match] flows. | *
-| [!DNL Data Ingestion] | [!DNL Manage Audience Share] | Access to read, create, edit, and publish [!DNL Segment Match] feeds with active partners. | *
-| [!DNL Data Lifecycle] | [!UICONTROL View Data Lifecycle] | Read-only access for data lifecycle.| *
-| [!DNL Data Lifecycle] | [!UICONTROL Manage Data Lifecycle] | Access to read, create, edit, and delete data lifecycle. | *
-| [!DNL Data Modeling] | [!UICONTROL Manage Schemas] | Access to read, create, edit, and delete schemas and related resources. | *
-| [!DNL Data Modeling] | [!UICONTROL View Schemas] | Read-only access to schemas and related resources. | *
-| [!DNL Data Modeling] | [!UICONTROL Manage Relationships] | Access to read, create, edit, and delete schema relationships. | *
-| [!DNL Data Modeling] | [!UICONTROL Manage Identity Metadata] | Access to read, create, edit, and delete identity metadata for schemas. | *
-| [!DNL Data Management] | [!UICONTROL Manage Datasets] | Access to read, create, edit, and delete datasets. Read-only access for schemas. | *
-| [!DNL Data Management] | [!UICONTROL View Datasets] | Read-only access for datasets and schemas. | *
-| [!DNL Data Management] | [!UICONTROL Data Monitoring] | Read-only access to monitoring datasets and streams. | *
-| [!DNL Data Science Workspace] | [!UICONTROL Manage Data Science Workspace] | Access to read, create, edit, and delete in [!DNL Data Science Workspace]. | *
-| [!DNL Decision Management] | [!UICONTROL Manage Experience Decisioning] | Ability to manage experience decisioning entities. | *
-| [!DNL Decision Management] | [!UICONTROL View Experience Decisioning] | Read-only access to experience decisioning entities. | *
-<!-- | [!DNL Decision Management] | [!UICONTROL Manage Decisions] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Decisions Management] | [!UICONTROL View Decisions] | MISSING DESCRIPTION |  -->
-<!-- | [!DNL Decision Management] | [!UICONTROL Manage Offers] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Decsion Management] | [!UICONTROL Manage Ranking Strategies] | MISSING DESCRIPTION |  -->
-| [!DNL Destinations] | [!UICONTROL View Destinations] | Read-only access to view available destinations in the **[!UICONTROL Catalog]** tab and authenticated destinations in the **[!UICONTROL Browse]** tab. | *
-| [!DNL Destinations] | [!UICONTROL Manage Destinations] | Access to read, create, edit, and disable destinations. | *
-| [!DNL Destinations] | [!UICONTROL Activate Destinations] | Ability to activate data to active destinations that have been created. This permission also requires either [!UICONTROL View Destinations] or [!UICONTROL Manage Destinations] to be granted to the user who will activate destinations.| *
-<!-- | [!DNL Destinations] | [!UICONTROL Activate Destination without Mapping] | MISSING DESCRIPTION | -->
-| [!DNL Destinations] | [!UICONTROL Activate Segment without Mapping] | Gives users the ability to activate segments to existing destinations, without displaying the [mapping step](../destinations/ui/activate-batch-profile-destinations.md#mapping). Users can add and remove segments in activation workflows, but cannot add or remove mapped attributes or identities. This permission also requires the [!UICONTROL View Destinations] permission to be granted to the user who will activate data to destinations. | * (THIS IS MISSING IN THE JSON)
-| [!DNL Destinations] | [!UICONTROL Manage and Activate Dataset Destinations] | Ability to read, create, edit, and disable dataset export flows. Ability to also activate data to active datasets that have been created. This permission also requires the [!UICONTROL View Destinations] permission to be granted to the user who will activate data to destinations. | * (THIS IS MISSING IN THE JSON)
-| [!DNL Destinations] | [!UICONTROL Destination Authoring] | Ability to author destinations using [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md). | *
-| [!DNL Federated Data] | [!UICONTROL Manage Federated Data] | The ability to access all federated data features such as creating schemas, models, and compositions. | *
-| [!DNL Identity Management] | [!UICONTROL Manage Identity Namespaces] | Access to read, create, edit, and delete identity namespaces. | *
-| [!DNL Identity Management] | [!UICONTROL View Identity Namespaces] | Read-only access for identity namespaces. | *
-| [!DNL Identity Management] | [!UICONTROL View Identity Graph] | Read-only access for identity graphs. | *
-<!-- | [!DNL Identity Management] | [!UICONTROL Manage Identity Settings] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Identity Management] | [!UICONTROL View Identity Settings] | MISSING DESCRIPTION | -->
-| [!DNL Intelligent Services] | [!UICONTROL View Attribution AI] | Read-only access for Attribution AI settings and insights. | * (THIS IS MISSING IN JSON)
-| [!DNL Intelligent Services] | [!UICONTROL Manage Attribution AI] | Access to read, create, edit, and delete Attribution AI models. | * (THIS IS MISSING IN JSON)
-| [!DNL Intelligent Services] | [!UICONTROL View Customer AI] | Access to read or view Customer AI models. | * (THIS IS MISSING IN JSON)
-| [!DNL Intelligent Services] | [!UICONTROL Manage Customer AI] | Access to create, update, delete, enable, or disable Customer AI models. | * (THIS IS MISSING IN JSON)
-| [!DNL IP Warmup Configurations] | [!UICONTROL View IP Warmup Plans] | Read-only access to IP warmup plans. | *
-| [!DNL IP Warmup Configurations] | [!UICONTROL Manage IP Warmup Plans] | The ability to manage IP warmup plans. | *
-| [!DNL IP Warmup Configurations] | [!UICONTROL View IP Warmup Reports] | Read-only access to IP warmup reports. | *
-<!-- | [!DNL Journeys] | [!UICONTROL Manage Journeys] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Journeys] | [!UICONTROL View Journeys] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Journeys] | [!UICONTROL View Journeys Report] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Journeys] | [!UICONTROL Manage Journeys Events, Data Sources and Actions] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Journeys] | [!UICONTROL View Journeys Events, Data Sources and Actions] | MISSING DESCRIPTION | -->
+| [!DNL Data Ingestion] | [!UICONTROL Manage Sources] | Access to read, create, edit, and disable sources. |
+| [!DNL Data Ingestion] | [!UICONTROL View Sources] | Read-only access to available sources in the **[!UICONTROL Catalog]** tab and authenticated sources in the **[!UICONTROL Browse]** tab. |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Access to create, accept, and decline partner sharing to connect two organizations and enable [!DNL Segment Match] flows. |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share] | Access to read, create, edit, and publish [!DNL Segment Match] feeds with active partners. |
+| [!DNL Data Lifecycle] | [!UICONTROL View Data Lifecycle] | Read-only access for data lifecycle.|
+| [!DNL Data Lifecycle] | [!UICONTROL Manage Data Lifecycle] | Access to read, create, edit, and delete data lifecycle. |
+| [!DNL Data Modeling] | [!UICONTROL Manage Schemas] | Access to read, create, edit, and delete schemas and related resources. |
+| [!DNL Data Modeling] | [!UICONTROL View Schemas] | Read-only access to schemas and related resources. |
+| [!DNL Data Modeling] | [!UICONTROL Manage Relationships] | Access to read, create, edit, and delete schema relationships. |
+| [!DNL Data Modeling] | [!UICONTROL Manage Identity Metadata] | Access to read, create, edit, and delete identity metadata for schemas. |
+| [!DNL Data Management] | [!UICONTROL Manage Datasets] | Access to read, create, edit, and delete datasets. Read-only access for schemas. |
+| [!DNL Data Management] | [!UICONTROL View Datasets] | Read-only access for datasets and schemas. |
+| [!DNL Data Management] | [!UICONTROL Data Monitoring] | Read-only access to monitoring datasets and streams. |
+| [!DNL Data Science Workspace] | [!UICONTROL Manage Data Science Workspace] | Access to read, create, edit, and delete in [!DNL Data Science Workspace]. |
+| [!DNL Decision Management] | [!UICONTROL Manage Experience Decisioning] | Ability to manage experience decisioning entities. |
+| [!DNL Decision Management] | [!UICONTROL View Experience Decisioning] | Read-only access to experience decisioning entities. |
+| [!DNL Decision Management] | [!UICONTROL Manage Decisions] | Access to read, create, edit, and delete decisioning entities. |
+| [!DNL Decisions Management] | [!UICONTROL View Decisions] | Read-only access to decision entities. | 
+| [!DNL Decision Management] | [!UICONTROL Manage Offers] | Access to read, create, edit, and delete all offers and components. Read-only access to decisions and collections. |
+| [!DNL Decsion Management] | [!UICONTROL Manage Ranking Strategies] | Access to read, create, edit, and delete custom reports and use action features. | 
+| [!DNL Destinations] | [!UICONTROL View Destinations] | Read-only access to view available destinations in the **[!UICONTROL Catalog]** tab and authenticated destinations in the **[!UICONTROL Browse]** tab. |
+| [!DNL Destinations] | [!UICONTROL Manage Destinations] | Access to read, create, and delete destinations connections and destination accounts. |
+| [!DNL Destinations] | [!UICONTROL Activate Destinations] | Ability to activate data to active destinations that have been created. This permission also requires either [!UICONTROL View Destinations] or [!UICONTROL Manage Destinations] to be granted to the user who will activate destinations.|
+| [!DNL Destinations] | [!UICONTROL Activate Segment without Mapping] | Gives users the ability to activate segments to existing destinations, without displaying the [mapping step](../destinations/ui/activate-batch-profile-destinations.md#mapping). Users can add and remove segments in activation workflows, but cannot add or remove mapped attributes or identities. This permission also requires the [!UICONTROL View Destinations] permission to be granted to the user who will activate data to destinations. |
+| [!DNL Destinations] | [!UICONTROL Manage and Activate Dataset Destinations] | Ability to read, create, edit, and disable dataset export flows. Ability to also activate data to active datasets that have been created. This permission also requires the [!UICONTROL View Destinations] permission to be granted to the user who will activate data to destinations. |
+| [!DNL Destinations] | [!UICONTROL Destination Authoring] | Ability to author destinations using [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md). |
+| [!DNL Federated Data] | [!UICONTROL Manage Federated Data] | The ability to access all federated data features such as creating schemas, models, and compositions. |
+| [!DNL Identity Management] | [!UICONTROL Manage Identity Namespaces] | Access to read, create, edit, and delete identity namespaces. |
+| [!DNL Identity Management] | [!UICONTROL View Identity Namespaces] | Read-only access for identity namespaces. |
+| [!DNL Identity Management] | [!UICONTROL View Identity Graph] | Read-only access for identity graphs. |
+| [!DNL Identity Management] | [!UICONTROL Manage Identity Settings] | Access to read, create, and edit identity settings. |
+| [!DNL Identity Management] | [!UICONTROL View Identity Settings] | Read-only access to identity settings. |
+| [!DNL Intelligent Services] | [!UICONTROL View Attribution AI] | Read-only access for Attribution AI settings and insights. |
+| [!DNL Intelligent Services] | [!UICONTROL Manage Attribution AI] | Access to read, create, edit, and delete Attribution AI models. |
+| [!DNL Intelligent Services] | [!UICONTROL View Customer AI] | Access to read or view Customer AI models. |
+| [!DNL Intelligent Services] | [!UICONTROL Manage Customer AI] | Access to create, update, delete, enable, or disable Customer AI models. |
+| [!DNL IP Warmup Configurations] | [!UICONTROL View IP Warmup Plans] | Read-only access to IP warmup plans. |
+| [!DNL IP Warmup Configurations] | [!UICONTROL Manage IP Warmup Plans] | The ability to manage IP warmup plans. |
+| [!DNL IP Warmup Configurations] | [!UICONTROL View IP Warmup Reports] | Read-only access to IP warmup reports. |
+| [!DNL Journeys] | [!UICONTROL Manage Journeys] | Access to read, create, edit, and delete journeys. |
+| [!DNL Journeys] | [!UICONTROL View Journeys] | Read-only access to journeys. |
+| [!DNL Journeys] | [!UICONTROL View Journeys Report] | Read-only access to journeys report. |
+| [!DNL Journeys] | [!UICONTROL Manage Journeys Events, Data Sources and Actions] | Access to read, create, edit, and delete events, data sources, or actions. |
+| [!DNL Journeys] | [!UICONTROL View Journeys Events, Data Sources and Actions] | Read-only access to events, data sources, or actions. |
 <!-- | [!DNL Journeys] | [!UICONTROL Approve and Publish Journeys] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Journeys] | [!UICONTROL Publish Journeys] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Journey Optimizer Library] | [!UICONTROL Manage Library Items] | MISSING DESCRIPTION | -->
+| [!DNL Journeys] | [!UICONTROL Publish Journeys] | Ability to publish journeys. |
+| [!DNL Journey Optimizer Library] | [!UICONTROL Manage Library Items] | Ability to add and delete saved expressions. |
 <!-- | [!DNL Journey Optimizer Library] | [!UICONTROL Publish Fragments] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Journey Optimizer Library] | [!UICONTROL Simulate Content] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Journey Optimizer Rules] | [!UICONTROL View Frequency Rules] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Journey Optimizer Rules] | [!UICONTROL Manage Frequency Rules] | MISSING DESCRIPTION | -->
+| [!DNL Journey Optimizer Library] | [!UICONTROL Simulate Content] | Access to the simulate content option for previewing and proofing. |
+| [!DNL Journey Optimizer Rules] | [!UICONTROL View Frequency Rules] | Read-only access to frequency rules. |
+| [!DNL Journey Optimizer Rules] | [!UICONTROL Manage Frequency Rules] | Access to read, create, edit, or delete frequency rules. |
 <!-- | [!DNL Messages] | [!UICONTROL Manage Messages] | MISSING DESCRIPTION | -->
 <!-- | [!DNL Messages] | [!UICONTROL View Messages] | MISSING DESCRIPTION | -->
 <!-- | [!DNL Messages] | [!UICONTROL View Messages Report] | MISSING DESCRIPTION | -->
@@ -257,47 +256,47 @@ The following table outlines the available permissions for Experience Platform i
 <!-- | [!DNL Messages] | [!UICONTROL Manage Messages Preview and Test] | MISSING DESCRIPTION | -->
 <!-- | [!DNL Privacy Service] | [!UICONTROL Manage Privacy Service] | MISSING DESCRIPTION | -->
 <!-- | [!DNL Privacy Service] | [!UICONTROL View Privacy Service] | MISSING DESCRIPTION | -->
-| [!DNL Profile Management] | [!UICONTROL Manage Profiles] | Access to read, create, edit, and delete datasets that are used for customer profiles. Read-only access to available profiles.| *
-| [!DNL Profile Management] | [!UICONTROL View Profiles] | Read-only access to available profiles. | *
-| [!DNL Profile Management] | [!UICONTROL Manage Segments] | Access to read, create, edit, and delete segments. | *
-| [!DNL Profile Management] | [!UICONTROL View Segments] | Read-only access to available segments. | *
-| [!DNL Profile Management] | [!UICONTROL Manage Merge Policies] | Access to read, create, edit, and delete merge policies. | *
-| [!DNL Profile Management] | [!UICONTROL View Merge Policies] | Read-only access to available merge policies. | *
-| [!DNL Profile Management] | [!UICONTROL Import Audiences] | Ability to use the CSV upload workflow to import new audiences. | *
-| [!DNL Profile Management] | [!UICONTROL Export Audience Segment] | Ability to export an evaluated audience segment to a dataset. | *
-| [!DNL Profile Management] | [!UICONTROL Evaluate a Segment to an Audience] | Ability to generate profiles for an audience by evaluating a segment definition. | *
-| [!DNL Profile Management] | [!UICONTROL View B2B AI] | Read-only access to settings and configurations for all B2B AI/ML services. | *
-| [!DNL Profile Management] | [!UICONTROL Manage B2B AI] | Access to read, create, edit, and delete settings and configurations for all B2B AI/ML services. | *
-| [!DNL Profile Management] | [!UICONTROL View B2B Profile] | Read-only access to B2B entity profiles (such as Account, Opportunity, and so on), settings and configurations for all B2B AI/ML services, and B2B dashboard widgets. | *
-| [!DNL Profile Management] | [!UICONTROL Manage B2B Profile] | Access to read, create, edit, and delete B2B entity profiles (such as Account, Opportunity, and so on). Read-only access for settings and configurations for all B2B AI/ML services, and B2B dashboard widgets. | *
+| [!DNL Profile Management] | [!UICONTROL Manage Profiles] | Access to read, create, edit, and delete datasets that are used for customer profiles. Read-only access to available profiles.|
+| [!DNL Profile Management] | [!UICONTROL View Profiles] | Read-only access to available profiles. |
+| [!DNL Profile Management] | [!UICONTROL Manage Segments] | Access to read, create, edit, and delete segments. |
+| [!DNL Profile Management] | [!UICONTROL View Segments] | Read-only access to available segments. |
+| [!DNL Profile Management] | [!UICONTROL Manage Merge Policies] | Access to read, create, edit, and delete merge policies. |
+| [!DNL Profile Management] | [!UICONTROL View Merge Policies] | Read-only access to available merge policies. |
+| [!DNL Profile Management] | [!UICONTROL Import Audiences] | Ability to use the CSV upload workflow to import new audiences. |
+| [!DNL Profile Management] | [!UICONTROL Export Audience Segment] | Ability to export an evaluated audience segment to a dataset. |
+| [!DNL Profile Management] | [!UICONTROL Evaluate a Segment to an Audience] | Ability to generate profiles for an audience by evaluating a segment definition. |
+| [!DNL Profile Management] | [!UICONTROL View B2B AI] | Read-only access to settings and configurations for all B2B AI/ML services. |
+| [!DNL Profile Management] | [!UICONTROL Manage B2B AI] | Access to read, create, edit, and delete settings and configurations for all B2B AI/ML services. |
+| [!DNL Profile Management] | [!UICONTROL View B2B Profile] | Read-only access to B2B entity profiles (such as Account, Opportunity, and so on), settings and configurations for all B2B AI/ML services, and B2B dashboard widgets. |
+| [!DNL Profile Management] | [!UICONTROL Manage B2B Profile] | Access to read, create, edit, and delete B2B entity profiles (such as Account, Opportunity, and so on). Read-only access for settings and configurations for all B2B AI/ML services, and B2B dashboard widgets. |
 <!-- | [!DNL Profile Management] | [!UICONTROL Manage Lookalikes] | MISSING DESCRIPTION | -->
 <!-- | [!DNL Profile Management] | [!UICONTROL View B2B Experience] | MISSING DESCRIPTION | -->
-| [!DNL Profile Management] | [!UICONTROL View Profile Settings] | Read-only access to all profile settings. | *
-| [!DNL Profile Management] | [!UICONTROL Manage Profile Settings] | Ability to view and edit all profile settings. | *
-| [!DNL Prospects] | [!UICONTROL View Prospects] | Read-only access to prospect schemas, profiles, audiences, and the prospect accordion. | *
-| [!DNL Prospects] | [!UICONTROL Manage Prospects] | Ability to create and manage prospect schemas, profiles, and audiences. Read-only access to the prospect accordion. | *
-| [!DNL Query Service] | [!UICONTROL Manage Queries] | Access to read, create, edit, and delete structured SQL queries for Platform data. | *
-| [!DNL Query Service] | [!UICONTROL Manage Query Service Integration] | Access to create, update, and delete non-expiring credentials for Query Service access. | *
-| [!DNL Query Service] | [!UICONTROL Manage Query Sessions] | Ability to evict existing sessions. | *
-| [!DNL Query Service] | [!UICONTROL Manage Allow List] | Ability to manage IP restrictions for your organization. | *
-| [!DNL Reports] | [!UICONTROL View Channel Reports] | The ability to view and modify channel reports. | *
-| [!DNL Sandbox Administration] | [!UICONTROL Manage Sandboxes] | Access to read, create, edit, and delete sandboxes. | *
-| [!DNL Sandbox Administration] | [!UICONTROL View Sandboxes] | Read-only access for sandboxes belonging to your organization. | *
-| [!DNL Sandbox Administration] | [!UICONTROL Reset a Sandbox] | Ability to reset a sandbox. | *
-| [!DNL Sandbox Administration] | [!UICONTROL Manage Packages] | The ability for users to create, import, or export packages. | *
-| [!DNL Sandbox Administration] | [!UICONTROL Share Packages] | The ability to share packages across different organizations. | *
-<!-- | [!DNL Traits Configurations] | [!UICONTROL View Traits] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Traits Configurations] | [!UICONTROL Manage Traits] | MISSING DESCRIPTION | -->
-| [!DNL Translation Service] | [!UICONTROL Manage Translation Projects] | The ability to manage translation projects. | *
-| [!DNL Translation Service] | [!UICONTROL View Translation Projects] | Read-only access to translation projects. | *
-| [!DNL Translation Service] | [!UICONTROL Manage Translation Tasks] | The ability to manage translation tasks. | *
-| [!DNL Translation Service] | [!UICONTROL View Translation Tasks] | Read-only access to translation tasks. | *
-| [!DNL Translation Service] | [!UICONTROL Manage Translation Reviews] | The ability to manage translation reviews. | *
-| [!DNL Translation Service] | [!UICONTROL View Translation Reviews] | Read-only access to translation reviews. | *
-| [!DNL Translation Service] | [!UICONTROL Manage Translation In-house] | The ability to manage translation in-house. | *
-| [!DNL Translation Service] | [!UICONTROL View Translation In-house] | Read-only access to translation in-house. | *
-| [!DNL Translation Service] | [!UICONTROL Manage Translation Settings] | The ability for administrators to manage translation settings. | *
-| [!DNL Translation Service] | [!UICONTROL Manage Translation Providers] | The ability to manage translation providers. | *
+| [!DNL Profile Management] | [!UICONTROL View Profile Settings] | Read-only access to all profile settings. |
+| [!DNL Profile Management] | [!UICONTROL Manage Profile Settings] | Access to read and edit all profile settings. |
+| [!DNL Prospects] | [!UICONTROL View Prospects] | Read-only access to prospect schemas, profiles, audiences, and the prospect accordion. |
+| [!DNL Prospects] | [!UICONTROL Manage Prospects] | Ability to create and manage prospect schemas, profiles, and audiences. Read-only access to the prospect accordion. |
+| [!DNL Query Service] | [!UICONTROL Manage Queries] | Access to read, create, edit, and delete structured SQL queries for Platform data. |
+| [!DNL Query Service] | [!UICONTROL Manage Query Service Integration] | Access to create, update, and delete non-expiring credentials for Query Service access. |
+| [!DNL Query Service] | [!UICONTROL Manage Query Sessions] | Ability to evict existing sessions. |
+| [!DNL Query Service] | [!UICONTROL Manage Allow List] | Ability to manage IP restrictions for your organization. |
+| [!DNL Reports] | [!UICONTROL View Channel Reports] | The ability to view and modify channel reports. |
+| [!DNL Sandbox Administration] | [!UICONTROL Manage Sandboxes] | Access to read, create, edit, and delete sandboxes. |
+| [!DNL Sandbox Administration] | [!UICONTROL View Sandboxes] | Read-only access for sandboxes belonging to your organization. |
+| [!DNL Sandbox Administration] | [!UICONTROL Reset a Sandbox] | Ability to reset a sandbox. |
+| [!DNL Sandbox Administration] | [!UICONTROL Manage Packages] | Access to create, import, or export packages. |
+| [!DNL Sandbox Administration] | [!UICONTROL Share Packages] | Access to share packages across different organizations. |
+| [!DNL Traits Configurations] | [!UICONTROL View Traits] | Read-only access for traits. |
+| [!DNL Traits Configurations] | [!UICONTROL Manage Traits] | Access to manage traits. |
+| [!DNL Translation Service] | [!UICONTROL Manage Translation Projects] | The ability to manage translation projects. |
+| [!DNL Translation Service] | [!UICONTROL View Translation Projects] | Read-only access to translation projects. |
+| [!DNL Translation Service] | [!UICONTROL Manage Translation Tasks] | The ability to manage translation tasks. |
+| [!DNL Translation Service] | [!UICONTROL View Translation Tasks] | Read-only access to translation tasks. |
+| [!DNL Translation Service] | [!UICONTROL Manage Translation Reviews] | The ability to manage translation reviews. |
+| [!DNL Translation Service] | [!UICONTROL View Translation Reviews] | Read-only access to translation reviews. |
+| [!DNL Translation Service] | [!UICONTROL Manage Translation In-house] | The ability to manage translation in-house. |
+| [!DNL Translation Service] | [!UICONTROL View Translation In-house] | Read-only access to translation in-house. |
+| [!DNL Translation Service] | [!UICONTROL Manage Translation Settings] | The ability for administrators to manage translation settings. |
+| [!DNL Translation Service] | [!UICONTROL Manage Translation Providers] | The ability to manage translation providers. |
 
 ## Next steps
 
