@@ -21,7 +21,9 @@ There are two destinations available that let you send audience data to the PubM
 
    This destination will let you choose to manually add a mapping ID during the activation workflow. Use this destination when data should be sent to existing audiences in the PubMatic platform or if a custom 'Source Audience ID' is required.
 
-> [!IMPORTANT]
+![Side-by-side view of the two PubMatic connectors in the destinations catalog.](/help/destinations/assets/catalog/advertising/pubmatic/two-pubmatic-connectors-side-by-side.png)
+
+>[!IMPORTANT]
 >
 > The destination connector and documentation page are created and maintained by the [!DNL PubMatic] team. For any inquiries or update requests, contact them directly at `support@pubmatic.com`.
 
@@ -73,7 +75,7 @@ Refer to the table below for information about the destination export type and f
 
 ## Connect to the destination {#connect}
 
-> [!IMPORTANT]
+>[!IMPORTANT]
 >
 > To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
@@ -111,7 +113,7 @@ When you are finished providing details for your destination connection, select 
 
 ## Activate segments to this destination {#activate}
 
-> [!IMPORTANT]
+>[!IMPORTANT]
 >
 > - To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >
