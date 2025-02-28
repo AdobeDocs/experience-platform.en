@@ -127,8 +127,8 @@ The following table outlines the available permissions for Experience Platform i
 | [!DNL Adobe Mix Modeler] | [!UICONTROL View Adobe Mix Modeler Models Plans Configurations] | Read-only access to plans configurations. |
 | [!DNL AI Assistant] | [!UICONTROL Enable AI Assistant] | Ability to ask the [AI assistant](../ai-assistant/access.md) questions. |
 | [!DNL AI Assistant] | [!UICONTROL View Operational Insights] | Access to obtain responses to [operational insights](../ai-assistant/home.md##operational-insights) queries. |
-<!-- | [!DNL AI Assistant] | [!UICONTROL Generate Content] | Enable users to generate content using the Varys service. | -->
-| [!DNL AI Assistant] | [!UICONTROL Manage Brand Kit] | Enable users to create brand guidelines using the [BrandKit](https://experienceleague.adobe.com/en/docs/creative-cloud-enterprise-learn/cce-learning-hub/expressoverview/expresshowto/brand) service. |
+| [!DNL AI Assistant] | [!UICONTROL Generate Content] | Enable users to generate content using the AI assistant. |
+| [!DNL AI Assistant] | [!UICONTROL Manage Brand Kit] | Enable users to create brand guidelines using the AI assistant. |
 | [!DNL Alerts] | [!UICONTROL View Alerts History] | Read-only access for alerts history. |
 | [!DNL Alerts] | [!UICONTROL Resolve Alerts] | Access to read, edit, and delete alerts. |
 | [!DNL Alerts] | [!UICONTROL View Alerts] | Read-only access for alerts. |
