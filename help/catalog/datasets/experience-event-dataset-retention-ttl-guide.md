@@ -26,9 +26,9 @@ TTL is useful when managing time-sensitive data that loses relevance over time. 
 
 >[!NOTE]
 >
->Experience Event Dataset Retention applies to event data stored in the data lake. If you are managing retention in Real-Time Customer Data Platform, consider [Experience Event Expiration](../../profile/event-expirations.md) and [Pseudonymous Profile Expiration](../../profile/pseudonymous-profiles.md) alongside Data Lake retention settings.
+>Experience Event Dataset Retention applies to event data stored in the data lake. If you are managing retention in Real-Time Customer Data Platform, consider [Experience Event Expiration](../../profile/event-expirations.md) and [Pseudonymous Profile Expiration](../../profile/pseudonymous-profiles.md) alongside data lake retention settings.
 >
->TTL configurations help you optimize storage based on entitlements. While Profile Store data (used in Real-Time CDP) may be considered stale and removed after 30 days, the same event data in the Data Lake can remain available for 12–13 months for analytics and Data Distiller use cases.
+>TTL configurations help you optimize storage based on entitlements. While Profile Store data (used in Real-Time CDP) may be considered stale and removed after 30 days, the same event data in the data lake can remain available for 12–13 months for analytics and Data Distiller use cases.
 
 ### Industry example {#industry-example}
 
