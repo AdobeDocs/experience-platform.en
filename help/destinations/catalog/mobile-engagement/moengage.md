@@ -137,9 +137,9 @@ To add more mappings, repeat the previous steps.
 
 ## Exported data / Validate data export {#exported-data}
 
-To verify if data has been exported successfully to the [!DNL Moengage] destination, go to the user profile on your [!DNL Moengage] account. Here, you should find a user attribute named AEPSegments created automatically and the other custom attributes that have been mapped in the earlier steps in Adobe Experience Platform.
+To verify if data has been exported successfully to the [!DNL Moengage] destination, go to the user profile in your [!DNL Moengage] account. Here, you should find a user attribute named `AEPSegments`, created automatically and the other custom attributes that have been mapped in the earlier steps in Adobe Experience Platform.
 
-AEPSegments is an array type attribute in MoEngage. It lists all of the Adobe audience names the user is associated with in AEP.
+`AEPSegments` is an array-type attribute in [!DNL Moengage]. It lists all of the Adobe audience names that the user is associated with in Experience Platform.
  
 
 ![Moengage Destination Mapping Complete](../../assets/catalog/mobile-engagement/moengage/validation.png)
