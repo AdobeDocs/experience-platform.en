@@ -458,9 +458,9 @@ After deduplication, the export file will contain:
 
 **Improved reliability**: This updated deduplication process ensures that successive runs with the same coordinates will always produce the same results, improving consistency.
 
-### Export arrays through calculated fields {#export-arrays-calculated-fields}
+### Perform data transformations through calculated fields {#calculated-fields}
 
-Select beta customers can export array objects from Experience Platform to cloud storage destinations. Read more about [exporting arrays and calculated fields](/help/destinations/ui/export-arrays-calculated-fields.md) and contact your Adobe representative to get access to the functionality. 
+You can use the [Calculated fields](/help/destinations/ui/data-transformations-calculated-fields.md) control to perform various data transformations on the data exported to file-based destinations. 
 
 ### Known limitations {#known-limitations}
 
