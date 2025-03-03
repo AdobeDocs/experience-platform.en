@@ -6,6 +6,16 @@ exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
 ---
 # Audience Composition UI guide
 
+>[!AVAILABILITY]
+>
+>In order to use this feature, you must have the following permissions:
+>
+>- Manage Segments
+>- Manage Profiles
+>- Manage Merge Policies
+>
+>More information about permissions within Platform can be found in the [access control overview](../../access-control/home.md#permissions).
+
 >[!NOTE]
 >
 >This guide explains how to create audiences using Audience Composition. To learn how to create audiences through segment definitions using the Segment Builder please read the [Segment Builder UI guide](./segment-builder.md).
