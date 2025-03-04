@@ -10,8 +10,8 @@ exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
 >id="platform_destinations_export_arrays_flat_files"
 >title="Add calculated fields"
 >abstract="<p>Use the **Add calculated field** control to perform various data transformations on data exported to cloud storage destinations. For example, you can apply hashing to data, concatenate arrays into strings, and more."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="Examples"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="Known limitations"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-maps-objects.html#examples" text="Examples"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-maps-objects.html#known-limitations" text="Known limitations"
 
 >[!AVAILABILITY]
 >
