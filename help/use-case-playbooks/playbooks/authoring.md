@@ -21,7 +21,7 @@ The playbook authoring framework follows a three-step process:
 
 Follow the steps outlined below to create a playbook with Adobe's AI Assitant:
 
-1. Navigate to the Use Case Playbooks home page. 
+1. Navigate to the Use Case Playbooks home page from the left navigation pane. 
 2. Select "New Playbook" and choose "Generate playbook with Adobe AI".
 3. In the prompt field, enter a use case. Example: "Engage customers of Nike who browsed running shoes but did not complete the purchase."
 4. Select "Generate" - The system uses Adobe's R2D2 framework to create the playbook.
