@@ -65,7 +65,7 @@ See the guide on [datastreams](../../../../datastreams/overview.md) to learn how
 
 
 
-## Configure Event Filtering
+## Configure event filtering
 
 In the **[!UICONTROL Event Filtering]** section, you can modify the regular expressions to filter **[!UICONTROL Page URLs]** and **[!UICONTROL Assets URLs]** when collecting data for Content Analytics. The regular expressions that you have defined in the [Content Analytics guided configuration wizard](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) are populated automatically.
 
@@ -80,3 +80,4 @@ In the **[!UICONTROL Event Filtering]** section, you can modify the regular expr
 You can use **[!UICONTROL Test Regex]** to test your regular expression in the **[!UICONTROL Regular Expression Tester]**.
 
 ![Image showing the regular expression tester of the Adobe Content Analytics tag extension in the Tags UI](assets/aca-tag-regextester.png)
+
