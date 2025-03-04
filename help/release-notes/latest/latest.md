@@ -5,10 +5,6 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 ---
 # Adobe Experience Platform release notes 
 
->[!TIP]
->
->This release includes improvements to the Federated Audience Composition add-on. For more information, read the [Federated Audience Composition release notes](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes).
-
 **Release date: February 18, 2025**
 
 Updates to existing features and documentation in Adobe Experience Platform:
@@ -17,6 +13,7 @@ Updates to existing features and documentation in Adobe Experience Platform:
 - [Catalog Service](#catalog-service)
 - [Data Prep](#data-prep)
 - [Destinations](#destinations)
+- [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes){target="_blank"}
 - [Sources](#sources)
 - [Segmentation Service](#segmentation)
 - [Documentation updates](#documentation-updates)
