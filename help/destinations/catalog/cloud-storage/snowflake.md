@@ -42,7 +42,6 @@ To help you better understand how and when you should use the *YourDestination* 
 
 [!DNL Snowflake] does not support the activation of [identities](/help/identity-service/features/namespaces.md).
 
-
 ## Supported audiences {#supported-audiences}
 
 This section describes which types of audiences you can export to this destination.
@@ -74,8 +73,6 @@ Refer to the table below for information about the destination export type and f
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
 
 ### Authenticate to destination {#authenticate}
-
-*Add the fields that customers must fill in when authenticating to your destination. These fields are destination-specific and depend on your configuration in Destination SDK. Your destination's fields may not be the same as the ones listed below. Please also include a screenshot similar to the sample screenshot shown below.*
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
