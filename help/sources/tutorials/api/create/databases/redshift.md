@@ -126,7 +126,7 @@ A successful response returns the newly created connection, including its unique
 
 Read the steps below for information on how to connect your [!DNL Amazon Redshift] source to Experience Platform on AWS.
 
-### Create a base connection for [!DNL Amazon Redshift] on Experience Platform on AWS {#aws}
+### Create a base connection for [!DNL Amazon Redshift] on Experience Platform on AWS {#aws-base}
 
 **API format**
 
