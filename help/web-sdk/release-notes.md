@@ -10,6 +10,18 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 This document covers the release notes for the Adobe Experience Platform Web SDK.
 For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## Version 2.26.0 - March 5, 2025
+
+**Fixes and improvements**
+
+- Fixed an issue where `getIdentity` commands did not return the identity after a collect call was sent.
+- Fixed an issue where personalization redirects caused content flickering before the redirect occurred.
+- Updates to the custom build script including making context a required component.
+
+**New features**
+
+- The `getIdentity` command now automatically reads the ECID directly from the `kndctr` identity cookie. If you call `getIdentity` with the `ECID` namespace, and there is already an identity cookie, Web SDK no longer makes a request to Adobe Experience Edge to get the identity. It just reads the identity from the cookie.
+
 ## Version 2.25.0 - January 23, 2025
 
 **Fixed and improvements**
@@ -18,7 +30,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 - Added a warning when configuring either an `onBeforeLinkClickSend` function or a download link qualifier when click collection is disabled.
 - Fixed an issue where rendered propositions were not included in display notifications.
 
-**New Features**
+**New features**
 
 - Implemented a fallback to the configured Edge domain when third-party cookies are enabled and requests to adobedc.demdex.net are blocked.
 
