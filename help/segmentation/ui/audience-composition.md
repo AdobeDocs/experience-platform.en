@@ -8,7 +8,7 @@ exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
 
 >[!AVAILABILITY]
 >
->In order to use this feature, you must have the following permissions:
+>To use this feature, you must have the following permissions:
 >
 >- Manage Segments
 >- Manage Profiles
