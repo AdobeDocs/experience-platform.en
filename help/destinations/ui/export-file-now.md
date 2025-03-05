@@ -57,7 +57,7 @@ To export files on-demand to batch destinations, you must have successfully [con
 Keep in mind the following considerations when using the **[!UICONTROL Export file now]** control:
 
 * **[!UICONTROL Export file now]** works only for audiences whose schedule in the batch activation dataflow overlaps with the present date. This includes audiences with schedules that have no end date (export frequency of **[!UICONTROL Once]**), or where the end date has not yet passed.
-* When adding an audience to an existing dataflow, wait for at least **2 hours** until using the **[!UICONTROL Export file now]** control.
+* When adding an audience to an existing dataflow, wait for at least **one hour** until using the **[!UICONTROL Export file now]** control.
 * If you change an audience's merge policy, or if you create an audience which uses a new merge policy, wait 24 hours until using the **[!UICONTROL Export file now]** control.
 
 ## UI error messages {#ui-error-messages}

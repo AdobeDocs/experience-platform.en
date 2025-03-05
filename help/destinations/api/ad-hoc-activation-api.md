@@ -120,7 +120,7 @@ Adobe Experience Platform runs scheduled segmentation jobs once every 24 hours. 
 
 >[!IMPORTANT]
 >
->Note the following one-time constraint: Before running an ad-hoc activation job, make sure that at least 2 hours have passed from the moment that the audience was first activated according to the schedule you set in [Step 3 - Create activation flow in the Platform UI](#activation-flow). 
+>Note the following one-time constraint: Before running an ad-hoc activation job, make sure that at least one hour has passed from the moment that the audience was first activated according to the schedule you set in [Step 3 - Create activation flow in the Platform UI](#activation-flow). 
 
 Before running an ad-hoc activation job, make sure the scheduled audience export job for your audiences has finished. See [destination dataflow monitoring](../../dataflows/ui/monitor-destinations.md) for information on how to monitor the status of activation flows. For example, if your activation dataflow shows a **[!UICONTROL Processing]** status, wait for it to finish before running the ad-hoc activation job to export a full file.
 
