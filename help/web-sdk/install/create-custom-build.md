@@ -1,8 +1,8 @@
 ---
 title: Create a custom Web SDK build using the NPM package
 description: Create a custom Web SDK build which only contains the modules that you need.
+exl-id: 0ba5ae55-9ec0-41b6-9675-e76ade8ca4cd
 ---
-
 # Create a custom Web SDK build
 
 The Experience Platform Web SDK library includes multiple modules for various features like personalization, identity, link tracking, and more. Depending on your use cases, you might only need specific features instead of the entire library. Creating a custom Web SDK build allows you to select only the modules you need, reducing the library size and improving performance.
@@ -65,4 +65,3 @@ The table below shows the relationship between Web SDK modules and the commands 
 1. Once you confirm the location, your custom build is generated and saved.
 
     ![Image of a terminal showing the custom build saved location.](../assets/custom-build/saved.png)
-
