@@ -1,16 +1,16 @@
 ---
-title: Connect Amazon Redshift To Experience Platform Using The Flow Service API
-description: Learn how to connect Adobe Experience Platform to Amazon Redshift using the Flow Service API.
+title: Connect AWS Redshift To Experience Platform Using The Flow Service API
+description: Learn how to connect Adobe Experience Platform to AWS Redshift using the Flow Service API.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 2728ce08-05c9-4dca-af1d-d2d1b266c5d9
 ---
-# Connect [!DNL Amazon Redshift] to Experience Platform using the [!DNL Flow Service] API
+# Connect [!DNL AWS Redshift] to Experience Platform using the [!DNL Flow Service] API
 
 >[!IMPORTANT]
 >
->The [!DNL Amazon Redshift] source is available in the sources catalog to users who have purchased Real-Time Customer Data Platform Ultimate.
+>The [!DNL AWS Redshift] source is available in the sources catalog to users who have purchased Real-Time Customer Data Platform Ultimate.
 
-Read this guide to learn how you can connect your [!DNL Amazon Redshift] source account to Adobe Experience Platform using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+Read this guide to learn how you can connect your [!DNL AWS Redshift] source account to Adobe Experience Platform using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Getting started
 
@@ -23,26 +23,25 @@ This guide requires a working understanding of the following components of Adobe
 
 For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
 
-## Connect [!DNL Amazon Redshift] to Experience Platform on Azure {#azure}
+## Connect [!DNL AWS Redshift] to Experience Platform on Azure {#azure}
 
-Read the steps below for information on how to connect your [!DNL Amazon Redshift] source to Experience Platform on Azure.
+Read the steps below for information on how to connect your [!DNL AWS Redshift] source to Experience Platform on Azure.
 
 ### Gather required credentials
 
-In order for [!DNL Flow Service] to connect with [!DNL Amazon Redshift], you must provide the following connection properties:
+In order for [!DNL Flow Service] to connect with [!DNL AWS Redshift], you must provide the following connection properties:
 
-| **Credential** | **Description** |
-| -------------- | --------------- |
-| `server` | The server associated with your [!DNL Amazon Redshift] account. |
-| `port` | The TCP port that a [!DNL Amazon Redshift] server uses to listen for client connections. |
-| `username` | The username associated with your [!DNL Amazon Redshift] account. |
-| `password` | The password associated with your [!DNL Amazon Redshift] account. |
-| `database` | The [!DNL Amazon Redshift] database you are accessing. |
-| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Amazon Redshift] is `3416976c-a9ca-4bba-901a-1f08f66978ff`. |
+| Credential | Description |
+| `server` | The server name of your [!DNL AWS Redshift] instance. |
+| `port` | The TCP port that a [!DNL AWS Redshift] server uses to listen for client connections. |
+| `username` | The username associated with your [!DNL AWS Redshift] account. |
+| `password` | The password that corresponds with the user account. |
+| `database` | The [!DNL AWS Redshift] database where data is to be fetched from. |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL AWS Redshift] is `3416976c-a9ca-4bba-901a-1f08f66978ff`. |
 
-For more information about getting started, refer to this [[!DNL Amazon Redshift] document](https://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html).
+For more information about getting started, refer to this [[!DNL AWS Redshift] document](https://docs.aws.amazon.com/redshift/latest/gsg/new-user-serverless.html).
 
-### Create a base connection for [!DNL Amazon Redshift] on Experience Platform on Azure [#azure-base]
+### Create a base connection for [!DNL AWS Redshift] on Experience Platform on Azure [#azure-base]
 
 >[!NOTE]
 >
@@ -50,7 +49,7 @@ For more information about getting started, refer to this [[!DNL Amazon Redshift
 
 A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
-To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Amazon Redshift] authentication credentials as part of the request parameters.
+To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL AWS Redshift] authentication credentials as part of the request parameters.
 
 **API format**
 
@@ -62,7 +61,7 @@ POST /connections
 
 +++Select to view example
 
-The following request creates a base connection for [!DNL Amazon Redshift]:
+The following request creates a base connection for [!DNL AWS Redshift]:
 
 ```shell
 curl -X POST \
@@ -73,8 +72,8 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "amazon-redshift base connection",
-      "description": "base connection for amazon-redshift,
+      "name": "AWS-redshift base connection",
+      "description": "base connection for AWS-redshift,
       "auth": {
           "specName": "Basic Authentication",
           "params": {
@@ -93,13 +92,13 @@ curl -X POST \
 ```
 
 | Property | Description |
-| ------------- | --------------- |
-| `auth.params.server` |  Your [!DNL Amazon Redshift] server. |
-| `auth.params.port` | The TCP port that the [!DNL Amazon Redshift] server uses to listen for client connections. |
-| `auth.params.database` | The database associated with your [!DNL Amazon Redshift] account. |
-| `auth.params.password` | The password associated with your [!DNL Amazon Redshift] account. |
-| `auth.params.username` | The username associated with your [!DNL Amazon Redshift] account. |
-| `connectionSpec.id` | The [!DNL Amazon Redshift] connection specification ID: `3416976c-a9ca-4bba-901a-1f08f66978ff` |
+| --- | --- |
+| `auth.params.server` | The server name of your [!DNL AWS Redshift] instance. |
+| `auth.params.port` | The TCP port that a [!DNL AWS Redshift] server uses to listen for client connections. |
+| `auth.params.username` | The username associated with your [!DNL AWS Redshift] account. |
+| `auth.params.password` | The password that corresponds with the user account. |
+| `auth.params.database` | The [!DNL AWS Redshift] database where data is to be fetched from. |
+| `connectionSpec.id` | The [!DNL AWS Redshift] connection specification ID: `3416976c-a9ca-4bba-901a-1f08f66978ff` |
 
 +++
 
@@ -118,15 +117,15 @@ A successful response returns the newly created connection, including its unique
 
 +++
 
-## Connect [!DNL Amazon Redshift] to Experience Platform on Amazon Web Services (AWS) {#aws}
+## Connect [!DNL AWS Redshift] to Experience Platform on AWS Web Services (AWS) {#aws}
 
 >[!AVAILABILITY]
 >
->This section applies to implementations of Experience Platform running on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../../../../landing/multi-cloud.md).
+>This section applies to implementations of Experience Platform running on AWS Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../../../../landing/multi-cloud.md).
 
-Read the steps below for information on how to connect your [!DNL Amazon Redshift] source to Experience Platform on AWS.
+Read the steps below for information on how to connect your [!DNL AWS Redshift] source to Experience Platform on AWS.
 
-### Create a base connection for [!DNL Amazon Redshift] on Experience Platform on AWS {#aws-base}
+### Create a base connection for [!DNL AWS Redshift] on Experience Platform on AWS {#aws-base}
 
 **API format**
 
@@ -136,7 +135,7 @@ POST /connections
 
 **Request**
 
-The following request creates a base connection for [!DNL Amazon Redshift]:
+The following request creates a base connection for [!DNL AWS Redshift]:
 
 +++Select to view example
 
@@ -149,8 +148,8 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "Amazon Redshift base connection for Experience Platform on AWS",
-      "description": "Amazon Redshift base connection for Experience Platform on AWS",
+      "name": "AWS Redshift base connection for Experience Platform on AWS",
+      "description": "AWS Redshift base connection for Experience Platform on AWS",
       "auth": {
           "specName": "Basic Authentication",
           "params": {
@@ -171,13 +170,13 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `auth.params.server` | Your [!DNL Amazon Redshift] server. |
-| `auth.params.port` | The TCP port that the [!DNL Amazon Redshift] server uses to listen for client connections. |
-| `auth.params.database` | The database associated with your [!DNL Amazon Redshift] account. |
-| `auth.params.password` | The password associated with your [!DNL Amazon Redshift] account. |
-| `auth.params.username` | The username associated with your [!DNL Amazon Redshift] account. |
-| `auth.params.schema` | The schema associated with your [!DNL Amazon Redshift] database. |
-| `connectionSpec.id` | The [!DNL Amazon Redshift] connection specification ID: `3416976c-a9ca-4bba-901a-1f08f66978ff` |
+| `auth.params.server` | The server name of your [!DNL AWS Redshift] instance. |
+| `auth.params.port` | The TCP port that a [!DNL AWS Redshift] server uses to listen for client connections. |
+| `auth.params.username` | The username associated with your [!DNL AWS Redshift] account. |
+| `auth.params.password` | The password that corresponds with the user account. |
+| `auth.params.database` | The [!DNL AWS Redshift] database where data is to be fetched from. |
+| `auth.params.schema` | The schema associated with your [!DNL AWS Redshift] database. |
+| `connectionSpec.id` | The [!DNL AWS Redshift] connection specification ID: `3416976c-a9ca-4bba-901a-1f08f66978ff` |
 
 +++
 
@@ -199,7 +198,7 @@ A successful response returns details of the newly created connection, including
 
 ## Next steps
 
-By following this tutorial, you have created an [!DNL Amazon Redshift] base connection using the [!DNL Flow Service] API. You can use this base connection ID in the following tutorials:
+By following this tutorial, you have created an [!DNL AWS Redshift] base connection using the [!DNL Flow Service] API. You can use this base connection ID in the following tutorials:
 
 * [Explore the structure and contents of your data tables using the [!DNL Flow Service] API](../../explore/tabular.md)
 * [Create a dataflow to bring database data to Platform using the [!DNL Flow Service] API](../../collect/database-nosql.md)
