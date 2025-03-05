@@ -1,35 +1,69 @@
 ---
-title: Create a Snowflake  Source Connection in the UI
+title: Connect Snowflake To Experience Platform Using The UI
 type: Tutorial
 description: Learn how to create a Snowflake source connection using the Adobe Experience Platform UI.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
 ---
-# Create a [!DNL Snowflake] source connection in the UI
+# Connect [!DNL Snowflake] to Experience Platform using the UI
 
 >[!IMPORTANT]
 >
 >The [!DNL Snowflake] source is available in the sources catalog to users who have purchased Real-Time Customer Data Platform Ultimate.
 
-This tutorial provides steps for creating a [!DNL Snowflake] source connector using the Adobe Experience Platform user interface.
+Read this guide to learn how to connect your [!DNL Snowflake] account to Adobe Experience Platform using the user interface.
 
 ## Getting started
 
 This tutorial requires a working understanding of the following components of Experience Platform:
 
-* [Sources](../../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
-* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-### Gather required credentials
+>[!NOTE]
+>
+>You must set the `PREVENT_UNLOAD_TO_INLINE_URL` flag to `FALSE` to allow data unloading from your [!DNL Snowflake] database to Experience Platform.
 
-You must provide values for the following credential properties to authenticate your [!DNL Snowflake] source.
+## Navigate the sources catalog
+
+In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
+
+Select **[!DNL Snowflake]** under the *[!UICONTROL Databases]* category, and then select **[!UICONTROL Set up]**.
+
+>[!TIP]
+>
+>Sources in the sources catalog display the **[!UICONTROL Set up]** option when a given source does not yet have an authenticated account. Once an authenticated account exists, this option changes to **[!UICONTROL Add data]**.
+
+![The sources catalog with the Snowflake card selected..](../../../../images/tutorials/create/snowflake/catalog.png)
+
+The **[!UICONTROL Connect to Snowflake]** page appears. On this page, you can either use new credentials or existing credentials.
+
+## Use an existing account {#existing}
+
+To use an existing account, select the [!DNL Snowflake] account you want to connect with and then select **[!UICONTROL Next]** to proceed.
+
+![The existing account interface in the sources workflow.](../../../../images/tutorials/create/snowflake/existing.png)
+
+## Create a new account
+
+If you do not have an existing account, then you must create a new account by providing the necessary authentication credentials that correspond with your source. 
+
+To create a new account, select **[!UICONTROL New account]** and then provide a name and optionally add a description for your account.
+
+### Create an account to connect to Experience Platform on Azure {#azure}
+
+You can connect your [!DNL Snowflake] account to Experience Platform on Azure using either account key authentication or key-pair authentication. 
 
 >[!BEGINTABS]
 
 >[!TAB Account key authentication]
 
+To use account key authentication, select **[!UICONTROL Account key authentication]**, provide your connection string in the input form and then select **[!UICONTROL Connect to source]**.
+
+![The account key authentication interface.](../../../../images/tutorials/create/snowflake/connection-string.png)
+
 | Credential | Description |
-| ---------- | ----------- |
+| --- | --- |
 | Account | An account name uniquely identifies an account within your organization. In this case, you must uniquely identify an account across different [!DNL Snowflake] organizations. To do this, you must prepend your organization name to the account name. For example: `orgname-account_name`. Read the guide on [retrieving your [!DNL Snowflake] account identifier](../../../../connectors/databases/snowflake.md#retrieve-your-account-identifier) for additional guidance. For more information, refer to the [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization).|
 | Warehouse | The [!DNL Snowflake] warehouse manages the query execution process for the application. Each [!DNL Snowflake] warehouse is independent from one another and must be accessed individually when bringing data over to Platform. |
 | Database | The [!DNL Snowflake] database contains the data you want to bring the Platform. |
@@ -40,7 +74,11 @@ You must provide values for the following credential properties to authenticate 
 
 >[!TAB Key-pair authentication]
 
-To use key-pair authentication, you must generate a 2048-bit RSA key pair and then provide the following values when creating an account for your [!DNL Snowflake] source.
+To use key-pair authentication, select **[!UICONTROL KeyPair authentication]**, provide values for your account, username, private key, private key passphrase, database, and warehouse, then select **[!UICONTROL Connect to source]**. 
+
+![The account key-pair authentication interface.](../../../../images/tutorials/create/snowflake/key-pair.png)
+
+With key-pair authentication, you must generate a 2048-bit RSA key pair and then provide the following values when creating an account for your [!DNL Snowflake] source.
 
 | Credential | Description |
 | --- | --- |
@@ -55,49 +93,19 @@ For more information about these values, refer to [this Snowflake document](http
 
 >[!ENDTABS]
 
->[!NOTE]
->
->You must set the `PREVENT_UNLOAD_TO_INLINE_URL` flag to `FALSE` to allow data unloading from your [!DNL Snowflake] database to Experience Platform.
+### Create an account to connect to Experience Platform on AWS {#aws}
 
-## Connect your  Snowflake account
+In order to authenticate your [!DNL Snowflake] account and connect to Experience Platform on AWS, you must be on a VA6 sandbox and you must provide the following credentials:
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace.
-
-You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search bar.
-
-Under the [!UICONTROL Databases] category, select **[!UICONTROL Snowflake]** and then select **[!UICONTROL Add data]**.
-
-![The sources catalog with [!DNL Snowflake] highlighted.](../../../../images/tutorials/create/snowflake/catalog.png)
-
-The **[!UICONTROL Connect to Snowflake]** page appears. On this page, you can either use new credentials or existing credentials.
-
-### Existing account
-
-To use an existing account, select the [!DNL Snowflake] account you want to connect with and then select **[!UICONTROL Next]** to proceed.
-
-![The existing account interface in the sources workflow.](../../../../images/tutorials/create/snowflake/existing.png)
-
-### New account
-
-To create a new account, select **[!UICONTROL New account]**, and then provide a name and an optional description for your new [!DNL Snowflake] account.
-
-![The new account interface in the sources workflow.](../../../../images/tutorials/create/snowflake/new.png)
-
->[!BEGINTABS]
-
->[!TAB Account key authentication]
-
-To use account key authentication, provide your connection string in the input form and then select **[!UICONTROL Connect to source]**.
-
-![The account key authentication interface.](../../../../images/tutorials/create/snowflake/connection-string.png)
-
->[!TAB Key-pair authentication]
-
-To use key-pair authentication, provide values for your account, username, private key, private key passphrase, database, and warehouse, then select **[!UICONTROL Connect to source]**. 
-
-![The account key-pair authentication interface.](../../../../images/tutorials/create/snowflake/key-pair.png)
-
->[!ENDTABS]
+| Credential | Description |
+| --- | --- |
+| Host |
+| Port |
+| Username |
+| Password |
+| Database |
+| Schema |
+| Warehouse |
 
 ### Skip preview of sample data {#skip-preview-of-sample-data}
 
