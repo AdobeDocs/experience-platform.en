@@ -60,7 +60,7 @@ You can connect your [!DNL Snowflake] account to Experience Platform on Azure us
 
 To use account key authentication, select **[!UICONTROL Account key authentication]**, provide your connection string in the input form and then select **[!UICONTROL Connect to source]**.
 
-![The account key authentication interface.](../../../../images/tutorials/create/snowflake/connection-string.png)
+![The account key authentication interface.](../../../../images/tutorials/create/snowflake/account-key-auth.png)
 
 | Credential | Description |
 | --- | --- |
@@ -76,7 +76,7 @@ To use account key authentication, select **[!UICONTROL Account key authenticati
 
 To use key-pair authentication, select **[!UICONTROL KeyPair authentication]**, provide values for your account, username, private key, private key passphrase, database, and warehouse, then select **[!UICONTROL Connect to source]**. 
 
-![The account key-pair authentication interface.](../../../../images/tutorials/create/snowflake/key-pair.png)
+![The account key-pair authentication interface.](../../../../images/tutorials/create/snowflake/key-pair-auth.png)
 
 With key-pair authentication, you must generate a 2048-bit RSA key pair and then provide the following values when creating an account for your [!DNL Snowflake] source.
 
@@ -95,17 +95,23 @@ For more information about these values, refer to [this Snowflake document](http
 
 ### Create an account to connect to Experience Platform on AWS {#aws}
 
-In order to authenticate your [!DNL Snowflake] account and connect to Experience Platform on AWS, you must be on a VA6 sandbox and you must provide the following credentials:
+>[!AVAILABILITY]
+>
+>This section applies to implementations of Experience Platform running on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../../../../landing/multi-cloud.md).
+
+To create a new [!DNL Snowflake] account and connect to Experience Platform on AWS, ensure that you are in a VA6 sandbox and then provide the necessary credentials for authentication.
+
+![The new account step in the sources workflow where you can connect Snowflake to Experience Platform on AWS.](../../../../images/tutorials/create/snowflake/aws-auth.png)
 
 | Credential | Description |
 | --- | --- |
-| Host |
-| Port |
-| Username |
-| Password |
-| Database |
-| Schema |
-| Warehouse |
+| Host | The host URL that your [!DNL Snowflake] account connects to. |
+| Port | The port number that is used by [!DNL Snowflake] when connecting to a server over the internet. The default port value is `443`. |
+| Username | The username associated with your [!DNL Snowflake] account. | 
+| Password | The password associated with your [!DNL Snowflake] account. |
+| Database | The [!DNL Snowflake] database from where the data will be pulled from. |
+| Schema | The schema associated with your [!DNL Snowflake] database. |
+| Warehouse | The [!DNL Snowflake] warehouse that you are using. |
 
 ### Skip preview of sample data {#skip-preview-of-sample-data}
 

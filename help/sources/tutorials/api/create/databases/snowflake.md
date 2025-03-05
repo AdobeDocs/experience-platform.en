@@ -305,10 +305,11 @@ curl -X POST \
 | --- | --- |
 | `auth.params.host` | The host URL that your [!DNL Snowflake] account connects to. |
 | `auth.params.port` | The port number that is used by [!DNL Snowflake] when connecting to a server over the internet. The default port value is `443`. |
+| `auth.params.username` | The username associated with your [!DNL Snowflake] account. |
 | `auth.params.database` | The [!DNL Snowflake] database from where the data will be pulled from. |
 | `auth.params.password` | The password associated with your [!DNL Snowflake] account. |
 | `auth.params.warehouse` | The [!DNL Snowflake] warehouse that you are using. |
-| `auth.params.schema` |
+| `auth.params.schema` | The schema associated with your [!DNL Snowflake] database. |
 
 +++
 
