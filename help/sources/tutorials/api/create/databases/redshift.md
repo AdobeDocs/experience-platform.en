@@ -175,7 +175,7 @@ curl -X POST \
 | `auth.params.username` | The username associated with your [!DNL AWS Redshift] account. |
 | `auth.params.password` | The password that corresponds with the user account. |
 | `auth.params.database` | The [!DNL AWS Redshift] database where data is to be fetched from. |
-| `auth.params.schema` | The schema associated with your [!DNL AWS Redshift] database. |
+| `auth.params.schema` | The name of the schema associated with your [!DNL AWS Redshift] database. You must ensure that the user you want to give database access to, also has access to this schema. |
 | `connectionSpec.id` | The [!DNL AWS Redshift] connection specification ID: `3416976c-a9ca-4bba-901a-1f08f66978ff` |
 
 +++

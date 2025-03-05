@@ -82,7 +82,7 @@ To create a new [!DNL AWS Redshift] account and connect to Experience Platform o
 | Username | The username of the account that you want to give access to. |
 | Password | The password that corresponds with the user account. |
 | Database | The [!DNL AWS Redshift] database where data is to be fetched from. |
-| Schema | The schema associated with your [!DNL AWS Redshift] database. |
+| Schema | The name of the schema associated with your [!DNL AWS Redshift] database. You must ensure that the user you want to give database access to, also has access to this schema. |
 
 For more information about getting started, refer to [this [!DNL AWS Redshift] document](https://docs.aws.amazon.com/redshift/latest/gsg/new-user-serverless.html).
 
