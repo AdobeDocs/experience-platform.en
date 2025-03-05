@@ -125,6 +125,10 @@ Select **[!UICONTROL Export full files]** to trigger the export of a file contai
     * **[!UICONTROL Once]**: schedule a one time on-demand full file export.
     * **[!UICONTROL Daily]**: schedule full file exports once a day, every day, at the time you specify.
 
+      >[!IMPORTANT]
+      >
+      >When mapping an audience which was evaluated through batch segmentation and created in the past 24 hours, set your daily export schedule to start the following day, in order for the daily snapshot to be created first. If you set your export schedule to start the same day when you created the audience, the initial export will fail, which can lead to incomplete exported data.
+
 2. Use the **[!UICONTROL Time]** toggle to select whether the export should happen immediately after audience evaluation or on a scheduled basis, at a specified time. When selecting the **[!UICONTROL Scheduled]** option, you can use the selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
 
     Use the **[!UICONTROL After segment evaluation]** option to have the activation job run immediately after the daily Platform batch segmentation job completes. This option ensures that when the activation job runs, the most up-to-date profiles are exported to your destination. This might result in an audience being exported multiple times a day, based on your actions.
