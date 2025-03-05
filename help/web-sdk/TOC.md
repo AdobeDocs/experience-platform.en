@@ -17,6 +17,7 @@ role: Developer
   * [Install the Web SDK using the tag extension](install/extension.md)
   * [Install the Web SDK using the JavaScript library](install/library.md)
   * [Install the Web SDK using the NPM package](install/npm.md)
+  * [Create a custom Web SDK build using the NPM package](install/create-custom-build.md)
 * Commands {#commands}
   * configure {#configure}
     * [Overview](commands/configure/overview.md)
