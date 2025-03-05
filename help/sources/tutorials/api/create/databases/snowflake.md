@@ -309,7 +309,7 @@ curl -X POST \
 | `auth.params.database` | The [!DNL Snowflake] database from where the data will be pulled from. |
 | `auth.params.password` | The password associated with your [!DNL Snowflake] account. |
 | `auth.params.warehouse` | The [!DNL Snowflake] warehouse that you are using. |
-| `auth.params.schema` | The schema associated with your [!DNL Snowflake] database. |
+| `auth.params.schema` | The name of the schema associated with your [!DNL Snowflake] database. You must ensure that the user you want to give database access to, also has access to this schema. |
 
 +++
 

@@ -110,7 +110,7 @@ To create a new [!DNL Snowflake] account and connect to Experience Platform on A
 | Username | The username associated with your [!DNL Snowflake] account. | 
 | Password | The password associated with your [!DNL Snowflake] account. |
 | Database | The [!DNL Snowflake] database from where the data will be pulled from. |
-| Schema | The schema associated with your [!DNL Snowflake] database. |
+| Schema | The name of the schema associated with your [!DNL Snowflake] database. You must ensure that the user you want to give database access to, also has access to this schema. |
 | Warehouse | The [!DNL Snowflake] warehouse that you are using. |
 
 ### Skip preview of sample data {#skip-preview-of-sample-data}
