@@ -143,7 +143,7 @@ The following table outlines the available permissions for Experience Platform i
 | [!DNL B2B Channel Configurations] | [!UICONTROL Manage B2B Channels Configurations] | Ability to view and access **[!UICONTROL Channels]** in the left nav. Users with access to **[!UICONTROL Channels]** should have access to all Channels CRUD functions. |
 | [!DNL B2B Journeys] | [!UICONTROL Manage B2B Account Journeys] | Ability to view and access **[!UICONTROL Account Journeys]** in the left nav. Users with access to **[!UICONTROL Account Journeys]** should have access to all Account Journeys CRUD functions. |
 | [!DNL Campaigns] | [!UICONTROL Manage Campaigns] | Access to read, create, edit, and delete campaigns. |
-<!-- | [!DNL Campaigns] | [!UICONTROL Approve and Publish Campaigns] | MISSING DESCRIPTION |  -->
+| [!DNL Campaigns] | [!UICONTROL Approve and Publish Campaigns] | The ability to approve and publish campaigns. | 
 | [!DNL Campaigns] | [!UICONTROL Publish Campaigns] | Ability to publish campaigns. |
 | [!DNL Campaigns] | [!UICONTROL View Campaigns] | Read-only access to campaigns. |
 | [!DNL Campaigns] | [!UICONTROL View Campaigns Report] | Read-only access to campaign reports. |
@@ -161,8 +161,8 @@ The following table outlines the available permissions for Experience Platform i
 | [!DNL Channel Configurations] | [!UICONTROL Manage Landing Page Settings] | Read, create, edit, and delete landing page settings. |
 | [!DNL Channel Configurations] | [!UICONTROL Manage SMS Settings] | Read, create, edit, and delete SMS settings. |
 | [!DNL Channel Configurations] | [!UICONTROL Manage SMS Subdomains] | Read, create, edit, and delete SMS subdomains. |
-<!-- | [!DNL Channel Configurations] | [!UICONTROL Manage File Routing] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Channel Configurations] | [!UICONTROL View File Routing] | MISSING DESCRIPTION | -->
+| [!DNL Channel Configurations] | [!UICONTROL Manage File Routing] | Read, create, edit, and delete file routings. |
+| [!DNL Channel Configurations] | [!UICONTROL View File Routing] | Read-only access to file routings. |
 | [!DNL Channel Configurations] | [!UICONTROL Manage Seedlist] | The ability to create and edit the Seedlist. |
 | [!DNL Channel Configurations] | [!UICONTROL Manage Language Settings] | The ability to create and edit the language settings. |
 | [!DNL Channel Configurations] | [!UICONTROL Manage Web Subdomains] | The ability to create and edit CJM web subdomains. |
@@ -197,7 +197,7 @@ The following table outlines the available permissions for Experience Platform i
 | [!DNL Data Governance] | [!UICONTROL Manage Data Usage Policies] | Access to read, create, edit, and delete data usage policies. |
 | [!DNL Data Governance] | [!UICONTROL View Data Usage Policies] | Read-only access for data usage policies belonging to your organization. |
 | [!DNL Data Governance] | [!UICONTROL View User Activity Log] | Read-only access to view recorded [audit logs](../landing/governance-privacy-security/audit-logs/overview.md) of Platform activities. |
-<!-- | [!DNL Data Governance] | [!UICONTROL View Privacy Console] | MISSING DESCRIPTION | -->
+| [!DNL Data Governance] | [!UICONTROL View Privacy Console] | Read-only access to privacy consoles. |
 | [!DNL Data Ingestion] | [!UICONTROL Manage Sources] | Access to read, create, edit, and disable sources. |
 | [!DNL Data Ingestion] | [!UICONTROL View Sources] | Read-only access to available sources in the **[!UICONTROL Catalog]** tab and authenticated sources in the **[!UICONTROL Browse]** tab. |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Access to create, accept, and decline partner sharing to connect two organizations and enable [!DNL Segment Match] flows. |
@@ -242,20 +242,20 @@ The following table outlines the available permissions for Experience Platform i
 | [!DNL Journeys] | [!UICONTROL View Journeys Report] | Read-only access to journeys report. |
 | [!DNL Journeys] | [!UICONTROL Manage Journeys Events, Data Sources and Actions] | Access to read, create, edit, and delete events, data sources, or actions. |
 | [!DNL Journeys] | [!UICONTROL View Journeys Events, Data Sources and Actions] | Read-only access to events, data sources, or actions. |
-<!-- | [!DNL Journeys] | [!UICONTROL Approve and Publish Journeys] | MISSING DESCRIPTION | -->
+| [!DNL Journeys] | [!UICONTROL Approve and Publish Journeys] | The ability to approve and publish journeys when a policy is applied. |
 | [!DNL Journeys] | [!UICONTROL Publish Journeys] | Ability to publish journeys. |
-| [!DNL Journey Optimizer Library] | [!UICONTROL Manage Library Items] | Ability to add and delete saved expressions. |
-<!-- | [!DNL Journey Optimizer Library] | [!UICONTROL Publish Fragments] | MISSING DESCRIPTION | -->
+| [!DNL Journey Optimizer Library] | [!UICONTROL Manage Library Items] | The ability to add and delete saved expressions. |
+| [!DNL Journey Optimizer Library] | [!UICONTROL Publish Fragments] | The ability to publish content fragments. |
 | [!DNL Journey Optimizer Library] | [!UICONTROL Simulate Content] | Access to the simulate content option for previewing and proofing. |
 | [!DNL Journey Optimizer Rules] | [!UICONTROL View Frequency Rules] | Read-only access to frequency rules. |
 | [!DNL Journey Optimizer Rules] | [!UICONTROL Manage Frequency Rules] | Access to read, create, edit, or delete frequency rules. |
-<!-- | [!DNL Messages] | [!UICONTROL Manage Messages] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Messages] | [!UICONTROL View Messages] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Messages] | [!UICONTROL View Messages Report] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Messages] | [!UICONTROL Publish Messages] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Messages] | [!UICONTROL Manage Messages Preview and Test] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Privacy Service] | [!UICONTROL Manage Privacy Service] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Privacy Service] | [!UICONTROL View Privacy Service] | MISSING DESCRIPTION | -->
+| [!DNL Messages] | [!UICONTROL Manage Messages] | Access to read, create, edit, and delete messages. |
+| [!DNL Messages] | [!UICONTROL View Messages] | Read-only access to messages. |
+| [!DNL Messages] | [!UICONTROL View Messages Report] | Access to read and edit message reports. |
+| [!DNL Messages] | [!UICONTROL Publish Messages] | The ability to publish messages. |
+| [!DNL Messages] | [!UICONTROL Manage Messages Preview and Test] | The ability to approve and publish messages when a policy is applied. |
+| [!DNL Privacy Service] | [!UICONTROL Manage Privacy Service] | Access to read and write privacy workflows. |
+| [!DNL Privacy Service] | [!UICONTROL View Privacy Service] | Read-only access to privacy workflows. |
 | [!DNL Profile Management] | [!UICONTROL Manage Profiles] | Access to read, create, edit, and delete datasets that are used for customer profiles. Read-only access to available profiles.|
 | [!DNL Profile Management] | [!UICONTROL View Profiles] | Read-only access to available profiles. |
 | [!DNL Profile Management] | [!UICONTROL Manage Segments] | Access to read, create, edit, and delete segments. |
@@ -269,8 +269,7 @@ The following table outlines the available permissions for Experience Platform i
 | [!DNL Profile Management] | [!UICONTROL Manage B2B AI] | Access to read, create, edit, and delete settings and configurations for all B2B AI/ML services. |
 | [!DNL Profile Management] | [!UICONTROL View B2B Profile] | Read-only access to B2B entity profiles (such as Account, Opportunity, and so on), settings and configurations for all B2B AI/ML services, and B2B dashboard widgets. |
 | [!DNL Profile Management] | [!UICONTROL Manage B2B Profile] | Access to read, create, edit, and delete B2B entity profiles (such as Account, Opportunity, and so on). Read-only access for settings and configurations for all B2B AI/ML services, and B2B dashboard widgets. |
-<!-- | [!DNL Profile Management] | [!UICONTROL Manage Lookalikes] | MISSING DESCRIPTION | -->
-<!-- | [!DNL Profile Management] | [!UICONTROL View B2B Experience] | MISSING DESCRIPTION | -->
+| [!DNL Profile Management] | [!UICONTROL View B2B Experience] | Ability to access the B2C tools. |
 | [!DNL Profile Management] | [!UICONTROL View Profile Settings] | Read-only access to all profile settings. |
 | [!DNL Profile Management] | [!UICONTROL Manage Profile Settings] | Access to read and edit all profile settings. |
 | [!DNL Prospects] | [!UICONTROL View Prospects] | Read-only access to prospect schemas, profiles, audiences, and the prospect accordion. |
