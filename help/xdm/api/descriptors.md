@@ -363,7 +363,7 @@ Friendly name descriptors allow a user to modify the `title`, `description`, and
 
 {style="table-layout:auto"}
 
-#### Relationship descriptor
+#### Relationship descriptor {#relationship-descriptor}
 
 Relationship descriptors describe a relationship between two different schemas, keyed on the properties described in `sourceProperty` and `destinationProperty`. See the tutorial on [defining a relationship between two schemas](../tutorials/relationship-api.md) for more information.
 
@@ -383,13 +383,49 @@ Relationship descriptors describe a relationship between two different schemas, 
 
 | Property | Description |
 | --- | --- |
-| `@type` | The type of descriptor being defined. For a relationship descriptor, this value must be set to `xdm:descriptorOneToOne`. |
+| `@type` | The type of descriptor being defined. For a relationship descriptor, this value must be set to `xdm:descriptorOneToOne`, unless you have access to B2B. B2B introduces an additional type of relationship descriptor, as described in the [section below](#b2b-relationship-descriptor). |
 | `xdm:sourceSchema` | The `$id` URI of the schema where the descriptor is being defined. |
 | `xdm:sourceVersion` | The major version of the source schema. |
 | `xdm:sourceProperty` | Path to the field in the source schema where the relationship is being defined. Should begin with a "/" and not end with one. Do not include "properties" in the path (for example, "/personalEmail/address" instead of "/properties/personalEmail/properties/address"). |
 | `xdm:destinationSchema` | The `$id` URI of the reference schema this descriptor is defining a relationship with. |
 | `xdm:destinationVersion` | The major version of the reference schema. |
 | `xdm:destinationProperty` | Optional path to a target field within the reference schema. If this property is omitted, the target field is inferred by any fields that contain a matching reference identity descriptor (see below). |
+
+{style="table-layout:auto"}
+
+##### B2B relationship descriptor {#B2B-relationship-descriptor}
+
+The Real-Time CDP B2B Edition introduces a new way to define relationships between schemas, described through `@type` property and an additional `xdm:destinationNamespace` property. The `@type` of `xdm:descriptorRelationship` is based on a many-to-one relationship, reflected in the `xdm:cardinality` value. See the tutorial on [defining a schema relationship for B2B Edition](../tutorials/relationship-b2b.md) for more information.
+
+```json
+{
+   "@type": "xdm:descriptorRelationship",
+   "xdm:sourceSchema" : "https://ns.adobe.com/{TENTANT_ID}/schemas/9f2b2f225ac642570a110d8fd70800ac0c0573d52974fa9a",
+   "xdm:sourceVersion" : 1,
+   "xdm:sourceProperty" : "/person-ref",
+   "xdm:destinationSchema" : "https://ns.adobe.com/{TENANT_ID/schemas/628427680e6b09f1f5a8f63ba302ee5ce12afba8de31acd7",
+   "xdm:destinationVersion" : 1,
+   "xdm:destinationProperty": "/personId",
+   "xdm:destinationNamespace" : "Person", 
+   "xdm:destinationToSourceTitle" : "Opportunity Roles",
+   "xdm:sourceToDestinationTitle" : "Person",
+   "xdm:cardinality": "M:1"
+}
+```
+
+| Property | Description |
+| --- | --- |
+| `@type` | The type of descriptor being defined. For us with the following fields, the value must be set to `xdm:descriptorRelationship`. For information on additional types, see the [relationship descriptors](#relationship-descriptor) section.  |
+| `xdm:sourceSchema` | The `$id` URI of the schema where the descriptor is being defined. |
+| `xdm:sourceVersion` | The major version of the source schema. |
+| `xdm:sourceProperty` | Path to the field in the source schema where the relationship is being defined. Should begin with a "/" and not end with one. Do not include "properties" in the path (for example, "/personalEmail/address" instead of "/properties/personalEmail/properties/address"). |
+| `xdm:destinationSchema` | The `$id` URI of the reference schema this descriptor is defining a relationship with. |
+| `xdm:destinationVersion` | The major version of the reference schema. |
+| `xdm:destinationProperty` | Optional path to a target field within the reference schema, which must be the schema's primary ID. If this property is omitted, the target field is inferred by any fields that contain a matching reference identity descriptor (see below). |
+| `xdm:destinationNamespace` | The namespace of the reference schema. |
+| `xdm:destinationToSourceTitle` | The display name of the relationship from the reference schema to the source schema. |
+| `xdm:sourceToDestinationTitle` | The display name of the relationship from the source schema to the reference schema. |
+| `xdm:cardinality` | The joining relationship between the schemas. This value should be set to `M:1`, referring to a many-to-one relationship. |
 
 {style="table-layout:auto"}
 
