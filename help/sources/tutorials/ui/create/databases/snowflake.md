@@ -106,7 +106,7 @@ To create a new [!DNL Snowflake] account and connect to Experience Platform on A
 | Credential | Description |
 | --- | --- |
 | Host | The host URL that your [!DNL Snowflake] account connects to. |
-| Port | The port number that is used by [!DNL Snowflake] when connecting to a server over the internet. The default port value is `443`. |
+| Port | The port number that is used by [!DNL Snowflake] when connecting to a server over the internet. |
 | Username | The username associated with your [!DNL Snowflake] account. | 
 | Password | The password associated with your [!DNL Snowflake] account. |
 | Database | The [!DNL Snowflake] database from where the data will be pulled from. |
