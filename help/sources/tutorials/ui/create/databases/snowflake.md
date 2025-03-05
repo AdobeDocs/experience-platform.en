@@ -24,7 +24,7 @@ This tutorial requires a working understanding of the following components of Ex
 >
 >You must set the `PREVENT_UNLOAD_TO_INLINE_URL` flag to `FALSE` to allow data unloading from your [!DNL Snowflake] database to Experience Platform.
 
-## Navigate the sources catalog
+## Navigate the sources catalog {#navigate}
 
 In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
@@ -36,21 +36,21 @@ Select **[!DNL Snowflake]** under the *[!UICONTROL Databases]* category, and the
 
 ![The sources catalog with the Snowflake card selected..](../../../../images/tutorials/create/snowflake/catalog.png)
 
-The **[!UICONTROL Connect to Snowflake]** page appears. On this page, you can either use new credentials or existing credentials.
-
 ## Use an existing account {#existing}
+
+Next, you are taken to the authentication step of the sources workflow. Here, you can either use an existing account or create a new account.
 
 To use an existing account, select the [!DNL Snowflake] account you want to connect with and then select **[!UICONTROL Next]** to proceed.
 
 ![The existing account interface in the sources workflow.](../../../../images/tutorials/create/snowflake/existing.png)
 
-## Create a new account
+## Create a new account {#create}
 
 If you do not have an existing account, then you must create a new account by providing the necessary authentication credentials that correspond with your source. 
 
 To create a new account, select **[!UICONTROL New account]** and then provide a name and optionally add a description for your account.
 
-### Create an account to connect to Experience Platform on Azure {#azure}
+### Connect to Experience Platform on Azure {#azure}
 
 You can connect your [!DNL Snowflake] account to Experience Platform on Azure using either account key authentication or key-pair authentication. 
 
@@ -93,7 +93,7 @@ For more information about these values, refer to [this Snowflake document](http
 
 >[!ENDTABS]
 
-### Create an account to connect to Experience Platform on AWS {#aws}
+### Connect to Experience Platform on AWS {#aws}
 
 >[!AVAILABILITY]
 >
