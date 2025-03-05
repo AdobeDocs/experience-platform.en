@@ -12,15 +12,15 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 ## Version 2.26.0 - March 5, 2025
 
-**Fixes and improvements**
-
-- Fixed an issue where `getIdentity` commands did not return the identity after a collect call was sent.
-- Fixed an issue where personalization redirects caused content flickering before the redirect occurred.
-- Updates to the custom build script including making context a required component.
-
 **New features**
 
-- The `getIdentity` command now automatically reads the ECID directly from the `kndctr` identity cookie. If you call `getIdentity` with the `ECID` namespace, and there is already an identity cookie, Web SDK no longer makes a request to Adobe Experience Edge to get the identity. It just reads the identity from the cookie.
+- You can now use the Web SDK NPM package to create custom Web SDK builds and select only the library components that you need. This leads to a reduces library size and optimized loading times. See the documentation on how to [create a custom Web SDK build using the NPM package](install/create-custom-build.md).
+- The [`getIdentity`](commands/getidentity.md) command now automatically reads the ECID directly from the `kndctr` identity cookie. If you call `getIdentity` with the `ECID` namespace, and there is already an identity cookie, Web SDK no longer makes a request to the Edge Network to get the identity. It now reads the identity from the cookie.
+
+**Fixes and improvements**
+
+- Fixed an issue where `getIdentity` commands did not return the identity after a `collect` call was sent.
+- Fixed an issue where personalization redirects caused content flickering before the redirect occurred.
 
 ## Version 2.25.0 - January 23, 2025
 

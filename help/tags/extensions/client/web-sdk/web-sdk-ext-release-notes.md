@@ -9,16 +9,16 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 
 ## Version 2.29.0 - March 5, 2025
 
-**Fixes and improvements**
-
-- Added graceful handling of missing data elements in update variable actions. Previously, editing an update variable action with a missing data element simply showed an error message. Now, you can choose a different data element and all the settings for the update variable action are still applied. Data elements can be missing if they are deleted or if an Adobe Tags property is duplicated.
-- Added support for opening a new tab with the redirect with identity action. Now when using the action, the `target` attribute of the anchor tag is used when redirecting the browser.
-- Fixed an issue where Adobe Audience Manager could not be disabled in configuration overrides.
-
 **New features**
 
-- Support for excluding Web SDK components as part of the Adobe Tags' library build. This can result in smaller builds by excluding unused components.
+- You can now create custom Web SDK builds and choose the components that you need from the tag extension user interface. This can result in smaller builds by excluding unused components. See the documentation on [creating a custom Web SDK build](web-sdk-extension-configuration.md#custom-build).
 - Contains [version 2.26.0](../../../../web-sdk/release-notes.md#2-26-0) of the Adobe Experience Platform Web SDK.
+
+**Fixes and improvements**
+
+- Added graceful handling of missing data elements in [update variable](action-types.md#update-variable) actions. Previously, editing an update variable action with a missing data element showed an error message. Now, you can choose a different data element and all the settings for the update variable action are still applied. Data elements can be missing if they are deleted or if a Tags property is duplicated.
+- Added support for opening a new tab with the [redirect with identity](action-types.md#redirect-with-identity) action. Now, when using the action, the `target` attribute of the anchor tag is used when redirecting the browser.
+- Fixed an issue where Adobe Audience Manager could not be disabled in configuration overrides.
 
 ## Version 2.28.0 - January 23, 2025
 
