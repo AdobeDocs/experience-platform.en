@@ -32,7 +32,7 @@ Locate your consent attributes from the options available. Select **[!UICONTROL 
 >
 >If you have maintained your user consent in an attribute different to the Adobe recommended field group, then you must select those attributes instead of the ones shown below.
 
-More information can be found on the [handling of consent in segmentation](../../segmentation/consents.md#handling-consent-in-segmentation) documentation.
+More information can be found on the [handling of consent in segmentation](../../segmentation/tutorials/consents.md#handling-consent-in-segmentation) documentation.
 
 ![The Segment Builder with the [!UICONTROL Consent and Preferences] attribute folder highlighted.](../images/insights-use-cases/consent-analysis/consent-and-preferences.png)
 

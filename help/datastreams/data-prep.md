@@ -161,6 +161,10 @@ The **[!UICONTROL Mapping]** step appears, allowing you to map the fields in you
 * [Create mapping rules](#create-mapping) for this datastream through a manual process.
 * [Import mapping rules](#import-mapping) from an existing datastream.
 
+>[!IMPORTANT]
+>
+>Data Prep mapping overrides `identityMap` XDM payloads, which can further impact profile matching against Real-Time CDP audiences.
+
 ### Create mapping rules {#create-mapping}
 
 To create a mapping rule, select **[!UICONTROL Add new mapping]**.
