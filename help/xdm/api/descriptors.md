@@ -383,7 +383,7 @@ Relationship descriptors describe a relationship between two different schemas, 
 
 | Property | Description |
 | --- | --- |
-| `@type` | The type of descriptor being defined. For a relationship descriptor, this value must be set to `xdm:descriptorOneToOne`, unless you have access to B2B. B2B introduces an additional type of relationship descriptor, as described in the [section below](#b2b-relationship-descriptor). |
+| `@type` | The type of descriptor being defined. For a relationship descriptor, this value must be set to `xdm:descriptorOneToOne`, unless you have access to Real-Time CDP B2B edition. B2B edition introduces an additional type of relationship descriptor, as described in the [section below](#b2b-relationship-descriptor). |
 | `xdm:sourceSchema` | The `$id` URI of the schema where the descriptor is being defined. |
 | `xdm:sourceVersion` | The major version of the source schema. |
 | `xdm:sourceProperty` | Path to the field in the source schema where the relationship is being defined. Should begin with a "/" and not end with one. Do not include "properties" in the path (for example, "/personalEmail/address" instead of "/properties/personalEmail/properties/address"). |
