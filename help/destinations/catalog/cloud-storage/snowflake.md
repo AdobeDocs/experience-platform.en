@@ -5,38 +5,19 @@ description: Export data to your Snowflake account using private listings.
 
 # Snowflake connection {#snowflake-destination}
 
-Export data to your Snowflake account using private listings.
-
 ## Overview {#overview}
 
 Export data to your Snowflake account using private listings.
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the *YourDestination* destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
-
-### Use case #1 {#use-case-1}
-
-*For mobile messaging platforms:*
-
-*A home rental and sales platform wants to push mobile notifications to customers' Android and iOS devices to let them know that there are 100 updated listings in the area where they previously searched for a rental.*
-
-### Use case #2 {#use-case-2}
-
-*For social network platforms:*
-
-*An athletic apparel brand wants to reach existing customers through their social media accounts. The apparel brand can ingest email addresses from their own CRM to Adobe Experience Platform, build audiences from their own offline data, and send these audiences to YourDestination, to display ads in their customers' social media feeds.*
 
 ## Prerequisites {#prerequisites}
 
-*Add information in this section about anything that customers need to be aware of before starting to set up the destination in the Adobe Experience Platform user interface. This can be about:*
+Before configuring your Snowflake connection, make sure you meet the following prerequisites:
 
-* *needing to be added to an allow list*
-* *requirements for email hashing*
-* *any account specifics on your side*
-* *how to obtain an API key to connect to your platform*
-
-*You can link out to your relevant documentation if that would be useful to customers.*
+* You have access to a [!DNL Snowflake] account.
+* Your Snowflake account is subscribed to private listings. You or someone in your company who has account administrator privileges on Snowflake can configure this.
 
 ## Supported identities {#supported-identities}
 
@@ -74,11 +55,9 @@ To connect to this destination, follow the steps described in the [destination c
 
 ### Authenticate to destination {#authenticate}
 
-To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
+To authenticate to the destination, select **[!UICONTROL Connect to destination]**.
 
-![Sample screenshot showing how to authenticate to the destination](../assets/docs-framework/authenticate-destination.png)
-
-* **[!UICONTROL Bearer token]**: Fill in the bearer token to authenticate to the destination.
+![Sample screenshot showing how to authenticate to the destination](../../assets/catalog/cloud-storage/snowflake/authenticate-destination.png)
 
 ### Fill in destination details {#destination-details}
 
@@ -88,8 +67,12 @@ To configure details for the destination, fill in the required and optional fiel
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Snowflake Account ID]**: Your Snowflake account ID.
+*  **[!UICONTROL Snowflake Account ID]**: Your Snowflake account ID. Example: `adobe-123456`.
 * **[!UICONTROL Account acknowledgment]**: Toggle on the Snowflake Account ID acknowledgment to confirm that your Account ID is correct and it belongs to you.
+
+>[!IMPORTANT]
+>
+> Special characters used in the destination name and Experience Platform sandbox name are automatically converted to underscores (`_`) in Snowflake. To avoid confusion, do not use any special characters in your destination and sandbox name.
 
 ### Enable alerts {#enable-alerts}
 
