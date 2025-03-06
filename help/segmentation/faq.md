@@ -77,7 +77,7 @@ The organization-specific default merge policy is automatically applied when upl
 
 ### Where can I activate externally generated audiences to? 
 
-An externally generated audience can be mapped to any destination and can be used in Adobe Journey Optimizer campaigns.
+An externally generated audience can be mapped to any destination and can be used in Adobe Journey Optimizer campaigns and journeys.
 
 ### Can I delete an externally generated audience?
 
