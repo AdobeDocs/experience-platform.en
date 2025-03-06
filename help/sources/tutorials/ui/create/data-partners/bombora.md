@@ -34,6 +34,17 @@ Select **[!DNL Bombora Intent]** under the *[!UICONTROL B2B]* category, and then
 
 ## Provide dataflow details {#provide-dataflow-details}
 
+>[!CONTEXTUALHELP]
+>id="platform_sources_bombora_domain"
+>title="Domain source"
+>abstract="While Adobe uses the XDM accountOrganization.website, there may be customers who use custom fields for their respective websites. Therefore, you must ensure that your domain source is the domain/website field that will match your Bombora account records against Experience Platform accounts."
+
 ## Schedule dataflow {#schedule-dataflow}
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_bombora_schedule"
+>title="Schedule your dataflow"
+>abstract="Bombora drops data once a week on Monday morning at 5:00 PM UTC. Therefore, you must configure your ingestion start time after 5:00PM UTC. Additionally, you must confirm the ingestion time with Bombora as they may alter their schedule, when dropping files to Adobe."
+
 
 ## Review dataflow {#review-dataflow}
