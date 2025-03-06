@@ -47,7 +47,7 @@ The guardrails below generally apply to activation through [all destination type
 |Maximum number of attributes mapped to a destination | 50 | Performance guardrail | In the case of several destinations and destination types, you can select profile attributes and identities to map for export. For optimal performance, a maximum of 50 attributes should be mapped in a dataflow to a destination.|
 |Maximum number of destinations | 100 | System-enforced guardrail | You can create a maximum of 100 destinations that you can connect and activate data to, *per sandbox*. [Edge personalization destinations (Custom personalization)](#edge-destinations-activation) can make up a maximum of 10 of the 100 recommended destinations.|
 |Type of data activated to destinations | Profile data, including identities and identity map | System-enforced guardrail| Currently, it is only possible to export *profile record attributes* to destinations. XDM attributes that describe event data are not supported for export at this time.|
-|Type of data activated to destinations - array and map attributes support | Partially available | System-enforced guardrail| You can export array attributes to [file-based destinations](/help/destinations/destination-types.md#file-based). [Read more](/help/destinations/ui/export-arrays-calculated-fields.md) about the functionality.|
+|Type of data activated to destinations - array and map attributes support | Partially available | System-enforced guardrail| You can export array attributes to [file-based destinations](/help/destinations/destination-types.md#file-based). [Read more](/help/destinations/ui/export-arrays-maps-objects.md) about the functionality.|
 
 {style="table-layout:auto"}
 
