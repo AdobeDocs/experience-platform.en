@@ -145,3 +145,9 @@ For more information on identity graph linking rules, read the following documen
 * [Namespace priority](./namespace-priority.md)
 * [Graph simulation UI](./graph-simulation.md)
 * [Identity settings UI](./identity-settings-ui.md)
+
+### Watch the video on identity graph linking rules {#watch}
+
+Watch the following video for additional information on using identity graph linking rules:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops)

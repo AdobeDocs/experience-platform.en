@@ -177,3 +177,9 @@ By reading this document, you now know how to use the [!DNL Graph Simulation] to
 * [Examples of graph configurations](./example-configurations.md)
 * [Namespace priority](./namespace-priority.md)
 * [Identity settings UI](./identity-settings-ui.md)
+
+### Watch the video on graph simulation {#watch}
+
+Watch the following video for additional information on using the [!DNL Graph Simulation] interface in the Identity Service UI workspace:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3444032/?learn=on&enablevpops)
