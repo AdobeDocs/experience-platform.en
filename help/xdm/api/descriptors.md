@@ -389,7 +389,7 @@ Relationship descriptors describe a relationship between two different schemas, 
 | `xdm:sourceProperty` | Path to the field in the source schema where the relationship is being defined. Should begin with a "/" and not end with "/". Do not include "properties" in the path (for example, "/personalEmail/address" instead of "/properties/personalEmail/properties/address"). |
 | `xdm:destinationSchema` | The `$id` URI of the reference schema this descriptor is defining a relationship with. |
 | `xdm:destinationVersion` | The major version of the reference schema. |
-| `xdm:destinationProperty` | Path to a target field within the reference schema. If this property is omitted, the target field is inferred by any fields that contain a matching reference identity descriptor (see below). |
+| `xdm:destinationProperty` | (Optional) Path to a target field within the reference schema. If this property is omitted, the target field is inferred by any fields that contain a matching reference identity descriptor (see below). |
 
 {style="table-layout:auto"}
 
@@ -421,7 +421,7 @@ The Real-Time CDP B2B Edition introduces an alternative way to define relationsh
 | `xdm:sourceProperty` | Path to the field in the source schema where the relationship is being defined. Should begin with a "/" and not end with "/". Do not include "properties" in the path (for example, "/personalEmail/address" instead of "/properties/personalEmail/properties/address"). |
 | `xdm:destinationSchema` | The `$id` URI of the reference schema this descriptor is defining a relationship with. |
 | `xdm:destinationVersion` | The major version of the reference schema. |
-| `xdm:destinationProperty` | Path to a target field within the reference schema, which must be the schema's primary ID. If this property is omitted, the target field is inferred by any fields that contain a matching reference identity descriptor (see below). |
+| `xdm:destinationProperty` | (Optional) Path to a target field within the reference schema, which must be the schema's primary ID. If this property is omitted, the target field is inferred by any fields that contain a matching reference identity descriptor (see below). |
 | `xdm:destinationNamespace` | The namespace of the primary ID from the reference schema. |
 | `xdm:destinationToSourceTitle` | The display name of the relationship from the reference schema to the source schema. |
 | `xdm:sourceToDestinationTitle` | The display name of the relationship from the source schema to the reference schema. |
