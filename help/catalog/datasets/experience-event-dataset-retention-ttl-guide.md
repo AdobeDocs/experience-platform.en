@@ -24,6 +24,12 @@ TTL is useful when managing time-sensitive data that loses relevance over time. 
 - Maintain data hygiene by keeping only relevant information.
 - Optimize data retention to support business objectives.
 
+>[!NOTE]
+>
+>Experience Event Dataset Retention applies to event data stored in the data lake. If you are managing retention in Real-Time Customer Data Platform, consider using [Experience Event Expiration](../../profile/event-expirations.md) and [Pseudonymous Profile Expiration](../../profile/pseudonymous-profiles.md) alongside data lake retention settings.
+>
+>TTL configurations help you optimize storage based on entitlements. While Profile Store data (used in Real-Time CDP) may be considered stale and removed after 30 days, the same event data in the data lake can remain available for 12–13 months (or longer based on entitlement) for analytics and Data Distiller use cases.
+
 ### Industry example {#industry-example}
 
 As an example, consider a video streaming service that tracks user interactions, such as video views, searches, and recommendations. While recent engagement data is crucial for personalization, older activity logs (for example, interactions from over a year ago) lose relevance. By using row-level expiration, Platform automatically removes outdated logs, ensuring only current and meaningful data is used for analytics and recommendations.
@@ -116,7 +122,7 @@ A successful response returns the TTL configuration for the dataset, including t
                 "rowExpiration": {
                     "defaultValue": "P12M",
                     "maxValue": "P12M",
-                    "minValue": "P7D"
+                    "minValue": "P30D"
                 }
             },
             "adobe_unifiedProfile": {  
@@ -249,7 +255,7 @@ A successful response shows the TTL configuration for the dataset. It includes d
 | `extensions`                     | A container for additional metadata related to the dataset. |
 | `extensions.adobe_lakeHouse`     | Specifies settings related to storage architecture, including row-level expiration configurations |
 | `rowExpiration` | The object contains TTL settings that define the retention period for the dataset. |
-| `rowExpiration.ttlValue` | Defines the duration before records in the dataset are automatically removed. Uses the ISO-8601 period format (for example, `P3M` for 3 months, or `P7D` for one week). |
+| `rowExpiration.ttlValue` | Defines the duration before records in the dataset are automatically removed. Uses the ISO-8601 period format (for example, `P3M` for 3 months, or `P30D` for one week). |
 | `rowExpiration.valueStatus` | The string indicates whether the TTL setting is a default system value or a custom value set by a user. Possible values are: `default`, `custom`. |
 | `rowExpiration.setBy` | Specifies who last modified the TTL setting. Possible values include: `user` (manually set) or `service` (automatically assigned). |
 | `rowExpiration.updated` | The timestamp of the last TTL update. This value indicates when the TTL setting was last modified. |
