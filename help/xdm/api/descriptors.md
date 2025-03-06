@@ -406,9 +406,9 @@ The Real-Time CDP B2B Edition introduces an alternative way to define relationsh
    "xdm:destinationSchema" : "https://ns.adobe.com/{TENANT_ID/schemas/628427680e6b09f1f5a8f63ba302ee5ce12afba8de31acd7",
    "xdm:destinationVersion" : 1,
    "xdm:destinationProperty": "/personId",
-   "xdm:destinationNamespace" : "Person", 
+   "xdm:destinationNamespace" : "People", 
    "xdm:destinationToSourceTitle" : "Opportunity Roles",
-   "xdm:sourceToDestinationTitle" : "Person",
+   "xdm:sourceToDestinationTitle" : "People",
    "xdm:cardinality": "M:1"
 }
 ```
