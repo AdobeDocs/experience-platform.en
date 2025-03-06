@@ -10,7 +10,7 @@ exl-id: 4faf3200-673b-4a20-8f94-d049e800444b
 >
 >The [!DNL AWS Redshift] source is available in the sources catalog to users who have purchased Real-Time Customer Data Platform Ultimate.
 
-Read this guide to learn how to connect your [!DNL AWS Redshift] account to Adobe Experience Platform using the user interface.
+Read this guide to learn how to connect your [!DNL AWS Redshift] account to Adobe Experience Platform using the sources workspace in the UI.
 
 ## Getting started
 
