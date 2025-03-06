@@ -11,7 +11,7 @@ This tutorial covers the steps for editing various components of a destination c
 
 >[!NOTE]
 >
-> The edit operations described in this tutorial are currently only supported through the Flow Service API.
+> The edit operations described in this tutorial are also supported in the Experience Platform UI. Read the tutorial on how to [edit destinations in the UI](/help/destinations/ui/edit-destination.md) for more information.
 
 ## Getting started {#get-started}
 
