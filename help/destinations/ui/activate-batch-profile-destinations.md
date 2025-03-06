@@ -127,7 +127,7 @@ Select **[!UICONTROL Export full files]** to trigger the export of a file contai
 
       >[!IMPORTANT]
       >
-      >When mapping an audience which was evaluated through batch segmentation and created in the past 24 hours, set your daily export schedule to start the following day, in order for the daily snapshot to be created first. If you set your export schedule to start the same day when you created the audience, the initial export will fail, which can lead to incomplete exported data.
+      >When mapping an audience which created within the last 24 hours and evaluated through [batch segmentation](../../segmentation/methods/batch-segmentation.md), set your daily export schedule to start the following day at the earliest. This assures that the daily batch evaluation job runs first and you are exporting complete audience data.
 
 2. Use the **[!UICONTROL Time]** toggle to select whether the export should happen immediately after audience evaluation or on a scheduled basis, at a specified time. When selecting the **[!UICONTROL Scheduled]** option, you can use the selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
 
