@@ -1,39 +1,70 @@
 ---
 solution: Experience Platform
-title: Available Use Case Playbooks for Real-Time Customer Data Platform and Adobe Journey Optimizer.
-description: A list of all the playbooks in Real-Time Customer Data Platform and Adobe Journey Optimizer.
+title: AI Assistant for Use Cases - Author and share your own Playbooks.
+description: How to author and share your own use case playbooks.
 role: User
 exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
 ---
-# Playbook Authoring Framework Overview
 
-The Playbook Authoring Framework is designed to enable marketing analysts and Martech teams to create, manage, and share playbooks efficiently within Adobe Experience Platform. 
+# Author and share your own playbooks using AI Assistant
 
-The playbook authoring framework follows a three-step process:
+The Playbook Authoring Framework is designed to enable you to create, manage, and share playbooks efficiently within Adobe Experience Platform. 
 
-1. **Metadata capture**: Marketing analysts gather or generate playbook metadata using AI assistance or manual input.
+The framework follows a three-step process:
 
-2. **Technical association**: The martech team links specific assets (schemas, segments, profiles) to the playbook. Customers retain full control over playbook creation in their developement sandbox, ensuring alignment with their assets, unique schemas and other data structures.
+1. **Metadata capture**: Use metadata capture to gather or generate playbook metadata using AI assistance or manual input.
 
-3. **Playbook distribution**: Playbooks are then shared across different subsidiaries and IMS organizations. For example, Allianz's Martech Center of Excellence in Germany creates a "golden" playbook and distributes it to regional subsidiaries in Thailand, Australia, etc.
+2. **Technical association**: Add specific technical assets (schemas, segments, profiles) to the playbook. Customers retain full control over playbook creation within their developement sandbox, ensuring alignment with their assets, unique schemas, and other data structures.
 
-## Create a playbook with Adobe's AI Assistant
+3. **Playbook distribution**: Playbooks are then shared across different IMS organizations. For example, Allianz's Martech Center of Excellence in Germany creates a "golden" playbook and distributes it to regional subsidiaries in Thailand, Australia, etc.
+
+## Manually create a Playbook with Adobe's AI Assistant
+
+### Playbook overview
 
 Follow the steps outlined below to create a playbook with Adobe's AI Assitant:
 
-1. Navigate to the Use Case Playbooks home page from the left navigation pane. 
-2. Select "New Playbook" and choose "Generate playbook with Adobe AI".
-3. In the prompt field, enter a use case. Example: "Engage customers of Nike who browsed running shoes but did not complete the purchase."
-4. Select "Generate" - The system uses Adobe's R2D2 framework to create the playbook.
-5. Select "Edit" to modify the generated title, description, and metadata as needed.
+1. From the left navigation pane, select 'Playbooks'. 
+
+![Choose Playbooks from the left hand navigation]()
+
+2. Select 'New Playbook' and then select 'Generate playbook with AI'.
+
+![Select "New Playbook" button]()
+
+![Select "Generate playbook with AI" button]()
+
+3. In the prompt field, describe the use case. Example: "Engage ACME customers who browsed running shoes but did not complete the purchase."
+
+![Select "Generate playbook with AI" button]()
+
+4. Select 'Generate' to create the playbook using Adobe's R2D2 framework.
+
+![Select "Generate playbook with AI" button]()
+
+5. Once generated, select 'Edit' to modify the generated title, description, and metadata as needed.
+
+![Select "Generate playbook with AI" button]()
+
+To ensure that the data engineer has all the necessary details to set up the use case, fill out the 'Playbook detail' section. While these details are optional, this helps capture key information, making it easier to connect the right technical components. Select 'Edit' to add valuesto the following fields:
+
+* 'Industry'
+* 'Target audience,'
+* 'Marketing channel'. 
+
+### Technical assets
+
+Currently, the 'Technical assets' tab is only available for Adobe Journey Optimizer (AJO). Support for Real-Time Customer Data Profile (RTCDP) will be added in a future release.
+
+When setting up a use case, you need to select an asset - such as a journey, which will be captured under the 'Technical Assets' tab. Once published, the journey's schema and audience details will be automatically extracted. Note that you will not be able to edit the Playbook or modify its technical details after publishing.
 
 ## Example prompts 
 
 To be added.
 
-## Playbook distribution
+## Playbook distribution or sharing (Add PM mocks for now but i've reached out to the engineer)
 
-Playbooks leverage sandbox tooling for distribution.Users can share playbooks and associated assets acros IMS organizations.
+Playbooks leverage sandbox tooling for distribution. Users can share playbooks and associated assets acros IMS organizations.
 
 ## Do's and don'ts
 
@@ -41,6 +72,16 @@ Some pre-requisites list to be added.
 
 ## Known limitations
 
-To be added. 
+To be added along with screenshots. 
+
+## Content guidelines and moderation
+
+When creating Playbooks, be mindful of the language and content you include. Playbooks are visible across your organization, and any offensive or inappropriate content can be flagged by users.
+
+![Report results]()
+
+### Flagging and review process
+
+If a Playbook is flagged for inappropriate or offensive content, it is automatically reported to Adobe for review. Adobe then reviews the flagged content, and if it is deemed inappropriate, the customer will be notified, and the Playbook will be removed.
 
 ## Next steps
