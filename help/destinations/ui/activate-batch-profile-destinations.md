@@ -58,18 +58,18 @@ To select the audiences that you want to activate to the destination, use the ch
 You can select from multiple types of audiences, depending on their origin:
 
 * **[!UICONTROL Segmentation Service]**: Audiences generated within Experience Platform by the Segmentation Service. See the [segmentation documentation](../../segmentation/ui/overview.md) for more details.
-* **[!UICONTROL Custom upload]**: Audiences generated outside of Experience Platform, and uploaded into Platform as CSV files. To learn more about external audiences, see the documentation on [importing an audience](../../segmentation/ui/audience-portal.md#import-audience).
+* **[!UICONTROL Custom upload]**: Audiences generated outside of Experience Platform, and uploaded into Platform as CSV files. To learn more about external audiences, see the documentation on [importing an audience](../../segmentation/ui/audience-portal.md#import-audience). Selecting audiences originating from **[!UICONTROL Custom uploads]** automatically enables the [Select enrichment attributes](#select-enrichment-attributes) step.
 * Other types of audiences, originating from other Adobe solutions, such as [!DNL Audience Manager].
+
+>[!IMPORTANT]
+>
+>When activating custom upload audiences to batch file-based destinations, there is a limit of 10 such audiences that you can activate in a dataflow.
 
 ![Checkboxes shown when selecting one or multiple audiences to activate.](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
 
 >[!TIP]
 >
->Selecting audiences originating from **[!UICONTROL Custom uploads]** automatically enables the [Select enrichment attributes](#select-enrichment-attributes) step.
-
->[!TIP]
->
->You can remove audiences from existing activation flows from the **[!UICONTROL Activation data]** page. See the [dedicated documentation](../ui/destination-details-page.md#bulk-remove) for details.
+>To remove audiences from existing activation flows, use the **[!UICONTROL Activation data]** page. Read the section on how to [remove multiple audiences from activation flows](../ui/destination-details-page.md#bulk-remove) for details.
 
 ## Schedule audience export {#scheduling}
 
