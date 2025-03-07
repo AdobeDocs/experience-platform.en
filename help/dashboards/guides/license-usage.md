@@ -182,8 +182,10 @@ The percentage of predicted usage is determined as follows:
 The predicted usage feature supports the following metrics:
 
 - [!UICONTROL Addressable audience]
+- [!UICONTROL Businessperson profiles]
 - [!UICONTROL Compute hours]
 - [!UICONTROL Customer Journey Audience number of rows]
+- [!UICONTROL Engageable profiles]
 - [!UICONTROL Total Data Volume]
 
 ## [!UICONTROL Summary] tab {#summary-tab}
