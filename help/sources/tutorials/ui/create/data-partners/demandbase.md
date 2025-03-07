@@ -3,6 +3,7 @@ title: Connect Demandbase Intent To Experience Platform Using The UI
 description: Learn how to connect Demandbase Intent to Experience Platform
 hide: true
 hidefromtoc: true
+exl-id: 7dc87067-cdf6-4dde-b077-19666dcb12e2
 ---
 # Connect [!DNL Demandbase Intent] to Experience Platform using the UI
 

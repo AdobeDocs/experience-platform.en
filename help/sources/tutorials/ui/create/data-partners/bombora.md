@@ -3,6 +3,7 @@ title: Connect Bombora Intent To Experience Platform Using The UI
 description: Learn how to connect Bombora Intent to Experience Platform
 hide: true
 hidefromtoc: true
+exl-id: 76a4fed5-b2d5-46d5-9245-b52792a7d323
 ---
 # Connect [!DNL Bombora Intent] to Experience Platform using the UI
 
