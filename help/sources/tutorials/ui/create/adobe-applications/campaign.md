@@ -134,7 +134,7 @@ This page also provides you with an interface to update the metadata description
 
 >[!IMPORTANT]
 >
->Backfill of old event logs is not supported with the Adobe Campaign Managed Cloud Services Source Connector. In case backfill is required, please use custom workflow or custom implementation to export data to Amazon S3/Azure Blob and from Amazon S3/Azure Blob to Adobe Experience Platform dataset.
+>You cannot backfill old event logs with the Adobe Campaign Managed Cloud Services source. If backfill is required, use a custom workflow or a custom implementation to export data to Amazon S3 or Azure Blob, or from Amazon S3 or Azure Blob to an Adobe Experience Platform dataset.
 >
 
 ## Next steps
