@@ -86,8 +86,10 @@ The **[!UICONTROL Browse]** tab displays the destinations with which you have es
 >[!TIP]
 >
 > * Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![Activate audiences control](/help/images/icons/data-add.png)**[!UICONTROL Activate]** control to export audiences or datasets to that destination.
+> * Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![Edit destination control](/help/images/icons/edit.png)**[!UICONTROL Edit destination]** control to edit existing destination connections. Read the tutorial on [editing destinations](/help/destinations/ui/edit-destination.md) for more information.
 > * Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![Delete control](/help/images/icons/delete.png)**[!UICONTROL Delete]** control to [remove](delete-destinations.md) an existing connection to a destination.
 > * Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![View in monitoring control](/help/images/icons/monitoring.png)**[!UICONTROL View in monitoring]** control to view activation information for this destination in the [monitoring dashboard](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
+> * Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![Apply access labels control](/help/images/icons/key.png)**[!UICONTROL Apply access labels]** control to apply access labels to destination dataflows and ensure that only a subset of users in your organization get access to specific destination dataflows. [Read more](/help/access-control/abac/apply-access-labels-destinations.md) about the functionality.
 > * Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![Subscribe to alerts ](/help/images/icons/alert-add.png)**[!UICONTROL Subscribe to alerts]** control to subscribe to destination dataflow alerts. You can subscribe to alerts to receive messages regarding the status, success, or failure of your flow run. See [Subscribe to in-context destination alerts](alerts.md) for detailed information on destination dataflow alerts..
 
 ![Browse Tab](../assets/ui/workspace/browse-tab.png)
@@ -103,6 +105,7 @@ The **[!UICONTROL Browse]** tab displays the destinations with which you have es
 |[!UICONTROL Activation Data] | Indicates the number of audiences that are being activated to this destination. Select this control to find out more about the activated audiences. Refer to [Activation Data](/help/destinations/ui/destination-details-page.md#activation-data) in the destination details page for more information about the activated audiences.|
 |[!UICONTROL Created] | The date and UTC time when the activation flow to the destination was created. Select the up/down arrow symbol to sort the activation flows by newest first or oldest first.|
 | [!UICONTROL Status] | `Enabled` or `Disabled`. Indicates whether data is being activated to this destination.|
+| [!UICONTROL Access labels] | Displays any access labels that were added to this destination dataflow. Read more about [applying access labels to destination dataflows](/help/access-control/abac/apply-access-labels-destinations.md).|
 
 Click on a destination row to bring up more information about the destination in the right rail, such as destination ID, description, the number of activated audiences, and more.
 

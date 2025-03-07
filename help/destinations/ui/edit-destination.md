@@ -5,62 +5,46 @@ description: Learn how to edit and update existing destinations accounts in the 
 ---
 # Edit destinations
 
-This tutorial covers the steps for editing various components of a destination connection. Learn how to update authentication credentials, export location, and more by using the Experience Platform UI.
+Learn how to edit various components of an existing destination connection, including how to update authentication credentials, export location, and more by using the Experience Platform UI.
 
 >[!NOTE]
 >
 > The edit operations described in this tutorial are also supported via API operations. Read the tutorial on how to [edit destinations in the API](/help/destinations/api/edit-destination.md) for more information.
 
-## Overview {#overview}
+To edit various components of an existing destination connection: 
 
-The **[!UICONTROL Accounts]** tab shows you details about the connections that you have established with various destinations. Refer to the [Accounts overview](../ui/destinations-workspace.md#accounts) for all the information you can get on each destination account.
+1. Navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**.
+2. Select the desired destination that you want to edit.
+3. Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![Edit destination control](/help/images/icons/edit.png)**[!UICONTROL Edit destination]** control to edit existing destination connections.
+4. In the modal window, edit any desired settings. Select Next when done. 
+5. If desired, update any of the marketing actions associated with this destination connection. Select **[!UICONTROL Save]** when done.
 
-This tutorial covers the steps to update destination account details by using the Experience Platform UI.
+![Screen recording showing the process to edit existing destination connections.](/help/destinations/assets/ui/edit-destinations/edit-destinations-recording.gif)
 
-You can update destination account details to refresh and re-authenticate credentials for your current or expired accounts for destinations you are currently using. Typically, OAuth and bearer tokens have a limited lifetime, depending on the destination platform. When these tokens expire, you can refresh them in the workflow described further below. This workflow directs you to go through the OAuth workflow or re-insert a token. Similarly, if a password or user access has changed in the downstream platform, you can refresh credentials.
+In the edit destination window, you can update any settings that you configured when you initialy connected to the destination. These settings are different based on the destination platform that you are updating. Below are some examples of the settings that you can update for Amazon S3, Azure EventHubs, and Google Ads destinations.
 
-For batch destinations, you can update the access or secret key, if any of those has changed. Additionally, should you want to encrypt your files moving forward, you can insert an RSA public key and your exported files will be encrypted going forward.
+![Edit destination screen for the Amazon S3 destination.](/help/destinations/assets/ui/edit-destinations/edit-amazon-s3-connection.png){width="100" zoomable="yes"}
 
-![Accounts tab](../assets/ui/update-accounts/destination-accounts.png)
+![Edit destination screen for the Azure EventHubs destination.](/help/destinations/assets/ui/edit-destinations/edit-eventhubs-connection.png){width="100" zoomable="yes"}
 
-## Update accounts {#update}
+![Edit destination screen for the Google Ads destination.](/help/destinations/assets/ui/edit-destinations/edit-google-ads-connection.png){width="100" zoomable="yes"}
 
-Follow the steps below to update connection details to existing destinations.
+>[!SUCCESS]
+>
+>Your destinaton connection settings are now updated.
 
-1. Log in to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Accounts]** from the top header to view your existing accounts.
+## Other editing options
 
-    ![Accounts tab](../assets/ui/update-accounts/accounts-tab.png)
+By using the Experience Platform UI or the Flow Service API, you can edit various destination configurations, as detailed in the links below:
 
-2. Select the filter icon ![Filter-icon](/help/images/icons/filter.png) on the top left to launch the sort panel. The sort panel provides a list of all your destinations. You can select more than one destination from the list to see a filtered selection of accounts associated with the selected destinations.
-
-    ![Filter destination accounts](../assets/ui/update-accounts/filter-accounts.png)
-
-3. Select the ellipses (`...`) beside the name of the account you intend to update. A pop-up panel appears, providing options to **[!UICONTROL Activate audiences]**, **[!UICONTROL Edit details]**, and **[!UICONTROL Delete]** the account. Select the ![Edit details button](/help/images/icons/edit.png) **[!UICONTROL Edit details]** button to edit the account information.
-
-    ![Edit account](../assets/ui/update-accounts/accounts-edit.png)
-
-4. Enter your updated account credentials.
-   
-   * For accounts that use an `OAuth1` or `OAuth2` connection type, select **[!UICONTROL Reconnect OAuth]** to renew your account credentials. You can also update the name and description of your account.
-    
-    ![Edit details OAuth](../assets/ui/update-accounts/edit-details-oauth.png)
-
-   * For accounts that use an `Access Key` or `ConnectionString` connection type, you can edit your account authentication information, including information such as access ID, secret keys, or connection strings. You can also update the name and description of your account.
-
-    ![Edit details Access Key](../assets/ui/update-accounts/edit-details-key.png)
-
-    * For accounts that use a `Bearer token` connection type, you can input a new bearer token, if needed. You can also update the name and description of your account.
-
-    ![Edit details Bearer token](../assets/ui/update-accounts/edit-details-bearer.png)
-
-    * For accounts that use a `Server to server` connection type, you can update the name and description of your account.
-
-    ![Edit details Server-to-server](../assets/ui/update-accounts/edit-details-s2s.png)
-
-5. Select **[!UICONTROL Save]** to finish the account details update.
+|Using the Experience Platform UI | Using the Flow Service API |
+|---------|----------|
+| Edit destination connections (this page) | [Edit target connection components (storage location and other components)](/help/destinations/api/edit-destination.md#patch-target-connection) |
+| [Edit accounts](/help/destinations/ui/update-accounts.md) | [Edit base connection components (authentication parameters and other components)](/help/destinations/api/edit-destination.md#patch-base-connection) |
+| [Edit activation dataflows](/help/destinations/ui/edit-activation.md) | [Update destination dataflows](/help/destinations/api/update-destination-dataflows.md) |
 
 ## Next steps
 
-By following this tutorial, you have successfully used the **[!UICONTROL destinations]** workspace to update existing accounts.
+By following this tutorial, you have successfully used the **[!UICONTROL destinations]** workspace to update existing destination connections.
 
 For more information about destinations, refer to the [destinations overview](../catalog/overview.md).
