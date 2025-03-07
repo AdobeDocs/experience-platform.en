@@ -59,10 +59,6 @@ Watch the following video for additional information on AI Assistant product kno
 
 ### Operational insights {#operational-insights}
 
->[!IMPORTANT]
->
->Operational insights answers are in beta. Anyone that has access to the **View Operational Insights** permission will have access to operational insights answers.
-
 Operational insights refer to answers AI Assistant generates about your meta data objects (attributes, audiences, dataflows, datasets, destinations, journeys, schemas, and sources), including counts, lookups, and lineage impact. It does not look at any data within the sandbox. 
 
 * How many datasets do I have?
@@ -85,6 +81,10 @@ You can ask AI Assistant questions about your operational insights in the follow
 {style="table-layout:auto"}
 
 For operational insights questions, answers may not reflect the current state of the UI. The data that backs these questions is updated once every 24 hours. For example, changes that users make in Real-Time CDP during the daytime are synced with the data stores at night, and then they become available for user questions in the morning. You will need to log into a sandbox to inquire about specific data related to objects.
+
+Watch the following video for additional information on AI Assistant operational insights:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
 
 ### Feature scope {#feature-scope}
 

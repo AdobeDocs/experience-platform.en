@@ -9,7 +9,7 @@ exl-id: cab5463b-97a0-400d-a00c-0cd8bf9301a5
 
 [!UICONTROL Point of interest details] is a standard XDM data type that describes the geographic-related data where an event was observed.
 
-<img src='../images/data-types/poi-details.png' width=550 /><br />
+![](../images/data-types/poi-details.png){width=550}
 
 | Property | Data type | Description |
 | --- | --- | --- |

@@ -32,6 +32,7 @@ You must also have the following technical values to configure the extension:
 
 * An [Event Collector token](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/UsetheHTTPEventCollector#Create_an_Event_Collector_token_on_Splunk_Cloud_Platform). Tokens typically are UUIDv4 format like the following: `12345678-1234-1234-1234-1234567890AB`.
 * The Splunk platform instance address and port for your organization. A platform instance address and port will typically have the following format: `mysplunkserver.example.com:443`.
+
   >[!IMPORTANT]
   >
   > Splunk endpoints referenced within event forwarding should only use port `443`. Non-standard ports are currently not supported in event forwarding implementations.

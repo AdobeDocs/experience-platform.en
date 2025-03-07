@@ -4,7 +4,13 @@ title: Attribute-based Access Control Manage Role Permissions
 description: This document provides information on configuring permissions for a role through the Permissions interface in Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 ---
-# Manage permissions for a role
+# Manage permissions for a role {#manage-role-permissions}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about"
+>title="What are roles?"
+>abstract="Roles define the access that an administrator, a specialist, or an end-user has to resources in your organization. They categorize the users interacting with your Platform instance and are the building blocks of access control policies. A role has a given set of permissions and members of your organization can be assigned to one or more roles, depending on the scope of view or write access they need."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html" text="Manage roles"
 
 >[!IMPORTANT]
 >
@@ -35,7 +41,14 @@ To remove a filter, select the "X" on the pill icon for the filter in question, 
 
 ![The Roles dashboard in the Permissions UI with the X and Clear all selections highlighted on the chosen filters.](../../images/flac-ui/flac-clear-filters.png)
 
-## Role details
+## Role details {#role-details}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_details"
+>title="Role overview"
+>abstract="The role overview dialog displays the role's details including the resources and sandboxes that a given role is permitted to access. You can manage labels, users, user groups, and API credentials for the role by navigating to the corresponding tab within the role's workspace."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-labels-for-a-role" text="Manage labels for a role"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-users-for-a-role" text="Manage users for a role"
 
 Select the role from the **[!UICONTROL Roles]** tab, which will open the role's [!UICONTROL Details] dashboard.
 
@@ -101,6 +114,12 @@ The following video is intended to support your understanding of creating a new 
 
 ## Manage API credentials for a role {#manage-api-credentials-for-role}
 
+>[!CONTEXTUALHELP]
+>id="platform_permissions_apicredentials_about"
+>title="What are API credentials?"
+>abstract="API credentials are assigned to roles to grant users and developers access to Platform APIs. Using Platform APIs, you can programmatically perform basic CRUD (Create, Read, Update, Delete) operations on data, such as configuring computed attributes, accessing data/entities, exporting data, deleting unneeded data or batches, and more."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-apis/api-guide" text="Platform API guide"
+
 >[!IMPORTANT]
 >
 > To use and manage API credentials in [!UICONTROL Permissions], users must have system administrator privileges.
@@ -129,7 +148,13 @@ The **[!UICONTROL Remove API credentials]** dialog appears, prompting you to con
 
 You will be returned to the **[!UICONTROL API credentials]** tab.
 
-## Manage user groups for a role
+## Manage user groups for a role {#manage-user-groups}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_usergroups_about"
+>title="What are user groups?"
+>abstract="User groups are collections of multiple users who share access to the same functions. Access to resources within an organization is managed through roles assigned to user groups."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles" text="Manage roles"
 
 User groups are multiple users that have been grouped together and have access to execute the same functions.
 

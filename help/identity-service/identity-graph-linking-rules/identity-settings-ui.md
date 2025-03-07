@@ -40,7 +40,7 @@ To configure namespace priority, select a namespace in the identity settings men
 
 ### Designate your unique namespace
 
-To designate a unique namespace, select the [!UICONTROL Unique per graph] checkbox that corresponds with that namespace. You can select more than one unique namespace for your identity settings configuration.
+To designate a unique namespace, select the [!UICONTROL Unique per graph] checkbox that corresponds with that namespace. You can select up to three unique namespaces for your identity settings configuration.
 
 ![Two namespaces selected and defined as unique.](../images/rules/unique-namespace.png)
 

@@ -339,11 +339,13 @@ If you use an audience metadata configuration, you must connect it to the destin
             "destinationServerId": "eec25bde-4f56-4c02-a830-9aa9ec73ee9d"
         }
     ],
+    "segmentMappingConfig":{
+        "mapExperiencePlatformSegmentName":false,
+        "mapExperiencePlatformSegmentId":false,
+        "mapUserInput":false
+    },
     "audienceMetadataConfig":{
-    "mapExperiencePlatformSegmentName":false,
-    "mapExperiencePlatformSegmentId":false,
-    "mapUserInput":false,
-    "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
+        "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
     },   
     "schemaConfig": {
         "profileRequired": true,
