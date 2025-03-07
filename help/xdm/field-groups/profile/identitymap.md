@@ -10,7 +10,7 @@ exl-id: c9928e85-ef1e-4739-ba1d-80505a9e60c3
 >
 >The names of several schema field groups have changed. See the document on [field group name updates](../name-updates.md) for more information.
 
-[!UICONTROL IdentityMap] is a standard schema field group for the [[!UICONTROL XDM ExperienceEvent] class](../../classes/experienceevent.md). The field group provides a single map field, which contains a set of user identities keyed by namespace.
+[!UICONTROL IdentityMap] is a standard schema field group for both the [[!UICONTROL XDM ExperienceEvent] class](../../classes/experienceevent.md) and the [[!UICONTROL XDM Individual Profile] class](../../classes/individual-profile.md). The field group provides a single map field, which contains a set of user identities keyed by namespace.
 
 ![A diagram of the [!UICONTROL IdentityMap] schema field group](../../images/field-groups/identitymap.png)
 
