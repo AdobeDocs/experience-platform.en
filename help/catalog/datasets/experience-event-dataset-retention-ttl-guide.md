@@ -1,6 +1,7 @@
 ---
 title: Manage Experience Event Dataset Retention in the Data Lake using TTL
 description: Learn how to evaluate, set, and manage Experience Event Dataset Retention in the data lake using Time-To-Live (TTL) configurations with Adobe Experience Platform APIs. This guide explains how TTL row-level expiration supports data retention policies, optimizes storage efficiency, and ensures effective data lifecycle management. It also provides use cases and best practices to help you apply TTL effectively.
+exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
 ---
 # Manage Experience Event Dataset Retention in the data lake using TTL
 
@@ -22,6 +23,12 @@ TTL is useful when managing time-sensitive data that loses relevance over time. 
 - Improve query performance by minimizing irrelevant data.
 - Maintain data hygiene by keeping only relevant information.
 - Optimize data retention to support business objectives.
+
+>[!NOTE]
+>
+>Experience Event Dataset Retention applies to event data stored in the data lake. If you are managing retention in Real-Time Customer Data Platform, consider using [Experience Event Expiration](../../profile/event-expirations.md) and [Pseudonymous Profile Expiration](../../profile/pseudonymous-profiles.md) alongside data lake retention settings.
+>
+>TTL configurations help you optimize storage based on entitlements. While Profile Store data (used in Real-Time CDP) may be considered stale and removed after 30 days, the same event data in the data lake can remain available for 12–13 months (or longer based on entitlement) for analytics and Data Distiller use cases.
 
 ### Industry example {#industry-example}
 
@@ -115,7 +122,7 @@ A successful response returns the TTL configuration for the dataset, including t
                 "rowExpiration": {
                     "defaultValue": "P12M",
                     "maxValue": "P12M",
-                    "minValue": "P7D"
+                    "minValue": "P30D"
                 }
             },
             "adobe_unifiedProfile": {  
@@ -248,7 +255,7 @@ A successful response shows the TTL configuration for the dataset. It includes d
 | `extensions`                     | A container for additional metadata related to the dataset. |
 | `extensions.adobe_lakeHouse`     | Specifies settings related to storage architecture, including row-level expiration configurations |
 | `rowExpiration` | The object contains TTL settings that define the retention period for the dataset. |
-| `rowExpiration.ttlValue` | Defines the duration before records in the dataset are automatically removed. Uses the ISO-8601 period format (for example, `P3M` for 3 months, or `P7D` for one week). |
+| `rowExpiration.ttlValue` | Defines the duration before records in the dataset are automatically removed. Uses the ISO-8601 period format (for example, `P3M` for 3 months, or `P30D` for one week). |
 | `rowExpiration.valueStatus` | The string indicates whether the TTL setting is a default system value or a custom value set by a user. Possible values are: `default`, `custom`. |
 | `rowExpiration.setBy` | Specifies who last modified the TTL setting. Possible values include: `user` (manually set) or `service` (automatically assigned). |
 | `rowExpiration.updated` | The timestamp of the last TTL update. This value indicates when the TTL setting was last modified. |
@@ -411,5 +418,4 @@ Now that you've learned how to manage TTL settings for row-level expiration, rev
 
 - Retention jobs: Learn to schedule and automate dataset expirations in the Platform UI with the [data lifecycle UI guide](../../hygiene/ui/dataset-expiration.md), or check Dataset Retention configurations and verify that expired records are deleted.
 - [Dataset Expiration API endpoint guide](../../hygiene/api/dataset-expiration.md): Discover how to delete entire datasets rather than just rows. Learn how to schedule, manage, and automate dataset expiration using the API to ensure efficient data retention.
-- [Data usage policies overview](../../data-governance/policies/overview.md): Learn how to align your data retention strategy with broader compliance requirements and marketing use restrictions. 
-
+- [Data usage policies overview](../../data-governance/policies/overview.md): Learn how to align your data retention strategy with broader compliance requirements and marketing use restrictions.
