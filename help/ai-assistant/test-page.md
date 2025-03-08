@@ -169,16 +169,6 @@ description: this is a page for testing
 
 ### Use case library
 
-<!-- CARDS
-
-* Use case: reduce onboarding time
-* Use case: de-clutter your audiences
-* Use case: get started with discoverability
-* Use case: validate responses
-* Use case: impact analysis
-* Use case: customer support
-
--->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">
     <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Reduce onboarding time">
@@ -196,7 +186,7 @@ description: this is a page for testing
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="https://video.tv.adobe.com/v/3438032/?learn=on" target="_blank" rel="referrer" title="Reduce onboarding time">Reduce onboarding time</a>
                     </p>
-                    <p class="is-size-6">lorem ipsum</p>
+                    <p class="is-size-6">Watch this video to learn how you can use AI Assistant product knowledge to reduce onboarding time.</p>
                 </div>
                 <a href="https://video.tv.adobe.com/v/3438032/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
@@ -219,16 +209,11 @@ description: this is a page for testing
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="https://video.tv.adobe.com/v/3435532?learn=on" target="_blank" rel="referrer" title="De-clutter your audiences">De-clutter your audiences</a>
                     </p>
-                    <p class="is-size-6">lorem ipsum.</p>
+                    <p class="is-size-6">Watch this video to learn how to use AI Assistant to de-clutter your audience and optimize your marketing operations.</p>
                 </div>
-                <div style="display: flex; flex-direction: row;">
                   <a href="https://video.tv.adobe.com/v/3435532?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
-                  </a>
-                  <a href="https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
-                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Read</span>
-                  </a>
-                </div>            
+                  </a>  
             </div>
         </div>
     </div>
@@ -249,11 +234,16 @@ description: this is a page for testing
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="https://video.tv.adobe.com/v/3440962/?learn=on" target="_blank" rel="referrer" title="Use the discoverability panel to get started">Use the discoverability panel to get started</a>
                     </p>
-                    <p class="is-size-6">View a step by step explanation of how to create on-brand marketing emails with Adobe [!DNL GenStudio for Performance Marketing].</p>
+                    <p class="is-size-6">Watch this video to learn about the discoverability panel in AI Assistant and how you can use it to get started with AI Assistant.</p>
                 </div>
-                <a href="https://video.tv.adobe.com/v/3440962/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
-                </a>
+                <div style="display: flex; flex-direction: row;">
+                  <a href="https://video.tv.adobe.com/v/3440962/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
+                  </a>
+                  <a href="./ui-guide.md#use-discoverability" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Read</span>
+                  </a>
+                </div>
             </div>
         </div>
     </div>
@@ -272,11 +262,16 @@ description: this is a page for testing
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="https://video.tv.adobe.com/v/3441738/?learn=on" target="_blank" rel="referrer" title="Verify and validate AI responses">Verify and validate AI responses</a>
                     </p>
-                    <p class="is-size-6">Follow a step-by-step product walk-thru of creating a meta ad in [!DNL GenStudio for Performance Marketing].</p>
+                    <p class="is-size-6">Watch this video to learn how you can use AI Assistant to verify and validate responses.</p>
                 </div>
-                <a href="https://video.tv.adobe.com/v/3441738/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
-                </a>
+                <div style="display: flex; flex-direction: row;">
+                  <a href="https://video.tv.adobe.com/v/3441738/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
+                  </a>
+                  <a href="./ui-guide.md#verify-operational-insights-responses" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Read</span>
+                  </a>
+                </div>
             </div>
         </div>
     </div>
@@ -297,7 +292,7 @@ description: this is a page for testing
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="https://video.tv.adobe.com/v/3441680/?learn=on" target="_blank" rel="referrer" title="Execute more effective lineage and impact analysis">Execute more effective lineage and impact analysis</a>
                     </p>
-                    <p class="is-size-6">View a step by step explanation of how to create on-brand marketing emails with Adobe [!DNL GenStudio for Performance Marketing].</p>
+                    <p class="is-size-6">Watch this video to learn how you can use AI Assistant to execute more effective impact analysis before any changes are made to your data objects.</p>
                 </div>
                 <a href="https://video.tv.adobe.com/v/3441680/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
@@ -320,11 +315,16 @@ description: this is a page for testing
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="https://video.tv.adobe.com/v/3443183?learn=on" target="_blank" rel="referrer" title="Use AI Assistant for customer support">Use AI Assistant for customer support</a>
                     </p>
-                    <p class="is-size-6">Follow a step-by-step product walk-thru of creating a meta ad in [!DNL GenStudio for Performance Marketing].</p>
+                    <p class="is-size-6">Watch this video to learn how you can use AI Assistant for Customer Support to seamlessly troubleshoot without leaving your workflows.</p>
                 </div>
-                <a href="https://video.tv.adobe.com/v/3443183?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
-                </a>
+                <div style="display: flex; flex-direction: row;">
+                  <a href="https://video.tv.adobe.com/v/3443183?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
+                  </a>
+                  <a href="./new-features/customer-support.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Read</span>
+                  </a>
+                </div>
             </div>
         </div>
     </div>
