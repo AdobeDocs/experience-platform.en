@@ -71,11 +71,11 @@ The **[!UICONTROL Accounts]** tab shows you details about the connections that y
 
 | Element | Description |
 |---|---|
-|[!UICONTROL Platform] | The destination for which you have set up the connection.|
+|[!UICONTROL Destination] | The destination connector for which you have set up the connection.|
 |[!UICONTROL Connection Type] | Represents the account connection type to your storage bucket or destination. Depending on the destination, authentication options are: <ul><li>For email marketing destinations: Can be S3, FTP, or Azure Blob.</li><li>For real-time advertising destinations: Server-to-server</li><li>For Amazon S3 cloud storage destinations: Access Key </li><li>For SFTP cloud storage destinations: Basic authentication for SFTP</li><li>OAuth 1 or OAuth 2 authentication</li><li>Bearer token authentication</li></ul>|
-|[!UICONTROL Username] | The username you selected in the [connect destination wizard](../catalog/email-marketing/overview.md#connect-destination).|
-|[!UICONTROL Destinations] | Represents the number of unique successful destination dataflows connected with basic information created for a destination.|
-|[!UICONTROL Authorized] | The date when the connection to this destination was authorized.|
+|[!UICONTROL Username] | The username you selected in the [connect destination workflow](../catalog/email-marketing/overview.md#connect-destination).|
+|[!UICONTROL Connections] | Represents the number of unique successful destination dataflows connected with basic information created for a destination.|
+|[!UICONTROL Authorization date] | The date when the connection to this destination was authorized.|
 
 {style="table-layout:auto"}
 

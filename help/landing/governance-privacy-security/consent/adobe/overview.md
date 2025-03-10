@@ -3,6 +3,8 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Consent Processing in Adobe Experience Platform
 description: Learn how to process customer consent signals in Adobe Experience Platform using the Adobe 2.0 standard.
+role: Developer
+feature: Consent
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
 ---
 # Consent processing in Adobe Experience Platform

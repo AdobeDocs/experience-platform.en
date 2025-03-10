@@ -1,6 +1,7 @@
 ---
 title: Efficient Big Data Analysis with Hypercubes in Experience Query Service
 description: Learn how to use hypercubes in Adobe Experience Platform Query Service to optimize big data analysis with approximate unique counting, reducing the need for full data reprocessing.
+exl-id: 48af0003-0677-4828-982c-ebcbd9583e11
 ---
 # Efficient big data analysis with hypercubes
 
@@ -365,5 +366,3 @@ Currently, sketches cannot be updated once created. Future updates will introduc
 By reading this document, you now know how to use hypercubes and associated sketch functions to perform efficient data processing for complex, multi-dimensional analyses without the need to reprocess historical data. This approach saves time, reduces costs, and offers the flexibility required for real-time, interactive queries, making it a valuable tool for big data analysis in Adobe Experience Platform.
 
 Next, explore other key concepts such as [incremental loading](../key-concepts/incremental-load.md) and [data dedupliction](../key-concepts/deduplication.md) to deepen your understanding of how to use these functions effectively for your specific data needs.
-
-

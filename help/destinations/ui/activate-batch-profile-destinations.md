@@ -58,18 +58,18 @@ To select the audiences that you want to activate to the destination, use the ch
 You can select from multiple types of audiences, depending on their origin:
 
 * **[!UICONTROL Segmentation Service]**: Audiences generated within Experience Platform by the Segmentation Service. See the [segmentation documentation](../../segmentation/ui/overview.md) for more details.
-* **[!UICONTROL Custom upload]**: Audiences generated outside of Experience Platform, and uploaded into Platform as CSV files. To learn more about external audiences, see the documentation on [importing an audience](../../segmentation/ui/audience-portal.md#import-audience).
+* **[!UICONTROL Custom upload]**: Audiences generated outside of Experience Platform, and uploaded into Platform as CSV files. To learn more about external audiences, see the documentation on [importing an audience](../../segmentation/ui/audience-portal.md#import-audience). Selecting audiences originating from **[!UICONTROL Custom uploads]** automatically enables the [Select enrichment attributes](#select-enrichment-attributes) step.
 * Other types of audiences, originating from other Adobe solutions, such as [!DNL Audience Manager].
+
+>[!IMPORTANT]
+>
+>When activating custom upload audiences to batch file-based destinations, there is a limit of 10 such audiences that you can activate in a dataflow.
 
 ![Checkboxes shown when selecting one or multiple audiences to activate.](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
 
 >[!TIP]
 >
->Selecting audiences originating from **[!UICONTROL Custom uploads]** automatically enables the [Select enrichment attributes](#select-enrichment-attributes) step.
-
->[!TIP]
->
->You can remove audiences from existing activation flows from the **[!UICONTROL Activation data]** page. See the [dedicated documentation](../ui/destination-details-page.md#bulk-remove) for details.
+>To remove audiences from existing activation flows, use the **[!UICONTROL Activation data]** page. Read the section on how to [remove multiple audiences from activation flows](../ui/destination-details-page.md#bulk-remove) for details.
 
 ## Schedule audience export {#scheduling}
 
@@ -127,12 +127,12 @@ Select **[!UICONTROL Export full files]** to trigger the export of a file contai
 
 2. Use the **[!UICONTROL Time]** toggle to select whether the export should happen immediately after audience evaluation or on a scheduled basis, at a specified time. When selecting the **[!UICONTROL Scheduled]** option, you can use the selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
 
-      >[!NOTE]
-      >
-      >The **[!UICONTROL After segment evaluation]** option described below is available only to select Beta customers.
-
-    Use the **[!UICONTROL After segment evaluation]** option to have the activation job run immediately after the daily Platform batch segmentation job completes. This option ensures that when the activation job runs, the most up-to-date profiles are exported to your destination.
+    Use the **[!UICONTROL After segment evaluation]** option to have the activation job run immediately after the daily Platform batch segmentation job completes. This option ensures that when the activation job runs, the most up-to-date profiles are exported to your destination. This might result in an audience being exported multiple times a day, based on your actions.
     
+    >[!IMPORTANT]
+    >
+    >If you run [flexible audience evaluation](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) on audiences which are already set to be activated after segment evaluation, the audiences will be activated as soon as the flexible audience evaluation job finishes, regardless of any previous daily activation jobs. This might result in audiences being exported multiple times a day, based on your actions.
+
     <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
 
     ![Image highlighting the After segment evaluation option in the activation flow for batch destinations.](../assets/ui/activate-batch-profile-destinations/after-segment-evaluation-option.png)
@@ -424,19 +424,43 @@ Assuming deduplication by the composite key `personalEmail + lastName`, the expo
 |johndoe@example.com|Doe|John|
 
 Adobe recommends selecting an identity namespace such as a [!DNL CRM ID] or email address as a deduplication key, to ensure all profile records are uniquely identified.
-   
->[!NOTE] 
-> 
->If any data usage labels have been applied to certain fields within a dataset (rather than the entire dataset), enforcement of those field-level labels on activation occurs under the following conditions:
->
->* The fields are used in the audience definition.
->* The fields are configured as projected attributes for the target destination.
->
-> For example, if the field `person.name.firstName` has certain data usage labels that conflict with the destination's marketing action, you would be shown a data usage policy violation in the review step. For more information, see [Data Governance in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
-### [!BADGE Beta]{type=Informative} Export arrays through calculated fields {#export-arrays-calculated-fields}
+### Deduplication behavior for profiles with the same timestamp {#deduplication-same-timestamp}
 
-Select beta customers can export array objects from Experience Platform to cloud storage destinations. Read more about [exporting arrays and calculated fields](/help/destinations/ui/export-arrays-calculated-fields.md) and contact your Adobe representative to get access to the functionality. 
+When exporting profiles to file-based destinations, deduplication ensures that only one profile is exported when multiple profiles share the same deduplication key and the same reference timestamp. This timestamp represents the moment a profile's audience membership or identity graph was last updated. For more information on how profiles are updated and exported, see the [profile export behavior](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2) document.
+
+#### Key considerations
+
+* **Deterministic selection**: When multiple profiles have identical deduplication keys and the same reference timestamp, the deduplication logic determines which profile to export by sorting the values of other selected columns (excluding complex types such as arrays, maps, or objects). The sorted values are evaluated in lexicographical order, and the first profile is selected.
+
+* **Example scenario**
+
+Consider the following data, where the deduplication key is the `Email` column:
+
+|Email*|first_name|last_name|timestamp|  
+|---|---|---|---|  
+|`test1@test.com`|John|Morris|2024-10-12T09:50|  
+|`test1@test.com`|John|Doe|2024-10-12T09:50|  
+|`test2@test.com`|Frank|Smith|2024-10-12T09:50|  
+
+{style="table-layout:auto"}
+
+After deduplication, the export file will contain:
+
+|Email*|first_name|last_name|timestamp|  
+|---|---|---|---|  
+|`test1@test.com`|John|Doe|2024-10-12T09:50|  
+|`test2@test.com`|Frank|Smith|2024-10-12T09:50|  
+
+{style="table-layout:auto"}
+
+**Explanation**: For `test1@test.com`, both profiles share the same deduplication key and timestamp. The algorithm sorts the `first_name` and `last_name` column values lexicographically. Since the first names are identical, the tie is resolved using the `last_name` column, where "Doe" comes before "Morris."
+
+**Improved reliability**: This updated deduplication process ensures that successive runs with the same coordinates will always produce the same results, improving consistency.
+
+### Perform data transformations through calculated fields {#calculated-fields}
+
+You can use the [Calculated fields](/help/destinations/ui/data-transformations-calculated-fields.md) control to perform various data transformations on the data exported to file-based destinations. 
 
 ### Known limitations {#known-limitations}
 
@@ -546,6 +570,15 @@ If you want to activate external audiences to your destinations without exportin
 Select **[!UICONTROL Next]** to move to the [Review](#review) step.
 
 ## Review {#review}
+
+>[!NOTE] 
+> 
+>If any data usage labels have been applied to certain fields within a dataset (rather than the entire dataset), enforcement of those field-level labels on activation occurs under the following conditions:
+>
+>* The fields are used in the audience definition.
+>* The fields are configured as projected attributes for the target destination.
+>
+> For example, if the field `person.name.firstName` has certain data usage labels that conflict with the destination's marketing action, you would be shown a data usage policy violation in the review step. For more information, see [Data Governance in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
 On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 

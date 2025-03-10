@@ -23,7 +23,12 @@ The following documents are essential in understanding identity graph linking ru
 * [Graph simulation UI](./graph-simulation.md)
 * [Identity settings UI](./identity-settings-ui.md)
 
-## Example scenarios where graph collapse could happen {#example-scenarios-where-graph-collapse-could-happen}
+## Graph collapse scenarios {#graph-collapse-scenarios}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_graphcollapsescenarios"
+>title="Graph Collapse Scenarios"
+>abstract="There are multiple reasons why graphs could "collapse", or represent multiple person entities."
 
 This section outlines example scenarios that you may consider when configuring identity graph linking rules.
 
@@ -92,11 +97,11 @@ You can configure a namespace to be unique using the identity settings UI worksp
 
 Consider the following scenario:
 
-* Scott uses a tablet and opens his Google Chrome browser to go to nike<span>.com, where he signs in and browses for new basketball shoes.
+* Scott uses a tablet and opens his Google Chrome browser to go to acme<span>.com, where he signs in and browses for new basketball shoes.
   * Behind the scenes, this scenario logs the following identities:
     * An ECID namespace and value to represent the use of the browser
     * A CRMID namespace and value to represent the authenticated user (Scott signed in with his username and password combination).
-* His son Peter then uses the same tablet and also uses Google Chrome to go to nike<span>.com, where he signs in with his own account to browse for football equipment.
+* His son Peter then uses the same tablet and also uses Google Chrome to go to acme<span>.com, where he signs in with his own account to browse for football equipment.
   * Behind the scenes, this scenario logs the following identities:
     * The same ECID namespace and value to represent the browser.
     * A new CRMID namespace and value to represent the authenticated user.

@@ -620,7 +620,7 @@ sessionPromise.then(sessionID => {
 
 ### State updates {#state-updates}
 
-The `media.stateUpdate` event type is used to track when the player state changes. This event should be sent when the player state changes.
+The `media.statesUpdate` event type is used to track when the player state changes. This event should be sent when the player state changes.
 
 >[!BEGINTABS]
 
@@ -630,7 +630,7 @@ The `media.stateUpdate` event type is used to track when the player state change
 alloy("sendMediaEvent", {
     playerId: "movie-test",
     xdm: {
-        eventType: "media.stateUpdate",
+        eventType: "media.statesUpdate",
         mediaCollection: {
             statesStart: [{
                     name: "mute"

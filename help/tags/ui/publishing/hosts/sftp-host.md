@@ -9,7 +9,7 @@ exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
 >
 >Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
 
-Adobe Experience Platform allows you to deliver tag library builds to a secured SFTP server that you host, giving you greater control over how your builds are stored and managed. This guide covers how to set up an SFTP host for a tag property in the Experience Platform UI or Data Collection UI.
+Experience Platform allows you to deliver tag library builds to a secured SFTP server that you host, giving you greater control over how your builds are stored and managed. This guide covers how to set up an SFTP host for a tag property in the Experience Platform UI or Data Collection UI.
 
 >[!NOTE]
 >
@@ -64,7 +64,7 @@ The dialog expands to include additional configuration options for the SFTP host
 | [!UICONTROL Don't Use Symlinks] | By default, all SFTP hosts use symbolic links (symlinks) to reference library [builds](../builds.md) that are saved to the server. However, not all servers support the use of symlinks. When this option is selected, the host uses a copy operation to update the build assets directly instead of using symlinks. |
 | [!UICONTROL SFTP Server URL] | The URL base path for your server. |
 | [!UICONTROL Path] | The path to append to the base server URL for this host. |
-| [!UICONTROL Port] | The port must be one of the following:<ul><li>`21`</li><li>`22`</li><li>`80`</li><li>`200-299`</li><li>`443`</li><li>`2000-2999`</li><li>`4343`</li><li>`8080`</li><li>`8888`</li></ul>As a security best practice, Adobe limits the number of ports that can be used for outgoing traffic. The selected ports are commonly allowed through corporate firewalls and include some ranges for flexibility. |
+| [!UICONTROL Port] | The port must be one of the following:<ul><li>`21`</li><li>`22`</li><li>`201`</li><li>`200`</li><li>`2002`</li><li>`2018`</li><li>`2022`</li><li>`2200`</li><li>`2222`</li><li>`2333`</li><li>`2939`</li><li>`443`</li><li>`4343`</li><li>`80`</li><li>`8080`</li><li>`8888`</li></ul>As a security best practice, Adobe limits the number of ports that can be used for outgoing traffic. The selected ports are commonly allowed through corporate firewalls and include some ranges for flexibility. |
 | [!UICONTROL Username] | The username to be used when accessing the server. |
 | [!UICONTROL Encrypted Private Key] | The encrypted private key that you created in a [previous step](#access-key). |
 

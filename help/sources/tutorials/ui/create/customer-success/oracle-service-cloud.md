@@ -6,6 +6,10 @@ exl-id: e5869c09-b61e-4d23-a594-5a07769da3c4
 ---
 # Create an Oracle Service Cloud source connection in the UI
 
+>[!WARNING]
+>
+>The [!DNL Oracle Service Cloud] source will be deprecated at the end of June 2025.
+
 This tutorial provides steps for creating an Oracle Service Cloud source connection using the Adobe Experience Platform user interface.
 
 ## Getting started

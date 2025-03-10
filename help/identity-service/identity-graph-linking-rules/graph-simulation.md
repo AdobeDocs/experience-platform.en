@@ -3,7 +3,12 @@ title: Graph Simulation UI Guide
 description: Learn how to use the Graph Simulation in the Identity Service UI.
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
 ---
-# [!DNL Graph Simulation] UI guide
+# [!DNL Graph Simulation] UI guide {#graph-simulation}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_graphsimulation"
+>title="Graph Simulation"
+>abstract="Simulate graphs to understand how Identity Service links identities, and how the identity optimization algorithm works."
 
 >[!AVAILABILITY]
 >

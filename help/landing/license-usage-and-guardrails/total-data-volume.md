@@ -3,8 +3,8 @@ title: Total Data Volume Metric
 description: Learn about the new Total Data Volume metric and how it replaces the previous average profile richness metric.
 hide: yes
 hidefromtoc: yes
+exl-id: 4b21d25c-b82b-4d1a-83ce-b510f02fd160
 ---
-
 # Total Data Volume metric
 
 Starting on September 24, 2024, the Total Data Volume metric will replace the previous metric of Average Profile Richness.

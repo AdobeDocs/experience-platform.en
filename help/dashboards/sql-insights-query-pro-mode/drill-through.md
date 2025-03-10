@@ -1,6 +1,7 @@
 ---
 title: Query Pro Mode Drill Through
 description: Learn how to navigate from any chart to a new dashboard to explore your data using drill through.
+exl-id: d38550ba-1c56-4b6b-bf96-f21da232ba34
 ---
 # Drill through {#drill-through}
 

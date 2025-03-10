@@ -25,7 +25,7 @@ Sending display events automatically provides more accurate analytics metrics, s
 To send display events automatically after the personalized content is rendered on page, you must configure the following parameters:
 
 * `renderDecisions: true`
-* `personalization.sendDisplayNotifications: true` or not specified
+* `personalization.sendDisplayEvent: true` or not specified
 
 Web SDK sends the display events immediately after any personalization is rendered as a result of a `sendEvent` call.
 
@@ -44,9 +44,9 @@ Additionally, sending display events in `sendEvent` calls minimizes bounce-rate 
 To send display events for automatically rendered propositions, you must configure the following parameters in the `sendEvent` call:
 
 * `renderDecisions: true`
-* `personalization.sendDisplayNotifications: false` for the top of page hit
+* `personalization.sendDisplayEvent: false` for the top of page hit
 
-To send the display events, call `sendEvent` with `personalization.includePendingDisplayNotifications: true`
+To send the display events, call `sendEvent` with `personalization.includeRenderedPropositions: true`
 
 ### Send display events for manually rendered propositions {#manually-rendered-propositions}
 

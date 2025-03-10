@@ -1,6 +1,8 @@
 ---
 title: Audit events export API Endpoint
 description: Learn how to export audit events in Experience Platform using the Audit Query API.
+role: Developer
+feature: Audits, API
 exl-id: 76c5de76-e391-4258-afd8-ddb2c8a9443f
 ---
 # Export a list of audit events

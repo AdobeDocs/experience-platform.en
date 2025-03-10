@@ -4,8 +4,8 @@ description: Learn how to create dynamic datastream configurations, to route you
 hide: yes
 hidefromtoc: yes
 badge: label="Beta" type="Informative"
+exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
 ---
-
 # Create dynamic datastream configurations
 
 >[!AVAILABILITY]
@@ -24,6 +24,14 @@ To create a dynamic configuration for your datastream, there are two conditions 
 * You must have *at least* one Experience Cloud service added to your datastream. See the documentation on how to [add a service](configure.md#add-services) to a datastream for detailed information.
 
 After you have created a datastream and added an Experience Cloud service to it, you can then [create a dynamic configuration](#create-dynamic-configuration).
+
+## Dynamic datastream configurations versus datastream configuration overrides {#dynamic-versus-overrides}
+
+Dynamic datastream configurations and [datastream configuration overrides](overrides.md) are mutually exclusive functionalities.
+
+This means that you cannot use dynamic datastream configurations along with datastream configuration overrides. You must choose one or the other.
+
+If you enable both dynamic datastream configurations and datastream configuration overrides, the configuration overrides will take precedence and the dynamic datastream configuration rules will be ignored.
 
 ## Create a dynamic datastream configuration {#create-dynamic-configuration}
 

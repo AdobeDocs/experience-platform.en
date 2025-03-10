@@ -1,6 +1,8 @@
 ---
 title: Audit Logs Overview
 description: Learn how audit logs allow you to see who did what actions in Adobe Experience Platform.
+role: Admin,Developer
+feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 ---
 # Audit logs {#audit-logs}
@@ -23,6 +25,10 @@ exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 In order to increase the transparency and visibility of activities performed in the system, Adobe Experience Platform allows you to audit user activity for various services and capabilities in the form of "audit logs". These logs form an audit trail that can help with troubleshooting issues on Platform, and help your business effectively comply with corporate data stewardship policies and regulatory requirements.
 
 In a basic sense, an audit log tells **who** performed **what** action, and **when**. Each action recorded in a log contains metadata that indicates the action type, date and time, the email ID of the user who performed the action, and additional attributes relevant to the action type.
+
+>[!NOTE]
+>
+> The metadata for the actions **Add user** and **Remove user** within the **Role** resource will not contain the email ID of the user who performed the action. Instead, the logs will display the system generated email ID (system@adobe.com).
 
 This document covers audit logs in Platform, including how to view and manage them in UI or API.
 

@@ -36,6 +36,7 @@ curl -X POST \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-sandbox-id: {SANDBOX_ID}'
   -d '{
         "start": "2020-07-14T00:00:00.000Z",
         "end": "2020-07-22T00:00:00.000Z",

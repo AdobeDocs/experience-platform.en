@@ -2,8 +2,8 @@
 title: Acxiom Audience Distribution
 description: Use the [!DNL Acxiom Audience Distribution] destination to enhance audiences with [!DNL Acxiom's Real ID] technology and activate audiences to multiple platforms, such as [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], and more.
 badge: Beta
+exl-id: bac0f337-bfab-4779-acc8-f70239552666
 ---
-
 # [!DNL Acxiom Audience Distribution] destination 
 
 >[!NOTE]
@@ -122,5 +122,3 @@ By following this tutorial, you have successfully activated an audience to the s
 ## Data usage and governance {#data-usage-governance}
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).
-
-

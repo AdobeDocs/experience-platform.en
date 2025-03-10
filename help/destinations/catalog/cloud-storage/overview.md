@@ -34,7 +34,7 @@ To send audiences to cloud storage destinations for your campaigns, Platform mus
 
 >[!NOTE]
 >
-> The functionality described in this section is currently available for [Amazon S3](amazon-s3.md) destinations only.
+> The functionality described in this section is available for all cloud storage destinations. However, the [Amazon S3](amazon-s3.md) destination currently only supports the `%SEGMENT_ID%` and `%SEGMENT_NAME%` macros.
 
 To create a custom folder per audience file in your storage location, you can use macros in the folder path input field. Insert the macros at the end of the input field, as shown below.
 

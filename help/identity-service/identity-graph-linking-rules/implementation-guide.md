@@ -17,7 +17,7 @@ Step-by-step outline:
 1. [Complete prerequisites for implementation](#prerequisites-for-implementation)
 2. [Create the necessary identity namespaces](#namespace)
 3. [Use the graph simulation tool to familiarize yourself with the identity optimization algorithm](#graph-simulation)
-4. [Use the identity settings tool to designate your unique namespaces and configure priority rankings for your namespaces](#identity-settings)
+4. [Use the identity settings UI to designate your unique namespaces and configure priority rankings for your namespaces](#identity-settings)
 5. [Create an Experience Data Model (XDM) schema](#schema)
 6. [Create a dataset](#dataset)
 7. [Ingest your data to Experience Platform](#ingest)
@@ -114,31 +114,6 @@ During your pre-implementation process, you must ensure that the authenticated e
 
 >[!ENDTABS]
 
-Do not send an empty string as an identity value when sending events using XDM experience events. If the identity value of the namespace with highest namespace priority is an empty string, the record will be ignored from Real-Time Customer Profile. This applies to both identityMap, as well as fields marked as an identity.
-
-+++Select to view an example of a payload with an empty string
-
-The following example returns an error because the identity value for `Phone` is submitted as an empty string.
-
-```json
-    "identityMap": {
-        "ECID": [
-            {
-                "id": "24165048599243194405404369473457348936",
-                "primary": false
-            }
-        ],
-        "Phone": [
-            {
-                "id": "",
-                "primary": true
-            }
-        ]
-    }
-```
-
-+++
-
 You must ensure that you have a fully qualified identity when sending events using XDM experience events.
 
 +++Select to view an example of an event with  a fully qualified identity
@@ -177,9 +152,13 @@ By creating different configurations, you can use the graph simulation tool to l
 
 ## Configure identity settings {#identity-settings}
 
-Once you have a better idea of how you want your graph to behave, navigate to the [identity settings  tool](./identity-settings-ui.md) in the Identity Service UI workspace. 
+Once you have a better idea of how you want your graph to behave, navigate to the [identity settings UI](./identity-settings-ui.md) in the Identity Service UI workspace. To access the identity settings UI, select **[!UICONTROL Identities]** from the left navigation and then select **[!UICONTROL Settings]**.
 
-Use the identity settings tool to designate your unique namespaces and configure your namespaces by order of priority. Once you are finished with applying your settings, you must wait at least six hours before you can proceed to ingest data, as it takes at least six hours for new settings to be reflected in Identity Service.
+![The identities browse page with the settings button highlighted.](../images/implementation/settings.png)
+
+Use the identity settings UI to designate your unique namespaces and configure your namespaces by order of priority. Once you are finished with applying your settings, you must wait at least six hours before you can proceed to ingest data, as it takes at least six hours for new settings to be reflected in Identity Service.
+
+For more information, read the [identity settings UI guide](./identity-settings-ui.md).
 
 ## Create an XDM schema {#schema}
 

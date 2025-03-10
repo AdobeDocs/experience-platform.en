@@ -8,6 +8,10 @@ exl-id: c648fc3e-beea-4030-8d36-dd8a7e2c281e
 ---
 # Create a [!DNL Zoho CRM] source connection in the UI
 
+>[!WARNING]
+>
+>The [!DNL Zoho CRM] source will be deprecated at the end of June 2025.
+
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced CRM data on a scheduled basis. This tutorial provides steps for creating a [!DNL Zoho CRM] source connector using the [!DNL Platform] user interface.
 
 ## Getting started

@@ -31,7 +31,7 @@ In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in 
 
 The [!UICONTROL Create a schema] dialog appears. In this dialog, you can choose to either manually create a schema by adding fields and field groups, or you can upload a CSV file and use ML algorithms to generate a schema. Select a schema creation workflow from the dialog.
 
-![The Create a schema dialog with the workflow options and select highlighted.](../../images/tutorials/create-schema/create-a-schema-dialog.png)
+![The Create a schema dialog with the workflow options and select highlighted.](../../images/ui/resources/schemas/create-a-schema-dialog.png)
 
 ### [!BADGE Beta]{type=Informative} Manual or ML-assisted schema creation {#manual-or-assisted}
 
@@ -43,15 +43,35 @@ The [!UICONTROL Create schema] workflow appears. You can choose a base class for
 
 ![The [!UICONTROL Create schema] workflow with the three class options and [!UICONTROL Next] highlighted.](../../images/ui/resources/schemas/schema-class-options.png)
 
+When choosing **[!UICONTROL Other]**, a list of available classes appears. From here you can browse and filter pre-existing classes.
+
+![The [!UICONTROL Create schema] workflow with [!UICONTROL Other] highlighted in the [!UICONTROL Schema details] section.](../../images/ui/resources/schemas/other-schema-details.png)
+
+Select a radio button to filter the classes based on whether they are custom or standard classes. You can also filter the available results based on their industry, or search for a specific class using the search field.
+
+![The [!UICONTROL Create schema] workflow with the search bar, [!UICONTROL Custom], and [!UICONTROL Industries] highlighted.](../../images/ui/resources/schemas/filter-and-search.png)
+
+To help you decide on the appropriate class, there are info and preview icons for each class. The info icon (![An info icon.](/help/images/icons/info.png)) opens a dialog that provides a description of the class and the industry that it is associated with. 
+
+![The info icon and tooltip of the selected class highlighted.](../../images/ui/resources/schemas/class-info.png)
+
+The preview icon (![An preview icon.](/help/images/icons/preview.png)) opens a preview dialog for the class that contains a schema diagram and its properties.
+
+![A preview of the selected class with the schema diagram and class properties.](../../images/ui/resources/schemas/class-preview.png)
+
+Select any row to choose a class, then select **[!UICONTROL Next]** to confirm your choice.
+
+![The [!UICONTROL Create schema] workflow with a class selected from the table of available classes and [!UICONTROL Next] highlighted.](../../images/ui/resources/schemas/select-class.png)
+
 After you have selected a class, the [!UICONTROL Name and review] section appears. In this section, you provide a name and description to identify your schema. ​The schema's base structure (provided by the class) is shown in the canvas for you to review and verify your selected class and schema structure.
 
 Enter a human-friendly [!UICONTROL Schema display name] in the text field. Next, enter a suitable description to help identify your schema. When you have reviewed your schema structure and are happy with your settings, select **[!UICONTROL Finish]** to create your schema. 
 
 ![The [!UICONTROL Name and review] section of the [!UICONTROL Create schema] workflow with the [!UICONTROL Schema display name], [!UICONTROL Description], and [!UICONTROL Finish] highlighted.](../../images/ui/resources/schemas/name-and-review.png)
 
-The [!UICONTROL Schema] [!UICONTROL Browse] tab appears. Your recently created schema is now listed in the Schema Library and available to edit in the the [!DNL Schema Editor].
+The Schema Editor appears, with the schema's structure shown in the canvas. If desired, you can now start [adding fields to the class](../../ui/resources/classes.md#add-fields).
 
-![The Schemas workspace Browse tab displaying your recently created schema.](../../images/ui/resources/schemas/example-schema.png)
+![The Schema Editor with the schema's structure shown in the canvas.](../../images/ui/resources/schemas/edit.png)
 
 ## Edit an existing schema {#edit}
 
@@ -133,7 +153,7 @@ The [!DNL Schema Editor] reappears with the field-group-provided fields represen
 
 >[!NOTE] 
 >
->Within the Schema Editor, standard (Adobe-generated) classes and field groups are indicated with the padlock icon (![A padlock icon.](/help/images/icons/lock-closed.png). The padlock appears in the left rail next to the class or field group name, as well as next to any field in the schema diagram that is a part of a system-generated resource.
+>Within the Schema Editor, standard (Adobe-generated) classes and field groups are indicated with the padlock icon ![A padlock icon.](/help/images/icons/lock-closed.png). The padlock appears in the left rail next to the class or field group name, as well as next to any field in the schema diagram that is a part of a system-generated resource.
 >
 >![The Schema Editor with the padlock icon highlighted](../../images/ui/explore/schema-editor-padlock-icon.png)
 
@@ -328,7 +348,7 @@ Once you have assigned a class and added field groups to a schema, you can edit 
 >
 >Once you make changes the display names for a schema's fields, those changes are immediately reflected in any existing datasets based on that schema.
 
-To edit the display name of a schema field, select the field in the canvas. In the right rail, provide the new name under **[!UICONTROL Display name]**.
+Change the field names to the display names by toggling on **[!UICONTROL Show display names for fields]**. To edit the display name of a schema field, select the field in the canvas. In the right rail, provide the new name under **[!UICONTROL Display name]**.
 
 ![](../../images/ui/resources/schemas/display-name.png)
 

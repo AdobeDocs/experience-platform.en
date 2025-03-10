@@ -27,6 +27,9 @@ feature: Sandboxes
   * [Packages](sandbox-tooling-api/packages.md)
   * [Tools](sandbox-tooling-api/tools.md)
   * [Appendix](sandbox-tooling-api/appendix.md)
+* Use Cases {#use-cases}
+  * [Backup object configurations](use-cases/backup-object-configuration.md)
+  * [Center of excellence](use-cases/center-of-excellence.md)
 * [Troubleshooting guide](troubleshooting-guide.md)
 * [API reference](https://www.adobe.io/experience-platform-apis/references/sandbox)
 * [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

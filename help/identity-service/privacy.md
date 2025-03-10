@@ -46,7 +46,7 @@ The following request creates a new privacy job under the GDPR for a single cust
 
 >[!TIP]
 >
->When deleting a custom namespace using the API, you must specify the identity symbol as the namespace, instead of the display name.
+>You must specify the identity symbol as the namespace instead of the display name, when deleting identities using GDPR delete.
 
 ```shell
 curl -X POST \
@@ -90,7 +90,7 @@ curl -X POST \
 
 >[!TIP]
 >
->When deleting a custom namespace using the UI, you must specify the identity symbol as the namespace, instead of the display name. Furthermore, you cannot delete custom namespaces in the UI for non-production sandboxes.
+>You must specify the identity symbol as the namespace instead of the display name, when deleting identities using GDPR delete. 
 
 When creating job requests in the UI, be sure to select **[!UICONTROL Identity]** under **[!UICONTROL Products]** in order to process jobs for data stored in [!DNL Identity Service].
 

@@ -53,11 +53,11 @@ Product knowledge refers to concepts and topics grounded in Experience League do
 
 {style="table-layout:auto"}
 
-### Operational insights {#operational-insights}
+Watch the following video for additional information on AI Assistant product knowledge:
 
->[!IMPORTANT]
->
->Operational insights answers are in beta. Anyone that has access to the **View Operational Insights** permission will have access to operational insights answers.
+>[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
+
+### Operational insights {#operational-insights}
 
 Operational insights refer to answers AI Assistant generates about your meta data objects (attributes, audiences, dataflows, datasets, destinations, journeys, schemas, and sources), including counts, lookups, and lineage impact. It does not look at any data within the sandbox. 
 
@@ -81,6 +81,10 @@ You can ask AI Assistant questions about your operational insights in the follow
 {style="table-layout:auto"}
 
 For operational insights questions, answers may not reflect the current state of the UI. The data that backs these questions is updated once every 24 hours. For example, changes that users make in Real-Time CDP during the daytime are synced with the data stores at night, and then they become available for user questions in the morning. You will need to log into a sandbox to inquire about specific data related to objects.
+
+Watch the following video for additional information on AI Assistant operational insights:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
 
 ### Feature scope {#feature-scope}
 

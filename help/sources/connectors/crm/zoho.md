@@ -7,6 +7,10 @@ exl-id: 4a010453-3d09-4a47-b04e-5789ae4af48c
 ---
 # [!DNL Zoho CRM]
 
+>[!WARNING]
+>
+>The [!DNL Zoho CRM] source will be deprecated at the end of June 2025.
+
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
 Experience Platform provides support for ingesting data from a third-party CRM system. Support for CRM providers include [!DNL Zoho CRM].

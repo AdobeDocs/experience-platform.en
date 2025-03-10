@@ -19,7 +19,7 @@ Within Audience Portal, you can accomplish the following tasks:
 - [Create an audience](#create-audience)
   - [Use Segment Builder to create an audience](#segment-builder)
   - [Use Audience Composition to create an audience](#audience-composition)
-  - [Use Federated Audience Composition to create an audience using data from your existing data warehouse](#fac) (Limited availability)
+  - [Use Federated Audience Composition to create an audience using data from your existing data warehouse](#fac)
 - [Import externally generated audiences](#import-audience)
 
 To open Audience Portal, select the **[!UICONTROL Browse]** tab within the Segmentation section. 
@@ -202,22 +202,50 @@ The list of available filters is displayed.
 
 ![The available filters are displayed and highlighted on the browse audiences page.](../images/ui/audience-portal/filter-audiences.png)
 
-#### Bulk actions {#bulk-actions}
+### Bulk actions {#bulk-actions}
+
+Additionally, you can select up to 25 different audiences, and perform various actions on these audiences. These actions include [moving to a folder](#folders), [editing or applying a tag](#tags), [evaluating audiences](#flexible-audience-evaluation), [applying access labels](../../access-control/abac/ui/labels.md),and [deleting](#browse).
+
+![The available options for bulk actions are displayed.](../images/ui/audience-portal/bulk-actions.png)
+
+When you apply bulk actions to audiences, the following conditions apply:
+
+- You **can** select audiences from different pages.
+- You **cannot** delete an audience which is being used in a destination activation.
+- If you select a filter, the selected audiences **will** reset.
+
+#### [!BADGE Limited availability]{type=Informative} Flexible audience evaluation {#flexible-audience-evaluation}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_browse_flexibleaudienceevaluation"
 >title="Flexible audience evaluation limits"
 >abstract="You can evaluate up to 20 audiences in a single flexible audience evaluation run.<br/><br/>Additionally, while the evaluation job runs as soon as possible, there may be system delays that may occur since on-demand evaluations <b>cannot</b> run simultaneously with another on-demand or batch evaluation."
 
-Additionally, you can select up to 25 different audiences, and perform various actions on these audiences. These actions include [moving to a folder](#folders), [editing or applying a tag](#tags), [applying access labels](../../access-control/abac/ui/labels.md), and [deleting](#browse).
+Flexible audience evaluation lets you run a segmentation job on demand. Choose the audiences you want to have evaluated and select **[!UICONTROL Evaluate audiences]**.
 
-![The available options for bulk actions are highlighted.](../images/ui/audience-portal/bulk-actions.png)
+>[!IMPORTANT]
+>
+>When selecting audiences for flexible audience evaluation, the following conditions apply:
+>
+>- You can only use flexible audience evaluation **twice** per day. This limit resets at midnight (UTC).
+>- You have a **maximum** of 50 flexible audience evaluation runs per year.
+>- All the audiences **must** have an origin of "Segmentation Service".
+>- All the audiences **must** be evaluated using batch segmentation.
+>- All the audiences **must** be people-based audiences.
+>- The audiences can **only** be activated to destinations in Platform.
+>- You can only select a maximum of 20 audiences.
 
-When you apply bulk actions to these audiences, the following conditions apply:
+![The audiences that you want to use flexible audience evaluation on are selected.](../images/ui/audience-portal/evaluate-audiences.png)
 
-- You **can** select audiences from different pages.
-- You **cannot** delete an audience which is being used in a destination activation.
-- If you select a filter, the selected audiences **will** reset.
+The **[!UICONTROL Evaluate audiences on demand]** popover appears, displaying the list of audiences that will be evaluated with the on-demand-segment job. If an audience is ineligible to be evaluated on demand, it will automatically be removed from the evaluation job. Confirm that the listed audiences are the ones you want to be evaluated.
+
+![The audiences that can be evaluated using flexible audience evaluation are displayed.](../images/ui/audience-portal/evaluate-audiences-modal.png)
+
+After confirming the correct audiences are listed, you can proceed with the request, and the flexible audience evaluation will begin. You can view the status of this audience evaluation in the [evaluation job monitoring view](../../dataflows/ui/monitor-audiences.md#evaluation-job-details).
+
+>[!NOTE]
+>
+>If you run flexible audience evaluation, you need to ensure the frequency is set to **[!UICONTROL After segment evaluation]**. Running flexible audience evaluation on audiences which are already set to be activated [after segment evaluation](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), will activate audiences as soon as the flexible audience evaluation job finishes, regardless of any previous daily activation jobs.
 
 ## Audience details {#audience-details}
 
