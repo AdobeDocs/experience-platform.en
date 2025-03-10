@@ -187,7 +187,6 @@ alloy("setConsent", {
 });
 ```
 
-
 ## Persistence of consent preferences {#persistence}
 
 After you have communicated user preferences to the Web SDK using the `setConsent` command, the SDK persists user preferences to a cookie. The next time the user loads your website in the browser, the Web SDK will retrieve and use these persisted preferences to determine whether or not events can be sent to Adobe.
@@ -195,5 +194,7 @@ After you have communicated user preferences to the Web SDK using the `setConsen
 You will need to store the user preferences independently to be able to show the consent dialog with the current preferences. There is no way to retrieve the user preferences from the Web SDK. To make sure that the user preferences stay in sync with the SDK, you can call the `setConsent` command on every page load. The Web SDK will only make a server call if the preferences have changed.
 
 ## Syncing identities while setting consent {#sync-identities}
+
+The `setConsent` command only uses the `ECID` from the identity map, as the command operates at device level.
 
 When the default consent (set through the [defaultConsent](configure/defaultconsent.md) parameter) is set to `pending` or `out`, the `setConsent` setting may be the first request that goes out and establishes identity. Because of this, it may be important to sync identities on the first request. You can add the identity map to the `setConsent` command just like on the `sendEvent` command. See [using identityMap](../identity/overview.md#using-identitymap) for an example of how to include the identity map on your command.
