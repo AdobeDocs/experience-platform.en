@@ -64,7 +64,7 @@ To be added.
 
 ## Playbook distribution or sharing (Add PM mocks for now but i've reached out to the engineer)
 
-Playbooks leverage sandbox tooling for distribution. Users can share playbooks and associated assets acros IMS organizations.
+Playbooks leverage sandbox tooling for distribution. Users can share playbooks and associated assets acros IMS organizations. Link out to existing documentaion here.
 
 ## Do's and don'ts
 
