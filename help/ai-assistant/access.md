@@ -19,13 +19,34 @@ Access to AI Assistant is governed by the following parameters:
   * As an administrator, you can add the **Enable AI Assistant** to a given role and add a user to that role, to allow them to access AI Assistant in your organization.
   * As an administrator, you can add the **View Operational Insights** to a given role and add a user to that role, to allow them to use AI Assistant's operational insights capabilities. Operational insights are currently in beta.
 
-![The permissions UI page with the Enable AI Assistant and View Operational Insights permissions included in a given role.](./images/permissions.png)
+Use the [permissions UI](../access-control/abac/ui/roles.md) to grant permissions to use AI Assistant in Experience Platform and Journey Optimizer. For information on how to access AI Assistant in Customer Journey Analytics. Read the documentation in [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant).
 
-Use the permissions UI to grant permissions to use AI Assistant in Experience Platform and Journey Optimizer. For information on how to access AI Assistant in Customer Journey Analytics. Read the documentation in [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant).
+![The permissions UI page with the Enable AI Assistant and View Operational Insights permissions included in a given role.](./images/access/access-permissions.png)
+
+There can be two reasons as to why you can't access AI Assistant:
+
+1. You are using an organization that is not legally eligible to use AI Assistant;
+2. Your administrators have not granted you the appropriate permissions to use AI Assistant.
+
+>[!BEGINTABS]
+
+>[!TAB Your organization cannot use AI Assistant]
+
+You will see the following message if you are using an organization that is not legally eligible to use AI Assistant. In this scenario, you must contact your Adobe account team to resolve access.
+
+![The pop-up message that appears on Experience Platform UI if the organization cannot use AI Assistant.](./images/access/modal-one.png)
+
+>[!TAB You do not have the right permissions]
+
+If your organization is legally eligible to use AI Assistant and you still cannot access the feature, then you will see the following message on Experience Platform UI. This scenario means that you do not have the sufficient permissions to access the feature and you must contact your administrators to resolve permissions.
+
+![The pop-up message that appears on Experience Platform UI if you do not have the necessary permissions for AI Assistant.](./images/access/modal-two.png)
+
+>[!ENDTABS]
 
 Once you have the necessary permissions, you can access AI Assistant by selecting the AI Assistant icon on the top header of the application that you are using.
 
-![AI Assistant with first-time user experience.](./images/ai-assistant.png)
+![AI Assistant with first-time user experience.](./images/access/access-home.png)
 
 ## Get access to AI Assistant
 
