@@ -140,7 +140,7 @@ The tables indicate the primary metric for each product, as each product can tra
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
 >title="Predicted usage"
->abstract="Predictions are based on the usage during the past 6-7 months and are generated on the 15th of every month. Please note that license usage predictions are approximations based on past usage. You are responsible for understanding your organization's actual usage and ensuring that usage does not go beyond the scope of your organization's license with Adobe. To reduce usage, you can configure dataset or pseudonymous profile data expirations for sandboxes and datasets."
+>abstract="Predictions are based on the usage during the past 6-7 months and are generated on a weekly basis every Friday. Please note that license usage predictions are approximations based on past usage. You are responsible for understanding your organization's actual usage and ensuring that usage does not go beyond the scope of your organization's license with Adobe. To reduce usage, you can configure dataset or pseudonymous profile data expirations for sandboxes and datasets."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="Automated dataset expirations"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Pseudonymous profiles data expiration"
 
@@ -151,11 +151,11 @@ The tables indicate the primary metric for each product, as each product can tra
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="Automated dataset expirations"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Pseudonymous profiles data expiration"
 
-Proactively manage and optimize your licensing resources based on insightful usage predictions. The [!UICONTROL Predicted Usage] column accurately predicts future license usage at the sandbox level, across all production and development sandboxes, for all of your purchased products. This alerting capability provides a forecast of license usage for six weeks in the future, based on your usage up to the 15th of this calendar month. Predictions are provided with a lower & an upper bound.
+Proactively manage and optimize your licensing resources with accurate, up-to-date usage predictions. The [!UICONTROL Predicted Usage] column forecasts future license usage at the sandbox level across all production and development sandboxes for all purchased products. Predictions now update weekly, providing a six-week forecast based on the latest usage data. Each prediction includes both a lower and upper bound to support informed planning.
 
 >[!IMPORTANT]
 >
->Predictions are refreshed on a monthly basis. The date of refresh is included in an info icon (![This info icon.](../images/license-usage/info-icon.png)) above the column title.
+>Predictions are refreshed on a weekly basis every Friday. The date of refresh is included in an info icon (![This info icon.](../images/license-usage/info-icon.png)) above the column title.
 
 To see a summary of a product's entitlement usage, select a product from the [!UICONTROL Core products] table.
 
