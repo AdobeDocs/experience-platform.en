@@ -55,15 +55,26 @@ To ensure that the data engineer has all the necessary details to set up the use
 
 Currently, the 'Technical assets' tab is only available for Adobe Journey Optimizer (AJO). Support for Real-Time Customer Data Profile (RTCDP) will be added in a future release.
 
-When setting up a use case, you need to select an asset - such as a journey, which will be captured under the 'Technical Assets' tab. Once published, the journey's schema and audience details will be automatically extracted. Note that you will not be able to edit the Playbook or modify its technical details after publishing.
+[Image selecting the product]
+[capture journey]
+
+When setting up a use case, you need to select an asset - such as a journey, which will be captured under the 'Technical Assets' tab. Once published, the journey's schema and audience details will be automatically extracted. 
+
+>[!NOTE]
+>
+> You will not be able to edit the Playbook or modify its details after publishing. You can delete and start over. 
+
+All the playbooks that you've created will be available in the Your Playbooks tab
+
+[image]
+
+We can now create instances 
+
+[image of instance]
 
 ## Example prompts 
 
 To be added.
-
-## Playbook distribution or sharing (Add PM mocks for now but i've reached out to the engineer)
-
-Playbooks leverage sandbox tooling for distribution. Users can share playbooks and associated assets acros IMS organizations. Link out to existing documentaion here.
 
 ## Do's and don'ts
 
