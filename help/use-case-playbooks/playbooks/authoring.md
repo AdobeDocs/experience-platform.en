@@ -45,7 +45,7 @@ Follow the steps outlined below to create a playbook with Adobe's AI Assitant:
 
 ![Select "Generate playbook with AI" button]()
 
-To ensure that the data engineer has all the necessary details to set up the use case, fill out the 'Playbook detail' section. While these details are optional, this helps capture key information, making it easier to connect the right technical components. Select 'Edit' to add valuesto the following fields:
+To ensure that the data engineer has all the necessary details to set up the use case, fill out the 'Playbook detail' section. While these details are optional, this helps capture key information, making it easier to connect the right technical components. Select 'Edit' to add values to the following fields:
 
 * 'Industry'
 * 'Target audience,'
