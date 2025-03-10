@@ -3,7 +3,6 @@ solution: Experience Platform
 title: AI Assistant for Use Cases - Author and share your own Playbooks.
 description: How to author and share your own use case playbooks.
 role: User
-exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
 ---
 
 # Author and share your own playbooks using AI Assistant
