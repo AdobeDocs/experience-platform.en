@@ -430,6 +430,7 @@ Watch the following videos for additional AI Assistant use case examples:
 
 * [Unlock the power of AI Assistant](https://www.youtube.com/watch?v=J48CNmcV7wc)
 * [Get to know AI Assistant for Audiences](https://www.youtube.com/live/DYsyii7ldck)
+* [Unlock operational insights with AI Assistant](https://www.youtube.com/watch?v=fGgFwAOZle8)
 
 >[!ENDTABS]
 
