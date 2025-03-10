@@ -15,3 +15,15 @@ Customer graph scenarios can be grouped into three different categories: beginne
 
 {style="table-layout:auto"}
 
+## Use case 1 (beginner)
+
+Generally, Adobe customers have a single cross-device ID that is used across all of their properties, including web, mobile, apps, etc. This system is both industry and geographically agnostic as customers in retail, telecom, and financial services use this implementation.
+
+An end-user is represented by a CRMID, therefore the CRMID should be classified as a unique namespace. 
+
+**Text mode**
+
+```json
+CRMID: John, ECID: 123
+CRMID: John, ECID: 999, IDFA: a-b-c
+```
