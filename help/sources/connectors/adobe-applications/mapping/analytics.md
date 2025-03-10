@@ -182,7 +182,7 @@ Select fields coming from ADC must be transformed, requiring logic beyond a dire
 
 Select fields (known as "post values") contain data after Adobe has adjusted their values using Processing rules, VISTA rules, and lookup tables. Most post values have a pre-processed counterpart. 
 
-The Analytics source connector sends pre-processed data into a dataset in Experience Platform. You can transform this data to its post-prosed counterpart using transformations. To learn more about performing these transformations using Query Service, see [Adobe-defined functions](/help/query-service/sql/adobe-defined-functions.md) in the Query Service user guide.
+The Analytics source connector sends pre-processed data into a dataset in Experience Platform. You can transform this data to its post-processed counterpart using transformations. To learn more about performing these transformations using Query Service, see [Adobe-defined functions](/help/query-service/sql/adobe-defined-functions.md) in the Query Service user guide.
 
 To learn more about performing these transformations using Query Service, see [Adobe-defined functions](/help/query-service/sql/adobe-defined-functions.md) in the Query Service user guide.
 
