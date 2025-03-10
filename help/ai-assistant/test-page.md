@@ -1,22 +1,16 @@
 ---
 title: this is a page for testing
 description: this is a page for testing
+hide: true
+hidefromtoc: true
 ---
 # AI Assistant new and improved landing
 
 ## Video library
 
+Watch the following videos to further amplify your knowledge on AI Assistant capabilities and use cases:
+
 ### Understanding the basics
-
-<!-- CARDS
-
-* Get to know AI Assistant - 3429845
-* Security - 3441066
-* Access AI Assistant - 3436470
-* Product knowledge - 3441024
-* Operational insights - 3444031
-
--->
 
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">
