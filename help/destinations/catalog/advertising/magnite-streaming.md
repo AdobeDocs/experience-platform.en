@@ -122,15 +122,19 @@ The current list of [!DNL Magnite Streaming] Supported Device Types will be avai
 
 ![Choose desired device type attribute from target field dropdown](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-target-dropdown.png)
 
-* You can add as many mappings as you need by selecting **[!UICONTROL Add new mapping]**.
-
 This example using the Real-Time destination shows a row that contains a generic deviceId source identifier mapped to the [!DNL Magnite Streaming] Device Type: Idfa target attribute identifier. When you are satisfied with the mappings, select [!UICONTROL Next].
 
 ![Map desired data fields to the target field](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-field-mapping.png)
 
-Be sure to set Mapping IDs to all activated audiences, or set NONE if no Mapping ID is present.
+* You can add as many mappings as you want/need by selecting **[!UICONTROL Add new mapping]**.
 
-![Be sure to set Mapping IDs to all activated audiences, or set NONE if no Mapping ID is present](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-mappingid.png)
+>[!NOTE]
+>
+>If you plan to map an audience to multiple device types (GAID, IDFA, etc.) using the Real-Time destination, a new destination connection/instance is required for each mapping. Please contact your [!DNL Magnite Streaming] account representative for more information.
+
+Be sure to set Mapping IDs for all activated audiences, or set NONE if no Mapping ID is present.
+
+![Be sure to set Mapping IDs for all activated audiences, or set NONE if no Mapping ID is present](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-mappingid.png)
 
 You must now configure a Start date (mandatory), an End date (optional), and a Mapping ID for each audience.
 
