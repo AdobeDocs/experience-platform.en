@@ -17,7 +17,7 @@ The `getIdentity` command goes through the following flow to retrieve the `ECID`
 1. Web SDK waits for consent information to be provided.
 1. Web SDK checks whether the `ECID` namespace was requested on the call. By default, the `ECID` namespace is always included.
 1. Web SDK reads the `kndctr` cookie and returns its value as `ECID`, if it exists. This only returns the `ECID` value, but not the `regionId`.
-1. If the  `kndctr` cookie is not set, Web SDK makes a request to the Edge Network.
+1. If the  `kndctr` identity cookie is not set or the `"CORE"` namespace was requested, Web SDK makes a request to the Edge Network.
 1. The Edge Network returns both the `ECID` and the `regionId` (and the `CORE ID`, if requested).
 
 ## Get identity using the Web SDK tag extension
@@ -30,6 +30,7 @@ Run the `getIdentity` command when calling your configured instance of the Web S
 
 * **`namespaces`**: An array of namespaces. The default value is `["ECID"]`. Other supported values include:
   * `["CORE"]`
+  * `["ECID","CORE"]`
   * `null`
   * `undefined`
 
