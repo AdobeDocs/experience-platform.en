@@ -51,7 +51,7 @@ Select **[!UICONTROL Schedule]** and allow a few moments for your on-demand data
 
 ![The scheduling configuration window for on-demand ingestion.](../../images/tutorials/on-demand/configure-schedule.png)
 
-Select your dataflow name to view your dataflow activity. Here you will see a list of your dataflow runs that have been processed. Select a dataflow run, then select **[!UICONTROL Retry]** from the right rail to retry ingestion for a selected dataflow run iteration.
+Select your dataflow name to view your dataflow activity. Here you will see a list of your dataflow runs that have been processed. You can re-run individual iterations of your dataflow runs regardless of whether they have failed or succeeded. For run iterations that have failed, you can use **[!UICONTROL Retry]** to initiate the run again after diagnosing and addressing any errors that may have been encountered during the creation process.
 
 ![A list of processed flow runs for a selected dataflow.](../../images/tutorials/on-demand/processed.png)
 
