@@ -8,7 +8,7 @@ hidefromtoc: yes
 
 Discover a practical framework to connect your business goals with real customer experiences. Learn how to apply real-world examples and Adobe Experience Platform applications to align technical capabilities with business value. Use a structured mapping process to collaborate with stakeholders, showcase your impact, and see how this approach drives measurable business outcomes.
 
-Key Takeaways
+## Key takeaways
 
 - Align business objectives, customer experiences, and technical capabilities using a structured framework.
 - Foster collaboration across teams to deliver effective use case outcomes.
