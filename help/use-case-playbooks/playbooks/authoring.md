@@ -65,19 +65,21 @@ Navigate to the **Technical Assets** tab and select the required product. For th
 >
 > Support for Real-Time Customer Data Profile will be added in a future release.
 
-![technical assets adn selecting the product](/help/use-case-playbooks/assets/playbooks/authoring/technical-assets-add-required-product.png)
+![technical assets and selecting the product](/help/use-case-playbooks/assets/playbooks/authoring/technical-assets-add-required-product.png)
 
 Select **Select an Asset** to associate this playbook with a journey as shown in the image below. Then select 'Publish playbook' to finalize the playbook. 
 
-[capture journey]
+![Select an Asset button](/help/use-case-playbooks/assets/playbooks/authoring/select-assets.png)
+
+![Select a journey](/help/use-case-playbooks/assets/playbooks/authoring/select-assets.png)
 
 Once published, the playbook automatically extracts and associates the journey's schema and audience details.
 
-[image]
+![Published playbook](/help/use-case-playbooks/assets/playbooks/authoring/publish-playbook.png)
 
 All the created playbooks are available in the **Your Playbooks** tab. You can select any playbook from the catalog to create instances for reuse.
 
-[image]
+![Your playbooks tab](/help/use-case-playbooks/assets/playbooks/authoring/your-playbooks-tab.png)
 
 [image of instance]
 
@@ -87,21 +89,52 @@ All the created playbooks are available in the **Your Playbooks** tab. You can s
 
 ## Example prompts 
 
-To be added.
+The AI Assistant can process various prompt structures and extract key details while filtering out unnecessary information. Below are some examples of user prompts and how they are interpreted by the system:
+
+**Example 1:**
+
+"Create a campaign titled "Complete the Look" in order to increase sales and CLV. The campaign encourages customers purchased kitchenware or furniture to complete a complementary purchase via personalized recommendations and offers related to their purchase. First message the customers with product recommendations. If they don't make any purchases within 7 days, they receive a second message with product recommendations and offers. Use push notifications and email to contact the customers. Target customers who made a purchase in last 7 days in kitchenware or furniture category and have not been targeted in last 30 days. As part of the campaign, we want to measure KPIs such as clicks (email, app,sms, push), CTR, E-Wallet CTR, AOV Conversion.CLV Revenue, Total Purchase events (in-store, digital, call center)."
+
+![Example 1 prompt](/help/use-case-playbooks/assets/playbooks/authoring/example-prompt.png)
+
+**Example 2:**
+
+"Project Name: Fashion Newsletter
+Background: (proactive or solving for problem): A journey designed to send fashion newsletters to ACME customers who have subscribed for newsletter communication.
+Objective: Send fashion newsletter emails to ACME customers who subscribed for communication.
+Promotional details: Customer receives fashion news in the email channel weekly. The email should be personalized and content variations based on gender, language and market.
+Project channels/Touchpoints: Email
+Target audience: Customers who have subscribed to ACME fashion newsletter communications.
+Target KPIs/Engagement Metrics/ROI: 1. Increase Revenue from Products. 2. Drive Customer loyalty."
+
+![Example 2 prompt](/help/use-case-playbooks/assets/playbooks/authoring/example-2-prompt.png)
+
+**Example 3:**
+
+"Nudge shoppers to buy products during an ongoing product promotional campaign. 
+Engage with shoppers during an ongoing promotion by sending appropriate communication through email, SMS, or push notifications to buy products. Send them a reminder email after 24 hours of them not engaging with the promotion."
+
+![Example 3 prompt](/help/use-case-playbooks/assets/playbooks/authoring/example-3-prompt.png)
+
+**Example 4:**
+
+"Sell shoes to high school players."
+
+![Example 4 prompt](/help/use-case-playbooks/assets/playbooks/authoring/example-4-prompt.png)
+
+The AI Assistant removes all unnecessary details such as "Project Name" or "Background." It extracts the key elements such as "target audience," "campaign goal," and "marketing channel" and works with any input style.
+
+These examples demonstrate how AI can refine and extract essential details from user prompts. 
 
 ## Do's and don'ts
 
 Pre-requisites to use the feature to be added.
 
-## Known limitations
-
-To be added along with screenshots. 
-
 ## Content guidelines and moderation
 
 When creating playbooks, be mindful of the language and content you include. Playbooks are visible across your organization, and any offensive or inappropriate content can be flagged by users.
 
-![Report results]()
+<!-- ![Report results]() -->
 
 ### Flagging and review process
 
