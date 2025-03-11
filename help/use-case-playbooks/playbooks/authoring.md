@@ -27,23 +27,23 @@ Follow these steps to create a playbook with Adobe's AI Assitant:
 
 ![Left navigation with Playbooks highlighted](/help/use-case-playbooks/assets/playbooks/authoring/playbooks.png)
 
-2. Select **New Playbook**, and then select **Generate playbook with AI**. (You can also create a playbook manually, but this guide focuses on AI-generated playbooks).
+1. Select **New Playbook**, and then select **Generate playbook with AI**. (You can also create a playbook manually, but this guide focuses on AI-generated playbooks).
 
 ![Select "New Playbook" button](/help/use-case-playbooks/assets/playbooks/authoring/new-playbook.png)
 
 ![Select "Generate playbook with AI" button](/help/use-case-playbooks/assets/playbooks/authoring/generate-playbook.png)
 
-3. In the prompt field, describe the use case. 
+1. In the prompt field, describe the use case. 
 
 **Example**: "Engage ACME customers who browsed running shoes but did not complete the purchase."
 
 ![Select "Generate playbook with AI" button](/help/use-case-playbooks/assets/playbooks/authoring/prompt.png)
 
-4. Select 'Generate' to create the playbook using Adobe's R2D2 framework. 
+1. Select 'Generate' to create the playbook using Adobe's R2D2 framework. 
 
 ![Select "Generate playbook with AI" button](/help/use-case-playbooks/assets/playbooks/authoring/generate.png)
 
-5. Once generated, select **Edit** to modify the generated title, description, and metadata as needed.
+1. Once generated, select **Edit** to modify the generated title, description, and metadata as needed.
 
 ![Select "Generate playbook with AI" button](/help/use-case-playbooks/assets/playbooks/authoring/edit.png)
 
