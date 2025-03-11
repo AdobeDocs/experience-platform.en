@@ -11,7 +11,7 @@ The **Playbook Authoring Framework** allows you to create, manage, and share pla
 
 The framework follows a three-step process:
 
-1. **Metadata capture**: Use AI assistance or manual inpu to generate playbook metadata.
+1. **Metadata capture**: Use AI assistant or manual input to generate playbook metadata.
 
 2. **Technical association**: Add specific technical assets (schemas, segments, profiles) to the playbook. You retain full control over the playbook creation process within your developement sandbox, ensuring alignment with your assets, schemas, and other unique data structures.
 
@@ -27,11 +27,11 @@ Follow these steps to create a playbook with Adobe's AI Assitant:
 
 ![Left navigation with Playbooks highlighted](/help/use-case-playbooks/assets/playbooks/authoring/playbooks.png)
 
-1. Select **New Playbook**, and then select **Generate playbook with AI**. (You can also create a playbook manually, but this guide focuses on AI-generated playbooks).
+1. Select **New Playbook**, and then select **Generate playbook with AI Assistant**. (You can also create a playbook manually, but this guide focuses on AI-generated playbooks).
 
 ![Select "New Playbook" button](/help/use-case-playbooks/assets/playbooks/authoring/new-playbook.png)
 
-![Select "Generate playbook with AI" button](/help/use-case-playbooks/assets/playbooks/authoring/generate-playbook.png)
+![Select "Generate playbook with AI Assistant" button](/help/use-case-playbooks/assets/playbooks/authoring/generate-playbook.png)
 
 1. In the prompt field, describe the use case. 
 
@@ -77,11 +77,11 @@ Once published, the playbook automatically extracts and associates the journey's
 
 ![Published playbook](/help/use-case-playbooks/assets/playbooks/authoring/publish-playbook.png)
 
-All the created playbooks are available in the **Your Playbooks** tab. You can select any playbook from the catalog to create instances for reuse.
+All the created playbooks are available in the **Your Playbooks** tab. You can select any playbook from the catalog to create instances for reuse. Please refer to the documentation to learn how to create instances. ADD LINK for create instance. 
 
 ![Your playbooks tab](/help/use-case-playbooks/assets/playbooks/authoring/your-playbooks-tab.png)
 
-[image of instance]
+![image of create instance screenshot]
 
 >[!NOTE]
 >
