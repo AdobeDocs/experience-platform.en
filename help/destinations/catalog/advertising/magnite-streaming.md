@@ -38,7 +38,7 @@ If you do not have a [!DNL Magnite Streaming] account, please reach out to adobe
 
 ## Supported identities {#supported-identities}
 
-The [!DNL Magnite Streaming: Real-Time] destination supports the activation of many identities. The list of supported identities is managed by [!DNL Magnite Streaming], and may change and/or grow over time. The current list of supported identities will be available from a dropdown in the Target Field, during the Mapping step of Audience Activation (described below). Learn more about [identities](/help/identity-service/features/namespaces.md).
+The [!DNL Magnite Streaming: Real-Time] destination supports the activation of any attributes and/or identities stored in Experience Platform, which will need to be mapped to a [!DNL Magnite Streaming] supported device type. The list of supported device types is managed by [!DNL Magnite Streaming], and may change and/or grow over time. The current list of supported device types will be available from a dropdown in the Target Field, during the Mapping step of Audience Activation (described below). Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 ## Supported audiences {#supported-audiences}
 
