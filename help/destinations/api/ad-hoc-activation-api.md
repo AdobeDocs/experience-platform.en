@@ -24,8 +24,6 @@ The diagram below illustrates the end-to-end workflow for activating audiences v
 
 ![ad-hoc-activation](../assets/api/ad-hoc-activation/ad-hoc-activation-overview.png)
 
-
-
 ## Use cases {#use-cases}
 
 ### Flash sales or promotions

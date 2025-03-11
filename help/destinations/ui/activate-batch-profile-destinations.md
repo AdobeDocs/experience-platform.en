@@ -125,10 +125,6 @@ Select **[!UICONTROL Export full files]** to trigger the export of a file contai
     * **[!UICONTROL Once]**: schedule a one time on-demand full file export.
     * **[!UICONTROL Daily]**: schedule full file exports once a day, every day, at the time you specify.
 
-      >[!IMPORTANT]
-      >
-      >When mapping an audience which created within the last 24 hours and evaluated through [batch segmentation](../../segmentation/methods/batch-segmentation.md), set your daily export schedule to start the following day at the earliest. This assures that the daily batch evaluation job runs first and you are exporting complete audience data.
-
 2. Use the **[!UICONTROL Time]** toggle to select whether the export should happen immediately after audience evaluation or on a scheduled basis, at a specified time. When selecting the **[!UICONTROL Scheduled]** option, you can use the selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
 
     Use the **[!UICONTROL After segment evaluation]** option to have the activation job run immediately after the daily Platform batch segmentation job completes. This option ensures that when the activation job runs, the most up-to-date profiles are exported to your destination. This might result in an audience being exported multiple times a day, based on your actions.
@@ -143,6 +139,10 @@ Select **[!UICONTROL Export full files]** to trigger the export of a file contai
     Use the **[!UICONTROL Scheduled]** option to have the activation job run at a fixed time. This option ensures that Experience Platform profile data is exported at the same time each day. However, the profiles you export may not be the most up to date, depending on whether the batch segmentation job has completed before the activation job kicks off.
 
     ![Image highlighting the Scheduled option in the activation flow for batch destinations and showing the time selector.](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
+
+      >[!IMPORTANT]
+      >
+      >When mapping an audience which was created within the last 24 hours and evaluated through [batch segmentation](../../segmentation/methods/batch-segmentation.md), set your daily export schedule to start the following day at the earliest. This assures that the daily batch evaluation job runs first and you are exporting complete audience data.
 
 3. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place. For daily exports, best practice is to set your start and end date to line up with the duration of your campaigns in your downstream platforms.
 
