@@ -20,6 +20,12 @@ exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
 
 Read this document to learn how you can use [!DNL Graph Simulation] to better understand identity graph behavior and how the graph algorithm functions.
 
+### Watch the video on graph simulation {#watch}
+
+Watch the following video for additional information on using the [!DNL Graph Simulation] interface in the Identity Service UI workspace:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3444032/?learn=on&enablevpops)
+
 ## Get to know the [!DNL Graph Simulation] interface {#interface}
 
 You can access [!DNL Graph Simulation] in the Adobe Experience Platform UI. Select **[!UICONTROL Identities]** from the left navigation and then select **[!UICONTROL Graph Simulation]** from the top header.
@@ -179,9 +185,3 @@ By reading this document, you now know how to use the [!DNL Graph Simulation] to
 * [Examples of graph configurations](./example-configurations.md)
 * [Namespace priority](./namespace-priority.md)
 * [Identity settings UI](./identity-settings-ui.md)
-
-### Watch the video on graph simulation {#watch}
-
-Watch the following video for additional information on using the [!DNL Graph Simulation] interface in the Identity Service UI workspace:
-
->[!VIDEO](https://video.tv.adobe.com/v/3444032/?learn=on&enablevpops)
