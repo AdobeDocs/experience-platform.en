@@ -11,22 +11,14 @@ You can access AI Assistant across several applications in Adobe Experience Clou
 >
 >If you receive a pop up message in permissions UI that informs you that your organization must first agree to additional legal terms in order to gain access to AI Assistant, then contact your Adobe account team for guidance on these terms.
 
-Access to AI Assistant is governed by the following parameters:
+## Get started {#get-started}
 
-* **Access the application:** You can access AI Assistant in Adobe Experience Platform, Adobe Real-Time CDP, Adobe Journey Optimizer, and [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant).
-<!-- * **Contractual access:** Your company must agree to certain [!DNL GenAI]-related legal terms before your organization can use AI Assistant. Contact your organization's administrator or your Adobe Account Team if you are not able to access AI Assistant.  -->
-* **Permissions:** Use the [Permissions UI](../access-control/abac/ui/permissions.md) to grant or revoke access to AI Assistant in your organization. In order to use AI Assistant, a given user must belong to a role that is provisioned with the **Enable AI Assistant** and **View Operational Insights** permissions.
-  * As an administrator, you can add the **Enable AI Assistant** to a given role and add a user to that role, to allow them to access AI Assistant in your organization.
-  * As an administrator, you can add the **View Operational Insights** to a given role and add a user to that role, to allow them to use AI Assistant's operational insights capabilities. Operational insights are currently in beta.
+You must complete two prerequisite steps before you can access AI Assistant.
 
-Use the [permissions UI](../access-control/abac/ui/roles.md) to grant permissions to use AI Assistant in Experience Platform and Journey Optimizer. For information on how to access AI Assistant in Customer Journey Analytics. Read the documentation in [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant).
+1. Your organization must first agree to legal terms set by AI Assistant.
+2. Your administrators must grant you sufficient permissions to access AI Assistant.
 
-![The permissions UI page with the Enable AI Assistant and View Operational Insights permissions included in a given role.](./images/access/access-permissions.png)
-
-There can be two reasons as to why you can't access AI Assistant:
-
-1. You are using an organization that is not legally eligible to use AI Assistant;
-2. Your administrators have not granted you the appropriate permissions to use AI Assistant.
+If you do not have either of these two prerequisite steps completed, then you will see the following messages when you select the AI Assistant chat icon in the Experience Platform UI.
 
 >[!BEGINTABS]
 
@@ -44,11 +36,23 @@ If your organization is legally eligible to use AI Assistant and you still canno
 
 >[!ENDTABS]
 
+## Get access to AI Assistant
+
+Access to AI Assistant is governed by the following parameters:
+
+* **Access the application:** You can access AI Assistant in Adobe Experience Platform, Adobe Real-Time CDP, Adobe Journey Optimizer, and [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant).
+<!-- * **Contractual access:** Your company must agree to certain [!DNL GenAI]-related legal terms before your organization can use AI Assistant. Contact your organization's administrator or your Adobe Account Team if you are not able to access AI Assistant.  -->
+* **Permissions:** Use the [Permissions UI](../access-control/abac/ui/permissions.md) to grant or revoke access to AI Assistant in your organization. In order to use AI Assistant, a given user must belong to a role that is provisioned with the **Enable AI Assistant** and **View Operational Insights** permissions.
+  * As an administrator, you can add the **Enable AI Assistant** to a given role and add a user to that role, to allow them to access AI Assistant in your organization.
+  * As an administrator, you can add the **View Operational Insights** to a given role and add a user to that role, to allow them to use AI Assistant's operational insights capabilities. Operational insights are currently in beta.
+
+Use the [permissions UI](../access-control/abac/ui/roles.md) to grant permissions to use AI Assistant in Experience Platform and Journey Optimizer. For information on how to access AI Assistant in Customer Journey Analytics. Read the documentation in [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant).
+
+![The permissions UI page with the Enable AI Assistant and View Operational Insights permissions included in a given role.](./images/access/access-permissions.png)
+
 Once you have the necessary permissions, you can access AI Assistant by selecting the AI Assistant icon on the top header of the application that you are using.
 
 ![AI Assistant with first-time user experience.](./images/access/access-home.png)
-
-## Get access to AI Assistant
 
 Watch the following video to learn how to configure access to AI Assistant for your organizations and users.
 
