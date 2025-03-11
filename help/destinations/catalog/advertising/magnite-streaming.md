@@ -25,7 +25,7 @@ Note: When using the Real-Time destination, [!DNL Magnite Streaming] will receiv
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the [!DNL  Streaming: Real-Time] destination, here is a sample use case that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL Magnite Streaming: Real-Time] destination, here is a sample use case that Adobe Experience Platform customers can solve by using this destination.
 
 ### Activation and targeting {#activation-and-targeting}
 
@@ -57,7 +57,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item             | Type                            | Notes                                                                                                                                                                                                                                                                                                                              |
 |------------------|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Export type      | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the [!DNL  Streaming: Real-Time] destination.                                                                                                                                                            |
+| Export type      | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the [!DNL Magnite Streaming: Real-Time] destination.                                                                                                                                                            |
 | Export frequency | **[!UICONTROL Streaming]**      | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -160,7 +160,7 @@ Once your audiences have been uploaded, you may validate your audiences have bee
 
 * Post-ingest, audiences are expected to appear in [!DNL Magnite Streaming] within a few minutes and can be applied to a deal. You can confirm this by looking up the segment ID that was shared during the activation steps in the Adobe Experience Platform.
 
-## Activate the same audiences through the [!DNL  Streaming: Batch ]destination
+## Activate the same audiences through the [!DNL Magnite Streaming: Batch ]destination
 
 Audiences shared with [!DNL Magnite Streaming] using the  Real-Time destination will also need to be shared using the Magnite Streaming: Batch destination. When configured correctly, segment names in the [!DNL Magnite Streaming] UI are updated to reflect those used in the Adobe Experience Platform post-daily update.
 
