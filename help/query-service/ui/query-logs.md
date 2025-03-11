@@ -5,10 +5,6 @@ exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
 ---
 # Query logs
 
->[!IMPORTANT]
->
->Certain query logs features are currently in a limited release and not available to all customers. Your UI may appear slightly differently without an edit icon. Also, the process of selecting a query name may to navigate to the Query Editor instead of the [!UICONTROL Query log details] view.
-
 Adobe Experience Platform maintains a log of all query events that occur through both the API and the UI. This information is available in the Query Service UI from the [!UICONTROL Logs] tab.  
 
 The log files are generated automatically by any query event and contain information including the SQL used, the status of the query, how long it took, and last run time. You can use query log data as a powerful tool for troubleshooting inefficient or problem queries. More comprehensive log information is kept as part of the audit log feature and can be found in the [audit log documentation](../../landing/governance-privacy-security/audit-logs/overview.md).
@@ -46,10 +42,6 @@ In the log details panel, you can perform a variety of actions. You can run the 
 >The option to [!UICONTROL Run as CTAS] is only available for a SELECT query.
 
 ![The Queries Log workspace with a row selected, Run as CTAS, Delete query and the copy SQL icon highlighted.](../images/ui/query-log/edit-output-dataset.png)
-
->[!IMPORTANT]
->
->Certain query logs features are currently in a limited release and not available to all customers.
 
 You can also select a query template name from the [!UICONTROL Name] column to navigate directly to the [!UICONTROL Query log details] view.
 

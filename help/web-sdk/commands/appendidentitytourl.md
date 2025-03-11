@@ -71,7 +71,11 @@ Append the identity to the URL.
 Run the `appendIdentityToUrl` command with a URL as a parameter. The method returns a URL with the identifier appended as a query string.
 
 ```js
-alloy("appendIdentityToUrl",document.location);
+alloy("appendIdentityToUrl",
+  {
+    url: document.location.href
+  }
+);
 ```
 
 You can add an event listener for all clicks received on the page and check to see if the URL matches any desired domains. If it does, append the identity to the URL and redirect the user.
