@@ -47,7 +47,7 @@ The table below displays guidance on the request per seconds limits for streamin
 | RPS limit | Notes |
 | --- | --- |
 | 1000 requests per second | These can contain multiple messages when using `/collection/batch` endpoint. |
-| 10000 individual messages per second | The messages can be grouped into fewer actual requests when using the `/collection/batch` endpoint. |
+| 10000 individual messages per second | The messages can be grouped into fewer actual requests when using the `/collection/` endpoint. |
 
 >[!IMPORTANT]
 >
