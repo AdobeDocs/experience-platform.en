@@ -4,7 +4,7 @@ description: Use this destination to deliver Adobe CDP audiences to the Magnite 
 last-substantial-update: 2024-11-18
 exl-id: 4e08a14b-6800-41e1-95a5-826a6241144d
 ---
-#  Magnite Streaming: Real-Time destination
+# Magnite Streaming: Real-Time destination {#magnite-streaming-real-time}
 
 ## Overview {#overview}
 
