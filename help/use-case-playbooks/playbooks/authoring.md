@@ -15,7 +15,7 @@ The framework follows a three-step process:
 
 2. **Technical association**: Add specific technical assets (schemas, segments, profiles) to the playbook. You retain full control over the playbook creation process within your developement sandbox, ensuring alignment with your assets, schemas, and other unique data structures.
 
-3. **Playbook distribution**: Share playbooks across different IMS organizations. For example, ACME's Martech Center of Excellence in Germany can create a "golden" playbook and distribute it to regional subsidiaries in Thailand, Australia, etc.
+3. **Playbook distribution**: Share playbooks across different IMS organizations. For example, ACME's Martech Center of Excellence in Germany can create a "golden" playbook and distribute it to regional IMS organizations in Thailand, Australia, etc. to help standardize marketing operations.
 
 ## Manually create a Playbook with Adobe's AI Assistant
 
@@ -126,9 +126,9 @@ The AI Assistant removes all unnecessary details such as "Project Name" or "Back
 
 These examples demonstrate how AI can refine and extract essential details from user prompts. 
 
-## Do's and don'ts
-
-Pre-requisites to use the feature to be added.
+>[!NOTE]
+>
+> Avoid any PII or explicit words while writing your prompts. 
 
 ## Content guidelines and moderation
 
