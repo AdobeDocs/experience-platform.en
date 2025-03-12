@@ -16,3 +16,13 @@ Through a case study, you will analyze user behavioral data and create a Recency
 ## Overview of the RFM Model
 
 RFM, short for Recency (R), Frequency (F), and Monetary (M), is a data-driven approach to customer segmentation and analysis. This methodology evaluates three key aspects of customer behavior: how recently a customer made a purchase, how often they engage, and how much they spend. By quantifying these factors, businesses can gain actionable insights into customer segments and develop targeted marketing strategies that better meet individual customer needs.
+
+## Business Understanding of RFM Model
+
+The RFM model classifies customers based on their transactional behaviors, utilizing three key parameters:
+
+- Recency gauges the time elapsed since a customer's last purchase, providing insights into engagement levels and future transaction potential.
+- Frequency assesses the frequency of customer interactions, serving as an indicator of loyalty and sustained engagement.
+- Monetary value measures the total spending of customers, emphasizing their value to the business.
+
+The combination of these factors enables businesses to assign numerical scores to each customer, typically on a scale from 1 to 4, where lower scores signify more favorable outcomes in our specific use case. For instance, a customer scoring 1 in all categories is deemed the "best," showcasing recent activity, high engagement, and substantial spending.
