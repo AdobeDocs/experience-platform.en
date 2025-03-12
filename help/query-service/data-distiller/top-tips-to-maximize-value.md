@@ -22,6 +22,7 @@ To execute this use case, your Adobe Experience Platform instance must be licens
 RFM, short for Recency (R), Frequency (F), and Monetary (M), is a data-driven approach to customer segmentation and analysis. This methodology evaluates three key aspects of customer behavior: how recently a customer made a purchase, how often they engage, and how much they spend. By quantifying these factors, businesses can gain actionable insights into customer segments and develop targeted marketing strategies that better meet individual customer needs.
 
 ## Understanding customer behavior with the RFM model
+
 <!-- ## How the RFM model defines customer value -->
 
 The RFM model segments customers based on transactional behavior using three key parameters.
