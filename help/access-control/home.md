@@ -133,15 +133,15 @@ The following table outlines the available permissions for Experience Platform i
 | [!DNL Alerts] | [!UICONTROL Resolve Alerts] | Access to read, edit, and delete alerts. |
 | [!DNL Alerts] | [!UICONTROL View Alerts] | Read-only access for alerts. |
 | [!DNL Alerts] | [!UICONTROL Manage Alerts] | Access to read, create, edit, and delete alerts history. |
-| [!DNL B2B Account Lists] | [!UICONTROL Manage B2B Account Lists] | Ability to view and access **[!UICONTROL Account Lists]** in the left nav. Users with access to **[!UICONTROL Account Lists]** should have access to all Account Lists CRUD functions. |
-| [!DNL B2B Admin Configurations] | [!UICONTROL Manage B2B Admin Configurations] | Ability to view and access **[!UICONTROL SMS API Credentials]** in the left nav. Users with access to **[!UICONTROL SMS API Credentials]** should have access to all SMS API Credentials CRUD functions. |
-| [!DNL B2B Assets] | [!UICONTROL Manage B2B Assets] | Ability to view and access **[!UICONTROL Assets]** in the left nav. Users with access to **[!UICONTROL Assets]** should have access to all Assets CRUD functions. |
-| [!DNL B2B Assets] | [!UICONTROL Manage B2B Templates] | Ability to view and access **[!UICONTROL Templates]** in the left nav. Users with access to **[!UICONTROL Templates]** should have access to all Templates CRUD functions. |
-| [!DNL B2B Assets] | [!UICONTROL Manage B2B Fragments] | Ability to view and access **[!UICONTROL Fragments]** in the left nav. Users with access to **[!UICONTROL Fragments]** should have access to all Fragments CRUD functions. |
-| [!DNL B2B Buying Groups] | [!UICONTROL Manage B2B Buying Groups] | Ability to view and access **[!UICONTROL Buying Groups]** in the left nav. Users with access to **[!UICONTROL Buying Groups]** should have access to all Buying Groups CRUD functions. |
-| [!DNL B2B Dashboards] | [!UICONTROL Manage B2B Engagement Dashboards] | Ability to view and access **[!UICONTROL Dashboard]** in the left nav. |
-| [!DNL B2B Channel Configurations] | [!UICONTROL Manage B2B Channels Configurations] | Ability to view and access **[!UICONTROL Channels]** in the left nav. Users with access to **[!UICONTROL Channels]** should have access to all Channels CRUD functions. |
-| [!DNL B2B Journeys] | [!UICONTROL Manage B2B Account Journeys] | Ability to view and access **[!UICONTROL Account Journeys]** in the left nav. Users with access to **[!UICONTROL Account Journeys]** should have access to all Account Journeys CRUD functions. |
+| [!DNL B2B Account Lists] | [!UICONTROL Manage B2B Account Lists] | Ability to view and access **[!UICONTROL Account Lists]** in the left nav. Users with access to **[!UICONTROL Account Lists]** should have access to all Account Lists CRUD functions: `/accounts-list` |
+| [!DNL B2B Admin Configurations] | [!UICONTROL Manage B2B Admin Configurations] | Ability to view and access **[!UICONTROL SMS API Credentials]** in the left nav. Users with access to **[!UICONTROL SMS API Credentials]** should have access to all SMS API Credentials CRUD functions: `/admin-configs`. |
+| [!DNL B2B Assets] | [!UICONTROL Manage B2B Assets] | Ability to view and access **[!UICONTROL Assets]** in the left nav. Users with access to **[!UICONTROL Assets]** should have access to all Assets CRUD functions: `/assets-listing`. |
+| [!DNL B2B Assets] | [!UICONTROL Manage B2B Templates] | Ability to view and access **[!UICONTROL Templates]** in the left nav. Users with access to **[!UICONTROL Templates]** should have access to all Templates CRUD functions: `/b2b-content-templates`. |
+| [!DNL B2B Assets] | [!UICONTROL Manage B2B Fragments] | Ability to view and access **[!UICONTROL Fragments]** in the left nav. Users with access to **[!UICONTROL Fragments]** should have access to all Fragments CRUD functions: `/fragments`. |
+| [!DNL B2B Buying Groups] | [!UICONTROL Manage B2B Buying Groups] | Ability to view and access **[!UICONTROL Buying Groups]** in the left nav. Users with access to **[!UICONTROL Buying Groups]** should have access to all Buying Groups CRUD functions: `/buying-groups`. |
+| [!DNL B2B Dashboards] | [!UICONTROL Manage B2B Engagement Dashboards] | Ability to view and access **[!UICONTROL Dashboard]** in the left nav. Users with access to **[!UICONTROL Dashboardes]** should have access to all Dashboards CRUD functions: `/insights-dashboard`. |
+| [!DNL B2B Channel Configurations] | [!UICONTROL Manage B2B Channels Configurations] | Ability to view and access **[!UICONTROL Channels]** in the left nav. Users with access to **[!UICONTROL Channels]** should have access to all Channels CRUD functions: `/channels-config`. |
+| [!DNL B2B Journeys] | [!UICONTROL Manage B2B Account Journeys] | Ability to view and access **[!UICONTROL Account Journeys]** in the left nav. Users with access to **[!UICONTROL Account Journeys]** should have access to all Account Journeys CRUD functions: `/account-journeys`. |
 | [!DNL Campaigns] | [!UICONTROL Manage Campaigns] | Access to read, create, edit, and delete campaigns. |
 | [!DNL Campaigns] | [!UICONTROL Approve and Publish Campaigns] | The ability to approve and publish campaigns. | 
 | [!DNL Campaigns] | [!UICONTROL Publish Campaigns] | Ability to publish campaigns. |
@@ -270,7 +270,7 @@ The following table outlines the available permissions for Experience Platform i
 | [!DNL Profile Management] | [!UICONTROL View B2B Profile] | Read-only access to B2B entity profiles (such as Account, Opportunity, and so on), settings and configurations for all B2B AI/ML services, and B2B dashboard widgets. |
 | [!DNL Profile Management] | [!UICONTROL Manage B2B Profile] | Access to read, create, edit, and delete B2B entity profiles (such as Account, Opportunity, and so on). Read-only access for settings and configurations for all B2B AI/ML services, and B2B dashboard widgets. |
 | [!DNL Profile Management] | [!UICONTROL Manage Lookalikes] | Ability to create or delete look-alike audiences. |
-| [!DNL Profile Management] | [!UICONTROL View B2B Experience] | Ability to view B2B profiles and attributes. |
+| [!DNL Profile Management] | [!UICONTROL View B2B Experience] | Ability to access the B2C tools. |
 | [!DNL Profile Management] | [!UICONTROL View Profile Settings] | Read-only access to all profile settings. |
 | [!DNL Profile Management] | [!UICONTROL Manage Profile Settings] | Access to read and edit all profile settings. |
 | [!DNL Prospects] | [!UICONTROL View Prospects] | Read-only access to prospect schemas, profiles, audiences, and the prospect accordion. |
