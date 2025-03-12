@@ -18,6 +18,10 @@ exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
 
 [!DNL Graph Simulation] is a tool in the Identity Service UI that you can use to simulate how an identity graph behaves given a particular combination of identities and how you configure the [identity optimization algorithm](./identity-optimization-algorithm.md).
 
+Watch the following video for additional information on using the [!DNL Graph Simulation] interface in the Identity Service UI workspace:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3444032/?learn=on&enablevpops)
+
 Read this document to learn how you can use [!DNL Graph Simulation] to better understand identity graph behavior and how the graph algorithm functions.
 
 ## Get to know the [!DNL Graph Simulation] interface {#interface}
