@@ -174,7 +174,7 @@ Once your audiences have been uploaded, you may validate your audiences have bee
 
 >[!NOTE]
 >
->Audiences activated/delivered to the [!DNL Magnite: Batch] destination will *replace* the same audiences that were activated/delivered via the Magnite: Real-Time destination. If you are looking-up a segment using the segment name, you may not find the segment in real-time, until the batch has been ingested and processed by the [!DNL Magnite] platform.
+>Audiences activated/delivered to the [!DNL Magnite: Batch] destination will *replace* the same audiences that were activated/delivered via the [!DNL Magnite: Real-Time] destination. If you are looking-up a segment using the segment name, you may not find the segment in real-time, until the batch has been ingested and processed by the [!DNL Magnite] platform.
 
 ## Data usage and governance {#data-usage-governance}
 
