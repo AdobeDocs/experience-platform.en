@@ -5,21 +5,23 @@ description: How to author and share your own use case playbooks.
 role: User
 ---
 
-# Author and share your own playbooks using AI Assistant
+# Author and share your own playbooks
 
 The **Playbook Authoring Framework**, powered by Adobe's AI Assistant, allows you to create, manage, and share playbooks efficiently within Adobe Experience Platform. 
 
 The framework follows a three-step process:
 
-1. **Metadata capture**: Use AI Assistant or manual input to generate playbook metadata.
+1. **Metadata capture**: Use AI Assistant or the [webform] to capture playbook metadata.
 
-2. **Technical association**: Add specific technical assets (schemas, segments, profiles) to the playbook. You retain full control over the playbook creation process within your development sandbox, ensuring alignment with your assets, schemas, and other unique data structures.
+2. **Technical association**: Add specific technical assets such as journeys or audiences to the playbook. You retain full control over the playbook creation process within your development sandbox, ensuring alignment with your schemas and other unique data structures.
 
-3. **Playbook distribution**: Share playbooks across different organizations. For example, ACME's Martech Center of Excellence in Germany can create a "golden" playbook and distribute it to regional organizations in Thailand, Australia, etc. to help standardize marketing operations.
+3. **Playbook distribution**: Share playbooks across different organizations. For example, ACME's Martech Center of Excellence in Germany can create a "golden" playbook and distribute it to regional organizations in Thailand, Australia, etc. to help standardize the marketing use case.
 
 ## Create a Playbook with Adobe's AI Assistant
 
 ### Playbook overview
+
+You can create a playbook in two ways: either using Adobe's AI Assistant or manually. 
 
 Follow these steps to create a playbook with Adobe's AI Assistant:
 
@@ -27,7 +29,7 @@ Follow these steps to create a playbook with Adobe's AI Assistant:
 
 !["Playbooks" highlighted in the left navigation pane in the UI.](/help/use-case-playbooks/assets/playbooks/authoring/playbooks.png)
 
-1. Select **New Playbook**, and then select **Generate playbook with AI Assistant**. (You can also create a playbook manually, but this guide focuses on AI-generated playbooks).
+1. Select **New Playbook**, and then select **Generate playbook with AI Assistant**.
 
 ![Select "New Playbook" button.](/help/use-case-playbooks/assets/playbooks/authoring/new-playbook.png)
 
@@ -39,7 +41,7 @@ Follow these steps to create a playbook with Adobe's AI Assistant:
 
 ![Select "Generate playbook with AI Assistant" button.](/help/use-case-playbooks/assets/playbooks/authoring/prompt.png)
 
-1. Select **Generate** to create the playbook using Adobe's R2D2 framework. 
+1. Select **Generate** to create the playbook metadata. 
 
 ![The prompt area with the "Generate" playbook button highlighted.](/help/use-case-playbooks/assets/playbooks/authoring/generate.png)
 
@@ -47,7 +49,7 @@ Follow these steps to create a playbook with Adobe's AI Assistant:
 
 ![The generated playbook with the "Edit" button highlighted.](/help/use-case-playbooks/assets/playbooks/authoring/edit.png)
 
-To ensure the data engineers have all the necessary details to set up the use case, fill out the **[!UICONTROLPlaybook detail]** section. While optional, these fields help capture key information, making it easier to connect the right technical components. Select **[!UICONTROL Edit]** to add values to the following fields:
+To ensure the data engineers have all the necessary details to set up the use case, fill out the **[!UICONTROL Playbook detail]** section. While optional, these fields help capture key information, making it easier to connect the right technical components. Select **[!UICONTROL Edit]** to add values to the following fields:
 
 * **Industry**
 * **Target audience**
@@ -55,15 +57,27 @@ To ensure the data engineers have all the necessary details to set up the use ca
 
 ![Playbook details section with the "Edit" button highlighted.](/help/use-case-playbooks/assets/playbooks/authoring/edit-details.png)
 
-Once the metadata is generated, proceed to associate the playbook with technical assets.
+Once the metadata is generated, select the **Edit journey map** button to adjust the steps in the journey map as required. 
+
+![Edit the journey map button.](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map-button.png)
+
+![Edit the journey map once you capture the playbook metadata.](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map.png)
+
+Then proceed to associate the playbook with technical assets.
+
+To create a playbook manually, select **Create playbook manually**.
+
+![Create playbook manually](/help/use-case-playbooks/assets/playbooks/authoring/create-manually.png)
+
+A blank playbook template appears. Fill out details such as **Title** and **Description**. You can also edit the journey map to add events and touchpoints as needed. 
 
 ## Associate playbook with technical assets
 
-Navigate to the **[!UICONTROL Technical Assets]** tab and select the required product. For this example, choose **[!UICONTROL Journey Optimizer]**. 
+Regardless of whether you create a playbook manually or with the AI Assistant, you must associate it with the required technical assets. Navigate to the **[!UICONTROL Technical Assets]** tab and select the required product. For this example, choose **[!UICONTROL Journey Optimizer]**. 
 
 >[!NOTE]
 >
-> Support for Real-Time Customer Data Profile will be added in a future release.
+> Support for Real-Time Customer Data Platform will be added in a future release.
 
 !["Technical assets" tab and the "Add required product" button highlighted.](/help/use-case-playbooks/assets/playbooks/authoring/technical-assets-add-required-product.png)
 
@@ -83,7 +97,7 @@ All the created playbooks are available in the **Your Playbooks** tab.
 
 You can select any playbook from the catalog to create instances for reuse. Refer to the documentation to [learn how to create instances](/help/use-case-playbooks/playbooks/create-share-reuse.md).
 
-!["Create instance" option highlighted in the "Playbook overview" tab once you select a playbook.](/help/use-case-playbooks/assets/playbooks/authoring/your-playbooks-tab.png)
+!["Create instance" option highlighted in the "Playbook overview" tab once you select a playbook.](/help/use-case-playbooks/assets/playbooks/authoring/create-instance.png)
 
 >[!NOTE]
 >

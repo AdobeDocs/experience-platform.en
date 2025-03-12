@@ -1,3 +1,8 @@
-<!-- ## Playbook distribution or sharing
+---
+solution: Experience Platform
+title: Playbooks sharing across organizations.
+description: How to share your playbooks.
+role: User
+---
 
-Playbooks leverage sandbox tooling for distribution. Users can share playbooks and associated assets acros IMS organizations. Link out to existing documentaion here. -->
+Coming soon.
