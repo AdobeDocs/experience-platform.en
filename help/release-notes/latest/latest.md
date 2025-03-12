@@ -5,10 +5,6 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 ---
 # Adobe Experience Platform release notes 
 
->[!TIP]
->
->This release includes improvements to the Federated Audience Composition add-on. For more information, read the [Federated Audience Composition release notes](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes).
-
 **Release date: February 18, 2025**
 
 Updates to existing features and documentation in Adobe Experience Platform:
@@ -17,6 +13,7 @@ Updates to existing features and documentation in Adobe Experience Platform:
 - [Catalog Service](#catalog-service)
 - [Data Prep](#data-prep)
 - [Destinations](#destinations)
+- [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes){target="_blank"}
 - [Sources](#sources)
 - [Segmentation Service](#segmentation)
 - [Documentation updates](#documentation-updates)
@@ -91,7 +88,7 @@ For more information, read the [Data Prep overview](../../data-prep/home.md).
 | Use access labels to manage user access to destination dataflows | As part of the [[!UICONTROL attribute-based access control]](/help/access-control/abac/overview.md) functionality in Real-Time CDP, you can now apply access labels to [destination dataflows](/help/dataflows/ui/monitor-destinations.md). This way, you can ensure that only a subset of users in your organization get access to specific destination dataflows. <br> **Important**: When searching for destination dataflows using the search box at the top of the Experience Platform user interface, the results may include destination dataflows which your user access labels restrict you from seeing. This behavior will be corrected in a future update. |
 | [Audience-level reporting](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) for the [Marketo Engage connection](/help/destinations/catalog/adobe/marketo-engage.md) | You can now [view information](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) about the activated, excluded, or failed identities broken down on an audience level, for each audience that is part of the dataflows for this destination.|
 | External audiences support for the [TikTok](/help/destinations/catalog/social/tiktok.md) and [Snap Inc](/help/destinations/catalog/advertising/snap-inc.md) connections | You can activate external audiences to these destinations from [custom uploads](../../segmentation/ui/audience-portal.md#import-audience) and [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences). |
-| Export arrays, maps, and objects to cloud storage destinations | By using the new **[!UICONTROL Export arrays, maps, objects]** toggle when connecting to a cloud storage destination, you can new export complex objects to select destinations. [Read more](/help/destinations/ui/export-arrays-calculated-fields.md) about the functionality. |
+| Export arrays, maps, and objects to cloud storage destinations | By using the new **[!UICONTROL Export arrays, maps, objects]** toggle when connecting to a cloud storage destination, you can new export complex objects to select destinations. [Read more](/help/destinations/ui/export-arrays-maps-objects.md) about the functionality. |
 
 {style="table-layout:auto"}
 
