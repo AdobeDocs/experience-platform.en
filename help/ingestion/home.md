@@ -53,8 +53,9 @@ While data prep is not a method of ingestion, it is an important part of the dat
 
 For more information, read the [data prep overview](../data-prep/home.md).
 
-## Streaming ingestion methods
+## Streaming ingestion methods {#streaming-ingestion-methods}
 
+The following table outlines the variety of methods that you can use to ingest streaming data to Experience Platform.
 
 <table cellspacing="0" class="Table" style="border-collapse:collapse; width:1123px">
 <tbody>
@@ -102,7 +103,7 @@ For more information, read the [data prep overview](../data-prep/home.md).
 </td>
 <td style="background-color:#cddbff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:39px; vertical-align:top; width:401px">
 <ul style="list-style-type:square">
-<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Collection from streaming sources, transactions, relevant customer events and signals</span></span></span></li>
+<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Collection from streaming sources, transactions, relevant customer events and signals.</span></span></span></li>
 </ul>
 </td>
 <td style="background-color:#cddbff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:39px; vertical-align:top; width:218px">
@@ -110,7 +111,7 @@ For more information, read the [data prep overview](../data-prep/home.md).
 </td>
 <td style="background-color:#cddbff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:39px; vertical-align:top; width:282px">
 <ul>
-<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Data is streamed directly to the hub, with no real-time Edge segmentation or event forwarding.</span></span></span></li>
+<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Raw or XDM data is streamed directly to the hub, with no real-time Edge segmentation or event forwarding.</span></span></span></li>
 </ul>
 </td>
 </tr>
@@ -120,7 +121,7 @@ For more information, read the [data prep overview](../data-prep/home.md).
 </td>
 <td style="background-color:#e8eeff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:39px; vertical-align:top; width:401px">
 <ul style="list-style-type:square">
-<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Collection from streaming sources, transactions, relevant customer events and signals from the globally distributed [!DNL Edge Network]</span></span></span></li>
+<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Collection from streaming sources, transactions, relevant customer events and signals from the globally distributed [!DNL Edge Network].</span></span></span></li>
 </ul>
 </td>
 <td style="background-color:#e8eeff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:39px; vertical-align:top; width:218px">
@@ -138,7 +139,7 @@ For more information, read the [data prep overview](../data-prep/home.md).
 </td>
 <td style="background-color:#cddbff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:39px; vertical-align:top; width:401px">
 <ul style="list-style-type:square">
-<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Prior implementation of Adobe Analytics, Marketo Engage, Campaign, Target, Adobe Audience Manager</span></span></span></li>
+<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Data ingestion from applications like Adobe Analytics, Marketo Engage, Adobe Campaign Managed Services, Adobe Target, Adobe Audience Manager</span></span></span></li>
 </ul>
 </td>
 <td style="background-color:#cddbff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:39px; vertical-align:top; width:218px">
@@ -174,7 +175,7 @@ For more information, read the [data prep overview](../data-prep/home.md).
 </td>
 <td style="background-color:#cddbff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:39px; vertical-align:top; width:401px">
 <ul style="list-style-type:square">
-<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Similar to HTTP API Connector, allows self-service configuration card of a external data stream.</span></span></span></li>
+<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Use the self-service capabilities of Self-Serve Sources Streaming SDK to integrate your own data source to the Experience Platform sources catalog.</span></span></span></li>
 </ul>
 </td>
 <td style="background-color:#cddbff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:39px; vertical-align:top; width:218px">
@@ -182,15 +183,16 @@ For more information, read the [data prep overview](../data-prep/home.md).
 </td>
 <td style="background-color:#cddbff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:39px; vertical-align:top; width:282px">
 <ul>
-<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">[!DNL Edge Network]</span></span></span></li>
+<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Examples of partner-integrated streaming sources include: Braze, Pendo, and RainFocus.</span></span></span></li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
 
-## Batch ingestion methods
+## Batch ingestion methods {#batch-ingestion-methods}
 
+The following table outlines the variety of methods that you can use to ingest batch data to Experience Platform.
 
 <table cellspacing="0" class="Table" style="border-collapse:collapse; width:1105px">
 <tbody>
@@ -219,7 +221,7 @@ For more information, read the [data prep overview](../data-prep/home.md).
 </td>
 <td style="background-color:#e8eeff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:62px; vertical-align:top; width:397px">
 <ul style="list-style-type:square">
-<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Ingestion from a enterprise managed que. Cleansing and transformation of data prior to ingestion.</span></span></span></li>
+<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Ingestion from an enterprise managed queue. Use batch ingestion if your data needs to be prepared and formatted prior to ingestion.</span></span></span></li>
 </ul>
 </td>
 <td style="background-color:#e8eeff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:62px; vertical-align:top; width:215px">
@@ -237,8 +239,7 @@ For more information, read the [data prep overview](../data-prep/home.md).
 </td>
 <td style="background-color:#cddbff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:62px; vertical-align:top; width:397px">
 <ul style="list-style-type:square">
-<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Common approach for ingestion of files from cloud storage locations.</span></span></span></li>
-<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Connectors to common CRM and marketing applications.</span></span></span></li>
+<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Common approach for ingestion of data from cloud storage, CRM, and marketing automation applications.</span></span></span></li>
 <li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Ideal for ingesting large amounts of historical data.</span></span></span></li>
 </ul>
 </td>
@@ -257,14 +258,17 @@ For more information, read the [data prep overview](../data-prep/home.md).
 </td>
 <td style="background-color:#e8eeff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:62px; vertical-align:top; width:397px">
 <ul style="list-style-type:square">
-<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Adobe provisioned file storage location to push files to for ingestion.</span></span></span></li>
+<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Adobe-provisioned cloud-based file storage. You have access to one Data Landing Zone container per sandbox.</span></span></span></li>
+<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Push your files to the Data Landing Zone for later ingestion into Experience Platform.</span></span></span></li>
 </ul>
 </td>
 <td style="background-color:#e8eeff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:62px; vertical-align:top; width:215px">
 <p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Push, CSV, JSON, Parquet</span></span></span></p>
 </td>
 <td style="background-color:#e8eeff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:62px; vertical-align:top; width:277px">
-</td>
+<ul>
+<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Experience Platform enforces a strict seven-day expiration time on all files and folders uploaded to a Data Landing Zone container. All files and folders are deleted after seven days.</span></span></span></li>
+</ul>
 </tr>
 <tr>
 <td style="background-color:#cddbff; border-bottom:1px solid white; border-left:1px solid white; border-right:1px solid white; border-top:none; height:62px; vertical-align:top; width:217px">
@@ -272,16 +276,16 @@ For more information, read the [data prep overview](../data-prep/home.md).
 </td>
 <td style="background-color:#cddbff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:62px; vertical-align:top; width:397px">
 <ul style="list-style-type:square">
-<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Allows self-service configuration card of an external data source.</span></span></span></li>
-<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Ideal for partner connectors or for a tailored workflow experience for setting up a enterprise connector.</span></span></span></li>
+<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Use the self-service capabilities of Self-Serve Sources Batch SDK to integrate your own data source to the Experience Platform sources catalog.</span></span></span></li>
+<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Ideal for partner connectors or for a tailored workflow experience for setting up an enterprise connector.</span></span></span></li>
 </ul>
 </td>
 <td style="background-color:#cddbff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:62px; vertical-align:top; width:215px">
-<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Pull, REST API, CSV or JSON Files</span></span></span></p>
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Pull, REST API, CSV or JSON</span></span></span></p>
 </td>
 <td style="background-color:#cddbff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:62px; vertical-align:top; width:277px">
 <ul>
-<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Mailchimp, OneTrust, Zendesk</span></span></span></li>
+<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Examples of partner-integrated batch sources include: Mailchimp, OneTrust, Zendesk</span></span></span></li>
 </ul>
 
 <p>&nbsp;</p>
