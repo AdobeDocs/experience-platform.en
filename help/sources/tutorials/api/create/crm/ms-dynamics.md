@@ -662,6 +662,21 @@ curl -X POST \
 
 +++
 
+**Response**
+
+A successful response returns the newly generated source connection ID and its corresponding etag.
+
++++Select to view response example
+
+```json
+{
+    "id": "e566bab3-1b58-428c-b751-86b8cc79a3b4",
+    "etag": "\"82009592-0000-0200-0000-678121030000\""
+}
+```
+
++++
+
 
 ## Next steps
 
