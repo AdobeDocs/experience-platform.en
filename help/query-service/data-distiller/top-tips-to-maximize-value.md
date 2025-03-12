@@ -42,4 +42,7 @@ To execute this use case, your Adobe Experience Platform instance must be licens
 
 Before starting the Luma case study, you need to ingest a sample dataset. First, download the `luma_web_data.csv` dataset locally.
 
-The data has been generated in CSV format to capture the essence of the use case. In practice, you would typically source this data from Adobe Analytics, Adobe Commerce, or Adobe Web/Mobile SDK. The key takeaway is that you'll need to apply the techniques outlined in this tutorial to extract the relevant events and fields into a canonical CSV format using Data Distiller. The main goal is to work with only the necessary fields and keep the data as flat as possible, while maintaining practicality.
+The sample dataset is provided in CSV format to align with the use case. In practice, you would typically source data from Adobe Analytics, Adobe Commerce, or Adobe Web/Mobile SDK.
+
+Throughout this tutorial, you will use Data Distiller to extract relevant events and fields into a standardized CSV format. The goal is to include only essential fields while maintaining a flat data structure for efficiency and practicality.
+
