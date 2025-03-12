@@ -186,12 +186,7 @@ If a query was scheduled, then the [!UICONTROL Scheduled Queries] tab provides i
 >
 >Queries that are not executed are not saved by the Log. In order for the query to be available in Query Service, it must be run or saved in Query Editor.
 
-### [!BADGE Limited Availability]{type=Informative} Object browser {#object-browser}
-
->[!AVAILABILITY]
->
->The dataset navigation rail is only available for Data Distiller customers. Your Platform UI might not contain the left dataset navigation rail. Other images in this document might not reflect the dataset navigation rail. Contact your Adobe representative for more information.<br>
->Object browser is currently available only in a **limited release**. Contact your Adobe representative to get early release access.
+### Object browser {#object-browser}
 
 Use the object browser to easily search and filter datasets. The object browser reduces the time spent searching for tables and datasets in large environments with numerous datasets. With streamlined access to relevant data and metadata, you can focus more on query authoring and less on navigation.
 

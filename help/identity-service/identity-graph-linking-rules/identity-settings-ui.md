@@ -28,9 +28,9 @@ Read the following documents before you start working with identity settings:
 
 To access identity settings, navigate to the Identity Service workspace in the Adobe Experience Platform UI and then select **[!UICONTROL Settings]**.
 
-![The identity settings button selected.](../images/rules/identities-ui.png)
+![The identity dashboard interface with the "Settings" button selected.](../images/rules/dashboard.png)
 
-The identity settings page is divided into two sections: [!UICONTROL Person namespaces] and [!UICONTROL Device or cookie namespaces]. Person namespaces are identifiers for single individuals. They can be cross-device IDs, email addresses, and phone numbers. Device or cookie namespaces are identifiers for devices and web browsers and cannot be given a higher priority than person namespaces. You also cannot designate a device or cookie namespace to be a unique namespace.
+The identity settings page is divided into two sections: [!UICONTROL Person namespaces] and [!UICONTROL Device or cookie namespaces]. Person namespaces are identifiers for single individuals. They can be cross-device IDs, email addresses, and phone numbers. Device or cookie namespaces are identifiers for devices and web browsers and cannot be given a higher priority than person namespaces. You also cannot designate a device or cookie namespace as a unique namespace.
 
 ### Configure namespace priority
 
@@ -40,19 +40,25 @@ To configure namespace priority, select a namespace in the identity settings men
 
 ### Designate your unique namespace
 
-To designate a unique namespace, select the [!UICONTROL Unique per graph] checkbox that corresponds with that namespace. You can select up to three unique namespaces for your identity settings configuration.
-
-![Two namespaces selected and defined as unique.](../images/rules/unique-namespace.png)
+To designate a unique namespace, select the [!UICONTROL Unique per graph] checkbox that corresponds with that namespace. You can select **up to a maximum of three unique namespaces** for your identity settings configuration.
 
 Once your unique namespaces are established, graphs will no longer be able to have multiple identities that contain a unique namespace. For example, if you designated CRMID as a unique namespace, then a graph can only have one identity with the CRMID namespace. For more information, read the [identity optimization algorithm overview](./identity-optimization-algorithm.md#unique-namespace).
 
-When you are finished with your configurations, select **[!UICONTROL Next]**. A confirmation message appears, use this opportunity to verify that your configurations are correct and then select **[!UICONTROL Finish]**.
+When you are finished with your configurations, select **[!UICONTROL Next]** to proceed.
 
-![The validation page with Finish highlighted.](../images/rules/finish.png)
+![Two namespaces selected and defined as unique.](../images/rules/unique-namespace.png)
 
-A warning message appears, indicating that existing graphs will only be affected by the graph algorithm only if the graphs get updated **after saving your settings**, and that the primary identity of event fragments on Real-Time Customer Profile will not be updated even after namespace priority changes. Additionally, you are notified that it  will take up to **six hours** for your new or updated settings to take effect. To confirm, enter your sandbox name and then select **[!UICONTROL Confirm]**.
+From here, you must confirm the following before proceeding to the final step:
 
-![The confirmation window that displays a warning about a six-hour delay before configurations get processed.](../images/rules/confirm-settings.png)
+1. The selected unique namespaces.
+2. The existence of an identity with the highest prioritized unique namespace in each known profile.
+3. The order of your namespace priority.
+
+![A confirmation window with the "confirm" button selected.](../images/rules/confirmation.png)
+
+The final step is another confirmation message indicating that existing graphs will only be affected by the graph algorithm **only if the graphs get updated after saving your settings**, and that the primary identity of event fragments on Real-Time Customer Profile will not be updated even after namespace priority changes. Additionally, you are notified that it will take up to **six hours** for your new or updated settings to take effect. To confirm, enter your sandbox name and then select **[!UICONTROL Confirm]**.
+
+![The confirmation window that displays a warning about a six-hour delay before configurations get processed.](../images/rules/complete.png)
 
 ## Next steps
 
