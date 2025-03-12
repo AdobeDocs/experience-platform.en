@@ -16,7 +16,7 @@ This document describes the [!DNL Magnite: Batch] destination and provides sampl
 
 Adobe Real-Time CDP audiences can be delivered to the [!DNL Magnite] platform in two ways - they can be delivered once per day, or they can be delivered in real-time:
 
-1. If you only want and/or need to deliver audiences once per day, you can use the [!DNL Magnite: Batch] destination, which delivers audiences to [!DNL Magnite] via a daily S3 batch file delivery. These Batch audiences are stored indefinitely in the [!DNL Magnite] platform, unlike real-time audiences, which are only stored for a couple days.
+1. If you only want and/or need to deliver audiences once per day, you can use the [!DNL Magnite: Batch] destination, which delivers audiences to [!DNL Magnite] via a daily S3 batch file delivery. These Batch audiences are stored more persistently in the [!DNL Magnite] platform, unlike real-time audiences, which are only stored for a couple days.
 
 2. However, if you want or need to deliver audiences more frequently, you will need to use the [Magnite: Real-Time destination](/help/destinations/catalog/advertising/magnite-streaming.md). When using the real-time destination, [!DNL Magnite] will receive audiences in real-time, but [!DNL Magnite] can only store real-time audiences temporarily in their platform, and they will be removed from the system within a couple days. For this reason, if you want to use the [!DNL Magnite: Real-Time] destination, you will *also* need to use the [!DNL Magnite: Batch] destination - each audience that you activate to the real-time destination, you also need to activate to the batch destination.
 
