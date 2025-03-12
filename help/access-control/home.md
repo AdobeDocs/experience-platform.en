@@ -269,7 +269,8 @@ The following table outlines the available permissions for Experience Platform i
 | [!DNL Profile Management] | [!UICONTROL Manage B2B AI] | Access to read, create, edit, and delete settings and configurations for all B2B AI/ML services. |
 | [!DNL Profile Management] | [!UICONTROL View B2B Profile] | Read-only access to B2B entity profiles (such as Account, Opportunity, and so on), settings and configurations for all B2B AI/ML services, and B2B dashboard widgets. |
 | [!DNL Profile Management] | [!UICONTROL Manage B2B Profile] | Access to read, create, edit, and delete B2B entity profiles (such as Account, Opportunity, and so on). Read-only access for settings and configurations for all B2B AI/ML services, and B2B dashboard widgets. |
-| [!DNL Profile Management] | [!UICONTROL View B2B Experience] | Ability to access the B2C tools. |
+| [!DNL Profile Management] | [!UICONTROL Manage Lookalikes] | Ability to create or delete look-alike audiences. |
+| [!DNL Profile Management] | [!UICONTROL View B2B Experience] | Ability to view B2B profiles and attributes. |
 | [!DNL Profile Management] | [!UICONTROL View Profile Settings] | Read-only access to all profile settings. |
 | [!DNL Profile Management] | [!UICONTROL Manage Profile Settings] | Access to read and edit all profile settings. |
 | [!DNL Prospects] | [!UICONTROL View Prospects] | Read-only access to prospect schemas, profiles, audiences, and the prospect accordion. |
