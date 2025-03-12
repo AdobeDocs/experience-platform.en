@@ -34,3 +34,22 @@ Every marketing modeling technique involves trade-offs, offering both benefits a
 
 However, RFM modeling has limitations. It assumes uniformity within segments based on recency, frequency, and monetary value, which may oversimplify customer behavior. The model also assigns equal weight to these factors, potentially misrepresenting customer value. Additionally, it does not account for context, such as product-specific traits or customer preferences, which can lead to misinterpretations of purchasing behavior.
 
+## Prerequisite
+
+To execute this use case, your Adobe Experience Platform instance must be licensed for [Data Distiller](./overview.md). Contact your Adobe representative for more information.
+
+## Steps to build dynamic RFM score-based SQL Audience
+
+Step 0: Luma Case Study
+
+Before we dive into the case study, let's first ingest a sample dataset for you to work with.
+
+Load Data for Luma Case Study
+
+Sample Luma Data
+
+1. The data has been generated in CSV format to capture the essence of the use case. In practice, you would typically source this data from Adobe Analytics, Adobe Commerce, or Adobe Web/Mobile SDK. The key takeaway is that you'll need to apply the techniques outlined in this tutorial to extract the relevant events and fields into a canonical CSV format using Data Distiller. The main goal is to work with only the necessary fields and keep the data as flat as possible, while maintaining practicality.
+
+<!--  Add file with name "luma_web_data.csv" -->
+
+2. Download the above data locally.
