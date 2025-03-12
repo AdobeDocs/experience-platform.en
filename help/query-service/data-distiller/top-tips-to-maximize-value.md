@@ -47,3 +47,35 @@ The sample dataset is provided in CSV format to align with the use case. In prac
 
 Throughout this tutorial, you will use Data Distiller to extract relevant events and fields into a standardized CSV format. The goal is to include only essential fields while maintaining a flat data structure for efficiency and practicality.
 
+### Ingest the sample Luma web data
+
+Load the CSV Data into Adobe Experience Platform
+
+1. Name the dataset as "luma_web_data" and follow the steps outlined here:
+
+a. Navigate to Adobe Experience Platform UI->Workflows->Create Dataset from CSV File.
+
+![The Platform UI with "Workflow" and "Create dataset from CSV file" highlighted.]()
+
+b. Configure the name of the dataset as luma_web_data
+
+c. Drag and drop the CSV file into the Add data box. You can also navigate to the file by using the "Choose File" button as well.
+
+![The "Add data" section of the "Create dataset from CSV file" workflow.]()
+
+d. Once the data is loaded, you will see a data preview.
+
+e. Select Finish to complete the upload.
+
+f. Navigate to AEP UI->Datasets to locate the dataset "luma_web_data". You will notice that the manual upload of the CSV file by you has caused the file to be ingested in batch with a Batch ID and 1000 records are ingested. On the right side panel, observe the table name that shows it as luma_web_data. The SQL engine in Data Distiller will be using this table name to query against the data, not the Dataset name.
+
+![The "Dataset activity" tab for the newly created "luma_web_data" dataset.]()
+
+g. To preview the dataset, select Preview dataset in the top right corner. You will get a dataset preview that looks like this:
+
+![The "Dataset activity" tab with "Preview dataset" highlighted.]()
+
+![The dataset preview of the "luma_web_data" dataset.]()
+
+2. Since we are loading the CSV file directly, there is no need to create an XDM schema (whether it's record, event, or other B2B styles). Instead, we will be working with an Ad Hoc schema. While Data Distiller can work with any schema, when we prepare the final dataset for hydration into the Real-Time Customer Profile, we will use a Record XDM schema.
+   
