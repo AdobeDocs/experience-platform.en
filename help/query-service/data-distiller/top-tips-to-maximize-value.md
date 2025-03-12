@@ -13,16 +13,18 @@ Through a case study, you will analyze user behavioral data and create a Recency
 
 [Select the link to download the sample CSV data](../resources/movie-data.csv)
 
-## Overview of the RFM Model
+## Overview of the RFM model
 
 RFM, short for Recency (R), Frequency (F), and Monetary (M), is a data-driven approach to customer segmentation and analysis. This methodology evaluates three key aspects of customer behavior: how recently a customer made a purchase, how often they engage, and how much they spend. By quantifying these factors, businesses can gain actionable insights into customer segments and develop targeted marketing strategies that better meet individual customer needs.
 
-## Business Understanding of RFM Model
+## Understanding customer behavior with the RFM model
+<!-- ## How the RFM model defines customer value -->
 
-The RFM model classifies customers based on their transactional behaviors, utilizing three key parameters:
+The RFM model segments customers based on transactional behavior using three key parameters.
 
-- Recency gauges the time elapsed since a customer's last purchase, providing insights into engagement levels and future transaction potential.
-- Frequency assesses the frequency of customer interactions, serving as an indicator of loyalty and sustained engagement.
-- Monetary value measures the total spending of customers, emphasizing their value to the business.
+- **Recency** measures the time since a customer's last purchase, indicating engagement levels and future buying potential.
+- **Frequency** tracks how often a customer interacts, serving as a clear indicator of loyalty and sustained engagement.
+- **Monetary value** assesses the total spending by customers, highlighting their overall value to the business.
 
-The combination of these factors enables businesses to assign numerical scores to each customer, typically on a scale from 1 to 4, where lower scores signify more favorable outcomes in our specific use case. For instance, a customer scoring 1 in all categories is deemed the "best," showcasing recent activity, high engagement, and substantial spending.
+By combining these factors, businesses assign numerical scores (typically on a scale from `1` to `4`) to each customer. Lower scores indicate more favorable outcomes. For example, a customer scoring `1` in all categories is considered among the best, demonstrating recent activity, high engagement, and significant spending.
+
