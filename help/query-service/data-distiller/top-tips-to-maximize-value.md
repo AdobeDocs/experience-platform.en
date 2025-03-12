@@ -15,9 +15,4 @@ Through a case study, you will analyze user behavioral data and create a Recency
 
 ## Overview of the RFM Model
 
-RFM, shorthand for Recency (R), Frequency(F), and Monetary(M), represents a data-driven approach to
-customer segmentation and analysis. This methodology delves into three pivotal dimensions of customer
-behavior: the recency of purchase, the frequency of engagement, and the monetary value spent.
-Through the quantification of these parameters, businesses attain valuable insights into distinct
-customer segments, empowering the formulation of customized marketing strategies that effectively
-cater to individual customer needs.
+RFM, short for Recency (R), Frequency (F), and Monetary (M), is a data-driven approach to customer segmentation and analysis. This methodology evaluates three key aspects of customer behavior: how recently a customer made a purchase, how often they engage, and how much they spend. By quantifying these factors, businesses can gain actionable insights into customer segments and develop targeted marketing strategies that better meet individual customer needs.
