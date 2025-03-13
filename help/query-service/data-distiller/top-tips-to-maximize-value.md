@@ -110,3 +110,13 @@ SELECT * FROM luma_web_data;
 ```
 
 The query results are displayed below the Query Editor in the [!UICONTROL Results] tab. To expand the results in a new dialog, select **[!UICONTROL View results]**.
+
+#### Focus on Orders Only But Exclude All Cancelled Orders
+
+Additionally, RFM model only focuses on the recency, frequency and monetary value of all purchases made. We are not so concerned about engagement (page views) or the checkout process. Also, we must exclude all orders that were cancelled as well as they do not contribute to a valid calculation - we would need to deal with cancellations differently.
+
+The first query would be selecting all the non-null purchase IDs that had a cancellation associated with them and aggregating them with a GROUP BY. The purchase IDs that we get as a result set needs to be excluded from our dataset.
+
+The second query would select the purchase IDs that are not in the view and retain them.
+
+The third query would exclude all events that are not orders.
