@@ -412,6 +412,20 @@ Historical dataset usage reporting is currently unavailable.
 No, once a retention policy is applied, any data older than the retention period is permanently deleted and cannot be recovered.
 +++
 
+### What is the minimum TTL I can configure on a data lake Experience Event dataset?
+
++++Answer 
+The minimum TTL for a data lake Experience Event dataset is 30 days. The data lake functions as a processing backup and recovery system during initial ingestion and processing. As a result, data must remain in the data lake for at least 30 days post-ingestion before it can be expired. 
++++
+
+### What if I need to retain some data lake fields longer than my TTL policy allows?
+
++++Answer 
+Use Data Distiller to retain specific fields beyond your dataset's TTL while staying within your utilization limits. Create a job that regularly writes only the necessary fields to a derived dataset. This workflow ensures compliance with a shorter TTL while preserving critical data for extended use.
+
+For more details, see the [Create derived datasets with SQL guide](../../query-service/data-distiller/derived-datasets/create-derived-datasets-with-sql.md). 
++++
+
 ## Next steps {#next-steps}
 
 Now that you've learned how to manage TTL settings for row-level expiration, review the following documentation to further your understanding of TTL management:
