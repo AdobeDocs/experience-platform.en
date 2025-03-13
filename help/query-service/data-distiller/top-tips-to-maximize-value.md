@@ -49,7 +49,7 @@ Throughout this tutorial, you will use Data Distiller to extract relevant events
 
 <!-- ### Ingest the sample Luma web data -->
 
-### Load the CSV data into Experience Platform
+### Step 1: Load the CSV data into Experience Platform
 
 Follow these steps to upload a CSV file to Adobe Experience Platform.
 
@@ -75,7 +75,7 @@ is ingested as a batch, and identified by a [!UICONTROL Batch ID]. A panel on th
 >
 >The SQL engine in Data Distiller queries the table name, not the dataset name.
 
-![The "Dataset activity" tab for the newly created "luma_web_data" dataset with the tbale name, batch ID and "Preview dataset" highlighted.]()
+![The "Dataset activity" tab for the newly created "luma_web_data" dataset with the table name, batch ID and "Preview dataset" highlighted.]()
 
 Once the data has finished processing, select [!UICONTROL Preview dataset] in the top right corner to preview the dataset. The dataset preview looks like this:
 
@@ -83,4 +83,17 @@ Once the data has finished processing, select [!UICONTROL Preview dataset] in th
 
 #### Schema considerations
 
-Since the CSV file is loaded directly, an XDM schema is not required (for example, record, event, or B2B styles). Instead, the dataset uses an Ad Hoc schema. While Data Distiller supports all schema types, the final dataset for ingestion into the Real-Time Customer Profile will use a Record XDM schema.
+A structured XDM schema (for example, record, event, or B2B schemas) is not required because the data is imported as a raw CSV file. Instead, the dataset uses an Ad Hoc schema. 
+
+While Data Distiller supports all schema types, the final dataset for ingestion into the Real-Time Customer Profile will use a Record XDM schema.
+
+### Step 2: Connect to the data lake and explore available datasets
+
+<!-- The objective of this step is to ... -->
+The next objective in this process is to perform data exploration tasks in Adobe Experience Platform Data Lake to ensure data accuracy and integrity.
+
+To generate meaningful insights from data, it's essential to ensure the accuracy and integrity of the data. When transferring data from one source to another, there's always a risk of errors, inconsistencies, or incompleteness creeping in. This is where data verification and exploration come in.
+
+Using Data Distiller, you can perform a wide range of operations on datasets, including verifying the quality and completeness of data.
+
+Data verification and exploration involve executing SELECT to inspect, validate, and analyze data to ensure that it has been accurately translated during the ingestion process. This process helps identify any discrepancies, inconsistencies, or missing information in the data.
