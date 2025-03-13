@@ -158,12 +158,20 @@ WHERE  event_type = 'order'
 
 ### Step 3: Enrich the data using Data Distiller functions
 
-Build the RFM Model
+The next step in this process is to build the RFM model.
 
-To start the development of an RFM model, the first step is to calculate three scores for each customer: Recency, Frequency, and Monetary value. These scores are derived from raw data collected through customer interactions and past purchase transactions. Just as a recap:
+To begin, calculate three scores for each customer: Recency, Frequency, and Monetary value. These scores are derived from raw data collected from customer interactions and past purchase transactions.
 
-· Recency reflects the time elapsed since the customer's last purchase, considering their entire history with us.
+- Recency: The time elapsed since the customer's last purchase, considering their entire history.
+- Frequency: The total number of purchases made by the customer.
+- Monetary: The overall amount spent by the customer across all transactions.
 
-· Frequency denotes the total number of purchases made by the customer over their entire history.
+<!-- This recap feels above repetative and should probably be cut. -->
 
-· Monetary represents the overall amount of money spent by the customer across all transactions during their entire tenure with us.
+#### Calculate RFM score for each unique user ID
+
+Let's delve into how we can leverage the raw data to compute these essential scores.
+
+Extract the Fields with Field Filtering
+
+1. We are augmenting the query developed in the previous section by choosing email address as our userid as every order requires an email login. We also use the TO_DATE row level function in Data Distiller to convert the timestamp date. The total_revenue currently reflects the price for each individual transaction. Later, we will aggregate this value by summing it up for each email ID.
