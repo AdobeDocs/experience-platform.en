@@ -5,7 +5,7 @@ description: How to author and share your own use case playbooks.
 role: User
 ---
 
-# Author and share your own playbooks
+# Author and share your own playbooks (Beta)
 
 The [!DNL Playbook Authoring Framework], powered by AI Assistant in Adobe Experience Platform, allows you to create, manage, and share playbooks efficiently within Adobe Experience Platform. 
 
