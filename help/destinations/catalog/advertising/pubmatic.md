@@ -1,20 +1,31 @@
 ---
 title: PubMatic Connect
 description: PubMatic maximizes customer value by delivering the programmatic digital marketing supply chain of the future. PubMatic Connect combines platform technology and dedicated service to enhance how inventory and data are packaged and transacted.
-last-substantial-update: 2023-12-14
+last-substantial-update: 2025-02-12
 exl-id: 21e07d2c-9a6a-4cfa-a4b8-7ca48613956c
 ---
+
 # PubMatic Connect destination {#pubmatic-connect}
 
 ## Overview {#overview}
 
 Use [!DNL PubMatic Connect] to maximize customer value by delivering the programmatic digital marketing supply chain of the future. [!DNL PubMatic Connect] combines platform technology and dedicated service to enhance how inventory and data are packaged and transacted.
 
-Use this destination to send audience data to the [!DNL PubMatic Connect] platform.
+There are two destinations available that let you send audience data to the PubMatic Connect platform. They differ slighty in their functionality:
+
+1. PubMatic Connect
+
+   During the initial activation, this destination will automatically register the audiences in the PubMatic platform and use the internal Adobe Experience Platform ID for mapping.
+
+2. PubMatic Connect (Custom Audience ID Mapping)
+
+   This destination will let you choose to manually add a mapping ID during the activation workflow. Use this destination when data should be sent to existing audiences in the PubMatic platform or if a custom 'Source Audience ID' is required.
+
+![Side-by-side view of the two PubMatic connectors in the destinations catalog.](/help/destinations/assets/catalog/advertising/pubmatic/two-pubmatic-connectors-side-by-side.png)
 
 >[!IMPORTANT]
 >
->The destination connector and documentation page are created and maintained by the [!DNL PubMatic] team. For any inquiries or update requests, contact them directly at `support@pubmatic.com`.
+> The destination connector and documentation page are created and maintained by the [!DNL PubMatic] team. For any inquiries or update requests, contact them directly at `support@pubmatic.com`.
 
 ## Use cases {#use-cases}
 
@@ -32,8 +43,8 @@ Talk to your [!DNL PubMatic] Account Manager to make sure your account is config
 
 [!DNL PubMatic Connect] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
-| Target Identity | Description | Considerations |
-| --------------- | ------ | --- |
+| Target Identity | Description              | Considerations                                                                  |
+| --------------- | ------------------------ | ------------------------------------------------------------------------------- |
 | GAID            | Google Advertising ID    | Select the GAID target identity when your source identity is a GAID namespace.  |
 | IDFA            | Apple ID for Advertisers | Select the IDFA target identity when your source identity is an IDFA namespace. |
 | extern_id       | Custom user IDs          | Select this target identity when your source identity is a custom namespace.    |
@@ -44,9 +55,9 @@ Talk to your [!DNL PubMatic] Account Manager to make sure your account is config
 
 This section describes which type of audiences you can export to this destination.
 
-| Audience origin| Supported | Description|
-| --- | --------- | ------ |
-| [!DNL Segmentation Service] | ✓         | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).          |
+| Audience origin             | Supported | Description                                                                                                                |
+| --------------------------- | --------- | -------------------------------------------------------------------------------------------------------------------------- |
+| [!DNL Segmentation Service] | ✓         | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).                 |
 | Custom uploads              | ✓         | Audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
@@ -55,9 +66,9 @@ This section describes which type of audiences you can export to this destinatio
 
 Refer to the table below for information about the destination export type and frequency.
 
-| Item| Type  | Notes |
-| --- | --- | --- |
-| Export type      | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the PubMatic Connect destination. |
+| Item             | Type                            | Notes                                                                                                                                                                                                                                                                                                                        |
+| ---------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Export type      | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the PubMatic Connect destination.                                                                                                                                                                         |
 | Export frequency | **[!UICONTROL Streaming]**      | Streaming destinations are "always on" API-based connections. When a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -90,9 +101,9 @@ To configure details for the destination, fill in the required and optional fiel
 - **[!UICONTROL Default country code]**: The default country code that should be applied to all identities if none is provided in the profile.
 - **[!UICONTROL Account ID]**: Your [!DNL PubMatic Connect] account ID.
 - **[!UICONTROL Account type]**: The account type of your [!DNL PubMatic] platform account. Talk to your [!DNL PubMatic] account manager if you have any questions on which to choose. The available options are:
-    - [!UICONTROL PUBLISHER]
-    - [!UICONTROL DEMAND_PARTNER]
-    - [!UICONTROL BUYER]
+  - [!UICONTROL PUBLISHER]
+  - [!UICONTROL DEMAND_PARTNER]
+  - [!UICONTROL BUYER]
 
 ### Enable alerts {#enable-alerts}
 
@@ -122,6 +133,12 @@ Selecting target fields:
 - Select the [!DNL PubMatic UID] type number that matches the identifier you selected in the first step.
 
 ![Map attributes and identities](../..//assets/catalog/advertising/pubmatic/export-identities-to-destination.png)
+
+### Audience scheduling
+
+If you are using the PubMatic Connect (Custom Audience ID Mapping) destination, you have to provide a mapping ID for each audience that corresponds to the 'Source Audience ID' in the PubMatic platform.
+
+![Audience scheduling](../..//assets/catalog/advertising/pubmatic/audience-scheduling-mapping-id.png)
 
 ## Exported data / Validate data export {#exported-data}
 
