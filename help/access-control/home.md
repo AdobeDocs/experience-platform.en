@@ -74,7 +74,7 @@ The following table outlines the available resource categories for both Experien
 | Category | Description |
 | --- | --- |
 | [!DNL Adobe Mix Modeler] | Configure, manage, and view permissions for [!DNL Adobe Mix Modeler]. |
-| [!DNL AI Assistant] | Configure permissions for AI Assistant. |
+| [!DNL AI Assistant] | Configure permissions for [!DNL AI Assistant]. |
 | [!DNL Alerts] | Configure manage, resolve, and view permissions for alerts and alerts history. |
 | [!DNL B2B Account Lists] | Configure manage, view, and publish permissions for B2B account lists, including actions such as add, remove, import, and delete accounts from account lists. |
 | [!DNL B2B Admin Configurations] | Configure manage and view permissions for B2B admin configurations, including digital asset management connections, asset repositories, and events. |
@@ -92,28 +92,28 @@ The following table outlines the available resource categories for both Experien
 | [!DNL Data Collection] | Configure manage and view permissions to datastreams. |
 | [!DNL Data Governance] | Configure manage, apply, and view permissions to data Ggvernance features such as labels, policies, and activity logs. |
 | [!DNL Data Ingestion] | Configure manage and view permissions to data ingestion features such as sources and audience share. |
-| [!DNL Data Lifecycle] | Configure manage and view permissions to aata hygiene features. |
+| [!DNL Data Lifecycle] | Configure manage and view permissions to data hygiene features. |
 | [!DNL Data Management] | Configure manage and view permissions to data management features such as datasets and monitoring datasets and streams. |
 | [!DNL Data Modeling] | Configure manage and view permissions to data modeling features such as schemas, relationships, and identity metadata. |
-| [!DNL Data Science Workspace] | Configure manage permissions to Data Science Workspace. |
+| [!DNL Data Science Workspace] | Configure manage permissions to [!DNL Data Science Workspace]. |
 | [!DNL Decision Management] | Configure manage and view permissions to decisions, offers, and ranking strategy features in decision management. |
-| [!DNL Destinations] | Configure manage and view permissions to destinations, including features such as activation and authoring with destinations SDK. |
+| [!DNL Destinations] | Configure manage and view permissions to destinations, including features such as activation and authoring with Destinations SDK. |
 | [!DNL Federated Data] | Configure manage and view permissions to federated data features. |
-| [!DNL Identity Management] | Configure manage and view permissions to identity service features such as identity namespaces and the identity graph. |
+| [!DNL Identity Management] | Configure manage and view permissions to Identity Service features such as identity namespaces and the identity graph. |
 | [!DNL Intelligent Service] | Configure manage and view permissions to attribution AI and customer AI in intelligent service. |
 | [!DNL IP Warmup Configurations] | Configure manage and view permissions to IP warmup plans and view permissions to view IP warmup reports. |
 | [!DNL Journey Optimizer Library] | Configure manage permissions to library items in Adobe Journey Optimizer. |
 | [!DNL Journey Optimizer Rules] | Configure manage and view permissions to frequency rules in Adobe Journey Optimizer. |
 | [!DNL Journeys] | Configure manage, publish, and view permissions to journeys, including features such as journeys report, events, data sources, and actions. |
 | [!DNL Messages] | Configure manage, publish, and view permissions to messages, including features such as messages preview and test. |
-| [!DNL Privacy Service] | Configure manage and view permissions to privacy service features. |
-| [!DNL Profile Management] | Configure manage, view, export, and evaluation permissions to profile service features such as profiles, segments, and merge policies. |
-| [!DNL Prospects] | Configure manage and view permissions to prospects schemas, profiles and audiences, including features such as seeing the prospect accordion. |
+| [!DNL Privacy Service] | Configure manage and view permissions to Privacy Service features. |
+| [!DNL Profile Management] | Configure manage, view, export, and evaluation permissions to profile service features such as audiences, profiles, and merge policies. |
+| [!DNL Prospects] | Configure manage and view permissions to prospects schemas, profiles, and audiences, including features such as seeing the prospect accordion. |
 | [!DNL Query Service] | Configure manage permissions to query service features such as non-expiring credential and structured SQL queries. |
 | [!DNL Reports] | Configure view permissions to channel reports. |
 | [!DNL Sandbox Administration] | Configure manage, view, and reset permissions when administering sandboxes. |
 | [!DNL Traits Configuration] | Configure manage and view traits via the computed attributes UI. |
-| [!DNL Translation Services] | Configure manage and view permissions to translation services for projects, tasks, reviews, inhouse, settings, providers. |
+| [!DNL Translation Services] | Configure manage and view permissions to translation services for projects, tasks, reviews, inhouse, settings, and providers. |
 
 The following table outlines the available permissions for Experience Platform in the role, with descriptions of the specific Experience Platform capabilities they grant access to. For detailed steps on how to add permissions to a role, see the [attribute based access control roles guide](./abac/ui/roles.md).
 
@@ -125,16 +125,16 @@ The following table outlines the available permissions for Experience Platform i
 | [!DNL Adobe Mix Modeler] | [!UICONTROL View Adobe Mix Modeler Models Configurations] | Read-only access to models configurations. |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL Manage Adobe Mix Modeler Models Plans Configurations] | The ability to view and modify plans configurations. |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL View Adobe Mix Modeler Models Plans Configurations] | Read-only access to plans configurations. |
-| [!DNL AI Assistant] | [!UICONTROL Enable AI Assistant] | Ability to ask the [AI assistant](../ai-assistant/access.md) questions. |
+| [!DNL AI Assistant] | [!UICONTROL Enable AI Assistant] | Ability to ask the [!DNL [AI assistant]](../ai-assistant/access.md) questions. |
 | [!DNL AI Assistant] | [!UICONTROL View Operational Insights] | Access to obtain responses to [operational insights](../ai-assistant/home.md##operational-insights) queries. |
-| [!DNL AI Assistant] | [!UICONTROL Generate Content] | Enable users to generate content using the AI assistant. |
-| [!DNL AI Assistant] | [!UICONTROL Manage Brand Kit] | Enable users to create brand guidelines using the AI assistant. |
+| [!DNL AI Assistant] | [!UICONTROL Generate Content] | Enable users to generate content using the [!DNL AI Assistant]. |
+| [!DNL AI Assistant] | [!UICONTROL Manage Brand Kit] | Enable users to create brand guidelines using the [!DNL AI Assistant]. |
 | [!DNL Alerts] | [!UICONTROL View Alerts History] | Read-only access for alerts history. |
 | [!DNL Alerts] | [!UICONTROL Resolve Alerts] | Access to read, edit, and delete alerts. |
 | [!DNL Alerts] | [!UICONTROL View Alerts] | Read-only access for alerts. |
 | [!DNL Alerts] | [!UICONTROL Manage Alerts] | Access to read, create, edit, and delete alerts. |
 | [!DNL B2B Account Lists] | [!UICONTROL Manage B2B Account Lists] | Ability to view and access **[!UICONTROL Account Lists]** in the left nav. Users with access to **[!UICONTROL Account Lists]** should have access to all Account Lists CRUD functions: `/accounts-list`. |
-| [!DNL B2B Admin Configurations] | [!UICONTROL Manage B2B Admin Configurations] | Ability to view and access **[!UICONTROL SMS API Credentials]** in the left nav. Users with access to **[!UICONTROL SMS API Credentials]** should have access to all SMS API Credentials CRUD functions: `/admin-configs`. |
+| [!DNL B2B Admin Configurations] | [!UICONTROL Manage B2B Admin Configurations] | Ability to view and access **[!UICONTROL B2B Admin Configurations]** in the left nav. Users with access to **[!UICONTROL B2B Admin Configurations]** should have access to all SMS API Credentials CRUD functions: `/admin-configs`. |
 | [!DNL B2B Assets] | [!UICONTROL Manage B2B Assets] | Ability to view and access **[!UICONTROL Assets]** in the left nav. Users with access to **[!UICONTROL Assets]** should have access to all Assets CRUD functions: `/assets-listing`. |
 | [!DNL B2B Assets] | [!UICONTROL Manage B2B Templates] | Ability to view and access **[!UICONTROL Templates]** in the left nav. Users with access to **[!UICONTROL Templates]** should have access to all Templates CRUD functions: `/b2b-content-templates`. |
 | [!DNL B2B Assets] | [!UICONTROL Manage B2B Fragments] | Ability to view and access **[!UICONTROL Fragments]** in the left nav. Users with access to **[!UICONTROL Fragments]** should have access to all Fragments CRUD functions: `/fragments`. |
@@ -221,7 +221,7 @@ The following table outlines the available permissions for Experience Platform i
 | [!DNL Destinations] | [!UICONTROL View Destinations] | Read-only access to view available destinations in the **[!UICONTROL Catalog]** tab and authenticated destinations in the **[!UICONTROL Browse]** tab. |
 | [!DNL Destinations] | [!UICONTROL Manage Destinations] | Access to read, create, and delete destinations connections and destination accounts. |
 | [!DNL Destinations] | [!UICONTROL Activate Destinations] | Ability to activate data to active destinations that have been created. This permission also requires either [!UICONTROL View Destinations] or [!UICONTROL Manage Destinations] to be granted to the user who will activate destinations.|
-| [!DNL Destinations] | [!UICONTROL Activate Segment without Mapping] | The ability to activate segments to existing destinations, without displaying the [mapping step](../destinations/ui/activate-batch-profile-destinations.md#mapping). Users can add and remove segments in activation workflows, but cannot add or remove mapped attributes or identities. This permission also requires the [!UICONTROL View Destinations] permission to be granted to the user who will activate data to destinations. |
+| [!DNL Destinations] | [!UICONTROL Activate Segment without Mapping] | The ability to activate audiences to existing destinations, without displaying the [mapping step](../destinations/ui/activate-batch-profile-destinations.md#mapping). Users can add and remove audiences in activation workflows, but cannot add or remove mapped attributes or identities. This permission also requires the [!UICONTROL View Destinations] permission to be granted to the user who will activate data to destinations. |
 | [!DNL Destinations] | [!UICONTROL Manage and Activate Dataset Destinations] | Ability to read, create, edit, and disable dataset export flows. Ability to also activate data to active datasets that have been created. This permission also requires the [!UICONTROL View Destinations] permission to be granted to the user who will activate data to destinations. |
 | [!DNL Destinations] | [!UICONTROL Destination Authoring] | Ability to author destinations using [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md). |
 | [!DNL Federated Data] | [!UICONTROL Manage Federated Data] | The ability to access all federated data features such as creating schemas, models, and compositions. |
@@ -258,12 +258,12 @@ The following table outlines the available permissions for Experience Platform i
 | [!DNL Privacy Service] | [!UICONTROL View Privacy Service] | Read-only access to privacy workflows. |
 | [!DNL Profile Management] | [!UICONTROL Manage Profiles] | Access to read, create, edit, and delete datasets that are used for customer profiles. Read-only access to available profiles. |
 | [!DNL Profile Management] | [!UICONTROL View Profiles] | Read-only access to available profiles. |
-| [!DNL Profile Management] | [!UICONTROL Manage Segments] | Access to read, create, edit, and delete segments. |
-| [!DNL Profile Management] | [!UICONTROL View Segments] | Read-only access to available segments. |
+| [!DNL Profile Management] | [!UICONTROL Manage Segments] | Access to read, create, edit, and delete audiences. |
+| [!DNL Profile Management] | [!UICONTROL View Segments] | Read-only access to available audiences. |
 | [!DNL Profile Management] | [!UICONTROL Manage Merge Policies] | Access to read, create, edit, and delete merge policies. |
 | [!DNL Profile Management] | [!UICONTROL View Merge Policies] | Read-only access to available merge policies. |
 | [!DNL Profile Management] | [!UICONTROL Import Audiences] | Ability to use the CSV upload workflow to import new audiences. |
-| [!DNL Profile Management] | [!UICONTROL Export Audience Segment] | Ability to export an evaluated audience segment to a dataset. |
+| [!DNL Profile Management] | [!UICONTROL Export Audience Segment] | Ability to export an evaluated audience to a dataset. |
 | [!DNL Profile Management] | [!UICONTROL Evaluate a Segment to an Audience] | Ability to generate profiles for an audience by evaluating a segment definition. |
 | [!DNL Profile Management] | [!UICONTROL View B2B AI] | Read-only access to settings and configurations for all B2B AI/ML services. |
 | [!DNL Profile Management] | [!UICONTROL Manage B2B AI] | Access to read, create, edit, and delete settings and configurations for all B2B AI/ML services. |
