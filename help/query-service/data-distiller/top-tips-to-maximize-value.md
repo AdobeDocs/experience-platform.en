@@ -92,8 +92,8 @@ While Data Distiller supports all schema types, the final dataset for ingestion 
 <!-- The objective of this step is to ... -->
 The next objective in this process is to perform data exploration tasks in Adobe Experience Platform Data Lake to ensure data accuracy and integrity.
 
-To generate meaningful insights from data, it's essential to ensure the accuracy and integrity of the data. When transferring data from one source to another, there's always a risk of errors, inconsistencies, or incompleteness creeping in. This is where data verification and exploration come in.
+To generate meaningful insights, data must be accurate and complete. Errors, inconsistencies, or missing values can occur when transferring data between sources, making data verification and exploration essential.
 
-Using Data Distiller, you can perform a wide range of operations on datasets, including verifying the quality and completeness of data.
+You can verify dataset quality and completeness through various operations using Data Distiller.
 
-Data verification and exploration involve executing SELECT to inspect, validate, and analyze data to ensure that it has been accurately translated during the ingestion process. This process helps identify any discrepancies, inconsistencies, or missing information in the data.
+To confirm that data was accurately translated during ingestion, execute SELECT queries to inspect, validate, and analyze it. This process helps identify and resolve discrepancies, inconsistencies, or missing information.
