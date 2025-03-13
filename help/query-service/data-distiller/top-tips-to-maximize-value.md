@@ -47,35 +47,40 @@ The sample dataset is provided in CSV format to align with the use case. In prac
 
 Throughout this tutorial, you will use Data Distiller to extract relevant events and fields into a standardized CSV format. The goal is to include only essential fields while maintaining a flat data structure for efficiency and practicality.
 
-### Ingest the sample Luma web data
+<!-- ### Ingest the sample Luma web data -->
 
-Load the CSV Data into Adobe Experience Platform
+### Load the CSV data into Experience Platform
 
-1. Name the dataset as "luma_web_data" and follow the steps outlined here:
+Follow these steps to upload a CSV file to Adobe Experience Platform.
 
-a. Navigate to Adobe Experience Platform UI->Workflows->Create Dataset from CSV File.
+#### Create a dataset from a CSV file
 
-![The Platform UI with "Workflow" and "Create dataset from CSV file" highlighted.]()
+In the Experience Platform UI, navigate to select **[!UICONTROL Workflows]** in the left navigation rail, and select **[!UICONTROL Create dataset from CSV file]** from the available options. A new sidebar appears on the right of the screen, select **[!UICONTROL Launch]**.
 
-b. Configure the name of the dataset as luma_web_data
+The [!UICONTROL Configure Dataset] panel appears. In the **[!UICONTROL Name]** field, input the dataset name as "luma_web_data" and select **[!UICONTROL Next]**.
+The [!UICONTROL Add data] panel appears. Drag and drop the CSV file into the **[!UICONTROL Add data]** box, or select **[!UICONTROL Choose File]** to browse and upload the file.
 
-c. Drag and drop the CSV file into the Add data box. You can also navigate to the file by using the "Choose File" button as well.
+#### Review and complete the upload
 
-![The "Add data" section of the "Create dataset from CSV file" workflow.]()
+Once the file is uploaded, a data preview appears at the bottom of the UI. Select **[!UICONTROL Finish]** to complete the upload.
 
-d. Once the data is loaded, you will see a data preview.
+![The "Add data" section of the "Create dataset from CSV file" workflow with a data preview and "Finish" highlighted.]()
 
-e. Select Finish to complete the upload.
+The dataset activities view for the "luma_web_data" dataset appears. The manual upload of the CSV file
+is ingested as a batch, and identified by a [!UICONTROL Batch ID]. A panel on the right-side displays the table name as `luma_web_data`.
 
-f. Navigate to AEP UI->Datasets to locate the dataset "luma_web_data". You will notice that the manual upload of the CSV file by you has caused the file to be ingested in batch with a Batch ID and 1000 records are ingested. On the right side panel, observe the table name that shows it as luma_web_data. The SQL engine in Data Distiller will be using this table name to query against the data, not the Dataset name.
+<!-- My table name is; luma_web_data_20250312_235611_817 Should we explain the suffix? -->
 
-![The "Dataset activity" tab for the newly created "luma_web_data" dataset.]()
+>[!NOTE]
+>
+>The SQL engine in Data Distiller queries the table name, not the dataset name.
 
-g. To preview the dataset, select Preview dataset in the top right corner. You will get a dataset preview that looks like this:
+![The "Dataset activity" tab for the newly created "luma_web_data" dataset with the tbale name, batch ID and "Preview dataset" highlighted.]()
 
-![The "Dataset activity" tab with "Preview dataset" highlighted.]()
+Once the data has finished processing, select [!UICONTROL Preview dataset] in the top right corner to preview the dataset. The dataset preview looks like this:
 
 ![The dataset preview of the "luma_web_data" dataset.]()
 
-2. Since we are loading the CSV file directly, there is no need to create an XDM schema (whether it's record, event, or other B2B styles). Instead, we will be working with an Ad Hoc schema. While Data Distiller can work with any schema, when we prepare the final dataset for hydration into the Real-Time Customer Profile, we will use a Record XDM schema.
-   
+#### Schema considerations
+
+Since the CSV file is loaded directly, an XDM schema is not required (for example, record, event, or B2B styles). Instead, the dataset uses an Ad Hoc schema. While Data Distiller supports all schema types, the final dataset for ingestion into the Real-Time Customer Profile will use a Record XDM schema.
