@@ -58,6 +58,7 @@ Follow these steps to upload a CSV file to Adobe Experience Platform.
 In the Experience Platform UI, navigate to select **[!UICONTROL Workflows]** in the left navigation rail, and select **[!UICONTROL Create dataset from CSV file]** from the available options. A new sidebar appears on the right of the screen, select **[!UICONTROL Launch]**.
 
 The [!UICONTROL Configure Dataset] panel appears. In the **[!UICONTROL Name]** field, input the dataset name as "luma_web_data" and select **[!UICONTROL Next]**.
+
 The [!UICONTROL Add data] panel appears. Drag and drop the CSV file into the **[!UICONTROL Add data]** box, or select **[!UICONTROL Choose File]** to browse and upload the file.
 
 #### Review and complete the upload
@@ -97,3 +98,15 @@ To generate meaningful insights, data must be accurate and complete. Errors, inc
 You can verify dataset quality and completeness through various operations using Data Distiller.
 
 To confirm that data was accurately translated during ingestion, execute SELECT queries to inspect, validate, and analyze it. This process helps identify and resolve discrepancies, inconsistencies, or missing information.
+
+#### Perform a basic exploration query
+
+In the Adobe Experience Platform UI, select [!UICONTROL Queries] in the left navigation rail then select **[!UICONTROL Create Query]**. The Query Editor appears.
+
+Paste the following query into the editor and execute it:
+
+```sql
+SELECT * FROM luma_web_data; 
+```
+
+The query results are displayed below the Query Editor in the [!UICONTROL Results] tab. To expand the results in a new dialog, select **[!UICONTROL View results]**.
