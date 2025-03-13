@@ -73,4 +73,19 @@ For more information on containers, read the [Segment Builder documentation](../
 
 ## Audience properties {#properties}
 
-The Audience properties section displays 
+The **[!UICONTROL Audience properties]** section displays information about the audience including an estimated size of the audience. You can also specify details about your audience, including its name, description, and tags.
+
+IMAGE
+
+### Estimates {#estimates}
+
+The **[!UICONTROL Qualified accounts]** indicates the actual number of accounts that match the audience's rules. This number updates every 24 hours, after the segmentation job has ran.
+
+The **[!UICONTROL Estimated accounts]** indicates the approximate number of accounts based off of the sample job. You can update this value after adding new rules or conditions and selecting **[!UICONTROL Refresh estimate]**.
+
+IMAGE
+
+### Details {#details}
+
+You can edit the audience's details, including its name, description, and tags.
+
