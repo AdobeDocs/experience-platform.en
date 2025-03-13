@@ -1,13 +1,13 @@
 ---
 solution: Experience Platform
-title: AI Assistant for Use Cases - Author and share your own Playbooks.
+title: Learn how to author and share your own Playbooks using the AI Assistant.
 description: How to author and share your own use case playbooks.
 role: User
 exl-id: 0bc49710-ad9e-4509-b7e6-55f9b9037aa9
 ---
 # Author and share your own playbooks
 
-The **Playbook Authoring Framework**, powered by Adobe's AI Assistant, allows you to create, manage, and share playbooks efficiently within Adobe Experience Platform. 
+The [!DNL Playbook Authoring Framework], powered by AI Assistant in Adobe Experience Platform, allows you to create, manage, and share playbooks efficiently within Adobe Experience Platform. 
 
 The framework follows a three-step process:
 
@@ -17,35 +17,33 @@ The framework follows a three-step process:
 
 3. **Playbook distribution**: Share playbooks across different organizations. For example, ACME's Martech Center of Excellence in Germany can create a "golden" playbook and distribute it to regional organizations in Thailand, Australia, etc. to help standardize the marketing use case.
 
-## Create a Playbook with Adobe's AI Assistant
+## Create a Playbook
+
+You can create a playbook in two ways: either using the AI Assistant or manually. Read the following sections to learn how.
 
 ### Playbook overview
 
-You can create a playbook in two ways: either using Adobe's AI Assistant or manually. 
+Follow these steps to create a playbook with the AI Assistant:
 
-Follow these steps to create a playbook with Adobe's AI Assistant:
-
-1. In the left navigation pane, select **Playbooks**. 
+In the left navigation panel, select **[!UICONTROL Playbooks]**. 
 
 !["Playbooks" highlighted in the left navigation pane in the UI.](/help/use-case-playbooks/assets/playbooks/authoring/playbooks.png)
 
-1. Select **New Playbook**, and then select **Generate playbook with AI Assistant**.
+Select **[!UICONTROL New Playbook]**, and then select **Generate playbook with AI Assistant**.
 
-![Select "New Playbook" button.](/help/use-case-playbooks/assets/playbooks/authoring/new-playbook.png)
+![The playbook interface with "Generate playbook with AI Assistant" selected.](/help/use-case-playbooks/assets/playbooks/authoring/generate-playbook.png)
 
-![Select "Generate playbook with AI Assistant" button highlighted.](/help/use-case-playbooks/assets/playbooks/authoring/generate-playbook.png)
-
-1. In the prompt field, describe the use case. 
+In the prompt field, describe the use case. 
 
 **Example**: "Engage ACME customers who browsed running shoes but did not complete the purchase."
 
-![Select "Generate playbook with AI Assistant" button.](/help/use-case-playbooks/assets/playbooks/authoring/prompt.png)
+![The playbook interface with the webform area highlighted.](/help/use-case-playbooks/assets/playbooks/authoring/prompt.png)
 
-1. Select **Generate** to create the playbook metadata. 
+Select **[!UICONTROL Generate]** to create the playbook metadata. 
 
 ![The prompt area with the "Generate" playbook button highlighted.](/help/use-case-playbooks/assets/playbooks/authoring/generate.png)
 
-1. Once generated, select **[!UICONTROL Edit]** to modify the generated title, description, and metadata as needed.
+Once generated, select **[!UICONTROL Edit]** to modify the generated title, description, and metadata as needed.
 
 ![The generated playbook with the "Edit" button highlighted.](/help/use-case-playbooks/assets/playbooks/authoring/edit.png)
 
@@ -55,17 +53,15 @@ To ensure the data engineers have all the necessary details to set up the use ca
 * **Target audience**
 * **Marketing channel**
 
-![Playbook details section with the "Edit" button highlighted.](/help/use-case-playbooks/assets/playbooks/authoring/edit-details.png)
+![The playbook details section with the "Edit" button highlighted.](/help/use-case-playbooks/assets/playbooks/authoring/edit-details.png)
 
-Once the metadata is generated, select the **Edit journey map** button to adjust the steps in the journey map as required. 
+Once the metadata is generated, select **[!UICONTROL Edit journey map]** to adjust the steps in the journey map as required. 
 
 ![Edit the journey map button.](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map-button.png)
 
 ![Edit the journey map once you capture the playbook metadata.](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map.png)
 
-Then proceed to associate the playbook with technical assets.
-
-To create a playbook manually, select **Create playbook manually**.
+Then, proceed to associate the playbook with technical assets. To create a playbook manually, select **[!UICONTROL Create playbook manually]**.
 
 ![Create playbook manually](/help/use-case-playbooks/assets/playbooks/authoring/create-manually.png)
 
@@ -73,13 +69,13 @@ A blank playbook template appears. Fill out details such as **Title** and **Desc
 
 ## Associate playbook with technical assets
 
-Regardless of whether you create a playbook manually or with the AI Assistant, you must associate it with the required technical assets. Navigate to the **[!UICONTROL Technical Assets]** tab and select the required product. For this example, choose **[!UICONTROL Journey Optimizer]**. 
+Regardless of whether you create a playbook manually or with the AI Assistant, you must associate it with the required technical assets. Navigate to the **[!UICONTROL Technical Assets]** tab and select the required product. For this example, select **[!UICONTROL Journey Optimizer]**. 
 
 >[!NOTE]
 >
-> Support for Real-Time Customer Data Platform will be added in a future release.
+> Support for Real-Time CDP will be added in a future release.
 
-!["Technical assets" tab and the "Add required product" button highlighted.](/help/use-case-playbooks/assets/playbooks/authoring/technical-assets-add-required-product.png)
+![The "Technical assets" tab and the "Add required product" button highlighted.](/help/use-case-playbooks/assets/playbooks/authoring/technical-assets-add-required-product.png)
 
 Choose **[!UICONTROL Select an Asset]** to associate this playbook with a journey as shown in the image below. Then select **Publish playbook** to finalize the playbook. 
 
@@ -156,4 +152,4 @@ If a playbook is flagged for inappropriate or offensive content, it is automatic
 
 ## Next steps
 
-Now that you understand how to create and publish playbooks using the Adobe's AI Assistant, learn how to get started with the available playbooks and choose the right one for your use case from [Playbooks List](/help/use-case-playbooks/playbooks/choose.md).
+Now that you understand how to create and publish playbooks using the AI Assistant, learn how to get started with the available playbooks and choose the right one for your use case from [Playbooks List](/help/use-case-playbooks/playbooks/choose.md).
