@@ -52,6 +52,10 @@ Adobe recommends that you add the following IP ranges to an allowlist prior to w
 `52.254.107.144/28`
 `20.22.83.112`
 
+## VA6: US and Americas customers running on AWS {#aws}
+
+`66.117.18.0/24`
+
 ## NLD2: EMEA customers {#emea}
 
 `40.74.4.160/28`
