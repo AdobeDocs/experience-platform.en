@@ -180,7 +180,9 @@ Select fields coming from ADC must be transformed, requiring logic beyond a dire
 
 ## Advanced mapping fields
 
-Select fields (known as "post values") contain data after Adobe has adjusted their values using Processing rules, VISTA rules, and lookup tables. Most post values have a pre-processed counterpart. Your organization can decide if you want to use the pre-processed field, post-processed field, or both.
+Select fields (known as "post values") contain data after Adobe has adjusted their values using Processing rules, VISTA rules, and lookup tables. Most post values have a pre-processed counterpart. 
+
+The Analytics source connector sends pre-processed data into a dataset in Experience Platform. You can transform this data to its post-processed counterpart using transformations. To learn more about performing these transformations using Query Service, see [Adobe-defined functions](/help/query-service/sql/adobe-defined-functions.md) in the Query Service user guide.
 
 To learn more about performing these transformations using Query Service, see [Adobe-defined functions](/help/query-service/sql/adobe-defined-functions.md) in the Query Service user guide.
 

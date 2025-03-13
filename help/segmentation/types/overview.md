@@ -1,8 +1,8 @@
 ---
 title: Audience types
 description: Learn about the different types of audiences you can create on Adobe Experience Platform.
+exl-id: c95c6276-d1a4-4d92-95cf-60d895c3fe10
 ---
-
 # Audience types
 
 Adobe Experience Platform offers a variety of audience types to best let you segment your profiles.
