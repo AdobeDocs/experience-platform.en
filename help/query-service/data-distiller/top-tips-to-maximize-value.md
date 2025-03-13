@@ -111,12 +111,47 @@ SELECT * FROM luma_web_data;
 
 The query results are displayed below the Query Editor in the [!UICONTROL Results] tab. To expand the results in a new dialog, select **[!UICONTROL View results]**.
 
-#### Focus on Orders Only But Exclude All Cancelled Orders
+#### Focus on orders and exclude cancelled transactions
 
-Additionally, RFM model only focuses on the recency, frequency and monetary value of all purchases made. We are not so concerned about engagement (page views) or the checkout process. Also, we must exclude all orders that were cancelled as well as they do not contribute to a valid calculation - we would need to deal with cancellations differently.
+The RFM model evaluates recency, frequency, and monetary value based on completed purchases. Non-transactional events, such as page views and checkout interactions, are excluded from analysis. Additionally, cancelled orders must be removed, as they do not contribute to valid RFM calculations and require a different processing approach.
 
-The first query would be selecting all the non-null purchase IDs that had a cancellation associated with them and aggregating them with a GROUP BY. The purchase IDs that we get as a result set needs to be excluded from our dataset.
+To ensure accuracy:
 
-The second query would select the purchase IDs that are not in the view and retain them.
+- Identify purchase IDs associated with cancellations and group them using GROUP BY.
+- Exclude these purchase IDs from the dataset.
+- Filter the data to retain only completed orders.
 
-The third query would exclude all events that are not orders.
+The following queries demonstrate how to identify and exclude cancelled orders from the dataset.
+
+This first query selects all non-null purchase IDs associated with a cancellation and aggregates them using `GROUP BY`. The resulting purchase IDs must be excluded from the dataset.
+
+```sql
+CREATE OR replace VIEW orders_cancelled
+AS
+  SELECT purchase_id
+  FROM   luma_web_data
+  WHERE  event_type IN ( 'order', 'cancellation' )
+         AND purchase_id IS NOT NULL
+  GROUP  BY purchase_id
+  HAVING Count(DISTINCT event_type) = 2; 
+```
+
+The second query retrieves only the purchase IDs that are not in this excluded set.
+
+```sql
+SELECT *
+FROM   luma_web_data
+WHERE  purchase_id NOT IN (SELECT purchase_id
+                           FROM   orders_cancelled)
+        OR purchase_id IS NULL; 
+```
+
+The third query removes all non-order events from the dataset.
+
+```sql
+SELECT *
+FROM   luma_web_data
+WHERE  event_type = 'order'
+       AND purchase_id NOT IN (SELECT purchase_id
+                               FROM   orders_cancelled); 
+```
