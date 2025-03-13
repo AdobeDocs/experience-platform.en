@@ -59,6 +59,16 @@ Read the following for a guide on the many different sections of a model card, i
 
 ### Model Architecture and Training
 
+| Question | Information needed | Example answer |
+| --- | --- | --- |
+| What architecture does the model use? | Type of neural network, ensemble method, etc. | The model leverages Gradient Boosting Decision Trees (GBDT) using XGBoost, optimized for structured data. It is trained on historical customer event sequences to identify predictive behavioral patterns. |
+| What algorithms were applied?  | Machine learning techniques used. | The model is built using a supervised learning approach, leveraging Gradient Boosting Decision Trees (GBDT) with XGBoost as the primary learning algorithm. Additionally, logistic regression is incorporated as a baseline model for benchmarking predictive accuracy. |
+| What training frameworks were used? | Libraries or platforms used for training. | The model was developed using TensorFlow, XGBoost, and scikit-learn. Training runs on Adobe AI cloud infrastructure using NVIDIA V100 GPUs, supporting large-scale datasets. |
+| What compute resources were used for training? | Hardware and cloud resources. | NVIDIA V100 GPUs, trained on Google Cloud infrastructure. |
+| What evaluation methods were used? | Metrics and testing procedures. | AUC-ROC, precision-recall, and cross-validation. |
+
+{style="table-layout:auto"}
+
 ### Performance and Evaluation
 
 ### Fairness and Bias
