@@ -44,8 +44,8 @@ Experience Platform comes with two pre-configured default roles. The following t
 
 | Role | Sandbox access | Permissions |
 | --- | --- | --- |
-| Default production all access | Production | All permissions applicable to Experience Platform, except for Sandbox Administration permissions. |
-| Sandbox Administrators | N/A | Provides access only to Sandbox Administration permissions. |
+| Default production all access | Prod | All permissions applicable to Experience Platform, except for Sandbox Administration permissions. |
+| Sandbox Administrators | N/A | Provides access to the `Prod` sandbox and to Sandbox Administration permissions. |
 
 ## Sandboxes and permissions
 
@@ -69,7 +69,7 @@ In [!UICONTROL Permissions], a role's resources workspace displays the sandboxes
 
 ![A role's resource workspace with a list of selected categories and permissions.](./images/permissions.png)
 
-The following table outlines the available resource categories for both Experience Platform and Experience Cloud products managed through Permissions:
+The following table outlines the available resource categories for both Experience Platform and applications managed through Permissions:
 
 | Category | Description |
 | --- | --- |
