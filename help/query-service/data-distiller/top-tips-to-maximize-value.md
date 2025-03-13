@@ -155,3 +155,15 @@ WHERE  event_type = 'order'
        AND purchase_id NOT IN (SELECT purchase_id
                                FROM   orders_cancelled); 
 ```
+
+### Step 3: Enrich the data using Data Distiller functions
+
+Build the RFM Model
+
+To start the development of an RFM model, the first step is to calculate three scores for each customer: Recency, Frequency, and Monetary value. These scores are derived from raw data collected through customer interactions and past purchase transactions. Just as a recap:
+
+· Recency reflects the time elapsed since the customer's last purchase, considering their entire history with us.
+
+· Frequency denotes the total number of purchases made by the customer over their entire history.
+
+· Monetary represents the overall amount of money spent by the customer across all transactions during their entire tenure with us.
