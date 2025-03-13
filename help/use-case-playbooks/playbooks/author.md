@@ -3,8 +3,8 @@ solution: Experience Platform
 title: AI Assistant for Use Cases - Author and share your own Playbooks.
 description: How to author and share your own use case playbooks.
 role: User
+exl-id: 0bc49710-ad9e-4509-b7e6-55f9b9037aa9
 ---
-
 # Author and share your own playbooks
 
 The **Playbook Authoring Framework**, powered by Adobe's AI Assistant, allows you to create, manage, and share playbooks efficiently within Adobe Experience Platform. 
