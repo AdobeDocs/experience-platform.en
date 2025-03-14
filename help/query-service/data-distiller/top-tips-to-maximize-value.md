@@ -470,11 +470,7 @@ Once complete, the query output displays "Query complete" in the console.
 
 ### Step 4: Schedule the query for batch processing
 
-Now that your SQL code generates a derived dataset and enables it for Real-Time Customer Profile, the next step is to automate updates to Real-Time Customer Profile by scheduling the query to run at specific intervals. Through automatic dataset updates, you eliminate the need for manual execution.
-
-<!-- The goal of the next step is to automate the publication of derived attributes to Real-Time Customer Profile using SQL queries.
-
-In the previous step, you used SQL code in Data Distiller to generate a derived dataset and enabled it for use in Real-Time Customer Profile. To make automatic updates, schedule the query to run at specific intervals and update the dataset. -->
+Now that your SQL code generates a derived dataset and enables it for Real-Time Customer Profile, the next step is to automate updates by scheduling the query to run at specific intervals. Through automatic dataset updates, you eliminate the need for manual execution.
 
 #### Schedule the query execution
 
@@ -501,4 +497,4 @@ Select **[!UICONTROL Save]** to confirm the schedule.
 
 After you have saved the schedule, you can navigate to the **[!UICONTROL Scheduled Queries]** tab at any point to monitor scheduled Data Distiller jobs.
 
-Once configured, the SQL query executes automatically at the defined intervals, eliminating the need for manual execution.
+Once configured, the SQL query runs automatically at the defined intervals, ensuring data remains up to date without requiring manual intervention.
