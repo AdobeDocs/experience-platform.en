@@ -470,10 +470,11 @@ Once complete, the query output displays "Query complete" in the console.
 
 ### Step 4: Schedule the query for batch processing
 
-The goal of the next step is to automate the publication of derived attributes to Real-Time Customer Profile using SQL queries.
+Now that your SQL code generates a derived dataset and enables it for Real-Time Customer Profile, the next step is to automate updates to Real-Time Customer Profile by scheduling the query to run at specific intervals. Through automatic dataset updates, you eliminate the need for manual execution.
 
-In the previous step, you used SQL code in Data Distiller to generate a derived dataset and enabled it for use in Real-Time Customer Profile. To make automatic updates, configure the dataset to run at specific intervals by scheduling the query.  
-<!-- is run correct here? does a dataset run? should this be update?-->
+<!-- The goal of the next step is to automate the publication of derived attributes to Real-Time Customer Profile using SQL queries.
+
+In the previous step, you used SQL code in Data Distiller to generate a derived dataset and enabled it for use in Real-Time Customer Profile. To make automatic updates, schedule the query to run at specific intervals and update the dataset. -->
 
 #### Schedule the query execution
 
