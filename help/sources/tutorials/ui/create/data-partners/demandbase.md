@@ -45,6 +45,10 @@ If you do not have an existing account, then you must create a new account by pr
 
 To create a new account, select **[!UICONTROL New account]** and then provide an account name and optionally, a description for your account details. Next, provide the appropriate authentication values to authenticate your source against Experience Platform. To connect your [!DNL Demandbase Intent] account, you must have the following credentials:
 
+* **Access key ID**:
+* **Secret access key**:
+* **Bucket name**:
+
 | Credential | Description |
 | --- | --- |
 | Access key ID | |
@@ -61,6 +65,10 @@ To create a new account, select **[!UICONTROL New account]** and then provide an
 >abstract="While Adobe uses the XDM accountOrganization.website, there may be customers who use custom fields for their respective websites. Therefore, you must ensure that your domain source is the domain/website field that will match your Demandbase account records against Experience Platform accounts."
 
 Once your account is authenticated and connected, you must now provide the following details for your dataflow:
+
+* **Dataflow name**: The name of your dataflow. You can use this name to search for your dataflow in the UI, once it has been created and processed.
+* **Description**: (Optional) A brief explanation or additional information for your dataflow.
+* **Domain source**: The domain or website field that matches your source account records against Experience Platform accounts. This value can depend on your configurations. If unprovided, the domain defaults to `accountOrganization.website`.
 
 | Dataflow details | Description |
 | --- | --- |
