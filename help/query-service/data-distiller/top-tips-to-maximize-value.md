@@ -470,35 +470,34 @@ Once complete, the query output displays "Query complete" in the console.
 
 ### Step 4: Schedule the query for batch processing
 
-In this section, we will see how to automatically publish derived attributes to Real-Time Customer Profile using SQL queries without manual intervention.
+The goal of the next step is to automate the publication of derived attributes to Real-Time Customer Profile using SQL queries.
 
-In the previous step, you generated a derived dataset and enabled it for Real-Time Customer Profile directly within your SQL code in Data Distiller. Additionally, you have the option to configure it for automatic updates by scheduling it to run at specific intervals.
+In the previous step, you used SQL code in Data Distiller to generate a derived dataset and enabled it for use in Real-Time Customer Profile. To make automatic updates, configure the dataset to run at specific intervals by scheduling the query.  
+<!-- is run correct here? does a dataset run? should this be update?-->
 
+#### Schedule the query execution
 
-Let's go ahead and quickly review how we auto hydrate profile at a defined cadence.
+After saving your SQL, navigate to the **[!UICONTROL Templates]** tab to view the saved query and initiate the scheduling process. There are two ways to schedule a query:
 
-1. Once you have saved the code under a saved name, you can view the saved code under tab "templates"
-
-2. There are two ways to "Schedule" the code
-
-a. Click on the button on right navigation Add Schedule.
-
-b. Or, you can click on "Schedules" at the top followed by clicking on to "Add Schedule"
+Select **[!UICONTROL Add Schedule]** from the right sidebar.  
 
 ![The Queries workspace Edit tab with Add schedule highlighted.](../images/data-distiller/top-tips-to-maximize-value/add-schedule-1.png)
 
-![The Queries workspace Schedules tab with Add Schedule highlighted.](../images/data-distiller/top-tips-to-maximize-value/add-schedule-2.png)
+Alternatively, select the **[!UICONTROL Schedules]** tab below the template name, then select **[!UICONTROL Add Schedule]**.  
 
-3. You are redirected to another screen to input your schedule details as explained
-below:
-a. Set the Execution frequency as Yearly.
-b. Set the Day of execution as April 30.
-c. Set the Schedule execution time as 11 PM UTC.
-d. Set schedule Period as April 1 – May 31, 2024.
-e. Save.
+![The Queries workspace Schedules tab with Add Schedule highlighted.](../images/data-distiller/top-tips-to-maximize-value/add-schedule-2.png)  
 
-![The schedule details with the settings configured and Save highlighted.](../images/data-distiller/top-tips-to-maximize-value/set-schedule.png)
+The [!UICONTROL Schedule details] view appears. From here, input the following details to configure the schedule:  
+   
+- **[!UICONTROL Execution Frequency]**: **Yearly**  
+- **[!UICONTROL Day of Execution]**: **April 30**  
+- **[!UICONTROL Schedule Execution Time]**: **11 PM UTC**  
+- **[!UICONTROL Schedule Period]**: **April 1 – May 31, 2024**  
 
-4. On successfully saving the schedule, you can go to tab "Scheduled Queries" to monitor the scheduled distiller jobs.
+Select **[!UICONTROL Save]** to confirm the schedule.  
 
-In simple terms, you don't need to stress about marking the dataset for profile and hydrate profile at a defined cadence. Just schedule SQL query, and it'll be automatically handled for you!
+![The schedule details with the settings configured and Save highlighted.](../images/data-distiller/top-tips-to-maximize-value/set-schedule.png)  
+
+After you have saved the schedule, you can navigate to the **[!UICONTROL Scheduled Queries]** tab at any point to monitor scheduled Data Distiller jobs.
+
+Once configured, the SQL query executes automatically at the defined intervals, eliminating the need for manual execution.
