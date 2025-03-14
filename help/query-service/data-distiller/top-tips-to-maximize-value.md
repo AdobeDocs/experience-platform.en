@@ -457,7 +457,7 @@ Observe that the order of the fields in the SELECT query of the INSERT statement
 
 >[!NOTE]
 >
->This code takes some time to run because it operates in Batch Mode, which involves spinning up a cluster to execute the query. The process includes reading data from the data lake into the cluster, performing the necessary processing, and then writing the results back to the data lake.
+>This query runs in Batch Mode, which requires spinning up a cluster to execute the process. The operation reads data from the data lake, processes it within the cluster, and writes the results back to the data lake.
 
 ```sql
 INSERT INTO adls_rfm_profile
