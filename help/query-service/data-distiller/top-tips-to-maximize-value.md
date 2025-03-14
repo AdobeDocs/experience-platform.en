@@ -168,10 +168,19 @@ To begin, calculate three scores for each customer: Recency, Frequency, and Mone
 
 <!-- This recap feels above repetative and should probably be cut. -->
 
-#### Calculate RFM score for each unique user ID
+#### Calculate the RFM score for each unique user ID
 
-Let's delve into how we can leverage the raw data to compute these essential scores.
+To compute the RFM scores, extract key fields from the raw data using field filtering.
 
-Extract the Fields with Field Filtering
+The next query builds on the previous section's logic by selecting email as the `userid`, since every order requires an email login. Data Distiller applies the `TO_DATE` function to convert the timestamp into a date format. The `total_revenue` field represents the price of each transaction and will later be aggregated by summing it for each `userid`.
 
-1. We are augmenting the query developed in the previous section by choosing email address as our userid as every order requires an email login. We also use the TO_DATE row level function in Data Distiller to convert the timestamp date. The total_revenue currently reflects the price for each individual transaction. Later, we will aggregate this value by summing it up for each email ID.
+```sql
+SELECT email AS userid, 
+       purchase_id AS purchaseid, 
+       price_total AS total_revenue, -- reflects the price for each individual transaction
+       TO_DATE(timestamp) AS purchase_date -- converts timestamp to date format
+FROM luma_web_data 
+WHERE event_type = 'order' 
+      AND purchase_id NOT IN (SELECT purchase_id FROM orders_cancelled) 
+      AND email IS NOT NULL;
+```
