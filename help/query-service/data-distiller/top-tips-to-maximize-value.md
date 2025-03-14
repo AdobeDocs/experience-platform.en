@@ -500,3 +500,26 @@ Select **[!UICONTROL Save]** to confirm the schedule.
 After you have saved the schedule, you can navigate to the **[!UICONTROL Scheduled Queries]** tab at any point to monitor scheduled Data Distiller jobs.
 
 Once configured, the SQL query runs automatically at the defined intervals, ensuring data remains up to date without requiring manual intervention.
+
+### Step 5: Activate an RFM-based SQL audience
+
+<!-- double check this intro paragraph ... -->
+
+There are two approaches to activating an RFM-based SQL audience in this tutorial. Solution 1 creates and activates an audience directly through Data Distiller using SQL queries, while Solution 2 uses precomputed RFM attributes to define an audience through the Experience Platform UI. Choose the method that best fits your workflow.
+
+#### Solution 1: SQL Audience via Data Distiller
+
+Create Audience
+
+Using the CREATE AUDIENCE AS SELECT command to define a new audience. The created audience is saved in a dataset and registered in the Audiences workspace under Data Distiller.
+
+```sql
+CREATE AUDIENCE rfm_best_customer WITH (primary_identity = _pfreportingonprod.userId, identity_namespace = queryService) AS ( SELECT * FROM adls_rfm_profile WHERE _pfreportingonprod.recency = 1 AND _pfreportingonprod.frequency = 1 AND _pfreportingonprod.monetization = 1 );
+
+CREATE AUDIENCE rfm_all_customer WITH (primary_identity = _pfreportingonprod.userId, identity_namespace = queryService) AS ( SELECT * FROM adls_rfm_profile );
+
+CREATE AUDIENCE rfm_core_customer WITH (primary_identity = _pfreportingonprod.userId, identity_namespace = Email) AS ( SELECT * FROM adls_rfm_profile WHERE
+
+_pfreportingonprod.recency = 1 AND _pfreportingonprod.frequency = 1 AND _pfreportingonprod.monetization = 1 );
+```
+
