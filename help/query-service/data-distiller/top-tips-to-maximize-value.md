@@ -258,6 +258,12 @@ AS
 
 The result will resemble the following image but with a different ID.
 
+![The Query results dialog displaying the newly created VIEW ID.](../images/data-distiller/top-tips-to-maximize-value/view-id.png)
+
+Again as best practice, run a simple explore query to inspect the data in the view. Use the following statement.
+
+```sql
+SELECT * FROM RFM_Values;
+```
+
 ![The Query results dialog for the aggregated RFM values.](../images/data-distiller/top-tips-to-maximize-value/view-of-aggregated-rfm-values.png)
-
-
