@@ -270,11 +270,14 @@ SELECT * FROM RFM_Values;
 
 ### Generate the RFM multi-dimensional cube
 
-An RFM multi-dimensional cube is a structured way to organize customers based on their Recency, Frequency, and Monetary (RFM) scores. It helps businesses analyze customer behavior patterns, making it easier to segment customers and identify high-value groups efficiently.
+An RFM multi-dimensional cube organizes customers based on their Recency, Frequency, and Monetary (RFM) scores. It helps businesses analyze customer behavior patterns and efficiently segment customers to identify high-value groups.
 
-We 4 slots for each dimension and we need to arrange all the values from the slots in 4 bins from highest to lowest.
+To categorize customers, divide each dimension into four equal groups (quartiles) using the NTILE window function. This function sorts values into ranked buckets, allowing for structured segmentation:
 
-Copy, paste, and execute the following SQL code:
+- Recency: Customers are ranked by how recently they made a purchase (`days_since_last_purchase`). Those who purchased most recently are in group 1, while those who haven't purchased for the longest time are in group 4.
+- Frequency: Customers are ranked by how often they make purchases (`ORDER BY orders DESC`). The most frequent buyers are in group 1, while the least frequent are in group 4.
+- Monetary: Customers are ranked by total spending (`total_revenue`). The highest spenders are in group 1, while the lowest spenders are in group 4.
+Run the following SQL query to generate the RFM multi-dimensional cube:
 
 ```sql
 SELECT userid,
@@ -292,12 +295,4 @@ SELECT userid,
            ORDER BY total_revenue DESC)                AS monetization
 FROM   rfm_val ues; 
 ```
-
-The NTILE window function is a way to divide data into equal-sized groups, or "buckets.". In our query, it helps categorize customers into 4 equal groups (quartiles) based on their recency, frequency, and monetization values:
-
-a. Frequency: Customers are ranked based on how many purchases they've made i.e. orders. The ones with the most orders are placed in group 1, and those with the fewest orders are in group 4.
-
-b. Monetization: This column ranks customers by how much total revenue they've generated total_revenue. The highest spenders are placed in group 1, and the lowest spenders are in group 4.
-
-c. Recency: The query ranks all customers based on how long it's been since their last purchase (days_since_last_purchase). It divides them into 4 groups, where the customers who purchased most recently are in group 1, and the ones who haven't purchased for the longest time are in group 4.
 
