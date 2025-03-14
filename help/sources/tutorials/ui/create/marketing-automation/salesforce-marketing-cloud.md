@@ -5,9 +5,9 @@ exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
 ---
 # Connect your [!DNL Salesforce Marketing Cloud] account to Experience Platform through the UI
 
->[!IMPORTANT]
+>[!WARNING]
 >
->Custom object ingestion is currently not supported by the [!DNL Salesforce Marketing Cloud] source integration.
+>The [!DNL Salesforce Marketing Cloud] source will be deprecated at the end of June 2025.
 
 This tutorial provides steps on how to connect your [!DNL Salesforce Marketing Cloud] account to Adobe Experience Platform through the UI.
 
@@ -35,6 +35,10 @@ In order to access your [!DNL Salesforce Marketing Cloud] account on Platform, y
 For more information about authentication for [!DNL Salesforce Marketing Cloud], visit the [[!DNL Salesforce] authentication documentation](https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm).
 
 ## Connect your [!DNL Salesforce Marketing Cloud] account
+
+>[!IMPORTANT]
+>
+>Custom object ingestion is currently not supported by the [!DNL Salesforce Marketing Cloud] source integration.
 
 In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] displays a variety of sources supported by Experience Platform.
 

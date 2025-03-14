@@ -9,6 +9,8 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
 
 * [Platform overview](home.md)
 * [Platform overview (Video)](video/platform-overview.md)
+* [Multi-cloud overview](multi-cloud.md)
+* [Edge Network and hub comparison](./edge-and-hub-comparison.md)
 * [Platform tutorials](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [A customer experience powered by Platform (Video)](video/customer-experience.md)
 * [Behind the scenes of a customer experience powered by Platform (Video)](video/customer-experience-bts.md)
@@ -60,11 +62,15 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
       * [Events](./governance-privacy-security/audit-logs/api/events.md)
       * [Export](./governance-privacy-security/audit-logs/api/export.md)
   * [Data encryption](./governance-privacy-security/encryption.md)
-  * Customer-managed keys {#customer-managed-keys}
-    * [Customer-managed keys](./governance-privacy-security/customer-managed-keys/overview.md)
-    * [Configure an Azure Key Vault](./governance-privacy-security/customer-managed-keys/azure-key-vault-config.md)
-    * [Use the API to set up CMK](./governance-privacy-security/customer-managed-keys/api-set-up.md)
-    * [Use the UI to set up CMK](./governance-privacy-security/customer-managed-keys/ui-set-up.md)
+  * Customer Managed Keys {#customer-managed-keys}
+    * [Customer Managed Keys](./governance-privacy-security/customer-managed-keys/overview.md)
+    * Azure {#azure}
+      * [Configure an Azure Key Vault](./governance-privacy-security/customer-managed-keys/azure/azure-key-vault-config.md)
+      * [Use the API to set up CMK](./governance-privacy-security/customer-managed-keys/azure/api-set-up.md)
+      * [Use the UI to set up CMK](./governance-privacy-security/customer-managed-keys/azure/ui-set-up.md)
+    * Amazon Web Services {#aws}
+      * [Configure AWS KMS for CMK](./governance-privacy-security/customer-managed-keys/aws/configure-kms.md)
+      * [Use the UI to set up CMK on AWS](./governance-privacy-security/customer-managed-keys/aws/ui-set-up.md)
 * License usage and guardrails {#license}
   * [Data management license entitlement best practices](./license-usage-and-guardrails/data-management-best-practices.md)    
   * [License usage dashboard](./license-usage-and-guardrails/license-usage-dashboard.md)

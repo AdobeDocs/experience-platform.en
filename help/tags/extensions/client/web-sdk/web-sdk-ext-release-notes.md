@@ -7,6 +7,41 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 
 This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Platform Web SDK release notes](/help/web-sdk/release-notes.md).
 
+## Version 2.29.0 - March 5, 2025
+
+**New features**
+
+- You can now create custom Web SDK builds and choose the components that you need from the tag extension user interface. This can result in smaller builds by excluding unused components. See the documentation on [creating a custom Web SDK build](web-sdk-extension-configuration.md#custom-build).
+- Contains [version 2.26.0](../../../../web-sdk/release-notes.md#2-26-0) of the Adobe Experience Platform Web SDK.
+
+**Fixes and improvements**
+
+- Added graceful handling of missing data elements in [update variable](action-types.md#update-variable) actions. Previously, editing an update variable action with a missing data element showed an error message. Now, you can choose a different data element and all the settings for the update variable action are still applied. Data elements can be missing if they are deleted or if a Tags property is duplicated.
+- Added support for opening a new tab with the [redirect with identity](action-types.md#redirect-with-identity) action. Now, when using the action, the `target` attribute of the anchor tag is used when redirecting the browser.
+- Fixed an issue where Adobe Audience Manager could not be disabled in configuration overrides.
+
+## Version 2.28.0 - January 23, 2025
+
+**Fixes and improvements**
+
+- Fixed an issue where ID Sync Container overrides could not be set without enabling Audience Manager.
+- Fixed an issue where datastream config overrides were disabled when upgrading to the latest version.
+- Fixed an issue where users were unable to save Target auto click collection settings.
+
+**New features**
+
+- Added a new feature to toggle between technical names and display names in the XDM Object.
+- Contains [version 2.25.0](../../../../web-sdk/release-notes.md#2-25-0) of the Adobe Experience Platform Web SDK.
+
+## Version 2.27.0 - October 31, 2024
+
+**New features**
+
+- [Datastream overrides](../web-sdk/web-sdk-extension-configuration.md#datastream-overrides) now includes settings to disable Experience Cloud solutions and Adobe Experience Platform services.
+- You can now create [datastream overrides](../web-sdk/web-sdk-extension-configuration.md) for media sessions.
+
+Contains version 2.24.0 of the Adobe Experience Platform Web SDK.
+
 ## Version 2.26.1 - September 19, 2024
 
 **Fixes and improvements**

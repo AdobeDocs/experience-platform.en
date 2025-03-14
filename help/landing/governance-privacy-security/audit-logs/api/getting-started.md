@@ -1,6 +1,8 @@
 ---
 title: Getting Started with the Audit Query API
 description: The Audit Query API allows you to retrieve metric data for various Adobe Experience Platform features. This document provides an introduction to the core concepts you need to know before attempting to make calls to the Audit Query API.
+role: Developer
+feature: Audits, API
 exl-id: 20eab0a8-98f7-4fee-8f91-88324e54ab18
 ---
 # Getting started with the Audit Query API

@@ -22,24 +22,24 @@ As this guide focuses exclusively on key considerations regarding schema design,
 The recommended approach for designing your data model for use in Experience Platform can be summarized as follows:
 
 1. Understand the business use cases for your data.
-1. Identify the primary data sources that should be brought into [!DNL Platform] to address those use cases.
-1. Identify any secondary data sources that could also be of interest. For example, if currently only one business unit in your organization is interested in porting their data to [!DNL Platform], a similar business unit might also be interested in porting similar data in the future. Considering these secondary sources helps standardize the data model across your entire organization.
+1. Identify the primary data sources that should be brought into Platform to address those use cases.
+1. Identify any secondary data sources that could also be of interest. For example, if currently only one business unit in your organization is interested in porting their data to Platform, a similar business unit might also be interested in porting similar data in the future. Considering these secondary sources helps standardize the data model across your entire organization.
 1. Create a high-level entity relationship diagram (ERD) for the data sources that have been identified.
-1. Convert the high-level ERD into a [!DNL Platform]-centric ERD (including profiles, Experience Events, and lookup entities).
+1. Convert the high-level ERD into a Platform-centric ERD (including profiles, Experience Events, and lookup entities).
 
-The steps related to identifying the applicable data sources required to carry out your business use cases vary from organization to organization. While the remainder of sections throughout this document focus on the latter steps of organizing and constructing an ERD after the data sources have been identified, the explanations of the diagram's various components may inform your decisions as to which of your data sources should be migrated to [!DNL Platform].
+The steps related to identifying the applicable data sources required to carry out your business use cases vary from organization to organization. While the remainder of sections throughout this document focus on the latter steps of organizing and constructing an ERD after the data sources have been identified, the explanations of the diagram's various components may inform your decisions as to which of your data sources should be migrated to Platform.
 
 ## Create a high-level ERD {#create-an-erd}
 
-Once you have determined the data sources that you wish to bring into [!DNL Platform], create a high-level ERD to help guide the process of mapping your data to XDM schemas.
+Once you have determined the data sources that you wish to bring into Platform, create a high-level ERD to help guide the process of mapping your data to XDM schemas.
 
-The example below represents a simplified ERD for a company who wants to bring data into [!DNL Platform]. The diagram highlights the essential entities that should be sorted into XDM classes, including customer accounts, hotels, addresses, and several common e-commerce events.
+The example below represents a simplified ERD for a company who wants to bring data into Platform. The diagram highlights the essential entities that should be sorted into XDM classes, including customer accounts, hotels, and several common e-commerce events.
 
 ![A entity relational diagram that highlights the essential entities that should be sorted into XDM classes for data ingestion.](../images/best-practices/erd.png)
 
 ## Sort entities into profile, lookup, and event categories {#sort-entities}
 
-Once you have created an ERD to identify the essential entities you would like to bring into [!DNL Platform], these entities must be sorted into profile, lookup, and event categories:
+Once you have created an ERD to identify the essential entities you would like to bring into Platform, these entities must be sorted into profile, lookup, and event categories:
 
 | Category | Description |
 | --- | --- |
@@ -73,7 +73,7 @@ If an entity contains any attributes related to an individual customer, it is mo
 
 #### Tracking data over time {#track-data}
 
-If you want to analyze how certain attributes within an entity change over time, it is most likely an event entity. For example, adding product items to a cart can be tracked as add-to-cart events in [!DNL Platform]:
+If you want to analyze how certain attributes within an entity change over time, it is most likely an event entity. For example, adding product items to a cart can be tracked as add-to-cart events in Platform:
 
 | Customer ID | Type | Product ID | Quantity | Timestamp |
 | --- | --- | --- | --- | --- |
@@ -107,7 +107,7 @@ For example, a company wants to build an audience based on the number of cart pu
 
 >[!CAUTION]
 >
->Experience Platform does not currently perform automatic value aggregation, although this is planned for future releases. If you choose to use aggregated values, you must perform the calculations externally before sending the data to [!DNL Platform].
+>Experience Platform does not currently perform automatic value aggregation, although this is planned for future releases. If you choose to use aggregated values, you must perform the calculations externally before sending the data to Platform.
 
 #### Cardinality {#cardinality}
 
@@ -121,9 +121,9 @@ The following table outlines some common entity relationships and the categories
 
 | Relationship | Cardinality | Entity categories |
 | --- | --- | --- |
-| Customers and Cart Checkouts | One to many | A single customer may have many cart checkouts, which are events that can be tracked over time. Customers would therefore be a profile entity, while Cart Checkouts would be an event entity. |
-| Customers and Loyalty Accounts | One to one | A single customer can only have one loyalty account, and a loyalty account can only belong to one customer. Since the relationship is one-to-one, both Customers and Loyalty Accounts represent profile entities. |
-| Customers and Subscriptions | One to many | A single customer may have many subscriptions. Since the company is only concerned with a customer's current subscriptions, Customers is a profile entity, while Subscriptions is a lookup entity. |
+| Customer and Cart Checkout | One to many | A single customer may have many cart checkouts, which are events that can be tracked over time. Customer would therefore be a profile entity, while Cart Checkout would be an event entity. |
+| Customer and Loyalty Account | One to one | A single customer can only have one loyalty account, and a loyalty account can only belong to one customer. Since the relationship is one-to-one, both Customer and Loyalty Account represent profile entities. |
+| Customer and Subscription | One to many | A single customer may have many subscriptions. Since the company is only concerned with a customer's current subscriptions, Customer is a profile entity, while Subscription is a lookup entity. |
 
 {style="table-layout:auto"}
 
@@ -140,9 +140,9 @@ In this scenario, the company has two potential options for representing a custo
 
 #### Approach 1: Use profile attributes {#profile-approach}
 
-The first approach would be to include an array of subscriptions as attributes within the profile entity for Customers. Objects in this array would contain fields for `category`, `status`, `planName`, `startDate`, and `endDate`.
+The first approach would be to include an array of `subscriptionID` within the profile entity for Customer.
 
-![The Customers schema in the Schema Editor with the class and structure highlighted](../images/best-practices/profile-schema.png)
+![The Customer schema in the Schema Editor with the class and structure highlighted](../images/best-practices/profile-schema.png)
 
 **Pros**
 
@@ -156,9 +156,9 @@ The first approach would be to include an array of subscriptions as attributes w
 
 #### Approach 2: Use event entities {#event-approach}
 
-The second approach would be to use event schemas to represent subscriptions. This entails ingesting the same subscription fields as the first approach, with addition of a subscription ID, a customer ID, and a timestamp of when the subscription event occurred.
+The second approach would be to use event schemas to represent a subscription event. This would include the subscription ID alongside a customer ID and a timestamp of when the subscription event occurred.
 
-![A diagram of the Subscription Events schema with the XDM Experience Event class and subscriptions structure highlighted.](../images/best-practices/event-schema.png)
+![A diagram of the Subscription Event schema with the XDM Experience Event class and subscriptions structure highlighted.](../images/best-practices/event-schema.png)
 
 **Pros**
 
@@ -186,7 +186,7 @@ The category that an entity has been sorted under should determine the XDM class
 >
 >While event entities are almost always represented by separate schemas, entities in the profile or lookup categories may be combined together in a single XDM schema, depending on their cardinality.
 >
->For example, since the Customers entity has a one-to-one relationship with the LoyaltyAccounts entity, the schema for the Customers entity could also include a `LoyaltyAccount` object to contain the appropriate loyalty fields for each customer. If the relationship is one to many, however, the entity that represents the "many" could be represented by a separate schema or an array of profile attributes, depending on its complexity.
+>For example, since the Customer entity has a one-to-one relationship with the LoyaltyAccount entity, the schema for the Customer entity could also include a `LoyaltyAccount` object to contain the appropriate loyalty fields for each customer. If the relationship is one to many, however, the entity that represents the "many" could be represented by a separate schema or an array of profile attributes, depending on its complexity.
 
 The sections below provide general guidance on constructing schemas based on your ERD.
 
@@ -240,12 +240,12 @@ To set constraints on a particular field, select the field from the Schema Edito
 The following are a collection of suggestions to maintain data integrity when you create a schema.
 
 * **Consider primary identities**: For Adobe products like web SDK, mobile SDK, Adobe Analytics, and Adobe Journey Optimizer, the `identityMap` field often serves as the primary identity. Avoid designating additional fields as primary identities for that schema.
-* **Avoid using `_id` as an identity**: Avoid using the `_id` field in Experience Event schemas as an identity. It is meant for record uniqueness, not for use as an identity.
+* **Ensure `_id` is not used as an identity**: The `_id` field in Experience Event schemas cannot be used as an identity as it is meant for record uniqueness.
 * **Set length constraints**: It is best practice to set minimum and maximum lengths on fields marked as identities. A warning triggers if you try to assign a custom namespace to an identity field without meeting the minimum and maximum length constraints. These limitations help maintain consistency and data quality.
 * **Apply patterns for consistent values**: If your identity values follow a specific pattern, you should use the **[!UICONTROL Pattern]** setting to enforce this constraint. This setting can include rules like digits only, uppercase or lowercase, or specific character combinations. Use regular expressions to match patterns in your strings.
 * **Limit eVars in Analytics schemas**: Typically, an Analytics schema should have only one eVar designated as an identity. If you intend to use more than one eVar as an identity, you should double-check whether the data structure can be optimized.
-* **Ensure uniqueness of a selected field**: Your chosen field should be unique compared to the primary identity in the schema. If it is not, do not mark it as an identity. For instance, if multiple customers can provide the same email address, then that namespace is not a suitable identity. This principle also applies to other identity namespaces like phone numbers.
-* **Constraints trigger warnings for custom namespace fields**: Set constraints to trigger a warning when a schema field is marked with a custom namespace without specifying both minimum and maximum lengths. The warning serves as an important caution for maintaining data integrity. See the [type-specific field properties](../ui/fields/overview.md#type-specific-properties) documentation for information on how to set constraints on a particular field.
+* **Ensure uniqueness of a selected field**: Your chosen field should be unique compared to the primary identity in the schema. If it is not, do not mark it as an identity. For instance, if multiple customers can provide the same email address, then that namespace is not a suitable identity. This principle also applies to other identity namespaces like phone numbers. Marking a non-unique field as an identity could cause unwanted profile collapse. 
+* **Verify minimum string lengths**: All string fields should be at least one character in length, as string values should never be empty. Null values for non-required fields, however, are acceptable.
 
 ## Next steps
 

@@ -95,6 +95,8 @@ Platform provides intelligent recommendations for auto-mapped fields based on th
 >[!IMPORTANT]
 >
 >When mapping your source fields to target XDM fields, you must ensure that you map your designated primary identity field to its appropriate target XDM field.
+>
+>For each audience, you can add up to 20 fields to map to Adobe Campaign. You can change this limit by updating the value of the `NmsCdp_Aep_Sources_Max_Columns` option in the Administration > Platform > Options folder of Campaign explorer.
 
 Once your source data is successfully mapped, select **[!UICONTROL Next]**.
 
@@ -128,6 +130,12 @@ The dataset activity page appears. From here, you can see information on the per
 This page also provides you with an interface to update the metadata description of your dataflow, enable partial ingestion and error diagnostics, as well as add new data to your dataset.
 
 ![An interface with graphs representing the ingestion rate of a selected dataset.](../../../../images/tutorials/create/campaign/dataset-activity.png)
+
+
+>[!IMPORTANT]
+>
+>You cannot backfill old event logs with the Adobe Campaign Managed Cloud Services source. If backfill is required, use a custom workflow or a custom implementation to export data to Amazon S3 or Azure Blob, or from Amazon S3 or Azure Blob to an Adobe Experience Platform dataset.
+
 
 ## Next steps
 

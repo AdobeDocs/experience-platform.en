@@ -3,7 +3,12 @@ title: Namespace priority
 description: Learn about namespace priority in Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
 ---
-# Namespace priority
+# Namespace priority {#namespace-priority}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_namespacepriority"
+>title="Namespace Priority"
+>abstract="Namespace priority determines how links are removed from the identity graph."
 
 >[!AVAILABILITY]
 >
@@ -11,10 +16,10 @@ exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
 
 Every customer implementation is unique and tailored to meet a particular organization's goals, and as such, the importance of a given namespace varies from customer to customer. Real-world examples include:
 
-* On one hand, you might deem the Email namespace to represent a person entity and thus be unique per person. On the other hand, another customer might consider the Email namespace as an unreliable identifier and therefore, they may allow a single CRMID to be associated to multiple identities with the Email namespace.
+* Your company might consider each email address to represent a single-person entity and therefore use [identity settings](./identity-settings-ui.md) to configure the email namespace as unique. Another company, however, might want to represent single-person entities as having multiple email addresses, and thus configure the email namespace as not-unique. These companies would need to use another identity namespace as unique, such as a CRMID namespace, so there can be a single-person identifier linked to the multiple email addresses.
 * You might collect online behavior using a "Login ID" namespace. This Login ID could have a 1:1 relationship with the CRMID, which then stores attributes from a CRM system and may be considered the most important namespace. In this case, you are then determining that the CRMID namespace is a more accurate representation of a person, while the Login ID namespace is the second most important.
 
-You must make configurations in Identity Service that reflects the importance of your namespaces as this influences how profiles are formed and segmented.
+You must make configurations in Identity Service that reflect the importance of your namespaces as this influences how profiles and their related identity graphs are formed and split.
 
 ## Determine your priorities
 
@@ -22,7 +27,7 @@ Determination of namespace priority is based on the following factors:
 
 ### Identity graph structure
 
-If your organization's graph structured is layered, then namespace priority should reflect this so that the correct links are removed in the case of graph collapse.
+If your organization's graph structure is layered, then namespace priority should reflect this so that the correct links are removed in the case of graph collapse.
 
 >[!TIP]
 >
@@ -42,19 +47,19 @@ An identity represents a real-world object. There are three objects that are rep
 
 Person namespaces are relatively immutable compared to hardware devices (such as IDFA, GAID), which are relatively immutable compared to web browsers. Basically, you (person) will always be a single entity, who can have multiple hardware devices (phone, laptop, tablet, etc.), and use multiple browsers (Google Chrome, Safari, FireFox, etc.)
 
-Another way to approach this topic is through cardinality. For a given person entity, how many identities will be created? In most cases, a person will have one CRMID, a handful of hardware device identifiers (IDFA/GAID resets should not happen often), and even more cookies (an individual could conceivably brows on multiple devices, use incognito mode, or reset cookies at any  given time). Generally, **lower cardinality indicates a namespace with a higher value**.
+Another way to approach this topic is through cardinality. For a given person entity, how many identities will be created? In most cases, a person will have one CRMID, a handful of hardware device identifiers (IDFA/GAID resets should not happen often), and even more cookies (an individual could conceivably browse on multiple devices, use incognito mode, or reset cookies at any given time). Generally, **lower cardinality indicates a namespace with a higher value**.
 
 ## Validate your namespace priority settings
 
-Once you have an idea of how you will prioritize your namespaces, you can use the Graph Simulation tool to test out various graph collapse scenarios and ensure that your priority configurations are returning the expected graph results. For more information, read the guide on using the [Graph Simulation tool](./graph-simulation.md).
+Once you have an idea of how you will prioritize your namespaces, you can use the Graph Simulation tool in the UI to test out various graph collapse scenarios and ensure that your priority configurations are returning the expected graph results. For more information, read the guide on using the [Graph Simulation tool](./graph-simulation.md).
 
 ## Configure namespace priority
 
-Namespace priority can be configured using [!UICONTROL Identity Settings]. In the [!UICONTROL Identity Settings] interface, you may drag and drop a namespace to determine its relative importance.
+Namespace priority can be configured using the [identity settings UI](./identity-settings-ui.md). In the identity settings interface, you may drag and drop a namespace to determine its relative importance.
 
 >[!IMPORTANT]
 >
->You cannot prioritize device/cookie namespaces over person namespaces. This restriction ensures that misconfigurations does not happen.
+>You cannot prioritize device/cookie namespaces over person namespaces. This restriction ensures that misconfigurations do not happen.
 
 ## Namespace priority usage
 
@@ -68,20 +73,20 @@ For relatively complex graph structures, namespace priority plays an important r
 
 ### Real-Time Customer Profile: primary identity determination for experience events
 
-* For experience events, once you have configured Identity Settings for a given sandbox, the primary identity will be determined by the highest namespace priority going forward.
+* Once you have configured identity settings for a given sandbox, the primary identity for experience events will be determined by the highest namespace priority in the configuration.
   * This is because experience events are dynamic in nature. An identity map may contain three or more identities, and namespace priority ensures that the most important namespace is associated to the experience event.
 * As a result, the following configurations **will no longer be used by Real-Time Customer Profile**:
-  * The "Primary" checkbox on data element type in WebSDK (which translates to `primary=true` in identityMap). **Note**: Identity namespace and identity value will continue to be used in Profile. Additionally, you must still configure your "Primary" checkbox settings because services outside of Real-Time Customer Profile will continue to refer to this configuration.
+  * The primary identity configuration (`primary=true`) when sending identities in the identityMap using the Web SDK, Mobile SDK, or Edge Network Server API (identity namespace and identity value will continue to be used in Profile). **Note**: Services outside of Real-Time Customer Profile like data lake storage or Adobe Target will continue to use the primary identity configuration (`primary=true`).
   * Any fields marked as primary identity on an XDM Experience Event Class schema.
   * Default primary identity settings in the Adobe Analytics source connector (ECID or AAID).
 * On the other hand, **namespace priority does not determine primary identity for profile records**.
-  * For profile records, you may use the schemas workspace in the Experience Platform UI to define your identity fields, including the primary identity. Read the guide on [defining identity fields in the UI](../../xdm/ui/fields/identity.md) for more information.
+  * For profile records, you should continue to define your identity fields in the schema, including the primary identity. Read the guide on [defining identity fields in the UI](../../xdm/ui/fields/identity.md) for more information.
 
 >[!TIP]
 >
 >* Namespace priority is **a property of a namespace**. It is a numerical value assigned to a namespace to indicate its relative importance.
 >
->* Primary identity is the identity in which a profile fragment is stored against. A profile fragment is a record of data that stores information about a certain user: attributes (usually ingested via CRM records) or events (usually ingested from experience events or online data).
+>* Primary identity is the identity in which a profile fragment is stored against. A profile fragment is a record of data that stores information about a certain user: attributes (for example, CRM records) or events (for example, web site browsing).
 
 ### Example scenario
 
@@ -101,13 +106,13 @@ Suppose that the following configurations are established for a given sandbox:
 
 Given the configurations outlined above, user actions and determination of primary identity, will be resolved as such:
 
-| User action (Experience event) | Authentication state | Data source | Identity map | Primary identity (primary key of profile fragment) |
+| User action (Experience event) | Authentication state | Data source | Namespaces in event | Namespace of primary identity |
 | --- | --- | --- | --- | --- |
-| View credit card offer page | Unauthenticated (anonymous) | Web SDK | {ECID} | ECID |
-| View help page | Unauthenticated | Mobile SDK | {ECID, IDFA} | IDFA |
-| View checking account balance | Authenticated | Web SDK | {CRMID, ECID} | CRMID |
-| Sign up for home loan | Authenticated | Analytics source connector | {CRMID, ECID, AAID} | CRMID |
-| Transfer $1,000 from checking to savings | Authenticated | Mobile SDK | {CRMID, GAID, ECID} | CRMID |
+| View credit card offer page | Unauthenticated (anonymous) | Web SDK | `{ECID}` | ECID |
+| View help page | Unauthenticated | Mobile SDK | `{ECID, IDFA}` | IDFA |
+| View checking account balance | Authenticated | Web SDK | `{CRMID, ECID}` | CRMID |
+| Sign up for home loan | Authenticated | Analytics source connector | `{CRMID, ECID, AAID}` | CRMID |
+| Transfer $1,000 from checking to savings | Authenticated | Mobile SDK | `{CRMID, GAID, ECID}` | CRMID |
 
 {style="table-layout:auto"}
 
@@ -115,14 +120,18 @@ Given the configurations outlined above, user actions and determination of prima
 
 ![A diagram of segment membership storage](../images/namespace-priority/segment-membership-storage.png)
 
-For a given merged profile, segment memberships will be stored against the identity with the highest priority namespace.
+For a given merged profile, segment memberships will be stored against the identity with the highest namespace priority.
 
 For example, assume that there are two profiles:
 
-* The first profile represents John.
-* The second profile represents Jane.
+* Profile 1 represents John.
+  * John's profile qualifies for S1 (segment membership 1). For example, S1 could refer to a segment of customers that identify as male.
+  * John's profile also qualifies for S2 (segment membership 2). This could refer to a segment of customers whose loyalty status is gold.
+* Profile 2 represents Jane.
+  * Jane's profile qualifies for S3 (segment membership 3). This could refer to a segment of customers that identify as female.
+  * Jane's profile also qualifies for S4 (segment membership 4). This could refer to a segment of customers whose loyalty status is platinum.
 
-If the John and Jane share a device, then the ECID (web browser) transfers from one person to another. However, this does not influence the segment membership information stored against John and Jane.
+If John and Jane share a device, then the ECID (web browser) transfers from one person to another. However, this does not influence the segment membership information stored against John and Jane.
 
 If the segment qualification criteria were solely based on anonymous events stored against the ECID, then Jane would qualify for that segment
 
@@ -135,15 +144,13 @@ This section outlines how namespace priority can affect other Experience Platfor
 Data hygiene record delete requests functions in the following manner, for a given identity:
 
 * Real-Time Customer Profile: Deletes any profile fragment with specified identity as primary identity. **The primary identity on Profile will now be determined based on namespace priority.**
-* Data lake: Deletes any record with the specified identity as primary identity.
+* Data lake: Deletes any record with the specified identity as primary identity. Unlike Real-Time Customer Profile, primary identity in data lake is based on primary identity specified on WebSDK (`primary=true`), or a field marked as primary identity
 
 For more information, read the [advanced lifecycle management overview](../../hygiene/home.md).
 
 ### Computed attributes
 
-Computed attributes does not use namespace priority to compute values. If you are using computed attributes, you must ensure that the CRMID is designated as your primary identity for WebSDK. This limitation is expected to be resolved in August 2024.
-
-For more information, read the [computed attributes UI guide](../../profile/computed-attributes/ui.md).
+If identity settings is enabled, then computed attributes will use namespace priority to store the computed attribute value. For a given event, the identity with the highest namespace priority will have the value of the computed attribute written against it. For more information, read the [computed attributes UI guide](../../profile/computed-attributes/ui.md).
 
 ### Data lake
 
@@ -166,7 +173,16 @@ When selecting your data, you will need to specify a namespace, which will be us
 
 This configuration results in computing scores only using authenticated events.
 
-For more information on, read the documents on [Attribution AI](../../intelligent-services/attribution-ai/overview.md) and [Customer AI](../../intelligent-services/customer-ai/overview.md).
+For more information, read the documents on [Attribution AI](../../intelligent-services/attribution-ai/overview.md) and [Customer AI](../../intelligent-services/customer-ai/overview.md).
+
+### Partner-built destinations
+
+Updated audience disqualification results for profiles associated to a shared device may not be sent to downstream destinations. This may happen in certain rare occurrences where:
+
+* Audience qualification is based only on anonymous activity.
+* Logins across multiple profiles occur in a short period of time.
+
+For more information on partner-built destinations, read the [destinations overview](../../destinations/home.md#adobe-built-and-partner-built-destinations).
 
 ### Privacy Service
 
@@ -179,4 +195,4 @@ For more information, read the [Privacy service overview](../../privacy-service/
 
 ### Adobe Target 
 
-You can only activate batch and streaming segmentation to Adobe Target.
+Adobe Target may yield unexpected user targeting for shared device scenarios when using edge segmentation.

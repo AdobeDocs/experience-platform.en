@@ -17,6 +17,7 @@ role: User,Developer
 - Data Distiller {#data-distiller}
     - [Overview](data-distiller/overview.md)
     - [License usage](data-distiller/license-usage.md)
+    - [Top tips to maximize value](data-distiller/top-tips-to-maximize-value.md)
     - Derived datasets {#derived-datasets}
         - [Overview](data-distiller/derived-datasets/overview.md)
         - [Create derived datasets with SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
@@ -33,6 +34,19 @@ role: User,Developer
         - [Engineer features for ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
         - [Export data to ML environments](data-distiller/ml-feature-pipelines/export-data.md)
         - [AI/ML data pipeline enrichment end-to-end workflow](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
+- Data Distiller statistics and machine learning {#advanced-statistics}
+    - [Overview](advanced-statistics/overview.md)
+    - [Feature engineering](advanced-statistics/feature-engineering.md)
+    - [Models](advanced-statistics/models.md)
+    - [Feature transformation](advanced-statistics/feature-transformation.md)
+    - Implement models {#implement-models}
+        - [Implement models](advanced-statistics/implement-models/implement-models.md)
+        - [Regression](advanced-statistics/implement-models/regression.md)
+        - [Classification](advanced-statistics/implement-models/classification.md)
+        - [Clustering](advanced-statistics/implement-models/clustering.md)
+    - Examples {#examples}
+        - [Bot filtering using statistics and machine learning](advanced-statistics/examples/statistics-and-ml-bot-filtering.md)
+        - [Predict customer churn using SQL-based logistic regression](advanced-statistics/examples/predict-customer-churn.md)
 - Data Distiller audiences {#data-distiller-audiences}
     - [Build external audiences using SQL](data-distiller-audiences/overview.md)
 - Examples {#use-cases}
@@ -40,6 +54,7 @@ role: User,Developer
     - [Abandoned browse](use-cases/abandoned-browse.md)
     - [Attribution analysis](use-cases/attribution-analysis.md)
     - [Bot filtering](use-cases/bot-filtering.md)
+    - [Bot filtering using statistics and machine learning introduction](use-cases/statistics-and-ml-bot-filtering-stub.md)
     - [Create a trended report of events](use-cases/trended-report-of-events.md)
     - [Consent analysis](use-cases/consent-analysis.md)
     - [Customer lifetime value](use-cases/customer-lifetime-value.md)
@@ -48,6 +63,7 @@ role: User,Developer
     - [Fuzzy match](use-cases/fuzzy-match.md)
     - [List the page views of a user](use-cases/list-visitor-sessions.md)
     - [List visitors by their page views](use-cases/visitors-by-number-of-page-views.md)
+    - [Predict customer churn using SQL](use-cases/predict-customer-churn-stub.md)
     - [Propensity score](use-cases/propensity-score.md)
     - [Retrieve similar records with higher-order functions](use-cases/retrieve-similar-records.md)
     - [Return and use merchandising variables from analytics data](use-cases/merchandising-variables.md)
@@ -70,6 +86,7 @@ role: User,Developer
     - [SSL modes](./clients/ssl-modes.md)
     - [Aqua Data Studio](clients/aqua-data-studio.md)
     - [DbVisualizer](./clients/dbvisulaizer.md)
+    - [GitHub Copilot](./clients/github-copilot.md)
     - [Jupyter Notebook](clients//jupyter-notebook.md)
     - [Looker](clients/looker.md)
     - [Postico](clients/postico.md)
@@ -87,7 +104,7 @@ role: User,Developer
     - [Monitor scheduled queries](ui/monitor-queries.md)
     - [Credentials guide](ui/credentials.md)
     - [Generate output datasets from query results](ui/create-datasets.md)
-- Query Service API endpoints {#api}
+- Query Service API {#api}
     - [Getting started](api/getting-started.md)
     - [Queries](api/queries.md)
     - [Connection parameters](api/connection-parameters.md)
@@ -96,6 +113,11 @@ role: User,Developer
     - [Query templates](api/query-templates.md)
     - [Accelerated queries](api/accelerated-queries.md)
     - [Alert subscriptions](api/alert-subscriptions.md)
+- Data Distiller Authorization API {#auth-api}
+    - [Overview](auth-api/overview.md)
+    - [Getting started](auth-api/getting-started.md)
+    - [IP access](auth-api/ip-access.md)
+    - [Validate](auth-api/validate.md)
 - Data Governance {#data-governance}
     - [Overview](data-governance/overview.md)
     - [Audit log guide](data-governance/audit-log-guide.md)

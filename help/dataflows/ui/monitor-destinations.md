@@ -88,7 +88,18 @@ Each individual dataflow run shows the following details:
 - **[!UICONTROL Identities activated]**: The total number of profile identities that were successfully activated to the selected destination as part of the dataflow run. This metric includes identities that are created, updated, and removed from exported audiences.
 - **[!UICONTROL Identities excluded]**: The total number of profile identities that are excluded from activation based on missing attributes and consent violation.
 - **[!UICONTROL Identities failed]** The total number of profile identities that are not activated to the destination due to errors.
-- **[!UICONTROL Activation rate]**: The percentage of received identities that have either been successfully activated or skipped. The following formula demonstrates how this value is calculated:
+
+  >[!IMPORTANT]
+  >
+  > Starting with October 2024, Adobe is rolling out an update to increase reporting accuracy for streaming destinations. This enhancement ensures a better alignment between the Experience Platform and the destination platforms reporting.
+  >
+  > Before this update, **[!UICONTROL Identities failed]** included all activation retries. After this update, only the last activation retry is included in the total count.
+  > 
+  > This enhancement currently applies to the [Google Customer Match destination](../../destinations/catalog/advertising/google-customer-match.md) but will be gradually rolled out to other Experience Platform streaming destinations.
+  > Following this enhancement, users of the [Google Customer Match destination](../../destinations/catalog/advertising/google-customer-match.md) may see an expected drop in their  **[!UICONTROL Identities failed]** count.
+ 
+
+- **[!UICONTROL Activation rate]**: The percentage of received identities that have been successfully activated. The following formula demonstrates how this value is calculated:
 ![Activation rate formula.](../assets/ui/monitor-destinations/activation-rate-formula.png)
 - **[!UICONTROL Status]**: Represents the state the dataflow is in: either [!UICONTROL Completed] or [!UICONTROL Processing]. [!UICONTROL Completed] means that all the identities for the corresponding dataflow run were exported within the one-hour period. [!UICONTROL Processing] means that the dataflow run has not yet finished.
 
@@ -104,7 +115,12 @@ The details page also displays a list of identities that failed and identities t
 
 #### (Beta) Audience-level dataflow run monitoring for streaming destinations {#audience-level-dataflow-runs-for-streaming-destinations}
 
-You can view information about the activated, excluded, or failed identities broken down on an audience level, for each audience that is part of the dataflow. Audience-level monitoring for streaming destinations is currently available for the [[!DNL Google Customer Match + Display & Video 360] destination](/help/destinations/catalog/advertising/google-customer-match-dv360.md) only. 
+You can view information about the activated, excluded, or failed identities broken down on an audience level, for each audience that is part of the dataflow.
+
+Audience-level monitoring for streaming destinations is currently available only for the following destinations:
+
+- [[!DNL Google Customer Match + Display & Video 360]](/help/destinations/catalog/advertising/google-customer-match-dv360.md)
+- [[!DNL Marketo Engage]](/help/destinations/catalog/adobe/marketo-engage.md)
 
 ![Audience-level monitoring for streaming destinations.](/help/dataflows/assets/ui/monitor-destinations/audience-level-monitoring-streaming.png)
 

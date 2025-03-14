@@ -583,7 +583,7 @@ The following request creates draft base connection for the [!DNL Azure File Sto
 
 ```shell
 curl -X POST \
-  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  'https://platform.adobe.io/data/foundation/flowservice/connections?mode=draft' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \

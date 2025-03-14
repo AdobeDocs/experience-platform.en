@@ -5,6 +5,10 @@ exl-id: 866e408f-6e0b-4e81-9ad8-9d74c485c89a
 ---
 # Create an [!DNL Oracle Eloqua] base connection using the [!DNL Flow Service] API
 
+>[!WARNING]
+>
+>The [!DNL Oracle Eloqua] source will be deprecated at the end of June 2025.
+
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
 This tutorial walks you through the steps to create a base connection for [!DNL Oracle Eloqua] using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).

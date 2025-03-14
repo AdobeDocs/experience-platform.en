@@ -84,6 +84,8 @@ role: Developer
     * Adobe Client Data Layer {#client-data-layer}
       * [Overview](./extensions/client/client-data-layer/overview.md)
       * [Release notes](./extensions/client/client-data-layer/release-notes.md)
+    * Adobe Content Analytics {#content-analytics}
+      * [Overview](./extensions/client/content-analytics/overview.md)
     * Adobe ContextHub {#contexthub}
       * [Overview](./extensions/client/contexthub/overview.md)
     * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)
@@ -200,9 +202,8 @@ role: Developer
     * [Vimeo Playback](https://exchange.adobe.com/apps/ec/108937)
     * [Web Vitals](https://exchange.adobe.com/apps/ec/106769)
     * [XDM Composer](https://exchange.adobe.com/apps/ec/106062)
-    * [Yahoo Dot](https://exchange.adobe.com/apps/ec/106062)
     * [Yext Conversion Tracking](https://exchange.adobe.com/apps/ec/103174)
-    * [[!DNL Youtube] Playback](https://exchange.adobe.com/apps/ec/103174)
+    * [[!DNL Youtube] Playback](https://exchange.adobe.com/apps/ec/104160)
     * [!DNL YouTube] video tracking {#youtube}
       * [Overview](./extensions/client/youtube/overview.md)
       * [Release notes](./extensions/client/youtube/release-notes.md)
@@ -236,7 +237,8 @@ role: Developer
     * [Pega Customer Decision Hub](https://exchange.adobe.com/apps/ec/107597)
     * [!DNL Pinterest] {#pinterest}
       * [Overview](./extensions/server/pinterest/overview.md)
-    * [Snap Conversions API](https://exchange.adobe.com/apps/ec/108550)
+    * [!DNL Snapchat] {#snap}
+      * [Overview](./extensions/server/snap/overview.md)
     * [!DNL Snowflake] {#snowflake}
       * [Overview](./extensions/server/snowflake/overview.md)
     * [!DNL Splunk] {#splunk}
@@ -255,10 +257,11 @@ role: Developer
   * [Supported browsers](./extension-dev/browsers.md)
   * Submission process {#submit}
     * [Overview](./extension-dev/submit/overview.md)
-    * [Company setup](./extension-dev/submit/setup.md)
+    * [Organization setup](./extension-dev/submit/setup.md)
     * [Grant user access](./extension-dev/submit/access.md)
     * [Develop an extension](./extension-dev/submit/develop.md)
     * [Create an exchange listing](./extension-dev/submit/create-listing.md)
+    * [Create an extension package zip](./extension-dev/submit/create-extension-package-zip.md)
     * [Upload and implement end-to-end testing](./extension-dev/submit/upload-and-test.md)
     * [Release an extension](./extension-dev/submit/release.md)
   * [Extension configuration](./extension-dev/configuration.md)

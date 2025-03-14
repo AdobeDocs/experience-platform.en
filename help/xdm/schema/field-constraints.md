@@ -17,7 +17,7 @@ If you plan on defining your own field types in the API, it is strongly recommen
 
 ## Base structure and examples {#basic-types}
 
-XDM is built on top of JSON Schema, and therefore XDM fields inherit a similar syntax when defining their type. Understanding how different field types are represented in JSON Schema can help indicate the base constraints of each type.
+XDM is built on top of JSON Schema, and therefore XDM fields inherit a similar syntax when defining their type. Understanding how different field types are represented in JSON Schema can help indicate the base constraints of each type. Custom fields names are case-insensitive and must have different names at the same level in your schema.
 
 >[!NOTE]
 >

@@ -37,9 +37,9 @@ For information on creating a technical account for use with tags in Adobe Exper
 
 >[!IMPORTANT]
 >
->In order to create an Integration in Adobe I/O you must be an Experience Cloud Organization Administrator or an Experience Cloud Org Developer.
+>In order to create an integration in Adobe I/O you must be an Experience Cloud Organization Administrator or an Experience Cloud Org Developer.
 
-If you cannot create an Integration, it is likely that you do not have the correct permissions. This will require either an Org Admin to complete the steps for you or to assign you as a developer.
+If you cannot create an integration, it is likely that you do not have the correct permissions. This will require either an Org Admin to complete the steps for you or to assign you as a developer.
 
 ## Upload Your extension package {#upload}
 
@@ -55,14 +55,16 @@ npx @adobe/reactor-uploader
 
 `npx` allows you to download and run an npm package without actually installing it on your machine. This is the simplest way to run the Uploader.
 
-The Uploader requires you to input several pieces of information. The technical account ID, API key, and other bits of information can be retrieved from the Adobe I/O console. Navigate to the [Integrations page](https://console.adobe.io/integrations) in the I/O console. Select the correct Org from the dropdown, find the right integration, and select **[!UICONTROL View]**.
+>[!NOTE]
+> By default, the uploader expects Adobe I/O credentials for a server-to-server Oauth flow. The legacy `jwt-auth` credentials
+> can be used by running `npx @adobe/reactor-uploader@v5.2.0` until deprecation on January 1, 2025. The parameters required
+> to run the `jwt-auth` version can be found [here](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
 
-- What is the path to your private key? /path/to/private.key. This is the place you saved your private key in step 2 above.
-- What is your Org ID? Copy and paste this from the I/O Console overview page that you left open earlier.
-- What is your technical account ID? Copy and paste this from the I/O Console.
-- What is your API key? Copy and paste this from the I/O Console.
-- What is the client secret? Copy and paste this from the I/O Console.
-- What is the path to the extension_package you want to upload? /path/to/extension_package.zip. If you invoke the uploader from within the directory containing your .zip package, you can just select it from the list instead of typing the path.
+The uploader requires you to input only a few pieces of information. The `clientId` and `clientSecret` can be retrieved from the Adobe I/O console. Navigate to the [Integrations page](https://console.adobe.io/integrations) in the I/O console. Select the correct Org from the dropdown, find the right integration, and select **[!UICONTROL View]**.
+
+- What is your `clientId`? Copy and paste this from the I/O Console.
+- What is your `clientSecret`? Copy and paste this from the I/O Console.
+- If you invoke the uploader from within the directory containing your .zip package, you can just select it from the list instead of typing the path.
 
 Your extension package will then be uploaded and the uploader will give you the ID of the extension_package.
 
@@ -73,6 +75,8 @@ Your extension package will then be uploaded and the uploader will give you the 
 >[!NOTE]
 >
 >If you plan to run the uploader often, putting all this information in each time can be a burden. You can also pass these in as arguments from the command line. Check out the [Command Line Arguments section](https://www.npmjs.com/package/@adobe/reactor-uploader#command-line-arguments) of the NPM docs for more info.
+
+If you'd like to manage uploading your extension using the API directly, see the example calls for [creating](../../api/endpoints/extension-packages.md/#create) or [updating](../../api/endpoints/extension-packages.md#update) an extension package in the API docs for more detail.
 
 ## Create a development property {#property}
 

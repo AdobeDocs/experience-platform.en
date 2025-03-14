@@ -11,6 +11,10 @@ exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
 
 With Adobe Experience Platform Identity Service and Real-Time Customer Profile, it is easy to assume that your data is ingested perfectly and that all merged profiles represent a single individual person through a person identifier, such as a CRMID. However, there are possible scenarios where certain data could try to merge multiple disparate profiles into a single profile ("graph collapse"). To prevent these unwanted merges, you can use configurations provided through identity graph linking rules and allow for accurate personalization for your users.
 
+Watch the following video for additional information on using identity graph linking rules:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops)
+
 ## Get started
 
 The following documents are essential in understanding identity graph linking rules.
@@ -23,7 +27,12 @@ The following documents are essential in understanding identity graph linking ru
 * [Graph simulation UI](./graph-simulation.md)
 * [Identity settings UI](./identity-settings-ui.md)
 
-## Example scenarios where graph collapse could happen {#example-scenarios-where-graph-collapse-could-happen}
+## Graph collapse scenarios {#graph-collapse-scenarios}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_graphcollapsescenarios"
+>title="Graph Collapse Scenarios"
+>abstract="There are multiple reasons why graphs could "collapse", or represent multiple person entities."
 
 This section outlines example scenarios that you may consider when configuring identity graph linking rules.
 
@@ -92,11 +101,11 @@ You can configure a namespace to be unique using the identity settings UI worksp
 
 Consider the following scenario:
 
-* Scott uses a tablet and opens his Google Chrome browser to go to nike<span>.com, where he signs in and browses for new basketball shoes.
+* Scott uses a tablet and opens his Google Chrome browser to go to acme<span>.com, where he signs in and browses for new basketball shoes.
   * Behind the scenes, this scenario logs the following identities:
     * An ECID namespace and value to represent the use of the browser
     * A CRMID namespace and value to represent the authenticated user (Scott signed in with his username and password combination).
-* His son Peter then uses the same tablet and also uses Google Chrome to go to nike<span>.com, where he signs in with his own account to browse for football equipment.
+* His son Peter then uses the same tablet and also uses Google Chrome to go to acme<span>.com, where he signs in with his own account to browse for football equipment.
   * Behind the scenes, this scenario logs the following identities:
     * The same ECID namespace and value to represent the browser.
     * A new CRMID namespace and value to represent the authenticated user.

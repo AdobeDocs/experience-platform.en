@@ -32,7 +32,7 @@ Locate your consent attributes from the options available. Select **[!UICONTROL 
 >
 >If you have maintained your user consent in an attribute different to the Adobe recommended field group, then you must select those attributes instead of the ones shown below.
 
-More information can be found on the [handling of consent in segmentation](../../segmentation/consents.md#handling-consent-in-segmentation) documentation.
+More information can be found on the [handling of consent in segmentation](../../segmentation/tutorials/consents.md#handling-consent-in-segmentation) documentation.
 
 ![The Segment Builder with the [!UICONTROL Consent and Preferences] attribute folder highlighted.](../images/insights-use-cases/consent-analysis/consent-and-preferences.png)
 
@@ -106,13 +106,13 @@ After you have created a consent-related audience such as "Users Consented to SM
 
 You can also build out your own widgets with user-defined dashboards. Building your own widget gives you complete control over the type of widget, along with flexibility to add filters and much more, directly within Adobe Real-Time CDP. 
 
-For example, if you want to trend multiple consent audiences in the same chart so that you can see over time how each of your consent preferences has changed. This type of visualization is possible with user-defined dashboards in minimal steps and a one time setup. First, select **[!UICONTROL Dashboards]** in the left navigation. The [!UICONTROL Dashboards] workspace appears. Then select **[!UICONTROL Create dashboard]**. Full instructions on how to [create a dashboard and custom widget](../user-defined-dashboards.md) can be found in the user-defined dashboards guide. 
+For example, if you want to trend multiple consent audiences in the same chart so that you can see over time how each of your consent preferences has changed. This type of visualization is possible with user-defined dashboards in minimal steps and a one time setup. First, select **[!UICONTROL Dashboards]** in the left navigation. The [!UICONTROL Dashboards] workspace appears. Then select **[!UICONTROL Create dashboard]**. Full instructions on how to [create a dashboard and custom widget](../standard-dashboards.md) can be found in the user-defined dashboards guide. 
 
-![The dashboards workspace with Dashboards and Create dashboard highlighted.](../images/user-defined-dashboards/create-dashboard.png)
+![The dashboards workspace with Dashboards and Create dashboard highlighted.](../images/standard-dashboards/create-dashboard.png)
 
-When you [select your data model](../user-defined-dashboards.md#select-data-model) in the widget composer, select `CDPInsights` followed by **[!UICONTROL Next]**. The [!UICONTROL Select table] dialog appears.
+When you [select your data model](../standard-dashboards.md#select-data-model) in the widget composer, select `CDPInsights` followed by **[!UICONTROL Next]**. The [!UICONTROL Select table] dialog appears.
 
-![The Select data model dialog with the CDPInsights model highlighted.](../images/user-defined-dashboards/select-data-model-dialog.png)
+![The Select data model dialog with the CDPInsights model highlighted.](../images/standard-dashboards/select-data-model-dialog.png)
 
 The next view displays a list of the available tables in the left rail. Select the `adwh_fact_profile_by_segment_and_namespace_trendlines`.
 
@@ -120,16 +120,16 @@ The next view displays a list of the available tables in the left rail. Select t
 
 After the widget composer is populated with data from your chosen table, perform the steps below:
 
-- [Search [!UICONTROL Attributes]](../user-defined-dashboards.md#add-filter-attributes) for `[!UICONTROL date]`, then use the + icon to add the `[!UICONTROL date]` attribute to the X-axis from the dropdown menu.
-![The widget composer with the add-icon and dropdown menu highlighted.](../images/user-defined-dashboards/attributes-dropdown.png)
+- [Search [!UICONTROL Attributes]](../standard-dashboards.md#add-filter-attributes) for `[!UICONTROL date]`, then use the + icon to add the `[!UICONTROL date]` attribute to the X-axis from the dropdown menu.
+![The widget composer with the add-icon and dropdown menu highlighted.](../images/standard-dashboards/attributes-dropdown.png)
 - Search [!UICONTROL Attributes] for `[!UICONTROL count_of_profiles]`, then use the + icon to add the `[!UICONTROL count_of_profiles]` attribute to the Y-axis from the dropdown menu.
 - Select the `...` (ellipses) icon in the [!UICONTROL Y-axis] field, then select the [!UICONTROL SUM] aggregate function from the dropdown menu.
 ![The widget composer Consent trends widget with the data model, table, and the Y-axis dropdown menu and SUM feature highlighted. ](../images/insights-use-cases/consent-analysis/y-axis-sum-function.png)
 - Select the [!UICONTROL Marks] dropdown menu, and change the chart type to [!UICONTROL Line]. 
 - Search [!UICONTROL Attributes] for the `[!UICONTROL segment_name]`, then use the + icon to add the `segment_name` as a [!UICONTROL Filter] from the dropdown menu. The [!UICONTROL Filter: Segment_name] dialog appears. Select the audiences created earlier that relate to consent. For this example, select **[!UICONTROL Users Consented to Calls]**, **[!UICONTROL Users Consented to SMS]**, and **[!UICONTROL Users Consented to Email]**, followed by **[!UICONTROL Apply]**.
 - Search [!UICONTROL Attributes] for `[!UICONTROL segment_name]`, then select the + icon to add `segment_name` as a [!UICONTROL Color] from the dropdown menu. 
-- Open [the [!UICONTROL Properties] panel](../user-defined-dashboards.md#widget-properties) and provide an appropriate [!UICONTROL Widget title] and [!UICONTROL Axis label].
-![The widget composer with the properties icon and Widget title highlighted.](../images/user-defined-dashboards/properties-panel.png)
+- Open [the [!UICONTROL Properties] panel](../standard-dashboards.md#widget-properties) and provide an appropriate [!UICONTROL Widget title] and [!UICONTROL Axis label].
+![The widget composer with the properties icon and Widget title highlighted.](../images/standard-dashboards/properties-panel.png)
 - Select **[!UICONTROL Save and close]** to confirm your settings.
 
 >[!TIP]

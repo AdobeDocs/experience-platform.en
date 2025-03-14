@@ -178,7 +178,13 @@ The **[!UICONTROL Remove]** dialog appears prompting you to confirm your selecti
 >
 >The selected sandbox has been successfully removed from the policy.
 
-## Activate a policy
+## Activate a policy {#activate-policy}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_about"
+>title="What are policies?"
+>abstract="Policies are statements that bring attributes together to establish permissible and impermissible actions. Every organization comes with a default policy that you must activate to start controlling access to specific objects based on labels. Labels applied to resources deny access unless users are assigned to a role with a matching label. Default policies cannot be edited or deleted, but they can be activated or deactivated."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/labels" text="Manage labels"
 
 To activate an existing policy, select the policy from the **[!UICONTROL Policies]** tab. 
 

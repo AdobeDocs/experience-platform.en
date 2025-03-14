@@ -18,7 +18,7 @@ exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
 | `lastActivityDate` | DateTime | The last activity date for the source system. |
 | `lastReferencedDate` | DateTime | The last referenced date for the source system. |
 | `lastUpdatedBy` | String | The name of the person who last updated this record. |
-| `lastUpdatedDate` | DateTime | The last updated date for the source system. |
+| `lastUpdatedDate` | DateTime | The last updated date for the source system. This value is used by the [attribute merge policy](../../profile/api/merge-policies.md#attribute-merge) to determine priority in the case of merge conflicts. |
 | `lastViewedDate` | DateTime | The last viewed date for the source system. |
 
 {style="table-layout:auto"}

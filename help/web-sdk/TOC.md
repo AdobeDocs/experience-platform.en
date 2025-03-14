@@ -17,10 +17,11 @@ role: Developer
   * [Install the Web SDK using the tag extension](install/extension.md)
   * [Install the Web SDK using the JavaScript library](install/library.md)
   * [Install the Web SDK using the NPM package](install/npm.md)
+  * [Create a custom Web SDK build using the NPM package](install/create-custom-build.md)
 * Commands {#commands}
   * configure {#configure}
     * [Overview](commands/configure/overview.md)
-    * [autoTrackPropositionInteractionsEnabled](commands/configure/autotrackpropositioninteractionsenabled.md)
+    * [autoCollectPropositionInteractions](commands/configure/autocollectpropositioninteractions.md)
     * [clickCollectionEnabled](commands/configure/clickcollectionenabled.md)
     * [clickCollection](commands/configure/clickcollection.md)
     * [context](commands/configure/context.md)
@@ -102,6 +103,6 @@ role: Developer
   * [Debugging methods](use-cases/debugging.md)
   * [Use multiple Web SDK instances](use-cases/multiple-instances.md)
   * [Configure top and bottom page events](use-cases/top-bottom-page-events.md)
-
+* [Monitoring hooks](monitoring-hooks.md)
 * [Frequently Asked Questions](faq.md)
 * [Resources](resources.md)

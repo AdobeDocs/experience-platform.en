@@ -10,6 +10,56 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 This document covers the release notes for the Adobe Experience Platform Web SDK.
 For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## Version 2.26.0 - March 5, 2025
+
+**New features**
+
+- You can now use the Web SDK NPM package to create custom Web SDK builds and select only the library components that you need. This leads to a reduces library size and optimized loading times. See the documentation on how to [create a custom Web SDK build using the NPM package](install/create-custom-build.md).
+- The [`getIdentity`](commands/getidentity.md) command now automatically reads the ECID directly from the `kndctr` identity cookie. If you call `getIdentity` with the `ECID` namespace, and there is already an identity cookie, Web SDK no longer makes a request to the Edge Network to get the identity. It now reads the identity from the cookie.
+
+**Fixes and improvements**
+
+- Fixed an issue where `getIdentity` commands did not return the identity after a `collect` call was sent.
+- Fixed an issue where personalization redirects caused content flickering before the redirect occurred.
+
+## Version 2.25.0 - January 23, 2025
+
+**Fixed and improvements**
+
+- Added option validation to the `setDebug` command.
+- Added a warning when configuring either an `onBeforeLinkClickSend` function or a download link qualifier when click collection is disabled.
+- Fixed an issue where rendered propositions were not included in display notifications.
+
+**New features**
+
+- Implemented a fallback to the configured Edge domain when third-party cookies are enabled and requests to adobedc.demdex.net are blocked.
+
+## Version 2.24.1 - December 6, 2024
+
+**Fixed and improvements**
+
+- Resolved a dependency issue related to [Adobe Experience Platform Rules Engine](https://github.com/adobe/aepsdk-rulesengine-typescript/), which was causing errors in some customer integrations. The Web SDK now requires [Adobe Experience Platform Rules Engine](https://github.com/adobe/aepsdk-rulesengine-typescript/) version 2.0.3 or later.
+
+## Version 2.24.0 - October 31, 2024
+
+**New features**
+
+- [Datastream overrides](../datastreams/overrides.md) are now supported when starting media sessions.
+
+- Added support for Adobe Target response tokens in the [`onContentRendering`](monitoring-hooks.md#onContentRendering)monitoring hook.
+
+**Fixes and improvements**
+
+- When multiple in-app messages are returned, only the one with the highest priority is shown. The others are recorded as suppressed.
+- Empty datastream overrides are no longer sent to the Edge Network, reducing potential conflicts with server side routing configurations.
+- Renamed the following logging message component names, to align with other Adobe SDKs:
+    - `DecisioningEngine` has been renamed to `RulesEngine`
+    - `LegacyMediaAnalytics`  has been renamed to `MediaAnalyticsBridge`
+    - `Privacy` has been renamed to `Consent`
+- Fixed an error that occurred when default content items were rendered via [`applyPropositions`](../web-sdk/commands/applypropositions.md).
+- Fixed a CSS error in Adobe Target move and resize actions.
+- Removed the `machineLearning` key from [`sendEvent`](../web-sdk/commands/sendevent/overview.md) responses.
+
 ## Version 2.23.0 - September 19, 2024
 
 **New features**

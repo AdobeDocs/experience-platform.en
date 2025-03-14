@@ -27,6 +27,39 @@ After selecting **[!UICONTROL Install]**, you must configure the Web SDK tag ext
 >
 >The tag extension only gets installed after saving the configuration. See the next sections to learn how to configure the tag extension.
 
+## Create a custom Web SDK build {#custom-build}
+
+The Web SDK library includes multiple modules for various features like personalization, identity, link tracking, and more. Depending on your use cases, you might only need specific features instead of the entire library. Creating a custom Web SDK build allows you to select only the modules you need, reducing the library size and improving performance.
+
+When you create a custom Web SDK build, the build is used by all of your Web SDK instances.
+
+>[!IMPORTANT]
+>
+>Disabling Web SDK components can break your existing implementation. Each time you disable a component, make sure to test your implementation thoroughly to make sure that all functionalities that you need are working as expected.
+>When you disable a component, you can no longer edit the settings of that component.
+
+To create a custom Web SDK build by using the Web SDK tag extension, follow the steps below.
+
+1. In the tag extension configuration page, expand the **[!UICONTROL Custom build components]** section.
+1. Enable or disable the components, based on your needs. You can select from the following components:
+    * **[!UICONTROL Activity collector]**: This component enables automatic link collection and activity map tracking.
+    * **[!UICONTROL Audiences]**: This components enables Audience Manager integration, including URL and cookie-based destinations, and ID syncs.
+    * **[!UICONTROL Consent]**: This component enables consent integrations. Disabling this component disables the following elements:
+      * [Set consent](action-types.md#set-consent) action type
+    * **[!UICONTROL Context]**: This component enables automatic collection of context data.
+    * **[!UICONTROL Event merge]**: _Deprecated_. Disabling this component disables the following elements:
+      * [Event merge ID](action-types.md#data) data element
+      * **[!UICONTROL Reset event merge ID]** action type
+    * **[!UICONTROL Media analytics bridge]**: This component enables Edge Network Streaming Media using the media analytics interface. Disabling this component disables the following elements:
+      * [Get Media Analytics Tracker](action-types.md#get-media-analytics-tracker) action type
+    * **[!UICONTROL Personalization]**: This component enables the Adobe Target and Adobe Journey Optimizer integrations. Disabling this component disables the following elements:
+      * [Apply propositions action](action-types.md) type
+    * **[!UICONTROL Rules engine]**: This component enables the Adobe Journey Optimizer on-device decisioning. Disabling this component disables the following elements:
+      * [Evaluate rulesets](action-types.md#evaluate-rulesets) action type
+      * [Subscribe ruleset items](event-types.md#subscribe-ruleset-items) event type
+    * **[!UICONTROL Streaming media]**: This component enables Edge Network Streaming Media. Disabling this component disables the following elements:
+      * [Send media event](action-types.md#send-media-event) action type
+
 ## Configure instance settings {#general}
 
 The configuration options at the top of the page tell Adobe Experience Platform where to route the data and what configurations to use on the server.
@@ -164,6 +197,66 @@ As an alternative to passing the overrides through a Web SDK command, you can co
 > Datastream overrides must be configured on a per-environment basis. The development, staging, and production environments all have separate overrides. You can copy the settings between them using the dedicated options shown in the screen below.
 
 ![Image showing the datastream configuration overrides using the Web SDK tag extension page.](assets/datastream-overrides.png)
+
+By default, the datastream configuration override is disabled. The **[!UICONTROL Match datastream configuration]** option is selected by default.
+
+![Web SDK tag extension user interface showing the datastream configuration overrides default setting.](assets/datastream-override-default.png)
+
+To enable datastream overrides in the tag extension, select **[!UICONTROL Enabled]** from the drop down menu.
+
+![Web SDK tag extension user interface showing the datastream configuration overrides Enabled setting.](assets/datastream-override-enabled.png)
+
+After you enable the datastream configuration overrides, you can configure the overrides for each service described below.
+
+The datastream override settings below will override any server-side datastream configurations and rules for the selected environment.
+
+### Adobe Analytics {#analytics}
+
+Use the settings in this section to override data routing to the Adobe Analytics service.
+
+![Web SDK tag extension UI image showing the Adobe Analytics datastream override settings.](assets/datastream-override-analytics.png)
+
+* **[!UICONTROL Enabled]** / **[!UICONTROL Disabled]**: Use this drop-down menu to enable or disable data routing to the Adobe Analytics service.
+* **[!UICONTROL Report suites]**: The IDs for the destination report suites in Adobe Analytics. The value must be a preconfigured override report suite (or a comma-separated list of report suites) from your datastream configuration. This setting overrides the primary report suites.
+* **[!UICONTROL Add Report Suite]**: Select this option to add additional report suites.
+
+### Adobe Audience Manager {#audience-manager}
+
+Use the settings in this section to override data routing to the Adobe Audience Manager service.
+
+![Web SDK tag extension UI image showing the Adobe Audience Manager datastream override settings.](assets/datastream-override-audience-manager.png)
+
+* **[!UICONTROL Enabled]** / **[!UICONTROL Disabled]**: Use this drop-down menu to enable or disable data routing to the Adobe Audience Manager service.
+* **[!UICONTROL Third-party ID sync container]**: The ID for the destination third-party ID sync container in Audience Manager. The value must be a preconfigured secondary container from your datastream configuration and overrides the primary container.
+
+### Adobe Experience Platform {#experience-platform}
+
+Use the settings in this section to override data routing to the Adobe Experience Platform service.
+
+![Web SDK tag extension UI image showing the Adobe Experience Platform datastream override settings.](assets/datastream-override-experience-platform.png)
+
+* **[!UICONTROL Enabled]** / **[!UICONTROL Disabled]**: Use this drop-down menu to enable or disable data routing to the Adobe Experience Platform service.
+* **[!UICONTROL Event dataset]**: The ID for the destination event dataset in the Adobe Experience Platform. The value must be a preconfigured secondary dataset from your datastream configuration.
+* **[!UICONTROL Offer Decisioning]**: Use this drop-down menu to enable or disable data routing to the [!DNL Offer Decisioning] service.
+* **[!UICONTROL Edge Segmentation]**: Use this drop-down menu to enable or disable data routing to the [!DNL Edge Segmentation] service.
+* **[!UICONTROL Personalization Destinations]**: Use this drop-down menu to enable or disable data routing to personalization destinations.
+* **[!UICONTROL Adobe Journey Optimizer]**: Use this drop-down menu to enable or disable data routing to the [!DNL Adobe Journey Optimizer] service.
+
+### Adobe Server-Side Event Forwarding {#ssf}
+
+Use the settings in this section to override data routing to the Adobe Server-Side Event Forwarding service.
+
+![Web SDK tag extension UI image showing the Adobe Server-Side Event Forwarding datastream override settings.](assets/datastream-override-ssf.png)
+
+* **[!UICONTROL Enabled]** / **[!UICONTROL Disabled]**: Use this drop-down menu to enable or disable data routing to the Adobe Server-Side Event Forwarding service.
+
+### Adobe Target {#target}
+
+Use the settings in this section to override data routing to the Adobe Target service.
+
+![Web SDK tag extension UI image showing the Adobe Target datastream override settings.](assets/datastream-override-target.png)
+
+* **[!UICONTROL Enabled]** / **[!UICONTROL Disabled]**: Use this drop-down menu to enable or disable data routing to the Adobe Target service.
 
 ## Configure advanced settings
 

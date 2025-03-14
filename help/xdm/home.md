@@ -123,6 +123,10 @@ See the [Real-Time Customer Profile overview](../profile/home.md) for more infor
 
 ### Data Science Workspace {#data-science-workspace}
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase. This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
+
 Adobe Experience Platform Data Science Workspace uses machine learning and artificial intelligence to gain insights from data stored within Experience Platform. Data Science Workspace allows data scientists to build recipes based on [!UICONTROL XDM Individual Profile] and [!UICONTROL XDM ExperienceEvent] data about customers and their activities. These recipes facilitate predictions such as buying propensity and recommended offers that the individual is likely to appreciate and use.
 
 With Data Science Workspace, data scientists can easily create intelligent service APIs powered by machine learning. These services work with other Adobe solutions, including Adobe Target and Adobe Analytics Cloud, to help you automate personalized, targeted digital experiences.

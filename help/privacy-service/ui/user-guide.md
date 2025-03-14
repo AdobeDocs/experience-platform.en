@@ -5,7 +5,7 @@ title: Manage Privacy Jobs in the Privacy Service UI
 description: Learn how to use the Privacy Service user interface to coordinate and monitor privacy requests across various Experience Cloud applications.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 ---
-# Manage privacy jobs in the Privacy Service UI {#user-guide}
+# Manage privacy jobs in the Privacy Service UI {#user-guide} 
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_requests_description"
@@ -30,26 +30,38 @@ The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow 
 
 [!DNL Privacy Service] supports job requests for several privacy regulations. The following table lists the supported regulations and their corresponding label as represented in the UI: 
 
-| UI label | Regulation |
-| --- | --- |
-| [!UICONTROL APA_AUS] | The [!DNL Australia Privacy Act (Privacy Act)] |
-| [!UICONTROL CPA] | The [!DNL Colorado Privacy Act] |
-| [!UICONTROL CCPA] | The [!DNL California Consumer Privacy Act] |
-| [!UICONTROL CPRA_USA] | The [!DNL California Consumer Privacy Rights Act (CPRA)] |
-| [!UICONTROL CTDPA] | The [!DNL Connecticut Data Privacy Act] |
-| [!UICONTROL FDBR_USA] | The [!DNL Florida Digital Bill of Rights] |
-| [!UICONTROL GDPR] | The European Union's [!DNL General Data Protection Regulation] |
-| [!UICONTROL HIPAA_AUS] | The [!DNL Health Insurance Portability and Accountability Act] |
-| [!UICONTROL LGPD_BRA] | Brazil's [!DNL Lei Geral de Proteção de Dados] |
-| [!UICONTROL MHMDA] | The [!DNL Washington My Health My Data Act] |
-| [!UICONTROL NZPA_NZL] | The New Zealand [!DNL Privacy Act] |
-| [!UICONTROL OCPA_USA] | The [!DNL Oregon Consumer Privacy Act] |
-| [!UICONTROL PDPA_THA] | Thailand's [!DNL Personal Data Protection Act] |
-| [!UICONTROL TDPSA_USA] | The [!DNL Texas Data Privacy and Security Act] |
-| [!UICONTROL UCPA]  | The [!DNL Utah Consumer Privacy Act] |
-| [!UICONTROL VCDPA_USA] | The [!DNL Virginia Consumer Data Protection Act] |
+| UI Label                            |  Regulation    |
+|-------------------------------------|------------------------|
+| [!UICONTROL APA_AUS  (Australia)]   | The [!DNL Australia Privacy Act] |
+| [!UICONTROL CCPA (California)]      | The [!DNL California Consumer Privacy Act]|
+| [!UICONTROL CPA_USA (Colorado)]     | The [!DNL Colorado Privacy Act] |
+| [!UICONTROL CPRA_USA (California)]  | The [!DNL California Consumer Privacy Rights Act (CPRA)] |
+| [!UICONTROL CTDPA_USA (Connecticut)]| The [!DNL Connecticut Data Privacy Act] |
+| [!UICONTROL DPDPA_USA (Delaware)]   | The [!DNL Delaware Personal Data Privacy Act]   |
+| [!UICONTROL FDBR_USA (Florida)]     | The [!DNL Florida Digital Bill of Rights]|
+| [!UICONTROL GDPR (European Union)]  | The European Union's [!DNL General Data Protection Regulation]|
+| [!UICONTROL HIPPA_USA (United States)]| The [!DNL Health Insurance Portability and Accountability Act] |
+| [!UICONTROL ICDPA_USA] (Iowa)       | The [!DNL Iowa Consumer Data Protection Act] |
+| [!UICONTROL LGPD_BRA (Brazil)]      | Brazil's "[!DNL General Data Protection Law]" [!DNL Lei Geral de Proteção de Dados]|
+| [!UICONTROL MHMDA_USA (Washington)] | The [!DNL Washington My Health My Data Act] |
+| [!UICONTROL MCDPA_USA (Montana)]    | The [!DNL Montana Consumer Data Privacy Act] |
+| [!UICONTROL NDPA_USA (Nebraska)]    | The [!DNL Nebraska Data Protection Act] |
+| [!UICONTROL NZPA_NZL (New Zealand)] | New Zealand's [!DNL Privacy Act] |
+| [!UICONTROL NHPA_USA (New Hampshire)]| The [!DNL New Hampshire Privacy Act] |
+| [!UICONTROL NJDPA_USA (New Jersey)] | The [!DNL New Jersey Data Protection Act] |
+| [!UICONTROL OCPA USA (Oregon)]      | The [!DNL Oregon Consumer Privacy Act] |
+| [!UICONTROL PDPA_THA (Thailand)]    | Thailand's [!DNL Personal Data Protection Act] |
+| [!UICONTROL QL25_CAN (Quebec)]      | [!DNL Quebec Law 25]   |
+| [!UICONTROL TDPSA USA (Texas)]      | The [!DNL Texas Data Privacy and Security Act] |
+| [!UICONTROL UCPA_USA (Utah)]        | The [!DNL Utah Consumer Privacy Act] |
+| [!UICONTROL VCDPA_USA (Virginia)]   | The [!DNL Virginia Consumer Data Protection Act] |
 
 {style="table-layout:auto"}
+
+<!-- 
+Waiting:
+| **[!UICONTROL PIPA_KOR]**  ?        | South Korea [!DNL Personal Information Privacy Act] |
+ -->
 
 >[!NOTE]
 >
@@ -141,29 +153,29 @@ To start using the Request builder, select **[!UICONTROL Create Request]** below
 
 The **[!UICONTROL Create Request]** dialog opens, displaying the available options for submitting a privacy job request for the currently selected regulation type.
 
-<img src="../images/user-guide/request-builder.png" width=500 /><br/>
+![](../images/user-guide/request-builder.png){width=500}
 
 Select the **[!UICONTROL Job Type]** of the request ("Delete" or "Access") and one or more available products from the list.
 
 Privacy Service supports two kinds of job requests for personal data: [!UICONTROL Access] (read) and/or [!UICONTROL Delete]. You can either submit a request to receive all information held in the product that relates to the subject of the inquiry, or request to delete all the information that relates to the subject of the inquiry.
 
-<img src="../images/user-guide/type-and-products.png" width=500 /><br/>
+![](../images/user-guide/type-and-products.png){width=500}
 
 Under **[!UICONTROL Namespace type]**, select the appropriate namespace type for the customer IDs being sent to [!DNL Privacy Service].
 
-<img src="../images/user-guide/namespace-type.png" width=500 /><br/>
+![](../images/user-guide/namespace-type.png){width=500}
 
 When using the standard namespace type, select a namespace from the drop-down menu (email, ECID, or AAID), then type the ID values in the textbox to the right, pressing **\<enter>** for each ID to add it to the list.
 
-<img src="../images/user-guide/standard-namespace.png" width=500 /><br/>
+![](../images/user-guide/standard-namespace.png){width=500}
 
 When using the custom namespace type, you must manually type in the namespace before providing the ID values below.
 
-<img src="../images/user-guide/custom-namespace.png" width=500 /><br/>
+![](../images/user-guide/custom-namespace.png){width=500}
 
 When finished, select **[!UICONTROL Create]**.
 
-<img src="../images/user-guide/request-builder-create.png" width=500 /><br/>
+![](../images/user-guide/request-builder-create.png){width=500}
 
 The dialog disappears, and the new job (or jobs) are listed in the Job Requests widget along with their current processing status.
 
@@ -177,12 +189,12 @@ Select the arrow next to **[!UICONTROL Create Request]**, below the Status Repor
 
 The **[!UICONTROL Upload JSON]** dialog appears, providing a window for you to drag and drop your JSON file into.
 
-<img src="../images/user-guide/upload-json.png" width=500 /><br/>
+![](../images/user-guide/upload-json.png){width=500}
 
 If you do not have a JSON file to upload, select **[!UICONTROL Download Adobe-GDPR-Request.json]** to download a template that you can populate according to the values you have collected from your data subjects.
 
 
-<img src="../images/user-guide/privacy-template.png" width=500 /><br/>
+![](../images/user-guide/privacy-template.png){width=500}
 
 
 Locate the JSON file on your computer, and drag it into the dialog window. If the upload is successful, the file name appears in the dialog. You can continue to add more JSON files as necessary by dragging and dropping them into the dialog.

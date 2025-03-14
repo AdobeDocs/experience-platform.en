@@ -12,6 +12,7 @@ role: Developer
 
 * [Datastreams overview](overview.md)
 * [Configure a datastream](configure.md)
+* [Create dynamic datastream configurations](configure-dynamic-datastream.md)
 * [Configure bot detection for datastreams](bot-detection.md)
 * [Configure datastream overrides](overrides.md)
 * [Data Prep for Data Collection](data-prep.md)

@@ -17,7 +17,7 @@ The Data Access API supports Adobe Experience Platform by providing users with a
 
 ## API specification reference
 
-The OpenAPI reference documentation can be found [here](https://developer.adobe.com/experience-platform-apis/references/data-access/).
+Refer to the [Data Access OpenAPI reference documentation](https://developer.adobe.com/experience-platform-apis/references/data-access/) to view a standardized, machine-readable format for easier integration, testing, and exploration.
 
 ## Terminology {#terminology}
 
@@ -148,7 +148,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 
 | Property | Description |
 | -------- | ----------- |
-| `data.name` | The name of the file (for example, `profiles.csv`). |
+| `data.name` | The name of the file (for example, `profiles.parquet`). |
 | `data.length` | The size of the file (in bytes). |
 | `data._links.self.href` | The URL to download the file. |
 
@@ -195,7 +195,7 @@ When a directory is returned, it contains an array of all files within the direc
 
 | Property | Description |
 | -------- | ----------- |
-| `data.name` | The name of the file (for example, `profiles.csv`). |
+| `data.name` | The name of the file (for example, `profiles.parquet`). |
 | `data._links.self.href` | The URL to download the file. |
 
 ## Access the contents of a file {#access-file-contents}
@@ -225,7 +225,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 | Property | Description |
 | -------- | ----------- |
 | `{FILE_ID}` | The ID of the file within a dataset. |
-| `{FILE_NAME}` | The full name of the file (for example, `profiles.csv`). |
+| `{FILE_NAME}` | The full name of the file (for example, `profiles.parquet`). |
 
 **Response**
 

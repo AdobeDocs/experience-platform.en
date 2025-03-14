@@ -56,7 +56,7 @@ Make sure to set a schedule to refresh your custom data model on a regular caden
 
 ## Build a dashboard to capture insights {#build-a-custom-dashboard}
 
-Now that you have created your custom data model, you are ready to visualize your data with custom queries and user-defined dashboards. See the user-defined dashboards overview for full guidance on how to [build a custom dashboard](../../dashboards/user-defined-dashboards.md). The UI guide includes details on:
+Now that you have created your custom data model, you are ready to visualize your data with custom queries and user-defined dashboards. See the user-defined dashboards overview for full guidance on how to [build a custom dashboard](../../dashboards/standard-dashboards.md). The UI guide includes details on:
 
 * How to create a widget.
 * How to use the widget composer.

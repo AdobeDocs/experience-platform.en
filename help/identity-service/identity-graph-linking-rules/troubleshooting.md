@@ -53,8 +53,8 @@ Within the context of identity graph linking rules, a record may be rejected fro
 
 Consider the following event with two assumptions:
 
-* The field name CRMID is marked as an identity with the namespace CRMID.
-* The namespace CRMID is defined as a unique namespace.
+1. The field name CRMID is marked as an identity with the namespace CRMID.
+2. The namespace CRMID is defined as a unique namespace.
 
 The following event will return an error message indicating that ingestion has failed. 
 
@@ -117,6 +117,24 @@ After running your query, find the event record that you expected to generate a 
 >
 >If the two identities are exactly the same, and if the event is ingested via streaming, then both Identity and Profile will deduplicate the identity.
 
+### Post-authentication ExperienceEvents are being attributed to the wrong authenticated profile
+
+Namespace priority plays an important role in how event fragments determine primary identity.
+
+* Once you have configured and saved your [identity settings](./identity-settings-ui.md) for a given sandbox, Profile will then use [namespace priority](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events) to determine the primary identity. In the case of identityMap, Profile will then no longer use the `primary=true` flag.
+* While Profile will no longer refer to this flag, other services on Experience Platform may continue to use the `primary=true` flag.
+
+In order for [authenticated user events](implementation-guide.md#ingest-your-data) to be tied to the person namespace, all authenticated events must contain the person namespace (CRMID). This means that even after a user logs in, the person namespace must still be present on every authenticated event.
+
+You may continue to see `primary=true` 'events' flag when looking up a profile in profile viewer. However, this is ignored and will not be used by Profile.
+
+AAIDs are blocked by default. Therefore, if you are using the [Adobe Analytics source connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md), you must ensure that the ECID is prioritized higher than the ECID so that the unauthenticated events will have a primary identity of ECID.
+
+**Troubleshooting steps**
+
+1. To validate that authenticated events contain both the person and cookie namespace, read the steps outlined in the section on [troubleshooting errors regarding data not being ingested to Identity Service](#my-identities-are-not-getting-ingested-into-identity-service).
+2. To validate that authenticated events have the primary identity of the person namespace (e.g. CRMID), search the person namespace on profile viewer using no-stitch merge policy (this is the merge policy that does not use private graph). This search will only return events associated to the person namespace. 
+
 ### My experience event fragments are not getting ingested into Profile {#my-experience-event-fragments-are-not-getting-ingested-into-profile}
 
 There are various reasons that contribute as to why your experience event fragments are not getting ingested into Profile, including but not limited to:
@@ -125,12 +143,8 @@ There are various reasons that contribute as to why your experience event fragme
 * [A validation failure may have occurred on Profile](../../xdm/classes/experienceevent.md).
   * For example, an experience event must contain both an `_id` and a `timestamp`.
   * Additionally, the `_id` must be unique for each event (record).
-* The namespace with the highest priority is an empty string.
 
-In the context of namespace priority, Profile will reject: 
-
-* Any event that contains two or more identities with the highest namespace priority. For example, if GAID is not marked as a unique namespace and two identities both with a GAID namespace and different identity values came in, then Profile will not store any of the events.
-* Any event where the namespace with the highest priority is an empty string.
+In the context of namespace priority, Profile will reject any event that contains two or more identities with the highest namespace priority. For example, if GAID is not marked as a unique namespace and two identities both with a GAID namespace and different identity values came in, then Profile will not store any of the events.
 
 **Troubleshooting steps**
 
@@ -151,43 +165,16 @@ If your data is sent to data lake, but not Profile, and you believe that this is
   FROM dataset_name)) WHERE col.id != _testimsorg.identification.core.email and key = 'Email' 
 ```
 
-You can also run the following query to check if ingestion to Profile is not happening due to the highest namespace having an empty string:
-
-```sql
-  SELECT identityMap, key, col.id as identityValue, _testimsorg.identification.core.email, _id, timestamp 
-  FROM (SELECT key, explode(value), * 
-  FROM (SELECT explode(identityMap), * 
-  FROM dataset_name)) WHERE (col.id = '' or _testimsorg.identification.core.email = '') and key = 'Email' 
-```
-
-These two queries assume that:
+This query assumes that:
 
 * One identity is sent from the identityMap, and another identity is sent from an identity descriptor. **NOTE**: In Experience Data Model (XDM) schemas, the identity descriptor is the field marked as an identity.
 * The CRMID is sent via identityMap. If the CRMID is sent as a field, remove the `key='Email'` from the WHERE clause.
-
-### My experience event fragments are ingested, but have the "wrong" primary identity in Profile
-
-Namespace priority plays an important role in how event fragments determine primary identity.
-
-* Once you have configured and saved your [identity settings](./identity-settings-ui.md) for a given sandbox, Profile will then use [namespace priority](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events) to determine the primary identity. In the case of identityMap, Profile will then no longer use the `primary=true` flag.
-* While Profile will no longer refer to this flag, other services on Experience Platform may continue to use the `primary=true` flag.
-
-In order for [authenticated user events](implementation-guide.md#ingest-your-data) to be tied to the person namespace, all authenticated events must contain the person namespace (CRMID). This means that even after a user logs in, the person namespace must still be present on every authenticated event.
-
-You may continue to see `primary=true` 'events' flag when looking up a profile in profile viewer. However, this is ignored and will not be used by Profile.
-
-AAIDs are blocked by default. Therefore, if you are using the [Adobe Analytics source connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md), you must ensure that the ECID is prioritized higher than the ECID so that the unauthenticated events will have a primary identity of ECID.
-
-**Troubleshooting steps**
-
-* To validate that authenticated events contain both the person and cookie namespace, read the steps outlined in the section on [troubleshooting errors regarding data not being ingested to Identity Service](#my-identities-are-not-getting-ingested-into-identity-service).
-* To validate that authenticated events have the primary identity of the person namespace (e.g. CRMID), search the person namespace on profile viewer using no-stitch merge policy (this is the merge policy that does not use private graph). This search will only return events associated to the person namespace. 
 
 ## Graph behavior related issues {#graph-behavior-related-issues}
 
 This section outlines common issues you may encounter regarding how the identity graph behaves.
 
-### The identity is getting linked to the 'wrong' person
+### Unauthenticated ExperienceEvents are getting attached to the wrong authenticated profile
 
 The identity optimization algorithm will honor [the most recently established links and remove the oldest links](./identity-optimization-algorithm.md#identity-optimization-algorithm-details). Therefore, it is possible that once this feature is enabled, ECIDs could be reassigned (re-linked) from one person to another. To understand the history of how an identity gets linked over time, follow the steps below:
 
@@ -203,11 +190,11 @@ The identity optimization algorithm will honor [the most recently established li
 
 First, you must collect the following information:
 
-* The identity symbol (namespaceCode) of the cookie namespace (e.g. ECID) and the person namespace (e.g. CRMID) that were sent.
-  * For Web SDK implementations, these are usually the namespaces included in the identityMap.
-  * For Analytics source connector implementations, these are the cookie identifier included in the identityMap. The person identifier is an eVar field marked as an identity.
-* The dataset in which the event was sent in (dataset_name).
-* The identity value of the cookie namespace to look up (identity_value).
+1. The identity symbol (namespaceCode) of the cookie namespace (e.g. ECID) and the person namespace (e.g. CRMID) that were sent.
+  1.1. For Web SDK implementations, these are usually the namespaces included in the identityMap.
+  1.2. For Analytics source connector implementations, these are the cookie identifier included in the identityMap. The person identifier is an eVar field marked as an identity.
+2. The dataset in which the event was sent in (dataset_name).
+3. The identity value of the cookie namespace to look up (identity_value).
 
 Identity symbols (namespaceCode) are case sensitive. To retrieve all identity symbols for a given dataset in the identityMap, run the following query:
 
@@ -235,7 +222,7 @@ If you do not know the identity value of your cookie identifier and you would li
  
 >[!ENDTABS]
 
-Next, examine the association of the cookie namespace in order of timestamp by running the following query:
+Now that you've identified the cookie values linked to multiple person IDs, take one from the results and use it in the following query to get a chronological view of when that cookie value was linked to a different person identifier: 
 
 >[!BEGINTABS]
 
@@ -362,6 +349,13 @@ The key points to highlight are as follows:
   * For example, if there is a wait condition between actions, and the ECID transfers during the waiting period, a different profile may be targeted.
   * With this feature, ECID are no longer always associated with one profile.
   * The recommendation is to start journeys with person namespaces (CRMID).
+
+>[!TIP]
+>
+>Journeys should look up a profile with a unique namespaces because a non-unique namespace may be re-assigned to another user.
+>
+>* ECIDs, and non-unique email/phone namespaces could move from one person to another.
+>* If a journey has a wait condition and if these non-unique namespaces are used to lookup a profile on a journey, then the journey message may be sent to the incorrect person.
 
 ## Namespace priority
 

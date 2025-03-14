@@ -1,9 +1,7 @@
 ---
 title: Magnite Batch Destination
 description: Use this destination to deliver Adobe CDP audiences to the Magnite Streaming platform in batch.
-badgeBeta: label="Beta" type="Informative"
-hide: yes
-hidefromtoc: yes
+last-substantial-update: 2024-11-18
 exl-id: 8cc3890f-84f8-49d1-a329-322c13f9e5af
 ---
 # Magnite: Batch connection {#magnite-streaming-batch}
@@ -25,8 +23,6 @@ Continue reading below for more information about the Magnite: Batch destination
 For more information about the Real-Time destination, See [this documentation page](magnite-streaming.md) instead.
 
 >[!IMPORTANT]
->
->This destination connector is in beta and only available to select customers. To request access, contact your Adobe representative.
 >
 >The destination connector and documentation page are created and maintained by the [!DNL Magnite] team. For any inquiries or update requests, please contact them directly at `adobe-tech@magnite.com`.
 
@@ -110,7 +106,11 @@ To configure details for the destination, fill in the required and optional fiel
   future.
 *  **[!UICONTROL Description]**: A description that will help you identify this
   destination connection/instance in the future.
-*  **[!UICONTROL Name of your source partner]**: The name you would like to go by as a source in Magnite Streaming's platform
+*  **[!UICONTROL Your company name]**: Your customer/company name. Only supported [!DNL Magnite Streaming] clients are available for selection. 
+  
+>[!NOTE]
+>
+>The company name must be a string which matches the name of the Amazon S3 delivery bucket you have configured with Magnite and set up in the [authenticate to destination](#authenticate) step. The supported characters include 'a-z', 'A-Z', '0-9', '-'(dash), or '_'(underscore).
 
 ![destination configuration auth fields filled](../../assets/catalog/advertising/magnite/destination-batch-config-auth-filled.png)
 

@@ -34,9 +34,13 @@ npx @adobe/reactor-scaffold
 The scaffold tool will prompt for some initial configuration options as follows:
 
 * Display name - The visible name of the extension
+* Platform - Specifies whether the extension is developed for web, mobile, or edge
 * Version - The version of the extension
 * Description - A short description of the extension's purpose
 * Author - The name of the extension's author
+
+>[!NOTE]
+> For mobile extensions, several questions will be asked regarding the structure of your Android and iOS applications.
 
 The scaffold tool will then provide options for building the extension structure:
 
@@ -46,8 +50,10 @@ The scaffold tool will then provide options for building the extension structure
 For example, this can return if the user’s browser is Chrome, if they're using an iPad, or if the user is on a specific domain.
 * [Action types](./web/action-types.md): The action to perform when an event occurs. For example, send an analytics beacon, show an offer, save a cookie, or open a support chat.
 * [Data element types](./web/data-element-types.md): A data element type retrieves a piece of data. This data could be in local storage, in a cookie, in a DOM element, or in a custom location.
-* [Shared modules](./web/shared.md): A shared module is a mechanism by which extensions may communicate with other extensions.
+* [Shared modules](./web/shared.md) (web only): A shared module is a mechanism by which extensions may communicate with other extensions.
 * [Views](./web/views.md): Each event, condition, action, or data element type may provide a view allowing a user to supply settings.
+* Exchange URL (web and edge only): When an extension is published to Adobe's public catalog, provide the listing URL here.
+* Icon Path: A path to an icon file for the extension.
 
 >[!NOTE]
 >

@@ -169,7 +169,7 @@ For more information about segmentation in Experience Platform, please refer to 
 
 ![The Audience membership tab is highlighted. The profile's audience membership details are displayed.](../images/user-guide/audience-membership.png)
 
-To view the audience membership of the profiles that are available on the Edge, select **[!UICONTROL Edge]** in the data location selector. More information about edge segmentation can be found in the [edge segmentation guide](../../segmentation/ui/edge-segmentation.md).
+To view the audience membership of the profiles that are available on the Edge, select **[!UICONTROL Edge]** in the data location selector. More information about edge segmentation can be found in the [edge segmentation guide](../../segmentation/methods/edge-segmentation.md).
 
 ![The data location selector within the audience membership tab is highlighted.](../images/user-guide/audience-membership-select.png)
 

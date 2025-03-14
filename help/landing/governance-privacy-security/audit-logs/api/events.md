@@ -1,6 +1,8 @@
 ---
 title: Audit events API Endpoint
 description: Learn how to retrieve audit events in Experience Platform using the Audit Query API.
+role: Developer
+feature: Audits, API
 exl-id: c365b6d8-0432-41a5-9a07-44a995f69b7d
 ---
 # Audit events endpoint

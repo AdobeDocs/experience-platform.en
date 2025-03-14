@@ -14,7 +14,7 @@ exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
 >
 >This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
 
-This tutorial will show you how to create, train, and evaluate a Model using API calls. Refer to [this document](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) for a detailed list of API documentation.
+This tutorial will show you how to create, train, and evaluate a Model using API calls. Refer to [this document](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) for a detailed list of API documentation.
 
 ## Prerequisites
 

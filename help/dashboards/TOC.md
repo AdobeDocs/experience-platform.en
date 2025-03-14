@@ -12,21 +12,24 @@ role: Developer,User
 * [Dashboards overview](home.md)
 * [Dashboard access permissions](permissions.md)
 * [Dashboards inventory](inventory.md)
-* [Dashboards](user-defined-dashboards.md)
+* [Standard dashboards](standard-dashboards.md)
 * [Download dashboards to PDF](download.md)
-* Data Distiller {#data-distiller}
-  * SQl Insights for extended app reporting {#sql-insights}
-    * [Overview](data-distiller/sql-insights/overview.md)
-  * Query pro mode {#query-pro-mode}  
-    * [Overview](data-distiller/query-pro-mode/overview.md)
-    * Filters {#filters}
-      * [Date filter](data-distiller/query-pro-mode/filters/date-filter.md)
-      * [Global filter](data-distiller/query-pro-mode/filters/global-filter.md) 
-    * [Drill through](data-distiller/query-pro-mode/drill-through.md)
-    * [View more](data-distiller/query-pro-mode/view-more.md)
-    * [View SQL](data-distiller/query-pro-mode/view-sql.md)
-    * [Download as CSV](data-distiller/query-pro-mode/download-csv.md)
-    * [Export as PDF](data-distiller/query-pro-mode/export-pdf.md)
+* SQL insights: query pro mode {#sql-insights-query-pro-mode}
+  * [Overview](sql-insights-query-pro-mode/overview.md)
+  * Data Distiller Templates {#templates}
+    * [Overview](sql-insights-query-pro-mode/templates/overview.md)
+    * [Advanced audience overlaps](sql-insights-query-pro-mode/templates/overlaps.md)
+    * [Audience comparison](sql-insights-query-pro-mode/templates/comparison.md)
+    * [Audience trends](sql-insights-query-pro-mode/templates/trends.md)
+    * [Audience identity overlaps](sql-insights-query-pro-mode/templates/identity-overlaps.md)
+  * Filters {#filters}
+    * [Date filter](sql-insights-query-pro-mode/filters/date-filter.md)
+    * [Global filter](sql-insights-query-pro-mode/filters/global-filter.md) 
+  * [Drill through](sql-insights-query-pro-mode/drill-through.md)
+  * [View more](sql-insights-query-pro-mode/view-more.md)
+  * [View SQL](sql-insights-query-pro-mode/view-sql.md)
+  * [Download as CSV](sql-insights-query-pro-mode/download-csv.md)
+  * [Export as PDF](sql-insights-query-pro-mode/export-pdf.md)
 * Available dashboards {#guides}
   * [Profiles](guides/profiles.md)
   * [Account Profiles](guides/account-profiles.md)

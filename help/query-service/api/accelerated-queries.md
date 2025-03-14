@@ -6,7 +6,7 @@ exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
 ---
 # Accelerated queries endpoint
 
-As part of the Data Distiller SKU, the [Query Service API](https://developer.adobe.com/experience-platform-apis/references/query-service/) allows you to make stateless queries to the accelerated store. The returned results are based on aggregated data. The decreased latency of results allows for a more interactive exchange of information. The accelerated queries APIs are also used to power [user-defined dashboards](../../dashboards/user-defined-dashboards.md).
+As part of the Data Distiller SKU, the [Query Service API](https://developer.adobe.com/experience-platform-apis/references/query-service/) allows you to make stateless queries to the accelerated store. The returned results are based on aggregated data. The decreased latency of results allows for a more interactive exchange of information. The accelerated queries APIs are also used to power [user-defined dashboards](../../dashboards/standard-dashboards.md).
 
 Before continuing with this guide, ensure that you have read and understood the [Query Service API guide](./getting-started.md) in order to successfully use Query Service API.
 

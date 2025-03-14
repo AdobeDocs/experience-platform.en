@@ -7,13 +7,13 @@ exl-id: f807d0fd-c8ec-42d4-96a0-5ffc5681943b
 
 Create bespoke reporting data models to extract deeper insights, optimize strategies, and adapt analytics to meet specific business needs with Data Distiller's SQL Insights. Use the SQL Insights capability to enhance transparency and gain operational insights from your Adobe Experience Platform data across dimensions such as profiles, audiences, campaigns, journeys, entitlements, and consent. This capability provides a versatile, adaptive solution to tailor your organization's reporting data models to align with your specific business needs.
 
-To [visualize your SQL Insights](../../../dashboards/data-distiller/sql-insights/overview.md) you can use [query pro mode](../../../dashboards/data-distiller/query-pro-mode/overview.md) to conduct complex analysis with custom SQL queries and transform your data into easily interpretable charts. Use query pro mode to create bespoke insights and visulaizations on your dashboards and cater to both technical and non-technical audiences by downloading your insights as CSV files. 
+To [visualize your SQL Insights](../../../dashboards/sql-insights-query-pro-mode/overview.md) you can use [query pro mode](../../../dashboards/sql-insights-query-pro-mode/overview.md) to conduct complex analysis with custom SQL queries and transform your data into easily interpretable charts. Use query pro mode to create bespoke insights and visulaizations on your dashboards and cater to both technical and non-technical audiences by downloading your insights as CSV files. 
 
 This document covers the use cases, essential capabilities, and required steps to develop an SQL insights dashboard with Data Distiller.
 
 ## Prerequisites
 
-This tutorial uses user-defined dashboards to visualize data from your custom data model within the Platform UI. See the [user-defined dashboards documentation](../../../dashboards/user-defined-dashboards.md) to learn more about this feature.
+This tutorial uses user-defined dashboards to visualize data from your custom data model within the Platform UI. See the [user-defined dashboards documentation](../../../dashboards/standard-dashboards.md) to learn more about this feature.
 
 ## Getting started 
 
@@ -66,7 +66,7 @@ To develop a SQL Insights dashboard within Data Distiller, follow the step-by-st
 1. **Ad hoc query exploration:** Begin by executing ad hoc `SELECT` queries to explore raw data on the data lake. This allows for on-the-fly, exploratory data analysis to experiment, and validates data where the results of the queries are not stored in the data lake.
 1. **Batch query utilization:** Use batch queries to [create scheduled jobs](../../api/scheduled-queries.md#create-a-new-scheduled-query) for generating insights aggregate tables, ensuring a systematic and automated approach to data processing. Batch queries execute `INSERT TABLE AS SELECT` and `CREATE TABLE AS SELECT` queries to clean, shape, manipulate, and enrich data. The results of these queries are stored on the data lake.
 1. **Aggregated insights loading:** Load the generated aggregated insights into the accelerated store and use SQL to test queries, and ensure the accuracy and efficiency of data retrieval. To learn how to [make stateless queries to the accelerated store](../../api/accelerated-queries.md), see the documentation.
-1. **Access and integration:** Access the insights stored in the accelerated store seamlessly by integrating with Adobe Experience Platform [User-defined Dashboards](../../../dashboards/user-defined-dashboards.md) or other preferred Business Intelligence (BI) tools. These integrations with third-party clients facilitate a cohesive and intuitive experience for users.
+1. **Access and integration:** Access the insights stored in the accelerated store seamlessly by integrating with Adobe Experience Platform [User-defined Dashboards](../../../dashboards/standard-dashboards.md) or other preferred Business Intelligence (BI) tools. These integrations with third-party clients facilitate a cohesive and intuitive experience for users.
 
 ![An infographic illustrating the four steps to SQL Insights in Data Distiller.](../../images/data-distiller/sql-insights/steps-to-customizable-insights.png)
 
