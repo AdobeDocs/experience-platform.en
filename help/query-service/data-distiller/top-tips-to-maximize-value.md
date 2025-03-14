@@ -266,6 +266,8 @@ Again as best practice, run a simple explore query to inspect the data in the vi
 SELECT * FROM RFM_Values;
 ```
 
+<!-- Image below could be unnecessary ... -->
+
 ![The Query results dialog for the aggregated RFM values.](../images/data-distiller/top-tips-to-maximize-value/view-of-aggregated-rfm-values.png)
 
 #### Generate the RFM multi-dimensional cube
@@ -298,6 +300,8 @@ The results should look like the images below.
 
 ![The Query results dialog for the multi-dimensional cube, part 1](../images/data-distiller/top-tips-to-maximize-value/multi-dimensional-cube-results-1.png)
 
+<!-- Do we need both images below ... -->
+
 ![The Query results dialog for the multi-dimensional cube, part 2](../images/data-distiller/top-tips-to-maximize-value/multi-dimensional-cube-results-2.png)
 
 Next, use the following statement to create a `VIEW` for this data.
@@ -323,20 +327,22 @@ AS
   FROM   rfm_values;
 ```
 
-#### Modeling RFM segments
+#### Model RFM segments
 
 With the RFM scores calculated, customers can be categorized into the following six priority segments:
 
-1. Core – Best customers with high Recency, Frequency, and Monetary value (Recency = 1, Frequency = 1, Monetary = 1).
-2. Loyal – Frequent customers who are consistent but not top spenders (Frequency = 1).
-3. Whales – Highest spenders, regardless of Recency and Frequency (Monetary = 1).
-4. Promising – Frequent but lower spenders (Frequency = 1, 2, 3; Monetary = 2, 3, 4).
-5. Rookies – New customers with low frequency (Recency = 1, Frequency = 4).
-6. Slipping – Formerly loyal customers with decreased activity (Recency = 2, 3, 4; Frequency = 4).
+1. Core: Best customers with high Recency, Frequency, and Monetary value (Recency = 1, Frequency = 1, Monetary = 1).
+2. Loyal: Frequent customers who are consistent but not top spenders (Frequency = 1).
+3. Whales: Highest spenders, regardless of Recency and Frequency (Monetary = 1).
+4. Promising: Frequent but lower spenders (Frequency = 1, 2, 3; Monetary = 2, 3, 4).
+5. Rookies: New customers with low frequency (Recency = 1, Frequency = 4).
+6. Slipping: Formerly loyal customers with decreased activity (Recency = 2, 3, 4; Frequency = 4).
 
 To streamline access and reuse, create a `VIEW` that stores the RFM segments, scores, and values.
 
 The `CASE` statements in the following SQL categorize customers into segments based on their RFM scores and assign the results to the `RFM_Model` variable.
+
++++Select to view SQL
 
 ```sql
 CREATE OR replace VIEW rfm_model_segment
@@ -376,4 +382,73 @@ AS
   FROM   rfm_scores; 
 ```
 
++++
+
 The generated `VIEW` will follow the same structure as previous creations, but with a different ID.
+
+As best practice, run a simple explore query to inspect the data in the view. Use the following statement.
+
+<!-- Double check this SQL. I wrote it.- it was absent fom the KT doc. -->
+
+```sql
+SELECT * FROM rfm_model_segment;
+```
+
+<!-- These VIEW results could be chopped -->
+
+![The Query results dialog for the exploratory rfm_model_segment query.](../images/data-distiller/top-tips-to-maximize-value/rfm_model_segment-query-results-1.png)
+
+![The second Query results dialog for the exploratory rfm_model_segment query.](../images/data-distiller/top-tips-to-maximize-value/rfm_model_segment-query-results-2.png)
+
+### Step 3: Write an SQL query to ingest the profile
+
+The next step is to ingest data into Real-Time Customer Profile. Begin by creating a new dataset and enabling it for Profile.
+
+#### Create a derived dataset to store RFM attributes
+
+As this dataset will be ingested into the Profile Store, it requires a partition key. Create an empty dataset to store RFM attributes and assign a primary identity.
+
+The `(LABEL = 'PROFILE')` ensures that the data lake dataset created is Profile enabled. 
+
+The following explanations outline the purpose and functionality of each element in the code.
+
+`userId TEXT`: Defines a column named userId with a text data type. This column stores user identifiers as strings.
+
+`PRIMARY IDENTITY`: In Experience Platform, the primary identity is the unique identifier used to merge customer data across datasets for the Real-Time Customer Profile.
+
+`PRIMARY IDENTITY NAMESPACE 'Email'`: Specifies that `userId` is the primary identity for records in this table and belongs to the identity namespace 'Email'.
+
+`IDENTITY NAMESPACE 'Email'`: Indicates that values in userId are email addresses and belong to the predefined email identity namespace. This helps unify profiles based on email addresses.
+
+`days_since_last_purchase INTEGER`: Stores the number of days since the user's last purchase. The same data type applies to orders integer, recency integer, frequency integer, and monetization integer.
+
+`total_revenue decimal(18,2)`: Defines a decimal value with up to 18 total digits and 2 decimal places.
+
+`rfm_model TEXT`: Stores additional information about the RFM segment assigned to the user. The data type is text.
+
+`WITH (LABEL = 'PROFILE')`: This clause designates the table as a Profile dataset in Experience Platform, meaning that the associated data contributes to building Real-Time Customer Profiles.
+
+
+The Identity Graph processes all records but ignores entries without additional identities beyond the primary identity.
+The Identity Graph identifies and links multiple identities within each record. If no associations exist, the record is not processed further.
+
+
+```sql
+CREATE TABLE IF NOT EXISTS adls_rfm_profile ( 
+    userId TEXT PRIMARY IDENTITY NAMESPACE 'Email', 
+    days_since_last_purchase INTEGER, 
+    orders INTEGER, 
+    total_revenue DECIMAL(18, 2), 
+    recency INTEGER, 
+    frequency INTEGER, 
+    monetization INTEGER, 
+    rfm_model TEXT 
+) WITH (LABEL = 'PROFILE');
+
+```
+
+Email is a standard identity namespace. See the Identity Service documentation for more information on [standard namespaces](https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/namespaces#standard) or the guide on [defining an identity field in the Adobe Experience Platform UI](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/fields/identity).
+
+
+
+
