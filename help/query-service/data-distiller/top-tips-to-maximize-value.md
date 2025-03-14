@@ -420,9 +420,9 @@ In this SQL statement:
 
 >[!NOTE]
 >
->The 'Email' namespace is a [standard identity namespace](https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/namespaces#standard) in Adobe Experience Platform. When defining identity fields, ensure that the appropriate namespace is specified to facilitate accurate identity resolution. ​
+>The 'Email' namespace is a [standard identity namespace](../../identity-service/features/namespaces.md#standard) in Adobe Experience Platform. When defining identity fields, ensure that the appropriate namespace is specified to facilitate accurate identity resolution. ​
 >
->For more information on defining identity fields and working with identity namespaces, refer to the [Identity Service documentation](https://experienceleague.adobe.com/en/docs/experience-platform/identity/home) or the guide on [defining an identity field in the Adobe Experience Platform UI](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/fields/identity).
+>For more information on defining identity fields and working with identity namespaces, refer to the [Identity Service documentation](../../identity-service/home.md) or the guide on [defining an identity field in the Adobe Experience Platform UI](../../xdm/ui/fields/identity.md).
 
 The following SQL creates a Profile-enabled table to store RFM attributes
 
