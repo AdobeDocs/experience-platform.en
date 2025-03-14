@@ -299,3 +299,26 @@ The results should look like the images below.
 ![The Query results dialog for the multi-dimensional cube, part 1](../images/data-distiller/top-tips-to-maximize-value/multi-dimensional-cube-results-1.png)
 
 ![The Query results dialog for the multi-dimensional cube, part 2](../images/data-distiller/top-tips-to-maximize-value/multi-dimensional-cube-results-2.png)
+
+Next, use the following statement to create a `VIEW` for this data.
+
+Creating a `VIEW` for the RFM multi-dimensional cube improves efficiency by storing pre-segmented data, eliminating the need to recalculate RFM scores in future queries. It simplifies SQL statements, ensures data consistency, and enhances reusability for further analysis.
+
+```sql
+CREATE OR replace VIEW rfm_scores
+AS
+  SELECT userid,
+         days_since_last_purchase,
+         orders,
+         total_revenue,
+         5 - Ntile(4)
+               over (
+                 ORDER BY days_since_last_purchase DESC) AS recency,
+         Ntile(4)
+           over (
+             ORDER BY orders DESC)                       AS frequency,
+         Ntile(4)
+           over (
+             ORDER BY total_revenue DESC)                AS monetization
+  FROM   rfm_values;
+```
