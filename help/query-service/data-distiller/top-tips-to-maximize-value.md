@@ -221,7 +221,11 @@ SELECT * FROM order_data;
 
 #### Aggregate the transactions to generate the RFM values
 
-To aggregate the transactions and generate the RFM values, use the following SQL query:
+To calculate the RFM values, this query aggregates transactions for each user. 
+
+The `DATEDIFF(CURRENT_DATE, MAX(purchase_date)) AS days_since_last_purchase` function calculates the number of days since the most recent purchase for each user.
+
+Use the following SQL query:
 
 ```sql
 SELECT 
@@ -232,4 +236,20 @@ SELECT
 FROM order_data 
 GROUP BY userid;
 ```
+
+To enhance query efficiency and reusability, create a `VIEW` to store the aggregated RFM values.
+
+```sql
+CREATE OR replace VIEW rfm_values
+AS
+  SELECT userid,
+         Datediff(current_date, Max(purchase_date)) AS days_since_last_purchase,
+         Count(purchaseid)                          AS orders,
+         SUM(total_revenue)                         AS total_revenue
+  FROM   order_data
+  GROUP  BY userid; 
+```
+
+The result will look similar to the following image but with different ID.
+
 
