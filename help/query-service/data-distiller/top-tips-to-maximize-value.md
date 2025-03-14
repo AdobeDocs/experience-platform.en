@@ -211,4 +211,25 @@ The result will look similar to the following image but with a different dataset
 
 ![The Query results dialog for the 'create a derived dataset' query.](../images/data-distiller/top-tips-to-maximize-value/create-table-derived-dataset.png)
 
-<!-- As best practice, run a simple explore query to view the data in the dataset -->
+As best practice, run a simple explore query to inspect the data in the dataset. Use the following statement to view your data.
+
+```sql
+SELECT * FROM order_data;
+```
+
+![The Query results dialog for the inspect data query.](../images/data-distiller/top-tips-to-maximize-value/inspect-data.png)
+
+#### Aggregate the transactions to generate the RFM values
+
+To aggregate the transactions and generate the RFM values, use the following SQL query:
+
+```sql
+SELECT 
+    userid, 
+    DATEDIFF(CURRENT_DATE, MAX(purchase_date)) AS days_since_last_purchase, 
+    COUNT(purchaseid) AS orders, 
+    SUM(total_revenue) AS total_revenue 
+FROM order_data 
+GROUP BY userid;
+```
+
