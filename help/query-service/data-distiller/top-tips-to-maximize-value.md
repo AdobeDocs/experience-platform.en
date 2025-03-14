@@ -174,6 +174,8 @@ To begin, calculate three scores for each customer: Recency, Frequency, and Mone
 
 To compute the RFM scores, extract key fields from the raw data using field filtering.
 
+<!-- ##### Extract key fields using field filtering (Heading level issue) -->
+
 The next query builds on the previous section's logic by selecting email as the `userid`, since every order requires an email login. Data Distiller applies the `TO_DATE` function to convert the timestamp into a date format. The `total_revenue` field represents the price of each transaction and will later be aggregated by summing it for each `userid`.
 
 ```sql
@@ -237,19 +239,25 @@ FROM order_data
 GROUP BY userid;
 ```
 
+The results should look like the image below.
+
+![The Query results dialog for the extracted key fields.](../images/data-distiller/top-tips-to-maximize-value/aggregate-transactions.png)
+
 To enhance query efficiency and reusability, create a `VIEW` to store the aggregated RFM values.
 
 ```sql
 CREATE OR replace VIEW rfm_values
 AS
   SELECT userid,
-         Datediff(current_date, Max(purchase_date)) AS days_since_last_purchase,
-         Count(purchaseid)                          AS orders,
+         DATEDIFF(current_date, MAX(purchase_date)) AS days_since_last_purchase,
+         COUNT(purchaseid)                          AS orders,
          SUM(total_revenue)                         AS total_revenue
   FROM   order_data
-  GROUP  BY userid; 
+  GROUP BY userid; 
 ```
 
-The result will look similar to the following image but with different ID.
+The result will resemble the following image but with a different ID.
+
+![The Query results dialog for the aggregated RFM values.](../images/data-distiller/top-tips-to-maximize-value/view-of-aggregated-rfm-values.png)
 
 
