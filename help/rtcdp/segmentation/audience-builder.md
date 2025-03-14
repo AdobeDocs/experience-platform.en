@@ -77,15 +77,32 @@ The **[!UICONTROL Audience properties]** section displays information about the 
 
 IMAGE
 
-### Estimates {#estimates}
-
 The **[!UICONTROL Qualified accounts]** indicates the actual number of accounts that match the audience's rules. This number updates every 24 hours, after the segmentation job has ran.
 
 The **[!UICONTROL Estimated accounts]** indicates the approximate number of accounts based off of the sample job. You can update this value after adding new rules or conditions and selecting **[!UICONTROL Refresh estimate]**.
 
 IMAGE
 
-### Details {#details}
+You can select **[!UICONTROL View accounts]** to see a sampling of the accounts that would qualify for the audience with the current rules.
 
-You can edit the audience's details, including its name, description, and tags.
+IMAGE
 
+The **[!UICONTROL Code view]** provides a text-based-code description of the audience's rules.
+
+IMAGE
+
+You can select **[!UICONTROL Apply access labels]** to apply the relevant access labels for the audience. More information on access labels can be found in the ???.
+
+IMAGE
+
+The rest of the audience properties section lets you edit details related to the account audience, including the name, description, and tags.
+
+IMAGE
+
+You **cannot** change the evaluation method for account audiences, as all account audiences are evaluated using batch segmentation.
+
+## Next steps {#next-steps}
+
+Audience Builder provides a rich workflow that lets you create audiences from your XDM Business Account data.
+
+To learn more about Segmentation Service for profile data, please read the [Segmentation Service overview](../../segmentation/home.md).
