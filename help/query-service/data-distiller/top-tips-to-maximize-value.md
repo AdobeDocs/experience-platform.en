@@ -270,9 +270,7 @@ SELECT * FROM RFM_Values;
 
 ### Generate the RFM multi-dimensional cube
 
-An RFM multi-dimensional cube organizes customers based on their Recency, Frequency, and Monetary (RFM) scores. It helps businesses analyze customer behavior patterns and efficiently segment customers to identify high-value groups.
-
-To categorize customers, divide each dimension into four equal groups (quartiles) using the NTILE window function. This function sorts values into ranked buckets, allowing for structured segmentation:
+To segment customers based on their RFM scores, use an RFM multi-dimensional cube. The NTILE window function sorts values into ranked buckets and divides each dimension into four equal groups (quartiles), allowing for structured segmentation.
 
 - Recency: Customers are ranked by how recently they made a purchase (`days_since_last_purchase`). Those who purchased most recently are in group 1, while those who haven't purchased for the longest time are in group 4.
 - Frequency: Customers are ranked by how often they make purchases (`ORDER BY orders DESC`). The most frequent buyers are in group 1, while the least frequent are in group 4.
@@ -296,3 +294,8 @@ SELECT userid,
 FROM   rfm_val ues; 
 ```
 
+The results should look like the images below.
+
+![The Query results dialog for the multi-dimensional cube, part 1](../images/data-distiller/top-tips-to-maximize-value/multi-dimensional-cube-results-1.png)
+
+![The Query results dialog for the multi-dimensional cube, part 2](../images/data-distiller/top-tips-to-maximize-value/multi-dimensional-cube-results-2.png)
