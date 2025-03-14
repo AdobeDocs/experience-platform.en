@@ -109,7 +109,9 @@ Paste the following query into the editor and execute it:
 SELECT * FROM luma_web_data; 
 ```
 
-The query results are displayed below the Query Editor in the [!UICONTROL Results] tab. To expand the results in a new dialog, select **[!UICONTROL View results]**.
+The query results are displayed below the Query Editor in the [!UICONTROL Results] tab. To expand the results in a new dialog, select **[!UICONTROL View results]**. The results should look similar to the image below.
+
+![The Query results dialog for the basic query exploration results.](../images/data-distiller/top-tips-to-maximize-value/basic-query-exploration-results.png)
 
 #### Focus on orders and exclude cancelled transactions
 
@@ -184,3 +186,29 @@ WHERE event_type = 'order'
       AND purchase_id NOT IN (SELECT purchase_id FROM orders_cancelled) 
       AND email IS NOT NULL;
 ```
+
+The results should look like the image below.
+
+![The Query results dialog for the extracted key fields.](../images/data-distiller/top-tips-to-maximize-value/extract-key-fields-results.png)
+
+Next, create a `TABLE` to store the results of the previous query in a derived dataset. Copy and paste the following command into the Query Editor to create a `TABLE`.
+
+<!-- Essentially this is "To cache the results of the previous query" -->
+
+```sql
+CREATE TABLE IF NOT EXISTS order_data AS
+  SELECT email              AS userid,
+         purchase_id        AS purchaseid,
+         price_total        AS total_revenue,
+         To_date(timestamp) AS purchase_date
+  FROM   luma_web_data
+  WHERE  event_type = 'order'
+         AND purchase_id NOT IN (SELECT purchase_id FROM orders_cancelled)
+         AND email IS NOT NULL; 
+```
+
+The result will look similar to the following image but with a different dataset ID.
+
+![The Query results dialog for the 'create a derived dataset' query.](../images/data-distiller/top-tips-to-maximize-value/create-table-derived-dataset.png)
+
+<!-- As best practice, run a simple explore query to view the data in the dataset -->
