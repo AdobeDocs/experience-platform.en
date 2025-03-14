@@ -476,24 +476,26 @@ Now that your SQL code generates a derived dataset and enables it for Real-Time 
 
 After saving your SQL, navigate to the **[!UICONTROL Templates]** tab to view the saved query and initiate the scheduling process. There are two ways to schedule a query:
 
-Select **[!UICONTROL Add Schedule]** from the right sidebar.  
+Select **[!UICONTROL Add Schedule]** from the right sidebar.
 
 ![The Queries workspace Edit tab with Add schedule highlighted.](../images/data-distiller/top-tips-to-maximize-value/add-schedule-1.png)
 
-Alternatively, select the **[!UICONTROL Schedules]** tab below the template name, then select **[!UICONTROL Add Schedule]**.  
+Alternatively, select the **[!UICONTROL Schedules]** tab below the template name, then select **[!UICONTROL Add Schedule]**.
 
-![The Queries workspace Schedules tab with Add Schedule highlighted.](../images/data-distiller/top-tips-to-maximize-value/add-schedule-2.png)  
+![The Queries workspace Schedules tab with Add Schedule highlighted.](../images/data-distiller/top-tips-to-maximize-value/add-schedule-2.png)
 
-The [!UICONTROL Schedule details] view appears. From here, input the following details to configure the schedule:  
-   
-- **[!UICONTROL Execution Frequency]**: **Yearly**  
-- **[!UICONTROL Day of Execution]**: **April 30**  
-- **[!UICONTROL Schedule Execution Time]**: **11 PM UTC**  
-- **[!UICONTROL Schedule Period]**: **April 1 – May 31, 2024**  
+For more details on scheduling queries, refer to the [Query Schedules documentation](../ui/query-schedules.md).
 
-Select **[!UICONTROL Save]** to confirm the schedule.  
+The [!UICONTROL Schedule details] view appears. From here, input the following details to configure the schedule:
 
-![The schedule details with the settings configured and Save highlighted.](../images/data-distiller/top-tips-to-maximize-value/set-schedule.png)  
+- **[!UICONTROL Execution Frequency]**: **Yearly**
+- **[!UICONTROL Day of Execution]**: **April 30**
+- **[!UICONTROL Schedule Execution Time]**: **11 PM UTC**
+- **[!UICONTROL Schedule Period]**: **April 1 – May 31, 2024**
+
+Select **[!UICONTROL Save]** to confirm the schedule.
+
+![The schedule details with the settings configured and Save highlighted.](../images/data-distiller/top-tips-to-maximize-value/set-schedule.png)
 
 After you have saved the schedule, you can navigate to the **[!UICONTROL Scheduled Queries]** tab at any point to monitor scheduled Data Distiller jobs.
 
