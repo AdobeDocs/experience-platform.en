@@ -268,7 +268,7 @@ SELECT * FROM RFM_Values;
 
 ![The Query results dialog for the aggregated RFM values.](../images/data-distiller/top-tips-to-maximize-value/view-of-aggregated-rfm-values.png)
 
-### Generate the RFM multi-dimensional cube
+#### Generate the RFM multi-dimensional cube
 
 To segment customers based on their RFM scores, use an RFM multi-dimensional cube. The NTILE window function sorts values into ranked buckets and divides each dimension into four equal groups (quartiles), allowing for structured segmentation.
 
@@ -322,3 +322,58 @@ AS
              ORDER BY total_revenue DESC)                AS monetization
   FROM   rfm_values;
 ```
+
+#### Modeling RFM segments
+
+With the RFM scores calculated, customers can be categorized into the following six priority segments:
+
+1. Core – Best customers with high Recency, Frequency, and Monetary value (Recency = 1, Frequency = 1, Monetary = 1).
+2. Loyal – Frequent customers who are consistent but not top spenders (Frequency = 1).
+3. Whales – Highest spenders, regardless of Recency and Frequency (Monetary = 1).
+4. Promising – Frequent but lower spenders (Frequency = 1, 2, 3; Monetary = 2, 3, 4).
+5. Rookies – New customers with low frequency (Recency = 1, Frequency = 4).
+6. Slipping – Formerly loyal customers with decreased activity (Recency = 2, 3, 4; Frequency = 4).
+
+To streamline access and reuse, create a `VIEW` that stores the RFM segments, scores, and values.
+
+The `CASE` statements in the following SQL categorize customers into segments based on their RFM scores and assign the results to the `RFM_Model` variable.
+
+```sql
+CREATE OR replace VIEW rfm_model_segment
+AS
+  SELECT userid,
+         days_since_last_purchase,
+         orders,
+         total_revenue,
+         recency,
+         frequency,
+         monetization,
+         CASE
+           WHEN recency = 1
+                AND frequency = 1
+                AND monetization = 1 THEN '1. Core - Your Best Customers'
+           WHEN recency IN( 1, 2, 3, 4 )
+                AND frequency = 1
+                AND monetization IN ( 1, 2, 3, 4 ) THEN
+           '2. Loyal - Your Most Loyal Customers'
+           WHEN recency IN( 1, 2, 3, 4 )
+                AND frequency IN ( 1, 2, 3, 4 )
+                AND monetization = 1 THEN
+           '3. Whales - Your Highest Paying Customers'
+           WHEN recency IN( 1, 2, 3, 4 )
+                AND frequency IN ( 1, 2, 3 )
+                AND monetization IN( 2, 3, 4 ) THEN
+           '4. Promising - Faithful customers'
+           WHEN recency = 1
+                AND frequency = 4
+                AND monetization IN ( 1, 2, 3, 4 ) THEN
+           '5. Rookies - Your Newest Customers'
+           WHEN recency IN ( 2, 3, 4 )
+                AND frequency = 4
+                AND monetization IN ( 1, 2, 3, 4 ) THEN
+           '6. Slipping - Once Loyal, Now Gone'
+         END RFM_Model
+  FROM   rfm_scores; 
+```
+
+The generated `VIEW` will follow the same structure as previous creations, but with a different ID.
