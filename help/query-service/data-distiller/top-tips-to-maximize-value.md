@@ -439,4 +439,15 @@ CREATE TABLE IF NOT EXISTS adls_rfm_profile (
 ) WITH (LABEL = 'PROFILE'); -- Enable the table for Real-Time Customer Profile
 ```
 
+The result of this query will look similar to the others you have seen before in this playbook while creating dataset, but with different ID.
+
+Once the dataset is created, you should be able to go to Datasets->Browse->adls_rfm_profile and see that the dataset is empty.
+
+![The datasets workspace with the details of the 'adls_rfm_profile' dataset displayed and the profile-enabled toggle highlighted.](../images/data-distiller/top-tips-to-maximize-value/profile-enabled-toggle.png)
+
+You will also see that it creates a proper XDM Individual Profile Schema with custom fieldgroups if you browse to Schemas->Browse->adls_rfm_profile.
+
+![The XDM workspace with the 'adls_rfm_profile' diagram displayed in the schema canvas.](../images/data-distiller/top-tips-to-maximize-value/xdm-individual-profile-schema.png)
+
+#### Insert data into the newly created derived dataset
 
