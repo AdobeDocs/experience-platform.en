@@ -451,9 +451,9 @@ You can also navigate to Schemas > Browse > `adls_rfm_profile` to view the XDM I
 
 #### Insert data into the newly created derived dataset
 
-We will now insert the data from RFM_MODEL_SEGMENT View into the adls_rfm_profile that has been marked for Real-Time Customer Profile.
+The next step is to insert data from the `rfm_model_segment VIEW` into `adls_rfm_profile`, which is enabled for Real-Time Customer Profile.
 
-Observe that the order of the fields in the SELECT query of the INSERT statement mirrors exactly one-to-one with the order of the fields in RFM_MODEL_SEGMENT. This ensures that the values from RFM_MODEL_SEGMENT are inserted correctly into the corresponding fields in the target structure or table. Maintaining this strict alignment is crucial to avoid mismatches between the source and target fields during data insertion.
+Ensure that the field order in the `SELECT` query of the `INSERT` statement matches the structure of `rfm_model_segment` exactly. This alignment ensures that values from `rfm_model_segment` are inserted correctly into the corresponding fields in the target table. Misalignment between source and target fields can cause data mismatches.
 
 >[!NOTE]
 >
@@ -466,4 +466,8 @@ SELECT Struct(userid, days_since_last_purchase, orders, total_revenue, recency,
 FROM   rfm_model_segment; 
 ```
 
-The query output will display a message in the console of "Query complete".
+Once complete, the query output displays "Query complete" in the console.
+
+### Step 4: Schedule the query for batch processing
+
+
