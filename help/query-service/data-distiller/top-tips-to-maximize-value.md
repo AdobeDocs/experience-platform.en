@@ -589,3 +589,23 @@ SELECT
 FROM adls_rfm_profile 
 WHERE _pfreportingonprod.rfm_model = '6. Slipping - Once Loyal, Now Gone';
 ```
+
+#### Delete an audience
+
+To delete an existing audience, use the `DROP AUDIENCE` command. If the audience does not exist, an exception occurs unless `IF EXISTS` is specified.
+
+#### Remove an audience
+
+Use the following SQL command to delete an audience:
+
+```sql
+DROP AUDIENCE IF EXISTS adls_rfm_audience;
+```
+
+Audiences created using the SQL extension are automatically registered under the [!UICONTROL Data Distiller] origin in the [!UICONTROL Audiences] workspace.
+
+For more details on SQL audiences, refer to the [Data Distiller Audiences documentation](../data-distiller-audiences/overview.md).
+
+![The Audiences workspace showing available audiences.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-1.png)
+
+![The Audiences workspace showing available audiences with the filter sidebar and Data Distiller selected.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-2.png)
