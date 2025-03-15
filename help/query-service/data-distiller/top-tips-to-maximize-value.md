@@ -612,9 +612,9 @@ DROP AUDIENCE IF EXISTS adls_rfm_audience;
 
 #### Solution 2: Audience creation with RFM attributes  
 
-Create audiences using attributes from the **RFM model** to segment users based on their behavior and characteristics. This section guides you through the **Adobe Experience Platform UI** to create an audience based on RFM scores.  
+Create audiences using attributes from the RFM model to segment users based on their behavior and characteristics. This section guides you through the Adobe Experience Platform UI to create an audience based on RFM scores.  
 
-To verify that the data has been loaded into Real-Time Customer Profile, navigate to **[!UICONTROL Customers] > [!UICONTROL Profiles] > [!UICONTROL Browse]**. Select **[!UICONTROL Identity Namespace]** as **Email** and enter `user0076@example.com`. This allows you to check whether profiles contain the expected RFM attributes.  
+To verify that the data has been loaded into Real-Time Customer Profile, navigate to **[!UICONTROL Customers] > [!UICONTROL Profiles] > [!UICONTROL Browse]**. Select **[!UICONTROL Identity Namespace]** as `Email` and enter `user0076@example.com`. This allows you to check whether profiles contain the expected RFM attributes.  
 
 ![The Profiles workspace showing available profiles with an Email primary identity and email value filter applied.](../images/data-distiller/top-tips-to-maximize-value/profiles-workspace.png)  
 
@@ -622,22 +622,22 @@ To verify that the data has been loaded into Real-Time Customer Profile, navigat
 
 To browse existing audiences, select **[!UICONTROL Audiences]** from the left navigation panel and ensure the **[!UICONTROL Browse]** tab is selected. The list of available audiences in the sandbox appears. Selecting an audience displays its description, qualifying rules, and the number of profiles included.  
 
-To create a new audience, select **[!UICONTROL Create Audience]** in the top-right corner. A dialog box appears with two options. Select **[!UICONTROL Build Rule]**, then click **[!UICONTROL Create]**.  
+To create a new audience, select **[!UICONTROL Create Audience]** in the top-right corner. A dialog box appears with two options. Select **[!UICONTROL Build Rule]** followed by **[!UICONTROL Create]**.  
 
 ![The Create audience dialog with Build rule selected and Create highlighted.](../images/data-distiller/top-tips-to-maximize-value/create-audience-dialog.png)  
 
-The **Audience Composer** provides access to profile attributes. Navigate to **[!UICONTROL Attributes] > [!UICONTROL XDM Individual Profile]** to view available attributes.  
+The Audience Composer provides access to profile attributes. Navigate to **[!UICONTROL Attributes] > [!UICONTROL XDM Individual Profile]** to view available attributes.  
 
 ![The Audience Composer with XDM Individual Profile attributes available.](../images/data-distiller/top-tips-to-maximize-value/audience-composer.png)  
 
-Custom attributes created in **Data Distiller** are stored in the folder matching the **tenant namespace name**, which appears next to the sandbox name. These attributes can be used to define audience segmentation criteria.  
+Custom attributes created in Data Distiller are stored in the folder matching the tenant namespace name, which appears next to the sandbox name. These attributes can be used to define audience segmentation criteria.  
 
 ![Custom attributes displayed in the Audience Composer.](../images/data-distiller/top-tips-to-maximize-value/custom-attributes.png)  
 
-To build an audience using RFM attributes, drag and drop the **`Rfm_Model`** attribute into the Audience Composer. These attributes can be used for **Edge, Streaming, and Batch Audiences**.  
+To build an audience using RFM attributes, drag and drop the `Rfm_Model` attribute into the Audience Composer. These attributes can be used for Edge, Streaming, and Batch Audiences.  
 
 ![Creating an audience in the Audience Composer.](../images/data-distiller/top-tips-to-maximize-value/drag-and-drop.png)  
 
-To finalize the audience, select **[!UICONTROL Save and Publish]** in the top-right corner. After saving, the newly created audience appears in the **Audiences workspace**, where you can review its summary and qualifying criteria.  
+To finalize the audience, select **[!UICONTROL Save and Publish]** in the top-right corner. After saving, the newly created audience appears in the [!UICONTROL Audiences] workspace, where you can review its summary and qualifying criteria.  
 
-The **segment builder** allows you to access the **derived RFM attributes** and use them to design additional audiences. The newly created **SQL audience based on RFM scores** can be activated and sent to any preferred destination, including **Adobe Journey Optimizer**.  
+Use the segment builder to access the derived RFM attributes and design additional audiences. Activate the newly created SQL audience based on RFM scores and send it to any preferred destination, including Adobe Journey Optimizer.  
