@@ -511,6 +511,14 @@ There are two approaches to activating an RFM-based SQL audience in this tutoria
 
 Use the `CREATE AUDIENCE AS SELECT` command to define a new audience. The created audience is saved in a dataset and registered in the **[!UICONTROL Audiences]** workspace under **[!UICONTROL Data Distiller]**.
 
+Audiences created using the SQL extension are automatically registered under the [!UICONTROL Data Distiller] origin in the [!UICONTROL Audiences] workspace. From the [!UICONTROL Audiences] UI, you can view, manage, and activate your audiences as needed.  
+
+![The Audiences workspace showing available audiences.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-1.png)  
+
+![The Audiences workspace showing available audiences with the filter sidebar and Data Distiller selected.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-2.png) 
+
+For more details on SQL audiences, refer to the [Data Distiller Audiences documentation](../data-distiller-audiences/overview.md). To learn how to manage audiences in the UI, see the [Audiences Portal overview](../../segmentation/ui/audience-portal.md#audience-list).
+
 #### Create an audience
 
 To create an audience, use the following SQL commands:
@@ -602,10 +610,3 @@ Use the following SQL command to delete an audience:
 DROP AUDIENCE IF EXISTS adls_rfm_audience;
 ```
 
-Audiences created using the SQL extension are automatically registered under the [!UICONTROL Data Distiller] origin in the [!UICONTROL Audiences] workspace.
-
-For more details on SQL audiences, refer to the [Data Distiller Audiences documentation](../data-distiller-audiences/overview.md).
-
-![The Audiences workspace showing available audiences.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-1.png)
-
-![The Audiences workspace showing available audiences with the filter sidebar and Data Distiller selected.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-2.png)
