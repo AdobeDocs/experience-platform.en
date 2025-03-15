@@ -616,7 +616,7 @@ DROP AUDIENCE IF EXISTS adls_rfm_audience;
 
 Create audiences using attributes from the RFM model to segment users based on their behavior and characteristics. This section guides you through the Adobe Experience Platform UI to create an audience based on RFM scores.  
 
-To verify that the data has been loaded into Real-Time Customer Profile, navigate to **[!UICONTROL Customers] > [!UICONTROL Profiles] > [!UICONTROL Browse]**. Select **[!UICONTROL Identity Namespace]** as `Email` and enter `user0076@example.com`. This allows you to check whether profiles contain the expected RFM attributes.  
+To verify that the data has been loaded into Real-Time Customer Profile, navigate to **[!UICONTROL Customers] > [!UICONTROL Profiles] > [!UICONTROL Browse]**. Select **[!UICONTROL Identity Namespace]** as `Email` and enter `user0076@example.com`. Check the profile details to confirm that it contains the expected RFM attributes.  
 
 ![The Profiles workspace showing available profiles with an Email primary identity and email value filter applied.](../images/data-distiller/top-tips-to-maximize-value/profiles-workspace.png)  
 
