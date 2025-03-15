@@ -65,22 +65,24 @@ The [!UICONTROL Add data] panel appears. Drag and drop the CSV file into the **[
 
 Once the file is uploaded, a data preview appears at the bottom of the UI. Select **[!UICONTROL Finish]** to complete the upload.
 
-![The "Add data" section of the "Create dataset from CSV file" workflow with a data preview and "Finish" highlighted.]()
+![The "Add data" section of the "Create dataset from CSV file" workflow with a data preview and "Finish" highlighted.](../images/data-distiller/top-tips-to-maximize-value/add-data-finish.png)
 
 The dataset activities view for the "luma_web_data" dataset appears. The manual upload of the CSV file
 is ingested as a batch, and identified by a [!UICONTROL Batch ID]. A panel on the right-side displays the table name as `luma_web_data`.
-
-<!-- My table name is; luma_web_data_20250312_235611_817 Should we explain the suffix? -->
 
 >[!NOTE]
 >
 >The SQL engine in Data Distiller queries the table name, not the dataset name.
 
-![The "Dataset activity" tab for the newly created "luma_web_data" dataset with the table name, batch ID and "Preview dataset" highlighted.]()
+![The "Dataset activity" tab for the newly created "luma_web_data" dataset with the table name, batch ID and "Preview dataset" highlighted.](../images/data-distiller/top-tips-to-maximize-value/luma_web_data-dataset-details.png)
+
+<!-- The "Dataset activity" tab for the newly created "luma_web_data" dataset with the table name, batch ID and "Preview dataset" highlighted. 
+My table name is; luma_web_data_20250312_235611_817 Should we explain the suffix? 
+-->
 
 Once the data has finished processing, select [!UICONTROL Preview dataset] in the top right corner to preview the dataset. The dataset preview looks like this:
 
-![The dataset preview of the "luma_web_data" dataset.]()
+![The dataset preview of the "luma_web_data" dataset.](../images/data-distiller/top-tips-to-maximize-value/luma_web_data-preview.png)
 
 #### Schema considerations
 
