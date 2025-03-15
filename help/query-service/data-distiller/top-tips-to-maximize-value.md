@@ -72,7 +72,7 @@ is ingested as a batch, and identified by a [!UICONTROL Batch ID]. A panel on th
 
 >[!NOTE]
 >
->The SQL engine in Data Distiller queries the table name, not the dataset name.
+>When writing queries in Data Distiller, use the table name instead of the dataset name. The dataset name is only used for browsing in the UI.
 
 ![The "Dataset activity" tab for the newly created "luma_web_data" dataset with the table name, batch ID and "Preview dataset" highlighted.](../images/data-distiller/top-tips-to-maximize-value/luma_web_data-dataset-details.png)
 
@@ -80,7 +80,7 @@ is ingested as a batch, and identified by a [!UICONTROL Batch ID]. A panel on th
 My table name is; luma_web_data_20250312_235611_817 Should we explain the suffix? 
 -->
 
-Once the data has finished processing, select [!UICONTROL Preview dataset] in the top right corner to preview the dataset. The dataset preview looks like this:
+Once the data has finished processing, select [!UICONTROL Preview dataset] in the top right corner to preview the dataset. This is how the dataset preview appears:
 
 ![The dataset preview of the "luma_web_data" dataset.](../images/data-distiller/top-tips-to-maximize-value/luma_web_data-preview.png)
 
@@ -111,7 +111,7 @@ Paste the following query into the editor and execute it:
 SELECT * FROM luma_web_data; 
 ```
 
-The query results are displayed below the Query Editor in the [!UICONTROL Results] tab. To expand the results in a new dialog, select **[!UICONTROL View results]**. The results should look similar to the image below.
+The query results are displayed below the Query Editor in the [!UICONTROL Results] tab. To expand the results in a new dialog, select **[!UICONTROL View results]**. The results look similar to the image below.
 
 ![The Query results dialog for the basic query exploration results.](../images/data-distiller/top-tips-to-maximize-value/basic-query-exploration-results.png)
 
@@ -162,7 +162,7 @@ WHERE  event_type = 'order'
 
 ### Step 3: Enrich the data using Data Distiller functions
 
-The next step in this process is to build the RFM model.
+Next, build the RFM model.
 
 To begin, calculate three scores for each customer: Recency, Frequency, and Monetary value. These scores are derived from raw data collected from customer interactions and past purchase transactions.
 
@@ -191,7 +191,7 @@ WHERE event_type = 'order'
       AND email IS NOT NULL;
 ```
 
-The results should look like the image below.
+The results look like the image below.
 
 ![The Query results dialog for the extracted key fields.](../images/data-distiller/top-tips-to-maximize-value/extract-key-fields-results.png)
 
@@ -241,7 +241,7 @@ FROM order_data
 GROUP BY userid;
 ```
 
-The results should look like the image below.
+The results look like the image below.
 
 ![The Query results dialog for the extracted key fields.](../images/data-distiller/top-tips-to-maximize-value/aggregate-transactions.png)
 
@@ -298,7 +298,7 @@ SELECT userid,
 FROM   rfm_val ues; 
 ```
 
-The results should look like the images below.
+The results look like the images below.
 
 ![The Query results dialog for the multi-dimensional cube, part 1](../images/data-distiller/top-tips-to-maximize-value/multi-dimensional-cube-results-1.png)
 
