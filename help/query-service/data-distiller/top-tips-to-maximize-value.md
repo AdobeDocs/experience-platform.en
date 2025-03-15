@@ -610,49 +610,34 @@ Use the following SQL command to delete an audience:
 DROP AUDIENCE IF EXISTS adls_rfm_audience;
 ```
 
-#### Solution 2: Audience Creation with RFM Attributes
+#### Solution 2: Audience creation with RFM attributes  
 
-The objective is to create Audiences using attributes from RFM model.
+Create audiences using attributes from the **RFM model** to segment users based on their behavior and characteristics. This section guides you through the **Adobe Experience Platform UI** to create an audience based on RFM scores.  
 
-An audience is a set of people that share similar behavior or characteristics. Let's look at the current set of audiences available for "The Luma Store" and then create an audience that qualifies people that are in one of the six RFM model bucket.
+To verify that the data has been loaded into Real-Time Customer Profile, navigate to **[!UICONTROL Customers] > [!UICONTROL Profiles] > [!UICONTROL Browse]**. Select **[!UICONTROL Identity Namespace]** as **Email** and enter `user0076@example.com`. This allows you to check whether profiles contain the expected RFM attributes.  
 
-Let's go ahead and created audiences using Adobe Experience Platform UI.
+![The Profiles workspace showing available profiles with an Email primary identity and email value filter applied.](../images/data-distiller/top-tips-to-maximize-value/profiles-workspace.png)  
 
-1. To see if the data has been loaded into Profile, navigate to Customer->Profile->Browse. Choose the Identity Namespace as Email and put in the value of `user0076@example.com`.
+![The Profiles attributes view displaying the attributes of a specific profile.](../images/data-distiller/top-tips-to-maximize-value/profiles-attributes.png)
 
-![The Profiles workspace showing available profiles with an Email primary identity and email value filter applied.](../images/data-distiller/top-tips-to-maximize-value/profiles-workspace.png)
+To browse existing audiences, select **[!UICONTROL Audiences]** from the left navigation panel and ensure the **[!UICONTROL Browse]** tab is selected. The list of available audiences in the sandbox appears. Selecting an audience displays its description, qualifying rules, and the number of profiles included.  
 
-![The Profiles attributes view displaying the attributes of a specific profile](../images/data-distiller/top-tips-to-maximize-value/profiles-attributes.png)
+To create a new audience, select **[!UICONTROL Create Audience]** in the top-right corner. A dialog box appears with two options. Select **[!UICONTROL Build Rule]**, then click **[!UICONTROL Create]**.  
 
-2. Click on Audiences in the left rail, and make sure you are on the Browse tab. You can now see a list of audiences that have already been created in this sandbox.
+![The Create audience dialog with Build rule selected and Create highlighted.](../images/data-distiller/top-tips-to-maximize-value/create-audience-dialog.png)  
 
-3. Click on any audience to read its description, qualifying rules and the number of profiles that qualified.
+The **Audience Composer** provides access to profile attributes. Navigate to **[!UICONTROL Attributes] > [!UICONTROL XDM Individual Profile]** to view available attributes.  
 
-4. When you are done reading through audiences, click on Create Audience (top right).
+![The Audience Composer with XDM Individual Profile attributes available.](../images/data-distiller/top-tips-to-maximize-value/audience-composer.png)  
 
-5. You will see a pop up with 2 options. Let's select Build rule.
+Custom attributes created in **Data Distiller** are stored in the folder matching the **tenant namespace name**, which appears next to the sandbox name. These attributes can be used to define audience segmentation criteria.  
 
-![The create audience dialog with Build rule selected adn Create highlighted.](../images/data-distiller/top-tips-to-maximize-value/create-audience-dialog.png)
+![Custom attributes displayed in the Audience Composer.](../images/data-distiller/top-tips-to-maximize-value/custom-attributes.png)  
 
-6. Click on Attributes_>XDM Individual Profile
+To build an audience using RFM attributes, drag and drop the **`Rfm_Model`** attribute into the Audience Composer. These attributes can be used for **Edge, Streaming, and Batch Audiences**.  
 
-![The Audience Composer with XDM Individual Profile attributes available](../images/data-distiller/top-tips-to-maximize-value/audience-composer.png)
+![Creating an audience in the Audience Composer.](../images/data-distiller/top-tips-to-maximize-value/drag-and-drop.png)  
 
-7. Click on the folder that has the same name as the tenant namespace (name you see next to the sandbox name). Custom attributes created in Data Distiller can be found in this folder.
+To finalize the audience, select **[!UICONTROL Save and Publish]** in the top-right corner. After saving, the newly created audience appears in the **Audiences workspace**, where you can review its summary and qualifying criteria.  
 
-![Custom attributes displayed in the Audience Composer.](../images/data-distiller/top-tips-to-maximize-value/custom-attributes.png)
-
-8. You can easily drag and drop the Rfm_Model attribute to begin building an audience. Keep in mind that these attributes can be utilized for Edge, Streaming, and Batch Audiences
-
-![Creating an audience in the Audience Composer.](../images/data-distiller/top-tips-to-maximize-value/drag-and-drop.png)
-
-9. Click Save and Publish on top right.
-
-10. You will be able to view the audience summary of the audience you just created.
-
-
-You can now use the segment builder to access the derived attributes you created earlier to design audiences.
-
-
-Success! You have successfully created an SQL audience based on RFM scores which can be sent to any preferred destination including Adobe Journey Optimizer.
-
+The **segment builder** allows you to access the **derived RFM attributes** and use them to design additional audiences. The newly created **SQL audience based on RFM scores** can be activated and sent to any preferred destination, including **Adobe Journey Optimizer**.  
