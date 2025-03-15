@@ -507,16 +507,16 @@ Once configured, the SQL query runs automatically at the defined intervals, ensu
 
 There are two approaches to activating an RFM-based SQL audience in this tutorial. Solution 1 creates and activates an audience directly through Data Distiller using SQL queries, while Solution 2 uses precomputed RFM attributes to define an audience through the Experience Platform UI. Choose the method that best fits your workflow.
 
-#### Solution 1: SQL audience via Data Distiller  
+#### Solution 1: SQL audience via Data Distiller
 
-Use the `CREATE AUDIENCE AS SELECT` command to define a new audience. The created audience is saved in a dataset and registered in the **[!UICONTROL Audiences]** workspace under **[!UICONTROL Data Distiller]**.  
+Use the `CREATE AUDIENCE AS SELECT` command to define a new audience. The created audience is saved in a dataset and registered in the **[!UICONTROL Audiences]** workspace under **[!UICONTROL Data Distiller]**.
 
-#### Create an audience  
+#### Create an audience
 
-To create an audience, use the following SQL commands:  
+To create an audience, use the following SQL commands:
 
 ```sql
--- Define an audience for best customers based on RFM scores  
+-- Define an audience for best customers based on RFM scores
 CREATE AUDIENCE rfm_best_customer 
 WITH (
     primary_identity = _pfreportingonprod.userId, 
@@ -528,7 +528,7 @@ WITH (
         AND _pfreportingonprod.monetization = 1 
 );
 
--- Define an audience that includes all customers  
+-- Define an audience that includes all customers
 CREATE AUDIENCE rfm_all_customer 
 WITH (
     primary_identity = _pfreportingonprod.userId, 
@@ -537,7 +537,7 @@ WITH (
     SELECT * FROM adls_rfm_profile 
 );
 
--- Define an audience for core customers based on email identity  
+-- Define an audience for core customers based on email identity
 CREATE AUDIENCE rfm_core_customer 
 WITH (
     primary_identity = _pfreportingonprod.userId, 
@@ -550,3 +550,42 @@ WITH (
 );
 ```
 
+#### Insert an audience
+
+To add profiles to an existing audience, use the `INSERT INTO` command. This allows you to add individual profiles or entire audience segments to an existing audience dataset.
+
+#### Add profiles to an audience
+
+Use the following SQL commands to create and populate an audience:
+
+```sql
+-- Create an empty audience dataset
+CREATE AUDIENCE adls_rfm_audience 
+WITH (
+    primary_identity = userId, 
+    identity_namespace = Email
+) AS 
+SELECT 
+    CAST(NULL AS STRING) userId, 
+    CAST(NULL AS INTEGER) days_since_last_purchase, 
+    CAST(NULL AS INTEGER) orders, 
+    CAST(NULL AS DECIMAL(18,2)) total_revenue, 
+    CAST(NULL AS INTEGER) recency, 
+    CAST(NULL AS INTEGER) frequency, 
+    CAST(NULL AS INTEGER) monetization, 
+    CAST(NULL AS STRING) rfm_model 
+WHERE FALSE;
+
+-- Insert profiles into the audience dataset
+INSERT INTO AUDIENCE adls_rfm_audience 
+SELECT 
+    _pfreportingonprod.userId, 
+    _pfreportingonprod.days_since_last_purchase, 
+    _pfreportingonprod.orders, 
+    _pfreportingonprod.total_revenue, 
+    _pfreportingonprod.recency, 
+    _pfreportingonprod.frequency, 
+    _pfreportingonprod.monetization 
+FROM adls_rfm_profile 
+WHERE _pfreportingonprod.rfm_model = '6. Slipping - Once Loyal, Now Gone';
+```
