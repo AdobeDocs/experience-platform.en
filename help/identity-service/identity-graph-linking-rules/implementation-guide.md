@@ -114,22 +114,13 @@ During your pre-implementation process, you must ensure that the authenticated e
 
 >[!ENDTABS]
 
-You must ensure that you have a fully qualified identity when sending events using XDM experience events.
+During your pre-implementation process, you must ensure that the authenticated events that your system will send to Experience Platform always contain a **single** person identifier, such as a CRMID.
 
-+++Select to view an example of an event with  a fully qualified identity
+* (Recommended) Authenticated events with one person identifier.
+* (Not recommended) Authenticated events with two person identifiers.
+* (Not recommended) Authenticated events without any person identifiers.
 
-```json
-    "identityMap": {
-        "ECID": [
-            {
-                "id": "24165048599243194405404369473457348936",
-                "primary": false
-            }
-        ]
-    }
-```
-
-+++
+If your system sends two person identifiers, then the implementation may fail the single-person namespace requirement. For example, if an authenticated ExperienceEvent contains a CRMID, a customerID, and an ECID, then the second person identifier (customerID), may get associated with a second person. Within Identity Service, this implementation may look like: `CRMID:John <-> ECID:111 <-> customerID: Jane`.
 
 ## Set permissions {#set-permissions}
 
