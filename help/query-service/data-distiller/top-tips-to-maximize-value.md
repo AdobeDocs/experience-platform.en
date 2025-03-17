@@ -1,29 +1,25 @@
 ---
 title: Top Tips to Maximize Value with Adobe Experience Platform Data Distiller
-description: Learn to maximize value with Adobe Experience Platform Data Distiller by enriching Real-Time Customer Profile data and leveraging behavioral insights to build targeted audiences. This resource includes a sample dataset and a case study demonstrating how to apply the Recency, Frequency, Monetary (RFM) model for customer segmentation.
+description: Learn to maximize value with Adobe Experience Platform Data Distiller by enriching Real-Time Customer Profile data and using behavioral insights to build targeted audiences. This resource includes a sample dataset and a case study demonstrating how to apply the Recency, Frequency, Monetary (RFM) model for customer segmentation.
 hide: true
 hidefromtoc: true
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
 ---
 # Top tips to maximize value with Adobe Experience Platform Data Distiller
 
-This page contains the sample dataset for you to apply what you learned in the session "OS656 - Top Tips to Maximize Value with Adobe Experience Platform Data Distiller". You will learn how to accelerate implementations of Adobe Real-Time Customer Data Platform and Journey Optimizer by enriching Real-Time Customer Profile data. This enrichment leverages deep insights into customer behavior patterns to build audiences for experience delivery and optimization.
+This page contains the sample dataset for you to apply what you learned in the Adobe Summit session "OS656 - Top Tips to Maximize Value with Adobe Experience Platform Data Distiller". You'll learn how to accelerate implementations of Adobe Real-Time Customer Data Platform and Journey Optimizer by enriching Real-Time Customer Profile data. This enrichment leverages deep insights into customer behavior patterns to build audiences for experience delivery and optimization.
 
-Through the Luma case study, you will analyze user behavioral data and create a Recency, Frequency, Monetary (RFM) model—a marketing analysis technique for customer segmentation based on purchasing patterns.
-
-<!-- [Select the link to download the sample CSV data](../resources/movie-data.csv) -->
+Through the Luma case study, you'll analyze user behavioral data and create a *Recency, Frequency, Monetary (RFM)* model—a marketing analysis technique for customer segmentation based on purchasing patterns.
 
 ## Prerequisite
 
 To execute this use case, your Adobe Experience Platform instance must be licensed for [Data Distiller](./overview.md). Contact your Adobe representative for more information.
 
-## Overview of the RFM model
+## Overview of the RFM model {#rfm-overview}
 
 RFM, short for Recency (R), Frequency (F), and Monetary (M), is a data-driven approach to customer segmentation and analysis. This methodology evaluates three key aspects of customer behavior: how recently a customer made a purchase, how often they engage, and how much they spend. By quantifying these factors, businesses can gain actionable insights into customer segments and develop targeted marketing strategies that better meet individual customer needs.
 
-## Understanding customer behavior with the RFM model
-
-<!-- ## How the RFM model defines customer value -->
+## Understand customer behavior with the RFM model {#understand-customer-behavior}
 
 The RFM model segments customers based on transactional behavior using three key parameters.
 
@@ -33,27 +29,23 @@ The RFM model segments customers based on transactional behavior using three key
 
 By combining these factors, businesses assign numerical scores (typically on a scale from `1` to `4`) to each customer. Lower scores indicate more favorable outcomes. For example, a customer scoring `1` in all categories is considered among the best, demonstrating recent activity, high engagement, and significant spending.
 
-## Benefits and limitations of the RFM model
+## Benefits and limitations of the RFM model {#benefits-and-limitations}
 
 Every marketing modeling technique involves trade-offs, offering both benefits and limitations. RFM modeling is a valuable tool for understanding customer behavior and refining marketing strategies. Its advantages include segmenting customers to personalize messaging, optimize revenue, and improve response rates, retention, satisfaction, and Customer Lifetime Value (CLTV).
 
 However, RFM modeling has limitations. It assumes uniformity within segments based on recency, frequency, and monetary value, which may oversimplify customer behavior. The model also assigns equal weight to these factors, potentially misrepresenting customer value. Additionally, it does not account for context, such as product-specific traits or customer preferences, which can lead to misinterpretations of purchasing behavior.
 
-## Steps to build a dynamic RFM score-based SQL audience
+## Build a dynamic RFM score-based SQL audience {#build-a-dynamic-rfm-audience}
 
-Before starting the Luma case study, you need to ingest a sample dataset. First, [select the link to download the `luma_web_data.zip` dataset locally](../resources/luma_web_data.csv).
+Before starting the Luma case study, you need to ingest a sample dataset. First, [select the link to download the `luma_web_data.zip` dataset locally](../resources/luma_web_data.zip). The sample dataset is a csv file in a compressed .zip format to align with the use case. Decompress this ZIP file using Adobe Acrobat or a trusted file extraction tool, such as your operating system's built-in utility. In practice, you would typically source data from Adobe Analytics, Adobe Commerce, or Adobe Web/Mobile SDK.
 
-The sample dataset is a csv file in a compressed .zip format to align with the use case. In practice, you would typically source data from Adobe Analytics, Adobe Commerce, or Adobe Web/Mobile SDK.
+Throughout this tutorial, you will use Data Distiller to extract relevant events and fields into a standardized CSV format. The goal is to include only essential fields while maintaining a flat data structure for efficiency and ease of use.
 
-Throughout this tutorial, you will use Data Distiller to extract relevant events and fields into a standardized CSV format. The goal is to include only essential fields while maintaining a flat data structure for efficiency and practicality.
-
-<!-- ### Ingest the sample Luma web data -->
-
-### Step 1: Load the CSV data into Experience Platform
+### Step 1: Upload the CSV data into Experience Platform {#upload-csv-data}
 
 Follow these steps to upload a CSV file to Adobe Experience Platform.
 
-#### Create a dataset from a CSV file
+#### Create a dataset from a CSV file {#create-a-dataset}
 
 In the Experience Platform UI, navigate to select **[!UICONTROL Workflows]** in the left navigation rail, and select **[!UICONTROL Create dataset from CSV file]** from the available options. A new sidebar appears on the right of the screen, select **[!UICONTROL Launch]**.
 
@@ -61,7 +53,9 @@ The [!UICONTROL Configure Dataset] panel appears. In the **[!UICONTROL Name]** f
 
 The [!UICONTROL Add data] panel appears. Drag and drop the CSV file into the **[!UICONTROL Add data]** box, or select **[!UICONTROL Choose File]** to browse and upload the file.
 
-#### Review and complete the upload
+To learn more about this process, refer to the [batch ingestion tutorial](../../ingestion/tutorials/ingest-batch-data.md) and the [dataset creation workflow](../../catalog/datasets/user-guide.md#create) in the Dataset UI guide.
+
+#### Review and complete the upload {#review-and-complete-upload}
 
 Once the file is uploaded, a data preview appears at the bottom of the UI. Select **[!UICONTROL Finish]** to complete the upload.
 
@@ -70,13 +64,13 @@ Once the file is uploaded, a data preview appears at the bottom of the UI. Selec
 The dataset activities view for the "luma_web_data" dataset appears. The manual upload of the CSV file
 is ingested as a batch, and identified by a [!UICONTROL Batch ID]. A panel on the right-side displays the table name as `luma_web_data`.
 
->[!NOTE]
+>[!TIP]
 >
 >When writing queries in Data Distiller, use the table name instead of the dataset name. The dataset name is only used for browsing in the UI.
 
 ![The "Dataset activity" tab for the newly created "luma_web_data" dataset with the table name, batch ID and "Preview dataset" highlighted.](../images/data-distiller/top-tips-to-maximize-value/luma_web_data-dataset-details.png)
 
-<!-- The "Dataset activity" tab for the newly created "luma_web_data" dataset with the table name, batch ID and "Preview dataset" highlighted. 
+<!-- ![The "Dataset activity" tab for the newly created "luma_web_data" dataset with the table name, batch ID and "Preview dataset" highlighted.]() 
 My table name is; luma_web_data_20250312_235611_817 Should we explain the suffix? 
 -->
 
@@ -84,26 +78,29 @@ Once the data has finished processing, select [!UICONTROL Preview dataset] in th
 
 ![The dataset preview of the "luma_web_data" dataset.](../images/data-distiller/top-tips-to-maximize-value/luma_web_data-preview.png)
 
-#### Schema considerations
+#### Schema considerations {#schema-considerations}
 
-A structured XDM schema (for example, record, event, or B2B schemas) is not required because the data is imported as a raw CSV file. Instead, the dataset uses an Ad Hoc schema. 
+A structured XDM schema (for example, record, event, or B2B schemas) is not required because the data is imported as a raw CSV file. Instead, the dataset uses an ad hoc schema. 
+
+>[!TIP]
+>
+>Ad hoc schemas are XDM schema with fields that are namespaced for use only by a single dataset. Ad hoc schemas are used in various data ingestion workflows for Experience Platform and creating certain kinds of source connections.
 
 While Data Distiller supports all schema types, the final dataset for ingestion into the Real-Time Customer Profile will use a Record XDM schema.
 
-### Step 2: Connect to the data lake and explore available datasets
+### Step 2: Connect to the data lake and explore available datasets {#connect-to-the-data-lake-and-explore-datasets}
 
-<!-- The objective of this step is to ... -->
-The next objective in this process is to perform data exploration tasks in Adobe Experience Platform Data Lake to ensure data accuracy and integrity.
+The next step is to explore data in the Adobe Experience Platform data lake to ensure accuracy and integrity. Data must be accurate and complete to generate meaningful insights, but errors, inconsistencies, or missing values can occur during data transfers. This makes data verification and exploration essential.
 
-To generate meaningful insights, data must be accurate and complete. Errors, inconsistencies, or missing values can occur when transferring data between sources, making data verification and exploration essential.
+>[!TIP]
+>
+>The data lake stores raw, unprocessed data, such as event logs, clickstream data, and bulk-ingested records, for analytics and processing. The Profile Store contains customer-identifiable data, including identity-stitched events and attribute information, to support real-time personalization and activation.
 
-You can verify dataset quality and completeness through various operations using Data Distiller.
+Use Data Distiller to verify dataset quality and completeness through various operations. To confirm that data was accurately translated during ingestion, execute `SELECT` queries to inspect, validate, and analyze it. This process helps identify and resolve discrepancies, inconsistencies, or missing information.
 
-To confirm that data was accurately translated during ingestion, execute SELECT queries to inspect, validate, and analyze it. This process helps identify and resolve discrepancies, inconsistencies, or missing information.
+#### Perform a basic exploration query {#basic-exploration-queries}
 
-#### Perform a basic exploration query
-
-In the Adobe Experience Platform UI, select [!UICONTROL Queries] in the left navigation rail then select **[!UICONTROL Create Query]**. The Query Editor appears.
+In the Adobe Experience Platform UI, select **[!UICONTROL Queries]** in the left navigation rail then select **[!UICONTROL Create Query]**. The Query Editor appears.
 
 Paste the following query into the editor and execute it:
 
@@ -111,17 +108,19 @@ Paste the following query into the editor and execute it:
 SELECT * FROM luma_web_data; 
 ```
 
-The query results are displayed below the Query Editor in the [!UICONTROL Results] tab. To expand the results in a new dialog, select **[!UICONTROL View results]**. The results look similar to the image below.
+The query results are displayed below the Query Editor in the **[!UICONTROL Results]** tab. To expand the results in a new dialog, select **[!UICONTROL View results]**. The results look similar to the image below.
 
 ![The Query results dialog for the basic query exploration results.](../images/data-distiller/top-tips-to-maximize-value/basic-query-exploration-results.png)
 
-#### Focus on orders and exclude cancelled transactions
+See the [general guidance for query execution](../best-practices/writing-queries.md) document for more information.
+
+#### Focus on orders and exclude cancelled transactions {#focus-orders-exclude-cancelled}
 
 The RFM model evaluates recency, frequency, and monetary value based on completed purchases. Non-transactional events, such as page views and checkout interactions, are excluded from analysis. Additionally, cancelled orders must be removed, as they do not contribute to valid RFM calculations and require a different processing approach.
 
 To ensure accuracy:
 
-- Identify purchase IDs associated with cancellations and group them using GROUP BY.
+- Identify purchase IDs associated with cancellations and group them using `GROUP BY`.
 - Exclude these purchase IDs from the dataset.
 - Filter the data to retain only completed orders.
 
@@ -160,25 +159,15 @@ WHERE  event_type = 'order'
                                FROM   orders_cancelled); 
 ```
 
-### Step 3: Enrich the data using Data Distiller functions
+### Step 3: Enrich the data using Data Distiller functions {#enrich-the-data}
 
-Next, build the RFM model.
-
-To begin, calculate three scores for each customer: Recency, Frequency, and Monetary value. These scores are derived from raw data collected from customer interactions and past purchase transactions.
-
-- Recency: The time elapsed since the customer's last purchase, considering their entire history.
-- Frequency: The total number of purchases made by the customer.
-- Monetary: The overall amount spent by the customer across all transactions.
-
-<!-- This recap feels above repetative and should probably be cut. -->
+Next, use Data Distiller to extract and transform customer data, generate RFM scores, aggregate transactions, and segment customers by purchasing behavior. Follow these steps to calculate Recency, Frequency, and Monetary (RFM) values, build an audience model, and prepare insights for activation.
 
 #### Calculate the RFM score for each unique user ID
 
 To compute the RFM scores, extract key fields from the raw data using field filtering.
 
-<!-- ##### Extract key fields using field filtering (Heading level issue) -->
-
-The next query builds on the previous section's logic by selecting email as the `userid`, since every order requires an email login. Data Distiller applies the `TO_DATE` function to convert the timestamp into a date format. The `total_revenue` field represents the price of each transaction and will later be aggregated by summing it for each `userid`.
+The next query builds on the previous section's logic by selecting email as the `userid`, since every order requires an email login. Data Distiller applies the `TO_DATE` function to convert the timestamp into a date format. The `total_revenue` field represents the price of each transaction and is later aggregated by summing it for each `userid`.
 
 ```sql
 SELECT email AS userid, 
@@ -197,8 +186,6 @@ The results look like the image below.
 
 Next, create a `TABLE` to store the results of the previous query in a derived dataset. Copy and paste the following command into the Query Editor to create a `TABLE`.
 
-<!-- Essentially this is "To cache the results of the previous query" -->
-
 ```sql
 CREATE TABLE IF NOT EXISTS order_data AS
   SELECT email              AS userid,
@@ -211,7 +198,7 @@ CREATE TABLE IF NOT EXISTS order_data AS
          AND email IS NOT NULL; 
 ```
 
-The result will look similar to the following image but with a different dataset ID.
+The result looks similar to the following image but with a different dataset ID.
 
 ![The Query results dialog for the 'create a derived dataset' query.](../images/data-distiller/top-tips-to-maximize-value/create-table-derived-dataset.png)
 
@@ -223,7 +210,7 @@ SELECT * FROM order_data;
 
 ![The Query results dialog for the inspect data query.](../images/data-distiller/top-tips-to-maximize-value/inspect-data.png)
 
-#### Aggregate the transactions to generate the RFM values
+#### Aggregate the transactions to generate the RFM values {#aggregate-transactions}
 
 To calculate the RFM values, this query aggregates transactions for each user. 
 
@@ -258,7 +245,7 @@ AS
   GROUP BY userid; 
 ```
 
-The result will resemble the following image but with a different ID.
+The result resembles the following image but with a different ID.
 
 ![The Query results dialog displaying the newly created VIEW ID.](../images/data-distiller/top-tips-to-maximize-value/view-id.png)
 
@@ -268,17 +255,18 @@ Again as best practice, run a simple explore query to inspect the data in the vi
 SELECT * FROM RFM_Values;
 ```
 
-<!-- Image below could be unnecessary ... -->
+The following screenshot shows a sample result of the query, displaying the calculated RFM values for each user. The result corresponds to the view ID from the `CREATE VIEW` query.
 
 ![The Query results dialog for the aggregated RFM values.](../images/data-distiller/top-tips-to-maximize-value/view-of-aggregated-rfm-values.png)
 
-#### Generate the RFM multi-dimensional cube
+#### Generate the RFM multi-dimensional cube {#generate-multi-dimensional-cube}
 
-To segment customers based on their RFM scores, use an RFM multi-dimensional cube. The NTILE window function sorts values into ranked buckets and divides each dimension into four equal groups (quartiles), allowing for structured segmentation.
+To segment customers based on their RFM scores, use an RFM multi-dimensional cube. The `NTILE` window function sorts values into ranked buckets and divides each dimension into four equal groups (quartiles), allowing for structured segmentation.
 
 - Recency: Customers are ranked by how recently they made a purchase (`days_since_last_purchase`). Those who purchased most recently are in group 1, while those who haven't purchased for the longest time are in group 4.
 - Frequency: Customers are ranked by how often they make purchases (`ORDER BY orders DESC`). The most frequent buyers are in group 1, while the least frequent are in group 4.
 - Monetary: Customers are ranked by total spending (`total_revenue`). The highest spenders are in group 1, while the lowest spenders are in group 4.
+
 Run the following SQL query to generate the RFM multi-dimensional cube:
 
 ```sql
@@ -286,13 +274,13 @@ SELECT userid,
        days_since_last_purchase,
        orders,
        total_revenue,
-       5 - Ntile(4)
+       5 - NTILE(4)
              OVER (
                ORDER BY days_since_last_purchase DESC) AS recency,
-       Ntile(4)
+       NTILE(4)
          OVER (
            ORDER BY orders DESC)                       AS frequency,
-       Ntile(4)
+       NTILE(4)
          OVER (
            ORDER BY total_revenue DESC)                AS monetization
 FROM   rfm_val ues; 
@@ -301,8 +289,6 @@ FROM   rfm_val ues;
 The results look like the images below.
 
 ![The Query results dialog for the multi-dimensional cube, part 1](../images/data-distiller/top-tips-to-maximize-value/multi-dimensional-cube-results-1.png)
-
-<!-- Do we need both images below ... -->
 
 ![The Query results dialog for the multi-dimensional cube, part 2](../images/data-distiller/top-tips-to-maximize-value/multi-dimensional-cube-results-2.png)
 
@@ -317,28 +303,28 @@ AS
          days_since_last_purchase,
          orders,
          total_revenue,
-         5 - Ntile(4)
+         5 - NTILE(4)
                over (
                  ORDER BY days_since_last_purchase DESC) AS recency,
-         Ntile(4)
+         NTILE(4)
            over (
              ORDER BY orders DESC)                       AS frequency,
-         Ntile(4)
+         NTILE(4)
            over (
              ORDER BY total_revenue DESC)                AS monetization
   FROM   rfm_values;
 ```
 
-#### Model RFM segments
+#### Model RFM segments {#model-rfm-segments}
 
 With the RFM scores calculated, customers can be categorized into the following six priority segments:
 
-1. Core: Best customers with high Recency, Frequency, and Monetary value (Recency = 1, Frequency = 1, Monetary = 1).
-2. Loyal: Frequent customers who are consistent but not top spenders (Frequency = 1).
-3. Whales: Highest spenders, regardless of Recency and Frequency (Monetary = 1).
-4. Promising: Frequent but lower spenders (Frequency = 1, 2, 3; Monetary = 2, 3, 4).
-5. Rookies: New customers with low frequency (Recency = 1, Frequency = 4).
-6. Slipping: Formerly loyal customers with decreased activity (Recency = 2, 3, 4; Frequency = 4).
+1. `Core`: Best customers with high Recency, Frequency, and Monetary value (Recency = 1, Frequency = 1, Monetary = 1).
+2. `Loyal`: Frequent customers who are consistent but not top spenders (Frequency = 1).
+3. `Whales`: Highest spenders, regardless of Recency and Frequency (Monetary = 1).
+4. `Promising`: Frequent but lower spenders (Frequency = 1, 2, 3; Monetary = 2, 3, 4).
+5. `Rookies`: New customers with low frequency (Recency = 1, Frequency = 4).
+6. `Slipping`: Formerly loyal customers with decreased activity (Recency = 2, 3, 4; Frequency = 4).
 
 To streamline access and reuse, create a `VIEW` that stores the RFM segments, scores, and values.
 
@@ -386,7 +372,7 @@ AS
 
 +++
 
-The generated `VIEW` will follow the same structure as previous creations, but with a different ID.
+The generated `VIEW` follows the same structure as previous creations, but with a different ID.
 
 As best practice, run a simple explore query to inspect the data in the view. Use the following statement.
 
@@ -396,19 +382,27 @@ As best practice, run a simple explore query to inspect the data in the view. Us
 SELECT * FROM rfm_model_segment;
 ```
 
-<!-- These VIEW results could be chopped -->
+<!-- Perhaps these VIEW results could be chopped? -->
 
-![The Query results dialog for the exploratory rfm_model_segment query.](../images/data-distiller/top-tips-to-maximize-value/rfm_model_segment-query-results-1.png)
+The following screenshots display a sample result of the `SELECT * FROM rfm_model_segment;` query, showing the segmented RFM model data. The output reflects the structure of the generated `VIEW`, including assigned customer segments based on RFM scores.
 
-![The second Query results dialog for the exploratory rfm_model_segment query.](../images/data-distiller/top-tips-to-maximize-value/rfm_model_segment-query-results-2.png)
+![The Query results dialog for the exploratory 'rfm_model_segment' query.](../images/data-distiller/top-tips-to-maximize-value/rfm_model_segment-query-results-1.png)
 
-### Step 3: Write an SQL query to ingest the profile
+![The second Query results dialog for the exploratory 'rfm_model_segment' query.](../images/data-distiller/top-tips-to-maximize-value/rfm_model_segment-query-results-2.png)
 
-The next step is to ingest data into Real-Time Customer Profile. Begin by creating a new dataset and enabling it for Profile.
+### Step 4: Use SQL to batch ingest RFM data into Real-Time Customer Profile {#sql-batch-ingest-rfm-data}
 
-#### Create a derived dataset to store RFM attributes
+The, batch ingest RFM-enriched customer data into Real-Time Customer Profile. Begin by creating a Profile-enabled dataset and inserting the transformed data using SQL.
 
-As this dataset will be ingested into the Profile Store, it requires a partition key. Create an empty dataset to store RFM attributes and assign a primary identity.
+#### Create a derived dataset to store RFM attributes {#create-a-derived-dataset}
+
+As this dataset will be ingested into the Profile Store, it requires a partition key. 
+
+>[!TIP]
+>
+>The primary identity field serves as the partition key, ensuring efficient data distribution, retrieval, and query performance. Assigning a primary identity with an identity namespace groups related profile records together, optimizing lookups and updates within the Profile Store.
+
+Create an empty dataset to store RFM attributes and assign a primary identity.
 
 In this SQL statement:
 
@@ -441,19 +435,19 @@ CREATE TABLE IF NOT EXISTS adls_rfm_profile (
 ) WITH (LABEL = 'PROFILE'); -- Enable the table for Real-Time Customer Profile
 ```
 
-The result of this query will resemble previous dataset creations in this playbook but with a different ID.
+The result of this query resembles previous dataset creations in this playbook but with a different ID.
 
 After creating the dataset, navigate to Datasets > Browse > `adls_rfm_profile` to verify that the dataset is empty.
 
 ![The datasets workspace with the details of the 'adls_rfm_profile' dataset displayed and the profile-enabled toggle highlighted.](../images/data-distiller/top-tips-to-maximize-value/profile-enabled-toggle.png)
 
-You can also navigate to Schemas > Browse > `adls_rfm_profile` to view the XDM Individual Profile Schema diagram of your newly created dataset, including custom field groups.
+You can also navigate to **[!UICONTROL Schemas]** > **[!UICONTROL Browse]** > `adls_rfm_profile` to view the XDM Individual Profile Schema diagram of your newly created dataset, and it's custom field groups.
 
 ![The XDM workspace with the 'adls_rfm_profile' diagram displayed in the schema canvas.](../images/data-distiller/top-tips-to-maximize-value/xdm-individual-profile-schema.png)
 
-#### Insert data into the newly created derived dataset
+#### Insert data into the newly created derived dataset {#insert-data-into-derived-dataset}
 
-The next step is to insert data from the `rfm_model_segment VIEW` into `adls_rfm_profile`, which is enabled for Real-Time Customer Profile.
+Next, insert the data from the `rfm_model_segment VIEW` into `adls_rfm_profile`, which is enabled for Real-Time Customer Profile.
 
 Ensure that the field order in the `SELECT` query of the `INSERT` statement matches the structure of `rfm_model_segment` exactly. This alignment ensures that values from `rfm_model_segment` are inserted correctly into the corresponding fields in the target table. Misalignment between source and target fields can cause data mismatches.
 
@@ -470,7 +464,7 @@ FROM   rfm_model_segment;
 
 Once complete, the query output displays "Query complete" in the console.
 
-### Step 4: Schedule the query for batch processing
+### Step 5: Schedule the query for batch processing {#schedule-the-query}
 
 Now that your SQL code generates a derived dataset and enables it for Real-Time Customer Profile, the next step is to automate updates by scheduling the query to run at specific intervals. Through automatic dataset updates, you eliminate the need for manual execution.
 
@@ -499,17 +493,22 @@ Select **[!UICONTROL Save]** to confirm the schedule.
 
 ![The schedule details with the settings configured and Save highlighted.](../images/data-distiller/top-tips-to-maximize-value/set-schedule.png)
 
-After you have saved the schedule, you can navigate to the **[!UICONTROL Scheduled Queries]** tab at any point to monitor scheduled Data Distiller jobs.
+After you have saved the schedule, you can navigate to the **[!UICONTROL Scheduled Queries]** tab at any point to monitor scheduled Data Distiller jobs. For more details on [viewing query execution status, error messages, and alerts](../ui/monitor-queries.md), see the monitor scheduled queries document.
 
 Once configured, the SQL query runs automatically at the defined intervals, ensuring data remains up to date without requiring manual intervention.
 
-### Step 5: Activate an RFM-based SQL audience
+### Step 6: Create and activate an RFM-based audience
 
 <!-- double check this intro paragraph ... -->
 
-There are two approaches to activating an RFM-based SQL audience in this tutorial. Solution 1 creates and activates an audience directly through Data Distiller using SQL queries, while Solution 2 uses precomputed RFM attributes to define an audience through the Experience Platform UI. Choose the method that best fits your workflow.
+There are two methods to create and activate an RFM-based audience in this tutorial.
 
-#### Solution 1: SQL audience via Data Distiller
+- Solution 1: Create and activate an audience directly using Data Distiller and SQL queries.
+- Solution 2: Define and manage an audience in the Experience Platform UI using precomputed RFM attributes, without SQL.
+
+Choose the approach that best suits your workflow.
+
+#### Solution 1: SQL audience via Data Distiller {#data-distiller-sql-audience}
 
 Use the `CREATE AUDIENCE AS SELECT` command to define a new audience. The created audience is saved in a dataset and registered in the **[!UICONTROL Audiences]** workspace under **[!UICONTROL Data Distiller]**.
 
@@ -521,7 +520,7 @@ Audiences created using the SQL extension are automatically registered under the
 
 For more details on SQL audiences, refer to the [Data Distiller Audiences documentation](../data-distiller-audiences/overview.md). To learn how to manage audiences in the UI, see the [Audiences Portal overview](../../segmentation/ui/audience-portal.md#audience-list).
 
-#### Create an audience
+#### Create an audience {#create-an-audience}
 
 To create an audience, use the following SQL commands:
 
@@ -560,11 +559,26 @@ WITH (
 );
 ```
 
-#### Insert an audience
+#### Insert an audience {#insert-an-audience}
 
 To add profiles to an existing audience, use the `INSERT INTO` command. This allows you to add individual profiles or entire audience segments to an existing audience dataset.
 
-#### Add profiles to an audience
+```sql
+-- Insert profiles into the audience dataset
+INSERT INTO AUDIENCE adls_rfm_audience 
+SELECT 
+    _pfreportingonprod.userId, 
+    _pfreportingonprod.days_since_last_purchase, 
+    _pfreportingonprod.orders, 
+    _pfreportingonprod.total_revenue, 
+    _pfreportingonprod.recency, 
+    _pfreportingonprod.frequency, 
+    _pfreportingonprod.monetization 
+FROM adls_rfm_profile 
+WHERE _pfreportingonprod.rfm_model = '6. Slipping - Once Loyal, Now Gone';
+```
+
+#### Add profiles to an audience {#add-profiles-to-audience}
 
 Use the following SQL commands to create and populate an audience:
 
@@ -585,26 +599,11 @@ SELECT
     CAST(NULL AS INTEGER) monetization, 
     CAST(NULL AS STRING) rfm_model 
 WHERE FALSE;
-
--- Insert profiles into the audience dataset
-INSERT INTO AUDIENCE adls_rfm_audience 
-SELECT 
-    _pfreportingonprod.userId, 
-    _pfreportingonprod.days_since_last_purchase, 
-    _pfreportingonprod.orders, 
-    _pfreportingonprod.total_revenue, 
-    _pfreportingonprod.recency, 
-    _pfreportingonprod.frequency, 
-    _pfreportingonprod.monetization 
-FROM adls_rfm_profile 
-WHERE _pfreportingonprod.rfm_model = '6. Slipping - Once Loyal, Now Gone';
 ```
 
-#### Delete an audience
+#### Delete an audience {#delete-an-audience}
 
 To delete an existing audience, use the `DROP AUDIENCE` command. If the audience does not exist, an exception occurs unless `IF EXISTS` is specified.
-
-#### Remove an audience
 
 Use the following SQL command to delete an audience:
 
@@ -612,9 +611,9 @@ Use the following SQL command to delete an audience:
 DROP AUDIENCE IF EXISTS adls_rfm_audience;
 ```
 
-#### Solution 2: Audience creation with RFM attributes  
+#### Solution 2: Create an audience with RFM attributes {#create-audience-with-rfm-attributes}
 
-Create audiences using attributes from the RFM model to segment users based on their behavior and characteristics. This section guides you through the Adobe Experience Platform UI to create an audience based on RFM scores.  
+Use RFM attributes to segment users based on their behavior and characteristics. This section guides you through the Adobe Experience Platform UI to define an audience using RFM scores.
 
 To verify that the data has been loaded into Real-Time Customer Profile, navigate to **[!UICONTROL Customers] > [!UICONTROL Profiles] > [!UICONTROL Browse]**. Select **[!UICONTROL Identity Namespace]** as `Email` and enter `user0076@example.com`. Check the profile details to confirm that it contains the expected RFM attributes.  
 
@@ -628,17 +627,19 @@ To create a new audience, select **[!UICONTROL Create Audience]** in the top-rig
 
 ![The Create audience dialog with Build rule selected and Create highlighted.](../images/data-distiller/top-tips-to-maximize-value/create-audience-dialog.png)  
 
-The Audience Composer provides access to profile attributes. Navigate to **[!UICONTROL Attributes] > [!UICONTROL XDM Individual Profile]** to view available attributes.  
+The Audience Composition UI provides access to profile attributes. Navigate to **[!UICONTROL Attributes] > [!UICONTROL XDM Individual Profile]** to view available attributes.
 
-![The Audience Composer with XDM Individual Profile attributes available.](../images/data-distiller/top-tips-to-maximize-value/audience-composer.png)  
+For more details on using Audience Composition, see the [Audience Composition UI guide](../../segmentation/ui/audience-composition.md). For more details on using Segment Builder, see the [Segment Builder UI guide](../../segmentation/ui/segment-builder.md).
+
+![The Audience Composition UI with XDM Individual Profile attributes available.](../images/data-distiller/top-tips-to-maximize-value/audience-composer.png)  
 
 Custom attributes created in Data Distiller are stored in the folder matching the tenant namespace name, which appears next to the sandbox name. These attributes can be used to define audience segmentation criteria.  
 
-![Custom attributes displayed in the Audience Composer.](../images/data-distiller/top-tips-to-maximize-value/custom-attributes.png)  
+![Custom attributes displayed in the Audience Composition UI.](../images/data-distiller/top-tips-to-maximize-value/custom-attributes.png)  
 
 To build an audience using RFM attributes, drag and drop the `Rfm_Model` attribute into the Audience Composer. These attributes can be used for Edge, Streaming, and Batch Audiences.  
 
-![Creating an audience in the Audience Composer.](../images/data-distiller/top-tips-to-maximize-value/drag-and-drop.png)  
+![Creating an audience in the Audience Composition UI.](../images/data-distiller/top-tips-to-maximize-value/drag-and-drop.png)  
 
 To finalize the audience, select **[!UICONTROL Save and Publish]** in the top-right corner. After saving, the newly created audience appears in the [!UICONTROL Audiences] workspace, where you can review its summary and qualifying criteria.  
 
