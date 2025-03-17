@@ -41,9 +41,9 @@ However, RFM modeling has limitations. It assumes uniformity within segments bas
 
 ## Steps to build a dynamic RFM score-based SQL audience
 
-Before starting the Luma case study, you need to ingest a sample dataset. First, [select the link to download the `luma_web_data.csv` dataset locally](../resources/luma_web_data.csv).
+Before starting the Luma case study, you need to ingest a sample dataset. First, [select the link to download the `luma_web_data.zip` dataset locally](../resources/luma_web_data.csv).
 
-The sample dataset is provided in CSV format to align with the use case. In practice, you would typically source data from Adobe Analytics, Adobe Commerce, or Adobe Web/Mobile SDK.
+The sample dataset is a csv file in a compressed .zip format to align with the use case. In practice, you would typically source data from Adobe Analytics, Adobe Commerce, or Adobe Web/Mobile SDK.
 
 Throughout this tutorial, you will use Data Distiller to extract relevant events and fields into a standardized CSV format. The goal is to include only essential fields while maintaining a flat data structure for efficiency and practicality.
 
