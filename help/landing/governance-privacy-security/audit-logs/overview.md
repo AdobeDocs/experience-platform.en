@@ -83,7 +83,7 @@ You can view audit logs for different Experience Platform features within the **
 
 Audit logs are retained for 365 days after which they will be deleted from the system. If you require data of more than 365 days, you should export logs at a regular cadence to meet your internal policy requirements.
 
-Your method of requesting audit logs changes the allowable time period and the number of records you will have access to. [Exporting logs](#export-audit-logs) allows you to go back 365 days (in 90 day intervals) to a maximum of 1000 records, where as the [activity log UI](#filter-audit-logs) in Experience Platform displays the past 90 days to a maximum of 1000 records. 
+Your method of requesting audit logs changes the allowable time period and the number of records you will have access to. [Exporting logs](#export-audit-logs) allows you to go back 365 days (in 90 day intervals) to a maximum of 10,000 records, where as the [activity log UI](#filter-audit-logs) in Experience Platform displays the past 90 days to a maximum of 1000 records. 
 
 Select an event from the list to view its details in the right rail.
 
