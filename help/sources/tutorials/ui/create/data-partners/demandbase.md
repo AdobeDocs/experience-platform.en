@@ -45,15 +45,9 @@ If you do not have an existing account, then you must create a new account by pr
 
 To create a new account, select **[!UICONTROL New account]** and then provide an account name and optionally, a description for your account details. Next, provide the appropriate authentication values to authenticate your source against Experience Platform. To connect your [!DNL Demandbase Intent] account, you must have the following credentials:
 
-* **Access key ID**:
-* **Secret access key**:
-* **Bucket name**:
-
-| Credential | Description |
-| --- | --- |
-| Access key ID | |
-| Secret access key | |
-| Bucket name | |
+* **Access key ID**: Your [!DNL Demandbase] access key ID. This is a 61-character alphanumeric string that is required to authenticate your account to Experience Platform.
+* **Secret access key**: Your [!DNL Demandbase] secret access key. This is a 40-character, base-64-encoded string that is required to authenticate your account to Experience Platform.
+* **Bucket name**: Your [!DNL Demandbase] bucket from which data will be pulled from.
 
 ![The new account interface of the sources workflow.]
 
@@ -70,11 +64,6 @@ Once your account is authenticated and connected, you must now provide the follo
 * **Description**: (Optional) A brief explanation or additional information for your dataflow.
 * **Domain source**: The domain or website field that matches your source account records against Experience Platform accounts. This value can depend on your configurations. If unprovided, the domain defaults to `accountOrganization.website`.
 
-| Dataflow details | Description |
-| --- | --- |
-| Dataflow name | |
-| Description | |
-| Domain source | |
 
 ## Schedule dataflow {#schedule-dataflow}
 
@@ -85,12 +74,10 @@ Once your account is authenticated and connected, you must now provide the follo
 
 Next, use the scheduling interface to configure an ingestion schedule for your dataflow.
 
-| Scheduling configuration | Description |
-| --- | --- |
-| Frequency | Configure frequency to indicate how often the dataflow should run. You can schedule your [!DNL Demandbase Intent] dataflow to ingest data at a weekly rate. |
-| Interval | Interval represents the amount of time between each ingestion cycle. The only supported interval for a [!DNL Demandbase Intent] dataflow is `1`. This means that your dataflow will ingest data once a week, every week. |
-| Start time | The start time dictates when the first run iteration of your dataflow will occur. [!DNL Demandbase Intent] drops data to Adobe once a week, on Mondays, at 12:00 PM UTC. Therefore, you must set your ingestion start time after 12:00 PM UTC. Additionally, you must confirm the ingestion time with [!DNL Demandbase] as they may alter their schedule, when dropping files to Adobe. |
-| Backfill | Backfill determines what data is initially ingested. If backfill is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If backfill is disabled, only the files that are loaded in between the first run of ingestion and the start time will be ingested. Files loaded prior to the start time will not be ingested. |
+* **Frequency**: Configure frequency to indicate how often the dataflow should run. You can schedule your [!DNL Demandbase] dataflow to ingest data at a weekly rate. 
+* **Interval**: Interval represents the amount of time between each ingestion cycle. The only supported interval for a [!DNL Demandbase] dataflow is `1`. This means that your dataflow will ingest data once a week, every week.
+* **Start time**: The start time dictates when the first run iteration of your dataflow will occur. [!DNL Demandbase] drops data to Adobe once a week, on Mondays, at 12:00 PM UTC. Therefore, you must set your ingestion start time after 12:00 PM UTC. Additionally, you must confirm the ingestion time with [!DNL Demandbase] as they may alter their schedule, when dropping files to Adobe.
+* **Backfill**: Backfill determines what data is initially ingested. If backfill is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If backfill is disabled, only the files that are loaded in between the first run of ingestion and the start time will be ingested. Files loaded prior to the start time will not be ingested.
 
 Once you have configured your dataflow's ingestion schedule, select **[!UICONTROL Next]**.
 
