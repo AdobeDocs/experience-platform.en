@@ -131,10 +131,14 @@ Within Identity Service, this implementation may look like:
 
 **Events**
 
+Input the following events in the events interface:
+
 * Event1 = `CRMID: John, ECID: 111`
 * Event2 = `customerID: Jane, ECID: 111`
 
 **Algorithm configuration**
+
+Add the following configurations in the algorithm interface:
 
 | Display name | Identity symbol | Identity type | Unique per graph |
 | --- | --- | --- | --- | 
@@ -142,7 +146,9 @@ Within Identity Service, this implementation may look like:
 | customerID | customerID | CROSS_DEVICE | &#x2611; |
 | ECID | ECID | COOKIE | &#x2612; |
 
-![screenshot]
+Finally, simulate your graph to view an example identity graph that contains two person identifiers sharing the same ECID.
+
+![The graph simulation UI with an example graph rendered.](../images/implementation/example-graph.png)
 
 +++
 
