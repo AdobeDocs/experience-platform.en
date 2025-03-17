@@ -120,7 +120,31 @@ During your pre-implementation process, you must ensure that the authenticated e
 * (Not recommended) Authenticated events with two person identifiers.
 * (Not recommended) Authenticated events without any person identifiers.
 
-If your system sends two person identifiers, then the implementation may fail the single-person namespace requirement. For example, if an authenticated ExperienceEvent contains a CRMID, a customerID, and an ECID, then the second person identifier (customerID), may get associated with a second person. Within Identity Service, this implementation may look like: `CRMID:John <-> ECID:111 <-> customerID: Jane`.
+If your system sends two person identifiers, then the implementation may fail the single-person namespace requirement. For example, if the identityMap for your webSDK implementation can contain a CRMID, a customerID, and an ECID namespace, it's possible that two individuals that share a device may be associated with a different namespace. 
+
+Within Identity Service, this implementation may look like:
+
+* `timestamp1` = John logs in -> system captures `CRMID: John, ECID: 111`.
+* `timestamp2` = Jane logs in -> system captures `customerID: Jane, ECID: 111`.
+
++++Select to view how the implementation may look in graph simulation
+
+**Events**
+
+* Event1 = `CRMID: John, ECID: 111`
+* Event2 = `customerID: Jane, ECID: 111`
+
+**Algorithm configuration**
+
+| Display name | Identity symbol | Identity type | Unique per graph |
+| --- | --- | --- | --- | 
+| CRMID | CRMID | CROSS_DEVICE | &#x2611; |
+| customerID | customerID | CROSS_DEVICE | &#x2611; |
+| ECID | ECID | COOKIE | &#x2612; |
+
+![screenshot]
+
++++
 
 ## Set permissions {#set-permissions}
 
