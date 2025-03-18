@@ -25,7 +25,7 @@ To use [!DNL Bombora], select the **[!UICONTROL Bombora Intent]** source card un
 >
 >Sources in the sources catalog display the **[!UICONTROL Set up]** option when a given source does not yet have an authenticated account. Once an authenticated account exists, this option changes to **[!UICONTROL Add data]**.
 
-![The sources catalog with the "Bombora Intent" card selected.]
+![The sources catalog with the "Bombora Intent" card selected.](../../../../images/tutorials/create/bombora/catalog.png)
 
 ## Authentication {#authentication}
 
@@ -35,7 +35,7 @@ To use an existing account, select **[!UICONTROL Existing account]** and then se
 
 Once you have selected your account, select **[!UICONTROL Next]** to proceed to the next step.
 
-![The existing account interface in the sources workflow.]
+![The existing account interface in the sources workflow.](../../../../images/tutorials/create/bombora/existing.png)
 
 ### Create a new account {#create}
 
@@ -47,7 +47,7 @@ To create a new account, select **[!UICONTROL New account]** and then provide an
 * **Secret access key**: Your [!DNL Bombora] secret access key. This is a 40-character, base-64-encoded string that is required to authenticate your account to Experience Platform.
 * **Bucket name**: Your [!DNL Bombora] bucket from which data will be pulled from.
 
-![The new account interface in the sources workflow.]
+![The new account interface in the sources workflow.](../../../../images/tutorials/create/bombora/new.png)
 
 ## Provide dataflow details {#provide-dataflow-details}
 
@@ -57,7 +57,7 @@ Once your account is authenticated and connected, you must now provide the follo
 * **Description**: (Optional) A brief explanation or additional information for your dataflow.
 * **Domain source**: The domain or website field that matches your source account records against Experience Platform accounts. This value can depend on your configurations. If unprovided, the domain defaults to accountOrganization.website.
 
-![The dataflow details interface of the sources workflow.]
+![The dataflow details interface of the sources workflow.](../../../../images/tutorials/create/bombora/dataflow-detail.png)
 
 ## Schedule dataflow {#schedule-dataflow}
 
@@ -69,7 +69,7 @@ Next, use the scheduling interface to configure an ingestion schedule for your d
 
 Once you have configured your dataflow's ingestion schedule, select **[!UICONTROL Next]**.
 
-![The scheduling interface of the sources workflow.]
+![The scheduling interface of the sources workflow.](../../../../images/tutorials/create/bombora/scheduling.png)
 
 ## Review dataflow {#review-dataflow}
 
@@ -80,7 +80,7 @@ The final step in the dataflow creation process is to review your dataflow befor
 
 Once you have reviewed your dataflow, select **[!UICONTROL Finish]**.
 
-![The review interface of the sources workflow.]
+![The review interface of the sources workflow.](../../../../images/tutorials/create/bombora/review.png)
 
 ## Next steps
 
