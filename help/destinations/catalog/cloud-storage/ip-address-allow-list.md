@@ -34,6 +34,16 @@ Adobe recommends that you add the following IP ranges to an allowlist prior to w
 ## Required for all customers {#all-customers}
 
 * `52.247.108.70`
+<!-- 
+## US customers running on AWS {#aws}
+
+The IP range below applies to Experience Platform customers running on Amazon Web Services (AWS). See the [Experience Platform Multi-Cloud overview](../../../landing/multi-cloud.md) for more information.
+
+>[!NOTE]
+>
+>This IP range is not supported for customers running on AWS who use file-based destinations to export data to Amazon S3. -->
+
+* `66.117.18.0/24`
 
 ## US customers {#us-customers}
 
