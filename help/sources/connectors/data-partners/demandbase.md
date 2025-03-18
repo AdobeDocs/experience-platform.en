@@ -1,7 +1,6 @@
 ---
 title: Demandbase Intent
 description: Learn about the Demandbase Intent source on Experience Platform.
-badge: Beta
 ---
 # [!DNL Demandbase Intent]
 
@@ -12,6 +11,8 @@ With the [!DNL Demandbase] source,  you can identify high-interest accounts base
 Read this document for prerequisite information on the [!DNL Demandbase] source.
 
 ## Prerequisites {#prerequisites}
+
+Read the following sections for prerequisite steps before connecting [!DNL Demandbase] to Experience Platform.
 
 ### IP address allow list
 
@@ -25,12 +26,12 @@ You must have both **[!UICONTROL View Sources]** and **[!UICONTROL Manage Source
 
 The restrictions listed below must be taken into consideration when naming your cloud storage file or directory:
 
-- Directory and file component names cannot exceed 255 characters.
-- Directory and file names cannot end with a forward slash (`/`). If provided, it will be automatically removed.
-- The following reserved URL characters must be properly escaped: `! ' ( ) ; @ & = + $ , % # [ ]`
-- The following characters are not allowed: `" \ / : | < > * ?`.
-- Illegal URL path characters are not allowed. Code points like `\uE000`, while valid in NTFS filenames, are not valid Unicode characters. In addition, some ASCII or Unicode characters, like control characters (0x00 to 0x1F, \u0081, etc.), are also not allowed. For rules governing Unicode strings in HTTP/1.1 see [RFC 2616, Section 2.2: Basic Rules](https://www.ietf.org/rfc/rfc2616.txt) and [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
-- The following file names are not allowed: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, dot character (.), and two dot characters (..).
+* Directory and file component names cannot exceed 255 characters.
+* Directory and file names cannot end with a forward slash (`/`). If provided, it will be automatically removed.
+* The following reserved URL characters must be properly escaped: `! ' ( ) ; @ & = + $ , % # [ ]`
+* The following characters are not allowed: `" \ / : | < > * ?`.
+* Illegal URL path characters are not allowed. Code points like `\uE000`, while valid in NTFS filenames, are not valid Unicode characters. In addition, some ASCII or Unicode characters, like control characters (0x00 to 0x1F, \u0081, etc.), are also not allowed. For rules governing Unicode strings in HTTP/1.1 see [RFC 2616, Section 2.2: Basic Rules](https://www.ietf.org/rfc/rfc2616.txt) and [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
+* The following file names are not allowed: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, dot character (.), and two dot characters (..).
 
 ### Gather required credentials
 
@@ -74,5 +75,6 @@ The [!DNL Demandbase] schema is called **Company Intent Weekly**. It is the week
 >
 >Any changes to the schema will be communicated to Adobe in advance. To support seamless schema evolution, maintaining backward compatibility is essential. Experience Platform enforces an additive-only versioning approach, ensuring that any updates to the schema are non-destructive. This means that breaking changes are strictly prohibited, and only changes that enhance or extend the existing schema are allowed. 
  
- ## Next steps
+## Next steps
 
+Now that you have completed the prerequisite setup for [!DNL Demandbase], you can now proceed to [connect your [!DNL Demandbase] account to Experience Platform using the UI](../../tutorials/ui/create/data-partners/demandbase.md).

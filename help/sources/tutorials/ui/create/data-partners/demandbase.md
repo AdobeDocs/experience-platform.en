@@ -1,8 +1,6 @@
 ---
 title: Connect Demandbase Intent To Experience Platform Using The UI
 description: Learn how to connect Demandbase Intent to Experience Platform
-hide: true
-hidefromtoc: true
 exl-id: 7dc87067-cdf6-4dde-b077-19666dcb12e2
 ---
 # Connect [!DNL Demandbase Intent] to Experience Platform using the UI
@@ -21,13 +19,13 @@ This tutorial requires a working understanding of the following components of Ex
 
 In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the *[!UICONTROL Sources]* workspace. You can select the appropriate category in the *[!UICONTROL Categories]* panel. Alternatively, you can use the search bar to navigate to the specific source that you want to use.
 
-To use [!DNL Demandbase Intent], select the **[!UICONTROL Demandbase Intent]** source card under [!UICONTROL Data & Identity Partners] and then select **[!UICONTROL Add data]**.
+To use [!DNL Demandbase], select the **[!UICONTROL Demandbase Intent]** source card under [!UICONTROL Data & Identity Partners] and then select **[!UICONTROL Add data]**.
 
 >[!TIP]
 >
 >Sources in the sources catalog display the **[!UICONTROL Set up]** option when a given source does not yet have an authenticated account. Once an authenticated account exists, this option changes to **[!UICONTROL Add data]**.
 
-![The sources catalog with the "Demandbase Intent" card selected.]
+![The sources catalog with the "Demandbase Intent" card selected.](../../../../images/tutorials/create/demandbase/catalog.png)
 
 ## Authentication {#authentication}
 
@@ -37,7 +35,7 @@ To use an existing account, select **[!UICONTROL Existing account]** and then se
 
 Once you have selected your account, select **[!UICONTROL Next]** to proceed to the next step.
 
-![The existing account interface of the sources workflow.]
+![The existing account interface of the sources workflow.](../../../../images/tutorials/create/demandbase/existing.png)
 
 ### Create a new account {#create}
 
@@ -49,14 +47,9 @@ To create a new account, select **[!UICONTROL New account]** and then provide an
 * **Secret access key**: Your [!DNL Demandbase] secret access key. This is a 40-character, base-64-encoded string that is required to authenticate your account to Experience Platform.
 * **Bucket name**: Your [!DNL Demandbase] bucket from which data will be pulled from.
 
-![The new account interface of the sources workflow.]
+![The new account interface of the sources workflow.](../../../../images/tutorials/create/demandbase/new.png)
 
 ## Provide dataflow details {#provide-dataflow-details}
-
->[!CONTEXTUALHELP]
->id="platform_sources_demandbase_domain"
->title="Domain source"
->abstract="While Adobe uses the XDM accountOrganization.website, there may be customers who use custom fields for their respective websites. Therefore, you must ensure that your domain source is the domain/website field that will match your Demandbase account records against Experience Platform accounts."
 
 Once your account is authenticated and connected, you must now provide the following details for your dataflow:
 
@@ -64,13 +57,9 @@ Once your account is authenticated and connected, you must now provide the follo
 * **Description**: (Optional) A brief explanation or additional information for your dataflow.
 * **Domain source**: The domain or website field that matches your source account records against Experience Platform accounts. This value can depend on your configurations. If unprovided, the domain defaults to `accountOrganization.website`.
 
+![The dataflow detail step of the source workflow.](../../../../images/tutorials/create/demandbase/dataflow-detail.png)
 
 ## Schedule dataflow {#schedule-dataflow}
-
->[!CONTEXTUALHELP]
->id="platform_sources_demandbase_schedule"
->title="Schedule your dataflow"
->abstract="Demandbase drops data once a week on Monday morning at 5:00 PM UTC. Therefore, you must configure your ingestion start time after 5:00PM UTC. Additionally, you must confirm the ingestion time with Demandbase as they may alter their schedule, when dropping files to Adobe."
 
 Next, use the scheduling interface to configure an ingestion schedule for your dataflow.
 
@@ -81,9 +70,29 @@ Next, use the scheduling interface to configure an ingestion schedule for your d
 
 Once you have configured your dataflow's ingestion schedule, select **[!UICONTROL Next]**.
 
+![The scheduling interface of the sources workflow.](../../../../images/tutorials/create/demandbase/scheduling.png)
+
 ## Review dataflow {#review-dataflow}
 
 The final step in the dataflow creation process is to review your dataflow before executing it. Use the *[!UICONTROL Review]* step to review the details of your new dataflow before it runs. Details are grouped in the following categories:
 
 * **Connection**: Shows the source type, the relevant path of the chosen source file, and the number of columns within that source file.
 * **Scheduling**: Shows the active period, frequency, and interval of the ingestion schedule.
+
+![The review interface of the sources workflow.](../../../../images/tutorials/create/demandbase/review.png)
+
+## Next steps
+
+By following this tutorial, you have successfully created a dataflow to bring intent data from your [!DNL Demandbase] source to Experience Platform. For additional resources, visit the documentation outlined below.
+
+### Monitor your dataflow
+
+Once your dataflow has been created, you can monitor the data that is being ingested through it to view information on ingestion rates, success, and errors. For more information on how to monitor dataflow, visit the tutorial on [monitoring accounts and dataflows in the UI](../../../../../dataflows/ui/monitor-sources.md).
+
+### Update your dataflow
+
+To update configurations for your dataflows scheduling, mapping, and general information, visit the tutorial on [updating sources dataflows in the UI](../../update-dataflows.md).
+
+### Delete your dataflow
+
+You can delete dataflows that are no longer necessary or were incorrectly created using the **[!UICONTROL Delete]** function available in the **[!UICONTROL Dataflows]** workspace. For more information on how to delete dataflows, visit the tutorial on [deleting dataflows in the UI](../../delete.md).
