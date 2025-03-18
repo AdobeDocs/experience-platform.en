@@ -58,7 +58,7 @@ The [!DNL Demandbase] schema is called **Company Intent Weekly**. It is the week
 | `domain` | STRING | true | yes | The identified domain of the account showing intent. |
 | `start_date` | DATE | true | yes | The start date of when the intent activity occurred in the duration period. |
 | `end_date` | DATE | true | yes | The end date of when the intent activity occurred in the duration period. |
-| `duration_type` | STRING | true | yes | The type of duration. Generally, this value may be daily, weekly, or monthly depending on the chosen roll-up duration. For this data sample, this value is `week`.
+| `duration_type` | STRING | true | yes | The type of duration. Generally, this value may be daily, weekly, or monthly depending on the chosen roll-up duration. For this data sample, this value is `week`. |
 | `keyword_set_id` | STRING | true | yes | The keyword set ID. This is unique per given customer. |
 | `keyword_set` | STRING | true | yes | The keyword set name. |
 | `is_trending` | STRING | true | | The current state of a given trend. Trending state is measured as a burst in intent activity in the last week relative to averages for the prior seven weeks. |
