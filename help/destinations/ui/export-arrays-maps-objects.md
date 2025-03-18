@@ -8,9 +8,9 @@ exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 
 >[!AVAILABILITY]
 >
->The functionality to export arrays to cloud storage destinations is generally available for the following destinations: [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md),
+>The functionality to export arrays and other complex objects to cloud storage destinations is generally available for the following destinations: [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md),
 
-Learn how to export arrays from Real-Time CDP to [cloud storage destinations](/help/destinations/catalog/cloud-storage/overview.md). Read this document to understand the export workflow, the use cases enabled by this functionality, and known limitations.
+Learn how to export arrays, maps, and objects from Real-Time CDP to [cloud storage destinations](/help/destinations/catalog/cloud-storage/overview.md). Read this document to understand the export workflow, the use cases enabled by this functionality, and known limitations.
 
 Consider this page your go-to place for anything that you want to know about exporting arrays, maps, and other object types from Experience Platform.
 
@@ -46,8 +46,6 @@ organizations = [{
   latestInteraction: "2024-09-08"
 }]
 ```
-
-See further below [extensive examples](#examples) of how you can use various functions to access elements of arrays, transform and filter arrays, join array elements into a string, and more.  
 
 In addition to arrays, you can also export maps and objects from Experience Platform to your desired cloud storage destination. Read more about [maps](/help/xdm/ui/fields/map.md) and [objects](/help/xdm/ui/fields/object.md) in Experience Platform.
 
