@@ -7,7 +7,7 @@ exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
 
 >[!AVAILABILITY]
 >
->Identity graph linking rules is currently in Limited Availability. Contact your Adobe account team for information on how to access the feature in development sandboxes.
+>Identity graph linking rules are currently in Limited Availability. Contact your Adobe account team for information on how to access the feature in development sandboxes.
 
 Read this document for a step-by-step by guide that you can follow when implementing your data with Adobe Experience Platform Identity Service.
 
@@ -54,7 +54,7 @@ If you are using the [Adobe Analytics source connector](../../sources/tutorials/
 
 ### XDM experience events
 
-During your pre-implementation process, you must ensure that the authenticated events that your system will send to Experience Platform always contain a person identifier, such as CRMID.
+During your pre-implementation process, ensure that the authenticated events that your system will send to Experience Platform always contain a person identifier, such as CRMID.
 
 >[!BEGINTABS]
 
@@ -120,7 +120,7 @@ During your pre-implementation process, you must ensure that the authenticated e
 * (Not recommended) Authenticated events with two person identifiers.
 * (Not recommended) Authenticated events without any person identifiers.
 
-If your system sends two person identifiers, then the implementation may fail the single-person namespace requirement. For example, if the identityMap for your webSDK implementation can contain a CRMID, a customerID, and an ECID namespace, it's possible that two individuals that share a device may be associated with a different namespace. 
+If your system sends two person identifiers, the implementation may fail the single-person namespace requirement. For example, if the identityMap in your webSDK implementation contains a CRMID, a customerID, and an ECID namespace, then two individuals who share a device may get incorrectly associated with different namespaces.
 
 Within Identity Service, this implementation may look like:
 
