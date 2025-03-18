@@ -127,26 +127,7 @@ Within Identity Service, this implementation may look like:
 * `timestamp1` = John logs in -> system captures `CRMID: John, ECID: 111`.
 * `timestamp2` = Jane logs in -> system captures `customerID: Jane, ECID: 111`.
 
-+++Select to view how the implementation may look in graph simulation
-
-**Events**
-
-Input the following events in the events interface:
-
-* Event1 = `CRMID: John, ECID: 111`
-* Event2 = `customerID: Jane, ECID: 111`
-
-**Algorithm configuration**
-
-Add the following configurations in the algorithm interface:
-
-| Display name | Identity symbol | Identity type | Unique per graph |
-| --- | --- | --- | --- | 
-| CRMID | CRMID | CROSS_DEVICE | &#x2611; |
-| customerID | customerID | CROSS_DEVICE | &#x2611; |
-| ECID | ECID | COOKIE | &#x2612; |
-
-Finally, simulate your graph to view an example identity graph that contains two person identifiers sharing the same ECID.
++++View how the implementation may look in graph simulation
 
 ![The graph simulation UI with an example graph rendered.](../images/implementation/example-graph.png)
 
