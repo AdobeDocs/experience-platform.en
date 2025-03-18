@@ -260,6 +260,10 @@ A successful response returns the [!DNL Dynamics] tables and views directory at 
 
 ### Use primary key to optimize data exploration
 
+>[!NOTE]
+>
+>You can only use non-lookup attributes when using the primary key approach to optimization.
+
 You can optimize your explore queries by providing `primaryKey` as part of your query parameters. You must specify the primary key of the [!DNL Dynamics] table when including `primaryKey` as a query parameter.
 
 **API format**
