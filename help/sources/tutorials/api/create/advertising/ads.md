@@ -79,10 +79,11 @@ curl -X POST \
               "clientCustomerID": "{CLIENT_CUSTOMER_ID}",
               "loginCustomerID": "{LOGIN_CUSTOMER_ID}",
               "developerToken": "{DEVELOPER_TOKEN}",
-              "authenticationType": "{AUTHENTICATION_TYPE}"
+              "refreshToken": "{REFRESH_TOKEN}",
               "clientId": "{CLIENT_ID}",
               "clientSecret": "{CLIENT_SECRET}",
-              "refreshToken": "{REFRESH_TOKEN}"
+              "googleAdsApiVersion": "v17"
+
           }
       },
       "connectionSpec": {
