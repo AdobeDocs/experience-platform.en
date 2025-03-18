@@ -10,6 +10,24 @@ With the [!DNL Bombora Intent] source, you can integrate [!DNL Bombora's] compan
 
 Read this document for prerequisite information on the [!DNL Bombora] source.
 
+## Use cases {#use-cases}
+
+Read the following for use case examples that you can apply to the [!DNL Bombora] source.
+
+### Demand-Side Platform (DSP) integration
+
+As a B2B marketer, you can create an account list in Real-Time CDP, identify companies that show high intent for your products, then activate this list in [!DNL Bombora], which integrates directly with DSPs, allowing you to run targeted programmatic ad campaigns using [!DNL Bombora's] data. This ensures that your ad spend is focused on companies most likely to convert.
+
+### Account-Based Marketiting (ABM) Capabilities
+
+As a B2B marketer, you can build an account list based on first and third-party intent signals. You can then activate this list in [!DNL Bombora], where ABM capabilities allow you to target employees at these accounts specifically, ensuring your ads reach decision-makers rather than a broad audience.
+
+### Multi-Channel ABM Activation
+
+As a B2B marketer, you can create an account list in Real-Time CDP, identifying companies with high intent and activate it in [!DNL Bombora] to run targeted campaigns across multiple channels. On paid social media, you can serve personalized ads to professionals at target accounts on platforms like [!DNL Linkedin] and [!DNL Facebook]. 
+
+Using native ad platforms, you can ensure your content reaches decision-makers in relevant contexts. You can also extend campaigns to advanced TV, delivering ads to key accounts. This multi-channel approach ensures consistent messaging across platforms, maximizing engagement and conversion rates.
+
 ## Prerequisites {#prerequisites}
 
 Read the following sections for prerequisite steps before connecting [!DNL Bombora] to Experience Platform.
@@ -42,7 +60,6 @@ The restrictions listed below must be taken into consideration when naming your 
 | Access key ID | The [!DNL Bombora] access key ID. This is a 61-character alphanumeric string that is required to authenticate your account to Experience Platform. |
 | Secret access key | The [!DNL Bombora] secret access key. This is a 40-character, base-64-encoded string that is required to authenticate your account to Experience Platform. |
 | Bucket name | The [!DNL Bombora] bucket from which data will be pulled from. |
-| Folder path | The path to the folder that you want to provide access to. |
 
 For more information on these credentials, read the [[!DNL Google Cloud Storage] HMAC keys guide](https://cloud.google.com/storage/docs/authentication/hmackeys#overview). For steps on how to generate your own access key, read the [prerequisite guide in the [!DNL Google Cloud Storage] source overview](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account).
 

@@ -66,7 +66,6 @@ Next, use the scheduling interface to configure an ingestion schedule for your d
 * **Frequency**: Configure frequency to indicate how often the dataflow should run. You can schedule your [!DNL Bombora] dataflow to ingest data at a weekly rate.
 * **Interval**: Interval represents the amount of time between each ingestion cycle. The only supported interval for a [!DNL Bombora] dataflow is 1. This means that your dataflow will ingest data once a week, every week.
 * **Start time**: The start time dictates when the first run iteration of your dataflow will occur. [!DNL Bombora] drops data to Adobe once a week, on Mondays, at 12:00 PM UTC. Therefore, you must set your ingestion start time after 12:00 PM UTC. Additionally, you must confirm the ingestion time with [!DNL Bombora] as they may alter their schedule, when dropping files to Adobe.
-* **Backfill**: Backfill determines what data is initially ingested. If backfill is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If backfill is disabled, only the files that are loaded in between the first run of ingestion and the start time will be ingested. Files loaded prior to the start time will not be ingested.
 
 Once you have configured your dataflow's ingestion schedule, select **[!UICONTROL Next]**.
 
