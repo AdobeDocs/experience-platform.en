@@ -1,6 +1,7 @@
 ---
 title: Leverage Customer Experience Use Cases to Drive Business Goals
 description: Discover a practical framework to connect your business goals with real customer experiences. Use the included worksheets to strategize, refine, and apply use cases effectively within Adobe Experience Platform.
+feature: Personalization Insights and Engagement
 hide: yes
 hidefromtoc: yes
 ---
