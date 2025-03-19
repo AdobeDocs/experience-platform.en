@@ -322,11 +322,11 @@ The result looks similar to the following image but with a different view ID.
 With the RFM scores calculated, customers can be categorized into the following six priority segments:
 
 1. `Core`: Best customers with high Recency, Frequency, and Monetary value (Recency = 1, Frequency = 1, Monetary = 1).
-2. `Loyal`: Frequent customers who are consistent but not top spenders (Frequency = 1).
-3. `Whales`: Highest spenders, regardless of Recency and Frequency (Monetary = 1).
-4. `Promising`: Frequent but lower spenders (Frequency = 1, 2, 3; Monetary = 2, 3, 4).
-5. `Rookies`: New customers with low frequency (Recency = 1, Frequency = 4).
-6. `Slipping`: Formerly loyal customers with decreased activity (Recency = 2, 3, 4; Frequency = 4).
+1. `Loyal`: Frequent customers who are consistent but not top spenders (Frequency = 1).
+1. `Whales`: Highest spenders, regardless of Recency and Frequency (Monetary = 1).
+1. `Promising`: Frequent but lower spenders (Frequency = 1, 2, 3; Monetary = 2, 3, 4).
+1. `Rookies`: New customers with low frequency (Recency = 1, Frequency = 4).
+1. `Slipping`: Formerly loyal customers with decreased activity (Recency = 2, 3, 4; Frequency = 4).
 
 To streamline access and reuse, create a `VIEW` that stores the RFM segments, scores, and values.
 
