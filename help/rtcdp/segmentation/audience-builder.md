@@ -91,7 +91,7 @@ The **[!UICONTROL Code view]** provides a text-based-code description of the aud
 
 ![The code view version of the account audience.](../assets/segmentation/audience-builder/code-view.png)
 
-You can select **[!UICONTROL Apply access labels]** to apply the relevant access labels for the audience. More information on access labels can be found in the ???.
+You can select **[!UICONTROL Apply access labels]** to apply the relevant access labels for the audience. More information on access labels can be found in the [managing labels guide](../../access-control/abac/ui/labels.md).
 
 ![The Apply access and data governance labels popover is displayed.](../assets/segmentation/audience-builder/apply-access-labels.png)
 
