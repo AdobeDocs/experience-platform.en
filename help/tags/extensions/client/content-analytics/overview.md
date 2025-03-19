@@ -63,9 +63,20 @@ You can override the automatic selected values for **[!UICONTROL Sandbox]** and 
 
 See the guide on [datastreams](../../../../datastreams/overview.md) to learn how to configure a datastream.
 
+## Configure experience capture and definition
 
+In the **[!UICONTROL Experience Capture & Definition]** section, you can enable **[!UICONTROL Include Experiences]** to include experiences when collecting data for Content Analytics. 
 
-## Configure Event Filtering
+![Image showing Experience Capture and Definition section in extension](assets/aca-tag-experiencecapture.png)
+
+1. Enable **[!UICONTROL Include experiences]**.
+1. Optionally. specify the parameters how content is rendered on your website. The parameters are zero or more combinations of a **[!UICONTROL Domain regular expression]** and **[!UICONTROL Query parameters]**.
+   1. Enter a **[!UICONTROL Domain regular expression]**, for example `^(?!.*\b(store|help|admin)\b)`.
+   1. Specify a comma separated list of **[!UICONTROL Query parameters,]** for example `outdoors, patio, kitchen`.
+1. Select **[!UICONTROL Remove]** if you want to remove a combination of domain regular expression and query parameters.
+1. Select **[!UICONTROL Add Regex]** if you want to add another combination of a regular expression and query parameters.
+
+## Configure event filtering
 
 In the **[!UICONTROL Event Filtering]** section, you can modify the regular expressions to filter **[!UICONTROL Page URLs]** and **[!UICONTROL Assets URLs]** when collecting data for Content Analytics. The regular expressions that you have defined in the [Content Analytics guided configuration wizard](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) are populated automatically.
 
@@ -80,3 +91,4 @@ In the **[!UICONTROL Event Filtering]** section, you can modify the regular expr
 You can use **[!UICONTROL Test Regex]** to test your regular expression in the **[!UICONTROL Regular Expression Tester]**.
 
 ![Image showing the regular expression tester of the Adobe Content Analytics tag extension in the Tags UI](assets/aca-tag-regextester.png)
+
