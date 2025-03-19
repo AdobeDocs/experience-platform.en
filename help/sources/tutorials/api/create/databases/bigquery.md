@@ -49,7 +49,7 @@ POST /connections
 
 +++Request
 
-The following request creates a base connection for [!DNL Google BigQuery] using basic authentication:
+The following request creates a base connection for [!DNL Google BigQuery] using basic authentication.
 
 ```shell
 curl -X POST \
