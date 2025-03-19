@@ -432,15 +432,15 @@ Since the Query Editor supports sequential execution, you can run the table crea
 
 ```sql
 CREATE TABLE IF NOT EXISTS adls_rfm_profile (
-    userId TEXT PRIMARY IDENTITY NAMESPACE 'Email', -- Primary identity field using the 'Email' namespace
-    days_since_last_purchase INTEGER, -- Days since the last purchase
-    orders INTEGER, -- Total number of orders
-    total_revenue DECIMAL(18, 2), -- Total revenue with two decimal precision
-    recency INTEGER, -- Recency score
-    frequency INTEGER, -- Frequency score
-    monetization INTEGER, -- Monetary score
-    rfm_model TEXT -- RFM segment classification
-) WITH (LABEL = 'PROFILE'); -- Enable the table for Real-Time Customer Profile
+    userId TEXT PRIMARY IDENTITY NAMESPACE 'Email',
+    days_since_last_purchase INTEGER,
+    orders INTEGER,
+    total_revenue DECIMAL(18, 2),
+    recency INTEGER,
+    frequency INTEGER,
+    monetization INTEGER,
+    rfm_model TEXT
+) WITH (LABEL = 'PROFILE');
 
 INSERT INTO adls_rfm_profile
 SELECT STRUCT(userId, days_since_last_purchase, orders, total_revenue, recency,
@@ -572,28 +572,9 @@ WITH (
 );
 ```
 
-#### Insert an audience {#insert-an-audience}
+#### Create an empty audience dataset {#create-empty-audience-dataset}
 
-To add profiles to an existing audience, use the `INSERT INTO` command. This allows you to add individual profiles or entire audiences to an existing audience dataset.
-
-```sql
--- Insert profiles into the audience dataset
-INSERT INTO AUDIENCE adls_rfm_audience 
-SELECT 
-    _{TENANT_ID}.userId, 
-    _{TENANT_ID}.days_since_last_purchase, 
-    _{TENANT_ID}.orders, 
-    _{TENANT_ID}.total_revenue, 
-    _{TENANT_ID}.recency, 
-    _{TENANT_ID}.frequency, 
-    _{TENANT_ID}.monetization 
-FROM adls_rfm_profile 
-WHERE _{TENANT_ID}.rfm_model = '6. Slipping - Once Loyal, Now Gone';
-```
-
-#### Add profiles to an audience {#add-profiles-to-audience}
-
-Use the following SQL commands to create and populate an audience:
+Before adding profiles, create an empty dataset to store audience records.
 
 ```sql
 -- Create an empty audience dataset
@@ -614,11 +595,28 @@ SELECT
 WHERE FALSE;
 ```
 
+#### Insert profiles into an existing audience {#insert-an-audience}
+
+To add profiles to an existing audience, use the INSERT INTO command. This allows you to add individual profiles or entire audience segments to an existing audience dataset.
+
+```sql
+-- Insert profiles into the audience dataset
+INSERT INTO AUDIENCE adls_rfm_audience 
+SELECT 
+    _{TENANT_ID}.userId, 
+    _{TENANT_ID}.days_since_last_purchase, 
+    _{TENANT_ID}.orders, 
+    _{TENANT_ID}.total_revenue, 
+    _{TENANT_ID}.recency, 
+    _{TENANT_ID}.frequency, 
+    _{TENANT_ID}.monetization 
+FROM adls_rfm_profile 
+WHERE _{TENANT_ID}.rfm_model = '6. Slipping - Once Loyal, Now Gone';
+```
+
 #### Delete an audience {#delete-an-audience}
 
-To delete an existing audience, use the `DROP AUDIENCE` command. If the audience does not exist, an exception occurs unless `IF EXISTS` is specified.
-
-Use the following SQL command to delete an audience:
+To delete an existing audience, use the DROP AUDIENCE command. If the audience does not exist, an exception occurs unless IF EXISTS is specified.
 
 ```sql
 DROP AUDIENCE IF EXISTS adls_rfm_audience;
