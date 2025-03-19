@@ -1,11 +1,9 @@
 ---
-title: Top Tips to Maximize Value with Adobe Experience Platform Data Distiller
+title: Top Tips to Maximize Value with Adobe Experience Platform Data Distiller - OS656
 description: Learn to maximize value with Adobe Experience Platform Data Distiller by enriching Real-Time Customer Profile data and using behavioral insights to build targeted audiences. This resource includes a sample dataset and a case study demonstrating how to apply the Recency, Frequency, Monetary (RFM) model for customer segmentation.
-hide: true
-hidefromtoc: true
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
 ---
-# Top tips to maximize value with Adobe Experience Platform Data Distiller
+# Top tips to maximize value with Adobe Experience Platform Data Distiller - OS656
 
 This page contains the sample dataset for you to apply what you learned in the Adobe Summit session "OS656 - Top Tips to Maximize Value with Adobe Experience Platform Data Distiller". You'll learn how to accelerate implementations of Adobe Real-Time Customer Data Platform and Journey Optimizer by enriching Real-Time Customer Profile data. This enrichment leverages deep insights into customer behavior patterns to build audiences for experience delivery and optimization.
 
@@ -47,7 +45,7 @@ Follow these steps to upload a CSV file to Adobe Experience Platform.
 
 #### Create a dataset from a CSV file {#create-a-dataset}
 
-In the Experience Platform UI, navigate to select **[!UICONTROL Workflows]** in the left navigation rail, and select **[!UICONTROL Create dataset from CSV file]** from the available options. A new sidebar appears on the right of the screen, select **[!UICONTROL Launch]**.
+In the Experience Platform UI, select **[!UICONTROL Datasets]** in the left navigation rail, followed by **[!UICONTROL Create dataset]**. Then select **[!UICONTROL Create dataset from CSV file]** from the available options.
 
 The [!UICONTROL Configure Dataset] panel appears. In the **[!UICONTROL Name]** field, input the dataset name as "luma_web_data" and select **[!UICONTROL Next]**.
 
@@ -129,7 +127,7 @@ The following queries demonstrate how to identify and exclude cancelled orders f
 This first query selects all non-null purchase IDs associated with a cancellation and aggregates them using `GROUP BY`. The resulting purchase IDs must be excluded from the dataset.
 
 ```sql
-CREATE OR replace VIEW orders_cancelled
+CREATE VIEW orders_cancelled
 AS
   SELECT purchase_id
   FROM   luma_web_data
@@ -235,7 +233,7 @@ The results look like the image below.
 To enhance query efficiency and reusability, create a `VIEW` to store the aggregated RFM values.
 
 ```sql
-CREATE OR replace VIEW rfm_values
+CREATE VIEW rfm_values
 AS
   SELECT userid,
          DATEDIFF(current_date, MAX(purchase_date)) AS days_since_last_purchase,
@@ -252,7 +250,7 @@ The result resembles the following image but with a different ID.
 Again as best practice, run a simple explore query to inspect the data in the view. Use the following statement.
 
 ```sql
-SELECT * FROM RFM_Values;
+SELECT * FROM rfm_values;
 ```
 
 The following screenshot shows a sample result of the query, displaying the calculated RFM values for each user. The result corresponds to the view ID from the `CREATE VIEW` query.
@@ -283,7 +281,7 @@ SELECT userid,
        NTILE(4)
          OVER (
            ORDER BY total_revenue DESC)                AS monetization
-FROM   rfm_val ues; 
+FROM rfm_values; 
 ```
 
 The results look like the images below.
@@ -315,16 +313,20 @@ AS
   FROM   rfm_values;
 ```
 
+The result looks similar to the following image but with a different view ID.
+
+![The Query results dialog for the 'rfm_scores' VIEW.](../images/data-distiller/top-tips-to-maximize-value/rfm_score-view-result.png)
+
 #### Model RFM segments {#model-rfm-segments}
 
 With the RFM scores calculated, customers can be categorized into the following six priority segments:
 
 1. `Core`: Best customers with high Recency, Frequency, and Monetary value (Recency = 1, Frequency = 1, Monetary = 1).
-2. `Loyal`: Frequent customers who are consistent but not top spenders (Frequency = 1).
-3. `Whales`: Highest spenders, regardless of Recency and Frequency (Monetary = 1).
-4. `Promising`: Frequent but lower spenders (Frequency = 1, 2, 3; Monetary = 2, 3, 4).
-5. `Rookies`: New customers with low frequency (Recency = 1, Frequency = 4).
-6. `Slipping`: Formerly loyal customers with decreased activity (Recency = 2, 3, 4; Frequency = 4).
+1. `Loyal`: Frequent customers who are consistent but not top spenders (Frequency = 1).
+1. `Whales`: Highest spenders, regardless of Recency and Frequency (Monetary = 1).
+1. `Promising`: Frequent but lower spenders (Frequency = 1, 2, 3; Monetary = 2, 3, 4).
+1. `Rookies`: New customers with low frequency (Recency = 1, Frequency = 4).
+1. `Slipping`: Formerly loyal customers with decreased activity (Recency = 2, 3, 4; Frequency = 4).
 
 To streamline access and reuse, create a `VIEW` that stores the RFM segments, scores, and values.
 
@@ -392,7 +394,7 @@ The following screenshots display a sample result of the `SELECT * FROM rfm_mode
 
 ### Step 4: Use SQL to batch ingest RFM data into Real-Time Customer Profile {#sql-batch-ingest-rfm-data}
 
-The, batch ingest RFM-enriched customer data into Real-Time Customer Profile. Begin by creating a Profile-enabled dataset and inserting the transformed data using SQL.
+Next, batch ingest RFM-enriched customer data into Real-Time Customer Profile. Begin by creating a Profile-enabled dataset and inserting the transformed data using SQL.
 
 #### Create a derived dataset to store RFM attributes {#create-a-derived-dataset}
 
@@ -420,28 +422,39 @@ In this SQL statement:
 >
 >For more information on defining identity fields and working with identity namespaces, refer to the [Identity Service documentation](../../identity-service/home.md) or the guide on [defining an identity field in the Adobe Experience Platform UI](../../xdm/ui/fields/identity.md).
 
-The following SQL creates a Profile-enabled table to store RFM attributes
+Since the Query Editor supports sequential execution, you can include the table creation and data insertion queries in a single session. The following SQL first creates a Profile-enabled table to store RFM attributes. Then, it inserts RFM-enriched customer data from `rfm_model_segment` into the `adls_rfm_profile` table, structuring each record under your tenant-specific namespace which is required for Real-Time Customer Profile ingestion.
+
+Since the Query Editor supports sequential execution, you can run the table creation and data insertion queries in a single session. The following SQL first creates a Profile-enabled table to store RFM attributes. Then, it inserts RFM-enriched customer data from `rfm_model_segment` into the `adls_rfm_profile` table, ensuring that each record is properly structured under your tenant-specific namespace (`_{TENANT_ID}`). This namespace is essential for Real-Time Customer Profile ingestion and accurate identity resolution.
+
+>[!IMPORTANT]
+>
+>Replace `_{TENANT_ID}` with your organization's tenant namespace. This namespace is unique to your organization and ensures that all ingested data is correctly assigned in Adobe Experience Platform.
 
 ```sql
 CREATE TABLE IF NOT EXISTS adls_rfm_profile (
-    userId TEXT PRIMARY IDENTITY NAMESPACE 'Email', -- Primary identity field using the 'Email' namespace
-    days_since_last_purchase INTEGER, -- Days since the last purchase
-    orders INTEGER, -- Total number of orders
-    total_revenue DECIMAL(18, 2), -- Total revenue with two decimal precision
-    recency INTEGER, -- Recency score
-    frequency INTEGER, -- Frequency score
-    monetization INTEGER, -- Monetary score
-    rfm_model TEXT -- RFM segment classification
-) WITH (LABEL = 'PROFILE'); -- Enable the table for Real-Time Customer Profile
+    userId TEXT PRIMARY IDENTITY NAMESPACE 'Email',
+    days_since_last_purchase INTEGER,
+    orders INTEGER,
+    total_revenue DECIMAL(18, 2),
+    recency INTEGER,
+    frequency INTEGER,
+    monetization INTEGER,
+    rfm_model TEXT
+) WITH (LABEL = 'PROFILE');
+
+INSERT INTO adls_rfm_profile
+SELECT STRUCT(userId, days_since_last_purchase, orders, total_revenue, recency,
+              frequency, monetization, rfm_model) _{TENANT_ID}
+FROM rfm_model_segment;
 ```
 
 The result of this query resembles previous dataset creations in this playbook but with a different ID.
 
-After creating the dataset, navigate to Datasets > Browse > `adls_rfm_profile` to verify that the dataset is empty.
+After creating the dataset, navigate to **[!UICONTROL Datasets]** > **[!UICONTROL Browse]** > `adls_rfm_profile` to verify that the dataset is empty.
 
 ![The datasets workspace with the details of the 'adls_rfm_profile' dataset displayed and the profile-enabled toggle highlighted.](../images/data-distiller/top-tips-to-maximize-value/profile-enabled-toggle.png)
 
-You can also navigate to **[!UICONTROL Schemas]** > **[!UICONTROL Browse]** > `adls_rfm_profile` to view the XDM Individual Profile Schema diagram of your newly created dataset, and it's custom field groups.
+You can also navigate to **[!UICONTROL Schemas]** > **[!UICONTROL Browse]** > `adls_rfm_profile` to view the XDM Individual Profile Schema diagram of your newly created dataset, and its custom field groups.
 
 ![The XDM workspace with the 'adls_rfm_profile' diagram displayed in the schema canvas.](../images/data-distiller/top-tips-to-maximize-value/xdm-individual-profile-schema.png)
 
@@ -453,12 +466,12 @@ Ensure that the field order in the `SELECT` query of the `INSERT` statement matc
 
 >[!NOTE]
 >
->This query runs in Batch Mode, which requires spinning up a cluster to execute the process. The operation reads data from the data lake, processes it within the cluster, and writes the results back to the data lake.
+>This query runs in batch mode, which requires spinning up a cluster to execute the process. The operation reads data from the data lake, processes it within the cluster, and writes the results back to the data lake.
 
 ```sql
 INSERT INTO adls_rfm_profile
 SELECT Struct(userid, days_since_last_purchase, orders, total_revenue, recency,
-              frequency, monetization, rfm_model) _pfreportingonprod
+              frequency, monetization, rfm_model) _{TENANT_ID}
 FROM   rfm_model_segment; 
 ```
 
@@ -484,10 +497,10 @@ For more details on scheduling queries, refer to the [Query Schedules documentat
 
 The [!UICONTROL Schedule details] view appears. From here, input the following details to configure the schedule:
 
-- **[!UICONTROL Execution Frequency]**: **Yearly**
-- **[!UICONTROL Day of Execution]**: **April 30**
-- **[!UICONTROL Schedule Execution Time]**: **11 PM UTC**
-- **[!UICONTROL Schedule Period]**: **April 1 – May 31, 2024**
+- **[!UICONTROL Execution Frequency]**: **Weekly**
+- **[!UICONTROL Day of Execution]**: **Monday & Tuesday**
+- **[!UICONTROL Schedule Execution Time]**: **10:10 AM UTC**
+- **[!UICONTROL Schedule Period]**: **March 17 – April 30, 2025**
 
 Select **[!UICONTROL Save]** to confirm the schedule.
 
@@ -512,11 +525,11 @@ Choose the approach that best suits your workflow.
 
 Use the `CREATE AUDIENCE AS SELECT` command to define a new audience. The created audience is saved in a dataset and registered in the **[!UICONTROL Audiences]** workspace under **[!UICONTROL Data Distiller]**.
 
-Audiences created using the SQL extension are automatically registered under the [!UICONTROL Data Distiller] origin in the [!UICONTROL Audiences] workspace. From the [!UICONTROL Audiences] UI, you can view, manage, and activate your audiences as needed.  
+Audiences created using the SQL extension are automatically registered under the [!UICONTROL Data Distiller] origin in the [!UICONTROL Audiences] workspace. From [Audience Portal](../../segmentation/ui/audience-portal.md), you can view, manage, and activate your audiences as needed.  
 
-![The Audiences workspace showing available audiences.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-1.png)  
+![The Audience Portal showing available audiences.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-1.png)  
 
-![The Audiences workspace showing available audiences with the filter sidebar and Data Distiller selected.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-2.png) 
+![The Audience Portal showing available audiences with the filter sidebar and Data Distiller selected.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-2.png) 
 
 For more details on SQL audiences, refer to the [Data Distiller Audiences documentation](../data-distiller-audiences/overview.md). To learn how to manage audiences in the UI, see the [Audiences Portal overview](../../segmentation/ui/audience-portal.md#audience-list).
 
@@ -528,19 +541,19 @@ To create an audience, use the following SQL commands:
 -- Define an audience for best customers based on RFM scores
 CREATE AUDIENCE rfm_best_customer 
 WITH (
-    primary_identity = _pfreportingonprod.userId, 
+    primary_identity = _{TENANT_ID}.userId, 
     identity_namespace = queryService
 ) AS ( 
     SELECT * FROM adls_rfm_profile 
-    WHERE _pfreportingonprod.recency = 1 
-        AND _pfreportingonprod.frequency = 1 
-        AND _pfreportingonprod.monetization = 1 
+    WHERE _{TENANT_ID}.recency = 1 
+        AND _{TENANT_ID}.frequency = 1 
+        AND _{TENANT_ID}.monetization = 1 
 );
 
 -- Define an audience that includes all customers
 CREATE AUDIENCE rfm_all_customer 
 WITH (
-    primary_identity = _pfreportingonprod.userId, 
+    primary_identity = _{TENANT_ID}.userId, 
     identity_namespace = queryService
 ) AS ( 
     SELECT * FROM adls_rfm_profile 
@@ -549,38 +562,19 @@ WITH (
 -- Define an audience for core customers based on email identity
 CREATE AUDIENCE rfm_core_customer 
 WITH (
-    primary_identity = _pfreportingonprod.userId, 
+    primary_identity = _{TENANT_ID}.userId, 
     identity_namespace = Email
 ) AS ( 
     SELECT * FROM adls_rfm_profile 
-    WHERE _pfreportingonprod.recency = 1 
-        AND _pfreportingonprod.frequency = 1 
-        AND _pfreportingonprod.monetization = 1 
+    WHERE _{TENANT_ID}.recency = 1 
+        AND _{TENANT_ID}.frequency = 1 
+        AND _{TENANT_ID}.monetization = 1 
 );
 ```
 
-#### Insert an audience {#insert-an-audience}
+#### Create an empty audience dataset {#create-empty-audience-dataset}
 
-To add profiles to an existing audience, use the `INSERT INTO` command. This allows you to add individual profiles or entire audience segments to an existing audience dataset.
-
-```sql
--- Insert profiles into the audience dataset
-INSERT INTO AUDIENCE adls_rfm_audience 
-SELECT 
-    _pfreportingonprod.userId, 
-    _pfreportingonprod.days_since_last_purchase, 
-    _pfreportingonprod.orders, 
-    _pfreportingonprod.total_revenue, 
-    _pfreportingonprod.recency, 
-    _pfreportingonprod.frequency, 
-    _pfreportingonprod.monetization 
-FROM adls_rfm_profile 
-WHERE _pfreportingonprod.rfm_model = '6. Slipping - Once Loyal, Now Gone';
-```
-
-#### Add profiles to an audience {#add-profiles-to-audience}
-
-Use the following SQL commands to create and populate an audience:
+Before adding profiles, create an empty dataset to store audience records.
 
 ```sql
 -- Create an empty audience dataset
@@ -601,11 +595,28 @@ SELECT
 WHERE FALSE;
 ```
 
+#### Insert profiles into an existing audience {#insert-an-audience}
+
+To add profiles to an existing audience, use the INSERT INTO command. This allows you to add individual profiles or entire audience segments to an existing audience dataset.
+
+```sql
+-- Insert profiles into the audience dataset
+INSERT INTO AUDIENCE adls_rfm_audience 
+SELECT 
+    _{TENANT_ID}.userId, 
+    _{TENANT_ID}.days_since_last_purchase, 
+    _{TENANT_ID}.orders, 
+    _{TENANT_ID}.total_revenue, 
+    _{TENANT_ID}.recency, 
+    _{TENANT_ID}.frequency, 
+    _{TENANT_ID}.monetization 
+FROM adls_rfm_profile 
+WHERE _{TENANT_ID}.rfm_model = '6. Slipping - Once Loyal, Now Gone';
+```
+
 #### Delete an audience {#delete-an-audience}
 
-To delete an existing audience, use the `DROP AUDIENCE` command. If the audience does not exist, an exception occurs unless `IF EXISTS` is specified.
-
-Use the following SQL command to delete an audience:
+To delete an existing audience, use the DROP AUDIENCE command. If the audience does not exist, an exception occurs unless IF EXISTS is specified.
 
 ```sql
 DROP AUDIENCE IF EXISTS adls_rfm_audience;
@@ -643,4 +654,4 @@ To build an audience using RFM attributes, drag and drop the `Rfm_Model` attribu
 
 To finalize the audience, select **[!UICONTROL Save and Publish]** in the top-right corner. After saving, the newly created audience appears in the [!UICONTROL Audiences] workspace, where you can review its summary and qualifying criteria.  
 
-Use the segment builder to access the derived RFM attributes and design additional audiences. Activate the newly created SQL audience based on RFM scores and send it to any preferred destination, including Adobe Journey Optimizer.  
+Use the Segment Builder to access the derived RFM attributes and design additional audiences. Activate the newly created SQL audience based on RFM scores and send it to any preferred destination, including Adobe Journey Optimizer.  
