@@ -12,9 +12,9 @@ exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
 
 >[!AVAILABILITY]
 >
->* Identity graph linking rules is currently in Limited Availability. Contact your Adobe account team for information on how to access the feature in development sandboxes.
+>* Identity graph linking rules are currently in Limited Availability. Contact your Adobe account team for information on how to access the feature in development sandboxes.
 >
->* Your account must be provisioned with the **View Identity Graph** permission in order to access the [!DNL Graph Simulation] tool. For more information, read the [guide on permissions in attribute-based access control](../../access-control/abac/ui/permissions.md).
+>* Your account must have the **View Identity Graph** permission in order to access the [!DNL Graph Simulation] tool. For more information, read the [guide on permissions in attribute-based access control](../../access-control/abac/ui/permissions.md).
 
 [!DNL Graph Simulation] is a tool in the Identity Service UI that you can use to simulate how an identity graph behaves given a particular combination of identities and how you configure the [identity optimization algorithm](./identity-optimization-algorithm.md).
 
