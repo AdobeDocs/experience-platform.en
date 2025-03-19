@@ -4,6 +4,7 @@ description: Discover a practical framework to connect your business goals with 
 feature: Personalization Insights and Engagement
 hide: yes
 hidefromtoc: yes
+exl-id: cf96b3d5-e995-48a7-8180-38adfd65a276
 ---
 # Leverage customer experience use cases to drive business goals
 
@@ -15,3 +16,5 @@ Discover a practical framework to connect your business goals with real customer
 - Foster collaboration across teams to deliver effective use case outcomes.
 - Apply a maturity framework to evolve use cases for greater business impact.
 - Use Adobe Experience Platform to accelerate value realization.
+
+Download this [PDF resource](../assets/summit/20250110-summit-session-s651-leave-behind.pdf) to explore a structured approach for defining, assessing, and evolving customer experience use cases. Learn how to align business objectives with measurable impact, leverage data for personalization, and activate use cases effectively within Adobe Experience Platform.
