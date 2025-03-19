@@ -12,7 +12,7 @@ exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
 
 >[!AVAILABILITY]
 >
->Identity graph linking rules is currently in Limited Availability. Contact your Adobe account team for information on how to access the feature in development sandboxes.
+>Identity graph linking rules are currently in Limited Availability. Contact your Adobe account team for information on how to access the feature in development sandboxes.
 
 The identity optimization algorithm is a graph algorithm on Identity Service that helps ensure that an identity graph is representative of a single person, and therefore, prevents the unwanted merging of identities on Real-Time Customer Profile.
 

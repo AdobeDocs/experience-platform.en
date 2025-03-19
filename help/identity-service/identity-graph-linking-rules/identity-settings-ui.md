@@ -7,7 +7,9 @@ exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
 
 >[!AVAILABILITY]
 >
->Identity graph linking rules is currently in Limited Availability. Contact your Adobe account team for information on how to access the feature in development sandboxes.
+>* Identity graph linking rules are currently in Limited Availability. Contact your Adobe account team for information on how to access the feature in development sandboxes.
+>
+>* Your account must have the **View Identity Graph** permission in order to access identity settings in the UI. For more information, read the [guide on permissions in attribute-based access control](../../access-control/abac/ui/permissions.md).
 
 Identity settings is a feature in the Adobe Experience Platform Identity Service UI that you can use to designate unique namespaces and configure namespace priority.
 
