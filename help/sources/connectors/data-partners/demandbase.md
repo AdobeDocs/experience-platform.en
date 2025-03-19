@@ -75,6 +75,106 @@ The [!DNL Demandbase] schema is called **Company Intent Weekly**. It is the week
 >
 >Any changes to the schema will be communicated to Adobe in advance. To support seamless schema evolution, maintaining backward compatibility is essential. Experience Platform enforces an additive-only versioning approach, ensuring that any updates to the schema are non-destructive. This means that breaking changes are strictly prohibited, and only changes that enhance or extend the existing schema are allowed. 
  
-## Next steps
+## Connect your [!DNL Demandbase] account to Experience Platform in the UI
 
-Now that you have completed the prerequisite setup for [!DNL Demandbase], you can now proceed to [connect your [!DNL Demandbase] account to Experience Platform using the UI](../../tutorials/ui/create/data-partners/demandbase.md).
+Now that you have completed the prerequisite setup for [!DNL Demandbase], you can now proceed to [connect your [!DNL Demandbase] account to Experience Platform using the UI]Once you have completed your prerequisite setup, read the tutorial on [connecting your [!DNL Demandbase] account to Experience Platform](../../tutorials/ui/create/data-partners/demandbase.md) to start your integration.
+
+## Frequently asked questions {#faq}
+
+Read this section for answers to frequently asked questions regarding the [!DNL Demandbase] source.
+
+### Do I need to have need to have an existing contract with [!DNL Demandbase] to use their account intent data in Real-Time CDP B2B Edition?
+
++++Answer
+
+Yes, you must have an active contract with [!DNL Demandbase] to access and utilize their intent data within Experience Platform and Real-Time CDP B2B Edition. The integration leverages your existing agreement with the [!DNL Demandbase] to ingest and activate account intent signals in Experience Platform and Real-Time CDP. 
+
++++
+
+### Are custom fields from [!DNL Demandbase] supported in this integration?
+
++++Answer
+
+Currently, you can only use standard [!DNL Demandbase] fields for ingestion and activation. To view the list of supported fields, read the [[!DNL Demandbase] schema guide](#schema) for the details on field availability.
+
++++
+
+### Can I ingest data from [!DNL Demandbase] to Experience Platform on an ad-hoc basis?
+
++++Answer
+
+Yes, you can ingest data from [!DNL Demandbase] on an ad-hoc basis. You can create a new dataflow to ingest the latest intent data, as long as there is new data from [!DNL Demandbase]. However, you can only have one active dataflow at a time. Therefore, ensure that you delete the existing dataflow, before creating a new one.
+
++++
+
+### What is the validation process for intent data and how can I check which intent data is linked to a specific account?
+
++++Answer
+
+To validate intent data and determine which intent signals are linked to specific accounts, use [Adobe Experience Platform Query Service](../../../query-service/home.md) by AccountID.
+
++++
+
+### How can I look up an intent for a specific company?
+
++++Answer
+
+Execute an SQL query in [Query Service](../../../query-service/home.md) to search for intent data using the company name or AccountID. To view all intent data for a specific company, you can run an SQL query in Query Service using the company name or AccountID to fetch all associated intent signals.
+
++++
+
+
+### I found an issue with the account matching process in Experience Platform, what should I do?
+
++++Answer
+
+The resolution depends on the specific issue:
+
+* **Incorrect or missing company domain in Experience Platform**: If the issue stems from an incorrect company domain value in the account data, update the company domain field in Experience Platform to ensure accurate matching.
+* **Incorrect field mapping in dataflow**: If the issue is due to an incorrect company domain field path in the dataflow, update the dataflow configuration to reference the correct field path. 
+
++++
+
+### How do I delete intent data in Experience Platform?
+
++++Answer
+
+You must [delete the dataset](../../../catalog/datasets/user-guide.md#delete-a-dataset) in order to delete intent data in Experience Platform.
+
++++
+
+### What field is used to match accounts from [!DNL Demandbase] to Experience Platform?
+
++++Answer
+
+The `accountOrganization.domain` field is used for matching accounts. If your organization uses a different custom field to store the website name, ensure that you provide the correct field path for accurate mapping.
+
++++
+
+### What happens when a company domain is updated in Experience Platform?
+
++++Answer
+
+When a company domain is updated, the new domain value will be applied in the next dataflow run. This ensures that:
+
+* Future intent data ingestion use the updated domain for account matching.
+* Any previously mismatched intent signals may now align correctly with the intended account.
+* No retroactive changes are made to past ingested data-only new and incoming data will reflect the update.
+
++++
+
+### What is the domain matching process?
+
++++Answer
+
+Domain matching in Experience Platform is based on an exact match of the scrubbed domain field value. Experience Platform automatically removes prefixes (e.g., https:/<span>/www.) and retains the top-level domain (e.g., adobe.com). Matching requires an exact domain value, with no support for fuzzy matching or subdomains.
+
++++
+
+### Where can I use intent data?
+
++++Answer
+
+Intent data can be utilized in [Account Audiences](../../../segmentation/types/account-audiences.md) to enhance targeting, segmentation, and personalization. By leveraging intent signals, businesses can identify and engage with accounts showing high interest in specific topics, optimizing marketing and sales outreach 
+
++++
