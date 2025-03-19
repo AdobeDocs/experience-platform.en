@@ -17,23 +17,23 @@ Activate profiles for your Bombora campaigns for audience targeting, personaliza
 
 ### DSP integration {#dsp-integration}
 
-As a B2B marketer, you can create an account list in Real-time CDP, identifying companies showing high intent for your products, then use this destination to activate this list in Bombora. Through Bombora's integration with DSPs you can run targeted programmatic ad campaigns using Bombora data. This ensures that ad spend is focused on companies most likely to convert.
+As a B2B marketer, you can create an account list in Real-time CDP, identifying companies which show high intent for your products, then use this destination to activate this list in Bombora.
 
+Through Bombora's integration with DSPs you can run targeted ad campaigns using Bombora data. This ensures your ad spend is focused on companies which are most likely to convert.
 
-### Account-Based Marketing 
+### Account-Based Marketing {#abm}
 
-Use this destination to activate your account audiences for Account-Based Marketing (ABM) use cases. Advertise to relevant personas and roles in your target accounts via DemandBase's B2B Demand Side Platform (DSP). Target accounts can also be enriched with Demandbase third-party data, for other downstream use-cases in marketing and sales.
+As a B2B marketer, you can build an account list based on CRM and marketing signals. Then, you can use this destination to activate this list in Bombora, where ABM-aware controls help you target decision makers at these companies.
 
-For instance, leverage Demandbase's ad-tech DSP to target specific personas or roles within key accounts for top-of-funnel lead generation, or create and grow buying groups. Use the Demandbase destination to explore other use cases to target your accounts effectively.
+### Multi-channel account-based marketing activation {#multi-channel-abm}
 
-With this integration, you can also personalize the website experience using real-time account information lookup to optimize engagement.
+As a B2B marketer, you can create an account list in Real-time CDP, identifying companies with high intent. Then, you can use this destination to activate the list in Bombora to run targeted campaigns across multiple channels.
 
+On paid social media, you might serve personalized ads to professionals at target accounts on platforms like [!DNL LinkedIn] and [!DNL Facebook]. Using native ad platforms, you can ensure the content reaches relevant decision makers.
 
+You can also extend campaigns to advanced TV, delivering ads to key accounts.
 
-A B2B marketer, I can create an account list in Adobe CDP, identifying companies showing high intent for my products, then activate this list in Bombora, which integrates directly with DSPs, allowing me to run targeted programmatic ad campaigns using Bombora's data. This ensures that ad spend is focused on companies most likely to convert.
-
-
-
+This multi-channel approach ensures consistent messaging across platforms, maximizing engagement and conversion rates.
 
 ## Supported audiences {#supported-audiences}
 
@@ -46,23 +46,33 @@ This section describes which type of audiences you can export to this destinatio
 
 {style="table-layout:auto"}
 
+## Supported identities {#supported-identities}
+
+[!DNL Bombora] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
+
+|Target Identity|Description|Considerations|
+|---|---|---|
+|Email address | Plain text email addresses | Only plain text emails are supported by Bombora. |
+
+{style="table-layout:auto"}
+
 ## Export type and frequency {#export-type-and-frequency} 
 
 Refer to the table below for information about the destination export type and frequency.
 
-| Item         | Type      | Notes                       |
-|--------------|-----------|---------------------------|
-| Export Type  | Audience export | All audience members will be exported with key identifiers like name, phone number, and more. |
-| Frequency    | Streaming  | "Always-on" API-based connections. Updates are sent downstream immediately after profile changes. |
+| Item | Type | Notes |
+---------|----------|---------|
+| Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience with the identifiers (name, phone number, or others) used in the [!DNL Bombora] destination.|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
 
 ## Prerequisites {#prerequisites}
 
-To export account audiences to Demandbase, you need the following:
+To export account audiences to Bombora, you need the following information.
 
-1. A Demandbase account.
-2. A Demandbase API token. You can generate an API token with your user in Demandbase. To generate a token, navigate to [My Profile > API Token](https://web.demandbase.com/o/ad/at) after logging into your Demandbase account.
+1. A Bombora account.
+2. A Bombora **[!UICONTROL client ID]** and **[!UICONTROL client secret]**.
 
 ## Connect to the destination {#connect}
 
@@ -78,7 +88,8 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 ![Add bearer token](/help/destinations/assets/catalog/advertising/demandbase/add-bearer-token.png)
 
-* **[!UICONTROL Bearer token]**: Fill in the bearer token to authenticate to the destination. View [prerequisites](#prerequisites) for information on how to obtain the token.
+* **[!UICONTROL Client ID]**: Enter your [!DNL Bombora] client ID.
+* **[!UICONTROL Client secret]**: Enter your [!DNL Bombora] client secret.
 
 ### Fill in destination details {#destination-details}
 
@@ -86,9 +97,8 @@ To configure details for the destination, fill in the required and optional fiel
 
 ![Add information about the destination connection](/help/destinations/assets/catalog/advertising/demandbase/name-and-description.png)
 
-*  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
-*  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Entity type]**: Select **[!UICONTROL Account]** as the entity type.
+* **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
+* **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 
 Now you're ready to activate your audiences within Demandbase.
 
