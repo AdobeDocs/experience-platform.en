@@ -7,7 +7,7 @@ exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
 
 >[!AVAILABILITY]
 >
->Identity graph linking rules is currently in Limited Availability. Contact your Adobe account team for information on how to access the feature in development sandboxes.
+>Identity graph linking rules are currently in Limited Availability. Contact your Adobe account team for information on how to access the feature in development sandboxes.
 
 As you test and validate identity graph linking rules, you may run into some issues related to data ingestion and graph behavior. Read this document to learn how to troubleshoot some common issues that you might encounter when working with identity graph linking rules.
 
