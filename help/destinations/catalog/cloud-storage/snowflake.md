@@ -1,9 +1,16 @@
 ---
 title: Snowflake connection
 description: Export data to your Snowflake account using private listings.
+hide: yes
+hidefromtoc: yes
+badgeBeta: label="Beta" type="Informative"
 ---
 
 # Snowflake connection {#snowflake-destination}
+
+>[!IMPORTANT]
+>
+>This destination connector is in beta and only available to select customers. To request access, contact your Adobe representative.
 
 ## Overview {#overview}
 
