@@ -1,6 +1,6 @@
 ---
 title: Audience Builder in Real-Time Customer Data Platform
-description: Learn how to use the Audience Builder in Real-Time CDP to create audiences.
+description: Learn how to use the Audience Builder in Real-Time Customer Data Platform to create audiences.
 feature: Get Started, Audiences
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 ---
@@ -9,7 +9,7 @@ badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/le
 
 Built on top of Adobe Experience Platform, [!DNL Adobe Real-Time Customer Data Platform] is able to make use of the full Audience Builder capabilities that are a part of [!DNL Experience Platform]. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties. 
 
-![The Audience Builder within the Accounts section.](../assets/segmentation/audience-builder/audience-builder.png)
+![The Audience Builder within the Accounts section.](../assets/segmentation/audience-builder/audience-builder.png){zoomable="yes"}
 
 ## Fields {#fields}
 
@@ -17,7 +17,7 @@ When using Audience Builder for accounts, you can use account attributes or exis
 
 You can select the ![settings icon](../../images/icons/settings.png) to adjust the settings for the displayed fields.
 
-![The settings icons is highlighted in Audience Builder.](../assets/segmentation/audience-builder/select-settings.png)
+![The settings icons is highlighted in Audience Builder.](../assets/segmentation/audience-builder/select-settings.png){zoomable="yes"}
 
 >[!NOTE]
 >
@@ -33,7 +33,7 @@ For the **[!UICONTROL Relationship of fields]**, you can either use the standard
 
 ### Attributes {#attributes}
 
-The Attributes tab lets you browse Account attributes belonging to the XDM Business Account class, as well as opportunities and people-based attributes. Each folder can be expanded to reveal additional attributes, where each attribute is a tile that can be dragged onto the [rule builder canvas](#rule-builder-canvas) in the center of the workspace.
+The [!UICONTROL Attributes] tab lets you browse Account attributes belonging to the XDM Business Account class, as well as opportunities and people-based attributes. Each folder can be expanded to reveal additional attributes, where each attribute is a tile that can be dragged onto the [rule builder canvas](#rule-builder-canvas) in the center of the workspace.
 
 ![The Attributes tab is displayed in the Audience Builder](../assets/segmentation/audience-builder/attributes.png)
 
@@ -41,19 +41,19 @@ When selecting an attribute, you can see summary data by selecting the [informat
 
 ![A popover that displays a fully populated version of the summary data for an attribute.](../assets/segmentation/audience-builder/full-summary-data.png){width="300"}
 
-If an attribute is populated by less than 25% of accounts, the (data alert icon) will be displayed instead. The same summary data will be displayed for the attribute, regardless.
+If an attribute is populated by less than 25% of accounts, the ![data notice icon](../../images/icons/data-notice.png) will be displayed instead. The same summary data will be displayed for the attribute, regardless.
 
 ![A popover that displays a version of the summary data for an attribute when it's populated by less than 25% of accounts.](../assets/segmentation/audience-builder/empty-summary-data.png){width="300"}
 
-For a more detailed guide on the Audience Builder, read the [Audience Builder user guide](../../segmentation/ui/segment-builder.md).
+For a more detailed guide on the Audience Builder, read the [Audience Builder user guide](../../segmentation/ui/segment-builder.md){target="_blank"}.
 
-### Audiences {#audinces}
+### Audiences {#audiences}
 
 The **[!UICONTROL Audiences]** tab lists all the people-based and account-based audiences available within Experience Platform.
 
 You can hover over the ![information icon](../../images/icons/info.png) next to an audience to view information about the audience including its ID, description, and the folder hierarchy to locate the audience.
 
-![Information about the audience is displayed.](../assets/segmentation/audience-builder/audience-information.png)
+![Information about the audience is displayed.](../assets/segmentation/audience-builder/audience-information.png){zoomable="yes"}
 
 ## Rule builder canvas {#rule-builder-canvas}
 
@@ -61,15 +61,15 @@ An audience created in Audience Builder is a collection of rules used to describ
 
 To add a new rule to your segment definition, drag a tile from the **[!UICONTROL Fields]** tab and drop it onto the rule builder canvas. 
 
-![The rule builder canvas with an added field.](../assets/segmentation/audience-builder/added-field.png)
+![The rule builder canvas with an added field.](../assets/segmentation/audience-builder/added-field.png){zoomable="yes"}
 
-For more information on using the rule builder canvas, read the [Segment Builder documentation](../../segmentation/ui/segment-builder.md#rule-builder-canvas).
+For more information on using the rule builder canvas, read the [Segment Builder documentation](../../segmentation/ui/segment-builder.md#rule-builder-canvas){target="_blank"}.
 
 ### Containers {#containers}
 
 Audience rules are evaluated in the order they are listed. You can use containers to allow greater control over the order of execution, through the usage of nested queries.
 
-For more information on containers, read the [Segment Builder documentation](../../segmentation/ui/segment-builder.md#containers).
+For more information on containers, read the [Segment Builder documentation](../../segmentation/ui/segment-builder.md#containers){target="_blank"}.
 
 ## Audience properties {#properties}
 
@@ -91,7 +91,7 @@ The **[!UICONTROL Code view]** provides a text-based-code description of the aud
 
 ![The code view version of the account audience.](../assets/segmentation/audience-builder/code-view.png)
 
-You can select **[!UICONTROL Apply access labels]** to apply the relevant access labels for the audience. More information on access labels can be found in the [managing labels guide](../../access-control/abac/ui/labels.md).
+You can select **[!UICONTROL Apply access labels]** to apply the relevant access labels for the audience. More information on access labels can be found in the [managing labels guide](../../access-control/abac/ui/labels.md){target="_blank"}.
 
 ![The Apply access and data governance labels popover is displayed.](../assets/segmentation/audience-builder/apply-access-labels.png)
 
@@ -105,4 +105,4 @@ You **cannot** change the evaluation method for account audiences, as all accoun
 
 Audience Builder provides a rich workflow that lets you create audiences from your XDM Business Account data.
 
-To learn more about Segmentation Service for customer profile data, please read the [Segmentation Service overview](../../segmentation/home.md).
+To learn more about Segmentation Service for customer profile data, please read the [Segmentation Service overview](../../segmentation/home.md){target="_blank"}.
