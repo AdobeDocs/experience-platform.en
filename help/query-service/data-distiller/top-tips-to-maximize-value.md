@@ -13,6 +13,10 @@ Through the Luma case study, you'll analyze user behavioral data and create a *R
 
 To execute this use case, your Adobe Experience Platform instance must be licensed for [Data Distiller](./overview.md). Contact your Adobe representative for more information.
 
+To follow this case study, you need to know your organization's **tenant ID**. Your tenant ID is the first part of the URL when you log into your Adobe Solution. In this case Adobe Experience Platform. It appears immediately after @ in the URL.
+
+For example, in the following URL: `https://experience.adobe.com/#/@pfreportingonprod/sname:prod/platform/home`, the tenant ID is `pfreportingonprod`.
+
 ## Overview of the RFM model {#rfm-overview}
 
 RFM, short for Recency (R), Frequency (F), and Monetary (M), is a data-driven approach to customer segmentation and analysis. This methodology evaluates three key aspects of customer behavior: how recently a customer made a purchase, how often they engage, and how much they spend. By quantifying these factors, businesses can gain actionable insights into customer segments and develop targeted marketing strategies that better meet individual customer needs.
