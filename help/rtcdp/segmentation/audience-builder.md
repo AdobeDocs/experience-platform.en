@@ -33,11 +33,11 @@ For the **[!UICONTROL Relationship of fields]**, you can either use the standard
 
 ### Attributes {#attributes}
 
-The Attributes tab allows you to browse Account attributes belonging to the XDM Business Account class. Each folder can be expanded to reveal additional attributes, where each attribute is a tile that can be dragged onto the [rule builder canvas](#rule-builder-canvas) in the center of the workspace.
+The Attributes tab lets you browse Account attributes belonging to the XDM Business Account class, as well as opportunities and people-based attributes. Each folder can be expanded to reveal additional attributes, where each attribute is a tile that can be dragged onto the [rule builder canvas](#rule-builder-canvas) in the center of the workspace.
 
 ![The Attributes tab is displayed in the Audience Builder](../assets/segmentation/audience-builder/attributes.png)
 
-When selecting an attribute, you can see summary data by selecting the (information icon). The summary data includes information such as top values, an explanation of what the field is, as well as the percentage of accounts that contain values for this attribute.
+When selecting an attribute, you can see summary data by selecting the [information icon](../../images/icons/info.png). The summary data includes information such as top values, an explanation of what the field is, as well as the percentage of accounts that contain values for this attribute.
 
 ![A popover that displays a fully populated version of the summary data for an attribute.](../assets/segmentation/audience-builder/full-summary-data.png)
 
@@ -105,4 +105,4 @@ You **cannot** change the evaluation method for account audiences, as all accoun
 
 Audience Builder provides a rich workflow that lets you create audiences from your XDM Business Account data.
 
-To learn more about Segmentation Service for profile data, please read the [Segmentation Service overview](../../segmentation/home.md).
+To learn more about Segmentation Service for customer profile data, please read the [Segmentation Service overview](../../segmentation/home.md).
