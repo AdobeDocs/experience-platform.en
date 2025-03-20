@@ -13,9 +13,15 @@ Through the Luma case study, you'll analyze user behavioral data and create a *R
 
 To execute this use case, your Adobe Experience Platform instance must be licensed for [Data Distiller](./overview.md). Contact your Adobe representative for more information.
 
-To follow this case study, you need to know your organization's **tenant ID**. Your tenant ID is the first part of the URL when you log into your Adobe Solution. In this case Adobe Experience Platform. It appears immediately after @ in the URL.
+You also need to know your **organization's tenant ID**, which is required for executing queries. Your tenant ID is the first part of the URL when you log into Adobe Experience Platform, appearing immediately after the @ symbol.
 
-For example, in the following URL: `https://experience.adobe.com/#/@pfreportingonprod/sname:prod/platform/home`, the tenant ID is `pfreportingonprod`.
+For example, in the following URL: 
+
+```http
+https://experience.adobe.com/#/@pfreportingonprod/sname:prod/platform/home
+```
+
+The tenant ID is `pfreportingonprod`.
 
 ## Overview of the RFM model {#rfm-overview}
 
