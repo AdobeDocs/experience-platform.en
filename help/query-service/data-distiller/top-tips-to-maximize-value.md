@@ -13,7 +13,7 @@ Through the Luma case study, you'll analyze user behavioral data and create a *R
 
 To execute this use case, your Adobe Experience Platform instance must be licensed for [Data Distiller](./overview.md). Contact your Adobe representative for more information.
 
-You also need to know your **organization's tenant ID**, which is required for executing queries. Your tenant ID is the first part of the URL when you log into Adobe Experience Platform, appearing immediately after the @ symbol.
+You also need to know your **organization's tenant ID**, which is required for executing queries. Your tenant ID is the first part of the URL when you log into Experience Platform, appearing immediately after the @ symbol.
 
 For example, in the following URL: 
 
