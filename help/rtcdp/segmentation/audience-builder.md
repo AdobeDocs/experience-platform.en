@@ -29,7 +29,7 @@ For the **[!UICONTROL Field options]**, you can either show only the fields that
 
 For the **[!UICONTROL Relationship of fields]**, you can either use the standard relations for your organization or you can show the relation selectors.
 
-![The settings module is displayed.](../assets/segmentation/audience-builder/settings.png)
+![The settings module is displayed.](../assets/segmentation/audience-builder/settings.png){width="300"}
 
 ### Attributes {#attributes}
 
@@ -39,11 +39,11 @@ The Attributes tab lets you browse Account attributes belonging to the XDM Busin
 
 When selecting an attribute, you can see summary data by selecting the [information icon](../../images/icons/info.png). The summary data includes information such as top values, an explanation of what the field is, as well as the percentage of accounts that contain values for this attribute.
 
-![A popover that displays a fully populated version of the summary data for an attribute.](../assets/segmentation/audience-builder/full-summary-data.png)
+![A popover that displays a fully populated version of the summary data for an attribute.](../assets/segmentation/audience-builder/full-summary-data.png){width="300"}
 
 If an attribute is populated by less than 25% of accounts, the (data alert icon) will be displayed instead. The same summary data will be displayed for the attribute, regardless.
 
-![A popover that displays a version of the summary data for an attribute when it's populated by less than 25% of accounts.](../assets/segmentation/audience-builder/empty-summary-data.png)
+![A popover that displays a version of the summary data for an attribute when it's populated by less than 25% of accounts.](../assets/segmentation/audience-builder/empty-summary-data.png){width="300"}
 
 For a more detailed guide on the Audience Builder, read the [Audience Builder user guide](../../segmentation/ui/segment-builder.md).
 
@@ -75,17 +75,17 @@ For more information on containers, read the [Segment Builder documentation](../
 
 The **[!UICONTROL Audience properties]** section displays information about the audience including an estimated size of the audience. You can also specify details about your audience, including its name, description, and tags.
 
-![The audience properties section is displayed for the audience within Audience Builder.](../assets/segmentation/audience-builder/audience-properties.png)
+![The audience properties section is displayed for the audience within Audience Builder.](../assets/segmentation/audience-builder/audience-properties.png){width="300"}
 
 The **[!UICONTROL Qualified accounts]** indicates the actual number of accounts that match the audience's rules. This number updates every 24 hours, after the segmentation job has ran.
 
 The **[!UICONTROL Estimated accounts]** indicates the approximate number of accounts based off of the sample job. You can update this value after adding new rules or conditions and selecting **[!UICONTROL Refresh estimate]**.
 
-![The estimates section within the audience properties section is displayed.](../assets/segmentation/audience-builder/account-estimates.png)
+![The estimates section within the audience properties section is displayed.](../assets/segmentation/audience-builder/account-estimates.png){width="300"}
 
 You can select **[!UICONTROL View accounts]** to see a sampling of the accounts that would qualify for the audience with the current rules.
 
-![The View accounts button is highlighted.](../assets/segmentation/audience-builder/view-accounts.png)
+![The View accounts button is highlighted.](../assets/segmentation/audience-builder/view-accounts.png){width="300"}
 
 The **[!UICONTROL Code view]** provides a text-based-code description of the audience's rules.
 
@@ -97,7 +97,7 @@ You can select **[!UICONTROL Apply access labels]** to apply the relevant access
 
 The rest of the audience properties section lets you edit details related to the account audience, including the name, description, and tags.
 
-![The details of the audience properties are displayed.](../assets/segmentation/audience-builder/audience-details.png)
+![The details of the audience properties are displayed.](../assets/segmentation/audience-builder/audience-details.png){width="300"}
 
 You **cannot** change the evaluation method for account audiences, as all account audiences are evaluated using batch segmentation.
 
