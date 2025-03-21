@@ -136,14 +136,14 @@ Ideally, you should send a payload similar to the following:
 }
 ```
 
-However, it is important to note that while you can send two person identifiers, there is no guarantee that an unwanted graph collapse will be prevented. Consider the following scenario:
+However, it is important to note that while you can send two person identifiers, there is no guarantee that an unwanted graph collapse will be prevented due to implementation or data errors. Consider the following scenario:
 
-* `timestamp1` = John logs in -> system captures `CRMID: John, ECID: 111` is not present in this event payload.
-* `timestamp2` = Jane logs in -> system captures `customerID: Jane, ECID: 111` is not present in this event payload.
+* `timestamp1` = John logs in -> system captures `CRMID: John, ECID: 111`. However, `customerID: John` is not present in this event payload.
+* `timestamp2` = Jane logs in -> system captures `customerID: Jane, ECID: 111`. However, `CRMID: Jane` is not present in this event payload.
 
 Therefore, it is best practice to only send just one person identifier with your authenticated events.
 
-In graph simulation, this implementation may look like:
+In graph simulation, this ingestion may look like:
 
 ![The graph simulation UI with an example graph rendered.](../images/implementation/example-graph.png)
 
