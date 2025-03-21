@@ -166,49 +166,65 @@ For more information on how to classify business objects for easier discovery an
 
 ### (Beta) Set data retention policy {#data-retention-policy}
 
-
 >[!AVAILABILITY] 
 > 
 >Data retention settings are currently in beta and available only in a **limited release** for select organizations. Your UI might not reflect the feature described below.
 
-Manage dataset expiration and retention policies at the dataset level from the [!UICONTROL Browse] tab of the [!UICONTROL Datasets] workspace. You can use this feature to configure retention policies for data already ingested into data lake and Profile services. The expiration date is based on when data was ingested into Platform and your retention rules.
+Manage dataset expiration and retention settings at the dataset level from the [!UICONTROL Browse] tab of the [!UICONTROL Datasets] workspace. You can use this feature to configure how long data is retained in the Data Lake and Profile Service. The expiration date is based on when data was ingested into Platform and your configured retention period.
 
 To open the [!UICONTROL Set data retention] dialog, select the ellipsis next to the dataset followed by **[!UICONTROL Set data retention policy]** from the dropdown menu.
 
 ![The Browse tab of the Datasets workspace with the ellipsis and Set data retention policy option highlighted.](../images/datasets/user-guide/set-data-retention-policy-dropdown.png)
 
-The [!UICONTROL Set data retention] dialog appears. The dialog shows the sandbox level license usage metrics , dataset-level details, and data lake settings. These metrics show your usage compared to your entitlements. The dataset details include the dataset name, type, Profile enablement status, and current data lake storage usage.
+The [!UICONTROL Set data retention] dialog appears. The dialog displays sandbox-level license usage metrics, dataset-level details, and current retention settings. These metrics show your usage compared to your entitlements and provide visibility into the dataset name, type, Profile enablement status, and data lake storage usage.
 
 >[!NOTE]
 >
->The sandbox-level licensed data lake storage metrics is still in development and not available.
+>Sandbox-level licensed data lake storage metrics are still in development and may not appear.
 
 ![The Set data retention dialog.](../images/datasets/user-guide/set-data-retention-dialog.png)
 
-Before you configure the dataset retention policy, the dialog shows recommended retention settings. One month is the default recommended retention period. To adjust the standard retention policy, select and update the number, then choose the desired time period (days, months, years). You can configure your retention settings for the data lake and Profile Service independently. 
+Before you configure the dataset retention settings, the dialog shows recommended retention values. One month is the default recommended retention period. To adjust your settings, select and update the number, then choose the desired time period (days, months, years) from the dropdown menu. You can configure retention settings independently for the data lake and Profile Service.
 
 >[!NOTE] 
 > 
->The minimum data retention duration for data lake is 30 days. The minimum data retention duration for Profile Service is one day.
+>The minimum retention period for the data lake is 30 days. The minimum retention period for Profile Service is one day.
 
-![The Set data retention dialog with the duration dropdown and Save highlighted.](../images/datasets/user-guide/time-unit-dropdown.png)
+<!-- ![The Set data retention dialog with the duration dropdown and Save highlighted.]() -->
+<!-- Due to new image guidelines i do not think an image is necessary here -->
 
-See the [frequently asked questions page](../catalog-faq.md) for more information on the rules that define dataset expirations date ranges and best practices for configuring your data retention policy.
+Additional insights are provided to help you evaluate the impact of different retention periods. Select **[!UICONTROL View Experience Event Data distribution]** to open a visual forecast.
+
+This visual forecast helps you evaluate the impact of different retention periods. For example, if you select a 30-day retention period and the chart shows that 60% of your data will be deleted, you may choose to extend retention to preserve more data for analysis.
+
+The chart displays the distribution of experience events across various retention periods. Hover over each bar to see the precise number of records that will be removed if that retention period is selected.
+
+>[!NOTE]
+>
+>The Experience Event distribution chart is dataset-specific and reflects only the selected dataset's data.
+
+![The Set data retention dialog with the Experience Event distribution chart displayed.](../images/datasets/user-guide/visual-forecast.png)
+
+To support transparency and monitoring, timestamps are provided for the **last** and **next** data retention job executions. These jobs run monthly and apply your configured settings. The timestamps help you understand when the last data cleanup occurred and when the next one is scheduled.
+
+After the job runs, monitoring updates show whether the execution was successful and how much data was removed, including the number of expired rows and deleted records.
 
 #### (Beta) Enhanced visibility of retention periods and storage metrics {#retention-and-storage-metrics}
 
-Four new columns are available to beta users that provide greater visibility into your data management: **[!UICONTROL Data Lake Storage]**, **[!UICONTROL Data Lake Retention]**, **[!UICONTROL Profile Storage]**, and **[!UICONTROL Profile Retention]**. These metrics show how much storage your data consumes and its retention duration in both data lake and Profile services. These details help you optimize retention policies, track usage against entitlements, and ensure compliance with organizational and regulatory standards. This increased visibility empowers you to make informed decisions, manage costs, streamline governance, and clearly understand your data landscape.
+Four new columns are available to beta users that provide greater visibility into your data management: **[!UICONTROL Data Lake Storage]**, **[!UICONTROL Data Lake Retention]**, **[!UICONTROL Profile Storage]**, and **[!UICONTROL Profile Retention]**. These metrics show how much storage your data consumes and its retention period in both Data Lake and Profile Service.
 
-![The Browse tab of the Datasets workspace with The four new storage and retention columns highlighted.](../images/datasets/user-guide/storage-and-retention-columns.png)
+This increased visibility empowers you to make informed decisions, manage costs, streamline governance, and clearly understand your data lifecycle and entitlements.
+
+![The Browse tab of the Datasets workspace with the four new storage and retention columns highlighted.]()
 
 The following table provides an overview of the new retention and storage metrics available in the beta release. It details each column's purpose and how it aids in managing data retention and storage within the Platform UI.
 
 | Column title  | Description |
 |---|---|
-| [!UICONTROL Data lake retention] | Shows the current retention duration for each dataset. This value can be modified in each dataset's retention settings. The data lake retention policy sets rules for how long data is stored and when it should be deleted in different services. |
-| [!UICONTROL Data Lake Storage] | Displays the current storage usage for each dataset in the data lake. This metric helps track how much space each dataset occupies, aiding in managing storage limits and optimizing usage. |
-| [!UICONTROL Profile Storage] | Shows the current storage usage for each dataset within Profile services. Use this information to monitor storage consumption and ensure it aligns with your data management goals. |
-| [!UICONTROL Profile Retention] | Indicates the retention duration for each Profile dataset. This value can be adjusted in the dataset's retention settings, helping you control how long Profile data is stored before deletion. |
+| [!UICONTROL Data Lake Retention] | Displays the current retention period for each dataset in the Data Lake. This value is configurable and determines how long data is retained before deletion. |
+| [!UICONTROL Data Lake Storage] | Shows current storage usage for each dataset in the Data Lake. Use this metric to manage storage limits and optimize usage. |
+| [!UICONTROL Profile Storage] | Displays storage usage for each dataset within the Profile Service. Helps monitor storage consumption and support data management decisions. |
+| [!UICONTROL Profile Retention] | Indicates the retention period for Profile datasets. You can update this value to control how long Profile data is retained. |
 
 {style="table-layout:auto"}
 
