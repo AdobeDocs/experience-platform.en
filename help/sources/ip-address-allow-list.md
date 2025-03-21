@@ -1,21 +1,23 @@
 ---
-description: Learn about the IP addresses that you need to add to your allow list in order to successfully use Adobe Experience Platform sources.
-title: IP Address Allow List for Sources
+description: Learn about the IP addresses that you need to add to your allowlist in order to successfully use Adobe Experience Platform sources.
+title: IP Address Allowlist for Sources
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
 ---
-# IP address allow list
+# IP address allowlist
 
-You can define network access controls through your network firewall. By specifying the appropriate source IP range, you can let traffic flow for the data transfer service. The following IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources.
+You can define network access controls through your network firewall. By specifying the appropriate source IP range, you can let traffic flow for the data transfer service. The following IP addresses must be added to an allowlist prior to working with source connectors. Failing to add your region-specific IP addresses to your allowlist may lead to errors or non-performance when using sources.
 
-## IP address allow list for batch sources {#batch}
+## IP addresses allowlist for sources connecting to Experience Platform on [!DNL Azure] {#azure}
 
-You must add the following IP addresses to your allow list to let traffic flow for the data transfer service for batch sources.
+### Batch sources on Experience Platform on [!DNL Azure] {#batch}
+
+You must add the following IP addresses to your allowlist to let traffic flow for the data transfer service for batch sources.
 
 >[!BEGINTABS]
 
 >[!TAB VA7: North America]
 
-### VA7: North America
+#### VA7: North America
 
 - `20.42.2.0/23`
 - `20.42.4.0/26`
@@ -42,7 +44,7 @@ You must add the following IP addresses to your allow list to let traffic flow f
 
 >[!TAB NLD2: Europe]
 
-### NLD2: Europe
+#### NLD2: Europe
 
 - `13.69.67.192/28`
 - `13.69.107.112/28`
@@ -54,7 +56,7 @@ You must add the following IP addresses to your allow list to let traffic flow f
 
 >[!TAB AUS5: Australia]
 
-### AUS5: Australia
+#### AUS5: Australia
 
 - `13.70.74.144/28`
 - `20.37.193.0/25`
@@ -69,7 +71,7 @@ You must add the following IP addresses to your allow list to let traffic flow f
 
 >[!TAB CAN2: Canada]
 
-### CAN2: Canada
+#### CAN2: Canada
 
 - `13.71.175.80/28`
 - `20.38.147.224/28`
@@ -82,7 +84,7 @@ You must add the following IP addresses to your allow list to let traffic flow f
 
 >[!TAB IND2: India]
 
-### IND2: India
+#### IND2: India
 
 - `20.43.121.48/28`
 - `20.192.42.0/24`
@@ -96,15 +98,15 @@ You must add the following IP addresses to your allow list to let traffic flow f
 
 >[!ENDTABS]
 
-## IP address allow list for streaming sources {#streaming}
+### Streaming sources on Experience Platform on [!DNL Azure] {#streaming}
 
-You must add the following IP addresses to your allow list to let traffic flow for the data transfer service for streaming sources such as [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md), and [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md).
+You must add the following IP addresses to your allowlist to let traffic flow for the data transfer service for streaming sources such as [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md), and [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md).
 
 >[!BEGINTABS]
 
 >[!TAB VA7: North America]
 
-### VA7: North America
+#### VA7: North America
 
 - `52.254.106.240/28`
 - `52.254.107.144/28`
@@ -131,7 +133,7 @@ You must add the following IP addresses to your allow list to let traffic flow f
 
 >[!TAB NLD2: Europe]
 
-### NLD2: Europe
+#### NLD2: Europe
 
 - `51.138.17.0/28`
 - `51.138.16.176/28`
@@ -158,7 +160,7 @@ You must add the following IP addresses to your allow list to let traffic flow f
 
 >[!TAB AUS5: Australia]
 
-### AUS5: Australia
+#### AUS5: Australia
 
 - `20.40.188.194`
 - `20.53.206.128`
@@ -188,7 +190,7 @@ You must add the following IP addresses to your allow list to let traffic flow f
 
 >[!TAB CAN2: Canada]
 
-### CAN2: Canada
+#### CAN2: Canada
 
 - `20.200.70.240/28`
 - `20.200.94.116`
@@ -218,7 +220,7 @@ You must add the following IP addresses to your allow list to let traffic flow f
 
 >[!TAB GBR9: United Kingdom]
 
-### GBR9: United Kingdom
+#### GBR9: United Kingdom
 
 - `20.254.2.128/28`
 - `20.26.131.71`
@@ -248,7 +250,7 @@ You must add the following IP addresses to your allow list to let traffic flow f
 
 >[!TAB IND2: India]
 
-### IND2: India
+#### IND2: India
 
 - `4.224.74.0/28`
 - `20.244.79.80/28`
@@ -279,3 +281,9 @@ You must add the following IP addresses to your allow list to let traffic flow f
 - `4.188.4.138`
 
 >[!ENDTABS]
+
+## IP addresses to allowlist for sources connection to Experience Platform on [!DNL Amazon Web Services] (AWS) {#aws}
+
+You must add the following IP addresses to your allowlist in order connect your source to Experience on AWS:
+
+- `66.117.18.0/24`
