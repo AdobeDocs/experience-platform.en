@@ -99,7 +99,9 @@ During your pre-implementation process, you must ensure that the authenticated e
 
 >[!TAB Authenticated events with two person identifiers]
 
-If your system sends two person identifiers, the implementation may fail the single-person namespace requirement. For example, if the identityMap in your webSDK implementation contains a CRMID, a customerID, and an ECID namespace, then two individuals who share a device may get incorrectly associated with different namespaces.
+If your system sends two person identifiers, the implementation may fail the single-person namespace requirement. For example, if the identityMap in your webSDK implementation contains a CRMID, a customerID, and an ECID namespace, then there is no guarantee that every single event will contain both CRMID and customerID.
+
+Ideally, you should send a payload similar to the following:
 
 ```json
 {
@@ -117,10 +119,10 @@ If your system sends two person identifiers, the implementation may fail the sin
               "primary": true
           }
       ],
-      "customerID: [
+      "customerID": [
           {
             "id": "Jane",
-            "primary": 
+            "primary": false
           }
       ],
   },
@@ -134,18 +136,18 @@ If your system sends two person identifiers, the implementation may fail the sin
 }
 ```
 
-Within Identity Service, this implementation may look like:
+However, it is important to note that while you can send two person identifiers, there is no guarantee that an unwanted graph collapse will be prevented. Consider the following scenario:
 
-* `timestamp1` = John logs in -> system captures `CRMID: John, ECID: 111`.
-* `timestamp2` = Jane logs in -> system captures `customerID: Jane, ECID: 111`.
+* `timestamp1` = John logs in -> system captures `CRMID: John, ECID: 111` is not present in this event payload.
+* `timestamp2` = Jane logs in -> system captures `customerID: Jane, ECID: 111` is not present in this event payload.
+
+Therefore, it is best practice to only send just one person identifier with your authenticated events.
 
 In graph simulation, this implementation may look like:
 
 ![The graph simulation UI with an example graph rendered.](../images/implementation/example-graph.png)
 
-
 >[!TAB Authenticated events without any person identifiers]
-
 
 ```json
 {
@@ -167,6 +169,8 @@ In graph simulation, this implementation may look like:
     }
 }
 ```
+
+>[!ENDTABS]
 
 ## Set permissions {#set-permissions}
 
