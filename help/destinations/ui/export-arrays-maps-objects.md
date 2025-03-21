@@ -4,11 +4,21 @@ type: Tutorial
 description: Learn how to export arrays, maps, and objects from Real-Time CDP to cloud storage destinations.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 ---
-# Export arrays, maps, and objects from Real-Time CDP to cloud storage destinations {#export-arrays-cloud-storage}
+# Export arrays, maps, and objects from Real-Time CDP to various destinations {#export-arrays-cloud-storage}
 
 >[!AVAILABILITY]
 >
 >The functionality to export arrays and other complex objects to cloud storage destinations is generally available for the following destinations: [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md),
+
+
+| Type of destination | Ability to export arrays, maps, and other custom objects |
+|---|---|
+| Adobe-owned out-of-the-box Cloud storage destinations [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md) | Yes, with the Enable export of arrays, maps, and objects toggle turned ON when setting up a destination connection. |
+| File-based email marketing destinations (Adobe Campaign, Oracle Eloqua, Oracle Responsys, Salesforce Marketing Cloud) | No |
+| Existing custom partner-built cloud storage destinations (custom file-based destinations built via Destination SDK) | No |
+| Enterprise destinations (AWS Kinesis, HTTP API, Azure Event Hubs) | Partially. You can select and export map-type objects. |
+| Streaming destinations (e.g. Facebook, Braze, Google Customer Match, and more) | No |
+| Edge personalization destinations (Adobe Target) | Partially. You can select and export map-type objects. |
 
 Learn how to export arrays, maps, and objects from Real-Time CDP to [cloud storage destinations](/help/destinations/catalog/cloud-storage/overview.md). Read this document to understand the export workflow, the use cases enabled by this functionality, and known limitations.
 
@@ -18,9 +28,9 @@ Consider this page your go-to place for anything that you want to know about exp
 
 Get the most important information about the functionality in this section, and continue below to the other sections in the document for detailed information.
 
-* The ability to export arrays, maps, and objects depends on your selection of the **Export arrays, maps, objects** toggle. Read more about it [further down on the page](#export-arrays-maps-objects-toggle).
-* You can export arrays, maps, and objects to cloud storage destinations only, in `JSON` and `Parquet` files. People and prospect audiences are supported, account audiences are not.
-* You *can* export arrays, maps, and objects to CSV files, but only by using the calculated fields functionality and concatenating them into a string by using the `array_to_string` function.
+* For cloud storage destinations, the ability to export arrays, maps, and objects depends on your selection of the **Export arrays, maps, objects** toggle. Read more about it [further down on the page](#export-arrays-maps-objects-toggle).
+* You can export arrays, maps, and objects to cloud storage destinations in `JSON` and `Parquet` files. For enterprise and edge personalization destinations, the exported data type is `JSON`. People and prospect audiences are supported, account audiences are not.
+* For file-based cloud storage destinations, you *can* export arrays, maps, and objects to CSV files, but only by using the calculated fields functionality and concatenating them into a string by using the `array_to_string` function.
 
 ## Arrays and other object types in Platform {#arrays-strings-other-objects}
 
@@ -60,7 +70,7 @@ In addition to arrays, you can also export maps and objects from Experience Plat
 >title="Export arrays, maps, and objects"
 >abstract="<p> Toggle this setting <b>on</b> to enable the export of arrays, maps, and objects to JSON or Parquet files. You can select these object types in the source field view of the mapping step. With the toggle on, you cannot use the calculated fields option in the mapping step.</p><p>With this toggle <b>off</b>, you can use the calculated fields option and apply various data transformation functions when activating audiences. However, you can <i>not</i> export arrays, maps, and objects to JSON or Parquet files and must configure a separate destination for that purpose.</p>"
 
-When connecting to a cloud storage destination, you can set the **[!UICONTROL Export arrays, maps, objects]** toggle on or off.
+When connecting to a file-based cloud storage destination, you can set the **[!UICONTROL Export arrays, maps, objects]** toggle on or off.
 
 ![Export arrays, maps, objects toggle shown with an on or off setting, as well as highlighting the popover.](/help/destinations/assets/ui/export-arrays-calculated-fields/export-objects-toggle.gif)
 
