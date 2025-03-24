@@ -27,6 +27,10 @@ When you run flexible audience evaluation, please keep the following conditions 
 - All the audiences **must** be people-based audiences.
 - You can only select a maximum of 20 audiences per flexible audience evaluation run.
 
+>[!NOTE]
+>
+>You *can* purchase additional flexible audience evaluation runs per year. For more information, contact Adobe Customer Care.
+
 ## Access {#access}
 
 In order to use flexible audience evaluation, you must have the following permission:

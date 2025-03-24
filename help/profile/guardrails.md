@@ -122,6 +122,7 @@ The guardrails outlined in this section refer to the number and nature of audien
 | Published compositions per sandbox | 10 | Performance guardrail | You can have a maximum of  10 published compositions in a sandbox. Read more about [audience composition in the UI guide](/help/segmentation/ui/audience-composition.md). |
 | Maximum audience size | 30 percent | Performance guardrail | The recommended maximum membership of an audience is 30 percent of the total number of profiles in the system. Creating audiences with more than 30% of the profiles as members or multiple large audiences is possible but will impact system performance. |
 | Flexible audience evaluation runs | 50 per year (production sandbox)<br/>100 per year (development sandbox) | System-enforced guardrail | You have a maximum of 50 flexible audience evaluation runs per year per **production** sandbox. You have a maximum of 100 flexible audience evaluation runs per year per **development** sandbox. |
+| Flexible audience evaluation runs | 2 per day | System-enforced guardrail | You have a maximum of 2 runs per day per sandbox. |
 | Audiences per flexible audience evaluation run | 20 | System-enforced guardrail | You can have a maximum of 20 audiences per flexible audience evaluation run. |
 
 {style="table-layout:auto"}
