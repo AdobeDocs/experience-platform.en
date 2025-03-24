@@ -170,34 +170,39 @@ For more information on how to classify business objects for easier discovery an
 > 
 >Data retention settings are currently in beta and available only in a **limited release** for select organizations. Your UI might not reflect the feature described below.
 
-Manage dataset expiration and retention settings at the dataset level from the [!UICONTROL Browse] tab of the [!UICONTROL Datasets] workspace. You can use this feature to configure how long data is retained in the Data Lake and Profile Service. The expiration date is based on when data was ingested into Platform and your configured retention period.
+Manage dataset expiration and retention settings at the dataset level from the [!UICONTROL Browse] tab of the [!UICONTROL Datasets] workspace. You can use this feature to configure how long data is retained in the data lake and Profile Store. The expiration date is based on when data was ingested into Platform and your configured retention period.
 
-To open the [!UICONTROL Set data retention] dialog, select the ellipsis next to the dataset followed by **[!UICONTROL Set data retention policy]** from the dropdown menu.
+>[!TIP]
+>
+>The data lake stores raw, unprocessed data, such as event logs, clickstream data, and bulk-ingested records, for analytics and processing. The Profile Store contains customer-identifiable data, including identity-stitched events and attribute information, to support real-time personalization and activation.
+
+To configure your retention period, select the ellipsis next to the dataset followed by **[!UICONTROL Set data retention policy]** from the dropdown menu.
 
 ![The Browse tab of the Datasets workspace with the ellipsis and Set data retention policy option highlighted.](../images/datasets/user-guide/set-data-retention-policy-dropdown.png)
 
-The [!UICONTROL Set data retention] dialog appears. The dialog displays sandbox-level license usage metrics, dataset-level details, and current retention settings. These metrics show your usage compared to your entitlements and provide visibility into the dataset name, type, Profile enablement status, and data lake storage usage.
+The '[!UICONTROL Set dataset retention]' dialog appears. The dialog displays sandbox-level license usage metrics, dataset-level details, and current data retention settings. These metrics show your usage compared to your entitlements and provide visibility into the dataset name, type, Profile enablement status, and data lake storage usage.
 
 >[!NOTE]
 >
->Sandbox-level licensed data lake storage metrics are still in development and may not appear.
+>Sandbox-level licensed data lake storage metrics are still in development and may not appear. A full breakdown of your license usage metrics can be found on the License Usage dashboard. See the documentation for descriptions of these metrics.
 
-![The Set data retention dialog.](../images/datasets/user-guide/set-data-retention-dialog.png)
+![The Set dataset retention dialog.](../images/datasets/user-guide/set-data-retention-dialog.png)
 
-Before you configure the dataset retention settings, the dialog shows recommended retention values. One month is the default recommended retention period. To adjust your settings, select and update the number, then choose the desired time period (days, months, years) from the dropdown menu. You can configure retention settings independently for the data lake and Profile Service.
+When you open the data retention settings, the dialog displays recommended retention values. The default recommendation for data lake storage is one month. To change the retention period, update the number and select a time period (days, months, or years) from the dropdown menu. Retention settings for the data lake and Profile Service can be configured independently.
 
 >[!NOTE] 
 > 
 >The minimum retention period for the data lake is 30 days. The minimum retention period for Profile Service is one day.
 
-<!-- ![The Set data retention dialog with the duration dropdown and Save highlighted.]() -->
-<!-- Due to new image guidelines i do not think an image is necessary here -->
+To support transparency and monitoring, timestamps are provided for the **last** and **next** data retention job executions. These jobs run monthly and apply your configured settings. The timestamps help you understand when the last data cleanup occurred and when the next one is scheduled.
 
-Additional insights are provided to help you evaluate the impact of different retention periods. Select **[!UICONTROL View Experience Event Data distribution]** to open a visual forecast.
+#### Storage impact insights {#storage-impact-insights}
 
-This visual forecast helps you evaluate the impact of different retention periods. For example, if you select a 30-day retention period and the chart shows that 60% of your data will be deleted, you may choose to extend retention to preserve more data for analysis.
+To open a visual forecast of the storage impact of different retention policies, select **[!UICONTROL View Experience Event Data distribution]**.
 
-The chart displays the distribution of experience events across various retention periods. Hover over each bar to see the precise number of records that will be removed if that retention period is selected.
+The chart displays the distribution of experience events across various retention periods for the currently selected dataset. Hover over each bar to see the precise number of records that will be removed if that retention period is selected.
+
+You can use the visual forecast to evaluate the impact of different retention periods and make informed business decisions. For example, if you select a 30-day retention period and the chart shows that 60% of your data will be deleted, you may choose to extend retention to preserve more data for analysis.
 
 >[!NOTE]
 >
@@ -205,9 +210,13 @@ The chart displays the distribution of experience events across various retentio
 
 ![The Set data retention dialog with the Experience Event distribution chart displayed.](../images/datasets/user-guide/visual-forecast.png)
 
-To support transparency and monitoring, timestamps are provided for the **last** and **next** data retention job executions. These jobs run monthly and apply your configured settings. The timestamps help you understand when the last data cleanup occurred and when the next one is scheduled.
+When you are satisfied with your configuration, select **[!UICONTROL Save]** to confirm your settings.
 
-After the job runs, monitoring updates show whether the execution was successful and how much data was removed, including the number of expired rows and deleted records.
+After configuring your retention settings, use the Monitoring UI to confirm that your changes were successfully applied. The Monitoring UI provides a centralized view of data retention activity across all datasets, helping you track job execution, review how much data was deleted, and ensure your retention policies are functioning as expected. This visibility supports governance, compliance, and efficient data lifecycle management.
+
+To learn how to use the monitoring dashboard to track source dataflows in the Experience Platform UI, see the [Monitor dataflows for sources in the UI](../../dataflows/ui/monitor-sources.md) documentation.
+
+<!-- Improve the link above. I cannot link to a 100% appropriate document yet. -->
 
 #### (Beta) Enhanced visibility of retention periods and storage metrics {#retention-and-storage-metrics}
 
