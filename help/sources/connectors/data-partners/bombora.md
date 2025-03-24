@@ -76,7 +76,7 @@ The [!DNL Bombora] schema is called **Account Intent Weekly**. It is the weekly 
 | `Topic_Id` | STRING | TRUE | YES | The [!DNL Bombora] topic ID. |
 | `Topic_Name` | STRING | TRUE | | The [!DNL Bombora] topic name. |
 | `Cluster_Name` | STRING | TRUE | | The cluster name on [!DNL Bombora] for a given topic. |
-| `Cluster_Id` | STRING | TRUE | | The cluster ID associated with a given topic.
+| `Cluster_Id` | STRING | TRUE | | The cluster ID associated with a given topic. |
 | `Composite_Score` | INTEGER | TRUE | | The composite score represents a domain's consumption pattern for a given topic over a specified time period. The composite score is measured between 0 and 100, where 100 represents the highest possible score and 0 represents the lowest possible score. A composite score of over 60 represents an increase in interest in a particular topic by a domain. This is also referred to as a "surge". |
 | `Partition_Date` | DATE | TRUE | | The calendar date of a snapshot. This is done weekly, at the end-of-week, in `mm/dd/yyyy` format. |
 
