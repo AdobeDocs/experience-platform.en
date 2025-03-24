@@ -246,6 +246,7 @@ The following parameters are typically required when using API key authenticatio
   }
 }
 ```
+
 +++
 
 ### Authentication behavior
@@ -328,6 +329,7 @@ The following is an example of a completed authentication spec using a [[!DNL Ma
     }
   ],
 ```
+
 +++
 
 ## Next steps
