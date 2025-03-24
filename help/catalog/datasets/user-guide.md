@@ -226,7 +226,7 @@ Four new columns are available to beta users to provide greater visibility into 
 
 This increased visibility empowers you to make informed decisions and manage storage costs. It also helps you streamline governance and better understand your data lifecycle and entitlements.
 
-![The Browse tab of the Datasets workspace with the four new storage and retention columns highlighted.]()
+![The Browse tab of the Datasets workspace with the four new storage and retention columns highlighted.](../images/datasets/user-guide/storage-and-retention-columns.png)
 
 The following table provides an overview of the new retention and storage metrics available in the beta release. It details each column's purpose and how it supports managing data retention and storage.
 
