@@ -45,6 +45,12 @@ If an attribute is populated by less than 25% of accounts, the ![data notice ico
 
 ![A popover that displays a version of the summary data for an attribute when it's populated by less than 25% of accounts.](../assets/segmentation/audience-builder/empty-summary-data.png){width="300"}
 
+>[!NOTE]
+>
+>Summary data is only available if the attribute belongs to the Account, Person, or Opportunity schema. Additionally, the top values are only displayed if the field does **not** contain too many different values and if those field's values are commonly repeated.
+>
+>This summary data is updated on a **daily** basis.
+
 For a more detailed guide on the Audience Builder, read the [Audience Builder user guide](../../segmentation/ui/segment-builder.md){target="_blank"}.
 
 ### Audiences {#audiences}
