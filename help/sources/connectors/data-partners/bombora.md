@@ -72,7 +72,7 @@ The [!DNL Bombora] schema is called **Account Intent Weekly**. It is the weekly 
 | Field name | Datatype | Required | Business key | Notes |
 | --- | --- | --- | --- | --- |
 | `Account_Name` | STRING | TRUE | YES | The canonical name of the company. |
-| `domain` | STRING | TRUE | YES | The domain of the identified account that is showing intent. |
+| `Domain` | STRING | TRUE | YES | The domain of the identified account that is showing intent. |
 | `Topic_Id` | STRING | TRUE | YES | The [!DNL Bombora] topic ID. |
 | `Topic_Name` | STRING | TRUE | | The [!DNL Bombora] topic name. |
 | `Cluster_Name` | STRING | TRUE | | The cluster name on [!DNL Bombora] for a given topic. |
@@ -186,6 +186,6 @@ Domain matching in Experience Platform is based on an exact match of the scrubbe
 
 +++Answer
 
-Intent data can be utilized in [Account Audiences](../../../segmentation/types/account-audiences.md) to enhance targeting, segmentation, and personalization. By leveraging intent signals, businesses can identify and engage with accounts showing high interest in specific topics, optimizing marketing and sales outreach 
+Intent data can be utilized in [Account Audiences](../../../segmentation/types/account-audiences.md) to enhance targeting, segmentation, and personalization. By leveraging intent signals, businesses can identify and engage with accounts showing high interest in specific topics, optimizing marketing and sales outreach.
 
 +++
