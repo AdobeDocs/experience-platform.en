@@ -49,7 +49,7 @@ This user guide requires a working understanding of the following components of 
 >abstract="Datalake retention sets rules for how long data is stored and when it should be deleted in different services. This ensures compliance with regulations, managing storage costs, and maintaining data quality."
 
 
-In the [!DNL Experience Platform] UI, select **[!UICONTROL Datasets]** in the left-navigation to open the **[!UICONTROL Datasets]** dashboard. The dashboard lists all available datasets for your organization. Details are displayed for each listed dataset, including its name, the schema the dataset adheres to, and status of the most recent ingestion run.
+In the [!DNL Experience Platform] UI, select **[!UICONTROL Datasets]** in the left-navigation to open the **[!UICONTROL Datasets]** dashboard. The dashboard lists all available datasets for your organization. Details are displayed for each listed dataset, including its name, the schema the dataset adheres to, and the status of the most recent ingestion run.
 
 ![The Platform UI with the Datasets item highlighted in the left navigation bar.](../images/datasets/user-guide/browse-datasets.png)
 
@@ -86,7 +86,7 @@ You can also delete a dataset or add a dataset for use with Real-Time Customer P
 
 The datasets UI now offers a collections of inline actions for each available dataset. Select the ellipsis (...) of a dataset that you want to manage to see the available options in a pop-up menu. The available actions include; 
 
-* [[!UICONTROL Preview dataset]](#preview), 
+* [[!UICONTROL Preview dataset]](#preview)
 * [[!UICONTROL Manage data and access labels]](#manage-and-enforce-data-governance)
 * [[!UICONTROL Enable unified profile]](#enable-profile)
 * [[!UICONTROL Manage tags]](#manage-tags)
@@ -98,7 +98,7 @@ More information on these available actions can be found in their respective sec
 
 ### Preview a dataset {#preview}
 
-You can preview dataset sample data from both the inline options of the [!UICONTROL Browse] tab and also the [!UICONTROL Dataset activity] view. From the [!UICONTROL Browse] tab, select the ellipses (...) next to the dataset name you wish to preview. A menu list of options appears. Next, select **[!UICONTROL Preview dataset]** from the list of available options. If the dataset is empty, the preview link will be deactivated and will instead say that the preview is not available.
+You can preview dataset sample data from both the inline options of the [!UICONTROL Browse] tab and also the [!UICONTROL Dataset activity] view. From the [!UICONTROL Browse] tab, select the ellipses (...) next to the dataset name you wish to preview. A menu list of options appears. Next, select **[!UICONTROL Preview dataset]** from the list of available options. If the dataset is empty, the preview link is deactivated and instead indicates that the preview is not available.
 
 ![The Browse tab of the Datasets workspace with the ellipsis and Preview dataset option highlighted for the chosen dataset.](../images/datasets/user-guide/preview-dataset-option.png)
 
@@ -121,7 +121,7 @@ For more robust methods to access your data, [!DNL Experience Platform] provides
 
 ### Manage and enforce data governance on a dataset {#manage-and-enforce-data-governance}
 
-You can manage the data governance labels for a dataset by selecting the inline options of the [!UICONTROL Browse] tab. Select the ellipses (...) next to the dataset name you wish to manage, followed by **[!UICONTROL Manage data and access labels]** from the dropdown menu.
+You can manage the data governance labels for a dataset by selecting the inline options of the [!UICONTROL Browse] tab. Select the ellipses (...) next to the dataset name that you wish to manage, followed by **[!UICONTROL Manage data and access labels]** from the dropdown menu.
 
 Data usage labels, applied at the schema level, allow you to categorize datasets and fields according to usage policies that apply to that data. See the [Data Governance overview](../../data-governance/home.md) to learn more about labels, or refer to the [data usage labels user guide](../../data-governance/labels/overview.md) for instructions on how to apply labels to schemas for propagation to datasets.
 
@@ -158,11 +158,11 @@ The [!UICONTROL Manage tags] dialog appears. Enter a short description to create
 
 ![The Manage tags dialog with custom tags highlighted.](../images/datasets/user-guide/manage-tags-dialog.png)
 
-The [!UICONTROL Manage tags] dialog can also remove existing tags from a dataset. Simply select the 'x' next to the tag you wish to remove and select **[!UICONTROL Save]**. 
+The [!UICONTROL Manage tags] dialog can also remove existing tags from a dataset. Simply select the 'x' next to the tag that you wish to remove and select **[!UICONTROL Save]**. 
 
-Once a tag has been aded to a dataset, the datasets can be filtered based on the corresponding tag. See the section on how to [filter datasets by tags](#enable-profile) for more information.
+Once a tag has been added to a dataset, the datasets can be filtered based on the corresponding tag. See the section on how to [filter datasets by tags](#enable-profile) for more information.
 
-For more information on how to classify business objects for easier discovery and categorization, see the guide on [managing metadata taxonomies](../../administrative-tags/ui/managing-tags.md). This guide details how a user with appropriate permissions can create pre-defined tags, assigning categories to tags, and perform all related CRUD operations on tags and tag categories in the Platform UI.
+For more information on how to classify business objects for easier discovery and categorization, see the guide on [managing metadata taxonomies](../../administrative-tags/ui/managing-tags.md). This guide explains how users with the right permissions can create pre-defined tags, assign them to categories, and manage all related CRUD operations in the Platform UI.
 
 ### (Beta) Set data retention policy {#data-retention-policy}
 
@@ -170,17 +170,17 @@ For more information on how to classify business objects for easier discovery an
 > 
 >Data retention settings are currently in beta and available only in a **limited release** for select organizations. Your UI might not reflect the feature described below.
 
-Manage dataset expiration and retention settings at the dataset level from the [!UICONTROL Browse] tab of the [!UICONTROL Datasets] workspace. You can use this feature to configure how long data is retained in the data lake and Profile Store. The expiration date is based on when data was ingested into Platform and your configured retention period.
+Manage dataset expiration and retention settings using the inline action menu from the [!UICONTROL Browse] tab of the [!UICONTROL Datasets] workspace. You can use this feature to configure how long data is retained in the data lake and Profile store. The expiration date is based on when data was ingested into Platform and your configured retention period.
 
 >[!TIP]
 >
->The data lake stores raw, unprocessed data, such as event logs, clickstream data, and bulk-ingested records, for analytics and processing. The Profile Store contains customer-identifiable data, including identity-stitched events and attribute information, to support real-time personalization and activation.
+>The data lake stores raw, unprocessed data, such as event logs, clickstream data, and bulk-ingested records, for analytics and processing. The Profile store contains customer-identifiable data, including identity-stitched events and attribute information, to support real-time personalization and activation.
 
 To configure your retention period, select the ellipsis next to the dataset followed by **[!UICONTROL Set data retention policy]** from the dropdown menu.
 
 ![The Browse tab of the Datasets workspace with the ellipsis and Set data retention policy option highlighted.](../images/datasets/user-guide/set-data-retention-policy-dropdown.png)
 
-The '[!UICONTROL Set dataset retention]' dialog appears. The dialog displays sandbox-level license usage metrics, dataset-level details, and current data retention settings. These metrics show your usage compared to your entitlements and provide visibility into the dataset name, type, Profile enablement status, and data lake storage usage.
+The [!UICONTROL Set dataset retention] dialog appears. The dialog displays sandbox-level license usage metrics, dataset-level details, and current data retention settings. These metrics show your usage compared to your entitlements and help you assess dataset-specific storage and retention configurations. The metrics include dataset name, type, Profile enablement status, and data lake usage.
 
 >[!NOTE]
 >
@@ -188,19 +188,19 @@ The '[!UICONTROL Set dataset retention]' dialog appears. The dialog displays san
 
 ![The Set dataset retention dialog.](../images/datasets/user-guide/set-data-retention-dialog.png)
 
-When you open the data retention settings, the dialog displays recommended retention values. The default recommendation for data lake storage is one month. To change the retention period, update the number and select a time period (days, months, or years) from the dropdown menu. Retention settings for the data lake and Profile Service can be configured independently.
+When you open the data retention settings, you'll see recommended values in the dialog. By default, the data lake retention period is set to one month. To adjust it, change the number and select a time unit (days, months, or years) from the dropdown menu. You can configure separate retention settings for the data lake and Profile Service.
 
 >[!NOTE] 
 > 
 >The minimum retention period for the data lake is 30 days. The minimum retention period for Profile Service is one day.
 
-To support transparency and monitoring, timestamps are provided for the **last** and **next** data retention job executions. These jobs run monthly and apply your configured settings. The timestamps help you understand when the last data cleanup occurred and when the next one is scheduled.
+To support transparency and monitoring, timestamps are provided for the **last** and **next** data retention job executions. The timestamps help you understand when the last data cleanup occurred and when the next one is scheduled.
 
 #### Storage impact insights {#storage-impact-insights}
 
 To open a visual forecast of the storage impact of different retention policies, select **[!UICONTROL View Experience Event Data distribution]**.
 
-The chart displays the distribution of experience events across various retention periods for the currently selected dataset. Hover over each bar to see the precise number of records that will be removed if that retention period is selected.
+The chart displays the distribution of experience events across various retention periods for the currently selected dataset. Hover over each bar to see the precise number of records that will be removed if the selected retention period is applied.
 
 You can use the visual forecast to evaluate the impact of different retention periods and make informed business decisions. For example, if you select a 30-day retention period and the chart shows that 60% of your data will be deleted, you may choose to extend retention to preserve more data for analysis.
 
@@ -212,28 +212,30 @@ You can use the visual forecast to evaluate the impact of different retention pe
 
 When you are satisfied with your configuration, select **[!UICONTROL Save]** to confirm your settings.
 
-After configuring your retention settings, use the Monitoring UI to confirm that your changes were successfully applied. The Monitoring UI provides a centralized view of data retention activity across all datasets, helping you track job execution, review how much data was deleted, and ensure your retention policies are functioning as expected. This visibility supports governance, compliance, and efficient data lifecycle management.
+After configuring your retention settings, use the Monitoring UI to confirm that your changes were executed by the system. The Monitoring UI provides a centralized view of data retention activity across all datasets. From there, you can track job execution, review how much data was deleted, and ensure that your retention policies are functioning as expected. This visibility supports governance, compliance, and efficient data lifecycle management.
 
 To learn how to use the monitoring dashboard to track source dataflows in the Experience Platform UI, see the [Monitor dataflows for sources in the UI](../../dataflows/ui/monitor-sources.md) documentation.
 
 <!-- Improve the link above. I cannot link to a 100% appropriate document yet. -->
 
+For more information on the rules that define dataset expirations date ranges and best practices for configuring your data retention policy, see the [frequently asked questions page](../catalog-faq.md).
+
 #### (Beta) Enhanced visibility of retention periods and storage metrics {#retention-and-storage-metrics}
 
-Four new columns are available to beta users that provide greater visibility into your data management: **[!UICONTROL Data Lake Storage]**, **[!UICONTROL Data Lake Retention]**, **[!UICONTROL Profile Storage]**, and **[!UICONTROL Profile Retention]**. These metrics show how much storage your data consumes and its retention period in both Data Lake and Profile Service.
+Four new columns are available to beta users to provide greater visibility into your data management: **[!UICONTROL Data Lake Storage]**, **[!UICONTROL Data Lake Retention]**, **[!UICONTROL Profile Storage]**, and **[!UICONTROL Profile Retention]**. These metrics show how much storage your data consumes and its retention period in both data lake and Profile Service.
 
-This increased visibility empowers you to make informed decisions, manage costs, streamline governance, and clearly understand your data lifecycle and entitlements.
+This increased visibility empowers you to make informed decisions and manage storage costs. It also helps you streamline governance and better understand your data lifecycle and entitlements.
 
 ![The Browse tab of the Datasets workspace with the four new storage and retention columns highlighted.]()
 
-The following table provides an overview of the new retention and storage metrics available in the beta release. It details each column's purpose and how it aids in managing data retention and storage within the Platform UI.
+The following table provides an overview of the new retention and storage metrics available in the beta release. It details each column's purpose and how it supports managing data retention and storage.
 
 | Column title  | Description |
 |---|---|
-| [!UICONTROL Data Lake Retention] | Displays the current retention period for each dataset in the Data Lake. This value is configurable and determines how long data is retained before deletion. |
-| [!UICONTROL Data Lake Storage] | Shows current storage usage for each dataset in the Data Lake. Use this metric to manage storage limits and optimize usage. |
-| [!UICONTROL Profile Storage] | Displays storage usage for each dataset within the Profile Service. Helps monitor storage consumption and support data management decisions. |
-| [!UICONTROL Profile Retention] | Indicates the retention period for Profile datasets. You can update this value to control how long Profile data is retained. |
+| [!UICONTROL Data Lake Retention] | The current retention period for each dataset in the data lake. This value is configurable and determines how long data is retained before deletion. |
+| [!UICONTROL Data Lake Storage] | The current storage usage for each dataset in the data lake. Use this metric to manage storage limits and optimize usage. |
+| [!UICONTROL Profile Storage] | The current storage usage for each dataset within the Profile Service. Helps monitor storage consumption and support data management decisions. |
+| [!UICONTROL Profile Retention] | The current retention period for Profile datasets. You can update this value to control how long Profile data is retained. |
 
 {style="table-layout:auto"}
 
