@@ -16,9 +16,6 @@ badgeBeta: label="Beta" type="Informative"
 
 Export data to your Snowflake account using private listings.
 
-## Use cases {#use-cases}
-
-
 ## Prerequisites {#prerequisites}
 
 Before configuring your Snowflake connection, make sure you meet the following prerequisites:
