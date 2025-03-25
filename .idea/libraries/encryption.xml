@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="encryption">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/help/landing/images/governance-privacy-security/encryption/destinations-public-certificate.zip!/" />
+      <root url="jar://$PROJECT_DIR$/help/landing/images/governance-privacy-security/encryption/ajo-public-certificate.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
