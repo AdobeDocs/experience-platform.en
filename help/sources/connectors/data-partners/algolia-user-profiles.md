@@ -1,7 +1,6 @@
 # [!DNL Algolia User Profiles]
 
-## Introduction
-[!DNL Adobe Experience Platform] (AEP) RealTime Customer Data Platform (CDP) integrates multiple user management platforms to collect disparate user profiles to build holistic profiles for personalization and experience testing. The platform provides out of the box integrations to pull user profiles from source systems. It also provides a SDK to build custom integrations. [!DNL Algolia] has created a Source Connector that integrates with Algolia’s Advanced Personalization APIs to retrieve user profiles into AEP.  This document will guide you through the set-up of the [!DNL Algolia User Profiles] Source connector.
+[!DNL Adobe Experience Platform] Real-Time CDP integrates multiple user management platforms to collect disparate user profiles to build holistic profiles for personalization and experience testing. Experience Platform provides integrations to pull user profiles from a variety of sources systems. It also provides a SDK to build custom integrations. Use the [!DNL Algolia] source to integrate with [!DNL Algolia's] Advanced Personalization APIs and retrieve user profiles for ingestion into Experience Platform. This document will guide you through the set-up of the [!DNL Algolia User Profiles] Source connector.
 
 ## Architecture
 The architecture is simple, the Experience Platform Source Integration SDK provides all necessary features to authentication with the source system, to paginate data from the source system, and to provide both a full and partial data pull. The [!DNL Algolia User Profiles] Source Connector uses these features to complete the integration.
