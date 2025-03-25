@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="DestinationPostmanCollection">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/help/destinations/assets/api/streaming-destination/DestinationPostmanCollection.zip!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

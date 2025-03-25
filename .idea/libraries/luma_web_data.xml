@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="luma_web_data">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/help/query-service/resources/luma_web_data.zip!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

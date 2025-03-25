@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="yourdestination-template">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/help/destinations/destination-sdk/assets/docs-framework/yourdestination-template.zip!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
