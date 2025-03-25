@@ -15,6 +15,8 @@ Activate profiles for your Bombora campaigns for audience targeting, personaliza
 
 ## Use cases {#use-case}
 
+To help you better understand how and when you should use the Bombora destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+
 ### DSP integration {#dsp-integration}
 
 As a B2B marketer, you can create an account list in Real-time CDP, identifying companies which show high intent for your products, then use this destination to activate this list in Bombora.
@@ -48,11 +50,15 @@ This section describes which type of audiences you can export to this destinatio
 
 ## Supported identities {#supported-identities}
 
+Bombora uses websites/domains as its source of truth for an account.
+
+During the mapping step, you must map a source field where you ingest a website or domain address. 
+
 [!DNL Bombora] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
-|Target Identity|Description|Considerations|
+|Source Identity|Description|Considerations|
 |---|---|---|
-|Email address | Plain text email addresses | Only plain text emails are supported by Bombora. |
+|`accountOrganization.domain` | Website or domain address | Only domains are required by this destination in order to create an account list. |
 
 {style="table-layout:auto"}
 
@@ -110,6 +116,16 @@ Now you're ready to activate your audiences within Demandbase.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
 Read [Activate account audiences](/help/destinations/ui/activate-account-audiences.md) for instructions on activating account audiences to this destination.
+
+### Mandatory mappings {#mapping}
+
+The Bombora destination requires you to configure the following mappings for successful data activation. 
+
+
+|Source field | Target field | Description |
+|---------|----------|---------|
+| Any value | `Identity: primaryId` | This mapping is mandatory for Experience Platform to establish a connection to Bombora. This value does not get exported to Bombora, but is required for the destination configuration. You can select any attribute for the source field.|
+| `xdm: accountOrganization.domain` | `xdm: companyWebsiteDomain` | Bombora uses website or domain addresses to create an account list. |
 
 ## Additional notes and important callouts {#additional-notes}
 
