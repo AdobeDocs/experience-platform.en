@@ -310,7 +310,11 @@ After confirming the correct audiences are listed, you can proceed with the requ
 
 >[!ENDTABS]
 
-## Next steps {#next-steps}
+## Video {#video}
+
+The following video demonstrates how to access and use flexible audience evaluation in Experience Platform.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
 ## Frequently asked questions {#faq}
 
