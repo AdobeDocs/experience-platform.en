@@ -1,6 +1,8 @@
 ---
 title: Apply access labels to manage user access to sources dataflows using the API
 description: Learn how to use use the Flow Service API to apply access labels and manage user access to your sources dataflows.
+hide: true
+hidefromtoc: true
 ---
 # Apply access labels to manage user access to sources dataflows using the API
 
