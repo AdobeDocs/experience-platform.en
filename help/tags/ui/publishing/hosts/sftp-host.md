@@ -33,7 +33,7 @@ The private key is used to encrypt the public key. You will need to provide your
 
 >[!IMPORTANT]
 >
-> On June 23rd, 2025, Adobe Launch is updating external IP addresses used to support SFTP Host Type and Callback API functionality. If you're using either of these features, ensure your firewall rules allow traffic from the new IP addresses.
+> On June 23rd, 2025, Adobe Launch is updating external IP addresses used to support SFTP Host Type and Callback API functionality. To continue using either of these features, ensure your firewall rules allow traffic from the new IP addresses.
 >
 > To maintain uninterrupted access, we recommend adding the new IPs now and removing the old ones after June 23rd, 2025. 
 >
