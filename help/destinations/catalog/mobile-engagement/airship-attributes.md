@@ -10,7 +10,9 @@ exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
 >
 >* Starting March 25, 2025, you can see two [!DNL Airship Attributes] cards side-by-side in the destinations catalog. This is due to an internal upgrade to the destinations service. The existing [!DNL Airship Attributes] destination connector has been renamed to **[!UICONTROL (Deprecated) Airship Attributes]** and a new card with the name **[!UICONTROL Airship Attributes]** is now available to you. 
 >* Use the **[!UICONTROL Airship Attributes]** connection in the catalog for new activation data flows. If you have any active dataflows to the **[!UICONTROL (Deprecated) Airship Attributes]** destination, they will be updated automatically, so no action is required from you.
->* If you are creating dataflows through the [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/), you must update your [!DNL flow spec ID] and [!DNL connection spec ID].
+>* If you are creating dataflows through the [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/), you must update your [!DNL flow spec ID] and [!DNL connection spec ID] to the following values:
+>   * Flow spec ID: `269ba276-16fc-47db-92b0-c1049a3c131f`
+>   * Connection spec ID: `4fce964d-3f37-408f-9778-e597338a21ee`
 
 ## Overview {#overview}
 
