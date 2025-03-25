@@ -39,116 +39,90 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_computehours"
 >title="Predicted Compute Hours"
->abstract="Compute Hours measure the time Query Service engines spend reading, processing, and writing data when running batch queries.
->
->Your usage might reach the licensed amount. To assess or reduce usage, go to Queries > Log to review your query history. If you do not have access to the Queries workspace, contact your administrator."
+>abstract="Compute Hours measure the time Query Service engines spend reading, processing, and writing data when running batch queries.<br>Your usage might reach the licensed amount. To assess or reduce usage, go to Queries > Log to review your query history. If you do not have access to the Queries workspace, contact your administrator."
 >additional-url="https://experience.adobe.com/#/platform/query/log.html" text="Queries Log workspace"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_addressableaudience"
 >title="Predicted Addressable Audience"
->abstract="The Addressable Audience is the set of person profiles in Real-Time Customer Profile that your organization is entitled to engage. This includes both directly identifiable and pseudonymous profiles.
->
->Your usage might reach the licensed amount. To reduce usage, configure dataset or Pseudonymous Profile data expirations."
+>abstract="The Addressable Audience is the set of person profiles in Real-Time Customer Profile that your organization is entitled to engage. This includes both directly identifiable and pseudonymous profiles.<br>Your usage might reach the licensed amount. To reduce usage, configure dataset or Pseudonymous Profile data expirations."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Experience Event expirations"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Pseudonymous profiles data expiration"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_engageableprofiles"
 >title="Predicted Engageable Profiles"
->abstract="Engageable Profiles are person profiles in Profile Service that your organization has attempted to engage using Journey Optimizer within the past 12 months.
->
->Your usage might reach the licensed amount. To reduce usage, configure dataset or Pseudonymous Profile data expirations."
+>abstract="Engageable Profiles are person profiles in Real-Time Customer Profile that your organization has attempted to engage using Journey Optimizer within the past 12 months.<br>Your usage might reach the licensed amount. To reduce usage, configure dataset or Pseudonymous Profile data expirations."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Experience Event expirations"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Pseudonymous profiles data expiration"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_businesspersonprofile"
 >title="Predicted Business Person Profile"
->abstract="Business Person Profiles are records in Real-Time Customer Profile representing individuals in a B2B context.
->
->Your usage might reach the licensed amount. To reduce usage, configure dataset or Pseudonymous Profile data expirations."
+>abstract="Business Person Profiles are records in Real-Time Customer Profile representing individuals in a B2B context.<br>Your usage might reach the licensed amount. To reduce usage, configure dataset or Pseudonymous Profile data expirations."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Experience Event expirations"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Pseudonymous profiles data expiration"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_corehours"
 >title="Predicted Core Hours"
->abstract="Core Hours represent processing time consumed across Experience Platform services.
->
->Your usage might reach the licensed amount. To reduce usage, configure dataset or Pseudonymous Profile data expirations."
+>abstract="Core Hours represent processing time consumed across Experience Platform services.<br>Your usage might reach the licensed amount. To reduce usage, configure dataset or Pseudonymous Profile data expirations."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Experience Event expirations"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Pseudonymous profiles data expiration"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_totaldatavolume"
 >title="Predicted Total Data Volume"
->abstract="Total Data Volume is the amount of data available in Real-Time Customer Profile for use in engagement and personalization workflows.
->
->Your usage might reach the licensed amount. To reduce usage, configure dataset or Pseudonymous Profile data expirations."
+>abstract="Total Data Volume is the amount of data available in Real-Time Customer Profile for use in engagement and personalization workflows.<br>Your usage might reach the licensed amount. To reduce usage, configure dataset or Pseudonymous Profile data expirations."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Experience Event expirations"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Pseudonymous profiles data expiration"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_cjaRowsAvailable"
 >title="Predicted CJA Rows Available"
->abstract="CJA Rows Available refers to the daily average rows of data available for analysis in Customer Journey Analytics.
->
->Your usage might reach the licensed amount. To reduce usage, configure dataset or Pseudonymous Profile data expirations."
+>abstract="CJA Rows Available refers to the daily average rows of data available for analysis in Customer Journey Analytics.<br>Your usage might reach the licensed amount. To reduce usage, configure dataset or Pseudonymous Profile data expirations."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Experience Event expirations"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Pseudonymous profiles data expiration"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_exceededusage_addressableaudience"
 >title="Predicted Addressable Audience"
->abstract="The Addressable Audience is the set of person profiles in Real-Time Customer Profile that your organization is entitled to engage. This includes both directly identifiable and pseudonymous profiles.
->
->Your usage has exceeded the licensed amount. To reduce usage, configure dataset or Pseudonymous Profile data expirations."
+>abstract="The Addressable Audience is the set of person profiles in Real-Time Customer Profile that your organization is entitled to engage. This includes both directly identifiable and pseudonymous profiles.<br>Your usage has exceeded the licensed amount. To reduce usage, configure dataset or Pseudonymous Profile data expirations."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Experience Event expirations"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Pseudonymous profiles data expiration"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_exceededusage_engageableprofiles"
 >title="Predicted Engageable Profiles"
->abstract="Engageable Profiles are person profiles in Profile Service that your organization has attempted to engage using Journey Optimizer within the past 12 months.
->
->Your usage has exceeded the licensed amount. To reduce usage, configure dataset or Pseudonymous Profile data expirations."
+>abstract="Engageable Profiles are person profiles in Real-Time Customer Profile that your organization has attempted to engage using Journey Optimizer within the past 12 months.<br>Your usage has exceeded the licensed amount. To reduce usage, configure dataset or Pseudonymous Profile data expirations."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Experience Event expirations"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Pseudonymous profiles data expiration"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_exceededusage_businesspersonprofile"
 >title="Predicted Business Person Profile"
->abstract="Business Person Profiles are records in Profile Service representing individuals in a B2B context.
->
->Your usage has exceeded the licensed amount. To reduce usage, configure dataset or Pseudonymous Profile data expirations."
+>abstract="Business Person Profiles are records in Real-Time Customer Profile representing individuals in a B2B context.<br>Your usage has exceeded the licensed amount. To reduce usage, configure dataset or Pseudonymous Profile data expirations."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Experience Event expirations"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Pseudonymous profiles data expiration"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_exceededusage_corehours"
 >title="Predicted Core Hours"
->abstract="Core Hours represent processing time consumed across Experience Platform services.
->
->Your usage has exceeded the licensed amount. To reduce usage, configure dataset or Pseudonymous Profile data expirations."
+>abstract="Core Hours represent processing time consumed across Experience Platform services.<br>Your usage has exceeded the licensed amount. To reduce usage, configure dataset or Pseudonymous Profile data expirations."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Experience Event expirations"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Pseudonymous profiles data expiration"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_exceededusage_totaldatavolume"
 >title="Predicted Total Data Volume"
->abstract="Total Data Volume is the amount of data available in Profile Service for use in engagement and personalization workflows.
->
->Your usage has exceeded the licensed amount. To reduce usage, configure dataset or Pseudonymous Profile data expirations."
+>abstract="Total Data Volume is the amount of data available in Real-Time Customer Profile for use in engagement and personalization workflows.<br>Your usage has exceeded the licensed amount. To reduce usage, configure dataset or Pseudonymous Profile data expirations."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Experience Event expirations"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Pseudonymous profiles data expiration"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_exceededusage_cjaRowsAvailable"
 >title="Predicted CJA Rows Available"
->abstract="CJA Rows Available refers to the daily average rows of data available for analysis in Customer Journey Analytics.
->
->Your usage has exceeded the licensed amount. To reduce usage, configure dataset or Pseudonymous Profile data expirations."
+>abstract="CJA Rows Available refers to the daily average rows of data available for analysis in Customer Journey Analytics.<br>Your usage has exceeded the licensed amount. To reduce usage, configure dataset or Pseudonymous Profile data expirations."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Experience Event expirations"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Pseudonymous profiles data expiration"
 
@@ -315,7 +289,7 @@ You can also select **[!UICONTROL Custom date]** to choose the time period that 
 
 >[!IMPORTANT]
 >
->Starting August 20th, customers with entitlements for '[!UICONTROL Average Profile Richness]' and '[!UICONTROL Total Storage]' instead saw '[!UICONTROL Total Data Volume]' in the License Usage Dashboard. There was no change to customer entitlements, only a simplification of tracking metrics. [!UICONTROL Total Data Volume] represents the data available in Adobe Experience Platform Profile Service for engagement and personalization workflows. This simplified metric improved the management and measurement of Profile Service use. Customers were encouraged to contact their Adobe representative for further clarification on this change.
+>Starting August 20th, customers with entitlements for '[!UICONTROL Average Profile Richness]' and '[!UICONTROL Total Storage]' instead saw '[!UICONTROL Total Data Volume]' in the License Usage Dashboard. There was no change to customer entitlements, only a simplification of tracking metrics. [!UICONTROL Total Data Volume] represents the data available in Real-Time Customer Profile for engagement and personalization workflows. This simplified metric improved the management and measurement of Real-Time Customer Profile use. Customers were encouraged to contact their Adobe representative for further clarification on this change.
 
 The license usage dashboard reports on several unique metrics that are applicable to multiple products in the organization. The available metrics are:
 
@@ -338,7 +312,7 @@ The license usage dashboard reports on several unique metrics that are applicabl
 | [!UICONTROL Profile Richness No of Packs] | An increase in your authorized Total Data Volume by 25 KB per profile for each Additional Profile Richness pack. |
 | [!UICONTROL Query Service Compute Hours] | A measure of the amount of time taken by the Query Service engines to read, process, and write data back into the data lake when a batch query is executed. |
 | [!UICONTROL Streaming Segmentation No of Packs] | The packs update segment membership for a person profile as new data enters the Segmentation Service through a streaming flow. Segment membership is evaluated based on the current person profile attributes and the value of the current event, without taking historical behavior into account. Streaming Segmentation is a shared feature. |
-| [!UICONTROL Total Data Volume] | The total amount of data available for Adobe Experience Platform Profile Service to use in engagement workflows. See the [frequently asked questions about Total Data Volume](../../landing/license-usage-and-guardrails/total-data-volume.md) to learn more. |
+| [!UICONTROL Total Data Volume] | The total amount of data available for Real-Time Customer Profile to use in engagement workflows. See the [frequently asked questions about Total Data Volume](../../landing/license-usage-and-guardrails/total-data-volume.md) to learn more. |
 | [!UICONTROL Total Volume of Data Egress] | The cumulative annual volume of data exported from Adobe Experience Platform to third-party data warehouses. |
 
 <!-- Approval needed on my revision above.
