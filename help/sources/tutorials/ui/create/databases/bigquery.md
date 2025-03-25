@@ -31,7 +31,6 @@ Read the [[!DNL Google BigQuery] authentication guide](../../../../connectors/da
 
 In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the *[!UICONTROL Sources]* workspace. You can select the appropriate category in the *[!UICONTROL Categories]* panel Alternatively, you can use the search bar to navigate to the specific source that you want to use.
 
-
 To use [!DNL Google BigQuery], select the **[!UICONTROL Google BigQuery]** source card under *[!UICONTROL Databases]* and then select **[!UICONTROL Add data]**.
 
 >[!TIP]
@@ -64,13 +63,13 @@ You can connect your [!DNL Google BigQuery] account to Experience Platform on Az
 
 To use basic authentication, select **[!UICONTROL Basic Authentication]** and provide values for your [project, client ID, client secret, refresh token, and (optional) large results dataset ID](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials). When finished, select **[!UICONTROL Connect to source]** and allow for a few moments for the connection to establish.
 
-![The new account interface where basic authentication is selected.](../../../../images/tutorials/create/google-big-query/basic_auth.png)
+![The new account interface where basic authentication is selected.](../../../../images/tutorials/create/google-big-query/basic-auth.png)
 
 >[!TAB Use service authentication]
 
 To use service authentication, select **[!UICONTROL Service Authentication]** and provide values for your [project ID, key file content, and (optional) large results dataset ID](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials). When finished, select **[!UICONTROL Connect to source]** and allow for a few moments for the connection to establish.
 
-![The new account interface where service authentication is selected.](../../../../images/tutorials/create/google-big-query/service_auth.png)
+![The new account interface where service authentication is selected.](../../../../images/tutorials/create/google-big-query/service-auth.png)
 
 >[!ENDTABS]
 
@@ -82,7 +81,7 @@ To use service authentication, select **[!UICONTROL Service Authentication]** an
 
 To create a new [!DNL Google BigQuery] account and connect to Experience Platform on AWS, ensure that you are in a VA6 sandbox and then provide the necessary credentials for authentication.
 
-![screenshot of aws connection interface here]
+![screenshot of aws connection interface here](../../../../images/tutorials/create/google-big-query/aws.png)
 
 ## Skip preview of sample data {#skip-preview-of-sample-data}
 

@@ -25,7 +25,7 @@ For information on how to successfully make calls to Platform APIs, see the guid
 
 ### Gather required credentials
 
-Read the [[!DNL Google BigQuery] authentication guide](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials) for detailed steps on gathering your required credentials.
+Read the [[!DNL Google BigQuery] authentication guide](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials) for detailed steps on retrieving your [!DNL Google BigQuery] credentials.
 
 ## Connect [!DNL Google BigQuery] to Experience Platform on Azure {#azure}
 
