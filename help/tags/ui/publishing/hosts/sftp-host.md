@@ -31,6 +31,22 @@ The private key is used to encrypt the public key. You will need to provide your
 
 ### Allowlist Platform IP addresses
 
+>[!IMPORTANT]
+>
+> On June 23rd, 2025, Adobe Launch is updating external IP addresses used to support SFTP Host Type and Callback API functionality. If you're using either of these features, ensure your firewall rules allow traffic from the new IP addresses.
+>
+> To maintain uninterrupted access, we recommend adding the new IPs now and removing the old ones after June 23rd, 2025. 
+>
+>**Old IP addresses:**
+> * `184.72.239.68`
+> * `23.20.85.113`
+> * `54.226.193.184`
+>
+>**New IP addresses:**
+> * `34.227.138.75 `
+> * `44.194.43.191`
+> * `3.215.163.18`
+
 You may need to approve a set of IP addresses to be used within your company firewall to allow Platform to reach your SFTP server and connect to it. These IP Addresses are:
 
 * `184.72.239.68`
