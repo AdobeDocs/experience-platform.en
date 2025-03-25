@@ -301,6 +301,8 @@ role: Developer
     - Data & identity partner {#data-partner}
       - [Acxiom Data Ingestion](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
       - [Acxiom Prospecting Data Import](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
+      - [Bombora Intent](tutorials/ui/create/data-partners/bombora.md)
+      - [Demandbase Intent](tutorials/ui/create/data-partners/demandbase.md)
       - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
     - eCommerce {#ecommerce}
       - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)

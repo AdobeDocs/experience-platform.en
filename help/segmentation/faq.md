@@ -77,7 +77,7 @@ The organization-specific default merge policy is automatically applied when upl
 
 ### Where can I activate externally generated audiences to? 
 
-An externally generated audience can be mapped to any destination and can be used in Adobe Journey Optimizer campaigns.
+An externally generated audience can be mapped to any destination and can be used in Adobe Journey Optimizer campaigns and journeys.
 
 ### Can I delete an externally generated audience?
 
@@ -352,6 +352,16 @@ The following section lists questions related to audience membership.
 
 To confirm a profile's audience membership, visit the profile details page of the profile you want to confirm. Select **[!UICONTROL Attributes]**, followed by **[!UICONTROL View JSON]**, and you can confirm that the `segmentMembership` object contains the ID of the audience.
 
+### Can audience membership drift between ideal and actual membership?
+
+Yes, audience membership can drift between ideal and actual membership if an audience is evaluated using streaming segmentation **and** that audience is based off of an audience evaluated using batch segmentation. 
+
+For example, if Audience A is based off of Audience B, and Audience B is evaluated using batch segmentation, since Audience B only updates every 24 hours, Audience A will move further away from the actual data until it re-syncs with the Audience B updates.
+
+## Batch segmentation {#batch-segmentation}
+
+The following section lists questions related to batch segmentation.
+
 ### How does batch segmentation resolve profile membership?
 
 Audiences evaluated using batch segmentation resolve daily, with the audience membership results being recorded into the profile's `segmentMembership` attribute. Profile lookups generate a fresh version of the profile at the time of the lookup, but it does **not** refresh the batch segmentation results.
@@ -374,3 +384,44 @@ It may take up to three hours for streaming data to be available in batch segmen
 
 For example, if a batch segmentation job runs at 9PM, it is guaranteed to contain streaming ingested data **up until** 6PM. Streaming ingested data that was ingested after 6PM but before 9PM **may** be included.
 
+## Edge segmentation {#edge-segmentation}
+
+The following section lists questions related to edge segmentation.
+
+### How long does it take for a segment definition to be available on the Edge Network?
+
+It takes up to one hour for a segment definition to be available on the Edge Network.
+
+## Streaming segmentation {#streaming-segmentation}
+
+The following section lists questions related to streaming segmentation.
+
+### Does streaming segmentation "unqualification" also happen in real time?
+
+For most instances, streaming segmentation unqualification happens in real-time. However, streaming segments that use segments of segments do **not** unqualify in real-time, instead unqualifying after 24 hours.
+
+### What data does streaming segmentation work on?
+
+Streaming segmentation works on all data that was ingested using a streaming source. Data ingested using a batch-based source will be evaluated nightly, even if it qualifies for streaming segmentation. Events streamed into the system with a timestamp older than 24 hours will be processed in the subsequent batch job.
+
+### How are segments defined as batch or streaming segmentation?
+
+A segment definition is defined as batch, streaming, or edge segmentation based on a combination of query type and event history duration. A list of which segments will be evaluated as a streaming segment definition can be found in the [streaming segmentation query types section](#query-types).
+
+Please note that if a segment definition contains **both** an `inSegment` expression and a direct single-event chain, it cannot qualify for streaming segmentation. If you want to have this segment definition qualify for streaming segmentation, you should make the direct single-event chain its own segment.
+
+### Why does the number of "total qualified" segments keep increasing while the number under "Last X days" remains at zero within the segment definition details section?
+
+The number of total qualified segments is drawn from the daily segmentation job, which includes audiences that qualify for both batch and streaming segments. This value is shown for both batch and streaming segments.
+
+The number under the "Last X days" **only** includes audiences that are qualified in streaming segmentation, and **only** increases if you have streamed data into the system and it counts toward that streaming definition. This value is **only** shown for streaming segments. As a result, this value **may** display as 0 for batch segments.
+
+As a result, if you see that the number under "Last X days" is zero, and the line graph is also reporting zero, you have **not** streamed any profiles into the system that would qualify for that segment.
+
+### How long does it take for a segment definition to be available?
+
+It takes up to one hour for a segment definition to be available.
+
+### Are there any limitations to the data being streamed in?
+
+In order for streamed data to be used in streaming segmentation, there **must** be spacing between the events streamed in. If too many events are streamed in within the same second, Platform will treat these events as bot-generated data, and they will be discarded. As best practice, you should have **at least** five seconds between event data in order to ensure the data is properly used.

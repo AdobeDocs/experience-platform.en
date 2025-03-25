@@ -107,9 +107,9 @@ If breakdown is selected, the display shows a bar graph outlining the percentage
 
 | Status | Description |
 | ------ | ----------- |
-| [!UICONTROL Realized] | The count of profiles that **qualified** for the segment in the last 24 hours since the last batch segment job ran. |
-| [!UICONTROL Existing] | The count of profiles which **remained** in the segment in the last 24 hours since the last batch segment job ran. |
-| [!UICONTROL Exiting] | The count of profiles which **exited** the segment in the last 24 hours since the last batch segment job ran. |
+| [!UICONTROL Realized] | The count of profiles that **qualified** for the audience in the last 24 hours since the last batch segment job ran. |
+| [!UICONTROL Existing] | The count of profiles which **remained** in the audience in the last 24 hours since the last batch segment job ran. This field is **calculated** and does not show up in the [`segmentMembership` object](../../xdm/field-groups/profile/segmentation.md). |
+| [!UICONTROL Exiting] | The count of profiles which **exited** the audience in the last 24 hours since the last batch segment job ran. |
 
 After you select the fields you want to display, you can also re-size the width of the displayed columns. You can either do this by dragging the area between the columns or by selecting the ![arrow icon](/help/images/icons/chevron-down.png) of the column you want to re-size, followed by **[!UICONTROL Resize column]**.
 
@@ -215,11 +215,6 @@ When you apply bulk actions to audiences, the following conditions apply:
 - If you select a filter, the selected audiences **will** reset.
 
 #### [!BADGE Limited availability]{type=Informative} Flexible audience evaluation {#flexible-audience-evaluation}
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_browse_flexibleaudienceevaluation"
->title="Flexible audience evaluation limits"
->abstract="You can evaluate up to 20 audiences in a single flexible audience evaluation run.<br/><br/>Additionally, while the evaluation job runs as soon as possible, there may be system delays that may occur since on-demand evaluations <b>cannot</b> run simultaneously with another on-demand or batch evaluation."
 
 Flexible audience evaluation lets you run a segmentation job on demand. Choose the audiences you want to have evaluated and select **[!UICONTROL Evaluate audiences]**.
 
