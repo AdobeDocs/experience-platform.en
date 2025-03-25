@@ -47,7 +47,7 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_addressableaudience"
 >title="Predicted Addressable Audience"
->abstract="The Addressable Audience is the set of person profiles in Profile Service that your organization is entitled to engage. This includes both directly identifiable and pseudonymous profiles.
+>abstract="The Addressable Audience is the set of person profiles in Real-Time Customer Profile that your organization is entitled to engage. This includes both directly identifiable and pseudonymous profiles.
 >
 >Your usage might reach the licensed amount. To reduce usage, configure dataset or Pseudonymous Profile data expirations."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Experience Event expirations"
@@ -65,7 +65,7 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_businesspersonprofile"
 >title="Predicted Business Person Profile"
->abstract="Business Person Profiles are records in Profile Service representing individuals in a B2B context.
+>abstract="Business Person Profiles are records in Real-Time Customer Profile representing individuals in a B2B context.
 >
 >Your usage might reach the licensed amount. To reduce usage, configure dataset or Pseudonymous Profile data expirations."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Experience Event expirations"
@@ -83,7 +83,7 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_totaldatavolume"
 >title="Predicted Total Data Volume"
->abstract="Total Data Volume is the amount of data available in Profile Service for use in engagement and personalization workflows.
+>abstract="Total Data Volume is the amount of data available in Real-Time Customer Profile for use in engagement and personalization workflows.
 >
 >Your usage might reach the licensed amount. To reduce usage, configure dataset or Pseudonymous Profile data expirations."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Experience Event expirations"
@@ -101,7 +101,7 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_exceededusage_addressableaudience"
 >title="Predicted Addressable Audience"
->abstract="The Addressable Audience is the set of person profiles in Profile Service that your organization is entitled to engage. This includes both directly identifiable and pseudonymous profiles.
+>abstract="The Addressable Audience is the set of person profiles in Real-Time Customer Profile that your organization is entitled to engage. This includes both directly identifiable and pseudonymous profiles.
 >
 >Your usage has exceeded the licensed amount. To reduce usage, configure dataset or Pseudonymous Profile data expirations."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Experience Event expirations"
@@ -322,7 +322,7 @@ The license usage dashboard reports on several unique metrics that are applicabl
 | Metric | Description |
 |---|---|
 | [!UICONTROL Audience Activation Size] | The total size of profiles activated to any file-based destination in a year. Note: This does not include profiles sent through streaming destinations. |
-|[!UICONTROL Addressable Audience] | The set of person profiles in Profile Service that your organization is entitled to engage, including both directly identifiable and Pseudonymous Profiles. These profiles may contain attributes, behaviors, and segment membership data. Profile volumes are calculated using Adobe Experience Platform's default deterministic Identity Graph and are considered a Shared Feature. |
+|[!UICONTROL Addressable Audience] | The set of person profiles in Real-Time Customer Profile that your organization is entitled to engage, including both directly identifiable and Pseudonymous Profiles. These profiles may contain attributes, behaviors, and segment membership data. Profile volumes are calculated using Adobe Experience Platform's default deterministic Identity Graph and are considered a Shared Feature. |
 | [!UICONTROL Adhoc Query Service Users Packs]  | An add-on to increase your authorized concurrent Query Service Users entitlement by five additional concurrent Query Service users and one additional concurrently running ad hoc query per pack. Multiple additional Ad Hoc Query User packs may be licensed. |
 | [!UICONTROL Average profile richness] | **Deprecated** - The sum of all production data stored within the Hub Profile Service at any point in time, divided by five times the number of authorized business person profiles. [!UICONTROL Average profile richness] is a shared feature. |
 | [!UICONTROL CJA Rows Available] | The daily average rows of data available for analysis within Customer Journey Analytics.  |
@@ -331,7 +331,7 @@ The license usage dashboard reports on several unique metrics that are applicabl
 | [!UICONTROL Data Export Size] | The amount of data sent through dataset activations in a year. |
 | [!UICONTROL Data Exports] | The total size of datasets that can be exported to any non-Adobe solution (directly or indirectly) in a year. |
 | [!UICONTROL Data Lake Storage] | The quantity used of the analytical data store within Adobe Experience Platform. |
-| [!UICONTROL Engageable Audience] | A group of person profiles in Profile Service that you have attempted to engage within the past 12 months using Journey Optimizer's authoring, decisioning, delivery, experimentation, or orchestration capabilities. |
+| [!UICONTROL Engageable Audience] | A group of person profiles in Real-Time Customer Profile that you have attempted to engage within the past 12 months using Journey Optimizer's authoring, decisioning, delivery, experimentation, or orchestration capabilities. |
 | [!UICONTROL Look-alike Audiences] | A Consumer Look-Alike Audience is an audience generated by modeling an existing Consumer Audience to identify Person Profiles with similar attributes or behaviors. |
 | [!UICONTROL Number of AMM Models] | A count of the machine learning model (built in Adobe Mix Modeler) used to measure and/or predict a specified outcome based on your investments. |
 | [!UICONTROL Number of Sandboxes] | The count of logical separations within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations. |
