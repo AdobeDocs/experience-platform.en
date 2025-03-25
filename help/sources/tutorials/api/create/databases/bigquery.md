@@ -224,6 +224,7 @@ A successful response returns details of the newly created connection, including
     "etag": "\"ca00acbf-0000-0200-0000-60149e1e0000\""
 }
 ```
+
 +++
 
 ## Next steps
