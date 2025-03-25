@@ -3,6 +3,7 @@ title: Apply access labels to manage user access to sources dataflows in the UI
 description: Learn how to use the Experience Platform UI to apply access labels and manage user access to your sources dataflows.
 hide: true
 hidefromtoc: true
+exl-id: 7aab9706-2f43-43c7-9878-1959d5a8a6b0
 ---
 # Apply access labels to manage user access to sources dataflows in the UI
 
