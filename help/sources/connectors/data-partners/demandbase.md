@@ -1,6 +1,7 @@
 ---
 title: Demandbase Intent
 description: Learn about the Demandbase Intent source on Experience Platform.
+last-substantial-update: 2025-03-26
 ---
 # [!DNL Demandbase Intent]
 
@@ -14,9 +15,9 @@ Read this document for prerequisite information on the [!DNL Demandbase] source.
 
 Read the following sections for prerequisite steps before connecting [!DNL Demandbase] to Experience Platform.
 
-### IP address allow list
+### IP address allowlist
 
-A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
+A list of IP addresses must be added to an allowlist prior to working with source connectors. Failing to add your region-specific IP addresses to your allowlist may lead to errors or non-performance when using sources. See the [IP address allowlist](../../ip-address-allow-list.md) page for more information.
 
 ### Configure permissions on Experience Platform
 
