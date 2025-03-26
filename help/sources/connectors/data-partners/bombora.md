@@ -1,6 +1,7 @@
 ---
 title: Bombora Intent
 description: Learn about the Bombora Intent source on Experience Platform.
+last-substantial-update: 2025-03-26
 ---
 # [!DNL Bombora Intent]
 
