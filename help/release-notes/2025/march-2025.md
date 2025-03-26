@@ -4,60 +4,37 @@ description: The March 2025 release notes for Adobe Experience Platform.
 ---
 # Adobe Experience Platform release notes 
 
->[!TIP]
->
->This release includes improvements to the Federated Audience Composition add-on. For more information, read the [Federated Audience Composition release notes](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes).
-
 **Release date: March 26, 2025**
 
 Updates to existing features and documentation in Adobe Experience Platform:
-<!-- 
-- [AI Assistant](#ai-assistant)
-- [Catalog Service](#catalog-service)
-- [Data Prep](#data-prep)
-- [Destinations](#destinations)
-- [Segmentation Service](#segmentation)
-- [Sources](#sources)
-- [Documentation updates](#documentation-updates)
-  - [Edge network and hub comparison](#edge)
-  - [Expanded Flow Service API for sources](#flow-service)
-  - [Back up object configurations using sandbox tooling](#back-up-object-configurations)
-  - [Enable a center of excellence using sandbox tooling](#center-of-excellence)
-  - [Experience Event Dataset Retention in the data lake](#experience-event-dataset-retention) -->
 
-<!-- ## AI Assistant {#ai-assistant}
+- [Adobe Experience Platform release notes](#adobe-experience-platform-release-notes)
+  - [Destinations {#destinations}](#destinations-destinations)
+  - [Segmentation Service {#segmentation-service}](#segmentation-service-segmentation-service)
+  - [Sources {#sources}](#sources-sources)
 
-AI Assistant in Adobe Experience Platform is a conversational experience that you can use to accelerate your workflows in Adobe applications. You can use AI Assistant to better understand product knowledge, troubleshoot problems, or search through information and find operational insights. AI Assistant supports Experience Platform, Real-Time Customer Data Platform, Adobe Journey Optimizer, and Customer Journey Analytics.
-
-**New features**
-
-For more information, read the [AI Assistant overview](../../ai-assistant/home.md). -->
-
-<!-- ## Catalog Service {#catalog-service}
-
-Catalog Service is the system of record for data location and lineage within Adobe Experience Platform. While all data that is ingested into Experience Platform is stored in the data lake as files and directories, Catalog holds the metadata and description of those files and directories for lookup and monitoring purposes.
-
-For more information on Catalog Service, read the [Catalog Service overview](../../catalog/home.md). -->
-
-<!-- ## Data Prep {#data-prep}
-
-Use data prep to map, transform, and validate data to and from Experience Data Model (XDM).
-
-**New or updated features**
-
-For more information, read the [Data Prep overview](../../data-prep/home.md). -->
-
-<!-- ## Destinations (updated February 20) {#destinations}
+## Destinations {#destinations}
 
 [!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
 **New or updated destinations** {#new-updated-destinations}
 
+| Destination | Description |
+| --- | --- |
+| [Airship Attributes](/help/destinations/catalog/mobile-engagement/airship-attributes.md) upgrade | Starting March 25, 2025, you can see two **[!UICONTROL Airship Attributes]** cards side-by-side in the destinations catalog. This is due to an internal upgrade to the destinations service. The existing **[!UICONTROL Airship Attributes]** destination connector has been renamed to **[!UICONTROL (Deprecated) Airship Attributes]** and a new card with the name **[!UICONTROL Airship Attributes]** is now available to you. <br> Use the **[!UICONTROL Airship Attributes]** connection in the catalog for new activation data flows. If you have any active dataflows to the [!DNL (Deprecated) Airship Attributes] destination, they will be updated automatically, so no action is required from you. <br> If you are creating dataflows through the [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/), you must update your [!DNL flow spec ID] and [!DNL connection spec ID] to the following values: <ul><li> Flow spec ID: `a862e0be-966e-4e5a-80d3-1bb566461986`</li><li> Connection spec ID: `594bc002-4a47-49b7-8a98-ac0d21045502`</li> </ul>|
+
+{style="table-layout:auto"}
+
 **New or updated functionality** {#destinations-new-updated-functionality}
 
-**Fixes and enhancements** {#destinations-fixes-and-enhancements}
+| Feature | Description |
+| --- | --- |
+| [Reporting accuracy enhancements for streaming destinations](../../dataflows/ui/monitor-destinations.md) | Starting with March 2025, Adobe is rolling out an update to increase reporting accuracy for streaming destinations. This enhancement ensures a better alignment between the reporting in Experience Platform and the destination platforms. <br> Before this update, **[!UICONTROL Identities failed]** included all activation retries. After this update, only the last activation retry is included in the total count. <br> This enhancement applies to all streaming destinations. <br> Following this enhancement, users of streaming destinations may see an expected drop in their **[!UICONTROL Identities failed]** count. |
+| [Map-type field export support for enterprise and edge destinations](/help/destinations/ui/export-arrays-maps-objects.md) | When exporting data to the [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [HTTP API](/help/destinations/catalog/streaming/http-destination.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), and [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) destinations, you can now select map-type fields for export in the mapping step of the activation workflow. <br> ![Export map-type field to enterprise destination.](../2025/assets/march/export-map.png "Export map-type field to enterprise destination."){width="250" align="center" zoomable="yes"}|
 
-For more information, read the [destinations overview](../../destinations/home.md). -->
+{style="table-layout:auto"}
+
+For more information, read the [destinations overview](../../destinations/home.md). 
 
 ## Segmentation Service {#segmentation-service}
 
@@ -97,25 +74,3 @@ Use sources in Experience Platform to ingest data from an Adobe application or a
 {style="table-layout:auto"}
 
 For more information, read the [sources overview](../../sources/home.md).
-
-## Documentation updates {#documentation-updates}
-
-### Edge Network and hub comparison {#edge}
-
-The [Edge Network and hub comparison](../../landing/edge-and-hub-comparison.md) provides an overview detailing the differences between the two server types for Adobe Experience Platform (hub and Edge Network), including what services are available on each server type, locations of the servers, as well as recommended scenarios for using each server type. 
-
-### Expanded Flow Service API reference for sources {#flow-service}
-
-The [[!DNL Flow Service] API reference](https://developer.adobe.com/experience-platform-apis/references/flow-service/#tag/Source-connections) for sources has been updated with new API request and response examples. Use the expanded API reference to create and update connection specs when integrating your own source to Experience Platform. You can also use the expanded API reference to perform state transitions on your sources entities, update existing source and target connections, and retrieve flows and flow specs given a specific filtering criteria.
-
-### Back up object configurations using sandbox tooling {#back-up-object-configurations}
-
-Read the [back up object configuration guide](../../sandboxes/use-cases/backup-object-configuration.md) for step-by-step instructions on creating a backup package using sandbox tooling to ensure your object configurations are stored and secured.
-
-### Enable a center of excellence using sandbox tooling {#center-of-excellence}
-
-Read the [center of excellence guide](../../sandboxes/use-cases/center-of-excellence.md) for step-by-step instructions on creating a "golden sandbox" package that acts as a center of excellence to efficiently share key configurations.
-
-### Experience Event Dataset Retention in the data lake {#experience-event-dataset-retention}
-
-Take control of Experience Event Dataset Retention in Adobe Experience Platform using Time-To-Live (TTL). [This guide](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) walks you through evaluating, configuring, and managing TTL settings to automatically remove outdated records, optimize storage, and keep your data relevant. Discover best practices, real-world use cases, and key considerations to enhance your data lifecycle management.
