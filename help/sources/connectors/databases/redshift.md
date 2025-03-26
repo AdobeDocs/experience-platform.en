@@ -31,11 +31,9 @@ A list of IP addresses must be added to an allow list prior to working with sour
 >
 >This section applies to implementations of Experience Platform running on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../../landing/multi-cloud.md).
 
-Add the following IP addresses to your allowlist, in order to connect your [!DNL Amazon Redshift] account to Experience Platform on Amazon Web Services (AWS):
+### IP address allowlist for connection on AWS
 
-- `34.193.63.59`
-- `44.217.93.240`
-- `44.194.79.229`
+You must add region-specific IP addresses to your allowlist prior to connecting your sources to Experience Platform on AWS. For more information, read the guide on [allowlisting IP addresses to connect to Experience Platform on AWS](../../ip-address-allow-list.md) for more information.
 
 ## Connect [!DNL Amazon Redshift] to Platform using APIs
 
