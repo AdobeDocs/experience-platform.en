@@ -2,8 +2,6 @@
 title: Flexible Audience Evaluation Guide
 description: Learn how to use flexible audience evaluation to run batch segmentation jobs on demand.
 role: Developer, User
-hide: true
-hidefromtoc: true
 ---
 
 # Flexible audience evaluation guide
