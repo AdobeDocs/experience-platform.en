@@ -45,7 +45,7 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_addressableaudience"
 >title="Predicted Addressable Audience"
->abstract="The Addressable Audience is the set of person profiles in Real-Time Customer Profile that your organization is entitled to engage. This includes both directly identifiable and pseudonymous profiles.<br>Your usage might reach the licensed amount. To reduce usage, configure dataset or Pseudonymous Profile data expirations."
+>abstract="The Addressable Audience is the set of person profiles in Real-Time Customer Profile that your organization is entitled to engage. This metric includes both directly identifiable and Pseudonymous Profiles.<br>Your usage might reach the licensed amount. To reduce usage, configure dataset or Pseudonymous Profile data expirations."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Experience Event expirations"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Pseudonymous profiles data expiration"
 
@@ -138,7 +138,7 @@ For a general overview of the Platform UI, refer to the [Experience Platform UI 
 
 The [!UICONTROL License usage] dashboard displays a list of all the Experience Platform products that you have purchased and any add-ons for those products. From this dashboard, you can find a snapshot of your organization's license-related data for Experience Platform across any associated sandbox.
 
-The data in this dashboard is displayed exactly as it appears at the specific point in time when the snapshot was taken. In other words, the snapshot is not an approximation or sample of the data, and the dashboard is not updating in real time.
+The data in this dashboard is displayed exactly as it appears at the specific point in time when the snapshot was taken. In other words, the snapshot is not an approximation or sample of the data, and the dashboard is not updated in real time.
 
 >[!NOTE]
 >
@@ -161,7 +161,7 @@ The metrics table includes the following columns:
 | Column name  | Description |
 |---|---|
 | **[!UICONTROL Metric Name]**  | The name of the license usage metric. Each entry includes an info icon (`ⓘ`) that displays a description and list of associated products. |
-| **[!UICONTROL Licensed]**  | The number of units your organization is entitled to use, as defined in your contract. This is the same value as **License Amount** in the Products tab. |
+| **[!UICONTROL Licensed]**  | The number of units your organization is entitled to use, as defined in your contract. This metric is the same value as the **License Amount** in the Products tab. |
 | **[!UICONTROL Measured]**  | The amount of the metric currently used by your organization. |
 | **[!UICONTROL Usage %]**  | The percentage of your licensed value currently in use. |
 | **[!UICONTROL Predicted Usage %]**  | The forecasted range of metric usage over the next 6 weeks. |
@@ -198,13 +198,13 @@ Each chart includes dropdown menus to filter the data. Use the date range dropdo
 
 ![The Addressable audience metric detail view with historical usage graph, sandbox table, and export button.](../images/license-usage/metric-details-view.png)
 
-You can also select **[!UICONTROL Custom date]** to choose the time period that is shown.
+You can also select a **[!UICONTROL Custom date]** to choose the time period that is shown.
 
 ![The License usage dashboard Overview tab with the custom date range options highlighted.](../images/license-usage/custom-date-range.png)
 
 ### CSV export {#export-metric-usage-data}
 
-You can export historical usage for the selected metric and sandbox as a CSV file directly from the metric detail view. Select **[!UICONTROL Export]** icon to analyze trends offline or share data with other teams.
+You can export historical usage for the selected metric and sandbox as a CSV file directly from the metric detail view. Select the **[!UICONTROL Export]** icon to analyze trends offline or share data with other teams.
 
 ## [!UICONTROL Products] tab {#products-tab}
 
@@ -217,7 +217,7 @@ The **[!UICONTROL Products]** tab presents license usage data grouped by purchas
 |---|---|
 | **[!UICONTROL Product]**  | The Adobe solution licensed by your organization. |
 | **[!UICONTROL Primary Metric]**  | The primary metric used for tracking within that product. |
-| **[!UICONTROL License Amount]**  | The contracted value for the maximum amount of the Primary Metric. |
+| **[!UICONTROL License Amount]**  | The contracted value for the maximum amount of the primary metric. |
 | **[!UICONTROL Usage]**  | The amount of your primary metric used. |
 | **[!UICONTROL Usage %]**  | The percentage of your primary metric used according to your license amount. |
 | **[!UICONTROL Predicted Usage]**  | The predicted usage percentage of your primary metric. |
@@ -281,18 +281,18 @@ The predicted usage feature supports the following metrics:
 
 >[!IMPORTANT]
 >
->Starting August 20th, customers with entitlements for '[!UICONTROL Average Profile Richness]' and '[!UICONTROL Total Storage]' instead saw '[!UICONTROL Total Data Volume]' in the License Usage Dashboard. There was no change to customer entitlements, only a simplification of tracking metrics. [!UICONTROL Total Data Volume] represents the data available in Real-Time Customer Profile for engagement and personalization workflows. This simplified metric improved the management and measurement of Real-Time Customer Profile use. Customers were encouraged to contact their Adobe representative for further clarification on this change.
+>Starting August 20th, customers with entitlements for '[!UICONTROL Average Profile Richness]' and '[!UICONTROL Total Storage]' instead saw '[!UICONTROL Total Data Volume]' in the License Usage Dashboard. There was no change to customer entitlements, only a simplification of tracking metrics. [!UICONTROL Total Data Volume] represents the data available in Real-Time Customer Profile for engagement and personalization workflows. This simplified metric improved the management and measurement of Real-Time Customer Profile use. Customers were are encouraged to contact their Adobe representative for further clarification on this change.
 
 The license usage dashboard reports on several unique metrics that are applicable to multiple products in the organization. The available metrics are:
 
 | Metric | Description |
 |---|---|
 | [!UICONTROL Audience Activation Size] | The total size of profiles activated to any file-based destination in a year. Note: This does not include profiles sent through streaming destinations. |
-|[!UICONTROL Addressable Audience] | The set of person profiles in Real-Time Customer Profile that your organization is entitled to engage, including both directly identifiable and Pseudonymous Profiles. These profiles may contain attributes, behaviors, and segment membership data. Profile volumes are calculated using Adobe Experience Platform's default deterministic Identity Graph and are considered a Shared Feature. |
+|[!UICONTROL Addressable Audience] | The set of person profiles in Real-Time Customer Profile that your organization is entitled to engage, including both directly identifiable and Pseudonymous Profiles. These profiles may contain attributes, behaviors, and segment membership data. Profile volumes are calculated using Adobe Experience Platform's default deterministic Identity Graph and are considered a shared feature. |
 | [!UICONTROL Adhoc Query Service Users Packs]  | An add-on to increase your authorized concurrent Query Service Users entitlement by five additional concurrent Query Service users and one additional concurrently running ad hoc query per pack. Multiple additional Ad Hoc Query User packs may be licensed. |
 | [!UICONTROL Average profile richness] | **Deprecated** - The sum of all production data stored within the Hub Profile Service at any point in time, divided by five times the number of authorized business person profiles. [!UICONTROL Average profile richness] is a shared feature. |
 | [!UICONTROL CJA Rows Available] | The daily average rows of data available for analysis within Customer Journey Analytics.  |
-| [!UICONTROL Computed Attributes] | Aggregated profile behavioral data based on experience events that is converted into a Profile attribute and can be included in a Person Profile. |
+| [!UICONTROL Computed Attributes] | Aggregated profile behavioral data based on experience events that are converted into a Profile attribute and can be included in a Person Profile. |
 | [!UICONTROL Consumer Audience] | The number of person profiles identified as "Consumer Audience" on the sales order. |
 | [!UICONTROL Data Export Size] | The amount of data sent through dataset activations in a year. |
 | [!UICONTROL Data Exports] | The total size of datasets that can be exported to any non-Adobe solution (directly or indirectly) in a year. |
@@ -311,7 +311,7 @@ The license usage dashboard reports on several unique metrics that are applicabl
 
 >[!TIP]
 >
->You can check your license entitlements in your Sales Order to calculate metrics such as your 'Storage Allowance'.<br>For example,<ul><li>Storage Allowance = The number of "authorized profiles" in your contract X Average Profile Richness</li></ul>
+>You can check your license entitlements in your sales order to calculate metrics such as your 'Storage Allowance'.<br>For example,<ul><li>Storage Allowance = The number of "authorized profiles" in your contract X Average Profile Richness</li></ul>
 
 The availability of these metrics and the specific definition of each of these metrics varies depending on the licensing that your organization has purchased. For detailed definitions of each metric, refer to the appropriate Product Description documentation:
 
