@@ -204,7 +204,7 @@ You can also select a **[!UICONTROL Custom date]** to choose the time period tha
 
 ### CSV export {#export-metric-usage-data}
 
-You can export historical usage for the selected metric and sandbox as a CSV file directly from the metric detail view. Select the **[!UICONTROL Export]** icon to analyze trends offline or share data with other teams.
+You can export historical usage data for the selected metric and sandbox as a CSV file directly from the metric detail view. Select the **[!UICONTROL Export]** icon to download the chart's data in tabular format. The exported CSV makes it easy to analyze trends offline or share usage insights across teams.
 
 ## [!UICONTROL Products] tab {#products-tab}
 
