@@ -130,7 +130,7 @@ See [Setting up an OAuth 2.0 client registration](https://docs.pega.com/bundle/p
 
 See [Creating a real-time run for data flows](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html) in [!DNL Pega Customer Decision Hub].
 
-See [Manage customer records in Customer Profile Designer](https://docs.pega.com/bundle/customer-decision-hub/page/customer-decision-hub/implement/profile-designer-data-management.html).
+See [Manage customer records in Customer Profile Designer](https://docs.pega.com/bundle/customer-decision-hub/page/customer-decision-hub/implement/profile-designer-data-management.html) in [!DNL Pega Customer Decision Hub].
 
 ## Data usage and governance {#data-usage-governance}
 
