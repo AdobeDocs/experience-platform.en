@@ -10,9 +10,26 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 Updates to existing features and documentation in Adobe Experience Platform:
 
 - [Adobe Experience Platform release notes](#adobe-experience-platform-release-notes)
-  - [Destinations {#destinations}](#destinations-destinations)
-  - [Segmentation Service {#segmentation-service}](#segmentation-service-segmentation-service)
-  - [Sources {#sources}](#sources-sources)
+  - [Dashboards](#dashboards)
+  - [Destinations](#destinations)
+  - [Segmentation Service](#segmentation-service)
+  - [Sources](#sources)
+
+## Dashboards {#dashboards}
+
+Experience Platform provides multiple dashboards through which you can view important insights about your organization's data, as captured during daily snapshots.
+
+**New or updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Metrics-based license usage dashboard | The license usage dashboard now includes a streamlined UI with two tabs: **Metrics** and **Products**. The new **Metrics** tab offers a consolidated view of all trackable license metrics across your purchased products. Each metric includes an inline info icon displaying descriptions and associated products. Users can select Production or Development sandboxes, view historical usage trends in interactive charts, and export sandbox-specific data as CSV files. These updates streamline license tracking and provide clearer insights. Learn more in the [license usage dashboard guide](../../dashboards/guides/license-usage.md) for more details. |
+| Updated prediction frequency | The license usage dashboard now provides more accurate insights into projected consumption by updating usage predictions **weekly** instead of monthly. These forecasts show estimated usage over the next six weeks based on recent trends. This change allows for faster decision-making, earlier intervention, and improved license planning. See the [license usage dashboard guide](../../dashboards/guides/license-usage.md#predicted-usage) for details. |
+| Updated metric descriptions in UI | Metric definitions in the license usage dashboard have been revised for clarity and consistency. You can now view updated descriptions directly in the dashboard using inline info icons next to each metric in the **Metrics** tab. These updates make it easier to understand how metrics are tracked and which products they apply to. See the [license usage dashboard guide](../../dashboards/guides/license-usage.md#available-metrics) for more details. |
+
+{style="table-layout:auto"}
+
+For more information on dashboards, including how to grant access permissions and create custom widgets, begin by reading the [dashboards overview](../../dashboards/home.md).
 
 ## Destinations {#destinations}
 
@@ -44,7 +61,7 @@ For more information, read the [destinations overview](../../destinations/home.m
 | Feature | Description |
 | ------- | ----------- |
 | Account Audience Builder enhancements | Within Audience Builder, you can now filter attributes to only display populated attributes as well as view summary data for these populated attributes. More information on these enhancements can be found in the [Audience Builder](../../rtcdp/segmentation/audience-builder.md) documentation. |
-| Flexible audience evaluation general availability | Flexible audience evaluation is now generally available! You can use flexible audience evaluation to create new audiences on demand for time-sensitive communications. More information about flexible audience evaluation can be found in the [flexible audience evaluation overview](../../segmentation/methods/flexible-audience-evaluation.md) |
+| Flexible audience evaluation general availability | Flexible audience evaluation is now generally available! You can use flexible audience evaluation to create new audiences on demand for time-sensitive communications. More information about flexible audience evaluation can be found in the [flexible audience evaluation overview](../../segmentation/methods/flexible-audience-evaluation.md). |
 
 For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md).
 
@@ -58,8 +75,8 @@ Use sources in Experience Platform to ingest data from an Adobe application or a
 
 | Feature | Description |
 | --- | --- |
-| [!DNL Bombora Intent] | The [!DNL Bombora Intent] source is now availale in the sources catalog. Use this source to: <ul><li>Integrate Bombora's Company Surge Intent data to identify accounts actively researching your products or services.</li><li>Prioritize in-market accounts to create precise segments and execute hyper-targeted ABM campaigns, ensuring your marketing efforts focus on those account most likely to convert.</li><li>Leverage intent-driven strategies to optimize ad spend, boost engagement, and maximize ROI.</li></ul> For more information, read the guide on [connecting your [!DNL Bombora] account to Experience Platform](../../sources/tutorials/ui/create/data-partners/bombora.md) |
-| [!DNL Demandbase Intent] | The [!DNL Bombora Intent] source is now availale in the sources catalog. Use this source to: <ul><li>Integrate Demandbase's Account Intent data to identify high-interest accounts based on real-time engagements.</li><li>By prioritizing the strongest intent signals, you can create precise segments and deliver hyper-targeted campaigns to ensure that your marketing efforts focus on accounts most likely to convert.</li><li>Activate intent-driven strategies to enable optimization of ad spend, increased engagement, and higher ROI.</li></ul> For more information, read the guide on [connecting your [!DNL Demandbase] account to Experience Platform](../../sources/tutorials/ui/create/data-partners/demandbase.md). |
+| [!DNL Bombora Intent] | The [!DNL Bombora Intent] source is now availale in the sources catalog. Use this source to: <ul><li>Integrate Bombora's Company Surge Intent data to identify accounts actively researching your products or services.</li><li>Prioritize in-market accounts to create precise segments and execute hyper-targeted ABM campaigns, ensuring your marketing efforts focus on those account most likely to convert.</li><li>Leverage intent-driven strategies to optimize ad spend, boost engagement, and maximize ROI.</li></ul> For more information, read the guide on [connecting your [!DNL Bombora] account to Experience Platform](../../sources/tutorials/ui/create/data-partners/bombora.md). |
+| [!DNL Demandbase Intent] | The [!DNL Demandbase Intent]¸ source is now availale in the sources catalog. Use this source to: <ul><li>Integrate Demandbase's Account Intent data to identify high-interest accounts based on real-time engagements.</li><li>By prioritizing the strongest intent signals, you can create precise segments and deliver hyper-targeted campaigns to ensure that your marketing efforts focus on accounts most likely to convert.</li><li>Activate intent-driven strategies to enable optimization of ad spend, increased engagement, and higher ROI.</li></ul> For more information, read the guide on [connecting your [!DNL Demandbase] account to Experience Platform](../../sources/tutorials/ui/create/data-partners/demandbase.md). |
 
 {style="table-layout:auto"}
 
