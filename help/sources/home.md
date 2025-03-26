@@ -138,10 +138,12 @@ Experience Platform provides support for ingesting data from a third-party datab
 
 ### Data & Identity Partners {#data-partner}
 
-Experience Platform provides support for ingesting data from a third-party database. See the following related documents for more information on specific source connectors:
+Experience Platform provides support for ingesting data from a data and identity partner. See the following related documents for more information on specific source connectors:
 
 - [[!DNL Acxiom Data Ingestion]](connectors/data-partners/acxiom-data-ingestion.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Acxiom Prospecting Data Import]](connectors/data-partners/acxiom-prospecting-data-import.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Bombora Intent]](connectors/data-partners/bombora.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Demandbase Intent]](connectors/data-partners/demandbase.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md) [!BADGE Batch]{type=Informative}
 
 ### eCommerce {#ecommerce}

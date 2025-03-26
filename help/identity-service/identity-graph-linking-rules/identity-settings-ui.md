@@ -7,9 +7,7 @@ exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
 
 >[!AVAILABILITY]
 >
->* Identity graph linking rules are currently in Limited Availability. Contact your Adobe account team for information on how to access the feature in development sandboxes.
->
->* Your account must have the **View Identity Graph** permission in order to access identity settings in the UI. For more information, read the [guide on permissions in attribute-based access control](../../access-control/abac/ui/permissions.md).
+>Identity graph linking rules are currently in Limited Availability. Contact your Adobe account team for information on how to access the feature in development sandboxes.
 
 Identity settings is a feature in the Adobe Experience Platform Identity Service UI that you can use to designate unique namespaces and configure namespace priority.
 
@@ -25,6 +23,15 @@ Read the following documents before you start working with identity settings:
 * [Examples of graph configurations](./example-configurations.md)
 * [Namespace priority](./namespace-priority.md)
 * [Graph simulation](./graph-simulation.md)
+
+### Set permissions {#set-permissions}
+
+Next, you must ensure that your account is provisioned with the following permissions:
+
+* **[!UICONTROL View Identity Settings]**: Apply this permission to be able to view unique namespaces and namespace priority in the identity namespace browse page.
+* **[!UICONTROL Edit Identity Settings]**: Apply this permission to be able to edit and save your identity settings.
+
+Contact your administrator if you do not have these permissions. For more information , read the [permissions guide](../../access-control/abac/ui/permissions.md).
 
 ## Configure your identity settings
 
