@@ -91,7 +91,7 @@ Each individual dataflow run shows the following details:
 
   >[!IMPORTANT]
   >
-  > Starting with March 2025, Adobe is rolling out an update to increase reporting accuracy for streaming destinations. This enhancement ensures a better alignment between the Experience Platform and the destination platforms reporting.
+  > Starting with March 2025, Adobe is rolling out an update to increase reporting accuracy for streaming destinations. This enhancement ensures a better alignment between the reporting in Experience Platform and the destination platforms.
   >
   > Before this update, **[!UICONTROL Identities failed]** included all activation retries. After this update, only the last activation retry is included in the total count.
   > 
