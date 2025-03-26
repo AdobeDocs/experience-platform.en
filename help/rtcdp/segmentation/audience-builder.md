@@ -3,8 +3,8 @@ title: Audience Builder in Real-Time Customer Data Platform
 description: Learn how to use the Audience Builder in Real-Time Customer Data Platform to create audiences.
 feature: Get Started, Audiences
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
 ---
-
 # Audience Builder in Real-Time Customer Data Platform
 
 Built on top of Adobe Experience Platform, [!DNL Adobe Real-Time Customer Data Platform] is able to make use of the full Audience Builder capabilities that are a part of [!DNL Experience Platform]. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties. 
