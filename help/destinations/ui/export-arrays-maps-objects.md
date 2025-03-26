@@ -69,7 +69,7 @@ In addition to arrays, you can also export maps and objects from Experience Plat
 
 >[!NOTE]
 >
->For enterprise and edge personalization destinatios, export support for map-type fields is available without the need to select an **[!UICONTROL Export arrays, maps, objects]** toggle on. This toggle is not available or required when connecting to these types of destinations.
+>For enterprise and edge personalization destinations, export support for map-type fields is available without the need to select an **[!UICONTROL Export arrays, maps, objects]** toggle on. This toggle is not available or required when connecting to these types of destinations.
 
 ## Export arrays, maps, objects toggle {#export-arrays-maps-objects-toggle}
 
