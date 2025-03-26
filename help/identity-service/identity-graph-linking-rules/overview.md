@@ -3,7 +3,12 @@ title: Identity Graph Linking Rules
 description: Learn about identity graph linking rules in Identity Service.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
 ---
-# Identity graph linking rules overview
+# Identity graph linking rules overview {#identity-graph-linking-rules-overview}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_linkingrules_overview"
+>title="Identity graph linking rules"
+>abstract="To prevent these unwanted merges, you can use configurations provided through identity graph linking rules and allow for accurate personalization for your users."
 
 >[!AVAILABILITY]
 >
