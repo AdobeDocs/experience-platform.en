@@ -152,15 +152,6 @@ To navigate to the license usage dashboard within the Platform UI, select **[!UI
 >
 >The license usage dashboard is not enabled by default. Users must be granted "View License Usage Dashboard" permission to view the dashboard. For steps on granting access permissions, refer to the [dashboard permissions guide](../permissions.md).
 
-<!-- OLD:
-To navigate to the license usage dashboard within the Platform UI, select **[!UICONTROL License usage]** in the left rail. The [!UICONTROL Overview] tab opens, displaying a list of available products.
-
->[!NOTE]
->
->The license usage dashboard is not enabled by default. Users must be granted "View License Usage Dashboard" permission to be able to view the dashboard. For steps on granting access permissions for viewing the license usage dashboard, refer to the [dashboard permissions guide](../permissions.md).
-
-![The License usage dashboard Metrics tab, with License usage highlighted in the left navigation sidebar.](../images/license-usage/dashboard-overview.png) -->
-
 ## [!UICONTROL Metrics] tab {#metrics-tab}
 
 The **[!UICONTROL Metrics]** tab provides a centralized view of all license usage metrics across your organization. Because most metrics are shared across products, there is no separate per-product breakdown for these metrics.
