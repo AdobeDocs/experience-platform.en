@@ -1,6 +1,6 @@
 ---
 title: Bombora connection
-description: 
+description: Activate profiles for your Bombora campaigns for audience targeting, personalization, and suppression, based on account audiences.
 badgeB2B: label="B2B Edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="B2P Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 ---
