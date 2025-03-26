@@ -230,6 +230,7 @@ role: Developer
   - [Delete dataflows](tutorials/api/delete-dataflows.md)
   - [Ingest encrypted data](tutorials/api/encrypt-data.md)
   - [Save a dataflow as a draft](tutorials/api/draft.md)
+  - [Apply access labels to a dataflow](tutorials/api/labels.md)
 - UI tutorials {#ui-tutorials}
   - Create a source connection {#create}
     - Adobe applications {#adobe-applications}
@@ -355,6 +356,7 @@ role: Developer
   - [Delete dataflows](tutorials/ui/delete.md)
   - [Subscribe to sources alerts](tutorials/ui/alerts.md)
   - [Save a dataflow as a draft](tutorials/ui/draft.md)
+  - [Apply access labels to a dataflow](tutorials/ui/labels.md)
 - Self-Serve Sources (Batch SDK) {#sdk}
   - [Overview](sources-sdk/overview.md)
   - Configure your connection specification {#config}

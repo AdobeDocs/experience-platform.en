@@ -15,3 +15,5 @@ Discover a practical framework to connect your business goals with real customer
 - Foster collaboration across teams to deliver effective use case outcomes.
 - Apply a maturity framework to evolve use cases for greater business impact.
 - Use Adobe Experience Platform to accelerate value realization.
+
+Download this [PDF resource](../assets/summit/20250110-summit-session-s651-leave-behind.pdf) to explore a structured approach for defining, assessing, and evolving customer experience use cases. Learn how to align business objectives with measurable impact, leverage data for personalization, and activate use cases effectively within Adobe Experience Platform.
