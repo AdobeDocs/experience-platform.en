@@ -19,7 +19,7 @@ Read the following for use case examples that you can apply to the [!DNL Bombora
 
 As a B2B marketer, you can create an account list in Real-Time CDP, identify companies that show high intent for your products, then activate this list in [!DNL Bombora], which integrates directly with DSPs, allowing you to run targeted programmatic ad campaigns using [!DNL Bombora's] data. This ensures that your ad spend is focused on companies most likely to convert.
 
-### Account-Based Marketiting (ABM) Capabilities
+### Account-Based Marketing (ABM) Capabilities
 
 As a B2B marketer, you can build an account list based on first and third-party intent signals. You can then activate this list in [!DNL Bombora], where ABM capabilities allow you to target employees at these accounts specifically, ensuring your ads reach decision-makers rather than a broad audience.
 
