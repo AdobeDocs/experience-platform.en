@@ -128,7 +128,7 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 
 You can view important information about your organization's license usage through the Adobe Experience Platform [!UICONTROL License usage] dashboard. The information displayed here is captured during a daily snapshot of your Platform instance. 
 
-License usage reports provide a high degree of granularity over your license usage metrics. The dashboard provides usage metrics for each purchased product (and associated add-ons), the consolidated usage of metrics in all production or development sandboxes, and the usage metric from a specific sandbox. The following Experience Platform applications can be tracked with usage metrics: Real-Time Customer Data Platform, Adobe Journey Optimizer, and Customer Journey Analytics.
+License usage reports provide a high degree of granularity. Most metrics are shared across multiple products and reflect aggregated usage across all products that use them, not per-product totals. The dashboard provides consolidated usage of these metrics in all production or development sandboxes, and the usage metric from a specific sandbox. The following Experience Platform applications can be tracked with usage metrics: Real-Time Customer Data Platform, Adobe Journey Optimizer, and Customer Journey Analytics.
 
 This guide outlines how to access and work with the license usage dashboard in the UI and provides more information regarding the visualizations displayed in the dashboard.
 
@@ -163,7 +163,7 @@ To navigate to the license usage dashboard within the Platform UI, select **[!UI
 
 ## [!UICONTROL Metrics] tab {#metrics-tab}
 
-The **[!UICONTROL Metrics]** tab provides a centralized view of all license usage metrics across your organization. This layout eliminates the need to drill down into individual products to find usage data.
+The **[!UICONTROL Metrics]** tab provides a centralized view of all license usage metrics across your organization. Because most metrics are shared across products, there is no separate per-product breakdown for these metrics.
 
 The metrics table includes the following columns:
 
@@ -181,7 +181,6 @@ Use the **[!UICONTROL Production]** or **[!UICONTROL Development]** sandbox togg
 >
 >Consumption reporting is cumulative by sandbox type. Selecting [!UICONTROL Production] or [!UICONTROL Development] shows combined usage across all sandboxes of that type.
 
-<!-- image needed: -->
 ![The License usage dashboard Metrics tab displaying a list of metrics, license amounts, and usage data.](../images/license-usage/metrics-tab.png)
 
 >[!WARNING]
@@ -206,7 +205,6 @@ This visualization allows you to track trends, understand how each sandbox contr
 
 Each chart includes dropdown menus to filter the data. Use the date range dropdown to adjust the lookback period (default: last 30 days) or use the sandbox dropdown to view usage for a specific Production or Development sandbox.
 
-<!-- Add screenshot -->
 ![The Addressable audience metric detail view with historical usage graph, sandbox table, and export button.](../images/license-usage/metric-details-view.png)
 
 You can also select **[!UICONTROL Custom date]** to choose the time period that is shown.
@@ -215,10 +213,7 @@ You can also select **[!UICONTROL Custom date]** to choose the time period that 
 
 ### CSV export {#export-metric-usage-data}
 
-You can export historical usage for the selected metric and sandbox as a CSV file directly from the metric detail view. Use the export function to analyze trends offline or share data with other teams.
-
-<!-- Add screenshot below -->
-![The export dropdown for metric usage in a selected sandbox.](../images/license-usage/export-usage.png)
+You can export historical usage for the selected metric and sandbox as a CSV file directly from the metric detail view. Select **[!UICONTROL Export]** icon to analyze trends offline or share data with other teams.
 
 ## [!UICONTROL Products] tab {#products-tab}
 
@@ -240,7 +235,6 @@ The **[!UICONTROL Products]** tab presents license usage data grouped by purchas
 >
 >The [!UICONTROL License Amount] for add-ons is included in the total license amount of the core product. Add-ons are not tracked separately but enhance the capabilities of their associated products. For example, if you buy one pack of five sandboxes as an add-on, the amount is added to that of the base product. The add-ons table shows a [!UICONTROL License Amount] specific to the add-on, but the actual usage is tracked through the base product.
 
-<!-- Add screenshot below -->
 ![The License usage dashboard Products tab with tables for Core products and Add-ons.](../images/license-usage/products-tab.png)
 
 ### Predicted usage {#predicted-usage}
@@ -265,17 +259,13 @@ Proactively manage and optimize your licensing resources with accurate, up-to-da
 >
 >Predictions are refreshed on a weekly basis every Friday. The date of refresh is included in an info icon (![This info icon.](../images/license-usage/info-icon.png)) above the column title.
 
-To see a summary of a product's entitlement usage, select a product from the [!UICONTROL Core products] table.
+View a summary of a product's entitlement usage from the [!UICONTROL Product] tab under the [!UICONTROL Core products] table.
 
-![The [!UICONTROL License usage] [!UICONTROL Overview] with a product and the predicted usage column highlighted.](../images/license-usage/product-predicted-usage.png)
-
-The summary tab appears. You can use the granular predictions available on the [!UICONTROL Summary] and [!UICONTROL Details] tabs to ensure informed decision-making for efficient license use.
+![The [!UICONTROL License usage] [!UICONTROL Product] tab with a product and the predicted usage column highlighted.](../images/license-usage/product-predicted-usage.png)
 
 >[!NOTE]
 >
 >Please note that license usage predictions are approximations based on past usage. You are responsible for understanding your organization's actual usage and ensuring that usage does not go beyond the scope of your organization's license with Adobe.
-
-![The summary view of a Platform Product with the predicted usage column highlighted.](../images/license-usage/summary-predicted-usage.png)
 
 The percentage of predicted usage is determined as follows:
 
@@ -295,14 +285,6 @@ The predicted usage feature supports the following metrics:
 - [!UICONTROL Customer Journey Audience number of rows]
 - [!UICONTROL Engageable profiles]
 - [!UICONTROL Total Data Volume]
-
-<!-- OLD:
-![The summary view of a Platform Product that displays all available metrics for that product.](../images/license-usage/summary-tab.png)
-![The summary view of a Platform Product with Production sandboxes and Development sandboxes highlighted.](../images/license-usage/summary-tab-sandboxes.png)
-![The Details tab of the License usage dashboard.](../images/license-usage/details-tab.png)
-![The visualization of a metric.](../images/license-usage/visualization.png)
-
-![The visualization dialog with the date range dropdown highlighted.](../images/license-usage/date-range.png) -->
 
 ## Available metrics {#available-metrics}
 
