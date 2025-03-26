@@ -146,36 +146,102 @@ The data in this dashboard is displayed exactly as it appears at the specific po
 
 ## Exploring the license usage dashboard {#explore}
 
+To navigate to the license usage dashboard within the Platform UI, select **[!UICONTROL License usage]** in the left rail. The dashboard contains two tabs: **[!UICONTROL Metrics]** and **[!UICONTROL Products]**.
+
+>[!NOTE]
+>
+>The license usage dashboard is not enabled by default. Users must be granted "View License Usage Dashboard" permission to view the dashboard. For steps on granting access permissions, refer to the [dashboard permissions guide](../permissions.md).
+
+<!-- OLD:
 To navigate to the license usage dashboard within the Platform UI, select **[!UICONTROL License usage]** in the left rail. The [!UICONTROL Overview] tab opens, displaying a list of available products.
 
 >[!NOTE]
 >
 >The license usage dashboard is not enabled by default. Users must be granted "View License Usage Dashboard" permission to be able to view the dashboard. For steps on granting access permissions for viewing the license usage dashboard, refer to the [dashboard permissions guide](../permissions.md).
 
-![The License usage dashboard Overview tab, with License usage highlighted in the left navigation sidebar.](../images/license-usage/dashboard-overview.png)
+![The License usage dashboard Metrics tab, with License usage highlighted in the left navigation sidebar.](../images/license-usage/dashboard-overview.png) -->
 
-## [!UICONTROL Overview] tab {#overview-tab}
+## [!UICONTROL Metrics] tab {#metrics-tab}
 
-The [!UICONTROL License Usage] dashboard displays two separate tables: **Core products** and **Add-ons**.
+The **[!UICONTROL Metrics]** tab provides a centralized view of all license usage metrics across your organization. This layout eliminates the need to drill down into individual products to find usage data.
 
-- **[!UICONTROL Core products] table**: This table lists the main Adobe Experience Platform products licensed by your organization. Each core product has its own metrics, usage tracking, and drill-through views at the sandbox level. These core products provide the key metrics for tracking, and any add-ons are included in these metrics.
+The metrics table includes the following columns:
 
-- **[!UICONTROL Add-ons] table**: This table lists additional products whose license amounts are combined with the metrics supported by the core products. Add-ons do not have separate metrics but enhance the usage tracking of the core products they are associated with.
+| Column name  | Description |
+|---|---|
+| **[!UICONTROL Metric Name]**  | The name of the license usage metric. Each entry includes an info icon (`ⓘ`) that displays a description and list of associated products. |
+| **[!UICONTROL Licensed]**  | The number of units your organization is entitled to use, as defined in your contract. This is the same value as **License Amount** in the Products tab. |
+| **[!UICONTROL Measured]**  | The amount of the metric currently used by your organization. |
+| **[!UICONTROL Usage %]**  | The percentage of your licensed value currently in use. |
+| **[!UICONTROL Predicted Usage %]**  | The forecasted range of metric usage over the next 6 weeks. |
+
+Use the **[!UICONTROL Production]** or **[!UICONTROL Development]** sandbox toggle to filter the metrics displayed by sandboxes.
+
+>[!NOTE]
+>
+>Consumption reporting is cumulative by sandbox type. Selecting [!UICONTROL Production] or [!UICONTROL Development] shows combined usage across all sandboxes of that type.
+
+<!-- image needed: -->
+![The License usage dashboard Metrics tab displaying a list of metrics, license amounts, and usage data.](../images/license-usage/metrics-tab.png)
+
+>[!WARNING]
+>
+>Permission to view the license usage dashboard must be specified at a sandbox level. Add permissions to each individual sandbox to view them within the dashboard. This limitation will be addressed in a future release. In the meantime, the following workaround is available:
+>
+>1. Create a product profile in the Adobe Admin Console.
+>2. Under Permission in the Sandbox category, add all sandboxes you wish to view in the license usage dashboard.
+>3. Under the User Dashboard Permission category, add "View License Usage Dashboard" permission.
+
+### View metric details {#view-metric-details}
+
+To view usage details for a specific metric, select a metric name in the list. A detailed view of the metric appears, including:
+
+- A historical line graph showing usage over time
+- A comparison of licensed and measured values
+- Usage by individual sandbox
+- A sandbox selector to filter data
+- An export option for CSV download
+
+This visualization allows you to track trends, understand how each sandbox contributes to overall usage, and export the data for offline analysis. 
+
+Each chart includes dropdown menus to filter the data. Use the date range dropdown to adjust the lookback period (default: last 30 days) or use the sandbox dropdown to view usage for a specific Production or Development sandbox.
+
+<!-- Add screenshot -->
+![The Addressable audience metric detail view with historical usage graph, sandbox table, and export button.](../images/license-usage/metric-details-view.png)
+
+You can also select **[!UICONTROL Custom date]** to choose the time period that is shown.
+
+![The License usage dashboard Overview tab with the custom date range options highlighted.](../images/license-usage/custom-date-range.png)
+
+### CSV export {#export-metric-usage-data}
+
+You can export historical usage for the selected metric and sandbox as a CSV file directly from the metric detail view. Use the export function to analyze trends offline or share data with other teams.
+
+<!-- Add screenshot below -->
+![The export dropdown for metric usage in a selected sandbox.](../images/license-usage/export-usage.png)
+
+## [!UICONTROL Products] tab {#products-tab}
+
+The **[!UICONTROL Products]** tab presents license usage data grouped by purchased products and any associated add-ons. The [!UICONTROL Products] tab contains two tables:
+
+- **[!UICONTROL Core products] table**: This table lists the main Adobe Experience Platform products licensed by your organization. Each product lists its primary metric, usage tracking, and predicted usage.
+- **[!UICONTROL Add-ons] table**: Lists supplementary items whose license amounts contribute to core product metrics. Add-ons do not have separate metrics but enhance the usage tracking of the core products they are associated with.
 
 | Column name  | Description |
 |---|---|
 | **[!UICONTROL Product]**  | The Adobe solution licensed by your organization. |
 | **[!UICONTROL Primary Metric]**  | The primary metric used for tracking within that product. |
-| **[!UICONTROL License Amount]**  | The contracted value for the maximum amount of the Primary Metric as agreed in your product license agreement. |
-| **[!UICONTROL Usage]**  | The amount of your primary metric used. This value provides the total usage of that metric across all sandboxes, either production or development. |
+| **[!UICONTROL License Amount]**  | The contracted value for the maximum amount of the Primary Metric. |
+| **[!UICONTROL Usage]**  | The amount of your primary metric used. |
 | **[!UICONTROL Usage %]**  | The percentage of your primary metric used according to your license amount. |
-| **[!UICONTROL Prediction Usage]**  | The predicted usage percentage of your primary metric according to your license amount. |
+| **[!UICONTROL Predicted Usage]**  | The predicted usage percentage of your primary metric. |
 
 >[!NOTE]
 >
->License amounts for add-ons are included in the [!UICONTROL License Amount] of the core products. For example, if you buy one pack of five sandboxes as an add-on, the amount is added to that of the base product. The add-ons table shows a [!UICONTROL License Amount] specific to the add-on, but the actual usage is tracked through the base product.
+>The [!UICONTROL License Amount] for add-ons is included in the total license amount of the core product. Add-ons are not tracked separately but enhance the capabilities of their associated products. For example, if you buy one pack of five sandboxes as an add-on, the amount is added to that of the base product. The add-ons table shows a [!UICONTROL License Amount] specific to the add-on, but the actual usage is tracked through the base product.
 
-The tables indicate the primary metric for each product, as each product can track numerous metrics.
+<!-- Add screenshot below -->
+![The License usage dashboard Products tab with tables for Core products and Add-ons.](../images/license-usage/products-tab.png)
 
 ### Predicted usage {#predicted-usage}
 
@@ -230,60 +296,13 @@ The predicted usage feature supports the following metrics:
 - [!UICONTROL Engageable profiles]
 - [!UICONTROL Total Data Volume]
 
-## [!UICONTROL Summary] tab {#summary-tab}
-
-To view more metrics and detailed insights on your product license usage, select a product name from the list. The [!UICONTROL Summary] view for that product appears. All available metrics are displayed on the [!UICONTROL Summary] tab. The metrics available depend on the licensed product. This view provides **a consolidated view of all metrics across all production or development sandboxes**. The same level of analysis is provided for both production and development sandboxes.
-
+<!-- OLD:
 ![The summary view of a Platform Product that displays all available metrics for that product.](../images/license-usage/summary-tab.png)
-
-On the summary tab, the table includes the [!UICONTROL Metric] column. These human-readable descriptions indicate all metrics used for that type of sandbox.
-
-### Select a sandbox {#select-sandbox}
-
-To change the view between production and development sandbox types, select either [!UICONTROL Production sandboxes] or [!UICONTROL Development sandboxes]. The selected sandbox type is indicated by the radio button next to the sandbox name.
-
-Consumption reporting for sandboxes is cumulative for all sandboxes of the same type. In other words, selecting [!UICONTROL Production] or [!UICONTROL Development] provides consumption reports for all production or development sandboxes, respectively.
-
 ![The summary view of a Platform Product with Production sandboxes and Development sandboxes highlighted.](../images/license-usage/summary-tab-sandboxes.png)
-
->[!WARNING]
->
->Permission to view the license usage dashboard must be specified at a sandbox level. Add permissions to each individual sandbox to view them within the dashboard. This limitation will be addressed in a future release. In the meantime, the following workaround is available:
->
->1. Create a product profile in the Adobe Admin Console.
->2. Under Permission in the Sandbox category, add all sandboxes you wish to view in the license usage dashboard.
->3. Under the User Dashboard Permission category, add "View License Usage Dashboard" permission.
-
-## [!UICONTROL Details] tab {#details-tab}
-
-To see **a particular usage metric from a specific sandbox**, navigate to the [!UICONTROL Details] tab. The [!UICONTROL Details] tab shows all the available sandboxes within either the Production or Development sandboxes.
-
 ![The Details tab of the License usage dashboard.](../images/license-usage/details-tab.png)
-
-From this view, you can select ![The inspect icon.](/help/images/icons/inspect.png) next to a sandbox name to view the visualization for that metric. A dialog opens with a visualization for that metric.
-
-### Visualizations {#visualizations}
-
-Each visualization widget includes the following aspects:
-
-- A line graph tracking the metric change over time
-- A key for the line graph
-- The sandbox name
-- A dropdown menu to adjust the time period for the line graph
-
-The line graphs compare usage numbers for your organization to the total available with your organization's licensing and provide a percentage of total usage.
-
 ![The visualization of a metric.](../images/license-usage/visualization.png)
 
-The lookback period of analysis can be adjusted from the dropdown menu. The default value of the last 30 days
-
-To select a date range, you can use the date range dropdown to select the time period to display in the dashboard. There are multiple options available, including the default value of the last 30 days.
-
-![The visualization dialog with the date range dropdown highlighted.](../images/license-usage/date-range.png)
-
-You can also select **[!UICONTROL Custom date]** to choose the time period that is shown.
-
-![The License usage dashboard Overview tab with the custom date range options highlighted.](../images/license-usage/custom-date-range.png)
+![The visualization dialog with the date range dropdown highlighted.](../images/license-usage/date-range.png) -->
 
 ## Available metrics {#available-metrics}
 
