@@ -180,15 +180,15 @@ To configure your retention period, select the ellipsis next to the dataset foll
 
 ![The Browse tab of the Datasets workspace with the ellipsis and Set data retention policy option highlighted.](../images/datasets/user-guide/set-data-retention-policy-dropdown.png)
 
-The [!UICONTROL Set dataset retention] dialog appears. The dialog displays sandbox-level license usage metrics, dataset-level details, and current data retention settings. These metrics show your usage compared to your entitlements and help you assess dataset-specific storage and retention configurations. The metrics include dataset name, type, Profile enablement status, and data lake usage.
+The [!UICONTROL Set dataset retention] dialog appears. The dialog displays sandbox-level license usage metrics, dataset-level details, and current data retention settings. These metrics show your usage compared to your entitlements and help you assess dataset-specific storage and retention configurations. The metrics include dataset name, type, Profile enablement status, and data lake and Profile store usage.
 
 >[!NOTE]
 >
 >Sandbox-level licensed data lake storage metrics are still in development and may not appear. A full breakdown of your license usage metrics can be found on the License Usage dashboard. See the documentation for descriptions of these metrics.
-
+<!-- replace this screenshot with a dataset that enabled unified profile so user can see the Profile TTL settings -->
 ![The Set dataset retention dialog.](../images/datasets/user-guide/set-data-retention-dialog.png)
 
-When you open the data retention settings, you'll see recommended values in the dialog. By default, the data lake retention period is set to one month. To adjust it, change the number and select a time unit (days, months, or years) from the dropdown menu. You can configure separate retention settings for the data lake and Profile Service.
+Configure your preferred retention period in the data retention settings dialog. Enter a number and select a time unit (days, months, or years) from the dropdown menu. You can configure separate retention settings for the data lake and Profile Service.
 
 >[!NOTE] 
 > 
@@ -212,6 +212,10 @@ You can use the visual forecast to evaluate the impact of different retention pe
 
 When you are satisfied with your configuration, select **[!UICONTROL Save]** to confirm your settings.
 
+>[!IMPORTANT]
+>
+>Once data retention rules are applied, any data older than the number of days defined by the expiration value is permanently deleted and cannot be recovered.
+
 After configuring your retention settings, use the Monitoring UI to confirm that your changes were executed by the system. The Monitoring UI provides a centralized view of data retention activity across all datasets. From there, you can track job execution, review how much data was deleted, and ensure that your retention policies are functioning as expected. This visibility supports governance, compliance, and efficient data lifecycle management.
 
 To learn how to use the monitoring dashboard to track source dataflows in the Experience Platform UI, see the [Monitor dataflows for sources in the UI](../../dataflows/ui/monitor-sources.md) documentation.
@@ -224,7 +228,7 @@ For more information on the rules that define dataset expirations date ranges an
 
 Four new columns are available to beta users to provide greater visibility into your data management: **[!UICONTROL Data Lake Storage]**, **[!UICONTROL Data Lake Retention]**, **[!UICONTROL Profile Storage]**, and **[!UICONTROL Profile Retention]**. These metrics show how much storage your data consumes and its retention period in both data lake and Profile Service.
 
-This increased visibility empowers you to make informed decisions and manage storage costs. It also helps you streamline governance and better understand your data lifecycle and entitlements.
+This increased visibility empowers you to make informed decisions and manage storage costs more effectively. Sort datasets by storage size to identify the largest ones in your current sandbox. These insights also support better governance and help you understand your data lifecycle and entitlement usage.
 
 ![The Browse tab of the Datasets workspace with the four new storage and retention columns highlighted.](../images/datasets/user-guide/storage-and-retention-columns.png)
 
