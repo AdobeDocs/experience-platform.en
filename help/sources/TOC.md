@@ -90,6 +90,7 @@ role: Developer
     - [Acxiom Data Ingestion](connectors/data-partners/acxiom-data-ingestion.md)
     - [Acxiom Prospecting Data Import](connectors/data-partners/acxiom-prospecting-data-import.md)
     - [Bombora Intent](connectors/data-partners/bombora.md)
+    - [Demandbase Intent](connectors/data-partners/demandbase.md)
     - [Merkury Enterprise Identity Resolution](connectors/data-partners/merkury.md)
   - eCommerce {#ecommerce}
     - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
