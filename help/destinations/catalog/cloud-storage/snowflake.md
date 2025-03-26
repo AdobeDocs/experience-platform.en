@@ -23,10 +23,6 @@ Before configuring your Snowflake connection, make sure you meet the following p
 * You have access to a [!DNL Snowflake] account.
 * Your Snowflake account is subscribed to private listings. You or someone in your company who has account administrator privileges on Snowflake can configure this.
 
-## Supported identities {#supported-identities}
-
-[!DNL Snowflake] does not support the activation of [identities](/help/identity-service/features/namespaces.md).
-
 ## Supported audiences {#supported-audiences}
 
 This section describes which types of audiences you can export to this destination.
