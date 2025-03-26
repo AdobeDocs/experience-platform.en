@@ -222,16 +222,6 @@ Attribute source data is not automatically hashed. When your source field contai
 
 After connecting to the destination and establishing a destination dataflow, you can use the [monitoring functionality](/help/dataflows/ui/monitor-destinations.md) in Real-Time CDP to get extensive information about the profile records activated to your destination in each dataflow run. 
 
->[!IMPORTANT]
->
-> Starting with October 2024, Adobe is rolling out an update to increase reporting accuracy for streaming destinations. This enhancement ensures a better alignment between the Experience Platform and the destination platforms reporting.
->
-> Before this update, **[!UICONTROL Identities failed]** included all activation retries. After this update, only the last activation retry is included in the total count.
->
-> This enhancement currently applies to the [Google Customer Match destination](google-customer-match.md) but will be gradually rolled out to other Experience Platform streaming destinations.
-> Following this enhancement, users of this destination may see an expected drop in their  **[!UICONTROL Identities failed]** count.
-
-
 ## Verify that audience activation was successful {#verify-activation}
 
 After completing the activation flow, switch to your **[!UICONTROL Google Ads]** account. The activated audiences are shown in your Google account as customer lists. Depending on your audience size, some audiences do not populate unless there are over 100 active users to serve.
