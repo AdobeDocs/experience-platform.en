@@ -50,15 +50,11 @@ This section describes which type of audiences you can export to this destinatio
 
 ## Supported identities {#supported-identities}
 
-Bombora uses websites/domains as its source of truth for an account.
+Bombora requires the mapping of the target identity described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
-During the mapping step, you must map a source field where you ingest a website or domain address. 
-
-[!DNL Bombora] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
-
-|Source Identity|Description|Considerations|
-|---|---|---|
-|`accountOrganization.domain` | Website or domain address | Only domains are required by this destination in order to create an account list. |
+|Target Identity|Description|
+|---|---|
+| `primaryId` | Bombora requires the mapping of this target identity in order for the integration to work correctly. You can map any source field to this identity. This mapping is mandatory but does not export data to Bombora. |
 
 {style="table-layout:auto"}
 
@@ -92,7 +88,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-![Add bearer token](/help/destinations/assets/catalog/advertising/demandbase/add-bearer-token.png)
+![Add bearer token](../../assets/catalog/advertising/bombora/add-bearer-token.png)
 
 * **[!UICONTROL Client ID]**: Enter your [!DNL Bombora] client ID.
 * **[!UICONTROL Client secret]**: Enter your [!DNL Bombora] client secret.
@@ -101,12 +97,12 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Add information about the destination connection](/help/destinations/assets/catalog/advertising/demandbase/name-and-description.png)
+![Add information about the destination connection](../..//assets/catalog/advertising/bombora/name-and-description.png)
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 
-Now you're ready to activate your audiences within Demandbase.
+Now you're ready to activate your audiences within Bombora.
 
 ## Activate audiences to this destination {#activate}
 
@@ -122,12 +118,16 @@ Read [Activate account audiences](/help/destinations/ui/activate-account-audienc
 The Bombora destination requires you to configure the following mappings for successful data activation. 
 
 
+
 |Source field | Target field | Description |
 |---------|----------|---------|
 | Any value | `Identity: primaryId` | This mapping is mandatory for Experience Platform to establish a connection to Bombora. This value does not get exported to Bombora, but is required for the destination configuration. You can select any attribute for the source field.|
 | `xdm: accountOrganization.domain` | `xdm: companyWebsiteDomain` | Bombora uses website or domain addresses to create an account list. |
 
+![Add mandatory mappings](../..//assets/catalog/advertising/bombora/mappings.png)
+
+
 ## Additional notes and important callouts {#additional-notes}
 
-* If an account audience with the same name was activated earlier to Demandbase, you cannot activate it again through a different dataflow to the Demandbase destination.
-* If you have exported audiences to Demandbase and the exports are successful in Experience Platform, yet not all of the data reaches Demandbase, you might have encountered API throttling on the Demandbase side. Reach out to them for clarification.
+If an account audience with the same name was activated earlier to Bombora, you will receive an error if you try to activate it again through a different dataflow to the Bombora destination.
+
