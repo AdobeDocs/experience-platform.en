@@ -25,7 +25,7 @@ For information on how to successfully make calls to Platform APIs, see the guid
 
 ### Gather required credentials
 
-Read the [[!DNL Google BigQuery] authentication guide](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials) for detailed steps on retrieving your [!DNL Google BigQuery] credentials.
+Read the [[!DNL Google BigQuery] authentication guide](../../../../connectors/databases/bigquery.md#prerequisites) for detailed steps on retrieving your [!DNL Google BigQuery] credentials.
 
 ## Connect [!DNL Google BigQuery] to Experience Platform on Azure {#azure}
 
@@ -196,7 +196,8 @@ curl -X POST \
           "specName": "Service Authentication",
           "params": {
                   "projectId": "{PROJECT_ID}",
-                  "keyFileContent": "{KEY_FILE_CONTENT}
+                  "keyFileContent": "{KEY_FILE_CONTENT},
+                  "datasetId": "{DATASET_ID}"
       },
       "connectionSpec": {
           "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
@@ -206,9 +207,10 @@ curl -X POST \
 ```
 
 | Property | Description |
-| --------- | ----------- |
+| --- | --- |
 | `auth.params.projectId` | The project ID of the default [!DNL Google BigQuery] project to query. against. |
 | `auth.params.keyFileContent` | The key file that is used to authenticate the service account. You must encode the key file content in [!DNL Base64]. |
+| `auth.params.datasetId` | The dataset ID that corresponds with your [!DNL Google BigQuery] source. This ID represents where the data tables are located. |
 
 +++
 

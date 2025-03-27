@@ -25,7 +25,7 @@ If you already have a valid [!DNL Google BigQuery] connection, you may skip the 
 
 ### Gather required credentials
 
-Read the [[!DNL Google BigQuery] authentication guide](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials) for detailed steps on gathering your required credentials.
+Read the [[!DNL Google BigQuery] authentication guide](../../../../connectors/databases/bigquery.md#prerequisites) for detailed steps on gathering your required credentials.
 
 ## Navigate the sources catalog {#navigate}
 
@@ -81,7 +81,11 @@ To use service authentication, select **[!UICONTROL Service Authentication]** an
 
 To create a new [!DNL Google BigQuery] account and connect to Experience Platform on AWS, ensure that you are in a VA6 sandbox and then provide the necessary credentials for authentication.
 
-![screenshot of aws connection interface here](../../../../images/tutorials/create/google-big-query/aws.png)
+* **Project ID**: The project ID that corresponds with your [!DNL Google BigQuery] account.
+* **Key file content**: The key file that is used to authenticate the service account. You can retrieve this value from the [[!DNL Google Cloud service accounts] dashboard](https://console.cloud.google.com). The key file content is in JSON format. You must encode this in [!DNL Base64] when authenticating to Experience Platform.
+* **Dataset ID**: The [!DNL Google BigQuery] dataset ID. This ID represents where your data tables are located and must be pre-created to enable support for large result sets.
+
+![The new account interface for an AWS connection.](../../../../images/tutorials/create/google-big-query/aws.png)
 
 ## Skip preview of sample data {#skip-preview-of-sample-data}
 
