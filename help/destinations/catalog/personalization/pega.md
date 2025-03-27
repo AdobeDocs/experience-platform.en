@@ -1,13 +1,13 @@
 ---
-title: Pega Customer Decision Hub connection
-description: Use the Pega Customer Decision Hub destination in Adobe Experience Platform to send profile attributes and audience membership data to Pega Customer Decision Hub for next-best-action decisioning.
+title: (V1) Pega CDH Realtime Audience connection
+description: Use the Pega Customer Decision Hub Realtime Audience destination in Adobe Experience Platform to send profile attributes and audience membership data to Pega Customer Decision Hub for next-best-action decisioning.
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
 ---
 # Pega Customer Decision Hub connection
 
 ## Overview {#overview}
 
-Use the [!DNL Pega Customer Decision Hub] destination in Adobe Experience Platform to send profile attributes and audience membership data to [!DNL Pega Customer Decision Hub] for next-best-action decisioning. 
+Use the [!DNL Pega Customer Decision Hub] Realtime Audience destination in Adobe Experience Platform to send profile attributes and audience membership data to [!DNL Pega Customer Decision Hub] for next-best-action decisioning. 
 
 Profile audience membership from Adobe Experience Platform, when loaded into [!DNL Pega Customer Decision Hub], can be used as predictor in adaptive models and help deliver the right contextual and behavioral data for next-best-action decisioning purposes.
 
@@ -31,9 +31,9 @@ A marketer wants to optimize the offers for customers who subscribed or unsubscr
 
 Before you can use this destination to export data out of Adobe Experience Platform, make sure you complete the following prerequisites in [!DNL Pega Customer Decision Hub]:
 
-* Configure the [Adobe Experience Platform Profile and Audience Membership integration Component](https://docs.pega.com/component/customer-decision-hub/adobe-experience-platform-profile-and-segment-membership-integration-component) in your [!DNL Pega Customer Decision Hub] instance.
-* Configure OAuth 2.0 [Client Registration using Client Credentials](https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration) grant type in your [!DNL Pega Customer Decision Hub] instance.
-* Configure [real-time run data flow](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) for  Adobe Audience Membership data flow in your [!DNL Pega Customer Decision Hub] instance.
+* Configure the [Adobe Experience Platform Profile and Audience Membership integration Component](https://docs.pega.com/bundle/components/page/customer-decision-hub/components/adobe-membership-component.html) in your [!DNL Pega Customer Decision Hub] instance.
+* Configure OAuth 2.0 [Client Registration using Client Credentials](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html) grant type in your [!DNL Pega Customer Decision Hub] instance.
+* Configure [real-time run data flow](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html) for  Adobe Audience Membership data flow in your [!DNL Pega Customer Decision Hub] instance.
 
 ## Supported identities {#supported-identities}
 
@@ -82,7 +82,7 @@ To configure details for the destination, fill in the required fields and select
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Host Name]**: The Pega Customer Decision Hub Host Name to which the profile gets exported as json data.
+*  **[!UICONTROL Pega CDH Host Name]**: The Pega Customer Decision Hub Host Name to which the profile gets exported as json data.
 
 ## Activate audiences to this destination {#activate}
 
@@ -126,11 +126,11 @@ The customer audience membership data fields are added as predictors in Adaptive
 
 ## Additional resources {#additional-resources}
 
-See [Setting up an OAuth 2.0 client registration](https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration) in [!DNL Pega Customer Decision Hub].
+See [Setting up an OAuth 2.0 client registration](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html) in [!DNL Pega Customer Decision Hub].
 
-See [Creating a real-time run for data flows](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) in [!DNL Pega Customer Decision Hub].
+See [Creating a real-time run for data flows](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html) in [!DNL Pega Customer Decision Hub].
 
-See [Manage customer records in Customer Profile Designer](https://docs.pega.com/whats-new-pega-platform/manage-customer-records-customer-profile-designer-86).
+See [Manage customer records in Customer Profile Designer](https://docs.pega.com/bundle/customer-decision-hub/page/customer-decision-hub/implement/profile-designer-data-management.html) in [!DNL Pega Customer Decision Hub].
 
 ## Data usage and governance {#data-usage-governance}
 
