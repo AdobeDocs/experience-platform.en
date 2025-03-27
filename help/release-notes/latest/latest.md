@@ -10,6 +10,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 Updates to existing features and documentation in Adobe Experience Platform:
 
 - [Adobe Experience Platform release notes](#adobe-experience-platform-release-notes)
+
   - [Dashboards](#dashboards)
   - [Destinations](#destinations)
   - [Segmentation Service](#segmentation-service)
