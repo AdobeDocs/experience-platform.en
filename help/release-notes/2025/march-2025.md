@@ -1,6 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes March 2025
 description: The March 2025 release notes for Adobe Experience Platform.
+exl-id: 3da1c912-2581-4afa-bd21-0b8303531dcd
 ---
 # Adobe Experience Platform release notes 
 
