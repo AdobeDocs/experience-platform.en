@@ -18,6 +18,8 @@ Self-Serve Sources (Batch SDK) supports OAuth 2 refresh codes and basic authenti
 
 An OAuth 2 refresh code allows for secure access to an application by generating a temporary access token and a refresh token. The access token allows you to securely access your resources without having to provide other credentials, while the refresh token allows you to generate a new access token, once the access token expires.
 
++++View example of an OAuth 2 refresh code
+
 ```json
 {
   "name": "OAuth2 Refresh Code",
@@ -126,10 +128,13 @@ An OAuth 2 refresh code allows for secure access to an application by generating
 
 {style="table-layout:auto"}
 
++++
 
 ### Basic authentication
 
 Basic authentication is an authentication type that allows you to access your application by using a combination of your account username and your account password.
+
++++ View example of basic authentication
 
 ```json
 {
@@ -169,13 +174,109 @@ Basic authentication is an authentication type that allows you to access your ap
 | `authSpec.spec.properties` | Contains information on the credentials used for the authentication. |
 | `authSpec.spec.properties.username` | The account username associated with your application. |
 | `authSpec.spec.properties.password` | The account password associated with your application. |
-| `authSpec.spec.required` | Specifies the fields required as mandatory values to be inputted in Platform. | `username` |
+| `authSpec.spec.required` | Specifies the fields required as mandatory values to be inputted in Experience Platform. | `username` |
 
 {style="table-layout:auto"}
 
-## Example authentication specification
++++
 
-The following is an example of a completed authentication specification using a [[!DNL MailChimp Members]](../../tutorials/api/create/marketing-automation/mailchimp-members.md) source.
+### API key authentication {#api-key-authentication}
+
+API key authentication is a secure method for accessing APIs by providing an API key and other relevant authentication parameters in requests. Depending on your specific API information, you can send the API key as part of the request header, query parameters, or body.
+
+The following parameters are typically required when using API key authentication:
+
+| Parameter | Type | Required | Description |
+| --- | --- | --- | --- |
+| `host` | string | No | The resource URL. |
+| `authKey1` | string | Yes | The first authentication key required for API access. It is usually sent in the request header or query parameters. |
+| `authKey2` | string | Optional | A second authentication key. If required, this key os often used to further validate requests. |
+| `authKeyN` | string | Optional | An additional authentication variable that can be used as needed, but the API. |
+
+{style="table-layout:auto"}
+
++++View API key authentication
+
+```json
+{
+  "name": "API Key Authentication",
+  "type": "KeyBased",
+  "spec": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "description": "Define authentication parameters required for API access",
+    "properties": {
+      "host": {
+        "type": "string",
+        "description": "Enter resource URL host path"
+      },
+      "authKey1": {
+        "type": "string",
+        "format": "password",
+        "title": "Authentication Key 1",
+        "description": "Primary authentication key for accessing the API",
+        "restAttributes": {
+          "headerParamName": "X-Auth-Key1"
+        }
+      },
+      "authKey2": {
+        "type": "string",
+        "format": "password",
+        "title": "Authentication Key 2",
+        "description": "Secondary authentication key, if required",
+        "restAttributes": {
+          "headerParamName": "X-Auth-Key2"
+        }
+      },
+      ..
+      ..
+      "authKeyN": {
+        "type": "string",
+        "format": "password",
+        "title": "Additional Authentication Key",
+        "description": "Additional authentication keys as needed by the API",
+        "restAttributes": {
+          "headerParamName": "X-Auth-KeyN"
+        }
+      }
+    },
+    "required": [
+      "authKey1"
+    ]
+  }
+}
+```
+
++++
+
+### Authentication behavior
+
+You can use the `restAttributes` parameter to define how the API key should be included in the request. For instance, in the example below, the `headerParamName` attribute indicates that the `X-Auth-Key1` should be sent as a header.
+
+```json
+  "restAttributes": {
+      "headerParamName": "X-Auth-Key1"
+  }
+```
+
+Each authentication key (such as `authKey1`, `authKey2`, etc.) can be associated with `restAttributes`, to dictate how they are sent as requests. 
+
+If `authKey1` has `"headerParamName": "X-Auth-Key1"`. This means that the request header should include `X-Auth-Key:{YOUR_AUTH_KEY1}`. Additionally, key name and the `headerParamName` don't necessarily have to be the same. For example:
+
+* The `authKey1` can have `headerParamName: X-Custom-Auth-Key`. This means that the request header will use `X-Custom-Auth-Key` instead of `authKey1`.
+* Conversely, `authKey1` can have `headerParamName: authKey1`. This means that the request header name remains unchanged.
+
+**Example API format**
+
+```http
+GET /data?X-Auth-Key1={YOUR_AUTH_KEY1}&X-Auth-Key2={YOUR_AUTH_KEY2}
+```
+
+## Example authentication spec
+
+The following is an example of a completed authentication spec using a [[!DNL MailChimp Members]](../../tutorials/api/create/marketing-automation/mailchimp-members.md) source.
+
++++View example authentication spec
 
 ```json
   "authSpec": [
@@ -228,6 +329,8 @@ The following is an example of a completed authentication specification using a 
     }
   ],
 ```
+
++++
 
 ## Next steps
 

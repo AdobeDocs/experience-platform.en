@@ -43,7 +43,7 @@ role: Admin,User
         * [Export files on-demand to batch destinations using the Experience Platform UI](./ui/export-file-now.md)
         * [Export datasets using the Experience Platform UI](./ui/export-datasets.md)
         * [(Beta) Use the last qualification time XDM attribute in the new beta cloud storage destinations](./ui/activate-last-qualification-time.md)
-        * [Export arrays, maps, and objects to cloud storage destinations](/help/destinations/ui/export-arrays-maps-objects.md)
+        * [Export arrays, maps, and objects](/help/destinations/ui/export-arrays-maps-objects.md)
         * [Perform transformations on data exported to cloud storage destinations](/help/destinations/ui/data-transformations-calculated-fields.md)
     * [View destination details](./ui/destination-details-page.md)
     * [Update destination accounts](./ui/update-accounts.md)
@@ -134,6 +134,7 @@ role: Admin,User
         * [Data Landing Zone](./catalog/cloud-storage/data-landing-zone.md)
         * [Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
         * [SFTP connection](./catalog/cloud-storage/sftp.md)
+        * [Snowflake connection](./catalog/cloud-storage/snowflake.md)
         * [IP address allowlist for file-based cloud storage destinations](./catalog/cloud-storage/ip-address-allow-list.md)
     * Customer Relationship Management (CRM) destinations {#crm}
         * [Hubspot connection](./catalog/crm/hubspot.md)
