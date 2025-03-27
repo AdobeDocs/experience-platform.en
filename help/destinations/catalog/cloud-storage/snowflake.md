@@ -4,8 +4,8 @@ description: Export data to your Snowflake account using private listings.
 hide: yes
 hidefromtoc: yes
 badgeBeta: label="Beta" type="Informative"
+exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
 ---
-
 # Snowflake connection {#snowflake-destination}
 
 >[!IMPORTANT]
