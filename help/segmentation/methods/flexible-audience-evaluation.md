@@ -6,6 +6,10 @@ exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
 ---
 # Flexible audience evaluation guide
 
+>[!AVAILABILITY]
+>
+>Flexible audience evaluation is **only** available on instances of Experience Platform running on Microsoft Azure. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../landing/multi-cloud.md).
+
 Flexible audience evaluation lets you run a batch segmentation job on demand. With flexible audience evaluation, you can run ad-hoc campaign launches, just-in-time communications, or other time-sensitive activities.
 
 ## Guardrails {#guardrails}
