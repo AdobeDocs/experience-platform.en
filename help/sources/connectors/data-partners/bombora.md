@@ -34,9 +34,9 @@ Using native ad platforms, you can ensure your content reaches decision-makers i
 
 Read the following sections for prerequisite steps before connecting [!DNL Bombora] to Experience Platform.
 
-### IP address allow list
+### IP address allowlist
 
-A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
+A list of IP addresses must be added to an allowlist prior to working with source connectors. Failing to add your region-specific IP addresses to your allowlist may lead to errors or non-performance when using sources. See the [IP address allowlist](../../ip-address-allow-list.md) page for more information.
 
 ### Configure permissions on Experience Platform
 

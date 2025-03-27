@@ -15,6 +15,10 @@ This tutorial requires a working understanding of the following components of Ex
 * [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
+### Prerequisites
+
+Read the [[!DNL Bombora Intent] overview](../../../../connectors/data-partners/bombora.md) for information on how to retrieve your authentication credentials.
+
 ## Navigate the sources catalog
 
 In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the *[!UICONTROL Sources]* workspace. You can select the appropriate category in the *[!UICONTROL Categories]* panel. Alternatively, you can use the search bar to navigate to the specific source that you want to use.
