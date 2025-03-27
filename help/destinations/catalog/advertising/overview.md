@@ -23,6 +23,7 @@ To understand the difference between connections and extensions, see [Connection
 * [(Beta) Acxiom Audience Distribution](acxiom-audience-distribution.md)
 * [Adobe Advertising Cloud connection](adobe-advertising-cloud-connection.md)
 * [Amazon Ads connection](amazon-ads.md)
+* [Bombora connection](bombora.md)
 * [Criteo connection](criteo.md)
 * [Demandbase connection](demandbase.md)
 * [Demandbase People connection](demandbase-people.md)

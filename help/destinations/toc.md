@@ -72,6 +72,7 @@ role: Admin,User
         * [Awin Advertiser Conversion Tag extension](./catalog/advertising/awin-conversiontag.md)
         * [Awin Advertiser Mastertag extension](./catalog/advertising/awin-mastertag.md)
         * [Bing Ads Universal Event Tracking (UET) extension](./catalog/advertising/bing-ads.md)
+        * [Bombora connection](./catalog/advertising/bombora.md)
         * [Branch extension](./catalog/advertising/branch.md)
         * [Criteo connection](./catalog/advertising/criteo.md)
         * [Demandbase connection](./catalog/advertising/demandbase.md)
