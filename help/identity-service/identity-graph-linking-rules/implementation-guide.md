@@ -61,10 +61,9 @@ If you are using the [Adobe Analytics source connector](../../sources/tutorials/
 
 During your pre-implementation process, you must ensure that the authenticated events that your system will send to Experience Platform always contain a **single** person identifier, such as a CRMID.
 
-* (Recommended) Authenticated events with one person identifier.
-* (Not recommended) Authenticated events with two person identifiers.
-* (Not recommended) Authenticated events without any person identifiers.
-
+* (Recommended) Authenticated events with one unique person identifier.
+* (Not recommended) Authenticated events with two unique person identifiers. If you have more than one unique person identifiers, then you may encounter an unwanted graph collapse.
+* (Not recommended) Authenticated events without any unique person identifiers. If you do not have any unique person identifiers, then both unauthenticated and authenticated events will be stored against the ECID.
 
 >[!BEGINTABS]
 
