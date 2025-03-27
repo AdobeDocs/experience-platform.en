@@ -2,6 +2,7 @@
 title: Demandbase Intent
 description: Learn about the Demandbase Intent source on Experience Platform.
 last-substantial-update: 2025-03-26
+exl-id: 62dd27e0-b846-4c04-977f-8a3ab99bc464
 ---
 # [!DNL Demandbase Intent]
 
