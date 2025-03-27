@@ -1,8 +1,8 @@
 ---
 title: Demandbase People connection
 description: Use this destination to activate your audiences and enrich them with Demandbase third-party data, for other downstream use-cases in marketing and sales.
+exl-id: 748f5518-7cc1-4d65-ab70-4a129d9e2066
 ---
-
 # Demandbase People connection {#demandbase-people}
 
 Activate profiles for your Demandbase campaigns for audience targeting, personalization, and suppression.
