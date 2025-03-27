@@ -2,8 +2,8 @@
 title: Flexible Audience Evaluation Guide
 description: Learn how to use flexible audience evaluation to run batch segmentation jobs on demand.
 role: Developer, User
+exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
 ---
-
 # Flexible audience evaluation guide
 
 Flexible audience evaluation lets you run a batch segmentation job on demand. With flexible audience evaluation, you can run ad-hoc campaign launches, just-in-time communications, or other time-sensitive activities.
@@ -367,4 +367,3 @@ Only audiences with the origin of Segmentation Service are supported for flexibl
 Flexible audience evaluation runs that were created either using the API or the UI count towards the maximum limit. However, the daily batch segmentation job run that runs on a nightly basis does **not** contribute towards this limit.
 
 +++
-
