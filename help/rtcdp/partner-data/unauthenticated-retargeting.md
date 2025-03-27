@@ -69,7 +69,7 @@ Set up an event forwarding within Platform to send collected user behavior data 
 
 Ensure that the offsite retargeting extension is attached to a valid event rule in Adobe Experience Platform Data Collection. Typically, a global rule should be created to fire on key actions, such as `page load` or specific user interactions.
 
-To learn more about configuring the extension, read the [Event forwarding](../..) documentation for server-side event forwarding.
+To learn more about configuring the extension, read the [Event forwarding](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/getting-started) documentation.
 
 ## Other use cases {#other-use-cases}
 
