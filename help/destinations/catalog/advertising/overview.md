@@ -25,6 +25,8 @@ To understand the difference between connections and extensions, see [Connection
 * [Amazon Ads connection](amazon-ads.md)
 * [Bombora connection](bombora.md)
 * [Criteo connection](criteo.md)
+* [Demandbase connection](demandbase.md)
+* [Demandbase People connection](demandbase-people.md)
 * [Google Display & Video 360 connection](google-dv360.md)
 * [Google Ads connection](google-ads-destination.md)
 * [Google Ad Manager connection](google-ad-manager.md)
