@@ -31,7 +31,7 @@ When you run flexible audience evaluation, please keep the following conditions 
 
 >[!NOTE]
 >
->You *can* purchase additional flexible audience evaluation runs per year. For more information, contact Adobe Customer Care.
+>You can purchase additional flexible audience evaluation runs per year. For more information, contact Adobe Customer Care.
 
 ## Access {#access}
 
@@ -323,6 +323,14 @@ The following video demonstrates how to access and use flexible audience evaluat
 ## Frequently asked questions {#faq}
 
 The following section lists frequently asked questions related to flexible audience evaluation.
+
+### How soon can I activate an audience using flexible audience evaluation?
+
++++ Answer
+
+You can activate an audience using flexible audience evaluation immediately after its creation.
+
++++
 
 ### Can I run scheduling with flexible audience evaluation?
 
