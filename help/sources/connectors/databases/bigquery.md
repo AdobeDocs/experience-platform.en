@@ -10,21 +10,19 @@ exl-id: 35c61382-a909-47f4-a937-15cb725ecbe3
 >
 >The [!DNL Google BigQuery] source is available in the sources catalog to users who have purchased Real-Time Customer Data Platform Ultimate.
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
-
-Read this document for prerequisite steps that you need to complete in order to successfully connect your [!DNL Google BigQuery] account to Experience Platform.
+Read this document for prerequisite steps that you need to complete in order to successfully connect your [!DNL Google BigQuery] account to Adobe Experience Platform on either Azure or Amazon Web Services (AWS).
 
 ## Prerequisites {#prerequisites}
 
-The following section provides further information on prerequisite set up required before you can create a [!DNL Google BigQuery] source connection.
+Read the following sections for prerequisite set up that you must complete before you can connect your [!DNL Google BigQuery] account to Experience Platform.
 
-### IP address allow list
+### IP address allowlist 
 
-A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
+You must add region-specific IP addresses to your allowlist prior to connecting your sources to Experience Platform on either Azure or Amazon Web Services (AWS). For more information, read the guide on [allowlisting IP addresses to connect to Experience Platform on Azure and AWS](../../ip-address-allow-list.md) for more information.
 
-### Generate your [!DNL Google BigQuery] credentials {#credentials}
+### Authenticate to Experience Platform on Azure {#azure}
 
-To connect [!DNL Google BigQuery] to Experience Platform, you need to generate values for the following credentials:
+You must provide the following credentials to connect your [!DNL Google BigQuery] account to Experience Platform on Azure.
 
 >[!BEGINTABS]
 
@@ -58,9 +56,19 @@ For more information on using service accounts in [!DNL Google BigQuery], read t
 
 >[!ENDTABS]
 
-## Connect [!DNL Google BigQuery] to Platform
+### Authenticate to Experience Platform on AWS {#aws}
 
-The documentation below provides information on how to connect [!DNL Google BigQuery] to Platform using APIs or the user interface:
+You must provide the following credentials to connect your [!DNL Google BigQuery] account to Experience Platform on AWS.
+
+| Credential | Description |
+| --- | --- |
+| `projectId` | The ID of the [!DNL Google BigQuery] that you want to query against. |
+| `keyFileContent` | The key file that is used to authenticate the service account. You can retrieve this value from the [[!DNL Google Cloud service accounts] dashboard](https://console.cloud.google.com). The key file content is in JSON format. You must encode this in [!DNL Base64] when authenticating to Experience Platform. |
+| `datasetId` | The [!DNL Google BigQuery] dataset ID. This ID represents where your data tables are located. |
+
+## Connect [!DNL Google BigQuery] to Experience Platform
+
+The documentation below provides information on how to connect [!DNL Google BigQuery] to Experience Platform using APIs or the user interface:
 
 ### Using APIs
 
