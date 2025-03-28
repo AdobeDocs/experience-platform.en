@@ -91,7 +91,7 @@ The following request retrieves your organization's TTL settings for a particula
 
 ```shell
 curl -X GET \
-  'https://platform.adobe.io/data/foundation/catalog/ttl/5ba9452f7de80408007fc52a' \
+  'https://platform.adobe.io/data/core/hygiene/ttl/{DATASET_ID}'' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -110,15 +110,15 @@ A successful response returns the default, maximum, and minimum TTL values suppo
   "extensions": {
     "adobe_lakeHouse": {
       "rowExpiration": {
-        "defaultValue": "P1M",
-        "maxValue": "P10Y",
-        "minValue": "P30D"
+        "defaultValue": "P12M",
+        "maxValue": "P12M",
+        "minValue": "P7D"
       }
     }
   }
 }
 ```
-<!-- Q: Are these actaul TTL default values (`P1M`, `P10Y`, `P30D`)? And are they standard across all orgs, or do they vary per implementation or entitlement? -->
+<!-- Q: Are these TTL default values standard across all orgs, or do they vary per implementation or entitlement? -->
 
 +++
 
@@ -142,16 +142,20 @@ This call returns the current `ttlValue` (if set) in the `extensions.adobe_lakeH
 
 **Request**
 
-The following request retrieves your organization's TTL settings for a particular dataset.
+The following request retrieves your organization's TTL constraints for a particular dataset.
 
 ```shell
 curl -X GET \
-................... ...
+https://platform.adobe.io/data/foundation/catalog/dataSets/{DATASET_ID} \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Response**
 
-A successful response shows the ...
+A successful response includes the `extensions` object, which contains the current TTL configuration applied to the dataset.
 
 ```json
 {
