@@ -138,11 +138,11 @@ For a general overview of the Platform UI, refer to the [Experience Platform UI 
 
 The [!UICONTROL License usage] dashboard displays a list of all the Experience Platform products that you have purchased and any add-ons for those products. From this dashboard, you can find a snapshot of your organization's license-related data for Experience Platform across any associated sandbox.
 
-The data in this dashboard is displayed exactly as it appears at the specific point in time when the snapshot was taken. In other words, the snapshot is not an approximation or sample of the data, and the dashboard is not updated in real time.
+The data in this dashboard is displayed exactly as it appeared at the specific point in time when the snapshot was taken. It is not an approximation or sample, but the dashboard is not updated in real time.
 
 >[!NOTE]
 >
->Any changes or updates made to the data since the snapshot was taken will not be reflected in the dashboard until the next snapshot is taken.
+>Most metrics in the dashboard are updated daily, based on a snapshot of your Platform instance. [!UICONTROL CJA Rows Available] is an exception and is updated monthly. Metrics labeled with "packs"—such as [!UICONTROL Adhoc Query Service Users Packs], [!UICONTROL Profile Richness No of Packs], and [!UICONTROL Streaming Segmentation No of Packs]—reflect license entitlements for add-on offerings and do not track ongoing usage. Changes made after the snapshot are not visible until the next snapshot is taken.
 
 ## Exploring the license usage dashboard {#explore}
 
