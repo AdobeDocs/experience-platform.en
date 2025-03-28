@@ -39,6 +39,7 @@ role: User
   - [Batch segmentation](methods/batch-segmentation.md)
   - [Streaming segmentation](methods/streaming-segmentation.md)
   - [Edge segmentation](methods/edge-segmentation.md)
+  - [Flexible audience evaluation](methods/flexible-audience-evaluation.md)
 - Audience types {#types}
   - [Overview](types/overview.md)
   - [People audiences](types/people-audiences.md)
