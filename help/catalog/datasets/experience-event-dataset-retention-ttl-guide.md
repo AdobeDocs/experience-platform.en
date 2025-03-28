@@ -64,9 +64,12 @@ Before you can evaluate, set, and manage Experience Event Dataset Retention usin
 >
 >This document covers row-level expiration, which deletes individual expired rows within a dataset while keeping the dataset itself intact. It does not apply to dataset expiration, which removes entire datasets and is managed by a separate feature. For dataset-level expiration, refer to the [dataset expiration API documentation](../../hygiene/api/dataset-expiration.md).
 
-### How to check current TTL settings
+### How to check TTL settings
 
-To begin your TTL management, first check current TTL settings. Make a GET request to the `/ttl/{datasetId}` endpoint to retrieve the default, maximum, and minimum TTL settings for a dataset. This step is necessary because TTL rules can vary based on the dataset type.
+Use the `/ttl/{datasetId}` endpoint to view the default, minimum, and maximum TTL values that apply to the dataset type. To [check the current TTL setting applied to a dataset](#check-applied-ttl-values), use the `/dataSets/{DATASET_ID}` endpoint instead.
+
+<!-- Q: What is the specific value of providing this `/ttl/{datasetId}` call to the user, given it doesn't return applied values? Should we explicitly guide users to use this for planning TTL rather than validation? -->
+
 
 >[!TIP]
 >
@@ -98,53 +101,24 @@ curl -X GET \
 
 **Response**
 
-A successful response returns the TTL configuration for the dataset, including the default, maximum, and minimum TTL values for both `adobe_lakeHouse` and `adobe_unifiedProfile` storage.
+A successful response returns the default, maximum, and minimum TTL values supported by the system for the dataset. It does not return custom TTL values that may have been applied. To retrieve the current TTL value for a dataset, use GET `/dataSets/{DATASET_ID}`.
 
 +++Select to view the response
 
 ```json
 {
-    "67976f0b4878252ab887ccd9": {
-        "name": "Acme Sales Data",
-        "description": "This dataset contains sales transaction records for Acme Corporation.",
-        "imsOrg": "{ORG_ID}",
-        "sandboxId": "{SANDBOX_ID}",
-        "tags": {
-            "adobe/pqs/table": [
-                "acme_sales_20250127_113331_106"
-            ],
-            "adobe/siphon/table/format": [
-                "delta"
-            ]
-        },
-        "extensions": {
-            "adobe_lakeHouse": {  
-                "rowExpiration": {
-                    "defaultValue": "P12M",
-                    "maxValue": "P12M",
-                    "minValue": "P30D"
-                }
-            },
-            "adobe_unifiedProfile": {  
-                "rowExpiration": {
-                    "defaultValue": "P12M",
-                    "maxValue": "P12M",
-                    "minValue": "P7D"
-                }
-            }
-        },
-        "version": "1.0.0",
-        "created": 1737977611118,
-        "updated": 1737977611118,
-        "createdClient": "acme_data_pipeline",
-        "createdUser": "john.snow@acmecorp.com",
-        "updatedUser": "arya.stark@acmecorp.com",
-        "classification": {
-            "managedBy": "CUSTOMER"
-        }
+  "extensions": {
+    "adobe_lakeHouse": {
+      "rowExpiration": {
+        "defaultValue": "P1M",
+        "maxValue": "P10Y",
+        "minValue": "P30D"
+      }
     }
+  }
 }
 ```
+<!-- Q: Are these actaul TTL default values (`P1M`, `P10Y`, `P30D`)? And are they standard across all orgs, or do they vary per implementation or entitlement? -->
 
 +++
 
@@ -154,55 +128,47 @@ A successful response returns the TTL configuration for the dataset, including t
 | `maxValue`    | The longest TTL allowed for the dataset. If null, there is no maximum limit. |
 | `minValue`    | The shortest TTL allowed to ensure compliance with system policies. |
 
-<!-- Q) what is the default Max and Min values and are they system-imposed? -->
+<!-- Q: Are these default Max and Min TTL values system-imposed? If so, can we document any conditions or exceptions that may affect them? -->
 
-### How to set TTL for a dataset {#set-ttl}
+### How to check applied TTL values {#check-applied-ttl-values}
 
->[!IMPORTANT]
->
->Row-expiration can only be applied to event datasets that use a time-series schema. Before setting TTL, verify that the dataset's schema extends `https://ns.adobe.com/xdm/data/time-series` to ensure the API request succeeds. Use the Schema Registry API to retrieve the schema details and verify the `meta:extends` property. Refer to the [Schema endpoint documentation](../../xdm/api/schemas.md#lookup) for guidance on how to do this.
-
-To configure Experience Event Dataset Retention for your dataset, set a new TTL value by making a PATCH request to the `/v2/datasets/{ID}` endpoint. 
-
-**API format**
+To check the current TTL value that has been applied to a dataset, use the following API call:
 
 ```http
-PATCH /v2/datasets/{DATASET_ID}
+GET /dataSets/{DATASET_ID}
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `{DATASET_ID}` | The ID of the dataset you want to update the TTL value for. |
+This call returns the current `ttlValue` (if set) in the `extensions.adobe_lakeHouse.rowExpiration` section.
 
 **Request**
 
-In the example request below, the `ttlValue` is set to `P3M`. This ensures that records older than three months are automatically deleted. You can adjust the retention period to suit your business needs using values such as `P6M` for six months or `P12M` for one year.
+The following request retrieves your organization's TTL settings for a particular dataset.
 
 ```shell
-curl -X PATCH \
-  'https://platform.adobe.io/data/foundation/catalog/v2/datasets/{DATASET_ID}' \
-  -h 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -h 'Content-Type: application/json' \
-  -h 'x-api-key: {API_KEY}' \
-  -h 'x-gw-ims-org-id: {ORG_ID}' \
-  -d '{
-    "extensions": {
-        "adobe_lakeHouse": {
-            "rowExpiration": {
-                "ttlValue": "P3M"  // A 3 month retention period
-            }
-        }
-    }
-}
-```  
+curl -X GET \
+................... ...
+```
 
 **Response**
 
-A successful response shows the TTL configuration for the dataset. It includes details on row-level expiration settings for both `adobe_lakeHouse` and `adobe_unifiedProfile` storage.
+A successful response shows the ...
 
-+++Select to view the response
+```json
+{
+  "extensions": {
+    "adobe_lakeHouse": {
+      "rowExpiration": {
+        "ttlValue": "P3M",
+        "valueStatus": "custom",
+        "setBy": "user",
+        "updated": 1737977766499
+      }
+    }
+  }
+}
+```
 
-```JSON
+<!-- Q: Is this the entire response body for GET /dataSets/{DATASET_ID}, or is it just a snippet? Should we show the full JSON (including dataset name, tags, etc.)? like this:
 {
     "67976f0b4878252ab887ccd9": {
         "name": "Acme Sales Data",
@@ -246,10 +212,59 @@ A successful response shows the TTL configuration for the dataset. It includes d
         }
     }
 }
+ -->
+
+### How to set TTL for a dataset {#set-ttl}
+
+>[!IMPORTANT]
+>
+>Row-expiration can only be applied to event datasets that use a time-series schema. Before setting TTL, verify that the dataset's schema extends `https://ns.adobe.com/xdm/data/time-series` to ensure the API request succeeds. Use the Schema Registry API to retrieve the schema details and verify the `meta:extends` property. Refer to the [Schema endpoint documentation](../../xdm/api/schemas.md#lookup) for guidance on how to do this.
+
+To configure Experience Event Dataset Retention for your dataset, set a new TTL value by making a PATCH request to the `/v2/datasets/{ID}` endpoint. 
+
+**API format**
+
+```http
+PATCH /v2/datasets/{DATASET_ID}
 ```
 
-+++
+| Parameter | Description |
+| --- | --- |
+| `{DATASET_ID}` | The ID of the dataset you want to update the TTL value for. |
 
+**Request**
+
+In the example request below, the `ttlValue` is set to `P3M`. This ensures that records older than three months are automatically deleted. You can adjust the retention period to suit your business needs using values such as `P6M` for six months or `P12M` for one year.
+
+```shell
+curl -X PATCH \
+  'https://platform.adobe.io/data/foundation/catalog/v2/datasets/{DATASET_ID}' \
+  -h 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -h 'Content-Type: application/json' \
+  -h 'x-api-key: {API_KEY}' \
+  -h 'x-gw-ims-org-id: {ORG_ID}' \
+  -d '{
+    "extensions": {
+        "adobe_lakeHouse": {
+            "rowExpiration": {
+                "ttlValue": "P3M"  // A 3 month retention period
+            }
+        }
+    }
+}
+```  
+
+**Response**
+
+A successful response returns a reference to the updated dataset. It does not include the TTL settings.
+To confirm the TTL value update, make a follow-up `GET /dataSets/{DATASET_ID}` call.
+
+```JSON
+[
+  "@/dataSets/{DATASET_ID}"
+]
+```
+<!-- 
 | Property                         | Description |
 |----------------------------------|-------------|
 | `extensions`                     | A container for additional metadata related to the dataset. |
@@ -258,7 +273,7 @@ A successful response shows the TTL configuration for the dataset. It includes d
 | `rowExpiration.ttlValue` | Defines the duration before records in the dataset are automatically removed. Uses the ISO-8601 period format (for example, `P3M` for 3 months, or `P30D` for one week). |
 | `rowExpiration.valueStatus` | The string indicates whether the TTL setting is a default system value or a custom value set by a user. Possible values are: `default`, `custom`. |
 | `rowExpiration.setBy` | Specifies who last modified the TTL setting. Possible values include: `user` (manually set) or `service` (automatically assigned). |
-| `rowExpiration.updated` | The timestamp of the last TTL update. This value indicates when the TTL setting was last modified. |
+| `rowExpiration.updated` | The timestamp of the last TTL update. This value indicates when the TTL setting was last modified. | -->
 
 ### How to update TTL {#update-ttl}
 
@@ -275,6 +290,10 @@ PATCH /v2/datasets/{DATASET_ID}
 **Request**
 
 In the following request, the TTL is updated to six months (`P6M`) extending the record retention period before automatic deletion.
+
+>[!NOTE]
+>
+>TTL settings for adobe_lakeHouse.rowExpiration and adobe_unifiedProfile.rowExpiration are independent. Updating one does not automatically update the other. If you want to apply TTL settings to both, you must include both sections explicitly in your PATCH request.
 
 ```shell
 curl -X PATCH \
@@ -294,7 +313,9 @@ curl -X PATCH \
 }
 ```
 
-<!-- Q) For Clarity, should this example show both data stores being updated by expanding the example payload above? -->
+<!-- Q) For Clarity, should this example show both data stores being updated by expanding the example payload above? ...-->
+<!-- Because PATCHing `adobe_lakeHouse.rowExpiration` does NOT update `adobe_unifiedProfile.rowExpiration`. They are independent of each other -->
+
 
 **Response**
 
@@ -346,7 +367,7 @@ Follow these best practices to ensure that TTL settings align with your data ret
 - Audit TTL changes regularly. Every TTL update triggers an audit event. Use audit logs to track TTL modifications for compliance, data governance, and troubleshooting purposes.
 - Remove TTL if data must be retained indefinitely. To disable TTL, set `ttlValue` to `null`. This prevents automatic expiration and retains all records permanently. Consider the storage implications before making this change. 
 
-<!-- Q) Are there any specific system constraints or impacts of setting TTL to null? -->
+<!-- Q: Are there any backend constraints or system side effects when setting `ttlValue` to null (e.g., does it reset other TTL metadata or generate a specific audit event)? -->
 
 ## Limitations of TTL {#limitations}
 
@@ -355,6 +376,13 @@ Be aware of the following limitations when using TTL:
 - **Experience Event Dataset Retention using TTL applies to row-level expiration**, not dataset deletion. TTL removes records based on a defined retention period but does not delete entire datasets. To remove a dataset, use the [dataset expiration endpoint](../../hygiene/api/dataset-expiration.md) or manual deletion.
 - **TTL cannot be removed**, only updated. Once applied, TTL cannot be deleted, but you can [modify the retention period](#update-ttl) to extend or shorten it. To retain data indefinitely, set a sufficiently long TTL instead of attempting to remove it.
 - **TTL is not a compliance tool**. TTL optimizes storage and data lifecycle management but does not meet regulatory data retention requirements. For compliance, implement broader data governance strategies.
+
+<!-- 
+Regarding - "**TTL cannot be removed**"
+**TTL cannot be removed, only disabled.** To disable TTL set the `ttlValue` to `null`. This stops expiration and retains all records, effectively removing the TTL rule.
+
+Q: Is setting ttlValue to null the correct method to "remove" TTL? In whihc case, should we revise our terminology around removal vs. disabling for clarity? 
+-->
 
 ## Dataset retention policy FAQs {#faqs}
 
