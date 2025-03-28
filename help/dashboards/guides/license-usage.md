@@ -142,7 +142,7 @@ The data in this dashboard is displayed exactly as it appeared at the specific p
 
 >[!NOTE]
 >
->Most metrics in the dashboard are updated daily, based on a snapshot of your Platform instance. [!UICONTROL CJA Rows Available] is an exception and is updated monthly. Metrics labeled with "packs"—such as [!UICONTROL Adhoc Query Service Users Packs], [!UICONTROL Profile Richness No of Packs], and [!UICONTROL Streaming Segmentation No of Packs]—reflect license entitlements for add-on offerings and do not track ongoing usage. Changes made after the snapshot are not visible until the next snapshot is taken.
+>Most metrics in the dashboard are updated daily, based on a snapshot of your Platform instance. [!UICONTROL CJA Rows Available] is an exception and is updated monthly. Metrics labeled with "packs", such as [!UICONTROL Adhoc Query Service Users Packs], [!UICONTROL Profile Richness No of Packs], and [!UICONTROL Streaming Segmentation No of Packs], reflect license entitlements for add-on offerings and do not track ongoing usage. Changes made after the snapshot are not visible until the next snapshot is taken.
 
 ## Exploring the license usage dashboard {#explore}
 
