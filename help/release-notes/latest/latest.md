@@ -13,6 +13,7 @@ Updates to existing features and documentation in Adobe Experience Platform:
 
   - [Dashboards](#dashboards)
   - [Destinations](#destinations)
+  - [Federated Audience Composition](#federated-audience-composition)
   - [Segmentation Service](#segmentation-service)
   - [Sources](#sources)
 
@@ -56,6 +57,10 @@ For more information on dashboards, including how to grant access permissions an
 {style="table-layout:auto"}
 
 For more information, read the [destinations overview](../../destinations/home.md). 
+
+## Federated Audience Composition {#federated-audience-composition}
+
+For information on the latest updates for Federated Audience Composition, read the [dedicated release notes](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes) here.
 
 ## Segmentation Service {#segmentation-service}
 
