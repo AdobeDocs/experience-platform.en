@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
-title: Configure authentication specifications for Self-Serve Sources (Batch SDK)
+title: Configure authentication specs for Self-Serve Sources (Batch SDK)
 description: This document provides an overview of the configurations you need to prepare in order to use Self-Serve Sources (Batch SDK).
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
 ---
-# Configure authentication specifications for Self-Serve Sources (Batch SDK)
+# Configure authentication specs for Self-Serve Sources (Batch SDK)
 
-Authentication specifications define how Adobe Experience Platform users can connect to your source.
+Authentication specs define how Adobe Experience Platform users can connect to your source.
 
 The `authSpec` array contains information on the authentication parameters required to connect a source to Platform. Any given source can support multiple different types of authentication.
 
-## Authentication specifications
+## Authentication specs
 
 Self-Serve Sources (Batch SDK) supports OAuth 2 refresh codes and basic authentication. See the tables below for guidance on using an OAuth 2 refresh code and basic authentication
 
