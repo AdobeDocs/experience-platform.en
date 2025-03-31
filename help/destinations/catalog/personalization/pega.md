@@ -5,6 +5,10 @@ exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
 ---
 # Pega CDH Realtime Audience connection
 
+>[!IMPORTANT]
+>
+>This version of the Pega Customer Decision Hub Realtime Audience destination supports only a single Pega Customer Decision application. If you have multiple Pega Customer Decision Hub applications configured, you need to use the (V2) Pega CDH Realtime Audience destination connector.
+
 ## Overview {#overview}
 
 Use the [!DNL Pega Customer Decision Hub] Realtime Audience destination in Adobe Experience Platform to send profile attributes and audience membership data to [!DNL Pega Customer Decision Hub] for next-best-action decisioning. 
