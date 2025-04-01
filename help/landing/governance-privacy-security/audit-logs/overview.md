@@ -81,7 +81,9 @@ You can view audit logs for different Experience Platform features within the **
 
 ![The Audits dashboard highlighting Audits in the left menu.](../../images/audit-logs/audits.png)
 
-Audit logs are retained for 365 days after which they will be deleted from the system. Therefore, you can only go back for a maximum period of 365 days. If you require data of more than 365 days, you should export logs at a regular cadence to meet your internal policy requirements.
+Audit logs are retained for 365 days after which they will be deleted from the system. If you require data of more than 365 days, you should export logs at a regular cadence to meet your internal policy requirements.
+
+Your method of requesting audit logs changes the allowable time period and the number of records you will have access to. [Exporting logs](#export-audit-logs) allows you to go back 365 days (in 90 day intervals) to a maximum of 10,000 records, where as the [activity log UI](#filter-audit-logs) in Experience Platform displays the past 90 days to a maximum of 1000 records. 
 
 Select an event from the list to view its details in the right rail.
 
@@ -89,12 +91,11 @@ Select an event from the list to view its details in the right rail.
 
 ### Filter audit logs
 
+Select the funnel icon (![Filter icon](/help/images/icons/filter.png)) to display a list of filter controls to help narrow results. 
+
 >[!NOTE]
 >
->Since this a new feature, the data displayed only goes back to March 2022. Depending on the resource selected, earlier data may be available from January 2022.
-
-
-Select the funnel icon (![Filter icon](/help/images/icons/filter.png)) to display a list of filter controls to help narrow results. Only the last 1000 records are displayed irrespective of the various filters selected.
+>The Experience Platform UI only displays the past 90 days up a maximum of 1000 records, regardless of the applied filters. If you need logs past that (to a maximum of 365 days), you'll need to [export your audit logs](#export-audit-logs).
 
 ![The Audits dashboard with the filtered activity log highlighted.](../../images/audit-logs/filters.png)
 
@@ -124,9 +125,13 @@ The returned audit log data contains the following information on all queries th
 
 ![The Audits dashboard with the filtered activity log highlighted.](../../images/audit-logs/filtered.png)
 
-### Export audit logs
+### Export audit logs {#export-audit-logs}
 
-To export the current list of audit logs, select **[!UICONTROL Download log]**.
+To export the current list of audit logs, select **[!UICONTROL Download log]**. 
+
+>[!NOTE]
+>
+>Logs can be requested in 90 day intervals up to 365 days in the past. However, the maximum amount of logs that can be returned during a single export is 10,000.
 
 ![The Audits dashboard with the [!UICONTROL Download log] highlighted.](../../images/audit-logs/download.png)
 
