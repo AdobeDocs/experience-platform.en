@@ -78,6 +78,14 @@ With attribute-based access control, you can apply mapping configurations to fie
 
 For more information on how destinations work with attribute-based access controls, read the [attribute-based access control overview](../access-control/abac/overview.md#destinations).
 
+## Profile removal from destinations {#profile-removal}
+
+When a profile is removed from an audience that is activated to a destination, that profile is also removed from the corresponding audience in the destination platform. For example, if a profile is removed from an audience that was previously activated to LinkedIn, that profile will be removed from the associated [!UICONTROL LinkedIn Matched Audience].
+
+Profile removal from destinations — also referred to as unsegmentation — occurs on the same cadence as segmentation. As soon as a profile is removed from an audience in Experience Platform, the next scheduled dataflow to the destination reflects that change and removes the profile from the destination audience.
+
+The actual speed at which profile removal takes effect in the destination platform may vary based on the destination's ingestion and processing behavior.
+
 ## Destinations monitoring {#destinations-monitoring}
 
 After establishing a connection to a destination and completing the activation workflow, you can monitor the data exports to your reception system. Read the [guide on monitoring dataflows to destinations in the UI](/help/dataflows/ui/monitor-destinations.md) for more information.
