@@ -12,7 +12,7 @@ Read this document for a guide on model cards in Adobe Experience Platform.
 
 Read the following for a guide on the many different sections of a model card, including information the questions they address.
 
-### Model Overview {#model-overview}
+### Model overview {#model-overview}
 
 | Question | Information needed | Example answer |
 | --- | --- | --- |
@@ -24,7 +24,7 @@ Read the following for a guide on the many different sections of a model card, i
 
 {style="table-layout:auto"}
 
-### Intended Use
+### Intended use {#intended-use}
 
 | Question | Information needed | Example answer |
 | --- | --- | --- |
@@ -71,18 +71,83 @@ Read the following for a guide on the many different sections of a model card, i
 
 ### Performance and Evaluation
 
+| Question | Information needed | Example answer |
+| --- | --- | --- |
+| How was the model tested? | The methods used to validate performance. | The model was tested using a holdout validation approach, where 80% of the data was used for training, and 20% was reserved for evaluation. |
+| What evaluation metrics were used? | The key performance indicators. | The model's effectiveness is measured using **AUC-ROC (0.85)**, **precision-recall (0.78)**, and **F1-score (0.80)**. These metrics help assess the model's predictive power across different segments. |
+| How does performance vary across different scenarios? | The context-specific performance variations. | Lower accuracy for new customer segments with limited historical data. |
+| Are there any known weaknesses or failure cases? | Any limitations or failure points. | The model may underperform for customers with limited historical data (cold-start problem). Additionally, seasonality effects, such as holiday shopping trends, may require frequent retraining to maintain accuracy. |
+
+{style="table-layout:auto"}
+
 ### Fairness and Bias
+
+| Question | Information needed | Example answer |
+| --- | --- | --- |
+| What fairness checks were performed? | The bias analysis and mitigation processes that were performed. | The model underwent demographic parity testing and adversarial fairness evaluations to detect performance disparities across different user segments. |
+| Does the model disproportionately affect certain groups? | Any disparities in the performance that have been identified. | Analysis revealed a 5% performance drop for users with low historical interaction data. To address this, the model incorporates re-weighting techniques during training. |
+| How does the model mitigate bis? | The techniques used to address bias. | The dataset is stratified to ensure proportional representation of different customer demographics, and fairness constraints are introduced during training to prevent the model from favoring any particular group. Regular bias audits are conducted using demographic parity analysis, allowing adjustments if performance disparities are detected. |
+
+{style="table-layout:auto"}
 
 ### Explainability and Interpretability
 
+| Question | Information needed | Example answer |
+| --- | --- | --- |
+| Can users understand why the model makes certain decisions? | The interpretability methods used by the model. | The model leverages **SHapley Additive Explanations (SHAP)** to quantify the impact of each input feature on its predictions, providing transparency into how customer attributes influence propensity scores. SHAP values enable both global interpretability, identifying the most influential factors across all predictions, and local interpretability, explaining individual predictions for specific customers. |
+| What tools or techniques are available for interpretability? | The available explainability tools. | The model supports **Local Interpretable Model-Agnostic Explanations (LIME)** and SHAP to provide insights into how input features influence predictions. LIME generates local explanations by creating perturbed versions of the input data and observing changes in predictions, while SHAP assigns contribution values to each feature, offering both global and local interpretability of model decisions. |
+
+{style="table-layout:auto"}
+
 ### Robustness and Generalization
+
+| Question | Information needed | Example answer |
+| --- | --- | --- |
+| How well does the model perform on unseen data? | The findings on generalization performance testing. | The model maintains **80% AUC-ROC** when tested on unseen datasets, demonstrating strong generalization to new customer records. Performance remains stable across different customer segments but shows slight degradation when user behavior significantly deviates from historical patterns. | 
+| Has the model been stress-tested for adversarial inputs? | The details from the robustness evaluation. | The model has been evaluated against perturbed and adversarial inputs, including missing data, outlier injection, and intentional mislabeling. While performance remains robust under normal conditions, minor accuracy degradation (approximately 3-5%) was observed under extreme adversarial modifications. |
+
+{style="table-layout:auto"}
 
 ### Security and Privacy Considerations
 
+| Question | Information needed | Example answer |
+| --- | --- | --- |
+| Does the model handle sensitive data? | Any information compliance with privacy laws. | The model does not process or retain any personally identifiable information (PII), and all data used for training is anonymized and aggregated. It adheres to strict compliance with GDPR, CCPA, and internal Adobe privacy policies to ensure responsible data usage. |
+| What privacy-preserving techniques were used? | The techniques used to ensure privacy measures. | The model incorporates differential privacy techniques to add controlled noise to data, preventing re-identification of individuals. Additionally, hashing, anonymization, and tokenization methods are used to remove PII before model training and inference. |
+
+{style="table-layout:auto"}
+
 ### Monitoring and Maintenance
+
+| Question | Information needed | Example answer |
+| --- | --- | --- |
+| How is model performance monitored over time? | Details on the tracking mechanisms used for the model. | The model is continuously monitored via WatsonX, tracking key performance indicators such as accuracy drift, feature importance shifts, and prediction stability. Anomaly detection and alerting mechanisms notify the team when significant deviations from expected behavior occur. |
+| How often is the model retrained? | The frequency of updates on the model. | The model is retrained monthly using updated customer interaction data to ensure continued relevance. Periodic retraining helps mitigate data drift and seasonal fluctuations that could impact predictive accuracy. |
+
+{style="table-layout:auto"}
 
 ### Ethical Considerations and Responsible AI
 
+| Question | Information needed | Example answer |
+| --- | --- | --- |
+| What ethical concerns are associated with this model? | The potential risks that have been identified. | The model could potentially introduce bias in decision-making if not monitored correctly. For example, if certain demographics are overrepresented in the training data, the model might unfairly favor specific customer groups. |
+| How does the model align with Responsible AI principles?  | Information on how the model complies with AI ethics guidelines. | Adobe Experience Platform follows Responsible AI guidelines, ensuring that models undergo bias audits, fairness testing, and human oversight before deployment. |
+
+{style="table-layout:auto"}
+
 ### Known Limitations
 
+| Question | Information needed | Example answer |
+| --- | --- | --- |
+| What are known limitations of the model? | Any identified performance or use case constraints. | The model may struggle to accurately predict outcomes for newly launched products or customer segments where insufficient historical data is available. Additionally, seasonal variations in customer behavior can cause fluctuations in predictive accuracy if not accounted for during retraining. |
+| Under what conditions does the model perform poorly? | Any identified weaknesses regarding the model. | Performance declines when customer history is sparse, such as for first-time buyers or users with minimal engagement data. Additionally, if customer behaviors shift due to external factors like economic downturns or industry trends, the model may require rapid adaptation to maintain accuracy. |
+
+{style="table-layout:auto"}
+
 ### Future Improvements
+
+| Question | Information needed | Example answer |
+| --- | --- | --- |
+| What improvements are planned for future iterations? | The roadmap for enhancements. | Future iterations will include transfer learning techniques to improve performance for cold-start users and enhance adaptability to changing customer behaviors. Additionally, real-time data integration will be introduced to improve model responsiveness and accuracy in dynamic marketing environments. |
+
+{style="table-layout:auto"}
