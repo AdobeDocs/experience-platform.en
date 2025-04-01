@@ -157,6 +157,10 @@ azcopy copy "%srcFilePath%" "%sasUri%" --overwrite=true --recursive=true
 
 Follow the steps below to learn how you can set up your [!DNL Data Landing Zone] account for Experience Platform on Amazon Web Services (AWS).
 
+### IP address allowlist for connection on AWS
+
+You must add region-specific IP addresses to your allowlist prior to connecting your sources to Experience Platform on AWS. For more information, read the guide on [allowlisting IP addresses to connect to Experience Platform on AWS](../../ip-address-allow-list.md) for more information.
+
 ### Set up AWS CLI and Performing Operations
 
 - Read the guide on [installing or updating to the latest version of the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
@@ -293,6 +297,12 @@ Finally, navigate to the generated URL to directly log in to the AWS Console wit
 
 ## Connect [!DNL Data Landing Zone] to Experience Platform
 
+>[!IMPORTANT]
+>
+>- To connect to the source, you need the **[!UICONTROL View Sources]** and **[!UICONTROL Manage Sources]** access control permissions. For more information, read the [access control overview](../../../access-control/home.md) or contact your product administrator to obtain the required permissions.
+>
+>- Private links are currently not supported when connecting to Experience Platform using the [!DNL Data Landing Zone]. The only supported methods for access are the methods listed [here](#manage-the-contents-of-your-data-landing-zone).
+
 The documentation below provides information on how to bring data from your [!DNL Data Landing Zone] container to Adobe Experience Platform using APIs or the user interface.
 
 ### Using APIs
@@ -304,8 +314,4 @@ The documentation below provides information on how to bring data from your [!DN
 
 - [Connect [!DNL Data Landing Zone] to Platform using the UI](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
 - [Create a dataflow for a cloud storage connection in the UI](../../tutorials/ui/dataflow/batch/cloud-storage.md)
-
->[!IMPORTANT]
->
->Private links are currently not supported when connecting to Experience Platform using the [!DNL Data Landing Zone]. The only supported methods for access are the methods listed [here](#manage-the-contents-of-your-data-landing-zone).
 

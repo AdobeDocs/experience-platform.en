@@ -153,7 +153,7 @@ The [!DNL Schema Editor] reappears with the field-group-provided fields represen
 
 >[!NOTE] 
 >
->Within the Schema Editor, standard (Adobe-generated) classes and field groups are indicated with the padlock icon (![A padlock icon.](/help/images/icons/lock-closed.png). The padlock appears in the left rail next to the class or field group name, as well as next to any field in the schema diagram that is a part of a system-generated resource.
+>Within the Schema Editor, standard (Adobe-generated) classes and field groups are indicated with the padlock icon ![A padlock icon.](/help/images/icons/lock-closed.png). The padlock appears in the left rail next to the class or field group name, as well as next to any field in the schema diagram that is a part of a system-generated resource.
 >
 >![The Schema Editor with the padlock icon highlighted](../../images/ui/explore/schema-editor-padlock-icon.png)
 

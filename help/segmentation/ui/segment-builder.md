@@ -236,6 +236,10 @@ Time constraints let you apply time restrictions on time-based attributes, event
 >
 >If you created a segment definition with the "This month" or "This year" time constraints prior to June 2024, you will need to re-save your segment definitions. Prior to June 2024, "This month" was based off of 30 days and "This year" was based off of 365 days.
 
+>[!NOTE]
+>
+>Both the [ignore year time constraint](./ignore-year.md) and [rule-level time constraints](./segment-refactoring.md) were previously refactored, with more information available in the linked overviews.
+
 The list of available time constraints are as follows:
 
 +++ Available time constraints
@@ -312,7 +316,7 @@ The list of available time constraints for this operation differs from the main 
 
 +++
 
-## Containers
+## Containers {#containers}
 
 Segment rules are evaluated in the order they are listed. Containers allow control over the order of execution through the use of nested queries.
 
@@ -388,7 +392,7 @@ As you continue to build your segment definition, you can view a paginated previ
 
 You can also select your evaluation method. If you know what evaluation method you want to use, you can select the desired evaluation method either using the dropdown list. If you want to know what evaluation types this segment definition qualifies for, you can select the browse icon ![folder icon with a magnifying glass](/help/images/icons/folder-search.png) to see a list of the available segment definition evaluation methods.
 
-The [!UICONTROL Evaluation method eligibility] popover appears. This popover displays the available evaluation methods, which are batch, streaming, and edge. The popover shows which evaluation methods are eligible and ineligible. Depending on the parameters you used in your segment definition, it may not qualify for certain evaluation methods. For more information on the requirements for each evaluation method, please read the [streaming segmentation](./streaming-segmentation.md#query-types) or the [edge segmentation](./edge-segmentation.md#query-types) overviews.
+The [!UICONTROL Evaluation method eligibility] popover appears. This popover displays the available evaluation methods, which are batch, streaming, and edge. The popover shows which evaluation methods are eligible and ineligible. Depending on the parameters you used in your segment definition, it may not qualify for certain evaluation methods. For more information on the requirements for each evaluation method, please read the [streaming segmentation](../methods/streaming-segmentation.md#query-types) or the [edge segmentation](../methods/edge-segmentation.md#query-types) overviews.
 
 You can also change the evaluation method of the segment definition after you've finished creating it. If you change the evaluation method from Edge or Streaming to Batch, you will **not** be able to change it back to Edge or Streaming. The change to the evaluation method will **only** take effect once you select **[!UICONTROL Save]** in the popover. Cancelling the dialog will **maintain** the original evaluation method.
 

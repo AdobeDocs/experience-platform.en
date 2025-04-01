@@ -130,7 +130,7 @@ Explore the product documentation links below to understand how the four core pi
     </td>
     <td>
       <img src="assets/do-not-localize/icon-cloud.svg" width="35px"><br/>
-      <strong>Cloud and AI/ML capabilities</strong><br/>AI and ML capabilities assist you at every step of the way in multiple dashboards. Some highlights include the areas below. <br/> <a href="/help/segmentation/ui/lookalike-audiences.md">Lookalike audiences</a> - <a href="/help/rtcdp/segmentation/customer-ai.md">Customer AI</a> - <a href="/help/rtcdp/b2b-ai-ml-services/related-accounts.md">Related accounts</a> - <a href="/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md">Predictive lead and account scoring</a> - <a href="/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md">Lead-to-account matching</a>
+      <strong>Cloud and AI/ML capabilities</strong><br/>AI and ML capabilities assist you at every step of the way in multiple dashboards. Some highlights include the areas below. <br/> <a href="/help/segmentation/types/account-audiences.md">Lookalike audiences</a> - <a href="/help/rtcdp/segmentation/customer-ai.md">Customer AI</a> - <a href="/help/rtcdp/b2b-ai-ml-services/related-accounts.md">Related accounts</a> - <a href="/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md">Predictive lead and account scoring</a> - <a href="/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md">Lead-to-account matching</a>
     </td>
     <td>
       <img src="assets/do-not-localize/icon-learn.svg" width="35px"><br/>

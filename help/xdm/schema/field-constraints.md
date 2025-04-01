@@ -124,7 +124,7 @@ The following table outlines how each XDM type is represented in JSON Schema, al
       <td>[!UICONTROL Boolean]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{"type": "string"}</pre>
+{"type": "boolean"}</pre>
       </td>
       <td><code>true</code></td>
     </tr>

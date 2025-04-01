@@ -24,5 +24,5 @@ With Real-Time CDP, B2B Edition, you can use the Experience Platform user interf
 
 You can create audiences consisting of account profiles and then activate them to several destinations available in the Real-Time CDP destinations catalog. Read more below:
 
-* [Account audiences](/help/segmentation/ui/account-audiences.md)
+* [Account audiences](/help/segmentation/types/account-audiences.md)
 * [Activate account audiences](/help/destinations/ui/activate-account-audiences.md)

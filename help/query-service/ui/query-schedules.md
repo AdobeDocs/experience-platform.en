@@ -113,10 +113,6 @@ For an overview of alerts in Adobe Experience Platform, including the structure 
 
 ### Set parameters for a scheduled parameterized query {#set-parameters}
 
->[!IMPORTANT]
->
->The parameterized query UI feature is currently available in a **limited release only** and is not available to all customers. If you do not have access to parameterized queries, continue on to the [delete or disable a schedule](#delete-schedule) section.
-
 If you are creating a scheduled query for a parameterized query, you must now set the parameter values for these query runs.
 
 ![The Schedule details section of the schedule creation workflow with the Query parameters section highlighted.](../images/ui/query-schedules/scheduled-query-parameter.png)

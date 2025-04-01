@@ -80,17 +80,6 @@ In batch queries, updating a row inside the dataset is not supported.
 No. There is no limit on data size, but there is a query timeout limit of 10 minutes from an interactive session. If the query is executed as a batch CTAS then a 10-minute timeout is not applicable. See the guidance on [interactive query execution](./best-practices/writing-queries.md#interactive-query-execution) for more details.
 +++
 
-### How do I bypass the limit on the output number of rows from a SELECT query?
-
-+++Answer
-To bypass the output row limit, apply "LIMIT 0" in the query. For example:
-
-```sql
-SELECT * FROM customers LIMIT 0;
-```
-
-+++
-
 ### How do I stop my queries from timing out in 10 minutes?
 
 +++Answer
