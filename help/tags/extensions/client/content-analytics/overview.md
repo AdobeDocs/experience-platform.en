@@ -1,8 +1,6 @@
 ---
 title: Adobe Content Analytics Extension Overview
 description: Learn about the Adobe Content Analytics tag extension in Adobe Experience Platform.
-hide: yes
-hidefromtoc: yes
 exl-id: fcc46c86-e765-4bc7-bfdf-b8b10e8afacc
 ---
 # Adobe Content Analytics extension overview
@@ -72,7 +70,8 @@ In the **[!UICONTROL Experience Capture & Definition]** section, you can enable 
 1. Enable **[!UICONTROL Include experiences]**.
 1. Optionally. specify the parameters how content is rendered on your website. The parameters are zero or more combinations of a **[!UICONTROL Domain regular expression]** and **[!UICONTROL Query parameters]**.
    1. Enter a **[!UICONTROL Domain regular expression]**, for example `^(?!.*\b(store|help|admin)\b)`.
-   1. Specify a comma separated list of **[!UICONTROL Query parameters,]** for example `outdoors, patio, kitchen`.
+   1. Specify a comma separated list of **[!UICONTROL Query parameters,]** for example `outdoors, patio, kitchen`. 
+   Use ![Close](./assets/CrossSize300.svg) to delete individual parameters, or **[!UICONTROL Clear all]** to delete all parameters.
 1. Select **[!UICONTROL Remove]** if you want to remove a combination of domain regular expression and query parameters.
 1. Select **[!UICONTROL Add Regex]** if you want to add another combination of a regular expression and query parameters.
 
