@@ -10,6 +10,8 @@ In order to use the [Reactor API](https://developer.adobe.com/experience-platfor
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
+* 'Accept: application/vnd.api+json;revision=1'
+* 'Content-Type: application/vnd.api+json'
 
 This guide covers how to use the Adobe Developer Console to gather the values for each of these headers so you can start making calls to the Reactor API.
 
