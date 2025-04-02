@@ -30,11 +30,11 @@ Refer to Experience Platform documentation for [Audience Membership Details sche
 
 ### Prerequisites for the [!DNL HubSpot] destination {#prerequisites-destination}
 
-Note the following prerequisites in order to export data from Platform to your [!DNL HubSpot] account:
+Note the following prerequisites in order to export data from Experience Platform to your [!DNL HubSpot] account:
 
 #### You must have a [!DNL HubSpot] account {#prerequisites-account}
 
-In order to export data from Platform to your [!DNL Hubspot] account you need to have a [!DNL HubSpot] account. If you do not have one already, visit the [Set up your HubSpot account](https://knowledge.hubspot.com/get-started/set-up-your-account) page and follow the guidance to register and create your account.
+In order to export data from Experience Platform to your [!DNL Hubspot] account you need to have a [!DNL HubSpot] account. If you do not have one already, visit the [Set up your HubSpot account](https://knowledge.hubspot.com/get-started/set-up-your-account) page and follow the guidance to register and create your account.
 
 #### Gather the [!DNL HubSpot] private app access token {#gather-credentials}
 
@@ -84,7 +84,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of an audience, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> Additionally, a new property is created in [!DNL HubSpot] using the audience name and its value is with the corresponding audience status from Platform, for each of the selected audiences.</li></ul> |
+| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of an audience, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> Additionally, a new property is created in [!DNL HubSpot] using the audience name and its value is with the corresponding audience status from Experience Platform, for each of the selected audiences.</li></ul> |
 | Export frequency | **[!UICONTROL Streaming]** | <ul><li>Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).</li></ul>|
 
 {style="table-layout:auto"}
@@ -133,7 +133,7 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 
 ### Map attributes and identities {#map}
 
-To correctly send your audience data from Adobe Experience Platform to the [!DNL HubSpot] destination, you must go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination.
+To correctly send your audience data from Adobe Experience Platform to the [!DNL HubSpot] destination, you must go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Experience Platform account and their corresponding equivalents from the target destination.
 
 To correctly map your XDM fields to the [!DNL HubSpot] destination fields, follow the steps below:
 

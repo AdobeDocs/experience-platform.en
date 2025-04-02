@@ -28,7 +28,7 @@ Data governance policies are rules that describe the kinds of marketing actions 
 
 >[!NOTE]
 >
->Data governance policies are not to be confused with access control policies, which determine the specific data attributes that can be accessed by certain Platform users in your organization. See the guide on [attribute-based access control](../../access-control/abac/overview.md) for more information.
+>Data governance policies are not to be confused with access control policies, which determine the specific data attributes that can be accessed by certain Experience Platform users in your organization. See the guide on [attribute-based access control](../../access-control/abac/overview.md) for more information.
 
 A data governance policy is defined by the following:
 
@@ -39,7 +39,7 @@ To learn how to manage policies in the API, see the [policies endpoint guide](./
 
 ## Evaluation
 
-Once data usage labels have been applied to Platform schemas, and data usage policies have been defined for marketing actions against those labels, Data Governance capabilities allow you to enforce those policies and prevent data operations that constitute policy violations.
+Once data usage labels have been applied to Experience Platform schemas, and data usage policies have been defined for marketing actions against those labels, Data Governance capabilities allow you to enforce those policies and prevent data operations that constitute policy violations.
 
 The [!DNL Policy Service] API provides endpoints that allow you to test marketing actions against datasets or arbitrary combinations of data usage labels in order to check if any policy violations occur. Based on the API response, you can then set up protocols within your experience application to appropriately enforce data usage policy compliance. See the [evaluation endpoints guide](./evaluation.md) for more information.
 

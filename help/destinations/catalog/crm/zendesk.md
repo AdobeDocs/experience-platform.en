@@ -26,7 +26,7 @@ Refer to Experience Platform documentation for [Audience Membership Details sche
 
 ### [!DNL Zendesk] prerequisites {#prerequisites-destination}
 
-In order to export data from Platform to your [!DNL Zendesk] account you need to have a [!DNL Zendesk] account.
+In order to export data from Experience Platform to your [!DNL Zendesk] account you need to have a [!DNL Zendesk] account.
 
 #### Gather [!DNL Zendesk] credentials {#gather-credentials}
 
@@ -54,7 +54,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of a segment, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> Each segment status in [!DNL Zendesk] gets updated with the corresponding audience status from Platform, based on the **[!UICONTROL Mapping ID]** value provided during the [audience scheduling](#schedule-segment-export-example) step.</li></ul> |
+| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of a segment, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> Each segment status in [!DNL Zendesk] gets updated with the corresponding audience status from Experience Platform, based on the **[!UICONTROL Mapping ID]** value provided during the [audience scheduling](#schedule-segment-export-example) step.</li></ul> |
 | Export frequency | **[!UICONTROL Streaming]** | <ul><li>Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).</li></ul>|
 
 {style="table-layout:auto"}
@@ -104,7 +104,7 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 
 ### Mapping considerations and example {#mapping-considerations-example}
 
-To correctly send your audience data from Adobe Experience Platform to the [!DNL Zendesk] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination.
+To correctly send your audience data from Adobe Experience Platform to the [!DNL Zendesk] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Experience Platform account and their corresponding equivalents from the target destination.
 
 Attributes specified in the **[!UICONTROL Target field]** should be named exactly as described in the attribute mappings table as these attributes will form the request body.
 
@@ -135,7 +135,7 @@ When you are finished providing the mappings for your destination connection, se
 
 ### Schedule audience export and example {#schedule-segment-export-example}
 
-In the [[!UICONTROL Schedule audience export]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) step of the activation workflow, you must manually map Platform audiences to the custom field attribute in [!DNL Zendesk].
+In the [[!UICONTROL Schedule audience export]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) step of the activation workflow, you must manually map Experience Platform audiences to the custom field attribute in [!DNL Zendesk].
 
 To do this, select each segment, then enter the corresponding custom field attribute from [!DNL Zendesk] in the **[!UICONTROL Mapping ID]** field.
 

@@ -286,7 +286,7 @@ POST /collection/{CONNECTION_ID}?syncValidation=true
 
 Ingesting time series data to a streaming connection can be done either with or without the source name.
 
-The example request below ingests time series data with a missing source name to Platform. If the data is missing the source name, it will add the source ID from the streaming connection definition.
+The example request below ingests time series data with a missing source name to Experience Platform. If the data is missing the source name, it will add the source ID from the streaming connection definition.
 
 Both `xdmEntity._id` and `xdmEntity.timestamp` are required fields for time-series data. The `xdmEntity._id` attribute represents a unique identifier for the record itself, **not** a unique ID of the person or device whose record it is.
 

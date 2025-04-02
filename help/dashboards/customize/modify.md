@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;user interface;UI;dashboards;dashboard;profiles;segments;destinations;license usage
-title: Modify Platform Dashboards in the UI
+title: Modify Experience Platform Dashboards in the UI
 description: This guide provides step-by-step instructions for customizing how your organization's Adobe Experience Platform data is displayed within dashboards. 
 exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
 ---

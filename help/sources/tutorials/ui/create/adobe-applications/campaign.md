@@ -12,13 +12,13 @@ This tutorial provides steps to create a source connection to bring your Adobe C
 
 This guide requires a working understanding of the following components of Experience Platform:
 
-* [Sources](../../../../home.md): Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
+* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
 * [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
     * [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
     * [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
-* [Sandboxes](../../../../../sandboxes/home.md): Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-## Connect Adobe Campaign Managed Cloud Services to Platform
+## Connect Adobe Campaign Managed Cloud Services to Experience Platform
 
 In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources that you can create an account with.
 
@@ -54,7 +54,7 @@ The [!UICONTROL Select data] step appears, providing you with an interface to co
 | --- | --- |
 | Adobe Campaign instance | The name of the Adobe Campaign environment instance that you are using. |
 | Target mapping | The technical objects used by Campaign in order to deliver messages, and contain all the technical settings required to send deliveries. |
-| Schema name | The name of the schema entity that you are bringing to Platform. Options include Delivery Log and Tracking Log. |
+| Schema name | The name of the schema entity that you are bringing to Experience Platform. Options include Delivery Log and Tracking Log. |
 
 ![An interface where you can configure your Adobe Campaign instance, target mapping, and schema name.](../../../../images/tutorials/create/campaign/select-data.png)
 
@@ -90,7 +90,7 @@ When you are finished providing details to your dataflow, select **[!UICONTROL N
 
 The [!UICONTROL Mapping] step appears, providing you with an interface to map the source fields from your source schema to their appropriate target XDM fields in the target schema.
 
-Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
+Experience Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
 
 >[!IMPORTANT]
 >
@@ -139,7 +139,7 @@ This page also provides you with an interface to update the metadata description
 
 ## Next steps
 
-By following this tutorial, you have successfully created a dataflow to bring your Campaign v8 delivery logs and tracking logs data to Platform. Incoming data can now be used by downstream Platform services such as [!DNL Real-Time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
+By following this tutorial, you have successfully created a dataflow to bring your Campaign v8 delivery logs and tracking logs data to Experience Platform. Incoming data can now be used by downstream Experience Platform services such as [!DNL Real-Time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
 * [[!DNL Real-Time Customer Profile] overview](../../../../../profile/home.md)
 * [[!DNL Data Science Workspace] overview](../../../../../data-science-workspace/home.md)

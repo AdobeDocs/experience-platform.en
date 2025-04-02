@@ -16,12 +16,12 @@ In addition to [standard activities](../../../../connectors/adobe-applications/m
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
 * [B2B namespaces and schema auto-generation utility](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md): The B2B namespaces and schema auto-generation utility allows you to use [!DNL Postman] to auto-generate values for your B2B namespaces and schemas. You must complete your B2B namespaces and schemas first, before creating a [!DNL Marketo] source connection and dataflow.
-* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
+* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
 * [Experience Data Model (XDM)](../../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
   * [Create and edit schemas in the UI](../../../../../xdm/ui/resources/schemas.md): Learn how to create and edit schemas in the UI.
 * [Identity namespaces](../../../../../identity-service/features/namespaces.md): Identity namespaces are a component of [!DNL Identity Service] that serve as indicators of the context to which an identity relates. A fully qualified identity includes an ID value and a namespace.
 * [[!DNL Real-Time Customer Profile]](/help/profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ## Retrieve your custom activity details
 
@@ -148,7 +148,7 @@ To add custom activity data to an existing dataflow, modify the mappings of an e
 
 Once your dataflow is complete, you can use [Query Service](../../../../../query-service/home.md) to filter activities for your custom activity data. 
 
-When custom activities are ingested into Platform, the API name of the custom activity automatically becomes its `eventType`. Use `eventType={API_NAME}` to filter for custom activity data.
+When custom activities are ingested into Experience Platform, the API name of the custom activity automatically becomes its `eventType`. Use `eventType={API_NAME}` to filter for custom activity data.
 
 ```sql
 SELECT * FROM with_custom_activities_ds_today WHERE eventType='aepCustomActivityDemo1' 
@@ -167,4 +167,4 @@ The image below shows an example SQL statement in the [Query Editor](../../../..
 
 ## Next steps
 
-By following this tutorial, you have set up a Platform schema for [!DNL Marketo] custom activity data and created a dataflow to bring that data to Platform. For general information on the [!DNL Marketo] source, read the [[!DNL Marketo] source overview](../../../../connectors/adobe-applications/marketo/marketo.md).
+By following this tutorial, you have set up an Experience Platform schema for [!DNL Marketo] custom activity data and created a dataflow to bring that data to Experience Platform. For general information on the [!DNL Marketo] source, read the [[!DNL Marketo] source overview](../../../../connectors/adobe-applications/marketo/marketo.md).

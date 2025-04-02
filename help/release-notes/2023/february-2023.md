@@ -86,7 +86,7 @@ XDM is an open-source specification that provides common structures and definiti
 
 {style="table-layout:auto"}
 
-For more information on XDM in Platform, read the [XDM System overview](../../xdm/home.md).​
+For more information on XDM in Experience Platform, read the [XDM System overview](../../xdm/home.md).​
 
 ## Query Service {#query-service}
 
@@ -122,7 +122,7 @@ To learn more about Real-Time CDP B2B Edition, read the [Real-Time CDP B2B Editi
 
 ## Sources {#sources}
 
-Adobe Experience Platform can ingest data from external sources and allows you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
+Adobe Experience Platform can ingest data from external sources and allows you to structure, label, and enhance that data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
 
 Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 
@@ -131,7 +131,7 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | Feature | Description |
 | --- | --- |
 | Designate subscription-level access with [!DNL Google PubSub] | You can now define access to a specific topic subscription when using the [!DNL Google PubSub] source by providing the subscription ID when authenticating. For more information, read the [!DNL Google PubSub] authentication tutorial [using the Flow Service API](../../sources/tutorials/api/create/cloud-storage/google-pubsub.md) or [Experience Platform UI](../../sources/tutorials/ui/create/cloud-storage/google-pubsub.md). |
-| Ingest custom activity data from [!DNL Marketo] | You can now bring custom activity data from your [!DNL Marketo] instance to Experience Platform. To ingest custom activity data, you must set up custom activities field groups in the B2B Activities schema and create a dataflow using the activities dataset. Once the dataflow is complete, the ingested dataset will contain both standard and custom activities from your [!DNL Marketo] instance. You can then use [Query Service](../../query-service/home.md) to access your custom activity records on Platform. For more information, read the guide on [creating a dataflow for custom activity data](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md). |
+| Ingest custom activity data from [!DNL Marketo] | You can now bring custom activity data from your [!DNL Marketo] instance to Experience Platform. To ingest custom activity data, you must set up custom activities field groups in the B2B Activities schema and create a dataflow using the activities dataset. Once the dataflow is complete, the ingested dataset will contain both standard and custom activities from your [!DNL Marketo] instance. You can then use [Query Service](../../query-service/home.md) to access your custom activity records on Experience Platform. For more information, read the guide on [creating a dataflow for custom activity data](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md). |
 | Exclude unclaimed accounts from [!DNL Marketo] | You can now configure whether you want to exclude or include unclaimed accounts from ingestion when creating a dataflow for companies data. For more information, read the guide on [creating a source connection and dataflow for [!DNL Marketo]](../../sources/tutorials/ui/create/adobe-applications/marketo.md). |
 
 {style="table-layout:auto"}

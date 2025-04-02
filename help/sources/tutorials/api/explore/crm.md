@@ -165,4 +165,4 @@ A successful response returns the structure of a table. Details regarding each o
 
 ## Next steps
 
-By following this tutorial, you have explored your CRM system, found the path of the table you wish to bring in to [!DNL Experience Platform], and obtained information regarding its structure. You can use this information in the next tutorial to [collect data from your CRM system and bring it into Platform](../collect/crm.md).
+By following this tutorial, you have explored your CRM system, found the path of the table you wish to bring in to [!DNL Experience Platform], and obtained information regarding its structure. You can use this information in the next tutorial to [collect data from your CRM system and bring it into Experience Platform](../collect/crm.md).

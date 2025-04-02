@@ -78,7 +78,7 @@ Next, select the object type that you want to ingest to Experience Platform.
 
 ## Next steps {#next-steps}
 
-By following this tutorial, you have established a connection to your [!DNL Oracle NetSuite Entities] account. You can now continue on to the next tutorial and [configure a dataflow to bring marketing automation data into Platform](../../dataflow/marketing-automation.md).
+By following this tutorial, you have established a connection to your [!DNL Oracle NetSuite Entities] account. You can now continue on to the next tutorial and [configure a dataflow to bring marketing automation data into Experience Platform](../../dataflow/marketing-automation.md).
 
 ## Additional resources {#additional-resources}
 
@@ -86,7 +86,7 @@ The sections below provide additional resources that you can refer to when using
 
 ### Mapping {#mapping}
 
-Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
+Experience Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
 
 >[!NOTE]
 >

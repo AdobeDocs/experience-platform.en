@@ -57,7 +57,7 @@ Adobe Experience Platform provides a rich set of features to ingest any type and
 
 * None
 
-To learn more about ingesting data into Platform, visit the [Data Ingestion documentation](../../ingestion/home.md).
+To learn more about ingesting data into Experience Platform, visit the [Data Ingestion documentation](../../ingestion/home.md).
 
 
 ## Destinations {#destinations}

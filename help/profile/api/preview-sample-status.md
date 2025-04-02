@@ -7,7 +7,7 @@ exl-id: a90a601e-629e-417b-ac27-3d69379bb274
 ---
 # Preview sample status endpoint (Profile preview)
 
-Adobe Experience Platform enables you to ingest customer data from multiple sources in order to build a robust, unified profile for each of your individual customers. As data is ingested into Platform, a sample job is run to update the profile count and other Real-Time Customer Profile data-related metrics. 
+Adobe Experience Platform enables you to ingest customer data from multiple sources in order to build a robust, unified profile for each of your individual customers. As data is ingested into Experience Platform, a sample job is run to update the profile count and other Real-Time Customer Profile data-related metrics. 
 
 The results of this sample job can be viewed using the `/previewsamplestatus` endpoint, part of the Real-Time Customer Profile API. This endpoint can also be used to list profile distributions by both dataset and identity namespace, as well as to generate multiple reports in order to gain visibility into the composition of your organization's Profile store. This guide walks through the steps required to view these metrics using the `/previewsamplestatus` API endpoint.
 
@@ -25,7 +25,7 @@ This guide references both "profile fragments" and "merged profiles". It is impo
 
 Each individual customer profile is composed of multiple profile fragments that have been merged to form a single view of that customer. For example, if a customer interacts with your brand across several channels, your organization likely has multiple profile fragments related to that single customer appearing in multiple datasets. 
 
-When profile fragments are ingested into Platform, they are merged together (based on a merge policy) in order to create a single profile for that customer. Therefore, the total number of profile fragments is likely to always be higher than the total number of merged profiles, as each profile is composed of multiple fragments.
+When profile fragments are ingested into Experience Platform, they are merged together (based on a merge policy) in order to create a single profile for that customer. Therefore, the total number of profile fragments is likely to always be higher than the total number of merged profiles, as each profile is composed of multiple fragments.
 
 To learn more about profiles and their role within Experience Platform, please begin by reading the [Real-Time Customer Profile overview](../home.md).
 
@@ -44,7 +44,7 @@ You can perform a GET request to the `/previewsamplestatus` endpoint to view the
 
 The profile count is generated after merging together profile fragments to form a single profile for each individual customer. In other words, when profile fragments are merged together they return a count of "1" profile because they are all related to the same individual.
 
-The profile count also includes both profiles with attributes (record data) as well as profiles containing only time series (event) data, such as Adobe Analytics profiles. The sample job is refreshed regularly as Profile data is ingested in order to provide an up-to-date total number of profiles within Platform.
+The profile count also includes both profiles with attributes (record data) as well as profiles containing only time series (event) data, such as Adobe Analytics profiles. The sample job is refreshed regularly as Profile data is ingested in order to provide an up-to-date total number of profiles within Experience Platform.
 
 **API format**
 

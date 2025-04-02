@@ -32,7 +32,7 @@ Before activating data to the [!DNL Marketing Cloud Account Engagement] destinat
 
 ### Prerequisites in [!DNL Marketing Cloud Account Engagement] {#prerequisites-destination}
 
-Note the following prerequisites in order to export data from Platform to your [!DNL Marketing Cloud Account Engagement] account:
+Note the following prerequisites in order to export data from Experience Platform to your [!DNL Marketing Cloud Account Engagement] account:
 
 #### You need to have a [!DNL Marketing Cloud Account Engagement] account {#prerequisites-account}
 
@@ -80,7 +80,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of a segment, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> For each selected audience in Platform, the corresponding [!DNL Salesforce Marketing Cloud Account Engagement] segment status gets updated with its audience status from Platform.</li></ul>|
+| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of a segment, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> For each selected audience in Experience Platform, the corresponding [!DNL Salesforce Marketing Cloud Account Engagement] segment status gets updated with its audience status from Experience Platform.</li></ul>|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
@@ -138,7 +138,7 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 
 ### Mapping considerations and example {#mapping-considerations-example}
 
-To correctly send your audience data from Adobe Experience Platform to the [!DNL Marketing Cloud Account Engagement] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. 
+To correctly send your audience data from Adobe Experience Platform to the [!DNL Marketing Cloud Account Engagement] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Experience Platform account and their corresponding equivalents from the target destination. 
 
 To correctly map your XDM fields to the [!DNL Marketing Cloud Account Engagement] destination fields, follow the steps below.
 

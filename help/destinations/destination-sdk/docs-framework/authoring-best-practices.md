@@ -31,7 +31,7 @@ Follow the provided documentation template and don't edit the existing links in 
 
 ## Branding guidelines {#branding}
 
-* AEP is not an approved public-facing term. Please use Adobe Experience Platform on first use, then Experience Platform, then Platform.
+* AEP is not an approved public-facing term. Please use Adobe Experience Platform on first use, then Experience Platform, then Experience Platform.
   * **Don't use**: Before you can export data from AEP to YourDestination, make sure you read and complete these prerequisites. 
   * **Use**: Before you can export data from Adobe Experience Platform to YourDestination, make sure you read and complete these prerequisites.
 

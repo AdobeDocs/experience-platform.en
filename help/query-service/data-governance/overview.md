@@ -23,12 +23,12 @@ This document examines each of the different areas of governance and demonstrate
 
 ## Security {#security}
 
-Data security is the process of protecting data from unauthorized access and ensuring secure access throughout its lifecycle. Secure access is maintained in Experience Platform through the application of roles and permissions by capabilities such as role-based access control and attribute-based access control. Credentials, SSL, and data encryption are also used to ensure data protection across Platform. 
+Data security is the process of protecting data from unauthorized access and ensuring secure access throughout its lifecycle. Secure access is maintained in Experience Platform through the application of roles and permissions by capabilities such as role-based access control and attribute-based access control. Credentials, SSL, and data encryption are also used to ensure data protection across Experience Platform. 
 
 Security in regard to Query Service is divided into the following categories:
 
 * [Access control](#access-control): Access is controlled through roles and permissions including dataset and column-level permissions.
-* Securing data through [connectivity](#connectivity): Data is secured through Platform and external clients by achieving a limited connection with expiring credentials, or non-expiring credentials.
+* Securing data through [connectivity](#connectivity): Data is secured through Experience Platform and external clients by achieving a limited connection with expiring credentials, or non-expiring credentials.
 * Securing data through [encryption and customer-managed keys (CMK)](#encryption-and-customer-managed-keys): Access controlled through encryption when data is at rest.
 
 ### Access control {#access-control}
@@ -121,7 +121,7 @@ Once the prerequisite workflow has been completed, authorized users can now [gen
 
 #### SSL data encryption
 
-For increased security, Query Service provides native support for SSL connections to encrypt client/server communications. Platform supports various SSL options to suit your data security needs and balance the processing overhead of encryption and key exchange.
+For increased security, Query Service provides native support for SSL connections to encrypt client/server communications. Experience Platform supports various SSL options to suit your data security needs and balance the processing overhead of encryption and key exchange.
 
 See the guide on available [SSL options for third-party client connections to Query Service](../clients/ssl-modes.md) for more information, including how to connect using the `verify-full` SSL parameter value.
 
@@ -138,7 +138,7 @@ Data-in-transit is always HTTPS compliant and similarly when the data is at rest
 
 Query Service records user activity and categorizes that activity in different log types. Logs supply information on **who** performed **what** action, and **when**. Each action recorded in a log contains metadata that indicates the action type, date and time, the email ID of the user who performed the action, and additional attributes relevant to the action type.
 
-Any of the log categories can be requested as desired by a Platform user. This section provides details on the type of information captured for Query Service and where this information can be accessed.
+Any of the log categories can be requested as desired by an Experience Platform user. This section provides details on the type of information captured for Query Service and where this information can be accessed.
 
 ### Query logs {#query-logs}
 
@@ -152,7 +152,7 @@ Query logs can be accessed either through the Experience Platform UI in the [!UI
 
 Audit logs contain more detailed information than query logs and enable you to filter logs based on attributes such as user, date, type of query, and so on. Beyond the details available in query log UI, Audit Logs stores details on individual users along with their session data or connectivity to a third-party client.
 
-By providing an exact record of user actions, an audit trail can help with troubleshooting issues and help your business effectively comply with corporate data stewardship policies and regulatory requirements. Audit logs provide a record of all Platform activities. Using audit logs you can audit user actions relating to query execution, templates, and scheduled queries to increase the transparency and visibility of actions performed by users in Query Service.
+By providing an exact record of user actions, an audit trail can help with troubleshooting issues and help your business effectively comply with corporate data stewardship policies and regulatory requirements. Audit logs provide a record of all Experience Platform activities. Using audit logs you can audit user actions relating to query execution, templates, and scheduled queries to increase the transparency and visibility of actions performed by users in Query Service.
 
 The following table indicates the query categories captured by audit logs and the action types they record: 
 
@@ -172,7 +172,7 @@ See the [audit logs overview](../../landing/governance-privacy-security/audit-lo
 
 ## Data usage {#data-usage}
 
-The Data Governance framework in Platform provides a uniform way to responsibly use data across all Adobe solutions, services, and platforms. It coordinates the systemic approach to capture, communicate, and use metadata across the entirety of Adobe Experience Cloud. This in turn, helps data controllers label data according to the marketing actions needed, and the restrictions placed on that data from these intended marketing actions. See the overview on [data usage labels](../../data-governance/labels/overview.md) for more information on how Data Governance allows you to apply data usage labels to datasets and fields. 
+The Data Governance framework in Experience Platform provides a uniform way to responsibly use data across all Adobe solutions, services, and platforms. It coordinates the systemic approach to capture, communicate, and use metadata across the entirety of Adobe Experience Cloud. This in turn, helps data controllers label data according to the marketing actions needed, and the restrictions placed on that data from these intended marketing actions. See the overview on [data usage labels](../../data-governance/labels/overview.md) for more information on how Data Governance allows you to apply data usage labels to datasets and fields. 
 
 It is best practice to work towards data compliance at every stage of the data's journey. To this end, derived datasets that use ad hoc schemas should be appropriately labeled as part of the Data Governance framework. There are two types of derived datasets formed by Query Service: datasets that use a standard schema and datasets that use an ad hoc schema. 
 
@@ -200,7 +200,7 @@ Schema data fields can be set as an identity field through the Experience Platfo
 
 "Data hygiene" refers to the process of repairing or removing data that may be outdated, inaccurate, incorrectly formatted, duplicated, or incomplete. These processes make sure that datasets are accurate and consistent across all systems. It is important to ensure adequate data hygiene along every step of the data's journey and even from the initial data storage location. In Experience Platform Query Service, this is either the data lake or the accelerated store.
 
-You can assign an identity to a derived dataset to allow their data management following Platform's centralized data hygiene services.
+You can assign an identity to a derived dataset to allow their data management following Experience Platform's centralized data hygiene services.
 
 Conversely, when you create an aggregated dataset on the accelerated store, the aggregated data cannot be used to derive the original data. As a result of this data aggregation, the need to raise data hygiene requests is eliminated.
 

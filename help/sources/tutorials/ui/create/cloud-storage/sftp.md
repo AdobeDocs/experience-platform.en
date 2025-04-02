@@ -9,7 +9,7 @@ This tutorial provides steps to create an [!DNL SFTP] source connection using th
 
 ## Get started
 
-This tutorial requires a working understanding of the following components of Platform:
+This tutorial requires a working understanding of the following components of Experience Platform:
 
 * [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
   * [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
@@ -95,4 +95,4 @@ For more information on authentication, read the guide on [gathering required cr
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your SFTP account. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into Platform](../../dataflow/batch/cloud-storage.md).
+By following this tutorial, you have established a connection to your SFTP account. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into Experience Platform](../../dataflow/batch/cloud-storage.md).

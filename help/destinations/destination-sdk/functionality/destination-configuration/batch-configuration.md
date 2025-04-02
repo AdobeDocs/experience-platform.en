@@ -107,9 +107,9 @@ Use file name configuration macros to define what the exported file names should
 |Macro|UI label|Description|Example|
 |---|---|---|---|
 |`DESTINATION`|[!UICONTROL Destination]|Destination name in the UI.|Amazon S3|
-|`SEGMENT_ID`|[!UICONTROL Segment ID]|Unique, Platform-generated audience ID|ce5c5482-2813-4a80-99bc-57113f6acde2|
+|`SEGMENT_ID`|[!UICONTROL Segment ID]|Unique, Experience Platform-generated audience ID|ce5c5482-2813-4a80-99bc-57113f6acde2|
 |`SEGMENT_NAME`|[!UICONTROL Segment Name]|User-defined audience name|VIP subscriber|
-|`DESTINATION_INSTANCE_ID`|[!UICONTROL Destination ID]|Unique, Platform-generated ID of the destination instance|7b891e5f-025a-4f0d-9e73-1919e71da3b0|
+|`DESTINATION_INSTANCE_ID`|[!UICONTROL Destination ID]|Unique, Experience Platform-generated ID of the destination instance|7b891e5f-025a-4f0d-9e73-1919e71da3b0|
 |`DESTINATION_INSTANCE_NAME`|[!UICONTROL Destination Name]|User-defined name of the destination instance.|My 2022 Advertising Destination|
 |`ORGANIZATION_NAME`|[!UICONTROL Organization Name]|Name of the customer organization in Adobe Experience Platform.|My Organization Name|
 |`SANDBOX_NAME`|[!UICONTROL Sandbox Name]|Name of the sandbox used by the customer.|prod|

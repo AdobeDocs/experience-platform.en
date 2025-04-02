@@ -15,7 +15,7 @@ exl-id: 4bafa132-0d21-4140-ab46-f09cc20bce6f
 
 The features of this extension are being ported over to new extension. Here is a quick comparison of current features. 
 
-| Platform Demo Extension | Platform Web SDK |
+| Experience Platform Demo Extension | Experience Platform Web SDK |
 | ------------------ | ----------- |
 | Support for Custom Customer IDs | Support for Custom Cusotmer IDs|
 | Client-Side Mapping UI for XDM | Build in ECID (No need for visitor.js)|

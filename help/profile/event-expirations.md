@@ -17,7 +17,7 @@ Experience Event expirations cannot be configured through the Experience Platfor
 
 ## Automated expiration process
 
-After Experience Event expirations have been enabled on a Profile-enabled dataset, Platform automatically applies the expiration values for each captured event in a two-step process:
+After Experience Event expirations have been enabled on a Profile-enabled dataset, Experience Platform automatically applies the expiration values for each captured event in a two-step process:
 
 1. All new data that is ingested into the dataset has the expiration value applied at ingestion time based on the event timestamp.
 1. All existing data in the dataset has the expiration value retroactively applied as a one-time backfill system job. Once the expiration value has been placed on the dataset, events that are older than the expiration value will be immediately dropped as soon as the system job runs. All other events will be dropped off as soon as they reach their expiration values from the event timestamp. When all Experience Events have been removed, if the profile no longer has any profile attributes, the profile will no longer exist.
@@ -70,4 +70,4 @@ Pseudonymous Profile data expiry and Experience Event data expiry can be used to
 
 You should **always** set up Experience Event data expiry in your datasets, based on your needs of retaining data about your known customers. Once Experience Event data expiry is set up, you can use Pseudonymous Profile data expiry to automatically remove Pseudonymous Profiles. Typically, the data expiry period for Pseudonymous Profiles is less than the data expiry period for Experience Events.
 
-For a typical use case, you can set your Experience Event data expiry based on the values of your known user data and you can set your Pseudonymous Profile data expiry to a much shorter duration to limit the impact of Pseudonymous profiles on your Platform license compliance.
+For a typical use case, you can set your Experience Event data expiry based on the values of your known user data and you can set your Pseudonymous Profile data expiry to a much shorter duration to limit the impact of Pseudonymous profiles on your Experience Platform license compliance.

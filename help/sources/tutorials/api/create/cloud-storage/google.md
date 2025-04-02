@@ -24,8 +24,8 @@ In order for [!DNL Flow Service] to connect with your [!DNL Google Cloud Storage
 
 | Credential | Description |
 | ---------- | ----------- |
-| `accessKeyId` | A 61-character, alphanumeric string used to authenticate your [!DNL Google Cloud Storage] account to Platform. |
-| `secretAccessKey` | A 40-character, base-64-encoded string used to authenticate your [!DNL Google Cloud Storage] account to Platform. |
+| `accessKeyId` | A 61-character, alphanumeric string used to authenticate your [!DNL Google Cloud Storage] account to Experience Platform. |
+| `secretAccessKey` | A 40-character, base-64-encoded string used to authenticate your [!DNL Google Cloud Storage] account to Experience Platform. |
 | `bucketName` | The name of your [!DNL Google Cloud Storage] bucket. You must specify a bucket name if you want to provide access to a specific sub folder in your cloud storage. |
 | `folderPath` | The path to the folder that you want to provide access to. |
 
@@ -37,7 +37,7 @@ For information on how to successfully make calls to Experience Platform APIs, s
 
 ## Create a base connection
 
-A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
+A base connection retains information between your source and Experience Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
 To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Google Cloud Storage] authentication credentials as part of the request parameters.
 

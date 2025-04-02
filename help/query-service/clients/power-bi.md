@@ -69,7 +69,7 @@ To import a table, enter the server and database details [as described above](#c
 
 ### Import tables using custom SQL
 
-[!DNL Power BI] and other third-party tools like [!DNL Tableau] do not currently allow users to import nested objects, such as XDM objects in Platform. To account for this, [!DNL Power BI] allows you to use custom SQL to access these nested fields and create a flattened view of the data. [!DNL Power BI] then loads this flattened view of the previously nested data as a normal table.
+[!DNL Power BI] and other third-party tools like [!DNL Tableau] do not currently allow users to import nested objects, such as XDM objects in Experience Platform. To account for this, [!DNL Power BI] allows you to use custom SQL to access these nested fields and create a flattened view of the data. [!DNL Power BI] then loads this flattened view of the previously nested data as a normal table.
 
 From the [!DNL PostgreSQL database] dialog, select **[!DNL Advanced options]** to enter a custom SQL query in the **[!DNL SQL statement]** section. This custom query should be used to flatten your JSON name-value pairs into a table format. The official documentation also provides information on how to [connect PowerBI using an SQL statement in the advanced options](https://learn.microsoft.com/en-us/power-query/connectors/postgresql#connect-using-advanced-options).
 

@@ -47,7 +47,7 @@ Schema relationships are represented by a dedicated field within a **source sche
 >title="Reference identity namespace"
 >abstract="The namespace (type) for the reference schema's primary identity field. The reference schema must have an established primary identity field in order to participate in a relationship. See the documentation to learn more about identities in B2B relationships."
 
-In order to establish a relationship, the reference schema must have a defined primary identity. When setting a primary identity for a B2B entity, keep in mind that string-based entity IDs may overlap if you are collecting them across different systems or locations, which could lead to data conflicts in Platform.
+In order to establish a relationship, the reference schema must have a defined primary identity. When setting a primary identity for a B2B entity, keep in mind that string-based entity IDs may overlap if you are collecting them across different systems or locations, which could lead to data conflicts in Experience Platform.
 
 To account for this, all standard B2B classes contain "key" fields that conform to the [[!UICONTROL B2B Source] data type](../data-types/b2b-source.md). This data type provides fields for a string identifier for the B2B entity along with other contextual information about the identifier's source. One of these fields, `sourceKey`, concatenates the values of the other fields in the data type to produce a wholly unique identifier for the entity. This field should always be used as the primary identity for B2B entity schemas.
 

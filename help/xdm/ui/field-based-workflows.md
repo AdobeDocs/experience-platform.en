@@ -5,7 +5,7 @@ exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
 ---
 # Field-based workflows in the Schema Editor
 
-Adobe Experience Platform provides a robust set of standardized [field groups](../schema/composition.md#field-group) for use in Experience Data Model (XDM) schemas. The structure and semantics behind these field groups are carefully tailored to meet a wide variety of segmentation use cases and other downstream applications in Platform. You can also define your own custom field groups to address unique business needs.
+Adobe Experience Platform provides a robust set of standardized [field groups](../schema/composition.md#field-group) for use in Experience Data Model (XDM) schemas. The structure and semantics behind these field groups are carefully tailored to meet a wide variety of segmentation use cases and other downstream applications in Experience Platform. You can also define your own custom field groups to address unique business needs.
 
 When you add a field group to a schema, that schema inherits all the fields contained in that group. However, you can now add individual fields to your schema without needing to include other fields from the associated field group that you may not necessarily use.
 

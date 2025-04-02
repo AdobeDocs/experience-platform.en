@@ -15,7 +15,7 @@ Experience Platform provides support for ingesting data from a third-party CRM s
 
 A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
 
-The documentation below provides information on how to connect [!DNL Veeva CRM] to Platform using APIs or the user interface:
+The documentation below provides information on how to connect [!DNL Veeva CRM] to Experience Platform using APIs or the user interface:
 
 ## Connect [!DNL Veeva CRM] to [!DNL Experience Platform] using APIs
 

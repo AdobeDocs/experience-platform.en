@@ -194,7 +194,7 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->Platform processes privacy requests across all [sandboxes](../sandboxes/home.md) belonging to your organization. As a result, any `x-sandbox-name` header included in the request is ignored by the system.
+>Experience Platform processes privacy requests across all [sandboxes](../sandboxes/home.md) belonging to your organization. As a result, any `x-sandbox-name` header included in the request is ignored by the system.
 
 ## Delete request processing
 

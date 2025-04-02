@@ -36,7 +36,7 @@ When planning to use partner-provided attributes to deliver personalized experie
 * To what extent are you comfortable delivering personalization in different channels and for different use cases based on probabilistically derived datasets, versus deterministically confirmed attributes?
 * How should the experience for a pre-authenticated but recognized visitor change when they authenticate?
 
-### UI functionality, Platform components, and Experience Cloud products that you will use {#ui-functionality-and-elements}
+### UI functionality, Experience Platform components, and Experience Cloud products that you will use {#ui-functionality-and-elements}
 
 To successfully implement this use case, you must use multiple areas of Real-Time Customer Data Platform and other Experience Cloud solutions. Make sure that you have the necessary [attribute-based access control permissions](/help/access-control/abac/overview.md) for all these areas, or ask your system administrator to grant you the necessary permissions. 
 

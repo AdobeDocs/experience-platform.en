@@ -11,7 +11,7 @@ Adobe Experience Platform allows data to be ingested from external sources and l
 
 Experience Platform provides support for ingesting data from your local system, allowing you to bring local files over to Experience Platform through the use of source connectors.
 
-The documentation below provides information on how to connect your local system to Platform using the user interface:
+The documentation below provides information on how to connect your local system to Experience Platform using the user interface:
 
 ## Connect Local file upload [!DNL Experience Platform] using the UI
 

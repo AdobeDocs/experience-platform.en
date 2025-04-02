@@ -9,7 +9,7 @@ Any data that is brought into Adobe Experience Platform is encapsulated by Exper
 
 By executing a CTAS query through Query Service when no schema is specified, an ad hoc schema is automatically generated. It is often necessary to restrict the usage of certain fields, or datasets, of ad hoc schemas to control access to both sensitive personal data and personally identifiable information. Adobe Experience Platform facilitates this access control by allowing you to label schema fields through the Experience Platform UI using the attribute-based access control capability.
 
-Labels can be applied at any time, providing flexibility in how you choose to govern data. Although, it is best practice to label data as soon as it is ingested into Platform, or as soon as the data becomes available for use in Platform.
+Labels can be applied at any time, providing flexibility in how you choose to govern data. Although, it is best practice to label data as soon as it is ingested into Experience Platform, or as soon as the data becomes available for use in Experience Platform.
 
 Schema-based labeling is an important component of attribute-based access control to better manage the access given to users or groups of users. Adobe Experience Platform enables you to restrict access to any field of an ad hoc schema by creating and applying labels.
 

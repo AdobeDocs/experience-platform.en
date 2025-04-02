@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;consent and preferences;consen
 solution: Experience Platform
 title: Create a Dataflow Using a Consent and Preferences Source in the UI
 type: Tutorial
-description: A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps on how to create a dataflow for a consent and preferences source using Experience Platform UI.
+description: A dataflow is a scheduled task that retrieves and ingests data from a source to an Experience Platform dataset. This tutorial provides steps on how to create a dataflow for a consent and preferences source using Experience Platform UI.
 exl-id: 340b5945-baa1-4f79-88fa-2572606f6083
 ---
 # Create a dataflow using a consent and preferences source in the UI
@@ -17,9 +17,9 @@ A dataflow is a scheduled task that retrieves and ingests data from a source to 
 
 ## Getting started
 
-This tutorial requires a working understanding of the following components of Platform:
+This tutorial requires a working understanding of the following components of Experience Platform:
 
-* [Sources](../../../home.md): Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Experience Platform] services.
+* [Sources](../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Experience Platform] services.
 * [[!DNL Experience Data Model (XDM)] System](../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
   * [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
   * [Schema Editor tutorial](../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
@@ -79,11 +79,11 @@ When you are finished providing details to your dataflow, select **[!UICONTROL N
 
 >[!IMPORTANT]
 >
->You cannot map any dynamic key-pair values as an object from [!DNL OneTrust] to Platform and must specify those keys in the target schema in order to map your data during ingestion.
+>You cannot map any dynamic key-pair values as an object from [!DNL OneTrust] to Experience Platform and must specify those keys in the target schema in order to map your data during ingestion.
 
 The [!UICONTROL Mapping] step appears, providing you with an interface to map the source fields from your source schema to their appropriate target XDM fields in the target schema.
 
-Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../data-prep/ui/mapping.md).
+Experience Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../data-prep/ui/mapping.md).
 
 Once your source data is successfully mapped, select **[!UICONTROL Next]**.
 
@@ -137,7 +137,7 @@ You can delete dataflows that are no longer necessary or were incorrectly create
 
 ## Next steps
 
-By following this tutorial, you have successfully created a dataflow to bring data from your consent and preferences source to Platform. Incoming data can now be used by downstream [!DNL Experience Platform] services such as [!DNL Real-Time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
+By following this tutorial, you have successfully created a dataflow to bring data from your consent and preferences source to Experience Platform. Incoming data can now be used by downstream [!DNL Experience Platform] services such as [!DNL Real-Time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
 * [[!DNL Real-Time Customer Profile] overview](../../../../profile/home.md)
 * [[!DNL Data Science Workspace] overview](../../../../data-science-workspace/home.md)

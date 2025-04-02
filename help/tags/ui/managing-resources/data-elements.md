@@ -232,7 +232,7 @@ Session storage is similar to local storage, except the data is discarded after 
 
 ### Visitor behavior
 
-Similar to Page Info, this data element uses common behavior types to enrich logic within rules or other Platform solutions.
+Similar to Page Info, this data element uses common behavior types to enrich logic within rules or other Experience Platform solutions.
 
 Select one of the following visitor behavior attributes:
 

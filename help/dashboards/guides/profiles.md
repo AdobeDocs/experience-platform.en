@@ -27,7 +27,7 @@ To navigate to the Profiles dashboard within the Experience Platform UI, select 
 
 >[!NOTE]
 >
->If your organization is new to Platform and does not yet have active Profile datasets or merge policies created, the Profiles dashboard is not visible. Instead, the [!UICONTROL Overview] tab displays links and documentation to help you get started with Real-Time Customer Profile.
+>If your organization is new to Experience Platform and does not yet have active Profile datasets or merge policies created, the Profiles dashboard is not visible. Instead, the [!UICONTROL Overview] tab displays links and documentation to help you get started with Real-Time Customer Profile.
 
 ![The Experience Platform Profiles dashboard with Profiles and Overview highlighted.](../images/profiles/dashboard-overview.png)
 
@@ -47,7 +47,7 @@ From the widget library you can browse the selection of standard and custom audi
 
 ### View SQL {#view-sql}
 
-You can view the SQL that generates the insights visualized on your dashboard with a toggle on the [!UICONTROL Overview] workspace. You can take inspiration from the SQL of your existing insights to create new queries that derive unique insights from Platform data based on your business needs. To learn more about this feature, see the [View SQL UI guide](../view-sql.md).
+You can view the SQL that generates the insights visualized on your dashboard with a toggle on the [!UICONTROL Overview] workspace. You can take inspiration from the SQL of your existing insights to create new queries that derive unique insights from Experience Platform data based on your business needs. To learn more about this feature, see the [View SQL UI guide](../view-sql.md).
 
 <!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 
@@ -113,7 +113,7 @@ Customer consent and contact preferences are complex topics. To learn how consen
 
 * To learn about the schema field groups required to [collect consent data according to the Adobe standard](../../landing/governance-privacy-security/consent/adobe/overview.md), see the documentation on these Profile-enabled schema field groups.
     * [[!UICONTROL Consent and Preference Details]](../../xdm/field-groups/profile/consents.md)
-    * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) (required if using the Platform Web or Mobile SDK to send consent signals)
+    * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) (required if using the Experience Platform Web or Mobile SDK to send consent signals)
 * To learn how to process customer consent and preference data using the Adobe standard, see the overview on [consent processing in Experience Platform](../../landing/governance-privacy-security/consent/adobe/overview.md).
 * A combined data governance and consent policy can be used to filter profiles for segmentation based on their consent preferences and your established organizational rules. To learn how to create and use these combined policies, see the user guide on [managing data usage policies](../../data-governance/policies/user-guide.md#combine-policies). 
 
@@ -317,7 +317,7 @@ The **[!UICONTROL Profile count change]** widget displays the number of merged p
 >title="Profiles count change trend"
 >abstract="This widget displays the number of merged profiles that have been added to the Profile store daily over the last 30 days, 90 days, or 12 months. The number also depends on the selected merge policy being applied to your Profile data."
 
-The **[!UICONTROL Profiles count change trend]** widget displays the total number of merged profiles that have been added to the Profile store daily over the last 30 days, 90 days, or 12 months. This number is updated each day when the snapshot is taken, therefore if you were to ingest profiles into Platform, the number of profiles would not be reflected until the next snapshot is taken. The count of profiles added is the result of the selected merge policy being applied to your Profile data in order to merge profile fragments together to form a single profile for each individual. 
+The **[!UICONTROL Profiles count change trend]** widget displays the total number of merged profiles that have been added to the Profile store daily over the last 30 days, 90 days, or 12 months. This number is updated each day when the snapshot is taken, therefore if you were to ingest profiles into Experience Platform, the number of profiles would not be reflected until the next snapshot is taken. The count of profiles added is the result of the selected merge policy being applied to your Profile data in order to merge profile fragments together to form a single profile for each individual. 
 
 To learn more, refer to the [section on merge policies earlier in this document](#merge-policies).
 

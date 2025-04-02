@@ -7,7 +7,7 @@ exl-id: c9a1888e-421f-4bb4-b4c7-968fb1d61746
 ---
 # Setup and configure Customer Managed Keys for Azure using the API
 
-This document covers the Azure-specific instructions for enabling Customer Managed Keys (CMK) in Adobe Experience Platform using the API. For instructions on how to complete this process using the UI for Azure-hosted Platform instances, refer to the [UI CMK setup document](./ui-set-up.md). 
+This document covers the Azure-specific instructions for enabling Customer Managed Keys (CMK) in Adobe Experience Platform using the API. For instructions on how to complete this process using the UI for Azure-hosted Experience Platform instances, refer to the [UI CMK setup document](./ui-set-up.md). 
 
 For AWS-specific instructions, refer to the [AWS setup guide](../aws/ui-set-up.md).
 
@@ -17,7 +17,7 @@ To view and visit the [!UICONTROL Encryption] section in Adobe Experience Platfo
 
 For more information on assigning roles and permissions in Experience Platform, refer to the [configure permissions documentation](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
 
-To enable CMK for Azure-hosted Platform instances, your [[!DNL Azure] Key Vault must be configured](./azure-key-vault-config.md) with the following settings:
+To enable CMK for Azure-hosted Experience Platform instances, your [[!DNL Azure] Key Vault must be configured](./azure-key-vault-config.md) with the following settings:
 
 * [Enable purge protection](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
 * [Enable soft-delete](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
@@ -215,13 +215,13 @@ curl -X GET \
 
 The `status` attribute can have one of four values with the following meanings:
 
-1. `RUNNING`: Validates that Platform can access the key and key vault.
+1. `RUNNING`: Validates that Experience Platform can access the key and key vault.
 1. `UPDATE_EXISTING_RESOURCES`: The system is adding the key vault and key name to the datastores across all sandboxes in your organization.
 1. `COMPLETED`: The key vault and key name have successfully been added to the datastores.
 1. `FAILED`: A problem occurred, primarily related to the key, key vault, or multi-tenant app setup.
 
 ## Next steps
 
-By completing the above steps, you have successfully enabled CMK for your organization. For Azure-hosted Platform instances, data that is ingested into primary data stores will now be encrypted and decrypted using the key(s) in your [!DNL Azure] Key Vault.
+By completing the above steps, you have successfully enabled CMK for your organization. For Azure-hosted Experience Platform instances, data that is ingested into primary data stores will now be encrypted and decrypted using the key(s) in your [!DNL Azure] Key Vault.
 
 To learn more about data encryption in Adobe Experience Platform, see the [encryption documentation](../../encryption.md).

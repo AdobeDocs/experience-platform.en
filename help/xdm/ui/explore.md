@@ -67,7 +67,7 @@ See the [Add custom fields to standard field groups](./resources/schemas.md) doc
 
 Some field names are prepended with an underscore, such as `_repo` and `_id`. These represent placeholders for fields that the system will automatically generate and assign as data is ingested.
 
-As such, most of these fields should be excluded from the structure of your data when ingesting into Platform. The main exception to this rule is the [`_{TENANT_ID}` field](../api/getting-started.md#know-your-tenant_id), which all XDM fields created under your organization must be namespaced under.
+As such, most of these fields should be excluded from the structure of your data when ingesting into Experience Platform. The main exception to this rule is the [`_{TENANT_ID}` field](../api/getting-started.md#know-your-tenant_id), which all XDM fields created under your organization must be namespaced under.
 
 ### Data types {#data-types}
 
@@ -101,7 +101,7 @@ Identity fields are highlighted in the canvas with a fingerprint icon (![Fingerp
 
 >[!NOTE]
 >
->See the guide on [defining identity fields](./fields/identity.md) for more information on identity fields and their relationship with downstream Platform services.
+>See the guide on [defining identity fields](./fields/identity.md) for more information on identity fields and their relationship with downstream Experience Platform services.
 
 ### Relationship fields {#relationship}
 

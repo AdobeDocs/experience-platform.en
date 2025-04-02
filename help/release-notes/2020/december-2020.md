@@ -21,7 +21,7 @@ Updates to existing features in Adobe Experience Platform:
 
 ## [!DNL Dataflows] {#dataflows}
 
-Dataflows are a representation of data jobs that move data across Platform. These dataflows are configured across different services, helping move data from source connectors to target datasets, to Identity and Profile Service, and to destinations. 
+Dataflows are a representation of data jobs that move data across Experience Platform. These dataflows are configured across different services, helping move data from source connectors to target datasets, to Identity and Profile Service, and to destinations. 
 
 **Key feature**
 

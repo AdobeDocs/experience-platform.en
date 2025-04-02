@@ -39,10 +39,10 @@ All limits are applied and normalised over a **request unit (RU)**, defined as a
 
 | Upstreams configured per datastream | Average request size | Request units |
 | --- | --- | --- |
-| 1 (Adobe Platform) | 8 KB (1 fragment) | 1 |
-| 2 (Adobe Platform, Adobe Target) | 8 KB (1 fragment)  | 2 |
-| 2 (Adobe Platform, Adobe Target) | 16 KB (2 fragments)  | 4 |
-| 2 (Adobe Platform, Adobe Target) | 64 KB (8 fragments)  | 16 |
+| 1 (Adobe Experience Platform) | 8 KB (1 fragment) | 1 |
+| 2 (Adobe Experience Platform, Adobe Target) | 8 KB (1 fragment)  | 2 |
+| 2 (Adobe Experience Platform, Adobe Target) | 16 KB (2 fragments)  | 4 |
+| 2 (Adobe Experience Platform, Adobe Target) | 64 KB (8 fragments)  | 16 |
 
 ### Request units limits
 

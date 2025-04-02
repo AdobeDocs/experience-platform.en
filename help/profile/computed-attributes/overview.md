@@ -26,7 +26,7 @@ Sample use cases include:
 - Collapsing multiple event-based audiences into a more condensed group of computed attributes
 - Re-targeting unauthenticated users offsite using recent partner IDs from events
 
-This guide will help you to better understand the role of computed attributes within Platform, in addition to explaining the basics of computed attributes.
+This guide will help you to better understand the role of computed attributes within Experience Platform, in addition to explaining the basics of computed attributes.
 
 ## Understanding computed attributes
 

@@ -15,7 +15,7 @@ The relationship between Real-Time Customer Profile and other services within Ex
 
 ## Understanding profiles
 
-[!DNL Real-Time Customer Profile] merges data from various enterprise systems and then provides access to that data in the form of customer profiles with related time series events. This feature enables marketers to drive coordinated, consistent and relevant experiences with their audiences across multiple channels. The following sections highlight some of the core concepts that you must understand in order to effectively build and maintain profiles within Platform.
+[!DNL Real-Time Customer Profile] merges data from various enterprise systems and then provides access to that data in the form of customer profiles with related time series events. This feature enables marketers to drive coordinated, consistent and relevant experiences with their audiences across multiple channels. The following sections highlight some of the core concepts that you must understand in order to effectively build and maintain profiles within Experience Platform.
 
 ### Profile entity composition
 
@@ -39,7 +39,7 @@ Dimensional and B2B entities are linked to the primary entity through **schema r
 
 Although [!DNL Real-Time Customer Profile] processes ingested data and uses Adobe Experience Platform [!DNL Identity Service] to merge related data through identity mapping, it maintains its own data in the [!DNL Profile] data store. The [!DNL Profile] store is separate from catalog data in the data lake and [!DNL Identity Service] data in the identity graph.
 
-The Profile store uses a Microsoft Azure Cosmos DB infrastructure and the Platform Data Lake uses Microsoft Azure Data Lake storage.
+The Profile store uses a Microsoft Azure Cosmos DB infrastructure and the Experience Platform Data Lake uses Microsoft Azure Data Lake storage.
 
 ### Profile guardrails
 
@@ -51,15 +51,15 @@ The Experience Platform UI provides a dashboard through which you can view impor
 
 ### Profile fragments vs merged profiles {#profile-fragments-vs-merged-profiles}
 
-Each individual customer profile is composed of multiple profile fragments that have been merged to form a single view of that customer. For example, if a customer interacts with your brand across several channels, your organization will have multiple profile fragments related to that single customer appearing in multiple datasets. When these fragments are ingested into Platform, they are merged together in order to create a single profile for that customer. 
+Each individual customer profile is composed of multiple profile fragments that have been merged to form a single view of that customer. For example, if a customer interacts with your brand across several channels, your organization will have multiple profile fragments related to that single customer appearing in multiple datasets. When these fragments are ingested into Experience Platform, they are merged together in order to create a single profile for that customer. 
 
 In other words, profile fragments represent a unique primary identity and the corresponding [record](#record-data) or [event](#time-series-events) data for that ID within a given dataset. 
 
-When the data from multiple datasets conflicts (for example one fragment lists the customer as "single" while the other lists the customer as "married") the [merge policy](#merge-policies) determines which information to prioritize and include in the profile for the individual. Therefore, the total number of profile fragments within Platform is likely to always be higher than the total number of merged profiles, as each profile is typically composed of multiple fragments from multiple datasets.
+When the data from multiple datasets conflicts (for example one fragment lists the customer as "single" while the other lists the customer as "married") the [merge policy](#merge-policies) determines which information to prioritize and include in the profile for the individual. Therefore, the total number of profile fragments within Experience Platform is likely to always be higher than the total number of merged profiles, as each profile is typically composed of multiple fragments from multiple datasets.
 
 ### Record data {#record-data}
 
-A profile is a representation of a subject, an organization or an individual, composed of many attributes (also known as record data). For example, the profile of a product may include a SKU and description, whereas the profile of a person contains information like first name, last name, and email address. Using [!DNL Experience Platform], you can customize profiles to use specific data relevant to your business. The standard [!DNL Experience Data Model] (XDM) class, [!DNL XDM Individual Profile], is the preferred class upon which to build a schema when describing customer record data, and supplies the data integral to many interactions between Platform services. For more information on working with schemas in [!DNL Experience Platform], please begin by reading the [XDM System overview](../xdm/home.md).
+A profile is a representation of a subject, an organization or an individual, composed of many attributes (also known as record data). For example, the profile of a product may include a SKU and description, whereas the profile of a person contains information like first name, last name, and email address. Using [!DNL Experience Platform], you can customize profiles to use specific data relevant to your business. The standard [!DNL Experience Data Model] (XDM) class, [!DNL XDM Individual Profile], is the preferred class upon which to build a schema when describing customer record data, and supplies the data integral to many interactions between Experience Platform services. For more information on working with schemas in [!DNL Experience Platform], please begin by reading the [XDM System overview](../xdm/home.md).
 
 ### Time series events {#time-series-events}
 

@@ -8,14 +8,14 @@ exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
 ---
 # Getting started in Customer AI
 
-The guides for Customer AI require a working understanding of the various Platform services involved in using Customer AI. Before you start, please review the following documents:
+The guides for Customer AI require a working understanding of the various Experience Platform services involved in using Customer AI. Before you start, please review the following documents:
 
-- [Experience Data Model (XDM) System overview](../../xdm/home.md): XDM is the foundational framework that allows [!DNL Adobe Experience Cloud], powered by Experience Platform, to deliver the right message to the right person, on the right channel, at exactly the right moment. The methodology on which Experience Platform is built, XDM System, operationalizes Experience Data Model schemas for use by Platform services.
+- [Experience Data Model (XDM) System overview](../../xdm/home.md): XDM is the foundational framework that allows [!DNL Adobe Experience Cloud], powered by Experience Platform, to deliver the right message to the right person, on the right channel, at exactly the right moment. The methodology on which Experience Platform is built, XDM System, operationalizes Experience Data Model schemas for use by Experience Platform services.
 - [Basics of schema composition](../../xdm/schema/composition.md): This document provides an introduction to Experience Data Model (XDM) schemas and the building blocks, principles, and best practices for composing schemas to be used in [!DNL Adobe Experience Platform].
 - [Building schemas](../../xdm/tutorials/create-schema-ui.md): This tutorial covers the steps for creating a schema using the Schema Editor within Experience Platform.
 - [Real-Time Customer Profile overview](../../rtcdp/overview.md): Built on [!DNL Adobe Experience Platform], Adobe Real-Time Customer Data Platform (Real-Time CDP) helps companies bring together known and unknown data to activate customer profiles with intelligent decisioning throughout the customer journey. Real-Time CDP combines multiple enterprise data sources to create unified profiles in real time that can be used to provide one-to-one personalized customer experiences across all channels and devices.
 - [Segmentation Service overview](../../segmentation/home.md): Segmentation is the process of defining specific attributes or behaviors shared by a subset of profiles from your Profile store to distinguish a marketable group of people from your customer base. For example, in an email campaign called "Did you forget to buy your sneakers?", you may want an audience of all users who searched for running shoes within the last 30 days, but who did not complete a purchase. Using different segments, you can focus on your various audiences, delivering a more customized marketing experience.
-- [Segment Builder user guide](../../segmentation/tutorials/create-a-segment.md): Platform allows you to easily create and access segments, as well as use different building blocks to further characterize your segments.
+- [Segment Builder user guide](../../segmentation/tutorials/create-a-segment.md): Experience Platform allows you to easily create and access segments, as well as use different building blocks to further characterize your segments.
 
 ## Downloading Customer AI scores
 
@@ -35,7 +35,7 @@ All resources in Experience Platform are isolated to specific virtual sandboxes.
 
 >[!NOTE]
 >
->For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
+>For more information on sandboxes in Experience Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 ### Reading sample API calls
 

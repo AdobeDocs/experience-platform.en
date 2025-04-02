@@ -50,7 +50,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns an array of tables from your source. Find the table you wish to bring into Platform and take note of its `path` property, as you are required to provide it in the next step to inspect its structure.
+A successful response returns an array of tables from your source. Find the table you wish to bring into Experience Platform and take note of its `path` property, as you are required to provide it in the next step to inspect its structure.
 
 ```json
 [
@@ -182,7 +182,7 @@ A successful response returns information on the contents and structure of the s
 
 ## Next steps
 
-By following this tutorial, you have gathered information on the structure and contents of your data tables. Furthermore, you have retrieved the path to the table that you wish to ingest into Platform. You can use this information to create a source connection and a dataflow to bring your data to Platform. See the following tutorials for specific steps on how to create a source connection and a dataflow using the [!DNL Flow Service] API:
+By following this tutorial, you have gathered information on the structure and contents of your data tables. Furthermore, you have retrieved the path to the table that you wish to ingest into Experience Platform. You can use this information to create a source connection and a dataflow to bring your data to Experience Platform. See the following tutorials for specific steps on how to create a source connection and a dataflow using the [!DNL Flow Service] API:
 
 * [Advertising sources](../collect/advertising.md)
 * [CRM sources](../collect/crm.md)

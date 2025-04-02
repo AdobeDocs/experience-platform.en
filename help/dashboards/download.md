@@ -7,7 +7,7 @@ exl-id: 838e98a0-ce2e-4dcd-8c8f-d28ef2cb8315
 ---
 # Download dashboards to PDF
 
-Dashboards within Adobe Experience Platform can be downloaded to PDF from within the Platform user interface to facilitate the sharing of information with members of your organization. 
+Dashboards within Adobe Experience Platform can be downloaded to PDF from within the Experience Platform user interface to facilitate the sharing of information with members of your organization. 
 
 This document provides a summary of how to download dashboards using the Experience Platform UI and save the dashboard to PDF using the default browser print menu. 
 

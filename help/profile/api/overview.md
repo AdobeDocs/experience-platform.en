@@ -35,11 +35,11 @@ Through Adobe Experience Platform you can access [!DNL Real-Time Customer Profil
 
 When bringing data from multiple sources together in [!DNL Experience Platform], merge policies are the rules that [!DNL Experience Platform] uses to determine how data will be prioritized and what data will be combined to create individual customer profiles. Using the [!DNL Real-Time Customer Profile] API, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. To work with merge policies using the API, visit the [merge policies endpoint guide](merge-policies.md). 
 
-To learn more about merge policies, and their role within Platform, please begin by reading the [merge policies overview](../merge-policies/overview.md). 
+To learn more about merge policies, and their role within Experience Platform, please begin by reading the [merge policies overview](../merge-policies/overview.md). 
 
 ## Preview sample status ([!DNL Profile] preview) {#profile-preview}
 
-As data is ingested into Platform, a sample job is run to update the profile count and other Real-Time Customer Profile data-related metrics. The results of this sample job can be viewed using the `/previewsamplestatus` endpoint, part of the Real-Time Customer Profile API. This endpoint can also be used to list profile distributions by both dataset and identity namespace, as well as to generate multiple reports in order to gain visibility into the composition of your organization's Profile store.  To get started using the `/profilepreviewstatus` endpoint, refer to the [preview sample status endpoint guide](preview-sample-status.md).
+As data is ingested into Experience Platform, a sample job is run to update the profile count and other Real-Time Customer Profile data-related metrics. The results of this sample job can be viewed using the `/previewsamplestatus` endpoint, part of the Real-Time Customer Profile API. This endpoint can also be used to list profile distributions by both dataset and identity namespace, as well as to generate multiple reports in order to gain visibility into the composition of your organization's Profile store.  To get started using the `/profilepreviewstatus` endpoint, refer to the [preview sample status endpoint guide](preview-sample-status.md).
 
 ## Profile system jobs {#profile-system-jobs}
 

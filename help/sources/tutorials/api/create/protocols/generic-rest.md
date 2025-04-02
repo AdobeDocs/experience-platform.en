@@ -20,8 +20,8 @@ This tutorial walks you through the steps to create a base connection for [!DNL 
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../../../landing/api-guide.md).
 
@@ -55,7 +55,7 @@ In order for [!DNL Flow Service] to connect with [!DNL Generic REST API], you mu
 
 ## Create a base connection
 
-A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
+A base connection retains information between your source and Experience Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
 [!DNL Generic REST API] supports both basic authentication and OAuth 2 refresh code. See the following examples for guidance on how to authenticate with either authentication types.
 
@@ -103,7 +103,7 @@ curl -X POST \
 | `name` | The name of your base connection. Ensure that the name of your base connection is descriptive as you can use this to look up information on your base connection. |
 | `description` | (Optional) A property that you can include to provide more information on your base connection. |
 | `connectionSpec.id` | The connection specification ID associated with [!DNL Generic REST API]. This fixed ID is: `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`. |
-| `auth.specName` | The authentication type that you are using to authenticate your source to Platform. |
+| `auth.specName` | The authentication type that you are using to authenticate your source to Experience Platform. |
 | `auth.params.host` | The root URL used to connect to your [!DNL Generic REST API] source. |
 | `auth.params.accessToken` | The corresponding access token used to authenticate your source. This is required for OAuth-based authentication. |
 
@@ -163,7 +163,7 @@ curl -X POST \
 | `name` | The name of your base connection. Ensure that the name of your base connection is descriptive as you can use this to look up information on your base connection. |
 | `description` | (Optional) A property that you can include to provide more information on your base connection. |
 | `connectionSpec.id` | The connection specification ID associated with [!DNL Generic REST API]. This fixed ID is: `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`. |
-| `auth.specName` | The authentication type that you are using to connect your source to Platform. |
+| `auth.specName` | The authentication type that you are using to connect your source to Experience Platform. |
 | `auth.params.host` | The root URL used to connect to your [!DNL Generic REST API] source. |
 | `auth.params.username` | The username that corresponds with your [!DNL Generic REST API] source. This is required for basic authentication. |
 | `auth.params.password` | The password that corresponds with your [!DNL Generic REST API] source. This is required for basic authentication. |
@@ -184,4 +184,4 @@ A successful response returns the newly created base connection, including its u
 By following this tutorial, you have created a [!DNL Generic REST API] base connection using the [!DNL Flow Service] API. You can use this base connection ID in the following tutorials:
 
 * [Explore the structure and contents of your data tables using the [!DNL Flow Service] API](../../explore/tabular.md)
-* [Create a dataflow to bring protocols data to Platform using the [!DNL Flow Service] API](../../collect/protocols.md)
+* [Create a dataflow to bring protocols data to Experience Platform using the [!DNL Flow Service] API](../../collect/protocols.md)

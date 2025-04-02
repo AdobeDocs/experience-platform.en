@@ -34,7 +34,7 @@ For more information, please read the [Data Lake migration guide](../../landing/
 
 ## [!DNL Access control] {#access-control}
 
-[!DNL Experience Platform] leverages [Adobe Admin Console](https://adminconsole.adobe.com) product profiles to link users with permissions and sandboxes. Permissions control access to a variety of Platform capabilities, including data modeling, profile management, and sandbox administration.
+[!DNL Experience Platform] leverages [Adobe Admin Console](https://adminconsole.adobe.com) product profiles to link users with permissions and sandboxes. Permissions control access to a variety of Experience Platform capabilities, including data modeling, profile management, and sandbox administration.
 
 **Key features**
 
@@ -181,7 +181,7 @@ Adobe Experience Platform enables you to drive coordinated, consistent, and rele
 
 | Feature | Description |
 | ------- | ----------- |
-| Updated merge policies workflow | Platform has upgraded the merge policy configuration to a new stepwise workflow. This workflow enables users to bring together data fragments from multiple Profile datasets and set priority for how data is merged across those datasets in order to create a comprehensive view of each individual. Users can merge selected XDM Individual Profile datasets by selecting the appropriate merge method (Timestamp ordered or Dataset precedence) and appending ExperienceEvent datasets to the Profile datasets.|
+| Updated merge policies workflow | Experience Platform has upgraded the merge policy configuration to a new stepwise workflow. This workflow enables users to bring together data fragments from multiple Profile datasets and set priority for how data is merged across those datasets in order to create a comprehensive view of each individual. Users can merge selected XDM Individual Profile datasets by selecting the appropriate merge method (Timestamp ordered or Dataset precedence) and appending ExperienceEvent datasets to the Profile datasets.|
 | Union schema view | In the Experience Platform UI, users can more easily find information regarding all schemas and datasets contributing to the union schema, as well as surface key attributes such as identity and relationship fields. These updates improve the ability to troubleshoot and validate that profiles are correctly configured, identities are correctly stitched, and data has been successfully ingested. |
 
 For more information on Real-Time Customer Profile, including tutorials and best practices for working with [!DNL Profile] data, please read the [Real-Time Customer Profile overview](../../profile/home.md).

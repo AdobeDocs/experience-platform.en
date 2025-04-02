@@ -17,8 +17,8 @@ This document provides steps on how to subscribe receive alerts messages for you
 This document requires a working understanding of the following components of Adobe Experience Platform:
 
 * [Sources](../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Experience Platform] services.
-* [Observability](../../../observability/home.md): [!DNL Observability Insights] allows you to monitor Platform activities through the use of statistical metrics and event notifications.
-  * [Alerts](../../../observability/alerts/overview.md): When a certain set of conditions in your Platform operations is reached (such as a potential problem when the system breaches a threshold), Platform can deliver alert messages to any users in your organization who have subscribed to them.
+* [Observability](../../../observability/home.md): [!DNL Observability Insights] allows you to monitor Experience Platform activities through the use of statistical metrics and event notifications.
+  * [Alerts](../../../observability/alerts/overview.md): When a certain set of conditions in your Experience Platform operations is reached (such as a potential problem when the system breaches a threshold), Experience Platform can deliver alert messages to any users in your organization who have subscribed to them.
 
 ## Subscribe to alerts in the UI {#subscribe-sources-alerts}
 
@@ -30,7 +30,7 @@ This document requires a working understanding of the following components of Ad
 
 >[!IMPORTANT]
 >
->You must enable instant notifications of emails for your Platform account in order to receive email-based alert notifications for your dataflows.
+>You must enable instant notifications of emails for your Experience Platform account in order to receive email-based alert notifications for your dataflows.
 
 You can enable alerts for your dataflows during the [!UICONTROL Dataflow detail] step of the sources workflow in the sources workspace.
 
@@ -45,7 +45,7 @@ The available alerts for sources dataflows are:
 | Alerts | Description |
 | --- | --- |
 | Sources Flow Run Start | This alert sends you a message when your source dataflow has started. |
-| Sources Flow Run Success | This alert sends you a message when data from your source is successfully ingested to Platform. |
+| Sources Flow Run Success | This alert sends you a message when data from your source is successfully ingested to Experience Platform. |
 | Sources Flow Run Failure | This alert sends you a message if an error occurs in your dataflow. |
 
 Select the alerts you would like to subscribe to and then select **[!UICONTROL Next]** to review and finish your dataflow.

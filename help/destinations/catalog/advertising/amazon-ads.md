@@ -120,7 +120,7 @@ The [!DNL Amazon Ads] connection supports hashed email address and hashed phone 
 
 * To map hashed email addresses, select the `Email_LC_SHA256` identity namespace as a source field.
 * To map hashed phone numbers, select the `Phone_SHA256` identity namespace as a source field.
-* To map unhashed email addresses or phone numbers, select the corresponding identity namespaces as source fields, and check the `Apply Transformation` option to have Platform hash the identities on activation.
+* To map unhashed email addresses or phone numbers, select the corresponding identity namespaces as source fields, and check the `Apply Transformation` option to have Experience Platform hash the identities on activation.
 * *NEW starting with the September 2024 release*: Amazon Ads requires you to map a field containing a `countryCode` value in the 2-character ISO format in order to facilitate the identity resolution process (for example: US, GB, MX, CA, and so on). Connections without `countryCode` mappings will result in negative impact to identity match rates.
 
 You only select a given target field one time in a destination configuration of the [!DNL Amazon Ads] connector.  For example, if you submit business email, you cannot also map personal email in the same destination configuration.

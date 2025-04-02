@@ -20,7 +20,7 @@ The ad-hoc activation API allows marketers to programmatically activate audience
 
 Use the ad-hoc activation API to export full files to your desired file reception system. Ad-hoc audience activation is only supported by [batch file-based destinations](../destination-types.md#file-based).
 
-The diagram below illustrates the end-to-end workflow for activating audiences via the ad-hoc activation API, including the segmentation jobs that take place in Platform every 24 hours.
+The diagram below illustrates the end-to-end workflow for activating audiences via the ad-hoc activation API, including the segmentation jobs that take place in Experience Platform every 24 hours.
 
 ![ad-hoc-activation](../assets/api/ad-hoc-activation/ad-hoc-activation-overview.png)
 
@@ -161,7 +161,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/d
 | Property | Description |
 | -------- | ----------- |
 | <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | The IDs of the destination instances to which you want to activate audiences. You can get these IDs from the Experience Platform UI, by navigating to **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** tab, and clicking on the desired destination row to bring up the destination ID in the right rail. For more information, read the [destinations workspace documentation](/help/destinations/ui/destinations-workspace.md#browse). |
-| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul>  | The IDs of the audiences that you want to activate to the selected destination. You can use the ad-hoc API to export Platform-generated audiences as well as external (custom upload) audiences. When activating external audiences, use the system-generated ID instead of the audience ID. You can find the system-generated ID in the audience summary view in the audiences UI. <br> ![View of the audience ID that should not be selected.](/help/destinations/assets/api/ad-hoc-activation/audience-id-do-not-use.png "View of the audience ID that should not be selected."){width="100" zoomable="yes"} <br> ![View of the system-generated audience ID that should be used.](/help/destinations/assets/api/ad-hoc-activation/system-generated-id-to-use.png "View of the system-generated audience ID that should be used."){width="100" zoomable="yes"} |
+| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul>  | The IDs of the audiences that you want to activate to the selected destination. You can use the ad-hoc API to export Experience Platform-generated audiences as well as external (custom upload) audiences. When activating external audiences, use the system-generated ID instead of the audience ID. You can find the system-generated ID in the audience summary view in the audiences UI. <br> ![View of the audience ID that should not be selected.](/help/destinations/assets/api/ad-hoc-activation/audience-id-do-not-use.png "View of the audience ID that should not be selected."){width="100" zoomable="yes"} <br> ![View of the system-generated audience ID that should be used.](/help/destinations/assets/api/ad-hoc-activation/system-generated-id-to-use.png "View of the system-generated audience ID that should be used."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -234,7 +234,7 @@ A successful response returns HTTP status 200.
 
 ## API error handling {#api-error-handling}
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
 
 ### API error codes and messages specific to the ad-hoc activation API {#specific-error-messages}
 

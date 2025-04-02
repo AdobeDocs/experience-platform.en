@@ -210,13 +210,13 @@ The following table lists compatible `Accept` header values, including those wit
 
 >[!NOTE]
 >
->Platform currently supports only one major version for each schema (`1`). Therefore, the value for `version` must always be `1` when performing lookup requests in order to return the latest minor version of the schema. See the subsection below for more information on schema versioning.
+>Experience Platform currently supports only one major version for each schema (`1`). Therefore, the value for `version` must always be `1` when performing lookup requests in order to return the latest minor version of the schema. See the subsection below for more information on schema versioning.
 
 ### Schema versioning {#versioning}
 
-Schema versions are referenced by `Accept` headers in the Schema Registry API and in `schemaRef.contentType` properties in downstream Platform service API payloads.
+Schema versions are referenced by `Accept` headers in the Schema Registry API and in `schemaRef.contentType` properties in downstream Experience Platform service API payloads.
 
-Currently, Platform only supports a single major version (`1`) for each schema. According to the [rules of schema evolution](../schema/composition.md#evolution), each update to a schema must be non-destructive, meaning that new minor versions of a schema (`1.2`, `1.3`, etc.) are always backward compatible with previous minor versions. Therefore, when specifying `version=1`, the Schema Registry always returns the **latest** major version `1` of a schema , meaning that previous minor versions are not returned.
+Currently, Experience Platform only supports a single major version (`1`) for each schema. According to the [rules of schema evolution](../schema/composition.md#evolution), each update to a schema must be non-destructive, meaning that new minor versions of a schema (`1.2`, `1.3`, etc.) are always backward compatible with previous minor versions. Therefore, when specifying `version=1`, the Schema Registry always returns the **latest** major version `1` of a schema , meaning that previous minor versions are not returned.
 
 >[!NOTE]
 >

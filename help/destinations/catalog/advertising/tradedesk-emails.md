@@ -125,7 +125,7 @@ Below is an example of correct identity mapping when activating audiences to [!D
 Selecting source fields:
 
 *  Select the `Email` namespace or attribute as source identity if using the raw email address on data ingestion. 
-*  Select the `Email_LC_SHA256` namespace or attribute as source identity if you hashed customer email addresses on data ingestion into Platform.  
+*  Select the `Email_LC_SHA256` namespace or attribute as source identity if you hashed customer email addresses on data ingestion into Experience Platform.  
 
 Selecting target fields:
 

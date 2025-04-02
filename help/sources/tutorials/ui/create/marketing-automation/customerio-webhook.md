@@ -47,9 +47,9 @@ Before creating a [!DNL Customer.io] source connection, you will require a sourc
 }
 ```
 
-### Create a Platform schema for [!DNL Customer.io] {#create-platform-schema}
+### Create an Experience Platform schema for [!DNL Customer.io] {#create-platform-schema}
 
-You must also ensure that you create a Platform schema to use for your source. See the tutorial on [creating a Platform schema](../../../../../xdm/schema/composition.md) for comprehensive steps on how to create a schema.
+You must also ensure that you create an Experience Platform schema to use for your source. See the tutorial on [creating an Experience Platform schema](../../../../../xdm/schema/composition.md) for comprehensive steps on how to create a schema.
 
 ![Experience Platform UI screenshot showing an example schema for Customer.io](../../../../images/tutorials/create/marketing-automation/customerio-webhook/schema.png)
 
@@ -65,7 +65,7 @@ Go to the [!UICONTROL Marketing automation] category to see the [!DNL Customer.i
 
 ## Select data {#select-data}
 
-The **[!UICONTROL Select data]** step appears, providing an interface for you to select the data that you want to bring to Platform.
+The **[!UICONTROL Select data]** step appears, providing an interface for you to select the data that you want to bring to Experience Platform.
 
 * The left part of the interface is a browser that allows you to view the available data streams within your account;
 * The right part of the interface lets you preview up to 100 rows of data from a JSON file.
@@ -92,7 +92,7 @@ When finished, select **[!UICONTROL Next]**.
 
 The [!UICONTROL Mapping] step appears, providing you with an interface to map the source fields from your source schema to their appropriate target XDM fields in the target schema.
 
-Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
+Experience Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
 
 All the mappings listed below are mandatory and should be setup before proceeding to the [!UICONTROL Review] stage.
 
@@ -150,7 +150,7 @@ In the [!DNL Customer.io] user interface, input your [webhook URL](#get-streamin
 
 >[!TIP]
 >
->You can subscribe to a variety of different events for your reporting webhook. Each events' message will be ingested to Platform when a [!DNL Customer.io] action event trigger criteria is met. For more information on the different events, please refer to the [[!DNL Customer.io] events documentation](https://customer.io/docs/webhooks/#events).
+>You can subscribe to a variety of different events for your reporting webhook. Each events' message will be ingested to Experience Platform when a [!DNL Customer.io] action event trigger criteria is met. For more information on the different events, please refer to the [[!DNL Customer.io] events documentation](https://customer.io/docs/webhooks/#events).
 
 ## Next steps {#next-steps}
 

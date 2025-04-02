@@ -21,7 +21,7 @@ This document explains how to configure first-party device IDs for your Web SDK 
 
 ## Prerequisites
 
-This guide assumes you are familiar with how identity data works for the Platform Web SDK, including the role of ECIDs and `identityMap`. See the overview on [identity data in the Web SDK](./overview.md) for more information.
+This guide assumes you are familiar with how identity data works for the Experience Platform Web SDK, including the role of ECIDs and `identityMap`. See the overview on [identity data in the Web SDK](./overview.md) for more information.
 
 ## Using first-party device IDs (FPIDs) {#using-fpid}
 
@@ -273,6 +273,6 @@ To reduce potential visitor inflation, the [!DNL FPID] should be generated befor
 
 Currently only Web SDK supports first-party device IDs.
 
-### Are first-party device IDs stored on any Platform or Experience Cloud solutions?
+### Are first-party device IDs stored on any Experience Platform or Experience Cloud solutions?
 
 Once the [!DNL FPID] has been used to seed an [!DNL ECID], it is dropped from the `identityMap` and replaced with the [!DNL ECID] that has been generated. The [!DNL FPID] is not stored in any Adobe Experience Platform or Experience Cloud solutions.

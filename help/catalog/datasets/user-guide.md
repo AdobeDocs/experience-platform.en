@@ -170,7 +170,7 @@ For more information on how to classify business objects for easier discovery an
 > 
 >Data retention settings are currently in beta and available only in a **limited release** for select organizations. Your UI might not reflect the feature described below.
 
-Manage dataset expiration and retention settings using the inline action menu from the [!UICONTROL Browse] tab of the [!UICONTROL Datasets] workspace. You can use this feature to configure how long data is retained in the data lake and Profile store. The expiration date is based on when data was ingested into Platform and your configured retention period.
+Manage dataset expiration and retention settings using the inline action menu from the [!UICONTROL Browse] tab of the [!UICONTROL Datasets] workspace. You can use this feature to configure how long data is retained in the data lake and Profile store. The expiration date is based on when data was ingested into Experience Platform and your configured retention period.
 
 >[!TIP]
 >

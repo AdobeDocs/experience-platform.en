@@ -62,7 +62,7 @@ See the guide on [managing user groups in Admin Console](https://helpx.adobe.com
 >
 >If you are following this document from the [Privacy Service API guide](../privacy-service/api/getting-started.md), you can now return to that guide to generate the access credentials unique to [!DNL Privacy Service].
 
-After you have been given developer and user access to Platform through Admin Console, the next step is to generate your `{ORG_ID}` and `{API_KEY}` credentials in Adobe Developer Console. These credentials only need to be generated once and can be reused in future Experience Platform API calls.
+After you have been given developer and user access to Experience Platform through Admin Console, the next step is to generate your `{ORG_ID}` and `{API_KEY}` credentials in Adobe Developer Console. These credentials only need to be generated once and can be reused in future Experience Platform API calls.
 
 >[!TIP]
 >
@@ -104,7 +104,7 @@ In the **[!UICONTROL Configure API]** screen, select **[!UICONTROL AEP-Default-A
 
 >[!IMPORTANT]
 >
->To get access to certain features in Platform, you also need a system administrator to grant you the necessary attribute-based access control permissions. Read more in the section [Get the necessary attribute-based access control permissions](#get-abac-permissions).
+>To get access to certain features in Experience Platform, you also need a system administrator to grant you the necessary attribute-based access control permissions. Read more in the section [Get the necessary attribute-based access control permissions](#get-abac-permissions).
 
 ![Select product profiles for your integration.](./images/api-authentication/select-product-profiles.png)
 
@@ -290,7 +290,7 @@ If your response is similar to the one shown below, then your credentials are va
 
 To access or modify several resources within Experience Platform, you must have the appropriate access control permissions. System administrators can grant you the [permissions you need](/help/access-control/ui/permissions.md). Get more information in the section about [managing API credentials for a role](/help/access-control/abac/ui/permissions.md#manage-api-credentials-for-role).
 
-Detailed information about how a system administrator can grant the required permissions to access Platform resources through the API is also available in the video tutorial below:
+Detailed information about how a system administrator can grant the required permissions to access Experience Platform resources through the API is also available in the video tutorial below:
 
 >[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on&t=159)
 

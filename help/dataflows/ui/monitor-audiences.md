@@ -6,7 +6,7 @@ exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
 ---
 # Monitor dataflows for audiences in the UI
 
-Segmentation Service allows you to create audiences through segment definitions or other sources from your [!DNL Real-Time Customer Profile] data. Platform provides dataflows to transparently track this flow of data from sources to destinations.
+Segmentation Service allows you to create audiences through segment definitions or other sources from your [!DNL Real-Time Customer Profile] data. Experience Platform provides dataflows to transparently track this flow of data from sources to destinations.
 
 Use the monitoring dashboard to see a visual representation of the data's activity within an audience, including the status of your data's segmentation. Read the tutorial for instructions on how you can use the monitoring dashboard to monitor your data's segmentation using the Experience Platform user interface, allowing you to track the status of audience activation, evaluation, and export jobs.
 
@@ -14,7 +14,7 @@ Use the monitoring dashboard to see a visual representation of the data's activi
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-- [Dataflows](../home.md): Dataflows are a representation of data jobs that move data across Platform. Dataflows are configured across different services, helping move data from source connectors to target datasets, to [!DNL Identity] and [!DNL Profile], and to [!DNL Destinations].
+- [Dataflows](../home.md): Dataflows are a representation of data jobs that move data across Experience Platform. Dataflows are configured across different services, helping move data from source connectors to target datasets, to [!DNL Identity] and [!DNL Profile], and to [!DNL Destinations].
   - [Dataflow runs](../../sources/notifications.md): Dataflow runs are the recurring scheduled jobs based on the frequency configuration of selected dataflows.
 - [Segmentation](../../segmentation/home.md): Segmentation allows you to create audiences from your Real-Time Customer Profile data. 
   - [Activation jobs](../../destinations/ui/activation-overview.md): An activation job is used to activate your audience to a specified destination.

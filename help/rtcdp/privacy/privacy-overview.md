@@ -27,7 +27,7 @@ See the document on [honoring opt-out requests](../../segmentation/tutorials/con
 
 ## IAB TCF 2.0 support
 
-[!DNL Real-Time CDP] is built on Adobe Experience Platform, which is part of the registered [vendor list](https://iabeurope.eu/vendor-list-tcf/) for the [!DNL Transparency & Consent Framework (TCF)], as outlined by the [!DNL Interactive Advertising Bureau (IAB)]. In compliance with TCF 2.0 requirements, Platform allows you to collect detailed customer consent data and integrate it into your stored customer profiles. This consent data can then be factored into whether certain profiles are included in exported audiences, depending on their use case.
+[!DNL Real-Time CDP] is built on Adobe Experience Platform, which is part of the registered [vendor list](https://iabeurope.eu/vendor-list-tcf/) for the [!DNL Transparency & Consent Framework (TCF)], as outlined by the [!DNL Interactive Advertising Bureau (IAB)]. In compliance with TCF 2.0 requirements, Experience Platform allows you to collect detailed customer consent data and integrate it into your stored customer profiles. This consent data can then be factored into whether certain profiles are included in exported audiences, depending on their use case.
 
 See the overview on [IAB TCF 2.0 support in Experience Platform](../../landing/governance-privacy-security/consent/iab/overview.md) for more information.
 

@@ -73,7 +73,7 @@ See the [Event Forwarding properties documentation](/help/tags/ui/event-forwardi
 
 ## Create rules to send conversion events to Snap {#create-snap-rules}
 
-[Rules](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule) are used to trigger extensions in Platform. This section outlines how to create rules within your event forwarding property to send conversion events to Snap using the Conversions API extension.
+[Rules](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule) are used to trigger extensions in Experience Platform. This section outlines how to create rules within your event forwarding property to send conversion events to Snap using the Conversions API extension.
 
 ### Create a new rule
 
@@ -195,4 +195,4 @@ If you experience issues with your **Event Quality Score**, learn more about our
 
 ## Next steps {#next-steps}
 
-This guide covered how to send server-side event data to **[!DNL Snap]** using the **[!DNL Snap Conversions API]** extension. For more information on event forward capabilities in Platform, refer to the [Event forwarding overview](../../../ui/event-forwarding/overview.md).
+This guide covered how to send server-side event data to **[!DNL Snap]** using the **[!DNL Snap Conversions API]** extension. For more information on event forward capabilities in Experience Platform, refer to the [Event forwarding overview](../../../ui/event-forwarding/overview.md).

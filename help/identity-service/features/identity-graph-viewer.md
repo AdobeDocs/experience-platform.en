@@ -7,7 +7,7 @@ exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
 
 An identity graph is a map of relationships between different identities for a particular customer, providing you with a visual representation of how your customer interacts with your brand across different channels. All customer identity graphs are collectively managed and updated by Adobe Experience Platform Identity Service in near real-time, in response to customer activity.
 
-The identity graph viewer in the Platform user interface allows you to visualize and better understand what customer identities are stitched together, and in what ways. The viewer allows you to drag and interact with different parts of the graph, allowing you to examine complex identity relationships, debug more efficiently, and benefit from increased transparency with how information is being utilized.
+The identity graph viewer in the Experience Platform user interface allows you to visualize and better understand what customer identities are stitched together, and in what ways. The viewer allows you to drag and interact with different parts of the graph, allowing you to examine complex identity relationships, debug more efficiently, and benefit from increased transparency with how information is being utilized.
 
 The following document provides steps on how to access and use the identity graph viewer in the Experience Platform UI.
 
@@ -129,7 +129,7 @@ From the preview window, select a fingerprint icon to see the identities represe
 
 ## Next steps
 
-By reading this document, you have learned how to explore your customers' identity graphs in the Experience Platform UI. For more information on identities in Platform, please refer to the [Identity Service overview](../home.md)
+By reading this document, you have learned how to explore your customers' identity graphs in the Experience Platform UI. For more information on identities in Experience Platform, please refer to the [Identity Service overview](../home.md)
 
 ## Changelog
 

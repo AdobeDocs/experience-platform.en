@@ -29,7 +29,7 @@ For more information on finding your database name, host, port, and login creden
 
 After inserting your credentials, select **[!DNL Connect]** to connect with Query Service.
 
-After connecting to Platform, you'll be able to see a list of all the relations previously made with Query Service.
+After connecting to Experience Platform, you'll be able to see a list of all the relations previously made with Query Service.
 
 ## Create SQL statements
 

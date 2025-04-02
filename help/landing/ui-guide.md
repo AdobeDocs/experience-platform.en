@@ -73,7 +73,7 @@ The next item on the right side of the top navigation is the **application switc
 
 ### Help
 
-To the right of the application switcher is the **help and support menu**, which is represented by the ![question mark/help](/help/images/icons/help.png) icon. When you select this icon, a popover menu appears, containing several help and support resources. The **[!UICONTROL Help]** tab shows a list of relevant documentation for the page you're currently on. The **[!UICONTROL Support]** tab allows you to create a support ticket with the Adobe support team. The **[!UICONTROL Feedback]** tab allows you to submit feedback about Platform to Adobe.
+To the right of the application switcher is the **help and support menu**, which is represented by the ![question mark/help](/help/images/icons/help.png) icon. When you select this icon, a popover menu appears, containing several help and support resources. The **[!UICONTROL Help]** tab shows a list of relevant documentation for the page you're currently on. The **[!UICONTROL Support]** tab allows you to create a support ticket with the Adobe support team. The **[!UICONTROL Feedback]** tab allows you to submit feedback about Experience Platform to Adobe.
 
 ![](images/user-guide/homepage-help-clicked.png)
 
@@ -85,13 +85,13 @@ In the **notifications section**, which is represented by the ![bell/Notificatio
 
 The final item on the top navigation bar is the **user settings**, represented by the ![user settings/User Profile](images/user-guide/profile-icon.png) icon. Select this icon to edit your preferences or sign out.
 
-You can toggle between the light and dark theme for the Platform interface with the switch located just below your name and email. Select the theme you prefer.
+You can toggle between the light and dark theme for the Experience Platform interface with the switch located just below your name and email. Select the theme you prefer.
 
 ![](images/theme.png)
 
 ### Sandboxes
 
-Immediately below the top navigation bar is the sandbox bar. This bar shows which sandbox you are currently using for Platform. You can find more information about sandboxes in the [sandboxes overview](../sandboxes/home.md).
+Immediately below the top navigation bar is the sandbox bar. This bar shows which sandbox you are currently using for Experience Platform. You can find more information about sandboxes in the [sandboxes overview](../sandboxes/home.md).
 
 ## Left navigation {#left-nav}
 
@@ -111,13 +111,13 @@ You can lock the navigation in the open position by clicking again after showing
 
 The **[!UICONTROL Home]** section lets you return to the Experience Platform UI homepage.
 
-The **[!UICONTROL Workflows]** section shows a list of multi-step workflows for performing operations within Platform. You can find more information about workflows in the [workflows overview](./workflows.md).
+The **[!UICONTROL Workflows]** section shows a list of multi-step workflows for performing operations within Experience Platform. You can find more information about workflows in the [workflows overview](./workflows.md).
 
 ### [!UICONTROL Connections]
 
-The **[!UICONTROL Sources]** section lets you create, update, and delete source connections, allowing you to ingest data from external sources into Platform. You can find more information about sources in the [sources overview](../sources/home.md).
+The **[!UICONTROL Sources]** section lets you create, update, and delete source connections, allowing you to ingest data from external sources into Experience Platform. You can find more information about sources in the [sources overview](../sources/home.md).
 
-The **[!UICONTROL Destinations]** section lets you create, update, and delete destinations, allowing you to export data from Platform to many external destinations. You can find more information about destinations in the [destinations overview](../destinations/home.md).
+The **[!UICONTROL Destinations]** section lets you create, update, and delete destinations, allowing you to export data from Experience Platform to many external destinations. You can find more information about destinations in the [destinations overview](../destinations/home.md).
 
 ### [!UICONTROL Customer]
 
@@ -166,7 +166,7 @@ Adobe Journey Optimizer is an application service built on top of Experience Pla
 
 ### [!UICONTROL Administration]
 
-The Platform user interface (UI) provides a dashboard through which you can view important information about your organization's license usage, as captured during a daily snapshot. Access this dashboard by selecting **[!UICONTROL License usage]** in the navigation. To learn more about the license usage dashboard, visit the [license usage dashboard guide](./license-usage-and-guardrails/license-usage-dashboard.md).
+The Experience Platform user interface (UI) provides a dashboard through which you can view important information about your organization's license usage, as captured during a daily snapshot. Access this dashboard by selecting **[!UICONTROL License usage]** in the navigation. To learn more about the license usage dashboard, visit the [license usage dashboard guide](./license-usage-and-guardrails/license-usage-dashboard.md).
 
 >[!IMPORTANT]
 >
@@ -174,4 +174,4 @@ The Platform user interface (UI) provides a dashboard through which you can view
 
 ## Next steps
 
-By reading this guide, you now have been introduced to the home page and major navigational elements of the Experience Platform UI. For more detailed information about working in the user interface, please refer to the documentation for each individual Platform service. Links to this documentation are provided in the [left navigation](#left-nav) section found earlier in this document.
+By reading this guide, you now have been introduced to the home page and major navigational elements of the Experience Platform UI. For more detailed information about working in the user interface, please refer to the documentation for each individual Experience Platform service. Links to this documentation are provided in the [left navigation](#left-nav) section found earlier in this document.

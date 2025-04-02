@@ -9,7 +9,7 @@ exl-id: de5e07bc-2c44-416e-99db-7607059117cb
 
 The Adobe Experience Platform user interface (UI) provides a dashboard through which you can view important information about your audiences, as captured during a daily snapshot. This guide outlines how to access and work with the [!UICONTROL Audiences] dashboard in the UI and provides more information regarding the visualizations displayed in the dashboard.  
 
-For an overview of all of the Adobe Experience Platform Segmentation Service features within the Platform user interface, please visit the [Segmentation Service UI guide](../../segmentation/ui/overview.md).
+For an overview of all of the Adobe Experience Platform Segmentation Service features within the Experience Platform user interface, please visit the [Segmentation Service UI guide](../../segmentation/ui/overview.md).
 
 ## [!UICONTROL Audiences] dashboard data
 
@@ -27,7 +27,7 @@ To navigate to the [!UICONTROL Audiences] dashboard within the Experience Platfo
 
 >[!NOTE]
 >
->If your organization is new to Platform and does not yet have active Profile datasets or merge policies created, the [!UICONTROL Audiences] dashboard is not visible. Instead, the [!UICONTROL Overview] tab displays links and documentation to help you get started with segmentation.
+>If your organization is new to Experience Platform and does not yet have active Profile datasets or merge policies created, the [!UICONTROL Audiences] dashboard is not visible. Instead, the [!UICONTROL Overview] tab displays links and documentation to help you get started with segmentation.
 
 ![The [!UICONTROL Audiences] dashboard [!UICONTROL Overview] tab with [!UICONTROL Audiences] and [!UICONTROL Overview] highlighted.](../images/audiences/dashboard-overview.png)
 
@@ -47,7 +47,7 @@ From the widget library, you can browse the selection of standard and custom aud
 
 ### View SQL {#view-sql}
 
-You can view the SQL that generates the insights visualized on your dashboard with a toggle on the [!UICONTROL Overview] workspace. You can take inspiration from the SQL of your existing insights to create new queries that derive unique insights from Platform data based on your business needs. To learn more about this feature, see the [View SQL UI guide](../view-sql.md).
+You can view the SQL that generates the insights visualized on your dashboard with a toggle on the [!UICONTROL Overview] workspace. You can take inspiration from the SQL of your existing insights to create new queries that derive unique insights from Experience Platform data based on your business needs. To learn more about this feature, see the [View SQL UI guide](../view-sql.md).
 
 ## Select a audience {#select-audience}
 

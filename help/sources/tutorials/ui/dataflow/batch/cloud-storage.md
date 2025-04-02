@@ -32,7 +32,7 @@ Cloud storage sources for batch data supports the following file formats for ing
 
 ## Add data
 
-After creating your cloud storage account, the **[!UICONTROL Add data]** step appears, providing an interface for you to explore your cloud storage file hierarchy and select the folder or specific file that you want to bring to Platform.
+After creating your cloud storage account, the **[!UICONTROL Add data]** step appears, providing an interface for you to explore your cloud storage file hierarchy and select the folder or specific file that you want to bring to Experience Platform.
 
 * The left part of the interface is a directory browser, displaying your cloud storage file hierarchy.
 * The right part of the interface lets you preview up to 100 rows of data from a compatible folder or file.
@@ -77,7 +77,7 @@ In the [!UICONTROL Select data] step, select a compressed file for ingestion and
 
 ![](../../../../images/tutorials/dataflow/cloud-batch/custom.png)
 
-To bring a specific file to Platform, select a folder, and then select the file that you want to ingest. During this step, you can also preview file contents of other files within a given folder by using the preview icon beside a file name. 
+To bring a specific file to Experience Platform, select a folder, and then select the file that you want to ingest. During this step, you can also preview file contents of other files within a given folder by using the preview icon beside a file name. 
 
 When finished, select **[!UICONTROL Next]**.
 
@@ -121,7 +121,7 @@ When you are finished providing details to your dataflow, select **[!UICONTROL N
 
 The [!UICONTROL Mapping] step appears, providing you with an interface to map the source fields from your source schema to their appropriate target XDM fields in the target schema.
 
-Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
+Experience Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
 
 Once your source data is successfully mapped, select **[!UICONTROL Next]**.
 

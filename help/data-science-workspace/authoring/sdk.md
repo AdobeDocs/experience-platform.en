@@ -36,7 +36,7 @@ The following table describes the abstract methods of a PySpark Data Loader clas
         <tr>
             <td>
                 <p><code>load(self, configProperties, spark)</code></p>
-                <p>Load and return Platform data as a Pandas DataFrame</p>
+                <p>Load and return Experience Platform data as a Pandas DataFrame</p>
             </td>
             <td>
                 <ul>
@@ -64,7 +64,7 @@ The following table describes the abstract methods of a [!DNL Spark] Data Loader
         <tr>
             <td>
                 <p><code>load(configProperties, sparkSession)</code></p>
-                <p>Load and return Platform data as a DataFrame</p>
+                <p>Load and return Experience Platform data as a DataFrame</p>
             </td>
             <td>
                 <ul>
@@ -210,7 +210,7 @@ The following table describes the abstract methods of a [!DNL PySpark] Data Save
         <tr>
             <td>
                 <p><code>save(self, configProperties, dataframe)</code></p>
-                <p>Receive output data as a DataFrame and stores it in a Platform dataset</p>
+                <p>Receive output data as a DataFrame and stores it in a Experience Platform dataset</p>
             </td>
             <td>
                 <ul>
@@ -238,7 +238,7 @@ The following table describes the abstract methods of a [!DNL Spark] Data Saver 
         <tr>
             <td>
                 <p><code>save(configProperties, dataFrame)</code></p>
-                <p>Receive output data as a DataFrame and stores it in a Platform dataset</p>
+                <p>Receive output data as a DataFrame and stores it in a Experience Platform dataset</p>
             </td>
             <td>
                 <ul>
@@ -273,7 +273,7 @@ from .helper import *
 
 class MyDataSaver(DataSaver):
     """
-    Implementation of DataSaver which stores a DataFrame to a Platform dataset
+    Implementation of DataSaver which stores a DataFrame to an Experience Platform dataset
     """
 
     def save(self, config_properties, prediction):
@@ -341,7 +341,7 @@ import org.apache.spark.sql.functions._
 import org.apache.spark.sql.types.TimestampType
 
 /**
- * Implementation of DataSaver which stores a DataFrame to a Platform dataset
+ * Implementation of DataSaver which stores a DataFrame to an Experience Platform dataset
  */
 
 class ScoringDataSaver extends DataSaver {

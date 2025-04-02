@@ -20,7 +20,7 @@ Manage customer data and ensure compliance with regulations, restrictions, and p
 
 >[!NOTE]
 >
->In Experience Platform, data governance is only concerned with how data is used or activated, regardless of the user performing the action. For information on how to control access to specific data fields for certain Platform users within your organization, see the documentation on [attribute-based access control](../access-control/abac/overview.md) instead.
+>In Experience Platform, data governance is only concerned with how data is used or activated, regardless of the user performing the action. For information on how to control access to specific data fields for certain Experience Platform users within your organization, see the documentation on [attribute-based access control](../access-control/abac/overview.md) instead.
 
 ## Data governance roles {#data-governance-roles}
 

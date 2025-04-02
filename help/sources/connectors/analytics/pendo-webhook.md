@@ -10,7 +10,7 @@ exl-id: 376f18ef-1eea-4c42-8041-6fadb5906e9b
 >
 >The [!DNL Pendo] source is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
 Experience Platform provides support for ingesting data from third-party analytics application. Support for analytics providers include [!DNL Pendo].
 
@@ -32,16 +32,16 @@ A [!DNL Pendo] account. If you do not have one already see the [[!DNL Pendo] reg
 
 ### Set up [!DNL Pendo] Webhook {#set-up-webhook}
 
-Once you have successfully created your dataflow, you must set up a webhook to inform Platform about [!DNL Pendo] events. [!DNL Pendo] Webhooks can push out real-time notifications to other services when certain events happen, and send this information to your [!DNL Pendo] source. For more information, read the tutorials on [getting your streaming endpoint URL](../../tutorials/ui/create/analytics/pendo-webhook.md#get-streaming-endpoint) and [setting up a [!DNL Pendo] Webhook](../../tutorials/ui/create/analytics/pendo-webhook.md#set-up-webhook).
+Once you have successfully created your dataflow, you must set up a webhook to inform Experience Platform about [!DNL Pendo] events. [!DNL Pendo] Webhooks can push out real-time notifications to other services when certain events happen, and send this information to your [!DNL Pendo] source. For more information, read the tutorials on [getting your streaming endpoint URL](../../tutorials/ui/create/analytics/pendo-webhook.md#get-streaming-endpoint) and [setting up a [!DNL Pendo] Webhook](../../tutorials/ui/create/analytics/pendo-webhook.md#set-up-webhook).
 
-## Connecting [!DNL Pendo] to Platform {#connect-to-platform}
+## Connecting [!DNL Pendo] to Experience Platform {#connect-to-platform}
 
 The documentation below provides information on how to create a [!DNL Pendo] streaming connector to connect with [!DNL Experience Platform] using APIs or the user interface:
 
-### Connect [!DNL Pendo] to Platform using APIs {#connect-to-platform-using-api}
+### Connect [!DNL Pendo] to Experience Platform using APIs {#connect-to-platform-using-api}
 
-* [Create a source connection to bring [!DNL Pendo] data to Platform using APIs.](../../tutorials/api/create/analytics/pendo-webhook.md)
+* [Create a source connection to bring [!DNL Pendo] data to Experience Platform using APIs.](../../tutorials/api/create/analytics/pendo-webhook.md)
 
-### Connect [!DNL Pendo] to Platform using the UI {#connect-to-platform-using-ui}
+### Connect [!DNL Pendo] to Experience Platform using the UI {#connect-to-platform-using-ui}
 
-* [Create a source connection to bring [!DNL Pendo] data to Platform using the user interface](../../tutorials/ui/create/analytics/pendo-webhook.md)
+* [Create a source connection to bring [!DNL Pendo] data to Experience Platform using the user interface](../../tutorials/ui/create/analytics/pendo-webhook.md)

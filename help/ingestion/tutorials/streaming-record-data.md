@@ -258,7 +258,7 @@ POST /collection/{CONNECTION_ID}?syncValidation=true
 
 Ingesting record data to a streaming connection can be done either with or without the source name.
 
-The example request below ingests a record with a missing source name to Platform. If a record is missing the source name, it will add the source ID from the streaming connection definition.
+The example request below ingests a record with a missing source name to Experience Platform. If a record is missing the source name, it will add the source ID from the streaming connection definition.
 
 >[!NOTE]
 >

@@ -20,7 +20,7 @@ If you already have a valid [!DNL SugarCRM] account, you may skip the remainder 
 
 ### Gather required credentials
 
-In order to connect [!DNL SugarCRM Accounts & Contacts] to Platform, you must provide values for the following connection properties:
+In order to connect [!DNL SugarCRM Accounts & Contacts] to Experience Platform, you must provide values for the following connection properties:
 
 | Credential | Description | Example |
 | --- | --- | --- |
@@ -28,9 +28,9 @@ In order to connect [!DNL SugarCRM Accounts & Contacts] to Platform, you must pr
 | `Username` | Your SugarCRM developer account username. | `abc.def@example.com@sugarmarketdemo000.com` |
 | `Password` | Your SugarCRM developer account password. | `123456789` |
 
-### Create a Platform schema
+### Create an Experience Platform schema
 
-Before creating a [!DNL SugarCRM] source connection, you must also ensure that you first create a Platform schema to use for your source. See the tutorial on [creating a Platform schema](../../../../../xdm/schema/composition.md) for comprehensive steps on how to create a schema.
+Before creating a [!DNL SugarCRM] source connection, you must also ensure that you first create an Experience Platform schema to use for your source. See the tutorial on [creating an Experience Platform schema](../../../../../xdm/schema/composition.md) for comprehensive steps on how to create a schema.
 
 The [!DNL SugarCRM Accounts & Contacts] supports multiple APIs. This means that you have to create a separate schema, depending on the object type that you are leveraging. See the examples below for both accounts and contacts schemas:
 
@@ -72,7 +72,7 @@ If you are creating a new account, select **[!UICONTROL New account]**, and then
 
 ### Select data
 
-Finally, you must select the object type that you want to ingest to Platform.
+Finally, you must select the object type that you want to ingest to Experience Platform.
 
 | Object type | Description |
 | --- | --- |
@@ -93,7 +93,7 @@ Finally, you must select the object type that you want to ingest to Platform.
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your [!DNL SugarCRM Accounts & Contacts] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](../../dataflow/crm.md).
+By following this tutorial, you have established a connection to your [!DNL SugarCRM Accounts & Contacts] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Experience Platform](../../dataflow/crm.md).
 
 ## Additional resources
 

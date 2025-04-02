@@ -58,7 +58,7 @@ This guide requires a working understanding of the following components of Adobe
 * [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md): All data that is successfully ingested into Adobe Experience Platform is persisted within the [!DNL Data Lake] as datasets. A dataset is a storage and management construct for a collection of data, typically a table, that contains a schema (columns) and fields (rows). Datasets also contain metadata that describes various aspects of the data they store. 
   * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Experience Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you must know in order to export datasets to cloud storage destinations in Platform.
+The following sections provide additional information that you must know in order to export datasets to cloud storage destinations in Experience Platform.
 
 ### Required permissions {#permissions}
 
@@ -2462,7 +2462,7 @@ Note the difference in file format between the two file types, when compressed:
 
 ## API error handling {#api-error-handling}
 
-The API endpoints in this tutorial follow the general Experience Platform API error message principles. Refer to [API status codes](/help/landing/troubleshooting.md#api-status-codes) and [request header errors](/help/landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide for more information on interpreting error responses.
+The API endpoints in this tutorial follow the general Experience Platform API error message principles. Refer to [API status codes](/help/landing/troubleshooting.md#api-status-codes) and [request header errors](/help/landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide for more information on interpreting error responses.
 
 ## Known limitations {#known-limitations}
 
@@ -2474,7 +2474,7 @@ View a [list of frequently asked questions](/help/destinations/ui/export-dataset
 
 ## Next steps {#next-steps}
 
-By following this tutorial, you have successfully connected Platform to one of your preferred batch cloud storage destinations and set up a dataflow to the respective destination to export datasets. See the following pages for more details, such as how to edit existing dataflows using the Flow Service API:
+By following this tutorial, you have successfully connected Experience Platform to one of your preferred batch cloud storage destinations and set up a dataflow to the respective destination to export datasets. See the following pages for more details, such as how to edit existing dataflows using the Flow Service API:
 
 * [Destinations overview](../home.md)
 * [Destinations catalog overview](../catalog/overview.md)

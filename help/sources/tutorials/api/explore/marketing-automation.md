@@ -22,7 +22,7 @@ The following sections provide additional information that you will need to know
 
 ### Gather required credentials
 
-This tutorial requires you to have a valid connection with the third-party marketing automation application you wish to ingest data from. A valid connection involves your application's connection specification ID and connection ID. More information about creating an marketing automation connection and retrieving these values can be found in the [connect a marketing automation source to Platform](../../api/create/marketing-automation/hubspot.md) tutorial.
+This tutorial requires you to have a valid connection with the third-party marketing automation application you wish to ingest data from. A valid connection involves your application's connection specification ID and connection ID. More information about creating an marketing automation connection and retrieving these values can be found in the [connect a marketing automation source to Experience Platform](../../api/create/marketing-automation/hubspot.md) tutorial.
 
 ### Reading sample API calls
 
@@ -178,4 +178,4 @@ A successful response returns the structure of a table. Details regarding each o
 
 ## Next steps
 
-By following this tutorial, you have explored your marketing automation system, found the path of the table you wish to bring in to [!DNL Experience Platform], and obtained information regarding its structure. You can use this information in the next tutorial to [collect data from your marketing automation system and bring it into Platform](../collect/marketing-automation.md).
+By following this tutorial, you have explored your marketing automation system, found the path of the table you wish to bring in to [!DNL Experience Platform], and obtained information regarding its structure. You can use this information in the next tutorial to [collect data from your marketing automation system and bring it into Experience Platform](../collect/marketing-automation.md).

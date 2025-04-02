@@ -2,7 +2,7 @@
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 title: Merge Policies API Endpoint
 type: Documentation
-description: Adobe Experience Platform enables you to bring data fragments together from multiple sources and combine them in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that Platform uses to determine how data will be prioritized and what data will be combined to create a unified view.
+description: Adobe Experience Platform enables you to bring data fragments together from multiple sources and combine them in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that Experience Platform uses to determine how data will be prioritized and what data will be combined to create a unified view.
 role: Developer
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
 ---
@@ -10,7 +10,7 @@ exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
 
 Adobe Experience Platform enables you to bring data fragments together from multiple sources and combine them in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that [!DNL Experience Platform] uses to determine how data will be prioritized and what data will be combined to create a unified view. 
 
-For example, if a customer interacts with your brand across several channels, your organization will have multiple profile fragments related to that single customer appearing in multiple datasets. When these fragments are ingested into Platform, they are merged together in order to create a single profile for that customer. When the data from multiple sources conflicts (for example one fragment lists the customer as "single" while the other lists the customer as "married") the merge policy determines which information to include in the profile for the individual.
+For example, if a customer interacts with your brand across several channels, your organization will have multiple profile fragments related to that single customer appearing in multiple datasets. When these fragments are ingested into Experience Platform, they are merged together in order to create a single profile for that customer. When the data from multiple sources conflicts (for example one fragment lists the customer as "single" while the other lists the customer as "married") the merge policy determines which information to include in the profile for the individual.
 
 Using RESTful APIs or the user interface, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. This guide provides steps for working with merge policies using the API. 
 
@@ -756,6 +756,6 @@ A successful delete request returns HTTP Status 200 (OK) and an empty response b
 
 ## Next steps
 
-Now that you know how to create and configure merge policies for your organization, you can use them to adjust the view of customer profiles within Platform and to create audiences from your [!DNL Real-Time Customer Profile] data. 
+Now that you know how to create and configure merge policies for your organization, you can use them to adjust the view of customer profiles within Experience Platform and to create audiences from your [!DNL Real-Time Customer Profile] data. 
 
 Please see the [Adobe Experience Platform Segmentation Service documentation](../../segmentation/home.md) to begin defining and working with audiences.

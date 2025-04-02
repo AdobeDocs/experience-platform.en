@@ -136,7 +136,7 @@ All this data from disparate sources is merged into a single unified customer pr
 
 ## Configuring a data source
 
-Use [!DNL Real-Time Customer Data Platform] to bring new sources of data into Platform. Real-Time CDP includes a catalog of data sources that can be quickly and easily added to the profile.  
+Use [!DNL Real-Time Customer Data Platform] to bring new sources of data into Experience Platform. Real-Time CDP includes a catalog of data sources that can be quickly and easily added to the profile.  
 
 ![image](assets/luma-source-cat.png)
 

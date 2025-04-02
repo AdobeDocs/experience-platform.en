@@ -36,9 +36,9 @@ In order to connect [!DNL SAP Commerce] to Experience Platform, you must provide
   
 For more information, please refer to the [[!DNL SAP Commerce] documentation](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html).
 
-### Create a Platform schema {#create-platform-schema}
+### Create an Experience Platform schema {#create-platform-schema}
 
-Before creating a [!DNL SAP Commerce] source connection, you must also ensure that you first create an Experience Platform schema to use for your source. See the tutorial on [creating a Platform schema](../../../../../xdm/schema/composition.md) for comprehensive steps on how to create a schema.
+Before creating a [!DNL SAP Commerce] source connection, you must also ensure that you first create an Experience Platform schema to use for your source. See the tutorial on [creating an Experience Platform schema](../../../../../xdm/schema/composition.md) for comprehensive steps on how to create a schema.
 
 Expand the following section to view an example schema.
 
@@ -161,7 +161,7 @@ If you are creating a new account, select **[!UICONTROL New account]**, and then
 
 ### Select data {#select-data}
 
-Finally, you must select the object type that you want to ingest to Platform.
+Finally, you must select the object type that you want to ingest to Experience Platform.
 
 | Object type | Description |
 | --- | --- |
@@ -186,7 +186,7 @@ To ingest contact data, select **[!UICONTROL Contacts]** as your object type and
 
 ## Next steps {#next-steps}
 
-By following this tutorial, you have established a connection to your [!DNL SAP Commerce] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](../../dataflow/ecommerce.md).
+By following this tutorial, you have established a connection to your [!DNL SAP Commerce] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Experience Platform](../../dataflow/ecommerce.md).
 
 ## Additional resources {#additional-resources}
 
@@ -194,7 +194,7 @@ The sections below provide additional resources that you can refer to when using
 
 ### Mapping {#mapping}
 
-Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
+Experience Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
 
 Mapping configurations for your dataflow will differ depending on your schema and the object type that you select to ingest.
 

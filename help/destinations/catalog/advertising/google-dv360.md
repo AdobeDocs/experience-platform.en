@@ -26,7 +26,7 @@ Note the following details that are specific to [!DNL Google Display & Video 360
 
 >[!IMPORTANT]
 >
->If you are looking to create your first destination with Google Display & Video 360 and have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Adobe Audience Manager or other applications), reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up Google integrations in Audience Manager, the ID syncs you had set up carry over to Platform.
+>If you are looking to create your first destination with Google Display & Video 360 and have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Adobe Audience Manager or other applications), reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up Google integrations in Audience Manager, the ID syncs you had set up carry over to Experience Platform.
 
 ## Supported identities {#supported-identities}
 
@@ -68,10 +68,10 @@ Refer to the table below for information about the destination export type and f
 
 >[!NOTE]
 >
->Allow-listing is mandatory before setting up your first [!DNL Google Display & Video 360] destination in Platform. Ensure the allow-listing process described below has been completed by [!DNL Google] before creating a destination.
+>Allow-listing is mandatory before setting up your first [!DNL Google Display & Video 360] destination in Experience Platform. Ensure the allow-listing process described below has been completed by [!DNL Google] before creating a destination.
 >The exception to this rule is for [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) customers. If you have already created a connection to this Google destination in Audience Manager, then it is not necessary to go through the allow-listing process again and you can proceed to the next steps.
 
-Before creating the [!DNL Google Display & Video 360] destination in Platform, you must contact Google asking for Adobe to be put on the list of allowed data providers, and for your account to be added to the allowlist. Contact Google and provide the following information:
+Before creating the [!DNL Google Display & Video 360] destination in Experience Platform, you must contact Google asking for Adobe to be put on the list of allowed data providers, and for your account to be added to the allowlist. Contact Google and provide the following information:
 
 * **Account ID**: Adobe's account ID with Google. Account ID: 87933855.
 * **Customer ID**: Adobe's customer account ID with Google. Customer ID: 89690775.

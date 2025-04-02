@@ -15,7 +15,7 @@ This tutorial uses the [[!DNL Flow Service] API](https://www.adobe.io/experience
 
 >[!IMPORTANT]
 >
->This tutorial requires you to have the unique base connection ID for your advertising source. If you do not have this ID, see the tutorial on [connecting an advertising source to Platform](../../api/create/advertising/ads.md) tutorial.
+>This tutorial requires you to have the unique base connection ID for your advertising source. If you do not have this ID, see the tutorial on [connecting an advertising source to Experience Platform](../../api/create/advertising/ads.md) tutorial.
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
@@ -164,4 +164,4 @@ A successful response returns the structure of a table. Details regarding each o
 
 ## Next steps
 
-By following this tutorial, you have explored your advertising system, found the path of the table you wish to bring in to [!DNL Experience Platform], and obtained information regarding its structure. You can use this information in the next tutorial to [collect data from your advertising system and bring it into Platform](../collect/advertising.md).
+By following this tutorial, you have explored your advertising system, found the path of the table you wish to bring in to [!DNL Experience Platform], and obtained information regarding its structure. You can use this information in the next tutorial to [collect data from your advertising system and bring it into Experience Platform](../collect/advertising.md).

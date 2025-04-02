@@ -196,7 +196,7 @@ This error message displays when a POST, PUT or PATCH request has an invalid or 
 
 This error message displays in either of the two cases below:
 - When an incorrect or malformed organization ID header (`x-gw-ims-org-id`) is passed in an API request. Ensure that the correct ID of your organization is included before trying again.
-- When your account (as represented by the provided authentication credentials) is not associated with a product profile for Experience Platform. Follow the steps on [generating access credentials](./api-authentication.md#authentication-for-each-session) in the Experience Platform API authentication tutorial to add Platform to your account and update your authentication credentials accordingly.
+- When your account (as represented by the provided authentication credentials) is not associated with a product profile for Experience Platform. Follow the steps on [generating access credentials](./api-authentication.md#authentication-for-each-session) in the Experience Platform API authentication tutorial to add Experience Platform to your account and update your authentication credentials accordingly.
 
 ## Service troubleshooting directory {#service-troubleshooting-directory}
 

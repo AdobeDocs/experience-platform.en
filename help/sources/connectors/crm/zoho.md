@@ -21,7 +21,7 @@ A list of IP addresses must be added to an allow list prior to working with sour
 
 ## Retrieve your authentication credentials for [!DNL Zoho CRM]
 
-Before you can bring data from your [!DNL Zoho CRM] account to Platform, you must first retrieve your credentials to authenticate your [!DNL Zoho CRM] source. Follow the steps below to retrieve your client ID, client secret, access token, and refresh token.
+Before you can bring data from your [!DNL Zoho CRM] account to Experience Platform, you must first retrieve your credentials to authenticate your [!DNL Zoho CRM] source. Follow the steps below to retrieve your client ID, client secret, access token, and refresh token.
 
 ### Register your application
 
@@ -45,7 +45,7 @@ For detailed steps on acquiring your credentials, see the [[!DNL Zoho CRM] authe
 
 ## Connect [!DNL Zoho CRM] to [!DNL Experience Platform] using APIs
 
-The documentation below provides information on how to connect [!DNL Zoho CRM] to Platform using APIs or the user interface:
+The documentation below provides information on how to connect [!DNL Zoho CRM] to Experience Platform using APIs or the user interface:
 
 - [Create a [!DNL Zoho CRM] base connection using the Flow Service API](../../tutorials/api/create/crm/zoho.md)
 - [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)

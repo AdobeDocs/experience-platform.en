@@ -13,7 +13,7 @@ The Audit Query API allows you to audit user activity for various services and c
 
 ## Prerequisites
 
-In order to manage audit events, you must have the **[!UICONTROL View User Activity Log]** access control permission granted (found under the [!UICONTROL Data Governance] category). To learn how to manage individual permissions for Platform features, please refer to the [access control documentation](../../../../access-control/home.md).
+In order to manage audit events, you must have the **[!UICONTROL View User Activity Log]** access control permission granted (found under the [!UICONTROL Data Governance] category). To learn how to manage individual permissions for Experience Platform features, please refer to the [access control documentation](../../../../access-control/home.md).
 
 ### Reading sample API calls
 

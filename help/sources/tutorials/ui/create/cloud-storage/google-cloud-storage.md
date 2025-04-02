@@ -28,18 +28,18 @@ If you already have a valid [!DNL Google Cloud Storage] connection, you may skip
 
 ### Gather required credentials
 
-In order to access your [!DNL Google Cloud Storage] data on Platform, you must provide the following values:
+In order to access your [!DNL Google Cloud Storage] data on Experience Platform, you must provide the following values:
 
 | Credential | Description |
 | ---------- | ----------- |
-| Access key ID | A 61-character, alphanumeric string used to authenticate your [!DNL Google Cloud Storage] account to Platform. |
-| Secret access key | A 40-character, base-64-encoded string used to authenticate your [!DNL Google Cloud Storage] account to Platform. |
+| Access key ID | A 61-character, alphanumeric string used to authenticate your [!DNL Google Cloud Storage] account to Experience Platform. |
+| Secret access key | A 40-character, base-64-encoded string used to authenticate your [!DNL Google Cloud Storage] account to Experience Platform. |
 | Bucket name | The name of your [!DNL Google Cloud Storage] bucket. You must specify a bucket name if you want to provide access to a specific subfolder in your cloud storage. |
 | Folder path | The path to the folder that you want to provide access to. |
 
 For more information about these values, see the [Google Cloud Storage HMAC keys](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) guide. For steps on how to generate your own access key ID and secret access key, refer to the [[!DNL Google Cloud Storage] overview](../../../../connectors/cloud-storage/google-cloud-storage.md).
 
-Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Google Cloud Storage] account to Platform.
+Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Google Cloud Storage] account to Experience Platform.
 
 ## Connect your [!DNL Google Cloud Storage] account
 
@@ -70,4 +70,4 @@ When finished, select **[!UICONTROL Connect to source]** and then allow some tim
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your [!DNL Google Cloud Storage] account. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into Platform](../../dataflow/batch/cloud-storage.md).
+By following this tutorial, you have established a connection to your [!DNL Google Cloud Storage] account. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into Experience Platform](../../dataflow/batch/cloud-storage.md).

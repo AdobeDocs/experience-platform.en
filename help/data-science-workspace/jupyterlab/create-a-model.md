@@ -119,7 +119,7 @@ The following two sections will go over loading data and data preparation.
 
 This step uses the [pandas dataframe](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Data can be loaded from files in [!DNL Adobe Experience Platform] using either the [!DNL Experience Platform] SDK (`platform_sdk`), or from external sources using pandas' `read_csv()` or `read_json()` functions.
 
-- [[!DNL Platform SDK]](#platform-sdk)
+- [[!DNL Experience Platform SDK]](#platform-sdk)
 - [External sources](#external-sources)
 
 >[!NOTE]
@@ -128,7 +128,7 @@ This step uses the [pandas dataframe](https://pandas.pydata.org/pandas-docs/stab
 
 ### [!DNL Experience Platform] SDK {#platform-sdk}
 
-For an in-depth tutorial on using the `platform_sdk` data loader, please visit the [Platform SDK guide](../authoring/platform-sdk.md). This tutorial provides information on build authentication, basic reading of data, and basic writing of data.
+For an in-depth tutorial on using the `platform_sdk` data loader, please visit the [Experience Platform SDK guide](../authoring/platform-sdk.md). This tutorial provides information on build authentication, basic reading of data, and basic writing of data.
 
 ### External sources {#external-sources}
 
@@ -152,7 +152,7 @@ Now your data is in the dataframe object and can be analyzed and manipulated in 
 
 ## Training Data Loader File
 
-In this example, data is loaded using the Platform SDK. The library can be imported at the top of the page by including the line:
+In this example, data is loaded using the Experience Platform SDK. The library can be imported at the top of the page by including the line:
 
 `from platform_sdk.dataset_reader import DatasetReader`
 

@@ -13,7 +13,7 @@ exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
 >
 >This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
 
-Each supported kernel provides built-in functionalities that allow you to read Platform data from a dataset within a notebook. Currently JupyterLab in Adobe Experience Platform Data Science Workspace supports notebooks for [!DNL Python], R, PySpark, and Scala. However, support for paginating data is limited to [!DNL Python] and R notebooks. This guide focuses on how to use JupyterLab notebooks to access your data.
+Each supported kernel provides built-in functionalities that allow you to read Experience Platform data from a dataset within a notebook. Currently JupyterLab in Adobe Experience Platform Data Science Workspace supports notebooks for [!DNL Python], R, PySpark, and Scala. However, support for paginating data is limited to [!DNL Python] and R notebooks. This guide focuses on how to use JupyterLab notebooks to access your data.
 
 ## Getting started
 
@@ -482,7 +482,7 @@ val spark = SparkSession
 
 ### Read a dataset {#read-scala-dataset}
 
-In Scala, you can import `clientContext` to get and return Platform values, this eliminates the need to define variables such as `var userToken`. In the Scala example below, `clientContext` is used to get and return all the required values needed for reading a dataset.
+In Scala, you can import `clientContext` to get and return Experience Platform values, this eliminates the need to define variables such as `var userToken`. In the Scala example below, `clientContext` is used to get and return all the required values needed for reading a dataset.
 
 >[!IMPORTANT]
 >
@@ -537,7 +537,7 @@ And
 
 ### Write to a dataset {#scala-write-dataset}
 
-In Scala, you can import `clientContext` to get and return Platform values, this eliminates the need to define variables such as `var userToken`. In the Scala example below, `clientContext` is used to define and return all the required values needed for writing to a dataset.
+In Scala, you can import `clientContext` to get and return Experience Platform values, this eliminates the need to define variables such as `var userToken`. In the Scala example below, `clientContext` is used to define and return all the required values needed for writing to a dataset.
 
 >[!IMPORTANT]
 >

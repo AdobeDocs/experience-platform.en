@@ -17,7 +17,7 @@ This tutorial uses user-defined dashboards to visualize data from your custom da
 
 ## Getting started
 
-The Data Distiller SKU is required to build a custom data model for your reporting insights and to extend the Real-Time CDP data models that hold enriched Platform data. Please see the [packaging](../../packaging.md), [guardrails](../../guardrails.md#query-accelerated-store), and  [licensing](../../data-distiller/license-usage.md) documentation that relates to the Data Distiller SKU. If you do not have the Data Distiller SKU please contact your Adobe customer service representative for more information.
+The Data Distiller SKU is required to build a custom data model for your reporting insights and to extend the Real-Time CDP data models that hold enriched Experience Platform data. Please see the [packaging](../../packaging.md), [guardrails](../../guardrails.md#query-accelerated-store), and  [licensing](../../data-distiller/license-usage.md) documentation that relates to the Data Distiller SKU. If you do not have the Data Distiller SKU please contact your Adobe customer service representative for more information.
 
 ## Build a reporting insights data model
 
@@ -27,7 +27,7 @@ At the outset, you have an initial data model from your sources (potentially fro
 
 ![An entity relational diagram (ERD) of the audience insight user model.](../../images/data-distiller/sql-insights/audience-insight-user-model.png)
 
-In this example, the `externalaudiencereach` table/dataset is based on an ID and tracks the lower and upper bounds for match count. The `externalaudiencemapping` dimension table/dataset maps the external ID to a destination and audience on Platform. 
+In this example, the `externalaudiencereach` table/dataset is based on an ID and tracks the lower and upper bounds for match count. The `externalaudiencemapping` dimension table/dataset maps the external ID to a destination and audience on Experience Platform. 
 
 ## Create a model for reporting insights with Data Distiller
 

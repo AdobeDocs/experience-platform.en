@@ -29,7 +29,7 @@ Refer to Adobe's documentation for [Audience Membership Details schema field gro
 
 ### [!DNL Microsoft Dynamics 365] prerequisites {#prerequisites-destination}
 
-Note the following prerequisites in [!DNL Dynamics 365], in order to export data from Platform to your [!DNL Dynamics 365] account:
+Note the following prerequisites in [!DNL Dynamics 365], in order to export data from Experience Platform to your [!DNL Dynamics 365] account:
 
 #### You need to have a [!DNL Microsoft Dynamics 365] account {#prerequisites-account}
 
@@ -96,7 +96,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of an audience, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> Each audience status in [!DNL Dynamics 365] gets updated with the corresponding audience status from Platform, based on the **[!UICONTROL Mapping ID]** value provided during the [audience scheduling](#schedule-audience-export-example) step.</li></ul> |
+| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of an audience, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> Each audience status in [!DNL Dynamics 365] gets updated with the corresponding audience status from Experience Platform, based on the **[!UICONTROL Mapping ID]** value provided during the [audience scheduling](#schedule-audience-export-example) step.</li></ul> |
 | Export frequency | **[!UICONTROL Streaming]** | <ul><li>Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).</li></ul>|
 
 {style="table-layout:auto"}
@@ -151,7 +151,7 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 
 ### Mapping considerations and example {#mapping-considerations-example}
 
-To correctly send your audience data from Adobe Experience Platform to the [!DNL Dynamics 365] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the [!DNL Dynamics 365] destination fields, follow these steps:
+To correctly send your audience data from Adobe Experience Platform to the [!DNL Dynamics 365] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Experience Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the [!DNL Dynamics 365] destination fields, follow these steps:
 
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
 ![Experience Platform UI screenshot example for Add new mapping.](../../assets/catalog/crm/microsoft-dynamics-365/add-new-mapping.png)
@@ -191,7 +191,7 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
 
 ### Schedule audience export and example {#schedule-audience-export-example}
 
-In the [[!UICONTROL Schedule audience export]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) step of the activation workflow, you must manually map Platform audiences to the custom field attribute in [!DNL Dynamics 365].
+In the [[!UICONTROL Schedule audience export]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) step of the activation workflow, you must manually map Experience Platform audiences to the custom field attribute in [!DNL Dynamics 365].
 
 To do this, select each audience, then enter the corresponding custom field attribute from [!DNL Dynamics 365] in the **[!UICONTROL Mapping ID]** field.
 
@@ -218,7 +218,7 @@ To validate that you have correctly set up the destination, follow the steps bel
 1. Monitor the audience summary and ensure that the count of profiles corresponds to the count created within the audience.
 ![Experience Platform UI screenshot example showing audience.](../../assets/catalog/crm/microsoft-dynamics-365/segment.png)
 
-1. Log in to the [!DNL Dynamics 365] website, then navigate to the [!DNL Customers] > [!DNL Contacts] page and check if the profiles from the audience have been added. You can see that each audience status in [!DNL Dynamics 365] was updated with the corresponding audience status from Platform, based on the **[!UICONTROL Mapping ID]** value provided during the [audience scheduling](#schedule-audience-export-example) step.
+1. Log in to the [!DNL Dynamics 365] website, then navigate to the [!DNL Customers] > [!DNL Contacts] page and check if the profiles from the audience have been added. You can see that each audience status in [!DNL Dynamics 365] was updated with the corresponding audience status from Experience Platform, based on the **[!UICONTROL Mapping ID]** value provided during the [audience scheduling](#schedule-audience-export-example) step.
 ![Dynamics 365 UI screenshot showing the Contacts page with updated audience statuses.](../../assets/catalog/crm/microsoft-dynamics-365/contacts.png)
 
 ## Data usage and governance {#data-usage-governance}
@@ -233,7 +233,7 @@ When checking a dataflow run, if you obtain the following error message: `Bad re
 
 ![Experience Platform UI screenshot showing Bad request error.](../../assets/catalog/crm/microsoft-dynamics-365/error.png)
 
-To fix this error, verify that the **[!UICONTROL Mapping ID]** you provided in [!DNL Dynamics 365] for your Platform audience is valid and exists within [!DNL Dynamics 365].
+To fix this error, verify that the **[!UICONTROL Mapping ID]** you provided in [!DNL Dynamics 365] for your Experience Platform audience is valid and exists within [!DNL Dynamics 365].
 
 ## Additional resources {#additional-resources}
 

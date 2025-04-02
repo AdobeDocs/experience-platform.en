@@ -516,7 +516,7 @@ There is no query concurrency limit as batch queries run as back-end jobs. There
 There are monitoring and alerting capabilities to check on query activities and statuses. See the [Query Service audit log integration](./data-governance/audit-log-guide.md) and the [query logs](./ui/overview.md#log) documents for more information.
 +++
 
-### Is there any way to roll back updates? For example, if there is an error or some calculations need reconfiguring when writing data back to Platform, how should that scenario be handled?
+### Is there any way to roll back updates? For example, if there is an error or some calculations need reconfiguring when writing data back to Experience Platform, how should that scenario be handled?
 
 +++Answer
 Currently, we do not support rollbacks or updates in that manner. 
@@ -557,7 +557,7 @@ There are three approaches to restricting access. They are as follows:
 
 +++
     
-### Once the data is returned by Query Service, are there any checks that can be run by Platform to ensure that it hasn't returned any protected data?
+### Once the data is returned by Query Service, are there any checks that can be run by Experience Platform to ensure that it hasn't returned any protected data?
 
 - Query Service supports attribute-based access control. You can restrict access to data at the column/leaf level and/or the struct level. See the documentation to learn more about attribute-based access control. 
 

@@ -22,7 +22,7 @@ This guide walks through the full process of configuring and enforcing a data go
 
 >[!NOTE]
 >
->This guide focuses on how to set up and enforce policies for how data is used or activated in Experience Platform. If you are trying to restrict **access** to the data itself for certain Platform users within your organization, see the end-to-end guide on [attribute-based access control](../access-control/abac/end-to-end-guide.md) instead. Attribute-based access control also uses labels and policies, but for a different use case than data governance.
+>This guide focuses on how to set up and enforce policies for how data is used or activated in Experience Platform. If you are trying to restrict **access** to the data itself for certain Experience Platform users within your organization, see the end-to-end guide on [attribute-based access control](../access-control/abac/end-to-end-guide.md) instead. Attribute-based access control also uses labels and policies, but for a different use case than data governance.
 
 ## Apply labels {#labels}
 

@@ -3,12 +3,12 @@ keywords: Experience Platform;home;popular topics;collect customer success;custo
 solution: Experience Platform
 title: Create a Dataflow for Customer Success Sources Using the Flow Service API
 type: Tutorial
-description: This tutorial covers the steps for retrieving data from a customer success system and ingesting it into Platform using source connectors and APIs.
+description: This tutorial covers the steps for retrieving data from a customer success system and ingesting it into Experience Platform using source connectors and APIs.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
 ---
 # Create a dataflow for customer success sources using the [!DNL Flow Service] API
 
-This tutorial covers the steps for retrieving data from a customer success source and bringing them to Platform using [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial covers the steps for retrieving data from a customer success source and bringing them to Experience Platform using [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
@@ -130,7 +130,7 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 ## Create a target XDM schema {#target-schema}
 
-In order for the source data to be used in Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create a Platform dataset in which the source data is contained.
+In order for the source data to be used in Experience Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create an Experience Platform dataset in which the source data is contained.
 
 A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
@@ -277,7 +277,7 @@ A successful response returns details of the newly created mapping including its
 
 ## Retrieve dataflow specifications {#specs}
 
-A dataflow is responsible for collecting data from sources and bringing them into Platform. In order to create a dataflow, you must first obtain the dataflow specifications by performing a GET request to the Flow Service API. Dataflow specifications are responsible for collecting data from a third-party customer success system.
+A dataflow is responsible for collecting data from sources and bringing them into Experience Platform. In order to create a dataflow, you must first obtain the dataflow specifications by performing a GET request to the Flow Service API. Dataflow specifications are responsible for collecting data from a third-party customer success system.
 
 **API format**
 
@@ -297,7 +297,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns the details of the dataflow specification responsible for bringing data from your source into Platform. The response includes the unique flow spec `id` required to create a new dataflow.
+A successful response returns the details of the dataflow specification responsible for bringing data from your source into Experience Platform. The response includes the unique flow spec `id` required to create a new dataflow.
 
 >[!NOTE]
 >

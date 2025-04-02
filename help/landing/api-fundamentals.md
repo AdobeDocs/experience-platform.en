@@ -120,4 +120,4 @@ JSON Schema is a format used to describe and validate the structure of JSON data
 
 ## Next steps
 
-This document introduced some of the technologies and syntaxes involved with managing JSON-based resources for [!DNL Experience Platform]. Refer to the [getting started guide](api-guide.md) for more information on working with Experience Platform APIs, including best practices. For answers to frequently asked questions, refer to the [Platform troubleshooting guide](troubleshooting.md).
+This document introduced some of the technologies and syntaxes involved with managing JSON-based resources for [!DNL Experience Platform]. Refer to the [getting started guide](api-guide.md) for more information on working with Experience Platform APIs, including best practices. For answers to frequently asked questions, refer to the [Experience Platform troubleshooting guide](troubleshooting.md).

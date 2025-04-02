@@ -7,9 +7,9 @@ exl-id: 5f38997a-66f3-4f9d-9c2f-fb70266ec0a6
 ---
 # Set up and Configure Customer Managed Keys for Azure using the Experience Platform UI
 
-This document covers the Azure-specific instructions for enabling the Customer Managed Keys (CMK) feature in Platform using the UI. For AWS-specific instructions, refer to the [AWS setup guide](../aws/ui-set-up.md).
+This document covers the Azure-specific instructions for enabling the Customer Managed Keys (CMK) feature in Experience Platform using the UI. For AWS-specific instructions, refer to the [AWS setup guide](../aws/ui-set-up.md).
 
-For instructions on how to complete this process for Azure-hosted Platform instances using the API, refer to the [API CMK setup document](./api-set-up.md).
+For instructions on how to complete this process for Azure-hosted Experience Platform instances using the API, refer to the [API CMK setup document](./api-set-up.md).
 
 ## Prerequisites
 
@@ -50,7 +50,7 @@ Copy and paste the [!UICONTROL Application authentication url] into a browser to
 
 >[!IMPORTANT]
 >
->If you have multiple [!DNL Microsoft Azure] subscriptions, then you could potentially connect your Platform instance to the wrong key vault. In this situation, you must swap the `common` section of the application authentication URL name for the CMK directory ID.<br>Copy the CMK directory ID from the Portal settings, Directories, and Subscriptions page of the [!DNL Microsoft Azure] application<br>![The [!DNL Microsoft Azure] application Portal settings, Directories and Subscriptions page with the Directory ID highlighted.](../../../images/governance-privacy-security/customer-managed-keys/directory-id.png)<br>Next, paste it into your browser address bar.<br>![A Google browser page with the 'common' section of the Application authentication url highlighted.](../../../images/governance-privacy-security/customer-managed-keys/common-url-section.png)
+>If you have multiple [!DNL Microsoft Azure] subscriptions, then you could potentially connect your Experience Platform instance to the wrong key vault. In this situation, you must swap the `common` section of the application authentication URL name for the CMK directory ID.<br>Copy the CMK directory ID from the Portal settings, Directories, and Subscriptions page of the [!DNL Microsoft Azure] application<br>![The [!DNL Microsoft Azure] application Portal settings, Directories and Subscriptions page with the Directory ID highlighted.](../../../images/governance-privacy-security/customer-managed-keys/directory-id.png)<br>Next, paste it into your browser address bar.<br>![A Google browser page with the 'common' section of the Application authentication url highlighted.](../../../images/governance-privacy-security/customer-managed-keys/common-url-section.png)
 
 ### Assign the CMK app to a role {#assign-to-role}
 
@@ -104,11 +104,11 @@ You are returned to the [!UICONTROL Encryption configurations dashboard]. The st
 
 ## Verify the configuration's status {#check-status}
 
-Allow a significant amount of time for processing. To check the status of the configuration, return to the [!UICONTROL Customer Managed Keys configuration] view and scroll down to the [!UICONTROL Configuration status]. The progress bar has advanced to step one of three and explains that the system is validating that Platform has access to the key and key vault.
+Allow a significant amount of time for processing. To check the status of the configuration, return to the [!UICONTROL Customer Managed Keys configuration] view and scroll down to the [!UICONTROL Configuration status]. The progress bar has advanced to step one of three and explains that the system is validating that Experience Platform has access to the key and key vault.
 
 There are four potential statuses of the CMK configuration. They are as follows:
 
-* Step 1: Validates that Platform has the ability to access the key and key vault.
+* Step 1: Validates that Experience Platform has the ability to access the key and key vault.
 * Step 2: The key vault and key name are in the process of being added to all datastores across your organization.
 * Step 3: The key vault and key name have successfully been added to the datastores.
 * `FAILED`: A problem occurred, primarily related to the key, key vault, or multi-tenant app setup.

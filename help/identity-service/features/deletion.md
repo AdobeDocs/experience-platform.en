@@ -31,7 +31,7 @@ The sections below outline the mechanisms you can use for single identity deleti
 
 ### Single identity deletion in Privacy Service 
 
-Privacy Service processes customer requests to access, opt out of sale, or delete their personal data as delineated by privacy regulations such as the General Data Protection Regulation (GDPR) and California Consumer Privacy Act (CCPA). With Privacy Service, you can submit job requests using the API or the UI. When Experience Platform receives a delete request from Privacy Service, Platform sends confirmation to Privacy Service that the request has been received and affected data has been marked for deletion. The deletion of the individual identity is based on provided namespace and/or ID value. Furthermore, the deletion takes place for all sandboxes associated with a given organization. For more information, read the guide on [privacy request processing in Identity Service](../privacy.md).
+Privacy Service processes customer requests to access, opt out of sale, or delete their personal data as delineated by privacy regulations such as the General Data Protection Regulation (GDPR) and California Consumer Privacy Act (CCPA). With Privacy Service, you can submit job requests using the API or the UI. When Experience Platform receives a delete request from Privacy Service, Experience Platform sends confirmation to Privacy Service that the request has been received and affected data has been marked for deletion. The deletion of the individual identity is based on provided namespace and/or ID value. Furthermore, the deletion takes place for all sandboxes associated with a given organization. For more information, read the guide on [privacy request processing in Identity Service](../privacy.md).
 
 The table below provides a breakdown of single identity deletion in Privacy Service :
 
@@ -60,7 +60,7 @@ The table below provides a breakdown of differences between dataset deletion in 
 
 | Dataset deletion | Catalog Service | Data hygiene |
 | --- | --- | --- |
-| Accepted use cases |  Delete full datasets and their associated identity information in Platform. | Management of data stored in Experience Platform. | 
+| Accepted use cases |  Delete full datasets and their associated identity information in Experience Platform. | Management of data stored in Experience Platform. | 
 | Estimated latency | Days | Days |
 | Services impacted | Dataset deletion through Catalog Service deletes data from Identity Service, Real-Time Customer Profile, and data lake. | Dataset deletion through Data hygiene deletes data from Identity Service, Real-Time Customer Profile, and data lake. |
 | Deletion pattern | Delete linked identities from Identity Service established by a particular dataset. | Delete linked identities from Identity Service established by a particular dataset, based on expiration schedule. |

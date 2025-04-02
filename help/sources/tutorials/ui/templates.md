@@ -35,9 +35,9 @@ The following tutorial provides steps on how to use templates in the Experience 
 
 This tutorial requires a working understanding of the following components of Experience Platform:
 
-* [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
+* [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
 * [[!DNL Experience Data Model (XDM)] System](../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
-* [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ## Use templates in the Experience Platform UI {#use-templates-in-the-platform-ui}
 
@@ -265,4 +265,4 @@ Select the notification icon the top header of Experience Platform UI and then s
 
 ![The notifications panel in Experience Platform UI with a notification alerting a failed dataflow highlighted.](../../images/tutorials/templates/notifications.png)
 
-You can update the alert settings of your templates to receive both email and in-Platform notifications on the status of your dataflows. For more information on configuring alerts, read the guide on [how to subscribe to alerts for sources dataflows](../ui/alerts.md).
+You can update the alert settings of your templates to receive both email and in-Experience Platform notifications on the status of your dataflows. For more information on configuring alerts, read the guide on [how to subscribe to alerts for sources dataflows](../ui/alerts.md).

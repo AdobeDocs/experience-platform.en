@@ -32,7 +32,7 @@ You may also use optional query parameters to filter the list of delete requests
 
 >[!AVAILABILITY]
 >
->The following query parameters are **only** available when using Platform on Microsoft Azure.
+>The following query parameters are **only** available when using Experience Platform on Microsoft Azure.
 >
 >When using this endpoint on AWS, the first 100 system jobs are returned in descending order, based on their creation date.
 
@@ -496,7 +496,7 @@ A successful response returns the details of the newly created system request.
 
 >[!AVAILABILITY]
 >
->The following feature is **only** available when using Platform on Microsoft Azure.
+>The following feature is **only** available when using Experience Platform on Microsoft Azure.
 
 If you attempt to initiate a delete request for a Record dataset batch, you will encounter a 400-level error, similar to the following:
 

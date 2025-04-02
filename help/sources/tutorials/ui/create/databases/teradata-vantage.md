@@ -10,14 +10,14 @@ This tutorial provides steps for creating a [!DNL Teradata Vantage] source conne
 
 ## Getting started
 
-This tutorial requires a working understanding of the following components of Platform:
+This tutorial requires a working understanding of the following components of Experience Platform:
 
 * [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ### Gather required credentials
 
-In order to access your [!DNL Teradata Vantage] account on Platform, you must provide the following authentication value:
+In order to access your [!DNL Teradata Vantage] account on Experience Platform, you must provide the following authentication value:
 
 | Credential | Description |
 | ---------- | ----------- |
@@ -53,4 +53,4 @@ If you are using new credentials, select **[!UICONTROL New account]**. On the in
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your Teradata Vantage account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](../../dataflow/databases.md).
+By following this tutorial, you have established a connection to your Teradata Vantage account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Experience Platform](../../dataflow/databases.md).

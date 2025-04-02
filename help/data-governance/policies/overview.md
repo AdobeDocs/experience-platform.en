@@ -21,7 +21,7 @@ There are two types of policies available:
 
 >[!NOTE]
 >
->Data usage policies are not to be confused with [access control policies](../../access-control/abac/end-to-end-guide.md#policy), which determine whether certain Platform users in your organization can access certain data fields, and are configured through the [!UICONTROL Permissions] tab.
+>Data usage policies are not to be confused with [access control policies](../../access-control/abac/end-to-end-guide.md#policy), which determine whether certain Experience Platform users in your organization can access certain data fields, and are configured through the [!UICONTROL Permissions] tab.
 
 This document provides a high-level overview of data usage policies, and provides links to further documentation for working with policies in the UI or API.
 
@@ -51,7 +51,7 @@ See the appendix to this document for a list of [available Adobe-defined marketi
 
 Experience Platform has the ability to share audiences with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager audiences are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
 
-For a reference on how specific Data Export Controls map to marketing actions in Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
+For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
 -->
 
 ## Managing data usage policies {#manage}
@@ -93,5 +93,5 @@ The table below describes the core marketing actions that are provided out-of-th
 | Export to Third Party | An action that exports data to processors and entities that do not have direct relationships with customers. Many data providers have terms in the contracts that prohibit the export of data from where it was originally collected. For example, social network contracts often restrict the transfer of data you receive from them. |
 | Onsite Advertising | An action that uses data for onsite ads, including the selection and delivery of advertisements on your organization's websites or apps, or to measure the delivery and effectiveness of such advertisements. |
 | Onsite Personalization | An action that uses data for onsite content personalization. Onsite personalization is any data that is used to make inferences about users' interests, and is used to select which content or ads are served based on those inferences. |
-| Segment Match | An action that uses data for Adobe Experience Platform Segment Match, which allows for two or more Platform users to exchange audience data. By enabling policies that reference this action, you can restrict what data is used for Segment Match. For example, if the core policy "Restrict data sharing" is enabled, any data with a [C11 label](../labels/reference.md#c11) cannot be used for Segment Match. |
+| Segment Match | An action that uses data for Adobe Experience Platform Segment Match, which allows for two or more Experience Platform users to exchange audience data. By enabling policies that reference this action, you can restrict what data is used for Segment Match. For example, if the core policy "Restrict data sharing" is enabled, any data with a [C11 label](../labels/reference.md#c11) cannot be used for Segment Match. |
 | Single Identity Personalization | An action that requires that a single identity be used for personalization purposes instead of stitching identities from multiple sources. |

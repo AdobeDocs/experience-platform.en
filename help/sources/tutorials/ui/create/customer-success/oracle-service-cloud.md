@@ -61,4 +61,4 @@ If you are using new credentials, select **[!UICONTROL New account]**. On the in
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your Oracle Service Cloud account. You can now continue on to the next tutorial and [configure a dataflow to bring customer success data into Platform](../../dataflow/crm.md).
+By following this tutorial, you have established a connection to your Oracle Service Cloud account. You can now continue on to the next tutorial and [configure a dataflow to bring customer success data into Experience Platform](../../dataflow/crm.md).

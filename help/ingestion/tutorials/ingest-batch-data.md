@@ -100,7 +100,7 @@ To begin adding data to the dataset, click on the **[!UICONTROL Add Data]** tab.
 
 >[!NOTE]
 >
->Platform supports two files types for data ingestion, Parquet or JSON. You may add up to five files at a time, with the maximum file size of each file being 1 GB.
+>Experience Platform supports two files types for data ingestion, Parquet or JSON. You may add up to five files at a time, with the maximum file size of each file being 1 GB.
 
 ![Add Data tab](../images/tutorials/ingest-batch-data/drag-and-drop.png)
 

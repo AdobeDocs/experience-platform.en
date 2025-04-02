@@ -10,19 +10,19 @@ exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_actions"
 >title="Top Actions"
->abstract="This widget shows the top kinds of actions that have been taken in Experience Platform within the selected timeframe. To see the full list of recorded actions in Platform, select **Audits** in the left navigation."
+>abstract="This widget shows the top kinds of actions that have been taken in Experience Platform within the selected timeframe. To see the full list of recorded actions in Experience Platform, select **Audits** in the left navigation."
 
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_users"
 >title="Top Users"
->abstract="This widget shows the users that have executed the most actions in Experience Platform within the selected timeframe. To see the full list of recorded actions in Platform, select **Audits** in the left navigation."
+>abstract="This widget shows the users that have executed the most actions in Experience Platform within the selected timeframe. To see the full list of recorded actions in Experience Platform, select **Audits** in the left navigation."
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
->title="Monitor user activities in Platform"
->abstract="<h2>Description</h2><p>You can monitor user activity for various Platform services and capabilities in the form of audit logs. These logs form an audit trail that records <b>who</b> performed <b>what</b> action and <b>when</b>. Audit logs can help with troubleshooting issues on Platform and help your business effectively comply with corporate data stewardship policies and regulatory requirements.</p>"
+>title="Monitor user activities in Experience Platform"
+>abstract="<h2>Description</h2><p>You can monitor user activity for various Experience Platform services and capabilities in the form of audit logs. These logs form an audit trail that records <b>who</b> performed <b>what</b> action and <b>when</b>. Audit logs can help with troubleshooting issues on Experience Platform and help your business effectively comply with corporate data stewardship policies and regulatory requirements.</p>"
 
-In order to increase the transparency and visibility of activities performed in the system, Adobe Experience Platform allows you to audit user activity for various services and capabilities in the form of "audit logs". These logs form an audit trail that can help with troubleshooting issues on Platform, and help your business effectively comply with corporate data stewardship policies and regulatory requirements.
+In order to increase the transparency and visibility of activities performed in the system, Adobe Experience Platform allows you to audit user activity for various services and capabilities in the form of "audit logs". These logs form an audit trail that can help with troubleshooting issues on Experience Platform, and help your business effectively comply with corporate data stewardship policies and regulatory requirements.
 
 In a basic sense, an audit log tells **who** performed **what** action, and **when**. Each action recorded in a log contains metadata that indicates the action type, date and time, the email ID of the user who performed the action, and additional attributes relevant to the action type.
 
@@ -30,7 +30,7 @@ In a basic sense, an audit log tells **who** performed **what** action, and **wh
 >
 > The metadata for the actions **Add user** and **Remove user** within the **Role** resource will not contain the email ID of the user who performed the action. Instead, the logs will display the system generated email ID (system@adobe.com).
 
-This document covers audit logs in Platform, including how to view and manage them in UI or API.
+This document covers audit logs in Experience Platform, including how to view and manage them in UI or API.
 
 ## Event types captured by audit logs {#category}
 
@@ -68,7 +68,7 @@ The following table outlines which actions on which resources are recorded by au
 
 When the feature is enabled for your organization, audit logs are automatically collected as activity occurs. You do not need to manually enable log collection.
 
-In order to view and export audit logs, you must have the **[!UICONTROL View User Activity Log]** access control permission granted (found under the [!UICONTROL Data Governance] category). To learn how to manage individual permissions for Platform features, please refer to the [access control documentation](../../../access-control/home.md).
+In order to view and export audit logs, you must have the **[!UICONTROL View User Activity Log]** access control permission granted (found under the [!UICONTROL Data Governance] category). To learn how to manage individual permissions for Experience Platform features, please refer to the [access control documentation](../../../access-control/home.md).
 
 ## Managing audit logs in the UI {#managing-audit-logs-in-the-ui}
 
@@ -165,7 +165,7 @@ To learn how to manage audit logs for activities in Adobe Admin Console, refer t
 
 ## Next steps and additional resources
 
-This guide covered how to manage audit logs in Experience Platform. For more information on how to monitor Platform activities, see the documentation on [Observability Insights](../../../observability/home.md) and [monitoring data ingestion](../../../ingestion/quality/monitor-data-ingestion.md).
+This guide covered how to manage audit logs in Experience Platform. For more information on how to monitor Experience Platform activities, see the documentation on [Observability Insights](../../../observability/home.md) and [monitoring data ingestion](../../../ingestion/quality/monitor-data-ingestion.md).
 
 To reinforce your understanding of audit logs in Experience Platform, watch the following video:
 

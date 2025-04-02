@@ -7,11 +7,11 @@ exl-id: 8fe08ffa-f095-4e9f-8bab-d060985f0236
 ---
 # Dataflows overview
 
-In Adobe Experience Platform, data is ingested from a wide variety of sources, analyzed within Experience Platform, and activated to a wide variety of destinations. Platform makes the process of tracking this potentially non-linear flow of data easier by providing transparency with dataflows. 
+In Adobe Experience Platform, data is ingested from a wide variety of sources, analyzed within Experience Platform, and activated to a wide variety of destinations. Experience Platform makes the process of tracking this potentially non-linear flow of data easier by providing transparency with dataflows. 
 
 ## Using dataflows
 
-Dataflows are a representation of data jobs that move data across Platform. These dataflows are configured across different services, helping move data from source connectors to target datasets, where it is then utilized by Identity Service and Real-Time Customer Profile before ultimately being activated to destinations.
+Dataflows are a representation of data jobs that move data across Experience Platform. These dataflows are configured across different services, helping move data from source connectors to target datasets, where it is then utilized by Identity Service and Real-Time Customer Profile before ultimately being activated to destinations.
 
 To learn more about using dataflows in source connectors, please read the [sources overview](../sources/home.md).
 

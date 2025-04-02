@@ -22,7 +22,7 @@ The following sections provide additional information that you will need to know
 
 ### Gather required credentials
 
-This tutorial requires you to have a valid connection with the third-party payments application you wish to ingest data from. A valid connection involves your application's connection specification ID and connection ID. More information about creating a payments connection and retrieving these values can be found in the [connect a payments source to Platform](../../api/create/payments/paypal.md) tutorial.
+This tutorial requires you to have a valid connection with the third-party payments application you wish to ingest data from. A valid connection involves your application's connection specification ID and connection ID. More information about creating a payments connection and retrieving these values can be found in the [connect a payments source to Experience Platform](../../api/create/payments/paypal.md) tutorial.
 
 ### Reading sample API calls
 
@@ -174,4 +174,4 @@ A successful response returns the structure of the specified table. Details rega
 
 ## Next steps
 
-By following this tutorial, you have explored your payments system, found the path of the table you wish to ingest into [!DNL Experience Platform], and obtained information regarding its structure. You can use this information in the next tutorial to [collect data from your payments system and bring it into Platform](../collect/payments.md).
+By following this tutorial, you have explored your payments system, found the path of the table you wish to ingest into [!DNL Experience Platform], and obtained information regarding its structure. You can use this information in the next tutorial to [collect data from your payments system and bring it into Experience Platform](../collect/payments.md).

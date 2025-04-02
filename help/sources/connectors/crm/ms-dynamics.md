@@ -17,9 +17,9 @@ A list of IP addresses must be added to an allow list prior to working with sour
 
 ## Field mapping from [!DNL Microsoft Dynamics] to XDM
 
-To establish a source connection between [!DNL Microsoft Dynamics] and Platform, the [!DNL Microsoft Dynamics] source data fields must be mapped to their appropriate target XDM fields prior to being ingested into Platform.
+To establish a source connection between [!DNL Microsoft Dynamics] and Experience Platform, the [!DNL Microsoft Dynamics] source data fields must be mapped to their appropriate target XDM fields prior to being ingested into Experience Platform.
 
-See the following for detailed information on the field mapping rules between [!DNL Microsoft Dynamics] datasets and Platform:
+See the following for detailed information on the field mapping rules between [!DNL Microsoft Dynamics] datasets and Experience Platform:
 
 - [Contacts](../adobe-applications/mapping/dynamics.md#contacts)
 - [Leads](../adobe-applications/mapping/dynamics.md#leads)

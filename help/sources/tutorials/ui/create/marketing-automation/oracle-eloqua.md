@@ -13,16 +13,16 @@ This tutorial provides steps for creating an [!DNL Oracle Eloqua] source connect
 
 ## Getting started
 
-This guide requires a working understanding of the following components of Platform:
+This guide requires a working understanding of the following components of Experience Platform:
 
-* [Sources](../../../../home.md): Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
-* [Sandboxes](../../../../../sandboxes/home.md): Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-If you already have an authenticated [!DNL Oracle Eloqua] account on Platform, then you may skip the remainder of this document and proceed to the tutorial on [creating a dataflow to bring marketing automation data to Platform](../../dataflow/marketing-automation.md).
+If you already have an authenticated [!DNL Oracle Eloqua] account on Experience Platform, then you may skip the remainder of this document and proceed to the tutorial on [creating a dataflow to bring marketing automation data to Experience Platform](../../dataflow/marketing-automation.md).
 
 ### Gather required credentials
 
-In order to connect [!DNL Oracle Eloqua] to Platform, you must provide values for the following authentication properties:
+In order to connect [!DNL Oracle Eloqua] to Experience Platform, you must provide values for the following authentication properties:
 
 | Credential | Description |
 | --- | --- |
@@ -32,7 +32,7 @@ In order to connect [!DNL Oracle Eloqua] to Platform, you must provide values fo
 
 For more information on authentication credentials for [!DNL Oracle Eloqua], see the [[!DNL Oracle Eloqua] guide on authentication](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html).
 
-Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Oracle Eloqua] account to Platform.
+Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Oracle Eloqua] account to Experience Platform.
 
 ## Connect your [!DNL Oracle Eloqua] account
 
@@ -60,4 +60,4 @@ If you are creating a new account, select **[!UICONTROL New account]**, and then
 
 ## Next steps
 
-By following this tutorial, you have authenticated and created a source connection between your [!DNL Oracle Eloqua] account and Platform. You can now continue on to the next tutorial and [create a dataflow to bring marketing automation data to Platform](../../dataflow/marketing-automation.md).
+By following this tutorial, you have authenticated and created a source connection between your [!DNL Oracle Eloqua] account and Experience Platform. You can now continue on to the next tutorial and [create a dataflow to bring marketing automation data to Experience Platform](../../dataflow/marketing-automation.md).

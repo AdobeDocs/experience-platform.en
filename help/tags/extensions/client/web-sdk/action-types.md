@@ -26,7 +26,7 @@ You can use this action type for various use cases, such as:
 This action type will not send a display event for rendered propositions. It will keep track of rendered propositions so that these can be included in subsequent **[!UICONTROL Send event]** calls.
 
 
-![Platform Tags UI showing the Apply Propositions action type.](assets/apply-propositions.png)
+![Experience Platform Tags UI showing the Apply Propositions action type.](assets/apply-propositions.png)
 
 This action type supports the following fields:
 
@@ -75,7 +75,7 @@ Use this action type to share identities from the current page to other domains.
 
 ## Send event {#send-event}
 
-Sends an event to Experience Platform so that Platform can collect the data you send and act on that information. Any data that you want to send can be sent in the **[!UICONTROL XDM Data]** field. Use a [!DNL JSON] object that conforms to the structure of your [!DNL XDM] schema. This object can either be created on your page or through a **[!UICONTROL Custom Code]** **[!UICONTROL Data Element]**.
+Sends an event to Experience Platform so that Experience Platform can collect the data you send and act on that information. Any data that you want to send can be sent in the **[!UICONTROL XDM Data]** field. Use a [!DNL JSON] object that conforms to the structure of your [!DNL XDM] schema. This object can either be created on your page or through a **[!UICONTROL Custom Code]** **[!UICONTROL Data Element]**.
 
 The **[!UICONTROL Send Event]** action type supports the fields and settings described below. These fields are all optional.
 
@@ -83,7 +83,7 @@ The **[!UICONTROL Send Event]** action type supports the fields and settings des
 
 Use the **[!UICONTROL Instance]** selector to choose your Web SDK instance that you want to configure. If you have only one instance, it is preselected.
 
-![Platform Tags UI image showing the instance settings for the Send Event action type.](assets/instance-settings.png)
+![Experience Platform Tags UI image showing the instance settings for the Send Event action type.](assets/instance-settings.png)
 
 * **[!UICONTROL Instance]**: Select the Web SDK instance that you want to configure. If you only have one instance, it will be preselected.
 * **[!UICONTROL Use guided events]**: Enable this option to automatically fill in or hide certain fields to enable a particular use case. Enabling this option triggers the display of the following settings.
@@ -102,7 +102,7 @@ Use the **[!UICONTROL Instance]** selector to choose your Web SDK instance that 
 
 ### Data {#data}
 
-![Platform Tags UI image showing the Data element settings for the Send Event action type.](assets/data.png)
+![Experience Platform Tags UI image showing the Data element settings for the Send Event action type.](assets/data.png)
 
 * **[!UICONTROL Type]**: This field allows you specify an event type that will be recorded in your XDM schema. See [`type`](/help/web-sdk/commands/sendevent/type.md) in the `sendEvent` command for more information.
 * **[!UICONTROL XDM]**:
@@ -113,7 +113,7 @@ Use the **[!UICONTROL Instance]** selector to choose your Web SDK instance that 
 
 ### Personalization {#personalization}
 
-![Platform Tags UI image showing the Personalization settings for the Send Event action type.](assets/personalization-settings.png)
+![Experience Platform Tags UI image showing the Personalization settings for the Send Event action type.](assets/personalization-settings.png)
 
 * **[!UICONTROL Scopes]**: Select the scopes (Adobe Target [!DNL mboxes]) you would like to explicitly request from personalization. You can enter the scopes manually, or by providing a data element.
 * **[!UICONTROL Surfaces]**: Set the web surfaces that are available on the page for personalization. See the [Adobe Journey Optimizer documentation](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) for more details.

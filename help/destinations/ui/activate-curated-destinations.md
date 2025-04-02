@@ -70,7 +70,7 @@ To learn how to configure the [!DNL LiveRamp - Onboarding] destination and expor
 
 >[!IMPORTANT]
 >
->When exporting files to the [!DNL LiveRamp - Onboarding] destination, Platform generates one CSV file for each [merge policy ID](../../profile/merge-policies/overview.md). See the [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) destination documentation for detailed information on how to validate your data export to LiveRamp.
+>When exporting files to the [!DNL LiveRamp - Onboarding] destination, Experience Platform generates one CSV file for each [merge policy ID](../../profile/merge-policies/overview.md). See the [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) destination documentation for detailed information on how to validate your data export to LiveRamp.
 
 
 After you have successfully exported your audiences to LiveRamp, continue to [step 2](#distribution).

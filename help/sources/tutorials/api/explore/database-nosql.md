@@ -28,7 +28,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all E[!DNL xperience Platform] API calls, as shown below:
+In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all E[!DNL xperience Experience Platform] API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -146,4 +146,4 @@ A successful response returns the structure of the specified table. Details rega
 
 ## Next steps
 
-By following this tutorial, you have explored your database, found the path of the table you wish to ingest into [!DNL Experience Platform], and obtained information regarding its structure. You can use this information in the next tutorial to [collect data from your database and bring it into Platform](../collect/database-nosql.md).
+By following this tutorial, you have explored your database, found the path of the table you wish to ingest into [!DNL Experience Platform], and obtained information regarding its structure. You can use this information in the next tutorial to [collect data from your database and bring it into Experience Platform](../collect/database-nosql.md).

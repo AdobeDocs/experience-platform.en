@@ -15,7 +15,7 @@ Using the developer guide requires a working understanding of the various Adobe 
 * [[!DNL Real-Time Customer Profile]](../home.md): Provides a unified, customer profile in real time based on aggregated data from multiple sources.
 * [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): Gain a better view of your customer and their behavior by bridging identities across devices and systems.
 * [[!DNL Adobe Experience Platform Segmentation Service]](../../segmentation/home.md): Allows you to build audiences from Real-Time Customer Profile data.
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Experience Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to successfully make calls to [!DNL Profile] API endpoints.

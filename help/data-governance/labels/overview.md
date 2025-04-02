@@ -32,7 +32,7 @@ All audience segments created by [Adobe Experience Platform Segmentation Service
 
 In addition to inheriting dataset-level labels, segments inherit all field-level labels from their associated datasets by default. Therefore, you can more easily identify which attributes should be excluded from your segments and prevent them from inheriting labels from excluded fields.
 
-For more information on how automatic enforcement works in Platform, see the overview on [automatic policy enforcement](../enforcement/auto-enforcement.md).
+For more information on how automatic enforcement works in Experience Platform, see the overview on [automatic policy enforcement](../enforcement/auto-enforcement.md).
 
 ### Inheritance from Adobe Audience Manager Data Export Controls
 

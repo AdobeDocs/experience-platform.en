@@ -75,7 +75,7 @@ The following section contains additional information about interpreting data in
 
 The following table lists the available data ingestion status notifications that you can subscribe to. 
 
-| Event code | Platform Service | Status | Event description |
+| Event code | Experience Platform Service | Status | Event description |
 | --- | ---------------- | ------ | ----------------- |
 | `ing_load_success` | [!DNL Data Ingestion] | success | A batch was successful ingested into a dataset within the [!DNL Data Lake]. |
 | `ing_load_failure` | [!DNL Data Ingestion] | failure | A batch failed to be ingested into a dataset within the [!DNL Data Lake]. |

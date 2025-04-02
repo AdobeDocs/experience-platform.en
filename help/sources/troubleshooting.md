@@ -61,7 +61,7 @@ All batch ingestion sources support partial ingestion. However, streaming ingest
 
 ### When should I use partial ingestion?
 
-Partial ingestion should be used if you do **not** have constraints, such as having the entire file being ingested into Platform. Alternatively, partial ingestion should be used if you do not mind ingesting data that may contain errors within it.
+Partial ingestion should be used if you do **not** have constraints, such as having the entire file being ingested into Experience Platform. Alternatively, partial ingestion should be used if you do not mind ingesting data that may contain errors within it.
 
 ### What is the typical partial ingestion error threshold?
 

@@ -27,7 +27,7 @@ Refer to the Experience Platform documentation for [Audience Membership Details 
 
 ### [!DNL Oracle Eloqua] prerequisites {#prerequisites-destination}
 
-In order to export data from Platform to your [!DNL Oracle Eloqua] account you need to have an [!DNL Oracle Eloqua] account.
+In order to export data from Experience Platform to your [!DNL Oracle Eloqua] account you need to have an [!DNL Oracle Eloqua] account.
 
 Additionally, you need, at a minimum, the *"Advanced Users - Marketing permissions"* for your [!DNL Oracle Eloqua] instance. Refer to the *"Security Groups"* section on the [Secured user access](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityOverview/SecuredUserAccess.htm) page for guidance. The access is required by the destination to programmatically [determine your base URL](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/DeterminingBaseURL.html) when invoking the [!DNL Oracle Eloqua] API.
 
@@ -51,7 +51,7 @@ Refer to the [Signing in to [!DNL Oracle Eloqua]](https://docs.oracle.com/en/clo
 >* [!DNL Oracle Eloqua] custom contact fields are automatically created using the names of the audiences selected during the **[!UICONTROL Select segments]** step.
 
 * [!DNL Oracle Eloqua] has a maximum limit of 250 custom contact fields.
-* Before exporting new audiences ensure that the number of Platform audiences and the number of existing audiences within [!DNL Oracle Eloqua] do not exceed this limit.
+* Before exporting new audiences ensure that the number of Experience Platform audiences and the number of existing audiences within [!DNL Oracle Eloqua] do not exceed this limit.
 * If this limit is exceeded, you will encounter an error in Experience Platform. This is because the [!DNL Oracle Eloqua] API fails to validate the request, and responds with a - *400: There was a validation error* - error message describing the issue.
 * If you have reached the limit specified above, you need to remove existing mappings from your destination and delete the corresponding custom contact fields in your [!DNL Oracle Eloqua] account before you can export more segments.
 
@@ -71,7 +71,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of a segment, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> For each selected audience in Platform, the corresponding [!DNL Oracle Eloqua] segment status gets updated with its audience status from Platform.</li></ul> |
+| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of a segment, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> For each selected audience in Experience Platform, the corresponding [!DNL Oracle Eloqua] segment status gets updated with its audience status from Experience Platform.</li></ul> |
 | Export frequency | **[!UICONTROL Streaming]** | <ul><li>Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).</li></ul>|
 
 {style="table-layout:auto"}
@@ -135,7 +135,7 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 
 ### Mapping considerations and example {#mapping-considerations-example}
 
-To correctly send your audience data from Adobe Experience Platform to the [!DNL Oracle Eloqua] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination.
+To correctly send your audience data from Adobe Experience Platform to the [!DNL Oracle Eloqua] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Experience Platform account and their corresponding equivalents from the target destination.
 
 To map your XDM fields to the [!DNL Oracle Eloqua] destination fields, follow these steps:
 

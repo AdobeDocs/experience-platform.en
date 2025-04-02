@@ -190,4 +190,4 @@ A successful response returns the structure of the specified table. Details rega
 
 ## Next steps
 
-By following this tutorial, you have explored your **[!UICONTROL eCommerce]** connection, found the path of the table you wish to ingest into [!DNL Experience Platform], and obtained information regarding its structure. You can use this information in the next tutorial to [collect eCommerce data and bring it into Platform](../collect/ecommerce.md).
+By following this tutorial, you have explored your **[!UICONTROL eCommerce]** connection, found the path of the table you wish to ingest into [!DNL Experience Platform], and obtained information regarding its structure. You can use this information in the next tutorial to [collect eCommerce data and bring it into Experience Platform](../collect/ecommerce.md).

@@ -19,7 +19,7 @@ This guide requires a working understanding of the following components of Adobe
 * [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Experience Platform] services.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single [!DNL Experience Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to successfully connect [!DNL Kinesis] to Platform using the [!DNL Flow Service] API.
+The following sections provide additional information that you will need to know in order to successfully connect [!DNL Kinesis] to Experience Platform using the [!DNL Flow Service] API.
 
 ### Gather required credentials
 
@@ -27,8 +27,8 @@ In order for [!DNL Flow Service] to connect with your [!DNL Amazon Kinesis] acco
 
 | Credential | Description |
 | ---------- | ----------- |
-| `accessKeyId` | The access key ID is one half of the access key pair used to authenticate your [!DNL Kinesis] account to Platform. |
-| `secretKey` | The secret access key is the other half of the access key pair used to authenticate your [!DNL Kinesis] account to Platform. |
+| `accessKeyId` | The access key ID is one half of the access key pair used to authenticate your [!DNL Kinesis] account to Experience Platform. |
+| `secretKey` | The secret access key is the other half of the access key pair used to authenticate your [!DNL Kinesis] account to Experience Platform. |
 | `region` | The region for your [!DNL Kinesis] account. See the guide on [adding IP addresses to your allow list](../../../../ip-address-allow-list.md) for more information on regions. |
 | `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The [!DNL Kinesis] connection specification ID is: `86043421-563b-46ec-8e6c-e23184711bf6`. |
 

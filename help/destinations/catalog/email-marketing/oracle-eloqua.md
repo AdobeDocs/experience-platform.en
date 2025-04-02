@@ -69,14 +69,14 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 * Optionally, you can attach your RSA-formatted public key to add encryption with PGP/GPG to your exported files under the **[!UICONTROL Key]** section. Your public key must be written as a [!DNL Base64] encoded string.
 * **[!UICONTROL Name]**: Pick a relevant name for your destination.
 * **[!UICONTROL Description]**: Enter a description for your destination.
-* **[!UICONTROL Folder Path]**: Provide the path in your storage location where Platform will deposit your export data as CSV files.
+* **[!UICONTROL Folder Path]**: Provide the path in your storage location where Experience Platform will deposit your export data as CSV files.
 * **[!UICONTROL File Format]**: Select **CSV** to export CSV files to your storage location.
 
 <!--
 
 Commenting out Amazon S3 bucket part for now until support is clarified
 
-- **[!UICONTROL Bucket name]**: Your Amazon S3 bucket, where Platform will deposit the data export. Your input must be between 3 and 63 characters long. Must begin and end with a letter or number. Must contain only lowercase letters, numbers, or hyphens ( - ). Must not be formatted as an IP address (for example, 192.100.1.1).
+- **[!UICONTROL Bucket name]**: Your Amazon S3 bucket, where Experience Platform will deposit the data export. Your input must be between 3 and 63 characters long. Must begin and end with a letter or number. Must contain only lowercase letters, numbers, or hyphens ( - ). Must not be formatted as an IP address (for example, 192.100.1.1).
 
 -->
 
@@ -101,7 +101,7 @@ When activating audiences to this destination, Adobe recommends that you select 
 
 ## Exported data {#exported-data}
 
-For [!DNL Oracle Eloqua] destinations, Platform creates a `.csv` file in the storage location that you provided. For more information about the files, see [verify audience activation](../../ui/activate-batch-profile-destinations.md#verify) in the audience activation tutorial. 
+For [!DNL Oracle Eloqua] destinations, Experience Platform creates a `.csv` file in the storage location that you provided. For more information about the files, see [verify audience activation](../../ui/activate-batch-profile-destinations.md#verify) in the audience activation tutorial. 
 
 ## Set up data import into [!DNL Oracle Eloqua] {#import-data-into-eloqua}
 

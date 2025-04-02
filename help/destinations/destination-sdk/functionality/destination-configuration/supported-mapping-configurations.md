@@ -66,7 +66,7 @@ The resulting UI experience is shown in the image below.
 
 ### Map identity namespaces to partner identity namespaces {#streaming-identity-to-identity}
 
-Users can map custom or global identity namespaces from Platform to identity namespaces that you defined.
+Users can map custom or global identity namespaces from Experience Platform to identity namespaces that you defined.
 
 The resulting UI experience is shown in the image below.
 
@@ -120,7 +120,7 @@ Users can leave the default name in place or enter a custom attribute name in th
 
 ### Map identity namespaces to custom attributes {#batch-identity-to-custom}
 
-Users can map custom or global identity namespaces from Platform to custom attributes on your destination's side.
+Users can map custom or global identity namespaces from Experience Platform to custom attributes on your destination's side.
 
 When selecting an identity namespace as a source field, the target field is automatically populated with an equivalent identity namespace. To replace the target field with a custom attribute, users must enter a custom attribute name in the target field selection screen.
 
@@ -132,7 +132,7 @@ The resulting UI experience is shown in the image below.
 
 ### Map identity namespaces to partner identity namespaces {#batch-identity-to-identity}
 
-Users can map custom or global identity namespaces from Platform to equivalent identity namespaces.
+Users can map custom or global identity namespaces from Experience Platform to equivalent identity namespaces.
 
 When selecting an identity namespace as a source field, the target field is automatically populated with an equivalent identity namespace. 
 

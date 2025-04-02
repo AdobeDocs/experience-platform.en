@@ -15,14 +15,14 @@ Experience Platform provides support for ingesting data from a third-party marke
 
 A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
 
-The documentation below provides information on how to connect [!DNL Mailchimp] to Platform and bring either [!DNL Mailchimp Campaigns] or [!DNL Mailchimp Members] data using APIs or the user interface:
+The documentation below provides information on how to connect [!DNL Mailchimp] to Experience Platform and bring either [!DNL Mailchimp Campaigns] or [!DNL Mailchimp Members] data using APIs or the user interface:
 
-## Connect [!DNL Mailchimp Campaigns] to Platform
+## Connect [!DNL Mailchimp Campaigns] to Experience Platform
 
-* [Create a source connection to bring [!DNL Mailchimp Campaigns] data to Platform using APIs](../../tutorials/api/create/marketing-automation/mailchimp-campaign.md).
-* [Create a source connection to bring [!DNL Mailchimp Campaigns] data to Platform using the user interface](../../tutorials/ui/create/marketing-automation/mailchimp-campaigns.md).
+* [Create a source connection to bring [!DNL Mailchimp Campaigns] data to Experience Platform using APIs](../../tutorials/api/create/marketing-automation/mailchimp-campaign.md).
+* [Create a source connection to bring [!DNL Mailchimp Campaigns] data to Experience Platform using the user interface](../../tutorials/ui/create/marketing-automation/mailchimp-campaigns.md).
 
-## Connect [!DNL Mailchimp Members] to Platform
+## Connect [!DNL Mailchimp Members] to Experience Platform
 
-* [Create a source connection to bring [!DNL Mailchimp Members] data to Platform using APIs](../../tutorials/api/create/marketing-automation/mailchimp-members.md).
-* [Create a source connection to bring [!DNL Mailchimp Members] data to Platform using the user interface](../../tutorials/ui/create/marketing-automation/mailchimp-members.md).
+* [Create a source connection to bring [!DNL Mailchimp Members] data to Experience Platform using APIs](../../tutorials/api/create/marketing-automation/mailchimp-members.md).
+* [Create a source connection to bring [!DNL Mailchimp Members] data to Experience Platform using the user interface](../../tutorials/ui/create/marketing-automation/mailchimp-members.md).

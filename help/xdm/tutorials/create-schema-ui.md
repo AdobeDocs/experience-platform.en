@@ -14,7 +14,7 @@ For demonstration purposes, the steps in this tutorial involve creating an examp
 
 >[!NOTE]
 >
->If you are ingesting CSV data into Platform, you can [map that data to an XDM schema created by AI-generated recommendations](../../ingestion/tutorials/map-csv/recommendations.md) (currently in beta) without having to manually create the schema yourself.
+>If you are ingesting CSV data into Experience Platform, you can [map that data to an XDM schema created by AI-generated recommendations](../../ingestion/tutorials/map-csv/recommendations.md) (currently in beta) without having to manually create the schema yourself.
 >
 >If you prefer to compose a schema using the [!DNL Schema Registry] API, start by reading the [[!DNL Schema Registry] developer guide](../api/getting-started.md) before attempting the tutorial on [creating a schema using the API](create-schema-api.md).
 

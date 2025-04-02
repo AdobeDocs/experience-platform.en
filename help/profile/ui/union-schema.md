@@ -57,7 +57,7 @@ For more information on datasets, including viewing dataset activity and preview
 
 ## View contributing schemas
 
-You can also view which specific schemas are contributing to the union schema by selecting **[!UICONTROL All contributing schemas]** to expand the list of schemas. Depending on the class you have selected and the number of schemas that your organization has created within Platform, this could be a short list containing a single schema or a long list containing many schemas.
+You can also view which specific schemas are contributing to the union schema by selecting **[!UICONTROL All contributing schemas]** to expand the list of schemas. Depending on the class you have selected and the number of schemas that your organization has created within Experience Platform, this could be a short list containing a single schema or a long list containing many schemas.
 
 ![The list of schemas that contribute to the union schema is highlighted.](../images/union-schema/contributing-schemas.png)
 
@@ -93,4 +93,4 @@ Selecting a relationship field from the list causes the displayed schema to upda
 
 ## Next steps
 
-By reading this guide, you now know how to view and navigate union schemas using the [!DNL Experience Platform] UI. For more information on schemas, including how they are used throughout Platform, please begin by reading the [XDM System overview](../../xdm/home.md).
+By reading this guide, you now know how to view and navigate union schemas using the [!DNL Experience Platform] UI. For more information on schemas, including how they are used throughout Experience Platform, please begin by reading the [XDM System overview](../../xdm/home.md).

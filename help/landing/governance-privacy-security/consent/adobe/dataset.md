@@ -11,7 +11,7 @@ exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
 
 In order for Adobe Experience Platform to process your customer consent/preference data, that data must be sent to a dataset whose schema contains fields related to consents and other permissions. Specifically, this dataset must be based on the [!DNL XDM Individual Profile] class, and enabled for use in [!DNL Real-Time Customer Profile].
 
-This document provides steps for configuring a dataset to process consent data in Experience Platform. For an overview of the full workflow for processing consent/preference data in Platform, refer to the [consent processing overview](./overview.md).
+This document provides steps for configuring a dataset to process consent data in Experience Platform. For an overview of the full workflow for processing consent/preference data in Experience Platform, refer to the [consent processing overview](./overview.md).
 
 >[!IMPORTANT]
 >
@@ -33,7 +33,7 @@ This tutorial requires a working understanding of the following components of Ad
 
 >[!IMPORTANT]
 >
->This tutorial assumes that you know the [!DNL Profile] schema in Platform that you want to use to capture customer attribute information. Regardless of the method you use to collect consent data, this schema must be [enabled for Real-Time Customer Profile](../../../../xdm/ui/resources/schemas.md#profile). In addition, the schema's primary identity cannot be a directly identifiable field that is prohibited from use in interest-based advertising, such as an email address. Consult your legal counsel if you are unsure which fields are restricted.
+>This tutorial assumes that you know the [!DNL Profile] schema in Experience Platform that you want to use to capture customer attribute information. Regardless of the method you use to collect consent data, this schema must be [enabled for Real-Time Customer Profile](../../../../xdm/ui/resources/schemas.md#profile). In addition, the schema's primary identity cannot be a directly identifiable field that is prohibited from use in interest-based advertising, such as an email address. Consult your legal counsel if you are unsure which fields are restricted.
 
 ## [!UICONTROL Consent and Preference Details] field group structure {#structure}
 
@@ -93,7 +93,7 @@ The field group provides a single object-type field, `consents`, whose sub-prope
 In order to collect consent data using the Adobe standard, you must have a Profile-enabled schema that contains the following two field groups:
 
 * [[!UICONTROL Consent and Preference Details]](../../../../xdm/field-groups/profile/consents.md)
-* [[!UICONTROL IdentityMap]](../../../../xdm/field-groups/profile/identitymap.md) (required if using the Platform Web or Mobile SDK to send consent signals)
+* [[!UICONTROL IdentityMap]](../../../../xdm/field-groups/profile/identitymap.md) (required if using the Experience Platform Web or Mobile SDK to send consent signals)
 
 In the Experience Platform UI, select **[!UICONTROL Schemas]** in the left navigation, then select the **[!UICONTROL Browse]** tab to display a list of existing schemas. From here, select the name of the [!DNL Profile]-enabled schema that you want to add consent fields to. The screenshots in this section use the "Loyalty Members" schema built in the [schema creation tutorial](../../../../xdm/tutorials/create-schema-ui.md) as an example.
 
@@ -123,7 +123,7 @@ The canvas reappears, showing that the `consents` and `identityMap` fields have 
 >
 >If you are creating a new schema, or editing an existing schema that has not been enabled for Profile, you must [enable the schema for Profile](../../../../xdm/ui/resources/schemas.md#profile) before saving.
 
-If the schema you edited is used by the [!UICONTROL Profile Dataset] specified in your Platform Web SDK datastream, that dataset will now include the new consent fields. You can now return to the [consent processing guide](./overview.md#merge-policies) to continue the process of configuring Experience Platform to process consent data. If you have not created a dataset for this schema, follow the steps in the next section.
+If the schema you edited is used by the [!UICONTROL Profile Dataset] specified in your Experience Platform Web SDK datastream, that dataset will now include the new consent fields. You can now return to the [consent processing guide](./overview.md#merge-policies) to continue the process of configuring Experience Platform to process consent data. If you have not created a dataset for this schema, follow the steps in the next section.
 
 ## Create a dataset based on your consent schema {#dataset}
 
@@ -155,11 +155,11 @@ Finally, select **[!UICONTROL Enable]** in the confirmation popover to enable th
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/enable-dataset.png)
 
-The dataset is now saved and enabled for use in [!DNL Profile]. If you are planning using the Platform Web SDK to send consent data to Profile, you must select this dataset as the [!UICONTROL Profile Dataset] when setting up your [datastream](../../../../datastreams/overview.md).
+The dataset is now saved and enabled for use in [!DNL Profile]. If you are planning using the Experience Platform Web SDK to send consent data to Profile, you must select this dataset as the [!UICONTROL Profile Dataset] when setting up your [datastream](../../../../datastreams/overview.md).
 
 ## Next steps
 
-By following this tutorial, you have added consent fields to a [!DNL Profile]-enabled schema, whose dataset will be used to ingest consent data using the Platform Web SDK or direct XDM ingestion.
+By following this tutorial, you have added consent fields to a [!DNL Profile]-enabled schema, whose dataset will be used to ingest consent data using the Experience Platform Web SDK or direct XDM ingestion.
 
 You can now return to the [consent processing overview](./overview.md#merge-policies) to continue configuring Experience Platform to process consent data.
 
@@ -173,7 +173,7 @@ If you need to capture additional consent signals outside of those represented b
 
 >[!IMPORTANT]
 >
->The Platform Web and Mobile SDKs do not support custom fields in their consent-change commands. Currently the only way to ingest custom consent fields into Profile is through [batch ingestion](../../../../ingestion/batch-ingestion/overview.md) or a [source connection](../../../../sources/home.md).
+>The Experience Platform Web and Mobile SDKs do not support custom fields in their consent-change commands. Currently the only way to ingest custom consent fields into Profile is through [batch ingestion](../../../../ingestion/batch-ingestion/overview.md) or a [source connection](../../../../sources/home.md).
 
 It is highly recommended that you use the [!UICONTROL Consent and Preference Details] field group as a baseline for the structure of your consent data and add additional fields as needed, rather than attempting to create the entire structure from scratch.
 

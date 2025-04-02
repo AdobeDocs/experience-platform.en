@@ -7,18 +7,18 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
 
 # Adobe Experience Platform overview {#landing}
 
-* [Platform overview](home.md)
-* [Platform overview (Video)](video/platform-overview.md)
+* [Experience Platform overview](home.md)
+* [Experience Platform overview (Video)](video/platform-overview.md)
 * [Multi-cloud overview](multi-cloud.md)
 * [Edge Network and hub comparison](./edge-and-hub-comparison.md)
-* [Platform tutorials](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
-* [A customer experience powered by Platform (Video)](video/customer-experience.md)
-* [Behind the scenes of a customer experience powered by Platform (Video)](video/customer-experience-bts.md)
+* [Experience Platform tutorials](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
+* [A customer experience powered by Experience Platform (Video)](video/customer-experience.md)
+* [Behind the scenes of a customer experience powered by Experience Platform (Video)](video/customer-experience-bts.md)
 * Getting started {#getting-started}
   * [End-to-end example workflow](end-to-end-tutorial.md)
   * [Key capabilities (Video)](video/key-capabilities.md)
   * [Key use cases (Video)](video/platform-use-cases.md)
-  * [Platform architecture (Video)](video/platform-architecture.md)
+  * [Experience Platform architecture (Video)](video/platform-architecture.md)
   * [Roles and project phases (Video)](video/roles-project-phases.md)
 * Experience Platform UI {#platform-ui}
   * [Experience Platform UI guide](ui-guide.md)
@@ -32,10 +32,10 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
   * [API fundamentals](api-fundamentals.md)
   * [Using Postman with Experience Platform APIs](postman.md)
   * [API reference documents](https://www.adobe.com/go/platform-api-reference-en)
-* Platform documentation {#documentation}
+* Experience Platform documentation {#documentation}
   * [Overview](documentation/overview.md)
   * [Language support](documentation/language-support.md)
-* Applications built on Platform {#ecosystem}
+* Applications built on Experience Platform {#ecosystem}
   * [Overview](application-services.md)
   * [Adobe Real-Time Customer Data Platform (all editions)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
   * [Application and Intelligent Services (Video)](video/application-intelligent-services.md)
@@ -43,7 +43,7 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
   * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html)
   * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
   * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html)
-  * [Platform integrations with Experience Cloud (Video)](video/experience-cloud-integrations.md)
+  * [Experience Platform integrations with Experience Cloud (Video)](video/experience-cloud-integrations.md)
 * Governance, privacy, and security {#governance-privacy-security}
   * [Overview](./governance-privacy-security/overview.md)
   * Consent management {#consent}
@@ -53,7 +53,7 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
     * IAB TCF 2.0 {#iab}
       * [Overview](./governance-privacy-security/consent/iab/overview.md)
       * [Configure a dataset to capture consent and preference data](./governance-privacy-security/consent/iab/dataset.md)
-    * [Integrate the Platform Web SDK to process consent and preference data](./governance-privacy-security/consent/sdk.md) 
+    * [Integrate the Experience Platform Web SDK to process consent and preference data](./governance-privacy-security/consent/sdk.md) 
   * Audit logs {#audit-logs}
     * [Overview](./governance-privacy-security/audit-logs/overview.md)
     * Audit Query API {#audit-api}

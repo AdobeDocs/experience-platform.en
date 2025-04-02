@@ -24,7 +24,7 @@ If you already have a [!DNL Salesforce Marketing Cloud] account, you may skip th
 
 ### Gather required credentials
 
-In order to access your [!DNL Salesforce Marketing Cloud] account on Platform, you must provide the following values:
+In order to access your [!DNL Salesforce Marketing Cloud] account on Experience Platform, you must provide the following values:
 
 | Credential | Description |
 | ---------- | ----------- |

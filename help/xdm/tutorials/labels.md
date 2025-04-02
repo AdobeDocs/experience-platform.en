@@ -5,7 +5,7 @@ exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
 ---
 # Manage data usage labels for a schema
 
-All data that is brought into Adobe Experience Platform is constrained by Experience Data Model (XDM) schemas. This data may be subject to usage restrictions defined by your organization or by legal regulations. To account for this, the Platform allows you to restrict the usage of certain datasets and fields through the use of [data usage labels](../../data-governance/labels/overview.md).
+All data that is brought into Adobe Experience Platform is constrained by Experience Data Model (XDM) schemas. This data may be subject to usage restrictions defined by your organization or by legal regulations. To account for this, the Experience Platform allows you to restrict the usage of certain datasets and fields through the use of [data usage labels](../../data-governance/labels/overview.md).
 
 A label applied to a schema field indicates the usage policies that apply to the data contained in that specific field. 
 
@@ -21,7 +21,7 @@ This guide requires a working understanding of the following components of Adobe
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
   * [Schema Editor](../ui/overview.md): Learn how to create and manage schemas and other resources in the Experience Platform UI.
-* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Provides the infrastructure for enforcing data usage restrictions on Platform operations, using policies that define which marketing actions can (or cannot) be performed on labeled data.
+* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Provides the infrastructure for enforcing data usage restrictions on Experience Platform operations, using policies that define which marketing actions can (or cannot) be performed on labeled data.
 
 ## Select a schema or field to add labels to {#select-schema-field}
 

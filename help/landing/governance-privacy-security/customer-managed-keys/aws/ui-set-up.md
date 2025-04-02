@@ -5,7 +5,7 @@ exl-id: f0e38a60-d448-4975-977e-1367fca10515
 ---
 # Set up and Configure Customer Managed Keys with AWS using the Experience Platform UI
 
-Use this guide to enable Customer Managed Keys (CMK) for Platform instances hosted on AWS through the Experience Platform UI. 
+Use this guide to enable Customer Managed Keys (CMK) for Experience Platform instances hosted on AWS through the Experience Platform UI. 
 
 >[!IMPORTANT]
 >
@@ -35,11 +35,11 @@ To integrate your AWS key with Experience Platform, you must edit the JSON in th
 }
 ```
 
-In the example above, all resources (`"Resource": "*"`) within the same account (`Principal.AWS`) can access the key. This policy allows services in the account to perform encryption and decryption operations, restricted to the specified account. To grant your Platform single-tenant account access to this key, add new statements to the default AWS policy. You can obtain the required JSON policy from the Experience Platform UI and apply it to your AWS KMS key to establish a secure connection with Adobe Experience Platform.
+In the example above, all resources (`"Resource": "*"`) within the same account (`Principal.AWS`) can access the key. This policy allows services in the account to perform encryption and decryption operations, restricted to the specified account. To grant your Experience Platform single-tenant account access to this key, add new statements to the default AWS policy. You can obtain the required JSON policy from the Experience Platform UI and apply it to your AWS KMS key to establish a secure connection with Adobe Experience Platform.
 
 In the Experience Platform UI, go to the **[!UICONTROL Administration]** section in the left navigation rail, and select **[!UICONTROL Encryption]**. In the [!UICONTROL Encryption Configuration] workspace, select **[!UICONTROL Configure]** in the [!UICONTROL Customer Managed Keys] card.
 
-![The Platform Encryption Configuration workspace with Configure highlighted in the Customer Managed Keys card.](../../../images/governance-privacy-security/key-management-service/encryption-configuration.png)
+![The Experience Platform Encryption Configuration workspace with Configure highlighted in the Customer Managed Keys card.](../../../images/governance-privacy-security/key-management-service/encryption-configuration.png)
 
 The [!UICONTROL Customer Managed Keys configuration] appears. Copy the `statement` object form the CMK KMS policy displayed in the [!UICONTROL Customer Managed Keys] [!UICONTROL Encryption Configuration].
 
@@ -156,9 +156,9 @@ Select **[!DNL Finish]** to confirm the updated policy and create the key. The c
 
 The updated [!DNL Customer Managed Keys] workspace of the AWS [!DNL Key Management Service] appears.
 
-### Add AWS encryption key details to Platform 
+### Add AWS encryption key details to Experience Platform 
 
-Next, to enable encryption, add the key's Amazon Resource Name (ARN) to your Platform [!UICONTROL Customer Managed Keys configuration]. From the [!DNL Customer Managed Keys] section of AWS, select the alias of your new key from the list in the [!DNL Key Management Service]. 
+Next, to enable encryption, add the key's Amazon Resource Name (ARN) to your Experience Platform [!UICONTROL Customer Managed Keys configuration]. From the [!DNL Customer Managed Keys] section of AWS, select the alias of your new key from the list in the [!DNL Key Management Service]. 
 
 ![The AWS KMS Customer Managed Keys workspace with the new key alias highlighted.](../../../images/governance-privacy-security/key-management-service/customer-managed-keys-on-aws.png)
 
@@ -169,13 +169,13 @@ Select the copy icon to copy your ARN. A confirmation dialog appears.
 
 ![The key details of your AWS KMS Customer Managed Key with the ARN highlighted.](../../../images/governance-privacy-security/key-management-service/keys-details-arn.png)
 
-Now, navigate back to the Platform [!UICONTROL Customer Managed Keys configuration] UI. In the **[!UICONTROL Add AWS encryption key details]** section, add a **[!UICONTROL Configuration name]** and the **[!UICONTROL KMS key ARN]** you copied from the AWS UI.
+Now, navigate back to the Experience Platform [!UICONTROL Customer Managed Keys configuration] UI. In the **[!UICONTROL Add AWS encryption key details]** section, add a **[!UICONTROL Configuration name]** and the **[!UICONTROL KMS key ARN]** you copied from the AWS UI.
 
-![The Platform Encryption Configuration workspace with Configuration name and KMS key ARN highlighted in the Add AWS encryption key details section.](../../../images/governance-privacy-security/key-management-service/add-encryption-key-details.png)
+![The Experience Platform Encryption Configuration workspace with Configuration name and KMS key ARN highlighted in the Add AWS encryption key details section.](../../../images/governance-privacy-security/key-management-service/add-encryption-key-details.png)
 
 Next, select **[!UICONTROL SAVE]** to submit the configuration name, the KMS key ARN, and begin validation of the key.
 
-![The Platform Encryption Configuration workspace with Save highlighted.](../../../images/governance-privacy-security/key-management-service/save.png)
+![The Experience Platform Encryption Configuration workspace with Save highlighted.](../../../images/governance-privacy-security/key-management-service/save.png)
 
 You are returned to the [!UICONTROL Encryption Configurations] workspace. The status of the encryption configuration is displayed on the bottom of the **[!UICONTROL Customer Managed Keys]** card. 
 
@@ -195,7 +195,7 @@ Once the key is validated, the key vault identifiers are added to the data lake 
 
 The following are key considerations for key revocation:
 
-- Revoking or disabling the key will make your Platform data inaccessible. This action is irreversible and should be performed with caution.
+- Revoking or disabling the key will make your Experience Platform data inaccessible. This action is irreversible and should be performed with caution.
 - Consider the propagation timelines when access to encryption keys is revoked. Primary data stores become inaccessible within a few minutes to 24 hours. Cached or transient data stores becomes inaccessible within seven days.
 
 To revoke a key, navigate to the AWS KMS workspace. The **[!DNL Customer managed keys]** section displays all the available keys for your AWS account. Select the alias of your key from the list. 
@@ -206,7 +206,7 @@ The details of your key are displayed. To disable the key, select **[!DNL Key ac
 
 ![The details of your AWS key in the AWS KMS UI with Key actions and Disable highlighted.](../../../images/governance-privacy-security/key-management-service/disable-key.png)
 
-A confirmation dialog appears. Select **[!DNL Disable key]** to confirm your choice. The impact of disabling the key should be reflected in Platform applications and the UI within approximately five minutes.
+A confirmation dialog appears. Select **[!DNL Disable key]** to confirm your choice. The impact of disabling the key should be reflected in Experience Platform applications and the UI within approximately five minutes.
 
 >[!NOTE]
 >

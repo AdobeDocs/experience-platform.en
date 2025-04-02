@@ -12,13 +12,13 @@ Branch provides powerful links and solutions that help you acquire, engage, and 
 
 Branch is an advertising extension in Adobe Experience Platform. For more information about the extension functionality, see the [features page](https://branch.io/features/) on the Branch website.
 
-This destination is a tag extension. For more information about how tag extensions work in Platform, see the [tag extensions overview](../launch-extensions/overview.md).
+This destination is a tag extension. For more information about how tag extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
 ![Branch extension](../../assets/catalog/advertising/branch/catalog.png)
 
 ## Prerequisites {#prerequisites}
 
-This extension is available in the [!DNL Destinations] catalog for all customers who have purchased Platform.
+This extension is available in the [!DNL Destinations] catalog for all customers who have purchased Experience Platform.
 
 To use this extension, you need access to tags in Adobe Experience Platform. Tags are offered to Adobe Experience Cloud customers as an included, value-add feature. Contact your organization administrator to get access to tags and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
 
@@ -26,7 +26,7 @@ To use this extension, you need access to tags in Adobe Experience Platform. Tag
 
 To install the [!DNL Branch] extension:
 
-In the [Platform interface](https://platform.adobe.com/), go to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+In the [Experience Platform interface](https://platform.adobe.com/), go to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Select the extension from the catalog or use the search bar.
 

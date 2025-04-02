@@ -18,10 +18,10 @@ This document explains how to verify and validate records in ingested batches wi
 
 To help your understanding of the concepts discussed in this document, you should have knowledge of the following topics:
 
-- **Data ingestion**: See the [data ingestion overview](../../ingestion/home.md) to learn the basics of how data is ingested into the Platform, including the different methods and processes involved.
-- **Batch ingestion**: See the [batch ingestion API overview](../../ingestion/batch-ingestion/overview.md) to learn the basic concepts of batch ingestion. Specifically, what a "batch" is and how it functions within Platform's data ingestion process.
+- **Data ingestion**: See the [data ingestion overview](../../ingestion/home.md) to learn the basics of how data is ingested into the Experience Platform, including the different methods and processes involved.
+- **Batch ingestion**: See the [batch ingestion API overview](../../ingestion/batch-ingestion/overview.md) to learn the basic concepts of batch ingestion. Specifically, what a "batch" is and how it functions within Experience Platform's data ingestion process.
 - **System metadata in datasets**: See the [Catalog Service overview](../../catalog/home.md) to learn how system metadata fields are used to track and query ingested data.
-- **Experience Data Model (XDM)**: See the [schemas UI overview](../../xdm/ui/overview.md) and the ['basics of schema composition'](../../xdm/schema/composition.md) to learn about XDM schemas and how they represent and validate the structure and format of data ingested into Platform.
+- **Experience Data Model (XDM)**: See the [schemas UI overview](../../xdm/ui/overview.md) and the ['basics of schema composition'](../../xdm/schema/composition.md) to learn about XDM schemas and how they represent and validate the structure and format of data ingested into Experience Platform.
 
 ## Access dataset batch metadata {#access-dataset-batch-metadata}
 
@@ -31,7 +31,7 @@ Next, to view the system fields of the dataset, execute a SELECT all statement t
  
 ![The DBVisualizer UI with the movie_data table and its metadata columns displayed and highlighted.](../images/use-cases/movie_data-table-with-metadata-columns.png)
 
-When data is ingested into Platform, it is assigned a logical partition based on the incoming data. This logical partition is represented by `_acp_system_metadata.sourceBatchId`. This ID helps to group and identify the data batches logically before they are processed and stored.
+When data is ingested into Experience Platform, it is assigned a logical partition based on the incoming data. This logical partition is represented by `_acp_system_metadata.sourceBatchId`. This ID helps to group and identify the data batches logically before they are processed and stored.
 
 After the data is processed and ingested into the data lake, it is assigned a physical partition represented by `_ACP_BATCHID`. This ID reflects the actual storage partition in the data lake where the ingested data resides.
 
@@ -50,7 +50,7 @@ The results of this query are shown in the image below.
 
 These results demonstrate that the number of input batches does not necessarily match the number of output batches, as the system determines the most efficient way to batch and store the data in the data lake. 
 
-For the purpose of this example, it is assumed that you have ingested a CSV file into Platform and created a dataset called `drug_checkout_data`.
+For the purpose of this example, it is assumed that you have ingested a CSV file into Experience Platform and created a dataset called `drug_checkout_data`.
 
 The `drug_checkout_data` file is a deeply nested set of 35,000 records. Use the SQL statement `SELECT * FROM drug_orders;` to preview of the first set of records in the JSON-based `drug_orders` dataset. 
 
@@ -86,7 +86,7 @@ Next, validate and verify the records that have been ingested into the dataset w
 
 >[!TIP]
 >
->To retrieve the batch ID and query records associated with that batch ID, you must first  create a batch within Platform. If you want to test the process yourself, you can ingest CSV data into Platform. Read the guide on how to [map a CSV file to an existing XDM schema using AI-generated recommendations](../../ingestion/tutorials/map-csv/recommendations.md).
+>To retrieve the batch ID and query records associated with that batch ID, you must first  create a batch within Experience Platform. If you want to test the process yourself, you can ingest CSV data into Experience Platform. Read the guide on how to [map a CSV file to an existing XDM schema using AI-generated recommendations](../../ingestion/tutorials/map-csv/recommendations.md).
 
 Once you have ingested a batch, you must navigate to the [!UICONTROL Datasets activity tab] for the dataset you ingested data into. 
 
@@ -118,8 +118,8 @@ When you execute this query in the Query Editor, the results are truncated to 10
 
 ## Next steps {#next-steps}
 
-By reading this document, you learned the essentials of verifying and validating records in ingested batches as part of the data ingestion process. You also gained insights into accessing dataset batch metadata, understanding logical and physical partitions, and querying specific batches using SQL commands. This knowledge can help you ensure data integrity and optimize your data storage on Platform.
+By reading this document, you learned the essentials of verifying and validating records in ingested batches as part of the data ingestion process. You also gained insights into accessing dataset batch metadata, understanding logical and physical partitions, and querying specific batches using SQL commands. This knowledge can help you ensure data integrity and optimize your data storage on Experience Platform.
 
-Next, you should practice data ingestion to apply the concepts learned. Ingest a sample dataset into Platform with either the provided sample files or your own data. If you have not done so already, read the tutorial on how to [ingest data into Adobe Experience Platform](../../ingestion/tutorials/ingest-batch-data.md).
+Next, you should practice data ingestion to apply the concepts learned. Ingest a sample dataset into Experience Platform with either the provided sample files or your own data. If you have not done so already, read the tutorial on how to [ingest data into Adobe Experience Platform](../../ingestion/tutorials/ingest-batch-data.md).
 
 Alternatively, you could learn how to [connect and verify Query Service with a variety of desktop client applications](../clients/overview.md) to enhance your data analysis capabilities.

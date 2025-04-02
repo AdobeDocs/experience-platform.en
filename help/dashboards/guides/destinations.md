@@ -47,7 +47,7 @@ From the widget library, you can browse the selection of standard and custom aud
 
 ### View SQL {#view-sql}
 
-You can view the SQL that generates the insights visualized on your dashboard with a toggle on the [!UICONTROL Overview] workspace. You can take inspiration from the SQL of your existing insights to create new queries that derive unique insights from Platform data based on your business needs. To learn more about this feature, see the [View SQL UI guide](../view-sql.md).
+You can view the SQL that generates the insights visualized on your dashboard with a toggle on the [!UICONTROL Overview] workspace. You can take inspiration from the SQL of your existing insights to create new queries that derive unique insights from Experience Platform data based on your business needs. To learn more about this feature, see the [View SQL UI guide](../view-sql.md).
 
 ## Default widgets {#default-widgets}
 

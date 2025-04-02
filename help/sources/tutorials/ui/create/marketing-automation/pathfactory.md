@@ -21,7 +21,7 @@ If you already have a [!DNL PathFactory] account, you may skip the remainder of 
 
 ### Gather Required Credentials {#gather-credentials}
 
-To access your PathFactory account on the Platform, you must provide the following values:
+To access your PathFactory account on the Experience Platform, you must provide the following values:
 
 | Credential | Description |
 | ---------- | ----------- |

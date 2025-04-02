@@ -10,7 +10,7 @@ badge: Beta
 
 *Start by updating the metadata (title and description) at the top of the page. Please ignore all instances of UICONTROL on this page. This is a tag that helps our machine translation processes correctly translate the page into the multiple languages that we support. We will add tags to your documentation after you submit it.*
 
-This tutorial provides steps for creating a *YOURSOURCE* source connector using the Platform user interface.
+This tutorial provides steps for creating a *YOURSOURCE* source connector using the Experience Platform user interface.
 
 ## Overview
 
@@ -31,7 +31,7 @@ This tutorial provides steps for creating a *YOURSOURCE* source connector using 
 
 ### Gather required credentials
 
-In order to connect *YOURSOURCE* to Platform, you must provide values for the following connection properties:
+In order to connect *YOURSOURCE* to Experience Platform, you must provide values for the following connection properties:
 
 | Credential | Description | Example |
 | --- | --- | --- |
@@ -61,7 +61,7 @@ Under the **Streaming** category, select *YOURSOURCE*, and then select **[!UICON
 
 ## Select data
 
-The **[!UICONTROL Select data]** step appears, providing an interface for you to select the data that you bring to Platform.
+The **[!UICONTROL Select data]** step appears, providing an interface for you to select the data that you bring to Experience Platform.
 
 * The left part of the interface is a browser that allows you to view the available data streams within your account;
 * The right part of the interface lets you preview up to 100 rows of data from a JSON file.
@@ -88,7 +88,7 @@ When finished, select **[!UICONTROL Next]**.
 
 The [!UICONTROL Mapping] step appears, providing you with an interface to map the source fields from your source schema to their appropriate target XDM fields in the target schema.
 
-Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
+Experience Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
 
 Once your source data is successfully mapped, select **[!UICONTROL Next]**.
 
@@ -117,7 +117,7 @@ To retrieve your streaming endpoint, go to the [!UICONTROL Dataflow activity] pa
 
 *Workflows for the remaining steps of creating a dataflow are modularized. If there are any specific call-outs you want to make regarding your source, please see the additional resources section below.*
 
-By following this tutorial, you hcave established a connection to your *YOURSOURCE* account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
+By following this tutorial, you hcave established a connection to your *YOURSOURCE* account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
 
 ## Additional resources
 

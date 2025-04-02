@@ -3,23 +3,23 @@ keywords: Experience Platform;home;popular topics;local system;file upload;map c
 solution: Experience Platform
 title: Create a Local File Upload Source Connector in the UI
 type: Tutorial
-description: Learn how to create a source connection for your local system to bring local files to Platform
+description: Learn how to create a source connection for your local system to bring local files to Experience Platform
 exl-id: 9ce15362-c30d-40cc-9d9c-caa650579390
 ---
 # Create a local file upload source connector in the UI
 
-This tutorial provides steps for creating a local file upload source connector to ingest local files to Platform using the user interface.
+This tutorial provides steps for creating a local file upload source connector to ingest local files to Experience Platform using the user interface.
 
 ## Getting started
 
-This tutorial requires a working understanding of the following components of Platform:
+This tutorial requires a working understanding of the following components of Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
+* [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
   * [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
   * [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
-## Upload local files to Platform
+## Upload local files to Experience Platform
 
 In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources for which you can create an account.
 
@@ -85,4 +85,4 @@ Once your CSV file is mapped and created, you can monitor the data that is being
 
 ## Next steps
 
-By following this tutorial, you have successfully mapped a flat CSV file to an XDM schema and ingested it into Platform. This data can now be used by downstream [!DNL Experience Platform] services such as [!DNL Real-Time Customer Profile]. See the overview for [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) for more information.
+By following this tutorial, you have successfully mapped a flat CSV file to an XDM schema and ingested it into Experience Platform. This data can now be used by downstream [!DNL Experience Platform] services such as [!DNL Real-Time Customer Profile]. See the overview for [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) for more information.

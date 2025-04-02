@@ -28,7 +28,7 @@ For information on how to successfully make calls to Experience Platform APIs, s
 
 ## Create a base connection {#create-a-base-connection}
 
-A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
+A base connection retains information between your source and Experience Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
 To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Snowflake] authentication credentials as part of the request body.
 
@@ -80,7 +80,7 @@ curl -X POST \
 | --- | --- |
 | `auth.params.account` | The name of your [!DNL Snowflake] streaming account. |
 | `auth.params.database` | The name of your [!DNL Snowflake] database where data will be pulled from. |
-| `auth.params.warehouse` | The name of your [!DNL Snowflake] warehouse. The [!DNL Snowflake] warehouse manages the query execution process for the application. Each warehouse is independent from one another and must be accessed individually when bringing data over to Platform. |
+| `auth.params.warehouse` | The name of your [!DNL Snowflake] warehouse. The [!DNL Snowflake] warehouse manages the query execution process for the application. Each warehouse is independent from one another and must be accessed individually when bringing data over to Experience Platform. |
 | `auth.params.username` | The username for your [!DNL Snowflake] streaming account. |
 | `auth.params.schema` | (Optional) The database schema associated with your [!DNL Snowflake] streaming account. |
 | `auth.params.password` | The password for your [!DNL Snowflake] streaming account. |
@@ -190,7 +190,7 @@ curl -X POST \
 | --- | --- |
 | `baseConnectionId` | The authenticated base connection ID for your [!DNL Snowflake] streaming source. This ID was generated in an earlier step. |
 | `connectionSpec.id` | The connection spec ID for the [!DNL Snowflake] streaming source. |
-| `params.tableName` | The name of the table in your [!DNL Snowflake] database that you want to bring to Platform. |
+| `params.tableName` | The name of the table in your [!DNL Snowflake] database that you want to bring to Experience Platform. |
 | `params.timestampColumn` | The name of the timestamp column that will be used to fetch incremental values. |
 | `params.backfill` | A boolean flag that determines whether data is fetched from the beginning (0 epoch time) or from the time the source is initiated. For more information on this value, read the [[!DNL Snowflake] streaming source overview](../../../../connectors/databases/snowflake-streaming.md).  |
 | `params.timezoneValue` | The timezone value indicates which timezone's current time should be fetched when querying the [!DNL Snowflake] database. This parameter should be provided if the timestamp column in the config is set to `TIMESTAMP_NTZ`. If unprovided, `timezoneValue` defaults to UTC.  |
@@ -209,7 +209,7 @@ A successful response returns your source connection ID and its corresponding et
 
 ## Create a dataflow
 
-To create a dataflow to stream data from tour [!DNL Snowflake] account to Platform, you must make a POST request to the `/flows` endpoint while providing the following values:
+To create a dataflow to stream data from tour [!DNL Snowflake] account to Experience Platform, you must make a POST request to the `/flows` endpoint while providing the following values:
 
 >[!TIP]
 >

@@ -20,7 +20,7 @@ If you already have a valid [!DNL SugarCRM] account, you may skip the remainder 
 
 ### Gather required credentials
 
-In order to connect [!DNL SugarCRM Events] to Platform, you must provide values for the following connection properties:
+In order to connect [!DNL SugarCRM Events] to Experience Platform, you must provide values for the following connection properties:
 
 | Credential | Description | Example |
 | --- | --- | --- |
@@ -28,15 +28,15 @@ In order to connect [!DNL SugarCRM Events] to Platform, you must provide values 
 | `Username` | Your SugarCRM developer account username. | `abc.def@example.com@sugarmarketdemo000.com` |
 | `Password` | Your SugarCRM developer account password. | `123456789` |
 
-### Create a Platform schema for [!DNL SugarCRM]
+### Create an Experience Platform schema for [!DNL SugarCRM]
 
-Before creating a [!DNL SugarCRM] source connection, you must also ensure that you first create a Platform schema to use for your source. See the tutorial on [creating a Platform schema](../../../../../xdm/schema/composition.md) for comprehensive steps on how to create a schema.
+Before creating a [!DNL SugarCRM] source connection, you must also ensure that you first create an Experience Platform schema to use for your source. See the tutorial on [creating an Experience Platform schema](../../../../../xdm/schema/composition.md) for comprehensive steps on how to create a schema.
 
 ![Experience Platform UI screenshot showing an example schema for SugarCRM Events](../../../../images/tutorials/create/sugarcrm-events/sugarcrm-schema-events.png)
 
 >[!WARNING]
 >
->When mapping the schema ensure you also map the mandatory `event_id` and `timestamp` fields required by Platform.
+>When mapping the schema ensure you also map the mandatory `event_id` and `timestamp` fields required by Experience Platform.
 
 ## Connect your [!DNL SugarCRM Events] account
 
@@ -64,7 +64,7 @@ If you are creating a new account, select **[!UICONTROL New account]**, and then
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your [!DNL SugarCRM Events] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](../../dataflow/crm.md).
+By following this tutorial, you have established a connection to your [!DNL SugarCRM Events] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Experience Platform](../../dataflow/crm.md).
 
 ## Additional resources
 

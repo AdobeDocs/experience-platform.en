@@ -21,7 +21,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Administrator**: One or more individuals in your organization who can configure and customize permissions for Experience Platform in Adobe Admin Console. 
 
-**Adobe Admin Console**: Adobe Admin Console provides a central location for managing Adobe product entitlements and access for your organization. Through the console, administrators can grant groups of users access permissions for various Platform capabilities, such as "Manage Datasets", "View Datasets", or "Manage Profiles".
+**Adobe Admin Console**: Adobe Admin Console provides a central location for managing Adobe product entitlements and access for your organization. Through the console, administrators can grant groups of users access permissions for various Experience Platform capabilities, such as "Manage Datasets", "View Datasets", or "Manage Profiles".
 
 **Adobe Experience Platform**: Adobe Experience Platform standardizes data and content across the enterprise, powering real-time consumer profiles, enabling data science, and accelerating content velocity to drive experience personalization across the customer journey.
 
@@ -31,7 +31,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Adobe Intelligent Services**: Intelligent Services such as Attribution AI and Customer AI are machine-learning, artificial-intelligence-based models that are purpose-built and require Experience Platform to run and operate.
 
-**Adobe I/O**: Adobe I/O is part of Experience Platform and provides access to everything developers need to integrate, extend, and customize Platform including APIs, events, developer console, and helpful tooling.
+**Adobe I/O**: Adobe I/O is part of Experience Platform and provides access to everything developers need to integrate, extend, and customize Experience Platform including APIs, events, developer console, and helpful tooling.
 
 **Adobe Sensei**: Adobe Sensei is the intelligence framework that powers Experience Platform. It also provides a set of AI services that empowers brands to enhance their ability to deliver real-time, personalized customer experiences.
 
@@ -149,7 +149,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Data element**: In the context of tags, a data element is a pointer used within rules and extensions to point to a specific piece of data that exists on the client device.
 
-**Data ingestion**: Data ingestion is the process of adding data from a source to Experience Platform. Data can be ingested into Platform in a number of ways including streaming, batches, or added via source connectors.
+**Data ingestion**: Data ingestion is the process of adding data from a source to Experience Platform. Data can be ingested into Experience Platform in a number of ways including streaming, batches, or added via source connectors.
 
 **Data layer**: In the context of tags, a data layer is a data structure that exists on the client device that contains metadata about the context in which a page or screen is viewed.
 
@@ -159,7 +159,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Dataset labels**: Data usage labels can be added to datasets. All fields within that dataset will inherit the dataset's labels.
 
-**Data Science Workspace**: [!DNL Data Science Workspace] within Experience Platform enables customers to create machine-learning models utilizing data across Platform and Adobe applications to create intelligent segments, generate insights, and provide predictions, allowing you to greatly enhance end-user digital experiences.
+**Data Science Workspace**: [!DNL Data Science Workspace] within Experience Platform enables customers to create machine-learning models utilizing data across Experience Platform and Adobe applications to create intelligent segments, generate insights, and provide predictions, allowing you to greatly enhance end-user digital experiences.
 
 **Data source**: A data source is a user designated origin of data. Examples of a data source are a mobile app, profile and/or experience events, website profile events, or a CRM.
 
@@ -171,7 +171,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Data usage labels**: Data usage labels allow you to categorize data that reflects privacy-related considerations and contractual conditions to be compliant with regulations and corporate policies. Data usage labels added to a dataset are inherited down or applied to all fields within that dataset. Data usage labels can also be applied directly to fields.
 
-**Dataflow**: A dataflow is a virtual pipeline of data that flows into Platform from a source and out to destinations. 
+**Dataflow**: A dataflow is a virtual pipeline of data that flows into Experience Platform from a source and out to destinations. 
 
 **Dataflow run**: A dataflow run is a dataflow that lands in Experience Platform based on a user specified schedule.
 
@@ -299,7 +299,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Input feature**: An input feature is specified in feature mapping and is used by a machine-learning model to make predictions.
 
-**[!DNL Intelligent Services]**: [!DNL Intelligent Services] such as [!DNL Attribution AI] and [!DNL Customer AI] are machine-learning, artificial-intelligence-based models that require Experience Platform (or applications built on top of Platform such as Adobe Real-Time Customer Data Platform) to run and operate.
+**[!DNL Intelligent Services]**: [!DNL Intelligent Services] such as [!DNL Attribution AI] and [!DNL Customer AI] are machine-learning, artificial-intelligence-based models that require Experience Platform (or applications built on top of Experience Platform such as Adobe Real-Time Customer Data Platform) to run and operate.
 
 **Interest-based targeting or personalization**: Interest-based targeting, also known as personalization, occurs if the following three conditions are met: 
 
@@ -387,7 +387,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Policies workspace**: A workspace in the Experience Platform UI that enables data stewards to view and manage data usage labels and policies for your organization. 
 
-**Policy**: A data usage policy is a rule that specifies marketing actions that are restricted based on the application of usage labels applied to Platform data.
+**Policy**: A data usage policy is a rule that specifies marketing actions that are restricted based on the application of usage labels applied to Experience Platform data.
 
 **Policy enforcement**: Allows you to enforce data usage policies with applied marketing actions to prevent data operations that constitute policy violations within an organization.
 
@@ -455,7 +455,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Sample data**: Sample data is a preview of a data file, typically the first 100 rows, which provides a data scientist or engineer an idea of what schema or data is in the data file.
 
-**Sandbox**: A sandbox is a virtual construct that partitions a single Platform instance into a separate virtual environment, in order to help develop and evolve digital experience applications.
+**Sandbox**: A sandbox is a virtual construct that partitions a single Experience Platform instance into a separate virtual environment, in order to help develop and evolve digital experience applications.
 
 **Sandbox reset**: A sandbox reset deletes all data including data, profiles, and segments within a sandbox. Sandbox resets can affect data that is connected to internal or external destinations.
 
@@ -505,7 +505,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **S2 data usage label**: An `S2` data usage label is used to classify data that can be used to determine a broadly defined geofence area.
 
-**Source**: A source is a general term for any input connector in Platform. See also: Source connector
+**Source**: A source is a general term for any input connector in Experience Platform. See also: Source connector
 
 **Source attribute**: A source attribute is a field in source dataset. Source attributes are mapped to target schema fields.
 

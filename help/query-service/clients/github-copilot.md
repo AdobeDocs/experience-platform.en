@@ -21,7 +21,7 @@ Once you have installed [!DNL VS Code] and activated your [!DNL Copilot] subscri
 
 ### Required [!DNL Visual Studio Code] extensions {#required-extensions}
 
-The following [!DNL Visual Studio Code] extensions are required to effectively manage and query your Platform SQL databases directly within the code editor. Download and install these extensions.
+The following [!DNL Visual Studio Code] extensions are required to effectively manage and query your Experience Platform SQL databases directly within the code editor. Download and install these extensions.
 
 - [SQLTools](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools): Use the SQLTools extension to manage and query multiple SQL databases. It includes features like a query runner, SQL formatter, and connection explorer, with support for additional drivers to boost developer productivity. Read the overview on Visual Studio Marketplace for more details.
 - [SQLTools PostgreSQL/Cockroach Driver](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools-driver-pg): This extension enables you to connect, query, and manage PostgreSQL and CockroachDB databases directly within your code editor.
@@ -43,17 +43,17 @@ The **[!DNL Connection Assistant]** appears. Select the **[!DNL PostgreSQL]** da
 
 ### Input connection settings {#input-connection-settings}
 
-The [!DNL Connection Settings] view appears. Enter your Platform connection credentials into the appropriate fields of the SQLTools [!DNL Connection Assistant]. The required values are explained in the table below.
+The [!DNL Connection Settings] view appears. Enter your Experience Platform connection credentials into the appropriate fields of the SQLTools [!DNL Connection Assistant]. The required values are explained in the table below.
 
 | Property  |  Description |
 | --- |--- |
 |  [!DNL Connection name] | Provide a "[!DNL Connection name]" like `Prod_MySQL_Server` that is descriptive and clearly indicates its purpose (for example, a production environment for a MySQL server). Best practices include:<br><ul><li>Following your organization's naming conventions to ensure that it is unique within the system.</li><li>Keep it concise to maintain clarity and avoid confusion with other connections.</li><li>Include relevant details about the connection's function or environment in the name.</li></ul>  |
-|  [!DNL Connect using]   | Use the **[!DNL Server and Port]** option to specify the server's address (hostname) and the port number to establish a direct connection to Platform  |
-|  [!DNL Server address]  | Enter the **[!UICONTROL Host]** value provided in your Platform Postgres credentials, such as `acmeprod.platform-query.adobe.io`. |
-|  [!DNL Port]   | This value is typically `80` for Platform services.   |
-|  [!DNL Database]   | Enter the **[!UICONTROL Database]** value provided in your Platform Postgres credentials, such as `prod:all`.  |
-|  [!DNL Username]   | This property refers to your organization ID. Enter the **[!UICONTROL Username]** value provided in your Platform Postgres credentials.  |
-|  [!DNL Password]   | This property is your access token. Enter the **[!UICONTROL Password]** value provided in your Platform Postgres credentials. |
+|  [!DNL Connect using]   | Use the **[!DNL Server and Port]** option to specify the server's address (hostname) and the port number to establish a direct connection to Experience Platform  |
+|  [!DNL Server address]  | Enter the **[!UICONTROL Host]** value provided in your Experience Platform Postgres credentials, such as `acmeprod.platform-query.adobe.io`. |
+|  [!DNL Port]   | This value is typically `80` for Experience Platform services.   |
+|  [!DNL Database]   | Enter the **[!UICONTROL Database]** value provided in your Experience Platform Postgres credentials, such as `prod:all`.  |
+|  [!DNL Username]   | This property refers to your organization ID. Enter the **[!UICONTROL Username]** value provided in your Experience Platform Postgres credentials.  |
+|  [!DNL Password]   | This property is your access token. Enter the **[!UICONTROL Password]** value provided in your Experience Platform Postgres credentials. |
 
 ![The Connection Assistant workspace with several settings highlighted.](../images/clients/github-copilot/connection-settings.png)
 
@@ -85,7 +85,7 @@ Your [!DNL VS Code] workspace appears with a suggestion from [!DNL GitHub Copilo
 
 ## [!DNL GitHub Copilot] quick guide
 
-Once connected to your Platform instance, you can use [!DNL Copilot] as an AI coding assistant to help you write code faster and with more confidence. This section covers its key features and how to use them.
+Once connected to your Experience Platform instance, you can use [!DNL Copilot] as an AI coding assistant to help you write code faster and with more confidence. This section covers its key features and how to use them.
 
 ## Getting started with [!DNL GitHub Copilot] {#get-started-with-copilot}
 
@@ -145,4 +145,4 @@ You can also access chat history by selecting the history icon (![The history ic
 
 ## Next steps
 
-You are now ready to efficiently query your Platform databases directly from your code editor, and use [!DNL GitHub Copilot]'s AI-powered code suggestions to streamline writing and optimizing SQL queries. For more information on how to write and run queries, refer to the [guidance for query execution](../best-practices/writing-queries.md).
+You are now ready to efficiently query your Experience Platform databases directly from your code editor, and use [!DNL GitHub Copilot]'s AI-powered code suggestions to streamline writing and optimizing SQL queries. For more information on how to write and run queries, refer to the [guidance for query execution](../best-practices/writing-queries.md).

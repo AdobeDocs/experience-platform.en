@@ -283,9 +283,9 @@ Yes, Data Distiller audiences are deleted every 30 days since they are external 
 
 After reading this document, you have learned how to use the SQL audience extension in Data Distiller to effectively create, manage, and publish audiences using SQL commands. You can now customize audience definitions based on your unique business requirements and activate them across various destinations, optimizing your marketing strategies and data-driven decisions.
 
-Next, you could read the following documentation to further develop and optimize your Platform audience management strategies:
+Next, you could read the following documentation to further develop and optimize your Experience Platform audience management strategies:
 
 - **Explore Audience Evaluation**: Learn about the [audience evaluation methods in Adobe Experience Platform](../../segmentation/home.md#evaluate-segments): streaming segmentation for real-time updates, batch segmentation for scheduled or on-demand processing, and edge segmentation for instant evaluation on the Edge Network.
-- **Integrate with Destinations**: Read the guide on how to [export files on-demand to batch destinations](../../destinations/ui/export-file-now.md) using the Platform Destinations UI.
+- **Integrate with Destinations**: Read the guide on how to [export files on-demand to batch destinations](../../destinations/ui/export-file-now.md) using the Experience Platform Destinations UI.
 - **Review Audience Performance**: Analyze how your SQL-defined audiences perform across different channels. Use data insights to adjust and improve your audience definitions and targeting strategies. Read the document on [Audience insights](../../dashboards/insights/audiences.md) to learn how to access and adapt the SQL queries for audience insights in Adobe Real-Time CDP. You can then create your own insights and transform raw data into actionable information by customizing the Audiences dashboard to effectively visualize and use these insights for better decision-making.
 

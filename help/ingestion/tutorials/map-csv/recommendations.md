@@ -7,7 +7,7 @@ exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
 
 >[!NOTE]
 >
->For information on generally available CSV mapping capabilities in Platform, see the document on [mapping a CSV file to an existing schema](./existing-schema.md).
+>For information on generally available CSV mapping capabilities in Experience Platform, see the document on [mapping a CSV file to an existing schema](./existing-schema.md).
 
 In order to ingest CSV data into [!DNL Adobe Experience Platform], the data must be mapped to an [!DNL Experience Data Model] (XDM) schema. You can choose to map to [an existing schema](./existing-schema.md), but if you do not know exactly which schema to use or how it should be structured, you can instead use dynamic recommendations based on machine-learning (ML) models within the Experience Platform UI.
 
@@ -41,7 +41,7 @@ You can optionally configure the following additional features for the dataflow 
 | [!UICONTROL Description] | A description for the dataflow. |
 | [!UICONTROL Error diagnostics] | When enabled, error messages are generated for newly ingested batches, which can be viewed when fetching the corresponding batch in the [API](../../batch-ingestion/api-overview.md). |
 | [!UICONTROL Partial ingestion] | When enabled, valid records for new batch data will be ingested within a specified error threshold. This threshold allows you to configure the percentage of acceptable errors before the entire batch fails. |
-| [!UICONTROL Dataflow details] | Provide a name and optional description for the dataflow that will bring the CSV data into Platform. The dataflow is automatically assigned a default name when starting this workflow. Changing the name is optional. |
+| [!UICONTROL Dataflow details] | Provide a name and optional description for the dataflow that will bring the CSV data into Experience Platform. The dataflow is automatically assigned a default name when starting this workflow. Changing the name is optional. |
 | [!UICONTROL Alerts] | Select from a list of [in-product alerts](../../../observability/alerts/overview.md) that you want to receive regarding the status of the dataflow once it has been initiated. |
 
 {style="table-layout:auto"}
@@ -70,7 +70,7 @@ The ML models are run to generate a new schema based on your dataflow configurat
 >
 >You can filter all fields in your schema based on a variety of criteria during the source-to-target field mapping workflow. The default behavior is to display all mapped fields. To change the displayed fields, select the filter icon next to the search input field and choose from the dropdown options.<br> ![The mapping stage fo the CSV to XDM schema creation workflow with the filter icon and dropdown menu highlighted.](../../images/tutorials/map-csv-recommendations/source-field-to-target-mapping-filter.png "The mapping stage fo the CSV to XDM schema creation workflow with the filter icon and dropdown menu highlighted."){width="100" zoomable="yes"}
 
-From here, you can optionally [edit the field mappings](#edit-mappings) or [alter the field groups they are associated with](#edit-schema) according to your needs. When satisfied, select **[!UICONTROL Finish]** to complete the mapping and initiate the dataflow you configured earlier. The CSV data is ingested into the system and populates a dataset based on the generated schema structure, ready to be consumed by downstream Platform services.
+From here, you can optionally [edit the field mappings](#edit-mappings) or [alter the field groups they are associated with](#edit-schema) according to your needs. When satisfied, select **[!UICONTROL Finish]** to complete the mapping and initiate the dataflow you configured earlier. The CSV data is ingested into the system and populates a dataset based on the generated schema structure, ready to be consumed by downstream Experience Platform services.
 
 ![The [!UICONTROL Finish] button being selected, completing the CSV mapping process.](../../images/tutorials/map-csv-recommendations/finish-mapping.png)
 
@@ -92,8 +92,8 @@ When you are finished adjusting the schema recommendations for your source field
 
 ## Next steps
 
-This guide covered how to map a CSV file to an XDM schema using AI-generated recommendations, allowing you to bring that data into Platform through batch ingestion.
+This guide covered how to map a CSV file to an XDM schema using AI-generated recommendations, allowing you to bring that data into Experience Platform through batch ingestion.
 
-For steps on mapping a CSV file to an existing schema, refer to the [existing schema mapping workflow](./existing-schema.md). For information on streaming data to Platform in real time through prebuilt source connections, refer to the [sources overview](../../../sources/home.md).
+For steps on mapping a CSV file to an existing schema, refer to the [existing schema mapping workflow](./existing-schema.md). For information on streaming data to Experience Platform in real time through prebuilt source connections, refer to the [sources overview](../../../sources/home.md).
 
 You can also use Machine Learning (ML) algorithms to **generate a schema from sample CSV data**. This workflow automatically creates a new schema based on the structure and content of your CSV file. This newly created schema matches your data's format to save you time and increase accuracy when defining the structure, fields, and data types for large complex datasets. See the [ML-Assisted schema creation guide](../../../xdm/ui/ml-assisted-schema-creation.md) for more information on this workflow.

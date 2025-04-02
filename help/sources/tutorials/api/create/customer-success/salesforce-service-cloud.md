@@ -61,7 +61,7 @@ For information on how to successfully make calls to Experience Platform APIs, s
 
 ## Create a base connection
 
-A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
+A base connection retains information between your source and Experience Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
 To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Salesforce Service Cloud] authentication credentials as part of the request parameters.
 
@@ -171,4 +171,4 @@ A successful response returns your newly created base connection along with its 
 By following this tutorial, you have created a [!DNL Salesforce Service Cloud] base connection using the [!DNL Flow Service] API. You can use this base connection ID in the following tutorials:
 
 * [Explore the structure and contents of your data tables using the [!DNL Flow Service] API](../../explore/tabular.md)
-* [Create a dataflow to bring customer success data to Platform using the [!DNL Flow Service] API](../../collect/customer-success.md)
+* [Create a dataflow to bring customer success data to Experience Platform using the [!DNL Flow Service] API](../../collect/customer-success.md)

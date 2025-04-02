@@ -8,7 +8,7 @@ exl-id: 37353e73-b207-444a-b2b5-a20a3628086b
 
 In Adobe Experience Platform you can view and interact with your organization's data using multiple dashboards. You can also update certain dashboards by adding new widgets to your dashboard view. Adobe provides a selection of standard widgets that you can choose to add to your dashboards.
 
-The [[!UICONTROL Profiles]](../guides/profiles.md#default-widgets), [[!UICONTROL Audiences]](../guides/audiences.md#default-widgets), and [[!UICONTROL Destinations]](../guides/destinations.md#default-widgets) dashboards each have a default widget load-out when a new Platform instance is created. This guide provides step-by-step instructions for adding standard widgets to customize the [!UICONTROL Profiles], [!UICONTROL Audiences], and [!UICONTROL Destinations] dashboards in the Experience Platform UI.
+The [[!UICONTROL Profiles]](../guides/profiles.md#default-widgets), [[!UICONTROL Audiences]](../guides/audiences.md#default-widgets), and [[!UICONTROL Destinations]](../guides/destinations.md#default-widgets) dashboards each have a default widget load-out when a new Experience Platform instance is created. This guide provides step-by-step instructions for adding standard widgets to customize the [!UICONTROL Profiles], [!UICONTROL Audiences], and [!UICONTROL Destinations] dashboards in the Experience Platform UI.
 
 >[!NOTE]
 >

@@ -57,7 +57,7 @@ Fields that are commonly marked as "[!UICONTROL Identity]" include: email addres
 
 It is important to think about customer identities during the schema planning phase to help ensure that data is being brought together to build the most robust profile possible. To learn more about how identity information can help you deliver digital experiences to your customers, see the [Identity Service overview](../../identity-service/home.md). See the data modelling best practices document for [tips on the use of identities when creating a schema](./best-practices.md#data-validation-fields). 
 
-There are two ways to send identity data to Platform:
+There are two ways to send identity data to Experience Platform:
 
 1. Adding identity descriptors to individual fields, either through the [Schema Editor UI](../ui/fields/identity.md) or using the [Schema Registry API](../api/descriptors.md#create)
 1. Using an [`identityMap` field](#identityMap)
@@ -133,7 +133,7 @@ Individual schema fields can be [marked as required](../ui/fields/required.md), 
 
 >[!IMPORTANT]
 >
->Regardless of whether a schema field is required or not, Platform does not accept `null` or empty values for any ingested field. If there is no value for particular field in a record or event, the key for that field should be excluded from the ingestion payload.
+>Regardless of whether a schema field is required or not, Experience Platform does not accept `null` or empty values for any ingested field. If there is no value for particular field in a record or event, the key for that field should be excluded from the ingestion payload.
 
 #### Setting fields as required after ingestion {#post-ingestion-required-fields}
 
@@ -143,7 +143,7 @@ When setting a previously optional field as required, keep the following in mind
 
 1. If you query historical data and write the results into a new dataset, some rows will fail because they contain null values for the required field.
 1. If the field participates in [Real-Time Customer Profile](../../profile/home.md) and you export data before setting it as required, it may be null for some profiles.
-1. You can use the Schema Registry API to view a timestamped changelog for all XDM resources in Platform, including new required fields. See the guide on the [audit log endpoint](../api/audit-log.md) for more information.
+1. You can use the Schema Registry API to view a timestamped changelog for all XDM resources in Experience Platform, including new required fields. See the guide on the [audit log endpoint](../api/audit-log.md) for more information.
 
 ### Schemas and data ingestion
 
@@ -175,7 +175,7 @@ Composing a schema begins by assigning a class. Classes define the behavioral as
 
 A schema's class determines which field groups are eligible for use in that schema. This is discussed in more detail in the [next section](#field-group). 
 
-Adobe provides several standard ("core") XDM classes. Two of these classes, [!DNL XDM Individual Profile] and [!DNL XDM ExperienceEvent], are required for nearly all downstream Platform processes. In addition these core classes, you can also create your own custom classes to describe more specific use cases for your organization. Custom classes are defined by an organization when there are no Adobe-defined core classes available to describe a unique use case.
+Adobe provides several standard ("core") XDM classes. Two of these classes, [!DNL XDM Individual Profile] and [!DNL XDM ExperienceEvent], are required for nearly all downstream Experience Platform processes. In addition these core classes, you can also create your own custom classes to describe more specific use cases for your organization. Custom classes are defined by an organization when there are no Adobe-defined core classes available to describe a unique use case.
 
 The following screenshot demonstrates how classes are represented in the Experience Platform UI. Since the example schema shown does not contain any field groups, all of the displayed fields are provided by the schema's class ([!UICONTROL XDM Individual Profile]).
 
@@ -298,7 +298,7 @@ All datafiles that are ingested into Experience Platform must conform to the str
 
 ## Schemas for external audiences
 
-If you are bringing audiences from external systems into Platform, you must use the following components to capture them in your schemas:
+If you are bringing audiences from external systems into Experience Platform, you must use the following components to capture them in your schemas:
 
 * [[!UICONTROL Segment definition] class](../classes/segment-definition.md): Use this standard class to capture key attributes of an external segment definition.
 * [[!UICONTROL Segment Membership Details] field group](../field-groups/profile/segmentation.md): Add this field group to your [!UICONTROL XDM Individual Profile] schema to associate customer profiles with specific audiences.

@@ -13,7 +13,7 @@ exl-id: 4bb804f5-1ad7-47b0-bc38-ba22877490d4
 ---
 # Create a merge policy in the Experience Platform UI
 
-This video provides a basic understanding of merge policies within Adobe Experience Platform and outlines how to define merge policies using the Platform user interface. To learn more about merge policies, please begin by reading the [merge policies overview](../merge-policies/overview.md). 
+This video provides a basic understanding of merge policies within Adobe Experience Platform and outlines how to define merge policies using the Experience Platform user interface. To learn more about merge policies, please begin by reading the [merge policies overview](../merge-policies/overview.md). 
 
 >[!NOTE]
 >

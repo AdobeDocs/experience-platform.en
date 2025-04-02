@@ -21,7 +21,7 @@ Adobe Experience Platform provides many standard data types that can be used to 
 >
 >If a field is defined as a specific data type, you cannot create the same field with a different datatype in another schema. This constraint applies across your organization's tenant.
 
-This tutorial covers the steps for creating and editing custom data types in the Platform user interface.
+This tutorial covers the steps for creating and editing custom data types in the Experience Platform user interface.
 
 ## Prerequisites {#prerequisites}
 

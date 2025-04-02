@@ -26,7 +26,7 @@ After installing [!DNL Aqua Data Studio], you must first register the server. Se
 Once the **[!DNL Register Server]** dialog appears for a PostgresSQL server, provide the following details for the server settings.
 
 - **[!DNL Name]**: The name of your connection. You are recommended to provide a friendly name to recognize the connection.
-- **[!DNL Login Name]**: The login name is your Platform Organization ID. It takes the form of `ORG_ID@AdobeOrg`.
+- **[!DNL Login Name]**: The login name is your Experience Platform Organization ID. It takes the form of `ORG_ID@AdobeOrg`.
 - **[!DNL Password]**: This is an alphanumeric string found on the [!DNL Query Service] credentials dashboard.
 - **[!DNL Host and Port]**: The host endpoint and its port for [!DNL Query Service]. You must use port 80 to connect with [!DNL Query Service].
 - **[!DNL Database]:** The database that will be used. Use the value for the Experience Platform UI credential `dbname`: `prod:all`.

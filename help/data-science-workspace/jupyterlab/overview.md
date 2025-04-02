@@ -21,14 +21,14 @@ This document provides an overview of [!DNL JupyterLab] and its features as well
 
 Experience Platform's JupyterLab integration is accompanied with architectural changes, design considerations, customized notebook extensions, pre-installed libraries, and an Adobe-themed interface.
 
-The following list outlines some of the features that are unique to JupyterLab on Platform:
+The following list outlines some of the features that are unique to JupyterLab on Experience Platform:
 
 | Feature | Description |
 | --- | --- |
 | **Kernels** | Kernels provide notebook and other [!DNL JupyterLab] front-ends the ability to execute and introspect code in different programming languages. [!DNL Experience Platform] provides additional kernels to support development in [!DNL Python], R, PySpark, and [!DNL Spark]. See the [kernels](#kernels) section for more details. |
 | **Data access** | Access existing datasets directly from within [!DNL JupyterLab] with full support for read and write capabilities. |
-| **[!DNL Experience Platform] service integration** | Built-in integrations allows you to utilize other [!DNL Experience Platform] services directly from within [!DNL JupyterLab]. A complete list of supported integrations is provided in the section on [Integration with other Platform services](#service-integration). |
-| **Authentication** | In addition to <a href="https://jupyter-notebook.readthedocs.io/en/stable/security.html" target="_blank">JupyterLab's built-in security model</a>, every interaction between your application and Experience Platform, including Platform service-to-service communication is encrypted and authenticated through the <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
+| **[!DNL Experience Platform] service integration** | Built-in integrations allows you to utilize other [!DNL Experience Platform] services directly from within [!DNL JupyterLab]. A complete list of supported integrations is provided in the section on [Integration with other Experience Platform services](#service-integration). |
+| **Authentication** | In addition to <a href="https://jupyter-notebook.readthedocs.io/en/stable/security.html" target="_blank">JupyterLab's built-in security model</a>, every interaction between your application and Experience Platform, including Experience Platform service-to-service communication is encrypted and authenticated through the <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
 | **Development libraries** | In [!DNL Experience Platform], [!DNL JupyterLab] provides pre-installed libraries for [!DNL Python], R, and PySpark. See the [appendix](#supported-libraries) for a complete list of supported libraries. |
 | **Library controller** | When the pre-installed libraries are lacking for your needs, additional libraries can be installed for Python and R, and are temporarily stored in isolated containers to maintain the integrity of [!DNL Experience Platform] and keep your data safe. See the [kernels](#kernels) section for more details. |
 

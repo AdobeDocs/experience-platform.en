@@ -26,7 +26,7 @@ This guide requires a working understanding of several important [!DNL Experienc
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_101221_404"
 >title="Merge policy not found"
->abstract="This means that Platform could not find the requested merge policy. To resolve this error, please try one of the following solutions:<ul><li>Ensure the correct merge policy ID is listed in the URL.</li><li>Ensure you have the correct Organization and sandbox combination for the merge policy you're trying to access.</li></ul>"
+>abstract="This means that Experience Platform could not find the requested merge policy. To resolve this error, please try one of the following solutions:<ul><li>Ensure the correct merge policy ID is listed in the URL.</li><li>Ensure you have the correct Organization and sandbox combination for the merge policy you're trying to access.</li></ul>"
 
 Within the [!DNL Experience Platform] UI, you can begin working with merge policies by selecting **[!UICONTROL Profiles]** in the left navigation and then selecting the **[!UICONTROL Merge Policies]** tab. 
 
@@ -211,4 +211,4 @@ To learn more about how data governance is performed within Adobe Experience Pla
 
 ## Next steps
 
-Now that you have created and configured merge policies for your organization, you can use them to adjust the view of customer profiles within Platform and to create audiences from your Profile data. See the [segmentation overview](../../segmentation/home.md) for more information on how to create and work with audiences using the [!DNL Experience Platform] UI and APIs.
+Now that you have created and configured merge policies for your organization, you can use them to adjust the view of customer profiles within Experience Platform and to create audiences from your Profile data. See the [segmentation overview](../../segmentation/home.md) for more information on how to create and work with audiences using the [!DNL Experience Platform] UI and APIs.

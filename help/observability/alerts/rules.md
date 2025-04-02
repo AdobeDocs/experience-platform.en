@@ -30,7 +30,7 @@ If you have previously subscribed to the following alert type, you will no longe
 
 | I/O Event subscription | Alert rule | Description |
 | --- | --- | --- |
-| Source Flow Run Delays, Failures and Errors | Lack of Ingestion | This alert sends you a message if ingestion is delayed by more than seven hours and no data gets ingested to Platform. |
+| Source Flow Run Delays, Failures and Errors | Lack of Ingestion | This alert sends you a message if ingestion is delayed by more than seven hours and no data gets ingested to Experience Platform. |
 
 {style="table-layout:auto"}
 

@@ -9,7 +9,7 @@ Adobe Experience Platform allows you to fully customize the structure of your cu
 
 You can also define map fields in the Schema Editor to model flexible and dynamic data structures or store a collection of key-value pairs.
 
-When defining a new field in the Platform user interface (UI), use the **[!UICONTROL Type]** dropdown and select "**[!UICONTROL Map]**" from the list.
+When defining a new field in the Experience Platform user interface (UI), use the **[!UICONTROL Type]** dropdown and select "**[!UICONTROL Map]**" from the list.
 
 ![The Schemas Editor with the Type dropdown and Map value highlighted.](../../images/ui/fields/special/map.png)
 

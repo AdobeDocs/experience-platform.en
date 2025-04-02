@@ -88,7 +88,7 @@ To view widgets that have been hidden, select **[!UICONTROL Show hidden widgets]
 
 >[!WARNING]
 >
->Hiding a widget in the library does not remove the widget from the dashboards of individual users. If a widget should no longer be used in your organization, please ensure that you communicate this directly to all Platform users as they will need to remove the widget from their dashboards.
+>Hiding a widget in the library does not remove the widget from the dashboards of individual users. If a widget should no longer be used in your organization, please ensure that you communicate this directly to all Experience Platform users as they will need to remove the widget from their dashboards.
 
 ![The Custom tab of the widget library workspace with the widget dropdown menu options and Show hidden widgets highlighted.](../images/customization/hide-widget.png)
 
@@ -102,7 +102,7 @@ On the **[!UICONTROL Edit widget]** dialog, you can edit the title and descripti
 
 >[!WARNING]
 >
->Editing a widget in the library does not update the widget for individual users. If a widget has been updated, please ensure that you communicate this directly to all Platform users as they will need to remove the outdated widget from their dashboards and then select and add the updated widget from the widget library.
+>Editing a widget in the library does not update the widget for individual users. If a widget has been updated, please ensure that you communicate this directly to all Experience Platform users as they will need to remove the outdated widget from their dashboards and then select and add the updated widget from the widget library.
 
 ![The Edit widget dialog.](../images/customization/edit-widget.png)
 
