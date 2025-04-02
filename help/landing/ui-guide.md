@@ -53,9 +53,9 @@ The **[!UICONTROL Recommended learning]** section provides links to useful docum
 
 ## Top navigation bar
 
-The top navigation bar in the Platform UI displays the organization you are currently signed into, and provides several important controls.
+The top navigation bar in the Experience Platform UI displays the organization you are currently signed into, and provides several important controls.
 
-On the left side of the navigation bar is the Adobe Experience Platform logo. Selecting this logo at any time brings you back to the Platform UI home screen.
+On the left side of the navigation bar is the Adobe Experience Platform logo. Selecting this logo at any time brings you back to the Experience Platform UI home screen.
 
 ![](./images/user-guide/homepage-top-nav-bar.png)
 
@@ -95,7 +95,7 @@ Immediately below the top navigation bar is the sandbox bar. This bar shows whic
 
 ## Left navigation {#left-nav}
 
-The navigation on the left side of the screen lists all the different services supported in the Platform UI.
+The navigation on the left side of the screen lists all the different services supported in the Experience Platform UI.
 
 Click the menu icon to show or hide the left navigation panel.
 
@@ -109,7 +109,7 @@ You can lock the navigation in the open position by clicking again after showing
 
 ![](images/user-guide/homepage-left.png)
 
-The **[!UICONTROL Home]** section lets you return to the Platform UI homepage.
+The **[!UICONTROL Home]** section lets you return to the Experience Platform UI homepage.
 
 The **[!UICONTROL Workflows]** section shows a list of multi-step workflows for performing operations within Platform. You can find more information about workflows in the [workflows overview](./workflows.md).
 
@@ -125,7 +125,7 @@ The **[!UICONTROL Profiles]** section lets you browse customer profiles, view pr
 
 The **[!UICONTROL Audiences]** section lets you create and manage segment definitions. To learn more about using the [!UICONTROL Audiences] section, please read the [segmentation user guide](../segmentation/ui/overview.md). You can find more information about Segmentation Service in the [Segmentation Service overview](../segmentation/home.md).
 
-The **[!UICONTROL Identities]** section lets you create and manage identity namespaces. For more information about the [!UICONTROL Identities] section, including information about identity namespaces and how to use identities in the Platform UI, please refer to the [identity namespace overview](../identity-service/features/namespaces.md).
+The **[!UICONTROL Identities]** section lets you create and manage identity namespaces. For more information about the [!UICONTROL Identities] section, including information about identity namespaces and how to use identities in the Experience Platform UI, please refer to the [identity namespace overview](../identity-service/features/namespaces.md).
 
 ### [!UICONTROL Privacy]
 
@@ -174,4 +174,4 @@ The Platform user interface (UI) provides a dashboard through which you can view
 
 ## Next steps
 
-By reading this guide, you now have been introduced to the home page and major navigational elements of the Platform UI. For more detailed information about working in the user interface, please refer to the documentation for each individual Platform service. Links to this documentation are provided in the [left navigation](#left-nav) section found earlier in this document.
+By reading this guide, you now have been introduced to the home page and major navigational elements of the Experience Platform UI. For more detailed information about working in the user interface, please refer to the documentation for each individual Platform service. Links to this documentation are provided in the [left navigation](#left-nav) section found earlier in this document.

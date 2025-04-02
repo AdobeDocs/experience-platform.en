@@ -35,7 +35,7 @@ When constructing schemas in the Experience Platform UI, listed field groups are
 
 Experience Platform provides a user interface and RESTful API from which you can view and manage all schema-related resources in the Experience Platform **[!DNL Schema Library]**. The [!DNL Schema Library] contains standard XDM components made available to you by Adobe, as well as resources from Experience Platform partners and vendors whose applications you use.
 
-You can also create and manage new schemas and resources that are unique to your organization using the [!DNL Schema Registry API], or the [!UICONTROL Schemas] workspace in the Platform UI.
+You can also create and manage new schemas and resources that are unique to your organization using the [!DNL Schema Registry API], or the [!UICONTROL Schemas] workspace in the Experience Platform UI.
 
 For more information on how to manage and interact with schemas in Platform, refer to the following documentation:
 

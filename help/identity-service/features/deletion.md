@@ -50,7 +50,7 @@ The following sections outline the mechanisms that can be used to delete dataset
 
 ### Dataset deletion in Catalog Service
 
-You can use the Catalog Service to submit requests for dataset deletion. For more information on how to delete datasets with Catalog Service, read the guide on [deleting objects using the Catalog Service API](../../catalog/api/delete-object.md). Alternatively, you can use Platform UI to submit requests for dataset deletion. For more information, read the [datasets user guide](../../catalog/datasets/user-guide.md#delete-a-dataset).
+You can use the Catalog Service to submit requests for dataset deletion. For more information on how to delete datasets with Catalog Service, read the guide on [deleting objects using the Catalog Service API](../../catalog/api/delete-object.md). Alternatively, you can use Experience Platform UI to submit requests for dataset deletion. For more information, read the [datasets user guide](../../catalog/datasets/user-guide.md#delete-a-dataset).
 
 ### Dataset expirations in Data hygiene
 
@@ -91,7 +91,7 @@ You can use [Data hygiene](../hygiene/home.md) for data cleansing, removing anon
 
 ### Single identity deletion in the [!UICONTROL Data Hygiene] workspace
 
-The [[!UICONTROL Data Hygiene] workspace](../hygiene/ui/overview.md) in the Platform UI allows you to delete consumer records that are participating in Identity Service and Real-Time Customer Profile. For a comprehensive guide on using the [!UICONTROL Data Hygiene] workspace, see the tutorial on [deleting consumer records](../hygiene/ui/record-delete.md).
+The [[!UICONTROL Data Hygiene] workspace](../hygiene/ui/overview.md) in the Experience Platform UI allows you to delete consumer records that are participating in Identity Service and Real-Time Customer Profile. For a comprehensive guide on using the [!UICONTROL Data Hygiene] workspace, see the tutorial on [deleting consumer records](../hygiene/ui/record-delete.md).
 
 The table below provides a breakdown of differences between single identity deletion in Privacy Service and Data hygiene:
 

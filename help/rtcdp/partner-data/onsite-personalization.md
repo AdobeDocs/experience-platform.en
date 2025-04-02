@@ -125,7 +125,7 @@ First, use the application switcher in the upper right corner of the screen to n
 
 The **[!UICONTROL Data Collection]** section of the UI looks similar to the image below.
 
-![Data collection section of the Platform UI.](/help/rtcdp/assets/partner-data/onsite-personalization/data-collection-home.png)
+![Data collection section of the Experience Platform UI.](/help/rtcdp/assets/partner-data/onsite-personalization/data-collection-home.png)
 
 #### Create datastream
 
@@ -253,7 +253,7 @@ You are now ready to create and activate audiences for personalization.
 
 #### Create audience and set up edge segmentation
 
-In the Platform UI, navigate to **[!UICONTROL Customer]** > **[!UICONTROL Audiences]** and create an audience to capture your website visitors. 
+In the Experience Platform UI, navigate to **[!UICONTROL Customer]** > **[!UICONTROL Audiences]** and create an audience to capture your website visitors. 
 
 ![View of how to navigate to audiences.](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
 

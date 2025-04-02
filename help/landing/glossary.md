@@ -49,7 +49,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Attributes**: Attributes are specified characteristics that represent a profile.
 
-**Attribute merge**: When defining a merge policy using the Real-Time Customer Profile API, the `attributeMerge` object indicates the manner by which the merge policy will prioritize profile attributes in the case of data conflicts. It is equivalent to selecting a [!UICONTROL Merge method] when defining a merge policy in the Platform UI.
+**Attribute merge**: When defining a merge policy using the Real-Time Customer Profile API, the `attributeMerge` object indicates the manner by which the merge policy will prioritize profile attributes in the case of data conflicts. It is equivalent to selecting a [!UICONTROL Merge method] when defining a merge policy in the Experience Platform UI.
 
 **Attribution AI**: [!DNL Attribution AI] is an Intelligent Service powered by Adobe Sensei that delivers algorithmic multi-channel attribution capabilities across the entire customer lifecycle.
 
@@ -309,7 +309,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 ## J
 
-**[!DNL JupyterLab]**: An open-source, web-based interface for Project [!DNL Jupyter] that is integrated into the Platform UI.
+**[!DNL JupyterLab]**: An open-source, web-based interface for Project [!DNL Jupyter] that is integrated into the Experience Platform UI.
 
 **[!DNL Jupyter Notebook]**: Integrated with JupyterLab, Jupyter Notebooks enable you to perform data cleaning and transformation, numerical simulation, statistical modeling, data visualization, machine learning, and more on your Experience Platform data in a variety of languages such as Python, Scala, and PySpark.
 
@@ -335,7 +335,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Marketing action**: In the data governance framework, a marketing action (also known as a marketing use case) is an action that an Experience Platform data consumer takes, for which there is a need to check for violations of data usage policies.
 
-**Merge method**: When defining a merge policy using the Platform UI, the merge method specifies how data fragments should be prioritized when a conflict occurs. When using the Real-Time Customer Profile API to define a merge policy, the merge method is determined using the `attributeMerge` object.
+**Merge method**: When defining a merge policy using the Experience Platform UI, the merge method specifies how data fragments should be prioritized when a conflict occurs. When using the Real-Time Customer Profile API to define a merge policy, the merge method is determined using the `attributeMerge` object.
 
 **Merge policy**: Merge policies are rules that Experience Platform uses to determine how customer data fragments from multiple sources will be combined to create an individual profile. When a data conflict occurs, the merge policy determines which data should be prioritized for inclusion in the profile.
 
@@ -385,7 +385,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Placements**: A placement is the location and or context in which an offer appears for an end-user.
 
-**Policies workspace**: A workspace in the Platform UI that enables data stewards to view and manage data usage labels and policies for your organization. 
+**Policies workspace**: A workspace in the Experience Platform UI that enables data stewards to view and manage data usage labels and policies for your organization. 
 
 **Policy**: A data usage policy is a rule that specifies marketing actions that are restricted based on the application of usage labels applied to Platform data.
 

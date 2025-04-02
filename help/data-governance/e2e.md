@@ -13,7 +13,7 @@ In order to control which marketing actions can be performed on certain datasets
 
 Once you have finished configuring your labels, governance policies, and marketing actions, you can [test your policy enforcement](#test) to ensure it is working as expected.
 
-This guide walks through the full process of configuring and enforcing a data governance policy in the Platform UI. For more detailed information on the features used in this guide, refer to the overview documentation on the following topics:
+This guide walks through the full process of configuring and enforcing a data governance policy in the Experience Platform UI. For more detailed information on the features used in this guide, refer to the overview documentation on the following topics:
 
 * [Adobe Experience Platform Data Governance](./home.md)
 * [Data usage labels](./labels/overview.md)
@@ -28,7 +28,7 @@ This guide walks through the full process of configuring and enforcing a data go
 
 >[!IMPORTANT]
 >
->Labels can no longer be applied to individual fields at the dataset level. This workflow has been deprecated in favour of applying labels at the schema level. However, you can still label an entire dataset. Any labels previously applied to individual dataset fields will still be supported through the Platform UI until 31st May 2024. To ensure that your labels are consistent across all schemas, any labels previously attached to fields at the dataset level must be migrated to the schema level by you over the coming year. See the section on [migrating previously applied labels](#migrate-labels) for instructions on how to do this.
+>Labels can no longer be applied to individual fields at the dataset level. This workflow has been deprecated in favour of applying labels at the schema level. However, you can still label an entire dataset. Any labels previously applied to individual dataset fields will still be supported through the Experience Platform UI until 31st May 2024. To ensure that your labels are consistent across all schemas, any labels previously attached to fields at the dataset level must be migrated to the schema level by you over the coming year. See the section on [migrating previously applied labels](#migrate-labels) for instructions on how to do this.
 
 You can [apply labels to a schema](#schema-labels) so that all datasets based on that schema inherit the same labels. This allows you to manage the labels for data governance, consent, and access control in one place. By enforcing data usage constraints at the schema level, the effect propagates downstream to all datasets that are based on that schema. Labels applied at the schema field level support Data Governance use cases and are discoverable in the Datasets workspace [!UICONTROL Data Governance] tab under the [!UICONTROL Field Name] column as read-only labels. 
 

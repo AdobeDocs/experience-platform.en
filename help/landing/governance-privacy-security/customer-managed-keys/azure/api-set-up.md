@@ -30,7 +30,7 @@ After you have your key vault configured, the next step is to register for the C
 
 ### Getting started
 
-Registering the CMK app requires you to make calls to Platform APIs. For details on how to gather the required authentication headers to make these calls, see the [Platform API authentication guide](../../../api-authentication.md).
+Registering the CMK app requires you to make calls to Experience Platform APIs. For details on how to gather the required authentication headers to make these calls, see the [Experience Platform API authentication guide](../../../api-authentication.md).
 
 While the authentication guide provides instructions on how to generate your own unique value for the required `x-api-key` request header, all API operations in this guide use the static value `acp_provisioning` instead. You must still provide your own values for `{ACCESS_TOKEN}` and `{ORG_ID}`, however.
 

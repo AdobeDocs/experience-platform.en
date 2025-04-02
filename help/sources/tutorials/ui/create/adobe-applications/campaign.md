@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;campaign;campaign managed services
-title: Create an Adobe Campaign Managed Cloud Services source connection using Platform UI
-description: Learn how to connect Adobe Experience Platform to Adobe Campaign Managed Cloud Services using Platform UI.
+title: Create an Adobe Campaign Managed Cloud Services source connection using Experience Platform UI
+description: Learn how to connect Adobe Experience Platform to Adobe Campaign Managed Cloud Services using Experience Platform UI.
 exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
 ---
-# Create an Adobe Campaign Managed Cloud Services source connection using Platform UI
+# Create an Adobe Campaign Managed Cloud Services source connection using Experience Platform UI
 
 This tutorial provides steps to create a source connection to bring your Adobe Campaign Managed Cloud Services data to Adobe Experience Platform.
 
@@ -20,7 +20,7 @@ This guide requires a working understanding of the following components of Exper
 
 ## Connect Adobe Campaign Managed Cloud Services to Platform
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources that you can create an account with.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources that you can create an account with.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. You can also use the search bar to narrow down the displayed sources.
 

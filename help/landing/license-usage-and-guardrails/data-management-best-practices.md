@@ -44,7 +44,7 @@ The availability of these metrics and the specific definition of each of these m
 
 The Adobe Experience Platform UI provides a dashboard through which you can view a snapshot of your organization's license-related data for Platform. The data in the dashboard is displayed exactly as it appears at the specific point in time when the snapshot was taken. The snapshot is neither an approximation nor a sample of data, and the dashboard is not updating in real-time.
 
-For more information, see the guide on [using the license usage dashboard on Platform UI](../../dashboards/guides/license-usage.md#license-usage-dashboard-data).
+For more information, see the guide on [using the license usage dashboard on Experience Platform UI](../../dashboards/guides/license-usage.md#license-usage-dashboard-data).
 
 ## Data management best practices
 

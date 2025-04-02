@@ -13,7 +13,7 @@ This document covers the steps for connecting the [!DNL DbVisualizer] database t
 
 This guide requires that you already have access to the [!DNL DbVisualizer] desktop app and are familiar with how to navigate its interface. To download the [!DNL DbVisualizer] desktop app or for more information, see the [official [!DNL DbVisualizer] documentation](https://www.dbvis.com/download/).
 
-To acquire the necessary credentials for connecting [!DNL  DbVisualizer] to Experience Platform, you must have access to the Queries workspace in the Platform UI. Please contact your organization administrator if you do not currently have access to the Queries workspace. 
+To acquire the necessary credentials for connecting [!DNL  DbVisualizer] to Experience Platform, you must have access to the Queries workspace in the Experience Platform UI. Please contact your organization administrator if you do not currently have access to the Queries workspace. 
 
 ## Create a database connection {#connect-database}
 
@@ -48,7 +48,7 @@ The [!DNL Edited] column shows a checkmark to denote that the parameter value ha
 
 ### Input Query Service credentials {#query-service-credentials}
 
-To find the credentials necessary to connect BBVisualizer with Query Service, log in to the Platform UI and select **[!UICONTROL Queries]** from the left navigation, followed by **[!UICONTROL Credentials]**. For more information on finding your **host**, **port**, **database**, **username**, and **password** credentials, please read the [credentials guide](../ui/credentials.md). 
+To find the credentials necessary to connect BBVisualizer with Query Service, log in to the Experience Platform UI and select **[!UICONTROL Queries]** from the left navigation, followed by **[!UICONTROL Credentials]**. For more information on finding your **host**, **port**, **database**, **username**, and **password** credentials, please read the [credentials guide](../ui/credentials.md). 
 
 ![The Credentials page of the Experience Platform Queries workspace with Credentials and the Expiring Credentials highlighted.](../images/clients/dbvisualizer/query-service-credentials-page.png)
 

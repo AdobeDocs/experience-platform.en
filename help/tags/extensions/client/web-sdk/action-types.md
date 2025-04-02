@@ -67,7 +67,7 @@ This action type supports the following options:
 
 This action is used to get the legacy Media Analytics API. When configuring the action and an object name is provided, then the legacy Media Analytics API will be exported to that window object. If none is provided it will be exported to `window.Media` as the current Media JS library does.
 
-![Platform UI image showing the Get Media Analytics Tracker action type.](assets/get-media-analytics-tracker.png)
+![Experience Platform UI image showing the Get Media Analytics Tracker action type.](assets/get-media-analytics-tracker.png)
 
 ## Redirect with identity {#redirect-with-identity}
 
@@ -134,7 +134,7 @@ This helps you trigger different datastream behaviors than the default ones, wit
 
 Sends a media event to Adobe Experience Platform and/or Adobe Analytics. This action is useful when you are tracking media events on your website. Select an instance (if you have more than one). The action requires a `playerId` that represents a unique identifier for a tracked media session. It also requires a **[!UICONTROL Quality of Experience]** and a `playhead` data element when starting a media session.
 
-![Platform UI image showing the send media event screen.](assets/send-media-event.png)
+![Experience Platform UI image showing the send media event screen.](assets/send-media-event.png)
 
 The **[!UICONTROL Send media event]** action type supports the following properties:
 

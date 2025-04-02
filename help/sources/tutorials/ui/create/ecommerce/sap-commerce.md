@@ -137,13 +137,13 @@ Expand the following section to view an example schema.
 
 ## Connect your [!DNL SAP Commerce] account {#connect-account}
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
 Under the *eCommerce* category, select **[!UICONTROL SAP Commerce]**, and then select **[!UICONTROL Add data]**.
 
-![Platform UI screenshot for catalog with SAP Commerce card](../../../../images/tutorials/create/ecommerce/sap-commerce/catalog-card.png)
+![Experience Platform UI screenshot for catalog with SAP Commerce card](../../../../images/tutorials/create/ecommerce/sap-commerce/catalog-card.png)
 
 The **[!UICONTROL Connect SAP Commerce account]** page appears. On this page, you can either use new credentials or existing credentials.
 
@@ -151,13 +151,13 @@ The **[!UICONTROL Connect SAP Commerce account]** page appears. On this page, yo
 
 To use an existing account, select the [!DNL SAP Commerce] account you want to create a new dataflow with, then select **[!UICONTROL Next]** to proceed.
 
-![Platform UI screenshot to connect SAP Commerce account with an existing account](../../../../images/tutorials/create/ecommerce/sap-commerce/existing.png)
+![Experience Platform UI screenshot to connect SAP Commerce account with an existing account](../../../../images/tutorials/create/ecommerce/sap-commerce/existing.png)
 
 ### New account {#new-account}
 
 If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name, an optional description, and your credentials. When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
 
-![Platform UI screenshot to connect SAP Commerce account with a new account](../../../../images/tutorials/create/ecommerce/sap-commerce/new.png)
+![Experience Platform UI screenshot to connect SAP Commerce account with a new account](../../../../images/tutorials/create/ecommerce/sap-commerce/new.png)
 
 ### Select data {#select-data}
 
@@ -174,13 +174,13 @@ Finally, you must select the object type that you want to ingest to Platform.
 
 To ingest customer data, select **[!UICONTROL Customers]** as your object type and then select **[!UICONTROL Next]**.
 
-![Platform UI screenshot for SAP Commerce showing configuration with Customers option selected](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-customers.png)
+![Experience Platform UI screenshot for SAP Commerce showing configuration with Customers option selected](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-customers.png)
 
 >[!TAB Contacts]
 
 To ingest contact data, select **[!UICONTROL Contacts]** as your object type and then select **[!UICONTROL Next]**.
 
-![Platform UI screenshot for SAP Commerce showing configuration with Contacts option selected](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-contacts.png)
+![Experience Platform UI screenshot for SAP Commerce showing configuration with Contacts option selected](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-contacts.png)
 
 >[!ENDTABS]
 

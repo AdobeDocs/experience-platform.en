@@ -44,7 +44,7 @@ For a list of the fields supported by the [!DNL Pinterest] campaign, ad group an
 
 ## Connect your [!DNL Pinterest Ads] account {#connect-account}
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources you can create an account with.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources you can create an account with.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
@@ -113,9 +113,9 @@ Once your have provided the values for your schedule, select **[!UICONTROL Next]
 
 To validate that you have correctly set up the source and [!DNL Pinterest Ads] data is being ingested, follow the steps below:
 
-In the Platform UI, select **[!UICONTROL View Dataflows]** beside the [!DNL Pinterest Ads] card menu on the catalog page. You can then select [!UICONTROL Preview dataset] to verify the data that was ingested.
+In the Experience Platform UI, select **[!UICONTROL View Dataflows]** beside the [!DNL Pinterest Ads] card menu on the catalog page. You can then select [!UICONTROL Preview dataset] to verify the data that was ingested.
 
-![Platform UI screenshot for Pinterest Ads Preview Dataset.](../../../../images/tutorials/create/advertising/pinterest-ads/preview-dataset.png)
+![Experience Platform UI screenshot for Pinterest Ads Preview Dataset.](../../../../images/tutorials/create/advertising/pinterest-ads/preview-dataset.png)
 
 You can verify the data against the counts visible on the [!DNL Pinterest] UI
 

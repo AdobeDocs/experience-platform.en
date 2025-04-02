@@ -16,7 +16,7 @@ Labelling dataset columns as primary or secondary identity requires an understan
 
 ## Add constraints {#add-constraints}
 
-The `ALTER TABLE` command allows you to label a dataset column as a person's identity and then use that label as a primary identity by updating the associated metadata using SQL. This is especially useful when datasets are created through SQL rather than directly from a schema through the Platform UI. The command can be used to ensure that your data operations within Platform are compliant with data usage policies.
+The `ALTER TABLE` command allows you to label a dataset column as a person's identity and then use that label as a primary identity by updating the associated metadata using SQL. This is especially useful when datasets are created through SQL rather than directly from a schema through the Experience Platform UI. The command can be used to ensure that your data operations within Platform are compliant with data usage policies.
 
 **Examples**
 

@@ -9,7 +9,7 @@ Use the SQL audience extension to build audiences with data from the data lake, 
 
 Using this SQL extension improves your ability to create audiences as you don't need raw data in your profiles when defining audience segments. Audiences created using this method are automatically registered in the Audience workspace, where you can further target them to file-based destinations.
 
-![Infographic showing the SQL audience extension workflow. The stages include; building audiences with the Query Service using SQL commands, managing them in the Platform UI, to activating them in file-based destinations.](../images/data-distiller/sql-audiences/sql-audience-extension-workflow.png)
+![Infographic showing the SQL audience extension workflow. The stages include; building audiences with the Query Service using SQL commands, managing them in the Experience Platform UI, to activating them in file-based destinations.](../images/data-distiller/sql-audiences/sql-audience-extension-workflow.png)
 
 This document covers how to use the SQL audience extension in Adobe Experience Platform's Data Distiller to create, manage, and publish audiences using SQL commands.
 
@@ -197,7 +197,7 @@ DROP AUDIENCE IF EXISTS aud_test;
 
 ### Automatic audience registration and availability {#registration-and-availability}
 
-Audiences created using the SQL extension are automatically registered under the Data Distiller [!UICONTROL Origin] in the Audience workspace. Once registered, these audiences are available for targeting in file-based destinations, enhancing segmentation and targeting strategies. This process requires no additional configuration, streamlining audience management. For more details on how to view, manage, and create audiences within the Platform UI, see the [Audience Portal overview](../../segmentation/ui/audience-portal.md).
+Audiences created using the SQL extension are automatically registered under the Data Distiller [!UICONTROL Origin] in the Audience workspace. Once registered, these audiences are available for targeting in file-based destinations, enhancing segmentation and targeting strategies. This process requires no additional configuration, streamlining audience management. For more details on how to view, manage, and create audiences within the Experience Platform UI, see the [Audience Portal overview](../../segmentation/ui/audience-portal.md).
 
 <!-- Q) Do you know how long it takes for the audience to register? This info would help manage user expectations. -->
 

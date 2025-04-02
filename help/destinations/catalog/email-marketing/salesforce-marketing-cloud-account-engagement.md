@@ -99,7 +99,7 @@ Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, search for [!DN
 
 To authenticate to the destination, select **[!UICONTROL Connect to destination]**. You will be navigated to the [!DNL Salesforce] login page. Enter your [!DNL Marketing Cloud Account Engagement] account credentials and select [!DNL Log In].
 
-![Platform UI screenshot showing how to authenticate to Marketing Cloud Account Engagement.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/authenticate-destination.png)
+![Experience Platform UI screenshot showing how to authenticate to Marketing Cloud Account Engagement.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/authenticate-destination.png)
 
 Next, Select [!UICONTROL Allow] in the subsequent window to give permissions to the **Adobe Experience Platform** app to access your [!DNL Salesforce Marketing Cloud Account Engagement] account. *You will need to do this only once*.
 
@@ -111,7 +111,7 @@ If the details provided are valid, the UI displays a message: *You successfully 
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required. Refer to the [Gather [!DNL Marketing Cloud Account Engagement] credentials](#gather-credentials) section for any guidance.
 
-![Platform UI screenshot showing the destination details.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/destination-details.png)
+![Experience Platform UI screenshot showing the destination details.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/destination-details.png)
 
 | Field | Description |
 | --- | --- |
@@ -155,7 +155,7 @@ To correctly map your XDM fields to the [!DNL Marketing Cloud Account Engagement
       |`xdm: person.name.firstName`|`Attribute: firstName`| |
 
     * An example with the above mappings is shown below:
-    ![Platform UI screenshot example showing Target mappings.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/mappings.png)
+    ![Experience Platform UI screenshot example showing Target mappings.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/mappings.png)
 
 When you have finished providing the mappings for your destination connection, select **[!UICONTROL Next]**.
 
@@ -164,7 +164,7 @@ When you have finished providing the mappings for your destination connection, s
 To validate that you have correctly set up the destination, follow the steps below:
 
 1. Navigate to one of the audiences you had selected. Select the **[!DNL Activation data]** tab. The **[!UICONTROL Mapping ID]** column displays the name of the custom field which is generated within the [!DNL Marketing Cloud Account Engagement Prospects] page.
-![Platform UI screenshot example showing the Mapping ID for a selected segment.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/selected-segment-mapping-id.png)
+![Experience Platform UI screenshot example showing the Mapping ID for a selected segment.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/selected-segment-mapping-id.png)
 
 1. Log in to the [[!DNL Salesforce]](https://login.salesforce.com/) website. Then navigate to the **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** page and check if the prospects from the audience have been added / updated. Alternatively you can also access [[!DNL Salesforce Pardot]](https://pi.pardot.com/) and access the **[!DNL Prospects]** page.
 ![Salesforce UI screenshot showing the Prospects page.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/prospects.png)

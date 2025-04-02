@@ -15,7 +15,7 @@ AI/ML Services provide Customer AI as a simple-to-use Adobe Sensei service that 
 
 ## Create an instance {#set-up-your-instance}
 
-In the Platform UI, select **[!UICONTROL Services]** in the left navigation. The **[!UICONTROL Services]** browser appears and displays all available services at your disposal. In the container for Customer AI, select **[!UICONTROL Open]**.
+In the Experience Platform UI, select **[!UICONTROL Services]** in the left navigation. The **[!UICONTROL Services]** browser appears and displays all available services at your disposal. In the container for Customer AI, select **[!UICONTROL Open]**.
 
 ![](../images/user-guide/navigate-to-service.png)
 

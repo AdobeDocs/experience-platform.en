@@ -32,9 +32,9 @@ The following sections provide additional information that you will need to know
 | `url` | The URL defines auth params required for connecting to [!DNL HDFS] anonymously. For more information on how to obtain this value, refer to [this [!DNL HDFS] document](https://hadoop.apache.org/docs/r1.2.1/HttpAuthentication.html). |
 | `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL AdWords] is: `54e221aa-d342-4707-bcff-7a4bceef0001`. |
 
-### Using Platform APIs
+### Using Experience Platform APIs
 
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
+For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../../../landing/api-guide.md).
 
 ## Create a base connection
 

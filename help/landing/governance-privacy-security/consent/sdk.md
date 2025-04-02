@@ -191,7 +191,7 @@ var setConsent = function () {
 
 All [!DNL Platform SDK] commands return promises that indicate whether the call succeeded or failed. You can then use these responses for additional logic such as displaying confirmation messages to the customer. See [Command responses](/help/web-sdk/commands/command-responses.md) for more information.
 
-Once you have successfully made `setConsent` calls with the SDK, you can use the profile viewer in the Platform UI to verify whether data is landing in the Profile store. See the section on [browsing profiles by identity](../../../profile/ui/user-guide.md#browse-identity) for more information.
+Once you have successfully made `setConsent` calls with the SDK, you can use the profile viewer in the Experience Platform UI to verify whether data is landing in the Profile store. See the section on [browsing profiles by identity](../../../profile/ui/user-guide.md#browse-identity) for more information.
 
 ## Next steps
 

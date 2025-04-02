@@ -430,6 +430,6 @@ For more details, see the [Create derived datasets with SQL guide](../../query-s
 
 Now that you've learned how to manage TTL settings for row-level expiration, review the following documentation to further your understanding of TTL management:
 
-- Retention jobs: Learn to schedule and automate dataset expirations in the Platform UI with the [data lifecycle UI guide](../../hygiene/ui/dataset-expiration.md), or check Dataset Retention configurations and verify that expired records are deleted.
+- Retention jobs: Learn to schedule and automate dataset expirations in the Experience Platform UI with the [data lifecycle UI guide](../../hygiene/ui/dataset-expiration.md), or check Dataset Retention configurations and verify that expired records are deleted.
 - [Dataset Expiration API endpoint guide](../../hygiene/api/dataset-expiration.md): Discover how to delete entire datasets rather than just rows. Learn how to schedule, manage, and automate dataset expiration using the API to ensure efficient data retention.
 - [Data usage policies overview](../../data-governance/policies/overview.md): Learn how to align your data retention strategy with broader compliance requirements and marketing use restrictions.

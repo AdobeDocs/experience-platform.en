@@ -13,7 +13,7 @@ An Experience Event is a fact record of what occurred, including the point in ti
 
 The [!DNL XDM ExperienceEvent] class itself provides several time-series-related fields to a schema. Two of these fields (`_id` and `timestamp`) are **required** for all schemas based on this class, while the rest are optional. The values of some of the fields are automatically populated when data is ingested.
 
-![The structure of XDM ExperienceEvent as it appears in the Platform UI.](../images/classes/experienceevent/structure.png)
+![The structure of XDM ExperienceEvent as it appears in the Experience Platform UI.](../images/classes/experienceevent/structure.png)
 
 | Property | Description |
 | --- | --- |

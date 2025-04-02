@@ -31,11 +31,11 @@ If you already have a valid [!DNL Oracle NetSuite] account, you may skip the rem
 
 ## Connect your [!DNL Oracle NetSuite] account {#connect-account}
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
 Under the *Marketing Automation* category, select **[!DNL Oracle NetSuite Activities]**, and then select **[!UICONTROL Add data]**.
 
-![Platform UI screenshot for catalog with Oracle NetSuite Activities card](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/catalog-card.png)
+![Experience Platform UI screenshot for catalog with Oracle NetSuite Activities card](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/catalog-card.png)
 
 The **[!UICONTROL Connect Oracle NetSuite Activities account]** page appears. On this page, you can either use new credentials or existing credentials.
 
@@ -47,13 +47,13 @@ The **[!UICONTROL Connect Oracle NetSuite Activities account]** page appears. On
 
 To use an existing account, select the [!DNL Oracle NetSuite Activities] account you want to create a new dataflow with, then select **[!UICONTROL Next]** to proceed.
 
-![Platform UI screenshot to connect Oracle NetSuite Activities account with an existing account](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/existing.png)
+![Experience Platform UI screenshot to connect Oracle NetSuite Activities account with an existing account](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/existing.png)
 
 ### New account {#new-account}
 
 If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name, an optional description, and your credentials. When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
 
-![Platform UI screenshot to connect Oracle NetSuite Activities account with a new account](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/new.png)
+![Experience Platform UI screenshot to connect Oracle NetSuite Activities account with a new account](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/new.png)
 
 ## Next steps {#next-steps}
 

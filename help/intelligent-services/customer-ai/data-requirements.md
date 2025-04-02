@@ -85,7 +85,7 @@ Experience Events are used for determining various customer behaviors. Depending
 
 Customer AI uses the events in these four standard field groups by default: Commerce, Web, Application, and Search. It is not necessary to have data for each event in the standard field groups listed below but certain events are required for certain scenarios. If you have any events in the standard field groups available, it is recommended that you include it in your schema. For example, if you wanted to create a Customer AI model for predicting purchase events, it is useful to have data from the Commerce and Web page details field groups. 
 
-To view a field group in the Platform UI, select the **[!UICONTROL Schemas]** tab on the left-rail followed by selecting the **[!UICONTROL Field groups]** tab.
+To view a field group in the Experience Platform UI, select the **[!UICONTROL Schemas]** tab on the left-rail followed by selecting the **[!UICONTROL Field groups]** tab.
 
 | Field group | Event type | XDM field path |
 | --- | --- | --- |

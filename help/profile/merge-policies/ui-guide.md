@@ -71,7 +71,7 @@ When creating or editing a merge policy, you can view the union schema for the c
 
 ![The "View Union Schema" button is highlighted on the New merge policy workflow.](../images/merge-policies/view-union-schema.png)
 
-This opens the [!UICONTROL View Union Schema] dialog, showing all contributing schemas, identities, and relationships associated with the union schema. You can use the dialog to explore the union schema in the same way that you would by accessing the [!UICONTROL Union Schema] tab in the [!UICONTROL Profiles] section of the Platform UI.
+This opens the [!UICONTROL View Union Schema] dialog, showing all contributing schemas, identities, and relationships associated with the union schema. You can use the dialog to explore the union schema in the same way that you would by accessing the [!UICONTROL Union Schema] tab in the [!UICONTROL Profiles] section of the Experience Platform UI.
 
 For detailed information on union schemas, including how to interact with them in the [!UICONTROL Union Schema] tab or the [!UICONTROL View Union Schema] dialog shown in the merge policies workflow, please visit the [union schema UI guide](../ui/union-schema.md).
 

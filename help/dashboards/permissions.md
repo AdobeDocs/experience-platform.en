@@ -29,7 +29,7 @@ There are five permissions not included in the [!DNL Dashboard] category that ar
 
 >[!IMPORTANT]
 >
->Both the **[!DNL Manage Standard Dashboards]** and the **[!DNL View Standard Dashboards]** permissions **require** a "view" or "manage" permission from the [!DNL Profile Management] or [!DNL Destinations] category in the Admin Console to activate the relevant sections within the Platform UI.
+>Both the **[!DNL Manage Standard Dashboards]** and the **[!DNL View Standard Dashboards]** permissions **require** a "view" or "manage" permission from the [!DNL Profile Management] or [!DNL Destinations] category in the Admin Console to activate the relevant sections within the Experience Platform UI.
 
 | Permission | Admin Console category location |
 |---|---|
@@ -41,7 +41,7 @@ There are five permissions not included in the [!DNL Dashboard] category that ar
 
 ## Access-control matrix
 
-The following access-control matrix provides a breakdown of which permissions are required and what function they provide regarding access to the different dashboard features. Permissions are listed across the top horizontal row and the Platform UI workspace is listed along the left column.  
+The following access-control matrix provides a breakdown of which permissions are required and what function they provide regarding access to the different dashboard features. Permissions are listed across the top horizontal row and the Experience Platform UI workspace is listed along the left column.  
 
 |   | [!UICONTROL View Standard Dashboard] OR [!UICONTROL Manage Standard Dashboard] | [!UICONTROL View Profiles],<br/>[!UICONTROL View Segments],<br/> [!UICONTROL View Destinations] | [!UICONTROL Manage Queries] & [!UICONTROL Manage Sandboxes] | [!UICONTROL View License Usage Dashboard]  |
 |---|---|---|---|---|

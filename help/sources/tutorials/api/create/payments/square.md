@@ -34,9 +34,9 @@ In order for [!DNL Flow Service] to connect with [!DNL Square], you must provide
 
 For more information on these credentials and how to obtain them, see the [[!DNL Square] documentation on OAuth](https://developer.squareup.com/docs/oauth-api/receive-and-manage-tokens).
 
-### Using Platform APIs
+### Using Experience Platform APIs
 
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
+For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../../../landing/api-guide.md).
 
 ## Create a base connection
 

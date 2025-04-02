@@ -64,7 +64,7 @@ For detailed instructions on how to create a schema, read the guide on [creating
 
 Finally, you must create a dataset for your schemas. For detailed instructions on how to create a dataset, read the guide on [creating a dataset in the UI](../../../catalog/datasets/user-guide.md).
 
-## Create an Adobe Campaign Managed Cloud Services source connection using the Platform UI
+## Create an Adobe Campaign Managed Cloud Services source connection using the Experience Platform UI
 
 Now that you have accessed your data logs in the Campaign client console, created a schema, and a dataset, you can now proceed to create a source connection to bring your Campaign Managed Services data to Platform.
 

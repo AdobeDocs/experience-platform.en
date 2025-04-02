@@ -7,7 +7,7 @@ exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
 
 Any data that is brought into Adobe Experience Platform is encapsulated by Experience Data Model (XDM) schemas and may be subject to usage restrictions defined by your organization or by legal regulations. 
 
-By executing a CTAS query through Query Service when no schema is specified, an ad hoc schema is automatically generated. It is often necessary to restrict the usage of certain fields, or datasets, of ad hoc schemas to control access to both sensitive personal data and personally identifiable information. Adobe Experience Platform facilitates this access control by allowing you to label schema fields through the Platform UI using the attribute-based access control capability.
+By executing a CTAS query through Query Service when no schema is specified, an ad hoc schema is automatically generated. It is often necessary to restrict the usage of certain fields, or datasets, of ad hoc schemas to control access to both sensitive personal data and personally identifiable information. Adobe Experience Platform facilitates this access control by allowing you to label schema fields through the Experience Platform UI using the attribute-based access control capability.
 
 Labels can be applied at any time, providing flexibility in how you choose to govern data. Although, it is best practice to label data as soon as it is ingested into Platform, or as soon as the data becomes available for use in Platform.
 
@@ -20,7 +20,7 @@ This document provides a tutorial to manage access to sensitive data by applying
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
 * [Experience Data Model (XDM) System](../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
-  * [[!DNL Schema Editor]](../../xdm/ui/overview.md): Learn how to create and manage schemas and other resources in the Platform UI.
+  * [[!DNL Schema Editor]](../../xdm/ui/overview.md): Learn how to create and manage schemas and other resources in the Experience Platform UI.
 * [[!DNL Data Governance]](../../data-governance/home.md): Learn how [!DNL Data Governance] allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. 
 * [Attribute-based access control](../../access-control/abac/overview.md): Attribute-based access control is a capability of Adobe Experience Platform that enables administrators to control access to specific objects and/or capabilities based on attributes. Attributes can be metadata added to an object, such as a label added to an ad hoc or regular schema field. An administrator defines access policies that include attributes to manage user access permissions.
 
@@ -28,15 +28,15 @@ This guide requires a working understanding of the following components of Adobe
 
 Once your query has been executed and results have been generated, an ad hoc schema is automatically generated and added to the schema inventory. 
 
-To add a data label, navigate to [!UICONTROL Schemas] dashboard browse tab by selecting [!UICONTROL Schemas] in the left rail of the Platform UI. The schema inventory is displayed.
+To add a data label, navigate to [!UICONTROL Schemas] dashboard browse tab by selecting [!UICONTROL Schemas] in the left rail of the Experience Platform UI. The schema inventory is displayed.
 
 >[!NOTE]
 >
 >Ad hoc schemas are not displayed by default in the schema inventory.
 
-## Discover ad hoc schemas in the schema inventory of the Platform UI {#discover-ad-hoc-schemas}
+## Discover ad hoc schemas in the schema inventory of the Experience Platform UI {#discover-ad-hoc-schemas}
 
-To enable the display of ad hoc schemas in the Platform UI, select the filter icon (![A filter icon.](/help/images/icons/filter.png)) to the left of the search field, and then select **[!UICONTROL Show adhoc schemas] in the left-rail that appears.
+To enable the display of ad hoc schemas in the Experience Platform UI, select the filter icon (![A filter icon.](/help/images/icons/filter.png)) to the left of the search field, and then select **[!UICONTROL Show adhoc schemas] in the left-rail that appears.
 
 ![The Schema dashboard filter options left rail with 'Show adhoc schema' toggle enabled.](../images/data-governance/adhoc-schema-toggle.png)
 

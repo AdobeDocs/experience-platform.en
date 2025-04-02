@@ -195,7 +195,7 @@ From the main **[!UICONTROL Profiles]** menu, select the **[!UICONTROL Computed 
 
 ![The Computed attributes tab is highlighted.](../images/user-guide/computed-attributes.png)
 
-For more information on computed attributes, please read the [computed attributes overview](../computed-attributes/overview.md). For more information on how to use computed attributes within the Platform UI, please read the [computed attributes UI guide](../computed-attributes/ui.md).
+For more information on computed attributes, please read the [computed attributes overview](../computed-attributes/overview.md). For more information on how to use computed attributes within the Experience Platform UI, please read the [computed attributes UI guide](../computed-attributes/ui.md).
 
 ## Next steps
 

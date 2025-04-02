@@ -17,7 +17,7 @@ You can view an individual dashboard by selecting the name of the dashboard from
 
 ![Browse tab with a name of a dashboard highlighted.](./images/inventory/dashboard-name.png)
 
-When selected, the dashboard opens either in the Platform UI or in a fully integrated application workspace that requires you to log in using the necessary credentials.
+When selected, the dashboard opens either in the Experience Platform UI or in a fully integrated application workspace that requires you to log in using the necessary credentials.
 
 ## Create custom dashboards
 

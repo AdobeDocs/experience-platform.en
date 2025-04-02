@@ -177,7 +177,7 @@ A schema's class determines which field groups are eligible for use in that sche
 
 Adobe provides several standard ("core") XDM classes. Two of these classes, [!DNL XDM Individual Profile] and [!DNL XDM ExperienceEvent], are required for nearly all downstream Platform processes. In addition these core classes, you can also create your own custom classes to describe more specific use cases for your organization. Custom classes are defined by an organization when there are no Adobe-defined core classes available to describe a unique use case.
 
-The following screenshot demonstrates how classes are represented in the Platform UI. Since the example schema shown does not contain any field groups, all of the displayed fields are provided by the schema's class ([!UICONTROL XDM Individual Profile]).
+The following screenshot demonstrates how classes are represented in the Experience Platform UI. Since the example schema shown does not contain any field groups, all of the displayed fields are provided by the schema's class ([!UICONTROL XDM Individual Profile]).
 
 ![The [!UICONTROL XDM Individual Profile] within the Schema Editor.](../images/schema-composition/class.png)
 
@@ -211,7 +211,7 @@ For example, to capture details such as "[!UICONTROL First Name]" and "[!UICONTR
 
 Remember that schemas are composed of "zero or more" field groups, so this means that you could compose a valid schema without using any field groups at all.
 
-The following screenshot demonstrates how field groups are represented in the Platform UI. A single field group ([!UICONTROL Demographic Details]) is added to a schema in this example, which provides a grouping of fields to the schema's structure.
+The following screenshot demonstrates how field groups are represented in the Experience Platform UI. A single field group ([!UICONTROL Demographic Details]) is added to a schema in this example, which provides a grouping of fields to the schema's structure.
 
 ![The Schema Editor with the [!UICONTROL Demographic Details] field group highlighted in an example schema.](../images/schema-composition/field-group.png)
 
@@ -231,7 +231,7 @@ Data types are used as reference field types in classes or schemas in the same w
 
 Experience Platform provides a number of common data types as part of the [!DNL Schema Registry] to support the use of standard patterns for describing common data structures. This is explained in more detail in the [Schema Registry tutorials](../tutorials/create-schema-api.md) and will become clearer as you walk through the steps to define data types.
 
-The following screenshot demonstrates how data types are represented in the Platform UI. One of the fields provided by the [!UICONTROL Demographic Details] field group uses the "[!UICONTROL Object]" data type, as indicated by the text following the pipe character (`|`) next to the field's name. This particular data type provides several subfields that relate to the name of an individual person, a construct that can be reused for other fields where a person's name needs to be captured.
+The following screenshot demonstrates how data types are represented in the Experience Platform UI. One of the fields provided by the [!UICONTROL Demographic Details] field group uses the "[!UICONTROL Object]" data type, as indicated by the text following the pipe character (`|`) next to the field's name. This particular data type provides several subfields that relate to the name of an individual person, a construct that can be reused for other fields where a person's name needs to be captured.
 
 ![A diagram in the Schema Editor for an individual person with the Full name object and attributes highlighted.](../images/schema-composition/data-type.png)
 

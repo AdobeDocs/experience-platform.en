@@ -16,9 +16,9 @@ The following document provides steps on how to test and debug your source using
 
 ## Getting started
 
-* For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../landing/api-guide.md).
-* For information on how to generate your credentials for Platform APIs, see the tutorial on [authenticating and accessing Experience Platform APIs](../../../landing/api-authentication.md).
-* For information on how to set up [!DNL Postman] for Platform APIs, see the tutorial on [setting up developer console and [!DNL Postman]](../../../landing/postman.md).
+* For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../landing/api-guide.md).
+* For information on how to generate your credentials for Experience Platform APIs, see the tutorial on [authenticating and accessing Experience Platform APIs](../../../landing/api-authentication.md).
+* For information on how to set up [!DNL Postman] for Experience Platform APIs, see the tutorial on [setting up developer console and [!DNL Postman]](../../../landing/postman.md).
 * To help your testing and debugging process, download the [Self-Serve Sources verification collection and environment here](../assets/sdk-verification.zip) and follow the steps outlined below.
 
 ## Test your source using the API
@@ -56,13 +56,13 @@ The [!DNL Runner] interface appears, allowing you to configure the run order of 
 
 >[!NOTE]
 >
->You can disable **Delete Flow** from the run order checklist if you prefer to use the sources monitoring dashboard in Platform UI. However, once you are finished with testing, you must ensure that your test flows are deleted.
+>You can disable **Delete Flow** from the run order checklist if you prefer to use the sources monitoring dashboard in Experience Platform UI. However, once you are finished with testing, you must ensure that your test flows are deleted.
 
 ![run-collection](../assets/run-collection.png)
 
 ## Test your source using the UI
 
-To test your source in the UI, go to the sources catalog of your organization's sandbox in the Platform UI. From here, you should see your new source appear under the *Streaming* category.
+To test your source in the UI, go to the sources catalog of your organization's sandbox in the Experience Platform UI. From here, you should see your new source appear under the *Streaming* category.
 
 With your new source now available in your sandbox, you must follow the sources workflow to test the functionalities. To begin, select **[!UICONTROL Set up]**.
 

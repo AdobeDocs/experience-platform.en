@@ -31,7 +31,7 @@ You can put library module files in anywhere you like within the extension direc
 
 ### Views
 
-A view is an HTML file capable of being loaded into an [`iframe` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) within the tags application, specifically through the Platform UI and Data Collection UI. The view must include a script provided by the extension and conform to a small API in order to communicate with the application.
+A view is an HTML file capable of being loaded into an [`iframe` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) within the tags application, specifically through the Experience Platform UI and Data Collection UI. The view must include a script provided by the extension and conform to a small API in order to communicate with the application.
 
 The most important view file for any extension is its configuration. See the section on [extension configurations](#configuration) for more information.
 

@@ -24,9 +24,9 @@ This guide requires a working understanding of the following components of Adobe
 
 The following sections provide additional information that you will need to know in order to successfully connect to an advertising system using the [!DNL Flow Service] API.
 
-### Using Platform APIs
+### Using Experience Platform APIs
 
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../landing/api-guide.md).
+For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../../landing/api-guide.md).
 
 ## Explore your data tables
 

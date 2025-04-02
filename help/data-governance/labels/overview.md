@@ -55,7 +55,7 @@ The **[!UICONTROL Policies]** workspace in the [!DNL Experience Platform] UI all
 
 >[!IMPORTANT]
 >
->Labels can no longer be applied to fields at the dataset level. This workflow has been deprecated in favour of applying labels at the schema level. Any labels previously applied at the dataset object level will still be supported through the Platform UI until 31st May 2024. To ensure that your labels are consistent across all schemas, any labels previously attached to fields at the dataset level must be migrated to the schema level by you over the coming year. See the section on [migrating previously applied labels](../e2e.md#migrate-labels) for instructions on how to do this.
+>Labels can no longer be applied to fields at the dataset level. This workflow has been deprecated in favour of applying labels at the schema level. Any labels previously applied at the dataset object level will still be supported through the Experience Platform UI until 31st May 2024. To ensure that your labels are consistent across all schemas, any labels previously attached to fields at the dataset level must be migrated to the schema level by you over the coming year. See the section on [migrating previously applied labels](../e2e.md#migrate-labels) for instructions on how to do this.
 
 ### Using APIs
 

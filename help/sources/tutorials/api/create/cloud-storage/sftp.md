@@ -26,9 +26,9 @@ The following sections provide additional information that you will need to know
 
 Read the [[!DNL SFTP] authentication guide](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials) for detailed steps on how to retrieve your authentication credentials.
 
-### Using Platform APIs
+### Using Experience Platform APIs
 
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
+For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../../../landing/api-guide.md).
 
 ## Create a base connection
 

@@ -33,7 +33,7 @@ This article describes all the supported customer authentication configurations 
 
 >[!IMPORTANT]
 >
->The customer authentication configuration does not require you to configure any parameters. You can copy and paste the snippets shown in this page in your API calls when [creating](../../authoring-api/destination-configuration/create-destination-configuration.md) or [updating](../../authoring-api/destination-configuration/update-destination-configuration.md) a destination configuration, and your users will see the corresponding authentication screen in the Platform UI.
+>The customer authentication configuration does not require you to configure any parameters. You can copy and paste the snippets shown in this page in your API calls when [creating](../../authoring-api/destination-configuration/create-destination-configuration.md) or [updating](../../authoring-api/destination-configuration/update-destination-configuration.md) a destination configuration, and your users will see the corresponding authentication screen in the Experience Platform UI.
 
 >[!IMPORTANT]
 >

@@ -22,9 +22,9 @@ This guide requires a working understanding of the following components of Adobe
 
 For prerequisite set up and information on the [!DNL Snowflake] streaming source. Please read the [[!DNL Snowflake] streaming source overview](../../../../connectors/databases/snowflake-streaming.md).
 
-### Using Platform APIs
+### Using Experience Platform APIs
 
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
+For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../../../landing/api-guide.md).
 
 ## Create a base connection {#create-a-base-connection}
 

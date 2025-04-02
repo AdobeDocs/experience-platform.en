@@ -3,12 +3,12 @@ keywords: Experience Platform;home;popular topics;consent and preferences;consen
 solution: Experience Platform
 title: Create a Dataflow Using a Consent and Preferences Source in the UI
 type: Tutorial
-description: A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps on how to create a dataflow for a consent and preferences source using Platform UI.
+description: A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps on how to create a dataflow for a consent and preferences source using Experience Platform UI.
 exl-id: 340b5945-baa1-4f79-88fa-2572606f6083
 ---
 # Create a dataflow using a consent and preferences source in the UI
 
-A dataflow is a scheduled task that retrieves and ingests data from a source to a dataset in Adobe Experience Platform. This tutorial provides steps on how to create a dataflow for a consent and preferences source using the Platform UI.
+A dataflow is a scheduled task that retrieves and ingests data from a source to a dataset in Adobe Experience Platform. This tutorial provides steps on how to create a dataflow for a consent and preferences source using the Experience Platform UI.
 
 >[!NOTE]
 >
@@ -145,6 +145,6 @@ By following this tutorial, you have successfully created a dataflow to bring da
 
 >[!WARNING]
 >
-> The Platform UI shown in the following video is out-of-date. Please refer to the documentation above for the latest UI screenshots and functionality.
+> The Experience Platform UI shown in the following video is out-of-date. Please refer to the documentation above for the latest UI screenshots and functionality.
 >
 >[!VIDEO](https://video.tv.adobe.com/v/29711?quality=12&learn=on)

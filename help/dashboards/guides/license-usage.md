@@ -132,7 +132,7 @@ License usage reports provide a high degree of granularity. Most metrics are sha
 
 This guide outlines how to access and work with the license usage dashboard in the UI and provides more information regarding the visualizations displayed in the dashboard.
 
-For a general overview of the Platform UI, refer to the [Experience Platform UI guide](../../landing/ui-guide.md).
+For a general overview of the Experience Platform UI, refer to the [Experience Platform UI guide](../../landing/ui-guide.md).
 
 ## [!UICONTROL License usage] dashboard data
 
@@ -146,7 +146,7 @@ The data in this dashboard is displayed exactly as it appeared at the specific p
 
 ## Exploring the license usage dashboard {#explore}
 
-To navigate to the license usage dashboard within the Platform UI, select **[!UICONTROL License usage]** in the left rail. The dashboard contains two tabs: **[!UICONTROL Metrics]** and **[!UICONTROL Products]**.
+To navigate to the license usage dashboard within the Experience Platform UI, select **[!UICONTROL License usage]** in the left rail. The dashboard contains two tabs: **[!UICONTROL Metrics]** and **[!UICONTROL Products]**.
 
 >[!NOTE]
 >
@@ -332,4 +332,4 @@ The availability of these metrics and the specific definition of each of these m
 
 After reading this document, you are able to locate the license usage dashboard and view usage metrics for each purchased product, for all production or development sandboxes, and for a specific sandbox. You can find more information about available metrics for your organization, based on the licensing your organization has purchased.
 
-To learn more about other features available in the Experience Platform UI, refer to the [Platform UI guide](../../landing/ui-guide.md).
+To learn more about other features available in the Experience Platform UI, refer to the [Experience Platform UI guide](../../landing/ui-guide.md).

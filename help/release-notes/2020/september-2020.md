@@ -74,7 +74,7 @@ Adobe Experience Platform enables you to drive coordinated, consistent, and rele
 
 | Feature | Description |
 | ------- | ----------- |
-| Profile viewer | The profile viewer, in the Platform UI, has been updated to be a dashboard with full customization. The user now has the option to do the following tasks: <ul><li>Update the selected standard and customized attributes in the basic information widget.</li><li>Create, edit, and remove custom widgets</li><li>Resize and rearrange widgets</li></ul>|
+| Profile viewer | The profile viewer, in the Experience Platform UI, has been updated to be a dashboard with full customization. The user now has the option to do the following tasks: <ul><li>Update the selected standard and customized attributes in the basic information widget.</li><li>Create, edit, and remove custom widgets</li><li>Resize and rearrange widgets</li></ul>|
 
 For more information on [!DNL Real-Time Customer Profile], including tutorials and best practices for working with [!DNL Profile] data, please read the [Real-Time Customer Profile overview](../../profile/home.md).
 

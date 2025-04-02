@@ -26,11 +26,11 @@ You must also have a Power BI account to follow this tutorial. To create an acco
 
 >[!NOTE]
 >
->In order for the Dashboards tab to appear in the left navigation of the Platform UI, and the Dashboard Inventory view to be visible, you must have access to any one of the Profile, Segmentaiton or Destination dashboards as part of your Platform license. 
+>In order for the Dashboards tab to appear in the left navigation of the Experience Platform UI, and the Dashboard Inventory view to be visible, you must have access to any one of the Profile, Segmentaiton or Destination dashboards as part of your Platform license. 
 
 ## Install the Power BI application integration
 
-Within the Platform UI, select **[!UICONTROL Dashboards]** in the left navigation to open the [!UICONTROL Dashboards] workspace. The [!UICONTROL Browse] tab displays a list of currently available dashboard views. To learn more about viewing available dashboards, see the [inventory documentation](../inventory.md). 
+Within the Experience Platform UI, select **[!UICONTROL Dashboards]** in the left navigation to open the [!UICONTROL Dashboards] workspace. The [!UICONTROL Browse] tab displays a list of currently available dashboard views. To learn more about viewing available dashboards, see the [inventory documentation](../inventory.md). 
 
 Next, select the **[!UICONTROL Integrations]** tab. The Power BI application integration page appears. From here, select **[!UICONTROL Install]** to begin the installation.
 
@@ -130,7 +130,7 @@ Custom widgets are created through the Widget Library. See the [Widget Library o
 
 >[!IMPORTANT]
 >
->Newly created custom widgets are **not** automatically synchronized between Adobe Experience Platform dashboards and the Power BI report templates. Any custom widgets created in the Platform UI have to be manually re-created inside the Power BI environment.
+>Newly created custom widgets are **not** automatically synchronized between Adobe Experience Platform dashboards and the Power BI report templates. Any custom widgets created in the Experience Platform UI have to be manually re-created inside the Power BI environment.
 
 ### Recreate your custom widget in the Power BI environment
 
@@ -142,7 +142,7 @@ To delete the dashboard, navigate to the dashboard inventory and select the del
 
 >[!NOTE]
 >
->Only the user who installed the Power BI dashboard can delete the integration from the Platform UI. 
+>Only the user who installed the Power BI dashboard can delete the integration from the Experience Platform UI. 
 
 ![Dashboards inventory screen browse tab displayed with Browse button and delete icon highlighted.](../images/power-bi/delete-power-bi-dashboard.png)
 
@@ -150,7 +150,7 @@ A confirmation popover appears. Select **[!UICONTROL Delete]** to confirm the pr
 
 >[!IMPORTANT]
 >
->Deleting the Power BI dashboard from the Platform UI does **not** delete the report templates available in your Power BI environment. If you want to completely delete the information held in the Power BI report templates, you need to log into your Power BI account and delete the report templates from that environment. Once deleted, a user can reinstall the Power BI dashboard by following the same installation instructions as outlined above.
+>Deleting the Power BI dashboard from the Experience Platform UI does **not** delete the report templates available in your Power BI environment. If you want to completely delete the information held in the Power BI report templates, you need to log into your Power BI account and delete the report templates from that environment. Once deleted, a user can reinstall the Power BI dashboard by following the same installation instructions as outlined above.
 
 ## Next steps
 

@@ -1,11 +1,11 @@
 ---
-title: Set up and Configure Customer Managed Keys with AWS using the Platform UI
+title: Set up and Configure Customer Managed Keys with AWS using the Experience Platform UI
 description: Learn how to set up your CMK app with your Amazon Resource Name (ARN) and send your encryption key ID to Adobe Experience Platform.
 exl-id: f0e38a60-d448-4975-977e-1367fca10515
 ---
-# Set up and Configure Customer Managed Keys with AWS using the Platform UI
+# Set up and Configure Customer Managed Keys with AWS using the Experience Platform UI
 
-Use this guide to enable Customer Managed Keys (CMK) for Platform instances hosted on AWS through the Platform UI. 
+Use this guide to enable Customer Managed Keys (CMK) for Platform instances hosted on AWS through the Experience Platform UI. 
 
 >[!IMPORTANT]
 >
@@ -35,9 +35,9 @@ To integrate your AWS key with Experience Platform, you must edit the JSON in th
 }
 ```
 
-In the example above, all resources (`"Resource": "*"`) within the same account (`Principal.AWS`) can access the key. This policy allows services in the account to perform encryption and decryption operations, restricted to the specified account. To grant your Platform single-tenant account access to this key, add new statements to the default AWS policy. You can obtain the required JSON policy from the Platform UI and apply it to your AWS KMS key to establish a secure connection with Adobe Experience Platform.
+In the example above, all resources (`"Resource": "*"`) within the same account (`Principal.AWS`) can access the key. This policy allows services in the account to perform encryption and decryption operations, restricted to the specified account. To grant your Platform single-tenant account access to this key, add new statements to the default AWS policy. You can obtain the required JSON policy from the Experience Platform UI and apply it to your AWS KMS key to establish a secure connection with Adobe Experience Platform.
 
-In the Platform UI, go to the **[!UICONTROL Administration]** section in the left navigation rail, and select **[!UICONTROL Encryption]**. In the [!UICONTROL Encryption Configuration] workspace, select **[!UICONTROL Configure]** in the [!UICONTROL Customer Managed Keys] card.
+In the Experience Platform UI, go to the **[!UICONTROL Administration]** section in the left navigation rail, and select **[!UICONTROL Encryption]**. In the [!UICONTROL Encryption Configuration] workspace, select **[!UICONTROL Configure]** in the [!UICONTROL Customer Managed Keys] card.
 
 ![The Platform Encryption Configuration workspace with Configure highlighted in the Customer Managed Keys card.](../../../images/governance-privacy-security/key-management-service/encryption-configuration.png)
 
@@ -179,7 +179,7 @@ Next, select **[!UICONTROL SAVE]** to submit the configuration name, the KMS key
 
 You are returned to the [!UICONTROL Encryption Configurations] workspace. The status of the encryption configuration is displayed on the bottom of the **[!UICONTROL Customer Managed Keys]** card. 
 
-![The Encryption Configurations workspace in the Platform UI with Processing highlighted on the Customer Managed Keys card.](../../../images/governance-privacy-security/key-management-service/configuration-status.png)
+![The Encryption Configurations workspace in the Experience Platform UI with Processing highlighted on the Customer Managed Keys card.](../../../images/governance-privacy-security/key-management-service/configuration-status.png)
 
 Once the key is validated, the key vault identifiers are added to the data lake and profile datastores for all sandboxes.
 
@@ -218,7 +218,7 @@ Alternatively, if your key is used across other services, you can remove access 
 
 ![The details section of the AWS key with Edit highlighted in the Key policy section.](../../../images/governance-privacy-security/key-management-service/edit-key-policy.png)
 
-The **[!DNL Edit key policy]** page appears. Highlight and delete the policy statement, copied form the Platform UI, to remove the permissions for the Customer Managed Keys app. Then, select **[!DNL Save changes]** to complete the process. 
+The **[!DNL Edit key policy]** page appears. Highlight and delete the policy statement, copied form the Experience Platform UI, to remove the permissions for the Customer Managed Keys app. Then, select **[!DNL Save changes]** to complete the process. 
 
 ![The Edit key policy workspace on AWS with the statement JSON object and Save changes highlighted.](../../../images/governance-privacy-security/key-management-service/delete-statement-and-save-changes.png)
 

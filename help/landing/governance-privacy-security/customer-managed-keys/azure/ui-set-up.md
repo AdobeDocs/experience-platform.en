@@ -1,11 +1,11 @@
 ---
-title: Set up and Configure Customer Managed Keys for Azure using the Platform UI
+title: Set up and Configure Customer Managed Keys for Azure using the Experience Platform UI
 description: Learn how to set up your CMK app with your Azure tenant and send your encryption key ID to Adobe Experience Platform.
 role: Developer
 feature: Privacy
 exl-id: 5f38997a-66f3-4f9d-9c2f-fb70266ec0a6
 ---
-# Set up and Configure Customer Managed Keys for Azure using the Platform UI
+# Set up and Configure Customer Managed Keys for Azure using the Experience Platform UI
 
 This document covers the Azure-specific instructions for enabling the Customer Managed Keys (CMK) feature in Platform using the UI. For AWS-specific instructions, refer to the [AWS setup guide](../aws/ui-set-up.md).
 
@@ -76,7 +76,7 @@ You can verify the application by comparing the [!UICONTROL Application ID] prov
 
 ![The [!UICONTROL Customer Managed Keys configuration] view with the [!UICONTROL Application ID] highlighted.](../../../images/governance-privacy-security/customer-managed-keys/application-id.png)
 
-All the details necessary to verify Azure tools are included in the Platform UI. This level of granularity is provided as many users wish to uze other Azure tools to enhance their ability to monitor and log these applications access to their key vault. Understanding these identifiers is critical for that purpose and to help Adobe services to access the key.
+All the details necessary to verify Azure tools are included in the Experience Platform UI. This level of granularity is provided as many users wish to uze other Azure tools to enhance their ability to monitor and log these applications access to their key vault. Understanding these identifiers is critical for that purpose and to help Adobe services to access the key.
 
 ## Enable the encryption key configuration on Experience Platform {#send-to-adobe}
 

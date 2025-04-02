@@ -51,7 +51,7 @@ For more information on [!DNL Dashboards], please see the [[!DNL Dashboards] ove
 
 | Feature | Description |
 | --- | --- |
-| Consolidated mapping experience | The new mapping interface in the Platform UI provides you with a consistent mapping experience to take advantage of intelligent mapping recommendations, manually configure mapping rules, and debug any errors that occur to your mapping sets. For more information, see the [[!DNL Data Prep] UI guide](../../data-prep/ui/mapping.md). |
+| Consolidated mapping experience | The new mapping interface in the Experience Platform UI provides you with a consistent mapping experience to take advantage of intelligent mapping recommendations, manually configure mapping rules, and debug any errors that occur to your mapping sets. For more information, see the [[!DNL Data Prep] UI guide](../../data-prep/ui/mapping.md). |
 
 For more information on [!DNL Data Prep], please see the [[!DNL Data Prep] overview](../../data-prep/home.md).
 
@@ -98,7 +98,7 @@ Adobe Experience Platform is built to enrich digital experience applications on 
 
 | Feature | Description |
 | --- | --- |
-| Sandboxes UI enhancements | The sandbox indicator is now integrated within the header for all Platform UI applications. The sandbox indicator displays the sandbox name, region, and type and also allows you to access a dropdown menu to switch between sandboxes. For more information, see the [sandbox UI guide](../../sandboxes/ui/user-guide.md). |
+| Sandboxes UI enhancements | The sandbox indicator is now integrated within the header for all Experience Platform UI applications. The sandbox indicator displays the sandbox name, region, and type and also allows you to access a dropdown menu to switch between sandboxes. For more information, see the [sandbox UI guide](../../sandboxes/ui/user-guide.md). |
 
 For more information on sandboxes, please see the [sandboxes overview](../../sandboxes/home.md).
 

@@ -1,6 +1,6 @@
 ---
 title: Union Schemas Overview
-description: This video provides a basic understanding of union schemas within Adobe Experience Platform and outlines how to explore a union schema using the Platform UI.
+description: This video provides a basic understanding of union schemas within Adobe Experience Platform and outlines how to explore a union schema using the Experience Platform UI.
 product: experience platform
 type: Documentation
 solution: Experience Platform

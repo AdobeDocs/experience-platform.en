@@ -33,7 +33,7 @@ Before you can bring your [!DNL SAP Commerce] data to Experience Platform, you m
 * [!DNL SAP] service key. The [!DNL SAP] service key allows you to access the [!DNL SAP Subscription Billing] API through Experience Platform. [!DNL SAP Commerce] requires the following:
   * Client ID
   * Client secret
-  * URL. The URL pattern is as follows: `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. This value will be used later to obtain values for `region` and `tokenEndpoint` when you [Create base connection](../../tutorials/api/create/ecommerce/sap-commerce.md#base-connection) using the API or when you [Connect your [!DNL SAP Commerce] account](../../tutorials/ui/create/ecommerce/sap-commerce.md#connect-account) through the Platform UI.
+  * URL. The URL pattern is as follows: `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. This value will be used later to obtain values for `region` and `tokenEndpoint` when you [Create base connection](../../tutorials/api/create/ecommerce/sap-commerce.md#base-connection) using the API or when you [Connect your [!DNL SAP Commerce] account](../../tutorials/ui/create/ecommerce/sap-commerce.md#connect-account) through the Experience Platform UI.
   
 +++Select to see an example of the service key
 

@@ -112,7 +112,7 @@ The following steps describe how to display a tabular view of a dataset through 
 - After logging into Experience Platform, select **[!UICONTROL Datasets]** in the left navigation of the UI to navigate to [!UICONTROL Datasets] dashboard.
 - The datasets [!UICONTROL Browse] tab opens. You can use the search bar to refine the available options. Select a dataset from the list displayed.
 
-![The Datasets dashboard in the Platform UI with the search bar and a dataset highlighted.](./images/troubleshooting/dataset-selection.png)
+![The Datasets dashboard in the Experience Platform UI with the search bar and a dataset highlighted.](./images/troubleshooting/dataset-selection.png)
 
 - The [!UICONTROL Datasets activity] screen appears. Select **[!UICONTROL Preview dataset]** to open a dialog of the XDM schema and tabular view of flattened data from the selected dataset. More details can be found in the [preview a dataset documentation](../catalog/datasets/user-guide.md#preview-a-dataset)
 
@@ -281,7 +281,7 @@ SELECT count(1) FROM myTableName
 ### Can I sample my data?
 
 +++Answer
-This feature is currently a work-in-progress. Details will be made available in [release notes](../release-notes/latest/latest.md) and through Platform UI dialogs once the feature is ready for release.
+This feature is currently a work-in-progress. Details will be made available in [release notes](../release-notes/latest/latest.md) and through Experience Platform UI dialogs once the feature is ready for release.
 +++
 
 ### What helper functions are supported by Query Service?
@@ -646,7 +646,7 @@ Backend infrastructure is constantly improved to optimize Compute Hour utilizati
 ### The "Create query" is stuck "Initializing connection..." when trying to connect to Query Service. How do I fix the issue?
 
 +++Answer
-If the "Create query" is stuck on "Initializing connection...", this is likely to be a connection or session issue. Refresh the browser if you are using the Platform UI and try again.
+If the "Create query" is stuck on "Initializing connection...", this is likely to be a connection or session issue. Refresh the browser if you are using the Experience Platform UI and try again.
 +++
 
 ## Dataset Samples

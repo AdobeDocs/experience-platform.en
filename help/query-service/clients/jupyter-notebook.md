@@ -11,7 +11,7 @@ This document covers the steps required to connect [!DNL Jupyter Notebook] with 
 
 This guide requires that you already have access to [!DNL Jupyter Notebook] and are familiar with its interface. To download [!DNL Jupyter Notebook] or for more information, see the [official [!DNL Jupyter Notebook] documentation](https://jupyter.org/).
 
-To acquire the necessary credentials for connecting [!DNL Jupyter Notebook] to Experience Platform, you must have access to the [!UICONTROL Queries] workspace in the Platform UI. Please contact your organization administrator if you do not currently have access to the [!UICONTROL Queries] workspace.
+To acquire the necessary credentials for connecting [!DNL Jupyter Notebook] to Experience Platform, you must have access to the [!UICONTROL Queries] workspace in the Experience Platform UI. Please contact your organization administrator if you do not currently have access to the [!UICONTROL Queries] workspace.
 
 >[!TIP]
 >
@@ -34,13 +34,13 @@ On the first line of the [!DNL Notebook] editor, enter the following value: `pip
 
 Next, import a [!DNL PostgreSQL] database adapter for [!DNL Python]. Enter the value: `import psycopg2`and select **[!DNL Run]**. There is no success message for this process. If there is no error message, continue to the next step. 
 
-You must now provide your Adobe Experience Platform credentials by entering the value: `conn = psycopg2.connect("{YOUR_CREDENTIALS}")`. Your connection credentials can be found in the [!UICONTROL Queries] section, under the [!UICONTROL Credentials] tab of the Platform UI. See the documentation on how to [find your organization credentials](../ui/credentials.md) for detailed instructions.
+You must now provide your Adobe Experience Platform credentials by entering the value: `conn = psycopg2.connect("{YOUR_CREDENTIALS}")`. Your connection credentials can be found in the [!UICONTROL Queries] section, under the [!UICONTROL Credentials] tab of the Experience Platform UI. See the documentation on how to [find your organization credentials](../ui/credentials.md) for detailed instructions.
 
 The use of non-expiring credentials is recommended when using third-party clients to save the effort of repeatedly entering your details. See the documentation for instructions on [how to generate and use non-expiring credentials](../ui/credentials.md#non-expiring-credentials).
 
 >[!IMPORTANT]
 >
->When copying credentials from the Platform UI, there is no need for additional formatting of the credentials. They can be given in one line, with a single space between the properties and values. The credentials are enclosed in quotation marks and **not** comma-separated.
+>When copying credentials from the Experience Platform UI, there is no need for additional formatting of the credentials. They can be given in one line, with a single space between the properties and values. The credentials are enclosed in quotation marks and **not** comma-separated.
 
 ```python
 conn = psycopg2.connect('''sslmode=require host=<YOUR_HOST_CREDENTIAL> port=80 dbname=prod:all user=<YOUR_ORGANIZATION_ID> password=<YOUR_PASSWORD>''')"

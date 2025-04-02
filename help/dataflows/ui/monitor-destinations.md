@@ -24,7 +24,7 @@ This guide requires a working understanding of the following components of Adobe
 
 ## Monitor dataflows in the Destinations workspace {#monitor-dataflows-in-the-destinations-workspace}
 
-In the **[!UICONTROL Destinations]** workspace within the Platform UI, navigate to the **[!UICONTROL Browse]** tab and select the name of a destination that you want to view.
+In the **[!UICONTROL Destinations]** workspace within the Experience Platform UI, navigate to the **[!UICONTROL Browse]** tab and select the name of a destination that you want to view.
 
 ![Select destination view with a destination connection highlighted](../assets/ui/monitor-destinations/select-destination.png)
 

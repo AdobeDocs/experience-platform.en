@@ -41,7 +41,7 @@ If you already have a [!DNL Braze] connection, you may skip the remainder of thi
 >
 >You must create an Experience Data Model (XDM) schema if this is your first time creating a [!DNL Braze Currents] connection. If you have already created a schema for [!DNL Braze Currents], then you may skip this step and proceed to [connecting your account to Experience Platform](#connect).
 
-In the Platform UI, use the left navigation and then select **[!UICONTROL Schemas]** to access the [!UICONTROL Schemas] workspace. Next, select **[!UICONTROL Create schema]**, and then select **[!UICONTROL Experience Event]**. To proceed, select **[!UICONTROL Next]**.
+In the Experience Platform UI, use the left navigation and then select **[!UICONTROL Schemas]** to access the [!UICONTROL Schemas] workspace. Next, select **[!UICONTROL Create schema]**, and then select **[!UICONTROL Experience Event]**. To proceed, select **[!UICONTROL Next]**.
 
 ![A completed schema.](../../../../images/tutorials/create/braze/schema.png)
 
@@ -51,7 +51,7 @@ For more information on schemas, read the guide to [creating schemas in the UI](
 
 ## Connect your [!DNL Braze] account to Experience Platform {#connect}
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
 Under the *Marketing Automation* category, select **[!UICONTROL Braze Currents]**, and then select **[!UICONTROL Add data]**.
 

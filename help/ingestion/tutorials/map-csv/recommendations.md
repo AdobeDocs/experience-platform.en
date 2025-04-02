@@ -9,7 +9,7 @@ exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
 >
 >For information on generally available CSV mapping capabilities in Platform, see the document on [mapping a CSV file to an existing schema](./existing-schema.md).
 
-In order to ingest CSV data into [!DNL Adobe Experience Platform], the data must be mapped to an [!DNL Experience Data Model] (XDM) schema. You can choose to map to [an existing schema](./existing-schema.md), but if you do not know exactly which schema to use or how it should be structured, you can instead use dynamic recommendations based on machine-learning (ML) models within the Platform UI.
+In order to ingest CSV data into [!DNL Adobe Experience Platform], the data must be mapped to an [!DNL Experience Data Model] (XDM) schema. You can choose to map to [an existing schema](./existing-schema.md), but if you do not know exactly which schema to use or how it should be structured, you can instead use dynamic recommendations based on machine-learning (ML) models within the Experience Platform UI.
 
 ## Getting started
 
@@ -24,7 +24,7 @@ This tutorial requires a working understanding of the following components of [!
 
 In the Experience Platform UI, select **[!UICONTROL Sources]** in the left navigation. On the **[!UICONTROL Catalog]** view, navigate to the **[!UICONTROL Local system]** category. Under **[!UICONTROL Local file upload]**, select **[!UICONTROL Add data]**.
 
-![The [!UICONTROL Sources] catalog in the Platform UI, with [!UICONTROL Add data] under [!UICONTROL Local file upload] being selected.](../../images/tutorials/map-csv-recommendations/local-file-upload.png)
+![The [!UICONTROL Sources] catalog in the Experience Platform UI, with [!UICONTROL Add data] under [!UICONTROL Local file upload] being selected.](../../images/tutorials/map-csv-recommendations/local-file-upload.png)
 
 The **[!UICONTROL Map CSV XDM schema]** workflow appears, starting on the **[!UICONTROL Dataflow detail]** step.
 

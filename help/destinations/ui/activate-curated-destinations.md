@@ -101,7 +101,7 @@ When you configure the **[!DNL LiveRamp - Distribution]** destination, you must 
 ><br>
 >Example: `LiveRamp - Roku`.
 
-![Platform UI screenshot showing multiple LiveRamp destinations.](../assets/ui/activate-curated-destinations-liveramp/liveramp-naming.png)
+![Experience Platform UI screenshot showing multiple LiveRamp destinations.](../assets/ui/activate-curated-destinations-liveramp/liveramp-naming.png)
 
 ## Exported data / Validate data export {#exported-data}
 

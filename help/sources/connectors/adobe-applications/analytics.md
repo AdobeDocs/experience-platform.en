@@ -33,7 +33,7 @@ To learn more about XDM, please see the [XDM System overview](../../../xdm/home.
 >
 >Data Prep transformations may add latency to the overall dataflow. The additional latency added varies based on the complexity of the transformation logic. 
 
-When a source connection is established for bringing [!DNL Analytics] data into Experience Platform using the Platform user interface, data fields are automatically mapped and ingested into [!DNL Real-Time Customer Profile] within minutes. For instructions on creating a source connection with [!DNL Analytics] using the Platform UI, see the [Analytics source connector tutorial](../../tutorials/ui/create/adobe-applications/analytics.md).
+When a source connection is established for bringing [!DNL Analytics] data into Experience Platform using the Platform user interface, data fields are automatically mapped and ingested into [!DNL Real-Time Customer Profile] within minutes. For instructions on creating a source connection with [!DNL Analytics] using the Experience Platform UI, see the [Analytics source connector tutorial](../../tutorials/ui/create/adobe-applications/analytics.md).
 
 For detailed information on the field mapping that occurs between [!DNL Analytics] and Experience Platform, see the [Adobe Analytics field mapping](./mapping/analytics.md) guide.
 

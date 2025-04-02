@@ -92,7 +92,7 @@ Refer to the table below for information about the destination export type and f
 > 
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-![Yahoo DataX destination card in Platform UI](/help/destinations/assets/catalog/advertising/yahoo-datax/catalog.png)
+![Yahoo DataX destination card in Experience Platform UI](/help/destinations/assets/catalog/advertising/yahoo-datax/catalog.png)
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 

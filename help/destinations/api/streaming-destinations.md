@@ -47,13 +47,13 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required and optional headers {#gather-values}
 
-In order to make calls to Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+In order to make calls to Experience Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
 *   Authorization: Bearer `{ACCESS_TOKEN}`
 *   x-api-key: `{API_KEY}`
 *   x-gw-ims-org-id: `{ORG_ID}`
 
-Resources in Experience Platform can be isolated to specific virtual sandboxes. In requests to Platform APIs, you can specify the name and ID of the sandbox that the operation will take place in. These are optional parameters.
+Resources in Experience Platform can be isolated to specific virtual sandboxes. In requests to Experience Platform APIs, you can specify the name and ID of the sandbox that the operation will take place in. These are optional parameters.
 
 *   x-sandbox-name: `{SANDBOX_NAME}`
 

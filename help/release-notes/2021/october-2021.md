@@ -21,7 +21,7 @@ The user interface has been updated with the following changes:
 | Toggle left navigation | Use the improved navigation toggle at the top of the application header to show or hide the menu displaying your Experience Platform capabilities. The system remembers your last selection and shows you only the capabilities you have access to. |
 | Access visibility | The left navigation bar shows only the features that you are able to access. In previous versions of Adobe Experience Platform, unavailable items were visible, even if you were not able to access them. |
 
-See the [Platform UI Guide](../../landing/ui-guide.md) to learn more.
+See the [Experience Platform UI Guide](../../landing/ui-guide.md) to learn more.
 
 ## Updates to existing features
 

@@ -14,7 +14,7 @@ Use this step-by-step tutorial to learn how to locate, access, and download data
 
 This tutorial requires a working understanding on how to create and populate a dataset. See the [dataset creation tutorial](../../catalog/datasets/create.md) for more information.
 
-The following sections provide additional information that you need to know to successfully make calls to the Platform APIs.
+The following sections provide additional information that you need to know to successfully make calls to the Experience Platform APIs.
 
 ### Reading sample API calls {#reading-sample-api-calls}
 

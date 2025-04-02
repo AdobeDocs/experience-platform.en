@@ -77,7 +77,7 @@ When policy violations occur, the resulting messages that appear in the UI provi
 
 ## Policy enforcement messages {#enforcement}
 
-The sections below outline the different policy enforcement messages that appear in the Platform UI:
+The sections below outline the different policy enforcement messages that appear in the Experience Platform UI:
 
 * [Data usage policy violation](#data-usage-violation)
 * [Consent policy evaluation](#consent-policy-evaluation)
@@ -140,7 +140,7 @@ Once you reach the **[!UICONTROL Review]** step when [activating a destination](
 
 A policy check dialog appears, showing you a preview of how your consent policies affect the consented audience of the audiences to be activated.
 
-![Consent policy check dialog in the Platform UI](../images/enforcement/consent-policy-check.png)
+![Consent policy check dialog in the Experience Platform UI](../images/enforcement/consent-policy-check.png)
 
 The dialog shows the consented audience for one audience at a time. To view the policy evaluation for a different audience, use the dropdown menu above the diagram to select one from the list.
 

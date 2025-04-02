@@ -12,7 +12,7 @@ Within the Adobe Experience Platform user interface (UI), you can view and inter
 >
 >Any updates made to the dashboards are per organization and by sandbox.
 
-This guide provides step-by-step instructions for customizing how dashboard data is displayed within the [!UICONTROL Profiles], [!UICONTROL Segments], and [!UICONTROL Destinations] dashboards in the Platform UI.
+This guide provides step-by-step instructions for customizing how dashboard data is displayed within the [!UICONTROL Profiles], [!UICONTROL Segments], and [!UICONTROL Destinations] dashboards in the Experience Platform UI.
 
 ## Getting started
 

@@ -21,7 +21,7 @@ Before continuing, please review the [getting started guide](../../getting-start
 Before you can use the `/template/render` endpoint, make sure you meet the following conditions:
 
 * You have an existing file-based destination created through the Destination SDK and you can see it in your [destinations catalog](../../../ui/destinations-workspace.md).
-* To successfully make the API request, you need the destination instance ID corresponding to the destination instance that you will be testing. Get the destination instance ID that you should use in the API call, from the URL, when browsing a connection with your destination in the Platform UI.
+* To successfully make the API request, you need the destination instance ID corresponding to the destination instance that you will be testing. Get the destination instance ID that you should use in the API call, from the URL, when browsing a connection with your destination in the Experience Platform UI.
 
    ![UI image showing how to get destination instance ID from the URL.](../../assets/testing-api/get-destination-instance-id.png)
 

@@ -49,17 +49,17 @@ For more information, read the [[!DNL Pendo] guide on webhooks](https://support.
 
 You must also ensure that you first create a Platform schema to use for your source. See the tutorial on [creating a Platform schema](../../../../../xdm/schema/composition.md) for comprehensive steps on how to create a schema.
 
-![Platform UI showing an example schema for Pendo.](../../../../images/tutorials/create/analytics-pendo-webhook/schema.png)
+![Experience Platform UI showing an example schema for Pendo.](../../../../images/tutorials/create/analytics-pendo-webhook/schema.png)
 
 ## Connect your [!DNL Pendo] account {#connect-account}
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace and see a catalog of sources available in Experience Platform.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace and see a catalog of sources available in Experience Platform.
 
 Use the *[!UICONTROL Categories]* menu to filter sources by category. Alternatively, enter a source name in the search bar to find a specific source from the catalog.
 
 Go to the [!UICONTROL Analytics] category to see the [!DNL Pendo] source card. To begin, select **[!UICONTROL Add data]**.
 
-![The Platform UI source catalog with the Pendo card.](../../../../images/tutorials/create/analytics-pendo-webhook/catalog.png)
+![The Experience Platform UI source catalog with the Pendo card.](../../../../images/tutorials/create/analytics-pendo-webhook/catalog.png)
 
 ## Select data {#select-data}
 
@@ -142,7 +142,7 @@ Once your webhook is created, navigate to the settings page of your [!DNL Pendo]
 
 ## Next steps {#next-steps}
 
-By following this tutorial you have successfully configured a streaming dataflow to bring your [!DNL Pendo] data to Experience Platform. To monitor the data that is being ingested, refer to the guide on [monitoring streaming dataflows using Platform UI](../../monitor-streaming.md).
+By following this tutorial you have successfully configured a streaming dataflow to bring your [!DNL Pendo] data to Experience Platform. To monitor the data that is being ingested, refer to the guide on [monitoring streaming dataflows using Experience Platform UI](../../monitor-streaming.md).
 
 ## Additional resources {#additional-resources}
 
@@ -156,15 +156,15 @@ To validate that you have correctly set up the source and [!DNL Pendo] messages 
 
 ![Pendo UI screenshot showing chat history](../../../../images/tutorials/create/analytics-pendo-webhook/pendo-events.png)
 
-* In the Platform UI, select **[!UICONTROL View Dataflows]** beside the [!DNL Pendo] card menu on the sources catalog. Next, select **[!UICONTROL Preview dataset]** to verify the data that was ingested for the webhooks that you have configured within [!DNL Pendo].
+* In the Experience Platform UI, select **[!UICONTROL View Dataflows]** beside the [!DNL Pendo] card menu on the sources catalog. Next, select **[!UICONTROL Preview dataset]** to verify the data that was ingested for the webhooks that you have configured within [!DNL Pendo].
 
-![Platform UI screenshot showing ingested events](../../../../images/tutorials/create/analytics-pendo-webhook/platform-dataset.png)
+![Experience Platform UI screenshot showing ingested events](../../../../images/tutorials/create/analytics-pendo-webhook/platform-dataset.png)
 
 ### Errors and troubleshooting {#errors-and-troubleshooting}
 
 When checking a dataflow run, you might encounter the following error message: `The message can't be validated ... uniqueID:expected minLength:1, actual 0].`
 
-![Platform UI screenshot showing error.](../../../../images/tutorials/create/analytics-pendo-webhook/error.png)
+![Experience Platform UI screenshot showing error.](../../../../images/tutorials/create/analytics-pendo-webhook/error.png)
 
 To fix this error, you must verify that the *uniqueID* mapping has been set up. For additional guidance, refer to the [Mmpping](#mapping) section.
 

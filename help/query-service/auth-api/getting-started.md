@@ -35,7 +35,7 @@ The following functionalities are available with the **[!UICONTROL Manage Allowe
 
 ### Gather values for required headers {#gather-values-for-required-headers}
 
-To make calls to the Data Distiller Authorization API, you must complete the [Platform API authentication tutorial](../../landing/api-authentication.md), which provides values for required headers in API calls. Include the following headers in each request:
+To make calls to the Data Distiller Authorization API, you must complete the [Experience Platform API authentication tutorial](../../landing/api-authentication.md), which provides values for required headers in API calls. Include the following headers in each request:
 
 - **Authorization**: `Bearer {ACCESS_TOKEN}`
 - **x-api-key**: `{API_KEY}`

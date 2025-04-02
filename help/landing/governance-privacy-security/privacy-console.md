@@ -9,7 +9,7 @@ The [!UICONTROL Privacy Console] tab the Adobe Experience Platform UI provides a
 
 To access the dashboard, select **[!UICONTROL Privacy Console]** in the left navigation.
 
-![Image showing [!UICONTROL Privacy Console] being selected in the left navigation within the Platform UI](../images/governance-privacy-security/privacy-console/left-nav.png)
+![Image showing [!UICONTROL Privacy Console] being selected in the left navigation within the Experience Platform UI](../images/governance-privacy-security/privacy-console/left-nav.png)
 
 From here, you can review the available [monitoring widgets](#widgets) provided by the console, or you can explore one of several [use case guides](#use-case-guides) on Platform's privacy capabilities.
 
@@ -17,7 +17,7 @@ From here, you can review the available [monitoring widgets](#widgets) provided 
 
 [!UICONTROL Privacy Console] provides several widgets to help monitor your privacy operations.
 
-![Image showing [!UICONTROL Privacy Console] being selected in the left navigation within the Platform UI](../images/governance-privacy-security/privacy-console/widgets.png)
+![Image showing [!UICONTROL Privacy Console] being selected in the left navigation within the Experience Platform UI](../images/governance-privacy-security/privacy-console/widgets.png)
 
 >[!NOTE]
 >
@@ -39,7 +39,7 @@ The function of each widget is explained below:
 
 The console provides several in-product guides that introduce you to common privacy workflows in Platform, including concise instructions on how to set up a basic implementation.
 
-![Image showing [!UICONTROL Privacy Console] being selected in the left navigation within the Platform UI](../images/governance-privacy-security/privacy-console/use-case-guide.png)
+![Image showing [!UICONTROL Privacy Console] being selected in the left navigation within the Experience Platform UI](../images/governance-privacy-security/privacy-console/use-case-guide.png)
 
 ## Next steps
 

@@ -40,7 +40,7 @@ When [creating](../../authoring-api/destination-server/create-destination-server
 
 ## Hard-coded versus templatized fields {#templatized-fields}
 
-When creating a destination server through Destination SDK, you can define configuration parameter values either by hard-coding them into the configuration, or by using templatized fields. Templatized fields allow you to read user-provided values from the Platform UI.
+When creating a destination server through Destination SDK, you can define configuration parameter values either by hard-coding them into the configuration, or by using templatized fields. Templatized fields allow you to read user-provided values from the Experience Platform UI.
 
 Destination server parameters have two configurable fields. These options dictate whether you are using hard-coded or templatized values.
 
@@ -57,7 +57,7 @@ Both hard-coded and templatized fields have their own uses in Destination SDK, d
 
 **Connecting to your destination without user input**
 
-When users [connect to your destination](../../../ui/connect-destination.md) in the Platform UI, you might want to handle the destination connection process without their input.
+When users [connect to your destination](../../../ui/connect-destination.md) in the Experience Platform UI, you might want to handle the destination connection process without their input.
 
 To do this, you can hard-code the destination platform connection parameters in the server spec. When you use hard-coded parameter values in your destination server configuration, the connection between Adobe Experience Platform and your destination platform is handled without any input from the user.
 
@@ -83,7 +83,7 @@ As a result, when users go through the [destination connection tutorial](../../.
 
 **Connecting to your destination with user input**
 
-When the connection between Platform and your destination should be established following a specific user input in the Platform UI, such as selecting an API endpoint or providing a field value, you can use templatized fields in the server spec to read the user input and connect to your destination platform.
+When the connection between Platform and your destination should be established following a specific user input in the Experience Platform UI, such as selecting an API endpoint or providing a field value, you can use templatized fields in the server spec to read the user input and connect to your destination platform.
 
 In the example below, a partner creates a [real-time (streaming)](#streaming-example) integration and the `url.value` field uses the templatized parameter `{{customerData.region}}` to personalize part of the API endpoint based on user input.
 
@@ -100,7 +100,7 @@ In the example below, a partner creates a [real-time (streaming)](#streaming-exa
 }
 ```
 
-To give users the option of selecting a value from the Platform UI, the `region` parameter must also be defined in the [destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md) as a customer data field, as shown below:
+To give users the option of selecting a value from the Experience Platform UI, the `region` parameter must also be defined in the [destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md) as a customer data field, as shown below:
 
 ```json
 "customerDataFields":[
@@ -147,7 +147,7 @@ The sample below shows an example of a destination server configuration for a re
 |---|---|---|
 |`name` | String | *Required.* Represents a friendly name of your server, visible only to Adobe. This name is not visible to partners or customers. Example: `Moviestar destination server`. |
 |`destinationServerType` | String |*Required.* Set this to `URL_BASED` for streaming destinations.|
-|`templatingStrategy` | String | *Required.* <ul><li>Use `PEBBLE_V1` if you are using a templatized field instead of a hard-coded value in the `value` field. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items`, where users must select the endpoint region from the Platform UI. </li><li> Use `NONE` if no temmplatized transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items` </li></ul>  |
+|`templatingStrategy` | String | *Required.* <ul><li>Use `PEBBLE_V1` if you are using a templatized field instead of a hard-coded value in the `value` field. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items`, where users must select the endpoint region from the Experience Platform UI. </li><li> Use `NONE` if no temmplatized transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items` </li></ul>  |
 |`value` | String | *Required.* Fill in the address of the API endpoint that Experience Platform should connect to. |
 
 {style="table-layout:auto"}

@@ -227,9 +227,9 @@ See the [appendix](#source-spec) for an example of a fully-populated source spec
 | `sourceSpec.attributes.uiAttributes` | Displays information on the source specific to the UI. |
 | `sourceSpec.attributes.uiAttributes.isBeta` | A boolean attribute that indicates whether the source requires more feedback from customers to add to its functionality. | <ul><li>`true`</li><li>`false`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.category` | Defines the category of the source. | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
-| `sourceSpec.attributes.uiAttributes.icon` | Defines the icon used for the rendering of the source in the Platform UI. | `mailchimp-icon.svg` |
+| `sourceSpec.attributes.uiAttributes.icon` | Defines the icon used for the rendering of the source in the Experience Platform UI. | `mailchimp-icon.svg` |
 | `sourceSpec.attributes.uiAttributes.description` | Displays a brief description of the source. |
-| `sourceSpec.attributes.uiAttributes.label` | Displays the label to be used for the rendering of the source in the Platform UI. |
+| `sourceSpec.attributes.uiAttributes.label` | Displays the label to be used for the rendering of the source in the Experience Platform UI. |
 | `sourceSpec.attributes.spec.properties.urlParams`| Contains information on the URL resource path, method, and supported query parameters. |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.path` | Defines the resource path from where to fetch the data from. | `/3.0/reports/${campaignId}/email-activity` |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.method` | Defines the HTTP method to be used to make the request to the resource to fetch data. | `GET`, `POST` |

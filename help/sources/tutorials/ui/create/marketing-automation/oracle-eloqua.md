@@ -1,9 +1,9 @@
 ---
-title: Create an Oracle Eloqua source connection using Platform UI
-description: Learn how to connect Adobe Experience Platform to Oracle Eloqua using Platform UI.
+title: Create an Oracle Eloqua source connection using Experience Platform UI
+description: Learn how to connect Adobe Experience Platform to Oracle Eloqua using Experience Platform UI.
 exl-id: c4431d85-5948-4122-9a99-dbacdde5a09f
 ---
-# Create an [!DNL Oracle Eloqua] source connection using Platform UI
+# Create an [!DNL Oracle Eloqua] source connection using Experience Platform UI
 
 >[!WARNING]
 >
@@ -36,7 +36,7 @@ Once you have gathered your required credentials, you can follow the steps below
 
 ## Connect your [!DNL Oracle Eloqua] account
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 

@@ -3,12 +3,12 @@ keywords: Experience Platform;home;popular topics;configure dataflow;advertising
 solution: Experience Platform
 title: Create a Dataflow Using an Advertising Source in the UI
 type: Tutorial
-description: A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps on how to create a dataflow for an advertising source using Platform UI.
+description: A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps on how to create a dataflow for an advertising source using Experience Platform UI.
 exl-id: 8dd1d809-e812-4a13-8831-189726b2430e
 ---
 # Create a dataflow using an advertising source in the UI
 
-A dataflow is a scheduled task that retrieves and ingests data from a source to a dataset in Adobe Experience Platform. This tutorial provides steps on how to create a dataflow for an advertising source using the Platform UI.
+A dataflow is a scheduled task that retrieves and ingests data from a source to a dataset in Adobe Experience Platform. This tutorial provides steps on how to create a dataflow for an advertising source using the Experience Platform UI.
 
 >[!NOTE]
 >
@@ -141,6 +141,6 @@ By following this tutorial, you have successfully created a dataflow to bring da
 
 >[!WARNING]
 >
-> The Platform UI shown in the following video is out-of-date. Please refer to the documentation above for the latest UI screenshots and functionality.
+> The Experience Platform UI shown in the following video is out-of-date. Please refer to the documentation above for the latest UI screenshots and functionality.
 >
 >[!VIDEO](https://video.tv.adobe.com/v/29711?quality=12&learn=on)

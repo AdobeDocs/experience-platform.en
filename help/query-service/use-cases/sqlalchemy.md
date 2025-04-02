@@ -11,11 +11,11 @@ Learn how to use SQLAlchemy for greater flexibility in the management of your Ad
 
 ## Getting started
 
-To acquire the necessary credentials for connecting [!DNL SQLAlchemy] to Experience Platform, you must have access to the Queries workspace in the Platform UI. Please contact your organization administrator if you do not currently have access to the Queries workspace. 
+To acquire the necessary credentials for connecting [!DNL SQLAlchemy] to Experience Platform, you must have access to the Queries workspace in the Experience Platform UI. Please contact your organization administrator if you do not currently have access to the Queries workspace. 
 
 ## [!DNL Query Service] credentials {#credentials}
 
-To find your credentials, log in to the Platform UI and select **[!UICONTROL Queries]** from the left navigation, followed by **[!UICONTROL Credentials]**. For complete directions on how to find your login credentials, please read the [credentials guide](../ui/credentials.md).
+To find your credentials, log in to the Experience Platform UI and select **[!UICONTROL Queries]** from the left navigation, followed by **[!UICONTROL Credentials]**. For complete directions on how to find your login credentials, please read the [credentials guide](../ui/credentials.md).
 
 ![The Credential tab with expiring credentials for Query Service highlighted.](../images/use-cases/credentials.png)
 

@@ -40,7 +40,7 @@ For more information about authentication for [!DNL Salesforce Marketing Cloud],
 >
 >Custom object ingestion is currently not supported by the [!DNL Salesforce Marketing Cloud] source integration.
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] displays a variety of sources supported by Experience Platform.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] displays a variety of sources supported by Experience Platform.
 
 You can select the appropriate category from the list of categories. You can also use the search bar to filter for a specific source.
 

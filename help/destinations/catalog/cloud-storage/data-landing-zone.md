@@ -91,7 +91,7 @@ After selecting your connection method, you must provide a **display name** and 
 
 ### Retrieve the credentials for your [!DNL Data Landing Zone] {#retrieve-dlz-credentials}
 
-You must use the Platform APIs to retrieve your [!DNL Data Landing Zone] credentials. The API call to retrieve your credentials is described below. For information about getting the required values for your headers, refer the [Getting started with Adobe Experience Platform APIs](/help/landing/api-guide.md) guide.
+You must use the Experience Platform APIs to retrieve your [!DNL Data Landing Zone] credentials. The API call to retrieve your credentials is described below. For information about getting the required values for your headers, refer the [Getting started with Adobe Experience Platform APIs](/help/landing/api-guide.md) guide.
 
 **API format**
 
@@ -212,7 +212,7 @@ Perform the operations below to get credentials to your [!DNL Data Landing Zone]
 
 ### Retrieve the credentials for your [!DNL Data Landing Zone] {#retrieve-dlz-credentials-aws}
 
-You must use the Platform APIs to retrieve your [!DNL Data Landing Zone] credentials. The API call to retrieve your credentials is described below. For information about getting the required values for your headers, refer the [Getting started with Adobe Experience Platform APIs](/help/landing/api-guide.md) guide.
+You must use the Experience Platform APIs to retrieve your [!DNL Data Landing Zone] credentials. The API call to retrieve your credentials is described below. For information about getting the required values for your headers, refer the [Getting started with Adobe Experience Platform APIs](/help/landing/api-guide.md) guide.
 
 **API format**
 

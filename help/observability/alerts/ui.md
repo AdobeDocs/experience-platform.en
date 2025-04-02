@@ -119,4 +119,4 @@ Select a listed alert and more details appear in the right rail, including a sho
 
 ## Next steps
 
-This document provided an overview of how to view and manage alerts in the Platform UI. See the overview on [Observability Insights](../home.md) for more information on the service's capabilities.
+This document provided an overview of how to view and manage alerts in the Experience Platform UI. See the overview on [Observability Insights](../home.md) for more information on the service's capabilities.

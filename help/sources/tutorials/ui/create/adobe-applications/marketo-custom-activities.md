@@ -85,7 +85,7 @@ The last step in preparing your schema is to add individual fields inside the fi
 
 With your schema setup complete, you can now proceed to create a dataflow for your custom activity data.
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search bar.
 
@@ -163,7 +163,7 @@ SELECT * FROM $datasetName WHERE eventType IN ('aepCustomActivityDemo1', 'aepCus
 
 The image below shows an example SQL statement in the [Query Editor](../../../../../query-service/ui/user-guide.md) that filters for custom activity data.
 
-![Platform UI displaying a query example for custom activities.](../../../../images/tutorials/create/marketo-custom-activities/queries.png)
+![Experience Platform UI displaying a query example for custom activities.](../../../../images/tutorials/create/marketo-custom-activities/queries.png)
 
 ## Next steps
 

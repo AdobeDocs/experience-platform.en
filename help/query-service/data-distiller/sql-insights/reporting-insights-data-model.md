@@ -13,7 +13,7 @@ The Real-Time CDP data model from Adobe Experience Platform provides insights on
 
 ## Prerequisites
 
-This tutorial uses user-defined dashboards to visualize data from your custom data model within the Platform UI. Please see the [user-defined dashboards documentation](../../../dashboards/standard-dashboards.md) to learn more about this feature.
+This tutorial uses user-defined dashboards to visualize data from your custom data model within the Experience Platform UI. Please see the [user-defined dashboards documentation](../../../dashboards/standard-dashboards.md) to learn more about this feature.
 
 ## Getting started
 

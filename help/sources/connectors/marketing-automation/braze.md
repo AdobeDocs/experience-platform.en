@@ -36,7 +36,7 @@ To successfully submit your [!DNL Braze Currents] data to Experience Platform, y
 | Dataflow ID | The dataflow ID associated with your Experience Platform source. |
 | Streaming Endpoint | The streaming endpoint associated with your Experience Platform source. **Note**: [!DNL Braze] automatically converts this to the batch streaming endpoint. |
 
-For information on how to retrieve these values, read the guide on [getting started with Platform APIs](../../../landing/api-authentication.md). For information on using the [!DNL Braze] dashboard, read the [!DNL Braze] guide on how to [Navigate to Currents](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
+For information on how to retrieve these values, read the guide on [getting started with Experience Platform APIs](../../../landing/api-authentication.md). For information on using the [!DNL Braze] dashboard, read the [!DNL Braze] guide on how to [Navigate to Currents](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
 
 ## Next steps
 

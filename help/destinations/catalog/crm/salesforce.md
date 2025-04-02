@@ -156,7 +156,7 @@ To authenticate to the destination, fill in the required fields below and select
 | **[!UICONTROL Client ID]** | Your [!DNL Salesforce] connected app `Consumer Key`. |
 | **[!UICONTROL Client Secret]** | Your [!DNL Salesforce] connected app `Consumer Secret`. |
 
-![Platform UI screenshot showing how to authenticate.](../../assets/catalog/crm/salesforce/authenticate-destination.png)
+![Experience Platform UI screenshot showing how to authenticate.](../../assets/catalog/crm/salesforce/authenticate-destination.png)
 
 If the details provided are valid, the UI displays a **[!UICONTROL Connected]** status with a green check mark, you can then proceed to the next step.
 
@@ -169,7 +169,7 @@ To configure details for the destination, fill in the required and optional fiel
     * Select **[!UICONTROL Contact]** if the identities you are looking to export or update are of type *Contact*.
     * Select **[!UICONTROL Lead]** if the identities you are looking to export or update are of type *Lead*.
 
-![Platform UI screenshot showing the destination details.](../../assets/catalog/crm/salesforce/destination-details.png)
+![Experience Platform UI screenshot showing the destination details.](../../assets/catalog/crm/salesforce/destination-details.png)
 
 ### Enable alerts {#enable-alerts}
 
@@ -197,7 +197,7 @@ Attributes specified in the **[!UICONTROL Source field]** do not follow any such
 To correctly map your XDM fields to the [!DNL (API) Salesforce CRM] destination fields, follow these steps:
 
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**, you will see a new mapping row on the screen.
-![Platform UI screenshot example for Add new mapping.](../../assets/catalog/crm/salesforce/add-new-mapping.png)
+![Experience Platform UI screenshot example for Add new mapping.](../../assets/catalog/crm/salesforce/add-new-mapping.png)
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** category and select the XDM attribute or choose the **[!UICONTROL Select identity namespace]** and select an identity.
 1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** and select an identity or choose **[!UICONTROL Select custom attributes]** category and select an attribute or define one using the **[!UICONTROL Attribute name]** field as needed. Refer to the [[!DNL Salesforce CRM] documentation](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&type=5) for guidance on supported attributes.
     * Repeat these steps to add the following mappings between your XDM profile schema and [!DNL (API) Salesforce CRM]:
@@ -216,7 +216,7 @@ To correctly map your XDM fields to the [!DNL (API) Salesforce CRM] destination 
        |`xdm: personalEmail.address`|`Attribute: Email`| The contact's email address. |
 
     * An example using these mappings is shown below:
-    ![Platform UI screenshot example showing Target mappings.](../../assets/catalog/crm/salesforce/mappings-contacts.png)
+    ![Experience Platform UI screenshot example showing Target mappings.](../../assets/catalog/crm/salesforce/mappings-contacts.png)
 
     **Working with Leads**
 
@@ -232,7 +232,7 @@ To correctly map your XDM fields to the [!DNL (API) Salesforce CRM] destination 
        |`xdm: personalEmail.address`|`Attribute: Email`| The lead's email address. |
 
     * An example using these mappings is shown below:
-    ![Platform UI screenshot example showing Target mappings.](../../assets/catalog/crm/salesforce/mappings-leads.png)    
+    ![Experience Platform UI screenshot example showing Target mappings.](../../assets/catalog/crm/salesforce/mappings-leads.png)    
 
 When you have finished providing the mappings for your destination connection, select **[!UICONTROL Next]**.
 
@@ -248,7 +248,7 @@ An example custom field from [!DNL Salesforce] is shown below:
 ![[!DNL Salesforce] UI screenshot showing custom field.](../../assets/catalog/crm/salesforce/salesforce-custom-field.png)
 
 An example indicating the location of the [!DNL Salesforce CRM] **[!UICONTROL Mapping ID]** is shown below:
-![Platform UI screenshot example showing Schedule audience export.](../../assets/catalog/crm/salesforce/schedule-segment-export.png)
+![Experience Platform UI screenshot example showing Schedule audience export.](../../assets/catalog/crm/salesforce/schedule-segment-export.png)
 
 As shown above the [!DNL Salesforce] **[!UICONTROL Field Name]** exactly matches the value specified within [!DNL Salesforce CRM] **[!UICONTROL Mapping ID]**.
 
@@ -266,16 +266,16 @@ Repeat this section for each activated Platform segment.
 To validate that you have correctly set up the destination, follow the steps below:
 
 1. Select **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** to navigate to the list of destinations.
-![Platform UI screenshot showing Browse Destinations.](../../assets/catalog/crm/salesforce/browse-destinations.png)
+![Experience Platform UI screenshot showing Browse Destinations.](../../assets/catalog/crm/salesforce/browse-destinations.png)
 
 1. Select the destination and validate that the status is **[!UICONTROL enabled]**.
-![Platform UI screenshot showing Destinations Dataflow Run.](../../assets/catalog/crm/salesforce/destination-dataflow-run.png)
+![Experience Platform UI screenshot showing Destinations Dataflow Run.](../../assets/catalog/crm/salesforce/destination-dataflow-run.png)
 
 1. Switch to the **[!UICONTROL Activation data]** tab, then select an audience name.
-![Platform UI screenshot example showing Destinations Activation Data.](../../assets/catalog/crm/salesforce/destinations-activation-data.png)
+![Experience Platform UI screenshot example showing Destinations Activation Data.](../../assets/catalog/crm/salesforce/destinations-activation-data.png)
 
 1. Monitor the audience summary and ensure that the count of profiles corresponds to the count created within the segment.
-![Platform UI screenshot example showing Segment.](../../assets/catalog/crm/salesforce/segment.png)
+![Experience Platform UI screenshot example showing Segment.](../../assets/catalog/crm/salesforce/segment.png)
 
 1. Finally, log in to the Salesforce website and validate if the profiles from the audience have been added or updated.
 
@@ -304,7 +304,7 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 ### Unknown errors encountered while pushing events to the destination {#unknown-errors}
 
 * When checking a dataflow run, you might encounter the following error message: `Unknown errors encountered while pushing events to the destination. Please contact the administrator and try again.`
-    ![Platform UI screenshot showing error.](../../assets/catalog/crm/salesforce/error.png)
+    ![Experience Platform UI screenshot showing error.](../../assets/catalog/crm/salesforce/error.png)
 
     * To fix this error, verify that the **[!UICONTROL Mapping ID]** that you provided in the activation workflow to the [!DNL Salesforce CRM] destination exactly matches the value of the custom field type you created in [!DNL Salesforce]. Refer to the [Create custom fields within [!DNL Salesforce]](#prerequisites-custom-field) section for guidance.
 

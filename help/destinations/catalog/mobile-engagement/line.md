@@ -79,7 +79,7 @@ Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** search for [!DNL
 ### Authenticate to destination {#authenticate}
 
 To authenticate to the destination, select **[!UICONTROL Connect to destination]**.
-![Platform UI screenshot showing how to authenticate.](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)
+![Experience Platform UI screenshot showing how to authenticate.](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)
 
 Fill in the required fields below.
 * **[!UICONTROL Bearer token]**: Your [!DNL LINE Channel access token (long-lived)] from the [!DNL LINE] developer console. Refer to the [gather credentials](#gather-credentials) section.
@@ -89,7 +89,7 @@ If the details provided are valid, the UI displays a **[!UICONTROL Connected]** 
 ### Fill in destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
-![Platform UI screenshot showing the destination details.](../../assets/catalog/mobile-engagement/line/destination-details.png)
+![Experience Platform UI screenshot showing the destination details.](../../assets/catalog/mobile-engagement/line/destination-details.png)
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -122,10 +122,10 @@ Depending on your source identity the following target identity namespace(s) mus
 | LINE user IDs | `UserID` | `LineId` |
 
 If your target identities are *LINE user ID's* you will need the below:
-![Platform UI screenshot example showing the Target mapping when using LINE User IDs for target identities.](../../assets/catalog/mobile-engagement/line/mappings-userid.png)
+![Experience Platform UI screenshot example showing the Target mapping when using LINE User IDs for target identities.](../../assets/catalog/mobile-engagement/line/mappings-userid.png)
 
 If your target identity is *ID for Advertisers(IFAs)* you will need the below:
-![Platform UI screenshot example showing the Target mapping when using ID for Advertisers(IFAs) for target identities.](../../assets/catalog/mobile-engagement/line/mappings-idfa.png)
+![Experience Platform UI screenshot example showing the Target mapping when using ID for Advertisers(IFAs) for target identities.](../../assets/catalog/mobile-engagement/line/mappings-idfa.png)
 
 ## Validate data export {#exported-data}
 

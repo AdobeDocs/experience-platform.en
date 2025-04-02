@@ -136,7 +136,7 @@ The **[!UICONTROL Templates]** tab shows queries saved by users in your organiza
 | **[!UICONTROL Modified by]** | The last user who modified the query. Any user in your organization with access to Query Service can modify queries. |
 | **[!UICONTROL Last modified]** | The date and time of the last modification to the query, in the browser's time zone. |
 
-See the [query templates](./query-templates.md) documentation for more information on templates in the Platform UI.
+See the [query templates](./query-templates.md) documentation for more information on templates in the Experience Platform UI.
 
 ## Log {#log}
 

@@ -1,6 +1,6 @@
 ---
 description: Experience Platform Debugger examines your web pages and helps you find problems with how your Experience Cloud solutions are implemented.
-keywords: debugger;experience Platform Debugger extension;chrome;extension
+keywords: debugger;Experience Platform Debugger extension;chrome;extension
 seo-description: Technical documentation for the Adobe Experience Platform Debugger Chrome Extension - examine your web pages and understand problems with your Experience Cloud solution mplementations
 seo-title: Adobe Experience Platform Debugger Chrome Extension
 title: Adobe Experience Platform Debugger Extension

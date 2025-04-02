@@ -9,7 +9,7 @@ exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
 
 Adobe Experience Platform provides several predefined alert rules that you can enable for your organization. This document covers the details of these Adobe-provided alert rules. For more general information on alerts in Experience Platform, see the [alerts overview](./overview.md).
 
-When [viewing alert rules in the Platform UI](./ui.md), you can subscribe to each rule individually. When subscribing to alerts through [I/O Event notifications](./subscribe.md), however, alert rules are organized into different subscription packages. In the tables below, each rule is shown with its corresponding I/O Event subscription name.
+When [viewing alert rules in the Experience Platform UI](./ui.md), you can subscribe to each rule individually. When subscribing to alerts through [I/O Event notifications](./subscribe.md), however, alert rules are organized into different subscription packages. In the tables below, each rule is shown with its corresponding I/O Event subscription name.
 
 ## Sources {#sources}
 

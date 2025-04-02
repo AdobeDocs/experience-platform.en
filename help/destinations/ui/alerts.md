@@ -57,7 +57,7 @@ Once your destination dataflow runs, you can receive alerts through the UI or by
 
 ### Receiving alerts in the UI {#receiving-alerts-in-ui}
 
-Alerts are represented in the UI by a notification icon in the top header of the Platform UI. Select the notification icon to see specific alert messages regarding your dataflows.
+Alerts are represented in the UI by a notification icon in the top header of the Experience Platform UI. Select the notification icon to see specific alert messages regarding your dataflows.
 
 ![UI image showing the notification icon in Experience Platform](../assets/ui/alerts/notification.png)
 

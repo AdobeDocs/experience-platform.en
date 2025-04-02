@@ -17,7 +17,7 @@ This document covers the steps required to connect [!DNL GitHub Copilot] and [!D
 
 This guide requires that you already have access to a GitHub account and have signed up for [!DNL GitHub Copilot]. You can [sign up from the GitHub website](https://github.com/github-copilot/signup). You also need [!DNL VS Code]. You can [download [!DNL VS Code] from their official website](https://code.visualstudio.com/download).
 
-Once you have installed [!DNL VS Code] and activated your [!DNL Copilot] subscription, acquire your connection credentials for Experience Platform. These credentials are located in the [!UICONTROL Credentials] tab of the [!UICONTROL Queries] workspace in the Platform UI. Read the credentials guide to [learn how to find these values in the Platform UI](../ui/credentials.md). Please contact your organization administrator if you do not currently have access to the [!UICONTROL Queries] workspace.
+Once you have installed [!DNL VS Code] and activated your [!DNL Copilot] subscription, acquire your connection credentials for Experience Platform. These credentials are located in the [!UICONTROL Credentials] tab of the [!UICONTROL Queries] workspace in the Experience Platform UI. Read the credentials guide to [learn how to find these values in the Experience Platform UI](../ui/credentials.md). Please contact your organization administrator if you do not currently have access to the [!UICONTROL Queries] workspace.
 
 ### Required [!DNL Visual Studio Code] extensions {#required-extensions}
 

@@ -26,7 +26,7 @@ The following is a list of answers to frequently asked questions about Adobe Exp
 
 Request formats vary depending on the [!DNL Experience Platform] API being used. The best way to learn how to structure your API calls is by following along with the examples provided in the documentation for the particular [!DNL Experience Platform] service you are using.
 
-For more information on formating API requests, please visit the Platform API getting started guide [reading sample API calls](./api-guide.md#sample-api) section.
+For more information on formating API requests, please visit the Experience Platform API getting started guide [reading sample API calls](./api-guide.md#sample-api) section.
 
 ## What is my organization? {#what-is-my-ims-organization}
 
@@ -60,7 +60,7 @@ Many PATCH operations in [!DNL Experience Platform] APIs use [JSON Pointer](http
 
 ## Can I use Postman to make calls to [!DNL Experience Platform] APIs? {#how-do-i-use-postman-to-make-calls-to-platform-apis}
 
-[Postman](https://www.postman.com/) is a useful tool for visualizing calls to RESTful APIs. The [Platform API getting started guide](api-guide.md) contains a video and instructions for importing Postman collections. Additionally, a list of Postman collections for each service is provided.
+[Postman](https://www.postman.com/) is a useful tool for visualizing calls to RESTful APIs. The [Experience Platform API getting started guide](api-guide.md) contains a video and instructions for importing Postman collections. Additionally, a list of Postman collections for each service is provided.
 
 ## What are the system requirements for [!DNL Experience Platform]? {#what-are-the-system-requirements-for-platform}
 
@@ -86,7 +86,7 @@ The following status codes may be encountered on any [!DNL Experience Platform] 
 |--- | --- | ---|
 |400 | Bad request | The request was improperly constructed, missing key information, and/or contained incorrect syntax.|
 |401 | Authentication failed | The request did not pass an authentication check. Your access token may be missing or invalid. See the [OAuth token errors](#oauth-token-is-missing) section below for more details.|
-|403 | Forbidden | The resource was found, but you do not have the right credentials to view it. <br> A likely cause of this error is that you might not have the required [access control permissions](/help/access-control/home.md) to access or edit the resource. Read how to [get the necessary attribute-based access control permissions](/help/landing/api-authentication.md#get-abac-permissions) to use Platform APIs. </p> |
+|403 | Forbidden | The resource was found, but you do not have the right credentials to view it. <br> A likely cause of this error is that you might not have the required [access control permissions](/help/access-control/home.md) to access or edit the resource. Read how to [get the necessary attribute-based access control permissions](/help/landing/api-authentication.md#get-abac-permissions) to use Experience Platform APIs. </p> |
 |404 | Not found | The requested resource could not be found on the server. The resource may have been deleted, or the requested path was entered incorrectly.|
 |500 | Internal server error | This is a server-side error. If you are making many simultaneous calls, you may be reaching the API limit and need to filter your results. (See the [!DNL Catalog Service] API developer guide sub-guide on [filtering data](../catalog/api/filter-data.md) to learn more.) Wait for a moment before trying your request again, and contact your administrator if the problem persists.|
 
@@ -196,7 +196,7 @@ This error message displays when a POST, PUT or PATCH request has an invalid or 
 
 This error message displays in either of the two cases below:
 - When an incorrect or malformed organization ID header (`x-gw-ims-org-id`) is passed in an API request. Ensure that the correct ID of your organization is included before trying again.
-- When your account (as represented by the provided authentication credentials) is not associated with a product profile for Experience Platform. Follow the steps on [generating access credentials](./api-authentication.md#authentication-for-each-session) in the Platform API authentication tutorial to add Platform to your account and update your authentication credentials accordingly.
+- When your account (as represented by the provided authentication credentials) is not associated with a product profile for Experience Platform. Follow the steps on [generating access credentials](./api-authentication.md#authentication-for-each-session) in the Experience Platform API authentication tutorial to add Platform to your account and update your authentication credentials accordingly.
 
 ## Service troubleshooting directory {#service-troubleshooting-directory}
 

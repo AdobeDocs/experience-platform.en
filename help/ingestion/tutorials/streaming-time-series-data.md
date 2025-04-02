@@ -20,9 +20,9 @@ This tutorial requires a working knowledge of various Adobe Experience Platform 
 
 Additionally, this tutorial requires that you have already created a streaming connection. For more information on creating a streaming connection, please read the [create a streaming connection tutorial](./create-streaming-connection.md).
 
-### Using Platform APIs
+### Using Experience Platform APIs
 
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../landing/api-guide.md).
+For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../landing/api-guide.md).
 
 ## Compose a schema based off of the XDM ExperienceEvent class
 

@@ -10,7 +10,7 @@ exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
 
 # Authenticate and access Experience Platform APIs
 
-This document provides a step-by-step tutorial for gaining access to an Adobe Experience Platform developer account in order to make calls to Experience Platform APIs. At the end of this tutorial, you will have generated or collected the following credentials that are required as headers in all Platform API calls:
+This document provides a step-by-step tutorial for gaining access to an Adobe Experience Platform developer account in order to make calls to Experience Platform APIs. At the end of this tutorial, you will have generated or collected the following credentials that are required as headers in all Experience Platform API calls:
 
 * `{ACCESS_TOKEN}`
 * `{API_KEY}`
@@ -18,11 +18,11 @@ This document provides a step-by-step tutorial for gaining access to an Adobe Ex
 
 >[!TIP]
 >
->In addition to the three credentials above, many Platform APIs also require a valid `{SANDBOX_NAME}` to be provided as a header. See the [sandboxes overview](../sandboxes/home.md) for more information about sandboxes and the [sandbox management endpoint](/help/sandboxes/api/sandboxes.md#list) documentation for information about listing the sandboxes available to your organization.
+>In addition to the three credentials above, many Experience Platform APIs also require a valid `{SANDBOX_NAME}` to be provided as a header. See the [sandboxes overview](../sandboxes/home.md) for more information about sandboxes and the [sandbox management endpoint](/help/sandboxes/api/sandboxes.md#list) documentation for information about listing the sandboxes available to your organization.
 
 To maintain the security of your applications and users, all requests to Experience Platform APIs must be authenticated and authorized using standards such as OAuth.
 
-This tutorial covers how to gather the required credentials to authenticate Platform API calls, as outlined in the flowchart below. You can gather most of the required credentials in the initial one-time setup. The access token, however, must be refreshed every 24-hours.
+This tutorial covers how to gather the required credentials to authenticate Experience Platform API calls, as outlined in the flowchart below. You can gather most of the required credentials in the initial one-time setup. The access token, however, must be refreshed every 24-hours.
 
 ![The authentication flow requirements for the one-time initial setup and each subsequent session.](./images/api-authentication/authentication-flowchart.png)
 
@@ -62,11 +62,11 @@ See the guide on [managing user groups in Admin Console](https://helpx.adobe.com
 >
 >If you are following this document from the [Privacy Service API guide](../privacy-service/api/getting-started.md), you can now return to that guide to generate the access credentials unique to [!DNL Privacy Service].
 
-After you have been given developer and user access to Platform through Admin Console, the next step is to generate your `{ORG_ID}` and `{API_KEY}` credentials in Adobe Developer Console. These credentials only need to be generated once and can be reused in future Platform API calls.
+After you have been given developer and user access to Platform through Admin Console, the next step is to generate your `{ORG_ID}` and `{API_KEY}` credentials in Adobe Developer Console. These credentials only need to be generated once and can be reused in future Experience Platform API calls.
 
 >[!TIP]
 >
->Instead of going to Developer Console, you can get all the authentication credentials that you need to work with Platform APIs directly from the API reference documentation pages. [Read more](#get-credentials-functionality) about the functionality.
+>Instead of going to Developer Console, you can get all the authentication credentials that you need to work with Experience Platform APIs directly from the API reference documentation pages. [Read more](#get-credentials-functionality) about the functionality.
 
 ### Add Experience Platform to a project {#add-platform-to-project}
 
@@ -137,7 +137,7 @@ In addition to the above credentials, you also need the generated **[!UICONTROL 
 
 ## Generate an access token {#generate-access-token}
 
-The next step is to generate an `{ACCESS_TOKEN}` credential for use in Platform API calls. Unlike the values for `{API_KEY}` and `{ORG_ID}`, a new token must be generated every 24 hours to continue using Platform APIs. Select **[!UICONTROL Generate access token]** which produces your access token, as shown below.
+The next step is to generate an `{ACCESS_TOKEN}` credential for use in Experience Platform API calls. Unlike the values for `{API_KEY}` and `{ORG_ID}`, a new token must be generated every 24 hours to continue using Experience Platform APIs. Select **[!UICONTROL Generate access token]** which produces your access token, as shown below.
 
 ![Show how to generate access token](././images/api-authentication/generate-access-token.png)
 
@@ -151,13 +151,13 @@ Starting with the November 2024 release of Experience Platform, you can get cred
 
 ![Get credentials functionality highlighted at the top of an API reference page.](././images/api-authentication/get-credentials-highlighted.png)
 
-To get credentials to call Platform APIs, navigate to any Experience Platform API reference page and select **[!UICONTROL Sign in]** at the top of the page. Sign in with your **[!UICONTROL Personal Account]** or **[!UICONTROL Company or School Account]**.  
+To get credentials to call Experience Platform APIs, navigate to any Experience Platform API reference page and select **[!UICONTROL Sign in]** at the top of the page. Sign in with your **[!UICONTROL Personal Account]** or **[!UICONTROL Company or School Account]**.  
 
-After signing in, select **[!UICONTROL Create new credential]** to create a new set of credentials to access Platform APIs. 
+After signing in, select **[!UICONTROL Create new credential]** to create a new set of credentials to access Experience Platform APIs. 
 
-![Create new credentials to access Platform APIs.](././images/api-authentication/create-credentials.gif)
+![Create new credentials to access Experience Platform APIs.](././images/api-authentication/create-credentials.gif)
 
-Next, use the dropdown selector to open the credentials window, generate an access token, and get your API key and organization ID. Copy the credentials into the [**[!UICONTROL Try it]**](/help/release-notes/2024/may-2024.md#interactive-api-documentation) blocks on the API reference pages to start working with Platform APIs.
+Next, use the dropdown selector to open the credentials window, generate an access token, and get your API key and organization ID. Copy the credentials into the [**[!UICONTROL Try it]**](/help/release-notes/2024/may-2024.md#interactive-api-documentation) blocks on the API reference pages to start working with Experience Platform APIs.
 
 ![Use the dropdown selector to view credentials and generate an access token.](././images/api-authentication/view-copy-credentials.gif)
 
@@ -177,7 +177,7 @@ Next, use the dropdown selector to open the credentials window, generate an acce
 
 +++ View deprecated information 
 
-The next step is to generate a JSON Web Token (JWT) based on your account credentials. This value is used to generate your `{ACCESS_TOKEN}` credential for use in Platform API calls, which must be regenerated every 24 hours.
+The next step is to generate a JSON Web Token (JWT) based on your account credentials. This value is used to generate your `{ACCESS_TOKEN}` credential for use in Experience Platform API calls, which must be regenerated every 24 hours.
 
 >[!IMPORTANT]
 >
@@ -189,7 +189,7 @@ Select **[!UICONTROL Service Account (JWT)]** in the left navigation, then selec
 
 ![](././images/api-authentication/generate-jwt.png)
 
-In the textbox provided under **[!UICONTROL Generate custom JWT]**, paste the contents of the private key that you previously generated when adding the Platform API to your service account. Then, select **[!UICONTROL Generate Token]**.
+In the textbox provided under **[!UICONTROL Generate custom JWT]**, paste the contents of the private key that you previously generated when adding the Experience Platform API to your service account. Then, select **[!UICONTROL Generate Token]**.
 
 ![](././images/api-authentication/paste-key.png)
 
@@ -199,7 +199,7 @@ The page updates to show the generated JWT, along with a sample cURL command tha
 
 **Generate an access token**
 
-Once you have generated a JWT, you can use it in an API call to generate your `{ACCESS_TOKEN}`. Unlike the values for `{API_KEY}` and `{ORG_ID}`, a new token must be generated every 24 hours to continue using Platform APIs.
+Once you have generated a JWT, you can use it in an API call to generate your `{ACCESS_TOKEN}`. Unlike the values for `{API_KEY}` and `{ORG_ID}`, a new token must be generated every 24 hours to continue using Experience Platform APIs.
 
 **Request**
 
@@ -236,8 +236,8 @@ curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
 | Property | Description |
 | --- | --- |
 | `token_type` | The type of token being returned. For access tokens, this value is always `bearer`. |
-| `access_token` | The generated `{ACCESS_TOKEN}`. This value, prefixed with the word `Bearer`, is required as the `Authentication` header for all Platform API calls. |
-| `expires_in` | The number of milliseconds remaining until the access token expires. Once this value reaches 0, a new access token must be generated to continue using Platform APIs. |
+| `access_token` | The generated `{ACCESS_TOKEN}`. This value, prefixed with the word `Bearer`, is required as the `Authentication` header for all Experience Platform API calls. |
+| `expires_in` | The number of milliseconds remaining until the access token expires. Once this value reaches 0, a new access token must be generated to continue using Experience Platform APIs. |
 
 +++
 
@@ -315,7 +315,7 @@ Download the [Identity Management Service Postman collection](https://github.com
 >[!VIDEO](https://video.tv.adobe.com/v/29704/?learn=on)
 
 <!--
-This [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) describes how you can set up Postman to automatically perform JWT authentication and use it to consume Platform APIs.
+This [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) describes how you can set up Postman to automatically perform JWT authentication and use it to consume Experience Platform APIs.
 -->
 
 ## System administrators: Grant developer and API access control with Experience Platform permissions {#grant-developer-and-api-access-control}
@@ -372,6 +372,6 @@ Refer to the additional resources linked below for further help getting started 
 
 ## Next steps {#next-steps}
 
-By reading this document, you have gathered and successfully tested your access credentials for Platform APIs. You can now follow along with the example API calls provided throughout the [documentation](../landing/documentation/overview.md).
+By reading this document, you have gathered and successfully tested your access credentials for Experience Platform APIs. You can now follow along with the example API calls provided throughout the [documentation](../landing/documentation/overview.md).
 
-In addition to the authentication values you have gathered in this tutorial, many Platform APIs also require a valid `{SANDBOX_NAME}` to be provided as a header. See the [sandboxes overview](../sandboxes/home.md) for more information.
+In addition to the authentication values you have gathered in this tutorial, many Experience Platform APIs also require a valid `{SANDBOX_NAME}` to be provided as a header. See the [sandboxes overview](../sandboxes/home.md) for more information.

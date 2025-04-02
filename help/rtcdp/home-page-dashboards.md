@@ -13,7 +13,7 @@ The Real-Time CDP home page includes a getting started widget that allows you to
 
 This document provides an overview of the Real-Time CDP home page and metrics dashboard.
 
-![The Platform UI home page.](assets/platform-home/home.png)
+![The Experience Platform UI home page.](assets/platform-home/home.png)
 
 ## Getting started widget
 
@@ -24,7 +24,7 @@ The [!UICONTROL Getting started with Real-Time Customer Profile] widget is divid
 * **Build audiences**: This widget directs you to the Segment Builder in the UI. Use the Segment Builder to interact with Profile data elements and define the criteria for your segment definition. Select **[!UICONTROL Create audience]** to navigate to the Segment Builder. For more information, read the [Segmentation Service overview](../segmentation/home.md).
 * **Send data to destinations**: This widget directs you to the destinations catalog. Use the destinations catalog to select a destination that you can then connect to and send audiences to. Select **[!UICONTROL Set up destinations]** to navigate to the destinations catalog. For more information, read the [destinations overview](../destinations/home.md).
 
-![The Platform UI home page displaying the getting started widget](assets/platform-home/getting-started-widget.png)
+![The Experience Platform UI home page displaying the getting started widget](assets/platform-home/getting-started-widget.png)
 
 ## Metrics dashboard {#metrics-dashboard}
 
@@ -40,7 +40,7 @@ The metrics dashboard displays up-to-date information on your Experience Platfor
 
 The leaderboard shows the current total number of schemas, datasets, profiles, and audiences in your organization as well as their most recent update date.
 
-![The leaderboard section in the Platform UI home page.](assets/platform-home/leaderboard.png)
+![The leaderboard section in the Experience Platform UI home page.](assets/platform-home/leaderboard.png)
 
 * **Total schemas**: The **Total schemas** counter displays the number of schemas in the system. This counter is updated when a schema is created. For more information, read the [schemas overview](../xdm/home.md).
 * **Total datasets**: The **Total datasets** counter shows the number of datasets in the system and the amount of data in Experience Platform. This counter is updated when a dataset is created. For more information about datasets, read the [datasets overview](../catalog/datasets/overview.md).
@@ -51,7 +51,7 @@ The leaderboard shows the current total number of schemas, datasets, profiles, a
 
 Recent items lists the most recent changes in your organization. In the example below, the most recent changes pertain to datasets, sources, audiences, and destinations.
 
-![The recent items section in the Platform UI home page.](assets/platform-home/recent-items.png)
+![The recent items section in the Experience Platform UI home page.](assets/platform-home/recent-items.png)
 
 * **Recent datasets**: The **[!UICONTROL Recent datasets]** card shows the five most recent datasets created within the organization. This list is updated when a new dataset is created. Select a dataset to view the details for that item, or select **[!UICONTROL View all]** for a list of datasets. From there, you can select a specific source for details. For more information about datasets, see the [datasets overview](../catalog/datasets/overview.md).
 * **Recent sources**: The **[!UICONTROL Recent sources]** metric card shows the five most recent sources created within the organization. This list is updated when a new source is created. Select a source to view the details for that item, or select **[!UICONTROL View all]** for a list of sources. From there, you can select a specific source for details. For more information about sources, see [Sources overview](../sources/home.md).
@@ -62,7 +62,7 @@ Recent items lists the most recent changes in your organization. In the example 
 
 Finally, the resources widget provides you with additional documentation resources that you can refer to. These include:
 
-![The resources section in the Platform UI home page.](assets/platform-home/resources.png)
+![The resources section in the Experience Platform UI home page.](assets/platform-home/resources.png)
 
 * [Understanding schemas](../xdm/schema/composition.md)
 * [Connecting sources](../sources/home.md)

@@ -91,7 +91,7 @@ The Query Editor has a maximum 50,000 row output. You can choose the number of r
 
 >[!NOTE]
 >
->As the Platform UI can support up to 1000 rows, passing a LIMIT value over 1000 is ignored.
+>As the Experience Platform UI can support up to 1000 rows, passing a LIMIT value over 1000 is ignored.
 
 ![The Query Editor with the Result count dropdown highlighted.](../images/ui/query-editor/result-count.png)
 

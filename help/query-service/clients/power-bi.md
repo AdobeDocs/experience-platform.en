@@ -17,7 +17,7 @@ This guide requires that you already have access to the [!DNL Power BI] desktop 
 >
 > The [!DNL Power BI] desktop application is **only** available on Windows devices.
 
-To acquire the necessary credentials for connecting [!DNL Power BI] to Experience Platform, you must have access to the Queries workspace in the Platform UI. Please contact your organization administrator if you do not currently have access to the queries workspace. 
+To acquire the necessary credentials for connecting [!DNL Power BI] to Experience Platform, you must have access to the Queries workspace in the Experience Platform UI. Please contact your organization administrator if you do not currently have access to the queries workspace. 
 
 ## Connect [!DNL Power BI] to Query Service {#connect-power-bi}
 
@@ -25,7 +25,7 @@ To connect [!DNL Power BI] to Query Service, open [!DNL Power BI] and select **[
 
 The [!DNL PostgreSQL] database dialog appears, requesting values for your server and database. Additional instructions on how to [connect to a PostgreSQL database from Power Query Desktop](https://learn.microsoft.com/en-us/power-query/connectors/postgresql#connect-to-a-postgresql-database-from-power-query-desktop) can be found in the official [!DNL PowerBI] documentation.
 
-These required values are taken from your Adobe Experience Platform credentials. To find your credentials, log in to the Platform UI and select **[!UICONTROL Queries]** from the left navigation, followed by **[!UICONTROL Credentials]**. For more information on finding your database name, host, port, and login credentials, please read the [credentials guide](../ui/credentials.md). 
+These required values are taken from your Adobe Experience Platform credentials. To find your credentials, log in to the Experience Platform UI and select **[!UICONTROL Queries]** from the left navigation, followed by **[!UICONTROL Credentials]**. For more information on finding your database name, host, port, and login credentials, please read the [credentials guide](../ui/credentials.md). 
 
 >[!IMPORTANT]
 >

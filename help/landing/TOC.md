@@ -21,16 +21,16 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
   * [Platform architecture (Video)](video/platform-architecture.md)
   * [Roles and project phases (Video)](video/roles-project-phases.md)
 * Experience Platform UI {#platform-ui}
-  * [Platform UI guide](ui-guide.md)
-  * [Platform UI tour (Video)](video/platform-ui.md)
+  * [Experience Platform UI guide](ui-guide.md)
+  * [Experience Platform UI tour (Video)](video/platform-ui.md)
   * [Workflows UI guide](workflows.md)
   * [Browser and language support](browser-language-support.md)
   * [Self-identification Survey](self-identification.md)
 * Experience Platform APIs {#platform-apis}
-  * [Getting started with Platform APIs](api-guide.md)
-  * [Authenticate and access Platform APIs](api-authentication.md)
+  * [Getting started with Experience Platform APIs](api-guide.md)
+  * [Authenticate and access Experience Platform APIs](api-authentication.md)
   * [API fundamentals](api-fundamentals.md)
-  * [Using Postman with Platform APIs](postman.md)
+  * [Using Postman with Experience Platform APIs](postman.md)
   * [API reference documents](https://www.adobe.com/go/platform-api-reference-en)
 * Platform documentation {#documentation}
   * [Overview](documentation/overview.md)

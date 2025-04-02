@@ -17,7 +17,7 @@ This guide requires you to already have access to [!DNL Aqua Data Studio] and be
 >
 >There are [!DNL Windows] and [!DNL macOS] versions of [!DNL Aqua Data Studio]. Screenshots in this guide were taken using the [!DNL macOS] desktop app. There may be minor discrepancies in the UI between the versions.
 
-To acquire the necessary credentials for connecting [!DNL Aqua Data Studio] to Experience Platform, you must have access to the [!UICONTROL Queries] workspace in the Platform UI. Please contact your organization administrator if you do not currently have access to the [!UICONTROL Queries] workspace. 
+To acquire the necessary credentials for connecting [!DNL Aqua Data Studio] to Experience Platform, you must have access to the [!UICONTROL Queries] workspace in the Experience Platform UI. Please contact your organization administrator if you do not currently have access to the [!UICONTROL Queries] workspace. 
 
 ## Register the server {#register-server}
 
@@ -29,7 +29,7 @@ Once the **[!DNL Register Server]** dialog appears for a PostgresSQL server, pro
 - **[!DNL Login Name]**: The login name is your Platform Organization ID. It takes the form of `ORG_ID@AdobeOrg`.
 - **[!DNL Password]**: This is an alphanumeric string found on the [!DNL Query Service] credentials dashboard.
 - **[!DNL Host and Port]**: The host endpoint and its port for [!DNL Query Service]. You must use port 80 to connect with [!DNL Query Service].
-- **[!DNL Database]:** The database that will be used. Use the value for the Platform UI credential `dbname`: `prod:all`.
+- **[!DNL Database]:** The database that will be used. Use the value for the Experience Platform UI credential `dbname`: `prod:all`.
 
 ### [!DNL Query Service] credentials
 

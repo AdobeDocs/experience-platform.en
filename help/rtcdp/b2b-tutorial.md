@@ -56,11 +56,11 @@ Next, the Bodea marketer uses the [Marketo Engage connector](../sources/connecto
 
 >[!NOTE]
 > 
->To learn which source connectors are available to your organization, you can view the sources catalog in the Platform UI. To access the catalog, select **Sources** in the left navigation, then select **Catalog**.
+>To learn which source connectors are available to your organization, you can view the sources catalog in the Experience Platform UI. To access the catalog, select **Sources** in the left navigation, then select **Catalog**.
 
 In order to create a connection between a Marketo account and Platform, you must acquire authentication credentials. See the [guide on attaining Marketo source connector authentication credentials](../sources/connectors/adobe-applications/marketo/marketo-auth.md) for detailed instructions. 
 
-After acquiring authentication credentials, the Bodea marketer creates a connection between the Marketo Account and their Platform organization. See the documentation for instructions on [how to connect a Marketo Account using the Platform UI](../sources/tutorials/ui/create/adobe-applications/marketo.md).
+After acquiring authentication credentials, the Bodea marketer creates a connection between the Marketo Account and their Platform organization. See the documentation for instructions on [how to connect a Marketo Account using the Experience Platform UI](../sources/tutorials/ui/create/adobe-applications/marketo.md).
 
 The Marketo Engage source connector provides an auto-mapping feature to make the process of mapping all of your data fields to those of the newly created schemas much easier. 
 
@@ -72,7 +72,7 @@ The Bodea marketer checks that all field groups are appropriately mapped and con
 
 ## Create an audience to evaluate your data
 
-The next task is to create an audience for Bodea's new email marketing campaign based on specific attributes from related entities in the source data. Within the Platform UI, the Bodea marketer first selects **[!UICONTROL Segments]** in the left navigation, then **[!UICONTROL Create segment]**.
+The next task is to create an audience for Bodea's new email marketing campaign based on specific attributes from related entities in the source data. Within the Experience Platform UI, the Bodea marketer first selects **[!UICONTROL Segments]** in the left navigation, then **[!UICONTROL Create segment]**.
 
 In this example, the audience finds all the people who work in the sales department and are related to any account that has at least one open opportunity. This audiences requires a link between the XDM Individual Profile class, XDM Business Account class, and XDM Business Opportunity class.
 
@@ -88,7 +88,7 @@ The Segment Builder allows you to create a marketable audience from Real-Time Cu
 
 After the audience is successfully created, a summary is provided in the [!UICONTROL Details] section of the workspace. As no destinations are currently activated for the segment definition, the Bodea marketer needs to export the audience to a dataset where it can be accessed and acted upon.
 
-Within the [!UICONTROL Segments] workspace of the Platform UI, the Bodea marketer selects **[!UICONTROL Activate to destination]**.
+Within the [!UICONTROL Segments] workspace of the Experience Platform UI, the Bodea marketer selects **[!UICONTROL Activate to destination]**.
 
 ![Activate the audience to a destination](./assets/b2b-tutorial/activate-to-destination.png)
 

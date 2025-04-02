@@ -23,4 +23,4 @@ To learn more about preparing data after it's been ingested, please read the [Da
 
 ## Monitoring dataflows
 
-Monitoring dataflows can be done by using either Platform APIs or the Platform UI. To learn how to monitor dataflows using the API, please read the [monitoring dataflows API tutorial](./api/monitor.md). To learn how to monitor dataflows within the Platform UI, please read the tutorials on [monitoring dataflows for sources](./ui/monitor-sources.md) and [monitoring dataflows for destinations](./ui/monitor-destinations.md).
+Monitoring dataflows can be done by using either Experience Platform APIs or the Experience Platform UI. To learn how to monitor dataflows using the API, please read the [monitoring dataflows API tutorial](./api/monitor.md). To learn how to monitor dataflows within the Experience Platform UI, please read the tutorials on [monitoring dataflows for sources](./ui/monitor-sources.md) and [monitoring dataflows for destinations](./ui/monitor-destinations.md).

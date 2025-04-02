@@ -153,14 +153,14 @@ Fill in the required fields below. Refer to the [Generate a service key](#prereq
 | **[!UICONTROL Region]** | Your data center location. The region is present in the `url` and has a value similar to `eu10` or `us10`. For example if the `url` is `https://eu10.revenue.cloud.sap/api` you need `eu10`. |
 
 To authenticate to the destination, select **[!UICONTROL Connect to destination]**.
-![Image from Platform UI showing how to authenticate to the destination.](../../assets/catalog/ecommerce/sap-commerce/authenticate-destination.png)
+![Image from Experience Platform UI showing how to authenticate to the destination.](../../assets/catalog/ecommerce/sap-commerce/authenticate-destination.png)
 
 If the details provided are valid, the UI displays a **[!UICONTROL Connected]** status with a green check mark. You can then proceed to the next step.
 
 ### Fill in destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
-![Image from Platform UI showing the destination details to be filled after authentication.](../../assets/catalog/ecommerce/sap-commerce/destination-details.png)
+![Image from Experience Platform UI showing the destination details to be filled after authentication.](../../assets/catalog/ecommerce/sap-commerce/destination-details.png)
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -190,29 +190,29 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
 The `customerNumberSAP` identity is a mandatory mapping for this destination. Follow the steps below to map it:
 
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You can now see a new mapping row on the screen.
-![Platform UI screenshot with add new mapping button highlighted.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
+![Experience Platform UI screenshot with add new mapping button highlighted.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select identity namespace]** and select `customerNumberSAP`.
-![Platform UI screenshot selecting email as a source attribute to map as identity.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-identity.png)
+![Experience Platform UI screenshot selecting email as a source attribute to map as identity.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-identity.png)
 1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** and select the `customerNumber` identity.
-![Platform UI screenshot selecting email as a target attribute to map as identity.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-identity.png)
+![Experience Platform UI screenshot selecting email as a target attribute to map as identity.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-identity.png)
 
 | Source Field | Target Field | Mandatory |
 | --- | --- | --- |
 | `IdentityMap: customerNumberSAP` | `Identity: customerNumber` | Yes |
 
 An example with the identity mapping is shown below:
-![Image from Platform UI showing an example of customerNumber identity mapping.](../../assets/catalog/ecommerce/sap-commerce/mapping-identities.png)
+![Image from Experience Platform UI showing an example of customerNumber identity mapping.](../../assets/catalog/ecommerce/sap-commerce/mapping-identities.png)
 
 #### Mapping attributes
 
 To add any other attributes you want to update between your XDM profile schema and your [!DNL SAP Subscription Billing] account, repeat the steps below:
 
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You can now see a new mapping row on the screen.
-![Platform UI screenshot with add new mapping button highlighted.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
+![Experience Platform UI screenshot with add new mapping button highlighted.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** category and select the XDM attribute.
-![Platform UI screenshot selecting Last Name as a source attribute.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-attribute.png)
+![Experience Platform UI screenshot selecting Last Name as a source attribute.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-attribute.png)
 1. In the **[!UICONTROL Select target field]** window, choose **[!UICONTROL Select custom attributes]** category and type the name of the [!DNL SAP Subscription Billing] attribute from the list of customer [schema](https://api.sap.com/api/BusinessPartner_APIs/schema) attributes.
-![Platform UI screenshot where lastName is defined as the target attribute.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-attribute.png)
+![Experience Platform UI screenshot where lastName is defined as the target attribute.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-attribute.png)
 
 >[!IMPORTANT]
 >
@@ -255,7 +255,7 @@ You can then add any additional mappings between your XDM profile schema and the
 | `xdm: workAddress.city` | `Attribute: city` | No |
 
 An example with both mandatory and optional attribute mappings where the customer is an individual is shown below:
-![Image from Platform UI showing an example with both mandatory and optional attribute mappings where the customer is an individual.](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-individual.png)
+![Image from Experience Platform UI showing an example with both mandatory and optional attribute mappings where the customer is an individual.](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-individual.png)
 
 >[!TAB Corporate customer]
 
@@ -265,7 +265,7 @@ An example with both mandatory and optional attribute mappings where the custome
 | `xdm: workAddress.city` | `Attribute: city` | No |
 
 An example with both mandatory and optional attribute mappings where the customer is a corporate is shown below:
-![Image from Platform UI showing an example with both mandatory and optional attribute mappings where the customer is a corporate.](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-corporate.png)
+![Image from Experience Platform UI showing an example with both mandatory and optional attribute mappings where the customer is a corporate.](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-corporate.png)
 
 >[!ENDTABS]
 

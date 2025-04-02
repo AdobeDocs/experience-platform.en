@@ -36,9 +36,9 @@ In order for [!DNL Flow Service] to connect to [!DNL FTP], you must provide valu
 | `password` | The password for your [!DNL FTP] server. |
 | `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL FTP] is: `fb2e94c9-c031-467d-8103-6bd6e0a432f2`. |
 
-### Using Platform APIs
+### Using Experience Platform APIs
 
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
+For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../../../landing/api-guide.md).
 
 ## Create a base connection
 

@@ -58,11 +58,11 @@ Users can map attributes from their source XDM profile to custom attributes on y
 
 Users must manually enter the name of the target custom attribute when selecting the target field mapping.
 
-![Platform UI screenshot showing customa attribute selection.](../../assets/functionality/destination-configuration/mapping-streaming-select-custom-attribute.png)
+![Experience Platform UI screenshot showing customa attribute selection.](../../assets/functionality/destination-configuration/mapping-streaming-select-custom-attribute.png)
 
 The resulting UI experience is shown in the image below.
 
-![Platform UI screenshot showing XDM attribute mapping to custom attributes for streaming destinations.](../../assets/functionality/destination-configuration/mapping-streaming-xdm-custom.png)
+![Experience Platform UI screenshot showing XDM attribute mapping to custom attributes for streaming destinations.](../../assets/functionality/destination-configuration/mapping-streaming-xdm-custom.png)
 
 ### Map identity namespaces to partner identity namespaces {#streaming-identity-to-identity}
 
@@ -70,7 +70,7 @@ Users can map custom or global identity namespaces from Platform to identity nam
 
 The resulting UI experience is shown in the image below.
 
-![Platform UI screenshot showing identity mapping to identity for streaming destinations.](../../assets/functionality/destination-configuration/mapping-streaming-identity-identity.png)
+![Experience Platform UI screenshot showing identity mapping to identity for streaming destinations.](../../assets/functionality/destination-configuration/mapping-streaming-identity-identity.png)
 
 ## Supported mappings for file-based destinations {#batch-mappings}
 
@@ -112,11 +112,11 @@ For file-based destinations, the target field is automatically populated with a 
 
 The resulting UI experience is shown in the image below.
 
-![Platform UI screenshot showing XDM mapping to custom attributes for file-based destinations.](../../assets/functionality/destination-configuration/mapping-batch-xdm-custom.png)
+![Experience Platform UI screenshot showing XDM mapping to custom attributes for file-based destinations.](../../assets/functionality/destination-configuration/mapping-batch-xdm-custom.png)
 
 Users can leave the default name in place or enter a custom attribute name in the target field selection screen.
 
-![Platform UI screenshot showing custom target attribute selection for file-based destinations.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
+![Experience Platform UI screenshot showing custom target attribute selection for file-based destinations.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
 
 ### Map identity namespaces to custom attributes {#batch-identity-to-custom}
 
@@ -124,11 +124,11 @@ Users can map custom or global identity namespaces from Platform to custom attri
 
 When selecting an identity namespace as a source field, the target field is automatically populated with an equivalent identity namespace. To replace the target field with a custom attribute, users must enter a custom attribute name in the target field selection screen.
 
-![Platform UI screenshot showing custom target attribute selection for file-based destinations.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
+![Experience Platform UI screenshot showing custom target attribute selection for file-based destinations.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
 
 The resulting UI experience is shown in the image below.
 
-![Platform UI screenshot showing identity mapping to custom attributes for file-based destinations.](../../assets/functionality/destination-configuration/mapping-batch-identity-custom.png)
+![Experience Platform UI screenshot showing identity mapping to custom attributes for file-based destinations.](../../assets/functionality/destination-configuration/mapping-batch-identity-custom.png)
 
 ### Map identity namespaces to partner identity namespaces {#batch-identity-to-identity}
 
@@ -138,7 +138,7 @@ When selecting an identity namespace as a source field, the target field is auto
 
 The resulting UI experience is shown in the image below.
 
-![Platform UI screenshot showing identity mapping to identity for file-based destinations.](../../assets/functionality/destination-configuration/mapping-batch-identity-identity.png)
+![Experience Platform UI screenshot showing identity mapping to identity for file-based destinations.](../../assets/functionality/destination-configuration/mapping-batch-identity-identity.png)
 
 
 ## Next steps {#next-steps}

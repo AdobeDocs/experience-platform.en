@@ -20,7 +20,7 @@ This guide requires a working understanding of the following components of Exper
 * [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-This tutorial also requires you to read the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md) to learn how to authenticate to Platform APIs and interpret the example calls provided in the documentation.
+This tutorial also requires you to read the guide on [getting started with Experience Platform APIs](../../../../../landing/api-guide.md) to learn how to authenticate to Experience Platform APIs and interpret the example calls provided in the documentation.
 
 The following sections provide additional information that you will need to know in order to successfully create a [!DNL Data Landing Zone] source connection using the [!DNL Flow Service] API.
 

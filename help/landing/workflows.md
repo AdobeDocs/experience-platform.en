@@ -29,4 +29,4 @@ The **[!UICONTROL Publish a model as a service]** workflow lets you publish a cr
 
 ## Next steps
 
-By reading this guide, you have been introduced to the [!UICONTROL Workflows] available within the Experience Platform user interface. For more information on Platform UI features and functionality, please read the [Adobe Experience Platform UI guide](ui-guide.md).
+By reading this guide, you have been introduced to the [!UICONTROL Workflows] available within the Experience Platform user interface. For more information on Experience Platform UI features and functionality, please read the [Adobe Experience Platform UI guide](ui-guide.md).

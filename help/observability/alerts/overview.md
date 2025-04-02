@@ -48,19 +48,19 @@ An alert can be broken down into the following components:
 Alerts can be received and managed through two channels:
 
 * [Adobe I/O Events](#events)
-* [Platform UI](#ui)
+* [Experience Platform UI](#ui)
 
 ### I/O Events {#events}
 
 Alerts can be sent to a configured webhook to facilitate efficient automation of activity monitoring. In order to receive alerts via webhook, you must register your webhook for Platform alerts in Adobe Developer Console. See the guide on [subscribing to Adobe I/O Event notifications](./subscribe.md) for specific steps.
 
-### Platform UI {#ui}
+### Experience Platform UI {#ui}
 
-The Platform UI allows you to view received alerts and manage alert rules. The following video provides an introduction to these capabilities.
+The Experience Platform UI allows you to view received alerts and manage alert rules. The following video provides an introduction to these capabilities.
 
 >[!VIDEO](https://video.tv.adobe.com/v/336218?quality=12&learn=on)
 
-To work with alerts in the Platform UI, you must have the following access control permissions enabled through Adobe Admin Console:
+To work with alerts in the Experience Platform UI, you must have the following access control permissions enabled through Adobe Admin Console:
 
 | Permission | Description |
 | --- | --- |

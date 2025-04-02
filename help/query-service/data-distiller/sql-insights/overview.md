@@ -13,7 +13,7 @@ This document covers the use cases, essential capabilities, and required steps t
 
 ## Prerequisites
 
-This tutorial uses user-defined dashboards to visualize data from your custom data model within the Platform UI. See the [user-defined dashboards documentation](../../../dashboards/standard-dashboards.md) to learn more about this feature.
+This tutorial uses user-defined dashboards to visualize data from your custom data model within the Experience Platform UI. See the [user-defined dashboards documentation](../../../dashboards/standard-dashboards.md) to learn more about this feature.
 
 ## Getting started 
 

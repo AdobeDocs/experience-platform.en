@@ -58,7 +58,7 @@ In order to create datasets that capture consent data, you must first create XDM
 
 As mentioned in the previous section, a schema that uses the [!UICONTROL XDM Individual Profile] class is required in order to enforce consent in downstream Platform workflows. You can also optionally create a separate schema based on [!UICONTROL XDM ExperienceEvent] if you wish to track consent changes over time. Both schemas must contain an `identityMap` field and an appropriate TCF 2.0 field group.
 
-In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation to open the [!UICONTROL Schemas] workspace. From here, follow the steps in the sections below to create each required schema.
+In the Experience Platform UI, select **[!UICONTROL Schemas]** in the left navigation to open the [!UICONTROL Schemas] workspace. From here, follow the steps in the sections below to create each required schema.
 
 >[!NOTE]
 >

@@ -39,7 +39,7 @@ Once you have gathered your required credentials, you can follow the steps in th
 
 ## Connect your [!DNL Marketo] account
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
 Under the *Adobe applications* category, select **[!UICONTROL Marketo Engage]**, and then select **[!UICONTROL Add data]**.
 

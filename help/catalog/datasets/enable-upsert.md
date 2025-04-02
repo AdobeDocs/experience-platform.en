@@ -22,7 +22,7 @@ This tutorial requires a working understanding of several Adobe Experience Platf
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
 - [Batch ingestion](../../ingestion/batch-ingestion/overview.md): The Batch Ingestion API allows you to ingest data into Experience Platform as batch files.
 
-The following sections provide additional information that you will need to know in order to successfully make calls to the Platform APIs.
+The following sections provide additional information that you will need to know in order to successfully make calls to the Experience Platform APIs.
 
 ### Reading sample API calls
 
@@ -230,7 +230,7 @@ An existing dataset can be enabled for Profile and attribute updates using a sin
 
 >[!IMPORTANT]
 >
->When enabling your dataset for Profile, please ensure the schema the dataset is associated with is **also** Profile-enabled. If the schema is not Profile-enabled, the dataset will **not** appear as Profile-enabled within the Platform UI.
+>When enabling your dataset for Profile, please ensure the schema the dataset is associated with is **also** Profile-enabled. If the schema is not Profile-enabled, the dataset will **not** appear as Profile-enabled within the Experience Platform UI.
 
 **API format**
 

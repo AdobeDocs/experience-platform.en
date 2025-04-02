@@ -7,7 +7,7 @@ exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
 
 Experience Platform uses schemas to describe the structure of data in a consistent and reusable way. When data is ingested into Platform, it is structured according to an XDM schema. For more information on the schema composition model, including design principles and best practices, see the [basics of schema composition](../../../../xdm/schema/composition.md).
 
-When building a destination with Destination SDK, you can define your own partner schema to be used by your destination platform. This gives users the ability to map profile attributes from Platform to specific fields that your destination platform recognizes, all within the Platform UI.
+When building a destination with Destination SDK, you can define your own partner schema to be used by your destination platform. This gives users the ability to map profile attributes from Platform to specific fields that your destination platform recognizes, all within the Experience Platform UI.
 
 When configuring the partner schema for your destination, you can fine tune the field mapping supported by your destination platform, such as:
 
@@ -22,7 +22,7 @@ You can configure your schema settings via the `/authoring/destinations` endpoin
 * [Create a destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Update a destination configuration](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-This article describes all the supported schema configuration options that you can use for your destination, and shows what customers will see in the Platform UI.
+This article describes all the supported schema configuration options that you can use for your destination, and shows what customers will see in the Experience Platform UI.
 
 >[!IMPORTANT]
 >
@@ -43,7 +43,7 @@ Destination SDK supports multiple schema configurations:
 
 * Static schemas are defined through the `profileFields` array in the `schemaConfig` section. In a static schema, you define every target attribute that should be shown in the Experience Platform UI in the `profileFields` array. If you need to update your schema, you must [update the destination configuration](../../authoring-api/destination-configuration/update-destination-configuration.md).
 * Dynamic schemas use an additional destination server type, called a [dynamic schema server](../../authoring-api/destination-server/create-destination-server.md#dynamic-schema-servers), to dynamically retrieve the supported target attributes and generate schemas based on your own API. Dynamic schemas do not use the `profileFields` array. If you need to update your schema, there is no need to [update the destination configuration](../../authoring-api/destination-configuration/update-destination-configuration.md). Instead, the dynamic schema server retrieves the updated schema from your API.
-* Within the schema configuration, you have the option of adding required (or predefined) mappings. These are mappings that users are able to view in the Platform UI, but they cannot modify them when setting up a connection to your destination. For example, you can enforce the email address field to always be sent to the destination.
+* Within the schema configuration, you have the option of adding required (or predefined) mappings. These are mappings that users are able to view in the Experience Platform UI, but they cannot modify them when setting up a connection to your destination. For example, you can enforce the email address field to always be sent to the destination.
 
 The `schemaConfig` section uses multiple configuration parameters, depending on the type of schema that you need, as shown in the sections below.
 
@@ -154,7 +154,7 @@ In a dynamic schema configuration, the `profileFields` array is replaced by the 
 
 ## Required mappings {#required-mappings}
 
-Within the schema configuration, in addition to your static or dynamic schema, you have the option of adding required (or predefined) mappings. These are mappings that users are able to view in the Platform UI, but they cannot modify them when setting up a connection to your destination.
+Within the schema configuration, in addition to your static or dynamic schema, you have the option of adding required (or predefined) mappings. These are mappings that users are able to view in the Experience Platform UI, but they cannot modify them when setting up a connection to your destination.
 
 For example, you can enforce the email address field to always be sent to the destination.
 
@@ -197,7 +197,7 @@ The example below shows both required source and destination mappings. When both
 
 {style="table-layout:auto"}
 
-As a result, both the **[!UICONTROL Source field]** and **[!UICONTROL Target field]** sections in the Platform UI are greyed out.
+As a result, both the **[!UICONTROL Source field]** and **[!UICONTROL Target field]** sections in the Experience Platform UI are greyed out.
 
 ![Image of the required mappings in the UI activation flow.](../../assets/functionality/destination-configuration/required-mappings-2.png)
 
@@ -227,7 +227,7 @@ The example below shows a required destination mapping. If only the destination 
 
 {style="table-layout:auto"}
 
-As a result, the **[!UICONTROL Target field]** section in the Platform UI is greyed out, while the **[!UICONTROL Source field]** section is active and users can interact with it. The **[!UICONTROL Mandatory key]** and **[!UICONTROL Deduplication key]** options are active, and users cannot change them.
+As a result, the **[!UICONTROL Target field]** section in the Experience Platform UI is greyed out, while the **[!UICONTROL Source field]** section is active and users can interact with it. The **[!UICONTROL Mandatory key]** and **[!UICONTROL Deduplication key]** options are active, and users cannot change them.
 
 ![Image of the required mappings in the UI activation flow.](../../assets/functionality/destination-configuration/required-mappings-1.png)
 

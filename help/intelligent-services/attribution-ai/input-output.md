@@ -138,7 +138,7 @@ The following table outlines the schema fields in the raw scores example output:
 
 ### Viewing raw score paths (UI) {#raw-score-path}
 
-You can view the path to your raw scores in the UI. Start by selecting **[!UICONTROL Schemas]** in the Platform UI then search for and select your attribution AI scores schema from within the **[!UICONTROL Browse]** tab.
+You can view the path to your raw scores in the UI. Start by selecting **[!UICONTROL Schemas]** in the Experience Platform UI then search for and select your attribution AI scores schema from within the **[!UICONTROL Browse]** tab.
 
 ![Pick your schema](./images/input-output/schemas_browse.png)
 
@@ -148,7 +148,7 @@ Next, select a field within the **[!UICONTROL Structure]** window of the UI, the
 
 ### Aggregated attribution scores {#aggregated-attribution-scores}
 
-Aggregated scores can be downloaded in CSV format from the Platform UI if the date range is less than 30 days.
+Aggregated scores can be downloaded in CSV format from the Experience Platform UI if the date range is less than 30 days.
 
 Attribution AI supports two categories of attribution scores, algorithmic and rule-based scores.
 
@@ -186,7 +186,7 @@ Time Decay | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.dec
 
 ### Aggregated Scores {#aggregated-scores}
 
-Aggregated scores can be downloaded in CSV format from the Platform UI if the date range is less than 30 days. See the table below for more details about each of these aggregate columns.
+Aggregated scores can be downloaded in CSV format from the Experience Platform UI if the date range is less than 30 days. See the table below for more details about each of these aggregate columns.
 
 | Column Name | Constraint | Nullable | Description |
 | --- | --- | --- | --- |

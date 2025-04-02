@@ -97,7 +97,7 @@ User access to individual columns can then be controlled by the attached data us
 
 ### Connectivity {#connectivity}
 
-Query Service is accessible through the Platform UI or by forming a connection with external compatible clients. Access to all available fronts is controlled by a set of credentials.
+Query Service is accessible through the Experience Platform UI or by forming a connection with external compatible clients. Access to all available fronts is controlled by a set of credentials.
 
 #### Connectivity through external clients
 
@@ -144,7 +144,7 @@ Any of the log categories can be requested as desired by a Platform user. This s
 
 The query logs UI allows you to monitor and review execution details for all queries that have been run either via the Query Editor or the Query Service API. This brings transparency to Query Service activities, allowing you to check the metadata for **all** the queries that have been executed across Query Service. It includes all types of queries whether it is an exploratory, batch, or scheduled query. 
 
-Query logs can be accessed either through the Platform UI in the [!UICONTROL Logs] tab of the [!UICONTROL Queries] workspace.
+Query logs can be accessed either through the Experience Platform UI in the [!UICONTROL Logs] tab of the [!UICONTROL Queries] workspace.
 
 ![The Queries log tab with the details panel highlighted.](../images/data-governance/overview/queries-log.png)
 
@@ -180,7 +180,7 @@ It is best practice to work towards data compliance at every stage of the data's
 >
 >Datasets that are created using Query Service are referred to as "derived datasets".
 
-As ad hoc schemas are created by an individual user for a specific purpose, the XDM schema fields are namespaced for that particular dataset and not intended for use across different datasets. As a result, ad hoc schemas are not visible by default in the Experience Platform UI. Although there is no difference in the application of data usage labels between both standard and ad hoc schemas, ad hoc schemas created by Query Service for the purpose of labelling must first be made visible in the Platform UI. See the guide on [discovering ad hoc schemas within the Platform UI](./ad-hoc-schema-labels.md#discover-ad-hoc-schemas) for more details. 
+As ad hoc schemas are created by an individual user for a specific purpose, the XDM schema fields are namespaced for that particular dataset and not intended for use across different datasets. As a result, ad hoc schemas are not visible by default in the Experience Platform UI. Although there is no difference in the application of data usage labels between both standard and ad hoc schemas, ad hoc schemas created by Query Service for the purpose of labelling must first be made visible in the Experience Platform UI. See the guide on [discovering ad hoc schemas within the Experience Platform UI](./ad-hoc-schema-labels.md#discover-ad-hoc-schemas) for more details. 
  
 After you have accessed the schema, you can [apply labels to individual fields](../../xdm/tutorials/labels.md). Once a schema has been labeled, all datasets that derive from that schema inherit those labels. From here, you can set up data usage policies that can restrict data with certain labels from being activated to certain destinations. For more information, see the overview on [data usage policies](../../data-governance/policies/overview.md).
 
@@ -194,7 +194,7 @@ See the Privacy Service documentation for more information on [identity data for
 
 Query Service features for data governance simplify and streamline the process of data categorization and adherence to data usage regulations. Once the data has been identified, Query Service enables you to allocate the primary identity on all output datasets. You **must** add identities into the dataset to facilitate data privacy requests and work towards data compliance. 
 
-Schema data fields can be set as an identity field through the Platform UI and Query Service also allows you to [mark the primary identities by using the SQL command 'ALTER TABLE'](../sql/syntax.md#alter-table). Setting an identity using the `ALTER TABLE` command is especially useful when datasets are created using SQL rather than directly from a schema through the Platform UI. See the documentation for instructions on how to [define identity fields in the UI](../../xdm/ui/fields/identity.md) when using standard schemas.
+Schema data fields can be set as an identity field through the Experience Platform UI and Query Service also allows you to [mark the primary identities by using the SQL command 'ALTER TABLE'](../sql/syntax.md#alter-table). Setting an identity using the `ALTER TABLE` command is especially useful when datasets are created using SQL rather than directly from a schema through the Experience Platform UI. See the documentation for instructions on how to [define identity fields in the UI](../../xdm/ui/fields/identity.md) when using standard schemas.
  
 ## Data hygiene {#data-hygiene}
 

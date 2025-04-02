@@ -48,7 +48,7 @@ After selecting your connection method, you must next provide a **display name**
 
 >[!TIP]
 >
->You can retrieve your [!DNL Data Landing Zone] credentials from the sources catalog in the Platform UI.
+>You can retrieve your [!DNL Data Landing Zone] credentials from the sources catalog in the Experience Platform UI.
 
 Provide your [!DNL Data Landing Zone] SAS URL and then select **Next**
 

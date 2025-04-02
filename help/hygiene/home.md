@@ -20,11 +20,11 @@ These activities can be performed using the [[!UICONTROL Data Lifecycle] UI work
 
 >[!NOTE]
 >
->Advanced Data Lifecycle Management supports dataset deletions through the [dataset expiration endpoint](./api/dataset-expiration.md) and ID deletions (row-level data) using primary identities via the [workorder endpoint](./api/workorder.md). You can also manage [dataset expirations](./ui/dataset-expiration.md) and [record deletions](./ui/record-delete.md) through the Platform UI. See the linked documentation for more information. Note that Data Lifecycle does not support batch deletion.
+>Advanced Data Lifecycle Management supports dataset deletions through the [dataset expiration endpoint](./api/dataset-expiration.md) and ID deletions (row-level data) using primary identities via the [workorder endpoint](./api/workorder.md). You can also manage [dataset expirations](./ui/dataset-expiration.md) and [record deletions](./ui/record-delete.md) through the Experience Platform UI. See the linked documentation for more information. Note that Data Lifecycle does not support batch deletion.
 
 ## [!UICONTROL Data Lifecycle] UI workspace {#ui}
 
-The [!UICONTROL Data Lifecycle] workspace in the Platform UI allows you to configure and schedule data lifecycle operations, helping to ensure that your records are being maintained as expected.
+The [!UICONTROL Data Lifecycle] workspace in the Experience Platform UI allows you to configure and schedule data lifecycle operations, helping to ensure that your records are being maintained as expected.
 
 For detailed steps on managing data lifecycle tasks in the UI, see the [data lifecycle UI guide](./ui/overview.md).
 

@@ -82,7 +82,7 @@ To authenticate to the destination, you will be redirected to login to your [!DN
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Destination connection details](/help/destinations/assets/catalog/social/tiktok/tiktok-configure-destination-details.png "Image of the Platform UI, showing destination connection details to be filled in")
+![Destination connection details](/help/destinations/assets/catalog/social/tiktok/tiktok-configure-destination-details.png "Image of the Experience Platform UI, showing destination connection details to be filled in")
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -117,7 +117,7 @@ Selecting target fields:
 
 * Select the email namespace as target identity.
 
-![Identity mapping](/help/destinations/assets/catalog/social/tiktok/tiktok-map-identity.png "Image of the Platform UI, mapping of identities")
+![Identity mapping](/help/destinations/assets/catalog/social/tiktok/tiktok-map-identity.png "Image of the Experience Platform UI, mapping of identities")
 
 ## Exported data {#exported-data}
 

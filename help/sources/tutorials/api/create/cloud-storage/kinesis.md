@@ -34,9 +34,9 @@ In order for [!DNL Flow Service] to connect with your [!DNL Amazon Kinesis] acco
 
 For more information on [!DNL Kinesis] access keys and how to generate them, refer to this [[!DNL AWS] guide on managing access keys for IAM users](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
-### Using Platform APIs
+### Using Experience Platform APIs
 
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
+For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../../../landing/api-guide.md).
 
 ## Create a base connection
 

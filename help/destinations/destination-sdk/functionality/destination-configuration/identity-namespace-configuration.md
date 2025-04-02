@@ -32,7 +32,7 @@ You can configure your supported identity namespaces via the `/authoring/destina
 * [Create a destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Update a destination configuration](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-This article describes all the supported identity namespaces configuration options that you can use for your destination, and shows what customers will see in the Platform UI.
+This article describes all the supported identity namespaces configuration options that you can use for your destination, and shows what customers will see in the Experience Platform UI.
 
 >[!IMPORTANT]
 >
@@ -56,7 +56,7 @@ When defining the target identities that your destination supports, you can use 
 |`acceptsAttributes` | Boolean | Optional | Indicates if customers can map standard profile attributes to the identity that you are configuring. |
 |`acceptsCustomNamespaces` | Boolean | Optional | Indicates if customers can map custom identity namespaces to the identity namespace that you are configuring. |
 |`acceptedGlobalNamespaces` | - | Optional | Indicates which [standard identity namespaces](../../../../identity-service/features/namespaces.md#standard) (for example, [!UICONTROL IDFA]) customers can map to the identity that you are configuring. |
-|`transformation` | String | Optional | Displays the [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) check box in the Platform UI, when the source field is either an XDM attribute or a custom identity namespace. Use this option to give users the ability to hash source attributes on export. To enable this option, set the value to `sha256(lower($))`. |
+|`transformation` | String | Optional | Displays the [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) check box in the Experience Platform UI, when the source field is either an XDM attribute or a custom identity namespace. Use this option to give users the ability to hash source attributes on export. To enable this option, set the value to `sha256(lower($))`. |
 |`requiredTransformation` | String | Optional | When customers select this source identity namespace, the [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) check box is automatically applied to the mapping, and customers cannot disable it. To enable this option, set the value to `sha256(lower($))`.|
 
 {style="table-layout:auto"}
@@ -94,7 +94,7 @@ If customers select a source identity namespace and do not select a target mappi
 
 Experience Platform customers can choose to ingest data into Platform in hashed format or in plain text. If your destination platform accepts both hashed and unhashed data, you can give customers the option to choose whether Platform should hash the source field values when they get exported to your destination.
 
-The configuration below enables the optional [Apply transformation](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) option in the Platform UI, in the Mapping step.
+The configuration below enables the optional [Apply transformation](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) option in the Experience Platform UI, in the Mapping step.
 
 ```json {line-numbers="true" highlight="5"}
 "identityNamespaces":{

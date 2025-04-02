@@ -9,9 +9,9 @@ exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
 ---
 # Getting started with Adobe Experience Platform APIs
 
-Adobe Experience Platform is developed under an "API first" philosophy. Using Platform APIs, you can programmatically perform basic CRUD (Create, Read, Update, Delete) operations against data, such as configuring computed attributes, accessing data/entities, exporting data, deleting unneeded data or batches, and more. 
+Adobe Experience Platform is developed under an "API first" philosophy. Using Experience Platform APIs, you can programmatically perform basic CRUD (Create, Read, Update, Delete) operations against data, such as configuring computed attributes, accessing data/entities, exporting data, deleting unneeded data or batches, and more. 
 
-The APIs for each Experience Platform service all share the same set of authentication headers and use similar syntaxes for their CRUD operations. The following guide outlines the necessary steps for getting started with Platform APIs.
+The APIs for each Experience Platform service all share the same set of authentication headers and use similar syntaxes for their CRUD operations. The following guide outlines the necessary steps for getting started with Experience Platform APIs.
 
 ## Authentication and headers
 
@@ -23,7 +23,7 @@ In order to successfully make calls to Platform endpoints, you are required to c
 
 ### Sandbox header
 
-All resources in Experience Platform are isolated to specific virtual sandboxes. Requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
+All resources in Experience Platform are isolated to specific virtual sandboxes. Requests to Experience Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -41,17 +41,17 @@ To learn more about the underlying API technologies Platform utilizes, including
 
 ## Postman collections for Experience Platform APIs
 
-Postman is a collaboration platform for API development that allows you to set up environments with preset variables, share API collections, streamline CRUD requests, and more. Most Platform API services have Postman collections which can be used to assist with making API calls.
+Postman is a collaboration platform for API development that allows you to set up environments with preset variables, share API collections, streamline CRUD requests, and more. Most Experience Platform API services have Postman collections which can be used to assist with making API calls.
 
 To learn more about Postman including how to set up an environment, a list of available collections, and how to import collections, visit the [Platform Postman documentation](postman.md).
 
 ## Reading sample API calls {#sample-api}
 
-Request formats vary depending on the Platform API being used. The best way to learn how to structure your API calls is by following along with the examples provided in the documentation for the particular Platform service you are using.
+Request formats vary depending on the Experience Platform API being used. The best way to learn how to structure your API calls is by following along with the examples provided in the documentation for the particular Platform service you are using.
 
 The documentation for [!DNL Experience Platform] shows example API calls in two different ways. First, the call is presented in its **API format**, a template representation showing only the operation (GET, POST, PUT, PATCH, DELETE) and the endpoint being used (for example, `/global/classes`). Some templates also show the location of variables to help illustrate how a call should be formulated, such as `GET /{VARIABLE}/classes/{ANOTHER_VARIABLE}`.
 
-The calls are then shown as cURL commands in a **Request**, which includes the necessary headers and full "base path" needed to successfully interact with the API. The base path should be pre-pended to all endpoints. For example, the aforementioned `/global/classes` endpoint becomes `https://platform.adobe.io/data/foundation/schemaregistry/global/classes`. You will see the API format / request pattern throughout the documentation, and are expected to use the complete path shown in the example request when making your own calls to Platform APIs.
+The calls are then shown as cURL commands in a **Request**, which includes the necessary headers and full "base path" needed to successfully interact with the API. The base path should be pre-pended to all endpoints. For example, the aforementioned `/global/classes` endpoint becomes `https://platform.adobe.io/data/foundation/schemaregistry/global/classes`. You will see the API format / request pattern throughout the documentation, and are expected to use the complete path shown in the example request when making your own calls to Experience Platform APIs.
 
 ### Example API request
 
@@ -109,9 +109,9 @@ The [Platform troubleshooting guide](troubleshooting.md#errors-and-troubleshooti
 
 For troubleshooting guides on individual Platform services, see the [service troubleshooting directory](troubleshooting.md#service-troubleshooting-directory).
 
-For more information on specific endpoints in Platform APIs, including required headers and request bodies, please see the [Platform API guides](#api-guides).
+For more information on specific endpoints in Experience Platform APIs, including required headers and request bodies, please see the [Experience Platform API guides](#api-guides).
 
-## Platform API guides {#api-guides}
+## Experience Platform API guides {#api-guides}
 
 | API guide | Description |
 | --- | --- |
@@ -138,7 +138,7 @@ For more information on specific endpoints and operations available for each ser
 
 ## Next steps
 
-This document introduced the required headers, available guides, and provided an example API call. Now that you have the required header values needed to make API calls on Adobe Experience Platform, select an API endpoint you wish to explore from the [Platform API guides table](#api-guides).
+This document introduced the required headers, available guides, and provided an example API call. Now that you have the required header values needed to make API calls on Adobe Experience Platform, select an API endpoint you wish to explore from the [Experience Platform API guides table](#api-guides).
 
 For answers to frequently asked questions, refer to the [Platform troubleshooting guide](troubleshooting.md).
 

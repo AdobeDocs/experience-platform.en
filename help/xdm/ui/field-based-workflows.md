@@ -9,11 +9,11 @@ Adobe Experience Platform provides a robust set of standardized [field groups](.
 
 When you add a field group to a schema, that schema inherits all the fields contained in that group. However, you can now add individual fields to your schema without needing to include other fields from the associated field group that you may not necessarily use.
 
-This guide covers the different methods for adding individual fields to a schema in the Platform UI.
+This guide covers the different methods for adding individual fields to a schema in the Experience Platform UI.
 
 ## Prerequisites
 
-This tutorial assumes that you are familiar with the [composition of XDM schemas](../schema/composition.md) and how to use the Schema Editor in the Platform UI. To follow along, you should start the process of [creating a new schema](./resources/schemas.md) and assigning it to a standard class before continuing with this guide.
+This tutorial assumes that you are familiar with the [composition of XDM schemas](../schema/composition.md) and how to use the Schema Editor in the Experience Platform UI. To follow along, you should start the process of [creating a new schema](./resources/schemas.md) and assigning it to a standard class before continuing with this guide.
 
 ## Remove fields added from standard field groups {#remove-field-group}
 
@@ -105,4 +105,4 @@ See the [Create and edit schemas in the UI guide](./resources/schemas.md#custom-
 
 ## Next steps
 
-This guide covered the new field-based workflows for the Schema Editor in the Platform UI. For more information about managing schemas in the UI, see the [UI overview](./overview.md).
+This guide covered the new field-based workflows for the Schema Editor in the Experience Platform UI. For more information about managing schemas in the UI, see the [UI overview](./overview.md).

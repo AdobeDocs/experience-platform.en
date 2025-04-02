@@ -65,7 +65,7 @@ The sample notebooks are intended to be used in one of two ways:
 1. As a tutorial for using Platform data in ML workflows.
     - Ideally, use a dedicated Platform sandbox for completing the tutorial. The use of a dedicated sandbox will avoid mixing synthetic data with real customer data. You can reset or delete the sandbox after completing the tutorial to free it up for other use. See the documentation to learn how to [create a new sandbox](../../../sandboxes/ui/user-guide.md#create), or to [swtich between them](../../../sandboxes/ui/user-guide.md#switch-between-sandboxes).
     - Clone or download this repository to create a copy in your ML environment.
-    - Follow the instructions in the [getting started](#getting-started) section to get an Platform API credential with the necessary permissions and update the `config.ini` file with the required values.
+    - Follow the instructions in the [getting started](#getting-started) section to get an Experience Platform API credential with the necessary permissions and update the `config.ini` file with the required values.
     - Review and execute the cells in each notebook in order to demonstrate and validate the workflow in your environment.
     - Modify the code in the notebooks as needed to adapt to your environment.
 2. As a template for Platform-related ML projects for your organization.
@@ -80,9 +80,9 @@ The sample notebooks are intended to be used in one of two ways:
 
 <!-- ## Getting started {#getting-started}
 
-There are several steps necessary to get started with the CMLE notebooks. The CMLE notebooks make use of the [aepp](https://github.com/adobe/aepp/tree/main) package, which provides functions for making requests to [Platform APIs](https://developer.adobe.com/experience-platform-apis/). 
+There are several steps necessary to get started with the CMLE notebooks. The CMLE notebooks make use of the [aepp](https://github.com/adobe/aepp/tree/main) package, which provides functions for making requests to [Experience Platform APIs](https://developer.adobe.com/experience-platform-apis/). 
 
-The following steps are required to set up access to Platform APIs through `aepp`. If you wish to code requests to Platform APIs yourself rather than use `aepp`, you will still need to complete these steps to get a credential with the necessary permissions and store it safely. -->
+The following steps are required to set up access to Experience Platform APIs through `aepp`. If you wish to code requests to Experience Platform APIs yourself rather than use `aepp`, you will still need to complete these steps to get a credential with the necessary permissions and store it safely. -->
 
 <!-- ### Step 1: Create an API credential in the Adobe Developer Console {#create-api-credential}
 
@@ -99,7 +99,7 @@ Is this the correct doc to link to about creating an Oauth2 API credential?:
 
 <!-- ### Step 2: Get the necessary attribute-based access control permissions for your credential {#get-permissions}
 
-An API credential will not be able to access Platform APIs without explicit permissions granted by your organization's Adobe System Admin for specific Platform services and data. A System Admin can [assign the API credential to a role](../../../landing/api-authentication.md#assign-api-to-a-role) and manage permissions for role in the [!UICONTROL Permissions] UI in Platform. 
+An API credential will not be able to access Experience Platform APIs without explicit permissions granted by your organization's Adobe System Admin for specific Platform services and data. A System Admin can [assign the API credential to a role](../../../landing/api-authentication.md#assign-api-to-a-role) and manage permissions for role in the [!UICONTROL Permissions] UI in Platform. 
 
 You will need to provide your system admin with the name and technical account email of your API credential. System admins can refer to the documentation to find information about how to [manage API credentials for a role](../../../access-control/abac/ui/permissions.md#manage-api-credentials-for-role) and [grant the required permissions to access Platform resources](../../../landing/api-authentication.md#get-abac-permissions).
 
@@ -155,8 +155,8 @@ model_name=cmle_propensity_model
 
 You will need to update the file with values for the following fields:
 
-- `ims_org_id`: You can easily find the IMS Org ID by clicking `CTRL+i` anywhere in the Platform UI
-- `sandbox_name`: Refer to [Sandboxes](https://experience.adobe.com/platform/sandbox/browse?limit=50&page=1&sortField=title) in the Platform UI to find the name (not the title) of the sandbox you will be using
+- `ims_org_id`: You can easily find the IMS Org ID by clicking `CTRL+i` anywhere in the Experience Platform UI
+- `sandbox_name`: Refer to [Sandboxes](https://experience.adobe.com/platform/sandbox/browse?limit=50&page=1&sortField=title) in the Experience Platform UI to find the name (not the title) of the sandbox you will be using
 - `client_id`: The Client ID for the API credential obtained in [Step 1](#step-1-create-an-api-credential-in-the-adobe-developer-console)
 - `client_secret`: The Client Secret for the API credential obtained in [Step 1](#step-1-create-an-api-credential-in-the-adobe-developer-console)
 - `tech_acct_id`: The Technical Account Email for the API credential obtained in [Step 1](#step-1-create-an-api-credential-in-the-adobe-developer-console)
@@ -169,9 +169,9 @@ The `[Cloud]` section is pre-populated for the example use case illustrated in t
 
 If you are using git with your copy of the CMLE directory, be sure to add the config.ini file to `.gitignore` to avoid accidentally publishing your credential information to a remote repository. -->
 
-<!-- ### Step 4: Configure `aepp` to authenticate with Platform APIs
+<!-- ### Step 4: Configure `aepp` to authenticate with Experience Platform APIs
 
-To use the `aepp` package in your code you will need to read the config.ini file using the standard `configparser` package and configure the connection to the Platform APIs. The following cell from the [Synthetic data generation](../notebooks/SyntheticData.ipynb) notebook provides an example:
+To use the `aepp` package in your code you will need to read the config.ini file using the standard `configparser` package and configure the connection to the Experience Platform APIs. The following cell from the [Synthetic data generation](../notebooks/SyntheticData.ipynb) notebook provides an example:
 
 ```python
 import os
@@ -205,7 +205,7 @@ aepp.configure(
 
 If necessary, modify the `config_path` in your code with the actual location of your config.ini file.
 
-You can test the connection to Platform APIs by executing the following lines:
+You can test the connection to Experience Platform APIs by executing the following lines:
 
 ```python
 from aepp import schema
@@ -221,4 +221,4 @@ If the connection test above is unsuccessful, you will likely get `KeyError: 'te
 - Confirm with your Adobe System Admin that your API credential has been added to a Role that has the permissions specified above.
 - Check your `config.ini` file and make sure that your environment and credential information is correct.
 
-If your configuration is correct and you are able to successfully make calls to `aepp` methods, you may sometimes get an unsuccessful response from the Platform server. This may happen if you try to create an object in Platform that already exists, or get an object that does not exist, or attempt to send a malformed payload with a request. Most `aepp` methods make a request to an Platform API endpoint and return the response from the server. Print the response and review it to get error message from the API. This will usually give you enough information to understand the problem with the request and fix it. -->
+If your configuration is correct and you are able to successfully make calls to `aepp` methods, you may sometimes get an unsuccessful response from the Platform server. This may happen if you try to create an object in Platform that already exists, or get an object that does not exist, or attempt to send a malformed payload with a request. Most `aepp` methods make a request to an Experience Platform API endpoint and return the response from the server. Print the response and review it to get error message from the API. This will usually give you enough information to understand the problem with the request and fix it. -->

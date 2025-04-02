@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;popular topics;analytics;mixpanel
 solution: Experience Platform
 title: Create a Dataflow Using an Analytics Source in the UI
-description: This tutorial provides steps on how to create a dataflow for an analytics source using Platform UI.
+description: This tutorial provides steps on how to create a dataflow for an analytics source using Experience Platform UI.
 exl-id: 108a69e5-d7d9-4ca1-a364-38ea54aa74ff
 ---
 # Create a dataflow using an analytics source in the UI
 
-A dataflow is a scheduled task that retrieves and ingests data from a source to a dataset in Adobe Experience Platform. This tutorial provides steps on how to create a dataflow for an analytics source using the Platform UI.
+A dataflow is a scheduled task that retrieves and ingests data from a source to a dataset in Adobe Experience Platform. This tutorial provides steps on how to create a dataflow for an analytics source using the Experience Platform UI.
 
 >[!NOTE]
 >
@@ -143,6 +143,6 @@ By following this tutorial, you have successfully created a dataflow to bring da
 
 >[!WARNING]
 >
-> The Platform UI shown in the following video is out-of-date. Please refer to the documentation above for the latest UI screenshots and functionality.
+> The Experience Platform UI shown in the following video is out-of-date. Please refer to the documentation above for the latest UI screenshots and functionality.
 >
 >[!VIDEO](https://video.tv.adobe.com/v/29711?quality=12&learn=on)

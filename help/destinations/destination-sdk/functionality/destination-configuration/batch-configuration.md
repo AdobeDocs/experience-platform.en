@@ -7,12 +7,12 @@ exl-id: 0ffbd558-a83c-4c3d-b4fc-b6f7a23a163a
 
 Use the batch configuration options in Destination SDK to allow users to customize the exported file names and to configure the export schedule according to their preference.
 
-When you create file-based destinations through Destination SDK, you can configure default file naming and export schedules, or you can give users the option to configure these settings from the Platform UI. For instance, you can configure behaviors such as:
+When you create file-based destinations through Destination SDK, you can configure default file naming and export schedules, or you can give users the option to configure these settings from the Experience Platform UI. For instance, you can configure behaviors such as:
 
 * Including specific information in the file name, such as audience IDs, destination IDs, or custom information.
-* Allowing users to customize the file naming from the Platform UI.
+* Allowing users to customize the file naming from the Experience Platform UI.
 * Configure file exports to occur at set time intervals.
-* Define what file naming and export schedule customization options the users can see in the Platform UI.
+* Define what file naming and export schedule customization options the users can see in the Experience Platform UI.
 
 Batch configuration settings are part of the destination configuration for file-based destinations. 
 
@@ -23,7 +23,7 @@ You can configure the file naming and export schedule settings via the `/authori
 * [Create a destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Update a destination configuration](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-This article describes all the supported batch configuration options that you can use for your destination, and shows what customers will see in the Platform UI.
+This article describes all the supported batch configuration options that you can use for your destination, and shows what customers will see in the Experience Platform UI.
 
 >[!IMPORTANT]
 >

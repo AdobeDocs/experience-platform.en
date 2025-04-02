@@ -13,14 +13,14 @@ Labels can be applied to individual schemas, and fields within those schemas. Wh
 
 In addition, any field label that you add in one schema propagates to all other schemas that employ the same field from a shared class or field group. This helps to ensure that usage rules for similar fields are consistent across your entire data model.
 
-This tutorial covers the steps for adding labels to a schema using the Schema Editor in the Platform UI.
+This tutorial covers the steps for adding labels to a schema using the Schema Editor in the Experience Platform UI.
 
 ## Getting started
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
-  * [Schema Editor](../ui/overview.md): Learn how to create and manage schemas and other resources in the Platform UI.
+  * [Schema Editor](../ui/overview.md): Learn how to create and manage schemas and other resources in the Experience Platform UI.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Provides the infrastructure for enforcing data usage restrictions on Platform operations, using policies that define which marketing actions can (or cannot) be performed on labeled data.
 
 ## Select a schema or field to add labels to {#select-schema-field}

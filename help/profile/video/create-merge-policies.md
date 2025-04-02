@@ -1,6 +1,6 @@
 ---
 title: Create a Merge Policy in Adobe Experience Platform
-description: This video provides a basic understanding of merge policies within Adobe Experience Platform and outlines how to define merge policies using the Platform UI.
+description: This video provides a basic understanding of merge policies within Adobe Experience Platform and outlines how to define merge policies using the Experience Platform UI.
 product: experience platform
 type: Documentation
 solution: Experience Platform

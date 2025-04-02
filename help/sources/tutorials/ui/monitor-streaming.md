@@ -19,7 +19,7 @@ This tutorial requires a working understanding of the following components of Ad
 
 ## Monitor dataflows for streaming sources
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources for which you can create an account with.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources for which you can create an account with.
 
 To view existing dataflows for streaming sources, select **[!UICONTROL Dataflows]** from the top header.
 

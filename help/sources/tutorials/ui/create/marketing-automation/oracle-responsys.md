@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;oracle;
-title: (Beta) Create an Oracle Responsys source connection using Platform UI
-description: Learn how to connect Adobe Experience Platform to Oracle Responsys using Platform UI.
+title: (Beta) Create an Oracle Responsys source connection using Experience Platform UI
+description: Learn how to connect Adobe Experience Platform to Oracle Responsys using Experience Platform UI.
 hide: true
 hidefromtoc: true
 exl-id: 9ec5e1c2-3d9e-4729-be81-89a85d5ea782
 ---
-# (Beta) Create an [!DNL Oracle Responsys] source connection using Platform UI
+# (Beta) Create an [!DNL Oracle Responsys] source connection using Experience Platform UI
 
 >[!NOTE]
 >
@@ -39,7 +39,7 @@ Once you have gathered your required credentials, you can follow the steps below
 
 ## Connect your [!DNL Oracle Responsys] account
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 

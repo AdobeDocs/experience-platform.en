@@ -98,7 +98,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Platform UI screenshot showing how to fill in details for your destination](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
+![Experience Platform UI screenshot showing how to fill in details for your destination](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -129,13 +129,13 @@ In the [!UICONTROL Scheduling] step, create an export schedule for each audience
 * **[!UICONTROL Frequency]**: [!UICONTROL Daily]
 * **[!UICONTROL Date]**: Select the export start and end times as you wish.
 
-![Platform UI screenshot showing the audience scheduling step.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
+![Experience Platform UI screenshot showing the audience scheduling step.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
 
 The exported file name is currently not user-configurable. All files exported to the [!DNL LiveRamp - Onboarding] destination are automatically named based on the following template:
 
 `%ORGANIZATION_NAME%_%DESTINATION%_%DESTINATION_INSTANCE_ID%_%DATETIME%`
 
-![Platform UI screenshot showing the exported file name template.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-file-name.png)
+![Experience Platform UI screenshot showing the exported file name template.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-file-name.png)
 
 For example, the name of an exported file for an organization named [!DNL Luma] could look similar to this:
 

@@ -95,7 +95,7 @@ In order to collect consent data using the Adobe standard, you must have a Profi
 * [[!UICONTROL Consent and Preference Details]](../../../../xdm/field-groups/profile/consents.md)
 * [[!UICONTROL IdentityMap]](../../../../xdm/field-groups/profile/identitymap.md) (required if using the Platform Web or Mobile SDK to send consent signals)
 
-In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation, then select the **[!UICONTROL Browse]** tab to display a list of existing schemas. From here, select the name of the [!DNL Profile]-enabled schema that you want to add consent fields to. The screenshots in this section use the "Loyalty Members" schema built in the [schema creation tutorial](../../../../xdm/tutorials/create-schema-ui.md) as an example.
+In the Experience Platform UI, select **[!UICONTROL Schemas]** in the left navigation, then select the **[!UICONTROL Browse]** tab to display a list of existing schemas. From here, select the name of the [!DNL Profile]-enabled schema that you want to add consent fields to. The screenshots in this section use the "Loyalty Members" schema built in the [schema creation tutorial](../../../../xdm/tutorials/create-schema-ui.md) as an example.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/select-schema.png)
 

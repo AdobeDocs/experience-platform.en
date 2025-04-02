@@ -6,7 +6,7 @@ exl-id: 70d2a352-75bd-4bbc-98e6-aeea16306f63
 ---
 # Frequently asked questions {#faq}
 
-This document provides answers to frequently asked questions about Adobe Experience Platform Catalog Service and datasets. For questions and troubleshooting related to other Platform services, including issues encountered across all Platform APIs, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
+This document provides answers to frequently asked questions about Adobe Experience Platform Catalog Service and datasets. For questions and troubleshooting related to other Platform services, including issues encountered across all Experience Platform APIs, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
 
 ## Retention policies and rules {#retention-policies-and-rules}
 

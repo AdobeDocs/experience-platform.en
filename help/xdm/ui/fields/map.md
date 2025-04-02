@@ -38,10 +38,10 @@ Ensure that you are only using map-type fields when absolutely necessary, as the
 
 >[!NOTE]
 >
->The Platform UI has limitations in how it can extract the keys of map-type fields. Whereas object-type fields can be expanded, maps are displayed as a single field instead. Map fields created through the Schema Registry API that are not string or integer data types are displayed as "[!UICONTROL Complex]" data types.
+>The Experience Platform UI has limitations in how it can extract the keys of map-type fields. Whereas object-type fields can be expanded, maps are displayed as a single field instead. Map fields created through the Schema Registry API that are not string or integer data types are displayed as "[!UICONTROL Complex]" data types.
 
 ## Next steps
 
-After reading this document, you are now able to define map fields in the Platform UI. Remember that you can only use classes and field groups to add fields to schemas. To learn more about how to manage these resources in the UI, see the guides on creating and editing [classes](../resources/classes.md) and [field groups](../resources/field-groups.md).
+After reading this document, you are now able to define map fields in the Experience Platform UI. Remember that you can only use classes and field groups to add fields to schemas. To learn more about how to manage these resources in the UI, see the guides on creating and editing [classes](../resources/classes.md) and [field groups](../resources/field-groups.md).
 
 For more information on the capabilities of the [!UICONTROL Schemas] workspace, see the [[!UICONTROL Schemas] workspace overview](../overview.md).

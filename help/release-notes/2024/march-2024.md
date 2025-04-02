@@ -92,7 +92,7 @@ XDM is an open-source specification that provides common structures and definiti
 
 | Feature | Description |
 | --- | --- |
-| Experience Platform UI map datatype support | Further customize your Experience Data Model (XDM) data structure by defining map fields in the Platform UI. You can now create map fields in the Schema Editor to model flexible data structures or efficiently store key-value pairs. Select "Map" from the Type dropdown when defining a new field to configure subfields and assign them to field groups. Supported map value types are string and integer.<br>![The Schemas Editor with the Type and Map value type fields highlighted.](../2024/assets/march/maps.png "The Schemas Editor with the Type and Map value type fields highlighted."){width="100" zoomable="yes"}<br> To learn how to [define map fields in the UI](../../xdm/ui/fields/map.md), see the UI guide. |
+| Experience Platform UI map datatype support | Further customize your Experience Data Model (XDM) data structure by defining map fields in the Experience Platform UI. You can now create map fields in the Schema Editor to model flexible data structures or efficiently store key-value pairs. Select "Map" from the Type dropdown when defining a new field to configure subfields and assign them to field groups. Supported map value types are string and integer.<br>![The Schemas Editor with the Type and Map value type fields highlighted.](../2024/assets/march/maps.png "The Schemas Editor with the Type and Map value type fields highlighted."){width="100" zoomable="yes"}<br> To learn how to [define map fields in the UI](../../xdm/ui/fields/map.md), see the UI guide. |
 
 {style="table-layout:auto"}
 

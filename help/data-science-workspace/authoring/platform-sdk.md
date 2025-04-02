@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;developer guide;SDK;Data Access SDK;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Model Authoring Using the Adobe Experience Platform Platform SDK
+title: Model Authoring Using the Adobe Experience Platform SDK
 description: This tutorial provides you with information on converting data_access_sdk_python to the new Python platform_sdk in both Python and R.
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
 ---
-# Model authoring using the Adobe Experience Platform [!DNL Experience Platform] SDK
+# Model authoring using the Adobe [!DNL Experience Platform] SDK
 
 >[!NOTE]
 >

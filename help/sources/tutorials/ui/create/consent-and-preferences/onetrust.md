@@ -42,7 +42,7 @@ For more information on these credentials, see the [[!DNL OneTrust Integration] 
 >
 >The [!DNL OneTrust Integration] API specifications are being shared with Adobe for data ingestion.
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace for a catalog of sources available in Experience Platform.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace for a catalog of sources available in Experience Platform.
 
 Use the *[!UICONTROL Categories]* menu to filter sources by category. Alternatively, enter a source name in the search bar to find a specific source from the catalog.
 

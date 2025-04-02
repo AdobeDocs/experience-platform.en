@@ -23,7 +23,7 @@ The attribute data in the snapshot shows the data exactly as it appears at the s
 
 ## Explore the [!UICONTROL Audiences] dashboard {#explore}
 
-To navigate to the [!UICONTROL Audiences] dashboard within the Platform UI, select **[!UICONTROL Audiences]** in the left rail, then select the **[!UICONTROL Overview]** tab to display the dashboard.
+To navigate to the [!UICONTROL Audiences] dashboard within the Experience Platform UI, select **[!UICONTROL Audiences]** in the left rail, then select the **[!UICONTROL Overview]** tab to display the dashboard.
 
 >[!NOTE]
 >

@@ -38,9 +38,9 @@ In order for [!DNL Flow Service] to connect with [!DNL PayPal], you must provide
 
 For more information about getting started refer to [this PayPal document](https://developer.paypal.com/docs/api/overview/#get-credentials).
 
-### Using Platform APIs
+### Using Experience Platform APIs
 
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
+For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../../../landing/api-guide.md).
 
 ## Create a base connection
 

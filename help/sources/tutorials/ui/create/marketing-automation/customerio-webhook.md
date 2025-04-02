@@ -51,17 +51,17 @@ Before creating a [!DNL Customer.io] source connection, you will require a sourc
 
 You must also ensure that you create a Platform schema to use for your source. See the tutorial on [creating a Platform schema](../../../../../xdm/schema/composition.md) for comprehensive steps on how to create a schema.
 
-![Platform UI screenshot showing an example schema for Customer.io](../../../../images/tutorials/create/marketing-automation/customerio-webhook/schema.png)
+![Experience Platform UI screenshot showing an example schema for Customer.io](../../../../images/tutorials/create/marketing-automation/customerio-webhook/schema.png)
 
 ## Connect your [!DNL Customer.io] account {#connect-account}
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace and see a catalog of sources available in Experience Platform.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace and see a catalog of sources available in Experience Platform.
 
 Use the *[!UICONTROL Categories]* menu to filter sources by category. Alternatively, enter a source name in the search bar to find a specific source from the catalog.
 
 Go to the [!UICONTROL Marketing automation] category to see the [!DNL Customer.io] source card. To begin, select **[!UICONTROL Add data]**.
 
-![Platform UI screenshot for catalog with Customer.io card](../../../../images/tutorials/create/marketing-automation/customerio-webhook/catalog.png)
+![Experience Platform UI screenshot for catalog with Customer.io card](../../../../images/tutorials/create/marketing-automation/customerio-webhook/catalog.png)
 
 ## Select data {#select-data}
 
@@ -154,7 +154,7 @@ In the [!DNL Customer.io] user interface, input your [webhook URL](#get-streamin
 
 ## Next steps {#next-steps}
 
-By following this tutorial you have successfully configured a streaming dataflow to bring your [!DNL Customer.io] data to Experience Platform. To monitor the data that is being ingested, refer to the guide on [monitoring streaming dataflows using Platform UI](../../monitor-streaming.md).
+By following this tutorial you have successfully configured a streaming dataflow to bring your [!DNL Customer.io] data to Experience Platform. To monitor the data that is being ingested, refer to the guide on [monitoring streaming dataflows using Experience Platform UI](../../monitor-streaming.md).
 
 ## Additional resources {#additional-resources}
 
@@ -172,6 +172,6 @@ To validate that you have correctly set up the source and [!DNL Customer.io] mes
 
 ![Customer.io UI screenshot showing activity logs](../../../../images/tutorials/create/marketing-automation/customerio-webhook/activity-logs.png)
 
-* In the Platform UI, select **[!UICONTROL View Dataflows]** beside the [!DNL Customer.io] card menu on the sources catalog. Next, select **[!UICONTROL Preview dataset]** to verify the data that was ingested for the events that you have selected within [!DNL Customer.io].
+* In the Experience Platform UI, select **[!UICONTROL View Dataflows]** beside the [!DNL Customer.io] card menu on the sources catalog. Next, select **[!UICONTROL Preview dataset]** to verify the data that was ingested for the events that you have selected within [!DNL Customer.io].
 
-![Platform UI screenshot showing ingested events](../../../../images/tutorials/create/marketing-automation/customerio-webhook/platform-dataset.png)
+![Experience Platform UI screenshot showing ingested events](../../../../images/tutorials/create/marketing-automation/customerio-webhook/platform-dataset.png)

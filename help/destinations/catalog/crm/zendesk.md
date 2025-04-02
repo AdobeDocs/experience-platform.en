@@ -75,14 +75,14 @@ Fill in the required fields below. Refer to the [Gather [!DNL Zendesk] credentia
 * **[!UICONTROL Bearer Token]**: The Access Token you have generated in your [!DNL Zendesk] account.
 
 To authenticate to the destination, select **[!UICONTROL Connect to destination]**.
-![Platform UI screenshot showing how to authenticate.](../../assets/catalog/crm/zendesk/authenticate-destination.png)
+![Experience Platform UI screenshot showing how to authenticate.](../../assets/catalog/crm/zendesk/authenticate-destination.png)
 
 If the details provided are valid, the UI displays a **[!UICONTROL Connected]** status with a green check mark. You can then proceed to the next step.
 
 ### Fill in destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
-![Platform UI screenshot showing the destination details.](../../assets/catalog/crm/zendesk/destination-details.png)
+![Experience Platform UI screenshot showing the destination details.](../../assets/catalog/crm/zendesk/destination-details.png)
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -125,7 +125,7 @@ To correctly map your XDM fields to the [!DNL Zendesk] destination fields, follo
       |`xdm: person.name.firstName`|`xdm: first_name`| |
 
     * An example using these mappings is shown below:
-    ![Platform UI screenshot example with attribute mappings.](../../assets/catalog/crm/zendesk/mappings.png)
+    ![Experience Platform UI screenshot example with attribute mappings.](../../assets/catalog/crm/zendesk/mappings.png)
 
 >[!IMPORTANT]
 >
@@ -140,7 +140,7 @@ In the [[!UICONTROL Schedule audience export]](/help/destinations/ui/activate-se
 To do this, select each segment, then enter the corresponding custom field attribute from [!DNL Zendesk] in the **[!UICONTROL Mapping ID]** field.
 
 An example is shown below:
-![Platform UI screenshot example showing Schedule audience export.](../../assets/catalog/crm/zendesk/schedule-segment-export.png)
+![Experience Platform UI screenshot example showing Schedule audience export.](../../assets/catalog/crm/zendesk/schedule-segment-export.png)
 
 ## Validate data export {#exported-data}
 
@@ -148,10 +148,10 @@ To validate that you have correctly set up the destination, follow the steps bel
 
 1. Select **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** and navigate to the list of destinations.
 1. Next, select the destination and switch to the **[!UICONTROL Activation data]** tab, then select an audience name.
-![Platform UI screenshot example showing Destinations Activation Data.](../../assets/catalog/crm/zendesk/destinations-activation-data.png)
+![Experience Platform UI screenshot example showing Destinations Activation Data.](../../assets/catalog/crm/zendesk/destinations-activation-data.png)
 
 1. Monitor the audience summary and ensure that the count of profiles corresponds to the count within the segment.
-![Platform UI screenshot example showing Segment.](../../assets/catalog/crm/zendesk/segment.png)
+![Experience Platform UI screenshot example showing Segment.](../../assets/catalog/crm/zendesk/segment.png)
 
 1. Log in to the [!DNL Zendesk] website, then navigate to the **[!UICONTROL Contacts]** page to check if the profiles from the audience have been added. This list can be configured to display columns for the additional fields created with the audience**[!UICONTROL Mapping ID]** and audience statuses.
 ![Zendesk UI screenshot showing the Contacts page with the additional fields created with the audience name.](../../assets/catalog/crm/zendesk/contacts.png)

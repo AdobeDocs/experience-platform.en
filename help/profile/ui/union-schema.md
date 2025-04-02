@@ -2,12 +2,12 @@
 keywords: Experience Platform;profile;real-time customer profile;unified profile;Unified Profile;unified;Profile;rtcp;enable profile;Enable profile;Union schema;UNION PROFILE;union profile
 title: Union Schema UI Guide
 type: Documentation
-description: In the Adobe Experience Platform user interface (UI) you can easily view any union schema within your organization and preview the fields, identities, relationships, and contributing schemas for a specific class. This guide provides detailed information on how to view and explore union schemas using the Platform UI.
+description: In the Adobe Experience Platform user interface (UI) you can easily view any union schema within your organization and preview the fields, identities, relationships, and contributing schemas for a specific class. This guide provides detailed information on how to view and explore union schemas using the Experience Platform UI.
 exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
 ---
 # [!UICONTROL Union schema] UI guide
 
-In the Adobe Experience Platform user interface (UI) you can easily view any union schema within your organization and preview the fields, identities, relationships, and contributing schemas for a specific class. This guide provides detailed information on how to view and explore union schemas using the Platform UI.
+In the Adobe Experience Platform user interface (UI) you can easily view any union schema within your organization and preview the fields, identities, relationships, and contributing schemas for a specific class. This guide provides detailed information on how to view and explore union schemas using the Experience Platform UI.
 
 ## Getting started
 
@@ -27,7 +27,7 @@ Working with union schemas requires a deep understanding of XDM schemas. For mor
 
 ## View union schemas
 
-To navigate to union schemas within the Platform UI, select **[!UICONTROL Profiles]** from the left navigation, then select the **[!UICONTROL Union Schema]** tab. The [!UICONTROL Union Schema] tab opens to display the union schema for the currently selected class. 
+To navigate to union schemas within the Experience Platform UI, select **[!UICONTROL Profiles]** from the left navigation, then select the **[!UICONTROL Union Schema]** tab. The [!UICONTROL Union Schema] tab opens to display the union schema for the currently selected class. 
 
 ![The Union Schema page is displayed, with the Profile and Union Schema tab highlighted.](../images/union-schema/landing.png)
 
