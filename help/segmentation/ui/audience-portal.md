@@ -388,7 +388,7 @@ You can also enrich existing audiences in Adobe Experience Platform by utilizing
 
 ### Data Distiller {#data-distiller}
 
-In Data Distiller, you can use a SQL extension to build audiences from the data lake. This data includes existing dimension entities such as customer attributes or product information.
+You can use Data Distiller's SQL extension to build audiences from the data lake. This data includes existing dimension entities such as customer attributes or product information.
 
 More information about Data Distiller can be found in the [building audiences using SQL guide](../../query-service/data-distiller-audiences/overview.md).
 
