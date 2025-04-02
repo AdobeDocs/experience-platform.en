@@ -33,7 +33,7 @@ Once the **[!DNL Register Server]** dialog appears for a PostgresSQL server, pro
 
 ### [!DNL Query Service] credentials
 
-To find your credentials, log in to the [!DNL Platform] UI and select **[!UICONTROL Queries]** from the left navigation, followed by **[!UICONTROL Credentials]**. For complete directions to find your login credentials, host, port, and database name, please read the [credentials guide](../ui/credentials.md).
+To find your credentials, log in to the [!DNL Experience Platform] UI and select **[!UICONTROL Queries]** from the left navigation, followed by **[!UICONTROL Credentials]**. For complete directions to find your login credentials, host, port, and database name, please read the [credentials guide](../ui/credentials.md).
 
 [!DNL Query Service] also offers non-expiring credentials to allow for a one-time setup with third-party clients. See the documentation for [full instructions on how to generate and use non-expiring credentials](../ui/credentials.md#non-expiring-credentials).
 

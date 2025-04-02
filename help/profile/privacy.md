@@ -24,7 +24,7 @@ This document covers essential concepts related to processing privacy requests f
 
 ## Getting started
 
-This guide requires a working understanding of the following [!DNL Platform] components:
+This guide requires a working understanding of the following [!DNL Experience Platform] components:
 
 * [[!DNL Privacy Service]](../privacy-service/home.md): Manages customer requests for accessing, opting out of sale, or deleting their personal data across Adobe Experience Cloud applications.
 * [[!DNL Identity Service]](../identity-service/home.md): Solves the fundamental challenge posed by the fragmentation of customer experience data by bridging identities across devices and systems.
@@ -184,7 +184,7 @@ To ensure that your privacy requests process all relevant customer attributes, y
 
 ## Delete request processing {#delete}
 
-When [!DNL Experience Platform] receives a delete request from [!DNL Privacy Service], [!DNL Platform] sends confirmation to [!DNL Privacy Service] that the request has been received and affected data has been marked for deletion. The records are then removed once the privacy job has completed.
+When [!DNL Experience Platform] receives a delete request from [!DNL Privacy Service], [!DNL Experience Platform] sends confirmation to [!DNL Privacy Service] that the request has been received and affected data has been marked for deletion. The records are then removed once the privacy job has completed.
 
 >[!IMPORTANT]
 >
@@ -196,8 +196,8 @@ Depending on whether you also included Identity Service (`identity`) and the dat
 | --- | --- |
 | `ProfileService` only | The profile is immediately deleted as soon as Platform sends the confirmation that the deletion request was received. However, the profile's identity graph still remains, and the profile can potentially be reconstructed as new data with the same identities is ingested. The data associated with the profile also remains in the data lake. |
 | `ProfileService` and `identity` | The profile and its associated identity graph are immediately deleted as soon as Platform sends the confirmation that the deletion request was received. The data associated with the profile remains in the data lake. |
-| `ProfileService` and `aepDataLake` | The profile is immediately deleted as soon as Platform sends the confirmation that the deletion request was received. However, the profile's identity graph still remains, and the profile can potentially be reconstructed as new data with the same identities is ingested.<br><br>When the data lake product responds that the request was received and is currently processing, the data associated with the profile is soft-deleted and is therefore not accessible by any [!DNL Platform] service. Once the job is completed, the data is removed from the data lake completely. |
-| `ProfileService`, `identity`, and `aepDataLake` | The profile and its associated identity graph are immediately deleted as soon as Platform sends the confirmation that the deletion request was received.<br><br>When the data lake product responds that the request was received and is currently processing, the data associated with the profile is soft-deleted and is therefore not accessible by any [!DNL Platform] service. Once the job is completed, the data is removed from the data lake completely. |
+| `ProfileService` and `aepDataLake` | The profile is immediately deleted as soon as Platform sends the confirmation that the deletion request was received. However, the profile's identity graph still remains, and the profile can potentially be reconstructed as new data with the same identities is ingested.<br><br>When the data lake product responds that the request was received and is currently processing, the data associated with the profile is soft-deleted and is therefore not accessible by any [!DNL Experience Platform] service. Once the job is completed, the data is removed from the data lake completely. |
+| `ProfileService`, `identity`, and `aepDataLake` | The profile and its associated identity graph are immediately deleted as soon as Platform sends the confirmation that the deletion request was received.<br><br>When the data lake product responds that the request was received and is currently processing, the data associated with the profile is soft-deleted and is therefore not accessible by any [!DNL Experience Platform] service. Once the job is completed, the data is removed from the data lake completely. |
 
 Refer to the [[!DNL Privacy Service] documentation](../privacy-service/home.md#monitor) for more information on tracking job statuses.
 
@@ -219,4 +219,4 @@ Privacy Service is only able to process [!DNL Profile] data using a merge policy
 
 By reading this document, you have been introduced to the important concepts involved with processing privacy requests in [!DNL Experience Platform]. To deepen your understanding of how to manage identity data and create privacy jobs, continue reading the documentation provided in this guide.
 
-For information on processing privacy requests for [!DNL Platform] resources not used by [!DNL Profile], see the document on [privacy request processing in the data lake](../catalog/privacy.md).
+For information on processing privacy requests for [!DNL Experience Platform] resources not used by [!DNL Profile], see the document on [privacy request processing in the data lake](../catalog/privacy.md).

@@ -327,6 +327,6 @@ The following video is intended to support your understanding of ingesting data 
 
 >[!WARNING]
 >
-> The [!DNL Platform] UI shown in the following video is out-of-date. Please refer to the documentation above for the latest UI screenshots and functionality.
+> The [!DNL Experience Platform] UI shown in the following video is out-of-date. Please refer to the documentation above for the latest UI screenshots and functionality.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)

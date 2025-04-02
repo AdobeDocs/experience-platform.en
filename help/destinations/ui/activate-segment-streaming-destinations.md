@@ -119,7 +119,7 @@ To see all the audiences being activated to your destination, use the filtering 
 
         ![Mapping ID dropdown highlighted.](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
 
-    * Some destinations require you to manually map [!DNL Platform] audiences to their counterpart in the target destination. To do this, select each audience, then enter the corresponding audience ID from the destination platform in the **[!UICONTROL Mapping ID]** field. If your destination does not include this field, skip this step.
+    * Some destinations require you to manually map [!DNL Experience Platform] audiences to their counterpart in the target destination. To do this, select each audience, then enter the corresponding audience ID from the destination platform in the **[!UICONTROL Mapping ID]** field. If your destination does not include this field, skip this step.
 
         ![Origin of audience dropdown highlighted.](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
 

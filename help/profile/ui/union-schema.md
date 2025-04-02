@@ -14,8 +14,8 @@ In the Adobe Experience Platform user interface (UI) you can easily view any uni
 This UI guide requires an understanding of the various [!DNL Experience Platform] services involved with managing Real-Time Customer Profile data. Before reading this guide, or working in the UI, please review the documentation for the following services:
 
 * [[!DNL Real-Time Customer Profile]](../home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-* [[!DNL Identity Service]](../../identity-service/home.md): Enables [!DNL Real-Time Customer Profile] by bridging identities from disparate data sources as they are ingested into [!DNL Platform].
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
+* [[!DNL Identity Service]](../../identity-service/home.md): Enables [!DNL Real-Time Customer Profile] by bridging identities from disparate data sources as they are ingested into [!DNL Experience Platform].
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
 
 ## Understanding union schemas
 

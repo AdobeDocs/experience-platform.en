@@ -15,7 +15,7 @@ This tutorial uses the [[!DNL Flow Service] API](https://www.adobe.io/experience
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes experience data.
+* [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes experience data.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, consumer profile in real time based on aggregated data from multiple sources.
 
 Additionally, creating a streaming connection requires you to have a target XDM schema and a dataset. To learn how to create these, please read the tutorial on [streaming record data](../../../../../ingestion/tutorials/streaming-record-data.md) or the tutorial on [streaming time-series data](../../../../../ingestion/tutorials/streaming-time-series-data.md).

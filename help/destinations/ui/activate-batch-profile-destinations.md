@@ -287,7 +287,7 @@ In this step, you must select the profile attributes that you want to add to the
 
 A mandatory attribute is a user-enabled checkbox which ensures all profile records contain the selected attribute. For example: all exported profiles contain an email address.​
 
-You can mark attributes as mandatory to ensure that [!DNL Platform] exports only the profiles that include the specific attribute. As a result, it can be used as an additional form of filtering. Marking an attribute as mandatory is **not** required.
+You can mark attributes as mandatory to ensure that [!DNL Experience Platform] exports only the profiles that include the specific attribute. As a result, it can be used as an additional form of filtering. Marking an attribute as mandatory is **not** required.
 
 Not selecting a mandatory attribute exports all qualified profiles regardless of their attributes.
 
@@ -304,7 +304,7 @@ A deduplication key is a user-defined primary key which determines the identity 
 
 Deduplication keys eliminate the possibility of having multiple records of the same profile in one export file.
 
-There are three ways you can use deduplication keys in [!DNL Platform]:
+There are three ways you can use deduplication keys in [!DNL Experience Platform]:
 
 * Using a single identity namespace as a [!UICONTROL deduplication key]
 * Using a single profile attribute from an [!DNL XDM] profile as a [!UICONTROL deduplication key]

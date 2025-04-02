@@ -169,7 +169,7 @@ write_tracker = dataset_writer.write({PANDA_DATAFRAME}, file_format='json')
 
 ### Query data using [!DNL Query Service] in [!DNL Python] {#query-data-python}
 
-[!DNL JupyterLab] on [!DNL Platform] allows you to use SQL in a [!DNL Python] notebook to access data through [Adobe Experience Platform Query Service](https://www.adobe.com/go/query-service-home-en). Accessing data through [!DNL Query Service] can be useful for dealing with large datasets due to its superior running times. Be advised that querying data using [!DNL Query Service] has a processing time limit of ten minutes.
+[!DNL JupyterLab] on [!DNL Experience Platform] allows you to use SQL in a [!DNL Python] notebook to access data through [Adobe Experience Platform Query Service](https://www.adobe.com/go/query-service-home-en). Accessing data through [!DNL Query Service] can be useful for dealing with large datasets due to its superior running times. Be advised that querying data using [!DNL Query Service] has a processing time limit of ten minutes.
 
 Before you use [!DNL Query Service] in [!DNL JupyterLab], ensure you have a working understanding of the [[!DNL Query Service] SQL syntax](https://www.adobe.com/go/query-service-sql-syntax-en).
 

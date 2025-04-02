@@ -198,7 +198,7 @@ curl -X POST \
 
 ## Delete request processing
 
-When [!DNL Experience Platform] receives a delete request from [!DNL Privacy Service], [!DNL Platform] sends confirmation to [!DNL Privacy Service] that the request has been received and affected data has been marked for deletion. The records are then removed from the data lake within seven days. During that seven-day window, the data is soft-deleted and is therefore not accessible by any [!DNL Platform] service.
+When [!DNL Experience Platform] receives a delete request from [!DNL Privacy Service], [!DNL Experience Platform] sends confirmation to [!DNL Privacy Service] that the request has been received and affected data has been marked for deletion. The records are then removed from the data lake within seven days. During that seven-day window, the data is soft-deleted and is therefore not accessible by any [!DNL Experience Platform] service.
 
 If you also included `ProfileService` or `identity` in the privacy request, their associated data is handled separately. See the section on [delete request processing for Profile](../profile/privacy.md#delete) for more information.
 

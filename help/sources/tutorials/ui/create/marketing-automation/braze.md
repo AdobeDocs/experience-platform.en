@@ -105,4 +105,4 @@ Within the [!DNL Braze Dashboard], navigate to Partner Integrations **->** Data 
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your [!DNL Braze] account. You can now continue on to the next tutorial and [configure a dataflow to bring marketing automation system data into [!DNL Platform]](../../dataflow/marketing-automation.md).
+By following this tutorial, you have established a connection to your [!DNL Braze] account. You can now continue on to the next tutorial and [configure a dataflow to bring marketing automation system data into [!DNL Experience Platform]](../../dataflow/marketing-automation.md).

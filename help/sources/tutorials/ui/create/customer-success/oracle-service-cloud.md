@@ -25,7 +25,7 @@ If you already have a valid Oracle Service Cloud source connection, you may skip
 
 ### Gather required credentials
 
-In order to access your Oracle Service Cloud account on [!DNL Platform], you must provide the following values:
+In order to access your Oracle Service Cloud account on [!DNL Experience Platform], you must provide the following values:
 
 | Credential | Description |
 | ---------- | ----------- |

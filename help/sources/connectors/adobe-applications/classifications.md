@@ -7,7 +7,7 @@ exl-id: c26002df-dce4-415e-93e9-268e0efebc9f
 ---
 # Adobe Analytics source connector for classifications data
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Experience Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
 [!DNL Experience Platform] provides support for ingesting Analytics Classifications data into Adobe Experience Platform.
 

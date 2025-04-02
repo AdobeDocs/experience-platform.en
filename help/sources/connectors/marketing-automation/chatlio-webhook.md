@@ -41,7 +41,7 @@ For more information, read the tutorials on [getting your streaming endpoint URL
 
 ## Connect [!DNL Chatlio] to Platform {#connect-to-platform}
 
-The documentation below provides information on how to create a [!DNL Chatlio] streaming connector to connect with [!DNL Platform] using APIs or the user interface:
+The documentation below provides information on how to create a [!DNL Chatlio] streaming connector to connect with [!DNL Experience Platform] using APIs or the user interface:
 
 ### Connect [!DNL Chatlio] to Platform using APIs {#connect-to-platform-using-api}
 

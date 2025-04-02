@@ -7,7 +7,7 @@ exl-id: c365b6d8-0432-41a5-9a07-44a995f69b7d
 ---
 # Audit events endpoint
 
-Audit logs are used to provide details of user activity for various services and capabilities. Each action recorded in a log contains metadata that indicates the action type, date and time, the email ID of the user who performed the action, and additional attributes relevant to the action type. The `/audit/events` endpoint in the [!DNL Audit Query] API allows you to programmatically retrieve event data for your organization's activity in [!DNL Platform].
+Audit logs are used to provide details of user activity for various services and capabilities. Each action recorded in a log contains metadata that indicates the action type, date and time, the email ID of the user who performed the action, and additional attributes relevant to the action type. The `/audit/events` endpoint in the [!DNL Audit Query] API allows you to programmatically retrieve event data for your organization's activity in [!DNL Experience Platform].
 
 ## Getting started
 

@@ -14,7 +14,7 @@ exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
 Note the following details that are specific to [!DNL Google Ads] destinations:
 
 * Activated audiences are created programmatically in the [!DNL Google] platform.
-* [!DNL Platform] does not currently include a measurement metric to validate successful activation. Refer to the audience counts in Google to validate the integration and understand audience targeting size.
+* [!DNL Experience Platform] does not currently include a measurement metric to validate successful activation. Refer to the audience counts in Google to validate the integration and understand audience targeting size.
 
 >[!IMPORTANT]
 >

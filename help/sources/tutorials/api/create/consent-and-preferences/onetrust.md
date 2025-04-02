@@ -95,7 +95,7 @@ A successful response returns the newly created base connection, including its u
 
 Using the base connection ID you generated in the previous step, you can explore files and directories by performing GET requests.
 
-Use the following calls to find the path of the file you wish to bring into [!DNL Platform]:
+Use the following calls to find the path of the file you wish to bring into [!DNL Experience Platform]:
 
 **API format**
 

@@ -17,7 +17,7 @@ Read this guide to learn how to connect your [!DNL Snowflake] account to Adobe E
 
 This tutorial requires a working understanding of the following components of Experience Platform:
 
-* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
+* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Experience Platform] services.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 >[!NOTE]
@@ -121,4 +121,4 @@ The rest of the workflow will remain the same. The only caveat is that skipping 
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your Snowflake account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Platform]](../../dataflow/databases.md).
+By following this tutorial, you have established a connection to your Snowflake account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Experience Platform]](../../dataflow/databases.md).

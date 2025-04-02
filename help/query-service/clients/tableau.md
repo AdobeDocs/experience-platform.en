@@ -24,7 +24,7 @@ Instructions on how to [connect to a PostgreSQL server with Tableau](https://hel
 | **[!DNL Username]** | This is your Platform organization ID. Use the value of your Experience Platform **[!UICONTROL Username]** credential. The ID will be in the format of `ORG_ID@AdobeOrg`. |
 | **[!DNL Password]** | This alphanumeric string is your Experience Platform **[!UICONTROL Password]** credential. If you want to use non-expiring credentials, this value is the concatenated arguments from the `technicalAccountID` and the `credential` downloaded in the configuration JSON file. The password value takes the form: {technicalAccountId}:{credential}. The configuration JSON file for non-expiring credentials is a one-time download during their initialization that Adobe does not keep a copy of. |
 
-For more information on finding your username, password, and login credentials, please read the [credentials guide](../ui/credentials.md). To find your credentials, log in to [!DNL Platform], then select **[!UICONTROL Queries]**, followed by **[!UICONTROL Credentials]**.
+For more information on finding your username, password, and login credentials, please read the [credentials guide](../ui/credentials.md). To find your credentials, log in to [!DNL Experience Platform], then select **[!UICONTROL Queries]**, followed by **[!UICONTROL Credentials]**.
 
 >[!IMPORTANT]
 >

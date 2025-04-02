@@ -76,9 +76,9 @@ The following table describes the abstract methods of a [!DNL Spark] Data Loader
     </tbody>
 </table>
 
-### Load data from a [!DNL Platform] dataset {#load-data-from-a-platform-dataset}
+### Load data from an [!DNL Experience Platform] dataset {#load-data-from-a-platform-dataset}
 
-The following example retrieves [!DNL Platform] data by ID and returns a DataFrame, where the dataset ID (`datasetId`) is a defined property in the configuration file.
+The following example retrieves [!DNL Experience Platform] data by ID and returns a DataFrame, where the dataset ID (`datasetId`) is a defined property in the configuration file.
 
 **PySpark**
 
@@ -250,14 +250,14 @@ The following table describes the abstract methods of a [!DNL Spark] Data Saver 
     </tbody>
 </table>
 
-### Save data to a [!DNL Platform] dataset {#save-data-to-a-platform-dataset}
+### Save data to an [!DNL Experience Platform] dataset {#save-data-to-a-platform-dataset}
 
-In order to store data onto a [!DNL Platform] dataset, the properties must be either provided or defined in the configuration file:
+In order to store data onto an [!DNL Experience Platform] dataset, the properties must be either provided or defined in the configuration file:
 
-- A valid [!DNL Platform] dataset ID to which data will be stored
+- A valid [!DNL Experience Platform] dataset ID to which data will be stored
 - The tenant ID belonging to your organization
 
-The following examples store data (`prediction`) onto a [!DNL Platform] dataset, where the dataset ID (`datasetId`) and tenant ID (`tenantId`) are defined properties within the configuration file.
+The following examples store data (`prediction`) onto an [!DNL Experience Platform] dataset, where the dataset ID (`datasetId`) and tenant ID (`tenantId`) are defined properties within the configuration file.
 
 
 **PySpark**

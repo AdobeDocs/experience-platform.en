@@ -7,7 +7,7 @@ exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
 ---
 # Basics of schema composition
 
-Learn about Experience Data Model (XDM) schemas and the building blocks, principles, and best practices for composing schemas in Adobe Experience Platform. For general information on XDM and how it is used within [!DNL Platform], see the [XDM System overview](../home.md).
+Learn about Experience Data Model (XDM) schemas and the building blocks, principles, and best practices for composing schemas in Adobe Experience Platform. For general information on XDM and how it is used within [!DNL Experience Platform], see the [XDM System overview](../home.md).
 
 ## Understanding schemas {#understanding-schemas}
 
@@ -117,7 +117,7 @@ Since maintaining backwards compatibility is crucial for schema evolution, Exper
 
 >[!NOTE]
 >
->You can only introduce a breaking change to a schema if it has not yet been used to ingest data into Experience Platform and hasn't been enabled for use in Real-Time Customer Profile. However, once the schema has been used in [!DNL Platform], it must adhere to the additive versioning policy.
+>You can only introduce a breaking change to a schema if it has not yet been used to ingest data into Experience Platform and hasn't been enabled for use in Real-Time Customer Profile. However, once the schema has been used in [!DNL Experience Platform], it must adhere to the additive versioning policy.
 
 The following table breaks down which changes are supported when editing schemas, field groups, and data types:
 
@@ -151,7 +151,7 @@ In order to ingest data into Experience Platform, a dataset must first be create
 
 ## Building blocks of a schema {#schema-building-blocks}
 
-Experience Platform uses a composition approach in which standard building blocks are combined to create schemas. This approach promotes the reusability of existing components and drives standardization across the industry to support vendor schemas and components in [!DNL Platform].
+Experience Platform uses a composition approach in which standard building blocks are combined to create schemas. This approach promotes the reusability of existing components and drives standardization across the industry to support vendor schemas and components in [!DNL Experience Platform].
 
 Schemas are composed using the following formula:
 
@@ -205,9 +205,9 @@ For example, to capture details such as "[!UICONTROL First Name]" and "[!UICONTR
 
 >[!NOTE]
 >
->You are strongly recommended to use standard field groups whenever possible in your schemas, since these fields are implicitly understood by Experience Platform services and provide greater consistency when used across [!DNL Platform] components.
+>You are strongly recommended to use standard field groups whenever possible in your schemas, since these fields are implicitly understood by Experience Platform services and provide greater consistency when used across [!DNL Experience Platform] components.
 >
->Fields provided by standard components (such as "First Name" and "Email Address") contain added connotations beyond basic scalar field types. They tell [!DNL Platform] that any fields sharing the same data type will behave in the same way. This behavior can be trusted to be consistent regardless of where the data is coming from, or in which [!DNL Platform] service the data is being used.
+>Fields provided by standard components (such as "First Name" and "Email Address") contain added connotations beyond basic scalar field types. They tell [!DNL Experience Platform] that any fields sharing the same data type will behave in the same way. This behavior can be trusted to be consistent regardless of where the data is coming from, or in which [!DNL Experience Platform] service the data is being used.
 
 Remember that schemas are composed of "zero or more" field groups, so this means that you could compose a valid schema without using any field groups at all.
 
@@ -272,7 +272,7 @@ The valid ranges of these scalar types can be further constrained to certain pat
 
 ## Composition example {#composition-example}
 
-Schemas are built using a composition model and represent the format and structure of data to be ingested into [!DNL Platform]. As previously mentioned, these schemas are composed of a class and zero or more field groups that are compatible with that class.
+Schemas are built using a composition model and represent the format and structure of data to be ingested into [!DNL Experience Platform]. As previously mentioned, these schemas are composed of a class and zero or more field groups that are compatible with that class.
 
 For example, a schema describing purchases made at a retail store might be called "[!UICONTROL Store Transactions]". The schema implements the [!DNL XDM ExperienceEvent] class combined with the standard [!UICONTROL Commerce] field group and a user-defined [!UICONTROL Product Info] field group. 
 
@@ -288,7 +288,7 @@ While Experience Platform allows you to compose schemas for particular use cases
 
 ![A union schema flow diagram that portrays the fields that compose them.](../images/schema-composition/union.png)
 
-By enabling a schema for use with [!DNL Real-Time Customer Profile], it is included in the union for that class type. [!DNL Profile] delivers robust, centralized profiles of customer attributes and a timestamped account of every event that customer has had across any system integrated with [!DNL Platform]. [!DNL Profile] uses the union view to represent this data and provide a holistic view of each individual customer.
+By enabling a schema for use with [!DNL Real-Time Customer Profile], it is included in the union for that class type. [!DNL Profile] delivers robust, centralized profiles of customer attributes and a timestamped account of every event that customer has had across any system integrated with [!DNL Experience Platform]. [!DNL Profile] uses the union view to represent this data and provide a holistic view of each individual customer.
 
 For more information on working with [!DNL Profile], see the [Real-Time Customer Profile overview](../../profile/home.md).
 

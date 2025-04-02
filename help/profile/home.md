@@ -71,7 +71,7 @@ Every business wants to communicate with their customers in a way that feels per
 
 ### Merge policies
 
-When bringing data fragments together from multiple sources and combining them in order to see a complete view of each of your individual customers, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be used to create the customer profile. 
+When bringing data fragments together from multiple sources and combining them in order to see a complete view of each of your individual customers, merge policies are the rules that [!DNL Experience Platform] uses to determine how data will be prioritized and what data will be used to create the customer profile. 
 
 When there is conflicting data from multiple datasets, the merge policy determines how that data should be treated and which value should be used. Through RESTful APIs or the user interface, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. 
 
@@ -101,7 +101,7 @@ Real-time input is made possible through a process called streaming ingestion. A
 
 ## Ingesting data into [!DNL Profile]
 
-[!DNL Platform] can be configured to send record and time-series data to [!DNL Profile], supporting real-time streaming ingestion and batch ingestion. For more information, see the tutorial outlining how to [add data to Real-Time Customer Profile](tutorials/add-profile-data.md). 
+[!DNL Experience Platform] can be configured to send record and time-series data to [!DNL Profile], supporting real-time streaming ingestion and batch ingestion. For more information, see the tutorial outlining how to [add data to Real-Time Customer Profile](tutorials/add-profile-data.md). 
 
 >[!NOTE]
 >
@@ -109,7 +109,7 @@ Real-time input is made possible through a process called streaming ingestion. A
 
 ### Profile ingestion metrics
 
-Observability Insights allows you to expose key metrics in Adobe Experience Platform. In addition to [!DNL Experience Platform] usage statistics and performance indicators for various [!DNL Platform] functionalities, there are specific profile-related metrics that allow you to gain insight into incoming request rates, successful ingestion rates, ingested record sizes, and more. To learn more, begin by reading the [Observability Insights API overview](../observability/api/overview.md), and for a complete list of Real-Time Customer Profile metrics, see the documentation on [available metrics](../observability/api/metrics.md#available-metrics).
+Observability Insights allows you to expose key metrics in Adobe Experience Platform. In addition to [!DNL Experience Platform] usage statistics and performance indicators for various [!DNL Experience Platform] functionalities, there are specific profile-related metrics that allow you to gain insight into incoming request rates, successful ingestion rates, ingested record sizes, and more. To learn more, begin by reading the [Observability Insights API overview](../observability/api/overview.md), and for a complete list of Real-Time Customer Profile metrics, see the documentation on [available metrics](../observability/api/metrics.md#available-metrics).
 
 ## Update Profile store data
 
@@ -125,7 +125,7 @@ As it relates to accessing data, data governance plays a key role within [!DNL E
 -   Data access policies 
 -   Access control on data for marketing actions
 
-Data Governance is managed at several points. These include deciding what data is ingested into [!DNL Platform] and what data is accessible after ingestion for a given marketing action. For more information, begin by reading the [data governance overview](../data-governance/home.md).
+Data Governance is managed at several points. These include deciding what data is ingested into [!DNL Experience Platform] and what data is accessible after ingestion for a given marketing action. For more information, begin by reading the [data governance overview](../data-governance/home.md).
 
 ### Handling opt-out and data privacy requests
 

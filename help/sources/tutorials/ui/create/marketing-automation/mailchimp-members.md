@@ -13,7 +13,7 @@ This tutorial provides steps for creating a [!DNL Mailchimp] source connector to
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-* [Sources](../../../../home.md): Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
+* [Sources](../../../../home.md): Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Experience Platform] services.
 * [Sandboxes](../../../../../sandboxes/home.md): Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ## Gather required credentials

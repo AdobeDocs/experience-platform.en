@@ -168,4 +168,4 @@ The **[!UICONTROL Credentials]** tab displays both your expiring and non-expirin
 
 ## Next steps
 
-Now that you are familiar with the Query Service user interface on [!DNL Platform], you can access Query Editor to start creating your own query projects to share with other users in your organization. For more information on authoring and running queries in Query Editor, see the [Query Editor user guide](./user-guide.md).
+Now that you are familiar with the Query Service user interface on [!DNL Experience Platform], you can access Query Editor to start creating your own query projects to share with other users in your organization. For more information on authoring and running queries in Query Editor, see the [Query Editor user guide](./user-guide.md).

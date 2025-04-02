@@ -73,7 +73,7 @@ Once the source connector is streaming your data into Experience Platform, you a
 
 ### [!DNL Experience Platform] data preparation
 
-If your data is already stored in [!DNL Platform] and not streaming through the Adobe Analytics or Adobe Audience Manager (Customer AI only) source connectors, follow the steps below. It is still recommended you understand the CEE schema.
+If your data is already stored in [!DNL Experience Platform] and not streaming through the Adobe Analytics or Adobe Audience Manager (Customer AI only) source connectors, follow the steps below. It is still recommended you understand the CEE schema.
 
 1. Review the structure of the [Consumer ExperienceEvent schema](#cee-schema) and determine whether your data can be mapped to its fields.
 2. Contact Adobe Consulting Services to help map your data to the schema and ingest it into [!DNL Intelligent Services], or [follow the steps in this guide](#mapping) if you want to map the data yourself.
@@ -353,7 +353,7 @@ After creating a CEE schema and dataset, you can start mapping your data tables 
 
 Once a dataset has been populated, the same dataset can be used to ingest additional data files.
 
-If your data is stored in a supported third-party application, you can also choose to create a [source connector](../sources/home.md) to ingest your marketing events data into [!DNL Platform] in real time.
+If your data is stored in a supported third-party application, you can also choose to create a [source connector](../sources/home.md) to ingest your marketing events data into [!DNL Experience Platform] in real time.
 
 ## Next steps {#next-steps}
 

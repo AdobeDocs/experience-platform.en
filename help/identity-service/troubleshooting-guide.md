@@ -7,7 +7,7 @@ exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
 ---
 # Identity Service troubleshooting guide
 
-This document provides answers to frequently asked questions about Adobe Experience Platform [!DNL Identity Service], as well as a troubleshooting guide for common errors. For questions and troubleshooting regarding [!DNL Platform] APIs in general, see the [Adobe Experience Platform API troubleshooting guide](../landing/troubleshooting.md).
+This document provides answers to frequently asked questions about Adobe Experience Platform [!DNL Identity Service], as well as a troubleshooting guide for common errors. For questions and troubleshooting regarding [!DNL Experience Platform] APIs in general, see the [Adobe Experience Platform API troubleshooting guide](../landing/troubleshooting.md).
 
 Data that identifies a single customer is often fragmented across the various devices and systems that they use to engage with your brand. [!DNL Identity Service] gathers these fragmented identities together, facilitating a complete understanding of customer behavior so you can deliver impactful digital experiences in real time. For more information, see the [Identity Service overview](./home.md).
 
@@ -210,7 +210,7 @@ This error message displays when your organization has not been provisioned with
 }
 ```
 
-In the case of this error, your access token is invalid. Access tokens expire every 24 hours and must be regenerated to continue using [!DNL Platform] APIs. See the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) for instructions on generating new access tokens.
+In the case of this error, your access token is invalid. Access tokens expire every 24 hours and must be regenerated to continue using [!DNL Experience Platform] APIs. See the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) for instructions on generating new access tokens.
 
 ### Authorization service token is not valid
 
@@ -222,7 +222,7 @@ In the case of this error, your access token is invalid. Access tokens expire ev
 }
 ```
 
-In the case of this error, your access token is invalid. Access tokens expire every 24 hours and must be regenerated to continue using [!DNL Platform] APIs. See the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) for instructions on generating new access tokens.
+In the case of this error, your access token is invalid. Access tokens expire every 24 hours and must be regenerated to continue using [!DNL Experience Platform] APIs. See the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) for instructions on generating new access tokens.
 
 ### User token does not have valid product context
 
@@ -270,11 +270,11 @@ This error message displays when your organization has not been provisioned with
 }
 ```
 
-This error displays when an unexpected exception occurs in the execution of a [!DNL Platform] service call. Best practice is to program your automated calls to retry their requests a few times at a timed interval when receiving this error. If the problem persists, contact your system administrator.
+This error displays when an unexpected exception occurs in the execution of an [!DNL Experience Platform] service call. Best practice is to program your automated calls to retry their requests a few times at a timed interval when receiving this error. If the problem persists, contact your system administrator.
 
 ## Batch Ingestion error codes
 
-[!DNL Identity Service] ingests identity data from record and time series data that is uploaded to [!DNL Platform] using Batch Ingestion. As batch ingestion is an asynchronous process, you must view the details for a batch to view errors. Errors will accumulate as the batch progresses until the batch is complete.
+[!DNL Identity Service] ingests identity data from record and time series data that is uploaded to [!DNL Experience Platform] using Batch Ingestion. As batch ingestion is an asynchronous process, you must view the details for a batch to view errors. Errors will accumulate as the batch progresses until the batch is complete.
 
 The following is a list of error messages related to [!DNL Identity Service] you may encounter when using the [Batch Ingestion API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/).
 

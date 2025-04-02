@@ -13,7 +13,7 @@ The majority of [!DNL Real-Time CDP] capabilities are powered by Adobe Experienc
 
 ## Honoring customer access and delete requests
 
-Legal privacy regulations such as the [!DNL General Data Protection Regulation] (GDPR) and the [!DNL California Consumer Privacy Act] (CCPA) give customers the right to request access to, or the deletion of, the personal data you collect from them. Since [!DNL Real-Time CDP] leverages [!DNL Experience Platform] capabilities for data collection and storage, customer requests to access and delete their personal data should be managed within [!DNL Platform]. See the overview on [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) for more information.
+Legal privacy regulations such as the [!DNL General Data Protection Regulation] (GDPR) and the [!DNL California Consumer Privacy Act] (CCPA) give customers the right to request access to, or the deletion of, the personal data you collect from them. Since [!DNL Real-Time CDP] leverages [!DNL Experience Platform] capabilities for data collection and storage, customer requests to access and delete their personal data should be managed within [!DNL Experience Platform]. See the overview on [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) for more information.
 
 >[!IMPORTANT]
 >

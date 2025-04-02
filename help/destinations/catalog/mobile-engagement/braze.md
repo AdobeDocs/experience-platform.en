@@ -102,7 +102,7 @@ See [Activate audience data to streaming audience export destinations](../../ui/
 
 To correctly send your audience data from [!DNL Adobe Experience Platform] to the [!DNL Braze] destination, you need to go through the field mapping step.
 
-Mapping consists of creating a link between your [!DNL Experience Data Model] (XDM) schema fields in your [!DNL Platform] account, and their corresponding equivalents from the target destination.
+Mapping consists of creating a link between your [!DNL Experience Data Model] (XDM) schema fields in your [!DNL Experience Platform] account, and their corresponding equivalents from the target destination.
 
 To correctly map your XDM fields to the [!DNL Braze] destination fields, follow these steps:
 
@@ -119,7 +119,7 @@ In the [!UICONTROL Select source field] window, you can choose between two categ
 
 ![Braze Destination Mapping Source Attribute](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
 
-* [!UICONTROL Select identity namespace]: Use this option to map a [!DNL Platform] identity namespace to a [!DNL Braze] namespace.
+* [!UICONTROL Select identity namespace]: Use this option to map an [!DNL Experience Platform] identity namespace to a [!DNL Braze] namespace.
 
 ![Braze Destination Mapping Source Namespace](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
 
@@ -130,7 +130,7 @@ In the [!UICONTROL Target Field] section, click the mapping icon to the right of
 ![Braze Destination Target Mapping](../../assets/catalog/mobile-engagement/braze/mapping-target.png)
 
 In the [!UICONTROL Select target field] window, you can choose between two categories of target fields:
-* [!UICONTROL Select identity namespace]: Use this option to map [!DNL Platform] identity namespaces to [!DNL Braze] identity namespaces.
+* [!UICONTROL Select identity namespace]: Use this option to map [!DNL Experience Platform] identity namespaces to [!DNL Braze] identity namespaces.
 * [!UICONTROL Select custom attributes]: Use this option to map XDM attributes to custom [!DNL Braze] attributes that you defined in your [!DNL Braze] account. <br> You can also use this option to rename existing XDM attributes into [!DNL Braze]. For instance, mapping a `lastName` XDM attribute to a custom `Last_Name` attribute in [!DNL Braze], will create the `Last_Name` attribute in [!DNL Braze], if it doesn't already exist, and map the `lastName` XDM attribute to it.
   
 ![Braze Destination Target Mapping Fields](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)

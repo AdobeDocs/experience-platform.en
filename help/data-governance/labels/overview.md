@@ -18,11 +18,11 @@ This document provides an overview of data usage labels in [!DNL Experience Plat
 
 ## Understanding data usage labels
 
-Data usage labels allow you to categorize datasets and fields according to governance policies that apply to that data. Labels can be applied at any time, providing flexibility in how you choose to govern data. Best practices encourage labeling data as soon as it is ingested into [!DNL Experience Platform], or as soon as data becomes available for use in [!DNL Platform].
+Data usage labels allow you to categorize datasets and fields according to governance policies that apply to that data. Labels can be applied at any time, providing flexibility in how you choose to govern data. Best practices encourage labeling data as soon as it is ingested into [!DNL Experience Platform], or as soon as data becomes available for use in [!DNL Experience Platform].
 
 Data usage labels that are applied at the dataset level are propagated to all fields within the dataset. Labels can also be applied directly to individual fields (column headers) in a dataset, without propagation.
 
-[!DNL Platform] provides several "core" data usage labels out-of-the-box, which cover a wide variety of common restrictions applicable to data governance. For more information on these labels and the governance policies they represent, see the guide on [core data usage labels](reference.md).
+[!DNL Experience Platform] provides several "core" data usage labels out-of-the-box, which cover a wide variety of common restrictions applicable to data governance. For more information on these labels and the governance policies they represent, see the guide on [core data usage labels](reference.md).
 
 In addition to the labels provided by Adobe, you can also define your own custom labels for your organization. See the section on [managing labels](#manage-labels) for more information.
 
@@ -38,7 +38,7 @@ For more information on how automatic enforcement works in Platform, see the ove
 
 [!DNL Experience Platform] has the ability to share segments with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager segments are translated to equivalent labels and marketing actions recognized by [!DNL Experience Platform] Data Governance.
 
-For a reference on how specific Data Export Controls map to data usage labels in [!DNL Platform], please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
+For a reference on how specific Data Export Controls map to data usage labels in [!DNL Experience Platform], please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
 
 ## Managing data usage labels in [!DNL Experience Platform] {#manage-labels}
 

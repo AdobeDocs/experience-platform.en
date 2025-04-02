@@ -11,7 +11,7 @@ exl-id: e3449e33-7261-4aa2-bce9-5530eb4fcc68
 >
 >The [!DNL Generic REST API] source is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled connectors.
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Experience Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
 Platform provides support for ingesting data from protocols applications, including [!DNL Generic REST API].
 
@@ -23,7 +23,7 @@ A list of IP addresses must be added to an allow list prior to working with sour
 
 The documentation below provides information on how to connect a [!DNL Generic REST API] source to Platform using APIs.
 
-## Connect [!DNL Generic REST API] to [!DNL Platform] using APIs
+## Connect [!DNL Generic REST API] to [!DNL Experience Platform] using APIs
 
 - [Create a generic REST API base connection using the Flow Service API](../../tutorials/api/create/protocols/generic-rest.md)
 - [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)

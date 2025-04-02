@@ -7,7 +7,7 @@ exl-id: 6ca162ce-2016-4270-b741-301cf4230233
 ---
 # Microsoft Dynamics connector
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Experience Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
 [!DNL Experience Platform] provides support for ingesting data from a third-party CRM system. Support for CRM providers include [!DNL Microsoft Dynamics].
 
@@ -30,15 +30,15 @@ See the following for detailed information on the field mapping rules between [!
 - [Marketing ist](../adobe-applications/mapping/dynamics.md#marketing-list)
 - [Marketing list members](../adobe-applications/mapping/dynamics.md#marketing-list-members)
 
-The documentation below provides information on how to connect [!DNL Microsoft Dynamics] to [!DNL Platform] using APIs or the user interface:
+The documentation below provides information on how to connect [!DNL Microsoft Dynamics] to [!DNL Experience Platform] using APIs or the user interface:
 
-## Connect [!DNL Microsoft Dynamics] to [!DNL Platform] using APIs
+## Connect [!DNL Microsoft Dynamics] to [!DNL Experience Platform] using APIs
 
 - [Create a Microsoft Dynamics base connection using the Flow Service API](../../tutorials/api/create/crm/ms-dynamics.md)
 - [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
 - [Create a dataflow for a CRM source using the Flow Service API](../../tutorials/api/collect/crm.md)
 
-## Connect [!DNL Microsoft Dynamics] to [!DNL Platform] using the UI
+## Connect [!DNL Microsoft Dynamics] to [!DNL Experience Platform] using the UI
 
 - [Create a Microsoft Dynamics source connection in the UI](../../tutorials/ui/create/crm/dynamics.md)
 - [Create a dataflow for a CRM connection in the UI](../../tutorials/ui/dataflow/crm.md)

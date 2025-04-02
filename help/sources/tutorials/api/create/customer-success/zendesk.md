@@ -11,7 +11,7 @@ The following tutorial walks you through the steps to create a source connection
 
 This guide requires a working understanding of the following components of Experience Platform:
 
-* [Sources](../../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
+* [Sources](../../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Experience Platform] services.
 * [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to successfully connect to [!DNL Zendesk] using the [!DNL Flow Service] API.
@@ -96,7 +96,7 @@ A successful response returns the newly created base connection, including its u
 ### Explore your source {#explore}
 
 Using the base connection ID you generated in the previous step, you can explore files and directories by performing GET requests.
-Use the following calls to find the path of the file you wish to bring into [!DNL Platform]:
+Use the following calls to find the path of the file you wish to bring into [!DNL Experience Platform]:
 
 **API format**
 

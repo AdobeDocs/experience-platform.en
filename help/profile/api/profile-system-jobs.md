@@ -12,7 +12,7 @@ exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
 >
 >The following endpoints can differ between implementations of Adobe Experience Platform running on Microsoft Azure and Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
-Adobe Experience Platform enables you to ingest data from multiple sources and build robust profiles for individual customers. Data ingested into [!DNL Platform] is stored in the [!DNL Data Lake], and if the datasets have been enabled for Profile, that data is stored in the [!DNL Real-Time Customer Profile] data store as well. Occasionally it may be necessary to delete profile data associated with a dataset from the Profile store in order to remove data that is no longer needed or was added in error. This requires using the [!DNL Real-Time Customer Profile] API to create a [!DNL Profile] system job, or "delete request".
+Adobe Experience Platform enables you to ingest data from multiple sources and build robust profiles for individual customers. Data ingested into [!DNL Experience Platform] is stored in the [!DNL Data Lake], and if the datasets have been enabled for Profile, that data is stored in the [!DNL Real-Time Customer Profile] data store as well. Occasionally it may be necessary to delete profile data associated with a dataset from the Profile store in order to remove data that is no longer needed or was added in error. This requires using the [!DNL Real-Time Customer Profile] API to create a [!DNL Profile] system job, or "delete request".
 
 >[!NOTE]
 >

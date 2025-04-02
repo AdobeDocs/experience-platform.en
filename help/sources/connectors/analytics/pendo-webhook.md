@@ -36,7 +36,7 @@ Once you have successfully created your dataflow, you must set up a webhook to i
 
 ## Connecting [!DNL Pendo] to Platform {#connect-to-platform}
 
-The documentation below provides information on how to create a [!DNL Pendo] streaming connector to connect with [!DNL Platform] using APIs or the user interface:
+The documentation below provides information on how to create a [!DNL Pendo] streaming connector to connect with [!DNL Experience Platform] using APIs or the user interface:
 
 ### Connect [!DNL Pendo] to Platform using APIs {#connect-to-platform-using-api}
 

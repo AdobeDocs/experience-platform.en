@@ -106,4 +106,4 @@ For [!DNL Salesforce Marketing Cloud] destinations, Platform creates a `.csv` fi
 
 ## Set up data import into [!DNL Salesforce Marketing Cloud] {#import-data-into-salesforce}
 
-After connecting [!DNL Platform] to your [!DNL SFTP] storage, you must set up the data import from your storage location into [!DNL Salesforce Marketing Cloud]. To learn how to accomplish this, see [Importing Subscribers into Marketing Cloud from a File](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&type=5) in the [!DNL Salesforce Help Center].
+After connecting [!DNL Experience Platform] to your [!DNL SFTP] storage, you must set up the data import from your storage location into [!DNL Salesforce Marketing Cloud]. To learn how to accomplish this, see [Importing Subscribers into Marketing Cloud from a File](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&type=5) in the [!DNL Salesforce Help Center].

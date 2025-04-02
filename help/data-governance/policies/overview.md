@@ -64,7 +64,7 @@ Once data usage labels have been applied, data stewards can use the [!DNL Policy
 
 For step-by-step instructions on working with marketing actions and data usage policies in the API, see the tutorial on [creating and evaluating data usage policies](create.md). For more information the key operations provided by the [!DNL Policy Service] API, see the [Policy Service developer guide](../api/getting-started.md).
 
-For information on how to work with marketing actions and policies in the [!DNL Platform] UI, see the [data usage policy user guide](./user-guide.md).
+For information on how to work with marketing actions and policies in the [!DNL Experience Platform] UI, see the [data usage policy user guide](./user-guide.md).
 
 ## Next steps
 

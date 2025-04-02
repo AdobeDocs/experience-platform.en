@@ -20,7 +20,7 @@ This guide requires a working understanding of the following components of Adobe
   - [Activation jobs](../../destinations/ui/activation-overview.md): An activation job is used to activate your audience to a specified destination.
   - [Evaluation jobs](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment): An evaluation job is an asynchronous process that evaluates the audience.
   - [Export jobs](../../segmentation/api/export-jobs.md): An export job is an asynchronous processes that are used to persist audience members to datasets.
-- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Experience Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ## Monitoring audiences dashboard {#monitoring-audiences-dashboard}
 

@@ -11,7 +11,7 @@ exl-id: 4a010453-3d09-4a47-b04e-5789ae4af48c
 >
 >The [!DNL Zoho CRM] source will be deprecated at the end of June 2025.
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Experience Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
 Experience Platform provides support for ingesting data from a third-party CRM system. Support for CRM providers include [!DNL Zoho CRM].
 
@@ -43,7 +43,7 @@ A successful request returns your access and refresh tokens, which you can then 
 
 For detailed steps on acquiring your credentials, see the [[!DNL Zoho CRM] authentication guide](https://www.zoho.com/crm/developer/docs/api/v2/oauth-overview.html).
 
-## Connect [!DNL Zoho CRM] to [!DNL Platform] using APIs
+## Connect [!DNL Zoho CRM] to [!DNL Experience Platform] using APIs
 
 The documentation below provides information on how to connect [!DNL Zoho CRM] to Platform using APIs or the user interface:
 
@@ -51,7 +51,7 @@ The documentation below provides information on how to connect [!DNL Zoho CRM] t
 - [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
 - [Create a dataflow for a CRM source using the Flow Service API](../../tutorials/api/collect/crm.md)
 
-## Connect [!DNL Zoho CRM] to [!DNL Platform] using the UI
+## Connect [!DNL Zoho CRM] to [!DNL Experience Platform] using the UI
 
 - [Create a [!DNL Zoho CRM] source connection in the UI](../../tutorials/ui/create/crm/zoho.md)
 - [Create a dataflow for a CRM source connection in the UI](../../tutorials/ui/dataflow/crm.md)

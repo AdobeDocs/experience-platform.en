@@ -7,7 +7,7 @@ exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
 
 # Merge policies UI guide
 
-Adobe Experience Platform enables you to bring data fragments together from multiple sources and combine them in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create the unified view. 
+Adobe Experience Platform enables you to bring data fragments together from multiple sources and combine them in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that [!DNL Experience Platform] uses to determine how data will be prioritized and what data will be combined to create the unified view. 
 
 Using RESTful APIs or the user interface, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. This guide provides step-by-step instructions for working with merge policies using the Adobe Experience Platform user interface (UI).
 
@@ -18,8 +18,8 @@ To learn more about merge policies and they role they play within Experience Pla
 This guide requires a working understanding of several important [!DNL Experience Platform] features. Before following this guide, please review the documentation for the following services:
 
 * [Real-Time Customer Profile](../home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-* [Adobe Experience Platform Identity Service](../../identity-service/home.md): Enables Real-Time Customer Profile by bridging identities from disparate data sources being ingested into [!DNL Platform].
-* [Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
+* [Adobe Experience Platform Identity Service](../../identity-service/home.md): Enables Real-Time Customer Profile by bridging identities from disparate data sources being ingested into [!DNL Experience Platform].
+* [Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
 
 ## View merge policies {#view-merge-policies}
 
@@ -201,7 +201,7 @@ Once you have made the necessary changes, review your merge policy and select **
 
 ## Data governance policy violations
 
-When creating or updating a merge policy, a check is performed to determine if the merge policy violates any of the data usage policies defined by your organization. Data usage policies are part of Adobe Experience Platform Data Governance and are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on specific [!DNL Platform] data. 
+When creating or updating a merge policy, a check is performed to determine if the merge policy violates any of the data usage policies defined by your organization. Data usage policies are part of Adobe Experience Platform Data Governance and are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on specific [!DNL Experience Platform] data. 
 
 For example, if a merge policy was used to create an audience that activated to a third-party destination, and your organization had a data usage policy preventing the export of specific data to third parties, you would receive a **[!UICONTROL Data governance policy violation detected]** notification when attempting to save your merge policy. 
 

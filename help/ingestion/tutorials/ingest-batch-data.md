@@ -8,7 +8,7 @@ exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
 ---
 # Ingest data into Adobe Experience Platform
 
-Adobe Experience Platform allows you to easily import data into [!DNL Platform] as batch files. Examples of data to be ingested may include profile data from a flat file in a CRM system (such as a Parquet file) or data that conforms to a known [!DNL Experience Data Model] (XDM) schema in the Schema Registry.
+Adobe Experience Platform allows you to easily import data into [!DNL Experience Platform] as batch files. Examples of data to be ingested may include profile data from a flat file in a CRM system (such as a Parquet file) or data that conforms to a known [!DNL Experience Data Model] (XDM) schema in the Schema Registry.
 
 ## Getting started
 
@@ -74,7 +74,7 @@ Also in the Info tab is a  **[!UICONTROL Profile]** toggle that is used for enab
 
 ## Enable dataset for [!DNL Real-Time Customer Profile]
 
-Datasets are used for ingesting data into [!DNL Experience Platform], and that data is ultimately used to identify individuals and stitch together information coming from multiple sources. That stitched together information is called a [!DNL Real-Time Customer Profile]. In order for [!DNL Platform] to know which information should be included in the [!DNL Real-Time Profile], datasets can be marked for inclusion using the **[!UICONTROL Profile]** toggle. 
+Datasets are used for ingesting data into [!DNL Experience Platform], and that data is ultimately used to identify individuals and stitch together information coming from multiple sources. That stitched together information is called a [!DNL Real-Time Customer Profile]. In order for [!DNL Experience Platform] to know which information should be included in the [!DNL Real-Time Profile], datasets can be marked for inclusion using the **[!UICONTROL Profile]** toggle. 
 
 By default, this toggle is off. If you choose to toggle on [!DNL Profile], all data ingested into the dataset will be used to help identify an individual and stitch together their [!DNL Real-Time Profile].
 
@@ -106,7 +106,7 @@ To begin adding data to the dataset, click on the **[!UICONTROL Add Data]** tab.
 
 ## Upload a file {#upload-file}
 
-Once you drag and drop (or browse and select) a Parquet or JSON file that you wish to upload, [!DNL Platform] will immediately begin to process the file and an **[!UICONTROL Uploading]** dialog will appear on the **[!UICONTROL Add Data]** tab showing the progress of your file upload.
+Once you drag and drop (or browse and select) a Parquet or JSON file that you wish to upload, [!DNL Experience Platform] will immediately begin to process the file and an **[!UICONTROL Uploading]** dialog will appear on the **[!UICONTROL Add Data]** tab showing the progress of your file upload.
 
 ![Uploading dialog](../images/tutorials/ingest-batch-data/uploading-file.png)
 
@@ -144,6 +144,6 @@ To learn more about batch ingestion, please read the [Batch Ingestion overview](
 
 >[!WARNING]
 >
->The [!DNL Platform] UI shown in the following video is out-of-date. Please refer to the documentation above for the latest UI screenshots and functionality.
+>The [!DNL Experience Platform] UI shown in the following video is out-of-date. Please refer to the documentation above for the latest UI screenshots and functionality.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)

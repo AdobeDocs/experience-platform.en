@@ -43,7 +43,7 @@ Once you have successfully created your dataflow, you must set up a Reporting We
 
 ## Connecting [!DNL Customer.io] to Platform {#connect-to-platform}
 
-The documentation below provides information on how to create a [!DNL Customer.io] streaming connection to connect with [!DNL Platform] using APIs or the user interface:
+The documentation below provides information on how to create a [!DNL Customer.io] streaming connection to connect with [!DNL Experience Platform] using APIs or the user interface:
 
 ### Connect [!DNL Customer.io] to Platform using APIs {#connect-to-platform-using-api}
 

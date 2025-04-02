@@ -8,7 +8,7 @@ exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
 
 ## Overview {#overview}
 
-This document provides answers to frequently asked questions about Adobe Experience Platform destinations. For questions and troubleshooting related to other [!DNL Platform] services, including those encountered across all [!DNL Platform] APIs, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
+This document provides answers to frequently asked questions about Adobe Experience Platform destinations. For questions and troubleshooting related to other [!DNL Experience Platform] services, including those encountered across all [!DNL Experience Platform] APIs, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
 
 ## General destinations questions {#general}
 
@@ -104,7 +104,7 @@ No. As this is not a pixel-based integration, there is no need to add any pixels
 ### How long does Facebook take to process information from Adobe Experience Platform?
 
 +++Answer
-As of March 2021, [!DNL Facebook Custom Audiences] needs up to an hour to process information received from [!DNL Platform].
+As of March 2021, [!DNL Facebook Custom Audiences] needs up to an hour to process information received from [!DNL Experience Platform].
 +++
 
 ### Can I use [!DNL Facebook Custom Audiences] for audience targeting in other [!DNL Facebook] apps, like [!DNL Instagram]?
@@ -116,9 +116,9 @@ You can use the [!DNL Facebook Custom Audiences] destination for audience target
 ### What is the difference between the [!DNL Facebook Custom Audiences] connection and [!DNL Facebook Pixel] extension?
 
 +++Answer
-The [!DNL Facebook Custom Audiences] connection uses [!DNL Platform] identities when sending audiences to [!DNL Facebook], while the [[!DNL Facebook Pixel] connection](../destinations/catalog/advertising/facebook-pixel.md) uses the [!DNL Facebook] pixel integrated in a website.
+The [!DNL Facebook Custom Audiences] connection uses [!DNL Experience Platform] identities when sending audiences to [!DNL Facebook], while the [[!DNL Facebook Pixel] connection](../destinations/catalog/advertising/facebook-pixel.md) uses the [!DNL Facebook] pixel integrated in a website.
 
-These two integrations are complementary; you can use both to ensure better audience coverage. As an example, you can use the [!DNL Facebook Pixel] extension for prospecting website visitors who have not created an account, whereas [!DNL Facebook Custom Audiences] can help you target existing customers, based on [!DNL Platform] identities.
+These two integrations are complementary; you can use both to ensure better audience coverage. As an example, you can use the [!DNL Facebook Pixel] extension for prospecting website visitors who have not created an account, whereas [!DNL Facebook Custom Audiences] can help you target existing customers, based on [!DNL Experience Platform] identities.
 +++
 
 ### Does the Adobe Experience Platform integration with [!DNL Facebook Custom Audiences] support disqualifying users from an audience when they no longer qualify for it?**

@@ -110,14 +110,14 @@ By default, the following configuration parameters are set for you when you trai
 
 The purpose of the Training Data Loader is to instantiate data used for creating the machine learning model. Typically, there are two tasks that the training data loader accomplishes:
 
-- Loading data from [!DNL Platform]
+- Loading data from [!DNL Experience Platform]
 - Data preparation and feature engineering
 
 The following two sections will go over loading data and data preparation. 
 
 ### Loading data {#loading-data}
 
-This step uses the [pandas dataframe](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Data can be loaded from files in [!DNL Adobe Experience Platform] using either the [!DNL Platform] SDK (`platform_sdk`), or from external sources using pandas' `read_csv()` or `read_json()` functions.
+This step uses the [pandas dataframe](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Data can be loaded from files in [!DNL Adobe Experience Platform] using either the [!DNL Experience Platform] SDK (`platform_sdk`), or from external sources using pandas' `read_csv()` or `read_json()` functions.
 
 - [[!DNL Platform SDK]](#platform-sdk)
 - [External sources](#external-sources)
@@ -126,7 +126,7 @@ This step uses the [pandas dataframe](https://pandas.pydata.org/pandas-docs/stab
 >
 >In the Recipe Builder notebook, data is loaded via the `platform_sdk` data loader.
 
-### [!DNL Platform] SDK {#platform-sdk}
+### [!DNL Experience Platform] SDK {#platform-sdk}
 
 For an in-depth tutorial on using the `platform_sdk` data loader, please visit the [Platform SDK guide](../authoring/platform-sdk.md). This tutorial provides information on build authentication, basic reading of data, and basic writing of data.
 
@@ -263,7 +263,7 @@ When you are done editing the recipe and satisfied with the training/scoring out
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
-After selecting **[!UICONTROL Create Recipe]**, you are prompted to enter a recipe name. This name represents the actual recipe created on [!DNL Platform].
+After selecting **[!UICONTROL Create Recipe]**, you are prompted to enter a recipe name. This name represents the actual recipe created on [!DNL Experience Platform].
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 

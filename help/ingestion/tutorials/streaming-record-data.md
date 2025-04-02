@@ -15,7 +15,7 @@ This tutorial will help you begin using streaming ingestion APIs, part of the Ad
 
 This tutorial requires a working knowledge of various Adobe Experience Platform services. Before beginning this tutorial, please review the documentation for the following services:
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes experience data.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes experience data.
   - [Schema Registry developer guide](../../xdm/api/getting-started.md): A comprehensive guide that covers each of the available endpoints of the [!DNL Schema Registry] API and how to make calls to them. This includes knowing your `{TENANT_ID}`, which appears in calls throughout this tutorial, as well as knowing how to create schemas, which is used in creating a dataset for ingestion.
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Provides a unified, consumer profile in real time based on aggregated data from multiple sources.
 
@@ -241,7 +241,7 @@ For more information on creating a streaming connection, please read the [create
 
 ## Ingest record data to the streaming connection {#ingest-data}
 
-With the dataset and streaming connection in place, you can ingest XDM-formatted JSON records to ingest record data into [!DNL Platform].
+With the dataset and streaming connection in place, you can ingest XDM-formatted JSON records to ingest record data into [!DNL Experience Platform].
 
 **API format**
 
@@ -429,6 +429,6 @@ A successful response returns HTTP status 200 with details of the entities reque
 
 ## Next steps
 
-By reading this document, you now understand how to ingest record data into [!DNL Platform] using streaming connections. You can try making more calls with different values and retrieving the updated values. Additionally, you can start monitoring your ingested data through [!DNL Platform] UI. For more information, please read the [monitoring data ingestion](../quality/monitor-data-ingestion.md) guide.
+By reading this document, you now understand how to ingest record data into [!DNL Experience Platform] using streaming connections. You can try making more calls with different values and retrieving the updated values. Additionally, you can start monitoring your ingested data through [!DNL Experience Platform] UI. For more information, please read the [monitoring data ingestion](../quality/monitor-data-ingestion.md) guide.
 
 For more information about streaming ingestion in general, please read the [streaming ingestion overview](../streaming-ingestion/overview.md).

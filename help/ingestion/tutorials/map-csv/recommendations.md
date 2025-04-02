@@ -13,11 +13,11 @@ In order to ingest CSV data into [!DNL Adobe Experience Platform], the data must
 
 ## Getting started
 
-This tutorial requires a working understanding of the following components of [!DNL Platform]:
+This tutorial requires a working understanding of the following components of [!DNL Experience Platform]:
 
-* [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
+* [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
     * At a minimum, you must understand the concept of [behaviors in XDM](../../../xdm/home.md#data-behaviors), so you can decide whether to map your data to a [!UICONTROL Profile] class (record behavior) or [!UICONTROL ExperienceEvent] class (time-series behavior).
-* [Batch ingestion](../../batch-ingestion/overview.md): The method by which [!DNL Platform] ingests data from user-supplied datafiles.
+* [Batch ingestion](../../batch-ingestion/overview.md): The method by which [!DNL Experience Platform] ingests data from user-supplied datafiles.
 * [Adobe Experience Platform Data Prep](../../batch-ingestion/overview.md): A suite of capabilities that allow you to map and transform ingested data to conform to XDM schemas. The documentation on [Data Prep functions](../../../data-prep/functions.md) is specifically relevant for schema mapping.
 
 ## Provide dataflow details

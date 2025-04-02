@@ -12,7 +12,7 @@ exl-id: 806ae7e2-d4af-47d5-a3aa-561b69acc836
 >
 >The [!DNL Oracle Responsys] source is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Experience Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
 [!DNL Oracle Responsys] is a cross-channel campaign management platform that allows you to deliver advanced intelligence at scale and build customized messages that fit the specific interests and preferences of your customers.
 

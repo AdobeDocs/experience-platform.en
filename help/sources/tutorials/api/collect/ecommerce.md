@@ -24,7 +24,7 @@ This tutorial requires you to have a working understanding of the following comp
   * [Schema Registry API](../../../../xdm/api/getting-started.md): Learn how to successfully perform calls to the Schema Registry API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the Accept header and its possible values).
 * [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is the system of record for data location and lineage within [!DNL Experience Platform].
 * [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): The Batch Ingestion API allows you to ingest data into [!DNL Experience Platform] as batch files.
-* [[!DNL Sandboxes]](../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+* [[!DNL Sandboxes]](../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Experience Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ### Using Platform APIs
 
@@ -245,7 +245,7 @@ A successful response returns details of the newly created mapping including its
 
 ## Look up dataflow specifications {#specs}
 
-A dataflow is responsible for collecting data from sources and bringing them into [!DNL Platform]. In order to create a dataflow, you must first obtain the dataflow specifications by performing a GET request to the [!DNL Flow Service] API. Dataflow specifications are responsible for collecting data from an e-commerce source.
+A dataflow is responsible for collecting data from sources and bringing them into [!DNL Experience Platform]. In order to create a dataflow, you must first obtain the dataflow specifications by performing a GET request to the [!DNL Flow Service] API. Dataflow specifications are responsible for collecting data from an e-commerce source.
 
 **API format**
 
@@ -641,7 +641,7 @@ Once your dataflow has been created, you can monitor the data that is being inge
 
 ## Next steps
 
-By following this tutorial, you have created a source connector to collect data e-commerce on a scheduled basis. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-Time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
+By following this tutorial, you have created a source connector to collect data e-commerce on a scheduled basis. Incoming data can now be used by downstream [!DNL Experience Platform] services such as [!DNL Real-Time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
 *   [Real-Time Customer Profile overview](../../../../profile/home.md)
 *   [Data Science Workspace overview](../../../../data-science-workspace/home.md)

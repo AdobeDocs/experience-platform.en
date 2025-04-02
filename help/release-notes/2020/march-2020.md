@@ -21,7 +21,7 @@ Updates to existing features in Adobe Experience Platform:
 
 ## Data Governance {#governance}
 
-[!DNL Experience Platform] allows companies to bring data from multiple enterprise systems together to better allow marketers to identify, understand, and engage customers. [!DNL Experience Platform] includes an end-to-end data governance infrastructure to ensure the proper use of data within [!DNL Platform] and when being shared between systems.
+[!DNL Experience Platform] allows companies to bring data from multiple enterprise systems together to better allow marketers to identify, understand, and engage customers. [!DNL Experience Platform] includes an end-to-end data governance infrastructure to ensure the proper use of data within [!DNL Experience Platform] and when being shared between systems.
 
 Adobe Experience Platform Data Governance is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data usage. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
 
@@ -95,7 +95,7 @@ For more information about [!DNL Identity Service], see the [Identity Service ov
 
 ## Sources {#sources}
 
-Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
+Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Experience Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
 
 [!DNL Experience Platform] provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 

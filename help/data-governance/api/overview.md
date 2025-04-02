@@ -16,7 +16,7 @@ To view all available endpoints and CRUD operations, visit the [[!DNL Policy Ser
 
 ## Labels
 
-Apply data usage labels to schemas to categorize datasets and fields according to usage policies that apply to that data. Labels can be applied at any time, providing flexibility in how you choose to govern data. Best practices encourage labeling data as soon as it is ingested into [!DNL Experience Platform], or as soon as data becomes available for use in [!DNL Platform]. You can created, view, edit, and delete labels using the `/labels` endpoint. To learn how to use this endpoint, visit the [labels endpoint guide](./labels.md).
+Apply data usage labels to schemas to categorize datasets and fields according to usage policies that apply to that data. Labels can be applied at any time, providing flexibility in how you choose to govern data. Best practices encourage labeling data as soon as it is ingested into [!DNL Experience Platform], or as soon as data becomes available for use in [!DNL Experience Platform]. You can created, view, edit, and delete labels using the `/labels` endpoint. To learn how to use this endpoint, visit the [labels endpoint guide](./labels.md).
 
 ## Marketing actions
 
