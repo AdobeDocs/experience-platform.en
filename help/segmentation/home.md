@@ -26,11 +26,11 @@ Once an audience has been conceptually defined, it is built in [!DNL Experience 
 
 ## Create audiences
 
-Audiences can be created in two different ways on Adobe Experience Platform - either directly composed as audiences or through Platform-derived segment definitions.
+You can create audiences in multiple ways on Adobe Experience Platform, including through compositions, segment definitions, federated data, and Data Distiller.
 
 ### Audience composition
 
-When directly composing an audience on Platform, you can use Audience Composition. To learn how to use Audience Composition to create an audience, please read the [Audience Composition guide](./ui/audience-composition.md) for more information.
+When directly composing an audience on Experience Platform, you can use Audience Composition. To learn how to use Audience Composition to create an audience, please read the [Audience Composition guide](./ui/audience-composition.md) for more information.
 
 ### Segment definitions
 
@@ -55,7 +55,7 @@ In addition to audience compositions and segment definitions, you can use Adobe 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation"
 >title="Evaluation methods"
->abstract="Platform currently supports three methods of evaluating audiences: streaming segmentation, batch segmentation, and edge segmentation."
+>abstract="Experience Platform currently supports three methods of evaluating audiences: streaming segmentation, batch segmentation, and edge segmentation."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
@@ -63,7 +63,7 @@ In addition to audience compositions and segment definitions, you can use Adobe 
 >abstract="Streaming segmentation is an ongoing data selection process that updates your audiences in response to user activity."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/streaming-segmentation.html" text="Evaluate events in near real-time with streaming segmentation"
 
-Platform currently supports three methods of evaluating audiences: streaming segmentation, batch segmentation, and edge segmentation.
+Experience Platform currently supports three methods of evaluating audiences: streaming segmentation, batch segmentation, and edge segmentation.
 
 ### Streaming segmentation {#streaming}
 
@@ -131,6 +131,7 @@ In addition to name and merge policy, [!DNL Segment Builder] offers you an addit
 ## Advanced segmentation features
 
 Segment definitions can be configured to continually generate an audience on an ongoing basis by combining [streaming data ingestion](../ingestion/streaming-ingestion/overview.md) with any of the following advanced segmentation features: 
+
 - [Sequential segmentation](#sequential)
 - [Dynamic segmentation](#dynamic)
 - [Multi-entity segmentation](#multi-entity)

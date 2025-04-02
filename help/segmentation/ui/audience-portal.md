@@ -20,6 +20,7 @@ Within Audience Portal, you can accomplish the following tasks:
   - [Use Segment Builder to create an audience](#segment-builder)
   - [Use Audience Composition to create an audience](#audience-composition)
   - [Use Federated Audience Composition to create an audience using data from your existing data warehouse](#fac)
+  - [Use Data Distiller to create an audience](#data-distiller)
 - [Import externally generated audiences](#import-audience)
 
 To open Audience Portal, select the **[!UICONTROL Browse]** tab within the Segmentation section. 
@@ -51,7 +52,7 @@ Next to each audience is an ellipsis icon. Selecting this displays a list of ava
 | [!UICONTROL Edit] | Segmentation Service | Opens the Segment Builder to edit your audience. Please note that if your audience was created through the API, you will **not** be able to edit it using Segment Builder. For more information on using the Segment Builder, please read the [Segment Builder UI guide](./segment-builder.md). |
 | [!UICONTROL Open composition] | Audience composition | Opens the Audience composition to see your audience. For more information on Audience composition, please read the [audience composition UI guide](./audience-composition.md). |
 | [!UICONTROL Activate to destination] | Segmentation Service | Activates the audience to a destination. For more detailed information on activating an audience to a destination, please read the [activation overview](../../destinations/ui/activation-overview.md). |
-| [!UICONTROL Share with partners] | Audience composition, Custom upload, Segmentation Service | Shares your audience with other Platform users. For more information on this feature, please read the [Segment Match overview](./segment-match/overview.md). |
+| [!UICONTROL Share with partners] | Audience composition, Custom upload, Segmentation Service | Shares your audience with other Experience Platform users. For more information on this feature, please read the [Segment Match overview](./segment-match/overview.md). |
 | [!UICONTROL Manage tags] | Audience composition, Custom upload, Segmentation Service | Manages the user-defined tags that belong to the audience. For more information on this feature, please read the section on [filtering and tagging](#manage-audiences). |
 | [!UICONTROL Move to folder] | Audience composition, Custom upload, Segmentation Service |  Manages which folder the audience belongs to. For more information on this feature, please read the section on [filtering and tagging](#manage-audiences). |
 | [!UICONTROL Copy] | Segmentation Service | Duplicates the selected audience. More information about this function can be found in the [Segmentation FAQ](../faq.md#copy). |
@@ -268,7 +269,7 @@ Selecting **[!UICONTROL Edit properties]** will let you edit the basic details o
 
 ### Audience total {#audience-total}
 
-For Platform-generated audiences and compositions, the **[!UICONTROL Audience total]** section shows the total number of profiles that qualify for the audience.
+For Experience-Platform-generated audiences and compositions, the **[!UICONTROL Audience total]** section shows the total number of profiles that qualify for the audience.
 
 >[!NOTE]
 >
@@ -291,7 +292,7 @@ For audiences with an origin of **[!UICONTROL Custom upload]**, the **[!UICONTRO
 | Profile count | The total number of profiles that qualify for the audience. |
 | Dataset name | The name of the dataset that the audience was ingested into. You can select the dataset name for more information about the dataset. To learn more about datasets, read the [dataset UI guide](../../catalog/datasets/user-guide.md). |
 | Dataset batch | The ID of the dataset that the audience was ingested into. You can select the ID of the batch for more information about the batch. To learn more about batches, read the [monitoring data ingestion guide](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
-| Profile batch | The ID of the batch that created the profiles on Platform. You can select the ID of the batch for more information about the batch. To learn more about batches, read the [monitoring data ingestion guide](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
+| Profile batch | The ID of the batch that created the profiles on Experience Platform. You can select the ID of the batch for more information about the batch. To learn more about batches, read the [monitoring data ingestion guide](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
 | Schema | The name of the schema that the audience belongs to. You can select the name of the schema to view information about the schema's structure and apply data usage labels. For more information, read the [manage data usage labels for a schema guide](../../xdm/tutorials/labels.md). |
 | Records ingested | The number of records ingested into the dataset. |
 | Records failed | The number of records that were not able to be ingested into the dataset. |
@@ -379,9 +380,17 @@ Selecting **[!UICONTROL Build rule]** takes you to the Segment Builder. This wor
 
 ### Federated Audience Composition {#fac}
 
-In addition to audience compositions and segment definitions, you can use Adobe Federated Audience Composition to build new audiences from enterprise datasets without copying underlying data and store those audiences in Adobe Experience Platform Audience Portal. You can also enrich existing audiences in Adobe Experience Platform by utilizing composed audience data that has been federated from the enterprise data warehouse. Please read the guide on [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+You can use Adobe Federated Audience Composition to build new audiences from enterprise datasets without copying underlying data and store those audiences in Adobe Experience Platform Audience Portal. 
+
+You can also enrich existing audiences in Adobe Experience Platform by utilizing composed audience data that has been federated from the enterprise data warehouse. Please read the guide on [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
 
 ![A list of audiences created in Federated Audience Composition for your organization.](../images/ui/overview/federated-audience-composition.png)
+
+### Data Distiller {#data-distiller}
+
+In Data Distiller, you can use a SQL extension to build audiences from the data lake. This data includes existing dimension entities such as customer attributes or product information.
+
+More information about Data Distiller can be found in the [building audiences using SQL guide](../../query-service/data-distiller-audiences/overview.md).
 
 ## Importing an audience {#import-audience}
 
@@ -440,7 +449,7 @@ After confirming the details are correct, select **[!UICONTROL Finish]** to impo
 >
 >Additionally, if your externally generated audience contains sensitive and/or healthcare-related information, you **must** apply the necessary data usage labels before activating it to any destination. Since variables from externally generated audiences are stored in the data lake rather than within Real-time Customer Profile, you should **not** include consent data within your CSV file. 
 >
->For more information on applying data usage labels, please read the documentation on [managing labels](../../access-control/abac/ui/labels.md). To learn about data usage labels on Platform in general, please read the [data usage labels overview](../../data-governance/labels/overview.md). To learn about how consent works in externally generated audiences, please read the [audiences FAQ](../faq.md#consent).
+>For more information on applying data usage labels, please read the documentation on [managing labels](../../access-control/abac/ui/labels.md). To learn about data usage labels on Experience Platform in general, please read the [data usage labels overview](../../data-governance/labels/overview.md). To learn about how consent works in externally generated audiences, please read the [audiences FAQ](../faq.md#consent).
 
 ## Next steps
 

@@ -466,7 +466,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | `name` | The name of the audience. |
 | `namespace` | The namespace for the audience. |
 | `description` | A description of the audience. |
-| `type` | A system-generated field that displays whether the audience is Platform-generated or is an externally generated audience. Possible values include `SegmentDefinition` and `ExternalSegment`. A `SegmentDefinition` refers to an audience that was generated in Platform, while an `ExternalSegment` refers to an audience that was not generated in Platform. |
+| `type` | A system-generated field that displays whether the audience is Platform-generated or is an externally generated audience. Possible values include `SegmentDefinition` and `ExternalSegment`. A `SegmentDefinition` refers to an audience that was generated in Experience Platform, while an `ExternalSegment` refers to an audience that was not generated in Experience Platform. |
 | `expression` | An object that contains the PQL expression of the audience. |
 | `lifecycleState` | The status of the audience. Possible values include `draft`, `published`, and `inactive`. `draft` represents when the audience is created, `published` when the audience is published, and `inactive` when the audience is no longer active. |
 | `datasetId` | The ID of the dataset that the audience data can be found. |
@@ -476,7 +476,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 
 **Response**
 
-A successful response returns HTTP status 200 with details of your newly updated audience. Please note that the details of your audience will differ depending if it is a Platform-generated audience or an externally generated audience.
+A successful response returns HTTP status 200 with details of your newly updated audience. Please note that the details of your audience will differ depending if it is an Experience Platform-generated audience or an externally generated audience.
 
 +++A sample response when updating an entire audience.
 
@@ -484,7 +484,7 @@ A successful response returns HTTP status 200 with details of your newly updated
 {
     "id": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
     "audienceId": "test-platform-audience-id",
-    "name": "New Platform audience",
+    "name": "New Experience Platform audience",
     "namespace": "AEPSegments",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
@@ -559,7 +559,7 @@ A successful response returns HTTP status 200 with the updated audience.
 {
     "id": "60ccea95-1435-4180-97a5-58af4aa285ab5",
     "audienceId": "test-platform-audience-id",
-    "name": "New Platform audience",
+    "name": "New Experience Platform audience",
     "namespace": "AEPSegments",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {

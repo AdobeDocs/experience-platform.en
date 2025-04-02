@@ -14,7 +14,7 @@ To view all available endpoints and CRUD operations, please refer to the [Segmen
 
 ## Audiences
 
-Audiences are a collection of people who share similar behaviors and/or characteristics. These can be generated either by using Platform or from external sources. You can use the `/audiences` endpoint to retrieve all audiences, create a new audience, retrieve details of a specific audience, update a specific audience, or delete a specific audience.
+Audiences are a collection of people who share similar behaviors and/or characteristics. These can be generated either by using Experience Platform or from external sources. You can use the `/audiences` endpoint to retrieve all audiences, create a new audience, retrieve details of a specific audience, update a specific audience, or delete a specific audience.
 
 For more information on using this endpoint, please read the [audiences endpoint guide](./audiences.md).
 
@@ -56,4 +56,4 @@ Segment search is used to search fields contained across various data sources an
 
 ## Next steps
 
-To get started with the [!DNL Segmentation Service] API, review the different endpoint guides for detailed steps on how to make calls to the service's various endpoints. To learn more about working with segments using the [!DNL Platform] UI, see the [Segmentation user guide](../ui/overview.md).
+To get started with the [!DNL Segmentation Service] API, review the different endpoint guides for detailed steps on how to make calls to the service's various endpoints. To learn more about working with segments using the [!DNL Experience Platform] UI, see the [Segmentation user guide](../ui/overview.md).
