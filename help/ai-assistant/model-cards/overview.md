@@ -1,18 +1,20 @@
 ---
 title: Model Cards For AI Model Transparency In Adobe Experience Platform
-description:
+description: Learn about model cards in Adobe Experience Platform.
 ---
 # Model cards for AI model transparency in Adobe Experience Platform
 
-A model card is the standard format in which AI model transparency is communicated.
+Model cards are the standard formats by which AI model transparency is communicated. Model cards are public and are intended to improve both existing and prospective customer understanding of the AI models that Adobe uses. Model cards are generally static. However, there are several aspects of AI models that can change over time, including lineage, bias, and other transparency attributes.
 
-Read this document for a guide on model cards in Adobe Experience Platform.
+Read this document to learn about model cards in Adobe Experience Platform.
 
-## Model card sections {#sections}
+## Model card sections {#model-card-sections}
 
-Read the following for a guide on the many different sections of a model card, including information the questions they address.
+Read the following for a guide on the different sections of a model card, including information the questions they address.
 
 ### Model overview {#model-overview}
+
++++View questions and example answers
 
 | Question | Information needed | Example answer |
 | --- | --- | --- |
@@ -24,7 +26,11 @@ Read the following for a guide on the many different sections of a model card, i
 
 {style="table-layout:auto"}
 
++++
+
 ### Intended use {#intended-use}
+
++++View questions and example answers
 
 | Question | Information needed | Example answer |
 | --- | --- | --- |
@@ -35,7 +41,11 @@ Read the following for a guide on the many different sections of a model card, i
 
 {style="table-layout:auto"}
 
-### Model Inputs and Outputs
++++
+
+### Model inputs and outputs {#model-inputs-and-outputs}
+
++++View questions and example answers
 
 | Question | Information needed | Example answer |
 | --- | --- | --- |
@@ -46,7 +56,11 @@ Read the following for a guide on the many different sections of a model card, i
 
 {style="table-layout:auto"}
 
-### Training Data
++++
+
+### Training data {#training-data}
+
++++View questions and example answers
 
 | Question | Information needed | Example answer |
 | --- | --- | --- |
@@ -57,7 +71,11 @@ Read the following for a guide on the many different sections of a model card, i
 
 {style="table-layout:auto"}
 
-### Model Architecture and Training
++++
+
+### Model architecture and training {#model-architecture-and-training}
+
++++View questions and example answers
 
 | Question | Information needed | Example answer |
 | --- | --- | --- |
@@ -69,7 +87,11 @@ Read the following for a guide on the many different sections of a model card, i
 
 {style="table-layout:auto"}
 
-### Performance and Evaluation
++++
+
+### Performance and evaluation {#performance-and-evaluation}
+
++++View questions and example answers
 
 | Question | Information needed | Example answer |
 | --- | --- | --- |
@@ -80,7 +102,11 @@ Read the following for a guide on the many different sections of a model card, i
 
 {style="table-layout:auto"}
 
-### Fairness and Bias
++++
+
+### Fairness and bias {#fairness-and-bias}
+
++++View questions and example answers
 
 | Question | Information needed | Example answer |
 | --- | --- | --- |
@@ -90,7 +116,11 @@ Read the following for a guide on the many different sections of a model card, i
 
 {style="table-layout:auto"}
 
-### Explainability and Interpretability
++++
+
+### Explainability and interpretability {#explainability-and-interpretability}
+
++++View questions and example answers
 
 | Question | Information needed | Example answer |
 | --- | --- | --- |
@@ -99,7 +129,11 @@ Read the following for a guide on the many different sections of a model card, i
 
 {style="table-layout:auto"}
 
-### Robustness and Generalization
++++
+
+### Robustness and generalization {#robustness-and-generalization}
+
++++View questions and example answers
 
 | Question | Information needed | Example answer |
 | --- | --- | --- |
@@ -108,7 +142,11 @@ Read the following for a guide on the many different sections of a model card, i
 
 {style="table-layout:auto"}
 
-### Security and Privacy Considerations
++++
+
+### Security and privacy considerations {#security-and-privacy-considerations}
+
++++View questions and example answers
 
 | Question | Information needed | Example answer |
 | --- | --- | --- |
@@ -117,7 +155,11 @@ Read the following for a guide on the many different sections of a model card, i
 
 {style="table-layout:auto"}
 
-### Monitoring and Maintenance
++++
+
+### Monitoring and maintenance {#monitoring-and-maintenance}
+
++++View questions and example answers
 
 | Question | Information needed | Example answer |
 | --- | --- | --- |
@@ -126,7 +168,11 @@ Read the following for a guide on the many different sections of a model card, i
 
 {style="table-layout:auto"}
 
-### Ethical Considerations and Responsible AI
++++
+
+### Ethical considerations and responsible AI {#ethical-considerations-and-responsible-ai}
+
++++View questions and example answers
 
 | Question | Information needed | Example answer |
 | --- | --- | --- |
@@ -135,7 +181,11 @@ Read the following for a guide on the many different sections of a model card, i
 
 {style="table-layout:auto"}
 
-### Known Limitations
++++
+
+### Known limitations {#known-limitations}
+
++++View questions and example answers
 
 | Question | Information needed | Example answer |
 | --- | --- | --- |
@@ -144,10 +194,16 @@ Read the following for a guide on the many different sections of a model card, i
 
 {style="table-layout:auto"}
 
-### Future Improvements
++++
+
+### Future improvements {#future-improvements}
+
++++View questions and example answers
 
 | Question | Information needed | Example answer |
 | --- | --- | --- |
 | What improvements are planned for future iterations? | The roadmap for enhancements. | Future iterations will include transfer learning techniques to improve performance for cold-start users and enhance adaptability to changing customer behaviors. Additionally, real-time data integration will be introduced to improve model responsiveness and accuracy in dynamic marketing environments. |
 
 {style="table-layout:auto"}
+
++++
