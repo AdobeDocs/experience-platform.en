@@ -476,7 +476,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 
 **Response**
 
-A successful response returns HTTP status 200 with details of your newly updated audience. Please note that the details of your audience will differ depending if it is an Experience Platform-generated audience or an externally generated audience.
+A successful response returns HTTP status 200 with details of your newly updated audience. Please note that the details of your audience will differ depending if it is an Experience-Platform-generated audience or an externally generated audience.
 
 +++A sample response when updating an entire audience.
 
