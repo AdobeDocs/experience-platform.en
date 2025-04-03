@@ -7,7 +7,7 @@ exl-id: fcc46c86-e765-4bc7-bfdf-b8b10e8afacc
 
 The [!DNL Adobe Content Analytics] tag extension allows for the tracking of content-related events on a website. The extension sends content data (experiences and assets) to a datastream in Adobe Experience Cloud from web properties through the Experience Platform Edge Network.
 
-The extension allows you to stream specific content-releated event data into Platform so you can use that data in your content analytics reports in Customer Journey Analytics.
+The extension allows you to stream specific content-releated event data into Experience Platform so you can use that data in your content analytics reports in Customer Journey Analytics.
 
 This document explains how to configure the tag extension in the Tags UI.
 

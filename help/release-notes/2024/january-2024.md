@@ -37,9 +37,9 @@ To get started with [!UICONTROL Use Case Playbooks], read the following document
 
 ## Attribute-based access control {#abac}
 
-Attribute-based access control is a capability of Adobe Experience Platform that gives privacy conscious brands greater flexibility to manage user access. Individual objects such as schema fields and segments can be assigned to user roles. This feature lets you grant or revoke access to individual objects for specific Platform users in your organization.
+Attribute-based access control is a capability of Adobe Experience Platform that gives privacy conscious brands greater flexibility to manage user access. Individual objects such as schema fields and segments can be assigned to user roles. This feature lets you grant or revoke access to individual objects for specific Experience Platform users in your organization.
 
-Through attribute-based access control, administrators of your organization can control users' access to, sensitive personal data (SPD), personally identifiable information (PII) and other customized type of data across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
+Through attribute-based access control, administrators of your organization can control users' access to, sensitive personal data (SPD), personally identifiable information (PII) and other customized type of data across all Experience Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
 
 **New or updated documentation**
 
@@ -73,7 +73,7 @@ Adobe Experience Platform provides multiple dashboards through which you can vie
 
 | Feature | Description |
 | --- | --- |
-| View SQL  | You can now view the SQL behind your Profiles, Audiences, Destinations, and customized insights with the View SQL toggle, then execute the query on demand through the Query Editor. Accessing the SQL that powers your Real-time Customer Data Platform insights helps you to understand the logic behind the analysis of your data model. This transparency makes your Adobe Real-time CDP data more accessible, understandable, and impactful for decision-making.<br>Take inspiration from the SQL of over 40 existing insights to create new queries that derive unique insights from Platform data based on your business needs. The SQL is also available for your [Profiles](../../dashboards/insights/profiles.md), [Audiences](../../dashboards/insights/audiences.md), and [Destinations](../../dashboards/insights/destinations.md) insights in the Experience League documentation. These documents highlight the business use cases that can be answered with the standard insights. For more information, read the guide on [viewing insight SQL](../../dashboards/view-sql.md). |
+| View SQL  | You can now view the SQL behind your Profiles, Audiences, Destinations, and customized insights with the View SQL toggle, then execute the query on demand through the Query Editor. Accessing the SQL that powers your Real-time Customer Data Platform insights helps you to understand the logic behind the analysis of your data model. This transparency makes your Adobe Real-time CDP data more accessible, understandable, and impactful for decision-making.<br>Take inspiration from the SQL of over 40 existing insights to create new queries that derive unique insights from Experience Platform data based on your business needs. The SQL is also available for your [Profiles](../../dashboards/insights/profiles.md), [Audiences](../../dashboards/insights/audiences.md), and [Destinations](../../dashboards/insights/destinations.md) insights in the Experience League documentation. These documents highlight the business use cases that can be answered with the standard insights. For more information, read the guide on [viewing insight SQL](../../dashboards/view-sql.md). |
 
 {style="table-layout:auto"}
 

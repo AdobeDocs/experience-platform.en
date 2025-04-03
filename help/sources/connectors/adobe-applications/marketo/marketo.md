@@ -11,11 +11,11 @@ exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
 >
 >You can now use the [!DNL Marketo Engage] source when running Adobe Experience Platform on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../../../landing/multi-cloud.md).
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
 [[!DNL Marketo Engage]](https://www.marketo.com/software/) is a complete solution for lead management and B2B marketers looking to transform customer experiences by engaging across every stage of complex buying journeys.
 
-With the [!DNL Marketo Engage] source connector, you can bring B2B data from [!DNL Marketo Engage] to Platform and keep this data up to date using Platform-connected applications.
+With the [!DNL Marketo Engage] source connector, you can bring B2B data from [!DNL Marketo Engage] to Experience Platform and keep this data up to date using Experience Platform-connected applications.
 
 >[!IMPORTANT]
 >
@@ -29,27 +29,27 @@ Before you can establish mapping sets for [!DNL Marketo Engage], you must first 
 
 ## Authenticate your [!DNL Marketo Engage] connector
 
-In order to connect [!DNL Marketo Engage] to Platform, you must first retrieve values for your `munchkinId`, `clientId`, and `clientSecret`.
+In order to connect [!DNL Marketo Engage] to Experience Platform, you must first retrieve values for your `munchkinId`, `clientId`, and `clientSecret`.
 
 See the steps outlined in the [Authenticate your Marketo source connector](./marketo-auth.md) document to retrieve your credentials.
 
 ## Set up B2B namespaces and schema auto-generation utility
 
-Next, use the B2B namespace and schema auto-generation utility to set up your Platform developer console and Postman environment. This allows you to auto-populate your B2B namespaces and schemas. For detailed instructions, see the guide on [setting up your B2B namespaces and schema auto-generation utility](./marketo-namespaces.md)
+Next, use the B2B namespace and schema auto-generation utility to set up your Experience Platform developer console and Postman environment. This allows you to auto-populate your B2B namespaces and schemas. For detailed instructions, see the guide on [setting up your B2B namespaces and schema auto-generation utility](./marketo-namespaces.md)
 
 ## Experience Data Model (XDM)
 
-XDM is a publicly documented specification that provides common structures and definitions that allow you to ingest data from third-party sources for use in downstream Platform services.
+XDM is a publicly documented specification that provides common structures and definitions that allow you to ingest data from third-party sources for use in downstream Experience Platform services.
 
-Adhering to XDM standards allows data to be uniformly incorporated into the Platform ecosystem, making it easier to deliver data and gather information.
+Adhering to XDM standards allows data to be uniformly incorporated into the Experience Platform ecosystem, making it easier to deliver data and gather information.
 
-To learn more about XDM and its role in Platform, please see the [XDM System overview](../../../../xdm/home.md).
+To learn more about XDM and its role in Experience Platform, please see the [XDM System overview](../../../../xdm/home.md).
 
 ## Field mapping from [!DNL Marketo Engage] to XDM
 
-To establish a source connection between [!DNL Marketo Engage] and Platform, the Marketo source data fields must be mapped to their appropriate target XDM fields prior to being ingested into Platform.
+To establish a source connection between [!DNL Marketo Engage] and Experience Platform, the Marketo source data fields must be mapped to their appropriate target XDM fields prior to being ingested into Experience Platform.
 
-See the following for detailed information on the field mapping rules between [!DNL Marketo Engage] datasets and Platform:
+See the following for detailed information on the field mapping rules between [!DNL Marketo Engage] datasets and Experience Platform:
 
 * [Activities](../mapping/marketo.md#activities)
 * [Programs](../mapping/marketo.md#programs)
@@ -62,9 +62,9 @@ See the following for detailed information on the field mapping rules between [!
 * [Opportunity contact roles](../mapping/marketo.md#opportunity-contact-roles)
 * [Persons](../mapping/marketo.md#persons)
 
-## Expected latency of [!DNL Marketo Engage] data on Platform
+## Expected latency of [!DNL Marketo Engage] data on Experience Platform
 
-The following table outlines the expected latency for bringing [!DNL Marketo Engage] data into Platform, based on the nature of ingestion and the desired destination:
+The following table outlines the expected latency for bringing [!DNL Marketo Engage] data into Experience Platform, based on the nature of ingestion and the desired destination:
 
 | Destination | Expected Latency |
 | ----------- | ---------------- |
@@ -79,7 +79,7 @@ The following table outlines the expected latency for bringing [!DNL Marketo Eng
 
 The following documentation provides further information on creating a [!DNL Marketo Engage] source connection:
 
-* For information on how to connect your [!DNL Marketo Engage] data to Platform, read the tutorial on [creating a [!DNL Marketo Engage] source connection in the UI](../../../tutorials/ui/create/adobe-applications/marketo.md).
+* For information on how to connect your [!DNL Marketo Engage] data to Experience Platform, read the tutorial on [creating a [!DNL Marketo Engage] source connection in the UI](../../../tutorials/ui/create/adobe-applications/marketo.md).
   * For information on how to set up your schemas and ingest custom activity data, read the tutorial on [creating a source connection and dataflow for [!DNL Marketo Engage] custom activity data](../../../tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
   * For information on how to migrate your ECID mapping from the [!DNL Person] dataset to the [!DNL Activity] dataset, read the [ECID mapping migration guide](./migration.md).
 * For information on the underlying setup for the B2B namespaces and schemas used with [!DNL Marketo Engage], read the documentation for [B2B namespaces and schemas](./marketo-namespaces.md).

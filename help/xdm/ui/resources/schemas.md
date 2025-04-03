@@ -23,7 +23,7 @@ This guide requires a working understanding of XDM System. Refer to the [XDM ove
 
 >[!NOTE]
 >
->This section covers how to manually create a new schema in the UI. If you are ingesting CSV data into Platform, you can use Machine Learning (ML) algorithms to **generate a schema from sample CSV data**. This workflow matches your data format and automatically creates a new schema based on the structure and content of your CSV file. See the [ML-Assisted schema creation guide](../ml-assisted-schema-creation.md) for more information on this workflow.
+>This section covers how to manually create a new schema in the UI. If you are ingesting CSV data into Experience Platform, you can use Machine Learning (ML) algorithms to **generate a schema from sample CSV data**. This workflow matches your data format and automatically creates a new schema based on the structure and content of your CSV file. See the [ML-Assisted schema creation guide](../ml-assisted-schema-creation.md) for more information on this workflow.
 
 In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in the top-right corner.
 
@@ -336,7 +336,7 @@ To finish the process, select **[!UICONTROL Save]** to save the schema.
 
 ![](../../images/ui/resources/schemas/profile-enabled.png)
 
-The schema is now enabled for use in Real-Time Customer Profile. When Platform ingests data into datasets based on this schema, that data will be incorporated into your amalgamated Profile data.
+The schema is now enabled for use in Real-Time Customer Profile. When Experience Platform ingests data into datasets based on this schema, that data will be incorporated into your amalgamated Profile data.
 
 ## Edit display names for schema fields {#display-names}
 
@@ -382,7 +382,7 @@ After confirming the class change, the canvas will be reset and all composition 
 
 ## Next steps {#next-steps}
 
-This document covered the basics of creating and editing schemas in the Platform UI. It is strongly recommended that you review the [schema creation tutorial](../../tutorials/create-schema-ui.md) for a comprehensive workflow for building a complete schema in the UI, including creating custom field groups and data types for unique use cases.
+This document covered the basics of creating and editing schemas in the Experience Platform UI. It is strongly recommended that you review the [schema creation tutorial](../../tutorials/create-schema-ui.md) for a comprehensive workflow for building a complete schema in the UI, including creating custom field groups and data types for unique use cases.
 
 For more information on the capabilities of the [!UICONTROL Schemas] workspace, see the [[!UICONTROL Schemas] workspace overview](../overview.md).
 

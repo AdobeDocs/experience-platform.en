@@ -36,7 +36,7 @@ If you are a technical writer, program manager, or developer from the product te
 
 ## Contacting the Experience Platform documentation team
 
-As stated above, members of the Adobe community can submit an issue that will be assigned to the appropriate writer. If you are an Adobe employee, you can submit an issue or contact the Experience Platform documentation team directly. To find the lead writer for a specific Platform area, see the [Adobe Experience Platform Documentation wiki](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation).
+As stated above, members of the Adobe community can submit an issue that will be assigned to the appropriate writer. If you are an Adobe employee, you can submit an issue or contact the Experience Platform documentation team directly. To find the lead writer for a specific Experience Platform area, see the [Adobe Experience Platform Documentation wiki](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation).
 
 ## Tools and setup
 

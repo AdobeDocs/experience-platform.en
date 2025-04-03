@@ -21,7 +21,7 @@ If you already have a [!DNL PathFactory] account, you may skip the remainder of 
 
 ### Gather Required Credentials {#gather-credentials}
 
-To access your PathFactory account on the Platform, you must provide the following values:
+To access your PathFactory account on the Experience Platform, you must provide the following values:
 
 | Credential | Description |
 | ---------- | ----------- |
@@ -36,7 +36,7 @@ For detailed guidance on how to secure and use your credentials, and for informa
 
 ## Connect your [!DNL PathFactory] account
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] displays a variety of sources supported by Experience Platform.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] displays a variety of sources supported by Experience Platform.
 
 You can select the appropriate category from the list of categories. You can also use the search bar to filter for a specific source.
 

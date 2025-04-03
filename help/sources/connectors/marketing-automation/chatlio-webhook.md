@@ -10,7 +10,7 @@ exl-id: 4a71d1dc-e0eb-443e-a956-8caa0e82fa18
 >
 >The [!DNL Chatlio] source is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
 Experience Platform provides support for ingesting data from Streaming applications. Support for streaming providers include [!DNL Chatlio].
 
@@ -35,18 +35,18 @@ Before you can create a [!DNL Chatlio] source connection, you must first ensure 
 
 ### Setup [!DNL Chatlio] webhook {#set-up-webhook}
 
-Once you have successfully created your dataflow, you must set up a webhook to inform Platform about [!DNL Chatlio] events. Webhooks can notify you immediately when customer attributes change or when people open your messages and send this information to your [!DNL Chatlio] source. 
+Once you have successfully created your dataflow, you must set up a webhook to inform Experience Platform about [!DNL Chatlio] events. Webhooks can notify you immediately when customer attributes change or when people open your messages and send this information to your [!DNL Chatlio] source. 
 
 For more information, read the tutorials on [getting your streaming endpoint URL](../../tutorials/ui/create/marketing-automation/chatlio-webhook.md#get-streaming-endpoint) and [setting up a [!DNL Chatlio] Webhook](../../tutorials/ui/create/marketing-automation/chatlio-webhook.md#set-up-webhook).
 
-## Connect [!DNL Chatlio] to Platform {#connect-to-platform}
+## Connect [!DNL Chatlio] to Experience Platform {#connect-to-platform}
 
-The documentation below provides information on how to create a [!DNL Chatlio] streaming connector to connect with [!DNL Platform] using APIs or the user interface:
+The documentation below provides information on how to create a [!DNL Chatlio] streaming connector to connect with [!DNL Experience Platform] using APIs or the user interface:
 
-### Connect [!DNL Chatlio] to Platform using APIs {#connect-to-platform-using-api}
+### Connect [!DNL Chatlio] to Experience Platform using APIs {#connect-to-platform-using-api}
 
-* [Create a source connection to bring [!DNL Chatlio] data to Platform using APIs.](../../tutorials/api/create/marketing-automation/chatlio-webhook.md)
+* [Create a source connection to bring [!DNL Chatlio] data to Experience Platform using APIs.](../../tutorials/api/create/marketing-automation/chatlio-webhook.md)
 
-### Connect [!DNL Chatlio] to Platform using the UI {#connect-to-platform-using-ui}
+### Connect [!DNL Chatlio] to Experience Platform using the UI {#connect-to-platform-using-ui}
 
-* [Create a source connection to bring [!DNL Chatlio] data to Platform using the user interface](../../tutorials/ui/create/marketing-automation/chatlio-webhook.md)
+* [Create a source connection to bring [!DNL Chatlio] data to Experience Platform using the user interface](../../tutorials/ui/create/marketing-automation/chatlio-webhook.md)

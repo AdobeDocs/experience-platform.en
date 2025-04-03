@@ -15,14 +15,14 @@ This tutorial uses the [[!DNL Flow Service] API](https://www.adobe.io/experience
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes experience data.
+* [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes experience data.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, consumer profile in real time based on aggregated data from multiple sources.
 
 Additionally, creating a streaming connection requires you to have a target XDM schema and a dataset. To learn how to create these, please read the tutorial on [streaming record data](../../../../../ingestion/tutorials/streaming-record-data.md) or the tutorial on [streaming time-series data](../../../../../ingestion/tutorials/streaming-time-series-data.md).
 
-### Using Platform APIs
+### Using Experience Platform APIs
 
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
+For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../../../landing/api-guide.md).
 
 ## Create a base connection
 
@@ -30,7 +30,7 @@ A base connection specifies the source and contains the information required to 
 
 ### Non-authenticated connection
 
-Non-authenticated connections are the standard streaming connection you can create when you want to stream data into Platform.
+Non-authenticated connections are the standard streaming connection you can create when you want to stream data into Experience Platform.
 
 To create a non-authenticated base connection, make a POST request to the `/connections` endpoint while providing a name for your connection, the data type, and the HTTP API connection specification ID. This ID is `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
 
@@ -124,7 +124,7 @@ A successful response returns HTTP status 201 with details of the newly created 
 
 ### Authenticated connection
 
-Authenticated connections should be used when you need to differentiate between records coming from trusted and un-trusted sources. Users who want to send information with Personally Identifiable Information (PII) should create an authenticated connection when streaming information to Platform.
+Authenticated connections should be used when you need to differentiate between records coming from trusted and un-trusted sources. Users who want to send information with Personally Identifiable Information (PII) should create an authenticated connection when streaming information to Experience Platform.
 
 To create an authenticated base connection, you must include the `authenticationRequired` parameter in your request and specify its value as `true`. During this step, you can also provide a source ID for your authenticated base connection. This parameter is optional and will use the same value as the `name` attribute, if it is not provided. 
 
@@ -326,7 +326,7 @@ A successful response returns HTTP status 201 with detailed of the newly created
 
 ## Create a target XDM schema {#target-schema}
 
-In order for the source data to be used in Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create a Platform dataset in which the source data is contained.
+In order for the source data to be used in Experience Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create an Experience Platform dataset in which the source data is contained.
 
 A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
@@ -553,7 +553,7 @@ A successful response returns HTTP status 201 with details of your newly created
 }
 ```
 
-## Post data to be ingested to Platform {#ingest-data}
+## Post data to be ingested to Experience Platform {#ingest-data}
 
 >[!NOTE]
 >
@@ -686,9 +686,9 @@ A successful response returns HTTP status 200 with details of the newly ingested
 
 ## Next steps
 
-By following this tutorial, you have created a streaming HTTP connection, enabling you to use the streaming endpoint to ingest data into Platform. For instructions to create a streaming connection in the UI, please read the [creating a streaming connection tutorial](../../../ui/create/streaming/http.md).
+By following this tutorial, you have created a streaming HTTP connection, enabling you to use the streaming endpoint to ingest data into Experience Platform. For instructions to create a streaming connection in the UI, please read the [creating a streaming connection tutorial](../../../ui/create/streaming/http.md).
 
-To learn how to stream data to Platform, please read either the tutorial on [streaming time series data](../../../../../ingestion/tutorials/streaming-time-series-data.md) or the tutorial on [streaming record data](../../../../../ingestion/tutorials/streaming-record-data.md).
+To learn how to stream data to Experience Platform, please read either the tutorial on [streaming time series data](../../../../../ingestion/tutorials/streaming-time-series-data.md) or the tutorial on [streaming record data](../../../../../ingestion/tutorials/streaming-record-data.md).
 
 ## Appendix
 

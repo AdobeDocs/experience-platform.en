@@ -34,7 +34,7 @@ role: Admin
   * [Customer AI](segmentation/customer-ai.md)
 * Datasets {#datasets}
   * [Datasets](datasets/dataset.md)
-  * [Data quality on Platform](datasets/data-quality.md)
+  * [Data quality on Experience Platform](datasets/data-quality.md)
 * Destinations {#destinations}
   * [Destinations overview](destinations/overview.md)
   * [Destinations in Real-Time CDP B2B Edition](destinations/b2b.md)
