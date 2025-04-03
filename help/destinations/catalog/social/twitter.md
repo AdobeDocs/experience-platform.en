@@ -23,7 +23,7 @@ Before you configure your [!DNL Twitter Custom Audiences] destination, make sure
 |Target Identity|Description|Considerations|
 |---|---|---|
 |device_id|IDFA/AdID/Android ID|Google Advertising ID (GAID) and Apple ID for Advertisers (IDFA) are supported in Adobe Experience Platform. Please map these namespaces and/or attributes from your source schema accordingly in the [mapping step](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) of the destination activation workflow.|
-|email|Email address(es) for the user|Please map your plain text email addresses and your SHA256-hashed email addresses to this field. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation. If you hash your customer email addresses before uploading them to Adobe Experience Platform, please note these identities must be hashed using SHA256, without a salt.|
+|email|Email address(es) for the user|Please map your plain text email addresses and your SHA256-hashed email addresses to this field. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation. If you hash your customer email addresses before uploading them to Adobe Experience Platform, please note these identities must be hashed using SHA256, without a salt.|
 
 {style="table-layout:auto"}
 

@@ -30,13 +30,13 @@ For more information, visit the [Data Ingestion documentation](../../ingestion/h
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-Adobe Experience Platform [!DNL Data Science Workspace] is a fully managed service within [!DNL Experience Platform] that enables data scientists to seamlessly generate insights from data and content across Adobe solutions and third-party systems by building and operationalizing Machine Learning Models. [!DNL Data Science Workspace] is tightly integrated with [!DNL Platform] and powers the end-to-end data science lifecycle, including exploration and preparation of XDM data, followed by the development and operationalization of Models to automatically enrich [!DNL Real-Time Customer Profile] with Machine Learning Insights.
+Adobe Experience Platform [!DNL Data Science Workspace] is a fully managed service within [!DNL Experience Platform] that enables data scientists to seamlessly generate insights from data and content across Adobe solutions and third-party systems by building and operationalizing Machine Learning Models. [!DNL Data Science Workspace] is tightly integrated with [!DNL Experience Platform] and powers the end-to-end data science lifecycle, including exploration and preparation of XDM data, followed by the development and operationalization of Models to automatically enrich [!DNL Real-Time Customer Profile] with Machine Learning Insights.
 
 **New features**
 
 | Feature    | Description  |
 | -----------| ---------- |
-| Scheduling of Services via the UI | Integrated with [!DNL Platform] Orchestration Service to automate Model training and scoring with user-defined schedules using the UI. |
+| Scheduling of Services via the UI | Integrated with [!DNL Experience Platform] Orchestration Service to automate Model training and scoring with user-defined schedules using the UI. |
 | [!DNL Service Gallery] | Browse, monitor, and access machine learning Services with the ability to schedule automated training and scoring jobs, all within the redesigned [!DNL Service Gallery]. |
 | [!DNL JupyterLab] 5.0.0 | [!DNL JupyterLab] UI improvements. |
 

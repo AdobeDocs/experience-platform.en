@@ -707,7 +707,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 
 >[!IMPORTANT]
 >
->Ensure that you are using Platform Web SDK version 2.6.0 or later.
+>Ensure that you are using Experience Platform Web SDK version 2.6.0 or later.
 
 The Response Tokens are returned as part of the `propositions` that are exposed in the result of the `sendEvent` command. Each proposition contains an array of `items`, and each item will have a `meta` object populated with Response Tokens if they are enabled in the Target admin UI. [Learn more](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
 

@@ -13,7 +13,7 @@ This tutorial requires a working understanding of the following components of Ex
 
 * [Experience Data Model (XDM) System](../../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
 * [Real-Time Customer Profile](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ### Key terminology
 
@@ -33,7 +33,7 @@ It is important to understand the following key terms used throughout this docum
 >* A dataflow that does a 13-month backfill of historical report suite data into data lake. This dataflow ends when the backfill is complete.
 >* A dataflow flow which sends live data to data lake and to [!DNL Real-Time Customer Profile]. This dataflow runs continuously.
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources that you can create an account with.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources that you can create an account with.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. You can also use the search bar to narrow down the displayed sources.
 
@@ -109,7 +109,7 @@ The [!UICONTROL Adobe Analytics ExperienceEvent Template Schema Field Group] pag
 
 ![field-group-preview](../../../../images/tutorials/create/analytics/field-group-preview.png)
 
-Platform automatically detects your mapping sets for any friendly name conflicts. If there are no conflicts with your mapping sets, select **[!UICONTROL Next]** to proceed.
+Experience Platform automatically detects your mapping sets for any friendly name conflicts. If there are no conflicts with your mapping sets, select **[!UICONTROL Next]** to proceed.
 
 ![mapping](../../../../images/tutorials/create/analytics/mapping.png)
 
@@ -316,7 +316,7 @@ To delete your Analytics dataflow, select **[!UICONTROL Dataflows]** from the to
 
 ## Next steps and additional resources
 
-Once the connection is created, the dataflow is automatically created to contain the incoming data and populate a dataset with your selected schema. Furthermore, data back-filling occurs and ingests up to 13 months of historical data. When the initial ingestion completes, [!DNL Analytics] data and be used by downstream Platform services such as [!DNL Real-Time Customer Profile] and Segmentation Service. See the following documents for more details:
+Once the connection is created, the dataflow is automatically created to contain the incoming data and populate a dataset with your selected schema. Furthermore, data back-filling occurs and ingests up to 13 months of historical data. When the initial ingestion completes, [!DNL Analytics] data and be used by downstream Experience Platform services such as [!DNL Real-Time Customer Profile] and Segmentation Service. See the following documents for more details:
 
 * [[!DNL Real-Time Customer Profile] overview](../../../../../profile/home.md)
 * [[!DNL Segmentation Service] overview](../../../../../segmentation/home.md)
@@ -327,6 +327,6 @@ The following video is intended to support your understanding of ingesting data 
 
 >[!WARNING]
 >
-> The [!DNL Platform] UI shown in the following video is out-of-date. Please refer to the documentation above for the latest UI screenshots and functionality.
+> The [!DNL Experience Platform] UI shown in the following video is out-of-date. Please refer to the documentation above for the latest UI screenshots and functionality.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)

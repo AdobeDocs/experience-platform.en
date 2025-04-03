@@ -22,24 +22,24 @@ As this guide focuses exclusively on key considerations regarding schema design,
 The recommended approach for designing your data model for use in Experience Platform can be summarized as follows:
 
 1. Understand the business use cases for your data.
-1. Identify the primary data sources that should be brought into Platform to address those use cases.
-1. Identify any secondary data sources that could also be of interest. For example, if currently only one business unit in your organization is interested in porting their data to Platform, a similar business unit might also be interested in porting similar data in the future. Considering these secondary sources helps standardize the data model across your entire organization.
+1. Identify the primary data sources that should be brought into Experience Platform to address those use cases.
+1. Identify any secondary data sources that could also be of interest. For example, if currently only one business unit in your organization is interested in porting their data to Experience Platform, a similar business unit might also be interested in porting similar data in the future. Considering these secondary sources helps standardize the data model across your entire organization.
 1. Create a high-level entity relationship diagram (ERD) for the data sources that have been identified.
-1. Convert the high-level ERD into a Platform-centric ERD (including profiles, Experience Events, and lookup entities).
+1. Convert the high-level ERD into an Experience Platform-centric ERD (including profiles, Experience Events, and lookup entities).
 
-The steps related to identifying the applicable data sources required to carry out your business use cases vary from organization to organization. While the remainder of sections throughout this document focus on the latter steps of organizing and constructing an ERD after the data sources have been identified, the explanations of the diagram's various components may inform your decisions as to which of your data sources should be migrated to Platform.
+The steps related to identifying the applicable data sources required to carry out your business use cases vary from organization to organization. While the remainder of sections throughout this document focus on the latter steps of organizing and constructing an ERD after the data sources have been identified, the explanations of the diagram's various components may inform your decisions as to which of your data sources should be migrated to Experience Platform.
 
 ## Create a high-level ERD {#create-an-erd}
 
-Once you have determined the data sources that you wish to bring into Platform, create a high-level ERD to help guide the process of mapping your data to XDM schemas.
+Once you have determined the data sources that you wish to bring into Experience Platform, create a high-level ERD to help guide the process of mapping your data to XDM schemas.
 
-The example below represents a simplified ERD for a company who wants to bring data into Platform. The diagram highlights the essential entities that should be sorted into XDM classes, including customer accounts, hotels, and several common e-commerce events.
+The example below represents a simplified ERD for a company who wants to bring data into Experience Platform. The diagram highlights the essential entities that should be sorted into XDM classes, including customer accounts, hotels, and several common e-commerce events.
 
 ![A entity relational diagram that highlights the essential entities that should be sorted into XDM classes for data ingestion.](../images/best-practices/erd.png)
 
 ## Sort entities into profile, lookup, and event categories {#sort-entities}
 
-Once you have created an ERD to identify the essential entities you would like to bring into Platform, these entities must be sorted into profile, lookup, and event categories:
+Once you have created an ERD to identify the essential entities you would like to bring into Experience Platform, these entities must be sorted into profile, lookup, and event categories:
 
 | Category | Description |
 | --- | --- |
@@ -73,7 +73,7 @@ If an entity contains any attributes related to an individual customer, it is mo
 
 #### Tracking data over time {#track-data}
 
-If you want to analyze how certain attributes within an entity change over time, it is most likely an event entity. For example, adding product items to a cart can be tracked as add-to-cart events in Platform:
+If you want to analyze how certain attributes within an entity change over time, it is most likely an event entity. For example, adding product items to a cart can be tracked as add-to-cart events in Experience Platform:
 
 | Customer ID | Type | Product ID | Quantity | Timestamp |
 | --- | --- | --- | --- | --- |
@@ -107,7 +107,7 @@ For example, a company wants to build an audience based on the number of cart pu
 
 >[!CAUTION]
 >
->Experience Platform does not currently perform automatic value aggregation, although this is planned for future releases. If you choose to use aggregated values, you must perform the calculations externally before sending the data to Platform.
+>Experience Platform does not currently perform automatic value aggregation, although this is planned for future releases. If you choose to use aggregated values, you must perform the calculations externally before sending the data to Experience Platform.
 
 #### Cardinality {#cardinality}
 
@@ -225,7 +225,7 @@ For Adobe Analytics, ECID is the default primary identity. If an ECID value is n
 
 ## Data validation fields {#data-validation-fields}
 
-When you ingest data into the data lake, data validation is only enforced for constrained fields. To validate a particular field during a batch ingestion, you must mark the field as constrained in the XDM schema. To prevent bad data from being ingested into Platform, you are recommended to define the criteria for field level validation when you create your schemas.
+When you ingest data into the data lake, data validation is only enforced for constrained fields. To validate a particular field during a batch ingestion, you must mark the field as constrained in the XDM schema. To prevent bad data from being ingested into Experience Platform, you are recommended to define the criteria for field level validation when you create your schemas.
 
 >[!IMPORTANT]
 >

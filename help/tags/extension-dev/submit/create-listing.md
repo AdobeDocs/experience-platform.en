@@ -17,7 +17,7 @@ Adobe Experience Platform has a single unified catalog where users can view tag 
 
 Separate from the extensions in the product catalog, public extensions also have listings in the [Experience Cloud Exchange App Marketplace](https://exchange.adobe.com/apps/browse/ec).  
 
-These listings enable extension developers to post descriptions of functionality, provide links to additional support and documentation, and to market extensions to prospective users who may not be aware of your company or the functionality of your extension. In this marketplace, your extension will have a public listing that can be viewed without the user being authenticated to Platform. For public extensions, creating this Exchange listing is a required step.
+These listings enable extension developers to post descriptions of functionality, provide links to additional support and documentation, and to market extensions to prospective users who may not be aware of your company or the functionality of your extension. In this marketplace, your extension will have a public listing that can be viewed without the user being authenticated to Experience Platform. For public extensions, creating this Exchange listing is a required step.
 
 >[!TIP]
 >

@@ -36,9 +36,9 @@ In order to connect [!DNL SAP Commerce] to Experience Platform, you must provide
   
 For more information, please refer to the [[!DNL SAP Commerce] documentation](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html).
 
-### Create a Platform schema {#create-platform-schema}
+### Create an Experience Platform schema {#create-platform-schema}
 
-Before creating a [!DNL SAP Commerce] source connection, you must also ensure that you first create an Experience Platform schema to use for your source. See the tutorial on [creating a Platform schema](../../../../../xdm/schema/composition.md) for comprehensive steps on how to create a schema.
+Before creating a [!DNL SAP Commerce] source connection, you must also ensure that you first create an Experience Platform schema to use for your source. See the tutorial on [creating an Experience Platform schema](../../../../../xdm/schema/composition.md) for comprehensive steps on how to create a schema.
 
 Expand the following section to view an example schema.
 
@@ -137,13 +137,13 @@ Expand the following section to view an example schema.
 
 ## Connect your [!DNL SAP Commerce] account {#connect-account}
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
 Under the *eCommerce* category, select **[!UICONTROL SAP Commerce]**, and then select **[!UICONTROL Add data]**.
 
-![Platform UI screenshot for catalog with SAP Commerce card](../../../../images/tutorials/create/ecommerce/sap-commerce/catalog-card.png)
+![Experience Platform UI screenshot for catalog with SAP Commerce card](../../../../images/tutorials/create/ecommerce/sap-commerce/catalog-card.png)
 
 The **[!UICONTROL Connect SAP Commerce account]** page appears. On this page, you can either use new credentials or existing credentials.
 
@@ -151,17 +151,17 @@ The **[!UICONTROL Connect SAP Commerce account]** page appears. On this page, yo
 
 To use an existing account, select the [!DNL SAP Commerce] account you want to create a new dataflow with, then select **[!UICONTROL Next]** to proceed.
 
-![Platform UI screenshot to connect SAP Commerce account with an existing account](../../../../images/tutorials/create/ecommerce/sap-commerce/existing.png)
+![Experience Platform UI screenshot to connect SAP Commerce account with an existing account](../../../../images/tutorials/create/ecommerce/sap-commerce/existing.png)
 
 ### New account {#new-account}
 
 If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name, an optional description, and your credentials. When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
 
-![Platform UI screenshot to connect SAP Commerce account with a new account](../../../../images/tutorials/create/ecommerce/sap-commerce/new.png)
+![Experience Platform UI screenshot to connect SAP Commerce account with a new account](../../../../images/tutorials/create/ecommerce/sap-commerce/new.png)
 
 ### Select data {#select-data}
 
-Finally, you must select the object type that you want to ingest to Platform.
+Finally, you must select the object type that you want to ingest to Experience Platform.
 
 | Object type | Description |
 | --- | --- |
@@ -174,19 +174,19 @@ Finally, you must select the object type that you want to ingest to Platform.
 
 To ingest customer data, select **[!UICONTROL Customers]** as your object type and then select **[!UICONTROL Next]**.
 
-![Platform UI screenshot for SAP Commerce showing configuration with Customers option selected](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-customers.png)
+![Experience Platform UI screenshot for SAP Commerce showing configuration with Customers option selected](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-customers.png)
 
 >[!TAB Contacts]
 
 To ingest contact data, select **[!UICONTROL Contacts]** as your object type and then select **[!UICONTROL Next]**.
 
-![Platform UI screenshot for SAP Commerce showing configuration with Contacts option selected](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-contacts.png)
+![Experience Platform UI screenshot for SAP Commerce showing configuration with Contacts option selected](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-contacts.png)
 
 >[!ENDTABS]
 
 ## Next steps {#next-steps}
 
-By following this tutorial, you have established a connection to your [!DNL SAP Commerce] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](../../dataflow/ecommerce.md).
+By following this tutorial, you have established a connection to your [!DNL SAP Commerce] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Experience Platform](../../dataflow/ecommerce.md).
 
 ## Additional resources {#additional-resources}
 
@@ -194,7 +194,7 @@ The sections below provide additional resources that you can refer to when using
 
 ### Mapping {#mapping}
 
-Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
+Experience Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
 
 Mapping configurations for your dataflow will differ depending on your schema and the object type that you select to ingest.
 

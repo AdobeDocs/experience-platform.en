@@ -6,7 +6,7 @@ exl-id: f4da5850-d5b0-4746-9f28-88ce836db800
 ---
 # Unified Tags API overview
 
-The Unified Tags API lets you categorize and manage your business objects within Adobe Experience Platform. You can create both folders and tags which can be used to better organize Platform objects such as audiences or datasets by using endpoints in this API.
+The Unified Tags API lets you categorize and manage your business objects within Adobe Experience Platform. You can create both folders and tags which can be used to better organize Experience Platform objects such as audiences or datasets by using endpoints in this API.
 
 Before reading the individual endpoint guides, please refer to the [getting started guide](./getting-started.md) for important information on required headers, reading sample API calls, and more.
 

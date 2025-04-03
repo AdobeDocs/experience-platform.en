@@ -24,13 +24,13 @@ The **[!UICONTROL Overview]** tab displays the [!UICONTROL Destinations] dashboa
 
 ## [!UICONTROL Catalog] {#catalog}
 
-The **[!UICONTROL Catalog]** tab displays a list of all destinations available in [!DNL Platform], that you can send data to. 
+The **[!UICONTROL Catalog]** tab displays a list of all destinations available in [!DNL Experience Platform], that you can send data to. 
 
-The [!DNL Platform] user interface provides several search and filter options on the destinations catalog page:
+The [!DNL Experience Platform] user interface provides several search and filter options on the destinations catalog page:
 
 * Use the search functionality on the page to locate a specific destination.
 * Filter destinations using the [!UICONTROL Categories] control.
-* Toggle between [!UICONTROL All destinations] and [!UICONTROL My destinations]. When you select **[!UICONTROL All destinations]**, all available [!DNL Platform] destinations are displayed. When you select **[!UICONTROL My destinations]**, you can only see the destinations with which you have established a connection.
+* Toggle between [!UICONTROL All destinations] and [!UICONTROL My destinations]. When you select **[!UICONTROL All destinations]**, all available [!DNL Experience Platform] destinations are displayed. When you select **[!UICONTROL My destinations]**, you can only see the destinations with which you have established a connection.
 * Select to view the **[!UICONTROL Connections]** and/or **[!UICONTROL Extensions]** types. To understand the difference between the two categories, read [Destination Types and Categories](../destination-types.md).
 
 ![Destinations catalog showing a few advertising and cloud storage destinations.](../assets/ui/workspace/catalog.png)

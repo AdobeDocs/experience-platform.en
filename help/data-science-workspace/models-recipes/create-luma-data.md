@@ -43,7 +43,7 @@ The following tutorial uses a custom Luma purchase propensity model. Before proc
 
 ### Create the Luma web data schema and ingest the data
 
-In order to create a model, you must have a dataset in Platform which is used to train and score your model. The following video tutorial from the [Data Science Workspace course](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw) walks you through creating the Luma schema and ingesting the data used by the purchase propensity model.
+In order to create a model, you must have a dataset in Experience Platform which is used to train and score your model. The following video tutorial from the [Data Science Workspace course](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw) walks you through creating the Luma schema and ingesting the data used by the purchase propensity model.
 
 >[!VIDEO](https://video.tv.adobe.com/v/333312)
 

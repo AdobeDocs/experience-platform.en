@@ -9,19 +9,19 @@ This document outlines the different types of packaging and query execution capa
 
 Adobe Experience Platform Query Service can be divided into two capabilities based on the query patterns that can be executed:
 
-- **Ad hoc queries** are SQL queries used to explore ingested datasets for verification, validation, experimentation, and so on. These queries do not write data back into the Platform data lake.
-- **Batch queries** are SQL queries used to perform the post-ingestion processing of ingested datasets. These queries clean, shape, manipulate, and enrich data, the results of which are written back to the Platform data lake. These queries can be scheduled, managed, and monitored as batch jobs.
+- **Ad hoc queries** are SQL queries used to explore ingested datasets for verification, validation, experimentation, and so on. These queries do not write data back into the Experience Platform data lake.
+- **Batch queries** are SQL queries used to perform the post-ingestion processing of ingested datasets. These queries clean, shape, manipulate, and enrich data, the results of which are written back to the Experience Platform data lake. These queries can be scheduled, managed, and monitored as batch jobs.
 
 Query Service capabilities are packaged with the following products and add-ons:  
 
-- **Platform-based applications** (Adobe Real-Time Customer Data Platform, Adobe Customer Journey Analytics, and Adobe Journey Optimizer): Query Service access to execute ad hoc queries is provided from the outset with every variation and tier of Platform-based applications. 
+- **Experience Platform-based applications** (Adobe Real-Time Customer Data Platform, Adobe Customer Journey Analytics, and Adobe Journey Optimizer): Query Service access to execute ad hoc queries is provided from the outset with every variation and tier of Experience Platform-based applications. 
 - **[!DNL Data Distiller]** (add-on package that can be purchased with Adobe Real-Time CDP, Customer Journey Analytics and Adobe Journey Optimizer): Query Service access to execute batch queries is provided with [!DNL Data Distiller].
 
 ## Entitlements {#entitlements}
 
 The following table outlines the key Query Service entitlements based on how they are packaged:
 
-| Query Service Entitlement | Packaged with Platform-based applications | Packaged with [!DNL Data Distiller] |
+| Query Service Entitlement | Packaged with Experience Platform-based applications | Packaged with [!DNL Data Distiller] |
 |---|---|---|
 | Query Pattern Supported | Ad hoc queries only | Batch query |
 | Use Case Supported | <ul><li>Exploration​</li><li>Data Discovery​</li><li>Data Validation</li><li>Experimentation</li></ul> | <ul><li>Cleaning</li><li>Shaping</li><li>Manipulating</li><li>Enriching</li></ul> |
@@ -74,7 +74,7 @@ To create Data Distiller [SQL Insights](./data-distiller/sql-insights/overview.m
 
 ## Sandbox support {#sandbox-support}
 
-Sandboxes are virtual partitions within a single instance of Experience Platform. Each Platform instance supports multiple production and non-production sandboxes, each maintaining its own library of Platform resources. Non-production sandboxes allow you to test features, run experiments, and make custom configurations without impacting your production sandboxes. For more information on sandboxes, see the [sandboxes overview](../sandboxes/home.md). All Query Service entitlements are shared across all sandboxes.
+Sandboxes are virtual partitions within a single instance of Experience Platform. Each Experience Platform instance supports multiple production and non-production sandboxes, each maintaining its own library of Experience Platform resources. Non-production sandboxes allow you to test features, run experiments, and make custom configurations without impacting your production sandboxes. For more information on sandboxes, see the [sandboxes overview](../sandboxes/home.md). All Query Service entitlements are shared across all sandboxes.
 
 ## Next steps
 

@@ -13,7 +13,7 @@ exl-id: d2ddfec3-a421-48a7-b765-86ce9162f26f
 
 [[!DNL SAP Commerce]](https://www.sap.com/india/products/acquired-brands/what-is-hybris.html), a cloud-based e-commerce platform solution for B2B and B2C enterprises is available as part of the SAP Customer Experience portfolio. [[!DNL SAP] Subscription Billing](https://www.sap.com/products/financial-management/subscription-billing.html) is a product under the portfolio and enables complete subscription lifecycle management with simplified selling and payment experiences through standardized integrations.
 
-The [!DNL SAP Commerce] source allows you to ingest customers and contacts information into Platform from the [[!DNL SAP] Subscription Billing](https://www.sap.com/products/financial-management/subscription-billing.html) Business Partners API endpoints below:
+The [!DNL SAP Commerce] source allows you to ingest customers and contacts information into Experience Platform from the [[!DNL SAP] Subscription Billing](https://www.sap.com/products/financial-management/subscription-billing.html) Business Partners API endpoints below:
 
 * [Customers](https://api.sap.com/api/BusinessPartner_APIs/path/GET_customers)
 * [Contacts](https://api.sap.com/api/BusinessPartner_APIs/path/GET_contacts)
@@ -33,7 +33,7 @@ Before you can bring your [!DNL SAP Commerce] data to Experience Platform, you m
 * [!DNL SAP] service key. The [!DNL SAP] service key allows you to access the [!DNL SAP Subscription Billing] API through Experience Platform. [!DNL SAP Commerce] requires the following:
   * Client ID
   * Client secret
-  * URL. The URL pattern is as follows: `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. This value will be used later to obtain values for `region` and `tokenEndpoint` when you [Create base connection](../../tutorials/api/create/ecommerce/sap-commerce.md#base-connection) using the API or when you [Connect your [!DNL SAP Commerce] account](../../tutorials/ui/create/ecommerce/sap-commerce.md#connect-account) through the Platform UI.
+  * URL. The URL pattern is as follows: `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. This value will be used later to obtain values for `region` and `tokenEndpoint` when you [Create base connection](../../tutorials/api/create/ecommerce/sap-commerce.md#base-connection) using the API or when you [Connect your [!DNL SAP Commerce] account](../../tutorials/ui/create/ecommerce/sap-commerce.md#connect-account) through the Experience Platform UI.
   
 +++Select to see an example of the service key
 
@@ -65,8 +65,8 @@ Before you can bring your [!DNL SAP Commerce] data to Experience Platform, you m
 
 ## Next steps
 
-The documentation below provides information on how to connect [!DNL SAP Commerce] to Platform using APIs or the user interface:
+The documentation below provides information on how to connect [!DNL SAP Commerce] to Experience Platform using APIs or the user interface:
 
-* [Create a source connection and dataflow to bring [!DNL SAP Commerce] data to Platform using APIs](../../tutorials/api/create/ecommerce/sap-commerce.md).
+* [Create a source connection and dataflow to bring [!DNL SAP Commerce] data to Experience Platform using APIs](../../tutorials/api/create/ecommerce/sap-commerce.md).
 * [Connect your [!DNL SAP Commerce] account to Experience Platform using the UI](../../tutorials/ui/create/ecommerce/sap-commerce.md).
 * [Create a dataflow for a source using the UI](../../tutorials/ui/dataflow/ecommerce.md)

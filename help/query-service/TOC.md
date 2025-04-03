@@ -137,4 +137,4 @@ role: User,Developer
 - [Frequently asked questions](troubleshooting-guide.md)
 - [IP address allowlist](ip-address-allowlist.md)
 - [API reference](https://www.adobe.io/experience-platform-apis/references/query-service/)
-- [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

@@ -1,13 +1,13 @@
 ---
 audience: user
 user-guide-title: Adobe Experience Platform Release Notes
-breadcrumb-title: Platform Release Notes
+breadcrumb-title: Experience Platform Release Notes
 user-guide-description: Find monthly release notes for Adobe Experience Platform.
 ---
 
 # Adobe Experience Platform release notes {#release-notes}
 
-* [Current Platform Release Notes](latest/latest.md)
+* [Current Experience Platform Release Notes](latest/latest.md)
 * 2025 {#2025}
   * [March 2025](2025/march-2025.md)
   * [February 2025](2025/february-2025.md)
