@@ -68,3 +68,55 @@ Read this model card for information the AI model used to power Customer AI.
 * The model was developed using TensorFlow, XGBoost, and scikit-learn. Training runs on Adobe AI cloud infrastructure using NVIDIA V100 GPUs, supporting large-scale datasets.
 * NVIDIA V100 GPUs, trained on Google Cloud infrastructure.
 * AUC-ROC, precision-recall, and cross-validation.
+
+## Performance and evaluation
+
+* The model was tested using a holdout validation approach, where 80% of the data was used for training, and 20% was reserved for evaluation.
+* The model's effectiveness is measured using AUC-ROC (0.85), precision-recall (0.78), and F1-score (0.80). These metrics help assess the model's predictive power across different segments.
+* Lower accuracy for new customer segments with limited historical data. 
+* The model may underperform for customers with limited historical data (cold-start problem). Additionally, seasonality effects (e.g., holiday shopping trends) may require frequent retraining to maintain accuracy.
+
+## Fairness and bias
+
+* The model underwent demographic parity testing and adversarial fairness evaluations to detect performance disparities across different user segments.
+* Analysis revealed a 5% performance drop for users with low historical interaction data. To address this, the model incorporates reweighting techniques during training.
+* The dataset is stratified to ensure proportional representation of different customer demographics, and fairness constraints are introduced during training to prevent the model from favoring any particular group. Regular bias audits are conducted using demographic parity analysis, allowing adjustments if performance disparities are detected.
+
+## Explainability and interpretability
+
+* The model leverages SHapley Additive Explanations (SHAP) to quantify the impact of each input feature on its predictions, providing transparency into how customer attributes influence propensity scores. SHAP values enable both global interpretability, identifying the most influential factors across all predictions, and local interpretability, explaining individual predictions for specific customers.
+* The model supports Local Interpretable Model-Agnostic Explanations (LIME) and SHapley Additive Explanations (SHAP) to provide insights into how input features influence predictions. LIME generates local explanations by creating perturbed versions of the input data and observing changes in predictions, while SHAP assigns contribution values to each feature, offering both global and local interpretability of model decisions.
+
+## Robustness and generalization
+
+* The model maintains 80% AUC-ROC when tested on unseen datasets, demonstrating strong generalization to new customer records. Performance remains stable across different customer segments but shows slight degradation when user behavior significantly deviates from historical patterns
+* The model has been evaluated against perturbed and adversarial inputs, including missing data, outlier injection, and intentional mislabeling. While performance remains robust under normal conditions, minor accuracy degradation (approximately 3-5%) was observed under extreme adversarial modifications.
+
+## Security and privacy considerations
+
+* The model does not process or retain any personally identifiable information (PII), and all data used for training is anonymized and aggregated. It adheres to strict compliance with GDPR, CCPA, and internal Adobe privacy policies to ensure responsible data usage.
+* The model incorporates differential privacy techniques to add controlled noise to data, preventing re-identification of individuals. Additionally, hashing, anonymization, and tokenization methods are used to remove PII before model training and inference.
+
+## Deployment and integration
+
+* The model is hosted on Adobe Experience Platform AI services and integrated with various Adobe applications. It is available via API endpoints, allowing seamless access for real-time predictions and batch processing across marketing and customer engagement workflows
+* The model runs on a Kubernetes-based deployment with auto-scaling capabilities to handle varying workloads efficiently. Compute resources include NVIDIA V100 GPUs for training and optimized CPU-based inference for real-time scalability.
+
+## Monitoring and maintenance
+
+* The model is continuously monitored via WatsonX, tracking key performance indicators such as accuracy drift, feature importance shifts, and prediction stability. Anomaly detection and alerting mechanisms notify the team when significant deviations from expected behavior occur
+* The model is retrained monthly using updated customer interaction data to ensure continued relevance. Periodic retraining helps mitigate data drift and seasonal fluctuations that could impact predictive accuracy
+
+## Ethical concerns and responsible AI
+
+* The model could potentially introduce bias in decision-making if not monitored correctly. For example, if certain demographics are overrepresented in the training data, the model might unfairly favor specific customer groups.
+* Adobe Experience Platform follows Responsible AI guidelines, ensuring that models undergo bias audits, fairness testing, and human oversight before deployment.
+
+## Known limitations
+
+* The model may struggle to accurately predict outcomes for newly launched products or customer segments where insufficient historical data is available. Additionally, seasonal variations in customer behavior can cause fluctuations in predictive accuracy if not accounted for during retraining.
+* Performance declines when customer history is sparse, such as for first-time buyers or users with minimal engagement data. Additionally, if customer behaviors shift due to external factors like economic downturns or industry trends, the model may require rapid adaptation to maintain accuracy
+
+## Future improvements
+
+* Future iterations will include transfer learning techniques to improve performance for cold-start users and enhance adaptability to changing customer behaviors. Additionally, real-time data integration will be introduced to improve model responsiveness and accuracy in dynamic marketing environments.
