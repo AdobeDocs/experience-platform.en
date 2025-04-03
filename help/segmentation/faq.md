@@ -5,7 +5,7 @@ exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
 ---
 # Frequently asked questions
 
-Adobe Experience Platform [!DNL Segmentation Service] provides a user interface and RESTful API that allows you to create audiences through segment definitions or other sources from your [!DNL Real-Time Customer Profile] data. These audiences are centrally configured and maintained on Platform, and are readily accessible by any Adobe solution. The following is a list of frequently asked questions regarding audiences and segmentation.
+Adobe Experience Platform [!DNL Segmentation Service] provides a user interface and RESTful API that allows you to create audiences through segment definitions or other sources from your [!DNL Real-Time Customer Profile] data. These audiences are centrally configured and maintained on Experience Platform, and are readily accessible by any Adobe solution. The following is a list of frequently asked questions regarding audiences and segmentation.
 
 ## Audience Portal
 
@@ -29,7 +29,7 @@ In order to upload externally generated audiences, you need to have the "View se
 
 When you upload an externally generated audience, a dataset will be created and be visible within the dataset inventory. The name of the dataset will be the **same** as the name of the externally generated audience you uploaded.
 
-### What is an externally generated audience comprised of, and what happens to this data when it's imported to Platform?
+### What is an externally generated audience comprised of, and what happens to this data when it's imported to Experience Platform?
 
 During the import external audience workflow, you must specify which column in the CSV file corresponds with the **Primary Identity**. An example of a primary identity includes email address, ECID, or an organization-specific custom identity namespace. 
 
@@ -39,9 +39,9 @@ All the other data within the externally generated audience are considered **pay
 
 While the externally generated audience can be referenced when creating audiences using the Segment Builder, individual profile attributes **cannot** be used. 
 
-### Can I reconcile externally generated audience data with an existing profile in Platform?
+### Can I reconcile externally generated audience data with an existing profile in Experience Platform?
 
-Yes, the externally generated audience will be merged with the existing profile in Platform if the primary identifiers match.This data can take up to 24 hours to be reconciled. If profile data does not already exist, a new profile will be created as the data is ingested.
+Yes, the externally generated audience will be merged with the existing profile in Experience Platform if the primary identifiers match.This data can take up to 24 hours to be reconciled. If profile data does not already exist, a new profile will be created as the data is ingested.
 
 ### How are customer consent preferences honored for externally generated audiences that are imported into Audience Portal?{#consent}
 
@@ -129,7 +129,7 @@ The following chart explains the different lifecycle statuses, what they represe
 | --- | --- | --- | --- | --- | --- | --- | --- | -- |
 | Draft | An audience in the **Draft** state is an audience that is still in development and is not yet ready to be used in other services. | Yes, but can be hidden. | No | Yes | Can be imported or updated during the refinement process. | Evaluated to get accurate publishing counts. | Yes, but not recommended to be used. | Yes |
 | Published | An audience in the **Published** state is an audience that is ready for use across all downstream services. | Yes | Yes | Yes | Can be imported or updated. | Evaluated using batch, streaming, or edge segmentation. | Yes | Yes |
-| Inactive | An audience in the **Inactive** state is an audience that is currently not in use. It still exists within Platform, but it will **not** be useable until it's marked as draft or published. | No, but can be shown. | No | No | No longer updated. | No longer evaluated or updated by Platform. | No | Yes |
+| Inactive | An audience in the **Inactive** state is an audience that is currently not in use. It still exists within Experience Platform, but it will **not** be useable until it's marked as draft or published. | No, but can be shown. | No | No | No longer updated. | No longer evaluated or updated by Experience Platform. | No | Yes |
 | Deleted | An audience in the **Deleted** state is an audience that has been deleted. The actual deletion of the data may take up to a few minutes to execute. | No | No | No | Underlying data is deleted. | No data evaluation or execution occurs after the deletion is completed. | No | No |
 
 ### In what states can I edit my audiences in?
@@ -266,7 +266,7 @@ The following section lists questions related to Audience Composition.
 
 ### When should I use Audience Composition as opposed to using the Segment Builder?
 
-Both Audience Composition and Segment Builder have important roles in the creation of building audiences in Platform.
+Both Audience Composition and Segment Builder have important roles in the creation of building audiences in Experience Platform.
 
 The Segment Builder is more suited for audience **creation** (for building an audience from scratch), while Audience Composition is more suited for audience **curation and personalization** (for creating new audiences based on an existing audience).
 
@@ -370,9 +370,9 @@ As a result, when changes are made to the profile, such as merging two profiles 
 
 For example, let's say you've created two mutually exclusive audiences: Audience A is for people who live in Washington and Audience B is for people who do **not** live in Washington. There are two profiles - profile 1 for a person who lives in Washington, and profile 2 for a person who lives in Oregon. 
 
-When the batch segmentation evaluation job runs, profile 1 will go to Audience A, while profile 2 will go to Audience B. Later on, but before the next day's batch segmentation evaluation job runs, an event that reconciles the two profiles enters Platform. As a result, a single merged profile that contains profiles 1 and 2 is created. 
+When the batch segmentation evaluation job runs, profile 1 will go to Audience A, while profile 2 will go to Audience B. Later on, but before the next day's batch segmentation evaluation job runs, an event that reconciles the two profiles enters Experience Platform. As a result, a single merged profile that contains profiles 1 and 2 is created. 
 
-Until the next batch segment evaluation job is run, the new merged profile will have audience membership in **both** profile 1 and profile 2. As a result, this means it'll be a member of **both** Audience A and Audience B, despite the fact that these audiences have contradictory definitions. For the end-user, this is the **exact same situation** as before the profiles were connected, since there was always just the one person involved, and Platform just did **not** have enough information to connect the two profiles together. 
+Until the next batch segment evaluation job is run, the new merged profile will have audience membership in **both** profile 1 and profile 2. As a result, this means it'll be a member of **both** Audience A and Audience B, despite the fact that these audiences have contradictory definitions. For the end-user, this is the **exact same situation** as before the profiles were connected, since there was always just the one person involved, and Experience Platform just did **not** have enough information to connect the two profiles together. 
 
 If you use profile lookup to retrieve the newly created profile and look at its audience membership, it'll show that it's a member of **both** Audience A and Audience B, despite the fact that both of these audiences have contradictory definitions. Once the daily batch segmentation evaluation job runs, the audience membership will be updated to reflect this updated state of profile data.
 
@@ -424,4 +424,4 @@ It takes up to one hour for a segment definition to be available.
 
 ### Are there any limitations to the data being streamed in?
 
-In order for streamed data to be used in streaming segmentation, there **must** be spacing between the events streamed in. If too many events are streamed in within the same second, Platform will treat these events as bot-generated data, and they will be discarded. As best practice, you should have **at least** five seconds between event data in order to ensure the data is properly used.
+In order for streamed data to be used in streaming segmentation, there **must** be spacing between the events streamed in. If too many events are streamed in within the same second, Experience Platform will treat these events as bot-generated data, and they will be discarded. As best practice, you should have **at least** five seconds between event data in order to ensure the data is properly used.

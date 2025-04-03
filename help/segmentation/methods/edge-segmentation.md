@@ -1,6 +1,6 @@
 ---
 title: Edge Segmentation Guide
-description: Learn how to use edge segmentation to evaluate audiences in Platform instantaneously on the edge, enabling same page and next page personalization use cases.
+description: Learn how to use edge segmentation to evaluate audiences in Experience Platform instantaneously on the edge, enabling same page and next page personalization use cases.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 ---
 # Edge segmentation guide
@@ -296,7 +296,7 @@ Within the available filters, go to **Update frequency** and select "Edge". Usin
 
 ![The Edge update frequency is selected, displaying all audiences in the organization that are evaluated using edge segmentation.](../images/methods/edge/filter-edge.png)
 
-To learn more about viewing audiences in Platform, please read the [Audience Portal guide](../ui/audience-portal.md).
+To learn more about viewing audiences in Experience Platform, please read the [Audience Portal guide](../ui/audience-portal.md).
 
 >[!ENDTABS]
 

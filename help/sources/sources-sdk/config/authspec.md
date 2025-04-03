@@ -8,7 +8,7 @@ exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
 
 Authentication specs define how Adobe Experience Platform users can connect to your source.
 
-The `authSpec` array contains information on the authentication parameters required to connect a source to Platform. Any given source can support multiple different types of authentication.
+The `authSpec` array contains information on the authentication parameters required to connect a source to Experience Platform. Any given source can support multiple different types of authentication.
 
 ## Authentication specs
 
@@ -334,4 +334,4 @@ The following is an example of a completed authentication spec using a [[!DNL Ma
 
 ## Next steps
 
-With your authentication specifications populated, you can proceed to configure the source specifications for the source that you want to integrate to Platform. See the document on [configuring source specifications](./sourcespec.md) for more information.
+With your authentication specifications populated, you can proceed to configure the source specifications for the source that you want to integrate to Experience Platform. See the document on [configuring source specifications](./sourcespec.md) for more information.

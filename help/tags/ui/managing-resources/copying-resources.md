@@ -54,7 +54,7 @@ When you copy an extension to another property, there are a few things that you 
 
 ## Copying rules and data elements
 
-All rules and data elements are provided by an extension, so when you copy across properties, Platform must account for these underlying extensions.
+All rules and data elements are provided by an extension, so when you copy across properties, Experience Platform must account for these underlying extensions.
 
 ![Copying a Rule to my Demo Property](../../images/copy-rules-dialog1.png)
 

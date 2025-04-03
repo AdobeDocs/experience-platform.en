@@ -31,7 +31,7 @@ The sections below outline the mechanisms you can use for single identity deleti
 
 ### Single identity deletion in Privacy Service 
 
-Privacy Service processes customer requests to access, opt out of sale, or delete their personal data as delineated by privacy regulations such as the General Data Protection Regulation (GDPR) and California Consumer Privacy Act (CCPA). With Privacy Service, you can submit job requests using the API or the UI. When Experience Platform receives a delete request from Privacy Service, Platform sends confirmation to Privacy Service that the request has been received and affected data has been marked for deletion. The deletion of the individual identity is based on provided namespace and/or ID value. Furthermore, the deletion takes place for all sandboxes associated with a given organization. For more information, read the guide on [privacy request processing in Identity Service](../privacy.md).
+Privacy Service processes customer requests to access, opt out of sale, or delete their personal data as delineated by privacy regulations such as the General Data Protection Regulation (GDPR) and California Consumer Privacy Act (CCPA). With Privacy Service, you can submit job requests using the API or the UI. When Experience Platform receives a delete request from Privacy Service, Experience Platform sends confirmation to Privacy Service that the request has been received and affected data has been marked for deletion. The deletion of the individual identity is based on provided namespace and/or ID value. Furthermore, the deletion takes place for all sandboxes associated with a given organization. For more information, read the guide on [privacy request processing in Identity Service](../privacy.md).
 
 The table below provides a breakdown of single identity deletion in Privacy Service :
 
@@ -50,7 +50,7 @@ The following sections outline the mechanisms that can be used to delete dataset
 
 ### Dataset deletion in Catalog Service
 
-You can use the Catalog Service to submit requests for dataset deletion. For more information on how to delete datasets with Catalog Service, read the guide on [deleting objects using the Catalog Service API](../../catalog/api/delete-object.md). Alternatively, you can use Platform UI to submit requests for dataset deletion. For more information, read the [datasets user guide](../../catalog/datasets/user-guide.md#delete-a-dataset).
+You can use the Catalog Service to submit requests for dataset deletion. For more information on how to delete datasets with Catalog Service, read the guide on [deleting objects using the Catalog Service API](../../catalog/api/delete-object.md). Alternatively, you can use Experience Platform UI to submit requests for dataset deletion. For more information, read the [datasets user guide](../../catalog/datasets/user-guide.md#delete-a-dataset).
 
 ### Dataset expirations in Data hygiene
 
@@ -60,7 +60,7 @@ The table below provides a breakdown of differences between dataset deletion in 
 
 | Dataset deletion | Catalog Service | Data hygiene |
 | --- | --- | --- |
-| Accepted use cases |  Delete full datasets and their associated identity information in Platform. | Management of data stored in Experience Platform. | 
+| Accepted use cases |  Delete full datasets and their associated identity information in Experience Platform. | Management of data stored in Experience Platform. | 
 | Estimated latency | Days | Days |
 | Services impacted | Dataset deletion through Catalog Service deletes data from Identity Service, Real-Time Customer Profile, and data lake. | Dataset deletion through Data hygiene deletes data from Identity Service, Real-Time Customer Profile, and data lake. |
 | Deletion pattern | Delete linked identities from Identity Service established by a particular dataset. | Delete linked identities from Identity Service established by a particular dataset, based on expiration schedule. |
@@ -91,7 +91,7 @@ You can use [Data hygiene](../hygiene/home.md) for data cleansing, removing anon
 
 ### Single identity deletion in the [!UICONTROL Data Hygiene] workspace
 
-The [[!UICONTROL Data Hygiene] workspace](../hygiene/ui/overview.md) in the Platform UI allows you to delete consumer records that are participating in Identity Service and Real-Time Customer Profile. For a comprehensive guide on using the [!UICONTROL Data Hygiene] workspace, see the tutorial on [deleting consumer records](../hygiene/ui/record-delete.md).
+The [[!UICONTROL Data Hygiene] workspace](../hygiene/ui/overview.md) in the Experience Platform UI allows you to delete consumer records that are participating in Identity Service and Real-Time Customer Profile. For a comprehensive guide on using the [!UICONTROL Data Hygiene] workspace, see the tutorial on [deleting consumer records](../hygiene/ui/record-delete.md).
 
 The table below provides a breakdown of differences between single identity deletion in Privacy Service and Data hygiene:
 

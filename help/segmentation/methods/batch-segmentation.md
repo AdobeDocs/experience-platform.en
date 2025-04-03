@@ -273,7 +273,7 @@ Within the available filters, go to **[!UICONTROL Update frequency]** and select
 
 ![The Batch update frequency is selected, displaying all audiences in the organization that are evaluated using batch segmentation.](../images/methods/batch/filter-batch.png)
 
-To learn more about viewing audiences in Platform, please read the [Audience Portal guide](../ui/audience-portal.md).
+To learn more about viewing audiences in Experience Platform, please read the [Audience Portal guide](../ui/audience-portal.md).
 
 >[!ENDTABS]
 

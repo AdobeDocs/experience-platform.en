@@ -21,5 +21,5 @@ role: Admin,User,Developer,Leader
   * [Monitor significant changes and forecast audiences](./new-features/audience-forecasting.md)
   * [Natural language estimation](./new-features/natural-language.md)
   * [XDM field discovery for audience creation](./new-features/xdm-field-discovery.md)
-* [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
 

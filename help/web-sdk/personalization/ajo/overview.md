@@ -1,10 +1,10 @@
 ---
-title: Using Adobe Journey Optimizer with the Platform Web SDK
+title: Using Adobe Journey Optimizer with the Experience Platform Web SDK
 description: Learn how to render personalized content with the Experience Platform Web SDK using Adobe Journey Optimizer
 keywords: ajo;ajo web;adobe journey optimizer;renderDecisions;surfaces;decisions;propositions;scope;schema
 exl-id: 3f28e2bc-2c4b-4400-8f69-c7316449ff4f
 ---
-# Using [!DNL Adobe Journey Optimizer] with the [!DNL Platform Web SDK]
+# Using [!DNL Adobe Journey Optimizer] with the [!DNL Experience Platform Web SDK]
 
 [!DNL Adobe Experience Platform] [!DNL Web SDK] can deliver and render personalized experiences managed in [!DNL Adobe Journey Optimizer] to the web channel. You can use a WYSIWYG editor, [!DNL Adobe Journey Optimizer] [Web Channel](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html), or a non-visual interface, the [Code-based Experience Channel](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) to create, activate, and deliver your [!DNL Journey Optimizer Web] campaigns and personalization experiences.
 
