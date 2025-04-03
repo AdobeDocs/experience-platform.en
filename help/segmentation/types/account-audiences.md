@@ -47,7 +47,7 @@ To create an account audience, select **[!UICONTROL Create audience]** on the [!
 
 ![The [!UICONTROL Create audience] button is highlighted on the account audience browse page.](../images/types/account/select-create-audience.png)
 
-The Segment Builder appears. The account attributes and audiences are displayed on the left navigation bar. Under the [!UICONTROL Attributes] tab, you can add both Platform-created and custom attributes.
+The Segment Builder appears. The account attributes and audiences are displayed on the left navigation bar. Under the [!UICONTROL Attributes] tab, you can add both Experience-Platform-created and custom attributes.
 
 ![The Segment Builder is displayed. Note that only the attributes and audiences are displayed.](../images/types/account/segment-builder.png)
 
@@ -110,7 +110,7 @@ The [!UICONTROL Activate destination] page appears. For more information on the 
 
 ## Next steps {#next-steps}
 
-After reading this guide, you now have a better understanding of how to create and use your account audiences in Adobe Experience Platform. To learn how to use other types of audiences in Platform, please read the [audience type overview](./overview.md).
+After reading this guide, you now have a better understanding of how to create and use your account audiences in Adobe Experience Platform. To learn how to use other types of audiences in Experience Platform, please read the [audience type overview](./overview.md).
 
 ## Appendix {#appendix}
 

@@ -31,7 +31,7 @@ Date data allows you to assign time-based context to your segment definitions, e
 
 ## Experience Events
 
-As an Adobe Experience Platform schema, [!DNL XDM ExperienceEvents] record explicit and implicit customer interactions with [!DNL Platform]-integrated applications, including a snapshot of the system at the time the interaction took place. [!DNL ExperienceEvents] are fact records. As such, they are a data source available to you during segment definition.
+As an Adobe Experience Platform schema, [!DNL XDM ExperienceEvents] record explicit and implicit customer interactions with Experience-Platform-integrated applications, including a snapshot of the system at the time the interaction took place. [!DNL ExperienceEvents] are fact records. As such, they are a data source available to you during segment definition.
 
 As seen in the table below, event data is rendered using keywords which help refine event behavior and specify event attributes. 
 
@@ -46,11 +46,11 @@ As seen in the table below, event data is rendered using keywords which help ref
 
 External audiences can also be used as components of a new segment definition, adding their attribute rules to the new segment definitions.
 
-Currently, only Adobe Audience Manager is supported as an external audience, with additional sources being enabled in the future. More information about using Adobe Audience Manager audiences with Platform can be found in the [audience sharing guide within the Adobe Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html).
+Currently, only Adobe Audience Manager is supported as an external audience, with additional sources being enabled in the future. More information about using Adobe Audience Manager audiences with Experience Platform can be found in the [audience sharing guide within the Adobe Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html).
 
 ### Segment definition sharing
 
-Segment definitions created in Platform can be used within other [Adobe Experience Cloud Core Services](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html). To enable this feature, you will need to contact your solution architect or your consultant.
+Segment definitions created in Experience Platform can be used within other [Adobe Experience Cloud Core Services](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html). To enable this feature, you will need to contact your solution architect or your consultant.
 
 ## Other data types
 

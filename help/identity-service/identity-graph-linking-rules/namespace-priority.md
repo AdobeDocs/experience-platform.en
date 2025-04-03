@@ -67,11 +67,11 @@ Currently, namespace priority influences system behavior of Real-Time Customer P
 
 ![A diagram of namespace priority application scope](../images/namespace-priority/application-scope.png)
 
-### Identity Service: Identity optimization algorithm
+## Identity Service: Identity optimization algorithm
 
 For relatively complex graph structures, namespace priority plays an important role in ensuring that the correct links are removed when graph collapse scenarios happen. For more information read the [identity optimization algorithm overview](../identity-graph-linking-rules/identity-optimization-algorithm.md).
 
-### Real-Time Customer Profile: primary identity determination for experience events
+## Real-Time Customer Profile: primary identity determination for experience events
 
 * Once you have configured identity settings for a given sandbox, the primary identity for experience events will be determined by the highest namespace priority in the configuration.
   * This is because experience events are dynamic in nature. An identity map may contain three or more identities, and namespace priority ensures that the most important namespace is associated to the experience event.
@@ -116,7 +116,7 @@ Given the configurations outlined above, user actions and determination of prima
 
 {style="table-layout:auto"}
 
-### Segmentation Service: segment membership metadata storage
+## Segmentation Service: segment membership metadata storage
 
 ![A diagram of segment membership storage](../images/namespace-priority/segment-membership-storage.png)
 
@@ -133,7 +133,7 @@ For example, assume that there are two profiles:
 
 If John and Jane share a device, then the ECID (web browser) transfers from one person to another. However, this does not influence the segment membership information stored against John and Jane.
 
-If the segment qualification criteria were solely based on anonymous events stored against the ECID, then Jane would qualify for that segment
+If the segment qualification criteria were solely based on anonymous events stored against the ECID, then Jane would qualify for that segment.
 
 ## Implications on other Experience Platform services {#implications}
 

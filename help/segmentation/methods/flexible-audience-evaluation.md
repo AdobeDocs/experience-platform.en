@@ -2,11 +2,13 @@
 title: Flexible Audience Evaluation Guide
 description: Learn how to use flexible audience evaluation to run batch segmentation jobs on demand.
 role: Developer, User
-hide: true
-hidefromtoc: true
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
 ---
 # Flexible audience evaluation guide
+
+>[!AVAILABILITY]
+>
+>Flexible audience evaluation is **only** available on instances of Experience Platform running on [!DNL Microsoft Azure]. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../landing/multi-cloud.md).
 
 Flexible audience evaluation lets you run a batch segmentation job on demand. With flexible audience evaluation, you can run ad-hoc campaign launches, just-in-time communications, or other time-sensitive activities.
 
@@ -26,6 +28,10 @@ When you run flexible audience evaluation, please keep the following conditions 
 - All the audiences **must** be evaluated using batch segmentation.
 - All the audiences **must** be people-based audiences.
 - You can only select a maximum of 20 audiences per flexible audience evaluation run.
+
+>[!NOTE]
+>
+>You can purchase additional flexible audience evaluation runs per year. For more information, contact Adobe Customer Care.
 
 ## Access {#access}
 
@@ -302,15 +308,29 @@ After confirming the correct audiences are listed, you can proceed with the requ
 
 >[!NOTE]
 >
->If you run flexible audience evaluation, you need to ensure the frequency is set to **[!UICONTROL After segment evaluation]**. Running flexible audience evaluation on audiences which are already set to be activated [after segment evaluation](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), will activate audiences as soon as the flexible audience evaluation job finishes, regardless of any previous daily activation jobs.
+>The status of the segment job may be reported as in the "Queued" state within the monitoring dashboard. You can view the most up-to-date status of the segment job by making a GET request to the `/segment/jobs` endpoint, providing the ID of the segment job in the request path. More information about using this endpoint can be found in the API tab.
+>
+>If you run flexible audience evaluation and want the evaluation to activate the audience to a destination, you need to ensure the frequency is set to **[!UICONTROL After segment evaluation]**. Running flexible audience evaluation on audiences which are already set to be activated [after segment evaluation](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), will activate audiences as soon as the flexible audience evaluation job finishes, regardless of any previous daily activation jobs.
 
 >[!ENDTABS]
 
-## Next steps {#next-steps}
+## Video {#video}
+
+The following video demonstrates how to access and use flexible audience evaluation in Experience Platform.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
 ## Frequently asked questions {#faq}
 
 The following section lists frequently asked questions related to flexible audience evaluation.
+
+### How soon can I activate an audience using flexible audience evaluation?
+
++++ Answer
+
+You can activate an audience using flexible audience evaluation immediately after its creation.
+
++++
 
 ### Can I run scheduling with flexible audience evaluation?
 
