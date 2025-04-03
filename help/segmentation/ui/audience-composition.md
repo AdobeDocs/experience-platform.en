@@ -14,7 +14,7 @@ exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
 >- Manage Profiles
 >- Manage Merge Policies
 >
->More information about permissions within Platform can be found in the [access control overview](../../access-control/home.md#permissions).
+>More information about permissions within Experience Platform can be found in the [access control overview](../../access-control/home.md#permissions).
 
 >[!NOTE]
 >
