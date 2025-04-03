@@ -26,13 +26,13 @@ Before you continue with this guide, follow the steps outlined in the [AI/ML fea
 
 The end-to-end workflow can be divided into three broad phases based on the services used to implement the workflow. 
 
-- Initial exploration and preparation of Platform data relies on Platform services. 
+- Initial exploration and preparation of Experience Platform data relies on Experience Platform services. 
 - Model training and scoring leverages tooling in your cloud-based ML environment. Common choices for ML platforms include: Databricks ML, AWS Sagemaker, DataRobot, and so on. 
-- Ingesting scores back into Platform and any code-based audience creation and activation based on those scores would again rely on Platform services. 
+- Ingesting scores back into Experience Platform and any code-based audience creation and activation based on those scores would again rely on Experience Platform services. 
 
-However, all of these phases can be executed in one or more notebooks from your ML environment without the user needing to switch contexts between Platform and their cloud-based ML tools.
+However, all of these phases can be executed in one or more notebooks from your ML environment without the user needing to switch contexts between Experience Platform and their cloud-based ML tools.
 
-The typical steps of this end-to-end flow have been divided into a set of modular notebooks which, taken together, demonstrate the steps involved in typical machine learning project involving Platform data. This makes it easier to use the notebooks as a reference for implementing specific activities, and to select and adapt code from the relevant notebooks to implement a real-world use case. In practice, a data scientist may prepare a single notebook the implements the end-to-end pipeline for their ML project. Alternatively, a data scientist may simply adapt the sample code for querying Platform data and making it available in their ML environment before continuing the project use UI-based features in their ML platform.
+The typical steps of this end-to-end flow have been divided into a set of modular notebooks which, taken together, demonstrate the steps involved in typical machine learning project involving Experience Platform data. This makes it easier to use the notebooks as a reference for implementing specific activities, and to select and adapt code from the relevant notebooks to implement a real-world use case. In practice, a data scientist may prepare a single notebook the implements the end-to-end pipeline for their ML project. Alternatively, a data scientist may simply adapt the sample code for querying Experience Platform data and making it available in their ML environment before continuing the project use UI-based features in their ML platform.
 
 The sample notebooks included in the linked repository are briefly described below. Detailed documentation for each notebook is interspersed with the code in the notebooks themselves.
 
@@ -40,11 +40,11 @@ The sample notebooks included in the linked repository are briefly described bel
 
 ### Generate synthetic data {#generate-synthetic-data}
 
-This notebook provides code for generating datsets of synthetic profiles and Experience Events in your Platform that will be used to illustrate the CMLE workflow.
+This notebook provides code for generating datsets of synthetic profiles and Experience Events in your Experience Platform that will be used to illustrate the CMLE workflow.
 
 ### EDA and Featurization with Query Service {#eda-and-featurization-with-query-service}
 
-This notebook includes examples of exploratory analysis on Platform datasets using interactive queries via Platform Query Service. These are followed with examples of featurization queries to create a training dataset for the example propensity model.
+This notebook includes examples of exploratory analysis on Experience Platform datasets using interactive queries via Experience Platform Query Service. These are followed with examples of featurization queries to create a training dataset for the example propensity model.
 
 ### Export training data {#export-training-data}
 
@@ -56,7 +56,7 @@ This notebook illustrates training a propensity model. It assumes Databricks ML 
 
 ### Score the propensity model
 
-This notebook illustrates scoring the trained propensity model to produce a dataset of propensity scores for each Platform customer profile.
+This notebook illustrates scoring the trained propensity model to produce a dataset of propensity scores for each Experience Platform customer profile.
 
 ### Ingest scores to AEP
 
@@ -64,4 +64,4 @@ This brief notebook illustrates ingesting the dataset of propensity scores to en
 
 ### Create and activate audiences from code
 
-This notebook illustrates how the user can create audiences from the scores and activate those audiences through Platform apps from their notebook code.
+This notebook illustrates how the user can create audiences from the scores and activate those audiences through Experience Platform apps from their notebook code.

@@ -33,4 +33,4 @@ For more detailed information about prospect audiences, please read the [prospec
 
 ## Next steps
 
-After reading this overview, you now have a better understanding of the different types of audiences available on Platform. To learn about the different evaluation methods, please read the [evaluation method overview](../methods/overview.md).
+After reading this overview, you now have a better understanding of the different types of audiences available on Experience Platform. To learn about the different evaluation methods, please read the [evaluation method overview](../methods/overview.md).

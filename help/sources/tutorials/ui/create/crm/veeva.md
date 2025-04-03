@@ -8,7 +8,7 @@ exl-id: 4ef76c28-9bd2-4e54-a3d6-dceb89162337
 ---
 # Create a [!DNL Veeva CRM] source connection in the UI
 
-Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced CRM data on a scheduled basis. This tutorial provides steps for creating a [!DNL Veeva CRM] source connector using the [!DNL Platform] user interface.
+Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced CRM data on a scheduled basis. This tutorial provides steps for creating a [!DNL Veeva CRM] source connector using the [!DNL Experience Platform] user interface.
 
 ## Getting started
 
@@ -34,9 +34,9 @@ For more information on getting started, refer to this [[!DNL Veeva CRM] documen
 
 ## Connect your [!DNL Veeva CRM] account
 
-Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Veeva CRM] account to [!DNL Platform].
+Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Veeva CRM] account to [!DNL Experience Platform].
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources for which you can create an account with.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources for which you can create an account with.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
@@ -60,4 +60,4 @@ If you are creating a new account, select **[!UICONTROL New account]**, and then
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your [!DNL Veeva CRM] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](../../dataflow/crm.md).
+By following this tutorial, you have established a connection to your [!DNL Veeva CRM] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Experience Platform](../../dataflow/crm.md).

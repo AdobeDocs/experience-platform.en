@@ -19,7 +19,7 @@ You can create a real-time outbound connection to your [!DNL Amazon Kinesis] sto
 
 * For more information about [!DNL Amazon Kinesis], see the [Amazon documentation](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
 * To connect to [!DNL Amazon Kinesis] programmatically, see the [Streaming destinations API tutorial](../../api/streaming-destinations.md).
-* To connect to [!DNL Amazon Kinesis] using the Platform user interface, see the sections below.
+* To connect to [!DNL Amazon Kinesis] using the Experience Platform user interface, see the sections below.
 
 ![Amazon Kinesis in the UI](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
 
@@ -63,7 +63,7 @@ To successfully connect and export data to your [!DNL Amazon Kinesis] streams, E
 * `kinesis:PutRecord`
 * `kinesis:PutRecords`
 
-These permissions are arranged through the [!DNL Kinesis] console and are checked by Platform once you configure your Kinesis destination in the Platform user interface.
+These permissions are arranged through the [!DNL Kinesis] console and are checked by Experience Platform once you configure your Kinesis destination in the Experience Platform user interface.
 
 The example below displays the minimum access rights required to successfully export data to a [!DNL Kinesis] destination.
 
@@ -110,7 +110,7 @@ Input the fields below and select **[!UICONTROL Connect to destination]**:
 
 ![Image of the UI screen showing completed fields for the Amazon Kinesis authentication details](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
 
-* **[!DNL Amazon Web Services] access key and secret key**: In [!DNL Amazon Web Services], generate an `access key - secret access key` pair to grant Platform access to your [!DNL Amazon Kinesis] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!DNL Amazon Web Services] access key and secret key**: In [!DNL Amazon Web Services], generate an `access key - secret access key` pair to grant Experience Platform access to your [!DNL Amazon Kinesis] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL Region]**: Indicate which [!DNL Amazon Web Services] region to stream data to.
 
 ### Fill in destination details {#destination-details}
@@ -131,7 +131,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 * **[!UICONTROL Name]**: Provide a name for your connection to [!DNL Amazon Kinesis]
 * **[!UICONTROL Description]**: Provide a description for your connection to [!DNL Amazon Kinesis].
-* **[!UICONTROL Stream]**: Provide the name of an existing data stream in your [!DNL Amazon Kinesis] account. Platform will export data to this stream.
+* **[!UICONTROL Stream]**: Provide the name of an existing data stream in your [!DNL Amazon Kinesis] account. Experience Platform will export data to this stream.
 * **[!UICONTROL Include Segment Names]**: Toggle if you want the data export to include the names of the audiences you are exporting. For an example of a data export with this option selected, refer to the [Exported data](#exported-data) section further below.
 * **[!UICONTROL Include Segment Timestamps]**: Toggle if you want the data export to include the UNIX timestamp when the audiences were created and updated, as well as the UNIX timestamp when the audiences were mapped to the destination for activation. For an example of a data export with this option selected, refer to the [Exported data](#exported-data) section further below.
 
@@ -139,7 +139,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 >[!IMPORTANT]
 >
->Platform needs `write` permissions on the bucket object where the export files will be delivered.
+>Experience Platform needs `write` permissions on the bucket object where the export files will be delivered.
 
 -->
 

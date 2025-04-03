@@ -25,9 +25,9 @@ The profile data in the snapshot shows the data exactly as it appears at the spe
 
 ## Explore the [!UICONTROL Account Profiles] dashboard {#explore}
 
-To navigate to the [!UICONTROL Account Profiles] dashboard within the Platform UI, select **[!UICONTROL Profiles]** under [!UICONTROL Accounts] in the left navigation panel. 
+To navigate to the [!UICONTROL Account Profiles] dashboard within the Experience Platform UI, select **[!UICONTROL Profiles]** under [!UICONTROL Accounts] in the left navigation panel. 
 
-![The Platform UI with Account Profiles in the left navigation highlighted and the overview tab displayed.](../images/account-profiles/account-profiles-dashboard.png)
+![The Experience Platform UI with Account Profiles in the left navigation highlighted and the overview tab displayed.](../images/account-profiles/account-profiles-dashboard.png)
 
 From the [!UICONTROL Account Profiles] dashboard, you can either [browse the account profiles ingested into your organization](#browse-account-profiles), or [view the entirety of your account profile data at a glance using widgets](#standard-widgets).
 
@@ -55,7 +55,7 @@ Select the [!UICONTROL Profile ID] from the results displayed on the [!UICONTROL
 
 ![The Account Profiles browse tab with results displayed and the Profile ID highlighted.](../images/account-profiles/account-profiles-browse-tab.png)
 
-The account profile information displayed on the [!UICONTROL Details] tab has been merged together from multiple profile fragments to form a single view of the individual account. See the documentation on [browsing account profiles in Adobe Real-Time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) to learn more about account profile viewing capabilities in the Platform UI. 
+The account profile information displayed on the [!UICONTROL Details] tab has been merged together from multiple profile fragments to form a single view of the individual account. See the documentation on [browsing account profiles in Adobe Real-Time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) to learn more about account profile viewing capabilities in the Experience Platform UI. 
 
 ## Standard widgets {#standard-widgets}
 
@@ -123,7 +123,7 @@ To switch between the drill through and the Account Profiles dashboard, select t
 
 ![The drill though view in the Accounts Profiles dashboard with the navigation dropdown menu highlighted.](../images/account-profiles/navigation-dropdown.png)
 
-To learn more about drill throughs in the Platform UI, see the [Drill Through guide](../sql-insights-query-pro-mode/drill-through.md). 
+To learn more about drill throughs in the Experience Platform UI, see the [Drill Through guide](../sql-insights-query-pro-mode/drill-through.md). 
 
 #### [!UICONTROL Customers per account detail] {#customers-per-account-detail}
 

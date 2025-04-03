@@ -16,16 +16,16 @@ Read the following tutorial to learn how to ingest your payments data from [!DNL
 
 This guide requires a working understanding of the following components of Experience Platform:
 
-* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes that partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes that partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ### Authentication
 
 Read the [[!DNL Stripe] overview](../../../../connectors/payments/stripe.md) for information on how to retrieve your authentication credentials.
 
-### Using Platform APIs
+### Using Experience Platform APIs
 
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
+For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../../../landing/api-guide.md).
 
 ## Connect [!DNL Stripe] to Experience Platform
 
@@ -109,7 +109,7 @@ When performing GET requests to explore your source's file structure and content
 | `{BASE_CONNECTION_ID}` | The base connection ID generated in the previous step. |
 | `objectType=rest` | The type of object you wish to explore. This value is always set to `rest`. |
 | `{OBJECT}` | This parameter is required only when viewing a specific directory. Its value represents the path of the directory you wish to explore. For this source the value would be `json`. |
-| `fileType=json` | The file type of the file you want to bring to Platform. Currently, `json` is the only supported file type. |
+| `fileType=json` | The file type of the file you want to bring to Experience Platform. Currently, `json` is the only supported file type. |
 | `{PREVIEW}` | A boolean value that defines whether the contents of the connection supports preview. |
 | `{SOURCE_PARAMS}` | A [!DNL Base64-]encoded string that points to the resource path you want to explore. Your resource path needs to be encoded in [!DNL Base64] in order to obtain the approved format for `{SOURCE_PARAMS}`. For example, `{"resourcePath":"charges"}` is encoded as `eyJyZXNvdXJjZVBhdGgiOiJjaGFyZ2VzIn0%3D`. The list of available resource paths include: <ul><li>`charges`</li><li>`subscriptions`</li><li>`refunds`</li><li>`balance_transactions`</li><li>`customers`</li><li>`prices`</li></ul> |
 
@@ -457,7 +457,7 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 ### Create a target XDM schema {#target-schema}
 
-In order for the source data to be used in Experience Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create a Platform dataset in which the source data is contained.
+In order for the source data to be used in Experience Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create an Experience Platform dataset in which the source data is contained.
 
 A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
@@ -808,7 +808,7 @@ A successful response returns details of the newly created mapping including its
 
 ### Create a flow {#flow}
 
-The last step towards bringing data from [!DNL Stripe] to Platform is to create a dataflow. By now, you have the following required values prepared:
+The last step towards bringing data from [!DNL Stripe] to Experience Platform is to create a dataflow. By now, you have the following required values prepared:
 
 * [Source connection ID](#source-connection)
 * [Target connection ID](#target-connection)

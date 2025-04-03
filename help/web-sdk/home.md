@@ -1,6 +1,6 @@
 ---
 title: Adobe Experience Platform Web Software Development Kit (SDK) Overview
-description: Learn how to use the Adobe Experience Platform Web SDK to integrate Platform capabilities into your website.
+description: Learn how to use the Adobe Experience Platform Web SDK to integrate Experience Platform capabilities into your website.
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
 ---
 # Adobe Experience Platform Web SDK {#overview}

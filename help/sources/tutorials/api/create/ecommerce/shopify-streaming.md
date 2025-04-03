@@ -16,16 +16,16 @@ The following tutorial provides steps on how to create a streaming source connec
 
 This guide requires a working understanding of the following components of Experience Platform:
 
-* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes that partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Experience Platform] services.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes that partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-### Using Platform APIs
+### Using Experience Platform APIs
 
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
+For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../../../landing/api-guide.md).
 
-## Stream [!DNL Shopify] data to Platform using the Flow Service API
+## Stream [!DNL Shopify] data to Experience Platform using the Flow Service API
 
-The following outlines the steps you need to make in order to create a source connection and a dataflow to stream your [!DNL Shopify] data to Platform.
+The following outlines the steps you need to make in order to create a source connection and a dataflow to stream your [!DNL Shopify] data to Experience Platform.
 
 ### Create a source connection {#source-connection}
 
@@ -83,7 +83,7 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 ### Create a target XDM schema {#target-schema}
 
-In order for the source data to be used in Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create a Platform dataset in which the source data is contained.
+In order for the source data to be used in Experience Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create an Experience Platform dataset in which the source data is contained.
 
 A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
@@ -146,7 +146,7 @@ curl -X POST \
 | `name` | The name of your target connection. Ensure that the name of your target connection is descriptive, as you can use this to look up information on your target connection. |
 | `description` | An optional value that you can include to provide more information on your target connection. |
 | `connectionSpec.id` | The connection specification ID that corresponds to the data lake. This fixed ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | The format of the [!DNL Shopify] data that you want to bring to Platform. |
+| `data.format` | The format of the [!DNL Shopify] data that you want to bring to Experience Platform. |
 | `params.dataSetId` | The target dataset ID retrieved in a previous step. |
 
 
@@ -226,7 +226,7 @@ A successful response returns details of the newly created mapping including its
 
 ### Create a flow {#flow}
 
-The last step towards bringing data from [!DNL Shopify] to Platform is to create a dataflow. By now, you have the following required values prepared:
+The last step towards bringing data from [!DNL Shopify] to Experience Platform is to create a dataflow. By now, you have the following required values prepared:
 
 * [Source connection ID](#source-connection)
 * [Target connection ID](#target-connection)
@@ -282,7 +282,7 @@ curl -X POST \
 | `flowSpec.version` | The corresponding version of the flow specification ID. This value defaults to `1.0`. |
 | `sourceConnectionIds` | The [source connection ID](#source-connection) generated in an earlier step. |
 | `targetConnectionIds` | The [target connection ID](#target-connection) generated in an earlier step. |
-| `transformations` | This property contains the various transformations that are needed to be applied to your data. This property is required when bringing non-XDM-compliant data to Platform. |
+| `transformations` | This property contains the various transformations that are needed to be applied to your data. This property is required when bringing non-XDM-compliant data to Experience Platform. |
 | `transformations.name` | The name assigned to the transformation. |
 | `transformations.params.mappingId` | The [mapping ID](#mapping) generated in an earlier step. |
 | `transformations.params.mappingVersion` | The corresponding version of the mapping ID. This value defaults to `0`. |

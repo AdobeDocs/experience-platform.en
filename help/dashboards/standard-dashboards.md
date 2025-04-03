@@ -16,7 +16,7 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 
 ## Create a custom dashboard
 
-To create a custom dashboard, first, navigate to the dashboard inventory. Select **[!UICONTROL Dashboards]** from the left navigation of the Platform UI followed by **[!UICONTROL Create dashboard]**.
+To create a custom dashboard, first, navigate to the dashboard inventory. Select **[!UICONTROL Dashboards]** from the left navigation of the Experience Platform UI followed by **[!UICONTROL Create dashboard]**.
 
 ![The dashboard inventory with Dashboards in the left navigation and "Create dashboard" highlighted.](./images/standard-dashboards/create-dashboard.png)
 

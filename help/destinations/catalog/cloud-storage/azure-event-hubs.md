@@ -19,7 +19,7 @@ You can create a real-time outbound connection to your [!DNL Azure Event Hubs] s
 
 * For more information about [!DNL Azure Event Hubs], see the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about).
 * To connect to [!DNL Azure Event Hubs] programmatically, see the [Streaming destinations API tutorial](../../api/streaming-destinations.md).
-* To connect to [!DNL Azure Event Hubs] using the Platform user interface, see the sections below.
+* To connect to [!DNL Azure Event Hubs] using the Experience Platform user interface, see the sections below.
 
 ![AWS Kinesis in the UI](../../assets/catalog/cloud-storage/event-hubs/catalog.png)
 

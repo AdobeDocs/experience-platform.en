@@ -362,7 +362,7 @@ Ensure that you are only using map-type fields when absolutely necessary, as the
 * Response time from [Adobe Experience Platform Query Service](../../query-service/home.md) degrades from three seconds to ten seconds for 100 million records.
 * Maps must have fewer than 16 keys or else risk further degradation.
 
-The Platform user interface also has limitations in how it can extract the keys of map-type fields. Whereas object-type fields can be expanded, maps are displayed as a single field instead.
+The Experience Platform user interface also has limitations in how it can extract the keys of map-type fields. Whereas object-type fields can be expanded, maps are displayed as a single field instead.
 
 ## Next steps
 

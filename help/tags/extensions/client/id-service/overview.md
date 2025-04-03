@@ -43,7 +43,7 @@ Select **[!UICONTROL Add]** to exclude another path.
 
 Use the Opt In options to determine whether to require visitors to opt in Adobe services on your site, including whether to create cookies that track visitor activity.
 
-Opt In is the centralized point of reference for all Platform solution client-side libraries to determine if cookies can be created on a user's device or browser when visiting your site. Opt In does not provide support for either gathering or storing user consent preferences.
+Opt In is the centralized point of reference for all Experience Platform solution client-side libraries to determine if cookies can be created on a user's device or browser when visiting your site. Opt In does not provide support for either gathering or storing user consent preferences.
 
 **Enable Opt In?**
 

@@ -12,21 +12,21 @@ The Conversion Tag is the declaration of the AWIN.Tracking.Sale JavaScript objec
 
 Awin Advertiser Conversion Tag is an advertising extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103240.awin-conversion-tag.html).
 
-This destination is a tag extension. For more information about how tags extensions work in Platform, see the [tag extensions overview](../launch-extensions/overview.md).
+This destination is a tag extension. For more information about how tags extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
 ![Awin Advertiser Conversiontag extension in the UI](../../assets/catalog/advertising/awin-conversion-tag/catalog.png)
 
 ## Prerequisites {#prerequisites}
 
-This extension is available in the Destinations catalog for all customers who have purchased Platform.
+This extension is available in the Destinations catalog for all customers who have purchased Experience Platform.
 
-To use this extension, you need access to tags in Platform. Tags are offered to Adobe Experience Cloud customers as an included, value-add feature. Contact your organization administrator to get access to Data Collection features in the UI and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
+To use this extension, you need access to tags in Experience Platform. Tags are offered to Adobe Experience Cloud customers as an included, value-add feature. Contact your organization administrator to get access to Data Collection features in the UI and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
 
 ## Install extension {#install-extension}
 
 To install the [!DNL Awin Advertiser Conversion Tag] extension:
 
-In the [Platform interface](https://platform.adobe.com/), go to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+In the [Experience Platform interface](https://platform.adobe.com/), go to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Select the extension from the catalog or use the search bar.
 

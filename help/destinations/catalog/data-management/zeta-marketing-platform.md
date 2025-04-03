@@ -47,7 +47,7 @@ An advertiser aims to target users within specific audiences through the Zeta De
 |Target Identity|Description|Considerations|Notes|
 ---------|----------|----------|----------|
 |uid|Unique ID that ZMP uses to differentiate customer profiles|Mandatory|Choose the `Email` standard identity namespace if you want to identify unique profiles using their email addresses. Alternatively, you can opt to map your custom namespace to `uid` if customer profiles do not have an email.|
-|email_md5_id|Email MD5 that represents each customer profile|Optional|Choose this target identity when you aim to uniquely identify customer profiles using email MD5 values. It is essential that email addresses are already in MD5 format within the Experience Platform, as the Platform does not convert plain text to MD5. In this scenario, set `uid` (mandatory) to either the same email MD5 values or another appropriate identity namespace.|
+|email_md5_id|Email MD5 that represents each customer profile|Optional|Choose this target identity when you aim to uniquely identify customer profiles using email MD5 values. It is essential that email addresses are already in MD5 format within the Experience Platform, as the Experience Platform does not convert plain text to MD5. In this scenario, set `uid` (mandatory) to either the same email MD5 values or another appropriate identity namespace.|
 
 {style="table-layout:auto"}
 
@@ -63,7 +63,7 @@ This section describes which type of audiences you can export to this destinatio
 {style="table-layout:auto"}
 
 >[!NOTE]
-> As individual members are added or removed from the Platform audience, updates will be sent to the ZMP to ensure that the destination customer list is synchronized accordingly.
+> As individual members are added or removed from the Experience Platform audience, updates will be sent to the ZMP to ensure that the destination customer list is synchronized accordingly.
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -98,7 +98,7 @@ To configure details for the destination, fill in the required and optional fiel
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 *  **[!UICONTROL ZMP Account Site Id]**: Your ZMP **Site Id** where you want to send your audiences to. You can view your Site Id by navigating to **Settings** > **Integrations** > **Keys & Apps** section. More information can be found [here](https://knowledgebase.zetaglobal.com/kb/integrations).
-*  **[!UICONTROL ZMP Segment]**: The customer list segment in your ZMP Site Id account that you want to be updated with the Platform audience.
+*  **[!UICONTROL ZMP Segment]**: The customer list segment in your ZMP Site Id account that you want to be updated with the Experience Platform audience.
 
 ### Enable alerts {#enable-alerts}
 
@@ -125,7 +125,7 @@ Selecting source fields:
 
 Selecting target fields:
 * (Mandatory) Select `uid` as the target identity to which you map a source identity namespace. 
-* (Optional) Select `email_md5_id` as the target identity to which you mapped the source identity namespace that represents email md5 values. It is essential that email addresses are already in MD5 format within the Experience Platform, as the Platform does not convert plain text to MD5
+* (Optional) Select `email_md5_id` as the target identity to which you mapped the source identity namespace that represents email md5 values. It is essential that email addresses are already in MD5 format within the Experience Platform, as the Experience Platform does not convert plain text to MD5
 * Select any additional target mappings if needed.
 
 ![Identity mapping](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-mapping-example.png)

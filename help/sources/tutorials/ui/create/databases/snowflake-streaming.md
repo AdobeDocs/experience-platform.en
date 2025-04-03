@@ -22,7 +22,7 @@ Read the guide on [prerequisite setup for [!DNL Snowflake] streaming data](../..
 
 ## Use the [!DNL Snowflake Streaming] source to stream [!DNL Snowflake] data to Experience Platform
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
 Under the *Databases* category, select **[!DNL Snowflake Streaming]**, and then select **[!UICONTROL Add data]**.
 

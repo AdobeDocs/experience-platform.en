@@ -16,7 +16,7 @@ This user guide requires a working understanding of the following components of 
 * [Datasets](overview.md): The storage and management construct for data persistence in [!DNL Experience Platform].
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
     * [Basics of schema composition](../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
-    * [Schema Editor](../../xdm/tutorials/create-schema-ui.md): Learn how to build your own custom XDM schemas using the [!DNL Schema Editor] within the [!DNL Platform] user interface.
+    * [Schema Editor](../../xdm/tutorials/create-schema-ui.md): Learn how to build your own custom XDM schemas using the [!DNL Schema Editor] within the [!DNL Experience Platform] user interface.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Ensure compliancy with regulations, restrictions, and policies regarding the usage of customer data.
 
@@ -51,7 +51,7 @@ This user guide requires a working understanding of the following components of 
 
 In the [!DNL Experience Platform] UI, select **[!UICONTROL Datasets]** in the left-navigation to open the **[!UICONTROL Datasets]** dashboard. The dashboard lists all available datasets for your organization. Details are displayed for each listed dataset, including its name, the schema the dataset adheres to, and the status of the most recent ingestion run.
 
-![The Platform UI with the Datasets item highlighted in the left navigation bar.](../images/datasets/user-guide/browse-datasets.png)
+![The Experience Platform UI with the Datasets item highlighted in the left navigation bar.](../images/datasets/user-guide/browse-datasets.png)
 
 Select the name of a dataset from the [!UICONTROL Browse] tab to access its **[!UICONTROL Dataset activity]** screen and see details of the dataset you selected. The activity tab includes a graph visualizing the rate of messages being consumed as well as a list of successful and failed batches.
 
@@ -162,7 +162,7 @@ The [!UICONTROL Manage tags] dialog can also remove existing tags from a dataset
 
 Once a tag has been added to a dataset, the datasets can be filtered based on the corresponding tag. See the section on how to [filter datasets by tags](#enable-profile) for more information.
 
-For more information on how to classify business objects for easier discovery and categorization, see the guide on [managing metadata taxonomies](../../administrative-tags/ui/managing-tags.md). This guide explains how users with the right permissions can create pre-defined tags, assign them to categories, and manage all related CRUD operations in the Platform UI.
+For more information on how to classify business objects for easier discovery and categorization, see the guide on [managing metadata taxonomies](../../administrative-tags/ui/managing-tags.md). This guide explains how users with the right permissions can create pre-defined tags, assign them to categories, and manage all related CRUD operations in the Experience Platform UI.
 
 ### (Beta) Set data retention policy {#data-retention-policy}
 
@@ -170,7 +170,7 @@ For more information on how to classify business objects for easier discovery an
 > 
 >Data retention settings are currently in beta and available only in a **limited release** for select organizations. Your UI might not reflect the feature described below.
 
-Manage dataset expiration and retention settings using the inline action menu from the [!UICONTROL Browse] tab of the [!UICONTROL Datasets] workspace. You can use this feature to configure how long data is retained in the data lake and Profile store. The expiration date is based on when data was ingested into Platform and your configured retention period.
+Manage dataset expiration and retention settings using the inline action menu from the [!UICONTROL Browse] tab of the [!UICONTROL Datasets] workspace. You can use this feature to configure how long data is retained in the data lake and Profile store. The expiration date is based on when data was ingested into Experience Platform and your configured retention period.
 
 >[!TIP]
 >
@@ -413,7 +413,7 @@ If you wish to delete the batch, select **[!UICONTROL Delete batch]** near the t
 
 ## Next steps
 
-This user guide provided instructions for performing common actions when working with datasets in the [!DNL Experience Platform] user interface. For steps on performing common [!DNL Platform] workflows involving datasets, please refer to the following tutorials:
+This user guide provided instructions for performing common actions when working with datasets in the [!DNL Experience Platform] user interface. For steps on performing common [!DNL Experience Platform] workflows involving datasets, please refer to the following tutorials:
 
 * [Create a dataset using APIs](create.md)
 * [Query dataset data using the Data Access API](../../data-access/home.md)

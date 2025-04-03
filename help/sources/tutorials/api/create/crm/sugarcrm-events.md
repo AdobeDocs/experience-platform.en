@@ -15,14 +15,14 @@ The following tutorial walks you through the steps to create a [!DNL SugarCRM Ev
 
 This guide requires a working understanding of the following components of Experience Platform:
 
-* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Experience Platform] services.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to successfully connect to [!DNL SugarCRM] using the [!DNL Flow Service] API.
 
 ### Gather required credentials
 
-In order to connect [!DNL SugarCRM Events] to Platform, you must provide values for the following connection properties:
+In order to connect [!DNL SugarCRM Events] to Experience Platform, you must provide values for the following connection properties:
 
 | Credential | Description | Example |
 | --- | --- | --- |
@@ -30,13 +30,13 @@ In order to connect [!DNL SugarCRM Events] to Platform, you must provide values 
 | `username` | Your SugarCRM developer account username. | `abc.def@example.com@sugarmarketdemo000.com` |
 | `password` | Your SugarCRM developer account password. | `123456789` |
 
-## Connect [!DNL SugarCRM Events] to Platform using the [!DNL Flow Service] API
+## Connect [!DNL SugarCRM Events] to Experience Platform using the [!DNL Flow Service] API
 
 The following outlines the steps you need to make in order to authenticate your [!DNL SugarCRM] source, create a source connection, and create a dataflow to bring your events data to Experience Platform.
 
 ### Create a base connection {#base-connection}
 
-A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
+A base connection retains information between your source and Experience Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
 To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL SugarCRM Events] authentication credentials as part of the request body.
 
@@ -81,7 +81,7 @@ curl -X POST \
 | `name` | The name of your base connection. Ensure that the name of your base connection is descriptive as you can use this to look up information on your base connection. |
 | `description` | An optional value that you can include to provide more information on your base connection. |
 | `connectionSpec.id` | The connection specification ID of your source. This ID can be retrieved after your source is registered and approved through the [!DNL Flow Service] API. |
-| `auth.specName` | The authentication type that you are using to authenticate your source to Platform. |
+| `auth.specName` | The authentication type that you are using to authenticate your source to Experience Platform. |
 | `auth.params.host` | The SugarCRM API host: *developer.salesfusion.com* |
 | `auth.params.username` | Your SugarCRM developer account username. |
 | `auth.params.password` | Your SugarCRM developer account password. |
@@ -100,7 +100,7 @@ A successful response returns the newly created base connection, including its u
 ### Explore your source {#explore}
 
 Using the base connection ID you generated in the previous step, you can explore files and directories by performing GET requests.
-Use the following calls to find the path of the file you wish to bring into [!DNL Platform]:
+Use the following calls to find the path of the file you wish to bring into [!DNL Experience Platform]:
 
 **API format**
 
@@ -115,9 +115,9 @@ When performing GET requests to explore your source's file structure and content
 | `{BASE_CONNECTION_ID}` | The base connection ID generated in the previous step. |
 | `objectType=rest` | The type of object that you wish to explore. Currently, this value is always set to `rest`. |
 | `{OBJECT}` | This parameter is required only when viewing a specific directory. Its value represents the path of the directory you wish to explore. For this source the value would be `json`. |
-| `fileType=json` | The file type of the file you want to bring to Platform. Currently, `json` is the only supported file type. |
+| `fileType=json` | The file type of the file you want to bring to Experience Platform. Currently, `json` is the only supported file type. |
 | `{PREVIEW}` | A boolean value that defines whether the contents of the connection supports preview. |
-| `{SOURCE_PARAMS}` | Defines parameters for the source file you want to bring to Platform. To retrieve the accepted format-type for `{SOURCE_PARAMS}`, you must encode the entire string in base64. <br> [!DNL SugarCRM Events] does not require any payload. The value for `{SOURCE_PARAMS}` is passed as `{}`, encoded in base64 it equates to `e30=` as shown below.|
+| `{SOURCE_PARAMS}` | Defines parameters for the source file you want to bring to Experience Platform. To retrieve the accepted format-type for `{SOURCE_PARAMS}`, you must encode the entire string in base64. <br> [!DNL SugarCRM Events] does not require any payload. The value for `{SOURCE_PARAMS}` is passed as `{}`, encoded in base64 it equates to `e30=` as shown below.|
 
 **Request**
 
@@ -346,7 +346,7 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 ### Create a target XDM schema {#target-schema}
 
-In order for the source data to be used in Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create a Platform dataset in which the source data is contained.
+In order for the source data to be used in Experience Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create an Experience Platform dataset in which the source data is contained.
 
 A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
@@ -552,7 +552,7 @@ A successful response returns details of the newly created mapping including its
 
 ### Create a flow {#flow}
 
-The last step towards bringing data from [!DNL SugarCRM Events] to Platform is to create a dataflow. By now, you have the following required values prepared:
+The last step towards bringing data from [!DNL SugarCRM Events] to Experience Platform is to create a dataflow. By now, you have the following required values prepared:
 
 * [Source connection ID](#source-connection)
 * [Target connection ID](#target-connection)
@@ -615,7 +615,7 @@ curl -X POST \
 | `flowSpec.version` | The corresponding version of the flow specification ID. This value defaults to `1.0`. |
 | `sourceConnectionIds` | The [source connection ID](#source-connection) generated in an earlier step. |
 | `targetConnectionIds` | The [target connection ID](#target-connection) generated in an earlier step. |
-| `transformations` | This property contains the various transformations that are needed to be applied to your data. This property is required when bringing non-XDM-compliant data to Platform. |
+| `transformations` | This property contains the various transformations that are needed to be applied to your data. This property is required when bringing non-XDM-compliant data to Experience Platform. |
 | `transformations.name` | The name assigned to the transformation. |
 | `transformations.params.mappingId` | The [mapping ID](#mapping) generated in an earlier step. |
 | `transformations.params.mappingVersion` | The corresponding version of the mapping ID. This value defaults to `0`. |
