@@ -1,8 +1,8 @@
 ---
 title: Batch Segmentation Guide
 description: Learn about batch segmentation including what it is, how to create an audience evaluated using batch segmentation, and how to view your audiences created using batch segmentation.
+exl-id: b6fba2fb-8eec-4429-92fd-ece5c79d379d
 ---
-
 # Batch segmentation guide
 
 Batch segmentation is a segmentation evaluation method that lets you move profile data all at once to create corresponding audiences. 
@@ -273,7 +273,7 @@ Within the available filters, go to **[!UICONTROL Update frequency]** and select
 
 ![The Batch update frequency is selected, displaying all audiences in the organization that are evaluated using batch segmentation.](../images/methods/batch/filter-batch.png)
 
-To learn more about viewing audiences in Platform, please read the [Audience Portal guide](../ui/audience-portal.md).
+To learn more about viewing audiences in Experience Platform, please read the [Audience Portal guide](../ui/audience-portal.md).
 
 >[!ENDTABS]
 

@@ -1,8 +1,8 @@
 ---
 title: Audience evaluation methods
 description: Learn about the different types of evaluation methods available on Adobe Experience Platform.
+exl-id: 54513369-42fa-4bab-803a-21d6dcd87660
 ---
-
 # Audience evaluation methods
 
 Adobe Experience Platform offers a variety of evaluation methods for segmenting your profiles into audiences.
@@ -13,9 +13,13 @@ Batch segmentation is a segmentation evaluation method that you can use to move 
 
 For more information on batch segmentation, please read the [batch segmentation overview](./batch-segmentation.md).
 
+### Flexible audience evaluation
+
+Flexible audience evaluation lets you run a batch segmentation job on demand. You can read the [flexible audience evaluation guide](./flexible-audience-evaluation.md) for more information.
+
 ## Streaming segmentation
 
-Streaming segmentation is a segmentation evaluation method that you can use to evaluate audiences in near real-time while focusing on data richness. You can use streaming segmentation to quickly segment streaming data as it lands in Platform.
+Streaming segmentation is a segmentation evaluation method that you can use to evaluate audiences in near real-time while focusing on data richness. You can use streaming segmentation to quickly segment streaming data as it lands in Experience Platform.
 
 For more information on streaming segmentation, please read the [streaming segmentation overview](./streaming-segmentation.md).
 

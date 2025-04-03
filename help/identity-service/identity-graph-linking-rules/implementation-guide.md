@@ -7,7 +7,7 @@ exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
 
 >[!AVAILABILITY]
 >
->Identity graph linking rules is currently in Limited Availability. Contact your Adobe account team for information on how to access the feature in development sandboxes.
+>Identity graph linking rules are currently in Limited Availability. Contact your Adobe account team for information on how to access the feature in development sandboxes.
 
 Read this document for a step-by-step by guide that you can follow when implementing your data with Adobe Experience Platform Identity Service.
 
@@ -52,13 +52,22 @@ Given a unique namespace, (in this case, a CRMID instead of two disparate namesp
 
 If you are using the [Adobe Analytics source connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md) to ingest data, then you must give your ECIDs a higher priority than Adobe Analytics ID (AAID) because Identity Service blocks AAID. By prioritizing ECID, you can instruct Real-Time Customer Profile to store unauthenticated events to ECID instead of AAID.
 
-### XDM experience events
+### XDM experience events {#xdm-experience-events}
 
-During your pre-implementation process, you must ensure that the authenticated events that your system will send to Experience Platform always contain a person identifier, such as CRMID.
+>[!CONTEXTUALHELP]
+>id="platform_identities_linkingrules_xdm"
+>title="Ensure that you have a single person identifier"
+>abstract="During your pre-implementation process, you must ensure that the authenticated events that your system will send to Experience Platform always contain a **single** person identifier, such as a CRMID."
+
+During your pre-implementation process, you must ensure that the authenticated events that your system will send to Experience Platform always contain a **single** person identifier, such as a CRMID.
+
+* (Recommended) Authenticated events with one unique person identifier.
+* (Not recommended) Authenticated events with two unique person identifiers. If you have more than one unique person identifiers, then you may encounter an unwanted graph collapse.
+* (Not recommended) Authenticated events without any unique person identifiers. If you do not have any unique person identifiers, then both unauthenticated and authenticated events will be stored against the ECID.
 
 >[!BEGINTABS]
 
->[!TAB Authenticated events with person identifier]
+>[!TAB Authenticated events with one person identifier]
 
 ```json
 {
@@ -87,8 +96,57 @@ During your pre-implementation process, you must ensure that the authenticated e
 }
 ```
 
->[!TAB Authenticated events without person identifier]
+>[!TAB Authenticated events with two person identifiers]
 
+If your system sends two person identifiers, the implementation may fail the single-person namespace requirement. For example, if the identityMap in your webSDK implementation contains a CRMID, a customerID, and an ECID namespace, then there is no guarantee that every single event will contain both CRMID and customerID.
+
+Ideally, you should send a payload similar to the following:
+
+```json
+{
+  "_id": "test_id",
+  "identityMap": {
+      "ECID": [
+          {
+              "id": "62486695051193343923965772747993477018",
+              "primary": false
+          }
+      ],
+      "CRMID": [
+          {
+              "id": "John",
+              "primary": true
+          }
+      ],
+      "customerID": [
+          {
+            "id": "Jane",
+            "primary": false
+          }
+      ],
+  },
+  "timestamp": "2024-09-24T15:02:32+00:00",
+  "web": {
+      "webPageDetails": {
+          "URL": "https://business.adobe.com/",
+          "name": "Adobe Business"
+      }
+  }
+}
+```
+
+However, it is important to note that while you can send two person identifiers, there is no guarantee that an unwanted graph collapse will be prevented due to implementation or data errors. Consider the following scenario:
+
+* `timestamp1` = John logs in -> system captures `CRMID: John, ECID: 111`. However, `customerID: John` is not present in this event payload.
+* `timestamp2` = Jane logs in -> system captures `customerID: Jane, ECID: 111`. However, `CRMID: Jane` is not present in this event payload.
+
+Therefore, it is best practice to only send just one person identifier with your authenticated events.
+
+In graph simulation, this ingestion may look like:
+
+![The graph simulation UI with an example graph rendered.](../images/implementation/example-graph.png)
+
+>[!TAB Authenticated events without any person identifiers]
 
 ```json
 {
@@ -111,25 +169,7 @@ During your pre-implementation process, you must ensure that the authenticated e
 }
 ```
 
-
 >[!ENDTABS]
-
-You must ensure that you have a fully qualified identity when sending events using XDM experience events.
-
-+++Select to view an example of an event with  a fully qualified identity
-
-```json
-    "identityMap": {
-        "ECID": [
-            {
-                "id": "24165048599243194405404369473457348936",
-                "primary": false
-            }
-        ]
-    }
-```
-
-+++
 
 ## Set permissions {#set-permissions}
 

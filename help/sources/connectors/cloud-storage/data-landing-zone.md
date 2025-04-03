@@ -157,6 +157,10 @@ azcopy copy "%srcFilePath%" "%sasUri%" --overwrite=true --recursive=true
 
 Follow the steps below to learn how you can set up your [!DNL Data Landing Zone] account for Experience Platform on Amazon Web Services (AWS).
 
+### IP address allowlist for connection on AWS
+
+You must add region-specific IP addresses to your allowlist prior to connecting your sources to Experience Platform on AWS. For more information, read the guide on [allowlisting IP addresses to connect to Experience Platform on AWS](../../ip-address-allow-list.md) for more information.
+
 ### Set up AWS CLI and Performing Operations
 
 - Read the guide on [installing or updating to the latest version of the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
