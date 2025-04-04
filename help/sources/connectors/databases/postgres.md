@@ -1,8 +1,6 @@
 ---
-keywords: Experience Platform;home;popular topics;PostgreSQL;postgresql
-solution: Experience Platform
 title: PostgreSQL Source Connector Overview
-description: Learn how to connect PostgreSQL to Adobe Experience Platform using APIs or the user interface.
+description: Learn about the PostgreSQL source on Adobe Experience Platform.
 exl-id: 27b891c5-5fc5-4539-8f98-e3a53e2eefe3
 ---
 # [!DNL PostgreSQL] connector
@@ -11,11 +9,36 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 [!DNL Experience Platform] provides support for ingesting data from a third-party database. [!DNL Platform] can connect to different types of databases such as relational, NoSQL, or data warehouses. Support for database providers include [!DNL PostgreSQL].
 
-## IP address allow list
+## Prerequisites
 
-A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
+### IP address allow list
 
-The documentation below provides information on how to connect [!DNL PostgreSQL] to [!DNL Platform] using APIs or the user interface:
+You must add region-specific IP addresses to your allowlist prior to connecting your sources to Experience Platform on either Azure or Amazon Web Services (AWS). For more information, read the guide on [allowlisting IP addresses to connect to Experience Platform on Azure and AWS](../../ip-address-allow-list.md) for more information.
+
+### Gather required credentials
+
+>[!BEGINTABS]
+
+>[!TAB Connect to Experience Platform on Azure]
+
+| Credential | Description |
+| --- | --- |
+| `connectionString` | The connection string associated with your [!DNL PostgreSQL] account. The [!DNL PostgreSQL] connection string pattern is: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL PostgreSQL] is `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
+
+For more information about obtaining a connection string, refer to this [[!DNL PostgreSQL] document](https://www.postgresql.org/docs/9.2/app-psql.html).
+
+>[!TAB Connect to Experience Platform on AWS]
+
+| Credential | Description |
+| --- | --- |
+| `server` |
+| `port` |
+| `database` |
+| `password` |
+| `sslMode` |
+
+>[!ENDTABS]
 
 ## Connect [!DNL PostgreSQL] to [!DNL Platform] using APIs
 
