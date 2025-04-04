@@ -25,11 +25,11 @@ As customer data comes together it is merged into a single profile through the u
 
 ## Merge policies
 
-When bringing customer data together, merge policies are the rules that Platform uses to determine how data will be prioritized and what data will be combined to create that unified view. For more information on merge policies, see the [merge policies overview](merge-policies.md).
+When bringing customer data together, merge policies are the rules that Experience Platform uses to determine how data will be prioritized and what data will be combined to create that unified view. For more information on merge policies, see the [merge policies overview](merge-policies.md).
 
 ## Profile viewer
 
-Platform allows you to easily view customer profiles and search for specific profiles using various attributes. For details regarding how to view profiles within Platform, please see the [profile browse overview](profile-browse.md).
+Experience Platform allows you to easily view customer profiles and search for specific profiles using various attributes. For details regarding how to view profiles within Experience Platform, please see the [profile browse overview](profile-browse.md).
 
 ## Next steps
 

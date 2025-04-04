@@ -1,6 +1,6 @@
 ---
-title: Syncing Identities Between Audience Manager and Adobe Experience Platform Using the Platform Web SDK
-description: Learn how to sync identities between Audience Manager and Adobe Experience Platform using the Platform Web SDK
+title: Syncing Identities Between Audience Manager and Adobe Experience Platform Using the Experience Platform Web SDK
+description: Learn how to sync identities between Audience Manager and Adobe Experience Platform using the Experience Platform Web SDK
 seo-description: Learn how to sync identities with Adobe Audience Manager with Experience Platform Web SDK
 keywords: audience manager;aam;identities;sync identities;namespace;
 ---

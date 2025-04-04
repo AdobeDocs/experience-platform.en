@@ -10,11 +10,11 @@ For increased security, Adobe Experience Platform [!DNL Query Service] provides 
 
 ## Prerequisites
 
-This document assumes that you have already downloaded a third-party desktop client application for use with your Platform data. Specific instructions on how to incorporate SSL security when connecting with a third-party client are found in their respective connection guide documentation. For a list of all [!DNL Query Service] supported clients, see the [client connections overview](./overview.md).
+This document assumes that you have already downloaded a third-party desktop client application for use with your Experience Platform data. Specific instructions on how to incorporate SSL security when connecting with a third-party client are found in their respective connection guide documentation. For a list of all [!DNL Query Service] supported clients, see the [client connections overview](./overview.md).
 
 ## Available SSL options {#available-ssl-options}
 
-Platform supports various SSL options to suit your data security needs and balance the processing overhead of encryption and key exchange. 
+Experience Platform supports various SSL options to suit your data security needs and balance the processing overhead of encryption and key exchange. 
 
 The different `sslmode` parameter values provide different levels of protection. By encrypting your data in motion with SSL certificates, it helps to prevent "man-in-the-middle" (MITM) attacks, eavesdropping, and impersonation. The table below provides a breakdown of the different SSL modes available and the level of protection they provide.
 
@@ -34,7 +34,7 @@ The different `sslmode` parameter values provide different levels of protection.
 >
 >The difference between `verify-ca` and `verify-full` depends on the policy of the root certificate authority (CA). If you have created your own local CA to issue private certificates for your applications, using `verify-ca` often provides enough protection. If using a public CA, `verify-ca` allows connections to a server that somebody else may have registered with the CA. `verify-full` should always be used with a public root CA.
 
-When establishing a third-party connection to a Platform database, you are recommended to use `sslmode=require` at a minimum to ensure a secure connection for your data in motion. The `verify-full` SSL mode is recommended for use in most security-sensitive environments.
+When establishing a third-party connection to an Experience Platform database, you are recommended to use `sslmode=require` at a minimum to ensure a secure connection for your data in motion. The `verify-full` SSL mode is recommended for use in most security-sensitive environments.
 
 ## Set up a root certificate for sever verification {#root-certificate}
 

@@ -88,4 +88,4 @@ Select **[!UICONTROL Preview]** to preview the data, and then select **[!UICONTR
 
 ## Create a dataflow to ingest advertising data
 
-By following this tutorial, you have established a connection to your Google Ads account. You can now continue on to the next tutorial and [configure a dataflow to bring advertising data into Platform](../../dataflow/advertising.md).
+By following this tutorial, you have established a connection to your Google Ads account. You can now continue on to the next tutorial and [configure a dataflow to bring advertising data into Experience Platform](../../dataflow/advertising.md).

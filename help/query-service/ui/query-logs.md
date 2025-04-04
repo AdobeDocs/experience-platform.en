@@ -17,7 +17,7 @@ To check the query logs, select [!UICONTROL Queries] to navigate to the Query Se
 >
 >Both system queries and dashboard queries are excluded by default. See the [filters](#filter-logs) section for information on how to refine the displayed logs based on your settings.
 
-![The Platform UI with Queries and Log highlighted.](../images/ui/query-log/logs.png)
+![The Experience Platform UI with Queries and Log highlighted.](../images/ui/query-log/logs.png)
 
 ## Customize and search {#customize-and-search}
 

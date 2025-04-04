@@ -14,13 +14,13 @@ exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html" text="Data Governance overview"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html" text="Data Governance labels overview" 
 
-One of the core capabilities of Adobe Experience Platform is to bring data from multiple enterprise systems together to better allow marketers to identify, understand, and engage customers. This data may be subject to usage restrictions defined by your organization or by legal regulations. It is therefore important to ensure that your data operations within [!DNL Platform] are compliant with data usage policies. 
+One of the core capabilities of Adobe Experience Platform is to bring data from multiple enterprise systems together to better allow marketers to identify, understand, and engage customers. This data may be subject to usage restrictions defined by your organization or by legal regulations. It is therefore important to ensure that your data operations within [!DNL Experience Platform] are compliant with data usage policies. 
 
 Manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use with Adobe Experience Platform Data Governance. Data governance plays a key role within Experience Platform at various levels, including cataloging, data lineage, data usage labeling, data usage policies, and controlling usage of data for marketing actions.
 
 >[!NOTE]
 >
->In Experience Platform, data governance is only concerned with how data is used or activated, regardless of the user performing the action. For information on how to control access to specific data fields for certain Platform users within your organization, see the documentation on [attribute-based access control](../access-control/abac/overview.md) instead.
+>In Experience Platform, data governance is only concerned with how data is used or activated, regardless of the user performing the action. For information on how to control access to specific data fields for certain Experience Platform users within your organization, see the documentation on [attribute-based access control](../access-control/abac/overview.md) instead.
 
 ## Data governance roles {#data-governance-roles}
 
@@ -71,7 +71,7 @@ The Data Governance framework includes predefined data usage labels that can be 
 >
 >See the guide on [supported data usage labels](labels/reference.md) for a complete list of available labels, and definitions for each label type.
 
-Labels can be applied at any time, providing flexibility in how you choose to govern data. Best practice encourages labeling data when it is ingested into Experience Platform, or as soon as data becomes available in [!DNL Platform].
+Labels can be applied at any time, providing flexibility in how you choose to govern data. Best practice encourages labeling data when it is ingested into Experience Platform, or as soon as data becomes available in [!DNL Experience Platform].
 
 See the overview on [data usage labels](./labels/overview.md) for more information on how data usage labels are used to help enforce data governance compliance.
 

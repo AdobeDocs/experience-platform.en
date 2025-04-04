@@ -10,7 +10,7 @@ exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_description"
 >title="Integrate and enforce customer consent in your profile data"
->abstract="<h2>Description</h2><p>Platform allows you to integrate the consent data you have collected from your customers into their respective profiles. You can then set up consent policies to determine whether this data can be included in segments that are activated to certain destinations.</p>"
+>abstract="<h2>Description</h2><p>Experience Platform allows you to integrate the consent data you have collected from your customers into their respective profiles. You can then set up consent policies to determine whether this data can be included in segments that are activated to certain destinations.</p>"
 
 This document covers how to use the **[!UICONTROL Policies]** workspace in the Adobe Experience Platform UI to create and manage data usage policies.
 

@@ -22,9 +22,9 @@ This guide requires a working understanding of the following components of Exper
 
 The following sections provide additional information that you will need to know in order to successfully connect to [!DNL Google Ads] using the [!DNL Flow Service] API.
 
-### Using Platform APIs
+### Using Experience Platform APIs
 
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
+For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../../../landing/api-guide.md).
 
 ### Gather required credentials
 
@@ -32,7 +32,7 @@ For information on authentication, read the [[!DNL Google Ads] source overview](
 
 ## Create a base connection
 
-A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
+A base connection retains information between your source and Experience Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
 To create a base connection ID, make a POST request to the `/connections` endpoint while providing your Google Ads authentication credentials as part of the request parameters.
 
@@ -104,4 +104,4 @@ A successful response returns details of the newly created base connection, incl
 By following this tutorial, you have created a [!DNL Google Ads] base connection using the [!DNL Flow Service] API and connected your [!DNL Google Ads] account to Experience Platform. You can use this base connection ID in the following tutorials:
 
 * [Explore the structure and contents of your data tables using the [!DNL Flow Service] API](../../explore/tabular.md)
-* [Create a dataflow to bring advertising data to Platform using the [!DNL Flow Service] API](../../collect/advertising.md)
+* [Create a dataflow to bring advertising data to Experience Platform using the [!DNL Flow Service] API](../../collect/advertising.md)

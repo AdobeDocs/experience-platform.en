@@ -13,11 +13,11 @@ This document covers the use cases, essential capabilities, and required steps t
 
 ## Prerequisites
 
-This tutorial uses user-defined dashboards to visualize data from your custom data model within the Platform UI. See the [user-defined dashboards documentation](../../../dashboards/standard-dashboards.md) to learn more about this feature.
+This tutorial uses user-defined dashboards to visualize data from your custom data model within the Experience Platform UI. See the [user-defined dashboards documentation](../../../dashboards/standard-dashboards.md) to learn more about this feature.
 
 ## Getting started 
 
-The Data Distiller SKU is required to build a custom data model for your reporting insights and to extend the Real-Time CDP data models that hold enriched Platform data. See the [packaging](../../packaging.md), [guardrails](../../guardrails.md#query-accelerated-store), and  [licensing](../../data-distiller/license-usage.md) documentation that relates to the Data Distiller SKU. If you do not have the Data Distiller SKU, contact your Adobe customer service representative for more information.
+The Data Distiller SKU is required to build a custom data model for your reporting insights and to extend the Real-Time CDP data models that hold enriched Experience Platform data. See the [packaging](../../packaging.md), [guardrails](../../guardrails.md#query-accelerated-store), and  [licensing](../../data-distiller/license-usage.md) documentation that relates to the Data Distiller SKU. If you do not have the Data Distiller SKU, contact your Adobe customer service representative for more information.
 
 ## SQL Insights use cases {#use-cases}
 

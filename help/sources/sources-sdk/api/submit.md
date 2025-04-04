@@ -12,9 +12,9 @@ The following document provides steps on how to test and debug your source using
 
 ## Getting started
 
-* For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../landing/api-guide.md).
-* For information on how to generate your credentials for Platform APIs, see the tutorial on [authenticating and accessing Experience Platform APIs](../../../landing/api-authentication.md).
-* For information on how to set up [!DNL Postman] for Platform APIs, see the tutorial on [setting up developer console and [!DNL Postman]](../../../landing/postman.md).
+* For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../landing/api-guide.md).
+* For information on how to generate your credentials for Experience Platform APIs, see the tutorial on [authenticating and accessing Experience Platform APIs](../../../landing/api-authentication.md).
+* For information on how to set up [!DNL Postman] for Experience Platform APIs, see the tutorial on [setting up developer console and [!DNL Postman]](../../../landing/postman.md).
 * To help your testing and debugging process, download the [Self-Serve Sources verification collection and environment here](../assets/sdk-verification.zip) and follow the steps outlined below.
 
 ## Test your source
@@ -56,7 +56,7 @@ Once your authentication and source specification parameters are provided, you c
 | `x-api-key` | A unique identifier used to authenticate calls to Experience Platform APIs. See the tutorial on [authenticating and accessing Experience Platform APIs](../../../landing/api-authentication.md) for information on how to retrieve your `x-api-key`. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
 | `x-gw-ims-org-id` | A corporate entity that can own or license products and services and allow access to its members. See the tutorial on [setting up developer console and [!DNL Postman]](../../../landing/postman.md) for instructions on how to retrieve your `x-gw-ims-org-id` information. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
 | `authorizationToken` | The authorization token required to complete calls to Experience Platform APIs. See the tutorial on [authenticating and accessing Experience Platform APIs](../../../landing/api-authentication.md) for information on how to retrieve your `authorizationToken`. | `Bearer authorizationToken` |
-| `schemaId` | In order for the source data to be used in Platform, a target schema must be created to structure the source data according to your needs. For detailed steps on how to create a target XDM schema, see the tutorial on [creating a schema using the API](../../../xdm/api/schemas.md). | `https://ns.adobe.com/{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
+| `schemaId` | In order for the source data to be used in Experience Platform, a target schema must be created to structure the source data according to your needs. For detailed steps on how to create a target XDM schema, see the tutorial on [creating a schema using the API](../../../xdm/api/schemas.md). | `https://ns.adobe.com/{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
 | `schemaVersion` | The unique version that corresponds with your schema. | `application/vnd.adobe.xed-full-notext+json; version=1` |
 | `schemaAltId` | The `meta:altId` that is returned alongside the  `schemaId` when creating a new schema. | `_{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
 | `dataSetId` | For detailed steps on how to create a target dataset, see the tutorial on [creating a dataset using the API](../../../catalog/api/create-dataset.md). | `5f3c3cedb2805c194ff0b69a` |
@@ -76,7 +76,7 @@ The [!DNL Runner] interface appears, allowing you to configure the run order of 
 
 >[!NOTE]
 >
->You can disable **Delete Flow** from the run order checklist if you prefer to use the sources monitoring dashboard in Platform UI. However, once you are finished with testing, you must ensure that your test flows are deleted.
+>You can disable **Delete Flow** from the run order checklist if you prefer to use the sources monitoring dashboard in Experience Platform UI. However, once you are finished with testing, you must ensure that your test flows are deleted.
 
 ![run-collection](../assets/run-collection.png)
 
