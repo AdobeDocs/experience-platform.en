@@ -18,7 +18,7 @@ The accelerated store is purpose-built for performance and efficiency. It enable
 
 ## Intended use {#intended-use}
 
-The accelerated store is designed **solely** for storing aggregated data that enables streamlined dashboarding and visualization. Its architecture is not intended to support complex workloads such as business intelligence processing or data warehousing.
+The accelerated store is designed **solely** for storing aggregated data that enables streamlined dashboarding and visualization. Its architecture is not intended to support complex workloads, such as business intelligence processing or data warehousing.
 
 >[!IMPORTANT]
 >
@@ -33,7 +33,7 @@ To ensure compliance with Adobe's data governance model and licensing terms, the
 - **Do not store personally identifiable information (PII)** such as email addresses, healthcare data, or customer identifiers
 - **Do not use the accelerated store to replicate your entire data lake**
 
-Only aggregated, non-identifiable data may be stored in the accelerated store.
+Only aggregated, non-identifiable data may be stored in the accelerated store. Aggregated datasets cannot be reverse-engineered to reveal the original source data, which makes them exempt from Experience Platform's centralized data hygiene processes.
 
 ## Governance and compliance {#governance-and-compliance}
 
