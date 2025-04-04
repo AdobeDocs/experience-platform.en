@@ -41,6 +41,8 @@ Using the accelerated store outside its intended purpose may place your organiza
 
 Adobe is not be liable for any consequences arising from the misuse of this feature.
 
+To learn more about how to manage data responsibly in Experience Platform, see [Governance, privacy, and security in Experience Platform](../../../landing/governance-privacy-security/overview.md). This page outlines the services and tools that help you control your experience data in alignment with business policies, legal requirements, and development standards. For links to more detailed guidance on usage labeling and policy enforcement, visit the [Data Governance overview](../../../data-governance/home.md).
+
 ## Best practices {#best-practices}
 
 To ensure efficient and compliant use of the accelerated store, follow these recommended best practices:
