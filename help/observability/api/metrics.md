@@ -271,7 +271,7 @@ The following table lists the different error codes that can be returned by the 
 
 | Error code | Title | Description |
 | --- | --- | --- |
-| `INSGHT-1000-400` | Bad request payload | Something was wrong with the request payload. Ensure that you match the payload formatting exactly as shown [above](#v2). Any of the possible reasons can trigger this error:<ul><li>Missing required fields such as `aggregator`</li><li>Invalid metrics</li><li>The request contains an invalid aggregator</li><li>A start date takes place after an end date</li></ul> |
+| `INSGHT-1000-400` | Bad request payload | Something was wrong with the request payload. Ensure that you match the payload formatting exactly as shown [above](#v2). Any of the possible reasons can trigger this error:<ul><li>Missing required fields such as `aggregator`</li><li>Invalid metrics</li><li>The request contains an invalid aggregator</li><li>A start date takes place after an end date</li><li>The request has a time range (between start and end date) of more than 32 days</li></ul> |
 | `INSGHT-1001-400` | Metrics query failed | There was an error when attempting to query the metrics database, due to a bad request or the query itself being unparsable. Ensure that your request is properly formatted before trying again. |
 | `INSGHT-1001-500` | Metrics query failed | There was an error when attempting to query the metrics database, due to a server error. Try the request again, and if the problem persists, contact Adobe support. |
 | `INSGHT-1002-500` | Service error | The request could not be processed due to an internal error. Try the request again, and if the problem persists, contact Adobe support. |

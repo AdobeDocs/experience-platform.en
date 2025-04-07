@@ -9,10 +9,13 @@ exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
 >
 >Identity graph linking rules are currently in Limited Availability. Contact your Adobe account team for information on how to access the feature in development sandboxes.
 
+>[!IMPORTANT]
+>
+>This document assumes that you are starting your implementation in a new sandbox without any data.
+
 Read this document for a step-by-step by guide that you can follow when implementing your data with Adobe Experience Platform Identity Service.
 
 Step-by-step outline:
-
 
 1. [Complete prerequisites for implementation](#prerequisites-for-implementation)
 2. [Create the necessary identity namespaces](#namespace)
