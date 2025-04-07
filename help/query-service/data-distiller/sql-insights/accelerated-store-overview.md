@@ -1,12 +1,12 @@
 ---
-title: Accelerated Store Usage Guidelines
+title: Accelerated Store Overview
 description: Learn how to use the accelerated store in Adobe Experience Platform for fast, SQL-based insights using aggregated data. This page outlines its intended use, restrictions on identity and BI data, and best practices to ensure compliance with Adobe's data governance policies.
 ---
-# Accelerated store usage guidelines
+# Accelerated store overview
 
 The accelerated store in Adobe Experience Platform is a performance-optimized storage layer available through the Data Distiller SKU. It is designed to hold pre-aggregated datasets, enabling fast, SQL-based insights and dashboard rendering.
 
-This document outlines how to use the accelerated store appropriately, explains why aggregated datasets are exempt from standard data hygiene processes, and emphasizes that identity data or business intelligence (BI) data must not be stored. To stay compliant with Adobe guidelines, you must adhere to the data governance policies and usage restrictions outlined in this document.
+This document outlines how to use the accelerated store appropriately, explains why aggregated datasets are exempt from standard data hygiene processes, and emphasizes that identity data must not be stored. To stay compliant with Adobe guidelines, you must adhere to the data governance policies and usage restrictions outlined in this document.
 
 ## Key capabilities {#key-capabilities}
 
