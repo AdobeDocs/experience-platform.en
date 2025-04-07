@@ -44,9 +44,13 @@ Before applying a retention policy, assess whether your dataset is a good candid
 
 If historical records are essential for long-term analysis or business operations, TTL may not be the right approach. Reviewing these factors ensures that TTL aligns with your data retention needs without negatively affecting data availability.
 
-## Plan your queries
+## Plan your queries {#plan-queries}
 
-Before applying TTL, use queries to analyze dataset size and relevance. Running targeted queries helps determine how much data would be retained or removed under different TTL configurations.
+Before applying TTL, it's important to assess dataset size and data relevance, and to evaluate how much historical data should be retained. The following visual outlines the full process of implementing TTL, from planning queries to monitoring retention effectiveness.
+
+![A visual workflow for implementing TTL on Experience Event Datasets. Steps include: assess data lifespan and impact of removal, validate TTL settings with queries, configure TTL through Catalog Service API, and continuously monitor TTL impact and make adjustments.](../images/datasets/dataset-retention-ttl-guide/manage-experience-event-dataset-retention-in-the-data-lake.png)
+
+Running targeted queries helps determine how much data would be retained or removed under different TTL configurations.
 
 For example, the following SQL query counts the number of records created within the last 30 days:
 
