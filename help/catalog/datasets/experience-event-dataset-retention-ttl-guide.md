@@ -50,9 +50,7 @@ Before applying TTL, it's important to assess dataset size and data relevance, a
 
 ![A visual workflow for implementing TTL on Experience Event Datasets. Steps include: assess data lifespan and impact of removal, validate TTL settings with queries, configure TTL through Catalog Service API, and continuously monitor TTL impact and make adjustments.](../images/datasets/dataset-retention-ttl-guide/manage-experience-event-dataset-retention-in-the-data-lake.png)
 
-Running targeted queries helps determine how much data would be retained or removed under different TTL configurations.
-
-For example, the following SQL query counts the number of records created within the last 30 days:
+Running targeted queries helps determine how much data would be retained or removed under different TTL configurations. For example, the following SQL query counts the number of records created within the last 30 days:
 
 ```sql
 SELECT COUNT(1) FROM [datasetName] WHERE timestamp > date_sub(now(), INTERVAL 30 DAY);
