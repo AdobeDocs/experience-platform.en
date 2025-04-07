@@ -20,7 +20,7 @@ The [!UICONTROL Consents and Preferences] field group provides a single object-t
 
 >[!TIP]
 >
->See the guide on [exploring XDM resources](../../ui/explore.md) to for steps on how to look up any XDM resource and inspect its structure in the Platform UI.
+>See the guide on [exploring XDM resources](../../ui/explore.md) to for steps on how to look up any XDM resource and inspect its structure in the Experience Platform UI.
 
 The following JSON shows an example of the type of data that the [!UICONTROL Consents and Preferences] field group can process. For information on how to use most of the fields provided by the field group, refer to the guide on the [Consents and Preferences data type](../../data-types/consents.md). The subsections below focus on the unique attributes that the field group adds to the data type.
 
@@ -179,7 +179,7 @@ See the tutorial on [creating a schema in the UI](https://www.adobe.com/go/xdm-s
 
 ## Handling consent and preference changes
 
-When a customer changes their consents or preferences on your website, these changes should be collected and immediately enforced using the [Adobe Experience Platform Web SDK](../../../web-sdk/commands/setconsent.md). If a customer opts out of data collection, all data collection must immediately cease. If a customer opts out of personalization, then there should be no personalization present on the next page they visit. 
+When a customer changes their consents or preferences on your website, these changes should be collected and immediately enforced using the [Adobe Experience Platform Web SDK](../../../web-sdk/commands/setconsent.md). If a customer opts out of data collection, all data collection must immediately cease. If a customer opts out of personalization, then there should be no personalization present on the next page they load. 
 
 ## Next steps
 

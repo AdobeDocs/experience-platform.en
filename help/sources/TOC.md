@@ -89,6 +89,8 @@ role: Developer
   - Data & identity partner {#data-partner}
     - [Acxiom Data Ingestion](connectors/data-partners/acxiom-data-ingestion.md)
     - [Acxiom Prospecting Data Import](connectors/data-partners/acxiom-prospecting-data-import.md)
+    - [Bombora Intent](connectors/data-partners/bombora.md)
+    - [Demandbase Intent](connectors/data-partners/demandbase.md)
     - [Merkury Enterprise Identity Resolution](connectors/data-partners/merkury.md)
   - eCommerce {#ecommerce}
     - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
@@ -393,4 +395,4 @@ role: Developer
 - [IP address allow list](ip-address-allow-list.md)
 - [Frequently asked questions](./troubleshooting.md)
 - [API reference](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

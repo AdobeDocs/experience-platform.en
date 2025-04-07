@@ -1,6 +1,6 @@
 ---
 title: Fuzzy Match in Query Service
-description: Learn how to perform a match on your Platform data that combines results from multiple datasets by approximately matching a string of your choice.
+description: Learn how to perform a match on your Experience Platform data that combines results from multiple datasets by approximately matching a string of your choice.
 exl-id: ec1e2dda-9b80-44a4-9fd5-863c45bc74a7
 ---
 # Fuzzy match in Query Service
@@ -345,7 +345,7 @@ Select **Output** to see the results of this join.
 
 +++
 
-### Save fuzzy match results to Platform {#save-to-platform}
+### Save fuzzy match results to Experience Platform {#save-to-platform}
 
 Finally, the results of the fuzzy match can be saved as a dataset for use in Adobe Experience Platform using SQL.
 

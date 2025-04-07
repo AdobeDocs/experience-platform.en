@@ -39,7 +39,7 @@ A folder of existing CRM sources appears. To add documentation for a new source,
 
 ![create-new-file](../assets/create-new-file.png)
 
-Name your source file `YOURSOURCE.md` where YOURSOURCE is the name of your source in Platform. For example, if your company is ACME CRM, then your file name should be `acme-crm.md`.
+Name your source file `YOURSOURCE.md` where YOURSOURCE is the name of your source in Experience Platform. For example, if your company is ACME CRM, then your file name should be `acme-crm.md`.
 
 ![git-interface](../assets/git-interface.png)
 

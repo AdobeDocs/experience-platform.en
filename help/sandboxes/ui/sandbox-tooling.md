@@ -54,6 +54,7 @@ The table below lists [!DNL Adobe Journey Optimizer] objects that are currently 
 | [!DNL Adobe Journey Optimizer] | Journey | Adding an entire journey to a package, will copy the majority of the objects the journey depends on, including audiences, schemas, events, and actions. |
 | [!DNL Adobe Journey Optimizer] | Content template | A content template can be copied as a dependent object of the journey object. Standalone templates allow you to easily reuse custom content across Journey Optimizer campaigns and journeys. |
 | [!DNL Adobe Journey Optimizer] | Fragment | A fragment can be copied as a dependent object of the journey object. Fragments are reusable components that can be referenced in one or more emails across Journey Optimizer campaigns and journeys. |
+| [!DNL Adobe Journey Optimizer] | Campaigns |  Campaigns can be copied along with all items related to the profile, audience, schema, inline messages, and dependent objects. Some items are not copied, such as decision items, data usage labels, and language settings. For a complete list of objects that cannot be copied, refer the [exporting objects to another sandbox](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) guide. |
 
 Surfaces (for example, presets) are not copied over. The system automatically selects the closest possible match on the destination sandbox based on the message type and surface name. If there are no surfaces found on the target sandbox, then the surface copy will fail, causing the message copy to fail because a message requires a surface to be available for setup. In this case, at least one surface needs to be created for the right channel of the message in order for the copy to work.
 
@@ -245,7 +246,7 @@ The **[!UICONTROL Import summary]** dialog shows a breakdown of the imports with
 
 ![The [!UICONTROL Import details] dialog showing a detailed breakdown of the imports.](../images/ui/sandbox-tooling/import-details.png)
 
-When your import is complete, a notification is received in the Platform UI. You can access these notifications from the alerts icon. You can navigate to troubleshooting from here if a job is unsuccessful.
+When your import is complete, a notification is received in the Experience Platform UI. You can access these notifications from the alerts icon. You can navigate to troubleshooting from here if a job is unsuccessful.
 
 ## Video tutorial
 

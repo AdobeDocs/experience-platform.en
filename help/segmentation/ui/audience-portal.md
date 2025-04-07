@@ -20,6 +20,7 @@ Within Audience Portal, you can accomplish the following tasks:
   - [Use Segment Builder to create an audience](#segment-builder)
   - [Use Audience Composition to create an audience](#audience-composition)
   - [Use Federated Audience Composition to create an audience using data from your existing data warehouse](#fac)
+  - [Use Data Distiller to create an audience](#data-distiller)
 - [Import externally generated audiences](#import-audience)
 
 To open Audience Portal, select the **[!UICONTROL Browse]** tab within the Segmentation section. 
@@ -51,7 +52,7 @@ Next to each audience is an ellipsis icon. Selecting this displays a list of ava
 | [!UICONTROL Edit] | Segmentation Service | Opens the Segment Builder to edit your audience. Please note that if your audience was created through the API, you will **not** be able to edit it using Segment Builder. For more information on using the Segment Builder, please read the [Segment Builder UI guide](./segment-builder.md). |
 | [!UICONTROL Open composition] | Audience composition | Opens the Audience composition to see your audience. For more information on Audience composition, please read the [audience composition UI guide](./audience-composition.md). |
 | [!UICONTROL Activate to destination] | Segmentation Service | Activates the audience to a destination. For more detailed information on activating an audience to a destination, please read the [activation overview](../../destinations/ui/activation-overview.md). |
-| [!UICONTROL Share with partners] | Audience composition, Custom upload, Segmentation Service | Shares your audience with other Platform users. For more information on this feature, please read the [Segment Match overview](./segment-match/overview.md). |
+| [!UICONTROL Share with partners] | Audience composition, Custom upload, Segmentation Service | Shares your audience with other Experience Platform users. For more information on this feature, please read the [Segment Match overview](./segment-match/overview.md). |
 | [!UICONTROL Manage tags] | Audience composition, Custom upload, Segmentation Service | Manages the user-defined tags that belong to the audience. For more information on this feature, please read the section on [filtering and tagging](#manage-audiences). |
 | [!UICONTROL Move to folder] | Audience composition, Custom upload, Segmentation Service |  Manages which folder the audience belongs to. For more information on this feature, please read the section on [filtering and tagging](#manage-audiences). |
 | [!UICONTROL Copy] | Segmentation Service | Duplicates the selected audience. More information about this function can be found in the [Segmentation FAQ](../faq.md#copy). |
@@ -91,7 +92,7 @@ You can add additional fields to Audience Portal by selecting ![the filter attri
 | ----- | ----------- |
 | [!UICONTROL Name] | The name of the audience. |
 | [!UICONTROL Profile count] | The total number of profiles that qualify for the audience. | 
-| [!UICONTROL Origin] | The origin of the audience. This states where the audience comes from. Possible values include Segmentation Service, Custom upload, Audience composition, and Audience Manager. |
+| [!UICONTROL Origin] | The origin of the audience. This states where the audience comes from. Possible values include [Segmentation Service](#segment-builder), [Custom upload](#import-audience), [Audience composition](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [Look-alike audience](../types/lookalike-audiences.md), [Federated Audience Composition](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller), and [AJO B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/guide-overview). |
 | [!UICONTROL Lifecycle status] | The status of the audience. Possible values for this field include `Draft`, `Inactive`, and `Published`. More information about lifecycle statuses, including what the different states mean and how to move audiences to different lifecycle states, read the [lifecycle status section of the Segmentation FAQ](../faq.md#lifecycle-status). |
 | [!UICONTROL Update frequency] | A value that states how often the audience's data is updated. Possible values for this field include [!UICONTROL Batch], [!UICONTROL Streaming], [!UICONTROL Edge], and [!UICONTROL Not Scheduled]. |
 | [!UICONTROL Last updated by] | The name of the person who last updated the audience. |
@@ -214,33 +215,9 @@ When you apply bulk actions to audiences, the following conditions apply:
 - You **cannot** delete an audience which is being used in a destination activation.
 - If you select a filter, the selected audiences **will** reset.
 
-#### [!BADGE Limited availability]{type=Informative} Flexible audience evaluation {#flexible-audience-evaluation}
+#### Flexible audience evaluation {#flexible-audience-evaluation}
 
-Flexible audience evaluation lets you run a segmentation job on demand. Choose the audiences you want to have evaluated and select **[!UICONTROL Evaluate audiences]**.
-
->[!IMPORTANT]
->
->When selecting audiences for flexible audience evaluation, the following conditions apply:
->
->- You can only use flexible audience evaluation **twice** per day. This limit resets at midnight (UTC).
->- You have a **maximum** of 50 flexible audience evaluation runs per year.
->- All the audiences **must** have an origin of "Segmentation Service".
->- All the audiences **must** be evaluated using batch segmentation.
->- All the audiences **must** be people-based audiences.
->- The audiences can **only** be activated to destinations in Platform.
->- You can only select a maximum of 20 audiences.
-
-![The audiences that you want to use flexible audience evaluation on are selected.](../images/ui/audience-portal/evaluate-audiences.png)
-
-The **[!UICONTROL Evaluate audiences on demand]** popover appears, displaying the list of audiences that will be evaluated with the on-demand-segment job. If an audience is ineligible to be evaluated on demand, it will automatically be removed from the evaluation job. Confirm that the listed audiences are the ones you want to be evaluated.
-
-![The audiences that can be evaluated using flexible audience evaluation are displayed.](../images/ui/audience-portal/evaluate-audiences-modal.png)
-
-After confirming the correct audiences are listed, you can proceed with the request, and the flexible audience evaluation will begin. You can view the status of this audience evaluation in the [evaluation job monitoring view](../../dataflows/ui/monitor-audiences.md#evaluation-job-details).
-
->[!NOTE]
->
->If you run flexible audience evaluation, you need to ensure the frequency is set to **[!UICONTROL After segment evaluation]**. Running flexible audience evaluation on audiences which are already set to be activated [after segment evaluation](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), will activate audiences as soon as the flexible audience evaluation job finishes, regardless of any previous daily activation jobs.
+Flexible audience evaluation lets you run a segmentation job on demand. To learn more about flexible audience evaluation, read the [flexible audience evaluation guide](../methods/flexible-audience-evaluation.md).
 
 ## Audience details {#audience-details}
 
@@ -292,7 +269,7 @@ Selecting **[!UICONTROL Edit properties]** will let you edit the basic details o
 
 ### Audience total {#audience-total}
 
-For Platform-generated audiences and compositions, the **[!UICONTROL Audience total]** section shows the total number of profiles that qualify for the audience.
+For Experience-Platform-generated audiences and compositions, the **[!UICONTROL Audience total]** section shows the total number of profiles that qualify for the audience.
 
 >[!NOTE]
 >
@@ -315,7 +292,7 @@ For audiences with an origin of **[!UICONTROL Custom upload]**, the **[!UICONTRO
 | Profile count | The total number of profiles that qualify for the audience. |
 | Dataset name | The name of the dataset that the audience was ingested into. You can select the dataset name for more information about the dataset. To learn more about datasets, read the [dataset UI guide](../../catalog/datasets/user-guide.md). |
 | Dataset batch | The ID of the dataset that the audience was ingested into. You can select the ID of the batch for more information about the batch. To learn more about batches, read the [monitoring data ingestion guide](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
-| Profile batch | The ID of the batch that created the profiles on Platform. You can select the ID of the batch for more information about the batch. To learn more about batches, read the [monitoring data ingestion guide](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
+| Profile batch | The ID of the batch that created the profiles on Experience Platform. You can select the ID of the batch for more information about the batch. To learn more about batches, read the [monitoring data ingestion guide](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
 | Schema | The name of the schema that the audience belongs to. You can select the name of the schema to view information about the schema's structure and apply data usage labels. For more information, read the [manage data usage labels for a schema guide](../../xdm/tutorials/labels.md). |
 | Records ingested | The number of records ingested into the dataset. |
 | Records failed | The number of records that were not able to be ingested into the dataset. |
@@ -403,9 +380,17 @@ Selecting **[!UICONTROL Build rule]** takes you to the Segment Builder. This wor
 
 ### Federated Audience Composition {#fac}
 
-In addition to audience compositions and segment definitions, you can use Adobe Federated Audience Composition to build new audiences from enterprise datasets without copying underlying data and store those audiences in Adobe Experience Platform Audience Portal. You can also enrich existing audiences in Adobe Experience Platform by utilizing composed audience data that has been federated from the enterprise data warehouse. Please read the guide on [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+You can use Adobe Federated Audience Composition to build new audiences from enterprise datasets without copying underlying data and store those audiences in Adobe Experience Platform Audience Portal. 
+
+You can also enrich existing audiences in Adobe Experience Platform by utilizing composed audience data that has been federated from the enterprise data warehouse. Please read the guide on [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
 
 ![A list of audiences created in Federated Audience Composition for your organization.](../images/ui/overview/federated-audience-composition.png)
+
+### Data Distiller {#data-distiller}
+
+You can use Data Distiller's SQL extension to build audiences from the data lake. This data includes existing dimension entities such as customer attributes or product information.
+
+More information about Data Distiller can be found in the [building audiences using SQL guide](../../query-service/data-distiller-audiences/overview.md).
 
 ## Importing an audience {#import-audience}
 
@@ -464,7 +449,7 @@ After confirming the details are correct, select **[!UICONTROL Finish]** to impo
 >
 >Additionally, if your externally generated audience contains sensitive and/or healthcare-related information, you **must** apply the necessary data usage labels before activating it to any destination. Since variables from externally generated audiences are stored in the data lake rather than within Real-time Customer Profile, you should **not** include consent data within your CSV file. 
 >
->For more information on applying data usage labels, please read the documentation on [managing labels](../../access-control/abac/ui/labels.md). To learn about data usage labels on Platform in general, please read the [data usage labels overview](../../data-governance/labels/overview.md). To learn about how consent works in externally generated audiences, please read the [audiences FAQ](../faq.md#consent).
+>For more information on applying data usage labels, please read the documentation on [managing labels](../../access-control/abac/ui/labels.md). To learn about data usage labels on Experience Platform in general, please read the [data usage labels overview](../../data-governance/labels/overview.md). To learn about how consent works in externally generated audiences, please read the [audiences FAQ](../faq.md#consent).
 
 ## Next steps
 

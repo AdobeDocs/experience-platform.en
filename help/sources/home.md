@@ -2,14 +2,14 @@
 keywords: Experience Platform;home;popular topics;source connectors;source connector;sources;data sources;data source;data source connection
 solution: Experience Platform
 title: Source Connectors Overview
-description: Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+description: Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 ---
 # Source connectors overview
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storages, databases, and many others.
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storages, databases, and many others.
 
-[!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Platform. The service provides a user interface and RESTful API that lets you set-up source connections to various data providers with ease. These source connections enable you to authenticate your third-party systems, set times for ingestion runs, and manage data ingestion throughput.
+[!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Experience Platform. The service provides a user interface and RESTful API that lets you set-up source connections to various data providers with ease. These source connections enable you to authenticate your third-party systems, set times for ingestion runs, and manage data ingestion throughput.
 
 With Experience Platform, you can centralize data you collect from disparate sources and use the insights gained from it to do more.
 
@@ -78,7 +78,7 @@ Experience Platform provides support for ingesting data from a third-party analy
 
 ### Cloud Storage {#cloud-storage}
 
-Cloud storage sources can bring your own data into Platform without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM Parquet, or delimited. Every step of the process is integrated into the Sources workflow using the user interface. See the following related documents for more information:
+Cloud storage sources can bring your own data into Experience Platform without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM Parquet, or delimited. Every step of the process is integrated into the Sources workflow using the user interface. See the following related documents for more information:
 
 - [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) [!BADGE Batch]{type=Informative}
@@ -138,10 +138,12 @@ Experience Platform provides support for ingesting data from a third-party datab
 
 ### Data & Identity Partners {#data-partner}
 
-Experience Platform provides support for ingesting data from a third-party database. See the following related documents for more information on specific source connectors:
+Experience Platform provides support for ingesting data from a data and identity partner. See the following related documents for more information on specific source connectors:
 
 - [[!DNL Acxiom Data Ingestion]](connectors/data-partners/acxiom-data-ingestion.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Acxiom Prospecting Data Import]](connectors/data-partners/acxiom-prospecting-data-import.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Bombora Intent]](connectors/data-partners/bombora.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Demandbase Intent]](connectors/data-partners/demandbase.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md) [!BADGE Batch]{type=Informative}
 
 ### eCommerce {#ecommerce}
@@ -220,7 +222,7 @@ With attribute-based access control, you can apply mapping configurations to fie
 
 >[!TIP]
 >
->Attribute-based access control works as follows: **roles** are created to categorize the types of users that interact with your Platform instance. **Labels** are applied to **roles** to designate the access of that given role. **Labels** are also applied to resources like schema fields and segments. In order for a user to have access to certain schema fields and segments, they must be added to *a role with the same label that is assigned to the queried resource*. For more information, read the [attribute-based access control end-to-end guide](../access-control/abac/end-to-end-guide.md).
+>Attribute-based access control works as follows: **roles** are created to categorize the types of users that interact with your Experience Platform instance. **Labels** are applied to **roles** to designate the access of that given role. **Labels** are also applied to resources like schema fields and segments. In order for a user to have access to certain schema fields and segments, they must be added to *a role with the same label that is assigned to the queried resource*. For more information, read the [attribute-based access control end-to-end guide](../access-control/abac/end-to-end-guide.md).
 
 - Apply labels to schema fields to define access to specific schema fields in your organization. Once access to specific schema fields are established, users will only be able to create mappings for the fields that they have access to.
 - Users without the appropriate roles will not be able to create or update dataflows with mappings that involve inaccessible schema fields. Furthermore, unauthorized users cannot update, delete, enable, or disable existing dataflows with inaccessible schema fields.

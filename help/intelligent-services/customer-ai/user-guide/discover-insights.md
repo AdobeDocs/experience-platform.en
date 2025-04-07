@@ -158,7 +158,7 @@ The segment builder is used to define a segment. When selecting **[!UICONTROL Cr
 
 ![Segment fill in](../images/insights/segment-saving.png)
 
- To view your new segment in the Platform UI, select **[!UICONTROL Segments]** in the left navigation. The **[!UICONTROL Browse]** page appears and displays all available segments. 
+ To view your new segment in the Experience Platform UI, select **[!UICONTROL Segments]** in the left navigation. The **[!UICONTROL Browse]** page appears and displays all available segments. 
 
  ![All your Segments](../images/insights/Segments-dashboard.png)
 

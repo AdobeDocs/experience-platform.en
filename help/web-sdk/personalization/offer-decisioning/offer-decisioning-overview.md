@@ -1,10 +1,10 @@
 ---
-title: Using Offer Decisioning with the Platform Web SDK
+title: Using Offer Decisioning with the Experience Platform Web SDK
 description: The Adobe Experience Platform Web SDK can deliver and render personalized offers managed in Offer Decisioning. You can create your offers and other related objects using the Offer Decisioning UI or API.
-keywords: offer decisioning;decisioning;Web SDK;Platform Web SDK;personalized offers;deliver offers;offer delivery;offer personalization;
+keywords: offer decisioning;decisioning;Web SDK;Experience Platform Web SDK;personalized offers;deliver offers;offer delivery;offer personalization;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
 ---
-# Using Offer Decisioning with the Platform Web SDK
+# Using Offer Decisioning with the Experience Platform Web SDK
 
 Adobe Experience Platform [!DNL Web SDK] can deliver and render personalized offers that are managed in Offer Decisioning. You can create your offers and other related objects using the Offer Decisioning user interface (UI) or APIs.
 
@@ -43,7 +43,7 @@ It is important to understand the following terminology when working with Offer 
 
 * **Datastreams:** For more information, please read the [datastreams](/help/datastreams/overview.md) documentation.
 
-* **Identity**: For more information, please read this documentation outlining how [Platform Web SDK uses Identity Service](../../identity/overview.md).
+* **Identity**: For more information, please read this documentation outlining how [Experience Platform Web SDK uses Identity Service](../../identity/overview.md).
 
 ## Enabling Offer Decisioning
 
@@ -76,13 +76,13 @@ To enable Offer Decisioning, perform the following steps:
 
      1. [Create a tag property](/help/tags/ui/administration/companies-and-properties.md)
      1. [Add the embed code](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-     1. Install and configure the Platform Web SDK extension with the Datastream you created by selecting the configuration from the "Datastream" dropdown. See the documentation on [extensions](/help/tags/ui/managing-resources/extensions/overview.md).
+     1. Install and configure the Experience Platform Web SDK extension with the Datastream you created by selecting the configuration from the "Datastream" dropdown. See the documentation on [extensions](/help/tags/ui/managing-resources/extensions/overview.md).
 
         ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
       
         ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
       
-     1. Create the necessary [Data Elements](/help/tags/ui/managing-resources/data-elements.md). At the bare minimum, you must create a Platform Web SDK Identity Map and a Platform Web SDK XDM Object data element.
+     1. Create the necessary [Data Elements](/help/tags/ui/managing-resources/data-elements.md). At the bare minimum, you must create an Experience Platform Web SDK Identity Map and an Experience Platform Web SDK XDM Object data element.
 
         ![identity-map-data-element](./assets/identity-map-data-element.png)
       
@@ -90,7 +90,7 @@ To enable Offer Decisioning, perform the following steps:
       
      1. Create your [Rules](/help/tags/ui/managing-resources/rules.md).
 
-        * Add a Platform Web SDK Send Event action and add the relevant `decisionScopes` to that action's configuration
+        * Add an Experience Platform Web SDK Send Event action and add the relevant `decisionScopes` to that action's configuration
 
         ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
       

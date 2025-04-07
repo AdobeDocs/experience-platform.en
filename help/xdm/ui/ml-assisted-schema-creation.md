@@ -26,7 +26,7 @@ This guide explains how to create schemas using machine learning (ML) algorithms
 
 ## Navigate to the Create schema workflow {#navigate-to-schema-creation-workflow}
 
-From the left navigation of the Platform UI, select the **[!UICONTROL Schemas]** workspace. The **[!UICONTROL Schemas]** workspace appears. Select **[!UICONTROL Create schema]** to add a new schema to start a schema creation workflow.
+From the left navigation of the Experience Platform UI, select the **[!UICONTROL Schemas]** workspace. The **[!UICONTROL Schemas]** workspace appears. Select **[!UICONTROL Create schema]** to add a new schema to start a schema creation workflow.
 
 ![The Schemas workspace with Schema in the left navigation and Create schema highlighted.](../images/ui/ml-schema-creation/schemas-workspace-create-schema.png)
 
