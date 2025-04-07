@@ -7,9 +7,9 @@ exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
 ---
 # Flow run notifications
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Experience Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
-[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) is used to collect and centralize customer data from various disparate sources within [!DNL Platform]. The service provides a user interface and RESTful API from which all supported sources are connectable.
+[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) is used to collect and centralize customer data from various disparate sources within [!DNL Experience Platform]. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
 With Adobe I/O Events, you can subscribe to events and use webhooks to receive notifications regarding the status of your flow runs. These notifications contain information about the success of your flow run or errors that contributed to a run's failure.
 
@@ -317,9 +317,9 @@ The following sections provides additional information for working with flow run
 
 ### Understanding error messages {#errors}
 
-Ingestion errors can happen when data is being copied from the source or when the copied data is being processed to [!DNL Platform]. See the table below for more information on specific errors.
+Ingestion errors can happen when data is being copied from the source or when the copied data is being processed to [!DNL Experience Platform]. See the table below for more information on specific errors.
 
 | Error | Description |
 | ---------- | ----------- |
 | `CONNECTOR-1001-500` | An error occurred while data is being copied from a source. |
-| `CONNECTOR-2001-500` | An error occurred while copied data is being processed to [!DNL Platform]. This error could be regarding parsing, validating, or transforming. |
+| `CONNECTOR-2001-500` | An error occurred while copied data is being processed to [!DNL Experience Platform]. This error could be regarding parsing, validating, or transforming. |

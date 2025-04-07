@@ -104,4 +104,4 @@ The MA extension exposes `media` as a shared module to other extensions. (For ad
 
 >[!NOTE]
 >
->**Testing:** For this release, to test your extension you must upload it to [Platform](../../../extension-dev/submit/upload-and-test.md), where you have access to all dependent extensions.
+>**Testing:** For this release, to test your extension you must upload it to [Experience Platform](../../../extension-dev/submit/upload-and-test.md), where you have access to all dependent extensions.

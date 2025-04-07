@@ -13,7 +13,7 @@ exl-id: 8edbcb26-0a18-47f1-8012-ca209d99d7a6
 >
 >The [!DNL Pinterest Ads] source is in beta. Read the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled connectors.
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
 Experience Platform provides support for ingesting data from a third-party advertising system. Support for advertising providers include [!DNL Pinterest Ads].
 
@@ -45,7 +45,7 @@ To generate your access token, read the [!DNL Pinterest] guides on [setting up y
 
 ### Gather required credentials {#gather-required-credentials}
 
-In order to connect [!DNL Pinterest Ads] to Platform, you must provide values for the following connection properties:
+In order to connect [!DNL Pinterest Ads] to Experience Platform, you must provide values for the following connection properties:
 
 | Credential | Description |
 | --- | --- |
@@ -89,23 +89,23 @@ The [!DNL Pinterest] API supports different kinds of time granularity for how da
 | **WEEKLY** | The data metrics are broken down on a weekly basis. |
 | **MONTHLY** | The data metrics are broken down on a monthly basis. |
 
-For Platform, the [!DNL Pinterest Ads] source is internally configured to `Day`, which means data will be aggregated on a daily basis. For example, using `impressions recorded` as a metric, since the granularity is configured as a `DAY`, you would get `xx` impressions on `day 1`, `yy` impressions on `day 2` and so on.
+For Experience Platform, the [!DNL Pinterest Ads] source is internally configured to `Day`, which means data will be aggregated on a daily basis. For example, using `impressions recorded` as a metric, since the granularity is configured as a `DAY`, you would get `xx` impressions on `day 1`, `yy` impressions on `day 2` and so on.
 
 >[!IMPORTANT]
 >
 >Pinterest imposes a rate limit of 1000 API calls daily on its API to read information from ads, ad groups or ad campaigns. For information on rate limits applicable to underlying API calls, refer to the [[!DNL Pinterest] documentation on rate limits](https://developers.pinterest.com/docs/reference/ratelimits/).
 
-## Connect [!DNL Pinterest Ads] to Platform {#connect-to-platform}
+## Connect [!DNL Pinterest Ads] to Experience Platform {#connect-to-platform}
 
-The documentation below provides information on how to connect [!DNL Pinterest Ads] to Platform using APIs or the user interface:
+The documentation below provides information on how to connect [!DNL Pinterest Ads] to Experience Platform using APIs or the user interface:
 
-### Connect [!DNL Pinterest Ads] to Platform using APIs {#connect-to-platform-using-api}
+### Connect [!DNL Pinterest Ads] to Experience Platform using APIs {#connect-to-platform-using-api}
 
 * [Create a Pinterest base connection using the Flow Service API](../../tutorials/api/create/advertising/pinterest-ads.md)
 * [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
 * [Create a dataflow for an advertising source using Flow Service API](../../tutorials/api/collect/advertising.md)
 
-### Connect [!DNL Pinterest Ads] to Platform using the UI {#connect-to-platform-using-ui}
+### Connect [!DNL Pinterest Ads] to Experience Platform using the UI {#connect-to-platform-using-ui}
 
 * [Create a Pinterest source connection in the UI](../../tutorials/ui/create/advertising/pinterest-ads.md)
 * [Create a dataflow for an advertising source connection in the UI](../../tutorials/ui/dataflow/advertising.md)

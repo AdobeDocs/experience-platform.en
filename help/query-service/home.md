@@ -7,7 +7,7 @@ exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
 ---
 # Query Service overview
 
-Adobe Experience Platform ingests data from a wide variety of sources. A major challenge for marketers is to make sense of this data to gain insights about their customers. To query data in Platform, you can use standard SQL and Adobe Experience Platform Query Service. You can use Query Service to join any dataset in the data lake and capture the query results as a new dataset for use in reporting, machine learning, or for ingestion into [!DNL Real-Time Customer Profile]. This document provides an overview of the role of Query Service within Experience Platform.
+Adobe Experience Platform ingests data from a wide variety of sources. A major challenge for marketers is to make sense of this data to gain insights about their customers. To query data in Experience Platform, you can use standard SQL and Adobe Experience Platform Query Service. You can use Query Service to join any dataset in the data lake and capture the query results as a new dataset for use in reporting, machine learning, or for ingestion into [!DNL Real-Time Customer Profile]. This document provides an overview of the role of Query Service within Experience Platform.
 
 You can use Query Service to connect the online-to-offline customer journey and understand omni-channel attribution for your brand. The following video shows how an experience business can use Query Service to address key use cases and how Query Service works.
 

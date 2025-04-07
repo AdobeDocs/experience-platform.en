@@ -93,7 +93,7 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 
 The Snowflake destination supports the mapping of profile attributes to custom attributes.
 
-![Platform user interface image showing the mapping screen for the Snowflake destination.](../../assets/catalog/cloud-storage/snowflake/mapping.png)
+![Experience Platform user interface image showing the mapping screen for the Snowflake destination.](../../assets/catalog/cloud-storage/snowflake/mapping.png)
 
 The target attributes are automatically created in Snowflake using the attribute name that you provide in the **[!UICONTROL Attribute name]** field.
 

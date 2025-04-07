@@ -5,9 +5,9 @@ exl-id: 37b8f991-dca9-4f85-9bdd-4927a015e4c0
 ---
 # [!DNL MariaDB] connector
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Experience Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
-Experience Platform provides support for ingesting data from a third-party database. Experience Platform can connect to different types of databases such as relational, NoSQL, or data warehouses. Support for database providers include [!DNL MariaDB].
+Experience Platform provides support for ingesting data from a third-party database. [!DNL Experience Platform] can connect to different types of databases such as relational, NoSQL, or data warehouses. Support for database providers include [!DNL MariaDB].
 
 ## Prerequisites {#prerequisites}
 

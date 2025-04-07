@@ -27,7 +27,7 @@ Before you can use the `/testing/destinationInstance` endpoint, make sure you me
 
 * You have an existing file-based destination created through the Destination SDK and you can see it in your [destinations catalog](../../../ui/destinations-workspace.md).
 * You have created at least one activation flow for your destination in the Experience Platform UI.
-* To successfully make the API request, you need the destination instance ID corresponding to the destination instance that you will be testing. Get the destination instance ID that you should use in the API call, from the URL, when browsing a connection with your destination in the Platform UI.
+* To successfully make the API request, you need the destination instance ID corresponding to the destination instance that you will be testing. Get the destination instance ID that you should use in the API call, from the URL, when browsing a connection with your destination in the Experience Platform UI.
 
    ![UI image showing how to get destination instance ID from the URL.](../../assets/testing-api/get-destination-instance-id.png)
 * You have previously [tested your destination configuration](file-based-destination-testing-api.md), and received a valid API response, which includes a `results` property. You will use this `results` value to further test your destination.
@@ -207,7 +207,7 @@ The response contains the complete details of the activation flow. You can obtai
 
 ## API error handling {#api-error-handling}
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
 
 ## Next steps
 

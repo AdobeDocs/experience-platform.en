@@ -39,9 +39,9 @@ Set up automatic dataset cleanup for short-lived data. Use the `/ttl` endpoint o
 
 ## Monitor work order and dataset expiration status {#monitor}
 
-You can efficiently monitor the progress of your data lifecycle management through the use of **I/O Events**. An I/O Event is a mechanism for receiving real-time notifications about changes or updates in various services within Platform. 
+You can efficiently monitor the progress of your data lifecycle management through the use of **I/O Events**. An I/O Event is a mechanism for receiving real-time notifications about changes or updates in various services within Experience Platform. 
 
-I/O Event alerts can be sent to a configured webhook to enable the automation of activity monitoring. To receive alerts via webhook, you must register your webhook for Platform alerts in the Adobe Developer Console. See the guide on [subscribing to Adobe I/O Event notifications](../observability/alerts/subscribe.md) for the detailed instructions.
+I/O Event alerts can be sent to a configured webhook to enable the automation of activity monitoring. To receive alerts via webhook, you must register your webhook for Experience Platform alerts in the Adobe Developer Console. See the guide on [subscribing to Adobe I/O Event notifications](../observability/alerts/subscribe.md) for the detailed instructions.
 
 Use the following data lifecycle methods and guidelines to effectively retrieve and monitor job statuses:
 
