@@ -3,7 +3,7 @@ title: MariaDB Source Connector Overview
 description: Learn how to connect MariaDB to Adobe Experience Platform using APIs or the user interface.
 exl-id: 37b8f991-dca9-4f85-9bdd-4927a015e4c0
 ---
-# [!DNL MariaDB] connector
+# [!DNL MariaDB]
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Experience Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
@@ -17,13 +17,15 @@ Read the following sections for prerequisite set up that you must complete befor
 
 You must add region-specific IP addresses to your allowlist prior to connecting your sources to Experience Platform on either Azure or Amazon Web Services (AWS). For more information, read the guide on [allowlisting IP addresses to connect to Experience Platform on Azure and AWS](../../ip-address-allow-list.md) for more information.
 
-### Gather required credentials {#credentials}
+### Authenticate to Experience Platform on Azure {#azure}
+
+You must provide values for the following credentials to connect [!DNL MariaDB] to Experience Platform on Azure.
 
 >[!BEGINTABS]
 
->[!TAB Connect to Experience Platform on Azure]
+>[!TAB Account key authentication]
 
-You must provide values for the following credentials to connect [!DNL MariaDB] to Experience Platform on Azure.
+To use account key authentication, provide the appropriate values for the following credentials.
 
 | Credential | Description |
 | --- | --- |
@@ -32,9 +34,9 @@ You must provide values for the following credentials to connect [!DNL MariaDB] 
 
 For more information about obtaining a connection string, refer to this [[!DNL MariaDB] document](https://mariadb.com/kb/en/about-mariadb-connector-odbc/).
 
->[!TAB Connect to Experience Platform on AWS]
+>[!TAB Basic authentication]
 
-You must provide values for the following credentials to connect [!DNL MariaDB] to Experience Platform on AWS.
+To use basic authentication, provide the appropriate values for the following credentials.
 
 | Credential | Description |
 | --- | --- |
@@ -48,6 +50,25 @@ You must provide values for the following credentials to connect [!DNL MariaDB] 
 For more information about obtaining a connection string, refer to this [[!DNL MariaDB] document](https://mariadb.com/kb/en/about-mariadb-connector-odbc/).
 
 >[!ENDTABS]
+
+### Authenticate to Experience Platform on Amazon Web Services (AWS) {#aws}
+
+>[!AVAILABILITY]
+>
+>This section applies to implementations of Experience Platform running on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../../landing/multi-cloud.md).
+
+You must provide values for the following credentials to connect [!DNL MariaDB] to Experience Platform on AWS.
+
+| Credential | Description |
+| --- | --- |
+| `server` | The name or IP of your [!DNL MariaDB] database. |
+| `username` | The name of your database. |
+| `password` | The username that corresponds with your database. |
+| `database` | The password that corresponds with your database. |
+| `sslMode` | The method by which data is encrypted during data transfer. |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL MariaDB] is `3000eb99-cd47-43f3-827c-43caf170f015`. **Note**: This credential is only required when connecting through the [!DNL Flow Service] API. |
+
+For more information about obtaining a connection string, refer to this [[!DNL MariaDB] document](https://mariadb.com/kb/en/about-mariadb-connector-odbc/).
 
 ## Connect [!DNL MariaDB] to Experience Platform using APIs
 
