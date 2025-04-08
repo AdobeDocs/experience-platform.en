@@ -237,6 +237,7 @@ role: Admin,User
             * [Supported transformation functions](./destination-sdk/functionality/destination-server/supported-functions.md)
             * [File formatting configuration](./destination-sdk/functionality/destination-server/file-formatting.md)
         * Destination configuration components {#destination-configuration}
+            * [Configure audience data type](./destination-sdk/functionality/destination-configuration/audience-data-type.md)
             * [Customer authentication configuration](./destination-sdk/functionality/destination-configuration/customer-authentication.md)
             * [OAuth2 authorization](./destination-sdk/functionality/destination-configuration/oauth2-authorization.md)
             * [Customer data fields](./destination-sdk/functionality/destination-configuration/customer-data-fields.md)
@@ -263,7 +264,6 @@ role: Admin,User
             * [Configure an Azure Data Lake Storage destination with custom file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
             * [Configure an Data Landing Zone (DLZ) destination with custom file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
             * [Configure an SFTP destination with predefined file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
-            * [Configure a file-based destination to export account audiences](destination-sdk/guides/batch/configure-account-audience-destination.md)
             * [Configure a file-based destination to export prospect audiences](/help/destinations/destination-sdk/guides/batch/configure-prospect-audience-destination.md)
     * Destination authoring API reference {#authoring-api}
         * [Destination SDK (Destination Authoring) API reference](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
