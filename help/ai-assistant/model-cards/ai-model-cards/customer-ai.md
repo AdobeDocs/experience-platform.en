@@ -1,6 +1,8 @@
 ---
 title: Customer AI Propensity Scoring Model Card
 description: Learn about the AI model used for Customer AI.
+hide: true
+hidefromtoc: true
 ---
 # Customer AI Propensity Scoring Model Card
 
