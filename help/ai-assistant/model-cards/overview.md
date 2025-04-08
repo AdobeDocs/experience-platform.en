@@ -3,6 +3,7 @@ title: Model Cards For AI Model Transparency In Adobe Experience Platform
 description: Learn about model cards in Adobe Experience Platform.
 hide: true
 hidefromtoc: true
+exl-id: 74a8ef82-cff9-4a7e-95c8-f915eb664eda
 ---
 # Model cards for AI model transparency in Adobe Experience Platform
 
