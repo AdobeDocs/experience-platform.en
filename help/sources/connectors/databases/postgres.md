@@ -5,9 +5,7 @@ exl-id: 27b891c5-5fc5-4539-8f98-e3a53e2eefe3
 ---
 # [!DNL PostgreSQL]
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
-
-Experience Platform provides support for ingesting data from a third-party database. Experience Platform can connect to different types of databases such as relational, NoSQL, or data warehouses. Support for database providers include [!DNL PostgreSQL].
+Read this document to learn about prerequisite steps that you need to complete before you can connect your [!DNL PostgreSQL] database to Adobe Experience Platform.
 
 ## Prerequisites {#prerequisites}
 
