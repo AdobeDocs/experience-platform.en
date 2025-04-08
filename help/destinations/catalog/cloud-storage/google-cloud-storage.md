@@ -12,7 +12,7 @@ Create a live outbound connection to [!DNL Google Cloud Storage] to periodically
 
 ## Connect to your [!DNL Google Cloud Storage] storage through API or UI {#connect-api-or-ui}
 
-* To connect to your [!DNL Google Cloud Storage] storage location using the Platform user interface, read the sections [Connect to the destination](#connect) and [Activate audiences to this destination](#activate) below.
+* To connect to your [!DNL Google Cloud Storage] storage location using the Experience Platform user interface, read the sections [Connect to the destination](#connect) and [Activate audiences to this destination](#activate) below.
 * To connect to your [!DNL Google Cloud Storage] storage location programmatically, read the [Activate audiences to file-based destinations by using the Flow Service API tutorial](../../api/activate-segments-file-based-destinations.md).
 
 ## Supported audiences {#supported-audiences}
@@ -41,18 +41,18 @@ Refer to the table below for information about the destination export type and f
 
 This destination supports dataset exports. For complete information on how to set up dataset exports, read the tutorials: 
 
-* How to [export datasets using the Platform user interface](/help/destinations/ui/export-datasets.md). 
+* How to [export datasets using the Experience Platform user interface](/help/destinations/ui/export-datasets.md). 
 * How to [export datasets programmatically using the Flow Service API](/help/destinations/api/export-datasets.md).
 
 ## File format of the exported data {#file-format}
 
-When exporting *audience data*, Platform creates a `.csv`, `parquet`, or `.json` file in the storage location that you provided. For more information about the files, see the [supported file formats for export](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) section in the audience activation tutorial.
+When exporting *audience data*, Experience Platform creates a `.csv`, `parquet`, or `.json` file in the storage location that you provided. For more information about the files, see the [supported file formats for export](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) section in the audience activation tutorial.
 
-When exporting *datasets*, Platform creates a `.parquet` or `.json` file in the storage location that you provided. For more information about the files, see the [verify successful dataset export](../../ui/export-datasets.md#verify) section in the export datasets tutorial.
+When exporting *datasets*, Experience Platform creates a `.parquet` or `.json` file in the storage location that you provided. For more information about the files, see the [verify successful dataset export](../../ui/export-datasets.md#verify) section in the export datasets tutorial.
 
 ## Prerequisite setup for connecting your [!DNL Google Cloud Storage] account {#prerequisites}
 
-In order to connect Platform to [!DNL Google Cloud Storage], you must first enable interoperability for your [!DNL Google Cloud Storage] account. To access the interoperability setting, open [!DNL Google Cloud Platform] and select **[!UICONTROL Settings]** from the **[!UICONTROL Cloud Storage]** option in the navigation panel.
+In order to connect Experience Platform to [!DNL Google Cloud Storage], you must first enable interoperability for your [!DNL Google Cloud Storage] account. To access the interoperability setting, open [!DNL Google Cloud Platform] and select **[!UICONTROL Settings]** from the **[!UICONTROL Cloud Storage]** option in the navigation panel.
 
 ![Google Cloud Platform dashboard with Cloud Storage and Settings highlighted.](../../../sources/images/tutorials/create/google-cloud-storage/nav.png)
 
@@ -64,7 +64,7 @@ The **[!UICONTROL Interoperability]** page contains information on authenticatio
 
 ![The Create a key for a service account control highlighted in the Google Cloud Platform dashboard.](../../../sources/images/tutorials/create/google-cloud-storage/interoperability.png)
 
-You can use your newly generated access key ID and secret access key to connect your [!DNL Google Cloud Storage] account to Platform.
+You can use your newly generated access key ID and secret access key to connect your [!DNL Google Cloud Storage] account to Experience Platform.
 
 ## Connect to the destination {#connect}
 
@@ -78,8 +78,8 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-* **[!UICONTROL Access key ID]**: A 61-character, alphanumeric string used to authenticate your [!DNL Google Cloud Storage] account to Platform. For information on how to obtain this value, read the [prerequisites](#prerequisites) section above.
-* **[!UICONTROL Secret access key]**: A 40-character, base64-encoded string used to authenticate your [!DNL Google Cloud Storage] account to Platform. For information on how to obtain this value, read the [prerequisites](#prerequisites) section above.
+* **[!UICONTROL Access key ID]**: A 61-character, alphanumeric string used to authenticate your [!DNL Google Cloud Storage] account to Experience Platform. For information on how to obtain this value, read the [prerequisites](#prerequisites) section above.
+* **[!UICONTROL Secret access key]**: A 40-character, base64-encoded string used to authenticate your [!DNL Google Cloud Storage] account to Experience Platform. For information on how to obtain this value, read the [prerequisites](#prerequisites) section above.
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
 
     ![Image showing an example of a correctly formatted PGP key in the UI](../../assets/catalog/cloud-storage/sftp/pgp-key.png)

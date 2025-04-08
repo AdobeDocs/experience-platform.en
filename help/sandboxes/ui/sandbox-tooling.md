@@ -246,7 +246,7 @@ The **[!UICONTROL Import summary]** dialog shows a breakdown of the imports with
 
 ![The [!UICONTROL Import details] dialog showing a detailed breakdown of the imports.](../images/ui/sandbox-tooling/import-details.png)
 
-When your import is complete, a notification is received in the Platform UI. You can access these notifications from the alerts icon. You can navigate to troubleshooting from here if a job is unsuccessful.
+When your import is complete, a notification is received in the Experience Platform UI. You can access these notifications from the alerts icon. You can navigate to troubleshooting from here if a job is unsuccessful.
 
 ## Video tutorial
 

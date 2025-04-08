@@ -279,6 +279,6 @@ A successful response returns the details of the updated schema.
 
 ## Next steps
 
-This guide covered how to use API calls to add individual fields from an existing field group to a schema. For details on how to perform similar field-based tasks in the Platform UI, see the guide on [field-based workflows](../ui/field-based-workflows.md).
+This guide covered how to use API calls to add individual fields from an existing field group to a schema. For details on how to perform similar field-based tasks in the Experience Platform UI, see the guide on [field-based workflows](../ui/field-based-workflows.md).
 
 For more information on the capabilities of the Schema Registry API, refer to the [API overview](../api/overview.md) for a full list of endpoints and processes.

@@ -8,7 +8,7 @@ exl-id: 259ca112-01f1-414a-bf9f-d94caf4c69df
 ---
 # Create a [!DNL MariaDB] source connection in the UI
 
-Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a Maria DB source connector using the [!DNL Platform] user interface.
+Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a Maria DB source connector using the [!DNL Experience Platform] user interface.
 
 ## Getting started
 
@@ -23,7 +23,7 @@ If you already have a [!DNL MariaDB] connection, you may skip the remainder of t
 
 ### Gather required credentials
 
-In order to access your [!DNL MariaDB] account on [!DNL Platform], you must provide the following value:
+In order to access your [!DNL MariaDB] account on [!DNL Experience Platform], you must provide the following value:
 
 | Credential | Description |
 | ---------- | ----------- |
@@ -33,7 +33,7 @@ For more information about getting started, refer to this [[!DNL MariaDB] docume
 
 ## Connect your [!DNL Maria DB] account
 
-Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Maria DB] account to [!DNL Platform].
+Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Maria DB] account to [!DNL Experience Platform].
 
 Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create an account with.
 
@@ -57,4 +57,4 @@ To connect an existing account, select the [!DNL MariaDB] account you want to co
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your [!DNL MariaDB] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Platform]](../../dataflow/databases.md).
+By following this tutorial, you have established a connection to your [!DNL MariaDB] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Experience Platform]](../../dataflow/databases.md).

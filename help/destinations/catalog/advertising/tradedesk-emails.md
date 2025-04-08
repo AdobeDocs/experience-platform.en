@@ -89,7 +89,7 @@ Before you can send, or activate, audience data to a destination, you must set u
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 *  **[!UICONTROL Advertiser ID]**: your [!DNL Trade Desk Advertiser ID], which can either be shared by your [!DNL Trade Desk] Account Manager or be found under [!DNL Advertiser Preferences] in the [!DNL Trade Desk] UI. 
 
-![Platform UI screenshot showing how to fill in destination details.](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
+![Experience Platform UI screenshot showing how to fill in destination details.](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
 
 When connecting to the destination, setting a data governance policy is completely optional. Please review the Experience Platform [data governance overview](/help/data-governance/policies/overview.md) for more details.  
 
@@ -104,17 +104,17 @@ Read [activate audience data to batch profile export destinations](/help/destina
 
 In the **[!UICONTROL Scheduling]** page, you can configure the schedule and the file names for each audience you are exporting. Configuring the schedule is mandatory, but configuring the file name is optional. 
 
-![Platform UI screenshot to schedule audience activation.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
+![Experience Platform UI screenshot to schedule audience activation.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
 
 >[!NOTE] 
 >
 >All audiences activated to [!DNL The Trade Desk] CRM Destination are automatically set to a daily frequency and full file export.
 
-![Platform UI screenshot to schedule audience activation.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
+![Experience Platform UI screenshot to schedule audience activation.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
 
 In the **[!UICONTROL Mapping]** page, you must select attributes or identity namespaces from the source column and map to the target column.  
 
-![Platform UI screenshot to map audience activation.](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
+![Experience Platform UI screenshot to map audience activation.](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
 
 Below is an example of correct identity mapping when activating audiences to [!DNL The Trade Desk] CRM destination. 
 
@@ -125,7 +125,7 @@ Below is an example of correct identity mapping when activating audiences to [!D
 Selecting source fields:
 
 *  Select the `Email` namespace or attribute as source identity if using the raw email address on data ingestion. 
-*  Select the `Email_LC_SHA256` namespace or attribute as source identity if you hashed customer email addresses on data ingestion into Platform.  
+*  Select the `Email_LC_SHA256` namespace or attribute as source identity if you hashed customer email addresses on data ingestion into Experience Platform.  
 
 Selecting target fields:
 

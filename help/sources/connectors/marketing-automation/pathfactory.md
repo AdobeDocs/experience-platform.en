@@ -57,10 +57,10 @@ For detailed instructions on how to obtain your username, password, domain, and 
 
 You must have both **[!UICONTROL View Sources]** and **[!UICONTROL Manage Sources]** permissions enabled for your account in order to connect your [!DNL PathFactory] account to Experience Platform. Contact your product administrator to obtain the necessary permissions. For more information, read the [access control UI guide](../../../access-control/ui/overview.md).
 
-## Connect [!DNL PathFactory] to Platform {#pathfactory-connect}
+## Connect [!DNL PathFactory] to Experience Platform {#pathfactory-connect}
 
-The documentation below provides information on how to connect [!DNL PathFactory] to Platform using APIs or the user interface:
+The documentation below provides information on how to connect [!DNL PathFactory] to Experience Platform using APIs or the user interface:
 
-* [Create a source connection and dataflow to bring [!DNL PathFactory] data to Platform using APIs](../../tutorials/api/create/marketing-automation/pathfactory.md).
+* [Create a source connection and dataflow to bring [!DNL PathFactory] data to Experience Platform using APIs](../../tutorials/api/create/marketing-automation/pathfactory.md).
 * [Connect your [!DNL PathFactory] account to Experience Platform using the UI](../../tutorials/ui/create/marketing-automation/pathfactory.md).
 * [Create a dataflow for a source connection using the UI](../../tutorials/ui/dataflow/marketing-automation.md).

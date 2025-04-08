@@ -23,7 +23,7 @@ The first step in setting up your local authoring environment is to navigate to 
 
 ![platform-repo](../assets/platform-repo.png)
 
-On the main page of the Platform GitHub repository, select **Fork**.
+On the main page of the Experience Platform GitHub repository, select **Fork**.
 
 ![fork](../assets/fork.png)
 

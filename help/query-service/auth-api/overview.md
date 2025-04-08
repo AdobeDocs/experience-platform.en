@@ -24,7 +24,7 @@ The following features enable you to define IP-based access restrictions, monito
 
 ## Audit and monitoring capabilities
 
-To support secure data access practices, Query Service logs all client IPs that access or attempt to access Experience Platform. Audit events, including denied connections, are sent to Platform Audit Logs. This enables:
+To support secure data access practices, Query Service logs all client IPs that access or attempt to access Experience Platform. Audit events, including denied connections, are sent to Experience Platform Audit Logs. This enables:
    
 - **Real-time Monitoring**: Track IP-based access patterns to ensure compliance.
 - **Alerting on Unauthorized Access**: Identify and respond to access attempts from unauthorized IPs.

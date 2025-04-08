@@ -61,7 +61,7 @@ For example, If you are deploying [!DNL Adobe Analytics], [!DNL Target], and the
 
 For the individuals, teams, and organizations that are working in Adobe Experience Platform, will they need access to all of your websites and applications, some of them, or just one?
 
-The User Management features allow you to assign different roles to different people for all of your properties, or on a per-property basis. If someone has sufficient rights, that person can perform administrative actions across all the properties in that Platform organization. All the other roles can be assigned on a per-property basis. You can even hide a property from certain users (non-admins) by not giving them any role in that property.
+The User Management features allow you to assign different roles to different people for all of your properties, or on a per-property basis. If someone has sufficient rights, that person can perform administrative actions across all the properties in that Experience Platform organization. All the other roles can be assigned on a per-property basis. You can even hide a property from certain users (non-admins) by not giving them any role in that property.
 
 ## Properties page
 
@@ -127,7 +127,7 @@ Follow the instructions to create a mobile property.
 
 1. Select **[!UICONTROL Save]**.
 
-After your property is created, Platform automatically adds a default host, a set of environments (Development, Staging, and Production), and the default extensions.
+After your property is created, Experience Platform automatically adds a default host, a set of environments (Development, Staging, and Production), and the default extensions.
 
 ## Delete a property
 

@@ -8,7 +8,7 @@ exl-id: e556d867-a1eb-4900-b8a9-189666a4f3f1
 ---
 # Create a [!DNL PostgreSQL] source connection in the UI
 
-Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL PostgreSQL] source connector using the [!DNL Platform] user interface.
+Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL PostgreSQL] source connector using the [!DNL Experience Platform] user interface.
 
 ## Getting started
 
@@ -23,7 +23,7 @@ If you already have a valid [!DNL PostgreSQL] connection, you may skip the remai
 
 ### Gather required credentials
 
-In order to access your [!DNL PostgreSQL] account on [!DNL Platform], you must provide the following value:
+In order to access your [!DNL PostgreSQL] account on [!DNL Experience Platform], you must provide the following value:
 
 | Credential | Description |
 | ---------- | ----------- |
@@ -44,7 +44,7 @@ The following is an example of a [!DNL PostgreSQL] connection string appended wi
 
 ## Connect your [!DNL PostgreSQL] account
 
-Once you have gathered your required credentials, you can follow the steps below to link your [!DNL PostgreSQL] account to [!DNL Platform].
+Once you have gathered your required credentials, you can follow the steps below to link your [!DNL PostgreSQL] account to [!DNL Experience Platform].
 
 Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create an account with.
 
@@ -70,4 +70,4 @@ To connect an existing account, select the [!DNL PostgreSQL] account you want to
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your [!DNL PostgreSQL] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Platform]](../../dataflow/databases.md).
+By following this tutorial, you have established a connection to your [!DNL PostgreSQL] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Experience Platform]](../../dataflow/databases.md).
