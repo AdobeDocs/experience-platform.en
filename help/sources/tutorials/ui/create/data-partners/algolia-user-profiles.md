@@ -82,19 +82,34 @@ If you are creating a new dataset, select a schema that is using the [!DNL Algol
 
 ### Map data fields to an XDM schema
 
-The Mapping step is how the source data from [!DNL Algolia] is mapped to the Experience Platform schema associated with the DataSet. If you're using the [!DNL Algolia Profile] Field Group, mapping will be 1:1 with the source.
+Use the mapping interface to map your source data to the appropriate schema fields before ingesting data to Experience Platform.  For more information, read the [mapping guide in the UI](../../../../../data-prep/ui/mapping.md).
 
 ![The mapping step of the sources workflow.](../../../../images/tutorials/create/algolia/user-profiles/mapping.png)
 
 ### Schedule ingestion runs
 
-The Scheduling step allows for configuration of the data/time to execute the [!DNL Algolia Uer Profiles] Source connector. There is configuration to backfill the data from [!DNL Algolia] which will pull all the profiles from the source system.  If the source is scheduled, then it will retrieve modified profiles from the [!DNL Algolia] based on the configured time interval.
+Next, use the scheduling interface to define the ingestion schedule of your dataflow.
+
+<!-- The Scheduling step allows for configuration of the data/time to execute the [!DNL Algolia Uer Profiles] Source connector. There is configuration to backfill the data from [!DNL Algolia] which will pull all the profiles from the source system.  If the source is scheduled, then it will retrieve modified profiles from the [!DNL Algolia] based on the configured time interval. -->
 
 ![The scheduling step of the sources workflow.](../../../../images/tutorials/create/algolia/user-profiles/scheduling.png)
 
+| Scheduling configuration | Description |
+| --- | --- |
+| Frequency | Configure frequency to indicate how often the dataflow should run. You can set your frequency to: <ul><li>**Once**: Set your frequency to `once` to create a one-time ingestion. Configurations for interval and backfill are unavailable when creating a one-time ingestion dataflow. By default, the scheduling frequency is set to once.</li><li>**Minute**: Set your frequency to `minute` to schedule your dataflow to ingest data on a per-minute basis.</li><li>**Hour**: Set your frequency to `hour` to schedule your dataflow to ingest data on a per-hour basis.</li><li>**Day**: Set your frequency to `day` to schedule your dataflow to ingest data on a per-day basis.</li><li>**Week**: Set your frequency to `week` to schedule your dataflow to ingest data on a per-week basis.</li></ul> |
+| Interval |  Once you select a frequency, you can then configure the interval setting to establish the time frame between every ingestion. For example, if you set your frequency to day and configure the interval to 15, then your dataflow will run every 15 days. You cannot set the interval to zero. The minimum accepted interval value for each frequency is as follows:<ul><li>**Once**: n/a</li><li>**Minute**: 15</li><li>**Hour**: 1</li><li>**Day**: 1</li><li>**Week**: 1</li></ul> |
+| Start Time | The timestamp for the projected run, presented in UTC time zone. |
+| Backfill | Backfill determines what data is initially ingested. If backfill is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If backfill is disabled, only the files that are loaded in between the first run of ingestion and the start time will be ingested. Files loaded prior to the start time will not be ingested. |
+
 ### Review your dataflow
 
-After all the steps, the review step allows to view the configuration of the data flow before executing it.
+Use the review page for a summary of your dataflow prior to ingestion. Details are grouped in the following categories:
+
+* **Connection** - Shows the source type, the relevant path of the chosen source file, and the number of columns within that source file.
+* **Assign dataset & map fields** - Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
+* **Scheduling** - Shows that active period, frequency, and interval of the ingestion schedule.
+
+Once you have reviewed your dataflow, select **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
 
 ![The review step of the sources workflow.](../../../../images/tutorials/create/algolia/user-profiles/review.png)
 

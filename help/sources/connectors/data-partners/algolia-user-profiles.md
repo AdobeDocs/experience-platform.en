@@ -44,11 +44,3 @@ A list of IP addresses must be added to an allowlist prior to working with sourc
 ## Connect your [!DNL Algolia] account to Experience Platform
 
 Once you have completed the prerequisites, you can proceed to the next step and [connect your [!DNL Algolia] account to Experience Platform](../../tutorials/ui/create/data-partners/algolia-user-profiles.md).
-
-<!-- Built on Adobe Experience Platform, [Real-Time CDP](../../../rtcdp/overview.md) integrates multiple user management platforms to collect disparate user profiles to build holistic profiles for personalization and experience testing. 
-
-Experience Platform provides integrations to pull user profiles from a variety of sources systems. 
-
-It also provides a SDK to build custom integrations. Use the [!DNL Algolia] source to integrate with [!DNL Algolia's] Advanced Personalization APIs and retrieve user profiles for ingestion into Experience Platform. This document will guide you through the set-up of the [!DNL Algolia User Profiles] Source connector.
-
-## Overview -->
