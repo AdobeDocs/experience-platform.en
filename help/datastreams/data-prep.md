@@ -5,7 +5,7 @@ exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
 ---
 # Data Prep for Data Collection
 
-Data Prep is an Adobe Experience Platform service that allows you to map, transform, and validate data to and from [Experience Data Model (XDM)](../xdm/home.md). When configuring a Platform-enabled [datastream](./overview.md), you can use Data Prep capabilities to map your source data to XDM when sending it to the Platform Edge Network.
+Data Prep is an Adobe Experience Platform service that allows you to map, transform, and validate data to and from [Experience Data Model (XDM)](../xdm/home.md). When configuring an Experience Platform-enabled [datastream](./overview.md), you can use Data Prep capabilities to map your source data to XDM when sending it to the Experience Platform Edge Network.
 
 All data sent from a web page must land in Experience Platform as XDM. There are 3 ways to translate data from an on-page data layer to the XDM accepted by Experience Platform:
 
@@ -46,7 +46,7 @@ For a quick demonstration of the Data Prep for Data Collection process, refer to
 
 ## [!UICONTROL Select data] {#select-data}
 
-Select **[!UICONTROL Save and Add Mapping]** after completing the basic configuration for a datastream, and the **[!UICONTROL Select data]** step appears. From here, you must provide a sample JSON object that represents the structure of the data that you plan on sending to Platform.
+Select **[!UICONTROL Save and Add Mapping]** after completing the basic configuration for a datastream, and the **[!UICONTROL Select data]** step appears. From here, you must provide a sample JSON object that represents the structure of the data that you plan on sending to Experience Platform.
 
 To capture properties directly from your data layer, the JSON object must have a single root property `data`. The subproperties of the `data` object should then be constructed in a way that maps to the data layer properties that you want to capture. Select the section below to view an example of a properly formatted JSON object with a `data` root.
 
@@ -156,10 +156,14 @@ You can select the option to upload the object as a file, or paste the raw objec
 
 ## [!UICONTROL Mapping]
 
-The **[!UICONTROL Mapping]** step appears, allowing you to map the fields in your source data to that of the target event schema in Platform. From here, you can configure the mapping in two ways:
+The **[!UICONTROL Mapping]** step appears, allowing you to map the fields in your source data to that of the target event schema in Experience Platform. From here, you can configure the mapping in two ways:
 
 * [Create mapping rules](#create-mapping) for this datastream through a manual process.
 * [Import mapping rules](#import-mapping) from an existing datastream.
+
+>[!IMPORTANT]
+>
+>Data Prep mapping overrides `identityMap` XDM payloads, which can further impact profile matching against Real-Time CDP audiences.
 
 ### Create mapping rules {#create-mapping}
 

@@ -88,7 +88,7 @@ Finding the right data and preparing it is the most labor-intensive part of buil
 
 On Adobe Experience Platform, your cross-channel data is centralized and stored in the XDM standardized schema, so data is easier to find, understand, and clean. A single store of data based on a common schema can save you countless hours of data exploration and preparation. 
 
-As you browse, use R, [!DNL Python], or Scala with the integrated, hosted [!DNL Jupyter Notebook] to browse the catalog of data on [!DNL Platform]. Using one of these languages, you can also take advantage of [!DNL Spark] ML and TensorFlow. Start from scratch, or use one of the notebook templates provided for specific business problems. 
+As you browse, use R, [!DNL Python], or Scala with the integrated, hosted [!DNL Jupyter Notebook] to browse the catalog of data on [!DNL Experience Platform]. Using one of these languages, you can also take advantage of [!DNL Spark] ML and TensorFlow. Start from scratch, or use one of the notebook templates provided for specific business problems. 
 
 As part of the data exploration workflow, you can also ingest new data or use existing features to help with data preparation.  
 

@@ -13,7 +13,7 @@ exl-id: a6186fad-8a7b-4103-80c7-a522ff69fe9e
 
 Adobe Experience Platform provides native connectivity for cloud providers like AWS, [!DNL Google Cloud Platform], and [!DNL Azure], allowing you to bring your data from these systems.
 
-Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM Parquet, or delimited. Every step of the process is integrated into the Sources workflow. [!DNL Platform] allows you to bring in data from an FTP or an SFTP server through batches.
+Cloud storage sources can bring your own data into [!DNL Experience Platform] without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM Parquet, or delimited. Every step of the process is integrated into the Sources workflow. [!DNL Experience Platform] allows you to bring in data from an FTP or an SFTP server through batches.
 
 >[!IMPORTANT]
 >
@@ -34,9 +34,9 @@ The following is a list of constraints you must account for when naming your clo
 - Illegal URL path characters not allowed. Code points like `\uE000`, while valid in NTFS filenames, are not valid Unicode characters. In addition, some ASCII or Unicode characters, like control characters (0x00 to 0x1F, \u0081, etc.), are also not allowed. For rules governing Unicode strings in HTTP/1.1 see [RFC 2616, Section 2.2: Basic Rules](https://www.ietf.org/rfc/rfc2616.txt) and [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
 - The following file names are not allowed: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, dot character (.), and two dot characters (..).
 
-## Connect FTP to [!DNL Platform]
+## Connect FTP to [!DNL Experience Platform]
 
-The documentation below provides information on how to connect an FTP server to [!DNL Platform] using APIs or the user interface:
+The documentation below provides information on how to connect an FTP server to [!DNL Experience Platform] using APIs or the user interface:
 
 ### Using the APIs
 

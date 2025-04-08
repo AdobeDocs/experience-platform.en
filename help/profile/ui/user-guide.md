@@ -13,8 +13,8 @@ exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
 This UI guide requires an understanding of the various [!DNL Experience Platform] services involved with managing [!DNL Real-Time Customer Profiles]. Before reading this guide, or working in the UI, please review the documentation for the following services:
 
 * [[!DNL Real-Time Customer Profile] overview](../home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-* [[!DNL Identity Service]](../../identity-service/home.md): Enables [!DNL Real-Time Customer Profile] by bridging identities from disparate data sources as they are ingested into [!DNL Platform].
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
+* [[!DNL Identity Service]](../../identity-service/home.md): Enables [!DNL Real-Time Customer Profile] by bridging identities from disparate data sources as they are ingested into [!DNL Experience Platform].
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
 
 ## [!UICONTROL Overview]
 
@@ -22,7 +22,7 @@ In the Experience Platform UI, select **[!UICONTROL Profiles]** in the left navi
 
 >[!NOTE]
 >
->If your organization is new to Platform and does not yet have active Profile datasets or merge policies created, the [!UICONTROL Profiles] dashboard is not visible. Instead, the [!UICONTROL Overview] tab displays links and documentation to help you get started with Real-Time Customer Profile.
+>If your organization is new to Experience Platform and does not yet have active Profile datasets or merge policies created, the [!UICONTROL Profiles] dashboard is not visible. Instead, the [!UICONTROL Overview] tab displays links and documentation to help you get started with Real-Time Customer Profile.
 
 ### Profile dashboard {#profile-dashboard}
 
@@ -50,7 +50,7 @@ In addition to these metrics, this section provides a last updated date and time
 
 The profile count displays the total number of profiles your organization has within Experience Platform, after your organization's default merge policy has merged together profile fragments to form a single profile for each individual customer. In other words, your organization may have multiple profile fragments related to a single customer who interacts with your brand across different channels, but these fragments would be merged together (according to the default merge policy) and would return a count of "1" profile because they are all related to the same individual.
 
-The profile count also includes both profiles with attributes (record data) as well as profiles containing only time series (event) data, such as Adobe Analytics profiles. The profile count is refreshed regularly to provide an up-to-date total number of profiles within Platform. 
+The profile count also includes both profiles with attributes (record data) as well as profiles containing only time series (event) data, such as Adobe Analytics profiles. The profile count is refreshed regularly to provide an up-to-date total number of profiles within Experience Platform. 
 
 #### Updating the profile count metric
 
@@ -90,7 +90,7 @@ To view the details of one of the sample profiles, select the **[!UICONTROL Prof
 
 ![Sample profiles that match the merge policy are displayed.](../images/user-guide/sample-profiles.png)
 
-To learn more about merge policies and their role within Platform, see the [merge policies overview](../merge-policies/overview.md).
+To learn more about merge policies and their role within Experience Platform, see the [merge policies overview](../merge-policies/overview.md).
 
 ### Browse by [!UICONTROL Identity] {#browse-identity}
 
@@ -125,7 +125,7 @@ Once a value has been entered, select **[!UICONTROL View]** and a single profile
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_201001_404"
 >title="Entity not found"
->abstract="This means that Platform could not find the requested entity. To resolve this error, please try one of the following solutions:<ul><li>Ensure the correct profile ID is listed in the URL of the entity you're trying to access.</li><li>Ensure you have the correct Organization and sandbox combination for the entity you're trying to access.</li></ul>"
+>abstract="This means that Experience Platform could not find the requested entity. To resolve this error, please try one of the following solutions:<ul><li>Ensure the correct profile ID is listed in the URL of the entity you're trying to access.</li><li>Ensure you have the correct Organization and sandbox combination for the entity you're trying to access.</li></ul>"
 
 After selecting a **[!UICONTROL Profile ID]**, the **[!UICONTROL Detail]** tab opens. The profile information displayed on the **[!UICONTROL Detail]** tab has been merged together from multiple profile fragments to form a single view of the individual customer. This includes customer details such as basic attributes, linked identities, and channel preferences. 
 
@@ -143,7 +143,7 @@ To view additional information related to the individual customer profile, selec
 
 The **[!UICONTROL Attributes]** tab provides a list view summarizing all of the attributes related to a single profile, after the specified merge policy has been applied.
 
-These attributes can also be viewed as a JSON object by selecting to **[!UICONTROL View JSON]**. This is helpful for any users wishing to better understand how the profile attributes are ingested into Platform.
+These attributes can also be viewed as a JSON object by selecting to **[!UICONTROL View JSON]**. This is helpful for any users wishing to better understand how the profile attributes are ingested into Experience Platform.
 
 ![The Attributes tab is highlighted. The profile attributes are displayed.](../images/user-guide/attributes.png)
 
@@ -157,7 +157,7 @@ For more information on edge profiles, please read the [edge profiles documentat
 
 The **[!UICONTROL Events]** tab contains data from the 100 most recent ExperienceEvents associated with the customer. This data could include email opens, cart activities, and page views. Selecting **[!UICONTROL View all]** for any individual event provides additional fields and values captures as part of the event.
 
-Events can also be viewed as a JSON object by selecting to **[!UICONTROL View JSON]**. This is helpful for understanding how events are captured in Platform.
+Events can also be viewed as a JSON object by selecting to **[!UICONTROL View JSON]**. This is helpful for understanding how events are captured in Experience Platform.
 
 ![The Events tab is highlighted. The profile events are displayed.](../images/user-guide/events.png)
 
@@ -169,7 +169,7 @@ For more information about segmentation in Experience Platform, please refer to 
 
 ![The Audience membership tab is highlighted. The profile's audience membership details are displayed.](../images/user-guide/audience-membership.png)
 
-To view the audience membership of the profiles that are available on the Edge, select **[!UICONTROL Edge]** in the data location selector. More information about edge segmentation can be found in the [edge segmentation guide](../../segmentation/ui/edge-segmentation.md).
+To view the audience membership of the profiles that are available on the Edge, select **[!UICONTROL Edge]** in the data location selector. More information about edge segmentation can be found in the [edge segmentation guide](../../segmentation/methods/edge-segmentation.md).
 
 ![The data location selector within the audience membership tab is highlighted.](../images/user-guide/audience-membership-select.png)
 
@@ -195,7 +195,7 @@ From the main **[!UICONTROL Profiles]** menu, select the **[!UICONTROL Computed 
 
 ![The Computed attributes tab is highlighted.](../images/user-guide/computed-attributes.png)
 
-For more information on computed attributes, please read the [computed attributes overview](../computed-attributes/overview.md). For more information on how to use computed attributes within the Platform UI, please read the [computed attributes UI guide](../computed-attributes/ui.md).
+For more information on computed attributes, please read the [computed attributes overview](../computed-attributes/overview.md). For more information on how to use computed attributes within the Experience Platform UI, please read the [computed attributes UI guide](../computed-attributes/ui.md).
 
 ## Next steps
 

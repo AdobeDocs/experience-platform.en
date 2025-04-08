@@ -6,7 +6,7 @@ exl-id: 76cf8420-cc50-4a56-9f6d-5bfc01efcdb3
 ---
 # [!DNL Real-Time Customer Profile] detail customization {#profile-detail-customization}
 
-Within the Adobe Experience Platform user interface, you can view and interact with [!DNL Real-Time Customer Profile] data in the form of customer profiles. The profile information displayed in the UI has been merged together from multiple profile fragments to form a single view of each individual customer. This includes details such as basic attributes, linked identities, and channel preferences. The default fields shown in profiles can also be changed at an organizational level to display preferred [!DNL Profile] attributes. This guide provides step-by-step instructions for customizing the way in which [!DNL Profile] data is displayed within the Platform UI.  
+Within the Adobe Experience Platform user interface, you can view and interact with [!DNL Real-Time Customer Profile] data in the form of customer profiles. The profile information displayed in the UI has been merged together from multiple profile fragments to form a single view of each individual customer. This includes details such as basic attributes, linked identities, and channel preferences. The default fields shown in profiles can also be changed at an organizational level to display preferred [!DNL Profile] attributes. This guide provides step-by-step instructions for customizing the way in which [!DNL Profile] data is displayed within the Experience Platform UI.  
 
 For a complete guide to the Profiles UI, please visit the [Profile UI guide](user-guide.md).
 

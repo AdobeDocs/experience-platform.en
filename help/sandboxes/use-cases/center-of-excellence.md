@@ -31,7 +31,7 @@ When planning to create your own center of excellence within your organization, 
 - Create a sandbox with all relevant and validated configurations to be set as the golden sandbox.
 - If required, gain stakeholder input and agreement on your baseline standards.
 
-### UI functionality, Platform components, and Experience Cloud products that you will use {#ui-functionality-and-elements}
+### UI functionality, Experience Platform components, and Experience Cloud products that you will use {#ui-functionality-and-elements}
 
 To successfully implement this use case, you must use multiple areas of Adobe Experience Platform. Ensure you have the necessary [attribute-based access control permissions](../../access-control/abac/overview.md) for all these areas, or ask your system administrator to grant you the necessary permissions.
 

@@ -57,4 +57,4 @@ role: Developer,User
   * [Power BI](integrations/power-bi.md)
 * [Query dashboard datasets](query.md)
 * [View insight SQL](view-sql.md)
-* [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

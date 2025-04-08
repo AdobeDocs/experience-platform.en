@@ -4,13 +4,13 @@ title: Criteo connection
 description: Criteo powers trusted and impactful advertising to bring richer experiences to every consumer across the open internet. With the world's largest commerce data set and best-in-class AI, Criteo ensures each touchpoint across the shopping journey is personalized to reach customers with the right ad, at the right time.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
 ---
-# (Beta) Criteo connection
+# Criteo connection
 
 ## Overview {#overview}
 
 >[!IMPORTANT]
 >
->This destination connector and documentation page are created and maintained by Criteo. This is currently a beta product and functionality is subject to change. For any inquiries or update requests, please contact Criteo directly [here](mailto:criteoTechnicalPartnerships@criteo.com).
+>This destination connector and documentation page are created and maintained by Criteo. For any inquiries or update requests, please contact Criteo directly [here](mailto:criteoTechnicalPartnerships@criteo.com).
 
 Criteo powers trusted and impactful advertising to bring richer experiences to every consumer across the open internet. With the world's largest commerce data set and best-in-class AI, Criteo ensures each touchpoint across the shopping journey is personalized to reach customers with the right ad, at the right time.
 
@@ -33,7 +33,7 @@ Criteo supports the activation of identities described in the table below. Learn
 
 | Target Identity | Description | Considerations |
 | --- | --- | --- |
-| `email_sha256` | Email addresses hashed with the SHA-256 algorithm | Both plain text and SHA-256-hashed email addresses are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the [!UICONTROL Apply transformation] option, to have Platform automatically hash the data on activation. |
+| `email_sha256` | Email addresses hashed with the SHA-256 algorithm | Both plain text and SHA-256-hashed email addresses are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the [!UICONTROL Apply transformation] option, to have Experience Platform automatically hash the data on activation. |
 | `gum_id` | Criteo [!DNL GUM] cookie identifier | [!DNL GUM IDs] allow clients to maintain a correspondence between their user identification system and Criteo's user identification ([!DNL UID]). If the identifier type is `gum_id`, an additional parameter, the [!DNL GUM Caller ID], must also be included. Please reach out to your Criteo account team for the appropriate [!DNL GUM Caller ID] or to get more information on this [!DNL GUM ID] sync, if needed.|
 
 ## Export type and frequency {#export-type-frequency}

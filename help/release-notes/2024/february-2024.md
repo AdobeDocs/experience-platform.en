@@ -18,7 +18,7 @@ Updates to existing features in Experience Platform:
 
 ## Alerts {#alerts}
 
-Experience Platform allows you to subscribe to event-based alerts for various Platform activities. You can subscribe to different alert rules through the [!UICONTROL Alerts] tab in the Platform user interface, and can choose to receive alert messages within the UI itself or through email notifications.
+Experience Platform allows you to subscribe to event-based alerts for various Experience Platform activities. You can subscribe to different alert rules through the [!UICONTROL Alerts] tab in the Experience Platform user interface, and can choose to receive alert messages within the UI itself or through email notifications.
 
 **New or updated features**
 
@@ -89,7 +89,7 @@ For more general information on destinations, refer to the [destinations overvie
 
 ## Sandboxes {#sandboxes}
 
-Adobe Experience Platform is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater for the development, testing, and deployment of these applications while ensuring operational compliance. To address this need, Experience Platform provides sandboxes that partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+Adobe Experience Platform is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater for the development, testing, and deployment of these applications while ensuring operational compliance. To address this need, Experience Platform provides sandboxes that partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 **New or updated features**
 
@@ -103,13 +103,13 @@ For more information on sandboxes, read the [sandboxes overview](../../sandboxes
 
 ## Segmentation Service {#segmentation}
 
-[!DNL Segmentation Service] allows you to segment data stored in [!DNL Experience Platform] that relates to individuals (such as customers, prospects, users, or organizations) into audiences. You can create audiences through segment definitions or other sources from your [!DNL Real-Time Customer Profile] data. These audiences are centrally configured and maintained on [!DNL Platform], and are readily accessible by any Adobe solution. 
+[!DNL Segmentation Service] allows you to segment data stored in [!DNL Experience Platform] that relates to individuals (such as customers, prospects, users, or organizations) into audiences. You can create audiences through segment definitions or other sources from your [!DNL Real-Time Customer Profile] data. These audiences are centrally configured and maintained on [!DNL Experience Platform], and are readily accessible by any Adobe solution. 
 
 **New feature**
 
 | Feature | Description |
 | ------- | ----------- |
-| Account audiences | Account audiences are now generally available! You can now use account segmentation to bring the full ease and sophistication of the marketing segmentation experience from people-based audiences to account-based audiences in both the B2B and B2P Editions of Real-Time Customer Platform. This release lets you use people-based audiences as a predicate to account-based audiences, adds search capabilities, supports the usage of custom entities, and is compliant with Data Governance. For more information about this feature, please read the [account audiences overview](../../segmentation/ui/account-audiences.md). |
+| Account audiences | Account audiences are now generally available! You can now use account segmentation to bring the full ease and sophistication of the marketing segmentation experience from people-based audiences to account-based audiences in both the B2B and B2P Editions of Real-Time Customer Experience Platform. This release lets you use people-based audiences as a predicate to account-based audiences, adds search capabilities, supports the usage of custom entities, and is compliant with Data Governance. For more information about this feature, please read the [account audiences overview](../../segmentation/types/account-audiences.md). |
 
 {style="table-layout:auto"}
 

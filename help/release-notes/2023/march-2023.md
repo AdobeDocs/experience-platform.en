@@ -141,7 +141,7 @@ XDM is an open-source specification that provides common structures and definiti
 
 {style="table-layout:auto"}
 
-For more information on XDM in Platform, read the [XDM System overview](../../xdm/home.md).
+For more information on XDM in Experience Platform, read the [XDM System overview](../../xdm/home.md).
 
 ## Query Service {#query-service}
 
@@ -187,7 +187,7 @@ For more information on [!DNL Segmentation Service], please see the [Segmentatio
 
 ## Sources {#sources}
 
-Adobe Experience Platform can ingest data from external sources and allows you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
+Adobe Experience Platform can ingest data from external sources and allows you to structure, label, and enhance that data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
 
 Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 

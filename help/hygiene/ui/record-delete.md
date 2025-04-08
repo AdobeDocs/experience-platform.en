@@ -19,17 +19,17 @@ Use the [[!UICONTROL Data Lifecycle] workspace](./overview.md) to delete records
 
 Deleting records requires a working understanding of how identity fields function in Experience Platform. Specifically, you must know the identity namespace values of the entities whose records you want to delete, depending on the dataset (or datasets) you are deleting them from.
 
-Refer to the following documentation for more information on identities in Platform:
+Refer to the following documentation for more information on identities in Experience Platform:
 
 * [Adobe Experience Platform Identity Service](../../identity-service/home.md): Bridges identities across devices and systems, linking datasets together based on the identity fields defined by the XDM schemas they conform to.
 * [Identity namespaces](../../identity-service/features/namespaces.md): Identity namespaces define the different types of identity information that can relate to a single person, and are a required component for each identity field.
 * [Real-Time Customer Profile](../../profile/home.md): Uses identity graphs to provide unified consumer profiles based on aggregated data from multiple sources, updated in near-real-time.
-* [Experience Data Model (XDM)](../../xdm/home.md): Provides standard definitions and structures for Platform data through the use of schemas. All Platform datasets conform to a specific XDM schema, and the schema defines which fields are identities.
+* [Experience Data Model (XDM)](../../xdm/home.md): Provides standard definitions and structures for Experience Platform data through the use of schemas. All Experience Platform datasets conform to a specific XDM schema, and the schema defines which fields are identities.
 * [Identity fields](../../xdm/ui/fields/identity.md): Learn how an identity field is defined in an XDM schema.
 
 ## Create a request {#create-request}
 
-To start the process, select **[!UICONTROL Data Lifecycle]** in the left navigation of the Platform UI. The [!UICONTROL Data lifecycle requests] workspace appears. Next, select **[!UICONTROL Create request]** from the main page in the workspace.
+To start the process, select **[!UICONTROL Data Lifecycle]** in the left navigation of the Experience Platform UI. The [!UICONTROL Data lifecycle requests] workspace appears. Next, select **[!UICONTROL Create request]** from the main page in the workspace.
 
 ![The [!UICONTROL Data lifecycle requests] workspace with [!UICONTROL Create request] selected.](../images/ui/record-delete/create-request-button.png)
 
@@ -69,13 +69,13 @@ If you want to delete records from all datasets, select **[!UICONTROL All datase
 >title="Primary identity value"
 >abstract="In this column, you must provide the value for the record's identity namespace, which must correspond with the identity type provided in the left column. If the identity namespace type is `email`, the value should be the record's email address. To learn more, see the data lifecycle UI guide."
 
-When deleting records, you must provide identity information so the system can determine which records are to be deleted. For any dataset in Platform, records are deleted based on the **identity namespace** field that is defined by the dataset's schema.
+When deleting records, you must provide identity information so the system can determine which records are to be deleted. For any dataset in Experience Platform, records are deleted based on the **identity namespace** field that is defined by the dataset's schema.
 
-Like all identity fields in Platform, an identity namespace is composed of two things: a **type** (sometimes referred to as an identity namespace) and a **value**. The identity type provides context as to how the field identifies a record (such as an email address). The value represents a record's specific identity for that type (for example, `jdoe@example.com` for the `email` identity type). Common fields used as identities include account information, device IDs, and cookie IDs.
+Like all identity fields in Experience Platform, an identity namespace is composed of two things: a **type** (sometimes referred to as an identity namespace) and a **value**. The identity type provides context as to how the field identifies a record (such as an email address). The value represents a record's specific identity for that type (for example, `jdoe@example.com` for the `email` identity type). Common fields used as identities include account information, device IDs, and cookie IDs.
 
 >[!TIP]
 >
->If you don't know the identity namespace for a particular dataset, you can find it in the Platform UI. In the **[!UICONTROL Datasets]** workspace, select the dataset in question from the list. On the details page for the dataset, hover over the name of the dataset's schema in the right rail. The identity namespace is displayed along with the schema name and description.
+>If you don't know the identity namespace for a particular dataset, you can find it in the Experience Platform UI. In the **[!UICONTROL Datasets]** workspace, select the dataset in question from the list. On the details page for the dataset, hover over the name of the dataset's schema in the right rail. The identity namespace is displayed along with the schema name and description.
 >
 >![The Datasets dashboard with a dataset selected, and a schema dialog opened from the dataset details panel. The primary ID of the dataset is highlighted.](../images/ui/record-delete/dataset-primary-identity.png)
 

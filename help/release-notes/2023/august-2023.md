@@ -40,9 +40,9 @@ For more information, please read the [Real-Time CDP overview](../../rtcdp/overv
 
 ## Attribute-based access control {#abac}
 
-Attribute-based access control is a capability of Adobe Experience Platform that gives privacy conscious brands greater flexibility to manage user access. Individual objects such as schema fields and segments can be assigned to user roles. This feature lets you grant or revoke access to individual objects for specific Platform users in your organization.
+Attribute-based access control is a capability of Adobe Experience Platform that gives privacy conscious brands greater flexibility to manage user access. Individual objects such as schema fields and segments can be assigned to user roles. This feature lets you grant or revoke access to individual objects for specific Experience Platform users in your organization.
 
-Through attribute-based access control, administrators of your organization can control users' access to, sensitive personal data (SPD), personally identifiable information (PII) and other customized type of data across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
+Through attribute-based access control, administrators of your organization can control users' access to, sensitive personal data (SPD), personally identifiable information (PII) and other customized type of data across all Experience Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
 
 **New or updated features**
 
@@ -156,13 +156,13 @@ For more information, please read the [Identity Service overview](../../identity
 
 ## Segmentation Service {#segmentation}
 
-[!DNL Segmentation Service] allows you to segment data stored in [!DNL Experience Platform] that relates to individuals (such as customers, prospects, users, or organizations) into audiences. You can create audiences through segment definitions or other sources from your [!DNL Real-Time Customer Profile] data. These audiences are centrally configured and maintained on [!DNL Platform], and are readily accessible by any Adobe solution. 
+[!DNL Segmentation Service] allows you to segment data stored in [!DNL Experience Platform] that relates to individuals (such as customers, prospects, users, or organizations) into audiences. You can create audiences through segment definitions or other sources from your [!DNL Real-Time Customer Profile] data. These audiences are centrally configured and maintained on [!DNL Experience Platform], and are readily accessible by any Adobe solution. 
 
 **New or updated features**
 
 | Feature | Description |
 | --- | --- |
-| Look-alike audiences (Limited availability) | Look-alike audiences provide intelligent insights on each of your audiences, leveraging machine-learning-based insights to identify and target high-value customers with your marketing campaigns. With Look-alike audiences, you can create expanded audiences that target customers similar to your high-performing audiences or target customers similar to previously converted audiences. For more information on Look-alike audiences, please read the [Look-alike audiences overview](../../segmentation/ui/lookalike-audiences.md). |
+| Look-alike audiences (Limited availability) | Look-alike audiences provide intelligent insights on each of your audiences, leveraging machine-learning-based insights to identify and target high-value customers with your marketing campaigns. With Look-alike audiences, you can create expanded audiences that target customers similar to your high-performing audiences or target customers similar to previously converted audiences. For more information on Look-alike audiences, please read the [Look-alike audiences overview](../../segmentation/types/account-audiences.md). |
 
 {style="table-layout:auto"}
 

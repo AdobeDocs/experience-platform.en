@@ -70,11 +70,11 @@ By default, only populated schema fields from your data store are shown. This in
 
 You can use data from either a single or multiple Adobe Analytics report suites as events within segmentation. 
 
-When using data from a single Analytics report suite, Platform will automatically add descriptors and friendly names to eVars, making it easier to find those fields within [!DNL Segment Builder].
+When using data from a single Analytics report suite, Experience Platform will automatically add descriptors and friendly names to eVars, making it easier to find those fields within [!DNL Segment Builder].
 
 ![An image showing how generic variables (eVars) are mapped with a user friendly name.](../images/ui/segment-builder/single-report-suite.png)
 
-When using data from multiple Analytics report suites, Platform **cannot** automatically add descriptors or friendly names to eVars. As a result, before using the data from Analytics report suites, you must map to XDM fields. More information about mapping Analytics variables to XDM can be found in the [Adobe Analytics source connection guide](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping).
+When using data from multiple Analytics report suites, Experience Platform **cannot** automatically add descriptors or friendly names to eVars. As a result, before using the data from Analytics report suites, you must map to XDM fields. More information about mapping Analytics variables to XDM can be found in the [Adobe Analytics source connection guide](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping).
 
 For example, consider a situation where you had two report suites with the following variables:
 
@@ -113,7 +113,7 @@ Once the report suites have been mapped, you can use these newly mapped fields w
 
 >[!NOTE]
 >
->For audiences created within Platform, only audiences that have the **same** merge policy will be displayed.
+>For audiences created within Experience Platform, only audiences that have the **same** merge policy will be displayed.
 
 The **[!UICONTROL Audiences]** tab lists all audiences imported from external sources, such as Adobe Audience Manager or Customer Journey Analytics, as well as audiences created within [!DNL Experience Platform].
 
@@ -176,7 +176,7 @@ Please note that there is a maximum of 250 values allowed. If you exceed this am
 
 You can drag and drop an audience from the **[!UICONTROL Audience]** tab onto the rule builder canvas to reference audience membership in the new segment definition. This allows you to include or exclude audience membership as an attribute in the new segment definition rules.
 
-For [!DNL Platform] audiences created using [!DNL Segment Builder], you are given the option to convert the audience into the set of rules that were used in the segment definition for that audience. This conversion makes a copy of the rule logic, that can then be modified without affecting the original segment definition. Make sure that you have saved any recent changes to your segment definition before converting it to rule logic.
+For [!DNL Experience Platform] audiences created using [!DNL Segment Builder], you are given the option to convert the audience into the set of rules that were used in the segment definition for that audience. This conversion makes a copy of the rule logic, that can then be modified without affecting the original segment definition. Make sure that you have saved any recent changes to your segment definition before converting it to rule logic.
 
 >[!NOTE]
 >
@@ -235,6 +235,10 @@ Time constraints let you apply time restrictions on time-based attributes, event
 >[!IMPORTANT]
 >
 >If you created a segment definition with the "This month" or "This year" time constraints prior to June 2024, you will need to re-save your segment definitions. Prior to June 2024, "This month" was based off of 30 days and "This year" was based off of 365 days.
+
+>[!NOTE]
+>
+>Both the [ignore year time constraint](./ignore-year.md) and [rule-level time constraints](./segment-refactoring.md) were previously refactored, with more information available in the linked overviews.
 
 The list of available time constraints are as follows:
 
@@ -312,7 +316,7 @@ The list of available time constraints for this operation differs from the main 
 
 +++
 
-## Containers
+## Containers {#containers}
 
 Segment rules are evaluated in the order they are listed. Containers allow control over the order of execution through the use of nested queries.
 
@@ -339,11 +343,11 @@ Once you select **[!UICONTROL Unwrap container]** the child container is removed
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
 >title="Merge policies"
->abstract="A merge policy enables the merging of different datasets to form your profile. Platform has provided a default merge policy, or you can create a new default merge policy in Profiles. Choose a merge policy that matches your marketing purpose for this audience."
+>abstract="A merge policy enables the merging of different datasets to form your profile. Experience Platform has provided a default merge policy, or you can create a new default merge policy in Profiles. Choose a merge policy that matches your marketing purpose for this audience."
 
-[!DNL Experience Platform] enables you to bring data together from multiple sources and combine it in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create a profile. 
+[!DNL Experience Platform] enables you to bring data together from multiple sources and combine it in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that [!DNL Experience Platform] uses to determine how data will be prioritized and what data will be combined to create a profile. 
 
-You can select a merge policy that matches your marketing purpose for this audience or use the default merge policy provided by [!DNL Platform]. You can create multiple merge policies unique to your organization, including creating your own default merge policy. For step-by-step instructions on creating merge policies for your organization, please begin by reading the [merge policies overview](../../profile/merge-policies/overview.md). 
+You can select a merge policy that matches your marketing purpose for this audience or use the default merge policy provided by [!DNL Experience Platform]. You can create multiple merge policies unique to your organization, including creating your own default merge policy. For step-by-step instructions on creating merge policies for your organization, please begin by reading the [merge policies overview](../../profile/merge-policies/overview.md). 
 
 To select a merge policy for your segment definition, select the gear icon on the **[!UICONTROL Fields]** tab, then use the **[!UICONTROL Merge Policy]** dropdown menu to select the merge policy that you wish to use.
 
@@ -388,7 +392,7 @@ As you continue to build your segment definition, you can view a paginated previ
 
 You can also select your evaluation method. If you know what evaluation method you want to use, you can select the desired evaluation method either using the dropdown list. If you want to know what evaluation types this segment definition qualifies for, you can select the browse icon ![folder icon with a magnifying glass](/help/images/icons/folder-search.png) to see a list of the available segment definition evaluation methods.
 
-The [!UICONTROL Evaluation method eligibility] popover appears. This popover displays the available evaluation methods, which are batch, streaming, and edge. The popover shows which evaluation methods are eligible and ineligible. Depending on the parameters you used in your segment definition, it may not qualify for certain evaluation methods. For more information on the requirements for each evaluation method, please read the [streaming segmentation](./streaming-segmentation.md#query-types) or the [edge segmentation](./edge-segmentation.md#query-types) overviews.
+The [!UICONTROL Evaluation method eligibility] popover appears. This popover displays the available evaluation methods, which are batch, streaming, and edge. The popover shows which evaluation methods are eligible and ineligible. Depending on the parameters you used in your segment definition, it may not qualify for certain evaluation methods. For more information on the requirements for each evaluation method, please read the [streaming segmentation](../methods/streaming-segmentation.md#query-types) or the [edge segmentation](../methods/edge-segmentation.md#query-types) overviews.
 
 You can also change the evaluation method of the segment definition after you've finished creating it. If you change the evaluation method from Edge or Streaming to Batch, you will **not** be able to change it back to Edge or Streaming. The change to the evaluation method will **only** take effect once you select **[!UICONTROL Save]** in the popover. Cancelling the dialog will **maintain** the original evaluation method.
 

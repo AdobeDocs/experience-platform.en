@@ -13,7 +13,7 @@ The majority of [!DNL Real-Time CDP] capabilities are powered by Adobe Experienc
 
 ## Honoring customer access and delete requests
 
-Legal privacy regulations such as the [!DNL General Data Protection Regulation] (GDPR) and the [!DNL California Consumer Privacy Act] (CCPA) give customers the right to request access to, or the deletion of, the personal data you collect from them. Since [!DNL Real-Time CDP] leverages [!DNL Experience Platform] capabilities for data collection and storage, customer requests to access and delete their personal data should be managed within [!DNL Platform]. See the overview on [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) for more information.
+Legal privacy regulations such as the [!DNL General Data Protection Regulation] (GDPR) and the [!DNL California Consumer Privacy Act] (CCPA) give customers the right to request access to, or the deletion of, the personal data you collect from them. Since [!DNL Real-Time CDP] leverages [!DNL Experience Platform] capabilities for data collection and storage, customer requests to access and delete their personal data should be managed within [!DNL Experience Platform]. See the overview on [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) for more information.
 
 >[!IMPORTANT]
 >
@@ -23,11 +23,11 @@ Legal privacy regulations such as the [!DNL General Data Protection Regulation] 
 
 [!DNL Real-Time CDP] allows customers to opt out of having their personal data included in segmentation use cases. Customers' opt-out preferences are captured and stored by [!DNL Real-Time Customer Profile], and can be enforced by excluding users who have opted out from an audience using boolean logic ("AND NOT") in the segment predicate.
 
-See the document on [honoring opt-out requests](../../segmentation/consents.md) in the Adobe Experience Platform Segmentation Service documentation for more information.
+See the document on [honoring opt-out requests](../../segmentation/tutorials/consents.md) in the Adobe Experience Platform Segmentation Service documentation for more information.
 
 ## IAB TCF 2.0 support
 
-[!DNL Real-Time CDP] is built on Adobe Experience Platform, which is part of the registered [vendor list](https://iabeurope.eu/vendor-list-tcf/) for the [!DNL Transparency & Consent Framework (TCF)], as outlined by the [!DNL Interactive Advertising Bureau (IAB)]. In compliance with TCF 2.0 requirements, Platform allows you to collect detailed customer consent data and integrate it into your stored customer profiles. This consent data can then be factored into whether certain profiles are included in exported audiences, depending on their use case.
+[!DNL Real-Time CDP] is built on Adobe Experience Platform, which is part of the registered [vendor list](https://iabeurope.eu/vendor-list-tcf/) for the [!DNL Transparency & Consent Framework (TCF)], as outlined by the [!DNL Interactive Advertising Bureau (IAB)]. In compliance with TCF 2.0 requirements, Experience Platform allows you to collect detailed customer consent data and integrate it into your stored customer profiles. This consent data can then be factored into whether certain profiles are included in exported audiences, depending on their use case.
 
 See the overview on [IAB TCF 2.0 support in Experience Platform](../../landing/governance-privacy-security/consent/iab/overview.md) for more information.
 

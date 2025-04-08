@@ -84,6 +84,8 @@ role: Developer
     * Adobe Client Data Layer {#client-data-layer}
       * [Overview](./extensions/client/client-data-layer/overview.md)
       * [Release notes](./extensions/client/client-data-layer/release-notes.md)
+    * Adobe Content Analytics {#content-analytics}
+      * [Overview](./extensions/client/content-analytics/overview.md)
     * Adobe ContextHub {#contexthub}
       * [Overview](./extensions/client/contexthub/overview.md)
     * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)
@@ -321,5 +323,5 @@ role: Developer
 * [FAQ](./faq.md)
 * [Terminology updates](./term-updates.md)
 * [Deprecating support for Internet Explorer 10 and 11](./ie-deprecation.md)
-* [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
 

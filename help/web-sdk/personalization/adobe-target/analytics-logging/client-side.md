@@ -1,12 +1,12 @@
 ---
-title: Client-side logging for A4T data in the Platform Web SDK
+title: Client-side logging for A4T data in the Experience Platform Web SDK
 description: Learn how to enable client-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
-seo-title: Client-side logging for A4T data in the Platform Web SDK
+seo-title: Client-side logging for A4T data in the Experience Platform Web SDK
 seo-description: Learn how to enable client-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
 keywords: target;a4t;logging;web sdk;experience;platform;
 exl-id: 7071d7e4-66e0-4ab5-a51a-1387bbff1a6d
 ---
-# Client-side logging for A4T data in the Platform Web SDK
+# Client-side logging for A4T data in the Experience Platform Web SDK
 
 ## Overview {#overview}
 
@@ -223,7 +223,7 @@ The following subsections demonstrate how to implement Analytics client-side log
 
 You can use the Web SDK to control the execution of propositions from [Adobe Target Form-Based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) activities.
 
-When you request propositions for a specific decision scope, the proposition returned contains its appropriate Analytics token. Best practice is to chain the Platform Web SDK `sendEvent` command and iterate through the returned propositions to execute them while collecting the Analytics tokens at the same time.
+When you request propositions for a specific decision scope, the proposition returned contains its appropriate Analytics token. Best practice is to chain the Experience Platform Web SDK `sendEvent` command and iterate through the returned propositions to execute them while collecting the Analytics tokens at the same time.
 
 You can trigger a `sendEvent` command for a Form-Based Experience Composer activity scope like this:
 
@@ -415,7 +415,7 @@ function getClickAnalyticsPayload(proposition) {
 
 #### Implementation summary {#implementation-summary}
 
-In summary, the following steps must be executed when applying Form-Based Experience Composer activities with the Platform Web SDK:
+In summary, the following steps must be executed when applying Form-Based Experience Composer activities with the Experience Platform Web SDK:
 
 1. Send an event that fetches Form-Based Experience Composer activity offers;
 1. Apply the content changes to the page;
@@ -467,7 +467,7 @@ The Web SDK allows you to handle offers that were authored using [Visual Experie
 >
 >The steps for implementing this use case are very similar to the steps for [Form-Based Experience Composer activities](#form-based-composer). Please review the previous section for further details.
 
-When auto rendering is enabled, you can collect the Analytics tokens from the propositions that were executed on the page. Best practice is to chain the Platform Web SDK `sendEvent` command and iterate through the returned propositions to filter those that the Web SDK has attempted to render.
+When auto rendering is enabled, you can collect the Analytics tokens from the propositions that were executed on the page. Best practice is to chain the Experience Platform Web SDK `sendEvent` command and iterate through the returned propositions to filter those that the Web SDK has attempted to render.
 
 **Example**
 

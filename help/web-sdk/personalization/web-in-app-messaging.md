@@ -47,12 +47,12 @@ In the **[!UICONTROL Personalization]** section, check the **[!UICONTROL Enable 
 
 Web In-app Messaging supports two types of triggers:
 
-* [Sending data to Platform](#send-data-platform)
+* [Sending data to Experience Platform](#send-data-platform)
 * [Manually triggering the messages](#manual-trigger)
 
 Refer to the following sections to configure the Web SDK tag extension according to the triggers you want to use.
 
-### Configuration steps for the **[!UICONTROL Send data to Platform]** trigger {#send-data-platform}
+### Configuration steps for the **[!UICONTROL Send data to Experience Platform]** trigger {#send-data-platform}
 
 Select the tag property which contains your Web SDK extension, and [create a new rule](../../tags/ui/managing-resources/rules.md##create-a-rule) with the following settings:
 

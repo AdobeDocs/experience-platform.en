@@ -80,17 +80,6 @@ In batch queries, updating a row inside the dataset is not supported.
 No. There is no limit on data size, but there is a query timeout limit of 10 minutes from an interactive session. If the query is executed as a batch CTAS then a 10-minute timeout is not applicable. See the guidance on [interactive query execution](./best-practices/writing-queries.md#interactive-query-execution) for more details.
 +++
 
-### How do I bypass the limit on the output number of rows from a SELECT query?
-
-+++Answer
-To bypass the output row limit, apply "LIMIT 0" in the query. For example:
-
-```sql
-SELECT * FROM customers LIMIT 0;
-```
-
-+++
-
 ### How do I stop my queries from timing out in 10 minutes?
 
 +++Answer
@@ -123,7 +112,7 @@ The following steps describe how to display a tabular view of a dataset through 
 - After logging into Experience Platform, select **[!UICONTROL Datasets]** in the left navigation of the UI to navigate to [!UICONTROL Datasets] dashboard.
 - The datasets [!UICONTROL Browse] tab opens. You can use the search bar to refine the available options. Select a dataset from the list displayed.
 
-![The Datasets dashboard in the Platform UI with the search bar and a dataset highlighted.](./images/troubleshooting/dataset-selection.png)
+![The Datasets dashboard in the Experience Platform UI with the search bar and a dataset highlighted.](./images/troubleshooting/dataset-selection.png)
 
 - The [!UICONTROL Datasets activity] screen appears. Select **[!UICONTROL Preview dataset]** to open a dialog of the XDM schema and tabular view of flattened data from the selected dataset. More details can be found in the [preview a dataset documentation](../catalog/datasets/user-guide.md#preview-a-dataset)
 
@@ -292,7 +281,7 @@ SELECT count(1) FROM myTableName
 ### Can I sample my data?
 
 +++Answer
-This feature is currently a work-in-progress. Details will be made available in [release notes](../release-notes/latest/latest.md) and through Platform UI dialogs once the feature is ready for release.
+This feature is currently a work-in-progress. Details will be made available in [release notes](../release-notes/latest/latest.md) and through Experience Platform UI dialogs once the feature is ready for release.
 +++
 
 ### What helper functions are supported by Query Service?
@@ -527,7 +516,7 @@ There is no query concurrency limit as batch queries run as back-end jobs. There
 There are monitoring and alerting capabilities to check on query activities and statuses. See the [Query Service audit log integration](./data-governance/audit-log-guide.md) and the [query logs](./ui/overview.md#log) documents for more information.
 +++
 
-### Is there any way to roll back updates? For example, if there is an error or some calculations need reconfiguring when writing data back to Platform, how should that scenario be handled?
+### Is there any way to roll back updates? For example, if there is an error or some calculations need reconfiguring when writing data back to Experience Platform, how should that scenario be handled?
 
 +++Answer
 Currently, we do not support rollbacks or updates in that manner. 
@@ -568,7 +557,7 @@ There are three approaches to restricting access. They are as follows:
 
 +++
     
-### Once the data is returned by Query Service, are there any checks that can be run by Platform to ensure that it hasn't returned any protected data?
+### Once the data is returned by Query Service, are there any checks that can be run by Experience Platform to ensure that it hasn't returned any protected data?
 
 - Query Service supports attribute-based access control. You can restrict access to data at the column/leaf level and/or the struct level. See the documentation to learn more about attribute-based access control. 
 
@@ -657,7 +646,7 @@ Backend infrastructure is constantly improved to optimize Compute Hour utilizati
 ### The "Create query" is stuck "Initializing connection..." when trying to connect to Query Service. How do I fix the issue?
 
 +++Answer
-If the "Create query" is stuck on "Initializing connection...", this is likely to be a connection or session issue. Refresh the browser if you are using the Platform UI and try again.
+If the "Create query" is stuck on "Initializing connection...", this is likely to be a connection or session issue. Refresh the browser if you are using the Experience Platform UI and try again.
 +++
 
 ## Dataset Samples

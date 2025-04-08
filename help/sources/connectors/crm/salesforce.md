@@ -9,7 +9,7 @@ exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
 >
 >You can now use the [!DNL Salesforce] source when running Adobe Experience Platform on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../../landing/multi-cloud.md).
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
 Experience Platform provides support for ingesting data from a third-party CRM system. Support for CRM providers include [!DNL Salesforce].
 
@@ -23,9 +23,9 @@ A list of IP addresses must be added to an allow list prior to working with sour
 
 ### Field mapping from [!DNL Salesforce] to XDM
 
-To establish a source connection between [!DNL Salesforce] and Platform, the [!DNL Salesforce] source data fields must be mapped to their appropriate target XDM fields prior to being ingested into Platform.
+To establish a source connection between [!DNL Salesforce] and Experience Platform, the [!DNL Salesforce] source data fields must be mapped to their appropriate target XDM fields prior to being ingested into Experience Platform.
 
-See the following for detailed information on the field mapping rules between [!DNL Salesforce] datasets and Platform:
+See the following for detailed information on the field mapping rules between [!DNL Salesforce] datasets and Experience Platform:
 
 - [Contacts](../adobe-applications/mapping/salesforce.md#contact)
 - [Leads](../adobe-applications/mapping/salesforce.md#lead)
@@ -41,11 +41,11 @@ See the following for detailed information on the field mapping rules between [!
 To use the [!DNL Salesforce] source as part of [!DNL B2B-CDP], you must first set up a [!DNL Postman] utility to auto-generate your [!DNL Salesforce] namespaces and schemas. The following documentation provides additional information on setting up the [!DNL Postman] utility:
 
 - You can download the namespace and schema auto-generation utility collection and environment from this [GitHub repository](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility).
-- For information on using Platform APIs including details on how to gather values for required headers and read sample API calls, see the guide on [getting started with Platform APIs](../../../landing/api-guide.md).
-- For information on how to generate your credentials for Platform APIs, see the tutorial on [authenticating and accessing Experience Platform APIs](../../../landing/api-authentication.md).
-- For information on how to set up [!DNL Postman] for Platform APIs, see the tutorial on [setting up developer console and [!DNL Postman]](../../../landing/postman.md).
+- For information on using Experience Platform APIs including details on how to gather values for required headers and read sample API calls, see the guide on [getting started with Experience Platform APIs](../../../landing/api-guide.md).
+- For information on how to generate your credentials for Experience Platform APIs, see the tutorial on [authenticating and accessing Experience Platform APIs](../../../landing/api-authentication.md).
+- For information on how to set up [!DNL Postman] for Experience Platform APIs, see the tutorial on [setting up developer console and [!DNL Postman]](../../../landing/postman.md).
 
-With a Platform developer console and [!DNL Postman] set up, you can now start applying the appropriate environment values to your [!DNL Postman] environment.
+With an Experience Platform developer console and [!DNL Postman] set up, you can now start applying the appropriate environment values to your [!DNL Postman] environment.
 
 +++View the variable table guide
 
@@ -105,11 +105,9 @@ To connect your [!DNL Salesforce] account to Experience Platform in an AWS regio
 - A [!DNL Salesforce Connected App] that you can then use to enable JWT_BEARER OAuth flow.
 - The necessary permissions in [!DNL Salesforce] to access data.
 
-You must also add the following IP addresses to your allowlist, in order to connect your [!DNL Salesforce] account to Experience Platform on Amazon Web Services (AWS):
+### IP address allowlist for connection on AWS
 
-- `34.193.63.59`
-- `44.217.93.240`
-- `44.194.79.229`
+You must add region-specific IP addresses to your allowlist prior to connecting your sources to Experience Platform on AWS. For more information, read the guide on [allowlisting IP addresses to connect to Experience Platform on AWS](../../ip-address-allow-list.md) for more information.
 
 ### Create a [!DNL Salesforce Connected App]
 
@@ -265,15 +263,15 @@ public class Main {
 
 Once you have completed prerequisite set up for your [!DNL Salesforce] account, you can proceed to connect your [!DNL Salesforce] account to Experience Platform and ingest your CRM data. Read the documentation below for more information:
 
-### Connect [!DNL Salesforce] to Platform using APIs
+### Connect [!DNL Salesforce] to Experience Platform using APIs
 
-The documentation below provides information on how to connect [!DNL Salesforce] to Platform using APIs or the user interface:
+The documentation below provides information on how to connect [!DNL Salesforce] to Experience Platform using APIs or the user interface:
 
 - [Connect Salesforce to Experience Platform using the Flow Service API](../../tutorials/api/create/crm/salesforce.md)
 - [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
 - [Create a dataflow for a CRM source using the Flow Service API](../../tutorials/api/collect/crm.md)
 
-### Connect [!DNL Salesforce] to Platform using the UI
+### Connect [!DNL Salesforce] to Experience Platform using the UI
 
 - [Create a Salesforce source connection in the UI](../../tutorials/ui/create/crm/salesforce.md)
 - [Create a dataflow for a CRM connection in the UI](../../tutorials/ui/dataflow/crm.md)

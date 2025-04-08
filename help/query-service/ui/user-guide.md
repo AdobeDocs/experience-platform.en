@@ -7,13 +7,9 @@ exl-id: d7732244-0372-467d-84e2-5308f42c5d51
 ---
 # Query Editor UI guide
 
->[!NOTE]
->
->The legacy editor was deprecated on 24th May 2024. It is no longer accessible for use. You can now use the [Enhanced Query Editor](#enhanced-editor-toggle) to write, validate, and run your queries
-
 Query Editor is an interactive tool provided by Adobe Experience Platform Query Service, which allows you to write, validate, and run queries for customer experience data within the [!DNL Experience Platform] user interface. Query Editor supports developing queries for analysis and data exploration, and allows you to run interactive queries for development purposes as well as non-interactive queries to populate datasets in [!DNL Experience Platform].
 
-For more information about the concepts and features of Query Service, see the [Query Service overview](../home.md). To learn more about how to navigate the Query Service user interface on [!DNL Platform], see the [Query Service UI overview](./overview.md).
+For more information about the concepts and features of Query Service, see the [Query Service overview](../home.md). To learn more about how to navigate the Query Service user interface on [!DNL Experience Platform], see the [Query Service UI overview](./overview.md).
 
 ## Getting started {#getting-started}
 
@@ -36,10 +32,6 @@ The Query Editor takes a few seconds to initialize and connect to Query Service 
 Queries executed from Query Editor run interactively which means that if you close the browser or navigate away, the query is cancelled. The same is true for queries made to generate datasets from query outputs.
 
 ## Query authoring using the Enhanced Query Editor {#query-authoring}
-
->[!NOTE]
->
->The legacy editor was deprecated on 24th May 2024. It is no longer accessible for use. You can now use the Enhanced Query Editor to write, validate, and run your queries.
 
 Using Query Editor, you can write, execute, and save queries for customer experience data. All queries executed, or saved in Query Editor are available to all users in your organization with access to Query Service.
 
@@ -95,11 +87,11 @@ A confirmation dialog appears. Select **[!UICONTROL Confirm]** to cancel the que
 
 ### Result count {#result-count}
 
-The Query Editor has a maximum 50,000 row output. You can choose the number of rows are displayed at one time in the Query Editor console. To change the number of rows displayed in the console, select the **[!UICONTROL Result count]** dropdown and select from the 50, 100, 150, 300, and 500 options.
+The Query Editor has a maximum 50,000 row output. You can choose the number of rows are displayed at one time in the Query Editor console. To change the number of rows displayed in the console, select the **[!UICONTROL Result count]** dropdown and select from the 50, 100, 150, 300, 500, and 1000 options.
 
 >[!NOTE]
 >
->As the Platform UI can only support up to 500 rows, passing a LIMIT value over 500 is ignored.
+>As the Experience Platform UI can support up to 1000 rows, passing a LIMIT value over 1000 is ignored.
 
 ![The Query Editor with the Result count dropdown highlighted.](../images/ui/query-editor/result-count.png)
 
@@ -194,12 +186,7 @@ If a query was scheduled, then the [!UICONTROL Scheduled Queries] tab provides i
 >
 >Queries that are not executed are not saved by the Log. In order for the query to be available in Query Service, it must be run or saved in Query Editor.
 
-### [!BADGE Limited Availability]{type=Informative} Object browser {#object-browser}
-
->[!AVAILABILITY]
->
->The dataset navigation rail is only available for Data Distiller customers. Your Platform UI might not contain the left dataset navigation rail. Other images in this document might not reflect the dataset navigation rail. Contact your Adobe representative for more information.<br>
->Object browser is currently available only in a **limited release**. Contact your Adobe representative to get early release access.
+### Object browser {#object-browser}
 
 Use the object browser to easily search and filter datasets. The object browser reduces the time spent searching for tables and datasets in large environments with numerous datasets. With streamlined access to relevant data and metadata, you can focus more on query authoring and less on navigation.
 
@@ -243,7 +230,7 @@ The console provides information on the status and operation of Query Service. T
 
 ### Query results {#query-results}
 
-After a query has been completed, the results are displayed in the **[!UICONTROL Results]** tab, next to the **[!UICONTROL Console]** tab. This view shows the tabular output of your query, displaying between 50 and 500 rows of results depending on your chosen [result count](#result-count). This view allows you to verify that your query produces the expected output. To generate a dataset with your query, remove limits on rows returned, and run the query with `CREATE TABLE tablename AS SELECT` to generate a dataset with the output. See the [generating datasets tutorial](./create-datasets.md) for instructions on how to generate a dataset from query results in Query Editor.
+After a query has been completed, the results are displayed in the **[!UICONTROL Results]** tab, next to the **[!UICONTROL Console]** tab. This view shows the tabular output of your query, displaying between 50 and 1000 rows of results depending on your chosen [result count](#result-count). This view allows you to verify that your query produces the expected output. To generate a dataset with your query, remove limits on rows returned, and run the query with `CREATE TABLE tablename AS SELECT` to generate a dataset with the output. See the [generating datasets tutorial](./create-datasets.md) for instructions on how to generate a dataset from query results in Query Editor.
 
 ![The Results tab of the Query Editor console displaying the results of a query run.](../images/ui/query-editor/query-results.png)
 
@@ -265,4 +252,4 @@ The following video shows how to run queries in the Adobe Experience Platform in
 
 ## Next steps
 
-Now that you know what features are available in Query Editor and how to navigate the application, you can start authoring your own queries directly in [!DNL Platform]. For more information about running SQL queries against datasets in [!DNL Data Lake], see the guide on [running queries](../best-practices/writing-queries.md). 
+Now that you know what features are available in Query Editor and how to navigate the application, you can start authoring your own queries directly in [!DNL Experience Platform]. For more information about running SQL queries against datasets in [!DNL Data Lake], see the guide on [running queries](../best-practices/writing-queries.md). 

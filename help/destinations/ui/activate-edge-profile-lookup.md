@@ -19,7 +19,7 @@ This page describes the steps that you must follow to look up edge profile data 
 
 ## Terminology and prerequisites {#prerequisites}
 
-When configuring the use case described in this page, you will use the following Platform components:
+When configuring the use case described in this page, you will use the following Experience Platform components:
 
 * [Datastreams](../../datastreams/overview.md): A datastream receives incoming event data from Web SDK and responds with edge profile data.
 * [Merge Policies](../../segmentation/ui/segment-builder.md#merge-policies): You will create an [!UICONTROL Active-On-Edge] merge policy to ensure that the edge profiles ßuse the correct profile data.
@@ -48,14 +48,14 @@ Follow the steps in the [datastream configuration](../../datastreams/configure.m
     >
     >Enabling edge segmentation limits the maximum number of lookup requests to 1500 request per second. If you need a higher request throughput, disable edge segmentation for your datastream. See the [guardrails documentation](../guardrails.md#edge-destinations-activation) for detailed information. -->
 
-    ![Platform UI image showing the datastream configuration screen.](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
+    ![Experience Platform UI image showing the datastream configuration screen.](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
 
 
 ## Step 2: Configure your audiences for edge evaluation {#audience-edge-evaluation}
 
 Looking up profile attributes on the edge requires your audiences to be configured for edge evaluation.
 
-Make sure the audiences that you plan to activate have the [Active-on-Edge Merge Policy](../../segmentation/ui/segment-builder.md#merge-policies) set as default. The [!DNL Active-On-Edge] merge policy ensures that audiences are constantly evaluated [on the edge](../../segmentation/ui/edge-segmentation.md) and are available for real-time personalization use cases.
+Make sure the audiences that you plan to activate have the [Active-on-Edge Merge Policy](../../segmentation/ui/segment-builder.md#merge-policies) set as default. The [!DNL Active-On-Edge] merge policy ensures that audiences are constantly evaluated [on the edge](../../segmentation/methods/edge-segmentation.md) and are available for real-time personalization use cases.
 
 Follow the instructions on [creating a merge policy](../../profile/merge-policies/ui-guide.md#create-a-merge-policy), and make sure to enable the **[!UICONTROL Active-On-Edge Merge Policy]** toggle.
 
@@ -104,7 +104,7 @@ After you have created a **[!UICONTROL Custom Personalization With Attributes]**
     You can select from multiple types of audiences, depending on their origin:
     
     * **[!UICONTROL Segmentation Service]**: Audiences generated within Experience Platform by the Segmentation Service. See the [segmentation documentation](../../segmentation/ui/overview.md) for more details.
-    * **[!UICONTROL Custom upload]**: Audiences generated outside of Experience Platform, and uploaded into Platform as CSV files. To learn more about external audiences, see the documentation on [importing an audience](../../segmentation/ui/overview.md#import-audience).
+    * **[!UICONTROL Custom upload]**: Audiences generated outside of Experience Platform, and uploaded into Experience Platform as CSV files. To learn more about external audiences, see the documentation on [importing an audience](../../segmentation/ui/overview.md#import-audience).
     * Other types of audiences, originating from other Adobe solutions, such as [!DNL Audience Manager].
 
         ![Select audiences step of the activation workflow with several audiences highlighted.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
