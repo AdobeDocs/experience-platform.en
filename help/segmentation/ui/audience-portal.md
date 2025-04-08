@@ -9,7 +9,9 @@ Audience Portal is a central hub, within Adobe Experience Platform, that allows 
 
 Within Audience Portal, you can accomplish the following tasks:
 
-- [View a list of your audiences](#audience-list)
+>[!BEGINSHADEBOX]
+
+- [View a list of your audiences](#list)
   - [Use quick actions on your audiences](#quick-actions)
   - [Customize the properties displayed in your list of audiences](#customize)
   - [Use filters, folders, and tags to organize your audiences](#manage-audiences)
@@ -22,6 +24,8 @@ Within Audience Portal, you can accomplish the following tasks:
   - [Use Federated Audience Composition to create an audience using data from your existing data warehouse](#fac)
   - [Use Data Distiller to create an audience](#data-distiller)
 - [Import externally generated audiences](#import-audience)
+
+>[!ENDSHADEBOX] 
 
 To open Audience Portal, select the **[!UICONTROL Browse]** tab within the Segmentation section. 
 
@@ -193,7 +197,7 @@ The list of available filters is displayed.
 
 | Filter | Description |
 | ------ | ----------- |
-| [!UICONTROL Origin] | Lets you filter based on the origin of the audience. Available options include Segmentation service, Custom upload, Audience composition, and Audience Manager. |
+| [!UICONTROL Origin] | Lets you filter based on the origin of the audience. Possible values include [Segmentation Service](#segment-builder), [Custom upload](#import-audience), [Audience composition](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [Look-alike audience](../types/lookalike-audiences.md), [Federated Audience Composition](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller), and [AJO B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/guide-overview).  |
 | [!UICONTROL Has any tag] | Lets you filter by tags. You can select between **[!UICONTROL Has any tag]** and **[!UICONTROL Has all tags]**. When **[!UICONTROL Has any tag]** is selected, the filtered audiences will include **any** of the tags you've added. When **[!UICONTROL Has all tags]** is selected, the filtered audiences must include **all** of the tags you've added. |
 | [!UICONTROL Lifecycle status] | Lets you filter based on the audience's lifecycle status. Available options include [!UICONTROL Deleted], [!UICONTROL Draft], [!UICONTROL Inactive], and [!UICONTROL Published]. |
 | [!UICONTROL Update frequency] | Lets you filter based on the audience's update frequency (evaluation method). Available options include [!UICONTROL Batch], [!UICONTROL Streaming], and [!UICONTROL Edge] |
