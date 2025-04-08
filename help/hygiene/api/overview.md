@@ -51,4 +51,4 @@ Your organization is limited to a predetermined monthly job quota for each type 
 
 ## Next steps
 
-This guide covered how to manage data lifecycle requests using API calls. For information on how to perform these actions in the Platform UI, see the [data lifecycle UI guide](../ui/overview.md).
+This guide covered how to manage data lifecycle requests using API calls. For information on how to perform these actions in the Experience Platform UI, see the [data lifecycle UI guide](../ui/overview.md).

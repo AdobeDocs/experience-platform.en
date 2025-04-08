@@ -25,7 +25,7 @@ Currently, you have to deploy different JavaScript libraries based on each indiv
 * None of these libraries were built to work with each other.
 * Cross-solution and Adobe Experience Platform use cases require these disparate libraries to be interdependent, causing deployment friction.
 
-Although tags in Platform make it as easy as possible to deploy and manage these libraries, there are still issues with:
+Although tags in Experience Platform make it as easy as possible to deploy and manage these libraries, there are still issues with:
 
 * Library size (too much Adobe code on a page)
 * Performance (sites take too long to load)
@@ -118,7 +118,7 @@ In other words, if you decide to use Adobe Experience Platform Web SDK for non-s
 
 ## Can I migrate the ECIDs when I start using Web SDK so my website visitors don't start showing up as new visitors?
 
-Yes, Adobe Experience Platform Web SDK provides an Identity Migration feature. Follow the instructions for ID migration in the [Platform Web SDK identity documentation](/help/web-sdk/identity/overview.md#id-migration) for more details.
+Yes, Adobe Experience Platform Web SDK provides an Identity Migration feature. Follow the instructions for ID migration in the [Experience Platform Web SDK identity documentation](/help/web-sdk/identity/overview.md#id-migration) for more details.
 
 ## How is the Web SDK different than tags?
 

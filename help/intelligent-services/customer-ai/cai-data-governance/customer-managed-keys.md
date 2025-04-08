@@ -14,4 +14,4 @@ You can read the documentation on [Customer Managed Keys in Adobe Experience Pla
 >
 >[!DNL Customer Managed Keys] are currently available only for organizations that have purchased the [!DNL Healthcare Shield or Privacy & Security Shield] add-on offering.
 
-All data utilized by Platform is encrypted in transit and at rest to keep your data secure, with or without CMK. For information on Adobe Experience Platform encryption, read the documentation on [Data encryption](../../../landing/governance-privacy-security/encryption.md).
+All data utilized by Experience Platform is encrypted in transit and at rest to keep your data secure, with or without CMK. For information on Adobe Experience Platform encryption, read the documentation on [Data encryption](../../../landing/governance-privacy-security/encryption.md).

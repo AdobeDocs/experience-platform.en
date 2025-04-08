@@ -24,7 +24,7 @@ When planning to create your own backup package within your organization, consid
 - Depending on the scope metadata you wish to back up, ensure you understand how to manually [add objects to a package](../ui/sandbox-tooling.md#add-object-to-a-new-package) or how to [export an entire sandbox](../ui/sandbox-tooling.md#export-an-entire-sandbox).
 - Ensure you have access to sandbox tooling in your organization with the correct permissions.
 
-### UI functionality, Platform components, and Experience Cloud products that you will use {#ui-functionality-and-elements}
+### UI functionality, Experience Platform components, and Experience Cloud products that you will use {#ui-functionality-and-elements}
 
 To successfully implement this use case, you must use multiple areas of Adobe Experience Platform. Ensure you have the necessary [attribute-based access control permissions](../../access-control/abac/overview.md) for all these areas, or ask your system administrator to grant you the necessary permissions.
 

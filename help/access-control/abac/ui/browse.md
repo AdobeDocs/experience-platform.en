@@ -21,11 +21,11 @@ In order to access attribute-based access control permissions for [!DNL Adobe Ex
 
 If you do not have admin privileges, contact your system administrator to gain access.
 
-Once you have admin privileges, go to [Adobe Experience Platform](https://experience.adobe.com/) and sign in using your [!DNL Adobe] credentials. Once logged in, the **[!UICONTROL Overview]** page appears for your organization you have admin privileges for. This page shows the products that your organization is subscribed to, along with other controls to add users and admins to the organization as a whole. Select **[!UICONTROL Permissions]** to open the attribute-based access control workspace for your Platform integration.
+Once you have admin privileges, go to [Adobe Experience Platform](https://experience.adobe.com/) and sign in using your [!DNL Adobe] credentials. Once logged in, the **[!UICONTROL Overview]** page appears for your organization you have admin privileges for. This page shows the products that your organization is subscribed to, along with other controls to add users and admins to the organization as a whole. Select **[!UICONTROL Permissions]** to open the attribute-based access control workspace for your Experience Platform integration.
 
 ![flac-select-product](../../images/flac-ui/flac-select-product.png)
 
-The attribute-based access control workspace for Platform appears, opening on the **[!UICONTROL Roles]** page. This page allows you to view all roles and manage various settings as outlined in this document.
+The attribute-based access control workspace for Experience Platform appears, opening on the **[!UICONTROL Roles]** page. This page allows you to view all roles and manage various settings as outlined in this document.
 
 >[!IMPORTANT]
 >
@@ -35,7 +35,7 @@ You should now use Permissions on [!DNL Adobe Experience Platform], instead of R
 
 ![flac-select-roles](../../images/flac-ui/flac-select-roles.png)
 
-This user guide focuses on how to use the [!DNL Adobe Experience Platform] to assign access permissions for Platform. For more general information on how to navigate the [!DNL Admin Console], see the [Admin Console user guide](https://helpx.adobe.com/enterprise/using/admin-console.html).
+This user guide focuses on how to use the [!DNL Adobe Experience Platform] to assign access permissions for Experience Platform. For more general information on how to navigate the [!DNL Admin Console], see the [Admin Console user guide](https://helpx.adobe.com/enterprise/using/admin-console.html).
 
 ## Next steps
 

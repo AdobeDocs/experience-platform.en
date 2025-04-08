@@ -12,7 +12,7 @@ exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
 >
 >The following endpoints can differ between implementations of Adobe Experience Platform running on Microsoft Azure and Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
-Adobe Experience Platform enables you to ingest data from multiple sources and build robust profiles for individual customers. Data ingested into [!DNL Platform] is stored in the [!DNL Data Lake], and if the datasets have been enabled for Profile, that data is stored in the [!DNL Real-Time Customer Profile] data store as well. Occasionally it may be necessary to delete profile data associated with a dataset from the Profile store in order to remove data that is no longer needed or was added in error. This requires using the [!DNL Real-Time Customer Profile] API to create a [!DNL Profile] system job, or "delete request".
+Adobe Experience Platform enables you to ingest data from multiple sources and build robust profiles for individual customers. Data ingested into [!DNL Experience Platform] is stored in the [!DNL Data Lake], and if the datasets have been enabled for Profile, that data is stored in the [!DNL Real-Time Customer Profile] data store as well. Occasionally it may be necessary to delete profile data associated with a dataset from the Profile store in order to remove data that is no longer needed or was added in error. This requires using the [!DNL Real-Time Customer Profile] API to create a [!DNL Profile] system job, or "delete request".
 
 >[!NOTE]
 >
@@ -32,7 +32,7 @@ You may also use optional query parameters to filter the list of delete requests
 
 >[!AVAILABILITY]
 >
->The following query parameters are **only** available when using Platform on Microsoft Azure.
+>The following query parameters are **only** available when using Experience Platform on Microsoft Azure.
 >
 >When using this endpoint on AWS, the first 100 system jobs are returned in descending order, based on their creation date.
 
@@ -496,7 +496,7 @@ A successful response returns the details of the newly created system request.
 
 >[!AVAILABILITY]
 >
->The following feature is **only** available when using Platform on Microsoft Azure.
+>The following feature is **only** available when using Experience Platform on Microsoft Azure.
 
 If you attempt to initiate a delete request for a Record dataset batch, you will encounter a 400-level error, similar to the following:
 

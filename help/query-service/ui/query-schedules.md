@@ -107,7 +107,7 @@ The table below explains the supported query alert types:
 
 >[!NOTE]
 >
->If you choose to set a [!UICONTROL Query Run Delay] alert, you must set your desired delay time in minutes in the Platform UI. Enter the duration in minutes. The maximum delay is 24 hours (1440 minutes).
+>If you choose to set a [!UICONTROL Query Run Delay] alert, you must set your desired delay time in minutes in the Experience Platform UI. Enter the duration in minutes. The maximum delay is 24 hours (1440 minutes).
 
 For an overview of alerts in Adobe Experience Platform, including the structure of how alert rules are defined, see the [alerts overview](../../observability/alerts/overview.md). For guidance on managing alerts and alert rules within the Adobe Experience Platform UI, see the [Alerts UI guide](../../observability/alerts/ui.md).
 

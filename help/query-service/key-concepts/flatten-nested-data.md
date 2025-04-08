@@ -20,7 +20,7 @@ Using the `FLATTEN` setting requires a working understanding of the following co
   
   * [Create an ad hoc schema](../../xdm/tutorials/ad-hoc.md): An XDM schema with fields that are namespaced for usage only by a single dataset, is referred to as an ad hoc schema. Ad hoc schemas are used in various data ingestion workflows for Experience Platform and creating certain kinds of source connections.
 
-* [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes that partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes that partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 * [Nested data structures](./nested-data-structures.md): This document provides examples of how to create, process, or transform datasets with complex data types including nested data structures.
 

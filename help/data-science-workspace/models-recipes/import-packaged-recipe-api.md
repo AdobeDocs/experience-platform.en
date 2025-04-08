@@ -35,7 +35,7 @@ This tutorial requires a packaged Recipe file in the form of a Docker URL. Follo
  
 -   `{DOCKER_URL}`: An URL address to a Docker image of an intelligent service.
 
-This tutorial requires you to have completed the [Authentication to Adobe Experience Platform tutorial](https://www.adobe.com/go/platform-api-authentication-en) in order to successfully make calls to [!DNL Platform] APIs. Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+This tutorial requires you to have completed the [Authentication to Adobe Experience Platform tutorial](https://www.adobe.com/go/platform-api-authentication-en) in order to successfully make calls to [!DNL Experience Platform] APIs. Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 -   `{ACCESS_TOKEN}`: Your specific bearer token value provided after authentication.
 -   `{ORG_ID}`: Your organization credentials found in your unique Adobe Experience Platform integration.

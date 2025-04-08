@@ -18,13 +18,13 @@ With [!UICONTROL Permission Manager], you can search based on:
 
 You can narrow down your search by selecting specific resources, actions, and sandboxes.
 
-To access [!UICONTROL Permission Manager] for [!DNL Experience Platform], you must be an administrator for an organization that has access to Platform. While Adobe allows for customizable administrator hierarchies inside your organization, you must be a product administrator for the [!DNL Adobe Experience Platform]. For further details, refer to the Adobe Help Center article on [administration roles](https://helpx.adobe.com/enterprise/using/admin-roles.html).
+To access [!UICONTROL Permission Manager] for [!DNL Experience Platform], you must be an administrator for an organization that has access to Experience Platform. While Adobe allows for customizable administrator hierarchies inside your organization, you must be a product administrator for the [!DNL Adobe Experience Platform]. For further details, refer to the Adobe Help Center article on [administration roles](https://helpx.adobe.com/enterprise/using/admin-roles.html).
 
 Log in to [Adobe Experience Platform](https://experience.adobe.com/) using your [!DNL Adobe] credentials.  After logging in, you will see the **[!UICONTROL Overview]** page for your organization. This page displays the products to which your organization is subscribed. To launch the attribute-based access control workspace for platform integration, select **[!UICONTROL Permissions]**.
 
 ![Adobe Experience Platform overview highlighting Permissions.](../../images/flac-ui/flac-select-product.png)
 
-The attribute-based access control workspace for Platform appears, opening on the **[!UICONTROL Overview]** page. This page allows you to view all roles and manage various settings as outlined in this document.
+The attribute-based access control workspace for Experience Platform appears, opening on the **[!UICONTROL Overview]** page. This page allows you to view all roles and manage various settings as outlined in this document.
 
 Select **[!UICONTROL Permission Manager]** from the left navigation.
 

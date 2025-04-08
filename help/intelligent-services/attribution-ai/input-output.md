@@ -138,7 +138,7 @@ The following table outlines the schema fields in the raw scores example output:
 
 ### Viewing raw score paths (UI) {#raw-score-path}
 
-You can view the path to your raw scores in the UI. Start by selecting **[!UICONTROL Schemas]** in the Platform UI then search for and select your attribution AI scores schema from within the **[!UICONTROL Browse]** tab.
+You can view the path to your raw scores in the UI. Start by selecting **[!UICONTROL Schemas]** in the Experience Platform UI then search for and select your attribution AI scores schema from within the **[!UICONTROL Browse]** tab.
 
 ![Pick your schema](./images/input-output/schemas_browse.png)
 
@@ -148,7 +148,7 @@ Next, select a field within the **[!UICONTROL Structure]** window of the UI, the
 
 ### Aggregated attribution scores {#aggregated-attribution-scores}
 
-Aggregated scores can be downloaded in CSV format from the Platform UI if the date range is less than 30 days.
+Aggregated scores can be downloaded in CSV format from the Experience Platform UI if the date range is less than 30 days.
 
 Attribution AI supports two categories of attribution scores, algorithmic and rule-based scores.
 
@@ -186,7 +186,7 @@ Time Decay | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.dec
 
 ### Aggregated Scores {#aggregated-scores}
 
-Aggregated scores can be downloaded in CSV format from the Platform UI if the date range is less than 30 days. See the table below for more details about each of these aggregate columns.
+Aggregated scores can be downloaded in CSV format from the Experience Platform UI if the date range is less than 30 days. See the table below for more details about each of these aggregate columns.
 
 | Column Name | Constraint | Nullable | Description |
 | --- | --- | --- | --- |
@@ -229,8 +229,8 @@ The table below maps the aggregated scores to the raw scores. If you wish to dow
 >[!IMPORTANT]
 >
 > - Attribution AI uses only updated data for further training and scoring. Likewise, when you request to delete data, Customer AI refrains from using the deleted data.
-> - Attribution AI leverages Platform datasets. To support consumer rights requests a brand may receive, brands should use Platform Privacy Service to submit consumer requests of access and delete to remove their data across the data lake, Identity Service, and Real-Time Customer Profile. 
-> - All datasets we use for input/output of models will follow Platform guidelines. Platform Data Encryption applies for data at-rest and in-transit. See the documentation to learn more about [data encryption](../../../help/landing/governance-privacy-security/encryption.md)
+> - Attribution AI leverages Experience Platform datasets. To support consumer rights requests a brand may receive, brands should use Experience Platform Privacy Service to submit consumer requests of access and delete to remove their data across the data lake, Identity Service, and Real-Time Customer Profile. 
+> - All datasets we use for input/output of models will follow Experience Platform guidelines. Experience Platform Data Encryption applies for data at-rest and in-transit. See the documentation to learn more about [data encryption](../../../help/landing/governance-privacy-security/encryption.md)
 
 ## Next steps {#next-steps}
 

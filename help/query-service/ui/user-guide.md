@@ -9,7 +9,7 @@ exl-id: d7732244-0372-467d-84e2-5308f42c5d51
 
 Query Editor is an interactive tool provided by Adobe Experience Platform Query Service, which allows you to write, validate, and run queries for customer experience data within the [!DNL Experience Platform] user interface. Query Editor supports developing queries for analysis and data exploration, and allows you to run interactive queries for development purposes as well as non-interactive queries to populate datasets in [!DNL Experience Platform].
 
-For more information about the concepts and features of Query Service, see the [Query Service overview](../home.md). To learn more about how to navigate the Query Service user interface on [!DNL Platform], see the [Query Service UI overview](./overview.md).
+For more information about the concepts and features of Query Service, see the [Query Service overview](../home.md). To learn more about how to navigate the Query Service user interface on [!DNL Experience Platform], see the [Query Service UI overview](./overview.md).
 
 ## Getting started {#getting-started}
 
@@ -91,7 +91,7 @@ The Query Editor has a maximum 50,000 row output. You can choose the number of r
 
 >[!NOTE]
 >
->As the Platform UI can support up to 1000 rows, passing a LIMIT value over 1000 is ignored.
+>As the Experience Platform UI can support up to 1000 rows, passing a LIMIT value over 1000 is ignored.
 
 ![The Query Editor with the Result count dropdown highlighted.](../images/ui/query-editor/result-count.png)
 
@@ -252,4 +252,4 @@ The following video shows how to run queries in the Adobe Experience Platform in
 
 ## Next steps
 
-Now that you know what features are available in Query Editor and how to navigate the application, you can start authoring your own queries directly in [!DNL Platform]. For more information about running SQL queries against datasets in [!DNL Data Lake], see the guide on [running queries](../best-practices/writing-queries.md). 
+Now that you know what features are available in Query Editor and how to navigate the application, you can start authoring your own queries directly in [!DNL Experience Platform]. For more information about running SQL queries against datasets in [!DNL Data Lake], see the guide on [running queries](../best-practices/writing-queries.md). 
