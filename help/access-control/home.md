@@ -196,7 +196,7 @@ The following table outlines the available permissions for Experience Platform i
 | [!DNL Data Governance] | [!UICONTROL Manage Usage Labels] | Access to read, create, and delete usage labels. |
 | [!DNL Data Governance] | [!UICONTROL Manage Data Usage Policies] | Access to read, create, edit, and delete data usage policies. |
 | [!DNL Data Governance] | [!UICONTROL View Data Usage Policies] | Read-only access for data usage policies belonging to your organization. |
-| [!DNL Data Governance] | [!UICONTROL View User Activity Log] | Read-only access to view recorded [audit logs](../landing/governance-privacy-security/audit-logs/overview.md) of Platform activities. |
+| [!DNL Data Governance] | [!UICONTROL View User Activity Log] | Read-only access to view recorded [audit logs](../landing/governance-privacy-security/audit-logs/overview.md) of Experience Platform activities. |
 | [!DNL Data Governance] | [!UICONTROL View Privacy Console] | Read-only access to privacy consoles. |
 | [!DNL Data Ingestion] | [!UICONTROL Manage Sources] | Access to read, create, edit, and disable sources. |
 | [!DNL Data Ingestion] | [!UICONTROL View Sources] | Read-only access to available sources in the **[!UICONTROL Catalog]** tab and authenticated sources in the **[!UICONTROL Browse]** tab. |
@@ -275,7 +275,7 @@ The following table outlines the available permissions for Experience Platform i
 | [!DNL Profile Management] | [!UICONTROL Manage Profile Settings] | Access to read and edit all profile settings. |
 | [!DNL Prospects] | [!UICONTROL View Prospects] | Read-only access to prospect schemas, profiles, audiences, and the prospect accordion. |
 | [!DNL Prospects] | [!UICONTROL Manage Prospects] | Ability to create and manage prospect schemas, profiles, and audiences. Read-only access to the prospect accordion. |
-| [!DNL Query Service] | [!UICONTROL Manage Queries] | Access to read, create, edit, and delete structured SQL queries for Platform data. |
+| [!DNL Query Service] | [!UICONTROL Manage Queries] | Access to read, create, edit, and delete structured SQL queries for Experience Platform data. |
 | [!DNL Query Service] | [!UICONTROL Manage Query Service Integration] | Access to create, update, and delete non-expiring credentials for Query Service access. |
 | [!DNL Query Service] | [!UICONTROL Manage Query Sessions] | Ability to evict existing sessions. |
 | [!DNL Query Service] | [!UICONTROL Manage Allow List] | Ability to manage IP restrictions for your organization. |

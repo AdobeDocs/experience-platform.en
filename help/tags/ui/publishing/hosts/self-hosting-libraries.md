@@ -13,7 +13,7 @@ Tags in Adobe Experience Platform allows for the production of a set of files ca
 
 Builds need to be hosted somewhere so client devices can retrieve them at run-time as needed.
 
-Platform can either manage the hosting of these files for you or you can do it yourself.
+Experience Platform can either manage the hosting of these files for you or you can do it yourself.
 
 ## Managed by Adobe {#managed-by-adobe}
 
@@ -27,7 +27,7 @@ The primary reason to use managed hosting is convenience. It is easier to create
 
 ## Self-hosting
 
-If you don't want Adobe to manage your hosted files, you must host them yourself. To host your files, you need to get the completed builds from Platform and be responsible for getting the files through your company's release cycle onto company-managed servers.
+If you don't want Adobe to manage your hosted files, you must host them yourself. To host your files, you need to get the completed builds from Experience Platform and be responsible for getting the files through your company's release cycle onto company-managed servers.
 
 ### Why use self-hosting?
 

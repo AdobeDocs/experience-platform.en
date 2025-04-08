@@ -27,6 +27,6 @@ To learn more about access control, see the [attribute-based access control over
 
 Adobe Experience Platform (and Real-Time CDP by extension) is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater to the development, testing, and deployment of these applications while ensuring operational compliance.
 
-To address this need, Adobe Experience Platform provides *sandboxes*, enabling you to partition a single [!DNL Platform] instance into separate virtual environments that can be used to develop and evolve digital experience applications. You can use the sandbox tooling feature to improve configuration accuracy across sandboxes and seamlessly export and import sandbox configurations between sandboxes. Follow the steps provided in the [sandbox tooling UI guide](../../sandboxes/ui/sandbox-tooling.md).
+To address this need, Adobe Experience Platform provides *sandboxes*, enabling you to partition a single [!DNL Experience Platform] instance into separate virtual environments that can be used to develop and evolve digital experience applications. You can use the sandbox tooling feature to improve configuration accuracy across sandboxes and seamlessly export and import sandbox configurations between sandboxes. Follow the steps provided in the [sandbox tooling UI guide](../../sandboxes/ui/sandbox-tooling.md).
 
 For more information on sandboxes, see the [sandboxes overview](../../sandboxes/home.md) in the [!DNL Experience Platform] documentation.

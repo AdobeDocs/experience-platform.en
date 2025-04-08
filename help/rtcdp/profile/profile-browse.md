@@ -12,7 +12,7 @@ Real-Time Customer Profile creates a holistic view of each of your individual cu
 
 Within the Adobe Experience Platform user interface, you can view these read-only profiles and see important information regarding each of your individual customers, including their preferences, past events, interactions, and the audiences to which the individual belongs.
 
-Adobe Real-Time Customer Data Platform is built on top of Adobe Experience Platform and is thereby able to make use of the profile viewing capabilities in the Experience Platform UI. For a detailed guide to viewing customer profiles within the Platform user interface, refer to the [Real-Time Customer Profile user guide](../../profile/ui/user-guide.md).
+Adobe Real-Time Customer Data Platform is built on top of Adobe Experience Platform and is thereby able to make use of the profile viewing capabilities in the Experience Platform UI. For a detailed guide to viewing customer profiles within the Experience Platform user interface, refer to the [Real-Time Customer Profile user guide](../../profile/ui/user-guide.md).
 
 ## Profile enhancements for Real-Time CDP, B2B Edition
 
@@ -28,7 +28,7 @@ The profile detail includes access to [!UICONTROL Accounts], [!UICONTROL Opportu
 
 ![](images/b2b-profile-detail.png)
 
-To learn more about the profile details provided in the Platform UI, refer to the [details section of the Profiles dashboard documentation](../../dashboards/guides/profiles.md#browse-profiles).
+To learn more about the profile details provided in the Experience Platform UI, refer to the [details section of the Profiles dashboard documentation](../../dashboards/guides/profiles.md#browse-profiles).
 
 ### Accounts tab
 

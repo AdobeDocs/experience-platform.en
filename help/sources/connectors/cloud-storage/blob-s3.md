@@ -7,9 +7,9 @@ exl-id: 43a60d4d-1947-43c7-9a13-8e4094ca3604
 ---
 # Azure Blob and Amazon S3 connectors
 
-Adobe Experience Platform provides native connectivity for cloud providers like AWS, [!DNL Google Cloud Platform], and [!DNL Azure]. You can bring your data from these systems into [!DNL Platform].
+Adobe Experience Platform provides native connectivity for cloud providers like AWS, [!DNL Google Cloud Platform], and [!DNL Azure]. You can bring your data from these systems into [!DNL Experience Platform].
 
-Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM Parquet, or delimited. Every step of the process is integrated into the Sources workflow. [!DNL Platform] allows you to bring in data from [!DNL Azure Blob] and S3 through batches.
+Cloud storage sources can bring your own data into [!DNL Experience Platform] without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM Parquet, or delimited. Every step of the process is integrated into the Sources workflow. [!DNL Experience Platform] allows you to bring in data from [!DNL Azure Blob] and S3 through batches.
 
 For more information on the [!DNL Azure Blob] connector, please read the [[!DNL Azure Blob] connector overview](./blob.md).
 

@@ -10,7 +10,7 @@ exl-id: 1f1ce317-eaaf-4ad2-a5fb-236983220bd7
 >
 >The [!DNL Azure Synapse Analytics] source is available in the sources catalog to users who have purchased Real-Time Customer Data Platform Ultimate.
 
-This tutorial provides steps for creating a [!DNL Azure Synapse Analytics] (hereinafter referred to as "[!DNL Synapse]") source connector using the [!DNL Platform] user interface.
+This tutorial provides steps for creating a [!DNL Azure Synapse Analytics] (hereinafter referred to as "[!DNL Synapse]") source connector using the [!DNL Experience Platform] user interface.
 
 ## Getting started
 
@@ -25,7 +25,7 @@ If you already have a valid [!DNL Synapse] connection, you may skip the remainde
 
 ### Gather required credentials
 
-In order to access your [!DNL Synapse] account on [!DNL Platform], you must provide the following values:
+In order to access your [!DNL Synapse] account on [!DNL Experience Platform], you must provide the following values:
 
 | Credential | Description |
 | ---------- | ----------- |
@@ -35,7 +35,7 @@ For more information about this value, refer to [this [!DNL Synapse] document](h
 
 ## Connect your [!DNL Synapse] account
 
-Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Synapse] account to [!DNL Platform].
+Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Synapse] account to [!DNL Experience Platform].
 
 Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create an account with.
 
@@ -61,4 +61,4 @@ To connect an existing account, select the [!DNL Synapse] account you want to co
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your [!DNL Synapse] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Platform]](../../dataflow/databases.md).
+By following this tutorial, you have established a connection to your [!DNL Synapse] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Experience Platform]](../../dataflow/databases.md).

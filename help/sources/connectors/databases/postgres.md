@@ -5,9 +5,9 @@ exl-id: 27b891c5-5fc5-4539-8f98-e3a53e2eefe3
 ---
 # [!DNL PostgreSQL] connector
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
-[!DNL Experience Platform] provides support for ingesting data from a third-party database. [!DNL Platform] can connect to different types of databases such as relational, NoSQL, or data warehouses. Support for database providers include [!DNL PostgreSQL].
+[!DNL Experience Platform] provides support for ingesting data from a third-party database. [!DNL Experience Platform] can connect to different types of databases such as relational, NoSQL, or data warehouses. Support for database providers include [!DNL PostgreSQL].
 
 ## Prerequisites
 
@@ -40,13 +40,13 @@ For more information about obtaining a connection string, refer to this [[!DNL P
 
 >[!ENDTABS]
 
-## Connect [!DNL PostgreSQL] to [!DNL Platform] using APIs
+## Connect [!DNL PostgreSQL] to [!DNL Experience Platform] using APIs
 
 - [Create a [!DNL PostgreSQL] base connection using the Flow Service API](../../tutorials/api/create/databases/postgres.md)
 - [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
 - [Create a dataflow for a database source using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
-## Connect [!DNL PostgreSQL] to [!DNL Platform] using the UI
+## Connect [!DNL PostgreSQL] to [!DNL Experience Platform] using the UI
 
 - [Create a [!DNL PostgreSQL] source connection in the UI](../../tutorials/ui/create/databases/postgres.md)
 - [Create a dataflow for a database source connection in the UI](../../tutorials/ui/dataflow/databases.md)

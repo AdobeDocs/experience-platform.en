@@ -42,7 +42,7 @@ SendGrid supports the activation of identities described in the table below. Lea
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-|email |Email address|Note both plain text and SHA256 hashed email addresses are supported by [!DNL Adobe Experience Platform]. If the Experience platform source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.<br/><br/> Note that **SendGrid** does not support hashed email addresses, so only plain text data without transformation is sent to the destination.|
+|email |Email address|Note both plain text and SHA256 hashed email addresses are supported by [!DNL Adobe Experience Platform]. If the Experience platform source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.<br/><br/> Note that **SendGrid** does not support hashed email addresses, so only plain text data without transformation is sent to the destination.|
 
 {style="table-layout:auto"}
 

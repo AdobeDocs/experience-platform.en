@@ -96,7 +96,7 @@ When defining a new field, additional configuration options may appear in the ri
 
 ## Special field types {#special}
 
-The right rail provides several checkboxes for designating special roles for the selected field. The use cases for some of these options involve important considerations regarding your data modeling strategy and how you intend to use downstream Platform services.
+The right rail provides several checkboxes for designating special roles for the selected field. The use cases for some of these options involve important considerations regarding your data modeling strategy and how you intend to use downstream Experience Platform services.
 
 To learn more about these special types, refer to the following documentation:
 

@@ -9,9 +9,9 @@ exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
 
 Standardization and interoperability are key concepts behind Adobe Experience Platform. Experience Data Model (XDM), driven by Adobe, is an effort to standardize customer experience data and define schemas for customer experience management. 
 
-XDM is a publicly documented specification designed to improve the power of digital experiences. It provides common structures and definitions that allow any application to use to communicate with Platform services. By adhering to XDM standards, all customer experience data can be incorporated into a common representation that can deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and express customer attributes for personalization purposes.
+XDM is a publicly documented specification designed to improve the power of digital experiences. It provides common structures and definitions that allow any application to use to communicate with Experience Platform services. By adhering to XDM standards, all customer experience data can be incorporated into a common representation that can deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and express customer attributes for personalization purposes.
 
-XDM is the foundational framework that allows Adobe Experience Cloud, powered by Experience Platform, to deliver the right message to the right person, on the right channel, at exactly the right moment. The methodology on which Experience Platform is built, XDM System, operationalizes Experience Data Model schemas for use by Platform services.
+XDM is the foundational framework that allows Adobe Experience Cloud, powered by Experience Platform, to deliver the right message to the right person, on the right channel, at exactly the right moment. The methodology on which Experience Platform is built, XDM System, operationalizes Experience Data Model schemas for use by Experience Platform services.
 
 Learn about the role of XDM System within Experience Platform.
 
@@ -19,7 +19,7 @@ Learn about the role of XDM System within Experience Platform.
 
 Experience Platform uses schemas to describe the structure of data in a consistent and reusable way. By defining data consistently across systems, it becomes easier to retain meaning and therefore gain value from data.
 
-Before data can be ingested into Platform, a schema must be composed to describe the data's structure and provide constraints to the type of data that can be contained within each field. Schemas consist of a base class and zero or more schema field groups.
+Before data can be ingested into Experience Platform, a schema must be composed to describe the data's structure and provide constraints to the type of data that can be contained within each field. Schemas consist of a base class and zero or more schema field groups.
 
 For more information on the schema composition model, including design principles, and best practices, see the [basics of schema composition](schema/composition.md).
 
@@ -27,7 +27,7 @@ For more information on the schema composition model, including design principle
 
 XDM provides a robust collection of standard field groups and data types, which are intended to capture common concepts and use cases across different industries. Experience Platform allows you to filter these components by industry, enabling you to quickly and confidently construct schemas that best support your particular business needs.
 
-When constructing schemas in the Experience Platform UI, listed field groups are shown with a popularity metric. This metric is determined by how often other Platform users employ the field group in their schemas. The higher the number, the more popular the field group. By default, results are displayed from most popular to least popular, keeping you informed of data modeling trends in your industry.
+When constructing schemas in the Experience Platform UI, listed field groups are shown with a popularity metric. This metric is determined by how often other Experience Platform users employ the field group in their schemas. The higher the number, the more popular the field group. By default, results are displayed from most popular to least popular, keeping you informed of data modeling trends in your industry.
 
 ![The popularity column of the [!UICONTROL Add field group] dialog.](./images/overview/popularity.png)
 
@@ -35,9 +35,9 @@ When constructing schemas in the Experience Platform UI, listed field groups are
 
 Experience Platform provides a user interface and RESTful API from which you can view and manage all schema-related resources in the Experience Platform **[!DNL Schema Library]**. The [!DNL Schema Library] contains standard XDM components made available to you by Adobe, as well as resources from Experience Platform partners and vendors whose applications you use.
 
-You can also create and manage new schemas and resources that are unique to your organization using the [!DNL Schema Registry API], or the [!UICONTROL Schemas] workspace in the Platform UI.
+You can also create and manage new schemas and resources that are unique to your organization using the [!DNL Schema Registry API], or the [!UICONTROL Schemas] workspace in the Experience Platform UI.
 
-For more information on how to manage and interact with schemas in Platform, refer to the following documentation:
+For more information on how to manage and interact with schemas in Experience Platform, refer to the following documentation:
 
 * [XDM UI guide](./ui/overview.md)
 * [Schema Registry API guide](./api/overview.md)
@@ -47,7 +47,7 @@ For more information on how to manage and interact with schemas in Platform, ref
 >[!CONTEXTUALHELP]
 >id="platform_schemas_behavior"
 >title="Data behaviors"
->abstract="Data intended for use in Experience Platform is grouped into three behavior types: record, time-series, and ad hoc. Record schemas provide information about the attributes of a subject, while time-series schemas capture a snapshot of the system at the time an action was taken. Ad hoc schemas capture fields that are namespaced for use only by a single dataset. See the documentation for more information on data behaviors in Platform."
+>abstract="Data intended for use in Experience Platform is grouped into three behavior types: record, time-series, and ad hoc. Record schemas provide information about the attributes of a subject, while time-series schemas capture a snapshot of the system at the time an action was taken. Ad hoc schemas capture fields that are namespaced for use only by a single dataset. See the documentation for more information on data behaviors in Experience Platform."
 
 Data intended for use in Experience Platform is grouped into three behavior types:
 
@@ -61,7 +61,7 @@ Although you are able to define your own classes within the [!DNL Schema Registr
 
 >[!NOTE]
 >
->There are no standard classes based on the ad-hoc behavior. Ad-hoc schemas are automatically generated by the Platform processes that use them, but they can also be [manually created using the Schema Registry API](./tutorials/ad-hoc.md).
+>There are no standard classes based on the ad-hoc behavior. Ad-hoc schemas are automatically generated by the Experience Platform processes that use them, but they can also be [manually created using the Schema Registry API](./tutorials/ad-hoc.md).
 
 ### [!UICONTROL XDM Individual Profile] {#xdm-individual-profile}
 
@@ -87,13 +87,13 @@ See the [[!UICONTROL XDM ExperienceEvent] reference guide](./classes/experiencee
 
 ## XDM schemas and Experience Platform services {#schemas-and-platform-services}
 
-Experience Platform is schema-agnostic, meaning that any schema that conforms to the XDM standard is made available to Platform services. The ways in which different Platform services use schemas are outlined in more detail below.
+Experience Platform is schema-agnostic, meaning that any schema that conforms to the XDM standard is made available to Experience Platform services. The ways in which different Experience Platform services use schemas are outlined in more detail below.
 
 ### Catalog Service, Data Ingestion, and data lake {#ingestion-catalog-and-storage}
 
 Catalog Service is the system of record for Experience Platform assets and their related schemas. Catalog does not contain the actual data files or directories, but rather it holds the metadata and descriptions of those files and directories.
 
-Catalog data is stored in the data lake, a highly granular data store containing all data managed by Platform, regardless of origin or file format. 
+Catalog data is stored in the data lake, a highly granular data store containing all data managed by Experience Platform, regardless of origin or file format. 
 
 To begin ingesting data into Experience Platform, you can use Catalog Service to create a dataset. The dataset references an XDM schema that describes the structure of the data to be ingested. If a dataset is created without a schema, Experience Platform derives an "observed schema" by inspecting the type and content of ingested data fields. Datasets are then tracked in the Catalog Service and stored in the data lake alongside the schemas and observed schemas on which they are based. 
 

@@ -32,13 +32,13 @@ Before you can make calls to the [!DNL Server API], make sure you meet the follo
 
 ## Gather credentials {#credentials}
 
-In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+In order to make calls to Experience Platform APIs, you must first complete the [authentication tutorial](../landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Resources in Experience Platform can be isolated to specific virtual sandboxes. In requests to Platform APIs, you can specify the name and ID of the sandbox that the operation will take place in. These are optional parameters.
+Resources in Experience Platform can be isolated to specific virtual sandboxes. In requests to Experience Platform APIs, you can specify the name and ID of the sandbox that the operation will take place in. These are optional parameters.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -65,6 +65,6 @@ To configure dataset write permissions, go to the [Admin Console](https://adminc
 | `EXEG-0501-401` | Invalid user authorization token | This error message is displayed in any of the following situations: <ul><li>The API call is missing the required `x-user-token` header.</li><li>The provided user token has an invalid format.</li></ul> |
 | `EXEG-0502-401` | Invalid authorization token | This error message is displayed when the provided authorization token has a valid format (JWT), but its signature is invalid. Check the [authentication tutorial](../landing/api-authentication.md) to learn how to get a valid JWT token. |
 | `EXEG-0503-401` | Invalid authorization token | This error message is displayed when the provided authorization token is expired. Go through the [authentication tutorial](../landing/api-authentication.md) to generate a new token. |
-| `EXEG-0504-401` | Required product context is missing | This error message is displayed in any of the following situations:  <ul><li>The developer account does not have access to Adobe Experience Platform product context.</li><li>The company account is not yet entitled to Adobe Experinece Platform.</li></ul>|
+| `EXEG-0504-401` | Required product context is missing | This error message is displayed in any of the following situations:  <ul><li>The developer account does not have access to Adobe Experience Platform product context.</li><li>The company account is not yet entitled to Adobe Experinece Experience Platform.</li></ul>|
 | `EXEG-0505-401` | Required authorization token scope is missing | This error applies only to service account authentication. The error message is displayed when the service authorization token included in the call belongs to a service account which does not have access to the `acp.foundation` IMS scope.|
 | `EXEG-0506-401` | Sandbox not accessible for write | This error message is displayed when the developer account does not have `WRITE` access to the Experience Platform sandbox in which the datastream is defined. |

@@ -79,7 +79,7 @@ When configuring the datastream, under **[!UICONTROL Adobe Experience Platform]*
 
 ![Datastream configuration with Edge Segmentation and Personalization Destinations highlighted!](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
-For more details on how to set up a datastream, follow the instructions described in the [Platform Web SDK documentation](../../datastreams/configure.md#aep).
+For more details on how to set up a datastream, follow the instructions described in the [Experience Platform Web SDK documentation](../../datastreams/configure.md#aep).
 
 ### Create an [!DNL Active-On-Edge] merge policy {#create-merge-policy}
 
@@ -91,9 +91,9 @@ After you have created your destination connection, you must create an [!DNL Act
 
 Follow the instructions on [creating a merge policy](../../profile/merge-policies/ui-guide.md#create-a-merge-policy), and make sure to enable the **[!UICONTROL Active-On-Edge Merge Policy]** toggle.
 
-### Create a new audience in Platform {#create-audience}
+### Create a new audience in Experience Platform {#create-audience}
 
-After you have created the [!DNL Active-On-Edge] merge policy, you must create a new audience in Platform.
+After you have created the [!DNL Active-On-Edge] merge policy, you must create a new audience in Experience Platform.
 
 Follow the [audience builder](../../segmentation/ui/segment-builder.md) guide to create your new audience, and make sure to [assign it](../../segmentation/ui/segment-builder.md#merge-policies) the [!DNL Active-On-Edge] merge policy that you created in the previous step.
 
@@ -135,7 +135,7 @@ To select the audiences that you want to activate to the destination, use the ch
 You can select from multiple types of audiences, depending on their origin:
 
 * **[!UICONTROL Segmentation Service]**: Audiences generated within Experience Platform by the Segmentation Service. See the [segmentation documentation](../../segmentation/ui/overview.md) for more details.
-* **[!UICONTROL Custom upload]**: Audiences generated outside of Experience Platform, and uploaded into Platform as CSV files. To learn more about external audiences, see the documentation on [importing an audience](../../segmentation/ui/audience-portal.md#import-audience).
+* **[!UICONTROL Custom upload]**: Audiences generated outside of Experience Platform, and uploaded into Experience Platform as CSV files. To learn more about external audiences, see the documentation on [importing an audience](../../segmentation/ui/audience-portal.md#import-audience).
 * Other types of audiences, originating from other Adobe solutions, such as [!DNL Audience Manager].
 
 ![Select audiences step of the activation workflow with several audiences highlighted.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
