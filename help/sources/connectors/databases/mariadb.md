@@ -11,7 +11,7 @@ Experience Platform provides support for ingesting data from a third-party datab
 
 ## Prerequisites {#prerequisites}
 
-Read the following sections for prerequisite set up that you must complete before you can connect your [!DNL MariaDB] account to Experience Platform.
+Read the following sections to complete the prerequisite setup before you connect your [!DNL MariaDB] account to Experience Platform.
 
 ### IP address allowlist 
 
@@ -42,6 +42,7 @@ To use basic authentication, provide the appropriate values for the following cr
 | --- | --- |
 | `server` | The name or IP of your [!DNL MariaDB] database. |
 | `username` | The name of your database. |
+| `port` | The port number of the communication endpoint you are connecting to. |
 | `password` | The username that corresponds with your database. |
 | `database` | The password that corresponds with your database. |
 | `sslMode` | The method by which data is encrypted during data transfer. |
@@ -63,6 +64,7 @@ You must provide values for the following credentials to connect [!DNL MariaDB] 
 | --- | --- |
 | `server` | The name or IP of your [!DNL MariaDB] database. |
 | `username` | The name of your database. |
+| `port` | The port number of the communication endpoint you are connecting to. |
 | `password` | The username that corresponds with your database. |
 | `database` | The password that corresponds with your database. |
 | `sslMode` | The method by which data is encrypted during data transfer. |

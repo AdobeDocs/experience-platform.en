@@ -24,7 +24,7 @@ Read the [[!DNL MariaDB] overview](../../../../connectors/databases/mariadb.md#p
 
 ## Navigate the sources catalog
 
-In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the *[!UICONTROL Sources]* workspace. You can select the appropriate category in the *[!UICONTROL Categories]* panel Alternatively, you can use the search bar to navigate to the specific source that you want to use.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the *[!UICONTROL Sources]* workspace. Select the appropriate category in the *[!UICONTROL Categories]* panel Alternatively, use the search bar to navigate to the specific source that you want to use.
 
 To use [!DNL MariaDB], select the **[!UICONTROL MariaDB]** source card under *[!UICONTROL Databases]* and then select **[!UICONTROL Set up]**.
 
