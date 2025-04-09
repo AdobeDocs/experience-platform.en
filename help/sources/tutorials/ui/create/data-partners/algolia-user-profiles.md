@@ -72,11 +72,11 @@ Once you finish selecting and previewing your data for ingestion, select **[!UIC
 
 ### Provide dataflow details
 
-If you are using an existing dataset, select a dataset that is associate with a schema that is using the [!DNL Algolia Profile] Field Group.
+If you are using an existing dataset, select a dataset that is associated with a schema that is using the [!DNL Algolia Profile] Field Group.
 
 ![The existing dataset step of the sources workflow.](../../../../images/tutorials/create/algolia/user-profiles/dataflow-detail-existing-dataset.png)
 
-If you are creating a new dataset, select a schema that is using the [!DNL Algolia Profile] field group which is required in the Mapping step.
+If you are creating a new dataset, select a schema that is using the [!DNL Algolia Profile] field group which is required in the mapping step.
 
 ![The new dataset step of the sources workflow.](../../../../images/tutorials/create/algolia/user-profiles/dataflow-detail-new-dataset.png)
 
