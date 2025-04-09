@@ -3,6 +3,7 @@ title: Algolia User Profiles Source Overview
 description: Learn about the Algolia User Profiles source in the Adobe Experience Platform
 hide: true
 hidefromtoc: true
+exl-id: b35d4753-4c33-4074-9ed5-50f94dedd8a4
 ---
 # [!DNL Algolia User Profiles]
 

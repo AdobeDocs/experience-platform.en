@@ -3,6 +3,7 @@ title: Connect Algolia User Profiles to Experience Platform using the UI
 description: Learn how to connect Algolia users intent to Experience Platform
 hide: true
 hidefromtoc: true
+exl-id: d4c936a7-4983-4a12-a813-03b672116e44
 ---
 # Ingest [!DNL Algolia User Profiles] data to Experience Platform using the UI
 
