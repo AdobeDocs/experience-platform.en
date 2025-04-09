@@ -3,6 +3,7 @@ title: Customer AI Propensity Scoring Model Card
 description: Learn about the AI model used for Customer AI.
 hide: true
 hidefromtoc: true
+exl-id: b2eeb1d2-3c2b-40a0-b5cd-91e99d99a906
 ---
 # Customer AI Propensity Scoring Model Card
 
