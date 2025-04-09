@@ -9,7 +9,7 @@ Read this document to learn about prerequisite steps that you need to complete b
 
 ## Prerequisites {#prerequisites}
 
-Read the following sections for prerequisite set up that you must complete before you can connect your [!DNL PostgreSQL] database to Experience Platform.
+Read the following sections to complete the prerequisite setup before you connect your [!DNL PostgreSQL] account to Experience Platform.
 
 ### IP address allowlist 
 
