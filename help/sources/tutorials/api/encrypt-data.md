@@ -25,13 +25,13 @@ This document provides steps on how to generate a encryption key pair to encrypt
 
 This tutorial requires you to have a working understanding of the following components of Adobe Experience Platform:
 
-* [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
+* [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
   * [Cloud storage sources](../api/collect/cloud-storage.md): Create a dataflow to bring batch data from your cloud storage source to Experience Platform.
-* [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-### Using Platform APIs
+### Using Experience Platform APIs
 
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../landing/api-guide.md).
+For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../landing/api-guide.md).
 
 ### Supported file extensions for encrypted files {#supported-file-extensions-for-encrypted-files}
 
@@ -215,7 +215,7 @@ A successful response returns your encryption algorithm, name, public key, publi
 
 You can optionally create a sign verification key pair to sign and ingest your encrypted data.
 
-During this stage, you must generate your own private key and public key combination and then use your private key to sign your encrypted data. Next, you must encode your public key in Base64 and then share it to Experience Platform in order for Platform to verify your signature.
+During this stage, you must generate your own private key and public key combination and then use your private key to sign your encrypted data. Next, you must encode your public key in Base64 and then share it to Experience Platform in order for Experience Platform to verify your signature.
 
 ### Share your public key to Experience Platform
 
@@ -316,9 +316,9 @@ curl -X GET \
 
 ## Connect your cloud storage source to Experience Platform using the [!DNL Flow Service] API
 
-Once you have retrieved your encryption key pair, you can now proceed and create a source connection for your cloud storage source and bring your encrypted data to Platform. 
+Once you have retrieved your encryption key pair, you can now proceed and create a source connection for your cloud storage source and bring your encrypted data to Experience Platform. 
 
-First, you must create a base connection to authenticate your source against Platform. To create a base connection and authenticate your source, select the source you would like to use from the list below:
+First, you must create a base connection to authenticate your source against Experience Platform. To create a base connection and authenticate your source, select the source you would like to use from the list below:
 
 * [Amazon S3](../api/create/cloud-storage/s3.md)
 * [[!DNL Apache HDFS]](../api/create/cloud-storage/hdfs.md)
@@ -407,8 +407,8 @@ curl -X POST \
 | Property | Description |
 | --- | --- |
 | `flowSpec.id` | The flow spec ID that corresponds with cloud storage sources. |
-| `sourceConnectionIds` | The source connection ID. This ID represents the transfer of data from source to Platform. |
-| `targetConnectionIds` | The target connection ID. This ID represents where the data lands once it is brought over to Platform. |
+| `sourceConnectionIds` | The source connection ID. This ID represents the transfer of data from source to Experience Platform. |
+| `targetConnectionIds` | The target connection ID. This ID represents where the data lands once it is brought over to Experience Platform. |
 | `transformations[x].params.mappingId` | The mapping ID.|
 | `transformations.name` | When ingesting encrypted files, you must provide `Encryption` as an additional transformations parameter for your dataflow. |
 | `transformations[x].params.publicKeyId` | The public key ID that you created. This ID is one half of the encryption key pair used to encrypt your cloud storage data. |

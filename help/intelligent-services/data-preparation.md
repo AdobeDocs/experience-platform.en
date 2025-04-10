@@ -31,7 +31,7 @@ The preparation process varies depending on whether your data is stored in Adobe
 
 ### External data preparation
 
-If your data is stored outside of Experience Platform, you need to map your data to the required and relevant fields in a [Consumer ExperienceEvent schema](#cee-schema). This schema can be augmented with custom field groups to better capture your customer data. Once mapped, you can create a dataset using your Consumer ExperienceEvent schema and [ingest your data to Platform](../ingestion/home.md). The CEE dataset can then be selected when configuring an [!DNL Intelligent Service].
+If your data is stored outside of Experience Platform, you need to map your data to the required and relevant fields in a [Consumer ExperienceEvent schema](#cee-schema). This schema can be augmented with custom field groups to better capture your customer data. Once mapped, you can create a dataset using your Consumer ExperienceEvent schema and [ingest your data to Experience Platform](../ingestion/home.md). The CEE dataset can then be selected when configuring an [!DNL Intelligent Service].
 
 Depending on the [!DNL Intelligent Service] you wish to use, different fields may be required. Note that it is a best practice to add data to a field if you have the data available. To learn more about the required fields, visit the [Attribution AI](./attribution-ai/input-output.md) or [Customer AI](./customer-ai/data-requirements.md) data requirements guide.
 
@@ -73,7 +73,7 @@ Once the source connector is streaming your data into Experience Platform, you a
 
 ### [!DNL Experience Platform] data preparation
 
-If your data is already stored in [!DNL Platform] and not streaming through the Adobe Analytics or Adobe Audience Manager (Customer AI only) source connectors, follow the steps below. It is still recommended you understand the CEE schema.
+If your data is already stored in [!DNL Experience Platform] and not streaming through the Adobe Analytics or Adobe Audience Manager (Customer AI only) source connectors, follow the steps below. It is still recommended you understand the CEE schema.
 
 1. Review the structure of the [Consumer ExperienceEvent schema](#cee-schema) and determine whether your data can be mapped to its fields.
 2. Contact Adobe Consulting Services to help map your data to the schema and ingest it into [!DNL Intelligent Services], or [follow the steps in this guide](#mapping) if you want to map the data yourself.
@@ -315,7 +315,7 @@ If you have an [!DNL Adobe Experience Platform] subscription and want to map and
 
 >[!NOTE]
 >
->The steps below require a subscription to Experience Platform. If you do not have access to Platform, skip ahead to the [next steps](#next-steps) section.
+>The steps below require a subscription to Experience Platform. If you do not have access to Experience Platform, skip ahead to the [next steps](#next-steps) section.
 
 This section outlines the workflow for mapping and ingesting data into Experience Platform for use in [!DNL Intelligent Services], including links to tutorials for detailed steps.
 
@@ -337,7 +337,7 @@ Once you have created and saved the schema, you can create a new dataset based o
 * [Create a dataset in the UI](../catalog/datasets/user-guide.md#create) (Follow the workflow for using an existing schema)
 * [Create a dataset in the API](../catalog/datasets/create.md)
 
-After the dataset is created, you can find it in the Platform UI within the **[!UICONTROL Datasets]** workspace.
+After the dataset is created, you can find it in the Experience Platform UI within the **[!UICONTROL Datasets]** workspace.
 
 ![](images/data-preparation/dataset-location.png)
 
@@ -349,11 +349,11 @@ If you are ingesting data from a local CSV file, you can skip ahead to the next 
 
 #### Map and ingest data {#ingest}
 
-After creating a CEE schema and dataset, you can start mapping your data tables to the schema and ingest that data into Platform. See the tutorial on [mapping a CSV file to an XDM schema](../ingestion/tutorials/map-csv/overview.md) for steps on how to perform this in the UI. You can use the following [sample JSON file](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) to test the ingestion process before using your own data.
+After creating a CEE schema and dataset, you can start mapping your data tables to the schema and ingest that data into Experience Platform. See the tutorial on [mapping a CSV file to an XDM schema](../ingestion/tutorials/map-csv/overview.md) for steps on how to perform this in the UI. You can use the following [sample JSON file](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) to test the ingestion process before using your own data.
 
 Once a dataset has been populated, the same dataset can be used to ingest additional data files.
 
-If your data is stored in a supported third-party application, you can also choose to create a [source connector](../sources/home.md) to ingest your marketing events data into [!DNL Platform] in real time.
+If your data is stored in a supported third-party application, you can also choose to create a [source connector](../sources/home.md) to ingest your marketing events data into [!DNL Experience Platform] in real time.
 
 ## Next steps {#next-steps}
 

@@ -92,7 +92,7 @@ The following video extension objects are to be included.
 
 >[!TIP]
 > 
->For implementations where multiple eVars or props for each video element can't be used, data element values can be concatenated within Platform, parsed into classification reports using the Classification Rule Builder tool, as explained in [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html), and then applied as a segment in Analysis Workspace.
+>For implementations where multiple eVars or props for each video element can't be used, data element values can be concatenated within Experience Platform, parsed into classification reports using the Classification Rule Builder tool, as explained in [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html), and then applied as a segment in Analysis Workspace.
 
 To concatenate video information values, create a new data element called "Video Meta Data," and program it to pull in all the video data elements (listed above) and assemble them together. For example:
 
@@ -108,4 +108,4 @@ r.push(_satellite.getVar('Extension Version'));
 return r.join('|');
 ```
 
-For more information on how to create and leverage data elements effectively within Platform, read the [data elements](../../../ui/managing-resources/data-elements.md) documentation.
+For more information on how to create and leverage data elements effectively within Experience Platform, read the [data elements](../../../ui/managing-resources/data-elements.md) documentation.

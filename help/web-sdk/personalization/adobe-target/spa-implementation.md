@@ -15,7 +15,7 @@ Modern web applications, such as single-page applications, have instead adopted 
 
 ![Diagram showing the SPA lifecycle compared to traiditional page lifecycle.](assets/spa-vs-traditional-lifecycle.png)
 
-## Benefits of Platform Web SDK for SPAs
+## Benefits of Experience Platform Web SDK for SPAs
 
 Here are some benefits to using Adobe Experience Platform Web SDK for your single-page applications: 
 

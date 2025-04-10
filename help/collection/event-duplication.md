@@ -11,7 +11,7 @@ For real-time data collection, [Experience Events](../xdm/classes/experienceeven
 
 To minimize Experience Event loss, client-side SDKs and the internal Experience Platform delivery service expect a confirmation that an event was successfully collected.
 
-If that confirmation is not received, the client-side SDKs or the internal Platform delivery service trigger a retry, and the Experience Event is sent again.
+If that confirmation is not received, the client-side SDKs or the internal Experience Platform delivery service trigger a retry, and the Experience Event is sent again.
 
 This is a best practice for handling transient failures. The side-effect is the possibility of introducing duplicate events.
 

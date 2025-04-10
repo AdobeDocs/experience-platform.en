@@ -18,7 +18,7 @@ This tutorial requires a working understanding of the following components of Ad
 
 ### Gather required credentials
 
-In order to access your [!DNL Zendesk] account on Platform, you must provide values for the following credentials:
+In order to access your [!DNL Zendesk] account on Experience Platform, you must provide values for the following credentials:
 
 | Credential | Description | Example |
 | --- | --- | --- |
@@ -29,9 +29,9 @@ For more information on authenticating your [!DNL Zendesk] source, see the [[!DN
 
 ![Zendesk API token](../../../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
 
-### Create a Platform schema for [!DNL Zendesk]
+### Create an Experience Platform schema for [!DNL Zendesk]
 
-Before creating a [!DNL Zendesk] source connection, you must also ensure that you first create a Platform schema to use for your source. See the tutorial on [creating a Platform schema](../../../../../xdm/schema/composition.md) for comprehensive steps on how to create a schema.
+Before creating a [!DNL Zendesk] source connection, you must also ensure that you first create an Experience Platform schema to use for your source. See the tutorial on [creating an Experience Platform schema](../../../../../xdm/schema/composition.md) for comprehensive steps on how to create a schema.
 
 For additional guidance on your [!DNL Zendesk] schema required for the [!DNL Zendesk Search API], refer to the [limits](#limits) section below.
 
@@ -39,7 +39,7 @@ For additional guidance on your [!DNL Zendesk] schema required for the [!DNL Zen
 
 ## Connect your [!DNL Zendesk] account
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
@@ -69,7 +69,7 @@ Once your source is authenticated, the page updates into an interactive schema t
 
 ## Next steps
 
-By following this tutorial, you have authenticated and created a source connection between your [!DNL Zendesk] account and Platform. You can now continue on to the next tutorial and [create a dataflow to bring customer success data into Platform](../../dataflow/customer-success.md).
+By following this tutorial, you have authenticated and created a source connection between your [!DNL Zendesk] account and Experience Platform. You can now continue on to the next tutorial and [create a dataflow to bring customer success data into Experience Platform](../../dataflow/customer-success.md).
 
 ## Additional resources
 
@@ -77,9 +77,9 @@ The sections below provides additional resources that you can refer to when usin
 
 ### Validation {#validation}
 
-The following outlines steps you can take to validate that you have successfully connected your [!DNL Zendesk] source and that [!DNL Zendesk] profiles are being ingested to Platform.
+The following outlines steps you can take to validate that you have successfully connected your [!DNL Zendesk] source and that [!DNL Zendesk] profiles are being ingested to Experience Platform.
 
-In the Platform UI, select **[!UICONTROL Datasets]** from the left navigation to access the [!UICONTROL Datasets] workspace. The [!UICONTROL Dataset Activity] screen displays the details of executions.
+In the Experience Platform UI, select **[!UICONTROL Datasets]** from the left navigation to access the [!UICONTROL Datasets] workspace. The [!UICONTROL Dataset Activity] screen displays the details of executions.
 
 ![Activity page](../../../../images/tutorials/create/zendesk/dataset-activity.png)
 
@@ -91,7 +91,7 @@ Finally, select **[!UICONTROL Preview dataset]** to display the data that was in
 
 ![Zendesk dataset](../../../../images/tutorials/create/zendesk/preview-dataset.png)
 
-You can also verify your Platform data against the data on your [!DNL Zendesk] > [!DNL Customers] page.
+You can also verify your Experience Platform data against the data on your [!DNL Zendesk] > [!DNL Customers] page.
 
 ![zendesk-customers](../../../../images/tutorials/create/zendesk/zendesk-customers.png)
 

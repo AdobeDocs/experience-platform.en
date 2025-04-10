@@ -170,6 +170,10 @@ This query assumes that:
 * One identity is sent from the identityMap, and another identity is sent from an identity descriptor. **NOTE**: In Experience Data Model (XDM) schemas, the identity descriptor is the field marked as an identity.
 * The CRMID is sent via identityMap. If the CRMID is sent as a field, remove the `key='Email'` from the WHERE clause.
 
+>[!NOTE]
+>
+>**On WebSDK implementation and ECID duplication**: If the ECID field is marked as an identity (identity descriptor) instead of the identityMap, then a second ECID is generated in the identityMap. This duplication can prevent Real-Time Customer Profile from storing anonymous events due to the presence of two ECIDs in a single event.
+
 ## Graph behavior related issues {#graph-behavior-related-issues}
 
 This section outlines common issues you may encounter regarding how the identity graph behaves.

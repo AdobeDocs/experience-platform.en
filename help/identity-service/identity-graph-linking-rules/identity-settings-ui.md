@@ -65,7 +65,13 @@ From here, you must confirm the following before proceeding to the final step:
 
 ![A confirmation window with the "confirm" button selected.](../images/rules/confirmation.png)
 
-The final step is another confirmation message indicating that existing graphs will only be affected by the graph algorithm **only if the graphs get updated after saving your settings**, and that the primary identity of event fragments on Real-Time Customer Profile will not be updated even after namespace priority changes. Additionally, you are notified that it will take up to **six hours** for your new or updated settings to take effect. To confirm, enter your sandbox name and then select **[!UICONTROL Confirm]**.
+### Confirm your settings {#confirm-your-settings}
+
+>[!IMPORTANT]
+>
+>* The final step is another confirmation message indicating that existing graphs will only be affected by the graph algorithm **only if the graphs get updated after saving your settings**, and that the primary identity of event fragments on Real-Time Customer Profile will not be updated even after namespace priority changes.
+>
+>* Additionally, you are notified that it will take up to **six hours** for your new or updated settings to take effect. To confirm, enter your sandbox name and then select **[!UICONTROL Confirm]**.
 
 ![The confirmation window that displays a warning about a six-hour delay before configurations get processed.](../images/rules/complete.png)
 

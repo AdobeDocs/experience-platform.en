@@ -9,7 +9,7 @@ The following entity relationship diagram (ERD) represents a standardized data m
 
 >[!NOTE]
 >
->The ERD as described is a recommendation for how you should model your data for this industry use case. To make use of this data model in Platform, you must construct the recommended schemas and their relationships yourself. See the guides on managing [schemas](../../ui/resources/schemas.md) and [relationships](../../tutorials/relationship-ui.md) in the UI for more information.
+>The ERD as described is a recommendation for how you should model your data for this industry use case. To make use of this data model in Experience Platform, you must construct the recommended schemas and their relationships yourself. See the guides on managing [schemas](../../ui/resources/schemas.md) and [relationships](../../tutorials/relationship-ui.md) in the UI for more information.
 
 Use the following legend to interpret this ERD:
 

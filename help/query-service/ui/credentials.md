@@ -26,7 +26,7 @@ You can use expiring credentials to quickly set up a connection to an external c
 
 The **[!UICONTROL Expiring credentials]** section provides the following information:
 
-- **[!UICONTROL Host]**: The name of the host to connect your client to. This incorporates the name of your organization as seen in the top ribbon of the Platform UI.
+- **[!UICONTROL Host]**: The name of the host to connect your client to. This incorporates the name of your organization as seen in the top ribbon of the Experience Platform UI.
 - **[!UICONTROL Port]**: The port number of the host to connect to.
 - **[!UICONTROL Database]**: The name of the database to connect a client to.
 - **[!UICONTROL Username]**: The username used to connect to Query Service.
@@ -93,7 +93,7 @@ All the required permissions are now configured in Adobe Developer Console for t
 
 ### Generate credentials {#generate-credentials}
 
-To create a set of non-expiring credentials, return to the Platform UI and select **[!UICONTROL Queries]** from the left navigation to access the [!UICONTROL Queries] workspace. Next, select the **[!UICONTROL Credentials]** tab followed by **[!UICONTROL Generate credentials]**.
+To create a set of non-expiring credentials, return to the Experience Platform UI and select **[!UICONTROL Queries]** from the left navigation to access the [!UICONTROL Queries] workspace. Next, select the **[!UICONTROL Credentials]** tab followed by **[!UICONTROL Generate credentials]**.
 
 ![The Queries dashboard with the Credentials tab and Generate credentials highlighted.](../images/ui/credentials/generate-credentials.png)
 
