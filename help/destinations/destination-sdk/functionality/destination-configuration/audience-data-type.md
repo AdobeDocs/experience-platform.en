@@ -9,7 +9,7 @@ When you build a destination with Destination SDK, you can define the type of au
 
 * [Dataset exports](../../../../catalog/datasets/overview.md): Datasets are collections of structured data stored in the Adobe Experience Platform Data Lake. All data that is successfully ingested into Adobe Experience Platform is stored in datasets. Datasets also contain metadata that describes various aspects of the data they store. 
 * [People audiences](../../../../segmentation/types/people-audiences.md): People audiences are based on customer profiles and they allow you to target specific groups of people for your marketing campaigns, such as frequent buyers or users who abandoned their carts.
-* [Prospect audiences](../../../../segmenta>tion/types/prospect-audiences.md): Use prospect audiences to target individuals who are not yet customers but share characteristics with your target audience. With prospect profiles, you can supplement your customer profiles with attributes from trusted third-party partners. 
+* [Prospect audiences](../../../../segmentation/types/prospect-audiences.md): Use prospect audiences to target individuals who are not yet customers but share characteristics with your target audience. With prospect profiles, you can supplement your customer profiles with attributes from trusted third-party partners. 
 * [Account audiences](../../../../segmentation/types/account-audiences.md): Use account audiences to target individuals within specific organizations, enabling account-based marketing strategies.
 
 The supported audience data type depends on the type of destination that you create.
