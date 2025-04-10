@@ -7,15 +7,21 @@ exl-id: 74a8ef82-cff9-4a7e-95c8-f915eb664eda
 ---
 # Model cards for AI model transparency in Adobe Experience Platform
 
-Model cards are the standard formats by which AI model transparency is communicated. Model cards are public and are intended to improve both existing and prospective customer understanding of the AI models that Adobe uses. Model cards are generally static. However, there are several aspects of AI models that can change over time, including lineage, bias, and other transparency attributes.
+An AI model card is the standard format by which AI model transparency is communicated. Model cards provide comprehensive information about the underlying model that a given AI tool is built on. Model cards include information such as an AI tool's purpose, training data, performance metrics, limitations, and ethical considerations. You can use the transparency that model cards provide to better understand the capabilities and limitations of the model, as well as to better promote responsible and fair use of AI.
+
+Model cards are public and are intended to improve both existing and prospective customer understanding of the AI models that Adobe uses. Model cards are generally static. However, there are several aspects of AI models that can change over time, including lineage, bias, and other transparency attributes.
 
 Read this document to learn about model cards in Adobe Experience Platform.
 
 ## Model card sections {#model-card-sections}
 
+A model card is composed of a variety of different sections, each focusing on a particular aspect of the AI model.
+
 Read the following for a guide on the different sections of a model card, including information the questions they address.
 
 ### Model overview {#model-overview}
+
+The model overview contains general information on an AI model. Use this section to provide information such as the name, purpose, and type of your AI model. Additionally, you can use this section to identify your intended users and elaborate on how your model integrates with Experience Platform.
 
 +++View questions and example answers
 
@@ -33,6 +39,8 @@ Read the following for a guide on the different sections of a model card, includ
 
 ### Intended use {#intended-use}
 
+The intended use section contains information on your AI model's primary use cases. You can use this section to expand on the problems that your model intends to solve, the industries and/or domains that your model is relevant for, and the misuse cases that should be avoided when using your AI model.
+
 +++View questions and example answers
 
 | Question | Information needed | Example answer |
@@ -47,6 +55,8 @@ Read the following for a guide on the different sections of a model card, includ
 +++
 
 ### Model inputs and outputs {#model-inputs-and-outputs}
+
+The model inputs and outputs section contains information on the supported data types that your model takes as input and returns as output. You can use this section to provide examples of the data inputs and outputs that are relevant to your AI model.
 
 +++View questions and example answers
 
@@ -63,6 +73,8 @@ Read the following for a guide on the different sections of a model card, includ
 
 ### Training data {#training-data}
 
+The training data section contains information on the datasets that were used to train a given AI model. You can use this section to elaborate on the size and source of the training data, biases that were identified in the dataset, and how data was preprocessed.
+
 +++View questions and example answers
 
 | Question | Information needed | Example answer |
@@ -77,6 +89,8 @@ Read the following for a guide on the different sections of a model card, includ
 +++
 
 ### Model architecture and training {#model-architecture-and-training}
+
+The model architecture and training section describes the blueprint of your AI model. This section refers to the structure and design of the AI model, including details about the type of algorithm and evaluation methods used. You can also use this section to provide information on the training frameworks used, as well as the compute resources that were used in training.
 
 +++View questions and example answers
 
@@ -94,6 +108,8 @@ Read the following for a guide on the different sections of a model card, includ
 
 ### Performance and evaluation {#performance-and-evaluation}
 
+The performance and evaluation section contains information on the metrics and methods used to assess how well the model performs its intended tasks. You can use this section to provide information on the evaluation metrics that were used, as well as identified weaknesses or failure cases.
+
 +++View questions and example answers
 
 | Question | Information needed | Example answer |
@@ -109,19 +125,23 @@ Read the following for a guide on the different sections of a model card, includ
 
 ### Fairness and bias {#fairness-and-bias}
 
+The fairness and bias section contain information on how the AI model performed with regards to fairness and bias metrics. Fairness refers to the model's ability to provide equitable outcomes across different demographic groups and use cases, while bias refers to systematic errors that result in unfair outcomes. Use this section to elaborate on the fairness checks that were performed and to discuss how the model mitigates bias.
+
 +++View questions and example answers
 
 | Question | Information needed | Example answer |
 | --- | --- | --- |
 | What fairness checks were performed? | The bias analysis and mitigation processes that were performed. | The model underwent demographic parity testing and adversarial fairness evaluations to detect performance disparities across different user segments. |
 | Does the model disproportionately affect certain groups? | Any disparities in the performance that have been identified. | Analysis revealed a 5% performance drop for users with low historical interaction data. To address this, the model incorporates re-weighting techniques during training. |
-| How does the model mitigate bis? | The techniques used to address bias. | The dataset is stratified to ensure proportional representation of different customer demographics, and fairness constraints are introduced during training to prevent the model from favoring any particular group. Regular bias audits are conducted using demographic parity analysis, allowing adjustments if performance disparities are detected. |
+| How does the model mitigate bias? | The techniques used to address bias. | The dataset is stratified to ensure proportional representation of different customer demographics, and fairness constraints are introduced during training to prevent the model from favoring any particular group. Regular bias audits are conducted using demographic parity analysis, allowing adjustments if performance disparities are detected. |
 
 {style="table-layout:auto"}
 
 +++
 
 ### Explainability and interpretability {#explainability-and-interpretability}
+
+The explainability and interpretability section contains information on an AI model's ability to provide clear and understandable explanations and the ease with which a human user can understand how input features affect predictions and answers. Use this section to explain how users can better understand why your model makes certain decisions and what tools or techniques are available for interpretability.
 
 +++View questions and example answers
 
@@ -136,6 +156,12 @@ Read the following for a guide on the different sections of a model card, includ
 
 ### Robustness and generalization {#robustness-and-generalization}
 
+The robustness and generalization section contains information on how well your AI model can perform on unseen data. Additionally, you can use this section to elaborate on how your model maintains its performance and accuracy given unexpected or challenging inputs.
+
+>[!TIP]
+>
+>In AI, "unseen data" refers to data that is different from the data that a given model was trained on.
+
 +++View questions and example answers
 
 | Question | Information needed | Example answer |
@@ -148,6 +174,8 @@ Read the following for a guide on the different sections of a model card, includ
 +++
 
 ### Security and privacy considerations {#security-and-privacy-considerations}
+
+The security and privacy considerations section contains information on the measures and practices implemented to protect sensitive data and ensure your model's safe use. You can use this section to answer questions on how your model handles sensitive data.
 
 +++View questions and example answers
 
@@ -162,6 +190,8 @@ Read the following for a guide on the different sections of a model card, includ
 
 ### Monitoring and maintenance {#monitoring-and-maintenance}
 
+The monitoring and maintenance section contains information on how your model's performance is monitored over time and how often the model is retrained. You can use this section to provide information on how metrics such as accuracy, precision, recall, and latency are tracked.
+
 +++View questions and example answers
 
 | Question | Information needed | Example answer |
@@ -174,6 +204,8 @@ Read the following for a guide on the different sections of a model card, includ
 +++
 
 ### Ethical considerations and responsible AI {#ethical-considerations-and-responsible-ai}
+
+The ethical considerations and responsible AI section contains information on any ethical concerns that are associated with your AI Model. This section also contains how well your model algins with responsible AI principles. Use this section to provide information on the potential ethical impacts of your model's use, including recognizing biases, ensuring fairness, and preventing harm to individuals or groups.
 
 +++View questions and example answers
 
@@ -188,6 +220,8 @@ Read the following for a guide on the different sections of a model card, includ
 
 ### Known limitations {#known-limitations}
 
+The known limitations section contains information on the existing limitations that have identified for your AI model. Use this section to underline the conditions in which your AI model may perform poorly and to outline any limitations that users must be aware of.
+
 +++View questions and example answers
 
 | Question | Information needed | Example answer |
@@ -200,6 +234,8 @@ Read the following for a guide on the different sections of a model card, includ
 +++
 
 ### Future improvements {#future-improvements}
+
+The future improvements section contains information on feature updates that are planned for your AI model. Use this section to elaborate on your enhancement roadmap.
 
 +++View questions and example answers
 
