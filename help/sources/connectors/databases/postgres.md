@@ -9,7 +9,7 @@ Read this document to learn about prerequisite steps that you need to complete b
 
 ## Prerequisites {#prerequisites}
 
-Read the following sections to complete the prerequisite setup before you connect your [!DNL PostgreSQL] account to Experience Platform.
+Read the following sections to complete the prerequisite setup before you connect your [!DNL PostgreSQL] database to Experience Platform.
 
 ### IP address allowlist 
 
@@ -23,6 +23,8 @@ You must provide values for the following authentication credentials to connect 
 
 >[!TAB Account key authentication]
 
+Provide values for the following credentials to connect your [!DNL PostgreSQL] database to Experience Platform on Azure using account key authentication.
+
 | Credential | Description |
 | --- | --- |
 | `connectionString` | The connection string associated with your [!DNL PostgreSQL] account. The [!DNL PostgreSQL] connection string pattern is: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
@@ -32,14 +34,16 @@ Read the [[!DNL PostgreSQL] documentation](https://www.postgresql.org/docs/curre
 
 >[!TAB Basic authentication]
 
+Provide values for the following credentials to connect your [!DNL PostgreSQL] database to Experience Platform on Azure using basic authentication.
+
 | Credential | Description |
 | --- | --- |
 | `server` | The name or IP address of your [!DNL PostgreSQL] database. |
-| `port` | The port number of the database server. |
+| `port` | The TCP port of your [!DNL PostgreSQL] server. |
 | `username` | The username associated with your [!DNL PostgreSQL] database authentication. |
 | `password` | The password associated with your [!DNL PostgreSQL] database authentication. |
-| `database` | The name of your [!DNL PostgreSQL] database. |
-| `sslMode` | The method by which data is encrypted during data transfer. The available values include: `Disable`, `Allow`, `Prefer`, `Verify Ca`, and `Verify Full`. |
+| `database` | The name of the [!DNL PostgreSQL] database that you want to connect to. |
+| `sslMode` | The [!DNL Secure Sockets Layer] (SSL) method to be applied to your connection. The available values are: <ul><li>`Disable`: Use this option to disable SSL. If your server requires an SSL configuration, then the connection will fail.</li><li>`Allow`: Use this option to allow SSL connections. Non-SSL connections may still be used if the server supports them.</li><li>`Prefer`: Use this option to prefer SSL connections given that the server supports them. This option also allows for non-SSL connections.</li><li>`Require`: Use this option to make SSL connections mandatory. If the server does not support SSL, then the connections will fail.</li><li>`Verify-Ca`: Use this option to verify server certificates while failing connections if the server does not support SSL.</li><li>`Verify-Full`: Use this option to verify server certificates with the host's name while failing connections if the server does not support SSL.</li></ul> |
 
 Read the [[!DNL PostgreSQL] documentation](https://www.postgresql.org/docs/current/) for more information.
 
@@ -51,26 +55,26 @@ Read the [[!DNL PostgreSQL] documentation](https://www.postgresql.org/docs/curre
 >
 >This section applies to implementations of Experience Platform running on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../../landing/multi-cloud.md).
 
-You must provide values for the following authentication credentials to connect your [!DNL PostgreSQL] database to Experience Platform on AWS.
+Provide values for the following credentials to connect your [!DNL PostgreSQL] database to Experience Platform on AWS using basic authentication.
 
 | Credential | Description |
 | --- | --- |
 | `server` | The name or IP address of your [!DNL PostgreSQL] database. |
-| `port` | The port number of the database server. |
+| `port` | The TCP port of your [!DNL PostgreSQL] server. |
 | `username` | The username associated with your [!DNL PostgreSQL] database authentication. |
 | `password` | The password associated with your [!DNL PostgreSQL] database authentication. |
-| `database` | The name of your [!DNL PostgreSQL] database. |
-| `sslMode` | The method by which data is encrypted during data transfer. The available values include: `Disable`, `Allow`, `Prefer`, `Verify Ca`, and `Verify Full`. |
+| `database` | The name of the [!DNL PostgreSQL] database that you want to connect to. |
+| `sslMode` | The [!DNL Secure Sockets Layer] (SSL) method to be applied to your connection. The available values are: <ul><li>`Disable`: Use this option to disable SSL. If your server requires an SSL configuration, then the connection will fail.</li><li>`Allow`: Use this option to allow SSL connections. Non-SSL connections may still be used if the server supports them.</li><li>`Prefer`: Use this option to prefer SSL connections given that the server supports them. This option also allows for non-SSL connections.</li><li>`Require`: Use this option to make SSL connections mandatory. If the server does not support SSL, then the connections will fail.</li><li>`Verify-Ca`: Use this option to verify server certificates while failing connections if the server does not support SSL.</li><li>`Verify-Full`: Use this option to verify server certificates with the host's name while failing connections if the server does not support SSL.</li></ul> |
 
 Read the [[!DNL PostgreSQL] documentation](https://www.postgresql.org/docs/current/) for more information.
 
 ## Connect [!DNL PostgreSQL] to Experience Platform using APIs
 
-- [Create a [!DNL PostgreSQL] base connection using the Flow Service API](../../tutorials/api/create/databases/postgres.md)
-- [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
-- [Create a dataflow for a database source using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
+* [Create a [!DNL PostgreSQL] base connection using the Flow Service API](../../tutorials/api/create/databases/postgres.md)
+* [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
+* [Create a dataflow for a database source using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Connect [!DNL PostgreSQL] to Experience Platform using the UI
 
-- [Create a [!DNL PostgreSQL] source connection in the UI](../../tutorials/ui/create/databases/postgres.md)
-- [Create a dataflow for a database source connection in the UI](../../tutorials/ui/dataflow/databases.md)
+* [Create a [!DNL PostgreSQL] source connection in the UI](../../tutorials/ui/create/databases/postgres.md)
+* [Create a dataflow for a database source connection in the UI](../../tutorials/ui/dataflow/databases.md)
