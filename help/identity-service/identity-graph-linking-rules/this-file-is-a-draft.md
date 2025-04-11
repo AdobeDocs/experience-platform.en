@@ -15,7 +15,7 @@ Customer graph scenarios can be grouped into three different categories: beginne
 
 {style="table-layout:auto"}
 
-## Use case 1 (beginner)
+## Use case 1: Beginner-level integration
 
 Generally, Adobe customers have a single cross-device ID that is used across all of their properties, including web, mobile, apps, etc. This system is both industry and geographically agnostic as customers in retail, telecom, and financial services use this implementation.
 
@@ -30,7 +30,7 @@ CRMID: John, ECID: 999, IDFA: a-b-c
 
 **Resulting graph**
 
-(graph here)
+![An identity graph with one CRMID.]
 
 **Identity settings (algorithm) configuration**
 
@@ -79,3 +79,7 @@ CRMID: Jane, IDFA: a-b-c
 ### Anonymous event association and how authenticated events are associated
 
 A common question is: "If the ECID is linked from John to Jane, then will John's events (on Real-Time Customer Profile) also move over to Jane?"
+
+## Use case 2: Intermediate-level integration
+
+You are a data architect working for a commercial bank that issues credit cards. Your marketing team has indicated that they want to include past credit card transaction history to a profile.
