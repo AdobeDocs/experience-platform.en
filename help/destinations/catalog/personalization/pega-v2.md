@@ -14,15 +14,19 @@ Profile audience membership from Adobe Experience Platform, when loaded into [!D
 >
 >This destination connector and documentation page are created and maintained by Pegasystems. For any inquiries or update requests, please contact Pega directly [here](mailto:support@pega.com).
 
-## Use cases 
+## Use cases {#use-cases}
 
 To help you better understand how and when you should use the [!DNL Customer Decision Hub] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
-### Telecommunications
+### Use case #1 {#use-case-1}
 
-A marketer wants to leverage insights from data science model-based next best action as delivered by [!DNL Pega Customer Decision Hub] for customer engagement. [!DNL Pega Customer Decision Hub] is heavily reliant on customer intent – for example "Interested_In_5G", "Interested_in_Unlimited_Dataplan" or "Interest_in_iPhone_accessories".
+For Telecommunications:
 
-### Financial services
+A marketer wants to leverage insights from data science model-based next best action as delivered by [!DNL Pega Customer Decision Hub] for customer engagement. [!DNL Pega Customer Decision Hub] relies significantly on customer intent, such as "Interested_In_5G", "Interested_in_Unlimited_Dataplan" or "Interest_in_iPhone_accessories" to determine the next-best-action (NBA) decisioning in outbound channels.
+
+### Use case #2 {#use-case-2}
+
+For Financial services:
 
 A marketer wants to optimize the offers for customers who subscribed or unsubscribed from Pension Plan or Retirement Plan newsletters. Financial services companies can ingest multiple Customer IDs from their own CRMs into Adobe Experience Platform, build audiences from their own offline data, and send profiles that are entering and exiting the audiences to [!DNL Pega Customer Decision Hub] for next-best-action (NBA) decisioning in outbound channels.
 
@@ -50,7 +54,6 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | Export all members of an audience with identifier (*CustomerID*), attributes (last name, first name, location, etc.) and Audience Membership data.|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are always-on API-based connections. As soon as a profile is updated in Experience Platform, based on audience evaluation, the connector sends the update downstream to the destination platform. For more information, see [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
@@ -81,8 +84,8 @@ To configure details for the destination, fill in the required fields and select
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Pega CDH Host Name]**: The Pega Customer Decision Hub Host Name to which the profile gets exported as json data.
-*  **[!UICONTROL Application alias]**: The application alias is configured for the Customer Decision Hub.
+*  **[!UICONTROL Pega CDH Host Name]**: The Pega Customer Decision Hub Host Name to which the profile gets exported as JSON data.
+*  **[!UICONTROL Application alias]**: The application alias that you configured for your Customer Decision Hub account. For more information, See [Adding an application URL alias](https://docs.pega.com/bundle/platform/page/platform/user-experience/adding-application-url-alias.html) in your [!DNL Pega Customer Decision Hub] instance.
 
 ## Activate audiences to this destination {#activate}
 
