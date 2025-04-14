@@ -381,3 +381,4 @@ Only audiences with the origin of Segmentation Service are supported for flexibl
 Flexible audience evaluation runs that were created either using the API or the UI count towards the maximum limit. However, the daily batch segmentation job run that runs on a nightly basis does **not** contribute towards this limit.
 
 +++
+
