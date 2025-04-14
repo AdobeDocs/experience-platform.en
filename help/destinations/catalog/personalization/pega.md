@@ -37,7 +37,7 @@ Before you can use this destination to export data out of Adobe Experience Platf
 
 * Configure the [Adobe Experience Platform Profile and Audience Membership integration Component](https://docs.pega.com/bundle/components/page/customer-decision-hub/components/adobe-membership-component.html) in your [!DNL Pega Customer Decision Hub] instance.
 * Configure OAuth 2.0 [Client Registration using Client Credentials](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html) grant type in your [!DNL Pega Customer Decision Hub] instance.
-* Configure [real-time run data flow](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html) for  Adobe Audience Membership data flow in your [!DNL Pega Customer Decision Hub] instance.
+* Configure [real-time run data flow](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html) for Adobe Audience Membership data flow in your [!DNL Pega Customer Decision Hub] instance.
 
 ## Supported identities {#supported-identities}
 
@@ -86,7 +86,7 @@ To configure details for the destination, fill in the required fields and select
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Pega CDH Host Name]**: The Pega Customer Decision Hub Host Name to which the profile gets exported as json data.
+*  **[!UICONTROL Pega CDH Host Name]**: The Pega Customer Decision Hub Host Name to which the profile gets exported as JSON data.
 
 ## Activate audiences to this destination {#activate}
 
