@@ -22,9 +22,9 @@ Built on RESTful APIs, [!DNL Experience Platform] exposes the full functionality
 
 ## [!DNL Experience Platform] documentation
 
-[!DNL Experience Platform] documentation is provided in multiple formats for a variety of features and applications. To learn more about the types of documentation that are available, please visit the [Platform documentation overview](documentation/overview.md). 
+[!DNL Experience Platform] documentation is provided in multiple formats for a variety of features and applications. To learn more about the types of documentation that are available, please visit the [Experience Platform documentation overview](documentation/overview.md). 
 
-To begin learning more about a specific [!DNL Platform] service, return to the [documentation landing page](https://experienceleague.adobe.com/docs/experience-platform.html) and select the appropriate guide.
+To begin learning more about a specific [!DNL Experience Platform] service, return to the [documentation landing page](https://experienceleague.adobe.com/docs/experience-platform.html) and select the appropriate guide.
 
 ### Documentation for applications built on [!DNL Experience Platform]
 
@@ -43,14 +43,14 @@ The video below describes the use cases of each application built on top of Expe
 
 ## [!DNL Experience Platform] tutorials
 
-You can get started with [!DNL Platform] quickly and easily by following along with step-by-step tutorials covering everything from preparing your data for ingestion to advanced machine-learning algorithms. These tutorials have been designed to supplement the information found within the [!DNL Experience Platform] documentation, so for best results keep the documentation on-hand while completing the tutorials. 
+You can get started with [!DNL Experience Platform] quickly and easily by following along with step-by-step tutorials covering everything from preparing your data for ingestion to advanced machine-learning algorithms. These tutorials have been designed to supplement the information found within the [!DNL Experience Platform] documentation, so for best results keep the documentation on-hand while completing the tutorials. 
 
 Visit the [Experience Platform tutorials](https://www.adobe.com/go/platform-tutorials-home-en) landing page to get started.
 
 ## Reference documents and resources
 
 * [**API fundamentals**](api-fundamentals.md)  
-Learn the basics of working with [!DNL Platform] APIs.
+Learn the basics of working with [!DNL Experience Platform] APIs.
 
 * [**API reference documents**](https://www.adobe.com/go/platform-api-reference-en)  
 Discover [!DNL Experience Platform] APIs, including headers, parameters, sample requests, and responses.<br/>*These documents are hosted on Adobe I/O.*

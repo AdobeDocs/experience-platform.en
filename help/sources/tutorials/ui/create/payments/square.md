@@ -6,7 +6,7 @@ exl-id: 7cdfeb36-c989-4875-bb94-e6594ddf30da
 ---
 # Create a [!DNL Square] source connection in the UI
 
-This tutorial provides steps for creating a [!DNL Square] source connector using the Platform user interface.
+This tutorial provides steps for creating a [!DNL Square] source connector using the Experience Platform user interface.
 
 ## Getting started
 
@@ -19,7 +19,7 @@ This tutorial requires a working understanding of the following components of Ad
 
 ### Gather required credentials
 
-In order to access your [!DNL Square] account Platform, you must provide the following values:
+In order to access your [!DNL Square] account Experience Platform, you must provide the following values:
 
 | Credential | Description |
 | --- | --- |
@@ -31,11 +31,11 @@ In order to access your [!DNL Square] account Platform, you must provide the fol
 
 For more information on these credentials and how to obtain them, see the [[!DNL Square] documentation on OAuth](https://developer.squareup.com/docs/oauth-api/receive-and-manage-tokens).
 
-Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Square] account to Platform.
+Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Square] account to Experience Platform.
 
 ## Connect your [!DNL Square] account
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
@@ -59,4 +59,4 @@ If you are creating a new account, select **[!UICONTROL New account]**, and then
 
 ## Next steps
 
-By following this tutorial, you have authenticated and created a source connection between your [!DNL Square] account and Platform. You can now continue on to the next tutorial and [create a dataflow to bring payments data into Platform](../../dataflow/payments.md).
+By following this tutorial, you have authenticated and created a source connection between your [!DNL Square] account and Experience Platform. You can now continue on to the next tutorial and [create a dataflow to bring payments data into Experience Platform](../../dataflow/payments.md).

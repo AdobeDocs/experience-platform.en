@@ -13,7 +13,7 @@ To view all available endpoints and CRUD operations, visit the [[!DNL Audit Quer
 
 ## Events
 
-Audit events provide insights on user actions in Platform, including the action type, date and time, the email ID of the user who performed the action, and additional attributes relevant to the action type for various features in Adobe Experience Platform. To learn how to retrieve metrics using the API, see the [events endpoint guide](./events.md).
+Audit events provide insights on user actions in Experience Platform, including the action type, date and time, the email ID of the user who performed the action, and additional attributes relevant to the action type for various features in Adobe Experience Platform. To learn how to retrieve metrics using the API, see the [events endpoint guide](./events.md).
 
 ## Export
 

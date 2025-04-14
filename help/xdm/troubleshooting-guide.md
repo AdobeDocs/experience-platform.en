@@ -7,9 +7,9 @@ exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
 ---
 # XDM System troubleshooting guide
 
-This document provides answers to frequently asked questions about [!DNL Experience Data Model] (XDM) and XDM System in Adobe Experience Platform, including a troubleshooting guide for common errors. For questions and troubleshooting related to other Platform services, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
+This document provides answers to frequently asked questions about [!DNL Experience Data Model] (XDM) and XDM System in Adobe Experience Platform, including a troubleshooting guide for common errors. For questions and troubleshooting related to other Experience Platform services, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
 
-**[!DNL Experience Data Model] (XDM)** is an open-source specification that defines standardized schemas for customer experience management. The methodology on which [!DNL Experience Platform] is built, **XDM System**, operationalizes [!DNL Experience Data Model] schemas for use by [!DNL Platform] services. The **[!DNL Schema Registry]** provides a user interface and a RESTful API to access the **[!DNL Schema Library]** within [!DNL Experience Platform]. See the [XDM documentation](home.md) for more information.
+**[!DNL Experience Data Model] (XDM)** is an open-source specification that defines standardized schemas for customer experience management. The methodology on which [!DNL Experience Platform] is built, **XDM System**, operationalizes [!DNL Experience Data Model] schemas for use by [!DNL Experience Platform] services. The **[!DNL Schema Registry]** provides a user interface and a RESTful API to access the **[!DNL Schema Library]** within [!DNL Experience Platform]. See the [XDM documentation](home.md) for more information.
 
 ## FAQ
 

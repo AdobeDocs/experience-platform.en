@@ -79,7 +79,7 @@ The [!DNL Demandbase] schema is called **Company Intent Weekly**. It is the week
  
 ## Connect your [!DNL Demandbase] account to Experience Platform in the UI
 
-Now that you have completed the prerequisite setup for [!DNL Demandbase], you can now proceed to [connect your [!DNL Demandbase] account to Experience Platform using the UI]Once you have completed your prerequisite setup, read the tutorial on [connecting your [!DNL Demandbase] account to Experience Platform](../../tutorials/ui/create/data-partners/demandbase.md) to start your integration.
+Once you have completed your prerequisite setup, read the tutorial on [connecting your [!DNL Demandbase] account to Experience Platform](../../tutorials/ui/create/data-partners/demandbase.md) to start your integration.
 
 ## Frequently asked questions {#faq}
 

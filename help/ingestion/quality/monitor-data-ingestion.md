@@ -7,7 +7,7 @@ exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
 ---
 # Monitoring data ingestion
 
-Data ingestion allows you to ingest your data to Adobe Experience Platform. You can either use batch ingestion, which allows you to insert your data using various file types (such as CSVs), or streaming ingestion, which allows you to ingest your data to [!DNL Platform] using streaming endpoints in real time.
+Data ingestion allows you to ingest your data to Adobe Experience Platform. You can either use batch ingestion, which allows you to insert your data using various file types (such as CSVs), or streaming ingestion, which allows you to ingest your data to [!DNL Experience Platform] using streaming endpoints in real time.
 
 This user guide provides steps on how to monitor your data within Adobe Experience Platform user interface. This guide requires you to have an Adobe ID and access to Adobe Experience Platform.
 
@@ -26,7 +26,7 @@ This user guide provides steps on how to monitor your data within Adobe Experien
 
 In the [Experience Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** on the left navigation menu, followed by **[!UICONTROL Streaming end-to-end]**.
 
-The **[!UICONTROL Streaming end-to-end]** monitoring page appears. This workspace provides a graph that displays the rate of streamed events being received by [!DNL Platform], a graph that displays the rate of streamed events which were successfully processed by [[!DNL Real-Time Customer Profile]](../../profile/home.md), as well as a detailed list of incoming data.
+The **[!UICONTROL Streaming end-to-end]** monitoring page appears. This workspace provides a graph that displays the rate of streamed events being received by [!DNL Experience Platform], a graph that displays the rate of streamed events which were successfully processed by [[!DNL Real-Time Customer Profile]](../../profile/home.md), as well as a detailed list of incoming data.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 

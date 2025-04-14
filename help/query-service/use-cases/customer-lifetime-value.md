@@ -67,7 +67,7 @@ Examples of custom CLV widgets that use decile buckets can be seen below.
 
 ## Create and activate high-performance audiences {#create-and-activate-audiences}
 
-The next step is to build a segment definition and generate audiences from your Real-Time Customer Profile data. See the Segment Builder UI guide to learn how to [create and activate audiences in Platform](../../segmentation/ui/segment-builder.md). The guide provides sections on how to:
+The next step is to build a segment definition and generate audiences from your Real-Time Customer Profile data. See the Segment Builder UI guide to learn how to [create and activate audiences in Experience Platform](../../segmentation/ui/segment-builder.md). The guide provides sections on how to:
 
 * Create segment definitions using a combination of attributes, events, and existing audiences as building blocks.
 * Use the rule builder canvas and containers to control the order in which the segmentation rules are executed.
@@ -79,7 +79,7 @@ Alternatively, there is also a [segment builder video tutorial](https://experien
 
 ## Activate your audience for an email campaign {#activate-audience-for-campaign}
 
-Once you have built your audience, you are ready to activate it to a destination. Platform supports a variety of Email Service Providers (ESPs) that enable you to manage your email marketing activities, such as sending promotional email campaigns. 
+Once you have built your audience, you are ready to activate it to a destination. Experience Platform supports a variety of Email Service Providers (ESPs) that enable you to manage your email marketing activities, such as sending promotional email campaigns. 
 
 Check the [email marketing destinations overview](../../destinations/catalog/email-marketing/overview.md#connect-destination) for a list of the supported destinations that you want to export data to (for example the [Oracle Eloqua](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) page).
 
@@ -105,7 +105,7 @@ By reading this document you should have a better understanding of how you can u
 
 * [An end-to-end example of an abandoned browse use case that demonstrates the versatility and benefits of Query Service.](./abandoned-browse.md)
 * [How to use Query Service and machine learning to determine and filter bot activity from genuine online website visitor traffic](./bot-filtering.md)
-* [How to perform a match on your Platform data that combines results from multiple datasets by approximately matching a string of your choice.](./fuzzy-match.md)
+* [How to perform a match on your Experience Platform data that combines results from multiple datasets by approximately matching a string of your choice.](./fuzzy-match.md)
 
 <!-- "Data signals are actions taken by consumers while online that offer clues about intent that can be acted upon. This includes anything from visiting a website to filling out a change of address or clicking an ad."  -->
 

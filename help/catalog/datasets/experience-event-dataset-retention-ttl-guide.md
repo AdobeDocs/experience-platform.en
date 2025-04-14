@@ -32,7 +32,7 @@ TTL is useful when managing time-sensitive data that loses relevance over time. 
 
 ### Industry example {#industry-example}
 
-As an example, consider a video streaming service that tracks user interactions, such as video views, searches, and recommendations. While recent engagement data is crucial for personalization, older activity logs (for example, interactions from over a year ago) lose relevance. By using row-level expiration, Platform automatically removes outdated logs, ensuring only current and meaningful data is used for analytics and recommendations.
+As an example, consider a video streaming service that tracks user interactions, such as video views, searches, and recommendations. While recent engagement data is crucial for personalization, older activity logs (for example, interactions from over a year ago) lose relevance. By using row-level expiration, Experience Platform automatically removes outdated logs, ensuring only current and meaningful data is used for analytics and recommendations.
 
 ## Evaluate TTL suitability
 
@@ -44,11 +44,13 @@ Before applying a retention policy, assess whether your dataset is a good candid
 
 If historical records are essential for long-term analysis or business operations, TTL may not be the right approach. Reviewing these factors ensures that TTL aligns with your data retention needs without negatively affecting data availability.
 
-## Plan your queries
+## Plan your queries {#plan-queries}
 
-Before applying TTL, use queries to analyze dataset size and relevance. Running targeted queries helps determine how much data would be retained or removed under different TTL configurations.
+Before applying TTL, it's important to assess dataset size and data relevance, and to evaluate how much historical data should be retained. The following visual outlines the full process of implementing TTL, from planning queries to monitoring retention effectiveness.
 
-For example, the following SQL query counts the number of records created within the last 30 days:
+![A visual workflow for implementing TTL on Experience Event Datasets. Steps include: assess data lifespan and impact of removal, validate TTL settings with queries, configure TTL through Catalog Service API, and continuously monitor TTL impact and make adjustments.](../images/datasets/dataset-retention-ttl-guide/manage-experience-event-dataset-retention-in-the-data-lake.png)
+
+Running targeted queries helps determine how much data would be retained or removed under different TTL configurations. For example, the following SQL query counts the number of records created within the last 30 days:
 
 ```sql
 SELECT COUNT(1) FROM [datasetName] WHERE timestamp > date_sub(now(), INTERVAL 30 DAY);
@@ -70,7 +72,7 @@ To begin your TTL management, first check current TTL settings. Make a GET reque
 
 >[!TIP]
 >
->The Platform Gateway URL and base path for the Catalog Service API is: `https://platform.adobe.io/data/foundation/catalog`.
+>The Experience Platform Gateway URL and base path for the Catalog Service API is: `https://platform.adobe.io/data/foundation/catalog`.
 
 **API format**
 
@@ -369,13 +371,13 @@ You can apply retention policies to datasets created using the XDM ExperienceEve
 ### How soon will the Dataset Retention job delete data from data lake services?
 
 +++Answer
-Dataset TTLs are evaluated and processed weekly, deleting all expired records. An event is considered expired if it was ingested into Platform more than 30 days ago (ingestion date > 30 days) and its event date exceeds the defined retention period (TTL).
+Dataset TTLs are evaluated and processed weekly, deleting all expired records. An event is considered expired if it was ingested into Experience Platform more than 30 days ago (ingestion date > 30 days) and its event date exceeds the defined retention period (TTL).
 +++
 
 ### How soon will the Dataset Retention job delete data from Profile services?
 
 +++Answer
-Once a retention policy is set, existing events in Platform are immediately deleted if their event timestamp exceeds the retention period (TTL). New events are deleted once their timestamp surpasses the retention period.
+Once a retention policy is set, existing events in Experience Platform are immediately deleted if their event timestamp exceeds the retention period (TTL). New events are deleted once their timestamp surpasses the retention period.
 
 For example, if you apply a 30-day expiration policy on May 15th, the following occurs:
 
@@ -430,6 +432,6 @@ For more details, see the [Create derived datasets with SQL guide](../../query-s
 
 Now that you've learned how to manage TTL settings for row-level expiration, review the following documentation to further your understanding of TTL management:
 
-- Retention jobs: Learn to schedule and automate dataset expirations in the Platform UI with the [data lifecycle UI guide](../../hygiene/ui/dataset-expiration.md), or check Dataset Retention configurations and verify that expired records are deleted.
+- Retention jobs: Learn to schedule and automate dataset expirations in the Experience Platform UI with the [data lifecycle UI guide](../../hygiene/ui/dataset-expiration.md), or check Dataset Retention configurations and verify that expired records are deleted.
 - [Dataset Expiration API endpoint guide](../../hygiene/api/dataset-expiration.md): Discover how to delete entire datasets rather than just rows. Learn how to schedule, manage, and automate dataset expiration using the API to ensure efficient data retention.
 - [Data usage policies overview](../../data-governance/policies/overview.md): Learn how to align your data retention strategy with broader compliance requirements and marketing use restrictions.
