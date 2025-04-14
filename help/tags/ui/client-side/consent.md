@@ -30,7 +30,7 @@ In the Link Tracking section of the [!DNL Analytics] extension's configuration s
 * Track download links
 * Track outbound links
 
-When these settings are not selected, Platform does not fire [!DNL Adobe Analytics] automatically. [!DNL Analytics] fires only if you specifically tell it to in a rule action. Use the rule conditions to determine when and what to fire. For example, to use cookies to determine opt-in status, set a data element to read that cookie and use it as a condition in the rule to determine when to fire the Send Beacon action. 
+When these settings are not selected, Experience Platform does not fire [!DNL Adobe Analytics] automatically. [!DNL Analytics] fires only if you specifically tell it to in a rule action. Use the rule conditions to determine when and what to fire. For example, to use cookies to determine opt-in status, set a data element to read that cookie and use it as a condition in the rule to determine when to fire the Send Beacon action. 
 
 Separately, you could consider using the [Adobe opt-in object](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html) to control the firing of this tag in concert with your consent management platform.
 

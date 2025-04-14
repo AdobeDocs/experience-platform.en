@@ -91,11 +91,11 @@ In order to access data collection features, you must enable all permissions in 
 
 ![Image showing the Data Collection product card in Admin Console](./images/permissions/platform-permission-card.png)
 
-See the [access control UI guide](../access-control/ui/overview.md) for detailed instructions on managing Platform permissions.
+See the [access control UI guide](../access-control/ui/overview.md) for detailed instructions on managing Experience Platform permissions.
 
 >[!NOTE]
 >
->Depending on the product SKUs your organization has access to, you may not have every Platform permission available to you.
+>Depending on the product SKUs your organization has access to, you may not have every Experience Platform permission available to you.
 
 ### Manage permissions under Adobe Experience Platform Data Collection {#manage-collection}
 

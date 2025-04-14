@@ -31,7 +31,7 @@ Computed attributes enable capability to easily summarize event data into profil
 
 ## Alerts {#alerts}
 
-Experience Platform allows you to subscribe to event-based alerts for various Platform activities. You can subscribe to different alert rules through the [!UICONTROL Alerts] tab in the Platform user interface, and can choose to receive alert messages within the UI itself or through email notifications.
+Experience Platform allows you to subscribe to event-based alerts for various Experience Platform activities. You can subscribe to different alert rules through the [!UICONTROL Alerts] tab in the Experience Platform user interface, and can choose to receive alert messages within the UI itself or through email notifications.
 
 **New or updated features**
 
@@ -97,7 +97,7 @@ Experience Platform provides a suite of data hygiene capabilities that allow you
 
 {style="table-layout:auto"}
 
-For more information on Platform's data hygiene capabilities, refer to the [data hygiene overview](../../hygiene/home.md).
+For more information on Experience Platform's data hygiene capabilities, refer to the [data hygiene overview](../../hygiene/home.md).
 
 ## Destinations {#destinations}
 
@@ -174,7 +174,7 @@ XDM is an open-source specification that provides common structures and definiti
 
 {style="table-layout:auto"}
 
-For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md)
+For more information on XDM in Experience Platform, see the [XDM System overview](../../xdm/home.md)
 
 ## Identity Service {#identity-service}
 
@@ -208,7 +208,7 @@ For more information on Query Services, refer to the [Query Service overview](..
 
 ## Segmentation Service {#segmentation}
 
-[!DNL Segmentation Service] allows you to segment data stored in [!DNL Experience Platform] that relates to individuals (such as customers, prospects, users, or organizations) into audiences. You can create audiences through segment definitions or other sources from your [!DNL Real-Time Customer Profile] data. These audiences are centrally configured and maintained on [!DNL Platform], and are readily accessible by any Adobe solution. 
+[!DNL Segmentation Service] allows you to segment data stored in [!DNL Experience Platform] that relates to individuals (such as customers, prospects, users, or organizations) into audiences. You can create audiences through segment definitions or other sources from your [!DNL Real-Time Customer Profile] data. These audiences are centrally configured and maintained on [!DNL Experience Platform], and are readily accessible by any Adobe solution. 
 
 **New or updated features**
 

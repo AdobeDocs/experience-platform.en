@@ -21,7 +21,7 @@ The following sections provide information on preparing the required authorizati
 
 ### Required permissions {#required-permissions}
 
-To enable secure data access restrictions in Query Service, you need the **[!UICONTROL Manage Allowed List]** permission. This permission allows organizations to define specific IP ranges (in IPv4 or IPv6 format) that are authorized to access data in Platform via the SQL interface. Access is managed at the sandbox level, where users can configure a list of approved IP addresses or CIDR blocks that restrict access only to permitted networks.
+To enable secure data access restrictions in Query Service, you need the **[!UICONTROL Manage Allowed List]** permission. This permission allows organizations to define specific IP ranges (in IPv4 or IPv6 format) that are authorized to access data in Experience Platform via the SQL interface. Access is managed at the sandbox level, where users can configure a list of approved IP addresses or CIDR blocks that restrict access only to permitted networks.
 
 >[!NOTE]
 >
@@ -29,13 +29,13 @@ To enable secure data access restrictions in Query Service, you need the **[!UIC
 
 The following functionalities are available with the **[!UICONTROL Manage Allowed List]** permission:
 
-- **Define allowed IP ranges**: Only IP addresses or CIDR blocks from these defined ranges can access data in Platform using SQL through Query Service.
+- **Define allowed IP ranges**: Only IP addresses or CIDR blocks from these defined ranges can access data in Experience Platform using SQL through Query Service.
 - **Enforce IP range checks**: Connections from IPs outside the allowed ranges are denied.
 - **Audit and alerting capabilities**: All access attempts, including denied connections, are logged as audit events. These events are available in the [Adobe Experience Platform Audit Logs](../../landing/governance-privacy-security/audit-logs/overview.md), enabling monitoring of potential security breaches.
 
 ### Gather values for required headers {#gather-values-for-required-headers}
 
-To make calls to the Data Distiller Authorization API, you must complete the [Platform API authentication tutorial](../../landing/api-authentication.md), which provides values for required headers in API calls. Include the following headers in each request:
+To make calls to the Data Distiller Authorization API, you must complete the [Experience Platform API authentication tutorial](../../landing/api-authentication.md), which provides values for required headers in API calls. Include the following headers in each request:
 
 - **Authorization**: `Bearer {ACCESS_TOKEN}`
 - **x-api-key**: `{API_KEY}`

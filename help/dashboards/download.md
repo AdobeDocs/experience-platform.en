@@ -7,9 +7,9 @@ exl-id: 838e98a0-ce2e-4dcd-8c8f-d28ef2cb8315
 ---
 # Download dashboards to PDF
 
-Dashboards within Adobe Experience Platform can be downloaded to PDF from within the Platform user interface to facilitate the sharing of information with members of your organization. 
+Dashboards within Adobe Experience Platform can be downloaded to PDF from within the Experience Platform user interface to facilitate the sharing of information with members of your organization. 
 
-This document provides a summary of how to download dashboards using the Platform UI and save the dashboard to PDF using the default browser print menu. 
+This document provides a summary of how to download dashboards using the Experience Platform UI and save the dashboard to PDF using the default browser print menu. 
 
 >[!WARNING]
 >
@@ -25,7 +25,7 @@ To begin downloading a dashboard, navigate to the dashboard that you want to dow
 
 After selecting **[!UICONTROL Download]**, the default print menu for your browser opens. In this example, the Google Chrome print menu is shown.
 
-The print menu allows you to preview the PDF that will be saved. The PDF is a true representation of the dashboard widgets as they appear in the Platform UI and the size of the PDF is automatically adjusted to display all of the currently visible dashboard widgets on a single page. 
+The print menu allows you to preview the PDF that will be saved. The PDF is a true representation of the dashboard widgets as they appear in the Experience Platform UI and the size of the PDF is automatically adjusted to display all of the currently visible dashboard widgets on a single page. 
 
 ![The Profile overview displayed on a single page format with the Print options panel to the right.](images/download/download-chrome-print.png)
 
@@ -45,7 +45,7 @@ After previewing the PDF, select **Save** to choose the location to which you wa
 
 ## Customize dashboard PDFs
 
-The PDF that is generated matches the dashboard that you can see in the UI and includes only the widgets that are currently visible on your dashboard. Certain dashboards can be customized to change the size and location of widgets or to add and remove widgets from view. Customizing the look of your dashboard in the Platform UI also changes the look of the PDF that is generated.
+The PDF that is generated matches the dashboard that you can see in the UI and includes only the widgets that are currently visible on your dashboard. Certain dashboards can be customized to change the size and location of widgets or to add and remove widgets from view. Customizing the look of your dashboard in the Experience Platform UI also changes the look of the PDF that is generated.
 
 For example, you could modify the look of your profiles dashboard to include several full-width widgets stacked above three standard widgets.
 

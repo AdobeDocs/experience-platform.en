@@ -54,7 +54,7 @@ With Real-Time CDP B2B Edition, Bodea's marketing team can:
 
 - Combine the data from all disparate sources (multiple Marketo and CRM instances, and the Master Data Management) into Real-Time CDP B2B Edition.
 
-With RT-CDP B2B Edition, Bodea can use the Marketo Engage Source Connector to bring B2B data from Marketo 1 and Marketo 2 into Experience Platform and keep this data current using Platform connected applications. See the [Marketo source connector](../sources/connectors/adobe-applications/marketo/marketo.md) documentation for more information. 
+With RT-CDP B2B Edition, Bodea can use the Marketo Engage Source Connector to bring B2B data from Marketo 1 and Marketo 2 into Experience Platform and keep this data current using Experience Platform connected applications. See the [Marketo source connector](../sources/connectors/adobe-applications/marketo/marketo.md) documentation for more information. 
 
 B2B data (People, Accounts, Opportunities, and activity ) from CRM1 is synced into Marketo 1. Similarly, all B2B data from CRM 2 is synced into Marketo 2. They get synced into Adobe Experience Platform via the Marketo source connector. However, If Bodea wants to bring in additional data from a CRM into Experience Platform, they can use existing CRM Connectors.
 

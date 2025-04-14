@@ -9,6 +9,8 @@ exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
 >[!AVAILABILITY]
 >
 >Flexible audience evaluation is **only** available on instances of Experience Platform running on [!DNL Microsoft Azure]. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../landing/multi-cloud.md).
+>
+>Additionally, flexible audience evaluation is **only** available for use with Real-Time CDP B2C Edition.
 
 Flexible audience evaluation lets you run a batch segmentation job on demand. With flexible audience evaluation, you can run ad-hoc campaign launches, just-in-time communications, or other time-sensitive activities.
 
@@ -379,3 +381,4 @@ Only audiences with the origin of Segmentation Service are supported for flexibl
 Flexible audience evaluation runs that were created either using the API or the UI count towards the maximum limit. However, the daily batch segmentation job run that runs on a nightly basis does **not** contribute towards this limit.
 
 +++
+

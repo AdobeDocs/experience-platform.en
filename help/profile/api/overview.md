@@ -25,7 +25,7 @@ You can create, view, edit, and delete computed attributes using the `ca/attribu
 
 ## Entities ([!DNL Profile] access) {#entities}
 
-Through Adobe Experience Platform you can access [!DNL Real-Time Customer Profile] data using RESTful APIs or the user interface. To learn how to access entities, more commonly known as "profiles", using the API, follow the steps outlined in the [entities endpoint guide](entities.md). To access profiles using the [!DNL Platform] UI, refer to the [Profile user guide](../ui/user-guide.md).
+Through Adobe Experience Platform you can access [!DNL Real-Time Customer Profile] data using RESTful APIs or the user interface. To learn how to access entities, more commonly known as "profiles", using the API, follow the steps outlined in the [entities endpoint guide](entities.md). To access profiles using the [!DNL Experience Platform] UI, refer to the [Profile user guide](../ui/user-guide.md).
 
 ## Export jobs ([!DNL Profile] export) {#profile-export}
 
@@ -33,17 +33,17 @@ Through Adobe Experience Platform you can access [!DNL Real-Time Customer Profil
 
 ## Merge policies {#merge-policies}
 
-When bringing data from multiple sources together in [!DNL Experience Platform], merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create individual customer profiles. Using the [!DNL Real-Time Customer Profile] API, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. To work with merge policies using the API, visit the [merge policies endpoint guide](merge-policies.md). 
+When bringing data from multiple sources together in [!DNL Experience Platform], merge policies are the rules that [!DNL Experience Platform] uses to determine how data will be prioritized and what data will be combined to create individual customer profiles. Using the [!DNL Real-Time Customer Profile] API, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. To work with merge policies using the API, visit the [merge policies endpoint guide](merge-policies.md). 
 
-To learn more about merge policies, and their role within Platform, please begin by reading the [merge policies overview](../merge-policies/overview.md). 
+To learn more about merge policies, and their role within Experience Platform, please begin by reading the [merge policies overview](../merge-policies/overview.md). 
 
 ## Preview sample status ([!DNL Profile] preview) {#profile-preview}
 
-As data is ingested into Platform, a sample job is run to update the profile count and other Real-Time Customer Profile data-related metrics. The results of this sample job can be viewed using the `/previewsamplestatus` endpoint, part of the Real-Time Customer Profile API. This endpoint can also be used to list profile distributions by both dataset and identity namespace, as well as to generate multiple reports in order to gain visibility into the composition of your organization's Profile store.  To get started using the `/profilepreviewstatus` endpoint, refer to the [preview sample status endpoint guide](preview-sample-status.md).
+As data is ingested into Experience Platform, a sample job is run to update the profile count and other Real-Time Customer Profile data-related metrics. The results of this sample job can be viewed using the `/previewsamplestatus` endpoint, part of the Real-Time Customer Profile API. This endpoint can also be used to list profile distributions by both dataset and identity namespace, as well as to generate multiple reports in order to gain visibility into the composition of your organization's Profile store.  To get started using the `/profilepreviewstatus` endpoint, refer to the [preview sample status endpoint guide](preview-sample-status.md).
 
 ## Profile system jobs {#profile-system-jobs}
 
-Profile-enabled data that is ingested into [!DNL Platform] is stored in the [!DNL Data Lake] as well as the [!DNL Real-Time Customer Profile] data store. Occasionally it may be necessary to delete profile data associated with a dataset from the Profile store in order to remove data that is no longer needed or was added in error. This requires using the API to create a [!DNL Profile System Job], also known as a "[!DNL delete request]", which can be modified, monitored, or deleted if required. To learn how to work with delete requests using the `/system/jobs` endpoint in the [!DNL Real-Time Customer Profile] API, follow the steps outlined in the [profile system jobs endpoint guide](profile-system-jobs.md).
+Profile-enabled data that is ingested into [!DNL Experience Platform] is stored in the [!DNL Data Lake] as well as the [!DNL Real-Time Customer Profile] data store. Occasionally it may be necessary to delete profile data associated with a dataset from the Profile store in order to remove data that is no longer needed or was added in error. This requires using the API to create a [!DNL Profile System Job], also known as a "[!DNL delete request]", which can be modified, monitored, or deleted if required. To learn how to work with delete requests using the `/system/jobs` endpoint in the [!DNL Real-Time Customer Profile] API, follow the steps outlined in the [profile system jobs endpoint guide](profile-system-jobs.md).
 
 ## Update profiles attributes {#update-profile}
 
