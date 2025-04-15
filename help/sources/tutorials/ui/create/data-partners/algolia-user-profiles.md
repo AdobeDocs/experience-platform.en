@@ -48,13 +48,13 @@ To use [!DNL Algolia], select the **[!UICONTROL Algolia]** source card under *[!
 
 ## Authentication
 
-### Existing account
+### Use an existing account
 
 To use an existing account, select **[!UICONTROL Existing account]** and then select the [!DNL Algolia User Profiles] account that you want to use. To proceed, select **[!UICONTROL Next]**.
 
 ![The existing account interface.](../../../../images/tutorials/create/algolia/user-profiles/existing-account.png)
 
-### New account
+### Create a new account
 
 If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name, an optional description, and [!DNL Algolia] credentials. When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
 
@@ -71,7 +71,7 @@ Once you finish selecting and previewing your data for ingestion, select **[!UIC
 
 ![The select data step of the workflow.](../../../../images/tutorials/create/algolia/user-profiles/select-data.png)
 
-### Provide dataflow details
+## Provide dataflow details
 
 If you are using an existing dataset, select a dataset that is associated with a schema that is using the [!DNL Algolia Profile] Field Group.
 
@@ -81,13 +81,13 @@ If you are creating a new dataset, select a schema that is using the [!DNL Algol
 
 ![The new dataset step of the sources workflow.](../../../../images/tutorials/create/algolia/user-profiles/dataflow-detail-new-dataset.png)
 
-### Map data fields to an XDM schema
+## Map data fields to an XDM schema
 
 Use the mapping interface to map your source data to the appropriate schema fields before ingesting data to Experience Platform.  For more information, read the [mapping guide in the UI](../../../../../data-prep/ui/mapping.md).
 
 ![The mapping step of the sources workflow.](../../../../images/tutorials/create/algolia/user-profiles/mapping.png)
 
-### Schedule ingestion runs
+## Schedule ingestion runs
 
 Next, use the scheduling interface to define the ingestion schedule of your dataflow.
 
@@ -102,7 +102,7 @@ Next, use the scheduling interface to define the ingestion schedule of your data
 | Start Time | The timestamp for the projected run, presented in UTC time zone. |
 | Backfill | Backfill determines what data is initially ingested. If backfill is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If backfill is disabled, only the files that are loaded in between the first run of ingestion and the start time will be ingested. Files loaded prior to the start time will not be ingested. |
 
-### Review your dataflow
+## Review your dataflow
 
 Use the review page for a summary of your dataflow prior to ingestion. Details are grouped in the following categories:
 
