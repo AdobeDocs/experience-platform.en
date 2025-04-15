@@ -62,7 +62,6 @@ Some destinations in Experience Platform have certain rules and obligations for 
 |`country_code`|User address country code|Accepted format: Lowercase, 2-letter country codes in [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format.|
 |`postal_code`|User address postal code|Select this target identity when your source identity is a postal code.|
 
-
 {style="table-layout:auto"}
 
 ## Supported audiences {#supported-audiences}
