@@ -1,12 +1,12 @@
 ---
-title: Adobe Analytics for Target (A4T) Logging in the Platform Web SDK
+title: Adobe Analytics for Target (A4T) Logging in the Experience Platform Web SDK
 description: Learn how to control the collection of Adobe Analytics for Target (A4T) data using the Experience Platform Web SDK.
-seo-title: Adobe Analytics for Target (A4T) Logging in the Platform Web SDK
+seo-title: Adobe Analytics for Target (A4T) Logging in the Experience Platform Web SDK
 seo-description: Learn how to control the collection of Adobe Analytics for Target (A4T) data using the Experience Platform Web SDK.
 keywords: a4t;logging;analytics;sdk;web sdk;
 exl-id: f1c90ccd-48a9-4668-b2ac-eacd5bec0b91
 ---
-# Adobe Analytics for Target (A4T) logging in the Platform Web SDK
+# Adobe Analytics for Target (A4T) logging in the Experience Platform Web SDK
 
 When using Adobe Target for personalization, you can choose which system you want to use for performance measurement. Each [Target activity](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html) allows you to select between Target reporting and Adobe Analytics reporting. 
 
@@ -31,5 +31,5 @@ The logging method is determined by whether you have Adobe Analytics enabled on 
 
 This document provided a brief introduction to the different logging methods for A4T data in the Web SDK. For more detailed information on each of these methods, refer to the following documentation:
 
-* [Server-side logging for A4T data in the Platform Web SDK](./server-side.md)
-* [Client-side logging for A4T data in the Platform Web SDK](./client-side.md)
+* [Server-side logging for A4T data in the Experience Platform Web SDK](./server-side.md)
+* [Client-side logging for A4T data in the Experience Platform Web SDK](./client-side.md)

@@ -14,7 +14,7 @@ This tutorial uses the [!DNL Schema Registry] API to walk you through the steps 
 
 >[!NOTE]
 >
->If you are ingesting CSV data into Platform, you can [map that data to an XDM schema created by AI-generated recommendations](../../ingestion/tutorials/map-csv/recommendations.md) (currently in beta) without having to manually create the schema yourself.
+>If you are ingesting CSV data into Experience Platform, you can [map that data to an XDM schema created by AI-generated recommendations](../../ingestion/tutorials/map-csv/recommendations.md) (currently in beta) without having to manually create the schema yourself.
 
 ## Getting started
 
@@ -23,7 +23,7 @@ This guide requires a working understanding of the following components of Adobe
 * [[!DNL Experience Data Model (XDM) System]](../home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
     * [Basics of schema composition](../schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Experience Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the [!DNL Schema Registry] API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the `Accept` header and its possible values).
 

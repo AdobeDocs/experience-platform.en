@@ -29,7 +29,7 @@ Please consult your legal team to determine how sensitive and personal data shou
 
 XDM provides a variety of standard field groups and data types to describe relevant, commonly used data structures to power customer experiences. If a recommended standard resource contains restricted fields that you do not want to include in your schemas, however, you do not have to use that resource.
 
-Platform allows you to define your own custom field groups and data types, giving you full control over how your data is structured if any available standard resources do not meet your needs. Refer to the following documentation for more information on how to define these custom resources:
+Experience Platform allows you to define your own custom field groups and data types, giving you full control over how your data is structured if any available standard resources do not meet your needs. Refer to the following documentation for more information on how to define these custom resources:
 
 * [Create a custom field group](../ui/resources/field-groups.md#create)
 * [Create a custom data type](../ui/resources/data-types.md#create)

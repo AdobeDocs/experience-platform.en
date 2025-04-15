@@ -31,7 +31,7 @@ When you build to a development or staging environment, the old build is cleaned
 
 These five most recent builds in your production environment are the ones that are available for retrieval.
 
-When you republish an older library, Platform updates the environment link to point to one of these older builds that hasn't been cleaned up yet.  Platform also issues a purge request to the CDN edge nodes cache to indicate that the library has been updated and a fresh copy should be retrieved from the origin.
+When you republish an older library, Experience Platform updates the environment link to point to one of these older builds that hasn't been cleaned up yet.  Experience Platform also issues a purge request to the CDN edge nodes cache to indicate that the library has been updated and a fresh copy should be retrieved from the origin.
 
 This means that when you republish an older library:
 
@@ -41,7 +41,7 @@ This means that when you republish an older library:
 
 Consider the scenario when you roll back because of a problem with a specific rule. The rule revision that is now in production might, for example, be three revisions old.  When you view that rule in the UI to fix it, it still reflects the latest changes saved rather than what is currently in production.
 
-For this reason, Platform notifies you that a property is in a republished state as a reminder that what you're seeing in the Data Collection user interface is a little farther removed from Production than usual. This notification is dismissible and appears once per browser session the first time you view the property.
+For this reason, Experience Platform notifies you that a property is in a republished state as a reminder that what you're seeing in the Data Collection user interface is a little farther removed from Production than usual. This notification is dismissible and appears once per browser session the first time you view the property.
 
 ### How to Republish an older library
 

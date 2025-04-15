@@ -6,7 +6,7 @@ exl-id: 810cfb2f-f80a-4aa7-ab3c-beb5de78708e
 ---
 # [!DNL Data Prep] troubleshooting guide
 
-This document provides answers to frequently asked questions about Adobe Experience Platform [!DNL Data Prep], as well as a troubleshooting guide for common errors. For questions and troubleshooting information regarding Platform APIs in general, see the [Adobe Experience Platform API troubleshooting guide](../landing/troubleshooting.md).
+This document provides answers to frequently asked questions about Adobe Experience Platform [!DNL Data Prep], as well as a troubleshooting guide for common errors. For questions and troubleshooting information regarding Experience Platform APIs in general, see the [Adobe Experience Platform API troubleshooting guide](../landing/troubleshooting.md).
 
 ## FAQ
 

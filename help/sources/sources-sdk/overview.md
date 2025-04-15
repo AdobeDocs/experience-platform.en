@@ -21,7 +21,7 @@ The Self-Serve Sources documentation provides instructions to configure, test, a
 
 ## Understanding sources
 
-Experience  Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
+Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
 
 For more information on sources, and to see a list of different sources currently supported on Experience Platform, see the [sources overview](../home.md).
 

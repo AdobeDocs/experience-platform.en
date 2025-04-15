@@ -11,9 +11,9 @@ exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
 
 Adobe-managed hosts are the default host setting for deploying your tag library builds in Adobe Experience Platform. When you create a new property through the Data Collection user interface, a default Adobe-managed host is created for you. 
 
-With Adobe-managed hosts, library builds are delivered to a third-party content delivery network (CDN) that Adobe has contracted with. These CDNs operate independently from Adobe, so even when Platform is undergoing maintenance or is otherwise down, your deployed code will continue to function as normal on your sites and applications. The embed code for an Adobe-managed host references the main library file on the CDN so a client device can retrieve the files at runtime.
+With Adobe-managed hosts, library builds are delivered to a third-party content delivery network (CDN) that Adobe has contracted with. These CDNs operate independently from Adobe, so even when Experience Platform is undergoing maintenance or is otherwise down, your deployed code will continue to function as normal on your sites and applications. The embed code for an Adobe-managed host references the main library file on the CDN so a client device can retrieve the files at runtime.
 
-This document provides an overview of Adobe-managed hosts in Platform and provides steps on how to create a new Adobe-managed host in the UI.
+This document provides an overview of Adobe-managed hosts in Experience Platform and provides steps on how to create a new Adobe-managed host in the UI.
 
 ## Akamai
 
@@ -27,7 +27,7 @@ Files hosted on Akamai have a domain of `assets.adobedtm.com`. This can be refer
 
 >[!WARNING]
 >
->If your library is unavailable from the Akamai network, Platform is unable to prevent any errors that may arise because of it.
+>If your library is unavailable from the Akamai network, Experience Platform is unable to prevent any errors that may arise because of it.
 
 ## Library build caching
 
@@ -84,7 +84,7 @@ Cache-control headers are only applied for the main library build. Any sub-resou
 
 ## Using Adobe-managed hosting in the UI
 
-When you first create a property in the Platform UI or Data Collection UI, an Adobe-managed host is automatically created for you. All available environments that have immediately usable properties are also assigned to the Adobe-managed host by default.
+When you first create a property in the Experience Platform UI or Data Collection UI, an Adobe-managed host is automatically created for you. All available environments that have immediately usable properties are also assigned to the Adobe-managed host by default.
 
 >[!NOTE]
 >

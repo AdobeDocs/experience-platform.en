@@ -16,12 +16,12 @@ Read this guide to learn how you can connect your [!DNL AWS Redshift] source acc
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-* [Sources](../../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
-* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Experience Platform] services.
+* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Experience Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-### Using Platform APIs
+### Using Experience Platform APIs
 
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
+For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../../../landing/api-guide.md).
 
 ## Connect [!DNL AWS Redshift] to Experience Platform on Azure {#azure}
 
@@ -47,7 +47,7 @@ For more information about getting started, refer to this [[!DNL AWS Redshift] d
 >
 >The default encoding standard for [!DNL Redshift] is Unicode. This cannot be changed.
 
-A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
+A base connection retains information between your source and Experience Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
 To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL AWS Redshift] authentication credentials as part of the request parameters.
 
@@ -201,4 +201,4 @@ A successful response returns details of the newly created connection, including
 By following this tutorial, you have created an [!DNL AWS Redshift] base connection using the [!DNL Flow Service] API. You can use this base connection ID in the following tutorials:
 
 * [Explore the structure and contents of your data tables using the [!DNL Flow Service] API](../../explore/tabular.md)
-* [Create a dataflow to bring database data to Platform using the [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [Create a dataflow to bring database data to Experience Platform using the [!DNL Flow Service] API](../../collect/database-nosql.md)
