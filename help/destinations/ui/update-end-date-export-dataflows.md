@@ -1,7 +1,7 @@
 ---
 title: Update the end date of dataset export dataflows (Action required by May 1, 2025)
 type: Tutorial
-hidden: yes
+hide: yes
 hidefromtoc: yes
 description: Learn how to update the end date for dataset export dataflows with a current end date of May 1, 2025.
 ---
@@ -35,6 +35,8 @@ Navigate to **Destinations > Browse** and look for the data type **Datasets** in
 ![Dataset export dataflows highlighted in the Browse tab.](/help/destinations/assets/ui/export-datasets/view-dataset-dataflows.png)
 
 ### Update the end date of the dataflows
+
+To update the end date of dataflows:
 
 1. In the dataflows that you have selected for inspection in the previous step, select **Export datasets**.
   ![Export datasets control highlighted in the Browse tab.](/help/destinations/assets/ui/export-datasets/export-datasets-control-highlighted.png)
