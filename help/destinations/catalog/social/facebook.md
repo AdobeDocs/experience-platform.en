@@ -48,7 +48,7 @@ Next, they can use their offline data including associated membership IDs and cu
 |`first_name_initial`|First name initial| Accepted format: Lowercase, `a-z` characters only. Use UTF-8 encoding for special characters.|
 |`state`|State|Use the [2-character ANSI abbreviation code](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standard_state_code) in lowercase. For non-US states, use lowercase characters, no punctuation, no special characters, and no spaces.|
 |`city`|City|Accepted format: Lowercase, `a-z` characters only, no punctuation, no special characters, no spaces.|
-|`zip`|Zip code|Accepted format: Lowercase, no spaces. For US zip codes, use only the first 5 digits. For the UK, use the `Area/District/Sector` format. |
+|`zip`|Zip code|Accepted format: Lowercase, no spaces. For US zip codes, use only the first 5 digits. For the UK, use the `Area/District/Sector` format.|
 |`country`|Country|Accepted format: Lowercase, 2-letter country codes in [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format.|
 
 ## Supported audiences {#supported-audiences}
