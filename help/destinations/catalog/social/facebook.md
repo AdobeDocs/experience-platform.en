@@ -36,11 +36,20 @@ Next, they can use their offline data including associated membership IDs and cu
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-|GAID|Google Advertising ID|Select the GAID target identity when your source identity is a GAID namespace.|
-|IDFA|Apple ID for Advertisers|Select the IDFA target identity when your source identity is an IDFA namespace.|
-|phone_sha256|Phone numbers hashed with the SHA256 algorithm|Both plain text and SHA256 hashed phone numbers are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed phone numbers, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
-|email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed email addresses, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
-|extern_id|Custom user IDs|Select this target identity when your source identity is a custom namespace.|
+|`GAID`|Google Advertising ID|Select the GAID target identity when your source identity is a GAID namespace.|
+|`IDFA`|Apple ID for Advertisers|Select the IDFA target identity when your source identity is an IDFA namespace.|
+|`phone_sha256`|Phone numbers hashed with the SHA256 algorithm|Both plain text and SHA256 hashed phone numbers are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed phone numbers, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
+|`email_lc_sha256`|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed email addresses, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
+|`extern_id`|Custom user IDs|Select this target identity when your source identity is a custom namespace.|
+|`gender`|Gender | Accepted values: <ul><li>`m`for male</li><li>`f`for female</li></ul>|
+|`date_of_birth`|Date of birth | Accepted format: `yyyy-MM-DD`.|
+|`last_name`|Last name| Accepted format: Lowercase, `a-z` characters only, no punctuation. Use UTF-8 encoding for special characters.|
+|`first_names`|First names|Accepted format: Lowercase, `a-z` characters only, no punctuation, no spaces. Use UTF-8 encoding for special characters.|
+|`first_name_initial`|First name initial| Accepted format: Lowercase, `a-z` characters only. Use UTF-8 encoding for special characters.|
+|`state`|State|Use the [2-character ANSI abbreviation code](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standard_state_code) in lowercase. For non-US states, use lowercase characters, no punctuation, no special characters, and no spaces.|
+|`city`|City|Accepted format: Lowercase, `a-z` characters only, no punctuation, no special characters, no spaces.|
+|`zip`|Zip code|Accepted format: Lowercase, no spaces. For US zip codes, use only the first 5 digits. For the UK, use the `Area/District/Sector` format. |
+|`country`|Country|Accepted format: Lowercase, 2-letter country codes in [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format.|
 
 ## Supported audiences {#supported-audiences}
 
