@@ -29,12 +29,12 @@ role: Admin
   * [Administration overview](administration/admin-overview.md)
 * Audiences and segmentation {#segmentation}
   * [Segmentation overview](segmentation/segmentation-overview.md)
-  * [Segment Builder guide](segmentation/segment-builder-guide.md)
+  * [Audience Builder guide](segmentation/audience-builder.md)
   * [Segmentation in Real-Time CDP B2B Edition](segmentation/b2b.md)
   * [Customer AI](segmentation/customer-ai.md)
 * Datasets {#datasets}
   * [Datasets](datasets/dataset.md)
-  * [Data quality on Platform](datasets/data-quality.md)
+  * [Data quality on Experience Platform](datasets/data-quality.md)
 * Destinations {#destinations}
   * [Destinations overview](destinations/overview.md)
   * [Destinations in Real-Time CDP B2B Edition](destinations/b2b.md)

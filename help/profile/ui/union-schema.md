@@ -2,20 +2,20 @@
 keywords: Experience Platform;profile;real-time customer profile;unified profile;Unified Profile;unified;Profile;rtcp;enable profile;Enable profile;Union schema;UNION PROFILE;union profile
 title: Union Schema UI Guide
 type: Documentation
-description: In the Adobe Experience Platform user interface (UI) you can easily view any union schema within your organization and preview the fields, identities, relationships, and contributing schemas for a specific class. This guide provides detailed information on how to view and explore union schemas using the Platform UI.
+description: In the Adobe Experience Platform user interface (UI) you can easily view any union schema within your organization and preview the fields, identities, relationships, and contributing schemas for a specific class. This guide provides detailed information on how to view and explore union schemas using the Experience Platform UI.
 exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
 ---
 # [!UICONTROL Union schema] UI guide
 
-In the Adobe Experience Platform user interface (UI) you can easily view any union schema within your organization and preview the fields, identities, relationships, and contributing schemas for a specific class. This guide provides detailed information on how to view and explore union schemas using the Platform UI.
+In the Adobe Experience Platform user interface (UI) you can easily view any union schema within your organization and preview the fields, identities, relationships, and contributing schemas for a specific class. This guide provides detailed information on how to view and explore union schemas using the Experience Platform UI.
 
 ## Getting started
 
 This UI guide requires an understanding of the various [!DNL Experience Platform] services involved with managing Real-Time Customer Profile data. Before reading this guide, or working in the UI, please review the documentation for the following services:
 
 * [[!DNL Real-Time Customer Profile]](../home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-* [[!DNL Identity Service]](../../identity-service/home.md): Enables [!DNL Real-Time Customer Profile] by bridging identities from disparate data sources as they are ingested into [!DNL Platform].
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
+* [[!DNL Identity Service]](../../identity-service/home.md): Enables [!DNL Real-Time Customer Profile] by bridging identities from disparate data sources as they are ingested into [!DNL Experience Platform].
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
 
 ## Understanding union schemas
 
@@ -27,7 +27,7 @@ Working with union schemas requires a deep understanding of XDM schemas. For mor
 
 ## View union schemas
 
-To navigate to union schemas within the Platform UI, select **[!UICONTROL Profiles]** from the left navigation, then select the **[!UICONTROL Union Schema]** tab. The [!UICONTROL Union Schema] tab opens to display the union schema for the currently selected class. 
+To navigate to union schemas within the Experience Platform UI, select **[!UICONTROL Profiles]** from the left navigation, then select the **[!UICONTROL Union Schema]** tab. The [!UICONTROL Union Schema] tab opens to display the union schema for the currently selected class. 
 
 ![The Union Schema page is displayed, with the Profile and Union Schema tab highlighted.](../images/union-schema/landing.png)
 
@@ -57,7 +57,7 @@ For more information on datasets, including viewing dataset activity and preview
 
 ## View contributing schemas
 
-You can also view which specific schemas are contributing to the union schema by selecting **[!UICONTROL All contributing schemas]** to expand the list of schemas. Depending on the class you have selected and the number of schemas that your organization has created within Platform, this could be a short list containing a single schema or a long list containing many schemas.
+You can also view which specific schemas are contributing to the union schema by selecting **[!UICONTROL All contributing schemas]** to expand the list of schemas. Depending on the class you have selected and the number of schemas that your organization has created within Experience Platform, this could be a short list containing a single schema or a long list containing many schemas.
 
 ![The list of schemas that contribute to the union schema is highlighted.](../images/union-schema/contributing-schemas.png)
 
@@ -93,4 +93,4 @@ Selecting a relationship field from the list causes the displayed schema to upda
 
 ## Next steps
 
-By reading this guide, you now know how to view and navigate union schemas using the [!DNL Experience Platform] UI. For more information on schemas, including how they are used throughout Platform, please begin by reading the [XDM System overview](../../xdm/home.md).
+By reading this guide, you now know how to view and navigate union schemas using the [!DNL Experience Platform] UI. For more information on schemas, including how they are used throughout Experience Platform, please begin by reading the [XDM System overview](../../xdm/home.md).

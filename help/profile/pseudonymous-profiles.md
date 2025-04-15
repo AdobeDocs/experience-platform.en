@@ -31,7 +31,7 @@ A profile is considered for Pseudonymous data expiration if it meets the followi
 
 ## Access {#access}
 
-Pseudonymous Profile data expiration cannot be configured through the Platform UI or APIs. Instead, you must contact support in order to enable this feature. When contacting support, please include the following information: 
+Pseudonymous Profile data expiration cannot be configured through the Experience Platform UI or APIs. Instead, you must contact support in order to enable this feature. When contacting support, please include the following information: 
 
 - The identity namespaces to be considered for Pseudonymous profile deletes. 
   - For example: `ECID` only, `AAID` only, or a combination of `ECID` and `AAID`.
@@ -69,11 +69,11 @@ Pseudonymous Profile data expiration and Experience Event data expiration can be
 
 You should **always** set up Experience Event data expiration in your datasets, based on your needs of retaining data about your known customers. Once Experience Event data expiration is set up, you can use Pseudonymous Profile data expiration to automatically remove Pseudonymous Profiles. Typically, the data expiration period for Pseudonymous Profiles is less than the data expiration period for Experience Events.
 
-For a typical use case, you can set your Experience Event data expiration based on the values of your known user data and you can set your Pseudonymous Profile data expiration to a much shorter duration to limit the impact of Pseudonymous profiles on your Platform license compliance.
+For a typical use case, you can set your Experience Event data expiration based on the values of your known user data and you can set your Pseudonymous Profile data expiration to a much shorter duration to limit the impact of Pseudonymous profiles on your Experience Platform license compliance.
 
 ### What users should be using Pseudonymous profiles data expiration?
 
-- If you are using Web SDK to directly send data to Platform.
+- If you are using Web SDK to directly send data to Experience Platform.
 - If you have a website that serves unauthenticated customers en masse.
 - If you have excessive profile counts in your datasets and have confirmed that this excessive profile count is because of anonymous cookie-based identity namespace.
   - To determine this, you should use the identity namespace overlap report. More information about this report can be found in the [identity overlap report section](./api/preview-sample-status.md#identity-overlap-report) of the preview sample status API guide.

@@ -17,7 +17,6 @@ role: User,Developer
 - Data Distiller {#data-distiller}
     - [Overview](data-distiller/overview.md)
     - [License usage](data-distiller/license-usage.md)
-    - [Top tips to maximize value](data-distiller/top-tips-to-maximize-value.md)
     - Derived datasets {#derived-datasets}
         - [Overview](data-distiller/derived-datasets/overview.md)
         - [Create derived datasets with SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
@@ -34,6 +33,7 @@ role: User,Developer
         - [Engineer features for ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
         - [Export data to ML environments](data-distiller/ml-feature-pipelines/export-data.md)
         - [AI/ML data pipeline enrichment end-to-end workflow](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
+    - [Summit 2025 Session](data-distiller/top-tips-to-maximize-value.md)
 - Data Distiller statistics and machine learning {#advanced-statistics}
     - [Overview](advanced-statistics/overview.md)
     - [Feature engineering](advanced-statistics/feature-engineering.md)
@@ -137,4 +137,4 @@ role: User,Developer
 - [Frequently asked questions](troubleshooting-guide.md)
 - [IP address allowlist](ip-address-allowlist.md)
 - [API reference](https://www.adobe.io/experience-platform-apis/references/query-service/)
-- [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

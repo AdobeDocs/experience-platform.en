@@ -7,7 +7,7 @@ exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
 ---
 # Monitor dataflows for destinations in the UI
 
-Use the various destinations in the Experience Platform catalog to activate your data from Platform to countless external partners. Platform makes the process of tracking the flow of data to your destinations easier by providing transparency with dataflows.
+Use the various destinations in the Experience Platform catalog to activate your data from Experience Platform to countless external partners. Experience Platform makes the process of tracking the flow of data to your destinations easier by providing transparency with dataflows.
 
 The monitoring dashboard provides you with a visual representation of the journey of a dataflow, including the destination that the data is being activated to, the type of data that you are viewing, exported data per dataflow run, and much more. 
 
@@ -17,14 +17,14 @@ This tutorial provides instructions on how you can either monitor dataflows dire
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-- [Dataflows](../home.md): Dataflows are a representation of data jobs that move data across Platform. Dataflows are configured across different services, helping move data from source connectors to target datasets, to [!DNL Identity] and [!DNL Profile], and to [!DNL Destinations].
+- [Dataflows](../home.md): Dataflows are a representation of data jobs that move data across Experience Platform. Dataflows are configured across different services, helping move data from source connectors to target datasets, to [!DNL Identity] and [!DNL Profile], and to [!DNL Destinations].
     - [Dataflow runs](../../sources/notifications.md): Dataflow runs are the recurring scheduled jobs based on the frequency configuration of selected dataflows.
-- [Destinations](../../destinations/home.md): Destinations are pre-built integrations with commonly used applications that allow for the seamless activation of data from Platform for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
-- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+- [Destinations](../../destinations/home.md): Destinations are pre-built integrations with commonly used applications that allow for the seamless activation of data from Experience Platform for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Experience Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ## Monitor dataflows in the Destinations workspace {#monitor-dataflows-in-the-destinations-workspace}
 
-In the **[!UICONTROL Destinations]** workspace within the Platform UI, navigate to the **[!UICONTROL Browse]** tab and select the name of a destination that you want to view.
+In the **[!UICONTROL Destinations]** workspace within the Experience Platform UI, navigate to the **[!UICONTROL Browse]** tab and select the name of a destination that you want to view.
 
 ![Select destination view with a destination connection highlighted](../assets/ui/monitor-destinations/select-destination.png)
 
@@ -91,12 +91,12 @@ Each individual dataflow run shows the following details:
 
   >[!IMPORTANT]
   >
-  > Starting with October 2024, Adobe is rolling out an update to increase reporting accuracy for streaming destinations. This enhancement ensures a better alignment between the Experience Platform and the destination platforms reporting.
+  > Starting with March 2025, Adobe is rolling out an update to increase reporting accuracy for streaming destinations. This enhancement ensures a better alignment between the reporting in Experience Platform and the destination platforms.
   >
   > Before this update, **[!UICONTROL Identities failed]** included all activation retries. After this update, only the last activation retry is included in the total count.
   > 
-  > This enhancement currently applies to the [Google Customer Match destination](../../destinations/catalog/advertising/google-customer-match.md) but will be gradually rolled out to other Experience Platform streaming destinations.
-  > Following this enhancement, users of the [Google Customer Match destination](../../destinations/catalog/advertising/google-customer-match.md) may see an expected drop in their  **[!UICONTROL Identities failed]** count.
+  > This enhancement applies to all streaming destinations.
+  > Following this enhancement, users of streaming destinations may see an expected drop in their **[!UICONTROL Identities failed]** count.
  
 
 - **[!UICONTROL Activation rate]**: The percentage of received identities that have been successfully activated. The following formula demonstrates how this value is calculated:
@@ -343,4 +343,4 @@ When **[!UICONTROL Audiences]** is selected, you see a list of the audiences whi
 
 ## Next steps {#next-steps}
 
-By following this guide, you now know how to monitor dataflows for both batch and streaming destinations, including all the relevant information such as processing time, activation rate, and status. To learn more about dataflows in Platform, read the [dataflows overview](../home.md). To learn more about destinations, read the [destinations overview](../../destinations/home.md).
+By following this guide, you now know how to monitor dataflows for both batch and streaming destinations, including all the relevant information such as processing time, activation rate, and status. To learn more about dataflows in Experience Platform, read the [dataflows overview](../home.md). To learn more about destinations, read the [destinations overview](../../destinations/home.md).

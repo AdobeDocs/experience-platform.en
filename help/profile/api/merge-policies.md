@@ -2,15 +2,15 @@
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 title: Merge Policies API Endpoint
 type: Documentation
-description: Adobe Experience Platform enables you to bring data fragments together from multiple sources and combine them in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that Platform uses to determine how data will be prioritized and what data will be combined to create a unified view.
+description: Adobe Experience Platform enables you to bring data fragments together from multiple sources and combine them in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that Experience Platform uses to determine how data will be prioritized and what data will be combined to create a unified view.
 role: Developer
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
 ---
 # Merge policies endpoint
 
-Adobe Experience Platform enables you to bring data fragments together from multiple sources and combine them in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create a unified view. 
+Adobe Experience Platform enables you to bring data fragments together from multiple sources and combine them in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that [!DNL Experience Platform] uses to determine how data will be prioritized and what data will be combined to create a unified view. 
 
-For example, if a customer interacts with your brand across several channels, your organization will have multiple profile fragments related to that single customer appearing in multiple datasets. When these fragments are ingested into Platform, they are merged together in order to create a single profile for that customer. When the data from multiple sources conflicts (for example one fragment lists the customer as "single" while the other lists the customer as "married") the merge policy determines which information to include in the profile for the individual.
+For example, if a customer interacts with your brand across several channels, your organization will have multiple profile fragments related to that single customer appearing in multiple datasets. When these fragments are ingested into Experience Platform, they are merged together in order to create a single profile for that customer. When the data from multiple sources conflicts (for example one fragment lists the customer as "single" while the other lists the customer as "married") the merge policy determines which information to include in the profile for the individual.
 
 Using RESTful APIs or the user interface, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. This guide provides steps for working with merge policies using the API. 
 
@@ -22,7 +22,7 @@ The API endpoint used in this guide is part of the [[!DNL Real-Time Customer Pro
 
 ## Components of merge policies {#components-of-merge-policies}
 
-Merge policies are private to your organization, allowing you to create different policies to merge schemas in the specific ways that you need. Any API accessing [!DNL Profile] data requires a merge policy, though a default will be used if one is not explicitly provided. [!DNL Platform] provides organizations with a default merge policy, or you can create a merge policy for a specific Experience Data Model (XDM) schema class and mark it as the default for your organization. 
+Merge policies are private to your organization, allowing you to create different policies to merge schemas in the specific ways that you need. Any API accessing [!DNL Profile] data requires a merge policy, though a default will be used if one is not explicitly provided. [!DNL Experience Platform] provides organizations with a default merge policy, or you can create a merge policy for a specific Experience Data Model (XDM) schema class and mark it as the default for your organization. 
 
 While each organization can potentially have multiple merge policies per schema class, each class can have only one default merge policy. Any merge policy set as default will be used in cases where the name of the schema class is provided and a merge policy is required but not provided. 
 
@@ -67,7 +67,7 @@ The complete merge policy object represents a set of preferences controlling asp
 |`name`|Friendly name by which the merge policy can be identified in list views.|
 |`imsOrgId`|Organization ID to which this merge policy belongs|
 |`schema.name`|Part of the [`schema`](#schema) object, the `name` field contains the XDM schema class to which the merge policy relates. For more information on schemas and classes, please read the [XDM documentation](../../xdm/home.md).|
-|`version`|[!DNL Platform] maintained version of merge policy. This read-only value is incremented whenever a merge policy is updated.|
+|`version`|[!DNL Experience Platform] maintained version of merge policy. This read-only value is incremented whenever a merge policy is updated.|
 |`identityGraph`|[Identity graph](#identity-graph) object indicating the identity graph from which related identities will be obtained. Profile fragments found for all related identities will be merged.|
 |`attributeMerge`|[Attribute merge](#attribute-merge) object indicating the manner by which the merge policy will prioritize profile attributes in the case of data conflicts.|
 |`isActiveOnEdge`|Boolean value indicating if this merge policy can be used on edge. By default, this value is `false`.|
@@ -756,6 +756,6 @@ A successful delete request returns HTTP Status 200 (OK) and an empty response b
 
 ## Next steps
 
-Now that you know how to create and configure merge policies for your organization, you can use them to adjust the view of customer profiles within Platform and to create audiences from your [!DNL Real-Time Customer Profile] data. 
+Now that you know how to create and configure merge policies for your organization, you can use them to adjust the view of customer profiles within Experience Platform and to create audiences from your [!DNL Real-Time Customer Profile] data. 
 
 Please see the [Adobe Experience Platform Segmentation Service documentation](../../segmentation/home.md) to begin defining and working with audiences.

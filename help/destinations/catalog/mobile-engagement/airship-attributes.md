@@ -6,9 +6,17 @@ exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
 ---
 # [!DNL Airship Attributes] connection {#airship-attributes-destination}
 
+>[!IMPORTANT]
+>
+>* Starting March 25, 2025, you can see two [!DNL Airship Attributes] cards side-by-side in the destinations catalog. This is due to an internal upgrade to the destinations service. The existing [!DNL Airship Attributes] destination connector has been renamed to **[!UICONTROL (Deprecated) Airship Attributes]** and a new card with the name **[!UICONTROL Airship Attributes]** is now available to you. 
+>* Use the **[!UICONTROL Airship Attributes]** connection in the catalog for new activation data flows. If you have any active dataflows to the **[!UICONTROL (Deprecated) Airship Attributes]** destination, they will be updated automatically, so no action is required from you.
+>* If you are creating dataflows through the [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/), you must update your [!DNL flow spec ID] and [!DNL connection spec ID] to the following values:
+>   * Flow spec ID: `a862e0be-966e-4e5a-80d3-1bb566461986`
+>   * Connection spec ID: `594bc002-4a47-49b7-8a98-ac0d21045502`
+
 ## Overview {#overview}
 
-[!DNL Airship] is the leading Customer Engagement Platform, helping you deliver meaningful, personalized omnichannel messaging to your users at every stage of the customer lifecycle.
+[!DNL Airship] is the leading Customer Engagement Experience Platform, helping you deliver meaningful, personalized omnichannel messaging to your users at every stage of the customer lifecycle.
 
 This integration passes Adobe profile data into [!DNL Airship] as [Attributes](https://docs.airship.com/guides/audience/attributes/) for targeting or triggering.
 
@@ -53,7 +61,7 @@ Refer to the table below for information about the destination export type and f
 
 ## Enable attributes {#enable-attributes}
 
-Adobe Experience Platform profile attributes are similar to [!DNL Airship] attributes and can be easily mapped to one another in Platform using the mapping tool demonstrated further below on this page.
+Adobe Experience Platform profile attributes are similar to [!DNL Airship] attributes and can be easily mapped to one another in Experience Platform using the mapping tool demonstrated further below on this page.
 
 [!DNL Airship] projects have several predefined and default attributes. If you have a custom attribute, you must define it in [!DNL Airship] first. See [Set Up and Manage Attributes](https://docs.airship.com/tutorials/audience/attributes/) for details.
 
@@ -77,7 +85,7 @@ Leverage profile data collected within Adobe Experience Platform for personaliza
 
 ### Use case #2
 
-Leverage Attributes from Adobe Experience Platform to further enrich [!DNL Airship] profiles and combine it with SDK or [!DNL Airship] predictive data. For example, a retailer can create an audience with loyalty status and location data (attributes from Platform) and [!DNL Airship] predicted to churn data to send highly targeted messages to users in the gold loyalty status who live in Las Vegas, NV, and have a high probability of churning.
+Leverage Attributes from Adobe Experience Platform to further enrich [!DNL Airship] profiles and combine it with SDK or [!DNL Airship] predictive data. For example, a retailer can create an audience with loyalty status and location data (attributes from Experience Platform) and [!DNL Airship] predicted to churn data to send highly targeted messages to users in the gold loyalty status who live in Las Vegas, NV, and have a high probability of churning.
 
 ## Connect to the destination {#connect}
 

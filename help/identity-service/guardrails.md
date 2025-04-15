@@ -16,7 +16,7 @@ This document provides information on use and rate limits for [!DNL Identity Ser
 
 The following Experience Platform services are involved with modeling Identity data: 
 
-* [Identities](home.md): Bridge identities from disparate data sources as they are ingested into Platform.
+* [Identities](home.md): Bridge identities from disparate data sources as they are ingested into Experience Platform.
 * [[!DNL Real-Time Customer Profile]](../profile/home.md): Create unified consumer profiles using data from multiple sources.
 
 ## Data model limits

@@ -7,7 +7,7 @@ exl-id: fd4821c7-6fe1-4cad-8e13-3549dbe0ce98
 ---
 # Create a dataflow for [!DNL Mailchimp Campaign] using the Flow Service API
 
-The following tutorial walks you through the steps to create a source connection and a dataflow to bring [!DNL Mailchimp Campaign] data to Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+The following tutorial walks you through the steps to create a source connection and a dataflow to bring [!DNL Mailchimp Campaign] data to Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prerequisites
 
@@ -15,9 +15,9 @@ Before you can connect [!DNL Mailchimp] to Adobe Experience Platform using OAuth
 
 ## Create a base connection {#base-connection}
 
-Once you have retrieved your [!DNL Mailchimp] authentication credentials, you can now start the process of creating dataflow to bring [!DNL Mailchimp Campaign] data to Platform. The first step in creating a dataflow is to create a base connection.
+Once you have retrieved your [!DNL Mailchimp] authentication credentials, you can now start the process of creating dataflow to bring [!DNL Mailchimp Campaign] data to Experience Platform. The first step in creating a dataflow is to create a base connection.
 
-A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
+A base connection retains information between your source and Experience Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
 [!DNL Mailchimp] supports both basic authentication and OAuth 2 refresh code. See the following examples for guidance on how to authenticate with either authentication types.
 
@@ -66,7 +66,7 @@ curl -X POST \
 | `name` | The name of your base connection. Ensure that the name of your base connection is descriptive as you can use this to look up information on your base connection. |
 | `description` | (Optional) A property that you can include to provide more information on your base connection. |
 | `connectionSpec.id` | The connection specification ID of your source. This ID can be retrieved after your source is registered and approved through the [!DNL Flow Service] API. |
-| `auth.specName` | The authentication type that you are using to connect your source to Platform. |
+| `auth.specName` | The authentication type that you are using to connect your source to Experience Platform. |
 | `auth.params.authorizationTestUrl` | (Optional) The authorization test URL is used to validate credentials when creating a base connection. If unprovided, credentials are automatically checked during the source connection creation step instead. |
 | `auth.params.username` | The username that corresponds with your [!DNL Mailchimp] account. This is required for basic authentication. |
 | `auth.params.password` | The password that corresponds with your [!DNL Mailchimp] account. This is required for basic authentication. |
@@ -126,7 +126,7 @@ curl -X POST \
 | `name` | The name of your base connection. Ensure that the name of your base connection is descriptive as you can use this to look up information on your base connection. |
 | `description` | (Optional) A property that you can include to provide more information on your base connection. |
 | `connectionSpec.id` | The connection specification ID of your source. This ID can be retrieved after registering your source using the [!DNL Flow Service] API. |
-| `auth.specName` | The authentication type that you are using to authenticate your source to Platform. |
+| `auth.specName` | The authentication type that you are using to authenticate your source to Experience Platform. |
 | `auth.params.authorizationTestUrl` | (Optional) The authorization Test URL is used to validate credentials when creating a base connection. If unprovided, credentials are automatically checked during the source connection creation step instead. |
 | `auth.params.accessToken` | The corresponding access token used to authenticate your source. This is required for OAuth-based authentication. |
 
@@ -317,7 +317,7 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 ## Create a target XDM schema {#target-schema}
 
-In order for the source data to be used in Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create a Platform dataset in which the source data is contained.
+In order for the source data to be used in Experience Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create an Experience Platform dataset in which the source data is contained.
 
 A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
@@ -378,7 +378,7 @@ curl -X POST \
 | `name` | The name of your target connection. Ensure that the name of your target connection is descriptive as you can use this to look up information on your target connection. |
 | `description` | An optional value that you can include to provide more information on your target connection. |
 | `connectionSpec.id` | The connection specification ID that corresponds to [!DNL Data Lake]. This fixed ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | The format of the [!DNL Mailchimp] data that you want to bring to Platform. |
+| `data.format` | The format of the [!DNL Mailchimp] data that you want to bring to Experience Platform. |
 | `params.dataSetId` | The target dataset ID retrieved in a previous step. |
 
 
@@ -465,7 +465,7 @@ A successful response returns details of the newly created mapping including its
 
 ## Create a flow {#flow}
 
-The last step towards bringing [!DNL Mailchimp] data to Platform is to create a dataflow. By now, you have the following required values prepared:
+The last step towards bringing [!DNL Mailchimp] data to Experience Platform is to create a dataflow. By now, you have the following required values prepared:
 
 * [Source connection ID](#source-connection)
 * [Target connection ID](#target-connection)

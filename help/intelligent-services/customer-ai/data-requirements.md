@@ -56,8 +56,8 @@ The following table outlines some common terminology used in this document:
 
 | Term | Definition |
 | --- | --- |
-| [Experience Data Model (XDM)](../../xdm/home.md) | XDM is the foundational framework that allows Adobe Experience Cloud, powered by Adobe Experience Platform, to deliver the right message to the right person, on the right channel, at exactly the right moment. Platform uses XDM System to organize data in a certain way that makes it easier to use for Platform services. |
-| [XDM Schema](../../xdm/schema/composition.md) | Experience Platform uses schemas to describe the structure of data in a consistent and reusable way. By defining data consistently across systems, it becomes easier to retain meaning and therefore gain value from data. Before data can be ingested into Platform, a schema must be composed to describe the data's structure and provide constraints to the type of data that can be contained within each field. Schemas consist of a base XDM class and zero or more schema field groups. |
+| [Experience Data Model (XDM)](../../xdm/home.md) | XDM is the foundational framework that allows Adobe Experience Cloud, powered by Adobe Experience Platform, to deliver the right message to the right person, on the right channel, at exactly the right moment. Experience Platform uses XDM System to organize data in a certain way that makes it easier to use for Experience Platform services. |
+| [XDM Schema](../../xdm/schema/composition.md) | Experience Platform uses schemas to describe the structure of data in a consistent and reusable way. By defining data consistently across systems, it becomes easier to retain meaning and therefore gain value from data. Before data can be ingested into Experience Platform, a schema must be composed to describe the data's structure and provide constraints to the type of data that can be contained within each field. Schemas consist of a base XDM class and zero or more schema field groups. |
 | [XDM class](../../xdm/schema/field-constraints.md) | All XDM schemas describe data that can be categorized as `Experience Event`. The data behavior of a schema is defined by the schema's class, which is assigned to a schema when it is first created. XDM classes describe the smallest number of properties a schema must contain in order to represent a particular data behavior. |
 | [Field groups](../../xdm/schema/composition.md) | A component that defines one or more fields in a schema. Field groups enforce how their fields appear in the schema's hierarchy, and therefore exhibit the same structure in every schema that they are included in. Field groups are only compatible with specific classes, as identified by their `meta:intendedToExtend` attribute. |
 | [Data type](../../xdm/schema/composition.md) | A component that can also provide one or more fields for a schema. However, unlike field groups, data types are not constrained to a particular class. This makes data types a more flexible option to describe common data structures that are reusable across multiple schemas with potentially different classes. The data types outlined in this document are supported by both the CEE and Adobe Analytics schemas. |
@@ -69,7 +69,7 @@ For input datasets, like Adobe Analytics and Adobe Audience Manager, the respect
 
 For more information on mapping Adobe Analytics data or Audience Manager data, visit the Analytics field mappings or Audience Manager [field mappings guide](../../sources/connectors/adobe-applications/mapping/audience-manager.md).
 
-You can use Experience Event or Consumer Experience Event XDM schemas for input datasets that are not populated via one of the above connectors. Additional XDM field groups can be added during the schema creation process. The field groups can be provided by Adobe like the standard field groups or a custom field group, which matches the data representation in the Platform. 
+You can use Experience Event or Consumer Experience Event XDM schemas for input datasets that are not populated via one of the above connectors. Additional XDM field groups can be added during the schema creation process. The field groups can be provided by Adobe like the standard field groups or a custom field group, which matches the data representation in the Experience Platform. 
 
 >[!IMPORTANT]
 >
@@ -85,7 +85,7 @@ Experience Events are used for determining various customer behaviors. Depending
 
 Customer AI uses the events in these four standard field groups by default: Commerce, Web, Application, and Search. It is not necessary to have data for each event in the standard field groups listed below but certain events are required for certain scenarios. If you have any events in the standard field groups available, it is recommended that you include it in your schema. For example, if you wanted to create a Customer AI model for predicting purchase events, it is useful to have data from the Commerce and Web page details field groups. 
 
-To view a field group in the Platform UI, select the **[!UICONTROL Schemas]** tab on the left-rail followed by selecting the **[!UICONTROL Field groups]** tab.
+To view a field group in the Experience Platform UI, select the **[!UICONTROL Schemas]** tab on the left-rail followed by selecting the **[!UICONTROL Field groups]** tab.
 
 | Field group | Event type | XDM field path |
 | --- | --- | --- |
@@ -205,7 +205,7 @@ Although Customer AI requires a minimum period of time for the data to exist wit
 
 Customer AI generates several attributes for individual profiles that are deemed eligible. There are two ways to consume the score (output) based on what you have provisioned. If you have a Real-time Customer Profile-enabled dataset, you can consume insights from Real-time Customer Profile in the [Segment Builder](../../segmentation/ui/segment-builder.md). If you don't have a Profile-enabled dataset, you can [download the Customer AI output](./user-guide/download-scores.md) dataset available on the data lake.
 
-You can find the output dataset in the Platform **Datasets** workspace. All Customer AI output datasets start with the name **Customer AI Scores - NAME_OF_APP**. Similarly, all Customer AI output schemas start with the name **Customer AI Schema - Name_of_app**.
+You can find the output dataset in the Experience Platform **Datasets** workspace. All Customer AI output datasets start with the name **Customer AI Scores - NAME_OF_APP**. Similarly, all Customer AI output schemas start with the name **Customer AI Schema - Name_of_app**.
 
 ![Name of the output datasets in Customer AI](./images/user-guide/cai-schema-name-of-app.png) 
 

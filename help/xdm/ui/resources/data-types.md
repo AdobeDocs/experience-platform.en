@@ -21,7 +21,7 @@ Adobe Experience Platform provides many standard data types that can be used to 
 >
 >If a field is defined as a specific data type, you cannot create the same field with a different datatype in another schema. This constraint applies across your organization's tenant.
 
-This tutorial covers the steps for creating and editing custom data types in the Platform user interface.
+This tutorial covers the steps for creating and editing custom data types in the Experience Platform user interface.
 
 ## Prerequisites {#prerequisites}
 
@@ -31,7 +31,7 @@ While not required for this guide, it is recommended that you also follow the tu
 
 ## Open the [!DNL Schema Editor] for a data type {#data-type}
 
-In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation to open the [!UICONTROL Schemas] workspace, then select the **[!UICONTROL Data types]** tab. A list of available data types is displayed. The list of data types is automatically filtered based on how they were created. The default setting displays the data types defined by Adobe. You can also filter the list to show those created by your organization. 
+In the Experience Platform UI, select **[!UICONTROL Schemas]** in the left navigation to open the [!UICONTROL Schemas] workspace, then select the **[!UICONTROL Data types]** tab. A list of available data types is displayed. The list of data types is automatically filtered based on how they were created. The default setting displays the data types defined by Adobe. You can also filter the list to show those created by your organization. 
 
 ![The [!UICONTROL Schemas] workspace with [!UICONTROL Schemas] in the left navigation and [!UICONTROL Data types] highlighted.](../../images/ui/resources/data-types/data-types-tab.png)
 
@@ -119,6 +119,6 @@ The canvas updates the data type of the field from "[!UICONTROL Object]" to the 
 
 ## Next steps {#next-steps}
 
-This guide covered how to create and edit data types using the Platform UI. For more information on the capabilities of the [!UICONTROL Schemas] workspace, see the [[!UICONTROL Schemas] workspace overview](../overview.md).
+This guide covered how to create and edit data types using the Experience Platform UI. For more information on the capabilities of the [!UICONTROL Schemas] workspace, see the [[!UICONTROL Schemas] workspace overview](../overview.md).
 
 To learn how to manage data types using the [!DNL Schema Registry] API, see the [data types endpoint guide](../../api/data-types.md).

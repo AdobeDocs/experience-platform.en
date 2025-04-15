@@ -7,14 +7,14 @@ exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
 ---
 # Behaviors endpoint
 
-In Experience Data Model (XDM), behaviors define the nature of data that a schema describes. Each XDM class must reference a specific behavior, which all schemas that employ that class will inherit. For nearly all use cases in Platform, there are two available behaviors:
+In Experience Data Model (XDM), behaviors define the nature of data that a schema describes. Each XDM class must reference a specific behavior, which all schemas that employ that class will inherit. For nearly all use cases in Experience Platform, there are two available behaviors:
 
 * **[!UICONTROL Record]**: Provides information about the attributes of a subject. A subject could be an organization or an individual.
 * **[!UICONTROL Time-series]**: Provides a snapshot of the system at the time an action was taken either directly or indirectly by a record subject.
 
 >[!NOTE]
 >
->There are some use cases in Platform that require the use of schema that does not employ either of the above behaviors. For these cases, a third "ad-hoc" behavior is available. See the tutorial on [creating an ad-hoc schema](../tutorials/ad-hoc.md) for more information.
+>There are some use cases in Experience Platform that require the use of schema that does not employ either of the above behaviors. For these cases, a third "ad-hoc" behavior is available. See the tutorial on [creating an ad-hoc schema](../tutorials/ad-hoc.md) for more information.
 >
 >For more general information on data behaviors in terms of how they affect schema composition, refer to the guide on the [basics of schema composition](../schema/composition.md).
 

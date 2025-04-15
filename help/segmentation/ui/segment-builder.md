@@ -21,6 +21,16 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 >title="Fields"
 >abstract="The three field types that make up a segment definition are attributes, events, and audiences. Attributes let you use Profile attributes that belong to the XDM Individual Profile class, events let you create an audience based on actions or events that take place using XDM ExperienceEvent data elements, and audiences let you use imported audiences from external sources."
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_showfullxdmschema"
+>title="Show full XDM schema"
+>abstract="By default, only fields that contain data are displayed. Enable this option to show all the fields in the XDM schema."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_showdeprecatedfields"
+>title="Show deprecated fields"
+>abstract="By default, deprecated XDM fields are not dispalyed. Enable this option to show deprecated XDM fields."
+
 The basic building blocks of segment definitions are attributes and events. In addition, the attributes and events contained in existing audiences can be used as components for new definitions. 
 
 >[!CONTEXTUALHELP]
@@ -70,11 +80,11 @@ By default, only populated schema fields from your data store are shown. This in
 
 You can use data from either a single or multiple Adobe Analytics report suites as events within segmentation. 
 
-When using data from a single Analytics report suite, Platform will automatically add descriptors and friendly names to eVars, making it easier to find those fields within [!DNL Segment Builder].
+When using data from a single Analytics report suite, Experience Platform will automatically add descriptors and friendly names to eVars, making it easier to find those fields within [!DNL Segment Builder].
 
 ![An image showing how generic variables (eVars) are mapped with a user friendly name.](../images/ui/segment-builder/single-report-suite.png)
 
-When using data from multiple Analytics report suites, Platform **cannot** automatically add descriptors or friendly names to eVars. As a result, before using the data from Analytics report suites, you must map to XDM fields. More information about mapping Analytics variables to XDM can be found in the [Adobe Analytics source connection guide](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping).
+When using data from multiple Analytics report suites, Experience Platform **cannot** automatically add descriptors or friendly names to eVars. As a result, before using the data from Analytics report suites, you must map to XDM fields. More information about mapping Analytics variables to XDM can be found in the [Adobe Analytics source connection guide](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping).
 
 For example, consider a situation where you had two report suites with the following variables:
 
@@ -113,7 +123,7 @@ Once the report suites have been mapped, you can use these newly mapped fields w
 
 >[!NOTE]
 >
->For audiences created within Platform, only audiences that have the **same** merge policy will be displayed.
+>For audiences created within Experience Platform, only audiences that have the **same** merge policy will be displayed.
 
 The **[!UICONTROL Audiences]** tab lists all audiences imported from external sources, such as Adobe Audience Manager or Customer Journey Analytics, as well as audiences created within [!DNL Experience Platform].
 
@@ -176,7 +186,7 @@ Please note that there is a maximum of 250 values allowed. If you exceed this am
 
 You can drag and drop an audience from the **[!UICONTROL Audience]** tab onto the rule builder canvas to reference audience membership in the new segment definition. This allows you to include or exclude audience membership as an attribute in the new segment definition rules.
 
-For [!DNL Platform] audiences created using [!DNL Segment Builder], you are given the option to convert the audience into the set of rules that were used in the segment definition for that audience. This conversion makes a copy of the rule logic, that can then be modified without affecting the original segment definition. Make sure that you have saved any recent changes to your segment definition before converting it to rule logic.
+For [!DNL Experience Platform] audiences created using [!DNL Segment Builder], you are given the option to convert the audience into the set of rules that were used in the segment definition for that audience. This conversion makes a copy of the rule logic, that can then be modified without affecting the original segment definition. Make sure that you have saved any recent changes to your segment definition before converting it to rule logic.
 
 >[!NOTE]
 >
@@ -316,7 +326,7 @@ The list of available time constraints for this operation differs from the main 
 
 +++
 
-## Containers
+## Containers {#containers}
 
 Segment rules are evaluated in the order they are listed. Containers allow control over the order of execution through the use of nested queries.
 
@@ -343,11 +353,11 @@ Once you select **[!UICONTROL Unwrap container]** the child container is removed
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
 >title="Merge policies"
->abstract="A merge policy enables the merging of different datasets to form your profile. Platform has provided a default merge policy, or you can create a new default merge policy in Profiles. Choose a merge policy that matches your marketing purpose for this audience."
+>abstract="A merge policy enables the merging of different datasets to form your profile. Experience Platform has provided a default merge policy, or you can create a new default merge policy in Profiles. Choose a merge policy that matches your marketing purpose for this audience."
 
-[!DNL Experience Platform] enables you to bring data together from multiple sources and combine it in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create a profile. 
+[!DNL Experience Platform] enables you to bring data together from multiple sources and combine it in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that [!DNL Experience Platform] uses to determine how data will be prioritized and what data will be combined to create a profile. 
 
-You can select a merge policy that matches your marketing purpose for this audience or use the default merge policy provided by [!DNL Platform]. You can create multiple merge policies unique to your organization, including creating your own default merge policy. For step-by-step instructions on creating merge policies for your organization, please begin by reading the [merge policies overview](../../profile/merge-policies/overview.md). 
+You can select a merge policy that matches your marketing purpose for this audience or use the default merge policy provided by [!DNL Experience Platform]. You can create multiple merge policies unique to your organization, including creating your own default merge policy. For step-by-step instructions on creating merge policies for your organization, please begin by reading the [merge policies overview](../../profile/merge-policies/overview.md). 
 
 To select a merge policy for your segment definition, select the gear icon on the **[!UICONTROL Fields]** tab, then use the **[!UICONTROL Merge Policy]** dropdown menu to select the merge policy that you wish to use.
 

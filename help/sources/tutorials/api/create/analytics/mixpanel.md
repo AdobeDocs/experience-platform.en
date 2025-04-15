@@ -11,14 +11,14 @@ The following tutorial walks you through the steps to create a source connection
 
 This guide requires a working understanding of the following components of Experience Platform:
 
-* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to successfully connect to [!DNL Mixpanel] using the [!DNL Flow Service] API.
 
 ### Gather required credentials
 
-In order to connect [!DNL Mixpanel] to Platform, you must provide values for the following connection properties:
+In order to connect [!DNL Mixpanel] to Experience Platform, you must provide values for the following connection properties:
 
 | Credential | Description | Example |
 | --- | --- | --- |
@@ -31,7 +31,7 @@ For more information on authenticating your [!DNL Mixpanel] source, see the [[!D
 
 ## Create a base connection {#base-connection}
 
-A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
+A base connection retains information between your source and Experience Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
 To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Mixpanel] authentication credentials as part of the request body.
 
@@ -55,7 +55,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
       "name": "Mixpanel base connection",
-      "description": "Mixpanel base connection to authenticate to Platform",
+      "description": "Mixpanel base connection to authenticate to Experience Platform",
       "connectionSpec": {
           "id": "fd2c8ff3-1de0-4f6b-8fa8-4264784870eb",
           "version": "1.0"
@@ -75,7 +75,7 @@ curl -X POST \
 | `name` | The name of your base connection. Ensure that the name of your base connection is descriptive as you can use this to look up information on your base connection. |
 | `description` | An optional value that you can include to provide more information on your base connection. |
 | `connectionSpec.id` | The connection specification ID of your source. This ID can be retrieved after your source is registered and approved through the [!DNL Flow Service] API. |
-| `auth.specName` | The authentication type that you are using to authenticate your source to Platform. |
+| `auth.specName` | The authentication type that you are using to authenticate your source to Experience Platform. |
 | `auth.params.` | Contains the credentials required to authenticate your source. |
 | `auth.params.username` | The username that corresponds with your [!DNL Mixpanel] account. |
 | `auth.params.password` | The password that corresponds with your [!DNL Mixpanel] account. |
@@ -110,9 +110,9 @@ When performing GET requests to explore your source's file structure and content
 | `{BASE_CONNECTION_ID}` | The base connection ID generated in the previous step. |
 | `objectType=rest` | The type of object that you wish to explore. Currently, this value is always set to `rest`. |
 | `{OBJECT}` | This parameter is required only when viewing a specific directory. Its value represents the path of the directory you wish to explore. For this source the value would be `json`. |
-| `fileType=json` | The file type of the file you want to bring to Platform. Currently, `json` is the only supported file type. |
+| `fileType=json` | The file type of the file you want to bring to Experience Platform. Currently, `json` is the only supported file type. |
 | `{PREVIEW}` | A boolean value that defines whether the contents of the connection supports preview. |
-| `{SOURCE_PARAMS}` | Defines parameters for the source file you want to bring to Platform. To retrieve the accepted format-type for `{SOURCE_PARAMS}`, you must encode the entire `{"projectId":"2671127","timezone":"Pacific Standard Time"}` string in base64. **Note**: In the example below, `"{"projectId":"2671127","timezone":"Pacific Standard Time"}"` encoded in base64 equates to `eyJwcm9qZWN0SWQiOiIyNjcxMTI3IiwidGltZXpvbmUiOiJQYWNpZmljIFN0YW5kYXJkIFRpbWUifQ==`. | 
+| `{SOURCE_PARAMS}` | Defines parameters for the source file you want to bring to Experience Platform. To retrieve the accepted format-type for `{SOURCE_PARAMS}`, you must encode the entire `{"projectId":"2671127","timezone":"Pacific Standard Time"}` string in base64. **Note**: In the example below, `"{"projectId":"2671127","timezone":"Pacific Standard Time"}"` encoded in base64 equates to `eyJwcm9qZWN0SWQiOiIyNjcxMTI3IiwidGltZXpvbmUiOiJQYWNpZmljIFN0YW5kYXJkIFRpbWUifQ==`. | 
 
 
 **Request**
@@ -392,7 +392,7 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 ## Create a target XDM schema {#target-schema}
 
-In order for the source data to be used in Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create a Platform dataset in which the source data is contained.
+In order for the source data to be used in Experience Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create an Experience Platform dataset in which the source data is contained.
 
 A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
@@ -449,7 +449,7 @@ curl -X POST \
 | `name` | The name of your target connection. Ensure that the name of your target connection is descriptive as you can use this to look up information on your target connection. |
 | `description` | An optional value that you can include to provide more information on your target connection. |
 | `connectionSpec.id` | The connection specification ID that corresponds to data lake. This fixed ID is: `fd2c8ff3-1de0-4f6b-8fa8-4264784870eb`. |
-| `data.format` | The format of the [!DNL Mixpanel] data that you want to bring to Platform. |
+| `data.format` | The format of the [!DNL Mixpanel] data that you want to bring to Experience Platform. |
 | `params.dataSetId` | The target dataset ID retrieved in a previous step. |
 
 
@@ -575,7 +575,7 @@ A successful response returns details of the newly created mapping including its
 
 ## Create a flow {#flow}
 
-The last step towards bringing data from [!DNL Mixpanel] to Platform is to create a dataflow. By now, you have the following required values prepared:
+The last step towards bringing data from [!DNL Mixpanel] to Experience Platform is to create a dataflow. By now, you have the following required values prepared:
 
 * [Source connection ID](#source-connection)
 * [Target connection ID](#target-connection)
@@ -639,7 +639,7 @@ curl -X POST \
 | `flowSpec.version` | The corresponding version of the flow specification ID. This value defaults to `1.0`. |
 | `sourceConnectionIds` | The [source connection ID](#source-connection) generated in an earlier step. |
 | `targetConnectionIds` | The [target connection ID](#target-connection) generated in an earlier step. |
-| `transformations` | This property contains the various transformations that are needed to be applied to your data. This property is required when bringing non-XDM-compliant data to Platform. |
+| `transformations` | This property contains the various transformations that are needed to be applied to your data. This property is required when bringing non-XDM-compliant data to Experience Platform. |
 | `transformations.name` | The name assigned to the transformation. |
 | `transformations.params.mappingId` | The [mapping ID](#mapping) generated in an earlier step. |
 | `transformations.params.mappingVersion` | The corresponding version of the mapping ID. This value defaults to `0`. |
