@@ -5,6 +5,10 @@ exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
 ---
 # Connect [!DNL Google Ads] to Experience Platform using the UI
 
+>[!WARNING]
+>
+>The [!DNL Google Ads] source is currently not available in the UI. You can continue to ingest your [!DNL Google Ads] data to Experience Platform [using the API](../../../api/create/advertising/ads.md).
+
 >[!NOTE]
 >
 >The [!DNL Google Ads] source is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
