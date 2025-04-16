@@ -96,23 +96,16 @@ To configure details for the destination, fill in the required fields and select
 
 See [Activate audience data to streaming profile export destinations](../../ui/activate-streaming-profile-destinations.md) for instructions on activating audiences to this destination.
 
-### Destination attributes {#attributes}
+### Mapping {#mapping}
 
-In the [[!UICONTROL Select attributes]](../../ui/activate-streaming-profile-destinations.md#select-attributes) step, Adobe recommends that you select a unique identifier from your [union schema](../../../profile/home.md#profile-fragments-and-union-schemas). Select the unique identifier and any other XDM fields that you want to export to the destination.
+In the [!UICONTROL Mapping] step, select a unique identifier from your union schema and any other XDM fields that you want to export to the destination.
 
 ### Mapping example: activating profile updates in [!DNL Pega Customer Decision Hub] {#mapping-example}
 
 Below is an example of correct identity mapping when exporting profiles to [!DNL Pega Customer Decision Hub].
 
-Selecting source fields:
-
-* Select an identifier (For example: CustomerID) as source identity that uniquely identifies a profile in Adobe Experience Platform and [!DNL Pega Customer Decision Hub].
-* Select XDM source profile attribute changes that need to be exported and updated in [!DNL Pega Customer Decision Hub].
-
-Selecting target fields:
-
-* Select the `CustomerID` namespace as target identity.
-* Select destination profile attribute names that need to be mapped to corresponding XDM source profile attributes.
+* Select a source identity that uniquely identifies a profile in Adobe Experience Platform and [!DNL Pega Customer Decision Hub]. For example: CustomerID.
+* Select the destination profile attributes to which you want to map the selected source profile attributes.
 
 ![Identity mapping](../../assets/catalog/personalization/pega/pega-source-destination-mapping.png)
 
@@ -128,12 +121,10 @@ The customer audience membership data fields are added as predictors in Adaptive
 ![Image of the UI screen where you can add Audience membership fields as predicators in Adaptive models, using Prediction Studio](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
 
 ## Additional resources {#additional-resources}
-
-See [Setting up an OAuth 2.0 client registration](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html) in [!DNL Pega Customer Decision Hub].
-
-See [Creating a real-time run for data flows](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html) in [!DNL Pega Customer Decision Hub].
-
-See [Manage customer records in Customer Profile Designer](https://docs.pega.com/bundle/customer-decision-hub/page/customer-decision-hub/implement/profile-designer-data-management.html) in [!DNL Pega Customer Decision Hub].
+Refer to the following [!DNL Pega] documentation for more information:
+* [Setting up an OAuth 2.0 client registration](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html)
+* [Creating a real-time run for data flows](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html)
+* [Manage customer records in Customer Profile Designer](https://docs.pega.com/bundle/customer-decision-hub/page/customer-decision-hub/implement/profile-designer-data-management.html)
 
 ## Data usage and governance {#data-usage-governance}
 
