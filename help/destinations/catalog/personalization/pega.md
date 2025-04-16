@@ -7,7 +7,7 @@ exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
 
 >[!IMPORTANT]
 >
->This version of the Pega Customer Decision Hub Realtime Audience destination supports only a single Pega Customer Decision application. If you have multiple Pega Customer Decision Hub applications configured, you need to use the (V2) Pega CDH Realtime Audience destination connector.
+>This version of the Pega Customer Decision Hub Realtime Audience destination supports only a single Pega Customer Decision application. If you have multiple Pega Customer Decision Hub applications configured, you need to use the [(V2) Pega CDH Realtime Audience destination connector](https://github.com/paratAtPega/experience-platform.en/edit/create-destination/help/destinations/catalog/personalization/pega-v2.md).
 
 ## Overview {#overview}
 
