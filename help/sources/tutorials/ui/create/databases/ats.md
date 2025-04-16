@@ -8,7 +8,7 @@ exl-id: 045cb954-e3e1-439d-a3cd-170d688dfbc8
 ---
 # Create an [!DNL Azure Table Storage] source connection in the UI
 
-Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL Azure Table Storage] (hereinafter referred to as "ATS") source connector using the [!DNL Platform] user interface.
+Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL Azure Table Storage] (hereinafter referred to as "ATS") source connector using the [!DNL Experience Platform] user interface.
 
 ## Getting started
 
@@ -23,7 +23,7 @@ If you already have a valid ATS connection, you may skip the remainder of this d
 
 ### Gather required credentials
 
-In order to access your ATS account on [!DNL Platform], you must provide the following values:
+In order to access your ATS account on [!DNL Experience Platform], you must provide the following values:
 
 | Credential | Description |
 | ---------- | ----------- |
@@ -33,7 +33,7 @@ For more information about getting started, refer to [this [!DNL Azure Table Sto
 
 ## Connect your [!DNL Azure Table Storage] account
 
-Once you have gathered your required credentials, you can follow the steps below to link your ATS account to [!DNL Platform].
+Once you have gathered your required credentials, you can follow the steps below to link your ATS account to [!DNL Experience Platform].
 
 Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create an account with.
 
@@ -59,4 +59,4 @@ To connect an existing account, select the ATS account you want to connect with,
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your ATS account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Platform]](../../dataflow/databases.md).
+By following this tutorial, you have established a connection to your ATS account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Experience Platform]](../../dataflow/databases.md).

@@ -2,12 +2,12 @@
 keywords: Experience Platform;profile;real-time customer profile;merge policies;UI;user interface;timestamp ordered;dataset precedence
 title: Merge Policies Overview
 type: Documentation
-description: Adobe Experience Platform enables you to bring data fragments together from multiple sources and combine them in order to see a complete view of your individual customers. When bringing this data together, merge policies are the rules that Platform uses to determine how data will be prioritized and what data will be combined to create the unified view.
+description: Adobe Experience Platform enables you to bring data fragments together from multiple sources and combine them in order to see a complete view of your individual customers. When bringing this data together, merge policies are the rules that Experience Platform uses to determine how data will be prioritized and what data will be combined to create the unified view.
 exl-id: a8ef527a-cfee-4129-9973-e8a212a3ad1e
 ---
 # Merge policies overview
 
-Adobe Experience Platform enables you to bring data fragments together from multiple sources and combine them in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create a unified view. 
+Adobe Experience Platform enables you to bring data fragments together from multiple sources and combine them in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that [!DNL Experience Platform] uses to determine how data will be prioritized and what data will be combined to create a unified view. 
 
 Using RESTful APIs or the user interface, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. This document provides an overview of merge policies and the role they play within Experience Platform.
 
@@ -16,14 +16,14 @@ Using RESTful APIs or the user interface, you can create new merge policies, man
 This guide requires a working understanding of several important [!DNL Experience Platform] features. Before following this guide and working with merge policies, please review the documentation for the following services:
 
 * [Real-Time Customer Profile](../home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-* [Adobe Experience Platform Identity Service](../../identity-service/home.md): Enables Real-Time Customer Profile by bridging identities from disparate data sources being ingested into [!DNL Platform].
-* [Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
+* [Adobe Experience Platform Identity Service](../../identity-service/home.md): Enables Real-Time Customer Profile by bridging identities from disparate data sources being ingested into [!DNL Experience Platform].
+* [Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
 
 ## Understanding merge policies
 
-Adobe Experience Platform enables you to bring data fragments together from multiple sources and combine them in order to see a complete, unified view of each of your individual customers. When bringing this data together, merge policies are the rules that Platform uses to determine how data will be prioritized and what data will be combined to create that unified view.
+Adobe Experience Platform enables you to bring data fragments together from multiple sources and combine them in order to see a complete, unified view of each of your individual customers. When bringing this data together, merge policies are the rules that Experience Platform uses to determine how data will be prioritized and what data will be combined to create that unified view.
 
-For example, if a customer interacts with your brand across several channels, your organization will have multiple profile fragments related to that single customer appearing in multiple datasets. When these fragments are ingested into Platform, they are merged together in order to create a single profile for that customer. 
+For example, if a customer interacts with your brand across several channels, your organization will have multiple profile fragments related to that single customer appearing in multiple datasets. When these fragments are ingested into Experience Platform, they are merged together in order to create a single profile for that customer. 
 
 When the data from multiple sources conflicts (for example one fragment lists the customer as "single" while the other lists the customer as "married") the merge policy determines which information to include in the profile for the individual.
 
@@ -48,7 +48,7 @@ In order to create a merge policy using **[!UICONTROL Dataset precedence]**, you
 
 ### Timestamp ordered {#timestamp-ordered}
 
-As profile records are ingested into Experience Platform, a system timestamp is obtained at the time of ingestion and added to the record. When **[!UICONTROL Timestamp ordered]** is selected as the merge method for a merge policy, profiles are merged based on the system timestamp. In other words, merging is done based on the timestamp for when the record was ingested into Platform.
+As profile records are ingested into Experience Platform, a system timestamp is obtained at the time of ingestion and added to the record. When **[!UICONTROL Timestamp ordered]** is selected as the merge method for a merge policy, profiles are merged based on the system timestamp. In other words, merging is done based on the timestamp for when the record was ingested into Experience Platform.
 
 ## Identity stitching {#id-stitching}
 

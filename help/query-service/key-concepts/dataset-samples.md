@@ -25,7 +25,7 @@ To use the create and delete approximate query processing capabilities detailed 
 
 >[!NOTE]
 >
->You must enable the session flag each time you log into Platform.
+>You must enable the session flag each time you log into Experience Platform.
 
 ![The Query Editor with the 'SET aqp=true;' command highlighted.](../images/key-concepts/set-session-flag.png)
 

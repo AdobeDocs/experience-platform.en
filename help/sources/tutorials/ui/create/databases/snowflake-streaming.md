@@ -22,7 +22,7 @@ Read the guide on [prerequisite setup for [!DNL Snowflake] streaming data](../..
 
 ## Use the [!DNL Snowflake Streaming] source to stream [!DNL Snowflake] data to Experience Platform
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
 Under the *Databases* category, select **[!DNL Snowflake Streaming]**, and then select **[!UICONTROL Add data]**.
 
@@ -80,7 +80,7 @@ Use the database directory on the left of your screen and select the table that 
 
 ![The select data interface with a database table selected.](../../../../images/tutorials/create/snowflake-streaming/select-table.png)
 
-Next, select the timestamp column type of your table. You can select between two types of timestamp columns: `TIMESTAMP_NTZ` or  `TIMESTAMP_LTZ`. If you select a column type of `TIMESTAMP_NTZ`, then you must also provide a timezone. Your columns should have a not null constraint. For more information, read the section on [limitations and frequently asked questions]
+Next, select the timestamp column type of your table. You can select between two types of timestamp columns: `TIMESTAMP_NTZ` or  `TIMESTAMP_LTZ`. If you select a column type of `TIMESTAMP_NTZ`, then you must also provide a timezone. Your columns should have a not null constraint. For more information, read the section on [limitations and frequently asked questions](../../../../connectors/databases/snowflake-streaming.md#limitations-and-frequently-asked-questions).
 
 You can also configure backfill settings during this step. Backfill determines what data is initially ingested. If backfill is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If not, then only the files that are loaded in between the first run of ingestion and the start time will be ingested. Files loaded prior to the start time will not be ingested. 
 

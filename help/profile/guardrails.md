@@ -25,9 +25,9 @@ This document provides default use and rate limits to help you model your Profil
 The following Experience Platform services are involved with modeling Real-Time Customer Profile data: 
 
 * [[!DNL Real-Time Customer Profile]](home.md): Create unified consumer profiles using data from multiple sources.
-* [Identities](../identity-service/home.md): Bridge identities from disparate data sources as they are ingested into Platform.
-* [Schemas](../xdm/home.md): Experience Data Model (XDM) schemas are the standardized framework by which Platform organizes customer experience data.
-* [Audiences](../segmentation/home.md): The segmentation engine within Platform is used to create audiences from your customer profiles based on customer behaviors and attributes.
+* [Identities](../identity-service/home.md): Bridge identities from disparate data sources as they are ingested into Experience Platform.
+* [Schemas](../xdm/home.md): Experience Data Model (XDM) schemas are the standardized framework by which Experience Platform organizes customer experience data.
+* [Audiences](../segmentation/home.md): The segmentation engine within Experience Platform is used to create audiences from your customer profiles based on customer behaviors and attributes.
 
 ## Limit types
 
@@ -171,9 +171,9 @@ In this document, there are several guardrails that refer to "profile fragments.
 
 ### Merge policies {#merge-policies}
 
-When bringing data together from multiple sources, merge policies are the rules that Platform uses to determine how data will be prioritized and what data will be combined to create that unified view. For example, if a customer interacts with your brand across several channels, your organization will have multiple profile fragments related to that single customer appearing in multiple datasets. When these fragments are ingested into Platform, they are merged together in order to create a single profile for that customer. When the data from multiple sources conflicts the merge policy determines which information to include in the profile for the individual. A maximum of five (5) merge policies that use the `_xdm.context.profile` schema are allowed per sandbox. To learn more about merge policies, please read the [merge policies overview](merge-policies/overview.md).
+When bringing data together from multiple sources, merge policies are the rules that Experience Platform uses to determine how data will be prioritized and what data will be combined to create that unified view. For example, if a customer interacts with your brand across several channels, your organization will have multiple profile fragments related to that single customer appearing in multiple datasets. When these fragments are ingested into Experience Platform, they are merged together in order to create a single profile for that customer. When the data from multiple sources conflicts the merge policy determines which information to include in the profile for the individual. A maximum of five (5) merge policies that use the `_xdm.context.profile` schema are allowed per sandbox. To learn more about merge policies, please read the [merge policies overview](merge-policies/overview.md).
 
-### Adobe Analytics report suite datasets in Platform {#aa-datasets}
+### Adobe Analytics report suite datasets in Experience Platform {#aa-datasets}
 
 Multiple report suites can be enabled for Profile as long as all data conflicts are resolved. You can use the Data Prep functionality to resolve data conflicts across eVars, Lists, and Props. To learn more about how to use the Data Prep functionality, please read the [Adobe Analytics connector UI guide](../sources/tutorials/ui/create/adobe-applications/analytics.md). 
 

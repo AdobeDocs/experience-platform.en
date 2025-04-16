@@ -5,7 +5,7 @@ exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
 ---
 # SFTP connector
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
 Read this document for prerequisite steps that you need to complete in order to successfully connect your [!DNL SFTP] account to Experience Platform.
 
@@ -34,7 +34,7 @@ The following is a list of constraints you must account for when naming your clo
 
 ### Set up a Base64-encoded OpenSSH private key for [!DNL SFTP]
 
-The [!DNL SFTP] source supports authentication using [!DNL Base64]-encoded OpenSSH private key. See the steps below for information on how to generate your Base64-encoded OpenSSH private key and connect [!DNL SFTP] to Platform.
+The [!DNL SFTP] source supports authentication using [!DNL Base64]-encoded OpenSSH private key. See the steps below for information on how to generate your Base64-encoded OpenSSH private key and connect [!DNL SFTP] to Experience Platform.
 
 >[!BEGINTABS]
 
@@ -90,7 +90,7 @@ Next, run the following command while providing the file path of the private key
 C:\Users\lucy> [convert]::ToBase64String((Get-Content -path "C:\Users\lucy\.ssh\id_rsa" -Encoding byte)) > C:\Users\lucy\.ssh\id_rsa_base64
 ```
 
-The above command saves the [!DNL Base64]-encoded private key in the file path you designated. You can then use that private key to authenticate to [!DNL SFTP] and connect to Platform.
+The above command saves the [!DNL Base64]-encoded private key in the file path you designated. You can then use that private key to authenticate to [!DNL SFTP] and connect to Experience Platform.
 
 >[!TAB Mac]
 
@@ -162,7 +162,7 @@ Provide the appropriate values for the following credentials to authenticate you
 | `port` | The [!DNL SFTP] server port you're connecting to. If unprovided, the value defaults to `22`. |
 | `username` | The username with access to your [!DNL SFTP] server. |
 | `password` | The password for your [!DNL SFTP] server. |
-| `maxConcurrentConnections` | This parameter allows you to specify a maximum limit for the number of concurrent connections Platform will create when connecting to your SFTP server. You must set this value to be less than the limit set by SFTP. **Note**: When this setting is enabled for an existing SFTP account, it will only affect future dataflows and not existing dataflows. |
+| `maxConcurrentConnections` | This parameter allows you to specify a maximum limit for the number of concurrent connections Experience Platform will create when connecting to your SFTP server. You must set this value to be less than the limit set by SFTP. **Note**: When this setting is enabled for an existing SFTP account, it will only affect future dataflows and not existing dataflows. |
 | `folderPath` | The path to the folder that you want to provide access to. [!DNL SFTP] source, you can provide the folder path to specify user access to the sub folder of your choice. |
 | `disableChunking` | During data ingestion, the [!DNL SFTP] source can retrieve the file length first, divide the file into multiple parts, and then read them in parallel. You can enable or disable this value to specify whether your [!DNL SFTP] server can retrieve file lengths or read data from a specific offset. |
 | `connectionSpec.id` | (API-only) The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL SFTP] is: `b7bf2577-4520-42c9-bae9-cad01560f7bc`. |
@@ -179,7 +179,7 @@ Provide the appropriate values for the following credentials to authenticate you
 | `password` | The password for your [!DNL SFTP] server. |
 | `privateKeyContent` | The Base64 encoded SSH private key content. The type of OpenSSH key must be classified as either RSA or DSA. |
 | `passPhrase` | The pass phrase or password to decrypt the private key if the key file or the key content is protected by a pass phrase. If PrivateKeyContent is password protected, this parameter needs to be used with the PrivateKeyContent's passphrase as value. |
-| `maxConcurrentConnections` | This parameter allows you to specify a maximum limit for the number of concurrent connections Platform will create when connecting to your SFTP server. You must set this value to be less than the limit set by SFTP. **Note**: When this setting is enabled for an existing SFTP account, it will only affect future dataflows and not existing dataflows. |
+| `maxConcurrentConnections` | This parameter allows you to specify a maximum limit for the number of concurrent connections Experience Platform will create when connecting to your SFTP server. You must set this value to be less than the limit set by SFTP. **Note**: When this setting is enabled for an existing SFTP account, it will only affect future dataflows and not existing dataflows. |
 | `folderPath` | The path to the folder that you want to provide access to. [!DNL SFTP] source, you can provide the folder path to specify user access to the sub folder of your choice. |
 | `disableChunking` | During data ingestion, the [!DNL SFTP] source can retrieve the file length first, divide the file into multiple parts, and then read them in parallel. You can enable or disable this value to specify whether your [!DNL SFTP] server can retrieve file lengths or read data from a specific offset. |
 | `connectionSpec.id` | (API-only) The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL SFTP] is: `b7bf2577-4520-42c9-bae9-cad01560f7bc`. |

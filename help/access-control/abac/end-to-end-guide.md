@@ -7,22 +7,22 @@ exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
 ---
 # Attribute-based access control end-to-end guide
 
-Use Attribute-based access control on Adobe Experience Platform to give yourself and other multi-brand privacy-conscious customers greater flexibility to manage user access. Access to individual objects, such as schema fields and audiences, can be granted with policies based on the object's attributes and role. This feature lets you grant or revoke access to individual objects for specific Platform users in your organization.
+Use Attribute-based access control on Adobe Experience Platform to give yourself and other multi-brand privacy-conscious customers greater flexibility to manage user access. Access to individual objects, such as schema fields and audiences, can be granted with policies based on the object's attributes and role. This feature lets you grant or revoke access to individual objects for specific Experience Platform users in your organization.
 
 This functionality allows you to categorize schema fields, audiences, and so on with labels that define organizational or data usage scopes. You can apply these same labels to journeys, Offers, and other objects in Adobe Journey Optimizer. In parallel, administrators can define access policies surrounding Experience Data Model (XDM) schema fields and better manage which users or groups (internal, external, or third-party users) can access those fields.
 
 >[!NOTE]
 >
->This document focuses on the use case of access control policies. If you are trying to set up policies to govern the **use** of data rather than which Platform users have access to it, see the end-to-end guide on [data governance](../../data-governance/e2e.md) instead.
+>This document focuses on the use case of access control policies. If you are trying to set up policies to govern the **use** of data rather than which Experience Platform users have access to it, see the end-to-end guide on [data governance](../../data-governance/e2e.md) instead.
 
 ## Getting started
 
-This tutorial requires a working understanding of the following Platform components:
+This tutorial requires a working understanding of the following Experience Platform components:
 
 * [[!DNL Experience Data Model (XDM)] System](../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
   * [Basics of schema composition](../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
   * [Schema Editor tutorial](../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
-* [Adobe Experience Platform Segmentation Service](../../segmentation/home.md): The segmentation engine within [!DNL Platform] used to create audience segments from your customer profiles based on customer behaviors and attributes.
+* [Adobe Experience Platform Segmentation Service](../../segmentation/home.md): The segmentation engine within [!DNL Experience Platform] used to create audience segments from your customer profiles based on customer behaviors and attributes.
 
 ### Use case overview
 
@@ -49,21 +49,21 @@ Through [!UICONTROL Permissions], you can create and manage roles and assign the
 
 Contact your system administrator to gain access if you do not have admin privileges.
 
-Once you have admin privileges, go to [Adobe Experience Cloud](https://experience.adobe.com/) and sign in using your Adobe credentials. Once logged in, the **[!UICONTROL Overview]** page appears for your organization you have admin privileges for. This page shows the products your organization is subscribed to, along with other controls to add users and admins to the organization. Select **[!UICONTROL Permissions]** to open the workspace for your Platform integration.
+Once you have admin privileges, go to [Adobe Experience Cloud](https://experience.adobe.com/) and sign in using your Adobe credentials. Once logged in, the **[!UICONTROL Overview]** page appears for your organization you have admin privileges for. This page shows the products your organization is subscribed to, along with other controls to add users and admins to the organization. Select **[!UICONTROL Permissions]** to open the workspace for your Experience Platform integration.
 
 ![Image showing the Permissions product being selected in Adobe Experience Cloud](../images/flac-ui/flac-select-product.png)
 
-The Permissions workspace for Platform UI appears, opening on the **[!UICONTROL Overview]** page.
+The Permissions workspace for the Experience Platform UI appears, opening on the **[!UICONTROL Overview]** page.
 
 ## Apply labels to a role {#label-roles}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="What are labels?"
->abstract="Use labels to categorize datasets and fields according to usage and access policies that apply to that data. Platform provides several Adobe-defined <strong>core</strong> data usage labels, which cover a wide variety of common restrictions applicable to data governance. For example, Sensitive <strong>S</strong> labels such as RHD (Regulated Health Data) allow you to categorize data that refers to Protected Health Information (PHI). You can also define your own custom labels that fit your organization's needs."
+>abstract="Use labels to categorize datasets and fields according to usage and access policies that apply to that data. Adobe Experience Platform provides several Adobe-defined <strong>core</strong> data usage labels, which cover a wide variety of common restrictions applicable to data governance. For example, Sensitive <strong>S</strong> labels such as RHD (Regulated Health Data) allow you to categorize data that refers to Protected Health Information (PHI). You can also define your own custom labels that fit your organization's needs."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#understanding-data-usage-labels" text="Data usage labels overview"
 
-Roles are ways to categorize the types of users interacting with your Platform instance and are building blocks of access control policies. A role has a given set of permissions, and members of your organization can be assigned to one or more roles, depending on the scope of access they need.
+Roles are ways to categorize the types of users interacting with your Experience Platform instance and are building blocks of access control policies. A role has a given set of permissions, and members of your organization can be assigned to one or more roles, depending on the scope of access they need.
 
 To get started, select **[!UICONTROL Roles]** from the left navigation and then select **[!UICONTROL ACME Business Group]**.
 
@@ -138,7 +138,7 @@ Repeat the above steps with **[!UICONTROL Insulin <50]**.
 
 ## Activate the access control policy {#policy}
 
-The default access control policy will leverage labels to define which user roles have access to specific Platform resources. In this example, access to schema fields and audiences will be denied in all sandboxes for users who aren't in a role that has the corresponding labels in the schema field.
+The default access control policy will leverage labels to define which user roles have access to specific Experience Platform resources. In this example, access to schema fields and audiences will be denied in all sandboxes for users who aren't in a role that has the corresponding labels in the schema field.
 
 To activate the access control policy, select [!UICONTROL Permissions] from the left navigation and then select **[!UICONTROL Policies]**. 
 
@@ -186,7 +186,7 @@ Confirmation of policy activation is received and you are returned to the [!UICO
 >title="Edit conditions"
 >abstract="Apply conditional statements to your policy to configure user access to certain resources. Select match all to require users to have roles with the same labels as a resource to be permitted access. Select match any to require users to have a role with just one label matching a label on a resource. Labels can either be defined as core or custom labels, with core labels representing labels created and provided by Adobe and custom labels representing labels that you created for your organization."
 
-Access control policies leverage labels to define which user roles have access to specific Platform resources. Policies can either be local or global and can override other policies. In this example, access to schema fields and segments will be denied in all sandboxes for users who don't have the corresponding labels in the schema field.
+Access control policies leverage labels to define which user roles have access to specific Experience Platform resources. Policies can either be local or global and can override other policies. In this example, access to schema fields and segments will be denied in all sandboxes for users who don't have the corresponding labels in the schema field.
 
 >[!NOTE]
 >
@@ -212,7 +212,7 @@ The table below shows the conditions available when creating a policy:
 | The following being true| When 'Permit access to' is set, access will be permitted if the user meets the selected criteria. |
 | Matches any| The user has a label that matches any label applied to a resource. |
 | Matches all| The user has all labels that matches all labels applied to a resource. |
-| Core label| A core label is an Adobe-defined label that is available in all Platform instances.|
+| Core label| A core label is an Adobe-defined label that is available in all Experience Platform instances.|
 | Custom label| A custom label is a label that has been created by your organization.|
 
 Select **[!UICONTROL The following being false]** and then select **[!UICONTROL No attribute selected]**. Next, select the user **[!UICONTROL Core label]**, then select **[!UICONTROL Matches all]**. Select the resource **[!UICONTROL Core label]** and finally select **[!UICONTROL Add resource]**.

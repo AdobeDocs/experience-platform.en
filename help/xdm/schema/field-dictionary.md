@@ -2,13 +2,13 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;fields;Fields;standard fields;Standard fields;dictionary;Dictionary;map;Map
 solution: Experience Platform
 title: Experience Data Model (XDM) Field Dictionary
-description: Experience Data Model (XDM) defines a set of standard fields that can be used when composing Adobe Experience Platform schemas. Use of these fields results in consistent behavior across Platform services, as all services that consume XDM will explicitly understand the specific definitions provided by these fields.
+description: Experience Data Model (XDM) defines a set of standard fields that can be used when composing Adobe Experience Platform schemas. Use of these fields results in consistent behavior across Experience Platform services, as all services that consume XDM will explicitly understand the specific definitions provided by these fields.
 exl-id: 9e183305-cd6c-444d-bd0b-f0cba3bcbe4d
 ---
 # XDM field dictionary
 
 
-[!DNL Experience Data Model] (XDM) defines a set of standard fields that can be used when composing Adobe Experience Platform schemas. Use of these fields results in consistent behavior across [!DNL Platform] services, as all services that consume XDM will explicitly understand the specific definitions provided by these fields.
+[!DNL Experience Data Model] (XDM) defines a set of standard fields that can be used when composing Adobe Experience Platform schemas. Use of these fields results in consistent behavior across [!DNL Experience Platform] services, as all services that consume XDM will explicitly understand the specific definitions provided by these fields.
 
 See the [basics of schema composition](composition.md) for more information regarding the building blocks of schemas, including principles and best practices in defining schemas for [!DNL Experience Platform].
 
