@@ -11,7 +11,7 @@ exl-id: 1dd30660-c990-4d3f-a64f-2a17e426f56d
 >
 >The [!DNL Oracle NetSuite] source is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
 Experience Platform provides support for ingesting data third-party marketing automation system. Support for marketing automation providers includes [!DNL Oracle NetSuite].
 
@@ -52,7 +52,7 @@ Before you can bring your [!DNL Oracle NetSuite] data to Experience Platform, yo
 
 ### Gather required credentials {#gather-credentials}
 
-In order to connect [!DNL Oracle NetSuite] to Platform, you must provide values for the following connection properties:
+In order to connect [!DNL Oracle NetSuite] to Experience Platform, you must provide values for the following connection properties:
 
 | Credential | Description | Example |
 | --- | --- | --- |
@@ -67,18 +67,18 @@ In order to connect [!DNL Oracle NetSuite] to Platform, you must provide values 
 >
 >After a refresh token expires, you must create a new account in Experience Platform with your updated updated tokens.
 
-## Connect [!DNL Oracle NetSuite Activities] to Platform {#oracle-netsuite-activities}
+## Connect [!DNL Oracle NetSuite Activities] to Experience Platform {#oracle-netsuite-activities}
 
-The documentation below provides information on how to connect [!DNL Oracle NetSuite Activities] to Platform using APIs or the user interface:
+The documentation below provides information on how to connect [!DNL Oracle NetSuite Activities] to Experience Platform using APIs or the user interface:
 
-* [Create a source connection and dataflow to bring [!DNL Oracle NetSuite Activities] data to Platform using APIs](../../tutorials/api/create/marketing-automation/oracle-netsuite-activities.md).
+* [Create a source connection and dataflow to bring [!DNL Oracle NetSuite Activities] data to Experience Platform using APIs](../../tutorials/api/create/marketing-automation/oracle-netsuite-activities.md).
 * [Connect your [!DNL Oracle NetSuite Activities] account to Experience Platform using the UI](../../tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md).
 * [Create a dataflow for a source connection using the UI](../../tutorials/ui/dataflow/marketing-automation.md).
 
-## Connect [!DNL Oracle NetSuite Entities] to Platform {#oracle-netsuite-entities}
+## Connect [!DNL Oracle NetSuite Entities] to Experience Platform {#oracle-netsuite-entities}
 
-The documentation below provides information on how to connect [!DNL Oracle NetSuite Entities] to Platform using APIs or the user interface:
+The documentation below provides information on how to connect [!DNL Oracle NetSuite Entities] to Experience Platform using APIs or the user interface:
 
-* [Create a source connection and dataflow to bring [!DNL Oracle NetSuite Entities] data to Platform using APIs](../../tutorials/api/create/marketing-automation/oracle-netsuite-entities.md).
+* [Create a source connection and dataflow to bring [!DNL Oracle NetSuite Entities] data to Experience Platform using APIs](../../tutorials/api/create/marketing-automation/oracle-netsuite-entities.md).
 * [Connect your [!DNL Oracle NetSuite Entities] account to Experience Platform using the UI](../../tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md).
 * [Create a dataflow for a source connection using the UI](../../tutorials/ui/dataflow/marketing-automation.md).

@@ -1,11 +1,11 @@
 ---
 title: Create an Azure Blob  Source Connection in the UI
-description: Learn how to create an Azure Blob source connector using the Platform user interface.
+description: Learn how to create an Azure Blob source connector using the Experience Platform user interface.
 exl-id: 0e54569b-7305-4065-981e-951623717648
 ---
 # Create an [!DNL Azure Blob] source connection in the UI
 
-This tutorial provides steps for creating an [!DNL Azure Blob] (hereinafter referred to as "[!DNL Blob]") source connection using the Platform user interface.
+This tutorial provides steps for creating an [!DNL Azure Blob] (hereinafter referred to as "[!DNL Blob]") source connection using the Experience Platform user interface.
 
 ## Getting started
 
@@ -52,7 +52,7 @@ Once you have gathered your required credentials, you can follow the steps below
 
 ## Connect your [!DNL Blob] account
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search bar.
 
@@ -102,4 +102,4 @@ To authenticate with a shared access signature, select **[!UICONTROL Shared acce
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your [!DNL Blob] account. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into Platform](../../dataflow/batch/cloud-storage.md).
+By following this tutorial, you have established a connection to your [!DNL Blob] account. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into Experience Platform](../../dataflow/batch/cloud-storage.md).

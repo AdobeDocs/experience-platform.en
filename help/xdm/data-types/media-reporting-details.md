@@ -13,7 +13,7 @@ exl-id: e8bf20a9-9ac0-4339-8200-5d6d9328ce3b
 
 >[!NOTE]
 >
->The fields mentioned below are not directly used to create requests. Instead, the collection of fields sent to Adobe Experience Platform or Adobe Analytics is assembled from your request data, and metrics are then incorporated or processed by the server infrastructure. While Platform collects various types of your user events, the reports returned to you focus on specific events, such as `media.sessionStart`, `media.adStart`, and `media.sessionComplete`. This means that although you transmit 12 types of events during collection, your reports will only present breakdowns based on the five events listed below.
+>The fields mentioned below are not directly used to create requests. Instead, the collection of fields sent to Adobe Experience Platform or Adobe Analytics is assembled from your request data, and metrics are then incorporated or processed by the server infrastructure. While Experience Platform collects various types of your user events, the reports returned to you focus on specific events, such as `media.sessionStart`, `media.adStart`, and `media.sessionComplete`. This means that although you transmit 12 types of events during collection, your reports will only present breakdowns based on the five events listed below.
 
 +++Select to display a diagram of the [!UICONTROL Media Reporting Details] data type.
 ![A diagram of the [!UICONTROL Media Reporting Details] data type.](../images/data-types/media-reporting-details.png)

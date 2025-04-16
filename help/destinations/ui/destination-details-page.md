@@ -12,7 +12,7 @@ In the Adobe Experience Platform user interface, you can view and monitor the at
 
 >[!NOTE]
 >
->The destinations details page is part of the [!UICONTROL Destinations] workspace in the [!DNL Platform] [!DNL UI]. See the [[!UICONTROL Destinations] workspace overview](./destinations-workspace.md) for more information.
+>The destinations details page is part of the [!UICONTROL Destinations] workspace in the [!DNL Experience Platform] [!DNL UI]. See the [[!UICONTROL Destinations] workspace overview](./destinations-workspace.md) for more information.
 
 ## View destination details {#view-details}
 

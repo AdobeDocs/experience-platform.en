@@ -12,6 +12,7 @@ Updates to existing features and documentation in Adobe Experience Platform:
 - [Adobe Experience Platform release notes](#adobe-experience-platform-release-notes)
   - [Dashboards](#dashboards)
   - [Destinations](#destinations)
+  - [Federated Audience Composition](#federated-audience-composition)
   - [Segmentation Service](#segmentation-service)
   - [Sources](#sources)
 
@@ -39,6 +40,8 @@ For more information on dashboards, including how to grant access permissions an
 
 | Destination | Description |
 | --- | --- |
+| [Demandbase People connection](/help/destinations/catalog/advertising/demandbase-people.md) | Use the [!DNL Demandbase People] connection to activate profiles for your Demandbase campaigns for audience targeting, personalization, and suppression. |
+| [Bombora account connection](/help/destinations/catalog/advertising/bombora.md) | Use the  [!DNL Bombora] connection to activate profiles for your Bombora campaigns for audience targeting, personalization, and suppression, based on [account audiences](/help/segmentation/types/account-audiences.md). |
 | [Airship Attributes](/help/destinations/catalog/mobile-engagement/airship-attributes.md) upgrade | Starting March 25, 2025, you can see two **[!UICONTROL Airship Attributes]** cards side-by-side in the destinations catalog. This is due to an internal upgrade to the destinations service. The existing **[!UICONTROL Airship Attributes]** destination connector has been renamed to **[!UICONTROL (Deprecated) Airship Attributes]** and a new card with the name **[!UICONTROL Airship Attributes]** is now available to you. <br> Use the **[!UICONTROL Airship Attributes]** connection in the catalog for new activation data flows. If you have any active dataflows to the [!DNL (Deprecated) Airship Attributes] destination, they will be updated automatically, so no action is required from you. <br> If you are creating dataflows through the [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/), you must update your [!DNL flow spec ID] and [!DNL connection spec ID] to the following values: <ul><li> Flow spec ID: `a862e0be-966e-4e5a-80d3-1bb566461986`</li><li> Connection spec ID: `594bc002-4a47-49b7-8a98-ac0d21045502`</li> </ul>|
 
 {style="table-layout:auto"}
@@ -53,6 +56,10 @@ For more information on dashboards, including how to grant access permissions an
 {style="table-layout:auto"}
 
 For more information, read the [destinations overview](../../destinations/home.md). 
+
+## Federated Audience Composition {#federated-audience-composition}
+
+For information on the latest updates for Federated Audience Composition, read the [dedicated release notes](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes) here.
 
 ## Segmentation Service {#segmentation-service}
 

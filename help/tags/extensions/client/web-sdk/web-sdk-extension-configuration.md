@@ -7,7 +7,7 @@ exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
 
 The [!DNL Web SDK] tag extension sends data to Adobe Experience Cloud from web properties through the Experience Platform Edge Network.
 
-The extension allows you to stream data into Platform, synchronize identities, process customer consent signals, and automatically collect context data.
+The extension allows you to stream data into Experience Platform, synchronize identities, process customer consent signals, and automatically collect context data.
 
 This document explains how to configure the tag extension in the Tags UI.
 

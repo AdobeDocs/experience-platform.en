@@ -14,7 +14,7 @@ When a prediction run completes, predicted propensity scores are automatically c
 >
 >In order to utilize this method, Real-Time Customer Profile needs to be enabled for the dataset.
 
-In the Platform UI, click **[!UICONTROL Segments]** in the left navigation, and then click **[!UICONTROL Create segment]**. 
+In the Experience Platform UI, click **[!UICONTROL Segments]** in the left navigation, and then click **[!UICONTROL Create segment]**. 
 
 ![](../images/user-guide/segments_new.png)
 

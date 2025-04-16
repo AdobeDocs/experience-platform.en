@@ -20,7 +20,7 @@ If you already have a valid [!DNL SQL Server] connection, you may skip the remai
 
 ### Gather required credentials
 
-In order to connect to [!DNL SQL Server] on [!DNL Platform], you must provide the following connection property:
+In order to connect to [!DNL SQL Server] on [!DNL Experience Platform], you must provide the following connection property:
 
 | Credential | Description |
 | ---------- | ----------- |
@@ -30,7 +30,7 @@ For more information about getting started, refer to [this [!DNL SQL Server] doc
 
 ## Connect your [!DNL SQL Server] account
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
 Under the *Databases* category, select **[!DNL Microsoft SQL Server]**, and then select **[!UICONTROL Set up]**.
 
@@ -64,4 +64,4 @@ Select **[!UICONTROL Next]** to proceed.
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your [!DNL SQL Server] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Platform]](../../dataflow/databases.md).
+By following this tutorial, you have established a connection to your [!DNL SQL Server] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Experience Platform]](../../dataflow/databases.md).

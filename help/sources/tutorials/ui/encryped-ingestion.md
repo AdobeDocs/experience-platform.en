@@ -50,7 +50,7 @@ You can create your encryption key pair through the Experience Platform UI. When
 
 >[!ENDSHADEBOX]
 
-In the Platform UI, navigate to the sources workspace and then select [!UICONTROL Key Pairs] from the top header.
+In the Experience Platform UI, navigate to the sources workspace and then select [!UICONTROL Key Pairs] from the top header.
 
 ![The sources catalog with the "Key Pairs" header selected.](../../images/tutorials/edi/catalog.png)
 
