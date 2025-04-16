@@ -44,7 +44,7 @@ Before you can use this destination to export data out of Adobe Experience Platf
 
 |Target Identity|Description|
 |---|---|
-|*CustomerID*|Common User Identifier that uniquely identifies a profile in [!DNL Pega Customer Decision Hub] and Adobe Experience Platform|
+|**[!UICONTROL CustomerID]**|Common User Identifier that uniquely identifies a profile in [!DNL Pega Customer Decision Hub] and Adobe Experience Platform.|
 
 {style="table-layout:auto"}
 
