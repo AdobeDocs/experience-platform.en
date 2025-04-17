@@ -1,7 +1,7 @@
 ---
 title: Adobe Amazon Conversions API extension
 description: This Adobe Experience Platform web events API allows you to share website interactions directly with Amazon.
-last-substantial-update: 2025-04-15
+last-substantial-update: 2025-04-17
 ---
 # [!DNL Amazon] web events API extension overview
 
@@ -9,44 +9,63 @@ The [!DNL Amazon] Conversions API extension creates a direct connection between 
 
 ## [!DNL Amazon] prerequisites {#prerequisites}
 
-To configure the Amazon Conversions API extension, follow these steps:
+Before installing and configuring the [!DNL Amazon] Conversions API extension, you need to complete several prerequisite steps to ensure proper authentication and data access.
 
-* **Create a Secret**: Create a new [!DNL Amazon] event forwarding secret with a unique name for authentication.
+### Create a secret and data element {#secret}
 
-* **Create a Data Element**: Use the Core extension and a Secret data element type to reference the Amazon secret.
+Authentication with [!DNL Amazon] requires a secure token that must be properly stored and referenced:
 
-* **Obtain Credentials**: Ensure you have a valid Amazon account and retrieve your OAuth 2 Access Token from the Amazon Campaign Manager portal.
+1. Create a new [!DNL Amazon] event forwarding secret with a unique name for authentication.
+2. Create a data element using the **Core** extension with a **Secret** data element type to reference your [!DNL Amazon] secret.
 
-## Install and configure the [!DNL Amazon] Conversions API extension {#install}
+This process ensures your authentication credentials remain secure while still being accessible to the extension when needed.
 
-### Installation
+## Install and configure the [!DNL Amazon] extension
 
-Navigate to the **Extensions** section in the Adobe Experience Platform UI.
+Installing the extension requires access to your event forwarding property in Platform:
 
-In the **Catalog** tab, locate the [!DNL Amazon] Conversions API Extension and select **Install**.
+1. Create or edit an event forwarding property.
+2. Select **Extensions** in the left navigation, then select [!DNL Amazon] extension in the Catalog tab.
+3. Select **Install**.
+![]()
+4. Configure with:
+   - **Access Token**: Your data element secret containing the OAuth 2 token
+   ![]()
+   - **Entity Id**: Your Entity Id (found in Campaign Manager portal URL with "entity" prefix)
+   ![]()
+5. Select **Save**.
+
+These configuration values establish the connection between Platform and your [!DNL Amazon] account.
 
 ![]()
 
-### Configuration
+### [!DNL Amazon] OAuth 2 {#oauth}
 
-On the configuration screen, input the required values:
+To create an [!DNL Amazon] OAuth 2 secret:
 
-- **Account ID**: Identifier used to access Amazon DSP.
+1. Select [!DNL Amazon] OAuth 2 from the **Type** dropdown and select **Create Secret**.
+![]()
 
-- **Entity ID**: The profile identifier associated with the advertiser account.
+2. Select **Create & Authorize secret with Amazon** on the popover to manually authorize the secret and continue.
+![]()
 
-- **Access Token**: OAuth 2 token needed for authentication.
+3. Enter your [!DNL Amazon] credentials in the dialog that appears. Follow the prompts to grant event forwarding access to your data. 
 
-Select **Save** when finished.
+After completion, you'll see your secret with its status and expiration date in the **Secrets** tab.
 
 ![]()
 
 ## Configure an event forwarding rule {#config-rule}
 
+Once all your data elements are set up, you can create event forwarding rules that determine when and how your events will be sent to Amazon.
+
 1. Navigate to **Rules** and create a new event forwarding rule.
 2. Under **Actions**, select **Amazon Conversions API Extension**.
 3. Set the **Action Type** to **Import Conversion Events**.
-4. Configure the event properties:
+![]()
+4. Configure the event properties as outlined below:
+
+![]()
 
 | Input | Description |
 | --- | --- |
@@ -62,16 +81,21 @@ Select **Save** when finished.
 | **Data Processing Options** | Flags for limited data usage. |
 | **Consent** | Indicates user consent for advertising data usage. |
 
-Select **Keep Changes** to save the rule.
+5. Select **Keep Changes** to save the rule.
+![]()
+![]()
 
 ## Event deduplication {#deduplication}
 
-If you use both [!DNL Amazon] Advertising Tag (AAT) and the [!DNL Amazon] Conversions API Extension, you must set up deduplication to prevent duplicate event reporting.
+If you use both [!DNL Amazon] Advertising Tag (AAT) and the [!DNL Amazon] Conversions API extension for the same events, deduplication setup is required. Include 'clientDedupeId' in every shared event to ensure proper deduplication.
+Deduplication is not needed if client and server events don't overlap.
 
-Ensure every shared event includes Client Dedupe ID. Events arriving within five minutes of each other will be merged, while duplicates received within 48 hours will be removed.
+Proper deduplication prevents inflated conversion counts and ensures your optimization data remains accurate.
 
 Refer to the [Amazon Event Deduplication Guide](https://advertising.amazon.com/) for more details.
 
 ## Next steps
 
 This guide covered how to configure and send conversion events to [!DNL Amazon] using the [!DNL Amazon] Conversions API extension. For more information on event forwarding capabilities in [!DNL Adobe Experience Platform], refer to the [event forwarding overview](../../../ui/event-forwarding/overview.md)
+
+For more details on how to debug your implementation using the Experience Platform Debugger and Event Forwarding Monitoring tool, read the [Adobe Experience Platform Debugger overview]() and [Monitor activities]() in event forwarding.
