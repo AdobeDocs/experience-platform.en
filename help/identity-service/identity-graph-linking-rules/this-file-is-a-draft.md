@@ -4,6 +4,8 @@ description: Learn about how and why this is a draft.
 ---
 # Draft
 
+Read this document to learn about different use cases for Identity Graph Linking Rules.
+
 Customer graph scenarios can be grouped into three different categories: beginner, intermediate, and advanced. 
 
 | | Beginner | Intermediate | Advanced |
@@ -15,26 +17,26 @@ Customer graph scenarios can be grouped into three different categories: beginne
 
 {style="table-layout:auto"}
 
-## Use case 1: Beginner-level integration
+## Beginner-level integrations {#beginner}
 
-Generally, Adobe customers have a single cross-device ID that is used across all of their properties, including web, mobile, and applications. This system is both industry and geographically agnostic as customers in retail, telecom, and financial services use this implementation.
+Read this section for beginner-level integrations of Identity Graph Linking Rules.
 
-An end-user is represented by a CRMID, therefore the CRMID should be classified as a unique namespace. An end-user who owns a computer or an [!DNL iPhone] and does not share their device, could have an identity graph that looks like the following.
+### Simple implementation with one cross-device namespace.
 
-**Text mode:**
+Generally, Adobe customers have a single cross-device ID that is used across all of their properties including, web, mobile, and applications. This system is both industry and geographically agnostic as customers in retail, telecom, and financial services use this type of implementation.
+
+An end-user is represented by a CRMID, therefore the CRMID should be classified as a unique namespace. An end-user who owns a computer or an [!DNL iPhone] and does not share their device, could have an identity graph like the following.
+
+**Text mode**
 
 ```json
 CRMID: John, ECID: 123
 CRMID: John, ECID: 999, IDFA: a-b-c
 ```
 
-**Simulated graph**
+**Algorithm configuration**
 
-![An identity graph with one CRMID.]
-
-**Identity settings (algorithm) configuration**
-
-Before you simulate the events, you must configure the following:
+Configure the following settings in the Graph Simulation interface before simulating your graph.
 
 | Unique namespace | Namespace priority |
 | --- | --- |
@@ -45,6 +47,15 @@ Before you simulate the events, you must configure the following:
 | CRMID | CRMID | CROSS_DEVICE |  ✔️  |
 | ECID | ECID | COOKIE | |
 | IDFA | IDFA | DEVICE | |
+
+
+**Simulated graph**
+
++++Select to view simulated graph
+
+![A simple implementation with one cross-device namespace..](../images/configs/simple-implementation.png)
+
++++
 
 ### Exercise
 
@@ -70,7 +81,11 @@ CRMID: Jane, ECID: 111
 
 **Simulated graph**
 
-![Image of the simulated graph]
++++Select to view simulated graph
+
+![A simulated graph for a shared device (PC).](../images/configs/shared-device-pc.png)
+
++++
 
 >[!TAB Shared device (mobile)]
 
@@ -83,13 +98,17 @@ You can implement this use case in the graph simulation tool by creating your ow
 **Text mode:**
 
 ```json
-CRMID: John, IDFA: a-b-c
-CRMID: Jane, IDFA: a-b-c
+CRMID: John, ECID: 111, IDFA: a-b-c
+CRMID: Jane, ECID: 111, IDFA: a-b-c
 ```
 
 **Simulated graph**
 
-![Image of the simulated graph]
++++Select to view simulated graph
+
+![A simulated graph for a shared device (mobile).](../images/configs/shared-device-mobile.png)
+
++++
 
 >[!ENDTABS]
 
@@ -97,15 +116,17 @@ CRMID: Jane, IDFA: a-b-c
 
 A common question is: "If the ECID is linked from John to Jane, then will John's events (on Real-Time Customer Profile) also move over to Jane?"
 
+Authenticated events are tied to the person and unauthenticated events are tied to the device. There will never be a scenario where Jane's browsing events get associated with John, and vice versa.
+
 | Event type | Association (primary identity of the event) |
 | --- | --- |
 | John's authenticated (logged in) events | John |
 | Jane's unauthenticated events | Jane |
 | Unauthenticated (logged out) events | The last authenticated user, which can be either John or Jane. |
 
-Authenticated events are tied to the person and unauthenticated events are tied to the device. There will never be a scenario where Jane's browsing events get associated with John, and vice versa.
+## Intermediate-level integrations {#intermediate}
 
-## Use case 2: Intermediate-level integrations
+Read this section for intermediate-level integrations of Identity Graph Linking Rules.
 
 ### Simple implementation with non-unique identities
 
@@ -120,16 +141,6 @@ CRMID: John, ECID: 123
 CRMID: John, ECID: 999, IDFA: a-b-c
 ```
 
-**Simulated graph**
-
-![Image of the simulated graph]
-
-* However, there are no guarantees that these credit card numbers, or any other non-unique namespaces, will always be associated to one single person. 
-* Two people may register the same credit card, there may be non-unique dummy values that may be ingested. 
-* Simply put, non-unique namespaces will cause two CRMIDs to collapse.
-
-To solve this issue, Identity Service removes the oldest links and retains the most recent links. This ensures that you just have one CRMID in a graph, thereby preventing scenarios of graph collapse.
-
 Ensure that you have have the following configuration before you simulate the events.
 
 | Unique namespace | Namespace priority |
@@ -142,6 +153,18 @@ Ensure that you have have the following configuration before you simulate the ev
 | CChash | CChash | CROSS_DEVICE | |
 | ECID | ECID | COOKIE | |
 | IDFA | IDFA | DEVICE | |
+
+**Simulated graph**
+
++++Select to view simulated graph
+
+![Image of the simulated graph](../images/configs/simple-implementation-non-unique.png)
+
++++
+
+However, there are no guarantees that these credit card numbers, or any other non-unique namespaces, will always be associated to one single person. Two people may register the same credit card, there may be non-unique dummy values that may be ingested. Simply put, non-unique namespaces will cause two CRMIDs to collapse.
+
+To solve this issue, Identity Service removes the oldest links and retains the most recent links. This ensures that you just have one CRMID in a graph, thereby preventing scenarios of graph collapse.
 
 ### Exercise
 
