@@ -12,8 +12,11 @@ exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
 
 >[!AVAILABILITY]
 >
->* Identity graph linking rules are currently in Limited Availability. Contact your Adobe account team for information on how to access the feature in development sandboxes.
+>Identity Graph Linking Rules is currently in Limited Availability, and can be accessed by all customers in development sandboxes.
 >
+>* **Activation requirements**: The feature will remain inactive until you configure and save your [!DNL Identity Settings]. Without this configuration, the system will continue to operate normally, with no changes in behavior.
+>* **Important notes**: During this Limited Availability phase, Edge segmentation may produce unexpected segment membership results. However, streaming and batch segmentation will function as expected.
+>* **Next steps**: For information on how to enable this feature in production sandboxes, please contact your Adobe account team.
 >* Your account must have the **View Identity Graph** permission in order to access the [!DNL Graph Simulation] tool. For more information, read the [guide on permissions in attribute-based access control](../../access-control/abac/ui/permissions.md).
 
 [!DNL Graph Simulation] is a tool in the Identity Service UI that you can use to simulate how an identity graph behaves given a particular combination of identities and how you configure the [identity optimization algorithm](./identity-optimization-algorithm.md).
@@ -176,7 +179,7 @@ In the example graph below, a dotted line exists between `{Email: tom@acme.com}`
 
 By reading this document, you now know how to use the [!DNL Graph Simulation] tool to better understand how your identity data is treated given a particular set of rules and configurations. For more information, read the following documents:
 
-* [Identity graph linking rules overview](./overview.md)
+* [[!DNL Identity Graph Linking Rules] overview](./overview.md)
 * [Identity optimization algorithm](./identity-optimization-algorithm.md)
 * [Implementation guide](./implementation-guide.md)
 * [Troubleshooting and FAQ](./troubleshooting.md)
