@@ -5,118 +5,73 @@ last-substantial-update: 2025-04-15
 ---
 # [!DNL Amazon] web events API extension overview
 
-The [!DNL Amazon] Conversions API extension allows advertisers to send server-side conversion events from Adobe Experience Platform to [!DNL Amazon], improving campaign optimization and data attribution.
+The [!DNL Amazon] Conversions API extension creates a direct connection between marketing data from an advertiser's server and [!DNL Amazon]. This enables advertisers to evaluate campaign effectiveness regardless of conversion location and optimize campaigns accordingly. The extension provides more complete attribution, improved data reliability, and better optimized delivery.
 
 ## [!DNL Amazon] prerequisites {#prerequisites}
 
-<!-- To configure the [!DNL Amazon] web events API to use the [!DNL Amazon] events API, you need to generate a [!DNL Amazon] pixel code and access token. 
+To configure the Amazon Conversions API extension, follow these steps:
 
-You must have a valid [!DNL Amazon] for business account in order to create a [!DNL Amazon] pixel using the partner setup. Go to the [[!DNL Amazon] for business registration page](https://www.Amazon.com/business/en-US/solutions/business-account) to register and create an account if you do not have one already.
+* **Create a Secret**: Create a new [!DNL Amazon] event forwarding secret with a unique name for authentication.
 
-You must be logged into your business account to set up [!DNL Amazon] Pixel using partner setup. To do this, follow the steps below:
+* **Create a Data Element**: Use the Core extension and a Secret data element type to reference the Amazon secret.
 
-1. Navigate to the **[!UICONTROL Assets]** tab and select **[!UICONTROL Event]**.
-2. Under Web Events, select **[!UICONTROL Manage]**.
-3. Select **[!UICONTROL Set Up Web Events]**.
-4. Select **[!UICONTROL Partner Setup]** as your connection method. -->
+* **Obtain Credentials**: Ensure you have a valid Amazon account and retrieve your OAuth 2 Access Token from the Amazon Campaign Manager portal.
 
-<!-- See the [Get Started with Pixel](https://ads.Amazon.com/help/article/get-started-pixel) guide for more information on how to setup the [!DNL Amazon] pixel.
+## Install and configure the [!DNL Amazon] Conversions API extension {#install}
 
-You can generate an access token once the pixel has been successfully created. To do this navigate to the Pixel and select the **[!UICONTROL Settings]** tab. Under Events API, select **[!UICONTROL Generate Access Token]**.
+### Installation
 
-See the [[!DNL Amazon] getting started guide](https://business-api.Amazon.com/portal/docs?id=1739584855420929) for more information on how to setup the pixel code and access token. -->
+Navigate to the **Extensions** section in the Adobe Experience Platform UI.
 
-## Install and configure the [!DNL Amazon] web events API extension {#install}
+In the **Catalog** tab, locate the [!DNL Amazon] Conversions API Extension and select **Install**.
 
-<!-- To install the extension, select **[!UICONTROL Extensions]** in the left navigation. In the **[!UICONTROL Catalog]** tab, select the **[!UICONTROL Amazon Web Events API Extension]** and then select **[!UICONTROL Install]**.
+![]()
 
-![The extension catalog showing the [!DNL Amazon] extension card highlighting install.](../../../images/extensions/server/Amazon/install-extension.png)
+### Configuration
 
-On the next screen, input the following configuration values that you previously generated from [!DNL Amazon] Ads Manager:
+On the configuration screen, input the required values:
 
-* **[!UICONTROL Pixel Code]**
-* **[!UICONTROL Access Token]**
+- **Account ID**: Identifier used to access Amazon DSP.
 
-When finished, select **[!UICONTROL Save]**.
+- **Entity ID**: The profile identifier associated with the advertiser account.
 
-![[!DNL Amazon] configuration screen for the [!DNL Amazon] web events API extension.](../../../images/extensions/server/Amazon/configure.png) -->
+- **Access Token**: OAuth 2 token needed for authentication.
+
+Select **Save** when finished.
+
+![]()
 
 ## Configure an event forwarding rule {#config-rule}
 
-<!-- Once all your data elements are set up, you can start creating event forwarding rules that determine when and how your events will be sent to [!DNL Amazon].
-
-Create a new [rule](../../../ui/managing-resources/rules.md) in your event forwarding property. Under **[!UICONTROL Actions]**, add a new action and set the extension to **[!UICONTROL Amazon Web Events API Extension]**. To send Edge Network events to [!DNL Amazon], set the **[!UICONTROL Action Type]** to **[!UICONTROL Send Amazon Web Events API Event].**
-
-![The [!UICONTROL Send Amazon Web Events API Event] action type being selected for a [!DNL Amazon] rule in the Data Collection UI.](../../../images/extensions/server/Amazon/select-action.png)
-
-After selection, additional controls appear to further configure the event, as outlined below. Once complete, select **[!UICONTROL Keep Changes]** to save the rule.
-
-**[!UICONTROL Web Events and Parameters]**
-
-Web events and parameters contain general information about the event. Standard events are supported across [!DNL Amazon] integration tools and can be used for reporting , optimizing for conversions, and building audiences.
+1. Navigate to **Rules** and create a new event forwarding rule.
+2. Under **Actions**, select **Amazon Conversions API Extension**.
+3. Set the **Action Type** to **Import Conversion Events**.
+4. Configure the event properties:
 
 | Input | Description |
 | --- | --- |
-| Event Name | The name of the event. These are actions with predefined names created by [!DNL Amazon] and is a required field. Refer to the [[!DNL Amazon] Marketing API](https://business-api.Amazon.com/portal/docs?id=1741601162187777) documentation for more information on supported events. |
-| Event Time | Date-time as string in ISO 8601 or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. This is a required field. |
-| Event ID | The unique ID generated by advertisers to indicate each event. This is an optional field and is used for deduplication. |
+| **Event Name** | The name of the conversion event. |
+| **Event Type** | Defines the type of event tracked (e.g., purchases, cart additions). |
+| **Timestamp** | Event time in ISO format. |
+| **Client Dedupe ID** | A unique ID for deduplication. |
+| **Match Keys** | User and device identifiers for attribution. |
+| **Value** | Monetary value of the event. |
+| **Currency Code** | Currency in ISO-4217 format. |
+| **Units Sold** | Quantity of items purchased. |
+| **Country Code** | Country where the event occurred. |
+| **Data Processing Options** | Flags for limited data usage. |
+| **Consent** | Indicates user consent for advertising data usage. |
 
-{style="table-layout:auto"}
-
-![The [!DNL Web Events and Parameters] section showing example data input into the fields.](../../../images/extensions/server/Amazon/configure-web-events-parameters.png) -->
-
-**[!UICONTROL User Context Parameters]**
-<!-- 
-User context parameters contain customer information that is used to match web visitor events with [!DNL Amazon] users. Including multiple types of matching data allows you to increase the accuracy of targeting and optimization models.
-
-| Input | Description |
-| --- | --- |
-| IP Address | Non-hashed public IP address of the browser. Support is provided for IPv4 and IPv6 addresses. Both the full and compressed forms of IPv6 addresses are recognized. |
-| User Agent | The non-hashed user agent from the user's device. |
-| Email | Email address of the contact associated with the conversion event. |
-| Phone | The phone number must be in E164 format [+][country code][area code][local phone number] before hashing. |
-| Cookie ID | If you are using Pixel SDK will automatically save a unique identifier in the `_ttp` cookie, if cookies are enabled. The `_ttp` value can  extracted and used for this field. |
-| External ID | Any unique identifier such as user IDs, external cookie IDs and so on and must be hashed with SHA256. |
-| Amazon Click ID | The `ttclid` which is added to the URL of the landing page each time an advertisement is selected on [!DNL Amazon]. |
-| Page URL | The page URL at the time of the event. |
-| Page Referrer URL | The URL of the page referrer. |
-
-{style="table-layout:auto"}
-
-![The [!DNL User Context Parameters] section showing example data input into the fields.](../../../images/extensions/server/Amazon/configure-user-context-parameters.png) -->
-
-**[!UICONTROL Properties Parameters]**
-
-Use the properties parameters to configure additional supported properties.
-
-| Input | Description |
-| --- | --- |
-| Price | The cost of a single item.  |
-| Quantity | The number of items being purchased in the event. This must be a positive number greater than 0. |
-| Content Type | A value of either `product` or `product_group` must be assigned to the content_type object property, depending on how you will configure your data feed when you set up your product catalog. |
-| Content ID | A unique identifier of the product item. |
-| Content Category | Category of the page/product. |
-| Content Name | Name of the page/product. |
-| Currency | The currency of the items being purchased in the event. This is expressed in ISO-4217. |
-| Value | The total price of the order. This value will be equal to the price * quantity. |
-| Description | A description of the item or page. |
-| Query | The string of text that was used to lookup a product. |
-| Status | The status of an order, item, or service. For example, "submitted". |
-
-{style="table-layout:auto"}
-
-![The [!DNL Properties Parameters] section showing example data input into the fields.](../../../images/extensions/server/Amazon/configure-properties-parameters.png)
+Select **Keep Changes** to save the rule.
 
 ## Event deduplication {#deduplication}
 
-[!DNL Amazon] pixel will need to be setup for deduplication if you use both the [!DNL Amazon] pixel SDK and the [!DNL Amazon] web events API extension to send the same events to [!DNL Amazon]. 
+If you use both [!DNL Amazon] Advertising Tag (AAT) and the [!DNL Amazon] Conversions API Extension, you must set up deduplication to prevent duplicate event reporting.
 
-Deduplication is not required if distinct event types are being sent from the client and server without any overlap. To ensure that your reporting is not negatively impacted, you must make sure that any single event that is shared by the [!DNL Amazon] pixel SDK and the [!DNL Amazon] web events API extension is deduplicated.
+Ensure every shared event includes Client Dedupe ID. Events arriving within five minutes of each other will be merged, while duplicates received within 48 hours will be removed.
 
-When sending shared events, make sure that every event includes a pixel ID, event ID and name. Duplicated events that arrive within five minutes of each other will be merged. If the data field was absent from the first event, it will be combined with the subsequent event. Any duplicate events received within 48 hours will be removed.
-
-See the [!DNL Amazon] documentation on [Event Deduplication](https://ads.Amazon.com/help/article/event-deduplication) for more details on this process.
+Refer to the [Amazon Event Deduplication Guide](https://advertising.amazon.com/) for more details.
 
 ## Next steps
 
-This guide covered how to send server-side event data to [!DNL Amazon] using the [!DNL Amazon] web events API extension. For more information on event forwarding capabilities in [!DNL Adobe Experience Platform], refer to the [event forwarding overview](../../../ui/event-forwarding/overview.md).
+This guide covered how to configure and send conversion events to [!DNL Amazon] using the [!DNL Amazon] Conversions API extension. For more information on event forwarding capabilities in [!DNL Adobe Experience Platform], refer to the [event forwarding overview](../../../ui/event-forwarding/overview.md)
