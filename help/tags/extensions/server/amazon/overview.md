@@ -27,33 +27,40 @@ Installing the extension requires access to your event forwarding property in Pl
 1. Create or edit an event forwarding property.
 2. Select **Extensions** in the left navigation, then select [!DNL Amazon] extension in the Catalog tab.
 3. Select **Install**.
-![]()
+    
+![[!DNL Amazon] extension selected in the extensions catalog along with the install button.](../../../images/extensions/server/amazon/amazon-extension.png)
+
 4. Configure with:
-   - **Access Token**: Your data element secret containing the OAuth 2 token
-   ![]()
-   - **Entity Id**: Your Entity Id (found in Campaign Manager portal URL with "entity" prefix)
-   ![]()
+
+- **Access Token**: Your data element secret containing the OAuth 2 token
+
+![Individual settings to enter the data element secret highlighted.](../../../images/extensions/server/amazon/2.png)
+
+- **Entity Id**: Your Entity Id (found in Campaign Manager portal URL with "entity" prefix)
+
+![The campaign manager portal in the left navigation.](../../../images/extensions/server/amazon/3.png)
+
 5. Select **Save**.
 
 These configuration values establish the connection between Platform and your [!DNL Amazon] account.
-
-![]()
 
 ### [!DNL Amazon] OAuth 2 {#oauth}
 
 To create an [!DNL Amazon] OAuth 2 secret:
 
 1. Select [!DNL Amazon] OAuth 2 from the **Type** dropdown and select **Create Secret**.
-![]()
+
+![Amazon OAuth 2 in the dropdown menu.](../../../images/extensions/server/amazon/Oauth.png)
 
 2. Select **Create & Authorize secret with Amazon** on the popover to manually authorize the secret and continue.
-![]()
+
+![Create & Authorize secret with Amazon selected.](../../../images/extensions/server/amazon/Oauth.1.png)
 
 3. Enter your [!DNL Amazon] credentials in the dialog that appears. Follow the prompts to grant event forwarding access to your data. 
 
 After completion, you'll see your secret with its status and expiration date in the **Secrets** tab.
 
-![]()
+![Created secret in the secrets tab.](../../../images/extensions/server/amazon/Oauth.2.png)
 
 ## Configure an event forwarding rule {#config-rule}
 
@@ -62,10 +69,10 @@ Once all your data elements are set up, you can create event forwarding rules th
 1. Navigate to **Rules** and create a new event forwarding rule.
 2. Under **Actions**, select **Amazon Conversions API Extension**.
 3. Set the **Action Type** to **Import Conversion Events**.
-![]()
-4. Configure the event properties as outlined below:
 
-![]()
+    ![Action configuration options highlighted.](../../../images/extensions/server/amazon/4.png)
+
+4. Configure the event properties as outlined below:
 
 | Input | Description |
 | --- | --- |
@@ -82,8 +89,10 @@ Once all your data elements are set up, you can create event forwarding rules th
 | **Consent** | Indicates user consent for advertising data usage. |
 
 5. Select **Keep Changes** to save the rule.
-![]()
-![]()
+
+![Event parameters in action configuration highlighted along with the keep changes button.](../../../images/extensions/server/amazon/5.png)
+
+![Additional event parameters in action configuration highlighted along with the keep changes button.](../../../images/extensions/server/amazon/6.png)
 
 ## Event deduplication {#deduplication}
 
@@ -98,4 +107,4 @@ Refer to the [Amazon Event Deduplication Guide](https://advertising.amazon.com/)
 
 This guide covered how to configure and send conversion events to [!DNL Amazon] using the [!DNL Amazon] Conversions API extension. For more information on event forwarding capabilities in [!DNL Adobe Experience Platform], refer to the [event forwarding overview](../../../ui/event-forwarding/overview.md)
 
-For more details on how to debug your implementation using the Experience Platform Debugger and Event Forwarding Monitoring tool, read the [Adobe Experience Platform Debugger overview]() and [Monitor activities]() in event forwarding.
+For more details on how to debug your implementation using the Experience Platform Debugger and Event Forwarding Monitoring tool, read the [Adobe Experience Platform Debugger overview](https://experienceleague.adobe.com/en/docs/experience-platform/debugger/home) and [Monitor activities](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/monitoring) in event forwarding.
