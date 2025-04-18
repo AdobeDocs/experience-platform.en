@@ -24,13 +24,13 @@ This process ensures your authentication credentials remain secure while still b
 
 Installing the extension requires access to your event forwarding property in Platform:
 
-1. Create or edit an event forwarding property.
-2. Select **Extensions** in the left navigation, then select [!DNL Amazon] extension in the Catalog tab.
-3. Select **Install**.
+- Create or edit an event forwarding property.
+- Select **Extensions** in the left navigation, then select [!DNL Amazon] extension in the Catalog tab.
+- Select **Install**.
     
 ![[!DNL Amazon] extension selected in the extensions catalog along with the install button.](../../../images/extensions/server/amazon/amazon-extension.png)
 
-4. Configure with:
+- Configure with:
 
 - **Access Token**: Your data element secret containing the OAuth 2 token
 
@@ -40,7 +40,7 @@ Installing the extension requires access to your event forwarding property in Pl
 
 ![The campaign manager portal in the left navigation.](../../../images/extensions/server/amazon/3.png)
 
-5. Select **Save**.
+- Select **Save**.
 
 These configuration values establish the connection between Platform and your [!DNL Amazon] account.
 
@@ -48,15 +48,15 @@ These configuration values establish the connection between Platform and your [!
 
 To create an [!DNL Amazon] OAuth 2 secret:
 
-1. Select [!DNL Amazon] OAuth 2 from the **Type** dropdown and select **Create Secret**.
+- Select [!DNL Amazon] OAuth 2 from the **Type** dropdown and select **Create Secret**.
 
 ![Amazon OAuth 2 in the dropdown menu.](../../../images/extensions/server/amazon/Oauth.png)
 
-2. Select **Create & Authorize secret with Amazon** on the popover to manually authorize the secret and continue.
+- Select **Create & Authorize secret with Amazon** on the popover to manually authorize the secret and continue.
 
 ![Create & Authorize secret with Amazon selected.](../../../images/extensions/server/amazon/Oauth.1.png)
 
-3. Enter your [!DNL Amazon] credentials in the dialog that appears. Follow the prompts to grant event forwarding access to your data. 
+- Enter your [!DNL Amazon] credentials in the dialog that appears. Follow the prompts to grant event forwarding access to your data. 
 
 After completion, you'll see your secret with its status and expiration date in the **Secrets** tab.
 
@@ -66,13 +66,13 @@ After completion, you'll see your secret with its status and expiration date in 
 
 Once all your data elements are set up, you can create event forwarding rules that determine when and how your events will be sent to Amazon.
 
-1. Navigate to **Rules** and create a new event forwarding rule.
-2. Under **Actions**, select **Amazon Conversions API Extension**.
-3. Set the **Action Type** to **Import Conversion Events**.
+- Navigate to **Rules** and create a new event forwarding rule.
+- Under **Actions**, select **Amazon Conversions API Extension**.
+- Set the **Action Type** to **Import Conversion Events**.
 
 ![Action configuration options highlighted.](../../../images/extensions/server/amazon/4.png)
 
-4. Configure the event properties as outlined below:
+- Configure the event properties as outlined below:
 
 | Input | Description |
 | --- | --- |
@@ -88,7 +88,7 @@ Once all your data elements are set up, you can create event forwarding rules th
 | **Data Processing Options** | Flags for limited data usage. |
 | **Consent** | Indicates user consent for advertising data usage. |
 
-5. Select **Keep Changes** to save the rule.
+- Select **Keep Changes** to save the rule.
 
 ![Event parameters in action configuration highlighted along with the keep changes button.](../../../images/extensions/server/amazon/5.png)
 
