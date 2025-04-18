@@ -3,6 +3,7 @@ keywords: adform integration; adform;
 title: Adform integration for unauthenticated retargeting
 description: This Adobe Experience Platform integration allows you to retarget users based on ECID.
 last-substantial-update: 2025-03-26
+exl-id: 37eb9453-fc3c-481e-94ea-54d9b1545631
 ---
 # [!DNL Adform] extension overview
 

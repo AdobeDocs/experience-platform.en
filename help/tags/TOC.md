@@ -212,6 +212,8 @@ role: Developer
     * Adobe Experience Platform Cloud Connector {#cloud-connector}
       * [Overview](./extensions/server/cloud-connector/overview.md)
       * [Release notes](./extensions/server/cloud-connector/release-notes.md)
+    * [!DNL Adform] {#adform}
+      * [Overview](./extensions/server/adform/overview.md)
     * [!DNL AWS] {#aws}
       * [Overview](./extensions/server/aws/overview.md)
     * [!DNL Braze] {#braze}
