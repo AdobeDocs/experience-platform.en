@@ -13,6 +13,21 @@ Built on top of Adobe Experience Platform, [!DNL Adobe Real-Time Customer Data P
 
 ## Fields {#fields}
 
+>[!CONTEXTUALHELP]
+>id="platform_b2b_audiencebuilder_showfullxdmschema"
+>title="Show full XDM schema"
+>abstract="By default, only fields that contain data are displayed. Enable this option to show all the fields in the XDM schema."
+
+>[!CONTEXTUALHELP]
+>id="platform_b2b_audiencebuilder_showrelationselectors"
+>title="Show relation selectors"
+>abstract="By default, the standard relations for your organization are used. Enable this option to show the relation selectors used."
+
+>[!CONTEXTUALHELP]
+>id="platform_b2b_audiencebuilder_showconstrainedfields"
+>title="Show constrained fields"
+>abstract="By default, only fields that do not have any constraints on them are displayed. Enable this option to show fields that have constraints on them."
+
 When using Audience Builder for accounts, you can use account attributes or existing audiences as your audience's fields.
 
 You can select the ![settings icon](../../images/icons/settings.png) to adjust the settings for the displayed fields.
