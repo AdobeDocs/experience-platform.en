@@ -70,7 +70,7 @@ Once all your data elements are set up, you can create event forwarding rules th
 2. Under **Actions**, select **Amazon Conversions API Extension**.
 3. Set the **Action Type** to **Import Conversion Events**.
 
-    ![Action configuration options highlighted.](../../../images/extensions/server/amazon/4.png)
+![Action configuration options highlighted.](../../../images/extensions/server/amazon/4.png)
 
 4. Configure the event properties as outlined below:
 
