@@ -78,6 +78,16 @@ You can select from multiple types of audiences, depending on their origin:
 >title="Schedule"
 >abstract="Use the pencil icon to set the file export type (full files or incremental files) and the export frequency."
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_schedule_weekly_messaging"
+>title="Weekly exports"
+>abstract="Select the start date and subsequent exports will occur on that day of the week until the selected end date."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_schedule_monthly_messaging"
+>title="Monthly exports"
+>abstract="Select the start date and subsequent exports will occur on that date of the month until the selected end date. For months with fewer than 30 or 31 days, the export occurs on the last day of the month."
+
 [!DNL Adobe Experience Platform] exports data for email marketing and cloud storage destinations as [different file types](#supported-file-formats-export). In the **[!UICONTROL Scheduling]** page, you can configure the schedule and the file names for each audience you are exporting.
 
 Experience Platform automatically sets a default schedule for each file export. You can modify the default schedule according to your needs, by selecting the pencil icon next to each schedule, and defining a custom schedule.
