@@ -1,6 +1,7 @@
 ---
 title: Accelerated Store Overview
 description: Learn how to use the accelerated store in Adobe Experience Platform for fast, SQL-based insights using aggregated data. This page outlines its intended use, restrictions on identity and BI data, and best practices to ensure compliance with Adobe's data governance policies.
+exl-id: 4ec09bd2-b0a2-4559-9b4d-295369880317
 ---
 # Accelerated store overview
 
