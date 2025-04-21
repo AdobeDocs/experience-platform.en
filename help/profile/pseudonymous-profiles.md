@@ -31,11 +31,26 @@ A profile is considered for Pseudonymous data expiration if it meets the followi
 
 ## Access {#access}
 
+>[!AVAILABILITY]
+>
+>To access this feature, you must have the following permissions:
+>
+>- Manage Profiles
+>- View Profiles
+>
+>The **Manage Profiles** permission lets you set the data expirations, while the **View Profiles** permission lets you view the data expirations.
+>
+>More information about permissions within Experience Platform can be found in the [access control overview](../access-control/home.md#permissions).
+
 To add Pseudonymous profile data expiration to your organization, go the Profile dashboard and select **[!UICONTROL Settings]**.
 
 ![The Settings button on the Profile dashboard is highlighted.](./images/pseudonymous-profiles/profile-settings.png)
 
-The [!UICONTROL Profile settings] popover appears. On this popover, you can set the number of days for the Pseudonymous profile data expiration as well as the identity namespace used for the data expiration. Select **[!UICONTROL Apply]** to save your data expiration settings.
+The [!UICONTROL Profile settings] popover appears. On this popover, you can set the number of days for the Pseudonymous profile data expiration as well as the identity namespace used for the data expiration. 
+
+For production sandboxes, the default Pseudonymous profile data expiration is 14 days, with the minimum being 1 day and the maximum being 365 days. For development sandboxes, the default Pseudonymous profile data expiration is 3 days, with the minimum being 1 day and the maximum being 365 days.
+
+Select **[!UICONTROL Apply]** to save your data expiration settings.
 
 ![The popover for adding Pseudonymous profile data expiration to your organization's profiles. The Apply button is highlighted.](./images/pseudonymous-profiles/profile-settings-data-expiry.png)
 
