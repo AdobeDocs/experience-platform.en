@@ -22,7 +22,7 @@ This process ensures your authentication credentials remain secure while still b
 
 ## Install and configure the [!DNL Amazon] extension
 
-Installing the extension requires access to your event forwarding property in Platform:
+Installing the extension requires access to your event forwarding property in Experience Platform:
 
 - Create or edit an event forwarding property.
 - Select **Extensions** in the left navigation, then select [!DNL Amazon] extension in the Catalog tab.
@@ -96,7 +96,7 @@ Once all your data elements are set up, you can create event forwarding rules th
 
 ## Event deduplication {#deduplication}
 
-If you use both [!DNL Amazon] Advertising Tag (AAT) and the [!DNL Amazon] Conversions API extension for the same events, deduplication setup is required. Include 'clientDedupeId' in every shared event to ensure proper deduplication.
+If you use both [!DNL Amazon] Advertising Tag (AAT) and the [!DNL Amazon] Conversions API extension for the same events, deduplication setup is required. Include `clientDedupeId` in every shared event to ensure proper deduplication.
 Deduplication is not needed if client and server events don't overlap.
 
 Proper deduplication prevents inflated conversion counts and ensures your optimization data remains accurate.
