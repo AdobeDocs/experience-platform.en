@@ -36,7 +36,7 @@ Get the most important information about the functionality in this section, and 
 * You can export arrays, maps, and objects to cloud storage destinations in `JSON` and `Parquet` files. For enterprise and edge personalization destinations, the exported data type is `JSON`. People and prospect audiences are supported, account audiences are not.
 * For file-based cloud storage destinations, you *can* export arrays, maps, and objects to CSV files, but only by using the calculated fields functionality and concatenating them into a string by using the `array_to_string` function.
 
-## Arrays and other object types in Platform {#arrays-strings-other-objects}
+## Arrays and other object types in Experience Platform {#arrays-strings-other-objects}
 
 In Experience Platform, you can use [XDM schemas](/help/xdm/home.md) to manage different field types. Before support for array exports was added, you were able to export simple key-value pair type fields such as strings out of Experience Platform to your desired destinations. An example of such a field that was supported for export previously is `personalEmail.address`:`johndoe@acme.org`.
 

@@ -34,17 +34,17 @@ In order to connect [!DNL Pinterest Ads] to Experience Platform, you must provid
 
 For more information on these connection properties, read the [[!DNL Pinterest Ads] overview](../../../../connectors/advertising/pinterest-ads.md#prerequisites).
 
-### Create a Platform schema {#create-platform-schema}
+### Create an Experience Platform schema {#create-platform-schema}
 
-You must also ensure that you first create a Platform schema to use for your [!DNL Pinterst Ads] source. Read the tutorial on [creating a Platform schema](../../../../../xdm/schema/composition.md) for comprehensive steps on how to create a schema.
+You must also ensure that you first create an Experience Platform schema to use for your [!DNL Pinterst Ads] source. Read the tutorial on [creating an Experience Platform schema](../../../../../xdm/schema/composition.md) for comprehensive steps on how to create a schema.
 
-![An example Platform schema for Pinterest Ads](../../../../images/tutorials/create/advertising/pinterest-ads/schema.png)
+![An example Experience Platform schema for Pinterest Ads](../../../../images/tutorials/create/advertising/pinterest-ads/schema.png)
 
 For a list of the fields supported by the [!DNL Pinterest] campaign, ad group and ad APIs, refer to [[!DNL Pinterest] fields](#pinterest-fields) section.
 
 ## Connect your [!DNL Pinterest Ads] account {#connect-account}
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources you can create an account with.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources you can create an account with.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
@@ -70,7 +70,7 @@ If you are creating a new account, select **[!UICONTROL New account]**, and then
 
 ## Select data {#select-data}
 
-The **[!UICONTROL Select data]** step appears, providing an interface for you to input the information that would be passed to the APIs to bring the data you want to Platform.
+The **[!UICONTROL Select data]** step appears, providing an interface for you to input the information that would be passed to the APIs to bring the data you want to Experience Platform.
 
 | Field | Description |
 | --- | --- |
@@ -80,7 +80,7 @@ The **[!UICONTROL Select data]** step appears, providing an interface for you to
 
 >[!TIP]
 >
->You can provide multiple `object_ids` by passing comma-separated values. The maximum number of IDs that you can pass in a single request is 100. If incorrect values are passed, Platform displays the following message: `The request could not be processed. Error from flow provider: Unknown error while processing request.` 
+>You can provide multiple `object_ids` by passing comma-separated values. The maximum number of IDs that you can pass in a single request is 100. If incorrect values are passed, Experience Platform displays the following message: `The request could not be processed. Error from flow provider: Unknown error while processing request.` 
 
 After providing the values, select **[!UICONTROL Select]**. If the values provided are valid, the right part of the interface, preview data, will get populated.
 
@@ -88,7 +88,7 @@ After providing the values, select **[!UICONTROL Select]**. If the values provid
 
 ## Next steps {#next-steps}
 
-By following this tutorial, you have established a connection to your [!DNL Pinterest Ads] account. You can now continue on to the next tutorial and [configure a dataflow to bring advertising data into Platform](../../dataflow/advertising.md).
+By following this tutorial, you have established a connection to your [!DNL Pinterest Ads] account. You can now continue on to the next tutorial and [configure a dataflow to bring advertising data into Experience Platform](../../dataflow/advertising.md).
 
 ## Additional resources {#additional-resources}
 
@@ -113,9 +113,9 @@ Once your have provided the values for your schedule, select **[!UICONTROL Next]
 
 To validate that you have correctly set up the source and [!DNL Pinterest Ads] data is being ingested, follow the steps below:
 
-In the Platform UI, select **[!UICONTROL View Dataflows]** beside the [!DNL Pinterest Ads] card menu on the catalog page. You can then select [!UICONTROL Preview dataset] to verify the data that was ingested.
+In the Experience Platform UI, select **[!UICONTROL View Dataflows]** beside the [!DNL Pinterest Ads] card menu on the catalog page. You can then select [!UICONTROL Preview dataset] to verify the data that was ingested.
 
-![Platform UI screenshot for Pinterest Ads Preview Dataset.](../../../../images/tutorials/create/advertising/pinterest-ads/preview-dataset.png)
+![Experience Platform UI screenshot for Pinterest Ads Preview Dataset.](../../../../images/tutorials/create/advertising/pinterest-ads/preview-dataset.png)
 
 You can verify the data against the counts visible on the [!DNL Pinterest] UI
 

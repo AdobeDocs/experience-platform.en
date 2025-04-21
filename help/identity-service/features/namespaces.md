@@ -86,9 +86,9 @@ The following identity types are available within Experience Platform:
 
 ### Standard namespaces {#standard}
 
-Experience Platform provides several identity namespaces that are available to all organizations. These are known as standard namespaces and are visible using the [!DNL Identity Service] API or through the Platform UI.
+Experience Platform provides several identity namespaces that are available to all organizations. These are known as standard namespaces and are visible using the [!DNL Identity Service] API or through the Experience Platform UI.
 
-The following standard namespaces are provided for use by all organizations within  Platform:
+The following standard namespaces are provided for use by all organizations within  Experience Platform:
 
 | Display name | Description |
 | ------------ | ----------- |

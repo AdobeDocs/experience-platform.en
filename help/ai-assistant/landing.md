@@ -36,6 +36,17 @@ Get started by reading the material in the links below to familiarize yourself w
     </tr>
 </table>
 
+### Hands-on guide to boost your productivity with AI Assistant
+
+>[!NOTE]
+>
+>This workbook was last updated on March 31, 2025. Since then, some capabilities may have evolved or expanded. Additionally, a few features referenced in this guide may still be in early access. If you encounter something that is not yet available in your environment and you are interested in exploring it, please reach out to your Adobe Account Team to request early access.
+
+Read the following for a hands-on guide on how to boost your productivity with AI Assistant.
+
+* [Supercharge your productivity with AI Assistant](./assets/landing/ai-assistant-lab-workbook.pdf)
+
+
 ## New features
 
 Get a glimpse of the newest enhancements in AI Assistant, including capabilities currently in the Alpha or Beta stages.
@@ -433,16 +444,6 @@ Watch the following videos for additional AI Assistant use case examples:
 * [Unlock operational insights with AI Assistant](https://www.youtube.com/watch?v=fGgFwAOZle8)
 
 >[!ENDTABS]
-
-### Boost your productivity with AI Assistant
-
->[!NOTE]
->
->This workbook was last updated on March 31, 2025. Since then, some capabilities may have evolved or expanded. Additionally, a few features referenced in this guide may still be in early access. If you encounter something that is not yet available in your environment and you are interested in exploring it, please reach out to your Adobe Account Team to request early access.
-
-Read the following for a hands-on guide on how to boost your productivity with AI Assistant.
-
-* [Supercharge your productivity with AI Assistant](./assets/landing/ai-assistant-lab-workbook.pdf)
 
 ## Next steps
 

@@ -38,8 +38,8 @@ Next, they can use their offline data including associated membership IDs and cu
 |---|---|---|
 |GAID|Google Advertising ID|Select the GAID target identity when your source identity is a GAID namespace.|
 |IDFA|Apple ID for Advertisers|Select the IDFA target identity when your source identity is an IDFA namespace.|
-|phone_sha256|Phone numbers hashed with the SHA256 algorithm|Both plain text and SHA256 hashed phone numbers are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed phone numbers, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
-|email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed email addresses, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
+|phone_sha256|Phone numbers hashed with the SHA256 algorithm|Both plain text and SHA256 hashed phone numbers are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed phone numbers, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
+|email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed email addresses, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
 |extern_id|Custom user IDs|Select this target identity when your source identity is a custom namespace.|
 
 ## Supported audiences {#supported-audiences}
@@ -92,8 +92,8 @@ Depending on the type of IDs that you ingest into Adobe Experience Platform, you
 
 There are two methods to activate phone numbers in [!DNL Facebook]:
 
-* **Ingesting raw phone numbers**: you can ingest raw phone numbers in the [!DNL E.164] format into [!DNL Platform]. They automatically hashed upon activation. If you choose this option, make sure to always ingest your raw phone numbers into the `Phone_E.164` namespace.
-* **Ingesting hashed phone numbers**: you can pre-hash your phone numbers before ingestion into [!DNL Platform]. If you choose this option, make sure to always ingest your hashed phone numbers into the `Phone_SHA256` namespace.
+* **Ingesting raw phone numbers**: you can ingest raw phone numbers in the [!DNL E.164] format into [!DNL Experience Platform]. They automatically hashed upon activation. If you choose this option, make sure to always ingest your raw phone numbers into the `Phone_E.164` namespace.
+* **Ingesting hashed phone numbers**: you can pre-hash your phone numbers before ingestion into [!DNL Experience Platform]. If you choose this option, make sure to always ingest your hashed phone numbers into the `Phone_SHA256` namespace.
 
 >[!NOTE]
 >
@@ -101,7 +101,7 @@ There are two methods to activate phone numbers in [!DNL Facebook]:
 
 ## Email hashing requirements {#email-hashing-requirements}
 
-You can hash email addresses before ingesting them into Adobe Experience Platform, or use email addresses in clear in Experience Platform, and have [!DNL Platform] hash them on activation.
+You can hash email addresses before ingesting them into Adobe Experience Platform, or use email addresses in clear in Experience Platform, and have [!DNL Experience Platform] hash them on activation.
 
 To learn about ingesting email addresses in Experience Platform, see the [batch ingestion overview](/help/ingestion/batch-ingestion/overview.md) and the [streaming ingestion overview](/help/ingestion/streaming-ingestion/overview.md).
 
@@ -116,8 +116,8 @@ If you select to hash the email addresses yourself, make sure to comply with the
 
 >[!NOTE]
 >
->Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
-> Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
+>Data from unhashed namespaces is automatically hashed by [!DNL Experience Platform] upon activation.
+> Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.
 > The **[!UICONTROL Apply transformation]** option is only displayed when you select attributes as source fields. It is not displayed when you choose namespaces.
 
 ![Apply transformation control highlighted in the mapping step.](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
@@ -224,9 +224,9 @@ Below is an example of correct identity mapping when activating audience data in
 Selecting source fields:
 
 * Select the `Email` namespace as source identity if the email addresses you are using are not hashed.
-* Select the `Email_LC_SHA256` namespace as source identity if you hashed customer email addresses on data ingestion into [!DNL Platform], according to [!DNL Facebook] [email hashing requirements](#email-hashing-requirements).
-* Select the `PHONE_E.164` namespace as source identity if your data consists of non-hashed phone numbers. [!DNL Platform] will hash the phone numbers to comply with [!DNL Facebook] requirements.
-* Select the `Phone_SHA256` namespace as source identity if you hashed phone numbers on data ingestion into [!DNL Platform], according to [!DNL Facebook] [phone number hashing requirements](#phone-number-hashing-requirements).
+* Select the `Email_LC_SHA256` namespace as source identity if you hashed customer email addresses on data ingestion into [!DNL Experience Platform], according to [!DNL Facebook] [email hashing requirements](#email-hashing-requirements).
+* Select the `PHONE_E.164` namespace as source identity if your data consists of non-hashed phone numbers. [!DNL Experience Platform] will hash the phone numbers to comply with [!DNL Facebook] requirements.
+* Select the `Phone_SHA256` namespace as source identity if you hashed phone numbers on data ingestion into [!DNL Experience Platform], according to [!DNL Facebook] [phone number hashing requirements](#phone-number-hashing-requirements).
 * Select the `IDFA` namespace as source identity if your data consists of [!DNL Apple] device IDs. 
 * Select the `GAID` namespace as source identity if your data consists of [!DNL Android] device IDs.
 * Select the `Custom` namespace as source identity if your data consists of other type of identifiers.
@@ -240,9 +240,9 @@ Selecting target fields:
 
 >[!IMPORTANT]
 >
->Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
+>Data from unhashed namespaces is automatically hashed by [!DNL Experience Platform] upon activation.
 > 
->Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
+>Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.
 
 ![Apply transformation control highlighted in the mapping step.](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 

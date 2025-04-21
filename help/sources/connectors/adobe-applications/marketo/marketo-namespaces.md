@@ -11,7 +11,7 @@ exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
 
 >[!NOTE]
 >
->You can use templates in the Adobe Experience Platform UI to expedite your asset creation for B2B and B2C data. For more information, read the guide on [using templates in Platform UI](../../../tutorials/ui/templates.md).
+>You can use templates in the Adobe Experience Platform UI to expedite your asset creation for B2B and B2C data. For more information, read the guide on [using templates in Experience Platform UI](../../../tutorials/ui/templates.md).
 
 Read this document for information information on the underlying set up for the namespaces and schemas to be used with B2B sources. This document also provides details around setting up your Postman automation utility required for generating B2B namespaces and schemas.
 
@@ -24,11 +24,11 @@ Read this document for information information on the underlying set up for the 
 Refer to the following documentation for prerequisite information on how to set up your [!DNL Postman] environment to support the B2B namespace and schema auto-generation utility.
 
 - You can download the namespace and schema auto-generation utility collection and environment from this [GitHub repository](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility).
-- For information on using Platform APIs including details on how to gather values for required headers and read sample API calls, see the guide on [getting started with Platform APIs](../../../../landing/api-guide.md).
-- For information on how to generate your credentials for Platform APIs, see the tutorial on [authenticating and accessing Experience Platform APIs](../../../../landing/api-authentication.md).
-- For information on how to set up [!DNL Postman] for Platform APIs, see the tutorial on [setting up developer console and [!DNL Postman]](../../../../landing/postman.md).
+- For information on using Experience Platform APIs including details on how to gather values for required headers and read sample API calls, see the guide on [getting started with Experience Platform APIs](../../../../landing/api-guide.md).
+- For information on how to generate your credentials for Experience Platform APIs, see the tutorial on [authenticating and accessing Experience Platform APIs](../../../../landing/api-authentication.md).
+- For information on how to set up [!DNL Postman] for Experience Platform APIs, see the tutorial on [setting up developer console and [!DNL Postman]](../../../../landing/postman.md).
 
-With a Platform developer console and [!DNL Postman] set up, you can now start applying the appropriate environment values to your [!DNL Postman] environment.
+With an Experience Platform developer console and [!DNL Postman] set up, you can now start applying the appropriate environment values to your [!DNL Postman] environment.
 
 The following table contains example values as well as additional information on populating your [!DNL Postman] environment:
 
@@ -92,7 +92,7 @@ The following table contains information on the underlying set up for B2B namesp
 
 Experience Platform uses schemas to describe the structure of data in a consistent and reusable way. By defining data consistently across systems, it becomes easier to retain meaning and therefore gain value from data.
 
-Before data can be ingested into Platform, a schema must be composed to describe the data's structure and provide constraints to the type of data that can be contained within each field. Schemas consist of a base class and zero or more schema field groups.
+Before data can be ingested into Experience Platform, a schema must be composed to describe the data's structure and provide constraints to the type of data that can be contained within each field. Schemas consist of a base class and zero or more schema field groups.
 
 For more information on the schema composition model, including design principles and best practices, see the [basics of schema composition](../../../../xdm/schema/composition.md).
 
@@ -119,4 +119,4 @@ The following table contains information on the underlying setup of B2B schemas.
 
 ## Next steps
 
-To learn how to connect your [!DNL Marketo] data to Platform, see the tutorial on [creating a Marketo source connector in the UI](../../../tutorials/ui/create/adobe-applications/marketo.md).
+To learn how to connect your [!DNL Marketo] data to Experience Platform, see the tutorial on [creating a Marketo source connector in the UI](../../../tutorials/ui/create/adobe-applications/marketo.md).

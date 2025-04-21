@@ -21,7 +21,7 @@ XDM is built on top of JSON Schema, and therefore XDM fields inherit a similar s
 
 >[!NOTE]
 >
->See the [API fundamentals guide](../../landing/api-fundamentals.md#json-schema) for more information on JSON Schema and other underlying technologies in Platform APIs.
+>See the [API fundamentals guide](../../landing/api-fundamentals.md#json-schema) for more information on JSON Schema and other underlying technologies in Experience Platform APIs.
 
 The following table outlines how each XDM type is represented in JSON Schema, along with an example value that conforms to the type:
 

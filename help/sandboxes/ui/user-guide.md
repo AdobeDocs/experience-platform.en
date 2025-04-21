@@ -17,7 +17,7 @@ In the Experience Platform UI, select **[!UICONTROL Sandboxes]** in the left nav
 
 ## Switch between sandboxes
 
-The sandbox indicator is located in the top header of the Platform UI and displays the title of the sandbox that you are currently in, its region, and its type.
+The sandbox indicator is located in the top header of the Experience Platform UI and displays the title of the sandbox that you are currently in, its region, and its type.
 
 ![The sandboxes dashboard with the sandbox indicator highlighted.](../images/ui/sandbox-indicator.png)
 

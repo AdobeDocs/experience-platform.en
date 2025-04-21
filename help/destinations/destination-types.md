@@ -90,7 +90,7 @@ Read more about how to [export datasets](/help/destinations/ui/export-datasets.m
 
 ## Extensions {#extensions}
 
-Platform leverages the power and flexibility of tag management, allowing you to configure tag extensions in the UI. 
+Experience Platform leverages the power and flexibility of tag management, allowing you to configure tag extensions in the UI. 
 
 >[!TIP]
 >

@@ -21,6 +21,16 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 >title="Fields"
 >abstract="The three field types that make up a segment definition are attributes, events, and audiences. Attributes let you use Profile attributes that belong to the XDM Individual Profile class, events let you create an audience based on actions or events that take place using XDM ExperienceEvent data elements, and audiences let you use imported audiences from external sources."
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_showfullxdmschema"
+>title="Show full XDM schema"
+>abstract="By default, only fields that contain data are displayed. Enable this option to show all the fields in the XDM schema."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_showdeprecatedfields"
+>title="Show deprecated fields"
+>abstract="By default, deprecated XDM fields are not dispalyed. Enable this option to show deprecated XDM fields."
+
 The basic building blocks of segment definitions are attributes and events. In addition, the attributes and events contained in existing audiences can be used as components for new definitions. 
 
 >[!CONTEXTUALHELP]
