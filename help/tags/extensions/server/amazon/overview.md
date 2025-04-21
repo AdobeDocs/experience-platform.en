@@ -2,6 +2,7 @@
 title: Adobe Amazon Conversions API extension
 description: This Adobe Experience Platform web events API allows you to share website interactions directly with Amazon.
 last-substantial-update: 2025-04-17
+exl-id: 20339b6e-15e3-4d0e-8870-a3a85b7e66fd
 ---
 # [!DNL Amazon] web events API extension overview
 
