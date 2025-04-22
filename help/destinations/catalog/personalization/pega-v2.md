@@ -85,7 +85,7 @@ To configure details for the destination, fill in the required fields and select
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 *  **[!UICONTROL Pega CDH Host Name]**: The Pega Customer Decision Hub Host Name to which the profile gets exported as JSON data.
-*  **[!UICONTROL Application alias]**: The application alias that you configured for your Customer Decision Hub account. For more information, See [Adding an application URL alias](https://docs.pega.com/bundle/platform/page/platform/user-experience/adding-application-url-alias.html) in your [!DNL Pega Customer Decision Hub] instance.
+*  **[!UICONTROL Application alias]**: The application alias that you configured for your Customer Decision Hub account. For more information, see [Adding an application URL alias](https://docs.pega.com/bundle/platform/page/platform/user-experience/adding-application-url-alias.html) in your [!DNL Pega Customer Decision Hub] instance.
 
 ## Activate audiences to this destination {#activate}
 
