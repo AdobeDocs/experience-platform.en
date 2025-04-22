@@ -7,7 +7,7 @@ exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
 
 >[!IMPORTANT]
 >
->This version of the Pega Customer Decision Hub Realtime Audience destination supports only a single Pega Customer Decision application. If you have multiple Pega Customer Decision Hub applications configured, you need to use the [(V2) Pega CDH Realtime Audience destination connector](https://github.com/paratAtPega/experience-platform.en/edit/create-destination/help/destinations/catalog/personalization/pega-v2.md).
+>This version of the Pega Customer Decision Hub Realtime Audience destination supports only a single Pega Customer Decision application. If you have multiple Pega Customer Decision Hub applications configured, you need to use the [(V2) Pega CDH Realtime Audience destination connector](./pega-v2.md).
 
 ## Overview {#overview}
 
@@ -129,12 +129,10 @@ The customer audience membership data fields are added as predictors in Adaptive
 ![Image of the UI screen where you can add Audience membership fields as predicators in Adaptive models, using Prediction Studio](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
 
 ## Additional resources {#additional-resources}
-
-See [Setting up an OAuth 2.0 client registration](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html) in [!DNL Pega Customer Decision Hub].
-
-See [Creating a real-time run for data flows](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html) in [!DNL Pega Customer Decision Hub].
-
-See [Manage customer records in Customer Profile Designer](https://docs.pega.com/bundle/customer-decision-hub/page/customer-decision-hub/implement/profile-designer-data-management.html) in [!DNL Pega Customer Decision Hub].
+Refer to the following [!DNL Pega] documentation for more information:
+* [Setting up an OAuth 2.0 client registration](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html)
+* [Creating a real-time run for data flows](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html)
+* [Manage customer records in Customer Profile Designer](https://docs.pega.com/bundle/customer-decision-hub/page/customer-decision-hub/implement/profile-designer-data-management.html)
 
 ## Data usage and governance {#data-usage-governance}
 
