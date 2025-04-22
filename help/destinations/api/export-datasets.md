@@ -13,7 +13,9 @@ exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
 
 >[!IMPORTANT]
 >
->**Action item**: The [September 2024 release of Experience Platform](/help/release-notes/latest/latest.md#destinations) introduces the option to set an `endTime` date for export dataset dataflows. Adobe is also introducing a default end date of May 1st 2025 for all dataset export dataflows created *prior to the September release*. For any of those dataflows, you need to update the end date in the dataflow manually before the end date, otherwise your exports for stop on that date. Use the Experience Platform UI to view which dataflows will be set to stop on May 1st.
+>**Action item**: The [September 2024 release of Experience Platform](/help/release-notes/latest/latest.md#destinations) introduced the option to set an `endTime` date for export dataset dataflows. Adobe has also introduced a default end date of May 1st 2025 for all dataset export dataflows created *prior to the September 2024 release*. 
+>
+>For any of those dataflows, you need to update the end date in the dataflow manually before the end date, otherwise your exports will stop on that date. Use the Experience Platform UI to view which dataflows will be set to stop on May 1st 2025.
 >
 >Similarly, for any dataflows that you create without specifying an `endTime` date, these will default to an end time six months from the time they are created.
 
