@@ -9,12 +9,12 @@ exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
 
 In Adobe Experience Platform, you can configure various components of existing activation dataflows to destinations, such as:
 
-* [Enable or disable](#enable-disable-dataflows) activation dataflows;
-* [Add additional audiences and profile attributes](#add-audiences) to activation dataflows;
-* Edit mapped attributes and identities
-* Edit the activation schedule and export frequency
-* [Add additional datasets](#add-datasets) to activation workflows;
-* [Edit names and descriptions](#edit-names-descriptions) for your activation dataflows;
+* [Enable or disable](#enable-disable-dataflows) activation dataflows
+* [Add additional audiences](#add-audiences) to activation dataflows
+* [Edit mapped attributes and identities](#edit-mapped-attributes)
+* [Edit the activation schedule and export frequency](#edit-schedule-frequency)
+* [Add additional datasets](#add-datasets) to activation workflows
+* [Edit names and descriptions](#edit-names-descriptions) for your activation dataflows
 
 <!-- * [Apply access labels](#apply-access-labels) to exported data; -->
 
