@@ -98,6 +98,48 @@ As you type in the Query Editor, the editor automatically completes SQL reserved
 
 ![The Query Editor workspace.](../images/ui/overview/query-editor.png)
 
+### Download query results {#download-query-results}
+
+<!-- 
+Business value 
+Empowers users to download data directly from the UI.
+Reduces friction for marketing and analytics use cases.
+Supports downloads of per rows displayed in the query result output
+
+Feature description: 'Download query results': Easily download your query output as a CSV, JSON, or XLS file directly from the Query Editor. Perfect for marketing analysis workflows in Excel—no third-party tools required. Note: This feature is available only to Data Distiller customers. To learn more about the Data Distiller add-on, please contact your Adobe representative.
+ -->
+
+After a successful query execution, you can download the results directly from the **[!UICONTROL Result]** tab in one of three file formats: **CSV**, **XLSX**, or **JSON**.
+
+To download your query results:
+
+1. Select the **[!UICONTROL Download]** button in the upper-right corner of the **[!UICONTROL Result]** tab.
+2. From the dropdown menu, choose a format: **[!UICONTROL CSV]**, **[!UICONTROL XLSX]**, or **[!UICONTROL JSON]**.
+3. The file will download automatically to your local machine.
+
+>[!NOTE]
+>
+>Only queries that return results will display the **[!UICONTROL Download]** button. If the query returns no records, the **[!UICONTROL Result]** tab will display a message indicating no results and the download option will not be available.
+
+![The results tab of the Query Editor with Download highlighted.](./download-results.png)
+
+>[!NOTE]
+>
+> When opening a CSV file in Excel, the following message may appear: "Possible Data Loss. Some features might be lost if you save this workbook in the comma-delimited (.csv) format. To preserve these features, save it in an Excel file format." Additionally, the formatting for date and time may vary by file type. For example, CSV files will reflect the format shown in the query result, while XLSX files may apply localized formatting in Excel.
+
+<!-- Additional unrequested section: -->
+
+### View results in full screen {#view-results}
+
+After executing a query, you can preview the output in a full-screen dialog for better readability by selecting **[!UICONTROL View results]** in the **[!UICONTROL Result]** tab.
+
+This expands the results into a dedicated view that displays the output in a resizable grid, making it easier to review large datasets or scan across columns. This preview mode is especially helpful when analyzing wide tables or reviewing row-level details.
+
+> This preview view is read-only and does not affect the query or dataset.
+
+![The full-screen preview dialog with View results selected.](./view-results-fullscreen.png)
+
+
 ## Scheduled queries {#scheduled-queries}
 
 Queries that have already been saved as a template can be scheduled to run on a regular cadence. When scheduling a query, you can choose the frequency of runs, the start and end date, the day of the week the scheduled query runs, as well as the dataset to export the query to. Query schedules are set using Query Editor.
