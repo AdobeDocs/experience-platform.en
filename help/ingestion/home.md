@@ -25,11 +25,7 @@ In Experience Platform, a batch is a set of data collected over a period of time
 
 Manually uploaded datafiles such as flat CSV files (mapped to XDM schemas) and parquet files must be ingested using this method.
 
-For more information, read the [batch ingestion overview](./batch-ingestion/overview.md) .
-
->[!TIP]
->
->Use single-line JSON instead of multi-line JSON as input for batch ingestion. Single-line JSON allows for better performance as the system can divide one input file into multiple chunks and process them in parallel, whereas multi-line JSON cannot be split. This can significantly reduce data processing costs and improve batch processing latency.
+For more information, read the [batch ingestion overview](./batch-ingestion/overview.md).
 
 ## Sources {#sources}
 
@@ -129,7 +125,7 @@ The following table outlines the variety of methods that you can use to ingest s
 </td>
 <td style="background-color:#e8eeff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:39px; vertical-align:top; width:282px">
 <ul>
-<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Data is streamed through the [!DNL Edge Network]. Support for real-time segmentation on the Edge. </span></span></span></li>
+<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Data is streamed through the [!DNL Edge Network]. Support for real-time segmentation and event forwarding on the Edge. </span></span></span></li>
 </ul>
 </td>
 </tr>
@@ -165,7 +161,7 @@ The following table outlines the variety of methods that you can use to ingest s
 </td>
 <td style="background-color:#e8eeff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:39px; vertical-align:top; width:282px">
 <ul>
-<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Data must be streamed in XDM format.</span></span></span></li>
+<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Data is streamed in JSON format and can be mapped to XDM schema.</span></span></span></li>
 </ul>
 </td>
 </tr>
@@ -248,7 +244,7 @@ The following table outlines the variety of methods that you can use to ingest b
 </td>
 <td style="background-color:#cddbff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:62px; vertical-align:top; width:277px">
 <ul>
-<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Not always on, immediate ingestion. </span></span></span></li>
+<li><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Source ingestion based on pre-configured scheduled intervals.</span></span></span></li>
 </ul>
 </td>
 </tr>
