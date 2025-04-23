@@ -34,14 +34,6 @@ Refer to the [IAM Policies for AWS KMS official documentation](https://docs.aws.
 - **Data Security in Experience Platform**: Explore how Experience Platform ensures data security and integrates with external services like AWS KMS for encryption. Experience Platform protects data with HTTPS TLS v1.2 for transit, cloud-provider encryption at rest, isolated storage, and customizable authentication and encryption options. See the [governance, privacy, and security overview](../overview.md), or the document on [data encryption in Experience Platform](../../encryption.md) for more information on how your data is kept secure.
 - **AWS Management Console**: A central hub where you can access and manage all your AWS services from one web-based application. Use the search bar to quickly find tools, check notifications, manage your account and billing, and customize your settings. Refer to the [official AWS management console documentation](https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/what-is.html) for more information.
 
->[!NOTE]
->
->To improve transparency and enable timely alerts regarding your key vault's availability, Adobe recommends that you add the following static IP address (XXXX) to the restricted network configuration of your key vault.
->
->If your key vault is already configured to allow public network access, no further action is required.
->
->Adding this IP address allows Adobe services to monitor connectivity more effectively and provide in-Platform alerts when access issues are detected.
-
 ## Get started {#get-started}
 
 This guide requires that you already have access to an Amazon Web Services account and access to the management console. Follow the steps below to get started:
