@@ -57,7 +57,7 @@ Select **[!DNL Networking]** in the left navigation. Under **[!DNL Firewalls and
 >
 >If your key vault is already configured to allow public network access, no further action is required.
 >
->Adding this IP address allows Adobe services to monitor connectivity more effectively and provide in-Platform alerts when access issues are detected.
+>Adding this IP address allows Adobe services to monitor connectivity more effectively and provide in-Platform alerts when access issues are detected. To learn more about when to allowlist Adobe's IP address, how alerts work, and what to do if you receive a key access failure notification, see [Manage Alerts and IP Access for Azure CMK]().
 
 ![The [!DNL Networking] tab of [!DNL Microsoft Azure] with [!DNL Networking] and [!DNL Allow trusted Microsoft surfaces to bypass this firewall] exception highlighted.](../../../images/governance-privacy-security/customer-managed-keys/networking.png)
 
