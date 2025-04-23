@@ -22,11 +22,11 @@ Next, in the **[!DNL Firewall]** section, select **[!DNL Add your current IP add
 >
 >After you add or update the static IP address in your Azure Key Vault settings, allow up to 10 minutes for the change to take effect. A background process runs every 10 minutes to check key accessibility and apply any updates.
 
-Once Adobe's static IP address is allowlisted in your Azure network firewall, Adobe services can reliably access your Key Vault even in restricted network configurations. This secure connection allows Experience Platform to proactively monitor for access issues. If a problem occurs, such as Adobe being unable to reach your key, Platform alerts will notify you so you can take corrective action and ensure uninterrupted access to your encrypted data.
+Once Adobe's static IP address is added to your Azure Key Vault firewall settings, Experience Platform can maintain a secure connection and monitor for access issues. If Adobe services are unable to reach your Key Vault, for example, due to misconfigured firewall rules or removal of the IP address, you will receive platform alerts in your Experience Platform notifications. These alerts help you take timely corrective action to avoid service disruption and maintain uninterrupted access to your encrypted data.
 
 ## Monitor alerts
 
-Once Adobe's static IP address is added to your allowlist, you can begin receiving platform alerts if Adobe services are unable to access your Key Vault. These alerts may appear under your Experience Platform notifications and indicate issues such as key access failure or key disablement.
+Platform alerts indicate issues such as **[!UICONTROL Key access failure]** or **[!UICONTROL Key disablement]**. A key access failure typically means that Adobe's IP is no longer allowlisted or that networking restrictions are misconfigured. In such cases, review your Azure firewall settings and re-add the required IP if necessary.
 
 If you receive a **[!UICONTROL Key access failure]** alert, it often indicates that Adobe's IP was removed from the firewall allowlist or that networking restrictions are misconfigured. In these cases, check your Azure firewall settings and re-add the required IP if necessary. These alerts are designed to help you take immediate corrective action and prevent data loss or service interruptions.
 
