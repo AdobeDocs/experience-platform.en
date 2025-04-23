@@ -35,10 +35,10 @@ A profile is considered for Pseudonymous data expiration if it meets the followi
 >
 >To access this feature, you must have the following permissions:
 >
->- Manage Profiles
+>- Manage Profile Settings
 >- View Profiles
 >
->The **Manage Profiles** permission lets you set the data expirations, while the **View Profiles** permission lets you view the data expirations.
+>The **Manage Profile Settings** permission lets you set the data expirations, while the **View Profiles** permission lets you view the data expirations.
 >
 >More information about permissions within Experience Platform can be found in the [access control overview](../access-control/home.md#permissions).
 
