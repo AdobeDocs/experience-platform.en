@@ -75,7 +75,7 @@ Device and hardware information use the `context` array string `"device"`, while
 
 Also, make sure that each desired XDM field exists in your schema. If it does not, you can add the Adobe-provided `Environment Details` field group to your schema.
 
-### Configure advanced options {#@advanced-options}
+### Configure advanced options {#advanced-options}
 
 To reveal advanced configration options, select **[!UICONTROL Advanced Options]**. Here, you can configure additional datastream settings, such as IP obfuscation, First Party ID cookies, and more.
 
