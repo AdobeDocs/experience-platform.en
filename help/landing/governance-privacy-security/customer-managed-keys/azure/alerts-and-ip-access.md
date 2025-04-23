@@ -10,7 +10,7 @@ For organizations managing sensitive data or operating under strict compliance r
 >
 >If you have disabled public network access or configured your Azure Key Vault to allow only selected networks, you must add Adobe's static IP address to your allowlist. This step is required to ensure that Adobe services can continue to access your key vault without interruption.
 
-## Allowlist Adobe's static IP in Azure Key Vault
+## Allowlist Adobe's static IP in Azure Key Vault {#add-adobe-static-ip}
 
 To allow Adobe access while maintaining your network restrictions, navigate to your **[!DNL Azure Key Vault]** > **[!DNL Networking settings]**. In the **[!DNL Firewalls and virtual networks]** section, select **[!DNL Allow public access from specific virtual networks and IP addresses]**.
 
@@ -24,11 +24,11 @@ Next, in the **[!DNL Firewall]** section, select **[!DNL Add your current IP add
 
 Once Adobe's static IP address is added to your Azure Key Vault firewall settings, Experience Platform can maintain a secure connection and monitor for access issues. If Adobe services are unable to reach your Key Vault, for example, due to misconfigured firewall rules or removal of the IP address, you will receive platform alerts in your Experience Platform notifications. These alerts give you the visibility needed to quickly resolve access issues. The next section outlines the types of alerts you may receive and how to respond.
 
-## Monitor alerts
+## Monitor alerts {#monitor-alerts}
 
-Platform alerts indicate issues such as **[!UICONTROL Key access failure]** or **[!UICONTROL Key disablement]**. A key access failure typically means that Adobe's IP is no longer allowlisted or that networking restrictions are misconfigured. In such cases, review your Azure firewall settings and re-add the required IP if necessary.
+Platform alerts notify you of issues that may interrupt key access, such as **[!UICONTROL Key access failure]** or **[!UICONTROL Key disablement]**. A key access failure often means Adobe's static IP has been removed from your firewall allowlist or your networking settings are misconfigured. In these cases, review your Azure firewall settings and re-add the required IP to restore access.
 
-Subscribe to Adobe I/O event notifications to receive real-time alerts about key access issues. You can integrate Experience Platform alerts—such as key access failures or disablement events—into your organization's existing monitoring systems. For setup guidance, see [Subscribe to Adobe I/O Event notifications]().
+To receive these alerts in real time, subscribe to Adobe I/O event notifications and integrate them with your organization's monitoring tools. For setup instructions, see [Subscribe to Adobe I/O Event notifications](../../../../observability/alerts/subscribe.md). Or refer to the [alerts UI guide](../../../../observability/alerts/ui.md) for more information on managing alerts.
 
 ## Next steps
 
