@@ -2,11 +2,11 @@
 title: (V2) Pega CDH Realtime Audience connection
 description: Use the Pega Customer Decision Hub Realtime Audience destination in Adobe Experience Platform to send profile attributes and audience membership data to Pega Customer Decision Hub for next-best-action decisioning.
 ---
-# Pega CDH Realtime Audience connection
+# (V2) Pega CDH Realtime Audience connection
 
 ## Overview {#overview}
 
-Use the [!DNL Pega Customer Decision Hub] Realtime Audience destination in Adobe Experience Platform to send profile attributes and audience membership data to [!DNL Pega Customer Decision Hub] for next-best-action decisioning. 
+Use the (V2) [!DNL Pega CDH Realtime Audience] destination in Adobe Experience Platform to send profile attributes and audience membership data to [!DNL Pega Customer Decision Hub] for next-best-action decisioning. 
 
 Profile audience membership from Adobe Experience Platform, when loaded into [!DNL Pega Customer Decision Hub], can be used as predictor in adaptive models and help deliver the right contextual and behavioral data for next-best-action decisioning purposes.
 
