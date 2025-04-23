@@ -5,17 +5,19 @@ title: Configure audience data type
 
 # Configure audience data type
 
-When you build a destination connector with Destination SDK, you can define the type of audience that will be exported to your destination. Review the audience data types below to learn about the differences between them and identify the type that you need for your integration. Then, read the sections further below on the page to learn how to configure your destination to export different audience types.
+When you build a destination connector with Destination SDK, you can define the type of audience that will be exported to your destination. Configuring the correct audience data type ensures that your destination receives the right data for its intended use case, whether it's for marketing campaigns, account-based strategies, or data analysis.
 
-* [People audiences](../../../../segmentation/types/people-audiences.md): People audiences are based on customer profiles and they allow you to target specific groups of people for your marketing campaigns, such as frequent buyers or users who abandoned their carts.
-* [Dataset exports](../../../../catalog/datasets/overview.md): Datasets are collections of structured data stored in the Adobe Experience Platform Data Lake. All data that is successfully ingested into Adobe Experience Platform is stored in datasets. Datasets also contain metadata that describes various aspects of the data they store. 
+Review the audience data types below to learn about the differences between them and identify the type that you need for your integration. Then, read the sections further below on the page to learn how to configure your destination to export different audience types.
 
-* [Prospect audiences](../../../../segmentation/types/prospect-audiences.md): Use prospect audiences to target individuals who are not yet customers but share characteristics with your target audience. With prospect profiles, you can supplement your customer profiles with attributes from trusted third-party partners. 
-* [Account audiences](../../../../segmentation/types/account-audiences.md): Use account audiences to target individuals within specific organizations, enabling account-based marketing strategies.
+|Audience data type| Description | Use cases |
+|---------|----------|---------|
+| [People audiences](../../../../segmentation/types/people-audiences.md) | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
+| [Account audiences](../../../../segmentation/types/account-audiences.md) | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
+| [Prospect audiences](../../../../segmentation/types/prospect-audiences.md) | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
+| [Dataset exports](../../../../catalog/datasets/overview.md) | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
 
 The supported audience data type depends on the type of destination that you create.
 Refer to the table below to understand which destination types support which audience data types.
-
 
 |Destination type | People audiences | Account audiences | Prospect audiences | Datasets|
 |---------|----------|---------|---------|---------|
@@ -24,13 +26,31 @@ Refer to the table below to understand which destination types support which aud
 
 {style="table-layout:auto"}
 
+## The `sources` array {#sources}
+
+The `sources` array specifies the type of audience data that your destination supports. It is required for account audiences, prospect audiences, and dataset exports but is not needed for people audiences, as they are supported by default.
+
+```json
+"sources":[
+   "ACCOUNTS" // Specifies that this destination supports account audiences
+]
+```
+
+The `sources` array accepts the following values:
+
+* `"ACCOUNTS"`: Specifies that your destination supports the export of account audiences.
+* `"UNIFIED_PROFILE_PROSPECTS"`: Specifies that your destination supports the export of prospect audiences.
+* `"DATASETS"`: Specifies that your destination supports the export of datasets.
+
 Depending on the audience type that you want to export to your destination, review the sections below for destination configuration examples.
 
 ## Export people audiences {#people-audiences}
 
-People audiences are supported by default for all destination types and do not need a specific `sources` value. To build a destination that supports only people destinations, you can omit the `sources` component from the configuration.
+People audiences are supported by default for all destination types and do not need a specific `sources` value. To build a destination that supports people audiences, you do not need to use the `sources` array at all, since that is the default behavior.
 
 +++ Streaming destination configuration example with people audiences support
+
+This is an example of a streaming destination that exports people audiences. Notice how there is no `sources` array in the configuration."
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations \
@@ -244,7 +264,7 @@ To build a destination which supports the export of prospect audiences, add the 
 ] 
 ```
 
-+++ Streaming destination configuration example with people and prospect audiences support
++++ Streaming destination configuration example with prospect audiences support
 
 ```shell {line-numbers="true" highlight="12-14"}
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations \
@@ -628,3 +648,22 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 ```
 
 +++
+
+## Next steps {#next-steps}
+
+After reading this article, you should have a better understanding of how to configure the audience data type for your destination.
+
+To learn more about the other destination components, see the following articles:
+
+* [Customer authentication configuration](customer-authentication.md)
+* [OAuth2 authorization](oauth2-authorization.md)
+* [Customer data fields](customer-data-fields.md)
+* [UI attributes](ui-attributes.md)
+* [Schema configuration](schema-configuration.md)
+* [Identity namespace configuration](identity-namespace-configuration.md)
+* [Supported mapping configurations](supported-mapping-configurations.md)
+* [Destination delivery](destination-delivery.md)
+* [Audience metadata configuration](audience-metadata-configuration.md)
+* [Aggregation policy](aggregation-policy.md)
+* [Batch configuration](batch-configuration.md)
+* [Historical profile qualifications](historical-profile-qualifications.md)
