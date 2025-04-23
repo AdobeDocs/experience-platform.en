@@ -6,9 +6,11 @@ description:
 
 [!DNL Azure Databricks] is a cloud-based platform designed for data analytics, machine learning, and AI. You can use [!DNL Databricks] to integrate with [!DNL Azure] and provide a holistic environment for building, deploying, and managing data solutions at scale.
 
+You can use the [!DNL Databricks] source to connect your account and ingest your [!DNL Databricks] data to Adobe Experience Platform.
+
 ## Prerequisites
 
-Before you can connect your [!DNL Azure Databricks] account to Experience Platform, you must first complete a set of prerequisite set up to ensure a successful connection.
+Before you can connect your [!DNL Databricks] account to Experience Platform, you must first complete a set of prerequisite steps to ensure that you can successfully connect your [!DNL Databricks] account to Experience Platform.
 
 ### Retrieve credentials for DLZ/Blob
 
@@ -26,7 +28,7 @@ GET /data/foundation/connectors/landingzone/credentials?type=dlz_databricks_sour
 
 The following request retrieves the credentials for your [!DNL Data Landing Zone].
 
-+++Select to view example
++++View request example
 
 ```shell
 curl -X GET \
@@ -44,7 +46,7 @@ curl -X GET \
 
 A successful response returns your credentials. Values for `containerName`, `SASToken`, and `storageAccountName` will be used in a later step when completing your [!DNL Apache Spark] configuration for [!DNL Databricks].
 
-+++Select to view example
++++View response example
 
 ```json
 {
@@ -66,6 +68,51 @@ A successful response returns your credentials. Values for `containerName`, `SAS
 
 +++
 
+### Refresh your credentials
+
+To refresh your credentials, make a POST request and include `action=refresh` as a query parameter.
+
+**API format**
+
+```http
+GET /data/foundation/connectors/landingzone/credentials?type=dlz_databricks_source&action=refresh
+```
+
+**Request**
+
+The following request refreshes the credentials for your [!DNL Data Landing Zone].
+
++++View request example
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=dlz_databricks_source&action=refresh' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+```
+
++++
+
+**Response**
+
+A successful response returns your new credentials.
+
++++View response example
+
+```json
+{
+    "containerName": "dlz-databricks-container",
+    "SASToken": "sv=2020-10-02&si=dlz-6e17e5d6-de18-4efc-88c7-45f37d242617&sr=c&sp=racwdlm&sig=wvA4K3fcEmqAA%2FPvcMhB%2FA8y8RLwVJ7zhdWbxvT1uFM%3D",
+    "storageAccountName": "sndbxdtlndga8m7ajbvgc64k",
+    "SASUri": "https://sndbxdtlndga8m7ajbvgc64k.blob.core.windows.net/dlz-databricks-container?sv=2020-10-02&si=dlz-6e17e5d6-de18-4efc-88c7-45f37d242617&sr=c&sp=racwdlm&sig=wvA4K3fcEmqAA%2FPvcMhB%2FA8y8RLwVJ7zhdWbxvT1uFM%3D",
+    "expiryDate": "2025-07-20"
+}
+```
+
++++
 
 ### Configure access to your [!DNL Azure Blob Storage]
 
@@ -81,6 +128,7 @@ fs.azure.sas.{CONTAINER_NAME}.{STORAGE-ACCOUNT}.blob.core.windows.net {SAS-TOKEN
 
 | Property | Description |
 | --- | --- |
-| Container name | 
-| Storage account |
-| SAS token |
+| Container name | The name of your container. You can obtain this value by retrieving your [!DNL Data Landing Zone] credentials. |
+| Storage account | The name of your storage account. You can obtain this value by retrieving your [!DNL Data Landing Zone] credentials. |
+| SAS token | The shared access signature token for your [!DNL Data Landing Zone]. You can obtain this value by retrieving your [!DNL Data Landing Zone] credentials. |
+
