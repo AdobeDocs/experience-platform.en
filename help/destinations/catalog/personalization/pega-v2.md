@@ -18,15 +18,11 @@ Profile audience membership from Adobe Experience Platform, when loaded into [!D
 
 To help you better understand how and when you should use the [!DNL Customer Decision Hub] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
-### Use case #1 {#use-case-1}
-
-For Telecommunications:
+### Telecommunications {#telecommunications}
 
 A marketer wants to leverage insights from data science model-based next best action as delivered by [!DNL Pega Customer Decision Hub] for customer engagement. [!DNL Pega Customer Decision Hub] relies significantly on customer intent, such as "Interested_In_5G", "Interested_in_Unlimited_Dataplan" or "Interest_in_iPhone_accessories" to determine the next-best-action (NBA) decisioning in outbound channels.
 
-### Use case #2 {#use-case-2}
-
-For Financial services:
+### Financial services {#financial-services}
 
 A marketer wants to optimize the offers for customers who subscribed or unsubscribed from Pension Plan or Retirement Plan newsletters. Financial services companies can ingest multiple Customer IDs from their own CRMs into Adobe Experience Platform, build audiences from their own offline data, and send profiles that are entering and exiting the audiences to [!DNL Pega Customer Decision Hub] for next-best-action (NBA) decisioning in outbound channels.
 
@@ -44,7 +40,7 @@ Before you can use this destination to export data out of Adobe Experience Platf
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-|**[!UICONTROL CustomerID]**|Customer ID|Common User Identifier that uniquely identifies a profile in [!DNL Pega Customer Decision Hub] and Adobe Experience Platform.|
+|`CustomerID`|Customer ID|Common User Identifier that uniquely identifies a profile in [!DNL Pega Customer Decision Hub] and Adobe Experience Platform.|
 
 {style="table-layout:auto"}
 
@@ -54,6 +50,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
+| Export type | **[!UICONTROL Profile-based]** | Export all members of an audience with identifier (*CustomerID*), attributes (last name, first name, location, etc.) and Audience Membership data.|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are always-on API-based connections. As soon as a profile is updated in Experience Platform, based on audience evaluation, the connector sends the update downstream to the destination platform. For more information, see [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
@@ -104,7 +101,7 @@ In the [!UICONTROL Mapping] step, select a unique identifier from your union sch
 
 Below is an example of correct identity mapping when exporting profiles to [!DNL Pega Customer Decision Hub].
 
-* Select a source identity that uniquely identifies a profile in Adobe Experience Platform and [!DNL Pega Customer Decision Hub]. For example: CustomerID.
+* Select a source identity that uniquely identifies a profile in Adobe Experience Platform and [!DNL Pega Customer Decision Hub]. For example: `CustomerID`.
 * Select the destination profile attributes to which you want to map the selected source profile attributes.
 
 ![Identity mapping](../../assets/catalog/personalization/pega/pega-source-destination-mapping.png)
