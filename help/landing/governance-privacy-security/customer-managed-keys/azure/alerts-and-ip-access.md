@@ -28,6 +28,8 @@ Once Adobe's static IP address is added to your Azure Key Vault firewall setting
 
 Platform alerts indicate issues such as **[!UICONTROL Key access failure]** or **[!UICONTROL Key disablement]**. A key access failure typically means that Adobe's IP is no longer allowlisted or that networking restrictions are misconfigured. In such cases, review your Azure firewall settings and re-add the required IP if necessary.
 
+Subscribe to Adobe I/O event notifications to receive real-time alerts about key access issues. You can integrate Experience Platform alerts—such as key access failures or disablement events—into your organization's existing monitoring systems. For setup guidance, see [Subscribe to Adobe I/O Event notifications]().
+
 ## Next steps
 
 You've now configured IP allowlisting for Adobe services and learned how to interpret platform alerts for Customer Managed Key access issues. To complete the CMK setup process for Azure-hosted environments, continue with the following guides:
