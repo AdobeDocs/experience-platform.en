@@ -25,7 +25,7 @@ If you already have a valid [!DNL AWS Redshift] connection, you may skip the rem
 
 ## Navigate the sources catalog
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
 Select **[!DNL AWS Redshift]** under the *[!UICONTROL Databases]* category, and then select **[!UICONTROL Set up]**.
 

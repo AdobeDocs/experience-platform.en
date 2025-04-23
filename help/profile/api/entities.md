@@ -12,7 +12,7 @@ exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
 >
 >ExperienceEvent lookup using the Profile access API will be deprecated. Please use features such as computed attributes for use cases that require looking up ExperienceEvents. For more information about this change, contact Adobe Customer Care.
 
-Adobe Experience Platform enables you to access [!DNL Real-Time Customer Profile] data using RESTful APIs or the user interface. This guide outlines how to access entities, more commonly known as "profiles", using the API. For more information on accessing profiles using the [!DNL Platform] UI, please refer to the [Profile user guide](../ui/user-guide.md). 
+Adobe Experience Platform enables you to access [!DNL Real-Time Customer Profile] data using RESTful APIs or the user interface. This guide outlines how to access entities, more commonly known as "profiles", using the API. For more information on accessing profiles using the [!DNL Experience Platform] UI, please refer to the [Profile user guide](../ui/user-guide.md). 
 
 ## Getting started
 
@@ -1217,7 +1217,7 @@ A successful response returns HTTP status 202 with an empty response body.
 
 ## Next steps
 
-By following this guide you have successfully accessed [!DNL Real-Time Customer Profile] data fields, profiles, and time series data. To learn how to access other data resources stored in [!DNL Platform], see the [Data Access overview](../../data-access/home.md).
+By following this guide you have successfully accessed [!DNL Real-Time Customer Profile] data fields, profiles, and time series data. To learn how to access other data resources stored in [!DNL Experience Platform], see the [Data Access overview](../../data-access/home.md).
 
 ## Appendix {#appendix}
 

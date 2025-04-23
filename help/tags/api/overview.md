@@ -93,7 +93,7 @@ See the [audit events endpoint guide](./endpoints/audit-events.md) to learn how 
 
 ## Callbacks
 
-A callback is a message that Platform sends to a URL host whenever a new audit event is generated. See the [callbacks endpoint guide](./endpoints/callbacks.md) to learn how to manage callbacks in the API.
+A callback is a message that Experience Platform sends to a URL host whenever a new audit event is generated. See the [callbacks endpoint guide](./endpoints/callbacks.md) to learn how to manage callbacks in the API.
 
 ## Notes
 

@@ -9,7 +9,7 @@ exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about"
 >title="What are roles?"
->abstract="Roles define the access that an administrator, a specialist, or an end-user has to resources in your organization. They categorize the users interacting with your Platform instance and are the building blocks of access control policies. A role has a given set of permissions and members of your organization can be assigned to one or more roles, depending on the scope of view or write access they need."
+>abstract="Roles define the access that an administrator, a specialist, or an end-user has to resources in your organization. They categorize the users interacting with your Experience Platform instance and are the building blocks of access control policies. A role has a given set of permissions and members of your organization can be assigned to one or more roles, depending on the scope of view or write access they need."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html" text="Manage roles"
 
 >[!IMPORTANT]
@@ -117,8 +117,8 @@ The following video is intended to support your understanding of creating a new 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_apicredentials_about"
 >title="What are API credentials?"
->abstract="API credentials are assigned to roles to grant users and developers access to Platform APIs. Using Platform APIs, you can programmatically perform basic CRUD (Create, Read, Update, Delete) operations on data, such as configuring computed attributes, accessing data/entities, exporting data, deleting unneeded data or batches, and more."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-apis/api-guide" text="Platform API guide"
+>abstract="API credentials are assigned to roles to grant users and developers access to Experience Platform APIs. Using Experience Platform APIs, you can programmatically perform basic CRUD (Create, Read, Update, Delete) operations on data, such as configuring computed attributes, accessing data/entities, exporting data, deleting unneeded data or batches, and more."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-apis/api-guide" text="Experience Platform API guide"
 
 >[!IMPORTANT]
 >

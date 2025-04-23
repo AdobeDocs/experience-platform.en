@@ -195,7 +195,7 @@ Back quotes are **not** needed if you are using bracket-notation.
 
 ## Viewing table information
 
-After connecting to Query Service, you can see all your available tables on Platform by using either the `\d` or `SHOW TABLES` commands.
+After connecting to Query Service, you can see all your available tables on Experience Platform by using either the `\d` or `SHOW TABLES` commands.
 
 ### Standard table view
 

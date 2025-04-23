@@ -11,13 +11,13 @@ last-substantial-update: 2023-05-25
 >
 >The [!DNL Salesforce Marketing Cloud] source will be deprecated at the end of June 2025.
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
 Experience Platform provides support for ingesting data from third-party marketing automation systems. Support for marketing automation providers include [!DNL Salesforce Marketing Cloud].
 
 ## Prerequisites
 
-Before you can connect your [!DNL Salesforce Marketing Cloud] source to Platform, you must ensure that the following **permission scopes** are provisioned to your [!DNL Salesforce Marketing Cloud] client ID and client secret combination:
+Before you can connect your [!DNL Salesforce Marketing Cloud] source to Experience Platform, you must ensure that the following **permission scopes** are provisioned to your [!DNL Salesforce Marketing Cloud] client ID and client secret combination:
 
 * `campaign_read`
 * `list_and_subscribers_read`
@@ -34,17 +34,17 @@ For more information on scopes including a list of their related permissions and
 
 A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
 
-## Connect [!DNL Salesforce Marketing Cloud] to Platform using APIs
+## Connect [!DNL Salesforce Marketing Cloud] to Experience Platform using APIs
 
-The documentation below provides information on how to connect [!DNL Salesforce Marketing Cloud] to Platform using APIs:
+The documentation below provides information on how to connect [!DNL Salesforce Marketing Cloud] to Experience Platform using APIs:
 
 * [Create a Salesforce Marketing Cloud base connection using the Flow Service API](../../tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
 * [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
 * [Create a dataflow for a marketing automation source using the Flow Service API](../../tutorials/api/collect/marketing-automation.md)
 
-## Connect [!DNL Salesforce Marketing Cloud] to Platform using the UI
+## Connect [!DNL Salesforce Marketing Cloud] to Experience Platform using the UI
 
-The documentation below provides information on how to connect [!DNL Salesforce Marketing Cloud] to Platform using the user interface:
+The documentation below provides information on how to connect [!DNL Salesforce Marketing Cloud] to Experience Platform using the user interface:
 
 * [Create a Salesforce Marketing Cloud source connection in the UI](../../tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
 * [Create a dataflow for a marketing automation source connection in the UI](../../tutorials/ui/dataflow/marketing-automation.md)

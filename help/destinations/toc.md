@@ -237,6 +237,7 @@ role: Admin,User
             * [Supported transformation functions](./destination-sdk/functionality/destination-server/supported-functions.md)
             * [File formatting configuration](./destination-sdk/functionality/destination-server/file-formatting.md)
         * Destination configuration components {#destination-configuration}
+            * [Configure audience data type](./destination-sdk/functionality/destination-configuration/audience-data-type.md)
             * [Customer authentication configuration](./destination-sdk/functionality/destination-configuration/customer-authentication.md)
             * [OAuth2 authorization](./destination-sdk/functionality/destination-configuration/oauth2-authorization.md)
             * [Customer data fields](./destination-sdk/functionality/destination-configuration/customer-data-fields.md)
@@ -310,4 +311,4 @@ role: Admin,User
         * [Documentation self-service template](./destination-sdk/docs-framework/self-service-template.md)
         * [Authoring best practices](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [Frequently asked questions](./destinations-faq.md)
-* [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

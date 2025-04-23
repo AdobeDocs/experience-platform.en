@@ -39,7 +39,7 @@ Before diving into the details of Identity Service, please read the following ta
 
 ## What is Identity Service?
 
-![Identity stitching on Platform](./images/identity-service-stitching.png)
+![Identity stitching on Experience Platform](./images/identity-service-stitching.png)
 
 In a Business-To-Customer (B2C) context, customers interact with your business and establish a relationship with your brand. A typical customer may be active in any number of systems within your organization's data infrastructure. Any given customer may be active within your e-commerce, loyalty, and help-desk systems. That same customer may also engage both anonymously or through authenticated means on any number of different devices.
 

@@ -50,7 +50,7 @@ For more information on using the Segment Builder, please read the [Segment Buil
 
 ## Suggested use cases {#use-cases}
 
-To learn how you can use the prospect audiences functionality in Experience Platform in combination with other Platform functionality, please read the following use case documentation:
+To learn how you can use the prospect audiences functionality in Experience Platform in combination with other Experience Platform functionality, please read the following use case documentation:
 
 - [Engage and acquire new customers through the prospecting functionality](../../rtcdp/partner-data/prospecting.md)
 
