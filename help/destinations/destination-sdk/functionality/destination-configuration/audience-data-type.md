@@ -1,8 +1,8 @@
 ---
 description: Learn how to configure the audience type for your destinations built with Destination SDK.
 title: Configure audience data type
+exl-id: c56fb0f9-adb2-4fb2-ab06-c0398d828600
 ---
-
 # Configure audience data type
 
 When you build a destination connector with Destination SDK, you can define the type of audience that will be exported to your destination. Configuring the correct audience data type ensures that your destination receives the right data for its intended use case, whether it's for marketing campaigns, account-based strategies, or data analysis.
