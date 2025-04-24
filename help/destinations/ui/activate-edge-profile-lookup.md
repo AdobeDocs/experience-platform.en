@@ -24,7 +24,7 @@ When configuring the use case described in this page, you will use the following
 * [Datastreams](../../datastreams/overview.md): A datastream receives incoming event data from Web SDK and responds with edge profile data.
 * [Merge Policies](../../segmentation/ui/segment-builder.md#merge-policies): You will create an [!UICONTROL Active-On-Edge] merge policy to ensure that the edge profiles ßuse the correct profile data.
 * [Custom Personalization connection](../catalog/personalization/custom-personalization.md): You will configure a new custom personalization connection which will send the profile attributes to the Edge Network.
-* [Edge Network API](../../server-api/overview.md): You will use the Edge Network API [interactive data collection](../../server-api/interactive-data-collection.md) functionality to quickly retrieve profile attributes from the edge profiles.
+* [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/): You will use the Edge Network API [interactive data collection](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) functionality to quickly retrieve profile attributes from the edge profiles.
 
 ## Performance guardrails {#guardrails}
 
@@ -160,7 +160,7 @@ The next step is to configure your personalization solution to retrieve profile 
 
 >[!IMPORTANT]
 >
->Profile attributes may contain sensitive data. To protect this data, you must retrieve the profile attributes through the [Edge Network API](../../server-api/overview.md). Furthermore, you must retrieve the profile attributes via the Edge Network API [interactive data collection endpoint](../../server-api/interactive-data-collection.md), in order for the API calls to be authenticated.
+>Profile attributes may contain sensitive data. To protect this data, you must retrieve the profile attributes through the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/getting-started/). Furthermore, you must retrieve the profile attributes via the Edge Network API [interactive data collection endpoint](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/), in order for the API calls to be authenticated.
 ><br>If you do not follow the requirements above, personalization will be based on audience membership only, and profile attributes will not be available to you.
 
 The datastream which you configured in [step 1](#create-datastream) is now ready to accept incoming event data and respond with edge profile information.
