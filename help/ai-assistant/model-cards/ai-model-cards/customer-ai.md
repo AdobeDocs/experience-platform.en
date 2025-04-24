@@ -86,4 +86,4 @@ The model maintains strong generalization to new customer records. Performance r
 
 ## Ethical considerations {#ethical-considerations}
 
-The model could potentially introduce bias in decision making. In effort to prevent this, Adobe Experience Platform follows Responsible AI guidelines, ensuring that models undergo bias audits, fairness testing, and human oversight before deployment.
+The model could potentially introduce bias in decision making. In effort to prevent this, Experience Platform follows Responsible AI guidelines, ensuring that models undergo bias audits, fairness testing, and human oversight before deployment.
