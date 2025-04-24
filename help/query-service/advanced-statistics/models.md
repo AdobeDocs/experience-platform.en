@@ -98,6 +98,40 @@ The following notes explain the key components and options in the model update w
 - `UPDATE model <model_alias>`: The update command handles versioning and creates a new model version incremented from the last version.
 - `version`: An optional keyword used only during updates to explicitly specify that a new version should be created. If omitted, the system automatically increments the version.
 
+<!-- 
+### What should that new section include?
+
+A short overview of the new CREATE TABLE ... TRANSFORM syntax and what it's for.
+
+Examples using both table and temp table creation.
+
+A note about limitations vs. Feature Store (e.g., no pipeline metadata saved, vector type gets converted to array).
+
+A comparison table (the one in your screenshot) showing differences between:
+
+  - current transform preview
+  - upcoming feature store version (which will support pipelines and metadata).
+
+### What's the new functionality?
+
+Previously, if you used the TRANSFORM clause while creating a model (using CREATE MODEL), you could apply feature engineering (like tokenizing, encoding, vectorizing), but you couldn't actually see what the transformed data looked like. It was a black box — the model used it, but you couldn't inspect it.
+
+The new functionality lets you preview the transformed data before training a model. You can now use:
+
+```sql
+CREATE TABLE table_name TRANSFORM(...) AS SELECT * FROM source_table;
+```
+
+This creates a new table containing the output of your feature engineering transformations. You can inspect it, validate it, and make sure everything looks right before using it to train your model.
+
+### Why is this helpful?
+
+- You can visually inspect what your features look like (e.g. encoded values, TF-IDF results).
+- It helps you debug your transformation logic.
+- You can reuse the transformed features in other workflows.
+- It improves transparency and model quality.
+
+-->
 
 ## Evaluate models {#evaluate-model}
 
