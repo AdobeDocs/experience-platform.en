@@ -1,6 +1,6 @@
 ---
-title: 
-description:
+title: Azure Databricks
+description: Learn about the prerequisite steps needed in order to connect Azure Databricks to Experience Platform.
 ---
 # [!DNL Azure Databricks]
 
@@ -12,7 +12,7 @@ You can use the [!DNL Databricks] source to connect your account and ingest your
 
 Before you can connect your [!DNL Databricks] account to Experience Platform, you must first complete a set of prerequisite steps to ensure that you can successfully connect your [!DNL Databricks] account to Experience Platform.
 
-### Retrieve credentials for DLZ/Blob
+### Retrieve your container credentials
 
 First, you must use the [!DNL Data Landing Zone] to retrieve your [!DNL Azure Blob Storage] credentials. You will use these credentials in a later step to allow your [!DNL Databricks] account to access your [!DNL Azure Blob Storage].
 
@@ -132,3 +132,8 @@ fs.azure.sas.{CONTAINER_NAME}.{STORAGE-ACCOUNT}.blob.core.windows.net {SAS-TOKEN
 | Storage account | The name of your storage account. You can obtain this value by retrieving your [!DNL Data Landing Zone] credentials. |
 | SAS token | The shared access signature token for your [!DNL Data Landing Zone]. You can obtain this value by retrieving your [!DNL Data Landing Zone] credentials. |
 
+![The Databricks UI on Azure.](../../images/tutorials/create/databricks/databricks-ui.png)
+
+## Connect [!DNL Databricks] to Experience Platform using APIs
+
+Now that you have completed the prerequisite steps, you can now proceed to the guide on [connecting your [!DNL Databricks] account to Experience Platform using the API](../../tutorials/api/create/databases/databricks.md).

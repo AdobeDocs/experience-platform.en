@@ -81,9 +81,9 @@ curl -X POST \
 | Property | Description |
 | --- | --- |
 | `auth.params.domain` | The URL of your [!DNL Databricks] workspace. |
-| `auth.params.clusterId` |
-| `auth.params.accessToken` |
-| `auth.params.database` |
+| `auth.params.clusterId` | The ID of your cluster in [!DNL Databricks]. This cluster must already be an existing cluster and should be an interactive cluster |
+| `auth.params.accessToken` | The access token that authenticates your [!DNL Databricks] account. |
+| `auth.params.database` | The name of your database in the delta lake. |
 | `connectionSpec.id` | The [!DNL Databricks] connection spec ID. |
 
 +++
@@ -105,4 +105,7 @@ A successful response returns your newly created connection, including your base
 
 ## Next steps
 
-By following this tutorial, you have successfully created a connection between your [!DNL Databricks] account and Experience Platform. 
+By following this tutorial, you have successfully created a connection between your [!DNL Databricks] account and Experience Platform. You can use your newly generated base connection ID in the following tutorials:
+
+* [Explore the structure and contents of your data tables using the [!DNL Flow Service] API](../../explore/tabular.md)
+* [Create a dataflow to bring database data to Experience Platform using the [!DNL Flow Service] API](../../collect/database-nosql.md)
