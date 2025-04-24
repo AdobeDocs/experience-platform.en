@@ -98,6 +98,87 @@ The following notes explain the key components and options in the model update w
 - `UPDATE model <model_alias>`: The update command handles versioning and creates a new model version incremented from the last version.
 - `version`: An optional keyword used only during updates to explicitly specify that a new version should be created. If omitted, the system automatically increments the version.
 
+<!--  -->
+
+### Preview and persist transformed features {#preview-transform-output}
+
+The `TRANSFORM` clause now supports use within `CREATE TABLE` and `CREATE TEMP TABLE` statements, enabling users to preview and persist the output of feature engineering logic prior to model training. This enhancement provides visibility into how transformation functions—such as encoding, tokenization, and vector assembly—are applied to the source dataset.
+
+By materializing the transformed data into a standalone table, users can inspect intermediate features, validate processing logic, and ensure feature quality before committing to model creation. This increases transparency across the machine learning pipeline and supports more informed decision-making during the model development process.
+
+>[!NOTE]
+>
+>While this feature enables inspection of engineered features, it does not support direct reuse of the transformed data in `CREATE MODEL` operations. Transformations that produce vector-type outputs are converted to arrays for compatibility with Experience Platform storage standards. As a result, if a model requires vector inputs, the transformation logic must be reapplied during model creation.
+
+You can now preview the output of feature engineering transformations defined in the TRANSFORM clause without training a model. This lets you inspect transformed features before using them in model creation.
+
+To do this, use the `TRANSFORM` clause within a `CREATE TABLE` or `CREATE TEMP TABLE` statement. This generates a new table with the output of the transformation logic applied to your dataset.
+
+The syntax is:
+
+```sql
+CREATE TABLE [IF NOT EXISTS] table_name
+[WITH (tableProperties)]
+TRANSFORM (transformFunctionExpression1, transformFunctionExpression2, ...)
+AS SELECT * FROM source_table;
+```
+
+Or:
+
+```sql
+CREATE TEMP TABLE [IF NOT EXISTS] table_name
+[WITH (tableProperties)]
+TRANSFORM (transformFunctionExpression1, transformFunctionExpression2, ...)
+AS SELECT * FROM source_table;
+```
+
+To improve transparency and feature validation, uUse this extension to inspect transformed outputs used in model training.
+
+**Example**
+
+```sql
+CREATE TABLE ctas_transform_table_vp14
+TRANSFORM(String_Indexer(additional_comments) si_add_comments,
+one_hot_encoder(si_add_comments) as ohe_add_comments,
+tokenizer(comments) as token_comments)
+AS SELECT * FROM movie_review_e2e_DND;
+```
+
+Or using additional transformations:
+
+```sql
+CREATE TEMP TABLE ctas_transform_table
+TRANSFORM(String_Indexer(additional_comments) si_add_comments,
+one_hot_encoder(si_add_comments) as ohe_add_comments,
+tokenizer(comments) as token_comments,
+stop_words_remover(token_comments, array('and','very','much')) stp_token,
+ngram(stp_token, 3) ngram_token,
+tf_idf(ngram_token, 20) ngram_idf,
+count_vectorizer(stp_token, 13) cnt_vec_comments,
+tf_idf(token_comments, 10, 1) as cmts_idf)
+AS SELECT * FROM movie_review;
+```
+
+Once created, the output can be queried like any table:
+
+```sql
+SELECT * FROM ctas_transform_table LIMIT 1;
+```
+
+#### Important considerations
+
+This capability helps validate feature engineering steps before model training.
+
+These tables are stored in ADLS and registered in Catalog V1.
+
+If the transformation generates vectors, they are automatically converted to arrays because XDM does not support vector types.
+
+As a result, these tables cannot always be used directly in CREATE MODEL operations, which expect vectors. You must redefine the TRANSFORM clause during model creation.
+
+The transformation logic is not saved as metadata. The same transformation cannot be replayed automatically on new data. This method is not intended for batch reuse or incremental processing.
+
+
+
 <!-- 
 ### What should that new section include?
 
