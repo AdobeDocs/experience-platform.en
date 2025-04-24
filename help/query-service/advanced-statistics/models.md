@@ -102,19 +102,13 @@ The following notes explain the key components and options in the model update w
 
 ### Preview and persist transformed features {#preview-transform-output}
 
-The `TRANSFORM` clause now supports use within `CREATE TABLE` and `CREATE TEMP TABLE` statements, enabling users to preview and persist the output of feature engineering logic prior to model training. This enhancement provides visibility into how transformation functions—such as encoding, tokenization, and vector assembly—are applied to the source dataset.
+Use the `TRANSFORM` clause within `CREATE TABLE` and `CREATE TEMP TABLE` statements to preview and persist the output of feature engineering logic prior to model training. This enhancement provides visibility into how transformation functions (such as encoding, tokenization, and vector assembly) are applied to your dataset.
 
-By materializing the transformed data into a standalone table, users can inspect intermediate features, validate processing logic, and ensure feature quality before committing to model creation. This increases transparency across the machine learning pipeline and supports more informed decision-making during the model development process.
+By materializing transformed data into a standalone table, you can inspect intermediate features, validate processing logic, and ensure feature quality before creating a model. This improves transparency across the machine learning pipeline and supports more informed decision-making during model development.
 
->[!NOTE]
->
->While this feature enables inspection of engineered features, it does not support direct reuse of the transformed data in `CREATE MODEL` operations. Transformations that produce vector-type outputs are converted to arrays for compatibility with Experience Platform storage standards. As a result, if a model requires vector inputs, the transformation logic must be reapplied during model creation.
+#### Syntax {#syntax}
 
-You can now preview the output of feature engineering transformations defined in the TRANSFORM clause without training a model. This lets you inspect transformed features before using them in model creation.
-
-To do this, use the `TRANSFORM` clause within a `CREATE TABLE` or `CREATE TEMP TABLE` statement. This generates a new table with the output of the transformation logic applied to your dataset.
-
-The syntax is:
+Use the `TRANSFORM` clause within a `CREATE TABLE` or `CREATE TEMP TABLE` statement as shown below:
 
 ```sql
 CREATE TABLE [IF NOT EXISTS] table_name
@@ -132,87 +126,55 @@ TRANSFORM (transformFunctionExpression1, transformFunctionExpression2, ...)
 AS SELECT * FROM source_table;
 ```
 
-To improve transparency and feature validation, uUse this extension to inspect transformed outputs used in model training.
-
 **Example**
+
+Create a table using basic transformations:
 
 ```sql
 CREATE TABLE ctas_transform_table_vp14
-TRANSFORM(String_Indexer(additional_comments) si_add_comments,
-one_hot_encoder(si_add_comments) as ohe_add_comments,
-tokenizer(comments) as token_comments)
+TRANSFORM(
+  String_Indexer(additional_comments) si_add_comments,
+  one_hot_encoder(si_add_comments) as ohe_add_comments,
+  tokenizer(comments) as token_comments
+)
 AS SELECT * FROM movie_review_e2e_DND;
 ```
 
-Or using additional transformations:
+Create a temporary table using additional feature engineering steps:
 
 ```sql
 CREATE TEMP TABLE ctas_transform_table
-TRANSFORM(String_Indexer(additional_comments) si_add_comments,
-one_hot_encoder(si_add_comments) as ohe_add_comments,
-tokenizer(comments) as token_comments,
-stop_words_remover(token_comments, array('and','very','much')) stp_token,
-ngram(stp_token, 3) ngram_token,
-tf_idf(ngram_token, 20) ngram_idf,
-count_vectorizer(stp_token, 13) cnt_vec_comments,
-tf_idf(token_comments, 10, 1) as cmts_idf)
+TRANSFORM(
+  String_Indexer(additional_comments) si_add_comments,
+  one_hot_encoder(si_add_comments) as ohe_add_comments,
+  tokenizer(comments) as token_comments,
+  stop_words_remover(token_comments, array('and','very','much')) stp_token,
+  ngram(stp_token, 3) ngram_token,
+  tf_idf(ngram_token, 20) ngram_idf,
+  count_vectorizer(stp_token, 13) cnt_vec_comments,
+  tf_idf(token_comments, 10, 1) as cmts_idf
+)
 AS SELECT * FROM movie_review;
 ```
 
-Once created, the output can be queried like any table:
+Then query the output:
 
 ```sql
 SELECT * FROM ctas_transform_table LIMIT 1;
 ```
 
-#### Important considerations
+#### Important considerations {#considerations}
 
-This capability helps validate feature engineering steps before model training.
+While this feature enhances transparency and supports feature validation, there are important limitations to consider when using the `TRANSFORM` clause outside of model creation.
 
-These tables are stored in ADLS and registered in Catalog V1.
+- Tables created with `TRANSFORM` are stored in the data lake and their metadata is registered in Catalog Service.
+- If the transformation generates vector-type outputs, they are automatically converted to arrays, as XDM does not support vector data types.
+- As a result, you cannot use these tables directly in `CREATE MODEL` statements, which require vector inputs. You must redefine the `TRANSFORM` logic during model creation.
+- Transformation logic is not persisted as metadata. The same transformations cannot be automatically applied to new data. This method is not intended for batch reuse or incremental processing.
 
-If the transformation generates vectors, they are automatically converted to arrays because XDM does not support vector types.
-
-As a result, these tables cannot always be used directly in CREATE MODEL operations, which expect vectors. You must redefine the TRANSFORM clause during model creation.
-
-The transformation logic is not saved as metadata. The same transformation cannot be replayed automatically on new data. This method is not intended for batch reuse or incremental processing.
-
-
-
-<!-- 
-### What should that new section include?
-
-A short overview of the new CREATE TABLE ... TRANSFORM syntax and what it's for.
-
-Examples using both table and temp table creation.
-
-A note about limitations vs. Feature Store (e.g., no pipeline metadata saved, vector type gets converted to array).
-
-A comparison table (the one in your screenshot) showing differences between:
-
-  - current transform preview
-  - upcoming feature store version (which will support pipelines and metadata).
-
-### What's the new functionality?
-
-Previously, if you used the TRANSFORM clause while creating a model (using CREATE MODEL), you could apply feature engineering (like tokenizing, encoding, vectorizing), but you couldn't actually see what the transformed data looked like. It was a black box — the model used it, but you couldn't inspect it.
-
-The new functionality lets you preview the transformed data before training a model. You can now use:
-
-```sql
-CREATE TABLE table_name TRANSFORM(...) AS SELECT * FROM source_table;
-```
-
-This creates a new table containing the output of your feature engineering transformations. You can inspect it, validate it, and make sure everything looks right before using it to train your model.
-
-### Why is this helpful?
-
-- You can visually inspect what your features look like (e.g. encoded values, TF-IDF results).
-- It helps you debug your transformation logic.
-- You can reuse the transformed features in other workflows.
-- It improves transparency and model quality.
-
--->
+>[!NOTE]
+>
+>This feature is designed for inspection and validation. It is not a substitute for reusable pipeline logic. Any transformations intended for model input must be explicitly redefined in the model creation step.
 
 ## Evaluate models {#evaluate-model}
 
