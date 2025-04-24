@@ -74,7 +74,7 @@ role: Admin
     * [Engage and acquire new customers without dependency on third-party cookies](/help/rtcdp/partner-data/prospecting.md)  
     * [Personalize onsite experiences for unknown visitors using partner-aided visitor recognition](/help/rtcdp/partner-data/onsite-personalization.md)
     * [Offsite retargeting of unauthenticated users](./partner-data/offsite-retargeting.md)
-    * [Offsite retargeting of unauthenticated users](./partner-data/unauthenticated-retargeting.md)
+    * [Unauthenticated server-side retargeting](./partner-data/unauthenticated-retargeting.md)
   * Profile enrichment {#profile-enrichment}
     * [Supplement first-party profiles with partner-provided attributes](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
   * Personalized insights and engagement {#personalization-insights-engagement}
