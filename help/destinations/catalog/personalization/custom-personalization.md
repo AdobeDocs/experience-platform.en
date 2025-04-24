@@ -17,7 +17,7 @@ exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 
 >[!IMPORTANT]
 >
->Profile attributes may contain sensitive data. To protect this data,  you must use the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/) when configuring the **[!UICONTROL Custom Personalization]** destination for attribute-based personalization. All the Edge Network API calls must be made in an [authenticated context](../../https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/).
+>Profile attributes may contain sensitive data. To protect this data,  you must use the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/) when configuring the **[!UICONTROL Custom Personalization]** destination for attribute-based personalization. All the Edge Network API calls must be made in an [authenticated context](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication).
 >
 ><br>You can retrieve profile attributes via the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/) by adding a server-side integration that utilizes the same datastream that you are already using for your Web or Mobile SDK implementation.
 >

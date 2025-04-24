@@ -144,7 +144,7 @@ You can select from multiple types of audiences, depending on their origin:
 
 >[!IMPORTANT]
 >
->Profile attributes may contain sensitive data. To protect this data, the **[!UICONTROL Custom Personalization]** destination requires you to use the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/) when configuring the destination for attribute-based personalization. All the Edge Network API calls must be made in an [authenticated context](../https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/).
+>Profile attributes may contain sensitive data. To protect this data, the **[!UICONTROL Custom Personalization]** destination requires you to use the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/) when configuring the destination for attribute-based personalization. All the Edge Network API calls must be made in an [authenticated context](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/).
 >
 ><br>If you are already using Web SDK or Mobile SDK for your integration, you can retrieve attributes via the Edge Network API by adding a server-side integration.
 >
