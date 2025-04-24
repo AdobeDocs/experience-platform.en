@@ -12,14 +12,18 @@ exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
 
 >[!AVAILABILITY]
 >
->Identity graph linking rules are currently in Limited Availability. Contact your Adobe account team for information on how to access the feature in development sandboxes.
+>Identity Graph Linking Rules is currently in Limited Availability, and can be accessed by all customers in development sandboxes.
+>
+>* **Activation requirements**: The feature will remain inactive until you configure and save your [!DNL Identity Settings]. Without this configuration, the system will continue to operate normally, with no changes in behavior.
+>* **Important notes**: During this Limited Availability phase, Edge segmentation may produce unexpected segment membership results. However, streaming and batch segmentation will function as expected.
+>* **Next steps**: For information on how to enable this feature in production sandboxes, please contact your Adobe account team.
 
 >[!NOTE]
 >
 >* "CRMID" and "loginID" are custom namespaces. In this document, "CRMID" is a person identifier and "loginID" is a login identifier associated with a given person.
 >* To simulate the example graph scenarios outlined in this document, you must first create two custom namespaces, one with the identity symbol "CRMID" and another with the identity symbol "loginID". Identity symbols are case sensitive.
 
-This document outlines graph configuration examples of common scenarios that you might encounter when working with identity graph linking rules and identity data.
+This document outlines graph configuration examples of common scenarios that you might encounter when working with [!DNL Identity Graph Linking Rules] and identity data.
 
 ## CRMID only
 
@@ -758,9 +762,9 @@ CRMID: Tom, ECID: 111
 
 ## Next steps
 
-For more information on identity graph linking rules, read the following documentation:
+For more information on [!DNL Identity Graph Linking Rules], read the following documentation:
 
-* [Identity graph linking rules overview](./overview.md)
+* [[!DNL Identity Graph Linking Rules] overview](./overview.md)
 * [Identity optimization algorithm](./identity-optimization-algorithm.md)
 * [Implementation guide](./implementation-guide.md)
 * [Troubleshooting and FAQ](./troubleshooting.md)

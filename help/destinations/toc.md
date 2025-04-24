@@ -45,7 +45,6 @@ role: Admin,User
         * [(Beta) Use the last qualification time XDM attribute in the new beta cloud storage destinations](./ui/activate-last-qualification-time.md)
         * [Export arrays, maps, and objects](/help/destinations/ui/export-arrays-maps-objects.md)
         * [Perform transformations on data exported to cloud storage destinations](/help/destinations/ui/data-transformations-calculated-fields.md)
-        * [Update the end date of export dataset dataflows](/help/destinations/ui/update-end-date-export-dataflows.md)
     * [View destination details](./ui/destination-details-page.md)
     * [Update destination accounts](./ui/update-accounts.md)
     * [Delete destination accounts](./ui/delete-destination-account.md)
@@ -238,6 +237,7 @@ role: Admin,User
             * [Supported transformation functions](./destination-sdk/functionality/destination-server/supported-functions.md)
             * [File formatting configuration](./destination-sdk/functionality/destination-server/file-formatting.md)
         * Destination configuration components {#destination-configuration}
+            * [Configure audience data type](./destination-sdk/functionality/destination-configuration/audience-data-type.md)
             * [Customer authentication configuration](./destination-sdk/functionality/destination-configuration/customer-authentication.md)
             * [OAuth2 authorization](./destination-sdk/functionality/destination-configuration/oauth2-authorization.md)
             * [Customer data fields](./destination-sdk/functionality/destination-configuration/customer-data-fields.md)
