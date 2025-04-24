@@ -151,6 +151,14 @@ When creating playbooks, be mindful of the language and content you include. Pla
 
 If a playbook is flagged for inappropriate or offensive content, it is automatically reported to Adobe for review. Adobe then reviews the flagged content, and if it is deemed inappropriate, the customer is notified, and the Playbook is removed.
 
+## Sharing your playbooks
+
+Choose one of the published playbook from the **Your playbooks** tab and then select Share playbook from the Playbook overview tab to share it with your partner orgs.  
+
+Note
+
+Create a one way partnership with Sandbox tooling.
+
 ## Next steps
 
 Now that you understand how to create and publish playbooks using the AI Assistant, learn how to get started with the available playbooks and choose the right one for your use case from [Playbooks List](/help/use-case-playbooks/playbooks/choose.md).
