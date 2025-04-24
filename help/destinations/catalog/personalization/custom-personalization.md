@@ -17,9 +17,9 @@ exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 
 >[!IMPORTANT]
 >
->Profile attributes may contain sensitive data. To protect this data,  you must use the [Edge Network Server API](/help/server-api/overview.md) when configuring the **[!UICONTROL Custom Personalization]** destination for attribute-based personalization. All the Server API calls must be made in an [authenticated context](../../../server-api/authentication.md).
+>Profile attributes may contain sensitive data. To protect this data,  you must use the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/) when configuring the **[!UICONTROL Custom Personalization]** destination for attribute-based personalization. All the Edge Network API calls must be made in an [authenticated context](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication).
 >
-><br>You can retrieve profile attributes via the [Edge Network Server API](/help/server-api/overview.md) by adding a server-side integration that utilizes the same datastream that you are already using for your Web or Mobile SDK implementation.
+><br>You can retrieve profile attributes via the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/) by adding a server-side integration that utilizes the same datastream that you are already using for your Web or Mobile SDK implementation.
 >
 ><br>If you do not follow the requirements above, personalization will be based on audience membership only.
 
@@ -33,7 +33,7 @@ This destination requires the use of one of the following data collection method
 
 * Use the [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) if you want to collect data from your website.
 * Use the [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) if you want to collect data from your mobile application.
-* Use the [Edge Network Server API](../../../server-api/overview.md) if you are not using [Web SDK](/help/web-sdk/home.md) or [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/), or if you want to personalize the user experience based on profile attributes.
+* Use the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/) if you are not using [Web SDK](/help/web-sdk/home.md) or [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/), or if you want to personalize the user experience based on profile attributes.
 
 >[!IMPORTANT]
 >
