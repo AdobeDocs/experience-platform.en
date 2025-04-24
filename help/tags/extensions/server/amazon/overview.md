@@ -1,11 +1,11 @@
 ---
-title: Adobe Amazon Conversions API extension
-description: This Adobe Experience Platform web events API allows you to share website interactions directly with Amazon.
+title: Amazon Conversions API extension
+description: Share website interactions directly with Amazon using the Adobe Experience Platform web events API  
 last-substantial-update: 2025-04-17
 ---
 # [!DNL Amazon] web events API extension overview
 
-The [!DNL Amazon] Conversions API extension creates a direct connection between marketing data from an advertiser's server and [!DNL Amazon]. This enables advertisers to evaluate campaign effectiveness regardless of conversion location and optimize campaigns accordingly. The extension provides more complete attribution, improved data reliability, and better optimized delivery.
+The [!DNL Amazon] Conversions API extension creates a direct connection between marketing data from an advertiser's server and [!DNL Amazon]. This enables advertisers to evaluate campaign effectiveness regardless of conversion location and optimize campaigns accordingly. This extension provides complete attribution, data reliability, and optimizes delivery.
 
 ## [!DNL Amazon] prerequisites {#prerequisites}
 
@@ -24,13 +24,13 @@ This process ensures your authentication credentials remain secure while still b
 
 Installing the extension requires access to your event forwarding property in Experience Platform:
 
-- Create or edit an event forwarding property.
-- Select **Extensions** in the left navigation, then select [!DNL Amazon] extension in the Catalog tab.
-- Select **Install**.
+1. Create or edit an event forwarding property.
+2. Select **Extensions** in the left navigation, then select [!DNL Amazon] extension in the Catalog tab.
+3. Select **Install**.
     
 ![[!DNL Amazon] extension selected in the extensions catalog along with the install button.](../../../images/extensions/server/amazon/amazon-extension.png)
 
-- Configure with:
+4. Configure with:
 
 - **Access Token**: Your data element secret containing the OAuth 2 token
 
@@ -88,7 +88,7 @@ Once all your data elements are set up, you can create event forwarding rules th
 | **Data Processing Options** | Flags for limited data usage. |
 | **Consent** | Indicates user consent for advertising data usage. |
 
-- Select **Keep Changes** to save the rule.
+- Select **[!UICONTROL Keep Changes**] to save the rule.
 
 ![Event parameters in action configuration highlighted along with the keep changes button.](../../../images/extensions/server/amazon/5.png)
 
