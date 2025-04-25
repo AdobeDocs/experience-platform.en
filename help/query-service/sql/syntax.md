@@ -186,7 +186,11 @@ SELECT statement 2
 
 ### CREATE TABLE AS SELECT {#create-table-as-select}
 
-The following syntax defines a `CREATE TABLE AS SELECT` (CTAS) query. You can optionally include a `TRANSFORM` clause to apply feature engineering functions and materialize the transformed dataset.
+Use the `CREATE TABLE AS SELECT` (CTAS) command to materialize the results of a `SELECT` query into a new table. This is useful for creating transformed datasets, performing aggregations, or previewing feature-engineered data before using it in a model.
+
+You can optionally include a `TRANSFORM` clause to apply one or more feature engineering functions directly within the CTAS statement. Use `TRANSFORM` to inspect the results of your transformation logic before model training.
+
+This syntax applies to both permanent and temporary tables.
 
 ```sql
 CREATE TABLE table_name 
@@ -201,18 +205,22 @@ CREATE TEMP TABLE table_name
   [TRANSFORM (transformFunctionExpression1, transformFunctionExpression2, ...)]
 AS (select_query)
 ```
-
-| Parameters | Description |
+ 
+| Parameter | Description |
 | ----- | ----- |
-| `schema` | The title of the XDM schema. Use this clause only if you wish to use an existing XDM schema for the new dataset created by the CTAS query. |
-| `rowvalidation` | (Optional) Specifies whether to perform row-level validation on every new batch ingested for the newly created dataset. The default value is `true`. |
-| `label` | When creating a dataset with a CTAS query, use this label with the value `PROFILE` to enable the dataset for profile. |
-| `transform` | (Optional) Applies one or more transformation functions to the dataset before materializing it. You can then preview feature-engineered output prior to model creation. |
-| `select_query` | A `SELECT` statement. The syntax of the `SELECT` query can be found in the [SELECT queries section](#select-queries). |
+| `schema` | The title of the XDM schema. Use this clause only if you wish to associate the new table with an existing XDM schema. |
+| `rowvalidation` | (Optional) Enables row-level validation for each batch ingested into the dataset. Default is true. |
+| `label` | (Optional) Use the value `PROFILE` to label the dataset as enabled for Profile ingestion. |
+| `transform` | (Optional) Applies feature engineering transformations (such as string indexing, one-hot encoding, or TF-IDF) before materializing  the dataset. This clause is used for previewing transformed features. See [`TRANSFORM` clause documentation](./PLACEHOLDER.md) for more details.  |
+| `select_query` | A standard `SELECT` statement that defines the dataset. See the [`SELECT` queries section](#select-queries) for more details. |
+
+>[!NOTE]
+>
+>The `SELECT` statement must include an alias for aggregate functions such as `COUNT`, `SUM`, or `MIN`. You can provide the `SELECT` query with or without parentheses. This applies whether or not the `TRANSFORM` clause is used.
 
 **Examples**
 
-A basic example using `TRANSFORM`:
+A basic example using a `TRANSFORM`clause to preview a few engineered features:
 
 ```sql
 CREATE TABLE ctas_transform_table_vp14 
@@ -224,7 +232,7 @@ TRANSFORM(
 AS SELECT * FROM movie_review_e2e_DND;
 ```
 
-An advanced example with multiple transformations:
+A more advanced example with multiple transformation steps:
 
 ```sql
 CREATE TABLE ctas_transform_table 
@@ -258,9 +266,14 @@ TRANSFORM(
 AS SELECT * FROM movie_review;
 ```
 
->[!NOTE]
->
->The `SELECT` statement must include an alias for aggregate functions such as `COUNT`, `SUM`, and `MIN`. You can include the `SELECT` query with or without parentheses. This requirement applies whether or not a `TRANSFORM` clause is used.
+#### Limitations and behavior
+
+Keep the following limitations and behavioral details in mind when using the `TRANSFORM` clause with `CREATE TABLE`.
+
+- Tables created using `TRANSFORM` are stored in the data lake and registered in Catalog Service.
+- If any transformation function outputs a vector, it will be automatically converted to an array. This is required because Experience Platform does not support vector types in materialized datasets.
+- As a result, you cannot directly reuse the output of these tables in a `CREATE MODEL` statement, which expects vector inputs. You must redefine the transformation logic at model creation time.
+- Transformation logic is not saved as metadata and cannot be replayed on new data. This method is intended for one-time preview or exploration—not for incremental reuse.
 
 <!-- ```sql
 CREATE TABLE Chairs AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
