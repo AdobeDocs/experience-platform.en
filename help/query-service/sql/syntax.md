@@ -186,32 +186,89 @@ SELECT statement 2
 
 ### CREATE TABLE AS SELECT {#create-table-as-select}
 
-The following syntax defines a `CREATE TABLE AS SELECT` (CTAS) query:
+The following syntax defines a `CREATE TABLE AS SELECT` (CTAS) query. You can optionally include a `TRANSFORM` clause to apply feature engineering functions and materialize the transformed dataset.
 
 ```sql
-CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false', label='PROFILE') ] AS (select_query)
+CREATE TABLE table_name 
+  [WITH (schema='target_schema_title', rowvalidation='false', label='PROFILE')] 
+  [TRANSFORM (transformFunctionExpression1, transformFunctionExpression2, ...)]
+AS (select_query)
+```
+
+```sql
+CREATE TEMP TABLE table_name 
+  [WITH (schema='target_schema_title', rowvalidation='false', label='PROFILE')] 
+  [TRANSFORM (transformFunctionExpression1, transformFunctionExpression2, ...)]
+AS (select_query)
 ```
 
 | Parameters | Description |
 | ----- | ----- |
-| `schema` | The title of XDM schema. Use this clause only if you wish to use an existing XDM schema for the new dataset created by the CTAS query. |
-| `rowvalidation` | (Optional) Specifies if the user wants row level validation of every new batch ingested for the newly created dataset. The default value is `true`. |
-| `label` | When you create a dataset with a CTAS query, use this label with the value of `profile` to label your dataset as enabled for profile. This means that your dataset automatically gets marked for profile as it gets created. See the derived attribute extension document for more information on the use of `label`. |
+| `schema` | The title of the XDM schema. Use this clause only if you wish to use an existing XDM schema for the new dataset created by the CTAS query. |
+| `rowvalidation` | (Optional) Specifies whether to perform row-level validation on every new batch ingested for the newly created dataset. The default value is `true`. |
+| `label` | When creating a dataset with a CTAS query, use this label with the value `PROFILE` to enable the dataset for profile. |
+| `transform` | (Optional) Applies one or more transformation functions to the dataset before materializing it. You can then preview feature-engineered output prior to model creation. |
 | `select_query` | A `SELECT` statement. The syntax of the `SELECT` query can be found in the [SELECT queries section](#select-queries). |
 
-**Example**
+**Examples**
+
+A basic example using `TRANSFORM`:
 
 ```sql
+CREATE TABLE ctas_transform_table_vp14 
+TRANSFORM(
+  String_Indexer(additional_comments) si_add_comments,
+  one_hot_encoder(si_add_comments) as ohe_add_comments,
+  tokenizer(comments) as token_comments
+)
+AS SELECT * FROM movie_review_e2e_DND;
+```
+
+An advanced example with multiple transformations:
+
+```sql
+CREATE TABLE ctas_transform_table 
+TRANSFORM(
+  String_Indexer(additional_comments) si_add_comments,
+  one_hot_encoder(si_add_comments) as ohe_add_comments,
+  tokenizer(comments) as token_comments,
+  stop_words_remover(token_comments, array('and','very','much')) stp_token,
+  ngram(stp_token, 3) ngram_token,
+  tf_idf(ngram_token, 20) ngram_idf,
+  count_vectorizer(stp_token, 13) cnt_vec_comments,
+  tf_idf(token_comments, 10, 1) as cmts_idf
+)
+AS SELECT * FROM movie_review;
+```
+
+A temporary table example:
+
+```sql
+CREATE TEMP TABLE ctas_transform_table 
+TRANSFORM(
+  String_Indexer(additional_comments) si_add_comments,
+  one_hot_encoder(si_add_comments) as ohe_add_comments,
+  tokenizer(comments) as token_comments,
+  stop_words_remover(token_comments, array('and','very','much')) stp_token,
+  ngram(stp_token, 3) ngram_token,
+  tf_idf(ngram_token, 20) ngram_idf,
+  count_vectorizer(stp_token, 13) cnt_vec_comments,
+  tf_idf(token_comments, 10, 1) as cmts_idf
+)
+AS SELECT * FROM movie_review;
+```
+
+>[!NOTE]
+>
+>The `SELECT` statement must include an alias for aggregate functions such as `COUNT`, `SUM`, and `MIN`. You can include the `SELECT` query with or without parentheses. This requirement applies whether or not a `TRANSFORM` clause is used.
+
+<!-- ```sql
 CREATE TABLE Chairs AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
 
 CREATE TABLE Chairs WITH (schema='target schema title', label='PROFILE') AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
 
 CREATE TABLE Chairs AS (SELECT color FROM Inventory SNAPSHOT SINCE 123)
-```
-
->[!NOTE]
->
->The `SELECT` statement must have an alias for the aggregate functions such as `COUNT`, `SUM`, `MIN`, and so on. Also, the `SELECT` statement can be provided with or without parentheses (). You can provide a `SNAPSHOT` clause to read incremental deltas into the target table.
+``` -->
 
 ## INSERT INTO
 
