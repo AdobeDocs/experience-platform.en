@@ -10,7 +10,7 @@ exl-id: c609a55a-dbfd-4632-8405-55e99d1e0bd8
 >
 >This functionality is available to customers who have purchased the Data Distiller add on. For more information, contact your Adobe representative.
 
-Query Service now supports the core processes of building and deploying a model. You can use SQL to train the model using your data, evaluate its accuracy, and then apply train model to make predictions on new data. You can then use the model to generalize from your past data to make informed decisions about real-world scenarios.
+Query Service now supports the core processes of building and deploying a model. You can use SQL to train the model using your data, evaluate its accuracy, and then apply the trained model to make predictions on new data. You can then use the model to generalize from your past data to make informed decisions about real-world scenarios.
 
 The three steps in the model lifecycle for generating actionable insights are:
 
@@ -187,7 +187,7 @@ SELECT *
 FROM   model_evaluate(model-alias, version-number,SELECT col1,
        col2,
        label-COLUMN
-FROM   test -dataset)
+FROM   test_dataset)
 ```
 
 The `model_evaluate` function takes `model-alias` as its first argument and a flexible `SELECT` statement as its second argument. Query Service first executes the `SELECT` statement and maps the results to the `model_evaluate` Adobe Defined Function (ADF). The system expects the column names and data types in the `SELECT` statement's result to match those used in the training step. These column names and data types are treated as test data and label data for evaluation.
@@ -251,10 +251,6 @@ INSERT INTO scored_data SELECT a, b, c, feature1 AS f1, probability AS p1, predi
 ```
 
 This provides flexibility to select and persist only the relevant output fields for downstream analysis or reporting.
-
->[!IMPORTANT]
->
->When evaluating (`model_evaluate`) and predicting (`model_predict`), the transformation(s) conducted at the time of training are reused. Intermediate fields are only visible if the feature flag is enabled.
 
 ## Evaluate and manage your models
 
