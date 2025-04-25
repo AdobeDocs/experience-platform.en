@@ -169,7 +169,7 @@ SELECT * FROM ctas_transform_table LIMIT 1;
 
 While this feature enhances transparency and supports feature validation, there are important limitations to consider when using the `TRANSFORM` clause outside of model creation.
 
-- Storage location: Tables created with `TRANSFORM` are stored in the data lake, and their metadata is registered in Catalog Service.
+- Storage location: Tables created with `TRANSFORM` are stored in the data lake, and their metadata is registered in [Catalog Service](../../catalog/home.md).
 - Vector outputs: If the transformation generates vector-type outputs, they are automatically converted to arrays, as XDM does not support vector data types.
 - Reuse limitation: Tables created this way cannot be used directly in `CREATE MODEL` statements. You must redefine the `TRANSFORM` logic.
 - Metadata limitation: Transformation logic is not persisted. You must reapply transformations manually for new data.
