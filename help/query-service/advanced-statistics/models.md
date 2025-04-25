@@ -104,7 +104,7 @@ The following notes explain the key components and options in the model update w
 
 ### Preview and persist transformed features {#preview-transform-output}
 
-Use the `TRANSFORM` clause within `CREATE TABLE` and `CREATE TEMP TABLE` statements to preview and persist the output of feature engineering logic prior to model training. This enhancement provides visibility into how transformation functions (such as encoding, tokenization, and vector assembly) are applied to your dataset.
+Use the `TRANSFORM` clause within `CREATE TABLE` and `CREATE TEMP TABLE` statements to preview and persist the output of feature transformations before model training. This enhancement provides visibility into how transformation functions (such as encoding, tokenization, and vector assembly) are applied to your dataset.
 
 By materializing transformed data into a standalone table, you can inspect intermediate features, validate processing logic, and ensure feature quality before creating a model. This improves transparency across the machine learning pipeline and supports more informed decision-making during model development.
 
@@ -169,10 +169,10 @@ SELECT * FROM ctas_transform_table LIMIT 1;
 
 While this feature enhances transparency and supports feature validation, there are important limitations to consider when using the `TRANSFORM` clause outside of model creation.
 
-- Tables created with `TRANSFORM` are stored in the data lake and their metadata is registered in Catalog Service.
-- If the transformation generates vector-type outputs, they are automatically converted to arrays, as XDM does not support vector data types.
-- As a result, you cannot use these tables directly in `CREATE MODEL` statements, which require vector inputs. You must redefine the `TRANSFORM` logic during model creation.
-- Transformation logic is not persisted as metadata. The same transformations cannot be automatically applied to new data. This method is not intended for batch reuse or incremental processing.
+- Storage location: Tables created with `TRANSFORM` are stored in the data lake, and their metadata is registered in Catalog Service.
+- Vector outputs: If the transformation generates vector-type outputs, they are automatically converted to arrays, as XDM does not support vector data types.
+- Reuse limitation: Tables created this way cannot be used directly in `CREATE MODEL` statements. You must redefine the `TRANSFORM` logic.
+- Metadata limitation: Transformation logic is not persisted. You must reapply transformations manually for new data.
 
 >[!NOTE]
 >
@@ -204,15 +204,11 @@ The `model_evaluate` function takes `model-alias` as its first argument and a fl
 
 Use the `model_predict` keyword to apply the specified model and version to a dataset and generate predictions. You can select all output columns, choose specific ones, or assign aliases to improve output clarity.
 
+By default, only base columns and the final prediction are returned unless the feature flag is enabled.
+
 ```sql
 SELECT * FROM model_predict(model-alias, version-number, SELECT col1, col2 FROM dataset);
 ```
-
-In this default behavior, all base and intermediate prediction fields (such as `probability`, `rawPrediction`, or `features`) are omitted unless a feature flag is enabled.
-
->[!IMPORTANT]
->
->The ability to select and view intermediate result fields (such as `feature1`, `probability`, `rawPrediction`, etc.) is gated behind a feature flag. Contact your Adobe representative to enable this capability.
 
 ### Select specific output fields
 
