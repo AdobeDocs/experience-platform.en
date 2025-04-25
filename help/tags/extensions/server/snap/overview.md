@@ -6,7 +6,7 @@ exl-id: 1c2d7243-5bcd-40a0-8515-9ab72613c5f3
 ---
 # [!DNL Snapchat] Conversions API extension overview
 
-The [!DNL Snap] Conversion API Extension is a secure [Edge Network Server API](/help/server-api/overview.md) interface that allows you to share information with [!DNL Snapchat] directly about user actions on your websites. You can leverage the event forwarding rules to send data from the **[!DNL Adobe Experience Platform Edge Network]** to **[!DNL Snapchat]** by using the **[!DNL Snap]** Conversion API extension.
+The [!DNL Snap] Conversion API Extension is a secure [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/) interface that allows you to share information with [!DNL Snapchat] directly about user actions on your websites. You can leverage the event forwarding rules to send data from the **[!DNL Adobe Experience Platform Edge Network]** to **[!DNL Snapchat]** by using the **[!DNL Snap]** Conversion API extension.
 
 ## [!DNL Snapchat] prerequisites {#prerequisites}
 
