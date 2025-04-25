@@ -350,3 +350,5 @@ CRMID: John, Email: john@y, Email_LC_SHA256: john_y_hash
 ```
 
 >[!ENDTABS]
+
+## Advanced-level integrations {#advanced}
