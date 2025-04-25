@@ -275,14 +275,6 @@ Keep the following limitations and behavioral details in mind when using the `TR
 - As a result, you cannot directly reuse the output of these tables in a `CREATE MODEL` statement, which expects vector inputs. You must redefine the transformation logic at model creation time.
 - Transformation logic is not saved as metadata and cannot be replayed on new data. This method is intended for one-time preview or exploration—not for incremental reuse.
 
-<!-- ```sql
-CREATE TABLE Chairs AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
-
-CREATE TABLE Chairs WITH (schema='target schema title', label='PROFILE') AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
-
-CREATE TABLE Chairs AS (SELECT color FROM Inventory SNAPSHOT SINCE 123)
-``` -->
-
 ## INSERT INTO
 
 The `INSERT INTO` command is defined as follows:
