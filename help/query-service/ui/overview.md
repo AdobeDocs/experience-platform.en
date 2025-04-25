@@ -100,22 +100,13 @@ As you type in the Query Editor, the editor automatically completes SQL reserved
 
 ### Download query results {#download-query-results}
 
-<!-- 
-Business value 
-Empowers users to download data directly from the UI.
-Reduces friction for marketing and analytics use cases.
-Supports downloads of per rows displayed in the query result output
+>[!AVAILABILITY]
+>
+>Download capabilities are available only to customers with the Data Distiller add-on. To learn more about Data Distiller, contact your Adobe representative.
 
-Feature description: 'Download query results': Easily download your query output as a CSV, JSON, or XLS file directly from the Query Editor. Perfect for marketing analysis workflows in Excel—no third-party tools required. Note: This feature is available only to Data Distiller customers. To learn more about the Data Distiller add-on, please contact your Adobe representative.
- -->
+You can now download query results directly from the Query Editor user interface. After a successful query execution, you can download the output as a CSV, XLSX, or JSON file formats. This functionality streamlines workflows for marketing and analytics teams by enabling immediate access to query results for offline analysis, reporting, and Excel-based processes. 
 
-After a successful query execution, you can download the results directly from the **[!UICONTROL Result]** tab in one of three file formats: **CSV**, **XLSX**, or **JSON**.
-
-To download your query results:
-
-1. Select the **[!UICONTROL Download]** button in the upper-right corner of the **[!UICONTROL Result]** tab.
-2. From the dropdown menu, choose a format: **[!UICONTROL CSV]**, **[!UICONTROL XLSX]**, or **[!UICONTROL JSON]**.
-3. The file will download automatically to your local machine.
+To download your query results, select the **[!UICONTROL Result]** tab of the Query Editor. Next, select **[!UICONTROL Download]** in the upper-right corner of the **[!UICONTROL Result]** tab. Choose your format from the dropdown menu that appears. Options include **[!UICONTROL CSV]**, **[!UICONTROL XLSX]**, or **[!UICONTROL JSON]**. The file is download automatically to your local machine.
 
 >[!NOTE]
 >
@@ -127,11 +118,9 @@ To download your query results:
 >
 > When opening a CSV file in Excel, the following message may appear: "Possible Data Loss. Some features might be lost if you save this workbook in the comma-delimited (.csv) format. To preserve these features, save it in an Excel file format." Additionally, the formatting for date and time may vary by file type. For example, CSV files will reflect the format shown in the query result, while XLSX files may apply localized formatting in Excel.
 
-<!-- Additional unrequested section: -->
-
 ### View results in full screen {#view-results}
 
-After executing a query, you can preview the output in a full-screen dialog for better readability by selecting **[!UICONTROL View results]** in the **[!UICONTROL Result]** tab.
+After executing a successful query, you can preview the output in a full-screen dialog for better readability.Selecting **[!UICONTROL View results]** in the **[!UICONTROL Result]** tab to open a tabulated view of your results.
 
 This expands the results into a dedicated view that displays the output in a resizable grid, making it easier to review large datasets or scan across columns. This preview mode is especially helpful when analyzing wide tables or reviewing row-level details.
 
@@ -139,6 +128,13 @@ This expands the results into a dedicated view that displays the output in a res
 
 ![The full-screen preview dialog with View results selected.](./view-results-fullscreen.png)
 
+#### Copy results {#copy-results}
+
+Use the enhanced copy functionality in the Query Editor to easily copy query results from the full-screen results view. After running a query, select individual rows or all rows, then copy the selected data to your clipboard. Results are formatted as comma-separated values (CSV), making it easy to paste them into spreadsheet applications like Excel for further analysis. This feature improves readability, preserves formatting, and streamlines validation and reporting workflows, without requiring third-party tools.
+
+From the full-screen dialog of results, select individual rows or the check-box in the top left of the dialog. Next, select the copy icon (![A copy icon.]()) to copy your query results to your clipboard as comma seperated values.
+
+![The full-screen preview dialog with result rows selected and the copy icon highlighted.](./results-copy.png)
 
 ## Scheduled queries {#scheduled-queries}
 
