@@ -102,8 +102,6 @@ The following notes explain the key components and options in the model update w
 - `UPDATE model <model_alias>`: The update command handles versioning and creates a new model version incremented from the last version.
 - `version`: An optional keyword used only during updates to explicitly specify that a new version should be created. If omitted, the system automatically increments the version.
 
-<!--  -->
-
 ### Preview and persist transformed features {#preview-transform-output}
 
 Use the `TRANSFORM` clause within `CREATE TABLE` and `CREATE TEMP TABLE` statements to preview and persist the output of feature engineering logic prior to model training. This enhancement provides visibility into how transformation functions (such as encoding, tokenization, and vector assembly) are applied to your dataset.
@@ -200,21 +198,67 @@ The `model_evaluate` function takes `model-alias` as its first argument and a fl
 
 ## Predict {#predict}
 
-Next, use the `model_predict` keyword to apply the specified model and version to a dataset and generate predictions for the selected columns. The SQL below demonstrates this process, showing how to forecast outcomes using the model's alias and version.
+>[!IMPORTANT]
+>
+>Enhanced column selection and aliasing for `model_predict` are gated behind a feature flag. By default, intermediate fields such as `features`, `probability`, and `rawPrediction` are not included in the prediction output.<br>To enable access to intermediate fields, contact your Adobe representative to request activation of this feature.
+
+Use the `model_predict` keyword to apply the specified model and version to a dataset and generate predictions. You can select all output columns, choose specific ones, or assign aliases to improve output clarity.
 
 ```sql
-SELECT *
-FROM   model_predict(model-alias, version-number,SELECT col1,
-       col2,
-       label-COLUMN
-FROM   dataset)
+SELECT * FROM model_predict(model-alias, version-number, SELECT col1, col2 FROM dataset);
 ```
 
-`model_predict` accepts the model alias as the first argument and a flexible `SELECT` statement as the second argument. Query Service first executes the `SELECT` statement and maps the results to the `model_predict` ADF. The system expects that the column names and data types in the `SELECT` statement's result to match those from the training step. This data is then used for scoring and generating predictions.
+In this default behavior, all base and intermediate prediction fields (such as `probability`, `rawPrediction`, or `features`) are omitted unless a feature flag is enabled.
 
 >[!IMPORTANT]
 >
->When evaluating (`model_evaluate`) and predicting (`model_predict`), the transformation(s) conducted at the time of training are used.
+>The ability to select and view intermediate result fields (such as `feature1`, `probability`, `rawPrediction`, etc.) is gated behind a feature flag. Contact your Adobe representative to enable this capability.
+
+### Select specific output fields
+
+When the feature flag is enabled, you can retrieve a subset of fields from the `model_predict` output. Use this to retrieve intermediate results, such as prediction probabilities, or feature columns used during model scoring.
+
+**Case 1: Return all available output fields**
+
+```sql
+SELECT * FROM model_predict(modelName, 1, SELECT a, b, c FROM dataset);
+```
+
+**Case 2: Return selected columns, including intermediate results**
+
+```sql
+SELECT a, b, c, feature1, probability, predictionCol FROM model_predict(modelName, 1, SELECT a, b, c FROM dataset);
+```
+
+**Case 3: Return selected columns with aliases**
+
+```sql
+SELECT a, b, c, feature1 AS f1, probability AS p1, predictionCol AS pdc FROM model_predict(modelName, 1, SELECT a, b, c FROM dataset);
+```
+
+In each case, the outer "SELECT" controls which result fields are returned. These include base fields from the input query and additional columns generated during model prediction.
+
+### Persist predictions using CREATE TABLE or INSERT INTO
+
+You can persist predictions using either "CREATE TABLE AS SELECT" or "INSERT INTO SELECT", including intermediate results if desired.
+
+**Example: Create table with all prediction output fields**
+
+```sql
+CREATE TABLE scored_data AS SELECT * FROM model_predict(modelName, 1, SELECT a, b, c FROM dataset);
+```
+
+**Example: Insert selected output fields with aliases**
+
+```sql
+INSERT INTO scored_data SELECT a, b, c, feature1 AS f1, probability AS p1, predictionCol AS pdc FROM model_predict(modelName, 1, SELECT a, b, c FROM dataset);
+```
+
+This provides flexibility to select and persist only the relevant output fields for downstream analysis or reporting.
+
+>[!IMPORTANT]
+>
+>When evaluating (`model_evaluate`) and predicting (`model_predict`), the transformation(s) conducted at the time of training are reused. Intermediate fields are only visible if the feature flag is enabled.
 
 ## Evaluate and manage your models
 
