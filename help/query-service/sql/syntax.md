@@ -188,6 +188,8 @@ SELECT statement 2
 
 Use the `CREATE TABLE AS SELECT` (CTAS) command to materialize the results of a `SELECT` query into a new table. This is useful for creating transformed datasets, performing aggregations, or previewing feature-engineered data before using it in a model.
 
+If you're ready to [train a model using transformed features](../advanced-statistics/models.md), see the Models documentation for guidance on using `CREATE MODEL` with the `TRANSFORM` clause.
+
 You can optionally include a `TRANSFORM` clause to apply one or more feature engineering functions directly within the CTAS statement. Use `TRANSFORM` to inspect the results of your transformation logic before model training.
 
 This syntax applies to both permanent and temporary tables.
@@ -266,7 +268,7 @@ TRANSFORM(
 AS SELECT * FROM movie_review;
 ```
 
-#### Limitations and behavior
+#### Limitations and behavior {#limitations-and-behavior}
 
 Keep the following limitations and behavioral details in mind when using the `TRANSFORM` clause with `CREATE TABLE`.
 
@@ -274,6 +276,46 @@ Keep the following limitations and behavioral details in mind when using the `TR
 - If any transformation function outputs a vector, it will be automatically converted to an array. This is required because Experience Platform does not support vector types in materialized datasets.
 - As a result, you cannot directly reuse the output of these tables in a `CREATE MODEL` statement, which expects vector inputs. You must redefine the transformation logic at model creation time.
 - Transformation logic is not saved as metadata and cannot be replayed on new data. This method is intended for one-time preview or exploration—not for incremental reuse.
+
+### TRANSFORM clause {#transform}
+
+Use the `TRANSFORM` clause to apply one or more feature engineering functions to a dataset before model training or table creation. This clause lets you preview, validate, or define the exact shape of your input features.
+
+The `TRANSFORM` clause can be used in the following statements:
+
+- `CREATE MODEL`
+- `CREATE TABLE`
+- `CREATE TEMP TABLE`
+
+See the Models documentation for detailed instructions on using CREATE MODEL, including how to [define transformations, set model options, and configure training data](../advanced-statistics/models.md).
+
+For usage with `CREATE TABLE`, see the [CREATE TABLE AS SELECT section](#create-table-as-select).
+
+#### CREATE MODEL example
+
+```sql
+CREATE MODEL review_model
+TRANSFORM(
+  String_Indexer(additional_comments) si_add_comments,
+  one_hot_encoder(si_add_comments) AS ohe_add_comments,
+  tokenizer(comments) AS token_comments,
+  stop_words_remover(token_comments, array('and','very','much')) AS stp_token,
+  ngram(stp_token, 3) AS ngram_token,
+  tf_idf(ngram_token, 20) AS ngram_idf,
+  count_vectorizer(stp_token, 13) AS cnt_vec_comments,
+  tf_idf(token_comments, 10, 1) AS cmts_idf,
+  vector_assembler(array(cmts_idf, viewsgot, ohe_add_comments, ngram_idf, cnt_vec_comments)) AS features
+)
+OPTIONS(MODEL_TYPE='logistic_reg', LABEL='reviews')
+AS SELECT * FROM movie_review_e2e_DND;
+```
+
+#### Limitations {#limitations}
+
+The following limitations apply when using `TRANSFORM` with `CREATE TABLE`. See `CREATE TABLE AS SELECT` limitations and behavior section for a detailed explanation of how transformed data is stored, how vector outputs are handled, and why the results cannot be reused directly in model training workflows.
+
+- Vector outputs are automatically converted to arrays, which cannot be used directly in `CREATE MODEL`.
+- Transformation logic is not persisted as metadata and cannot be reused across batches.
 
 ## INSERT INTO
 

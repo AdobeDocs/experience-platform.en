@@ -69,6 +69,10 @@ To help you understand the key components and configurations in the model creati
 
 Use SQL to reference the dataset used for training.
 
+>[!TIP]
+>
+>For a full reference on the `TRANSFORM` clause, including supported functions and usage across both `CREATE MODEL` and `CREATE TABLE`, see the [`TRANSFORM` clause in the SQL Syntax documentation](../sql/syntax.md#transform).
+
 ## Update a model {#update}
 
 Learn how to update an existing machine learning model by applying new feature engineering transformations and configuring options such as the algorithm type and label column. Each update creates a new version of the model, incremented from the last version. This ensures changes are tracked, and the model can be reused in future evaluation or prediction steps.
