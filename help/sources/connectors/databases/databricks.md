@@ -14,7 +14,7 @@ Before you can connect your [!DNL Databricks] account to Experience Platform, yo
 
 ### Retrieve your container credentials
 
-First, you must use the [!DNL Data Landing Zone] to retrieve your [!DNL Azure Blob Storage] credentials. You will use these credentials in a later step to allow your [!DNL Databricks] account to access your [!DNL Azure Blob Storage].
+First, you must use retrieve your [!DNL Azure Blob Storage] credentials. You will use these credentials in a later step to allow your [!DNL Databricks] account to access your [!DNL Azure Blob Storage].
 
 To retrieve your credentials, make a GET request to the `/credentials` endpoint of the [!DNL Connectors] API.
 
@@ -26,7 +26,7 @@ GET /data/foundation/connectors/landingzone/credentials?type=dlz_databricks_sour
 
 **Request**
 
-The following request retrieves the credentials for your [!DNL Data Landing Zone].
+The following request retrieves the credentials for your [!DNL Azure Blob Storage].
 
 +++View request example
 
@@ -60,11 +60,11 @@ A successful response returns your credentials. Values for `containerName`, `SAS
 
 | Property | Description |
 | --- | --- |
-| `containerName` | The name of your [!DNL Data Landing Zone] container. You will use this value later when completing your [!DNL Apache Spark] configuration for [!DNL Databricks]. |
-| `SASToken` | The shared access signature token for your [!DNL Data Landing Zone]. This string contains all of the information necessary to authorize a request. |
+| `containerName` | The name of your [!DNL Azure Blob Storage] container. You will use this value later when completing your [!DNL Apache Spark] configuration for [!DNL Databricks]. |
+| `SASToken` | The shared access signature token for your [!DNL Azure Blob Storage]. This string contains all of the information necessary to authorize a request. |
 | `storageAccountName` | The name of your storage account. |
-| `SASUri` | The shared access signature URI for your [!DNL Data Landing Zone]. This string is a combination of the URI to the [!DNL Data Landing Zone] for which you are being authenticated to and its corresponding SAS token. |
-| `expiryDate` | The date when your SAS token will expire. You must refresh your token before the expiry date in order to continue using it in your application for uploading data to the [!DNL Data Landing Zone]. If you do not manually refresh your token before the stated expiry date, then it will automatically refresh and provide a new token when the GET credentials call is performed. |
+| `SASUri` | The shared access signature URI for your [!DNL Azure Blob Storage]. This string is a combination of the URI to the [!DNL Azure Blob Storage] for which you are being authenticated to and its corresponding SAS token. |
+| `expiryDate` | The date when your SAS token will expire. You must refresh your token before the expiry date in order to continue using it in your application for uploading data to the [!DNL Azure Blob Storage]. If you do not manually refresh your token before the stated expiry date, then it will automatically refresh and provide a new token when the GET credentials call is performed. |
 
 +++
 
@@ -80,7 +80,7 @@ GET /data/foundation/connectors/landingzone/credentials?type=dlz_databricks_sour
 
 **Request**
 
-The following request refreshes the credentials for your [!DNL Data Landing Zone].
+The following request refreshes the credentials for your [!DNL Azure Blob Storage].
 
 +++View request example
 
@@ -128,9 +128,9 @@ fs.azure.sas.{CONTAINER_NAME}.{STORAGE-ACCOUNT}.blob.core.windows.net {SAS-TOKEN
 
 | Property | Description |
 | --- | --- |
-| Container name | The name of your container. You can obtain this value by retrieving your [!DNL Data Landing Zone] credentials. |
-| Storage account | The name of your storage account. You can obtain this value by retrieving your [!DNL Data Landing Zone] credentials. |
-| SAS token | The shared access signature token for your [!DNL Data Landing Zone]. You can obtain this value by retrieving your [!DNL Data Landing Zone] credentials. |
+| Container name | The name of your container. You can obtain this value by retrieving your [!DNL Azure Blob Storage] credentials. |
+| Storage account | The name of your storage account. You can obtain this value by retrieving your [!DNL Azure Blob Storage] credentials. |
+| SAS token | The shared access signature token for your [!DNL Azure Blob Storage]. You can obtain this value by retrieving your [!DNL Azure Blob Storage] credentials. |
 
 ![The Databricks UI on Azure.](../../images/tutorials/create/databricks/databricks-ui.png)
 
