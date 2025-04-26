@@ -104,9 +104,9 @@ As you type in the Query Editor, the editor automatically completes SQL reserved
 >
 >Download capabilities are available only to customers with the Data Distiller add-on. To learn more about Data Distiller, contact your Adobe representative.
 
-You can now download query results directly from the Query Editor user interface. After a successful query execution, you can download the output as a CSV, XLSX, or JSON file formats. This functionality streamlines workflows for marketing and analytics teams by enabling immediate access to query results for offline analysis, reporting, and Excel-based processes. 
+You can now download query results directly from the Query Editor user interface. After a successful query execution, you can download the output in CSV, XLSX, or JSON file format. This functionality streamlines workflows for marketing and analytics teams by enabling immediate access to query results for offline analysis, reporting, and Excel-based processes. 
 
-To download your query results, select the **[!UICONTROL Result]** tab of the Query Editor. Next, select **[!UICONTROL Download]** in the upper-right corner of the **[!UICONTROL Result]** tab. Choose your format from the dropdown menu that appears. Options include **[!UICONTROL CSV]**, **[!UICONTROL XLSX]**, or **[!UICONTROL JSON]**. The file is download automatically to your local machine.
+To download your query results, select **[!UICONTROL Download]** in the upper-right corner of the Query Editor **[!UICONTROL Result]** tab. Then choose **[!UICONTROL CSV]**, **[!UICONTROL XLSX]**, or **[!UICONTROL JSON]** from the dropdown menu. The file is downloaded automatically to your local machine.
 
 >[!NOTE]
 >
@@ -120,9 +120,9 @@ To download your query results, select the **[!UICONTROL Result]** tab of the Qu
 
 ### View results in full screen {#view-results}
 
-After executing a successful query, you can preview the output in a full-screen dialog for better readability.Selecting **[!UICONTROL View results]** in the **[!UICONTROL Result]** tab to open a tabulated view of your results.
+After executing a successful query, select **[!UICONTROL View results]** in the **[!UICONTROL Result]** tab to open a tabulated, full-screen view of your results.
 
-This expands the results into a dedicated view that displays the output in a resizable grid, making it easier to review large datasets or scan across columns. This preview mode is especially helpful when analyzing wide tables or reviewing row-level details.
+The full-screen view displays the output in a resizable grid, making it easier to review large datasets and scan across columns. This preview mode is especially helpful when analyzing wide tables or reviewing row-level details.
 
 > This preview view is read-only and does not affect the query or dataset.
 
@@ -130,9 +130,9 @@ This expands the results into a dedicated view that displays the output in a res
 
 #### Copy results {#copy-results}
 
-Use the enhanced copy functionality in the Query Editor to easily copy query results from the full-screen results view. After running a query, select individual rows or all rows, then copy the selected data to your clipboard. Results are formatted as comma-separated values (CSV), making it easy to paste them into spreadsheet applications like Excel for further analysis. This feature improves readability, preserves formatting, and streamlines validation and reporting workflows, without requiring third-party tools.
+Use the enhanced copy functionality in the Query Editor to copy query results from the full-screen results view. After running a query, select individual rows or all rows, then copy the selected data to your clipboard. Results are formatted as comma-separated values (CSV), making it easy to paste them into spreadsheet applications like Excel for further analysis. This feature improves readability, preserves formatting, and streamlines validation and reporting workflows, without requiring third-party tools.
 
-From the full-screen dialog of results, select individual rows or the check-box in the top left of the dialog. Next, select the copy icon (![A copy icon.]()) to copy your query results to your clipboard as comma seperated values.
+From the full-screen results view, select individual rows or use the checkbox in the upper-left corner to select all rows. Next, select the copy icon (![A copy icon.]()) to copy the selected query results as comma-separated values (CSV).
 
 ![The full-screen preview dialog with result rows selected and the copy icon highlighted.](./results-copy.png)
 
@@ -145,8 +145,6 @@ To learn how to schedule a query through the UI, see the [scheduled queries guid
 Once a query has been scheduled, it appears in the list of scheduled queries on the [!UICONTROL Scheduled Queries] tab. Full details regarding the query, runs, creator, and timings can be found by selecting a scheduled query from the list.
 
 ![The Queries workspace with the Scheduled Queries tab highlighted and displaying rows of query schedules.](../images/ui/overview/scheduled-queries.png)
-
-<!--  -->
 
 | Column | Description |
 | --- | --- |
