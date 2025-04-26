@@ -112,7 +112,7 @@ To download your query results, select **[!UICONTROL Download]** in the upper-ri
 >
 >Only queries that return results will display the **[!UICONTROL Download]** button. If the query returns no records, the **[!UICONTROL Result]** tab will display a message indicating no results and the download option will not be available.
 
-![The results tab of the Query Editor with Download highlighted.](./download-results.png)
+![The results tab of the Query Editor with Download and the dropdown menu highlighted.](./download-results.png)
 
 >[!NOTE]
 >
@@ -126,15 +126,19 @@ The full-screen view displays the output in a resizable grid, making it easier t
 
 > This preview view is read-only and does not affect the query or dataset.
 
-![The full-screen preview dialog with View results selected.](./view-results-fullscreen.png)
+![The full-screen preview dialog with View results selected.](../images/ui/overview/view-results-fullscreen.png)
 
-#### Copy results {#copy-results}
+### Copy results {#copy-results}
 
-Use the enhanced copy functionality in the Query Editor to copy query results from the full-screen results view. After running a query, select individual rows or all rows, then copy the selected data to your clipboard. Results are formatted as comma-separated values (CSV), making it easy to paste them into spreadsheet applications like Excel for further analysis. This feature improves readability, preserves formatting, and streamlines validation and reporting workflows, without requiring third-party tools.
+Use the enhanced copy functionality in the Query Editor to copy query results formatted as comma-separated values (CSV). This makes it easy to paste them into spreadsheet applications like Excel for further analysis. This feature improves readability, preserves formatting, and streamlines validation and reporting workflows without requiring third-party tools.
 
-From the full-screen results view, select individual rows or use the checkbox in the upper-left corner to select all rows. Next, select the copy icon (![A copy icon.]()) to copy the selected query results as comma-separated values (CSV).
+You can copy query results either from the [!UICONTROL Result] tab or from the full-screen results view. From the [!UICONTROL Result] tab, select the copy icon to copy all query results to your clipboard. From the Query Editor Results tab, select individual rows or use the checkbox column header to select all rows. Select a single row to enable the copy icon.
 
-![The full-screen preview dialog with result rows selected and the copy icon highlighted.](./results-copy.png)
+![The results tab of the Query Editor with the copy icon highlighted.](../images/ui/overview/query-editor-copy-icon.png)
+
+Alternatively, select **[!UICONTROL View results]** to open the full-screen preview. From this dialog, select individual rows or use the checkbox in the upper-left corner to select all rows, then select the copy icon (![A copy icon.](../../images/icons/copy.png)) to copy the selected data. 
+
+![The full-screen preview dialog with result rows selected and the copy icon highlighted.](../images/ui/overview/results-copy.png)
 
 ## Scheduled queries {#scheduled-queries}
 
