@@ -61,11 +61,24 @@ The Algolia event field group is required in order to use the Algolia event forw
 
 ### Adding Algolia event field group to schema
 
-Using the Algolia Event 
-
-If order to add the Algolia event field group, navigate to **[!UICONTROL Schemas]**, then select **[!UICONTROL Schemas > Browse]**, add a schema or update an existing schema you are using to send web events.  Hover over the **[!UICONTROL Add]** icon and enter **Algolia** in the search box to narrow down the results and click on the **Algolia Event Details** field group, and click on **[!UICONTROL Add field group]** button.  Click **[!UICONTROL Save]**.
+In order to add the Algolia event field group, navigate to **[!UICONTROL Schemas]**, then select **[!UICONTROL Schemas > Browse]**, add a schema or update an existing schema you are using to send web events.  Hover over the **[!UICONTROL Add]** icon and enter **Algolia** in the search box to narrow down the results and click on the **Algolia Event Details** field group, and click on **[!UICONTROL Add field group]** button.  Click **[!UICONTROL Save]**.
 
 ![](../../../images/extensions/server/algolia/algolia-profile-field-group.png)
+
+### Mapping and sending field group in Data Collection Tag
+
+Create a Tag property and install the **Adobe Experience Platform Web SDK** extension.  Use this extension to map the data from HTML to the **Algolia Event** field group.
+
+![](../../../images/extensions/server/algolia/html-dataset.png)
+
+
+Create a Data Element using the **[!UICONTROL Adobe Experience Platform Web SDK]** and **[!UICONTROL XDM object]**
+
+![](../../../images/extensions/server/algolia/xdm-mapping.png)
+
+Create a rule and add an action **[!UICONTROL Adobe Experience Platform Web SDK]** and **[!UICONTROL Send event]** to use the Data Element to send to Adobe Experience Platform.
+
+![](../../../images/extensions/server/algolia/rule-action.png)
 
 ## Additional resources
 
