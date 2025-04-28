@@ -1,6 +1,6 @@
 ---
 title: Connect Azure Databricks To Experience Platform Using The Flow Service API
-description: 
+description: Learn how to connect Azure Databricks to Experience Platform using APIs.
 ---
 # Connect [!DNL Azure Databricks] to Experience Platform using the [!DNL Flow Service] API
 
