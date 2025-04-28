@@ -14,7 +14,7 @@ Before you can connect your [!DNL Databricks] account to Experience Platform, yo
 
 ### Retrieve your container credentials
 
-First, you must use retrieve your [!DNL Azure Blob Storage] credentials. You will use these credentials in a later step to allow your [!DNL Databricks] account to access your [!DNL Azure Blob Storage].
+First, you must use retrieve your Experience Platform [!DNL Azure Blob Storage] credentials. You will use these credentials in a later step to allow your [!DNL Databricks] account to access your Experience Platform [!DNL Azure Blob Storage].
 
 To retrieve your credentials, make a GET request to the `/credentials` endpoint of the [!DNL Connectors] API.
 
@@ -26,7 +26,7 @@ GET /data/foundation/connectors/landingzone/credentials?type=dlz_databricks_sour
 
 **Request**
 
-The following request retrieves the credentials for your [!DNL Azure Blob Storage].
+The following request retrieves the credentials for your Experience Platform [!DNL Azure Blob Storage].
 
 +++View request example
 
@@ -69,6 +69,10 @@ A successful response returns your credentials. Values for `containerName`, `SAS
 +++
 
 ### Refresh your credentials
+
+>[!NOTE]
+>
+>Your existing credentials will be revoked once you refresh your credentials. Therefore, you must update you [!DNL Spark] configurations accordingly whenever you refresh your storage credentials. Otherwise, your dataflow will fail.
 
 To refresh your credentials, make a POST request and include `action=refresh` as a query parameter.
 
@@ -115,6 +119,13 @@ A successful response returns your new credentials.
 +++
 
 ### Configure access to your [!DNL Azure Blob Storage]
+
+>[!IMPORTANT]
+>
+>* If your cluster has been terminated, the service will automatically restart it during a flow run. However, you must ensure that your cluster is active when creating a connection or a dataflow. Additionally, your cluster must be active if you are performing actions like data preview or exploration as these actions cannot prompt the automatic restart of a terminated cluster.
+>
+>* Your [!DNL Azure] container includes a folder named `adobe-managed-staging`. To ensure the seamless ingestion of data, **do not** modify this folder.
+
 
 Next, you must ensure that your [!DNL Databricks] cluster has access to the Experience Platform [!DNL Azure Blob Storage] account. In doing so, you can use [!DNL Azure Blob Storage] as an interim location for writing [!DNL delta lake] table data.
 
