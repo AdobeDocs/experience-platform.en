@@ -110,13 +110,13 @@ To download your query results, select **[!UICONTROL Download]** in the upper-ri
 
 >[!NOTE]
 >
->Only queries that return results will display the **[!UICONTROL Download]** button. If the query returns no records, the **[!UICONTROL Result]** tab will display a message indicating no results and the download option will not be available.
+>The **[!UICONTROL Download]** button appears only when a query returns results. If no records are returned, the **[!UICONTROL Result]** tab shows a 'No results' message and the download option is disabled.
 
-![The results tab of the Query Editor with Download and the dropdown menu highlighted.](./download-results.png)
+![The results tab of the Query Editor with Download and the dropdown menu highlighted.](../images/ui/overview/download-results.png)
 
 >[!NOTE]
 >
-> When opening a CSV file in Excel, the following message may appear: "Possible Data Loss. Some features might be lost if you save this workbook in the comma-delimited (.csv) format. To preserve these features, save it in an Excel file format." Additionally, the formatting for date and time may vary by file type. For example, CSV files will reflect the format shown in the query result, while XLSX files may apply localized formatting in Excel.
+>When opening a CSV file in Excel, you may see the following warning:<br>"Possible Data Loss. Some features might be lost if you save this workbook in the comma-delimited (.csv) format. To preserve these features, save it in an Excel file format."<br>In addition, be aware that date and time formatting may vary by file type. CSV files retain the format shown in the query results, while XLSX files may apply localized formatting automatically in Excel.
 
 ### View results in full screen {#view-results}
 
@@ -124,15 +124,17 @@ After executing a successful query, select **[!UICONTROL View results]** in the 
 
 The full-screen view displays the output in a resizable grid, making it easier to review large datasets and scan across columns. This preview mode is especially helpful when analyzing wide tables or reviewing row-level details.
 
-> This preview view is read-only and does not affect the query or dataset.
+>[!NOTE]
+>
+>The preview is read-only and does not modify your query or dataset.
 
 ![The full-screen preview dialog with View results selected.](../images/ui/overview/view-results-fullscreen.png)
 
 ### Copy results {#copy-results}
 
-Use the enhanced copy functionality in the Query Editor to copy query results formatted as comma-separated values (CSV). This makes it easy to paste them into spreadsheet applications like Excel for further analysis. This feature improves readability, preserves formatting, and streamlines validation and reporting workflows without requiring third-party tools.
+Use the enhanced copy feature in Query Editor to quickly copy query results as comma-separated values (CSV). Easily paste the copied data into spreadsheet applications like Excel for further analysis. This functionality improves readability, preserves formatting, and streamlines validation and reporting workflows without relying on third-party tools.
 
-You can copy query results either from the [!UICONTROL Result] tab or from the full-screen results view. From the [!UICONTROL Result] tab, select the copy icon to copy all query results to your clipboard. From the Query Editor Results tab, select individual rows or use the checkbox column header to select all rows. Select a single row to enable the copy icon.
+You can copy query results either from the [!UICONTROL Result] tab or from the full-screen results preview. From the **[!UICONTROL Result]** tab, select the copy icon (![A copy icon.](../../images/icons/copy.png)) to copy all query results to your clipboard. In the Query Editor Results tab, select individual rows or use the checkbox column header to select all rows. Select a single row to enable the copy icon.
 
 ![The results tab of the Query Editor with the copy icon highlighted.](../images/ui/overview/query-editor-copy-icon.png)
 
