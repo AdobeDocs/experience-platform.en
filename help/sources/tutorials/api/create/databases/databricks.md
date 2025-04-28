@@ -23,7 +23,7 @@ Read the [[!DNL Databricks] overview](../../../../connectors/databases/databrick
 
 ### Gather required credentials
 
-You must provide values for the following credentials to connect [!DNL Databricks] to Experience Platform.
+Provide values for the following credentials to connect [!DNL Databricks] to Experience Platform.
 
 | Credential | Description |
 | --- | --- |
@@ -66,9 +66,9 @@ curl -X POST \
         "specName": "Access Token Authentication",
         "params": {
           "domain": "https://adb-1234567890123456.7.azuredatabricks.net",
-          "clusterId": "",
-          "accessToken": "",
-          "database": ""
+          "clusterId": "xxxx",
+          "accessToken": "xxxx",
+          "database": "acme-db"
         }
     },
     "connectionSpec": {
