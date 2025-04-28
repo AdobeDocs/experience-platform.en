@@ -52,7 +52,7 @@ For production sandboxes, the default Pseudonymous profile data expiration is 14
 
 Select **[!UICONTROL Apply]** to save your data expiration settings.
 
-![The popover for adding Pseudonymous profile data expiration to your organization's profiles. The Apply button is highlighted.](./images/pseudonymous-profiles/profile-settings-data-expiry.png)
+![The popover for adding Pseudonymous profile data expiration to your organization's profiles. The Apply button is highlighted.](./images/pseudonymous-profiles/profile-settings-data-expiry.png){width="800" zoomable="yes"}
 
 ## Frequently asked questions {#faq}
 
