@@ -9,11 +9,12 @@ exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
 >
 >Support for filtering row-level data is currently only available to the following sources:
 >
+>* [[Amazon Redshift]](../../connectors/databases/redshift.md)
 >* [[!DNL Google BigQuery]](../../connectors/databases/bigquery.md)
+>* [[!DNL Marketo Engage] standard activities](../../connectors/adobe-applications/marketo/marketo.md)
 >* [[!DNL Microsoft Dynamics]](../../connectors/crm/ms-dynamics.md)
 >* [[!DNL Salesforce]](../../connectors/crm/salesforce.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
->* [[!DNL Marketo Engage] standard activities](../../connectors/adobe-applications/marketo/marketo.md)
 
 Read this guide for steps on how to filter row-level data for a source using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 

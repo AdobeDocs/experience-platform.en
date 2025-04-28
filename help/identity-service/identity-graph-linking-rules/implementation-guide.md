@@ -7,7 +7,11 @@ exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
 
 >[!AVAILABILITY]
 >
->Identity graph linking rules are currently in Limited Availability. Contact your Adobe account team for information on how to access the feature in development sandboxes.
+>Identity Graph Linking Rules is currently in Limited Availability, and can be accessed by all customers in development sandboxes.
+>
+>* **Activation requirements**: The feature will remain inactive until you configure and save your [!DNL Identity Settings]. Without this configuration, the system will continue to operate normally, with no changes in behavior.
+>* **Important notes**: During this Limited Availability phase, Edge segmentation may produce unexpected segment membership results. However, streaming and batch segmentation will function as expected.
+>* **Next steps**: For information on how to enable this feature in production sandboxes, please contact your Adobe account team.
 
 >[!IMPORTANT]
 >
@@ -27,7 +31,7 @@ Step-by-step outline:
 
 ## Prerequisites for implementation {#prerequisites-for-implementation}
 
-This section outlines prerequisite steps that you must complete prior to implementing identity graph linking rules to your data.
+This section outlines prerequisite steps that you must complete prior to implementing [!DNL Identity Graph Linking Rules] to your data.
 
 ### Unique namespace
 
@@ -285,9 +289,9 @@ This example also shows that Tom and Summer are to disparate person entities tha
 
 ## Next steps
 
-For more information on identity graph linking rules, read the following documentation:
+For more information on [!DNL Identity Graph Linking Rules], read the following documentation:
 
-* [Identity graph linking rules overview](./overview.md)
+* [[!DNL Identity Graph Linking Rules] overview](./overview.md)
 * [Identity optimization algorithm](./identity-optimization-algorithm.md)
 * [Examples of graph configurations](./example-configurations.md)
 * [Troubleshooting and FAQ](./troubleshooting.md)

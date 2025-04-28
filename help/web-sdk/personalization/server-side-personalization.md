@@ -1,16 +1,16 @@
 ---
-title: Server-side personalization using the Edge Network Server API
-description: This article demonstrates how you can use the Edge Network Server API to deploy server-side personalization on your web properties.
+title: Server-side personalization using the Edge Network API
+description: This article demonstrates how you can use the Edge Network API to deploy server-side personalization on your web properties.
 keywords: personalization; server api; edge network; server-side;
 ---
 
-# Server-side personalization using the Edge Network Server API
+# Server-side personalization using the Edge Network API
 
 ## Overview {#overview}
 
-Server-side personalization involves using the [Edge Network Server API](../../server-api/overview.md) to personalize the customer experience on your web properties.
+Server-side personalization involves using the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/getting-started/) to personalize the customer experience on your web properties.
 
-In the example described in this article, personalization content is retrieved server-side, using the Server API. Then, the HTML is rendered server-side, based on the retrieved personalization content.
+In the example described in this article, personalization content is retrieved server-side, using the Edge Network API. Then, the HTML is rendered server-side, based on the retrieved personalization content.
 
 The table below shows an example of personalized and non-personalized content.
 
@@ -31,12 +31,12 @@ Cookies are used to persist user identity and cluster information.  When using a
 
 ### Request placement {#request-placement}
 
-Personalization requests are required to get propositions and send a display notification. When using a server-side implementation, the application server makes these requests to the Edge Network Server API.
+Personalization requests are required to get propositions and send a display notification. When using a server-side implementation, the application server makes these requests to the Edge Network API.
 
 | Request | Made by | 
 |---|---|
-| Interact request to retrieve propositions | Application server calling the Edge Network Server API. |
-| Interact request to send display notifications | Application server calling the Edge Network Server API. |
+| Interact request to retrieve propositions | Application server calling the Edge Network API. |
+| Interact request to send display notifications | Application server calling the Edge Network API. |
 
 ## Sample application {#sample-app}
 
@@ -62,7 +62,7 @@ This section described the steps used in retrieving the personalization content.
 
 1. [Express](https://expressjs.com/) is used for a lean server-side implementation. This handles basic server requests and routing.
 2. The browser requests the web page. Any cookies previously stored by the browser, prefixed with `kndctr_`, are included.
-3. When the page is requested from the app server, an event is sent to the [interactive data collection endpoint](../../../server-api/interactive-data-collection.md) to fetch personalization content. The sample app uses helper methods to simplify building and sending requests to the API (see [aepEdgeClient.js](https://github.com/adobe/alloy-samples/blob/main/common/aepEdgeClient.js)). The `POST` request contains an `event` and a `query`. The cookies from the previous step, if available, are included in the `meta>state>entries` array.
+3. When the page is requested from the app server, an event is sent to the [interactive data collection endpoint](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) to fetch personalization content. The sample app uses helper methods to simplify building and sending requests to the API (see [aepEdgeClient.js](https://github.com/adobe/alloy-samples/blob/main/common/aepEdgeClient.js)). The `POST` request contains an `event` and a `query`. The cookies from the previous step, if available, are included in the `meta>state>entries` array.
 
    ```js
    fetch(
