@@ -7,12 +7,6 @@ exl-id: b2eeb1d2-3c2b-40a0-b5cd-91e99d99a906
 ---
 # Customer AI Propensity Scoring Model Card
 
-As part of [Intelligent Services in Adobe Experience Platform](../../../intelligent-services/home.md), you can use [Customer AI](../../../intelligent-services/customer-ai/overview.md) to generate customer predictions and explanations at the individual level.
-
-With the help of influential factors, you can use Customer AI to tell you what a customer is likely to do and why. Additionally, you can benefit from Customer AI predictions and insights to personalize customer experiences by serving the most appropriate offers and messaging.
-
-Read this model card for information the AI model used to power Customer AI.
-
 ## Model overview {#model-overview}
 
 * The Customer AI Propensity Scoring Model is designed to provide marketers and customer engagement teams with actionable insights by predicting the probability that a customer will perform a given action, such as making a purchase, signing up for a subscription, or engaging with an email campaign. The outputs allow businesses to optimize audience segmentation and personalize customer interactions based on predicted behaviors.
