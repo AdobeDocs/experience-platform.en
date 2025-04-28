@@ -3,7 +3,7 @@ title: Identity Graph Linking Rules
 description: Learn about identity graph linking rules in Identity Service.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
 ---
-# Identity graph linking rules overview {#identity-graph-linking-rules-overview}
+# [!DNL Identity Graph Linking Rules] overview {#identity-graph-linking-rules-overview}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_linkingrules_overview"
@@ -12,17 +12,21 @@ exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
 
 >[!AVAILABILITY]
 >
->Identity graph linking rules are currently in Limited Availability. Contact your Adobe account team for information on how to access the feature in development sandboxes.
+>Identity Graph Linking Rules is currently in Limited Availability, and can be accessed by all customers in development sandboxes.
+>
+>* **Activation requirements**: The feature will remain inactive until you configure and save your [!DNL Identity Settings]. Without this configuration, the system will continue to operate normally, with no changes in behavior.
+>* **Important notes**: During this Limited Availability phase, Edge segmentation may produce unexpected segment membership results. However, streaming and batch segmentation will function as expected.
+>* **Next steps**: For information on how to enable this feature in production sandboxes, please contact your Adobe account team.
 
-With Adobe Experience Platform Identity Service and Real-Time Customer Profile, it is easy to assume that your data is ingested perfectly and that all merged profiles represent a single individual person through a person identifier, such as a CRMID. However, there are possible scenarios where certain data could try to merge multiple disparate profiles into a single profile ("graph collapse"). To prevent these unwanted merges, you can use configurations provided through identity graph linking rules and allow for accurate personalization for your users.
+With Adobe Experience Platform Identity Service and Real-Time Customer Profile, it is easy to assume that your data is ingested perfectly and that all merged profiles represent a single individual person through a person identifier, such as a CRMID. However, there are possible scenarios where certain data could try to merge multiple disparate profiles into a single profile ("graph collapse"). To prevent these unwanted merges, you can use configurations provided through [!DNL Identity Graph Linking Rules] and allow for accurate personalization for your users.
 
-Watch the following video for additional information on using identity graph linking rules:
+Watch the following video for additional information on using [!DNL Identity Graph Linking Rules]:
 
 >[!VIDEO](https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops)
 
 ## Get started
 
-The following documents are essential in understanding identity graph linking rules.
+The following documents are essential in understanding [!DNL Identity Graph Linking Rules].
 
 * [Identity optimization algorithm](./identity-optimization-algorithm.md)
 * [Implementation guide](./implementation-guide.md)
@@ -39,7 +43,7 @@ The following documents are essential in understanding identity graph linking ru
 >title="Graph Collapse Scenarios"
 >abstract="There are multiple reasons why graphs could "collapse", or represent multiple person entities."
 
-This section outlines example scenarios that you may consider when configuring identity graph linking rules.
+This section outlines example scenarios that you may consider when configuring [!DNL Identity Graph Linking Rules].
 
 ### Shared device
 
@@ -55,7 +59,7 @@ There are instances where multiple logins can occur on a single device:
 
 In these cases, from a graph standpoint, with no limits enabled, a single ECID will be linked to multiple CRMIDs. 
 
-With identity graph linking rules, you can:
+With [!DNL Identity Graph Linking Rules], you can:
 
 * Configure the ID used for login as unique identifier. For example, you can limit a graph to store just one identity with a CRMID namespace, and thus define that CRMID as the unique identifier of a shared device.
   * By doing this, you can ensure that CRMIDs do not get merged by the ECID.
@@ -66,7 +70,7 @@ There are also instances of users who provide fake values as phone numbers and/o
 
 ![A diagram that represents invalid email or phone scenarios.](../images/identity-settings/invalid-email-phone.png)
 
-With identity graph linking rules, you can:
+With [!DNL Identity Graph Linking Rules], you can:
 
 * Configure either the CRMID, phone number, or email address as the unique identifier and thus limit one person to just one CRMID, phone number, and/or email address associated with their account.
 
@@ -83,11 +87,11 @@ These identities could result in the following graphs, where multiple CRMIDs are
 
 ![A graph example of identity data with erroneous or bad identity values.](../images/identity-settings/bad-data.png)
 
-With identity graph linking rules you can configure the CRMID as the unique identifier to prevent unwanted profile collapsing due to this type of data.
+With [!DNL Identity Graph Linking Rules] you can configure the CRMID as the unique identifier to prevent unwanted profile collapsing due to this type of data.
 
-## Identity graph linking rules {#identity-graph-linking-rules}
+## [!DNL Identity Graph Linking Rules] {#identity-graph-linking-rules}
 
-With Identity graph linking rules you can:
+With [!DNL Identity Graph Linking Rules] you can:
 
 * Create a single identity graph / merged profile for each user by configuring unique namespaces, which will prevent two disparate person identifiers from merging into one identity graph.
 * Associate online, authenticated events to the person by configuring priorities
@@ -145,7 +149,7 @@ For more information, read the guide on [namespace priority](./namespace-priorit
 
 ## Next steps
 
-For more information on identity graph linking rules, read the following documentation:
+For more information on [!DNL Identity Graph Linking Rules], read the following documentation:
 
 * [Identity optimization algorithm](./identity-optimization-algorithm.md)
 * [Implementation guide](./implementation-guide.md)
