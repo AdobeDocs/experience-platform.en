@@ -42,7 +42,7 @@ A profile is considered for Pseudonymous data expiration if it meets the followi
 >
 >More information about permissions within Experience Platform can be found in the [access control overview](../access-control/home.md#permissions).
 
-To add Pseudonymous profile data expiration to your organization, go the Profile dashboard and select **[!UICONTROL Settings]**.
+To add Pseudonymous profile data expiration to your organization, go to the Profile dashboard and select **[!UICONTROL Settings]**.
 
 ![The Settings button on the Profile dashboard is highlighted.](./images/pseudonymous-profiles/profile-settings.png)
 
@@ -96,7 +96,7 @@ For a typical use case, you can set your Experience Event data expiration based 
 
 +++
 
-### What users should be using Pseudonymous profiles data expiration?
+### What kinds of use cases should I be using Pseudonymous profiles data expiration for?
 
 +++ Answer
 
