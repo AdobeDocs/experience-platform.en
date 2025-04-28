@@ -1,6 +1,7 @@
 ---
 title: Azure Databricks
 description: Learn about the prerequisite steps needed in order to connect Azure Databricks to Experience Platform.
+last-substantial-update: 2023-04-29
 ---
 # [!DNL Azure Databricks]
 
@@ -10,11 +11,11 @@ You can use the [!DNL Databricks] source to connect your account and ingest your
 
 ## Prerequisites
 
-Before you can connect your [!DNL Databricks] account to Experience Platform, you must first complete a set of prerequisite steps to ensure that you can successfully connect your [!DNL Databricks] account to Experience Platform.
+Complete the prerequisite steps to successfully connect your [!DNL Databricks] account to Experience Platform.
 
 ### Retrieve your container credentials
 
-First, you must use retrieve your Experience Platform [!DNL Azure Blob Storage] credentials. You will use these credentials in a later step to allow your [!DNL Databricks] account to access your Experience Platform [!DNL Azure Blob Storage].
+Retrieve your Experience Platform [!DNL Azure Blob Storage] credentials to enable your [!DNL Databricks] account to access it later.
 
 To retrieve your credentials, make a GET request to the `/credentials` endpoint of the [!DNL Connectors] API.
 
@@ -44,7 +45,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns your credentials. Values for `containerName`, `SASToken`, and `storageAccountName` will be used in a later step when completing your [!DNL Apache Spark] configuration for [!DNL Databricks].
+A successful response provides your credentials (`containerName`, `SASToken`, `storageAccountName`) for later use in [!DNL Apache Spark] configuration for [!DNL Databricks].
 
 +++View response example
 
