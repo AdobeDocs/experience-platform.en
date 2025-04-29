@@ -213,7 +213,7 @@ AS (select_query)
 | `schema` | The title of the XDM schema. Use this clause only if you wish to associate the new table with an existing XDM schema. |
 | `rowvalidation` | (Optional) Enables row-level validation for each batch ingested into the dataset. Default is true. |
 | `label` | (Optional) Use the value `PROFILE` to label the dataset as enabled for Profile ingestion. |
-| `transform` | (Optional) Applies feature engineering transformations (such as string indexing, one-hot encoding, or TF-IDF) before materializing  the dataset. This clause is used for previewing transformed features. See [`TRANSFORM` clause documentation](./PLACEHOLDER.md) for more details.  |
+| `transform` | (Optional) Applies feature engineering transformations (such as string indexing, one-hot encoding, or TF-IDF) before materializing  the dataset. This clause is used for previewing transformed features. See [`TRANSFORM` clause documentation](#transform) for more details.  |
 | `select_query` | A standard `SELECT` statement that defines the dataset. See the [`SELECT` queries section](#select-queries) for more details. |
 
 >[!NOTE]
