@@ -30,7 +30,7 @@ To begin, find the desired field type and use the sample code provided to build 
 You can optionally constrain what kinds of values can be inputted for the string through the following additional properties:
 
 * `pattern`: A regex pattern to constrain by.
-* `minLength`: A minimum length for the string.
+* `minLength`: A minimum length for the string. Strings receive a minimum value of `1` by default.
 * `maxLength`: A maximum length for the string.
 
 ```json
