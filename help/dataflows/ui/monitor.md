@@ -57,12 +57,6 @@ Select **[!UICONTROL Customer & Account]** to update your dashboard and display 
 
 ![The monitoring data type set to "Customer & Account".](../assets/ui/monitor-overview/customer-account.png)
 
->[!TAB Prospect]
-
-Select **[!UICONTROL Prospect]** to update your dashboard and display metrics on prospecting data that has been ingested to Experience Platform over the course of a given period. **Note**: You can only view prospect data type activities if you are [entitled to prospect data](../../rtcdp/partner-data/prospecting.md).
-
-![The monitoring data type set to "Prospect".](../assets/ui/monitor-overview/prospect.png)
-
 >[!TAB Account profile enrichment]
 
 Select **[!UICONTROL Account profile enrichment]** to update your dashboard and display metrics on profile enrichment data. **Note**: You can only view account profile enrichment metrics if you are entitled to [B2B data](../../rtcdp/b2b-tutorial.md). 
@@ -132,3 +126,7 @@ By reading this document, you can now navigate your way through the monitoring d
 * [Monitor profile data](monitor-profiles.md).
 * [Monitor audience data](monitor-audiences.md).
 * [Monitor destinations data](monitor-destinations.md).
+
+<!-- >[!TAB Prospect]
+
+Select **[!UICONTROL Prospect]** to update your dashboard and display metrics on prospecting data that has been ingested to Experience Platform over the course of a given period. **Note**: You can only view prospect data type activities if you are [entitled to prospect data](../../rtcdp/partner-data/prospecting.md). -->
