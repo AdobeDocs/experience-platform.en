@@ -46,34 +46,3 @@ PORT    STATE SERVICE
 ### Self-hosting
 
 If you are [self-hosting](../publishing/hosts/self-hosting-libraries.md) your library, then the TLS versions supported will be determined by your own hosting service.
-
-## TLS Ciphers to be removed May 1st 2024
-
-```
-PORT    STATE SERVICE
-443/tcp open  https
-| ssl-enum-ciphers:
-|   TLSv1.2:
-|     ciphers:
-|       TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
-|       TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
-|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
-|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
-|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
-|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
-|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
-|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
-|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
-|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
-|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
-|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
-|     compressors:
-|       NULL
-|     cipher preference: server
-|   TLSv1.3:
-|     ciphers:
-|       TLS_AKE_WITH_AES_128_CCM_8_SHA256 (secp256r1) - A
-|       TLS_AKE_WITH_AES_128_CCM_SHA256 (secp256r1) - A
-|     cipher preference: client
-|_  least strength: A
-```

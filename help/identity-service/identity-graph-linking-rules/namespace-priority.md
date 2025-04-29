@@ -80,7 +80,7 @@ For relatively complex graph structures, namespace priority plays an important r
 * Once you have configured identity settings for a given sandbox, the primary identity for experience events will be determined by the highest namespace priority in the configuration.
   * This is because experience events are dynamic in nature. An identity map may contain three or more identities, and namespace priority ensures that the most important namespace is associated to the experience event.
 * As a result, the following configurations **will no longer be used by Real-Time Customer Profile**:
-  * The primary identity configuration (`primary=true`) when sending identities in the identityMap using the Web SDK, Mobile SDK, or Edge Network Server API (identity namespace and identity value will continue to be used in Profile). **Note**: Services outside of Real-Time Customer Profile like data lake storage or Adobe Target will continue to use the primary identity configuration (`primary=true`).
+  * The primary identity configuration (`primary=true`) when sending identities in the identityMap using the Web SDK, Mobile SDK, or Edge Network API (identity namespace and identity value will continue to be used in Profile). **Note**: Services outside of Real-Time Customer Profile like data lake storage or Adobe Target will continue to use the primary identity configuration (`primary=true`).
   * Any fields marked as primary identity on an XDM Experience Event Class schema.
   * Default primary identity settings in the Adobe Analytics source connector (ECID or AAID).
 * On the other hand, **namespace priority does not determine primary identity for profile records**.

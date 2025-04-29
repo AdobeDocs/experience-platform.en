@@ -22,7 +22,7 @@ There are three types of data that are available from [!DNL The Weather Channel]
 Before you use weather data, make sure you meet the following prerequisites:
 
 * You must license the weather data that you will use from [!DNL The Weather Channel]. They will then enable it on your account. 
-* Weather data is available only through datastreams. To use weather data, you must use [!DNL Web SDK], [!DNL Mobile Edge Extension] or the [Server API](../../server-api/overview.md) to include this data.
+* Weather data is available only through datastreams. To use weather data, you must use [!DNL Web SDK], [!DNL Mobile Edge Extension] or the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/) to include this data.
 * Your datastream must have [[!UICONTROL Geo Location]](../configure.md#advanced-options) enabled.
 * Add the [weather field group](#schema-configuration) to the schema that you are using.
 

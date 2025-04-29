@@ -72,7 +72,7 @@ Also in the Info tab is a  **[!UICONTROL Profile]** toggle that is used for enab
 
 ![Dataset activity](../images/tutorials/ingest-batch-data/sample-dataset.png)
 
-## Enable dataset for [!DNL Real-Time Customer Profile]
+## Enable dataset for [!DNL Real-Time Customer Profile] {#enable-for-profile}
 
 Datasets are used for ingesting data into [!DNL Experience Platform], and that data is ultimately used to identify individuals and stitch together information coming from multiple sources. That stitched together information is called a [!DNL Real-Time Customer Profile]. In order for [!DNL Experience Platform] to know which information should be included in the [!DNL Real-Time Profile], datasets can be marked for inclusion using the **[!UICONTROL Profile]** toggle. 
 
