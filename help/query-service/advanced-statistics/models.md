@@ -10,7 +10,7 @@ exl-id: c609a55a-dbfd-4632-8405-55e99d1e0bd8
 >
 >This functionality is available to customers who have purchased the Data Distiller add on. For more information, contact your Adobe representative.
 
-Query Service now supports the core processes of building and deploying a model. You can use SQL to train the model using your data, evaluate its accuracy, and then apply the trained model to make predictions on new data. You can then use the model to generalize from your past data to make informed decisions about real-world scenarios.
+Query Service now supports the core processes of building and deploying a model. You can use SQL to train the model using your data, evaluate its accuracy, and then use the trained model to make predictions on new data. You can then use the model to generalize from your past data to make informed decisions about real-world scenarios.
 
 The three steps in the model lifecycle for generating actionable insights are:
 
@@ -104,7 +104,7 @@ The following notes explain the key components and options in the model update w
 
 ### Preview and persist transformed features {#preview-transform-output}
 
-Use the `TRANSFORM` clause within `CREATE TABLE` and `CREATE TEMP TABLE` statements to preview and persist the output of feature transformations before model training. This enhancement provides visibility into how transformation functions (such as encoding, tokenization, and vector assembly) are applied to your dataset.
+Use the `TRANSFORM` clause within `CREATE TABLE` and `CREATE TEMP TABLE` statements to preview and persist the output of feature transformations before model training. This enhancement provides visibility into how transformation functions (such as encoding, tokenization, and vector assembler) are applied to your dataset.
 
 By materializing transformed data into a standalone table, you can inspect intermediate features, validate processing logic, and ensure feature quality before creating a model. This improves transparency across the machine learning pipeline and supports more informed decision-making during model development.
 
@@ -133,13 +133,13 @@ AS SELECT * FROM source_table;
 Create a table using basic transformations:
 
 ```sql
-CREATE TABLE ctas_transform_table_vp14
+CREATE TABLE ctas_transform_table
 TRANSFORM(
   String_Indexer(additional_comments) si_add_comments,
   one_hot_encoder(si_add_comments) as ohe_add_comments,
   tokenizer(comments) as token_comments
 )
-AS SELECT * FROM movie_review_e2e_DND;
+AS SELECT * FROM movie_review;
 ```
 
 Create a temporary table using additional feature engineering steps:
@@ -169,10 +169,9 @@ SELECT * FROM ctas_transform_table LIMIT 1;
 
 While this feature enhances transparency and supports feature validation, there are important limitations to consider when using the `TRANSFORM` clause outside of model creation.
 
-- Storage location: Tables created with `TRANSFORM` are stored in the data lake, and their metadata is registered in [Catalog Service](../../catalog/home.md).
-- Vector outputs: If the transformation generates vector-type outputs, they are automatically converted to arrays, as XDM does not support vector data types.
-- Reuse limitation: Tables created this way cannot be used directly in `CREATE MODEL` statements. You must redefine the `TRANSFORM` logic.
-- Metadata limitation: Transformation logic is not persisted. You must reapply transformations manually for new data.
+- **Vector outputs**: If the transformation generates vector-type outputs, they are automatically converted to arrays.
+- **Batch reuse limitation**: Tables created with `TRANSFORM` can only apply transformations during table creation. New batches of data inserted with `INSERT INTO` are **not automatically transformed**. To apply the same transformation logic to new data, you must recreate the table using a new `CREATE TABLE AS SELECT` (CTAS) statement.
+- **Model reuse limitation**: Tables created using `TRANSFORM` cannot be directly used in `CREATE MODEL` statements. You must redefine the `TRANSFORM` logic during model creation. Transformations that produce vector-type outputs are not supported during model training. For more information, see the [Feature transformation output data types](./feature-transformation.md#available-transformations).
 
 >[!NOTE]
 >
@@ -200,7 +199,10 @@ The `model_evaluate` function takes `model-alias` as its first argument and a fl
 
 >[!IMPORTANT]
 >
->Enhanced column selection and aliasing for `model_predict` are gated behind a feature flag. By default, intermediate fields such as `features`, `probability`, and `rawPrediction` are not included in the prediction output.<br>To enable access to intermediate fields, contact your Adobe representative to request activation of this feature.
+>Enhanced column selection and aliasing for `model_predict` are controlled by a feature flag. By default, intermediate fields such as `probability` and `rawPrediction` are not included in the prediction output.  
+>To enable access to these intermediate fields, run the following command before executing `model_predict`:
+>
+>`set advanced_statistics_show_hidden_fields=true;`
 
 Use the `model_predict` keyword to apply the specified model and version to a dataset and generate predictions. You can select all output columns, choose specific ones, or assign aliases to improve output clarity.
 
@@ -210,9 +212,9 @@ By default, only base columns and the final prediction are returned unless the f
 SELECT * FROM model_predict(model-alias, version-number, SELECT col1, col2 FROM dataset);
 ```
 
-### Select specific output fields
+### Select specific output fields {#select-specific-output-fields}
 
-When the feature flag is enabled, you can retrieve a subset of fields from the `model_predict` output. Use this to retrieve intermediate results, such as prediction probabilities, or feature columns used during model scoring.
+When the feature flag is enabled, you can retrieve a subset of fields from the `model_predict` output. Use this to retrieve intermediate results, such as prediction probabilities, raw prediction scores, and base columns from the input query.
 
 **Case 1: Return all available output fields**
 
@@ -220,23 +222,23 @@ When the feature flag is enabled, you can retrieve a subset of fields from the `
 SELECT * FROM model_predict(modelName, 1, SELECT a, b, c FROM dataset);
 ```
 
-**Case 2: Return selected columns, including intermediate results**
+**Case 2: Return selected columns**
 
 ```sql
-SELECT a, b, c, feature1, probability, predictionCol FROM model_predict(modelName, 1, SELECT a, b, c FROM dataset);
+SELECT a, b, c, probability, predictionCol FROM model_predict(modelName, 1, SELECT a, b, c FROM dataset);
 ```
 
 **Case 3: Return selected columns with aliases**
 
 ```sql
-SELECT a, b, c, feature1 AS f1, probability AS p1, predictionCol AS pdc FROM model_predict(modelName, 1, SELECT a, b, c FROM dataset);
+SELECT a, b, c, probability AS p1, predictionCol AS pdc FROM model_predict(modelName, 1, SELECT a, b, c FROM dataset);
 ```
 
-In each case, the outer "SELECT" controls which result fields are returned. These include base fields from the input query and additional columns generated during model prediction.
+In each case, the outer `SELECT` controls which result fields are returned. These include base fields from the input query, along with prediction outputs such as `probability`, `rawPrediction`, and `predictionCol`.
 
 ### Persist predictions using CREATE TABLE or INSERT INTO
 
-You can persist predictions using either "CREATE TABLE AS SELECT" or "INSERT INTO SELECT", including intermediate results if desired.
+You can persist predictions using either "CREATE TABLE AS SELECT" or "INSERT INTO SELECT", including prediction outputs if desired.
 
 **Example: Create table with all prediction output fields**
 
@@ -247,10 +249,10 @@ CREATE TABLE scored_data AS SELECT * FROM model_predict(modelName, 1, SELECT a, 
 **Example: Insert selected output fields with aliases**
 
 ```sql
-INSERT INTO scored_data SELECT a, b, c, feature1 AS f1, probability AS p1, predictionCol AS pdc FROM model_predict(modelName, 1, SELECT a, b, c FROM dataset);
+INSERT INTO scored_data SELECT a, b, c, probability AS p1, predictionCol AS pdc FROM model_predict(modelName, 1, SELECT a, b, c FROM dataset);
 ```
 
-This provides flexibility to select and persist only the relevant output fields for downstream analysis or reporting.
+This provides flexibility to select and persist only the relevant prediction output fields and base columns for downstream analysis or reporting.
 
 ## Evaluate and manage your models
 
