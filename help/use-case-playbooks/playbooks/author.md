@@ -20,7 +20,7 @@ The framework follows a three-step process:
 
 ## Create a Playbook
 
-You can create a playbook in two ways: either using the AI Assistant or manually. Read the following sections to learn how.
+You can create a playbook in two ways: either using the AI Assistant or manually. Read the following sections to learn how to create a playbook with AI Assistant.
 
 ### Playbook overview
 
