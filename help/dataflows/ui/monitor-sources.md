@@ -1,6 +1,6 @@
 ---
 description: Learn how to use the monitoring dashboard to monitor data ingested into data lake.
-title: Monitor data lake ingestion in the YU
+title: Monitor data lake ingestion
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
 ---
 # Monitor data lake ingestion
@@ -124,7 +124,7 @@ Use the [!UICONTROL Records failed] section to view metrics on records that were
 
 ## Next steps {#next-steps}
 
-By following this tutorial, you have successfully monitored ingestion rate to data lake using the **[!UICONTROL Monitoring]** dashboard. You have also successfully identified errors that contributed to the failure of dataflows during the ingestion process. See the following documents for more details:
+By following this tutorial, you learned how to monitor the data lake ingestion rate using the **[!UICONTROL Monitoring]** dashboard. You also learned to identify errors that cause dataflow failures during ingestion. See the following documents for more details:
 
 * [Monitoring identity data](./monitor-identities.md).
 * [Monitoring profile data](./monitor-profiles.md).
