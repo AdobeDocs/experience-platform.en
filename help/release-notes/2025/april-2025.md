@@ -21,10 +21,9 @@ Updates to existing features and documentation in Adobe Experience Platform:
 - [Destinations](#destinations)
 - [Experience Data Model](#xdm)
 - [Identity Service](#identity)
+- [Query Service](#query-service)
 - [Real-Time Customer Profile](#profile)
 - [Sources](#sources)
-
-
 
 ## Experience League {#experience-league}
 
@@ -32,7 +31,7 @@ Experience League is a comprehensive learning platform designed to help you enha
 
 | Feature | Description |
 | --- | --- |
-| Personalized home page | Access and customize your personalized home page on [Experience League](https://experienceleague.adobe.com/en/home#). Sign in with your Adobe credentials to start optimizing your learning experience: <ul><li>**Bookmarks**: Use the [!UICONTROL Bookmarks] feature to save and collect your favorite resources in one place. You can save a variety of content, including playlists, articles, and tutorials.</li><li>**Customize your learning**: Enhance your learning experience by updating your Experience League profile with the roles, industries, products, and experience level that best match your needs.</li><li>**Recommendations**: View learning content recommended based on your recent activity.</li><li>**Recently viewed**: Use the [!UICONTROL Recently viewed] section to quickly navigate back to recently viewed content such as documentation and videos.</li><li>**Learning resources**: Use the [!UICONTROL All learning resources] panel to navigate to tutorials, documentation, community, events, and certifications.</li><li>**What's new**: View the [!UICONTROL What's new] section for a stream of the latest content on Experience League.</li><li>**Watch past events on-demand**: Watch previously recorded live streams on product spotlights, use cases, and tutorials with the [!UICONTROL Watch past events on-demand] section.</li></ul><br> ![Personalized home page on Experience League.](../2025/assets/april/personalized-home-page.png "Personalized home page on Experience League."){width="250" align="center" zoomable="yes"} |
+| Personalized home page | Access and customize your personalized home page on [Experience League](https://experienceleague.adobe.com/en/home#). Sign in with your Adobe credentials and then select **[!UICONTROL Experience League]** on the top menu to start optimizing your learning experience: <ul><li>**Bookmarks**: Use the [!UICONTROL Bookmarks] feature to save and collect your favorite resources in one place. You can save a variety of content, including playlists, articles, and tutorials.</li><li>**Customize your learning**: Enhance your learning experience by updating your Experience League profile with the roles, industries, products, and experience level that best match your needs.</li><li>**Recommendations**: View learning content recommended based on your recent activity.</li><li>**Recently viewed**: Use the [!UICONTROL Recently viewed] section to quickly navigate back to recently viewed content such as documentation and videos.</li><li>**Learning resources**: Use the [!UICONTROL All learning resources] panel to navigate to tutorials, documentation, community, events, and certifications.</li><li>**What's new**: View the [!UICONTROL What's new] section for a stream of the latest content on Experience League.</li><li>**Watch past events on-demand**: Watch previously recorded live streams on product spotlights, use cases, and tutorials with the [!UICONTROL Watch past events on-demand] section.</li></ul><br> ![Personalized home page on Experience League.](../2025/assets/april/personalized-home-page.png "Personalized home page on Experience League."){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -91,6 +90,22 @@ Use Adobe Experience Platform Identity Service to create a comprehensive view of
 {style="table-layout:auto"}
 
 For more information, read the [[!DNL Identity Graph Linking Rules] documentation](../../identity-service/identity-graph-linking-rules/overview.md).
+
+## Query Service {#query-service}
+
+Query data in the Adobe Experience Platform data lake using standard SQL with Query Service. Seamlessly combine datasets and generate new ones from your query results to power reporting, enable data science workflows, or facilitate ingestion into Real-Time Customer Profile. For example, you can merge customer transaction data with behavioral data to identify high-value audiences for targeted marketing campaigns.
+
+**Updated features**
+
+| Feature | Description |
+| --- | --- |
+| SQL audience overwrite | Refresh audience membership by overwriting existing profiles with the results of a new SQL query. This allows you to manage dynamic audiences more efficiently by removing outdated records and inserting updated ones in a single operation. For more information, see the [SQL audience extension guide](../../query-service/data-distiller-audiences/overview.md#replace-audience). |
+| Download and Copy Query Results | [Download query results directly from the Query Editor](../../query-service/ui/overview.md#download-query-results) as CSV, XLSX, or JSON files, or [copy results to your clipboard](../../query-service/ui/overview.md#copy-results) as comma-separated values (CSV) for quick use in spreadsheet applications like Excel. These enhancements streamline offline analysis, reporting, and data validation workflows. |
+| View Query Results in Full Screen | [Preview query results in a full-screen dialog](../../query-service/ui/overview.md#view-results) to improve readability, easily scan large datasets, and select rows for copying. The full-screen view provides a resizable grid layout, helping you review wide tables and detailed output more efficiently. |
+| Enhanced Column Selection in Model Prediction | Select specific columns and apply aliases using the extended `model_predict` syntax. Retrieve intermediate prediction results such as feature vectors and probability scores. The enhanced selection requires a feature flag activation. See [Model lifecycle documentation](../../query-service/advanced-statistics/models.md#select-specific-output-fields) for syntax examples and feature flag details. |
+| Save Model Prediction Outputs Using CREATE TABLE and INSERT INTO | [Save selected prediction outputs into new tables using CREATE TABLE AS SELECT or insert into existing tables using INSERT INTO SELECT](../../query-service/advanced-statistics/models.md#predict). If enhanced column selection is enabled, intermediate results such as feature vectors and probabilities can also be persisted alongside final predictions. For usage examples, refer to the [SQL syntax documentation](../../query-service/sql/syntax.md#create-table-as-select). |
+
+For more information on [!DNL Query Service], please see the [[!DNL Query Service] overview](../../query-service/home.md).
 
 ## Real-Time Customer Profile {#profile}
 
