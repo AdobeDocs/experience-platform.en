@@ -245,7 +245,7 @@ The following are a collection of suggestions to maintain data integrity when yo
 * **Apply patterns for consistent values**: If your identity values follow a specific pattern, you should use the **[!UICONTROL Pattern]** setting to enforce this constraint. This setting can include rules like digits only, uppercase or lowercase, or specific character combinations. Use regular expressions to match patterns in your strings.
 * **Limit eVars in Analytics schemas**: Typically, an Analytics schema should have only one eVar designated as an identity. If you intend to use more than one eVar as an identity, you should double-check whether the data structure can be optimized.
 * **Ensure uniqueness of a selected field**: Your chosen field should be unique compared to the primary identity in the schema. If it is not, do not mark it as an identity. For instance, if multiple customers can provide the same email address, then that namespace is not a suitable identity. This principle also applies to other identity namespaces like phone numbers. Marking a non-unique field as an identity could cause unwanted profile collapse. 
-* **Verify minimum string lengths**: All string fields should be at least one character in length, as string values should never be empty. Null values for non-required fields, however, are acceptable.
+* **Verify minimum string lengths**: All string fields should be at least one character in length, as string values should never be empty. Null values for non-required fields, however, are acceptable. New string fields are given a minimum length of one by default.
 
 ## Next steps
 
