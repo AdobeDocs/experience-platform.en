@@ -161,7 +161,7 @@ If the playbook references fields that aren't available in the union schema of a
 >
 >Transitive playbook sharing is not supported. If you share a playbook from one organization to another and then import it, it cannot be shared again from the receiving organization to a third organization.
 
-## Sharing your playbooks across organizations {sharing-playbooks}
+## Sharing your playbooks across organizations {#sharing-playbooks}
 
 Follow these steps to share a playbook from one organization to another: 
 
