@@ -108,7 +108,7 @@ The AI Assistant can process various prompt structures and extract key details w
 
 "Create a campaign titled "Complete the Look" in order to increase sales and CLV. The campaign encourages customers purchased kitchenware or furniture to complete a complementary purchase via personalized recommendations and offers related to their purchase. First message the customers with product recommendations. If they don't make any purchases within 7 days, they receive a second message with product recommendations and offers. Use push notifications and email to contact the customers. Target customers who made a purchase in last 7 days in kitchenware or furniture category and have not been targeted in last 30 days. As part of the campaign, we want to measure KPIs such as clicks (email, app,sms, push), CTR, E-Wallet CTR, AOV Conversion.CLV Revenue, Total Purchase events (in-store, digital, call center)."
 
-![Example 1 prompt](/help/use-case-playbooks/assets/playbooks/authoring/example-prompt.png)
+![Example showing a long prompt in the text input box](/help/use-case-playbooks/assets/playbooks/authoring/long-prompt.png)
 
 **Example 2:**
 
@@ -120,20 +120,20 @@ Project channels/Touchpoints: Email
 Target audience: Customers who have subscribed to ACME fashion newsletter communications.
 Target KPIs/Engagement Metrics/ROI: 1. Increase Revenue from Products. 2. Drive Customer loyalty."
 
-![Example 2 prompt](/help/use-case-playbooks/assets/playbooks/authoring/example-2-prompt.png)
+![Example showing an organized prompt in the text input box](/help/use-case-playbooks/assets/playbooks/authoring/organized-list-prompt.png)
 
 **Example 3:**
 
 "Nudge shoppers to buy products during an ongoing product promotional campaign. 
 Engage with shoppers during an ongoing promotion by sending appropriate communication through email, SMS, or push notifications to buy products. Send them a reminder email after 24 hours of them not engaging with the promotion."
 
-![Example 3 prompt](/help/use-case-playbooks/assets/playbooks/authoring/example-3-prompt.png)
+![Example showing an concise prompt in the text input box](/help/use-case-playbooks/assets/playbooks/authoring/concise-prompt.png)
 
 **Example 4:**
 
 "Sell shoes to high school players."
 
-![Example 4 prompt](/help/use-case-playbooks/assets/playbooks/authoring/example-4-prompt.png)
+![Example showing a one-liner prompt](/help/use-case-playbooks/assets/playbooks/authoring/one-liner-prompt.png)
 
 The AI Assistant removes all unnecessary details such as "Project Name" or "Background." It extracts the key elements such as "target audience", "campaign goal", and "marketing channel" and works with any input style.
 
@@ -170,7 +170,7 @@ Follow these steps to share a playbook from one organization to another:
 
 >[!NOTE]
 >
->Ensure that partnership is established between the source and target organizations to facilitate playbook sharing. To learn how, read the documentation on how to [create an organization partnership request](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sharing-packages-across-orgs?lang=en).
+>Ensure that a partnership is established between the source and target organizations to facilitate playbook sharing. To learn how, read the documentation on how to [create an organization partnership request](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sharing-packages-across-orgs?lang=en).
 
 3. **Initiate the share**: Once the playbook is published and a partnership is established, select **Share Playbook**.
 4. **Select the target organization**: You'll be prompted to select the organization you want to share the playbook with.
@@ -184,21 +184,19 @@ If there are any missing fields from your union schema, they would be highlighte
 
 To access the sandbox and its associated functionality, you need the following permissions:
 
-1. Sandbox permissions: 
+1. **Sandbox permissions**: 
 
-These are necessary to access the sandbox environment where the feature exists: 
+These permissions are necessary to access the sandbox environment where the feature exists: 
 
-* Manage sandbox
-* View sandbox
+* **Manage sandbox**
+* **View sandbox**
 
 2. Package sharing permissions: 
 
 These permissions are required for internal sharing functionality:
 
-* Manage package
-* Share package
-
-All of these can be found in the Sandboxes section of the permissions list. 
+* **Manage package**
+* **Share package**
 
 These permissions will allow you to:
 
@@ -206,25 +204,29 @@ These permissions will allow you to:
 * Access the feature within the sandbox
 * Manage and share packages as needed
 
+These can be found in the **Sandboxes** section of the permissions list. 
+
+![The permissions list with the relevant permissions for this feature highlighted.](/help/use-case-playbooks/assets/playbooks/authoring/example-4-prompt.png)
+
 >[!NOTE]
 >
->No new permissions have been introduced for this feature. All of these are pre-existing and commonly used.
+>All the permissions for this feature are pre-existing and commonly used.
 
 ### Journeys and related objects - permissions
 
-When building Journeys that are connected to Playbooks, you may use a wide range of related objects. For example, a Journey can reference Channels, Audiences, Segments, and other entities. Each of these has its own permissions and documentation. 
+When building Journeys that are connected to Playbooks, you may use a wide range of related objects. For example, a Journey can reference **Channels**, **Audiences**, **Segments**, and other entities. Each of these has its own permissions and documentation. 
 
 These are the key permissions for Journey-related actions, such as: 
 
-* View journey
-* Manage journey
+* **View journey**
+* **Manage journey**
 * Permissions related to objects like Segments, Audiences, and Channels
 
 You will also need the following audience permissions: 
 
-* Segment read
-* Profile read
-* Dataset read
+* **Segment read**
+* **Profile read**
+* **Dataset read**
 
 Journeys are highly flexible and customizable. Due to the number of objects involved, their permissions are documented separately and can vary based on your particular use case.
 
