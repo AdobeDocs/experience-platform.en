@@ -1,15 +1,15 @@
 ---
-description: Learn how to use the monitoring dashboard to monitor data ingested from sources.
-title: Monitor Dataflows for Sources in the UI
+description: Learn how to use the monitoring dashboard to monitor data ingested into data lake.
+title: Monitor data lake ingestion in the YU
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
 ---
-# Monitor dataflows for sources in the UI
+# Monitor data lake ingestion
 
 >[!IMPORTANT]
 >
 >Streaming sources, such as the [HTTP API source](../../sources/connectors/streaming/http.md) are not currently supported by the monitoring dashboard. At this moment, you can only use the dashboard to monitor batch sources.
 
-Read this document to learn how to use the monitoring dashboard to monitor your sources dataflows in the Experience Platform UI.
+Read this document to learn how to use the monitoring dashboard to monitor data lake ingestion in the Experience Platform UI.
 
 ## Get started {#get-started}
 
@@ -22,7 +22,7 @@ This tutorial requires a working understanding of the following components of Ad
 * [Real-Time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-## Monitor your sources data using the monitoring dashboard
+## Use the monitoring dashboard for data lake ingestion
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
@@ -36,15 +36,11 @@ This tutorial requires a working understanding of the following components of Ad
 >abstract="Sources processing contains information on data activity status and metrics in data lake service, including records ingested and records failed. Review the metric definition guide to learn more about metrics and graphs."
 >text="Learn more in documentation"
 
-<!-- In the [Experience Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** from the left navigation to access the [!UICONTROL Monitoring] dashboard. The [!UICONTROL Monitoring] dashboard contains metrics and information on all sources dataflows, including insights into the health of data traffic from a source to [!DNL Identity Service], and to [!DNL Profile].
+Select **[!UICONTROL Data lake]** from the main header in the monitoring dashboard to view your data lake ingestion rate.
 
-At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which contains metrics and graphs that display data on records ingested and records failed. -->
+![The monitoring dashboard with the sources card selected.](../assets/ui/monitor-sources/data-lake.png)
 
-In the monitoring dashboard, select [!UICONTROL Sources] from the main header to update your dashboard with a display of your sources dataflow ingestion rate.
-
-![The monitoring dashboard with the sources card selected.](../assets/ui/monitor-sources/sources.png)
-
-The [!UICONTROL Ingestion rate] graph displays your data ingestion rate based on your configured time frame. By default, the monitoring dashboard displays ingestion rate from the last 24 hours. For steps on how to configure your time frame, read the guide on [configuring monitoring time frame](monitor.md#configure-monitoring-time-frame).
+The [!UICONTROL Ingestion rate] graph displays your data ingestion rate based on your configured time frame. By default, the monitoring dashboard displays ingestion rates from the last 24 hours. For steps on how to configure your time frame, read the guide on [configuring monitoring time frame](monitor.md#configure-monitoring-time-frame).
 
 The graph is enabled to display by default. To hide the graph, select **[!UICONTROL Metrics and graphs]** to disable the toggle and hide the graph.
 
@@ -126,11 +122,9 @@ Use the [!UICONTROL Records failed] section to view metrics on records that were
 >
 >You may only use error diagnostics if the feature was enabled during the source connection creation process.
 
-![The dataflow run errors panel.](../assets/ui/monitor-sources/errors.png)
-
 ## Next steps {#next-steps}
 
-By following this tutorial, you have successfully monitored the ingestion dataflow from the source-level using the **[!UICONTROL Monitoring]** dashboard. You have also successfully identified errors that contributed to the failure of dataflows during the ingestion process. See the following documents for more details:
+By following this tutorial, you have successfully monitored ingestion rate to data lake using the **[!UICONTROL Monitoring]** dashboard. You have also successfully identified errors that contributed to the failure of dataflows during the ingestion process. See the following documents for more details:
 
 * [Monitoring identity data](./monitor-identities.md).
 * [Monitoring profile data](./monitor-profiles.md).
