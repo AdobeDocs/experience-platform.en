@@ -44,7 +44,6 @@ Experience League is a comprehensive learning platform designed to help you enha
 
 | Destination | Description |
 | --- | --- |
-| [(V2) Pega CDH Realtime Audience connection](/help/destinations/catalog/personalization/pega-v2.md) | Use the [!DNL (V2) Pega Customer Decision Hub Realtime Audience] destination in Adobe Experience Platform to send profile attributes and audience membership data to Pega Customer Decision Hub for next-best-action decisioning, when you have multiple Pega Customer Decision Hub applications configured in your Pega account.|
 | [Marketo Engage Person Sync](/help/destinations/catalog/adobe/marketo-engage-person-sync.md) | Adobe updated the [!DNL Marketo Engage Person Sync] destination to fix an issue that affected customers when multiple emails were present in the identity map.|
 
 **New or updated functionality** {#destinations-new-updated-functionality}
