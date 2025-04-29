@@ -1,12 +1,16 @@
 ---
-title: This Is A Draft
-description: Learn about how and why this is a draft.
+title: Identity Graph Linking Rules Guide Book
+description: 
 ---
-# Draft
+# Identity Graph Linking Rules configurations guide
 
 Read this document to learn about different use cases for Identity Graph Linking Rules.
 
-Customer graph scenarios can be grouped into three different categories: beginner, intermediate, and advanced. 
+Customer graph scenarios can be grouped into three different categories.
+
+* **Beginner**: Beginner-level integrations include graphs that most often include simple implementations. These implementation tend to revolve around a single cross-device namespace (CRMID). While beginner-level integrations are fairly straightforward, graph collapse can still occur, often due to **shared device** scenarios.
+* **Intermediate**: Intermediate-level integrations start to include several variables including multiple CRMIDs, non-unique identities, and multiple unique namespaces.
+* **Advanced**:
 
 | | Beginner | Intermediate | Advanced |
 | --- | --- | --- | --- |
@@ -353,5 +357,15 @@ CRMID: John, Email: john@y, Email_LC_SHA256: john_y_hash
 
 ## Advanced-level integrations {#advanced}
 
-**Namespace priority** is metadata that indicates which namespaces are "stronger" than the others. In the event that a graph would have two identities, each with a unique namespace, Identity Service will use namespace priority to determine which links will be removed. For more information, read the [documentation on namespace priority](../identity-graph-linking-rules/namespace-priority.md).
+**Namespace priority** is metadata that ranks namespaces by their importance. If a graph contains two identities, each with a different unique namespaces, Identity Service uses namespace priority to decide which links to remove. For more information, read the [documentation on namespace priority](../identity-graph-linking-rules/namespace-priority.md).
 
+Namespace priority plays a critical role in complex graph scenarios. Graphs can have multiple layers - an end-user may be associated with multiple login IDs, and these login IDs could be hashed. Additionally, different ECIDs could be linked to different login IDs. In order to ensure that the right link, in the right layer is removed, your namespace priority configurations must be correct. 
+
+For example:
+
+* You are a data architect at a consumer packaged goods (CPG) company that has multiple brand lines. Each brand line has its own corresponding website.
+* John is an end-user represented by a CRMID. John also has three different loginIDs across different websites. Each of these loginIDs are linked to an ECID.
+* Jane is an end-user who has one loginID for one of your websites.
+* In a multi-layered graph structure, there could be several ways in which John and Jane's respective CRMIDs could be merged, including:
+  * The existence of a non-unique login ID due to bad data.
+  * A shared device scenario where John and Jane share the same device to browse your website(s).
