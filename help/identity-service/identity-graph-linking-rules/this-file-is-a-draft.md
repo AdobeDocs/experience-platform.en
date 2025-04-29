@@ -352,3 +352,6 @@ CRMID: John, Email: john@y, Email_LC_SHA256: john_y_hash
 >[!ENDTABS]
 
 ## Advanced-level integrations {#advanced}
+
+**Namespace priority** is metadata that indicates which namespaces are "stronger" than the others. In the event that a graph would have two identities, each with a unique namespace, Identity Service will use namespace priority to determine which links will be removed. For more information, read the [documentation on namespace priority](../identity-graph-linking-rules/namespace-priority.md).
+
