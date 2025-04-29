@@ -1,7 +1,7 @@
 ---
 title: Azure Databricks
 description: Learn about the prerequisite steps needed in order to connect Azure Databricks to Experience Platform.
-last-substantial-update: 2023-04-29
+last-substantial-update: 2025-04-29
 ---
 # [!DNL Azure Databricks]
 
