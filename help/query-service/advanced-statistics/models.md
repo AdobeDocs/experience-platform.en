@@ -10,7 +10,7 @@ exl-id: c609a55a-dbfd-4632-8405-55e99d1e0bd8
 >
 >This functionality is available to customers who have purchased the Data Distiller add on. For more information, contact your Adobe representative.
 
-Query Service now supports the core processes of building and deploying a model. You can use SQL to train the model using your data, evaluate its accuracy, and then apply train model to make predictions on new data. You can then use the model to generalize from your past data to make informed decisions about real-world scenarios.
+Query Service now supports the core processes of building and deploying a model. You can use SQL to train the model using your data, evaluate its accuracy, and then use the trained model to make predictions on new data. You can then use the model to generalize from your past data to make informed decisions about real-world scenarios.
 
 The three steps in the model lifecycle for generating actionable insights are:
 
@@ -69,6 +69,10 @@ To help you understand the key components and configurations in the model creati
 
 Use SQL to reference the dataset used for training.
 
+>[!TIP]
+>
+>For a full reference on the `TRANSFORM` clause, including supported functions and usage across both `CREATE MODEL` and `CREATE TABLE`, see the [`TRANSFORM` clause in the SQL Syntax documentation](../sql/syntax.md#transform).
+
 ## Update a model {#update}
 
 Learn how to update an existing machine learning model by applying new feature engineering transformations and configuring options such as the algorithm type and label column. Each update creates a new version of the model, incremented from the last version. This ensures changes are tracked, and the model can be reused in future evaluation or prediction steps.
@@ -98,6 +102,80 @@ The following notes explain the key components and options in the model update w
 - `UPDATE model <model_alias>`: The update command handles versioning and creates a new model version incremented from the last version.
 - `version`: An optional keyword used only during updates to explicitly specify that a new version should be created. If omitted, the system automatically increments the version.
 
+### Preview and persist transformed features {#preview-transform-output}
+
+Use the `TRANSFORM` clause within `CREATE TABLE` and `CREATE TEMP TABLE` statements to preview and persist the output of feature transformations before model training. This enhancement provides visibility into how transformation functions (such as encoding, tokenization, and vector assembler) are applied to your dataset.
+
+By materializing transformed data into a standalone table, you can inspect intermediate features, validate processing logic, and ensure feature quality before creating a model. This improves transparency across the machine learning pipeline and supports more informed decision-making during model development.
+
+#### Syntax {#syntax}
+
+Use the `TRANSFORM` clause within a `CREATE TABLE` or `CREATE TEMP TABLE` statement as shown below:
+
+```sql
+CREATE TABLE [IF NOT EXISTS] table_name
+[WITH (tableProperties)]
+TRANSFORM (transformFunctionExpression1, transformFunctionExpression2, ...)
+AS SELECT * FROM source_table;
+```
+
+Or:
+
+```sql
+CREATE TEMP TABLE [IF NOT EXISTS] table_name
+[WITH (tableProperties)]
+TRANSFORM (transformFunctionExpression1, transformFunctionExpression2, ...)
+AS SELECT * FROM source_table;
+```
+
+**Example**
+
+Create a table using basic transformations:
+
+```sql
+CREATE TABLE ctas_transform_table
+TRANSFORM(
+  String_Indexer(additional_comments) si_add_comments,
+  one_hot_encoder(si_add_comments) as ohe_add_comments,
+  tokenizer(comments) as token_comments
+)
+AS SELECT * FROM movie_review;
+```
+
+Create a temporary table using additional feature engineering steps:
+
+```sql
+CREATE TEMP TABLE ctas_transform_table
+TRANSFORM(
+  String_Indexer(additional_comments) si_add_comments,
+  one_hot_encoder(si_add_comments) as ohe_add_comments,
+  tokenizer(comments) as token_comments,
+  stop_words_remover(token_comments, array('and','very','much')) stp_token,
+  ngram(stp_token, 3) ngram_token,
+  tf_idf(ngram_token, 20) ngram_idf,
+  count_vectorizer(stp_token, 13) cnt_vec_comments,
+  tf_idf(token_comments, 10, 1) as cmts_idf
+)
+AS SELECT * FROM movie_review;
+```
+
+Then query the output:
+
+```sql
+SELECT * FROM ctas_transform_table LIMIT 1;
+```
+
+#### Important considerations {#considerations}
+
+While this feature enhances transparency and supports feature validation, there are important limitations to consider when using the `TRANSFORM` clause outside of model creation.
+
+- **Vector outputs**: If the transformation generates vector-type outputs, they are automatically converted to arrays.
+- **Batch reuse limitation**: Tables created with `TRANSFORM` can only apply transformations during table creation. New batches of data inserted with `INSERT INTO` are **not automatically transformed**. To apply the same transformation logic to new data, you must recreate the table using a new `CREATE TABLE AS SELECT` (CTAS) statement.
+- **Model reuse limitation**: Tables created using `TRANSFORM` cannot be directly used in `CREATE MODEL` statements. You must redefine the `TRANSFORM` logic during model creation. Transformations that produce vector-type outputs are not supported during model training. For more information, see the [Feature transformation output data types](./feature-transformation.md#available-transformations).
+
+>[!NOTE]
+>
+>This feature is designed for inspection and validation. It is not a substitute for reusable pipeline logic. Any transformations intended for model input must be explicitly redefined in the model creation step.
 
 ## Evaluate models {#evaluate-model}
 
@@ -108,7 +186,7 @@ SELECT *
 FROM   model_evaluate(model-alias, version-number,SELECT col1,
        col2,
        label-COLUMN
-FROM   test -dataset)
+FROM   test_dataset)
 ```
 
 The `model_evaluate` function takes `model-alias` as its first argument and a flexible `SELECT` statement as its second argument. Query Service first executes the `SELECT` statement and maps the results to the `model_evaluate` Adobe Defined Function (ADF). The system expects the column names and data types in the `SELECT` statement's result to match those used in the training step. These column names and data types are treated as test data and label data for evaluation.
@@ -119,21 +197,62 @@ The `model_evaluate` function takes `model-alias` as its first argument and a fl
 
 ## Predict {#predict}
 
-Next, use the `model_predict` keyword to apply the specified model and version to a dataset and generate predictions for the selected columns. The SQL below demonstrates this process, showing how to forecast outcomes using the model's alias and version.
-
-```sql
-SELECT *
-FROM   model_predict(model-alias, version-number,SELECT col1,
-       col2,
-       label-COLUMN
-FROM   dataset)
-```
-
-`model_predict` accepts the model alias as the first argument and a flexible `SELECT` statement as the second argument. Query Service first executes the `SELECT` statement and maps the results to the `model_predict` ADF. The system expects that the column names and data types in the `SELECT` statement's result to match those from the training step. This data is then used for scoring and generating predictions.
-
 >[!IMPORTANT]
 >
->When evaluating (`model_evaluate`) and predicting (`model_predict`), the transformation(s) conducted at the time of training are used.
+>Enhanced column selection and aliasing for `model_predict` are controlled by a feature flag. By default, intermediate fields such as `probability` and `rawPrediction` are not included in the prediction output.  
+>To enable access to these intermediate fields, run the following command before executing `model_predict`:
+>
+>`set advanced_statistics_show_hidden_fields=true;`
+
+Use the `model_predict` keyword to apply the specified model and version to a dataset and generate predictions. You can select all output columns, choose specific ones, or assign aliases to improve output clarity.
+
+By default, only base columns and the final prediction are returned unless the feature flag is enabled.
+
+```sql
+SELECT * FROM model_predict(model-alias, version-number, SELECT col1, col2 FROM dataset);
+```
+
+### Select specific output fields {#select-specific-output-fields}
+
+When the feature flag is enabled, you can retrieve a subset of fields from the `model_predict` output. Use this to retrieve intermediate results, such as prediction probabilities, raw prediction scores, and base columns from the input query.
+
+**Case 1: Return all available output fields**
+
+```sql
+SELECT * FROM model_predict(modelName, 1, SELECT a, b, c FROM dataset);
+```
+
+**Case 2: Return selected columns**
+
+```sql
+SELECT a, b, c, probability, predictionCol FROM model_predict(modelName, 1, SELECT a, b, c FROM dataset);
+```
+
+**Case 3: Return selected columns with aliases**
+
+```sql
+SELECT a, b, c, probability AS p1, predictionCol AS pdc FROM model_predict(modelName, 1, SELECT a, b, c FROM dataset);
+```
+
+In each case, the outer `SELECT` controls which result fields are returned. These include base fields from the input query, along with prediction outputs such as `probability`, `rawPrediction`, and `predictionCol`.
+
+### Persist predictions using CREATE TABLE or INSERT INTO
+
+You can persist predictions using either "CREATE TABLE AS SELECT" or "INSERT INTO SELECT", including prediction outputs if desired.
+
+**Example: Create table with all prediction output fields**
+
+```sql
+CREATE TABLE scored_data AS SELECT * FROM model_predict(modelName, 1, SELECT a, b, c FROM dataset);
+```
+
+**Example: Insert selected output fields with aliases**
+
+```sql
+INSERT INTO scored_data SELECT a, b, c, probability AS p1, predictionCol AS pdc FROM model_predict(modelName, 1, SELECT a, b, c FROM dataset);
+```
+
+This provides flexibility to select and persist only the relevant prediction output fields and base columns for downstream analysis or reporting.
 
 ## Evaluate and manage your models
 
