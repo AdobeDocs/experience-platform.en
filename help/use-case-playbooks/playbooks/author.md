@@ -151,13 +151,76 @@ When creating playbooks, be mindful of the language and content you include. Pla
 
 If a playbook is flagged for inappropriate or offensive content, it is automatically reported to Adobe for review. Adobe then reviews the flagged content, and if it is deemed inappropriate, the customer is notified, and the Playbook is removed.
 
-## Sharing your playbooks
+## Sharing your playbooks across orgs {sharing-playbooks}
 
-Choose one of the published playbook from the **Your playbooks** tab and then select Share playbook from the Playbook overview tab to share it with your partner orgs.  
+Follow these steps to share a playbook from one org to another: 
 
-Note
+1. Log into the source org: Navigate to the org that contains the playbook you want to share. 
+2. Publish the playbook: If you haven't already, proceed to publish the playbook as it cannot be shared otherwise.
+3. Initiate the share: Once published, select **Share Playbook**.
+4. Select the target org: You'll be prompted to select the org you want to share the playbook with.
+5. Confirm and share: After selecting the target org, confirm the action. You'll receive confirmation messages indicating that the playbook has been successfully shared.
+6. Verify the target org: Log into the target org to ensure that the playbook is available.
 
-Create a one way partnership with Sandbox tooling.
+If you cannot find the playbook, ensure that it is published and that the org parternship is active. 
+
+>[!NOTE]
+>
+>A partnership must be established between the source and target orgs in order to share a playbook. To learn more, read the [documentation]() on setting up a connection.
+
+## Required permissions 
+
+To access the sandbox and its associated functionality, you need the following permissions:
+
+1. Sandbox permissions: 
+
+These are necessary to access the sandbox environment where the feature exists: 
+
+* Manage sandbox
+* View sandbox
+
+2. Package sharing permissions: 
+
+These permissions are required for internal sharing functionality:
+
+* Manage package
+* Share package
+
+All of these can be found in the Sandboxes section of the permissions list. 
+
+These permissions will allow you to:
+
+* Enter the sandbox environment
+* Access the feature within the sandbox
+* Manage and share packages as needed
+
+>[!NOTE]
+>
+>No new permissions have been introduced for this feature. All of these are pre-existing and commonly used.
+
+### Journeys and related objects - permissions
+
+When building Journeys that are connected to Playbooks, you may use a wide range of related objects. For example, a Journey can reference Channels, Audiences, Segments, and other entities. Each of these has its own permissions and documentation. 
+
+These are the key permissions for Journey-related actions, such as: 
+
+* View journey
+* Manage journey
+* Permissions related to objects like Segments, Audiences, and Channels
+
+You will also need the following audience permissions: 
+
+* Segment read
+* Profile read
+* Dataset read
+
+Journeys are highly flexible and customizable. Due to the number of objects involved, their permissions are documented separately and can vary based on your particular use case.
+
+## Sharing playbooks across sandboxes
+
+If your IMS org contains multiple sandboxes, you don't need to manually share playbooks across them. Once you create and publish a playbook in one sandbox, it becomes available across all sandboxes within that IMS org. You can then create instances of that playbook in any of the other sandboxes. 
+
+If the playbook references fields that aren't available in the union schema of another sandbox, you may see an error message when trying to create the instance. That message calls out the missing fields, so you can update the schema as needed. 
 
 ## Next steps
 
