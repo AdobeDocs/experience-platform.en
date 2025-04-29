@@ -75,11 +75,11 @@ Use the top header of the dashboard for a cross-service monitoring experience. Y
 
 >[!BEGINTABS]
 
->[!TAB Sources]
+>[!TAB Data lake]
 
-Select **[!UICONTROL Sources]** to view metrics on your sources ingestion rate. Read the guide on [monitoring sources data](monitor-sources.md) for more information.
+Select **[!UICONTROL Data lake]** to view metrics on your data lake ingestion rate. Read the guide on [monitoring data lake ingestion](monitor-sources.md) for more information.
 
-![The monitoring dashboard in the UI with the sources card selected.](../assets/ui/monitor-overview/sources.png)
+![The monitoring dashboard in the UI with the data lake card selected.](../assets/ui/monitor-overview/data-lake.png)
 
 >[!TAB Identities]
 
@@ -127,7 +127,7 @@ When finished, select **[!UICONTROL Apply]**.
 
 By reading this document, you can now navigate your way through the monitoring dashboard in the UI. For information on how to monitor data for a specific Experience Platform service, read the documentation below:
 
-* [Monitor sources data](monitor-sources.md).
+* [Monitor data lake ingestion](monitor-sources.md).
 * [Monitor identity data](monitor-identities.md).
 * [Monitor profile data](monitor-profiles.md).
 * [Monitor audience data](monitor-audiences.md).
