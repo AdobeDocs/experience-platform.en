@@ -195,7 +195,7 @@ No, [Web SDK](../web-sdk/home.md) is not required to activate audiences to [Adob
 
 However, if [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html) is used instead of Web SDK, only next-session personalization is supported.
 
-For [same-page and next-page personalization](ui/activate-edge-personalization-destinations.md) use cases, you must use either [Web SDK](../web-sdk/home.md) or the [Edge Network Server API](../server-api/overview.md). See the documentation on [activating audiences to edge destinations](ui/activate-edge-personalization-destinations.md) for more implementation details.
+For [same-page and next-page personalization](ui/activate-edge-personalization-destinations.md) use cases, you must use either [Web SDK](../web-sdk/home.md) or the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/). See the documentation on [activating audiences to edge destinations](ui/activate-edge-personalization-destinations.md) for more implementation details.
 +++
 
 ### Is there a limit on the number of attributes that I can send from Real-time Customer Data Platform to Adobe Target or a Custom Personalization destination?
@@ -238,10 +238,10 @@ This is currently not supported through the Destinations UI. If you need assista
 When you delete a destination, all audiences and attributes mapped under the destination are deleted from Adobe Target and they are also removed from the Edge Network.
 +++
 
-### Does the integration work using the Edge Network Server API?
+### Does the integration work using the Edge Network API?
 
 +++Answer
-Yes, the Edge Network Server API works with the Custom Personalization destination. Since profile attributes may contain sensitive data, in order to protect this data, the Custom Personalization destination requires you to use the Edge Network Server API for data collection. Furthermore, all API calls must be made in an [authenticated context](../server-api/authentication.md).
+Yes, the Edge Network API works with the Custom Personalization destination. Since profile attributes may contain sensitive data, in order to protect this data, the Custom Personalization destination requires you to use the Edge Network API for data collection. Furthermore, all API calls must be made in an [authenticated context](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/).
 +++
 
 ### I can only have one merge policy that is active-on-edge. Can I build audiences that use a different merge policy and still send them to Adobe Target as streaming audiences?
