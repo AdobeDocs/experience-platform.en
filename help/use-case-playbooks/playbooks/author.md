@@ -165,18 +165,18 @@ If the playbook references fields that aren't available in the union schema of a
 
 Follow these steps to share a playbook from one organization to another: 
 
-1. **Log into the source organization**: Navigate to the organization that contains the playbook you created and want to share. 
-2. **Publish the playbook**: If you haven't already, proceed to publish the playbook as it cannot be shared otherwise.
+* **Log into the source organization**: Navigate to the organization that contains the playbook you created and want to share from the **Your playbooks** tab.
+* **Publish the playbook**: If you haven't already, proceed to publish the playbook as it cannot be shared otherwise.
 
 >[!NOTE]
 >
 >Ensure that a partnership is established between the source and target organizations to facilitate playbook sharing. To learn how, read the documentation on how to [create an organization partnership request](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sharing-packages-across-orgs?lang=en).
 
-3. **Initiate the share**: Once the playbook is published and a partnership is established, select **Share Playbook**.
-4. **Select the target organization**: You'll be prompted to select the organization you want to share the playbook with.
-5. **Confirm and share**: After selecting the target organization, confirm the action. You'll receive confirmation messages indicating that the playbook has been successfully shared.
-6. **Verify the target org**: Log into the target org to ensure that the playbook is available.
-7. **Import the playbook**: Select **Import** to import the playbook in the target organization where you can view it in the **Playbooks** tab.
+* **Initiate the share**: Once the playbook is published and a partnership is established, select **Share Playbook**.
+* **Select the target organization**: You'll be prompted to select the organization you want to share the playbook with.
+* **Confirm and share**: After selecting the target organization, confirm the action. You'll receive confirmation messages indicating that the playbook has been successfully shared.
+* ***Verify the target org**: Log into the target org to ensure that the playbook is available.
+* **Import the playbook**: Select **Import** to import the playbook in the target organization where you can view it in the **Playbooks** tab.
 
 If there are any missing fields from your union schema, they would be highlighted in a dialog box during the import. If you cannot find the playbook, ensure that it is published and that the organization parternship is active.
 
@@ -184,14 +184,14 @@ If there are any missing fields from your union schema, they would be highlighte
 
 To access the sandbox and its associated functionality, you need the following permissions:
 
-1. **Sandbox permissions**: 
+* **Sandbox permissions**: 
 
 These permissions are necessary to access the sandbox environment where the feature exists: 
 
 * **Manage sandbox**
 * **View sandbox**
 
-2. Package sharing permissions: 
+* Package sharing permissions: 
 
 These permissions are required for internal sharing functionality:
 
