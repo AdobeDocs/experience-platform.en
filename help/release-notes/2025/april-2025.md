@@ -4,28 +4,69 @@ description: The April 2025 release notes for Adobe Experience Platform.
 ---
 # Adobe Experience Platform release notes
 
->[!TIP]
->
->
-
 **Release date: April 29, 2025**
 
 Updates to existing features and documentation in Adobe Experience Platform:
 
 - [Experience League](#experience-league)
+- [Destinations](#destinations)
+- [Experience Data Model](#xdm)
 - [Identity Service](#identity)
-- [Query Service]
 - [Real-Time Customer Profile](#profile)
 - [Sources](#sources)
 - [Documentation updates](#documentation-updates)
 
 ## Experience League {#experience-league}
 
+Experience League is a comprehensive learning platform designed to help you enhance your skills with Adobe products. It offers a variety of resources, including: courses, documentation, community pages, events, and access to certifications.
+
 | Feature | Description |
 | --- | --- |
-| Personalized home page | You can now access and customize your very own personalized home page on [Experience League](https://experienceleague.adobe.com/en/home). Navigate to Experience League and sign in with your Adobe credentials to access and start customizing your own personalized home page. Use the following Experience League features to optimize your learning: <ul><li>**Bookmarks**:</li><li>**Customized learning**:</li><li>**Recommendations**:</li><li>**Recently viewed documents**:</li><li>**Learning resources**:</li><li>**What's new**:</li><li>**On-demand info about recent events**:</li></ul> |
+| Personalized home page | Access and customize your personalized home page on [Experience League](https://experienceleague.adobe.com/en/home#). Sign in with your Adobe credentials to start optimizing your learning experience: <ul><li>**Bookmarks**: Use the [!UICONTROL Bookmarks] feature to save and collect your favorite resources in one place. You can save a variety of content, including playlists, articles, and tutorials.</li><li>**Customize your learning**: Enhance your learning experience by updating your Experience League profile with the roles, industries, products, and experience level that best match your needs.</li><li>**Recommendations**: View learning content recommended based on your recent activity.</li><li>**Recently viewed**: Use the [!UICONTROL Recently viewed] section to quickly navigate back to recently viewed content such as documentation and videos.</li><li>**Learning resources**: Use the [!UICONTROL All learning resources] panel to navigate to tutorials, documentation, community, events, and certifications.</li><li>**What's new**: View the [!UICONTROL What's new] section for a stream of the latest content on Experience League.</li><li>**Watch past events on-demand**: Watch previously recorded live streams on product spotlights, use cases, and tutorials with the [!UICONTROL Watch past events on-demand] section.</li></ul><br> ![Export map-type field to enterprise destination.](../2025/assets/april/personalized-home-page.png "Personalized home page on Experience League."){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
+
+## Destinations {#destinations}
+
+[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+
+**New or updated destinations** {#new-updated-destinations}
+
+| Destination | Description |
+| --- | --- |
+| [(V2) Pega CDH Realtime Audience connection](/help/destinations/catalog/personalization/pega-v2.md) | Use the [!DNL (V2) Pega Customer Decision Hub Realtime Audience] destination in Adobe Experience Platform to send profile attributes and audience membership data to Pega Customer Decision Hub for next-best-action decisioning, when you have multiple Pega Customer Decision Hub applications configured in your Pega account.|
+| [Marketo Engage Person Sync](/help/destinations/catalog/adobe/marketo-engage-person-sync.md) | Adobe updated the [!DNL Marketo Engage Person Sync] destination to fix an issue that affected customers when multiple emails were present in the identity map.|
+
+**New or updated functionality** {#destinations-new-updated-functionality}
+
+| Feature | Description |
+| --- | --- |
+| **Weekly** and **Monthly** scheduling options for full file exports | You can now schedule full file exports for people and prospect audiences on a weekly or monthly basis when activating to cloud storage file-based destinations. [Read more](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) about scheduling options. |
+
+{style="table-layout:auto"}
+
+**Fixes, enhancements, and other announcements** {#destinations-fixes-and-enhancements}
+
+- **Enforcement of dataset export end dates delayed to September 1, 2025**  
+As part of the [September 2024 release](/help/release-notes/2024/september-2024.md#destinations-new-updated-functionality), Adobe set a default end date of May 1, 2025, for any dataset export dataflows created *before that release*. Adobe is now extending this enforcement deadline to **September 1, 2025** to provide customers with additional time to update their schedules.
+
+- **Improved handling of failed SFTP transfers for LiveRamp Onboarding**  
+Adobe has implemented a fix for an issue affecting file exports to the [LiveRamp Onboarding](/help/destinations/catalog/advertising/liveramp-onboarding.md) destination via SFTP. Occasionally, file transfers failed due to transient server-side issues, and temporary files from failed attempts remained on the server. These undeletable files blocked subsequent retries, as Adobe did not have permission to overwrite them.  
+With the fix, if a retry attempt cannot delete the temporary file, Adobe will generate a new file with an appended suffix ,`attempt2`, to ensure the retry completes successfully.
+
+## Experience Data Model (XDM) {#xdm}
+
+XDM is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+
+**Updated XDM components**
+
+| Feature | Description |
+| --- | --- |
+| String fields receive a minimum value of one | New string fields are given a minimum length of one by default. Null values for non-required fields are still acceptable. For more information on best practices, read the guide on [best practices for data modeling](../../xdm/schema/best-practices.md#data-integrity-tips) |
+
+{style="table-layout:auto"}
+
+For more information on XDM in Experience Platform, see the [XDM System overview](../../xdm/home.md).
 
 ## Identity Service {#identity}
 
