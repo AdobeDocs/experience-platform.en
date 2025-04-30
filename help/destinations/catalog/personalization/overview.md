@@ -20,6 +20,7 @@ Currently, Experience Platform supports the personalization destinations listed 
 * [Adobe Commerce](adobe-commerce.md)
 * [Custom personalization connection](custom-personalization.md)
 * [Pega Customer Decision Hub connection](pega.md)
+* [(V2) Pega Customer Decision Hub connection](pega.md)
 * [Pega Profile connection](pega-profile.md)
 
 **Extensions**

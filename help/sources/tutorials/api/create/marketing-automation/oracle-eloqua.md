@@ -7,7 +7,7 @@ exl-id: 866e408f-6e0b-4e81-9ad8-9d74c485c89a
 
 >[!WARNING]
 >
->The [!DNL Oracle Eloqua] source will be deprecated at the end of June 2025.
+>The [!DNL Oracle Eloqua] source will be deprecated in January 2026. A new source will be released later this year as an alternative. Once the new source is released, you must plan to migrate to the new source by creating new account connections and dataflows before the end of January 2026.
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 

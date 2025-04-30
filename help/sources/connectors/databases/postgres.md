@@ -1,6 +1,7 @@
 ---
 title: PostgreSQL Source Connector Overview
 description: Learn about the PostgreSQL source on Adobe Experience Platform.
+last-substantial-update: 2025-04-29
 exl-id: 27b891c5-5fc5-4539-8f98-e3a53e2eefe3
 ---
 # [!DNL PostgreSQL]

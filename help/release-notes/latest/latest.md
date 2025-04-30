@@ -1,37 +1,42 @@
 ---
-title: Adobe Experience Platform Release Notes March 2025
-description: The March 2025 release notes for Adobe Experience Platform.
+title: Adobe Experience Platform Release Notes April 2025
+description: The April 2025 release notes for Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 ---
-# Adobe Experience Platform release notes 
+# Adobe Experience Platform release notes
 
-**Release date: March 26, 2025**
+>[!TIP]
+>
+>Refer to the following documentation for release notes of other Adobe Experience Platform applications:
+>
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/latest)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
+
+**Release date: April 29, 2025**
 
 Updates to existing features and documentation in Adobe Experience Platform:
 
-- [Adobe Experience Platform release notes](#adobe-experience-platform-release-notes)
+- [Experience League](#experience-league)
+- [Destinations](#destinations)
+- [Experience Data Model](#xdm)
+- [Identity Service](#identity)
+- [Query Service](#query-service)
+- [Real-Time Customer Profile](#profile)
+- [Sandboxes](#sandboxes)
+- [Sources](#sources)
+- [Use Case Playbooks](#use-case-playbooks)
 
-  - [Dashboards](#dashboards)
-  - [Destinations](#destinations)
-  - [Federated Audience Composition](#federated-audience-composition)
-  - [Segmentation Service](#segmentation-service)
-  - [Sources](#sources)
+## Experience League {#experience-league}
 
-## Dashboards {#dashboards}
-
-Experience Platform provides multiple dashboards through which you can view important insights about your organization's data, as captured during daily snapshots.
-
-**New or updated features**
+Experience League is a comprehensive learning platform designed to help you enhance your skills with Adobe products. It offers a variety of resources, including: courses, documentation, community pages, events, and access to certifications.
 
 | Feature | Description |
-| ------- | ----------- |
-| Metrics-based license usage dashboard | The license usage dashboard now includes a streamlined UI with two tabs: **Metrics** and **Products**. The new **Metrics** tab offers a consolidated view of all trackable license metrics across your purchased products. Each metric includes an inline info icon displaying descriptions and associated products. Users can select Production or Development sandboxes, view historical usage trends in interactive charts, and export sandbox-specific data as CSV files. These updates streamline license tracking and provide clearer insights. Learn more in the [license usage dashboard guide](../../dashboards/guides/license-usage.md) for more details. |
-| Updated prediction frequency | The license usage dashboard now provides more accurate insights into projected consumption by updating usage predictions **weekly** instead of monthly. These forecasts show estimated usage over the next six weeks based on recent trends. This change allows for faster decision-making, earlier intervention, and improved license planning. See the [license usage dashboard guide](../../dashboards/guides/license-usage.md#predicted-usage) for details. |
-| Updated metric descriptions in UI | Metric definitions in the license usage dashboard have been revised for clarity and consistency. You can now view updated descriptions directly in the dashboard using inline info icons next to each metric in the **Metrics** tab. These updates make it easier to understand how metrics are tracked and which products they apply to. See the [license usage dashboard guide](../../dashboards/guides/license-usage.md#available-metrics) for more details. |
+| --- | --- |
+| Personalized home page | AAccess and customize your personalized home page on [Experience League](https://experienceleague.adobe.com/en/home#). Sign in with your Adobe credentials and then select **[!UICONTROL Experience League]** on the top menu to start optimizing your learning experience: <ul><li>**Bookmarks**: Use the [!UICONTROL Bookmarks] feature to save and collect your favorite resources in one place. You can save a variety of content, including playlists, articles, and tutorials.</li><li>**Customize your learning**: Enhance your learning experience by updating your Experience League profile with the roles, industries, products, and experience level that best match your needs.</li><li>**Recommendations**: View learning content recommended based on your recent activity.</li><li>**Recently viewed**: Use the [!UICONTROL Recently viewed] section to quickly navigate back to recently viewed content such as documentation and videos.</li><li>**Learning resources**: Use the [!UICONTROL All learning resources] panel to navigate to tutorials, documentation, community, events, and certifications.</li><li>**What's new**: View the [!UICONTROL What's new] section for a stream of the latest content on Experience League.</li><li>**Watch past events on-demand**: Watch previously recorded live streams on product spotlights, use cases, and tutorials with the [!UICONTROL Watch past events on-demand] section.</li></ul><br> ![Personalized home page on Experience League.](../2025/assets/april/personalized-home-page.png "Personalized home page on Experience League."){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
-
-For more information on dashboards, including how to grant access permissions and create custom widgets, begin by reading the [dashboards overview](../../dashboards/home.md).
 
 ## Destinations {#destinations}
 
@@ -41,37 +46,95 @@ For more information on dashboards, including how to grant access permissions an
 
 | Destination | Description |
 | --- | --- |
-| [Demandbase People connection](/help/destinations/catalog/advertising/demandbase-people.md) | Use the [!DNL Demandbase People] connection to activate profiles for your Demandbase campaigns for audience targeting, personalization, and suppression. |
-| [Bombora account connection](/help/destinations/catalog/advertising/bombora.md) | Use the  [!DNL Bombora] connection to activate profiles for your Bombora campaigns for audience targeting, personalization, and suppression, based on [account audiences](/help/segmentation/types/account-audiences.md). |
-| [Airship Attributes](/help/destinations/catalog/mobile-engagement/airship-attributes.md) upgrade | Starting March 25, 2025, you can see two **[!UICONTROL Airship Attributes]** cards side-by-side in the destinations catalog. This is due to an internal upgrade to the destinations service. The existing **[!UICONTROL Airship Attributes]** destination connector has been renamed to **[!UICONTROL (Deprecated) Airship Attributes]** and a new card with the name **[!UICONTROL Airship Attributes]** is now available to you. <br> Use the **[!UICONTROL Airship Attributes]** connection in the catalog for new activation data flows. If you have any active dataflows to the [!DNL (Deprecated) Airship Attributes] destination, they will be updated automatically, so no action is required from you. <br> If you are creating dataflows through the [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/), you must update your [!DNL flow spec ID] and [!DNL connection spec ID] to the following values: <ul><li> Flow spec ID: `a862e0be-966e-4e5a-80d3-1bb566461986`</li><li> Connection spec ID: `594bc002-4a47-49b7-8a98-ac0d21045502`</li> </ul>|
-
-{style="table-layout:auto"}
+| [Marketo Engage Person Sync](/help/destinations/catalog/adobe/marketo-engage-person-sync.md) | Adobe updated the [!DNL Marketo Engage Person Sync] destination to fix an issue that affected customers when multiple emails were present in the identity map.|
+| [(V2) Pega CDH Realtime Audience connection](/help/destinations/catalog/personalization/pega-v2.md) | Use the [!DNL (V2) Pega Customer Decision Hub Realtime Audience] destination in Adobe Experience Platform to send profile attributes and audience membership data to Pega Customer Decision Hub for next-best-action decisioning, when you have multiple Pega Customer Decision Hub applications configured in your Pega account.|
 
 **New or updated functionality** {#destinations-new-updated-functionality}
 
 | Feature | Description |
 | --- | --- |
-| [Reporting accuracy enhancements for streaming destinations](../../dataflows/ui/monitor-destinations.md) | Starting with March 2025, Adobe is rolling out an update to increase reporting accuracy for streaming destinations. This enhancement ensures a better alignment between the reporting in Experience Platform and the destination platforms. <br> Before this update, **[!UICONTROL Identities failed]** included all activation retries. After this update, only the last activation retry is included in the total count. <br> This enhancement applies to all streaming destinations. <br> Following this enhancement, users of streaming destinations may see an expected drop in their **[!UICONTROL Identities failed]** count. |
-| [Map-type field export support for enterprise and edge destinations](/help/destinations/ui/export-arrays-maps-objects.md) | When exporting data to the [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [HTTP API](/help/destinations/catalog/streaming/http-destination.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), and [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) destinations, you can now select map-type fields for export in the mapping step of the activation workflow. <br> ![Export map-type field to enterprise destination.](../2025/assets/march/export-map.png "Export map-type field to enterprise destination."){width="250" align="center" zoomable="yes"}|
+| **Weekly** and **Monthly** scheduling options for full file exports | You can now schedule full file exports for people and prospect audiences on a weekly or monthly basis when activating to cloud storage file-based destinations. [Read more](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) about scheduling options. |
 
 {style="table-layout:auto"}
 
-For more information, read the [destinations overview](../../destinations/home.md). 
+**Fixes, enhancements, and other announcements** {#destinations-fixes-and-enhancements}
 
-## Federated Audience Composition {#federated-audience-composition}
+- **Enforcement of dataset export end dates delayed to September 1, 2025**  
+As part of the [September 2024 release](/help/release-notes/2024/september-2024.md#destinations-new-updated-functionality), Adobe set a default end date of May 1, 2025, for any dataset export dataflows created *before that release*. Adobe is now extending this enforcement deadline to **September 1, 2025** to provide customers with additional time to update their schedules. Refer to the scheduling section of the [export datasets tutorial](../../destinations/ui/export-datasets.md#schedule-dataset-export) for information on how to edit the end date of a dataset export dataflow.
 
-For information on the latest updates for Federated Audience Composition, read the [dedicated release notes](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes) here.
+- **Improved handling of failed SFTP transfers for LiveRamp Onboarding**  
+Adobe has implemented a fix for an issue affecting file exports to the [LiveRamp Onboarding](/help/destinations/catalog/advertising/liveramp-onboarding.md) destination via SFTP. Occasionally, file transfers failed due to transient server-side issues, and temporary files from failed attempts remained on the server. These undeletable files blocked subsequent retries, as Adobe did not have permission to overwrite them.  
+With the fix, if a retry attempt cannot delete the temporary file, Adobe will generate a new file with an appended suffix ,`attempt2`, to ensure the retry completes successfully.
 
-## Segmentation Service {#segmentation-service}
+## Experience Data Model (XDM) {#xdm}
 
-[!DNL Segmentation Service] defines a particular subset of profiles by describing the criteria that distinguishes a marketable group of people within your customer base. Segments can be based on record data (such as demographic information) or time series events representing customer interactions with your brand.
+XDM is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+
+**Updated XDM components**
+
+| Feature | Description |
+| --- | --- |
+| String fields receive a minimum value of one | New string fields are given a minimum length of one by default. Null values for non-required fields are still acceptable. For more information on best practices, read the guide on [best practices for data modeling](../../xdm/schema/best-practices.md#data-integrity-tips) |
+
+{style="table-layout:auto"}
+
+For more information on XDM in Experience Platform, see the [XDM System overview](../../xdm/home.md).
+
+## Identity Service {#identity}
+
+Use Adobe Experience Platform Identity Service to create a comprehensive view of your customers and their behaviors by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real time.
+
+**Updated features**
+
+| Feature | Description |
+| --- | --- |
+| [!BADGE Limited Availability]{type=Informative} [!DNL Identity Graph Linking Rules] | Identity Graph Linking Rules is now in Limited Availability, and can be accessed by all customers in development sandboxes. <ul><li>**Activation requirements**: The feature will remain inactive until you configure and save your [!DNL Identity Settings]. Without this configuration, the system will continue to operate normally, with no changes in behavior.</li><li>**Important notes**: During this Limited Availability phase, Edge segmentation may produce unexpected segment membership results. However, streaming and batch segmentation will function as expected.</li><li>**Next steps**: For information on how to enable this feature in production sandboxes, please contact your Adobe account team.</li></ul> |
+
+{style="table-layout:auto"}
+
+For more information, read the [[!DNL Identity Graph Linking Rules] documentation](../../identity-service/identity-graph-linking-rules/overview.md).
+
+## Query Service {#query-service}
+
+Query data in the Adobe Experience Platform data lake using standard SQL with Query Service. Seamlessly combine datasets and generate new ones from your query results to power reporting, enable data science workflows, or facilitate ingestion into Real-Time Customer Profile. For example, you can merge customer transaction data with behavioral data to identify high-value audiences for targeted marketing campaigns.
+
+**Updated features**
+
+| Feature | Description |
+| --- | --- |
+| SQL audience overwrite | Refresh audience membership by overwriting existing profiles with the results of a new SQL query. This allows you to manage dynamic audiences more efficiently by removing outdated records and inserting updated ones in a single operation. For more information, see the [SQL audience extension guide](../../query-service/data-distiller-audiences/overview.md#replace-audience). |
+| Download and Copy Query Results | [Download query results directly from the Query Editor](../../query-service/ui/overview.md#download-query-results) as CSV, XLSX, or JSON files, or [copy results to your clipboard](../../query-service/ui/overview.md#copy-results) as comma-separated values (CSV) for quick use in spreadsheet applications like Excel. These enhancements streamline offline analysis, reporting, and data validation workflows. |
+| View Query Results in Full Screen | [Preview query results in a full-screen dialog](../../query-service/ui/overview.md#view-results) to improve readability, easily scan large datasets, and select rows for copying. The full-screen view provides a resizable grid layout, helping you review wide tables and detailed output more efficiently. |
+| Enhanced Column Selection in Model Prediction | Select specific columns and apply aliases using the extended `model_predict` syntax. Retrieve intermediate prediction results such as feature vectors and probability scores. The enhanced selection requires a feature flag activation. See [Model lifecycle documentation](../../query-service/advanced-statistics/models.md#select-specific-output-fields) for syntax examples and feature flag details. |
+| Save Model Prediction Outputs Using CREATE TABLE and INSERT INTO | [Save selected prediction outputs into new tables using CREATE TABLE AS SELECT or insert into existing tables using INSERT INTO SELECT](../../query-service/advanced-statistics/models.md#predict). If enhanced column selection is enabled, intermediate results such as feature vectors and probabilities can also be persisted alongside final predictions. For usage examples, refer to the [SQL syntax documentation](../../query-service/sql/syntax.md#create-table-as-select). |
+
+For more information on [!DNL Query Service], please see the [[!DNL Query Service] overview](../../query-service/home.md).
+
+## Real-Time Customer Profile {#profile}
+
+Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-Time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. Profile allows you to consolidate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
 
 | Feature | Description |
 | ------- | ----------- |
-| Account Audience Builder enhancements | Within Audience Builder, you can now filter attributes to only display populated attributes as well as view summary data for these populated attributes. More information on these enhancements can be found in the [Audience Builder](../../rtcdp/segmentation/audience-builder.md) documentation. |
-| Flexible audience evaluation general availability | Flexible audience evaluation is now generally available! You can use flexible audience evaluation to create new audiences on demand for time-sensitive communications. More information about flexible audience evaluation can be found in the [flexible audience evaluation overview](../../segmentation/methods/flexible-audience-evaluation.md). |
+| Pseudonymous profile data expiration | Manage your Pseudonymous profile data expiration in the Profile dashboard. To learn more about this feature and Pseudonymous Profiles, please read the [Pseudonymous Profile data expiration guide](../../profile/pseudonymous-profiles.md). |
 
-For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md).
+{style="table-layout:auto"}
+
+To learn more about Real-Time Customer Profile, read the [Profile overview](../../profile/home.md)
+
+## Sandboxes {#sandboxes}
+
+Adobe Experience Platform is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater for the development, testing, and deployment of these applications while ensuring operational compliance. To address this need, Experience Platform provides sandboxes that partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| Sandbox tooling plugin support expansion | Custom actions can now be copied as a dependent object when duplicating Journey objects in sandbox tooling. Additionally, you can select existing actions to reuse in the target sandbox. They can also be added to a package independently. For complete information on supported Adobe Journey Optimizer objects, read the [sandbox tooling](../../sandboxes/ui/sandbox-tooling.md#adobe-journey-optimizer-objects) guide. |
+
+{style="table-layout:auto"}
+
+For more information on sandboxes, read the [sandboxes overview](../../sandboxes/home.md).
 
 ## Sources {#sources}
 
@@ -83,8 +146,8 @@ Use sources in Experience Platform to ingest data from an Adobe application or a
 
 | Feature | Description |
 | --- | --- |
-| [!DNL Bombora Intent] | The [!DNL Bombora Intent] source is now available in the sources catalog. Use this source to: <ul><li>Integrate Bombora's Company Surge Intent data to identify accounts actively researching your products or services.</li><li>Prioritize in-market accounts to create precise segments and execute hyper-targeted ABM campaigns, ensuring your marketing efforts focus on those account most likely to convert.</li><li>Leverage intent-driven strategies to optimize ad spend, boost engagement, and maximize ROI.</li></ul> For more information, read the guide on [connecting your [!DNL Bombora] account to Experience Platform](../../sources/tutorials/ui/create/data-partners/bombora.md). |
-| [!DNL Demandbase Intent] | The [!DNL Demandbase Intent]¸ source is now available in the sources catalog. Use this source to: <ul><li>Integrate Demandbase's Account Intent data to identify high-interest accounts based on real-time engagements.</li><li>By prioritizing the strongest intent signals, you can create precise segments and deliver hyper-targeted campaigns to ensure that your marketing efforts focus on accounts most likely to convert.</li><li>Activate intent-driven strategies to enable optimization of ad spend, increased engagement, and higher ROI.</li></ul> For more information, read the guide on [connecting your [!DNL Demandbase] account to Experience Platform](../../sources/tutorials/ui/create/data-partners/demandbase.md). |
+| [!BADGE Beta]{type=Informative} [!DNL Algolia User Profiles] | The [[!DNL Algolia User Profiles]](../../sources/connectors/data-partners/algolia-user-profiles.md) source is now available. Use this source to bring your [!DNL Algolia] user profiles affinities data to Experience Platform. You can then use this data to improve user engagement, conversion rates, and overall customer experience by providing high-performance search solutions for websites, e-commerce platforms, and applications. For more information, read the guide on how to [ingest [!DNL Algolia User Profiles] data to Experience Platform](../../sources/tutorials/ui/create/data-partners/algolia-user-profiles.md). |
+| [!BADGE Beta]{type=Informative} API support for [!DNL Azure Databricks] | The [!DNL Azure Databricks] source is now available in the API. Use the [!DNL Flow Service] API to connect your [!DNL Databricks] account and bring your [!DNL Databricks] data to Experience Platform. For more information read the documentation on [[!DNL Azure Databricks]](../../sources/connectors/databases/databricks.md). |
 
 {style="table-layout:auto"}
 
@@ -92,11 +155,28 @@ Use sources in Experience Platform to ingest data from an Adobe application or a
 
 | Feature | Description |
 | --- | --- |
-| Enhancements to the [!DNL Google Ads] source | You can now use the [[!DNL Google Ads] source](../../sources/connectors/advertising/ads.md) to ingest aggregate data. You can use the [!DNL Google Ads Query Builder] to specify the attributes, segments, and resources that you want to ingest to Experience Platform. For more information, read the guide on [connecting your [!DNL Google Ads] account to Experience Platform](../../sources/tutorials/ui/create/advertising/ads.md). |
-| Enhancements to the [!DNL Microsoft Dynamics] source | You can now specify the primary key of a given [!DNL Microsoft Dynamics] table when exploring the contents and structure of your data. Use this feature to optimize your queries with the [!DNL Microsoft Dynamics] source. For more information, read the guide on [connecting your [!DNL Microsoft Dynamics] source to Experience Platform using the API](../../sources/tutorials/api/create/crm/ms-dynamics.md). |
-| Support for API key authentication in Self-Serve Sources (Batch SDK) | You can now use API key authentication as an authentication type when integrating a new source with Self-Serve Sources (Batch SDK). For more information, read the guide on [configuring your auth spec in Batch SDK](../../sources/sources-sdk/config/authspec.md). |
-| Support for attribute-based access control in sources | You can now use attribute-based access control functions against your sources dataflows. Read the following guides for more information: <ul><li>[Apply labels to your sources dataflows using the API](../../sources/tutorials/api/labels.md)</li><li>[Apply labels to your sources dataflows using the UI](../../sources/tutorials/ui/labels.md). |
+| Updated XDM fields for ingesting Streaming Media data into Experience Platform. | The new XDM field group, `mediaReporting`, is now available for ingesting Streaming Media data via the Adobe Analytics source into Experience Platform. This field replaces the `media.mediaTimed` field.</br> <br>During a transitional period of three months, data ingestion on `media.mediaTimed` fields will continue. However, at the end of July 2025, the `media.mediaTimed` fields will be fully deprecated and no longer visible in the Experience Platform Schema UI, and data will only be sent using the `mediaReporting` fields.</br><br>If have you implemented the Analytics source to collect Streaming Media data into Platform before April 22, 2025, then you must migrate your existing configurations to send data using the new field group. This migration must be complete by the end of July 2025. Contact your Adobe Account Team for migration support. |
+| New authentication types for [!DNL MariaDB] and [!DNL PostgreSQL] | You can now use basic authentication to authenticate your [!DNL MariaDB] and [!DNL PostgreSQL] sources on Experience Platform. Read the following documentation for more information: <ul><li>[[!DNL MariaDB]](../../sources/connectors/databases/mariadb.md)</li><li>[[!DNL PostgreSQL]](../../sources/connectors/databases/postgres.md) |
+| Row-level filtering support for [!DNL Amazon Redshift] | You can use row-level filtering capabilities for your [!DNL Amazon Redshift] data on Experience Platform. For more information, read the guide on [filtering row-level data for sources in the API](../../sources/tutorials/api/filter.md). |
 
 {style="table-layout:auto"}
 
 For more information, read the [sources overview](../../sources/home.md).
+
+## Use Case Playbooks {#use-case-playbooks}
+
+Use Case Playbooks were originally designed to help overcome challenges when getting started with Real-Time Customer Data Platform or Adobe Journey Optimizer. They continue to evolve, and now enable you to jumpstart key marketing use cases and provide inspiration and pre-built assets to test and move into production.
+
+Use Case Playbooks have transitioned from a discovery tool into a collaborative framework. They now help you build, manage, and share your own playbooks across different organizations.
+
+**Updated features**
+
+| Feature | Description |
+| --- | --- |
+| [!BADGE Beta]{type=Informative} Author and share your own playbooks | A new Playbook Authoring Framework enables you to create, manage, and share your own use case playbooks. This includes support for capturing key metadata, editing journey maps, and associating relevant technical assets. You can share Playbooks across organizations to standardize marketing approaches and maintain consistency. |
+
+{style="table-layout:auto"}
+
+To learn how you can author and share your own playbooks, read the [Author and share your own playbooks](/help/use-case-playbooks/playbooks/author.md) document.
+
+For more information, read the [Use Case Playbooks overview](/help/use-case-playbooks/playbooks/overview.md), which provides an overview of the playbooks' functionality, their purpose, and an end-to-end demonstration, including how to create instances and import generated assets into other sandbox environments.
