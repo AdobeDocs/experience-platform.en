@@ -24,6 +24,7 @@ Updates to existing features and documentation in Adobe Experience Platform:
 - [Query Service](#query-service)
 - [Real-Time Customer Profile](#profile)
 - [Sources](#sources)
+- [Use Case Playbooks](#use-case-playbooks)
 
 ## Experience League {#experience-league}
 
@@ -144,3 +145,21 @@ Use sources in Experience Platform to ingest data from an Adobe application or a
 {style="table-layout:auto"}
 
 For more information, read the [sources overview](../../sources/home.md).
+
+## Use Case Playbooks {#use-case-playbooks}
+
+Use Case Playbooks were originally designed to help overcome challenges when getting started with Real-Time Customer Data Platform or Adobe Journey Optimizer. They continue to evolve, and now enable you to jumpstart key marketing use cases and provide inspiration and pre-built assets to test and move into production.
+
+Use Case Playbooks have transitioned from a discovery tool into a collaborative framework—empowering you to build, manage, and share your own playbooks across different organizations.
+
+**Updated features**
+
+| Feature | Description |
+| --- | --- |
+| [!BADGE Beta]{type=Informative} Author and share your own playbooks | A new AI-powered Playbook Authoring Framework enables users to create, manage, and share their own use case playbooks. This includes support for capturing key metadata, editing journey maps, and associating relevant technical assets. Playbooks can be shared across organizations to standardize marketing approaches and maintain consistency. |
+
+{style="table-layout:auto"}
+
+To learn how you can author and share your own playbooks, read the [Author and share your own playbooks](/help/use-case-playbooks/playbooks/author.md) document.
+
+For more information, read the [Use Case Playbooks overview](/help/use-case-playbooks/playbooks/overview.md), which provides an overview of the playbooks' functionality, their purpose, and an end-to-end demonstration, including how to create instances and import generated assets into other sandbox environments.
