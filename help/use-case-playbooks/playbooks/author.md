@@ -12,7 +12,7 @@ The [!DNL Playbook Authoring Framework], powered by AI Assistant in Adobe Experi
 
 The framework follows a three-step process:
 
-1. **Metadata capture**: Use AI Assistant or the [webform] to capture playbook metadata.
+1. **Metadata capture**: Use AI Assistant or the webform to capture playbook metadata.
 
 2. **Technical association**: Add specific technical assets such as journeys or audiences to the playbook. You retain full control over the playbook creation process within your development sandbox, ensuring alignment with your schemas and other unique data structures.
 
@@ -20,7 +20,7 @@ The framework follows a three-step process:
 
 ## Create a Playbook
 
-You can create a playbook in two ways: either using the AI Assistant or manually. Read the following sections to learn how.
+You can create a playbook in two ways: either using the AI Assistant or manually. Read the following sections to learn how to create a playbook with AI Assistant.
 
 ### Playbook overview
 
@@ -34,9 +34,9 @@ Select **[!UICONTROL New Playbook]**, and then select **Generate playbook with A
 
 ![The playbook interface with "Generate playbook with AI Assistant" selected.](/help/use-case-playbooks/assets/playbooks/authoring/generate-playbook.png)
 
-In the prompt field, describe the use case. 
+Use the prompt field to describe the use case. For example: 
 
-**Example**: "Engage ACME customers who browsed running shoes but did not complete the purchase."
+"Engage ACME customers who browsed running shoes but did not complete the purchase."
 
 ![The playbook interface with the webform area highlighted.](/help/use-case-playbooks/assets/playbooks/authoring/prompt.png)
 
@@ -108,7 +108,7 @@ The AI Assistant can process various prompt structures and extract key details w
 
 "Create a campaign titled "Complete the Look" in order to increase sales and CLV. The campaign encourages customers purchased kitchenware or furniture to complete a complementary purchase via personalized recommendations and offers related to their purchase. First message the customers with product recommendations. If they don't make any purchases within 7 days, they receive a second message with product recommendations and offers. Use push notifications and email to contact the customers. Target customers who made a purchase in last 7 days in kitchenware or furniture category and have not been targeted in last 30 days. As part of the campaign, we want to measure KPIs such as clicks (email, app,sms, push), CTR, E-Wallet CTR, AOV Conversion.CLV Revenue, Total Purchase events (in-store, digital, call center)."
 
-![Example 1 prompt](/help/use-case-playbooks/assets/playbooks/authoring/example-prompt.png)
+![Example showing a long prompt in the text input box](/help/use-case-playbooks/assets/playbooks/authoring/long-prompt.png)
 
 **Example 2:**
 
@@ -120,20 +120,20 @@ Project channels/Touchpoints: Email
 Target audience: Customers who have subscribed to ACME fashion newsletter communications.
 Target KPIs/Engagement Metrics/ROI: 1. Increase Revenue from Products. 2. Drive Customer loyalty."
 
-![Example 2 prompt](/help/use-case-playbooks/assets/playbooks/authoring/example-2-prompt.png)
+![Example showing an organized prompt in the text input box](/help/use-case-playbooks/assets/playbooks/authoring/organized-list-prompt.png)
 
 **Example 3:**
 
 "Nudge shoppers to buy products during an ongoing product promotional campaign. 
 Engage with shoppers during an ongoing promotion by sending appropriate communication through email, SMS, or push notifications to buy products. Send them a reminder email after 24 hours of them not engaging with the promotion."
 
-![Example 3 prompt](/help/use-case-playbooks/assets/playbooks/authoring/example-3-prompt.png)
+![Example showing a concise prompt in the text input box](/help/use-case-playbooks/assets/playbooks/authoring/concise-prompt.png)
 
 **Example 4:**
 
 "Sell shoes to high school players."
 
-![Example 4 prompt](/help/use-case-playbooks/assets/playbooks/authoring/example-4-prompt.png)
+![Example showing a one-liner prompt](/help/use-case-playbooks/assets/playbooks/authoring/one-liner-prompt.png)
 
 The AI Assistant removes all unnecessary details such as "Project Name" or "Background." It extracts the key elements such as "target audience", "campaign goal", and "marketing channel" and works with any input style.
 
@@ -151,6 +151,85 @@ When creating playbooks, be mindful of the language and content you include. Pla
 
 If a playbook is flagged for inappropriate or offensive content, it is automatically reported to Adobe for review. Adobe then reviews the flagged content, and if it is deemed inappropriate, the customer is notified, and the Playbook is removed.
 
+## Sharing playbooks across sandboxes {#sharing-playbooks-sandboxes}
+
+If your organization contains multiple sandboxes, you don't need to manually share playbooks across them. Once you create and publish a playbook in one sandbox, it becomes available across all sandboxes within that organization. You can then create instances of that playbook in any of the other sandboxes.
+
+If the playbook references fields that aren't available in the union schema of another sandbox, you may see an error message when trying to create the instance. That message calls out the missing fields, so you can update the schema as needed. 
+
+>[!IMPORTANT]
+>
+>Transitive playbook sharing is not supported. If you share a playbook from one organization to another and then import it, it cannot be shared again from the receiving organization to a third organization.
+
+## Sharing your playbooks across organizations {#sharing-playbooks-organizations}
+
+To share a playbook from one organization to another, follow these steps: 
+
+* **Log into the source organization**: Navigate to the organization that contains the playbook you created and want to share from the **[!UICONTROL Your playbooks]** tab.
+* **Publish the playbook**: If the playbook isn't already published, you must publish it before sharing.
+
+>[!NOTE]
+>
+>A partnership must be established between the source and target organizations to enable playbook sharing. Learn how to [create an organization partnership request](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sharing-packages-across-orgs).
+
+* **Initiate the share**: Once the playbook is published and a partnership is established, select **[!UICONTROL Share Playbook]**.
+* **Select the target organization**: Choose the organization you want to share the playbook with when prompted.
+* **Confirm and share**: Confirm your selection. You will receive confirmation messages indicating successful sharing.
+* ***Verify the target organization**: Log into the target organization to verify that the playbook is available.
+* **Import the playbook**: Select **[!UICONTROL Import]** to bring the playbook into the target organization. You can view it in the **Playbooks** tab.
+
+If any fields are missing from your union schema, a dialog box will highlight them during the import. 
+
+![Fields missing from the union schema listed during the import process](/help/use-case-playbooks/assets/playbooks/authoring/missing-fields.png)
+
+If the playbook doesn't appear, ensure it is published and that the organization parternship is active.
+
+## Required permissions 
+
+To access the sandbox and use this feature, you need the following permissions:
+
+* **Sandbox permissions**: 
+
+These are required to access the sandbox environment where the feature exists: 
+
+* **Manage sandbox**
+* **View sandbox**
+
+* **Package sharing permissions**: 
+
+These permissions are required for internal sharing functionality:
+
+* [**Manage package**](/help/sandboxes/ui/sandbox-tooling.md)
+* [**Share package**](/help/sandboxes/ui/sharing-packages-across-orgs.md)
+
+These permissions will allow you to:
+
+* Enter the sandbox environment
+* Access the feature within the sandbox
+* Manage and share packages as needed
+
+These permissions are located in the **[!UICONTROL Sandboxes]** section of the permissions list. 
+
+![The permissions list with the relevant permissions highlighted.](/help/use-case-playbooks/assets/playbooks/authoring/permissions.png)
+
+### Journeys and related objects - permissions
+
+When building Journeys that use Playbooks, you'll likely reference other objects such as **Channels**, **Audiences**, and other entities. Each of these has its own permission set. 
+
+These are the key permissions for Journey-related actions, such as: 
+
+* **View journey**
+* **Manage journey**
+* Permissions related to objects like Audiences, and Channels
+
+You will also need the following audience permissions: 
+
+* **Segment read**
+* **Profile read**
+* **Dataset read**
+
+As Journeys are highly flexible and can involve many interconnected objects, their [full permissions](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/privacy/high-low-permissions) are documented separately and can vary based on your particular use case.
+
 ## Next steps
 
-Now that you understand how to create and publish playbooks using the AI Assistant, learn how to get started with the available playbooks and choose the right one for your use case from [Playbooks List](/help/use-case-playbooks/playbooks/choose.md).
+Now that you understand how to create, publish and share playbooks using the AI Assistant, learn how to get started with the available playbooks and choose the right one for your use case from [Playbooks List](/help/use-case-playbooks/playbooks/choose.md).
