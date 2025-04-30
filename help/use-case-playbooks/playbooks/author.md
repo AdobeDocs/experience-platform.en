@@ -127,7 +127,7 @@ Target KPIs/Engagement Metrics/ROI: 1. Increase Revenue from Products. 2. Drive 
 "Nudge shoppers to buy products during an ongoing product promotional campaign. 
 Engage with shoppers during an ongoing promotion by sending appropriate communication through email, SMS, or push notifications to buy products. Send them a reminder email after 24 hours of them not engaging with the promotion."
 
-![Example showing an concise prompt in the text input box](/help/use-case-playbooks/assets/playbooks/authoring/concise-prompt.png)
+![Example showing a concise prompt in the text input box](/help/use-case-playbooks/assets/playbooks/authoring/concise-prompt.png)
 
 **Example 4:**
 
@@ -155,6 +155,8 @@ If a playbook is flagged for inappropriate or offensive content, it is automatic
 
 If your organization contains multiple sandboxes, you don't need to manually share playbooks across them. Once you create and publish a playbook in one sandbox, it becomes available across all sandboxes within that organization. You can then create instances of that playbook in any of the other sandboxes. 
 
+![]()
+
 If the playbook references fields that aren't available in the union schema of another sandbox, you may see an error message when trying to create the instance. That message calls out the missing fields, so you can update the schema as needed. 
 
 >[!IMPORTANT]
@@ -165,18 +167,18 @@ If the playbook references fields that aren't available in the union schema of a
 
 To share a playbook from one organization to another, follow these steps: 
 
-* **Log into the source organization**: Navigate to the organization that contains the playbook you created and want to share from the **Your playbooks** tab.
+* **Log into the source organization**: Navigate to the organization that contains the playbook you created and want to share from the **[!UICONTROL Your playbooks]** tab.
 * **Publish the playbook**: If the playbook isn't already published, you must publish it before sharing.
 
 >[!NOTE]
 >
 >A partnership must be established between the source and target organizations to enable playbook sharing. Learn how to [create an organization partnership request](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sharing-packages-across-orgs?lang=en).
 
-* **Initiate the share**: Once the playbook is published and a partnership is established, select **Share Playbook**.
+* **Initiate the share**: Once the playbook is published and a partnership is established, select **[!UICONTROL Share Playbook]**.
 * **Select the target organization**: Choose the organization you want to share the playbook with when prompted.
 * **Confirm and share**: Confirm your selection. You will receive confirmation messages indicating successful sharing.
 * ***Verify the target organization**: Log into the target organization to verify that the playbook is available.
-* **Import the playbook**: Select **Import** to bring the playbook into the target organization. You can view it in the **Playbooks** tab.
+* **Import the playbook**: Select **[!UICONTROL Import]** to bring the playbook into the target organization. You can view it in the **Playbooks** tab.
 
 If any fields are missing from your union schema, a dialog box will highlight them during the import. 
 
@@ -206,23 +208,19 @@ These permissions will allow you to:
 * Access the feature within the sandbox
 * Manage and share packages as needed
 
-These permissions are located in the **Sandboxes** section of the permissions list. 
+These permissions are located in the **[!UICONTROL Sandboxes]** section of the permissions list. 
 
 ![The permissions list with the relevant permissions for this feature highlighted.](/help/use-case-playbooks/assets/playbooks/authoring/permissions.png)
 
->[!NOTE]
->
->All the permissions listed above are pre-existing and commonly used.
-
 ### Journeys and related objects - permissions
 
-When building Journeys that use Playbooks, you'll likely reference other objects such as **Channels**, **Audiences**, **Segments**, and other entities. Each of these has its own permission set. 
+When building Journeys that use Playbooks, you'll likely reference other objects such as **Channels**, **Audiences**, and other entities. Each of these has its own permission set. 
 
 These are the key permissions for Journey-related actions, such as: 
 
 * **View journey**
 * **Manage journey**
-* Permissions related to objects like Segments, Audiences, and Channels
+* Permissions related to objects like Audiences, and Channels
 
 You will also need the following audience permissions: 
 
@@ -234,4 +232,4 @@ As Journeys are highly flexible and can involve many interconnected objects, the
 
 ## Next steps
 
-Now that you understand how to create and publish playbooks using the AI Assistant, learn how to get started with the available playbooks and choose the right one for your use case from [Playbooks List](/help/use-case-playbooks/playbooks/choose.md).
+Now that you understand how to create, publish and share playbooks using the AI Assistant, learn how to get started with the available playbooks and choose the right one for your use case from [Playbooks List](/help/use-case-playbooks/playbooks/choose.md).
