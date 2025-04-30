@@ -22,6 +22,8 @@ Before diving in to the following document, ensure that you familiarize yourself
 * [Unique namespace](overview.md#unique-namespace)
 * [Graph Simulation](graph-simulation.md)
 
+### Section on frequently used terms
+
 <!-- | | Beginner | Intermediate | Advanced |
 | --- | --- | --- | --- |
 | Graph collapse because of shared device | ✔️ |  ✔️ |  ✔️ |
