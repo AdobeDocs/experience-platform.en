@@ -175,7 +175,7 @@ To share a playbook from one organization to another, follow these steps:
 * **Initiate the share**: Once the playbook is published and a partnership is established, select **[!UICONTROL Share Playbook]**.
 * **Select the target organization**: Choose the organization you want to share the playbook with when prompted.
 * **Confirm and share**: Confirm your selection. You will receive confirmation messages indicating successful sharing.
-* ***Verify the target organization**: Log into the target organization to verify that the playbook is available.
+* **Verify the target organization**: Log into the target organization to verify that the playbook is available.
 * **Import the playbook**: Select **[!UICONTROL Import]** to bring the playbook into the target organization. You can view it in the **Playbooks** tab.
 
 If any fields are missing from your union schema, a dialog box will highlight them during the import. 
