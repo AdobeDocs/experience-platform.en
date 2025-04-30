@@ -16,11 +16,11 @@ Customer graph scenarios can be grouped into three different categories.
 
 Before diving in to the following document, ensure that you familiarize yourself with several important concepts of Identity Service and [!DNL Identity Graph Linking Rules].
 
-* [Identity Service overview]
-* [[!DNL Identity Graph Linking Rules] overview]
-* [Namespace priority]
-* [Unique namespace]
-* [Graph simulation]
+* [Identity Service overview](../home.md)
+* [[!DNL Identity Graph Linking Rules] overview](../identity-graph-linking-rules/namespace-priority.md)
+* [Namespace priority](namespace-priority.md)
+* [Unique namespace](overview.md#unique-namespace)
+* [Graph Simulation](graph-simulation.md)
 
 <!-- | | Beginner | Intermediate | Advanced |
 | --- | --- | --- | --- |
@@ -33,7 +33,7 @@ Before diving in to the following document, ensure that you familiarize yourself
 
 ## Beginner-level integrations {#beginner}
 
-Read this section for beginner-level integrations of Identity Graph Linking Rules.
+Read this section for beginner-level integrations of [!DNL Identity Graph Linking Rules].
 
 ### Simple implementation with one cross-device namespace.
 
@@ -50,7 +50,7 @@ CRMID: John, ECID: 999, IDFA: a-b-c
 
 **Algorithm configuration**
 
-Configure the following settings in the Graph Simulation interface before simulating your graph.
+Configure the following settings in the Graph Simulation interface before you simulate your graph.
 
 | Unique namespace | Namespace priority |
 | --- | --- |
@@ -67,13 +67,13 @@ Configure the following settings in the Graph Simulation interface before simula
 
 +++Select to view simulated graph
 
-![A simple implementation with one cross-device namespace..](../images/configs/simple-implementation.png)
+![A simple implementation with one cross-device namespace..](../images/configs/beginner/simple-implementation.png)
 
 +++
 
 ### Exercise
 
-Simulate the following configuration in the graph simulation tool. You can either create your own events, or copy and paste using text mode.
+Simulate the following configuration in Graph Simulation. You can either create your own events, or copy and paste using text mode.
 
 >[!BEGINTABS]
 
@@ -81,10 +81,9 @@ Simulate the following configuration in the graph simulation tool. You can eithe
 
 **Shared device (PC)**
 
-* You are a data architect at e-commerce company called "ACME".
-* John and Jane live together in San Jose, California. They share a desktop computer and use this computer to browse your website.
+You are a data architect at an e-commerce company called **ACME**. John and Jane are your customers. They are end-users who live together in San Jose, California. They share a desktop computer and use this computer to browse your website.
 
-You can implement this use case in the graph simulation tool by creating your own events or inputting the following in text mode:
+You can implement this use case in Graph Simulation by creating your own events or inputting the following in text mode:
 
 **Text mode:**
 
@@ -97,7 +96,7 @@ CRMID: Jane, ECID: 111
 
 +++Select to view simulated graph
 
-![A simulated graph for a shared device (PC).](../images/configs/shared-device-pc.png)
+![A simulated graph for a shared device (PC).](../images/configs/beginner/shared-device-pc.png)
 
 +++
 
@@ -120,7 +119,7 @@ CRMID: Jane, ECID: 111, IDFA: a-b-c
 
 +++Select to view simulated graph
 
-![A simulated graph for a shared device (mobile).](../images/configs/shared-device-mobile.png)
+![A simulated graph for a shared device (mobile).](../images/configs/beginner/shared-device-mobile.png)
 
 +++
 
@@ -140,13 +139,13 @@ Authenticated events are tied to the person and unauthenticated events are tied 
 
 ## Intermediate-level integrations {#intermediate}
 
-Read this section for intermediate-level integrations of Identity Graph Linking Rules.
+Read this section for intermediate-level integrations of [!DNL Identity Graph Linking Rules].
 
 ### Simple implementation with non-unique identities
 
 >[!TIP]
 >
->What is a non-unique identity?
+>A **non-unique identity** is an identity associated with a non-unique namespace. 
 
 You are a data architect working for a commercial bank that issues credit cards. Your marketing team has indicated that they want to include past credit card transaction history to a profile. This identity graph could look like the following.
 
@@ -176,23 +175,23 @@ Ensure that you have have the following configuration before you simulate the ev
 
 +++Select to view simulated graph
 
-![Image of the simulated graph](../images/configs/simple-implementation-non-unique.png)
+![Image of the simulated graph](../images/configs/beginner/simple-implementation-non-unique.png)
 
 +++
 
-However, there are no guarantees that these credit card numbers, or any other non-unique namespaces, will always be associated to one single person. Two people may register the same credit card, there may be non-unique dummy values that may be ingested. Simply put, non-unique namespaces will cause two CRMIDs to collapse.
+However, there are no guarantees that these credit card numbers, or any other non-unique namespaces, will always be associated to one single person. Two people may register the same credit card, there may be non-unique placeholder values that may be ingested. Simply put, non-unique namespaces will cause two CRMIDs to collapse.
 
-To solve this issue, Identity Service removes the oldest links and retains the most recent links. This ensures that you just have one CRMID in a graph, thereby preventing scenarios of graph collapse.
+To solve this issue, Identity Service removes the oldest links and retains the most recent links. This ensures that you just have one CRMID in a graph, thereby preventing graph collapse.
 
 ### Exercise
 
-Simulate the following configurations in the graph simulation tool. You can either create your own events, or copy and paste using text mode.
+Simulate the following configurations in Graph Simulation. You can either create your own events, or copy and paste using text mode.
 
 >[!BEGINTABS]
 
->[!TAB Scenario one]
+>[!TAB Two end-users with the same credit card]
 
-A credit card number is registered by two end-users. Your marketing team wants to prevent graph collapse and wants that credit card to be associated with just a single profile. 
+Two different end-users sign up for your e-commerce website with the same credit card. Your marketing team wants to prevent graph collapse by ensuring that the credit card is associated with just one single profile.
 
 **Text mode:**
 
@@ -207,11 +206,11 @@ CRMID: Jane, ECID:456
 
 +++Select to view simulated graph
 
-![The simulated graph.]
+![A graph where two end-users sign up with the same credit card.](../images/configs/intermediate/graph-with-same-credit-card.png)
 
 +++
 
->[!TAB Scenario two]
+>[!TAB Invalid credit card number]
 
 Due to unclean data, an invalid credit card number is ingested into Experience Platform.
 
@@ -228,7 +227,7 @@ CRMID: Jill, CChash: undefined
 
 +++Select to view simulated graph
 
-![The simulated graph.]
+![A graph where a hashing issues results in an invalid credit card.](../images/configs/intermediate/graph-with-invalid-credit-card.png)
 
 +++
 
@@ -250,7 +249,7 @@ Ensure that you have have the following configuration before you simulate the ev
 
 **Exercise**
 
-Simulate the following configurations in the graph simulation tool. You can either create your own events, or copy and paste using text mode.
+Simulate the following configurations in Graph Simulation. You can either create your own events, or copy and paste using text mode.
 
 >[!BEGINTABS]
 
@@ -267,6 +266,8 @@ CRMIDhash: John, ECID: 111
 CRMIDhash: Jane, ECID: 111
 ```
 
+![placeholder](../images/configs/intermediate/shared-device-hashed-crmid.png)
+
 >[!TAB Scenario 2: bad data]
 
 Due to errors in the hashing process, a non-unique hashed CRMID is generated and sent to Identity Service.
@@ -277,6 +278,8 @@ Due to errors in the hashing process, a non-unique hashed CRMID is generated and
 CRMID: John, CRMIDhash: aaaa
 CRMID: Jane, CRMIDhash: aaaa
 ```
+
+![A shared device graph with an error in the hashing process, leading to a non-unique hashed CRMID.](../images/configs/intermediate/hashing-error.png)
 
 >[!ENDTABS]
 
@@ -308,6 +311,8 @@ CRMID: John, ECID: 111
 CRMID: Jane, ECID: 111
 ```
 
+![A graph that displays two authenticated members who share a device.](../images/configs/intermediate/shared-device-two-members.png)
+
 >[!TAB Shared device between two guests]
 
 In this scenario, two guests share the same device to browse an e-commerce website.
@@ -318,6 +323,8 @@ In this scenario, two guests share the same device to browse an e-commerce websi
 Email: john@g, ECID: 111
 Email: jane@g, ECID: 111
 ```
+
+![A graph that displays two guests who share a device.](../images/configs/intermediate/shared-device-two-guests.png)
 
 >[!TAB Shared device between a member and a guest]
 
@@ -331,6 +338,7 @@ CRMID: John, ECID: 111
 Email: jane@g, ECID: 111
 ```
 
+![A graph that displays a member and a guest who share a device.](../images/configs/intermediate/shared-device-member-and-guest.png)
 
 >[!ENDTABS]
 
@@ -359,8 +367,11 @@ In this scenario, John and Jane both log in to an e-commerce website.
 ```json
 CRMID: John, Email: john@g, Email_LC_SHA256: john_hash 
 CRMID: Jane, Email: jane@g, Email_LC_SHA256: jane_hash 
-CRMID: John, ECID: 111 CRMID: Jane, ECID: 111
+CRMID: John, ECID: 111 
+CRMID: Jane, ECID: 111
 ```
+
+![A graph that displays two end-users who log in to your website using the same device.](../images/configs/intermediate/two-end-users-log-ing.png)
 
 >[!TAB An end-user changes their email]
 
@@ -370,6 +381,8 @@ CRMID: John, ECID: 111 CRMID: Jane, ECID: 111
 CRMID: John, Email: john@g, Email_LC_SHA256: john_hash
 CRMID: John, Email: john@y, Email_LC_SHA256: john_y_hash
 ```
+
+![A graph that displays an end-user who has changed their email.](../images/configs/intermediate/end-user-changes-email.png)
 
 >[!ENDTABS]
 
