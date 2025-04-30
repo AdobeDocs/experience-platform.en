@@ -155,11 +155,11 @@ If a playbook is flagged for inappropriate or offensive content, it is automatic
 
 If your organization contains multiple sandboxes, you don't need to manually share playbooks across them. Once you create and publish a playbook in one sandbox, it becomes available across all sandboxes within that organization. You can then create instances of that playbook in any of the other sandboxes.
 
-If the playbook references fields that aren't available in the union schema of another sandbox, you may see an error message when trying to create the instance. That message calls out the missing fields, so you can update the schema as needed. 
+If the playbook references fields that aren't available in the union schema of the target sandbox or lack the requisite permissions, you may see an error message when trying to create the instance. That message calls out the missing fields and/or missing permissions.
 
->[!IMPORTANT]
->
->Transitive playbook sharing is not supported. If you share a playbook from one organization to another and then import it, it cannot be shared again from the receiving organization to a third organization.
+If any fields are missing from your union schema, a dialog box will highlight them during the import. 
+
+![Fields missing from the union schema listed during the import process](/help/use-case-playbooks/assets/playbooks/authoring/missing-fields.png)
 
 ## Sharing your playbooks across organizations {#sharing-playbooks-organizations}
 
@@ -175,14 +175,14 @@ To share a playbook from one organization to another, follow these steps:
 * **Initiate the share**: Once the playbook is published and a partnership is established, select **[!UICONTROL Share Playbook]**.
 * **Select the target organization**: Choose the organization you want to share the playbook with when prompted.
 * **Confirm and share**: Confirm your selection. You will receive confirmation messages indicating successful sharing.
-* ***Verify the target organization**: Log into the target organization to verify that the playbook is available.
+* **Verify the target organization**: Log into the target organization to verify that the playbook is available.
 * **Import the playbook**: Select **[!UICONTROL Import]** to bring the playbook into the target organization. You can view it in the **Playbooks** tab.
 
-If any fields are missing from your union schema, a dialog box will highlight them during the import. 
-
-![Fields missing from the union schema listed during the import process](/help/use-case-playbooks/assets/playbooks/authoring/missing-fields.png)
-
 If the playbook doesn't appear, ensure it is published and that the organization parternship is active.
+
+>[!IMPORTANT]
+>
+>Transitive playbook sharing is not supported. If you share a playbook from one organization to another and then import it, it cannot be shared again from the receiving organization to a third organization.
 
 ## Required permissions 
 
