@@ -24,6 +24,7 @@ Updates to existing features and documentation in Adobe Experience Platform:
 - [Identity Service](#identity)
 - [Query Service](#query-service)
 - [Real-Time Customer Profile](#profile)
+- [Sandboxes](#sandboxes)
 - [Sources](#sources)
 - [Use Case Playbooks](#use-case-playbooks)
 
@@ -120,6 +121,20 @@ Adobe Experience Platform enables you to drive coordinated, consistent, and rele
 {style="table-layout:auto"}
 
 To learn more about Real-Time Customer Profile, read the [Profile overview](../../profile/home.md)
+
+## Sandboxes {#sandboxes}
+
+Adobe Experience Platform is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater for the development, testing, and deployment of these applications while ensuring operational compliance. To address this need, Experience Platform provides sandboxes that partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| Sandbox tooling plugin support expansion | Custom actions can now be copied as a dependent object when duplicating Journey objects in sandbox tooling. Additionally, you can select existing actions to reuse in the target sandbox. They can also be added to a package independently. For complete information on supported Adobe Journey Optimizer objects, read the [sandbox tooling](../../sandboxes/ui/sandbox-tooling.md#adobe-journey-optimizer-objects) guide. |
+
+{style="table-layout:auto"}
+
+For more information on sandboxes, read the [sandboxes overview](../../sandboxes/home.md).
 
 ## Sources {#sources}
 
