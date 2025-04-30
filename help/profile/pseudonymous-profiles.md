@@ -132,3 +132,4 @@ For a typical use case, you can set your Experience Event data expiration based 
 ## Next steps
 
 After reading this guide, you know how to view and create Pseudonymous profile data expirations. For more information on data management on Experience Platform as a whole, please read the [Data management license entitlement best practices guide](../landing/license-usage-and-guardrails/data-management-best-practices.md).
+
