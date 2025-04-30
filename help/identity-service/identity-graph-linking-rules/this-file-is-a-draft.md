@@ -10,16 +10,26 @@ Customer graph scenarios can be grouped into three different categories.
 
 * **Beginner**: Beginner-level integrations include graphs that most often include simple implementations. These implementation tend to revolve around a single cross-device namespace (CRMID). While beginner-level integrations are fairly straightforward, graph collapse can still occur, often due to **shared device** scenarios.
 * **Intermediate**: Intermediate-level integrations start to include several variables including multiple CRMIDs, non-unique identities, and multiple unique namespaces.
-* **Advanced**:
+* **Advanced**: Advanced-level integrations involve complex and multi-layered graph scenarios. Advanced integrations will include significant usage of **namespace priority** in order to identify the correct links to remove and prevent instances of graph collapse.
 
-| | Beginner | Intermediate | Advanced |
+## Get started
+
+Before diving in to the following document, ensure that you familiarize yourself with several important concepts of Identity Service and [!DNL Identity Graph Linking Rules].
+
+* [Identity Service overview]
+* [[!DNL Identity Graph Linking Rules] overview]
+* [Namespace priority]
+* [Unique namespace]
+* [Graph simulation]
+
+<!-- | | Beginner | Intermediate | Advanced |
 | --- | --- | --- | --- |
 | Graph collapse because of shared device | ✔️ |  ✔️ |  ✔️ |
 | Graph collapse because of non-unique identities | n/a | ✔️ | ✔️ |
 | Use of namespace priority | n/a | n/a | ✔️ |
 | Customer graph scenarios | Simple implementation with one cross-device namespace | <ul><li>Simple implementation with additional graph collapse scenarios due to non-unique identifiers.</li><li>Hashed/unhashed(online/offline) CRMIDs.</li><li>Customers using Real-Time CDP and Adobe Commerce</li><li>Three unique namespaces.</li></ul> | <ul><li>Support for multiple lines of businesses.</li><li>Complex implementation.</li></ul> |
 
-{style="table-layout:auto"}
+{style="table-layout:auto"} -->
 
 ## Beginner-level integrations {#beginner}
 
@@ -27,7 +37,7 @@ Read this section for beginner-level integrations of Identity Graph Linking Rule
 
 ### Simple implementation with one cross-device namespace.
 
-Generally, Adobe customers have a single cross-device ID that is used across all of their properties including, web, mobile, and applications. This system is both industry and geographically agnostic as customers in retail, telecom, and financial services use this type of implementation.
+Generally, Adobe customers have a single cross-device namespace that is used across all of their properties including, web, mobile, and applications. This system is both industry and geographically agnostic as customers in retail, telecom, and financial services use this type of implementation.
 
 An end-user is represented by a CRMID, therefore the CRMID should be classified as a unique namespace. An end-user who owns a computer or an [!DNL iPhone] and does not share their device, could have an identity graph like the following.
 
@@ -134,6 +144,10 @@ Read this section for intermediate-level integrations of Identity Graph Linking 
 
 ### Simple implementation with non-unique identities
 
+>[!TIP]
+>
+>What is a non-unique identity?
+
 You are a data architect working for a commercial bank that issues credit cards. Your marketing team has indicated that they want to include past credit card transaction history to a profile. This identity graph could look like the following.
 
 **Text mode:**
@@ -221,6 +235,10 @@ CRMID: Jill, CChash: undefined
 >[!ENDTABS]
 
 ### Hashed or unhashed CRMIDs
+
+>[!TIP]
+>
+>What is a hashed CRMID? What is an unhashed CRMID?
 
 Your customer is ingesting both an unhashed (offline) CRMID and a hashed (online) CRMID. They expect a direct relationship between both unhashed and hashed CRMIDs. However, when a user browses with an authenticated account, the hashed CRMID is sent along with the device ID (represented on Identity Service as an ECID).
 
@@ -369,3 +387,38 @@ For example:
 * In a multi-layered graph structure, there could be several ways in which John and Jane's respective CRMIDs could be merged, including:
   * The existence of a non-unique login ID due to bad data.
   * A shared device scenario where John and Jane share the same device to browse your website(s).
+
+### Experience events
+
+Experience events, which typically send online web behavior events, usually contain the following data:
+
+* **IdentityMap**: a set of identities keyed by namespace.
+* **Events**: The user activity (purchase shoes, browse socks, etc.)
+
+An authenticated event typically has an identityMap of `{CRMID, ECID}`. This scenario means that an authenticated person (CRMID), is browsing  your website using a device (ECID). 
+
+An unauthenticated event typically has an identityMap that only contains an `{ECID}`. This means that someone (unknown to the system) is browsing a device (ECID).
+
+### Primary identity
+
+The primary identity is the key that stores events. If the primary identity of an experience event is the CRMID, then the event is tied to the end-user.
+
+### Tying experience events and the primary identity together
+
+For a given experience event, the identity with the highest namespace priority is the primary identity. 
+
+| Namespace | Entity representation | Namespace priority |
+| --- | --- | --- |
+| CRMID | End-user | 1 |
+| IDFA | Apple hardware (iPhone, iPad, etc.) | 2 |
+| GAID | Google hardware (Google Pixel, etc.) | 3 |
+| ECID | Web browser (Firefox, Safari, Google Chrome, etc.) | 4 |
+| AAID | Web browser (Firefox, Safari, Google Chrome, etc.) | 5 |
+
+| User action (Experience event) | Authentication state | Data source | IdentityMap | Primary identity |
+| --- | --- | --- | --- | --- |
+| View credit card offer page |
+| View help page |
+| View checking account balance |
+| Sign up for home loan |
+| Transfer $1000 from checking to savings account |
