@@ -151,11 +151,9 @@ When creating playbooks, be mindful of the language and content you include. Pla
 
 If a playbook is flagged for inappropriate or offensive content, it is automatically reported to Adobe for review. Adobe then reviews the flagged content, and if it is deemed inappropriate, the customer is notified, and the Playbook is removed.
 
-## Sharing playbooks across sandboxes
+## Sharing playbooks across sandboxes {#sharing-playbooks-sandboxes}
 
-If your organization contains multiple sandboxes, you don't need to manually share playbooks across them. Once you create and publish a playbook in one sandbox, it becomes available across all sandboxes within that organization. You can then create instances of that playbook in any of the other sandboxes. 
-
-![]()
+If your organization contains multiple sandboxes, you don't need to manually share playbooks across them. Once you create and publish a playbook in one sandbox, it becomes available across all sandboxes within that organization. You can then create instances of that playbook in any of the other sandboxes.
 
 If the playbook references fields that aren't available in the union schema of another sandbox, you may see an error message when trying to create the instance. That message calls out the missing fields, so you can update the schema as needed. 
 
@@ -163,7 +161,7 @@ If the playbook references fields that aren't available in the union schema of a
 >
 >Transitive playbook sharing is not supported. If you share a playbook from one organization to another and then import it, it cannot be shared again from the receiving organization to a third organization.
 
-## Sharing your playbooks across organizations {#sharing-playbooks}
+## Sharing your playbooks across organizations {#sharing-playbooks-organizations}
 
 To share a playbook from one organization to another, follow these steps: 
 
@@ -172,7 +170,7 @@ To share a playbook from one organization to another, follow these steps:
 
 >[!NOTE]
 >
->A partnership must be established between the source and target organizations to enable playbook sharing. Learn how to [create an organization partnership request](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sharing-packages-across-orgs?lang=en).
+>A partnership must be established between the source and target organizations to enable playbook sharing. Learn how to [create an organization partnership request](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sharing-packages-across-orgs).
 
 * **Initiate the share**: Once the playbook is published and a partnership is established, select **[!UICONTROL Share Playbook]**.
 * **Select the target organization**: Choose the organization you want to share the playbook with when prompted.
@@ -181,6 +179,8 @@ To share a playbook from one organization to another, follow these steps:
 * **Import the playbook**: Select **[!UICONTROL Import]** to bring the playbook into the target organization. You can view it in the **Playbooks** tab.
 
 If any fields are missing from your union schema, a dialog box will highlight them during the import. 
+
+![Fields missing from the union schema listed during the import process](/help/use-case-playbooks/assets/playbooks/authoring/missing-fields.png)
 
 If the playbook doesn't appear, ensure it is published and that the organization parternship is active.
 
@@ -199,8 +199,8 @@ These are required to access the sandbox environment where the feature exists:
 
 These permissions are required for internal sharing functionality:
 
-* **Manage package**
-* **Share package**
+* [**Manage package**](/help/sandboxes/ui/sandbox-tooling.md)
+* [**Share package**](/help/sandboxes/ui/sharing-packages-across-orgs.md)
 
 These permissions will allow you to:
 
@@ -210,7 +210,7 @@ These permissions will allow you to:
 
 These permissions are located in the **[!UICONTROL Sandboxes]** section of the permissions list. 
 
-![The permissions list with the relevant permissions for this feature highlighted.](/help/use-case-playbooks/assets/playbooks/authoring/permissions.png)
+![The permissions list with the relevant permissions highlighted.](/help/use-case-playbooks/assets/playbooks/authoring/permissions.png)
 
 ### Journeys and related objects - permissions
 
@@ -228,7 +228,7 @@ You will also need the following audience permissions:
 * **Profile read**
 * **Dataset read**
 
-As Journeys are highly flexible and can involve many interconnected objects, their full permissions are documented separately and can vary based on your particular use case.
+As Journeys are highly flexible and can involve many interconnected objects, their [full permissions](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/privacy/high-low-permissions) are documented separately and can vary based on your particular use case.
 
 ## Next steps
 
