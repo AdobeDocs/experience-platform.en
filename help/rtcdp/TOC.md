@@ -41,7 +41,7 @@ role: Admin
 * Guardrails {#guardrails}
   * [Real-Time CDP guardrails overview](guardrails/overview.md)
   * [Guardrails for data ingestion](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
-  * [Guardrails for the [!DNL Edge Network Server API]](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/guardrails.html){target="_blank"}
+  * [Guardrails for the [!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/){target="_blank"}
   * [Guardrails for [!DNL Real-Time Customer Profile] data and segmentation](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html){target="_blank"}
   * [Guardrails for [!DNL Identity Service] data](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
   * [Guardrails for [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
@@ -74,7 +74,7 @@ role: Admin
     * [Engage and acquire new customers without dependency on third-party cookies](/help/rtcdp/partner-data/prospecting.md)  
     * [Personalize onsite experiences for unknown visitors using partner-aided visitor recognition](/help/rtcdp/partner-data/onsite-personalization.md)
     * [Offsite retargeting of unauthenticated users](./partner-data/offsite-retargeting.md)
-    * [Offsite retargeting of unauthenticated users](./partner-data/unauthenticated-retargeting.md)
+    * [Unauthenticated server-side retargeting](./partner-data/unauthenticated-retargeting.md)
   * Profile enrichment {#profile-enrichment}
     * [Supplement first-party profiles with partner-provided attributes](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
   * Personalized insights and engagement {#personalization-insights-engagement}

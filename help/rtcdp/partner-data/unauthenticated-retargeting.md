@@ -1,9 +1,10 @@
 ---
-title: Offsite retargeting of unauthenticated visitors
+title: Unauthenticated server-side retargeting
 description: Learn how to retarget unauthenticated users by using ECIDs
 feature: Use Cases, Customer Acquisition
+exl-id: 008f4534-29e7-49b9-b0be-9e0c3962ee21
 ---
-# Unauthenticated retargeting {#unauthenticated-retargeting}
+# Unauthenticated server-side retargeting {#unauthenticated-retargeting}
 
 As third-party cookies lose effectiveness, businesses are transitioning to cookie-less solutions for personalized engagement and retargeting. Offsite retargeting enables businesses to reach high-intent users based on their previous interactions, without relying on client-side JavaScript. 
 
