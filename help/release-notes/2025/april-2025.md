@@ -151,13 +151,13 @@ For more information, read the [sources overview](../../sources/home.md).
 
 Use Case Playbooks were originally designed to help overcome challenges when getting started with Real-Time Customer Data Platform or Adobe Journey Optimizer. They continue to evolve, and now enable you to jumpstart key marketing use cases and provide inspiration and pre-built assets to test and move into production.
 
-Use Case Playbooks have transitioned from a discovery tool into a collaborative framework—empowering you to build, manage, and share your own playbooks across different organizations.
+Use Case Playbooks have transitioned from a discovery tool into a collaborative framework. They now help you build, manage, and share your own playbooks across different organizations.
 
 **Updated features**
 
 | Feature | Description |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} Author and share your own playbooks | A new AI-powered Playbook Authoring Framework enables users to create, manage, and share their own use case playbooks. This includes support for capturing key metadata, editing journey maps, and associating relevant technical assets. Playbooks can be shared across organizations to standardize marketing approaches and maintain consistency. |
+| [!BADGE Beta]{type=Informative} Author and share your own playbooks | A new Playbook Authoring Framework enables you to create, manage, and share your own use case playbooks. This includes support for capturing key metadata, editing journey maps, and associating relevant technical assets. You can share Playbooks across organizations to standardize marketing approaches and maintain consistency. |
 
 {style="table-layout:auto"}
 
