@@ -109,17 +109,21 @@ Below is an example of correct identity mapping when exporting profiles to [!DNL
 ## Exported data / Validate data export {#exported-data}
 
 A successful audience membership update for a profile would insert the audience identifier, name and statuses in the Pega marketing audience membership datastore. The membership data is associated to a customer using Customer Profile Designer in [!DNL Pega Customer Decision Hub], as shown below.
+
 ![Image of the UI screen where you can associate Adobe Audience Membership data to Customer, using Customer Profile Designer](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
 
 The audience membership data is used in Pega Next-Best-Action Designer Engagement polices for next-best-action decisioning, as shown below.
-![Image of the UI screen where you can add Audience membership fields as conditions in Engagement Policies of Pega Next-Best-Action Designer](../../assets/catalog/personalization/pega/pega-profile-designer-engagment.png)
+
+![Image of the UI screen where you can add Audience membership fields as conditions in Engagement Policies of Pega Next-Best-Action Designer](../../assets/catalog/personalization/pega/pega-profile-designer-engagement.png)
 
 The customer audience membership data fields are added as predictors in Adaptive models, as shown below.
+
 ![Image of the UI screen where you can add Audience membership fields as predicators in Adaptive models, using Prediction Studio](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
 
 ## Additional resources {#additional-resources}
 
 Refer to the following [!DNL Pega] documentation for more information:
+
 * [Setting up an OAuth 2.0 client registration](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html)
 * [Creating a real-time run for data flows](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html)
 * [Manage customer records in Customer Profile Designer](https://docs.pega.com/bundle/customer-decision-hub/page/customer-decision-hub/implement/profile-designer-data-management.html)
