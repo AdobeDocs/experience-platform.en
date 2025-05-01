@@ -151,11 +151,13 @@ When creating playbooks, be mindful of the language and content you include. Pla
 
 If a playbook is flagged for inappropriate or offensive content, it is automatically reported to Adobe for review. Adobe then reviews the flagged content, and if it is deemed inappropriate, the customer is notified, and the Playbook is removed.
 
-## Sharing playbooks across sandboxes {#sharing-playbooks-sandboxes}
+## Share playbooks across sandboxes {#share-playbooks-sandboxes}
 
-If your organization contains multiple sandboxes, you don't need to manually share playbooks across them. Once you create and publish a playbook in one sandbox, it becomes available across all sandboxes within that organization. You can then create instances of that playbook in any of the other sandboxes.
+When you create and publish a playbook in one sandbox, it automatically becomes available across all sandboxes within your organization. This eliminates the need for manual sharing and allows you to create instances of the playbook in any other sandbox seamlessly.
 
-If the playbook references fields that aren't available in the union schema of the target sandbox or lack the requisite permissions, you may see an error message when trying to create the instance. That message calls out the missing fields and/or missing permissions.
+>[!TIP]
+>
+>If the playbook references fields that aren't available in the union schema of the target sandbox or lack the requisite permissions, you may see an error message when trying to create the instance. That message calls out the missing fields and/or missing permissions.
 
 If any fields are missing from your union schema, a dialog box will highlight them during the import. 
 
@@ -163,34 +165,34 @@ If any fields are missing from your union schema, a dialog box will highlight th
 
 ## Sharing your playbooks across organizations {#sharing-playbooks-organizations}
 
-To share a playbook from one organization to another, follow these steps: 
+Sharing playbooks across organizations helps ensure consistency and efficiency when multiple teams need to follow the same best practices. To share a playbook from one organization to another, follow these steps: 
 
-* **Log into the source organization**: Navigate to the organization that contains the playbook you created and want to share from the **[!UICONTROL Your playbooks]** tab.
-* **Publish the playbook**: If the playbook isn't already published, you must publish it before sharing.
+1. **Log into the source organization**: Navigate to the organization that contains the playbook you created and want to share from the **[!UICONTROL Your playbooks]** tab.
+2. **Publish the playbook**: If the playbook isn't already published, you must publish it before sharing.
 
->[!NOTE]
->
->A partnership must be established between the source and target organizations to enable playbook sharing. Learn how to [create an organization partnership request](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sharing-packages-across-orgs).
+    >[!NOTE]
+    >
+    >A partnership must be established between the source and target organizations to enable playbook sharing. Learn how to [create an organization partnership request](/help/sandboxes/ui/sharing-packages-across-orgs.md#create-an-organization-partnership-request).
 
-* **Initiate the share**: Once the playbook is published and a partnership is established, select **[!UICONTROL Share Playbook]**.
-* **Select the target organization**: Choose the organization you want to share the playbook with when prompted.
-* **Confirm and share**: Confirm your selection. You will receive confirmation messages indicating successful sharing.
-* **Verify the target organization**: Log into the target organization to verify that the playbook is available.
-* **Import the playbook**: Select **[!UICONTROL Import]** to bring the playbook into the target organization. You can view it in the **Playbooks** tab.
+3. **Initiate the share**: Once the playbook is published and a partnership is established, select **[!UICONTROL Share Playbook]**.
+4. **Select the target organization**: Choose the organization you want to share the playbook with when prompted.
+5. **Confirm and share**: Confirm your selection. You will receive confirmation messages indicating successful sharing.
+6. **Verify the target organization**: Log into the target organization to verify that the playbook is available.
+7. **Import the playbook**: Select **[!UICONTROL Import]** to bring the playbook into the target organization. You can view it in the **Playbooks** tab.
 
-If the playbook doesn't appear, ensure it is published and that the organization parternship is active.
+If the playbook doesn't appear, ensure it is published and that the organization partnernship is active.
 
 >[!IMPORTANT]
 >
 >Transitive playbook sharing is not supported. If you share a playbook from one organization to another and then import it, it cannot be shared again from the receiving organization to a third organization.
 
-## Required permissions 
+## Required permissions {#required-permissions} 
 
 To access the sandbox and use this feature, you need the following permissions:
 
-* **Sandbox permissions**: 
+### Sandbox permissions 
 
-These are required to access the sandbox environment where the feature exists: 
+These permissions are required to access the sandbox environment where the feature exists: 
 
 * **Manage sandbox**
 * **View sandbox**
