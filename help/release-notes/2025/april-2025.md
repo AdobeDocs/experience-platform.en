@@ -24,7 +24,9 @@ Updates to existing features and documentation in Adobe Experience Platform:
 - [Identity Service](#identity)
 - [Query Service](#query-service)
 - [Real-Time Customer Profile](#profile)
+- [Sandboxes](#sandboxes)
 - [Sources](#sources)
+- [Use Case Playbooks](#use-case-playbooks)
 
 ## Experience League {#experience-league}
 
@@ -45,6 +47,7 @@ Experience League is a comprehensive learning platform designed to help you enha
 | Destination | Description |
 | --- | --- |
 | [Marketo Engage Person Sync](/help/destinations/catalog/adobe/marketo-engage-person-sync.md) | Adobe updated the [!DNL Marketo Engage Person Sync] destination to fix an issue that affected customers when multiple emails were present in the identity map.|
+| [(V2) Pega CDH Realtime Audience connection](/help/destinations/catalog/personalization/pega-v2.md) | Use the [!DNL (V2) Pega Customer Decision Hub Realtime Audience] destination in Adobe Experience Platform to send profile attributes and audience membership data to Pega Customer Decision Hub for next-best-action decisioning, when you have multiple Pega Customer Decision Hub applications configured in your Pega account.|
 
 **New or updated functionality** {#destinations-new-updated-functionality}
 
@@ -119,6 +122,20 @@ Adobe Experience Platform enables you to drive coordinated, consistent, and rele
 
 To learn more about Real-Time Customer Profile, read the [Profile overview](../../profile/home.md)
 
+## Sandboxes {#sandboxes}
+
+Adobe Experience Platform is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater for the development, testing, and deployment of these applications while ensuring operational compliance. To address this need, Experience Platform provides sandboxes that partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| Sandbox tooling plugin support expansion | Custom actions can now be copied as a dependent object when duplicating Journey objects in sandbox tooling. Additionally, you can select existing actions to reuse in the target sandbox. They can also be added to a package independently. For complete information on supported Adobe Journey Optimizer objects, read the [sandbox tooling](../../sandboxes/ui/sandbox-tooling.md#adobe-journey-optimizer-objects) guide. |
+
+{style="table-layout:auto"}
+
+For more information on sandboxes, read the [sandboxes overview](../../sandboxes/home.md).
+
 ## Sources {#sources}
 
 Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
@@ -145,3 +162,21 @@ Use sources in Experience Platform to ingest data from an Adobe application or a
 {style="table-layout:auto"}
 
 For more information, read the [sources overview](../../sources/home.md).
+
+## Use Case Playbooks {#use-case-playbooks}
+
+Use Case Playbooks were originally designed to help overcome challenges when getting started with Real-Time Customer Data Platform or Adobe Journey Optimizer. They continue to evolve, and now enable you to jumpstart key marketing use cases and provide inspiration and pre-built assets to test and move into production.
+
+Use Case Playbooks have transitioned from a discovery tool into a collaborative framework. They now help you build, manage, and share your own playbooks across different organizations.
+
+**Updated features**
+
+| Feature | Description |
+| --- | --- |
+| [!BADGE Beta]{type=Informative} Author and share your own playbooks | A new Playbook Authoring Framework enables you to create, manage, and share your own use case playbooks. This includes support for capturing key metadata, editing journey maps, and associating relevant technical assets. You can share Playbooks across organizations to standardize marketing approaches and maintain consistency. |
+
+{style="table-layout:auto"}
+
+To learn how you can author and share your own playbooks, read the [Author and share your own playbooks](/help/use-case-playbooks/playbooks/author.md) document.
+
+For more information, read the [Use Case Playbooks overview](/help/use-case-playbooks/playbooks/overview.md), which provides an overview of the playbooks' functionality, their purpose, and an end-to-end demonstration, including how to create instances and import generated assets into other sandbox environments.
