@@ -48,7 +48,7 @@ Once generated, select **[!UICONTROL Edit]** to modify the generated title, desc
 
 ![A generated playbook with the "Edit" button highlighted, allowing users to modify metadata.](/help/use-case-playbooks/assets/playbooks/authoring/edit.png)
 
-To ensure the data engineers have all the necessary details to set up the use case, fill out the **[!UICONTROL Playbook detail]** section. While optional, these fields help capture key information, making it easier to connect the right technical components. Select **[!UICONTROL Edit]** to add values to the following fields:
+To ensure that the data engineers have all the necessary details to set up the use case, fill out the **[!UICONTROL Playbook detail]** section. While optional, these fields help capture key information, making it easier to connect the right technical components. Select **[!UICONTROL Edit]** to add values to the following fields:
 
 * **Industry**
 * **Target audience**
@@ -102,11 +102,11 @@ You can select any playbook from the catalog to create instances for reuse. Refe
 
 ## Example prompts 
 
-The AI Assistant can process various prompt structures and extract key details while filtering out unnecessary information. Below are some examples of user prompts and how they are interpreted by the system:
+The AI Assistant can process various prompt structures and extract key details while filtering out unnecessary information. Below are some examples of user prompts and how the system interprets them. 
 
 **Example 1:**
 
-"Create a campaign titled "Complete the Look" in order to increase sales and CLV. The campaign encourages customers purchased kitchenware or furniture to complete a complementary purchase via personalized recommendations and offers related to their purchase. First message the customers with product recommendations. If they don't make any purchases within 7 days, they receive a second message with product recommendations and offers. Use push notifications and email to contact the customers. Target customers who made a purchase in last 7 days in kitchenware or furniture category and have not been targeted in last 30 days. As part of the campaign, we want to measure KPIs such as clicks (email, app,sms, push), CTR, E-Wallet CTR, AOV Conversion.CLV Revenue, Total Purchase events (in-store, digital, call center)."
+"Create a campaign titled "Complete the Look" in order to increase sales and CLV. The campaign encourages customers purchased kitchenware or furniture to complete a complementary purchase via personalized recommendations and offers related to their purchase. First message the customers with product recommendations. If they don't make any purchases within 7 days, they receive a second message with product recommendations and offers. Use push notifications and email to contact the customers. Target customers who made a purchase in last 7 days in kitchenware or furniture category and have not been targeted in last 30 days. As part of the campaign, we want to measure KPIs such as clicks (email, app, sms, push), CTR, E-Wallet CTR, AOV Conversion.CLV Revenue, Total Purchase events (in-store, digital, call center)."
 
 ![An example of a long prompt entered in the text input box to generate a playbook.](/help/use-case-playbooks/assets/playbooks/authoring/long-prompt.png)
 
@@ -145,21 +145,21 @@ These examples demonstrate how AI can refine and extract essential details from 
 
 ## Content guidelines and moderation
 
-When creating playbooks, be mindful of the language and content you include. Playbooks are visible across your organization, and any offensive or inappropriate content can be flagged by users.
+When creating playbooks, be mindful of the language and content you include. Playbooks are visible across your organization, and any offensive or inappropriate content that users flag.
 
 ### Flagging and review process
 
-If a playbook is flagged for inappropriate or offensive content, it is automatically reported to Adobe for review. Adobe then reviews the flagged content, and if it is deemed inappropriate, the customer is notified, and the Playbook is removed.
+If a playbook contains inappropriate or offensive content, Adobe automatically receives a report for review. Adobe reviews the flagged content, notifies the customer if it is deemed inappropriate, and removes the playbook.
 
 ## Share playbooks across sandboxes {#share-playbooks-sandboxes}
 
-When you create and publish a playbook in one sandbox, it automatically becomes available across all sandboxes within your organization. This eliminates the need for manual sharing and allows you to create instances of the playbook in any other sandbox seamlessly.
+When you create and publish a playbook in one sandbox, it automatically becomes available across all sandboxes within your organization. This feature eliminates the need for manual sharing and allows you to create instances of the playbook in any other sandbox seamlessly.
 
 >[!TIP]
 >
->If the playbook references fields that aren't available in the union schema of the target sandbox or lack the requisite permissions, you may see an error message when trying to create the instance. That message calls out the missing fields and/or missing permissions.
+>If the playbook references fields that are unavailable in the union schema of the target sandbox or if you lack the necessary permissions, an error message appears when you try to create the instance. The message specifies the missing fields and/or permissions.
 
-If any fields are missing from your union schema, a dialog box will highlight them during the import. 
+If any fields are missing from your union schema, a dialog box highlights them during the import. 
 
 ![A dialog box listing fields missing from the union schema during the playbook import process.](/help/use-case-playbooks/assets/playbooks/authoring/missing-fields.png)
 
@@ -204,7 +204,7 @@ These permissions are required for internal sharing functionality:
 * [**Manage package**](/help/sandboxes/ui/sandbox-tooling.md)
 * [**Share package**](/help/sandboxes/ui/sharing-packages-across-orgs.md)
 
-These permissions will allow you to:
+Use these permissions to:
 
 * Enter the sandbox environment
 * Access the feature within the sandbox
@@ -216,7 +216,7 @@ These permissions are located in the **[!UICONTROL Sandboxes]** section of the p
 
 ### Journeys and related objects - permissions
 
-When building Journeys that use Playbooks, you'll likely reference other objects such as **Channels**, **Audiences**, and other entities. Each of these has its own permission set. 
+When building Journeys that use Playbooks, you might reference other objects, such as **Channels**, **Audiences**, and other entities. Each of these objects has its own permission set. 
 
 These are the key permissions for Journey-related actions, such as: 
 
@@ -224,7 +224,7 @@ These are the key permissions for Journey-related actions, such as:
 * **Manage journey**
 * Permissions related to objects like Audiences, and Channels
 
-You will also need the following audience permissions: 
+You also need the following audience permissions: 
 
 * **Segment read**
 * **Profile read**
@@ -234,4 +234,4 @@ As Journeys are highly flexible and can involve many interconnected objects, the
 
 ## Next steps
 
-Now that you understand how to create, publish and share playbooks using the AI Assistant, learn how to get started with the available playbooks and choose the right one for your use case from [Playbooks List](/help/use-case-playbooks/playbooks/choose.md).
+Now that you understand how to create, publish, and share playbooks using the AI Assistant, learn how to get started with the available playbooks and choose the right one for your use case from [Playbooks List](/help/use-case-playbooks/playbooks/choose.md).
