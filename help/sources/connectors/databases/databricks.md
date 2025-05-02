@@ -14,7 +14,7 @@ exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
 
 [!DNL Azure Databricks] is a cloud-based platform designed for data analytics, machine learning, and AI. You can use [!DNL Databricks] to integrate with [!DNL Azure] and provide a holistic environment for building, deploying, and managing data solutions at scale.
 
-You can use the [!DNL Databricks] source to connect your account and ingest your [!DNL Databricks] data to Adobe Experience Platform.
+Use the [!DNL Databricks] source to connect your account and ingest your [!DNL Databricks] data to Adobe Experience Platform.
 
 ## Prerequisites
 

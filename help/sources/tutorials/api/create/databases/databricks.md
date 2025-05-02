@@ -26,7 +26,7 @@ Read the guide on [how to get started with Experience Platform APIs](../../../..
 
 ### Configure prerequisite setup
 
-Read the [[!DNL Databricks] overview](../../../../connectors/databases/databricks.md) for information the prerequisite configurations that must first be completed, before you can connect your account to Experience Platform.
+Read the [[!DNL Databricks] overview](../../../../connectors/databases/databricks.md) to learn about the prerequisite configurations that must be completed before you can connect your account to Experience Platform.
 
 ### Gather required credentials
 
