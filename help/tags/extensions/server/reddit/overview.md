@@ -23,9 +23,9 @@ Follow these steps to install and configure the [!DNL Reddit] Conversions API ex
 
 1. Create a new event forwarding property or select an existing property.
 2. Navigate to **Extensions** in the left navigation panel.
-    ![]()
+    ![The Adobe Experience Platform Extensions catalog with the Reddit extension highlighted.](../../../images/extensions/server/reddit/reddit-extension.png)
 3. Open the **Catalog** tab and select the card for the [!DNL Reddit] extension.
-    ![]()
+    ![Configuration details for the Reddit Conversions API extension, including fields for Pixel ID and Conversion Access Token.](../../../images/extensions/server/reddit/reddit-capi-details.png)
 4. Provide the following configuration details:
    - **Pixel ID**: Enter your [!DNL Reddit Ads] Pixel ID.
    - **Conversion Access Token**: Enter the token generated in your [!DNL Reddit Ads] account.
@@ -38,22 +38,22 @@ After you set up your data elements, create event forwarding rules to determine 
 1. Navigate to **Rules** in your event forwarding property and create a new rule.
 2. Under **Actions**, add a new action and set the extension to **[!DNL Reddit CAPI]**.
 3. Set the **Action Type** to **Send Event**.
-    ![]()
+    ![Event forwarding rule configuration interface for the Reddit Conversions API extension, with the extension and action type fields highlighted.](../images/extensions/server/reddit/reddit-rule.png)
 4. Configure the additional controls for your event as shown in the table below:
 
-    | Control | Description |
-    | --- | --- |
-    | `Event Name` | Specify the name of the conversion event. |
-    | `Event Type` | Define the type of event. For example: SignUp, Purchase. |
-    | `Timestamp` | Provide the event time in ISO format. |
-    | `Client Dedupe ID` | Add a unique ID for deduplication. |
-    | `Match Keys` | Include user and device identifiers for attribution. |
-    | `Value` | Specify the monetary value of the event. |
-    | `Currency Code` | Use ISO-4217 format for the currency. |
-    | `Units Sold` | Enter the quantity of items purchased. |
-    | `Country Code` | Specify the country where the event occurred. |
-    | `Data Processing Options` | Add privacy flags, such as LDU (Limited Data Usage). |
-    | `Consent` | Indicate user consent for advertising Data Usage. |
+    | Field name | Description | Example | 
+    | --- | --- | --- |
+    | `Event Name` | Specify the name of the conversion event. | `Purchase` |
+    | `Event Type` | Define the type of event. This can be a supported Reddit conversion event or a custom one. | `SignUp`, `MyCustomEvent` |
+    | `Timestamp` | Provide the event time in ISO format or epoch time. | `2025-04-15T16:01:00.000Z`, `1744742460000` |
+    | `Client Dedupe ID` | Add a unique ID for deduplication. | `abc123` |
+    | `Match Keys` | Include user and device identifiers for attribution. | `{"email":"hashed_email@example.com", "phone":"hashed_phone"}` |
+    | `Value` | Specify the monetary value of the event. | `99.99` |
+    | `Currency Code` | Use ISO-4217 format for the currency. | `USD` |
+    | `Units Sold` | Enter the quantity of items purchased. | `3` |
+    | `Country Code` | Specify the country where the event occurred. | `US` |
+    | `Data Processing Options` | Add privacy flags, such as LDU (Limited Data Usage). | `{"modes":["LDU"],"country":"US","region":"US-NY"}` |
+    | `Consent` | Indicate user consent for advertising data usage. | `true` |
 
 5. Select **Keep Changes** to save the rule.
 
@@ -102,7 +102,7 @@ The following parameters are optional but recommended:
 
 Before sending data to [!DNL Reddit Ads], the extension hashes and normalizes the values of the following fields: `Email`, `External ID`, `IDFA`, and `AAID`. The extension does not re-hash these fields if they already contain an SHA-256 hash.
 
-This section provides a detailed breakdown of the event metadata and user data fields, ensuring users understand the required and optional parameters for configuring their events. Let me know if you need further refinements!## Event metadata {#event-metadata}.
+This section provides a detailed breakdown of the event metadata and user data fields, ensuring users understand the required and optional parameters for configuring their events. Let me know if you need further refinements.
 
 ## Validate and deploy {#validate-deploy}
 
@@ -112,6 +112,9 @@ For additional details on [!DNL Reddit Ads], visit the [Reddit Ads documentation
 
 ## Next steps {#next-steps}
 
-After reading this document, you should now understand how to configure and use the [!DNL Reddit] Conversions API extension. For more information on event forwarding capabilities in Adobe Experience Platform, refer to the [event forwarding overview](../../../ui/event-forwarding/overview.md).
+After reading this document, you should now understand how to configure and use the [!DNL Reddit] Conversions API extension. For more information on event forwarding capabilities in Adobe Experience Platform, refer to the [event forwarding overview](../../../ui/event-forwarding/overview.md) or refer to the following resources:
 
-For additional details on [!DNL Reddit Ads], visit the [Reddit Ads documentation](https://ads.reddit.com/).
+- [Configure Signals](../../../ui/event-forwarding/configure-signals.md): Learn how to configure signals for better data accuracy.
+- [Share match keys and event metadata](../../../ui/event-forwarding/share-match-keys.md): Understand how to share match keys and event metadata effectively.
+- [Deduplicate events](../../../ui/event-forwarding/deduplicate-events.md): Ensure accurate event tracking by deduplicating events.
+- [Create a conversion access token](../../../ui/event-forwarding/create-conversion-token.md): Follow the steps to create a conversion access token for secure API authentication.
