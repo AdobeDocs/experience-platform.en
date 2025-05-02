@@ -141,7 +141,7 @@ With identity optimization algorithm, bad identity values such as bogus emails o
 
 ![bad-email](../images/identity-settings/bad-email.png)
 
-### Anonymous event association
+## Anonymous event association
 
 ECIDs store unauthenticated (anonymous) events, while CRMID stores authenticated events. In the case of shared devices, the ECID (bearer of unauthenticated events) gets associated with the **last authenticated user**.
 
