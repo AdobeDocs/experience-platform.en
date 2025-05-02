@@ -5,23 +5,23 @@ last-substantial-update: 2025-05-1
 ---
 # [!DNL Reddit] Conversions API extension overview
 
-Use the [!DNL Reddit] Conversions API extension to send user interaction events captured in the Adobe Experience Platform Edge Network to [!DNL Reddit Ads]. This integration helps your brand reach an audience of over 379 million weekly active users, and enables you to understand user behavior and run targeted advertisements.
+Use the [[!DNL Reddit] Conversions API extension](https://ads-api.reddit.com/docs/v2/#tag/Conversions-API) to send user interaction events captured in the Adobe Experience Platform Edge Network to [!DNL Reddit Ads]. This integration helps your brand reach an audience of over 379 million weekly active users, and enables you to understand user behavior and run targeted advertisements.
 
-Read this guide to learn how to install, configure, and use the [!DNL Reddit] Conversions API extension in your event forwarding rules.
+Read this guide to learn how to install, configure, and use the [!DNL Reddit] Conversions API extension in your event forwarding [rules](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/rules).
 
 ## Prerequisites {#prerequisites}
 
 Before you install and configure the [!DNL Reddit] Conversions API extension, ensure that the following prerequisites are met:
 
-1. **Set up a [!DNL Reddit Ads] account**: Request access to the Ads API.
-2. **Find your Pixel ID**: Locate your Pixel ID in your [!DNL Reddit Ads] account.
+1. [**Set up a [!DNL Reddit Ads] account**](https://business.reddithelp.com/s/article/Create-and-manage-your-Reddit-Ads-account): [Request access to the Ads API](https://www.redditforbusiness.com/api-partnership).
+2. **Find your Pixel ID**: Locate your Pixel ID in your [!DNL Reddit Ads] [account](https://ads.reddit.com/accounts).
 3. **Create a conversion access token**: Generate a token to authenticate API requests.
 
 ## Install and configure the [!DNL Reddit] extension {#install-configure}
 
 Follow these steps to install and configure the [!DNL Reddit] Conversions API extension:
 
-1. Create a new event forwarding property or select an existing property.
+1. [Create a new event forwarding property](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/overview#properties) or select an existing property.
 2. Navigate to **Extensions** in the left navigation panel.
     ![The Adobe Experience Platform Extensions catalog with the Reddit extension highlighted.](../../../images/extensions/server/reddit/reddit-extension.png)
 3. Open the **Catalog** tab and select the card for the [!DNL Reddit] extension.
@@ -35,7 +35,7 @@ Follow these steps to install and configure the [!DNL Reddit] Conversions API ex
 
 After you set up your data elements, create event forwarding rules to determine when and how events are sent to [!DNL Reddit Ads].
 
-1. Navigate to **Rules** in your event forwarding property and create a new rule.
+1. Navigate to **Rules** in your event forwarding property and create a new [rule](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/rules).
 2. Under **Actions**, add a new action and set the extension to **[!DNL Reddit CAPI]**.
 3. Set the **Action Type** to **Send Event**.
     ![Event forwarding rule configuration interface for the Reddit Conversions API extension, with the extension and action type fields highlighted.](../images/extensions/server/reddit/reddit-rule.png)
@@ -44,7 +44,7 @@ After you set up your data elements, create event forwarding rules to determine 
     | Field name | Description | Example | 
     | --- | --- | --- |
     | `Event Name` | Specify the name of the conversion event. | `Purchase` |
-    | `Event Type` | Define the type of event. This can be a supported Reddit conversion event or a custom one. | `SignUp`, `MyCustomEvent` |
+    | `Event Type` | Define the type of event. This can be a [supported Reddit conversion event](https://business.reddithelp.com/s/article/supported-conversion-events#supported-conversion-events) or a custom one. | `SignUp`, `MyCustomEvent` |
     | `Timestamp` | Provide the event time in ISO format or epoch time. | `2025-04-15T16:01:00.000Z`, `1744742460000` |
     | `Client Dedupe ID` | Add a unique ID for deduplication. | `abc123` |
     | `Match Keys` | Include user and device identifiers for attribution. | `{"email":"hashed_email@example.com", "phone":"hashed_phone"}` |
@@ -69,7 +69,7 @@ The following fields may appear to depend on your selected event type.
 
 >[!NOTE]
 >
->It is strongly recommended to provide all these fields with dynamic product ads (DPAs) when using conversion events.
+>It is strongly recommended to provide all these fields with [dynamic product ads](https://business.reddithelp.com/s/article/dynamic-product-ads) when using conversion events.
 
 ### Event metadata fields
 
@@ -77,7 +77,7 @@ The following fields may appear to depend on your selected event type.
 | --- | --- | --- |
 | `Conversion ID` (required) | Unique ID for the conversion event, used for deduplication. | `abc123` |
 | `Item Count` | The total number of items for the conversion event. | `6` |
-| `Currency` | The currency for the value provided, in ISO-4217 format. | `USD` |
+| `Currency` | The currency for the value provided, in [ISO-4217](https://www.iso.org/iso-4217-currency-codes.html) format. | `USD` |
 | `Value` | Total monetary value of the conversion event, including decimals. | `1.23` |
 | `Products` | A JSON array of objects with details about the products associated with the event. Each object must include an `id` at a minimum. | `[{"id":"SKU123","name":"ProductName","category":"CategoryName"},{"id":"SKU456","name":"ProductName","category":"CategoryName"}]` |
 
@@ -106,15 +106,14 @@ This section provides a detailed breakdown of the event metadata and user data f
 
 ## Validate and deploy {#validate-deploy}
 
-After configuring the extension and rules, validate the integration by checking event data in the [!DNL Reddit Ads] Events Manager. Use the Match Quality Score (MQS) to evaluate the accuracy and reliability of your signal integrations.
+After configuring the extension and rules, validate the integration by checking event data in the [[!DNL Reddit Ads] Events Manager](https://business.reddithelp.com/s/article/Events-Manager). Use the [Match Quality Score (MQS)](https://business.reddithelp.com/s/article/match-quality-score) to evaluate the accuracy and reliability of your signal integrations.
 
 For additional details on [!DNL Reddit Ads], visit the [Reddit Ads documentation](https://ads.reddit.com/).
 
 ## Next steps {#next-steps}
 
-After reading this document, you should now understand how to configure and use the [!DNL Reddit] Conversions API extension. For more information on event forwarding capabilities in Adobe Experience Platform, refer to the [event forwarding overview](../../../ui/event-forwarding/overview.md) or refer to the following resources:
+After reading this document, you should now understand how to configure and use the [!DNL Reddit] Conversions API extension. For more information on event forwarding capabilities in Adobe Experience Platform, refer to the [event forwarding overview](../../../ui/event-forwarding/overview.md) or to the following resources:
 
-- [Configure Signals](../../../ui/event-forwarding/configure-signals.md): Learn how to configure signals for better data accuracy.
-- [Share match keys and event metadata](../../../ui/event-forwarding/share-match-keys.md): Understand how to share match keys and event metadata effectively.
-- [Deduplicate events](../../../ui/event-forwarding/deduplicate-events.md): Ensure accurate event tracking by deduplicating events.
-- [Create a conversion access token](../../../ui/event-forwarding/create-conversion-token.md): Follow the steps to create a conversion access token for secure API authentication.
+- [Share match keys](https://business.reddithelp.com/s/article/about-attribution-matching-signals) and [event metadata](https://business.reddithelp.com/s/article/about-event-metadata): Understand how to share match keys and event metadata effectively.
+- [Deduplicate events](https://business.reddithelp.com/s/article/event-deduplication): Ensure accurate event tracking by deduplicating events.
+- [Create a conversion access token](https://business.reddithelp.com/helpcenter/s/article/conversion-access-token): Follow the steps to create a conversion access token for secure API authentication.
