@@ -23,7 +23,7 @@ Once PSQL is installed, you can connect it to Query Service. Return to the Exper
 
 Under the **[!UICONTROL PSQL Command]** section, select the **[!UICONTROL Copy to clipboard]** icon (![Copy Icon](/help/images/icons/copy.png)) to copy the command string.
 
-![The Queries dashboard Credentials tab with the copy icon highlighted.](../images/clients/psql/connect-bi.png)
+![The Queries dashboard Credentials tab with the copy icon highlighted.](../images/clients/psql/copy-credentials.png)
 
 Paste the command string into your terminal and press **Enter** on your keyboard.
 
