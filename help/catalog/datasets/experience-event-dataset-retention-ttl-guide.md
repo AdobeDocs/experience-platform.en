@@ -64,7 +64,7 @@ Before you can evaluate, set, and manage Experience Event Dataset Retention usin
 >
 >This document covers row-level expiration, which deletes individual expired rows within a dataset while keeping the dataset itself intact. It does not apply to dataset expiration, which removes entire datasets and is managed by a separate feature. For dataset-level expiration, refer to the [dataset expiration API documentation](../../hygiene/api/dataset-expiration.md).
 
-### How to check TTL settings
+### How to check TTL constraints {#check-ttl-constraints}
 
 Use the `/ttl/{datasetId}` endpoint to view the default, minimum, and maximum TTL values that apply to the dataset type. To [check the current TTL setting applied to a dataset](#check-applied-ttl-values), use the `/dataSets/{DATASET_ID}` endpoint instead.
 
@@ -91,7 +91,7 @@ The following request retrieves your organization's TTL settings for a particula
 
 ```shell
 curl -X GET \
-  'https://platform.adobe.io/data/core/hygiene/ttl/{DATASET_ID}'' \
+  'https://platform.adobe.io/data/foundation/catalog/ttl/{DATASET_ID}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -101,7 +101,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns the default, maximum, and minimum TTL values supported by the system for the dataset. It does not return custom TTL values that may have been applied. To retrieve the current TTL value for a dataset, use GET `/dataSets/{DATASET_ID}`.
+A successful response returns the recommended, maximum, and minimum TTL values based on your organization's entitlements, along with a suggested TTL (`defaultValue`) for the dataset. This `defaultValue` is not automatically applied, it is provided as guidance and must be manually configured. The response does not include any custom TTL values that may already be set. To view the current TTL for a dataset, use the GET `/catalog/dataSets/{DATASET_ID}` endpoint.
 
 +++Select to view the response
 
@@ -118,15 +118,14 @@ A successful response returns the default, maximum, and minimum TTL values suppo
   }
 }
 ```
-<!-- Q: Are these TTL default values standard across all orgs, or do they vary per implementation or entitlement? -->
 
 +++
 
 | Property      | Description |
 |--------------|-------------|
-| `defaultValue` | The default TTL period applied if no custom TTL is set. |
-| `maxValue`    | The longest TTL allowed for the dataset. If null, there is no maximum limit. |
-| `minValue`    | The shortest TTL allowed to ensure compliance with system policies. |
+| `defaultValue` | A recommended TTL value for your dataset. This value is **not** automatically applied. You must explicitly set a TTL for it to take effect. |
+| `maxValue`    | The maximum TTL duration your organization can apply. Typically, this duration is 10 years (`P10Y`), but it may vary based on entitlements. |
+| `minValue`    | The minimum TTL duration your organization must apply. Typically, this duration is 30 days (`P30D`), but it may vary based on entitlements. |
 
 <!-- Q: Are these default Max and Min TTL values system-imposed? If so, can we document any conditions or exceptions that may affect them? -->
 
@@ -155,68 +154,26 @@ https://platform.adobe.io/data/foundation/catalog/dataSets/{DATASET_ID} \
 
 **Response**
 
-A successful response includes the `extensions` object, which contains the current TTL configuration applied to the dataset.
+A successful response includes the `extensions` object, which contains the current TTL configuration applied to the dataset. The response example below is truncated for brevity.
 
 ```json
 {
-  "extensions": {
-    "adobe_lakeHouse": {
-      "rowExpiration": {
-        "ttlValue": "P3M",
-        "valueStatus": "custom",
-        "setBy": "user",
-        "updated": 1737977766499
-      }
-    }
-  }
-}
-```
-
-<!-- Q: Is this the entire response body for GET /dataSets/{DATASET_ID}, or is it just a snippet? Should we show the full JSON (including dataset name, tags, etc.)? like this:
-{
-    "67976f0b4878252ab887ccd9": {
+    "{DATASET_ID}": {
         "name": "Acme Sales Data",
         "description": "This dataset contains sales transaction records for Acme Corporation.",
         "imsOrg": "{ORG_ID}",
         "sandboxId": "{SANDBOX_ID}",
-        "tags": {
-            "adobe/pqs/table": [
-                "acme_sales_20250127_113331_106"
-            ],
-            "adobe/siphon/table/format": [
-                "delta"
-            ]
-        },
         "extensions": {
             "adobe_lakeHouse": {
-                "rowExpiration": {
+            "rowExpiration": {
                 "ttlValue": "P3M",
-                    "valueStatus": "custom",
-                    "setBy": "user",
-                    "updated": 1737977766499
-                }
-            },
-            "adobe_unifiedProfile": {  
-                "rowExpiration": {
-                    "ttlValue": "P3M",
-                    "valueStatus": "custom",
-                    "setBy": "user",
-                    "updated": 1737977766499
-                }
             }
-        },
-        "version": "1.0.0",
-        "created": 1737977611118,
-        "updated": 1737977611118,
-        "createdClient": "acme_data_pipeline",
-        "createdUser": "john.snow@acmecorp.com",
-        "updatedUser": "arya.stark@acmecorp.com",
-        "classification": {
-            "managedBy": "CUSTOMER"
+            }
         }
+        ...
     }
 }
- -->
+```
 
 ### How to set TTL for a dataset {#set-ttl}
 
@@ -258,6 +215,10 @@ curl -X PATCH \
 }
 ```  
 
+| Property                         | Description |
+|----------------------------------|-------------|
+| `rowExpiration.ttlValue` | Defines the duration before records in the dataset are automatically removed. Uses the ISO-8601 period format (for example, `P3M` for 3 months, or `P30D` for one week). |
+
 **Response**
 
 A successful response returns a reference to the updated dataset. It does not include the TTL settings.
@@ -268,16 +229,6 @@ To confirm the TTL value update, make a follow-up `GET /dataSets/{DATASET_ID}` c
   "@/dataSets/{DATASET_ID}"
 ]
 ```
-<!-- 
-| Property                         | Description |
-|----------------------------------|-------------|
-| `extensions`                     | A container for additional metadata related to the dataset. |
-| `extensions.adobe_lakeHouse`     | Specifies settings related to storage architecture, including row-level expiration configurations |
-| `rowExpiration` | The object contains TTL settings that define the retention period for the dataset. |
-| `rowExpiration.ttlValue` | Defines the duration before records in the dataset are automatically removed. Uses the ISO-8601 period format (for example, `P3M` for 3 months, or `P30D` for one week). |
-| `rowExpiration.valueStatus` | The string indicates whether the TTL setting is a default system value or a custom value set by a user. Possible values are: `default`, `custom`. |
-| `rowExpiration.setBy` | Specifies who last modified the TTL setting. Possible values include: `user` (manually set) or `service` (automatically assigned). |
-| `rowExpiration.updated` | The timestamp of the last TTL update. This value indicates when the TTL setting was last modified. | -->
 
 ### How to update TTL {#update-ttl}
 
@@ -317,30 +268,25 @@ curl -X PATCH \
 }
 ```
 
-<!-- Q) For Clarity, should this example show both data stores being updated by expanding the example payload above? ...-->
-<!-- Because PATCHing `adobe_lakeHouse.rowExpiration` does NOT update `adobe_unifiedProfile.rowExpiration`. They are independent of each other -->
-
-
 **Response**
 
+The response displays the updated dataset details and its extensions object. The example is truncated for brevity.
+
 ```JSON
-{  "extensions": {
-        "adobe_lakeHouse": {
-            "rowExpiration": {
-              "ttlValue": "P6M",
-              "valueStatus": "custom",
-              "setBy": "user",
-              "updated": "1737977766499"
+{  
+    "{DATASET_ID}": {
+        "name": "Acme Sales Data",
+        "description": "This dataset contains sales transaction records for Acme Corporation.",
+        "imsOrg": "{ORG_ID}",
+        "sandboxId": "{SANDBOX_ID}",
+        "extensions": {
+            "adobe_lakeHouse": {
+                "rowExpiration": {
+                "ttlValue": "P6M",
+                }
             }
         },
-        "adobe_unifiedProfile": {
-            "rowExpiration": {
-                "ttlValue": "P3M",
-                "valueStatus": "custom",
-                "setBy": "user",
-                "updated": "17379754766355"
-            }
-        }
+        ...
     }
 }
 ```
