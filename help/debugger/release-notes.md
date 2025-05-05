@@ -11,7 +11,7 @@ exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
 
 ### Fixes and improvements
 
-* Fixed an issue where the Debugger would prevent DTM and Launch functions from working.
+* Fixed an issue where the Debugger would prevent DTM and Tags functions from working.
 * Fixed an issue where Analytics Post-Processed Hits would not appear in logs.
 * Fixed an issue where data in non-ASCII languages like Japanese would not show correctly in logs.
 

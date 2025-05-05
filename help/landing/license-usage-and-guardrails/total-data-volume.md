@@ -1,15 +1,15 @@
 ---
 title: Total Data Volume Metric
 description: Learn about the new Total Data Volume metric and how it replaces the previous average profile richness metric.
-hide: yes
-hidefromtoc: yes
 exl-id: 4b21d25c-b82b-4d1a-83ce-b510f02fd160
 ---
 # Total Data Volume metric
 
-Starting on September 24, 2024, the Total Data Volume metric will replace the previous metric of Average Profile Richness.
+Total Data Volume replaces the previous Average Profile Richness metric as a simpler and more explainable way to track usage against your Profile Store entitlement.
 
-Total Data Volume represents the total amount of data available for Adobe Experience Platform Real-Time Customer Profile to use in engagement workflows. This value is equivalent to the Addressable Audience metric multiplied by the Average Profile Richness.
+**Total Data Volume = Addressable Audience × Average Profile Richness**  
+
+This metric reflects the total amount of data stored in the **Profile Store** and available for use in Real-Time Customer Profile engagement workflows. It does **not** include any data stored in the **data lake**. This change provides a more focused and transparent view of data relevant to profile-based personalization and engagement.
 
 ## Frequently asked questions {#faq}
 
@@ -30,6 +30,16 @@ No. You will still get the benefits of the entitlement packages that you previou
 ### How come I see a different value for my Total Data Volume compared to my Profile store entitlement?
 
 Total Data Volume represents the **total** amount of data available for Profile to use in engagement workflows. The measurement has been updated to be more deterministic and explainable. Most users should **not** see a significant change between their Total Data Volume and their total profile storage. If you have any concerns, please raise a ticket with your customer service representative.
+
+### How is Total Data Volume calculated? Does it include Data Lake storage?
+
+Total Data Volume is calculated using the following formula:
+
+**Total Data Volume = Addressable Audience × Average Profile Richness**
+
+This metric reflects the total amount of data stored in the Profile Store that is available for Real-Time Customer Profile to use in engagement workflows. It does **not** include any data stored in the data lake.
+
+Previously, some legacy offers used a "total storage" metric that combined both Profile Store and Data Lake usage. However, Total Data Volume is limited to Profile Store only, providing a more focused view of data relevant to profile-based engagement.
 
 ### Do I need to recreate my changes to continue managing my Average Profile Richness?
 
