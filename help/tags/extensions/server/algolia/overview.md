@@ -49,8 +49,8 @@ To configure the extension:
 
 | Property | Description |
 |----------|-------------|
-| Application ID | Enter the Application ID found in the [!DNL Algolia] Dashboard under the [API Keys](https://www.algolia.com/account/api-keys/all) section. |
-| Search API Key | Enter the Search API Key found in the [!DNL Algolia] Dashboard under the [API Keys](https://www.algolia.com/account/api-keys/all) section. |
+| Application ID | Enter the Application ID found in the [!DNL Algolia] Dashboard under [API Keys](https://www.algolia.com/account/api-keys/all) section. |
+| Search API Key | Enter the Search API Key found in the [!DNL Algolia] Dashboard under [API Keys](https://www.algolia.com/account/api-keys/all) section. |
 | Index Name | Enter the Index Name that contains your Products or Content. This Index is used as the default. |
 
 ## [!DNL Algolia] Event Forwarding Extension Action Types
