@@ -5,7 +5,7 @@ last-substantial-update: 2025-04-17
 ---
 # [!DNL Amazon] web events API extension overview
 
-The [!DNL Amazon] Conversions API extension creates a direct connection between marketing data from an advertiser's server and [!DNL Amazon]. This enables advertisers to evaluate campaign effectiveness regardless of conversion location and optimize campaigns accordingly. This extension provides complete attribution, data reliability, and optimized delivery.
+The [!DNL Amazon] Conversions API extension creates a direct connection between marketing data from an advertiser's server and [!DNL Amazon]. It enables advertisers to evaluate campaign effectiveness regardless of conversion location and optimize campaigns accordingly. This extension provides complete attribution, data reliability, and optimized delivery.
 
 ## [!DNL Amazon] prerequisites {#prerequisites}
 
@@ -18,7 +18,7 @@ Authentication with [!DNL Amazon] requires a secure token that must be properly 
 1. Create a new [!DNL Amazon] event forwarding secret with a unique name for authentication.
 2. Create a data element using the **Core** extension with a **Secret** data element type to reference your [!DNL Amazon] secret.
 
-This process ensures your authentication credentials remain secure while still being accessible to the extension when needed.
+This process ensures that your authentication credentials remain secure while still being accessible to the extension when needed.
 
 ## Install and configure the [!DNL Amazon] extension {#install-configure}
 
@@ -61,7 +61,7 @@ After completion, you'll see your secret with its status and expiration date in 
 
 ## Configure an event forwarding rule {#config-rule}
 
-Once all your data elements are set up, create event forwarding rules to determine when and how your events will be sent to [!DNL Amazon].
+Once all your data elements are set up, create event forwarding rules to determine when and how your events are sent to [!DNL Amazon].
 
 1. Navigate to **Rules** and create a new event forwarding rule.
 2. Under **Actions**, select **Amazon Conversions API Extension**.
@@ -71,19 +71,20 @@ Once all your data elements are set up, create event forwarding rules to determi
 
 4. Configure the event properties as outlined below:
 
-   | Input | Description |
-   | --- | --- |
-   | **Event Name** | The name of the conversion event. |
-   | **Event Type** | Defines the type of event tracked (e.g., purchases, cart additions). |
-   | **Timestamp** | Event time in ISO format. |
-   | **Client Dedupe ID** | A unique ID for deduplication. |
-   | **Match Keys** | User and device identifiers for attribution. |
-   | **Value** | Monetary value of the event. |
-   | **Currency Code** | Currency in ISO-4217 format. |
-   | **Units Sold** | Quantity of items purchased. |
-   | **Country Code** | Country where the event occurred. |
-   | **Data Processing Options** | Flags for limited data usage. |
-   | **Consent** | Indicates user consent for advertising data usage. |
+   | Input | Description | Required | Example |
+   | --- | --- | --- | --- |
+   | `name` | The name of the conversion event. | Yes | My Event Name. |
+   | `eventType` | Defines the type of event tracked. For example: purchases, cart additions. | Yes | Add to Shopping Cart. |
+   | `eventActionSource` | Event time in ISO format. |  Yes | --- |
+   | `clientDedupeId` | A unique ID for deduplication. | Yes | --- |
+   | `timestamp` | User and device identifiers for attribution. | Yes | --- |
+   | `matchKeys` | Monetary value of the event. | Yes | --- |
+   | `matchKeys > type` | Currency in ISO-4217 format. | Yes | --- |
+   | `matchKeys > value` | Quantity of items purchased. | Yes | --- |
+   | `currencyCode` | Flags for limited data usage. | Yes | --- |
+   | `unitsSold` | Indicates user consent for advertising data usage. | Yes | --- |
+   | `countryCode` | Indicates user consent for advertising data usage. | Yes | --- |
+   | `dataProcessingOptions` | Indicates user consent for advertising data usage. | Yes | --- |
 
 5. Select **[!UICONTROL Keep Changes]** to save the rule.
 
@@ -93,14 +94,23 @@ Once all your data elements are set up, create event forwarding rules to determi
 
 ## Event deduplication {#deduplication}
 
-If you use both [!DNL Amazon] Advertising Tag (AAT) and the [!DNL Amazon] Conversions API extension for the same events, deduplication setup is required. Include `clientDedupeId` in every shared event to ensure proper deduplication. Deduplication is not needed if client and server events don't overlap.
+Deduplication is essential to ensure accurate reporting and prevent inflated conversion counts when using both the [!DNL Amazon] Advertising Tag (AAT) and the [!DNL Amazon] Conversions API extension to track the same events.
 
-Proper deduplication prevents inflated conversion counts and ensures your optimization data remains accurate.
+### When is deduplication required?
 
-Refer to the [Amazon Event Deduplication Guide](https://advertising.amazon.com/) for more details.
+- **Required**: If the same event is being sent from both the client (AAT) and the server (Conversions API).
+- **Not required**: If distinct event types are being sent from the client and server without any overlap.
+
+### How to enable deduplication
+
+To enable deduplication, include the `clientDedupeId` field in every shared event. This unique identifier allows [!DNL Amazon] to distinguish between client-side and server-side events and prevent duplicate entries.
+
+By properly configuring deduplication, you can ensure that your optimization data remains accurate and that your reporting is not negatively impacted.
+
+For more details, refer to the [Amazon Event Deduplication Guide](https://advertising.amazon.com/).
 
 ## Next steps {#next-steps}
 
 This guide covered how to configure and send conversion events to [!DNL Amazon] using the [!DNL Amazon] Conversions API extension. For more information on event forwarding capabilities in [!DNL Adobe Experience Platform], refer to the [event forwarding overview](../../../ui/event-forwarding/overview.md).
 
-For more details on how to debug your implementation using the Experience Platform Debugger and Event Forwarding Monitoring tool, read the [Adobe Experience Platform Debugger overview](https://experienceleague.adobe.com/en/docs/experience-platform/debugger/home) and [Monitor activities](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/monitoring) in event forwarding.
+For more details on how to debug your implementation using the Experience Platform Debugger and Event Forwarding Monitoring tool, read the [Adobe Experience Platform Debugger overview](/help/debugger/home.md) and [Monitor activities](../../../ui/event-forwarding/monitoring.md) in event forwarding.
