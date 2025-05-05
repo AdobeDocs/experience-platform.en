@@ -1,6 +1,6 @@
 ---
 title: Algolia Event Forwarding Extension Overview
-description: Use event forwarding to send search user behaviours to Algolia.
+description: Use event forwarding to send search user behaviors to Algolia.
 type: Documentation
 feature: Data Collection, Event Forwarding
 level: Beginner
@@ -20,7 +20,7 @@ The [!DNL Algolia] event forwarding extension sends user behavior events to [!DN
 
 This document assumes you are familiar with the relevant [!DNL Algolia] Insights APIs leveraged by the extension. For more information, please see [!DNL Algolia]'s help documentation for [sending events](https://www.algolia.com/doc/guides/sending-events/getting-started/).
 
-An [!DNL Algolia] account is required to use this extension. You can sign up for a free account [here](https://dashboard.algolia.com/users/sign_up/). In the [!DNL Algolia] account dashboard, make note of the following values which you'll need for configuration:
+An [!DNL Algolia] account is required to use this extension. You can sign up for a free account [here](https://dashboard.algolia.com/users/sign_up/). In the [!DNL Algolia] account dashboard, make note of the following values which you need for configuration:
 
 - Your Application ID
 - Your Search API Key
@@ -49,9 +49,9 @@ To configure the extension:
 
 | Property | Description |
 |----------|-------------|
-| Application ID | Enter the Application ID found in the [!DNL Algolia] Dashboard under [API Keys](https://www.algolia.com/account/api-keys/all) section. |
-| Search API Key | Enter the Search API Key found in the [!DNL Algolia] Dashboard under [API Keys](https://www.algolia.com/account/api-keys/all) section. |
-| Index Name | Enter the Index Name that contains your Products or Content. This Index will be used as the default. |
+| Application ID | Enter the Application ID found in the [!DNL Algolia] Dashboard under the [API Keys](https://www.algolia.com/account/api-keys/all) section. |
+| Search API Key | Enter the Search API Key found in the [!DNL Algolia] Dashboard under the [API Keys](https://www.algolia.com/account/api-keys/all) section. |
+| Index Name | Enter the Index Name that contains your Products or Content. This Index is used as the default. |
 
 ## [!DNL Algolia] Event Forwarding Extension Action Types
 
@@ -83,7 +83,7 @@ To add the [!DNL Algolia] event field group:
 1. Navigate to **Schemas > Browse**
 2. Add a new schema or update an existing schema you're using to send web events
 3. Hover over the **Add** icon
-4. Enter "[!DNL Algolia]" in the search box to narrow down results
+4. Enter "[!DNL Algolia]" in the search box to narrow down the results
 5. Click on the **[!DNL Algolia] Event Details** field group
 6. Click the **Add field group** button
 7. Click **Save**
@@ -111,7 +111,7 @@ To add the [!DNL Algolia] event field group:
 #### Step 3: Create a Rule to Send Events
 
 1. Create a new rule in your Tag property
-2. Add appropriate event triggers (e.g., page load, click events)
+2. Add appropriate event triggers (For example: page load, click events)
 3. Add an action using **Adobe Experience Platform Web SDK**
 4. Select **Send event** as the action type
 5. Configure the action to use your XDM data element
@@ -121,7 +121,7 @@ To add the [!DNL Algolia] event field group:
 #### Step 4: Publish and Test
 
 1. Publish the rules and extension changes to your target environment
-2. Use Adobe Experience Platform Debugger to verify the data being sent to Adobe Experience Platform and forwarded to Algolia
+2. Use the Adobe Experience Platform Debugger to verify the data is sent to Adobe Experience Platform and forwarded to Algolia
 
 ![](../../../images/extensions/server/algolia/adobe-debugger.png)
 
@@ -152,8 +152,8 @@ Track add to cart/purchases and other conversion events to optimize [!DNL Algoli
 
 - Verify your Application ID and API Key are correct
 - Check that your XDM schema includes the [!DNL Algolia] Event field group
-- Ensure data is properly mapped to the XDM fields
-- Use both Adobe Experience Platform Debugger and [!DNL Algolia]'s event debugger to trace the flow of data
+- Ensure that data is properly mapped to the XDM fields
+- Use both the the Adobe Experience Platform Debugger and [!DNL Algolia]'s event debugger to trace the flow of data
 
 ### Incorrect Event Data
 
