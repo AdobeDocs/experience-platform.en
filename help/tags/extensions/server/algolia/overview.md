@@ -104,7 +104,7 @@ To add the [!DNL Algolia] event field group:
 
 1. Create a Data Element using the **Adobe Experience Platform Web SDK** 
 2. Select **XDM object** as the data element type
-3. Map your data to the appropriate XDM fields, ensuring [!DNL Algolia]-specific fields are populated
+3. Map your data to the appropriate XDM fields, ensuring that [!DNL Algolia]-specific fields are populated
 
 ![](../../../images/extensions/server/algolia/xdm-mapping.png)
 
