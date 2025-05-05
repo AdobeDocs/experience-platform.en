@@ -430,10 +430,191 @@ For a given experience event, the identity with the highest namespace priority i
 | ECID | Web browser (Firefox, Safari, Google Chrome, etc.) | 4 |
 | AAID | Web browser (Firefox, Safari, Google Chrome, etc.) | 5 |
 
-| User action (Experience event) | Authentication state | Data source | IdentityMap | Primary identity |
+{style="table-layout:auto"}
+
+| User action (Experience event) | Authentication state | Data source | IdentityMap | Primary identity (primary key of profile fragment) |
 | --- | --- | --- | --- | --- |
-| View credit card offer page |
-| View help page |
-| View checking account balance |
-| Sign up for home loan |
-| Transfer $1000 from checking to savings account |
+| View credit card offer page | Unauthenticated (anonymous) | Web SDK | {ECID} | ECID |
+| View help page | Unauthenticated | Mobile SDK | {ECID, IDFA} | IDFA |
+| View checking account balance | Authenticated | Web SDK | {CRMID, ECID} | CRMID |
+| Sign up for home loan | Authenticated | Adobe Analytics source | {CRMID, ECID, AAID} | CRMID |
+| Transfer $1000 from checking to savings account | Authenticated | Mobile SDK | {CRMID, GAID, ECID} | CRMID |
+
+{style="table-layout:auto"}
+
+### Segmentation Service
+
+>[!NOTE]
+>
+>Namespace priority ensures that segment membership is associated with the user.
+
+Just like experience events are linked to the identity with the highest namespace priority, segment membership for a profile is also linked to the identity with the highest namespace priority
+
+### Use case: support for multiple lines of businesses
+
+Your end-users have two different accounts: a personal account and a business account. Each account is identified by a different ID. In this scenario, a typical graph would look like the following:
+
+**Text mode***
+
+```json
+CRMID: John, loginID: JohnPersonal
+CRMID: John, loginID: JohnBusiness
+loginID: JohnPersonal, ECID: 111
+loginID: JohnPersonal, ECID: 222
+loginID: JohnBusiness, ECID: 222
+```
+
+**Algorithm configuration**
+
+Configure the following settings in the Graph Simulation interface before you simulate your graph.
+
+| Unique namespace | Namespace priority |
+| --- | --- |
+| CRMID | <ul><li>CRMID</li><li>loginID</li><li>ECID</li></ul> |
+
+| Display name | Identity symbol | Identity type | Unique per graph |
+| --- | --- | --- | --- |
+| CRMID | CRMID | CROSS_DEVICE |  ✔️  |
+| loginID | loginID | CROSS_DEVICE | |
+| ECID | ECID | COOKIE | |
+
+**Exercise**
+
+Simulate the following configuration in Graph Simulation. You can either create your own events, or copy and paste using text mode.
+
+>[!BEGINTABS]
+
+>[!TAB Shared device]
+
+**Text mode**
+
+```json
+CRMID: John, loginID: JohnPersonal
+CRMID: John, loginID: JohnBusiness
+CRMID: Jane, loginID: JanePersonal
+CRMID: Jane, loginID: JaneBusiness
+loginID: JohnPersonal, ECID: 111
+loginID: JanePersonal, ECID: 111
+```
+
+![simulated graph here]
+
+>[!TAB Bad data is sent to Real-Time CDP]
+
+```json
+CRMID: John, loginID: JohnPersonal
+CRMID: John, loginID: error
+CRMID: Jane, loginID: JanePersonal
+CRMID: Jane, loginID: error
+loginID: JohnPersonal, ECID: 111
+loginID: JanePersonal, ECID: 222
+```
+
+![simulated graph here]
+
+>[!ENDTABS]
+
+### Use case: complex implementations with multiple namespaces
+
+You are a median and entertainment company and your end-users have the following:
+* A CRMID
+* A loyalty ID
+Additionally, your end-users can make a purchase on the e-commerce website and this data is tied to their email address. User data is also enriched by a third-party database provider and is sent to Experience Platform in batches.
+
+**Text mode**
+
+```json
+CRMID: John, loginID: JohnPersonal
+CRMID: John, loginID: JohnBusiness
+loginID: JohnPersonal, ECID: 111
+loginID: JohnPersonal, ECID: 222
+loginID: JohnBusiness, ECID: 222
+```
+
+**Algorithm configuration**
+
+Configure the following settings in the Graph Simulation interface before you simulate your graph.
+
+| Unique namespace | Namespace priority |
+| --- | --- |
+| <ul><li>CRMID</li><li>loyaltyID</li><li>Email</li></ul> | <ul><li>CRMID</li><li>loyaltyID</li><li>Email</li><li>thirdPartyID</li><li>orderID</li><li>ECID</li></ul> |
+
+| Display name | Identity symbol | Identity type | Unique per graph |
+| --- | --- | --- | --- |
+| CRMID | CRMID | CROSS_DEVICE |  ✔️  |
+| loyaltyID | loyaltyID | CROSS_DEVICE | |
+| Email | Email | Email | |
+| thirdPartyID | thirdPartyID | CROSS_DEVICE | |
+| orderID | orderID | CROSS_DEVICE | |
+| ECID | ECID | COOKIE | |
+
+**Exercise**
+
+Simulate the following configuration in Graph Simulation. You can either create your own events, or copy and paste using text mode.
+
+>[!BEGINTABS]
+
+>[!TAB Shared device]
+
+**Text mode**
+
+```json
+CRMID: John, loyaltyID: John, Email: john@g
+CRMID: Jane, loyaltyID: Jane, Email: jane@g
+Email: john@g, orderID: aaa 
+CRMID: John, thirdPartyID: xyz 
+CRMID: John, ECID: 111
+CRMID: Jane, ECID: 111
+```
+
+![graph here]
+
+>[!TAB End-user changes their email address]
+
+**Text mode**
+
+```json
+CRMID: John, loyaltyID: John, Email: john@g
+CRMID: John, loyaltyID: John, Email: john@y
+```
+
+![graph here]
+
+>[!TAB The thirdPartyID association changes]
+
+**Text mode**
+
+```json
+CRMID: John, loyaltyID: John, Email: john@g
+CRMID: Jane, loyaltyID: Jane, Email: jane@g
+CRMID: John, thirdPartyID: xyz
+CRMID: Jane, thirdPartyID: xyz
+```
+
+![graph here]
+
+>[!TAB Non-unique orderID]
+
+**Text mode**
+
+```json
+CRMID: John, loyaltyID: John, Email: john@g
+CRMID: Jane, loyaltyID: Jane, Email: jane@g
+Email: john@g, orderID: aaa
+Email: jane@g, orderID: aaa
+```
+
+![graph here]
+
+>[!TAB Erroneous loyaltyID]
+
+**Text mode**
+
+```json
+CRMID: John, loyaltyID: aaa, Email: john@g
+CRMID: Jane, loyaltyID: aaa, Email: jane@g
+```
+
+![graph here]
+
+>[!ENDTABS]
