@@ -174,7 +174,7 @@ This call returns the current `ttlValue` (if set) in the `extensions.adobe_lakeH
 
 **Request**
 
-The following request retrieves your organization's TTL constraints for a particular dataset.
+The following request retrieves your organization's TTL value for a particular dataset.
 
 ```shell
 curl -X GET \
