@@ -2,15 +2,15 @@
 title: Identity Graph Linking Rules Guide Book
 description: 
 ---
-# Identity Graph Linking Rules configurations guide
+# Identity Graph Linking Rules implementation guide
 
 Read this document to learn about different use cases for Identity Graph Linking Rules.
 
 Customer graph scenarios can be grouped into three different categories.
 
-* **Beginner**: Beginner-level integrations include graphs that most often include simple implementations. These implementation tend to revolve around a single cross-device namespace (CRMID). While beginner-level integrations are fairly straightforward, graph collapse can still occur, often due to **shared device** scenarios.
-* **Intermediate**: Intermediate-level integrations start to include several variables including multiple CRMIDs, non-unique identities, and multiple unique namespaces.
-* **Advanced**: Advanced-level integrations involve complex and multi-layered graph scenarios. Advanced integrations will include significant usage of **namespace priority** in order to identify the correct links to remove and prevent instances of graph collapse.
+* **Beginner**: Beginner-level implementations include graphs that most often include simple implementations. These implementation tend to revolve around a single cross-device namespace (CRMID). While beginner-level implementations are fairly straightforward, graph collapse can still occur, often due to **shared device** scenarios.
+* **Intermediate**: Intermediate-level implementations start to include several variables including multiple CRMIDs, non-unique identities, and multiple unique namespaces.
+* **Advanced**: Advanced-level implementations involve complex and multi-layered graph scenarios. Advanced implementations will include significant usage of **namespace priority** in order to identify the correct links to remove and prevent instances of graph collapse.
 
 ## Get started
 
@@ -22,20 +22,9 @@ Before diving in to the following document, ensure that you familiarize yourself
 * [Unique namespace](overview.md#unique-namespace)
 * [Graph Simulation](graph-simulation.md)
 
-### Section on frequently used terms
+## Beginner-level implementations {#beginner}
 
-<!-- | | Beginner | Intermediate | Advanced |
-| --- | --- | --- | --- |
-| Graph collapse because of shared device | ✔️ |  ✔️ |  ✔️ |
-| Graph collapse because of non-unique identities | n/a | ✔️ | ✔️ |
-| Use of namespace priority | n/a | n/a | ✔️ |
-| Customer graph scenarios | Simple implementation with one cross-device namespace | <ul><li>Simple implementation with additional graph collapse scenarios due to non-unique identifiers.</li><li>Hashed/unhashed(online/offline) CRMIDs.</li><li>Customers using Real-Time CDP and Adobe Commerce</li><li>Three unique namespaces.</li></ul> | <ul><li>Support for multiple lines of businesses.</li><li>Complex implementation.</li></ul> |
-
-{style="table-layout:auto"} -->
-
-## Beginner-level integrations {#beginner}
-
-Read this section for beginner-level integrations of [!DNL Identity Graph Linking Rules].
+Read this section for beginner-level implementations of [!DNL Identity Graph Linking Rules].
 
 ### Simple implementation with one cross-device namespace.
 
@@ -53,10 +42,6 @@ CRMID: John, ECID: 999, IDFA: a-b-c
 **Algorithm configuration**
 
 Configure the following settings in the Graph Simulation interface before you simulate your graph.
-
-| Unique namespace | Namespace priority |
-| --- | --- |
-| CRMID | <ul><li>CRMID</li><li>ECID</li><li>IDFA</li></ul> |
 
 | Display name | Identity symbol | Identity type | Unique per graph |
 | --- | --- | --- | --- |
@@ -139,9 +124,9 @@ Authenticated events are tied to the person and unauthenticated events are tied 
 | Jane's unauthenticated events | Jane |
 | Unauthenticated (logged out) events | The last authenticated user, which can be either John or Jane. |
 
-## Intermediate-level integrations {#intermediate}
+## Intermediate-level implementations {#intermediate}
 
-Read this section for intermediate-level integrations of [!DNL Identity Graph Linking Rules].
+Read this section for intermediate-level implementations of [!DNL Identity Graph Linking Rules].
 
 ### Simple implementation with non-unique identities
 
@@ -160,11 +145,7 @@ CRMID: John, ECID: 123
 CRMID: John, ECID: 999, IDFA: a-b-c
 ```
 
-Ensure that you have have the following configuration before you simulate the events.
-
-| Unique namespace | Namespace priority |
-| --- | --- |
-| CRMID | <ul><li>CRMID</li><li>CChash</li><li>ECID</li><li>IDFA</li></ul> |
+Configure the following settings in the Graph Simulation interface before you simulate your graph.
 
 | Display name | Identity symbol | Identity type | Unique per graph |
 | --- | --- | --- | --- |
@@ -243,7 +224,7 @@ CRMID: Jill, CChash: undefined
 
 Your customer is ingesting both an unhashed (offline) CRMID and a hashed (online) CRMID. They expect a direct relationship between both unhashed and hashed CRMIDs. However, when a user browses with an authenticated account, the hashed CRMID is sent along with the device ID (represented on Identity Service as an ECID).
 
-Ensure that you have have the following configuration before you simulate the events.
+Configure the following settings in the Graph Simulation interface before you simulate your graph.
 
 | Unique namespace | Namespace priority |
 | --- | --- |
@@ -388,7 +369,7 @@ CRMID: John, Email: john@y, Email_LC_SHA256: john_y_hash
 
 >[!ENDTABS]
 
-## Advanced-level integrations {#advanced}
+## Advanced-level implementations {#advanced}
 
 **Namespace priority** is metadata that ranks namespaces by their importance. If a graph contains two identities, each with a different unique namespaces, Identity Service uses namespace priority to decide which links to remove. For more information, read the [documentation on namespace priority](../identity-graph-linking-rules/namespace-priority.md).
 
@@ -452,7 +433,7 @@ Just like experience events are linked to the identity with the highest namespac
 
 ### Use case: support for multiple lines of businesses
 
-Your end-users have two different accounts: a personal account and a business account. Each account is identified by a different ID. In this scenario, a typical graph would look like the following:
+Your end-users have two different accounts, a personal account and a business account. Each account is identified by a different ID. In this scenario, a typical graph would look like the following:
 
 **Text mode***
 
@@ -478,6 +459,15 @@ Configure the following settings in the Graph Simulation interface before you si
 | loginID | loginID | CROSS_DEVICE | |
 | ECID | ECID | COOKIE | |
 
+**Simulated graph**
+
++++Select to view simulated graph
+
+![](../images/configs/advanced/advanced.png)
+
++++
+
+
 **Exercise**
 
 Simulate the following configuration in Graph Simulation. You can either create your own events, or copy and paste using text mode.
@@ -497,7 +487,7 @@ loginID: JohnPersonal, ECID: 111
 loginID: JanePersonal, ECID: 111
 ```
 
-![simulated graph here]
+![simulated graph here](../images/configs/advanced/advanced-shared-device.png)
 
 >[!TAB Bad data is sent to Real-Time CDP]
 
@@ -510,7 +500,7 @@ loginID: JohnPersonal, ECID: 111
 loginID: JanePersonal, ECID: 222
 ```
 
-![simulated graph here]
+![simulated graph here](../images/configs/advanced/advanced-bad-data.png)
 
 >[!ENDTABS]
 
@@ -567,7 +557,7 @@ CRMID: John, ECID: 111
 CRMID: Jane, ECID: 111
 ```
 
-![graph here]
+![graph here](../images/configs/advanced/complex-shared-device.png)
 
 >[!TAB End-user changes their email address]
 
@@ -578,7 +568,7 @@ CRMID: John, loyaltyID: John, Email: john@g
 CRMID: John, loyaltyID: John, Email: john@y
 ```
 
-![graph here]
+![graph here](../images/configs/advanced/complex-email-change.png)
 
 >[!TAB The thirdPartyID association changes]
 
@@ -591,7 +581,7 @@ CRMID: John, thirdPartyID: xyz
 CRMID: Jane, thirdPartyID: xyz
 ```
 
-![graph here]
+![graph here](../images/configs/advanced/complex-third-party-change.png)
 
 >[!TAB Non-unique orderID]
 
@@ -604,7 +594,7 @@ Email: john@g, orderID: aaa
 Email: jane@g, orderID: aaa
 ```
 
-![graph here]
+![graph here](../images/configs/advanced/complex-non-unique.png)
 
 >[!TAB Erroneous loyaltyID]
 
@@ -615,6 +605,6 @@ CRMID: John, loyaltyID: aaa, Email: john@g
 CRMID: Jane, loyaltyID: aaa, Email: jane@g
 ```
 
-![graph here]
+![graph here](../images/configs/advanced/complex-error.png)
 
 >[!ENDTABS]
