@@ -30,6 +30,10 @@ TTL is useful when managing time-sensitive data that loses relevance over time. 
 >
 >TTL configurations help you optimize storage based on entitlements. While Profile Store data (used in Real-Time CDP) may be considered stale and removed after 30 days, the same event data in the data lake can remain available for 12–13 months (or longer based on entitlement) for analytics and Data Distiller use cases.
 
+>[!TIP]
+>
+>Entitlements refer to the storage and retention allowances defined by your Adobe subscription and license agreements.
+
 ### Industry example {#industry-example}
 
 As an example, consider a video streaming service that tracks user interactions, such as video views, searches, and recommendations. While recent engagement data is crucial for personalization, older activity logs (for example, interactions from over a year ago) lose relevance. By using row-level expiration, Experience Platform automatically removes outdated logs, ensuring only current and meaningful data is used for analytics and recommendations.
@@ -66,9 +70,9 @@ Before you can evaluate, set, and manage Experience Event Dataset Retention usin
 
 ### Check your TTL constraints {#check-ttl-constraints}
 
-Use the Data Hygiene API `/ttl/{datasetId}` endpoint to help plan TTL configurations. This endpoint returns the minimum and maximum TTL values supported for your organization, along with a recommended value (`defaultValue`) for the dataset type. 
+Use the Data Hygiene API `/ttl/{DATASET_ID}` endpoint to help plan TTL configurations. This endpoint returns the minimum and maximum TTL values supported for your organization, along with a recommended value (`defaultValue`) for the dataset type. 
 
-To [check the TTL currently applied to a dataset](#check-applied-ttl-values), make a GET requesat to the Catalog Service API `/dataSets/{DATASET_ID}` endpoint instead.
+To [check the TTL currently applied to a dataset](#check-applied-ttl-values), make a GET request to the Catalog Service API `/dataSets/{DATASET_ID}` endpoint instead.
 
 See the Adobe Developer [Data Hygiene API](https://developer.adobe.com/experience-platform-apis/references/data-hygiene/#operation/getTtl) documentation for more information.
 
@@ -247,7 +251,7 @@ In the following request, the TTL is updated to six months (`P6M`) extending the
 
 >[!NOTE]
 >
->TTL settings for adobe_lakeHouse.rowExpiration and adobe_unifiedProfile.rowExpiration are independent. Updating one does not automatically update the other. If you want to apply TTL settings to both, you must include both sections explicitly in your PATCH request.
+>TTL settings for `adobe_lakeHouse.rowExpiration` and `adobe_unifiedProfile.rowExpiration` are independent. Updating one does not automatically update the other. If you want to apply TTL settings to both, you must include both sections explicitly in your PATCH request.
 
 ```shell
 curl -X PATCH \
@@ -305,7 +309,7 @@ The table below provides common TTL recommendations based on dataset type and us
 
 Review TTL settings periodically to ensure they continue to align with your storage policies, analytical needs, and business requirements.
 
-### Key considerations when setting TTL
+### Key considerations when setting TTL {#key-considerations}
 
 <!-- What are the default TTL limits for system-generated Profile Store and data lake datasets? -->
 
@@ -322,7 +326,7 @@ Follow these best practices to ensure that TTL settings align with your data ret
 Be aware of the following limitations when using TTL:
 
 - **Experience Event Dataset Retention using TTL applies to row-level expiration**, not dataset deletion. TTL removes records based on a defined retention period but does not delete entire datasets. To remove a dataset, use the [dataset expiration endpoint](../../hygiene/api/dataset-expiration.md) or manual deletion.
-- **Once set, TTL must be explicitly disabled**. The configuration remains in effect until you disable it by [setting `ttlValue` to `null`](#update-ttl). Disabling TTL stops expiration and ensures all records in the dataset are retained.
+- **TTL configuration remains active until explicitly disabled**. The configuration remains in effect until you disable it by [setting `ttlValue` to `null`](#update-ttl). Disabling TTL stops expiration and ensures all records in the dataset are retained.
 - **TTL is not a compliance tool**. While TTL optimizes storage and lifecycle management, you must implement broader governance strategies to ensure regulatory compliance.
 
 ## Dataset retention policy FAQs {#faqs}
