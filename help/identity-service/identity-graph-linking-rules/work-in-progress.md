@@ -514,11 +514,10 @@ Additionally, your end-users can make a purchase on the e-commerce website and t
 **Text mode**
 
 ```json
-CRMID: John, loginID: JohnPersonal
-CRMID: John, loginID: JohnBusiness
-loginID: JohnPersonal, ECID: 111
-loginID: JohnPersonal, ECID: 222
-loginID: JohnBusiness, ECID: 222
+CRMID: John, loyaltyID: John, Email: john@g
+Email: john@g, orderID: aaa
+CRMID: John, thirdPartyID: xyz
+CRMID: John, ECID: 111
 ```
 
 **Algorithm configuration**
