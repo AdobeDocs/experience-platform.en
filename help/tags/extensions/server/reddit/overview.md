@@ -7,7 +7,7 @@ last-substantial-update: 2025-05-1
 
 Reddit is a social media platform with a diverse user base, making it ideal for advertisers targeting specific audiences.
 
-Use the [[!DNL Reddit] Conversions API extension](https://ads-api.reddit.com/docs/v2/#tag/Conversions-API) to send user interaction events captured in the Adobe Experience Platform Edge Network to [!DNL Reddit Ads]. Use this extension to help your brand reach an audience of over 379 million weekly active users, and to better understand user behavior and run targeted advertisements.
+Use the [[!DNL Reddit] Conversions API extension](https://ads-api.reddit.com/docs/v2/#tag/Conversions-API) to send user interaction events captured in the Adobe Experience Platform Edge Network to [!DNL Reddit Ads]. Use this extension to help your brand reach an audience of over 379 million weekly active users, and better understand user behavior and run targeted advertisements.
 
 Read this guide to learn how to install, configure, and use the [!DNL Reddit] Conversions API extension in your event forwarding [rules](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/rules).
 
@@ -21,16 +21,16 @@ Use the Reddit Conversions API extension to:
 
 ## Prerequisites {#prerequisites}
 
-You must have a valid Reddit Ads account in order to use this extension. Go to [[!DNL Reddit Ads] registration page](https://business.reddithelp.com/s/article/Create-and-manage-your-Reddit-Ads-account) to register and create an account if you do not have one already. Once you have your account set up you will need to [request access to the Ads API](https://www.redditforbusiness.com/api-partnership).
+You must have a valid Reddit Ads account to use this extension. Go to [[!DNL Reddit Ads] registration page](https://business.reddithelp.com/s/article/Create-and-manage-your-Reddit-Ads-account) to register and create an account if you do not have one already. Once you have your account set up, [request access to the Ads API](https://www.redditforbusiness.com/api-partnership).
 
 ### Gather required configuration details {#configuration-details}
 
-In order to connect the Experience Platform to [!DNL Reddit], the following inputs are required:
+To connect the Experience Platform to [!DNL Reddit], the following inputs are required:
 
 | Credential | Description | Example |
 | --- | --- | --- |
 | Pixel ID | The Pixel ID is a unique identifier associated with your [!DNL Reddit Ads] account. It is used to track user interactions and conversion events on your website or app. You can find your Pixel ID in your [!DNL Reddit Ads] [account](https://ads.reddit.com/accounts).| 123456789012 |
-| Conversion Access Token | Your [!DNL Reddit] Conversion Access Token. Refer to the [[!DNL Reddit] Conversions API](https://business.reddithelp.com/s/article/conversion-access-token) document for guidance. <br> **You will only be required to do this once as this token does not expire.** | {YOUR_REDDIT_BEARER_TOKEN} |
+| Conversion Access Token | Your [!DNL Reddit] Conversion Access Token. Refer to the [[!DNL Reddit] Conversions API](https://business.reddithelp.com/s/article/conversion-access-token) document for guidance. <br> **You are only required to go through this process once as this token does not expire.** | {YOUR_REDDIT_BEARER_TOKEN} |
 
 ## Install and configure the [!DNL Reddit] extension {#install-configure}
 
@@ -58,7 +58,7 @@ After you set up your data elements, create event forwarding rules to determine 
     | Field name | Description | Example | 
     | --- | --- | --- |
     | `Event Name` | Specify the name of the conversion event. | `Purchase` |
-    | `Event Type` | Define the type of event. This can be a [supported Reddit conversion event](https://business.reddithelp.com/s/article/supported-conversion-events#supported-conversion-events) or a custom one. | `SignUp`, `MyCustomEvent` |
+    | `Event Type` | Define the type of event that can be a [supported Reddit conversion event](https://business.reddithelp.com/s/article/supported-conversion-events#supported-conversion-events) or a custom one. | `SignUp`, `MyCustomEvent` |
     | `Timestamp` | Provide the event time in ISO format or epoch time. | `2025-04-15T16:01:00.000Z`, `1744742460000` |
     | `Client Dedupe ID` | Add a unique ID for deduplication. | `abc123` |
     | `Match Keys` | Include user and device identifiers for attribution. | `{"email":"hashed_email@example.com", "phone":"hashed_phone"}` |
@@ -87,7 +87,7 @@ This section provides a detailed breakdown of the event metadata and user data f
 | --- | --- | --- |
 | `Conversion ID` (required) | The unique ID for the conversion event, used for deduplication. | `abc123` |
 | `Item Count` | The total number of items for the conversion event. | `6` |
-| `Currency` | The currency for the value provided, in [ISO-4217](https://www.iso.org/iso-4217-currency-codes.html) format. | `USD` |
+| `Currency` | The currency for the value is provided, in [ISO-4217](https://www.iso.org/iso-4217-currency-codes.html) format. | `USD` |
 | `Value` | The total monetary value of the conversion event, including decimals. | `1.23` |
 | `Products` | A JSON array of objects with details about the products associated with the event. Each object must include an `id` at a minimum. | `[{"id":"SKU123","name":"ProductName","category":"CategoryName"},{"id":"SKU456","name":"ProductName","category":"CategoryName"}]` |
 
@@ -110,7 +110,7 @@ The following parameters are optional but recommended:
 
 ### Important considerations
 
-Before sending data to [!DNL Reddit Ads], the extension hashes and normalizes the values of the following fields: `Email`, `External ID`, `IDFA`, and `AAID`. The extension does not re-hash these if they have already been hashed in [!DNL SHA-256].
+Before sending data to [!DNL Reddit Ads], the extension hashes and normalizes the values of the following fields: `Email`, `External ID`, `IDFA`, and `AAID`. The extension does not re-hash these values if they have already been hashed in [!DNL SHA-256].
 
 ## Validate and deploy {#validate-deploy}
 
