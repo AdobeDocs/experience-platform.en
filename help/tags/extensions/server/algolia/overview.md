@@ -1,6 +1,6 @@
 ---
 title: Algolia Event Forwarding Extension Overview
-description: Use event forwarding to send search user behaviors to Algolia.
+description: Learn how to use event forwarding to send search user behaviors to Algolia.
 type: Documentation
 feature: Data Collection, Event Forwarding
 level: Beginner
@@ -14,11 +14,13 @@ topic: Integrations
 >  
 >Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) for a consolidated reference of the terminology changes.
 
-The [!DNL Algolia] event forwarding extension sends user behavior events to [!DNL Algolia] using the Insights API, unlocking [!DNL Algolia]'s AI features. This document covers how to set up the extension and configure rules using the **Send Event** action.
+Algolia is a powerful search and discovery platform that enables businesses to deliver fast, relevant, and personalized search experiences. It uses AI-powered features to optimize search results and recommendations to help you find products, content, or information quickly.
+
+Use the [!DNL Algolia] event forwarding extension to send user behavior events to [!DNL Algolia] using the Insights API, unlocking [!DNL Algolia]'s AI features. This document covers how to set up the extension and configure rules using the **Send Event** action.
 
 ## Prerequisites
 
-This document assumes you are familiar with the relevant [!DNL Algolia] Insights APIs leveraged by the extension. For more information, please see [!DNL Algolia]'s help documentation for [sending events](https://www.algolia.com/doc/guides/sending-events/getting-started/).
+This document assumes that you are familiar with the relevant [!DNL Algolia] Insights APIs leveraged by the extension. For more information, please see [!DNL Algolia]'s help documentation for [sending events](https://www.algolia.com/doc/guides/sending-events/getting-started/).
 
 An [!DNL Algolia] account is required to use this extension. You can sign up for a free account [here](https://dashboard.algolia.com/users/sign_up/). In the [!DNL Algolia] account dashboard, make note of the following values which you need for configuration:
 
