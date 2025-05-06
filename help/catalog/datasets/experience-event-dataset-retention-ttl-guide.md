@@ -122,7 +122,7 @@ GET /ttl/{DATASET_ID}
 
 **Request**
 
-The following request retrieves your organization's TTL settings for a particular dataset.
+The following request retrieves your organization's TTL constraints for a particular dataset.
 
 ```shell
 curl -X GET \
@@ -291,16 +291,16 @@ This FAQ covers practical questions about dataset retention jobs, immediate effe
 ### What types of datasets can I apply retention policy rules to?
 
 +++Answer
-You can apply retention policies to datasets created using the XDM ExperienceEvent class. For Profile services, retention policies are only applicable to Experience Event datasets that have been Profile-enabled.
+You can apply retention policies to datasets created using the XDM ExperienceEvent class. Retention policies are only applicable to Experience Event datasets that have been Profile-enabled.
 +++
 
 ### How soon will the Dataset Retention job delete data from data lake services?
 
 +++Answer
-Dataset TTLs are evaluated and processed weekly, deleting all expired records. An event is considered expired if it was ingested into Experience Platform more than 30 days ago (ingestion date > 30 days) and its event date exceeds the defined retention period (TTL).
+Dataset TTLs are evaluated and processed every 30 days, deleting all expired records. An event is considered expired if it was ingested into Experience Platform more than 30 days ago (ingestion date > 30 days) and its event date exceeds the defined retention period (TTL).
 +++
 
-### How soon will the Dataset Retention job delete data from Profile services?
+<!-- ### How soon will the Dataset Retention job delete data from Profile services?
 
 +++Answer
 Once a retention policy is set, existing events that already exceed the newly defined TTL are immediately deleted. Newer events remain until their timestamps surpass the retention period.
@@ -310,7 +310,7 @@ For example, if you apply a 30-day expiration policy on May 15th, the following 
 - New events receive a 30-day expiration as they are ingested.
 - Existing events with a timestamp older than April 15th are immediately deleted.
 - Existing events with a timestamp after April 15th are set to expire 30 days after their timestamp (for example, an event from April 18th would be deleted on May 18th).
-+++
++++ -->
 
 ### Can I set different retention policies for data lake and Profile services?
 
@@ -330,6 +330,12 @@ For sandbox-level usage, refer to the License Usage dashboard. See the [License 
 
 +++Answer
 You can verify the last data retention job by checking its timestamp in the [Dataset Retention Configuration UI](./user-guide.md#data-retention-policy) or on the Data Inventory page.
+
+Alternatively, you can make a GET request to the following endpoint:
+
+`GET https://platform.adobe.io/data/foundation/catalog/dataSets/{DATASET_ID}`
+
+The response includes the property `extensions.adobe_lakeHouse.rowExpiration.lastCompleted`, which indicates the Unix timestamp (in milliseconds) of when the most recent TTL job was completed.
 
 Historical dataset usage reporting is currently unavailable.
 +++
