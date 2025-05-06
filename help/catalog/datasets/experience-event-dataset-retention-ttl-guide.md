@@ -64,12 +64,13 @@ Before you can evaluate, set, and manage Experience Event Dataset Retention usin
 >
 >This document covers row-level expiration, which deletes individual expired rows within a dataset while keeping the dataset itself intact. It does not apply to dataset expiration, which removes entire datasets and is managed by a separate feature. For dataset-level expiration, refer to the [dataset expiration API documentation](../../hygiene/api/dataset-expiration.md).
 
-### How to check TTL constraints {#check-ttl-constraints}
+### Check your TTL constraints {#check-ttl-constraints}
 
-Use the `/ttl/{datasetId}` endpoint to view the default, minimum, and maximum TTL values that apply to the dataset type. To [check the current TTL setting applied to a dataset](#check-applied-ttl-values), use the `/dataSets/{DATASET_ID}` endpoint instead.
+Use the Data Hygiene API `/ttl/{datasetId}` endpoint to help plan TTL configurations. This endpoint returns the minimum and maximum TTL values supported for your organization, along with a recommended value (`defaultValue`) for the dataset type. 
 
-<!-- Q: What is the specific value of providing this `/ttl/{datasetId}` call to the user, given it doesn't return applied values? Should we explicitly guide users to use this for planning TTL rather than validation? -->
+To [check the TTL currently applied to a dataset](#check-applied-ttl-values), make a GET requesat to the Catalog Service API `/dataSets/{DATASET_ID}` endpoint instead.
 
+See the Adobe Developer [Data Hygiene API](https://developer.adobe.com/experience-platform-apis/references/data-hygiene/#operation/getTtl) documentation for more information.
 
 >[!TIP]
 >
@@ -101,7 +102,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns the recommended, maximum, and minimum TTL values based on your organization's entitlements, along with a suggested TTL (`defaultValue`) for the dataset. This `defaultValue` is not automatically applied, it is provided as guidance and must be manually configured. The response does not include any custom TTL values that may already be set. To view the current TTL for a dataset, use the GET `/catalog/dataSets/{DATASET_ID}` endpoint.
+A successful response returns the recommended, maximum, and minimum TTL values based on your organization's entitlements, along with a suggested TTL (`defaultValue`) for the dataset. This `defaultValue` is a recommended TTL duration, provided for guidance only. It is not applied unless explicitly configured by you. The response does not include any custom TTL values that may already be set. To view the current TTL for a dataset, use the GET `/catalog/dataSets/{DATASET_ID}` endpoint.
 
 +++Select to view the response
 
@@ -124,10 +125,8 @@ A successful response returns the recommended, maximum, and minimum TTL values b
 | Property      | Description |
 |--------------|-------------|
 | `defaultValue` | A recommended TTL value for your dataset. This value is **not** automatically applied. You must explicitly set a TTL for it to take effect. |
-| `maxValue`    | The maximum TTL duration your organization can apply. Typically, this duration is 10 years (`P10Y`), but it may vary based on entitlements. |
-| `minValue`    | The minimum TTL duration your organization must apply. Typically, this duration is 30 days (`P30D`), but it may vary based on entitlements. |
-
-<!-- Q: Are these default Max and Min TTL values system-imposed? If so, can we document any conditions or exceptions that may affect them? -->
+| `maxValue`    | The maximum TTL duration permitted by your organization's entitlement. Typically, this duration is 10 years (`P10Y`). |
+| `minValue`    | The minimum TTL duration permitted by your organization's entitlement. Typically, this duration is 30 days (`P30D`). |
 
 ### How to check applied TTL values {#check-applied-ttl-values}
 
@@ -315,24 +314,16 @@ Review TTL settings periodically to ensure they continue to align with your stor
 Follow these best practices to ensure that TTL settings align with your data retention strategy:
 
 - Audit TTL changes regularly. Every TTL update triggers an audit event. Use audit logs to track TTL modifications for compliance, data governance, and troubleshooting purposes.
-- Remove TTL if data must be retained indefinitely. To disable TTL, set `ttlValue` to `null`. This prevents automatic expiration and retains all records permanently. Consider the storage implications before making this change. 
+- Disable TTL if data must be retained indefinitely. To disable TTL, set `ttlValue` to `null`. This prevents automatic expiration and retains all records permanently. Consider the storage implications before making this change. 
 
-<!-- Q: Are there any backend constraints or system side effects when setting `ttlValue` to null (e.g., does it reset other TTL metadata or generate a specific audit event)? -->
 
 ## Limitations of TTL {#limitations}
 
 Be aware of the following limitations when using TTL:
 
 - **Experience Event Dataset Retention using TTL applies to row-level expiration**, not dataset deletion. TTL removes records based on a defined retention period but does not delete entire datasets. To remove a dataset, use the [dataset expiration endpoint](../../hygiene/api/dataset-expiration.md) or manual deletion.
-- **TTL cannot be removed**, only updated. Once applied, TTL cannot be deleted, but you can [modify the retention period](#update-ttl) to extend or shorten it. To retain data indefinitely, set a sufficiently long TTL instead of attempting to remove it.
-- **TTL is not a compliance tool**. TTL optimizes storage and data lifecycle management but does not meet regulatory data retention requirements. For compliance, implement broader data governance strategies.
-
-<!-- 
-Regarding - "**TTL cannot be removed**"
-**TTL cannot be removed, only disabled.** To disable TTL set the `ttlValue` to `null`. This stops expiration and retains all records, effectively removing the TTL rule.
-
-Q: Is setting ttlValue to null the correct method to "remove" TTL? In whihc case, should we revise our terminology around removal vs. disabling for clarity? 
--->
+- **Once set, TTL must be explicitly disabled**. The configuration remains in effect until you disable it by [setting `ttlValue` to `null`](#update-ttl). Disabling TTL stops expiration and ensures all records in the dataset are retained.
+- **TTL is not a compliance tool**. While TTL optimizes storage and lifecycle management, you must implement broader governance strategies to ensure regulatory compliance.
 
 ## Dataset retention policy FAQs {#faqs}
 
@@ -353,7 +344,7 @@ Dataset TTLs are evaluated and processed weekly, deleting all expired records. A
 ### How soon will the Dataset Retention job delete data from Profile services?
 
 +++Answer
-Once a retention policy is set, existing events in Experience Platform are immediately deleted if their event timestamp exceeds the retention period (TTL). New events are deleted once their timestamp surpasses the retention period.
+Once a retention policy is set, existing events that already exceed the newly defined TTL are immediately deleted. Newer events remain until their timestamps surpass the retention period.
 
 For example, if you apply a 30-day expiration policy on May 15th, the following occurs:
 
