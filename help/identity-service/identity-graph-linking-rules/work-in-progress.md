@@ -1,16 +1,16 @@
 ---
-title: Identity Graph Linking Rules Guide Book
+title: 
 description: 
 ---
-# Identity Graph Linking Rules implementation guide
+# {TITLE}
 
 Read this document to learn about different use cases for Identity Graph Linking Rules.
 
 Customer graph scenarios can be grouped into three different categories.
 
-* **Beginner**: Beginner-level implementations include graphs that most often include simple implementations. These implementation tend to revolve around a single cross-device namespace (CRMID). While beginner-level implementations are fairly straightforward, graph collapse can still occur, often due to **shared device** scenarios.
-* **Intermediate**: Intermediate-level implementations start to include several variables including multiple CRMIDs, non-unique identities, and multiple unique namespaces.
-* **Advanced**: Advanced-level implementations involve complex and multi-layered graph scenarios. Advanced implementations will include significant usage of **namespace priority** in order to identify the correct links to remove and prevent instances of graph collapse.
+* **Beginner**: Beginner-level implementations include graphs that most often include simple implementations. These implementations tend to revolve around a single cross-device namespace (for example, CRMID). While beginner-level implementations are fairly straightforward, graph collapse can still occur, often due to **shared device** scenarios.
+* **Intermediate**: Intermediate-level implementations include several variables such as **multiple cross-device namespaces**, **non-unique identities**, and **multiple unique namespaces**.
+* **Advanced**: Advanced-level implementations involve complex and multi-layered graph scenarios. Advanced implementations will include significant usage of **namespace priority** in order to identify the correct links that must be removed in order to prevent graph collapse.
 
 ## Get started
 
@@ -26,11 +26,11 @@ Before diving in to the following document, ensure that you familiarize yourself
 
 Read this section for beginner-level implementations of [!DNL Identity Graph Linking Rules].
 
-### Simple implementation with one cross-device namespace.
+### Simple implementation with one cross-device namespace
 
 Generally, Adobe customers have a single cross-device namespace that is used across all of their properties including, web, mobile, and applications. This system is both industry and geographically agnostic as customers in retail, telecom, and financial services use this type of implementation.
 
-An end-user is represented by a CRMID, therefore the CRMID should be classified as a unique namespace. An end-user who owns a computer or an [!DNL iPhone] and does not share their device, could have an identity graph like the following.
+Typically, an end-user is represented by a cross-device namespace (often a CRMID), therefore, the CRMID should be classified as a unique namespace. An end-user who owns a computer and an [!DNL iPhone] and does not share their device, could have an identity graph like the following.
 
 **Text mode**
 
@@ -53,6 +53,8 @@ Configure the following settings in the Graph Simulation interface before you si
 **Simulated graph**
 
 +++Select to view simulated graph
+
+In this graph,  John (the end-user) is represented by the CRMID. {ECID: 123} represents the web browser that John used on his personal computer to visit your e-commerce platform. {ECID: 999} represents the browser that he used on his [!DNL iPhone] and {IDFA: a-b-c} represents his [!DNL iPhone].
 
 ![A simple implementation with one cross-device namespace..](../images/configs/beginner/simple-implementation.png)
 
@@ -83,6 +85,13 @@ CRMID: Jane, ECID: 111
 
 +++Select to view simulated graph
 
+In this graph, John and Jane are represented by their own respective CRMIDs:
+
+* {CRMID: John}
+* {CRMID: Jane}
+
+The browser on the desktop computer that they both use to visit your e-commerce platform is represented by {ECID: 111}. In this graph scenario, Jane is the last authenticated (or most recently active) end-user, and therefore, the link between {ECID: 111} and {CRMID: John} is removed.
+
 ![A simulated graph for a shared device (PC).](../images/configs/beginner/shared-device-pc.png)
 
 +++
@@ -93,7 +102,7 @@ CRMID: Jane, ECID: 111
 
 Similarly, John and Jane also share an [!DNL iPad] and occasionally use this [!DNL iPad] to browse the internet, including your website.
 
-You can implement this use case in the graph simulation tool by creating your own events or inputting the following in text mode:
+You can implement this use case in Graph Simulation by creating your own events or inputting the following in text mode:
 
 **Text mode:**
 
@@ -106,23 +115,23 @@ CRMID: Jane, ECID: 111, IDFA: a-b-c
 
 +++Select to view simulated graph
 
+In this graph, John and Jane are both represented by their own respective CRMIDs. The browser that they use is represented by {ECID: 111} and the [!DNL iPad] that they share is represented by {IDFA: a-b-c}. In this graph scenario, Jane is the last authenticated (or most recently active) end-user, and therefore, the links from {ECID: 111} and {IDFA: a-b-c} to {CRMID: John} are removed.
+
 ![A simulated graph for a shared device (mobile).](../images/configs/beginner/shared-device-mobile.png)
 
 +++
 
 >[!ENDTABS]
 
-### Anonymous event association and how authenticated events are associated
+### Understanding anonymous event association and how authenticated events are associated
 
-A common question is: "If the ECID is linked from John to Jane, then will John's events (on Real-Time Customer Profile) also move over to Jane?"
+<!-- A common question is: "If the ECID is linked from John to Jane, then will John's events on Real-Time Customer Profile also move over to Jane?" -->
 
-Authenticated events are tied to the person and unauthenticated events are tied to the device. There will never be a scenario where Jane's browsing events get associated with John, and vice versa.
+Authenticated events are tied to the end-user and unauthenticated events are tied to the device. There will never be a scenario where Jane's browsing events get associated with John, and vice versa.
 
-| Event type | Association (primary identity of the event) |
-| --- | --- |
-| John's authenticated (logged in) events | John |
-| Jane's unauthenticated events | Jane |
-| Unauthenticated (logged out) events | The last authenticated user, which can be either John or Jane. |
+* If John logs in and browses your website for shoes (authenticated event), then the primary identity of this authenticated event gets associated with John.
+* If Jane logs in and browses your website for jackets (authenticated event), then the primary identity of this authenticated event gets associated with Jane.
+* If Jane logs out, and then John uses the same device to browse your website for shoes **without logging in** (unauthenticated event), then the primary identity of this unauthenticated event gets associated with the last authenticated user, which in this case is Jane.
 
 ## Intermediate-level implementations {#intermediate}
 
