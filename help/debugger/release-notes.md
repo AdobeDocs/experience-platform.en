@@ -7,6 +7,12 @@ exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
 ---
 # Adobe Experience Platform Debugger release notes
 
+## Version 1.6.4 - May 6, 2025
+
+### Fixes and improvements
+
+* Fixed an issue where sign-in was unavailable.
+
 ## Version 1.6.3 - April 30, 2025
 
 ### Fixes and improvements
