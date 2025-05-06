@@ -52,3 +52,28 @@ WHERE
 
 ## Model deployment {#model-deployment}
 
+* The LLM model is a GPT-based model hosted by [!DNL Azure OpenAI] APIs.
+* The base model is hosted by [!DNL Azure].
+* The model is updated regularly, on a weekly basis, through question bank expansion. The mode lis also updated through new prompting strategies and instructions when needed.
+
+## Explainability {#explainability}
+
+The model uses a separate explanation model for SQL.
+
+## Fairness and bias {#fairness-and-bias}
+
+* To ensure the model interprets and generates queries consistently across different user intents and linguistic variations without introducing bias or reinforcing stereotypes, Adobe uses prompt auditing, explainability, and safeguards against generating biased or unethical output.
+* The model output is impacted by the In-Context Learning examples, and what the retriever selects into the prompt. The question bank examples contain examples considered representative from PM's perspective, and also we are expanding the question banks based on real customer traffic.
+
+## Robustness {#robustness}
+
+Since most of the queries it receives are not covered in the question bank, the production traffic accuracy reflects the robustness of the model. 
+
+## Privacy and security considerations {#privacy-and-security-considerations}
+
+The model does not process or retain any personally identifiable information (PII), and those information are masked out for SQL generation. For attribute-based access control permission checking, the generated SQL will further be processed by the Experience Platform Knowledge Graph team to ensure governance quality. 
+
+## Ethical considerations {#ethical-considerations}
+
+To avoid exposing PII or sensitive attributes, the model has been designed to support privacy, avoid reinforcing existing data biases, and respect access control boundaries. This includes filtering, tagging, and auditing schema fields for responsible usage.
+
