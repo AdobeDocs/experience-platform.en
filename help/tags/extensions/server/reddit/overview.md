@@ -5,31 +5,45 @@ last-substantial-update: 2025-05-1
 ---
 # [!DNL Reddit] Conversions API extension overview
 
+Reddit is a social media platform with a diverse user base, making it ideal for advertisers targeting specific audiences.
+
 Use the [[!DNL Reddit] Conversions API extension](https://ads-api.reddit.com/docs/v2/#tag/Conversions-API) to send user interaction events captured in the Adobe Experience Platform Edge Network to [!DNL Reddit Ads]. Use this extension to help your brand reach an audience of over 379 million weekly active users, and to better understand user behavior and run targeted advertisements.
 
 Read this guide to learn how to install, configure, and use the [!DNL Reddit] Conversions API extension in your event forwarding [rules](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/rules).
 
+## Key benefits {#benefits}
+
+Use the Reddit Conversions API extension to:
+
+- **Reach your audience**: Engage with over 379 million weekly active users on [!DNL Reddit].
+- **Analyze user behavior**: Leverage user interaction data to understand behavior and optimize campaigns.
+- **Deliver targeted ads**: Run personalized advertisements based on user interactions captured in Adobe Experience Platform.
+
 ## Prerequisites {#prerequisites}
 
-Before you install and configure the [!DNL Reddit] Conversions API extension, ensure that the following prerequisites are met:
+You must have a valid Reddit Ads account in order to use this extension. Go to [[!DNL Reddit Ads] registration page](https://business.reddithelp.com/s/article/Create-and-manage-your-Reddit-Ads-account) to register and create an account if you do not have one already. Once you have your account set up you will need to [request access to the Ads API](https://www.redditforbusiness.com/api-partnership).
 
-1. [**Set up a [!DNL Reddit Ads] account**](https://business.reddithelp.com/s/article/Create-and-manage-your-Reddit-Ads-account): [Request access to the Ads API](https://www.redditforbusiness.com/api-partnership).
-2. **Find your Pixel ID**: Locate your Pixel ID in your [!DNL Reddit Ads] [account](https://ads.reddit.com/accounts).
-3. **Create a conversion access token**: Generate a token to authenticate API requests.
+### Gather required configuration details {#configuration-details}
+
+In order to connect the Experience Platform to [!DNL Reddit], the following inputs are required:
+
+| Credential | Description | Example |
+| --- | --- | --- |
+| Pixel ID | The Pixel ID is a unique identifier associated with your [!DNL Reddit Ads] account. It is used to track user interactions and conversion events on your website or app. You can find your Pixel ID in your [!DNL Reddit Ads] [account](https://ads.reddit.com/accounts).| 123456789012 |
+| Conversion Access Token | Your [!DNL Reddit] Conversion Access Token. Refer to the [[!DNL Reddit] Conversions API](https://business.reddithelp.com/s/article/conversion-access-token) document for guidance. <br> **You will only be required to do this once as this token does not expire.** | {YOUR_REDDIT_BEARER_TOKEN} |
 
 ## Install and configure the [!DNL Reddit] extension {#install-configure}
 
 Follow these steps to install and configure the [!DNL Reddit] Conversions API extension:
 
-1. [Create a new event forwarding property](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/overview#properties) or select an existing property.
-2. Navigate to **Extensions** in the left navigation panel.
+1. In the Experience Platform Data Collection UI, select [!UICONTROL Extensions] from the left navigation to access the [!UICONTROL Extensions] catalog. Then [Create a new event forwarding property](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/overview#properties) or select an existing property.
+2. Navigate to **[!UICONTROL Extensions]** in the left navigation panel. Select **[!UICONTROL Catalog]** and then select the **[!DNL Reddit]** extension.
     ![The Adobe Experience Platform Extensions catalog with the Reddit extension highlighted.](../../../images/extensions/server/reddit/reddit-extension.png)
-3. Open the **Catalog** tab and select the card for the [!DNL Reddit] extension.
-    ![Configuration details for the Reddit Conversions API extension, including fields for Pixel ID and Conversion Access Token.](../../../images/extensions/server/reddit/reddit-capi-details.png)
-4. Provide the following configuration details:
+3. Provide the following configuration details:
    - **Pixel ID**: Enter your [!DNL Reddit Ads] Pixel ID.
    - **Conversion Access Token**: Enter the token generated in your [!DNL Reddit Ads] account.
-5. Select [!UICONTROL **Save**] to complete the configuration.
+   ![Configuration details for the Reddit Conversions API extension, including fields for Pixel ID and Conversion Access Token.](../../../images/extensions/server/reddit/reddit-capi-details.png)
+4. Select [!UICONTROL **Save**] to complete the configuration.
 
 ## Configure an event forwarding rule {#config-rule}
 
@@ -38,7 +52,7 @@ After you set up your data elements, create event forwarding rules to determine 
 1. Navigate to **Rules** in your event forwarding property and create a new [rule](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/rules).
 2. Under **Actions**, add a new action and set the extension to **[!DNL Reddit CAPI]**.
 3. Set the **Action Type** to **Send Event**.
-    ![Event forwarding rule configuration interface for the Reddit Conversions API extension, with the extension and action type fields highlighted.](../images/extensions/server/reddit/reddit-rule.png)
+    ![Event forwarding rule configuration interface for the Reddit Conversions API extension, with the extension and action type fields highlighted.](../../../images/extensions/server/reddit/reddit-rule.png)
 4. Configure the additional controls for your event as shown in the table below:
 
     | Field name | Description | Example | 
@@ -57,21 +71,17 @@ After you set up your data elements, create event forwarding rules to determine 
 
 5. Select **Keep Changes** to save the rule.
 
-## Key benefits {#benefits}
-
-- **Audience reach**: Engage with over 379 million weekly active users on [!DNL Reddit].
-- **Behavioral insights**: Leverage user interaction data to understand behavior and optimize campaigns.
-- **Targeted advertising**: Run personalized advertisements based on user interactions captured in Adobe Experience Platform.
-
 ## Event metadata {#event-metadata}
 
-This section provides a detailed breakdown of the event metadata and user data fields, ensuring you understand the required and optional parameters for configuring your events. The following fields may appear depending on your selected event type. 
+This section provides a detailed breakdown of the event metadata and user data fields, ensuring you understand the required and optional parameters for configuring your events. The fields shown may vary depending on the event type selected.
 
 >[!NOTE]
 >
 >To get the best results from your conversion events, make sure to fill in all the fields when setting up [dynamic product ads](https://business.reddithelp.com/s/article/dynamic-product-ads).
 
 ### Event metadata fields
+
+![Configuration details for the Reddit Conversions API extension, including fields for Pixel ID and Conversion Access Token.](../../../images/extensions/server/reddit/reddit-event-metadata.png)
 
 | Field Name | Description | Example |
 | --- | --- | --- |
@@ -100,7 +110,7 @@ The following parameters are optional but recommended:
 
 ### Important considerations
 
-Before sending data to [!DNL Reddit Ads], the extension hashes and normalizes the values of the following fields: `Email`, `External ID`, `IDFA`, and `AAID`. The extension does not re-hash these fields if they already contain an SHA-256 hash.
+Before sending data to [!DNL Reddit Ads], the extension hashes and normalizes the values of the following fields: `Email`, `External ID`, `IDFA`, and `AAID`. The extension does not re-hash these if they have already been hashed in [!DNL SHA-256].
 
 ## Validate and deploy {#validate-deploy}
 
