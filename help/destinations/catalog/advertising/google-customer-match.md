@@ -226,6 +226,10 @@ Attribute source data is not automatically hashed. When your source field contai
 
 After connecting to the destination and establishing a destination dataflow, you can use the [monitoring functionality](/help/dataflows/ui/monitor-destinations.md) in Real-Time CDP to get extensive information about the profile records activated to your destination in each dataflow run. 
 
+>[!IMPORTANT]
+>
+>When you map the four address-related target identities (`address_info_first_name`, `address_info_last_name`, `address_info_country_code`, and `address_info_postal_code`), they are counted as separate individual identities for each profile in the dataflow monitoring page.
+
 ## Verify that audience activation was successful {#verify-activation}
 
 After completing the activation flow, switch to your **[!UICONTROL Google Ads]** account. The activated audiences are shown in your Google account as customer lists. Depending on your audience size, some audiences do not populate unless there are over 100 active users to serve.
