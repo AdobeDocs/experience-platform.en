@@ -12,7 +12,11 @@ exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
 
 >[!AVAILABILITY]
 >
->Identity graph linking rules are currently in Limited Availability. Contact your Adobe account team for information on how to access the feature in development sandboxes.
+>Identity Graph Linking Rules is currently in Limited Availability, and can be accessed by all customers in development sandboxes.
+>
+>* **Activation requirements**: The feature will remain inactive until you configure and save your [!DNL Identity Settings]. Without this configuration, the system will continue to operate normally, with no changes in behavior.
+>* **Important notes**: During this Limited Availability phase, Edge segmentation may produce unexpected segment membership results. However, streaming and batch segmentation will function as expected.
+>* **Next steps**: For information on how to enable this feature in production sandboxes, please contact your Adobe account team.
 
 The identity optimization algorithm is a graph algorithm on Identity Service that helps ensure that an identity graph is representative of a single person, and therefore, prevents the unwanted merging of identities on Real-Time Customer Profile.
 
@@ -137,7 +141,7 @@ With identity optimization algorithm, bad identity values such as bogus emails o
 
 ![bad-email](../images/identity-settings/bad-email.png)
 
-### Anonymous event association
+## Anonymous event association
 
 ECIDs store unauthenticated (anonymous) events, while CRMID stores authenticated events. In the case of shared devices, the ECID (bearer of unauthenticated events) gets associated with the **last authenticated user**.
 
@@ -157,9 +161,9 @@ View the diagram below to better understand how anonymous event association work
 
 ## Next steps
 
-For more information on identity graph linking rules, read the following documentation:
+For more information on [!DNL Identity Graph Linking Rules], read the following documentation:
 
-* [Identity graph linking rules overview](./overview.md)
+* [[!DNL Identity Graph Linking Rules] overview](./overview.md)
 * [Implementation guide](./implementation-guide.md)
 * [Examples of graph configurations](./example-configurations.md)
 * [Troubleshooting and FAQ](./troubleshooting.md)
