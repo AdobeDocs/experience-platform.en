@@ -38,12 +38,12 @@ To install the [!DNL Algolia] event forwarding extension:
 
 1. Open your Platform Data Collection property.
 2. Navigate to the **Extensions** tab and select **Catalog**.
-3. Locate the [!DNL Algolia] Event Forwarding extension in the catalog.
+3. Locate the [!DNL Algolia] event forwarding extension in the catalog.
 4. Click **Install** to add the extension to your property.
 
 ### Configuration {#configuration}
 
-After you install the [!DNL Algolia] event forwarding extension, follow these steps to configure it:
+Follow these steps to configure the [!DNL Algolia] event forwarding extension:
 
 1. Navigate to the **Extensions** tab.
 2. Click on the extension.
@@ -61,9 +61,9 @@ After you install the [!DNL Algolia] event forwarding extension, follow these st
 
 The [!DNL Algolia] event forwarding extension offers a single action type that can be used in the **Then** section of a rule:
 
-### Send Event
+### Send event
 
-This action forwards events to [!DNL Algolia]. To configure:
+Configure the `Send event` action to forward events to [!DNL Algolia]:
 
 1. Select **Rules**, then **Add Rule** or select an existing rule
 2. In the "Then" portion of the rule, add an action
@@ -78,9 +78,9 @@ This action forwards events to [!DNL Algolia]. To configure:
 
 ## Implement the [!DNL Algolia] event field group {#algolia-field-group}
 
-The [!DNL Algolia] event field group is required to use the [!DNL Algolia] event forwarding extension. It is one of the standard field groups provided through Platform.
+Ensure that the [!DNL Algolia] event field group is added to your schema before you use the [!DNL Algolia] event forwarding extension. It is one of the standard field groups provided through Platform.
 
-![](../../../images/extensions/server/algolia/algolia-field-groups.png)
+![](https://your-domain.com/images/extensions/server/algolia/algolia-field-groups.png)
 
 ### Add the [!DNL Algolia] event field group to your schema
 
@@ -94,7 +94,7 @@ To add the [!DNL Algolia] event field group:
 6. Click the **Add field group** button
 7. Click **Save**
 
-![](../../../images/extensions/server/algolia/algolia-profile-field-group.png)
+![](https://your-domain.com/images/extensions/server/algolia/algolia-profile-field-group.png)
 
 ### Map and send data using the Data Collection tag
 
