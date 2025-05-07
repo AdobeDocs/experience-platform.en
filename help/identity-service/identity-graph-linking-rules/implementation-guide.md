@@ -107,7 +107,7 @@ During your pre-implementation process, you must ensure that the authenticated e
 
 If your system sends two person identifiers, the implementation may fail the single-person namespace requirement. For example, if the identityMap in your webSDK implementation contains a CRMID, a customerID, and an ECID namespace, then there is no guarantee that every single event will contain both CRMID and customerID.
 
-Ideally, you should send a payload similar to the following:
+You should **not** send a payload like below:
 
 ```json
 {

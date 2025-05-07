@@ -7,7 +7,7 @@ exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
 
 >[!WARNING]
 >
->The [!DNL Salesforce Marketing Cloud] source will be deprecated at the end of June 2025.
+>The [!DNL Salesforce Marketing Cloud] source will be deprecated in January 2026. A new source will be released later this year as an alternative. Once the new source is released, you must plan to migrate to the new source by creating new account connections and dataflows before the end of January 2026.
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 

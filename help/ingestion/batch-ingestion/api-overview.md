@@ -21,7 +21,9 @@ Before continuing, please review the [batch ingestion API overview](overview.md)
 
 >[!NOTE]
 >
->The following steps are applicable for small files (256 MB or less). If you hit a gateway timeout or request body size errors, you need to switch to large file upload.
+>- The following steps are applicable for small files (256 MB or less). If you hit a gateway timeout or request body size errors, you need to switch to large file upload.
+>
+>- Use single-line JSON instead of multi-line JSON as input for batch ingestion. Single-line JSON allows for better performance as the system can divide one input file into multiple chunks and process them in parallel, whereas multi-line JSON cannot be split. This can significantly reduce data processing costs and improve batch processing latency.
 
 ### Create batch
 

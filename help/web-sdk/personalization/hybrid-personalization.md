@@ -1,24 +1,24 @@
 ---
-title: Hybrid personalization using Web SDK and Edge Network Server API
-description: This article demonstrates how you can use the Web SDK in conjunction with the Server API to deploy hybrid personalization on your web properties.
+title: Hybrid personalization using Web SDK and Edge Network API
+description: This article demonstrates how you can use the Web SDK in conjunction with the Edge Network API to deploy hybrid personalization on your web properties.
 keywords: personalization; hybrid; server api; server-side; hybrid implementation;
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
 ---
-# Hybrid personalization using Web SDK and Edge Network Server API
+# Hybrid personalization using Web SDK and Edge Network API
 
 ## Overview {#overview}
 
-Hybdrid personalization describes the process of retrieving personalization content server-side, using the [Edge Network Server API](../../server-api/overview.md), and rendering it client-side, using the [Web SDK](../home.md).
+Hybdrid personalization describes the process of retrieving personalization content server-side, using the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/), and rendering it client-side, using the [Web SDK](../home.md).
 
-You can use hybrid personalization with personalization solutions like Adobe Target, Adobe Journey Optimizer, or Offer Decisioning, the difference being the contents of the [!UICONTROL Server API] payload.
+You can use hybrid personalization with personalization solutions like Adobe Target, Adobe Journey Optimizer, or Offer Decisioning, the difference being the contents of the [!UICONTROL Edge Network API] payload.
 
 ## Prerequisites {#prerequisites}
 
 Before implementing hybrid personalization on your web properties, make sure you meet the following conditions:
 
-* You have decided what personalization solution you want to use. This will have an impact on the contents of the [!UICONTROL Server API] payload.
-* You have access to an application server which you can use to make the [!UICONTROL Server API] calls.
-* You have access to the [Edge Network Server API](../../server-api/authentication.md).
+* You have decided what personalization solution you want to use. This will have an impact on the contents of the [!UICONTROL Edge Network API] payload.
+* You have access to an application server which you can use to make the [!UICONTROL Edge Network API] calls.
+* You have access to the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/).
 * You have correctly [configured](/help/web-sdk/commands/configure/overview.md) and deployed the Web SDK on the pages that you want to personalize.
 
 ## Flow diagram {#flow-diagram}
@@ -29,10 +29,10 @@ The flow diagram below describes the order of the steps taken to deliver hybrid 
 
 1. Any existing cookies previously stored by the browser, prefixed with `kndctr_`, are included in the browser request.
 1. The client web browser requests the web page from your application server. 
-1. When the application server receives the page request, it makes a `POST` request to the [Server API interactive data collection endpoint](../../server-api/interactive-data-collection.md) to fetch personalization content. The `POST` request contains an `event` and a `query`. The cookies from the previous step, if available, are included in the `meta>state>entries` array.
-1. The Server API returns the personalization content to your application server.
+1. When the application server receives the page request, it makes a `POST` request to the [Edge Network API interactive data collection endpoint](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) to fetch personalization content. The `POST` request contains an `event` and a `query`. The cookies from the previous step, if available, are included in the `meta>state>entries` array.
+1. The Edge Network API returns the personalization content to your application server.
 1. The application server returns an HTML response to the client browser, containing the [identity and cluster cookies](#cookies).
-1. On the client page, the [!DNL Web SDK] `applyResponse` command is called, passing in the headers and body of the [!UICONTROL Server API] response from the previous step.
+1. On the client page, the [!DNL Web SDK] `applyResponse` command is called, passing in the headers and body of the [!UICONTROL Edge Network API] response from the previous step.
 1. The [!DNL Web SDK] renders Target [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) offers and Journey Optimizer Web Channel items automatically, because the `renderDecisions` flag is set to `true`.
 1. Target form-based [!DNL HTML]/[!DNL JSON] offers and Journey Optimizer code-based experiences are manually applied through the `applyProposition` method, to update the [!DNL DOM] based on the personalization content in the proposition.
 1. For Target form-based [!DNL HTML]/[!DNL JSON] offers and Journey Optimizer code-based experiences, display events must manually be sent, to indicate when the returned content has been displayed. This is done via the `sendEvent` command.
@@ -48,7 +48,7 @@ Cookies are used to persist user identity and cluster information.  When using a
 
 ## Request placement {#request-placement}
 
-Server API requests are required to get propositions and send a display notification. When using a hybrid implementation, the application server makes these requests to the Server API.
+Edge Network API requests are required to get propositions and send a display notification. When using a hybrid implementation, the application server makes these requests to the Edge Network API.
 
 | Request | Made by | 
 |---|---|
@@ -64,14 +64,14 @@ When you [configure a datastream](../../datastreams/overview.md) for Analytics, 
 The sample from this implementation uses two different datastreams:
 
 * A datastream configured for Analytics. This datastream is used for Web SDK interactions.
-* A second datastream without an Analytics configuration. This datastream is used for Server API requests. You must configure this datastream with the same destination configuration as the datastream that you configured for Analytics.
+* A second datastream without an Analytics configuration. This datastream is used for Edge Network API requests. You must configure this datastream with the same destination configuration as the datastream that you configured for Analytics.
 
 This way, the server-side request do not register any Analytics events, but the client-side requests do. This leads to Analytics requests being accurately counted.
 
 
 ## Server-side request {#server-side-request}
 
-The sample request below illustrates a Server API request that your application server could use to retrieve the personalization content.
+The sample request below illustrates a Edge Network API request that your application server could use to retrieve the personalization content.
 
 >[!IMPORTANT]
 >
@@ -161,7 +161,7 @@ curl -X POST "https://edge.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_I
 
 ### Server-side response {#server-response}
 
-The sample response below shows what the Server API response might look like.
+The sample response below shows what the Edge Network API response might look like.
 
 
 ```json
