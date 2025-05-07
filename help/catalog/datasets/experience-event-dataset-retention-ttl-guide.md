@@ -28,7 +28,7 @@ TTL is useful when managing time-sensitive data that loses relevance over time. 
 >
 >Experience Event Dataset Retention applies to event data stored in the data lake. If you are managing retention in Real-Time Customer Data Platform, consider using [Experience Event Expiration](../../profile/event-expirations.md) and [Pseudonymous Profile Expiration](../../profile/pseudonymous-profiles.md) alongside data lake retention settings.
 
-TTL configurations help you optimize storage based on entitlements. While Profile Store data (used in Real-Time CDP) may be considered stale and removed after 30 days, the same event data in the data lake can remain available for 12–13 months (or longer based on entitlement) for analytics and Data Distiller use cases.
+Use TTL configurations to optimize storage based on entitlements. While Profile Store data (used in Real-Time CDP) may be considered stale and removed after 30 days, the same event data in the data lake can remain available for 12–13 months (or longer based on entitlement) for analytics and Data Distiller use cases.
 
 >[!TIP]
 >
@@ -50,7 +50,7 @@ If historical records are essential for long-term analysis or business operation
 
 ## Best practices for setting TTL {#best-practices}
 
-Choosing the right TTL value is crucial to ensuring that your Experience Event Dataset Retention policy balances data retention, storage efficiency, and analytical needs. A TTL that is too short may cause data loss, while one that is too long can increase storage costs and unnecessary data accumulation. Ensure that the TTL aligns with your dataset's purpose by considering how often the data is accessed and how long it remains relevant.
+Select the right TTL value to ensure your Experience Event Dataset Retention policy balances data retention, storage efficiency, and analytical needs. A TTL that is too short may cause data loss, while one that is too long can increase storage costs and unnecessary data accumulation. Ensure that the TTL aligns with your dataset's purpose by considering how often the data is accessed and how long it remains relevant.
 
 The table below provides common TTL recommendations based on dataset type and usage patterns:
 
@@ -212,7 +212,9 @@ A successful response includes the `extensions` object, which contains the curre
 
 >[!IMPORTANT]
 >
->Row-expiration can only be applied to event datasets that use a time-series schema. Before setting TTL, verify that the dataset's schema extends `https://ns.adobe.com/xdm/data/time-series` to ensure the API request succeeds. Use the Schema Registry API to retrieve the schema details and verify the `meta:extends` property. Refer to the [Schema endpoint documentation](../../xdm/api/schemas.md#lookup) for guidance on how to do this.
+>TTL-based row-level expiration can only be applied to event datasets that use a time-series schema. This includes datasets based on the standard XDM ExperienceEvent class as well as custom schemas that extend the Time Series schema (`https://ns.adobe.com/xdm/data/time-series`).
+>
+>Before you apply TTL, use the Schema Registry API to verify that the dataset's schema includes the correct extension by checking the `meta:extends` property. See the [Schema endpoint documentation](../../xdm/api/schemas.md#lookup) for guidance on how to do this.
 
 You can configure Experience Event Dataset Retention by setting a new TTL or updating an existing TTL using the same API method. Use a PATCH request to the `/v2/datasets/{DATASET_ID}` endpoint to apply or adjust TTL.
 
@@ -291,7 +293,15 @@ This FAQ covers practical questions about dataset retention jobs, immediate effe
 ### What types of datasets can I apply retention policy rules to?
 
 +++Answer
-You can apply retention policies to datasets created using the XDM ExperienceEvent class.
+You can apply TTL-based retention policies to any dataset that uses a time-series schema. This includes datasets based on the standard XDM ExperienceEvent class, as well as custom schemas that extend the XDM Time Series class.
+
+Row-level expiration requires the following technical conditions:
+
+- The schema must extend the XDM Time Series base class.
+- The schema must include a timestamp field, used to evaluate expiration.
+- The dataset should store event-level data, typically using or extending the XDM ExperienceEvent class.
+- The dataset must be registered in Catalog Service, as TTL settings are applied via `extensions.adobe_lakeHouse.rowExpiration`.
+- TTL values must use the ISO-8601 duration format (for example, `P30D`, `P6M`, `P1Y`).
 +++
 
 ### How soon will the Dataset Retention job delete data from data lake services?
