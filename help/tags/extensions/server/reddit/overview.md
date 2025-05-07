@@ -41,9 +41,8 @@ Follow these steps to install and configure the [!DNL Reddit] Conversions API ex
     ![The Adobe Experience Platform Extensions catalog with the Reddit extension highlighted.](../../../images/extensions/server/reddit/reddit-extension.png)
 3. Provide the following configuration details:
    - **Pixel ID**: Enter your [!DNL Reddit Ads] Pixel ID.
-   - **Conversion Access Token**: Enter the token generated in your [!DNL Reddit Ads] account.
+   - **Conversion Access Token**: Enter the token generated in your [!DNL Reddit Ads] account and select **[!UICONTROL Save]** when finished.
    ![Configuration details for the Reddit Conversions API extension, including fields for Pixel ID and Conversion Access Token.](../../../images/extensions/server/reddit/reddit-capi-details.png)
-4. Select [!UICONTROL **Save**] to complete the configuration.
 
 ## Configure an event forwarding rule {#config-rule}
 
@@ -73,7 +72,7 @@ After you set up your data elements, create event forwarding rules to determine 
 
 ## Event metadata {#event-metadata}
 
-This section provides a detailed breakdown of the event metadata and user data fields, ensuring you understand the required and optional parameters for configuring your events. The fields shown may vary depending on the event type selected.
+Read this section for a detailed breakdown of the event metadata and user data fields, ensuring you understand the required and optional parameters for configuring your events. The fields shown may vary depending on the event type selected.
 
 >[!NOTE]
 >
