@@ -1,10 +1,10 @@
 ---
-title: 
-description: 
+title: Identity Graph Linking Rules Configurations Guide
+description: Learn about the different implementation types that you can configure using Identity Graph Linking Rules.
 ---
-# {TITLE}
+# [!DNL Identity Graph Linking Rules] configurations guide
 
-Read this document to learn about different use cases for Identity Graph Linking Rules.
+Read this document to learn about different implementation types that you can configure using [!DNL Identity Graph Linking Rules].
 
 Customer graph scenarios can be grouped into three different categories.
 
@@ -26,7 +26,7 @@ Before diving in to the following document, ensure that you familiarize yourself
 
 Read this section for beginner-level implementations of [!DNL Identity Graph Linking Rules].
 
-### Simple implementation with one cross-device namespace
+### Use case: simple implementation that uses one cross-device namespace
 
 Generally, Adobe customers have a single cross-device namespace that is used across all of their properties including, web, mobile, and applications. This system is both industry and geographically agnostic as customers in retail, telecom, and financial services use this type of implementation.
 
@@ -137,7 +137,7 @@ Authenticated events are tied to the end-user and unauthenticated events are tie
 
 Read this section for intermediate-level implementations of [!DNL Identity Graph Linking Rules].
 
-### Simple implementation with non-unique identities
+### Use case: Your data includes non-unique identities
 
 >[!TIP]
 >
@@ -153,6 +153,8 @@ CRMID: John, CChash: 3333-4444
 CRMID: John, ECID: 123 
 CRMID: John, ECID: 999, IDFA: a-b-c
 ```
+
+**Algorithm configuration**
 
 Configure the following settings in the Graph Simulation interface before you simulate your graph.
 
@@ -171,7 +173,7 @@ Configure the following settings in the Graph Simulation interface before you si
 
 +++
 
-However, there are no guarantees that these credit card numbers, or any other non-unique namespaces, will always be associated to one single person. Two people may register the same credit card, there may be non-unique placeholder values that may be ingested. Simply put, non-unique namespaces will cause two CRMIDs to collapse.
+There are no guarantees that these credit card numbers, or any other non-unique namespaces, will always be associated to one single end-user. Two end-users may register with the same credit card, there may be non-unique placeholder values that erroneously ingested. Simply put, non-unique namespaces will cause two CRMIDs to collapse.
 
 To solve this issue, Identity Service removes the oldest links and retains the most recent links. This ensures that you just have one CRMID in a graph, thereby preventing graph collapse.
 
@@ -225,7 +227,7 @@ CRMID: Jill, CChash: undefined
 
 >[!ENDTABS]
 
-### Hashed or unhashed CRMIDs
+### Use case: Your data includes both hashed and unhashed CRMIDs
 
 >[!TIP]
 >
@@ -233,11 +235,16 @@ CRMID: Jill, CChash: undefined
 
 Your customer is ingesting both an unhashed (offline) CRMID and a hashed (online) CRMID. They expect a direct relationship between both unhashed and hashed CRMIDs. However, when a user browses with an authenticated account, the hashed CRMID is sent along with the device ID (represented on Identity Service as an ECID).
 
+**Algorithm configuration**
+
 Configure the following settings in the Graph Simulation interface before you simulate your graph.
 
-| Unique namespace | Namespace priority |
-| --- | --- |
-| <ul><li>CRMID</li><li>CRMIDhash</li></ul> | <ul><li>CRMID</li><li>CChash</li><li>ECID</li><li>IDFA</li></ul> |
+| Display name | Identity symbol | Identity type | Unique per graph |
+| --- | --- | --- | --- |
+| CRMID | CRMID | CROSS_DEVICE | ✔️ |
+| CRMIDhash | CRMIDhash | CROSS_DEVICE | ✔️ |
+| ECID | ECID | COOKIE | |
+
 
 **Exercise**
 
@@ -275,7 +282,7 @@ CRMID: Jane, CRMIDhash: aaaa
 
 >[!ENDTABS]
 
-### Real-Time CDP and Adobe Commerce
+### Use case: You are using Real-Time CDP and Adobe Commerce
 
 You have two types of end-users:
 
@@ -334,7 +341,7 @@ Email: jane@g, ECID: 111
 
 >[!ENDTABS]
 
-### Three unique namespaces
+### Use case: Your data includes three unique namespaces
 
 Your customer defines a single-person entity as follows:
 
@@ -440,7 +447,7 @@ For a given experience event, the identity with the highest namespace priority i
 
 Just like experience events are linked to the identity with the highest namespace priority, segment membership for a profile is also linked to the identity with the highest namespace priority
 
-### Use case: support for multiple lines of businesses
+### Use case: You need support for multiple lines of businesses
 
 Your end-users have two different accounts, a personal account and a business account. Each account is identified by a different ID. In this scenario, a typical graph would look like the following:
 
@@ -457,10 +464,6 @@ loginID: JohnBusiness, ECID: 222
 **Algorithm configuration**
 
 Configure the following settings in the Graph Simulation interface before you simulate your graph.
-
-| Unique namespace | Namespace priority |
-| --- | --- |
-| CRMID | <ul><li>CRMID</li><li>loginID</li><li>ECID</li></ul> |
 
 | Display name | Identity symbol | Identity type | Unique per graph |
 | --- | --- | --- | --- |
@@ -513,7 +516,7 @@ loginID: JanePersonal, ECID: 222
 
 >[!ENDTABS]
 
-### Use case: complex implementations with multiple namespaces
+### Use case: You have complex implementations that require multiple namespaces
 
 You are a median and entertainment company and your end-users have the following:
 * A CRMID
@@ -532,10 +535,6 @@ CRMID: John, ECID: 111
 **Algorithm configuration**
 
 Configure the following settings in the Graph Simulation interface before you simulate your graph.
-
-| Unique namespace | Namespace priority |
-| --- | --- |
-| <ul><li>CRMID</li><li>loyaltyID</li><li>Email</li></ul> | <ul><li>CRMID</li><li>loyaltyID</li><li>Email</li><li>thirdPartyID</li><li>orderID</li><li>ECID</li></ul> |
 
 | Display name | Identity symbol | Identity type | Unique per graph |
 | --- | --- | --- | --- |
