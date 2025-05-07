@@ -14,7 +14,7 @@ role: Developer
   - [Sort and filter API responses](./api/sort-and-filter.md)
 - UI guides {#ui}
   - [Monitoring dashboard overview](./ui/monitor.md)
-  - [Monitor dataflows in sources](./ui/monitor-sources.md)
+  - [Monitor data lake ingestion](./ui/monitor-sources.md)
   - [Monitor dataflows in identities](./ui/monitor-identities.md)
   - [Monitor dataflows in Profiles](./ui/monitor-profiles.md)
   - [Monitor dataflows in audiences](./ui/monitor-audiences.md)
