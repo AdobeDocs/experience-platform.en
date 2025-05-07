@@ -47,6 +47,7 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 
 | Feature | Description |
 | --- | --- |
+| [!DNL Adform] extension | The [!DNL Adform] server-side extension enables brands to easily retarget audiences off-site using ECIDs. This server-side extension is not reliant on third-party cookies or cookie alternate IDs. Additionally, because this is done entirely server-side, no additional pixels or other client-side changes are needed. For more information, see the [Adform extension overview](/help/tags/extensions/server/adform/overview.md). |
 | [!DNL Amazon] web events API extension | The [!DNL Amazon] Conversions API extension enables advertisers to share website interactions directly with [!DNL Amazon], providing improved attribution, data reliability, and campaign optimization. This extension supports event forwarding, allowing you to send conversion events such as purchases, cart additions, and more, while ensuring proper deduplication for accurate reporting. For more information, see the [Amazon extension overview](/help/tags/extensions/server/amazon/overview.md). |
 
 {style="table-layout:auto"}
