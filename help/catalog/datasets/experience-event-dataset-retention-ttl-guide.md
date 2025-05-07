@@ -291,7 +291,7 @@ This FAQ covers practical questions about dataset retention jobs, immediate effe
 ### What types of datasets can I apply retention policy rules to?
 
 +++Answer
-You can apply retention policies to datasets created using the XDM ExperienceEvent class. Retention policies are only applicable to Experience Event datasets that have been Profile-enabled.
+You can apply retention policies to datasets created using the XDM ExperienceEvent class.
 +++
 
 ### How soon will the Dataset Retention job delete data from data lake services?
