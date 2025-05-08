@@ -212,6 +212,10 @@ role: Developer
     * Adobe Experience Platform Cloud Connector {#cloud-connector}
       * [Overview](./extensions/server/cloud-connector/overview.md)
       * [Release notes](./extensions/server/cloud-connector/release-notes.md)
+    * [!DNL Adform] {#adform}
+      * [Overview](./extensions/server/adform/overview.md)
+    * [!DNL Amazon] {#amazon}
+      * [Overview](./extensions/server/amazon/overview.md)
     * [!DNL AWS] {#aws}
       * [Overview](./extensions/server/aws/overview.md)
     * [!DNL Braze] {#braze}
@@ -237,6 +241,8 @@ role: Developer
     * [Pega Customer Decision Hub](https://exchange.adobe.com/apps/ec/107597)
     * [!DNL Pinterest] {#pinterest}
       * [Overview](./extensions/server/pinterest/overview.md)
+    * [!DNL Reddit] {#reddit}
+      * [Overview](./extensions/server/reddit/overview.md)
     * [!DNL Snapchat] {#snap}
       * [Overview](./extensions/server/snap/overview.md)
     * [!DNL Snowflake] {#snowflake}

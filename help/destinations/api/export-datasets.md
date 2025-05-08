@@ -13,9 +13,9 @@ exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
 
 >[!IMPORTANT]
 >
->**Action item**: The [September 2024 release of Experience Platform](/help/release-notes/latest/latest.md#destinations) introduced the option to set an `endTime` date for export dataset dataflows. Adobe has also introduced a default end date of May 1st 2025 for all dataset export dataflows created *prior to the September 2024 release*. 
+>**Action item**: The [September 2024 release of Experience Platform](/help/release-notes/latest/latest.md#destinations) introduced the option to set an `endTime` date for export dataset dataflows. Adobe has also introduced a default end date of September 1st 2025 for all dataset export dataflows created *prior to the September 2024 release*. 
 >
->For any of those dataflows, you need to update the end date in the dataflow manually before the end date, otherwise your exports will stop on that date. Use the Experience Platform UI to view which dataflows will be set to stop on May 1st 2025.
+>For any of those dataflows, you need to update the end date in the dataflow manually before the end date, otherwise your exports will stop on that date. Use the Experience Platform UI to view which dataflows will be set to stop on September 1st 2025.
 >
 >Similarly, for any dataflows that you create without specifying an `endTime` date, these will default to an end time six months from the time they are created.
 
@@ -50,6 +50,13 @@ Currently, you can export datasets to the cloud storage destinations highlighted
 * [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog)
 * [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog) 
 * [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
+
+## Prerequisites {#prerequisites}
+
+Note the following prerequisites in order to export datasets:
+
+* To export datasets to cloud storage destinations, you must have successfully [connected to a destination](/help/destinations/ui/connect-destination.md). If you haven't done so already, go to the [destinations catalog](/help/destinations/catalog/overview.md), browse the supported destinations, and configure the destination that you want to use.
+* Profile datasets need to be enabled for use in Real-Time Customer Profile. [Read more](/help/ingestion/tutorials/ingest-batch-data.md#enable-for-profile) about how to enable this option. 
 
 ## Getting started {#get-started}
 

@@ -78,6 +78,16 @@ You can select from multiple types of audiences, depending on their origin:
 >title="Schedule"
 >abstract="Use the pencil icon to set the file export type (full files or incremental files) and the export frequency."
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_schedule_weekly_messaging"
+>title="Weekly exports"
+>abstract="<sup>*</sup> Select the start date and subsequent exports will occur on that day of the week until the selected end date."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_schedule_monthly_messaging"
+>title="Monthly exports"
+>abstract="<sup>*</sup> Select the start date and subsequent exports will occur on that date of the month until the selected end date. For months with fewer than 30 or 31 days, the export occurs on the last day of the month."
+
 [!DNL Adobe Experience Platform] exports data for email marketing and cloud storage destinations as [different file types](#supported-file-formats-export). In the **[!UICONTROL Scheduling]** page, you can configure the schedule and the file names for each audience you are exporting.
 
 Experience Platform automatically sets a default schedule for each file export. You can modify the default schedule according to your needs, by selecting the pencil icon next to each schedule, and defining a custom schedule.
@@ -109,7 +119,7 @@ To edit multiple schedules at the same time, select the audiences by using the c
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
 >title="Activate after audience evaluation"
->abstract="Activation runs immediately after the daily segmentation job completes. This ensures that the most up-to-date profiles are exported."
+>abstract="<p>Activation runs immediately after the daily segmentation job completes. This ensures that the most up-to-date profiles are exported.</p><p>The option to export profiles after audience evaluation is <i>not</i> available for the weekly and monthly export frequency.</p>"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_scheduled"
@@ -124,6 +134,8 @@ Select **[!UICONTROL Export full files]** to trigger the export of a file contai
     
     * **[!UICONTROL Once]**: schedule a one time on-demand full file export.
     * **[!UICONTROL Daily]**: schedule full file exports once a day, every day, at the time you specify.
+    * **[!UICONTROL Weekly]**: select the start date and subsequent exports will occur on that day of the week until the selected end date.
+    * **[!UICONTROL Monthly]**: select the start date and subsequent exports will occur on that date of the month until the selected end date. For months with fewer than 30 or 31 days, the export occurs on the last day of the month.
 
 2. Use the **[!UICONTROL Time]** toggle to select whether the export should happen immediately after audience evaluation or on a scheduled basis, at a specified time. When selecting the **[!UICONTROL Scheduled]** option, you can use the selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
 
@@ -171,6 +183,7 @@ Select **[!UICONTROL Export incremental files]** to trigger an export where the 
     
     * **[!UICONTROL Daily]**: schedule incremental file exports once a day, every day, at the time you specify.
     * **[!UICONTROL Hourly]**: schedule incremental file exports every 3, 6, 8, or 12 hours.
+    
 
 2. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
 

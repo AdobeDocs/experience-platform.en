@@ -80,7 +80,7 @@ Use the database directory on the left of your screen and select the table that 
 
 ![The select data interface with a database table selected.](../../../../images/tutorials/create/snowflake-streaming/select-table.png)
 
-Next, select the timestamp column type of your table. You can select between two types of timestamp columns: `TIMESTAMP_NTZ` or  `TIMESTAMP_LTZ`. If you select a column type of `TIMESTAMP_NTZ`, then you must also provide a timezone. Your columns should have a not null constraint. For more information, read the section on [limitations and frequently asked questions]
+Next, select the timestamp column type of your table. You can select between two types of timestamp columns: `TIMESTAMP_NTZ` or  `TIMESTAMP_LTZ`. If you select a column type of `TIMESTAMP_NTZ`, then you must also provide a timezone. Your columns should have a not null constraint. For more information, read the section on [limitations and frequently asked questions](../../../../connectors/databases/snowflake-streaming.md#limitations-and-frequently-asked-questions).
 
 You can also configure backfill settings during this step. Backfill determines what data is initially ingested. If backfill is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If not, then only the files that are loaded in between the first run of ingestion and the start time will be ingested. Files loaded prior to the start time will not be ingested. 
 

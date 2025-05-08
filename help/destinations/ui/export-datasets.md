@@ -12,9 +12,9 @@ exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
 
 >[!IMPORTANT]
 >
->**Action item**: The [September 2024 release of Experience Platform](/help/release-notes/latest/latest.md#destinations) introduced the option to set an `endTime` date for export dataset dataflows. Adobe has also introduced a default end date of May 1st 2025 for all dataset export dataflows created *prior to the September 2024 release*. 
+>**Action item**: The [September 2024 release of Experience Platform](/help/release-notes/latest/latest.md#destinations) introduced the option to set an `endTime` date for export dataset dataflows. Adobe has also introduced a default end date of September 1st 2025 for all dataset export dataflows created *prior to the September 2024 release*. 
 >
->For any of those dataflows, you need to update the end date in the dataflow manually before the end date, otherwise your exports will stop on that date. Use the Experience Platform UI to view which dataflows will be set to stop on May 1st 2025. 
+>For any of those dataflows, you need to update the end date in the dataflow manually before the end date, otherwise your exports will stop on that date. Use the Experience Platform UI to view which dataflows will be set to stop on September 1st 2025. 
 >
 >Refer to the [scheduling section](#scheduling) for information on how to edit the end date of a dataset export dataflow.
 
@@ -98,7 +98,10 @@ This document contains all the information necessary to export datasets. If you 
 
 ## Prerequisites {#prerequisites}
 
-To export datasets to cloud storage destinations, you must have successfully [connected to a destination](./connect-destination.md). If you haven't done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported destinations, and configure the destination that you want to use.
+Note the following prerequisites in order to export datasets:
+
+* To export datasets to cloud storage destinations, you must have successfully [connected to a destination](./connect-destination.md). If you haven't done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported destinations, and configure the destination that you want to use.
+* Profile datasets need to be enabled for use in Real-Time Customer Profile. [Read more](/help/ingestion/tutorials/ingest-batch-data.md#enable-for-profile) about how to enable this option. 
 
 ### Required permissions {#permissions}
 
@@ -149,7 +152,7 @@ Use the check boxes to the left of the dataset names to select the datasets that
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_body"
 >title="Update the end date for this dataflow body"
->abstract="Because of recent updates to this destination, the dataflow now requires an end date. Adobe has set a default end date to May 1st 2025. Please update to your desired end date otherwise the data exports will stop on the default date."
+>abstract="Because of recent updates to this destination, the dataflow now requires an end date. Adobe has set a default end date to September 1st 2025. Please update to your desired end date, otherwise the data exports will stop on the default date."
 
 Use the **[!UICONTROL Scheduling]** step to: 
 

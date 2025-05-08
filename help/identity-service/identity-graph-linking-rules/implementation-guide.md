@@ -7,7 +7,11 @@ exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
 
 >[!AVAILABILITY]
 >
->Identity graph linking rules are currently in Limited Availability. Contact your Adobe account team for information on how to access the feature in development sandboxes.
+>Identity Graph Linking Rules is currently in Limited Availability, and can be accessed by all customers in development sandboxes.
+>
+>* **Activation requirements**: The feature will remain inactive until you configure and save your [!DNL Identity Settings]. Without this configuration, the system will continue to operate normally, with no changes in behavior.
+>* **Important notes**: During this Limited Availability phase, Edge segmentation may produce unexpected segment membership results. However, streaming and batch segmentation will function as expected.
+>* **Next steps**: For information on how to enable this feature in production sandboxes, please contact your Adobe account team.
 
 >[!IMPORTANT]
 >
@@ -27,7 +31,7 @@ Step-by-step outline:
 
 ## Prerequisites for implementation {#prerequisites-for-implementation}
 
-This section outlines prerequisite steps that you must complete prior to implementing identity graph linking rules to your data.
+This section outlines prerequisite steps that you must complete prior to implementing [!DNL Identity Graph Linking Rules] to your data.
 
 ### Unique namespace
 
@@ -103,7 +107,7 @@ During your pre-implementation process, you must ensure that the authenticated e
 
 If your system sends two person identifiers, the implementation may fail the single-person namespace requirement. For example, if the identityMap in your webSDK implementation contains a CRMID, a customerID, and an ECID namespace, then there is no guarantee that every single event will contain both CRMID and customerID.
 
-Ideally, you should send a payload similar to the following:
+You should **not** send a payload like below:
 
 ```json
 {
@@ -150,6 +154,8 @@ In graph simulation, this ingestion may look like:
 ![The graph simulation UI with an example graph rendered.](../images/implementation/example-graph.png)
 
 >[!TAB Authenticated events without any person identifiers]
+
+In this example, you can assume that the following event was sent to Experience Platform while John (the end-user) was browsing your website while authenticated. However, despite being authenticated, Experience Platform is unable to identify John due to the lack of person identifiers in the event. Therefore, this event gets interpreted as an anonymous user browsing the Adobe Business website, instead of recognizing it as an online activity associated specifically to John.
 
 ```json
 {
@@ -285,9 +291,9 @@ This example also shows that Tom and Summer are to disparate person entities tha
 
 ## Next steps
 
-For more information on identity graph linking rules, read the following documentation:
+For more information on [!DNL Identity Graph Linking Rules], read the following documentation:
 
-* [Identity graph linking rules overview](./overview.md)
+* [[!DNL Identity Graph Linking Rules] overview](./overview.md)
 * [Identity optimization algorithm](./identity-optimization-algorithm.md)
 * [Examples of graph configurations](./example-configurations.md)
 * [Troubleshooting and FAQ](./troubleshooting.md)

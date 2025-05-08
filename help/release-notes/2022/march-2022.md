@@ -67,7 +67,7 @@ For more information on alerts in Experience Platform, refer to the [alerts over
 
 ## Dashboards {#dashboards}
 
-Adobe Experience Platform provides multiple [!DNL dashboards] through which you can view important information about your organization’s data, as captured during daily snapshots.
+Adobe Experience Platform provides multiple [!DNL dashboards] through which you can view important information about your organization's data, as captured during daily snapshots.
 
 ### Profile Dashboards
 
@@ -109,7 +109,7 @@ Experience Platform provides a suite of technologies that allow you to collect c
 | Feature | Description |
 | --- | --- |
 | Global datastream settings | You can now configure several new global settings when configuring a datastream: geo location, first-party ID cookie, and third-party ID sync. See the section on [configuring a datastream](../../datastreams/overview.md#create) in the Datastreams UI guide for more information. |
-|[Edge Network Server API](../../server-api/overview.md)|The Server API allows customers to interact with the Experience Platform Edge Network using a new, authenticated endpoint, to power a variety of data collection, personalization, advertising and marketing use cases.|
+|[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/getting-started/)|The Edge Network API allows customers to interact with the Experience Platform Edge Network using a new, authenticated endpoint, to power a variety of data collection, personalization, advertising and marketing use cases.|
 
 For more information on data collection in Experience Platform, please see the [data collection overview](../../collection/home.md).
 

@@ -3,13 +3,17 @@ title: Troubleshooting Guide for Identity Graph Linking Rules
 description: Learn how to troubleshoot common issues in identity graph linking rules.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
 ---
-# Troubleshooting guide for identity graph linking rules
+# Troubleshooting guide for [!DNL Identity Graph Linking Rules]
 
 >[!AVAILABILITY]
 >
->Identity graph linking rules are currently in Limited Availability. Contact your Adobe account team for information on how to access the feature in development sandboxes.
+>Identity Graph Linking Rules is currently in Limited Availability, and can be accessed by all customers in development sandboxes.
+>
+>* **Activation requirements**: The feature will remain inactive until you configure and save your [!DNL Identity Settings]. Without this configuration, the system will continue to operate normally, with no changes in behavior.
+>* **Important notes**: During this Limited Availability phase, Edge segmentation may produce unexpected segment membership results. However, streaming and batch segmentation will function as expected.
+>* **Next steps**: For information on how to enable this feature in production sandboxes, please contact your Adobe account team.
 
-As you test and validate identity graph linking rules, you may run into some issues related to data ingestion and graph behavior. Read this document to learn how to troubleshoot some common issues that you might encounter when working with identity graph linking rules.
+As you test and validate [!DNL Identity Graph Linking Rules], you may run into some issues related to data ingestion and graph behavior. Read this document to learn how to troubleshoot some common issues that you might encounter when working with [!DNL Identity Graph Linking Rules].
 
 ## Data ingestion flow overview {#data-ingestion-flow-overview}
 
@@ -49,7 +53,7 @@ There are various reasons for why this could happen, including, but not limited 
 * By default, [AAIDs are blocked from ingestion](../guardrails.md#identity-namespace-ingestion).
 * The identity is removed because of [system guardrails](../guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated).
 
-Within the context of identity graph linking rules, a record may be rejected from Identity Service because the incoming event has two or more identities with the same unique namespace but different identity value. This scenario usually happens due to implementation errors.
+Within the context of [!DNL Identity Graph Linking Rules], a record may be rejected from Identity Service because the incoming event has two or more identities with the same unique namespace but different identity value. This scenario usually happens due to implementation errors.
 
 Consider the following event with two assumptions:
 
@@ -312,11 +316,11 @@ You can use the following query in profile snapshot export dataset to obtain sam
 
 >[!TIP]
 >
->The two queries listed above will yield expected results if the sandbox is not enabled for the shared device interim approach and will behave differently from identity graph linking rules.
+>The two queries listed above will yield expected results if the sandbox is not enabled for the shared device interim approach and will behave differently from [!DNL Identity Graph Linking Rules].
 
 ## Frequently asked questions {#faq}
 
-This section outlines a list of answers to frequently asked questions about identity graph linking rules.
+This section outlines a list of answers to frequently asked questions about [!DNL Identity Graph Linking Rules].
 
 ## Identity optimization algorithm {#identity-optimization-algorithm}
 
@@ -383,7 +387,7 @@ The identity optimization algorithm will be applied first to ensure person entit
 
 ## Testing
 
-Read this section for answers to frequently asked questions about testing and debugging features in identity graph linking rules.
+Read this section for answers to frequently asked questions about testing and debugging features in [!DNL Identity Graph Linking Rules].
 
 ### What are some of the scenarios I should be testing in a development sandbox environment? 
 
