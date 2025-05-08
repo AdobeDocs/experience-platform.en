@@ -97,6 +97,12 @@ Before you can send your audiences to [!DNL Facebook], make sure you meet the fo
 
 Depending on the type of IDs that you ingest into Adobe Experience Platform, you must adhere to their corresponding requirements.
 
+## Maximizing audience match rates {#match-rates}
+
+To achieve the highest audience match rates in [!DNL Facebook], it is highly recommended to use the `phone_sha256` and `email_lc_sha256` target identities.
+
+These identifiers are the primary ones used by [!DNL Facebook] for matching audiences across their platforms. Ensure that your source data is properly mapped to these target identities and adheres to [!DNL Facebook's] hashing requirements.
+
 ## Phone number hashing requirements {#phone-number-hashing-requirements}
 
 There are two methods to activate phone numbers in [!DNL Facebook]:
