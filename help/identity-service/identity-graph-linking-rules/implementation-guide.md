@@ -155,6 +155,8 @@ In graph simulation, this ingestion may look like:
 
 >[!TAB Authenticated events without any person identifiers]
 
+In this example, you can assume that the following event was sent to Experience Platform while John (the end-user) was browsing your website while authenticated. However, despite being authenticated, Experience Platform is unable to identify John due to the lack of person identifiers in the event. Therefore, this event gets interpreted as an anonymous user browsing the Adobe Business website, instead of recognizing it as an online activity associated specifically to John.
+
 ```json
 {
     "_id": "test_id",

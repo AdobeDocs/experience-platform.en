@@ -2,6 +2,7 @@
 title: Reddit Conversions API extension
 description: Learn how to use the Reddit Ads Conversions API extension to send user interaction events to Reddit Ads for targeted advertising.
 last-substantial-update: 2025-05-1
+exl-id: 550f7b62-84d7-49d4-8551-b8785cdedd0f
 ---
 # [!DNL Reddit] Conversions API extension overview
 
