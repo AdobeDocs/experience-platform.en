@@ -13,7 +13,7 @@ exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
 
 v3.4.3
 
-* Fixes an issue where Data Elements -> Javascript Tools -> Simple Replace showed a checkbox to "Replace All" but threw an error when trying to save the Rule.
+* Fixes an issue where **Data Elements** > **Javascript Tools** > **Simple Replace** shows a checkbox to **Replace All** but causes an error when trying to save the Rule with the checkbox enabled.
 * Upgrades @adobe/react-spectrum to v3.41.0.
 * Upgrades @adobe/reactor-sandbox to v13.2.1.
 
