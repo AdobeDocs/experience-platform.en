@@ -3,6 +3,7 @@ title: AI Assistant Natural Language to SQL Model Card
 description: Learn about the AI Assistant Natural Language to SQL AI model.
 hide: true
 hidefromtoc: true
+exl-id: ca157945-5f74-45d0-9d40-c65d09a8e80d
 ---
 # AI Assistant Operational Insights Natural Language to SQL Model Card
 
@@ -76,4 +77,3 @@ The model does not process or retain any personally identifiable information (PI
 ## Ethical considerations {#ethical-considerations}
 
 To avoid exposing PII or sensitive attributes, the model has been designed to support privacy, avoid reinforcing existing data biases, and respect access control boundaries. This includes filtering, tagging, and auditing schema fields for responsible usage.
-
