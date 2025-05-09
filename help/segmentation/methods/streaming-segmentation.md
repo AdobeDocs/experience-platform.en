@@ -34,7 +34,6 @@ A segment definition will **not** be eligible for streaming segmentation in the 
 - The segment definition includes Adobe Audience Manager (AAM) segments or traits.
 - The segment definition includes multiple entities (multi-entity queries).
 - The segment definition includes a combination of a single event and an `inSegment` event.
-- The segment definition contains a segment of segments.
 - The segment definition uses "Ignore year" as part of its time constraints.
 
 Please note the following guidelines that apply to streaming segmentation queries:
@@ -47,6 +46,29 @@ Please note the following guidelines that apply to streaming segmentation querie
 If a segment definition is modified so it no longer meets the criteria for streaming segmentation, the segment definition will automatically switch from "Streaming" to "Batch".
 
 Additionally, segment unqualification, similarly to segment qualification, happens in real-time. As a result, if an audience no longer qualifies for a segment, it will be immediately unqualified. For example, if the segment definition asks for "All users who bought red shoes in the last three hours", after three hours, all the profiles that initially qualified for the segment definition will be unqualified.
+
+### Combine audiences {#combine-audiences}
+
+In order to combine data from both batch and streaming sources, you'll need to separate the batch and streaming components into separate audiences.
+
+For example, let's take the following two sample audiences into account:
+
+| Audience | Source type | Query definition | Audience ID |
+| -------- | ----------- | ---------------- | ----------- |
+| CA Residents | Batch | Home address is in the state of California | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| Recent checkouts | Streaming | Has at least one checkout in the the last 24 hours | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
+
+If you want to use the batch component in your streaming audience, you'll need to make a reference to the batch audience using segment of segments.
+
+So, an example query that would combine the two audiences together would look as follows:
+
+```
+inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and 
+CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) 
+WHEN(<= 24 hours before now)])
+```
+
+The resulting audience *will* be evaluated using streaming segmentation, since it leverages the batch audience's membership by referring to the batch audience component.
 
 ## Create audience {#create-audience}
 
