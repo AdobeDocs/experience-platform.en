@@ -12,6 +12,10 @@ With streaming segmentation, audience qualification now happens as streaming dat
 
 ## Eligible query types {#query-types}
 
+>[!IMPORTANT]
+>
+>In order to use streaming segmentation, you **must** use a merge policy that is "Active on Edge".
+
 A query will be eligible for streaming segmentation if it meets any of the criteria outlined in the following table.
 
 >[!NOTE]
@@ -23,7 +27,6 @@ A query will be eligible for streaming segmentation if it meets any of the crite
 | Single event within a time window of less than 24 hours | Any segment definition that refers to a single incoming event within a time window of less than 24 hours. | `CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![An example of a single event within a relative time window is shown.](../images/methods/streaming/single-event.png) |
 | Profile only | Any segment definition that refers to only a profile attribute. | `homeAddress.country.equals("US", false)` | ![An example of a profile attribute shown.](../images/methods/streaming/profile-attribute.png) |
 | Single event with a profile attribute within a relative time window of less than 24 hours | Any segment definition that refers to a single incoming event, with one or more profile attributes, and occurs within a relative time window of less than 24 hours. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![An example of a single event with a profile attribute within a relative time window is shown.](../images/methods/streaming/single-event-with-profile-attribute.png) |
-| Segment of segments | Any segment definition that contains one or more batch or streaming segments. **Note:** If a segment of segments is used, profile disqualification will happen **every 24 hours**. | `inSegment("a730ed3f-119c-415b-a4ac-27c396ae2dff") and inSegment("8fbbe169-2da6-4c9d-a332-b6a6ecf559b9")` | ![An example of a segment of segments is shown.](../images/methods/streaming/segment-of-segments.png) |
 | Multiple events with a profile attribute | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("directMarketing.emailClicked", false)) WHEN(today), C1: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![An example of multiple events with a profile attribute is shown.](../images/methods/streaming/multiple-events-with-profile-attribute.png) |
 
 A segment definition will **not** be eligible for streaming segmentation in the following scenarios:
@@ -31,7 +34,7 @@ A segment definition will **not** be eligible for streaming segmentation in the 
 - The segment definition includes Adobe Audience Manager (AAM) segments or traits.
 - The segment definition includes multiple entities (multi-entity queries).
 - The segment definition includes a combination of a single event and an `inSegment` event.
-  - However, if the segment definition contained in the `inSegment` event is profile only, the segment definition **will** be enabled for streaming segmentation.
+- The segment definition contains a segment of segments.
 - The segment definition uses "Ignore year" as part of its time constraints.
 
 Please note the following guidelines that apply to streaming segmentation queries:

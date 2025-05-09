@@ -7,7 +7,7 @@ exl-id: c91c0f75-9bc8-4fa7-9d27-9b07d0ea560c
 ---
 # Segmentation eligibility criteria update
 
-Starting on May 23, 2025, two updates will be made that affect segmentation eligibility.
+Starting on May 20, 2025, two updates will be made that affect segmentation eligibility.
 
 1. Streaming and edge segmentation query types
 2. Streaming and edge segmentation merge policies
