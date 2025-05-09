@@ -8,6 +8,14 @@ exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 
 ## Overview {#overview}
 
+>[!IMPORTANT]
+>
+>* Starting May 20th, 2025, you can see two [!DNL Facebook Custom Audience] cards side-by-side in the destinations catalog. This is due to an internal upgrade to the destinations service. The existing [!DNL Facebook Custom Audience] destination connector has been renamed to **[!UICONTROL (Deprecated) Facebook Custom Audience]** and a new card with the name **[!UICONTROL Facebook Custom Audience]** is now available to you. 
+>* Use the **[!UICONTROL Facebook Custom Audience]** connection in the catalog for new activation data flows. If you have any active dataflows to the **[!UICONTROL (Deprecated) Facebook Custom Audience]** destination, they will be updated automatically, so no action is required from you.
+>* If you are creating dataflows through the [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/), you must update your [!DNL flow spec ID] and [!DNL connection spec ID] to the following values:
+>   * Flow spec ID: `bb181d00-58d7-41ba-9c15-9689fdc831d3`
+>   * Connection spec ID: `c8b97383-2d65-4b7a-9913-db0fbfc71727`
+
 Activate profiles for your [!DNL Facebook] campaigns for audience targeting, personalization, and suppression based on hashed emails.
 
 You can use this destination for audience targeting across [!DNL Facebook's] family of apps that are supported by [!DNL Custom Audiences], including [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network], and [!DNL Messenger]. Selection of the app that you want to run campaign against is indicated at the placement level in [!DNL Facebook Ads Manager].
