@@ -64,55 +64,72 @@ To create an [!DNL Analytics] source connection, select a report suite and then 
 >
 >Data Prep transformations may add latency to the overall dataflow. The additional latency added varies based on the complexity of the transformation logic. 
 
-Before you can map your [!DNL Analytics] data to target XDM schema, you must first select whether you are using a default schema or a custom schema.
+Before you can map your [!DNL Analytics] data to target XDM schema, you must first determine whether you are using a default schema or a custom schema.
 
-A default schema creates a new schema on your behalf, containing the [!DNL Adobe Analytics ExperienceEvent Template] field group. To use a default schema, select **[!UICONTROL Default schema]**.
+>[!BEGINTABS]
 
-![default-schema](../../../../images/tutorials/create/analytics/default-schema.png)
+>[!TAB Default schema]
+
+A default schema creates a new schema on your behalf. This newly created schema contains the [!DNL Adobe Analytics ExperienceEvent Template] field group. To use a default schema, select **[!UICONTROL Default schema]**.
+
+![The schema selection step of the Analytics source workflow, with "Default schema" selected.](../../../../images/tutorials/create/analytics/default-schema.png)
+
+>[!TAB Custom schema]
 
 With a custom schema, you can choose any available schema for your [!DNL Analytics] data, as long as that schema has the [!DNL Adobe Analytics ExperienceEvent Template] field group. To use a custom schema, select **[!UICONTROL Custom schema]**.
 
-![custom-schema](../../../../images/tutorials/create/analytics/custom-schema.png)
+![The schema selection step of the Analytics source workflow, with "Custom schema" selected.](../../../../images/tutorials/create/analytics/custom-schema.png)
 
-The [!UICONTROL Mapping] page provides an interface to map source fields to their appropriate target schema fields. From here, you can map custom variables to new schema field groups and apply calculations as supported by Data Prep. Select a target schema to start the mapping process.
+>[!ENDTABS]
+
+Use [!UICONTROL Mapping] interface to map source fields to their appropriate target schema fields. From here, you can map custom variables to new schema field groups and apply calculations as supported by Data Prep. Select a target schema to start the mapping process.
 
 >[!TIP]
 >
->Only schemas that have the [!DNL Adobe Analytics ExperienceEvent Template] field group are displayed in the schema selection menu. Other schemas are omitted. If there are no appropriate schemas available for your Report Suite data, then you must create a new schema. For detailed steps on creating schemas, see the guide on [creating and editing schemas in the UI](../../../../../xdm/ui/resources/schemas.md).
+>Only schemas that have the [!DNL Adobe Analytics ExperienceEvent Template] field group are displayed in the schema selection menu. Other schemas are omitted. If there are no appropriate schemas available for your report suite data, then you must create a new schema. For detailed steps on creating schemas, see the guide on [creating and editing schemas in the UI](../../../../../xdm/ui/resources/schemas.md).
 
-![select-schema](../../../../images/tutorials/create/analytics/select-schema.png)
+![The target schema selection panel of the Mapping interface.](../../../../images/tutorials/create/analytics/select-schema.png)
 
-The [!UICONTROL Map standard fields] section displays panels for [!UICONTROL Standard mappings applied], [!UICONTROL Non matching standard mappings] and [!UICONTROL Custom mappings]. See the following table for specific information regarding each category:
+Use the [!UICONTROL Map standard fields] panel for metrics on your [!UICONTROL Standard mappings applied]. [!UICONTROL Standard mappings with descriptor name conflicts], and [!DNL Custom mappings].
 
 | Map standard fields | Description |
 | --- | --- |
 | [!UICONTROL Standard mappings applied] | The [!UICONTROL Standard mappings applied] panel displays the total number of mapped attributes. Standard mappings refer to mapping sets between all attributes in the source [!DNL Analytics] data and corresponding attributes in [!DNL Analytics] field group. These are pre-mapped and cannot be edited. |
-| [!UICONTROL Non matching standard mappings] | The [!UICONTROL Non matching standard mappings] panel refers to the number of mapped attributes that contain friendly name conflicts. These conflicts appear when you are re-using a schema that already has a populated set of field descriptors from a different Report Suite. You can proceed with your [!DNL Analytics] dataflow even with friendly name conflicts. |
+| [!UICONTROL Non matching standard mappings] | The [!UICONTROL Non matching standard mappings] panel refers to the number of mapped attributes that contain friendly name conflicts. These conflicts appear when you are re-using a schema that already has a populated set of field descriptors from a different report suite. You can proceed with your [!DNL Analytics] dataflow even with friendly name conflicts. |
 | [!UICONTROL Custom mappings] | The [!UICONTROL Custom mappings] panel displays the number of mapped custom attributes, including eVars, props, and lists. Custom mappings refer to mapping sets between custom attributes in the source [!DNL Analytics] data and attributes in custom field groups included in the selected schema. |
 
 ![map-standard-fields](../../../../images/tutorials/create/analytics/map-standard-fields.png)
 
-To preview the [!DNL Analytics] ExperienceEvent template schema field group, select **[!UICONTROL View]** in the [!UICONTROL Standard mappings applied] panel.
+### Standard mappings {#standard-mappings}
+
+Experience Platform automatically detects your mapping sets for any friendly name conflicts. If there are no conflicts with your mapping sets, select **[!UICONTROL Next]** to proceed.
+
+![mapping](../../../../images/tutorials/create/analytics/mapping.png)
+
+
+<!-- To preview the [!DNL Analytics] ExperienceEvent template schema field group, select **[!UICONTROL View]** in the [!UICONTROL Standard mappings applied] panel.
 
 ![view](../../../../images/tutorials/create/analytics/view.png)
 
 The [!UICONTROL Adobe Analytics ExperienceEvent Template Schema Field Group] page provides you with an interface to use for inspecting the structure of your schema. When finished, select **[!UICONTROL Close]**.
 
 ![field-group-preview](../../../../images/tutorials/create/analytics/field-group-preview.png)
-
-Experience Platform automatically detects your mapping sets for any friendly name conflicts. If there are no conflicts with your mapping sets, select **[!UICONTROL Next]** to proceed.
-
-![mapping](../../../../images/tutorials/create/analytics/mapping.png)
+ -->
 
 >[!TIP]
 >
->If there are friendly name conflicts between your source Report Suite and your selected schema, you can still continue with your [!DNL Analytics] dataflow, acknowledging that the field descriptors will not be changed. Alternatively, you can opt to create a new schema with a blank set of descriptors.
+>If there are friendly name conflicts between your source report suite and your selected schema, you can still continue with your [!DNL Analytics] dataflow, acknowledging that the field descriptors will not be changed. Alternatively, you can opt to create a new schema with a blank set of descriptors.
 
-#### Custom mappings
+## Custom mappings {#custom-mappings}
 
-You can use Data Prep functions to add new custom mapping or calculated fields for custom attributes. To add custom mappings, select **[!UICONTROL Custom]**.
+You can use Data Prep functions to add new custom mappings or calculated fields for custom attributes. To add custom mappings, select **[!UICONTROL Custom]**.
 
-![custom](../../../../images/tutorials/create/analytics/custom.png)
+![The custom mapping tab in the Analytics source workflow.](../../../../images/tutorials/create/analytics/custom.png)
+
+* **[!UICONTROL Add new mapping]**
+* **[!UICONTROL Add calculated field]**
+* **[!UICONTROL Import mapping]**
+* **[!UICONTROL Download template]**
 
 Depending on your needs, you can select either **[!UICONTROL Add new mapping]** or **[!UICONTROL Add calculated field]** and proceed to create custom mappings for your custom attributes. For comprehensive steps on how to use Data Prep functions, please read the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
 
