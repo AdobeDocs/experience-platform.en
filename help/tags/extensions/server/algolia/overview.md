@@ -18,9 +18,9 @@ Use the [!DNL Algolia] event forwarding extension to send user behavior events t
 
 This document assumes that you are familiar with the relevant [!DNL Algolia] [!DNL Insights] APIs leveraged by the extension. For more information, please see [!DNL Algolia]'s documentation on [sending events](https://www.algolia.com/doc/guides/sending-events/getting-started/).
 
-You must have an [!DNL Algolia] account with access to the [!DNL Insights API] in order to use this extension. If you do not have an account, see the [!DNL Algolia] documentation on [signing up](https://dashboard.algolia.com/users/sign_up).
+You must have an [!DNL Algolia] account with access to the [!DNL Insights API] in order to use this extension. See the [!DNL Algolia] documentation to [sign up](https://dashboard.algolia.com/users/sign_up).
 
-Before proceeding, ensure you have the following values from your [!DNL Algolia] account dashboard:
+Before you proceed, ensure that you have the following values from your [!DNL Algolia] account dashboard:
 
 - **Application ID**
 - **Search API Key**
@@ -28,7 +28,7 @@ Before proceeding, ensure you have the following values from your [!DNL Algolia]
 
 ## Install the extension {#install}
 
-To install the [!DNL Algolia] extension, navigate to the Data Collection UI and complete the following steps:
+To install the [!DNL Algolia] extension, navigate to the [!UICONTROL Data Collection] in Adobe Experience Platform and complete the following steps:
 
 1. Navigate to the **Extensions** tab. 
 2. Select **Catalog** and locate the **[!DNL Algolia] Event Forwarding** extension.
@@ -36,7 +36,7 @@ To install the [!DNL Algolia] extension, navigate to the Data Collection UI and 
 
 ### Configure the extension {#configure-extension}
 
-Follow these steps to configure the [!DNL Algolia] event forwarding extension:
+Follow the steps below to configure the [!DNL Algolia] event forwarding extension:
 
 1. Navigate to the **Extensions** tab.
 2. Select the **[!DNL Algolia]** extension.
@@ -81,13 +81,13 @@ Ensure that the [!DNL Algolia] event field group is added to your schema before 
 
 To add the [!DNL Algolia] event field group:
 
-1. Navigate to **Schemas > Browse**
-2. Add a new schema or update an existing schema you're using to send web events
+1. Navigate to **[!UICONTROL Schemas]** and select **[!UICONTROL Browse]**
+2. Add a new schema or update an existing schema that you use to send web events
 3. Hover over the **Add** icon
 4. Enter "[!DNL Algolia]" in the search box to narrow down the results
-5. Click on the **[!DNL Algolia] Event Details** field group
-6. Click the **Add field group** button
-7. Click **Save**
+5. Select **[!DNL Algolia] Event Details** field group
+6. Select the **Add field group** button
+7. Select **Save**
 
 ![Algolia profile field group configuration in Platform](https://your-domain.com/images/extensions/server/algolia/algolia-profile-field-group.png)
 
