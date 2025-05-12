@@ -334,6 +334,14 @@ You can activate an audience using flexible audience evaluation immediately afte
 
 +++
 
+### How long does flexible audience evaluation take?
+
++++ Answer
+
+A flexible audience evaluation job can take up to four hours to complete.
+
++++
+
 ### Can I run scheduling with flexible audience evaluation?
 
 +++ Answer

@@ -1,6 +1,7 @@
 ---
 title: MariaDB Source Connector Overview
 description: Learn how to connect MariaDB to Adobe Experience Platform using APIs or the user interface.
+last-substantial-update: 2025-04-29
 exl-id: 37b8f991-dca9-4f85-9bdd-4927a015e4c0
 ---
 # [!DNL MariaDB]
