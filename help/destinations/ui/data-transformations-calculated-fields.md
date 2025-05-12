@@ -10,15 +10,7 @@ exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
 >id="platform_destinations_export_arrays_flat_files"
 >title="Add calculated fields"
 >abstract="<p>Use the **Add calculated field** control to perform various data transformations on data exported to cloud storage destinations. For example, you can apply hashing to data, concatenate arrays into strings, and more."
-
-<!--
-
-disable additional URLs for a while
-
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-maps-objects.html#examples" text="Examples"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-maps-objects.html#known-limitations" text="Known limitations"
-
--->
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/data-transformations-calculated-fields.html#examples" text="Examples"
 
 >[!AVAILABILITY]
 >
@@ -47,6 +39,10 @@ To use calculated fields for data transformations:
 >id="platform_destinations_export_arrays_calculated_field_disabled"
 >title="Add calculated fields disabled"
 >abstract="This control is disabled because you selected the **Export arrays, maps, objects** toggle *on* when setting up this destination connection. To use calculated fields and the functions available within, set up a new destination connection with the **Export arrays, maps, objects** toggle *off*."
+
+>[!IMPORTANT]
+>
+>Whenever you work with calcuated fields, in addition to any data transformation function that you apply, you must also use the array_to_string function to concatenate fields into a string.
 
 In the mapping step of the activation workflow for cloud storage destinations, select **[!UICONTROL Add calculated field]**.
 
