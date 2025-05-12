@@ -42,14 +42,9 @@ If you want to [use mTLS with Adobe Journey Optimizer custom actions](https://ex
 
 >[!NOTE]
 >
->It is your responsibility to keep the public certificate up-to-date. Please ensure that you regularly review the certificate, particularly as its expiration date approaches. You should bookmark this page in order to maintain the latest copy in your environment.
+>It is your responsibility to keep the public certificate up-to-date. Please ensure that you regularly review the certificate, particularly as its expiration date approaches.
 
-If you want to check the CN or SAN to do additional third-party validation, can can download the relevant certificates here:
-
-- [The Adobe Journey Optimizer public certificate](../images/governance-privacy-security/encryption/AJO-public-certificate.pem) 
-- [The Destinations Service public certificate](../images/governance-privacy-security/encryption/destinations-public-cert.pem).
-
-You can also securely retrieve public certificates by making a GET request to the MTLS endpoint. See the [public certificate endpoint documentation](../../data-governance/mtls-api/public-certificate-endpoint.md) for more information. 
+Securely retrieve public certificates by making a GET request to the MTLS endpoint. See the [public certificate endpoint documentation](../../data-governance/mtls-api/public-certificate-endpoint.md) for more information. 
 
 ## Data at rest {#at-rest}
 
