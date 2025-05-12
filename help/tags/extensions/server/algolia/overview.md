@@ -1,14 +1,10 @@
 ---
-title: Algolia Event Forwarding Extension Overview
+title: Algolia event forwarding extension overview
 description: Learn how to use event forwarding to send search user behaviors to Algolia.
-type: Documentation
-feature: Data Collection, Event Forwarding
-level: Beginner
-role: User, Developer, Admin
-topic: Integrations
+last-substantial-update: 2025-05-09
 ---
 
-# [!DNL Algolia] Event Forwarding Extension Overview
+# [!DNL Algolia] event forwarding extension overview
 
 >[!NOTE]
 >  
@@ -22,31 +18,28 @@ Use the [!DNL Algolia] event forwarding extension to send user behavior events t
 
 This document assumes that you are familiar with the relevant [!DNL Algolia] [!DNL Insights] APIs leveraged by the extension. For more information, please see [!DNL Algolia]'s documentation on [sending events](https://www.algolia.com/doc/guides/sending-events/getting-started/).
 
-An [!DNL Algolia] account is required to use this extension. You can sign up for a free account on the [Algolia sign-up page](https://dashboard.algolia.com/users/sign_up/). In the [!DNL Algolia] account dashboard, make note of the following values that you need for configuration:
+You must have an [!DNL Algolia] account with access to the [!DNL Insights API] in order to use this extension. If you do not have an account, see the [!DNL Algolia] documentation on [signing up](https://dashboard.algolia.com/users/sign_up).
 
-- Your Application ID
-- Your Search API Key
-- Your Index Name
+Before proceeding, ensure you have the following values from your [!DNL Algolia] account dashboard:
 
-## Configuring the [!DNL Algolia] Event Forwarding Extension {#installation-and-configuration}
+- **Application ID**
+- **Search API Key**
+- **Index Name**
 
-Learn how to install and configure the [!DNL Algolia] Event Forwarding extension to send user behavior events to [!DNL Algolia].
+## Install the extension {#install}
 
-### Installation {#installation}
+To install the [!DNL Algolia] extension, navigate to the Data Collection UI and complete the following steps:
 
-To install the [!DNL Algolia] event forwarding extension:
+1. Navigate to the **Extensions** tab. 
+2. Select **Catalog** and locate the **[!DNL Algolia] Event Forwarding** extension.
+3. Click **Install** to add the extension to your property.
 
-1. Open your Platform Data Collection property.
-2. Navigate to the **Extensions** tab and select **Catalog**.
-3. Locate the [!DNL Algolia] event forwarding extension in the catalog.
-4. Click **Install** to add the extension to your property.
-
-### Configuration {#configuration}
+### Configure the extension {#configure-extension}
 
 Follow these steps to configure the [!DNL Algolia] event forwarding extension:
 
 1. Navigate to the **Extensions** tab.
-2. Click on the extension.
+2. Select the **[!DNL Algolia]** extension.
 3. Select **Configure**.
 
 ![](../../../images/extensions/server/algolia/configure.png)
@@ -56,6 +49,8 @@ Follow these steps to configure the [!DNL Algolia] event forwarding extension:
 | Application ID | Enter the [!UICONTROL Application ID] found in the [!DNL Algolia] Dashboard under [API Keys](https://www.algolia.com/account/api-keys/all) section. |
 | Search API Key | Enter the [!UICONTROL Search API Key] found in the [!DNL Algolia] Dashboard under [API Keys](https://www.algolia.com/account/api-keys/all) section. |
 | Index Name | Enter the [!UICONTROL Index Name] that contains your products or content. This **index** is used as the default value. |
+
+{style="table-layout:auto"}
 
 ## [!DNL Algolia] event forwarding extension action types {#action-types}
 
@@ -70,7 +65,7 @@ Configure the `Send event` action to forward events to [!DNL Algolia]:
 3. Select **Extension**: `[!DNL Algolia] Event Forwarding`
 4. Select **Action Type**: `Send Events`
 
-![](../../../images/extensions/server/algolia/send-event.png)
+![Configuration of the Send Event action in the Algolia event forwarding extension.](https://your-domain.com/images/extensions/server/algolia/send-event.png)
 
 >[!NOTE]
 >
@@ -80,7 +75,7 @@ Configure the `Send event` action to forward events to [!DNL Algolia]:
 
 Ensure that the [!DNL Algolia] event field group is added to your schema before you use the [!DNL Algolia] event forwarding extension. It is one of the standard field groups provided through Platform.
 
-![](https://your-domain.com/images/extensions/server/algolia/algolia-field-groups.png)
+![Algolia event field group configuration](https://example.com/images/extensions/server/algolia/algolia-field-groups.png)
 
 ### Add the [!DNL Algolia] event field group to your schema
 
@@ -94,7 +89,7 @@ To add the [!DNL Algolia] event field group:
 6. Click the **Add field group** button
 7. Click **Save**
 
-![](https://your-domain.com/images/extensions/server/algolia/algolia-profile-field-group.png)
+![Algolia profile field group configuration in Platform](https://your-domain.com/images/extensions/server/algolia/algolia-profile-field-group.png)
 
 ### Map and send data using the Data Collection tag
 
@@ -104,7 +99,7 @@ To add the [!DNL Algolia] event field group:
 2. Install the **Adobe Experience Platform Web SDK** extension
 3. Use this extension to map data from HTML to the **[!DNL Algolia] Event** field group
 
-![](../../../images/extensions/server/algolia/html-dataset.png)
+![Example of an HTML dataset being mapped to the Algolia event field group](../../../images/extensions/server/algolia/html-dataset.png)
 
 #### Step 2: Create a data element for XDM mapping
 
@@ -129,9 +124,9 @@ To add the [!DNL Algolia] event field group:
 1. Publish the rules and extension changes to your target environment
 2. Use the Platform Debugger to verify the data is sent to Platform and forwarded to Algolia
 
-![](../../../images/extensions/server/algolia/adobe-debugger.png)
+![Configure a rule to send events using the Algolia extension](../../../images/extensions/server/algolia/adobe-debugger.png)
 
-### Verifying events in [!DNL Algolia]
+### Verify events in [!DNL Algolia]
 
 To confirm events are being properly received by [!DNL Algolia]:
 
@@ -140,23 +135,23 @@ To confirm events are being properly received by [!DNL Algolia]:
 3. Click on the event that matches the event sent from [!DNL Algolia]'s event forwarding extension
 4. Verify that all expected data is present in the event
 
-![](../../../images/extensions/server/algolia/algolia-debugger.png)
+![Verify events in the Algolia debugger](../../../images/extensions/server/algolia/algolia-debugger.png)
 
 ## Common implementation scenarios
 
-### Tracking product or content views
+### Track product or content views
 
 Use the extension to track when users view product/content pages, helping [!DNL Algolia] understand user interests.
 
-### Tracking conversion events
+### Track conversion events
 
 Track add to cart/purchases and other conversion events to optimize [!DNL Algolia]'s AI-powered recommendations.
 
-## Troubleshooting
+## Troubleshoot
 
 ### Events not appearing in [!DNL Algolia]
 
-- Verify your Application ID and API Key are correct
+- Verify that your Application ID and API Key are correct
 - Check that your XDM schema includes the [!DNL Algolia] Event field group
 - Ensure that data is properly mapped to the XDM fields
 - Use both the Platform Debugger and [!DNL Algolia]'s event debugger to trace the flow of data
