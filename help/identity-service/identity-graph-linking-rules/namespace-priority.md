@@ -199,4 +199,8 @@ For more information, read the [Privacy service overview](../../privacy-service/
 
 ### Adobe Target 
 
-Adobe Target may yield unexpected user targeting for shared device scenarios when using edge segmentation.
+Adobe Target may yield unexpected user targeting for shared device scenarios when using Edge Network applications.
+
+### Edge segmentation
+
+In a given event, ensure that all namespaces representing a person entity are included in the identityMap because [identities sent as XDM fields](../../xdm/ui/fields/identity.md) are ignored and are not used for segment membership metadata storage.
