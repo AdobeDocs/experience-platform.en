@@ -287,3 +287,6 @@ You must add the following IP addresses to your allowlist to let traffic flow fo
 You must add the following IP address to your allowlist in order connect your source to Experience on AWS:
 
 - `66.117.18.0/24`
+- `34.193.63.59`
+- `44.217.93.240`
+- `44.194.79.229`
