@@ -8,13 +8,13 @@ exl-id: 8369c783-e595-476f-9546-801cf4f10f71
 
 >[!NOTE]
 >
->Adobe has deprecated static certificate downloads. You must use this API to retrieve valid public mTLS certificates. Adobe automates the certificate lifecycle by reissuing certificates 60 days before expiration and revoking them 30 days before expiration. These intervals will continue to shorten in line with [CA/B Forum guidelines](https://www.digicert.com/blog/tls-certificate-lifetimes-will-officially-reduce-to-47-days). Update your workflows to support automated retrieval to avoid disruptions from expired or revoked certificates."
+>Adobe no longer supports static download of public mTLS certificates. Use this API to retrieve valid certificates for your integrations. Automated retrieval is now required to avoid service disruptions.
 
 This guide explains how to use the public certificate endpoint to securely retrieve public certificates for your organization's Adobe applications. It includes a sample API call and detailed instructions to help developers authenticate and verify data exchanges.
 
 ## Getting started
 
-Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
+Before continuing, review the [getting started guide](./getting-started.md) for important details about required headers and how to interpret example API calls.
 
 ## API paths {#paths}
 
@@ -112,7 +112,7 @@ Adobe automates the lifecycle of public mTLS certificates to ensure continuity a
 
 >[!NOTE]
 >
->These timelines will shorten over time in alignment with CA/B Forum guidelines, which aim to reduce certificate lifetimes to a maximum of 47 days.
+>These timelines will shorten over time in alignment with [CA/B Forum guidelines](https://www.digicert.com/blog/tls-certificate-lifetimes-will-officially-reduce-to-47-days), which aim to reduce certificate lifetimes to a maximum of 47 days.
 
 You must update your integrations to support automated retrieval via the API. Do not rely on manual certificate downloads or static copies, as these may result in expired or revoked certificates.
 
