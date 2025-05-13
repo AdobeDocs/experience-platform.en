@@ -295,12 +295,12 @@ This FAQ covers practical questions about dataset retention jobs, immediate effe
 ### What types of datasets can I apply retention policy rules to?
 
 +++Answer
-You can apply TTL-based retention policies to any dataset that uses a time-series schema. This includes datasets based on the standard XDM ExperienceEvent class, as well as custom schemas that extend the XDM Time Series class.
+You can apply TTL-based retention policies to any dataset that uses time-series behavior. This includes datasets based on the standard XDM ExperienceEvent class, as well as custom schemas designed to capture time-series data.
 
 Row-level expiration requires the following technical conditions:
 
-- The schema must extend the XDM Time Series base class.
-- The schema must include a timestamp field, used to evaluate expiration.
+- The schema must be designed to capture time-series data.
+- The schema must include a timestamp field used to evaluate expiration.
 - The dataset should store event-level data, typically using or extending the XDM ExperienceEvent class.
 - The dataset must be registered in Catalog Service, as TTL settings are applied via `extensions.adobe_lakeHouse.rowExpiration`.
 - TTL values must use the ISO-8601 duration format (for example, `P30D`, `P6M`, `P1Y`).
