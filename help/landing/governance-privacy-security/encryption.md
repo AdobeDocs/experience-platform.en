@@ -42,9 +42,22 @@ If you want to [use mTLS with Adobe Journey Optimizer custom actions](https://ex
 
 >[!NOTE]
 >
->It is your responsibility to keep the public certificate up-to-date. Please ensure that you regularly review the certificate, particularly as its expiration date approaches.
+>It is your responsibility to ensure that your systems always use a valid public certificate. Ensure that you regularly review the certificate, particularly as its expiration date approaches.Use the API to regularly retrieve and update certificates before they expire.
 
-Securely retrieve public certificates by making a GET request to the MTLS endpoint. See the [public certificate endpoint documentation](../../data-governance/mtls-api/public-certificate-endpoint.md) for more information. 
+Direct download links for public mTLS certificates no longer provided. Instead, use the [public certificate endpoint](../../data-governance/mtls-api/public-certificate-endpoint.md) to retrieve certificates. This approach ensures that you always receive the most current and valid certificates for your integrations. Integrations that rely on certificate-based encryption should update their workflows to utilize the API for automated certificate retrieval.
+
+#### Certificate lifecycle automation {#certificate-lifecycle-automation}
+
+To improve reliability and prevent disruptions, the certificate lifecycle for mTLS integrations has been automated. Public certificates are now:
+
+- Reissued 60 days before expiration.
+- Revoked 30 days before expiration.
+
+These intervals will continue to shorten over time to align with the [evolving CA/B Forum guidelines](https://www.digicert.com/blog/tls-certificate-lifetimes-will-officially-reduce-to-47-days). The industry is moving toward significantly shorter certificate lifespans, with a planned reduction to a maximum validity period of 47 days.
+
+Update your workflows to support automated certificate retrieval via the API. Relying on static links or manual updates may result in expired or revoked certificates, which can lead to failed integrations.
+
+If you previously used links on this page to download certificates, update your process to retrieve them exclusively through the API going forward.
 
 ## Data at rest {#at-rest}
 

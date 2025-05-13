@@ -103,6 +103,4 @@ A successful response returns HTTP status 200 and lists the public certificates 
 
 After reading this guide, you now understand how to retrieve your public certificates using the Adobe Experience Platform API. To learn more about managing customer data to ensure compliance with regulations and organizational policies, see the [Data Governance overview](../home.md).
 
-<!-- To test this API call, navigate to the [MTLS API reference page]() to interact with the Experience Platform API endpoints. -->
-
-<!-- Add link after developer page is live -->
+To test this API call, navigate to the [MTLS API reference page](https://developer.adobe.com/experience-platform-apis/references/mtls-service/) to interact with the Experience Platform API endpoints.
