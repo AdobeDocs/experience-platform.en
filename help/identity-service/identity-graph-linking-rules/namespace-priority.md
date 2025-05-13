@@ -197,11 +197,7 @@ For more information on partner-built destinations, read the [destinations overv
 
 For more information, read the [Privacy service overview](../../privacy-service/home.md).
 
-### Adobe Target 
-
-Adobe Target may yield unexpected user targeting for shared device scenarios when using Edge Network applications.
-
-### Edge Network applications
+### Edge Segmentation and Edge Network applications
 
 * The identityMap must contain a person namespace that has been marked as unique. Identity descriptors are not supported.
 * This person namespace must have the `primary = true` configuration when an end-user is browsing while authenticated.
