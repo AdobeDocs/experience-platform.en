@@ -66,6 +66,11 @@ See the [BI extension guide](https://experienceleague.adobe.com/en/docs/analytic
 
 ## Non-expiring credentials {#non-expiring-credentials}
 
+>[!CONTEXTUALHELP]
+>id="platform_queryservice_credentials_migratenonexpiringcredentials"
+>title="Migrate to OAuth Server-to-Server Credential"
+>abstract="This migration is required as JWT credentials will stop working after June 30, 2025. It takes about 30–40 seconds and can't be canceled once started. All existing jobs and integrations will continue to work with OAuth after migration. You can leave this screen and return any time to check the status."
+
 You can use non-expiring credentials to set up a more permanent connection to an external client.
 
 >[!NOTE]
