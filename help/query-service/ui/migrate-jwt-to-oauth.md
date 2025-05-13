@@ -14,11 +14,7 @@ This document provides step-by-step instructions for performing the migration, u
 
 ## Who needs to migrate {#who-needs-to-migrate}
 
-If you use non-expiring credentials in Query Service, you must migrate each one. This applies to credentials used for the following purposes:
-
-* Automated workflows
-* Scheduled queries
-* Custom API integrations
+If you use non-expiring credentials in Query Service, you must migrate each one. This applies to credentials used in automated workflows, scheduled queries, or custom API integrations.
 
 If you see credentials listed under the **[!UICONTROL Non-expiring Credentials]** section in the **[!UICONTROL Credentials]** tab, those credentials are affected.
 
@@ -32,11 +28,7 @@ You can migrate credentials directly in the Experience Platform UI. To do so, na
 
 ![The Query Service Credentials workspace with Queries, Credentials, and Migrate highlighted.]()
 
-Once migration completes successfully:
-
-* A new OAuth Server-to-Server credential replaces the JWT-based one.
-* The system automatically retires the JWT credential.
-* The status of the credential updates to **[!UICONTROL Migrated]**.
+After migration, a new OAuth credential replaces the JWT-based one. The system retires the original JWT credential automatically, and the credential status updates to **[!UICONTROL Migrated]**.
 
 No reconfiguration is required. Existing jobs and integrations using the migrated credential continue to function without interruption.
 
@@ -44,7 +36,7 @@ No reconfiguration is required. Existing jobs and integrations using the migrate
 
 After a successful migration:
 
-* After migration, Query Service automatically uses the new OAuth credential.
+* Query Service automatically uses the new OAuth credential.
 * Scheduled jobs, queries, and API calls that previously relied on the JWT credential continue to run as expected.
 * The old JWT credential is no longer valid.
 
