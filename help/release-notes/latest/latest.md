@@ -102,7 +102,7 @@ Use Adobe Experience Platform Identity Service to create a comprehensive view of
 
 | Feature | Description |
 | --- | --- |
-| [!BADGE Limited Availability]{type=Informative} [!DNL Identity Graph Linking Rules] | Identity Graph Linking Rules is now in Limited Availability, and can be accessed by all customers in development sandboxes. <ul><li>**Activation requirements**: The feature will remain inactive until you configure and save your [!DNL Identity Settings]. Without this configuration, the system will continue to operate normally, with no changes in behavior.</li><li>**Important notes**: During this Limited Availability phase, Edge segmentation may produce unexpected segment membership results. However, streaming and batch segmentation will function as expected.</li><li>**Next steps**: For information on how to enable this feature in production sandboxes, please contact your Adobe account team.</li></ul> |
+| [!BADGE Limited Availability]{type=Informative} [!DNL Identity Graph Linking Rules] Identity Graph Linking Rules can now be accessed by all customers in development sandboxes. <ul><li>**Activation requirements**: The feature will remain inactive until you configure and save your [!DNL Identity Settings]. Without this configuration, the system will continue to operate normally, with no changes in behavior.</li><li>**Important notes**: During this Limited Availability phase, Edge segmentation may produce unexpected segment membership results. However, streaming and batch segmentation will function as expected.</li><li>**Next steps**: For information on how to enable this feature in production sandboxes, please contact your Adobe account team.</li></ul> |
 
 {style="table-layout:auto"}
 
