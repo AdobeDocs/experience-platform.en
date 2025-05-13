@@ -14,7 +14,7 @@ With streaming segmentation, audience qualification now happens as streaming dat
 
 >[!IMPORTANT]
 >
->In order to use streaming segmentation, you **must** use a merge policy that is "Active on Edge".
+>In order to use streaming segmentation, you **must** use a merge policy that is "Active on Edge". For more information on merge policies, please read the [merge policies overview](../../profile/merge-policies/overview.md).
 
 A query will be eligible for streaming segmentation if it meets any of the criteria outlined in the following table.
 
@@ -27,7 +27,7 @@ A query will be eligible for streaming segmentation if it meets any of the crite
 | Single event within a time window of less than 24 hours | Any segment definition that refers to a single incoming event within a time window of less than 24 hours. | `CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![An example of a single event within a relative time window is shown.](../images/methods/streaming/single-event.png) |
 | Profile only | Any segment definition that refers to only a profile attribute. | `homeAddress.country.equals("US", false)` | ![An example of a profile attribute shown.](../images/methods/streaming/profile-attribute.png) |
 | Single event with a profile attribute within a relative time window of less than 24 hours | Any segment definition that refers to a single incoming event, with one or more profile attributes, and occurs within a relative time window of less than 24 hours. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![An example of a single event with a profile attribute within a relative time window is shown.](../images/methods/streaming/single-event-with-profile-attribute.png) |
-| Multiple events with a profile attribute | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("directMarketing.emailClicked", false)) WHEN(today), C1: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![An example of multiple events with a profile attribute is shown.](../images/methods/streaming/multiple-events-with-profile-attribute.png) |
+| Multiple events within a relative time window of 24 hours | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("directMarketing.emailClicked", false)) WHEN(today), C1: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![An example of multiple events with a profile attribute is shown.](../images/methods/streaming/multiple-events-with-profile-attribute.png) |
 
 A segment definition will **not** be eligible for streaming segmentation in the following scenarios:
 
