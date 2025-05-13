@@ -6,6 +6,10 @@ exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
 ---
 # Streaming segmentation guide
 
+>[!NOTE]
+>
+>The streaming segmentation eligibility criteria have updated on May 20, 2025. For more information about these changes, please read the [streaming segmentation eligibility criteria updates](../eligibility-criteria-update.md).
+
 Streaming segmentation is the ability to evaluate audiences in Adobe Experience Platform in near real-time while focusing on data richness.
 
 With streaming segmentation, audience qualification now happens as streaming data lands into Experience Platform, alleviating the need to schedule and run segmentation jobs. This allows you to evaluate data as its passed into Experience Platform, letting audience membership be automatically kept up-to-date.
@@ -20,7 +24,7 @@ A query will be eligible for streaming segmentation if it meets any of the crite
 
 >[!NOTE]
 >
->In order for streaming segmentation to work,  you will need to enable scheduled segmentation for the organization. For details on enabling scheduled segmentation, please refer to [the Audience Portal overview](../ui/audience-portal.md#scheduled-segmentation).
+>In order for streaming segmentation to work, you will need to enable scheduled segmentation for the organization. For details on enabling scheduled segmentation, please refer to [the Audience Portal overview](../ui/audience-portal.md#scheduled-segmentation).
 
 | Query type | Details | Query | Example |
 | ---------- | ------- | ----- | ------- |
