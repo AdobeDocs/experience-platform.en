@@ -114,7 +114,7 @@ See the guide on [defining fields in the UI](../fields/overview.md#define) for s
 
 If you have previously created schemas that employ this class, the newly added fields will automatically appear in those schemas.
 
-## Edit a class (#edit-a-class)
+## Edit a class {#edit-a-class}
 
 >[!NOTE]
 >
