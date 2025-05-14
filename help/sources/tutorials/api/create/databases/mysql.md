@@ -236,10 +236,6 @@ A successful response returns details of the newly created base connection, incl
 
 +++
 
-## Next steps
+## Create a dataflow for [!DNL MySQL] data
 
-By following this tutorial, you have created a [!DNL MySQL] base connection using the [!DNL Flow Service] API. You can use this base connection ID in the following tutorials:
-
-* [Explore the structure and contents of your data tables using the [!DNL Flow Service] API](../../explore/tabular.md)
-* [Create a dataflow to bring database data to Experience Platform using the [!DNL Flow Service] API](../../collect/database-nosql.md)
-
+Now that you have successfully connected your [!DNL MySQL] database, you can now [create a dataflow and ingest data from your database into Experience Platform](../../collect/database-nosql.md).

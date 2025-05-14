@@ -32,19 +32,19 @@ To connect to [!DNL MySQL], go to the *[!UICONTROL Databases]* category, select 
 >
 >Sources in the sources catalog display the **[!UICONTROL Set up]** option when a given source does not yet have an authenticated account. Once an authenticated account is created, this option changes to **[!UICONTROL Add data]**.
 
-![The sources catalog with the MySQL source card selected.]
+![The sources catalog with the MySQL source card selected.](../../../../images/tutorials/create/my-sql/catalog.png)
 
 ## Use an existing account {#existing}
 
 To use an existing account, select **[!UICONTROL Existing account]** and then select the [!DNL MySQL] account that you want to use.
 
-![The existing accounts interface in the sources workflow with "Existing account" selected.]
+![The existing accounts interface in the sources workflow with "Existing account" selected.](../../../../images/tutorials/create/my-sql/existing.png)
 
 ## Create a new account {#new}
 
 To create a new account, select **[!UICONTROL New account]** and then provide a name and optionally add a description for your account.
 
-![The new account interface in the sources workflow with an account name and optional description provided.]
+![The new account interface in the sources workflow with an account name and optional description provided.](../../../../images/tutorials/create/my-sql/new.png)
 
 ### Connect to Experience Platform on Azure {#azure}
 
@@ -55,13 +55,14 @@ You can connect your [!DNL MySQL] database to Experience Platform on Azure using
 >[!TAB Account key authentication]
 
 To use account key authentication, select **[!UICONTROL Account key authentication]**, provide your [connection string](../../../../connectors/databases/mysql.md#azure), and then select **[!UICONTROL Connect to source]**.
-![The new account interface in the sources workflow with "Account key authentication" selected.]
+
+![The new account interface in the sources workflow with "Account key authentication" selected.](../../../../images/tutorials/create/my-sql/account-key.png)
 
 >[!TAB Basic authentication]
 
 To use basic authentication, select **[!UICONTROL Basic authentication]**, provide values for your [authentication credentials](../../../../connectors/databases/mysql.md#azure), and then select **[!UICONTROL Connect to source]**.
 
-![The new account interface in the sources workflow with "Basic authentication" selected.]
+![The new account interface in the sources workflow with "Basic authentication" selected.](../../../../images/tutorials/create/my-sql/basic-auth.png)
 
 >[!ENDTABS]
 
@@ -73,7 +74,8 @@ To use basic authentication, select **[!UICONTROL Basic authentication]**, provi
 
 To create a new [!DNL MySQL] account and connect to Experience Platform on AWS, ensure that you are in a VA6 sandbox and then provide the necessary [credentials for authentication](../../../../connectors/databases/mysql.md#aws).
 
-![The new account interface in the sources workflow to connect to AWS.]
+![The new account interface in the sources workflow to connect to AWS.](../../../../images/tutorials/create/my-sql/aws.png)
 
-## Next steps
+## Create a dataflow for [!DNL MySQL] data
 
+Now that you have successfully connected your [!DNL MySQL] database, you can now [create a dataflow and ingest data from your database into Experience Platform](../../dataflow/databases.md).
