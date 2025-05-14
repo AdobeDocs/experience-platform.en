@@ -42,7 +42,7 @@ To use calculated fields for data transformations:
 
 >[!IMPORTANT]
 >
->Whenever you work with calcuated fields, in addition to any data transformation function that you apply, you must also use the array_to_string function to concatenate fields into a string.
+>Whenever you work with calcuated fields, in addition to any data transformation function that you apply, you must also use the `array_to_string` function to concatenate fields into a string.
 
 In the mapping step of the activation workflow for cloud storage destinations, select **[!UICONTROL Add calculated field]**.
 
