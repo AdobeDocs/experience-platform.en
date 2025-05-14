@@ -241,6 +241,8 @@ role: Developer
     * [Pega Customer Decision Hub](https://exchange.adobe.com/apps/ec/107597)
     * [!DNL Pinterest] {#pinterest}
       * [Overview](./extensions/server/pinterest/overview.md)
+    * [!DNL Reddit] {#reddit}
+      * [Overview](./extensions/server/reddit/overview.md)
     * [!DNL Snapchat] {#snap}
       * [Overview](./extensions/server/snap/overview.md)
     * [!DNL Snowflake] {#snowflake}

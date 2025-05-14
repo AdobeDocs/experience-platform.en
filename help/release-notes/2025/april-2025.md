@@ -19,6 +19,7 @@ exl-id: a3b1e2e8-d780-4e23-b323-37e1a631f716
 Updates to existing features and documentation in Adobe Experience Platform:
 
 - [Experience League](#experience-league)
+- [Data Collection](#data-collection)
 - [Destinations](#destinations)
 - [Experience Data Model](#xdm)
 - [Identity Service](#identity)
@@ -35,6 +36,19 @@ Experience League is a comprehensive learning platform designed to help you enha
 | Feature | Description |
 | --- | --- |
 | Personalized home page | Access and customize your personalized home page on [Experience League](https://experienceleague.adobe.com/en/home#). Sign in with your Adobe credentials and then select **[!UICONTROL Experience League]** on the top menu to start optimizing your learning experience: <ul><li>**Bookmarks**: Use the [!UICONTROL Bookmarks] feature to save and collect your favorite resources in one place. You can save a variety of content, including playlists, articles, and tutorials.</li><li>**Customize your learning**: Enhance your learning experience by updating your Experience League profile with the roles, industries, products, and experience level that best match your needs.</li><li>**Recommendations**: View learning content recommended based on your recent activity.</li><li>**Recently viewed**: Use the [!UICONTROL Recently viewed] section to quickly navigate back to recently viewed content such as documentation and videos.</li><li>**Learning resources**: Use the [!UICONTROL All learning resources] panel to navigate to tutorials, documentation, community, events, and certifications.</li><li>**What's new**: View the [!UICONTROL What's new] section for a stream of the latest content on Experience League.</li><li>**Watch past events on-demand**: Watch previously recorded live streams on product spotlights, use cases, and tutorials with the [!UICONTROL Watch past events on-demand] section.</li></ul><br> ![Personalized home page on Experience League.](../2025/assets/april/personalized-home-page.png "Personalized home page on Experience League."){width="250" align="center" zoomable="yes"} |
+
+{style="table-layout:auto"}
+
+## Data collection {#data-collection}
+
+Adobe Experience Platform provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| [!DNL Adform] extension | The [!DNL Adform] server-side extension enables brands to easily retarget audiences off-site using ECIDs. This server-side extension is not reliant on third-party cookies or cookie alternate IDs. Additionally, because this is done entirely server-side, no additional pixels or other client-side changes are needed. For more information, see the [Adform extension overview](/help/tags/extensions/server/adform/overview.md). |
+| [!DNL Amazon] web events API extension | The [!DNL Amazon] Conversions API extension enables advertisers to share website interactions directly with [!DNL Amazon], providing improved attribution, data reliability, and campaign optimization. This extension supports event forwarding, allowing you to send conversion events such as purchases, cart additions, and more, while ensuring proper deduplication for accurate reporting. For more information, see the [Amazon extension overview](/help/tags/extensions/server/amazon/overview.md). |
 
 {style="table-layout:auto"}
 
@@ -88,7 +102,7 @@ Use Adobe Experience Platform Identity Service to create a comprehensive view of
 
 | Feature | Description |
 | --- | --- |
-| [!BADGE Limited Availability]{type=Informative} [!DNL Identity Graph Linking Rules] | Identity Graph Linking Rules is now in Limited Availability, and can be accessed by all customers in development sandboxes. <ul><li>**Activation requirements**: The feature will remain inactive until you configure and save your [!DNL Identity Settings]. Without this configuration, the system will continue to operate normally, with no changes in behavior.</li><li>**Important notes**: During this Limited Availability phase, Edge segmentation may produce unexpected segment membership results. However, streaming and batch segmentation will function as expected.</li><li>**Next steps**: For information on how to enable this feature in production sandboxes, please contact your Adobe account team.</li></ul> |
+| [!BADGE Limited Availability]{type=Informative} [!DNL Identity Graph Linking Rules] | Identity Graph Linking Rules can now be accessed by all customers in development sandboxes. <ul><li>**Activation requirements**: The feature will remain inactive until you configure and save your [!DNL Identity Settings]. Without this configuration, the system will continue to operate normally, with no changes in behavior.</li><li>**Important notes**: During this Limited Availability phase, Edge segmentation may produce unexpected segment membership results. However, streaming and batch segmentation will function as expected.</li><li>**Next steps**: For information on how to enable this feature in production sandboxes, please contact your Adobe account team.</li></ul> |
 
 {style="table-layout:auto"}
 
