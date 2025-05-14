@@ -6,9 +6,17 @@ exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
 ---
 # Look-alike audiences guide
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
 >Look-alike insights and Look-alike audiences are only available in the **B2C edition**.
+
+>[!IMPORTANT]
+>
+>Look-alike insights and Look-alike audiences will automatically be disabled for environments that show low usage. 
+>
+>If you find that Look-alike insights have been disabled from your environment and you need to re-enable them, please send an email to the Adobe Customer Care team requesting Look-alike audiences enablement. This email should include information such as your organization ID and the environment details.
+>
+>After sending this email and receiving confirmation from Adobe Customer Care, Look-alike insights and audiences will be enabled across all the sandboxes in your environment.
 
 In Adobe Experience Platform, Look-alike audiences provide intelligent insights on each of your audiences, leveraging machine-learning-based insights to identify and target high-value customers with your marketing campaigns. 
 
@@ -69,7 +77,9 @@ The following entitlements apply for usage of Look-alike audiences:
 
 Add-on packs, which will be available at a later date, increase the entitlements for production sandboxes by 20 Look-alike audiences per pack.
 
-To confirm if you have access to Look-alike audiences, please contact your Adobe representative.
+## Access {#access}
+
+To confirm if you have access to Look-alike audiences, select any audience within the Audience Portal and check if the **[!UICONTROL Look-alike insights]** tab is visible.
 
 ## View look-alike insights {#view}
 
