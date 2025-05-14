@@ -201,7 +201,7 @@ For more information, read the [Privacy service overview](../../privacy-service/
 
 There are two main behavioral changes to take note of regarding Edge segmentation and Edge Network applications:
 
-1. The identityMap must contain a person namespace that has been marked as unique. Identity descriptors are not supported.
+1. The identityMap must contain a person namespace that has been marked as unique. Fields marked as an identity (identity descriptors) are not supported.
 2. The person namespace must have the `primary = true` configuration when an end-user is browsing while authenticated.
 
 #### Edge segmentation
@@ -210,7 +210,7 @@ In a given event, ensure that all of your namespaces that represent a person ent
 
 * **Event applicability**: This behavior applies only to events sent directly to the Edge Network (such as WebSDK, Mobile SDK). Events ingested from [Experience Platform hub](../../landing/edge-and-hub-comparison.md), such as those ingested with the HTTP API source, other streaming sources, and batch sources, are not subject to this limitation.
 * **Edge segmentation specificity**: This behavior is specific to edge segmentation. Batch and streaming segmentation are separate services evaluated on the hub and do not follow the same process.
-* Read the [Adobe Experience Platform and applications architecture diagrams](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) for more information.
+* Read the [Adobe Experience Platform and applications architecture diagrams](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) and [Edge Network and hub comparison](../../landing/edge-and-hub-comparison.md) pages for more information.
 
 #### Edge Network applications
 
