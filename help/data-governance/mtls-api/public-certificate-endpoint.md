@@ -118,4 +118,4 @@ You must update your integrations to support automated retrieval via the API. Do
 
 ## Next steps
 
-After retrieving your public certificates using the API, update your integrations to regularly call this endpoint before certificates expire. To test this call interactively, visit the [MTLS API reference page](https://developer.adobe.com/experience-platform-apis/references/mtls-service/). For broader guidance on certificate-based integrations, see the [Data encryption in Adobe Experience Platform overview](../../landing/governance-privacy-security/encryption) or the [Data Governance overview](../home.md).
+After retrieving your public certificates using the API, update your integrations to regularly call this endpoint before certificates expire. To test this call interactively, visit the [MTLS API reference page](https://developer.adobe.com/experience-platform-apis/references/mtls-service/). For broader guidance on certificate-based integrations, see the [Data encryption in Adobe Experience Platform overview](../../landing/governance-privacy-security/encryption.md) or the [Data Governance overview](../home.md).
