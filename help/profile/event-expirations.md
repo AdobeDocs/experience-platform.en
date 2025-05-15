@@ -42,6 +42,10 @@ You should therefore keep the same Experience Event expiration value for all dat
 
 The following section lists frequently asked questions regarding Experience Event data expiration:
 
+### What is the minimum duration I can set an Experience Event data expiration for?
+
+The minimum duration for an Experience Event data expiration is **one day**. 
+
 ### How does Experience Event data expiry differ from Pseudonymous Profile data expiry?
 
 Experience Event data expiry and Pseudonymous Profile data expiry are complementary features.
