@@ -115,7 +115,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    },
    "audienceMetadataConfig":{
       "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
-   },  
+   },
    "aggregation":{
       "aggregationType":"CONFIGURABLE_AGGREGATION",
       "configurableAggregation":{
@@ -170,8 +170,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    "description":"Moviestar is a fictional destination, used for this example.",
    "status":"TEST",
    "sources":[
-      "ACCOUNTS" // Specifies that this destination supports account audiences
-   ], 
+      "ACCOUNTS"
+   ],
    "customerAuthenticationConfigurations":[
       {
          "authType":"BEARER"
@@ -223,7 +223,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    },
    "audienceMetadataConfig":{
       "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
-   },  
+   },
    "aggregation":{
       "aggregationType":"CONFIGURABLE_AGGREGATION",
       "configurableAggregation":{
@@ -279,8 +279,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    "description":"Moviestar is a fictional destination, used for this example.",
    "status":"TEST",
    "sources":[
-      "UNIFIED_PROFILE_PROSPECTS" // Specifies that this destination supports prospect audiences
-   ], 
+      "UNIFIED_PROFILE_PROSPECTS"
+   ],
    "customerAuthenticationConfigurations":[
       {
          "authType":"BEARER"
@@ -288,25 +288,50 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    ],
    "customerDataFields":[
       {
-         "name":"endpointsInstance",
+         "name":"bucketName",
+         "title":"Enter the name of your Amazon S3 bucket",
+         "description":"Amazon S3 bucket name",
          "type":"string",
-         "title":"Select Endpoint",
-         "description":"Moviestar manages several instances across the globe for REST endpoints that our customers are provisioned for. Select your endpoint in the dropdown list.",
          "isRequired":true,
+         "pattern":"(?=^.{3,63}$)(?!^(\\d+\\.)+\\d+$)(^(([a-z0-9]|[a-z0-9][a-z0-9\\-]*[a-z0-9])\\.)*([a-z0-9]|[a-z0-9][a-z0-9\\-]*[a-z0-9])$)",
+         "readOnly":false,
+         "hidden":false
+      },
+      {
+         "name":"path",
+         "title":"Enter the path to your S3 bucket folder",
+         "description":"Enter the path to your S3 bucket folder",
+         "type":"string",
+         "isRequired":true,
+         "pattern":"^[0-9a-zA-Z\\/\\!\\-_\\.\\*\\''\\(\\)]*((\\%SEGMENT_(NAME|ID)\\%)?\\/?)+$",
+         "readOnly":false,
+         "hidden":false
+      },
+      {
+         "name":"compression",
+         "title":"Compression format",
+         "description":"Select the desired file compression format.",
+         "type":"string",
+         "isRequired":true,
+         "readOnly":false,
          "enum":[
-            "US",
-            "EU",
-            "APAC",
-            "NZ"
+            "GZIP",
+            "NONE"
          ]
       },
       {
-         "name":"customerID",
+         "name":"fileType",
+         "title":"File type",
+         "description":"Select the exported file type.",
          "type":"string",
-         "title":"Moviestar Customer ID",
-         "description":"Your customer ID in the Moviestar destination (e.g. abcdef).",
          "isRequired":true,
-         "pattern":""
+         "readOnly":false,
+         "hidden":false,
+         "enum":[
+            "json",
+            "parquet"
+         ],
+         "default":"parquet"
       }
    ],
    "uiAttributes":{
@@ -332,7 +357,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    },
    "audienceMetadataConfig":{
       "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
-   },  
+   },
    "aggregation":{
       "aggregationType":"CONFIGURABLE_AGGREGATION",
       "configurableAggregation":{
@@ -387,14 +412,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    "description":"Amazon S3 destination with custom file formatting options and custom file name configuration",
    "status":"TEST",
    "sources":[
-      "DATASETS" // Specifies that this destination supports dataset exports
-   ], 
-   "customerAuthenticationConfigurations":[
-      {
-         "authType":"S3"
-      }
+      "DATASETS"
    ],
-   "customerEncryptionConfigurations":[
+   "customerAuthenticationConfigurations":[
       
    ],
    "customerDataFields":[
@@ -404,7 +424,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
          "description":"Amazon S3 bucket name",
          "type":"string",
          "isRequired":true,
-         "pattern": "(?=^.{3,63}$)(?!^(\\d+\\.)+\\d+$)(^(([a-z0-9]|[a-z0-9][a-z0-9\\-]*[a-z0-9])\\.)*([a-z0-9]|[a-z0-9][a-z0-9\\-]*[a-z0-9])$)",
+         "pattern":"(?=^.{3,63}$)(?!^(\\d+\\.)+\\d+$)(^(([a-z0-9]|[a-z0-9][a-z0-9\\-]*[a-z0-9])\\.)*([a-z0-9]|[a-z0-9][a-z0-9\\-]*[a-z0-9])$)",
          "readOnly":false,
          "hidden":false
       },
@@ -414,142 +434,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
          "description":"Enter the path to your S3 bucket folder",
          "type":"string",
          "isRequired":true,
-         "pattern": "^[0-9a-zA-Z\\/\\!\\-_\\.\\*\\''\\(\\)]*((\\%SEGMENT_(NAME|ID)\\%)?\\/?)+$",
+         "pattern":"^[0-9a-zA-Z\\/\\!\\-_\\.\\*\\''\\(\\)]*((\\%SEGMENT_(NAME|ID)\\%)?\\/?)+$",
          "readOnly":false,
-         "hidden":false
-      },
-      {
-         "name":"sep",
-         "title":"Enter your desired separator for each field and value",
-         "description":"Enter your desired separator for each field and value",
-         "type":"string",
-         "isRequired":false,
-         "readOnly":false,
-         "hidden":false
-      },
-      {
-         "name":"encoding",
-         "title":"Select the desired CSV file encoding",
-         "description":"Select the desired CSV file encoding",
-         "type":"string",
-         "enum":[
-            "UTF-8",
-            "UTF-16"
-         ],
-         "isRequired":false,
-         "readOnly":false,
-         "hidden":false
-      },
-      {
-         "name":"quote",
-         "title":"Quoted values escape character",
-         "description":"Enter the desired character to be used for escaping quoted values.",
-         "type":"string",
-         "isRequired":false,
-         "readOnly":false,
-         "hidden":false
-      },
-      {
-         "name":"quoteAll",
-         "title":"Escape all quoted values",
-         "description":"Select whether to escape all quoted values.",
-         "type":"string",
-         "enum":[
-            "true",
-            "false"
-         ],
-         "default":"true",
-         "isRequired":true,
-         "readOnly":false,
-         "hidden":false
-      },
-      {
-         "name":"escape",
-         "title":"Quote escaping character",
-         "description":"Enter the desired character to be used for escaping quotes inside an already quoted value.",
-         "type":"string",
-         "isRequired":false,
-         "readOnly":false,
-         "hidden":false
-      },
-      {
-         "name":"escapeQuotes",
-         "title":"Enclose quoted values within quotes",
-         "description":"Select whether values containing quotes should always be enclosed in quotes.",
-         "type":"string",
-         "enum":[
-            "true",
-            "false"
-         ],
-         "isRequired":false,
-         "default":"true",
-         "readOnly":false,
-         "hidden":false
-      },
-      {
-         "name":"header",
-         "title":"Generate file header.",
-         "description":"Select whether to write the names of columns as the first line of the exported files.",
-         "type":"string",
-         "isRequired":false,
-         "enum":[
-            "true",
-            "false"
-         ],
-         "readOnly":false,
-         "default":"true",
-         "hidden":false
-      },
-      {
-         "name":"ignoreLeadingWhiteSpace",
-         "title":"Ignore leading white space",
-         "description":"Select whether leading whitespaces should be trimmed from exported values.",
-         "type":"string",
-         "isRequired":false,
-         "enum":[
-            "true",
-            "false"
-         ],
-         "readOnly":false,
-         "default":"true",
-         "hidden":false
-      },
-      {
-         "name":"nullValue",
-         "title":"NULL value string format",
-         "description":"Enter the string representation of a NULL value. ",
-         "type":"string",
-         "isRequired":false,
-         "readOnly":false,
-         "hidden":false
-      },
-      {
-         "name":"dateFormat",
-         "title":"Date format",
-         "description":"Enter the desired date format. ",
-         "type":"string",
-         "default":"yyyy-MM-dd",
-         "isRequired":false,
-         "readOnly":false,
-         "hidden":false
-      },
-      {
-         "name":"charToEscapeQuoteEscaping",
-         "title":"Quote escaping escape character",
-         "description":"Enter the desired character to be used for escaping the escaping of a quote character.",
-         "type":"string",
-         "isRequired":false,
-         "readOnly":false,
-         "hidden":false
-      },
-      {
-         "name":"emptyValue",
-         "title":"Empty value string format",
-         "description":"Enter the string representation of an empty value.",
-         "type":"string",
-         "isRequired":false,
-         "readOnly":false,
-         "default":"",
          "hidden":false
       },
       {
@@ -560,9 +446,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
          "isRequired":true,
          "readOnly":false,
          "enum":[
-            "SNAPPY",
             "GZIP",
-            "DEFLATE",
             "NONE"
          ]
       },
@@ -575,61 +459,71 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
          "readOnly":false,
          "hidden":false,
          "enum":[
-            "csv",
             "json",
             "parquet"
          ],
-         "default":"csv"
+         "default":"parquet"
       }
    ],
    "uiAttributes":{
-      "documentationLink":"https://www.adobe.com/go/destinations-amazon-s3-en",
-      "category":"cloudStorage",
-      "connectionType":"S3",
-      "flowRunsSupported":true,
+      "documentationLink":"https://www.adobe.com/go/destinations-marketo-measure-en",
+      "category":"adobeSolutions",
+      "frequency":"Batch",
       "monitoringSupported":true,
-      "frequency":"Batch"
+      "flowRunsSupported":true
+   },
+   "segmentMappingConfig":{
+      "mapExperiencePlatformSegmentName":false,
+      "mapExperiencePlatformSegmentId":false,
+      "mapUserInput":false,
+      "audienceTemplateId":"19c8fc89-9b73-4e0f-893e-549410b23f39"
+   },
+   "aggregation":{
+      "aggregationType":"BEST_EFFORT"
    },
    "destinationDelivery":[
       {
-         "deliveryMatchers":[
-            {
-               "type":"SOURCE",
-               "value":[
-                  "batch"
-               ]
-            }
-         ],
-         "authenticationRule":"CUSTOMER_AUTHENTICATION",
-         "destinationServerId":"{{destinationServerId}}"
+         "authenticationRule":"PLATFORM_AUTHENTICATION",
+         "authenticationId":"2fff57e1-6603-4927-8a9c-147c90839bdb",
+         "destinationServerId":"e59de90a-6df6-471a-bd55-11f7bdb52fae"
       }
    ],
+   "inputSchemaId":"70d0bd4734cc49c98d48c4b162e9a1b7",
    "schemaConfig":{
-      "profileRequired":true,
-      "segmentRequired":true,
-      "identityRequired":true
+      "useCustomerSchemaForAttributeMapping":false,
+      "requiredMappingsOnly":false,
+      "profileRequired":false,
+      "segmentRequired":false,
+      "identityRequired":false
    },
    "batchConfig":{
-      "allowMandatoryFieldSelection":true,
-      "allowDedupeKeyFieldSelection":true,
-      "defaultExportMode":"DAILY_FULL_EXPORT",
-      "allowedExportMode":[
-         "DAILY_FULL_EXPORT",
-         "FIRST_FULL_THEN_INCREMENTAL"
+      "allowMandatoryFieldSelection":false,
+      "autoSelectJoinKeyOnPartnerSchemaSelection":false,
+      "joinKeyTitle":"DEDUPLICATION KEY",
+      "defaultExportMode":"FIRST_FULL_THEN_INCREMENTAL",
+      "allowedExportModes":[
+         
       ],
       "allowedScheduleFrequency":[
-         "DAILY",
-         "EVERY_3_HOURS",
-         "EVERY_6_HOURS",
-         "EVERY_8_HOURS",
-         "EVERY_12_HOURS",
-         "ONCE"
+         
       ],
-      "defaultFrequency":"DAILY",
+      "defaultFrequency":"EVERY_HOUR",
       "defaultStartTime":"00:00",
       "filenameConfig":{
          "allowedFilenameAppendOptions":[
-            "SEGMENT_NAME",
+            
+         ],
+         "defaultFilenameAppendOptions":[
+            
+         ],
+         "defaultFilename":""
+      },
+      "datasetBatchConfig":{
+         "allowedFoldernameAppendOptions":[
+            "DESTINATION",
+            "DATASET_ID",
+            "DATASET_NAME",
+            "EXPORT_TIME",
             "DESTINATION_INSTANCE_ID",
             "DESTINATION_INSTANCE_NAME",
             "ORGANIZATION_NAME",
@@ -637,14 +531,30 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
             "DATETIME",
             "CUSTOM_TEXT"
          ],
-         "defaultFilenameAppendOptions":[
-            "DATETIME"
+         "defaultFoldernameAppendOptions":[
+            "DATASET_ID",
+            "EXPORT_TIME"
          ],
-         "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
+         "allowedExportModes":[
+            "DAILY_FULL_EXPORT",
+            "FIRST_FULL_THEN_INCREMENTAL"
+         ],
+         "allowedScheduleFrequency":[
+            "DAILY",
+            "EVERY_3_HOURS",
+            "EVERY_6_HOURS",
+            "EVERY_12_HOURS",
+            "EVERY_8_HOURS",
+            "ONCE"
+         ]
       },
-      "backfillHistoricalProfileData":true
-   }
-}'
+      "allowDedupKeyFieldSelection":false
+   },
+   "maxProfileAttributes":9000,
+   "maxIdentityAttributes":1000,
+   "destConfigId":"069280b7-40fc-490c-85c4-3bcae17b5441",
+   "backfillHistoricalProfileData":true
+}
 ```
 
 +++
