@@ -284,6 +284,10 @@ You must add the following IP addresses to your allowlist to let traffic flow fo
 
 ## IP addresses to allowlist for sources connection to Experience Platform on [!DNL Amazon Web Services] (AWS) {#aws}
 
-You must add the following IP address to your allowlist in order connect your source to Experience on AWS:
+You must add the following IP address to your allowlist in order connect your source to Experience on AWS:.
 
-- `66.117.18.0/24`
+### VA6
+
+- `34.193.63.59`
+- `44.217.93.240`
+- `44.194.79.229`
