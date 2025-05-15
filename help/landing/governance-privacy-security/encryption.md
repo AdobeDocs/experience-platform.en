@@ -42,14 +42,22 @@ If you want to [use mTLS with Adobe Journey Optimizer custom actions](https://ex
 
 >[!NOTE]
 >
->It is your responsibility to keep the public certificate up-to-date. Please ensure that you regularly review the certificate, particularly as its expiration date approaches. You should bookmark this page in order to maintain the latest copy in your environment.
+>You are responsible for ensuring that your systems use a valid public certificate. Regularly review your certificates, especially as the expiration date approaches. Use the API to retrieve and update certificates before they expire.
 
-If you want to check the CN or SAN to do additional third-party validation, can can download the relevant certificates here:
+Direct download links for public mTLS certificates are no longer provided. Instead, use the [public certificate endpoint](../../data-governance/mtls-api/public-certificate-endpoint.md) to retrieve certificates. This is the only supported method for accessing current public certificates. It ensures that you always receive valid, up-to-date certificates for your integrations.
 
-- [The Adobe Journey Optimizer public certificate](../images/governance-privacy-security/encryption/AJO-public-certificate.pem) 
-- [The Destinations Service public certificate](../images/governance-privacy-security/encryption/destinations-public-cert.pem).
+Integrations that rely on certificate-based encryption must update their workflows to support automated certificate retrieval using the API. Relying on static links or manual updates may result in the use of expired or revoked certificates, leading to failed integrations.
 
-You can also securely retrieve public certificates by making a GET request to the MTLS endpoint. See the [public certificate endpoint documentation](../../data-governance/mtls-api/public-certificate-endpoint.md) for more information. 
+#### Certificate lifecycle automation {#certificate-lifecycle-automation}
+
+Adobe now automates the certificate lifecycle for mTLS integrations to improve reliability and prevent service disruptions. Public certificates are:
+
+- Reissued 60 days before expiration.
+- Revoked 30 days before expiration.
+
+These intervals will continue to shorten in line with [evolving CA/B Forum guidelines](https://www.digicert.com/blog/tls-certificate-lifetimes-will-officially-reduce-to-47-days) which aim to reduce certificate lifetimes to a maximum of 47 days.
+
+If you previously used links on this page to download certificates, update your process to retrieve them exclusively through the API.
 
 ## Data at rest {#at-rest}
 
