@@ -1,9 +1,9 @@
 ---
-title: Create an Adobe Analytics Source Connection in the UI
-description: Learn how to create an Adobe Analytics source connection in the UI to bring consumer data into Adobe Experience Platform.
+title: Ingest Adobe Analytics data into Experience Platform
+description:
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
 ---
-# Create an Adobe Analytics source connection in the UI
+# Ingest Adobe Analytics data into Experience Platform
 
 Read this guide to learn how to use the Adobe Analytics source to ingest your Analytics report suite data into Adobe Experience Platform.
 
@@ -22,7 +22,8 @@ It is important to understand the following key terms used throughout this docum
 * **Standard attribute**: Standard attributes are any attribute that is pre-defined by Adobe. They contain the same meaning for all customers and are available in the [!DNL Analytics] source data and [!DNL Analytics] schema field groups.
 * **Custom attribute**: Custom attributes are any attribute in the custom variable hierarchy in [!DNL Analytics]. Custom attributes are used within an Adobe Analytics implementation to capture specific information into a report suite, and they can differ in their use from report suite to report suite. Custom attributes include eVars, props, and lists. See the following [[!DNL Analytics] documentation on conversion variables](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) for more information on eVars.
 * **Any attribute in Custom field groups**: Attributes that originate from field groups created by customers are all user-defined and are considered to be neither standard nor custom attributes.
-* **Friendly names**: Friendly names are human-provided labels for custom variables in an [!DNL Analytics] implementation. See the following [[!DNL Analytics] documentation on conversion variables](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) for more information on friendly names.
+
+<!-- * **Friendly names**: Friendly names are human-provided labels for custom variables in an [!DNL Analytics] implementation. See the following [[!DNL Analytics] documentation on conversion variables](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) for more information on friendly names. -->
 
 ## Navigate the sources catalog
 
@@ -35,7 +36,7 @@ It is important to understand the following key terms used throughout this docum
 
 In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the the [!UICONTROL Sources] workspace. In the *[Adobe applications]* category, select the Adobe Analytics card and then select **[!UICONTROL Add data]**.
 
-![The sources catalog with the Adobe Analytics source card selected.](../../../../images/tutorials/create/analytics/catalog.png)
+![The sources catalog with the Adobe Analytics source card selected. CHANGE.](../../../../images/tutorials/create/analytics/catalog.png)
 
 ## Select data
 
@@ -44,17 +45,15 @@ In the Experience Platform UI, select **[!UICONTROL Sources]** from the left nav
 >* The report suites listed on the screen may come from various regions. You are responsible for understanding the limitations and obligations of your data and how you use that data in Adobe Experience Platform cross regions. Please ensure this is permitted by your company.
 >* Data from multiple report suites can be enabled for Real-Time Customer Profile only if there are no data conflicts, such as two custom properties (eVars, lists and props) that have different meaning.
 
-Select **[!UICONTROL Report suite]** and then use the *[!UICONTROL Analytics source add data]* interface to navigate through the list and identify the Analytics report suite that you want to ingest to Experience Platform.
-
 A report suite is a container of data that forms the basis of Analytics reporting. An organization can have many report suites, each containing different datasets. 
 
 You can ingest report suites from any region (United States, United Kingdom, or Singapore) as long as they are mapped to the same organization as the Experience Platform sandbox instance in which the source connection is being created in. A report suite can be ingested using only a single active dataflow. If a report suite is grey and cannot be selected, then it has already been ingested, either in the sandbox that you are using or in a different sandbox.
 
 Multiple in-bound connections can be made to bring multiple report suites into the same sandbox. If the report suites have differing schemas for variables (such as eVars or events), they should be mapped to specific fields in the custom field groups and avoid data conflicts using [Data Prep](../../../../../data-prep/ui/mapping.md). Report suites can only be added to a single sandbox.
 
-To create an [!DNL Analytics] source connection, select a report suite and then select **[!UICONTROL Next]** to proceed.
+Select **[!UICONTROL Report suite]** and then use the *[!UICONTROL Analytics source add data]* interface to navigate through the list and identify the Analytics report suite that you want to ingest to Experience Platform. Select **[!UICONTROL Next]** to proceed.
 
-![An analytics report suite is selected for ingestion and the "Next" button is highlighted.](../../../../images/tutorials/create/analytics/add-data.png)
+![An analytics report suite is selected for ingestion and the "Next" button is highlighted.CHANGE](../../../../images/tutorials/create/analytics/add-data.png)
 
 <!---Analytics Report Suites can be configured for one sandbox at a time. To import the same Report Suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
 
