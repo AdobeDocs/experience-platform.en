@@ -36,7 +36,7 @@ It is important to understand the following key terms used throughout this docum
 
 In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the the [!UICONTROL Sources] workspace. In the *[Adobe applications]* category, select the Adobe Analytics card and then select **[!UICONTROL Add data]**.
 
-![The sources catalog with the Adobe Analytics source card selected. CHANGE.](../../../../images/tutorials/create/analytics/catalog.png)
+![The sources catalog with the Adobe Analytics source card selected.](../../../../images/tutorials/create/analytics/catalog.png)
 
 ## Select data
 
@@ -53,7 +53,7 @@ Multiple in-bound connections can be made to bring multiple report suites into t
 
 Select **[!UICONTROL Report suite]** and then use the *[!UICONTROL Analytics source add data]* interface to navigate through the list and identify the Analytics report suite that you want to ingest to Experience Platform. Select **[!UICONTROL Next]** to proceed.
 
-![An analytics report suite is selected for ingestion and the "Next" button is highlighted.CHANGE](../../../../images/tutorials/create/analytics/add-data.png)
+![An analytics report suite is selected for ingestion and the "Next" button is highlighted](../../../../images/tutorials/create/analytics/add-data.png)
 
 <!---Analytics Report Suites can be configured for one sandbox at a time. To import the same Report Suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
 
@@ -81,7 +81,7 @@ With a custom schema, you can choose any available schema for your [!DNL Analyti
 
 >[!ENDTABS]
 
-Use [!UICONTROL Mapping] interface to map source fields to their appropriate target schema fields. From here, you can map custom variables to new schema field groups and apply calculations as supported by Data Prep. Select a target schema to start the mapping process.
+Use the *[!UICONTROL Mapping]* interface to map source fields to their appropriate target schema fields. You can map custom variables to new schema field groups and apply calculations as supported by Data Prep. Select a target schema to start the mapping process.
 
 >[!TIP]
 >
@@ -89,35 +89,23 @@ Use [!UICONTROL Mapping] interface to map source fields to their appropriate tar
 
 ![The target schema selection panel of the Mapping interface.](../../../../images/tutorials/create/analytics/select-schema.png)
 
-Use the [!UICONTROL Map standard fields] panel for metrics on your [!UICONTROL Standard mappings applied]. [!UICONTROL Standard mappings with descriptor name conflicts], and [!DNL Custom mappings].
+You can refer to the [!UICONTROL Map standard fields] panel for metrics on your [!UICONTROL Standard mappings applied]. [!UICONTROL Standard mappings with descriptor name conflicts], and [!DNL Custom mappings].
 
 | Map standard fields | Description |
 | --- | --- |
-| [!UICONTROL Standard mappings applied] | The [!UICONTROL Standard mappings applied] panel displays the total number of mapped attributes. Standard mappings refer to mapping sets between all attributes in the source [!DNL Analytics] data and corresponding attributes in [!DNL Analytics] field group. These are pre-mapped and cannot be edited. |
-| [!UICONTROL Non matching standard mappings] | The [!UICONTROL Non matching standard mappings] panel refers to the number of mapped attributes that contain friendly name conflicts. These conflicts appear when you are re-using a schema that already has a populated set of field descriptors from a different report suite. You can proceed with your [!DNL Analytics] dataflow even with friendly name conflicts. |
-| [!UICONTROL Custom mappings] | The [!UICONTROL Custom mappings] panel displays the number of mapped custom attributes, including eVars, props, and lists. Custom mappings refer to mapping sets between custom attributes in the source [!DNL Analytics] data and attributes in custom field groups included in the selected schema. |
-
-![map-standard-fields](../../../../images/tutorials/create/analytics/map-standard-fields.png)
+| [!UICONTROL Standard mappings applied] | The [!UICONTROL Standard mappings applied] panel displays the total number of mapped attributes. Standard mappings refer to mappings between all attributes in the source Analytics data and corresponding attributes in Analytics field group. These are pre-mapped and cannot be edited. |
+| [!UICONTROL Standard mappings with descriptor name conflicts] | The [!UICONTROL Standard mappings with descriptor name conflicts] panel refers to the number of mapped attributes that contain name conflicts. These conflicts appear when you are re-using a schema that already has a populated set of field descriptors from a different report suite. You can proceed with your Analytics dataflow even with name conflicts. |
+| [!UICONTROL Custom mappings] | The [!UICONTROL Custom mappings] panel displays the number of mapped custom attributes, including eVars, props, and lists. Custom mappings refer to mapping between custom attributes in the source Analytics data and attributes in custom field groups included in the selected schema. |
 
 ### Standard mappings {#standard-mappings}
 
-Experience Platform automatically detects your mapping sets for any friendly name conflicts. If there are no conflicts with your mapping sets, select **[!UICONTROL Next]** to proceed.
+Experience Platform automatically detects your mapping for any name conflicts. If there are no conflicts with your mappings, select **[!UICONTROL Next]** to proceed.
 
-![mapping](../../../../images/tutorials/create/analytics/mapping.png)
-
-
-<!-- To preview the [!DNL Analytics] ExperienceEvent template schema field group, select **[!UICONTROL View]** in the [!UICONTROL Standard mappings applied] panel.
-
-![view](../../../../images/tutorials/create/analytics/view.png)
-
-The [!UICONTROL Adobe Analytics ExperienceEvent Template Schema Field Group] page provides you with an interface to use for inspecting the structure of your schema. When finished, select **[!UICONTROL Close]**.
-
-![field-group-preview](../../../../images/tutorials/create/analytics/field-group-preview.png)
- -->
+![The standard mappings header displaying no name conflicts](../../../../images/tutorials/create/analytics/standard.png)
 
 >[!TIP]
 >
->If there are friendly name conflicts between your source report suite and your selected schema, you can still continue with your [!DNL Analytics] dataflow, acknowledging that the field descriptors will not be changed. Alternatively, you can opt to create a new schema with a blank set of descriptors.
+>If there are name conflicts between your source report suite and your selected schema, you can still continue with your [!DNL Analytics] dataflow, acknowledging that the field descriptors will not be changed. Alternatively, you can opt to create a new schema with a blank set of descriptors.
 
 ## Custom mappings {#custom-mappings}
 
@@ -125,14 +113,13 @@ You can use Data Prep functions to add new custom mappings or calculated fields 
 
 ![The custom mapping tab in the Analytics source workflow.](../../../../images/tutorials/create/analytics/custom.png)
 
-* **[!UICONTROL Add new mapping]**
-* **[!UICONTROL Add calculated field]**
-* **[!UICONTROL Import mapping]**
-* **[!UICONTROL Download template]**
+* **[!UICONTROL Filter fields]**: Use the [!UICONTROL Filter fields] text input to filter for specific mapping fields in your mappings.
+* **[!UICONTROL Add new mapping]**: To add a new source field and target field mapping, select **[!UICONTROL Add new mapping]**.
+* **[!UICONTROL Add calculated field]**: If needed, you can select **[!UICONTROL Add calculated field]** to create a new calculated field for your mappings.
+* **[!UICONTROL Import mapping]**: You can reduce the manual configuration time of your data ingestion process and limit mistakes by using the import mapping functionality of Data Prep. Select **[!UICONTROL Import mapping]** to import mappings from an existing flow or from an exported file. For more information, read [the guide on importing and exporting mappings](../../../../../data-prep/ui/mapping.md#import-mapping).
+* **[!UICONTROL Download template]**: You can also download a CSV copy of your mappings and configure your mappings in your local device. Select **[!UICONTROL Download template]** to download a CSV copy of your mappings. You must ensure that you are using only the fields that are provided in your source file and target schema. 
 
-Depending on your needs, you can select either **[!UICONTROL Add new mapping]** or **[!UICONTROL Add calculated field]** and proceed to create custom mappings for your custom attributes. For comprehensive steps on how to use Data Prep functions, please read the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
-
-The following documentation provides further resources on understanding Data Prep, calculated fields, and mapping functions:
+Refer to the following documentation for more information on Data Prep.
 
 * [Data Prep overview](../../../../../data-prep/home.md)
 * [Data Prep mapping functions](../../../../../data-prep/functions.md)
@@ -203,7 +190,7 @@ Once you have completed mappings for your [!DNL Analytics] report suite data, yo
 >
 >Use row-level filtering to apply conditions and dictate which data to **include for Profile ingestion**. Use column-level filtering to select the columns of data that you want to **exclude for Profile ingestion**.
 
-You can filter data for [!DNL Profile] ingestion at the row-level and the column-level. Row-level filtering allows you to define criteria such as string contains, equals to, begins, or ends with. You can also use row-level filtering to join conditions using `AND` as well as `OR`, and negate conditions using `NOT`. 
+You can filter data for [!DNL Profile] ingestion at the row-level and the column-level. Use row-level filtering to define criteria such as string contains, equals to, begins, or ends with. You can also use row-level filtering to join conditions using `AND` as well as `OR`, and negate conditions using `NOT`. 
 
 To filter your [!DNL Analytics] data at the row-level, select **[!UICONTROL Row filter]**.
 
