@@ -38,6 +38,7 @@ A segment definition will **not** be eligible for streaming segmentation in the 
 - The segment definition includes Adobe Audience Manager (AAM) segments or traits.
 - The segment definition includes multiple entities (multi-entity queries).
 - The segment definition includes a combination of a single event and an `inSegment` event.
+  - For example, chaining the following in a single query: `inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and  CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false))  WHEN(<= 24 hours before now)])`.
 - The segment definition uses "Ignore year" as part of its time constraints.
 
 Please note the following guidelines that apply to streaming segmentation queries:
@@ -57,10 +58,10 @@ In order to combine data from both batch and streaming sources, you'll need to s
 
 For example, let's take the following two sample audiences into account:
 
-| Audience | Source type | Query definition | Audience ID |
-| -------- | ----------- | ---------------- | ----------- |
-| CA Residents | Batch | Home address is in the state of California | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
-| Recent checkouts | Streaming | Has at least one checkout in the the last 24 hours | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
+| Audience | Schema | Source type | Query definition | Audience ID | 
+| -------- | ------ | ----------- | ---------------- | ----------- |
+| CA Residents | Profile | Batch | Home address is in the state of California | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| Recent checkouts | Experience Event | Streaming | Has at least one checkout in the the last 24 hours | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
 
 If you want to use the batch component in your streaming audience, you'll need to make a reference to the batch audience using segment of segments.
 
