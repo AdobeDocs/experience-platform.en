@@ -23,7 +23,7 @@ If none of the above SDKs accommodate your project's needs, you can use the [Ado
 
 ## Data collection process
 
-Instead of installing and implementing separate libraries for each Adobe product, you can implement one of the above SDKs or tag extensions and aggregate that data into a single payload. That payload is sent to a [datastream](/help/datastreams/overview.md) in the Adobe Experience Platform Edge Network.
+Instead of installing and implementing separate individual libraries for each Adobe product, you can implement one of the above SDKs or tag extensions to aggregate all desired data into a single payload. That payload is sent to a [datastream](/help/datastreams/overview.md) in the Adobe Experience Platform Edge Network.
 
 ![Data collection diagram](assets/tags-sdks.png)
 
@@ -31,6 +31,6 @@ The Adobe Experience Platform Edge Network is a globally distributed, fast, and 
 
 ![Adobe solutions diagram](assets/adobe-solutions.png)
 
-You can also use [event forwarding](/help/tags/ui/event-forwarding/overview.md) to transform, enrich, and send data to any non-Adobe destination with low latency and without any client-side implementation code:
+You can also use [event forwarding](/help/tags/ui/event-forwarding/overview.md) to transform, enrich, and send data to any non-Adobe destination with low latency and without any client-side implementation code.
 
 ![Event forwarding diagram](assets/event-forwarding.png)
