@@ -24,7 +24,6 @@ Updates to existing features and documentation in Adobe Experience Platform:
 - [Experience Data Model](#xdm)
 - [Identity Service](#identity)
 - [Query Service](#query-service)
-- [Real-Time Customer Profile](#profile)
 - [Sandboxes](#sandboxes)
 - [Sources](#sources)
 - [Use Case Playbooks](#use-case-playbooks)
@@ -123,18 +122,6 @@ Query data in the Adobe Experience Platform data lake using standard SQL with Qu
 | Save Model Prediction Outputs Using CREATE TABLE and INSERT INTO | [Save selected prediction outputs into new tables using CREATE TABLE AS SELECT or insert into existing tables using INSERT INTO SELECT](../../query-service/advanced-statistics/models.md#predict). If enhanced column selection is enabled, intermediate results such as feature vectors and probabilities can also be persisted alongside final predictions. For usage examples, refer to the [SQL syntax documentation](../../query-service/sql/syntax.md#create-table-as-select). |
 
 For more information on [!DNL Query Service], please see the [[!DNL Query Service] overview](../../query-service/home.md).
-
-## Real-Time Customer Profile {#profile}
-
-Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-Time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. Profile allows you to consolidate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
-
-| Feature | Description |
-| ------- | ----------- |
-| Pseudonymous profile data expiration | Manage your Pseudonymous profile data expiration in the Profile dashboard. To learn more about this feature and Pseudonymous Profiles, please read the [Pseudonymous Profile data expiration guide](../../profile/pseudonymous-profiles.md). |
-
-{style="table-layout:auto"}
-
-To learn more about Real-Time Customer Profile, read the [Profile overview](../../profile/home.md)
 
 ## Sandboxes {#sandboxes}
 
