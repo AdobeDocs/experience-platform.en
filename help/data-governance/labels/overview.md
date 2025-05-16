@@ -51,7 +51,7 @@ You can manage data usage labels using [!DNL Experience Platform] APIs or the us
 
 ### Using the UI
 
-The **[!UICONTROL Policies]** workspace in the [!DNL Experience Platform] UI allows you to view and manage core and custom labels for your organization. You can use the **[!UICONTROL Schemas]** workspace to [apply labels to your Experience Data Model (XDM) schemas](../../xdm/tutorials/labels.md), or learn how to [create and manage custom labels in the **[!UICONTROL Policies] UI](./user-guide.md) by reading the data usage labels user guide instead.
+The **[!UICONTROL Policies]** workspace in the [!DNL Experience Platform] UI allows you to view and manage core and custom labels for your organization. You can use the **[!UICONTROL Schemas]** workspace to [apply labels to your Experience Data Model (XDM) schemas](../../xdm/tutorials/labels.md), or learn how to [create and manage custom labels in the **[!UICONTROL Policies]** UI](./user-guide.md) by reading the data usage labels user guide instead.
 
 >[!IMPORTANT]
 >
