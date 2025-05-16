@@ -98,8 +98,6 @@ As you type in the Query Editor, the editor automatically completes SQL reserved
 
 ![The Query Editor workspace.](../images/ui/overview/query-editor.png)
 
-<!--  -->
-
 ### About the Results tab {#results-tab}
 
 The [!UICONTROL Result] tab displays the tabular output of your query after execution. Use this tab to review results, validate output, and take follow-up actions directly in the interface. From this view, you can:
@@ -117,8 +115,6 @@ Query Editor supports parameterized queries, which allow you to insert variables
 You can define parameters when writing queries, then assign values through the [!UICONTROL Query parameters] tab before running them. Parameterized queries are especially useful for scheduled queries or query templates shared across your organization.
 
 To learn how to define and use parameters, see [Parameterized queries in Query Editor](./parameterized-queries.md).
-
-<!--  -->
 
 ## Scheduled queries {#scheduled-queries}
 
