@@ -26,7 +26,7 @@ You can migrate credentials directly in the Experience Platform UI. To do so, na
 >
 >The migration takes 8 to 10 seconds and cannot be canceled once started.
 
-![The Query Service Credentials workspace with Queries, Credentials, and Migrate highlighted.]()
+![The Query Service Credentials workspace with Queries, Credentials, and Migrate highlighted.](../images/ui/migrate-jwt-to-oauth/migrate.png)
 
 After migration, the system updates the credential to use OAuth Server-to-Server authentication. The JWT-based method is retired automatically, and the status updates to **[!UICONTROL Migrated]**.
 
