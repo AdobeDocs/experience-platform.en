@@ -70,11 +70,11 @@ No. You must migrate each credential individually using the **[!UICONTROL Migrat
 
 ### Can I continue using expiring credentials?
 
-Expiring credentials are not affected by this change. Only non-expiring JWT credentials must be migrated.
+Yes. Expiring credentials are not affected by this change. Only non-expiring JWT credentials must be migrated.
 
 ### I see a message saying "[!UICONTROL No non-expiring credentials found.]" What does that mean? Do I need to take any action?
 
-This message means you haven't created any non-expiring credentials yet, so there's nothing you need to do.
+This message means that you haven't created any non-expiring credentials yet, so there's nothing you need to do.
 
 ### I see a message saying "[!UICONTROL AEP admin verification failed]..." What does that mean? Do I need to take any action?
 
