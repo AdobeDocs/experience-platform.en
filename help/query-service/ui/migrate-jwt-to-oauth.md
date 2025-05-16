@@ -20,25 +20,25 @@ If you see credentials listed under the **[!UICONTROL Non-expiring Credentials]*
 
 ## How to migrate a credential {#how-to-migrate}
 
-You can migrate credentials directly in the Experience Platform UI. To do so, navigate to **[!UICONTROL Queries]** in the left navigation of Adobe Experience Platform, then select the **[!UICONTROL Credentials]** tab. In the **[!UICONTROL Non-expiring Credentials]** section, identify a credential marked as eligible for migration and select **[!UICONTROL Migrate]** next to it.
+You can migrate credentials directly in the Experience Platform UI. To do so, navigate to **[!UICONTROL Queries]** in the left navigation, then select the **[!UICONTROL Credentials]** tab. In the **[!UICONTROL Non-expiring Credentials]** section, identify a credential marked as eligible for migration and select **[!UICONTROL Migrate]** next to it.
 
 >[!NOTE]
 >
->The migration takes 30 to 40 seconds and cannot be canceled once started.
+>The migration takes 8 to 10 seconds and cannot be canceled once started.
 
 ![The Query Service Credentials workspace with Queries, Credentials, and Migrate highlighted.]()
 
-After migration, a new OAuth credential replaces the JWT-based one. The system retires the original JWT credential automatically, and the credential status updates to **[!UICONTROL Migrated]**.
+After migration, the system updates the credential to use OAuth Server-to-Server authentication. The JWT-based method is retired automatically, and the status updates to **[!UICONTROL Migrated]**.
 
-No reconfiguration is required. Existing jobs and integrations using the migrated credential continue to function without interruption.
+No reconfiguration is required. Existing jobs and integrations continue to work without interruption.
 
 ## What happens after migration {#after-migration}
 
-After a successful migration:
+After you complete the migration:
 
-* Query Service automatically uses the new OAuth credential.
-* Scheduled jobs, queries, and API calls that previously relied on the JWT credential continue to run as expected.
-* The old JWT credential is no longer valid.
+* Your credential continues to work seamlessly—no changes are needed in your jobs or integrations.
+* Query Service automatically uses OAuth Server-to-Server authentication.
+* The JWT-based authentication method is retired and no longer used.
 
 >[!IMPORTANT]
 >
