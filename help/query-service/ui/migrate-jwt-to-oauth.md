@@ -36,9 +36,9 @@ No reconfiguration is required. Existing jobs and integrations continue to work 
 
 After you complete the migration:
 
-* Your credential continues to work seamlessly—no changes are needed in your jobs or integrations.
-* Query Service automatically uses OAuth Server-to-Server authentication.
-* The JWT-based authentication method is retired and no longer used.
+- Your credential continues to work seamlessly—no changes are needed in your jobs or integrations.
+- Query Service automatically uses OAuth Server-to-Server authentication.
+- The JWT-based authentication method is retired and no longer used.
 
 >[!IMPORTANT]
 >
@@ -54,7 +54,7 @@ OAuth Server-to-Server is a more secure and standardized authentication method. 
 
 ### What happens if I don't migrate by June 30, 2025?
 
-JWT credentials will stop refreshing. Scheduled jobs and integrations will fail. Adobe cannot migrate credentials on your behalf.
+JWT credentials will stop refreshing, and integrations that rely on them will fail. Adobe cannot migrate credentials on your behalf unless you initiate the process.
 
 ### How do I know if I need to migrate?
 
@@ -71,6 +71,21 @@ No. You must migrate each credential individually using the **[!UICONTROL Migrat
 ### Can I continue using expiring credentials?
 
 Expiring credentials are not affected by this change. Only non-expiring JWT credentials must be migrated.
+
+### I see a message saying "[!UICONTROL No non-expiring credentials found.]" What does that mean? Do I need to take any action?
+
+This message means you haven't created any non-expiring credentials yet, so there's nothing you need to do.
+
+### I see a message saying "[!UICONTROL AEP admin verification failed]..." What does that mean? Do I need to take any action?
+
+This message indicates that you are either not an Admin or don't have the necessary permissions to create non-expiring credentials.
+
+- If your permissions haven't changed recently, it means you never had access to create credentials, so no action is needed.
+- If your permissions were changed recently, contact your organization Admin and ask them to migrate the credentials for you.
+
+### Can I migrate non-expiring credentials for someone else?
+
+Yes, but only if you're an Admin. Only Admins have the permissions needed to create and migrate non-expiring credentials for other users, so they can continue working without disruption.
 
 ## Next steps {#next-steps}
 
