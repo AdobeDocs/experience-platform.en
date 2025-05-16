@@ -10,7 +10,7 @@ exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 
 >[!IMPORTANT]
 >
->* Starting May 20th, 2025, you can see two [!DNL Facebook Custom Audience] cards side-by-side in the destinations catalog. This is due to an internal upgrade to the destinations service. The existing [!DNL Facebook Custom Audience] destination connector has been renamed to **[!UICONTROL (Deprecated) Facebook Custom Audience]** and a new card with the name **[!UICONTROL Facebook Custom Audience]** is now available to you. 
+>* Starting May 20th, 2025, you can see two [!DNL Facebook Custom Audience] cards side-by-side in the destinations catalog. This is due to an internal upgrade to the destinations service and to support new fields for improved targeting and matching with profiles on Facebook properties. Read more about the new address-related fields in the [supported identities](#supported-identities) section. The existing [!DNL Facebook Custom Audience] destination connector has been renamed to **[!UICONTROL (Deprecated) Facebook Custom Audience]** and a new card with the name **[!UICONTROL Facebook Custom Audience]** is now available to you. 
 >* Use the **[!UICONTROL Facebook Custom Audience]** connection in the catalog for new activation data flows. If you have any active dataflows to the **[!UICONTROL (Deprecated) Facebook Custom Audience]** destination, they will be updated automatically, so no action is required from you.
 >* If you are creating dataflows through the [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/), you must update your [!DNL flow spec ID] and [!DNL connection spec ID] to the following values:
 >   * Flow spec ID: `bb181d00-58d7-41ba-9c15-9689fdc831d3`
