@@ -22,7 +22,7 @@ Learn how to export arrays, maps, and objects from Real-Time CDP to [cloud stora
 | Existing custom partner-built cloud storage destinations (custom file-based destinations built via Destination SDK) | No |
 | Enterprise destinations (Amazon Kinesis, Azure Event Hubs, HTTP API) | Partially. You can select and export map-type objects in the mapping step of the activation workflow. |
 | Streaming destinations (for example: Facebook, Braze, Google Customer Match, and more) | No |
-| Edge personalization destinations (Adobe Target) | Partially. You can select and export map-type objects in the mapping step of the activation workflow. |
+| Edge personalization destinations | No |
 
 {style="table-layout:auto"}
 
