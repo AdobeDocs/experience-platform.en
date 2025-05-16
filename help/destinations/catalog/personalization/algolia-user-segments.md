@@ -10,7 +10,7 @@ description: Use this connector to activate audiences to Algolia for personaliza
 
 ## Overview {#overview}
 
-Use the [!DNL Algolia User Segments] connector to send Adobe Experience Platform audiences to Algolia to personalize search and recommendations. This requires the use of the Algolia User Profiles source connector to pull user profiles from Algolia to help build rich audiences.
+Use the [!DNL Algolia User Segments] connector to send Adobe Experience Platform audiences to Algolia to personalize search and recommendations. This requires the use of the [!DNL Algolia User Profiles] source connector to pull user profiles from Algolia to help build rich audiences.
 
 This tutorial provides steps to create an [!DNL Algolia User Segments] destination connection and dataflow using the Adobe Experience Platform user interface. This connector is used to deliver audiences and user ids to Algolia.
 
@@ -18,19 +18,19 @@ This tutorial provides steps to create an [!DNL Algolia User Segments] destinati
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the [!DNL Acxiom Data Enhancement] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL Algolia User Segments] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
-### Enhance Customer data {#enhance-customer-data}
+### Personalization Consistency {#personalization-consistency}
 
-This connector should be used by marketing professionals aiming to enhance the effectiveness of their outreach strategies by appending selected descriptive elements to their customer profiles and use these to better target campaigns.
+This connector should be used by marketing professionals aiming to deliver a consistent personalization across the site from home page to search.  
 
-For example, as a marketer, you might want to deepen your understanding of your existing audiences by enriching their profiles with additional data. Doing so will improve your segmentation and targeting strategies, leading to a boost in campaign personalization and conversion.
+For example, as a marketer, you might want to build rich audiences from multiple user data source include Algolia that can be share with variaus channels to targeting strategies, leading to a boost in campaign personalization and conversion.
 
 The use case is executed through a combination of both destination and source connectors.
 
-You would start by exporting your existing customer records for enrichment using this destination connector. Acxiom's service would search for the file, retrieve it, enrich it with Acxiom's data and generate a file. 
+You would start by importing your existing [!DNL Algolia] user profiles into Adobe Experience Platform Real-time CDP and other sources to start the creation of rich audiences source connector. Marketer would create audience using the profile data that can be sent to Algolia for search and recommendation personalization.
 
-The customer would then use the corresponding [Acxiom Data Ingestion](/help/sources/connectors/data-partners/acxiom-data-ingestion.md) source card to ingest the hydrated customer profiles back into Adobe Real-Time CDP.
+The customer would then use the corresponding [Algolia User Profiles](/help/sources/connectors/data-partners/algolia-user-profiles.md) source to ingest and augment customer profiles back into Adobe Real-Time CDP.
 
 ## Prerequisites {#prerequisites}
 
@@ -54,10 +54,10 @@ This section describes which type of audiences you can export to this destinatio
 
 Refer to the table below for information about the destination export type and frequency.
 
-| Item             | Type                           | Notes                                                                                                                                                                                                                                                                                                                  |
-|------------------|--------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Export type      | **[!UICONTROL Profile-based]** | You are exporting all members of a segment only inluding the user token [destination activation workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| Export frequency | **[!UICONTROL Batch]**         | Batch destinations export files to downstream platforms in increments of three, six, eight, twelve, or twenty-four hours. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).                                                                                         |
+| Item | Type | Notes |
+|---------|----------|---------|
+| Export type | **[!DNL Profile request]** | You are requesting all the audiences that are mapped in the Algolia User Segments destination for a single profile.|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
 
@@ -73,108 +73,76 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-In order to access your bucket on Experience Platform, you need to provide valid values for the following credentials:
-
-| Credential    | Description                                                                                              |
-|---------------|----------------------------------------------------------------------------------------------------------|
-| S3 Access key | The access key ID for your bucket. You can retrieve this value from the [!DNL Acxiom] team.              |
-| S3 Secret key | The secret key ID for your bucket. You can retrieve this value from the [!DNL Acxiom] team.              |
-| Bucket name   | This is your bucket where files will be shared. You can retrieve this value from the [!DNL Acxiom] team. |
-
 ### New Account
 
-To define a new Acxiom Managed S3 location: 
+| Credential | Description |
+| --- | --- |
+| Application ID | The [!DNL Algolia] application ID is a unique identifier assigned to your [!DNL Algolia] account.   |
+| API Key | The [!DNL Algolia] API Key is a credential used to authenticate and authorize API requests to [!DNL Algolia]'s search and indexing services. |
 
-![New Account](../../assets/catalog/data-partner/acxiom/image-destination-new-account.png)
+For more information on these credentials, see the [!DNL Algolia] [authentication documentation](https://www.algolia.com/doc/tools/cli/get-started/authentication/).
+
+![New Account](../../assets/catalog/personalization/algolia-user-segments/connection.png)
+
+After connection to destinatino is successful, enter the below information to complete the Account creation.
+
+| Credential | Description |
+| --- | --- |
+| Name | Fill in the preferred name for this destination. |
+| Description | Short explanation of the destination's purpose. |
+| Region | The options are **US** or **EU**.  Select the region where the customers data is stored |
+
+
+![Existing Account](../../assets/catalog/personalization/algolia-user-segments/account.png)
 
 ### Existing Account
 
-Accounts already defined using the [!DNL Acxiom Data Enhancement] destination appear in a list pop-up. When selected, you can see details on the account in the right rail. View the example from the UI, when you navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**;
+Accounts already defined using the [!DNL Algolia User Segments] destination appear in a list pop-up. When selected, you can see details on the account in the right rail. View the example from the UI, when you navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**;
 
-![Existing Account](../../assets/catalog/data-partner/acxiom/image-destination-enhancement-account.png)
+![Existing Account](../../assets/catalog/personalization/algolia-user-segments/existing-account.png)
 
-### Fill in destination details {#destination-details}
-
-To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
-
-![Destination Detail](../../assets/catalog/data-partner/acxiom/image-destination-details.png)
-
-* **Name (Required)** - The name the destination will be saved under
-* **Description** -  Short explanation of the destination's purpose
-* **Bucket Name (Required)** - Name of the Amazon S3 bucket set up on S3
-* **Folder Path (Required)** - If subdirectories in a bucket are used a path must be defined, or '/' to reference the root path.
-* **File Type** - Select the format Experience Platform should use for the exported files. Currently, the only file type Acxiom processing will be expecting is CSV
-
->[!IMPORTANT]
->
->When selecting the CSV option, *Delimiter*, *Quote Character*, *Escape Character*, *Empty Value*, *Null Value*, *Compression format*, and *Include manifest file* options will be presented, the following document explains these settings in more detail [configure the formatting options](../../ui/batch-destinations-file-formatting-options.md).
-
-![CSV Options](../../assets/catalog/data-partner/acxiom/image-destination-csv-options.png)
-
-### Enable alerts {#enable-alerts}
+#### Enable alerts {#enable-alerts}
 
 You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
+### Data usage and governance {#governance}
+
+All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
+
+![Goverance](../../assets/catalog/personalization/algolia-user-segments/governance.png)
+
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
->
->* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
->* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
+> 
+>To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-Read [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md) for instructions on activating audiences to this destination.
+Read [Activate audiences to edge personalization destinations](../../ui/activate-edge-personalization-destinations.md) for instructions on activating audiences to this destination.
+
+![Activate](../../assets/catalog/personalization/algolia-user-segments/audiences.png)
 
 ### Mapping suggestions
 
-The correct processing of files on the Acxiom side requires name and address elements. While not all elements are required, providing as much as possible will aid in successful matching.
-
-Mapping suggestions are provided in the table below listing attributes on your destination side that are used by Acxiom processing that customers can map profile attributes to. Treat these elements as suggestions as not all elements are required and the source values will depend on the needs of the account.
+Mapping suggestions are provided in the table below listing attributes on your destination side that are used by Algolia.
 
 | Target Field | Source Description                                          |
 |--------------|-------------------------------------------------------------|
-| name         | The `person.name.fullName` value in Experience Platform.      |
-| firstName    | The `person.name.firstName` value in Experience Platform.     |
-| lastName     | The `person.name.lastName` value in Experience Platform.      |
-| address1     | The `mailingAddress.street1` value in Experience Platform.    |
-| address2     | The `mailingAddress.street2` value in Experience Platform.    |
-| city         | The `mailingAddress.city` value in Experience Platform.       |
-| state        | The `mailingAddress.state` value in Experience Platform.      |
-| zip          | The `mailingAddress.postalCode` value in Experience Platform. |
+| userId         | The `IdentityMap: AlgoliaUserToken` value in Experience Platform.   |
+
+![Mapping complete](../../assets/catalog/personalization/algolia-user-segments/mapping-complete.png)
 
 >[!NOTE]
 >
->If you map additional fields not listed above in the dataflow, these will be included in the data export, but will be ignored by Acxiom processing.
+>It is preferred to use the [!DNL Algolia User Token] identity as the source field.  If this has not been done, then you can select `userToken` in the Algolia Profile Details JSON structure. 
 
 ## Validate data export {#exported-data}
 
-To verify if data has been exported successfully, check your [!DNL Amazon S3 Storage] bucket and make sure that the exported files contain the expected profile populations.
+To verify if audiences have been exported to the user profiles successfully, check your [!DNL Algolia] dashboard and navigate to **[!UICONTROL Advanced Personalization]** and click on **[!UICONTROL User Inspector]**.  Find a user profile associated to the exported Adobe Experience Platform audience and search for it in the User Inspector.  You will see the audience id in the segment section.
+
+![Algolia User Inspector](../../assets/catalog/personalization/algolia-user-segments/verify-segment-user-profile.png)
 
 ## Next steps
 
-By following this tutorial, you have successfully created a dataflow to export profile data from Experience Platform to your [!DNL Acxiom] managed S3 location. Next, you need to contact your Acxiom representative with the name of the account, file names, and the bucket path so that processing can set up.
-
-## Data usage and governance {#data-usage-governance}
-
-All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).
-
-## Additional resources {#additional-resources}
-
-*Acxiom Infobase:* https://www.acxiom.com/wp-content/uploads/2022/02/fs-acxiom-infobase_AC-0268-22.pdf
-
-
-
-
-![Adobe Target v2 extension](../../assets/catalog/personalization/algolia-user-segments/catalog.png)
-![Adobe Target v2 extension](../../assets/catalog/personalization/algolia-user-segments/connection.png)
-![Adobe Target v2 extension](../../assets/catalog/personalization/algolia-user-segments/account.png)
-![Adobe Target v2 extension](../../assets/catalog/personalization/algolia-user-segments/governance.png)
-![Adobe Target v2 extension](../../assets/catalog/personalization/algolia-user-segments/audiences.png)
-![Adobe Target v2 extension](../../assets/catalog/personalization/algolia-user-segments/mapping.png)
-![Adobe Target v2 extension](../../assets/catalog/personalization/algolia-user-segments/mapping-source-field.png)
-![Adobe Target v2 extension](../../assets/catalog/personalization/algolia-user-segments/mapping-target-field.png)
-![Adobe Target v2 extension](../../assets/catalog/personalization/algolia-user-segments/mapping-complete.png)
-![Adobe Target v2 extension](../../assets/catalog/personalization/algolia-user-segments/review.png)
-![Adobe Target v2 extension](../../assets/catalog/personalization/algolia-user-segments/complete.png)
-![Adobe Target v2 extension](../../assets/catalog/personalization/algolia-user-segments/destinations.png)
+By following this tutorial, you have successfully created a dataflow to export audiences from Experience Platform to your [!DNL Algolia] application.
