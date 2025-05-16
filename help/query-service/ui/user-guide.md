@@ -290,8 +290,6 @@ Unlike the enhanced table, which uses structured row selection and dedicated cop
 
 ![The display of results in the legacy editor with simple drag-to-select results highlighted.](../images/ui/query-editor/legacy-results-table.png)
 
-<!-- probably update the image for better resolution -->
-
 <!-- This version of the results table is available by request and is primarily intended for users with manual data processing workflows or QA needs that depend on flexible selection patterns. -->
 
 ## Examples {#examples}
