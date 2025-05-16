@@ -408,14 +408,16 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '
 {
-   "name":"Amazon S3 destination with custom file formatting options and custom file name configuration",
-   "description":"Amazon S3 destination with custom file formatting options and custom file name configuration",
+   "name":"Amazon S3 destination with dataset export capability",
+   "description":"Amazon S3 destination with dataset export capability",
    "status":"TEST",
    "sources":[
       "DATASETS"
    ],
    "customerAuthenticationConfigurations":[
-      
+      {
+         "authType":"S3"
+      }
    ],
    "customerDataFields":[
       {
@@ -466,8 +468,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       }
    ],
    "uiAttributes":{
-      "documentationLink":"https://www.adobe.com/go/destinations-marketo-measure-en",
-      "category":"adobeSolutions",
+      "documentationLink":"https://www.adobe.com/go/destinations-dataset-export-en",
+      "category":"cloudStorage",
       "frequency":"Batch",
       "monitoringSupported":true,
       "flowRunsSupported":true
