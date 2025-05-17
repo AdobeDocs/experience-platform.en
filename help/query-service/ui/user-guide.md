@@ -282,17 +282,15 @@ Alternatively, select **[!UICONTROL View results]** to open the full-screen prev
 
 >[!AVAILABILITY]
 >
->The legacy results table is currently only available to select users through a feature flag and may not be present in your current Query Editor experience. Contact your Adobe representative if your team relies on drag-to-select workflows and would benefit from legacy behavior.
+>The legacy results table is only available to select users through a feature flag and may not appear in your current Query Editor experience. If your team relies on drag-to-select workflows, contact your Adobe representative to request access.
 
-If your team relies on drag-to-select copying, contact your Adobe representative to request access to the legacy results table.
+The legacy version of the Query Editor is intended for users who rely on flexible, manual data workflows such as QA or spreadsheet-based review. 
 
-The legacy version of the Query Editor results table supports native browser-based drag selection for copying query output directly from the results grid.
+It supports native browser-based drag selection, so you can highlight and copy any portion of the output—including individual cells or blocks—using standard selection behavior. This contrasts with the enhanced table, which uses structured row selection and dedicated copy actions.
 
-Unlike the enhanced table, which uses structured row selection and dedicated copy actions, the legacy results table allows you to highlight and copy any portion of the output—including individual cells or blocks—using standard browser behavior. Copied data is tab-delimited, preserving cell alignment when pasted into spreadsheet tools like Excel. Column headers are also included when drag-selecting across the header row.
+Copied data is tab-delimited, so when you paste it into tools like Excel, the columns stay aligned and readable. Column headers are also included when drag-selecting across the header row.
 
 ![The display of results in the legacy editor with simple drag-to-select results highlighted.](../images/ui/query-editor/legacy-results-table.png)
-
-<!-- This version of the results table is available by request and is primarily intended for users with manual data processing workflows or QA needs that depend on flexible selection patterns. -->
 
 ## Examples {#examples}
 
