@@ -11,7 +11,7 @@ Experience Platform offers licenses that establish the number of profiles that y
 
 Read this guide for best practices to follow and tools you can use to better manage your license entitlements with AExperience Platform.
 
-## Feature summary and availability {#feature-summary}
+## Summary of features {#summary-of-features}
 
 Use the best practices and tools outlined in this document to better manage your license entitlement usage within Experience Platform. This document is updated as additional features are released to help provide visibility and control to all Experience Platform customers.
 
@@ -21,12 +21,14 @@ The following table outlines the list of currently available features at your di
 | --- | --- |
 | [Enable/Disable Datasets for Profile](../../catalog/datasets/user-guide.md) | Enable or disable dataset ingestion into Real-Time Customer Profile. |
 | [Experience Event expirations](../../profile/event-expirations.md) | Apply an expiration time for all events ingested into a Profile-enabled dataset. Please contact your Adobe account team or Customer Care to enable this feature. |
-| [Adobe Analytics Data Prep filters](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) | Apply [!DNL Kafka] filters to exclude unnecessary data from ingestion |
-| [Adobe Audience Manager source connector filters](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Apply Audience Manager source connection filters to exclude unnecessary data from ingestion |
+| [Adobe Analytics Data Prep filters](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) | Apply [!DNL Kafka] filters to exclude unnecessary data from ingestion. |
+| [Adobe Audience Manager source connector filters](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Apply Audience Manager source connection filters to exclude unnecessary data from ingestion. |
 | [Event forwarding data filters](../../tags/ui/event-forwarding/overview.md) | Apply server-side [!DNL Kafka] filters to exclude unnecessary data from ingestion.  See the documentation on [tag rules](../../tags/ui/managing-resources/rules.md) for additional information. |
-| [License Usage Dashboard UI](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | View a snapshot of your organization's license-related data for Experience Platform |
-| [Dataset Overlap Report API](../../profile/tutorials/dataset-overlap-report.md) | Outputs the datasets that contributes the most to your Addressable Audience |
-| [Identity Overlap Report API](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) | Outputs the identity namespaces that contribute the most to your Addressable Audience |
+| [License Usage Dashboard UI](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | View a snapshot of your organization's license-related data for Experience Platform. |
+| [Dataset Overlap Report API](../../profile/tutorials/dataset-overlap-report.md) | Outputs the datasets that contributes the most to your Addressable Audience. |
+| [Identity Overlap Report API](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) | Outputs the identity namespaces that contribute the most to your Addressable Audience. |
+| [Pseudonymous Profile data expirations](../../profile/pseudonymous-profiles.md) | Configure data expiration times for Pseudonymous profiles and automatically remove data from the Profile store. 
+| [Experience Event data retention](../../catalog/datasets/user-guide.md#data-retention-policy) | Configure a fixed retention period for data in data lake and Profile store. Records are deleted as the configured retention period ends. |
 
 {style="table-layout:auto"}
 
@@ -136,7 +138,7 @@ The Profile store is composed of the following components:
 
 {style="table-layout:auto"}
 
-#### Profile store Composition Reports
+### Profile store Composition Reports
 
 There are a number of reports available to help you understand the composition of the Profile store. These reports help you make informed decisions about how and where to set your Experience Event expirations to better optimize your license usage:
 
@@ -145,11 +147,15 @@ There are a number of reports available to help you understand the composition o
 <!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
 
-#### Pseudonymous Profile data expirations {#pseudonymous-profile-expirations}
+### Pseudonymous Profile data expirations {#pseudonymous-profile-expirations}
 
 Use the Pseudonymous profiles data expiration capability to automatically remove data from that is no longer valid or useful for your use cases from the Profile store. For more information on this feature, please read the [Pseudonymous Profile data expiration overview](../../profile/pseudonymous-profiles.md).
 
-#### Experience Event expirations {#event-expirations}
+### Data retention {#data-retention}
+
+Configure dataset expiration and retention settings to enforce a fixed retention period for your data in data lake and Profile store. Once the retention period ends, data is deleted. For more information, read the guide on [setting data retention policy](../../catalog/datasets/user-guide.md#data-retention-policy).
+
+### Experience Event expirations {#event-expirations}
 
 This capability allows you to automatically remove behavioral data from a Profile-enabled dataset that is no longer valuable for your use cases. See the overview on [Experience Event expirations](../../profile/event-expirations.md) for details on how this process works once it is enabled for a dataset.
 
