@@ -1,6 +1,7 @@
 ---
 title: MySQL Source Connector Overview
 description: Learn how to connect MySQL to Adobe Experience Platform using APIs or the user interface.
+last-substantial-update: 2025-05-17
 exl-id: a18e8e69-880f-4bee-b339-726091d6f858
 ---
 # [!DNL MySQL]
