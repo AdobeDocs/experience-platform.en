@@ -199,7 +199,7 @@ For more information, read the [Privacy service overview](../../privacy-service/
 
 ### Edge segmentation and Edge Network applications
 
-In the context of [!DNL Identity Graph Linking Rules],there are two main behavioral changes to take note of regarding Edge segmentation and Edge Network applications:
+In the context of [!DNL Identity Graph Linking Rules], there are two main behavioral changes to take note of regarding Edge segmentation and Edge Network applications:
 
 1. The `identityMap` must contain a person namespace that has been marked as unique. Fields marked as an identity (identity descriptors) are not supported.
 2. The person namespace must have the `primary = true` configuration when an end-user is browsing while authenticated.
