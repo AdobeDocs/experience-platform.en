@@ -9,6 +9,8 @@ exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
 >
 >Streaming sources, such as the [HTTP API source](../../sources/connectors/streaming/http.md) are not currently supported by the monitoring dashboard. At this moment, you can only use the dashboard to monitor batch sources.
 
+You can use the monitoring dashboard in the Adobe Experience Platform user interface to retrieve metrics around your data ingestion processes. Use the graphs in the interface to monitor ingestion trends over time and summarize performance across all of your sources dataflows.
+
 Read this document to learn how to use the monitoring dashboard to monitor data ingestion to data lake in the Experience Platform UI.
 
 ## Get started {#get-started}
