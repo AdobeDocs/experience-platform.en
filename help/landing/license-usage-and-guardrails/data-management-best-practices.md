@@ -27,7 +27,7 @@ The following table outlines the list of currently available features at your di
 | [License Usage Dashboard UI](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | View a snapshot of your organization's license-related data for Experience Platform. |
 | [Dataset Overlap Report API](../../profile/tutorials/dataset-overlap-report.md) | Outputs the datasets that contributes the most to your Addressable Audience. |
 | [Identity Overlap Report API](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) | Outputs the identity namespaces that contribute the most to your Addressable Audience. |
-| [Pseudonymous Profile data expirations](../../profile/pseudonymous-profiles.md) | Configure data expiration times for Pseudonymous profiles and automatically remove data from the Profile store. 
+| [Pseudonymous Profile data expirations](../../profile/pseudonymous-profiles.md) | Configure data expiration times for Pseudonymous profiles and automatically remove data from the Profile store. |
 | [Experience Event data retention](../../catalog/datasets/user-guide.md#data-retention-policy) | Configure a fixed retention period for data in data lake and Profile store. Records are deleted as the configured retention period ends. |
 
 {style="table-layout:auto"}
