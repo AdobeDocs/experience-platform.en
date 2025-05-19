@@ -26,7 +26,7 @@ There are two types of Shadow DOM:
 * **Open Shadow DOM:** The internal structure is accessible to JavaScript running on the page. This means other scripts can interact with or inspect the contents of the component.
 * **Closed Shadow DOM:** The internal structure is hidden from JavaScript outside the component, making it inaccessible for tracking or manipulation.
 
-The Web SDK automatically tracks clicks on `<a>` and `<area>` elements inside **open Shadow DOMs**, just as it does for links in the main document. This ensures that link clicks within web components using open [!DNL Shadow DOM] are included in your analytics data. Clicks inside **closed Shadow DOMs** are not tracked, as their contents are not accessible.
+The Web SDK automatically tracks clicks on `<a>` and `<area>` elements inside **open Shadow DOMs**, just as it does for links in the main document. This ensures that link clicks within web components using open [!DNL Shadow DOM] are included in your analytics data. Clicks inside **closed Shadow DOMs** are not tracked, as their internal structure is hidden from JavaScript code operating outside the component.
 
 ## Automatic link tracking logic
 
