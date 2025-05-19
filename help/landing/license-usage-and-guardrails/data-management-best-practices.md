@@ -19,8 +19,9 @@ The following table outlines the list of currently available features at your di
 
 | Feature | Description |
 | --- | --- |
+| [Dataset UI - Experience Event data retention](../../catalog/datasets/user-guide.md#data-retention-policy) | Configure a fixed retention period for data in data lake and Profile store. Records are deleted as the configured retention period ends. |
 | [Enable/Disable Datasets for Profile](../../catalog/datasets/user-guide.md) | Enable or disable dataset ingestion into Real-Time Customer Profile. |
-| [Experience Event expirations](../../profile/event-expirations.md) | Apply an expiration time for all events ingested into a Profile-enabled dataset. Please contact your Adobe account team or Customer Care to enable this feature. |
+| [Experience Event expirations in Profile store](../../profile/event-expirations.md) | Apply an expiration time for all events ingested into a Profile-enabled dataset. Please contact your Adobe account team or Customer Care to enable this feature. |
 | [Adobe Analytics Data Prep filters](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) | Apply [!DNL Kafka] filters to exclude unnecessary data from ingestion. |
 | [Adobe Audience Manager source connector filters](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Apply Audience Manager source connection filters to exclude unnecessary data from ingestion. |
 | [Event forwarding data filters](../../tags/ui/event-forwarding/overview.md) | Apply server-side [!DNL Kafka] filters to exclude unnecessary data from ingestion.  See the documentation on [tag rules](../../tags/ui/managing-resources/rules.md) for additional information. |
@@ -28,7 +29,6 @@ The following table outlines the list of currently available features at your di
 | [Dataset Overlap Report API](../../profile/tutorials/dataset-overlap-report.md) | Outputs the datasets that contributes the most to your Addressable Audience. |
 | [Identity Overlap Report API](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) | Outputs the identity namespaces that contribute the most to your Addressable Audience. |
 | [Pseudonymous Profile data expirations](../../profile/pseudonymous-profiles.md) | Configure data expiration times for Pseudonymous profiles and automatically remove data from the Profile store. |
-| [Experience Event data retention](../../catalog/datasets/user-guide.md#data-retention-policy) | Configure a fixed retention period for data in data lake and Profile store. Records are deleted as the configured retention period ends. |
 
 {style="table-layout:auto"}
 
@@ -149,15 +149,15 @@ There are a number of reports available to help you understand the composition o
 
 ### Pseudonymous Profile data expirations {#pseudonymous-profile-expirations}
 
-Use the Pseudonymous profiles data expiration capability to automatically remove data from that is no longer valid or useful for your use cases from the Profile store. For more information on this feature, please read the [Pseudonymous Profile data expiration overview](../../profile/pseudonymous-profiles.md).
+Use the Pseudonymous profiles data expiration capability to automatically remove data from that is no longer valid or useful for your use cases from the Profile store. Pseudonymous Profile data expiration removes both event and profile records. As a result, this setting will reduce Addressable Audience volumes. For more information on this feature, please read the [Pseudonymous Profile data expiration overview](../../profile/pseudonymous-profiles.md).
 
-### Data retention {#data-retention}
+### Dataset UI - Experience Event Dataset retention {#data-retention}
 
-Configure dataset expiration and retention settings to enforce a fixed retention period for your data in data lake and Profile store. Once the retention period ends, data is deleted. For more information, read the guide on [setting data retention policy](../../catalog/datasets/user-guide.md#data-retention-policy).
+Configure dataset expiration and retention settings to enforce a fixed retention period for your data in data lake and Profile store. Once the retention period ends, data is deleted. Experience Event data expiration only removes events and does not remove profile class data, which will reduce Total Data Volume in license usage metrics. For more information, read the guide on [setting data retention policy](../../catalog/datasets/user-guide.md#data-retention-policy).
 
-### Experience Event expirations {#event-expirations}
+### Profile Experience Event expirations {#event-expirations}
 
-This capability allows you to automatically remove behavioral data from a Profile-enabled dataset that is no longer valuable for your use cases. See the overview on [Experience Event expirations](../../profile/event-expirations.md) for details on how this process works once it is enabled for a dataset.
+Configure expiration times to automatically remove behavioral data from your Profile-enabled dataset once they are no longer valuable for your use cases.Read the overview on [Experience Event expirations](../../profile/event-expirations.md) for more information.
 
 ## Summary of best practices for license usage compliancy {#best-practices}
 
@@ -166,5 +166,5 @@ The following is a list of some recommended best practices that you can follow t
 * Use the [license usage dashboard](../../dashboards/guides/license-usage.md) to track and monitor customer usage trends. This allows you to get ahead of any potential overages that may incur.
 * Configure [ingestion filters](#ingestion-filters) by identifying the events required for your segmentation and personalization use cases. This allows you to send only important events required for your use cases.
 * Ensure that you have only [enabled datasets for profile](#ingestion-filters) that are required for your segmentation and personalization use cases. 
-* Configure [Experience Event expirations](#event-expirations) and [Pseudonymous Profile data expirations](#pseudonymous-profile-expirations) for high-frequency data like web data.
+* Configure [Experience Event expirations](../../catalog/datasets/user-guide.md#data-retention-policy) and [Pseudonymous Profile data expirations](../../profile/pseudonymous-profiles.md) for high-frequency data like web data.
 * Periodically check the [Profile Composition Reports](#profile-store-composition-reports) to understand your Profile store composition. This allows you to understand the data sources contributing most to your license usage consumption.
