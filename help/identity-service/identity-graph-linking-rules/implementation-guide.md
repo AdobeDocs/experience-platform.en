@@ -107,7 +107,7 @@ During your pre-implementation process, you must ensure that the authenticated e
 
 If your system sends two person identifiers, the implementation may fail the single-person namespace requirement. For example, if the identityMap in your webSDK implementation contains a CRMID, a customerID, and an ECID namespace, then there is no guarantee that every single event will contain both CRMID and customerID.
 
-Ideally, you should send a payload similar to the following:
+You should **not** send a payload like below:
 
 ```json
 {
@@ -154,6 +154,8 @@ In graph simulation, this ingestion may look like:
 ![The graph simulation UI with an example graph rendered.](../images/implementation/example-graph.png)
 
 >[!TAB Authenticated events without any person identifiers]
+
+In this example, you can assume that the following event was sent to Experience Platform while John (the end-user) was browsing your website while authenticated. However, despite being authenticated, Experience Platform is unable to identify John due to the lack of person identifiers in the event. Therefore, this event gets interpreted as an anonymous user browsing the Adobe Business website, instead of recognizing it as an online activity associated specifically to John.
 
 ```json
 {

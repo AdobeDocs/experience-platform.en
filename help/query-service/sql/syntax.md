@@ -104,17 +104,21 @@ SELECT * FROM table_to_be_queried SNAPSHOT AS OF end_snapshot_id;
 
 SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN start_snapshot_id AND end_snapshot_id;
 
-SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN HEAD AND start_snapshot_id;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN 'HEAD' AND start_snapshot_id;
 
-SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN end_snapshot_id AND TAIL;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN end_snapshot_id AND 'TAIL';
 
-SELECT * FROM (SELECT id FROM table_to_be_queried BETWEEN start_snapshot_id AND end_snapshot_id) C 
+SELECT * FROM (SELECT id FROM table_to_be_queried SNAPSHOT BETWEEN start_snapshot_id AND end_snapshot_id) C;
 
 (SELECT * FROM table_to_be_queried SNAPSHOT SINCE start_snapshot_id) a
   INNER JOIN 
 (SELECT * from table_to_be_joined SNAPSHOT AS OF your_chosen_snapshot_id) b 
   ON a.id = b.id;
 ```
+
+>[!NOTE]
+>
+>When using `HEAD` or `TAIL` in a `SNAPSHOT` clause, you must wrap them in single quotes (for example, 'HEAD', 'TAIL'). Using them without quotes results in a syntax error.
 
 The table below explains the meaning of each syntax option within the SNAPSHOT clause.
 
@@ -124,7 +128,7 @@ The table below explains the meaning of each syntax option within the SNAPSHOT c
 | `AS OF end_snapshot_id`                                  | Reads data as it was at the specified snapshot ID (inclusive).                                       |
 | `BETWEEN start_snapshot_id AND end_snapshot_id`          | Reads data between the specified start and end snapshot IDs. It is exclusive of the `start_snapshot_id` and inclusive of the `end_snapshot_id`.                 |
 | `BETWEEN HEAD AND start_snapshot_id`                     | Reads data from the beginning (before the first snapshot) to the specified start snapshot ID (inclusive). Note, this only returns rows in `start_snapshot_id`.|
-| `BETWEEN end_snapshot_id AND TAIL`                       | Reads data from just after the specified `end-snapshot_id` to the end of the dataset (exclusive of the snapshot ID). This means that if `end_snapshot_id` is the last snapshot in the dataset, the query will return zero rows because there are no snapshots beyond that last snapshot. |
+| `BETWEEN end_snapshot_id AND TAIL`                       | Reads data from just after the specified `end_snapshot_id` to the end of the dataset (exclusive of the snapshot ID). This means that if `end_snapshot_id` is the last snapshot in the dataset, the query will return zero rows because there are no snapshots beyond that last snapshot. |
 | `SINCE start_snapshot_id INNER JOIN table_to_be_joined AS OF your_chosen_snapshot_id ON table_to_be_queried.id = table_to_be_joined.id` | Reads data starting from the specified snapshot ID from `table_to_be_queried` and joins it with the data from `table_to_be_joined` as it was at `your_chosen_snapshot_id`. The join is based on matching IDs from the ID columns of the two tables being joined. |
 
 A `SNAPSHOT` clause works with a table or table alias but not on top of a subquery or view. A `SNAPSHOT` clause works anywhere a `SELECT` query on a table can be applied.
@@ -135,7 +139,7 @@ Also, you can use `HEAD` and `TAIL` as special offset values for snapshot clause
 >
 >If you are querying between two snapshot IDs, the following two scenarios can occur if the start snapshot is expired and the optional fallback behavior flag (`resolve_fallback_snapshot_on_failure`) is set:
 >
->- If the optional fallback behavior flag is set, Query Service chooses the earliest available snapshot, set it as the start snapshot, and return the data between the earliest available snapshot and the specified end snapshot. This data is **inclusive** of the earliest available snapshot.
+>- If the optional fallback behavior flag is set, Query Service chooses the earliest available snapshot, sets it as the start snapshot, and returns the data between the earliest available snapshot and the specified end snapshot. This data is **inclusive** of the earliest available snapshot.
 
 ### WHERE clause
 
