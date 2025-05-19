@@ -9,9 +9,9 @@ exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
 >
 >Streaming sources, such as the [HTTP API source](../../sources/connectors/streaming/http.md) are not currently supported by the monitoring dashboard. At this moment, you can only use the dashboard to monitor batch sources.
 
-You can use the monitoring dashboard in the Adobe Experience Platform user interface to retrieve metrics around your data ingestion processes. Use the graphs in the interface to monitor ingestion trends over time and summarize performance across all of your sources dataflows.
+You can use the monitoring dashboard in the Adobe Experience Platform user interface to retrieve metrics around your data ingestion and data retention processes in data lake. Use the graphs in the interface to monitor ingestion and retention trends over time and summarize performance across all of your sources dataflows.
 
-Read this document to learn how to use the monitoring dashboard to monitor data ingestion to data lake in the Experience Platform UI.
+Read this document to learn how you can use the monitoring dashboard to monitor all data processing in data lake, including both ingestion and retention.
 
 ## Get started {#get-started}
 
@@ -56,7 +56,7 @@ The lower part of the dashboard displays a table that outlines the current metri
 | --- | --- |
 | Records received | The total number of records received from a given source. |
 | Records ingested | The total number of records ingested to data lake. |
-| Records deleted | The total number of records deleted. |
+| Records deleted | The total number of records deleted due to data lake retention settings. |
 | Records skipped | The total number of records skipped. A skipped record refers to fields that were skipped because they were not required for ingestion. For example, if you create a sources dataflow with partial ingestion enabled, you can configure an acceptable error rate threshold. During the ingestion process, ingestion will skip records of fields that are not required, such as identity fields, so long as they are within the error threshold. |
 | Records failed | The total number of records that could not be ingested due to errors. |
 | Ingested rate | The percentage of records that were ingested based on the total number of records received. |
