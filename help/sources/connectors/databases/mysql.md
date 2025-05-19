@@ -6,7 +6,7 @@ exl-id: a18e8e69-880f-4bee-b339-726091d6f858
 ---
 # [!DNL MySQL]
 
-[!DNL MySQL] is an open-source relational database management system used to store and manage structured data. It organizes data into tables and uses SQL (Structured Query Language) for querying and updating information. [!DNL MySQL] is widely used in web applications, supports multiple platforms, and is known for its speed, reliability, and ease of use. It's ideal for everything from small websites to large-scale enterprise systems.
+[!DNL MySQL] is an open-source relational database management system used to store and manage structured data. It organizes data into tables and uses SQL (Structured Query Language) for querying and updating information. [!DNL MySQL] is widely used in web applications, supports multiple platforms, and is known for its speed, reliability, and ease of use.
 
 You can use the [!DNL MySQL] source to connect your account and ingest data from your [!DNL MySQL] database to Adobe Experience Platform.
 
@@ -42,12 +42,29 @@ Provide values for the following credentials to connect your [!DNL MySQL] databa
 | Credential | Description |
 | --- | --- |
 | `server` | The name or IP address of your [!DNL MySQL] database. |
-| `database` | The name of the [!DNL MySQL] database that you want to connect to. |
 | `username` | The username associated with your [!DNL MySQL] database authentication. |
 | `password` | The password associated with your [!DNL MySQL] database authentication. |
+| `database` | The name of the [!DNL MySQL] database that you want to connect to. |
 | `sslMode` | The [!DNL Secure Sockets Layer] (SSL) method to be applied to your connection. The available values are: <ul><li>`DISABLED`: Use this option to disable SSL. If your server requires an SSL configuration, then the connection will fail</li><li>`PREFERRED`: Use this option to prefer SSL connections given that the server supports them. This option also allows for non-SSL connections.</li><li>`REQUIRED`: Use this option to make SSL connections mandatory. If the server does not support SSL, then the connections will fail.</li><li>`Verify-Ca`: Use this option to verify server certificates while failing connections if the server does not support SSL.</li><li>`Verify Identity`: Use this option to verify server certificates with the host's name while failing connections if the server does not support SSL.</li></ul> |
 
 >[!ENDTABS]
+
+### Authenticate to Experience Platform on Amazon Web Services (AWS) {#aws}
+
+>[!AVAILABILITY]
+>
+>This section applies to implementations of Experience Platform running on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../../landing/multi-cloud.md).
+
+You must provide values for the following credentials to connect [!DNL MySQL] to Experience Platform on AWS.
+
+| Credential | Description |
+| --- | --- |
+| `server` | The name or IP of your [!DNL MySQL] database. |
+| `username` | The name of your database. |
+| `password` | The username that corresponds with your database. |
+| `database` | The password that corresponds with your database. |
+| `sslMode` | The [!DNL Secure Sockets Layer] (SSL) method to be applied to your connection. The available values are: <ul><li>`DISABLED`: Use this option to disable SSL. If your server requires an SSL configuration, then the connection will fail</li><li>`PREFERRED`: Use this option to prefer SSL connections given that the server supports them. This option also allows for non-SSL connections.</li><li>`REQUIRED`: Use this option to make SSL connections mandatory. If the server does not support SSL, then the connections will fail.</li><li>`Verify-Ca`: Use this option to verify server certificates while failing connections if the server does not support SSL.</li><li>`Verify Identity`: Use this option to verify server certificates with the host's name while failing connections if the server does not support SSL.</li></ul> |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL MySQL] is `26d738e0-8963-47ea-aadf-c60de735468a`. **Note**: This credential is only required when connecting through the [!DNL Flow Service] API. |
 
 ## Connect [!DNL MySQL] to Experience Platform using APIs
 
