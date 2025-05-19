@@ -9,7 +9,7 @@ Adobe Experience Platform is an open system that transforms your data into robus
 
 Experience Platform offers licenses that establish the number of profiles that you can create and the amount of data that you can bring in. Given the capacity to bring in any source, volume, or history of data, it is possible to exceed your licensing entitlements as your data volumes grow.
 
-Read this guide for best practices to follow and tools you can use to better manage your license entitlements with AExperience Platform.
+Read this guide for best practices to follow and tools you can use to better manage your license entitlements with Experience Platform.
 
 ## Summary of features {#summary-of-features}
 
@@ -20,12 +20,12 @@ The following table outlines the list of currently available features at your di
 | Feature | Description |
 | --- | --- |
 | [Dataset UI - Experience Event data retention](../../catalog/datasets/user-guide.md#data-retention-policy) | Configure a fixed retention period for data in data lake and Profile store. Records are deleted as the configured retention period ends. |
-| [Enable/Disable Datasets for Profile](../../catalog/datasets/user-guide.md) | Enable or disable dataset ingestion into Real-Time Customer Profile. |
+| [Enable/Disable Datasets for Real-Time Customer Profile](../../catalog/datasets/user-guide.md) | Enable or disable dataset ingestion into Real-Time Customer Profile. |
 | [Experience Event expirations in Profile store](../../profile/event-expirations.md) | Apply an expiration time for all events ingested into a Profile-enabled dataset. Please contact your Adobe account team or Customer Care to enable this feature. |
 | [Adobe Analytics Data Prep filters](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) | Apply [!DNL Kafka] filters to exclude unnecessary data from ingestion. |
 | [Adobe Audience Manager source connector filters](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Apply Audience Manager source connection filters to exclude unnecessary data from ingestion. |
 | [Event forwarding data filters](../../tags/ui/event-forwarding/overview.md) | Apply server-side [!DNL Kafka] filters to exclude unnecessary data from ingestion.  See the documentation on [tag rules](../../tags/ui/managing-resources/rules.md) for additional information. |
-| [License Usage Dashboard UI](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | View a snapshot of your organization's license-related data for Experience Platform. |
+| [License Usage Dashboard UI](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | Monitor your organization's consumption of Experience Platform products against licensed entitlements. Access daily usage snapshots, predictive trends, and detailed sandbox-level data to support proactive license management. |
 | [Dataset Overlap Report API](../../profile/tutorials/dataset-overlap-report.md) | Outputs the datasets that contributes the most to your Addressable Audience. |
 | [Identity Overlap Report API](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) | Outputs the identity namespaces that contribute the most to your Addressable Audience. |
 | [Pseudonymous Profile data expirations](../../profile/pseudonymous-profiles.md) | Configure data expiration times for Pseudonymous profiles and automatically remove data from the Profile store. |
@@ -153,11 +153,11 @@ Use the Pseudonymous profiles data expiration capability to automatically remove
 
 ### Dataset UI - Experience Event Dataset retention {#data-retention}
 
-Configure dataset expiration and retention settings to enforce a fixed retention period for your data in data lake and Profile store. Once the retention period ends, data is deleted. Experience Event data expiration only removes events and does not remove profile class data, which will reduce Total Data Volume in license usage metrics. For more information, read the guide on [setting data retention policy](../../catalog/datasets/user-guide.md#data-retention-policy).
+Configure dataset expiration and retention settings to enforce a fixed retention period for your data in data lake and Profile store. Once the retention period ends, data is deleted. Experience Event data expiration only removes events and does not remove profile class data, which will reduce [total data volume](total-data-volume.md) in license usage metrics. For more information, read the guide on [setting data retention policy](../../catalog/datasets/user-guide.md#data-retention-policy).
 
 ### Profile Experience Event expirations {#event-expirations}
 
-Configure expiration times to automatically remove behavioral data from your Profile-enabled dataset once they are no longer valuable for your use cases.Read the overview on [Experience Event expirations](../../profile/event-expirations.md) for more information.
+Configure expiration times to automatically remove behavioral data from your Profile-enabled dataset once they are no longer valuable for your use cases. Read the overview on [Experience Event expirations](../../profile/event-expirations.md) for more information.
 
 ## Summary of best practices for license usage compliancy {#best-practices}
 
@@ -167,4 +167,5 @@ The following is a list of some recommended best practices that you can follow t
 * Configure [ingestion filters](#ingestion-filters) by identifying the events required for your segmentation and personalization use cases. This allows you to send only important events required for your use cases.
 * Ensure that you have only [enabled datasets for profile](#ingestion-filters) that are required for your segmentation and personalization use cases. 
 * Configure [Experience Event expirations](../../catalog/datasets/user-guide.md#data-retention-policy) and [Pseudonymous Profile data expirations](../../profile/pseudonymous-profiles.md) for high-frequency data like web data.
+* Configure [Time-to-Live (TTL) retention policies for Experience Event datasets](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) in the data lake to automatically remove outdated records and optimize storage usage in line with your license entitlements.
 * Periodically check the [Profile Composition Reports](#profile-store-composition-reports) to understand your Profile store composition. This allows you to understand the data sources contributing most to your license usage consumption.
