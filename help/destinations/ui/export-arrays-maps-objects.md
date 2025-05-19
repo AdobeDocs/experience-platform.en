@@ -10,7 +10,7 @@ exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 >
 >The functionality to export arrays and other complex objects to cloud storage destinations is generally available for the following destinations: [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md).
 >
->Additionally, you can export map-type fields to the following destinations: [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [HTTP API](/help/destinations/catalog/streaming/http-destination.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md).
+>Additionally, you can export map-type fields to the following destinations: [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [HTTP API](/help/destinations/catalog/streaming/http-destination.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md).
 
 
 Learn how to export arrays, maps, and objects from Real-Time CDP to [cloud storage destinations](/help/destinations/catalog/cloud-storage/overview.md). Additionally, you can export map-type fields to [enterprise destinations](/help/destinations/destination-types.md#advanced-enterprise-destinations) and limited [edge personalization destinations](/help/destinations/destination-types.md#edge-personalization-destinations). Read this document to understand the export workflow, the use cases enabled by this functionality, and known limitations. View the table below to understand the functionality available per destination type.
@@ -22,7 +22,7 @@ Learn how to export arrays, maps, and objects from Real-Time CDP to [cloud stora
 | Existing custom partner-built cloud storage destinations (custom file-based destinations built via Destination SDK) | No |
 | Enterprise destinations (Amazon Kinesis, Azure Event Hubs, HTTP API) | Partially. You can select and export map-type objects in the mapping step of the activation workflow. |
 | Streaming destinations (for example: Facebook, Braze, Google Customer Match, and more) | No |
-| Edge personalization destinations (Adobe Target) | Partially. You can select and export map-type objects in the mapping step of the activation workflow. |
+| Edge personalization destinations | No |
 
 {style="table-layout:auto"}
 
