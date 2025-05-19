@@ -52,11 +52,15 @@ Some destinations in Experience Platform have certain rules and obligations for 
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-|GAID|Google Advertising ID|Select this target identity when your source identity is a GAID namespace.|
-|IDFA|Apple ID for Advertisers|Select this target identity when your source identity is an IDFA namespace.|
-|phone_sha256_e.164|Phone numbers in E164 format, hashed with the SHA256 algorithm|Both plain text and SHA256 hashed phone numbers are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed phone numbers, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
-|email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed email addresses, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
-|user_id|Custom user IDs|Select this target identity when your source identity is a custom namespace.|
+|`GAID`|Google Advertising ID|Select this target identity when your source identity is a GAID namespace.|
+|`IDFA`|Apple ID for Advertisers|Select this target identity when your source identity is an IDFA namespace.|
+|`phone_sha256_e.164`|Phone numbers in E164 format, hashed with the SHA256 algorithm|Both plain text and SHA256 hashed phone numbers are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed phone numbers, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
+|`email_lc_sha256`|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed email addresses, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
+|`user_id`|Custom user IDs|Select this target identity when your source identity is a custom namespace.|
+|`address_info_first_name`|First name of the user| This target identity is meant to be used along with `address_info_last_name`, `address_info_country_code`, and `address_info_postal_code`, when you want to send mailing address data to your destination. <br><br>To ensure Google matches the address, you must map all four address fields (`address_info_first_name`, `address_info_last_name`, `address_info_country_code`, and `address_info_postal_code`) and ensure that none of these fields are missing data in the exported profiles. <br> If any field is either unmapped or contains missing data, Google will not match the address.|
+|`address_info_last_name`|Last name of the user|This target identity is meant to be used along with `address_info_first_name`, `address_info_country_code`, and `address_info_postal_code`, when you want to send mailing address data to your destination. <br><br>To ensure Google matches the address, you must map all four address fields (`address_info_first_name`, `address_info_last_name`, `address_info_country_code`, and `address_info_postal_code`) and ensure that none of these fields are missing data in the exported profiles. <br> If any field is either unmapped or contains missing data, Google will not match the address.|
+|`address_info_country_code`|User address country code|This target identity is meant to be used along with `address_info_first_name`, `address_info_last_name`, and `address_info_postal_code`, when you want to send mailing address data to your destination. <br><br>To ensure Google matches the address, you must map all four address fields (`address_info_first_name`, `address_info_last_name`, `address_info_country_code`, and `address_info_postal_code`) and ensure that none of these fields are missing data in the exported profiles. <br> If any field is either unmapped or contains missing data, Google will not match the address. <br><br>Accepted format: Lowercase, 2-letter country codes in [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format.|
+|`address_info_postal_code`|User address postal code|This target identity is meant to be used along with `address_info_first_name`, `address_info_last_name`, and `address_info_country_code`, when you want to send mailing address data to your destination. <br><br>To ensure Google matches the address, you must map all four address fields (`address_info_first_name`, `address_info_last_name`, `address_info_country_code`, and `address_info_postal_code`) and ensure that none of these fields are missing data in the exported profiles. <br> If any field is either unmapped or contains missing data, Google will not match the address.|
 
 {style="table-layout:auto"}
 
@@ -126,6 +130,12 @@ For more information about Google's hashing requirements and other restrictions 
 To learn about ingesting email addresses in Experience Platform, see the [batch ingestion overview](../../../ingestion/batch-ingestion/overview.md) and the [streaming ingestion overview](../../../ingestion/streaming-ingestion/overview.md).
 
 If you select to hash the email addresses yourself, make sure to comply with Google's requirements, outlined in the links above.
+
+### Address field hashing requirements {#address-field-hashing}
+
+When mapping address-related fields to [!DNL Google Customer Match], Experience Platform **automatically hashes** the `address_info_first_name` and `address_info_last_name` values before sending them to Google. This automatic hashing is required to comply with Google's security and privacy requirements.
+
+Do **not** provide pre-hashed values for `address_info_first_name` or `address_info_last_name`. If you provide already hashed values, the matching process will fail.
 
 ### Using custom namespaces {#custom-namespaces}
 
@@ -221,6 +231,10 @@ Attribute source data is not automatically hashed. When your source field contai
 ## Monitor destination {#monitor-destination}
 
 After connecting to the destination and establishing a destination dataflow, you can use the [monitoring functionality](/help/dataflows/ui/monitor-destinations.md) in Real-Time CDP to get extensive information about the profile records activated to your destination in each dataflow run. 
+
+>[!IMPORTANT]
+>
+>When you map the four address-related target identities (`address_info_first_name`, `address_info_last_name`, `address_info_country_code`, and `address_info_postal_code`), they are counted as separate individual identities for each profile in the dataflow monitoring page.
 
 ## Verify that audience activation was successful {#verify-activation}
 
