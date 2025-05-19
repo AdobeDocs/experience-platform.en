@@ -1,22 +1,17 @@
 ---
-title: AI Assistant for Customer Support
-description: Learn how you can use AI Assistant to streamline troubleshooting and the customer support ticket filing process.
-badge: Alpha
+title: Product Support Agent
+description: Learn how you can use Product Support Agent in AI Assistant to streamline troubleshooting and the customer support ticket filing process.
 exl-id: 263b8a44-8902-42b9-8390-d7da8e9b5129
 ---
-# AI Assistant for Customer Support
+# Product Support Agent
 
->[!AVAILABILITY]
->
->This feature is in Alpha and may not be available to your organization. To participate in the Alpha program and access this feature, contact your Adobe Account Team.
+Product Support Agent is a self-serve debugging and troubleshooting capability of AI Assistant that you can use for Adobe Experience Platform features and applications.
 
-AI Assistant for Customer Support is a self-serve debugging and troubleshooting capability of AI Assistant that you can use for Adobe Experience Platform features and applications.
+You can use Product Support Agent in AI Assistant to seamlessly troubleshoot without leaving your workflows. When needed, support administrators can now use Product Support Agent to create customer support tickets, complete with context and session details from your interactions with AI Assistant. Additionally, you can now check on the latest updates to your support tickets using AI Assistant.
 
-You can use AI Assistant for Customer Support to seamlessly troubleshoot without leaving your workflows. When needed, support administrators can now use AI Assistant for Customer Support to create customer support tickets, complete with context and session details from your interactions with AI Assistant. Additionally, you can now check on the latest updates to your support tickets using AI Assistant.
+Product Support Agent includes the following solution capabilities:
 
-Currently, AI Assistant for Customer Support includes the following solution capabilities:
-
-## Quick troubleshooting help
+## Quick troubleshooting help {#quick-troubleshooting-help}
 
 Get instant responses to common support questions sourced from expert-curated documentation, such as:
 
@@ -33,25 +28,25 @@ Get instant responses to common support questions sourced from expert-curated do
     * "What is the limit for batch segmentation jobs in Adobe Experience Platform Activation?"
     * "What is the average profile richness limit in Adobe Experience Platform Activation?"
 
-## Support case creation
+## Support case creation {#support-case-creation}
 
-Initiate support cases directly from AI Assistant for Customer Support, which automatically captures contextual insights to accelerate case resolution.
+Initiate support cases directly from Product Support Agent, which automatically captures contextual insights to accelerate case resolution.
 
 * Example questions:
   * "Create a support ticket."
   * "Can you help me create a support ticket?"
 
-## Track case progress
+## Track case progress {#track-case-progress}
 
-Seamlessly track he status of support issues.
+Seamlessly track the status of support issues.
 
 * Example questions and commands:
   * "What is the latest on my case E-12345?"
   * "What's the update on ticket E-67890?"
 
-To gain access to AI Assistant for Customer Support, contact your Adobe Account Team.
+To gain access to Product Support Agent, contact your Adobe Account Team.
 
-For more information, watch the following video to learn how you can use AI Assistant for Customer Support to seamlessly troubleshoot without leaving your workflows.
+For more information, watch the following video to learn how you can use Product Support Agent to seamlessly troubleshoot without leaving your workflows.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3443183?learn=on)
 
