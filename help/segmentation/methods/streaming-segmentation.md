@@ -23,7 +23,9 @@ Any **new or edited** segment definitions that match the following rulesets will
 - A single event with no time window
   - Activate an audience with all profiles that viewed a webpage.
 
-As a result, in order to evaluate an audience with streaming segmentation, it **must** be constrained within a 24 hour time window.
+## Time window {#time-window}
+
+In order to evaluate an audience with streaming segmentation, it **must** be constrained within a 24 hour time window.
 
 ## Including batch data in streaming audiences {#include-batch-data}
 

@@ -10,8 +10,9 @@ exl-id: c91c0f75-9bc8-4fa7-9d27-9b07d0ea560c
 Starting on May 20, 2025, three updates will be made that affect segmentation eligibility.
 
 1. Eligible ruleset
-2. Including batch data in streaming audiences
-3. Active merge policies
+2. Time window eligibility
+3. Including batch data in streaming audiences
+4. Active merge policies
 
 ## Ruleset {#ruleset}
 
@@ -22,7 +23,9 @@ Any **new or edited** segment definitions that match the following rulesets will
 - A single event with no time window
   - Activate an audience with all profiles that viewed a webpage.
 
-As a result, in order to evaluate an audience with streaming segmentation, it **must** be constrained within a 24 hour time window.
+## Time window {#time-window}
+
+In order to evaluate an audience with streaming segmentation, it **must** be constrained within a 24 hour time window.
 
 ## Including batch data in streaming audiences {#include-batch-data}
 
