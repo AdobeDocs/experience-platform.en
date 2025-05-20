@@ -56,7 +56,7 @@ The lower part of the dashboard displays a table that outlines the current metri
 | --- | --- |
 | Records received | The total number of records received from a given source. |
 | Records ingested | The total number of records ingested to data lake. |
-| Records deleted | The total number of records deleted due to data lake retention settings. |
+| Records deleted | The total number of records deleted due to data lake retention settings or change data capture operations. |
 | Records skipped | The total number of records skipped. A skipped record refers to fields that were skipped because they were not required for ingestion. For example, if you create a sources dataflow with partial ingestion enabled, you can configure an acceptable error rate threshold. During the ingestion process, ingestion will skip records of fields that are not required, such as identity fields, so long as they are within the error threshold. |
 | Records failed | The total number of records that could not be ingested due to errors. |
 | Ingested rate | The percentage of records that were ingested based on the total number of records received. |
