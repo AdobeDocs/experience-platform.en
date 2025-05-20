@@ -61,13 +61,6 @@ Next, they can use their offline data including associated membership IDs and cu
 |`zip`|Zip code|Accepted format: Lowercase, no spaces. For US zip codes, use only the first 5 digits. For the UK, use the `Area/District/Sector` format.  <br>Experience Platform **automatically hashes** this value before sending it to Facebook. This automatic hashing is required to comply with Facebook's security and privacy requirements. Do **not** provide pre-hashed values for this field, as this will cause the matching process to fail.|
 |`country`|Country|Accepted format: Lowercase, 2-letter country codes in [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format.  <br>Experience Platform **automatically hashes** this value before sending it to Facebook. This automatic hashing is required to comply with Facebook's security and privacy requirements. Do **not** provide pre-hashed values for this field, as this will cause the matching process to fail.|
 
-
-### Address field hashing requirements {#address-field-hashing}
-
-
-
-
-
 ## Supported audiences {#supported-audiences}
 
 This section describes which types of audiences you can export to this destination.
