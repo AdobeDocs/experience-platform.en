@@ -81,7 +81,7 @@ inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4
 
 Any **new or edited** segment definitions that qualify for streaming or edge segmentation **must** be on the "Active on Edge" merge policy.
 
-If there is no active merge policy set, you'll need to [configure your merge policy](../profile/merge-policies/ui-guide.md#configure) and set it to be active on edge.
+If there is no active merge policy set, you'll need to [configure your merge policy](../../profile/merge-policies/ui-guide.md#configure) and set it to be active on edge.
 
 
 +++
