@@ -1,6 +1,7 @@
 ---
 title: Migrate From JWT to OAuth Server-to-Server Credentials
 description: Learn how to migrate non-expiring JWT credentials to OAuth Server-to-Server credentials in Adobe Experience Platform to maintain secure, uninterrupted access to Query Service before support for JWT ends on June 30, 2025. This guide provides step-by-step instructions, explains post-migration behavior, and answers common questions.
+exl-id: a8bab296-becf-4255-b0df-cd41a1d432c2
 ---
 # Migrate from JWT to OAuth Server-to-Server credentials
 
