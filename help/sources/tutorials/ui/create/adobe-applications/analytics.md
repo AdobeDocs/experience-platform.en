@@ -23,8 +23,6 @@ It is important to understand the following key terms used throughout this docum
 * **Custom attribute**: Custom attributes are any attribute in the custom variable hierarchy in Analytics. Custom attributes are used within an Adobe Analytics implementation to capture specific information into a report suite, and they can differ in their use from report suite to report suite. Custom attributes include eVars, props, and lists. See the following [Analytics documentation on conversion variables](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) for more information on eVars.
 * **Any attribute in Custom field groups**: Attributes that originate from field groups created by customers are all user-defined and are considered to be neither standard nor custom attributes.
 
-<!-- * **Friendly names**: Friendly names are human-provided labels for custom variables in an Analytics implementation. See the following [Analytics documentation on conversion variables](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) for more information on friendly names. -->
-
 ## Navigate the sources catalog
 
 >[!NOTE]
@@ -57,7 +55,7 @@ Select **[!UICONTROL Report suite]** and then use the *[!UICONTROL Analytics sou
 
 <!---Analytics Report Suites can be configured for one sandbox at a time. To import the same Report Suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
 
-## Mapping
+## Mapping {#mapping}
 
 >[!IMPORTANT]
 >
