@@ -151,9 +151,9 @@ The video below also demonstrates the steps to configure a [!DNL Facebook] desti
 
 ### Refresh authentication credentials {#refresh-authentication-credentials}
 
-Facebook tokens expire every 60 days. Once the token is expired, data exports to the destination stop working.
+Facebook authentication tokens expire every 60 days. Once the token is expired, data exports to the destination stop working.
 
-You can keep an eye on your token expiration dates from either the **[!UICONTROL Accounts]** or the **[!UICONTROL Browse]** tabs. 
+You can monitor your token expiration dates from the **[!UICONTROL Account expiration date]** column in either the **[!UICONTROL Accounts]** or the **[!UICONTROL Browse]** tabs. 
 
 ![Facebook account token expiration date column in the Browse tab](../../assets/catalog/social/facebook/account-expiration-browse.png)
 

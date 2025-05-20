@@ -96,7 +96,7 @@ The **[!UICONTROL Browse]** tab displays the destinations with which you have es
 |Element | Description |
 |---------|----------|
 |Name | The name you provided for your activation flow to this destination. The same column includes two controls: [!UICONTROL Activate ] and [!UICONTROL Delete destination].|
-|Data Type | The type of data supported by the destination connection. Supported data types: <ul><li>**[!UICONTROL Customers]**</li><li>**[!UICONTROL Prospects]**</li><li>**[!UICONTROL Datasets]**</li></ul> |
+|Data Type | The type of data supported by the destination connection. Supported data types: <ul><li>**[!UICONTROL Customers]**</li><li>**[!UICONTROL Prospects]**</li><li>**[!UICONTROL Accounts]**</li><li>**[!UICONTROL Datasets]**</li></ul> |
 |[!UICONTROL Last Dataflow Run Status] | The status of the last dataflow run. See [View destination details](destination-details-page.md) for more information about dataflow runs.|
 |[!UICONTROL Last Dataflow Run Date] | Time and date when the last dataflow run has occurred. See [View destination details](destination-details-page.md) for more information about dataflow runs.|
 |[!UICONTROL Destination] | The destination platform that you selected for your activation flow.|
