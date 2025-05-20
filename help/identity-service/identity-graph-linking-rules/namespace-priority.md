@@ -80,7 +80,7 @@ For relatively complex graph structures, namespace priority plays an important r
 * Once you have configured identity settings for a given sandbox, the primary identity for experience events will be determined by the highest namespace priority in the configuration.
   * This is because experience events are dynamic in nature. An identity map may contain three or more identities, and namespace priority ensures that the most important namespace is associated to the experience event.
 * As a result, the following configurations **will no longer be used by Real-Time Customer Profile**:
-  * The primary identity configuration (`primary=true`) when sending identities in the identityMap using the Web SDK, Mobile SDK, or Edge Network API (identity namespace and identity value will continue to be used in Profile). **Note**: Services outside of Real-Time Customer Profile like data lake storage or Adobe Target will continue to use the primary identity configuration (`primary=true`).
+  * The primary identity configuration (`primary=true`) when sending identities in the `identityMap` using the Web SDK, Mobile SDK, or Edge Network API (identity namespace and identity value will continue to be used in Profile). **Note**: Services outside of Real-Time Customer Profile like data lake storage or Adobe Target will continue to use the primary identity configuration (`primary=true`).
   * Any fields marked as primary identity on an XDM Experience Event Class schema.
   * Default primary identity settings in the Adobe Analytics source connector (ECID or AAID).
 * On the other hand, **namespace priority does not determine primary identity for profile records**.
@@ -197,6 +197,25 @@ For more information on partner-built destinations, read the [destinations overv
 
 For more information, read the [Privacy service overview](../../privacy-service/home.md).
 
-### Adobe Target 
+### Edge segmentation and Edge Network applications
 
-Adobe Target may yield unexpected user targeting for shared device scenarios when using edge segmentation.
+In the context of [!DNL Identity Graph Linking Rules], there are two main behavioral changes to take note of regarding Edge segmentation and Edge Network applications:
+
+1. The `identityMap` must contain a person namespace that has been marked as unique. Fields marked as an identity (identity descriptors) are not supported.
+2. The person namespace must have the `primary = true` configuration when an end-user is browsing while authenticated.
+
+#### Edge segmentation
+
+In a given event, ensure that all of your namespaces that represent a person entity are included in the `identityMap` because [identities sent as XDM fields](../../xdm/ui/fields/identity.md) are ignored and are not used for segment membership metadata storage.
+
+* **Event applicability**: This behavior applies only to events sent directly to the Edge Network (such as WebSDK and Mobile SDK). Events ingested from [Experience Platform hub](../../landing/edge-and-hub-comparison.md), such as those ingested with the HTTP API source, other streaming sources, and batch sources, are not subject to this limitation.
+* **Edge segmentation specificity**: This behavior is specific to edge segmentation. Batch and streaming segmentation are separate services evaluated on the hub and do not follow the same process. Read the [edge segmentation guide](../../segmentation/methods/edge-segmentation.md) for more information.
+* Read the [Adobe Experience Platform and applications architecture diagrams](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) and [Edge Network and hub comparison](../../landing/edge-and-hub-comparison.md) pages for more information.
+
+#### Edge Network applications
+
+To ensure applications on the Edge Network have access to the Edge Profile without delay, make sure your events include `primary=true` on the CRMID. This ensures immediate availability without waiting for identity graph updates from hub.
+
+* Applications on Edge Network such as Adobe Target, Offer Decisioning, and Custom Personalization Destinations will continue to depend on the primary identity in events to access profiles from Edge Profile.
+* Read the [Experience Platform Web SDK & Edge Network architecture diagram](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) for more information on Edge Network behavior.
+* Read the documentation on [Data element types](../../tags/extensions/client/web-sdk/data-element-types.md) and [Identity data in Web SDK](../../web-sdk/identity/overview.md) for more information on how to configure primary identity on Web SDK.
