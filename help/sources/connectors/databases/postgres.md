@@ -1,7 +1,7 @@
 ---
 title: PostgreSQL Source Connector Overview
 description: Learn about the PostgreSQL source on Adobe Experience Platform.
-last-substantial-update: 2025-04-29
+last-substantial-update: 2025-05-20
 exl-id: 27b891c5-5fc5-4539-8f98-e3a53e2eefe3
 ---
 # [!DNL PostgreSQL]
@@ -29,7 +29,7 @@ Provide values for the following credentials to connect your [!DNL PostgreSQL] d
 | Credential | Description |
 | --- | --- |
 | `connectionString` | The connection string associated with your [!DNL PostgreSQL] account. The [!DNL PostgreSQL] connection string pattern is: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
-| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL PostgreSQL] is `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL PostgreSQL] is `74a1c565-4e59-48d7-9d67-7c03b8a13137`. This credential is only required when connecting through the [!DNL Flow Service] API. |
 
 Read the [[!DNL PostgreSQL] documentation](https://www.postgresql.org/docs/current/) for more information.
 
@@ -45,6 +45,7 @@ Provide values for the following credentials to connect your [!DNL PostgreSQL] d
 | `password` | The password associated with your [!DNL PostgreSQL] database authentication. |
 | `database` | The name of the [!DNL PostgreSQL] database that you want to connect to. |
 | `sslMode` | The [!DNL Secure Sockets Layer] (SSL) method to be applied to your connection. The available values are: <ul><li>`Disable`: Use this option to disable SSL. If your server requires an SSL configuration, then the connection will fail.</li><li>`Allow`: Use this option to allow SSL connections. Non-SSL connections may still be used if the server supports them.</li><li>`Prefer`: Use this option to prefer SSL connections given that the server supports them. This option also allows for non-SSL connections.</li><li>`Require`: Use this option to make SSL connections mandatory. If the server does not support SSL, then the connections will fail.</li><li>`Verify-Ca`: Use this option to verify server certificates while failing connections if the server does not support SSL.</li><li>`Verify-Full`: Use this option to verify server certificates with the host's name while failing connections if the server does not support SSL.</li></ul> |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL PostgreSQL] is `74a1c565-4e59-48d7-9d67-7c03b8a13137`. This credential is only required when connecting through the [!DNL Flow Service] API. |
 
 Read the [[!DNL PostgreSQL] documentation](https://www.postgresql.org/docs/current/) for more information.
 
@@ -65,7 +66,8 @@ Provide values for the following credentials to connect your [!DNL PostgreSQL] d
 | `username` | The username associated with your [!DNL PostgreSQL] database authentication. |
 | `password` | The password associated with your [!DNL PostgreSQL] database authentication. |
 | `database` | The name of the [!DNL PostgreSQL] database that you want to connect to. |
-| `sslMode` | The [!DNL Secure Sockets Layer] (SSL) method to be applied to your connection. The available values are: <ul><li>`Disable`: Use this option to disable SSL. If your server requires an SSL configuration, then the connection will fail.</li><li>`Allow`: Use this option to allow SSL connections. Non-SSL connections may still be used if the server supports them.</li><li>`Prefer`: Use this option to prefer SSL connections given that the server supports them. This option also allows for non-SSL connections.</li><li>`Require`: Use this option to make SSL connections mandatory. If the server does not support SSL, then the connections will fail.</li><li>`Verify-Ca`: Use this option to verify server certificates while failing connections if the server does not support SSL.</li><li>`Verify-Full`: Use this option to verify server certificates with the host's name while failing connections if the server does not support SSL.</li></ul> |
+| `sslMode` | A boolean value that controls whether SSL is enforced or not, depending on your server support. This configuration defaults to `false`. |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL PostgreSQL] is `74a1c565-4e59-48d7-9d67-7c03b8a13137`. This credential is only required when connecting through the [!DNL Flow Service] API. |
 
 Read the [[!DNL PostgreSQL] documentation](https://www.postgresql.org/docs/current/) for more information.
 
