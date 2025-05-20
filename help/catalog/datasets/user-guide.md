@@ -168,6 +168,12 @@ For more information on how to classify business objects for easier discovery an
 
 Manage dataset expiration and retention settings using the inline action menu from the [!UICONTROL Browse] tab of the [!UICONTROL Datasets] workspace. You can use this feature to configure how long data is retained in the data lake and Profile store. The expiration date is based on when data was ingested into Experience Platform and your configured retention period.
 
+>[!IMPORTANT]
+>
+>To apply or update retention rules for an ExperienceEvent dataset, your user role must include the **Manage datasets** permission. This role-based access control ensures that only authorized users can modify dataset retention settings.
+>
+>See the [Access control overview](../../access-control/home.md#platform-permissions) for more information on assigning permissions in Adobe Experience Platform.
+
 >[!TIP]
 >
 >The data lake stores raw, unprocessed data, such as event logs, clickstream data, and bulk-ingested records, for analytics and processing. The Profile store contains customer-identifiable data, including identity-stitched events and attribute information, to support real-time personalization and activation.
