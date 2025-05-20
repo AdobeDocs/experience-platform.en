@@ -149,7 +149,7 @@ If you are using non-expiring JWT credentials, you must migrate each one to OAut
 >
 >JWT credentials will stop working after June 30, 2025. You must manually complete this migration to maintain authorization.
 
-To learn how to identify affected credentials and complete the migration, see [Migrate from JWT to OAuth Server-to-Server credentials](./migrate-jwt-to-oauth.md).
+To learn how to identify affected credentials and complete the migration, see the [migrate from JWT to OAuth Server-to-Server credentials guide](./migrate-jwt-to-oauth.md).
 
 For common questions, refer to the [migration FAQ](./migrate-jwt-to-oauth.md#faq).
 

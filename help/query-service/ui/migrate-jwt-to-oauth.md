@@ -36,9 +36,9 @@ No reconfiguration is required. Existing jobs and integrations continue to work 
 
 After you complete the migration:
 
-- Your credential continues to work seamlessly—no changes are needed in your jobs or integrations.
+- Your credential continues to work seamlessly, so no changes are needed in your jobs or integrations.
 - Query Service automatically uses OAuth Server-to-Server authentication.
-- The JWT-based authentication method is retired and no longer used.
+- The JWT-based authentication method is retired and no longer in use.
 
 >[!IMPORTANT]
 >
