@@ -10,6 +10,10 @@ exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
 >title="Identity graph linking rules"
 >abstract="To prevent these unwanted merges, you can use configurations provided through Identity Graph Linking Rules and allow for accurate personalization for your users."
 
+>[!IMPORTANT]
+>
+>Contact Adobe Account Team if you require any existing collapsed graphs to be un-collapsed ("fixed") after you enable identity settings.
+
 With Adobe Experience Platform Identity Service and Real-Time Customer Profile, it is easy to assume that your data is ingested perfectly and that all merged profiles represent a single individual person through a person identifier, such as a CRMID. However, there are possible scenarios where certain data could try to merge multiple disparate profiles into a single profile ("graph collapse"). To prevent these unwanted merges, you can use configurations provided through [!DNL Identity Graph Linking Rules] and allow for accurate personalization for your users.
 
 Watch the following video for additional information on using [!DNL Identity Graph Linking Rules]:

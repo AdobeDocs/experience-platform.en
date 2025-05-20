@@ -5,6 +5,10 @@ exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
 ---
 # Identity Settings UI
 
+>[!IMPORTANT]
+>
+>Contact your Adobe Account Team if you require any existing collapsed graphs to be un-collapsed ("fixed") after you enable identity settings.
+
 Identity settings is a feature in the Adobe Experience Platform Identity Service UI that you can use to designate unique namespaces and configure namespace priority.
 
 Read this guide to learn how to configure your identity settings in the UI.
