@@ -14,6 +14,10 @@ exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
 
 +++Eligibility updates
 
+>[!IMPORTANT]
+>
+>All existing segment definitions that are currently evaluated using streaming or edge segmentation will continue to work as is, unless edited or updated.
+
 ## Ruleset {#ruleset}
 
 Any **new or edited** segment definitions that match the following rulesets will **no longer** be evaluated using streaming or edge segmentation. Instead, they will be evaluated using batch segmentation.
@@ -31,18 +35,18 @@ In order to evaluate an audience with streaming segmentation, it **must** be con
 
 Prior to this update, you could create a streaming audience definition that combined both batch and streaming data sources. However, with the latest update, creating an audience with both batch and streaming data sources will be evaluated using batch segmentation.
 
-If you need to evaluate a segment definition using streaming or edge segmentation that matches the updated query type, you need to explicitly create a batch and streaming query and combine them using segment of segments. This batch query **must** be based on a profile schema.
+If you need to evaluate a segment definition using streaming or edge segmentation that matches the updated ruleset, you need to explicitly create a batch and streaming ruleset and combine them using segment of segments. This batch ruleset **must** be based on a profile schema.
 
 For example, let's say you have two audiences, with one audience housing profile schema data and the other housing experience event schema data:
 
 | Audience | Schema | Source type | Query definition | Audience ID | 
 | -------- | ------ | ----------- | ---------------- | ----------- |
-| CA Residents | Profile | Batch | Home address is in the state of California | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| California Residents | Profile | Batch | Home address is in the state of California | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
 | Recent checkouts | Experience Event | Streaming | Has at least one checkout in the the last 24 hours | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
 
 If you want to use the batch component in your streaming audience, you'll need to make a reference to the batch audience using segment of segments.
 
-So, an example query that would combine the two audiences together would look as follows:
+So, an example ruleset that would combine the two audiences together would look as follows:
 
 ```
 inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and 
@@ -69,7 +73,7 @@ inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4
 
 >[!IMPORTANT]
 >
->All existing segment definitions that match the query types will remain evaluated using streaming or edge segmentation until they are edited.
+>All existing segment definitions that match the rulesets will remain evaluated using streaming or edge segmentation until they are edited.
 >
 >Additionally, all existing segment definitions that currently meet the other streaming or edge segmentation evaluation criteria will remain evaluated with streaming or edge segmentation.
 
@@ -77,7 +81,8 @@ inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4
 
 Any **new or edited** segment definitions that qualify for streaming or edge segmentation **must** be on the "Active on Edge" merge policy.
 
-All existing segment definitions that are evaluated using streaming or edge segmentation will continue to work as is.
+If there is no active merge policy set, you'll need to [configure your merge policy](../profile/merge-policies/ui-guide.md#configure) and set it to be active on edge.
+
 
 +++
 
@@ -87,13 +92,13 @@ Streaming segmentation is the ability to evaluate audiences in Adobe Experience 
 
 With streaming segmentation, audience qualification now happens as streaming data lands into Experience Platform, alleviating the need to schedule and run segmentation jobs. This allows you to evaluate data as its passed into Experience Platform, letting audience membership be automatically kept up-to-date.
 
-## Eligible query types {#query-types}
+## Eligible rulesets {#rulesets}
 
 >[!IMPORTANT]
 >
 >In order to use streaming segmentation, you **must** use a merge policy that is "Active on Edge". For more information on merge policies, please read the [merge policies overview](../../profile/merge-policies/overview.md).
 
-A query will be eligible for streaming segmentation if it meets any of the criteria outlined in the following table.
+A ruleset will be eligible for streaming segmentation if it meets any of the criteria outlined in the following table.
 
 >[!NOTE]
 >
@@ -111,14 +116,14 @@ A segment definition will **not** be eligible for streaming segmentation in the 
 - The segment definition includes Adobe Audience Manager (AAM) segments or traits.
 - The segment definition includes multiple entities (multi-entity queries).
 - The segment definition includes a combination of a single event and an `inSegment` event.
-  - For example, chaining the following in a single query: `inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and  CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false))  WHEN(<= 24 hours before now)])`.
+  - For example, chaining the following in a single ruleset: `inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and  CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false))  WHEN(<= 24 hours before now)])`.
 - The segment definition uses "Ignore year" as part of its time constraints.
 
 Please note the following guidelines that apply to streaming segmentation queries:
 
 | Query type | Guideline |
 | ---------- | -------- |
-| Single event query | There are no limits to the lookback window. |
+| Single event ruleset | The lookback window is limited to **one day**. |
 | Query with event history | <ul><li>The lookback window is limited to **one day**.</li><li>A strict time-ordering condition **must** exist between the events.</li><li>Queries with at least one negated event are supported. However, the entire event **cannot** be a negation.</li></ul>|
 
 If a segment definition is modified so it no longer meets the criteria for streaming segmentation, the segment definition will automatically switch from "Streaming" to "Batch".
@@ -133,12 +138,12 @@ For example, let's take the following two sample audiences into account:
 
 | Audience | Schema | Source type | Query definition | Audience ID | 
 | -------- | ------ | ----------- | ---------------- | ----------- |
-| CA Residents | Profile | Batch | Home address is in the state of California | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| California Residents | Profile | Batch | Home address is in the state of California | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
 | Recent checkouts | Experience Event | Streaming | Has at least one checkout in the the last 24 hours | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
 
 If you want to use the batch component in your streaming audience, you'll need to make a reference to the batch audience using segment of segments.
 
-So, an example query that would combine the two audiences together would look as follows:
+So, an example ruleset that would combine the two audiences together would look as follows:
 
 ```
 inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and 
@@ -148,11 +153,26 @@ WHEN(<= 24 hours before now)])
 
 The resulting audience *will* be evaluated using streaming segmentation, since it leverages the batch audience's membership by referring to the batch audience component.
 
+However, if you want to combine two audiences with event data, you **cannot** just combine the two events. You'll need to create both audiences, then create another audience that uses `inSegment` to refer to both of these audiences.
+
+For example, let's say you have two audiences, with both audiences housing experience event schema data:
+
+| Audience | Schema | Source type | Query definition | Audience ID | 
+| -------- | ------ | ----------- | ---------------- | ----------- |
+| Recent abandons | Experience event | Batch | Has at least one abandon event in the last 24 hours | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| Recent checkouts | Experience Event | Streaming | Has at least one checkout in the the last 24 hours | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
+
+In this situation, you'd need to create a third audience as follows:
+
+```
+inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4309-ba59-17d6c5bab6a1")
+```
+
 ## Create audience {#create-audience}
 
 You can create an audience that is evaluated using streaming segmentation using either the Segmentation Service API or through Audience Portal in the UI.
 
-A segment definition can be streaming-enabled if it matches one of the [eligible query types](#eligible-query-types).
+A segment definition can be streaming-enabled if it matches one of the [eligible rulesets](#eligible-rulesets).
 
 >[!BEGINTABS]
 
@@ -263,7 +283,7 @@ A popover appears. Select **[!UICONTROL Build rules]** to enter Segment Builder.
 
 ![The Build rules button is highlighted in the create audience popover.](../images/methods/streaming/select-build-rules.png)
 
-Within Segment Builder, create a segment definition that matches one of the [eligible query types](#eligible-query-types). If the segment definition qualifies for streaming segmentation, you'll be able to select **[!UICONTROL Streaming]** as the **[!UICONTROL Evaluation method]**.
+Within Segment Builder, create a segment definition that matches one of the [eligible rulesets](#eligible-rulesets). If the segment definition qualifies for streaming segmentation, you'll be able to select **[!UICONTROL Streaming]** as the **[!UICONTROL Evaluation method]**.
 
 ![The segment definition is displayed. The evaluation type is highlighted, showing the segment definition can be evaluated using streaming segmentation.](../images/methods/streaming/streaming-evaluation-method.png)
 
