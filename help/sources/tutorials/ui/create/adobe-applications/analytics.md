@@ -32,7 +32,7 @@ It is important to understand the following key terms used throughout this docum
 >* A dataflow that does a 13-month backfill of historical report suite data into data lake. This dataflow ends when the backfill is complete.
 >* A dataflow flow which sends live data to data lake and to [!DNL Real-Time Customer Profile]. This dataflow runs continuously.
 
-In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the the [!UICONTROL Sources] workspace. In the *[UICONTROL Adobe applications]* category, select the Adobe Analytics card and then select **[!UICONTROL Add data]**.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the the [!UICONTROL Sources] workspace. In the *[!UICONTROL Adobe applications]* category, select the Adobe Analytics card and then select **[!UICONTROL Add data]**.
 
 ![The sources catalog with the Adobe Analytics source card selected.](../../../../images/tutorials/create/analytics/catalog.png)
 
