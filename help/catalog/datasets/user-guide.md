@@ -48,6 +48,10 @@ This user guide requires a working understanding of the following components of 
 >title="Dataset retention"
 >abstract="Datalake retention sets rules for how long data is stored and when it should be deleted in different services. This ensures compliance with regulations, managing storage costs, and maintaining data quality."
 
+>[!CONTEXTUALHELP]
+>id="platform_datasets_orchestratedCampaigns_toggle"
+>title="Orchestrated Campaigns"
+>abstract="Enable this toggle to allow the selected dataset to be used in Adobe Journey Optimizer Orchestrated Campaigns. The dataset must use a relational schema and only one dataset can be created per schema."
 
 In the [!DNL Experience Platform] UI, select **[!UICONTROL Datasets]** in the left-navigation to open the **[!UICONTROL Datasets]** dashboard. The dashboard lists all available datasets for your organization. Details are displayed for each listed dataset, including its name, the schema the dataset adheres to, and the status of the most recent ingestion run.
 
