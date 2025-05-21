@@ -84,10 +84,6 @@ Use Adobe Experience Platform Identity Service to create a comprehensive view of
 
 For more information, read the [Identity Service overview](../../identity-service/home.md).
 
-{style="table-layout:auto"}
-
-For more information, read the [Identity Service overview](../../identity-service/home.md).
-
 ## Query Service {#query-service}
 
 Query data in the Adobe Experience Platform data lake using standard SQL with Query Service. Seamlessly combine datasets and generate new ones from your query results to power reporting, enable data science workflows, or facilitate ingestion into Real-Time Customer Profile. For example, you can merge customer transaction data with behavioral data to identify high-value audiences for targeted marketing campaigns.
