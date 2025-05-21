@@ -37,19 +37,20 @@ The following is an example of a [!DNL PostgreSQL] connection string appended wi
 
 In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the *[!UICONTROL Sources]* workspace. Select the appropriate category in the *[!UICONTROL Categories]* panel Alternatively, use the search bar to navigate to the specific source that you want to use.
 
-To use [!DNL PostgreSQL], select the **[!UICONTROL PostgreSQL]** source card under *[!UICONTROL Databases]* and then select **[!UICONTROL Set up]**.
+To use [!DNL PostgreSQL], select the **[!UICONTROL PostgreSQL DB]** source card under *[!UICONTROL Databases]* and then select **[!UICONTROL Set up]**.
 
 >[!TIP]
 >
 >Sources in the sources catalog display the **[!UICONTROL Set up]** option when a given source does not yet have an authenticated account. Once an authenticated account is created, this option changes to **[!UICONTROL Add data]**.
 
-![The sources catalog with the PostgreSQL source card selected.]
+![The sources catalog with the PostgreSQL source card selected.](../../../../images/tutorials/create/postgresql/catalog.png)
+
 
 ## Use an existing account {#existing}
 
 To use an existing account, select **[!UICONTROL Existing account]** and then select the [!DNL PostgreSQL] account that you want to use.
 
-![The existing account interface of the sources workflow.](../../../../images/tutorials/create/postgresql/catalog.png)
+![The existing account interface of the sources workflow.](../../../../images/tutorials/create/postgresql/existing.png)
 
 ## Create a new account {#create}
 
@@ -57,7 +58,7 @@ If you do not have an existing account, then you must create a new account by pr
 
 To create a new account, select **[!UICONTROL New account]** and then provide a name and optionally add a description for your account.
 
-![The new account interface in the sources workflow with an account name and optional description provided.](../../../../images/tutorials/create/postgresql/existing.png)
+![The new account interface in the sources workflow with an account name and optional description provided.](../../../../images/tutorials/create/postgresql/new.png)
 
 ### Connect to Experience Platform on Azure {#azure}
 
@@ -87,7 +88,7 @@ To use basic authentication, select **[!UICONTROL Basic authentication]**, provi
 
 To create a new [!DNL PostgreSQL] account and connect to Experience Platform on AWS, ensure that you are in a VA6 sandbox and then provide the necessary [credentials for authentication](../../../../connectors/databases/postgres.md#aws).
 
-![The new account interface in the sources workflow to connect to AWS.](../../../../images/tutorials/create/postgresql/basic-auth.png)
+![The new account interface in the sources workflow to connect to AWS.](../../../../images/tutorials/create/postgresql/aws.png)
 
 ## Create a dataflow for your [!DNL PostgreSQL] data
 
