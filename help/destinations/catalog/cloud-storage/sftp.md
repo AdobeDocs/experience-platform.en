@@ -68,8 +68,7 @@ When exporting *datasets*, Experience Platform creates a `.parquet` or `.json` f
 
 To ensure successful data exports, you must configure your target SFTP server to allow a sufficient number of concurrent connections. If your SFTP server limits the number of simultaneous connections, you may experience export job failures, especially when exporting multiple audiences or datasets at the same time.
 
-**Recommendation** 
-
+**Recommendation**
 For optimal performance, your SFTP server should allow at least one concurrent connection for each audience or dataset being exported. At a minimum, the server should support at least 30% of the total number of audiences or datasets scheduled for export at the same time.
 
 **Example**  
