@@ -5,6 +5,10 @@ exl-id: 263b8a44-8902-42b9-8390-d7da8e9b5129
 ---
 # Product Support Agent
 
+>[!AVAILABILITY]
+>
+>You have limited-time access to Product Support Agent. Your access to Product Support Agent is temporary and will automatically end on November 30, 2025, unless your company licenses Product Support Agent separately prior to that date. Adobe may revoke your access to Product Support Agent at any time. Please contact your Adobe account representative to learn more about licensing Product Support Agent.
+
 Product Support Agent is a self-serve debugging and troubleshooting capability of AI Assistant that you can use for Adobe Experience Platform features and applications.
 
 You can use Product Support Agent in AI Assistant to seamlessly troubleshoot without leaving your workflows. When needed, support administrators can now use Product Support Agent to create customer support tickets, complete with context and session details from your interactions with AI Assistant. Additionally, you can now check on the latest updates to your support tickets using AI Assistant.
