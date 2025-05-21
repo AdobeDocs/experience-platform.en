@@ -136,7 +136,7 @@ There are instances where multiple logins can occur on a single device:
 | Public kiosk | Travelers at an airport logging on using their loyalty ID to check in bags and print boarding passes. |
 | Call center | Call center personnel log in on a single device on behalf of customers calling customer support to resolve issues. |
 
-![A diagram of some common shared devices.](../images/identity-settings/shared-devices.png)
+![A diagram of some common shared devices.](../images/identity-settings/shared-devices.png "A diagram of some common shared devices."){zoomable="yes"}
 
 In these cases, from a graph standpoint, with no limits enabled, a single ECID will be linked to multiple CRMIDs. 
 
@@ -149,7 +149,7 @@ With [!DNL Identity Graph Linking Rules], you can:
 
 There are also instances of users who provide fake values as phone numbers and/or email addresses when registering. In these cases, if limits are not enabled, then phone/email related identities will end up being linked to multiple different CRMIDs.
 
-![A diagram that represents invalid email or phone scenarios.](../images/identity-settings/invalid-email-phone.png)
+![A diagram that represents invalid email or phone scenarios.](../images/identity-settings/invalid-email-phone.png "A diagram that represents invalid email or phone scenarios."){zoomable="yes"}
 
 With [!DNL Identity Graph Linking Rules], you can:
 
@@ -166,7 +166,7 @@ There are cases where non-unique, erroneous identity values are ingested in the 
 
 These identities could result in the following graphs, where multiple CRMIDs are merged together with the 'bad' identity:
 
-![A graph example of identity data with erroneous or bad identity values.](../images/identity-settings/bad-data.png)
+![A graph example of identity data with erroneous or bad identity values.](../images/identity-settings/bad-data.png "A graph example of identity data with erroneous or bad identity values."){zoomable="yes"}
 
 With [!DNL Identity Graph Linking Rules] you can configure the CRMID as the unique identifier to prevent unwanted profile collapsing due to this type of data.
 
