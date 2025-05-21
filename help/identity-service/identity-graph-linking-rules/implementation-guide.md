@@ -263,7 +263,7 @@ The following graph simulates a "dangling" loginID scenario. In this example, tw
 
 In this example, `{loginID: ID_C}` is left dangling and unlinked to a CRMID. Thus, the person entity that this loginID should be associated with is left ambiguous.
 
-![An example of a graph with a "dangling" loginID scenario.](../images/graph-examples/dangling_example.png "An example of a graph with a "dangling" loginID scenario."){zoomable="yes"}
+![An example of a graph with a "dangling" loginID scenario.](../images/graph-examples/dangling_example.png "An example of a graph with a dangling loginID scenario."){zoomable="yes"}
 
 >[!TAB loginID is linked to a CRMID]
 

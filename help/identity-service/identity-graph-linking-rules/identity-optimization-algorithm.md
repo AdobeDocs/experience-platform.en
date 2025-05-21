@@ -89,7 +89,7 @@ In this example, both CRMID and Email are designated as unique namespaces. At `t
 * However, due to the unique namespace configuration that sets a maximum of one CRMID namespace and one Email namespace per graph, Identity Optimization Algorithm then splits the graph into two.
   * Finally, because John is the last authenticated user, the ECID that represents the laptop, remains linked to his graph instead of Jane's.
 
-![Case one of shared device.](../images/identity-settings/shared-device-case-one.png"Case one of shared device."){zoomable="yes"}
+![Case one of shared device.](../images/identity-settings/shared-device-case-one.png "Case one of shared device."){zoomable="yes"}
 
 >[!TAB Example two]
 
