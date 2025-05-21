@@ -3,7 +3,7 @@ title: Connect MySQL To Experience Platform Using The UI
 description: Learn how to connect your MySQL database to Experience Platform using the UI.
 exl-id: 75e74bde-6199-4970-93d2-f95ec3a59aa5
 ---
-# Create a [!DNL MySQL] source connection in the UI
+# Connect [!DNL MySQL] to Experience Platform using the UI
 
 Read this guide to learn how to connect your [!DNL MySQL] database to Adobe Experience Platform using the sources workspace in the Experience Platform user interface.
 
