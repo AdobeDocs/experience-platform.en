@@ -445,7 +445,7 @@ CRMID: Tom, loginID: ID_D
 
 The following graph simulates a "dangling" loginID scenario. In this example, two different loginIDs are bound to the same ECID. However, `{loginID:ID_C}` is not linked to the CRMID. Therefore, there is no way for Identity Service to detect that these two loginIDs represent two different entities. 
 
-![A dangling loginID scenario.](../images/graph-examples/dangling_example.png "A dangling loginID scenario.""){zoomable="yes"}
+![A dangling loginID scenario.](../images/graph-examples/dangling_example.png "A dangling loginID scenario."){zoomable="yes"}
 
 **Graph simulation events input**
 
