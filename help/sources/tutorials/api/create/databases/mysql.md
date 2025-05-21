@@ -118,11 +118,12 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "server": "{SERVER}",
-              "database": "{DATABASE}",
-              "username": "{USERNAME}",
-              "password": "{PASSWORD}",
-              "sslMode": "{SSLMODE}"
+              "server": "localhost",
+              "port": "443",
+              "database": "mysql-acme",
+              "username": "acme",
+              "password": "xxxx",
+              "sslMode": "DISABLED"
           }
       },
       "connectionSpec": {
@@ -196,11 +197,12 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "server": "{SERVER}",
-              "database": "{DATABASE}",
-              "username": "{USERNAME}",
-              "password": "{PASSWORD}",
-              "sslMode": "{SSLMODE}"
+              "server": "localhost",
+              "port": "443",
+              "database": "mysql-acme",
+              "username": "acme",
+              "password": "xxxx",
+              "sslMode": "false"
           }
       },
       "connectionSpec": {
@@ -216,7 +218,7 @@ curl -X POST \
 | `auth.params.database` | The name of your database. |
 | `auth.params.username` | The username that corresponds with your database. |
 | `auth.params.password` | The password that corresponds with your database. |
-| `auth.params.sslMode` | The method by which data is encrypted during data transfer. |
+| `auth.params.sslMode` | A boolean value that controls whether SSL is enforced or not, depending on your server support. This configuration defaults to `false`. |
 | `connectionSpec.id` | The [!DNL MySQL] connection specification ID is: `26d738e0-8963-47ea-aadf-c60de735468a`. |
 
 +++

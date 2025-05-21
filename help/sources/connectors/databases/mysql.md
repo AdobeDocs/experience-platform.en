@@ -1,7 +1,7 @@
 ---
 title: MySQL Source Connector Overview
 description: Learn how to connect MySQL to Adobe Experience Platform using APIs or the user interface.
-last-substantial-update: 2025-05-17
+last-substantial-update: 2025-05-20
 exl-id: a18e8e69-880f-4bee-b339-726091d6f858
 ---
 # [!DNL MySQL]
@@ -63,7 +63,7 @@ You must provide values for the following credentials to connect [!DNL MySQL] to
 | `username` | The name of your database. |
 | `password` | The username that corresponds with your database. |
 | `database` | The password that corresponds with your database. |
-| `sslMode` | The [!DNL Secure Sockets Layer] (SSL) method to be applied to your connection. The available values are: <ul><li>`DISABLED`: Use this option to disable SSL. If your server requires an SSL configuration, then the connection will fail</li><li>`PREFERRED`: Use this option to prefer SSL connections given that the server supports them. This option also allows for non-SSL connections.</li><li>`REQUIRED`: Use this option to make SSL connections mandatory. If the server does not support SSL, then the connections will fail.</li><li>`Verify-Ca`: Use this option to verify server certificates while failing connections if the server does not support SSL.</li><li>`Verify Identity`: Use this option to verify server certificates with the host's name while failing connections if the server does not support SSL.</li></ul> |
+| `sslMode` | A boolean value that controls whether SSL is enforced or not, depending on your server support. This configuration defaults to `false`. |
 | `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL MySQL] is `26d738e0-8963-47ea-aadf-c60de735468a`. **Note**: This credential is only required when connecting through the [!DNL Flow Service] API. |
 
 ## Connect [!DNL MySQL] to Experience Platform using APIs
