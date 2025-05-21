@@ -1,14 +1,36 @@
 ---
 audience: user
 user-guide-title: Adobe Experience Platform Release Notes
-breadcrumb-title: Platform Release Notes
+breadcrumb-title: Experience Platform Release Notes
 user-guide-description: Find monthly release notes for Adobe Experience Platform.
 ---
 
 # Adobe Experience Platform release notes {#release-notes}
 
-* [Current Platform Release Notes](latest/latest.md)
+* [Current Experience Platform Release Notes](latest/latest.md)
+* 2025 {#2025}
+  * [May 2025](2025/may-2025.md)
+  * [April 2025](2025/april-2025.md)
+  * [March 2025](2025/march-2025.md)
+  * [February 2025](2025/february-2025.md)
+* 2024 {#2024}
+  * [November 2024](2024/november-2024.md)
+  * [October 2024](2024/october-2024.md)
+  * [September 2024](2024/september-2024.md)
+  * [August 2024](2024/august-2024.md)
+  * [July 2024](2024/july-2024.md)
+  * [June 2024](2024/june-2024.md)
+  * [May 2024](2024/may-2024.md)
+  * [April 2024](2024/april-2024.md)
+  * [March 2024](2024/march-2024.md)
+  * [February 2024](2024/february-2024.md)
+  * [January 2024](2024/january-2024.md)
 * 2023 {#2023}
+  * [October 2023](2023/october-2023.md)
+  * [September 2023](2023/september-2023.md)
+  * [August 2023](2023/august-2023.md)
+  * [July 2023](2023/july-2023.md)
+  * [June 2023](2023/june-2023.md)
   * [May 2023](2023/may-2023.md)
   * [April 2023](2023/april-2023.md)
   * [March 2023](2023/march-2023.md)

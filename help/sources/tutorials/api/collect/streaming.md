@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;cloud storage data;streaming d
 solution: Experience Platform
 title: Create a Streaming Dataflow for Raw Data Using the Flow Service API
 type: Tutorial
-description: This tutorial covers the steps for retrieving streaming data and bringing them in to Platform using source connectors and APIs.
+description: This tutorial covers the steps for retrieving streaming data and bringing them in to Experience Platform using source connectors and APIs.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
 ---
 # Create a streaming dataflow for raw data using the [!DNL Flow Service] API
@@ -18,12 +18,12 @@ This tutorial requires you to have a working understanding of the following comp
   - [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
   - [Schema Registry developer guide](../../../../xdm/api/getting-started.md): Includes important information that you need to know in order to successfully perform calls to the Schema Registry API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the Accept header and its possible values).
 - [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is the system of record for data location and lineage within Experience Platform.
-- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): Streaming ingestion for Platform provides users a method to send data from client and server-side devices to Experience Platform in real time..
-- [Sandboxes](../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): Streaming ingestion for Experience Platform provides users a method to send data from client and server-side devices to Experience Platform in real time..
+- [Sandboxes](../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-### Using Platform APIs
+### Using Experience Platform APIs
 
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../landing/api-guide.md).
+For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../../landing/api-guide.md).
 
 ### Create a source connection {#source}
 
@@ -35,7 +35,7 @@ This tutorial also requires you to have a valid source connection ID for a strea
 
 ## Create a target XDM schema {#target-schema}
 
-In order for the source data to be used in Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create a Platform dataset in which the source data is contained. This target XDM schema also extends the XDM [!DNL Individual Profile] class.
+In order for the source data to be used in Experience Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create an Experience Platform dataset in which the source data is contained. This target XDM schema also extends the XDM [!DNL Individual Profile] class.
 
 To create a target XDM schema, make a POST request to the `/schemas` endpoint of the [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
@@ -198,7 +198,7 @@ A successful response returns an array containing the ID of the newly created da
 
 ## Create a target connection {#target-connection}
 
-Target connections create and manage a destination connection to Platform or any location where the transferred data will land. Target connections contain information regarding data destination, data format, and the target connection ID required to create a dataflow. Target connection instances are specific to a tenant and organization.
+Target connections create and manage a destination connection to Experience Platform or any location where the transferred data will land. Target connections contain information regarding data destination, data format, and the target connection ID required to create a dataflow. Target connection instances are specific to a tenant and organization.
 
 To create a target connection, make a POST request to the `/targetConnections` endpoint of the [!DNL Flow Service] API. As part of the request, you must provide the data format, the `dataSetId` retrieved in the previous step, and the fixed connection specification ID tied to [!DNL Data Lake]. This ID is `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
@@ -240,9 +240,9 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| `connectionSpec.id` | The connection specification ID used to connect to the [!DNL Data Lake]. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | The specified format of the data you are bringing to [!DNL Data Lake]. |
-| `params.dataSetId` | The ID of the target dataset retrieved in the previous step. |
+| `data.format` | The specified format of the data you are bringing to data lake. |
+| `params.dataSetId` | The ID of the target dataset generated in the previous step. **Note**: You must provide a valid dataset ID when creating a target connection. An invalid dataset ID will result in an error. |
+| `connectionSpec.id` | The connection spec ID used to connect to the data lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Response**
 
@@ -259,7 +259,7 @@ A successful response returns the new target connection's unique identifier (`id
 
 In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema that the target dataset adheres to.
 
-To create a mapping set, make a POST request to the `mappingSets` endpoint of the [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) while providing your target XDM schema `$id` and the details of the mapping sets you want to create.
+To create a mapping set, make a POST request to the `mappingSets` endpoint of the [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/) while providing your target XDM schema `$id` and the details of the mapping sets you want to create.
 
 **API format**
 
@@ -319,7 +319,7 @@ A successful response returns details of the newly created mapping including its
 
 ## Retrieve a list of dataflow specifications {#specs}
 
-A dataflow is responsible for collecting data from sources and bringing them into Platform. In order to create a dataflow, you must first obtain the dataflow specifications by performing a GET request to the [!DNL Flow Service] API.
+A dataflow is responsible for collecting data from sources and bringing them into Experience Platform. In order to create a dataflow, you must first obtain the dataflow specifications by performing a GET request to the [!DNL Flow Service] API.
 
 **API format**
 
@@ -476,9 +476,91 @@ A successful response returns the ID (`id`) of the newly created dataflow.
 }
 ```
 
+## Post data for ingestion
+
+View the sample payload below for examples of raw or XDM-compliant json that you can send for ingestion.
+
+>[!NOTE]
+>
+>You must add a delay of at least ~5 minutes between creation of dataflow and ingesting any streaming data. This allows the dataflow to be fully enabled, before any data is ingested.
+
+The following examples apply to all of:
+
+- [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
+- [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
+- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
+
+>[!BEGINTABS]
+
+>[!TAB Raw data]
+
+```json
+'{
+      "name": "Johnson Smith",
+      "location": {
+          "city": "Seattle",
+          "country": "United State of America",
+          "address": "3692 Main Street"
+      },
+      "gender": "Male",
+      "birthday": {
+          "year": 1984,
+          "month": 6,
+          "day": 9
+      }
+  }'
+```
+
+>[!TAB XDM data]
+
+```json
+{
+  "header": {
+    "schemaRef": {
+      "id": "https://ns.adobe.com/aepstreamingservicesint/schemas/73cae7e6db06ebca535cd973e3ece85e66253962f504e7d8",
+      "contentType": "application/vnd.adobe.xed-full-notext+json; version=1.0"
+    }
+  },
+  "body": {
+    "xdmMeta": {
+      "schemaRef": {
+        "id": "https://ns.adobe.com/aepstreamingservicesint/schemas/73cae7e6db06ebca535cd973e3ece85e66253962f504e7d8",
+        "contentType": "application/vnd.adobe.xed-full-notext+json; version=1.0"
+      }
+    },
+    "xdmEntity": {
+      "_id": "acme",
+      "workEmail": {
+        "address": "mike@acme.com",
+        "primary": true,
+        "type": "work",
+        "status": "active"
+      },
+      "person": {
+        "gender": "male",
+        "name": {
+          "firstName": "Mike",
+          "lastName": "Wazowski"
+        },
+        "birthDate": "1985-01-01"
+      },
+      "identityMap": {
+        "ecid": [
+          {
+            "id": "01262118050522051420082102000000000000"
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+>[!ENDTABS]
+
 ## Next steps
 
-By following this tutorial, you have created a dataflow to collect streaming data from your streaming connector. Incoming data can now be used by downstream Platform services such as [!DNL Real-Time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
+By following this tutorial, you have created a dataflow to collect streaming data from your streaming connector. Incoming data can now be used by downstream Experience Platform services such as [!DNL Real-Time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
 - [Real-Time Customer Profile overview](../../../../profile/home.md)
 - [Data Science Workspace overview](../../../../data-science-workspace/home.md)

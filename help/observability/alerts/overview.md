@@ -9,17 +9,17 @@ exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
 
 >[!NOTE]
 >
->Alerts are not supported in non-production sandboxes. In order to subscribe to alerts, you must ensure that you are using a production sandbox.
+>Since alerts are supported in both production and development sandboxes, you can subscribe to them in any sandbox. When a sandbox is reset, all subscription alerts will also be reset, and when a sandbox is deleted, all subscription alerts will be deleted.
 
 Adobe Experience Platform allows you to subscribe to event-based alerts regarding Adobe Experience Platform activities. Alerts reduce or eliminate the need to poll the [[!DNL Observability Insights] API](../api/overview.md) in order to check if a job has completed, if a certain milestone within a workflow has been reached, or if any errors have occurred.
 
-When a certain set of conditions in your Platform operations is reached (such as a potential problem when the system breaches a threshold), Platform can deliver alert messages to any users in your organization who have subscribed to them. These messages can repeat over a pre-defined time interval until the alert has been resolved.
+When a certain set of conditions in your Experience Platform operations is reached (such as a potential problem when the system breaches a threshold), Experience Platform can deliver alert messages to any users in your organization who have subscribed to them. These messages can repeat over a pre-defined time interval until the alert has been resolved.
 
 This document provides an overview of alerts in Adobe Experience Platform, including the structure of how alert rules are defined.
 
 ## One-time alerts vs. repeating alerts
 
-Platform alerts can be sent one time, or they can repeat over a pre-defined interval until they are resolved. The use cases of each of these options are intended to differ in the following ways:
+Experience Platform alerts can be sent one time, or they can repeat over a pre-defined interval until they are resolved. The use cases of each of these options are intended to differ in the following ways:
 
 | One-time alert | Repeating alert |
 | --- | --- |
@@ -48,19 +48,19 @@ An alert can be broken down into the following components:
 Alerts can be received and managed through two channels:
 
 * [Adobe I/O Events](#events)
-* [Platform UI](#ui)
+* [Experience Platform UI](#ui)
 
 ### I/O Events {#events}
 
-Alerts can be sent to a configured webhook to facilitate efficient automation of activity monitoring. In order to receive alerts via webhook, you must register your webhook for Platform alerts in Adobe Developer Console. See the guide on [subscribing to Adobe I/O Event notifications](./subscribe.md) for specific steps.
+Alerts can be sent to a configured webhook to facilitate efficient automation of activity monitoring. In order to receive alerts via webhook, you must register your webhook for Experience Platform alerts in Adobe Developer Console. See the guide on [subscribing to Adobe I/O Event notifications](./subscribe.md) for specific steps.
 
-### Platform UI {#ui}
+### Experience Platform UI {#ui}
 
-The Platform UI allows you to view received alerts and manage alert rules. The following video provides an introduction to these capabilities.
+The Experience Platform UI allows you to view received alerts and manage alert rules. The following video provides an introduction to these capabilities.
 
 >[!VIDEO](https://video.tv.adobe.com/v/336218?quality=12&learn=on)
 
-To work with alerts in the Platform UI, you must have the following access control permissions enabled through Adobe Admin Console:
+To work with alerts in the Experience Platform UI, you must have the following access control permissions enabled through Adobe Admin Console:
 
 | Permission | Description |
 | --- | --- |
@@ -75,9 +75,9 @@ To work with alerts in the Platform UI, you must have the following access contr
 
 >[!NOTE]
 >
->For more information on how to manage permissions in Platform, refer to the [access control documentation](../../access-control/ui/overview.md).
+>For more information on how to manage permissions in Experience Platform, refer to the [access control documentation](../../access-control/ui/overview.md).
 
-With the View Alerts permission, can view received alerts by selecting the the bell icon (![Bell Icon](../images/alerts/overview/icon.png)) in the top-right corner.
+With the View Alerts permission, can view received alerts by selecting the bell icon (![Bell Icon](/help/images/icons/bell.png)) in the top-right corner.
 
 ![](../images/alerts/overview/ui.png)
 
@@ -89,4 +89,4 @@ In addition, the [!UICONTROL Alerts] tab in the UI allows individual users to su
 
 ## Next steps
 
-By reading this document, you have been introduced to Platform alerts and their role in the Platform ecosystem. Refer to the process documentation linked to throughout this overview to learn how to receive and manage alerts.
+By reading this document, you have been introduced to Experience Platform alerts and their role in the Experience Platform ecosystem. Refer to the process documentation linked to throughout this overview to learn how to receive and manage alerts.

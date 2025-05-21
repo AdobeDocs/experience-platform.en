@@ -1,8 +1,8 @@
 ---
-description: This page exemplifies the API call used to retrieve details about a destination publishing request through Adobe Experience Platform Destination SDK. 
+description: This page exemplifies the API call used to retrieve details about a destination publishing request through Adobe Experience Platform Destination SDK.
 title: Retrieve a destination publishing request
+exl-id: fceef12d-a52c-4259-a91e-7af88b132800
 ---
-
 # Retrieve a destination publishing request
 
 >[!IMPORTANT]
@@ -177,4 +177,4 @@ If you passed a `DESTINATION_ID` in the API call, the response returns HTTP stat
 
 ## API error handling
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.

@@ -3,6 +3,7 @@ keywords: event forwarding extension;pinterest;pinterest event forwarding extens
 title: Pinterest event forwarding extension
 description: This Adobe Experience Platform event forwarding extension allows you to ingest events into Pinterest for your business requirements.
 last-substantial-update: 2023-04-27
+exl-id: 44f38a9b-0a28-4b51-bead-ee460eb8405e
 ---
 # [!DNL Pinterest] event forwarding extension
 
@@ -63,7 +64,7 @@ On the next screen, input the [!UICONTROL Ads Account Id] and [!UICONTROL Conver
 
 Once all your data elements are set up, you can start creating event forwarding rules that determine when and how your events will be sent to [!DNL Pinterest].
 
-Create a new [rule](../../../ui/managing-resources/rules.md) in your event forwarding property. Under **[!UICONTROL Actions]**, add a new action and set the extension to **[!UICONTROL Pinterest]**. To send Adobe Experience Edge Network events to [!DNL Pinterest], set the **[!UICONTROL Action Type]** to **[!UICONTROL Send Event].**
+Create a new [rule](../../../ui/managing-resources/rules.md) in your event forwarding property. Under **[!UICONTROL Actions]**, add a new action and set the extension to **[!UICONTROL Pinterest]**. To send Edge Network events to [!DNL Pinterest], set the **[!UICONTROL Action Type]** to **[!UICONTROL Send Event].**
 
 ![The [!DNL Pinterest] [!UICONTROL Send Event] rule creation.](../../../images/extensions/server/pinterest/rule.png)
 

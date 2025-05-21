@@ -1,8 +1,8 @@
 ---
 description: Learn how to create input fields in the Experience Platform UI that allow your users to specify various information relevant to how to connect and export data to your destination.
 title: Customer data fields
+exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
 ---
-
 # Configure user input through customer data fields
 
 When connecting to your destination in the Experience Platform UI, you might need your users to provide specific configuration details or select specific options that you make available to them. In Destination SDK, these options are called customer data fields.
@@ -47,10 +47,10 @@ When creating your own customer data fields, you can use the parameters describe
 
 |Parameter | Type | Required/Optional |Description|
 |---------|----------|------|---|
-|`name` | String | Required| Provide a name for the custom field you are introducing. This name is not visible in the Platform UI, unless the `title` field is empty or missing.|
+|`name` | String | Required| Provide a name for the custom field you are introducing. This name is not visible in the Experience Platform UI, unless the `title` field is empty or missing.|
 |`type` | String | Required |Indicates the type of the custom field you are introducing. Accepted values: <ul><li>`string`</li><li>`object`</li><li>`integer`</li></ul> |
-|`title` | String | Optional |Indicates the name of the field, as it is seen by customers in the Platform UI. If this field is empty or missing, the UI inherits the field name from the `name` value. |
-|`description` | String | Optional | Provide a description for the custom field. This description is not visible in the Platform UI. |
+|`title` | String | Optional |Indicates the name of the field, as it is seen by customers in the Experience Platform UI. If this field is empty or missing, the UI inherits the field name from the `name` value. |
+|`description` | String | Optional | Provide a description for the custom field. This description is not visible in the Experience Platform UI. |
 |`isRequired` | Boolean | Optional |Indicates whether users are required to provide a value for this field in the destination configuration workflow. |
 |`pattern` | String |Optional| Enforces a pattern for the custom field, if needed. Use regular expressions to enforce a pattern. For example, if your customer IDs don't include numbers or underscores, enter `^[A-Za-z]+$` in this field.|
 |`enum` | String |Optional| Renders the custom field as a dropdown menu and lists the options available to the user.|
@@ -61,7 +61,7 @@ When creating your own customer data fields, you can use the parameters describe
 
 {style="table-layout:auto"}
 
-In the example below, the `customerDataFields` section defines two fields that users must input in the Platform UI when connecting to the destination:
+In the example below, the `customerDataFields` section defines two fields that users must input in the Experience Platform UI when connecting to the destination:
 
 * `Account ID`: A user account ID for your destination platform.
 * `Endpoint region`: The regional endpoint of the API they will connect to. The `enum` section creates a drop-down menu with the values defined within available for the users to select.
@@ -97,7 +97,7 @@ The resulting UI experience is shown in the image below.
 
 ## Destination connection names and descriptions {#names-description}
 
-When creating a new destination, Destination SDK automatically adds **[!UICONTROL Name]** and **[!UICONTROL Description]** fields to the destination connection screen in the Platform UI. As you can see in the example above, the **[!UICONTROL Name]** and **[!UICONTROL Description]** fields are rendered in the UI without being included in the customer data fields configuration.
+When creating a new destination, Destination SDK automatically adds **[!UICONTROL Name]** and **[!UICONTROL Description]** fields to the destination connection screen in the Experience Platform UI. As you can see in the example above, the **[!UICONTROL Name]** and **[!UICONTROL Description]** fields are rendered in the UI without being included in the customer data fields configuration.
 
 >[!IMPORTANT]
 >
@@ -105,7 +105,7 @@ When creating a new destination, Destination SDK automatically adds **[!UICONTRO
 
 ## Order customer data fields {#ordering}
 
-The order in which you add the customer data fields in the destination configuration is reflected in the Platform UI.
+The order in which you add the customer data fields in the destination configuration is reflected in the Experience Platform UI.
 
 For example, the configuration below is reflected accordingly in the UI, with the options showing up in the order **[!UICONTROL Name]**, **[!UICONTROL Description]**, **[!UICONTROL Bucket name]**, **[!UICONTROL Folder path]**, **[!UICONTROL File Type]**, **[!UICONTROL Compression format]**.
 
@@ -247,6 +247,145 @@ To do this, use the `namedEnum` object as shown below and configure a `default` 
 
 ![Screen recording showing an example of dropdown selectors created with the configuration shown above.](../../assets/functionality/destination-configuration/customer-data-fields-dropdown.gif)
 
+## Create dynamic dropdown selectors for customer data fields {#dynamic-dropdown-selectors}
+
+For situations where you want to dynamically call an API and use the response to dynamically populate the options in a dropdown menu, you can use a dynamic dropdown selector. 
+
+The dynamic dropdown selectors look identical to the [regular dropdown selectors](#dropdown-selectors) in the UI. The only difference is the values are dynamically retrieved from an API.
+
+To create a dynamic dropdown selector, you must configure two components:
+
+**Step 1.** [Create a destination server](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) with a `responseFields` template for the dynamic API call, as shown below.
+
+```json
+{
+   "name":"Server for dynamic dropdown",
+   "destinationServerType":"URL_BASED",
+   "urlBasedDestination":{
+      "url":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":" <--YOUR-API-ENDPOINT-PATH--> "
+      }
+   },
+   "httpTemplate":{
+      "httpMethod":"GET",
+      "headers":[
+         {
+            "header":"Authorization",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"My Bearer Token"
+            }
+         },
+         {
+            "header":"x-integration",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"{{customerData.integrationId}}"
+            }
+         },
+         {
+            "header":"Accept",
+            "value":{
+               "templatingStrategy":"NONE",
+               "value":"application/json"
+            }
+         }
+      ]
+   },
+   "responseFields":[
+      {
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{% set list = [] %} {% for record in response.body %} {% set list = list|merge([{'name' : record.name, 'value' : record.id }]) %} {% endfor %}{{ {'list': list} | toJson | raw }}",
+         "name":"list"
+      }
+   ]
+}
+```
+
+**Step 2.** Use the `dynamicEnum` object as shown below. In the example below, the `User` dropdown is retrieved using the dynamic server.
+
+
+```json {line-numbers="true" highlight="13-21"}
+"customerDataFields": [
+  {
+    "name": "integrationId",
+    "title": "Integration ID",
+    "type": "string",
+    "isRequired": true
+  },
+  {
+    "name": "userId",
+    "title": "User",
+    "type": "string",
+    "isRequired": true,
+    "dynamicEnum": {
+      "queryParams": [
+        "integrationId"
+      ],
+      "destinationServerId": "<~dynamic-field-server-id~>",
+      "authenticationRule": "CUSTOMER_AUTHENTICATION",
+      "value": "$.list",
+      "responseFormat": "NAME_VALUE"
+    }
+  }
+]
+```
+
+Set the `destinationServerId` parameter to the ID of the destination server that you created at step 1. You can see the destination server ID in the response of the [retrieve a destination server configuration](../../authoring-api/destination-server/retrieve-destination-server.md) API call.
+
+## Create nested customer data fields {#nested-fields}
+
+You can create nested customer data fields for complex integration patterns. This allows you to chain a series of selections for the customer. 
+
+For example, you can add nested customer data fields to require customers to select an integration type with your destination, followed immediately by another selection. The second selection is a nested field within the integration type.
+
+To add a nested field, use the `properties` parameter as shown below. In the configuration example below, you can see three separate nested fields within the **Yourdestination - Integration Specific Settings** customer data field.
+
+>[!TIP]
+>
+>Starting with the April 2024 release, you can set an `isRequired` parameter on nested fields. For example, in the configuration snippet below, the first two nested fields are marked as required (highlighted line xxx) and customers cannot proceed unless they select a value for the field. Read more about required fields in the [supported parameters](#supported-parameters) section.
+
+```json {line-numbers="true" highlight="11,20"}
+
+    {
+      "name": "yourdestination",
+      "title": "Yourdestination - Integration Specific Settings",
+      "type": "object",
+      "properties": [
+        {
+          "name": "agreement",
+          "title": "Advertiser data destination terms agreement. Enter I AGREE.",
+          "type": "string",
+          "isRequired": true,
+          "pattern": "I AGREE",
+          "readOnly": false,
+          "hidden": false
+        },
+        {
+          "name": "account-name",
+          "title": "Account name",
+          "type": "string",
+          "isRequired": true,
+          "readOnly": false,
+          "hidden": false
+        },
+        {
+          "name": "email",
+          "title": "Email address",
+          "type": "string",
+          "isRequired": false,
+          "pattern": "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$",
+          "readOnly": false,
+          "hidden": false
+        }
+      ],
+      "isRequired": false,
+      "readOnly": false,
+      "hidden": false,
+
+```
+
 ## Create conditional customer data fields {#conditional-options}
 
 You can create conditional customer data fields, which are displayed in the activation workflow only when users select a certain option.
@@ -265,7 +404,7 @@ To set a field as conditional, use the `conditional` parameter as shown below:
 }
 ```
 
-In a wider context, you can see the `conditional` field being used in the destination configuration below, alongside the `fileType` string and the `csvOptions` object in which it is defined.
+In a wider context, you can see the `conditional` field being used in the destination configuration below, alongside the `fileType` string and the `csvOptions` object in which it is defined. The conditional fields are defined in the `properties` parameter.
 
 ```json {line-numbers="true" highlight="3-15, 21-25"}
 "customerDataFields":[
@@ -416,7 +555,7 @@ Below, you can see the resulting UI screen, based on the configuration above. Wh
 
 ## Accessing templatized customer data fields {#accessing-templatized-fields}
 
-When your destination requires user input, you must provide a selection of customer data fields to your users, which they can fill in through the Platform UI. Then, you must configure your destination server to correctly read the user input from the customer data fields. This is done through templatized fields.
+When your destination requires user input, you must provide a selection of customer data fields to your users, which they can fill in through the Experience Platform UI. Then, you must configure your destination server to correctly read the user input from the customer data fields. This is done through templatized fields.
 
 Templatized fields use the format `{{customerData.fieldName}}`, where `fieldName` is the name of the customer data field that you are reading information from. All templatized customer data fields are preceded by `customerData.` and enclosed within double braces `{{ }}`.
 
@@ -470,12 +609,12 @@ For more information about how to configure your destination server to read temp
 
 ## Next steps {#next-steps}
 
-After reading this article, you should have a better understanding of how you can allow your users to input information in the Experience Platform UI through customer data fields. You now also know how to select the right customer data field for your use case, and configure, order, and group customer data fields in the Platform UI.
+After reading this article, you should have a better understanding of how you can allow your users to input information in the Experience Platform UI through customer data fields. You now also know how to select the right customer data field for your use case, and configure, order, and group customer data fields in the Experience Platform UI.
 
 To learn more about the other destination components, see the following articles:
 
 * [Customer authentication](customer-authentication.md)
-* [OAuth2 authentication](oauth2-authentication.md)
+* [OAuth2 authorization](oauth2-authorization.md)
 * [UI attributes](ui-attributes.md)
 * [Schema configuration](schema-configuration.md)
 * [Identity namespace configuration](identity-namespace-configuration.md)

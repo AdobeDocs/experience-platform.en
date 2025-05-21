@@ -13,7 +13,7 @@ Adobe Experience Platform is continuously enhanced to meet the needs of all type
 
 The Experience Platform user interface meets required contrast ratios for normal text, graphics, and UI components. The colors of the user interface have also been chosen to support accessibility for all users, including those with visual disabilities. 
 
-In Platform, UI elements that are clickable or actionable with a pointer can also be engaged using a keyboard. This includes the left navigation, video players, tables, and more.
+In , UI elements that are clickable or actionable with a pointer can also be engaged using a keyboard. This includes the left navigation, video players, tables, and more.
 
 Experience Platform strives to meet international accessibility standards, including the Web Content Accessibility Guidelines 2.1 Level A and Level AA and the Web Accessibility Initiative - Accessible Rich Internet Applications (WAI-ARIA) web standards.
 
@@ -35,13 +35,13 @@ With the left navigation in focus, up and down arrow keys navigate to each item 
 
 ![The Experience Platform left navigation with Sources selected.](images/left-navigation-sources.png)
 
-Some features within Platform are not enabled for all users. These items appear in the navigation but are not able to be selected. When navigating with a keyboard, these items are skipped during arrow navigation and cannot be selected using **Enter (Return)**.
+Some features within Experience Platform are not enabled for all users. These items appear in the navigation but are not able to be selected. When navigating with a keyboard, these items are skipped during arrow navigation and cannot be selected using **Enter (Return)**.
 
-![Sections of the Experience Platform left navigation that are not enabled for the user are not able to be selected.](images/left-navigation-sections-disabled.png)
+![Sections of the Experience Platform left navigation that are not enabled for the user are not able to be selected.](images/left-navigation-sections-disabled.png)  
 
 ## Embedded video dialog
 
-Videos can be viewed within Experience Platform by using keyboard navigation to highlight and select an available video link. This opens an embedded video dialog within the Platform UI.
+Videos can be viewed within Experience Platform by using keyboard navigation to highlight and select an available video link. This opens an embedded video dialog within the Experience Platform UI.
 
 ![A blue border appearing around a selected element to indicate that focus is applied.](images/profile-overview-tab.png)
 
@@ -136,6 +136,10 @@ The following accessibility features are available in the Query Service editor:
 
 * Color contrast in the Query Service editor UI meets accessibility compliance.
 * Keyboard navigation is supported outside of the editor UI. The editor UI is an embedded Code Mirror.
+
+>[!NOTE]
+>
+>The Query editor does not handle the **Tab** key by default. To invoke **Tab** functionality while in the editor, you must press the **Escape** key, and then press **Tab** directly after it. Press **Tab** again, to move focus beyond the editor.
 
 ## System View tab in Sources and Destinations
 

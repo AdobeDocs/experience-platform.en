@@ -1,16 +1,12 @@
 ---
-keywords: Experience Platform;home;popular topics;
-title: (Beta) Mixpanel Source Connector Overview
+title: Mixpanel Source Connector Overview
 description: Learn how to connect Mixpanel to Adobe Experience Platform using APIs or the user interface.
+last-substantial-update: 2023-06-21
 exl-id: 7eb605f6-8580-40b7-a9b3-96b9c3444f5d
 ---
-# (Beta) [!DNL Mixpanel]
+# [!DNL Mixpanel]
 
->[!NOTE]
->
->The [!DNL Mixpanel] source is in beta. See the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
-
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
 Experience Platform provides support for ingesting data from a third-party analytics application. Support for analytics providers include [!DNL Mixpanel].
 
@@ -24,7 +20,7 @@ A list of IP addresses must be added to an allow list prior to working with sour
 
 ## Authenticate your [!DNL Mixpanel] account
 
-This section outlines prerequisite steps to complete in order to authenticate your account and bring your [!DNL Mixpanel] data to Platform.
+This section outlines prerequisite steps to complete in order to authenticate your account and bring your [!DNL Mixpanel] data to Experience Platform.
 
 In order to create a [!DNL Mixpanel] source connection and dataflow, you must first have a valid [!DNL Mixpanel] account. If you do not have a valid [!DNL Mixpanel] account, see the [Mixpanel register](https://mixpanel.com/register/) page to create your account.
 
@@ -40,17 +36,17 @@ Next, navigate to the [!DNL Service Accounts] tab in the [!DNL Project Settings]
 
 ![Mixpanel Service Account](../../images/tutorials/create/mixpanel-export-events/mixpanel-service-account.png)
 
-Finally, create a Platform [schema](../../../xdm/schema/composition.md) required for the [!DNL Mixpanel Event Export API]. For more information on the mappings required for your schema, see the guide on [creating a [!DNL Mixpanel] source connection in the UI](../../tutorials/ui/create/analytics/mixpanel.md#additional-resources).
+Finally, create an Experience Platform [schema](../../../xdm/schema/composition.md) required for the [!DNL Mixpanel Event Export API]. For more information on the mappings required for your schema, see the guide on [creating a [!DNL Mixpanel] source connection in the UI](../../tutorials/ui/create/analytics/mixpanel.md#additional-resources).
 
 ![Create Schema](../../images/tutorials/create/mixpanel-export-events/schema.png)
 
-## Connect [!DNL Mixpanel] to Platform using APIs
+## Connect [!DNL Mixpanel] to Experience Platform using APIs
 
-The documentation below provides information on how to connect [!DNL Mixpanel] to Platform using APIs or the user interface:
+The documentation below provides information on how to connect [!DNL Mixpanel] to Experience Platform using APIs or the user interface:
 
 * [Create a source connection and a dataflow for [!DNL Mixpanel] using the Flow Service API](../../tutorials/api/create/analytics/mixpanel.md)
 
-## Connect [!DNL Mixpanel] to Platform using the UI
+## Connect [!DNL Mixpanel] to Experience Platform using the UI
 
 * [Create a [!DNL Mixpanel] source connection in the UI](../../tutorials/ui/create/analytics/mixpanel.md)
 * [Create a dataflow for a customer success source connection in the UI](../../tutorials/ui/dataflow/analytics.md)

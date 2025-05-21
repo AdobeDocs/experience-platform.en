@@ -1,8 +1,8 @@
 ---
-description: This page exemplifies the API call used to update an existing destination server configuration through Adobe Experience Platform Destination SDK. 
+description: This page exemplifies the API call used to update an existing destination server configuration through Adobe Experience Platform Destination SDK.
 title: Update a destination server configuration
+exl-id: 579d2cc1-5110-4fba-9dcc-ff4b8d259827
 ---
-
 # Update a destination server configuration
 
 This page exemplifies the API request and payload that you can use to update an existing destination server configuration, using the `/authoring/destination-servers` API endpoint.
@@ -92,7 +92,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 |`urlBasedDestination.url.value` | String | *Required.* Fill in the address of the API endpoint that Experience Platform should connect to. |
 |`httpTemplate.httpMethod` | String | *Required.* The method that Adobe will use in calls to your server. Options are `GET`, `PUT`, `PUT`, `DELETE`, `PATCH`. |
 |`httpTemplate.requestBody.templatingStrategy` | String | *Required.* Use `PEBBLE_V1`. |
-|`httpTemplate.requestBody.value` | String | *Required.* This string is the character-escaped version that transforms the data of Platform customers to the format your service expects. <br> <ul><li> For information on how to write the template, read the [Using templating section](../../functionality/destination-server/message-format.md#using-templating). </li><li> For more information about character escaping, refer to the [RFC JSON standard, section seven](https://tools.ietf.org/html/rfc8259#section-7). </li><li> For an example of a simple transformation, refer to the [Profile Attributes](../../functionality/destination-server/message-format.md#attributes) transformation. </li></ul> |
+|`httpTemplate.requestBody.value` | String | *Required.* This string is the character-escaped version that transforms the data of Experience Platform customers to the format your service expects. <br> <ul><li> For information on how to write the template, read the [Using templating section](../../functionality/destination-server/message-format.md#using-templating). </li><li> For more information about character escaping, refer to the [RFC JSON standard, section seven](https://tools.ietf.org/html/rfc8259#section-7). </li><li> For an example of a simple transformation, refer to the [Profile Attributes](../../functionality/destination-server/message-format.md#attributes) transformation. </li></ul> |
 |`httpTemplate.contentType` | String | *Required.* The content type that your server accepts. This value is most likely `application/json`. |
 
 {style="table-layout:auto"}
@@ -228,7 +228,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 {
    "name":"File-based SFTP destination server",
    "destinationServerType":"FILE_BASED_SFTP",
-   "fileBasedSftpDestination":{
+   "fileBasedSFTPDestination":{
       "rootDirectory":{
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.rootDirectory}}"
@@ -303,10 +303,10 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 |---|---|---|
 |`name`|String|The name of your destination connection.|
 |`destinationServerType`|String|Set this value according to your destination platform. For [!DNL SFTP] destinations, set this to `FILE_BASED_SFTP`.|
-|`fileBasedSftpDestination.rootDirectory.templatingStrategy`|String| *Required.* Use `PEBBLE_V1`.|
-|`fileBasedSftpDestination.rootDirectory.value`|String|The root directory of the destination storage.|
-|`fileBasedSftpDestination.hostName.templatingStrategy`|String| *Required.* Use `PEBBLE_V1`.|
-|`fileBasedSftpDestination.hostName.value`|String|The host name of the destination storage.|
+|`fileBasedSFTPDestination.rootDirectory.templatingStrategy`|String| *Required.* Use `PEBBLE_V1`.|
+|`fileBasedSFTPDestination.rootDirectory.value`|String|The root directory of the destination storage.|
+|`fileBasedSFTPDestination.hostName.templatingStrategy`|String| *Required.* Use `PEBBLE_V1`.|
+|`fileBasedSFTPDestination.hostName.value`|String|The host name of the destination storage.|
 |`port`|Integer|The SFTP file server port.|
 |`encryptionMode`|String|Indicates whether to use file encryption. Supported values: <ul><li>PGP</li><li>None</li></ul>|
 |`fileConfigurations`|N/A|See [file formatting configuration](../../functionality/destination-server/file-formatting.md) for detailed information on how to configure these settings.|
@@ -746,7 +746,7 @@ A successful response returns HTTP status 200 with the details of your updated d
 
 ## API error handling {#error-handling}
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
 
 ## Next steps {#next-steps}
 

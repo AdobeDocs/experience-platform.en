@@ -8,24 +8,28 @@ exl-id: f82bfac9-dc2d-44de-a308-651300f107df
 
 >[!NOTE]
 >
+>Event forwarding is a paid feature that is included as part of the Adobe Real-Time Customer Data Platform Connections, Prime, or Ultimate offerings.
+
+>[!NOTE]
+>
 >Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
 
 To use event forwarding in Adobe Experience Platform, data must be sent to Adobe Experience Platform Edge Network using one or more of the following three options:
 
-* [Adobe Experience Platform Web SDK](../../extensions/client/sdk/overview.md)
+* [Adobe Experience Platform Web SDK](../../extensions/client/web-sdk/overview.md)
 * [Adobe Experience Platform Mobile SDK](https://sdkdocs.com)
-* [Server-to-Server API](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html?lang=en)
+* [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/)
 
 >[!NOTE]
->The Platform Web SDK and Platform Mobile SDK do not require deployment through tags in Adobe Experience Platform. However, using tags to deploy these SDKs is the recommended approach.
+>The Experience Platform Web SDK and Experience Platform Mobile SDK do not require deployment through tags in Adobe Experience Platform. However, using tags to deploy these SDKs is the recommended approach.
 
 After you send data to Edge network, you can toggle on Adobe solutions to send data there. To send data to a non-Adobe solution, set that up in event forwarding.
 
 ## Prerequisites
 
-* Adobe Experience Platform Collection Enterprise (Contact your Adobe account team for pricing)
+* Adobe Real-Time CDP Connections, Prime, or Ultimate (Contact your Adobe account team for pricing)
 * Event forwarding in Adobe Experience Platform
-* Adobe Experience Platform Web or Mobile SDK, configured to send data to Edge Network
+* Adobe Experience Platform Web SDK, Mobile SDK, or Edge Network API configured to send data to Edge Network
 * Map data to Experience Data Model (XDM) (This mapping can be done using tags)
 
 ## Create an XDM schema
@@ -72,7 +76,7 @@ To create your datastream in Adobe Experience Platform, use the Environment ID g
 
 1. Select **[!UICONTROL Save]**.
 
-## Enable event forwarding
+## Enable event forwarding {#enable-event-forwarding}
 
 Next, configure Edge Network to send data to event forwarding, and to other Adobe products.
 
@@ -90,17 +94,17 @@ Next, configure Edge Network to send data to event forwarding, and to other Adob
 
 After configuring, make note of the Environment IDs for the new property.
 
-## Configure the Platform Web SDK extension to send data to the datastream created previously
+## Configure the Experience Platform Web SDK extension to send data to the datastream created previously
 
 Create your property in the **[!UICONTROL Tags]** workspace, then navigate to **[!UICONTROL Extensions]** and select the Experience Platform Web SDK extension from the catalog to configure and install it.
 
-See the [Web SDK extension documentation](../../extensions/client/sdk/overview.md) for details on configuration options.
+See the [Web SDK extension documentation](../../extensions/client/web-sdk/overview.md) for details on configuration options.
 
-## Create a tag rule to send data to Platform Web SDK
+## Create a tag rule to send data to Experience Platform Web SDK
 
 After the above is in place, build data definitions, rules, and so on, that use event forwarding and tags, but that need only a single request from the page.
 
-Create a page load rule using the Platform Web SDK extension and the "Send Event" action type:
+Create a page load rule using the Experience Platform Web SDK extension and the "Send Event" action type:
 
 1. Open the **[!UICONTROL Rules]** tab, then select **[!UICONTROL Create New Rule]**.
 
@@ -110,7 +114,7 @@ Create a page load rule using the Platform Web SDK extension and the "Send Event
 
 1. Add an event by choosing an extension and one of the event types available for that extension, then configure the settings for the event. For example, select **[!UICONTROL Core - Window Loaded]**.
 
-1. Add an action using the Platform Web SDK extension. Select **[!UICONTROL Send Event]** from the **[!UICONTROL Action Type]** list, select the desired Instance (Alloy instance configured earlier), and then select a data element to add to the XDM Data block within the Alloy hit.
+1. Add an action using the Experience Platform Web SDK extension. Select **[!UICONTROL Send Event]** from the **[!UICONTROL Action Type]** list, select the desired Instance (Alloy instance configured earlier), and then select a data element to add to the XDM Data block within the Alloy hit.
 
 1. Leave the rest of the settings as default for this example, and select **[!UICONTROL Save]**.
 

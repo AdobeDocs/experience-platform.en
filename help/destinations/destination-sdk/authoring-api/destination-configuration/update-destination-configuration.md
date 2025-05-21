@@ -1,8 +1,8 @@
 ---
-description: This page exemplifies the API call used to update an existing destination configuration through Adobe Experience Platform Destination SDK. 
+description: This page exemplifies the API call used to update an existing destination configuration through Adobe Experience Platform Destination SDK.
 title: Update a destination configuration
+exl-id: d7f18689-9806-4f73-a63a-fa112569819c
 ---
-
 # Update a destination configuration
 
 This page exemplifies the API request and payload that you can use to update an existing destination configuration, using the `/authoring/destinations` API endpoint.
@@ -14,7 +14,7 @@ This page exemplifies the API request and payload that you can use to update an 
 For a detailed description of the capabilities of a destination configuration, read the following articles:
 
 * [Customer authentication configuration](../../functionality/destination-configuration/customer-authentication.md)
-* [OAuth2 authentication](../../functionality/destination-configuration/oauth2-authentication.md)
+* [OAuth2 authorization](../../functionality/destination-configuration/oauth2-authorization.md)
 * [Customer data fields](../../functionality/destination-configuration/customer-data-fields.md)
 * [UI attributes](../../functionality/destination-configuration/ui-attributes.md)
 * [Schema configuration](../../functionality/destination-configuration/schema-configuration.md)
@@ -201,7 +201,7 @@ A successful response returns HTTP status 200 with the details of your updated d
 
 ## API error handling {#error-handling}
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
 
 ## Next steps
 

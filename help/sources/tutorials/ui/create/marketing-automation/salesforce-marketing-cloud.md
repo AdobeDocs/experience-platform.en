@@ -5,10 +5,9 @@ exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
 ---
 # Connect your [!DNL Salesforce Marketing Cloud] account to Experience Platform through the UI
 
->[!IMPORTANT]
+>[!WARNING]
 >
->Custom object ingestion is currently not supported by the [!DNL Salesforce Marketing Cloud] source integration.
-
+>The [!DNL Salesforce Marketing Cloud] source will be deprecated in January 2026. A new source will be released later this year as an alternative. Once the new source is released, you must plan to migrate to the new source by creating new account connections and dataflows before the end of January 2026.
 
 This tutorial provides steps on how to connect your [!DNL Salesforce Marketing Cloud] account to Adobe Experience Platform through the UI.
 
@@ -25,11 +24,11 @@ If you already have a [!DNL Salesforce Marketing Cloud] account, you may skip th
 
 ### Gather required credentials
 
-In order to access your [!DNL Salesforce Marketing Cloud] account on Platform, you must provide the following values:
+In order to access your [!DNL Salesforce Marketing Cloud] account on Experience Platform, you must provide the following values:
 
 | Credential | Description |
 | ---------- | ----------- |
-| Host | The host server of your application. This is often your subdomain. **Note:** When entering your `host` value, you only need to specify the subdomain and not the entire URL. For example, if your host URL is `https://abcd-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`, then you only need to enter `abcd-ab12c3d4e5fg6hijk7lmnop8qrst` as your host value. |
+| Host | The host server of your application. This is often your subdomain. **Note:** When entering your `host` value, you need to specify the `{subdomain}.rest.marketingcloudapis.com`. For example, if your host URL is `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`, then you must enter `acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/` as your host value. |
 | Client ID | The client ID associated with your [!DNL Salesforce Marketing Cloud] application. |
 | Client secret | The client secret associated with your [!DNL Salesforce Marketing Cloud] application. |
 
@@ -37,7 +36,11 @@ For more information about authentication for [!DNL Salesforce Marketing Cloud],
 
 ## Connect your [!DNL Salesforce Marketing Cloud] account
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] displays a variety of sources supported by Experience Platform.
+>[!IMPORTANT]
+>
+>Custom object ingestion is currently not supported by the [!DNL Salesforce Marketing Cloud] source integration.
+
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] displays a variety of sources supported by Experience Platform.
 
 You can select the appropriate category from the list of categories. You can also use the search bar to filter for a specific source.
 

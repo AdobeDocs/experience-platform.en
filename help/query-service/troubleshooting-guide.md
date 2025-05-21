@@ -1,18 +1,41 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;Query service;troubleshooting guide;faq;troubleshooting;
 solution: Experience Platform
-title: Frequently Asked Questions
-description: This document contains common questions and answers related to Query Service. Topics include, exporting data, third-party tools, and PSQL errors.
+title: Query Service and Data Distiller frequently asked questions
+description: This document contains common questions and answers related to Query Service and Data Distiller. Topics include, exporting data, third-party tools, and PSQL errors.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 ---
-# Frequently asked questions
+# Query Service and Data Distiller frequently asked questions
 
-This document provides answers to frequently asked questions about Query Service and provides a list of commonly seen error codes when using Query Service. For questions and troubleshooting related to other services in Adobe Experience Platform, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
+This document answers frequently asked questions about Query Service and Data Distiller. It also includes commonly seen error codes while using the "Queries" product for data validation or writing transformed data back to the data lake. For questions and troubleshooting other Adobe Experience Platform services, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
+
+To clarify how Query Service and Data Distiller work together within Adobe Experience Platform, here are two foundational questions. 
+
+## What is the relationship between Query Service and Data Distiller?
+
+Query Service and Data Distiller are distinct, complementary components that provide specific data querying capabilities. Query Service is designed for ad hoc queries to explore, validate, and experiment with ingested data without altering the data lake. In contrast, Data Distiller focuses on batch queries that transform and enrich data, with results stored back into the data lake for future use. Batch queries in Data Distiller can be scheduled, monitored, and managed, supporting deeper data processing and manipulation that Query Service alone does not facilitate.
+
+Together, Query Service facilitates rapid insights, while Data Distiller enables in-depth, persistent data transformations.
+
+## What is the difference between Query Service and Data Distiller?
+
+**Query Service**: Used for SQL queries focused on data exploration, validation, and experimentation. Outputs are not stored in the data lake, and execution time is limited to 10 minutes. Ad hoc queries are suited for lightweight, interactive data checks and analyses.
+
+**Data Distiller**: Enables batch queries that process, clean, and enrich data, with results stored back in the data lake. These queries support longer execution (up to 24 hours) and additional features like scheduling, monitoring, and accelerated reporting. Data Distiller is ideal for in-depth data manipulation and scheduled data processing tasks.
+
+See the [Query Service packaging document](./packaging.md) for more detailed information.
+
+## Question categories {#categories}
 
 The following list of answers to frequently asked questions is divided into the following categories:
 
 - [General](#general)
+- [Data Distiller](#data-distiller)
+- [Queries UI](#queries-ui)
+- [Dataset Samples](#dataset-samples)
 - [Exporting data](#exporting-data)
+- [SQL Syntax](#sql-syntax) 
+- [ITAS Queries](#itas-queries) 
 - [Third-party tools](#third-party-tools)
 - [PostgreSQL API errors](#postgresql-api-errors)
 - [REST API errors](#rest-api-errors)
@@ -57,17 +80,6 @@ In batch queries, updating a row inside the dataset is not supported.
 No. There is no limit on data size, but there is a query timeout limit of 10 minutes from an interactive session. If the query is executed as a batch CTAS then a 10-minute timeout is not applicable. See the guidance on [interactive query execution](./best-practices/writing-queries.md#interactive-query-execution) for more details.
 +++
 
-### How do I bypass the limit on the output number of rows from a SELECT query?
-
-+++Answer
-To bypass the output row limit, apply "LIMIT 0" in the query. For example:
-
-```sql
-SELECT * FROM customers LIMIT 0;
-```
-
-+++
-
 ### How do I stop my queries from timing out in 10 minutes?
 
 +++Answer
@@ -100,7 +112,7 @@ The following steps describe how to display a tabular view of a dataset through 
 - After logging into Experience Platform, select **[!UICONTROL Datasets]** in the left navigation of the UI to navigate to [!UICONTROL Datasets] dashboard.
 - The datasets [!UICONTROL Browse] tab opens. You can use the search bar to refine the available options. Select a dataset from the list displayed.
 
-![The Datasets dashboard in the Platform UI with the search bar and a dataset highlighted.](./images/troubleshooting/dataset-selection.png)
+![The Datasets dashboard in the Experience Platform UI with the search bar and a dataset highlighted.](./images/troubleshooting/dataset-selection.png)
 
 - The [!UICONTROL Datasets activity] screen appears. Select **[!UICONTROL Preview dataset]** to open a dialog of the XDM schema and tabular view of flattened data from the selected dataset. More details can be found in the [preview a dataset documentation](../catalog/datasets/user-guide.md#preview-a-dataset)
 
@@ -110,7 +122,7 @@ The following steps describe how to display a tabular view of a dataset through 
 
 ![The XDM schema and tabular view of the flattened data. The column name of a nested dataset is highlighted in the UI.](./images/troubleshooting/column-name.png)
 
-See the documentation for full guidance on [how to work with nested data structures](./essential-concepts/nested-data-structures.md) using the Query Editor or a third-party client.
+See the documentation for full guidance on [how to work with nested data structures](./key-concepts/nested-data-structures.md) using the Query Editor or a third-party client.
 +++
 
 ### How do I speed up a query on a dataset that contains arrays?
@@ -150,7 +162,7 @@ A dropdown banner appears containing a [!UICONTROL Help and support] section. Se
 +++Answer
 The anonymous block feature allows you to chain one or more SQL statements that are executed in sequence. They also allow for the option of exception-handling.
 
-See the [anonymous block documentation](./essential-concepts/anonymous-block.md) for more details.
+See the [anonymous block documentation](./key-concepts/anonymous-block.md) for more details.
 +++
 
 ### How do I implement custom attribution in Query Service?
@@ -239,13 +251,13 @@ AS SELECT '1' as _id,
 ### How do I quickly process the new data coming into the system every day?
 
 +++Answer
-The [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) clause can be used to incrementally read data on a table based on a snapshot ID. This is ideal for use with the [incremental load](./essential-concepts/incremental-load.md) design pattern that only processes information in the dataset that has been created or modified since the last load execution. As a result, it increases processing efficiency and can be used with both streaming and batch data processing.
+The [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) clause can be used to incrementally read data on a table based on a snapshot ID. This is ideal for use with the [incremental load](./key-concepts/incremental-load.md) design pattern that only processes information in the dataset that has been created or modified since the last load execution. As a result, it increases processing efficiency and can be used with both streaming and batch data processing.
 +++
 
 ### Why is there a difference between the numbers shown in Profile UI and the numbers calculated from the profile export dataset? 
 
 +++Answer
-The numbers displayed in the profile dashboard are accurate as of the last snapshot. The numbers generated in the profile export table are dependent entirely on the export query. As a result, querying the number of profiles that qualify for a particular segment is a common cause for this discrepancy.
+The numbers displayed in the profile dashboard are accurate as of the last snapshot. The numbers generated in the profile export table are dependent entirely on the export query. As a result, querying the number of profiles that qualify for a particular audience is a common cause for this discrepancy.
 
 >[!NOTE]
 >
@@ -269,7 +281,7 @@ SELECT count(1) FROM myTableName
 ### Can I sample my data?
 
 +++Answer
-This feature is currently a work-in-progress. Details will be made available in [release notes](../release-notes/latest/latest.md) and through Platform UI dialogs once the feature is ready for release.
+This feature is currently a work-in-progress. Details will be made available in [release notes](../release-notes/latest/latest.md) and through Experience Platform UI dialogs once the feature is ready for release.
 +++
 
 ### What helper functions are supported by Query Service?
@@ -297,7 +309,7 @@ First, check the logs to find out the details of the error. The FAQ section on [
 
 You should also check the documentation for guidance on how to perform [scheduled queries in the UI](./ui/user-guide.md#scheduled-queries) and through [the API](./api/scheduled-queries.md). 
 
-The following is a list of considerations for scheduled queries when using the [!DNL Query Editor]. They do not apply to the [!DNL Query Service] API:<br/>You can only add a schedule to a query that has already been created, saved, and run.<br/>You **cannot** add a schedule to a parameterized query.<br/>Scheduled queries **cannot** contain an anonymous block.<br/>You can only schedule **one** query template using the UI. If you want to add additional schedules to a query template, you will need to use the API. If a schedule has already been added using the API, you will not be able to add additional schedules using the UI.
+Be aware, when using the [!DNL Query Editor] you can only add a schedule to a query that has already been created, and saved. This does not apply to the [!DNL Query Service] API.
 +++
 
 ### What does the "Session Limit Reached" error mean?
@@ -504,7 +516,7 @@ There is no query concurrency limit as batch queries run as back-end jobs. There
 There are monitoring and alerting capabilities to check on query activities and statuses. See the [Query Service audit log integration](./data-governance/audit-log-guide.md) and the [query logs](./ui/overview.md#log) documents for more information.
 +++
 
-### Is there any way to roll back updates? For example, if there is an error or some calculations need reconfiguring when writing data back to Platform, how should that scenario be handled?
+### Is there any way to roll back updates? For example, if there is an error or some calculations need reconfiguring when writing data back to Experience Platform, how should that scenario be handled?
 
 +++Answer
 Currently, we do not support rollbacks or updates in that manner. 
@@ -545,7 +557,7 @@ There are three approaches to restricting access. They are as follows:
 
 +++
     
-### Once the data is returned by Query Service, are there any checks that can be run by Platform to ensure that it hasn't returned any protected data?
+### Once the data is returned by Query Service, are there any checks that can be run by Experience Platform to ensure that it hasn't returned any protected data?
 
 - Query Service supports attribute-based access control. You can restrict access to data at the column/leaf level and/or the struct level. See the documentation to learn more about attribute-based access control. 
 
@@ -577,6 +589,72 @@ Yes, attribute-based access control is enforced if configured. See the [attribut
 
 +++Answer
 No, Query Service does not support the "INSERT OVERWRITE INTO" command.
++++
+
+### How frequently is the usage data on the license usage dashboard updated for Data Distiller Compute Hours?
+
++++Answer
+The license usage dashboard for Data Distiller computer hours is updated four times a day, every six hours.
++++
+
+### Can I use the CREATE VIEW command without Data Distiller access?
+
++++Answer
+Yes, you can use `CREATE VIEW` command without Data Distiller access. This command provides a logical view of data but does not write it back to the data lake.
++++
+
+### Can I use anonymous blocks in DbVisualizer?
+
++++Answer
+Yes. Although, certain third-party clients, such as DbVisualizer, may require a separate identifier before and after an SQL block to indicate that a part of a script should be handled as a single statement. More details can be found in the [anonymous block documentation](./key-concepts/anonymous-block.md) or in [the official DbVisualizer documentation](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect). 
++++
+
+## Data Distiller {#data-distiller}
+
+### How is Data Distiller's license usage tracked and where can I see this information?
+
++++Answer  
+The main metric used to track batch query usage is the Compute Hour. You have access to this information and your current consumption through the [License usage dashboard](../dashboards/guides/license-usage.md).
++++
+
+### What is a Compute Hour?
+
++++Answer  
+Compute hours are the measure of time taken by the Query Service engines to read, process, and write data back into the data lake when a batch query is executed.
++++
+
+### How are Compute Hours measured?
+
++++Answer  
+Compute Hours are measured cumulatively across all of your authorized Sandboxes.
++++
+
+### Why do I sometimes notice a variation in Compute Hour consumption even when I run the same query consecutively?
+
++++Answer  
+Compute hours for a query can fluctuate due to multiple factors. These include the data volume processed, the complexity of transformation operations within the SQL query, and so on. Query Service scales the cluster based on the above parameters for each query, which can lead to differences in Compute Hours.
++++
+
+### Is it normal to notice a reduction in Compute Hours when I run the same query using the same data over a long period of time? Why might this be happening?
+
++++Answer  
+Backend infrastructure is constantly improved to optimize Compute Hour utilization and processing time. As a result, you may notice changes over time as performance enhancements are implemented.
++++
+
+## Queries UI
+
+### The "Create query" is stuck "Initializing connection..." when trying to connect to Query Service. How do I fix the issue?
+
++++Answer
+If the "Create query" is stuck on "Initializing connection...", this is likely to be a connection or session issue. Refresh the browser if you are using the Experience Platform UI and try again.
++++
+
+## Dataset Samples
+
+### Can I create samples on a system dataset?
+
++++Answer
+No. Write permissions are restricted on system datasets so you cannot create samples.
 +++
 
 ## Exporting data {#exporting-data}
@@ -623,6 +701,22 @@ timestamp >= to_timestamp('2022-07-22')
 and timestamp < to_timestamp('2022-07-23');
 ```
 
++++
+
+## SQL Syntax
+
+### Is MERGE INTO supported by Data Distiller or Query Service?
+
++++Answer
+The MERGE INTO SQL construct is not supported by Data Distiller or Query Service.
++++
+
+## ITAS Queries
+
+### What are ITAS queries?
+
++++Answer
+INSERT INTO queries are called ITAS queries. Note that CREATE TABLE queries are referred to as CTAS queries.
 +++
 
 ## Third-party tools {#third-party-tools}

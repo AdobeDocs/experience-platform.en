@@ -13,8 +13,8 @@ This tutorial walks you through the steps to create a base connection for [!DNL 
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 >[!IMPORTANT]
 >
@@ -24,27 +24,19 @@ The following sections provide additional information that you will need to know
 
 ### Gather required credentials
 
-In order for [!DNL Flow Service] to connect to [!DNL SFTP], you must provide values for the following connection properties:
+Read the [[!DNL SFTP] authentication guide](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials) for detailed steps on how to retrieve your authentication credentials.
 
-| Credential | Description |
-| ---------- | ----------- |
-| `host` | The name or IP address associated with your [!DNL SFTP] server. |
-| `port` | The SFTP server port you're connecting to. If unprovided, the value defaults to `22`. |
-| `username` | The username with access to your [!DNL SFTP] server. |
-| `password` | The password for your [!DNL SFTP] server. |
-| `privateKeyContent` | The Base64 encoded SSH private key content. The type of OpenSSH key must be classified as either RSA or DSA. |
-| `passPhrase` | The pass phrase or password to decrypt the private key if the key file or the key content is protected by a pass phrase. If the `privateKeyContent` is password protected, this parameter needs to be used with the private key content's passphrase as value. |
-| `maxConcurrentConnections` | This parameter allows you to specify a maximum limit for the number of concurrent connections Platform will create when connecting to your SFTP server. You must set this value to be less than the limit set by SFTP. **Note**: When this setting is enabled for an existing SFTP account, it will only affect future dataflows and not existing dataflows. |
-| `folderPath` | The path to the folder that you want to provide access to. [!DNL SFTP] source, you can provide the folder path to specify user access to sub folder of your choice. |
-| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL SFTP] is: `b7bf2577-4520-42c9-bae9-cad01560f7bc`. |
+### Using Experience Platform APIs
 
-### Using Platform APIs
-
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
+For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../../../landing/api-guide.md).
 
 ## Create a base connection
 
-A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
+>[!TIP]
+>
+>Once created, you cannot change the authentication type of an [!DNL SFTP] base connection. To change the authentication type, you must create a new base connection.
+
+A base connection retains information between your source and Experience Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
 The [!DNL SFTP] source supports both basic authentication and authentication via SSH public key. During this step, you can also designate the path to the sub folder that you want to provide access to.
 
@@ -60,13 +52,11 @@ To create a base connection ID, make a POST request to the `/connections` endpoi
 POST /connections
 ```
 
-**Request**
-
-The following request creates a base connection for [!DNL SFTP]:
-
 >[!BEGINTABS]
 
 >[!TAB Basic authentication]
+
++++Request
 
 ```shell
 curl -X POST \
@@ -87,7 +77,8 @@ curl -X POST \
               "userName": "{USERNAME}",
               "password": "{PASSWORD}",
               "maxConcurrentConnections": 5,
-              "folderPath": "acme/business/customers/holidaySales"
+              "folderPath": "acme/business/customers/holidaySales",
+              "disableChunking": "true"
           }
       },
       "connectionSpec": {
@@ -103,11 +94,29 @@ curl -X POST \
 | `auth.params.port` | The port of the SFTP server. This integer value defaults to 22. |
 | `auth.params.username` | The username associated with your SFTP server. |
 | `auth.params.password` | The password associated with your SFTP server. |
-| `auth.params.maxConcurrentConnections` | The maximum number of concurrent connections specified when connecting Platform to SFTP. When enabled, this value must be set to at least 1. |
+| `auth.params.maxConcurrentConnections` | The maximum number of concurrent connections specified when connecting Experience Platform to SFTP. When enabled, this value must be set to at least 1. |
 | `auth.params.folderPath` | The path to the folder that you want to provide access to. |
+| `auth.params.disableChunking` | A boolean value used to determine whether or not your SFTP server supports chunking. |
 | `connectionSpec.id` | The SFTP server connection specification ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
++++
+
++++Response
+
+A successful response returns the unique identifier (`id`) of the newly created connection. This ID is required to explore your SFTP server in the next tutorial.
+
+```json
+{
+    "id": "bf367b0d-3d9b-4060-b67b-0d3d9bd06094",
+    "etag": "\"1700cc7b-0000-0200-0000-5e3b3fba0000\""
+}
+```
+
++++
+
 >[!TAB SSH public key authentication]
+
++++Request
 
 ```shell
 curl -X POST \
@@ -129,7 +138,8 @@ curl -X POST \
               "privateKeyContent": "{PRIVATE_KEY_CONTENT}",
               "passPhrase": "{PASSPHRASE}",
               "maxConcurrentConnections": 5,
-              "folderPath": "acme/business/customers/holidaySales"
+              "folderPath": "acme/business/customers/holidaySales",
+              "disableChunking": "true"
           }
       },
       "connectionSpec": {
@@ -146,13 +156,14 @@ curl -X POST \
 | `auth.params.username` | The username associated with your [!DNL SFTP] server. |
 | `auth.params.privateKeyContent` | The Base64 encoded SSH private key content. The type of OpenSSH key must be classified as either RSA or DSA.  |
 | `auth.params.passPhrase` | The pass phrase or password to decrypt the private key if the key file or the key content is protected by a pass phrase. If PrivateKeyContent is password protected, this parameter needs to be used with the PrivateKeyContent's passphrase as value. |
-| `auth.params.maxConcurrentConnections` | The maximum number of concurrent connections specified when connecting Platform to SFTP. When enabled, this value must be set to at least 1. |
+| `auth.params.maxConcurrentConnections` | The maximum number of concurrent connections specified when connecting Experience Platform to SFTP. When enabled, this value must be set to at least 1. |
 | `auth.params.folderPath` | The path to the folder that you want to provide access to. |
+| `auth.params.disableChunking` | A boolean value used to determine whether or not your SFTP server supports chunking. |
 | `connectionSpec.id` | The [!DNL SFTP] server connection specification ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
->[!ENDTABS]
++++
 
-**Response**
++++Response
 
 A successful response returns the unique identifier (`id`) of the newly created connection. This ID is required to explore your SFTP server in the next tutorial.
 
@@ -162,6 +173,10 @@ A successful response returns the unique identifier (`id`) of the newly created 
     "etag": "\"1700cc7b-0000-0200-0000-5e3b3fba0000\""
 }
 ```
+
++++
+
+>[!ENDTABS]
 
 ## Next steps
 

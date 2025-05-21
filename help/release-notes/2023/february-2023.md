@@ -86,7 +86,7 @@ XDM is an open-source specification that provides common structures and definiti
 
 {style="table-layout:auto"}
 
-For more information on XDM in Platform, read the [XDM System overview](../../xdm/home.md).​
+For more information on XDM in Experience Platform, read the [XDM System overview](../../xdm/home.md).​
 
 ## Query Service {#query-service}
 
@@ -96,10 +96,10 @@ Query Service allows you to use standard SQL to query data in Adobe Experience P
 
 | Feature | Description |
 | --- | --- |
-| Enable datasets for profile with SQL | [Use LABELs in CTAS queries to make a dataset 'profile enabled'](../../query-service/sql/syntax.md#create-table-as-select), or use ALTER to update existing datasets to be enabled for profile. You can use this extended SQL construct to provide seamless support for derived attributes for your Real-Time Customer Profile business use cases. See the [Seamless SQL flow for derived attributes document](../../query-service/data-distiller/derived-attributes/seamless-sql-flow.md) for more details. |
+| Enable datasets for profile with SQL | [Use LABELs in CTAS queries to make a dataset 'profile enabled'](../../query-service/sql/syntax.md#create-table-as-select), or use ALTER to update existing datasets to be enabled for profile. You can use this extended SQL construct to provide seamless support for derived datasets for your Real-Time Customer Profile business use cases. See the [Seamless SQL flow for derived datasets document](../../query-service/data-distiller/derived-datasets/create-derived-datasets-with-sql.md) for more details. |
 | Monitor scheduled queries | Use the [Scheduled Queries tab](../../query-service/ui/monitor-queries.md) to find important information about your query runs and subscribe to alerts. Monitor queries for schedule details, status, and error messages/codes should they fail.  |
 | Toggle auto-complete feature  | Eliminate certain metadata commands and improve processing times by [toggling the Query Editor auto-complete feature](../../query-service/ui/user-guide.md#auto-complete). This feature automatically suggests potential SQL keywords and table details for the query as you write it. |
-| Dataset samples | Specify a sampling rate in your query and [use dataset samples to create a uniform random sample](../../query-service/essential-concepts/dataset-samples.md), or create conditional samples based on specific criteria. |
+| Dataset samples | Specify a sampling rate in your query and [use dataset samples to create a uniform random sample](../../query-service/key-concepts/dataset-samples.md), or create conditional samples based on specific criteria. |
 
 {style="table-layout:auto"}
 
@@ -122,7 +122,7 @@ To learn more about Real-Time CDP B2B Edition, read the [Real-Time CDP B2B Editi
 
 ## Sources {#sources}
 
-Adobe Experience Platform can ingest data from external sources and allows you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
+Adobe Experience Platform can ingest data from external sources and allows you to structure, label, and enhance that data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
 
 Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 
@@ -130,8 +130,8 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Feature | Description |
 | --- | --- |
-| Designate subscription-level access with [!DNL Google PubSub] | You can now define access to a specific topic subscription when using the [!DNL Google PubSub] source by providing the subscription ID when authenticating. For more information, read the [!DNL Google PubSub] authentication tutorial [using the Flow Service API](../../sources/tutorials/api/create/cloud-storage/google-pubsub.md) or [Platform UI](../../sources/tutorials/ui/create/cloud-storage/google-pubsub.md). |
-| Ingest custom activity data from [!DNL Marketo] | You can now bring custom activity data from your [!DNL Marketo] instance to Experience Platform. To ingest custom activity data, you must set up custom activities field groups in the B2B Activities schema and create a dataflow using the activities dataset. Once the dataflow is complete, the ingested dataset will contain both standard and custom activities from your [!DNL Marketo] instance. You can then use [Query Service](../../query-service/home.md) to access your custom activity records on Platform. For more information, read the guide on [creating a dataflow for custom activity data](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md). |
+| Designate subscription-level access with [!DNL Google PubSub] | You can now define access to a specific topic subscription when using the [!DNL Google PubSub] source by providing the subscription ID when authenticating. For more information, read the [!DNL Google PubSub] authentication tutorial [using the Flow Service API](../../sources/tutorials/api/create/cloud-storage/google-pubsub.md) or [Experience Platform UI](../../sources/tutorials/ui/create/cloud-storage/google-pubsub.md). |
+| Ingest custom activity data from [!DNL Marketo] | You can now bring custom activity data from your [!DNL Marketo] instance to Experience Platform. To ingest custom activity data, you must set up custom activities field groups in the B2B Activities schema and create a dataflow using the activities dataset. Once the dataflow is complete, the ingested dataset will contain both standard and custom activities from your [!DNL Marketo] instance. You can then use [Query Service](../../query-service/home.md) to access your custom activity records on Experience Platform. For more information, read the guide on [creating a dataflow for custom activity data](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md). |
 | Exclude unclaimed accounts from [!DNL Marketo] | You can now configure whether you want to exclude or include unclaimed accounts from ingestion when creating a dataflow for companies data. For more information, read the guide on [creating a source connection and dataflow for [!DNL Marketo]](../../sources/tutorials/ui/create/adobe-applications/marketo.md). |
 
 {style="table-layout:auto"}

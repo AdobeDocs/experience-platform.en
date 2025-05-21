@@ -10,7 +10,7 @@ The Adobe Experience Platform user interface (UI) is designed to support multipl
 
 ## Browser Support
 
-The Platform UI is designed to work optimally in the **latest versions** of Google Chrome, Safari, Firefox, and Microsoft Edge. You might have trouble using certain features on older versions of browsers. 
+The Experience Platform UI is designed to work optimally in the **latest versions** of Google Chrome, Safari, Firefox, and Microsoft Edge. You might have trouble using certain features on older versions of browsers. 
 
 | Operating system | Supported browsers |
 |---|---|
@@ -26,7 +26,7 @@ The following operating systems and browsers are not supported:
 
 ## Language support
 
-The Platform UI is currently available in the following languages:
+The Experience Platform UI is currently available in the following languages:
 
 * English
 * French
@@ -45,9 +45,11 @@ Your default UI language is determined by the region specified in your user prof
 
 To change your language:
 
-1. Select the current language in the footer of the [!DNL Experience Platform] user interface.
-2. In your profile settings, select **[!UICONTROL Change Region]**.
-3. Select your region. 
+1. Log in to your Experience Platform account.
+1. Press `Ctrl + i` to bring up the account information menu.
+1. Go to **[!UICONTROL Preferred Languages]**.
+1. Select your first and second language preferences.
+1. Select **[!UICONTROL Save]** and close the window.
 
 >[!NOTE]
 >

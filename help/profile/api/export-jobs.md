@@ -3,11 +3,12 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Profile Export Jobs API Endpoint
 type: Documentation
 description: Real-Time Customer Profile enables you to build a single view of individual customers within Adobe Experience Platform by bringing together data from multiple sources, including both attribute data and behavioral data. Profile data can then be exported to a dataset for further processing.
+role: Developer
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
 ---
 # Profile export jobs endpoint
 
-[!DNL Real-Time Customer Profile] enables you to build a single view of individual customers by bringing together data from multiple sources, including both attribute data and behavioral data. Profile data can then be exported to a dataset for further processing. For example, audience segments from [!DNL Profile] data can be exported for activation, and profile attributes can be exported for reporting.
+[!DNL Real-Time Customer Profile] enables you to build a single view of individual customers by bringing together data from multiple sources, including both attribute data and behavioral data. Profile data can then be exported to a dataset for further processing. For example, [!DNL Profile] data can be exported for activation by creating audiences, and profile attributes can be exported for reporting.
 
 This document provides step-by-step instructions for creating and managing export jobs using the [Profile API](https://www.adobe.com/go/profile-apis-en).
 
@@ -31,7 +32,7 @@ When exporting [!DNL Profile] data, a target dataset must first be created. It i
 
 One of the key considerations is the schema upon which the dataset is based (`schemaRef.id` in the API sample request below). In order to export profile data, the dataset must be based on the [!DNL XDM Individual Profile] Union Schema (`https://ns.adobe.com/xdm/context/profile__union`). A union schema is a system-generated, read-only schema that aggregates the fields of schemas which share the same class. In this case, that is the [!DNL XDM Individual Profile] class. For more information on union view schemas, please see the [union section in the basics of schema composition guide](../../xdm/schema/composition.md#union).
 
-The steps that follow in this tutorial outline how to create a dataset that references the [!DNL XDM Individual Profile] Union Schema using the [!DNL Catalog] API. You may also use the [!DNL Platform] user interface to create a dataset that references the union schema. Steps for using the UI are outlined in [this UI tutorial for exporting segments](../../segmentation/tutorials/create-dataset-export-segment.md) but are applicable here as well. Once completed, you can return to this tutorial to proceed with the steps for [initiating a new export job](#initiate).
+The steps that follow in this tutorial outline how to create a dataset that references the [!DNL XDM Individual Profile] Union Schema using the [!DNL Catalog] API. You may also use the [!DNL Experience Platform] user interface to create a dataset that references the union schema. Steps for using the UI are outlined in [this UI tutorial for exporting audiences](../../segmentation/tutorials/create-dataset-export-segment.md) but are applicable here as well. Once completed, you can return to this tutorial to proceed with the steps for [initiating a new export job](#initiate).
 
 If you already have a compatible dataset and know its ID, you can proceed directly to the step for [initiating a new export job](#initiate).
 
@@ -46,8 +47,7 @@ POST /dataSets
 The following request creates a new dataset, providing configuration parameters in the payload.
 
 ```shell
-curl -X POST \
-  https://platform.adobe.io/data/foundation/catalog/dataSets \
+curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -92,8 +92,7 @@ POST /export/jobs
 The following request creates a new export job, providing configuration parameters in the payload.
 
 ```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/ups/export/jobs \
+curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -112,7 +111,7 @@ curl -X POST \
           "fromIngestTimestamp": "2018-10-25T13:22:04-07:00"
         }
       }
-    }
+    },
     "destination": {
       "datasetId": "5b020a27e7040801dedba61b",
       "segmentPerBatch": false
@@ -126,11 +125,11 @@ curl -X POST \
 | Property | Description |
 | -------- | ----------- |
 | `fields` | *(Optional)* Limits the data fields to be included in the export to only those provided in this parameter. Omitting this value will result in all fields being included in the exported data. |
-| `mergePolicy` | *(Optional)* Specifies the merge policy to govern the exported data. Include this parameter when there are multiple segments being exported. |
+| `mergePolicy` | *(Optional)* Specifies the merge policy to govern the exported data. Include this parameter when there are multiple audiences being exported. |
 | `mergePolicy.id` | The ID of the merge policy. |
 | `mergePolicy.version` | The specific version of the merge policy to use. Omitting this value will default to the most recent version.|
 | `additionalFields.eventList` | *(Optional)* Controls the time-series event fields exported for child or associated objects by providing one or more of the following settings:<ul><li>`eventList.fields`: Control the fields to export.</li><li>`eventList.filter`: Specifies criteria that limits the results included from associated objects. Expects a minimum value required for export, typically a date.</li><li>`eventList.filter.fromIngestTimestamp`: Filters time-series events to those that have been ingested after the provided timestamp. This is not the event time itself but the ingestion time for the events.</li></ul> |
-| `destination` | **(Required)** Destination information for the exported data:<ul><li>`destination.datasetId`: **(Required)** The ID of the dataset where data is to be exported.</li><li>`destination.segmentPerBatch`: *(Optional)* A Boolean value that, if not provided, defaults to `false`. A value of `false` exports all segment IDs into a single batch ID. A value of `true` exports one segment ID into one batch ID. Note that setting the value to be `true` may affect batch export performance.</li></ul> |
+| `destination` | **(Required)** Destination information for the exported data:<ul><li>`destination.datasetId`: **(Required)** The ID of the dataset where data is to be exported.</li><li>`destination.segmentPerBatch`: *(Optional)* A Boolean value that, if not provided, defaults to `false`. A value of `false` exports all segment definition IDs into a single batch ID. A value of `true` exports one segment definition ID into one batch ID. Note that setting the value to be `true` may affect batch export performance.</li></ul> |
 | `schema.name` | **(Required)** The name of the schema associated with the dataset where data is to be exported. |
 
 >[!NOTE]
@@ -193,8 +192,7 @@ GET /export/jobs?{QUERY_PARAMETERS}
 **Request**
 
 ```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/export/jobs/ \
+curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/ \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}'
@@ -335,8 +333,7 @@ GET /export/jobs/{EXPORT_JOB_ID}
 **Request**
 
 ```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/export/jobs/24115 \
+curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/24115 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -412,8 +409,7 @@ DELETE /export/jobs/{EXPORT_JOB_ID}
 **Request**
 
 ```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/ups/export/jobs/726 \
+curl -X POST https://platform.adobe.io/data/core/ups/export/jobs/726 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -488,6 +484,6 @@ To create an export job that only contains event data (no profile attributes), t
   }
 ```
 
-### Exporting segments
+### Exporting audiences
 
-You can also use the export jobs endpoint to export audience segments instead of [!DNL Profile] data. See the guide on [export jobs in the Segmentation API](../../segmentation/api/export-jobs.md) for more information.
+You can also use the export jobs endpoint to export audiences instead of [!DNL Profile] data. See the guide on [export jobs in the Segmentation API](../../segmentation/api/export-jobs.md) for more information.

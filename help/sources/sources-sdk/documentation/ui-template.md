@@ -10,7 +10,7 @@ exl-id: 6471c0a2-22e8-4133-a76f-ee3c5c669ef8
 
 *Start by updating the metadata (title and description) at the top of the page. Please ignore all instances of UICONTROL on this page. This is a tag that helps our machine translation processes correctly translate the page into the multiple languages that we support. We will add tags to your documentation after you submit it.*
 
-This tutorial provides steps for creating a *YOURSOURCE* source connector using the Platform user interface.
+This tutorial provides steps for creating a *YOURSOURCE* source connector using the Experience Platform user interface.
 
 ## Overview
 
@@ -18,7 +18,7 @@ This tutorial provides steps for creating a *YOURSOURCE* source connector using 
 
 >[!IMPORTANT]
 >
->This documentation page was created by the *YOURSOURCE* team. For any inquiries or update requests, please contact them directly at *Insert link or email address where you can be reached for updates*.
+>This source connector and documentation page are created and maintained by the *YourSource* team. For any inquiries or update requests, please contact them directly at *Insert link or email address where you can be reached for updates*.
 
 ## Prerequisites
 
@@ -31,7 +31,7 @@ This tutorial provides steps for creating a *YOURSOURCE* source connector using 
 
 ### Gather required credentials
 
-In order to connect *YOURSOURCE* to Platform, you must provide values for the following connection properties:
+In order to connect *YOURSOURCE* to Experience Platform, you must provide values for the following connection properties:
 
 | Credential | Description | Example |
 | --- | --- | --- |
@@ -43,7 +43,7 @@ For more information on these credentials, see the *YOURSOURCE* authentication d
 
 ## Connect your *YOURSOURCE* account
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
@@ -51,7 +51,7 @@ Under the *YOURSOURCE'S CATEGORY* category, select *YOURSOURCE*, and then select
 
 >[!TIP]
 >
->The screenshots used below are examples. When creating your documentation, please replace the images with screenshots of your actual source. You can use the same mark up pattern and color, as well as the same file names. Please ensure that your screenshot captures the entire Platform UI screen. For information on how to upload your screenshots, see the guide on [submitting your documentation for review](./github.md).
+>The screenshots used below are examples. When creating your documentation, please replace the images with screenshots of your actual source. You can use the same mark up pattern and color, as well as the same file names. Please ensure that your screenshot captures the entire Experience Platform UI screen. For information on how to upload your screenshots, see the guide on [submitting your documentation for review](./github.md).
 
 ![catalog](../assets/ui/catalog.png)
 
@@ -73,7 +73,7 @@ If you are creating a new account, select **[!UICONTROL New account]**, and then
 
 *Workflows for the remaining steps of creating a dataflow are modularized. If there are any specific call-outs you want to make regarding your source, please see the additional resources section below.*
 
-By following this tutorial, you have established a connection to your *YOURSOURCE* account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
+By following this tutorial, you have established a connection to your *YOURSOURCE* account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
 
 ## Additional resources
 

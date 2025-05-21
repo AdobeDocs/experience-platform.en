@@ -32,13 +32,13 @@ A preference is an option that allows the customer to specify how different aspe
 * **Personalization preferences**: Preferences regarding how the brand should personalize experiences delivered to a customer.
 * **Marketing preferences**: Preferences regarding whether a brand is allowed to contact a customer through various channels.
 
-The following screenshot shows how the structure of the data type is represented in the Platform UI:
+The following screenshot shows how the structure of the data type is represented in the Experience Platform UI:
 
 ![](../images/data-types/consents.png)
 
 >[!TIP]
 >
->See the guide on [exploring XDM resources](../ui/explore.md) to for steps on how to look up any XDM resource and inspect its structure in the Platform UI.
+>See the guide on [exploring XDM resources](../ui/explore.md) to for steps on how to look up any XDM resource and inspect its structure in the Experience Platform UI.
 
 The following JSON shows an example of the type of data that the [!UICONTROL Consents and Preferences] data type can process. Information on the specific use of each of these fields is provided in the sections that follow.
 
@@ -251,7 +251,7 @@ The following JSON shows an example of the type of data that the [!UICONTROL Con
 
 In order to use the [!UICONTROL Consents and Preferences] data type to ingest consent data from your customers, you must create a dataset based on a schema that contains that data type.
 
-See the tutorial on [creating a schema in the UI](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) for steps on how to assign data types to fields. Once you have created a schema containing a field with the [!UICONTROL Consents and Preferences] data type, refer to the the section on [creating a dataset](../../catalog/datasets/user-guide.md#create) in the dataset user guide, following the steps to create a dataset with an existing schema.
+See the tutorial on [creating a schema in the UI](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) for steps on how to assign data types to fields. Once you have created a schema containing a field with the [!UICONTROL Consents and Preferences] data type, refer to the section on [creating a dataset](../../catalog/datasets/user-guide.md#create) in the dataset user guide, following the steps to create a dataset with an existing schema.
 
 >[!IMPORTANT]
 >
@@ -261,7 +261,7 @@ See the tutorial on [creating a schema in the UI](https://www.adobe.com/go/xdm-s
 
 ## Handling consent and preference changes
 
-When a customer changes their consents or preferences on your website, these changes should be collected and immediately enforced using the [Adobe Experience Platform Web SDK](../../edge/consent/supporting-consent.md). If a customer opts out of data collection, all data collection must immediately cease. If a customer opts out of personalization, then there should be no personalization present on the next page they visit. 
+When a customer changes their consents or preferences on your website, these changes should be collected and immediately enforced using the [Adobe Experience Platform Web SDK](../../web-sdk/commands/setconsent.md). If a customer opts out of data collection, all data collection must immediately cease. If a customer opts out of personalization, then there should be no personalization present on the next page they visit. 
 
 ## Appendix {#appendix}
 
@@ -275,7 +275,7 @@ The following table outlines the accepted values for `val`:
 | --- | --- | --- |
 | `y` | Yes (opt-in) | The customer has opted in for the consent or preference. In other words, they **do** consent to the use of their data as indicated by the consent or preference in question. |
 | `n` | No (opt-out) | The customer has opted out of the consent or preference. In other words, they **do not** consent to the use of their data as indicated by the consent or preference in question. |
-| `p` | Pending verification  | The system has not yet received a final consent or preference value. This is most often used as part of a consent that requires two-step verification. For example, if a customer opts into receiving emails, that consent is set to `p` until they select a link in an email to verify that they have provided the correct email address, at which point the consent would be updated to `y`.<br><br>If this consent or preference does not use a two-set verification process, then the `p` choice may instead be used to indicate that the customer has not yet responded to the consent prompt. For example, you can automatically set the value to `p` on the first page of a website, before the customer has responded to the consent prompt. In jurisdictions that do not require explicit consent, you may also use it to indicate that the customer has not explicitly opted out (in other words, consent is assumed). |
+| `p` | Pending verification  | The system has not yet received a final consent or preference value. This is most often used as part of a consent that requires two-step verification. For example, if a customer opts into receiving emails, that consent is set to `p` until they select a link in an email to verify that they have provided the correct email address, at which point the consent would be updated to `y`.<br><br>If this consent or preference does not use a two-set verification process, then the `p` choice may instead be used to indicate that the customer has not yet responded to the consent prompt. For example, you can automatically set the value to `p` on the first page of a website, before the customer has responded to the consent prompt. In jurisdictions that do not require explicit consent, you may also use it to indicate that the customer has not explicitly opted out (in other words, consent is assumed).<br><br> While this value can be ingested in the [!DNL Profile] using other mechanisms, such as streaming ingestion, it is **not supported** for data collection or consent collection on [!DNL Edge Network]. While the `p` value cannot be sent explicity, the event queueing is still handled by the [[!DNL Web SDK]](../../landing/governance-privacy-security/consent/sdk.md) and event is dispatched to [!DNL Edge Network] once the consent of the end-user is explicitly `in`. |
 | `u` | Unknown | The customer's consent or preference information is unknown. |
 | `dy` | Default of Yes (opt-in) | The customer has not provided a consent value themselves, and is treated as an opt-in ("Yes") by default. In other words, consent is assumed until the customer indicates otherwise.<br><br>Note that if laws or changes to your company's privacy policy result in changes to the defaults of some or all users, you must manually update all profiles containing default values. |
 | `dn` | Default of No (opt-out) | The customer has not provided a consent value themselves, and is treated as an opt-out ("No") by default. In other words, the customer is assumed to have denied consent until they indicate otherwise.<br><br>Note that if laws or changes to your company's privacy policy result in changes to the defaults of some or all users, you must manually update all profiles containing default values. |
@@ -289,23 +289,23 @@ The following table outlines the accepted values for `val`:
 
 ### Accepted values for `preferred` {#preferred-values}
 
-The following table outlines the accepted values for `preferred`:
+The following table outlines the accepted values for `preferred`. The `preferred` values indicate the customer's preferred channel for receiving communications that would inform them about data collection, privacy policies, and personalization options. 
 
 | Value | Description |
 | --- | --- |
-| `email` | Email messages. |
-| `push` | Push notifications. |
-| `inApp` | In-app messages. |
-| `sms` | SMS messages. |
-| `phone` | Phone call interactions. |
-| `phyMail` | Physical mail. |
-| `inVehicle` | In-vehicle messages. |
-| `inHome` | In-home messages. |
-| `iot` | Internet of things (IoT) messages. |
-| `social` | Social media content. |
-| `other` | A channel that does not fit into a standard category. |
-| `none` | No preferred channel. |
-| `unknown` | The preferred channel is unknown. |
+| `email` | This preference indicates the customer's consent to receive messages via email. |
+| `push` | This preference indicates the customer's consent to receive push notifications. These are messages or alerts sent directly to their device, often a mobile application. |
+| `inApp` | This preference indicates the customer's consent to receive in-app messages. These messages are delivered within a mobile or web application and provide information while the user is actively engaged with the app. |
+| `sms` | This preference indicates the customer's consent to receive messages via SMS (Short Message Service). These are text messages sent to their mobile phone. |
+| `phone` | This preference indicates the customer's consent to receive communications through phone call interactions.  |
+| `phyMail` | This preference indicates the customer's consent to receive materials through physical mail.  |
+| `inVehicle` | This preference indicates the customer's consent to receive notifications while in their vehicle. These messages may be delivered through vehicle infotainment systems or other in-vehicle communication channels. |
+| `inHome` | This preference indicates the customer's consent to receive messages while at home. These messages may be delivered through smart home devices or other home-based communication channels. |
+| `iot` | This preference denotes the customer's consent to receive messages related to the Internet of Things (IoT). These messages may be delivered through connected devices and systems within their environment. |
+| `social` | This preference indicates the customer's consent to receive communications through social media platforms.  |
+| `other` | This preference encompasses channels that do not fit into standard categories. It represents alternative or specialized communication channels that may be specific to a particular business or industry. |
+| `none` | This preference indicates that the customer does not have a preferred communication channel. |
+| `unknown` | This preference signifies that the customer's preferred communication channel is not known or has not been specified. This could occur if the customer has not provided explicit consent or preference information. |
 
 {style="table-layout:auto"}
 

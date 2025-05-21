@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;download scores;customer ai;popular topics;Export;export;customer ai download;customer ai scores
-solution: Experience Platform, Real-time Customer Data Platform
+solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Download Scores in Customer AI
 description: Customer AI allows you to download scores in the Parquet file format.
@@ -25,11 +25,11 @@ Currently, there are two ways to download Customer AI scores:
 
 Within your service instance for Customer AI insights, click the *More actions* dropdown in the top-right navigation then select **[!UICONTROL Access scores]**.
 
-![more actions](../images/insights/more-actions.png)
+![More actions dropdown menu showing the "Access scores" option.](../images/insights/more-actions.png)
 
 A new dialog appears, containing a link to the downloading scores documentation and the dataset ID for your current instance. Copy the dataset ID to your clipboard and proceed to the next step.
 
-![Dataset ID](../images/download-scores/access-scores.png)
+![Access Scores dialog showing the dataset ID for the current instance.](../images/download-scores/access-scores.png)
 
 ## Retrieve your batch ID {#retrieve-your-batch-id}
 
@@ -230,7 +230,6 @@ The response contains a data array that may have a single entry, or a list of fi
 | --------- | ----------- |
 | `_links.self.href` | The GET request URL used to download a file in your directory. |
 
-
 Copy the `href` value for any file object in the `data` array, then proceed to the next step.
 
 ## Download your file data
@@ -271,7 +270,7 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 The response downloads the file you requested in in your current directory. In this example the filename is "filename.parquet".
 
-![Terminal](../images/download-scores/response.png)
+![Example of a terminal response showing a successful API call.](../images/download-scores/response.png)
 
 ## Download a segment configured with Customer AI {#segment}
 

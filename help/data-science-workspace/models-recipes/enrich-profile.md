@@ -8,17 +8,25 @@ exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
 ---
 # Enrich [!DNL Real-Time Customer Profile] with machine learning insights
 
-Adobe Experience Platform [!DNL Data Science Workspace] provides the tools and resources to create, evaluate, and utilize machine learning models to generate data predictions and insights. When machine learning insights are ingested into a [!DNL Profile]-enabled dataset, that same data is also ingested as [!DNL Profile] records which can then be segmented using [!DNL Adobe Experience Platform Segmentation Service].
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
+
+Adobe Experience Platform [!DNL Data Science Workspace] provides the tools and resources to create, evaluate, and utilize machine learning models to generate data predictions and insights. When machine learning insights are ingested into a [!DNL Profile]-enabled dataset, that same data is also ingested as [!DNL Profile] records which can then be segmented using [!DNL Adobe Experience Platform Segmentation Service]. 
+
+The segmentation process depends on the evaluation method for the audience. If an audience is configured as **streaming**, it will process all the new updates written by the model into the profile in real-time. However, if an audience is configured for **batch** evaluation, the new values will be evaluated in the next batch.
 
 This document provides links to tutorials that enable you to enrich [!DNL Real-Time Customer Profile] with your machine learning insights.
 
 ## Getting started
 
-In order to complete the tutorials below, you are required to have a working understanding of ingesting [!DNL Profile] data and creating segments. Before beginning this tutorial, please review the documentation for the following services:
+In order to complete the tutorials below, you are required to have a working understanding of ingesting [!DNL Profile] data and creating audiences. Before beginning this tutorial, please review the documentation for the following services:
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Provides a complete, unified representation of each individual customer based on aggregated data from multiple sources.
-- [[!DNL Identity Service]](../../identity-service/home.md): Enables [!DNL Real-Time Customer Profile] by bridging identities from disparate data sources being ingested into Platform.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
+- [[!DNL Identity Service]](../../identity-service/home.md): Enables [!DNL Real-Time Customer Profile] by bridging identities from disparate data sources being ingested into Experience Platform.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
 
 In addition to the above-mentioned documents, it is highly recommended that you also review the following guides on schemas and the Schema Editor:
 
@@ -35,20 +43,20 @@ If you prefer to compose a schema using the [!DNL Schema Registry] API instead, 
 
 Once your schema and dataset are prepared, you can generate and ingest scoring data to the dataset by performing scoring runs using an appropriate model.
 
-## Create segments using the [!DNL Segment Builder] {#create-segments-using-the-segment-builder}
+## Create audiences using the [!DNL Segment Builder] {#create-audiences-using-the-segment-builder}
 
-After you have generated and ingested your scoring data insights to your [!DNL Profile]-enabled dataset, you can create dynamic segments using the [!DNL Segment Builder]. 
+After you have generated and ingested your scoring data insights to your [!DNL Profile]-enabled dataset, you can create dynamic audiences using the [!DNL Segment Builder]. 
 
 The [!DNL Segment Builder] provides a rich workspace that allows you to interact with [!DNL Profile] data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties. Follow the [[!DNL Segment Builder] user guide](../../segmentation/ui/segment-builder.md) to learn about:
 
 - Creating segment definitions using a combination of attributes, events, and existing audiences as building blocks.  
-- Using the rule builder canvas and containers to control the order in which segment rules are executed.
+- Using the rule builder canvas and containers to control the order in which audience rules are executed.
 - Viewing estimates of your prospective audience, allowing you to adjust your segment definitions as required.
 - Enabling all segment definitions for scheduled segmentation.
 - Enabling specified segment definitions for streaming segmentation.
 
 ## Next steps {#next-steps}
 
-To learn more about segments and the [!DNL Segment Builder], read the [Segmentation Service overview](../../segmentation/home.md).
+To learn more about audiences and the [!DNL Segment Builder], read the [Segmentation Service overview](../../segmentation/home.md).
 
 To learn more about [!DNL Real-Time Customer Profile], read the [Real-Time Customer Profile overview](../../profile/home.md)

@@ -1,0 +1,1 @@
+{"flowRunId":"0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19","scheduledTime":"2023-08-18T01:00:00Z","exportResults":[{"sinkPath":"/destination/output001","name":"amazon-s3_segment-name_20230818_010718.json","size":145854}]}

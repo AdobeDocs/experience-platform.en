@@ -17,7 +17,7 @@ Adobe Experience Platform has a single unified catalog where users can view tag 
 
 Separate from the extensions in the product catalog, public extensions also have listings in the [Experience Cloud Exchange App Marketplace](https://exchange.adobe.com/apps/browse/ec).  
 
-These listings enable extension developers to post descriptions of functionality, provide links to additional support and documentation, and to market extensions to prospective users who may not be aware of your company or the functionality of your extension. In this marketplace, your extension will have a public listing that can be viewed without the user being authenticated to Platform. For public extensions, creating this Exchange listing is a required step.
+These listings enable extension developers to post descriptions of functionality, provide links to additional support and documentation, and to market extensions to prospective users who may not be aware of your company or the functionality of your extension. In this marketplace, your extension will have a public listing that can be viewed without the user being authenticated to Experience Platform. For public extensions, creating this Exchange listing is a required step.
 
 >[!TIP]
 >
@@ -39,6 +39,7 @@ If you already have a company account, or if you do not need an Exchange listing
 1. Select the **Create New Application** tab, and then select **Create New App** for a customized solution, or select an applicable template.
 1. Provide your listing information. For detailed information on App Manager check out the full [article](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360024197931). Listing information should be very clear about what the extension does and why it is useful. The listing functions as a marketing space for your app. Promote your extension here using clear descriptions, links to landing pages on your site, links to help docs or support email addresses, and so on. Although space in extension views is limited, the Exchange listing provides an opportunity to promote both your extension and your company. The following are suggestions to improve promotion of the extension:
    - **App Icon** – Make sure the icon for the Exchange listing has the appropriate dimensions, 512 x 512 for png or 1:1 aspect ratio for jpg.
+   
       >[!NOTE]
       >
       >This is a different file format than used in your extension code. The extension itself will contain an svg file as the [icon](../manifest.md).

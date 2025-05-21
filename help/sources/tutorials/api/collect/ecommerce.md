@@ -3,16 +3,17 @@ keywords: Experience Platform;home;popular topics;Collect eCommerce data;eCommer
 solution: Experience Platform
 title: Create a Dataflow for E-commerce Sources using the Flow Service API
 type: Tutorial
-description: This tutorial covers the steps for retrieving data from a third-party eCommerce system and ingesting it into Platform using source connectors and APIs.
+description: This tutorial covers the steps for retrieving data from a third-party eCommerce system and ingesting it into Experience Platform using source connectors and APIs.
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
 ---
 # Create a dataflow for E-commerce sources using the [!DNL Flow Service] API
 
-This tutorial covers the steps for retrieving data from an e-commerce source and bringing them to Platform using [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial covers the steps for retrieving data from an e-commerce source and bringing them to Experience Platform using [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
->In order to create a dataflow, you must already have a valid base connection ID with an E-commerce source. If you do not have this ID, then see the [sources overview](../../../home.md#ecommerce) for a list of E-commerce sources that you can create a base connection with.
+>* In order to create a dataflow, you must already have a valid base connection ID with an E-commerce source. If you do not have this ID, then see the [sources overview](../../../home.md#ecommerce) for a list of E-commerce sources that you can create a base connection with.
+>* For Experience Platform to ingest data, timezones for all table-based batch sources must be configured to UTC.
 
 ## Getting started
 
@@ -23,11 +24,11 @@ This tutorial requires you to have a working understanding of the following comp
   * [Schema Registry API](../../../../xdm/api/getting-started.md): Learn how to successfully perform calls to the Schema Registry API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the Accept header and its possible values).
 * [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is the system of record for data location and lineage within [!DNL Experience Platform].
 * [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): The Batch Ingestion API allows you to ingest data into [!DNL Experience Platform] as batch files.
-* [[!DNL Sandboxes]](../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+* [[!DNL Sandboxes]](../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Experience Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-### Using Platform APIs
+### Using Experience Platform APIs
 
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../landing/api-guide.md).
+For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../../landing/api-guide.md).
 
 ## Create a source connection {#source}
 
@@ -107,7 +108,7 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 ## Create a target XDM schema {#target-schema}
 
-In order for the source data to be used in Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create a Platform dataset in which the source data is contained.
+In order for the source data to be used in Experience Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create an Experience Platform dataset in which the source data is contained.
 
 A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
@@ -115,7 +116,7 @@ For detailed steps on how to create a target XDM schema, see the tutorial on [cr
 
 ## Create a target dataset {#target-dataset}
 
-A target dataset can be created by performing a POST request to the [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), providing the ID of the target schema within the payload.
+A target dataset can be created by performing a POST request to the [Catalog Service API](https://developer.adobe.com/experience-platform-apis/references/catalog/), providing the ID of the target schema within the payload.
 
 For detailed steps on how to create a target dataset, see the tutorial on [creating a dataset using the API](../../../../catalog/api/create-dataset.md).
 
@@ -165,8 +166,8 @@ curl -X POST \
 | -------- | ----------- |
 | `data.schema.id` | The `$id` of the target XDM schema. |
 |`data.schema.version` | The version of the schema. This value must be set `application/vnd.adobe.xed-full+json;version=1`, which returns the latest minor version of the schema. |
-| `params.dataSetId` | The ID of the target dataset. |
-| `connectionSpec.id` | The connection spec ID used to connect to the Data Lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `params.dataSetId` | The ID of the target dataset generated in the previous step. **Note**: You must provide a valid dataset ID when creating a target connection. An invalid dataset ID will result in an error. |
+| `connectionSpec.id` | The connection spec ID used to connect to the data lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Response**
 
@@ -183,7 +184,7 @@ A successful response returns the new target connection's unique identifier (`id
 
 In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema that the target dataset adheres to.
 
-To create a mapping set, make a POST request to the `mappingSets` endpoint of the [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) while providing your target XDM schema `$id` and the details of the mapping sets you want to create.
+To create a mapping set, make a POST request to the `mappingSets` endpoint of the [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/) while providing your target XDM schema `$id` and the details of the mapping sets you want to create.
 
 **API format**
 
@@ -244,7 +245,7 @@ A successful response returns details of the newly created mapping including its
 
 ## Look up dataflow specifications {#specs}
 
-A dataflow is responsible for collecting data from sources and bringing them into [!DNL Platform]. In order to create a dataflow, you must first obtain the dataflow specifications by performing a GET request to the [!DNL Flow Service] API. Dataflow specifications are responsible for collecting data from an e-commerce source.
+A dataflow is responsible for collecting data from sources and bringing them into [!DNL Experience Platform]. In order to create a dataflow, you must first obtain the dataflow specifications by performing a GET request to the [!DNL Flow Service] API. Dataflow specifications are responsible for collecting data from an e-commerce source.
 
 **API format**
 
@@ -264,7 +265,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns the details of the dataflow specification responsible for bringing data from your source into Platform. The response includes the unique flow spec `id` required to create a new dataflow.
+A successful response returns the details of the dataflow specification responsible for bringing data from your source into Experience Platform. The response includes the unique flow spec `id` required to create a new dataflow.
 
 >[!NOTE]
 >
@@ -621,7 +622,7 @@ curl -X POST \
 | `transformations.params.mappingId`| The mapping ID associated with your e-commerce source. |
 | `scheduleParams.startTime` | The start time for the dataflow in epoch time. |
 | `scheduleParams.frequency` | The `frequency` at which the dataflow will collect data. Acceptable values include: `once`, `minute`, `hour`, `day`, or `week`. |
-| `scheduleParams.interval` | The interval designates the period between two consecutive flow runs. The interval's value should be a non-zero integer. An interval is not required when `frequency` is set as `once` and should be greater than or equal to `15` for other `frequency` values. |
+| `scheduleParams.interval` | The interval designates the period between two consecutive flow runs. The interval's value should be a non-zero integer. The minimum accepted interval value for each frequency is as follows:<ul><li>**Once**: n/a</li><li>**Minute**: 15</li><li>**Hour**: 1</li><li>**Day**: 1</li><li>**Week**: 1</li></ul>  |
 
 **Response**
 
@@ -640,7 +641,7 @@ Once your dataflow has been created, you can monitor the data that is being inge
 
 ## Next steps
 
-By following this tutorial, you have created a source connector to collect data e-commerce on a scheduled basis. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-Time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
+By following this tutorial, you have created a source connector to collect data e-commerce on a scheduled basis. Incoming data can now be used by downstream [!DNL Experience Platform] services such as [!DNL Real-Time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
 *   [Real-Time Customer Profile overview](../../../../profile/home.md)
 *   [Data Science Workspace overview](../../../../data-science-workspace/home.md)

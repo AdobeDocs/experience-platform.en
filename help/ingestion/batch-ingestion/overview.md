@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;popular topics;data ingestion;batch;Batch;enable dataset;Batch ingestion overview;overview;batch ingestion overview;
 solution: Experience Platform
 title: Batch Ingestion API Overview
-description: The Adobe Experience Platform Batch Ingestion API allows you to ingest data into Platform as batch files. Data being ingested can be the profile data from a flat file in a CRM system (such as a Parquet file), or data that conforms to a known schema in the Experience Data Model (XDM) registry.
+description: The Adobe Experience Platform Batch Ingestion API allows you to ingest data into Experience Platform as batch files. Data being ingested can be the profile data from a flat file in a CRM system (such as a Parquet file), or data that conforms to a known schema in the Experience Data Model (XDM) registry.
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
 ---
 # Batch ingestion API overview
 
-The Adobe Experience Platform Batch Ingestion API allows you to ingest data into Platform as batch files. Data being ingested can be profile data from a flat file (such as a Parquet file) or data that conforms to a known schema in the [!DNL Experience Data Model] (XDM) registry.
+The Adobe Experience Platform Batch Ingestion API allows you to ingest data into Experience Platform as batch files. Data being ingested can be profile data from a flat file (such as a Parquet file) or data that conforms to a known schema in the [!DNL Experience Data Model] (XDM) registry.
 
 The [Batch Ingestion API reference](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) provides additional information on these API calls.
 
@@ -38,7 +38,7 @@ Batch data ingestion has some constraints:
 - Maximum number of files per batch: 1500
 - Maximum batch size: 100 GB
 - Maximum number of properties or fields per row: 10000
-- Maximum number of batches per minute, per user: 138
+- Maximum number of batches on data lake per minute, per user: 2000
 
 >[!NOTE]
 >
@@ -50,7 +50,7 @@ When ingesting data, it is important to understand how [!DNL Experience Data Mod
 
 There is some flexibility when ingesting data - if a type does not match what is in the target schema, the data will be converted to the expressed target type. If it cannot, it will fail the batch with a `TypeCompatibilityException`. 
 
-For example, neither JSON nor CSV has a `date` or `date-time` type. As a result, these values are expressed using [ISO 8061 formatted strings](https://www.iso.org/iso-8601-date-and-time-format.html) ("2018-07-10T15:05:59.000-08:00") or Unix Time formatted in milliseconds (1531263959000) and are converted at ingestion time to the target XDM type.
+For example, neither JSON nor CSV has a `date` or `date-time` type. As a result, these values are expressed using [ISO 8601 formatted strings](https://www.iso.org/iso-8601-date-and-time-format.html) ("2018-07-10T15:05:59.000-08:00") or Unix Time formatted in milliseconds (1531263959000) and are converted at ingestion time to the target XDM type.
 
 The table below shows the conversions supported when ingesting data.
 
@@ -140,7 +140,7 @@ You can upload files using the Small File Upload API. However, if your files are
 
 >[!NOTE]
 >
->Batch ingestion can be used to incrementally update data in the Profile Store. For more information, see the section on [updating a batch](#patch-a-batch) in the [batch ingestion developer guide](api-overview.md). 
+>Batch ingestion can be used to incrementally update data in the Profile store. For more information, see the section on [updating a batch](#patch-a-batch) in the [batch ingestion developer guide](api-overview.md). 
 
 >[!INFO]
 >

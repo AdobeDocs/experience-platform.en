@@ -7,6 +7,12 @@ exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
 ---
 # [!DNL JupyterLab] UI overview
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
+
 [!DNL JupyterLab] is a web-based user interface for [Project Jupyter](https://jupyter.org/) and is tightly integrated into Adobe Experience Platform. It provides an interactive development environment for data scientists to work with Jupyter Notebooks, code, and data.
 
 This document provides an overview of [!DNL JupyterLab] and its features as well as instructions to perform common actions.
@@ -15,24 +21,24 @@ This document provides an overview of [!DNL JupyterLab] and its features as well
 
 Experience Platform's JupyterLab integration is accompanied with architectural changes, design considerations, customized notebook extensions, pre-installed libraries, and an Adobe-themed interface.
 
-The following list outlines some of the features that are unique to JupyterLab on Platform:
+The following list outlines some of the features that are unique to JupyterLab on Experience Platform:
 
 | Feature | Description |
 | --- | --- |
 | **Kernels** | Kernels provide notebook and other [!DNL JupyterLab] front-ends the ability to execute and introspect code in different programming languages. [!DNL Experience Platform] provides additional kernels to support development in [!DNL Python], R, PySpark, and [!DNL Spark]. See the [kernels](#kernels) section for more details. |
 | **Data access** | Access existing datasets directly from within [!DNL JupyterLab] with full support for read and write capabilities. |
-| **[!DNL Platform] service integration** | Built-in integrations allows you to utilize other [!DNL Platform] services directly from within [!DNL JupyterLab]. A complete list of supported integrations is provided in the section on [Integration with other Platform services](#service-integration). |
-| **Authentication** | In addition to <a href="https://jupyter-notebook.readthedocs.io/en/stable/security.html" target="_blank">JupyterLab's built-in security model</a>, every interaction between your application and Experience Platform, including Platform service-to-service communication is encrypted and authenticated through the <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
+| **[!DNL Experience Platform] service integration** | Built-in integrations allows you to utilize other [!DNL Experience Platform] services directly from within [!DNL JupyterLab]. A complete list of supported integrations is provided in the section on [Integration with other Experience Platform services](#service-integration). |
+| **Authentication** | In addition to <a href="https://jupyter-notebook.readthedocs.io/en/stable/security.html" target="_blank">JupyterLab's built-in security model</a>, every interaction between your application and Experience Platform, including Experience Platform service-to-service communication is encrypted and authenticated through the <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
 | **Development libraries** | In [!DNL Experience Platform], [!DNL JupyterLab] provides pre-installed libraries for [!DNL Python], R, and PySpark. See the [appendix](#supported-libraries) for a complete list of supported libraries. |
-| **Library controller** | When the pre-installed libraries are lacking for your needs, additional libraries can be installed for Python and R, and are temporarily stored in isolated containers to maintain the integrity of [!DNL Platform] and keep your data safe. See the [kernels](#kernels) section for more details. |
+| **Library controller** | When the pre-installed libraries are lacking for your needs, additional libraries can be installed for Python and R, and are temporarily stored in isolated containers to maintain the integrity of [!DNL Experience Platform] and keep your data safe. See the [kernels](#kernels) section for more details. |
 
 >[!NOTE]
 >
 >Additional libraries are only available for the session in which they were installed. You must reinstall any additional libraries you require when starting new sessions.
 
-## Integration with other [!DNL Platform] services {#service-integration}
+## Integration with other [!DNL Experience Platform] services {#service-integration}
 
-Standardization and interoperability are key concepts behind [!DNL Experience Platform]. The integration of [!DNL JupyterLab] on [!DNL Platform] as an embedded IDE allows it to interact with other [!DNL Platform] services, enabling you to utilize [!DNL Platform] to its full potential. The following [!DNL Platform] services are available in [!DNL JupyterLab]:
+Standardization and interoperability are key concepts behind [!DNL Experience Platform]. The integration of [!DNL JupyterLab] on [!DNL Experience Platform] as an embedded IDE allows it to interact with other [!DNL Experience Platform] services, enabling you to utilize [!DNL Experience Platform] to its full potential. The following [!DNL Experience Platform] services are available in [!DNL JupyterLab]:
 
 *   **[!DNL Catalog Service]:** Access and explore datasets with read and write functionalities.
 *   **[!DNL Query Service]:** Access and explore datasets using SQL, providing lower data access overheads when dealing with large amounts of data.
@@ -41,7 +47,7 @@ Standardization and interoperability are key concepts behind [!DNL Experience Pl
 
 >[!NOTE]
 >
->Some [!DNL Platform] service integrations on [!DNL JupyterLab] are limited to specific kernels. Refer to the section on [kernels](#kernels) for more details.
+>Some [!DNL Experience Platform] service integrations on [!DNL JupyterLab] are limited to specific kernels. Refer to the section on [kernels](#kernels) for more details.
 
 ## Key features and common operations
 
@@ -110,9 +116,9 @@ In [!DNL JupyterLab] select the gear icon in the top-right corner to open *Noteb
 
 ### Terminate & restart [!DNL JupyterLab]
 
-In [!DNL JupyterLab], you can terminate your session to prevent further resources from being used. Start by selecting the **power icon** ![power icon](../images/jupyterlab/user-guide/power_button.png), then select **[!UICONTROL Shut Down]** from the popover that appears to terminate your session. Notebook sessions auto-terminate after 12 hours of no activity.
+In [!DNL JupyterLab], you can terminate your session to prevent further resources from being used. Start by selecting the **power icon** ![power icon](/help/images/icons/power.png), then select **[!UICONTROL Shut Down]** from the popover that appears to terminate your session. Notebook sessions auto-terminate after 12 hours of no activity.
 
-To restart [!DNL JupyterLab], select the **restart icon** ![restart icon](../images/jupyterlab/user-guide/restart_button.png) located directly to the left of the power icon, then select **[!UICONTROL Restart]** from the popover that appears.
+To restart [!DNL JupyterLab], select the **restart icon** ![restart icon](/help/images/icons/restart.png) located directly to the left of the power icon, then select **[!UICONTROL Restart]** from the popover that appears.
 
 ![terminate jupyterlab](../images/jupyterlab/user-guide/shutdown-jupyterlab.gif)
 
@@ -138,7 +144,7 @@ Notebook kernels are the language-specific computing engines for processing note
 
 Certain features and functionalities are limited to particular kernels as described in the table below:
 
-| Kernel | Library installation support | [!DNL Platform] integrations |
+| Kernel | Library installation support | [!DNL Experience Platform] integrations |
 | :----: | :--------------------------: | :-------------------- |
 | **[!DNL Python]** | Yes | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li><li>[!DNL Query Service]</li></ul> |
 | **R** | Yes | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li></ul> |

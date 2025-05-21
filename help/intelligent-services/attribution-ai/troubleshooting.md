@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;getting started;attribution ai;popular topics;attribution ai input;attribution ai output;attribution ai troubleshooting;attribution ai errors
-solution: Experience Platform, Real-time Customer Data Platform
+solution: Experience Platform, Real-Time Customer Data Platform
 feature: Attribution AI
 title: Attribution AI error troubleshooting
 description: Find answers to common errors in Attribution AI.
@@ -15,7 +15,7 @@ This document provides answers to frequently asked questions about Attribution A
 
 Loading errors in Google Chrome's incognito mode are present because of updates in Google Chrome's incognito mode security settings. The issue is actively being worked on with Chrome to make experience.adobe.com a trusted domain.
 
-<img src='./images/faq/error.PNG' width=500 /><br />
+![Error image](./images/faq/error.PNG){width=500}
 
 ### Recommended fix
 

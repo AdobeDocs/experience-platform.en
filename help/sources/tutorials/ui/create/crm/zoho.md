@@ -8,7 +8,11 @@ exl-id: c648fc3e-beea-4030-8d36-dd8a7e2c281e
 ---
 # Create a [!DNL Zoho CRM] source connection in the UI
 
-Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced CRM data on a scheduled basis. This tutorial provides steps for creating a [!DNL Zoho CRM] source connector using the [!DNL Platform] user interface.
+>[!WARNING]
+>
+>The [!DNL Zoho CRM] source will be deprecated at the end of June 2025.
+
+Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced CRM data on a scheduled basis. This tutorial provides steps for creating a [!DNL Zoho CRM] source connector using the [!DNL Experience Platform] user interface.
 
 ## Getting started
 
@@ -23,7 +27,7 @@ If you already have a valid [!DNL Zoho CRM] account, you may skip the remainder 
 
 ### Gather required credentials
 
-In order to connect [!DNL Zoho CRM] to Platform, you must provide values for the following connection properties:
+In order to connect [!DNL Zoho CRM] to Experience Platform, you must provide values for the following connection properties:
 
 | Credential | Description |
 | --- | --- |
@@ -38,9 +42,9 @@ For more information on these credentials, see the documentation on [[!DNL Zoho 
 
 ## Connect your [!DNL Zoho CRM] account
 
-Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Zoho CRM] account to [!DNL Platform].
+Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Zoho CRM] account to [!DNL Experience Platform].
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
@@ -68,4 +72,4 @@ If you are creating a new account, select **[!UICONTROL New account]**, and then
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your [!DNL Zoho CRM] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](../../dataflow/crm.md).
+By following this tutorial, you have established a connection to your [!DNL Zoho CRM] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Experience Platform](../../dataflow/crm.md).

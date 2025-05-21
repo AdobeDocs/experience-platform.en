@@ -16,8 +16,8 @@ This tutorial provides steps for updating the details and credentials of an exis
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
-- [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
-- [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+- [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
+- [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ## Update accounts
 
@@ -27,7 +27,7 @@ Log in to the [Experience Platform UI](https://platform.adobe.com) and then sele
 
 The **[!UICONTROL Accounts]** page appears. On this page is a list of viewable accounts, including information about their source, username, number of dataflows, and date of creation.
 
-Select the filter icon ![filter](../../images/tutorials/update/filter.png) on the top left to launch the sort panel.
+Select the filter icon ![filter](/help/images/icons/filter.png) on the top left to launch the sort panel.
 
 ![accounts-list](../../images/tutorials/update/accounts-list.png)
 

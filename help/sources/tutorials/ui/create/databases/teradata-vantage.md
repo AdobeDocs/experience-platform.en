@@ -4,24 +4,20 @@ title: Create a Teradata Vantage  Source Connection in the UI
 description: Learn how to create a Teradata Vantage source connection using the Adobe Experience Platform UI.
 exl-id: 3fdb09fa-128a-477b-9144-d4ef3ed18ea6
 ---
-# (Beta) Create a [!DNL Teradata Vantage] source connection in the UI
-
->[!NOTE]
->
-> The [!DNL Teradata Vantage] source is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
+# Create a [!DNL Teradata Vantage] source connection in the UI
 
 This tutorial provides steps for creating a [!DNL Teradata Vantage] source connector using the Adobe Experience Platform user interface.
 
 ## Getting started
 
-This tutorial requires a working understanding of the following components of Platform:
+This tutorial requires a working understanding of the following components of Experience Platform:
 
 * [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ### Gather required credentials
 
-In order to access your [!DNL Teradata Vantage] account on Platform, you must provide the following authentication value:
+In order to access your [!DNL Teradata Vantage] account on Experience Platform, you must provide the following authentication value:
 
 | Credential | Description |
 | ---------- | ----------- |
@@ -31,13 +27,15 @@ For more information about getting started, refer to this [[!DNL Teradata Vantag
 
 ## Connect your [!DNL Teradata Vantage] account
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources that you can create an account with.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search bar.
+Under the [!UICONTROL Databases] category, select **[!UICONTROL Teradata Vantage]** and then select **[!UICONTROL Set up]**.
 
-Under the [!UICONTROL Databases] category, select **[!UICONTROL Teradata Vantage]** and then select **[!UICONTROL Add data]**.
+>[!TIP]
+>
+>Sources in the sources catalog display the **[!UICONTROL Set up]** option when a given source does not yet have an authenticated account. Once an authenticated account exists, this option changes to **[!UICONTROL Add data]**.
 
-![](../../../../images/tutorials/create/teradata/catalog.png)
+![The sources catalog with the Teradata Vantage source selected.](../../../../images/tutorials/create/teradata/catalog.png)
 
 The **[!UICONTROL Connect to Teradata Vantage]** page appears. On this page, you can either use new credentials or existing credentials.
 
@@ -45,14 +43,14 @@ The **[!UICONTROL Connect to Teradata Vantage]** page appears. On this page, you
 
 To connect an existing account, select the [!DNL Teradata Vantage] account you want to connect with, then select **[!UICONTROL Next]** to proceed.
 
-![](../../../../images/tutorials/create/teradata/existing.png)
+![The existing accounts page in the sources workspace.](../../../../images/tutorials/create/teradata/existing.png)
 
 ### New account
 
 If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide a name, an optional description, and your [!DNL Teradata Vantage] credentials. When finished, select **[!UICONTROL Connect]** and then allow some time for the new connection to establish.
 
-![](../../../../images/tutorials/create/teradata/new.png)
+![The new account creation interface in the sources workspace.](../../../../images/tutorials/create/teradata/new.png)
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your Teradata Vantage account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](../../dataflow/databases.md).
+By following this tutorial, you have established a connection to your Teradata Vantage account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Experience Platform](../../dataflow/databases.md).

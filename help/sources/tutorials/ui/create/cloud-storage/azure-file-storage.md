@@ -8,7 +8,7 @@ exl-id: 25d483b6-3975-4e80-9dbe-28b7b91cb063
 ---
 # Create an [!DNL Azure File Storage] source connection in the UI
 
-Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for authenticating an [!DNL Azure File Storage] source connector using the [!DNL Platform] user interface.
+Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for authenticating an [!DNL Azure File Storage] source connector using the [!DNL Experience Platform] user interface.
 
 ## Getting started
 
@@ -35,7 +35,7 @@ For more information about getting started refer to [this [!DNL Azure File Stora
 
 ## Connect your [!DNL Azure File Storage] account
 
-Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Azure File Storage] account to [!DNL Platform].
+Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Azure File Storage] account to [!DNL Experience Platform].
 
 Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create an account with.
 
@@ -61,4 +61,4 @@ To connect an existing account, select the [!DNL Azure File Storage] account you
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your [!DNL Azure File Storage] account. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into [!DNL Platform]](../../dataflow/batch/cloud-storage.md).
+By following this tutorial, you have established a connection to your [!DNL Azure File Storage] account. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into [!DNL Experience Platform]](../../dataflow/batch/cloud-storage.md).

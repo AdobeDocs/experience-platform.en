@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;string functions;string;
 solution: Experience Platform
 title: PQL String Functions
 description: Profile Query Language (PQL) offers functions to make interaction with strings simpler.
@@ -11,7 +10,7 @@ exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
 
 ## Like
 
-The `like` function is used to determine if a string matches a specified pattern.
+The `like` function is used to determine if a string matches a specified pattern as a boolean.
 
 **Format**
 
@@ -34,7 +33,7 @@ city like "%es%"
 
 ## Starts with
 
-The `startsWith` function is used to determine if a string starts with a specified substring.
+The `startsWith` function is used to determine if a string starts with a specified substring as a boolean.
 
 **Format**
 
@@ -58,7 +57,7 @@ person.name.startsWith("Joe")
 
 ## Does not start with
 
-The `doesNotStartWith` function is used to determine if a string does not start with a specified substring.
+The `doesNotStartWith` function is used to determine if a string does not start with a specified substring as a boolean.
 
 **Format**
 
@@ -82,7 +81,7 @@ person.name.doesNotStartWith("Joe")
 
 ## Ends with
 
-The `endsWith` function is used to determine if a string ends with a specified substring.
+The `endsWith` function is used to determine if a string ends with a specified substring as a boolean.
 
 **Format**
 
@@ -106,7 +105,7 @@ person.emailAddress.endsWith(".com")
 
 ## Does not end with
 
-The `doesNotEndWith` function is used to determine if a string does not end with a specified substring.
+The `doesNotEndWith` function is used to determine if a string does not end with a specified substring as a boolean.
 
 **Format**
 
@@ -130,7 +129,7 @@ person.emailAddress.doesNotEndWith(".com")
 
 ## Contains
 
-The `contains` function is used to determine if a string contains a specified substring.
+The `contains` function is used to determine if a string contains a specified substring as a boolean.
 
 **Format**
 
@@ -154,7 +153,7 @@ person.emailAddress.contains("2010@gm")
 
 ## Does not contain
 
-The `doesNotContain` function is used to determine if a string does not contain a specified substring.
+The `doesNotContain` function is used to determine if a string does not contain a specified substring as a boolean.
 
 **Format**
 
@@ -178,7 +177,7 @@ person.emailAddress.doesNotContain("2010@gm")
 
 ## Equals
 
-The `equals` function is used to determine if a string is equal to the specified string.
+The `equals` function is used to determine if a string is equal to the specified string as a boolean.
 
 **Format**
 
@@ -201,7 +200,7 @@ person.name.equals("John")
 
 ## Not equal to
 
-The `notEqualTo` function is used to determine if a string is not equal to the specified string.
+The `notEqualTo` function is used to determine if a string is not equal to the specified string as a boolean.
 
 **Format**
 
@@ -224,7 +223,7 @@ person.name.notEqualTo("John")
 
 ## Matches
 
-The `matches` function is used to determine if a string matches a specific regular expression. Please refer to [this document](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) for more information on matching patterns in regular expressions.
+The `matches` function is used to determine if a string matches a specific regular expression. Please refer to [this document](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) for more information on matching patterns in regular expressions as a boolean.
 
 **Format**
 
@@ -246,7 +245,7 @@ person.name.matches("(?i)^John")
 
 ## Regular expression group
 
-The `regexGroup` function is used to extract specific information, based on the regular expression provided.
+The `regexGroup` function is used to extract specific information, based on the regular expression provided as a string.
 
 **Format**
 

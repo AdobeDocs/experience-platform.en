@@ -1,8 +1,7 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;segment;segmentMembership;segment membership;Schema design;map;Map;
 solution: Experience Platform
 title: Segment Membership Details Schema Field Group
-description: This document provides an overview of the Segment Membership Details schema field group.
+description: Learn about the Segment Membership Details schema field group.
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
 ---
 
@@ -18,7 +17,7 @@ exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
 >
 >While the `segmentMembership` field must be manually added to your profile schema using this field group, you should not attempt to manually populate or update this field. The system automatically updates the `segmentMembership` map for each profile as segmentation jobs are performed.
 
-<img src='../../images/data-types/profile-segmentation.png' width=400 /><br />
+![profile segmentation](../../images/data-types/profile-segmentation.png){width=400}
 
 | Property | Data type | Description |
 | --- | --- | --- |

@@ -7,7 +7,7 @@ exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
 ---
 # Streaming ingestion troubleshooting guide
 
-This document provides answers to frequently asked questions about streaming ingestion on Adobe Experience Platform. For questions and troubleshooting related to other [!DNL Platform] services, including those that are encountered across all [!DNL Platform] APIs, please refer to the [Experience Platform troubleshooting guide](../../landing/troubleshooting.md).
+This document provides answers to frequently asked questions about streaming ingestion on Adobe Experience Platform. For questions and troubleshooting related to other [!DNL Experience Platform] services, including those that are encountered across all [!DNL Experience Platform] APIs, please refer to the [Experience Platform troubleshooting guide](../../landing/troubleshooting.md).
 
 Adobe Experience Platform [!DNL Data Ingestion] provides RESTful APIs that you can use to ingest data into [!DNL Experience Platform]. The ingested data is used to update individual customer profiles in near real-time, allowing you to deliver personalized, relevant experiences across multiple channels. Please read the [Data Ingestion overview](../home.md) for more information on the service and the different ingestion methods. For steps on how to use streaming ingestion APIs, please read the [streaming ingestion overview](../streaming-ingestion/overview.md).
 
@@ -27,9 +27,9 @@ Streaming ingestion supports two modes of validation: synchronous and asynchrono
 
 For more information on synchronous and asynchronous validation, see the [streaming validation overview](../quality/streaming-validation.md). For steps on how to view batches that fail validation, please refer to the guide on [retrieving failed batches](../quality/retrieve-failed-batches.md).
 
-### Can I validate a request payload before sending it to [!DNL Platform]?
+### Can I validate a request payload before sending it to [!DNL Experience Platform]?
 
-Request payloads can only be evaluated after they have been sent to [!DNL Platform]. When performing synchronous validation, valid payloads return populated JSON objects while invalid payloads return error messages. During asynchronous validation, the service detects and sends any malformed data to the [!DNL Data Lake] where it can later be retrieved for analysis. See the [streaming validation overview](../quality/streaming-validation.md) for more information.
+Request payloads can only be evaluated after they have been sent to [!DNL Experience Platform]. When performing synchronous validation, valid payloads return populated JSON objects while invalid payloads return error messages. During asynchronous validation, the service detects and sends any malformed data to the [!DNL Data Lake] where it can later be retrieved for analysis. See the [streaming validation overview](../quality/streaming-validation.md) for more information.
 
 ### What happens when synchronous validation is requested on an edge that does not support it?
 
@@ -37,7 +37,7 @@ When synchronous validation is not supported for the requested location, a 501 e
 
 ### How do I ensure data is only collected from trusted sources?
 
-[!DNL Experience Platform] supports secured data collection. When authenticated data collection is enabled, clients must send a JSON Web Token (JWT) and their organization ID as request headers. For more information on how to send authenticated data to [!DNL Platform], please see the guide on [authenticated data collection](../tutorials/create-authenticated-streaming-connection.md).
+[!DNL Experience Platform] supports secured data collection. When authenticated data collection is enabled, clients must send a JSON Web Token (JWT) and their organization ID as request headers. For more information on how to send authenticated data to [!DNL Experience Platform], please see the guide on [authenticated data collection](../tutorials/create-authenticated-streaming-connection.md).
 
 ### What is the latency for streaming data to [!DNL Real-Time Customer Profile]?
 
@@ -45,15 +45,15 @@ Streamed events are generally reflected in [!DNL Real-Time Customer Profile] in 
 
 ### Can I include multiple messages in the same API request?
 
-You can group multiple messages within a single request payload and stream them to [!DNL Platform]. When used correctly, grouping multiple messages within a single request is an excellent way to optimize your data operations. Please read the tutorial on [sending multiple messages in a request](../tutorials/streaming-multiple-messages.md) for more information. 
+You can group multiple messages within a single request payload and stream them to [!DNL Experience Platform]. When used correctly, grouping multiple messages within a single request is an excellent way to optimize your data operations. Please read the tutorial on [sending multiple messages in a request](../tutorials/streaming-multiple-messages.md) for more information. 
 
 ### How do I know if the data I'm sending is being received?
 
-All data that is sent to [!DNL Platform] (successfully or otherwise) is stored as batch files before being persisted in datasets. The processing status of batches appear within the dataset they were sent to.
+All data that is sent to [!DNL Experience Platform] (successfully or otherwise) is stored as batch files before being persisted in datasets. The processing status of batches appear within the dataset they were sent to.
 
 You can verify if data has been successfully ingested by checking dataset activity using the [Experience Platform user interface](https://platform.adobe.com). Click **[!UICONTROL Datasets]** in the left-navigation to display a list of datasets. Select the dataset you are streaming to from the displayed list to open its **[!UICONTROL Dataset activity]** page, showing all batches sent during a selected time period. For more information about using [!DNL Experience Platform] to monitor data streams, see the guide on [monitoring streaming data flows](../quality/monitor-data-ingestion.md).
 
-If your data failed to ingest and you want to recover it from [!DNL Platform], you can retrieve the failed batches by sending their IDs to the [!DNL Data Access API]. See the guide on [retrieving failed batches](../quality/retrieve-failed-batches.md) for more information.
+If your data failed to ingest and you want to recover it from [!DNL Experience Platform], you can retrieve the failed batches by sending their IDs to the [!DNL Data Access API]. See the guide on [retrieving failed batches](../quality/retrieve-failed-batches.md) for more information.
 
 ### Why is my streaming data not available in the Data Lake?
 
@@ -91,6 +91,6 @@ The following JSON is an example response object for an API request with two mes
 
 If [!DNL Real-Time Customer Profile] rejects a message, it is most likely due to incorrect identity information. This can be the result of providing an invalid value or namespace for an identity.
 
-There are two types of identity namespaces: default and custom. When using custom namespaces, make sure the namespace has been registered within [!DNL Identity Service]. See the [identity namespace overview](../../identity-service/namespaces.md) for more information on using default and custom namespaces.
+There are two types of identity namespaces: default and custom. When using custom namespaces, make sure the namespace has been registered within [!DNL Identity Service]. See the [identity namespace overview](../../identity-service/features/namespaces.md) for more information on using default and custom namespaces.
 
 You can use the [[!DNL Experience Platform UI]](https://platform.adobe.com) to see more information on why a message failed ingestion. Click **[!UICONTROL Monitoring]** in the left-navigation, then view the **[!UICONTROL Streaming end-to-end]** tab to see message batches streamed during a selected time period.

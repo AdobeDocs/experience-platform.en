@@ -6,6 +6,10 @@ exl-id: e5869c09-b61e-4d23-a594-5a07769da3c4
 ---
 # Create an Oracle Service Cloud source connection in the UI
 
+>[!WARNING]
+>
+>The [!DNL Oracle Service Cloud] source will be deprecated at the end of June 2025.
+
 This tutorial provides steps for creating an Oracle Service Cloud source connection using the Adobe Experience Platform user interface.
 
 ## Getting started
@@ -21,7 +25,7 @@ If you already have a valid Oracle Service Cloud source connection, you may skip
 
 ### Gather required credentials
 
-In order to access your Oracle Service Cloud account on [!DNL Platform], you must provide the following values:
+In order to access your Oracle Service Cloud account on [!DNL Experience Platform], you must provide the following values:
 
 | Credential | Description |
 | ---------- | ----------- |
@@ -33,7 +37,7 @@ For more information on authenticating your Oracle Service Cloud account, refer 
 
 ## Connect your Oracle Service Cloud account
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources that can be used to create an account.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources that can be used to create an account.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search bar.
 
@@ -57,4 +61,4 @@ If you are using new credentials, select **[!UICONTROL New account]**. On the in
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your Oracle Service Cloud account. You can now continue on to the next tutorial and [configure a dataflow to bring customer success data into Platform](../../dataflow/crm.md).
+By following this tutorial, you have established a connection to your Oracle Service Cloud account. You can now continue on to the next tutorial and [configure a dataflow to bring customer success data into Experience Platform](../../dataflow/crm.md).

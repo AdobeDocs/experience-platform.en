@@ -5,25 +5,25 @@ exl-id: f99548ff-c6f2-4e99-920b-eb981679de2d
 ---
 # Test an Adobe Target implementation with Adobe Experience Platform Debugger
 
-Adobe Experience Platform Debugger provides a suite of useful tools for testing and debugging a website that has been tooled with an Adobe Target implementation. This guide covers some common workflows and best practices for using Platform Debugger on a Target-enabled website.
+Adobe Experience Platform Debugger provides a suite of useful tools for testing and debugging a website that has been tooled with an Adobe Target implementation. This guide covers some common workflows and best practices for using Experience Platform Debugger on a Target-enabled website.
 
 ## Prerequisites
 
-To use Platform Debugger for Target, the website must be using the [at.js library](https://developer.adobe.com/target/implement/client-side/atjs/how-atjs-works/) version 1.x or higher. Previous versions are not supported.
+To use Experience Platform Debugger for Target, the website must be using the [at.js library](https://developer.adobe.com/target/implement/client-side/atjs/how-atjs-works/) version 1.x or higher. Previous versions are not supported.
 
-## Initializing Platform Debugger
+## Initializing Experience Platform Debugger
 
-Open the website you want to test in a browser, and then open the Platform Debugger extension.
+Open the website you want to test in a browser, and then open the Experience Platform Debugger extension.
 
-Select **[!DNL Target]** in the left navigation. If Platform Debugger detects that a compatible version of at.js is running on the site, Adobe Target implementation details are shown.
+Select **[!DNL Target]** in the left navigation. If Experience Platform Debugger detects that a compatible version of at.js is running on the site, Adobe Target implementation details are shown.
 
-![The Target view selected in Platform Debugger, indicating that Adobe Target is active on the currently viewed browser page](../images/solutions/target/target-initialized.png)
+![The Target view selected in Experience Platform Debugger, indicating that Adobe Target is active on the currently viewed browser page](../images/solutions/target/target-initialized.png)
 
 ## Global configuration information
 
-Information about the implementation's global configuration is displayed at the top of the Target view in Platform Debugger.
+Information about the implementation's global configuration is displayed at the top of the Target view in Experience Platform Debugger.
 
-![Global configuration information for Target highlighted within Platform Debugger](../images/solutions/target/global-config.png)
+![Global configuration information for Target highlighted within Experience Platform Debugger](../images/solutions/target/global-config.png)
 
 | Name | Description |
 | --- | --- |
@@ -38,11 +38,11 @@ Information about the implementation's global configuration is displayed at the 
 
 Select **[!DNL Network Requests]** to view summary information on each network request made on the page.
 
-![The [!DNL Network Requests] section for Target selected within Platform Debugger](../images/solutions/target/network-requests.png)
+![The [!DNL Network Requests] section for Target selected within Experience Platform Debugger](../images/solutions/target/network-requests.png)
 
 As you perform actions on the page (including reloading the page), new columns are automatically added to the table, allowing you to view the sequence of actions and how values are altered between each request.
 
-![The [!DNL Network Requests] section for Target selected within Platform Debugger](../images/solutions/target/new-request.png)
+![The [!DNL Network Requests] section for Target selected within Experience Platform Debugger](../images/solutions/target/new-request.png)
 
 The following values are captured:
 
@@ -63,7 +63,7 @@ The following values are captured:
 | [!DNL clientCode] | The identifier for your organization's account as recognized by Target.  |
 | [!DNL requestType] | The API that was used for the request. If using at.js 1.x, the value is `/json`. If using at.js 2.x, the value is `delivery`. |
 | [!DNL Audience Manager Blob] | Provides information on encrypted Audience Manager metadata referred to as the "blob". |
-| [!DNL Audience Location Hint] | The data collection region ID. This is a numeric identifier for the geographic location of a particular ID service data center. For more information, see the Audience Manager documentation on [DCS Region IDs, Locations, and Host Names](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html) and the Experience Cloud Identity Service guide on [`getLocationHint`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/getlocationhint.html?lang=en#reference-a761030ff06c4439946bb56febf42d4c). |
+| [!DNL Audience Location Hint] | The data collection region ID. This is a numeric identifier for the geographic location of a particular ID service data center. For more information, see the Audience Manager documentation on [DCS Region IDs, Locations, and Host Names](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html) and the Experience Cloud Identity Service guide on [`getLocationHint`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/getlocationhint.html#reference-a761030ff06c4439946bb56febf42d4c). |
 | [!DNL Browser Height] | The browser height in pixels. |
 | [!DNL Browser Time Offset] | The browser's time offset associated with its timezone. |
 | [!DNL Browser Width] | The browser width in pixels. |
@@ -92,18 +92,18 @@ The following values are captured:
 
 To view the details for a parameter on a particular network event, select the table cell in question. A popover appears providing further information on the parameter, including a description and its value. If the value is a JSON object, the dialog includes a fully navigable view of the object's structure.
 
-![The [!DNL Network Requests] section for Target selected within Platform Debugger](../images/solutions/target/request-param-details.png)
+![The [!DNL Network Requests] section for Target selected within Experience Platform Debugger](../images/solutions/target/request-param-details.png)
 
 ## [!DNL Configuration]
 
 Select **[!DNL Configuration]** to enable or disable a selection of additional debugging tools for Target.
 
-![The [!DNL Configuration Requests] section for Target selected within Platform Debugger](../images/solutions/target/configuration.png)
+![The [!DNL Configuration Requests] section for Target selected within Experience Platform Debugger](../images/solutions/target/configuration.png)
 
 | Debugging tool | Description |
 | --- | --- |
 | [!DNL Target Console Logging] | When enabled, allows you access at.js logs in the browser's console tab. This feature can also be enabled by adding an `mboxDebug` query param (with any value) to the browser URL. |
-| [!DNL Target Diable] | When enabled, all Target functionalities are disabled on the page. This can be used to determine if a Target-specific offer is what is causing the issue on the page. |
+| [!DNL Target Disable] | When enabled, all Target functionalities are disabled on the page. This can be used to determine if a Target-specific offer is what is causing the issue on the page. |
 | [!DNL Target Trace] | **Note**: You must be logged in to enable this feature.<br><br>When enabled, tracking tokens are sent with every quest, and a trace object is returned in each response. `at.js` parses the response `window.__targetTraces`. Each trace object contains the same information as the [[!DNL Network Requests] tab], with the following additions:<ul><li>A profile snapshot, allowing you to see attributes before and after requests.</li><li>Matched and unmatched [activities](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html), showing why the current profile did or did not qualify for specific activities.<ul><li>This can help identify which audiences a profile is qualifying for at a given point, and why.</li><li>Target docs contain more info on different activity types</li></ul></li></ul> |
 
 {style="table-layout:auto"}

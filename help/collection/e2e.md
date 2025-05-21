@@ -7,7 +7,7 @@ exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
 
 Adobe Experience Platform collects and transfers your data to other Adobe products and third-party destinations. In order to send event data from your application to the Experience Platform Edge Network, it is important to understand these core technologies and how to configure them to deliver your data to the destinations you require, when you require it.
 
-This guide provides a high-level tutorial of how to send an event through the Edge Network using Platform's data collection capabilities. Specifically, the tutorial walks through the steps of installing and configuring the Adobe Experience Platform Web SDK tag extension within the Data Collection UI (formerly Adobe Experience Platform Launch).
+This guide provides a high-level tutorial of how to send an event through the Edge Network using Experience Platform's data collection capabilities. Specifically, the tutorial walks through the steps of installing and configuring the Adobe Experience Platform Web SDK tag extension within the Data Collection UI (formerly Adobe Experience Platform Launch).
 
 >[!NOTE]
 >
@@ -26,12 +26,12 @@ See the guide on [managing permissions for data collection](./permissions.md) to
 
 To use the various Data Collection products mentioned in this guide, you must also have access to datastreams and the ability to create and manage schemas. If you need access to either of these features, please contact your Adobe account team to help you get the necessary access. Please note that if you have not purchased Adobe Experience Platform, Adobe will provision you with the necessary access to use the SDK at no extra charge.
 
-If you already have access to Platform, you must ensure that you have the all [permissions](../access-control/home.md#permissions) under the following categories enabled:
+If you already have access to Experience Platform, you must ensure that you have the all [permissions](../access-control/home.md#permissions) under the following categories enabled:
 
 * Data Modeling
 * Identities
 
-See the [access control UI overview](../access-control/ui/overview.md) to learn how to grant permissions for Platform capabilities to users.
+See the [access control UI overview](../access-control/ui/overview.md) to learn how to grant permissions for Experience Platform capabilities to users.
 
 ## Process summary
 
@@ -97,18 +97,18 @@ Select **[!UICONTROL Datastreams]** in the left navigation. From here, you can s
 
 ![Datastreams](./images/e2e/datastreams.png)
 
-The configuration requirements for a datastream depend on which products and capabilities you are sending data to. For detailed information on the configuration options for each product, refer to the [datastreams overview](../edge/datastreams/overview.md).
+The configuration requirements for a datastream depend on which products and capabilities you are sending data to. For detailed information on the configuration options for each product, refer to the [datastreams overview](../datastreams/overview.md).
 
 ## Install and configure the Web SDK {#install}
 
-Once you have created a schema and a datastream, the next step is to install and configure the Platform Web SDK to start sending data to the Edge Network.
+Once you have created a schema and a datastream, the next step is to install and configure the Experience Platform Web SDK to start sending data to the Edge Network.
 
 >[!NOTE]
 >
 >This section uses the Data Collection UI to configure the Web SDK tag extension, but you can also install and configure it using raw code instead. Refer to the following guides for more information:
 >
->* [Install the SDK](../edge/fundamentals/installing-the-sdk.md)
->* [Configure the SDK](../edge/fundamentals/configuring-the-sdk.md)
+>* [Install the SDK](/help/web-sdk/install/overview.md)
+>* [Configure the SDK](/help/web-sdk/commands/configure/overview.md)
 >
 >Also note that even if you only want to use event forwarding, you must still install and configure the SDK as described before configuring event forwarding at a [later step](#event-forwarding).
 
@@ -129,7 +129,7 @@ If creating a new property, provide a descriptive name and set the [!UICONTROL P
 
 ![Create property](./images/e2e/create-property.png)
 
-The overview page for the property appears. From here, select **[!UICONTROL Extensions]** in the left navigation, then select **[!UICONTROL Catalog]**. Find the listing for the Platform Web SDK (optionally using the search bar to narrow results) and select **[!UICONTROL Install]**.
+The overview page for the property appears. From here, select **[!UICONTROL Extensions]** in the left navigation, then select **[!UICONTROL Catalog]**. Find the listing for the Experience Platform Web SDK (optionally using the search bar to narrow results) and select **[!UICONTROL Install]**.
 
 ![Install the Web SDK](./images/e2e/install-sdk.png)
 
@@ -153,7 +153,7 @@ On the next screen, select **[!UICONTROL Adobe Experience Platform Web SDK]** un
 
 ![XDM object type](./images/e2e/xdm-object.png)
 
-The configuration dialog appears for the XDM object type. The dialog automatically selects your Platform sandbox, and from here you can see all the schemas that have been created in that sandbox. Select the XDM schema you created earlier from the list.
+The configuration dialog appears for the XDM object type. The dialog automatically selects your Experience Platform sandbox, and from here you can see all the schemas that have been created in that sandbox. Select the XDM schema you created earlier from the list.
 
 ![XDM object type](./images/e2e/select-schema.png)
 
@@ -222,7 +222,7 @@ The action configuration page appears. To get the rule to send data to the Edge 
 
 ![Action type](./images/e2e/action-type.png)
 
-The screen updates to show additional options to configure the send event action. Under **[!UICONTROL Type]**, you can provide a custom type value to populate the `eventType` XDM field. Under **[!UICONTROL XDM data]**, provide the name of the XDM data type you created earlier (surrounded by percent signs), or select the database icon (![Database icon](./images/e2e/database-symbol.png)) to select it from a list. This is the data that will ultimately be sent to the Edge Network.
+The screen updates to show additional options to configure the send event action. Under **[!UICONTROL Type]**, you can provide a custom type value to populate the `eventType` XDM field. Under **[!UICONTROL XDM data]**, provide the name of the XDM data type you created earlier (surrounded by percent signs), or select the database icon (![Database icon](/help/images/icons/database.png)) to select it from a list. This is the data that will ultimately be sent to the Edge Network.
 
 Select **[!UICONTROL Keep Changes]** when finished.
 
@@ -240,7 +240,7 @@ After the rule has been configured, you are ready to add it to a tag library, bu
 >
 >If you have not set up an environment in the Data Collection UI yet, you must do so before you can create a build. See the section on [configuring an environment for a web property](../tags/ui/publishing/environments.md#web-configuration) in the tags documentation for more information.
 
-To learn how to create a library, add extensions and rules to the library, and build that library to an environment, see the guide on [managing libraries](../tags/ui/publishing/libraries.md) in the tags documentation. When you create the library, ensure that you include the Platform Web SDK extension and the data collection rules you created previously.
+To learn how to create a library, add extensions and rules to the library, and build that library to an environment, see the guide on [managing libraries](../tags/ui/publishing/libraries.md) in the tags documentation. When you create the library, ensure that you include the Experience Platform Web SDK extension and the data collection rules you created previously.
 
 Once you have created the library and its build has been assigned to an environment, you can install that environment on the client side of your website. See the section on [installing environments](../tags/ui/publishing/environments.md#installation) for more information.
 
@@ -268,4 +268,4 @@ After the build is complete, the final step is to update the datastream you [pre
 
 ## Next steps
 
-This guide provided a high-level end-to-end overview of how to send data to the Edge Network using the Platform Web SDK. Please refer to the documentation linked to throughout this guide for more information on the various components and services involved.
+This guide provided a high-level end-to-end overview of how to send data to the Edge Network using the Experience Platform Web SDK. Please refer to the documentation linked to throughout this guide for more information on the various components and services involved.

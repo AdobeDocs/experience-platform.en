@@ -938,7 +938,7 @@ A successful response return the details of the updated extension package.
 
 Once you have completed testing your extension package you can release it privately. This makes it available to any property within your company.
 
-After you have released privately, you can begin the public release process by filling out the [public release request form](https://experiencecloudpanel.adobe.com/c/r/DCExtensionReleaseRequest).
+After you have released privately, you can begin the public release process by filling out the [public release request form](https://www.feedbackprogram.adobe.com/c/r/DCExtensionReleaseRequest).
 
 **API format**
 

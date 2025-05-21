@@ -98,7 +98,7 @@ Experience Platform Debugger shows the following information for each solution:
  <tbody> 
   <tr> 
    <td colname="col1"> <p>Library Version </p> </td> 
-   <td colname="col2"> <p>The number of the Adobe Experience Platform Web SDK <a href="https://experienceleague.adobe.com/docs/experience-platform/edge/extension/web-sdk-ext-release-notes.html" format="html" scope="external">library version</a> </p> </td> 
+   <td colname="col2"> <p>The number of the Adobe Experience Platform Web SDK <a href="https://experienceleague.adobe.com/docs/experience-platform/web-sdk/extension/web-sdk-ext-release-notes.html" format="html" scope="external">library version</a> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Namespace</p> </td> 

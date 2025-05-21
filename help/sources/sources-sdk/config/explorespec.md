@@ -78,4 +78,4 @@ Explore specifications defines the parameters required for exploring and inspect
 
 ## Next steps
 
-With your explore specifications populated, you can proceed to create a complete connection specification using the [!DNL Flow Service] API. See the the [Self-Serve Sources (Batch SDK) API guide](../api/api-overview.md) for more information.
+With your explore specifications populated, you can proceed to create a complete connection specification using the [!DNL Flow Service] API. See the [Self-Serve Sources (Batch SDK) API guide](../api/api-overview.md) for more information.

@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;previews;estimates;previews and estimates;estimates and previews;api;API;
 solution: Experience Platform
 title: Previews and Estimates API Endpoints
 description: As segment definition are developed, you can use the estimate and preview tools within Adobe Experience Platform to view summary-level information to help ensure you are isolating the expected audience.
+role: Developer
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
 ---
 # Previews and estimates endpoints
@@ -28,9 +28,9 @@ When the ingestion of records into the Profile store increases or decreases the 
 * **Batch ingestion:** For batch ingestion, within 15 minutes of successfully ingesting a batch into the Profile store, if the 5% increase or decrease threshold is met, a job is run to update the count.
 * **Streaming ingestion:** For streaming data workflows, a check is done on an hourly basis to determine if the 5% increase or decrease threshold has been met. If it has, a job is automatically triggered to update the count.
 
-The sample size of the scan depends on the overall number of entities in your profile store. These sample sizes are represented in the following table:
+The sample size of the scan depends on the overall number of entities in your Profile store. These sample sizes are represented in the following table:
 
-| Entities in profile store | Sample size |
+| Entities in Profile store | Sample size |
 | ------------------------- | ----------- |
 | Less than 1 million | Full data set |
 | 1 to 20 million | 1 million |
@@ -56,6 +56,8 @@ POST /preview
 
 **Request**
 
++++ A sample request to create a preview.
+
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/preview \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -79,9 +81,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | `predicateModel` | The name of the [!DNL Experience Data Model] (XDM) schema class the profile data is based on. |
 | `graphType` | The graph type that you want to get the cluster from. The supported values are `none` (performs no identity stitching) and `pdg` (performs identity stitching based on your private identity graph). |
 
++++
+
 **Response**
 
 A successful response returns HTTP status 201 (Created) with details of your newly created preview.
+
++++ A sample response when creating a preview.
 
 ```json
 {
@@ -97,6 +103,8 @@ A successful response returns HTTP status 201 (Created) with details of your new
 | -------- | ----------- |
 | `state` | The current state of the preview job. When initially created, it will be in the "NEW" state. Subsequently, it will be in the "RUNNING" state until processing is complete, at which point it becomes "RESULT_READY" or "FAILED". |
 | `previewId` | The ID of the preview job, to be used for lookup purposes when viewing an estimate or preview, as outlined in the next section. |
+
++++
 
 ## Retrieve the results of a specific preview {#get-preview}
 
@@ -114,6 +122,8 @@ GET /preview/{PREVIEW_ID}
 
 **Request**
 
++++ A sample request to retrieve a preview.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgtM2YzMS00YjY0LThkODQtYWNkMGM0ZmJkYWQzOmU4OTAwNjhiLWY1Y2EtNGE4Zi1hNmI1LWFmODdmZjBjYWFjMzow \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -122,7 +132,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Response**
+
++++ A sample response when retrieving a preview.
 
 A successful response returns HTTP status 200 with detailed information about the specified preview.
 
@@ -175,6 +189,8 @@ A successful response returns HTTP status 200 with detailed information about th
 | -------- | ----------- |
 | `results` | A list of entity IDs, along with their related identities. The links provided can be used to look up the specified entities, using the [profile access API endpoint](../../profile/api/entities.md). |
 
++++
+
 ## Retrieve the results of a specific estimate job {#get-estimate}
 
 Once you have created a preview job, you can use its `previewId` in the path of a GET request to the `/estimate` endpoint to view statistical information about the segment definition, including projected audience size, confidence interval, and error standard deviation.
@@ -193,6 +209,8 @@ GET /estimate/{PREVIEW_ID}
 
 The following request retrieves the results of a specific estimate job.
 
++++ A sample request to retrieve an estimate job.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWFjOTEtNGJiNy1hNDI2LTE1MDkzN2I2YWY1Yzo0Mg \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -201,9 +219,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWF
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Response**
 
 A successful response returns HTTP status 200 with details of the estimate job.
+
++++ A sample response when retrieving an estimate job.
 
 ```json
 {
@@ -237,9 +259,11 @@ A successful response returns HTTP status 200 with details of the estimate job.
 
 | Property | Description |
 | -------- | ----------- |
-|`estimatedNamespaceDistribution`|An array of objects showing the number of profiles within the segment broken down by identity namespace. The total number of profiles by namespace (adding together the values shown for each namespace) may be higher than the profile count metric because one profile could be associated with multiple namespaces. For example, if a customer interacts with your brand on more than one channel, multiple namespaces will be associated with that individual customer.|
+|`estimatedNamespaceDistribution`| An array of objects showing the number of profiles within the segment definition broken down by identity namespace. The total number of profiles by namespace (adding together the values shown for each namespace) may be higher than the profile count metric because one profile could be associated with multiple namespaces. For example, if a customer interacts with your brand on more than one channel, multiple namespaces will be associated with that individual customer.|
 | `state` | The current state of the preview job. The state will be "RUNNING" until processing is complete, at which point it becomes "RESULT_READY" or "FAILED". |
 | `_links.preview` | When the `state` is "RESULT_READY", this field provides a URL to view the estimate. |
+
++++
 
 ## Next steps
 

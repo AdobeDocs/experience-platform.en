@@ -1,14 +1,15 @@
 ---
-keywords: Experience Platform;home;popular topics;flow service;update dataflows
-solution: Experience Platform
 title: Update Dataflows Using the Flow Service API
-type: Tutorial
-description: This tutorial covers the steps for updating a dataflow, including its name, description, and schedule, using the Flow Service API.
+description: Learn how to a dataflow, including its name, description, and schedule, using the Flow Service API.
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
 ---
 # Update dataflows using the Flow Service API
 
 This tutorial covers the steps for updating a dataflow, including its basic information, schedule, and mapping sets using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+
+>[!TIP]
+>
+>Your source connection and your target connection should be mapped to a single dataflow. You should not update your source and target connections separately, as the changes will not be reflected in their corresponding dataflow. If your use case requires an update  of your source and target connections, then you must create a new pair of source and target connections, as well as a new dataflow.
 
 ## Getting started
 
@@ -16,12 +17,12 @@ This tutorial requires you to have a valid flow ID. If you do not have a valid f
 
 This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 
-* [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
-* [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
+* [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-### Using Platform APIs
+### Using Experience Platform APIs
 
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../landing/api-guide.md).
+For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../landing/api-guide.md).
 
 ## Look up dataflow details
 
@@ -43,11 +44,11 @@ The following request retrieves updated information regarding your flow ID.
 
 ```shell
 curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
+  'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Response**

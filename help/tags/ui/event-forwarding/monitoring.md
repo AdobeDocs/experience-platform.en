@@ -34,6 +34,10 @@ To show metrics for a single property, select the property dropdown menu and cho
 
 ## [!UICONTROL Usage]
 
+>[!NOTE]
+>
+>Usage data is refreshed every month after the previous month ends.
+
 The **[!UICONTROL Usage]** report shows incoming and outgoing calls for a given time period. Incoming calls represent data sent to event forwarding. Outgoing calls represents data sent from event forwarding. The **[!UICONTROL Total events]** number in the left pane is the sum of incoming and outgoing calls for the given time period.
 
 ## [!UICONTROL Error Events]

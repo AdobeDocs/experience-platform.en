@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Labels API Endpoint
 description: Learn how to manage data usage labels in Experience Platform using the Policy Service API.
+role: Developer
 exl-id: 9a01f65c-01f1-4298-bdcf-b7e00ccfe9f2
 ---
 # Labels endpoint
@@ -11,7 +12,7 @@ Data usage labels allow you to categorize data according to usage policies that 
 
 >[!NOTE]
 >
->The `/labels` endpoint is only used to retrieve, create, and update data usage labels. For steps on how to add labels to datasets and fields using API calls, refer to the guide on [managing dataset labels](../labels/dataset-api.md).
+>The `/labels` endpoint is only used to retrieve, create, and update data usage labels. You cannot delete labels. However, you can add or remove labels to datasets and fields using API calls. Refer to the guide on [managing dataset labels](../labels/dataset-api.md) document for instructions.
 
 ## Getting started
 
@@ -156,6 +157,10 @@ A successful response returns the details of the custom label.
 ## Create or update a custom label {#create-update}
 
 To create or update a custom label, you must make a PUT request to the [!DNL Policy Service] API.
+
+>[!NOTE]
+>
+>If you want to remove labels from a dataset, you can perform a [PUT request on the Dataset Service API](../labels/dataset-api.md#remove), or using the [Datasets UI](../labels/user-guide.md#remove-labels-from-a-dataset).
 
 **API format**
 

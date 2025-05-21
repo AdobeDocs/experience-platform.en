@@ -15,12 +15,12 @@ This tutorial provides steps on how to set your [!DNL Flow Service] entities to 
 
 This tutorial requires you to have a working understanding of the following components of Adobe Experience Platform:
 
-* [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
-* [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
+* [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-### Using Platform APIs
+### Using Experience Platform APIs
 
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../landing/api-guide.md).
+For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../landing/api-guide.md).
 
 ### Check for draft mode support
 
@@ -583,7 +583,7 @@ The following request creates draft base connection for the [!DNL Azure File Sto
 
 ```shell
 curl -X POST \
-  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  'https://platform.adobe.io/data/foundation/flowservice/connections?mode=draft' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \

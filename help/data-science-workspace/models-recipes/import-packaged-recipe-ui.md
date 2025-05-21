@@ -8,6 +8,12 @@ exl-id: 2556e1f0-3f9c-4884-a699-06c041d5c4d1
 ---
 # Import a packaged recipe in the Data Science Workspace UI
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
+
 This tutorial provides insight on how to configure and import a packaged recipe using the provided Retail Sales example. By the end of this tutorial, you will be ready to create, train, and evaluate a Model in Adobe Experience Platform [!DNL Data Science Workspace].
 
 ## Prerequisites
@@ -116,7 +122,7 @@ For the purpose of this tutorial, you can leave the default configuration files 
 
 ### Import Docker based recipe - [!DNL Python] {#python}
 
-Start by navigating and selecting **[!UICONTROL Workflows]** located in the top-left of the [!DNL Platform] UI. Next, select **Import recipe** and select **[!UICONTROL Launch]**.
+Start by navigating and selecting **[!UICONTROL Workflows]** located in the top-left of the [!DNL Experience Platform] UI. Next, select **Import recipe** and select **[!UICONTROL Launch]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -150,7 +156,7 @@ Proceed to the [next steps](#next-steps) to find out how to create a Model in [!
 
 ### Import Docker based recipe - R {#r}
 
- Start by navigating and selecting **[!UICONTROL Workflows]** located in the top-left of the [!DNL Platform] UI. Next, select **Import recipe** and select **[!UICONTROL Launch]**.
+ Start by navigating and selecting **[!UICONTROL Workflows]** located in the top-left of the [!DNL Experience Platform] UI. Next, select **Import recipe** and select **[!UICONTROL Launch]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -184,7 +190,7 @@ Proceed to the [next steps](#next-steps) to find out how to create a Model in [!
 
 ### Import Docker based recipe - PySpark {#pyspark}
 
- Start by navigating and selecting **[!UICONTROL Workflows]** located in the top-left of the [!DNL Platform] UI. Next, select **Import recipe** and select **[!UICONTROL Launch]**.
+ Start by navigating and selecting **[!UICONTROL Workflows]** located in the top-left of the [!DNL Experience Platform] UI. Next, select **Import recipe** and select **[!UICONTROL Launch]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -220,7 +226,7 @@ Proceed to the [next steps](#next-steps) to find out how to create a Model in [!
 
 ### Import Docker based recipe - Scala {#scala}
 
- Start by navigating and selecting **[!UICONTROL Workflows]** located in the top-left of the [!DNL Platform] UI. Next, select **Import recipe** and select **[!UICONTROL Launch]**.
+ Start by navigating and selecting **[!UICONTROL Workflows]** located in the top-left of the [!DNL Experience Platform] UI. Next, select **Import recipe** and select **[!UICONTROL Launch]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 

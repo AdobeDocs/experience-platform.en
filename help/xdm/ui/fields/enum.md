@@ -34,7 +34,7 @@ Select **[!UICONTROL Enums and Suggested Values]**, then select **[!UICONTROL En
 
 Under the **[!UICONTROL Value]** column, you must provide the exact value you want to constrain the field to. You can optionally provide a human-friendly **[!UICONTROL Display Name]** for the constraint as well, which affects how the value will be represented in segmentation.
 
-Continue to use **[!UICONTROL Add row]** to add the desired constraints and optional labels to the enum, or select the delete icon (![Image of the delete icon](../../images/ui/fields/enum/remove-icon.png)) next to a previously added row to remove it. When finished, select **[!UICONTROL Apply]** to apply the changes to the schema.
+Continue to use **[!UICONTROL Add row]** to add the desired constraints and optional labels to the enum, or select the delete icon (![Image of the delete icon](/help/images/icons/remove-circle.png)) next to a previously added row to remove it. When finished, select **[!UICONTROL Apply]** to apply the changes to the schema.
 
 ![Image showing the enum values and display names filled out for the string field in the UI](../../images/ui/fields/enum/enum-confirm.png)
 
@@ -46,7 +46,7 @@ Select **[!UICONTROL Enums and Suggested Values]**, then select **[!UICONTROL Su
 
 ![Image showing the Suggested Values option selected in the UI](../../images/ui/fields/enum/suggested-add-row.png)
 
-Under the **[!UICONTROL Display Name]** column, provide a human-friendly name for the value as you want it to appear in the Segmentation UI. To add more suggested values, select **[!UICONTROL Add row]** again and repeat the process as needed. To remove a previously added row, select ![the delete icon](../../images/ui/fields/enum/remove-icon.png) next to the row in question.
+Under the **[!UICONTROL Display Name]** column, provide a human-friendly name for the value as you want it to appear in the Segmentation UI. To add more suggested values, select **[!UICONTROL Add row]** again and repeat the process as needed. To remove a previously added row, select ![the delete icon](/help/images/icons/remove-circle.png) next to the row in question.
 
 When finished, select **[!UICONTROL Apply]** to apply the changes to the schema.
 
@@ -62,7 +62,7 @@ Some fields from standard XDM components contain their own suggested values, suc
 
 ![Image showing the enum values and display names filled out for the string field in the UI](../../images/ui/fields/enum/suggested-standard.png)
 
-To add new suggested values for a standard field, select **[!UICONTROL Add row]**. To remove a suggested value that was previously added by your organization, select ![the delete icon](../../images/ui/fields/enum/remove-icon.png) next to the row in question.
+To add new suggested values for a standard field, select **[!UICONTROL Add row]**. To remove a suggested value that was previously added by your organization, select ![the delete icon](/help/images/icons/remove-circle.png) next to the row in question.
 
 ![Image showing the enum values and display names filled out for the string field in the UI](../../images/ui/fields/enum/suggested-standard-add.png)
 
@@ -80,7 +80,7 @@ See the [section below](#evolution) for more information on the rules for updati
 
 ## Evolution rules for enums and suggested values {#evolution}
 
-After a schema with an enum field has been used to ingest data into Platform, any further changes made to the schema definition must comply with the data already in the system. In general, changes made to an existing field can only make that field **less** restrictive. An field cannot be made more restrictive than it already is.
+After a schema with an enum field has been used to ingest data into Experience Platform, any further changes made to the schema definition must comply with the data already in the system. In general, changes made to an existing field can only make that field **less** restrictive. An field cannot be made more restrictive than it already is.
 
 When it comes to enums and suggested values, the following rules apply post-ingestion:
 
@@ -116,6 +116,6 @@ Due to current system limitations, there are two cases where an enum is not vali
 
 ## Next steps
 
-This guide covered how to define enums and suggested values for string fields in the the UI. For information on how to manage enums and suggested values using the Schema Registry API, refer to the following [tutorial](../../tutorials/suggested-values.md).
+This guide covered how to define enums and suggested values for string fields in the UI. For information on how to manage enums and suggested values using the Schema Registry API, refer to the following [tutorial](../../tutorials/suggested-values.md).
 
 To learn how to define other XDM field types in the [!DNL Schema Editor], see the overview on [defining fields in the UI](./overview.md#special).

@@ -9,7 +9,7 @@ This reference provides more information about how the auditor feature in Adobe 
 
 >[!NOTE]
 >
->For more information on auditor tests in Platform Debugger, see the [auditor feature overview](./overview.md).
+>For more information on auditor tests in Experience Platform Debugger, see the [auditor feature overview](./overview.md).
 
 Tag presence tests evaluate whether certain tags exists on the page, and whether they are in the right place in your page code.
 

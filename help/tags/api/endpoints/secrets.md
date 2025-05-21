@@ -11,7 +11,7 @@ This guide shows you how to make calls to the `/secrets` endpoint in the Reactor
 
 ## Getting started
 
-The endpoint used in this guide is part of the [Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Before continuing, please review the [getting started guide](../getting-started.md) for important information regarding how to authenticate to the API.
+The endpoint used in this guide is part of the [Reactor API](https://developer.adobe.com/experience-platform-apis/references/reactor/). Before continuing, please review the [getting started guide](../getting-started.md) for important information regarding how to authenticate to the API.
 
 ## Retrieve a list of secrets for a property {#list-property}
 
@@ -296,7 +296,7 @@ You can create a secret by making a POST request.
 
 >[!NOTE]
 >
->When you create a new secret, the API returns an immediate response that contains information for that resource. At the same time, a secret exchange task is triggered to test that the credential exchange is functional. This task is processed asynchronously and updates the secret’s status attribute to `succeeded` or `failed` depending on the outcome.
+>When you create a new secret, the API returns an immediate response that contains information for that resource. At the same time, a secret exchange task is triggered to test that the credential exchange is functional. This task is processed asynchronously and updates the secret's status attribute to `succeeded` or `failed` depending on the outcome.
 
 **API format**
 
@@ -466,7 +466,7 @@ curl -X PATCH \
 
 **Response**
 
-A successful response returns the details of the secret, with the the authorization service's response contained under `meta.test_exchange`.
+A successful response returns the details of the secret, with the authorization service's response contained under `meta.test_exchange`.
 
 ```json
 { 

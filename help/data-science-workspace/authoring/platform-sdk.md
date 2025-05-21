@@ -1,11 +1,17 @@
 ---
 keywords: Experience Platform;developer guide;SDK;Data Access SDK;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Model Authoring Using the Adobe Experience Platform Platform SDK
+title: Model Authoring Using the Adobe Experience Platform SDK
 description: This tutorial provides you with information on converting data_access_sdk_python to the new Python platform_sdk in both Python and R.
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
 ---
-# Model authoring using the Adobe Experience Platform [!DNL Platform] SDK
+# Model authoring using the Adobe [!DNL Experience Platform] SDK
+
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
 
 This tutorial provides you with information on converting `data_access_sdk_python` to the new Python `platform_sdk` in both Python and R. This tutorial provides information on the following operations:
 
@@ -62,7 +68,7 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
 
 ## Basic reading of data {#basic-reading-of-data}
 
-With the new [!DNL Platform] SDK, the maximum read size is 32 GB, with a maximum read time of 10 minutes. 
+With the new [!DNL Experience Platform] SDK, the maximum read size is 32 GB, with a maximum read time of 10 minutes. 
 
 If your read time is taking too long, you can try using one of the following filtering options:
 
@@ -139,7 +145,7 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-The new [!DNL Platform] SDK supports the following operations:
+The new [!DNL Experience Platform] SDK supports the following operations:
 
 | Operation | Function |
 | --------- | -------- |

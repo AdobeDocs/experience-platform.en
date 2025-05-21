@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;field group;field group;
 solution: Experience Platform
 title: Commerce Details Schema Field Group
-description: This document provides an overview of the Commerce Details schema field group.
+description: Learn about the Commerce Details schema field group.
 exl-id: 36aba186-fadb-4abb-a94f-7e151ff3f744
 ---
 # [!UICONTROL Commerce Details] schema field group

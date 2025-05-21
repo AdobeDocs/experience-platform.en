@@ -19,7 +19,7 @@ The following video is designed to help support your understanding of streaming 
 
 ### Stream profile records and [!DNL ExperienceEvents]
 
-With streaming ingestion, users can stream profile records and [!DNL ExperienceEvents] to [!DNL Platform] in seconds to help drive real-time personalization. All data sent to streaming ingestion APIs is automatically persisted in the [!DNL Data Lake].
+With streaming ingestion, users can stream profile records and [!DNL ExperienceEvents] to [!DNL Experience Platform] in seconds to help drive real-time personalization. All data sent to streaming ingestion APIs is automatically persisted in the [!DNL Data Lake].
 
 Please read the [create a streaming connection guide](../tutorials/create-streaming-connection.md) for more information.
 
@@ -29,12 +29,16 @@ Once you are confident that your data is clean, you can enable your datasets for
 
 For more information on enabling a dataset for [!DNL Profile] and [!DNL Identity Service], please read the [configure a dataset guide](../../profile/tutorials/dataset-configuration.md). 
 
-## What is the expected latency for streaming ingestion on [!DNL Platform]?
+## What is the expected latency for streaming ingestion on Experience Platform?
+
+>[!IMPORTANT]
+>
+>Guardrails for streaming ingestion are calculated at the organization level and not the sandbox level. This means that your data usage per sandbox is bound to the total license usage entitlement that corresponds with your entire organization. Additionally, data usage in development sandboxes are limited to 10% of your total profiles. For more information about license usage entitlement, read the [data management best practices guide](../../landing/license-usage-and-guardrails/data-management-best-practices.md).
 
 | Destination | Expected latency | 
 | --------- | ---------------- |
-| Real-Time Customer Profile | < 1 minute |
-| Data Lake | < 60 minutes |
+| Real-Time Customer Profile | < 15 minutes at the 95th percentile |
+| Data lake | < 60 minutes |
 
 ## Request per seconds (RPS) guidance on streaming ingestion
 
@@ -43,7 +47,7 @@ The table below displays guidance on the request per seconds limits for streamin
 | RPS limit | Notes |
 | --- | --- |
 | 1000 requests per second | These can contain multiple messages when using `/collection/batch` endpoint. |
-| 10000 individual messages per second | The messages can be grouped into fewer actual requests when using the `/collection/batch` endpoint. |
+| 10000 individual messages per second | The messages can be grouped into fewer actual requests when using the `/collection/` endpoint. |
 
 >[!IMPORTANT]
 >
@@ -51,4 +55,4 @@ The table below displays guidance on the request per seconds limits for streamin
 
 ## Adobe Experience Platform extension
 
-You can use the Adobe Experience Platform extension to create a new streaming connection. The [!DNL Experience Platform] extension provides actions to send beacons formatted in [!DNL Experience Data Model] (XDM) for real-time ingestion to [!DNL Experience Platform]. Visit the [Experience Platform Extension](../../tags/extensions/client/sdk/overview.md) documentation for more information.
+You can use the Adobe Experience Platform extension to create a new streaming connection. The [!DNL Experience Platform] extension provides actions to send beacons formatted in [!DNL Experience Data Model] (XDM) for real-time ingestion to [!DNL Experience Platform]. Visit the [Experience Platform Extension](../../tags/extensions/client/web-sdk/overview.md) documentation for more information.

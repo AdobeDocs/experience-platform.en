@@ -6,7 +6,7 @@ exl-id: 76cf8420-cc50-4a56-9f6d-5bfc01efcdb3
 ---
 # [!DNL Real-Time Customer Profile] detail customization {#profile-detail-customization}
 
-Within the Adobe Experience Platform user interface, you can view and interact with [!DNL Real-Time Customer Profile] data in the form of customer profiles. The profile information displayed in the UI has been merged together from multiple profile fragments to form a single view of each individual customer. This includes details such as basic attributes, linked identities, and channel preferences. The default fields shown in profiles can also be changed at an organizational level to display preferred [!DNL Profile] attributes. This guide provides step-by-step instructions for customizing the way in which [!DNL Profile] data is displayed within the Platform UI.  
+Within the Adobe Experience Platform user interface, you can view and interact with [!DNL Real-Time Customer Profile] data in the form of customer profiles. The profile information displayed in the UI has been merged together from multiple profile fragments to form a single view of each individual customer. This includes details such as basic attributes, linked identities, and channel preferences. The default fields shown in profiles can also be changed at an organizational level to display preferred [!DNL Profile] attributes. This guide provides step-by-step instructions for customizing the way in which [!DNL Profile] data is displayed within the Experience Platform UI.  
 
 For a complete guide to the Profiles UI, please visit the [Profile UI guide](user-guide.md).
 
@@ -50,7 +50,11 @@ The **[!UICONTROL Selected Attributes]** section on the right-hand side of the d
 
 ![The attributes that currently make up the attributes on the card are highlighted.](../images/profile-customization/select-before.png)
 
-You can select any of the available union schema fields to customize the attributes on the card that you are editing. Selected fields are shown with a check mark next to them and are automatically added to the list of selected attributes. Once you have added all of the attributes that you would like to have displayed on the card, choose **[!UICONTROL Select]** to return to the **[!UICONTROL Edit widget]** screen.
+You can select any of the available union schema fields to customize the attributes on the card that you are editing. When selecting the fields, you can choose to see either the file path name or the display name. To switch between these two displays, select the **[!UICONTROL Show display names]** toggle. 
+
+![The [!UICONTROL Show display names] toggle is highlighted within the Profile details page.](../images/profile-customization/show-display-names.png)
+
+Selected fields are shown with a check mark next to them and are automatically added to the list of selected attributes. Once you have added all of the attributes that you would like to have displayed on the card, choose **[!UICONTROL Select]** to return to the **[!UICONTROL Edit widget]** screen.
 
 ![The newly added attributes are highlighted.](../images/profile-customization/select-after.png)
 

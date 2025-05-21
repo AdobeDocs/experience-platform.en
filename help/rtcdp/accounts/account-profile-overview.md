@@ -2,6 +2,8 @@
 keywords: rtcdp b2b;b2b;account;account profile;account profiles rtcdp;real-time customer data platform;
 title: Account Profiles in Real-Time CDP B2B Edition
 description: Learn how Adobe Real-Time Customer Data Platform B2B Edition enables you to unify account information from multiple sources using account profiles.
+badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+feature: Profiles, B2B
 exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
 ---
 # Account profiles overview
@@ -16,4 +18,11 @@ By stitching together account data from different sources, you can begin to see 
 
 ## Account profile viewer
 
-With Real-Time CDP, B2B Edition, you can use the Experience Platform user interface to view account profiles and search for specific accounts using an account id from a connected enterprise source or by entering source details directly. For more information regarding how to view account profiles within the Platform UI, please see the [account profile UI guide](account-profile-ui-guide.md).
+With Real-Time CDP, B2B Edition, you can use the Experience Platform user interface to view account profiles and search for specific accounts using an account id from a connected enterprise source or by entering source details directly. For more information regarding how to view account profiles within the Experience Platform UI, please see the [account profile UI guide](account-profile-ui-guide.md).
+
+## Create and activate account audiences
+
+You can create audiences consisting of account profiles and then activate them to several destinations available in the Real-Time CDP destinations catalog. Read more below:
+
+* [Account audiences](/help/segmentation/types/account-audiences.md)
+* [Activate account audiences](/help/destinations/ui/activate-account-audiences.md)

@@ -1,41 +1,46 @@
 ---
-keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Importing and using external audiences
 description: Follow this tutorial to learn how to use external audiences with Adobe Experience Platform.
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
+hide: yes
+hidefromtoc: yes
 ---
 # Importing and using external audiences
 
-Adobe Experience Platform supports the ability to import external audience, which can subsequently be used as components for a new segment definition. This document provides a tutorial for setting up Experience Platform to import and use external audiences.
+>[!IMPORTANT]
+>
+>This documentation contains information from a previous version of the Audiences documentation, and as a result, is out of date.
+
+Adobe Experience Platform supports the ability to import external audience, which can subsequently be used as components for a new audience. This document provides a tutorial for setting up Experience Platform to import and use external audiences.
 
 ## Getting started
 
-This tutorial requires a working understanding of the various [!DNL Adobe Experience Platform] services involved in creating audience segments. Before beginning this tutorial, please review the documentation for the following services:
+This tutorial requires a working understanding of the various [!DNL Adobe Experience Platform] services involved in creating audiences. Before beginning this tutorial, please review the documentation for the following services:
 
-- [Segmentation Service](../home.md): Allows you to build audience segments from Real-Time Customer Profile data.
+- [Segmentation Service](../home.md): Allows you to build audiences from Real-Time Customer Profile data.
 - [Real-Time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-- [Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data. To best make use of Segmentation, please ensure your data is ingested as profiles and events according to the [best practices for data modeling](../../xdm/schema/best-practices.md).
+- [Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data. To best make use of Segmentation, please ensure your data is ingested as profiles and events according to the [best practices for data modeling](../../xdm/schema/best-practices.md).
 - [Datasets](../../catalog/datasets/overview.md): The storage and management construct for data persistence in Experience Platform.
 - [Streaming ingestion](../../ingestion/streaming-ingestion/overview.md): How Experience Platform ingests and stores data from client- and server-side devices in real time.
 
-### Segment data vs segment metadata
+### Audiences vs segment definitions
 
-Before you start importing and using external audiences, it is important to understand the difference between segment data and segment metadata.
+Before you start importing and using external audiences, it is important to understand the difference between audiences and segment definitions.
 
-Segment data refers to the profiles that meet the segment qualification criteria, and are therefore part of the audience.
+Audiences refer to the group of profiles that you are trying to filter towards. When using segment definitions, you can create an audience by creating a segment definition that filters your profiles to the subset that meets the segment qualification criteria.
 
-Segment metadata is information about the segment itself, which includes the name, description, expression (if applicable), the creation date, the last modified date, and an ID. The ID links the segment metadata to the individual profiles that meet the segment qualification and are part of the resulting audience. 
+Segment definitions includes information such as the name, description, expression (if applicable), the creation date, the last modified date, and an ID. The ID links the segment metadata to the individual profiles that meet the segment qualification and are part of the resulting audience. 
 
-| Segment data | Segment metadata |
-| ------------ | ---------------- |
-| Profiles that meet segment qualification | Information about the segment itself |
+| Audiences | Segment definition |
+| --------- | ---------------- |
+| The group of profiles that you are trying to find. When using segment definitions, this means that it'll be the group of profiles that meet segment qualification. | The group of rules used to segment the audience you're looking for. |
 
 ## Create an identity namespace for the external audience
 
-The first step for using external audiences is creating an identity namespace. Identity namespaces allow Platform to associate where a segment originates from.
+The first step for using external audiences is creating an identity namespace. Identity namespaces allow Experience Platform to associate where an audience originates from.
 
-To create an identity namespace, follow the instructions in the [identity namespace guide](../../identity-service/namespaces.md#manage-namespaces). When creating your identity namespace, add the source details to the identity namespace, and mark its [!UICONTROL Type] as a **[!UICONTROL Non-people identifier]**.
+To create an identity namespace, follow the instructions in the [identity namespace guide](../../identity-service/features/namespaces.md#manage-namespaces). When creating your identity namespace, add the source details to the identity namespace, and mark its [!UICONTROL Type] as a **[!UICONTROL Non-people identifier]**.
 
 ![The Non-person identifier is highlighted on the Create identity namespace modal.](../images/tutorials/external-audiences/identity-namespace-info.png)
 
@@ -59,7 +64,7 @@ After marking the `_id` field as the primary identity, select the title of the s
 
 ![The toggle to enable the schema for Profile is highlighted in the Schema Editor.](../images/tutorials/external-audiences/schema-profile.png)
 
-Now, this schema is enabled for Profile, with the primary identification assigned to the non-person identity namespace you created. As a result, this means that segment metadata imported into Platform using this schema will be ingested into Profile without being merged with other people-related Profile data.
+Now, this schema is enabled for Profile, with the primary identification assigned to the non-person identity namespace you created. As a result, this means that segment metadata imported into Experience Platform using this schema will be ingested into Profile without being merged with other people-related Profile data.
 
 ## Create a dataset for the schema
 
@@ -75,7 +80,7 @@ After creating the dataset, continue following the instructions in the [dataset 
 
 ## Set up and import audience data
 
-With the dataset enabled, data can now be sent into Platform either through the UI or using the Experience Platform APIs. You can ingest this data either through a batch or streaming connection.
+With the dataset enabled, data can now be sent into Experience Platform either through the UI or using the Experience Platform APIs. You can ingest this data either through a batch or streaming connection.
 
 ### Ingest data using a batch connection
 
@@ -91,7 +96,7 @@ Once you have created your streaming connection, you will have access to your un
 
 ## Audience metadata structure
 
-After creating a connection, you can now ingest your data to Platform.
+After creating a connection, you can now ingest your data to Experience Platform.
 
 A sample of the external audience payload's metadata can be seen below:
 
@@ -152,7 +157,7 @@ Now that you can use external audiences in your segments, you can use the Segmen
 
 ## Appendix
 
-In addition to using imported external audience metadata and using them for creating segments, you can also import external segment memberships to Platform.
+In addition to using imported external audience metadata and using them for creating segments, you can also import external segment memberships to Experience Platform.
 
 ### Set up an external segment membership destination schema
 
@@ -182,7 +187,7 @@ After creating the dataset, continue following the instructions in the [dataset 
 
 ## Set up and import external audience membership data
 
-With the dataset enabled, data can now be sent into Platform either through the UI or using the Experience Platform APIs. You can ingest this data either through a batch or streaming connection.
+With the dataset enabled, data can now be sent into Experience Platform either through the UI or using the Experience Platform APIs. You can ingest this data either through a batch or streaming connection.
 
 ### Ingest data using a batch connection
 
@@ -198,7 +203,7 @@ Once you have created your streaming connection, you will have access to your un
 
 ## Segment membership structure
 
-After creating a connection, you can now ingest your data to Platform.
+After creating a connection, you can now ingest your data to Experience Platform.
 
 A sample of the external audience membership payload can be seen below:
 
@@ -254,4 +259,4 @@ A sample of the external audience membership payload can be seen below:
 
 >[!NOTE]
 >
->By default, external audience memberships are only retained for 30 days. To retain them for longer than 30 days, please use the `validUntil` field while ingesting your audience data. For more information on this field, please read the guide on [Segment Membership Details schema field groups](../../xdm/field-groups/profile/segmentation.md).
+>By default, external audience memberships are deleted after 30 days. To prevent deletion and retain them for longer than 30 days, please use the `validUntil` field while ingesting your audience data. For more information on this field, please read the guide on [Segment Membership Details schema field groups](../../xdm/field-groups/profile/segmentation.md).

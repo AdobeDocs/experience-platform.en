@@ -3,7 +3,12 @@ title: Permission management for data collection in Experience Platform
 description: A high-level overview of how to manage permissions and control access to data collection features in Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
 ---
-# Permission management for data collection in Experience Platform
+# Permission management for data collection in Experience Platform {#permission-management}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_permissions"
+>title="Permissions"
+>abstract="Understand the key permissions required for working with datastreams, schemas, identities, and sandboxes within Adobe Experience Platform."
 
 [Data collection in Adobe Experience Platform](./home.md) is comprised of several different technologies which work together to collect and transfer your data. Access to these technologies is controlled through granular role-based permissions in Adobe Admin Console.
 
@@ -28,9 +33,9 @@ Permissions under Adobe Experience Platform include access to datastreams, ident
 | Sandboxes | (N/A) | Depending on the [sandboxes](../sandboxes/home.md) that have been created under your organization, you can control access to each of them through this permission category in Admin Console. |
 | Data Modeling | Manage Schemas | Grants the ability to view, create, and edit [Experience Data Model (XDM) schemas](../xdm/home.md). |
 | Data Modeling | View Schemas | Grants read-only access to schemas. |
-| Identity Management | Manage Identity Namespaces | Grants the ability to view, create, and edit [identity namespaces](../identity-service/namespaces.md). |
+| Identity Management | Manage Identity Namespaces | Grants the ability to view, create, and edit [identity namespaces](../identity-service/features/namespaces.md). |
 | Identity Management | View Identity Namespaces | Grants read-only access to identity namespaces. |
-| Data Collection | Manage Datastreams | Grants the ability to view, create, and edit [datastreams](../edge/datastreams/overview.md). |
+| Data Collection | Manage Datastreams | Grants the ability to view, create, and edit [datastreams](../datastreams/overview.md). |
 | Data Collection | View Datastreams | Grants read-only access to datastreams. |
 
 {style="table-layout:auto"}
@@ -52,7 +57,8 @@ Permissions under Adobe Experience Platform Data Collection control access to ta
 | Property Rights | Manage Extensions | Grants the ability to manage the [extensions](../tags/ui/managing-resources/extensions/overview.md) for the properties a user has access to. |
 | Property Rights | Publish | Grants the ability to publish a library build as part of the [publishing flow](../tags/ui/publishing/publishing-flow.md). |
 | Company Rights | Develop Extensions | Grants the ability to create and modify extension packages that are owned by your organization, including private releases and requests for public release. |
-| Company Rights | Manage Extensions | This permission is only applicable if you have a license for Adobe Journey Optimizer or another solution that grants access to mobile in-app and push messaging. This allows you to manage the apps that Adobe Experience Cloud knows about along with the necessary push credentials needed to communicate with the Firebase Cloud Messaging service and the Apple Push Notification service. |
+| Company Rights | Manage App Configurations | This permission is only applicable if you have a license for Adobe Journey Optimizer or another solution that grants access to mobile in-app and push messaging. This allows you to manage the apps that Adobe Experience Cloud knows about along with the necessary push credentials needed to communicate with the Firebase Cloud Messaging service and the Apple Push Notification service. |
+| Company Rights | Manage Properties | Grants you the ability to create and manage tags (web property), event forwarding (edge property), and mobile properties. |
 
 {style="table-layout:auto"}
 
@@ -71,17 +77,25 @@ Refer to the subsections below for steps on how to manage the relevant permissio
 
 ### Manage permissions under Adobe Experience Platform {#manage-platform}
 
-From the **[!UICONTROL Permissions]** area in Adobe Experience Platform select the role that you want to edit.
+>[!NOTE]
+>
+>To manage permissions for a role, you will require administrator rights. If you do not have administrator privileges, contact your system administrator.
+
+Experience Cloud's **[!UICONTROL Permissions]** section allows you to define user roles and policies to manage access for features and objects within a product application.
+
+Through [!UICONTROL Permissions], you can create and manage roles and assign the desired resource permissions for these roles. 
+
+![Adobe Experience Cloud highlighting the Permissions product.](./images/permissions/permissions-product.png)
 
 In order to access data collection features, you must enable all permissions in the **[!UICONTROL Sandboxes]**, **[!UICONTROL Data Modeling]**, **[!UICONTROL Identity Management]**, and **[!UICONTROL Data Collection]** categories.
 
 ![Image showing the Data Collection product card in Admin Console](./images/permissions/platform-permission-card.png)
 
-See the [access control UI guide](../access-control/ui/overview.md) for detailed instructions on managing Platform permissions.
+See the [access control UI guide](../access-control/ui/overview.md) for detailed instructions on managing Experience Platform permissions.
 
 >[!NOTE]
 >
->Depending on the product SKUs your organization has access to, you may not have every Platform permission available to you.
+>Depending on the product SKUs your organization has access to, you may not have every Experience Platform permission available to you.
 
 ### Manage permissions under Adobe Experience Platform Data Collection {#manage-collection}
 

@@ -5,6 +5,7 @@ breadcrumb-title: Tags
 user-guide-description: Learn to deploy and manage analytics, marketing, and advertising tags to power customer experiences.
 feature: Tags
 solution: Data Collection
+role: Developer
 ---
 
 # Tags {#tags}
@@ -39,7 +40,7 @@ solution: Data Collection
   * [Libraries](./ui/publishing/libraries.md)
   * [Self-hosting libraries](./ui/publishing/hosts/self-hosting-libraries.md)
   * [Republish a library](./ui/publishing/republish.md)
-  * [Premium CDN support (Beta)](./ui/publishing/premium-cdn.md)
+  * [Experience Platform Tags (China)](./ui/publishing/premium-cdn.md)
 * Client-side information {#client-side}
   * [Overview](./ui/client-side/overview.md)
   * [Asynchronous deployment](./ui/client-side/asynchronous-deployment.md)
@@ -47,6 +48,7 @@ solution: Data Collection
   * [Deploy JavaScript tags to manage customer consent](./ui/client-side/consent.md)
   * [Content Security Policy (CSP) support](./ui/client-side/content-security-policy.md)
   * [Subresource Integrity (SRI) support](./ui/client-side/sri.md)
+  * [Transport Layer Security](./ui/client-side/transport-layer-security.md)
 * Event forwarding {#event-forwarding}
   * [Overview](./ui/event-forwarding/overview.md)
   * [Getting started](./ui/event-forwarding/getting-started.md)
@@ -82,6 +84,8 @@ solution: Data Collection
     * Adobe Client Data Layer {#client-data-layer}
       * [Overview](./extensions/client/client-data-layer/overview.md)
       * [Release notes](./extensions/client/client-data-layer/release-notes.md)
+    * Adobe Content Analytics {#content-analytics}
+      * [Overview](./extensions/client/content-analytics/overview.md)
     * Adobe ContextHub {#contexthub}
       * [Overview](./extensions/client/contexthub/overview.md)
     * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)
@@ -90,8 +94,16 @@ solution: Data Collection
       * [Release notes](./extensions/client/id-service/release-notes.md)
     * Adobe Experience Platform Demo {#platform-demo}
       * [Overview](./extensions/client/platform-demo/overview.md)
-    * Adobe Experience Platform Web SDK {#sdk}
-      * [Overview](./extensions/client/sdk/overview.md)
+    * Adobe Experience Platform Web SDK {#web-sdk}
+      * [Overview](./extensions/client/web-sdk/overview.md)
+      * [Configure the Web SDK tag extension](./extensions/client/web-sdk/web-sdk-extension-configuration.md)
+      * [Event types](./extensions/client/web-sdk/event-types.md)
+      * [Action types](./extensions/client/web-sdk/action-types.md)
+      * [Data element types](./extensions/client/web-sdk/data-element-types.md)
+      * [Accessing the ECID](./extensions/client/web-sdk/accessing-the-ecid.md)
+      * [Web SDK plug-ins](./extensions/client/web-sdk/web-sdk-plugins.md)
+      * [Web SDK extension release notes](./extensions/client/web-sdk/web-sdk-ext-release-notes.md)
+      * [Web SDK plug-ins release notes](./extensions/client/web-sdk/web-sdk-plugins-release-notes.md)
     * Adobe Experience Manager Asset Insights {#asset-insights}
       * [Overview](./extensions/client/asset-insights/overview.md)
       * [Release notes](./extensions/client/asset-insights/release-notes.md)
@@ -131,10 +143,7 @@ solution: Data Collection
     * [Clicktale](https://exchange.adobe.com/apps/ec/100082)
     * Common Analytics Plugins {#plugins}
       * [Overview](./extensions/client/plugins/overview.md)
-      * [Release notes](./extensions/client/plugins/release-notes.md)
-    * Common Web SDK Plugins {#web-sdk-plugins}
-      * [Overview](./extensions/client/web-sdk-plugins/overview.md)
-      * [Release notes](./extensions/client/web-sdk-plugins/release-notes.md)
+      * [Release notes](./extensions/client/plugins/release-notes.md)     
     * [Concat](https://exchange.adobe.com/apps/ec/104690)
     * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)
     * [Cookie Consent Management by Usercentrics CMP v2](https://exchange.adobe.com/apps/ec/107037)
@@ -167,6 +176,7 @@ solution: Data Collection
       * [Overview](./extensions/client/marketo/overview.md)
       * [Release notes](./extensions/client/marketo/release-notes.md)
     * [Master Property Manager](https://exchange.adobe.com/apps/ec/102992)
+    * [Merkury Tag](https://exchange.adobe.com/apps/ec/600027/merkury-tag)
     * [!DNL Meta Pixel] {#meta}
       * [Overview](./extensions/client/meta/overview.md)
     * [Monita](https://exchange.adobe.com/apps/ec/106544)
@@ -183,7 +193,6 @@ solution: Data Collection
     * [SDI Survey](https://exchange.adobe.com/apps/ec/102991)
     * [SDI Toolkit](https://exchange.adobe.com/apps/ec/101460)
     * [SessionCam](https://exchange.adobe.com/apps/ec/100517)
-    * [SPA View Change Event](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.105867.html)
     * [Storage Spanner](https://exchange.adobe.com/apps/ec/102990)
     * [TAGS by Loop Horizon](https://exchange.adobe.com/apps/ec/106092)
     * [Tealium Collect](https://exchange.adobe.com/apps/ec/104217)
@@ -193,9 +202,8 @@ solution: Data Collection
     * [Vimeo Playback](https://exchange.adobe.com/apps/ec/108937)
     * [Web Vitals](https://exchange.adobe.com/apps/ec/106769)
     * [XDM Composer](https://exchange.adobe.com/apps/ec/106062)
-    * [Yahoo Dot](https://exchange.adobe.com/apps/ec/106062)
     * [Yext Conversion Tracking](https://exchange.adobe.com/apps/ec/103174)
-    * [[!DNL Youtube] Playback](https://exchange.adobe.com/apps/ec/103174)
+    * [[!DNL Youtube] Playback](https://exchange.adobe.com/apps/ec/104160)
     * [!DNL YouTube] video tracking {#youtube}
       * [Overview](./extensions/client/youtube/overview.md)
       * [Release notes](./extensions/client/youtube/release-notes.md)
@@ -204,6 +212,10 @@ solution: Data Collection
     * Adobe Experience Platform Cloud Connector {#cloud-connector}
       * [Overview](./extensions/server/cloud-connector/overview.md)
       * [Release notes](./extensions/server/cloud-connector/release-notes.md)
+    * [!DNL Adform] {#adform}
+      * [Overview](./extensions/server/adform/overview.md)
+    * [!DNL Amazon] {#amazon}
+      * [Overview](./extensions/server/amazon/overview.md)
     * [!DNL AWS] {#aws}
       * [Overview](./extensions/server/aws/overview.md)
     * [!DNL Braze] {#braze}
@@ -214,22 +226,35 @@ solution: Data Collection
     * [Epsilon Event API](https://exchange.adobe.com/apps/ec/109127)
     * Google Ads Enhanced Conversions {#google-ads-enhanced-conversions}
       * [Overview](./extensions/server/google-ads-enhanced-conversions/overview.md)
+    * Google Cloud Platform {#google-cloud-platform}
+      * [Overview](./extensions/server/google-cloud-platform/overview.md)
+    * [!DNL LinkedIn Conversions API] {#linkedin}
+      * [Overview](./extensions/server/linkedin/overview.md)
     * [!DNL Mailchimp] Edge {#mailchimp}
       * [Overview](./extensions/server/mailchimp/overview.md)
     * [!DNL Meta Conversions API] {#meta}
       * [Overview](./extensions/server/meta/overview.md)
-    * [!UICONTROL Microsoft Azure] {#azure}
+    * [!DNL Microsoft Azure] {#azure}
       * [Overview](./extensions/server/azure/overview.md)
     * [!DNL Mixpanel] {#mixpanel}
       * [Overview](./extensions/server/mixpanel/overview.md)
     * [Pega Customer Decision Hub](https://exchange.adobe.com/apps/ec/107597)
     * [!DNL Pinterest] {#pinterest}
       * [Overview](./extensions/server/pinterest/overview.md)
-    * [Snap Conversions API](https://exchange.adobe.com/apps/ec/108550)
+    * [!DNL Reddit] {#reddit}
+      * [Overview](./extensions/server/reddit/overview.md)
+    * [!DNL Snapchat] {#snap}
+      * [Overview](./extensions/server/snap/overview.md)
+    * [!DNL Snowflake] {#snowflake}
+      * [Overview](./extensions/server/snowflake/overview.md)
     * [!DNL Splunk] {#splunk}
       * [Overview](./extensions/server/splunk/overview.md)
     * [!DNL Twitter] {#twitter}
       * [Overview](./extensions/server/twitter/overview.md)
+    * [!DNL Tiktok] Web Events API {#tiktok}
+      * [Overview](./extensions/server/tiktok/overview.md)
+    * [!DNL The Trade Desk] {#thetradedesk}
+      * [Overview](./extensions/server/tradedesk/overview.md)
     * [!DNL Zendesk] Events API {#zendesk}
       * [Overview](./extensions/server/zendesk/overview.md)
 * Extension development {#extension-dev}
@@ -238,10 +263,11 @@ solution: Data Collection
   * [Supported browsers](./extension-dev/browsers.md)
   * Submission process {#submit}
     * [Overview](./extension-dev/submit/overview.md)
-    * [Company setup](./extension-dev/submit/setup.md)
+    * [Organization setup](./extension-dev/submit/setup.md)
     * [Grant user access](./extension-dev/submit/access.md)
     * [Develop an extension](./extension-dev/submit/develop.md)
     * [Create an exchange listing](./extension-dev/submit/create-listing.md)
+    * [Create an extension package zip](./extension-dev/submit/create-extension-package-zip.md)
     * [Upload and implement end-to-end testing](./extension-dev/submit/upload-and-test.md)
     * [Release an extension](./extension-dev/submit/release.md)
   * [Extension configuration](./extension-dev/configuration.md)
@@ -268,7 +294,7 @@ solution: Data Collection
   * [Backwards compatibility standard](./extension-dev/backwards-compatibility.md)
 * Reactor API {#api}
   * [Overview](./api/overview.md)
-  * [Getting started](./api/getting-started.md)
+  * [Authenticate and access the Reactor API](./api/getting-started.md)
   * Endpoints {#endpoints}
     * [Companies](./api/endpoints/companies.md)
     * [Properties](./api/endpoints/properties.md)
@@ -276,6 +302,7 @@ solution: Data Collection
     * [Rules](./api/endpoints/rules.md)
     * [Rule components](./api/endpoints/rule-components.md)
     * [Extension packages](./api/endpoints/extension-packages.md)
+    * [Extension package usage authroizations](./api/endpoints/extension-package-usage-authorizations.md)
     * [Extensions](./api/endpoints/extensions.md)
     * [Libraries](./api/endpoints/libraries.md)
     * [Builds](./api/endpoints/builds.md)
@@ -292,6 +319,7 @@ solution: Data Collection
     * [Delegate descriptor IDs](./api/guides/delegate-descriptor-ids.md)
     * [Encrypting values](./api/guides/encrypting-values.md)
     * [Error handling](./api/guides/error-handling.md)
+    * [Sharing private extension packages](./api/guides/extension-packages.md)
     * [Filtering responses](./api/guides/filtering.md)
     * [Paginating responses](./api/guides/pagination.md)
     * [Sorting responses](./api/guides/sorting.md)
@@ -301,10 +329,5 @@ solution: Data Collection
 * [FAQ](./faq.md)
 * [Terminology updates](./term-updates.md)
 * [Deprecating support for Internet Explorer 10 and 11](./ie-deprecation.md)
-* Release notes {#release-notes}
-  * [Latest](./release-notes/current.md)
-  * [2021 release notes](./release-notes/2021.md)
-  * [2020 release notes](./release-notes/2020.md)
-  * [2019 release notes](./release-notes/2019.md)
-  * [2018 release notes](./release-notes/2018.md)
+* [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
 

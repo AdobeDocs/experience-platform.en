@@ -1,8 +1,8 @@
 ---
 description: Learn how to set up an authentication mechanism for your destination and get insight into what users will be seeing in the UI depending on the authentication method you select.
 title: Customer authentication configuration
+exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
 ---
-
 # Customer authentication configuration
 
 Experience Platform provides great flexibility in the authentication protocols available to partners and customers. You can configure your destination to support any of the industry-standard authentication methods like [!DNL OAuth2], bearer token authentication, password authentication, and many more.
@@ -14,13 +14,13 @@ To understand where this component fits into an integration created with Destina
 * [Use Destination SDK to configure a streaming destination](../../guides/configure-destination-instructions.md#create-destination-configuration)
 * [Use Destination SDK to configure a file-based destination](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
 
-Before customers can export data from Platform to your destination, they must create a new connection between Experience Platform and your destination, by following the steps described in the [destination connection](../../../ui/connect-destination.md) tutorial.
+Before customers can export data from Experience Platform to your destination, they must create a new connection between Experience Platform and your destination, by following the steps described in the [destination connection](../../../ui/connect-destination.md) tutorial.
 
 When [creating a destination](../../authoring-api/destination-configuration/create-destination-configuration.md) through Destination SDK, the `customerAuthenticationConfigurations` section defines what customers see in the [authentication screen](../../../ui/connect-destination.md#authenticate). Depending on the destination authentication type, customers must provide various authentication details, such as:
 
 * For destinations using [basic authentication](#basic), users must provide a username and password directly in the Experience Platform UI authentication page.
 * For destinations using [bearer authentication](#bearer), users must provide a bearer token.
-* For destinations using [OAuth2 authentication](#oauth2), users are redirected to your destination's login page where they can log in with their credentials.
+* For destinations using [OAuth2 authorization](#oauth2), users are redirected to your destination's login page where they can log in with their credentials.
 * For [Amazon S3](#s3) destinations, users must provide their [!DNL Amazon S3] access key and secret key.
 * For [Azure Blob](#blob) destinations, users must provide their [!DNL Azure Blob] connection string.
 
@@ -33,7 +33,7 @@ This article describes all the supported customer authentication configurations 
 
 >[!IMPORTANT]
 >
->The customer authentication configuration does not require you to configure any parameters. You can copy and paste the snippets shown in this page in your API calls when [creating](../../authoring-api/destination-configuration/create-destination-configuration.md) or [updating](../../authoring-api/destination-configuration/update-destination-configuration.md) a destination configuration, and your users will see the corresponding authentication screen in the Platform UI.
+>The customer authentication configuration does not require you to configure any parameters. You can copy and paste the snippets shown in this page in your API calls when [creating](../../authoring-api/destination-configuration/create-destination-configuration.md) or [updating](../../authoring-api/destination-configuration/update-destination-configuration.md) a destination configuration, and your users will see the corresponding authentication screen in the Experience Platform UI.
 
 >[!IMPORTANT]
 >
@@ -99,7 +99,7 @@ To set up bearer type authentication for your destination, configure the `custom
 
 ## OAuth 2 authentication {#oauth2}
 
-Users select **[!UICONTROL Connect to destination]** to trigger the OAuth 2 authentication flow to your destination, as shown in the example below for the Twitter Custom Audiences destination. For detailed information on configuring OAuth 2 authentication to your destination endpoint, read the dedicated [Destination SDK OAuth 2 authentication page](oauth2-authentication.md).
+Users select **[!UICONTROL Connect to destination]** to trigger the OAuth 2 authentication flow to your destination, as shown in the example below for the Twitter Custom Audiences destination. For detailed information on configuring OAuth 2 authentication to your destination endpoint, read the dedicated [Destination SDK OAuth 2 authentication page](oauth2-authorization.md).
 
 ![UI render with OAuth 2 authentication](../../assets/functionality/destination-configuration/oauth2-authentication-ui.png)
 
@@ -227,7 +227,7 @@ After reading this article, you should have a better understanding of how you ca
 
 To learn more about the other destination components, see the following articles:
 
-* [OAuth2 authentication](oauth2-authentication.md)
+* [OAuth2 authorization](oauth2-authorization.md)
 * [Customer data fields](customer-data-fields.md)
 * [UI attributes](ui-attributes.md)
 * [Schema configuration](schema-configuration.md)

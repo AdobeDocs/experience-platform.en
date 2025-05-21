@@ -8,13 +8,19 @@ exl-id: 3b0148d1-9c08-458b-9601-979cb6c7a0fb
 ---
 # Analyze your data using notebooks
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
+
 This tutorial focuses on how to use Jupyter Notebooks, built within Data Science Workspace, to access, explore, and visualize your data. By the end of this tutorial, you should have a understanding of some of the features Jupyter Notebooks offer to better understand your data.
 
 The following concepts are introduced:
 
 - **[!DNL JupyterLab]:** [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) is the next-generation web-based interface for Project Jupyter, and is tightly integrated into [!DNL Adobe Experience Platform].
 - **Batches:** Datasets are made up of batches. A batch is a set of data collected over a period of time and processed together as a single unit. New batches are created when data is added to a dataset.
-- **Data Access SDK (deprecated):** The Data Access SDK is now deprecated. Please use the [[!DNL Platform SDK]](../authoring/platform-sdk.md) guide.
+- **Data Access SDK (deprecated):** The Data Access SDK is now deprecated. Please use the [[!DNL Experience Platform SDK]](../authoring/platform-sdk.md) guide.
 
 ## Explore notebooks in Data Science Workspace
 
@@ -46,7 +52,7 @@ The Retail Sales recipe is a standalone example which uses the same Retail Sales
 
 >[!NOTE]
 >
->The `data_access_sdk_python` is deprecated and no longer recommended. Please refer to the [converting data access SDK to Platform SDK](../authoring/platform-sdk.md) tutorial to convert your code. The same steps below still apply for this tutorial.
+>The `data_access_sdk_python` is deprecated and no longer recommended. Please refer to the [converting data access SDK to Experience Platform SDK](../authoring/platform-sdk.md) tutorial to convert your code. The same steps below still apply for this tutorial.
 
 We will go over accessing data internally from [!DNL Adobe Experience Platform] and data externally. We will be using the `data_access_sdk_python` library to access internal data such as datasets and XDM schemas. For external data, we will use the pandas [!DNL Python] library.
 
@@ -84,7 +90,7 @@ Now, we can right click on the `Retail-Training-<your-alias>` dataset and select
 
 >[!TIP]
 >
->Refer to the [[!DNL Platform SDK]](../authoring/platform-sdk.md) guide to convert your code.
+>Refer to the [[!DNL Experience Platform SDK]](../authoring/platform-sdk.md) guide to convert your code.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader

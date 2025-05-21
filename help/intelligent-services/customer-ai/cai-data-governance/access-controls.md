@@ -6,7 +6,7 @@ title: Access Control for Customer AI
 description: This document provides information on attribute-based access control for Customer AI.
 exl-id: 02e3b6a4-304a-4ac4-b07c-010531101feb
 ---
-# Attribute-based access control
+# Attribute-based access control in Customer AI
 
 >[!IMPORTANT]
 >
@@ -16,7 +16,7 @@ exl-id: 02e3b6a4-304a-4ac4-b07c-010531101feb
 
 This functionality allows you to label Experience Data Model (XDM) schema fields with labels that define organizational or data usage scopes. In parallel, administrators can use the user and role administration interface to define access policies surrounding XDM schema fields and better manage the access given to users or groups of users (internal, external, or third-party users). Additionally, attribute-based access control allows administrators to manage access to specific segments.
 
-Through attribute-based access control, administrators of your organization can control users' access to both sensitive personal data (SPD) and personally identifiable information (PII) across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
+Through attribute-based access control, administrators of your organization can control users' access to both sensitive personal data (SPD) and personally identifiable information (PII) across all Experience Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
 
 Due to attribute-based access control, some fields and functionalities would have access restricted and be unavailable for certain Customer AI service models. Examples include, "Identity", "Score Definition", and "Clone."
 
@@ -40,4 +40,4 @@ See the documentation to learn [assigning permissions for access control](../../
 
 ## Next steps
 
-By reading this guide, you have been introduced to the main principles of access control in [!DNL Experience Platform]. You can now continue to the [access control user guide](../overview.md) for detailed steps on how use the [!DNL Admin Console] to create product profiles and assign permissions for [!DNL Platform].
+By reading this guide, you have been introduced to the main principles of access control in [!DNL Experience Platform]. You can now continue to the [access control user guide](../overview.md) for detailed steps on how use the [!DNL Admin Console] to create product profiles and assign permissions for [!DNL Experience Platform].

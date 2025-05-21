@@ -11,10 +11,10 @@ In Experience Data Model (XDM), an identity field represents a field that that c
 
 ## Prerequisites
 
-Identity fields are a crucial component in how customer identity graphs are constructed in Platform, which ultimately affects how Real-Time Customer Profile merges disparate data fragments together to gain a complete view of the customer. Before defining identity fields in your schemas, please refer to the following documentation to learn about the key services and concepts related to identity fields:
+Identity fields are a crucial component in how customer identity graphs are constructed in Experience Platform, which ultimately affects how Real-Time Customer Profile merges disparate data fragments together to gain a complete view of the customer. Before defining identity fields in your schemas, please refer to the following documentation to learn about the key services and concepts related to identity fields:
 
 * [Adobe Experience Platform Identity Service](../../../identity-service/home.md): Bridges identities across devices and systems, linking datasets together based on the identity fields defined by the XDM schemas they conform to.
-  * [Identity namespaces](../../../identity-service/namespaces.md): Identity namespaces define the different types of identity information that can relate to a single person, and are a required component for each identity field.
+  * [Identity namespaces](../../../identity-service/features/namespaces.md): Identity namespaces define the different types of identity information that can relate to a single person, and are a required component for each identity field.
 * [Real-Time Customer Profile](../../../profile/home.md): Leverages customer identity graphs to provide a unified consumer profile based on aggregated data from multiple sources, updated in near-real-time.
 
 ## Define an identity field {#define-a-identity-field}
@@ -38,9 +38,13 @@ Under **[!UICONTROL Identity namespace]**, use the dropdown menu to select the a
 
 When finished, select **[!UICONTROL Apply]** to apply the change to the schema.
 
+>[!IMPORTANT]
+>
+>If a primary identity field is already set, you may change the primary identity field in your schema by following the steps above. However, you must disable and then re-enable any associated datasets in the profile for the change to take affect.
+
 ![](../../images/ui/fields/special/identity-config.png)
 
-The canvas updates to reflect the changes, with the selected field gaining a fingerprint symbol (![](../../images/ui/fields/special/identity-symbol.png)) to designate it as an identity. In the left rail, the identity field is now listed under the name of the class or schema field group that provides the field to the schema.
+The canvas updates to reflect the changes, with the selected field gaining a fingerprint symbol (![](/help/images/icons/identity-service.png)) to designate it as an identity. In the left rail, the identity field is now listed under the name of the class or schema field group that provides the field to the schema.
 
 If the field was also set as the primary identity, it will also be listed under **[!UICONTROL Required fields]** in the left rail. If the identity field is nested within the schema structure, all parent fields will also be listed as required.
 
@@ -50,6 +54,7 @@ If you defined a primary identity for the schema, you can now proceed to [enable
 
 ## Next steps
 
-This guide covered how to define an identity field in the the UI. As data is ingested using this schema, your customer identity graphs will update to reflect the schema's identity fields. See the guide on the [identity graph viewer](../../../identity-service/ui/identity-graph-viewer.md) to learn how to explore your organization's private graph in the UI.
+This guide covered how to define an identity field in the UI. As data is ingested using this schema, your customer identity graphs will update to reflect the schema's identity fields. See the guide on the [identity graph viewer](../../../identity-service/features/identity-graph-viewer.md) to learn how to explore your organization's private graph in the UI.
 
 See the overview on [defining fields in the UI](./overview.md#special) to learn how to define other XDM field types in the [!DNL Schema Editor].
+

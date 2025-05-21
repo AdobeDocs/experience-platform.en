@@ -1,34 +1,44 @@
 ---
-keywords: Experience Platform;home;popular topics;SFTP;sftp
-solution: Experience Platform
 title: SFTP Source Connector Overview
 description: Learn how to connect an SFTP server to Adobe Experience Platform using APIs or the user interface.
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
 ---
 # SFTP connector
 
-Adobe Experience Platform provides native connectivity for cloud providers like AWS, [!DNL Google Cloud Platform], and [!DNL Azure], allowing you to bring your data from these systems.
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
-Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM Parquet, or delimited. Every step of the process is integrated into the Sources workflow. [!DNL Platform] allows you to bring in data from an FTP or an SFTP server through batches.
+Read this document for prerequisite steps that you need to complete in order to successfully connect your [!DNL SFTP] account to Experience Platform.
 
-## IP address allow list
+>[!TIP]
+>
+>You are must to disable Keyboard Interactive Authentication in the SFTP server configuration prior to connecting. Disabling the setting will allow passwords to be entered manually, as opposed to inputting through a service or a program.
+
+## Prerequisites {#prerequisites}
+
+Read this section for prerequisite steps that you must complete in order to successfully connect your [!DNL SFTP] source to Experience Platform.
+
+### IP address allow list
 
 A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
 
-## Naming constraints for files and directories
+### Naming constraints for files and directories
 
 The following is a list of constraints you must account for when naming your cloud storage file or directory.
 
-- Directory and file component names cannot exceed 255 characters.
-- Directory and file names cannot end with a forward slash (`/`). If provided, it will be automatically removed.
-- The following reserved URL characters must be properly escaped: `! ' ( ) ; @ & = + $ , % # [ ]`
-- The following characters are not allowed: `" \ / : | < > * ?`.
-- Illegal URL path characters not allowed. Code points like `\uE000`, while valid in NTFS filenames, are not valid Unicode characters. In addition, some ASCII or Unicode characters, like control characters (0x00 to 0x1F, \u0081, etc.), are also not allowed. For rules governing Unicode strings in HTTP/1.1 see [RFC 2616, Section 2.2: Basic Rules](https://www.ietf.org/rfc/rfc2616.txt) and [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
-- The following file names are not allowed: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, dot character (.), and two dot characters (..).
+* Directory and file component names cannot exceed 255 characters.
+* Directory and file names cannot end with a forward slash (`/`). If provided, it will be automatically removed.
+* The following reserved URL characters must be properly escaped: `! ' ( ) ; @ & = + $ , % # [ ]`
+* The following characters are not allowed: `" \ / : | < > * ?`.
+* Illegal URL path characters not allowed. Code points like `\uE000`, while valid in NTFS filenames, are not valid Unicode characters. In addition, some ASCII or Unicode characters, like control characters (0x00 to 0x1F, \u0081, etc.), are also not allowed. For rules governing Unicode strings in HTTP/1.1 see [RFC 2616, Section 2.2: Basic Rules](https://www.ietf.org/rfc/rfc2616.txt) and [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
+* The following file names are not allowed: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, dot character (.), and two dot characters (..).
 
-## Set up a Base64-encoded OpenSSH private key for [!DNL SFTP]
+### Set up a Base64-encoded OpenSSH private key for [!DNL SFTP]
 
-The [!DNL SFTP] source supports authentication using [!DNL Base64]-encoded OpenSSH private key. See the steps below for information on how to generate your Base64-encoded OpenSSH private key and connect [!DNL SFTP] to Platform.
+The [!DNL SFTP] source supports authentication using [!DNL Base64]-encoded OpenSSH private key. See the steps below for information on how to generate your Base64-encoded OpenSSH private key and connect [!DNL SFTP] to Experience Platform.
+
+>[!BEGINTABS]
+
+>[!TAB Windows]
 
 ### [!DNL Windows] users
 
@@ -80,7 +90,9 @@ Next, run the following command while providing the file path of the private key
 C:\Users\lucy> [convert]::ToBase64String((Get-Content -path "C:\Users\lucy\.ssh\id_rsa" -Encoding byte)) > C:\Users\lucy\.ssh\id_rsa_base64
 ```
 
-The above command saves the [!DNL Base64]-encoded private key in the file path you designated. You can then use that private key to authenticate to [!DNL SFTP] and connect to Platform.
+The above command saves the [!DNL Base64]-encoded private key in the file path you designated. You can then use that private key to authenticate to [!DNL SFTP] and connect to Experience Platform.
+
+>[!TAB Mac]
 
 ### [!DNL Mac] users
 
@@ -132,21 +144,59 @@ To confirm whether your public key was added properly, you can run following on 
 more ~/.ssh/authorized_keys
 ```
 
-## Connect SFTP to [!DNL Platform]
+>[!ENDTABS]
 
->[!IMPORTANT]
->
->Users are required to disable Keyboard Interactive Authentication in the SFTP server configuration prior to connecting. Disabling the setting will allow passwords to be entered manually, as opposed to inputting through a service or a program. See the [Component Pro document](https://doc.componentpro.com/ComponentPro-Sftp/authenticating-with-a-keyboard-interactive-authentication) for more information on Keyboard Interactive Authentication.
+### Gather required credentials {#credentials}
 
-The documentation below provides information on how to connect an an SFTP server to [!DNL Platform] using APIs or the user interface:
+You must provide values for the following credentials in order to connect your [!DNL SFTP] server to Experience Platform.
+
+>[!BEGINTABS]
+
+>[!TAB Basic authentication]
+
+Provide the appropriate values for the following credentials to authenticate your [!DNL SFTP] server using basic authentication.
+
+| Credential | Description |
+| ---------- | ----------- |
+| `host` | The name or IP address associated with your [!DNL SFTP] server. |
+| `port` | The [!DNL SFTP] server port you're connecting to. If unprovided, the value defaults to `22`. |
+| `username` | The username with access to your [!DNL SFTP] server. |
+| `password` | The password for your [!DNL SFTP] server. |
+| `maxConcurrentConnections` | This parameter allows you to specify a maximum limit for the number of concurrent connections Experience Platform will create when connecting to your SFTP server. You must set this value to be less than the limit set by SFTP. **Note**: When this setting is enabled for an existing SFTP account, it will only affect future dataflows and not existing dataflows. |
+| `folderPath` | The path to the folder that you want to provide access to. [!DNL SFTP] source, you can provide the folder path to specify user access to the sub folder of your choice. |
+| `disableChunking` | During data ingestion, the [!DNL SFTP] source can retrieve the file length first, divide the file into multiple parts, and then read them in parallel. You can enable or disable this value to specify whether your [!DNL SFTP] server can retrieve file lengths or read data from a specific offset. |
+| `connectionSpec.id` | (API-only) The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL SFTP] is: `b7bf2577-4520-42c9-bae9-cad01560f7bc`. |
+
+>[!TAB SSH public key authentication]
+
+Provide the appropriate values for the following credentials to authenticate your [!DNL SFTP] server using SSH public key authentication.
+
+| Credential | Description |
+| ---------- | ----------- |
+| `host` | The name or IP address associated with your [!DNL SFTP] server. |
+| `port` | The [!DNL SFTP] server port you're connecting to. If unprovided, the value defaults to `22`. |
+| `username` | The username with access to your [!DNL SFTP] server. |
+| `password` | The password for your [!DNL SFTP] server. |
+| `privateKeyContent` | The Base64 encoded SSH private key content. The type of OpenSSH key must be classified as either RSA or DSA. |
+| `passPhrase` | The pass phrase or password to decrypt the private key if the key file or the key content is protected by a pass phrase. If PrivateKeyContent is password protected, this parameter needs to be used with the PrivateKeyContent's passphrase as value. |
+| `maxConcurrentConnections` | This parameter allows you to specify a maximum limit for the number of concurrent connections Experience Platform will create when connecting to your SFTP server. You must set this value to be less than the limit set by SFTP. **Note**: When this setting is enabled for an existing SFTP account, it will only affect future dataflows and not existing dataflows. |
+| `folderPath` | The path to the folder that you want to provide access to. [!DNL SFTP] source, you can provide the folder path to specify user access to the sub folder of your choice. |
+| `disableChunking` | During data ingestion, the [!DNL SFTP] source can retrieve the file length first, divide the file into multiple parts, and then read them in parallel. You can enable or disable this value to specify whether your [!DNL SFTP] server can retrieve file lengths or read data from a specific offset. |
+| `connectionSpec.id` | (API-only) The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL SFTP] is: `b7bf2577-4520-42c9-bae9-cad01560f7bc`. |
+
+>[!ENDTABS]
+
+## Connect SFTP to Experience Platform
+
+The documentation below provides information on how to connect an an SFTP server to Experience Platform using APIs or the user interface:
 
 ### Using the APIs
 
-- [Create an SFTP base connection using the Flow Service API](../../tutorials/api/create/cloud-storage/sftp.md)
-- [Explore the data structure and contents of a cloud storage source using the Flow Service API](../../tutorials/api/explore/cloud-storage.md)
-- [Create a dataflow for a cloud storage source using the Flow Service API](../../tutorials/api/collect/cloud-storage.md)
+* [Create an SFTP base connection using the Flow Service API](../../tutorials/api/create/cloud-storage/sftp.md)
+* [Explore the data structure and contents of a cloud storage source using the Flow Service API](../../tutorials/api/explore/cloud-storage.md)
+* [Create a dataflow for a cloud storage source using the Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
 ### Using the UI
 
-- [Create an SFTP source connection in the UI](../../tutorials/ui/create/cloud-storage/sftp.md)
-- [Create a dataflow for a cloud storage connection in the UI](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+* [Create an SFTP source connection in the UI](../../tutorials/ui/create/cloud-storage/sftp.md)
+* [Create a dataflow for a cloud storage connection in the UI](../../tutorials/ui/dataflow/batch/cloud-storage.md)

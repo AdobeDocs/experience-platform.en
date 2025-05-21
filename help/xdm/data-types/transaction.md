@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;transaction;datatype;data-type;data type;
 title: Transaction Data Type
-description: This document provides an overview of the Transaction Experience Data Model (XDM) data type.
+description: Learn about the Transaction Experience Data Model (XDM) data type.
 exl-id: 47b7152f-a853-44f0-8962-e902631ad8a4
 ---
 # [!UICONTROL Transaction] data type

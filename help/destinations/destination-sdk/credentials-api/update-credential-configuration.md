@@ -1,8 +1,8 @@
 ---
-description: This page exemplifies the API call used to update an existing credential configuration through Adobe Experience Platform Destination SDK. 
+description: This page exemplifies the API call used to update an existing credential configuration through Adobe Experience Platform Destination SDK.
 title: Update a credential configuration
+exl-id: ebff370c-9189-48df-871f-ed0e1cd535c8
 ---
-
 # Update a credential configuration
 
 >[!IMPORTANT]
@@ -19,7 +19,7 @@ This page exemplifies the API request and payload that you can use to update an 
 > 
 >Read [Customer authentication configuration](../functionality/destination-configuration/customer-authentication.md) for detailed information on the supported authentication types.
 
-Use this API endpoint to create a credential configuration only if there is a global authentication system between Adobe and your destination platform, and the [!DNL Platform] customer does not need to provide any authentication credentials to connect to your destination. In this case, you must create a credential configuration using the `/credentials` API endpoint.
+Use this API endpoint to create a credential configuration only if there is a global authentication system between Adobe and your destination platform, and the [!DNL Experience Platform] customer does not need to provide any authentication credentials to connect to your destination. In this case, you must create a credential configuration using the `/credentials` API endpoint.
 
 When using a global authentication system, you must set `"authenticationRule":"PLATFORM_AUTHENTICATION"` in the [destination delivery](../functionality/destination-configuration/destination-delivery.md) configuration, when [creating a new destination configuration](../authoring-api/destination-configuration/create-destination-configuration.md).
 
@@ -246,7 +246,7 @@ A successful response returns HTTP status 200 with the details of your updated c
 
 ## API error handling {#error-handling}
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
 
 ## Next steps {#next-steps}
 

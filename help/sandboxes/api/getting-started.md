@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;sandbox developer guide
 solution: Experience Platform
 title: Getting started with the Sandbox API
 description: The Sandbox API allows developers to programmatically manage sandboxes in Adobe Experience Platform. Follow this guide to learn how to perform key operations using the API.
+role: Developer
 exl-id: 1ae27f30-2f89-4bfa-887d-a5def17b5cbc
 ---
 # Getting started with the Sandbox API
@@ -21,7 +22,7 @@ This guide provides example API calls to demonstrate how to format your requests
 
 ### Gather values for required headers
 
-This guide requires you to have completed the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) in order to successfully make calls to Platform APIs. Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+This guide requires you to have completed the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) in order to successfully make calls to Experience Platform APIs. Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`

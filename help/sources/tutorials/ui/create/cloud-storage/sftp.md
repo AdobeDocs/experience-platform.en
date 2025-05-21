@@ -1,15 +1,15 @@
 ---
-title: Create an SFTP  Source Connection in the UI
+title: Create an SFTP Source Connection in the UI
 description: Learn how to create an SFTP source connection using the Adobe Experience Platform UI.
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
 ---
 # Create an [!DNL SFTP] source connection in the UI
 
-This tutorial provides steps for creating an [!DNL SFTP] source connection using the Adobe Experience Platform UI.
+This tutorial provides steps to create an [!DNL SFTP] source connection using the Adobe Experience Platform UI.
 
-## Getting started
+## Get started
 
-This tutorial requires a working understanding of the following components of Platform:
+This tutorial requires a working understanding of the following components of Experience Platform:
 
 * [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
   * [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
@@ -24,24 +24,11 @@ If you already have a valid [!DNL SFTP] connection, you may skip the remainder o
 
 ### Gather required credentials
 
-In order to connect to [!DNL SFTP], you must provide values for the following connection properties:
-
-| Credential | Description |
-| ---------- | ----------- |
-| `host` | The name or IP address associated with your [!DNL SFTP] server. |
-| `port` | The [!DNL SFTP] server port you're connecting to. If unprovided, the value defaults to `22`. |
-| `username` | The username with access to your [!DNL SFTP] server. |
-| `password` | The password for your [!DNL SFTP] server. |
-| `privateKeyContent` | The Base64 encoded SSH private key content. The type of OpenSSH key must be classified as either RSA or DSA. |
-| `passPhrase` | The pass phrase or password to decrypt the private key if the key file or the key content is protected by a pass phrase. If PrivateKeyContent is password protected, this parameter needs to be used with the PrivateKeyContent's passphrase as value. |
-| `maxConcurrentConnections` | This parameter allows you to specify a maximum limit for the number of concurrent connections Platform will create when connecting to your SFTP server. You must set this value to be less than the limit set by SFTP. **Note**: When this setting is enabled for an existing SFTP account, it will only affect future dataflows and not existing dataflows. |
-| Folder path | The path to the folder that you want to provide access to. [!DNL SFTP] source, you can provide the folder path to specify user access to the sub folder of your choice. |
-
-Once you have gathered your required credentials, you can follow the steps below to create a new [!DNL SFTP] account to connect to Platform.
+Read the [[!DNL SFTP] authentication guide](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials) for detailed steps on how to retrieve your authentication credentials.
 
 ## Connect to your [!DNL SFTP] server
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
@@ -59,9 +46,11 @@ To connect an existing account, select the FTP or SFTP account you want to conne
 
 ### New account
 
->[!IMPORTANT]
+>[!TIP]
 >
->SFTP supports an RSA or DSA type OpenSSH key. Ensure that your key file content starts with `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` and ends with `"-----END [RSA/DSA] PRIVATE KEY-----"`. If the private key file is a PPK-format file, use the PuTTY tool to convert from PPK to OpenSSH format.
+>* Once created, you cannot change the authentication type of an [!DNL SFTP] base connection. To change the authentication type, you must create a new base connection.
+>
+>* SFTP supports an RSA or DSA type OpenSSH key. Ensure that your key file content starts with `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` and ends with `"-----END [RSA/DSA] PRIVATE KEY-----"`. If the private key file is a PPK-format file, use the PuTTY tool to convert from PPK to OpenSSH format.
 
 If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name and an optional description for your new [!DNL SFTP] account.
 
@@ -73,13 +62,32 @@ The [!DNL SFTP] source supports both basic authentication and authentication via
 
 >[!TAB Basic authentication]
 
-To use basic authentication, select **[!UICONTROL Password]** and then provide the host and port values to connect to, alongside your username and password. During this step, you can also designate the path to the sub folder that you want to provide access to. When finished, select **[!UICONTROL Connect to source]**.
+To use basic authentication, select **[!UICONTROL Password]** and then provide the appropriate values for the following credentials:
+
+* host
+* port
+* username
+* password
+
+During this step, you can also configure your max concurrent connections, define your folder path, and enable or disable chunking for your [!DNL SFTP] server. When finished, select **[!UICONTROL Connect to source]** and allow for a few moments for the connection to establish.
+
+For more information on authentication, read the guide on [gathering required credentials for [!DNL SFTP]](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials).
 
 ![The new account screen for the SFTP source using basic authentication](../../../../images/tutorials/create/sftp/password.png)
 
 >[!TAB SSH public key authentication]
 
-To use SSH public key-based credentials, select **[!UICONTROL SSH public key]**  and then provide your host and port values, as well as your private key content and passphrase combination. During this step, you can also designate the path to the sub folder that you want to provide access to. When finished, select **[!UICONTROL Connect to source]**.
+To use SSH public key-based credentials, select **[!UICONTROL SSH public key]**  and then provide the appropriate values for the following credentials:
+
+* host
+* port
+* username
+* private key content
+* passphrase
+
+During this step, you can also configure your max concurrent connections, define your folder path, and enable or disable chunking for your [!DNL SFTP] server. When finished, select **[!UICONTROL Connect to source]** and allow for a few moments for the connection to establish.
+
+For more information on authentication, read the guide on [gathering required credentials for [!DNL SFTP]](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials).
 
 ![The new account screen for the SFTP source using SSH public key.](../../../../images/tutorials/create/sftp/ssh.png)
 
@@ -87,4 +95,4 @@ To use SSH public key-based credentials, select **[!UICONTROL SSH public key]** 
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your SFTP account. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into Platform](../../dataflow/batch/cloud-storage.md).
+By following this tutorial, you have established a connection to your SFTP account. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into Experience Platform](../../dataflow/batch/cloud-storage.md).

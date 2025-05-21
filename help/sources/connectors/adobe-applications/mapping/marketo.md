@@ -15,9 +15,13 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 ## Activities {#activities}
 
-The [!DNL Marketo] source now supports additional standard activities. To use standard activities, you must update your schema using the [schema auto-generation utility](../marketo/marketo-namespaces.md) because if you create new `activities` dataflow without updating your schema, the mapping templates will fail as the new target fields will not be present in your schema. If you choose not to update your schema, you can still create a new dataflow and dismiss any errors. However, any new or updated fields will not be ingested into Platform.
+The [!DNL Marketo] source now supports additional standard activities. To use standard activities, you must update your schema using the [schema auto-generation utility](../marketo/marketo-namespaces.md) because if you create new `activities` dataflow without updating your schema, the mapping templates will fail as the new target fields will not be present in your schema. If you choose not to update your schema, you can still create a new dataflow and dismiss any errors. However, any new or updated fields will not be ingested into Experience Platform.
 
-See the documentation on [XDM Experience Event class](../../../../xdm/classes/experienceevent.md) for more information on the XDM Class and XDM Field Group(s).
+Read the documentation on [XDM Experience Event class](../../../../xdm/classes/experienceevent.md) for more information on the XDM Class and XDM Field Group(s).
+
+>[!NOTE]
+>
+>The `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` source field is a calculated field that must be added using the **[!UICONTROL Add calculated field]** option in the Experience Platform UI. Read the tutorial on [adding calculated fields](../../../../data-prep/ui/mapping.md#calculated-fields) for more information.
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
@@ -121,6 +125,7 @@ See the documentation on [XDM Experience Event class](../../../../xdm/classes/ex
 | `directMarketing.emailSent.testVariantID` | `directMarketing.emailSent.testVariantID` |
 | `directMarketing.emailSent.testVariantName` | `directMarketing.emailSent.testVariantName` |
 | `directMarketing.emailSent.automationRunID` | `directMarketing.emailSent.automationRunID` |
+| `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` | `identityMap` | This is a calculated field. |
 
 {style="table-layout:auto"}
 
@@ -269,7 +274,7 @@ Read the [XDM Business Account overview](../../../../xdm/classes/b2b/business-ac
 | `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | The value for `"${MUNCHKIN_ID}"` will be automatically replaced. |
 | `concat(id, ".mkto_acct")` | `accountKey.sourceID` |
 | `concat(id, ".mkto_acct@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | Primary identity. The value for `"${MUNCHKIN_ID}"` will be automatically replaced. |
-| `iif(crmGuid != null && crmGuid != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", crmGuid, "sourceKey", concat(crmGuid,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | The `extSourceSystemAudit.externalKey` is the secondary identity. The values for `{CRM_ORG_ID}` and `{CRM_TYPE}` will be automatically replaced. |
+| `iif(externalSourceId != null && externalSourceId != "", to_object("sourceType", externalSourceType, "sourceInstanceID", externalSourceInstanceId, "sourceID", externalSourceId, "sourceKey", externalSourceKey), iif(crmGuid != null && crmGuid != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", crmGuid, "sourceKey", concat(crmGuid,"@${CRM_ORG_ID}.${CRM_TYPE}")), null))` | `extSourceSystemAudit.externalKey` | The `extSourceSystemAudit.externalKey` is the secondary identity. The values for `{CRM_ORG_ID}` and `{CRM_TYPE}` will be automatically replaced. |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `city` | `accountBillingAddress.city` |
@@ -396,16 +401,11 @@ Read the [XDM Individual Profile overview](../../../../xdm/classes/individual-pr
 | `iif(id != null && id != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", id, "sourceKey", concat(id,"@${MUNCHKIN_ID}.Marketo")), null)` | `personComponents.sourcePersonKey` |
 | `email` | `personComponents.workEmail.address` |
 | `email` | `workEmail.address` |
-| `iif(ecids != null, to_object('ECID',arrays_to_objects('id',explode(ecids))), null)` | `identityMap` | This is a calculated field. |
 | `marketoIsDeleted` | `isDeleted` |
 | `iif(mktoCdpCnvContactPersonId != null && mktoCdpCnvContactPersonId != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\", \"sourceID\", mktoCdpCnvContactPersonId, \"sourceKey\", concat(mktoCdpCnvContactPersonId,\"@${MUNCHKIN_ID}.Marketo\")), null)` | `b2b.convertedContactKey` | This is a calculated field. |
 | `iif(mktoCdpCnvContactPersonId != null && mktoCdpCnvContactPersonId != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\", \"sourceID\", mktoCdpCnvContactPersonId, \"sourceKey\", concat(mktoCdpCnvContactPersonId,\"@${MUNCHKIN_ID}.Marketo\")), null)` | `personComponents.sourceConvertedContactKey` | This is a calculated field. |
 
 {style="table-layout:auto"}
-
->[!NOTE]
->
->The `to_object('ECID',arrays_to_objects('id',explode(ecids)))` source field is a calculated field that must be added using the [!UICONTROL Add calculated field] option in the Platform UI. See the tutorial on [adding calculated fields](../../../../data-prep/ui/mapping.md#calculated-fields) for more information.
 
 ## Next steps
 

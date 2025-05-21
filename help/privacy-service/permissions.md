@@ -5,12 +5,6 @@ exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
 ---
 # Manage permissions for Privacy Service
 
->[!IMPORTANT]
->
->Permissions for Adobe Experience Platform Privacy Service have been improved to increase their level of granularity. These changes enable organization admins to grant more users access with the desired role and permission level. Technical account users must update their Privacy Service permissions as this impending update constitutes a breaking change for them. The enforcement of this permissions change will take place on **April 13th, 2023**. See the documentation on [migrating legacy API credentials](#migrate-tech-accounts) for guidance on resolving this issue.
->
->Technical accounts are available to enterprise customers and created through the Adobe Developers Console. The Adobe ID of a technical account holder ends in `@techacct.adobe.com`. If you are unsure whether you are a technical account holder, please contact your organization administrator.
-
 Access to [Adobe Experience Platform Privacy Service](./home.md) is controlled through granular role-based permissions in Adobe Admin Console. By creating product profiles that assign permissions to groups of users, you can determine who has access to which features in the Privacy Service [UI](./ui/overview.md) and [API](./api/overview.md).
 
 >[!NOTE]
@@ -47,17 +41,17 @@ The following table outlines the available permissions for Privacy Service with 
 
 To manage Privacy Service permissions, log in to [Admin Console](https://adminconsole.adobe.com/) and select **[!UICONTROL Products]** from the top navigation. From here, select **[!UICONTROL Adobe Experience Platform Privacy Service]**.
 
-![Image showing the Privacy Service product card in Admin Console](./images/permissions/privacy-service-card.png)
+![The Admin Console with the Privacy Service product card highlighted.](./images/permissions/privacy-service-card.png)
 
 ### Select or create a product profile
 
 The next screen shows a list of available product profiles for Privacy Service under your organization. If no product profiles exist, select **[!UICONTROL New Profile]** to create one. If you have multiple roles or user groups in your organization that require different levels of access, you should create a separate product profile for each of them.
 
-![Image showing the product profiles for Privacy Service in Admin Console](./images/permissions/select-or-create-profile.png)
+![The Admin Console with the Privacy Service product profile highlighted.](./images/permissions/select-or-create-profile.png)
 
 After selecting a product profile, you can use the **[!UICONTROL Permissions]** tab to start [editing permissions](#edit-permissions) for the profile, or select the **[!UICONTROL Users]** tab to start [assigning users](#assign-users) to the profile.
 
-![Image showing the permissions tab for a product profile Admin Console](./images/permissions/users-permissions-tabs.png)
+![The permissions tab for a product profile Admin Console.](./images/permissions/users-permissions-tabs.png)
 
 ### Edit permissions for the profile {#edit-permissions}
 
@@ -65,25 +59,25 @@ On the **[!UICONTROL Permissions]** tab, select any of the displayed permission 
 
 When editing permissions for a profile, available permissions are listed in the left column while those that are included in the profile are listed in the right column. Select the listed permissions to move them between either column.
 
-![Image showing the available and included permission columns](./images/permissions/edit-permissions.png)
+![The available and included permission columns.](./images/permissions/edit-permissions.png)
 
 Permissions are organized into categories. To switch between categories, select the desired category from the left navigation.
 
-![Image showing the [!UICONTROL Opt Out of Sale] section under permissions](./images/permissions/switch-category.png)
+![The [!UICONTROL Opt Out of Sale] section under permissions.](./images/permissions/switch-category.png)
 
 Select **[!UICONTROL Save]** once you have finished configuring permissions.
 
-![Image showing the permission configuration being saved for the product profile](./images/permissions/save-permissions.png)
+![The permission configuration for the product profile with Save highlighted.](./images/permissions/save-permissions.png)
 
 The product profile view reappears with the added permissions reflected.
 
-![Image showing the added permissions for the product profile](./images/permissions/permissions-added.png)
+![The added permissions for the product profile.](./images/permissions/permissions-added.png)
 
 ### Assign users to the profile {#assign-users}
 
 To assign users to the product profile (and grant them the profile's configured permissions), select the **[!UICONTROL Users]** tab, followed by **[!UICONTROL Add user]**.
 
-![Image showing the users tab for a product profile in Admin Console](./images/permissions/manage-users.png)
+![The Users tab for a product profile in Admin Console.](./images/permissions/manage-users.png)
 
 For more information on managing users for a product profile, see the [Admin Console documentation](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html).
 

@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics; API tutorials; streaming destinations API; Platform
+keywords: Experience Platform;home;popular topics; API tutorials; streaming destinations API; Experience Platform
 solution: Experience Platform
 title: Connect to streaming destinations and activate data using the Flow Service API in Adobe Experience Platform
 description: This document covers the creation of streaming destinations by using the Adobe Experience Platform API
@@ -10,9 +10,9 @@ exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
 
 >[!IMPORTANT]
 > 
->To connect to a destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). 
+>To connect to a destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). 
 >
->To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
+>To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
 >
 >Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
@@ -20,9 +20,9 @@ This tutorial demonstrates how to use API calls to connect to your Adobe Experie
 
 This tutorial uses the [!DNL Amazon Kinesis] destination in all examples, but the steps are identical for [!DNL Azure Event Hubs].
 
-![Overview - the steps to create a streaming destination and activate segments](../assets/api/streaming-destination/overview.png)
+![Overview - the steps to create a streaming destination and activate audiences](../assets/api/streaming-destination/overview.png)
 
-If you prefer to use the user interface in Platform to connect to a destination and activate data, see the [Connect a destination](../ui/connect-destination.md) and [Activate audience data to streaming segment export destinations](../ui/activate-segment-streaming-destinations.md) tutorials.
+If you prefer to use the user interface in Experience Platform to connect to a destination and activate data, see the [Connect a destination](../ui/connect-destination.md) and [Activate audience data to streaming audience export destinations](../ui/activate-segment-streaming-destinations.md) tutorials.
 
 ## Get started
 
@@ -30,13 +30,13 @@ This guide requires a working understanding of the following components of Adobe
 
 *   [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
 *   [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] is the system of record for data location and lineage within Experience Platform.
-*   [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+*   [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to activate data to streaming destinations in Platform.
+The following sections provide additional information that you will need to know in order to activate data to streaming destinations in Experience Platform.
 
 ### Gather required credentials
 
-To complete the steps in this tutorial, you should have the following credentials ready, depending on the type of destinations that you are connecting and activating segments to.
+To complete the steps in this tutorial, you should have the following credentials ready, depending on the type of destinations that you are connecting and activating audiences to.
 
 * For [!DNL Amazon Kinesis] connections: `accessKeyId`, `secretKey`, `region` or `connectionUrl`
 * For [!DNL Azure Event Hubs] connections: `sasKeyName`, `sasKey`, `namespace`
@@ -47,13 +47,13 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required and optional headers {#gather-values}
 
-In order to make calls to Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+In order to make calls to Experience Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
 *   Authorization: Bearer `{ACCESS_TOKEN}`
 *   x-api-key: `{API_KEY}`
 *   x-gw-ims-org-id: `{ORG_ID}`
 
-Resources in Experience Platform can be isolated to specific virtual sandboxes. In requests to Platform APIs, you can specify the name and ID of the sandbox that the operation will take place in. These are optional parameters.
+Resources in Experience Platform can be isolated to specific virtual sandboxes. In requests to Experience Platform APIs, you can specify the name and ID of the sandbox that the operation will take place in. These are optional parameters.
 
 *   x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -73,7 +73,7 @@ You can find accompanying reference documentation for all the API calls in this 
 
 ![Destination steps overview step 1](../assets/api/streaming-destination/step1.png)
 
-As a first step, you should decide which streaming destination to activate data to. To begin with, perform a call to request a list of available destinations that you can connect and activate segments to. Perform the following GET request to the `connectionSpecs` endpoint to return a list of available destinations:
+As a first step, you should decide which streaming destination to activate data to. To begin with, perform a call to request a list of available destinations that you can connect and activate audiences to. Perform the following GET request to the `connectionSpecs` endpoint to return a list of available destinations:
 
 **API format**
 
@@ -95,7 +95,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Response**
 
-A successful response contains a list of available destinations and their unique identifiers (`id`). Store the value of the destination that you plan to use, as it will be required in further steps. For example, if you want to connect and deliver segments to [!DNL Amazon Kinesis] or [!DNL Azure Event Hubs], look for the following snippet in the response:
+A successful response contains a list of available destinations and their unique identifiers (`id`). Store the value of the destination that you plan to use, as it will be required in further steps. For example, if you want to connect and deliver audiences to [!DNL Amazon Kinesis] or [!DNL Azure Event Hubs], look for the following snippet in the response:
 
 ```json
 {
@@ -266,10 +266,10 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 *   `{AUTHENTICATION_CREDENTIALS}`: fill in the name of your streaming destination: `Aws Kinesis authentication credentials` or `Azure EventHub authentication credentials`. 
 *   `{ACCESS_ID}`: *For [!DNL Amazon Kinesis] connections.* Your access ID for your Amazon Kinesis storage location.
 *   `{SECRET_KEY}`: *For [!DNL Amazon Kinesis] connections.* Your secret key for your Amazon Kinesis storage location.
-*  `{REGION}`: *For [!DNL Amazon Kinesis] connections.* The region in your [!DNL Amazon Kinesis] account where Platform will stream your data.
+*  `{REGION}`: *For [!DNL Amazon Kinesis] connections.* The region in your [!DNL Amazon Kinesis] account where Experience Platform will stream your data.
 *  `{SAS_KEY_NAME}`: *For [!DNL Azure Event Hubs] connections.* Fill in your SAS key name. Learn about authenticating to [!DNL Azure Event Hubs] with SAS keys in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 *  `{SAS_KEY}`: *For [!DNL Azure Event Hubs] connections.* Fill in your SAS key. Learn about authenticating to [!DNL Azure Event Hubs] with SAS keys in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
-*  `{EVENT_HUB_NAMESPACE}`: *For [!DNL Azure Event Hubs] connections.* Fill in the [!DNL Azure Event Hubs] namespace where Platform will stream your data. For more information, see [Create an Event Hubs namespace](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) in the [!DNL Microsoft] documentation.
+*  `{EVENT_HUB_NAMESPACE}`: *For [!DNL Azure Event Hubs] connections.* Fill in the [!DNL Azure Event Hubs] namespace where Experience Platform will stream your data. For more information, see [Create an Event Hubs namespace](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) in the [!DNL Microsoft] documentation.
 
 **Response**
 
@@ -324,9 +324,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 *   `{BASE_CONNECTION_ID}`: Use the base connection ID you obtained in the step above.
 *   `{CONNECTION_SPEC_ID}`: Use the connection spec you obtained in the step [Get the list of available destinations](#get-the-list-of-available-destinations).
-*   `{NAME_OF_DATA_STREAM}`: *For [!DNL Amazon Kinesis] connections.* Provide the name of your existing data stream in your [!DNL Amazon Kinesis] account. Platform will export data to this stream.
-*   `{REGION}`: *For [!DNL Amazon Kinesis] connections.* The region in your Amazon Kinesis account where Platform will stream your data.
-*   `{EVENT_HUB_NAME}`: *For [!DNL Azure Event Hubs] connections.* Fill in the [!DNL Azure Event Hub] name where Platform will stream your data. For more information, see [Create an event hub](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) in the [!DNL Microsoft] documentation.
+*   `{NAME_OF_DATA_STREAM}`: *For [!DNL Amazon Kinesis] connections.* Provide the name of your existing data stream in your [!DNL Amazon Kinesis] account. Experience Platform will export data to this stream.
+*   `{REGION}`: *For [!DNL Amazon Kinesis] connections.* The region in your Amazon Kinesis account where Experience Platform will stream your data.
+*   `{EVENT_HUB_NAME}`: *For [!DNL Azure Event Hubs] connections.* Fill in the [!DNL Azure Event Hub] name where Experience Platform will stream your data. For more information, see [Create an event hub](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) in the [!DNL Microsoft] documentation.
 
 **Response**
 
@@ -403,7 +403,7 @@ curl -X POST \
 
 **Response**
 
-A successful response returns the ID (`id`) of the newly created dataflow and an `etag`. Note down both values. as you will them in the next step, to activate segments.
+A successful response returns the ID (`id`) of the newly created dataflow and an `etag`. Note down both values. as you will them in the next step, to activate audiences.
 
 ```json
 {
@@ -417,9 +417,9 @@ A successful response returns the ID (`id`) of the newly created dataflow and an
 
 ![Destination steps overview step 5](../assets/api/streaming-destination/step5.png)
 
-Having created all the connections and the data flow, now you can activate your profile data to the streaming platform. In this step, you select which segments and which profile attributes you are sending to the destination and you can schedule and send data to the destination.
+Having created all the connections and the data flow, now you can activate your profile data to the streaming platform. In this step, you select which audiences and which profile attributes you are sending to the destination and you can schedule and send data to the destination.
 
-To activate segments to your new destination, you must perform a JSON PATCH operation, similar to the example below. You can activate mutiple segments and profile attributes in one call. To learn more about JSON PATCH, see the [RFC specification](https://tools.ietf.org/html/rfc6902). 
+To activate audiences to your new destination, you must perform a JSON PATCH operation, similar to the example below. You can activate mutiple audiences and profile attributes in one call. To learn more about JSON PATCH, see the [RFC specification](https://tools.ietf.org/html/rfc6902). 
 
 **API format**
 
@@ -444,8 +444,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
     "value": {
       "type": "PLATFORM_SEGMENT",
       "value": {
-        "name": "Name of the segment that you are activating",
-        "description": "Description of the segment that you are activating",
+        "name": "Name of the audience that you are activating",
+        "description": "Description of the audience that you are activating",
         "id": "{SEGMENT_ID}"
       }
     }
@@ -468,13 +468,13 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | --------- | ----------- |
 |`{DATAFLOW_ID}`| In the URL, use the ID of the dataflow that you created in the previous step. |
 |`{ETAG}` | Get the `{ETAG}` from the response in the previous step, [Create a dataflow](#create-dataflow). The response format in the previous step has escaped quotes. You must use the unescaped values in the header of the request. See the example below: <br> <ul><li>Response example: `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>Value to use in your request: `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> The etag value updates with every successful update of a dataflow. |
-| `{SEGMENT_ID}`| Provide the segment ID that you want to export to this destination. To retrieve segment IDs for the segments that you want to activate, see [retrieve a segment definition](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) in the Experience Platform API reference. |
+| `{SEGMENT_ID}`| Provide the audience ID that you want to export to this destination. To retrieve audience IDs for the audiences that you want to activate, see [retrieve a audience definition](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) in the Experience Platform API reference. |
 | `{PROFILE_ATTRIBUTE}`| For example, `"person.lastName"` |
-| `op` | The operation call used to define the action needed to update the dataflow. Operations include: `add`, `replace`, and `remove`. To add a segment to a dataflow, use the `add` operation. |
-| `path` | Defines the part of the flow that is to be updated. When adding a segment to a dataflow, use the path specified in the example. |
+| `op` | The operation call used to define the action needed to update the dataflow. Operations include: `add`, `replace`, and `remove`. To add an audience to a dataflow, use the `add` operation. |
+| `path` | Defines the part of the flow that is to be updated. When adding an audience to a dataflow, use the path specified in the example. |
 | `value` | The new value you want to update your parameter with. |
-| `id` | Specify the ID of the segment you are adding to the destination dataflow.  |
-| `name` | *Optional*. Specify the name of the segment you are adding to the destination dataflow. Note that this field is not mandatory and you can successfully add a segment to the destination dataflow without providing its name. |
+| `id` | Specify the ID of the audience you are adding to the destination dataflow.  |
+| `name` | *Optional*. Specify the name of the audience you are adding to the destination dataflow. Note that this field is not mandatory and you can successfully add an audience to the destination dataflow without providing its name. |
 
 **Response**
 
@@ -484,7 +484,7 @@ Look for a 202 OK response. No response body is returned. To validate that the r
 
 ![Destination steps overview step 6](../assets/api/streaming-destination/step6.png)
 
-As a final step in the tutorial, you should validate that the segments and profile attributes have indeed been correctly mapped to the data flow.
+As a final step in the tutorial, you should validate that the audiences and profile attributes have indeed been correctly mapped to the data flow.
 
 To validate this, perform the following GET request:
 
@@ -511,7 +511,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **Response**
 
-The returned response should include in the `transformations` parameter the segments and profile attributes that you submitted in the previous step. A sample `transformations` parameter in the response could look like below:
+The returned response should include in the `transformations` parameter the audiences and profile attributes that you submitted in the previous step. A sample `transformations` parameter in the response could look like below:
 
 ```json
 "transformations": [
@@ -557,7 +557,7 @@ The returned response should include in the `transformations` parameter the segm
 
 >[!IMPORTANT]
 >
-> In addition to the profile attributes and the segments in the step [Activate data to your new destination](#activate-data), the exported data in [!DNL AWS Kinesis] and [!DNL Azure Event Hubs] will also include information about the identity map. This represents the identities of the exported profiles (for example [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html), mobile ID, Google ID, email address, etc.). See an example below.
+> In addition to the profile attributes and the audiences in the step [Activate data to your new destination](#activate-data), the exported data in [!DNL AWS Kinesis] and [!DNL Azure Event Hubs] will also include information about the identity map. This represents the identities of the exported profiles (for example [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html), mobile ID, Google ID, email address, etc.). See an example below.
 
 ```json
 {
@@ -624,11 +624,11 @@ To successfully connect to the destinations using the attached [!DNL Postman] co
 
 ## API error handling {#api-error-handling}
 
-The API endpoints in this tutorial follow the general Experience Platform API error message principles. Refer to [API status codes](/help/landing/troubleshooting.md#api-status-codes) and [request header errors](/help/landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide for more information on interpreting error responses.
+The API endpoints in this tutorial follow the general Experience Platform API error message principles. Refer to [API status codes](/help/landing/troubleshooting.md#api-status-codes) and [request header errors](/help/landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide for more information on interpreting error responses.
 
 ## Next steps {#next-steps}
 
-By following this tutorial, you have successfully connected Platform to one of your preferred streaming destinations and set up a data flow to the respective destination. Outgoing data can now be used in the destination for customer analytics or any other data operations you may wish to perform. See the following pages for more details:
+By following this tutorial, you have successfully connected Experience Platform to one of your preferred streaming destinations and set up a data flow to the respective destination. Outgoing data can now be used in the destination for customer analytics or any other data operations you may wish to perform. See the following pages for more details:
 
 *   [Destinations overview](../home.md)
 *   [Destinations Catalog overview](../catalog/overview.md)

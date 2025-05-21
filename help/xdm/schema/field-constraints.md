@@ -17,11 +17,11 @@ If you plan on defining your own field types in the API, it is strongly recommen
 
 ## Base structure and examples {#basic-types}
 
-XDM is built on top of JSON Schema, and therefore XDM fields inherit a similar syntax when defining their type. Understanding how different field types are represented in JSON Schema can help indicate the base constraints of each type.
+XDM is built on top of JSON Schema, and therefore XDM fields inherit a similar syntax when defining their type. Understanding how different field types are represented in JSON Schema can help indicate the base constraints of each type. Custom fields names are case-insensitive and must have different names at the same level in your schema.
 
 >[!NOTE]
 >
->See the [API fundamentals guide](../../landing/api-fundamentals.md#json-schema) for more information on JSON Schema and other underlying technologies in Platform APIs.
+>See the [API fundamentals guide](../../landing/api-fundamentals.md#json-schema) for more information on JSON Schema and other underlying technologies in Experience Platform APIs.
 
 The following table outlines how each XDM type is represented in JSON Schema, along with an example value that conforms to the type:
 
@@ -43,7 +43,7 @@ The following table outlines how each XDM type is represented in JSON Schema, al
       <td><code>"Platinum"</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL Double]</td>
+      <td>[!UICONTROL Number]</td>
       <td>
         <pre class="JSON language-JSON hljs">
 {"type": "number"}</pre>
@@ -124,7 +124,7 @@ The following table outlines how each XDM type is represented in JSON Schema, al
       <td>[!UICONTROL Boolean]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{"type": "string"}</pre>
+{"type": "boolean"}</pre>
       </td>
       <td><code>true</code></td>
     </tr>
@@ -152,7 +152,7 @@ The sections below describe how each XDM type maps to other common serialization
 | XDM type | Parquet | Spark SQL | Java | 
 | --- | --- | --- | --- |
 | [!UICONTROL String] | Type: `BYTE_ARRAY`<br>Annotation: `UTF8` | `StringType` | `java.lang.String` |
-| [!UICONTROL Double] | Type: `DOUBLE` | `LongType` | `java.lang.Double` |
+| [!UICONTROL Number] | Type: `DOUBLE` | `LongType` | `java.lang.Double` |
 | [!UICONTROL Long] | Type: `INT64` | `LongType` | `java.lang.Long` |
 | [!UICONTROL Integer] | Type: `INT32`<br>Annotation: `INT_32` | `IntegerType` | `java.lang.Integer` |
 | [!UICONTROL Short] | Type: `INT32`<br>Annotation: `INT_16` | `ShortType` | `java.lang.Short` |
@@ -169,7 +169,7 @@ The sections below describe how each XDM type maps to other common serialization
 | XDM type | Scala | .NET | CosmosDB |
 | --- | --- | --- | --- |
 | [!UICONTROL String] | `String` | `System.String` | `String` |
-| [!UICONTROL Double] | `Double` | `System.Double` | `Number` |
+| [!UICONTROL Number] | `Double` | `System.Double` | `Number` |
 | [!UICONTROL Long] | `Long` | `System.Int64` | `Number` |
 | [!UICONTROL Integer] | `Int` | `System.Int32` | `Number` |
 | [!UICONTROL Short] | `Short` | `System.Int16` | `Number` |
@@ -186,7 +186,7 @@ The sections below describe how each XDM type maps to other common serialization
 | XDM type | MongoDB | Aerospike | Protobuf 2 | 
 | --- | --- | --- | --- |
 | [!UICONTROL String] | `string` | `String` | `string` |
-| [!UICONTROL Double] | `double` | `Double` | `double` |
+| [!UICONTROL Number] | `double` | `Double` | `double` |
 | [!UICONTROL Long] | `long` | `Integer` | `int64` |
 | [!UICONTROL Integer] | `int` | `Integer` | `int32` |
 | [!UICONTROL Short] | `int` | `Integer` | `int32` |

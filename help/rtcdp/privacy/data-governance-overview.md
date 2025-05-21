@@ -2,6 +2,7 @@
 keywords: data governance rtcdp;rtcdp data governance;real time customer data profile data governance
 title: Data Governance overview
 description: Data Governance allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. 
+feature: Get Started, Data Governance
 exl-id: eb501d85-cabd-4667-a1cd-2210ec83fb71
 ---
 # Data Governance in Real-Time CDP
@@ -30,7 +31,7 @@ You can set data usage restrictions on a destination by defining marketing actio
 >
 >For more information on marketing actions and their use in data usage policies, see the [data usage policies overview](../../data-governance/policies/overview.md) in the [!DNL Experience Platform] documentation.
 
-Defining marketing actions on destinations allows you to ensure that any profiles or segments sent to those destinations are compliant with data usage policies. You should therefore add appropriate marketing actions to your destinations based on your organization's needs to enforce policy restrictions on activation.
+Defining marketing actions on destinations allows you to ensure that any profiles or audiences sent to those destinations are compliant with data usage policies. You should therefore add appropriate marketing actions to your destinations based on your organization's needs to enforce policy restrictions on activation.
 
 Marketing actions can only be selected when setting up a destination for the first time. Depending on the type of destination you are working with, the opportunity to configure marketing actions will appear at different points in the setup workflow. See the [destinations documentation](../destinations/overview.md) for steps on how to configure your particular destination.
 
@@ -42,7 +43,7 @@ Adobe Experience Platform provides several core policies for common customer exp
 
 ## Enforce data usage compliance {#enforce}
 
-Once data is labeled and usage policies are defined, you can enforce data usage compliance with policies. When activating audience segments to destinations in Real-Time CDP, Data Governance automatically enforces usage policies should any violations occur.
+Once data is labeled and usage policies are defined, you can enforce data usage compliance with policies. When activating audiences to destinations in Real-Time CDP, Data Governance automatically enforces usage policies should any violations occur.
 
 See the document on [automatic policy enforcement](../../data-governance/enforcement/auto-enforcement.md) for more information.
 

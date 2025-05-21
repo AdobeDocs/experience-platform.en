@@ -195,7 +195,7 @@ Back quotes are **not** needed if you are using bracket-notation.
 
 ## Viewing table information
 
-After connecting to Query Service, you can see all your available tables on Platform by using either the `\d` or `SHOW TABLES` commands.
+After connecting to Query Service, you can see all your available tables on Experience Platform by using either the `\d` or `SHOW TABLES` commands.
 
 ### Standard table view
 
@@ -305,7 +305,7 @@ LIMIT 50;
 
 ## Deduplication
 
-Query Service supports data deduplication, or the removal of duplicate rows from data. For more information on deduplication, please read the [Query Service deduplication guide](../essential-concepts/deduplication.md).
+Query Service supports data deduplication, or the removal of duplicate rows from data. For more information on deduplication, please read the [Query Service deduplication guide](../key-concepts/deduplication.md).
 
 ## Time zone computations in Query Service
 

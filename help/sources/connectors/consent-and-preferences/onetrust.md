@@ -10,19 +10,19 @@ exl-id: f2229d4d-8aa6-483a-9156-403309f80007
 
 >[!NOTE]
 >
->The [!DNL OneTrust Integration] source only supports ingestion of consent and preferences data and not cookies.
+>The [!DNL OneTrust Integration] source only supports ingestion of consent and preferences data and not cookies. For issues with the source connector, please contact OneTrust support at https://support.onetrust.com
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
 Experience Platform provides support for ingesting data from a third-party consent and preferences management platform. Support for consent and preferences providers include [!DNL OneTrust Integration].
 
-The documentation below provides information on how to connect [!DNL OneTrust Integration] to Platform using APIs or the user interface:
+The documentation below provides information on how to connect [!DNL OneTrust Integration] to Experience Platform using APIs or the user interface:
 
-## Connect [!DNL OneTrust Integration] to Platform using APIs
+## Connect [!DNL OneTrust Integration] to Experience Platform using APIs
 
 - [Create a [!DNL OneTrust Integration] source connection and dataflow using the Flow Service API](../../tutorials/api/create/consent-and-preferences/onetrust.md)
 
-## Connect [!DNL OneTrust Integration] to Platform using the UI
+## Connect [!DNL OneTrust Integration] to Experience Platform using the UI
 
 - [Create a [!DNL OneTrust Integration] source connection in the UI](../../tutorials/ui/create/consent-and-preferences/onetrust.md)
 - [Create a dataflow for a consent and preferences source connection in the UI](../../tutorials/ui/dataflow/consent-and-preferences.md)

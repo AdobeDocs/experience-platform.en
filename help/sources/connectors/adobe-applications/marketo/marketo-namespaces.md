@@ -5,38 +5,40 @@ exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
 ---
 # B2B namespaces and schemas
 
+>[!AVAILABILITY]
+>
+>You must have access to [Adobe Real-Time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) for your B2B schemas to qualify in [Real-Time Customer Profile](../../../../profile/home.md).
+
 >[!NOTE]
 >
->You can use templates in the Adobe Experience Platform UI to expedite your asset creation for B2B and B2C data. For more information, read the guide on [using templates in Platform UI](../../../tutorials/ui/templates.md).
+>You can use templates in the Adobe Experience Platform UI to expedite your asset creation for B2B and B2C data. For more information, read the guide on [using templates in Experience Platform UI](../../../tutorials/ui/templates.md).
 
-This document provides information on the underlying set up for the namespaces and schemas to be used with B2B sources. This document also provides details around setting up your Postman automation utility required for generating B2B namespaces and schemas.
-
->[!IMPORTANT]
->
->You must have access to [Adobe Real-Time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) in order for B2B schemas to participate in [Real-Time Customer Profile](../../../../profile/home.md).
+Read this document for information information on the underlying set up for the namespaces and schemas to be used with B2B sources. This document also provides details around setting up your Postman automation utility required for generating B2B namespaces and schemas.
 
 ## Set up B2B namespaces and schema auto-generation utility
 
-The first step in using the B2B namespace and schema auto-generation utility is to set up your Platform developer console and [!DNL Postman] environment.
+>[!IMPORTANT]
+>
+>Service Account (JWT) credentials have been deprecated. You must ensure that you migrate your application or integration to the new OAuth Server-to-Server credential before January 27, 2025. Read the following documentation for detailed steps on [how to migrate your JWT credential to OAuth Server-to-Server credential](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/).
+
+Refer to the following documentation for prerequisite information on how to set up your [!DNL Postman] environment to support the B2B namespace and schema auto-generation utility.
 
 - You can download the namespace and schema auto-generation utility collection and environment from this [GitHub repository](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility).
-- For information on using Platform APIs including details on how to gather values for required headers and read sample API calls, see the guide on [getting started with Platform APIs](../../../../landing/api-guide.md).
-- For information on how to generate your credentials for Platform APIs, see the tutorial on [authenticating and accessing Experience Platform APIs](../../../../landing/api-authentication.md).
-- For information on how to set up [!DNL Postman] for Platform APIs, see the tutorial on [setting up developer console and [!DNL Postman]](../../../../landing/postman.md).
+- For information on using Experience Platform APIs including details on how to gather values for required headers and read sample API calls, see the guide on [getting started with Experience Platform APIs](../../../../landing/api-guide.md).
+- For information on how to generate your credentials for Experience Platform APIs, see the tutorial on [authenticating and accessing Experience Platform APIs](../../../../landing/api-authentication.md).
+- For information on how to set up [!DNL Postman] for Experience Platform APIs, see the tutorial on [setting up developer console and [!DNL Postman]](../../../../landing/postman.md).
 
-With a Platform developer console and [!DNL Postman] set up, you can now start applying the appropriate environment values to your [!DNL Postman] environment.
+With an Experience Platform developer console and [!DNL Postman] set up, you can now start applying the appropriate environment values to your [!DNL Postman] environment.
 
 The following table contains example values as well as additional information on populating your [!DNL Postman] environment:
 
 | Variable | Description | Example |
 | --- | --- | --- |
 | `CLIENT_SECRET` | A unique identifier used to generate your `{ACCESS_TOKEN}`. See the tutorial on [authenticating and accessing Experience Platform APIs](../../../../landing/api-authentication.md) for information on how to retrieve your `{CLIENT_SECRET}`. | `{CLIENT_SECRET}` |
-| `JWT_TOKEN` | The JSON Web Token (JWT) is an authentication credential used to generate your {ACCESS_TOKEN}. See the tutorial on [authenticating and accessing Experience Platform APIs](../../../../landing/api-authentication.md) for information on how to generate your `{JWT_TOKEN}`. | `{JWT_TOKEN}` |
 | `API_KEY` | A unique identifier used to authenticate calls to Experience Platform APIs. See the tutorial on [authenticating and accessing Experience Platform APIs](../../../../landing/api-authentication.md) for information on how to retrieve your `{API_KEY}`. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
 | `ACCESS_TOKEN` | The authorization token required to complete calls to Experience Platform APIs. See the tutorial on [authenticating and accessing Experience Platform APIs](../../../../landing/api-authentication.md) for information on how to retrieve your `{ACCESS_TOKEN}`. | `Bearer {ACCESS_TOKEN}` |
 | `META_SCOPE` | With regards to [!DNL Marketo], this value is fixed and is alway set to: `ent_dataservices_sdk`. | `ent_dataservices_sdk` |
 | `CONTAINER_ID` | The `global` container holds all standard Adobe and Experience Platform partner provided classes, schema field groups, data types, and schemas. With regards to [!DNL Marketo], this value is fixed and is always set to `global`. | `global` |
-| `PRIVATE_KEY` | A credential used to authenticate your [!DNL Postman] instance to Experience Platform APIs. See the tutorial on setting up developer console and [setting up developer console and [!DNL Postman]](../../../../landing/postman.md) for instructions on how to retrieve your {PRIVATE_KEY}. | `{PRIVATE_KEY}` |
 | `TECHNICAL_ACCOUNT_ID` | A credential used to integrate to Adobe I/O. | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
 | `IMS` | The Identity Management System (IMS) provides the framework for authentication to Adobe services. With regards to [!DNL Marketo], this value is fixed and is always set to: `ims-na1.adobelogin.com`. | `ims-na1.adobelogin.com` |
 | `IMS_ORG` | A corporate entity that can own or license products and services and allow access to its members. See the tutorial on [setting up developer console and [!DNL Postman]](../../../../landing/postman.md) for instructions on how to retrieve your `{ORG_ID}` information. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
@@ -52,17 +54,17 @@ With your [!DNL Postman] collection and environment set up, you can now run the 
 
 In the [!DNL Postman] interface, select the root folder of the auto-generator utility and then select **[!DNL Run]** from the top header.
 
-![root-folder](../images/marketo/root-folder.png)
+![The root folder of the Namespaces and Schemas generator in the Postman UI. "Runs" is highlighted in the top menu bar.](../images/marketo/root_folder.png)
 
 The [!DNL Runner] interface appears. From here, ensure that all the checkboxes are selected and then select **[!DNL Run Namespaces and Schemas Autogeneration Utility]**.
 
-![run-generator](../images/marketo/run-generator.png)
+![The Runner interface of the Postman UI with several requests in the Namespaces and Schemas collection checked and the "Run Namespaces and Schemas" button highlighted on the right side.](../images/marketo/run_generator.png)
 
 A successful request creates the namespaces and schemas required for B2B.
 
 ## B2B namespaces
 
-Identity namespaces are a component of [[!DNL Identity Service]](../../../../identity-service/home.md) that serve to distinguish the context or type of an identity. A fully qualified identity includes an ID value and a namespace. See the [namespaces overview](../../../../identity-service/namespaces.md) for more information.
+Identity namespaces are a component of [[!DNL Identity Service]](../../../../identity-service/home.md) that serve to distinguish the context of an identity. A fully qualified identity includes an identity value and a namespace. Read the [namespaces overview](../../../../identity-service/features/namespaces.md) for more information.
 
 B2B namespaces are used in the primary identity of the entity.
 
@@ -90,7 +92,7 @@ The following table contains information on the underlying set up for B2B namesp
 
 Experience Platform uses schemas to describe the structure of data in a consistent and reusable way. By defining data consistently across systems, it becomes easier to retain meaning and therefore gain value from data.
 
-Before data can be ingested into Platform, a schema must be composed to describe the data's structure and provide constraints to the type of data that can be contained within each field. Schemas consist of a base class and zero or more schema field groups.
+Before data can be ingested into Experience Platform, a schema must be composed to describe the data's structure and provide constraints to the type of data that can be contained within each field. Schemas consist of a base class and zero or more schema field groups.
 
 For more information on the schema composition model, including design principles and best practices, see the [basics of schema composition](../../../../xdm/schema/composition.md).
 
@@ -117,4 +119,4 @@ The following table contains information on the underlying setup of B2B schemas.
 
 ## Next steps
 
-To learn how to connect your [!DNL Marketo] data to Platform, see the tutorial on [creating a Marketo source connector in the UI](../../../tutorials/ui/create/adobe-applications/marketo.md).
+To learn how to connect your [!DNL Marketo] data to Experience Platform, see the tutorial on [creating a Marketo source connector in the UI](../../../tutorials/ui/create/adobe-applications/marketo.md).

@@ -27,7 +27,7 @@ Service models can be edited, cloned, and deleted by using the controls on the r
 
 - **[!UICONTROL Edit]**: Selecting **[!UICONTROL Edit]** allows you to modify an existing service model. You can edit the name, description, status, scoring frequency of the model, and additional score dataset columns.
 - **[!UICONTROL Clone]**: Selecting **[!UICONTROL Clone]** copies the selected service model. You can then modify the workflow to make minor tweaks and rename it as a new model.
-- **[!UICONTROL Delete]**: You can delete a service model including any historical runs. The corresponding output dataset will be deleted from Platform. However, scores that were synced to Real-Time Customer Profile are not deleted.
+- **[!UICONTROL Delete]**: You can delete a service model including any historical runs. The corresponding output dataset will be deleted from Experience Platform. However, scores that were synced to Real-Time Customer Profile are not deleted.
 - **[!UICONTROL Data source]**: A link to the dataset being used. If more than one dataset is being used by Attribution AI, "Multiple" followed by the number of datasets is displayed. Upon selecting the hyperlink, the datasets preview popover is shown.
 - **[!UICONTROL Last run details]**: This is only displayed when a run fails. Information on why the run failed such as error codes are displayed here.
 
@@ -53,11 +53,11 @@ Next, the set up page for Attribution AI appears where you can provide a name an
 
 By design, Attribution AI can use Adobe Analytics, Experience event, and Consumer Experience Event data to calculate attribution scores. When selecting a dataset only ones that are compatible with Attribution AI are listed. To select a dataset, select the (**+**) symbol next to the dataset name or select the checkbox to add multiple datasets at once. You can also use the search option to quickly find the datasets you're interested in.
 
-After selecting the datasets you wish to use, select the **[!UICONTROL Add]** button to add the datasets to the the dataset preview pane.
+After selecting the datasets you wish to use, select the **[!UICONTROL Add]** button to add the datasets to the dataset preview pane.
 
 ![Select datasets](./images/user-guide/select-datasets.png)
 
-Selecting the info icon ![info icon](./images/user-guide/info-icon.png) next to a dataset opens the dataset preview popover.
+Selecting the info icon ![info icon](/help/images/icons/info.png) next to a dataset opens the dataset preview popover.
 
 ![Select and search for dataset](./images/user-guide/dataset-preview.png)
 
@@ -97,7 +97,7 @@ In the event that more than one identity is available within a namespace, make s
 
 >[!NOTE]
 >
-> If no valid identity type (namespace) exists for a dataset, you must set a primary identity and assign it to an identity namespace using the [schema editor](../../xdm/schema/composition.md#identity). To learn more about namespaces and identities, visit the [Identity Service namespaces](../../identity-service/namespaces.md) documentation.
+> If no valid identity type (namespace) exists for a dataset, you must set a primary identity and assign it to an identity namespace using the [schema editor](../../xdm/schema/composition.md#identity). To learn more about namespaces and identities, visit the [Identity Service namespaces](../../identity-service/features/namespaces.md) documentation.
 
 ## Mapping media channel and campaign fields {#aai-mapping}
 

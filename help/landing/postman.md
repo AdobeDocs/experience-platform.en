@@ -2,12 +2,14 @@
 keywords: Experience Platform;home;popular topics;Adobe Experience Platform;api guide;platform api guide;introduction to platform;developer guide
 solution: Experience Platform
 title: Postman in Adobe Experience Platform
-description: This document contains steps outlining how to set up a Postman environment, import Postman collections, and a list of available collections for each Platform service.
+description: This document contains steps outlining how to set up a Postman environment, import Postman collections, and a list of available collections for each Experience Platform service.
+role: Developer
+feature: API
 exl-id: a09b3875-97f5-47f1-a562-52decbce67b1
 ---
 # Postman in Adobe Experience Platform
 
-Postman is a collaboration platform for API development that allows you to set up environments with preset variables, share API collections, streamline CRUD requests, and more. Most Platform API services have Postman collections which can be used to assist with making API calls.
+Postman is a collaboration platform for API development that allows you to set up environments with preset variables, share API collections, streamline CRUD requests, and more. Most Experience Platform API services have Postman collections which can be used to assist with making API calls.
 
 ## How to set up a Postman environment for Experience Platform
 
@@ -53,4 +55,4 @@ The video below uses the [Identity Management Service (IMS) Postman collection](
 
 ## Next steps
 
-This document introduced Postman environments, collections, and how to import collections. Now that you have Postman ready, visit the [Platform getting started guide](api-guide.md) for information on required headers, examples, and a list of [API guides](api-guide.md#api-guides) available for each Platform service.
+This document introduced Postman environments, collections, and how to import collections. Now that you have Postman ready, visit the [Experience Platform getting started guide](api-guide.md) for information on required headers, examples, and a list of [API guides](api-guide.md#api-guides) available for each Experience Platform service.

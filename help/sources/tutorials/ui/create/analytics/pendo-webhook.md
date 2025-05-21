@@ -8,7 +8,7 @@ exl-id: defdec30-42af-43c8-b2eb-7ce98f7871e3
 
 >[!NOTE]
 >
->The [!DNL Pendo] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
+>The [!DNL Pendo] source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 This tutorial provides steps for creating a [!DNL Pendo] source connection and dataflow using the Adobe Experience Platform user interface.
 
@@ -45,25 +45,25 @@ Before creating a [!DNL Pendo] source connection, you will require a source sche
 
 For more information, read the [[!DNL Pendo] guide on webhooks](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks).
 
-### Create a Platform schema for [!DNL Pendo] {#create-platform-schema}
+### Create an Experience Platform schema for [!DNL Pendo] {#create-platform-schema}
 
-You must also ensure that you first create a Platform schema to use for your source. See the tutorial on [creating a Platform schema](../../../../../xdm/schema/composition.md) for comprehensive steps on how to create a schema.
+You must also ensure that you first create an Experience Platform schema to use for your source. See the tutorial on [creating an Experience Platform schema](../../../../../xdm/schema/composition.md) for comprehensive steps on how to create a schema.
 
-![Platform UI showing an example schema for Pendo.](../../../../images/tutorials/create/analytics-pendo-webhook/schema.png)
+![Experience Platform UI showing an example schema for Pendo.](../../../../images/tutorials/create/analytics-pendo-webhook/schema.png)
 
 ## Connect your [!DNL Pendo] account {#connect-account}
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace and see a catalog of sources available in Experience Platform.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace and see a catalog of sources available in Experience Platform.
 
 Use the *[!UICONTROL Categories]* menu to filter sources by category. Alternatively, enter a source name in the search bar to find a specific source from the catalog.
 
 Go to the [!UICONTROL Analytics] category to see the [!DNL Pendo] source card. To begin, select **[!UICONTROL Add data]**.
 
-![The Platform UI source catalog with the Pendo card.](../../../../images/tutorials/create/analytics-pendo-webhook/catalog.png)
+![The Experience Platform UI source catalog with the Pendo card.](../../../../images/tutorials/create/analytics-pendo-webhook/catalog.png)
 
 ## Select data {#select-data}
 
-The **[!UICONTROL Select data]** step appears, providing an interface for you to select the data that you want to bring to Platform.
+The **[!UICONTROL Select data]** step appears, providing an interface for you to select the data that you want to bring to Experience Platform.
 
 * The left part of the interface is a browser that allows you to view the available data streams within your account;
 * The right part of the interface lets you preview up to 100 rows of data from a JSON file.
@@ -90,7 +90,7 @@ When finished, select **[!UICONTROL Next]**.
 
 The [!UICONTROL Mapping] step appears, providing you with an interface to map the source fields from your source schema to their appropriate target XDM fields in the target schema.
 
-Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
+Experience Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
 
 The mappings listed below are mandatory and should be setup before proceeding to the [!UICONTROL Review] stage.
 
@@ -138,11 +138,11 @@ Once your webhook is created, navigate to the settings page of your [!DNL Pendo]
 
 >[!TIP]
 >
->You can subscribe to a variety of different events categories to determine the kind of events you want to send from your [!DNL Pendo] instance to Platform. For more information on the different events, please refer to the the [[!DNL Pendo] documentation](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks#create-a-webhook-0-4).
+>You can subscribe to a variety of different events categories to determine the kind of events you want to send from your [!DNL Pendo] instance to Experience Platform. For more information on the different events, please refer to the [[!DNL Pendo] documentation](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks#create-a-webhook-0-4).
 
 ## Next steps {#next-steps}
 
-By following this tutorial you have successfully configured a streaming dataflow to bring your [!DNL Pendo] data to Experience Platform. To monitor the data that is being ingested, refer to the guide on [monitoring streaming dataflows using Platform UI](../../monitor-streaming.md).
+By following this tutorial you have successfully configured a streaming dataflow to bring your [!DNL Pendo] data to Experience Platform. To monitor the data that is being ingested, refer to the guide on [monitoring streaming dataflows using Experience Platform UI](../../monitor-streaming.md).
 
 ## Additional resources {#additional-resources}
 
@@ -156,15 +156,15 @@ To validate that you have correctly set up the source and [!DNL Pendo] messages 
 
 ![Pendo UI screenshot showing chat history](../../../../images/tutorials/create/analytics-pendo-webhook/pendo-events.png)
 
-* In the Platform UI, select **[!UICONTROL View Dataflows]** beside the [!DNL Pendo] card menu on the sources catalog. Next, select **[!UICONTROL Preview dataset]** to verify the data that was ingested for the webhooks that you have configured within [!DNL Pendo].
+* In the Experience Platform UI, select **[!UICONTROL View Dataflows]** beside the [!DNL Pendo] card menu on the sources catalog. Next, select **[!UICONTROL Preview dataset]** to verify the data that was ingested for the webhooks that you have configured within [!DNL Pendo].
 
-![Platform UI screenshot showing ingested events](../../../../images/tutorials/create/analytics-pendo-webhook/platform-dataset.png)
+![Experience Platform UI screenshot showing ingested events](../../../../images/tutorials/create/analytics-pendo-webhook/platform-dataset.png)
 
 ### Errors and troubleshooting {#errors-and-troubleshooting}
 
 When checking a dataflow run, you might encounter the following error message: `The message can't be validated ... uniqueID:expected minLength:1, actual 0].`
 
-![Platform UI screenshot showing error.](../../../../images/tutorials/create/analytics-pendo-webhook/error.png)
+![Experience Platform UI screenshot showing error.](../../../../images/tutorials/create/analytics-pendo-webhook/error.png)
 
 To fix this error, you must verify that the *uniqueID* mapping has been set up. For additional guidance, refer to the [Mmpping](#mapping) section.
 

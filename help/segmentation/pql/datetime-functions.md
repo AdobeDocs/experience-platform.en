@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;date and time functions;datetime functions;datetime;date;time;
 solution: Experience Platform
 title: PQL Date and Time Functions
 description: Date and time functions are used to perform date and time operations on values within Profile Query Language (PQL).
@@ -119,7 +118,7 @@ product.sale.getDayOfMonth() <= 15
 
 ## Occurs
 
-The `occurs` function compares the given timestamp function with a fixed period of time.
+The `occurs` function compares the given timestamp function with a fixed period of time as a boolean.
 
 **Format**
 

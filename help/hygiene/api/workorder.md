@@ -1,18 +1,18 @@
 ---
-title: Work order API Endpoint
-description: The /workorder endpoint in the Data Hygiene API allows you to programmatically manage deletion tasks for  identities.
+title: Work Order API Endpoint
+description: The /workorder endpoint in the Data Hygiene API allows you to programmatically manage deletion tasks for identities.
+badgeBeta: label="Beta" type="Informative"
+role: Developer
+badge: Beta
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-hide: true
-hidefromtoc: true
 ---
-# Work order endpoint
+# Work order endpoint {#work-order-endpoint}
 
 The `/workorder` endpoint in the Data Hygiene API allows you to programmatically manage record delete requests in Adobe Experience Platform.
 
->[!IMPORTANT]
->
->Record delete requests are only available for organizations that have purchased **Adobe Healthcare Shield**.
->
+>[!IMPORTANT] 
+> 
+>The Record Delete feature is currently in Beta and available only in a **limited release**. It is not available to all customers. Record delete requests are only available for organizations in the limited release.
 >
 >Record deletes are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) instead.
 
@@ -24,11 +24,19 @@ The endpoint used in this guide is part of the Data Hygiene API. Before continui
 
 You can delete one or more identities from a single dataset or all datasets by making a POST request to the `/workorder` endpoint.
 
+>[!IMPORTANT] 
+> 
+>There are different limits for the total number of unique identity record deletes that can be submitted each month. These limits are based on your license agreement. Organizations who have purchased all editions of Adobe Real-Time Customer Data Platform and Adobe Journey Optimizer can submit up to 100,000 identity record deletes each month. Organizations who have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield** can submit up to 600,000 identity record deletes each month.<br>A single [record delete request through the UI](../ui/record-delete.md) allows you to submit 10,000 IDs at one time. The API method to delete records allows for the submission of 100,000 IDs at one time.<br>It is best practice to submit as many IDs per request as possible, up to your ID limit. When you intend to delete a high volume of IDs, submitting a low volume, or a single ID per record delete request should be avoided.
+
 **API format**
 
 ```http
 POST /workorder
 ```
+
+>[!NOTE]
+>
+>Data Lifecycle requests can only modify datasets based on primary identities or an identity map. A request must either specify the primary identity, or provide an identity map.
 
 **Request**
 
@@ -73,10 +81,10 @@ curl -X POST \
 | Property | Description |
 | --- | --- |
 | `action` | The action to be performed. The value must be set to `delete_identity` for record deletes. |
-| `datasetId` | If you are deleting from a single dataset, this value must be the ID of the dataset in question. If you are deleting from all datasets, set the value to `ALL`.<br><br>If you are specifying a single dataset, the dataset's associated Experience Data Model (XDM) schema must have a primary identity defined. |
+| `datasetId` | If you are deleting from a single dataset, this value must be the ID of the dataset in question. If you are deleting from all datasets, set the value to `ALL`.<br><br>If you are specifying a single dataset, the dataset's associated Experience Data Model (XDM) schema must have a primary identity defined. If the dataset does not have a primary identity, then it must have an identity map in order to be modified by a Data Lifecycle request.<br>If an identity map exists, it will be present as a top-level field named `identityMap`.<br>Note that a dataset row may have many identities in its identity map, but only one can be marked as primary. `"primary": true` must be included to force the `id` to match a primary identity. |
 | `displayName` | The display name for the record delete request. |
 | `description` | A description for the record delete request. |
-| `identities` | An array containing the identities of at least one user whose information you would like to delete. Each identity is comprised of an [identity namespace](../../identity-service/namespaces.md) and a value:<ul><li>`namespace`: Contains a single string property, `code`, which represents the identity namespace. </li><li>`id`: The identity value.</ul>If `datasetId` specifies a single dataset, each entity under `identities` must use the same identity namespace as the schema's primary identity.<br><br>If `datasetId` is set to `ALL`, the `identities` array is not constrained to any single namespace since each dataset might be different. However, your requests are still constrained the namespaces available to your organization, as reported by [Identity Service](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
+| `identities` | An array containing the identities of at least one user whose information you would like to delete. Each identity is comprised of an [identity namespace](../../identity-service/features/namespaces.md) and a value:<ul><li>`namespace`: Contains a single string property, `code`, which represents the identity namespace. </li><li>`id`: The identity value.</ul>If `datasetId` specifies a single dataset, each entity under `identities` must use the same identity namespace as the schema's primary identity.<br><br>If `datasetId` is set to `ALL`, the `identities` array is not constrained to any single namespace since each dataset might be different. However, your requests are still constrained the namespaces available to your organization, as reported by [Identity Service](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
 {style="table-layout:auto"}
 
@@ -114,9 +122,9 @@ A successful response returns the details of the record delete.
 
 {style="table-layout:auto"}
 
-## Retrieve the status of a record delete (#lookup)
+## Retrieve the status of a record delete {#lookup}
 
-After [creating a record delete request](#create), you can check on its status using a GET request.
+After you [create a record delete request](#create), you can check on its status using a GET request.
 
 **API format**
 
@@ -210,7 +218,7 @@ PUT /workorder{WORK_ORDER_ID}
 **Request**
 
 ```shell
-curl -X GET \
+curl -X PUT \
   https://platform.adobe.io/data/core/hygiene/workorder/BN-35c1676c-3b4f-4195-8d6c-7cf5aa21efdd \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -235,34 +243,41 @@ A successful response returns the details of the record delete.
 
 ```json
 {
-  "workorderId": "a15345b8-a2d6-4d6f-b33c-5b593e86439a",
-  "orgId": "{ORG_ID}",
-  "bundleId": "BN-35c1676c-3b4f-4195-8d6c-7cf5aa21efdd",
-  "action": "identity-delete",
-  "createdAt": "2022-07-21T18:05:28.316029Z",
-  "updatedAt": "2022-07-21T17:59:43.217801Z",
-  "status": "received",
-  "createdBy": "{USER_ID}",
-  "datasetId": "c48b51623ec641a2949d339bad69cb15",
-  "displayName" : "Update - displayName",
-  "description" : "Update - description",
-  "productStatusDetails": [
-    {
-        "productName": "Data Management",
-        "productStatus": "success",
-        "createdAt": "2022-08-08T16:51:31.535872Z"
-    },
-    {
-        "productName": "Identity Service",
-        "productStatus": "success",
-        "createdAt": "2022-08-08T16:43:46.331150Z"
-    },
-    {
-        "productName": "Profile Service",
-        "productStatus": "waiting",
-        "createdAt": "2022-08-08T16:37:13.443481Z"
-    }
-  ]
+    "workorderId": "DI-61828416-963a-463f-91c1-dbc4d0ddbd43",
+    "orgId": "{ORG_ID}",
+    "bundleId": "BN-aacacc09-d10c-48c5-a64c-2ced96a78fca",
+    "action": "identity-delete",
+    "createdAt": "2024-06-12T20:02:49.398448Z",
+    "updatedAt": "2024-06-13T21:35:01.944749Z",
+    "operationCount": 1,
+    "status": "ingested",
+    "createdBy": "{USER_ID}",
+    "datasetId": "666950e6b7e2022c9e7d7a33",
+    "datasetName": "Acme_Dataset_E2E_Identity_Map_Schema_5_1718178022379",
+    "displayName": "Updated Display Name",
+    "description": "Updated Description",
+    "productStatusDetails": [
+        {
+            "productName": "Data Management",
+            "productStatus": "waiting",
+            "createdAt": "2024-06-12T20:11:18.447747Z"
+        },
+        {
+            "productName": "Identity Service",
+            "productStatus": "success",
+            "createdAt": "2024-06-12T20:36:09.020832Z"
+        },
+        {
+            "productName": "Profile Service",
+            "productStatus": "waiting",
+            "createdAt": "2024-06-12T20:11:18.447747Z"
+        },
+        {
+            "productName": "Journey Orchestrator",
+            "productStatus": "success",
+            "createdAt": "2024-06-12T20:12:19.843199Z"
+        }
+    ]
 }
 ```
 
