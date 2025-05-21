@@ -141,6 +141,18 @@ When editing a non-expiring credential, a modal appears. You can provide the fol
 
 Once you have provided all the required details, select **[!UICONTROL Update account]** to complete the update to your credentials.
 
+### Migrate credentials to OAuth {#migrate-credentials}
+
+If you are using non-expiring JWT credentials, you must migrate each one to OAuth Server-to-Server before June 30, 2025 to avoid service disruption.
+
+>[!IMPORTANT]
+>
+>JWT credentials will stop working after June 30, 2025. You must manually complete this migration to maintain authorization.
+
+To learn how to identify affected credentials and complete the migration, see the [migrate from JWT to OAuth Server-to-Server credentials guide](./migrate-jwt-to-oauth.md).
+
+For common questions, refer to the [migration FAQ](./migrate-jwt-to-oauth.md#faq).
+
 ## Use credentials to connect to external clients {#use-credential-to-connect}
 
 You can use either the expiring or non-expiring credentials to connect with external clients, such as Aqua Data Studio, Looker, or Power BI. The method of input for these credentials will vary depending on the external client. Refer to the external client's documentation for specific instructions on the use of these credentials.

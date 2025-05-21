@@ -1,6 +1,6 @@
 ---
 title: Examples of Graph Configurations
-description: Learn about common graph scenarios that you might encounter when working with identity graph linking rules and identity data.
+description: Learn about common graph scenarios that you might encounter when working with Identity Graph Linking Rules and identity data.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
 ---
 # Examples of graph configurations {#examples-of-graph-configurations}
@@ -9,14 +9,6 @@ exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
 >id="platform_identities_algorithmconfiguration"
 >title="Algorithm Configuration"
 >abstract="Configure unique namespace and namespace priority tailored to your ingested identities."
-
->[!AVAILABILITY]
->
->Identity Graph Linking Rules is currently in Limited Availability, and can be accessed by all customers in development sandboxes.
->
->* **Activation requirements**: The feature will remain inactive until you configure and save your [!DNL Identity Settings]. Without this configuration, the system will continue to operate normally, with no changes in behavior.
->* **Important notes**: During this Limited Availability phase, Edge segmentation may produce unexpected segment membership results. However, streaming and batch segmentation will function as expected.
->* **Next steps**: For information on how to enable this feature in production sandboxes, please contact your Adobe account team.
 
 >[!NOTE]
 >
@@ -765,7 +757,7 @@ CRMID: Tom, ECID: 111
 For more information on [!DNL Identity Graph Linking Rules], read the following documentation:
 
 * [[!DNL Identity Graph Linking Rules] overview](./overview.md)
-* [Identity optimization algorithm](./identity-optimization-algorithm.md)
+* [Identity Optimization Algorithm](./identity-optimization-algorithm.md)
 * [Implementation guide](./implementation-guide.md)
 * [Troubleshooting and FAQ](./troubleshooting.md)
 * [Namespace priority](./namespace-priority.md)
