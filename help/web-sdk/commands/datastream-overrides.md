@@ -11,11 +11,11 @@ This object is useful when you have different websites or subdomains for differe
 
 >[!IMPORTANT]
 >
->For detailed, end-to-end configuration instructions for datastream overrides, see the [datastream configuration overrides](../../datastreams/overrides.md#configure-overrides) documentation.
+>For detailed, end-to-end configuration instructions for datastream overrides, see the [datastream configuration overrides](/help/datastreams/overrides.md#configure-overrides) documentation.
 
 Datastream configuration override is a two-step process:
 
-1. First, you must define your datastream configuration override in the [datastream configuration page](../../datastreams/configure.md), within the Datastreams UI. See the [datastream configuration overrides](../../datastreams/overrides.md#configure-overrides) documentation for instructions on how to configure overrides.
+1. First, you must define your datastream configuration override in the [datastream configuration page](/help/datastreams/configure.md), within the Datastreams UI. See the [datastream configuration overrides](/help/datastreams/overrides.md#configure-overrides) documentation for instructions on how to configure overrides.
 2. After you have configured the datastream override in the UI, you must send the overrides to the Edge Network in one of the following ways:
     * Through the Web SDK [tag extension](#tag-extension).
     * Through the [`sendEvent`](../commands/sendevent/overview.md) or [`configure`](../commands/configure/overview.md) Web SDK commands.
@@ -25,11 +25,11 @@ If you set overrides both in the Web SDK configuration and in a specific command
 
 >[!NOTE]
 >
->If you want a configuration override to *disable* an Experience Cloud service, you must make sure that the service is first *enabled* in the datastream configuration. See the documentation on how to [configure datastreams](../../datastreams/configure.md#add-services) for details on how to add services to a datastream.
+>If you want a configuration override to *disable* an Experience Cloud service, you must make sure that the service is first *enabled* in the datastream configuration. See the documentation on how to [configure datastreams](/help/datastreams/configure.md#add-services) for details on how to add services to a datastream.
 
 ## Send datastream overrides to the Edge Network through the Web SDK tag extension {#tag-extension}
 
-See the documentation on [configuring datastream overrides](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#datastrea-overrides) from the Web SDK tag extension for detailed configuration instructions.
+See the documentation on [configuring datastream overrides](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#datastrea-overrides) from the Web SDK tag extension for detailed configuration instructions.
 
 If you want to configure datastream overrides from the Web SDK tag extension, set each desired field under **[!UICONTROL Datastream configuration overrides]** when [configuring the tag extension](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
@@ -56,7 +56,7 @@ Separate fields are provided for [!UICONTROL Development], [!UICONTROL Staging],
 
 ## Send the overrides to the Edge Network via the Web SDK JavaScript library {#library}
 
-After [configuring the datastream overrides](../../datastreams/overrides.md) in the Data Collection UI, you can now send the overrides to the Edge Network, via the Web SDK JavaScript library.
+After [configuring the datastream overrides](/help/datastreams/overrides.md) in the Data Collection UI, you can now send the overrides to the Edge Network, via the Web SDK JavaScript library.
 
 If you are using Web SDK, sending the overrides to the Edge Network via the `edgeConfigOverrides` command is the second and final step of activating datastream configuration overrides.
 
@@ -215,4 +215,3 @@ alloy("configure", {
 | `com_adobe_target.propertyToken`| The token for the Adobe Target destination property.|
 | `com_adobe_audience_manager.enabled`| Defines whether the event data is sent to the Audience Manager service. |
 | `com_adobe_launch_ssf`| Defines whether the event data is sent to server-side forwarding. |
-
