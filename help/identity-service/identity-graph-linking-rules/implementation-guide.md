@@ -1,17 +1,9 @@
 ---
-title: Implementation guide for identity graph linking rules
-description: Learn the recommended steps to follow when implementing your data with identity graph linking rules configurations.
+title: Implementation Guide For Identity Graph Linking Rules
+description: Learn the recommended steps to follow when implementing your data with Identity Graph Linking Rules configurations.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
 ---
-# Implementation guide for identity graph linking rules
-
->[!AVAILABILITY]
->
->Identity Graph Linking Rules is currently in Limited Availability, and can be accessed by all customers in development sandboxes.
->
->* **Activation requirements**: The feature will remain inactive until you configure and save your [!DNL Identity Settings]. Without this configuration, the system will continue to operate normally, with no changes in behavior.
->* **Important notes**: During this Limited Availability phase, Edge segmentation may produce unexpected segment membership results. However, streaming and batch segmentation will function as expected.
->* **Next steps**: For information on how to enable this feature in production sandboxes, please contact your Adobe account team.
+# Implementation guide for [!DNL Identity Graph Linking Rules]
 
 >[!IMPORTANT]
 >
@@ -23,7 +15,7 @@ Step-by-step outline:
 
 1. [Complete prerequisites for implementation](#prerequisites-for-implementation)
 2. [Create the necessary identity namespaces](#namespace)
-3. [Use the graph simulation tool to familiarize yourself with the identity optimization algorithm](#graph-simulation)
+3. [Use the graph simulation tool to familiarize yourself with the Identity Optimization Algorithm](#graph-simulation)
 4. [Use the identity settings UI to designate your unique namespaces and configure priority rankings for your namespaces](#identity-settings)
 5. [Create an Experience Data Model (XDM) schema](#schema)
 6. [Create a dataset](#dataset)
@@ -107,7 +99,7 @@ During your pre-implementation process, you must ensure that the authenticated e
 
 If your system sends two person identifiers, the implementation may fail the single-person namespace requirement. For example, if the identityMap in your webSDK implementation contains a CRMID, a customerID, and an ECID namespace, then there is no guarantee that every single event will contain both CRMID and customerID.
 
-Ideally, you should send a payload similar to the following:
+You should **not** send a payload like below:
 
 ```json
 {
@@ -155,6 +147,8 @@ In graph simulation, this ingestion may look like:
 
 >[!TAB Authenticated events without any person identifiers]
 
+In this example, you can assume that the following event was sent to Experience Platform while John (the end-user) was browsing your website while authenticated. However, despite being authenticated, Experience Platform is unable to identify John due to the lack of person identifiers in the event. Therefore, this event gets interpreted as an anonymous user browsing the Adobe Business website, instead of recognizing it as an online activity associated specifically to John.
+
 ```json
 {
     "_id": "test_id",
@@ -195,7 +189,7 @@ If your data requires it, you must first create the appropriate namespaces for y
 
 Next, navigate to the [graph simulation tool](./graph-simulation.md) in the Identity Service UI workspace. You can use the graph simulation tool to simulate identity graphs, built with a variety of different unique namespace and namespace priority configurations. 
 
-By creating different configurations, you can use the graph simulation tool to learn and better understand how the identity optimization algorithm and certain configurations can affect how your graph behaves.
+By creating different configurations, you can use the graph simulation tool to learn and better understand how the Identity Optimization Algorithm and certain configurations can affect how your graph behaves.
 
 ## Configure identity settings {#identity-settings}
 
@@ -292,7 +286,7 @@ This example also shows that Tom and Summer are to disparate person entities tha
 For more information on [!DNL Identity Graph Linking Rules], read the following documentation:
 
 * [[!DNL Identity Graph Linking Rules] overview](./overview.md)
-* [Identity optimization algorithm](./identity-optimization-algorithm.md)
+* [Identity Optimization Algorithm](./identity-optimization-algorithm.md)
 * [Examples of graph configurations](./example-configurations.md)
 * [Troubleshooting and FAQ](./troubleshooting.md)
 * [Namespace priority](./namespace-priority.md)

@@ -65,13 +65,11 @@ You can use [!DNL Mutual Transport Layer Security] ([!DNL mTLS]) to ensure enhan
 
 If you want to use [!DNL mTLS] with [!DNL HTTP API] destinations, the server address you put in the [destination details](#destination-details) page must have [!DNL TLS] protocols disabled and only [!DNL mTLS] enabled. If the [!DNL TLS] 1.2 protocol is still enabled on the endpoint, no certificate is sent for the client authentication. This means that to use [!DNL mTLS] with your [!DNL HTTP API] destination, your "receiving" server endpoint must be an [!DNL mTLS]-only enabled connection endpoint.
 
-### Download certificate {#certificate}
+### Retrieve and inspect certificate details {#certificate}
 
-If you want to check the [!DNL Common Name] (CN) and [!DNL Subject Alternative Names] (SAN) to do additional third-party validation, you can download the certificate below:
+If you want to inspect certificate details such as the [!DNL Common Name] (CN) and [!DNL Subject Alternative Names] (SAN) for additional third-party validation, use the API to retrieve the certificate and extract those fields from the response.
 
-* [HTTP API mTLS public certificate](../../../landing/images/governance-privacy-security/encryption/destinations-public-certificate.zip)
-
-You can also securely retrieve public certificates by making a GET request to the MTLS endpoint. See the [public certificate endpoint documentation](../../../data-governance/mtls-api/public-certificate-endpoint.md) for more information. 
+See the [public certificate endpoint documentation](../../../data-governance/mtls-api/public-certificate-endpoint.md) for more information. 
 
 ## IP address allowlist {#ip-address-allowlist}
 
