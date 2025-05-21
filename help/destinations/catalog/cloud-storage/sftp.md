@@ -72,7 +72,7 @@ To ensure successful data exports, you must configure your target SFTP server to
 
 For optimal performance, your SFTP server should allow at least one concurrent connection for each audience or dataset being exported. At a minimum, the server should support at least 30% of the total number of audiences or datasets scheduled for export at the same time.
 
-**Example:**  
+**Example**  
 If you schedule exports for 100 audiences or datasets simultaneously, your SFTP server should allow at least 30 concurrent connections.
 
 Properly configuring your SFTP server's connection limits helps prevent failed exports and ensures reliable data delivery from Adobe Experience Platform.
