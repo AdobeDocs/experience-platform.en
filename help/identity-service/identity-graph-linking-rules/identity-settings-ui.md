@@ -11,6 +11,10 @@ exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
 
 Identity settings is a feature in the Adobe Experience Platform Identity Service UI that you can use to designate unique namespaces and configure namespace priority.
 
+Watch the following video for additional information on using the [!DNL Graph Simulation] interface in the Identity Service UI workspace:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops)
+
 Read this guide to learn how to configure your identity settings in the UI.
 
 ## Prerequisites 
