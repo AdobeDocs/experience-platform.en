@@ -48,7 +48,13 @@ Seamlessly track the status of support issues.
   * "What is the latest on my case E-12345?"
   * "What's the update on ticket E-67890?"
 
-To gain access to Product Support Agent, contact your Adobe Account Team.
+## Access Product Support Agent
+
+Follow the steps below to activate Product Support Agent.
+* Complete [AI Assistant readiness](https://fieldreadiness-adobe.highspot.com/items/665f831c9f831b011aeda057#1) for legal readiness.
+* [Enable UI permissions](../access.md) for AI Assistant and Support Administration.
+
+Once you complete these steps, any support admins in your onboarded organization will be able to create tickets using AI Assistant.
 
 For more information, watch the following video to learn how you can use Product Support Agent to seamlessly troubleshoot without leaving your workflows.
 
