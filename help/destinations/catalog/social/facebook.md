@@ -10,10 +10,8 @@ exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 
 >[!IMPORTANT]
 >
->* Starting May 20th, 2025, you will see two **[!DNL Facebook Custom Audience]** cards side-by-side in the destinations catalog, for a short period of time. This is due to an internal upgrade to the destinations service and to support new fields for improved targeting and matching with profiles on Facebook properties. Read more about the new address-related fields in the [supported identities](#supported-identities) section.
->* A new card with the name **[!UICONTROL (New) Facebook Custom Audience]** is now available to you. Use this card for new activation data flows.
->* If you have any active dataflows to the existing **[!UICONTROL Facebook Custom Audience]** destination, they will be updated automatically, so no action is required from you.
->* During the upgrade, any update that you make to existing dataflows will be applied to the new destination card as well.
+>* Starting May 22nd, 2025, you might see two **[!DNL Facebook Custom Audience]** destination cards side-by-side in the destinations catalog, for a short period of time. This is due to an internal upgrade to the destinations service and to support new fields for improved targeting and matching with profiles on Facebook properties. Read more about the new address-related fields in the [supported identities](#supported-identities) section.
+>* If you see a new card with the name **[!UICONTROL (New) Facebook Custom Audience]**, use this card for new activation data flows. Your existing dataflows will be updated automatically, so no action is required from you. Any update that you make to existing dataflows will be kept after the upgrade is complete.
 >* If you are creating dataflows through the [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/), you must update your [!DNL flow spec ID] and [!DNL connection spec ID] to the following values:
 >   * Flow spec ID: `bb181d00-58d7-41ba-9c15-9689fdc831d3`
 >   * Connection spec ID: `c8b97383-2d65-4b7a-9913-db0fbfc71727`
