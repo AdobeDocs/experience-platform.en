@@ -43,7 +43,7 @@ Namespaces in Identity Service have an implicit relative order of importance. Co
 
 For an in-depth look at namespace priority and its complete functionalities and uses, read the [namespace priority guide](./namespace-priority.md).
 
-![graph layers and namespace priority](../images/namespace-priority/graph-layers.png)
+![The graph layers and namespace priority.](../images/namespace-priority/graph-layers.png "The graph layers and namespace priority."){zoomable="yes"}
 
 ## Process {#process}
 
@@ -62,7 +62,7 @@ When the unique namespace constraint is violated, the Identity Optimization Algo
 * The graph would re-establish based on the above order. If adding the link violates the limit constraint (e.g. the graph contains two or more identities with a unique namespace), then the links is removed.
 * The resulting graph will then be compliant with the unique namespace constraint that you configured.
 
-![A diagram that visualizes Identity Optimization Algorithm.](../images/ido_algorithm.png)
+![A diagram that visualizes Identity Optimization Algorithm.](../images/ido_algorithm.png "A diagram that visualizes Identity Optimization Algorithm."){zoomable="yes"}
 
 ## Example scenarios for Identity Optimization Algorithm
 
@@ -89,7 +89,7 @@ In this example, both CRMID and Email are designated as unique namespaces. At `t
 * However, due to the unique namespace configuration that sets a maximum of one CRMID namespace and one Email namespace per graph, Identity Optimization Algorithm then splits the graph into two.
   * Finally, because John is the last authenticated user, the ECID that represents the laptop, remains linked to his graph instead of Jane's.
 
-![shared device case one](../images/identity-settings/shared-device-case-one.png)
+![Case one of shared device.](../images/identity-settings/shared-device-case-one.png "Case one of shared device."){zoomable="yes"}
 
 >[!TAB Example two]
 
@@ -106,7 +106,7 @@ In this example, the CRMID namespace is designated as a unique namespace.
   * As a result, Identity Optimization Algorithm removes the older link, which in this case is Jane's CRMID that was linked at `timestamp=1`.
   * However, while Jane's CRMID will no longer exist as a graph on Identity Service, it will still persist as a profile on Real-Time Customer Profile. This is because an identity graph must contain at least two linked identities, and as a result of removing the links, Jane's CRMID no longer has another identity to link to.
 
-![shared-device-case-two](../images/identity-settings/shared-device-case-two.png)
+![Case two of shared device.](../images/identity-settings/shared-device-case-two.png "Case two of shared device."){zoomable="yes"}
 
 >[!ENDTABS]
 
@@ -131,7 +131,7 @@ In this example, the CRMID and Email namespaces are designated as unique. Consid
 
 With Identity Optimization Algorithm, bad identity values such as bogus emails or phone numbers do not get propagated across several different identity graphs.
 
-![bad-email](../images/identity-settings/bad-email.png)
+![A diagram of a bad email ingestion.](../images/identity-settings/bad-email.png "A diagram of a bad email ingestion."){zoomable="yes"}
 
 ## Anonymous event association
 
@@ -148,7 +148,7 @@ View the diagram below to better understand how anonymous event association work
     * Before his initial login prior to `timestamp=1`; and
     * Any activities he or Nora did while browsing anonymously in-between Kevin's first and second logins.
 
-![anon-event-association](../images/identity-settings/anon-event-association.png)
+![A diagram of anonymous event association.](../images/identity-settings/anon-event-association.png "A diagram of anonymous event association."){zoomable="yes"}
 
 
 ## Next steps
