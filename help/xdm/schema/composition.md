@@ -49,7 +49,7 @@ Both record and time series schemas contain a map of identities (`xdm:identityMa
 >title="Identities in schemas"
 >abstract="Identities are key fields within a schema that can be used to identify a subject, such as an email address or a marketing ID. These fields are used to construct the identity graph for each individual and build customer profiles. See the documentation for more information on identities in schemas."
 
-Schemas are used for ingesting data into Experience Platform. This data can be used across multiple services to create a single, unified view of an individual entity. Therefore, when designing schemas, carefully consider which fields should be used as identities—these determine how individual profiles are stitched together across datasets.
+Schemas define the structure of data ingested into Experience Platform. That data powers multiple services within the Platform, and help to create a single, unified view of each individual. So when designing schemas, think carefully about which fields to mark as identities—these control how profiles are stitched across datasets.
 
 To help with this process, key fields within your schemas can be marked as identities. Upon data ingestion, the data in those fields is inserted into the "[!UICONTROL Identity Graph]" for that individual. The graph data can then be accessed by [[!DNL Real-Time Customer Profile]](../../profile/home.md) and other Experience Platform services to provide a stitched-together view of each individual customer.
 
