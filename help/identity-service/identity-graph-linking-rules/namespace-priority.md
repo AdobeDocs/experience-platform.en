@@ -31,7 +31,7 @@ If your organization's graph structure is layered, then namespace priority shoul
 >
 >* A layered graph refers to identity graphs that have multiple levels of links. View the image below for an example of a graph with three layers.
 
-![A diagram of graph layers](../images/namespace-priority/graph-layers.png)
+![A diagram of graph layers](../images/namespace-priority/graph-layers.png "A diagram of graph layers"){zoomable="yes"}
 
 ### Semantic meaning of the namespace
 
@@ -61,7 +61,7 @@ Namespace priority can be configured using the [identity settings UI](./identity
 
 Currently, namespace priority influences system behavior of Real-Time Customer Profile. The diagram below illustrates this concept. For more information, read the guide on [Adobe Experience Platform and applications architecture diagrams](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
 
-![A diagram of namespace priority application scope](../images/namespace-priority/application-scope.png)
+![A diagram of namespace priority application scope.](../images/namespace-priority/application-scope.png "A diagram of namespace priority application scope."){zoomable="yes"}
 
 ## Identity Service: Identity Optimization Algorithm
 
@@ -114,7 +114,7 @@ Given the configurations outlined above, user actions and determination of prima
 
 ## Segmentation Service: segment membership metadata storage
 
-![A diagram of segment membership storage](../images/namespace-priority/segment-membership-storage.png)
+![A diagram of segment membership storage.](../images/namespace-priority/segment-membership-storage.png "A diagram of segment membership storage."){zoomable="yes"}
 
 For a given merged profile, segment memberships will be stored against the identity with the highest namespace priority.
 
