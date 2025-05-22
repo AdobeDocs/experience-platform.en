@@ -12,7 +12,7 @@ exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
 
 >[!IMPORTANT]
 >
->Contact your Adobe Account Team if you have an existing sandbox that requires collapsed graphs to be un-collapsed ("fixed") after you enable identity settings.
+>[!DNL Identity Graph Linking Rules] is now generally available. Contact Adobe Support if you have an existing sandbox that requires collapsed graphs to be un-collapsed ("fixed") after you enable identity settings.
 
 With Adobe Experience Platform Identity Service and Real-Time Customer Profile, it is easy to assume that your data is ingested perfectly and that all merged profiles represent a single individual person through a person identifier, such as a CRMID. However, there are possible scenarios where certain data could try to merge multiple disparate profiles into a single profile ("graph collapse"). To prevent these unwanted merges, you can use configurations provided through [!DNL Identity Graph Linking Rules] and allow for accurate personalization for your users.
 
@@ -136,7 +136,7 @@ There are instances where multiple logins can occur on a single device:
 | Public kiosk | Travelers at an airport logging on using their loyalty ID to check in bags and print boarding passes. |
 | Call center | Call center personnel log in on a single device on behalf of customers calling customer support to resolve issues. |
 
-![A diagram of some common shared devices.](../images/identity-settings/shared-devices.png)
+![A diagram of some common shared devices.](../images/identity-settings/shared-devices.png "A diagram of some common shared devices."){zoomable="yes"}
 
 In these cases, from a graph standpoint, with no limits enabled, a single ECID will be linked to multiple CRMIDs. 
 
@@ -149,7 +149,7 @@ With [!DNL Identity Graph Linking Rules], you can:
 
 There are also instances of users who provide fake values as phone numbers and/or email addresses when registering. In these cases, if limits are not enabled, then phone/email related identities will end up being linked to multiple different CRMIDs.
 
-![A diagram that represents invalid email or phone scenarios.](../images/identity-settings/invalid-email-phone.png)
+![A diagram that represents invalid email or phone scenarios.](../images/identity-settings/invalid-email-phone.png "A diagram that represents invalid email or phone scenarios."){zoomable="yes"}
 
 With [!DNL Identity Graph Linking Rules], you can:
 
@@ -166,7 +166,7 @@ There are cases where non-unique, erroneous identity values are ingested in the 
 
 These identities could result in the following graphs, where multiple CRMIDs are merged together with the 'bad' identity:
 
-![A graph example of identity data with erroneous or bad identity values.](../images/identity-settings/bad-data.png)
+![A graph example of identity data with erroneous or bad identity values.](../images/identity-settings/bad-data.png "A graph example of identity data with erroneous or bad identity values."){zoomable="yes"}
 
 With [!DNL Identity Graph Linking Rules] you can configure the CRMID as the unique identifier to prevent unwanted profile collapsing due to this type of data.
 
