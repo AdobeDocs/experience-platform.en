@@ -35,7 +35,7 @@ You must ensure that the unique namespace with the highest priority is always pr
 
 Without a unique namespace to represent your person identifiers, you may end up with a graph that links to disparate person identifiers to the same ECID. In this example, both B2BCRM and B2CCRM are linked to the same ECID at the same time. This graph suggests that Tom, using his B2C login account, shared a device with Summer, using her B2B login account. However, the system will recognize that this is one profile (graph collapse).
 
-![A graph scenario where two person identifiers are linked to the same ECID.](../images/graph-examples/multi_namespaces.png)
+![A graph scenario where two person identifiers are linked to the same ECID.](../images/graph-examples/multi_namespaces.png "A graph scenario where two person identifiers are linked to the same ECID."){zoomable="yes"}
 
 +++
 
@@ -43,7 +43,7 @@ Without a unique namespace to represent your person identifiers, you may end up 
 
 Given a unique namespace, (in this case, a CRMID instead of two disparate namespaces), Identity Service is able to discern the person identifier that was last associated with the ECID. In this example, because a unique CRMID exists, Identity Service is able to recognize a "shared device" scenario, where two entities are sharing the same device.
 
-![A shared device graph scenario, where two person identifiers are linked to the same ECID, but the older link is removed.](../images/graph-examples/crmid_only_multi.png)
+![A shared device graph scenario, where two person identifiers are linked to the same ECID, but the older link is removed.](../images/graph-examples/crmid_only_multi.png "A shared device graph scenario, where two person identifiers are linked to the same ECID, but the older link is removed."){zoomable="yes"}
 
 +++
 
@@ -143,7 +143,7 @@ Therefore, it is best practice to only send just one person identifier with your
 
 In graph simulation, this ingestion may look like:
 
-![The graph simulation UI with an example graph rendered.](../images/implementation/example-graph.png)
+![The graph simulation UI with an example graph rendered.](../images/implementation/example-graph.png "The graph simulation UI with an example graph rendered."){zoomable="yes"}
 
 >[!TAB Authenticated events without any person identifiers]
 
@@ -195,7 +195,7 @@ By creating different configurations, you can use the graph simulation tool to l
 
 Once you have a better idea of how you want your graph to behave, navigate to the [identity settings UI](./identity-settings-ui.md) in the Identity Service UI workspace. To access the identity settings UI, select **[!UICONTROL Identities]** from the left navigation and then select **[!UICONTROL Settings]**.
 
-![The identities browse page with the settings button highlighted.](../images/implementation/settings.png)
+![The identities browse page with the settings button highlighted.](../images/implementation/settings.png "The identities browse page with the settings button highlighted."){zoomable="yes"}
 
 Use the identity settings UI to designate your unique namespaces and configure your namespaces by order of priority. Once you are finished with applying your settings, you must wait at least six hours before you can proceed to ingest data, as it takes at least six hours for new settings to be reflected in Identity Service.
 
@@ -243,11 +243,11 @@ Use the identity dashboard for insights on the state of your identity graphs, su
 
 Select the ellipses (`...`) and then select **[!UICONTROL View more]** for further information and to validate that there are no collapsed graphs.
 
-![The identity dashboard in the Identity Service UI workspace.](../images/implementation/identity_dashboard.png)
+![The identity dashboard in the Identity Service UI workspace.](../images/implementation/identity_dashboard.png "The identity dashboard in the Identity Service UI workspace."){zoomable="yes"}
 
 Use the window that appears to view information on your collapsed graphs. In this example, both email and phone are marked as unique namespace, so therefore, there are no collapsed graphs in your sandbox.
 
-![The pop-up window for graphs with multiple identities.](../images/implementation/graphs.png)
+![The pop-up window for graphs with multiple identities.](../images/implementation/graphs.png "The pop-up window for graphs with multiple identities."){zoomable="yes"}
 
 ## Appendix {#appendix}
 
@@ -263,13 +263,13 @@ The following graph simulates a "dangling" loginID scenario. In this example, tw
 
 In this example, `{loginID: ID_C}` is left dangling and unlinked to a CRMID. Thus, the person entity that this loginID should be associated with is left ambiguous.
 
-![An example of a graph with a "dangling" loginID scenario.](../images/graph-examples/dangling_example.png)
+![An example of a graph with a "dangling" loginID scenario.](../images/graph-examples/dangling_example.png "An example of a graph with a dangling loginID scenario."){zoomable="yes"}
 
 >[!TAB loginID is linked to a CRMID]
 
 In this example, `{loginID: ID_C}` is linked to `{CRMID: Tom}`. Therfore, the system is able to discern that this loginID is associated with Tom.
 
-![LoginID is linked to a CRMID.](../images/graph-examples/id_c_tom.png)
+![LoginID is linked to a CRMID.](../images/graph-examples/id_c_tom.png "LoginID is linked to a CRMID."){zoomable="yes"}
 
 >[!TAB loginID is linked to another CRMID]
 
@@ -277,7 +277,7 @@ In this example, `{loginID: ID_C}` is linked to `{CRMID: Summer}`. Therefore, th
 
 This example also shows that Tom and Summer are to disparate person entities that are sharing a device, which is represented by `{ECID: 111}`.
 
-![LoginID is linked to another CRMID.](../images/graph-examples/id_c_summer.png)
+![LoginID is linked to another CRMID.](../images/graph-examples/id_c_summer.png "LoginID is linked to another CRMID."){zoomable="yes"}
 
 >[!ENDTABS]
 

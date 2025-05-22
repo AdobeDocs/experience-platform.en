@@ -11,7 +11,7 @@ As you test and validate [!DNL Identity Graph Linking Rules], you may run into s
 
 The following diagram is a simplified representation of how data flows into Adobe Experience Platform and Applications. Use this diagram as reference to help you get a better understanding of the contents of this page.
 
-![A diagram of how data ingestion flows in Identity Service.](../images/troubleshooting/dataflow_in_identity.png)
+![A diagram of how data ingestion flows in Identity Service.](../images/troubleshooting/dataflow_in_identity.png "A diagram of how data ingestion flows in Identity Service."){zoomable="yes"}
 
 It is important to note the following factors:
 
