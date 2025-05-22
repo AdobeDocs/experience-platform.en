@@ -7,7 +7,7 @@ exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
 
 >[!IMPORTANT]
 >
->Contact your Adobe Account Team if you have an existing sandbox that requires collapsed graphs to be un-collapsed ("fixed") after you enable identity settings.
+>[!DNL Identity Graph Linking Rules] is now generally available. Contact Adobe Support if you have an existing sandbox that requires collapsed graphs to be un-collapsed ("fixed") after you enable identity settings.
 
 Identity settings is a feature in the Adobe Experience Platform Identity Service UI that you can use to designate unique namespaces and configure namespace priority.
 
