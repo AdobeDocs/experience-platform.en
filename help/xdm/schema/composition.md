@@ -21,7 +21,7 @@ XDM schemas are ideal for storing vast amounts of complex data in a self-contain
 
 ### Schema-based workflows in Experience Platform {#schema-based-workflows}
 
-Standardization is a key concept behind Experience Platform. XDM, driven by Adobe, is an effort to standardize customer experience data and define standard schemas for customer experience management. 
+Standardization is a key concept behind Experience Platform. XDM, driven by Adobe, is an effort to standardize customer experience data and define standard schemas for customer experience management.
 
 The infrastructure on which Experience Platform is built, known as [!DNL XDM System], facilitates schema-based workflows and includes the [!DNL Schema Registry], [!DNL Schema Editor], schema metadata, and service consumption patterns. See the [XDM System overview](../home.md) for more information.
 
@@ -49,24 +49,24 @@ Both record and time series schemas contain a map of identities (`xdm:identityMa
 >title="Identities in schemas"
 >abstract="Identities are key fields within a schema that can be used to identify a subject, such as an email address or a marketing ID. These fields are used to construct the identity graph for each individual and build customer profiles. See the documentation for more information on identities in schemas."
 
-Schemas are used for ingesting data into Experience Platform. This data can be used across multiple services to create a single, unified view of an individual entity. Therefore, it is important when designing schemas for customer identities to consider which fields can be used to identify a subject, regardless of where the data may be coming from.
+Schemas are used for ingesting data into Experience Platform. This data can be used across multiple services to create a single, unified view of an individual entity. Therefore, when designing schemas, carefully consider which fields should be used as identities—these determine how individual profiles are stitched together across datasets.
 
 To help with this process, key fields within your schemas can be marked as identities. Upon data ingestion, the data in those fields is inserted into the "[!UICONTROL Identity Graph]" for that individual. The graph data can then be accessed by [[!DNL Real-Time Customer Profile]](../../profile/home.md) and other Experience Platform services to provide a stitched-together view of each individual customer.
 
 Fields that are commonly marked as "[!UICONTROL Identity]" include: email address, phone number, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), CRM ID, or other unique ID fields. Consider any unique identifiers specific to your organization, as they may be good "[!UICONTROL Identity]" fields as well.
 
-It is important to think about customer identities during the schema planning phase to help ensure that data is being brought together to build the most robust profile possible. To learn more about how identity information can help you deliver digital experiences to your customers, see the [Identity Service overview](../../identity-service/home.md). See the data modelling best practices document for [tips on the use of identities when creating a schema](./best-practices.md#data-validation-fields). 
+To learn more about how identity information can help you deliver digital experiences to your customers, see the [Identity Service overview](../../identity-service/home.md). See the data modeling best practices document for [tips on the use of identities when creating a schema](./best-practices.md#data-validation-fields). 
 
 There are two ways to send identity data to Experience Platform:
 
 1. Adding identity descriptors to individual fields, either through the [Schema Editor UI](../ui/fields/identity.md) or using the [Schema Registry API](../api/descriptors.md#create)
-1. Using an [`identityMap` field](#identityMap)
+2. Using an [`identityMap` field](#identityMap)
 
 #### `identityMap` {#identityMap}
 
 `identityMap` is a map-type field that describes the various identity values for an individual, along with their associated namespaces. This field can be used to provide identity information for your schemas, instead of defining identity values within the structure of the schema itself.
 
-The main drawback of using `identityMap` is that identities become embedded in the data and become less visible as a result. If you are ingesting raw data, you should define individual identity fields within the actual schema structure instead.
+The main drawback of using `identityMap` is that identity values are nested and may be harder to work with in tools that expect top-level identity fields, such as the Segment Builder or some third-party integrations.
 
 >[!NOTE]
 >
@@ -103,7 +103,7 @@ An example of a simple identity map would look like the following:
 }
 ```
 
-As the example above shows, each key in the `identityMap` object represents an identity namespace. The value for each key is an array of objects, representing the identity values (`id`) for the respective namespace. Refer to the [!DNL Identity Service] documentation for a [list of standard identity namespaces](../../identity-service/troubleshooting-guide.md#standard-namespaces) recognized by Adobe applications. 
+As the example above shows, each key in the `identityMap` object represents an identity namespace. The value for each key is an array of objects, representing the identity values (`id`) for the respective namespace. Refer to the [!DNL Identity Service] documentation for a [list of standard identity namespaces](../../identity-service/troubleshooting-guide.md#standard-namespaces) recognized by Adobe applications.
 
 >[!NOTE]
 >
@@ -123,17 +123,17 @@ The following table breaks down which changes are supported when editing schemas
 
 | Supported changes | Breaking changes (Not supported) |
 | --- | --- |
-| <ul><li>Adding new fields to the resource</li><li>Making a required field optional</li><li>Introducing new required fields*</li><li>Changing the resource's display name and description</li><li>Enabling the schema to participate in Profile</li></ul> | <ul><li>Removing previously defined fields</li><li>Renaming or redefining existing fields</li><li>Removing or restricting previously supported field values</li><li>Moving existing fields to a different location in the tree</li><li>Deleting the schema</li><li>Disabling the schema from participating in Profile</li></ul> |
+| <ul><li>Adding new fields to the resource</li><li>Making a required field optional</li><li>Introducing new required fields*</li><li>Changing the resource's display name and description</li><li>Enabling the schema to participate in Profile</li></ul> | <ul><li>Removing previously defined fields</li><li>Renaming or redefining existing fields</li><li>Removing or restricting previously supported field values</li><li>Moving existing fields to a different location in the tree</li><li>Deleting the schema</li><li>Disabling the schema from participating in Profile</li><li>Changing the primary identity field on a schema that is enabled for Profile and has ingested data</li></ul> |
 
 \**Refer to the section below for important considerations regarding [setting new required fields](#post-ingestion-required-fields).*
 
 ### Required fields
 
-Individual schema fields can be [marked as required](../ui/fields/required.md), which means that any ingested records must contain data in those fields to pass validation. For example, setting a schema's primary identity field as required can help ensure that all ingested records will participate in Real-Time Customer Profile. Equally, setting a timestamp field as required ensures that all time-series events are chronologically preserved.
+Individual schema fields can be [marked as required](../ui/fields/required.md), which means that any ingested records must contain data in those fields to pass validation. For example, setting a schema's primary identity field as required can help ensure that all ingested records will participate in Real-Time Customer Profile. Similarly, setting a timestamp field as required ensures that all time-series events are chronologically preserved.
 
 >[!IMPORTANT]
 >
->Regardless of whether a schema field is required or not, Experience Platform does not accept `null` or empty values for any ingested field. If there is no value for particular field in a record or event, the key for that field should be excluded from the ingestion payload.
+>Regardless of whether a schema field is required or not, Experience Platform does not accept `null` or empty values for any ingested field. If there is no value for a particular field in a record or event, the key for that field should be excluded from the ingestion payload.
 
 #### Setting fields as required after ingestion {#post-ingestion-required-fields}
 
