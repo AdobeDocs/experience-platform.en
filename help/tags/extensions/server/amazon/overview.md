@@ -1,5 +1,5 @@
 ---
-title: Amazon Conversions API extension
+title: Amazon Conversions API Extension Overview
 description: Share website interactions directly with Amazon using the Adobe Experience Platform web events API  
 last-substantial-update: 2025-04-17
 ---
@@ -73,18 +73,19 @@ Once all your data elements are set up, create event forwarding rules to determi
 
    | Input | Description | Required | Example |
    | --- | --- | --- | --- |
-   | `name` | The name of the conversion event. | Yes | My Event Name. |
-   | `eventType` | Defines the type of event tracked. For example: purchases, cart additions. | Yes | Add to Shopping Cart. |
-   | `eventActionSource` | Event time in ISO format. |  Yes | --- |
-   | `clientDedupeId` | A unique ID for deduplication. | Yes | --- |
-   | `timestamp` | User and device identifiers for attribution. | Yes | --- |
+   | `name` | The name of the imported event. | Yes | `My Event Name` |
+   | `eventType` | The standard Amazon event type associated with the event and used for reporting. | Yes | Add to Shopping Cart. |
+   | `eventActionSource` | The platform from which the event was sourced. |  Yes | WEBSITE |
+   | `clientDedupeId` | The advertiser-specified `id` for the conversion event. For events with the same `clientDedupeId` only the first event is be retained and all subsequent events are dropped. | Optional | `3234A398932` |
+   | `timestamp` | User and device identifiers for attribution. | Yes | `2023-05-08T14:04:28Z` |
    | `matchKeys` | Monetary value of the event. | Yes | --- |
    | `matchKeys > type` | Currency in ISO-4217 format. | Yes | --- |
    | `matchKeys > value` | Quantity of items purchased. | Yes | --- |
-   | `currencyCode` | Flags for limited data usage. | Yes | --- |
-   | `unitsSold` | Indicates user consent for advertising data usage. | Yes | --- |
+   | `value` | Quantity of items purchased. | Optional | --- |
+   | `currencyCode` | Flags for limited data usage. | Optional | --- |
+   | `unitsSold` | Indicates user consent for advertising data usage. | Optional | --- |
    | `countryCode` | Indicates user consent for advertising data usage. | Yes | --- |
-   | `dataProcessingOptions` | Indicates user consent for advertising data usage. | Yes | --- |
+   | `dataProcessingOptions` | Indicates user consent for advertising data usage. | Optional | --- |
 
 5. Select **[!UICONTROL Keep Changes]** to save the rule.
 
