@@ -134,6 +134,8 @@ Additionally, segment unqualification, similarly to segment qualification, happe
 
 In order to combine data from both batch and streaming sources, you'll need to separate the batch and streaming components into separate audiences.
 
+### Profile attribute and Experience Event {#profile-and-event}
+
 For example, let's take the following two sample audiences into account:
 
 | Audience | Schema | Source type | Query definition | Audience ID | 
@@ -153,7 +155,9 @@ WHEN(<= 24 hours before now)])
 
 The resulting audience *will* be evaluated using streaming segmentation, since it leverages the batch audience's membership by referring to the batch audience component.
 
-However, if you want to combine two audiences with event data, you **cannot** just combine the two events. You'll need to create both audiences, then create another audience that uses `inSegment` to refer to both of these audiences.
+### Two Experience Events {#two-events}
+
+If you want to combine two audiences with event data, you **cannot** just combine the two events. You'll need to create both audiences, then create another audience that uses `inSegment` to refer to both of these audiences.
 
 For example, let's say you have two audiences, with both audiences housing experience event schema data:
 
