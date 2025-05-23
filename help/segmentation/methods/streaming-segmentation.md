@@ -155,9 +155,9 @@ WHEN(<= 24 hours before now)])
 
 The resulting audience *will* be evaluated using streaming segmentation, since it leverages the batch audience's membership by referring to the batch audience component.
 
-### Two Experience Events {#two-events}
+### Multiple Experience Events {#two-events}
 
-If you want to combine two audiences with event data, you **cannot** just combine the two events. You'll need to create both audiences, then create another audience that uses `inSegment` to refer to both of these audiences.
+If you want to combine multiple audiences with event data, you **cannot** just combine the events. You'll need to create an audience for each event, then create another audience that uses `inSegment` to refer to all of the audiences.
 
 For example, let's say you have two audiences, with both audiences housing experience event schema data:
 
