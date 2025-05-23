@@ -13,12 +13,19 @@ Before you install and configure the [!DNL Amazon] Conversions API extension, co
 
 ### Create a secret and data element {#secret}
 
-Authentication with [!DNL Amazon] requires a secure token that must be properly stored and referenced:
+Create a new [!DNL Amazon] [event forwarding secret](../../../ui/event-forwarding/secrets.md) and provide it with a unique name that signifies the authenticating member. This will be used to authenticate the connection to your account while keeping the value secure.
 
-1. Create a new [!DNL Amazon] event forwarding secret with a unique name for authentication.
-2. Create a data element using the **Core** extension with a **Secret** data element type to reference your [!DNL Amazon] secret.
+Next, [create a data element](../../../ui/managing-resources/data-elements.md#create-a-data-element) using the [!UICONTROL Core] extension and a [!UICONTROL Secret] data element type to reference the `Amazon` secret you just created.
 
-This process ensures that your authentication credentials remain secure while still being accessible to the extension when needed.
+### Gather required configuration details {#configuration-details}
+
+In order to connect Experience Platform to [!DNL Amazon], input the following details:
+
+| Key Type | Description |
+| --- | --- |
+| Account ID | The unique account identifier for your [!DNL Amazon] account.|
+| Entity ID | The identifier of a profile associated with the advertiser account. This can be found in the Campaign Manager portal URL, prefixed with `entity`.|
+| Access Token | The non-expiring access token of your app, which is used for authenticating to the [!DNL Amazon] API via OAuth. Refer to the [Amazon API documentation on authentication](https://developer.amazon.com/docs/app-porting/device-messaging-fit-obtain-api-key.html) for guidance. |
 
 ## Install and configure the [!DNL Amazon] extension {#install-configure}
 
@@ -33,31 +40,13 @@ Follow these steps to install and configure the [!DNL Amazon] Conversions API ex
 4. Configure the extension with the following details:
    - **Access Token**: Your data element secret containing the OAuth 2 token.
 
-     ![The configuration interface highlighting the field to enter the data element secret for the OAuth 2 token.](../../../images/extensions/server/amazon/2.png)
+     ![The configuration interface highlighting the field to enter the data element secret for the OAuth 2 token.](../../../images/extensions/server/amazon/amazon-oauth2-token-field.png)
 
    - **Entity ID**: Your Entity ID (found in the Campaign Manager portal URL with the "entity" prefix).
 
-     ![The Campaign Manager portal interface with the Entity ID field highlighted.](../../../images/extensions/server/amazon/3.png)
+     ![The Campaign Manager portal interface with the Entity ID field highlighted.](../../../images/extensions/server/amazon/campaign-manager-entity-id.png)
 
 5. Select **Save** to complete the configuration.
-
-### [!DNL Amazon] OAuth 2 {#oauth}
-
-To create an [!DNL Amazon] OAuth 2 secret:
-
-1. Select **[!DNL Amazon] OAuth 2** from the **Type** dropdown and select **Create Secret**.
-
-   ![The dropdown menu with Amazon OAuth 2 selected.](../../../images/extensions/server/amazon/Oauth.png)
-
-2. Select **Create & Authorize secret with Amazon** on the popover to manually authorize the secret and continue.
-
-   ![The Create & Authorize secret with Amazon button highlighted.](../../../images/extensions/server/amazon/Oauth.1.png)
-
-3. Enter your [!DNL Amazon] credentials in the dialog that appears. Follow the prompts to grant event forwarding access to your data.
-
-After completion, you'll see your secret with its status and expiration date in the **Secrets** tab.
-
-   ![The Secrets tab displaying the created secret with its status and expiration date.](../../../images/extensions/server/amazon/Oauth.2.png)
 
 ## Configure an event forwarding rule {#config-rule}
 
@@ -67,31 +56,35 @@ Once all your data elements are set up, create event forwarding rules to determi
 2. Under **Actions**, select **Amazon Conversions API Extension**.
 3. Set the **Action Type** to **Import Conversion Events**.
 
-   ![The event forwarding rule configuration interface with the Action Type set to Import Conversion Events.](../../../images/extensions/server/amazon/4.png)
+   ![The event forwarding rule configuration interface with the Action Type set to Import Conversion Events.](../../../images/extensions/server/amazon/amazon-import-conversion-events.png)
 
-4. Configure the event properties as outlined below:
+### Configure conversion event data {#conversion-event-data}
 
-   | Input | Description | Required | Example |
-   | --- | --- | --- | --- |
-   | `name` | The name of the imported event. | Yes | `My Event Name` |
-   | `eventType` | The standard Amazon event type associated with the event and used for reporting. | Yes | Add to Shopping Cart. |
-   | `eventActionSource` | The platform from which the event was sourced. |  Yes | WEBSITE |
-   | `clientDedupeId` | The advertiser-specified `id` for the conversion event. For events with the same `clientDedupeId` only the first event is be retained and all subsequent events are dropped. | Optional | `3234A398932` |
-   | `timestamp` | User and device identifiers for attribution. | Yes | `2023-05-08T14:04:28Z` |
-   | `matchKeys` | Monetary value of the event. | Yes | --- |
-   | `matchKeys > type` | Currency in ISO-4217 format. | Yes | --- |
-   | `matchKeys > value` | Quantity of items purchased. | Yes | --- |
-   | `value` | Quantity of items purchased. | Optional | --- |
-   | `currencyCode` | Flags for limited data usage. | Optional | --- |
-   | `unitsSold` | Indicates user consent for advertising data usage. | Optional | --- |
-   | `countryCode` | Indicates user consent for advertising data usage. | Yes | --- |
-   | `dataProcessingOptions` | Indicates user consent for advertising data usage. | Optional | --- |
+Conversion event data is critical to track user interactions and measure the effectiveness of your campaigns. By forwarding this data to [!DNL Amazon], you can gain insights into user behavior, optimize your campaigns, and ensure accurate attribution for conversions.
 
-5. Select **[!UICONTROL Keep Changes]** to save the rule.
+The table below outlines the key properties required to configure and forward conversion event data:
 
-   ![The event parameters configuration interface with the Keep Changes button highlighted.](../../../images/extensions/server/amazon/5.png)
+| Input | Description | Required | Example |
+| --- | --- | --- | --- |
+| `name` | The name of the imported event. | Yes | `My Event Name` |
+| `eventType` | The standard Amazon event type associated with the event and used for reporting. | Yes | `Add to Shopping Cart` |
+| `eventActionSource` | The platform from which the event was sourced. | Yes | `WEBSITE` |
+| `clientDedupeId` | The advertiser-specified `id` for the conversion event. For events with the same `clientDedupeId`, only the first event is retained and all subsequent events are dropped. | Optional | `3234A398932` |
+| `timestamp` | The reported timestamp of when the event occurred. The timestamp can be up to 7 days before you send an event. Data older than 7 days will not be processed. | Yes | `2023-05-08T14:04:28Z` |
+| `matchKeys` | Array representing the customer and device identifier types/values to be used for attribution to traffic events. | Yes | --- |
+| `matchKeys > type` | The identifier type used for attribution. | Yes | --- |
+| `matchKeys > value` | The identifier value used for attribution. | Yes | List of SHA-256 hashed identifier values of the customer who performed the event. |
+| `value` | The value of the event. | Optional | `5`, or `0.99` |
+| `currencyCode` | The currency code associated with the `value` of the event in ISO-4217 format. Only applicable for Off Amazon Purchases event type. If not provided, the currency code setting on the conversion definition will be used. | Optional | `USD`, `EUR`, `GBP`, etc. |
+| `unitsSold` | The number of items purchased. Only applicable for Off Amazon Purchases event type. If not provided on the conversion event, a default of `1` will be applied. | Optional | --- |
+| `countryCode` | This value is based on ISO 3166-1 alpha-2, two-letter country codes defined in ISO 3166-1, part of the ISO 3166 standard published by the International Organization for Standardization (ISO), to represent countries, dependent territories, and special areas of geographical interest. | Yes | --- |
+| `dataProcessingOptions` | Indicates user consent for advertising data usage. | Optional | LIMITED_DATA_USE |
 
-   ![Additional event parameters configuration interface with the Keep Changes button highlighted.](../../../images/extensions/server/amazon/6.png)
+- Select **[!UICONTROL Keep Changes]** to save the rule.
+
+![The event parameters configuration interface with the Keep Changes button highlighted.](../../../images/extensions/server/amazon/event-parameters.png)
+
+![Additional event parameters configuration interface with the Keep Changes button highlighted.](../../../images/extensions/server/amazon/additional-event-parameters.png)
 
 ## Event deduplication {#deduplication}
 
