@@ -104,6 +104,7 @@ role: User,Developer
     - [Query logs](ui/query-logs.md)
     - [Monitor scheduled queries](ui/monitor-queries.md)
     - [Credentials guide](ui/credentials.md)
+    - [Migrate JWT to OAuth credentials](ui/migrate-jwt-to-oauth.md)
     - [Generate output datasets from query results](ui/create-datasets.md)
 - Query Service API {#api}
     - [Getting started](api/getting-started.md)

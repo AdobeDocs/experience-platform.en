@@ -24,6 +24,7 @@ role: Admin,User,Developer,Leader
 * Model cards {#model-cards}
   * [Model cards overview](./model-cards/overview.md)
   * AI model cards {#ai-model-cards}
+    * [AI Assistant Natural Operational Insights Language to SQL](./model-cards/ai-model-cards/natural-language-to-sql.md)
     * [Customer AI propensity scoring](./model-cards/ai-model-cards/customer-ai.md)
 * [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
 

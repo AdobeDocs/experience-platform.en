@@ -1,7 +1,7 @@
 ---
 title: Visitor identification via FPID
-description: Learn how to consistently identify visitors via the Server API, by using the FPID
-seo-description: Learn how to consistently identify visitors via the Server API, by using the FPID
+description: Learn how to consistently identify visitors via the Edge Network API, by using the FPID
+seo-description: Learn how to consistently identify visitors via the Edge Network API, by using the FPID
 keywords: edge network;gateway;api;visitor;identification;fpid
 exl-id: c61d2e7c-7b5e-4b14-bd52-13dde34e32e3
 ---

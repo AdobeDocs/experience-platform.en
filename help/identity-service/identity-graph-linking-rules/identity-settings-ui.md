@@ -5,11 +5,15 @@ exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
 ---
 # Identity Settings UI
 
->[!AVAILABILITY]
+>[!IMPORTANT]
 >
->Identity graph linking rules are currently in Limited Availability. Contact your Adobe account team for information on how to access the feature in development sandboxes.
+>[!DNL Identity Graph Linking Rules] is now generally available. Contact Adobe Support if you have an existing sandbox that requires collapsed graphs to be un-collapsed ("fixed") after you enable identity settings.
 
 Identity settings is a feature in the Adobe Experience Platform Identity Service UI that you can use to designate unique namespaces and configure namespace priority.
+
+Watch the following video for additional information on using the [!DNL Graph Simulation] interface in the Identity Service UI workspace:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops)
 
 Read this guide to learn how to configure your identity settings in the UI.
 
@@ -17,8 +21,8 @@ Read this guide to learn how to configure your identity settings in the UI.
 
 Read the following documents before you start working with identity settings:
 
-* [Identity graph linking rules](./overview.md)
-* [Identity optimization algorithm](./identity-optimization-algorithm.md)
+* [[!DNL Identity Graph Linking Rules]](./overview.md)
+* [Identity Optimization Algorithm](./identity-optimization-algorithm.md)
 * [Implementation guide](./implementation-guide.md)
 * [Examples of graph configurations](./example-configurations.md)
 * [Namespace priority](./namespace-priority.md)
@@ -51,7 +55,7 @@ To configure namespace priority, select a namespace in the identity settings men
 
 To designate a unique namespace, select the [!UICONTROL Unique per graph] checkbox that corresponds with that namespace. You can select **up to a maximum of three unique namespaces** for your identity settings configuration.
 
-Once your unique namespaces are established, graphs will no longer be able to have multiple identities that contain a unique namespace. For example, if you designated CRMID as a unique namespace, then a graph can only have one identity with the CRMID namespace. For more information, read the [identity optimization algorithm overview](./identity-optimization-algorithm.md#unique-namespace).
+Once your unique namespaces are established, graphs will no longer be able to have multiple identities that contain a unique namespace. For example, if you designated CRMID as a unique namespace, then a graph can only have one identity with the CRMID namespace. For more information, read the [Identity Optimization Algorithm overview](./identity-optimization-algorithm.md#unique-namespace).
 
 When you are finished with your configurations, select **[!UICONTROL Next]** to proceed.
 
@@ -71,16 +75,16 @@ From here, you must confirm the following before proceeding to the final step:
 >
 >* The final step is another confirmation message indicating that existing graphs will only be affected by the graph algorithm **only if the graphs get updated after saving your settings**, and that the primary identity of event fragments on Real-Time Customer Profile will not be updated even after namespace priority changes.
 >
->* Additionally, you are notified that it will take up to **six hours** for your new or updated settings to take effect. To confirm, enter your sandbox name and then select **[!UICONTROL Confirm]**.
+>* It will take up up to  **24 hours** for your new or updated settings to take effect. To confirm, enter your sandbox name and then select **[!UICONTROL Confirm]**. 
 
 ![The confirmation window that displays a warning about a six-hour delay before configurations get processed.](../images/rules/complete.png)
 
 ## Next steps
 
-For more information on identity graph linking rules, read the following documentation:
+For more information on [!DNL Identity Graph Linking Rules], read the following documentation:
 
-* [Identity graph linking rules overview](./overview.md)
-* [Identity optimization algorithm](./identity-optimization-algorithm.md)
+* [[!DNL Identity Graph Linking Rules] overview](./overview.md)
+* [Identity Optimization Algorithm](./identity-optimization-algorithm.md)
 * [Implementation guide](./implementation-guide.md)
 * [Examples of graph configurations](./example-configurations.md)
 * [Troubleshooting and FAQ](./troubleshooting.md)

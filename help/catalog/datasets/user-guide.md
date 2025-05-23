@@ -48,6 +48,10 @@ This user guide requires a working understanding of the following components of 
 >title="Dataset retention"
 >abstract="Datalake retention sets rules for how long data is stored and when it should be deleted in different services. This ensures compliance with regulations, managing storage costs, and maintaining data quality."
 
+>[!CONTEXTUALHELP]
+>id="platform_datasets_orchestratedCampaigns_toggle"
+>title="Orchestrated Campaigns"
+>abstract="Enable this toggle to allow the selected dataset to be used in Adobe Journey Optimizer Orchestrated Campaigns. The dataset must use a relational schema and only one dataset can be created per schema."
 
 In the [!DNL Experience Platform] UI, select **[!UICONTROL Datasets]** in the left-navigation to open the **[!UICONTROL Datasets]** dashboard. The dashboard lists all available datasets for your organization. Details are displayed for each listed dataset, including its name, the schema the dataset adheres to, and the status of the most recent ingestion run.
 
@@ -90,7 +94,7 @@ The datasets UI now offers a collections of inline actions for each available da
 * [[!UICONTROL Manage data and access labels]](#manage-and-enforce-data-governance)
 * [[!UICONTROL Enable unified profile]](#enable-profile)
 * [[!UICONTROL Manage tags]](#manage-tags)
-* [(Beta) [!UICONTROL Set data retention policy]](#data-retention-policy)
+* [[!UICONTROL Set data retention policy]](#data-retention-policy)
 * [[!UICONTROL Move to folders]](#move-to-folders)
 * [[!UICONTROL Delete]](#delete). 
 
@@ -164,13 +168,15 @@ Once a tag has been added to a dataset, the datasets can be filtered based on th
 
 For more information on how to classify business objects for easier discovery and categorization, see the guide on [managing metadata taxonomies](../../administrative-tags/ui/managing-tags.md). This guide explains how users with the right permissions can create pre-defined tags, assign them to categories, and manage all related CRUD operations in the Experience Platform UI.
 
-### (Beta) Set data retention policy {#data-retention-policy}
-
->[!AVAILABILITY] 
-> 
->Data retention settings are currently in beta and available only in a **limited release** for select organizations. Your UI might not reflect the feature described below.
+### Set data retention policy {#data-retention-policy}
 
 Manage dataset expiration and retention settings using the inline action menu from the [!UICONTROL Browse] tab of the [!UICONTROL Datasets] workspace. You can use this feature to configure how long data is retained in the data lake and Profile store. The expiration date is based on when data was ingested into Experience Platform and your configured retention period.
+
+>[!IMPORTANT]
+>
+>To apply or update retention rules for an ExperienceEvent dataset, your user role must include the **Manage datasets** permission. This role-based access control ensures that only authorized users can modify dataset retention settings.
+>
+>See the [Access control overview](../../access-control/home.md#platform-permissions) for more information on assigning permissions in Adobe Experience Platform.
 
 >[!TIP]
 >
@@ -206,7 +212,7 @@ You can use the visual forecast to evaluate the impact of different retention pe
 
 >[!NOTE]
 >
->The Experience Event distribution chart is dataset-specific and reflects only the selected dataset's data.
+>The Experience Event distribution chart is specific to the selected dataset and reflects only its data. It applies exclusively to data stored in the data lake.
 
 ![The Set data retention dialog with the Experience Event distribution chart displayed.](../images/datasets/user-guide/visual-forecast.png)
 
@@ -216,7 +222,9 @@ When you are satisfied with your configuration, select **[!UICONTROL Save]** to 
 >
 >Once data retention rules are applied, any data older than the number of days defined by the expiration value is permanently deleted and cannot be recovered.
 
-After configuring your retention settings, use the Monitoring UI to confirm that your changes were executed by the system. The Monitoring UI provides a centralized view of data retention activity across all datasets. From there, you can track job execution, review how much data was deleted, and ensure that your retention policies are functioning as expected. This visibility supports governance, compliance, and efficient data lifecycle management.
+After configuring your retention settings, use the Monitoring UI to confirm that your changes were executed by the system. The Monitoring UI provides a centralized view of data retention activity across all datasets. From there, you can track job execution, review how much data was deleted, and ensure that your retention policies are functioning as expected. 
+
+To explore how retention policies apply across different services, see the dedicated guides on [Experience Event Dataset Retention in Profile](../../profile/event-expirations.md) and [Experience Event Dataset Retention in the Data Lake](./experience-event-dataset-retention-ttl-guide.md). This visibility supports governance, compliance, and efficient data lifecycle management.
 
 To learn how to use the monitoring dashboard to track source dataflows in the Experience Platform UI, see the [Monitor dataflows for sources in the UI](../../dataflows/ui/monitor-sources.md) documentation.
 
@@ -224,15 +232,15 @@ To learn how to use the monitoring dashboard to track source dataflows in the Ex
 
 For more information on the rules that define dataset expirations date ranges and best practices for configuring your data retention policy, see the [frequently asked questions page](../catalog-faq.md).
 
-#### (Beta) Enhanced visibility of retention periods and storage metrics {#retention-and-storage-metrics}
+#### Enhanced visibility of retention periods and storage metrics {#retention-and-storage-metrics}
 
-Four new columns are available to beta users to provide greater visibility into your data management: **[!UICONTROL Data Lake Storage]**, **[!UICONTROL Data Lake Retention]**, **[!UICONTROL Profile Storage]**, and **[!UICONTROL Profile Retention]**. These metrics show how much storage your data consumes and its retention period in both data lake and Profile Service.
+Four new columns provide greater visibility into your data management: **[!UICONTROL Data Lake Storage]**, **[!UICONTROL Data Lake Retention]**, **[!UICONTROL Profile Storage]**, and **[!UICONTROL Profile Retention]**. These metrics show how much storage your data consumes and its retention period in both data lake and Profile Service.
 
-This increased visibility empowers you to make informed decisions and manage storage costs more effectively. Sort datasets by storage size to identify the largest ones in your current sandbox. These insights also support better governance and help you understand your data lifecycle and entitlement usage.
+This increased visibility empowers you to make informed decisions and manage storage costs more effectively. Sort datasets by storage size to identify the largest ones in your current sandbox. These insights support data management best practices and help ensure compliance with your licensed entitlements.
 
 ![The Browse tab of the Datasets workspace with the four new storage and retention columns highlighted.](../images/datasets/user-guide/storage-and-retention-columns.png)
 
-The following table provides an overview of the new retention and storage metrics available in the beta release. It details each column's purpose and how it supports managing data retention and storage.
+The following table provides an overview of the new retention and storage metrics. It details each column's purpose and how it supports managing data retention and storage.
 
 | Column title  | Description |
 |---|---|
@@ -242,6 +250,8 @@ The following table provides an overview of the new retention and storage metric
 | [!UICONTROL Profile Retention] | The current retention period for Profile datasets. You can update this value to control how long Profile data is retained. |
 
 {style="table-layout:auto"}
+
+To act on the insights from storage and retention metrics, refer to the [data management license entitlement best practices guide](../../landing/license-usage-and-guardrails/data-management-best-practices.md). Use it to manage what data you ingest and retain, apply filters and expiration rules, and control data growth to stay within your licensed usage limits.
 
 ### Move to folders {#move-to-folders}
 

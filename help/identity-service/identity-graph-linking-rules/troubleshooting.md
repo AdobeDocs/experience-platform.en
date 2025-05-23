@@ -1,21 +1,17 @@
 ---
 title: Troubleshooting Guide for Identity Graph Linking Rules
-description: Learn how to troubleshoot common issues in identity graph linking rules.
+description: Learn how to troubleshoot common issues in Identity graph Linking Rules.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
 ---
-# Troubleshooting guide for identity graph linking rules
+# Troubleshooting guide for [!DNL Identity Graph Linking Rules]
 
->[!AVAILABILITY]
->
->Identity graph linking rules are currently in Limited Availability. Contact your Adobe account team for information on how to access the feature in development sandboxes.
-
-As you test and validate identity graph linking rules, you may run into some issues related to data ingestion and graph behavior. Read this document to learn how to troubleshoot some common issues that you might encounter when working with identity graph linking rules.
+As you test and validate [!DNL Identity Graph Linking Rules], you may run into some issues related to data ingestion and graph behavior. Read this document to learn how to troubleshoot some common issues that you might encounter when working with [!DNL Identity Graph Linking Rules].
 
 ## Data ingestion flow overview {#data-ingestion-flow-overview}
 
 The following diagram is a simplified representation of how data flows into Adobe Experience Platform and Applications. Use this diagram as reference to help you get a better understanding of the contents of this page.
 
-![A diagram of how data ingestion flows in Identity Service.](../images/troubleshooting/dataflow_in_identity.png)
+![A diagram of how data ingestion flows in Identity Service.](../images/troubleshooting/dataflow_in_identity.png "A diagram of how data ingestion flows in Identity Service."){zoomable="yes"}
 
 It is important to note the following factors:
 
@@ -49,7 +45,7 @@ There are various reasons for why this could happen, including, but not limited 
 * By default, [AAIDs are blocked from ingestion](../guardrails.md#identity-namespace-ingestion).
 * The identity is removed because of [system guardrails](../guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated).
 
-Within the context of identity graph linking rules, a record may be rejected from Identity Service because the incoming event has two or more identities with the same unique namespace but different identity value. This scenario usually happens due to implementation errors.
+Within the context of [!DNL Identity Graph Linking Rules], a record may be rejected from Identity Service because the incoming event has two or more identities with the same unique namespace but different identity value. This scenario usually happens due to implementation errors.
 
 Consider the following event with two assumptions:
 
@@ -180,7 +176,7 @@ This section outlines common issues you may encounter regarding how the identity
 
 ### Unauthenticated ExperienceEvents are getting attached to the wrong authenticated profile
 
-The identity optimization algorithm will honor [the most recently established links and remove the oldest links](./identity-optimization-algorithm.md#identity-optimization-algorithm-details). Therefore, it is possible that once this feature is enabled, ECIDs could be reassigned (re-linked) from one person to another. To understand the history of how an identity gets linked over time, follow the steps below:
+The Identity Optimization Algorithm will honor [the most recently established links and remove the oldest links](./identity-optimization-algorithm.md#identity-optimization-algorithm-details). Therefore, it is possible that once this feature is enabled, ECIDs could be reassigned (re-linked) from one person to another. To understand the history of how an identity gets linked over time, follow the steps below:
 
 **Troubleshooting steps**
 
@@ -252,18 +248,18 @@ ORDER BY timestamp desc
 
 >[!ENDTABS]
 
-### The identity optimization algorithm is not 'working' as expected
+### The Identity Optimization Algorithm is not 'working' as expected
 
 **Troubleshooting steps**
 
-Refer to the documentation on [identity optimization algorithm](./identity-optimization-algorithm.md), as well as the types of graph structures that are supported.
+Refer to the documentation on [Identity Optimization Algorithm](./identity-optimization-algorithm.md), as well as the types of graph structures that are supported.
 
 * Read the [graph configuration guide](./example-configurations.md) for examples of supported graph structures.
 * You can also read the [implementation guide](./implementation-guide.md#appendix) for examples of unsupported graph structures. There are two scenarios that could happen:
   * No single namespace across all your profiles.
   * A ["dangling ID"](./implementation-guide.md#dangling-loginid-scenario) scenario occurs. In this scenario, Identity Service is unable to determine if the dangling ID is associated with any of the person entities in the graphs.
 
-You can also use the [graph simulation tool in the UI](./graph-simulation.md) to simulate events and configure your own unique namespace and namespace priority settings. Doing so can help give you a baseline understanding of how the identity optimization algorithm should behave. 
+You can also use the [graph simulation tool in the UI](./graph-simulation.md) to simulate events and configure your own unique namespace and namespace priority settings. Doing so can help give you a baseline understanding of how the Identity Optimization Algorithm should behave. 
 
 If your simulation results match your graph behavior expectations, then you can check and see if your [identity settings](./identity-settings-ui.md) matches the settings that you have configured in your simulation.
 
@@ -312,21 +308,21 @@ You can use the following query in profile snapshot export dataset to obtain sam
 
 >[!TIP]
 >
->The two queries listed above will yield expected results if the sandbox is not enabled for the shared device interim approach and will behave differently from identity graph linking rules.
+>The two queries listed above will yield expected results if the sandbox is not enabled for the shared device interim approach and will behave differently from [!DNL Identity Graph Linking Rules].
 
 ## Frequently asked questions {#faq}
 
-This section outlines a list of answers to frequently asked questions about identity graph linking rules.
+This section outlines a list of answers to frequently asked questions about [!DNL Identity Graph Linking Rules].
 
-## Identity optimization algorithm {#identity-optimization-algorithm}
+## Identity Optimization Algorithm {#identity-optimization-algorithm}
 
-Read this section for answers to frequently asked questions about the [identity optimization algorithm](./identity-optimization-algorithm.md).
+Read this section for answers to frequently asked questions about the [Identity Optimization Algorithm](./identity-optimization-algorithm.md).
 
 ### I have a CRMID for each of my business unites (B2C CRMID, B2B CRMID), but I don't have a unique namespace across all of my profiles. What will happen if I mark B2C CRMID and B2B CRMID as unique, and enable my identity settings?
 
 This scenario is unsupported. Therefore, you may see graphs collapse in cases where a user uses their B2C CRMID to login, and another user uses their B2B CRMID to login. For more information, read the section on [single person namespace requirement](./implementation-guide.md#single-person-namespace-requirement) in the implementation page.
 
-### Does identity optimization algorithm 'fix' existing collapsed graphs?
+### Does Identity Optimization Algorithm 'fix' existing collapsed graphs?
 
 Existing collapsed graphs will be affected ('fixed') by the graph algorithm only if these graphs get updated after you save your new settings.
 
@@ -379,11 +375,11 @@ No. Namespace priority will only apply to Experience Event datasets using the XD
 
 ### How does this feature work in tandem with the identity graph guardrails of 50 identities per graph? Does namespace priority affect this system defined guardrail? 
 
-The identity optimization algorithm will be applied first to ensure person entity representation. Afterwards, if the graph tries to exceed the [identity graph guardrail](../guardrails.md) (50 identities per graph), then this logic will be applied. Namespace priority does not affect the deletion logic of the 50 identity/graph guardrail. 
+The Identity Optimization Algorithm will be applied first to ensure person entity representation. Afterwards, if the graph tries to exceed the [identity graph guardrail](../guardrails.md) (50 identities per graph), then this logic will be applied. Namespace priority does not affect the deletion logic of the 50 identity/graph guardrail. 
 
 ## Testing
 
-Read this section for answers to frequently asked questions about testing and debugging features in identity graph linking rules.
+Read this section for answers to frequently asked questions about testing and debugging features in [!DNL Identity Graph Linking Rules].
 
 ### What are some of the scenarios I should be testing in a development sandbox environment? 
 
