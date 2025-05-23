@@ -96,6 +96,8 @@ document.addEventListener("click", event => {
 });
 ```
 
+This command supports the `edgeConfigOverrides` object.
+
 ## Response object
 
 If you decide to [handle responses](command-responses.md) with this command, the response object contains **`url`**, the new URL with identity information added as a query string parameter.

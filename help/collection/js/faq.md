@@ -7,14 +7,6 @@ exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
 
 This guide provides answers to questions that are often asked about the Adobe Experience Platform Web SDK.
 
-## What is Adobe Experience Platform Web SDK?
-
-Adobe Experience Platform Web SDK is a client-side JavaScript library that allows you to interact with the various services in Adobe Experience Cloud.
-
-The Web SDK sends data in a solution-agnostic way (XDM) to the Experience Platform Edge Network, which then maps the data to solution-specific formats and destinations and sends it in real time.
-
-See the following video for more information about the Web SDK: [Meet Alloy.js and Never Tag for an eVar or Mbox Again](https://www.adobe.com/summit/2020/with-alloy-js-never-tag-for-an-evar-or-mbox-again.html).
-
 ## How does Adobe Experience Platform Web SDK differ from previous solutions?
 
 ### Prior to Experience Platform Web SDK

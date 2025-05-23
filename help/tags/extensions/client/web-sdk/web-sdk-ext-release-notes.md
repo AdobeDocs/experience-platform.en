@@ -5,14 +5,14 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 ---
 # Adobe Experience Platform Web SDK extension release notes
 
-This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Experience Platform Web SDK release notes](/help/web-sdk/release-notes.md).
+This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Experience Platform Web SDK release notes](/help/collection/js/release-notes.md).
 
 ## Version 2.29.0 - March 5, 2025
 
 **New features**
 
 - You can now create custom Web SDK builds and choose the components that you need from the tag extension user interface. This can result in smaller builds by excluding unused components. See the documentation on [creating a custom Web SDK build](web-sdk-extension-configuration.md#custom-build).
-- Contains [version 2.26.0](../../../../web-sdk/release-notes.md#2-26-0) of the Adobe Experience Platform Web SDK.
+- Contains [version 2.26.0](/help/collection/js/release-notes.md) of the Adobe Experience Platform Web SDK.
 
 **Fixes and improvements**
 
@@ -31,7 +31,7 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 **New features**
 
 - Added a new feature to toggle between technical names and display names in the XDM Object.
-- Contains [version 2.25.0](../../../../web-sdk/release-notes.md#2-25-0) of the Adobe Experience Platform Web SDK.
+- Contains [version 2.25.0](/help/collection/js/release-notes.md#2-25-0) of the Adobe Experience Platform Web SDK.
 
 ## Version 2.27.0 - October 31, 2024
 
