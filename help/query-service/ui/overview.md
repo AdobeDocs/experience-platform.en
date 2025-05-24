@@ -98,49 +98,23 @@ As you type in the Query Editor, the editor automatically completes SQL reserved
 
 ![The Query Editor workspace.](../images/ui/overview/query-editor.png)
 
-### Download query results {#download-query-results}
+### About the Results tab {#results-tab}
 
->[!AVAILABILITY]
->
->Download capabilities are available only to customers with the Data Distiller add-on. To learn more about Data Distiller, contact your Adobe representative.
+The [!UICONTROL Result] tab displays the tabular output of your query after execution. Use this tab to review results, validate output, and take follow-up actions directly in the interface. From this view, you can:
 
-You can now download query results directly from the Query Editor user interface. After a successful query execution, you can download the output in CSV, XLSX, or JSON file format. This functionality streamlines workflows for marketing and analytics teams by enabling immediate access to query results for offline analysis, reporting, and Excel-based processes. 
+- Download results in CSV, XLSX, or JSON format for offline analysis. See [Download query results](./user-guide.md#download-query-results).
+- View results in full screen to examine large tables or wide datasets in a resizable grid layout. See [View results in full screen](./user-guide.md#view-results).
+- Copy results to your clipboard in CSV format for quick pasting into spreadsheet applications. See [Copy results](./user-guide.md#copy-results).
 
-To download your query results, select **[!UICONTROL Download]** in the upper-right corner of the Query Editor **[!UICONTROL Result]** tab. Then choose **[!UICONTROL CSV]**, **[!UICONTROL XLSX]**, or **[!UICONTROL JSON]** from the dropdown menu. The file is downloaded automatically to your local machine.
+These features are designed to support seamless data validation, reporting, and sharing workflows—all without leaving the Query Editor.
 
->[!NOTE]
->
->The **[!UICONTROL Download]** button appears only when a query returns results. If no records are returned, the **[!UICONTROL Result]** tab shows a 'No results' message and the download option is disabled.
+### Parameterized queries {#parameterized-queries}
 
-![The results tab of the Query Editor with Download and the dropdown menu highlighted.](../images/ui/overview/download-results.png)
+Query Editor supports parameterized queries, which allow you to insert variables into your SQL statements and dynamically assign values at runtime. This feature helps simplify reusable queries and improve flexibility in workflows.
 
->[!NOTE]
->
->When opening a CSV file in Excel, you may see the following warning:<br>"Possible Data Loss. Some features might be lost if you save this workbook in the comma-delimited (.csv) format. To preserve these features, save it in an Excel file format."<br>In addition, be aware that date and time formatting may vary by file type. CSV files retain the format shown in the query results, while XLSX files may apply localized formatting automatically in Excel.
+You can define parameters when writing queries, then assign values through the [!UICONTROL Query parameters] tab before running them. Parameterized queries are especially useful for scheduled queries or query templates shared across your organization.
 
-### View results in full screen {#view-results}
-
-After executing a successful query, select **[!UICONTROL View results]** in the **[!UICONTROL Result]** tab to open a tabulated, full-screen view of your results.
-
-The full-screen view displays the output in a resizable grid, making it easier to review large datasets and scan across columns. This preview mode is especially helpful when analyzing wide tables or reviewing row-level details.
-
->[!NOTE]
->
->The preview is read-only and does not modify your query or dataset.
-
-![The full-screen preview dialog with View results selected.](../images/ui/overview/view-results-fullscreen.png)
-
-### Copy results {#copy-results}
-
-Use the enhanced copy feature in Query Editor to quickly copy query results as comma-separated values (CSV). Easily paste the copied data into spreadsheet applications like Excel for further analysis. This functionality improves readability, preserves formatting, and streamlines validation and reporting workflows without relying on third-party tools.
-
-You can copy query results either from the [!UICONTROL Result] tab or from the full-screen results preview. From the **[!UICONTROL Result]** tab, select the copy icon (![A copy icon.](../../images/icons/copy.png)) to copy all query results to your clipboard. In the Query Editor Results tab, select individual rows or use the checkbox column header to select all rows. Select a single row to enable the copy icon.
-
-![The results tab of the Query Editor with the copy icon highlighted.](../images/ui/overview/query-editor-copy-icon.png)
-
-Alternatively, select **[!UICONTROL View results]** to open the full-screen preview. From this dialog, select individual rows or use the checkbox in the upper-left corner to select all rows, then select the copy icon (![A copy icon.](../../images/icons/copy.png)) to copy the selected data. 
-
-![The full-screen preview dialog with result rows selected and the copy icon highlighted.](../images/ui/overview/results-copy.png)
+To learn how to define and use parameters, see [Parameterized queries in Query Editor](./parameterized-queries.md).
 
 ## Scheduled queries {#scheduled-queries}
 

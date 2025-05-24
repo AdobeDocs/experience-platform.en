@@ -9,7 +9,9 @@ exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
 >
 >Streaming sources, such as the [HTTP API source](../../sources/connectors/streaming/http.md) are not currently supported by the monitoring dashboard. At this moment, you can only use the dashboard to monitor batch sources.
 
-Read this document to learn how to use the monitoring dashboard to monitor data lake ingestion in the Experience Platform UI.
+You can use the monitoring dashboard in the Adobe Experience Platform user interface to retrieve metrics around your data ingestion and data retention processes in data lake. Use the graphs in the interface to monitor ingestion and retention trends over time and summarize performance across all of your sources dataflows.
+
+Read this document to learn how you can use the monitoring dashboard to monitor all data processing in data lake, including both ingestion and retention.
 
 ## Get started {#get-started}
 
@@ -54,6 +56,7 @@ The lower part of the dashboard displays a table that outlines the current metri
 | --- | --- |
 | Records received | The total number of records received from a given source. |
 | Records ingested | The total number of records ingested to data lake. |
+| Records deleted | The total number of records deleted due to data lake retention settings or change data capture operations. |
 | Records skipped | The total number of records skipped. A skipped record refers to fields that were skipped because they were not required for ingestion. For example, if you create a sources dataflow with partial ingestion enabled, you can configure an acceptable error rate threshold. During the ingestion process, ingestion will skip records of fields that are not required, such as identity fields, so long as they are within the error threshold. |
 | Records failed | The total number of records that could not be ingested due to errors. |
 | Ingested rate | The percentage of records that were ingested based on the total number of records received. |
@@ -73,7 +76,19 @@ You can further filter your data using the options provided above the metrics ta
 
 {style="table-layout:auto"}
 
+To customize your column display, select the column settings icon ![column-icon](/help/images/icons/column-settings.png).
+
+![The monitoring dashboard with the column settings icon selected.](../assets/ui/monitor-sources/edit-columns.png)
+
+Next, use the *[!UICONTROL Customize table]* window to select the columns that you want your dashboard to display. When finished, select **[!UICONTROL Apply]**.
+
+![The customize column pop-up window in the monitoring dashboard.](../assets/ui/monitor-sources/customize-table.png)
+
 To monitor the data that is being ingested in a specific dataflow, select the filter icon ![filter](/help/images/icons/filter-add.png) beside a source.
+
+>[!TIP]
+>
+>You can use the monitoring dashboard to monitor data deletion metrics for records deleted using data retention policies. For more information on data retention, read the guide on [setting data retention policies](../../catalog/datasets/user-guide.md#data-retention-policy).
 
 ![Monitor a specific dataflow by selecting the filter icon beside a given source.](../assets/ui/monitor-sources/monitor-dataflow.png)
 
