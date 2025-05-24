@@ -1,19 +1,17 @@
 ---
 title: autoCollectPropositionInteractions
-description: Learn how to configure Experience Platform Web SDK to automatically collect link data.
+description: Automatically collect data when a link is clicked.
 exl-id: c70db76a-3f2f-45a6-86ab-36efcb18d20f
 ---
 # `autoCollectPropositionInteractions`
 
-The `autoCollectPropositionInteractions` property is an optional setting that determines if the Web SDK should automatically collect proposition interactions.
+The `autoCollectPropositionInteractions` property is an optional setting that determines if the Web SDK automatically collects proposition interactions.
 
 The value is a map of decision providers, each with value that indicates how automatic proposition interactions should be handled.
 
 ## Supported values {#supported-values}
 
-By default, automatic proposition interactions are _always_ collected for Adobe Journey Optimizer (`AJO`), and _never_ collected for Adobe Target (`TGT`).
-
-The default value of `autoTrackPropositionInteractions` is shown below.
+By default, automatic proposition interactions are _always_ collected for Adobe Journey Optimizer (`AJO`), and _never_ collected for Adobe Target (`TGT`). The default value of `autoTrackPropositionInteractions` is:
 
 ```json
 {
@@ -22,13 +20,11 @@ The default value of `autoTrackPropositionInteractions` is shown below.
 }
 ```
 
-Refer to the table below for the supported configuration values for each decision provider.
-
 | Value | Description |
 | --- | --- |
-| `always` | [!DNL Web SDK] will always automatically collect `interact` events for any elements associated with a proposition. |
-| `never` | [!DNL Web SDK] will never automatically collect `interact` events for elements associated with a proposition. |
-| `decoratedElementsOnly` | [!DNL Web SDK] will automatically collect `interact` events for elements associated with a proposition, but only if the element includes data attributes specifying a label or token. |
+| `always` | Always automatically collects `interact` events for any elements associated with a proposition. |
+| `never` | Never automatically collect `interact` events for elements associated with a proposition. |
+| `decoratedElementsOnly` | Automatically collect `interact` events for elements associated with a proposition, but only if the element includes data attributes specifying a label or token. |
 
 ## Automatic proposition interaction tracking {#logic}
 
@@ -44,16 +40,14 @@ You can use data attributes on elements to add specificity to an interaction.
 | [!DNL Token] | `data-aep-click-token` | Use this token when leveraging decision policies in [Adobe Journey Optimizer code-based campaigns](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based). You can use the token to distinguish which decision policy item was clicked. When the token data attribute is present on a clicked element, it is included with the interaction details sent to the Edge Network. The [!DNL Web SDK] looks for a token data attribute beginning with the element clicked and walking up the DOM tree. The [!DNL Web SDK] uses the first token it finds. |
 | [!DNL Interact ID] | `data-aep-interact-id` | The [!DNL Web SDK] automatically adds this unique ID to container elements when rendering propositions. The Web SDK uses this ID to correlate [!DNL DOM] elements with propositions. As this is an ID required by the [!DNL Web SDK], you should not alter it in any way. You can safely ignore it. |
 
-**Example**
-
-Refer to the code snippet below to see an example of using data attributes.
+## Example
 
 ```html
 <div class="row movies" data-aep-interact-id="5">
   <div class="col-md-4 movie" data-aep-click-token="wlpk/z/qyDGoFGF1E47O0w">
     <img src="/img/walle.jpg" class="poster" />
     <h2>WALL·E</h2>
-    <p class="description"> In a distant, but not so unrealistic, future where mankind has abandoned earth because it has become covered with trash from products sold by the powerful multi-national Buy N Large corporation, WALL-E, a garbage collecting robot has been left to clean up the mess. </p>
+    <p class="description"> In a distant, but not so unrealistic, future where mankind has abandoned earth because it has become covered with trash from products sold by the powerful multi-national Buy N Large corporation, WALL-E, a garbage collecting robot has been left to clean up the mess.</p>
     <p>
       <button class="btn btn-default" data-aep-click-label="view-movie-WALL·E"> View details >> </button>
     </p>
@@ -79,13 +73,9 @@ Refer to the code snippet below to see an example of using data attributes.
 
 ### The `applyPropositions` command {#apply-propositions}
 
-Refer to the [`applyPropositions`](../applypropositions.md) documentation to learn how this command works.
-
-The `applyPropositions` command is a convenient way to render propositions to the [!DNL DOM]. However, in the case of code-based campaigns with `JSON`, you can use this command to correlate an existing [!DNL DOM] element (or the one your application code rendered to the screen based on the `JSON` values) with a proposition.
+The [`applyPropositions`](../applypropositions.md) command is a convenient way to render propositions to the [!DNL DOM]. However, in the case of code-based campaigns with `JSON`, you can use this command to correlate an existing [!DNL DOM] element (or the one your application code rendered to the screen based on the `JSON` values) with a proposition.
 
 This correlation activates automatic interaction tracking for that element and assigns that element the appropriate proposition. To achieve this, set the `actionType` to `track`.
-
-**Example**
 
 ```javascript
 alloy("sendEvent", {
@@ -95,7 +85,7 @@ alloy("sendEvent", {
         propositions = []
     } = result;
     const proposition = propositions.find(
-        (proposition) => proposition.scope === "web://mywebsite.com/#weather-widget"
+        (proposition) => proposition.scope === "web://example.com/#weather-widget"
     );
 
     if (proposition) {
@@ -104,7 +94,7 @@ alloy("sendEvent", {
         alloy("applyPropositions", {
             propositions: [proposition],
             metadata: {
-                "web://mywebsite.com/#weather-widget": {
+                "web://example.com/#weather-widget": {
                     selector: "#weather-widget",
                     actionType: "track",
                 },

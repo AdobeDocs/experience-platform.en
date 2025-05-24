@@ -5,59 +5,22 @@ exl-id: 5a128b4a-4727-4415-87b4-4ae87a7e1750
 ---
 # `clickCollection`
 
-The `clickCollection` object contains several variables that help you control automatically collected link data. Use these variables when you want to include or exclude types of links from data collection.
+The `clickCollection` object contains several variables that help you control automatically collected link data. Use these variables when you want to include or exclude types of links from data collection. It is supported on Web SDK 2.25.0 or later.
 
-It requires [`clickCollectionEnabled`](clickcollectionenabled.md) to be enabled.
+This variable requires [`clickCollectionEnabled`](clickcollectionenabled.md) to be enabled. If `clickCollectionEnabled` is set to `false`, then this object does nothing.
 
-It is supported on Web SDK 2.25.0 or later.
+The following properties are available in the `clickCollection` object:
 
-The following variables are available in the `clickCollection` object:
+| Property | Type | Description |
+| --- | --- | --- |
+| **`internalLinkEnabled`** | `boolean` | Determines if links within the current domain are automatically tracked. For example, `https://example.com/index.html` to `https://example.com/product.html`. |
+| **`downloadLinkEnabled`** | `boolean` | Determines if the library tracks links that qualify as downloads based on the [`downloadLinkQualifier`](downloadlinkqualifier.md) property. |
+| **`externalLinkEnabled`** | `boolean` | Determines if links to external domains are automatically tracked. For example, `https://example.com` to `https://example.net`. |
+| **`eventGroupingEnabled`** | `boolean` | Determines if the library waits until the next page to send link tracking data. When the next page loads, the library combines link tracking data with the page load event. Enabling this option reduces the number of events that you send to Adobe. If `internalLinkEnabled` is disabled, then this variable does nothing. |
+| **`sessionStorageEnabled`** | `boolean` | Determines if link tracking data is stored in session storage instead of local variables. If `internalLinkEnabled` or `eventGroupingEnabled` are disabled, then this variable does nothing.<br>Adobe strongly recommends enabling this variable when using `eventGroupingEnabled` outside of single-page applications. If `eventGroupingEnabled` is enabled while `sessionStorageEnabled` is disabled, clicking to a new page results in loss of link tracking data, as it is not preserved in session storage. Since single-page applications don't typically navigate to a new page, session storage is not required for SPA pages. |
+| **`filterClickDetails`** | `function` | A callback function that provides full controls over link tracking data that you collect. You can use this callback function to alter, obfuscate, or abort sending link tracking data. This callback is useful when you want to omit specific information, such as personally identifiable information within links. |
 
-* **`clickCollection.internalLinkEnabled`**: A boolean that determines if links within the current domain are automatically tracked. For example, `https://example.com/index.html` to `https://example.com/product.html`.
-* **`clickCollection.downloadLinkEnabled`**: A boolean that determines if the library tracks links that qualify as downloads based on the [`downloadLinkQualifier`](downloadlinkqualifier.md) property.
-* **`clickCollection.externalLinkEnabled`**: A boolean that determines if links to external domains are automatically tracked. For example, `https://example.com` to `https://example.net`.
-* **`clickCollection.eventGroupingEnabled`**: A boolean that determines if the library waits until the next page to send link tracking data. When the next page loads, combine the link tracking data with the page load event. Enabling this option reduces the number of events that you send to Adobe. If `internalLinkEnabled` is disabled, then this variable does nothing. 
-* **`clickCollection.sessionStorageEnabled`**: A boolean that determines if link tracking data is stored in session storage instead of local variables. If `internalLinkEnabled` or `eventGroupingEnabled` are disabled, then this variable does nothing.
-  
-  Adobe strongly recommends enabling this variable when using `eventGroupingEnabled` outside of single-page applications. If `eventGroupingEnabled` is enabled while `sessionStorageEnabled` is disabled, clicking to a new page results in loss of link tracking data, as it is not preserved in session storage. Since single-page applications don't typically navigate to a new page, session storage is not required for SPA pages.
-* **`filterClickDetails`**: A callback function that provides full controls over link tracking data that you collect. You can use this callback function to alter, obfuscate, or abort sending link tracking data. This callback is useful when you want to omit specific information, such as personally identifiable information within links.
-
-## Click collection settings using the Web SDK tag extension
-
-Select any of the following options when [configuring the tag extension](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md):
-
-* [!UICONTROL Collect internal links]
-  * [!UICONTROL Event grouping options]:
-    * [!UICONTROL No event grouping]
-    * [!UICONTROL Event grouping using session storage]
-    * [!UICONTROL Event grouping using local object]
-* [!UICONTROL Collect external links]
-* [!UICONTROL Collect download links]
-* [!UICONTROL Filter click properties]
-
-1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
-1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
-1. Select the desired tag property.
-1. Navigate to **[!UICONTROL Extensions]**, then click **[!UICONTROL Configure]** on the [!UICONTROL Adobe Experience Platform Web SDK] card.
-1. Scroll down to the [!UICONTROL Data Collection] section, then select the desired click collection settings.
-1. Click **[!UICONTROL Save]**, then publish your changes.
-
-The [!UICONTROL Filter click properties] callback opens a custom code editor that lets you insert the desired code. Within the code editor, you have access to the following variables:
-
-* **`content.clickedElement`**: The DOM element that was clicked.
-* **`content.pageName`**: The page name when the click happened.
-* **`content.linkName`**: The name of the clicked link.
-* **`content.linkRegion`**: The region of the clicked link.
-* **`content.linkType`**: The type of link (exit, download, or other).
-* **`content.linkURL`**: The destination URL of the clicked link.
-* **`return true`**: Immediately exit the callback with the current variable values.
-* **`return false`**: Immediately exit the callback and abort collecting data.
-
-Any variables defined outside of `content` can be used, but are not included in the payload sent to Adobe.
-
-## Click collection settings using the Web SDK JavaScript library
-
-Set the desired variables within the `clickCollection` object when running the [`configure`](overview.md) command. If not set, default settings for this object depend on the value of [`clickCollectionEnabled`](clickcollectionenabled.md).
+If you don't set this object in the [`configure`](overview.md) command, then the default settings for this object depend on the value of [`clickCollectionEnabled`](clickcollectionenabled.md):
 
 * `internalLinkEnabled`: Matches `clickCollectionEnabled`
 * `downloadLinkEnabled`: Matches `clickCollectionEnabled`
@@ -67,6 +30,7 @@ Set the desired variables within the `clickCollection` object when running the [
 * `filterClickDetails`: Does not contain a function; must be explicitly registered
 
 >[!TIP]
+>
 >Adobe recommends enabling `eventGroupingEnabled` when `internalLinkEnabled` is enabled, as it reduces the number of events that count toward contractual usage.
 
 ```js

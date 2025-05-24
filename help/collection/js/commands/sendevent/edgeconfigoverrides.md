@@ -1,21 +1,22 @@
 ---
 title: edgeConfigOverrides
-description: Configure datastream overrides.
+description: Configure datastream overrides for just the sendEvent command.
 exl-id: 8e327892-9520-43f5-abf4-d65a5ca34e6d
 ---
-# `edgeConfigOverrides`
+# `edgeConfigOverrides` (`sendEvent` command)
 
+The `edgeConfigOverrides` object allows you to override configuration settings just for the current `sendEvent` command. This object is useful when you have specific commands on the same page that you want to run with different configuration settings than the rest of your Web SDK implementation. If you want to override configuration settings for all commands on a given page, consider using the [`edgeConfigOverrides` object in the `configure` command](../configure/edgeconfigoverrides.md).
 
+The overarching datastream configuration override process consists of two main steps:
 
+1. First, you must define your datastream configuration override when [configuring a datastream](/help/datastreams/configure.md) in the Datastreams UI. See [Datastream configuration overrides](/help/datastreams/overrides.md) in the datastreams documentation for instructions on how to configure overrides.
+1. After you have configured the datastream override in the datastreams UI, you can configure the `edgeConfigOverrides` object.
 
+Note that the `configure` command also supports a `edgeConfigOverrides` object; see [`edgeConfigOverrides`](../configure/edgeconfigoverrides.md) under the `configure` command. The `edgeConfigOverrides` object in the `sendEvent` command takes precedence over the `edgeConfigOverrides` object in the `configure` command if both are set.
 
+## Example
 
-
-### Send configuration overrides via the Web SDK `sendEvent` command {#send-event}
-
-The example below shows all the dynamic datastream configuration options supported on a `sendEvent` call.
-
-If your datastream configuration has all supported services enabled, the sample below will override this setting and disable all services (see the `enabled: false` setting on each service).
+If your datastream configuration has all supported services enabled, the sample below overrides this setting and disables all services (see the `enabled: false` setting on each service). This object supports the same properties as the [`edgeConfigOverrides`](../configure/edgeconfigoverrides.md) object in the `configure` command.
 
 ```js
 alloy("sendEvent", {
@@ -62,24 +63,4 @@ alloy("sendEvent", {
   },
 });
 ```
-
-|Parameter|Description|
-|---|---|
-| `renderDecisions` |  |
-|`edgeConfigOverrides.datastreamId`| Use this parameter to allow a single request to go to a different datastream than the one defined by the `configure` command. |
-| `edgeConfigOverrides.com_adobe_experience_platform` | Defines the dynamic datastream configuration for the Experience Platform service.|
-| `edgeConfigOverrides.com_adobe_experience_platform.enabled`| Defines whether the event will be sent to the Experience Platform service or not. |
-| `edgeConfigOverrides.com_adobe_experience_platform.datasets`| Defines the datasets used for the event. |
-| `edgeConfigOverrides.com_adobe_experience_platform.com_adobe_edge_ode.enabled`| Defines whether the event is sent to the Offer Decisioning service or not. |
-| `edgeConfigOverrides.com_adobe_experience_platform.com_adobe_edge_segmentation.enabled`| Defines whether the event is sent to the edge segmentation service or not. |
-| `edgeConfigOverrides.com_adobe_experience_platform.com_adobe_edge_destinations.enabled`| Defines whether the event data is sent to the edge destinations or not. |
-| `edgeConfigOverrides.com_adobe_experience_platform.com_adobe_edge_ajo.enabled`| Defines whether the event data is sent to Adobe Journey Optimizer service or not. |
-| `com_adobe_analytics.enabled`| Defines whether the event data is sent to Adobe Analytics or not. |
-| `com_adobe_analytics.reportSuites[]`| An array of strings that determines to which report suites you want to send Analytics data.|
-| `com_adobe_identity.idSyncContainerId`| The third-party ID sync container that you want to use in Audience Manager. For this ID sync container to work, you must set `com_adobe_audience_manager.enabled` to `true`. Otherwise, the Audience Manager service is disabled. |
-| `com_adobe_target.enabled`| Defines whether the event data is sent to Adobe Target. |
-| `com_adobe_target.propertyToken`| The token for the Adobe Target destination property.|
-| `com_adobe_audience_manager.enabled`| Defines whether the event data is sent to the Audience Manager service. |
-| `com_adobe_launch_ssf`| Defines whether the event data is sent to server-side forwarding. |
-
 
