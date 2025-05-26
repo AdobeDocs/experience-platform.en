@@ -81,33 +81,35 @@ If creating a new dataset, select a schema using the [!DNL Algolia Profile] fiel
 
 ![The new dataset step.](../../../../images/tutorials/create/algolia/user-profiles/dataflow-detail-new-dataset.png)
 
-### Create [!DNL Algolia User Token] Identity Namespace
+### Create [!DNL Algolia User Token] identity namespace
 
-If the [!DNL Algolia User Token] identity namespace doesn't exist, you'll need to create it.
+You will need to create the [!DNL Algolia User Token] identity namespace if it doesn't already exist in your organization.
 
-Navigate to **[!UICONTROL Identities]** in the left sidebar and select **[!UICONTROL Create identity namespace]**.
+Use the left navigation and select **[!UICONTROL Identities]** to access the [Identity Service](../../../../../identity-service/home.md) UI workspace and then select **[!UICONTROL Create identity namespace]**.
+
+Next, provide a **[!UICONTROL Display Name]** and an **[!UICONTROL Identity Symbol]** for your custom namespace. During this step, you must also configure the type of your namespace. When finished, select **[!UICONTROL Create]**.
 
 ![Create identity namespace screen.](../../../../images/tutorials/create/algolia/user-profiles/aep-identity-inputs.png)
 
-Enter:
-
-* **[!UICONTROL Display Name]**: [!DNL Algolia User Token]
-* **[!UICONTROL Identity Symbol]**: [!DNL AlgoliaUserToken]
-* **[!UICONTROL Select a type]**: [!DNL Cookie ID]
-
-Select **[!UICONTROL Create]**.
-
-![Successful creation of the Algolia Identity namespace.](../../../../images/tutorials/create/algolia/user-profiles/aep-algolia-user-token-identity.png)
+| Custom namespace config | Value |
+| --- | --- |
+| **[!UICONTROL Display Name]** | [!DNL Algolia User Token] |
+| **[!UICONTROL Identity Symbol]** | [!DNL AlgoliaUserToken] |
+| **[!UICONTROL Select a type]** | [!DNL Cookie ID] |
 
 Once added, the namespace appears in the list. You can now apply it in your schema.
 
+![Successful creation of the Algolia Identity namespace.](../../../../images/tutorials/create/algolia/user-profiles/aep-algolia-user-token-identity.png)
+
+### Apply your namespace to your schema
+
+Use the left navigation and select **[!UICONTROL Schemas]** to access the [Schemas](../../../../../xdm/ui/overview.md) UI workspace. Use the schemas workspace to create or update a schema with the [!DNL Algolia Profile Details] field group. Next, navigate to the **[!UICONTROL User Token]** field and use the right-rail to select the **[!UICONTROL Identity]** box. Additionally, use the input box to define the [!DNL Algolia User Token] identity namespace. When finished, select **[!UICONTROL Save]**.
+
 ![Set identity on field.](../../../../images/tutorials/create/algolia/user-profiles/set-set-identity-on-field.png)
 
-Navigate to **[!UICONTROL Schemas]** in the left sidebar. Create or update a schema and add the [!DNL Algolia Profile Details] field group. Then navigate to the **[!UICONTROL User Token]** field, scroll to **[!UICONTROL Identity]**, check the box, and select the [!DNL Algolia User Token] identity namespace.  Click **[!UICONTROL Save]**.
-
-![User Profile.](../../../../images/tutorials/create/algolia/user-profiles/user-profile.png)
-
 After the **[!UICONTROL User Token]** field is assigned the [!DNL Algolia User Token] identity namespace, the identity appears in the user profile for any profile.
+
+![The user profile interface.](../../../../images/tutorials/create/algolia/user-profiles/user-profile.png)
 
 ## Map data fields to an XDM schema
 
