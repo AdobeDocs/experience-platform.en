@@ -174,7 +174,7 @@ Manage dataset expiration and retention settings using the inline action menu fr
 
 >[!IMPORTANT]
 >
->To apply or update retention rules for an ExperienceEvent dataset, your user role must include the **Manage datasets** permission. This role-based access control ensures that only authorized users can modify dataset retention settings.
+>To apply or update retention rules for an ExperienceEvent dataset, your user role must include the **[!UICONTROL Manage datasets]** permission. This role-based access control ensures that only authorized users can modify dataset retention settings.
 >
 >See the [Access control overview](../../access-control/home.md#platform-permissions) for more information on assigning permissions in Adobe Experience Platform.
 
