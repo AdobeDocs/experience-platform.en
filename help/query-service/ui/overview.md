@@ -170,7 +170,7 @@ The **[!UICONTROL Log]** tab provides a list of queries that have previously bee
 | **[!UICONTROL Client]** | The client used for the query. |
 | **[!UICONTROL Created by]** | The name of the person who created the query. |
 
->![Note]
+>[!NOTE]
 >
 >Select the pencil icon (![A pencil icon.](/help/images/icons/edit.png)) from any row of the query log to navigate to the Query Editor. The query is pre-populated for convenient editing.
 
