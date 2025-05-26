@@ -12,11 +12,11 @@ exl-id: 4270a48a-843c-4f1e-b280-35b620581d68
 >
 >The [!DNL Couchbase] source will be deprecated at the end of June 2025.
 
-Source connectors in [!DNL Adobe Experience Platform] provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating an [!DNL Couchbase] source connector using the [!DNL Platform] user interface.
+Source connectors in [!DNL Adobe Experience Platform] provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating an [!DNL Couchbase] source connector using the [!DNL Experience Platform] user interface.
 
 ## Getting started
 
-This tutorial requires a working understanding of the following components of [!DNL Platform]:
+This tutorial requires a working understanding of the following components of [!DNL Experience Platform]:
 
 *   [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
     *   [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
@@ -35,7 +35,7 @@ In order to authenticate your [!DNL Couchbase] source connector, you must provid
 
 ## Connect your [!DNL Couchbase] account
 
-Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Couchbase] account to [!DNL Platform].
+Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Couchbase] account to [!DNL Experience Platform].
 
 Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create an account with.
 
@@ -61,4 +61,4 @@ To connect an existing account, select the [!DNL Couchbase] account you want to 
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your [!DNL Couchbase] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Platform]](../../dataflow/databases.md).
+By following this tutorial, you have established a connection to your [!DNL Couchbase] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Experience Platform]](../../dataflow/databases.md).

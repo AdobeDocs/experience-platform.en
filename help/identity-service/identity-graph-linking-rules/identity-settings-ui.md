@@ -5,11 +5,15 @@ exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
 ---
 # Identity Settings UI
 
->[!AVAILABILITY]
+>[!IMPORTANT]
 >
->Identity graph linking rules is currently in Limited Availability. Contact your Adobe account team for information on how to access the feature in development sandboxes.
+>[!DNL Identity Graph Linking Rules] is now generally available. Contact Adobe Support if you have an existing sandbox that requires collapsed graphs to be un-collapsed ("fixed") after you enable identity settings.
 
 Identity settings is a feature in the Adobe Experience Platform Identity Service UI that you can use to designate unique namespaces and configure namespace priority.
+
+Watch the following video for additional information on using the [!DNL Graph Simulation] interface in the Identity Service UI workspace:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops)
 
 Read this guide to learn how to configure your identity settings in the UI.
 
@@ -17,20 +21,29 @@ Read this guide to learn how to configure your identity settings in the UI.
 
 Read the following documents before you start working with identity settings:
 
-* [Identity graph linking rules](./overview.md)
-* [Identity optimization algorithm](./identity-optimization-algorithm.md)
+* [[!DNL Identity Graph Linking Rules]](./overview.md)
+* [Identity Optimization Algorithm](./identity-optimization-algorithm.md)
 * [Implementation guide](./implementation-guide.md)
 * [Examples of graph configurations](./example-configurations.md)
 * [Namespace priority](./namespace-priority.md)
 * [Graph simulation](./graph-simulation.md)
 
+### Set permissions {#set-permissions}
+
+Next, you must ensure that your account is provisioned with the following permissions:
+
+* **[!UICONTROL View Identity Settings]**: Apply this permission to be able to view unique namespaces and namespace priority in the identity namespace browse page.
+* **[!UICONTROL Edit Identity Settings]**: Apply this permission to be able to edit and save your identity settings.
+
+Contact your administrator if you do not have these permissions. For more information , read the [permissions guide](../../access-control/abac/ui/permissions.md).
+
 ## Configure your identity settings
 
 To access identity settings, navigate to the Identity Service workspace in the Adobe Experience Platform UI and then select **[!UICONTROL Settings]**.
 
-![The identity settings button selected.](../images/rules/identities-ui.png)
+![The identity dashboard interface with the "Settings" button selected.](../images/rules/dashboard.png)
 
-The identity settings page is divided into two sections: [!UICONTROL Person namespaces] and [!UICONTROL Device or cookie namespaces]. Person namespaces are identifiers for single individuals. They can be cross-device IDs, email addresses, and phone numbers. Device or cookie namespaces are identifiers for devices and web browsers and cannot be given a higher priority than person namespaces. You also cannot designate a device or cookie namespace to be a unique namespace.
+The identity settings page is divided into two sections: [!UICONTROL Person namespaces] and [!UICONTROL Device or cookie namespaces]. Person namespaces are identifiers for single individuals. They can be cross-device IDs, email addresses, and phone numbers. Device or cookie namespaces are identifiers for devices and web browsers and cannot be given a higher priority than person namespaces. You also cannot designate a device or cookie namespace as a unique namespace.
 
 ### Configure namespace priority
 
@@ -40,26 +53,38 @@ To configure namespace priority, select a namespace in the identity settings men
 
 ### Designate your unique namespace
 
-To designate a unique namespace, select the [!UICONTROL Unique per graph] checkbox that corresponds with that namespace. You can select more than one unique namespace for your identity settings configuration.
+To designate a unique namespace, select the [!UICONTROL Unique per graph] checkbox that corresponds with that namespace. You can select **up to a maximum of three unique namespaces** for your identity settings configuration.
+
+Once your unique namespaces are established, graphs will no longer be able to have multiple identities that contain a unique namespace. For example, if you designated CRMID as a unique namespace, then a graph can only have one identity with the CRMID namespace. For more information, read the [Identity Optimization Algorithm overview](./identity-optimization-algorithm.md#unique-namespace).
+
+When you are finished with your configurations, select **[!UICONTROL Next]** to proceed.
 
 ![Two namespaces selected and defined as unique.](../images/rules/unique-namespace.png)
 
-Once your unique namespaces are established, graphs will no longer be able to have multiple identities that contain a unique namespace. For example, if you designated CRMID as a unique namespace, then a graph can only have one identity with the CRMID namespace. For more information, read the [identity optimization algorithm overview](./identity-optimization-algorithm.md#unique-namespace).
+From here, you must confirm the following before proceeding to the final step:
 
-When you are finished with your configurations, select **[!UICONTROL Next]**. A confirmation message appears, use this opportunity to verify that your configurations are correct and then select **[!UICONTROL Finish]**.
+1. The selected unique namespaces.
+2. The existence of an identity with the highest prioritized unique namespace in each known profile.
+3. The order of your namespace priority.
 
-![The validation page with Finish highlighted.](../images/rules/finish.png)
+![A confirmation window with the "confirm" button selected.](../images/rules/confirmation.png)
 
-A warning message appears, indicating that existing graphs will only be affected by the graph algorithm only if the graphs get updated **after saving your settings**, and that the primary identity of event fragments on Real-Time Customer Profile will not be updated even after namespace priority changes. Additionally, you are notified that it  will take up to **six hours** for your new or updated settings to take effect. To confirm, enter your sandbox name and then select **[!UICONTROL Confirm]**.
+### Confirm your settings {#confirm-your-settings}
 
-![The confirmation window that displays a warning about a six-hour delay before configurations get processed.](../images/rules/confirm-settings.png)
+>[!IMPORTANT]
+>
+>* The final step is another confirmation message indicating that existing graphs will only be affected by the graph algorithm **only if the graphs get updated after saving your settings**, and that the primary identity of event fragments on Real-Time Customer Profile will not be updated even after namespace priority changes.
+>
+>* It will take up up to  **24 hours** for your new or updated settings to take effect. To confirm, enter your sandbox name and then select **[!UICONTROL Confirm]**. 
+
+![The confirmation window that displays a warning about a six-hour delay before configurations get processed.](../images/rules/complete.png)
 
 ## Next steps
 
-For more information on identity graph linking rules, read the following documentation:
+For more information on [!DNL Identity Graph Linking Rules], read the following documentation:
 
-* [Identity graph linking rules overview](./overview.md)
-* [Identity optimization algorithm](./identity-optimization-algorithm.md)
+* [[!DNL Identity Graph Linking Rules] overview](./overview.md)
+* [Identity Optimization Algorithm](./identity-optimization-algorithm.md)
 * [Implementation guide](./implementation-guide.md)
 * [Examples of graph configurations](./example-configurations.md)
 * [Troubleshooting and FAQ](./troubleshooting.md)

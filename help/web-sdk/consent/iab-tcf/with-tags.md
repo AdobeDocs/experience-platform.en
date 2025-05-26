@@ -1,9 +1,9 @@
 ---
-title: Integrate IAB TCF 2.0 Support using tags and the Platform Web SDK Extension
+title: Integrate IAB TCF 2.0 Support using tags and the Experience Platform Web SDK Extension
 description: Learn how to set up IAB TCF 2.0 consent with tags and the Adobe Experience Platform Web SDK extension.
 exl-id: dc0e6b68-8257-4862-9fc4-50b370ef204f
 ---
-# Integrate IAB TCF 2.0 support using tags and the Platform Web SDK extension
+# Integrate IAB TCF 2.0 support using tags and the Experience Platform Web SDK extension
 
 Adobe Experience Platform Web SDK supports the Interactive Advertising Bureau Transparency & Consent Framework, version 2.0 (IAB TCF 2.0). This guide shows you how to set up a tag property for sending IAB TCF 2.0 consent information to Adobe using the Adobe Experience Platform Web SDK tag extension.
 
@@ -11,7 +11,7 @@ If you do not wish to use tags, please refer to the guide on [using IAB TCF 2.0 
 
 ## Getting started
 
-In order to use IAB TCF 2.0 with tags and the Platform Web SDK extension, you need to have an XDM schema and dataset available.
+In order to use IAB TCF 2.0 with tags and the Experience Platform Web SDK extension, you need to have an XDM schema and dataset available.
 
 Additionally, this guide requires you to have a working understanding of Adobe Experience Platform Web SDK. For a quick refresher, please read the [Adobe Experience Platform Web SDK overview](../../home.md) and the [Frequently asked questions](../../faq.md) documentation.
 
@@ -107,7 +107,7 @@ addEventListener();
 
 This code is identical to the previous custom code, except that both `useractioncomplete` and `tcloaded` events are handled. The [previous custom code](#consent-code-1) only triggers when the customer chooses their preferences for the first time. This code also triggers when the customer has already chosen their preferences. For example, on the second page load.
 
-Add a "Send Event" action from the Platform Web SDK extension. Within the XDM field, choose the XDM data element you created in the previous section.
+Add a "Send Event" action from the Experience Platform Web SDK extension. Within the XDM field, choose the XDM data element you created in the previous section.
 
 ## Sending other events with IAB TCF 2.0 consent information
 
@@ -115,4 +115,4 @@ When events are triggered after the initial Experience Event, the two data eleme
 
 ## Next steps
 
-Now that you have learned how to use IAB TCF 2.0 with the Platform Web SDK extension, you can also choose to integrate with other Adobe solutions such as Adobe Analytics or Adobe Real-Time Customer Data Platform. See the [IAB Transparency & Consent Framework 2.0 overview](./overview.md) for more information.
+Now that you have learned how to use IAB TCF 2.0 with the Experience Platform Web SDK extension, you can also choose to integrate with other Adobe solutions such as Adobe Analytics or Adobe Real-Time Customer Data Platform. See the [IAB Transparency & Consent Framework 2.0 overview](./overview.md) for more information.

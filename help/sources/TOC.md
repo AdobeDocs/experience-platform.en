@@ -69,6 +69,7 @@ role: Developer
     - [Amazon Redshift connector](connectors/databases/redshift.md)
     - [Apache Hive on Azure HDInsights connector](connectors/databases/hive.md)
     - [Apache Spark on Azure HDInsights connector](connectors/databases/spark.md)
+    - [Azure Databricks connector](connectors/databases/databricks.md)
     - [Azure Data Explorer connector](connectors/databases/data-explorer.md)
     - [Azure Synapse Analytics connector](connectors/databases/synapse-analytics.md)
     - [Azure Table Storage connector](connectors/databases/ats.md)
@@ -89,6 +90,9 @@ role: Developer
   - Data & identity partner {#data-partner}
     - [Acxiom Data Ingestion](connectors/data-partners/acxiom-data-ingestion.md)
     - [Acxiom Prospecting Data Import](connectors/data-partners/acxiom-prospecting-data-import.md)
+    - [Algolia User Profiles](connectors/data-partners/algolia-user-profiles.md)
+    - [Bombora Intent](connectors/data-partners/bombora.md)
+    - [Demandbase Intent](connectors/data-partners/demandbase.md)
     - [Merkury Enterprise Identity Resolution](connectors/data-partners/merkury.md)
   - eCommerce {#ecommerce}
     - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
@@ -156,6 +160,7 @@ role: Developer
       - [Amazon Redshift](tutorials/api/create/databases/redshift.md)
       - [Apache Hive on Azure HDInsights](tutorials/api/create/databases/hive.md)
       - [Apache Spark on Azure HDInsights](tutorials/api/create/databases/spark.md)
+      - [Azure Databricks](tutorials/api/create/databases/databricks.md)
       - [Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)
       - [Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
       - [Azure Table Storage](tutorials/api/create/databases/ats.md)
@@ -230,6 +235,7 @@ role: Developer
   - [Delete dataflows](tutorials/api/delete-dataflows.md)
   - [Ingest encrypted data](tutorials/api/encrypt-data.md)
   - [Save a dataflow as a draft](tutorials/api/draft.md)
+  - [Apply access labels to a dataflow](tutorials/api/labels.md)
 - UI tutorials {#ui-tutorials}
   - Create a source connection {#create}
     - Adobe applications {#adobe-applications}
@@ -300,6 +306,9 @@ role: Developer
     - Data & identity partner {#data-partner}
       - [Acxiom Data Ingestion](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
       - [Acxiom Prospecting Data Import](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
+      - [Algolia User Profiles](tutorials/ui/create/data-partners/algolia-user-profiles.md)
+      - [Bombora Intent](tutorials/ui/create/data-partners/bombora.md)
+      - [Demandbase Intent](tutorials/ui/create/data-partners/demandbase.md)
       - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
     - eCommerce {#ecommerce}
       - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
@@ -353,6 +362,7 @@ role: Developer
   - [Delete dataflows](tutorials/ui/delete.md)
   - [Subscribe to sources alerts](tutorials/ui/alerts.md)
   - [Save a dataflow as a draft](tutorials/ui/draft.md)
+  - [Apply access labels to a dataflow](tutorials/ui/labels.md)
 - Self-Serve Sources (Batch SDK) {#sdk}
   - [Overview](sources-sdk/overview.md)
   - Configure your connection specification {#config}
@@ -389,4 +399,4 @@ role: Developer
 - [IP address allow list](ip-address-allow-list.md)
 - [Frequently asked questions](./troubleshooting.md)
 - [API reference](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

@@ -7,7 +7,7 @@ exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
 
 >[!WARNING]
 >
->The [!DNL Salesforce Marketing Cloud] source will be deprecated at the end of June 2025.
+>The [!DNL Salesforce Marketing Cloud] source will be deprecated in January 2026. A new source will be released later this year as an alternative. Once the new source is released, you must plan to migrate to the new source by creating new account connections and dataflows before the end of January 2026.
 
 This tutorial provides steps on how to connect your [!DNL Salesforce Marketing Cloud] account to Adobe Experience Platform through the UI.
 
@@ -24,7 +24,7 @@ If you already have a [!DNL Salesforce Marketing Cloud] account, you may skip th
 
 ### Gather required credentials
 
-In order to access your [!DNL Salesforce Marketing Cloud] account on Platform, you must provide the following values:
+In order to access your [!DNL Salesforce Marketing Cloud] account on Experience Platform, you must provide the following values:
 
 | Credential | Description |
 | ---------- | ----------- |
@@ -40,7 +40,7 @@ For more information about authentication for [!DNL Salesforce Marketing Cloud],
 >
 >Custom object ingestion is currently not supported by the [!DNL Salesforce Marketing Cloud] source integration.
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] displays a variety of sources supported by Experience Platform.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] displays a variety of sources supported by Experience Platform.
 
 You can select the appropriate category from the list of categories. You can also use the search bar to filter for a specific source.
 

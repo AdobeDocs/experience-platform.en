@@ -24,7 +24,7 @@ Create a live outbound connection to your SFTP server to periodically export del
 
 ## Connect to SFTP through API or UI {#connect-api-or-ui}
 
-* To connect to your SFTP storage location using the Platform user interface, read the sections [Connect to the destination](#connect) and [Activate audiences to this destination](#activate) below.
+* To connect to your SFTP storage location using the Experience Platform user interface, read the sections [Connect to the destination](#connect) and [Activate audiences to this destination](#activate) below.
 * To connect to your SFTP storage location programmatically, read the [Activate audiences to file-based destinations by using the Flow Service API tutorial](../../api/activate-segments-file-based-destinations.md).
 
 ## Supported audiences {#supported-audiences}
@@ -55,14 +55,26 @@ Refer to the table below for information about the destination export type and f
 
 This destination supports dataset exports. For complete information on how to set up dataset exports, read the tutorials: 
 
-* How to [export datasets using the Platform user interface](/help/destinations/ui/export-datasets.md). 
+* How to [export datasets using the Experience Platform user interface](/help/destinations/ui/export-datasets.md). 
 * How to [export datasets programmatically using the Flow Service API](/help/destinations/api/export-datasets.md).
 
 ## File format of the exported data {#file-format}
 
-When exporting *audience data*, Platform creates a `.csv`, `parquet`, or `.json` file in the storage location that you provided. For more information about the files, see the [supported file formats for export](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) section in the audience activation tutorial.
+When exporting *audience data*, Experience Platform creates a `.csv`, `parquet`, or `.json` file in the storage location that you provided. For more information about the files, see the [supported file formats for export](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) section in the audience activation tutorial.
 
-When exporting *datasets*, Platform creates a `.parquet` or `.json` file in the storage location that you provided. For more information about the files, see the [verify successful dataset export](../../ui/export-datasets.md#verify) section in the export datasets tutorial.
+When exporting *datasets*, Experience Platform creates a `.parquet` or `.json` file in the storage location that you provided. For more information about the files, see the [verify successful dataset export](../../ui/export-datasets.md#verify) section in the export datasets tutorial.
+
+## SFTP server connection requirements {#sftp-connection-requirements}
+
+To ensure successful data exports, you must configure your target SFTP server to allow a sufficient number of concurrent connections. If your SFTP server limits the number of simultaneous connections, you may experience export job failures, especially when exporting multiple audiences or datasets at the same time.
+
+**Recommendation**
+For optimal performance, your SFTP server should allow at least one concurrent connection for each audience or dataset being exported. At a minimum, the server should support at least 30% of the total number of audiences or datasets scheduled for export at the same time.
+
+**Example**  
+If you schedule exports for 100 audiences or datasets simultaneously, your SFTP server should allow at least 30 concurrent connections.
+
+Properly configuring your SFTP server's connection limits helps prevent failed exports and ensures reliable data delivery from Adobe Experience Platform.
 
 ## Connect to the destination {#connect}
 

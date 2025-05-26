@@ -26,13 +26,13 @@ Sample use cases include:
 - Collapsing multiple event-based audiences into a more condensed group of computed attributes
 - Re-targeting unauthenticated users offsite using recent partner IDs from events
 
-This guide will help you to better understand the role of computed attributes within Platform, in addition to explaining the basics of computed attributes.
+This guide will help you to better understand the role of computed attributes within Experience Platform, in addition to explaining the basics of computed attributes.
 
 ## Understanding computed attributes
 
 Adobe Experience Platform enables you to easily import and merge data from multiple sources in order to generate [!DNL Real-Time Customer Profiles]. Each profile contains important information related to an individual, such as their contact information, preferences, and purchase history, providing a 360-degree view of the customer. 
 
-Some of the information collected in the profile is easily understood when reading the data fields directly (for example, "first name") whereas other data requires performing multiple calculations or relying on other fields and values in order to generate the information (for example, "lifetime purchase total"). To make this data easier to understand at a glance, [!DNL Platform] allows you to create computed attributes that automatically perform these references and calculations, returning the value in the appropriate field.
+Some of the information collected in the profile is easily understood when reading the data fields directly (for example, "first name") whereas other data requires performing multiple calculations or relying on other fields and values in order to generate the information (for example, "lifetime purchase total"). To make this data easier to understand at a glance, [!DNL Experience Platform] allows you to create computed attributes that automatically perform these references and calculations, returning the value in the appropriate field.
 
 Computed attributes include creating an expression, or "rule", that operates on incoming data and stores the resulting value in a profile attribute. Expressions can be defined in multiple different ways, allowing you to specify which events to aggregate on, aggregate functions, or the lookback durations.
 

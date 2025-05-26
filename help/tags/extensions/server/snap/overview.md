@@ -6,7 +6,7 @@ exl-id: 1c2d7243-5bcd-40a0-8515-9ab72613c5f3
 ---
 # [!DNL Snapchat] Conversions API extension overview
 
-The [!DNL Snap] Conversion API Extension is a secure [Edge Network Server API](/help/server-api/overview.md) interface that allows you to share information with [!DNL Snapchat] directly about user actions on your websites. You can leverage the event forwarding rules to send data from the **[!DNL Adobe Experience Platform Edge Network]** to **[!DNL Snapchat]** by using the **[!DNL Snap]** Conversion API extension.
+The [!DNL Snap] Conversion API Extension is a secure [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/) interface that allows you to share information with [!DNL Snapchat] directly about user actions on your websites. You can leverage the event forwarding rules to send data from the **[!DNL Adobe Experience Platform Edge Network]** to **[!DNL Snapchat]** by using the **[!DNL Snap]** Conversion API extension.
 
 ## [!DNL Snapchat] prerequisites {#prerequisites}
 
@@ -73,7 +73,7 @@ See the [Event Forwarding properties documentation](/help/tags/ui/event-forwardi
 
 ## Create rules to send conversion events to Snap {#create-snap-rules}
 
-[Rules](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule) are used to trigger extensions in Platform. This section outlines how to create rules within your event forwarding property to send conversion events to Snap using the Conversions API extension.
+[Rules](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule) are used to trigger extensions in Experience Platform. This section outlines how to create rules within your event forwarding property to send conversion events to Snap using the Conversions API extension.
 
 ### Create a new rule
 
@@ -195,4 +195,4 @@ If you experience issues with your **Event Quality Score**, learn more about our
 
 ## Next steps {#next-steps}
 
-This guide covered how to send server-side event data to **[!DNL Snap]** using the **[!DNL Snap Conversions API]** extension. For more information on event forward capabilities in Platform, refer to the [Event forwarding overview](../../../ui/event-forwarding/overview.md).
+This guide covered how to send server-side event data to **[!DNL Snap]** using the **[!DNL Snap Conversions API]** extension. For more information on event forward capabilities in Experience Platform, refer to the [Event forwarding overview](../../../ui/event-forwarding/overview.md).

@@ -13,13 +13,13 @@ exl-id: b71fc922-7722-4279-8fc6-e5d7735e1ebb
 >- You can now use the [!DNL Amazon Kinesis] source when running Adobe Experience Platform on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../../landing/multi-cloud.md).
 
 
-Adobe Experience Platform provides native connectivity for cloud providers like AWS, [!DNL Google Cloud Platform], and [!DNL Azure]. You can bring your data from these systems into [!DNL Platform].
+Adobe Experience Platform provides native connectivity for cloud providers like AWS, [!DNL Google Cloud Platform], and [!DNL Azure]. You can bring your data from these systems into [!DNL Experience Platform].
 
-Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM Parquet, or delimited. Every step of the process is integrated into the Sources workflow. [!DNL Platform] allows you to bring in data from [!DNL Amazon Kinesis] in real time.
+Cloud storage sources can bring your own data into [!DNL Experience Platform] without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM Parquet, or delimited. Every step of the process is integrated into the Sources workflow. [!DNL Experience Platform] allows you to bring in data from [!DNL Amazon Kinesis] in real time.
 
 >[!NOTE]
 >
->The scale factor for [!DNL Kinesis] must be increased if you need to ingest high volume data. Currently, maximum volume of data that you can bring from your [!DNL Kinesis] account to Platform is 4000 records per second. To scale up and ingest higher volume data, please contact your Adobe representative.
+>The scale factor for [!DNL Kinesis] must be increased if you need to ingest high volume data. Currently, maximum volume of data that you can bring from your [!DNL Kinesis] account to Experience Platform is 4000 records per second. To scale up and ingest higher volume data, please contact your Adobe representative.
 
 ## Prerequisites
 
@@ -34,7 +34,7 @@ A [!DNL Kinesis] stream requires the following permissions to create a source co
 - `DescribeStream`
 - `ListStreams`
 
-These permissions are arranged through the [!DNL Kinesis] console and are checked by Platform once you enter your credentials and select your data stream.
+These permissions are arranged through the [!DNL Kinesis] console and are checked by Experience Platform once you enter your credentials and select your data stream.
 
 The example below displays the minimum access rights required to create a [!DNL Kinesis] source connection.
 
@@ -79,13 +79,13 @@ For more information on controlling access for [!DNL Kinesis] data streams, see 
 | `TRIM_HORIZON` | The data is read starting from the oldest data record. |
 | `LATEST` | The data is read starting from the most recent data record. |
 
-A [!DNL Kinesis] UI source currently only supports `TRIM_HORIZON`, while the API supports both `TRIM_HORIZON` and `LATEST` as modes to get data. The default iterator value that Platform uses for the [!DNL Kinesis] source is `TRIM_HORIZON`.
+A [!DNL Kinesis] UI source currently only supports `TRIM_HORIZON`, while the API supports both `TRIM_HORIZON` and `LATEST` as modes to get data. The default iterator value that Experience Platform uses for the [!DNL Kinesis] source is `TRIM_HORIZON`.
 
 For more information on iterator types, see the following [[!DNL Kinesis] document](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#API_GetShardIterator_RequestSyntax).
 
-## Connect [!DNL Amazon Kinesis] to [!DNL Platform]
+## Connect [!DNL Amazon Kinesis] to [!DNL Experience Platform]
 
-The documentation below provides information on how to connect [!DNL Amazon Kinesis] to [!DNL Platform] using APIs or the user interface:
+The documentation below provides information on how to connect [!DNL Amazon Kinesis] to [!DNL Experience Platform] using APIs or the user interface:
 
 ### Using APIs
 

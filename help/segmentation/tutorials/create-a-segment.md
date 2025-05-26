@@ -17,9 +17,9 @@ This tutorial requires a working understanding of the various [!DNL Adobe Experi
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Allows you to build audiences using segment definitions or other external sources from Real-Time Customer Profile data.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data. To best make use of Segmentation, please ensure your data is ingested as profiles and events according to the [best practices for data modeling](../../xdm/schema/best-practices.md).
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data. To best make use of Segmentation, please ensure your data is ingested as profiles and events according to the [best practices for data modeling](../../xdm/schema/best-practices.md).
 
-The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Platform] APIs.
+The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Experience Platform] APIs.
 
 ### Reading sample API calls
 
@@ -27,19 +27,19 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Experience Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
+>For more information on sandboxes in [!DNL Experience Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 
@@ -66,7 +66,7 @@ There are two required steps to preview or get an estimate of your segment defin
   
 ### How estimates are generated
 
-As data enabled for Real-Time Customer Profile is ingested into Platform, it is stored within the Profile data store. When the ingestion of records into the Profile store increases or decreases the total profile count by more than 5%, a sampling job is triggered to update the count. If the profile count does not change by more than 5%, the sampling job will run automatically on a weekly basis. 
+As data enabled for Real-Time Customer Profile is ingested into Experience Platform, it is stored within the Profile data store. When the ingestion of records into the Profile store increases or decreases the total profile count by more than 5%, a sampling job is triggered to update the count. If the profile count does not change by more than 5%, the sampling job will run automatically on a weekly basis. 
 
 The way in which the sample is triggered depends on the type of ingestion being used:
 

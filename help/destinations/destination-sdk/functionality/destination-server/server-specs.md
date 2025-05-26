@@ -5,11 +5,11 @@ exl-id: 62202edb-a954-42ff-9772-863cea37a889
 ---
 # Server specs for destinations created with Destination SDK
 
-Destination server specs define the type of destination platform that will receive the data from Adobe Experience Platform, and the communication parameters between Platform and your destination. For instance:
+Destination server specs define the type of destination platform that will receive the data from Adobe Experience Platform, and the communication parameters between Experience Platform and your destination. For instance:
 
-* A [streaming](#streaming-example) destination server spec defines the HTTP server endpoint that will receive the HTTP messages from Platform. To learn to configure how the HTTP calls to the endpoint are formatted, read the [templating specs](templating-specs.md) page.
-* An [Amazon S3](#s3-example) destination server spec defines the [!DNL S3] bucket name and path where Platform will export the files.
-* An [SFTP](#sftp-example) destination server spec defines the host name, root directory, communication port, and encryption type of the SFTP server where Platform will export the files.
+* A [streaming](#streaming-example) destination server spec defines the HTTP server endpoint that will receive the HTTP messages from Experience Platform. To learn to configure how the HTTP calls to the endpoint are formatted, read the [templating specs](templating-specs.md) page.
+* An [Amazon S3](#s3-example) destination server spec defines the [!DNL S3] bucket name and path where Experience Platform will export the files.
+* An [SFTP](#sftp-example) destination server spec defines the host name, root directory, communication port, and encryption type of the SFTP server where Experience Platform will export the files.
 
 To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the following destination configuration overview pages:
 
@@ -40,7 +40,7 @@ When [creating](../../authoring-api/destination-server/create-destination-server
 
 ## Hard-coded versus templatized fields {#templatized-fields}
 
-When creating a destination server through Destination SDK, you can define configuration parameter values either by hard-coding them into the configuration, or by using templatized fields. Templatized fields allow you to read user-provided values from the Platform UI.
+When creating a destination server through Destination SDK, you can define configuration parameter values either by hard-coding them into the configuration, or by using templatized fields. Templatized fields allow you to read user-provided values from the Experience Platform UI.
 
 Destination server parameters have two configurable fields. These options dictate whether you are using hard-coded or templatized values.
 
@@ -57,7 +57,7 @@ Both hard-coded and templatized fields have their own uses in Destination SDK, d
 
 **Connecting to your destination without user input**
 
-When users [connect to your destination](../../../ui/connect-destination.md) in the Platform UI, you might want to handle the destination connection process without their input.
+When users [connect to your destination](../../../ui/connect-destination.md) in the Experience Platform UI, you might want to handle the destination connection process without their input.
 
 To do this, you can hard-code the destination platform connection parameters in the server spec. When you use hard-coded parameter values in your destination server configuration, the connection between Adobe Experience Platform and your destination platform is handled without any input from the user.
 
@@ -77,13 +77,13 @@ In the example below, a partner creates a Data Landing Zone destination server w
 }
 ```
 
-As a result, when users go through the [destination connection tutorial](../../../ui/connect-destination.md), they will not see an [authentication step](../../../ui/connect-destination.md#authenticate). Instead, the authentication is handled by Platform, as shown in the image below.
+As a result, when users go through the [destination connection tutorial](../../../ui/connect-destination.md), they will not see an [authentication step](../../../ui/connect-destination.md#authenticate). Instead, the authentication is handled by Experience Platform, as shown in the image below.
 
-![Ui image showing the authentication screen between Platform and a DLZ destination.](../../assets/functionality/destination-server/server-spec-hardcoded.png)
+![Ui image showing the authentication screen between Experience Platform and a DLZ destination.](../../assets/functionality/destination-server/server-spec-hardcoded.png)
 
 **Connecting to your destination with user input**
 
-When the connection between Platform and your destination should be established following a specific user input in the Platform UI, such as selecting an API endpoint or providing a field value, you can use templatized fields in the server spec to read the user input and connect to your destination platform.
+When the connection between Experience Platform and your destination should be established following a specific user input in the Experience Platform UI, such as selecting an API endpoint or providing a field value, you can use templatized fields in the server spec to read the user input and connect to your destination platform.
 
 In the example below, a partner creates a [real-time (streaming)](#streaming-example) integration and the `url.value` field uses the templatized parameter `{{customerData.region}}` to personalize part of the API endpoint based on user input.
 
@@ -100,7 +100,7 @@ In the example below, a partner creates a [real-time (streaming)](#streaming-exa
 }
 ```
 
-To give users the option of selecting a value from the Platform UI, the `region` parameter must also be defined in the [destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md) as a customer data field, as shown below:
+To give users the option of selecting a value from the Experience Platform UI, the `region` parameter must also be defined in the [destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md) as a customer data field, as shown below:
 
 ```json
 "customerDataFields":[
@@ -147,7 +147,7 @@ The sample below shows an example of a destination server configuration for a re
 |---|---|---|
 |`name` | String | *Required.* Represents a friendly name of your server, visible only to Adobe. This name is not visible to partners or customers. Example: `Moviestar destination server`. |
 |`destinationServerType` | String |*Required.* Set this to `URL_BASED` for streaming destinations.|
-|`templatingStrategy` | String | *Required.* <ul><li>Use `PEBBLE_V1` if you are using a templatized field instead of a hard-coded value in the `value` field. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items`, where users must select the endpoint region from the Platform UI. </li><li> Use `NONE` if no temmplatized transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items` </li></ul>  |
+|`templatingStrategy` | String | *Required.* <ul><li>Use `PEBBLE_V1` if you are using a templatized field instead of a hard-coded value in the `value` field. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items`, where users must select the endpoint region from the Experience Platform UI. </li><li> Use `NONE` if no temmplatized transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items` </li></ul>  |
 |`value` | String | *Required.* Fill in the address of the API endpoint that Experience Platform should connect to. |
 
 {style="table-layout:auto"}
@@ -288,7 +288,7 @@ The sample below shows an example of a destination server configuration for an [
 
 ## [!DNL Data Landing Zone] ([!DNL DLZ]) destination server {#dlz-example}
 
-This destination server allows you to export files containing Platform data to a [[!DNL Data Landing Zone]](../../../catalog/cloud-storage/data-landing-zone.md) storage.
+This destination server allows you to export files containing Experience Platform data to a [[!DNL Data Landing Zone]](../../../catalog/cloud-storage/data-landing-zone.md) storage.
 
 The sample below shows an example of a destination server configuration for a [!DNL Data Landing Zone] ([!DNL DLZ]) destination.
 
@@ -317,7 +317,7 @@ The sample below shows an example of a destination server configuration for a [!
 
 ## [!DNL Google Cloud Storage] destination server {#gcs-example}
 
-This destination server allows you to export files containing Platform data to your [!DNL Google Cloud Storage] account.
+This destination server allows you to export files containing Experience Platform data to your [!DNL Google Cloud Storage] account.
 
 The sample below shows an example of a destination server configuration for a [!DNL Google Cloud Storage] destination.
 

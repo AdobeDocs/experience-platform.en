@@ -23,11 +23,11 @@ The attribute data in the snapshot shows the data exactly as it appears at the s
 
 ## Explore the Profiles dashboard {#explore-dashboard}
 
-To navigate to the Profiles dashboard within the Platform UI, select **[!UICONTROL Profiles]** in the left rail, then select the **[!UICONTROL Overview]** tab to display the dashboard.
+To navigate to the Profiles dashboard within the Experience Platform UI, select **[!UICONTROL Profiles]** in the left rail, then select the **[!UICONTROL Overview]** tab to display the dashboard.
 
 >[!NOTE]
 >
->If your organization is new to Platform and does not yet have active Profile datasets or merge policies created, the Profiles dashboard is not visible. Instead, the [!UICONTROL Overview] tab displays links and documentation to help you get started with Real-Time Customer Profile.
+>If your organization is new to Experience Platform and does not yet have active Profile datasets or merge policies created, the Profiles dashboard is not visible. Instead, the [!UICONTROL Overview] tab displays links and documentation to help you get started with Real-Time Customer Profile.
 
 ![The Experience Platform Profiles dashboard with Profiles and Overview highlighted.](../images/profiles/dashboard-overview.png)
 
@@ -47,7 +47,7 @@ From the widget library you can browse the selection of standard and custom audi
 
 ### View SQL {#view-sql}
 
-You can view the SQL that generates the insights visualized on your dashboard with a toggle on the [!UICONTROL Overview] workspace. You can take inspiration from the SQL of your existing insights to create new queries that derive unique insights from Platform data based on your business needs. To learn more about this feature, see the [View SQL UI guide](../view-sql.md).
+You can view the SQL that generates the insights visualized on your dashboard with a toggle on the [!UICONTROL Overview] workspace. You can take inspiration from the SQL of your existing insights to create new queries that derive unique insights from Experience Platform data based on your business needs. To learn more about this feature, see the [View SQL UI guide](../view-sql.md).
 
 <!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 
@@ -113,7 +113,7 @@ Customer consent and contact preferences are complex topics. To learn how consen
 
 * To learn about the schema field groups required to [collect consent data according to the Adobe standard](../../landing/governance-privacy-security/consent/adobe/overview.md), see the documentation on these Profile-enabled schema field groups.
     * [[!UICONTROL Consent and Preference Details]](../../xdm/field-groups/profile/consents.md)
-    * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) (required if using the Platform Web or Mobile SDK to send consent signals)
+    * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) (required if using the Experience Platform Web or Mobile SDK to send consent signals)
 * To learn how to process customer consent and preference data using the Adobe standard, see the overview on [consent processing in Experience Platform](../../landing/governance-privacy-security/consent/adobe/overview.md).
 * A combined data governance and consent policy can be used to filter profiles for segmentation based on their consent preferences and your established organizational rules. To learn how to create and use these combined policies, see the user guide on [managing data usage policies](../../data-governance/policies/user-guide.md#combine-policies). 
 
@@ -163,7 +163,7 @@ The [!UICONTROL Union Schema] dashboard displays the union schema for a specific
 
 Union schemas are composed of multiple schemas that share the same class and have been enabled for Profile. They enable you to see in a single view, an amalgamation of every field contained within each schema that shares the same class.
 
-To learn more about [viewing union schemas within the Platform UI](../../profile/ui/union-schema.md#view-union-schemas), refer to the union schema UI guide.
+To learn more about [viewing union schemas within the Experience Platform UI](../../profile/ui/union-schema.md#view-union-schemas), refer to the union schema UI guide.
 
 ## Widgets and metrics
 
@@ -308,7 +308,7 @@ The **[!UICONTROL Profile count change]** widget displays the number of merged p
 >
 >The [!UICONTROL Profile count change] widget reflects the number of profiles added **after** the initial profile ingestion and Profile store set-up. In other words, if your organization set up the Profile store and ingested 4,000,000 on Day 1, within 24 hours the dashboard would be available, however the [!UICONTROL Profile count change] widget would be set to 0. This counting method is done to avoid a spike associated with the initial ingestion of profiles into the system. Over the next 30 days, your organization ingests an additional 1,000,000 profiles into the Profile store. After the next snapshot is taken, the [!UICONTROL Profile count change] widget would show a total of 1,000,000 profiles added, while the [!UICONTROL Profile count] widget would display 5,000,000 total profiles.
 
-![The Platform UI Profiles dashboard with the Profile count change widget highlighted.](../images/profiles/profile-count-change.png)
+![The Experience Platform UI Profiles dashboard with the Profile count change widget highlighted.](../images/profiles/profile-count-change.png)
 
 ### [!UICONTROL Profiles count change trend] {#profiles-count-change-trend}
 
@@ -317,7 +317,7 @@ The **[!UICONTROL Profile count change]** widget displays the number of merged p
 >title="Profiles count change trend"
 >abstract="This widget displays the number of merged profiles that have been added to the Profile store daily over the last 30 days, 90 days, or 12 months. The number also depends on the selected merge policy being applied to your Profile data."
 
-The **[!UICONTROL Profiles count change trend]** widget displays the total number of merged profiles that have been added to the Profile store daily over the last 30 days, 90 days, or 12 months. This number is updated each day when the snapshot is taken, therefore if you were to ingest profiles into Platform, the number of profiles would not be reflected until the next snapshot is taken. The count of profiles added is the result of the selected merge policy being applied to your Profile data in order to merge profile fragments together to form a single profile for each individual. 
+The **[!UICONTROL Profiles count change trend]** widget displays the total number of merged profiles that have been added to the Profile store daily over the last 30 days, 90 days, or 12 months. This number is updated each day when the snapshot is taken, therefore if you were to ingest profiles into Experience Platform, the number of profiles would not be reflected until the next snapshot is taken. The count of profiles added is the result of the selected merge policy being applied to your Profile data in order to merge profile fragments together to form a single profile for each individual. 
 
 To learn more, refer to the [section on merge policies earlier in this document](#merge-policies).
 
@@ -508,7 +508,7 @@ This widget uses a Venn diagram to display the overlap of two selected audiences
 
 As the widget displays the visual crossover of segment definitions, you can optimize your segmentation strategy by studying similarities between your segment definitions.
 
-![The Platform UI Profiles dashboard with the merge policy dropdown and the widget audience dropdowns highlighted.](../images/profiles/audience-overlap-by-merge-policy.png)
+![The Experience Platform UI Profiles dashboard with the merge policy dropdown and the widget audience dropdowns highlighted.](../images/profiles/audience-overlap-by-merge-policy.png)
 
 
 <!-- ## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}

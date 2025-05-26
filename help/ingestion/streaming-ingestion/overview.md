@@ -19,7 +19,7 @@ The following video is designed to help support your understanding of streaming 
 
 ### Stream profile records and [!DNL ExperienceEvents]
 
-With streaming ingestion, users can stream profile records and [!DNL ExperienceEvents] to [!DNL Platform] in seconds to help drive real-time personalization. All data sent to streaming ingestion APIs is automatically persisted in the [!DNL Data Lake].
+With streaming ingestion, users can stream profile records and [!DNL ExperienceEvents] to [!DNL Experience Platform] in seconds to help drive real-time personalization. All data sent to streaming ingestion APIs is automatically persisted in the [!DNL Data Lake].
 
 Please read the [create a streaming connection guide](../tutorials/create-streaming-connection.md) for more information.
 
@@ -47,7 +47,7 @@ The table below displays guidance on the request per seconds limits for streamin
 | RPS limit | Notes |
 | --- | --- |
 | 1000 requests per second | These can contain multiple messages when using `/collection/batch` endpoint. |
-| 10000 individual messages per second | The messages can be grouped into fewer actual requests when using the `/collection/batch` endpoint. |
+| 10000 individual messages per second | The messages can be grouped into fewer actual requests when using the `/collection/` endpoint. |
 
 >[!IMPORTANT]
 >

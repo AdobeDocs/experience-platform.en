@@ -13,7 +13,9 @@ exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
 
 >[!IMPORTANT]
 >
->**Action item**: The [September 2024 release of Experience Platform](/help/release-notes/latest/latest.md#destinations) introduces the option to set an `endTime` date for export dataset dataflows. Adobe is also introducing a default end date of May 1st 2025 for all dataset export dataflows created *prior to the September release*. For any of those dataflows, you need to update the end date in the dataflow manually before the end date, otherwise your exports for stop on that date. Use the Experience Platform UI to view which dataflows will be set to stop on May 1st.
+>**Action item**: The [September 2024 release of Experience Platform](/help/release-notes/latest/latest.md#destinations) introduced the option to set an `endTime` date for export dataset dataflows. Adobe has also introduced a default end date of September 1st 2025 for all dataset export dataflows created *prior to the September 2024 release*. 
+>
+>For any of those dataflows, you need to update the end date in the dataflow manually before the end date, otherwise your exports will stop on that date. Use the Experience Platform UI to view which dataflows will be set to stop on September 1st 2025.
 >
 >Similarly, for any dataflows that you create without specifying an `endTime` date, these will default to an end time six months from the time they are created.
 
@@ -49,6 +51,13 @@ Currently, you can export datasets to the cloud storage destinations highlighted
 * [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog) 
 * [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
+## Prerequisites {#prerequisites}
+
+Note the following prerequisites in order to export datasets:
+
+* To export datasets to cloud storage destinations, you must have successfully [connected to a destination](/help/destinations/ui/connect-destination.md). If you haven't done so already, go to the [destinations catalog](/help/destinations/catalog/overview.md), browse the supported destinations, and configure the destination that you want to use.
+* Profile datasets need to be enabled for use in Real-Time Customer Profile. [Read more](/help/ingestion/tutorials/ingest-batch-data.md#enable-for-profile) about how to enable this option. 
+
 ## Getting started {#get-started}
 
 ![Overview - the steps to create a destination and export datasets](../assets/api/export-datasets/export-datasets-api-workflow-get-started.png)
@@ -56,9 +65,9 @@ Currently, you can export datasets to the cloud storage destinations highlighted
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
 * [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md): All data that is successfully ingested into Adobe Experience Platform is persisted within the [!DNL Data Lake] as datasets. A dataset is a storage and management construct for a collection of data, typically a table, that contains a schema (columns) and fields (rows). Datasets also contain metadata that describes various aspects of the data they store. 
-  * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+  * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Experience Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you must know in order to export datasets to cloud storage destinations in Platform.
+The following sections provide additional information that you must know in order to export datasets to cloud storage destinations in Experience Platform.
 
 ### Required permissions {#permissions}
 
@@ -72,13 +81,13 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required and optional headers {#gather-values-headers}
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [Experience Platform authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [Experience Platform authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Resources in [!DNL Experience Platform] can be isolated to specific virtual sandboxes. In requests to [!DNL Platform] APIs, you can specify the name and ID of the sandbox that the operation will take place in. These are optional parameters.
+Resources in [!DNL Experience Platform] can be isolated to specific virtual sandboxes. In requests to [!DNL Experience Platform] APIs, you can specify the name and ID of the sandbox that the operation will take place in. These are optional parameters.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -2462,7 +2471,7 @@ Note the difference in file format between the two file types, when compressed:
 
 ## API error handling {#api-error-handling}
 
-The API endpoints in this tutorial follow the general Experience Platform API error message principles. Refer to [API status codes](/help/landing/troubleshooting.md#api-status-codes) and [request header errors](/help/landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide for more information on interpreting error responses.
+The API endpoints in this tutorial follow the general Experience Platform API error message principles. Refer to [API status codes](/help/landing/troubleshooting.md#api-status-codes) and [request header errors](/help/landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide for more information on interpreting error responses.
 
 ## Known limitations {#known-limitations}
 
@@ -2474,7 +2483,7 @@ View a [list of frequently asked questions](/help/destinations/ui/export-dataset
 
 ## Next steps {#next-steps}
 
-By following this tutorial, you have successfully connected Platform to one of your preferred batch cloud storage destinations and set up a dataflow to the respective destination to export datasets. See the following pages for more details, such as how to edit existing dataflows using the Flow Service API:
+By following this tutorial, you have successfully connected Experience Platform to one of your preferred batch cloud storage destinations and set up a dataflow to the respective destination to export datasets. See the following pages for more details, such as how to edit existing dataflows using the Flow Service API:
 
 * [Destinations overview](../home.md)
 * [Destinations catalog overview](../catalog/overview.md)

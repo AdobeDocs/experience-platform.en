@@ -84,6 +84,8 @@ role: Developer
     * Adobe Client Data Layer {#client-data-layer}
       * [Overview](./extensions/client/client-data-layer/overview.md)
       * [Release notes](./extensions/client/client-data-layer/release-notes.md)
+    * Adobe Content Analytics {#content-analytics}
+      * [Overview](./extensions/client/content-analytics/overview.md)
     * Adobe ContextHub {#contexthub}
       * [Overview](./extensions/client/contexthub/overview.md)
     * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)
@@ -210,6 +212,10 @@ role: Developer
     * Adobe Experience Platform Cloud Connector {#cloud-connector}
       * [Overview](./extensions/server/cloud-connector/overview.md)
       * [Release notes](./extensions/server/cloud-connector/release-notes.md)
+    * [!DNL Adform] {#adform}
+      * [Overview](./extensions/server/adform/overview.md)
+    * [!DNL Amazon] {#amazon}
+      * [Overview](./extensions/server/amazon/overview.md)
     * [!DNL AWS] {#aws}
       * [Overview](./extensions/server/aws/overview.md)
     * [!DNL Braze] {#braze}
@@ -235,6 +241,8 @@ role: Developer
     * [Pega Customer Decision Hub](https://exchange.adobe.com/apps/ec/107597)
     * [!DNL Pinterest] {#pinterest}
       * [Overview](./extensions/server/pinterest/overview.md)
+    * [!DNL Reddit] {#reddit}
+      * [Overview](./extensions/server/reddit/overview.md)
     * [!DNL Snapchat] {#snap}
       * [Overview](./extensions/server/snap/overview.md)
     * [!DNL Snowflake] {#snowflake}
@@ -321,5 +329,5 @@ role: Developer
 * [FAQ](./faq.md)
 * [Terminology updates](./term-updates.md)
 * [Deprecating support for Internet Explorer 10 and 11](./ie-deprecation.md)
-* [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
 

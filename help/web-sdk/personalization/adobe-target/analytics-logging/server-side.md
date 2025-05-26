@@ -1,14 +1,14 @@
 ---
-title: Server-side logging for A4T data in Platform Web SDK
+title: Server-side logging for A4T data in Experience Platform Web SDK
 description: Learn how to enable server-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
-seo-title: Server-side logging for A4T data in Platform Web SDK
+seo-title: Server-side logging for A4T data in Experience Platform Web SDK
 seo-description: Learn how to enable server-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
 keywords: a4t;target;web;sdk;platform;logging;
 exl-id: 26c25f58-e43c-4147-8595-69ea85af561f
 ---
-# Server-side logging for A4T data in Platform Web SDK
+# Server-side logging for A4T data in Experience Platform Web SDK
 
-The Adobe Experience Platform Web SDK allows you to implement Adobe Analytics for Target (A4T) functionality on Platform Edge Network. When server-side logging is enabled, all Analytics hits sent through the Edge Network are augmented with Target details on the server side, without having to go through the hit stitching process. 
+The Adobe Experience Platform Web SDK allows you to implement Adobe Analytics for Target (A4T) functionality on Experience Platform Edge Network. When server-side logging is enabled, all Analytics hits sent through the Edge Network are augmented with Target details on the server side, without having to go through the hit stitching process. 
 
 Server-side logging for Analytics is enabled when Analytics is enabled in the datastream configuration:
 

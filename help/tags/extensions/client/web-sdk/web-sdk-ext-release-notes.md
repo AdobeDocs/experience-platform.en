@@ -5,7 +5,38 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 ---
 # Adobe Experience Platform Web SDK extension release notes
 
-This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Platform Web SDK release notes](/help/web-sdk/release-notes.md).
+This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Experience Platform Web SDK release notes](/help/web-sdk/release-notes.md).
+
+## Version 2.30.0 - May 21, 2025
+
+**New features**
+
+- You can now specify a data element when enabling third party cookies.
+- Added clear buttons to code fields.
+- Contains [version 2.27.0](../../../../web-sdk/release-notes.md#2-27-0) of the Adobe Experience Platform Web SDK.
+
+**Fixes and improvements**
+
+- Added validation to prevent setting `onBeforeLinkClickSend` when event grouping is enabled.
+
+## Version 2.29.1 - May 8, 2025
+
+**Fixes and improvements**
+
+- Fixed an issue where settings were not saved when immediately clicking "save" after editing.
+
+## Version 2.29.0 - March 5, 2025
+
+**New features**
+
+- You can now create custom Web SDK builds and choose the components that you need from the tag extension user interface. This can result in smaller builds by excluding unused components. See the documentation on [creating a custom Web SDK build](web-sdk-extension-configuration.md#custom-build).
+- Contains [version 2.26.0](../../../../web-sdk/release-notes.md#2-26-0) of the Adobe Experience Platform Web SDK.
+
+**Fixes and improvements**
+
+- Added graceful handling of missing data elements in [update variable](action-types.md#update-variable) actions. Previously, editing an update variable action with a missing data element showed an error message. Now, you can choose a different data element and all the settings for the update variable action are still applied. Data elements can be missing if they are deleted or if a Tags property is duplicated.
+- Added support for opening a new tab with the [redirect with identity](action-types.md#redirect-with-identity) action. Now, when using the action, the `target` attribute of the anchor tag is used when redirecting the browser.
+- Fixed an issue where Adobe Audience Manager could not be disabled in configuration overrides.
 
 ## Version 2.28.0 - January 23, 2025
 
@@ -15,7 +46,7 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 - Fixed an issue where datastream config overrides were disabled when upgrading to the latest version.
 - Fixed an issue where users were unable to save Target auto click collection settings.
 
-**New Features**
+**New features**
 
 - Added a new feature to toggle between technical names and display names in the XDM Object.
 - Contains [version 2.25.0](../../../../web-sdk/release-notes.md#2-25-0) of the Adobe Experience Platform Web SDK.
@@ -318,7 +349,7 @@ Contains version 2.3.0 of the Adobe Experience Platform Web SDK library.
 
 ## Version 2.2.0 - October 1, 2020
 
-- When customers tried to create an XDM object from sandbox schemas, they were running into authentication issues. The API that calls Platform is now aware of environments so users are only presented with those schemas that they have access to edit.
+- When customers tried to create an XDM object from sandbox schemas, they were running into authentication issues. The API that calls Experience Platform is now aware of environments so users are only presented with those schemas that they have access to edit.
 - When using the `identityMap` data element, the namespaces is now pre-populated in a dropdown so you don't have to fill this in manually.
 - Revamped the UI for the `xdmObject` data element. In the new UI, you can see which fields have been populated without having to enter each item in the object.
 
@@ -334,7 +365,7 @@ Contains version 2.3.0 of the Adobe Experience Platform Web SDK library.
 - Support overriding the dataset ID in the `sendEvent` action.
 - Add a new Data Element of type `IdentityMap` which can be used to populate the `identityMap` entry in the XDM Object Data Element which is now enabled, and in the `setConsent` action.
 - Support passing an identity map in the `setConsent` action.
-- Support choosing an Platform sandbox in the XDM Object Data Element.
+- Support choosing an Experience Platform sandbox in the XDM Object Data Element.
 
 ## Version 1.0.0 - May 26, 2020
 

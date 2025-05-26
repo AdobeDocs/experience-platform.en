@@ -26,7 +26,7 @@ While not required for this guide, it is recommended that you also follow the tu
 
 ## Getting started {#getting-started}
 
-In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation to open the [!UICONTROL Schemas] workspace, then select the **[!UICONTROL Classes]** tab. A list of available classes are displayed. 
+In the Experience Platform UI, select **[!UICONTROL Schemas]** in the left navigation to open the [!UICONTROL Schemas] workspace, then select the **[!UICONTROL Classes]** tab. A list of available classes are displayed. 
 
 ![The of classes inside the [!UICONTROL Classes] tab of the [!UICONTROL Schemas] workspace [!UICONTROL Classes] and [!UICONTROL Schemas] highlighted.](../../images/ui/resources/classes/available-classes.png)
 
@@ -42,7 +42,7 @@ The list of classes are automatically filtered based on how they were created. T
 
 ## Create a new class {#create}
 
-There are two methods to create a class in the Platform UI, through **[!UICONTROL Create class]** or **[!UICONTROL Create schema]**.
+There are two methods to create a class in the Experience Platform UI, through **[!UICONTROL Create class]** or **[!UICONTROL Create schema]**.
 
 ### Create class
 
@@ -114,7 +114,7 @@ See the guide on [defining fields in the UI](../fields/overview.md#define) for s
 
 If you have previously created schemas that employ this class, the newly added fields will automatically appear in those schemas.
 
-## Edit a class (#edit-a-class)
+## Edit a class {#edit-a-class}
 
 >[!NOTE]
 >
@@ -150,6 +150,6 @@ See the guide on [creating and editing schemas](./schemas.md#change-class) for m
 
 ## Next steps {#next-steps}
 
-This document covered how to create and edit classes using the Platform UI. For more information on the capabilities of the [!UICONTROL Schemas] workspace, see the [[!UICONTROL Schemas] workspace overview](../overview.md).
+This document covered how to create and edit classes using the Experience Platform UI. For more information on the capabilities of the [!UICONTROL Schemas] workspace, see the [[!UICONTROL Schemas] workspace overview](../overview.md).
 
 To learn how to manage classes using the Schema Registry API, see the [classes endpoint guide](../../api/classes.md).

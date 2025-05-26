@@ -8,7 +8,7 @@ exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
 
 ## Overview {#overview}
 
-[!DNL Airship] is the leading Customer Engagement Platform, helping you deliver meaningful, personalized omnichannel messaging to your users at every stage of the customer lifecycle.
+[!DNL Airship] is the leading Customer Engagement Experience Platform, helping you deliver meaningful, personalized omnichannel messaging to your users at every stage of the customer lifecycle.
 
 This integration passes Adobe profile data into [!DNL Airship] as [Attributes](https://docs.airship.com/guides/audience/attributes/) for targeting or triggering.
 
@@ -53,7 +53,7 @@ Refer to the table below for information about the destination export type and f
 
 ## Enable attributes {#enable-attributes}
 
-Adobe Experience Platform profile attributes are similar to [!DNL Airship] attributes and can be easily mapped to one another in Platform using the mapping tool demonstrated further below on this page.
+Adobe Experience Platform profile attributes are similar to [!DNL Airship] attributes and can be easily mapped to one another in Experience Platform using the mapping tool demonstrated further below on this page.
 
 [!DNL Airship] projects have several predefined and default attributes. If you have a custom attribute, you must define it in [!DNL Airship] first. See [Set Up and Manage Attributes](https://docs.airship.com/tutorials/audience/attributes/) for details.
 
@@ -77,7 +77,7 @@ Leverage profile data collected within Adobe Experience Platform for personaliza
 
 ### Use case #2
 
-Leverage Attributes from Adobe Experience Platform to further enrich [!DNL Airship] profiles and combine it with SDK or [!DNL Airship] predictive data. For example, a retailer can create an audience with loyalty status and location data (attributes from Platform) and [!DNL Airship] predicted to churn data to send highly targeted messages to users in the gold loyalty status who live in Las Vegas, NV, and have a high probability of churning.
+Leverage Attributes from Adobe Experience Platform to further enrich [!DNL Airship] profiles and combine it with SDK or [!DNL Airship] predictive data. For example, a retailer can create an audience with loyalty status and location data (attributes from Experience Platform) and [!DNL Airship] predicted to churn data to send highly targeted messages to users in the gold loyalty status who live in Las Vegas, NV, and have a high probability of churning.
 
 ## Connect to the destination {#connect}
 
