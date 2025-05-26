@@ -10,9 +10,9 @@ This tutorial guides you through ingesting data from your [!DNL Algolia User Pro
 
 ## Get started
 
-> [!IMPORTANT]
+>[!IMPORTANT]
 >
-> Before you begin, make sure you've completed the prerequisites outlined in the [[!DNL Algolia User Profiles] overview](../../../../connectors/data-partners/algolia-user-profiles.md#prerequisites).
+>Before you begin, make sure you've completed the prerequisites outlined in the [[!DNL Algolia User Profiles] overview](../../../../connectors/data-partners/algolia-user-profiles.md#prerequisites).
 
 This tutorial assumes familiarity with the following Experience Platform components:
 
@@ -29,8 +29,8 @@ To connect [!DNL Algolia] to Adobe Experience Platform, provide the following cr
 
 | Credential     | Description                                                                               |
 | -------------- | ----------------------------------------------------------------------------------------- |
-| Application ID | Unique identifier assigned to your [!DNL Algolia] account.                               |
-| API Key        | Credential for authenticating and authorizing API requests to [!DNL Algolia]'s services. |
+| Application ID | The unique identifier assigned to your [!DNL Algolia] account.                               |
+| API Key        | The credential for authenticating and authorizing API requests to [!DNL Algolia]'s services. |
 
 For more information, refer to the [!DNL Algolia] [authentication documentation](https://www.algolia.com/doc/tools/cli/get-started/authentication/).
 
