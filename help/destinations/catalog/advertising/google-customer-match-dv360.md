@@ -65,14 +65,6 @@ To promote the release, they upload email addresses from their CRM database into
 
 {style="table-layout:auto"}
 
-<!-- not supported in beta
-
-|GAID|Google Advertising ID|Select this target identity when your source identity is a GAID namespace.|
-|IDFA|Apple ID for Advertisers|Select this target identity when your source identity is an IDFA namespace.|
-|user_id|Custom user IDs|Select this target identity when your source identity is a custom namespace.| 
-
--->
-
 ## Supported audiences {#supported-audiences}
 
 This section describes which types of audiences you can export to this destination.
