@@ -50,9 +50,7 @@ Seamlessly track the status of support issues.
 
 ## Access Product Support Agent
 
-Follow the steps below to activate Product Support Agent.
-* Complete [AI Assistant readiness](https://fieldreadiness-adobe.highspot.com/items/665f831c9f831b011aeda057#1) for legal readiness.
-* [Enable UI permissions](../access.md) for AI Assistant and Support Administration.
+Follow the [access guide](../access.md) to learn how to enable permissions and access AI Assistant.
 
 Once you complete these steps, any support admins in your onboarded organization will be able to create tickets using AI Assistant.
 
