@@ -40,9 +40,9 @@ To install the [!DNL Algolia] extension, follow these steps:
 
 Follow the steps below to configure the [!DNL Algolia] event forwarding extension:
 
-1. Navigate to the **[!UICONTROL Extensions]** tab.
-2. Select the **[!UICONTROL Algolia]** extension.
-3. Select **[!UICONTROL Configure]**.
+- Navigate to the **[!UICONTROL Extensions]** tab.
+- Select the **[!UICONTROL Algolia]** extension.
+- Select **[!UICONTROL Configure]**.
 
 ![Configuration screen for the Algolia event forwarding extension in Adobe Experience Platform](../../../images/extensions/server/algolia/configure.png)
 
@@ -75,7 +75,7 @@ Configure the **[!UICONTROL Send event]** action to forward events to [!DNL Algo
 
 ## Implement the [!DNL Algolia] event field group {#algolia-field-group}
 
-Ensure that the [!DNL Algolia] event field group is added to your schema before you use the [!DNL Algolia] event forwarding extension. It is one of the standard field groups provided through Adobe Experience Platform.
+Ensure you add the [!DNL Algolia] event field group to your schema before you use the [!DNL Algolia] event forwarding extension. It is one of the standard field groups provided through Adobe Experience Platform.
 
 ![Algolia event field group configuration](../../../images/extensions/server/algolia/algolia-field-groups.png)
 
