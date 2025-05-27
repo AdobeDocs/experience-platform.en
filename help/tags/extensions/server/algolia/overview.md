@@ -105,9 +105,9 @@ Select the **[!UICONTROL Add field group]** button and then select **[!UICONTROL
 
 The [!DNL Algolia] event forwarding extension can be used with the **[!DNL Adobe Experience Platform Web SDK]** to send data from your website to [!DNL Algolia]. This is done by creating a tag property, mapping data to the [!DNL XDM] object, and configuring rules to send events.
 
-#### Step 1: Create a Tag property with the web SDK
+#### Step 1: Create a tag property with the web SDK
 
-1. Create a [!UICONTROL Tag] property.
+1. Create a tag property.
 2. Install the [!DNL Adobe Experience Platform Web SDK] extension.
 3. Use this extension to map data from HTML to the **[!DNL Algolia] Event** field group.
 
@@ -123,8 +123,8 @@ The [!DNL Algolia] event forwarding extension can be used with the **[!DNL Adobe
 
 #### Step 3: Create a rule to send events
 
-1. Create a new rule in your [!UICONTROL Tag] property.
-2. Add appropriate event triggers (For example: page load, click events).
+1. Create a new rule in your tag property.
+2. Add the required event triggers such as page load, or click events.
 3. Add an action using **[!DNL Adobe Experience Platform Web SDK]**.
 4. Select **[!UICONTROL Send event]** as the action type.
 5. Configure the action to use your [!DNL XDM] data element.
@@ -140,7 +140,7 @@ The [!DNL Algolia] event forwarding extension can be used with the **[!DNL Adobe
 
 ### Verify events in [!DNL Algolia]
 
-To confirm that events are being properly received by [!DNL Algolia], complete the following steps:
+After configuring the [!DNL Algolia] event forwarding extension, you can verify that events are being sent and received correctly by following these steps:
 
 Navigate to your [!DNL Algolia] dashboard and go to **[!UICONTROL Data Sources > Events > Debugger]**.
 
@@ -152,15 +152,15 @@ Select the event that matches the event sent from [!DNL Algolia]'s event forward
 
 ## Common implementation scenarios
 
-Here are some common scenarios where you can use the [!DNL Algolia] event forwarding extension:
+Use the [!DNL Algolia] event forwarding extension to capture and send user interaction data for various use cases, enhancing search relevance and personalization.
 
 ### Track product or content views
 
-Use the extension to track when users view product/content pages, helping [!DNL Algolia] understand user interests.
+Use the extension to track when users view product or content pages, helping [!DNL Algolia] understand user interests.
 
 ### Track conversion events
 
-Track add-to-cart events, purchases and other conversion events to optimize [!DNL Algolia]'s AI-powered recommendations.
+Track add-to-cart events, purchases, and other conversion events to optimize [!DNL Algolia]'s AI-powered recommendations.
 
 ## Troubleshoot
 
@@ -170,15 +170,20 @@ If you encounter issues while implementing the [!DNL Algolia] event forwarding e
 
 If events do not appear in [!DNL Algolia], check the following: 
 
-- Verify that your **[!UICONTROL Application ID]** and **[!UICONTROL API Key]** are correct.
-- Check that your [!DNL XDM] schema includes the [!DNL Algolia] Event field group.
-- Ensure that data is properly mapped to the [!DNL XDM] fields.
-- Use both the [!DNL Adobe Experience Platform Debugger] and [!DNL Algolia]'s event debugger to trace the flow of data.
+- **Verify API Credentials**: Ensure that the **[!UICONTROL Application ID]** and **[!UICONTROL API Key]** match the values in your [!DNL Algolia] dashboard.
+- **Check Event Debugger**: Use the [!DNL Algolia] Event Debugger to confirm if events are being received. If not, verify the event forwarding rule configuration.
+- **Inspect XDM Mapping**: Ensure that all required fields in the [!DNL Algolia] schema are mapped correctly in the [!DNL XDM] object.
 
 ### Incorrect event data
 
 - Ensure that your [!DNL XDM] object data element is accurately mapped to the [!DNL Algolia] schema, with all required fields.
 - Confirm that the event parameters matchthe expected format and structure outlined in [!DNL Algolia]'s Insights API documentation.
+
+## Next steps
+
+This guide covered how to send data to [!DNL Algolia] using the [!DNL Algolia Event Forwarding Extension]. For more information on event forwarding capabilities in [!DNL Adobe Experience Platform], read the [event forwarding overview](../../../ui/event-forwarding/overview.md).
+
+For details on how to debug your implementation using the Experience Platform Debugger and Event Forwarding Monitoring tool, read the [Adobe Experience Platform Debugger overview](../../../../debugger/home.md) and [Monitor activities in event forwarding](../../../ui/event-forwarding/monitoring.md).
 
 ## Additional resources
 
