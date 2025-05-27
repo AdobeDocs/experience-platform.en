@@ -16,13 +16,11 @@ Use the [!DNL Algolia] event forwarding extension to send user behavior events t
 
 ## Prerequisites {#prerequisites}
 
-Before you install the extension, make sure you meet the following requirements:
+Before you install the extension, make sure that you have a [!DNL Algolia] account with access to the [!DNL Insights API]. If you don't have an account, [sign up](https://dashboard.algolia.com/users/sign_up) and enable access to the API.
 
-- You have a [!DNL Algolia] account with access to the [!DNL Insights API]. If you don't have an account, [sign up](https://dashboard.algolia.com/users/sign_up) and enable access to the API.
+Also make sure that you understand how to use the [!DNL Algolia] [!DNL Insights API]. For an overview of how to send events, see the [sending events with the Insights API](https://www.algolia.com/doc/guides/sending-events/getting-started/).
 
-- You understand how to use the [!DNL Algolia] [!DNL Insights API]. For an overview of how to send events, see [sending events with the Insights API](https://www.algolia.com/doc/guides/sending-events/getting-started/).
-
-- You have the following values from your [!DNL Algolia] account dashboard:
+Gather the following values from your [!DNL Algolia] account dashboard:
     - **[!UICONTROL Application ID]**
     - **[!UICONTROL Search API Key]**
     - **[!UICONTROL Index Name]**
@@ -31,18 +29,17 @@ Before you install the extension, make sure you meet the following requirements:
 
 To install the [!DNL Algolia] extension, follow these steps:
 
-- Navigate to **[!UICONTROL Data Collection]** in [!DNL Adobe Experience Platform].
-- Select the **[!UICONTROL Extensions]** tab.
-- Open the **[!UICONTROL Catalog]** and locate the **[!UICONTROL Algolia Event Forwarding]** extension.
-- Click **[!UICONTROL Install]** to add the extension to your property.
+Navigate to **[!UICONTROL Data Collection]** in [!DNL Adobe Experience Platform]. Select the **[!UICONTROL Extensions]** tab.
+
+![Placeholder](../../../images/extensions/server/algolia/placeholder.png)
+
+Open the **[!UICONTROL Catalog]** and locate the **[!UICONTROL Algolia Event Forwarding]** extension and then select **[!UICONTROL Install]**.
+
+![Placeholder](../../../images/extensions/server/algolia/placeholder.png)
 
 ### Configure the extension {#configure-extension}
 
-Follow the steps below to configure the [!DNL Algolia] event forwarding extension:
-
-- Navigate to the **[!UICONTROL Extensions]** tab.
-- Select the **[!UICONTROL Algolia]** extension.
-- Select **[!UICONTROL Configure]**.
+To configure the [!DNL Algolia] event forwarding extension, navigate to the **[!UICONTROL Extensions]** tab, select the **[!UICONTROL Algolia]** extension and then select **[!UICONTROL Configure]**.
 
 ![Configuration screen for the Algolia event forwarding extension in Adobe Experience Platform](../../../images/extensions/server/algolia/configure.png)
 
@@ -62,20 +59,25 @@ The [!DNL Algolia] event forwarding extension offers a single action type that c
 
 Configure the **[!UICONTROL Send event]** action to forward events to [!DNL Algolia]:
 
-1. Select **[!UICONTROL Rules]**, then **[!UICONTROL Add Rule]** or select an existing rule.
-2. In the **[!UICONTROL Then]** portion of the rule, add an action.
-3. Select **[!UICONTROL Extension]**: [!DNL Algolia] Event Forwarding.
-4. Select **[!UICONTROL Action Type]**: **[!UICONTROL Send Events]**.
+Select **[!UICONTROL Rules]**, then **[!UICONTROL Add Rule]** or select an existing rule.
+
+![Placeholder](../../../images/extensions/server/algolia/placeholder.png)
+
+In the **[!UICONTROL Then]** portion of the rule, add an action.
+
+![Placeholder](../../../images/extensions/server/algolia/placeholder.png)
+
+Select **[!UICONTROL Extension]**: [!DNL Algolia] Event Forwarding.
+
+![Placeholder](../../../images/extensions/server/algolia/placeholder.png)
+
+Select **[!UICONTROL Action Type]**: **[!UICONTROL Send Events]**.
 
 ![Configuration of the Send Event action in the Algolia vent forwarding extension.](../../../images/extensions/server/algolia/send-event.png)
 
->[!NOTE]
->
->No additional configuration is required for this action.
-
 ## Implement the [!DNL Algolia] event field group {#algolia-field-group}
 
-Ensure you add the [!DNL Algolia] event field group to your schema before you use the [!DNL Algolia] event forwarding extension. It is one of the standard field groups provided through Adobe Experience Platform.
+Ensure you add the [!DNL Algolia] event field group to your schema before you use the [!DNL Algolia] event forwarding extension. It is one of the standard field groups provided through Experience Platform.
 
 ![Algolia event field group configuration](../../../images/extensions/server/algolia/algolia-field-groups.png)
 
@@ -83,13 +85,19 @@ Ensure you add the [!DNL Algolia] event field group to your schema before you us
 
 To add the [!DNL Algolia] event field group:
 
-1. Navigate to **[!UICONTROL Schemas]** and select **[!UICONTROL Browse]**.
-2. Add a new schema or update an existing schema that you use to send web events.
-3. Hover over the **[!UICONTROL Add]** icon.
-4. Enter "[!DNL Algolia]" in the search box to narrow down the results.
-5. Select **[!DNL Algolia] Event Details** field group.
-6. Select the **[!UICONTROL Add field group]** button.
-7. Select **[!UICONTROL Save]**.
+Navigate to **[!UICONTROL Schemas]** and select **[!UICONTROL Browse]**.
+
+![Placeholder](../../../images/extensions/server/algolia/placeholder.png)
+
+Add a new schema or update an existing schema that you use to send web events and hover over the **[!UICONTROL Add]** icon. Enter *[!DNL Algolia]* in the search box to narrow down the results.
+
+![Placeholder](../../../images/extensions/server/algolia/placeholder.png)
+
+Select the **[!DNL Algolia] Event Details** field group.
+
+![Placeholder](../../../images/extensions/server/algolia/placeholder.png)
+
+Select the **[!UICONTROL Add field group]** button and then select **[!UICONTROL Save]**.
 
 ![Algolia profile field group configuration in [!DNL Adobe Experience Platform]](../../../images/extensions/server/algolia/algolia-profile-field-group.png)
 
@@ -134,10 +142,11 @@ The [!DNL Algolia] event forwarding extension can be used with the **[!DNL Adobe
 
 To confirm that events are being properly received by [!DNL Algolia], complete the following steps:
 
-1. Navigate to your [!DNL Algolia] dashboard.
-2. Go to **[!UICONTROL Data Sources > Events > Debugger]**.
-3. Select the event that matches the event sent from [!DNL Algolia]'s event forwarding extension.
-4. Verify that all expected data is present in the event.
+Navigate to your [!DNL Algolia] dashboard and go to **[!UICONTROL Data Sources > Events > Debugger]**.
+
+![Placeholder](../../../images/extensions/server/algolia/placeholder.png)
+
+Select the event that matches the event sent from [!DNL Algolia]'s event forwarding extension and verify that the expected data is present in the event.
 
 ![Verify events in the Algolia debugger](../../../images/extensions/server/algolia/algolia-debugger.png)
 
@@ -151,7 +160,7 @@ Use the extension to track when users view product/content pages, helping [!DNL 
 
 ### Track conversion events
 
-Track add-to-cart/purchases and other conversion events to optimize [!DNL Algolia]'s AI-powered recommendations.
+Track add-to-cart events, purchases and other conversion events to optimize [!DNL Algolia]'s AI-powered recommendations.
 
 ## Troubleshoot
 
@@ -159,7 +168,7 @@ If you encounter issues while implementing the [!DNL Algolia] event forwarding e
 
 ### Events do not appear in [!DNL Algolia]
 
-If events are not appearing in [!DNL Algolia], check the following: 
+If events do not appear in [!DNL Algolia], check the following: 
 
 - Verify that your **[!UICONTROL Application ID]** and **[!UICONTROL API Key]** are correct.
 - Check that your [!DNL XDM] schema includes the [!DNL Algolia] Event field group.
@@ -168,8 +177,8 @@ If events are not appearing in [!DNL Algolia], check the following:
 
 ### Incorrect event data
 
-- Review your data mapping in the [!DNL XDM] object data element.
-- Ensure event parameters match [!DNL Algolia]'s expected format.
+- Ensure that your [!DNL XDM] object data element is accurately mapped to the [!DNL Algolia] schema, with all required fields.
+- Confirm that the event parameters matchthe expected format and structure outlined in [!DNL Algolia]'s Insights API documentation.
 
 ## Additional resources
 
