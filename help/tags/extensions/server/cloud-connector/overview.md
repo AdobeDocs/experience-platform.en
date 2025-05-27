@@ -13,7 +13,7 @@ The Cloud Connector event forwarding extension allows you to create custom HTTP 
 
 Use this reference for information about the options available when using this extension to build a rule. 
 
-## Cloud Connector extension action type
+## Cloud Connector extension action type 
 
 This section describes the Send Data action type available in the Adobe Experience Platform Cloud Connector extension. 
  
@@ -119,3 +119,41 @@ arc.ruleStash.[EXTENSION-NAME-HERE].responses.[RESPONSE-KEY-HERE]
 
 arc.ruleStash.adobe-cloud-connector.reponses.productDetails 
 ```
+
+## Use Mutual Transport Layer Security [!DNL mTLS] in Event Forwarding rules {#mtls-rules}
+
+The [!DNL mTLS] certificate is a digital credential that proves the identity of a server or client in secure communications. When you use the [!DNL mTLS] Service API, these certificates help you verify and encrypt your interactions with Adobe Experience Platform Event Forwarding. This process not only protects your data but also ensures that every connection is from a trusted partner.
+
+### Install the Adobe Cloud Connector extension {#install}
+
+To install the extension, [create an event forwarding property](../../../ui/event-forwarding/overview.md#properties) or select an existing property to edit instead.
+
+Select **[!UICONTROL Extensions]** in the left panel. In the **[!UICONTROL Catalog]** tab, select the **[!UICONTROL Adobe Cloud Connector]** Real-Time Conversions API card, then select **[!UICONTROL Install]**.
+
+![The extension catalog showing the [!DNL Adobe Cloud Connector] extension card highlighting install.](../../../images/extensions/server/cloud-connector/install-extension.png)
+
+### Configure an event forwarding rule {#rule}
+
+>[!NOTE]
+>
+>To configure a rule to use [!DNL mTLS], you must have Adobe Cloud Connector version 1.2.4 or later.
+
+After installing the extension, you can create an Event Forwarding rule that uses [!DNL mTLS] and add it to your library.
+
+Create a new event forwarding [rule](../../../ui/managing-resources/rules.md) in your event forwarding property. Provide a name for your rule, then under **[!UICONTROL Actions]**, add a new action and set the extension to **[!UICONTROL Adobe Cloud Connector]**. Next, select **[!UICONTROL Make Fetch Call]** for the **[!UICONTROL Action Type]**.
+
+![The Event Forwarding Property Rules view, with the fields required to add an event forwarding rule action configuration highlighted.](../../../images/extensions/server/cloud-connector/event-action.png)
+
+After making your selection, additional controls will appear to configure the methos and destination for the [!DNL mTLS] request. To enable the use of active certificates in the environments, select **[!UICONTROL Enable in [!DNL mTLS]]**, then select **[!UICONTROL Keep Changes]** to save the rule.
+
+![The Event Forwarding Property Rules view, with the additional control fields and keep changes highlighted.](../../../images/extensions/server/cloud-connector/save-rule.png)
+
+Your new rule is now ready. Select **[!UICONTROL Save to Library]**, then select **[!UICONTROL Build]** to deploy it. The [!DNL mTLS] request is now active and available in your library.
+
+![The Event Forwarding rule with save to library and build highlighted.](../../../images/extensions/server/cloud-connector/save-build.png)
+
+## Next steps
+
+This guide covered how to set up mTLS rules in event forwarding. For more details on setting up mTLS for an environment, refer to the [Mutual Transport Layer Security [!DNL mTLS] guide](../cloud-connector/mtls.md).
+
+For more information on event forwarding capabilities in Experience Platform, refer to the [event forwarding overview](../../../ui/event-forwarding/overview.md).
