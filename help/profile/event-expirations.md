@@ -11,6 +11,8 @@ In Adobe Experience Platform, you can configure expiration times for all Experie
 
 To learn how to manage your Experience Event expirations in your datasets, read the [dataset UI guide](../catalog/datasets/user-guide.md#data-retention-policy).
 
+![A dialog that displays the dataset retention as well as the available settings.](./images/event-expirations/set-data-retention-dialog.png) {width="500" zoomable="yes"}
+
 >[!IMPORTANT]
 >
 >Experience Event expirations are not to be confused with dataset expirations, which delete the entire dataset after the expiration date is reached. These are manually configured through [Adobe Experience Platform Data Hygiene](../hygiene/home.md).
