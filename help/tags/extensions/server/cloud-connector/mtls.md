@@ -6,7 +6,7 @@ description: Learn how you can use mTLS to securely retrieve public certificates
 
 Bind Mutual Transport Layer Security ([!DNL mTLS]) certificates in the [!UICONTROL Environments UI] to take control of your extension's security. The [!DNL mTLS] certificate is a digital credential that proves the identity of a server or client in secure communications. When you use the [!DNL mTLS] Service API, these certificates help you verify and encrypt your interactions with Adobe Experience Platform. This process not only protects your data but also ensures that every connection is genuine.
 
-## Implement [!DNL mTLS] in a new environment {#implement-steps}
+## Implement [!DNL mTLS] in a new environment {#implement-mtls}
 
 Set up the Event Forwarding environment to ensure your library builds are deployed correctly to the edge network. During setup, you can choose the hosting option that best fits your deployment needs. An [!DNL mTLS] certificate is also automatically added to your new environment for secure communication.
 
@@ -36,7 +36,7 @@ The environement is successfully created, and you are returned to the **[!UICONT
 
 ![The [!UICONTROL Environments] tab, highlighting the Developemet environment.](../../../images/extensions/server/cloud-connector/new-environment-created)
 
-## View the environment certificate details
+## View the environment certificate details {#view-certificate}
 
 To view the certificate details for an environment select the **[!UICONTROL Environments]** tab in the left panel of your Event Forwarding properties, then select the environment to view details.
 
@@ -51,7 +51,7 @@ The following certificate details are displayed:
 
 ![The  Edit Development Environment page, highlighting [!UICONTROL Certificate] details.](../../../images/extensions/server/cloud-connector/create-environment)
 
-### Select and deploy an obsolete certificate
+### Select and deploy an obsolete certificate {#deploy-obsolete-certificate}
 
 To use an obsolete certificate, navigate to the **[!UICONTROL Environments]** tab in the left panel of your Event Forwarding properties, then select the environment to view its details.
 
