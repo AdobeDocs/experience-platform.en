@@ -12,7 +12,7 @@ Set up the Event Forwarding environment to ensure your library builds are deploy
 
 To create a new environment, select the **[!UICONTROL Environments]** tab in the left panel of your Event Forwarding properties, then select **[!UICONTROL Add Environment]**.
 
-![Event forwarding properties showing existing environments, highlighting [!UICONTROL Add Environment].](../../../images/extensions/server/cloud-connector/add-environment)
+![Event forwarding properties showing existing environments, highlighting [!UICONTROL Add Environment].](../../../images/extensions/server/cloud-connector/add-environment.png)
 
 On the next page, select the environment you would like to use for this set up. Three environments are available:
 
@@ -26,15 +26,15 @@ On the next page, select the environment you would like to use for this set up. 
 | Staging | The staging environment is optional and allows approved team members to test and approve a library before it's published. |
 | Production | The Production environment is used for live production data. |
 
-![The environment select screen, highlighting [!UICONTROL Select] for Development.](../../../images/extensions/server/cloud-connector/select-environment)
+![The environment select screen, highlighting [!UICONTROL Select] for Development.](../../../images/extensions/server/cloud-connector/select-environment.png)
 
 On the **[!UICONTROL Create Environment]** page, enter a **[!UICONTROL Name]** and choose ***Adobe Managed*** from the **[!UICONTROL Select Host]** dropdown menu. The **[!UICONTROL Certificate]** is ***Automatically added***. Finally, select **[!UICONTROL Save]**.
 
-![The  Create Development Environment page, highlighting [!UICONTROL Name], [!UICONTROL Select Host], and [!UICONTROL Save].](../../../images/extensions/server/cloud-connector/create-environment)
+![The  Create Development Environment page, highlighting [!UICONTROL Name], [!UICONTROL Select Host], and [!UICONTROL Save].](../../../images/extensions/server/cloud-connector/create-environment.png)
 
 The environement is successfully created, and you are returned to the **[!UICONTROL Environments]** tab, which displays your new environment.
 
-![The [!UICONTROL Environments] tab, highlighting the Developemet environment.](../../../images/extensions/server/cloud-connector/new-environment-created)
+![The [!UICONTROL Environments] tab, highlighting the Developemet environment.](../../../images/extensions/server/cloud-connector/new-environment-created.png)
 
 ## View the environment certificate details {#view-certificate}
 
@@ -49,25 +49,25 @@ The following certificate details are displayed:
 | Variable Name | The variable name of the certificate. |
 | Status | The current status of the certificate:<ul><li>**Depolyed**: The certificate has been successfully deployed and is active.</li><li>**Deploying**: The certificate is in the process of being deployed.</li><li>**Needs Deployment**: This status appears when an obsolete certificate is selected.</li></ul> |
 
-![The  Edit Development Environment page, highlighting [!UICONTROL Certificate] details.](../../../images/extensions/server/cloud-connector/create-environment)
+![The  Edit Development Environment page, highlighting [!UICONTROL Certificate] details.](../../../images/extensions/server/cloud-connector/create-environment.png)
 
 ### Select and deploy an obsolete certificate {#deploy-obsolete-certificate}
 
 To use an obsolete certificate, navigate to the **[!UICONTROL Environments]** tab in the left panel of your Event Forwarding properties, then select the environment to view its details.
 
-![The [!UICONTROL Environments] tab, highlighting the Developemet environment.](../../../images/extensions/server/cloud-connector/new-environment-created)
+![The [!UICONTROL Environments] tab, highlighting the Developemet environment.](../../../images/extensions/server/cloud-connector/new-environment-created.png)
 
 From the **[!UICONTROL Certificate]** dropdown, choose an obsolete certificate, then select **[!UICONTROL Save]**.
 
-![The  Edit Development Environment page, highlighting [!UICONTROL Certificate] dropdown with obsolete certificate and Save highlighted.](../../../images/extensions/server/cloud-connector/obsolete-certificate)
+![The  Edit Development Environment page, highlighting [!UICONTROL Certificate] dropdown with obsolete certificate and Save highlighted.](../../../images/extensions/server/cloud-connector/obsolete-certificate.png)
 
 To deploy the certificate, select **[!UICONTROL Save and deploy]** in the **[!UICONTROL Deploy Certificate]** dialog.
 
-![Deploy certificate dialog with Save and deploy highlighted.](../../../images/extensions/server/cloud-connector/obsolete-certificate-deploy)
+![Deploy certificate dialog with Save and deploy highlighted.](../../../images/extensions/server/cloud-connector/obsolete-certificate-deploy.png)
 
 
 ## Next steps {#next-steps}
 
 This document demonstrated how to create an environment for your Event Forwarding property, add a certificate, and use an obsolete certificate. For more information about the [!DNL mTLS] certificates, see [[!DNL mTLS] Service API Overview](../../../../data-governance/mtls-api/overview.md)
 
-To learn how to use [!DNL mTLS] certificates in Event Forwarding rules, refer to the [Cloud Connector extension overview](../cloud-connector/overview.md).
+To learn how to use [!DNL mTLS] certificates in Event Forwarding rules, refer to the [Cloud Connector extension overview](../cloud-connector/overview.md/#mtls-rules).
