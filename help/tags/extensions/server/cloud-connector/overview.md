@@ -140,17 +140,17 @@ Select **[!UICONTROL Extensions]** in the left panel. In the **[!UICONTROL Catal
 
 After installing the extension, you can create an Event Forwarding rule that uses [!DNL mTLS] and add it to your library.
 
-Create a new event forwarding [rule](../../../ui/managing-resources/rules.md) in your event forwarding property. Under **[!UICONTROL Actions]**, add a new action and set the extension to **[!UICONTROL Adobe Cloud Connector]**. Next, select **[!UICONTROL Make Fetch Call]** for the **[!UICONTROL Action Type]**.
+Create a new event forwarding [rule](../../../ui/managing-resources/rules.md) in your event forwarding property. Provide a name for your rule, then under **[!UICONTROL Actions]**, add a new action and set the extension to **[!UICONTROL Adobe Cloud Connector]**. Next, select **[!UICONTROL Make Fetch Call]** for the **[!UICONTROL Action Type]**.
 
 ![The Event Forwarding Property Rules view, with the fields required to add an event forwarding rule action configuration highlighted.](../../../images/extensions/server/cloud-connector/event-action.png)
 
-After making your selection, additional controls will appear to configure the destination for the [!DNL mTLS] request. To enable the use of active certificates in the environments, select **[!UICONTROL Enable in [!DNL mTLS]]**, then select **[!UICONTROL Keep Changes]** to save the rule.
+After making your selection, additional controls will appear to configure the methos and destination for the [!DNL mTLS] request. To enable the use of active certificates in the environments, select **[!UICONTROL Enable in [!DNL mTLS]]**, then select **[!UICONTROL Keep Changes]** to save the rule.
 
 ![The Event Forwarding Property Rules view, with the additional control fields and keep changes highlighted.](../../../images/extensions/server/cloud-connector/save-rule.png)
 
 Your new rule is now ready. Select **[!UICONTROL Save to Library]**, then select **[!UICONTROL Build]** to deploy it. The [!DNL mTLS] request is now active and available in your library.
 
-![The Event Forwarding rule with save to library and build highlighted.](../../../images/extensions/server/cloud-connector/save-rule.png)
+![The Event Forwarding rule with save to library and build highlighted.](../../../images/extensions/server/cloud-connector/save-build.png)
 
 ## Next steps
 

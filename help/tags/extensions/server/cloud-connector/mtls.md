@@ -1,6 +1,6 @@
 ---
 title: Mutual Transport Layer Security (mTLS) Overview
-description: Learn how you can use mTLS to securely retrieve public certificates issued by Adobe for your organization’s applications.
+description: Learn how you can use mTLS to securely retrieve public certificates issued by Adobe for Event Forwarding.
 ---
 # Mutual Transport Layer Security [!DNL mTLS] overview
 
@@ -30,13 +30,13 @@ On the next page, select the environment you would like to use for this set up. 
 
 On the **[!UICONTROL Create Environment]** page, enter a **[!UICONTROL Name]** and choose ***Adobe Managed*** from the **[!UICONTROL Select Host]** dropdown menu. The **[!UICONTROL Certificate]** is ***Automatically added***. Finally, select **[!UICONTROL Save]**.
 
-![The  Create Development Environment page, highlighting [!UICONTROL Name], [!UICONTROL Select Host], and [!UICONTROL Save].](../../../images/extensions/server/cloud-connector/create-environment.png)
+![The Create Development Environment page, highlighting [!UICONTROL Name], [!UICONTROL Select Host], and [!UICONTROL Save].](../../../images/extensions/server/cloud-connector/create-environment.png)
 
 The environement is successfully created, and you are returned to the **[!UICONTROL Environments]** tab, which displays your new environment.
 
 ![The [!UICONTROL Environments] tab, highlighting the Developemet environment.](../../../images/extensions/server/cloud-connector/new-environment-created.png)
 
-## View the environment certificate details {#view-certificate}
+## View environment certificate details {#view-certificate}
 
 To view the certificate details for an environment select the **[!UICONTROL Environments]** tab in the left panel of your Event Forwarding properties, then select the environment to view details.
 
