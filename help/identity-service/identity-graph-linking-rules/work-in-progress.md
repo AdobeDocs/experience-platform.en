@@ -8,9 +8,9 @@ Read this document to learn about different implementation types that you can co
 
 Customer graph scenarios can be grouped into three different categories.
 
-* **Basic**: Basic implementations include graphs that most often include simple implementations. These implementations tend to revolve around a single cross-device namespace (for example, CRMID). While basic implementations are fairly straightforward, graph collapse can still occur, often due to **shared device** scenarios.
-* **Intermediate**: Intermediate-level implementations include several variables such as **multiple cross-device namespaces**, **non-unique identities**, and **multiple unique namespaces**.
-* **Advanced**: Advanced-level implementations involve complex and multi-layered graph scenarios. Advanced implementations will include usage of **namespace priority** in order to identify the correct links that must be removed in order to prevent graph collapse.
+* **Basic**: [Basic implementations](#basic-implementations) include graphs that most often include simple implementations. These implementations tend to revolve around a single cross-device namespace (for example, CRMID). While basic implementations are fairly straightforward, graph collapse can still occur, often due to **shared device** scenarios.
+* **Intermediate**: [Intermediate implementations](#intermediate-implementations) include several variables such as **multiple cross-device namespaces**, **non-unique identities**, and **multiple unique namespaces**.
+* **Advanced**: [Advanced implementations](#advanced-implementations) involve complex and multi-layered graph scenarios. Advanced implementations will include usage of **namespace priority** in order to identify the correct links that must be removed in order to prevent graph collapse.
 
 ## Get started
 
@@ -22,7 +22,7 @@ Before diving in to the following document, ensure that you familiarize yourself
 * [Unique namespace](overview.md#unique-namespace)
 * [Graph Simulation](graph-simulation.md)
 
-## Basic implementations {#basic}
+## Basic implementations {#basic-implementations}
 
 Read this section for basic implementations of [!DNL Identity Graph Linking Rules].
 
@@ -31,6 +31,10 @@ Read this section for basic implementations of [!DNL Identity Graph Linking Rule
 Generally, Adobe customers have a single cross-device namespace that is used across all of their properties including, web, mobile, and applications. This system is both industry and geographically agnostic as customers in retail, telecom, and financial services use this type of implementation.
 
 Typically, an end-user is represented by a cross-device namespace (often a CRMID), therefore, the CRMID should be classified as a unique namespace. An end-user who owns a computer and an [!DNL iPhone] and does not share their device, could have an identity graph like the following.
+
+Imagine that you are a data architect at an e-commerce company called **ACME**. John and Jane are your customers. They are end-users who live together in San Jose, California. They share a desktop computer and use this computer to browse your website. Similarly, John and Jane also share an [!DNL iPad] and occasionally use this [!DNL iPad] to browse the internet, including your website.
+
+
 
 **Text mode**
 
@@ -69,10 +73,6 @@ Simulate the following configuration in Graph Simulation. You can either create 
 
 **Shared device (PC)**
 
-Imagine that you are a data architect at an e-commerce company called **ACME**. John and Jane are your customers. They are end-users who live together in San Jose, California. They share a desktop computer and use this computer to browse your website.
-
-You can simulate this scenario in Graph Simulation by creating your own events or inputting the following in text mode:
-
 **Text mode:**
 
 ```json
@@ -98,10 +98,6 @@ The browser on the desktop computer that they both use to visit your e-commerce 
 >[!TAB Shared device (mobile)]
 
 **Shared device (mobile)**
-
-Similarly, John and Jane also share an [!DNL iPad] and occasionally use this [!DNL iPad] to browse the internet, including your website.
-
-You can simulate this scenario in Graph Simulation by creating your own events or inputting the following in text mode:
 
 **Text mode:**
 
@@ -130,15 +126,17 @@ Authenticated events are tied to the end-user and unauthenticated events are tie
 * If Jane logs in and browses your website for jackets (authenticated event), then the primary identity of this authenticated event gets associated with Jane.
 * If Jane logs out, and then John uses the same device to browse your website for shoes **without logging in** (unauthenticated event), then the primary identity of this unauthenticated event gets associated with the last authenticated user, which in this case is Jane. -->
 
-## Intermediate-level implementations {#intermediate}
+## Intermediate implementations {#intermediate-implementations}
 
-Read this section for intermediate-level implementations of [!DNL Identity Graph Linking Rules].
+Read this section for intermediate implementations of [!DNL Identity Graph Linking Rules].
 
 ### Use case: Your data includes non-unique identities
 
 >[!TIP]
 >
->A **non-unique identity** is an identity associated with a non-unique namespace. 
+>* A **non-unique identity** is an identity associated with a non-unique namespace.
+>
+>* In the examples below, `CChash` is a custom namespace that represents hashed credit cards.
 
 You are a data architect working for a commercial bank that issues credit cards. Your marketing team has indicated that they want to include past credit card transaction history to a profile. This identity graph could look like the following.
 
@@ -381,11 +379,15 @@ CRMID: John, Email: john@y, Email_LC_SHA256: john_y_hash
 
 >[!ENDTABS]
 
-## Advanced-level implementations {#advanced}
+## Advanced implementations {#advanced-implementations}
+
+Advanced implementations involve complex and multi-layered graph scenarios. These types of implementations include the usage of **namespace priority** in order to identify the correct links that must be removed in order to prevent graph collapse.
 
 **Namespace priority** is metadata that ranks namespaces by their importance. If a graph contains two identities, each with a different unique namespaces, Identity Service uses namespace priority to decide which links to remove. For more information, read the [documentation on namespace priority](../identity-graph-linking-rules/namespace-priority.md).
 
 Namespace priority plays a critical role in complex graph scenarios. Graphs can have multiple layers - an end-user may be associated with multiple login IDs, and these login IDs could be hashed. Additionally, different ECIDs could be linked to different login IDs. In order to ensure that the right link, in the right layer is removed, your namespace priority configurations must be correct. 
+
+Read this section for advanced implementations of [!DNL Identity Graph Linking Rules].
 
 ### Use case: You need support for multiple lines of businesses
 
