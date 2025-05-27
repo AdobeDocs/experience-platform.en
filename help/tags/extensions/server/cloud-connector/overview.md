@@ -122,7 +122,7 @@ arc.ruleStash.adobe-cloud-connector.reponses.productDetails
 
 ## Use Mutual Transport Layer Security [!DNL mTLS] in Event Forwarding rules {#mtls-rules}
 
-The [!DNL mTLS] certificate is a digital credential that proves the identity of a server or client in secure communications. When you use the [!DNL mTLS] Service API, these certificates help you verify and encrypt your interactions with Adobe Experience Platform. This process not only protects your data but also ensures that every connection is genuine.
+The [!DNL mTLS] certificate is a digital credential that proves the identity of a server or client in secure communications. When you use the [!DNL mTLS] Service API, these certificates help you verify and encrypt your interactions with Adobe Experience Platform Event Forwarding. This process not only protects your data but also ensures that every connection is from a trusted partner.
 
 ### Install the Adobe Cloud Connector extension {#install}
 
