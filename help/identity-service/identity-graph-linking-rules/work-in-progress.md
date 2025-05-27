@@ -34,8 +34,6 @@ Typically, an end-user is represented by a cross-device namespace (often a CRMID
 
 Imagine that you are a data architect at an e-commerce company called **ACME**. John and Jane are your customers. They are end-users who live together in San Jose, California. They share a desktop computer and use this computer to browse your website. Similarly, John and Jane also share an [!DNL iPad] and occasionally use this [!DNL iPad] to browse the internet, including your website.
 
-
-
 **Text mode**
 
 ```json
