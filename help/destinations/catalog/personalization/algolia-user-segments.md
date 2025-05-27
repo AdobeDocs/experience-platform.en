@@ -1,7 +1,6 @@
 ---
 title: Algolia User Segments
 description: Use this connector to activate audiences to Algolia for personalization and use across search and recommendations. You can then use the Algolia User Profile source to import the profiles into the Real-Time CDP to build rich audiences.
-exl-id: 9ee6d5cb-5d87-4a3c-9b87-99a9f7b8c8d8
 ---
 
 # [!DNL Algolia User Segments] connection
@@ -10,11 +9,11 @@ exl-id: 9ee6d5cb-5d87-4a3c-9b87-99a9f7b8c8d8
 
 >[!IMPORTANT]
 >
->The Algolia User Segments destination connector and documentation page are created and maintained by the Algolia Integration Services team. For inquiries or update requests, contact them at [adobe-algolia-solutions@algolia.com](adobe-algolia-solutions@algolia.com).
+>The [!DNL Algolia User Segments] destination connector and documentation page are created and maintained by the Algolia Integration Services team. For inquiries or update requests, contact them at [adobe-algolia-solutions@algolia.com](adobe-algolia-solutions@algolia.com).
 
-Use the [!DNL Algolia User Segments] connector to send Adobe Experience Platform audiences to Algolia to personalize search and recommendations. This requires the use of the [!DNL Algolia User Profiles] source connector to pull user profiles from Algolia to help build rich audiences.
+Use the [!DNL Algolia User Segments] destination connection to send Adobe Experience Platform audiences to Algolia to personalize search and recommendations. This requires the use of the [!DNL Algolia User Profiles] source connector to pull user profiles from Algolia to help build rich audiences.
 
-This tutorial provides steps to create an [!DNL Algolia User Segments] destination connection and dataflow using the Adobe Experience Platform user interface. This connector is used to deliver audiences to Algolia.
+This tutorial provides steps to create an [!DNL Algolia User Segments] destination connection and dataflow using the Adobe Experience Platform user interface.
 
 ![The destination catalog with the Algolia destination.](../../assets/catalog/personalization/algolia-user-segments/catalog.png)
 
@@ -24,15 +23,15 @@ To help you better understand how and when you should use the [!DNL Algolia User
 
 ### Personalization consistency {#personalization-consistency}
 
-This connector should be used by marketing professionals aiming to deliver a consistent personalization across the site from home page to search.  
+Use this destination connector to deliver a consistent personalization across your site from home page to search.  
 
-For example, as a marketer, you might want to build rich audiences from multiple user data sources including Algolia that can be shared with various channels for targeting strategies, leading to a boost in campaign personalization and conversion.
+For example, as a marketer, you might want to build rich audiences in Adobe Experience Platform from multiple user data sources, including Algolia. You can use the [!DNL Algolia User Segments] connector to share the audiences for targeting strategies, leading to a boost in campaign personalization and conversion.
 
-The use case is executed through a combination of both destination and source connectors.
+To implement this use case, you must use both the [[!DNL Algolia] source](/help/sources/connectors/data-partners/algolia-user-profiles.md) and destination connectors.
 
-You would start by importing your existing [!DNL Algolia] user profiles into Adobe Experience Platform Real-time CDP and other sources to begin creating rich audiences with the source connector. Marketers would create audiences using the profile data that can be sent to Algolia for search and recommendation personalization.
+You would start by importing your existing [!DNL Algolia] user profiles into Adobe Experience Platform Real-Time CDP and other sources to begin creating rich audiences with the source connector. Marketers would create audiences using the profile data that can be sent to Algolia for search and recommendation personalization.
 
-The customer would then use the corresponding [Algolia User Profiles](/help/sources/connectors/data-partners/algolia-user-profiles.md) source to ingest and augment customer profiles back into Adobe Real-Time CDP.
+Then, use the corresponding [[!DNL Algolia User Profiles]](/help/sources/connectors/data-partners/algolia-user-profiles.md) source connector to ingest and augment customer profiles back into Real-Time CDP.
 
 ## Prerequisites {#prerequisites}
 
@@ -40,6 +39,16 @@ The customer would then use the corresponding [Algolia User Profiles](/help/sour
 >
 >* To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
+
+## Supported identities {#supported-identities}
+
+[!DNL Algolia User Segments] supports the activation of identities described in the table below. Learn more about [identities](https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/namespaces).
+
+| Target Identity | Description | Considerations |
+|---------|---------|----------|
+| AlgoliaUserToken | Algolia User Token | Select this identity to map to the user profile in Algolia to associate the [!DNL Adobe Experience Platform] audience ids. |
+
+{style="table-layout:auto"}
 
 ## Supported audiences {#supported-audiences}
 
@@ -57,7 +66,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 |---------|----------|---------|
-| Export type | **[!DNL Profile request]** | You are requesting all the audiences that are mapped in the Algolia User Segments destination for a single profile.|
+| Export type | **[!DNL Audience export]** | You are exporting all members of an audience with the identifiers (name, phone number, or others) used in the [!DNL Algolia User Segments] destination. |
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
@@ -74,12 +83,8 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-#### New account {#new-account}
-
-| Field | Description |
-| --- | --- |
-| [!UICONTROL Application ID] | The [!DNL Algolia] application ID is a unique identifier assigned to your [!DNL Algolia] account. |
-| [!UICONTROL API Key] | The [!DNL Algolia] API Key is a credential used to authenticate and authorize API requests to [!DNL Algolia]'s search and indexing services. |
+* **[!UICONTROL Application ID]**: The [!DNL Algolia] application ID is a unique identifier assigned to your [!DNL Algolia] account.
+* **[!UICONTROL API Key]**: The [!DNL Algolia] API Key is a credential used to authenticate and authorize API requests to [!DNL Algolia]'s search and indexing services.
 
 For more information on these credentials, see the [!DNL Algolia] [authentication documentation](https://www.algolia.com/doc/tools/cli/get-started/authentication/).
 
@@ -87,19 +92,12 @@ For more information on these credentials, see the [!DNL Algolia] [authenticatio
 
 After connection to destination is successful, enter the below information to complete the account creation.
 
-| Field | Description |
-| --- | --- |
-| [!UICONTROL Name] | Fill in the preferred name for this destination. |
-| [!UICONTROL Description] | Short explanation of the destination's purpose. |
-| [!UICONTROL Region] | The options are **US** or **EU**. Select the region where the customer data is stored. |
+* **[!UICONTROL Name]**: Fill in the preferred name for this destination.
+* **[!UICONTROL Description]**: Short explanation of the destination's purpose.
+* **[!UICONTROL Region]**: The options are **US** or **EU**. Select the region where the customer data is stored.
+
 
 ![Account details](../../assets/catalog/personalization/algolia-user-segments/account.png)
-
-### Existing account {#existing-account}
-
-Accounts already defined using the [!DNL Algolia User Segments] destination appear in a list pop-up. When selected, you can see details on the account in the right rail. View the example from the UI, when you navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**:
-
-![Existing Account](../../assets/catalog/personalization/algolia-user-segments/existing-account.png)
 
 ### Enable alerts {#enable-alerts}
 
@@ -107,40 +105,40 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-## Data usage and governance {#data-usage-governance}
-
-All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
-
-![Governance](../../assets/catalog/personalization/algolia-user-segments/governance.png)
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
 > 
->To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To export identities, you need the View Identity Graph [access control permission](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions).
 
-Read [Activate audiences to edge personalization destinations](../../ui/activate-edge-personalization-destinations.md) for instructions on activating audiences to this destination.
+Read [Activate profiles and audiences to streaming audience export destinations](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations) for instructions on activating audiences to this destination.
 
-![Activate](../../assets/catalog/personalization/algolia-user-segments/audiences.png)
+### Map attributes and identities {#mapping-attributes-identities}
 
-### Mapping considerations {#mapping-considerations}
+The following target identity namespace(s) must be mapped depending on the use case:
 
-The table below provides recommended mappings for target fields on your destination side that are used by Algolia.
-
-| Target Field | Source Description |
-|--------------|-------------------------------------------------------------|
-| userId | The `IdentityMap: AlgoliaUserToken` value in Experience Platform. |
+* **[!UICONTROL userId]** must be mapped as a target field using **[!UICONTROL Target field]** > **[!UICONTROL Select identity namespace]** > **[!UICONTROL AlgoliaUserToken]**
 
 ![Mapping complete](../../assets/catalog/personalization/algolia-user-segments/mapping-complete.png)
-
->[!NOTE]
->
->It is preferred to use the [!DNL Algolia User Token] identity as the source field. If this has not been done, then you can select `userToken` in the Algolia Profile Details JSON structure.
 
 ## Validate data export {#exported-data}
 
 To verify if audiences have been exported to the user profiles successfully, check your [!DNL Algolia] dashboard and navigate to **[!UICONTROL Advanced Personalization]** and click on **[!UICONTROL User Inspector]**. Find a user profile associated with the exported Adobe Experience Platform audience and search for it in the User Inspector. You will see the audience ID in the segment section.
 
 ![Algolia User Inspector](../../assets/catalog/personalization/algolia-user-segments/verify-segment-user-profile.png)
+
+## Data usage and governance {#data-usage-governance}
+
+All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
+
+## Additional resources {#additional-resources}
+
+Refer to the following [!DNL Algolia] documentation for more information:
+
+* [What is Advanced Personalization?](https://www.algolia.com/doc/guides/personalization/advanced-personalization/what-is-advanced-personalization/)
+* [User profiles](https://www.algolia.com/doc/guides/personalization/advanced-personalization/what-is-advanced-personalization/concepts/user-profiles/)
+* [Segment users with rule contexts](https://www.algolia.com/doc/guides/personalization/advanced-personalization/implement/guides/segment-users-with-rule-contexts/#assign-a-segment-context-at-query-time)
 
 ## Next steps {#next-steps}
 
