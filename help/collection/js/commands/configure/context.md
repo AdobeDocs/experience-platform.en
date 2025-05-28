@@ -61,14 +61,13 @@ The `"placeContext"` keyword collects information about the user's location.
 
 {style="table-layout:auto"}
 
-
 ### Timestamp
 
-The `timestamp` keyword collects information about the timestamp of the event. This part of context cannot be removed.
+The `"timestamp"` keyword collects information about the timestamp of the event. This context is always included and cannot be removed.
 
 | Dimension | Description | XDM path | Example value |
 | --- | --- | --- | --- |
-| Timestamp of the event | UTC timestamp for the end user in simplified extended [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) format. | `xdm.timestamp` | `2019-08-07T22:47:17.129Z` |
+| Timestamp of the event | UTC timestamp for the end user in simplified extended [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) format. | `xdm.timestamp` | `YYYY-08-07T22:47:17.129Z` |
 
 {style="table-layout:auto"}
 
@@ -80,16 +79,11 @@ The `implementationDetails` keyword collects information about the SDK version u
 | --- | --- | --- | --- |
 | Name | The software development kit (SDK) identifier. This field uses a URI to improve uniqueness among identifiers provided by different software libraries. | `xdm.implementationDetails.name` | When the standalone library is used, the value is `https://ns.adobe.com/experience/alloy`. When the library is used as part of the tag extension, the value is `https://ns.adobe.com/experience/alloy+reactor`. |
 | Version | The software development kit (SDK) version. | `xdm.implementationDetails.version` | When the standalone library is used, the value is the library version. When the library is used as part of the tag extension, the value is the library version and the tag extension version joined with a `+`. For example, if the library version is `2.1.0` and the tag extension version is `2.1.3`, the value would be `2.1.0+2.1.3`. |
-| Environment | The environment where the data was collected. This is always set to `browser`. | `xdm.implementationDetails.environment` | `browser` |
-
+| Environment | The environment where the data was collected. This field is always set to `browser`. | `xdm.implementationDetails.environment` | `browser` |
 
 ### High entropy client hints {#high-entropy-client-hints}
 
->[!TIP]
->
->See the documentation on [user agent client hints](../../use-cases/client-hints.md) for detailed information on how to configure them.
-
-The `"highEntropyUserAgentHints"` keyword collects detailed information about the user's device. This data is included in the HTTP header of the request sent to Adobe. After the data has arrived within the Edge network, the XDM object populates its respective XDM path. If you set the respective XDM path in your `sendEvent` call, it takes precedence over the HTTP header value.
+The `"highEntropyUserAgentHints"` keyword collects detailed information about the user's device. This data is included in the HTTP header of the request sent to Adobe. After the data has arrived to the Edge network, the XDM object populates its respective XDM path. If you set the respective XDM path in your `sendEvent` call, it takes precedence over the HTTP header value.
 
 If you use device lookups when [configuring your datastream](/help/datastreams/configure.md), data can be cleared out in favor of device lookup values. Some client hint fields and device lookup fields cannot exist in the same hit.
 
@@ -103,21 +97,9 @@ If you use device lookups when [configuring your datastream](/help/datastreams/c
 | Browser name | The browser used. The low entropy hint `Sec-CH-UA` also collects this element. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | `Chrome` |
 | Browser version | The significant version of the browser. The low entropy hint `Sec-CH-UA` also collects this element. Exact browser version is not automatically collected. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` |
 
-{style="table-layout:auto"}
+See [User agent client hints](../../use-cases/client-hints.md) under Experience Platform use cases for more information.
 
-## Collect context information using the Web SDK tag extension
-
-The context information setting is a combination of radio buttons and check boxes when [configuring the tag extension](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Each checkbox maps to a context keyword.
-
-1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
-1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
-1. Select the desired tag property.
-1. Navigate to **[!UICONTROL Extensions]**, then click **[!UICONTROL Configure]** on the [!UICONTROL Adobe Experience Platform Web SDK] card.
-1. Scroll down to the [!UICONTROL Data Collection] section, then select either **[!UICONTROL All default context information]** or **[!UICONTROL Specific context information]**.
-1. If you select **[!UICONTROL Specific context information]**, enable the check box next to each desired context information element.
-1. Click **[!UICONTROL Save]**, then publish your changes.
-
-## Collect context information using the Web SDK JavaScript library
+## Code example
 
 Set the `context` array of strings when running the `configure` command. If you omit this property when configuring the SDK, all context information except `"highEntropyUserAgentHints"` is collected by default. Set this property if you want to collect high entropy client hints, or if you want to omit other context information from data collection. Strings can be included in any order.
 
@@ -132,3 +114,7 @@ alloy("configure", {
   context: ["web", "device", "environment", "placeContext", "highEntropyUserAgentHints"]
 });
 ```
+
+## Collect context information using the Web SDK tag extension
+
+See [Data collection configuration settings](/help/tags/extensions/client/web-sdk/configure/data-collection.md) in the Web SDK extension documentation to learn how to set the desired context keywords using tags. The desired fields to edit are under **[!UICONTROL Context settings]**.

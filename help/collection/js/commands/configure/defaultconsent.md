@@ -31,7 +31,7 @@ If you do not want to collect events that occurred before the user's opt-in pref
 
 >[!NOTE]
 >
->Currently, Web SDK supports only a single all-or-nothing purpose. Although we plan to build out a more robust set of purposes or categories that will correspond to the different Adobe capabilities and product offerings, the current implementation is an all-or-nothing approach to opt-in.  This only applies to [!DNL Web SDK] and NOT other Adobe JavaScript libraries.
+>Currently, Web SDK supports only a single all-or-nothing purpose. Although Adobe plans to build a more robust set of purposes or categories that correspond to Adobe capabilities and product offerings, the current implementation is an all-or-nothing approach to opt-in. This limitation only applies to the Web SDK and not other Adobe JavaScript libraries.
 
 ## Using `defaultConsent` together with `setConsent` {#using-consent}
 

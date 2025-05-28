@@ -15,19 +15,6 @@ When `clickCollectionEnabled` is enabled, the following XDM elements automatical
 
 Internal links, download links, and exit links are all automatically tracked by default when this boolean is enabled. If you want more control over automatic link tracking, Adobe recommends using the [`clickCollection`](clickcollection.md) object.
 
-## Support for open [!DNL Shadow DOM] elements
-
-The Web SDK supports automatic click tracking for links inside **open Shadow DOM** elements.
-
-Many modern websites use [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components) to build reusable and encapsulated user interface elements. These components often use a technology called [**Shadow DOM**](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM) to keep their internal structure and styles separate from the rest of the page.
-
-There are two types of Shadow DOM:
-
-* **Open Shadow DOM:** The internal structure is accessible to JavaScript running on the page. This means other scripts can interact with or inspect the contents of the component.
-* **Closed Shadow DOM:** The internal structure is hidden from JavaScript outside the component, making it inaccessible for tracking or manipulation.
-
-The Web SDK automatically tracks clicks on `<a>` and `<area>` elements inside **open Shadow DOMs**, just as it does for links in the main document. This ensures that link clicks within web components using open [!DNL Shadow DOM] are included in your analytics data. Clicks inside **closed Shadow DOMs** are not tracked, as their internal structure is hidden from JavaScript code operating outside the component.
-
 ## Automatic link tracking logic
 
 The Web SDK tracks all clicks on `<a>` and `<area>` HTML elements if it doesn't have an `onClick` attribute. Clicks are captured with a [capture](https://www.w3.org/TR/uievents/#capture-phase) click event listener that is attached to the document. When a valid link is clicked, the following logic is run in order:
@@ -38,17 +25,7 @@ The Web SDK tracks all clicks on `<a>` and `<area>` HTML elements if it doesn't 
 
 In all cases, `xdm.web.webInteraction.name` is set to the link text label and `xdm.web.webInteraction.URL` is set to the link destination URL. If you want to set the link name to the URL as well, you can override this XDM field using the `filterClickDetails` callback in the `clickCollection` object.
 
-## Enable automatic link tracking using the Web SDK tag extension {#tag-extension}
-
-This variable is automatically managed by the tag extension; you do not need to explicitly set it. If any of the following are selected when [configuring the tag extension](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md), the applicable link tracking data is collected:
-
-* [!UICONTROL Collect internal link clicks]
-* [!UICONTROL Collect external link clicks]
-* [!UICONTROL Collect download link clicks]
-
-See [`clickCollection`](clickcollection.md) for more information.
-
-## Enable automatic link tracking using the Web SDK JavaScript library {#library}
+## Code example
 
 Set the `clickCollectionEnabled` boolean when running the `configure` command. If you omit this property when configuring the Web SDK, it defaults to `true`. Set this value to `false` if you prefer to set `xdm.web.webInteraction.type` and `xdm.web.webInteraction.value` manually.
 
@@ -59,3 +36,20 @@ alloy(configure, {
   clickCollectionEnabled: false
 });
 ```
+
+## Support for open [!DNL Shadow DOM] elements
+
+The Web SDK supports automatic click tracking for links inside **open Shadow DOM** elements.
+
+Many modern websites use [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components) to build reusable and encapsulated user interface elements. These components often use a technology called [**Shadow DOM**](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM) to keep their internal structure and styles separate from the rest of the page.
+
+There are two types of Shadow DOM:
+
+* **Open Shadow DOM:** The internal structure is accessible to JavaScript running on the page. Other scripts can interact with or inspect the contents of the component.
+* **Closed Shadow DOM:** The internal structure is hidden from JavaScript outside the component, making it inaccessible for tracking or manipulation.
+
+The Web SDK automatically tracks clicks on `<a>` and `<area>` elements inside **open Shadow DOMs**, just as it does for links in the main document. This tracking ensures that link clicks within web components using open [!DNL Shadow DOM] are included in your analytics data. Clicks inside **closed Shadow DOMs** are not tracked, as their internal structure is hidden from JavaScript code operating outside the component.
+
+## Enable or disable click collection for the Web SDK tag extension
+
+See [Data collection configuration settings](/help/tags/extensions/client/web-sdk/configure/data-collection.md) in the Web SDK extension documentation to learn how to perform these actions using tags.

@@ -5,40 +5,40 @@ exl-id: c70db76a-3f2f-45a6-86ab-36efcb18d20f
 ---
 # `autoCollectPropositionInteractions`
 
-The `autoCollectPropositionInteractions` property is an optional setting that determines if the Web SDK automatically collects proposition interactions.
+The `autoCollectPropositionInteractions` property is an optional setting that determines if the Web SDK automatically collects proposition interactions. The value is a map of decision providers, each with value that indicates how automatic proposition interactions should be handled.
 
-The value is a map of decision providers, each with value that indicates how automatic proposition interactions should be handled.
+When you enable automatic proposition interaction tracking, any clicks within a proposition element rendered to the DOM are automatically collected by the Web SDK. This collection includes any experiences automatically rendered to the DOM by the Web SDK and experiences rendered to the DOM using the [`applyPropositions`](../applypropositions.md) command.
 
-## Supported values {#supported-values}
+If you omit this property when configuring the Web SDK, it defaults to `{"AJO": "always", "TGT": "never"}`. If you prefer not to automatically track proposition interactions, set the value to `{"AJO": "never", "TGT": "never"}`.
 
-By default, automatic proposition interactions are _always_ collected for Adobe Journey Optimizer (`AJO`), and _never_ collected for Adobe Target (`TGT`). The default value of `autoTrackPropositionInteractions` is:
-
-```json
-{
-  "AJO": "always",
-  "TGT": "never"
-}
+```javascript
+alloy("configure", {
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
+  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  "autoCollectPropositionInteractions": {
+    "AJO": "always",
+    "TGT": "never"
+  }
+});
 ```
+
+Possible values for each property are:
 
 | Value | Description |
 | --- | --- |
-| `always` | Always automatically collects `interact` events for any elements associated with a proposition. |
-| `never` | Never automatically collect `interact` events for elements associated with a proposition. |
-| `decoratedElementsOnly` | Automatically collect `interact` events for elements associated with a proposition, but only if the element includes data attributes specifying a label or token. |
+| **`always`** | Always automatically collect `interact` events for any elements associated with a proposition. |
+| **`never`** | Never automatically collect `interact` events for elements associated with a proposition. |
+| **`decoratedElementsOnly`** | Automatically collect `interact` events for elements associated with a proposition if the element includes data attributes specifying a label or token. |
 
-## Automatic proposition interaction tracking {#logic}
-
-When you enable automatic proposition interaction tracking, any clicks within a proposition element rendered to the DOM will be automatically collected by the [!DNL Web SDK]. This includes any experiences automatically rendered to the DOM by [!DNL Web SDK] and experiences rendered to the DOM using the [`applyPropositions`](../applypropositions.md) command.
-
-### Data attributes {#data-attributes}
+## Data attributes {#data-attributes}
 
 You can use data attributes on elements to add specificity to an interaction. 
 
 | Name | Data attribute | Description |
 | --- | --- | --- |
-| [!DNL Label] | `data-aep-click-label` | When the label data attribute is present on a clicked element, it is included with the interaction details sent to the [!DNL Edge Network]. The [!DNL Web SDK] looks for a label data attribute beginning with the element clicked and walking up the DOM tree. The [!DNL Web SDK] uses the first label it finds. |
-| [!DNL Token] | `data-aep-click-token` | Use this token when leveraging decision policies in [Adobe Journey Optimizer code-based campaigns](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based). You can use the token to distinguish which decision policy item was clicked. When the token data attribute is present on a clicked element, it is included with the interaction details sent to the Edge Network. The [!DNL Web SDK] looks for a token data attribute beginning with the element clicked and walking up the DOM tree. The [!DNL Web SDK] uses the first token it finds. |
-| [!DNL Interact ID] | `data-aep-interact-id` | The [!DNL Web SDK] automatically adds this unique ID to container elements when rendering propositions. The Web SDK uses this ID to correlate [!DNL DOM] elements with propositions. As this is an ID required by the [!DNL Web SDK], you should not alter it in any way. You can safely ignore it. |
+| [!DNL Label] | `data-aep-click-label` | When the label data attribute is present on a clicked element, it is included with the interaction details sent to the Edge Network. The Web SDK looks for a label data attribute beginning with the element clicked and walking up the DOM tree. The Web SDK uses the first label it finds. |
+| [!DNL Token] | `data-aep-click-token` | Use this token when leveraging decision policies in [Adobe Journey Optimizer code-based campaigns](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based). You can use the token to distinguish which decision policy item was clicked. When the token data attribute is present on a clicked element, it is included with the interaction details sent to the Edge Network. The Web SDK looks for a token data attribute beginning with the element clicked and walking up the DOM tree. The Web SDK uses the first token it finds. |
+| [!DNL Interact ID] | `data-aep-interact-id` | The Web SDK automatically adds this unique ID to container elements when rendering propositions. The Web SDK uses this ID to correlate DOM elements with propositions. As this is an ID required by the Web SDK, you should not alter it in any way. You can safely ignore it. |
 
 ## Example
 
@@ -71,9 +71,9 @@ You can use data attributes on elements to add specificity to an interaction.
 </div>
 ```
 
-### The `applyPropositions` command {#apply-propositions}
+### Using `autoCollectPropositionInteractions` with the `applyPropositions` command {#apply-propositions}
 
-The [`applyPropositions`](../applypropositions.md) command is a convenient way to render propositions to the [!DNL DOM]. However, in the case of code-based campaigns with `JSON`, you can use this command to correlate an existing [!DNL DOM] element (or the one your application code rendered to the screen based on the `JSON` values) with a proposition.
+The [`applyPropositions`](../applypropositions.md) command is a convenient way to render propositions to the DOM. However, in the case of code-based campaigns with JSON, you can use this command to correlate an existing DOM element (or the one your application code rendered to the screen based on the JSON values) with a proposition.
 
 This correlation activates automatic interaction tracking for that element and assigns that element the appropriate proposition. To achieve this, set the `actionType` to `track`.
 
@@ -101,28 +101,5 @@ alloy("sendEvent", {
             },
         });
     }
-});
-```
-
-## Enable automatic propositions and interactions click tracking through the Web SDK tag extension {#tag-extension}
-
-1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credential.
-1. Navigate to **Data Collection** > **Tags**.
-1. Select the desire tag property.
-1. Navigate to **Extensions**, then select **Configure** on the Adobe Experience Platform Web SDK card.
-1. Scroll down to the **[!UICONTROL Data Collection]** section, then select the checkbox **Enable propositions and interaction link tracking**.
-1. Select **Save**, then publish your changes.
-
-## Enable automatic propositions and interactions link tracking through the Web SDK JavaScript library {#library}
-
-Proposition tracking is enabled by default in [!DNL Web SDK]. However, you can configure it further using the `autoCollectPropositionInteractions` value when running the [`configure`](../configure/overview.md) command.
-
-If you omit this property when configuring the Web SDK, it defaults to `{"AJO": "always", "TGT": "never"}`. If you prefer not to automatically track proposition interactions, set the value to `{"AJO": "never", "TGT": "never"}`.
-
-```javascript
-alloy("configure", {
-   "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-   "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-   "autoCollectPropositionInteractions": {"AJO": "always", "TGT": "never"}
 });
 ```

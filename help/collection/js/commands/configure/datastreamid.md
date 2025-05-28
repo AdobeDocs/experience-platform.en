@@ -5,7 +5,7 @@ exl-id: 2d709f70-c014-4868-b2f5-17e8b88343d1
 ---
 # `datastreamId`
 
-The `datastreamId` property is a string that determines which [datastream](../../../datastreams/overview.md) in Adobe Experience Platform you want to send data to. This property is required when sending data to Adobe. Web SDK versions 2.20.0 or earlier use `edgeConfigId` instead.
+The `datastreamId` property is a string that determines which [datastream](/help/datastreams/overview.md) in Adobe Experience Platform you want to send data to. This property is required when sending data to Adobe. Web SDK versions 2.20.0 or earlier use `edgeConfigId` instead.
 
 To locate a datastream ID:
 
@@ -15,7 +15,22 @@ To locate a datastream ID:
 
 Alternatively, you can select the desired datastream name and the datastream ID appears in the right column for you to copy.
 
+## Code example
+
+Set the `datastreamID` string property when running the `configure` command. This property is required for all Web SDK implementations. If you omit this property, the Web SDK does not know which datastream to send data to, causing that data to be permanently lost.
+
+```js
+alloy("configure", {
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
+});
+```
+
+If you configure multiple instances of the Web SDK on a single page, you must configure a different `datastreamId` for each instance.
+
 ## Select the datastream ID using the Web SDK tag extension
+
+
 
 Choose from a list of available datastreams, or enter a datastream ID directly when [configuring the tag extension](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
@@ -29,16 +44,3 @@ Choose from a list of available datastreams, or enter a datastream ID directly w
 1. Click **[!UICONTROL Save]**, then publish your changes.
 
 You can send data to different datastreams for production, staging, and development tag environments.
-
-## Select the datastream ID using the Web SDK JavaScript library
-
-Set the `datastreamID` string property when running the `configure` command. This property is required for all Web SDK implementations. If you omit this property, the Web SDK does not know which datastream to send data to, causing that data to be permanently lost.
-
-```js
-alloy("configure", {
-  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
-  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
-});
-```
-
-If you configure multiple instances of the Web SDK on a single page, you must configure a different `datastreamId` for each instance.
