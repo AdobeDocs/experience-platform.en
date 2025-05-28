@@ -8,6 +8,12 @@ exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
 ---
 # Privacy jobs endpoint
 
+>[!IMPORTANT]
+>
+>To support the growing number of U.S. state privacy laws, Privacy Service is changing its `regulation_type` values. Use the new values that include state abbreviations (for example, `ucpa_ut_usa`) starting **12 June 2025**. The older values (for example, `ucpa_usa`) stop working after **28 July 2025**.
+>
+>Update your integrations before this deadline to avoid request failures.
+
 This document covers how to work with privacy jobs using API calls. Specifically, it covers the use of the `/job` endpoint in the [!DNL Privacy Service] API. Before reading this guide, refer to the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
 
 >[!NOTE]
