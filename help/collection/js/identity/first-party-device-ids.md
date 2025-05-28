@@ -146,11 +146,11 @@ A [!DNL CNAME] record in your DNS allows you to create an alias from one domain 
 
 **Example**
 
-Let's consider you want to implement Web SDK on your website `mywebsite.com`. The Web SDK sends data to the Edge Network to the `edge.adobedc.net` domain.
+Let's consider you want to implement Web SDK on your website `example.com`. The Web SDK sends data to the Edge Network to the `edge.adobedc.net` domain.
 
 |Without [!DNL CNAME] | With [!DNL CNAME] |
 |---------|----------|
-| <ul><li>Your website `mywebsite.com` uses the Web SDK domain `edge.adobedc.net` to send data to the Edge Network.</li><li>Cookies set by `edge.adobedc.net` are considered third-party cookies, since they do not come from your `mywebsite.com` domain. Depending on your users browsers, third party cookies might be blocked, and your data does not reach the Edge Network.</li></ul> | <ul><li>You create a subdomain where you deploy Web SDK, such as `metrics.mywebsite.com`.</li><li>You set a [!DNL CNAME] record in your DNS system so that `metrics.mywebsite.com` points to `edge.adobedc.net`.</li><li>When your website sets cookies through `metrics.mywebsite.com`, to the browser they will appear to come from `mywebsite.com` (first-party) instead of `edge.adobedc.net` (third-party). This makes the first-party ID cookie less likely to be blocked, ensuring more accurate data collection.</li></ul> |
+| <ul><li>Your website `example.com` uses the Web SDK domain `edge.adobedc.net` to send data to the Edge Network.</li><li>Cookies set by `edge.adobedc.net` are considered third-party cookies, since they do not come from your `example.com` domain. Depending on your users browsers, third party cookies might be blocked, and your data does not reach the Edge Network.</li></ul> | <ul><li>You create a subdomain where you deploy Web SDK, such as `metrics.example.com`.</li><li>You set a [!DNL CNAME] record in your DNS system so that `metrics.example.com` points to `edge.adobedc.net`.</li><li>When your website sets cookies through `metrics.example.com`, to the browser they will appear to come from `example.com` (first-party) instead of `edge.adobedc.net` (third-party). This makes the first-party ID cookie less likely to be blocked, ensuring more accurate data collection.</li></ul> |
 
 When first-party data collection is enabled using a [!DNL CNAME], all cookies for your domain will be sent on requests made to the data collection endpoint.
 

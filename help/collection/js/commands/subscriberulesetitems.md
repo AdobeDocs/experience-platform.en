@@ -56,11 +56,11 @@ Follow the steps below to subscribe to content cards through the Tags user inter
 
 ## Subscribe to content cards using the Web SDK JavaScript library {#library}
 
-The following sample code subscribes to the `web://mywebsite.com/#welcome` surface for content cards and uses the `collectEvent` convenience method to emit `display` events for all propositions.
+The following sample code subscribes to the `web://example.com/#welcome` surface for content cards and uses the `collectEvent` convenience method to emit `display` events for all propositions.
 
 ```js
 alloy("subscribeRulesetItems", {
-  surfaces: ["web://mywebsite.com/#welcome"],
+  surfaces: ["web://example.com/#welcome"],
   schemas: ["https://ns.adobe.com/personalization/message/content-card"],
   callback: (result, collectEvent) => {
     const { propositions = [] } = result;
