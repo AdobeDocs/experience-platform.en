@@ -7,7 +7,7 @@ exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
 
 >[!IMPORTANT]
 >
->[!DNL Identity Graph Linking Rules] is now generally available. Contact Adobe Support if you have an existing sandbox that requires collapsed graphs to be un-collapsed ("fixed") after you enable identity settings.
+>[!DNL Identity Graph Linking Rules] is now generally available. Contact your Adobe Account Team or Adobe Support if you have an existing sandbox that requires collapsed graphs to be un-collapsed ("fixed") after you enable identity settings.
 
 Identity settings is a feature in the Adobe Experience Platform Identity Service UI that you can use to designate unique namespaces and configure namespace priority.
 
@@ -76,6 +76,8 @@ From here, you must confirm the following before proceeding to the final step:
 >* The final step is another confirmation message indicating that existing graphs will only be affected by the graph algorithm **only if the graphs get updated after saving your settings**, and that the primary identity of event fragments on Real-Time Customer Profile will not be updated even after namespace priority changes.
 >
 >* It will take up up to  **24 hours** for your new or updated settings to take effect. To confirm, enter your sandbox name and then select **[!UICONTROL Confirm]**. 
+>
+>* There will be no changes to your data until you save your identity settings.
 
 ![The confirmation window that displays a warning about a six-hour delay before configurations get processed.](../images/rules/complete.png)
 
