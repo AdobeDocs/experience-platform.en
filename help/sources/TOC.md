@@ -236,6 +236,7 @@ role: Developer
   - [Ingest encrypted data](tutorials/api/encrypt-data.md)
   - [Save a dataflow as a draft](tutorials/api/draft.md)
   - [Apply access labels to a dataflow](tutorials/api/labels.md)
+  - [Use private endpoints](tutorials/api/private-link.md)
 - UI tutorials {#ui-tutorials}
   - Create a source connection {#create}
     - Adobe applications {#adobe-applications}
