@@ -103,6 +103,13 @@ This document provides definitions for key terms related to privacy regulations 
 
 **MHMDAa**: The [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&full=true) enhances privacy rights for consumers regarding their health data. It mandates disclosures, consumer consent, and deletion rights for health data, and prohibits the sale of health data without authorization. Additionally, the Act makes it unlawful to use geofencing around healthcare facilities.
 
+**[!DNL Minnesota Consumer Data Privacy Act]** (MCDPA): Effective July 31, 2025, the Minnesota Consumer Data Privacy Act (MCDPA) grants residents rights to access, correct, delete, and obtain copies of their personal data. It also provides opt-out rights for data sales, targeted advertising, and profiling with legal or similarly significant effects. The MCDPA applies to entities that conduct business in Minnesota or target Minnesota residents if they control or process the personal data of either:
+
+- At least 100,000 consumers annually (excluding data processed solely for payment transactions), or
+- At least 25,000 consumers and derive more than 25% of gross revenue from selling personal data.
+
+Businesses are required to implement reasonable administrative, technical, and physical data security practices. They must also conduct data protection assessments for high-risk processing activities. Enforcement is led by the Minnesota Attorney General, with penalties of up to $7,500 per violation. A 30-day cure period is provided before enforcement begins—this grace period applies until January 31, 2026.
+
 **[!DNL Montana Consumer Data Privacy Act]**: This law gives Montana residents rights to access, correct, delete, and request copies of their personal data. The MCDPA applies to businesses that process data for over 50,000 Montana consumers and emphasizes the protection of sensitive personal data, such as biometric and genetic information. It enforces transparency around data collection, sharing, and selling practices.
 
 ## N
@@ -163,6 +170,8 @@ This document provides definitions for key terms related to privacy regulations 
 ## T
 
 **TDPSA**: The Texas Data Privacy and Security Act (TDPSA) is a comprehensive legislation that protects Texas residents' personal data rights. It grants individuals the right to access, correct, delete, and obtain copies of their data and to opt out of data sales and targeted advertising. Businesses violating this legislation can face financial penalties.
+
+**[!DNL Tennessee Information Protection Act (TIPA)]**: Effective July 1, 2025, the Tennessee Information Protection Act (TIPA) grants residents the rights to access, correct, delete, and obtain copies of their personal data. It also provides opt-out rights for data sales, targeted advertising, and profiling with legal or similarly significant effects. TIPA applies to businesses with annual gross revenues over $25 million that either: control or process data of at least 175,000 consumers, or control or process data of at least 25,000 consumers and derive over 50% of gross revenue from the sale of personal information. Businesses must implement reasonable security measures and conduct data protection assessments for high-risk processing. The Tennessee Attorney General enforces the law, with penalties up to $7,500 per violation and treble damages for willful violations. A 60-day cure period is provided before enforcement actions begin.
 
 **Trilogues**: Trilogues are informal negotiations between the European Commission, the European Parliament, and the Council of the European Union. These negotiations are usually held following the first readings of proposed legislation to more quickly agree to a compromise text to be adopted.
 agree on the adoption of a compromise text more quickly.
