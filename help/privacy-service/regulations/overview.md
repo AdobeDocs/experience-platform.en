@@ -47,6 +47,8 @@ Through the use of [Adobe Experience Platform Privacy Service](../home.md), Expe
 
 {style="table-layout:auto"}
 
+See the [Privacy jobs endpoint guide](../api/privacy-jobs.md) to learn how to use the `/jobs` endpoint to submit, track, and manage access and delete requests using the Privacy Service API, with examples and formatting guidance.
+
 ## Next steps
 
 For more information on supported regulations, refer to the following documents:
