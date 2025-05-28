@@ -26,21 +26,10 @@ alloy("configure", {
 });
 ```
 
-If you configure multiple instances of the Web SDK on a single page, you must configure a different `datastreamId` for each instance.
+>[!NOTE]
+>
+>If you configure multiple instances of the Web SDK on a single page, you must configure a different `datastreamId` for each instance.
 
 ## Select the datastream ID using the Web SDK tag extension
 
-
-
-Choose from a list of available datastreams, or enter a datastream ID directly when [configuring the tag extension](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
-
-1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
-1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
-1. Select the desired tag property.
-1. Navigate to **[!UICONTROL Extensions]**, then click **[!UICONTROL Configure]** on the [!UICONTROL Adobe Experience Platform Web SDK] card.
-1. Locate the [!UICONTROL Datastreams] section, then select the desired method of determining datastream.
-   * If choosing from a list, select the sandbox and datastream from each respective dropdown list.
-   * If entering values, enter the desired datastream ID.
-1. Click **[!UICONTROL Save]**, then publish your changes.
-
-You can send data to different datastreams for production, staging, and development tag environments.
+See [Datastream configuration settings](/help/tags/extensions/client/web-sdk/configure/datastreams.md) in the Web SDK tag extension documentation to learn how to set the desired datastream for each environment using tags. You can send data to different datastreams for production, staging, and development tag environments.
