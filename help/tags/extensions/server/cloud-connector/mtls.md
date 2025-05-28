@@ -1,6 +1,7 @@
 ---
 title: Mutual Transport Layer Security (mTLS) Overview
 description: Learn how you can use mTLS to securely retrieve public certificates issued by Adobe for Event Forwarding.
+exl-id: e8ee8655-213d-4d2a-93d4-d62824b53b1d
 ---
 # Mutual Transport Layer Security [!DNL mTLS] overview
 
