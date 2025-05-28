@@ -161,9 +161,9 @@ This guide covered how to send data to [!DNL Algolia] using the [!DNL Algolia Ev
 
 For details on how to debug your implementation using the Experience Platform Debugger and Event Forwarding Monitoring tool, read the [Adobe Experience Platform Debugger overview](../../../../debugger/home.md) and [Monitor activities in event forwarding](../../../ui/event-forwarding/monitoring.md).
 
-<!-- ## Additional resources
+## Additional resources
 
 - [[!DNL Algolia] Insights API Documentation](https://www.algolia.com/doc/rest-api/insights/)
 - [[!DNL Algolia] Events Documentation](https://www.algolia.com/doc/guides/sending-events/getting-started/)
 - [[!DNL Adobe Experience Platform] Event Forwarding Documentation](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html)
-- [[!DNL Algolia] AI Features Overview](https://www.algolia.com/products/ai-search/) -->
+- [[!DNL Algolia] AI Features Overview](https://www.algolia.com/products/ai-search/)
