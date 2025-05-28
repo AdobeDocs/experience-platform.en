@@ -18,7 +18,7 @@ The NPM package of the Adobe Experience Platform Web SDK exposes a `createInstan
 ```js
 import { createInstance } from "@adobe/alloy";
 const alloy = createInstance({ name: "alloy" });
-alloy("config", { ... });
+alloy("configure", { ... });
 alloy("sendEvent", { ... });
 ```
 
@@ -31,6 +31,6 @@ alloy("sendEvent", { ... });
 ```js
 var alloyLibrary = require("@adobe/alloy");
 var alloy = alloyLibrary.createInstance({ name: "alloy" });
-alloy("config", { ... });
+alloy("configure", { ... });
 alloy("sendEvent", { ... });
 ```

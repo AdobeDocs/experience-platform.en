@@ -211,6 +211,7 @@ role: Developer
     * [Overview](./extensions/server/overview.md)
     * Adobe Experience Platform Cloud Connector {#cloud-connector}
       * [Overview](./extensions/server/cloud-connector/overview.md)
+      * [mTLS Certificates](./extensions/server/cloud-connector/mtls.md)
       * [Release notes](./extensions/server/cloud-connector/release-notes.md)
     * [!DNL Adform] {#adform}
       * [Overview](./extensions/server/adform/overview.md)

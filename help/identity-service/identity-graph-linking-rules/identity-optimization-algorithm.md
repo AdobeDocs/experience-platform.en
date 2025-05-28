@@ -1,28 +1,20 @@
 ---
-title: Identity optimization algorithm
+title: Identity Optimization Algorithm
 description: Learn about Identity Optimization Algorithm in Identity Service.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
 ---
-# Identity optimization algorithm {#identity-optimization-algorithm}
+# Identity Optimization Algorithm {#identity-optimization-algorithm}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_uniquenamespace"
 >title="Unique Namespace"
 >abstract="A graph cannot have two identities with a unique namespace. If a graph tries to exceed this limit, the most recent links are kept, and the oldest links are removed."
 
->[!AVAILABILITY]
->
->Identity Graph Linking Rules is currently in Limited Availability, and can be accessed by all customers in development sandboxes.
->
->* **Activation requirements**: The feature will remain inactive until you configure and save your [!DNL Identity Settings]. Without this configuration, the system will continue to operate normally, with no changes in behavior.
->* **Important notes**: During this Limited Availability phase, Edge segmentation may produce unexpected segment membership results. However, streaming and batch segmentation will function as expected.
->* **Next steps**: For information on how to enable this feature in production sandboxes, please contact your Adobe account team.
-
-The identity optimization algorithm is a graph algorithm on Identity Service that helps ensure that an identity graph is representative of a single person, and therefore, prevents the unwanted merging of identities on Real-Time Customer Profile.
+The Identity Optimization Algorithm is a graph algorithm on Identity Service that helps ensure that an identity graph is representative of a single person, and therefore, prevents the unwanted merging of identities on Real-Time Customer Profile.
 
 ## Input parameters {#input-parameters}
 
-Read this section for information on unique namespaces and namespace priority. These two concepts serve as input parameters required by the identity optimization algorithm.
+Read this section for information on unique namespaces and namespace priority. These two concepts serve as input parameters required by the Identity Optimization Algorithm.
 
 ### Unique namespace {#unique-namespace}
 
@@ -30,7 +22,7 @@ A unique namespace determines the links that get removed if graph collapse happe
 
 A single merged profile and its corresponding identity graph should represent a single individual (person entity). A single individual is usually represented by CRMIDs and/or Login IDs. The expectation is that no two individuals (CRMIDs) are merged into a single profile or graph.
 
-You must specify which namespaces represent a person entity in Identity Service using the identity optimization algorithm. For example, if a CRM database defines a user account to be associated with a single CRMID and a single email address, then the identity settings for this sandbox would look like:
+You must specify which namespaces represent a person entity in Identity Service using the Identity Optimization Algorithm. For example, if a CRM database defines a user account to be associated with a single CRMID and a single email address, then the identity settings for this sandbox would look like:
 
 * CRMID namespace = unique
 * Email namespace = unique
@@ -45,24 +37,24 @@ A namespace that you declare to be unique will automatically be configured to ha
 
 ### Namespace priority {#namespace-priority}
 
-Namespace priority determines how the identity optimization algorithm removes links.
+Namespace priority determines how the Identity Optimization Algorithm removes links.
 
 Namespaces in Identity Service have an implicit relative order of importance. Consider a graph structured like a pyramid. There is one node on the top layer, two nodes on the middle layer, and four nodes on the bottom layer. Namespace priority must reflect this relative order to ensure that a person entity is accurately represented.
 
 For an in-depth look at namespace priority and its complete functionalities and uses, read the [namespace priority guide](./namespace-priority.md).
 
-![graph layers and namespace priority](../images/namespace-priority/graph-layers.png)
+![The graph layers and namespace priority.](../images/namespace-priority/graph-layers.png "The graph layers and namespace priority."){zoomable="yes"}
 
 ## Process {#process}
 
-Upon ingesting new identities, Identity Service checks if the new identities and their corresponding namespaces adheres to unique namespace configurations. If the configurations are followed, then ingestion proceeds and the new identities are linked to the the graph. However, if configurations are not followed, then the identity optimization algorithm will:
+Upon ingesting new identities, Identity Service checks if the new identities and their corresponding namespaces adheres to unique namespace configurations. If the configurations are followed, then ingestion proceeds and the new identities are linked to the the graph. However, if configurations are not followed, then the Identity Optimization Algorithm will:
 
 * Ingest the most recent event, while taking namespace priority into account.
 * Remove the link that would merge two person entities from the appropriate graph layer.  
 
-## Identity optimization algorithm details
+## Identity Optimization Algorithm details
 
-When the unique namespace constraint is violated, the identity optimization algorithm will "re-play" the links and rebuild the graph from scratch.
+When the unique namespace constraint is violated, the Identity Optimization Algorithm will "re-play" the links and rebuild the graph from scratch.
 
 * Links are sorted by the following order:
   * Latest event.
@@ -70,11 +62,11 @@ When the unique namespace constraint is violated, the identity optimization algo
 * The graph would re-establish based on the above order. If adding the link violates the limit constraint (e.g. the graph contains two or more identities with a unique namespace), then the links is removed.
 * The resulting graph will then be compliant with the unique namespace constraint that you configured.
 
-![A diagram that visualizes identity optimization algorithm.](../images/ido_algorithm.png)
+![A diagram that visualizes Identity Optimization Algorithm.](../images/ido_algorithm.png "A diagram that visualizes Identity Optimization Algorithm."){zoomable="yes"}
 
-## Example scenarios for identity optimization algorithm
+## Example scenarios for Identity Optimization Algorithm
 
-The following section outlines how the identity optimization algorithm behaves, under scenarios such as shared device or ingestion of data with the same timestamp.
+The following section outlines how the Identity Optimization Algorithm behaves, under scenarios such as shared device or ingestion of data with the same timestamp.
 
 ### Shared device
 
@@ -94,10 +86,10 @@ In this example, both CRMID and Email are designated as unique namespaces. At `t
 
 * `timestamp=1`: Jane logs in to your e-commerce website using a laptop. Jane is represented by her CRMID and Email, while the web browser on her laptop that she uses is represented by an ECID.
 * `timestamp=2`: John logs in to your e-commerce website using the same laptop. John is represented by his CRMID and Email, while the web browser he used is already represented by an ECID. Due to the same ECID being linked to two different graphs, Identity Service is able to know that this device (laptop) is a shared device.
-* However, due to the unique namespace configuration that sets a maximum of one CRMID namespace and one Email namespace per graph, identity optimization algorithm then splits the graph into two.
+* However, due to the unique namespace configuration that sets a maximum of one CRMID namespace and one Email namespace per graph, Identity Optimization Algorithm then splits the graph into two.
   * Finally, because John is the last authenticated user, the ECID that represents the laptop, remains linked to his graph instead of Jane's.
 
-![shared device case one](../images/identity-settings/shared-device-case-one.png)
+![Case one of shared device.](../images/identity-settings/shared-device-case-one.png "Case one of shared device."){zoomable="yes"}
 
 >[!TAB Example two]
 
@@ -111,10 +103,10 @@ In this example, the CRMID namespace is designated as a unique namespace.
 * `timestamp=1`: Jane logs in to your e-commerce website using a laptop. She is represented by her CRMID, and the web browser on the laptop is represented by the ECID.
 * `timestamp=2`: John logs in to your e-commerce website using the same laptop. He is represented by his CRMID and the web browser he uses is represented by the same ECID.
   * This event links two independent CRMIDs to the same ECID, which exceeds the configured limit of one CRMID.
-  * As a result, identity optimization algorithm removes the older link, which in this case is Jane's CRMID that was linked at `timestamp=1`.
+  * As a result, Identity Optimization Algorithm removes the older link, which in this case is Jane's CRMID that was linked at `timestamp=1`.
   * However, while Jane's CRMID will no longer exist as a graph on Identity Service, it will still persist as a profile on Real-Time Customer Profile. This is because an identity graph must contain at least two linked identities, and as a result of removing the links, Jane's CRMID no longer has another identity to link to.
 
-![shared-device-case-two](../images/identity-settings/shared-device-case-two.png)
+![Case two of shared device.](../images/identity-settings/shared-device-case-two.png "Case two of shared device."){zoomable="yes"}
 
 >[!ENDTABS]
 
@@ -135,11 +127,11 @@ In this example, the CRMID and Email namespaces are designated as unique. Consid
 * `timestamp=3`: Your data engineer ingests Jane's CRM record, which results in her CRMID getting linked to the bad email.
 * `timestamp=4`: Your data engineer ingests John's CRM record, which results in his CRMID getting linked to the bad email.
   * This then becomes a violation of the unique namespace configuration as it creates a single graph with two CRMID namespaces.
-  * As a result, the identity optimization algorithm deletes the older link, which in this case is the link between Jane's identity with CRMID namespace and the identity with test<span>@test.
+  * As a result, the Identity Optimization Algorithm deletes the older link, which in this case is the link between Jane's identity with CRMID namespace and the identity with test<span>@test.
 
-With identity optimization algorithm, bad identity values such as bogus emails or phone numbers do not get propagated across several different identity graphs.
+With Identity Optimization Algorithm, bad identity values such as bogus emails or phone numbers do not get propagated across several different identity graphs.
 
-![bad-email](../images/identity-settings/bad-email.png)
+![A diagram of a bad email ingestion.](../images/identity-settings/bad-email.png "A diagram of a bad email ingestion."){zoomable="yes"}
 
 ## Anonymous event association
 
@@ -156,7 +148,7 @@ View the diagram below to better understand how anonymous event association work
     * Before his initial login prior to `timestamp=1`; and
     * Any activities he or Nora did while browsing anonymously in-between Kevin's first and second logins.
 
-![anon-event-association](../images/identity-settings/anon-event-association.png)
+![A diagram of anonymous event association.](../images/identity-settings/anon-event-association.png "A diagram of anonymous event association."){zoomable="yes"}
 
 
 ## Next steps

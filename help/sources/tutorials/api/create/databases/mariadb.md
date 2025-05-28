@@ -7,7 +7,7 @@ exl-id: 9b7ff394-ca55-4ab4-99ef-85c80b04a6df
 
 Read this guide to learn how to connect your [!DNL MariaDB] account to Adobe Experience Platform using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
-## Getting started
+## Get started
 
 This guide requires a working understanding of the following components of Experience Platform:
 
@@ -24,11 +24,11 @@ Read the [[!DNL MariaDB] overview](../../../../connectors/databases/mariadb.md#p
 
 Read the guide on [getting started with Experience Platform APIs](../../../../../landing/api-guide.md) for information on how to successfully make calls to Experience Platform APIs.
 
-## Connect [!DNL MariaDB] to Experience Platform on Azure {#azure}
+## Connect [!DNL MariaDB] to Experience Platform
 
-Read the steps below for information on how to connect your [!DNL MariaDB] account to Experience Platform on Azure.
+Read the steps below for information on how to connect your [!DNL MariaDB] account to Experience Platform.
 
-### Create a base connection for [!DNL MariaDB] on Experience Platform on Azure {#azure-base}
+### Create a base connection for [!DNL MariaDB]
 
 A base connection retains information between your source and Experience Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
@@ -159,82 +159,6 @@ A successful response returns details of the newly created base connection, incl
 +++
 
 >[!ENDTABS]
-
-## Connect [!DNL MariaDB] to Experience Platform on Amazon Web Services {#aws}
-
->[!AVAILABILITY]
->
->This section applies to implementations of Experience Platform running on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../../../../landing/multi-cloud.md).
-
-Read the steps below for information on how to connect your [!DNL MariaDB] account to Experience Platform on AWS.
-
-### Create a base connection for [!DNL MariaDB] on Experience Platform on AWS {#aws-base}
-
-**API format**
-
-```https
-POST /connections
-```
-
-**Request**
-
-The following request creates a base connection for [!DNL MariaDB] to connect to Experience Platform on AWS.
-
-+++View request example
-
-```shell
-curl -X POST \
-  'https://platform.adobe.io/data/foundation/flowservice/connections' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-      "name": "MariaDB on Experience Platform AWS",
-      "description": "MariaDB on Experience Platform AWS",
-      "auth": {
-          "specName": "Basic Authentication",
-          "params": {
-              "server": "{SERVER}",
-              "database": "{DATABASE}",
-              "username": "{USERNAME}",
-              "password": "{PASSWORD}",
-              "sslMode": "{SSLMODE}"
-          }
-      },
-      "connectionSpec": {
-          "id": "3000eb99-cd47-43f3-827c-43caf170f015",
-          "version": "1.0"
-      }
-  }'
-```
-
-| Property | Description |
-| --- | --- |
-| `auth.params.server` | The name or IP of your [!DNL MariaDB] database. |
-| `auth.params.database` | The name of your database. |
-| `auth.params.username` | The username that corresponds with your database. |
-| `auth.params.password` | The password that corresponds with your database. |
-| `auth.params.sslMode` | The method by which data is encrypted during data transfer. |
-| `connectionSpec.id` | The [!DNL MariaDB] connection specification ID is: `3000eb99-cd47-43f3-827c-43caf170f015`. |
-
-+++
-
-**Response**
-
-A successful response returns details of the newly created base connection, including its unique identifier (`id`).
-
-+++View response example
-
-```json
-{
-    "id": "f847950c-1c12-4568-a550-d5312b16fdb8",
-    "etag": "\"0c0099f4-0000-0200-0000-67da91710000\""
-}
-```
-
-+++
 
 
 ## Next steps
