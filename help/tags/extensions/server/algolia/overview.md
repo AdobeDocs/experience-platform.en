@@ -31,11 +31,9 @@ To install the [!DNL Algolia] extension, follow these steps:
 
 Navigate to **[!UICONTROL Data Collection]** in [!DNL Adobe Experience Platform]. Select the **[!UICONTROL Extensions]** tab.
 
-![Placeholder](../../../images/extensions/server/algolia/placeholder.png)
-
 Open the **[!UICONTROL Catalog]** and locate the **[!UICONTROL Algolia Event Forwarding]** extension and then select **[!UICONTROL Install]**.
 
-![Placeholder](../../../images/extensions/server/algolia/placeholder.png)
+![The installation process for the Algolia Event Forwarding extension in Adobe Experience Platform](../../../images/extensions/server/algolia/install-extension.png)
 
 ### Configure the extension {#configure-extension}
 
@@ -59,19 +57,7 @@ The [!DNL Algolia] event forwarding extension offers a single action type that c
 
 Configure the **[!UICONTROL Send event]** action to forward events to [!DNL Algolia]:
 
-Select **[!UICONTROL Rules]**, then **[!UICONTROL Add Rule]** or select an existing rule.
-
-![Placeholder](../../../images/extensions/server/algolia/placeholder.png)
-
-In the **[!UICONTROL Then]** portion of the rule, add an action.
-
-![Placeholder](../../../images/extensions/server/algolia/placeholder.png)
-
-Select **[!UICONTROL Extension]**: [!DNL Algolia] Event Forwarding.
-
-![Placeholder](../../../images/extensions/server/algolia/placeholder.png)
-
-Select **[!UICONTROL Action Type]**: **[!UICONTROL Send Events]**.
+Select **[!UICONTROL Rules]** > **[!UICONTROL Add Rule]** or select an existing rule. In the **[!UICONTROL Then]** portion of the rule, add an action and select **[!UICONTROL Extension]**: [!DNL Algolia] Event Forwarding > **[!UICONTROL Action Type]**: **[!UICONTROL Send Events]**.
 
 ![Configuration of the Send Event action in the Algolia vent forwarding extension.](../../../images/extensions/server/algolia/send-event.png)
 
@@ -87,19 +73,11 @@ To add the [!DNL Algolia] event field group:
 
 Navigate to **[!UICONTROL Schemas]** and select **[!UICONTROL Browse]**.
 
-![Placeholder](../../../images/extensions/server/algolia/placeholder.png)
-
 Add a new schema or update an existing schema that you use to send web events and hover over the **[!UICONTROL Add]** icon. Enter *[!DNL Algolia]* in the search box to narrow down the results.
 
-![Placeholder](../../../images/extensions/server/algolia/placeholder.png)
+Select the **[!DNL Algolia] Event Details** field group > **[!UICONTROL Add field group]** button > **[!UICONTROL Save]**.
 
-Select the **[!DNL Algolia] Event Details** field group.
-
-![Placeholder](../../../images/extensions/server/algolia/placeholder.png)
-
-Select the **[!UICONTROL Add field group]** button and then select **[!UICONTROL Save]**.
-
-![Algolia profile field group configuration in [!DNL Adobe Experience Platform]](../../../images/extensions/server/algolia/algolia-profile-field-group.png)
+![Algolia profile field group configuration in Experience Platform](../../../images/extensions/server/algolia/algolia-profile-field-group.png)
 
 ### Map and send data using the [!UICONTROL Data Collection] tag
 
@@ -143,8 +121,6 @@ The [!DNL Algolia] event forwarding extension can be used with the **[!DNL Adobe
 After configuring the [!DNL Algolia] event forwarding extension, you can verify that events are being sent and received correctly by following these steps:
 
 Navigate to your [!DNL Algolia] dashboard and go to **[!UICONTROL Data Sources > Events > Debugger]**.
-
-![Placeholder](../../../images/extensions/server/algolia/placeholder.png)
 
 Select the event that matches the event sent from [!DNL Algolia]'s event forwarding extension and verify that the expected data is present in the event.
 
