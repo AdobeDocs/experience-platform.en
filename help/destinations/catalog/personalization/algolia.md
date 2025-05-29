@@ -11,7 +11,7 @@ description: Use this connector to activate audiences to Algolia for personaliza
 >
 >The [!DNL Algolia] destination connector and documentation page are created and maintained by the Algolia Integration Services team. For inquiries or update requests, contact them at [adobe-algolia-solutions@algolia.com](adobe-algolia-solutions@algolia.com).
 
-Use the [!DNL Algolia] destination connection to send Adobe Experience Platform audiences to Algolia for personalized search and recommendations. Before using the [!DNL Algolia] destination connector, you must first configure the [[!DNL Algolia User Profiles]](/help/sources/connectors/data-partners/algolia-user-profiles.md) source connector. In the source connector [UI tutorial](/help/sources/tutorials/ui/create/data-partners/algolia-user-profiles.md), there are steps to create the Algolia User Token identity, which will be used in the mapping step when configuring the destination connector.
+Use the [!DNL Algolia] destination connection to send Adobe Experience Platform audiences to Algolia for personalized search and recommendations. Before you can use the [!DNL Algolia] destination connector, you must first set up the [[!DNL Algolia User Profiles]](/help/sources/connectors/data-partners/algolia-user-profiles.md) source connector. During the source connector setup tutorial, you will create the Algolia User Token identity. This identity is required for mapping when you configure the destination connector.
 
 This tutorial provides steps to create an [!DNL Algolia] destination connection and dataflow using the Adobe Experience Platform user interface.
 
@@ -46,7 +46,7 @@ Then, use the corresponding [[!DNL Algolia User Profiles]](/help/sources/connect
 
 | Target Identity | Description | Considerations |
 |---------|---------|----------|
-| AlgoliaUserToken | [!DNL Algolia User Token] | Select this target identity to map [!DNL Adobe Experience Platform] audience IDs to the user profiles in [!DNL Algolia]. |
+| userId | [!DNL Algolia] user token | Select this target identity to map to the [!DNL Adobe Experience Platform] AlgoliaUserToken namespace identity. |
 
 {style="table-layout:auto"}
 
@@ -121,9 +121,7 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 
 ### Map attributes and identities {#mapping-attributes-identities}
 
-The following target identity namespace must be mapped:
-
-* **[!UICONTROL userId]** must be mapped as a target field using **[!UICONTROL Target field]** > **[!UICONTROL Select identity namespace]** > **[!UICONTROL AlgoliaUserToken]**
+During the [!UICONTROL Mapping step], you must map the AlgoliaUserToken source field to the target field.
 
 ![Mapping complete](../../assets/catalog/personalization/algolia/mapping-complete.png)
 
