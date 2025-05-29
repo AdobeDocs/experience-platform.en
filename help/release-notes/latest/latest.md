@@ -134,6 +134,7 @@ For more information on sandboxes, read the [sandboxes overview](../../sandboxes
 
 | Feature | Description |
 | ------- | ----------- |
+| Look-alike insights availability update | Look-alike insights and look-alike audiences are automatically disabled for environments that show low usage. Low usage is defined as not viewing look-alike insights for the last three months or not creating a new look-alike audience for the last six months. More information about this change can be found in the [look-alike audiences guide](../../segmentation/types/lookalike-audiences.md). |
 | Streaming segmentation criteria update | Starting with the May 2025 release, the criteria for your audiences to be eligible for streaming segmentation have been updated. More information about these changes can be found in the [streaming segmentation eligibility criteria update](../../segmentation/eligibility-criteria-update.md). |
 
 ## Sources {#sources}
