@@ -215,6 +215,8 @@ role: Developer
       * [Release notes](./extensions/server/cloud-connector/release-notes.md)
     * [!DNL Adform] {#adform}
       * [Overview](./extensions/server/adform/overview.md)
+    * [!DNL Algolia] {#algolia}
+      * [Overview](./extensions/server/algolia/overview.md)
     * [!DNL Amazon] {#amazon}
       * [Overview](./extensions/server/amazon/overview.md)
     * [!DNL AWS] {#aws}
