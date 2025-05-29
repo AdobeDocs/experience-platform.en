@@ -1,6 +1,6 @@
 ---
 title: Algolia
-description: Use this connector to activate audiences to Algolia for personalization and use across search and recommendations. You can then use the Algolia User Profile source to import the profiles into the Real-Time CDP to build rich audiences.
+description: Use this connector to activate audiences to Algolia for personalization and use across search and recommendations. You can then use the Algolia User Profile source connector to import the profiles into Real-Time CDP to build rich audiences.
 ---
 
 # [!DNL Algolia] connection
@@ -11,7 +11,7 @@ description: Use this connector to activate audiences to Algolia for personaliza
 >
 >The [!DNL Algolia] destination connector and documentation page are created and maintained by the Algolia Integration Services team. For inquiries or update requests, contact them at [adobe-algolia-solutions@algolia.com](adobe-algolia-solutions@algolia.com).
 
-Use the [!DNL Algolia] destination connection to send Adobe Experience Platform audiences to Algolia to personalize search and recommendations. This requires the use of the [!DNL Algolia User Profiles] source connector to pull user profiles from Algolia to help build rich audiences.
+Use the [!DNL Algolia] destination connection to send Adobe Experience Platform audiences to Algolia for personalized search and recommendations. Before using the [!DNL Algolia] destination connector, you must first configure the [[!DNL Algolia User Profiles]](/help/sources/connectors/data-partners/algolia-user-profiles.md) source connector. In the source connector [UI tutorial](/help/sources/tutorials/ui/create/data-partners/algolia-user-profiles.md), there are steps to create the Algolia User Token identity, which will be used in the mapping step when configuring the destination connector.
 
 This tutorial provides steps to create an [!DNL Algolia] destination connection and dataflow using the Adobe Experience Platform user interface.
 
@@ -25,9 +25,9 @@ To help you better understand how and when you should use the [!DNL Algolia] des
 
 Use this destination connector to deliver a consistent personalization across your site from home page to search.  
 
-For example, as a marketer, you might want to build rich audiences in Adobe Experience Platform from multiple user data sources, including Algolia. You can use the [!DNL Algolia] connector to share the audiences for targeting strategies, leading to a boost in campaign personalization and conversion.
+For example, as a marketer, you might want to build rich audiences in Adobe Experience Platform from multiple user data sources, including Algolia. You can use the [!DNL Algolia] destination connector to share the audiences for targeting strategies, leading to a boost in campaign personalization and conversion.
 
-To implement this use case, you must use both the [[!DNL Algolia] source](/help/sources/connectors/data-partners/algolia-user-profiles.md) and destination connectors.
+To implement this use case, you must use both the [[!DNL Algolia User Profiles]](/help/sources/connectors/data-partners/algolia-user-profiles.md) source and [!DNL Algolia] destination connectors.
 
 You would start by importing your existing [!DNL Algolia] user profiles into Adobe Experience Platform Real-Time CDP and other sources to begin creating rich audiences with the source connector. Marketers would create audiences using the profile data that can be sent to Algolia for search and recommendation personalization.
 
@@ -46,7 +46,7 @@ Then, use the corresponding [[!DNL Algolia User Profiles]](/help/sources/connect
 
 | Target Identity | Description | Considerations |
 |---------|---------|----------|
-| AlgoliaUserToken | Algolia User Token | Select this identity to map to the user profile in Algolia to associate the [!DNL Adobe Experience Platform] audience ids. |
+| AlgoliaUserToken | [!DNL Algolia User Token] | Select this target identity to map [!DNL Adobe Experience Platform] audience IDs to the user profiles in [!DNL Algolia]. |
 
 {style="table-layout:auto"}
 
@@ -57,6 +57,7 @@ This section describes which type of audiences you can export to this destinatio
 | Audience origin | Supported | Description |
 |---------|---------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md). |
+| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
@@ -116,7 +117,7 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 
 ### Map attributes and identities {#mapping-attributes-identities}
 
-The following target identity namespace(s) must be mapped depending on the use case:
+The following target identity namespace must be mapped:
 
 * **[!UICONTROL userId]** must be mapped as a target field using **[!UICONTROL Target field]** > **[!UICONTROL Select identity namespace]** > **[!UICONTROL AlgoliaUserToken]**
 
