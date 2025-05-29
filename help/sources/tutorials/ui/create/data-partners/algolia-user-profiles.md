@@ -1,46 +1,48 @@
 ---
 title: Connect Algolia User Profiles to Experience Platform using the UI
-description: Learn how to connect Algolia users intent to Experience Platform
+description: Learn how to connect Algolia user intent data to Adobe Experience Platform
 exl-id: d4c936a7-4983-4a12-a813-03b672116e44
 ---
-# Ingest [!DNL Algolia User Profiles] data to Experience Platform using the UI
 
-Read this tutorial to learn how to ingest data from your [!DNL Algolia User Profiles] account to Adobe Experience Platform using the user interface.
+# Ingest [!DNL Algolia User Profiles] data into Experience Platform using the UI
+
+This tutorial guides you through ingesting data from your [!DNL Algolia User Profiles] account into Adobe Experience Platform using the user interface.
 
 ## Get started
 
 >[!IMPORTANT]
 >
->Before getting started, ensure that you complete the prerequisite steps outlined in the [[!DNL Algolia User Profiles] overview](../../../../connectors/data-partners/algolia-user-profiles.md#prerequisites).
+>Before you begin, make sure you've completed the prerequisites outlined in the [[!DNL Algolia User Profiles] overview](../../../../connectors/data-partners/algolia-user-profiles.md#prerequisites).
 
-This tutorial requires a working understanding of the following components of Experience Platform:
+This tutorial assumes familiarity with the following Experience Platform components:
 
-* [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
-    * [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
-    * [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
+* [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework Experience Platform uses to organize customer experience data.
+
+  * [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about schema composition, including key principles and best practices.
+  * [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): A unified, real-time customer profile based on aggregated data from multiple sources.
+* [Sources](../../../../home.md): Ingest data from various sources and use Experience Platform services to structure, label, and enhance the data.
 
 ### Gather required credentials
 
-In order to connect [!DNL Algolia] to Experience Platform, you must provide values for the following credentials:
+To connect [!DNL Algolia] to Adobe Experience Platform, provide the following credentials:
 
-| Credential | Description |
-| --- | --- |
-| Application ID | The [!DNL Algolia] application ID is a unique identifier assigned to your [!DNL Algolia] account.   |
-| API Key | The [!DNL Algolia] API Key is a credential used to authenticate and authorize API requests to [!DNL Algolia]'s search and indexing services. |
+| Credential     | Description                                                                               |
+| -------------- | ----------------------------------------------------------------------------------------- |
+| Application ID | The unique identifier assigned to your [!DNL Algolia] account.                               |
+| API Key        | The credential for authenticating and authorizing API requests to [!DNL Algolia]'s services. |
 
-For more information on these credentials, see the [!DNL Algolia] [authentication documentation](https://www.algolia.com/doc/tools/cli/get-started/authentication/).
+For more information, refer to the [!DNL Algolia] [authentication documentation](https://www.algolia.com/doc/tools/cli/get-started/authentication/).
 
 ## Connect your [!DNL Algolia] account
 
-In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the *[!UICONTROL Sources]* workspace. You can select the appropriate category in the *[!UICONTROL Categories]* panel. Alternatively, you can use the search bar to navigate to the specific source that you want to use.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to open the *[!UICONTROL Sources]* workspace. Use the *[!UICONTROL Categories]* panel or search bar to find your desired source.
 
-To use [!DNL Algolia], select the **[!UICONTROL Algolia]** source card under *[!UICONTROL Data & Identity Partners]* and then select **[!UICONTROL Set up]**.
+To connect [!DNL Algolia], choose the **[!UICONTROL Algolia]** source card under *[!UICONTROL Data & Identity Partners]* and select **[!UICONTROL Set up]**.
 
 >[!TIP]
 >
->Sources in the sources catalog display the **[!UICONTROL Set up]** option when a given source does not yet have an authenticated account. Once an authenticated account exists, this option changes to **[!UICONTROL Add data]**.
+> If a source does not yet have an authenticated account, it shows the **[!UICONTROL Set up]** option. Once authenticated, this changes to **[!UICONTROL Add data]**.
 
 ![The sources catalog with the Algolia User Profiles source selected.](../../../../images/tutorials/create/algolia/user-profiles/catalog.png)
 
@@ -48,48 +50,76 @@ To use [!DNL Algolia], select the **[!UICONTROL Algolia]** source card under *[!
 
 ### Use an existing account
 
-To use an existing account, select **[!UICONTROL Existing account]** and then select the [!DNL Algolia User Profiles] account that you want to use. To proceed, select **[!UICONTROL Next]**.
+To use an existing account, choose **[!UICONTROL Existing account]** and select the [!DNL Algolia User Profiles] account you want to use. Then select **[!UICONTROL Next]**.
 
 ![The existing account interface.](../../../../images/tutorials/create/algolia/user-profiles/existing-account.png)
 
 ### Create a new account
 
-If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name, an optional description, and [!DNL Algolia] credentials. When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
+To create a new account, select **[!UICONTROL New account]**, then enter a name, an optional description, and your [!DNL Algolia] credentials. Select **[!UICONTROL Connect to source]** and wait for the connection to establish.
 
 ![The new account interface.](../../../../images/tutorials/create/algolia/user-profiles/new-account.png)
 
 ## Add data
 
-After creating your [!DNL Algolia User Profiles] account, the **[!UICONTROL Add data]** step appears, providing an interface for you to explore your [!DNL Algolia] user profiles that you want to bring to Experience Platform.
+After your [!DNL Algolia User Profiles] account is created, the **[!UICONTROL Add data]** step appears. Use it to select and preview user profile data for ingestion.
 
-* The left part of the interface is for you to enter optional **[!UICONTROL Indices]** and **[!UICONTROL Affinity(s)]** fields.
-* The right part of the interface lets you preview up to 100 rows of user profiles.
+* On the left, enter optional **[!UICONTROL Indices]** and **[!UICONTROL Affinity(s)]**.
+* On the right, preview up to 100 rows of user profiles.
 
-Once you finish selecting and previewing your data for ingestion, select **[!UICONTROL Next]**.
+Once done, select **[!UICONTROL Next]**.
 
 ![The select data step of the workflow.](../../../../images/tutorials/create/algolia/user-profiles/select-data.png)
 
 ## Provide dataflow details
 
-If you are using an existing dataset, select a dataset that is associated with a schema that is using the [!DNL Algolia Profile] Field Group.
+If using an existing dataset, choose one associated with a schema that includes the [!DNL Algolia Profile] field group. Make sure the [!DNL Algolia User Token] field is using the [!DNL Algolia User Token] identity namespace.  If the [!DNL Algolia User Token] is not currently created or assigned, instructions are provided below.
 
-![The existing dataset step of the sources workflow.](../../../../images/tutorials/create/algolia/user-profiles/dataflow-detail-existing-dataset.png)
+![The existing dataset step.](../../../../images/tutorials/create/algolia/user-profiles/dataflow-detail-existing-dataset.png)
 
-If you are creating a new dataset, select a schema that is using the [!DNL Algolia Profile] field group which is required in the mapping step.
+If creating a new dataset, select a schema using the [!DNL Algolia Profile] field group.
 
-![The new dataset step of the sources workflow.](../../../../images/tutorials/create/algolia/user-profiles/dataflow-detail-new-dataset.png)
+![The new dataset step.](../../../../images/tutorials/create/algolia/user-profiles/dataflow-detail-new-dataset.png)
+
+### Create [!DNL Algolia User Token] identity namespace
+
+You will need to create the [!DNL Algolia User Token] identity namespace if it doesn't already exist in your organization.
+
+Use the left navigation and select **[!UICONTROL Identities]** to access the [Identity Service](../../../../../identity-service/home.md) UI workspace and then select **[!UICONTROL Create identity namespace]**.
+
+Next, provide a **[!UICONTROL Display Name]** and an **[!UICONTROL Identity Symbol]** for your custom namespace. During this step, you must also configure the type of your namespace. When finished, select **[!UICONTROL Create]**.
+
+![Create identity namespace screen.](../../../../images/tutorials/create/algolia/user-profiles/aep-identity-inputs.png)
+
+| Custom namespace config | Value |
+| --- | --- |
+| **[!UICONTROL Display Name]** | [!DNL Algolia User Token] |
+| **[!UICONTROL Identity Symbol]** | [!DNL AlgoliaUserToken] |
+| **[!UICONTROL Select a type]** | [!DNL Cookie ID] |
+
+Once added, the namespace appears in the list. You can now apply it in your schema.
+
+![Successful creation of the Algolia Identity namespace.](../../../../images/tutorials/create/algolia/user-profiles/aep-algolia-user-token-identity.png)
+
+### Apply your namespace to your schema
+
+Use the left navigation and select **[!UICONTROL Schemas]** to access the [Schemas](../../../../../xdm/ui/overview.md) UI workspace. Use the schemas workspace to create or update a schema with the [!DNL Algolia Profile Details] field group. Next, navigate to the **[!UICONTROL User Token]** field and use the right-rail to select the **[!UICONTROL Identity]** box. Additionally, use the input box to define the [!DNL Algolia User Token] identity namespace. When finished, select **[!UICONTROL Save]**.
+
+![Set identity on field.](../../../../images/tutorials/create/algolia/user-profiles/set-set-identity-on-field.png)
+
+After the **[!UICONTROL User Token]** field is assigned the [!DNL Algolia User Token] identity namespace, the identity appears in the user profile for any profile.
+
+![The user profile interface.](../../../../images/tutorials/create/algolia/user-profiles/user-profile.png)
 
 ## Map data fields to an XDM schema
 
-Use the mapping interface to map your source data to the appropriate schema fields before ingesting data to Experience Platform.  For more information, read the [mapping guide in the UI](../../../../../data-prep/ui/mapping.md).
+Use the mapping interface to map your source data to schema fields. For more information, refer to the [mapping guide](../../../../../data-prep/ui/mapping.md).
 
-![The mapping step of the sources workflow.](../../../../images/tutorials/create/algolia/user-profiles/mapping.png)
+![The mapping step.](../../../../images/tutorials/create/algolia/user-profiles/mapping.png)
 
 ## Schedule ingestion runs
 
 Next, use the scheduling interface to define the ingestion schedule of your dataflow.
-
-<!-- The Scheduling step allows for configuration of the data/time to execute the [!DNL Algolia Uer Profiles] Source connector. There is configuration to backfill the data from [!DNL Algolia] which will pull all the profiles from the source system.  If the source is scheduled, then it will retrieve modified profiles from the [!DNL Algolia] based on the configured time interval. -->
 
 ![The scheduling step of the sources workflow.](../../../../images/tutorials/create/algolia/user-profiles/scheduling.png)
 

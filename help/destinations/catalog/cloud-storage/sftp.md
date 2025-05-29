@@ -64,6 +64,18 @@ When exporting *audience data*, Experience Platform creates a `.csv`, `parquet`,
 
 When exporting *datasets*, Experience Platform creates a `.parquet` or `.json` file in the storage location that you provided. For more information about the files, see the [verify successful dataset export](../../ui/export-datasets.md#verify) section in the export datasets tutorial.
 
+## SFTP server connection requirements {#sftp-connection-requirements}
+
+To ensure successful data exports, you must configure your target SFTP server to allow a sufficient number of concurrent connections. If your SFTP server limits the number of simultaneous connections, you may experience export job failures, especially when exporting multiple audiences or datasets at the same time.
+
+**Recommendation**
+For optimal performance, your SFTP server should allow at least one concurrent connection for each audience or dataset being exported. At a minimum, the server should support at least 30% of the total number of audiences or datasets scheduled for export at the same time.
+
+**Example**  
+If you schedule exports for 100 audiences or datasets simultaneously, your SFTP server should allow at least 30 concurrent connections.
+
+Properly configuring your SFTP server's connection limits helps prevent failed exports and ensures reliable data delivery from Adobe Experience Platform.
+
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]

@@ -9,7 +9,9 @@ exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
 
 In Adobe Experience Platform, you can configure expiration times for all Experience Events that are ingested into a dataset enabled for [Real-Time Customer Profile](./home.md). This lets you automatically remove data from the Profile store that is no longer valid or useful for your use cases.
 
-Experience Event expirations cannot be configured through the Experience Platform UI or APIs. Instead, you must contact support in order to enable Experience Event expirations on your required datasets.
+To learn how to manage your Experience Event expirations in your datasets, read the [dataset UI guide](../catalog/datasets/user-guide.md#data-retention-policy).
+
+![A dialog that displays the dataset retention as well as the available settings.](./images/event-expirations/set-data-retention-dialog.png) {width="500" zoomable="yes"}
 
 >[!IMPORTANT]
 >
@@ -41,6 +43,10 @@ You should therefore keep the same Experience Event expiration value for all dat
 ## Frequently asked questions {#faq}
 
 The following section lists frequently asked questions regarding Experience Event data expiration:
+
+### What is the minimum duration I can set an Experience Event data expiration for?
+
+The minimum duration for an Experience Event data expiration is **one day**. 
 
 ### How does Experience Event data expiry differ from Pseudonymous Profile data expiry?
 
