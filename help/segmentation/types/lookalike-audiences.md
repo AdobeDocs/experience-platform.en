@@ -12,11 +12,11 @@ exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
 
 >[!IMPORTANT]
 >
->Look-alike insights and Look-alike audiences will automatically be disabled for environments that show low usage. 
+>Look-alike insights and Look-alike audiences are automatically disabled for environments that show low usage. Low usage is defined as not viewing look-alike insights for the last three months or not creating a new look-alike audience for the last six months.
 >
->If you find that Look-alike insights have been disabled from your environment and you need to re-enable them, please send an email to the Adobe Customer Care team requesting Look-alike audiences enablement. This email should include information such as your organization ID and the environment details.
+>If Look-alike insights are disabled for your environment, you can request access by sending an email to the Adobe Customer Care team, including your organization ID and the environment details in your message.
 >
->After sending this email and receiving confirmation from Adobe Customer Care, Look-alike insights and audiences will be enabled across all the sandboxes in your environment.
+>After receiving confirmation from Adobe Customer Care, Look-alike insights and audiences will be enabled across all the sandboxes in your environment.
 
 In Adobe Experience Platform, Look-alike audiences provide intelligent insights on each of your audiences, leveraging machine-learning-based insights to identify and target high-value customers with your marketing campaigns. 
 
