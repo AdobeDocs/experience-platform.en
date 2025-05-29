@@ -91,7 +91,11 @@ For more information on these credentials, see the [!DNL Algolia] [authenticatio
 
 ![New Account](../../assets/catalog/personalization/algolia/connection.png)
 
-After connection to destination is successful, enter the below information to complete the account creation.
+### Fill in destination details
+
+To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
+
+
 
 * **[!UICONTROL Name]**: Fill in the preferred name for this destination.
 * **[!UICONTROL Description]**: Short explanation of the destination's purpose.
