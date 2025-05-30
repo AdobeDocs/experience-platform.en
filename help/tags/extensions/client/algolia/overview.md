@@ -1,134 +1,141 @@
-# Algolia Launch extension overview
+---
+title: Algolia Tags Extension Overview
+description: Learn about the Algolia Tags extension in Adobe Experience Platform.
+---
+# [!DNL Algolia] Tags extension overview
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
+The [!DNL Algolia] Tags extension empowers marketers to easily set up rules that send user interaction data to [!DNL Algolia], helping you deliver more personalized AI Search and Discovery experiences.
 
-The Algolia Launch extension allows Marketers set up rules to send events to Algolia to power AI Search and Discovery experience. This extension uses one main component:
+This extension is powered by a key feature:
 
-* **Algolia Insights**: Send user interaction events to Algolia to power analytics, personalization, and search relevance improvement.
-
+* **[!DNL Algolia] Insights**: Automatically captures and sends user interaction events to [!DNL Algolia], which enables powerful analytics, personalized experiences, and improved search relevance.
 
 ## Prerequisites
 
-* An Algolia account with a valid Application ID and API Key
-* Permissions to install extensions in Adobe Experience Platform
+You must have a valid [!DNL Algolia] account in order to use this extension. Go to the [[!DNL Algolia] sign up page](https://dashboard.algolia.com/users/sign_up) to create an account if you do not have one already.
 
-## Configure the Algolia Insights extension
+### Gather required configuration details {#configuration-details}
 
-If the Algolia Insights extension is not yet installed, open your property, then select **[!UICONTROL Extensions > Catalog]**, hover over the Algolia Insights extension, and select **[!UICONTROL Install]**.
+To connect [!DNL Algolia] with Adobe Experience Platform, you’ll need the following information:
 
-To configure the extension, open the Extensions tab, hover over the extension, and then select **[!UICONTROL Configure]**.
+| Credential | Description | Example |
+| --- | --- | --- |
+| Application ID | Your Application Id can be found in the [API Keys](https://www.algolia.com/account/api-keys/all) section of your [!DNL Algolia] Dashboard. | 0ABCDEFG12 |
+| Search API Key | Your Search API Key can be found in the [API Keys](https://www.algolia.com/account/api-keys/all) section of your [!DNL Algolia] Dashboard. | 1234a12345678901b1234567890c1ab1 |
+
+## Install and configure the [!DNL Algolia] Insights extension
+
+To install the [!DNL Algolia] Insights extension, navigate to the [!UICONTROL Data Collection UI] and select  **[!UICONTROL Tags]** from the left navigation. From here, select a property to add the extension to, or create a new property instead.
+
+Once you have selected or created the desired property, select **[!UICONTROL Extensions]** in the left navigation, then select the **[!UICONTROL Catalog]** tab. Search for the [!DNL Algolia] Insights card, then select **[!UICONTROL Install]**.
+
+![](../../../images/extensions/client/algolia/install.png)
+
+In the configuration view that appears, you must provide the following details:
+
+| Property | Description |
+| --- | --- |
+| Application ID | Enter the [!UICONTROL Application Id] you previously gathered in the [configuration details](#configuration-details) section. |
+| Search API Key | Enter the [!UICONTROL Search API Key] you previously gathered in the [configuration details](#configuration-details) section. |
+| Index Name  | The [!UICONTROL Index Name] contains the Products or Content.  This Index will be used as a default. |
+| User Token Data Element | The Data Element that will return the User Token. |
+| Authenticated User Token Data Element | Set the Data Element that will return the Authenticated User Token. |
+| Currency | Select a currency type.  The default value is set to `USD`. |
 
 ![](../../../images/extensions/client/algolia/configure.png)
 
-| Property                              | Description                                                                                                                                          |
-|---------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Application ID                        | Enter the Application Id which can be found in the on the Algolia Dashboard in the [API Keys](https://www.algolia.com/account/api-keys/all) section. |
-| Search API Key                        | Enter Search API Key which can be found in the on the Algolia Dashboard in the [API Keys](https://www.algolia.com/account/api-keys/all) section.     |
-| Index Name                            | Enter the Index Name that contain the Products or Content.  This Index will be used as a default.                                                    |
-| User Token Data Element               | Set the Data Element that will return the User Token.                                                                                                |
-| Authenticated User Token Data Element | Set the Data Element that will return the Authenticated User Token.                                                                                  |
-| Currency                              | Select a currency type.  The default value is `USD`.                                                                                                 |
+## [!DNL Algolia] Insights extension action types
 
-
-## Algolia Insights extension action types
-
-This section describes the action types available in the Algolia Insights extension. It provides the following actions in the Then portion of a rule:
+[!DNL Algolia] supports a set of predefined standard events, each with specific contexts and properties. The actions available in the [!DNL Algolia] extension align with these event types, making it easy to categorize and configure the events you send to [!DNL Algolia] based on their type.
 
 ### Load Insights
 
-Add this action to your tag rule where it makes sense to load Algolia Insights in the context of your rule. This loads the `search-insights.js` library into the page. In most implementations, Algolia Insights should be loaded on every page of your site. Select **[!UICONTROL Rules]**, then **[!UICONTROL Add Rule]** or select an existing rule. In the Then portion of a rule, add the action and select **[!UICONTROL Extension]** `Algolia Insights`, then **[!UICONTROL Action Type]** `Load Insights`.
+>[!NOTE]
+>
+>In most cases, it's recommended to load [!DNL Algolia] Insights on every page of your site.
+
+Add the **[!UICONTROL Load Insights]** action to your tag rule wherever it makes the most sense for loading [!DNL Algolia] Insights based on your rule’s context. This action loads the `search-insights.js` library onto the page. 
+
+Create a new tag rule or open an existing one. Define the conditions according to your requirements, then select **[!UICONTROL Algolia]** as the [!UICONTROL Extension] and select **[!UICONTROL Load Insights]** as the [!UICONTROL Action Type].
+
+| Property | Description |
+| --- | --- |
+| [!UICONTROL Insight Library Version] | The [!DNL Algolia] Insights version. The default is `2.13.0`. |
+| [!UICONTROL User Opt Out Data Element] | The Data Element that captures the user's tracking preference. |
+| [!UICONTROL Use User Token Cookie] | Check this box to allow [!DNL Algolia] to generate a User Token cookie. By default, this option is set to `false`. |
 
 ![](../../../images/extensions/client/algolia/load-insights.png)
 
-| Property                  | Description                                                                                        |
-|---------------------------|----------------------------------------------------------------------------------------------------|
-| Use User Token Cookie     | Check this box if you want Algolia to generate a User Token cookie.  The default value is `false`. |
-| Insight Library Version   | Enter the Algolia Insight version.  The default value is `2.13.0`.                                 |
-| User Opt Out Data Element | Select a Data Element that will retrieve the user's decision on tracking.                          |
-
-
 ### Clicked
 
-Add this action to your tag rule to send a clicked event to Algolia. Select **[!UICONTROL Rules]**, then **[!UICONTROL Add Rule]** or select an existing rule. In the Then portion of a rule, add the action and select **[!UICONTROL Extension]** `Algolia Insights`, then **[!UICONTROL Action Type]** `Clicked`.
+Add the **[!UICONTROL Click]** action to your tag rule to send clicked events to [!DNL Algolia]. Create a new tag rule or open an existing one. Define the conditions according to your requirements, then select **[!UICONTROL Algolia]** as the [!UICONTROL Extension] and select **[!UICONTROL Clicked]** as the [!UICONTROL Action Type].
+
+| Property | Description |
+| --- | --- |
+| [!UICONTROL Event Name ] | The Event Name that can be used to further refine this click event. |
+| Event Details Data Element | The Data Element that will retrieve the event details including `indexName`, `objectIDs`, and optionally `queryID`, `position`. If both `queryID` and `position` are included, the event will be categorized as *Clicked object IDs after Search* otherwise it will be treated as a *Clicked object IDs* event. If the Data Element does not supply an index Name, the default Index Name will be used when sending the event. |
 
 ![](../../../images/extensions/client/algolia/clicked.png)
 
-| Property                              | Description |
-|---------------------------------------|--------------|
-| Event Name                            | Enter the Event Name that can be used to further refine this `click` event |
-| Event Type                            | Automatically set as `click` |
-| Event Details Data Element            | Select a Data Element that will retrieve the event details (`indexName`, `objectIDs`, `queryID` (optional), `position` (optional)). If the Data Element contains `queryID` and `position`, the event will be classed as *Clicked object IDs after Search* otherwise it will be considered a *Clicked object IDs* event. If Index Name is not available from the Data Element, then the default Index Name will be used when sending events. |
-| User Token Data Element               | Select a Data Element that will retrieve the User Token. |
-| Authenticated User Token Data Element | Set the Data Element that will return the Authenticated User Token. |
-
 ### Converted
 
-Add this action to your tag rule to send a converted event to Algolia. Select **[!UICONTROL Rules]**, then **[!UICONTROL Add Rule]** or select an existing rule. In the Then portion of a rule, add the action and select **[!UICONTROL Extension]** `Algolia Insights`, then **[!UICONTROL Action Type]** `Converted`.
+Add the **[!UICONTROL Converted]** action to your tag rule to send converted events to [!DNL Algolia]. Create a new tag rule or open an existing one. Define the conditions according to your requirements, then select **[!UICONTROL Algolia]** as the [!UICONTROL Extension] and select **[!UICONTROL Converted]** as the [!UICONTROL Action Type].                
 
-![](../../../images/extensions/client/algolia/converted.png)                  
+| Property | Description |
+| --- | --- |
+| Event Name | The Event Name that will be used to further refine this **convert** event. | 
+| Event Details Data Element | The Data Element that will retrieve the event details including `indexName`, `objectId`, and optionally `queryId`. If the Data Element contains `queryId`, the event will be classed as *Converted after Search* otherwise it will be considered a *Converted* event class. If the Data Element does not supply an index Name, the default Index Name will be used when sending the event. |
 
-| Property                   | Description                                                                                                                                                                                                                                                                                                                                                                                               |
-|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Event Name                 | Enter the Event Name that can be used to further refine this `convert` event                                                                                                                                                                                                                                                                                                                              |
-| Event Type                 | Automatically set as `convert`                                                                                                                                                                                                                                                                                                                                                                            |
-| Event Details Data Element | Select a Data Element that will retrieve the event details (`indexName`, `objectIDs`, `queryID` (optional)). If the Data Element contains `queryID`, the event will be classed as *Converted object IDs after Search* otherwise it will be considered a *Converted object IDs* event.  If Index Name is not available from the Data Element, then the default Index Name will be used when sending events. |
+![](../../../images/extensions/client/algolia/converted.png)  
 
+### Added to Cart
 
-### Converted - Added to Cart
+Add the **[!UICONTROL Added to Cart]** action to your tag rule to send added to cart events to [!DNL Algolia]. Create a new tag rule or open an existing one. Define the conditions according to your requirements, then select **[!UICONTROL Algolia]** as the [!UICONTROL Extension] and select **[!UICONTROL Added to cart]** as the [!UICONTROL Action Type].
 
-Add this action to your tag rule to send a clicked event to Algolia. Select **[!UICONTROL Rules]**, then **[!UICONTROL Add Rule]** or select an existing rule. In the Then portion of a rule, add the action and select **[!UICONTROL Extension]** `Algolia Insights`, then **[!UICONTROL Action Type]** `Added to Cart`.
+| Property | Description |
+| --- | --- |
+| Event Name | The Event Name that will be used to further refine this **convert** event. | 
+| Event Details Data Element | The Data Element that will retrieve the event details including `indexName`, `objectId`, and optionally `queryId`, `objectData`. If the Data Element contains `queryId`, the event will be classed as *Added to cart object IDs after search* otherwise it will be considered a *Added to cart object IDs* event class. If the Data Element does not supply an index Name, the default Index Name will be used when sending the event. |
+| Currency | Specifies the currency type, such as `USD`.|
 
 ![](../../../images/extensions/client/algolia/added-to-cart.png) 
 
-| Property                   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                |
-|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Event Name                 | Enter the Event Name that can be used to further refine this `convert` event                                                                                                                                                                                                                                                                                                                                                               |
-| Event Type                 | Automatically set as `convert`                                                                                                                                                                                                                                                                                                                                                                                                             |
-| Sub Event Type             | Automatically set as `addToCart`                                                                                                                                                                                                                                                                                                                                                                                                           |
-| Event Details Data Element | Select a Data Element that will retrieve the event details (`indexName`, `objectIDs`, `queryID` (optional), `objectData` (optional)). If the Data Element contains `queryID`, the event will be classed as *Added to Cart object IDs after Search* otherwise it will be considered a *Added to Cart object IDs* event.  If Index Name is not available from the Data Element, then the default Index Name will be used when sending events. |
+### Purchased
 
-### Converted - Purchased
+Add the **[!UICONTROL Added to Cart]** action to your tag rule to send purchased events to [!DNL Algolia]. Create a new tag rule or open an existing one. Define the conditions according to your requirements, then select **[!UICONTROL Algolia]** as the [!UICONTROL Extension] and select **[!UICONTROL Purchased]** as the [!UICONTROL Action Type].
 
-Add this action to your tag rule to send a clicked event to Algolia. Select **[!UICONTROL Rules]**, then **[!UICONTROL Add Rule]** or select an existing rule. In the Then portion of a rule, add the action and select **[!UICONTROL Extension]** `Algolia Insights`, then **[!UICONTROL Action Type]** `Purchased`.
+| Property | Description |
+| --- | --- |
+| Event Name | The Event Name that will be used to further refine this **purchase** event. | 
+| Event Details Data Element | The Data Element that will retrieve the event details including `indexName`, `objectId`, and optionally `queryId`. If the Data Element contains `queryId`, the event will be classed as *Purchased object IDs after search* otherwise it will be considered a *Purchased object IDs* event class. If the Data Element does not supply an index Name, the default Index Name will be used when sending the event. |
 
 ![](../../../images/extensions/client/algolia/purchased.png) 
 
-| Property                   | Description                                                                                                                                                                                                                                                                                                                                                                                                                        |
-|----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Event Name                 | Enter the Event Name that can be used to further refine this `convert` event                                                                                                                                                                                                                                                                                                                                                       |
-| Event Type                 | Automatically set as `convert`                                                                                                                                                                                                                                                                                                                                                                                                     |
-| Sub Event Type             | Automatically set as `purchase`                                                                                                                                                                                                                                                                                                                                                                                                    |
-| Event Details Data Element | Select a Data Element that will retrieve the event details (`indexName`, `objectIDs`, `queryID` (optional), `objectData` (optional)). If the Data Element contains `queryID`, the event will be classed as *Purchased object IDs after Search* otherwise it will be considered a *Purchased object IDs* event.  If Index Name is not available from the Data Element, then the default Index Name will be used when sending events. |
-
 ### Viewed
 
-Add this action to your tag rule to send a clicked event to Algolia. Select **[!UICONTROL Rules]**, then **[!UICONTROL Add Rule]** or select an existing rule. In the Then portion of a rule, add the action and select **[!UICONTROL Extension]** `Algolia Insights`, then **[!UICONTROL Action Type]** `Viewed`.
+Add the **[!UICONTROL Added to Cart]** action to your tag rule to send purchased events to [!DNL Algolia]. Create a new tag rule or open an existing one. Define the conditions according to your requirements, then select **[!UICONTROL Algolia]** as the [!UICONTROL Extension] and select **[!UICONTROL Viewed]** as the [!UICONTROL Action Type].
 
 ![](../../../images/extensions/client/algolia/viewed.png) 
 
-| Property                   | Description                                                                                                                                                                                               |
-|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Event Name                 | Enter the Event Name that can be used to further refine this `view` event                                                                                                                                 |
-| Event Type                 | Automatically set as `view`                                                                                                                                                                               |
-| Event Details Data Element | Select a Data Element that will retrieve the event details (`indexName`, `objectIDs`). If Index Name is not available from the Data Element, then the default Index Name will be used when sending events. |
+| Property | Description |
+| --- | --- |
+| Event Name | The Event Name that will be used to further refine this **view** event. | 
+| Event Details Data Element | The Data Element that will retrieve the event details including `indexName` and `objectId`. If `indexName` is not available, the default Index Name will be used when sending the events. |
 
+## [!DNL Algolia] Insights extension data elements
 
-## Algolia Insights extension data elements
-
-This section describes the data elements available in the Algolia Insights extension.
+[!DNL Algolia] supports a set of predefined data elements, each with specific contexts and properties. The following sections describes the data elements available in the [!DNL Algolia] Insights extension.
 
 ### DataSet
 
-The DataSet Data Element returns the data associated to the HTML elements to be used for Algolia Actions.
+The DataSet Data Element retrieves data associated with HTML elements, which is then used in [!DNL Algolia] actions.
 
-![](../../../images/extensions/client/algolia/dataset.png) 
+| Property | Description |
+| --- | --- |
+| Hit Element Div/Class Name | The HTML Element Name and/or CSS Class Name containing the dataset attributes including `data-insights-object-id` and optionally`data-insights-query-id` and `data-insights-position` on the HTML Element. |
+| Index Name Element Div/Class Name | The HTML Element Name and/or CSS Class Name that has the dataset attributes (`data-indexname`) on the HTML Element. |
 
-| Property                          | Description                                                                                                                                                                                                  |
-|-----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Hit Element Div/Class Name        | Enter the HTML Element Name and/or CSS Class Name that has the dataset attributes (`data-insights-object-id`, `data-insights-query-id` (optional), `data-insights-position` (optional)) on the HTML Element. |
-| Index Name Element Div/Class Name | Enter the HTML Element Name and/or CSS Class Name that has the dataset attributes (`data-indexname`) on the HTML Element.                                                                                    |
+![](../../../images/extensions/client/algolia/dataset.png)
 
 This Data Element returns:
 
@@ -142,34 +149,31 @@ This Data Element returns:
 }
 ```
 
-#### Example of HTML that contains dataset.
+An example of HTML that contains dataset:
 
-```
-<div data-indexname="magento2_master_default_products" class="instant-search-comp__hits">
-...
-<div class="hit-card"
+```html
+<div data-indexname="acme_master_default_products" class="instant-search-comp__hits">
+  <div class="hit-card"
     data-insights-object-id="${hit.objectID}"
     data-insights-position="${hit.__position}"
     data-insights-query-id="${hit.__queryID}">
-    <h4 class="hit-name">...</h4>
-      
-</div>
-...
+    <h4 class="hit-name">...</h4>   
+  </div>
 </div>
 ```
 
-#### Query String
+### Query String
 
-The Query String Data Element returns the data from the url query to be used for Algolia Actions.
+The Query String Data Element extracts data from the URL query string to be used in [!DNL Algolia] actions.
+
+| Property | Description |
+| --- | --- |
+| Object ID Param Name | The query param name that contains the Object Id.  |
+| Index Name Param Name (Optional) | The query param name that contains the Index Name. |
+| Query ID Param Name (Optional) | The query param name that contains the Query Id.   |
+| Position Param Name (Optional) | The query param name that contains the Position.   |
 
 ![](../../../images/extensions/client/algolia/query-string.png) 
-
-| Property                         | Description                                              |
-|----------------------------------|----------------------------------------------------------|
-| Object ID Param Name             | Enter the query param name that contains the Object Id.  |
-| Index Name Param Name (Optional) | Enter the query param name that contains the Index Name. |
-| Query ID Param Name (Optional)   | Enter the query param name that contains the Query Id.   |
-| Position Param Name (Optional)   | Enter the query param name that contains the Position.   |
 
 This Data Element returns:
 
@@ -182,20 +186,19 @@ This Data Element returns:
 }
 ```
 
-##### Example of HTML that contains query parameters.
+An example of HTML that contains query parameters.
 
 ```
-<a href="product.html?objectID=${hit.objectID}&queryID=${hit.__queryID}&indexName=${indexName}&position=${hit.position}">Read More</a></div>
+<a href="product.html?objectID=${hit.objectID}&queryID=${hit.__queryID}&indexName=${indexName}&position=${hit.position}">Read More</a>
 ```
 
-#### Storage
+### Storage
 
-The Storage Data Element returns the data from Session Storage to be used for Algolia Actions.
+The Storage Data Element retrieves data from Session Storage for use in [!DNL Algolia] actions.
+
+This Data Element retrieves event details from Session Storage. No configuration is required. The data is automatically added during the *click* event action and removed during the *convert* event action.
 
 ![](../../../images/extensions/client/algolia/storage.png) 
-
-This Data Element uses the Session Storage to get the event details. There is no configuration needed for this Data
-Element. The data is added in the *click* event action automatically. On *convert* event action, the data is removed.
 
 This Data Element returns what is stored in the Session Storage.
 
@@ -208,20 +211,18 @@ This Data Element returns what is stored in the Session Storage.
 }
 ```
 
-
 ## Clicked or Converted after Search
 
-### InstantSearch & Autocomplete
-
-The Clicked or Converted after Search requires a `queryID`. `position` is required on Clicked after Search. These two
-properties are available when `insights` flag is enabled on InstantSearch and/or Autocomplete qeury parameters. Please review below resources to learn and configure Insights for you site.
-
-#### Resources
+The *Clicked after Search* or *Converted after Search* events require a `queryId`, and `position` is also required for *Clicked after Search*. These properties are available when the `insights` flag is enabled in InstantSearch and/or Autocomplete query parameters. Refer to the following resources to learn how to configure Insights for your site:
 
 * [Setting up Insights on Autocomplete](https://www.algolia.com/doc/ui-libraries/autocomplete/api-reference/autocomplete-js/autocomplete/#param-insights)
 * [Setting up Insights on InstantSearch.js](https://www.algolia.com/doc/guides/building-search-ui/events/js/#set-the-insights-option-to-true)
 * [Get started with click and conversion events](https://www.algolia.com/doc/guides/sending-events/implementing/how-to/sending-events-backend/)
-* [Sending Algolia Insights events](https://www.algolia.com/doc/ui-libraries/autocomplete/guides/sending-algolia-insights-events/)
-* [Algolia Launch Extension GitHub Repository](https://github.com/algolia/algolia-launch-extension)
+* [Sending [!DNL Algolia] Insights events](https://www.algolia.com/doc/ui-libraries/autocomplete/guides/sending-algolia-insights-events/)
+* [[!DNL Algolia] Launch Extension GitHub Repository](https://github.com/algolia/algolia-launch-extension)
 * [InstantSearch.js Documentation](https://www.algolia.com/doc/guides/building-search-ui/what-is-instantsearch/js/)
-* [Algolia Insights API Documentation](https://www.algolia.com/doc/rest-api/insights/)
+* [[!DNL Algolia] Insights API Documentation](https://www.algolia.com/doc/rest-api/insights/)
+
+## Next steps
+
+This guide covered how to send data to [!DNL Algolia] using the [!DNL Algolia] Insights tag extension.
