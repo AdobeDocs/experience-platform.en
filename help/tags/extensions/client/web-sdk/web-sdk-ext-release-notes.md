@@ -7,6 +7,13 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 
 This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Experience Platform Web SDK release notes](/help/collection/js/release-notes.md).
 
+
+## Version 2.30.1 - May 27, 2025
+
+**Fixes and improvements**
+
+- Fixed an issue where the update variable view was crashing when an organization had no default sandbox set.
+
 ## Version 2.30.0 - May 21, 2025
 
 **New features**
