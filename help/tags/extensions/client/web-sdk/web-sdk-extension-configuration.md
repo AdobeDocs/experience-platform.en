@@ -147,6 +147,11 @@ Manage data collection configuration settings. Similar settings in the JavaScrip
   * **[!UICONTROL No event grouping]**: Link tracking data is sent to Adobe in separate events. Link clicks sent in separate events can increase the contractual usage of data sent to Adobe Experience Platform.
   * **[!UICONTROL Event grouping using session storage]**: Store link tracking data in session storage until the next page event. On the following page, the stored link tracking data and page view data is sent to Adobe at the same time. Adobe recommends enabling this setting when tracking internal links.
   * **[!UICONTROL Event grouping using local object]**: Store link tracking data in a local object until the next page event. If a visitor navigates to a new page, link tracking data is lost. This setting is most beneficial in context of single-page applications.
+
+  When you choose event grouping with session storage or a local object, and you are sending data to Real-Time CDP, Customer Journey Analytics, Adobe Journey Optimizer, or Mix Modeler, you must update your tagging rules. Make sure that every page view event explicitly maps both the page name (as a string) and the page view value (as an integer, typically 1) to the XDM object before sending the data to Adobe.
+  
+  If you are sending data to Adobe Analytics, these values are included automatically and no additional configuration is needed.
+
 * **[!UICONTROL Collect external link clicks]**: A checkbox that enables the collection of external links.
 * **[!UICONTROL Collect download link clicks]**: A checkbox that enables the collection of download links.
 * **[!UICONTROL Download link qualifier]**: A regular expression that qualifies a link URL as a download link.
