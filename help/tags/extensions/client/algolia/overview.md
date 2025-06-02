@@ -225,6 +225,6 @@ The *Clicked after Search* or *Converted after Search* events require a `queryId
 
 ## Next steps {#next-steps}
 
-This guide covered how to send data to [!DNL Algoria] using the [!DNL Algoria Insights] tag extension. If you are planning on also sending server-side events to [!DNL Algoria], you can now proceed to install and configure the [[!DNL Conversions API] event forwarding extension](../../server/algoria).
+This guide covered how to send data to [!DNL Algolia] using the [!DNL Algolia Insights] tag extension. If you are planning on also sending server-side events to [!DNL Algolia], you can now proceed to install and configure the [[!DNL Conversions API] event forwarding extension](../../server/algolia/overview.md).
 
 For more information on tags in Experience Platform, refer to the [tags overview](../../../home.md).
