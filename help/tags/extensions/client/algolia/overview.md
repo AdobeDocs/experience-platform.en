@@ -10,7 +10,7 @@ This extension is powered by a key feature:
 
 * **[!DNL Algolia] Insights**: Automatically captures and sends user interaction events to [!DNL Algolia], which enables powerful analytics, personalized experiences, and improved search relevance.
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 You must have a valid [!DNL Algolia] account in order to use this extension. Go to the [[!DNL Algolia] sign up page](https://dashboard.algolia.com/users/sign_up) to create an account if you do not have one already.
 
@@ -23,7 +23,7 @@ To connect [!DNL Algolia] with Adobe Experience Platform, you’ll need the foll
 | Application ID | Your Application Id can be found in the [API Keys](https://www.algolia.com/account/api-keys/all) section of your [!DNL Algolia] Dashboard. | 0ABCDEFG12 |
 | Search API Key | Your Search API Key can be found in the [API Keys](https://www.algolia.com/account/api-keys/all) section of your [!DNL Algolia] Dashboard. | 1234a12345678901b1234567890c1ab1 |
 
-## Install and configure the [!DNL Algolia] Insights extension
+## Install and configure the [!DNL Algolia] Insights extension {#install-configure}
 
 To install the [!DNL Algolia] Insights extension, navigate to the [!UICONTROL Data Collection UI] and select  **[!UICONTROL Tags]** from the left navigation. From here, select a property to add the extension to, or create a new property instead.
 
@@ -44,11 +44,11 @@ In the configuration view that appears, you must provide the following details:
 
 ![](../../../images/extensions/client/algolia/configure.png)
 
-## [!DNL Algolia] Insights extension action types
+## [!DNL Algolia] Insights extension action types {#action-types}
 
 [!DNL Algolia] supports a set of predefined standard events, each with specific contexts and properties. The actions available in the [!DNL Algolia] extension align with these event types, making it easy to categorize and configure the events you send to [!DNL Algolia] based on their type.
 
-### Load Insights
+### Load Insights {#load-insights}
 
 >[!NOTE]
 >
@@ -66,7 +66,7 @@ Create a new tag rule or open an existing one. Define the conditions according t
 
 ![](../../../images/extensions/client/algolia/load-insights.png)
 
-### Clicked
+### Clicked {#clicked}
 
 Add the **[!UICONTROL Click]** action to your tag rule to send clicked events to [!DNL Algolia]. Create a new tag rule or open an existing one. Define the conditions according to your requirements, then select **[!UICONTROL Algolia]** as the [!UICONTROL Extension] and select **[!UICONTROL Clicked]** as the [!UICONTROL Action Type].
 
@@ -77,7 +77,7 @@ Add the **[!UICONTROL Click]** action to your tag rule to send clicked events to
 
 ![](../../../images/extensions/client/algolia/clicked.png)
 
-### Converted
+### Converted {#converted}
 
 Add the **[!UICONTROL Converted]** action to your tag rule to send converted events to [!DNL Algolia]. Create a new tag rule or open an existing one. Define the conditions according to your requirements, then select **[!UICONTROL Algolia]** as the [!UICONTROL Extension] and select **[!UICONTROL Converted]** as the [!UICONTROL Action Type].                
 
@@ -88,7 +88,7 @@ Add the **[!UICONTROL Converted]** action to your tag rule to send converted eve
 
 ![](../../../images/extensions/client/algolia/converted.png)  
 
-### Added to Cart
+### Added to Cart {#added-to-cart}
 
 Add the **[!UICONTROL Added to Cart]** action to your tag rule to send added to cart events to [!DNL Algolia]. Create a new tag rule or open an existing one. Define the conditions according to your requirements, then select **[!UICONTROL Algolia]** as the [!UICONTROL Extension] and select **[!UICONTROL Added to cart]** as the [!UICONTROL Action Type].
 
@@ -100,7 +100,7 @@ Add the **[!UICONTROL Added to Cart]** action to your tag rule to send added to 
 
 ![](../../../images/extensions/client/algolia/added-to-cart.png) 
 
-### Purchased
+### Purchased {#purchased}
 
 Add the **[!UICONTROL Added to Cart]** action to your tag rule to send purchased events to [!DNL Algolia]. Create a new tag rule or open an existing one. Define the conditions according to your requirements, then select **[!UICONTROL Algolia]** as the [!UICONTROL Extension] and select **[!UICONTROL Purchased]** as the [!UICONTROL Action Type].
 
@@ -111,7 +111,7 @@ Add the **[!UICONTROL Added to Cart]** action to your tag rule to send purchased
 
 ![](../../../images/extensions/client/algolia/purchased.png) 
 
-### Viewed
+### Viewed {#viewed}
 
 Add the **[!UICONTROL Added to Cart]** action to your tag rule to send purchased events to [!DNL Algolia]. Create a new tag rule or open an existing one. Define the conditions according to your requirements, then select **[!UICONTROL Algolia]** as the [!UICONTROL Extension] and select **[!UICONTROL Viewed]** as the [!UICONTROL Action Type].
 
@@ -122,11 +122,11 @@ Add the **[!UICONTROL Added to Cart]** action to your tag rule to send purchased
 | Event Name | The Event Name that will be used to further refine this **view** event. | 
 | Event Details Data Element | The Data Element that will retrieve the event details including `indexName` and `objectId`. If `indexName` is not available, the default Index Name will be used when sending the events. |
 
-## [!DNL Algolia] Insights extension data elements
+## [!DNL Algolia] Insights extension data elements {#data-elements}
 
 [!DNL Algolia] supports a set of predefined data elements, each with specific contexts and properties. The following sections describes the data elements available in the [!DNL Algolia] Insights extension.
 
-### DataSet
+### DataSet {#dataset}
 
 The DataSet Data Element retrieves data associated with HTML elements, which is then used in [!DNL Algolia] actions.
 
@@ -162,7 +162,7 @@ An example of HTML that contains dataset:
 </div>
 ```
 
-### Query String
+### Query String {#query-string}
 
 The Query String Data Element extracts data from the URL query string to be used in [!DNL Algolia] actions.
 
@@ -192,7 +192,7 @@ An example of HTML that contains query parameters.
 <a href="product.html?objectID=${hit.objectID}&queryID=${hit.__queryID}&indexName=${indexName}&position=${hit.position}">Read More</a>
 ```
 
-### Storage
+### Storage {#storage}
 
 The Storage Data Element retrieves data from Session Storage for use in [!DNL Algolia] actions.
 
@@ -211,7 +211,7 @@ This Data Element returns what is stored in the Session Storage.
 }
 ```
 
-## Clicked or Converted after Search
+## Clicked or Converted after Search {#clicked-converted-after-search}
 
 The *Clicked after Search* or *Converted after Search* events require a `queryId`, and `position` is also required for *Clicked after Search*. These properties are available when the `insights` flag is enabled in InstantSearch and/or Autocomplete query parameters. Refer to the following resources to learn how to configure Insights for your site:
 
@@ -223,6 +223,8 @@ The *Clicked after Search* or *Converted after Search* events require a `queryId
 * [InstantSearch.js Documentation](https://www.algolia.com/doc/guides/building-search-ui/what-is-instantsearch/js/)
 * [[!DNL Algolia] Insights API Documentation](https://www.algolia.com/doc/rest-api/insights/)
 
-## Next steps
+## Next steps {#next-steps}
 
-This guide covered how to send data to [!DNL Algolia] using the [!DNL Algolia] Insights tag extension.
+This guide covered how to send data to [!DNL Algoria] using the [!DNL Algoria Insights] tag extension. If you are planning on also sending server-side events to [!DNL Algoria], you can now proceed to install and configure the [[!DNL Conversions API] event forwarding extension](../../server/algoria).
+
+For more information on tags in Experience Platform, refer to the [tags overview](../../../home.md).
