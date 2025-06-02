@@ -1,6 +1,7 @@
 ---
 title: Algolia Tags Extension Overview
 description: Learn about the Algolia Tags extension in Adobe Experience Platform.
+exl-id: 8409bf8b-fae2-44cc-8466-9942f7d92613
 ---
 # [!DNL Algolia] Tags extension overview
 
