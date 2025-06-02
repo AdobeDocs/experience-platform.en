@@ -1,8 +1,9 @@
 ---
 title: Mutual Transport Layer Security (mTLS) Overview
 description: Learn how you can use mTLS to securely retrieve public certificates issued by Adobe for Event Forwarding.
+exl-id: e8ee8655-213d-4d2a-93d4-d62824b53b1d
 ---
-# Mutual Transport Layer Security [!DNL mTLS] overview
+# Mutual Transport Layer Security ([!DNL mTLS]) overview
 
 Bind Mutual Transport Layer Security ([!DNL mTLS]) certificates in the [!UICONTROL Environments UI] to take control of your extension's security. The [!DNL mTLS] certificate is a digital credential that proves the identity of a server or client in secure communications. When you use the [!DNL mTLS] Service API, these certificates help you verify and encrypt your interactions with Adobe Experience Platform Event Forwarding. This process not only protects your data but also ensures that every connection is from a trusted partner.
 
@@ -42,14 +43,14 @@ To view the certificate details for an environment select the **[!UICONTROL Envi
 
 The following certificate details are displayed:
 
-| Environment | Description | 
+| Field Name | Description | 
 | --- | --- |
 | Certificate | Details of the certificate, which include:<ul><li>**Name**: The name of the cerificate.</li><li>**Date created**: The date when the certificate was created.</li><li>**Status**: The current status of the certificate:<ul><li>**Current**: The certificate is actively in use.</li><li>**Obsolete**: The certificate is not in use but hasn’t expired yet. It can still be selected for use.</li><li>**Expired**: The certificate is expired, grayed out, and no longer available for use.</li></ul></ul>  |
 | Expires | Date the certificate will expire. |
 | Variable Name | The variable name of the certificate. |
 | Status | The current status of the certificate:<ul><li>**Depolyed**: The certificate has been successfully deployed and is active.</li><li>**Deploying**: The certificate is in the process of being deployed.</li><li>**Needs Deployment**: This status appears when an obsolete certificate is selected.</li></ul> |
 
-![The  Edit Development Environment page, highlighting [!UICONTROL Certificate] details.](../../../images/extensions/server/cloud-connector/create-environment.png)
+![The  Edit Development Environment page, highlighting [!UICONTROL Certificate] details.](../../../images/extensions/server/cloud-connector/certificate-details.png)
 
 ### Select and deploy an obsolete certificate {#deploy-obsolete-certificate}
 
