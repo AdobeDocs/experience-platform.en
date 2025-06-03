@@ -86,7 +86,7 @@ The turnaround time to resolve the deprovisioning ticket is six business days or
 
 Note the following known limitations and important callouts while using the Experience Cloud Audiences card:
 
-* Currently, a single Experience Cloud Audiences destination is supported. Attempting to configure a second destination connection results in an error.
+* Currently, you can configure the Experience Cloud Audiences destination on a single sandbox per organization. Attempting to configure a second destination connection in another sandbox results in an error.
 * When connecting to the destination, you can see an option to [enable dataflow alerts](../../ui/alerts.md). Though visible in the UI, the **enable alerts option is not currently supported**.
 * **Audience backfill support**: The first export to Audience Manager or other Experience Cloud solutions includes a historical population of the audiences. Users of the [legacy audience-sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) who are configuring this destination should expect a backfill difference of approximately six hours.
 * Audiences originating from [Audience Composition](../../../segmentation/ui/audience-composition.md) are not supported directly. To activate composite audiences to this destination you must create an audience definition through [Segment Builder](../../../segmentation/ui/segment-builder.md) based on your composite audience, and activate the newly created audience.
