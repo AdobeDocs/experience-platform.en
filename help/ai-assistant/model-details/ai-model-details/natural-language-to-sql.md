@@ -9,7 +9,7 @@ exl-id: ca157945-5f74-45d0-9d40-c65d09a8e80d
 
 ## Model overview {#model-overview}
 
-* **Model Name and Version**: The official name of the model is AI Assistant Operational Insights Natural Language to SQL Model ([!DNL NL2SQL]).
+* **Model Name and Version**: Adobe Experience Platform AI Assistant Operational Insights Natural Language to SQL Model ([!DNL NL2SQL]).
 * **Model Release Date**: February 2025
 * **Model Purpose**: The model is designed to translate customers' natural language queries about operational insights into SQL queries. These SQL queries are executed over the Adobe Experience Platform knowledge graph, which contains metadata about the customers' Experience Platform entities—such as schemas, datasets, audiences, destinations, and journeys. The results of the SQL queries are then used to generate responses to the customers' original natural language questions.
 * **Intended Users**: The primary users of this model are marketing professionals, data analysts, or customer journey managers—who seeks to understand and act on operational insights within Experience Platform using natural language. They may not be experts in SQL or data engineering but need quick, accurate answers about their Experience Platform entities to make informed decisions and optimize customer experiences.
@@ -38,16 +38,10 @@ WHERE
     createdTime >= DATEADD(day, -10, CURRENT_DATE);
 ```
 
-* **Base Model**: N/A. As if April 11 2025, the We use [!DNL Azure OpenAI GPT]-based models for in-context learning.
-* **Training Specifications**: N/A
-* **Training Frameworks**: N/A
-* **Training Infrastructure**: N/A
-
 ## Model evaluation {#model-evaluation}
 
 * **Evaluation Metrics and Procedures**: The model is evaluated using accuracy. For example, out of all [!DNL NL2SQL] requests, how many of the requests yield the correct SQL results. The evaluation process is a combination of rule-based matching (SQL standardization and then direct SQL string matching), LLM-based SQL solver, and human evaluation.
 * **Evaluation Data & Preprocessing**: We use open set(s) for regression test and we also have weekly annotation projects to monitor the performance of the model through sampled real customer traffic.
-* **Adversarial Evaluation**: N/A
 
 ## Model deployment {#model-deployment}
 
