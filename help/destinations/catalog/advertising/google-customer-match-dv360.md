@@ -93,6 +93,14 @@ Before setting up a [!DNL Google Customer Match] destination in Experience Platf
 
 Next, make sure that your [!DNL Google] account is configured for a [!DNL Standard] or higher permission level. See the [Google Ads documentation](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) for details.
 
+### Account linking for manager and client Google accounts {#linking}
+
+If your organization uses a manager [!DNL Google] account that manages multiple client [!DNL Google] accounts, you must ensure proper account linking for data exports from Experience Platform.
+
+If you intend to export data from Experience Platform to a specific client Google account, you must link that client account with your Adobe account.
+
+Linking only the manager Google account will cause issues during data export.
+
 ### Allow list {#allowlist}
 
 Before creating the [!DNL Google Customer Match] destination in Experience Platform, make sure that your [!DNL Google Ads] account complies with the [[!DNL Google Customer Match] policy](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
@@ -127,7 +135,6 @@ For more information about Google's hashing requirements and other restrictions 
 * [[!DNL Customer Match] with phone number](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_phone_number)
 * [[!DNL Customer Match] with mobile device IDs](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_mobile_device_ids)
 
-
 To learn about ingesting email addresses in Experience Platform, see the [batch ingestion overview](../../../ingestion/batch-ingestion/overview.md) and the [streaming ingestion overview](../../../ingestion/streaming-ingestion/overview.md).
 
 If you select to hash the email addresses yourself, make sure to comply with Google's requirements, outlined in the links above.
@@ -148,6 +155,11 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
 ## Connect to the destination {#connect}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_gcm_dv360_accountID"
+>title="Link Google and Adobe accounts"
+>abstract="Make sure the Google Account ID that you enter here is already linked to your Adobe account. If you have a manager Google account with multiple client accounts and you intend to export data from Experience Platform to a specific client account, you must link that client account with your Adobe account and enter the Account ID here."
 
 >[!IMPORTANT]
 > 
