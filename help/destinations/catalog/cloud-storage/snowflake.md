@@ -79,13 +79,20 @@ To authenticate to the destination, select **[!UICONTROL Connect to destination]
 
 ### Fill in destination details {#destination-details}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_snowflake_accountID"
+>title="Enter your Snowflake Account ID"
+>abstract="If your account is linked to an organization use this format: `OrganizationName.AccountName`<br><br> If your account is not linked to an organization use this format:`AccountName`"
+
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
 ![Sample screenshot showing how to fill in details for your destination](../../assets/catalog/cloud-storage/snowflake/configure-destination-details.png)
 
-*  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
-*  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Snowflake Account ID]**: Your Snowflake account ID. Example: `adobe-123456`.
+* **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
+* **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
+* **[!UICONTROL Snowflake Account ID]**: Your Snowflake account ID. Use the following Account ID format depending on whether your account is linked to an organization:
+    * If your account is linked to an organization:`OrganizationName.AccountName`.
+    * If your account is not linked to an organization:`AccountName`.
 * **[!UICONTROL Account acknowledgment]**: Toggle on the Snowflake Account ID acknowledgment to confirm that your Account ID is correct and it belongs to you.
 
 >[!IMPORTANT]
