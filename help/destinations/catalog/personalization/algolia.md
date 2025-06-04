@@ -46,7 +46,7 @@ Then, use the corresponding [[!DNL Algolia User Profiles]](/help/sources/connect
 
 | Target Identity | Description | Considerations |
 |---------|---------|----------|
-| userId | [!DNL Algolia] user token | Select this target identity to map to the [!DNL Adobe Experience Platform] AlgoliaUserToken namespace identity. |
+| userId | [!DNL Algolia] user token | Select this target identity to map it to the [!DNL Adobe Experience Platform] AlgoliaUserToken namespace identity. |
 
 {style="table-layout:auto"}
 
@@ -95,8 +95,6 @@ For more information on these credentials, see the [!DNL Algolia] [authenticatio
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-
-
 * **[!UICONTROL Name]**: Fill in the preferred name for this destination.
 * **[!UICONTROL Description]**: Short explanation of the destination's purpose.
 * **[!UICONTROL Region]**: The options are **US** or **EU**. Select the region where the customer data is stored.
@@ -121,7 +119,7 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 
 ### Map attributes and identities {#mapping-attributes-identities}
 
-During the [!UICONTROL Mapping step], you must map the AlgoliaUserToken source field to the target field.
+During the [!UICONTROL Mapping step], you must map the AlgoliaUserToken source identity to the userId target identity.
 
 ![Mapping complete](../../assets/catalog/personalization/algolia/mapping-complete.png)
 
