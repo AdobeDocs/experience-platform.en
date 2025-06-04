@@ -44,6 +44,7 @@ To open Audience Portal, select the **[!UICONTROL Browse]** tab within the Segme
 By default, Audience Portal displays a list of all the audiences in your organization and sandbox including the profile count, origin, created date, last modified date, tags, and breakdown. 
 
 ![The browse screen is displayed. A list of all the audiences belonging to the organization is shown.](../images/ui/audience-portal/audience-browse.png)
+<!-- Check in image above if the 'Origin' column is visible, and you want to show RTCDP Collaboration as an Origin -->
 
 ### Quick actions {#quick-actions}
 
@@ -55,7 +56,7 @@ Next to each audience is an ellipsis icon. Selecting this displays a list of ava
 | ------ | ------- | ----------- |
 | [!UICONTROL Edit] | Segmentation Service | Opens the Segment Builder to edit your audience. Please note that if your audience was created through the API, you will **not** be able to edit it using Segment Builder. For more information on using the Segment Builder, please read the [Segment Builder UI guide](./segment-builder.md). |
 | [!UICONTROL Open composition] | Audience composition | Opens the Audience composition to see your audience. For more information on Audience composition, please read the [audience composition UI guide](./audience-composition.md). |
-| [!UICONTROL Activate to destination] | Segmentation Service | Activates the audience to a destination. For more detailed information on activating an audience to a destination, please read the [activation overview](../../destinations/ui/activation-overview.md). |
+| [!UICONTROL Activate to destination] | Segmentation Service, Real-Time CDP Collaboration | Activates the audience to a destination. For more detailed information on activating an audience to a destination, please read the [activation overview](../../destinations/ui/activation-overview.md). |
 | [!UICONTROL Share with partners] | Audience composition, Custom upload, Segmentation Service | Shares your audience with other Experience Platform users. For more information on this feature, please read the [Segment Match overview](./segment-match/overview.md). |
 | [!UICONTROL Manage tags] | Audience composition, Custom upload, Segmentation Service | Manages the user-defined tags that belong to the audience. For more information on this feature, please read the section on [filtering and tagging](#manage-audiences). |
 | [!UICONTROL Move to folder] | Audience composition, Custom upload, Segmentation Service |  Manages which folder the audience belongs to. For more information on this feature, please read the section on [filtering and tagging](#manage-audiences). |
@@ -65,6 +66,8 @@ Next to each audience is an ellipsis icon. Selecting this displays a list of ava
 | [!UICONTROL Deactivate] | Custom upload, Segmentation Service | Deactivates the selected audience. Please note that in order to deactivate an audience, it **cannot** be activated in **any** destination (including non-Experience Platform destinations) or be part of **any** other audiences. For more information on lifecycle status management, please read the [lifecycle state section of the Segmentation FAQ](../faq.md#lifecycle-states). |
 | [!UICONTROL Delete] | Audience composition, Custom upload, Segmentation Service | Deletes the selected audience. Audiences that are used in downstream destinations or are dependents in other audiences **cannot** be deleted. For more information on audience deletion, please read the [segmentation FAQ](../faq.md#lifecycle-states). |
 | [!UICONTROL Add to package] | Audience composition, Custom upload, Segmentation Service | Moves the audience between sandboxes. For more information on this feature, please read the [sandbox tooling guide](../../sandboxes/ui/sandbox-tooling.md). |
+
+<!-- Q) can users Activate to destination to Real-Time CDP Collaboration ? I assume so but need to confirm -->
 
 >[!IMPORTANT]
 >
@@ -96,7 +99,7 @@ You can add additional fields to Audience Portal by selecting ![the filter attri
 | ----- | ----------- |
 | [!UICONTROL Name] | The name of the audience. |
 | [!UICONTROL Profile count] | The total number of profiles that qualify for the audience. | 
-| [!UICONTROL Origin] | The origin of the audience. This states where the audience comes from. Possible values include [Segmentation Service](#segment-builder), [Custom upload](#import-audience), [Audience composition](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [Look-alike audience](../types/lookalike-audiences.md), [Federated Audience Composition](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller), and [AJO B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/guide-overview). |
+| [!UICONTROL Origin] | The origin of the audience. This states where the audience comes from. Possible values include [Segmentation Service](#segment-builder), [Custom upload](#import-audience), [Audience composition](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [Look-alike audience](../types/lookalike-audiences.md), [Federated Audience Composition](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/guide-overview), and [Real-Time CDP Collaboration](#real-time-cdp-collaboration). |
 | [!UICONTROL Lifecycle status] | The status of the audience. Possible values for this field include `Draft`, `Inactive`, and `Published`. More information about lifecycle statuses, including what the different states mean and how to move audiences to different lifecycle states, read the [lifecycle status section of the Segmentation FAQ](../faq.md#lifecycle-status). |
 | [!UICONTROL Update frequency] | A value that states how often the audience's data is updated. Possible values for this field include [!UICONTROL Batch], [!UICONTROL Streaming], [!UICONTROL Edge], and [!UICONTROL Not Scheduled]. |
 | [!UICONTROL Last updated by] | The name of the person who last updated the audience. |
@@ -192,12 +195,13 @@ You can also filter your audiences, based on a variety of settings.
 To filter the available audiences, select the ![filter icon](/help/images/icons/filter.png). 
 
 ![The browse audiences page is displayed, with the filter icon highlighted.](../images/ui/audience-portal/browse-select-filter.png)
+<!-- Check in image above if the dropdown list of Origins is shown, it needs updating to include the new origin -->
 
 The list of available filters is displayed.
 
 | Filter | Description |
 | ------ | ----------- |
-| [!UICONTROL Origin] | Lets you filter based on the origin of the audience. Possible values include [Segmentation Service](#segment-builder), [Custom upload](#import-audience), [Audience composition](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [Look-alike audience](../types/lookalike-audiences.md), [Federated Audience Composition](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller), and [AJO B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/guide-overview).  |
+| [!UICONTROL Origin] | Lets you filter based on the origin of the audience. Possible values include [Segmentation Service](#segment-builder), [Custom upload](#import-audience), [Audience composition](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [Look-alike audience](../types/lookalike-audiences.md), [Federated Audience Composition](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/guide-overview), and [Real-Time CDP Collaboration](#real-time-cdp-collaboration).  |
 | [!UICONTROL Has any tag] | Lets you filter by tags. You can select between **[!UICONTROL Has any tag]** and **[!UICONTROL Has all tags]**. When **[!UICONTROL Has any tag]** is selected, the filtered audiences will include **any** of the tags you've added. When **[!UICONTROL Has all tags]** is selected, the filtered audiences must include **all** of the tags you've added. |
 | [!UICONTROL Lifecycle status] | Lets you filter based on the audience's lifecycle status. Available options include [!UICONTROL Deleted], [!UICONTROL Draft], [!UICONTROL Inactive], and [!UICONTROL Published]. |
 | [!UICONTROL Update frequency] | Lets you filter based on the audience's update frequency (evaluation method). Available options include [!UICONTROL Batch], [!UICONTROL Streaming], and [!UICONTROL Edge] |
@@ -206,6 +210,7 @@ The list of available filters is displayed.
 | [!UICONTROL Modified date] | Lets you filter based on the last modified date of the audience. You can choose a date range to filter when the audience was last modified. |
 
 ![The available filters are displayed and highlighted on the browse audiences page.](../images/ui/audience-portal/filter-audiences.png)
+<!-- Check in image above if this image shows the list of filter values and Origin is visible, it should include RTCDP Collaboration -->
 
 ### Bulk actions {#bulk-actions}
 
@@ -348,6 +353,11 @@ Once audiences have been created, you can then evaluate them through on-demand o
 
 On-demand evaluation involves using the API to perform evaluation and build audiences as needed, whereas scheduled evaluation (also known as 'scheduled segmentation') allows you to create a recurring schedule to evaluate audiences at a specific time (at a maximum, once daily).
 
+>[!NOTE]
+>
+>Audiences sourced from [Real-Time CDP Collaboration](#real-time-cdp-collaboration) do not require a batch segmentation job to activate. They can be activated immediately after sourcing without waiting for a scheduled evaluation.
+
+
 ### Enable scheduled segmentation {#enable-scheduled-segmentation}
 
 Enabling your audiences for scheduled evaluation can be done using the UI or the API. In the UI, return to the **[!UICONTROL Browse]** tab within **[!UICONTROL Audiences]** and toggle on **[!UICONTROL Schedule all audiences]**. This will cause all audiences to be evaluated based on the schedule set by your organization.
@@ -454,6 +464,10 @@ After confirming the details are correct, select **[!UICONTROL Finish]** to impo
 >Additionally, if your externally generated audience contains sensitive and/or healthcare-related information, you **must** apply the necessary data usage labels before activating it to any destination. Since variables from externally generated audiences are stored in the data lake rather than within Real-time Customer Profile, you should **not** include consent data within your CSV file. 
 >
 >For more information on applying data usage labels, please read the documentation on [managing labels](../../access-control/abac/ui/labels.md). To learn about data usage labels on Experience Platform in general, please read the [data usage labels overview](../../data-governance/labels/overview.md). To learn about how consent works in externally generated audiences, please read the [audiences FAQ](../faq.md#consent).
+
+## Real-Time CDP Collaboration {#real-time-cdp-collaboration}
+
+Audiences created through Real-Time CDP Collaboration are externally sourced audiences designed for collaboration use cases. They allow for immediate activation without requiring additional batch segmentation processing and support direct membership updates (overwrites).
 
 ## Next steps
 
