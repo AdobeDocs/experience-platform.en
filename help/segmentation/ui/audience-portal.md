@@ -66,8 +66,6 @@ Next to each audience is an ellipsis icon. Selecting this displays a list of ava
 | [!UICONTROL Delete] | Audience composition, Custom upload, Segmentation Service | Deletes the selected audience. Audiences that are used in downstream destinations or are dependents in other audiences **cannot** be deleted. For more information on audience deletion, please read the [segmentation FAQ](../faq.md#lifecycle-states). |
 | [!UICONTROL Add to package] | Audience composition, Custom upload, Segmentation Service | Moves the audience between sandboxes. For more information on this feature, please read the [sandbox tooling guide](../../sandboxes/ui/sandbox-tooling.md). |
 
-<!-- Q) can users Activate to destination to Real-Time CDP Collaboration ? I assume so but need to confirm -->
-
 >[!IMPORTANT]
 >
 >Before deleting your audience, please ensure that the audience is **not** used as a component in an account-based audience or used in Adobe Journey Optimizer.
@@ -199,7 +197,7 @@ The list of available filters is displayed.
 
 | Filter | Description |
 | ------ | ----------- |
-| [!UICONTROL Origin] | Lets you filter based on the origin of the audience. Possible values include [Segmentation Service](#segment-builder), [Custom upload](#import-audience), [Audience composition](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [Look-alike audience](../types/lookalike-audiences.md), [Federated Audience Composition](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/guide-overview), and [Real-Time CDP Collaboration](#real-time-cdp-collaboration).  |
+| [!UICONTROL Origin] | Lets you filter based on the origin of the audience. Possible values include [Segmentation Service](#segment-builder), [Custom upload](#import-audience), [Audience composition](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [Look-alike audience](../types/lookalike-audiences.md), [Federated Audience Composition](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/guide-overview), and [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal).  |
 | [!UICONTROL Has any tag] | Lets you filter by tags. You can select between **[!UICONTROL Has any tag]** and **[!UICONTROL Has all tags]**. When **[!UICONTROL Has any tag]** is selected, the filtered audiences will include **any** of the tags you've added. When **[!UICONTROL Has all tags]** is selected, the filtered audiences must include **all** of the tags you've added. |
 | [!UICONTROL Lifecycle status] | Lets you filter based on the audience's lifecycle status. Available options include [!UICONTROL Deleted], [!UICONTROL Draft], [!UICONTROL Inactive], and [!UICONTROL Published]. |
 | [!UICONTROL Update frequency] | Lets you filter based on the audience's update frequency (evaluation method). Available options include [!UICONTROL Batch], [!UICONTROL Streaming], and [!UICONTROL Edge] |
@@ -350,11 +348,6 @@ Once audiences have been created, you can then evaluate them through on-demand o
 
 On-demand evaluation involves using the API to perform evaluation and build audiences as needed, whereas scheduled evaluation (also known as 'scheduled segmentation') allows you to create a recurring schedule to evaluate audiences at a specific time (at a maximum, once daily).
 
->[!NOTE]
->
->Audiences sourced from [Real-Time CDP Collaboration](#real-time-cdp-collaboration) do not require a batch segmentation job to activate. They can be activated immediately after sourcing without waiting for a scheduled evaluation.
-
-
 ### Enable scheduled segmentation {#enable-scheduled-segmentation}
 
 Enabling your audiences for scheduled evaluation can be done using the UI or the API. In the UI, return to the **[!UICONTROL Browse]** tab within **[!UICONTROL Audiences]** and toggle on **[!UICONTROL Schedule all audiences]**. This will cause all audiences to be evaluated based on the schedule set by your organization.
@@ -461,10 +454,6 @@ After confirming the details are correct, select **[!UICONTROL Finish]** to impo
 >Additionally, if your externally generated audience contains sensitive and/or healthcare-related information, you **must** apply the necessary data usage labels before activating it to any destination. Since variables from externally generated audiences are stored in the data lake rather than within Real-time Customer Profile, you should **not** include consent data within your CSV file. 
 >
 >For more information on applying data usage labels, please read the documentation on [managing labels](../../access-control/abac/ui/labels.md). To learn about data usage labels on Experience Platform in general, please read the [data usage labels overview](../../data-governance/labels/overview.md). To learn about how consent works in externally generated audiences, please read the [audiences FAQ](../faq.md#consent).
-
-## Real-Time CDP Collaboration {#real-time-cdp-collaboration}
-
-Audiences created through Real-Time CDP Collaboration are externally sourced audiences designed for collaboration use cases. They allow for immediate activation without requiring additional batch segmentation processing and support direct membership updates (overwrites).
 
 ## Next steps
 
