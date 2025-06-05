@@ -54,6 +54,8 @@ For more information about Customer Journey Analytics latencies, see: [Customer 
 
 The Analytics backfill for production sandboxes defaults to 13 months. For Analytics data in non-production sandboxes, backfill is set to three months. The limit of 10 billion events mentioned in the table above is strictly with respect to expected latency. 
 
+For production sandboxes, if you have licensed the additional SKU that entitles you to import more than 13 months of historical backfill data, contact Adobe to request the extended backfill.
+
 When you create an Analytics source dataflow in a production sandbox, two dataflows are created:
 
 * A dataflow that does a 13-month backfill of historical report suite data into data lake. This dataflow ends when the backfill is complete.

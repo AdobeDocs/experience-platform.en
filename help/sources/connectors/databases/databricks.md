@@ -89,7 +89,7 @@ To refresh your credentials, make a POST request and include `action=refresh` as
 **API format**
 
 ```http
-GET /data/foundation/connectors/landingzone/credentials?type=dlz_databricks_source&action=refresh
+POST /data/foundation/connectors/landingzone/credentials?type=dlz_databricks_source&action=refresh
 ```
 
 **Request**
@@ -99,7 +99,7 @@ The following request refreshes the credentials for your [!DNL Azure Blob Storag
 +++View request example
 
 ```shell
-curl -X GET \
+curl -X POST \
   'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=dlz_databricks_source&action=refresh' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
