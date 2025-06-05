@@ -207,7 +207,7 @@ Customer AI generates several attributes for individual profiles that are deemed
 
 You can find the output dataset in the Experience Platform **Datasets** workspace. All Customer AI output datasets start with the name **Customer AI Scores - NAME_OF_APP**. Similarly, all Customer AI output schemas start with the name **Customer AI Schema - Name_of_app**.
 
-![Name of the output datasets in Customer AI](./images/user-guide/cai-schema-name-of-app.png) 
+![The naming convention for output datasets in Customer AI.](./images/user-guide/cai-schema-name-of-app.png) 
 
 The table below describes the various attributes found in the output of Customer AI: 
 

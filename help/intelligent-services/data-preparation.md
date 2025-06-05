@@ -86,7 +86,7 @@ The CEE schema, like all XDM ExperienceEvent schemas, captures the time-series-b
 
 [!DNL Intelligent Services] utilize several key fields within this schema to generate insights from your marketing events data, all of which can be found at the root level and expanded to show their required subfields.
 
-![](./images/data-preparation/schema-expansion.gif)
+![Demo of schema expansion in Adobe Experience Platform UI, showing navigation and subfield details.](./images/data-preparation/schema-expansion.gif)
 
 Like all XDM schemas, the CEE schema field group is extensible. In other words, additional fields can be added to the CEE field group, and different variations can be included in multiple schemas if necessary.
 
@@ -128,19 +128,19 @@ If you are unsure which field you should use as a primary identity, contact Adob
 
 To set a primary identity, navigate to your schema from the **[!UICONTROL Schemas]** tab and select the schema name hyperlink to open the **[!DNL Schema Editor]**.
 
-![Navigate to schema](./images/data-preparation/navigate_schema.png)
+![Navigation to the schema in the Adobe Experience Platform UI.](./images/data-preparation/navigate_schema.png)
 
 Next, navigate to the field you wish to as a primary identity and select it. The **[!UICONTROL Field properties]** menu opens for that field.
 
-![Select the field](./images/data-preparation/find_field.png)
+![The process of selecting the desired field in the Adobe Experience Platform UI.](./images/data-preparation/find_field.png)
 
 In the **[!UICONTROL Field properties]** menu, scroll down until you find the **[!UICONTROL Identity]** checkbox. After checking the box, the option to set the selected identity as the **[!UICONTROL Primary identity]** appears. Select this box as well.
 
-![Select checkbox](./images/data-preparation/set_primary_identity.png)
+![Checkbox to set primary identity in the Adobe Experience Platform UI.](./images/data-preparation/set_primary_identity.png)
 
 Next, you must provide an **[!UICONTROL Identity namespace]** from the list of pre-defined namespaces in the dropdown. In this example, the ECID namesapce is selected since an Adobe Audience Manager ID `mcid.id` is being used. Select **[!UICONTROL Apply]** to confirm the updates then select **[!UICONTROL Save]** in the top-right corner to save the changes to your schema.
 
-![Save the changes](./images/data-preparation/select_namespace.png)
+![Dropdown menu showing the selection of the ECID namespace in the Adobe Experience Platform UI.](./images/data-preparation/select_namespace.png)
 
 #### xdm:timestamp {#timestamp}
 
@@ -154,7 +154,7 @@ This field represents the datetime at which the event occurred. This value must 
 
 This field represents the marketing channel related to the ExperienceEvent. The field includes information about the channel type, media type, and location type.
 
-![](./images/data-preparation/channel.png)
+![Diagram showing the structure of the xdm:channel field, including subfields such as type, mediaType, and mediaAction.](./images/data-preparation/channel.png)
 
 **Example schema**
 
@@ -192,7 +192,7 @@ The remainder of the key fields are outlined in this section. While these fields
 
 This field is an array of items which represent products selected by a customer, including the product SKU, name, price, and quantity.
 
-![](./images/data-preparation/productListItems.png)
+![The xdm:productListItems field, including subfields such as SKU, name, currencyCode, quantity, and priceTotal.](./images/data-preparation/productListItems.png)
 
 **Example schema**
 
@@ -221,7 +221,7 @@ For complete information regarding each of the required sub-fields for `xdm:prod
 
 This field contains commerce-specific information about the ExperienceEvent, including the purchase order number and payment information.
 
-![](./images/data-preparation/commerce.png)
+![The structure of the xdm:commerce field, including subfields such as order, purchases, and payments.](./images/data-preparation/commerce.png)
 
 **Example schema**
 
@@ -259,7 +259,7 @@ For complete information regarding each of the required sub-fields for `xdm:comm
 
 This field represents web details relating to the ExperienceEvent, such as the interaction, page details, and referrer.
 
-![](./images/data-preparation/web.png)
+![The xdm:web field, including subfields such as webPageDetails and webReferrer.](./images/data-preparation/web.png)
 
 **Example schema**
 
@@ -289,7 +289,7 @@ For complete information regarding each of the required sub-fields for `xdm:prod
 
 This field contains information related to marketing activities that are active with the touchpoint.
 
-![](./images/data-preparation/marketing.png)
+![The structure of the xdm:marketing field, including subfields such as trackingCode, campaignGroup, and campaignName.](./images/data-preparation/marketing.png)
 
 **Example schema**
 

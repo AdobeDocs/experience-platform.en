@@ -10,14 +10,6 @@ exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
 >title="Namespace Priority"
 >abstract="Namespace priority determines how links are removed from the identity graph."
 
->[!AVAILABILITY]
->
->Identity Graph Linking Rules is currently in Limited Availability, and can be accessed by all customers in development sandboxes.
->
->* **Activation requirements**: The feature will remain inactive until you configure and save your [!DNL Identity Settings]. Without this configuration, the system will continue to operate normally, with no changes in behavior.
->* **Important notes**: During this Limited Availability phase, Edge segmentation may produce unexpected segment membership results. However, streaming and batch segmentation will function as expected.
->* **Next steps**: For information on how to enable this feature in production sandboxes, please contact your Adobe account team.
-
 Every customer implementation is unique and tailored to meet a particular organization's goals, and as such, the importance of a given namespace varies from customer to customer. Real-world examples include:
 
 * Your company might consider each email address to represent a single-person entity and therefore use [identity settings](./identity-settings-ui.md) to configure the email namespace as unique. Another company, however, might want to represent single-person entities as having multiple email addresses, and thus configure the email namespace as not-unique. These companies would need to use another identity namespace as unique, such as a CRMID namespace, so there can be a single-person identifier linked to the multiple email addresses.
@@ -39,7 +31,7 @@ If your organization's graph structure is layered, then namespace priority shoul
 >
 >* A layered graph refers to identity graphs that have multiple levels of links. View the image below for an example of a graph with three layers.
 
-![A diagram of graph layers](../images/namespace-priority/graph-layers.png)
+![A diagram of graph layers](../images/namespace-priority/graph-layers.png "A diagram of graph layers"){zoomable="yes"}
 
 ### Semantic meaning of the namespace
 
@@ -51,7 +43,7 @@ An identity represents a real-world object. There are three objects that are rep
 
 Person namespaces are relatively immutable compared to hardware devices (such as IDFA, GAID), which are relatively immutable compared to web browsers. Basically, you (person) will always be a single entity, who can have multiple hardware devices (phone, laptop, tablet, etc.), and use multiple browsers (Google Chrome, Safari, FireFox, etc.)
 
-Another way to approach this topic is through cardinality. For a given person entity, how many identities will be created? In most cases, a person will have one CRMID, a handful of hardware device identifiers (IDFA/GAID resets should not happen often), and even more cookies (an individual could conceivably browse on multiple devices, use incognito mode, or reset cookies at any given time). Generally, **lower cardinality indicates a namespace with a higher value**.
+Another way to approach this topic is through cardinality. For a given person entity, how many identities will be created? In most cases, a person will have one CRMID, a handful of hardware device identifiers (IDFA/GAID resets should not happen often), and even more cookies (an individual could conceivably browse on multiple devices, use incognito mode, or reset cookies at any given time). Generally, **lower cardinality indicates a namespace with a higher priority**.
 
 ## Validate your namespace priority settings
 
@@ -69,11 +61,11 @@ Namespace priority can be configured using the [identity settings UI](./identity
 
 Currently, namespace priority influences system behavior of Real-Time Customer Profile. The diagram below illustrates this concept. For more information, read the guide on [Adobe Experience Platform and applications architecture diagrams](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
 
-![A diagram of namespace priority application scope](../images/namespace-priority/application-scope.png)
+![A diagram of namespace priority application scope.](../images/namespace-priority/application-scope.png "A diagram of namespace priority application scope."){zoomable="yes"}
 
-## Identity Service: Identity optimization algorithm
+## Identity Service: Identity Optimization Algorithm
 
-For relatively complex graph structures, namespace priority plays an important role in ensuring that the correct links are removed when graph collapse scenarios happen. For more information read the [identity optimization algorithm overview](../identity-graph-linking-rules/identity-optimization-algorithm.md).
+For relatively complex graph structures, namespace priority plays an important role in ensuring that the correct links are removed when graph collapse scenarios happen. For more information read the [Identity Optimization Algorithm overview](../identity-graph-linking-rules/identity-optimization-algorithm.md).
 
 ## Real-Time Customer Profile: primary identity determination for experience events
 
@@ -122,7 +114,7 @@ Given the configurations outlined above, user actions and determination of prima
 
 ## Segmentation Service: segment membership metadata storage
 
-![A diagram of segment membership storage](../images/namespace-priority/segment-membership-storage.png)
+![A diagram of segment membership storage.](../images/namespace-priority/segment-membership-storage.png "A diagram of segment membership storage."){zoomable="yes"}
 
 For a given merged profile, segment memberships will be stored against the identity with the highest namespace priority.
 
@@ -199,7 +191,7 @@ For more information, read the [Privacy service overview](../../privacy-service/
 
 ### Edge segmentation and Edge Network applications
 
-In the context of [!DNL Identity Graph Linking Rules],there are two main behavioral changes to take note of regarding Edge segmentation and Edge Network applications:
+In the context of [!DNL Identity Graph Linking Rules], there are two main behavioral changes to take note of regarding Edge segmentation and Edge Network applications:
 
 1. The `identityMap` must contain a person namespace that has been marked as unique. Fields marked as an identity (identity descriptors) are not supported.
 2. The person namespace must have the `primary = true` configuration when an end-user is browsing while authenticated.
@@ -219,3 +211,4 @@ To ensure applications on the Edge Network have access to the Edge Profile witho
 * Applications on Edge Network such as Adobe Target, Offer Decisioning, and Custom Personalization Destinations will continue to depend on the primary identity in events to access profiles from Edge Profile.
 * Read the [Experience Platform Web SDK & Edge Network architecture diagram](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) for more information on Edge Network behavior.
 * Read the documentation on [Data element types](../../tags/extensions/client/web-sdk/data-element-types.md) and [Identity data in Web SDK](../../web-sdk/identity/overview.md) for more information on how to configure primary identity on Web SDK.
+* Ensure the ECID is included in the experience event. If the ECID is missing, then it will be added to the event payload with `primary=true`, which may lead to unexpected results.

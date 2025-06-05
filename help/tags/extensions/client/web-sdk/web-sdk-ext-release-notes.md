@@ -7,6 +7,31 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 
 This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Experience Platform Web SDK release notes](/help/web-sdk/release-notes.md).
 
+
+## Version 2.30.1 - May 27, 2025
+
+**Fixes and improvements**
+
+- Fixed an issue where the update variable view was crashing when an organization had no default sandbox set.
+
+## Version 2.30.0 - May 21, 2025
+
+**New features**
+
+- You can now specify a data element when enabling third party cookies.
+- Added clear buttons to code fields.
+- Contains [version 2.27.0](../../../../web-sdk/release-notes.md#2-27-0) of the Adobe Experience Platform Web SDK.
+
+**Fixes and improvements**
+
+- Added validation to prevent setting `onBeforeLinkClickSend` when event grouping is enabled.
+
+## Version 2.29.1 - May 8, 2025
+
+**Fixes and improvements**
+
+- Fixed an issue where settings were not saved when immediately clicking "save" after editing.
+
 ## Version 2.29.0 - March 5, 2025
 
 **New features**
