@@ -14,7 +14,7 @@ exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
 
 ## Overview {#overview}
 
-Use the Snowflake destination connector to export data to Snowflake using private listings.
+Use the Snowflake destination connector to export data to Adobe's Snowflake instance, then share it with your instance through [private listings](https://other-docs.snowflake.com/en/collaboration/collaboration-listings-about).
 
 Read the following sections to understand how the Snowflake destination works and how data is transferred between Adobe and Snowflake.
 
@@ -22,13 +22,15 @@ Read the following sections to understand how the Snowflake destination works an
 
 This destination uses a [!DNL Snowflake] data share, which means that no data is physically exported or transferred to your own Snowflake instance. Instead, Adobe grants you read-only access to a live table hosted within Adobe's Snowflake environment. You can query this shared table directly from your Snowflake account, but you do not own the table and cannot modify or retain it beyond the specified retention period. Adobe fully manages the lifecycle and structure of the shared table.
 
+The first time you share data from Adobe's Snowflake instance to yours, you are prompted to accept the private listing from Adobe.
+
 ### Data retention and Time-to-Live (TTL) {#ttl}
 
-All data shared through this integration has a fixed Time-to-Live (TTL) of 7 days. After 7 days, the shared table automatically expires and becomes inaccessible, regardless of whether the dataflow is still active. If you need to retain the data for longer than 7 days, you must copy the contents into a table that you own in your own Snowflake instance before the TTL expires.
+All data shared through this integration has a fixed Time-to-Live (TTL) of seven days. Seven days after the last export, the shared table automatically expires and becomes inaccessible, regardless of whether the dataflow is still active. If you need to retain the data for longer than seven days, you must copy the contents into a table that you own in your own Snowflake instance before the TTL expires.
 
 ### Audience update behavior {#audience-update-behavior}
 
-If your audience is evaluated in batch mode, the data in the shared table is refreshed every 24 hours. This means there may be a delay of up to 24 hours between changes in audience membership and when those changes are reflected in the shared table.
+If your audience is evaluated in [batch mode](../../../segmentation/methods/batch-segmentation.md), the data in the shared table is refreshed every 24 hours. This means there may be a delay of up to 24 hours between changes in audience membership and when those changes are reflected in the shared table.
 
 ### Incremental export logic {#incremental-export}
 
