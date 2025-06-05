@@ -1,7 +1,6 @@
 ---
 title: Google Customer Match + Display & Video 360 connection
 description: With the Google Customer Match + Display & Video 360 destination connector, you can use your online and offline data from Experience Platform to reach and re-engage with your customers across Google's owned and operated properties, such as Search, Shopping, Gmail, and YouTube.
-badgeBeta: label="Beta" type="Informative"
 exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
 ---
 # [!DNL Google Customer Match + Display & Video 360] connection
@@ -11,10 +10,6 @@ Use this destination to activate your first-party PII-based [[!DNL Google Custom
 Certain Google-integrated third parties, such as Adobe Real-Time CDP, can use the [!DNL Google Audience Partner API] to create [!DNL Customer Match] audiences directly in customers' [!DNL Display & Video 360] account.
 
 With the newly introduced capability of being able to utilize [!DNL Customer Matched] audiences across [!DNL Display & Video 360], you are now able to target audiences across an expanded roster of inventory sources. 
-
->[!IMPORTANT]
->
->This destination connector is in beta and only available to select customers. To request access, contact your Adobe representative.
 
 ![Google Customer Match + DV360 destination in the Adobe Experience Platform UI.](/help/destinations/assets/catalog/advertising/gcm-dv360/catalog.png)
 
