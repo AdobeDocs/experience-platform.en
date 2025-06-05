@@ -30,7 +30,7 @@ To begin, find the desired field type and use the sample code provided to build 
 You can optionally constrain what kinds of values can be inputted for the string through the following additional properties:
 
 * `pattern`: A regex pattern to constrain by.
-* `minLength`: A minimum length for the string.
+* `minLength`: A minimum length for the string. Strings receive a minimum value of `1` by default.
 * `maxLength`: A maximum length for the string.
 
 ```json
@@ -182,7 +182,7 @@ The equivalent of a [!UICONTROL Long] field created through the Schema Builder U
 
 ## [!UICONTROL Short] {#short}
 
-The equivalent of a [!UICONTROL Short] field created through the Schema Builder UI is an [`integer` type field](#integer) with specific `minimum` and `maximum` values (`-32768` and `32768`, respectively).
+The equivalent of a [!UICONTROL Short] field created through the Schema Builder UI is an [`integer` type field](#integer) with specific `minimum` and `maximum` values (`-32768` and `32767`, respectively).
 
 ```json
 "sampleField": {
@@ -190,13 +190,13 @@ The equivalent of a [!UICONTROL Short] field created through the Schema Builder 
   "description": "An example short field.",
   "type": "integer",
   "minimum": -32768,
-  "maximum": 32768
+  "maximum": 32767
 }
 ```
 
 ## [!UICONTROL Byte] {#byte}
 
-The equivalent of a [!UICONTROL Byte] field created through the Schema Builder UI is an [`integer` type field](#integer) with specific `minimum` and `maximum` values (`-128` and `128`, respectively).
+The equivalent of a [!UICONTROL Byte] field created through the Schema Builder UI is an [`integer` type field](#integer) with specific `minimum` and `maximum` values (`-128` and `127`, respectively).
 
 ```json
 "sampleField": {
@@ -204,7 +204,7 @@ The equivalent of a [!UICONTROL Byte] field created through the Schema Builder U
   "description": "An example byte field.",
   "type": "integer",
   "minimum": -128,
-  "maximum": 128
+  "maximum": 127
 }
 ```
 

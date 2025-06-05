@@ -98,6 +98,24 @@ As you type in the Query Editor, the editor automatically completes SQL reserved
 
 ![The Query Editor workspace.](../images/ui/overview/query-editor.png)
 
+### About the Results tab {#results-tab}
+
+The [!UICONTROL Result] tab displays the tabular output of your query after execution. Use this tab to review results, validate output, and take follow-up actions directly in the interface. From this view, you can:
+
+- Download results in CSV, XLSX, or JSON format for offline analysis. See [Download query results](./user-guide.md#download-query-results).
+- View results in full screen to examine large tables or wide datasets in a resizable grid layout. See [View results in full screen](./user-guide.md#view-results).
+- Copy results to your clipboard in CSV format for quick pasting into spreadsheet applications. See [Copy results](./user-guide.md#copy-results).
+
+These features are designed to support seamless data validation, reporting, and sharing workflows—all without leaving the Query Editor.
+
+### Parameterized queries {#parameterized-queries}
+
+Query Editor supports parameterized queries, which allow you to insert variables into your SQL statements and dynamically assign values at runtime. This feature helps simplify reusable queries and improve flexibility in workflows.
+
+You can define parameters when writing queries, then assign values through the [!UICONTROL Query parameters] tab before running them. Parameterized queries are especially useful for scheduled queries or query templates shared across your organization.
+
+To learn how to define and use parameters, see [Parameterized queries in Query Editor](./parameterized-queries.md).
+
 ## Scheduled queries {#scheduled-queries}
 
 Queries that have already been saved as a template can be scheduled to run on a regular cadence. When scheduling a query, you can choose the frequency of runs, the start and end date, the day of the week the scheduled query runs, as well as the dataset to export the query to. Query schedules are set using Query Editor.
@@ -107,8 +125,6 @@ To learn how to schedule a query through the UI, see the [scheduled queries guid
 Once a query has been scheduled, it appears in the list of scheduled queries on the [!UICONTROL Scheduled Queries] tab. Full details regarding the query, runs, creator, and timings can be found by selecting a scheduled query from the list.
 
 ![The Queries workspace with the Scheduled Queries tab highlighted and displaying rows of query schedules.](../images/ui/overview/scheduled-queries.png)
-
-<!--  -->
 
 | Column | Description |
 | --- | --- |
@@ -154,7 +170,7 @@ The **[!UICONTROL Log]** tab provides a list of queries that have previously bee
 | **[!UICONTROL Client]** | The client used for the query. |
 | **[!UICONTROL Created by]** | The name of the person who created the query. |
 
->![Note]
+>[!NOTE]
 >
 >Select the pencil icon (![A pencil icon.](/help/images/icons/edit.png)) from any row of the query log to navigate to the Query Editor. The query is pre-populated for convenient editing.
 

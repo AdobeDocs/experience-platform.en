@@ -1,6 +1,6 @@
 ---
 title: Examples of Graph Configurations
-description: Learn about common graph scenarios that you might encounter when working with identity graph linking rules and identity data.
+description: Learn about common graph scenarios that you might encounter when working with Identity Graph Linking Rules and identity data.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
 ---
 # Examples of graph configurations {#examples-of-graph-configurations}
@@ -10,16 +10,12 @@ exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
 >title="Algorithm Configuration"
 >abstract="Configure unique namespace and namespace priority tailored to your ingested identities."
 
->[!AVAILABILITY]
->
->Identity graph linking rules are currently in Limited Availability. Contact your Adobe account team for information on how to access the feature in development sandboxes.
-
 >[!NOTE]
 >
 >* "CRMID" and "loginID" are custom namespaces. In this document, "CRMID" is a person identifier and "loginID" is a login identifier associated with a given person.
 >* To simulate the example graph scenarios outlined in this document, you must first create two custom namespaces, one with the identity symbol "CRMID" and another with the identity symbol "loginID". Identity symbols are case sensitive.
 
-This document outlines graph configuration examples of common scenarios that you might encounter when working with identity graph linking rules and identity data.
+This document outlines graph configuration examples of common scenarios that you might encounter when working with [!DNL Identity Graph Linking Rules] and identity data.
 
 ## CRMID only
 
@@ -65,13 +61,13 @@ Within the context of this configuration, the primary identity will be defined l
 
 The following is an example of an ideal single-person graph, where CRMID is unique and given the highest priority.
 
-![A simulated example of an ideal single-person graph, where CRMID is unique and given the highest priority.](../images/graph-examples/crmid_only_single.png)
+![A simulated example of an ideal single-person graph, where CRMID is unique and given the highest priority.](../images/graph-examples/crmid_only_single.png "A simulated example of an ideal single-person graph, where CRMID is unique and given the highest priority."){zoomable="yes"}
 
 >[!TAB Multi-person graph]
 
 The following is an example of  a multi-person graph. This example displays a "shared device" scenario, where there are two CRMIDs and the one with the older established link gets removed.
 
-![A simulated example of a multi-person graph. This example displays a shared device scenario, where there are two CRMIDs and the older established link gets removed.](../images/graph-examples/crmid_only_multi.png)
+![A simulated example of a multi-person graph. This example displays a shared device scenario, where there are two CRMIDs and the older established link gets removed.](../images/graph-examples/crmid_only_multi.png "A simulated example of a multi-person graph. This example displays a shared device scenario, where there are two CRMIDs and the older established link gets removed."){zoomable="yes"}
 
 **Graph simulation events input**
 
@@ -134,13 +130,13 @@ Within the context of this configuration, the primary identity will be defined l
 
 The following are examples of a pair of ideal single-person graphs, where each CRMID is associated with their respective hashed email namespace and ECID.
 
-![In this example, two separate graphs are generated, each representing a single-person entity.](../images/graph-examples/crmid_hashed_single.png)
+![In this example, two separate graphs are generated, each representing a single-person entity.](../images/graph-examples/crmid_hashed_single.png "A simulated example of a multi-person graph. This example displays a shared device scenario, where there are two CRMIDs and the older established link gets removed."){zoomable="yes"}
 
 >[!TAB Multi-person graph: shared device]
 
 The following is an example of a multi-person graph scenario where a device is shared by two people.
 
-![In this example, the simulated graph displays a "shared device" scenario because both Tom and Summer are associated with the same ECID.](../images/graph-examples/crmid_hashed_shared_device.png)
+![In this example, the simulated graph displays a "shared device" scenario because both Tom and Summer are associated with the same ECID.](../images/graph-examples/crmid_hashed_shared_device.png "A simulated example of a multi-person graph. This example displays a shared device scenario, where there are two CRMIDs and the older established link gets removed."){zoomable="yes"}
 
 **Graph simulation events input**
 
@@ -156,7 +152,7 @@ CRMID: Summer, ECID: 111
 
 The following is an example of a multi-person graph scenario where email is not unique and is being associated with two different CRMIDs.
 
-![This scenario is similar to a "shared device" scenario. However, instead of having the person entities share ECID, they are instead associate with the same email account.](../images/graph-examples/crmid_hashed_nonunique_email.png)
+![This scenario is similar to a "shared device" scenario. However, instead of having the person entities share ECID, they are instead associate with the same email account. "A simulated example of a multi-person graph. This example displays a shared device scenario, where there are two CRMIDs and the older established link gets removed."](../images/graph-examples/crmid_hashed_nonunique_email.png){zoomable="yes"}
 
 **Graph simulation events input**
 
@@ -231,13 +227,13 @@ Within the context of this configuration, the primary identity will be defined l
 
 The following is an ideal single-person graph scenario where hashed email and hashed phone are marked as identities for use in [!DNL Segment Match]. In this scenario, the graphs are split into two, to represent to disparate person entities.
 
-![An ideal single-person graph scenario.](../images/graph-examples/crmid_hashed_single_seg_match.png)
+![An ideal single-person graph scenario.](../images/graph-examples/crmid_hashed_single_seg_match.png "A simulated example of a multi-person graph. This example displays a shared device scenario, where there are two CRMIDs and the older established link gets removed."){zoomable="yes"}
 
 >[!TAB Multi-person graph: shared device, shared computer]
 
 The following is a multi-person graph scenario where a device (computer) is shared by two people. In this scenario, the shared computer is represented by `{ECID: 111}` and is linked to `{CRMID: Summer}` because that link is the most recently established link. `{CRMID: Tom}` is removed because the link between `{CRMID: Tom}` and `{ECID: 111}` is older and because CRMID is the designated unique namespace in this configuration.
 
-![A multi-person graph scenario where two users are sharing a computer.](../images/graph-examples/shared_device_shared_computer.png)
+![A multi-person graph scenario where two users are sharing a computer.](../images/graph-examples/shared_device_shared_computer.png "A simulated example of a multi-person graph. This example displays a shared device scenario, where there are two CRMIDs and the older established link gets removed."){zoomable="yes"}
 
 **Graph simulation events input**
 
@@ -255,7 +251,7 @@ CRMID: Summer, ECID: 111
 
 The following is a multi-person graph scenario where an android device is shared by two people. In this scenario, CRMID is configured as a unique namespace, and therefore, the newer link of `{CRMID: Tom, GAID: B-B-B, ECID:444}` supersedes the older `{CRMID: Summer, GAID: B-B-B, ECID:444}`.
 
-![A multi-person graph scenario where two users are sharing an android mobile device.](../images/graph-examples/shared_device_android.png)
+![A multi-person graph scenario where two users are sharing an android mobile device.](../images/graph-examples/shared_device_android.png "A simulated example of a multi-person graph. This example displays a shared device scenario, where there are two CRMIDs and the older established link gets removed."){zoomable="yes"}
 
 **Graph simulation events input**
 
@@ -273,7 +269,7 @@ CRMID: Tom, ECID: 444, GAID: B-B-B
 
 The following is a multi-person graph scenario where an Apple device is shared by two people. In this scenario the IDFA is shared, but the ECID does not reset.
 
-![A multi-person graph scenario where two users are sharing an Apple mobile device.](../images/graph-examples/shared_device_apple_no_reset.png)
+![A multi-person graph scenario where two users are sharing an Apple mobile device.](../images/graph-examples/shared_device_apple_no_reset.png "A simulated example of a multi-person graph. This example displays a shared device scenario, where there are two CRMIDs and the older established link gets removed."){zoomable="yes"}
 
 **Graph simulation events input**
 
@@ -291,7 +287,7 @@ CRMID: Summer, ECID: 222, IDFA: A-A-A
 
 The following is a multi-person graph scenario where an Apple device is shared by two people. In this scenario, the ECID resets, but the IDFA remains the same.
 
-![A multi-person graph scenario where two users are sharing an Apple mobile device, but the ECID is reset.](../images/graph-examples/shared_device_apple_with_reset.png)
+![A multi-person graph scenario where two users are sharing an Apple mobile device, but the ECID is reset.](../images/graph-examples/shared_device_apple_with_reset.png "A simulated example of a multi-person graph. This example displays a shared device scenario, where there are two CRMIDs and the older established link gets removed."){zoomable="yes"}
 
 **Graph simulation events input**
 
@@ -309,7 +305,7 @@ CRMID: Summer, ECID: 555, IDFA: A-A-A
 
 The following is a multi-person graph scenario where the same phone number is being shared by two people.
 
-![A multi-person graph scenario where the phone namespace is not unique.](../images/graph-examples/non_unique_phone.png)
+![A multi-person graph scenario where the phone namespace is not unique.](../images/graph-examples/non_unique_phone.png "A simulated example of a multi-person graph. This example displays a shared device scenario, where there are two CRMIDs and the older established link gets removed."){zoomable="yes"}
 
 **Graph simulation events input**
 
@@ -325,13 +321,13 @@ CRMID: Summer, Phone_SHA256: 123-4567
 
 In this example, `{Phone_SHA256}` is also marked as a unique namespace. Therefore, a graph cannot have more than one identity with the `{Phone_SHA256}` namespace. In this scenario, `{Phone_SHA256: 765-4321}` is unlinked from `{CRMID: Summer}` and `{Email_LC_SHA256: ddeeff}` because it is the older link,
 
-![A multi-person graph scenario where Phone_SHA256 is unique.](../images/graph-examples/unique_phone.png)
+![A multi-person graph scenario where Phone_SHA256 is unique.](../images/graph-examples/unique_phone.png "A simulated example of a multi-person graph. This example displays a shared device scenario, where there are two CRMIDs and the older established link gets removed."){zoomable="yes"}
 
 >[!TAB Multi-person graph: Non-unique email]
 
 The following is a multi-person graph scenario where email is shared by two people.
 
-![A multi-person graph scenario where email is not unique](../images/graph-examples/non_unique_email.png)
+![A multi-person graph scenario where email is not unique](../images/graph-examples/non_unique_email.png "A simulated example of a multi-person graph. This example displays a shared device scenario, where there are two CRMIDs and the older established link gets removed."){zoomable="yes"}
 
 **Graph simulation events input**
 
@@ -407,13 +403,13 @@ Within the context of this configuration, the primary identity will be defined l
 
 The following is a single-person graph scenario with a single CRMID and multiple loginIDs.
 
-![A graph scenario that includes a single CRMID and multiple loginIDs.](../images/graph-examples/single_crmid.png)
+![A graph scenario that includes a single CRMID and multiple loginIDs.](../images/graph-examples/single_crmid.png "A simulated example of a multi-person graph. This example displays a shared device scenario, where there are two CRMIDs and the older established link gets removed."){zoomable="yes"}
 
 >[!TAB Multi-person graph scenario: shared device]
 
 The following is a multi-person graph scenario where a device is shared by two people. In this scenario, `{ECID:111}` is linked with both `{loginID:ID_A}` and `{loginID:ID_C}` and the older established link of `{ECID:111, loginID:ID_A}` gets removed.
 
-![A multi-person shared device scenario.](../images/graph-examples/single_crmid_shared_device.png)
+![A multi-person shared device scenario.](../images/graph-examples/single_crmid_shared_device.png "A simulated example of a multi-person graph. This example displays a shared device scenario, where there are two CRMIDs and the older established link gets removed."){zoomable="yes"}
 
 **Graph simulation events input**
 
@@ -431,7 +427,7 @@ loginID: ID_C, ECID: 111
 
 The following is a multi-person graph scenario that involves bad data. In this scenario, `{loginID:ID_D}` is wrongly linked to two disparate users and the link with the older timestamp is deleted, in favor of the more recently established link.
 
-![A multi-person graph scenario with bad data.](../images/graph-examples/single_crmid_bad_data.png)
+![A multi-person graph scenario with bad data.](../images/graph-examples/single_crmid_bad_data.png "A simulated example of a multi-person graph. This example displays a shared device scenario, where there are two CRMIDs and the older established link gets removed."){zoomable="yes"}
 
 **Graph simulation events input**
 
@@ -449,7 +445,7 @@ CRMID: Tom, loginID: ID_D
 
 The following graph simulates a "dangling" loginID scenario. In this example, two different loginIDs are bound to the same ECID. However, `{loginID:ID_C}` is not linked to the CRMID. Therefore, there is no way for Identity Service to detect that these two loginIDs represent two different entities. 
 
-![A dangling loginID scenario.](../images/graph-examples/dangling_example.png)
+![A dangling loginID scenario.](../images/graph-examples/dangling_example.png "A dangling loginID scenario."){zoomable="yes"}
 
 **Graph simulation events input**
 
@@ -527,13 +523,13 @@ Within the context of this configuration, the primary identity will be defined l
 
 The following is an example of two single-person graphs that each have one CRMID and multiple loginIDs.
 
-![A single-person graph that involves one CRMID and multiple loginIDs](../images/graph-examples/complex_single_person.png)
+![A single-person graph that involves one CRMID and multiple loginIDs.](../images/graph-examples/complex_single_person.png "A single-person graph that involves one CRMID and multiple loginIDs."){zoomable="yes"}
 
 >[!TAB Multi-person graph: shared device 1]
 
 The following is a multi-person shared device scenario where `{ECID:111}` is linked to both `{loginID:ID_A}` and `{loginID:ID_C}`. In this case, the older established links get removed in favor of the more recently established links.
 
-![A multi-person shared device graph scenario.](../images/graph-examples/complex_shared_device_one.png)
+![A multi-person shared device graph scenario.](../images/graph-examples/complex_shared_device_one.png "A multi-person shared device graph scenario."){zoomable="yes"}
 
 **Graph simulation events input**
 
@@ -553,7 +549,7 @@ loginID: ID_C, ECID: 111
 
 In this scenario, instead of sending only the loginID, both loginID and CRMID are sent as experience events.
 
-![A multi-person shared device graph scenario where both loginID and CRMID are sent as experience events.](../images/graph-examples/complex_shared_device_two.png)
+![A multi-person shared device graph scenario where both loginID and CRMID are sent as experience events.](../images/graph-examples/complex_shared_device_two.png "A multi-person shared device graph scenario where both loginID and CRMID are sent as experience events."){zoomable="yes"}
 
 **Graph simulation events input**
 
@@ -574,7 +570,7 @@ loginID: ID_A, ECID: 111
 
 In this scenario, `{loginID:ID_C}` is linked to both `{CRMID:Tom}` and `{CRMID:Summer}`, and is therefore deemed to be bad data because ideal graph scenarios should not linked the same loginIDs to two disparate users. In this case, the older established links are removed in favor of the more recently established links.
 
-![A multi-person graph scenario that involves bad login data.](../images/graph-examples/complex_bad_data.png)
+![A multi-person graph scenario that involves bad login data.](../images/graph-examples/complex_bad_data.png "A multi-person graph scenario that involves bad login data."){zoomable="yes"}
 
 **Graph simulation events input**
 
@@ -594,7 +590,7 @@ CRMID: Tom, loginID: ID_C
 
 In this scenario, a non-unique email is being linked with two different CRMIDs, therefore, the older established links are removed in favor of the more recently established links.
 
-![A multi-person graph scenario that involves a non-unique email.](../images/graph-examples/complex_non_unique_email.png)
+![A multi-person graph scenario that involves a non-unique email.](../images/graph-examples/complex_non_unique_email.png "A multi-person graph scenario that involves a non-unique email."){zoomable="yes"}
 
 **Graph simulation events input**
 
@@ -614,7 +610,7 @@ CRMID: Summer, Email_LC_SHA256: aabbcc
 
 In this scenario, a non-unique phone number is being linked with two different CRMIDs, the older established links are removed in favor of the more recently established links.
 
-![A multi-person graph scenario that involves a non-unique phone number.](../images/graph-examples/complex_non_unique_phone.png)
+![A multi-person graph scenario that involves a non-unique phone number.](../images/graph-examples/complex_non_unique_phone.png "A multi-person graph scenario that involves a non-unique phone number."){zoomable="yes"}
 
 **Graph simulation events input**
 
@@ -691,13 +687,13 @@ Within the context of this configuration, the primary identity will be defined l
 
 The following is an example of an ideal single-person graph.
 
-![An example of an ideal single-person graph with one email namespace.](../images/graph-examples/single_person_email.png)
+![An example of an ideal single-person graph with one email namespace.](../images/graph-examples/single_person_email.png "An example of an ideal single-person graph with one email namespace."){zoomable="yes"}
 
 >[!TAB Multi-person graphs]
 
 The following is an example of a multi-person graph where two registered users are browsing using the same device.
 
-![A multi-person graph scenario where two registered users are browsing using the same device.](../images/graph-examples/two_registered_users.png)
+![A multi-person graph scenario where two registered users are browsing using the same device.](../images/graph-examples/two_registered_users.png "A multi-person graph scenario where two registered users are browsing using the same device."){zoomable="yes"}
 
 **Graph simulation events input**
 
@@ -710,7 +706,7 @@ CRMID: Summer, ECID: 111
 
 In this scenario, a registered user and a guest user share the same device.
 
-![A multi-person graph example where a registered user and a guest are sharing the same device.](../images/graph-examples/one_guest.png)
+![A multi-person graph example where a registered user and a guest are sharing the same device.](../images/graph-examples/one_guest.png "A multi-person graph example where a registered user and a guest are sharing the same device."){zoomable="yes"}
 
 **Graph simulation events input**
 
@@ -722,7 +718,7 @@ Email: summer@acme.com, ECID: 111
 
 In this scenario, a registered user and a guest user share a device. However, an implementation error occurs as the CRMID does not contain a corresponding email namespace. In this scenario, Tom is the registered user, and Summer is the guest user. Unlike the previous scenario, the two entities are merged since there is no common email namespaces across the two person entities.
 
-![A multi-person graph example where a registered user and a guest share the same device, however, an implementation error occurs as the CRMID does not contain an email namespace.](../images/graph-examples/no_email_namespace_in_crmid.png)
+![A multi-person graph example where a registered user and a guest share the same device, however, an implementation error occurs as the CRMID does not contain an email namespace.](../images/graph-examples/no_email_namespace_in_crmid.png "A multi-person graph example where a registered user and a guest share the same device, however, an implementation error occurs as the CRMID does not contain an email namespace."){zoomable="yes"}
 
 **Graph simulation events input**
 
@@ -733,7 +729,7 @@ Email: summer@acme.com, ECID: 111
 
 In this scenario, two guest users share the same device.
 
-![A multi-person graph scenario where two guest users are sharing the same device.](../images/graph-examples/two_guests.png)
+![A multi-person graph scenario where two guest users are sharing the same device.](../images/graph-examples/two_guests.png){zoomable="yes"}
 
 **Graph simulation events input**
 
@@ -744,7 +740,7 @@ Email: summer@acme.com, ECID: 111
 
 In this scenario, a guest user checks out an item and then registers using the same device.
 
-![A graph scenario where a guest user purchases and item, and then registers for an account.](../images/graph-examples/guest_purchase.png)
+![A graph scenario where a guest user purchases and item, and then registers for an account.](../images/graph-examples/guest_purchase.png "A graph scenario where a guest user purchases and item, and then registers for an account."){zoomable="yes"}
 
 **Graph simulation events input**
 
@@ -758,10 +754,10 @@ CRMID: Tom, ECID: 111
 
 ## Next steps
 
-For more information on identity graph linking rules, read the following documentation:
+For more information on [!DNL Identity Graph Linking Rules], read the following documentation:
 
-* [Identity graph linking rules overview](./overview.md)
-* [Identity optimization algorithm](./identity-optimization-algorithm.md)
+* [[!DNL Identity Graph Linking Rules] overview](./overview.md)
+* [Identity Optimization Algorithm](./identity-optimization-algorithm.md)
 * [Implementation guide](./implementation-guide.md)
 * [Troubleshooting and FAQ](./troubleshooting.md)
 * [Namespace priority](./namespace-priority.md)

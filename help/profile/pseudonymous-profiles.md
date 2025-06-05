@@ -20,7 +20,7 @@ In Adobe Experience Platform, you can configure data expiration times for Pseudo
 >[!CONTEXTUALHELP]
 >id="platform_profile_pseudonymousprofile_dataexpiration"
 >title="Pseudonymous profile data expiration"
->abstract="The Pseudonymous profile data expiration represents the number of days a Pseudonymous profile will remain in Adobe Experience Platform before being removed."
+>abstract="The Pseudonymous profile data expiration represents the number of days a Pseudonymous profile will remain in Adobe Experience Platform before being removed. This value must be set to at least 1. Please note that it may take up to three days for the Pseudonymous profile to be removed."
 
 A profile is considered for Pseudonymous data expiration if it meets the following conditions: 
 
@@ -31,17 +31,37 @@ A profile is considered for Pseudonymous data expiration if it meets the followi
 
 ## Access {#access}
 
-Pseudonymous Profile data expiration cannot be configured through the Experience Platform UI or APIs. Instead, you must contact support in order to enable this feature. When contacting support, please include the following information: 
+>[!AVAILABILITY]
+>
+>To access this feature, you must have the following permissions:
+>
+>- Manage Profile Settings
+>- View Profiles
+>- View Identity Namespaces
+>
+>The **Manage Profile Settings** permission lets you set the data expirations, the **View Profiles** permission lets you view the data expirations, and the **View Identity Namespaces** permission lets you view the available identity namespaces that you can use.
+>
+>More information about permissions within Experience Platform can be found in the [access control overview](../access-control/home.md#permissions).
 
-- The identity namespaces to be considered for Pseudonymous profile deletes. 
-  - For example: `ECID` only, `AAID` only, or a combination of `ECID` and `AAID`.
-- The amount of time to wait before deleting a pseudonymous profile. The default recommendation for customers is 14 days. However, this value may differ based on your use case.
+To add Pseudonymous profile data expiration to your organization, go to the Profile dashboard and select **[!UICONTROL Settings]**.
+
+![The Settings button on the Profile dashboard is highlighted.](./images/pseudonymous-profiles/profile-settings.png)
+
+The [!UICONTROL Profile settings] popover appears. On this popover, you can set the number of days for the Pseudonymous profile data expiration as well as the identity namespace used for the data expiration. 
+
+For production sandboxes, the default Pseudonymous profile data expiration is 14 days, with the minimum being 1 day and the maximum being 365 days. For development sandboxes, the default Pseudonymous profile data expiration is 3 days, with the minimum being 1 day and the maximum being 365 days.
+
+Select **[!UICONTROL Apply]** to save your data expiration settings.
+
+![The popover for adding Pseudonymous profile data expiration to your organization's profiles. The Apply button is highlighted.](./images/pseudonymous-profiles/profile-settings-data-expiry.png){width="800" zoomable="yes"}
 
 ## Frequently asked questions {#faq}
 
 The following section lists frequently asked questions regarding Pseudonymous profiles data expiration:
 
 ### How does Pseudonymous Profile data expiration differ from  Experience Event data expiration?
+
++++ Answer
 
 Pseudonymous Profile data expiration and Experience Event data expiration are complementary features.
 
@@ -63,7 +83,11 @@ Pseudonymous Profile data expiration removes **both** event and profile records.
 
 Experience Event data expiration **only** removes events and does **not** remove profile class data. The profile class data is only removed when all the data is removed across **all** datasets and there are **no** profile class records remaining for the profile.
 
++++
+
 ### How can Pseudonymous Profile data expiration be used in conjunction with Experience Event data expiration?
+
++++ Answer
 
 Pseudonymous Profile data expiration and Experience Event data expiration can be used to complement each other.
 
@@ -71,14 +95,22 @@ You should **always** set up Experience Event data expiration in your datasets, 
 
 For a typical use case, you can set your Experience Event data expiration based on the values of your known user data and you can set your Pseudonymous Profile data expiration to a much shorter duration to limit the impact of Pseudonymous profiles on your Experience Platform license compliance.
 
-### What users should be using Pseudonymous profiles data expiration?
++++
+
+### What kinds of use cases should I be using Pseudonymous profiles data expiration for?
+
++++ Answer
 
 - If you are using Web SDK to directly send data to Experience Platform.
 - If you have a website that serves unauthenticated customers en masse.
 - If you have excessive profile counts in your datasets and have confirmed that this excessive profile count is because of anonymous cookie-based identity namespace.
   - To determine this, you should use the identity namespace overlap report. More information about this report can be found in the [identity overlap report section](./api/preview-sample-status.md#identity-overlap-report) of the preview sample status API guide.
+  
++++
 
 ### What are some caveats you should be aware of before using Pseudonymous profiles data expiration?
+
++++ Answer
 
 - Pseudonymous profile data expiration runs at a **sandbox** level. You can choose to have different configurations for production and development sandboxes.
 - Once you have activated this feature, the deletion of profiles is **permanent**. There is **no** way to roll back or restore the deleted profiles.
@@ -87,7 +119,18 @@ For a typical use case, you can set your Experience Event data expiration based 
 - This cleanup will **only** occur in Profile. Identity Service may continue to show the deleted identities within the graph after the cleanup in cases where the profile has two or more associated pseudonymous identities (such as `AAID` and `ECID`). This discrepancy will be addressed in the near future.
 - Pseudonymous profile data expiration does **not** run immediately, and may take up to three days to process.
 
++++
+
 ### How does Pseudonymous profiles data expiration interact with guardrails for Identity Service data?
+
++++ Answer
 
 - The Identity Service ["first-in, first-out" deletion system](../identity-service/guardrails.md) could delete ECIDs from the identity graph, which are stored in Identity Service.
 - If this deletion behavior results in an ECID-only profile being stored in the Real-Time Customer Profile (Profile store), then Pseudonymous profile data expiration will delete this profile from the Profile store.
+
++++
+
+## Next steps
+
+After reading this guide, you know how to view and create Pseudonymous profile data expirations. For more information on data management on Experience Platform as a whole, please read the [Data management license entitlement best practices guide](../landing/license-usage-and-guardrails/data-management-best-practices.md).
+
