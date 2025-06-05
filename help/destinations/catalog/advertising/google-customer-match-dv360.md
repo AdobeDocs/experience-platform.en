@@ -95,15 +95,16 @@ Next, make sure that your [!DNL Google] account is configured for a [!DNL Standa
 
 ### Account linking requirements {#linking}
 
-Before configuring this destination connector, make sure your Google account ID is linked to Adobe's Google account ID.
+Before configuring this destination connector, you must link your Google account ID to Adobe's Google account ID: `4641108541`. 
 
-If your Google account is not linked to the Adobe account ID, the data export will fail.
+Data exports will fail if your Google account is not properly linked to Adobe's account ID.
 
-If your organization uses a [manager [!DNL Google] account](https://support.google.com/google-ads/answer/6139186) that manages multiple client [!DNL Google] accounts, you must ensure proper account linking for data exports from Experience Platform.
+**For organizations with manager accounts:**
 
-If you intend to export data from Experience Platform to a specific client Google account, you must link that client account with the Adobe's Google account ID.
+If your organization uses a [manager [!DNL Google] account](https://support.google.com/google-ads/answer/6139186) to manage multiple client accounts, follow these specific linking requirements:
 
-Linking only your manager Google account will cause the data export to fail.
+* **To export to a specific client account:** Link that individual client account (not the manager account) to Adobe's Google account ID: `4641108541`
+* **Manager account linking alone is not sufficient** and will cause data export failures
 
 ### Allow list {#allowlist}
 
