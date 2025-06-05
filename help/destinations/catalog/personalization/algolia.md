@@ -46,7 +46,7 @@ Then, use the corresponding [[!DNL Algolia User Profiles]](/help/sources/connect
 
 | Target Identity | Description | Considerations |
 |---------|---------|----------|
-| userId | [!DNL Algolia] user token | Select this target identity to map it to the [!DNL Adobe Experience Platform] AlgoliaUserToken namespace identity. |
+| userId | [!DNL Algolia] user token | Select this target identity to map the `AlgoliaUserToken` source identity to the `userToken` in the [!DNL Algolia] platform. |
 
 {style="table-layout:auto"}
 
