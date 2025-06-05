@@ -93,13 +93,17 @@ Before setting up a [!DNL Google Customer Match] destination in Experience Platf
 
 Next, make sure that your [!DNL Google] account is configured for a [!DNL Standard] or higher permission level. See the [Google Ads documentation](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) for details.
 
-### Account linking for manager and client Google accounts {#linking}
+### Account linking requirements {#linking}
 
-If your organization uses a manager [!DNL Google] account that manages multiple client [!DNL Google] accounts, you must ensure proper account linking for data exports from Experience Platform.
+Before configuring this destination connector, make sure your Google account ID is linked to Adobe's Google account ID.
 
-If you intend to export data from Experience Platform to a specific client Google account, you must link that client account with your Adobe account.
+If your Google account is not linked to the Adobe account ID, the data export will fail.
 
-Linking only the manager Google account will cause issues during data export.
+If your organization uses a [manager [!DNL Google] account](https://support.google.com/google-ads/answer/6139186) that manages multiple client [!DNL Google] accounts, you must ensure proper account linking for data exports from Experience Platform.
+
+If you intend to export data from Experience Platform to a specific client Google account, you must link that client account with the Adobe's Google account ID.
+
+Linking only your manager Google account will cause the data export to fail.
 
 ### Allow list {#allowlist}
 
