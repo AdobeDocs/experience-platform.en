@@ -44,7 +44,6 @@ To open Audience Portal, select the **[!UICONTROL Browse]** tab within the Segme
 By default, Audience Portal displays a list of all the audiences in your organization and sandbox including the profile count, origin, created date, last modified date, tags, and breakdown. 
 
 ![The browse screen is displayed. A list of all the audiences belonging to the organization is shown.](../images/ui/audience-portal/audience-browse.png)
-<!-- Check in image above if the 'Origin' column is visible, and you want to show RTCDP Collaboration as an Origin -->
 
 ### Quick actions {#quick-actions}
 
@@ -195,7 +194,6 @@ You can also filter your audiences, based on a variety of settings.
 To filter the available audiences, select the ![filter icon](/help/images/icons/filter.png). 
 
 ![The browse audiences page is displayed, with the filter icon highlighted.](../images/ui/audience-portal/browse-select-filter.png)
-<!-- Check in image above if the dropdown list of Origins is shown, it needs updating to include the new origin -->
 
 The list of available filters is displayed.
 
@@ -210,7 +208,6 @@ The list of available filters is displayed.
 | [!UICONTROL Modified date] | Lets you filter based on the last modified date of the audience. You can choose a date range to filter when the audience was last modified. |
 
 ![The available filters are displayed and highlighted on the browse audiences page.](../images/ui/audience-portal/filter-audiences.png)
-<!-- Check in image above if this image shows the list of filter values and Origin is visible, it should include RTCDP Collaboration -->
 
 ### Bulk actions {#bulk-actions}
 
