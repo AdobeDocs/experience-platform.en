@@ -44,7 +44,6 @@ To open Audience Portal, select the **[!UICONTROL Browse]** tab within the Segme
 By default, Audience Portal displays a list of all the audiences in your organization and sandbox including the profile count, origin, created date, last modified date, tags, and breakdown. 
 
 ![The browse screen is displayed. A list of all the audiences belonging to the organization is shown.](../images/ui/audience-portal/audience-browse.png)
-<!-- ... -->
 
 ### Quick actions {#quick-actions}
 
