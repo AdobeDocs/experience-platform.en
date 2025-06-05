@@ -43,7 +43,7 @@ An identity represents a real-world object. There are three objects that are rep
 
 Person namespaces are relatively immutable compared to hardware devices (such as IDFA, GAID), which are relatively immutable compared to web browsers. Basically, you (person) will always be a single entity, who can have multiple hardware devices (phone, laptop, tablet, etc.), and use multiple browsers (Google Chrome, Safari, FireFox, etc.)
 
-Another way to approach this topic is through cardinality. For a given person entity, how many identities will be created? In most cases, a person will have one CRMID, a handful of hardware device identifiers (IDFA/GAID resets should not happen often), and even more cookies (an individual could conceivably browse on multiple devices, use incognito mode, or reset cookies at any given time). Generally, **lower cardinality indicates a namespace with a higher value**.
+Another way to approach this topic is through cardinality. For a given person entity, how many identities will be created? In most cases, a person will have one CRMID, a handful of hardware device identifiers (IDFA/GAID resets should not happen often), and even more cookies (an individual could conceivably browse on multiple devices, use incognito mode, or reset cookies at any given time). Generally, **lower cardinality indicates a namespace with a higher priority**.
 
 ## Validate your namespace priority settings
 
