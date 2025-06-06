@@ -40,13 +40,13 @@ WHERE
 
 ## Model evaluation {#model-evaluation}
 
-* **Evaluation metrics and procedures**: The model is evaluated using accuracy. For example, out of all [!DNL NL2SQL] requests, how many of the requests yield the correct SQL results. The evaluation process is a combination of rule-based matching (SQL standardization and then direct SQL string matching), LLM-based SQL solver, and human evaluation.
+* **Evaluation metrics and procedures**: The model is evaluated by looking at the [!DNL NL2SQL] requests and assessing how many of the requests yield the correct SQL results. The evaluation process is a combination of rule-based matching (SQL standardization and then direct SQL string matching), LLM-based SQL solver, and human evaluation.
 * **Evaluation data and preprocessing**: We use open set(s) for regression test and we also have weekly annotation projects to monitor the performance of the model through sampled real customer traffic.
 
 ## Model deployment {#model-deployment}
 
 * **Model monitoring**: The base model is hosted by [!DNL Azure].
-* **Model update**: The model is updated regularly, on a weekly basis, through question bank expansion. The model is also updated through new prompting strategies and instructions when needed.
+* **Model update**: The Adobe Experience Platform AI Assistant Operational Insights Natural Language to SQL Model is updated regularly (weekly) through question bank expansion. The model is also updated through new prompting strategies and instructions when needed.
 
 ## Fairness and bias {#fairness-and-bias}
 
