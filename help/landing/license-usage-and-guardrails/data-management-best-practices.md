@@ -169,3 +169,49 @@ The following is a list of some recommended best practices that you can follow t
 * Configure [Experience Event expirations](../../catalog/datasets/user-guide.md#data-retention-policy) and [Pseudonymous Profile data expirations](../../profile/pseudonymous-profiles.md) for high-frequency data like web data.
 * Configure [Time-to-Live (TTL) retention policies for Experience Event datasets](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) in the data lake to automatically remove outdated records and optimize storage usage in line with your license entitlements.
 * Periodically check the [Profile Composition Reports](#profile-store-composition-reports) to understand your Profile store composition. This allows you to understand the data sources contributing most to your license usage consumption.
+
+## Use case: License Usage Compliance
+
+### Why consider this use case
+
+By ensuring your compliance with **license usage provisions** for both data lake and Profile storage, you can confidently prevent overages, optimize costs, and align your data retention policies with your business requirements.
+
+### Prerequisites and planning
+
+Consider the following prerequisites in your planning process:
+
+* **Access and permissions**:
+  * Ensure that you have the **Manage Datasets** permission to use Experience Event TTL.
+  * Ensure that you have the **Manage Profile Settings** to use Pseudonymous Profile TTL.
+* **Understanding of data retention policy**:
+  * Organizational policies regarding data retention and compliance
+  * Business needs for data analytics and segmentation lookback windows
+
+### UI functionality, Experience Platform components, and Experience Cloud products that you will use
+
+To successfully implement this use case, you must use multiple areas of Adobe Experience Platform. Ensure you have the necessary attribute-based access control permissions for all these areas, or ask your system administrator to grant you the necessary permissions.
+
+* License usage dashboard
+* Dataset management
+* Audiences (Real-Time Customer Profile)
+* Monitoring and alerts
+
+### How to achieve the use case: Step-by-step instructions
+
+Read through the sections below, which include links to further documentation, to complete each of the steps in the high-level overview above.
+
+**Check your current license usage**
+
+First, navigate to the **license usage dashboard** and review your entitlement usage at the sandbox level.
+
+![]
+
+**Analyze dataset-level storage usage**
+
+Use the **Dataset browse view** to review your dataset usage metrics for both data lake and Real-Time Customer Profile. You can sort datasets by storage size to identify the largest consumers of storage.
+
+![]
+
+**Evaluate and configure retention rule**
+
+Next, determine if your datasets have appropriate retention policies based on license limits and business requirements for Analytics and Segmentation.
