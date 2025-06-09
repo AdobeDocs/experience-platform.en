@@ -131,6 +131,12 @@ To learn about ingesting email addresses in Experience Platform, see the [batch 
 
 If you select to hash the email addresses yourself, make sure to comply with Google's requirements, outlined in the links above.
 
+### Address field hashing requirements {#address-field-hashing}
+
+When mapping address-related fields to [!DNL Google Customer Match], Experience Platform **automatically hashes** the `address_info_first_name` and `address_info_last_name` values before sending them to Google. This automatic hashing is required to comply with Google's security and privacy requirements.
+
+Do **not** provide pre-hashed values for `address_info_first_name` or `address_info_last_name`. If you provide already hashed values, the matching process will fail.
+
 ### Using custom namespaces {#custom-namespaces}
 
 Before you can use the `User_ID` namespace to send data to Google, make sure you synchronize your own identifiers using [!DNL gTag]. Refer to the [Google official documentation](https://support.google.com/google-ads/answer/9199250) for detailed information.
