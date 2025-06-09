@@ -1,18 +1,14 @@
 ---
-title: Delete Records
+title: Record Delete Requests (UI Workflow)
 description: Learn how to delete records in the Adobe Experience Platform UI.
-badgeBeta: label="Beta" type="Informative"
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 ---
-# Delete records {#record-delete}
+# Record delete requests (UI Workflow) {#record-delete}
  
 Use the [[!UICONTROL Data Lifecycle] workspace](./overview.md) to delete records in Adobe Experience Platform based on their primary identities. These records can be tied to individual consumers or any other entity that is included in the identity graph.
  
 >[!IMPORTANT] 
-> 
->The Record Delete feature is currently in Beta and available only in a **limited release**. It is not available to all customers. Record delete requests are only available for organizations in the limited release.
-> 
-> 
+>
 >Record deletions are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) instead.
 
 ## Prerequisites {#prerequisites}
