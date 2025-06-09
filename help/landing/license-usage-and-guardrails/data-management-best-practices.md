@@ -191,10 +191,10 @@ Consider the following prerequisites in your planning process:
 
 To successfully implement this use case, you must use multiple areas of Adobe Experience Platform. Ensure you have the necessary attribute-based access control permissions for all these areas, or ask your system administrator to grant you the necessary permissions.
 
-* License usage dashboard
-* Dataset management
-* Audiences (Real-Time Customer Profile)
-* Monitoring and alerts
+* License usage dashboard - View your current entitlement usage at the sandbox level.
+* Dataset management - Monitor and manage dataset-level retention policies.
+* Audiences (Real-Time Customer Profile) - Ensure segmentation rules look back window aligns with data retention windows.
+* Monitoring and alerts - Track updates and receive insights on dataset retention operations.
 
 ### How to achieve the use case: Step-by-step instructions
 
@@ -204,14 +204,35 @@ Read through the sections below, which include links to further documentation, t
 
 First, navigate to the **license usage dashboard** and review your entitlement usage at the sandbox level.
 
-![]
+![The license usage dashboard UI.]
 
 **Analyze dataset-level storage usage**
 
 Use the **Dataset browse view** to review your dataset usage metrics for both data lake and Real-Time Customer Profile. You can sort datasets by storage size to identify the largest consumers of storage.
 
+![The dataset browse view UI.]
+
+>[!BEGINTABS]
+
+>[!TAB Data lake storage]
+
 ![]
+
+>[!TAB Profile storage]
+
+![]
+
+
+>[!ENDTABS]
 
 **Evaluate and configure retention rule**
 
-Next, determine if your datasets have appropriate retention policies based on license limits and business requirements for Analytics and Segmentation.
+Next, determine if your datasets have the appropriate retention policies based on license limits and business requirements for Analytics and Segmentation. During this step, you could also analyze the retention impact using the impact forecaster. If a dataset lacks a retention rule, select [!UICONTROL Set Data Retention] to configure TTL for both data lake and Profile.
+
+**Validate retention changes**
+
+Once you have applied your retention policies, you can validate your retention changes using the following tools:
+
+* Use **dataset usage metrics** in the dataset browse view.
+* Use **retention impact** through the [!UICONTROL Monitoring dasbhoard].
+* Use the **license usage dashboard**.
