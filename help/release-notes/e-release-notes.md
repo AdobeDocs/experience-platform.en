@@ -5,7 +5,11 @@ hide: true
 hidefromtoc: true
 ---
 
-# Adobe Experience Platform release notes
+# Adobe Experience Platform release notes (Preview)
+
+>[!IMPORTANT]
+>
+>This document is intended as a **preview** of the release notes for the current month. Release items are subject to change, and may be removed from the final copy of the release notes.
 
 >[!TIP]
 >
