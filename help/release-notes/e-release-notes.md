@@ -25,11 +25,65 @@ hidefromtoc: true
 
 New features and updates to existing features in Adobe Experience Platform:
 
+- [Access control](#access-control)
+- [Advanced data lifecycle management](#advanced-data-lifecycle-management)
+- [Dashboards](#dashboards)
+- [Data Governance](#data-governance)
 - [Destinations](#destinations)
-- [Federated Audience Composition]{#fac}
+- [Federated Audience Composition](#fac)
+- [Privacy Service](#privacy-service)
 - [Query Service](#query-service)
 - [Sandboxes](#sandboxes)
 - [Sources](#sources)
+
+## Access control {#access-control}
+
+Experience Platform leverages [Adobe Admin Console](https://adminconsole.adobe.com) product profiles to link users with permissions and sandboxes. Permissions control access to a variety of Experience Platform capabilities, including data modeling, profile management, and sandbox administration.
+
+**Key features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Export Dashboard Data permission | The **[!UICONTROL Download CSV]** and **[!UICONTROL Send as email]** options in dashboards now require the **[!UICONTROL Export Dashboard Data]** permission. This permission ensures that only authorized users can export tabulated insight data, supporting tighter governance and data access control policies. |
+
+For more information, please see the [access control overview](../../access-control/home.md). 
+
+## Advanced data lifecycle management {#advanced-data-lifecycle-management}
+
+Experience Platform provides a suite of data hygiene capabilities that allow you to manage your stored data through programmatic deletions of consumer records and datasets. Using either the Data Lifecycle workspace in the UI or through calls to the Data Hygiene API, you can effectively manage your data stores. Use these capabilities to ensure that information is used as expected, is updated when incorrect data needs fixing, and is deleted when organizational policies deem it necessary.
+
+**New documentation**
+
+| New documentation | Description |
+| --- | --- |
+| Record Delete General Availability | You can now delete individual records based on identity fields using the UI or API. This feature helps reduce storage, enforce governance, and improve data hygiene by allowing deletions from a single dataset or across all datasets. Volume limits and entitlement requirements apply. |
+
+For more information, read the [advanced data lifecycle management overview](../../hygiene/home.md).
+
+## Dashboards {#dashboards}
+
+Experience Platform provides multiple dashboards through which you can view important insights about your organization's data, as captured during daily snapshots.
+
+**New or updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Send as Email Export Option | You can now export up to 10,000 records from Query Pro mode dashboards by selecting **[!UICONTROL Send as email]** from the **[!UICONTROL View more]** menu. This option securely sends a download link to your Adobe-associated email for larger exports. |
+
+For more information on dashboards, including how to grant access permissions and create custom widgets, begin by reading the [dashboards overview](../../dashboards/home.md).
+
+## Data Governance {#data-governance}
+
+Adobe Experience Platform Data Governance is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data usage. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
+
+**New features**
+
+| Feature | Description |
+| --- | --- |
+| Azure CMK Alerts and IP Allowlist Configuration | You can now allowlist Adobe's static IP address in Azure Key Vault to ensure continued access when network restrictions are enabled. This helps prevent disruptions to Platform services due to restricted key access. |
+| CMK Configuration Alerts and Resolutions  | Experience Platform now triggers alerts when Adobe services lose access to your Azure Key Vault (for example, due to removed IP allowlist entries or disabled keys). A new guide helps you understand each alert and take corrective action. |
+
+For more information, read the [data governance overview](../../data-governance/home.md).
 
 ## Destinations {#destinations}
 
@@ -65,6 +119,18 @@ Federated Audience Composition allows enterprises to compose data for better app
 | HIPAA readiness | Federated Audience Composition is now HIPAA compliant. For more information on Federated Audience Composition's privacy and security measures, read the [privacy and security in Federated Audience Composition overview](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/privacy-security). For more information on HIPAA compliance for Experience Platform products in general, read the [HIPAA and Adobe Products and Services overview](https://www.adobe.com/trust/compliance/hipaa-ready.html). |
 
 For more information, read the [Federated Audience Composition documentation](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+
+## [!DNL Privacy Service] {#privacy}
+
+Several legal and organizational regulations give users the right to access or delete their personal data from your data stores upon request. Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface to help you manage these data requests from your customers. With [!DNL Privacy Service], you can submit requests to access and delete private or personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
+
+**New features**
+
+|Feature | Description|
+|--- | ---|
+| Support for Tennessee and Minnesota Privacy Laws | Privacy Service now supports the Tennessee Information Protection Act (`tipa_tn_usa`) and the Minnesota Consumer Data Privacy Act (`mcdpa_mn_usa`). You can process access and delete requests in compliance with these new state-level regulations. See the [Regulations overview](https://experienceleague.adobe.com/en/docs/experience-platform/privacy/regulations/overview) for more details. |
+
+See the [Privacy Service overview](../../privacy-service/home.md) for more information on the service.
 
 ## Query Service {#query-service}
 
