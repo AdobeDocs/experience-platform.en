@@ -247,6 +247,10 @@ The **[!UICONTROL Import summary]** dialog shows a breakdown of the imports with
 
 When your import is complete, a notification is received in the Experience Platform UI. You can access these notifications from the alerts icon. You can navigate to troubleshooting from here if a job is unsuccessful.
 
+## Move object configuration updates across sandboxes
+
+You can use sandbox tooling to move object configurations across different sandboxes. In the past, configurations to your objects (such as schemas, field groups, and datatypes) had to be manually recreated or reimported in order to be brought over to other sandboxes. With this capability, you can use sandbox tooling to seemingly move your configuration updates across different sandboxes.
+
 ## Video tutorial
 
 The following video is intended to support your understanding of sandbox tooling, and outlines how to create a new package, publish a package, and import a package.
