@@ -10,8 +10,8 @@ Customer graph scenarios can be grouped into three different categories.
 
 * **Basic**: [Basic implementations](#basic-implementations) include graphs that most often include simple implementations. These implementations tend to revolve around a single cross-device namespace (for example, CRMID). While basic implementations are fairly straightforward, graph collapse can still occur, often due to **shared device** scenarios.
 * **Intermediate**: [Intermediate implementations](#intermediate-implementations) include several variables such as **multiple cross-device namespaces**, **non-unique identities**, and **multiple unique namespaces**.
-* **Advanced**: [Advanced implementations](#advanced-implementations) involve complex and multi-layered graph scenarios. Advanced implementations will include usage of **namespace priority** in order to identify the correct links that must be removed in order to prevent graph collapse.
-
+* **Advanced**: [Advanced implementations](#advanced-implementations) involve complex and multi-layered graph scenarios. For advanced implementations, it is essential to establish the correct namespace priority order to ensure that the appropriate links are removed, thereby preventing graph collapse.
+ 
 ## Get started
 
 Before diving in to the following document, ensure that you familiarize yourself with several important concepts of Identity Service and [!DNL Identity Graph Linking Rules].
@@ -116,14 +116,6 @@ In this graph, John and Jane are both represented by their own respective CRMIDs
 
 >[!ENDTABS]
 
-<!-- ### Understanding anonymous event association and how authenticated events are associated
-
-Authenticated events are tied to the end-user and unauthenticated events are tied to the device. There will never be a scenario where Jane's browsing events get associated with John, and vice versa.
-
-* If John logs in and browses your website for shoes (authenticated event), then the primary identity of this authenticated event gets associated with John.
-* If Jane logs in and browses your website for jackets (authenticated event), then the primary identity of this authenticated event gets associated with Jane.
-* If Jane logs out, and then John uses the same device to browse your website for shoes **without logging in** (unauthenticated event), then the primary identity of this unauthenticated event gets associated with the last authenticated user, which in this case is Jane. -->
-
 ## Intermediate implementations {#intermediate-implementations}
 
 Read this section for intermediate implementations of [!DNL Identity Graph Linking Rules].
@@ -134,7 +126,7 @@ Read this section for intermediate implementations of [!DNL Identity Graph Linki
 >
 >* A **non-unique identity** is an identity associated with a non-unique namespace.
 >
->* In the examples below, `CChash` is a custom namespace that represents hashed credit cards.
+>* In the examples below, `CChash` is a custom namespace that represents a hashed credit card number.
 
 You are a data architect working for a commercial bank that issues credit cards. Your marketing team has indicated that they want to include past credit card transaction history to a profile. This identity graph could look like the following.
 
@@ -222,7 +214,7 @@ CRMID: Jill, CChash: undefined
 
 ### Use case: Your data includes both hashed and unhashed CRMIDs
 
-Your customer is ingesting both an unhashed (offline) CRMID and a hashed (online) CRMID. They expect a direct relationship between both unhashed and hashed CRMIDs. When a user browses with an authenticated account, the hashed CRMID is sent along with the device ID (represented on Identity Service as an ECID).
+Your are ingesting both an unhashed (offline) CRMID and a hashed (online) CRMID. They expect a direct relationship between both unhashed and hashed CRMIDs. When an end-user browses with an authenticated account, the hashed CRMID is sent along with the device ID (represented on Identity Service as an ECID).
 
 **Algorithm configuration (Identity Settings)**
 
