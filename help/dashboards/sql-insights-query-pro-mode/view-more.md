@@ -5,7 +5,7 @@ exl-id: f57d85cf-dbd2-415c-bf01-8faa49871377
 ---
 # View more {#view-more}
 
-Once you have created a [custom insight](./overview.md) with [query pro mode](./overview.md#query-pro-mode), you can view your chart data in different formats. You can view either a tabulated form of the results, or download the data as a CSV file to view in a spreadsheet. 
+Once you have created a [custom insight](./overview.md) with [query pro mode](./overview.md#query-pro-mode), you can view your chart data in different formats. You can view either a tabulated form of the results, or export the data in CSV format or via email.
 
 ## Tabulated results {#tabulated-results}
 
@@ -15,15 +15,41 @@ From your custom dashboard, select the ellipses (`...`) on any widget to access 
 
 ![A custom dashboard with an insight's ellipses dropdown menu and the View more and View SQL options highlighted.](../images/sql-insights-query-pro-mode/ellipses-dropdown.png)
 
-## Download CSV {#download-csv}
+## Export {#export}
 
-The [!UICONTROL View more] feature displays the specific data points for the chart in tabular form. To simplify the process of data sharing and manipulation, you can download the processed data in CSV format from this dialog. Select **[!UICONTROL Download CSV]** to download your data.
+From the **[!UICONTROL View more]** dialog, you can export the data shown in the table by downloading it directly as a CSV file or sending it by email for secure download later. 
+
+>[!IMPORTANT]
+>
+>To access the export options, your admin must grant you the **[!UICONTROL Export Dashboard Data]** permission. If the [!UICONTROL Export] button is grayed out, contact your administrator. See the [Access control overview](../../access-control/home.md) for more details.
 
 >[!NOTE]
 >
->The CSV download is limited ot the first 500 records.
+>Visualization-only exports do not require the [!UICONTROL Export Dashboard Data] permission. Such as exporting the processed data from your [custom dashboard insights in PDF format](./export-pdf.md), or [Platform UI dashboard insights](../download.md).
+
+### Download CSV {#download-csv}
+
+The [!UICONTROL View more] feature displays the specific data points for the chart in tabular form. Select **[!UICONTROL Export]** then choose **[!UICONTROL Download CSV]** to download your data in CSV format.
+
+>[!NOTE]
+>
+>The CSV download is limited to the first 500 records.
 
 ![A dialog displaying a preview of your insight and the tabularized results of your SQL that generated the insight.](../images/sql-insights-query-pro-mode/view-more-download-csv.png)
+
+### Send as email {#send-as-email}
+
+To export more than 500 records, select **[!UICONTROL Export]** and choose **[!UICONTROL Send as email]**. This option securely sends a download link to your Adobe-associated email address.
+
+When selected:
+
+- A secure background job generates the report.
+- You'll receive an email with a link to download the file.
+- You must authenticate to access the file, and Adobe verifies the recipient before allowing access.
+
+To protect your data, Adobe does not send exports directly via email. Instead, exported files are securely hosted and made available only after you authenticate through the Platform UI. Once authenticated, Adobe also verifies that the person downloading the file is the intended recipient. These added layers of security help ensure that your data remains private and protected throughout the export process.
+
+This method allows you to export **up to 10,000 records** and ensures secure access to sensitive data.
 
 ## Sort by column {#sort-column}
 
@@ -45,7 +71,7 @@ You can resize columns in tabulated results to improve data readability. From yo
 
 ![A table column dropdown showing the Resize column option highlighted.](../images/sql-insights-query-pro-mode/advanced-resize-dropdown.png)
 
-Select the sllider and drag to the left or right to adjust the column size as required.
+Select the slider and drag to the left or right to adjust the column size as required.
 
 ![A table showing the column resize bar highlighted.](../images/sql-insights-query-pro-mode/advanced-resize-column.png)
 
@@ -59,6 +85,6 @@ You can see up to 500 records per page. To navigate through the records, use the
 
 ## Next steps
 
-After reading this document, you now know how to view the tabulated results of your custom chart's SQL analysis and download the data as a CSV file. See the view SQL document to learn how to [view the SQL behind your custom insights](./view-sql.md). 
+After reading this document, you now know how to view the tabulated results of your custom chart's SQL analysis and export the data. See the view SQL document to learn how to [view the SQL behind your custom insights](./view-sql.md). 
 
 You can also learn how to generate charts from existing data models in the Adobe Experience Platform UI with the [guided design mode guide](../standard-dashboards.md).

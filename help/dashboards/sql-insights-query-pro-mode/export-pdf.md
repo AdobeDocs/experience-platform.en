@@ -13,6 +13,10 @@ From the dashboards workspace, select a custom dashboard from the inventory list
 
 You custom dashboard appears. Next, select **[!UICONTROL Export]** from the top right of the UI.
 
+>[!NOTE]
+>
+>Visualization-only exports do not require the [!UICONTROL Export Dashboard Data] permission. See the [View more documentation](./view-more.md#export) for more details.
+
 ![A custom dashboard with Export highlighted.](../images/sql-insights-query-pro-mode/export.png)
 
 The **[!UICONTROL Export file]** dialog appears. Finally, select **[!UICONTROL Download]**
