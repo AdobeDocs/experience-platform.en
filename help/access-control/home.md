@@ -191,6 +191,7 @@ The following table outlines the available permissions for Experience Platform i
 | [!DNL Dashboards] | [!UICONTROL Manage Custom Dashboards] | Access to create or edit a dashboard. |
 | [!DNL Dashboards] | [!UICONTROL View Custom Dashboards] | Read-only access to user defined dashboards. |
 | [!DNL Dashboards] | [!UICONTROL Manage Report Schedules] | Ability to create schedules. |
+| [!DNL Dashboards] | [!UICONTROL Export Dashboard Data] |  |
 | [!DNL Data Collection] | [!UICONTROL Manage Datastreams] | Access to read, create, and edit datastreams. |
 | [!DNL Data Collection] | [!UICONTROL View Datastreams] | Read-only access to datastreams. |
 | [!DNL Data Governance] | [!UICONTROL Manage Usage Labels] | Access to read, create, and delete usage labels. |
