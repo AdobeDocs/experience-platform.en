@@ -126,6 +126,7 @@ Use sources in Experience Platform to ingest data from an Adobe application or a
 | Feature | Description |
 | --- | --- |
 | Support for Views in [!DNL Microsoft Dynamics] | You can now ingest `"entityType": "view"` when using the [!DNL Microsoft Dynamics] source. For more information, read the guide on [connecting a [!DNL Microsoft Dynamics] source to Experience Platform](../../sources/tutorials/api/create/crm/ms-dynamics.md). |
+| New IP addresses to allowlist | You must add the following IP addresses to your allowlist to successfully use Experience Platform sources.<br></br>**VA7**<ul><li>`48.211.4.136/29`</li><li>`48.211.4.144/28`</li><li>`48.211.4.160/29`</li><li>`40.84.85.144/28`</li><li>`40.84.85.192/28`</li></ul>**AUS5**<ul><li>`20.213.194.144/29`</li><li>`20.227.120.32/27`</li></ul> <br></br>For more information, read the [sources IP address allowlist guide](../../sources/ip-address-allow-list.md). |
 
 {style="table-layout:auto"}
 
