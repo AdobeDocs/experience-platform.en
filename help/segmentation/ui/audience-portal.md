@@ -96,7 +96,7 @@ You can add additional fields to Audience Portal by selecting ![the filter attri
 | ----- | ----------- |
 | [!UICONTROL Name] | The name of the audience. |
 | [!UICONTROL Profile count] | The total number of profiles that qualify for the audience. | 
-| [!UICONTROL Origin] | The origin of the audience. This states where the audience comes from. Possible values include [Segmentation Service](#segment-builder), [Custom upload](#import-audience), [Audience composition](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [Look-alike audience](../types/lookalike-audiences.md), [Federated Audience Composition](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/guide-overview), and [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
+| [!UICONTROL Origin] | The origin of the audience. This states where the audience comes from. Possible values include [Segmentation Service](#segment-builder), [Custom upload](#import-audience), [Audience composition](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [Look-alike audience](../types/lookalike-audiences.md), [Federated Audience Composition](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller), and [AJO B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/guide-overview). |
 | [!UICONTROL Lifecycle status] | The status of the audience. Possible values for this field include `Draft`, `Inactive`, and `Published`. More information about lifecycle statuses, including what the different states mean and how to move audiences to different lifecycle states, read the [lifecycle status section of the Segmentation FAQ](../faq.md#lifecycle-status). |
 | [!UICONTROL Update frequency] | A value that states how often the audience's data is updated. Possible values for this field include [!UICONTROL Batch], [!UICONTROL Streaming], [!UICONTROL Edge], and [!UICONTROL Not Scheduled]. |
 | [!UICONTROL Last updated by] | The name of the person who last updated the audience. |
@@ -197,7 +197,7 @@ The list of available filters is displayed.
 
 | Filter | Description |
 | ------ | ----------- |
-| [!UICONTROL Origin] | Lets you filter based on the origin of the audience. Possible values include [Segmentation Service](#segment-builder), [Custom upload](#import-audience), [Audience composition](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [Look-alike audience](../types/lookalike-audiences.md), [Federated Audience Composition](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/guide-overview), and [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal).  |
+| [!UICONTROL Origin] | Lets you filter based on the origin of the audience. Possible values include [Segmentation Service](#segment-builder), [Custom upload](#import-audience), [Audience composition](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [Look-alike audience](../types/lookalike-audiences.md), [Federated Audience Composition](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller), and [AJO B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/guide-overview).  |
 | [!UICONTROL Has any tag] | Lets you filter by tags. You can select between **[!UICONTROL Has any tag]** and **[!UICONTROL Has all tags]**. When **[!UICONTROL Has any tag]** is selected, the filtered audiences will include **any** of the tags you've added. When **[!UICONTROL Has all tags]** is selected, the filtered audiences must include **all** of the tags you've added. |
 | [!UICONTROL Lifecycle status] | Lets you filter based on the audience's lifecycle status. Available options include [!UICONTROL Deleted], [!UICONTROL Draft], [!UICONTROL Inactive], and [!UICONTROL Published]. |
 | [!UICONTROL Update frequency] | Lets you filter based on the audience's update frequency (evaluation method). Available options include [!UICONTROL Batch], [!UICONTROL Streaming], and [!UICONTROL Edge] |
@@ -398,6 +398,11 @@ More information about Data Distiller can be found in the [building audiences us
 
 ## Importing an audience {#import-audience}
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_importaudience_dataexpiration"
+>title="Data expiration"
+>abstract=""
+
 >[!IMPORTANT]
 >
 >In order to import an externally generated audience, you **must** have the following permissions: [!UICONTROL View segments], [!UICONTROL Manage segments], and [!UICONTROL Import audience]. For more information on these permission, read the [access control overview](../../access-control/home.md#permissions).
@@ -428,7 +433,7 @@ When importing the externally generated audience, you must select one of the col
 
 ![The [!UICONTROL Audience details] page is displayed.](../images/ui/audience-portal/import-audience-audience-details.png)
 
-You can also optionally add some extra details to your externally generated audience, including giving it an ID, defining its merge policy, or editing its column data type.
+You can also optionally add some extra details to your externally generated audience, including giving it an ID, defining its merge policy, editing its column data type, or applying a custom data expiration.
 
 >[!NOTE]
 >
