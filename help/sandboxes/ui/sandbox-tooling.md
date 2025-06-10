@@ -249,7 +249,7 @@ When your import is complete, a notification is received in the Experience Platf
 
 ## Move object configuration updates across sandboxes {#move-configs}
 
-You can use sandbox tooling to move object configurations across different sandboxes. In the past, configurations to your objects (such as schemas, field groups, and datatypes) had to be manually recreated or reimported in order to be brought over to other sandboxes. With this capability, you can use sandbox tooling to seamlessly move your configuration updates across different sandboxes.
+You can use sandbox tooling to move object configurations across different sandboxes. In the past, configurations to your objects (such as schemas, field groups, and data types) had to be manually recreated or reimported in order to be brought over to other sandboxes. With this capability, you can use sandbox tooling to accelerate your workflows and reduce potential errors by seamlessly moving your configuration updates across different sandboxes 
 
 >[!BEGINSHADEBOX]
 
@@ -266,7 +266,7 @@ Follow the steps below to learn how to use sandbox tooling to move your object c
 
 **Previously imported objects**
 
-Update object in source sandbox
+First, update the object in your source sandbox. For example, navigate to the **[!UICONTROL Schemas]** workspace and update a schema.
 
 Use "Update Package" to refresh changes
 
@@ -276,6 +276,13 @@ System auto-selects "Update existing objects" and shows diffs
 
 Confirm and complete the update
 
+**Objects created manually in target sandbox**
+
+Create new package with updated object
+
+During import, manually choose "Update existing objects"
+
+Select correct target object and confirm changes
 
 
 ## Video tutorial
