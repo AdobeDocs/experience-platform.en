@@ -113,9 +113,17 @@ The details page also displays a list of identities that failed and identities t
 
 ![Dataflow records for streaming destinations with an error message highlighted.](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
-#### Audience-level dataflow run monitoring for streaming destinations {#audience-level-dataflow-runs-for-streaming-destinations}
+#### [!BADGE Beta]{type=Informative} Audience-level dataflow run monitoring for streaming destinations {#audience-level-dataflow-runs-for-streaming-destinations}
 
 You can view information about the activated, excluded, or failed identities broken down on an audience level, for each audience that is part of the dataflow.
+
+Audience-level monitoring for streaming destinations is currently available only for the following destinations:
+
+- [[!DNL Google Customer Match + Display & Video 360]](/help/destinations/catalog/advertising/google-customer-match-dv360.md)
+- [[!DNL (V2) Marketo Engage]](/help/destinations/catalog/adobe/marketo-engage.md)
+- [[!DNL HTTP API]](/help/destinations/catalog/streaming/http-destination.md)
+- [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
+- [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
 
 ![Audience-level monitoring for streaming destinations.](/help/dataflows/assets/ui/monitor-destinations/audience-level-monitoring-streaming.png)
 
@@ -294,7 +302,16 @@ For example, you are activating an audience called "Loyalty Members in Californi
 >[!IMPORTANT]
 >
 >Note the current limitations related to audience-level metrics:
->- The audience-level view is currently available for batch (file-based) destinations and the [Google Customer Match DV 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md) streaming destination only. Rollout is planned for further streaming destinations.
+>
+>- The audience-level view is currently available for the destinations listed below. Rollout is planned for further streaming destinations.
+>
+>   - [[!DNL Google Customer Match + Display & Video 360]](/help/destinations/catalog/advertising/google-customer-match-dv360.md)
+>   - [[!DNL (V2) Marketo Engage]](/help/destinations/catalog/adobe/marketo-engage.md)
+>   - [[!DNL HTTP API]](/help/destinations/catalog/streaming/http-destination.md)
+>   - [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
+>   - [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+>   - Batch (file-based) destinations
+> 
 >- For batch destinations, audience-level metrics are currently recorded for successful dataflow runs only. They are not recorded for failed dataflow runs and excluded records. For dataflow runs to streaming destinations, metrics are captured and displayed for activated and excluded records. 
 
 ![Audiences highlighted in the dataflow panel.](../assets/ui/monitor-destinations/dashboard-segments-view.png)
