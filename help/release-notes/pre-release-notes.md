@@ -1,15 +1,15 @@
 ---
-title: Experience Platform Release Notes (Preview)
+title: Experience Platform Pre-Release Notes
 description: A preview of the latest release notes for Adobe Experience Platform.
 hide: true
 hidefromtoc: true
 ---
 
-# Adobe Experience Platform release notes (Preview)
+# Adobe Experience Platform pre-release notes
 
 >[!IMPORTANT]
 >
->This document is intended as a **preview** of the release notes for the current month. Release items are subject to change, and may be removed from the final copy of the release notes.
+>This document is intended as a **preview** of the release notes for the current month. Release items are subject to change, and may be added or removed from the final copy of the release notes.
 
 >[!TIP]
 >
@@ -21,7 +21,7 @@ hidefromtoc: true
 >- [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
-**Release date: June 17, 2025**
+**Release date: June 18, 2025**
 
 New features and updates to existing features in Adobe Experience Platform:
 
@@ -99,12 +99,10 @@ For more information, read the [data governance overview](../data-governance/hom
 
 | Feature | Description |
 | --- | --- |
-| LinkedIn account expiration information | Account expiration information for LinkedIn destinations is now available directly in the Browse and Accounts views. Previously, this information was only available in documentation. This enhancement provides better visibility into LinkedIn authentication status and credential management. |
-| Google Customer Match + Display & Video 360 enhancements | Enhanced documentation and contextual help for account linking between Adobe and Google advertising accounts. Added in-workflow guidance for the destination connection process and removed beta label from the destination. |
-| Marketo destination card consolidation | Consolidated Marketo V2 and V3 destination cards into a unified experience. This enhancement streamlines destination management and provides migration guidance for existing users. |
-| Data Lake Zone (DLZ) encryption support | Added encryption support for the Data Lake Zone destination, consistent with other cloud storage destinations. You can now attach RSA-formatted public keys to add encryption to your exported files. |
-| Enhanced destinations monitoring | Segment-level reporting is now available for all SSD streaming real-time destinations in the destinations monitoring UI. This provides enhanced visibility into destination performance at the audience segment level. |
-| Facebook account expiration visibility | Facebook destination connections now display account token expiration dates in the Browse and Accounts views for improved account management. |
+| LinkedIn account expiration information | Account expiration information for LinkedIn destinations is now available directly in the [!UICONTROL Browse] and [!UICONTROL Accounts] views. Previously, this information was only available in documentation. This enhancement provides better visibility into LinkedIn authentication status and credential management. |
+| Google Customer Match + DV360 general availability and enhancement | The Google Customer Match + DV360 destination is now available for all Experience Platform users. The documentation now includes detailed guidance for account linking between Adobe and Google advertising accounts. |
+| Data Landing Zone (DLZ) destination encryption support | Added encryption support for the Data Landing Zone destination. You can now attach RSA-formatted public keys to add encryption to your exported files. |
+| Audience-level monitoring for enterprise destinations | Audience-level monitoring is now available for the following enterprise destinations: [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), [[!DNL HTTP API]](/help/destinations/catalog/streaming/http-destination.md), [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md).|
 
 {style="table-layout:auto"}
 
