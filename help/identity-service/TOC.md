@@ -20,7 +20,7 @@ role: Admin,Developer
     - [Feature overview](./identity-graph-linking-rules/overview.md)
     - [Identity Optimization Algorithm](./identity-graph-linking-rules/identity-optimization-algorithm.md)
     - [Implementation guide for Identity Graph Linking Rules](./identity-graph-linking-rules/implementation-guide.md)
-    - [Example graph configurations](./identity-graph-linking-rules/example-configurations.md)
+    - [Configurations guide](./identity-graph-linking-rules/example-configurations.md)
     - [Troubleshooting for Identity Graph Linking Rules](./identity-graph-linking-rules/troubleshooting.md)
     - [Namespace priority](./identity-graph-linking-rules/namespace-priority.md)
     - [Graph Simulation UI](./identity-graph-linking-rules/graph-simulation.md)
