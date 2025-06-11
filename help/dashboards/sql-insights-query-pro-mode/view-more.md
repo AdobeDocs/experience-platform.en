@@ -5,7 +5,7 @@ exl-id: f57d85cf-dbd2-415c-bf01-8faa49871377
 ---
 # View more {#view-more}
 
-Once you have created a [custom insight](./overview.md) with [query pro mode](./overview.md#query-pro-mode), you can view your chart data in different formats. You can view either a tabulated form of the results, or export the data in CSV format or via email.
+After creating a [custom insight](./overview.md) using [query pro mode](./overview.md#query-pro-mode), you can view the chart data in multiple formats. You can view either a tabulated form of the results, or export the data in CSV format or via email.
 
 ## Tabulated results {#tabulated-results}
 
@@ -17,7 +17,7 @@ From your custom dashboard, select the ellipses (`...`) on any widget to access 
 
 ## Export {#export}
 
-From the **[!UICONTROL View more]** dialog, you can export the data shown in the table by downloading it directly as a CSV file or sending it by email for secure download later. 
+From the **[!UICONTROL View more]** dialog, export the table data by either downloading a CSV file directly or sending it to your email for secure download later. 
 
 >[!IMPORTANT]
 >
@@ -25,11 +25,11 @@ From the **[!UICONTROL View more]** dialog, you can export the data shown in the
 
 >[!NOTE]
 >
->Visualization-only exports do not require the [!UICONTROL Export Dashboard Data] permission. Such as exporting the processed data from your [custom dashboard insights in PDF format](./export-pdf.md), or [Platform UI dashboard insights](../download.md).
+>Visualization-only exports do not require the [!UICONTROL Export Dashboard Data] permission. For example, exporting processed data from your [custom dashboard insights in PDF format](./export-pdf.md), or from [Platform UI dashboard insights](../download.md).
 
 ### Download CSV {#download-csv}
 
-The [!UICONTROL View more] feature displays the specific data points for the chart in tabular form. Select **[!UICONTROL Export]** then choose **[!UICONTROL Download CSV]** to download your data in CSV format.
+In the [!UICONTROL View more] dialog, select **[!UICONTROL Export]**, then choose **[!UICONTROL Download CSV]** to download the chart data in CSV format.
 
 >[!NOTE]
 >
@@ -39,21 +39,19 @@ The [!UICONTROL View more] feature displays the specific data points for the cha
 
 ### Send as email {#send-as-email}
 
-To export more than 500 records, select **[!UICONTROL Export]** and choose **[!UICONTROL Send as email]** from the [!UICONTROL Export file] dialog. This option securely sends a download link to your Adobe-associated email address. The recipients name and Adobe registered email is displayed in the [!UICONTROL Recipients] section of the dialog.
+To export more than 500 records, select **[!UICONTROL Export]** and choose **[!UICONTROL Send as email]** from the [!UICONTROL Export file] dialog. This option securely sends a download link to your Adobe-associated email address. The recipient's name and registered Adobe email address appear in the [!UICONTROL Recipients] section of the dialog.
 
 ![The View more chart data with the Export and Send as email options highlighted.](../images/sql-insights-query-pro-mode/send-as-email.png)
 
-When selected, a report is generated and an email is sent to the Adobe registered email address.
-The email from Adobe Experience Cloud contains a link to download the file. The link requires you to 
-authenticate to Experience Platform to access the file.
+After you select [!UICONTROL Send as email], Adobe generates a report and sends an email to your registered Adobe address. The email includes a secure download link that requires authentication through Experience Platform.
 
 >[!NOTE]
 >
->The report is only available for download for 24 hours from the time this link was generated. 
+>You must download the report within 24 hours of link generation; after that, the file expires.
 
 ![The Experience Platform UI with the File generation successful dialog displayed containing the Download report option.](../images/sql-insights-query-pro-mode/download-report.png)
 
-To protect your data, Adobe does not send exports directly via email. Instead, exported files are securely hosted and made available only after you authenticate through the Platform UI. Once authenticated, Adobe also verifies that the person downloading the file is the intended recipient. These added layers of security help ensure that your data remains private and protected throughout the export process.
+To protect your data, Adobe securely hosts exported files rather than sending them as attachments. Access requires authentication through the Platform UI, and Adobe verifies that the file is downloaded only by the intended recipient.
 
 This method allows you to export **up to 10,000 records** and ensures secure access to sensitive data.
 
@@ -91,6 +89,6 @@ You can see up to 500 records per page. To navigate through the records, use the
 
 ## Next steps
 
-After reading this document, you now know how to view the tabulated results of your custom chart's SQL analysis and export the data. See the view SQL document to learn how to [view the SQL behind your custom insights](./view-sql.md). 
+After reading this document, you now know how to view tabulated results from your custom chart's SQL analysis and how to export that data securely. See the view SQL document to learn how to [view the SQL behind your custom insights](./view-sql.md). 
 
 You can also learn how to generate charts from existing data models in the Adobe Experience Platform UI with the [guided design mode guide](../standard-dashboards.md).
