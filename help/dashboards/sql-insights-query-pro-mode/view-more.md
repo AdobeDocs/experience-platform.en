@@ -21,7 +21,7 @@ From the **[!UICONTROL View more]** dialog, you can export the data shown in the
 
 >[!IMPORTANT]
 >
->To access the export options, your admin must grant you the **[!UICONTROL Export Dashboard Data]** permission. If the [!UICONTROL Export] button is grayed out, contact your administrator. See the [Access control overview](../../access-control/home.md) for more details.
+>To access the export options, your admin must grant you the **[!UICONTROL Export Dashboard Data]** permission. If the [!UICONTROL Export] button is grayed out, contact your administrator. See the [Access control overview](../../access-control/home.md) for more information on dashboard permissions.
 
 >[!NOTE]
 >
@@ -39,13 +39,19 @@ The [!UICONTROL View more] feature displays the specific data points for the cha
 
 ### Send as email {#send-as-email}
 
-To export more than 500 records, select **[!UICONTROL Export]** and choose **[!UICONTROL Send as email]**. This option securely sends a download link to your Adobe-associated email address.
+To export more than 500 records, select **[!UICONTROL Export]** and choose **[!UICONTROL Send as email]** from the [!UICONTROL Export file] dialog. This option securely sends a download link to your Adobe-associated email address. The recipients name and Adobe registered email is displayed in the [!UICONTROL Recipients] section of the dialog.
 
-When selected:
+![The View more chart data with the Export and Send as email options highlighted.](../images/sql-insights-query-pro-mode/send-as-email.png)
 
-- A secure background job generates the report.
-- You'll receive an email with a link to download the file.
-- You must authenticate to access the file, and Adobe verifies the recipient before allowing access.
+When selected, a report is generated and an email is sent to the Adobe registered email address.
+The email from Adobe Experience Cloud contains a link to download the file. The link requires you to 
+authenticate to Experience Platform to access the file.
+
+>[!NOTE]
+>
+>The report is only available for download for 24 hours from the time this link was generated. 
+
+![The Experience Platform UI with the File generation successful dialog displayed containing the Download report option.](../images/sql-insights-query-pro-mode/download-report.png)
 
 To protect your data, Adobe does not send exports directly via email. Instead, exported files are securely hosted and made available only after you authenticate through the Platform UI. Once authenticated, Adobe also verifies that the person downloading the file is the intended recipient. These added layers of security help ensure that your data remains private and protected throughout the export process.
 
