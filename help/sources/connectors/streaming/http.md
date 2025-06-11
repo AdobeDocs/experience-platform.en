@@ -15,6 +15,10 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 You can use the [!DNL HTTP API] source connector to stream your data to Experience Platform. The [!DNL HTTP API] source is supported by [!DNL Data Prep] functions, allowing you to map any non XDM-compliant data to an XDM-compliant dataset.
 
+>[!NOTE]
+>
+>After you create or update a streaming dataflow, a brief 5-minute pause in data ingestion is required to prevent any potential instances of data loss or data drops.
+
 The documentation below provides information on how to create an HTTP API streaming connector to connect with [!DNL Experience Platform] using APIs or the user interface:
 
 ## Create an HTTP API streaming connector using APIs
