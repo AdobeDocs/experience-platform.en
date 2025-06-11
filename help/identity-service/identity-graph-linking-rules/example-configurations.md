@@ -1,6 +1,8 @@
 ---
 title: Identity Graph Linking Rules Configurations Guide
 description: Learn about the different implementation types that you can configure using Identity Graph Linking Rules.
+hide: true
+hidefromtoc: true
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
 ---
 # [!DNL Identity Graph Linking Rules] configurations guide {#configurations-guide}
