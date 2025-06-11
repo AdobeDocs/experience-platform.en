@@ -17,7 +17,7 @@ From your custom dashboard, select the ellipses (`...`) on any widget to access 
 
 ## Export {#export}
 
-From the **[!UICONTROL View more]** dialog, export the table data by either downloading a CSV file directly or sending it to your email for secure download later. 
+From the **[!UICONTROL View more]** dialog, export the table data by either downloading a CSV file directly, or sending a link to your email for secure download later. 
 
 >[!IMPORTANT]
 >
@@ -51,7 +51,7 @@ After you select [!UICONTROL Send as email], Adobe generates a report and sends 
 
 ![The Experience Platform UI with the File generation successful dialog displayed containing the Download report option.](../images/sql-insights-query-pro-mode/download-report.png)
 
-To protect your data, Adobe securely hosts exported files rather than sending them as attachments. Access requires authentication through the Platform UI, and Adobe verifies that the file is downloaded only by the intended recipient.
+To protect your data, Adobe securely hosts exported files rather than sending them as attachments. Access requires authentication through the Experience Platform UI, and Adobe verifies that the file is downloaded only by the intended recipient.
 
 This method allows you to export **up to 10,000 records** and ensures secure access to sensitive data.
 
