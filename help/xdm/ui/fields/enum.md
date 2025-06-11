@@ -80,7 +80,7 @@ See the [section below](#evolution) for more information on the rules for updati
 
 ## Evolution rules for enums and suggested values {#evolution}
 
-After a schema with an enum field has been used to ingest data into Platform, any further changes made to the schema definition must comply with the data already in the system. In general, changes made to an existing field can only make that field **less** restrictive. An field cannot be made more restrictive than it already is.
+After a schema with an enum field has been used to ingest data into Experience Platform, any further changes made to the schema definition must comply with the data already in the system. In general, changes made to an existing field can only make that field **less** restrictive. An field cannot be made more restrictive than it already is.
 
 When it comes to enums and suggested values, the following rules apply post-ingestion:
 

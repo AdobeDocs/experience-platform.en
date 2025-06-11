@@ -33,7 +33,7 @@ Experience Platform allows you to audit user activity for various services and c
 
 {style="table-layout:auto"}
 
-For more information on audit logs in Platform, refer to the [audit logs overview](../../landing/governance-privacy-security/audit-logs/overview.md).
+For more information on audit logs in Experience Platform, refer to the [audit logs overview](../../landing/governance-privacy-security/audit-logs/overview.md).
 
 ## Related accounts in Real-Time CDP B2B Edition {#related-accounts}
 
@@ -53,7 +53,7 @@ To learn more about Real-Time CDP B2B Edition, see the [overview](../../rtcdp/ov
 
 ## Alerts {#alerts}
 
-Experience Platform allows you to subscribe to event-based alerts for various Platform activities. You can subscribe to different alert rules through the [!UICONTROL Alerts] tab in the Platform user interface, and can choose to receive alert messages within the UI itself or through email notifications.
+Experience Platform allows you to subscribe to event-based alerts for various Experience Platform activities. You can subscribe to different alert rules through the [!UICONTROL Alerts] tab in the Experience Platform user interface, and can choose to receive alert messages within the UI itself or through email notifications.
 
 **Updated features**
 
@@ -63,11 +63,11 @@ Experience Platform allows you to subscribe to event-based alerts for various Pl
 
 {style="table-layout:auto"}
 
-For more information on alerts in Platform, refer to the [alerts overview](../../observability/alerts/overview.md).
+For more information on alerts in Experience Platform, refer to the [alerts overview](../../observability/alerts/overview.md).
 
 ## Dashboards {#dashboards}
 
-Adobe Experience Platform provides multiple [!DNL dashboards] through which you can view important information about your organization’s data, as captured during daily snapshots.
+Adobe Experience Platform provides multiple [!DNL dashboards] through which you can view important information about your organization's data, as captured during daily snapshots.
 
 ### Profile Dashboards
 
@@ -98,20 +98,20 @@ The Destinations dashboard displays a snapshot of the destinations that your org
 
 {style="table-layout:auto"}
 
-For more information on Destinations dashboards in Platform, refer to the [Destinations dashboards overview](../../dashboards/guides/destinations.md).
+For more information on Destinations dashboards in Experience Platform, refer to the [Destinations dashboards overview](../../dashboards/guides/destinations.md).
 
 ## Data collection {#data-collection}
 
-Platform provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
+Experience Platform provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
 
 **New features**
 
 | Feature | Description |
 | --- | --- |
 | Global datastream settings | You can now configure several new global settings when configuring a datastream: geo location, first-party ID cookie, and third-party ID sync. See the section on [configuring a datastream](../../datastreams/overview.md#create) in the Datastreams UI guide for more information. |
-|[Edge Network Server API](../../server-api/overview.md)|The Server API allows customers to interact with the Experience Platform Edge Network using a new, authenticated endpoint, to power a variety of data collection, personalization, advertising and marketing use cases.|
+|[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/getting-started/)|The Edge Network API allows customers to interact with the Experience Platform Edge Network using a new, authenticated endpoint, to power a variety of data collection, personalization, advertising and marketing use cases.|
 
-For more information on data collection in Platform, please see the [data collection overview](../../collection/home.md).
+For more information on data collection in Experience Platform, please see the [data collection overview](../../collection/home.md).
 
 ## Query Service {#query-service}
 
@@ -129,7 +129,7 @@ For more information on available features, refer to the [Query Service overview
 
 ## Sources {#sources}
 
-Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
+Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
 
 Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughout.
 
@@ -137,8 +137,8 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Feature | Description |
 | --- | --- |
-| New sources now available for B2B usage | You can now use all the available sources on Platform for B2B use cases. See the [sources catalog](../../sources/home.md) for a complete list of available sources. |
-| General availability of new [!DNL Oracle Eloqua] source | You can now use the [!DNL Oracle Eloqua] source to seamlessly ingest data from your [!DNL Oracle Eloqua] instance (account, campaign, contacts) to Platform. See the documentation on [creating an [!DNL Oracle Eloqua] source connection](../../sources/connectors/marketing-automation/oracle-eloqua.md) for more information. |
+| New sources now available for B2B usage | You can now use all the available sources on Experience Platform for B2B use cases. See the [sources catalog](../../sources/home.md) for a complete list of available sources. |
+| General availability of new [!DNL Oracle Eloqua] source | You can now use the [!DNL Oracle Eloqua] source to seamlessly ingest data from your [!DNL Oracle Eloqua] instance (account, campaign, contacts) to Experience Platform. See the documentation on [creating an [!DNL Oracle Eloqua] source connection](../../sources/connectors/marketing-automation/oracle-eloqua.md) for more information. |
 | API enhancements for [!DNL Data Landing Zone] | The [!DNL Data Landing Zone] source now supports auto-detection of file properties when using the [!DNL Flow Service] API. See the documentation on [creating a [!DNL Data Landing Zone] source connection](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) for more information. |
 
 {style="table-layout:auto"}

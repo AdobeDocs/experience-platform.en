@@ -136,7 +136,7 @@ All this data from disparate sources is merged into a single unified customer pr
 
 ## Configuring a data source
 
-Use [!DNL Real-Time Customer Data Platform] to bring new sources of data into Platform. Real-Time CDP includes a catalog of data sources that can be quickly and easily added to the profile.  
+Use [!DNL Real-Time Customer Data Platform] to bring new sources of data into Experience Platform. Real-Time CDP includes a catalog of data sources that can be quickly and easily added to the profile.  
 
 ![image](assets/luma-source-cat.png)
 
@@ -187,7 +187,7 @@ All of the profile information Luma has about Sarah displays. This includes her 
 
 |Category|Description|
 |---|---|
-|Identities|Shows the identities that have been linked together in [!DNL Platform] from Sarah's interactions with Luma across channels and devices. Her ECID from the website is displayed. Her identity also includes the ECID from her mobile app, her email ID, a CRM ID from the recently added [!DNL Microsoft Dynamics] dataset, and a loyalty ID passed into Adobe Experience Platform from the Luma loyalty system.|  
+|Identities|Shows the identities that have been linked together in [!DNL Experience Platform] from Sarah's interactions with Luma across channels and devices. Her ECID from the website is displayed. Her identity also includes the ECID from her mobile app, her email ID, a CRM ID from the recently added [!DNL Microsoft Dynamics] dataset, and a loyalty ID passed into Adobe Experience Platform from the Luma loyalty system.|  
 |Events|Shows all of Sarah's interaction data with the Luma brand. This includes the item she just viewed, anything she's viewed in the past, the emails she's received, her interactions with the call center, and what channel and device each of those interactions happened on.|
 
 The Real-Time CDP profile reduces the Luma marketing team's workflow from weeks to minutes and unlocks possibilities for personalization based on this 360-degree customer view. The profile merges the behavioral data from when she browsed the site before she signed in, with her existing customer profile, creating a comprehensive view of Sarah. 

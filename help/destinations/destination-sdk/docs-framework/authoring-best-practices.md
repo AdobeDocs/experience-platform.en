@@ -31,14 +31,14 @@ Follow the provided documentation template and don't edit the existing links in 
 
 ## Branding guidelines {#branding}
 
-* AEP is not an approved public-facing term. Please use Adobe Experience Platform on first use, then Experience Platform, then Platform.
+* AEP is not an approved public-facing term. Please use Adobe Experience Platform on first use, then Experience Platform, then Experience Platform.
   * **Don't use**: Before you can export data from AEP to YourDestination, make sure you read and complete these prerequisites. 
   * **Use**: Before you can export data from Adobe Experience Platform to YourDestination, make sure you read and complete these prerequisites.
 
 ## Images and screenshots {#images-and-screenshots}
 
 * For information on [how to link to images](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#images), refer to the contributor guide.
-* When using screenshots, please ensure that your screenshot captures the entire Platform UI screen.
+* When using screenshots, please ensure that your screenshot captures the entire Experience Platform UI screen.
 * When marking up images to highlight a certain control or label on the page, try to follow the markup style used by the Experience Platform documentation team. Notice how Profile-based is highlighted in [this screenshot](/help/destinations/catalog/cloud-storage/amazon-s3.md#export-type-frequency).
 * Please use `png` format images.
 * Please don't use numbered screenshots as filenames. Image filenames should be descriptive.
@@ -46,7 +46,7 @@ Follow the provided documentation template and don't edit the existing links in 
   * **Use**: `yourdestination-authentication-details.png`, `yourdestination-destination-details.png`
 * Please use alt text for any images that you add to the documentation and use proper grammar in the alt text.
   * **Don't use**: Destination connection details
-  * **Use**: Image of the Platform UI, showing destination connection details filled in.
+  * **Use**: Image of the Experience Platform UI, showing destination connection details filled in.
 
 ## Process {#process}
 

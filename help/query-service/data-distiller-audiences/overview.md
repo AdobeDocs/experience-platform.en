@@ -9,7 +9,7 @@ Use the SQL audience extension to build audiences with data from the data lake, 
 
 Using this SQL extension improves your ability to create audiences as you don't need raw data in your profiles when defining audience segments. Audiences created using this method are automatically registered in the Audience workspace, where you can further target them to file-based destinations.
 
-![Infographic showing the SQL audience extension workflow. The stages include; building audiences with the Query Service using SQL commands, managing them in the Platform UI, to activating them in file-based destinations.](../images/data-distiller/sql-audiences/sql-audience-extension-workflow.png)
+![Infographic showing the SQL audience extension workflow. The stages include; building audiences with the Query Service using SQL commands, managing them in the Experience Platform UI, to activating them in file-based destinations.](../images/data-distiller/sql-audiences/sql-audience-extension-workflow.png)
 
 This document covers how to use the SQL audience extension in Adobe Experience Platform's Data Distiller to create, manage, and publish audiences using SQL commands.
 
@@ -94,6 +94,97 @@ The following example demonstrates how to add profiles to an existing audience w
 INSERT INTO Audience aud_test
 SELECT userId, orders, total_revenue, recency, frequency, monetization FROM customer_ds;
 ```
+
+### Replace audience data (INSERT OVERWRITE) {#replace-audience}
+
+Use the `INSERT OVERWRITE INTO` command to replace all existing profiles in an audience with the results of a new SQL query. This command is useful for managing dynamic audience segments by allowing you to fully refresh an audience's contents in a single step.
+
+>[!AVAILABILITY]
+>
+>The `INSERT OVERWRITE INTO` command is only available to Data Distiller customers. To learn more about the Data Distiller add-on, contact your Adobe representative.
+
+Unlike [`INSERT INTO`](#add-profiles-to-audience), which adds to the current audience, `INSERT OVERWRITE INTO` removes all existing audience members and inserts only those returned by the query. This provides greater control and flexibility when managing audiences that require frequent or complete updates.
+
+Use the following syntax template to overwrite an audience with a new set of profiles:
+
+```sql
+INSERT OVERWRITE INTO audience_name
+SELECT select_query
+```
+
+**Parameters**
+
+The table below explains the parameters required for the `INSERT OVERWRITE INTO` command:
+
+| Parameter | Description |
+|-----------|-------------|
+| `audience_name` | The name of the audience created using the `CREATE AUDIENCE` command. |
+| `select_query` | A `SELECT` statement that defines the profiles to be included in the audience. |
+
+**Example:**
+
+In this example, the `audience_monthly_refresh` audience is completely overwritten with the results of the query. Any profiles not returned by the query are removed from the audience.
+
+>[!NOTE]
+>
+>There must be only one batch upload associated with the audience for overwrite operations to work correctly.
+
+```sql
+INSERT OVERWRITE INTO audience_monthly_refresh
+SELECT user_id FROM latest_transaction_summary WHERE total_spend > 100;
+```
+
+#### Audience overwrite behavior in Real-Time Customer Profile
+
+When you overwrite an audience, Real-Time Customer Profile applies the following logic to update profile membership:
+
+- Profiles that appear only in the new batch are marked as entered.
+- Profiles that existed only in the previous batch are marked as exited.
+- Profiles present in both batches are left unchanged (no operation is performed).
+
+This ensures that audience updates are accurately reflected in downstream systems and workflows.
+
+**Example scenario**
+
+If an audience `A1` originally contains:
+
+| ID |  NAME |
+|----|------|
+| A |  Jack |
+| B |  John |
+| C |  Martha |
+
+And the overwrite query returns:
+
+| ID |  NAME |
+|----|------|
+| A |  Stewart |
+| C |  Martha |
+
+Then the updated audience will contain:
+
+| ID |  NAME |
+|----|------|
+| A |  Stewart |
+| C |  Martha |
+
+Profile B is removed, profile A is updated, and profile C remains unchanged.
+
+If the overwrite query includes a new profile:
+
+| ID |  NAME |
+|----|------|
+| A  |  Stewart |
+| C  |  Martha |
+| D  |  Chris |
+
+Then the final audience will be:
+
+| ID |  NAME |
+|----|------|
+| A  |  Stewart |
+| C  |  Martha |
+| D  |  Chris |
 
 ### RFM model audience example {#rfm-model-audience-example}
 
@@ -197,7 +288,7 @@ DROP AUDIENCE IF EXISTS aud_test;
 
 ### Automatic audience registration and availability {#registration-and-availability}
 
-Audiences created using the SQL extension are automatically registered under the Data Distiller [!UICONTROL Origin] in the Audience workspace. Once registered, these audiences are available for targeting in file-based destinations, enhancing segmentation and targeting strategies. This process requires no additional configuration, streamlining audience management. For more details on how to view, manage, and create audiences within the Platform UI, see the [Audience Portal overview](../../segmentation/ui/audience-portal.md).
+Audiences created using the SQL extension are automatically registered under the Data Distiller [!UICONTROL Origin] in the Audience workspace. Once registered, these audiences are available for targeting in file-based destinations, enhancing segmentation and targeting strategies. This process requires no additional configuration, streamlining audience management. For more details on how to view, manage, and create audiences within the Experience Platform UI, see the [Audience Portal overview](../../segmentation/ui/audience-portal.md).
 
 <!-- Q) Do you know how long it takes for the audience to register? This info would help manage user expectations. -->
 
@@ -283,9 +374,9 @@ Yes, Data Distiller audiences are deleted every 30 days since they are external 
 
 After reading this document, you have learned how to use the SQL audience extension in Data Distiller to effectively create, manage, and publish audiences using SQL commands. You can now customize audience definitions based on your unique business requirements and activate them across various destinations, optimizing your marketing strategies and data-driven decisions.
 
-Next, you could read the following documentation to further develop and optimize your Platform audience management strategies:
+Next, you could read the following documentation to further develop and optimize your Experience Platform audience management strategies:
 
 - **Explore Audience Evaluation**: Learn about the [audience evaluation methods in Adobe Experience Platform](../../segmentation/home.md#evaluate-segments): streaming segmentation for real-time updates, batch segmentation for scheduled or on-demand processing, and edge segmentation for instant evaluation on the Edge Network.
-- **Integrate with Destinations**: Read the guide on how to [export files on-demand to batch destinations](../../destinations/ui/export-file-now.md) using the Platform Destinations UI.
+- **Integrate with Destinations**: Read the guide on how to [export files on-demand to batch destinations](../../destinations/ui/export-file-now.md) using the Experience Platform Destinations UI.
 - **Review Audience Performance**: Analyze how your SQL-defined audiences perform across different channels. Use data insights to adjust and improve your audience definitions and targeting strategies. Read the document on [Audience insights](../../dashboards/insights/audiences.md) to learn how to access and adapt the SQL queries for audience insights in Adobe Real-Time CDP. You can then create your own insights and transform raw data into actionable information by customizing the Audiences dashboard to effectively visualize and use these insights for better decision-making.
 

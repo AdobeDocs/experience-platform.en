@@ -26,7 +26,7 @@ You can use expiring credentials to quickly set up a connection to an external c
 
 The **[!UICONTROL Expiring credentials]** section provides the following information:
 
-- **[!UICONTROL Host]**: The name of the host to connect your client to. This incorporates the name of your organization as seen in the top ribbon of the Platform UI.
+- **[!UICONTROL Host]**: The name of the host to connect your client to. This incorporates the name of your organization as seen in the top ribbon of the Experience Platform UI.
 - **[!UICONTROL Port]**: The port number of the host to connect to.
 - **[!UICONTROL Database]**: The name of the database to connect a client to.
 - **[!UICONTROL Username]**: The username used to connect to Query Service.
@@ -66,6 +66,11 @@ See the [BI extension guide](https://experienceleague.adobe.com/en/docs/analytic
 
 ## Non-expiring credentials {#non-expiring-credentials}
 
+>[!CONTEXTUALHELP]
+>id="platform_queryservice_credentials_migratenonexpiringcredentials"
+>title="Migrate to OAuth Server-to-Server Credential"
+>abstract="This migration is required as JWT credentials will stop working after June 30, 2025. It takes about 30–40 seconds and can't be canceled once started. All existing jobs and integrations will continue to work with OAuth after migration. You can leave this screen and return any time to check the status."
+
 You can use non-expiring credentials to set up a more permanent connection to an external client.
 
 >[!NOTE]
@@ -93,7 +98,7 @@ All the required permissions are now configured in Adobe Developer Console for t
 
 ### Generate credentials {#generate-credentials}
 
-To create a set of non-expiring credentials, return to the Platform UI and select **[!UICONTROL Queries]** from the left navigation to access the [!UICONTROL Queries] workspace. Next, select the **[!UICONTROL Credentials]** tab followed by **[!UICONTROL Generate credentials]**.
+To create a set of non-expiring credentials, return to the Experience Platform UI and select **[!UICONTROL Queries]** from the left navigation to access the [!UICONTROL Queries] workspace. Next, select the **[!UICONTROL Credentials]** tab followed by **[!UICONTROL Generate credentials]**.
 
 ![The Queries dashboard with the Credentials tab and Generate credentials highlighted.](../images/ui/credentials/generate-credentials.png)
 
@@ -135,6 +140,18 @@ When editing a non-expiring credential, a modal appears. You can provide the fol
 ![The Update account dialog.](../images/ui/credentials/update-credentials.png)
 
 Once you have provided all the required details, select **[!UICONTROL Update account]** to complete the update to your credentials.
+
+### Migrate credentials to OAuth {#migrate-credentials}
+
+If you are using non-expiring JWT credentials, you must migrate each one to OAuth Server-to-Server before June 30, 2025 to avoid service disruption.
+
+>[!IMPORTANT]
+>
+>JWT credentials will stop working after June 30, 2025. You must manually complete this migration to maintain authorization.
+
+To learn how to identify affected credentials and complete the migration, see the [migrate from JWT to OAuth Server-to-Server credentials guide](./migrate-jwt-to-oauth.md).
+
+For common questions, refer to the [migration FAQ](./migrate-jwt-to-oauth.md#faq).
 
 ## Use credentials to connect to external clients {#use-credential-to-connect}
 

@@ -204,7 +204,7 @@ External Source System Audit Attributes is a standard Experience Data Model (XDM
 
 #### Customer offline transactions schema {#customer-offline-transactions-schema}
 
-This schema is used to structure and reference the event data that makes up your customer activity that occurs on platforms outside of your website. This data is typically ingested into [!DNL Adobe Experience Platform] from a POS (or similar system) and most often streamed into Platform via an API connection. Read about [batch ingestion](/help/ingestion/batch-ingestion/getting-started.md). Its purpose is to reference the various offline conversion events that are used for triggering journeys, deep online and offline customer analysis, and enhanced segmentation capabilities.
+This schema is used to structure and reference the event data that makes up your customer activity that occurs on platforms outside of your website. This data is typically ingested into [!DNL Adobe Experience Platform] from a POS (or similar system) and most often streamed into Experience Platform via an API connection. Read about [batch ingestion](/help/ingestion/batch-ingestion/getting-started.md). Its purpose is to reference the various offline conversion events that are used for triggering journeys, deep online and offline customer analysis, and enhanced segmentation capabilities.
 
 ![Customer offline transactions schema with field groups highlighted](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-offline-transactions-schema.png)
 
@@ -294,7 +294,7 @@ This use case requires that you create two audiences to define specific attribut
 
 * For information on how to create an audience, read the [Audience service UI guide](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 * For information on how to compose [audiences](/help/segmentation/home.md), read the [Audience Composition UI guide](/help/segmentation/ui/audience-composition.md).
-* For information on how to build audiences through Platform-derived segment definitions, read the [Audience Builder UI guide](/help/segmentation/ui/segment-builder.md).
+* For information on how to build audiences through Experience Platform-derived segment definitions, read the [Audience Builder UI guide](/help/segmentation/ui/segment-builder.md).
 
 Specifically, you must create and use two audiences at different steps of the use case, as shown in the image below.
 

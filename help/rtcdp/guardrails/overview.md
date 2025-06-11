@@ -15,7 +15,7 @@ Guardrails are thresholds that provide guidance for data and system usage, perfo
 Start here and follow the links below to understand all guardrails across the various services and areas of Real-Time CDP:
 
 * [Guardrails for data ingestion](/help/ingestion/guardrails.md)
-* [Guardrails for the [!DNL Edge Network Server API]](/help/server-api/guardrails.md)
+* [Guardrails for the [!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/)
 * [Guardrails for [!DNL Real-Time Customer Profile] data and segmentation](/help/profile/guardrails.md)
 * [Guardrails for [!DNL Identity Service] data](/help/identity-service/guardrails.md)
 * [Guardrails for [!DNL Query Service]](/help/query-service/guardrails.md)

@@ -25,9 +25,9 @@ This document provides default use and rate limits to help you model your Profil
 The following Experience Platform services are involved with modeling Real-Time Customer Profile data: 
 
 * [[!DNL Real-Time Customer Profile]](home.md): Create unified consumer profiles using data from multiple sources.
-* [Identities](../identity-service/home.md): Bridge identities from disparate data sources as they are ingested into Platform.
-* [Schemas](../xdm/home.md): Experience Data Model (XDM) schemas are the standardized framework by which Platform organizes customer experience data.
-* [Audiences](../segmentation/home.md): The segmentation engine within Platform is used to create audiences from your customer profiles based on customer behaviors and attributes.
+* [Identities](../identity-service/home.md): Bridge identities from disparate data sources as they are ingested into Experience Platform.
+* [Schemas](../xdm/home.md): Experience Data Model (XDM) schemas are the standardized framework by which Experience Platform organizes customer experience data.
+* [Audiences](../segmentation/home.md): The segmentation engine within Experience Platform is used to create audiences from your customer profiles based on customer behaviors and attributes.
 
 ## Limit types
 
@@ -92,7 +92,7 @@ The following guardrails refer to data size and provide recommended limits for d
 | Maximum profile fragment size | 50MB | System-enforced guardrail | **The maximum size of a single profile fragment is 50MB.** Segmentation, exports, and lookups may fail for any [profile fragment](#profile-fragments) that is larger than 50MB.|
 | Maximum profile storage size | 50MB | Performance guardrail | **The maximum size of a stored profile is 50MB.** Adding new [profile fragments](#profile-fragments) into a profile that is larger than 50MB will affect system performance. For example, a profile could contain a single fragment that is 50MB or it could contain multiple fragments across multiple datasets with a combined total size of 50MB. Attempting to store a profile with a single fragment larger than 50MB, or multiple fragments that total more than 50MB in combined size, will affect system performance.|
 | Number of Profile or ExperienceEvent batches ingested per day | 90 | Performance guardrail | **The maximum number of Profile or ExperienceEvent batches ingested per day is 90.** This means that the combined total of Profile and ExperienceEvent batches ingested each day cannot exceed 90. Ingesting additional batches will affect system performance.|
-| Number of ExperienceEvents per profile record | 5000 | Performance guardrail | **The maximum number of ExperienceEvents per profile record is 5000.** Profiles with more than 5000 ExperienceEvents will **not** be considered for segmentation. | 
+| Number of ExperienceEvents per profile record | 5000 | Performance guardrail | **The maximum number of ExperienceEvents per profile record is 5000.** Profiles with more than 5000 ExperienceEvents will only use the **latest** 5000 ExperienceEvents when used with segmentation. | 
 
 {style="table-layout:auto"}
 
@@ -121,6 +121,9 @@ The guardrails outlined in this section refer to the number and nature of audien
 | Account audiences per sandbox | 50 | System-enforced guardrail | You can create a maximum of 50 account audiences in a sandbox. After you reach 50 audiences in a sandbox, the **[!UICONTROL Create audience]** control is disabled when trying to create a new account audience. Read more about [account audiences](/help/segmentation/types/account-audiences.md). |
 | Published compositions per sandbox | 10 | Performance guardrail | You can have a maximum of  10 published compositions in a sandbox. Read more about [audience composition in the UI guide](/help/segmentation/ui/audience-composition.md). |
 | Maximum audience size | 30 percent | Performance guardrail | The recommended maximum membership of an audience is 30 percent of the total number of profiles in the system. Creating audiences with more than 30% of the profiles as members or multiple large audiences is possible but will impact system performance. |
+| Flexible audience evaluation runs | 50 per year (production sandbox)<br/>100 per year (development sandbox) | System-enforced guardrail | You have a maximum of 50 flexible audience evaluation runs per year per **production** sandbox. You have a maximum of 100 flexible audience evaluation runs per year per **development** sandbox. |
+| Flexible audience evaluation runs | 2 per day | System-enforced guardrail | You have a maximum of 2 runs per day per sandbox. |
+| Audiences per flexible audience evaluation run | 20 | System-enforced guardrail | You can have a maximum of 20 audiences per flexible audience evaluation run. |
 
 {style="table-layout:auto"}
 
@@ -168,9 +171,9 @@ In this document, there are several guardrails that refer to "profile fragments.
 
 ### Merge policies {#merge-policies}
 
-When bringing data together from multiple sources, merge policies are the rules that Platform uses to determine how data will be prioritized and what data will be combined to create that unified view. For example, if a customer interacts with your brand across several channels, your organization will have multiple profile fragments related to that single customer appearing in multiple datasets. When these fragments are ingested into Platform, they are merged together in order to create a single profile for that customer. When the data from multiple sources conflicts the merge policy determines which information to include in the profile for the individual. A maximum of five (5) merge policies that use the `_xdm.context.profile` schema are allowed per sandbox. To learn more about merge policies, please read the [merge policies overview](merge-policies/overview.md).
+When bringing data together from multiple sources, merge policies are the rules that Experience Platform uses to determine how data will be prioritized and what data will be combined to create that unified view. For example, if a customer interacts with your brand across several channels, your organization will have multiple profile fragments related to that single customer appearing in multiple datasets. When these fragments are ingested into Experience Platform, they are merged together in order to create a single profile for that customer. When the data from multiple sources conflicts the merge policy determines which information to include in the profile for the individual. A maximum of five (5) merge policies that use the `_xdm.context.profile` schema are allowed per sandbox. To learn more about merge policies, please read the [merge policies overview](merge-policies/overview.md).
 
-### Adobe Analytics report suite datasets in Platform {#aa-datasets}
+### Adobe Analytics report suite datasets in Experience Platform {#aa-datasets}
 
 Multiple report suites can be enabled for Profile as long as all data conflicts are resolved. You can use the Data Prep functionality to resolve data conflicts across eVars, Lists, and Props. To learn more about how to use the Data Prep functionality, please read the [Adobe Analytics connector UI guide](../sources/tutorials/ui/create/adobe-applications/analytics.md). 
 

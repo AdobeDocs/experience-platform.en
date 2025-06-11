@@ -35,7 +35,7 @@ After you complete the prerequisites, connect to the [!DNL Commerce] destination
 
 To connect to the [!DNL Adobe Commerce] destination:
 
-1. In the [Platform interface](https://experience.adobe.com/platform/), go to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+1. In the [Experience Platform interface](https://experience.adobe.com/platform/), go to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 1. Select **[!UICONTROL Personalization]**.
 1. Select the Adobe Commerce destination to highlight it, then select **[!UICONTROL Set up]**.
 1. Follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).

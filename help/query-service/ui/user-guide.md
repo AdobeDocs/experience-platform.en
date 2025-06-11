@@ -9,7 +9,7 @@ exl-id: d7732244-0372-467d-84e2-5308f42c5d51
 
 Query Editor is an interactive tool provided by Adobe Experience Platform Query Service, which allows you to write, validate, and run queries for customer experience data within the [!DNL Experience Platform] user interface. Query Editor supports developing queries for analysis and data exploration, and allows you to run interactive queries for development purposes as well as non-interactive queries to populate datasets in [!DNL Experience Platform].
 
-For more information about the concepts and features of Query Service, see the [Query Service overview](../home.md). To learn more about how to navigate the Query Service user interface on [!DNL Platform], see the [Query Service UI overview](./overview.md).
+For more information about the concepts and features of Query Service, see the [Query Service overview](../home.md). To learn more about how to navigate the Query Service user interface on [!DNL Experience Platform], see the [Query Service UI overview](./overview.md).
 
 ## Getting started {#getting-started}
 
@@ -91,7 +91,7 @@ The Query Editor has a maximum 50,000 row output. You can choose the number of r
 
 >[!NOTE]
 >
->As the Platform UI can support up to 1000 rows, passing a LIMIT value over 1000 is ignored.
+>As the Experience Platform UI can support up to 1000 rows, passing a LIMIT value over 1000 is ignored.
 
 ![The Query Editor with the Result count dropdown highlighted.](../images/ui/query-editor/result-count.png)
 
@@ -228,11 +228,69 @@ The console provides information on the status and operation of Query Service. T
 >
 >The console only shows errors that resulted from the execution of a query. It does not show the query validation errors that occur before a query is executed.
 
-### Query results {#query-results}
+## Query results {#query-results}
 
 After a query has been completed, the results are displayed in the **[!UICONTROL Results]** tab, next to the **[!UICONTROL Console]** tab. This view shows the tabular output of your query, displaying between 50 and 1000 rows of results depending on your chosen [result count](#result-count). This view allows you to verify that your query produces the expected output. To generate a dataset with your query, remove limits on rows returned, and run the query with `CREATE TABLE tablename AS SELECT` to generate a dataset with the output. See the [generating datasets tutorial](./create-datasets.md) for instructions on how to generate a dataset from query results in Query Editor.
 
 ![The Results tab of the Query Editor console displaying the results of a query run.](../images/ui/query-editor/query-results.png)
+
+### Download query results {#download-query-results}
+
+>[!AVAILABILITY] 
+>
+>Download capabilities are available only to customers with the Data Distiller add-on. To learn more about Data Distiller, contact your Adobe representative.
+
+After running a successful query, download the results in CSV, XLSX, or JSON format to use in offline analysis, reporting, or spreadsheet workflows. This functionality streamlines workflows for marketing and analytics teams by enabling immediate access to query results for offline analysis, reporting, and Excel-based processes.
+
+To download your query results, select **[!UICONTROL Download]** in the upper-right corner of the Query Editor **[!UICONTROL Result]** tab. Then choose **[!UICONTROL CSV]**, **[!UICONTROL XLSX]**, or **[!UICONTROL JSON]** from the dropdown menu. The file is downloaded automatically to your local machine. Choose the format that fits your use case, CSV for lightweight exports, XLSX for formatted spreadsheets, or JSON for structured data handling.
+
+>[!NOTE]
+>
+>If the **[!UICONTROL Download]** button is missing, check your query results. The button appears only when records are returned. If no records are returned, the **[!UICONTROL Result]** tab shows a 'No results' message and the download option is disabled.
+
+![The results tab of the Query Editor with Download and the dropdown menu highlighted.](../images/ui/overview/download-results.png)
+
+>[!NOTE]
+>
+>When opening a CSV file in Excel, you may see the following warning:<br>"Possible Data Loss. Some features might be lost if you save this workbook in the comma-delimited (.csv) format. To preserve these features, save it in an Excel file format."<br>In addition, be aware that date and time formatting may vary by file type. CSV files retain the format shown in the query results, while XLSX files may apply localized formatting automatically in Excel. If this warning appears, you can safely continue. To preserve Excel-specific formatting, save the file as XLSX instead.
+
+### View results in full screen {#view-results}
+
+After executing a successful query, select **[!UICONTROL View results]** in the **[!UICONTROL Result]** tab to open a tabulated, full-screen view of your results.
+
+Use full-screen preview to easily scan wide tables and inspect row-level details without horizontal scrolling. The full-screen view displays the output in a resizable grid, making it easier to review large datasets and scan across columns.
+
+>[!NOTE]
+>
+>The preview is read-only and does not modify your query or dataset.
+
+![The full-screen preview dialog with View results selected.](../images/ui/overview/view-results-fullscreen.png)
+
+### Copy results {#copy-results}
+
+Use the enhanced copy feature in Query Editor to copy query results as comma-separated values (CSV) and paste them into spreadsheet tools like Excel for immediate validation or reporting. This functionality improves readability, preserves formatting, and streamlines workflows without relying on third-party tools.
+
+You can copy query results either from the [!UICONTROL Result] tab or from the full-screen results preview. From the **[!UICONTROL Result]** tab, select the copy icon (![A copy icon.](../../images/icons/copy.png)) to copy all query results to your clipboard. To enable the copy icon, first select a row. You can select individual rows or use the checkbox at the top to select all rows at once.
+
+![The results tab of the Query Editor with the copy icon highlighted.](../images/ui/overview/query-editor-copy-icon.png)
+
+Alternatively, select **[!UICONTROL View results]** to open the full-screen preview. From this dialog, select individual rows or use the checkbox in the upper-left corner to select all rows, then select the copy icon (![A copy icon.](../../images/icons/copy.png)) to copy the selected data.
+
+![The full-screen preview dialog with result rows selected and the copy icon highlighted.](../images/ui/overview/results-copy.png)
+
+### Legacy results table (limited availability) {#legacy-results-table}
+
+>[!AVAILABILITY]
+>
+>The legacy results table is only available to select users through a feature flag and may not appear in your current Query Editor experience. If your team relies on drag-to-select workflows, contact your Adobe representative to request access.
+
+The legacy version of the Query Editor is intended for users who rely on flexible, manual data workflows such as QA or spreadsheet-based review. 
+
+It supports native browser-based drag selection, so you can highlight and copy any portion of the output—including individual cells or blocks—using standard selection behavior. This contrasts with the enhanced table, which uses structured row selection and dedicated copy actions.
+
+Copied data is tab-delimited, so when you paste it into tools like Excel, the columns stay aligned and readable. Column headers are also included when drag-selecting across the header row.
+
+![The display of results in the legacy editor with simple drag-to-select results highlighted.](../images/ui/query-editor/legacy-results-table.png)
 
 ## Examples {#examples}
 
@@ -252,4 +310,4 @@ The following video shows how to run queries in the Adobe Experience Platform in
 
 ## Next steps
 
-Now that you know what features are available in Query Editor and how to navigate the application, you can start authoring your own queries directly in [!DNL Platform]. For more information about running SQL queries against datasets in [!DNL Data Lake], see the guide on [running queries](../best-practices/writing-queries.md). 
+Now that you know what features are available in Query Editor and how to navigate the application, you can start authoring your own queries directly in [!DNL Experience Platform]. For more information about running SQL queries against datasets in [!DNL Data Lake], see the guide on [running queries](../best-practices/writing-queries.md). 

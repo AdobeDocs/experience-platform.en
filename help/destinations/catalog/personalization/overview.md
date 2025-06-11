@@ -12,7 +12,7 @@ Personalization platforms collect data and insights from individual behaviors. T
 
 ## Supported personalization destinations {#supported-destinations}
 
-Currently, Platform supports the personalization destinations listed below. For information on how to connect to these destinations, see the individual links:
+Currently, Experience Platform supports the personalization destinations listed below. For information on how to connect to these destinations, see the individual links:
 
 **Connections**
 
@@ -20,6 +20,7 @@ Currently, Platform supports the personalization destinations listed below. For 
 * [Adobe Commerce](adobe-commerce.md)
 * [Custom personalization connection](custom-personalization.md)
 * [Pega Customer Decision Hub connection](pega.md)
+* [(V2) Pega Customer Decision Hub connection](pega.md)
 * [Pega Profile connection](pega-profile.md)
 
 **Extensions**

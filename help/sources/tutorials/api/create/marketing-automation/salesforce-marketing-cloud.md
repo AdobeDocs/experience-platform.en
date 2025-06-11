@@ -7,7 +7,7 @@ exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
 
 >[!WARNING]
 >
->The [!DNL Salesforce Marketing Cloud] source will be deprecated at the end of June 2025.
+>The [!DNL Salesforce Marketing Cloud] source will be deprecated in January 2026. A new source will be released later this year as an alternative. Once the new source is released, you must plan to migrate to the new source by creating new account connections and dataflows before the end of January 2026.
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
@@ -17,12 +17,12 @@ This tutorial walks you through the steps to create a base connection for [!DNL 
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-### Using Platform APIs
+### Using Experience Platform APIs
 
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
+For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../../../landing/api-guide.md).
 
 The following section provides additional information that you will need to know in order to successfully connect to [!DNL Salesforce Marketing Cloud] using the [!DNL Flow Service] API.
 
@@ -45,7 +45,7 @@ For more information about getting started, refer to this [[!DNL Salesforce Mark
 >
 >Custom object ingestion is currently not supported by the [!DNL Salesforce Marketing Cloud] source integration.
 
-A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
+A base connection retains information between your source and Experience Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
 To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Salesforce Marketing Cloud] authentication credentials as part of the request body.
 
@@ -107,4 +107,4 @@ A successful response returns the newly created connection, including its unique
 By following this tutorial, you have created a [!DNL Salesforce Marketing Cloud] base connection using the [!DNL Flow Service] API. You can use this base connection ID in the following tutorials:
 
 * [Explore the structure and contents of your data tables using the [!DNL Flow Service] API](../../explore/tabular.md)
-* [Create a dataflow to bring marketing automation data to Platform using the [!DNL Flow Service] API](../../collect/marketing-automation.md)
+* [Create a dataflow to bring marketing automation data to Experience Platform using the [!DNL Flow Service] API](../../collect/marketing-automation.md)

@@ -30,7 +30,7 @@ Attribution AI is used to attribute credits to touchpoints leading to conversion
 
 | Feature | Description |
 | ------- | ----------- |
-| Support for Privacy | <ul><li> Attribution AI now supports defining user roles and access policies to manage [permissions](../../../help/access-control/abac/ui/permissions.md) for features and objects within a product application. </li><li>Audit log resources are recorded automatically as the activity occurs.</li><li> Through [attribute-based access control](../../access-control/abac/overview.md), administrators can control access to specific objects and/or capabilities based on certain attributes, which can be metadata added to an object, such as labels.Administrators can also define user roles that have access to only specific fields and data that correspond to those fields.</li><li>Attribution AI leverages Platform datasets. To support consumer rights requests a brand may receive, brands should use Platform Privacy Service to submit consumer requests of access and delete to remove their data across the data lake, Identity Service, and Real-Time Customer Profile.  </li><li>All datasets used for input/output of models will follow Platform guidelines. Platform Data Encryption applies for data at-rest and in-transit. See the documentation to learn more about [data encryption](../../../help/landing/governance-privacy-security/encryption.md).</li></ul>|
+| Support for Privacy | <ul><li> Attribution AI now supports defining user roles and access policies to manage [permissions](../../../help/access-control/abac/ui/permissions.md) for features and objects within a product application. </li><li>Audit log resources are recorded automatically as the activity occurs.</li><li> Through [attribute-based access control](../../access-control/abac/overview.md), administrators can control access to specific objects and/or capabilities based on certain attributes, which can be metadata added to an object, such as labels.Administrators can also define user roles that have access to only specific fields and data that correspond to those fields.</li><li>Attribution AI leverages Experience Platform datasets. To support consumer rights requests a brand may receive, brands should use Experience Platform Privacy Service to submit consumer requests of access and delete to remove their data across the data lake, Identity Service, and Real-Time Customer Profile.  </li><li>All datasets used for input/output of models will follow Experience Platform guidelines. Experience Platform Data Encryption applies for data at-rest and in-transit. See the documentation to learn more about [data encryption](../../../help/landing/governance-privacy-security/encryption.md).</li></ul>|
 
 {style="table-layout:auto"}
 
@@ -46,7 +46,7 @@ Customer AI available in Real-Time Customer Data Platform, is used to generate c
 
 | Feature | Description |
 | ------- | ----------- |
-| Support for Privacy | <ul><li> Customer AI now supports defining user roles and access policies to manage [permissions](../../../help/access-control/abac/ui/permissions.md) for features and objects within a product application. </li><li>Audit log resources are recorded automatically as the activity occurs.</li><li> Through [attribute-based access control](../../access-control/abac/overview.md), administrators can control access to specific objects and/or capabilities based on certain attributes. These attributes can be metadata added to an object, such as labels. Administrators can also define user roles that have access to only specific fields and data that correspond to those fields.</li><li>Customer AI leverages Platform datasets. To support consumer rights requests a brand may receive, brands should use Platform Privacy Service to submit consumer requests of access and delete to remove their data across the data lake, Identity Service, and Real-Time Customer Profile. </li><li>All datasets used for input/output of models will follow Platform guidelines. Platform Data Encryption applies for data at-rest and in-transit. See the documentation to learn more about [data encryption](../../../help/landing/governance-privacy-security/encryption.md).</li></ul>|
+| Support for Privacy | <ul><li> Customer AI now supports defining user roles and access policies to manage [permissions](../../../help/access-control/abac/ui/permissions.md) for features and objects within a product application. </li><li>Audit log resources are recorded automatically as the activity occurs.</li><li> Through [attribute-based access control](../../access-control/abac/overview.md), administrators can control access to specific objects and/or capabilities based on certain attributes. These attributes can be metadata added to an object, such as labels. Administrators can also define user roles that have access to only specific fields and data that correspond to those fields.</li><li>Customer AI leverages Experience Platform datasets. To support consumer rights requests a brand may receive, brands should use Experience Platform Privacy Service to submit consumer requests of access and delete to remove their data across the data lake, Identity Service, and Real-Time Customer Profile. </li><li>All datasets used for input/output of models will follow Experience Platform guidelines. Experience Platform Data Encryption applies for data at-rest and in-transit. See the documentation to learn more about [data encryption](../../../help/landing/governance-privacy-security/encryption.md).</li></ul>|
 
 {style="table-layout:auto"}
 
@@ -88,7 +88,7 @@ To learn more about [!DNL Data Prep], see the [[!DNL Data Prep] overview](../../
 
 | Feature | Description |
 | ----------- | ----------- |
-| (Beta) Attribute-based personalization support for personalization destinations| With the beta release of attribute-based personalization, you will see two new cards in the [destination catalog](../../destinations/catalog/overview.md): <ul><li>**[!UICONTROL Adobe Target V2]**: This connector is currently in beta and only available to a select number of customers. In addition to the functionality provided by the Adobe Target V1 card, the Target V2 connector adds a [mapping step](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes) to the activation workflow, which allows you to map profile attributes to Adobe Target, enabling attribute-based same-page and next-page personalization.</li><li>**[!UICONTROL Custom Personalization With Attributes]**: This connector is currently in beta and only available to a select number of customers. In addition to the functionality provided by the **[!UICONTROL Custom Personalization]**, the **[!UICONTROL Custom Personalization With Attributes]** connector adds an optional [mapping step](../../destinations/ui/activate-edge-personalization-destinations.md#map-attributes) to the activation workflow, which allows you to map profile attributes to your custom personalization destination, enabling attribute-based same-page and next-page personalization.</li></ul> <br> Profile attributes may contain sensitive data. To protect this data, the **[!UICONTROL Custom Personalization With Attributes]** destination requires you to use the [Edge Network Server API](../../server-api/overview.md) for data collection. Furthermore, all the Server API calls must be made in an [authenticated context](../../server-api/authentication.md).|
+| (Beta) Attribute-based personalization support for personalization destinations| With the beta release of attribute-based personalization, you will see two new cards in the [destination catalog](../../destinations/catalog/overview.md): <ul><li>**[!UICONTROL Adobe Target V2]**: This connector is currently in beta and only available to a select number of customers. In addition to the functionality provided by the Adobe Target V1 card, the Target V2 connector adds a [mapping step](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes) to the activation workflow, which allows you to map profile attributes to Adobe Target, enabling attribute-based same-page and next-page personalization.</li><li>**[!UICONTROL Custom Personalization With Attributes]**: This connector is currently in beta and only available to a select number of customers. In addition to the functionality provided by the **[!UICONTROL Custom Personalization]**, the **[!UICONTROL Custom Personalization With Attributes]** connector adds an optional [mapping step](../../destinations/ui/activate-edge-personalization-destinations.md#map-attributes) to the activation workflow, which allows you to map profile attributes to your custom personalization destination, enabling attribute-based same-page and next-page personalization.</li></ul> <br> Profile attributes may contain sensitive data. To protect this data, the **[!UICONTROL Custom Personalization With Attributes]** destination requires you to use the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/getting-started/) for data collection. Furthermore, all the Edge Network API calls must be made in an [authenticated context](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication).|
 
 {style="table-layout:auto"}
 
@@ -96,7 +96,7 @@ To learn more about [!DNL Data Prep], see the [[!DNL Data Prep] overview](../../
 
 | Destination | Description |
 | ----------- | ----------- |
-| [[!DNL Outreach]](../..//destinations/catalog/crm/outreach.md) | [[!DNL Outreach]](https://www.outreach.io/) is a Sales Execution Platform with the most B2B buyer-seller interaction data in the world and significant investments in proprietary AI technologies to translate sales data into intelligence. [!DNL Outreach] helps organizations automate sales engagement and act on revenue intelligence to improve their efficiency, predictability, and growth. |
+| [[!DNL Outreach]](../..//destinations/catalog/crm/outreach.md) | [[!DNL Outreach]](https://www.outreach.io/) is a Sales Execution Experience Platform with the most B2B buyer-seller interaction data in the world and significant investments in proprietary AI technologies to translate sales data into intelligence. [!DNL Outreach] helps organizations automate sales engagement and act on revenue intelligence to improve their efficiency, predictability, and growth. |
 
 {style="table-layout:auto"}
 
@@ -131,7 +131,7 @@ XDM is an open-source specification that provides common structures and definiti
 
 {style="table-layout:auto"}
 
-For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md).
+For more information on XDM in Experience Platform, see the [XDM System overview](../../xdm/home.md).
 
 ## Real-Time Customer Profile {#profile}
 
@@ -139,7 +139,7 @@ Adobe Experience Platform enables you to drive coordinated, consistent, and rele
 
 | Feature | Description |
 | ------- | ----------- |
-| Merge policies hard limit | Platform will now enforce a hard limit of **five** merge policies per sandbox. If your sandbox currently has more than five merge policies, you will **not** be able to create new merge policies until the sandbox has less than five merge policies. |
+| Merge policies hard limit | Experience Platform will now enforce a hard limit of **five** merge policies per sandbox. If your sandbox currently has more than five merge policies, you will **not** be able to create new merge policies until the sandbox has less than five merge policies. |
 | Orphaned profile edge attribute cleanup | For all organizations, Profile Service now removes leftover edge attributes of user activity region on a daily basis to give a more accurate representation of your profiles in your system. This cleanup occurs after all the profile fragments for a given profile are deleted and should impact profiles being merged from datasets where `com_adobe_aep_profile_region_dataset` is marked as `true`. This may show a drop in the "Addressable audience" metric in the license usage dashboard and may show a drop in the "Profile count" metric in the Profile dashboard, since these metrics included leftover edge attribute fragments prior to this release. |
 
 {style="table-layout:auto"}
@@ -154,13 +154,13 @@ To learn more about Real-Time Customer Profile, including tutorials and best pra
 
 | Feature | Description |
 | ------- | ----------- |
-| Support for 4000 segments | All organizations with Platform can now support up to 4000 segment definitions. For more information on how this change affects the segment job APIs, please read the [segment job endpoint guide](../../segmentation/api/segment-jobs.md) |
+| Support for 4000 segments | All organizations with Experience Platform can now support up to 4000 segment definitions. For more information on how this change affects the segment job APIs, please read the [segment job endpoint guide](../../segmentation/api/segment-jobs.md) |
 
 For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md).
 
 ## Sources {#sources}
 
-Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
+Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
 
 Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 

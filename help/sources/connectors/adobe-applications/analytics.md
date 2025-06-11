@@ -5,7 +5,7 @@ exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
 ---
 # Adobe Analytics source connector for report-suite data
 
-Adobe Experience Platform allows you to ingest Adobe Analytics data through the Analytics source connector. The [!DNL Analytics] source connector streams data collected by [!DNL Analytics] to Platform in real-time, converting SCDS-formatted [!DNL Analytics] data into [!DNL Experience Data Model] (XDM) fields for consumption by Platform.
+Adobe Experience Platform allows you to ingest Adobe Analytics data through the Analytics source connector. The [!DNL Analytics] source connector streams data collected by [!DNL Analytics] to Experience Platform in real-time, converting SCDS-formatted [!DNL Analytics] data into [!DNL Experience Data Model] (XDM) fields for consumption by Experience Platform.
 
 This document provides an overview of [!DNL Analytics] and describes the use-cases for [!DNL Analytics] data.
 
@@ -15,7 +15,7 @@ This document provides an overview of [!DNL Analytics] and describes the use-cas
 
 ![A graphic illustrating the journey of data from different Adobe applications, including Adobe Analytics.](./images/analytics-data-experience-platform.png)
 
-At a high level, [!DNL Analytics] collects data from various digital channels and multiple data centers around the world. Once the data is collected, Visitor Identification, Segmentation and Transformation Architecture (VISTA) rules, and processing rules are applied to shape the incoming data. After raw data has gone through this lightweight processing, it is then considered ready for consumption by [!DNL Real-Time Customer Profile]. In a process parallel to the aforementioned, the same processed data is micro-batched and ingested into Platform datasets for consumption by [!DNL Query Service], and other data-discovery applications.
+At a high level, [!DNL Analytics] collects data from various digital channels and multiple data centers around the world. Once the data is collected, Visitor Identification, Segmentation and Transformation Architecture (VISTA) rules, and processing rules are applied to shape the incoming data. After raw data has gone through this lightweight processing, it is then considered ready for consumption by [!DNL Real-Time Customer Profile]. In a process parallel to the aforementioned, the same processed data is micro-batched and ingested into Experience Platform datasets for consumption by [!DNL Query Service], and other data-discovery applications.
 
 See the [processing rules overview](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html) for more information on processing rules.
 
@@ -33,13 +33,13 @@ To learn more about XDM, please see the [XDM System overview](../../../xdm/home.
 >
 >Data Prep transformations may add latency to the overall dataflow. The additional latency added varies based on the complexity of the transformation logic. 
 
-When a source connection is established for bringing [!DNL Analytics] data into Experience Platform using the Platform user interface, data fields are automatically mapped and ingested into [!DNL Real-Time Customer Profile] within minutes. For instructions on creating a source connection with [!DNL Analytics] using the Platform UI, see the [Analytics source connector tutorial](../../tutorials/ui/create/adobe-applications/analytics.md).
+When a source connection is established for bringing [!DNL Analytics] data into Experience Platform using the Experience Platform user interface, data fields are automatically mapped and ingested into [!DNL Real-Time Customer Profile] within minutes. For instructions on creating a source connection with [!DNL Analytics] using the Experience Platform UI, see the [Analytics source connector tutorial](../../tutorials/ui/create/adobe-applications/analytics.md).
 
 For detailed information on the field mapping that occurs between [!DNL Analytics] and Experience Platform, see the [Adobe Analytics field mapping](./mapping/analytics.md) guide.
 
-## What is the expected latency for Analytics Data on Platform?
+## What is the expected latency for Analytics Data on Experience Platform?
 
-The expected latency for Analytics Data on Platform is outlined in the table below. Latency will vary depending on customer configuration, data volumes, and consumer applications. For example, if the Analytics implementation is configured with `A4T` the latency to Pipeline will increase to 5-10 minutes.
+The expected latency for Analytics Data on Experience Platform is outlined in the table below. Latency will vary depending on customer configuration, data volumes, and consumer applications. For example, if the Analytics implementation is configured with `A4T` the latency to Pipeline will increase to 5-10 minutes.
 
 | Analytics Data | Expected Latency |
 | -------------- | ---------------- |
@@ -53,6 +53,8 @@ The expected latency for Analytics Data on Platform is outlined in the table bel
 For more information about Customer Journey Analytics latencies, see: [Customer Journey Analytics Guardrails](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=en).
 
 The Analytics backfill for production sandboxes defaults to 13 months. For Analytics data in non-production sandboxes, backfill is set to three months. The limit of 10 billion events mentioned in the table above is strictly with respect to expected latency. 
+
+For production sandboxes, if you have licensed the additional SKU that entitles you to import more than 13 months of historical backfill data, contact Adobe to request the extended backfill.
 
 When you create an Analytics source dataflow in a production sandbox, two dataflows are created:
 

@@ -24,13 +24,13 @@ The **[!UICONTROL Overview]** tab displays the [!UICONTROL Destinations] dashboa
 
 ## [!UICONTROL Catalog] {#catalog}
 
-The **[!UICONTROL Catalog]** tab displays a list of all destinations available in [!DNL Platform], that you can send data to. 
+The **[!UICONTROL Catalog]** tab displays a list of all destinations available in [!DNL Experience Platform], that you can send data to. 
 
-The [!DNL Platform] user interface provides several search and filter options on the destinations catalog page:
+The [!DNL Experience Platform] user interface provides several search and filter options on the destinations catalog page:
 
 * Use the search functionality on the page to locate a specific destination.
 * Filter destinations using the [!UICONTROL Categories] control.
-* Toggle between [!UICONTROL All destinations] and [!UICONTROL My destinations]. When you select **[!UICONTROL All destinations]**, all available [!DNL Platform] destinations are displayed. When you select **[!UICONTROL My destinations]**, you can only see the destinations with which you have established a connection.
+* Toggle between [!UICONTROL All destinations] and [!UICONTROL My destinations]. When you select **[!UICONTROL All destinations]**, all available [!DNL Experience Platform] destinations are displayed. When you select **[!UICONTROL My destinations]**, you can only see the destinations with which you have established a connection.
 * Select to view the **[!UICONTROL Connections]** and/or **[!UICONTROL Extensions]** types. To understand the difference between the two categories, read [Destination Types and Categories](../destination-types.md).
 
 ![Destinations catalog showing a few advertising and cloud storage destinations.](../assets/ui/workspace/catalog.png)
@@ -76,6 +76,7 @@ The **[!UICONTROL Accounts]** tab shows you details about the connections that y
 |[!UICONTROL Username] | The username you selected in the [connect destination workflow](../catalog/email-marketing/overview.md#connect-destination).|
 |[!UICONTROL Connections] | Represents the number of unique successful destination dataflows connected with basic information created for a destination.|
 |[!UICONTROL Authorization date] | The date when the connection to this destination was authorized.|
+|[!UICONTROL Expiration date] | The date when the connection authorization to this destination will expire. <br>**Important**: This column is currently available only for the [Facebook](../catalog/social/facebook.md) connection.|
 
 {style="table-layout:auto"}
 
@@ -97,9 +98,11 @@ The **[!UICONTROL Browse]** tab displays the destinations with which you have es
 |Element | Description |
 |---------|----------|
 |Name | The name you provided for your activation flow to this destination. The same column includes two controls: [!UICONTROL Activate ] and [!UICONTROL Delete destination].|
-|[!UICONTROL Last Flow Run Status] | The status of the last dataflow run. See [View destination details](destination-details-page.md) for more information about dataflow runs.|
-|[!UICONTROL Last Flow Run Date] | Time and date when the last dataflow run has occurred. See [View destination details](destination-details-page.md) for more information about dataflow runs.|
+|Data Type | The type of data supported by the destination connection. Supported data types: <ul><li>**[!UICONTROL Customers]**</li><li>**[!UICONTROL Prospects]**</li><li>**[!UICONTROL Accounts]**</li><li>**[!UICONTROL Datasets]**</li></ul> |
+|[!UICONTROL Last Dataflow Run Status] | The status of the last dataflow run. See [View destination details](destination-details-page.md) for more information about dataflow runs.|
+|[!UICONTROL Last Dataflow Run Date] | Time and date when the last dataflow run has occurred. See [View destination details](destination-details-page.md) for more information about dataflow runs.|
 |[!UICONTROL Destination] | The destination platform that you selected for your activation flow.|
+|[!UICONTROL Account Expiration Date] | The date when the connection authorization to this destination will expire. <br>**Important**: This column is currently available only for the [Facebook](../catalog/social/facebook.md) connection.|
 |[!UICONTROL Connection Type] | Represents the connection type to your storage bucket or destination. <ul><li>For email marketing destinations: Can be S3, FTP, or [!DNL Azure Blob].</li><li>For real-time advertising destinations: Server-to-server.</li><li>For streaming destinations: Can be [!DNL Azure Event Hubs] or [!DNL Amazon Kinesis].</li></ul>|
 |[!UICONTROL Username] | The account credentials you selected for the destination flow.|
 |[!UICONTROL Activation Data] | Indicates the number of audiences that are being activated to this destination. Select this control to find out more about the activated audiences. Refer to [Activation Data](/help/destinations/ui/destination-details-page.md#activation-data) in the destination details page for more information about the activated audiences.|

@@ -33,7 +33,7 @@ For more information on [!DNL Dashboards], please see the [[!DNL Dashboards] ove
 
 ## Data collection {#data-collection}
 
-Platform provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
+Experience Platform provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
 
 **New features**
 
@@ -41,9 +41,9 @@ Platform provides a suite of technologies that allow you to collect client-side 
 | --- | --- |
 | Improved UI workflow for datastream configuration | The workflow for creating a new datastream in the Data Collection UI has been updated. When adding services to a datastream, only the services you have access to will be included in the list of options. See the guide on [configuring a datastream](../../datastreams/overview.md) for more information. |
 | Data Prep for Data Collection | If you are using the Adobe Experience Platform Web SDK, you can now leverage Data Prep capabilities to map your data to Experience Data Model (XDM) on the server side. See the section on [Data Prep for Data Collection](../../datastreams/data-prep.md) in the datastreams guide for more information. |
-| First-party device IDs | You can now send your own device IDs to the Adobe Experience Platform Edge Network when collecting customer data using the Platform Web SDK, providing a workaround for recent browser restrictions on third-party cookie lifespans. See the guide on [first-party device IDs](../../web-sdk/identity/first-party-device-ids.md) for more information. |
+| First-party device IDs | You can now send your own device IDs to the Adobe Experience Platform Edge Network when collecting customer data using the Experience Platform Web SDK, providing a workaround for recent browser restrictions on third-party cookie lifespans. See the guide on [first-party device IDs](../../web-sdk/identity/first-party-device-ids.md) for more information. |
 
-For more information on data collection in Platform, please see the [data collection overview](../../collection/home.md).
+For more information on data collection in Experience Platform, please see the [data collection overview](../../collection/home.md).
 
 ## [!DNL Destinations] {#destinations}
 
@@ -71,7 +71,7 @@ For more general information on [!DNL Identity Service], refer to the [Identity 
 
 ## Sources {#sources}
 
-Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
+Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
 
 Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 

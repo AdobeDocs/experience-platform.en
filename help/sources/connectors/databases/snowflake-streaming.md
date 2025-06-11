@@ -14,7 +14,7 @@ exl-id: ed937689-e844-487e-85fb-e3536c851fe5
 >* You can now use the [!DNL Snowflake] streaming source when running Adobe Experience Platform on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../../landing/multi-cloud.md).
 
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
 Experience Platform provides support for streaming data from a [!DNL Snowflake] database.
 
@@ -32,7 +32,7 @@ The following section outlines prerequisite steps to complete before you can str
 
 A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md#ip-address-allow-list-for-streaming-sources) page for more information.
 
-The documentation below provides information on how to connect [!DNL Amazon Redshift] to Platform using APIs or the user interface:
+The documentation below provides information on how to connect [!DNL Amazon Redshift] to Experience Platform using APIs or the user interface:
 
 ### Gather required credentials
 
@@ -41,8 +41,8 @@ In order for [!DNL Flow Service] to connect with [!DNL Snowflake], you must prov
 | Credential | Description |
 | --- | --- |
 | `account` | The full account identifier (account name or account locator) of your [!DNL Snowflake] account appended with the suffix `snowflakecomputing.com`. The account identifier can be of different formats: <ul><li>{ORG_NAME}-{ACCOUNT_NAME}.snowflakecomputing.com (e.g. `acme-abc12345.snowflakecomputing.com`)</li><li>{ACCOUNT_LOCATOR}.{CLOUD_REGION_ID}.snowflakecomputing.com (e.g. `acme12345.ap-southeast-1.snowflakecomputing.com`)</li><li>{ACCOUNT_LOCATOR}.{CLOUD_REGION_ID}.{CLOUD}.snowflakecomputing.com (e.g. `acme12345.east-us-2.azure.snowflakecomputing.com`)</li></ul> For more information, read the [[!DNL Snowflake document on account identifiers]](<https://docs.snowflake.com/en/user-guide/admin-account-identifier.html>). |
-| `warehouse` | The [!DNL Snowflake] warehouse manages the query execution process for the application. Each [!DNL Snowflake] warehouse is independent from one another and must be accessed individually when bringing data over to Platform. |
-| `database` | The [!DNL Snowflake] database contains the data you want to bring the Platform. |
+| `warehouse` | The [!DNL Snowflake] warehouse manages the query execution process for the application. Each [!DNL Snowflake] warehouse is independent from one another and must be accessed individually when bringing data over to Experience Platform. |
+| `database` | The [!DNL Snowflake] database contains the data you want to bring the Experience Platform. |
 | `username` | The username for the [!DNL Snowflake] account. |
 | `password` | The password for the [!DNL Snowflake] user account. |
 | `role` | (Optional) A custom-defined role that can be provided for a user, for a given connection. If unprovided, this value defaults to `public`. |
@@ -80,6 +80,10 @@ For more information on role and privilege management, refer to the [[!DNL Snowf
       * `TIMESTAMP_TZ` cannot be used a timestamp column or in a mapping.
 
 ## Next steps
+
+>[!NOTE]
+>
+>After you create or update a streaming dataflow, a brief 5-minute pause in data ingestion is required to prevent any potential instances of data loss or data drops.
 
 The following tutorial provides steps on how to connect your [!DNL Snowflake] streaming source to Experience Platform using the API:
 

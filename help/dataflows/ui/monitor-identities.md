@@ -13,10 +13,10 @@ The monitoring dashboard provides you with a visual representation of the data's
 
 ## Getting started {#getting-started}
 
-- [Dataflows](../home.md): Dataflows are a representation of data jobs that move data across Platform. Dataflows are configured across different services, helping move data from source connectors to target datasets, to [!DNL Identity] and [!DNL Profile], and to [!DNL Destinations].
+- [Dataflows](../home.md): Dataflows are a representation of data jobs that move data across Experience Platform. Dataflows are configured across different services, helping move data from source connectors to target datasets, to [!DNL Identity] and [!DNL Profile], and to [!DNL Destinations].
   - [Dataflow runs](../../sources/notifications.md): Dataflow runs are the recurring scheduled jobs based on the frequency configuration of selected dataflows.
 - [Identity Service](../../identity-service/home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
-- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Experience Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ## Monitoring identities dashboard {#identity-metrics}
 
@@ -48,7 +48,7 @@ The following metrics are available for this dashboard view:
 | Identity metrics | Description |
 | ---------------- | ----------- |
 | **[!UICONTROL Records received]** | The number of records received from data lake. |
-| **[!UICONTROL Records failed]** | The number of records that were not ingested into Platform due to errors in the data. |
+| **[!UICONTROL Records failed]** | The number of records that were not ingested into Experience Platform due to errors in the data. |
 | **[!UICONTROL Records skipped]** | The number of records that were ingested, but not into [!DNL Identity Service] because there was only one identifier in the record row. |
 | **[!UICONTROL Records ingested]** | The number of records ingested into [!DNL Identity Service]. |
 | **[!UICONTROL Identities added]** | The number of net new identifiers added to [!DNL Identity Service]. |
@@ -72,7 +72,7 @@ The following metrics are available for this dashboard view:
 | **[!UICONTROL Dataset]** | The name of the dataset that the dataflow is inserting to. |
 | **[!UICONTROL Source name]** | The name of the source that the dataflow belongs to. |
 | **[!UICONTROL Records received]** | The number of records received from data lake. |
-| **[!UICONTROL Records failed]** | The number of records that were not ingested into Platform due to errors in the data. |
+| **[!UICONTROL Records failed]** | The number of records that were not ingested into Experience Platform due to errors in the data. |
 | **[!UICONTROL Records skipped]** | The number of records that were ingested, but not into [!DNL Identity Service] because there was only one identifier in the record row. |
 | **[!UICONTROL Records ingested]** | The number of records ingested into [!DNL Identity Service]. |
 | **[!UICONTROL Total records]** | The total count of all records, including records failed, records skipped, identities added, and duplicated records. |
@@ -94,7 +94,7 @@ The following metrics are available for this dashboard view:
 | Metric | Description |
 | -------| ----------- |
 | **[!UICONTROL Records received]** | The number of records received from data lake. |
-| **[!UICONTROL Records failed]** | The number of records that were not ingested into Platform due to errors in the data. |
+| **[!UICONTROL Records failed]** | The number of records that were not ingested into Experience Platform due to errors in the data. |
 | **[!UICONTROL Records skipped]** | The number of records that were ingested, but not into [!DNL Identity Service] because there was only one identifier in the record row. |
 | **[!UICONTROL Records ingested]** | The number of records ingested into [!DNL Identity Service]. |
 | **[!UICONTROL Identities added]** | The number of net new identifiers added to [!DNL Identity Service]. |

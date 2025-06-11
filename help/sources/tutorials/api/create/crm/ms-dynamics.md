@@ -1,6 +1,6 @@
 ---
 title: Create a Microsoft Dynamics Base Connection Using the Flow Service API
-description: Learn how to connect Platform to a Microsoft Dynamics account using the Flow Service API.
+description: Learn how to connect Experience Platform to a Microsoft Dynamics account using the Flow Service API.
 exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
 ---
 # Connect [!DNL Microsoft Dynamics] to Experience Platform using the [!DNL Flow Service] API
@@ -11,14 +11,14 @@ Read this guide to learn how you can connect your [!DNL Microsoft Dynamics] sour
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-### Using Platform APIs
+### Using Experience Platform APIs
 
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
+For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../../../landing/api-guide.md).
 
-The following sections provide additional information that you will need to know in order to successfully connect Platform to a Dynamics account using the [!DNL Flow Service] API.
+The following sections provide additional information that you will need to know in order to successfully connect Experience Platform to a Dynamics account using the [!DNL Flow Service] API.
 
 ### Gather required credentials
 
@@ -258,6 +258,44 @@ A successful response returns the [!DNL Dynamics] tables and views directory at 
 
 +++
 
+### Use primary key to optimize data exploration
+
+>[!NOTE]
+>
+>You can only use non-lookup attributes when using the primary key approach to optimization.
+
+You can optimize your explore queries by providing `primaryKey` as part of your query parameters. You must specify the primary key of the [!DNL Dynamics] table when including `primaryKey` as a query parameter.
+
+**API format**
+
+```http
+GET /connections/{BASE_CONNECTION_ID}/explore?preview=true&object={OBJECT}&objectType={OBJECT_TYPE}&previewCount=10&primaryKey={PRIMARY_KEY}
+```
+
+| Query parameters | Description |
+| --- | --- |
+| `{BASE_CONNECTION_ID}` | The ID of the base connection. Use this ID to explore the contents and structure of your source. |
+| `preview` | A boolean value that enables data preview. |
+| `{OBJECT}` | The [!DNL Dynamics] object that you want to explore. |
+| `{OBJECT_TYPE}` | The type of the object. |
+| `previewCount` | A restriction that limits the returned preview to only a certain number of records. |
+| `{PRIMARY_KEY}` | The primary key of the table that you are retrieving for preview.|
+
+**Request**
+
++++Select to view request example
+
+```shell
+curl -X GET \
+  'https://platform-stage.adobe.io/data/foundation/flowservice/connections/dd668808-25da-493f-8782-f3433b976d1e/explore?preview=true&object=lead&objectType=table&previewCount=10&primaryKey=leadid' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+```
+
++++
 
 ## Inspect the structure of a table
 
@@ -576,9 +614,77 @@ A successful response returns the newly generated source connection ID and its c
 
 +++
 
+### Use primary key to optimize your dataflow
+
+You can also optimize your [!DNL Dynamics] dataflow by specifying the primary key as part of your request body parameters.
+
+**API format**
+
+```http
+POST /sourceConnections
+```
+
+**Request**
+
+The following request creates a [!DNL Dynamics] source connection while specifying the primary key as `contactid`.
+
++++Select to view request example
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Dynamics Source Connection",
+      "description": "Dynamics Source Connection",
+      "baseConnectionId": "dd668808-25da-493f-8782-f3433b976d1e",
+      "data": {
+          "format": "tabular"
+      },
+      "params": {
+          "tableName": "contact",
+          "primaryKey": "contactid"
+      },
+      "connectionSpec": {
+          "id": "38ad80fe-8b06-4938-94f4-d4ee80266b07",
+          "version": "1.0"
+      }
+  }'
+```
+
+| Property | Description |
+| --- | --- |
+| `baseConnectionId` | The ID of the base connection. |
+| `data.format` | The format of the data. |
+| `params.tableName` | The name of the table in [!DNL Dynamics]. |
+| `params.primaryKey` | The primary key of the table that will optimize queries. |
+| `connectionSpec.id` | The connection spec ID that corresponds with the [!DNL Dynamics] source. |
+
++++
+
+**Response**
+
+A successful response returns the newly generated source connection ID and its corresponding etag.
+
++++Select to view response example
+
+```json
+{
+    "id": "e566bab3-1b58-428c-b751-86b8cc79a3b4",
+    "etag": "\"82009592-0000-0200-0000-678121030000\""
+}
+```
+
++++
+
+
 ## Next steps
 
 By following this tutorial, you have created a [!DNL Microsoft Dynamics] base connection using the [!DNL Flow Service] API. You can use this base connection ID in the following tutorials:
 
 * [Explore the structure and contents of your data tables using the [!DNL Flow Service] API](../../explore/tabular.md)
-* [Create a dataflow to bring CRM data to Platform using the [!DNL Flow Service] API](../../collect/crm.md)
+* [Create a dataflow to bring CRM data to Experience Platform using the [!DNL Flow Service] API](../../collect/crm.md)

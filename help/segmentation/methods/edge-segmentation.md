@@ -1,6 +1,6 @@
 ---
 title: Edge Segmentation Guide
-description: Learn how to use edge segmentation to evaluate audiences in Platform instantaneously on the edge, enabling same page and next page personalization use cases.
+description: Learn how to use edge segmentation to evaluate audiences in Experience Platform instantaneously on the edge, enabling same page and next page personalization use cases.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 ---
 # Edge segmentation guide
@@ -27,7 +27,6 @@ A query can be evaluated with edge segmentation if it meets any of the criteria 
 | Profile only | Any segment definition that refers to only a profile attribute. | `homeAddress.country.equals("US", false)` | ![An example of a profile attribute shown.](../images/methods/edge/profile-attribute.png) |
 | Single event with a profile attribute within a relative time window of less than 24 hours | Any segment definition that refers to a single incoming event, with one or more profile attributes, and occurs within a relative time window of less than 24 hours. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![An example of a single event with a profile attribute within a relative time window is shown.](../images/methods/edge/single-event-with-profile-attribute.png) |
 | Segment of segments | Any segment definition that contains one or more batch or edge segments. **Note:** If a segment of segments is used, profile disqualification will happen **every 24 hours**. | `inSegment("a730ed3f-119c-415b-a4ac-27c396ae2dff") and inSegment("8fbbe169-2da6-4c9d-a332-b6a6ecf559b9")` | ![An example of a segment of segments is shown.](../images/methods/edge/segment-of-segments.png) |
-| Multiple events with a profile attribute | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("directMarketing.emailClicked", false)) WHEN(today), C1: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![An example of multiple events with a profile attribute is shown.](../images/methods/edge/multiple-events-with-profile-attribute.png) |
 
 Additionally, the segment definition **must** be tied to a merge policy that is active on edge. For more information about merge policies, please read the [merge policies guide](../../profile/api/merge-policies.md).
 
@@ -296,7 +295,7 @@ Within the available filters, go to **Update frequency** and select "Edge". Usin
 
 ![The Edge update frequency is selected, displaying all audiences in the organization that are evaluated using edge segmentation.](../images/methods/edge/filter-edge.png)
 
-To learn more about viewing audiences in Platform, please read the [Audience Portal guide](../ui/audience-portal.md).
+To learn more about viewing audiences in Experience Platform, please read the [Audience Portal guide](../ui/audience-portal.md).
 
 >[!ENDTABS]
 
