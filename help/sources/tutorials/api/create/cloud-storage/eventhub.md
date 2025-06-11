@@ -379,6 +379,10 @@ curl -X POST \
 | `params.reset` | This parameter defines how the data will be read. Use `latest` to start reading from the most recent data, and use `earliest` to start reading from the first available data in the stream. This parameter is optional and defaults to `earliest` if unprovided. |
 | `params.consumerGroup` | The publish or subscription mechanism to be used for [!DNL Event Hubs]. This parameter is optional and defaults to `$Default` if unprovided. Refer to this [[!DNL Event Hubs] guide on event consumers](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) for more information. **Note**: An [!DNL Event Hubs] consumer group can only be used for a single flow at a given time.  |
 
+>[!NOTE]
+>
+>After you create or update a streaming dataflow, a brief 5-minute pause in data ingestion is required to prevent any potential instances of data loss or data drops.
+
 ## Next steps
 
 By following this tutorial, you have created an [!DNL Event Hubs] source connection using the [!DNL Flow Service] API. You can use this source connection ID in the next tutorial to [create a streaming dataflow using the [!DNL Flow Service] API](../../collect/streaming.md).
