@@ -4,7 +4,9 @@ description: Learn how to allowlist Adobe's static IP address in Azure Key Vault
 ---
 # Configure alerts and IP allowlist for [!DNL Azure] CMK
 
-For organizations managing sensitive data or operating under strict compliance requirements, it is best practice to restrict access to your [!DNL Azure] Key Vault to trusted IP addresses. Enabling network restrictions reduces the risk of unauthorized access and supports a stronger security posture.
+If you manage sensitive data or work under strict compliance policies, restrict [!DNL Azure] Key Vault access to trusted IP addresses to reduce the risk of unauthorized access. Enabling network restrictions reduces the risk of unauthorized access and supports a stronger security posture. 
+
+To improve transparency, Adobe has introduced a monitoring service that checks your Key Vault's access status. If an issue occurs, the system triggers platform alerts so you can respond quickly and avoid service disruptions. To enable this service, you must allowlist Adobe's static IP address.
 
 >[!IMPORTANT]
 >
@@ -16,7 +18,7 @@ To allow Adobe access while maintaining your network restrictions, navigate to y
 
 ![[!DNL Azure] Key vault Networking settings view with Allow public access from specific virtual networks and IP addresses and Add your current IP address highlighted.](../../../images/governance-privacy-security/customer-managed-keys/key-vault-networking-settings-placeholder.png)
 
-Next, in the **[!DNL Firewall]** section, select **[!DNL Add your current IP address]**. Enter the Adobe-provided static IP address for your Production or Stage environment. Adobe uses a fixed IP address that must be allowlisted to ensure uninterrupted access to your Key Vault in restricted network configurations.
+Next, in the **[!DNL Firewall]** section, select **[!DNL Add your current IP address]**, then replace it with the Adobe-provided static IP address for your environment. Adobe uses a static IP address that must be allowlisted to ensure uninterrupted access to your Key Vault in restricted network configurations.
 
 >[!NOTE]
 >
@@ -26,13 +28,15 @@ Once Adobe's static IP address is added to your [!DNL Azure] Key Vault firewall 
 
 ## Monitor alerts {#monitor-alerts}
 
-Platform alerts notify you of issues that may interrupt key access, such as **[!UICONTROL Key access failure]** or **[!UICONTROL Key disablement]**. A key access failure often means Adobe's static IP has been removed from your firewall allowlist or your networking settings are misconfigured. In these cases, review your [!DNL Azure] firewall settings and re-add the required IP to restore access.
+Platform alerts notify you of issues that may interrupt key access, such as **[!UICONTROL Key access failure]** or **[!UICONTROL Key disablement]**. These alerts help you quickly identify problems like a removed static IP or a misconfigured firewall. To restore access, review your [!DNL Azure] firewall settings and re-add the required IP address.
 
-To receive these alerts in real time, subscribe to Adobe I/O event notifications and integrate them with your organization's monitoring tools. For setup instructions, see [Subscribe to Adobe I/O Event notifications](../../../../observability/alerts/subscribe.md). Or refer to the [alerts UI guide](../../../../observability/alerts/ui.md) for more information on managing alerts.
+<!-- Link to Les' doc as per PLAT-233033 -->
+
+To receive these alerts in real time, subscribe to Adobe I/O event notifications and integrate them with your organization's monitoring tools. For setup instructions, see [Subscribe to Adobe I/O Event notifications](../../../../observability/alerts/subscribe.md). Or refer to the [alerts UI guide](../../../../observability/alerts/ui.md) to learn how to view and manage alerts within Experience Platform.
 
 ## Next steps
 
-You've now configured IP allowlisting for Adobe services and learned how to interpret platform alerts for Customer Managed Key access issues. To complete the CMK setup process for [!DNL Azure]-hosted environments, continue with the following guides:
+You've now configured IP allowlisting and alert monitoring for your [!DNL Azure] Key Vault. Continue with the steps below to complete the Customer Managed Key setup.
 
 - [Configure an [!DNL Azure] Key Vault](./azure-key-vault-config.md)  
 - [Use the API to set up CMK](./api-set-up.md)  
