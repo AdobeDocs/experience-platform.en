@@ -46,7 +46,7 @@ Experience Platform leverages [Adobe Admin Console](https://adminconsole.adobe.c
 | ------- | ----------- |
 | Export Dashboard Data permission | The **[!UICONTROL Download CSV]** and **[!UICONTROL Send as email]** options in dashboards now require the **[!UICONTROL Export Dashboard Data]** permission. This permission ensures that only authorized users can export tabulated insight data, supporting tighter governance and data access control policies. |
 
-For more information, please see the [access control overview](../../access-control/home.md). 
+For more information, please see the [access control overview](../access-control/home.md). 
 
 ## Advanced data lifecycle management {#advanced-data-lifecycle-management}
 
@@ -58,7 +58,7 @@ Experience Platform provides a suite of data hygiene capabilities that allow you
 | --- | --- |
 | Record Delete General Availability | You can now delete individual records based on identity fields using the UI or API. This feature helps reduce storage, enforce governance, and improve data hygiene by allowing deletions from a single dataset or across all datasets. Volume limits and entitlement requirements apply. |
 
-For more information, read the [advanced data lifecycle management overview](../../hygiene/home.md).
+For more information, read the [advanced data lifecycle management overview](../hygiene/home.md).
 
 ## Dashboards {#dashboards}
 
@@ -70,7 +70,7 @@ Experience Platform provides multiple dashboards through which you can view impo
 | ------- | ----------- |
 | Send as Email Export Option | You can now export up to 10,000 records from Query Pro mode dashboards by selecting **[!UICONTROL Send as email]** from the **[!UICONTROL View more]** menu. This option securely sends a download link to your Adobe-associated email for larger exports. |
 
-For more information on dashboards, including how to grant access permissions and create custom widgets, begin by reading the [dashboards overview](../../dashboards/home.md).
+For more information on dashboards, including how to grant access permissions and create custom widgets, begin by reading the [dashboards overview](../dashboards/home.md).
 
 ## Data Governance {#data-governance}
 
@@ -83,7 +83,7 @@ Adobe Experience Platform Data Governance is a series of strategies and technolo
 | Azure CMK Alerts and IP Allowlist Configuration | You can now allowlist Adobe's static IP address in Azure Key Vault to ensure continued access when network restrictions are enabled. This helps prevent disruptions to Platform services due to restricted key access. |
 | CMK Configuration Alerts and Resolutions  | Experience Platform now triggers alerts when Adobe services lose access to your Azure Key Vault (for example, due to removed IP allowlist entries or disabled keys). A new guide helps you understand each alert and take corrective action. |
 
-For more information, read the [data governance overview](../../data-governance/home.md).
+For more information, read the [data governance overview](../data-governance/home.md).
 
 ## Destinations {#destinations}
 
@@ -93,7 +93,7 @@ For more information, read the [data governance overview](../../data-governance/
 
 | Destination | Description |
 | --- | --- |
-| [Algolia User Segments](../../destinations/catalog/personalization/algolia.md) | The Algolia User Segments destination enables marketing professionals to deliver consistent personalization across sites from home page to search. Build rich audiences from multiple data sources and share them across various channels for improved targeting strategies and campaign personalization. |
+| Algolia User Segments | The Algolia User Segments destination enables marketing professionals to deliver consistent personalization across sites from home page to search. Build rich audiences from multiple data sources and share them across various channels for improved targeting strategies and campaign personalization. |
 
 **New or updated functionality**
 
@@ -108,7 +108,7 @@ For more information, read the [data governance overview](../../data-governance/
 
 {style="table-layout:auto"}
 
-For more information, read the [Destinations overview](../../destinations/home.md).
+For more information, read the [Destinations overview](../destinations/home.md).
 
 ## Federated Audience Composition {#fac}
 
@@ -130,7 +130,7 @@ Several legal and organizational regulations give users the right to access or d
 |--- | ---|
 | Support for Tennessee and Minnesota Privacy Laws | Privacy Service now supports the Tennessee Information Protection Act (`tipa_tn_usa`) and the Minnesota Consumer Data Privacy Act (`mcdpa_mn_usa`). You can process access and delete requests in compliance with these new state-level regulations. See the [Regulations overview](https://experienceleague.adobe.com/en/docs/experience-platform/privacy/regulations/overview) for more details. |
 
-See the [Privacy Service overview](../../privacy-service/home.md) for more information on the service.
+See the [Privacy Service overview](../privacy-service/home.md) for more information on the service.
 
 ## Query Service {#query-service}
 
@@ -151,7 +151,7 @@ Query data in the Adobe Experience Platform data lake using standard SQL with Qu
 
 {style="table-layout:auto"}
 
-For more information on [!DNL Query Service], please see the [[!DNL Query Service] overview](../../query-service/home.md).
+For more information on [!DNL Query Service], please see the [[!DNL Query Service] overview](../query-service/home.md).
 
 ## Sandboxes {#sandboxes}
 
@@ -165,7 +165,7 @@ Adobe Experience Platform is built to enrich digital experience applications on 
 
 {style="table-layout:auto"}
 
-For more information on sandboxes, read the [sandboxes overview](../../sandboxes/home.md).
+For more information on sandboxes, read the [sandboxes overview](../sandboxes/home.md).
 
 ## Sources {#sources}
 
@@ -186,4 +186,4 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 {style="table-layout:auto"}
 
-For more information, read the [sources overview](../../sources/home.md).
+For more information, read the [sources overview](../sources/home.md).
