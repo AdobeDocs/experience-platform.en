@@ -9,7 +9,7 @@ hidefromtoc: true
 
 >[!IMPORTANT]
 >
->This document is intended as a **preview** of the release notes for the current month. Release items are subject to change, and may be added or removed from the final copy of the release notes.
+>This document is intended as a **preview** of the release notes for the current month. Release items are subject to change, and may be added or removed in the final release.
 
 >[!TIP]
 >
