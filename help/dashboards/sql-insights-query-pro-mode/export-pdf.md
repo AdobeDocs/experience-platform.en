@@ -15,7 +15,7 @@ You custom dashboard appears. Next, select **[!UICONTROL Export]** from the top 
 
 >[!NOTE]
 >
->Visualization-only exports do not require the [!UICONTROL Export Dashboard Data] permission. See the [View more documentation](./view-more.md#export) for more details.
+>Visualization-only exports do not require the [!UICONTROL Export Dashboard Data] permission. See the [[!UICONTROL View more] documentation](./view-more.md#export) for more details.
 
 ![A custom dashboard with Export highlighted.](../images/sql-insights-query-pro-mode/export.png)
 
