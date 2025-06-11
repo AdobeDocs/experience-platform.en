@@ -173,7 +173,6 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Feature | Description |
 | --- | --- |
-| [!DNL Salesforce] soft deleted records support | Added support for soft deleted records in Salesforce CRM and Service Cloud connectors. A new optional parameter `includeDeletedObjects` is available in OAuth2 Client Credential authentication. When set to true, this parameter allows you to include soft deleted records in Salesforce queries, providing access to previously deleted data from your Salesforce account. This functionality is available in both API and UI configurations. |
 | Support for new authentication type for [!DNL Azure Synapse Analytics] | The [!DNL Azure Synapse Analytics] will now also support service principal authentication, in addition to the existing connection string authentication. |
 
 **Important authentication updates**
