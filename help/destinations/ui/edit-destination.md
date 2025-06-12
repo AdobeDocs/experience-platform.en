@@ -28,7 +28,7 @@ To edit various components of an existing destination connection:
 
 In the edit destination window, you can update any settings that you configured when you initialy connected to the destination. These settings are different based on the destination platform that you are updating.
 
-Depending on how the destination was configured, some fields might be read-only and cannot be edited. To change the value of read-only fields, you must [create a new destination connection](/destinations/ui/connect-destination.md) with the new field values.
+Depending on how the destination was configured, some fields might be read-only and cannot be edited. To change the value of read-only fields, you must [create a new destination connection](../ui/connect-destination.md) with the new field values.
 
 Below are some examples of the settings that you can update for [Amazon S3](../catalog/cloud-storage/amazon-s3.md), [Azure Event Hubs](../catalog/cloud-storage/azure-event-hubs.md), and [Google Ads](../catalog/advertising/google-ads-destination.md) destinations.
 
