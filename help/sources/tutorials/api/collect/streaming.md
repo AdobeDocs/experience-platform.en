@@ -409,6 +409,10 @@ A successful response returns a list of dataflow specifications. The dataflow sp
 
 ## Create a dataflow
 
+>[!NOTE]
+>
+>After you create or update a streaming dataflow, a brief 5-minute pause in data ingestion is required to prevent any potential instances of data loss or data drops.
+
 The last step towards collecting streaming data is to create a dataflow. By now, you have the following required values prepared:
 
 - [Source connection ID](#source)
