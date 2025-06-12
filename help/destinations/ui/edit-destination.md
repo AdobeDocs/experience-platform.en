@@ -2,10 +2,15 @@
 title: Edit destinations
 type: Tutorial
 description: Learn how to edit and update existing destinations accounts in the Adobe Experience Platform UI
+badgeBeta: label="Beta" type="Informative"
 ---
 # Edit destinations
 
 Learn how to edit various components of an existing destination connection, including how to update authentication credentials, export location, and more by using the Experience Platform UI.
+
+>[!IMPORTANT]
+>
+>This functionality is in beta and only available to select customers. To request access, contact your Adobe representative.
 
 >[!NOTE]
 >
@@ -21,7 +26,11 @@ To edit various components of an existing destination connection:
 
 ![Screen recording showing the process to edit existing destination connections.](/help/destinations/assets/ui/edit-destinations/edit-destinations-recording.gif)
 
-In the edit destination window, you can update any settings that you configured when you initialy connected to the destination. These settings are different based on the destination platform that you are updating. Below are some examples of the settings that you can update for [Amazon S3](../catalog/cloud-storage/amazon-s3.md), [Azure Event Hubs](../catalog/cloud-storage/azure-event-hubs.md), and [Google Ads](../catalog/advertising/google-ads-destination.md) destinations.
+In the edit destination window, you can update any settings that you configured when you initialy connected to the destination. These settings are different based on the destination platform that you are updating.
+
+Depending on how the destination was configured, some fields might be read-only and cannot be edited. To change the value of read-only fields, you must [create a new destination connection](/destinations/ui/connect-destination.md) with the new field values.
+
+Below are some examples of the settings that you can update for [Amazon S3](../catalog/cloud-storage/amazon-s3.md), [Azure Event Hubs](../catalog/cloud-storage/azure-event-hubs.md), and [Google Ads](../catalog/advertising/google-ads-destination.md) destinations.
 
 ![Edit destination screen for the Amazon S3 destination.](/help/destinations/assets/ui/edit-destinations/edit-amazon-s3-connection.png){width="100" zoomable="yes"}
 
