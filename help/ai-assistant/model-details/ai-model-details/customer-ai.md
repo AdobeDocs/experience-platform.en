@@ -44,9 +44,10 @@ exl-id: b2eeb1d2-3c2b-40a0-b5cd-91e99d99a906
 
 ## Model training {#model-training}
 
-* **Training data and preprocessing**: The training dataset for each customer is sourced directly from their own data within Adobe Experience Platform. This includes customer's historical interactions, transactional records, behavioral engagement logs, and demographic information as collected and stored in their Adobe Experience Platform instance. The dataset leverages customer-specific data over their chosen timeframe, capturing their unique seasonal trends and engagement patterns. Before use, each customer's dataset undergoes preprocessing tailored to their data characteristics, including missing value handling, categorical encoding, feature scaling, outlier detection, and feature engineering to ensure optimal quality and usability for their specific use case
+* **Training data and preprocessing**: The training dataset for each customer is sourced directly from their own data within Adobe Experience Platform. This includes customer's historical interactions, transactional records, behavioral engagement logs, and demographic information as collected and stored in their Adobe Experience Platform instance. The dataset leverages customer-specific data over their chosen timeframe, capturing their unique seasonal trends and engagement patterns. Before use, each customer's dataset undergoes preprocessing tailored to their data characteristics, including missing value handling, categorical encoding, feature scaling, outlier detection, and feature engineering to ensure optimal quality and usability for their specific use case.
+  * Consumer data used for training is not used cross-customer.
 * **Training specifications**: The model leverages [!DNL LightGBM] using [!DNL GBM], optimized for structured data. It is trained on historical customer event sequences to identify predictive behavioral patterns.
-* **Training frameworks**: The model was developed using [!DNL LightGBM], and [!DNL scikit-learn], and is trained on Adobe AI cloud infrastructure.
+* **Training frameworks**: The model was developed using [!DNL LightGBM], and [!DNL scikit-learn], and is hosted on Adobe AI cloud infrastructure.
 * **Training infrastructure**: [!DNL Databricks] clusters.
 
 ## Model evaluation {#model-evaluation}
@@ -58,7 +59,7 @@ exl-id: b2eeb1d2-3c2b-40a0-b5cd-91e99d99a906
 
 * **Model deployment**: The model is hosted on Adobe Experience Platform AI services and integrated with various Adobe applications. It is available via API endpoints, allowing seamless access for real-time predictions and batch processing across marketing and consumer engagement workflows.
 * **Model monitoring**: The model is continuously monitored via model monitoring to see the drift from the training setup. Periodic retrains (once in 3 months) are automatically run.
-* **Model ipdate**: The model is retrained once in several months (utmost once in 6 months) using updated consumer interaction data to ensure continued relevance. Periodic retraining helps mitigate data drift and seasonal fluctuations that could impact predictive accuracy.
+* **Model update**: The model is retrained once in several months (utmost once in 6 months) using updated consumer interaction data to ensure continued relevance. Periodic retraining helps mitigate data drift and seasonal fluctuations that could impact predictive accuracy.
 
 ## Explainability {#explainability}
 
