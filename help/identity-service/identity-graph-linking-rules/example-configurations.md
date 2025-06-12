@@ -70,7 +70,7 @@ Configure the following settings in the Graph Simulation interface before you si
 
 **Simulated graph**
 
-In this graph,  John (the end-user) is represented by the CRMID. {ECID: 123} represents the web browser that John used on his personal computer to visit your e-commerce platform. {ECID: 999} represents the browser that he used on his [!DNL iPhone] and {IDFA: a-b-c} represents his [!DNL iPhone].
+In this graph,  John (the end-user) is represented by the CRMID. `{ECID: 123}` represents the web browser that John used on his personal computer to visit your e-commerce platform. `{ECID: 999}` represents the browser that he used on his [!DNL iPhone] and `{IDFA: a-b-c}` represents his [!DNL iPhone].
 
 ![A simple implementation with one cross-device namespace..](../images/configs/basic/simple-implementation.png)
 
@@ -95,10 +95,10 @@ CRMID: Jane, ECID: 111
 
 In this graph, John and Jane are represented by their own respective CRMIDs:
 
-* {CRMID: John}
-* {CRMID: Jane}
+* `{CRMID: John}`
+* `{CRMID: Jane}`
 
-The browser on the desktop computer that they both use to visit your e-commerce platform is represented by {ECID: 111}. In this graph scenario, Jane is the last authenticated end-user, and therefore, the link between {ECID: 111} and {CRMID: John} is removed.
+The browser on the desktop computer that they both use to visit your e-commerce platform is represented by `{ECID: 111}`. In this graph scenario, Jane is the last authenticated end-user, and therefore, the link between `{ECID: 111}` and `{CRMID: John}` is removed.
 
 ![A simulated graph for a shared device (PC).](../images/configs/basic/shared-device-pc.png)
 
@@ -115,7 +115,7 @@ CRMID: Jane, ECID: 111, IDFA: a-b-c
 
 **Simulated graph**
 
-In this graph, John and Jane are both represented by their own respective CRMIDs. The browser that they use is represented by {ECID: 111} and the [!DNL iPad] that they share is represented by {IDFA: a-b-c}. In this graph scenario, Jane is the last authenticated end-user, and therefore, the links from {ECID: 111} and {IDFA: a-b-c} to {CRMID: John} are removed.
+In this graph, John and Jane are both represented by their own respective CRMIDs. The browser that they use is represented by `{ECID: 111}` and the [!DNL iPad] that they share is represented by `{IDFA: a-b-c}`. In this graph scenario, Jane is the last authenticated end-user, and therefore, the links from `{ECID: 111}` and `{IDFA: a-b-c}` to `{CRMID: John}` are removed.
 
 ![A simulated graph for a shared device (mobile).](../images/configs/basic/shared-device-mobile.png)
 
