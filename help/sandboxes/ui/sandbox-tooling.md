@@ -266,15 +266,14 @@ Follow the steps below to learn how to use sandbox tooling to move your object c
 
 **Previously imported objects**
 
-First, update the object in your source sandbox. For example, navigate to the **[!UICONTROL Schemas]** workspace and update a schema.
+Follow these steps if your use case involves existing objects in your source sandbox that require configuration updates, after having already been packaged and imported to other sandboxes.
 
-Use "Update Package" to refresh changes
-
-Import package into target sandbox
-
-System auto-selects "Update existing objects" and shows diffs
-
-Confirm and complete the update
+1. First, update the object in your source sandbox. For example, navigate to the **[!UICONTROL Schemas]** workspace, select your schema, and add a new field group to it.
+2. Once you have updated your schema, navigate to **[!UICONTROL Sandboxes]**, select **[!UICONTROL Packages]**, and then locate your existing package.
+3. Use the packages interface to verify your changes. Select **[!UICONTROL Check for updates]** to view any changes to the artifacts in your package. Next, select **[!UICONTROL View diff]** to receive a detailed summary of all the changes conducted against your artifacts. During this step, you can also select [!UICONTROL Summarize with AI] for a step-by-step summary of all changes. When finished, select **[!UICONTROL Done]**.
+4. When ready, select **[!UICONTROL Update package]** and then select **[!UICONTROL Confirm]** in the pop up window that appears. Once the job is complete, you can refresh the page and select **[!UICONTROL View history]** to verify the version of your package.
+5. To import your changes, navigate back to the [!UICONTROL Packages] directory and select the ellipses (`...`) beside your package, then select **[!UICONTROL Import package]**. Experience Platform auto-selects [!UICONTROL Update existing objects]. Verify the changes, and then select **[!UICONTROL Finish]**
+6. You can further validate your importing process by navigating to your target sandbox and viewing the updated object from within that sandbox.
 
 **Objects created manually in target sandbox**
 
