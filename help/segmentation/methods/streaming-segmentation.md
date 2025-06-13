@@ -163,7 +163,7 @@ For example, let's say you have two audiences, with both audiences housing exper
 
 | Audience | Schema | Source type | Query definition | Audience ID | 
 | -------- | ------ | ----------- | ---------------- | ----------- |
-| Recent abandons | Experience event | Batch | Has at least one abandon event in the last 24 hours | `7deb246a-49b4-4687-95f9-6316df049948` |
+| Recent abandons | Experience event | Batch | Has at least one abandon event in the last 48 hours | `7deb246a-49b4-4687-95f9-6316df049948` |
 | Recent checkouts | Experience Event | Streaming | Has at least one checkout in the the last 24 hours | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
 
 In this situation, you'd need to create a third audience as follows:
