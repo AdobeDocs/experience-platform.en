@@ -251,16 +251,12 @@ When your import is complete, a notification is received in the Experience Platf
 
 You can use sandbox tooling to move object configurations across different sandboxes. In the past, configurations to your objects (such as schemas, field groups, and data types) had to be manually recreated or reimported in order to be brought over to other sandboxes. With this capability, you can use sandbox tooling to accelerate your workflows and reduce potential errors by seamlessly moving your configuration updates across different sandboxes 
 
->[!BEGINSHADEBOX]
-
-### Set up
-
-Ensure that you have the following prerequisites before attempting to move your object configurations across different sandboxes.
-
-1. The appropriate permissions to access sandbox tooling.
-2. A newly created or updated object (such as a schema) in your source sandbox.
-
->[!ENDSHADEBOX]
+>[!TIP]
+>
+> Ensure that you have the following prerequisites before attempting to move your object configurations across different sandboxes.
+>
+>* The appropriate permissions to access sandbox tooling.
+>* A newly created or updated object (such as a schema) in your source sandbox.
 
 Follow the steps below to learn how to use sandbox tooling to move your object configurations across different sandboxes
 
@@ -296,21 +292,21 @@ To import your changes, navigate back to the [!UICONTROL Packages] directory and
 
 ![The import objective interface.](../images/ui/sandbox-tooling/import-objective.png)
 
-You can further validate your importing process by navigating to your target sandbox and viewing the updated object from within that sandbox.
+To further validate your import process, navigate to your target sandbox and manually view the updated object from within that sandbox.
 
-**Objects created manually in target sandbox**
+### Objects created manually in target sandbox
 
-Follow these steps if your use case involves applying configuration changes to objects that have been created manually in separate sandboxes.
+Follow these steps if your use case involves applying configuration changes to objects that have been previously created manually in separate sandboxes.
 
-1. First, create and publish a new package with your updated object.
-2. Next, import your package to the target sandbox that contains the objects that you also want to update.
-3. Select **[!UICONTROL Update existing objects]** and then use the object navigator to manually select the target objects that you want your updates to apply to. 
-4. Once your changes are ready, select **[!UICONTROL Finish]**.
+First, create and publish a new package with your updated object.
 
-During import, manually choose "Update existing objects"
+Next, import your package to the target sandbox that contains the objects that you also want to update. During the import process, select **[!UICONTROL Update existing objects]** and then use the object navigator to manually select the target objects that you want your updates to apply to.
 
-Select correct target object and confirm changes
+![The import objective interface with placeholders for objects to be updated.](../images/ui/sandbox-tooling/update-existing-objects.png)
 
+Once you have identified the target objects that you want to update, select **[!UICONTROL Finish]**.
+
+![The target objects selected.](../images/ui/sandbox-tooling/add-updated-objects.png)
 
 ## Video tutorial
 
