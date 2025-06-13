@@ -264,20 +264,48 @@ Ensure that you have the following prerequisites before attempting to move your 
 
 Follow the steps below to learn how to use sandbox tooling to move your object configurations across different sandboxes
 
-**Previously imported objects**
+### Previously imported objects
 
 Follow these steps if your use case involves existing objects in your source sandbox that require configuration updates, after having already been packaged and imported to other sandboxes.
 
-1. First, update the object in your source sandbox. For example, navigate to the **[!UICONTROL Schemas]** workspace, select your schema, and add a new field group to it.
-2. Once you have updated your schema, navigate to **[!UICONTROL Sandboxes]**, select **[!UICONTROL Packages]**, and then locate your existing package.
-3. Use the packages interface to verify your changes. Select **[!UICONTROL Check for updates]** to view any changes to the artifacts in your package. Next, select **[!UICONTROL View diff]** to receive a detailed summary of all the changes conducted against your artifacts. During this step, you can also select [!UICONTROL Summarize with AI] for a step-by-step summary of all changes. When finished, select **[!UICONTROL Done]**.
-4. When ready, select **[!UICONTROL Update package]** and then select **[!UICONTROL Confirm]** in the pop up window that appears. Once the job is complete, you can refresh the page and select **[!UICONTROL View history]** to verify the version of your package.
-5. To import your changes, navigate back to the [!UICONTROL Packages] directory and select the ellipses (`...`) beside your package, then select **[!UICONTROL Import package]**. Experience Platform auto-selects [!UICONTROL Update existing objects]. Verify the changes, and then select **[!UICONTROL Finish]**
-6. You can further validate your importing process by navigating to your target sandbox and viewing the updated object from within that sandbox.
+First, update the object in your source sandbox. For example, navigate to the **[!UICONTROL Schemas]** workspace, select your schema, and add a new field group to it.
+
+![The schema workspace with an updated schema.](../images/ui/sandbox-tooling/update-schema.png)
+
+Once you have updated your schema, navigate to **[!UICONTROL Sandboxes]**, select **[!UICONTROL Packages]**, and then locate your existing package.
+
+![The sandbox tooling interface with a package selected](../images/ui/sandbox-tooling/select-package.png)
+
+Use the packages interface to verify your changes. Select **[!UICONTROL Check for updates]** to view any changes to the artifacts in your package. Next, select **[!UICONTROL View diff]** to receive a detailed summary of all the changes conducted against your artifacts. 
+
+![The package interface with the view diff button selected.](../images/ui/sandbox-tooling/view-diff.png)
+
+The [!UICONTROL View diff] interface appears. Refer to this toll for information on your source and target artifacts, as well as the changes to be applied to them.
+
+![The summary of changes.](../images/ui/sandbox-tooling/summary-of-changes.png)
+
+During this step, you can also select [!UICONTROL Summarize with AI] for a step-by-step summary of all changes. 
+
+![The summary with AI-enabled.](../images/ui/sandbox-tooling/ai-summary.png)
+
+When ready, select **[!UICONTROL Update package]** and then select **[!UICONTROL Confirm]** in the pop up window that appears. Once the job is complete, you can refresh the page and select **[!UICONTROL View history]** to verify the version of your package.
+
+![The confirmation window.](../images/ui/sandbox-tooling/confirm-changes.png)
+
+To import your changes, navigate back to the [!UICONTROL Packages] directory and select the ellipses (`...`) beside your package, then select **[!UICONTROL Import package]**. Experience Platform auto-selects [!UICONTROL Update existing objects]. Verify the changes, and then select **[!UICONTROL Finish]**.
+
+![The import objective interface.](../images/ui/sandbox-tooling/import-objective.png)
+
+You can further validate your importing process by navigating to your target sandbox and viewing the updated object from within that sandbox.
 
 **Objects created manually in target sandbox**
 
-Create new package with updated object
+Follow these steps if your use case involves applying configuration changes to objects that have been created manually in separate sandboxes.
+
+1. First, create and publish a new package with your updated object.
+2. Next, import your package to the target sandbox that contains the objects that you also want to update.
+3. Select **[!UICONTROL Update existing objects]** and then use the object navigator to manually select the target objects that you want your updates to apply to. 
+4. Once your changes are ready, select **[!UICONTROL Finish]**.
 
 During import, manually choose "Update existing objects"
 
