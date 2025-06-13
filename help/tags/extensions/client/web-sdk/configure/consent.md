@@ -1,18 +1,18 @@
-## Configure privacy settings {#privacy}
+---
+title: Consent configuration settings
+description: Configure default consent and privacy settings for the tag extension.
+---
+# Consent configuration settings
 
-This section allows you to configure how Web SDK handles user consent signals from your website. Specifically, it allows you to select the default level of consent that is assumed of a user if no other explicit consent preference has been provided.
+The **[!UICONTROL Consent]** section allows you to select the default level of consent that is assumed if no other explicit consent preference is provided. Default consent level is not saved to user profiles.
 
-The default consent level is not saved to the user profile.
+![Image showing the privacy settings of the Web SDK tag extension in the Tags UI](../assets/web-sdk-ext-privacy.png)
 
-![Image showing the privacy settings of the Web SDK tag extension in the Tags UI](assets/web-sdk-ext-privacy.png)
+This section contains a single set of radio buttons which determines the default consent level:
 
-| [!UICONTROL Default consent level] | Description |
-| --- | --- |
-| [!UICONTROL In] | Collect events that occur before the user provides consent preferences. |
-| [!UICONTROL Out] | Discard events that occur before the user provides consent preferences. |
-| [!UICONTROL Pending] | Queue events that occur before the user provides consent preferences. When consent preferences are provided, the events will be collected or discarded depending on the provided preferences. |
-| [!UICONTROL Provided by data element] | The default consent level is determined by a separate data element that you define. When using this option, you must specify the data element using the provided dropdown menu. |
+* **[!UICONTROL In]**: Collect events that occur before the user provides consent preferences.
+* **[!UICONTROL Out]**: Drop events that occur before the user provides consent preferences.
+* **[!UICONTROL Pending]**: Queue events that occur before the user provides consent preferences. When consent is granted, queued events are sent to Adobe. When consent is denied, queued events are discarded.
+* **[!UICONTROL Provide a data element]**: Select a data element that determines one of the above configuration settings. Valid values include the strings `"in"`, `"out"`, or `"pending"`.
 
->[!TIP]
->
->Use **[!UICONTROL Out]** or **[!UICONTROL Pending]** if you require explicit user consent for your business operations.
+If your organization requires explicit user consent to collect data, Adobe recommends setting default consent to either **[!UICONTROL Out]** or **[!UICONTROL Pending]**.

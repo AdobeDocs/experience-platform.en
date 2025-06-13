@@ -32,6 +32,12 @@ A checkbox that enables the collection of link tracking data internal to your si
   * **[!UICONTROL Event grouping using session storage]**: Store link tracking data in session storage until the next page event. On the following page, the stored link tracking data and page view data is sent to Adobe at the same time. Adobe recommends enabling this setting when tracking internal links.
   * **[!UICONTROL Event grouping using local object]**: Store link tracking data in a local object until the next page event. If a visitor navigates to a new page, link tracking data is lost. This setting is most beneficial in context of single-page applications.
 
+>[!TIP]
+>
+>When you choose either type of event grouping and send data to Real-Time CDP, Customer Journey Analytics, Adobe Journey Optimizer, or Mix Modeler, Adobe recommends updating your tagging rules. Make sure that every page view event explicitly maps both the page name (as a string) and the page view value (as an integer, typically 1) to the XDM object before sending the data to Adobe.
+>
+>If you send data to Adobe Analytics, these values are automatically included and no additional configuration is needed.
+
 ## **[!UICONTROL Collect external link clicks]**
 
 A checkbox that enables the collection of external links. This checkbox is the tag equivalent to [`clickCollection.externalLinkEnabled`](/help/collection/js/commands/configure/clickcollection.md) in the JavaScript library.
