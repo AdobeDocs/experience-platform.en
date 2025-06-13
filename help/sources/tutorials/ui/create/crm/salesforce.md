@@ -20,6 +20,10 @@ If you already have an authenticated [!DNL Salesforce] account, you may skip the
 
 ### Gather required credentials {#gather-required-credentials}
 
+>[!WARNING]
+>
+>Basic authentication for the [!DNL Salesforce] source will be deprecated in January 2026. You must move to OAuth 2 Client Credential authentication in order to continue using the source and ingesting data from your [!DNL Salesforce] account to Experience Platform.
+
 The [!DNL Salesforce] source supports basic authentication and OAuth2 Client Credential.
 
 >[!BEGINTABS]
