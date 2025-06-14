@@ -17,4 +17,6 @@ alloy("configure", {
 });
 ```
 
-The Web SDK tag extension equivalent of this field is under [Advanced settings](/help/tags/extensions/client/web-sdk/configure/advanced-settings.md) when configuring the tag extension.
+## Edge base path using the Web SDK tag extension
+
+The Web SDK tag extension equivalent of this field is under [Advanced configuration settings](/help/tags/extensions/client/web-sdk/configure/advanced-settings.md) when configuring the tag extension.

@@ -60,4 +60,4 @@ alloy("configure", {
 
 ## Configure click collection for the Web SDK tag extension
 
-See [Data collection configuration settings](/help/tags/extensions/client/web-sdk/configure/data-collection.md) in the Web SDK extension documentation to learn how to perform these actions using tags.
+These settings can be configured in the Web SDK tag extension using [Data collection configuration settings](/help/tags/extensions/client/web-sdk/configure/data-collection.md).

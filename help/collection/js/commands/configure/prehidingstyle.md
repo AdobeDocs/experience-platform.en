@@ -11,20 +11,6 @@ The CSS selectors that you define in this property begin hiding content when you
 
 If you include both `prehidingStyle` and the prehiding snippet in your implementation, the prehiding snippet takes priority over this configuration property.
 
-## Prehiding style using the Web SDK tag extension
-
-Select the **[!UICONTROL Provide prehiding style]** button when [configuring the tag extension](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
-
-1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
-1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
-1. Select the desired tag property.
-1. Navigate to **[!UICONTROL Extensions]**, then click **[!UICONTROL Configure]** on the [!UICONTROL Adobe Experience Platform Web SDK] card.
-1. Scroll down to the [!UICONTROL Personalization] section, then select the button **[!UICONTROL Provide prehiding style]**.
-1. This button opens a modal window with a CSS editor. Insert the desired CSS selector and declaration block, then click **[!UICONTROL Save]** to close the modal window.
-1. Click **[!UICONTROL Save]** under extension settings, then publish your changes.
-
-## Prehiding style using the Web SDK JavaScript library
-
 Set the `prehidingStyle` string when running the `configure` command. If you omit this property when configuring the Web SDK, nothing is hidden when running the first `sendEvent` command on a page. Set this value to the desired CSS selector and declaration block for synchronously loaded libraries.
 
 ```js
@@ -34,3 +20,7 @@ alloy("configure", {
   prehidingStyle: "#container { opacity: 0 !important }"
 });
 ```
+
+## Prehiding style using the Web SDK tag extension
+
+The Web SDK tag extension equivalent of this field is under [Personalization configuration settings](/help/tags/extensions/client/web-sdk/configure/personalization.md#prehiding-style) when configuring the tag extension.

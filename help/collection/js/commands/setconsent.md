@@ -193,6 +193,6 @@ alloy("setConsent", {
 
 ## Persistence of consent preferences {#persistence}
 
-After you have communicated user preferences to the Web SDK using the `setConsent` command, the SDK persists user preferences to a cookie. The next time the user loads your website in the browser, the Web SDK will retrieve and use these persisted preferences to determine whether or not events can be sent to Adobe.
+After you have communicated user preferences to the Web SDK using the `setConsent` command, the SDK persists user preferences to a cookie. The next time the user loads your website in the browser, the Web SDK retrieves and use these persisted preferences to determine whether or not events can be sent to Adobe.
 
-You will need to store the user preferences independently to be able to show the consent dialog with the current preferences. There is no way to retrieve the user preferences from the Web SDK. To make sure that the user preferences stay in sync with the SDK, you can call the `setConsent` command on every page load. The Web SDK will only make a server call if the preferences have changed.
+Store the user's preferences independently so you can show the consent dialog with the current preferences. There is no way to retrieve the user preferences from the Web SDK. To make sure that the user preferences stay in sync with the SDK, you can call the `setConsent` command on every page load. The Web SDK only makes a server call if the preferences change.

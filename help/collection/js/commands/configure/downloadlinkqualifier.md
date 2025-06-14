@@ -9,18 +9,6 @@ If you enable automatic link tracking using [`clickCollectionEnabled`](clickcoll
 
 This property is a regex string. If the clicked URL matches this regex, `xdm.web.webInteraction.type` is set to `"download"`. Links are also immediately classified as a download link if they include a `download` HTML attribute. If `clickCollectionEnabled` is not enabled, this property does nothing.
 
-## Download link qualifier using the Web SDK tag extension
-
-Enable the **[!UICONTROL Enable click data collection]** checkbox, then enter the desired text under **[!UICONTROL Download link qualifier]** when [configuring the tag extension](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
-
-1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
-1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
-1. Select the desired tag property.
-1. Navigate to **[!UICONTROL Extensions]**, then click **[!UICONTROL Configure]** on the [!UICONTROL Adobe Experience Platform Web SDK] card.
-1. Scroll down to the [!UICONTROL Data Collection] section, then select the checkbox **[!UICONTROL Enable click data collection]**.
-1. Once enabled, the **[!UICONTROL Download link qualifier]** text box appears. Enter the desired value. Buttons are also available to test the regex and restore the default value.
-1. Click **[!UICONTROL Save]**, then publish your changes.
-
 ## Download link qualifier using the Web SDK JavaScript library
 
 Set the `downloadLinkQualifier` string when running the `configure` command. If you omit this property, it defaults to the following value:
@@ -37,3 +25,7 @@ alloy("configure", {
   downloadLinkQualifier: "\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$"
 });
 ```
+
+## Download link qualifier using the Web SDK tag extension
+
+The Web SDK tag extension equivalent of this field is under [Data collection configuration settings](/help/tags/extensions/client/web-sdk/configure/data-collection.md#download-link-qualifier) when configuring the tag extension.

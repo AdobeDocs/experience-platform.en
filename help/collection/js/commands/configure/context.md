@@ -20,8 +20,6 @@ The `"web"` keyword collects information about the current page.
 | Page URL | The URL of the current page. | `xdm.web.webPageDetails.URL` | `https://example.com/index.html` |
 | Referrer URL | The URL of the previous page visited. | `xdm.web.webReferrer.URL` | `http://example.org/linkedpage.html` |
 
-{style="table-layout:auto"}
-
 ### Device
 
 The `"device"` keyword collects information about the user's device.
@@ -32,8 +30,6 @@ The `"device"` keyword collects information about the user's device.
 | Screen width | The width of the screen in pixels. | `xdm.device.screenWidth` | `1440` |
 | Screen orientation | The orientation of the screen. | `xdm.device.screenOrientation` | `landscape` or `portrait` |
 
-{style="table-layout:auto"}
-
 ### Environment
 
 The `"environment"` keyword collects information about the user's browser.
@@ -43,8 +39,6 @@ The `"environment"` keyword collects information about the user's browser.
 | Environment type | The type of environment through which the experience surfaced. The Web SDK always sets this field to `browser`. | `xdm.environment.type` | `browser` |
 | Viewport height | The height of the browser's content area in pixels. | `xdm.environment.browserDetails.viewportHeight` | `679` |
 | Viewport width | The width of the browser's content area in pixels. | `xdm.environment.browserDetails.viewportWidth` | `642` |
-
-{style="table-layout:auto"}
 
 ### Place context
 
@@ -59,8 +53,6 @@ The `"placeContext"` keyword collects information about the user's location.
 | Latitude | The latitude of the end user location. |`xdm.placeContext.geo._schema.latitude`| `37.3307447` |
 | Longitude | The longitude of the end user location. |`xdm.placeContext.geo._schema.longitude`| `-121.8945965` |
 
-{style="table-layout:auto"}
-
 ### Timestamp
 
 The `"timestamp"` keyword collects information about the timestamp of the event. This context is always included and cannot be removed.
@@ -68,8 +60,6 @@ The `"timestamp"` keyword collects information about the timestamp of the event.
 | Dimension | Description | XDM path | Example value |
 | --- | --- | --- | --- |
 | Timestamp of the event | UTC timestamp for the end user in simplified extended [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) format. | `xdm.timestamp` | `YYYY-08-07T22:47:17.129Z` |
-
-{style="table-layout:auto"}
 
 ### Implementation details
 
@@ -117,4 +107,4 @@ alloy("configure", {
 
 ## Collect context information using the Web SDK tag extension
 
-See [Data collection configuration settings](/help/tags/extensions/client/web-sdk/configure/data-collection.md) in the Web SDK extension documentation to learn how to set the desired context keywords using tags. The desired fields to edit are under **[!UICONTROL Context settings]**.
+See [Context settings](/help/tags/extensions/client/web-sdk/configure/data-collection.md#context-settings) under data collection configuration settings in the Web SDK tag extension documentation.

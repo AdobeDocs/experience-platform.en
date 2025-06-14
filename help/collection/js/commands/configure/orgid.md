@@ -16,19 +16,6 @@ To locate your `orgID`:
 
 Org IDs are always 24-character alpha-numeric strings, and always end in `@AdobeOrg`.
 
-## Configure an `orgID` using the Web SDK tag extension
-
-Enter the org ID in the **[!UICONTROL IMS organization ID]** text field when [configuring the tag extension](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
-
-1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
-1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
-1. Select the desired tag property.
-1. Navigate to **[!UICONTROL Extensions]**, then click **[!UICONTROL Configure]** on the [!UICONTROL Adobe Experience Platform Web SDK] card.
-1. Input the desired org ID into the [!UICONTROL IMS organization ID] text field near the top.
-1. Click **[!UICONTROL Save]**, then publish your changes.
-
-## Configure an `orgID` using the Web SDK JavaScript library
-
 Set the `orgId` string when running the `configure` command. If you omit this property when configuring the Web SDK, the Web SDK throws a console error and data is not sent to Adobe.
 
 ```js
@@ -37,3 +24,7 @@ alloy("configure", {
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
 });
 ```
+
+## Set the Org ID using the Web SDK tag extension
+
+The Web SDK tag extension equivalent of this field is under [SDK instance configuration settings](/help/tags/extensions/client/web-sdk/configure/general.md) when configuring the tag extension. The field is automatically populated based on the organization that the tag property was created under.

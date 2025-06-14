@@ -9,58 +9,7 @@ The `onBeforeEventSend` callback allows you to register a JavaScript function th
 
 >[!WARNING]
 >
->This callback allows the use of custom code. If any code that you include in the callback throws an uncaught exception, processing for the event halts. Data is not sent to Adobe.
-
-## Configure on before event send callback using the Web SDK tag extension {#tag-extension}
-
-Select the **[!UICONTROL Provide on before event send callback code]** button when [configuring the tag extension](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). This button opens a modal window where you can insert the desired code.
-
-1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
-1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
-1. Select the desired tag property.
-1. Navigate to **[!UICONTROL Extensions]**, then click **[!UICONTROL Configure]** on the [!UICONTROL Adobe Experience Platform Web SDK] card.
-1. Scroll down to the [!UICONTROL Data Collection] section, then select the button **[!UICONTROL Provide on before event send callback code]**.
-1. This button opens a modal window with a code editor. Insert the desired code, then click **[!UICONTROL Save]** to close the modal window.
-1. Click **[!UICONTROL Save]** under extension settings, then publish your changes.
-
-Within the code editor, you have access to the following variables:
-
-* **`content.xdm`**: The [XDM](../sendevent/xdm.md) payload for the event.
-* **`content.data`**: The [data](../sendevent/data.md) object payload for the event.
-* **`return true`**: Immediately exit the callback and send data to Adobe with the current values in the `content` object.
-* **`return false`**: Immediately exit the callback and abort sending data to Adobe.
-
-Any variables defined outside of `content` can be used, but are not included in the payload sent to Adobe.
-
-```js
-// Use nullish coalescing assignments to add objects if they don't yet exist
-content.xdm.commerce ??= {};
-content.xdm.commerce.order ??= {};
-
-// Then add the purchase ID
-content.xdm.commerce.order.purchaseID = "12345";
-
-// Use optional chaining to prevent undefined errors when setting tracking code to lower case
-if(content.xdm.marketing?.trackingCode) content.xdm.marketing.trackingCode = content.xdm.marketing.trackingCode.toLowerCase();
-
-// Delete operating system version
-if(content.xdm.environment) delete content.xdm.environment.operatingSystemVersion;
-
-// Immediately end onBeforeEventSend logic and send the data to Adobe for this event type
-if (content.xdm.eventType === "web.webInteraction.linkClicks") {
-  return true;
-}
-
-// Cancel sending data if it is a known bot
-if (myBotDetector.isABot()) {
-  return false;
-}
-```
-
->[!TIP]
->Avoid returning `false` on the first event on a page. Returning `false` on the first event can negatively impact personalization.
-
-## Configure on before event send callback using the Web SDK JavaScript library {#library}
+>This callback allows the use of custom code. If any code that you include in the callback throws an uncaught exception, processing for the event halts. **Data is not sent to Adobe.**
 
 Register the `onBeforeEventSend` callback when running the `configure` command. You can change the `content` variable name to any value that you would like by changing the parameter variable inside the inline function.
 
@@ -113,3 +62,7 @@ alloy("configure", {
   onBeforeEventSend: lastChanceLogic
 });    
 ```
+
+## Configure on before event send callback using the Web SDK tag extension
+
+The Web SDK tag extension equivalent of this field is under [Data collection configuration settings](/help/tags/extensions/client/web-sdk/configure/data-collection.md#on-before-event-send-callback) when configuring the tag extension.

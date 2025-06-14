@@ -1,14 +1,38 @@
-## Configure media collection settings {#media-collection}
+---
+title: Streaming media configuration settings
+description: Customize how the Web SDK tag extension collects streaming media data.
+---
+# Streaming media configuration settings
 
-The media collection feature helps you collect data related to media sessions on your website. 
+The media collection feature helps you collect data related to media sessions, such as media playbacks, pauses, completions, and other related events. Once collected, you can send this data to Adobe Experience Platform or Adobe Analytics to generate reports. This feature provides a comprehensive solution for tracking and understanding media consumption behavior on your website.
 
-The collected data can include information about media playbacks, pauses, completions, and other related events. Once collected, you can send this data to Adobe Experience Platform and/or Adobe Analytics, to generate reports. This feature provides a comprehensive solution for tracking and understanding media consumption behavior on your website.
+![Image showing the media collection settings of the Web SDK tag extension in the Tags UI](../assets/media-collection.png)
 
-![Image showing the media collection settings of the Web SDK tag extension in the Tags UI](assets/media-collection.png)
+## Prerequisites
 
+To use the streaming media component of the Web SDK, you must meet the following prerequisites:
 
-* **[!UICONTROL Channel]**: The name of the channel where media collection occurs. Example: `Video channel`.
-* **[!UICONTROL Player Name]**: The name of the media player.
-* **[!UICONTROL Application Version]**: The version of the media player application.
-* **[!UICONTROL Main ping interval]**: Frequency of pings for main content, in seconds. The default value is `10`. Values can range from `10` to `50` seconds.  If no value is specified, the default value is used when using [automatically-tracked sessions](../../../../web-sdk/commands/createmediasession.md#automatic).
-* **[!UICONTROL Ad ping interval]**: Frequency of pings for ad content, in seconds. The default value is `10`. Values can range from `1` to `10` seconds. If no value is specified, the default value is used when using [automatically-tracked sessions](../../../../web-sdk/commands/createmediasession.md#automatic)
+* Make sure that you have access to Adobe Experience Platform or Adobe Analytics.
+* Enable the **[[!UICONTROL Media Analytics]](/help/datastreams/configure.md#advanced-options)** option for the datastream you are using.
+* Ensure that the schema used by your datastream includes the Media Collection schema fields.
+* Configure the Streaming Media feature in the Web SDK tag extension, as shown on this page.
+
+## [!UICONTROL Channel]
+
+The name of the channel where media collection occurs. For example, `Video channel`. Any string value is valid.
+
+## [!UICONTROL Player Name]
+
+The name of the media player that your property uses for media playback.
+
+## [!UICONTROL Application Version]
+
+The version of the media player application that your property uses for media playback.
+
+## [!UICONTROL Main ping interval]
+
+The frequency of pings for main content, in seconds. The default value is `10`. Values can range from `10` to `50` seconds. If no value is specified, the default value is used when using [automatically-tracked sessions](/help/collection/js/commands/createmediasession.md#automatic).
+
+## [!UICONTROL Ad ping interval]
+
+The frequency of pings for ad content, in seconds. The default value is `10`. Values can range from `1` to `10` seconds. If no value is specified, the default value is used when using [automatically-tracked sessions](/help/collection/js/commands/createmediasession.md#automatic).

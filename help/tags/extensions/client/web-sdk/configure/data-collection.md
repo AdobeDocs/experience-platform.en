@@ -16,15 +16,52 @@ This configuration section allows you to determine how data is collected across 
 
 The following options are available:
 
-## **[!UICONTROL On before event send callback]**
+## [!UICONTROL On before event send callback]
 
-A callback function to evaluate and modify the payload sent to Adobe. Use the `content` variable within the callback function to modify the payload. For example, you can modify `content.xdm` to alter an XDM field, or you can modify `content.data` to modify non-XDM data. This callback is the tag equivalent to [`onBeforeEventSend`](/help/collection/js/commands/configure/onbeforeeventsend.md) in the JavaScript library.
+A callback function to evaluate and modify the payload sent to Adobe. Within the code editor, you have access to the following variables:
+
+* **`content.xdm`**: The XDM payload for the event.
+* **`content.data`**: The data object payload for the event.
+* **`return true`**: Immediately exit the callback and send data to Adobe with the current values in the `content` object.
+* **`return false`**: Immediately exit the callback and abort sending data to Adobe.
+
+Any variables defined outside of `content` can be used, but are not included in the payload sent to Adobe.
+
+>[!WARNING]
+>
+>This callback allows the use of custom code. If any code that you include in the callback throws an uncaught exception, processing for the event halts. **Data is not sent to Adobe.**
+
+```js
+// Use nullish coalescing assignments to add objects if they don't yet exist
+content.xdm.commerce ??= {};
+content.xdm.commerce.order ??= {};
+
+// Then add the purchase ID
+content.xdm.commerce.order.purchaseID = "12345";
+
+// Use optional chaining to prevent undefined errors when setting tracking code to lower case
+if(content.xdm.marketing?.trackingCode) content.xdm.marketing.trackingCode = content.xdm.marketing.trackingCode.toLowerCase();
+
+// Delete operating system version
+if(content.xdm.environment) delete content.xdm.environment.operatingSystemVersion;
+
+// Immediately end onBeforeEventSend logic and send the data to Adobe for this event type
+if (content.xdm.eventType === "web.webInteraction.linkClicks") {
+  return true;
+}
+
+// Cancel sending data if it is a known bot
+if (myBotDetector.isABot()) {
+  return false;
+}
+```
 
 >[!TIP]
->
->The **[!UICONTROL On before link click send]** field is a deprecated callback that is only visible for properties that already have it configured. It is the tag equivalent to [`onBeforeLinkClickSend`](/help/collection/js/commands/configure/onbeforelinkclicksend.md) in the JavaScript library. Use the **[!UICONTROL Filter click properties]** callback to filter or adjust click data, or use the **[!UICONTROL On before event send callback]** to filter or adjust the overall payload sent to Adobe. If both the **[!UICONTROL Filter click properties]** callback and the **[!UICONTROL On before link click send]** callback are set, only the **[!UICONTROL Filter click properties]** callback runs.
+>Avoid returning `false` on the first event on a page. Returning `false` on the first event can negatively impact personalization.
 
-## **[!UICONTROL Collect internal link clicks]**
+This callback is the tag equivalent to [`onBeforeEventSend`](/help/collection/js/commands/configure/onbeforeeventsend.md) in the JavaScript library.
+
+## [!UICONTROL Collect internal link clicks]
 
 A checkbox that enables the collection of link tracking data internal to your site or property. This checkbox is the tag equivalent to [`clickCollection.internalLinkEnabled`](/help/collection/js/commands/configure/clickcollection.md) in the JavaScript library. When you enable this checkbox, event grouping options appear:
 
@@ -38,19 +75,19 @@ A checkbox that enables the collection of link tracking data internal to your si
 >
 >If you send data to Adobe Analytics, these values are automatically included and no additional configuration is needed.
 
-## **[!UICONTROL Collect external link clicks]**
+## [!UICONTROL Collect external link clicks]
 
 A checkbox that enables the collection of external links. This checkbox is the tag equivalent to [`clickCollection.externalLinkEnabled`](/help/collection/js/commands/configure/clickcollection.md) in the JavaScript library.
 
-## **[!UICONTROL Collect download link clicks]**
+## [!UICONTROL Collect download link clicks]
 
 A checkbox that enables the collection of download links. This checkbox is the tag equivalent to [`clickCollection.downloadLinkEnabled`](/help/collection/js/commands/configure/clickcollection.md) in the JavaScript library.
 
-## **[!UICONTROL Download link qualifier]**
+## [!UICONTROL Download link qualifier]
 
 A regular expression that qualifies a link URL as a download link. This string is the tag equivalent to [`downloadLinkQualifier`](/help/collection/js/commands/configure/downloadlinkqualifier.md) in the JavaScript library.
 
-## **[!UICONTROL Filter click properties]**
+## [!UICONTROL Filter click properties]
 
 A callback function to evaluate and modify click-related properties before collection. This function runs before the [!UICONTROL On before event send callback], and is the tag equivalent to [`clickCollection.filterClickDetails`](/help/collection/js/commands/configure/clickcollection.md) in the JavaScript library. Within the code editor, you have access to the following variables:
 
@@ -64,7 +101,11 @@ A callback function to evaluate and modify click-related properties before colle
   * **`return false`**: Immediately exit the callback and abort collecting data.
   * Any variables defined outside of `content` can be used, but are not included in the payload sent to Adobe.
 
-## **Context settings**
+>[!TIP]
+>
+>The **[!UICONTROL On before link click send]** field is a deprecated callback that is only visible for properties that already have it configured. It is the tag equivalent to [`onBeforeLinkClickSend`](/help/collection/js/commands/configure/onbeforelinkclicksend.md) in the JavaScript library. Use the **[!UICONTROL Filter click properties]** callback to filter or adjust click data, or use the **[!UICONTROL On before event send callback]** to filter or adjust the overall payload sent to Adobe. If both the **[!UICONTROL Filter click properties]** callback and the **[!UICONTROL On before link click send]** callback are set, only the **[!UICONTROL Filter click properties]** callback runs.
+
+## Context settings
 
 Automatically collect visitor information, which populates specific XDM fields for you. You can choose **[!UICONTROL All default context information]** or **[!UICONTROL Specific context information]**. It is the tag equivalent to [`context`](/help/collection/js/commands/configure/context.md) in the JavaScript library.
 

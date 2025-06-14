@@ -8,6 +8,16 @@ This configuration section governs the Web SDK instance name, the IMS org it app
 
 ![Image showing the general settings of the Web SDK tag extension in the Tags UI](../assets/web-sdk-ext-general.png)
 
-* **[!UICONTROL Name]**: The Adobe Experience Platform Web SDK tag extension supports multiple instances on the page. The name is used to send data to multiple organizations without requiring duplicate Web SDK tag libraries. You can change the instance name to any valid JavaScript object name.
-* **[!UICONTROL IMS organization ID]**: The ID of the organization that you would like the data sent to at Adobe. Most of the time, use the default value that is autopopulated. When you have multiple instances on the page, populate this field with the value of the second organization you want to send data to.
-* **[!UICONTROL Edge domain]**: The domain that the extension sends and receives data from. While the default value of `edge.adobedc.net` works, Adobe recommends using a first-party domain in most cases. See the [Adobe-managed certificate program](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert) for instructions on how to set up a first-party domain suitable for data collection.
+The following options are available:
+
+## [!UICONTROL Name]
+
+The Adobe Experience Platform Web SDK tag extension supports multiple instances on the page. The name is used to send data to multiple organizations without requiring duplicate Web SDK tag libraries. You can change the instance name to any valid JavaScript object name.
+
+## [!UICONTROL IMS organization ID]
+
+The ID of the organization that you would like the data sent to at Adobe. Most of the time, use the default value that is autopopulated. When you have multiple instances on the page, populate this field with the value of the second organization you want to send data to.
+
+## [!UICONTROL Edge domain]
+
+The domain that the extension sends and receives data from. While the default value of `edge.adobedc.net` works, Adobe recommends using a first-party domain in most cases. See the [Adobe-managed certificate program](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert) for instructions on how to set up a first-party domain suitable for data collection.
