@@ -142,12 +142,16 @@ Quotas reset at the start of each calendar month. Unused quota does **not** roll
 >
 >These quotas are based on customer entitlements and are not enforced through system guardrails. However, volume limits may be evaluated during contract review or monitored through backend metrics.
 
-### Processing timelines
+### Processing timelines (SLA)
 
 The time it takes for a request to be processed also depends on your entitlement level:
 
 * **Base:** Work orders are queued for 15 days before processing. The SLA is 30 days.
 * **Premium:** Work orders are queued for 24 hours before processing. The SLA is 15 days.
+
+>[!TIP]  
+>
+>For a centralized summary of entitlements, quotas, SLAs, and exception rules, refer to the [Quota reference guide](../api/quota.md).
 
 If your organization requires higher volumes, contact your Adobe representative to begin an entitlement review. Approved exceptions are tracked internally and subject to periodic review.
 

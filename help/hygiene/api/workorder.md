@@ -16,16 +16,44 @@ The `/workorder` endpoint in the Data Hygiene API allows you to programmatically
 
 The endpoint used in this guide is part of the Data Hygiene API. Before continuing, please review the [overview](./overview.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
+## Quotas and processing timelines {#quotas}
+
+Record delete requests are subject to quotas and service-level expectations based on your license entitlement, and apply to both UI- and API-based delete requests.
+
+### Quota limits
+
+- **Daily limit**: 1,000,000 identities per day (applies to all customers)
+- **Monthly limits**:
+  - **Base entitlement**: Up to 2,000,000 identities per month (capped at 5% of your addressable audience)
+  - **Premium (Shield) entitlement**: Up to 15,000,000 identities per month (capped at 10% of your addressable audience)
+  - **CJA customers**: Follow the same percentage caps—5% for base and 10% for premium
+
+Quotas reset at the start of each calendar month. Unused quota does **not** roll over if you start submitting late in the month.
+
+>[!NOTE]
+>
+>These quotas are based on entitlements defined in your license agreement. They are not currently enforced by system guardrails. However, usage may be monitored and reviewed periodically.
+
+### Processing timelines (SLA)
+
+Work orders are processed based on your entitlement level:
+
+- **Base**: Queued for 15 days before processing. The SLA is 30 days.
+- **Premium**: Queued for 24 hours before processing. The SLA is 15 days.
+
+>[!TIP]
+>
+>For a centralized summary of entitlements, quotas, SLAs, and exception rules, refer to the [Quota reference guide](../api/quota.md).
+
+If your organization requires higher limits, contact your Adobe representative for an entitlement review. Approved exceptions are tracked internally.
+
 ## Create a record delete request {#create}
 
 You can delete one or more identities from a single dataset or all datasets by making a POST request to the `/workorder` endpoint.
 
->[!IMPORTANT] 
-> 
->There are different limits for the total number of unique identity record deletes that can be submitted each month. These limits are based on your license agreement. Organizations who have purchased all editions of Adobe Real-Time Customer Data Platform and Adobe Journey Optimizer can submit up to 100,000 identity record deletes each month. Organizations who have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield** can submit up to 600,000 identity record deletes each month.<br>A single [record delete request through the UI](../ui/record-delete.md) allows you to submit 10,000 IDs at one time. The API method to delete records allows for the submission of 100,000 IDs at one time.<br>It is best practice to submit as many IDs per request as possible, up to your ID limit. When you intend to delete a high volume of IDs, submitting a low volume, or a single ID per record delete request should be avoided.
-
-<!-- 232034 ... segmentation Platform experience leagye
- -->
+>[!TIP]
+>
+>Each record delete request submitted through the API can include up to **100,000 identities**. To maximize efficiency, submit as many identities per request as possible and avoid low-volume submissions such as single-ID work orders.
 
 **API format**
 
