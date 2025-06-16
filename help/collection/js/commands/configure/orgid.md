@@ -27,4 +27,4 @@ alloy("configure", {
 
 ## Set the Org ID using the Web SDK tag extension
 
-The Web SDK tag extension equivalent of this field is under [SDK instance configuration settings](/help/tags/extensions/client/web-sdk/configure/general.md) when configuring the tag extension. The field is automatically populated based on the organization that the tag property was created under.
+This setting can be configured in the Web SDK tag extension using [SDK instance configuration settings](/help/tags/extensions/client/web-sdk/configure/general.md). The field is automatically populated based on the organization that the tag property was created under.

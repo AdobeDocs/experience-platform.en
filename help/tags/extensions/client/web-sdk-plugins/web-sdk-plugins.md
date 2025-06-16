@@ -23,18 +23,18 @@ This section provides a reference for the options available when configuring the
 
 No configuration is necessary to initialize or add a plugin to your library outside of using the following native data elements that are provided by the Common Web SDK Plugins extension:
 
-* [`getAndPersistValue`](#getAndPersistValue)
-* [`getGeoCoordinates`](#getGeoCoordinates)
-* [`getNewRepeat`](#getNewRepeat)
-* [`getPagename`](#getPagename)
-* [`getPreviousValue`](#getPreviousValue)
-* [`getQueryParam`](#getQueryParam)
-* [`getTimeParting`](#getTimeParting)
-* [`getTimeSinceLastVisit`](#getTimeSInceLastVisit)
-* [`getValOnce`](#getValOnce)
-* [`getVisitDuration`](#getVisitDuration)
-* [`getVisitNum`](#getVisitNum)
-* [`pFo`](#pFo)
+* [`getAndPersistValue`](web-sdk-plugins.md#getandpersistvalue)
+* [`getGeoCoordinates`](#getgeocoordinates)
+* [`getNewRepeat`](#getnewrepeat)
+* [`getPageName`](#getpagename)
+* [`getPreviousValue`](#getpreviousvalue)
+* [`getQueryParam`](#getqueryparam)
+* [`getTimeParting`](#gettimeparting)
+* [`getTimeSinceLastVisit`](#gettimesincelastvisit)
+* [`getValOnce`](#getvalonce)
+* [`getVisitDuration`](#getvisitduration)
+* [`getVisitNum`](#getvisitnum)
+* [`p_fo` (Page First Only)](#p_fo-page-first-only)
 
 [//]: # (- [ ] Add links to plugin pages within the data elements below)
 
@@ -66,7 +66,7 @@ The `getGeoCoordinates` data element does not use any arguments. It returns one 
 
 * `"geo coordinates not available"`: For devices that do not have geo-location data available at the time that the plug-in runs. This value is common on the first hit of the visit, especially when visitors first need to provide consent on tracking their location.
 * `"error retrieving geo coordinates"`: When the plug-in encounters any errors when attempting to retrieve the device's location
-* `"latitude=[LATITUDE] | longtitude=[LONGITUDE]"`: Where [LATITUDE]/[LONGITUDE] are the latitude and longitude, respectively
+* `"latitude=[LATITUDE] | longtitude=[LONGITUDE]"`: Where `[LATITUDE]/[LONGITUDE]` are the latitude and longitude, respectively
 
 ### `getNewRepeat`
 

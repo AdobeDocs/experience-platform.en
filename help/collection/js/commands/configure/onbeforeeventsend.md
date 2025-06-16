@@ -9,7 +9,7 @@ The `onBeforeEventSend` callback allows you to register a JavaScript function th
 
 >[!WARNING]
 >
->This callback allows the use of custom code. If any code that you include in the callback throws an uncaught exception, processing for the event halts. **Data is not sent to Adobe.**
+>This callback allows the use of custom code. If any code that you include in the callback throws an uncaught exception, processing for the event halts and **data is not sent to Adobe.**
 
 Register the `onBeforeEventSend` callback when running the `configure` command. You can change the `content` variable name to any value that you would like by changing the parameter variable inside the inline function.
 
@@ -65,4 +65,4 @@ alloy("configure", {
 
 ## Configure on before event send callback using the Web SDK tag extension
 
-The Web SDK tag extension equivalent of this field is under [Data collection configuration settings](/help/tags/extensions/client/web-sdk/configure/data-collection.md#on-before-event-send-callback) when configuring the tag extension.
+These settings can be configured in the Web SDK tag extension using [Data collection configuration settings](/help/tags/extensions/client/web-sdk/configure/data-collection.md#on-before-event-send-callback).

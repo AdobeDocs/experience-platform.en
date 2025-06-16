@@ -21,4 +21,4 @@ alloy("configure", {
 
 ## Edge domain using the Web SDK tag extension
 
-The Web SDK tag extension equivalent of this field is under [SDK instance configuration settings](/help/tags/extensions/client/web-sdk/configure/general.md) when configuring the tag extension.
+These settings can be configured in the Web SDK tag extension using [SDK instance configuration settings](/help/tags/extensions/client/web-sdk/configure/general.md).

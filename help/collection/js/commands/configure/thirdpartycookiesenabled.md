@@ -23,4 +23,4 @@ alloy("configure", {
 
 ## Enable third-party cookies using the Web SDK tag extension
 
-The Web SDK tag extension equivalent of this boolean is under [Identity configuration settings](/help/tags/extensions/client/web-sdk/configure/identity.md#use-third-party-cookies) when configuring the tag extension.
+This setting can be configured in the Web SDK tag extension using [Identity configuration settings](/help/tags/extensions/client/web-sdk/configure/identity.md#use-third-party-cookies).

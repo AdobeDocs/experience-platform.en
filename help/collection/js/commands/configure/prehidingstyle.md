@@ -23,4 +23,4 @@ alloy("configure", {
 
 ## Prehiding style using the Web SDK tag extension
 
-The Web SDK tag extension equivalent of this field is under [Personalization configuration settings](/help/tags/extensions/client/web-sdk/configure/personalization.md#prehiding-style) when configuring the tag extension.
+These settings can be configured in the Web SDK tag extension using [Personalization configuration settings](/help/tags/extensions/client/web-sdk/configure/personalization.md).

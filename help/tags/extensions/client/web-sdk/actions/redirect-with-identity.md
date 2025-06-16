@@ -1,0 +1,3 @@
+## Redirect with identity {#redirect-with-identity}
+
+Use this action type to share identities from the current page to other domains. This action is designed to be used with a **[!UICONTROL click]** event type and a value comparison condition. See [append identity to URL using the Web SDK extension](../../../../web-sdk/commands/appendidentitytourl.md#extension) for more information on how to use this action type.

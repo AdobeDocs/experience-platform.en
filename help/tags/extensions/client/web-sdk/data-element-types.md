@@ -30,7 +30,7 @@ You should not provide an [!DNL ECID] when building an identity map. When using 
 
 The identity map data element is often used in tandem with the [[!UICONTROL XDM object] data element type](#xdm-object) and the [[!UICONTROL Set consent] action type](action-types.md#set-consent).
 
-Read more about [Adobe Experience Platform Identity Service](../../../../identity-service/home.md).
+Read more about [Adobe Experience Platform Identity Service](/help/identity-service/home.md).
 
 ## XDM object {#xdm-object}
 

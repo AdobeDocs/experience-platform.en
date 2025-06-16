@@ -19,4 +19,4 @@ alloy("configure", {
 
 ## Enable Target migration using the Web SDK tag extension
 
-The Web SDK tag extension equivalent of this boolean is under [Personalization configuration settings](/help/tags/extensions/client/web-sdk/configure/personalization.md#migrate-target-from-atjs-to-the-web-sdk) when configuring the tag extension.
+This setting can be configured in the Web SDK tag extension using [Personalization configuration settings](/help/tags/extensions/client/web-sdk/configure/personalization.md#migrate-target-from-atjs-to-the-web-sdk).

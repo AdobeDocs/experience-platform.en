@@ -43,4 +43,4 @@ alloy("configure", {
 
 ## Streaming media configuration using the Web SDK tag extension
 
-The Web SDK tag extension equivalent of this field is under [Streaming media configuration settings](/help/tags/extensions/client/web-sdk/configure/streaming-media.md) when configuring the tag extension.
+These settings can be configured in the Web SDK tag extension using [Streaming media configuration settings](/help/tags/extensions/client/web-sdk/configure/streaming-media.md).

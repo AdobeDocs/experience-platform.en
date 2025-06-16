@@ -9,8 +9,6 @@ If you enable automatic link tracking using [`clickCollectionEnabled`](clickcoll
 
 This property is a regex string. If the clicked URL matches this regex, `xdm.web.webInteraction.type` is set to `"download"`. Links are also immediately classified as a download link if they include a `download` HTML attribute. If `clickCollectionEnabled` is not enabled, this property does nothing.
 
-## Download link qualifier using the Web SDK JavaScript library
-
 Set the `downloadLinkQualifier` string when running the `configure` command. If you omit this property, it defaults to the following value:
 
 `\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$`

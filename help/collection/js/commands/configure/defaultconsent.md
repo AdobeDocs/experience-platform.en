@@ -65,3 +65,7 @@ The following cookies are set when the consent configuration allows:
 | **`kndct_orgid_identity`** | 34128000 (395 days) | Stores the ECID, as well as other information related to the ECID. |
 | **`kndctr_orgid_consent`** | 15552000 (180 days) | Stores the users consent preference for the website. |
 |**`s_ecid`** | 63115200 (2 years) | Contains a copy of the Experience Cloud ID (ECID) or MID. The MID is stored in a key-value pair that follows the syntax `s_ecid=MCMID\|<ECID>`. |
+
+## Default consent using the Web SDK tag extension
+
+See [Consent settings](/help/tags/extensions/client/web-sdk/configure/consent.md) in the Web SDK tag extension documentation to learn how to perform these actions using tags.
