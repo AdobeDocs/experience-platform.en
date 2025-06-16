@@ -1,11 +1,13 @@
 ---
 title: AI Assistant Natural Language to SQL Model Details
 description: Learn about the AI Assistant Natural Language to SQL AI model.
-hide: true
-hidefromtoc: true
 exl-id: ca157945-5f74-45d0-9d40-c65d09a8e80d
 ---
 # AI Assistant Operational Insights Natural Language to SQL Model Details
+
+>[!IMPORTANT]
+>
+>Adobe is currently working on additional model details for AI Assistant.
 
 ## Model overview {#model-overview}
 
