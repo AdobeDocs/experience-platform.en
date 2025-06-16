@@ -270,7 +270,7 @@ The following are supported object types for update:
 - Field groups
 - Data types
 
-| Supported updates | Unsupported updated  |
+| Supported updates | Unsupported updates  |
 | --- | --- |
 | <ul><li>Adding new fields/field groups to the resource.</li><li>Making a required field optional.</li><li>Introducing new required fields.</li><li>Introducing a new relationship field.</li><li>Introducing a new identity field.</li><li>Changing the resource's display name and description.</li></ul> | <ul><li>Removing previously defined fields.</li><li>Redefining existing fields when schema is enabled for Real-Time Customer Profile.</li><li>Removing or restricting previously supported field values.</li><li>Moving existing fields to a different location in the schema tree – this will create a new field in the target sandbox, but the previous field will not be removed.</li><li>Enabling or disabling the schema to participate in Profile – this operation will be skipped in diff comparison.</li><li>Access control labels.</li></ul> |
 
