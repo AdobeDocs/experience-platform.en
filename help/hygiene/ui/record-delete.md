@@ -124,7 +124,7 @@ To add more identities, select the plus icon (![A plus icon.](/help/images/icons
 
 ![The request creation workflow with the plus icon and the add identity icon highlighted.](../images/ui/record-delete/more-identities.png)
 
-## ## Quotas and Entitlements {#quotas-and-entitlements}
+## Quotas and Entitlements {#quotas-and-entitlements}
 
 Record deletion requests are subject to daily and monthly quotas that vary by license entitlement.
 
@@ -132,7 +132,7 @@ Record deletion requests are subject to daily and monthly quotas that vary by li
 * **Monthly limits:**
   * **Base entitlement:** Up to 2,000,000 identities per calendar month (capped at 5% of your addressable audience)
   * **Premium (Shield) entitlement:** Up to 15,000,000 identities per calendar month (capped at 10% of your addressable audience)
-  * **CJA customers:** Same percentage-based logic applies
+  * **CJA customers:** Follow the same percentage caps—5% for base and 10% for premium entitlements
 
 Quotas reset at the start of each calendar month. Unused quota does **not** roll over if you start submitting late in the month.
 
@@ -145,7 +145,7 @@ The time it takes for a request to be processed also depends on your entitlement
 * **Base:** Work orders are queued for 15 days before processing. The SLA is 30 days.
 * **Premium:** Work orders are queued for 24 hours before processing. The SLA is 15 days.
 
-If your organization requires higher volumes, contact your Adobe representative to begin an entitlement review. Approved exceptions are tracked internally.
+If your organization requires higher volumes, contact your Adobe representative to begin an entitlement review. Approved exceptions are tracked internally and subject to periodic review.
 
 ## Submit the request {#submit}
 
