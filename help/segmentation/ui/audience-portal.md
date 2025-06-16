@@ -401,7 +401,7 @@ More information about Data Distiller can be found in the [building audiences us
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_importaudience_dataexpiration"
 >title="Data expiration"
->abstract=""
+>abstract="The number of days that the audience membership will expire. This value can be set from 1 day to 90 days."
 
 >[!IMPORTANT]
 >
@@ -435,12 +435,20 @@ When importing the externally generated audience, you must select one of the col
 
 You can also optionally add some extra details to your externally generated audience, including giving it an ID, defining its merge policy, editing its column data type, or applying a custom data expiration.
 
++++ Custom external audience ID
+
 >[!NOTE]
 >
 >If you use a custom external audience ID, it must adhere to the following guidelines:
 >
 > - It **must** start with a letter (a-z or A-Z), underscore (_), or a dollar sign ($).
 > - All subsequent characters can be alphanumeric (a-z, A-Z, 0-9), underscores (_), or dollar signs ($).
+
++++
+
+>[!NOTE]
+>
+>The custom data expiration sets the number of days that profiles will **remain** in the audience membership. After the data expiration is over, the profiles will exit the audience membership. This value can be set from 1 to 90 days.
 
 After filling in your audience details, select **[!UICONTROL Next]**.
 
