@@ -255,8 +255,8 @@ You can use sandbox tooling to move object configurations across different sandb
 >
 > Ensure that you have the following prerequisites before attempting to move your object configurations across different sandboxes.
 >
->* The appropriate permissions to access sandbox tooling.
->* A newly created or updated object (such as a schema) in your source sandbox.
+>- The appropriate permissions to access sandbox tooling.
+>- A newly created or updated object (such as a schema) in your source sandbox.
 
 Follow the steps below to learn how to use sandbox tooling to move your object configurations across different sandboxes
 
