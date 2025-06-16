@@ -124,13 +124,36 @@ To add more identities, select the plus icon (![A plus icon.](/help/images/icons
 
 ![The request creation workflow with the plus icon and the add identity icon highlighted.](../images/ui/record-delete/more-identities.png)
 
+## ## Quotas and Entitlements {#quotas-and-entitlements}
+
+Record deletion requests are subject to daily and monthly quotas that vary by license entitlement.
+
+* **Daily limit:** 1,000,000 identities per day (applies to all customers)
+* **Monthly limits:**
+  * **Base entitlement:** Up to 2,000,000 identities per calendar month (capped at 5% of your addressable audience)
+  * **Premium (Shield) entitlement:** Up to 15,000,000 identities per calendar month (capped at 10% of your addressable audience)
+  * **CJA customers:** Same percentage-based logic applies
+
+Quotas reset at the start of each calendar month. Unused quota does **not** roll over if you start submitting late in the month.
+
+>[!NOTE]
+>
+>These quotas are based on customer entitlements and are not enforced through system guardrails. However, volume limits may be evaluated during contract review or monitored through backend metrics.
+
+The time it takes for a request to be processed also depends on your entitlement level:
+
+* **Base:** Work orders are queued for 15 days before processing. The SLA is 30 days.
+* **Premium:** Work orders are queued for 24 hours before processing. The SLA is 15 days.
+
+If your organization requires higher volumes, contact your Adobe representative to begin an entitlement review. Approved exceptions are tracked internally.
+
 ## Submit the request {#submit}
 
 Once you have finished adding identities to the request, under **[!UICONTROL Request settings]**, provide a name and optional description for the request before selecting **[!UICONTROL Submit]**.
 
->[!IMPORTANT] 
-> 
->There are different limits for the total number of unique identity record deletes that can be submitted each month. These limits are based on your license agreement. Organizations who have purchased all editions of Adobe Real-Time Customer Data Platform or Adobe Journey Optimizer can submit up to 100,000 identity record deletes each month. Organizations who have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield** can submit up to 600,000 identity record deletes each month.<br>A single record delete request through the UI allows you to submit 10,000 IDs at one time. The [API method to delete records](../api/workorder.md#create) allows for the submission of 100,000 IDs at one time.<br>It is best practice to submit as many IDs per request as possible, up to your ID limit. When you intend to delete a high volume of IDs, submitting a low volume, or a single ID per record delete request should be avoided.
+>[!TIP]
+>
+>You can submit up to 10,000 identities per request through the UI. To submit larger volumes (up to 100,000 IDs per request), use the [API method](../api/workorder.md#create).
 
 ![The request setting's [!UICONTROL Name] and [!UICONTROL Description] fields with [!UICONTROL Submit] highlighted.](../images/ui/record-delete/submit.png)
 
