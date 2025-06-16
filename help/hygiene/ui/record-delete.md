@@ -128,10 +128,12 @@ To add more identities, select the plus icon (![A plus icon.](/help/images/icons
 
 Record deletion requests are subject to daily and monthly quotas that vary by license entitlement.
 
+### Quota limits
+
 * **Daily limit:** 1,000,000 identities per day (applies to all customers)
 * **Monthly limits:**
-  * **Base entitlement:** Up to 2,000,000 identities per calendar month (capped at 5% of your addressable audience)
-  * **Premium (Shield) entitlement:** Up to 15,000,000 identities per calendar month (capped at 10% of your addressable audience)
+  * **Base entitlement:** Up to 2,000,000 identities per month (capped at 5% of your addressable audience)
+  * **Premium (Shield) entitlement:** Up to 15,000,000 identities per month (capped at 10% of your addressable audience)
   * **CJA customers:** Follow the same percentage caps—5% for base and 10% for premium entitlements
 
 Quotas reset at the start of each calendar month. Unused quota does **not** roll over if you start submitting late in the month.
@@ -139,6 +141,8 @@ Quotas reset at the start of each calendar month. Unused quota does **not** roll
 >[!NOTE]
 >
 >These quotas are based on customer entitlements and are not enforced through system guardrails. However, volume limits may be evaluated during contract review or monitored through backend metrics.
+
+### Processing timelines
 
 The time it takes for a request to be processed also depends on your entitlement level:
 
