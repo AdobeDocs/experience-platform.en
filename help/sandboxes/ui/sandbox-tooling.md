@@ -247,24 +247,42 @@ The **[!UICONTROL Import summary]** dialog shows a breakdown of the imports with
 
 When your import is complete, a notification is received in the Experience Platform UI. You can access these notifications from the alerts icon. You can navigate to troubleshooting from here if a job is unsuccessful.
 
-## Move object configuration updates across sandboxes {#move-configs}
+## Transfer iterative object configurations updates across sandboxes via sandbox tooling {#move-configs}
 
-You can use sandbox tooling to move object configurations across different sandboxes. In the past, configurations to your objects (such as schemas, field groups, and data types) had to be manually recreated or reimported in order to be brought over to other sandboxes. With this capability, you can use sandbox tooling to accelerate your workflows and reduce potential errors by seamlessly moving your configuration updates across different sandboxes 
+You can use sandbox tooling to transfer object configurations between different sandboxes. Previously, configuration updates to your objects (such as schemas, field groups, and data types) had to be manually recreated or reimported in order to be transferred to other sandboxes. With this capability, you can use sandbox tooling to accelerate your workflows and reduce potential errors by seamlessly transferring your configuration updates across different sandboxes.
+
+![A diagram that displays how updates are moved across sandboxes.](../images/ui/sandbox-tooling/move-updates-diagram.png)
 
 >[!TIP]
 >
-> Ensure that you have the following prerequisites before attempting to move your object configurations across different sandboxes.
+> Ensure that you have the following prerequisites before attempting to transfer your object configurations across different sandboxes.
 >
 >- The appropriate permissions to access sandbox tooling.
 >- A newly created or updated object (such as a schema) in your source sandbox.
 
-Follow the steps below to learn how to use sandbox tooling to move your object configurations across different sandboxes
+>[!BEGINSHADEBOX]
+
+### Supported object types for update operation
+
+The following are supported object types for update:
+
+- Schemas
+- Field groups
+- Data types
+
+| Supported updates | Unsupported updated  |
+| --- | --- |
+| <ul><li>Adding new fields/field groups to the resource.</li><li>Making a required field optional.</li><li>Introducing new required fields.</li><li>Introducing a new relationship field.</li><li>Introducing a new identity field.</li><li>Changing the resource's display name and description.</li></ul> | <ul><li>Removing previously defined fields.</li><li>Redefining existing fields when schema is enabled for Real-Time Customer Profile.</li><li>Removing or restricting previously supported field values.</li><li>Moving existing fields to a different location in the schema tree – this will create a new field in the target sandbox, but the previous field will not be removed.</li><li>Enabling or disabling the schema to participate in Profile – this operation will be skipped in diff comparison.</li><li>Access control labels.</li></ul> |
+
+>[!ENDSHADEBOX]
+
+Follow the steps below to learn how to use sandbox tooling to transfer your object configurations across different sandboxes.
 
 ### Previously imported objects
 
 Follow these steps if your use case involves existing objects in your source sandbox that require configuration updates, after having already been packaged and imported to other sandboxes.
 
-First, update the object in your source sandbox. For example, navigate to the **[!UICONTROL Schemas]** workspace, select your schema, and add a new field group to it.
+First, update the object in your source sandbox. For example, navigate to the **[!UICONTROL Schemas]** workspace, select your schema, and add a new field group.
 
 ![The schema workspace with an updated schema.](../images/ui/sandbox-tooling/update-schema.png)
 
@@ -290,17 +308,26 @@ When ready, select **[!UICONTROL Update package]** and then select **[!UICONTROL
 
 To import your changes, navigate back to the [!UICONTROL Packages] directory and select the ellipses (`...`) beside your package, then select **[!UICONTROL Import package]**. Experience Platform auto-selects [!UICONTROL Update existing objects]. Verify the changes, and then select **[!UICONTROL Finish]**.
 
+>[!NOTE]
+>
+>All dependent objects are automatically updated in the target sandbox as part of this workflow.
+
 ![The import objective interface.](../images/ui/sandbox-tooling/import-objective.png)
 
 To further validate your import process, navigate to your target sandbox and manually view the updated object from within that sandbox.
 
 ### Objects created manually in target sandbox
 
-Follow these steps if your use case involves applying configuration changes to objects that have been previously created manually in separate sandboxes.
+Follow these steps if your use case involves applying configuration changes to objects that were manually created in separate sandboxes.
 
 First, create and publish a new package with your updated object.
 
 Next, import your package to the target sandbox that contains the objects that you also want to update. During the import process, select **[!UICONTROL Update existing objects]** and then use the object navigator to manually select the target objects that you want your updates to apply to.
+
+>[!NOTE]
+>
+>- It is optional to select a target mapping in a different sandbox for dependent objects. If none is selected, a new one is created.
+>- For identity namespace, the system auto-detects if a new identity needs to be created if an existing one needs to be reused in the target sandbox.
 
 ![The import objective interface with placeholders for objects to be updated.](../images/ui/sandbox-tooling/update-existing-objects.png)
 
