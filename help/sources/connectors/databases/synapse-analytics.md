@@ -5,7 +5,7 @@ badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2025-06-17
 exl-id: 5b94ae74-e5a7-40e9-a952-41eddf06dcde
 ---
-# [!DNL Azure Synapse Analytics] source
+# [!DNL Azure Synapse Analytics]
 
 >[!IMPORTANT]
 >
@@ -47,7 +47,20 @@ Provide values for the following credentials to connect your [!DNL Azure Synapse
 | `connectionString` | This is the **connection string** used for authenticating with [!DNL Azure Synapse Analytics]. The standard format is: `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. You must replace the placeholders with your actual connection details. |
 | `connectionSpec.id` | The **connection spec** provides the connector properties of a data source. This includes details such as authentication specifications and requirements for creating both **base** and **source** connections. For [!DNL Azure Synapse Analytics], the connection spec ID is: `a49bcc7d-8038-43af-b1e4-5a7a089a7d79`. **Note:** This credential is only necessary when connecting via APIs.  |
 
->[!TAB Service-principal key authentication]
+>[!TAB Service principal key authentication]
+
+To retrieve your credentials for service principal key authentication, navigate to the [[!DNL Microsfot Entra admin center]](https://entra.microsoft.com/#home) and retrieve values for the following:
+
+* App ID
+* Display name
+* Secret
+* Tenant ID
+
+Next, navigate to your [[!DNL Azure Synapse Analytics] instance](https://azure.microsoft.com/en-ca/products/synapse-analytics) and then select the option to create a user from an external provider. From here, provide the appropriate permissions for the service principal on the schema. **NOTE:**: You must include "SELECT" as it is required for schema preview, similar to "COPY". For instance, an example command can be: 
+
+```SQL
+GRANT SELECT ON SCHEMA::dbo TO {APP_ID};
+```
 
 Provide values for the following credentials to connect your [!DNL Azure Synapse Analytics] database to Experience Platform using service-principal key authentication.
 

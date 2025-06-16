@@ -12,7 +12,7 @@ exl-id: 1f1ce317-eaaf-4ad2-a5fb-236983220bd7
 
 Read this guide to learn how to connect your [!DNL Azure Synapse Analytics] account to Adobe Platform using the sources workspace in the UI.
 
-## Getting started
+## Get started
 
 This tutorial requires a working understanding of the following components of Experience Platform:
 
@@ -37,19 +37,19 @@ To connect to [!DNL Azure Synapse Analytics], go to the *[!UICONTROL Databases]*
 >
 >Sources in the sources catalog display the **[!UICONTROL Set up]** option when a given source does not yet have an authenticated account. Once an authenticated account is created, this option changes to **[!UICONTROL Add data]**.
 
-![The sources catalog with "Azure Synapse Analytics" selected.]
+![The sources catalog with "Azure Synapse Analytics" selected.](../../../../images/tutorials/create/azure-synapse-analytics/catalog.png)
 
 ## Use an existing account {#existing}
 
 To use an existing account, select **[!UICONTROL Existing account]** and then select the [!DNL Azure Synapse Analytics] account that you want to use.
 
-![The existing account interface of the sources workflow.]
+![The existing account interface of the sources workflow.](../../../../images/tutorials/create/azure-synapse-analytics/existing.png)
 
 ## Create a new account {#new}
 
 To create a new account, select **[!UICONTROL New account]** and then provide a name and optionally add a description for your account.
 
-![The new account interface of the sources workflow.]
+![The new account interface of the sources workflow.](../../../../images/tutorials/create/azure-synapse-analytics/new.png)
 
 ### Connect to Experience Platform
 
@@ -61,13 +61,13 @@ You can connect your [!DNL Azure Synapse Analytics] account to Experience Platfo
 
 To use account key authentication, select **[!UICONTROL Account key authentication]**, provide your [connection string](../../../../connectors/databases/synapse-analytics.md#prerequisites), and then select **[!UICONTROL Connect to source]**.
 
-![The "create new account" step in the sources workflow with "account key authentication selected.]
+![The "create new account" step in the sources workflow with "account key authentication selected.](../../../../images/tutorials/create/azure-synapse-analytics/account-key-auth.png)
 
 >[!TAB Service principal and key authentication]
 
 Alternatively, select **[!UICONTROL Service principal and key authentication]**, provide values for your [authentication credentials](../../../../connectors/databases/synapse-analytics.md#prerequisites), and then select **[!UICONTROL Connect to source]**.
 
-![The "create new account" step in the sources workflow with "service principal and key authentication" selected.]
+![The "create new account" step in the sources workflow with "service principal and key authentication" selected.](../../../../images/tutorials/create/azure-synapse-analytics/service-principal.png)
 
 >[!ENDTABS]
 
