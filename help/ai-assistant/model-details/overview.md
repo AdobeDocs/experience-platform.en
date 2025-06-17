@@ -1,23 +1,23 @@
 ---
-title: Model Cards For AI Model Transparency In Adobe Experience Platform
-description: Learn about model cards in Adobe Experience Platform.
+title: Model Details For AI Model Transparency In Adobe Experience Platform
+description: Learn about model detailss in Adobe Experience Platform.
 hide: true
 hidefromtoc: true
 exl-id: 74a8ef82-cff9-4a7e-95c8-f915eb664eda
 ---
-# Model cards for AI model transparency in Adobe Experience Platform
+# Model details for AI model transparency in Adobe Experience Platform
 
-An AI model card is the standard format by which AI model transparency is communicated. Model cards provide comprehensive information about the underlying model that a given AI tool is built on. Model cards include information such as an AI tool's purpose, training data, performance metrics, limitations, and ethical considerations. You can use the transparency that model cards provide to better understand the capabilities and limitations of the model, as well as to better promote responsible and fair use of AI.
+An AI model detail is the standard format by which AI model transparency is communicated. Model details provide comprehensive information about the underlying model that a given AI tool is built on. Model details include information such as an AI tool's purpose, training data, performance metrics, limitations, and ethical considerations. You can use the transparency that model details provide to better understand the capabilities and limitations of the model, as well as to better promote responsible and fair use of AI.
 
-Model cards are public and are intended to improve both existing and prospective customer understanding of the AI models that Adobe uses. Model cards are generally static. However, there are several aspects of AI models that can change over time, including lineage, bias, and other transparency attributes.
+Model details are public and are intended to improve both existing and prospective customer understanding of the AI models that Adobe uses. Model details are generally static. However, there are several aspects of AI models that can change over time, including lineage, bias, and other transparency attributes.
 
-Read this document to learn about model cards in Adobe Experience Platform.
+Read this document to learn about model details in Adobe Experience Platform.
 
-## Model card sections {#model-card-sections}
+## Model detail sections {#model-detail-sections}
 
-A model card is composed of a variety of different sections, each focusing on a particular aspect of the AI model.
+A model detail is composed of a variety of different sections, each focusing on a particular aspect of the AI model.
 
-Read the following for a guide on the different sections of a model card, including information the questions they address.
+Read the following for a guide on the different sections of a model detail, including information the questions they address.
 
 ### Model overview {#model-overview}
 

@@ -2,8 +2,8 @@
 title: Algolia Event Forwarding Extension Overview
 description: Learn how to set up and use the Algolia event forwarding extension in Adobe Experience Platform. Forward user behavior data via the Insights API, configure rules, map XDM fields, and verify event delivery.
 last-substantial-update: 2025-05-09
+exl-id: 397c8761-9bff-4b85-9f3f-4cbbd782c139
 ---
-
 # [!DNL Algolia] event forwarding extension overview {#overview}
 
 >[!NOTE]

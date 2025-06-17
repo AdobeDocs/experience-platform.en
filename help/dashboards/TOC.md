@@ -28,7 +28,7 @@ role: Developer,User
   * [Drill through](sql-insights-query-pro-mode/drill-through.md)
   * [View more](sql-insights-query-pro-mode/view-more.md)
   * [View SQL](sql-insights-query-pro-mode/view-sql.md)
-  * [Download as CSV](sql-insights-query-pro-mode/download-csv.md)
+  * [Export as CSV](sql-insights-query-pro-mode/download-csv.md)
   * [Export as PDF](sql-insights-query-pro-mode/export-pdf.md)
 * Available dashboards {#guides}
   * [Profiles](guides/profiles.md)

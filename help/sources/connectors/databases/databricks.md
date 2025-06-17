@@ -3,7 +3,7 @@ title: Azure Databricks
 description: Learn about the prerequisite steps needed in order to connect Azure Databricks to Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
-last-substantial-update: 2025-04-29
+last-substantial-update: 2025-06-17
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
 ---
 # [!DNL Azure Databricks]
@@ -12,7 +12,7 @@ exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
 >
 >* The [!DNL Azure Databricks] source is available in the sources catalog to users who have purchased Real-Time CDP Ultimate.
 >
->* The [!DNL Azure Databricks] source is in beta. Read the [terms and conditions](../../home.md#terms-and-conditions) in the sources overview for more information on using beta-labeled sources..
+>* The [!DNL Azure Databricks] source is in beta. Read the [terms and conditions](../../home.md#terms-and-conditions) in the sources overview for more information on using beta-labeled sources.
 
 [!DNL Azure Databricks] is a cloud-based platform designed for data analytics, machine learning, and AI. You can use [!DNL Databricks] to integrate with [!DNL Azure] and provide a holistic environment for building, deploying, and managing data solutions at scale.
 
@@ -89,7 +89,7 @@ To refresh your credentials, make a POST request and include `action=refresh` as
 **API format**
 
 ```http
-GET /data/foundation/connectors/landingzone/credentials?type=dlz_databricks_source&action=refresh
+POST /data/foundation/connectors/landingzone/credentials?type=dlz_databricks_source&action=refresh
 ```
 
 **Request**
@@ -99,7 +99,7 @@ The following request refreshes the credentials for your [!DNL Azure Blob Storag
 +++View request example
 
 ```shell
-curl -X GET \
+curl -X POST \
   'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=dlz_databricks_source&action=refresh' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -155,6 +155,9 @@ fs.azure.sas.{CONTAINER_NAME}.{STORAGE-ACCOUNT}.blob.core.windows.net {SAS-TOKEN
 
 ![The Databricks UI on Azure.](../../images/tutorials/create/databricks/databricks-ui.png)
 
-## Connect [!DNL Databricks] to Experience Platform using APIs
+## Connect [!DNL Databricks] to Experience Platform 
 
-Now that you have completed the prerequisite steps, you can now proceed to the guide on [connecting your [!DNL Databricks] account to Experience Platform using the API](../../tutorials/api/create/databases/databricks.md).
+Now that you have completed the prerequisite steps, you can now proceed and connect your [!DNL Databricks] account to Experience Platform:
+
+* [Connect through the API](../../tutorials/api/create/databases/databricks.md)
+* [Connect through the sources workspace in the UI](../../tutorials/ui/create/databases/databricks.md)

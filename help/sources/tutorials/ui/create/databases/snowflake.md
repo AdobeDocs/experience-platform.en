@@ -15,6 +15,10 @@ Read this guide to learn how to connect your [!DNL Snowflake] account to Adobe E
 
 ## Getting started
 
+>[!WARNING]
+>
+>Basic authentication (or account key authentication) for the [!DNL Snowflake] source will be deprecated on November 2025. You must move to key-pair based authentication in order to continue using the source and ingesting data from your database to Experience Platform. For more information on the deprecation, read the [[!DNL Snowflake] best practices guide on mitigating the risks of credential compromise](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
+
 This tutorial requires a working understanding of the following components of Experience Platform:
 
 * [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Experience Platform] services.
