@@ -8,7 +8,9 @@ Use this guide to troubleshoot and resolve alerts triggered by misconfigured Cus
 
 ## Key access disabled {#key-access-disabled}
 
-This alert indicates that Adobe Experience Platform is unable to access the configured CMK due to the key being disabled in the customer's key management service.
+This alert indicates that Adobe Experience Platform is unable to access the configured CMK due to the key being disabled in the your key management service.
+
+<!-- Potential outcome: In this event Adobe CMK treats this as a purposeful removal and will purge all data associated with the customer (your organization) based on our customer (your) SLAs.  -->
 
 ### When it occurs
 
@@ -45,13 +47,15 @@ Complete the following steps to resolve the issue:
 
 This alert indicates that Adobe Experience Platform failed to access the CMK due to network-level or configuration-based denial of access.
 
+<!-- Potential impact: "Adobe CMK assumes that there is an issues with the access and will not purge data based on SLA."  -->
+
 ### When it occurs
 
 This alert is triggered when Adobe attempts to access the CMK and encounters permission, network, or identity-related issues.
 
 ### Possible causes
 
-The following are common reasons this alert may occur:
+This alert typically occurs when the key vault firewall is not properly configured to allow Adobe CMK access to the Key.The following are more precise common reasons this alert may occur:
 
 - The CMK no longer exists at the expected location.
 - The Key Vault has been deleted or is misconfigured.
@@ -79,7 +83,9 @@ Complete the following steps to resolve the issue:
 
 ## Alert notification {#alert-notification}
 
-This alert serves as a general notification about a CMK configuration or access issue that may require customer attention but does not match a specific failure category.
+This alert serves as a general notification about a CMK configuration or access issue that may require your attention but does not match a specific failure category.
+
+<!-- Potential impact: Varies. This could be anything from an FYI we are experience internal network issues, to the customer has mistakenly misconfigred something we've never seen before.  -->
 
 ### When it occurs
 
@@ -87,7 +93,7 @@ This alert appears when a general issue is detected with CMK configuration or ac
 
 ### Possible causes
 
-The following are common reasons this alert may occur:
+Potential causes and possible next steps are included in the alert message; however, the following are common reasons this alert may occur:
 
 - Temporary network disruption between Adobe and the Key Vault.
 - A non-fatal but recurring access issue has been observed.
