@@ -19,13 +19,13 @@ exl-id: 95e1fc8f-1817-40d7-aa55-93daa50f43c0
 ## Model details {#model-details}
 
 * **Model type**: The Send-Time Optimization model ingests your organization's Adobe Journey Optimizer consumer behavior data and looks at user-level open and click events to predict when your consumers are most likely to engage with your messaging. Consumer-level open and click behavior for each hour of the week are weighted and combined with lookalike and overall consumer behavior using a [!DNL Bayesian] estimator. The [!DNL Bayesian] predictions for each hour of the week are then ranked, resulting in a "heat map" for each metric (email opens, email clicks, and push opens), for each customer, to predict the hours of the week that contacting each consumer is most and least likely to result in the desired engagement outcome.
-* **Input**: Send-Time Optimization utilizes consumer timezone data in the `timeZone` field within the [!UICONTROL Preference Details] field group, if provided, to determine a consumer's timezone. If a consumer's timezone is not available in the `timeZone` field, Send-Time Optimization attempts to infer the consumer's timezone, based on the most common timezone match to the first postal address found stored in the consumer's profile using the [postal address data type](../../../xdm/data-types/postal-address.md). Send-Time Optimization makes predictions for each consumer based on three types of behavioral data:
+* **Input**: Send-Time Optimization utilizes consumer timezone data in the `timeZone` field within the [!UICONTROL Preference Details] field group, if provided, to determine a consumer's timezone. If a consumer's timezone is not available in the `timeZone` field, Send-Time Optimization attempts to infer the consumer's timezone, based on the most common timezone match to the first postal address found stored in the consumer's profile using the [postal address data type](../../xdm/data-types/postal-address.md). Send-Time Optimization makes predictions for each consumer based on three types of behavioral data:
   * The open and click behavior of your consumers overall.
   * The open and click behavior of lookalike consumers in the same time zone.
   * The open and click behavior of that individual consumer.
 * **Output**: These predictions are weighted and combined using a [!DNL Bayesian] approach, resulting in a "heat map" for each metric (email opens, email clicks, and push opens), for each customer, that indicates the hours of the week that contacting that consumer is most and least likely to result in the desired engagement outcome (open/click), as illustrated in the below example heatmap:
 
-![The Send-Time Optimization heat map.](../../images/models/send-time-optimization.png)
+![The Send-Time Optimization heat map.](../images/models/send-time-optimization.png)
 
 * **Example input and output**: In order to minimize the model's impact on profile richness, model scores are stored and compressed in three Profile attributes stored in `_experience.intelligentServices.journeyAI.sendTimeOptimization`, and are not designed to be human readable.
 
