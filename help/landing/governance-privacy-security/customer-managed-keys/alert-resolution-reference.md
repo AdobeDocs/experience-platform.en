@@ -1,10 +1,12 @@
 ---
-title:
-description:
+title: CMK Alert Resolution Reference
+description: Identify, troubleshoot, and resolve common alerts triggered by Customer Managed Key (CMK) misconfigurations in Adobe Experience Platform. Use this guide to follow clear, step-by-step instructions and restore secure key access.
 ---
 # CMK alert resolution reference
 
-This document provides guidance for resolving alerts triggered by misconfigured Customer Managed Key (CMK) settings in Adobe Experience Platform. It is intended for system administrators and implementation specialists responsible for maintaining encryption key access and health. Use this reference to understand what each alert means, when it occurs, and how to resolve it.
+Use this guide to troubleshoot and resolve alerts triggered by misconfigured Customer Managed Key (CMK) settings in Adobe Experience Platform. It helps system administrators and implementation specialists identify causes and apply resolutions to restore secure access.
+
+Use the following sections to understand and resolve each alert.
 
 ## Key access disabled
 
@@ -24,13 +26,18 @@ This alert is triggered when the encryption key in Azure Key Vault is in a disab
 
 1. Navigate to the [Azure Key Vault](https://portal.azure.com/) that contains the CMK.
 2. Select the key associated with Adobe Experience Platform.
-3. Confirm that the key's status is **Enabled**.
-4. If the key is disabled, enable it using the Azure portal or Azure CLI.
+3. Verify that the key's status is set to **Enabled**.
+4. If the key is disabled, enable it using the Azure portal or by running a CLI command such as `az keyvault key enable`.  
+   
+   >[!NOTE]  
+   >
+   >Replace this command with your actual environment-specific usage if necessary.
+
 5. Ensure that no automated scripts or lifecycle policies disable the key again.
 
 ### Notes
 
->[!NOTE]
+>[!NOTE]  
 >
 >If soft-delete is enabled in Azure Key Vault, restoring a disabled key may require additional steps. Confirm that the key was not deleted or scheduled for deletion.
 
@@ -57,15 +64,14 @@ This alert is triggered when Adobe attempts to access the CMK and encounters per
    - `get`, `wrapKey`, and `unwrapKey` on the key.
 3. Review the Key Vault's access policies or role assignments.
 4. Ensure the Object ID for the Adobe MultiTenant App is current. If changed, reapply the necessary permissions.
-5. Verify that firewall rules allow access from Adobe's static IP address: `20.88.123.53`.
+5. Verify that firewall rules allow access from Adobe's static IP address: `20.88.123.53`.  
+   
+   >[!NOTE]  
+   >
+   >Adobe's IP must be allowlisted. Firewall rules can block access even if permissions are configured correctly.
+
 6. Confirm that the key is not in a pending deletion or recoverable state.
 7. If soft-delete is enabled and the key was deleted, recover the key before reapplying permissions.
-
-### Notes
-
->[!NOTE]
->
->Check that the Adobe static IP is included in your Key Vault's allowlist configuration. Even with correct permissions, firewall restrictions can block access.
 
 ## Alert notification
 
@@ -91,6 +97,6 @@ This alert appears when a general issue is detected with CMK configuration or ac
 
 ### Notes
 
->[!NOTE]
+>[!NOTE]  
 >
->You may receive this alert even if the CMK recovers automatically. Use this as a prompt to audit key settings and access configurations for stability.
+>You may receive this alert even if the CMK recovers automatically. Audit your key settings and access configurations to ensure continued stability.
