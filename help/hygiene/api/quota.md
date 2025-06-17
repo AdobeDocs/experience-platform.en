@@ -30,7 +30,7 @@ The following table outlines the daily and monthly identity deletion quotas base
 |--------|------------|-------------|----------|
 | **All customers**      | 1,000,000 identities/day      | —          | —     |
 | **Base**               | 1,000,000 identities/day      | 2,000,000 identities/month     | Up to 5% of addressable audience |
-| **Premium (Shield)**   | 1,000,000 identities/day      | 15,000,000 identities/month    | Up to 10% of addressable audience |
+| **Premium ( Healthcare Shield)**   | 1,000,000 identities/day      | 15,000,000 identities/month    | Up to 10% of addressable audience |
 | **CJA customers**      | Same as Base or Premium       | Same as Base or Premium        | Based on entitlement          |
 
 >[!NOTE]
