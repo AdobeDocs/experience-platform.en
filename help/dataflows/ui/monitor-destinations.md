@@ -119,11 +119,27 @@ You can view information about the activated, excluded, or failed identities bro
 
 Audience-level monitoring for streaming destinations is currently available only for the following destinations:
 
-- [[!DNL Google Customer Match + Display & Video 360]](/help/destinations/catalog/advertising/google-customer-match-dv360.md)
-- [[!DNL (V2) Marketo Engage]](/help/destinations/catalog/adobe/marketo-engage.md)
-- [[!DNL HTTP API]](/help/destinations/catalog/streaming/http-destination.md)
-- [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
-- [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+- [[!DNL (API) Oracle Eloqua] connection](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)
+- [[!DNL (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)
+- [[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md)
+- [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md)
+- [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md)
+- [[!DNL Google Customer Match + Display & Video 360]](../../destinations/catalog/advertising/google-customer-match-dv360.md)
+- [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md)
+- [[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md)
+- [[!DNL Magnite: Real-time]](../../destinations/catalog/advertising/magnite-streaming.md)
+- [[!DNL Marketo Engage Person Sync]](../../destinations/catalog/adobe/marketo-engage-person-sync.md)
+- [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md)
+- [[!DNL Moengage]](../../destinations/catalog/mobile-engagement/moengage.md)
+- [[!DNL Outreach]](../../destinations/catalog/crm/outreach.md)
+- [[!DNL PubMatic Connect]](../../destinations/catalog/advertising/pubmatic-connect.md)
+- [[!DNL PubMatic Connect (Custom Audience ID Mapping)]](../../destinations/catalog/advertising/pubmatic-connect.md)
+- [[!DNL Qualtrics Automations]](../../destinations/catalog/survey/qualtrics-automations.md)
+- [[!DNL RainFocus Attendee Profiles]](../../destinations/catalog/marketing-automation/rainfocus-attendee-profiles.md)
+- [[!DNL SAP Commerce]](../../destinations/catalog/ecommerce/sap-commerce.md)
+- [[!DNL Snowflake]](../../destinations/catalog/cloud-storage/snowflake.md)
+- [[!DNL Yahoo DataX]](../../destinations/catalog/advertising/datax.md)
+- [[!DNL Zendesk]](../../destinations/catalog/crm/zendesk.md)
 
 ![Audience-level monitoring for streaming destinations.](/help/dataflows/assets/ui/monitor-destinations/audience-level-monitoring-streaming.png)
 
