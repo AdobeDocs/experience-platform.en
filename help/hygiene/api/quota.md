@@ -8,10 +8,7 @@ exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
 
 The `/quota` endpoint in the Data Hygiene API allows you to monitor your Advanced Data Lifecycle Management usage against your organization's quota limits for each job type.
 
-Quotas are enforced for each Data Lifecycle job type in the following ways:
-
-* Record deletes and updates are limited to a certain number of requests each month.
-* Dataset expirations have a flat limit for the number of concurrently active jobs, regardless of when the expirations will be executed.
+Quota usage is tracked for each Data Lifecycle job type. Your actual quota limits depend on your organization's entitlement and may be reviewed periodically. Dataset expirations are subject to a hard limit on the number of concurrently active jobs.
 
 ## Getting started
 
@@ -20,6 +17,38 @@ The endpoint used in this guide is part of the Data Hygiene API. Before continui
 * Links to related documentation
 * A guide to reading the sample API calls in this document
 * Important information regarding the required headers that are needed to make calls to any Experience Platform API
+
+## Quota behavior and entitlements {#quota-behavior}
+
+Quota limits for identity deletions depend on your organization's license entitlement.
+
+### Entitlement-based quotas
+
+The following table outlines the daily and monthly identity deletion quotas based on your organization's entitlement level.
+
+| Entitlement Type       | Daily Limit | Monthly Limit | Percentage Cap  |
+|--------|------------|-------------|----------|
+| **All customers**      | 1,000,000 identities/day      | —          | —     |
+| **Base**               | 1,000,000 identities/day      | 2,000,000 identities/month     | Up to 5% of addressable audience |
+| **Premium (Shield)**   | 1,000,000 identities/day      | 15,000,000 identities/month    | Up to 10% of addressable audience |
+| **CJA customers**      | Same as Base or Premium       | Same as Base or Premium        | Based on entitlement          |
+
+>[!NOTE]
+>
+>These quotas reflect contract entitlements and are not enforced by technical guardrails. However, they are tracked and may be reviewed during support engagements.
+
+### Quota reset behavior
+
+Quotas reset at the start of each calendar month. Unused quota does not roll over.
+
+### SLA differences
+
+Work order processing time also depends on entitlement:
+
+* **Base**: 15-day queue, 30-day SLA
+* **Premium**: 24-hour queue, 15-day SLA
+
+If your organization requires a higher limit, contact your Adobe representative to request an entitlement review. Approved exceptions are tracked internally.
 
 ## List quotas {#list}
 
@@ -64,13 +93,13 @@ A successful response returns the details of your data lifecycle quotas.
       "name": "dailyConsumerDeleteIdentitiesQuota",
       "description": "The consumed number of deleted identities in all workorder requests for the organization for today.",
       "consumed": 0,
-      "quota": 600000
+      "quota": 1000000
     },
     {
       "name": "monthlyConsumerDeleteIdentitiesQuota",
       "description": "The consumed number of deleted identities in all workorder requests for the organization for this month.",
       "consumed": 841,
-      "quota": 600000
+      "quota": 2000000
     },
     {
       "name": "monthlyUpdatedFieldIdentitiesQuota",
@@ -83,7 +112,5 @@ A successful response returns the details of your data lifecycle quotas.
 ```
 
 | Property | Description |
-| --- | --- |
+| -------- | ------- |
 | `quotas` | Lists the quota information for each data lifecycle job type. Each quota object contains the following properties:<ul><li>`name`: The data lifecycle job type:<ul><li>`expirationDatasetQuota`: Dataset expirations</li><li>`deleteIdentityWorkOrderDatasetQuota`: Record deletes</li></ul></li><li>`description`: A description of the data lifecycle job type.</li><li>`consumed`: The number of jobs of this type run in the current period. The object name indicates the quota period.</li><li>`quota`: The allotment for this job type for your organization. For record deletions and updates, the quota represents the number of jobs that can be run for each monthly period. For dataset expirations, the quota represents the number of jobs that can be concurrently active at any given time.</li></ul> |
-
-{style="table-layout:auto"}
