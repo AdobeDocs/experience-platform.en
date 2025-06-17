@@ -25,7 +25,7 @@ exl-id: 95e1fc8f-1817-40d7-aa55-93daa50f43c0
   * The open and click behavior of that individual consumer.
 * **Output**: These predictions are weighted and combined using a [!DNL Bayesian] approach, resulting in a "heat map" for each metric (email opens, email clicks, and push opens), for each customer, that indicates the hours of the week that contacting that consumer is most and least likely to result in the desired engagement outcome (open/click), as illustrated in the below example heatmap:
 
-![The Send-Time Optimization heat map.](../../images/models/send-time-optimization.png)
+![The Send-Time Optimization heat map.](../images/models/send-time-optimization.png)
 
 * **Example input and output**: In order to minimize the model's impact on profile richness, model scores are stored and compressed in three Profile attributes stored in `_experience.intelligentServices.journeyAI.sendTimeOptimization`, and are not designed to be human readable.
 
