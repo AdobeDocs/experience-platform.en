@@ -23,8 +23,7 @@ role: Admin,User,Developer,Leader
   * [XDM field discovery for audience creation](./new-features/xdm-field-discovery.md)
 * Model details {#model-details}
   * [Model details overview](./model-details/overview.md)
-  * AI model details {#ai-model-details}
-    * [AI Assistant Natural Operational Insights Language to SQL](./model-details/ai-model-details/natural-language-to-sql.md)
-    * [Send-Time Optimization](./model-details/ai-model-details/send-time-optimization.md)
+  * [AI Assistant Natural Operational Insights Language to SQL](./model-details/ai-model-details/natural-language-to-sql.md)
+  * [Send-Time Optimization](./model-details/ai-model-details/send-time-optimization.md)
 * [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
 
