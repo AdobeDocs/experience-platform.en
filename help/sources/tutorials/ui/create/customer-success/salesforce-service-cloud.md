@@ -20,6 +20,10 @@ If you already have a valid [!DNL Salesforce Service Cloud] connection, you may 
 
 ### Gather required credentials
 
+>[!WARNING]
+>
+>Basic authentication for the [!DNL Salesforce Service Cloud] source will be deprecated in January 2026. You must move to OAuth 2 Client Credential authentication in order to continue using the source and ingesting data from your [!DNL Salesforce Service Cloud] account to Experience Platform.
+
 The [!DNL Salesforce Service Cloud] source supports basic authentication and OAuth2 Client Credential.
 
 >[!BEGINTABS]

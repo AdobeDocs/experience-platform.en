@@ -21,10 +21,9 @@ role: Admin,User,Developer,Leader
   * [Natural language estimation](./new-features/natural-language.md)
   * [Product Support Agent](./new-features/customer-support.md)
   * [XDM field discovery for audience creation](./new-features/xdm-field-discovery.md)
-* Model cards {#model-cards}
-  * [Model cards overview](./model-cards/overview.md)
-  * AI model cards {#ai-model-cards}
-    * [AI Assistant Natural Operational Insights Language to SQL](./model-cards/ai-model-cards/natural-language-to-sql.md)
-    * [Customer AI propensity scoring](./model-cards/ai-model-cards/customer-ai.md)
+* Model details {#model-details}
+  * [Model details overview](./model-details/overview.md)
+  * [AI Assistant Natural Operational Insights Language to SQL](./model-details/natural-language-to-sql.md)
+  * [Send-Time Optimization](./model-details/send-time-optimization.md)
 * [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
 
