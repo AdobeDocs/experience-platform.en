@@ -329,7 +329,7 @@ Next, import your package to the target sandbox that contains the objects that y
 >- It is optional to select a target mapping in a different sandbox for dependent objects. If none is selected, a new one is created.
 >- For identity namespace, the system auto-detects if a new identity needs to be created if an existing one needs to be reused in the target sandbox.
 
-![The import objective interface with placeholders for objects to be updated.](../images/ui/sandbox-tooling/update-existing-objects.png)
+![The import objective interface with placeholders for the target objects to be updated.](../images/ui/sandbox-tooling/update-existing-objects.png)
 
 Once you have identified the target objects that you want to update, select **[!UICONTROL Finish]**.
 
