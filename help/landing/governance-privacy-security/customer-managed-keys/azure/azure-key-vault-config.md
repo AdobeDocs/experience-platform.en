@@ -53,7 +53,9 @@ Select **[!DNL Networking]** in the left navigation. Under **[!DNL Firewalls and
 
 >[!NOTE]
 >
->If your Key Vault is configured with restricted network access, Adobe recommends that you add the following static IP address for Production environments: `20.88.123.53` to the restricted network configuration of your key vault. Adding this IP address allows Adobe services to monitor connectivity more effectively and provide in-Platform alerts when access issues are detected. To learn more about when to allowlist Adobe's IP address, how alerts work, and what to do if you receive a key access failure notification, see [Configuree Alerts and IP Access for Azure CMK](./alerts-and-ip-access.md).
+>If your key vault uses restricted network access, Adobe recommends that you add the following static IP address: `20.88.123.53`. Adding this IP address allows Adobe services to monitor connectivity more effectively and provide in-Platform alerts when access issues are detected.
+>
+>To learn more about when to allowlist Adobe's IP address, how alerts work, and how to respond to key access failure notifications, see [Configure Alerts and IP Access for Azure CMK](./alerts-and-ip-access.md).
 >
 >If your key vault is already configured to allow public network access, no further action is required.
 
