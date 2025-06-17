@@ -6,6 +6,12 @@ description: Customize how the Web SDK tag extension collects streaming media da
 
 The media collection feature helps you collect data related to media sessions, such as media playbacks, pauses, completions, and other related events. Once collected, you can send this data to Adobe Experience Platform or Adobe Analytics to generate reports. This feature provides a comprehensive solution for tracking and understanding media consumption behavior on your website.
 
+1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
+1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
+1. Select the desired tag property.
+1. Navigate to **[!UICONTROL Extensions]**, then select **[!UICONTROL Configure]** on the [!UICONTROL Adobe Experience Platform Web SDK] card.
+1. Scroll down to the **[!UICONTROL Streaming media]** section.
+
 ![Image showing the media collection settings of the Web SDK tag extension in the Tags UI](../assets/media-collection.png)
 
 ## Prerequisites

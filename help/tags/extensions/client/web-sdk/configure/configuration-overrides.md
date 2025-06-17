@@ -1,10 +1,16 @@
 ---
-title: Datastream override configuration settings
+title: Datastream configuration override settings
 description: Modify configuration settings when certain conditions are met.
 ---
-# Datastream override configuration settings
+# Datastream configuration override settings
 
 Datastream overrides allow you to define additional configurations for your datastreams, which get passed to the Edge Network via the Web SDK. This feature helps you conditionally trigger different datastream behaviors without creating a new datastream or modifying your existing settings.
+
+1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
+1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
+1. Select the desired tag property.
+1. Navigate to **[!UICONTROL Extensions]**, then select **[!UICONTROL Configure]** on the [!UICONTROL Adobe Experience Platform Web SDK] card.
+1. Scroll down to the **[!UICONTROL Datastream configuration overrides]** section.
 
 Datastream configuration override is a two step process:
 

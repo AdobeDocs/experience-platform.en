@@ -10,7 +10,7 @@ This configuration section allows you to determine how data is collected across 
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Select the desired tag property.
 1. Navigate to **[!UICONTROL Extensions]**, then select **[!UICONTROL Configure]** on the [!UICONTROL Adobe Experience Platform Web SDK] card.
-1. Scroll down to the [!UICONTROL Data Collection] section.
+1. Scroll down to the **[!UICONTROL Data collection]** section.
 
 ![Image showing the data collection settings of the Web SDK tag extension in the Tags UI.](../assets/web-sdk-ext-collection.png)
 

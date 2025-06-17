@@ -8,15 +8,15 @@ The Web SDK library includes multiple modules for various features like personal
 
 When you disable a component, you can no longer edit the settings of that component. If you use multiple Web SDK instances, selected build components apply to all instances.
 
->[!WARNING]
->
->Incorrectly modifying these settings can cause undesired results, including data loss. Thoroughly test your implementation in a development environment before publishing these changes to production.
-
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Select the desired tag property.
 1. Navigate to **[!UICONTROL Extensions]**, then select **[!UICONTROL Configure]** on the [!UICONTROL Adobe Experience Platform Web SDK] card.
 1. Expand the **[!UICONTROL Custom build components]** accordion at the top.
+
+>[!WARNING]
+>
+>Incorrectly modifying these settings can cause undesired results, including data loss. Thoroughly test your implementation in a development environment before publishing these changes to production.
 
 Adobe offers the ability to disable the following Web SDK build components:
 

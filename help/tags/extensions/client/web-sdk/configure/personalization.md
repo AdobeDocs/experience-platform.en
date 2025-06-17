@@ -10,7 +10,7 @@ This configuration section allows you to determine how you want to hide certain 
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Select the desired tag property.
 1. Navigate to **[!UICONTROL Extensions]**, then select **[!UICONTROL Configure]** on the [!UICONTROL Adobe Experience Platform Web SDK] card.
-1. Scroll down to the [!UICONTROL Personalization] section.
+1. Scroll down to the **[!UICONTROL Personalization]** section.
 
 ![Image showing the personalization settings of the Web SDK tag extension in the Tags UI](../assets/web-sdk-ext-personalization.png)
 

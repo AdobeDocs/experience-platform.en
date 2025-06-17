@@ -1,16 +1,23 @@
-## Evaluate rulesets {#evaluate-rulesets}
+---
+title: Evaluate rulesets
+description: Manually trigger a ruleset evaluation.
+---
+# Evaluate rulesets
 
-This action type manually triggers ruleset evaluation. Rulesets are returned by Adobe Journey Optimizer to support features like in-browser messages.
+The **[!UICONTROL Evaluate rulesets]** action type lets you manually trigger ruleset evaluations. Rulesets are returned by Adobe Journey Optimizer to support features like in-browser messages.
 
-![Image of the Experience Platform user interface showing the Evaluate rulesets response action type.](assets/evaluate-rulesets.png)
+1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
+1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
+1. Select the desired tag property.
+1. Navigate to **[!UICONTROL Rules]**, then select the desired rule.
+1. Under [!UICONTROL Actions], select an existing action or create an action.
+1. Set the [!UICONTROL Extension] dropdown field to **[!UICONTROL Adobe Experience Platform Web SDK]**, then set the [!UICONTROL Action type] to **[!UICONTROL Evaluate rulesets]**.
+
+![Image of the Experience Platform user interface showing the Evaluate rulesets response action type.](../assets/evaluate-rulesets.png)
+
+## Available fields
 
 This action type supports the following options:
 
-* **[!UICONTROL Render visual personalization decisions]**: Enable this option to render visual personalization decisions for the ruleset items that match.
-* **[!UICONTROL Decision context]**: This is a key-value map that is used when evaluating Adobe Journey Optimizer rulesets for on-device decisioning. You can provide the decision context manually or through a data element.
-
-## Get Media Analytics Tracker {#get-media-analytics-tracker}
-
-This action is used to get the legacy Media Analytics API. When configuring the action and an object name is provided, then the legacy Media Analytics API will be exported to that window object. If none is provided it will be exported to `window.Media` as the current Media JS library does.
-
-![Experience Platform UI image showing the Get Media Analytics Tracker action type.](assets/get-media-analytics-tracker.png)
+* **[!UICONTROL Render visual personalization decisions]**: A checkbox that, when enabled, renders visual personalization decisions for the ruleset items that match.
+* **[!UICONTROL Decision context]**: A key-value map that is used when evaluating Adobe Journey Optimizer rulesets for on-device decisioning. You can provide the decision context manually or through a data element.
