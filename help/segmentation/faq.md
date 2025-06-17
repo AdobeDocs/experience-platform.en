@@ -424,4 +424,4 @@ It takes up to one hour for a segment definition to be available.
 
 ### Are there any limitations to the data being streamed in?
 
-In order for streamed data to be used in streaming segmentation, there **must** be spacing between the events streamed in. If too many events are streamed in within the same second, Experience Platform will treat these events as bot-generated data, and they will be discarded. As best practice, you should have **at least** five seconds between event data in order to ensure the data is properly used.
+When using edge or streaming segmentation, ensure that events for each profile are spaced out. If too many events are streamed in within the same second, Experience Platform will treat these events as bot-generated data, and they will be discarded. As best practice, you should have **at least** five seconds between event data in order to ensure the data is properly used.

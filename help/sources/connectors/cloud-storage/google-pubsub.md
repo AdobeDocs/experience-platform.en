@@ -77,6 +77,10 @@ You must **set your subscription message retention duration to be 24 hours or mo
 
 ## Connect [!DNL Google PubSub] to Experience Platform
 
+>[!NOTE]
+>
+>After you create or update a streaming dataflow, a brief 5-minute pause in data ingestion is required to prevent any potential instances of data loss or data drops.
+
 The documentation below provides information on how to connect [!DNL Google PubSub] to Experience Platform using APIs or the user interface:
 
 ### Using APIs
