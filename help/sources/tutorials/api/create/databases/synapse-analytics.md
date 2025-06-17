@@ -16,8 +16,8 @@ Read this guide to learn how to connect your [!DNL Azure Synapse Analytics] acco
 
 This guide requires a working understanding of the following components of Experience Platform:
 
-* [Sources](../../../../home.md): Expereince Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Expereince Platform services.
-* [Sandboxes](../../../../../sandboxes/home.md): Expereince Platform provides virtual sandboxes which partition a single Expereince Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to successfully connect to [!DNL Azure Synapse Analytics] using the [!DNL Flow Service] API.
 
