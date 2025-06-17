@@ -10,7 +10,7 @@ exl-id: 1f1ce317-eaaf-4ad2-a5fb-236983220bd7
 >
 >The [!DNL Azure Synapse Analytics] source is available in the sources catalog to users who have purchased Real-Time Customer Data Platform Ultimate.
 
-Read this guide to learn how to connect your [!DNL Azure Synapse Analytics] account to Adobe Platform using the sources workspace in the UI.
+Read this guide to learn how to connect your [!DNL Azure Synapse Analytics] account to Adobe Experience Platform using the sources workspace in the UI.
 
 ## Get started
 

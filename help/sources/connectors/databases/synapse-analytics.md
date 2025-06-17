@@ -11,9 +11,9 @@ exl-id: 5b94ae74-e5a7-40e9-a952-41eddf06dcde
 >
 >The [!DNL Azure Synapse Analytics] source is available in the sources catalog to users who have purchased Real-Time Customer Data Platform Ultimate.
 
-[!DNL Azure Synapse Analytics] is a cloud-based analytics service that unifies big data and data warehousing. You can ingest, explore, prepare, and analyze data using SQL, Spark, or real-time tools—all without moving your data.
+[!DNL Azure Synapse Analytics] is a cloud-based analytics service that unifies big data and data warehousing. You can ingest, explore, prepare, and analyze data using SQL, [!DNL Spark], or real-time tools—all without moving your data.
 
-You can use the [!DNL Azure Synapse Analytics] source to connect your account and ingest data from your [!DNL Azure Synapse Analytics] account to Adobe Experience Platform.
+You can use the [!DNL Azure Synapse Analytics] source to connect your account and bring your data to Adobe Experience Platform.
 
 ## Prerequisites {#prerequisites}
 
@@ -25,7 +25,7 @@ You must add region-specific IP addresses to your allowlist prior to connecting 
 
 ### Configure permissions
 
-To connect your source account to Adobe Experience Platform, your account must have both of the following permissions enabled:
+To connect your source account to Experience Platform, your account must have both of the following permissions enabled:
 
 * **View Sources**
 * **Manage Sources**
@@ -44,8 +44,8 @@ Provide values for the following credentials to connect your [!DNL Azure Synapse
 
 | Credential | Description |
 | --- | --- |
-| `connectionString` | This is the **connection string** used for authenticating with [!DNL Azure Synapse Analytics]. The standard format is: `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. You must replace the placeholders with your actual connection details. |
-| `connectionSpec.id` | The **connection spec** provides the connector properties of a data source. This includes details such as authentication specifications and requirements for creating both **base** and **source** connections. For [!DNL Azure Synapse Analytics], the connection spec ID is: `a49bcc7d-8038-43af-b1e4-5a7a089a7d79`. **Note:** This credential is only necessary when connecting via APIs.  |
+| Connection string | This is the **connection string** used for authenticating with [!DNL Azure Synapse Analytics]. The standard format is: `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. You must replace the placeholders with your actual connection details. |
+| Connection spec ID | The **connection spec** provides the connector properties of a data source. This includes details such as authentication specifications and requirements for creating both **base** and **source** connections. For [!DNL Azure Synapse Analytics], the connection spec ID is: `a49bcc7d-8038-43af-b1e4-5a7a089a7d79`. **Note:** This credential is only necessary when connecting via APIs.  |
 
 >[!TAB Service principal key authentication]
 
@@ -71,7 +71,7 @@ Provide values for the following credentials to connect your [!DNL Azure Synapse
 | Tenant | The [!DNL Azure Active Directory] tenant ID associated with your [!DNL Azure] subscription. |
 | Service principal ID | The client ID of an [!DNL Azure Active Directory] application. |
 | Service principal key | The client secret or password associated with the service principal. |
-| `connectionSpec.id` | The **connection spec** provides the connector properties of a data source. This includes details such as authentication specifications and requirements for creating both **base** and **source** connections. For [!DNL Azure Synapse Analytics], the connection spec ID is: `a49bcc7d-8038-43af-b1e4-5a7a089a7d79`. **Note:** This credential is only necessary when connecting via APIs.  |
+| Connection spec ID | The **connection spec** provides the connector properties of a data source. This includes details such as authentication specifications and requirements for creating both **base** and **source** connections. For [!DNL Azure Synapse Analytics], the connection spec ID is: `a49bcc7d-8038-43af-b1e4-5a7a089a7d79`. **Note:** This credential is only necessary when connecting via APIs.  |
 
 For more information, read the [[!DNL Azure] documentation on managing identities for [!DNL Azure Synapse Analytics]](https://learn.microsoft.com/en-us/azure/synapse-analytics/synapse-service-identity).
 
