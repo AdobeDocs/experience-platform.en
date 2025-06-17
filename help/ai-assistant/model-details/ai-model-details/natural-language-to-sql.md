@@ -7,7 +7,7 @@ exl-id: ca157945-5f74-45d0-9d40-c65d09a8e80d
 
 >[!IMPORTANT]
 >
->Adobe is currently working on additional model details for AI Assistant.
+>Adobe is actively publishing more model details; additional documentation will be added to Experience League as it becomes available.
 
 ## Model overview {#model-overview}
 
