@@ -22,11 +22,14 @@ Record delete requests are subject to quotas and service-level expectations base
 
 ### Quota limits
 
-- **Daily limit**: 1,000,000 identities per day (applies to all customers)
-- **Monthly limits**:
-  - **Base entitlement**: Up to 2,000,000 identities per month (capped at 5% of your addressable audience)
-  - **Premium (Shield) entitlement**: Up to 15,000,000 identities per month (capped at 10% of your addressable audience)
-  - **CJA customers**: Follow the same percentage caps—5% for base and 10% for premium
+The table below outlines identity deletion quotas by entitlement level for API-based record delete requests.
+
+| Entitlement Type  | Daily Limit | Monthly Limit | Percentage Cap |
+|--------|------------|-------------|----------------|
+| **All customers**        | 1,000,000 identities/day      | —   | —    |
+| **Base entitlement**     | 1,000,000 identities/day      | Up to 2,000,000/month         | Capped at 5% of addressable audience |
+| **Premium (Shield)**     | 1,000,000 identities/day      | Up to 15,000,000/month        | Capped at 10% of addressable audience |
+| **CJA customers**        | Same as Base or Premium       | Same as Base or Premium       | Based on entitlement   |
 
 Quotas reset at the start of each calendar month. Unused quota does **not** roll over if you start submitting late in the month.
 
