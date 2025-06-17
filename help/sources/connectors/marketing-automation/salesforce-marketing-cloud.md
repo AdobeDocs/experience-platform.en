@@ -10,7 +10,9 @@ last-substantial-update: 2025-05-17
 >
 >The [!DNL Salesforce Marketing Cloud] source will be deprecated in January 2026. A new source will be released later this year as an alternative. Once the new source is released, you must plan to migrate to the new source by creating new account connections and dataflows before the end of January 2026.
 
-[!DNL Salesforce Marketing Cloud] empowers you to manage and automate customer engagement across email, mobile, social media, and advertising—all from one platform. With tools like Email Studio, Journey Builder, and Audience Builder, you can create personalized campaigns and customer journeys tailored to your audience. 
+[!DNL Salesforce Marketing Cloud] empowers you to manage and automate customer engagement across email, mobile, social media, and advertising—all from one platform. With tools like Email Studio, Journey Builder, and Audience Builder, you can create personalized campaigns and customer journeys tailored to your audience.
+
+You can use the [!DNL Salesforce Marketing Cloud] source to connect your account and bring your data to Adobe Experience Platform.
 
 ## Prerequisites
 
@@ -35,7 +37,7 @@ You must add region-specific IP addresses to your allowlist prior to connecting 
 >
 >If you do not add the necessary IP addresses to your allowlist, your [!DNL Salesforce Marketing Cloud] account will not connect to Experience Platform.
 
-### Authenticate to Experience Platform on Azure
+### Authenticate to Experience Platform on Azure {#azure}
 
 You must provide values for the following credentials to connect [!DNL Salesforce Marketing Cloud] to Experience Platform on [!DNL Azure].
 
@@ -46,7 +48,7 @@ You must provide values for the following credentials to connect [!DNL Salesforc
 | Client secret | The client secret associated with your [!DNL Salesforce Marketing Cloud] application. |
 | Connection spec ID | The **connection spec** provides the connector properties of a data source. This includes details such as authentication specifications and requirements for creating both **base** and **source** connections. For [!DNL Salesforce Marketing Cloud], the connection spec ID is: `ea1c2a08-b722-11eb-8529-0242ac130003`. **Note:** This credential is only necessary when connecting via APIs. |
 
-### Authenticate to Experience Platform on Amazon Web Services (AWS)
+### Authenticate to Experience Platform on Amazon Web Services (AWS) {#aws}
 
 >[!AVAILABILITY]
 >
