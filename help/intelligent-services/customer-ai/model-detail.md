@@ -1,9 +1,6 @@
 ---
 title: Customer AI Propensity Scoring Model Details
 description: Learn about the AI model used for Customer AI.
-hide: true
-hidefromtoc: true
-exl-id: b2eeb1d2-3c2b-40a0-b5cd-91e99d99a906
 ---
 # Customer AI Propensity Scoring Model Details
 
@@ -11,7 +8,7 @@ exl-id: b2eeb1d2-3c2b-40a0-b5cd-91e99d99a906
 
 * **Model name and version**: Customer AI Propensity Scoring Model
 * **Model purpose**: The model is designed to provide marketers and customer engagement teams with actionable insights by predicting the probability that a consumer will perform a given action, such as making a purchase, signing up for a subscription, or engaging with an email campaign. The outputs allow businesses to optimize audience segmentation and personalize consumer interactions based on predicted behaviors.
-* **Intended users**: The primary users of this model are marketing professionals, data analysts, and customer engagement teams who leverage [Real-Time CDP](../../../rtcdp/home.md) to drive data-driven marketing strategies.
+* **Intended users**: The primary users of this model are marketing professionals, data analysts, and customer engagement teams who leverage [Real-Time CDP](../../rtcdp/home.md) to drive data-driven marketing strategies.
 * **Use cases**: This model is primarily used for consumer segmentation, targeted marketing, and churn prediction. Businesses leverage this model to predict consumer purchase intent, optimize marketing campaigns, and enhance personalization efforts. For example, an e-commerce company might use the model to identify high-intent shoppers and offer them exclusive promotions.
 * **Pain points**: Marketers often struggle with identifying the right consumers to target and optimizing engagement efforts. This model reduces guesswork by providing a data-driven approach to consumer targeting, ensuring that marketing resources are allocated efficiently.
 * **Potential misuse**: The model should not be used for high-risk use cases, such as financial credit scoring, medical diagnostics, or legal assessments. Additionally, the model should not be used in predicting personally sensitive behaviors (such as health conditions, political preferences).
