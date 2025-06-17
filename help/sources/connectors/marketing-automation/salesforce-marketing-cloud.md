@@ -11,9 +11,7 @@ last-substantial-update: 2025-04-29
 >
 >The [!DNL Salesforce Marketing Cloud] source will be deprecated in January 2026. A new source will be released later this year as an alternative. Once the new source is released, you must plan to migrate to the new source by creating new account connections and dataflows before the end of January 2026.
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
-
-Experience Platform provides support for ingesting data from third-party marketing automation systems. Support for marketing automation providers include [!DNL Salesforce Marketing Cloud].
+[!DNL Salesforce Marketing Cloud] empowers you to manage and automate customer engagement across email, mobile, social media, and advertising—all from one platform. With tools like Email Studio, Journey Builder, and Audience Builder, you can create personalized campaigns and customer journeys tailored to your audience. 
 
 ## Prerequisites
 
@@ -30,13 +28,41 @@ For more information on scopes including a list of their related permissions and
 >
 >Custom object ingestion is currently not supported by the [!DNL Salesforce Marketing Cloud] source integration.
 
-## IP address allowlist
+### IP address allowlist
 
 You must add region-specific IP addresses to your allowlist prior to connecting your sources to Experience Platform. For more information, read the guide on [allowlisting IP addresses to connect to Experience Platform](../../ip-address-allow-list.md) for more information.
 
 >[!WARNING]
 >
 >If you do not add the necessary IP addresses to your allowlist, your [!DNL Salesforce Marketing Cloud] account will not connect to Experience Platform.
+
+### Authenticate to Experience Platform on Azure
+
+You must provide values for the following credentials to connect [!DNL Salesforce Marketing Cloud] to Experience Platform on [!DNL Azure].
+
+| Credential | Description |
+| --- | --- |
+| Host | The host server of your application. This is often your subdomain. **Note:** When entering your `host` value, you need to specify the `{subdomain}.rest.marketingcloudapis.com`. For example, if your host URL is `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`, then you must enter `acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/` as your host value. |
+| Client ID | The client ID associated with your [!DNL Salesforce Marketing Cloud] application. |
+| Client secret | The client secret associated with your [!DNL Salesforce Marketing Cloud] application. |
+| Connection spec ID | The **connection spec** provides the connector properties of a data source. This includes details such as authentication specifications and requirements for creating both **base** and **source** connections. For [!DNL Salesforce Marketing Cloud], the connection spec ID is: `ea1c2a08-b722-11eb-8529-0242ac130003`. **Note:** This credential is only necessary when connecting via APIs. |
+
+### Authenticate to Experience Platform on Amazon Web Services (AWS)
+
+>[!AVAILABILITY]
+>
+>This section applies to implementations of Experience Platform running on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../../landing/multi-cloud.md).
+
+You must provide values for the following credentials to connect [!DNL Salesforce Marketing Cloud] to Experience Platform on AWS.
+
+| Credential | Description |
+| --- | --- |
+| Subdomain | The unique part of your [!DNL Salesforce Marketing Cloud] instance's URL, used to construct API endpoints. |
+| Client ID | A public identifier for your application, generated when you create an installed package in [!DNL Salesforce Marketing Cloud]
+| Client secret | A confidential key associated with your Client ID, also generated in the installed package. |
+| Connection spec ID | The **connection spec** provides the connector properties of a data source. This includes details such as authentication specifications and requirements for creating both **base** and **source** connections. For [!DNL Salesforce Marketing Cloud], the connection spec ID is: `ea1c2a08-b722-11eb-8529-0242ac130003`. **Note:** This credential is only necessary when connecting via APIs. |
+
+For more information, read the [[!DNL Salesforce] documentation on access token for server-to-server integrations](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html).
 
 ## Connect [!DNL Salesforce Marketing Cloud] to Experience Platform using APIs
 
