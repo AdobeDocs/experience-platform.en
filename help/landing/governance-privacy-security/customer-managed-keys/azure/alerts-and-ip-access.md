@@ -16,9 +16,13 @@ To improve transparency, Adobe has introduced a monitoring service that checks y
 
 To allow Adobe access while maintaining your network restrictions, navigate to your **[!DNL Azure Key Vault]** > **[!DNL Networking settings]**. In the **[!DNL Firewalls and virtual networks]** section, select **[!DNL Allow public access from specific virtual networks and IP addresses]**.
 
-![[!DNL Azure] Key vault Networking settings view with Allow public access from specific virtual networks and IP addresses and Add your current IP address highlighted.](../../../images/governance-privacy-security/customer-managed-keys/key-vault-networking-settings-placeholder.png)
+![[!DNL Azure] Key vault Networking settings view with Allow public access from specific virtual networks and IP addresses and Add your current IP address highlighted.](../../../images/governance-privacy-security/customer-managed-keys/key-vault-networking-settings.png)
 
 Next, in the **[!DNL Firewall]** section, select **[!DNL Add your current IP address]**, then replace it with the Adobe-provided static IP address for your environment. Adobe uses a static IP address that must be allowlisted to ensure uninterrupted access to your Key Vault in restricted network configurations.
+
+>[!IMPORTANT]
+>
+>The Adobe-provided static IP address for Production environments is: `20.88.123.53`. 
 
 >[!NOTE]
 >
