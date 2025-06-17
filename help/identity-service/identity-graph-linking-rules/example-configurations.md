@@ -12,11 +12,6 @@ exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
 >title="Algorithm Configuration"
 >abstract="Configure unique namespace and namespace priority tailored to your ingested identities."
 
->[!NOTE]
->
->* "CRMID" and "loginID" are custom namespaces. In this document, "CRMID" is a person identifier and "loginID" is a login identifier associated with a given person.
->* To simulate the example graph scenarios outlined in this document, you must first create two custom namespaces, one with the identity symbol "CRMID" and another with the identity symbol "loginID". Identity symbols are case sensitive.
-
 Read this document to learn about different implementation types that you can configure using [!DNL Identity Graph Linking Rules].
 
 Customer graph scenarios can be grouped into three different categories.
@@ -84,7 +79,7 @@ Simulate the following configuration in Graph Simulation. You can either create 
 
 **Shared device (PC)**
 
-**Text mode:**
+**Text mode**
 
 ```json
 CRMID: John, ECID: 111
@@ -106,7 +101,7 @@ The browser on the desktop computer that they both use to visit your e-commerce 
 
 **Shared device (mobile)**
 
-**Text mode:**
+**Text mode**
 
 ```json
 CRMID: John, ECID: 111, IDFA: a-b-c
@@ -135,7 +130,7 @@ Read this section for intermediate implementations of [!DNL Identity Graph Linki
 
 Imagine that you are a data architect working for a commercial bank that issues credit cards. Your marketing team has indicated that they want to include past credit card transaction history to a profile. This identity graph could look like the following.
 
-**Text mode:**
+**Text mode**
 
 ```json
 CRMID: John, CChash: 1111-2222 
@@ -171,7 +166,7 @@ Simulate the following configurations in Graph Simulation. You can either create
 
 >[!TAB Shared device]
 
-**Text mode:**
+**Text mode**
 
 ```json
 CRMID: John, CChash: 1111-2222
@@ -188,7 +183,7 @@ CRMID: Jane, ECID:123
 
 Two different end-users sign up for your e-commerce website with the same credit card. Your marketing team wants to prevent graph collapse by ensuring that the credit card is associated with just one single profile.
 
-**Text mode:**
+**Text mode**
 
 ```json
 CRMID: John, CChash: 1111-2222
@@ -205,7 +200,7 @@ CRMID: Jane, ECID:456
 
 Due to unclean data, an invalid credit card number is ingested into Experience Platform.
 
-**Text mode:**
+**Text mode**
 
 ```json
 CRMID: John, CChash: undefined
@@ -249,7 +244,7 @@ Simulate the following configurations in Graph Simulation. You can either create
 
 John and Jane share a device.
 
-**Text mode:**
+**Text mode**
 
 ```json
 CRMID: John, CRMIDhash: John
@@ -264,7 +259,7 @@ CRMIDhash: Jane, ECID: 111
 
 Due to errors in the hashing process, a non-unique hashed CRMID is generated and sent to Identity Service.
 
-**Text mode:**
+**Text mode**
 
 ```json
 CRMID: John, CRMIDhash: aaaa
@@ -399,7 +394,7 @@ Read this section for advanced implementations of [!DNL Identity Graph Linking R
 
 Your end-users have two different accounts, a personal account and a business account. Each account is identified by a different ID. In this scenario, a typical graph would look like the following:
 
-**Text mode***
+**Text mode**
 
 ```json
 CRMID: John, loginID: JohnPersonal
@@ -450,6 +445,8 @@ loginID: JanePersonal, ECID: 111
 ![A graph of an advanced shared device.](../images/configs/advanced/advanced-shared-device.png)
 
 >[!TAB Bad data is sent to Real-Time CDP]
+
+**Text mode**
 
 ```json
 CRMID: John, loginID: JohnPersonal
