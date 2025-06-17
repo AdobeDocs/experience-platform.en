@@ -1,9 +1,11 @@
 ---
-title: Examples of Graph Configurations
-description: Learn about common graph scenarios that you might encounter when working with Identity Graph Linking Rules and identity data.
+title: Identity Graph Linking Rules Configurations Guide
+description: Learn about the different implementation types that you can configure using Identity Graph Linking Rules.
+hide: true
+hidefromtoc: true
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
 ---
-# Examples of graph configurations {#examples-of-graph-configurations}
+# [!DNL Identity Graph Linking Rules] configurations guide {#configurations-guide}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_algorithmconfiguration"
@@ -15,740 +17,556 @@ exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
 >* "CRMID" and "loginID" are custom namespaces. In this document, "CRMID" is a person identifier and "loginID" is a login identifier associated with a given person.
 >* To simulate the example graph scenarios outlined in this document, you must first create two custom namespaces, one with the identity symbol "CRMID" and another with the identity symbol "loginID". Identity symbols are case sensitive.
 
-This document outlines graph configuration examples of common scenarios that you might encounter when working with [!DNL Identity Graph Linking Rules] and identity data.
+Read this document to learn about different implementation types that you can configure using [!DNL Identity Graph Linking Rules].
 
-## CRMID only
+Customer graph scenarios can be grouped into three different categories.
 
-This is an example of a simple implementation scenario where online events (CRMID and ECID) are ingested and offline events (profile records) are only stored against the CRMID.
+* **Basic**: [Basic implementations](#basic-implementations) include graphs that most often include simple implementations. These implementations tend to revolve around a single cross-device namespace (for example, CRMID). While basic implementations are fairly straightforward, graph collapse can still occur, often due to **shared device** scenarios.
+* **Intermediate**: [Intermediate implementations](#intermediate-implementations) include several variables such as **multiple cross-device namespaces**, **non-unique identities**, and **multiple unique namespaces**.
+* **Advanced**: [Advanced implementations](#advanced-implementations) involve complex and multi-layered graph scenarios. For advanced implementations, it is essential to establish the correct namespace priority order to ensure that the appropriate links are removed, thereby preventing graph collapse.
+ 
+## Get started
 
-**Implementation:**
+Before diving in to the following document, ensure that you familiarize yourself with several important concepts of Identity Service and [!DNL Identity Graph Linking Rules].
 
-| Namespaces used | Web behavior collection method |
-| --- | --- |
-| CRMID, ECID | Web SDK |
+* [Identity Service overview](../home.md)
+* [[!DNL Identity Graph Linking Rules] overview](../identity-graph-linking-rules/namespace-priority.md)
+* [Namespace priority](namespace-priority.md)
+* [Unique namespace](overview.md#unique-namespace)
+* [Graph Simulation](graph-simulation.md)
 
-**Events:**
+## Basic implementations {#basic-implementations}
 
-You can create this scenario in graph simulation by copying the following events to text mode:
+>[!TIP]
+>
+>You must create a custom cross device namespace for "CRMID" to complete the basic implementation exercises below.
 
-```shell
-CRMID: Tom, ECID: 111
+Read this section for basic implementations of [!DNL Identity Graph Linking Rules].
+
+### Use case: simple implementation that uses one cross-device namespace
+
+Generally, Adobe customers have a single cross-device namespace that is used across all of their properties including, web, mobile, and applications. This system is both industry and geographically agnostic as customers in retail, telecom, and financial services use this type of implementation.
+
+Typically, an end-user is represented by a cross-device namespace (often a CRMID), therefore, the CRMID should be classified as a unique namespace. An end-user who owns a computer and an [!DNL iPhone] and does not share their device, could have an identity graph like the following.
+
+Imagine that you are a data architect at an e-commerce company called **ACME**. John and Jane are your customers. They are end-users who live together in San Jose, California. They share a desktop computer and use this computer to browse your website. Similarly, John and Jane also share an [!DNL iPad] and occasionally use this [!DNL iPad] to browse the internet, including your website.
+
+**Text mode**
+
+```json
+CRMID: John, ECID: 123
+CRMID: John, ECID: 999, IDFA: a-b-c
 ```
 
-**Algorithm configuration:**
+**Algorithm configuration (Identity Settings)**
 
-You can create this scenario in graph simulation by configuring the following setup for your algorithm configuration:
+Configure the following settings in the Graph Simulation interface before you simulate your graph.
 
-| Priority | Display name | Identity type | Unique per graph |
-| ---| --- | --- | --- |
-| 1 | CRMID | CROSS_DEVICE | Yes |
-| 2 | ECID | COOKIE | No |
+| Display name | Identity symbol | Identity type | Unique per graph | Namespace priority |
+| --- | --- | --- | --- | --- |
+| CRMID | CRMID | CROSS_DEVICE |  ✔️  | 1 |
+| ECID | ECID | COOKIE | | 2 |
+| IDFA | IDFA | DEVICE | | 3 |
 
-**Primary identity selection for Real-Time Customer Profile:**
+**Simulated graph**
 
-Within the context of this configuration, the primary identity will be defined like this:
+In this graph,  John (the end-user) is represented by the CRMID. `{ECID: 123}` represents the web browser that John used on his personal computer to visit your e-commerce platform. `{ECID: 999}` represents the browser that he used on his [!DNL iPhone] and `{IDFA: a-b-c}` represents his [!DNL iPhone].
 
-| Authentication status | Namespace(s) in events | Primary identity |
-| --- | --- | --- |
-| Authenticated | CRMID, ECID | CRMID |
-| Unauthenticated | ECID | ECID | 
+![A simple implementation with one cross-device namespace..](../images/configs/basic/simple-implementation.png)
 
-**Graph examples**
+**Exercise**
+
+Simulate the following configuration in Graph Simulation. You can either create your own events, or copy and paste using text mode.
 
 >[!BEGINTABS]
 
->[!TAB Ideal single-person graph]
+>[!TAB Shared device (PC)]
 
-The following is an example of an ideal single-person graph, where CRMID is unique and given the highest priority.
+**Shared device (PC)**
 
-![A simulated example of an ideal single-person graph, where CRMID is unique and given the highest priority.](../images/graph-examples/crmid_only_single.png "A simulated example of an ideal single-person graph, where CRMID is unique and given the highest priority."){zoomable="yes"}
+**Text mode:**
 
->[!TAB Multi-person graph]
-
-The following is an example of  a multi-person graph. This example displays a "shared device" scenario, where there are two CRMIDs and the one with the older established link gets removed.
-
-![A simulated example of a multi-person graph. This example displays a shared device scenario, where there are two CRMIDs and the older established link gets removed.](../images/graph-examples/crmid_only_multi.png "A simulated example of a multi-person graph. This example displays a shared device scenario, where there are two CRMIDs and the older established link gets removed."){zoomable="yes"}
-
-**Graph simulation events input**
-
-```shell
-CRMID: Tom, ECID: 111
-CRMID: Summer, ECID: 111
+```json
+CRMID: John, ECID: 111
+CRMID: Jane, ECID: 111
 ```
+
+**Simulated graph**
+
+In this graph, John and Jane are represented by their own respective CRMIDs:
+
+* `{CRMID: John}`
+* `{CRMID: Jane}`
+
+The browser on the desktop computer that they both use to visit your e-commerce platform is represented by `{ECID: 111}`. In this graph scenario, Jane is the last authenticated end-user, and therefore, the link between `{ECID: 111}` and `{CRMID: John}` is removed.
+
+![A simulated graph for a shared device (PC).](../images/configs/basic/shared-device-pc.png)
+
+>[!TAB Shared device (mobile)]
+
+**Shared device (mobile)**
+
+**Text mode:**
+
+```json
+CRMID: John, ECID: 111, IDFA: a-b-c
+CRMID: Jane, ECID: 111, IDFA: a-b-c
+```
+
+**Simulated graph**
+
+In this graph, John and Jane are both represented by their own respective CRMIDs. The browser that they use is represented by `{ECID: 111}` and the [!DNL iPad] that they share is represented by `{IDFA: a-b-c}`. In this graph scenario, Jane is the last authenticated end-user, and therefore, the links from `{ECID: 111}` and `{IDFA: a-b-c}` to `{CRMID: John}` are removed.
+
+![A simulated graph for a shared device (mobile).](../images/configs/basic/shared-device-mobile.png)
 
 >[!ENDTABS]
 
-## CRMID with hashed email
+## Intermediate implementations {#intermediate-implementations}
 
-In this scenario, a CRMID is ingested and represents both online (experience event) and offline (profile record) data. This scenario also involves the ingestion of a hashed email, which represents another namespace sent in the CRM record dataset along with the CRMID.
+Read this section for intermediate implementations of [!DNL Identity Graph Linking Rules].
 
->[!IMPORTANT]
+### Use case: Your data includes non-unique identities
+
+>[!TIP]
 >
->**It is crucial that the CRMID is always sent for every user**. Failure to do so may result in a "dangling" login ID scenario, where a single person entity is assumed to be sharing a device with another person.
+>* A **non-unique identity** is an identity associated with a non-unique namespace.
+>
+>* You must create custom cross device namespaces for "CRMID" and "CChash" to complete the intermediate implementation exercises below. "CCHash" is a custom namespace that represents a hashed credit card number.
 
-**Implementation:**
+Imagine that you are a data architect working for a commercial bank that issues credit cards. Your marketing team has indicated that they want to include past credit card transaction history to a profile. This identity graph could look like the following.
 
-| Namespaces used | Web behavior collection method |
-| --- | --- |
-| CRMID, Email_LC_SHA256, ECID | Web SDK |
+**Text mode:**
 
-**Events:**
-
-You can create this scenario in graph simulation by copying the following events to text mode:
-
-```shell
-CRMID: Tom, Email_LC_SHA256: tom<span>@acme.com
-CRMID: Tom, ECID: 111
-CRMID: Summer, Email_LC_SHA256: summer<span>@acme.com
-CRMID: Summer, ECID: 222
+```json
+CRMID: John, CChash: 1111-2222 
+CRMID: John, CChash: 3333-4444 
+CRMID: John, ECID: 123 
+CRMID: John, ECID: 999, IDFA: a-b-c
 ```
 
-**Algorithm configuration:**
+**Algorithm configuration (Identity Settings)**
 
-You can create this scenario in graph simulation by configuring the following setup for your algorithm configuration:
+Configure the following settings in the Graph Simulation interface before you simulate your graph.
 
-| Priority | Display name | Identity type | Unique per graph |
-| ---| --- | --- | --- |
-| 1 | CRMID | CROSS_DEVICE | Yes |
-| 2 | Emails (SHA256, lowercased) | Email | No |
-| 3 | ECID | COOKIE | No |
+| Display name | Identity symbol | Identity type | Unique per graph | Namespace priority |
+| --- | --- | --- | --- | --- |
+| CRMID | CRMID | CROSS_DEVICE |  ✔️  | 1 |
+| CChash | CChash | CROSS_DEVICE | | 2 |
+| ECID | ECID | COOKIE | | 3 |
+| IDFA | IDFA | DEVICE | | 4 |
 
-**Primary identity selection for Profile:**
+**Simulated graph**
 
-Within the context of this configuration, the primary identity will be defined like this:
+![Image of the simulated graph](../images/configs/basic/simple-implementation-non-unique.png)
 
-| Authentication status | Namespace(s) in events | Primary identity |
-| --- | --- | --- |
-| Authenticated | CRMID, ECID | CRMID |
-| Unauthenticated | ECID | ECID | 
+There are no guarantees that these credit card numbers, or any other non-unique namespaces, will always be associated to one single end-user. Two end-users may register with the same credit card, there may be non-unique placeholder values that erroneously ingested. Simply put, there is no guarantee that non-unique namespaces will not cause graph collapse.
 
-**Graph examples**
+To solve this issue, Identity Service removes the oldest links and retains the most recent links. This ensures that you just have one CRMID in a graph, thereby preventing graph collapse.
+
+**Exercise**
+
+Simulate the following configurations in Graph Simulation. You can either create your own events, or copy and paste using text mode.
 
 >[!BEGINTABS]
 
->[!TAB Ideal single-person graph]
+>[!TAB Shared device]
 
-The following are examples of a pair of ideal single-person graphs, where each CRMID is associated with their respective hashed email namespace and ECID.
+**Text mode:**
 
-![In this example, two separate graphs are generated, each representing a single-person entity.](../images/graph-examples/crmid_hashed_single.png "A simulated example of a multi-person graph. This example displays a shared device scenario, where there are two CRMIDs and the older established link gets removed."){zoomable="yes"}
-
->[!TAB Multi-person graph: shared device]
-
-The following is an example of a multi-person graph scenario where a device is shared by two people.
-
-![In this example, the simulated graph displays a "shared device" scenario because both Tom and Summer are associated with the same ECID.](../images/graph-examples/crmid_hashed_shared_device.png "A simulated example of a multi-person graph. This example displays a shared device scenario, where there are two CRMIDs and the older established link gets removed."){zoomable="yes"}
-
-**Graph simulation events input**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc
-CRMID: Tom, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff
-CRMID: Summer, ECID: 222
-CRMID: Summer, ECID: 111
+```json
+CRMID: John, CChash: 1111-2222
+CRMID: Jane, CChash: 3333-4444
+CRMID: John, ECID: 123
+CRMID: Jane, ECID:123
 ```
 
->[!TAB Multi-person graph: non-unique email]
+**Simulated graph**
 
-The following is an example of a multi-person graph scenario where email is not unique and is being associated with two different CRMIDs.
+![An intermediate shared device graph with CChash.](../images/configs/intermediate/intermediate-shared-device.png)
 
-![This scenario is similar to a "shared device" scenario. However, instead of having the person entities share ECID, they are instead associate with the same email account. "A simulated example of a multi-person graph. This example displays a shared device scenario, where there are two CRMIDs and the older established link gets removed."](../images/graph-examples/crmid_hashed_nonunique_email.png){zoomable="yes"}
+>[!TAB Two end-users with the same credit card]
 
-**Graph simulation events input**
+Two different end-users sign up for your e-commerce website with the same credit card. Your marketing team wants to prevent graph collapse by ensuring that the credit card is associated with just one single profile.
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc
-CRMID: Tom, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff
-CRMID: Summer, ECID: 222
-CRMID: Summer, Email_LC_SHA256: aabbcc
+**Text mode:**
+
+```json
+CRMID: John, CChash: 1111-2222
+CRMID: Jane, CChash: 1111-2222
+CRMID: John, ECID: 123
+CRMID: Jane, ECID:456
 ```
+
+**Simulated graph**
+
+![A graph where two end-users sign up with the same credit card.](../images/configs/intermediate/graph-with-same-credit-card.png)
+
+>[!TAB Invalid credit card number]
+
+Due to unclean data, an invalid credit card number is ingested into Experience Platform.
+
+**Text mode:**
+
+```json
+CRMID: John, CChash: undefined
+CRMID: Jane, CChash: undefined
+CRMID: Jack, CChash: undefined
+CRMID: Jill, CChash: undefined
+```
+
+**Simulated graph**
+
+![A graph where a hashing issues results in an invalid credit card.](../images/configs/intermediate/graph-with-invalid-credit-card.png)
 
 >[!ENDTABS]
 
-## CRMID with hashed email, hashed phone, GAID, and IDFA
+### Use case: Your data includes both hashed and unhashed CRMIDs
 
-This scenario is similar to the previous one. However, in this scenario, hashed email and phone are being marked as identities to utilize in [[!DNL Segment Match]](../../segmentation/ui/segment-match/overview.md).
-
->[!IMPORTANT]
+>[!TIP]
 >
->**It is crucial that the CRMID is always sent for every user**. Failure to do so may result in a "dangling" login ID scenario, where a single person entity is assumed to be sharing a device with another person.
+>You must create custom cross device namespaces for "CRMID" and "CRMIDhash" to complete the intermediate implementation exercises below.
 
-**Implementation:**
+You are ingesting both an unhashed (offline) CRMID and a hashed (online) CRMID. The expectation is that there is a direct relationship between both unhashed and hashed CRMIDs. When an end-user browses with an authenticated account, the hashed CRMID is sent along with the device ID (represented on Identity Service as an ECID).
 
-| Namespaces used | Web behavior collection method |
-| --- | --- |
-| CRMID, Email_LC_SHA256, Phone_SHA256, GAID, IDFA, ECID | Web SDK |
+**Algorithm configuration (Identity Settings)**
 
-**Events:**
+Configure the following settings in the Graph Simulation interface before you simulate your graph.
 
-You can create this scenario in graph simulation by copying the following events to text mode:
+| Display name | Identity symbol | Identity type | Unique per graph | Namespace priority |
+| --- | --- | --- | --- | --- | 
+| CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
+| CRMIDhash | CRMIDhash | CROSS_DEVICE | ✔️ | 2 |
+| ECID | ECID | COOKIE | | 3 |
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID:B-B-B
-```
 
-**Algorithm configuration:**
+**Exercise**
 
-You can create this scenario in graph simulation by configuring the following setup for your algorithm configuration:
-
-| Priority | Display name | Identity type | Unique per graph |
-| ---| --- | --- | --- |
-| 1 | CRMID | CROSS_DEVICE | Yes |
-| 2 | Emails (SHA256, lowercased) | Email | No |
-| 3 | Phone (SHA256) | Phone | No |
-| 4 | Google Ad ID (GAID) | DEVICE | No |
-| 5 | Apple IDFA (ID for Apple) | DEVICE | No |
-| 6 | ECID | COOKIE | No |
-
-**Primary identity selection for Profile:**
-
-Within the context of this configuration, the primary identity will be defined like this:
-
-| Authentication status | Namespace(s) in events| Primary identity |
-| --- | --- | --- |
-| Authenticated | CRMID, IDFA, ECID | CRMID |
-| Authenticated | CRMID, GAID, ECID | CRMID |
-| Authenticated | CRMID, ECID | CRMID |
-| Unauthenticated | GAID, ECID | GAID |
-| Unauthenticated | IDFA, ECID | IDFA |
-| Unauthenticated | ECID | ECID |
-
-**Graph examples**
+Simulate the following configurations in Graph Simulation. You can either create your own events, or copy and paste using text mode.
 
 >[!BEGINTABS]
 
->[!TAB Ideal single-person graph]
+>[!TAB Shared device]
 
-The following is an ideal single-person graph scenario where hashed email and hashed phone are marked as identities for use in [!DNL Segment Match]. In this scenario, the graphs are split into two, to represent to disparate person entities.
+John and Jane share a device.
 
-![An ideal single-person graph scenario.](../images/graph-examples/crmid_hashed_single_seg_match.png "A simulated example of a multi-person graph. This example displays a shared device scenario, where there are two CRMIDs and the older established link gets removed."){zoomable="yes"}
+**Text mode:**
 
->[!TAB Multi-person graph: shared device, shared computer]
-
-The following is a multi-person graph scenario where a device (computer) is shared by two people. In this scenario, the shared computer is represented by `{ECID: 111}` and is linked to `{CRMID: Summer}` because that link is the most recently established link. `{CRMID: Tom}` is removed because the link between `{CRMID: Tom}` and `{ECID: 111}` is older and because CRMID is the designated unique namespace in this configuration.
-
-![A multi-person graph scenario where two users are sharing a computer.](../images/graph-examples/shared_device_shared_computer.png "A simulated example of a multi-person graph. This example displays a shared device scenario, where there are two CRMIDs and the older established link gets removed."){zoomable="yes"}
-
-**Graph simulation events input**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID:B-B-B
-CRMID: Summer, ECID: 111
+```json
+CRMID: John, CRMIDhash: John
+CRMID: Jane, CRMIDhash: Jane
+CRMIDhash: John, ECID: 111 
+CRMIDhash: Jane, ECID: 111
 ```
 
->[!TAB Multi-person graph: shared device, android mobile device]
+![A shared device graph with hashed CRMID](../images/configs/intermediate/shared-device-hashed-crmid.png)
 
-The following is a multi-person graph scenario where an android device is shared by two people. In this scenario, CRMID is configured as a unique namespace, and therefore, the newer link of `{CRMID: Tom, GAID: B-B-B, ECID:444}` supersedes the older `{CRMID: Summer, GAID: B-B-B, ECID:444}`.
+>[!TAB Bad data]
 
-![A multi-person graph scenario where two users are sharing an android mobile device.](../images/graph-examples/shared_device_android.png "A simulated example of a multi-person graph. This example displays a shared device scenario, where there are two CRMIDs and the older established link gets removed."){zoomable="yes"}
+Due to errors in the hashing process, a non-unique hashed CRMID is generated and sent to Identity Service.
 
-**Graph simulation events input**
+**Text mode:**
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID: B-B-B
-CRMID: Tom, ECID: 444, GAID: B-B-B
+```json
+CRMID: John, CRMIDhash: aaaa
+CRMID: Jane, CRMIDhash: aaaa
 ```
 
->[!TAB Multi-person graph: shared device, apple mobile device, no ECID reset]
+![A shared device graph with an error in the hashing process, leading to a non-unique hashed CRMID.](../images/configs/intermediate/hashing-error.png)
 
-The following is a multi-person graph scenario where an Apple device is shared by two people. In this scenario the IDFA is shared, but the ECID does not reset.
+>[!ENDTABS]
+<!-- 
+### Use case: You are using Real-Time CDP and Adobe Commerce
 
-![A multi-person graph scenario where two users are sharing an Apple mobile device.](../images/graph-examples/shared_device_apple_no_reset.png "A simulated example of a multi-person graph. This example displays a shared device scenario, where there are two CRMIDs and the older established link gets removed."){zoomable="yes"}
+You have two types of end-users:
 
-**Graph simulation events input**
+* **Members**: An end-user who is assigned a CRMID and has an email account registered to your system.
+* **Guests**: An end-user who is not a member. They do not have an assigned CRMID and their email accounts are not registered to your system.
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID: B-B-B
-CRMID: Summer, ECID: 222, IDFA: A-A-A
+In this scenario, your customers are sending data from Adobe Commerce to Real-Time CDP.
+
+**Exercise**
+
+Simulate the following configurations in the graph simulation tool. You can either create your own events, or copy and paste using text mode.
+
+>[!BEGINTABS]
+
+>[!TAB Shared device between two members]
+
+In this scenario, two members share the same device to browse an e-commerce website.
+
+**Text mode**
+
+```json
+CRMID: John, Email: john@g
+CRMID: Jane, Email: jane@g
+CRMID: John, ECID: 111
+CRMID: Jane, ECID: 111
 ```
 
->[!TAB Multi-person graph: shared device, apple, ECID resets]
+![A graph that displays two authenticated members who share a device.](../images/configs/intermediate/shared-device-two-members.png)
 
-The following is a multi-person graph scenario where an Apple device is shared by two people. In this scenario, the ECID resets, but the IDFA remains the same.
+>[!TAB Shared device between two guests]
 
-![A multi-person graph scenario where two users are sharing an Apple mobile device, but the ECID is reset.](../images/graph-examples/shared_device_apple_with_reset.png "A simulated example of a multi-person graph. This example displays a shared device scenario, where there are two CRMIDs and the older established link gets removed."){zoomable="yes"}
+In this scenario, two guests share the same device to browse an e-commerce website.
 
-**Graph simulation events input**
+**Text mode**
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID: B-B-B
-CRMID: Summer, ECID: 555, IDFA: A-A-A
+```json
+Email: john@g, ECID: 111
+Email: jane@g, ECID: 111
 ```
 
->[!TAB Multi-person graph: Non-unique phone]
+![A graph that displays two guests who share a device.](../images/configs/intermediate/shared-device-two-guests.png)
 
-The following is a multi-person graph scenario where the same phone number is being shared by two people.
+>[!TAB Shared device between a member and a guest]
 
-![A multi-person graph scenario where the phone namespace is not unique.](../images/graph-examples/non_unique_phone.png "A simulated example of a multi-person graph. This example displays a shared device scenario, where there are two CRMIDs and the older established link gets removed."){zoomable="yes"}
+In this scenario, a member and a guest share the same device to browse an e-commerce website.
 
-**Graph simulation events input**
+**Text mode**
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID: B-B-B
-CRMID: Summer, Phone_SHA256: 123-4567
+```json
+CRMID: John, Email: john@g
+CRMID: John, ECID: 111
+Email: jane@g, ECID: 111
 ```
 
-In this example, `{Phone_SHA256}` is also marked as a unique namespace. Therefore, a graph cannot have more than one identity with the `{Phone_SHA256}` namespace. In this scenario, `{Phone_SHA256: 765-4321}` is unlinked from `{CRMID: Summer}` and `{Email_LC_SHA256: ddeeff}` because it is the older link,
+![A graph that displays a member and a guest who share a device.](../images/configs/intermediate/shared-device-member-and-guest.png)
 
-![A multi-person graph scenario where Phone_SHA256 is unique.](../images/graph-examples/unique_phone.png "A simulated example of a multi-person graph. This example displays a shared device scenario, where there are two CRMIDs and the older established link gets removed."){zoomable="yes"}
+>[!ENDTABS] -->
 
->[!TAB Multi-person graph: Non-unique email]
+### Use case: Your data includes three unique namespaces
 
-The following is a multi-person graph scenario where email is shared by two people.
+Your customer defines a single-person entity as follows:
 
-![A multi-person graph scenario where email is not unique](../images/graph-examples/non_unique_email.png "A simulated example of a multi-person graph. This example displays a shared device scenario, where there are two CRMIDs and the older established link gets removed."){zoomable="yes"}
+* An end-user with an assigned CRMID.
+* An end-user who is associated to a hashed email address, so that profiles can be activated to destinations that support hashed email (for example, [!DNL Facebook]).
+* An end-user associated with an email addresss, so that support personnel can look up their profile on Real-Time CDP using said email address.
 
-**Graph simulation events input**
+| Display name | Identity symbol | Identity type | Unique per graph | Namespace priority |
+| --- | --- | --- | --- | --- |
+| CRMID | CRMID | CROSS_DEVICE |  ✔️  | 1 |
+| Email | Email | Email | ✔️ | 2 |
+| Email_LC_SHA256| Email_LC_SHA256 | Email | ✔️ | 3 |
+| ECID | ECID | COOKIE | | 4 |
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID: B-B-B
-CRMID: Summer, Email_LC_SHA256: aabbcc
+Simulate the following configurations in the graph simulation tool. You can either create your own events, or copy and paste using text mode.
+
+>[!BEGINTABS]
+
+>[!TAB Shared device]
+
+In this scenario, John and Jane both log in to an e-commerce website.
+
+**Text mode**
+
+```json
+CRMID: John, Email: john@g, Email_LC_SHA256: john_hash 
+CRMID: Jane, Email: jane@g, Email_LC_SHA256: jane_hash 
+CRMID: John, ECID: 111 
+CRMID: Jane, ECID: 111
 ```
+
+![A graph that displays two end-users who log in to your website using the same device.](../images/configs/intermediate/two-end-users-log-ing.png)
+
+>[!TAB An end-user changes their email]
+
+**Text mode**
+
+```json
+CRMID: John, Email: john@g, Email_LC_SHA256: john_hash
+CRMID: John, Email: john@y, Email_LC_SHA256: john_y_hash
+```
+
+![A graph that displays an end-user who has changed their email.](../images/configs/intermediate/end-user-changes-email.png)
 
 >[!ENDTABS]
 
-## Single CRMID with multiple login IDs (simple version)
+## Advanced implementations {#advanced-implementations}
 
-In this scenario, there is a single CRMID that represents a person entity. However, a person entity may have multiple login identifiers:
+Advanced implementations involve complex and multi-layered graph scenarios. These types of implementations include the usage of **namespace priority** in order to identify the correct links that must be removed in order to prevent graph collapse.
 
-* A given person entity can have different account account types (personal vs. business, account by state, account by brand, etc.)
-* A given person entity may use different email addresses for any number of accounts.
+**Namespace priority** is metadata that ranks namespaces by their importance. If a graph contains two identities, each with a different unique namespaces, Identity Service uses namespace priority to decide which links to remove. For more information, read the [documentation on namespace priority](../identity-graph-linking-rules/namespace-priority.md).
 
->[!IMPORTANT]
+Namespace priority plays a critical role in complex graph scenarios. Graphs can have multiple layers - an end-user may be associated with multiple login IDs, and these login IDs could be hashed. Additionally, different ECIDs could be linked to different login IDs. In order to ensure that the right link, in the right layer is removed, your namespace priority configurations must be correct. 
+
+Read this section for advanced implementations of [!DNL Identity Graph Linking Rules].
+
+### Use case: You need support for multiple lines of businesses
+
+>[!TIP]
 >
->**It is crucial that the CRMID is always sent for every user**. Failure to do so may result in a "dangling" login ID scenario, where a single person entity is assumed to be sharing a device with another person.
+>You must create custom cross device namespaces for "CRMID" and "loginID" to complete the advanced implementation exercises below.
 
-**Implementation:**
+Your end-users have two different accounts, a personal account and a business account. Each account is identified by a different ID. In this scenario, a typical graph would look like the following:
 
-| Namespaces used | Web behavior collection method |
-| --- | --- |
-| CRMID, loginID, ECID | Web SDK |
+**Text mode***
 
-**Events:**
-
-You can create this scenario in graph simulation by copying the following events to text mode:
-
-```shell
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
+```json
+CRMID: John, loginID: JohnPersonal
+CRMID: John, loginID: JohnBusiness
+loginID: JohnPersonal, ECID: 111
+loginID: JohnPersonal, ECID: 222
+loginID: JohnBusiness, ECID: 222
 ```
 
-**Algorithm configuration:**
+**Algorithm configuration (Identity Settings)**
 
-You can create this scenario in graph simulation by configuring the following setup for your algorithm configuration:
+Configure the following settings in the Graph Simulation interface before you simulate your graph.
 
-| Priority | Display name | Identity type | Unique per graph |
-| ---| --- | --- | --- |
-| 1 | CRMID | CROSS_DEVICE | Yes |
-| 2 | loginID | CROSS_DEVICE | No |
-| 3 | ECID | COOKIE | No |
+| Display name | Identity symbol | Identity type | Unique per graph | Namespace priority |
+| --- | --- | --- | --- | --- |
+| CRMID | CRMID | CROSS_DEVICE |  ✔️  | 1 |
+| loginID | loginID | CROSS_DEVICE | | 2 |
+| ECID | ECID | COOKIE | | 3 |
 
-**Primary identity selection for Profile:**
+**Simulated graph**
 
-Within the context of this configuration, the primary identity will be defined like this:
++++Select to view simulated graph
 
-| Authentication status | Namespace(s) in events| Primary identity |
-| --- | --- | --- |
-| Authenticated | loginID, ECID | loginID |
-| Authenticated | loginID, ECID | loginID |
-| Authenticated | CRMID, loginID, ECID | CRMID |
-| Authenticated | CRMID, ECID | CRMID |
-| Unauthenticated | ECID | ECID |
+![An identity graph for an end-user with a business and a personal email.](../images/configs/advanced/advanced.png)
 
-**Graph examples**
++++
+
+
+**Exercise**
+
+Simulate the following configuration in Graph Simulation. You can either create your own events, or copy and paste using text mode.
 
 >[!BEGINTABS]
 
->[!TAB Ideal single-person scenario]
+>[!TAB Shared device]
 
-The following is a single-person graph scenario with a single CRMID and multiple loginIDs.
+**Text mode**
 
-![A graph scenario that includes a single CRMID and multiple loginIDs.](../images/graph-examples/single_crmid.png "A simulated example of a multi-person graph. This example displays a shared device scenario, where there are two CRMIDs and the older established link gets removed."){zoomable="yes"}
-
->[!TAB Multi-person graph scenario: shared device]
-
-The following is a multi-person graph scenario where a device is shared by two people. In this scenario, `{ECID:111}` is linked with both `{loginID:ID_A}` and `{loginID:ID_C}` and the older established link of `{ECID:111, loginID:ID_A}` gets removed.
-
-![A multi-person shared device scenario.](../images/graph-examples/single_crmid_shared_device.png "A simulated example of a multi-person graph. This example displays a shared device scenario, where there are two CRMIDs and the older established link gets removed."){zoomable="yes"}
-
-**Graph simulation events input**
-
-```shell
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-loginID: ID_C, ECID: 111
+```json
+CRMID: John, loginID: JohnPersonal
+CRMID: John, loginID: JohnBusiness
+CRMID: Jane, loginID: JanePersonal
+CRMID: Jane, loginID: JaneBusiness
+loginID: JohnPersonal, ECID: 111
+loginID: JanePersonal, ECID: 111
 ```
 
->[!TAB Multi-person graph scenario: bad data]
+![A graph of an advanced shared device.](../images/configs/advanced/advanced-shared-device.png)
 
-The following is a multi-person graph scenario that involves bad data. In this scenario, `{loginID:ID_D}` is wrongly linked to two disparate users and the link with the older timestamp is deleted, in favor of the more recently established link.
+>[!TAB Bad data is sent to Real-Time CDP]
 
-![A multi-person graph scenario with bad data.](../images/graph-examples/single_crmid_bad_data.png "A simulated example of a multi-person graph. This example displays a shared device scenario, where there are two CRMIDs and the older established link gets removed."){zoomable="yes"}
-
-**Graph simulation events input**
-
-```shell
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-CRMID: Tom, loginID: ID_D
+```json
+CRMID: John, loginID: JohnPersonal
+CRMID: John, loginID: error
+CRMID: Jane, loginID: JanePersonal
+CRMID: Jane, loginID: error
+loginID: JohnPersonal, ECID: 111
+loginID: JanePersonal, ECID: 222
 ```
 
->[!TAB 'Dangling' loginID]
-
-The following graph simulates a "dangling" loginID scenario. In this example, two different loginIDs are bound to the same ECID. However, `{loginID:ID_C}` is not linked to the CRMID. Therefore, there is no way for Identity Service to detect that these two loginIDs represent two different entities. 
-
-![A dangling loginID scenario.](../images/graph-examples/dangling_example.png "A dangling loginID scenario."){zoomable="yes"}
-
-**Graph simulation events input**
-
-```shell
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-loginID: ID_C, ECID: 111
-```
+![A graph that displays a scenario where bad data is sent to Real-Time CDP.](../images/configs/advanced/advanced-bad-data.png)
 
 >[!ENDTABS]
 
-## Single CRMID with multiple login IDs (complex version)
+### Use case: You have complex implementations that require multiple namespaces
 
-In this scenario, there is a single CRMID that represents a person entity. However, a person entity may have multiple login identifiers:
-
-* A given person entity can have different account account types (personal vs. business, account by state, account by brand, etc.)
-* A given person entity may use different email addresses for any number of accounts.
-
->[!IMPORTANT]
+>[!TIP]
 >
->**It is crucial that the CRMID is always sent for every user**. Failure to do so may result in a "dangling" login ID scenario, where a single person entity is assumed to be sharing a device with another person.
+>You must create custom cross device namespaces for "CRMID", "loyaltyID", "thirdPartyID", and "orderID" to complete the advanced implementation exercises below.
 
-**Implementation:**
+You are a media and entertainment company and your end-users have the following:
 
-| Namespaces used | Web behavior collection method |
-| --- | --- |
-| CRMID, Email_LC_SHA256, Phone_SHA256, loginID, ECID | Adobe Analytics source connector. <br> **Note:** By default, AAIDs are blocked in Identity Service, therefore, you must place a higher priority on your ECIDs than AAIDs, when using the Analytics source. Read the [implementation guide](./implementation-guide.md#ingest-your-data) for more information.</br> |
+* A CRMID
+* A loyalty ID
 
-**Events:**
+Additionally, your end-users can make a purchase on the e-commerce website and this data is tied to their email address. User data is also enriched by a third-party database provider and is sent to Experience Platform in batches.
 
-You can create this scenario in graph simulation by copying the following events to text mode:
+**Text mode**
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
+```json
+CRMID: John, loyaltyID: John, Email: john@g
+Email: john@g, orderID: aaa
+CRMID: John, thirdPartyID: xyz
+CRMID: John, ECID: 111
 ```
 
-**Algorithm configuration:**
+**Algorithm configuration (Identity Settings)**
 
-You can create this scenario in graph simulation by configuring the following setup for your algorithm configuration:
+Configure the following settings in the Graph Simulation interface before you simulate your graph.
 
-| Priority | Display name | Identity type | Unique per graph |
-| ---| --- | --- | --- | 
-| 1 | CRMID | CROSS_DEVICE | Yes |
-| 2 | Email_LC_SHA256 | Email | No |
-| 3 | Phone_SHA256 | Phone | No |
-| 4 | loginID | CROSS_DEVICE | No |
-| 5 | ECID | COOKIE | No |
-| 6 | AAID | COOKIE | No |
+| Display name | Identity symbol | Identity type | Unique per graph | Namespace priority |
+| --- | --- | --- | --- | --- |
+| CRMID | CRMID | CROSS_DEVICE |  ✔️  | 1 | 
+| loyaltyID | loyaltyID | CROSS_DEVICE | | 2 |
+| Email | Email | Email | | 3 |
+| thirdPartyID | thirdPartyID | CROSS_DEVICE | | 4 |
+| orderID | orderID | CROSS_DEVICE | | 5 |
+| ECID | ECID | COOKIE | | 6 |
 
-**Primary identity selection for Profile:**
+**Exercise**
 
-Within the context of this configuration, the primary identity will be defined like this:
-
-| Authentication status | Namespace(s) in events| Primary identity |
-| --- | --- | --- |
-| Authenticated | loginID, ECID | loginID |
-| Authenticated | loginID, ECID | loginID |
-| Authenticated | CRMID, loginID, ECID | CRMID |
-| Authenticated | CRMID, ECID | CRMID |
-| Unauthenticated | ECID | ECID |
-
-**Graph examples**
+Simulate the following configuration in Graph Simulation. You can either create your own events, or copy and paste using text mode.
 
 >[!BEGINTABS]
 
->[!TAB Ideal single-person graph]
+>[!TAB Shared device]
 
-The following is an example of two single-person graphs that each have one CRMID and multiple loginIDs.
+**Text mode**
 
-![A single-person graph that involves one CRMID and multiple loginIDs.](../images/graph-examples/complex_single_person.png "A single-person graph that involves one CRMID and multiple loginIDs."){zoomable="yes"}
-
->[!TAB Multi-person graph: shared device 1]
-
-The following is a multi-person shared device scenario where `{ECID:111}` is linked to both `{loginID:ID_A}` and `{loginID:ID_C}`. In this case, the older established links get removed in favor of the more recently established links.
-
-![A multi-person shared device graph scenario.](../images/graph-examples/complex_shared_device_one.png "A multi-person shared device graph scenario."){zoomable="yes"}
-
-**Graph simulation events input**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-loginID: ID_C, ECID: 111
+```json
+CRMID: John, loyaltyID: John, Email: john@g
+CRMID: Jane, loyaltyID: Jane, Email: jane@g
+Email: john@g, orderID: aaa 
+CRMID: John, thirdPartyID: xyz 
+CRMID: John, ECID: 111
+CRMID: Jane, ECID: 111
 ```
 
->[!TAB Multi-person graph: shared device 2]
+![A complex graph example of shared device.](../images/configs/advanced/complex-shared-device.png)
 
-In this scenario, instead of sending only the loginID, both loginID and CRMID are sent as experience events.
+>[!TAB End-user changes their email address]
 
-![A multi-person shared device graph scenario where both loginID and CRMID are sent as experience events.](../images/graph-examples/complex_shared_device_two.png "A multi-person shared device graph scenario where both loginID and CRMID are sent as experience events."){zoomable="yes"}
+**Text mode**
 
-**Graph simulation events input**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-CRMID: Summer, loginID: ID_C, ECID: 111
-loginID: ID_A, ECID: 111
+```json
+CRMID: John, loyaltyID: John, Email: john@g
+CRMID: John, loyaltyID: John, Email: john@y
 ```
 
->[!TAB Multi-person graph: bad loginID data]
+![A graph that displays identity behavior given an email change.](../images/configs/advanced/complex-email-change.png)
 
-In this scenario, `{loginID:ID_C}` is linked to both `{CRMID:Tom}` and `{CRMID:Summer}`, and is therefore deemed to be bad data because ideal graph scenarios should not linked the same loginIDs to two disparate users. In this case, the older established links are removed in favor of the more recently established links.
+>[!TAB The thirdPartyID association changes]
 
-![A multi-person graph scenario that involves bad login data.](../images/graph-examples/complex_bad_data.png "A multi-person graph scenario that involves bad login data."){zoomable="yes"}
+**Text mode**
 
-**Graph simulation events input**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-CRMID: Tom, loginID: ID_C
+```json
+CRMID: John, loyaltyID: John, Email: john@g
+CRMID: Jane, loyaltyID: Jane, Email: jane@g
+CRMID: John, thirdPartyID: xyz
+CRMID: Jane, thirdPartyID: xyz
 ```
 
->[!TAB Multi-person graph: non-unique email]
+![A graph that displays identity behavior given a change in third party ID association.](../images/configs/advanced/complex-third-party-change.png)
 
-In this scenario, a non-unique email is being linked with two different CRMIDs, therefore, the older established links are removed in favor of the more recently established links.
+>[!TAB Non-unique orderID]
 
-![A multi-person graph scenario that involves a non-unique email.](../images/graph-examples/complex_non_unique_email.png "A multi-person graph scenario that involves a non-unique email."){zoomable="yes"}
+**Text mode**
 
-**Graph simulation events input**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-CRMID: Summer, Email_LC_SHA256: aabbcc
+```json
+CRMID: John, loyaltyID: John, Email: john@g
+CRMID: Jane, loyaltyID: Jane, Email: jane@g
+Email: john@g, orderID: aaa
+Email: jane@g, orderID: aaa
 ```
 
->[!TAB Multi-person graph: non-unique phone]
+![A graph that displays identity behavior given a non-unique order ID.](../images/configs/advanced/complex-non-unique.png)
 
-In this scenario, a non-unique phone number is being linked with two different CRMIDs, the older established links are removed in favor of the more recently established links.
+>[!TAB Erroneous loyaltyID]
 
-![A multi-person graph scenario that involves a non-unique phone number.](../images/graph-examples/complex_non_unique_phone.png "A multi-person graph scenario that involves a non-unique phone number."){zoomable="yes"}
+**Text mode**
 
-**Graph simulation events input**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-CRMID: Tom, Phone_SHA256: 111-1111
-CRMID: Summer, Phone_SHA256: 111-1111
+```json
+CRMID: John, loyaltyID: aaa, Email: john@g
+CRMID: Jane, loyaltyID: aaa, Email: jane@g
 ```
 
->[!ENDTABS]
-
-## Usage in other Adobe Commerce
-
-The graph configuration examples in this section outline use cases for Adobe Commerce. The examples below are focused on retail customers with two user types:
-
-* Registered user (users that created an account)
-* Guest users (users that only have an email address)
-
->[!IMPORTANT]
->
->**It is crucial that the CRMID is always sent for every user**. Failure to do so may result in a "dangling" login ID scenario, where a single person entity is assumed to be sharing a device with another person.
-
-**Implementation:**
-
-| Namespaces used | Web behavior collection method |
-| --- | --- |
-| CRMID, Email, ECID | Web SDK |
-
-**Events:**
-
-You can create this scenario in graph simulation by copying the following events to text mode:
-
-```shell
-CRMID: Tom, Email: tom@acme.com
-CRMID: Tom, ECID: 111
-```
-
-**Algorithm configuration:**
-
-You can create this scenario in graph simulation by configuring the following setup for your algorithm configuration:
-
-| Priority | Display name | Identity type | Unique per graph |
-| ---| --- | --- | --- | 
-| 1 | CRMID | CROSS_DEVICE | Yes |
-| 2 | Email| Email |Yes |
-| 5 | ECID | COOKIE | No |
-
-**Primary identity selection for Profile:**
-
-Within the context of this configuration, the primary identity will be defined like this:
-
-| User activity | Namespace(s) in events| Primary identity |
-| --- | --- | --- |
-| Authenticated browsing | CRMID, ECID | CRMID |
-| Guest checkout | Email, ECID | Email |
-| Unauthenticated browsing | ECID | ECID |
-
->[!WARNING]
->
->Registered users must both CRMID and email in their profiles, in order for the following graph scenarios to work.
-
-**Graph examples**
-
->[!BEGINTABS]
-
->[!TAB Ideal single-person graph]
-
-The following is an example of an ideal single-person graph.
-
-![An example of an ideal single-person graph with one email namespace.](../images/graph-examples/single_person_email.png "An example of an ideal single-person graph with one email namespace."){zoomable="yes"}
-
->[!TAB Multi-person graphs]
-
-The following is an example of a multi-person graph where two registered users are browsing using the same device.
-
-![A multi-person graph scenario where two registered users are browsing using the same device.](../images/graph-examples/two_registered_users.png "A multi-person graph scenario where two registered users are browsing using the same device."){zoomable="yes"}
-
-**Graph simulation events input**
-
-```shell
-CRMID: Tom, Email: tom@acme.com
-CRMID: Summer, Email: summer@acme.com
-CRMID: Tom, ECID: 111
-CRMID: Summer, ECID: 111
-```
-
-In this scenario, a registered user and a guest user share the same device.
-
-![A multi-person graph example where a registered user and a guest are sharing the same device.](../images/graph-examples/one_guest.png "A multi-person graph example where a registered user and a guest are sharing the same device."){zoomable="yes"}
-
-**Graph simulation events input**
-
-```shell
-CRMID: Tom, Email: tom@acme.com
-CRMID: Tom, ECID: 111
-Email: summer@acme.com, ECID: 111
-```
-
-In this scenario, a registered user and a guest user share a device. However, an implementation error occurs as the CRMID does not contain a corresponding email namespace. In this scenario, Tom is the registered user, and Summer is the guest user. Unlike the previous scenario, the two entities are merged since there is no common email namespaces across the two person entities.
-
-![A multi-person graph example where a registered user and a guest share the same device, however, an implementation error occurs as the CRMID does not contain an email namespace.](../images/graph-examples/no_email_namespace_in_crmid.png "A multi-person graph example where a registered user and a guest share the same device, however, an implementation error occurs as the CRMID does not contain an email namespace."){zoomable="yes"}
-
-**Graph simulation events input**
-
-```shell
-CRMID: Tom, ECID: 111
-Email: summer@acme.com, ECID: 111
-```
-
-In this scenario, two guest users share the same device.
-
-![A multi-person graph scenario where two guest users are sharing the same device.](../images/graph-examples/two_guests.png){zoomable="yes"}
-
-**Graph simulation events input**
-
-```shell
-Email: tom@acme.com, ECID: 111
-Email: summer@acme.com, ECID: 111
-```
-
-In this scenario, a guest user checks out an item and then registers using the same device.
-
-![A graph scenario where a guest user purchases and item, and then registers for an account.](../images/graph-examples/guest_purchase.png "A graph scenario where a guest user purchases and item, and then registers for an account."){zoomable="yes"}
-
-**Graph simulation events input**
-
-```shell
-Email: tom@acme.com, ECID: 111
-Email: tom@acme.com, CRMID: Tom
-CRMID: Tom, ECID: 111
-```
+![A graph that displays identity behavior given an erroneous loyalty ID.](../images/configs/advanced/complex-error.png)
 
 >[!ENDTABS]
 
