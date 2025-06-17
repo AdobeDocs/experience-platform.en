@@ -1,9 +1,8 @@
 ---
-solution: Experience Platform
 title: Salesforce Marketing Cloud Source Overview
 description: Learn how to connect Salesforce Marketing Cloud to Adobe Experience Platform using APIs or the user interface.
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
-last-substantial-update: 2025-04-29
+last-substantial-update: 2025-05-17
 ---
 # [!DNL Salesforce Marketing Cloud]
 
@@ -68,7 +67,7 @@ For more information, read the [[!DNL Salesforce] documentation on access token 
 
 The documentation below provides information on how to connect [!DNL Salesforce Marketing Cloud] to Experience Platform using APIs:
 
-* [Create a Salesforce Marketing Cloud base connection using the Flow Service API](../../tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
+* [Connect [!DNL Salesforce Marketing Cloud] to Experience Platform using the Flow Service API](../../tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
 * [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
 * [Create a dataflow for a marketing automation source using the Flow Service API](../../tutorials/api/collect/marketing-automation.md)
 
@@ -76,5 +75,5 @@ The documentation below provides information on how to connect [!DNL Salesforce 
 
 The documentation below provides information on how to connect [!DNL Salesforce Marketing Cloud] to Experience Platform using the user interface:
 
-* [Create a Salesforce Marketing Cloud source connection in the UI](../../tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
+* [Connect [!DNL Salesforce Marketing Cloud] to Experience Platform in the UI](../../tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
 * [Create a dataflow for a marketing automation source connection in the UI](../../tutorials/ui/dataflow/marketing-automation.md)

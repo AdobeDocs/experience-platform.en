@@ -1,24 +1,25 @@
 ---
-title: Create a Salesforce Marketing Cloud Base Connection Using the Flow Service API
-description: Learn how to authenticate your Salesforce Marketing Cloud account against Experience Platform using the Flow Service API.
+title: Connect Salesforce Marketing Cloud To Experience Platform Using The Flow Service API
+description: Learn how to connect your Salesforce Marketing Cloud account to Experience Platform using APIs.
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
 ---
-# Create a [!DNL Salesforce Marketing Cloud] base connection using the [!DNL Flow Service] API
+# Connect [!DNL Salesforce Marketing Cloud] to Experience Platform using the [!DNL Flow Service] API
 
 >[!WARNING]
 >
 >The [!DNL Salesforce Marketing Cloud] source will be deprecated in January 2026. A new source will be released later this year as an alternative. Once the new source is released, you must plan to migrate to the new source by creating new account connections and dataflows before the end of January 2026.
 
-A base connection represents the authenticated connection between a source and Adobe Experience Platform.
+Read this guide to learn how to connect your [!DNL Salesforce Marketing Cloud] account to Adobe Experience Platform using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
-This tutorial walks you through the steps to create a base connection for [!DNL Salesforce Marketing Cloud] using the [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
+## Get started
 
-## Getting started
-
-This guide requires a working understanding of the following components of Adobe Experience Platform:
+This guide requires a working understanding of the following components of Experience Platform:
 
 * [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+
+The following sections provide additional information that you will need to know in order to successfully connect to [!DNL Azure Synapse Analytics] using the [!DNL Flow Service] API.
+
 
 ### Using Experience Platform APIs
 
