@@ -32,9 +32,9 @@ Before diving in to the following document, ensure that you familiarize yourself
 
 ## Basic implementations {#basic-implementations}
 
->[!TIP]
+>[!NOTE]
 >
->You must create a custom cross device namespace for "CRMID" to complete the basic implementation exercises below.
+>To complete the implementations below, you must create a custom namespace with the identity symbol (case sensitive) of: `CRMID`.
 
 Read this section for basic implementations of [!DNL Identity Graph Linking Rules].
 
@@ -118,15 +118,19 @@ In this graph, John and Jane are both represented by their own respective CRMIDs
 
 ## Intermediate implementations {#intermediate-implementations}
 
+>[!TIP]
+>
+>A **non-unique identity** is an identity associated with a non-unique namespace.
+
 Read this section for intermediate implementations of [!DNL Identity Graph Linking Rules].
 
 ### Use case: Your data includes non-unique identities
 
->[!TIP]
+>[!NOTE]
 >
->* A **non-unique identity** is an identity associated with a non-unique namespace.
->
->* You must create custom cross device namespaces for "CRMID" and "CChash" to complete the intermediate implementation exercises below. "CCHash" is a custom namespace that represents a hashed credit card number.
+>To complete the implementations below, you must create the following custom namespaces with the identity symbols (case sensitive) of:
+>* `CRMID`
+>* `CCHash` (This is a custom namespace that represents a hashed credit card number.)
 
 Imagine that you are a data architect working for a commercial bank that issues credit cards. Your marketing team has indicated that they want to include past credit card transaction history to a profile. This identity graph could look like the following.
 
@@ -217,9 +221,11 @@ CRMID: Jill, CChash: undefined
 
 ### Use case: Your data includes both hashed and unhashed CRMIDs
 
->[!TIP]
+>[!NOTE]
 >
->You must create custom cross device namespaces for "CRMID" and "CRMIDhash" to complete the intermediate implementation exercises below.
+>To complete the implementations below, you must create custom namespaces with the identity symbols (case sensitive) of:
+>* `CRMID`
+>* `CRMIDhash`
 
 You are ingesting both an unhashed (offline) CRMID and a hashed (online) CRMID. The expectation is that there is a direct relationship between both unhashed and hashed CRMIDs. When an end-user browses with an authenticated account, the hashed CRMID is sent along with the device ID (represented on Identity Service as an ECID).
 
@@ -331,6 +337,10 @@ Email: jane@g, ECID: 111
 
 ### Use case: Your data includes three unique namespaces
 
+>[!NOTE]
+>
+>To complete the implementations below, you must create a custom namespace with the identity symbol (case sensitive) of: `CRMID`.
+
 Your customer defines a single-person entity as follows:
 
 * An end-user with an assigned CRMID.
@@ -388,9 +398,11 @@ Read this section for advanced implementations of [!DNL Identity Graph Linking R
 
 ### Use case: You need support for multiple lines of businesses
 
->[!TIP]
+>[!NOTE]
 >
->You must create custom cross device namespaces for "CRMID" and "loginID" to complete the advanced implementation exercises below.
+>To complete the implementations below, you must create custom namespaces with the identity symbols (case sensitive) of:
+>* `CRMID`
+>* `loginID`
 
 Your end-users have two different accounts, a personal account and a business account. Each account is identified by a different ID. In this scenario, a typical graph would look like the following:
 
@@ -416,12 +428,7 @@ Configure the following settings in the Graph Simulation interface before you si
 
 **Simulated graph**
 
-+++Select to view simulated graph
-
 ![An identity graph for an end-user with a business and a personal email.](../images/configs/advanced/advanced.png)
-
-+++
-
 
 **Exercise**
 
@@ -463,9 +470,12 @@ loginID: JanePersonal, ECID: 222
 
 ### Use case: You have complex implementations that require multiple namespaces
 
->[!TIP]
+>[!NOTE]
 >
->You must create custom cross device namespaces for "CRMID", "loyaltyID", "thirdPartyID", and "orderID" to complete the advanced implementation exercises below.
+>To complete the implementations below, you must create custom namespaces with the identity symbols (case sensitive) of:
+>* `CRMID`
+>* `loyaltyID`
+>* `thirdPartyID`
 
 You are a media and entertainment company and your end-users have the following:
 
@@ -490,8 +500,8 @@ Configure the following settings in the Graph Simulation interface before you si
 | Display name | Identity symbol | Identity type | Unique per graph | Namespace priority |
 | --- | --- | --- | --- | --- |
 | CRMID | CRMID | CROSS_DEVICE |  ✔️  | 1 | 
-| loyaltyID | loyaltyID | CROSS_DEVICE | | 2 |
-| Email | Email | Email | | 3 |
+| loyaltyID | loyaltyID | CROSS_DEVICE |   ✔️  | 2 |
+| Email | Email | Email |  ✔️   | 3 |
 | thirdPartyID | thirdPartyID | CROSS_DEVICE | | 4 |
 | orderID | orderID | CROSS_DEVICE | | 5 |
 | ECID | ECID | COOKIE | | 6 |
