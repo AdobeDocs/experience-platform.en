@@ -6,9 +6,7 @@ description: Identify, troubleshoot, and resolve common alerts triggered by Cust
 
 Use this guide to troubleshoot and resolve alerts triggered by misconfigured Customer Managed Key (CMK) settings in Adobe Experience Platform. It helps system administrators and implementation specialists identify causes and apply resolutions to restore secure access.
 
-Use the following sections to understand and resolve each alert.
-
-## Key access disabled
+## Key access disabled {#key-access-disabled}
 
 This alert indicates that Adobe Experience Platform is unable to access the configured CMK due to the key being disabled in the customer's key management service.
 
@@ -18,11 +16,15 @@ This alert is triggered when the encryption key in Azure Key Vault is in a disab
 
 ### Possible causes
 
+The following are common reasons this alert may occur:
+
 - The key was manually disabled in Azure Key Vault.
 - The key was automatically disabled by a lifecycle policy or external automation.
 - An update to key access policies disabled access without re-enabling the key.
 
 ### Resolution steps
+
+Complete the following steps to resolve the issue:
 
 1. Navigate to the [Azure Key Vault](https://portal.azure.com/) that contains the CMK.
 2. Select the key associated with Adobe Experience Platform.
@@ -31,17 +33,15 @@ This alert is triggered when the encryption key in Azure Key Vault is in a disab
    
    >[!NOTE]  
    >
-   >Replace this command with your actual environment-specific usage if necessary.
+   >Customize this command based on your Azure environment or operational context.
 
 5. Ensure that no automated scripts or lifecycle policies disable the key again.
-
-### Notes
 
 >[!NOTE]  
 >
 >If soft-delete is enabled in Azure Key Vault, restoring a disabled key may require additional steps. Confirm that the key was not deleted or scheduled for deletion.
 
-## Key access failure
+## Key access failure {#key-access-failure}
 
 This alert indicates that Adobe Experience Platform failed to access the CMK due to network-level or configuration-based denial of access.
 
@@ -51,6 +51,8 @@ This alert is triggered when Adobe attempts to access the CMK and encounters per
 
 ### Possible causes
 
+The following are common reasons this alert may occur:
+
 - The CMK no longer exists at the expected location.
 - The Key Vault has been deleted or is misconfigured.
 - Required permissions for the Adobe-managed application are missing.
@@ -58,6 +60,8 @@ This alert is triggered when Adobe attempts to access the CMK and encounters per
 - The identity (Object ID) of the MultiTenant App has changed.
 
 ### Resolution steps
+
+Complete the following steps to resolve the issue:
 
 1. Verify that the Azure Key Vault and encryption key still exist and are not deleted.
 2. Confirm that the Adobe MultiTenant App has the following permissions:
@@ -73,7 +77,7 @@ This alert is triggered when Adobe attempts to access the CMK and encounters per
 6. Confirm that the key is not in a pending deletion or recoverable state.
 7. If soft-delete is enabled and the key was deleted, recover the key before reapplying permissions.
 
-## Alert notification
+## Alert notification {#alert-notification}
 
 This alert serves as a general notification about a CMK configuration or access issue that may require customer attention but does not match a specific failure category.
 
@@ -83,20 +87,26 @@ This alert appears when a general issue is detected with CMK configuration or ac
 
 ### Possible causes
 
+The following are common reasons this alert may occur:
+
 - Temporary network disruption between Adobe and the Key Vault.
 - A non-fatal but recurring access issue has been observed.
 - The key's status or configuration is transitioning between valid and invalid states.
 
 ### Resolution steps
 
+Complete the following steps to resolve the issue:
+
 1. Review your Azure Key Vault logs for recent anomalies or intermittent errors.
 2. Confirm that the key is in a valid state and not disabled or pending deletion.
 3. Monitor for any automatic processes that might affect key accessibility.
 4. Reapply access permissions to the key if any recent changes were made.
-5. Check for any Azure-side incidents that may affect Key Vault availability.
-
-### Notes
+5. Check Azure service health for incidents affecting Key Vault availability.
 
 >[!NOTE]  
 >
 >You may receive this alert even if the CMK recovers automatically. Audit your key settings and access configurations to ensure continued stability.
+
+## Next steps
+
+To understand how alerts are triggered and how to configure IP allowlisting for [!DNL Azure] CMK, see the [Configure alerts and IP allowlist for Azure CMK](./alerts-and-ip-access.md) guide.
