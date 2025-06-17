@@ -25,7 +25,6 @@ role: Admin,User,Developer,Leader
   * [Model details overview](./model-details/overview.md)
   * AI model details {#ai-model-details}
     * [AI Assistant Natural Operational Insights Language to SQL](./model-details/ai-model-details/natural-language-to-sql.md)
-    * [Customer AI propensity scoring](./model-details/ai-model-details/customer-ai.md)
     * [Send-Time Optimization](./model-details/ai-model-details/send-time-optimization.md)
 * [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
 
