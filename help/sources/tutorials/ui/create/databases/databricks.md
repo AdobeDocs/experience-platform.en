@@ -4,7 +4,7 @@ description: Learn how to connect Azure Databricks to Experience Platform using 
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 ---
-## Connect [!DNL Azure Databricks] to Experience Platform in the UI
+# Connect [!DNL Azure Databricks] to Experience Platform in the UI
 
 >[!AVAILABILITY]
 >
