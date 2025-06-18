@@ -4,8 +4,6 @@ description: Learn how to allowlist Adobe's static IP address in Azure Key Vault
 ---
 # Configure alerts and IP allowlist for [!DNL Azure] CMK
 
-If you manage sensitive data or work under strict compliance policies, restrict [!DNL Azure] Key Vault access to trusted IP addresses. Enabling network restrictions strengthens security and helps prevent unauthorized access.
-
 To improve transparency, Adobe provides a [monitoring service](../../../../observability/alerts/ui.md){target="_blank"} that checks your key vault's access status and triggers alerts if issues occur. These alerts help you to respond quickly and avoid service disruptions. To enable this service, allowlist Adobe's static IP address.
 
 >[!IMPORTANT]
@@ -14,7 +12,7 @@ To improve transparency, Adobe provides a [monitoring service](../../../../obser
 
 ## Allowlist Adobe's static IP in [!DNL Azure] Key Vault {#add-adobe-static-ip}
 
-To allow Adobe access while maintaining your network restrictions, navigate to your **[!DNL Azure Key Vault]** > **[!DNL Networking settings]**. In the **[!DNL Firewalls and virtual networks]** tab, select **[!DNL Allow public access from specific virtual networks and IP addresses]**.
+To enable these alerts while maintaining your network restrictions, navigate to your **[!DNL Azure Key Vault]** > **[!DNL Networking settings]**. In the **[!DNL Firewalls and virtual networks]** tab, select **[!DNL Allow public access from specific virtual networks and IP addresses]**.
 
 ![[!DNL Azure] Key vault Networking settings screen showing where to add Adobe's static IP address and with the Allow access from option highlighted.](../../../images/governance-privacy-security/customer-managed-keys/key-vault-networking-settings.png)
 
@@ -28,7 +26,7 @@ Next, in the **[!DNL Firewall]** section, select **[!DNL Add your current IP add
 
 >[!NOTE]
 >
->After you add or update the static IP address in your [!DNL Azure] Key Vault settings, allow up to 10 minutes for the change to take effect. A background process runs every 10 minutes to check key accessibility and apply any updates.
+>After you add or update the static IP address in your [!DNL Azure] Key Vault settings, allow up to 10 minutes for the change to take effect. Adobe services use the CMK App to verify key access status after the allowlist update.
 
 After allowlisting Adobe's static IP, Experience Platform can monitor access to your key vault and trigger alerts if issues arise. These alerts provide early warnings so you can act before service is impacted. The next section details the types of alerts you may receive and how to respond.
 
