@@ -161,7 +161,7 @@ If your organization requires higher limits, contact your Adobe representative f
 
 >[!TIP]
 >
->For a centralized summary of quotas, SLAs, and entitlement rules, see the [Quota reference guide](../api/quota.md).
+>To monitor your organization's usage against quota limits, see the [Quota reference guide](../api/quota.md). The tables above define entitlement-based limits and processing expectations for API-based deletes.
 
 ## Submit the request {#submit}
 
