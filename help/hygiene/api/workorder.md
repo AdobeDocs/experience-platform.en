@@ -18,42 +18,43 @@ The endpoint used in this guide is part of the Data Hygiene API. Before continui
 
 ## Quotas and processing timelines {#quotas}
 
-Record delete requests are subject to quotas and service-level expectations based on your license entitlement. These limits apply to both UI- and API-based delete requests.
+Record Delete requests are subject to daily and monthly submission limits based on your organization's license entitlement. These limits apply to both UI- and API-based delete requests.
 
-### Quota limits {#quota-limits}
+Customers can submit up to **1,000,000 identifiers per day**, subject to the monthly limits outlined below.
 
-The table below outlines identity deletion quotas by entitlement level.
+### Entitlement-based monthly limits {#quota-limits}
 
-| Entitlement Type         | Daily Limit | Monthly Limit   | Cap Logic   |
-|--------------------------|-------------|-----------------|-------------|
-| **All customers**        | 1,000,000 identities/day   | —     | —      |
-| **Base entitlement (CDP/AJO)** | 1,000,000 identities/day   | Lesser of 2,000,000 identities/month or 5% of addressable audience entitlement | "Whichever is less" rule applies          |
-| **Premium (Shield add-on)** | 1,000,000 identities/day   | Lesser of 15,000,000 identities/month or 10% of addressable audience entitlement | "Whichever is less" rule applies          |
-| **CJA customers (Base)** | 1,000,000 identities/day   | Lesser of 2,000,000 identities/month or 200 identifiers per million CJA rows of entitlement | "Whichever is less" rule applies |
-| **CJA customers (Shield)** | 1,000,000 identities/day   | Lesser of 15,000,000 identities/month or 200 identifiers per million CJA rows of entitlement | "Whichever is less" rule applies |
+The table below summarizes monthly identifier submission caps by product and entitlement level. Each cap is calculated using the lesser of two criteria.
 
-Quotas reset at the start of each calendar month. Unused quota does **not** roll over.
+| Product                   | Entitlement Tier       | Monthly Cap                | Cap Logic                                      |
+|---------------------------|------------------------|----------------------------|------------------------------------------------|
+| Real-Time CDP, Adobe Journey Optimizer | **Base**               | Up to 2,000,000            | Lesser of 2M or 5% of addressable audience     |
+| Real-Time CDP, Adobe Journey Optimizer | **Shield Add-on**       | Up to 15,000,000           | Lesser of 15M or 10% of addressable audience   |
+| Customer Journey Analytics             | **Base**               | Up to 2,000,000            | Lesser of 2M or 200 IDs per million CJA rows   |
+| Customer Journey Analytics             | **Shield Add-on**       | Up to 15,000,000           | Lesser of 15M or 200 IDs per million CJA rows  |
+
+Quotas reset on the first day of each calendar month. Unused quota does **not** carry over.
 
 >[!NOTE]
 >
-> Quotas are based on your organization's licensed entitlement and are not currently enforced by system guardrails. However, all activity is monitored and may be reviewed.  
+> These quotas are based on your organization's licensed entitlement and are not currently enforced by system guardrails. However, all activity is monitored and may be reviewed.  
 >  
-> Record Delete is a **shared service**. Your organization's maximum quota applies across all supported products (Real-Time CDP, AJO, CJA, and Shield add-ons).
+> Record Delete is a **shared service**. Your quota reflects the highest entitlement across Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics, and any Shield add-ons.
 
-### Processing timelines (SLA) {#sla-processing-timelines}
+### Deletion SLA timelines {#sla-processing-timelines}
 
-Work orders are processed based on your entitlement level.
+After submission, work orders are processed according to the entitlement tier.
 
-| Entitlement Type | Queue Duration         | SLA (Maximum Time to Completion) |
-|------------------|------------------------|----------------------------------|
-| **Base**         | Up to 15 days          | 30 days                          |
-| **Premium (Shield)** | Typically 24 hours   | 15 days                          |
+| Entitlement Tier | Queue Duration         | Maximum Processing Time (SLA) |
+|------------------|------------------------|-------------------------------|
+| **Base**         | Up to 15 days          | 30 days                       |
+| **Shield Add-on**| Typically 24 hours     | 15 days                       |
 
-If your organization requires higher limits, contact your Adobe representative for an entitlement review.
+If your organization requires higher limits, contact your Adobe representative for an entitlement review. Approved exceptions are tracked internally.
 
 >[!TIP]
 >
->To monitor your organization's usage against quota limits, see the [Quota reference guide](../api/quota.md). The tables above define entitlement-based limits and processing expectations for API-based deletes.
+>To monitor your organization's quota usage or check your current limits, see the [Quota reference guide](../api/quota.md).
 
 ## Create a record delete request {#create}
 
