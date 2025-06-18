@@ -29,7 +29,7 @@ This section outlines prerequisite steps that you must complete prior to impleme
 
 #### Single person namespace requirement {#single-person-namespace-requirement}
 
-You must ensure that the unique namespace with the highest priority is always present in every profile. Doing so allows Identity Service to detect the appropriate person identifier in a given graph. 
+You must ensure that the unique namespace with the highest priority is always present in every known profile. Doing so allows Identity Service to detect the appropriate person identifier in a given graph. 
 
 +++Select to view an example of a graph without a singular person identifier namespace
 
