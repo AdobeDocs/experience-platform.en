@@ -173,7 +173,7 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | Feature | Description |
 | --- | --- |
 | [!BADGE Beta]{type=Informative} UI support for [!DNL Azure Databricks] | You can now connect your [!DNL Azure Databricks] account to Experience Platform using the sources workspace in the UI. Read the guide on [connecting [!DNL Databricks] to Experience Platform in the UI](../../sources/connectors/databases/databricks.md) for more information. |
-| Support for new authentication type for [!DNL Azure Synapse Analytics] | The [!DNL Azure Synapse Analytics] will now also support service principal authentication, in addition to the existing connection string authentication. For more information, read the [[!DNL Azure Synapse Analytics] authentication overview](../../sources/connectors/databases/synapse-analytics.md) |
+| Support for new authentication type for [!DNL Azure Synapse Analytics] | The [!DNL Azure Synapse Analytics] will now also support service principal authentication, in addition to the existing connection string authentication. For more information, read the [[!DNL Azure Synapse Analytics] authentication overview](../../sources/connectors/databases/synapse-analytics.md). |
 | [!DNL Salesforce] Basic Authentication deprecation | Basic Authentication for [Salesforce CRM](../../sources/connectors/crm/salesforce.md) and [Salesforce Service Cloud](../../sources/connectors/customer-success/salesforce-service-cloud.md) will be deprecated by January 2026. Customers must migrate to OAuth 2.0 authentication to maintain connectivity. This change affects both source connectors and ensures improved security and compliance with Salesforce's authentication standards. |
 
 {style="table-layout:auto"}
