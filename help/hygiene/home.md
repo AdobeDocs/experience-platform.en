@@ -36,6 +36,11 @@ The [!UICONTROL Data Lifecycle] UI is built on top of the Data Hygiene API, whos
 
 [Record delete](./ui/record-delete.md) and dataset expiration requests each have their own processing timelines and provide transparency updates at key points in their respective workflows. 
 
+>[!TIP]
+>
+>For detailed rules around entitlements, quotas, SLAs, and exception handling, refer to the [Quota reference guide](./api/quota.md).  
+>Core limits and processing timelines are also available in the [Record delete (UI)](./ui/record-delete.md) and [Workorder (API)](./api/workorder.md) documentation.
+
 The following takes place when a [dataset expiration request](./ui/dataset-expiration.md) is created:
 
 | Stage | Time after scheduled expiration | Description |

@@ -124,7 +124,9 @@ To add more identities, select the plus icon (![A plus icon.](/help/images/icons
 
 ![The request creation workflow with the plus icon and the add identity icon highlighted.](../images/ui/record-delete/more-identities.png)
 
-## Quotas and Entitlements {#quotas-and-entitlements}
+{{$include /help/_includes/record-delete-quotas-and-entitlements.md}}
+
+<!-- ## Quotas and Entitlements {#record-delete-quotas-and-entitlements}
 
 Record deletion requests are subject to daily and monthly quotas that vary by license entitlement.
 
@@ -156,7 +158,7 @@ The time it takes for a request to be processed also depends on your entitlement
 >
 >For a centralized summary of entitlements, quotas, SLAs, and exception rules, refer to the [Quota reference guide](../api/quota.md).
 
-If your organization requires higher volumes, contact your Adobe representative to begin an entitlement review. Approved exceptions are tracked internally and subject to periodic review.
+If your organization requires higher volumes, contact your Adobe representative to begin an entitlement review. Approved exceptions are tracked internally and subject to periodic review. -->
 
 ## Submit the request {#submit}
 

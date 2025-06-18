@@ -16,7 +16,9 @@ The `/workorder` endpoint in the Data Hygiene API allows you to programmatically
 
 The endpoint used in this guide is part of the Data Hygiene API. Before continuing, please review the [overview](./overview.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
-## Quotas and processing timelines {#quotas}
+{{$include /help/_includes/record-delete-quotas-and-entitlements.md}}
+
+<!-- ## Quotas and processing timelines {#quotas}
 
 Record delete requests are subject to quotas and service-level expectations based on your license entitlement, and apply to both UI- and API-based delete requests.
 
@@ -48,7 +50,7 @@ Work orders are processed based on your entitlement level:
 >
 >For a centralized summary of entitlements, quotas, SLAs, and exception rules, refer to the [Quota reference guide](../api/quota.md).
 
-If your organization requires higher limits, contact your Adobe representative for an entitlement review. Approved exceptions are tracked internally.
+If your organization requires higher limits, contact your Adobe representative for an entitlement review. Approved exceptions are tracked internally. -->
 
 ## Create a record delete request {#create}
 

@@ -18,7 +18,9 @@ The endpoint used in this guide is part of the Data Hygiene API. Before continui
 * A guide to reading the sample API calls in this document
 * Important information regarding the required headers that are needed to make calls to any Experience Platform API
 
-## Quota behavior and entitlements {#quota-behavior}
+{{$include /help/_includes/record-delete-quotas-and-entitlements.md}}
+
+<!-- ## Quota behavior and entitlements {#quota-behavior}
 
 Quota limits for identity deletions depend on your organization's license entitlement.
 
@@ -48,7 +50,7 @@ Work order processing time also depends on entitlement:
 * **Base**: 15-day queue, 30-day SLA
 * **Premium**: 24-hour queue, 15-day SLA
 
-If your organization requires a higher limit, contact your Adobe representative to request an entitlement review. Approved exceptions are tracked internally.
+If your organization requires a higher limit, contact your Adobe representative to request an entitlement review. Approved exceptions are tracked internally. -->
 
 ## List quotas {#list}
 
