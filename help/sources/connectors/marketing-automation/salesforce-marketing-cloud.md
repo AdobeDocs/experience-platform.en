@@ -59,7 +59,7 @@ You must provide values for the following credentials to connect [!DNL Salesforc
 | Credential | Description |
 | --- | --- |
 | Subdomain | The unique part of your [!DNL Salesforce Marketing Cloud] instance's URL, used to construct API endpoints. |
-| Client ID | A public identifier for your application, generated when you create an installed package in [!DNL Salesforce Marketing Cloud]
+| Client ID | A public identifier for your application, generated when you create an installed package in [!DNL Salesforce Marketing Cloud] |
 | Client secret | A confidential key associated with your Client ID, also generated in the installed package. |
 | Connection spec ID | The **connection spec** provides the connector properties of a data source. This includes details such as authentication specifications and requirements for creating both **base** and **source** connections. For [!DNL Salesforce Marketing Cloud], the connection spec ID is: `ea1c2a08-b722-11eb-8529-0242ac130003`. **Note:** This credential is only necessary when connecting via APIs. |
 

@@ -126,7 +126,7 @@ A successful response returns details of the newly created base connection, incl
 
 Read the steps below for information on how to connect your [!DNL Salesforce Marketing Cloud] account to Experience Platform on AWS.
 
-### Create a base connection {aws-base}
+### Create a base connection {#aws-base}
 
 **API format**
 
