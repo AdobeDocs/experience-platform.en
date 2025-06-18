@@ -190,7 +190,7 @@ role: Admin,User
         * [Adobe Target connection](./catalog/personalization/adobe-target-connection.md)
         * [Adobe Target extension](./catalog/personalization/adobe-target.md)
         * [Adobe Target v2 extension](./catalog/personalization/adobe-target-v2.md)
-        * [Algolia extension](./catalog/personalization/algolia.md)
+        * [Algolia connection](./catalog/personalization/algolia.md)
         * [Beemray extension](./catalog/personalization/beemray.md)
         * [Custom personalization connection](./catalog/personalization/custom-personalization.md)
         * [D&B Visitor Intelligence extension](./catalog/personalization/dnb.md)
