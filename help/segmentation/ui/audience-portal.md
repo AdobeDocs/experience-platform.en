@@ -401,7 +401,7 @@ More information about Data Distiller can be found in the [building audiences us
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_importaudience_dataexpiration"
 >title="Data expiration"
->abstract="The number of days that the audience membership will expire. This value can be set from 1 day to 90 days."
+>abstract="The number of days that the audience membership will expire. This value can be set from 1 day to 180 days."
 
 >[!IMPORTANT]
 >
@@ -433,7 +433,7 @@ When importing the externally generated audience, you must select one of the col
 
 ![The [!UICONTROL Audience details] page is displayed.](../images/ui/audience-portal/import-audience-audience-details.png)
 
-You can also optionally add some extra details to your externally generated audience, including giving it an ID, defining its merge policy, editing its column data type, or applying a custom data expiration.
+You can also optionally add some extra details to your externally generated audience, including giving it an external ID, defining its merge policy, editing its column data type, or applying a custom data expiration.
 
 +++ Custom external audience ID
 
@@ -448,7 +448,7 @@ You can also optionally add some extra details to your externally generated audi
 
 >[!NOTE]
 >
->The custom data expiration sets the number of days that profiles will **remain** in the audience membership. After the data expiration is over, the profiles will exit the audience membership. This value can be set from 1 to 90 days.
+>The custom data expiration sets the number of days that profiles will **remain** in the audience membership. After the data expiration is over, the profiles will exit the audience membership. This value can be set from 1 to 180 days.
 
 After filling in your audience details, select **[!UICONTROL Next]**.
 
