@@ -42,17 +42,18 @@ Quotas reset at the start of each calendar month. Unused quota does **not** roll
 
 ### Processing timelines (SLA) {#sla-processing-timelines}
 
-Work orders are processed based on your entitlement level:
+Work orders are processed based on your entitlement level.
 
-- **Base**: Requests may be queued for up to 15 days before processing. The maximum SLA is 30 days.
-- **Premium (Shield)**: Requests are typically queued for 24 hours before processing. The maximum SLA is 15 days.
+| Entitlement Type | Queue Duration         | SLA (Maximum Time to Completion) |
+|------------------|------------------------|----------------------------------|
+| **Base**         | Up to 15 days          | 30 days                          |
+| **Premium (Shield)** | Typically 24 hours   | 15 days                          |
 
 If your organization requires higher limits, contact your Adobe representative for an entitlement review.
 
 >[!TIP]
 >
 > For a centralized summary of quotas, SLAs, and entitlement rules, see the [Quota reference guide](../api/quota.md).
-
 
 ## Create a record delete request {#create}
 
