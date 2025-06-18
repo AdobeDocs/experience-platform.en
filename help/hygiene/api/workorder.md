@@ -24,31 +24,35 @@ Record delete requests are subject to quotas and service-level expectations base
 
 The table below outlines identity deletion quotas by entitlement level.
 
-| Entitlement Type    | Daily Limit                | Monthly Limit             | Percentage Cap                          |
-|---------------------|----------------------------|---------------------------|------------------------------------------|
-| **All customers**   | 1,000,000 identities/day   | —                         | —                                        |
-| **Base entitlement**| 1,000,000 identities/day   | Up to 2,000,000/month     | Capped at 5% of addressable audience     |
-| **Premium (Shield)**| 1,000,000 identities/day   | Up to 15,000,000/month    | Capped at 10% of addressable audience    |
-| **CJA customers**   | Same as Base or Premium    | Same as Base or Premium   | Based on entitlement                     |
+| Entitlement Type         | Daily Limit | Monthly Limit   | Cap Logic   |
+|--------------------------|-------------|-----------------|-------------|
+| **All customers**        | 1,000,000 identities/day   | —     | —      |
+| **Base entitlement (CDP/AJO)** | 1,000,000 identities/day   | Lesser of 2,000,000 identities/month or 5% of addressable audience entitlement | "Whichever is less" rule applies          |
+| **Premium (Shield add-on)** | 1,000,000 identities/day   | Lesser of 15,000,000 identities/month or 10% of addressable audience entitlement | "Whichever is less" rule applies          |
+| **CJA customers (Base)** | 1,000,000 identities/day   | Lesser of 2,000,000 identities/month or 200 identifiers per million CJA rows of entitlement | "Whichever is less" rule applies |
+| **CJA customers (Shield)** | 1,000,000 identities/day   | Lesser of 15,000,000 identities/month or 200 identifiers per million CJA rows of entitlement | "Whichever is less" rule applies |
 
-Quotas reset at the start of each calendar month. Unused quota does **not** roll over if you start submitting late in the month.
+Quotas reset at the start of each calendar month. Unused quota does **not** roll over.
 
 >[!NOTE]
 >
-> These quotas are based on entitlements defined in your license agreement. They are not currently enforced by system guardrails. However, usage may be monitored and reviewed periodically.
+> Quotas are based on your organization's licensed entitlement and are not currently enforced by system guardrails. However, all activity is monitored and may be reviewed.  
+>  
+> Record Delete is a **shared service**. Your organization's maximum quota applies across all supported products (Real-Time CDP, AJO, CJA, and Shield add-ons).
 
-### Processing timelines (SLA) {#sla-pProcessing-timelines}
+### Processing timelines (SLA) {#sla-processing-timelines}
 
 Work orders are processed based on your entitlement level:
 
-- **Base**: Queued for up to 15 days before processing. The SLA is 30 days.
-- **Premium**: Queued for 24 hours before processing. The SLA is 15 days.
+- **Base**: Requests may be queued for up to 15 days before processing. The maximum SLA is 30 days.
+- **Premium (Shield)**: Requests are typically queued for 24 hours before processing. The maximum SLA is 15 days.
 
 If your organization requires higher limits, contact your Adobe representative for an entitlement review.
 
 >[!TIP]
-> 
->For a centralized summary of entitlements, quotas, SLAs, and exception rules, refer to the [Quota reference guide](../api/quota.md).
+>
+> For a centralized summary of quotas, SLAs, and entitlement rules, see the [Quota reference guide](../api/quota.md).
+
 
 ## Create a record delete request {#create}
 
