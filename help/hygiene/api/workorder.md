@@ -18,43 +18,43 @@ The endpoint used in this guide is part of the Data Hygiene API. Before continui
 
 ## Quotas and processing timelines {#quotas}
 
-Record Delete requests are subject to daily and monthly submission limits based on your organization's license entitlement. These limits apply to both UI- and API-based delete requests.
+Record Delete requests are subject to daily and monthly identifier submission limits, determined by your organization's license entitlement. These limits apply to both UI- and API-based delete requests.
 
-Customers can submit up to **1,000,000 identifiers per day**, subject to the monthly limits outlined below.
+> **Note**: Customers can submit up to **1,000,000 identifiers per day**, but this daily volume is still subject to the monthly caps outlined below.
 
-### Entitlement-based monthly limits {#quota-limits}
+### Monthly submission entitlement by product {#quota-limits}
 
-The table below summarizes monthly identifier submission caps by product and entitlement level. Each cap is calculated using the lesser of two criteria.
+The table below summarizes monthly identity submission limits by product and entitlement level. For each product, the monthly cap is the lesser of two values: a fixed identifier ceiling or a percentage-based threshold tied to your licensed data volume.
 
-| Product                   | Entitlement Tier       | Monthly Cap                | Cap Logic                                      |
-|---------------------------|------------------------|----------------------------|------------------------------------------------|
-| Real-Time CDP, Adobe Journey Optimizer | **Base**               | Up to 2,000,000            | Lesser of 2M or 5% of addressable audience     |
-| Real-Time CDP, Adobe Journey Optimizer | **Shield Add-on**       | Up to 15,000,000           | Lesser of 15M or 10% of addressable audience   |
-| Customer Journey Analytics             | **Base**               | Up to 2,000,000            | Lesser of 2M or 200 IDs per million CJA rows   |
-| Customer Journey Analytics             | **Shield Add-on**       | Up to 15,000,000           | Lesser of 15M or 200 IDs per million CJA rows  |
+| Product  | Entitlement Details           | Monthly Cap (Whichever is Less) |
+|----------|-------------------------------|----------------------------|
+| Real-Time CDP, Adobe Journey Optimizer | Without Shield add-on                                       | 2,000,000 identifiers or 5% of addressable audience      |
+| Real-Time CDP, Adobe Journey Optimizer | With Privacy and Security Shield or Healthcare Shield add-on| 15,000,000 identifiers or 10% of addressable audience    |
+| Customer Journey Analytics             | Without Shield add-on                                       | 2,000,000 identifiers or 200 identifiers per million CJA rows of entitlement |
+| Customer Journey Analytics             | With Privacy and Security Shield or Healthcare Shield add-on| 15,000,000 identifiers or 200 identifiers per million CJA rows of entitlement |
 
 Quotas reset on the first day of each calendar month. Unused quota does **not** carry over.
 
 >[!NOTE]
 >
-> These quotas are based on your organization's licensed entitlement and are not currently enforced by system guardrails. However, all activity is monitored and may be reviewed.  
->  
-> Record Delete is a **shared service**. Your quota reflects the highest entitlement across Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics, and any Shield add-ons.
+> Quotas are based on your organization's licensed monthly entitlement for **submitted identifiers**. These are not enforced by system guardrails but may be monitored and reviewed.  
+>
+> Record Delete is a **shared service**. Your monthly cap reflects the highest entitlement across Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics, and any applicable Shield add-ons.
 
 ### Deletion SLA timelines {#sla-processing-timelines}
 
-After submission, work orders are processed according to the entitlement tier.
+After submission, record delete requests are queued and processed based on your entitlement level.
 
-| Entitlement Tier | Queue Duration         | Maximum Processing Time (SLA) |
-|------------------|------------------------|-------------------------------|
-| **Base**         | Up to 15 days          | 30 days                       |
-| **Shield Add-on**| Typically 24 hours     | 15 days                       |
+| Product & Entitlement                              | Queue Duration      | Maximum Processing Time (SLA) |
+|----------------------------------------------------|---------------------|-------------------------------|
+| Without Shield add-on                              | Up to 15 days       | 30 days                       |
+| With Privacy and Security Shield or Healthcare Shield add-on | Typically 24 hours  | 15 days                       |
 
 If your organization requires higher limits, contact your Adobe representative for an entitlement review. Approved exceptions are tracked internally.
 
 >[!TIP]
 >
->To monitor your organization's quota usage or check your current limits, see the [Quota reference guide](../api/quota.md).
+>To check your current quota usage or entitlement tier, see the [Quota reference guide](../api/quota.md).
 
 ## Create a record delete request {#create}
 
