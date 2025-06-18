@@ -42,6 +42,8 @@ Provide values for the following credentials to connect [!DNL Databricks] to Exp
 | `database` | The name of your database in the delta lake. |
 | `connectionSpec.Id` | The connection spec ID returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection spec ID for [!DNL Databricks] is `e9d7ec6b-0873-4e57-ad21-b3a7c65e310b`. |
 
+For more information, read the [[!DNL Azure Databricks] overview](../../../../connectors/databases/databricks.md).
+
 ## Create a base connection
 
 A base connection retains information between your source and Experience Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
