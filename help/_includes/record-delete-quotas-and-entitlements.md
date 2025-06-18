@@ -25,10 +25,10 @@ Quotas reset at the start of each calendar month. Unused quota does **not** roll
 
 Work orders are processed based on your entitlement level:
 
-- **Base**: Queued for 15 days before processing. The SLA is 30 days.
+- **Base**: Queued for up to 15 days before processing. The SLA is 30 days.
 - **Premium**: Queued for 24 hours before processing. The SLA is 15 days.
 
-If your organization requires higher limits, contact your Adobe representative for an entitlement review. Approved exceptions are tracked internally.
+If your organization requires higher limits, contact your Adobe representative for an entitlement review.
 
 >[!TIP]
 > 

@@ -18,39 +18,13 @@ The endpoint used in this guide is part of the Data Hygiene API. Before continui
 * A guide to reading the sample API calls in this document
 * Important information regarding the required headers that are needed to make calls to any Experience Platform API
 
-{{$include /help/_includes/record-delete-quotas-and-entitlements.md}}
+## Quotas and processing timelines {#quotas}
 
-<!-- ## Quota behavior and entitlements {#quota-behavior}
+Record delete requests are subject to quotas and service-level expectations based on your license entitlement. These limits apply to both UI- and API-based delete requests.
 
-Quota limits for identity deletions depend on your organization's license entitlement.
-
-### Entitlement-based quotas
-
-The following table outlines the daily and monthly identity deletion quotas based on your organization's entitlement level.
-
-| Entitlement Type       | Daily Limit | Monthly Limit | Percentage Cap  |
-|--------|------------|-------------|----------|
-| **All customers**      | 1,000,000 identities/day      | —          | —     |
-| **Base**               | 1,000,000 identities/day      | 2,000,000 identities/month     | Up to 5% of addressable audience |
-| **Premium ( Healthcare Shield)**   | 1,000,000 identities/day      | 15,000,000 identities/month    | Up to 10% of addressable audience |
-| **CJA customers**      | Same as Base or Premium       | Same as Base or Premium        | Based on entitlement          |
-
->[!NOTE]
->
->These quotas reflect contract entitlements and are not enforced by technical guardrails. However, they are tracked and may be reviewed during support engagements.
-
-### Quota reset behavior
-
-Quotas reset at the start of each calendar month. Unused quota does not roll over.
-
-### SLA differences
-
-Work order processing time also depends on entitlement:
-
-* **Base**: 15-day queue, 30-day SLA
-* **Premium**: 24-hour queue, 15-day SLA
-
-If your organization requires a higher limit, contact your Adobe representative to request an entitlement review. Approved exceptions are tracked internally. -->
+>[!TIP]
+> 
+>This document shows you how to query your usage against entitlement-based limits. For a full description of quota tiers, record delete entitlements, and SLA behavior, see the [UI-based record delete](./ui/record-delete.md#quotas) or[API-based record delete](./api/workorder.md#quotas) documents.
 
 ## List quotas {#list}
 

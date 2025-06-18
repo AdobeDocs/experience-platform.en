@@ -124,41 +124,39 @@ To add more identities, select the plus icon (![A plus icon.](/help/images/icons
 
 ![The request creation workflow with the plus icon and the add identity icon highlighted.](../images/ui/record-delete/more-identities.png)
 
-{{$include /help/_includes/record-delete-quotas-and-entitlements.md}}
+## Quotas and processing timelines {#quotas}
 
-<!-- ## Quotas and Entitlements {#record-delete-quotas-and-entitlements}
+Record delete requests are subject to quotas and service-level expectations based on your license entitlement. These limits apply to both UI- and API-based delete requests.
 
-Record deletion requests are subject to daily and monthly quotas that vary by license entitlement.
+### Quota limits {#quota-limits}
 
-### Quota limits
+The table below outlines identity deletion quotas by entitlement level.
 
-The table below summarizes the daily and monthly identity deletion quotas based on your organization's entitlement level.
-
-| Entitlement Type | Daily Limit | Monthly Limit | Percentage Cap  |
-|---------|-------|---------|----------|
-| **All customers**        | 1,000,000 identities/day      | —     | —   |
-| **Base entitlement**     | 1,000,000 identities/day      | Up to 2,000,000/month         | Capped at 5% of addressable audience |
-| **Premium ( Healthcare Shield)**     | 1,000,000 identities/day      | Up to 15,000,000/month        | Capped at 10% of addressable audience |
-| **CJA customers**        | Same as Base or Premium       | Same as Base or Premium       | Based on entitlement  |
+| Entitlement Type    | Daily Limit                | Monthly Limit             | Percentage Cap                          |
+|---------------------|----------------------------|---------------------------|------------------------------------------|
+| **All customers**   | 1,000,000 identities/day   | —                         | —                                        |
+| **Base entitlement**| 1,000,000 identities/day   | Up to 2,000,000/month     | Capped at 5% of addressable audience     |
+| **Premium (Shield)**| 1,000,000 identities/day   | Up to 15,000,000/month    | Capped at 10% of addressable audience    |
+| **CJA customers**   | Same as Base or Premium    | Same as Base or Premium   | Based on entitlement                     |
 
 Quotas reset at the start of each calendar month. Unused quota does **not** roll over if you start submitting late in the month.
 
 >[!NOTE]
 >
->These quotas are based on customer entitlements and are not enforced through system guardrails. However, volume limits may be evaluated during contract review or monitored through backend metrics.
+> These quotas are based on entitlements defined in your license agreement. They are not currently enforced by system guardrails. However, usage may be monitored and reviewed periodically.
 
-### Processing timelines (SLA)
+### Processing timelines (SLA) {#sla-pProcessing-timelines}
 
-The time it takes for a request to be processed also depends on your entitlement level:
+Work orders are processed based on your entitlement level:
 
-* **Base:** Work orders are queued for 15 days before processing. The SLA is 30 days.
-* **Premium:** Work orders are queued for 24 hours before processing. The SLA is 15 days.
+* **Base**: Queued for up to 15 days before processing. The SLA is 30 days.
+* **Premium**: Queued for 24 hours before processing. The SLA is 15 days.
 
->[!TIP]  
->
+If your organization requires higher limits, contact your Adobe representative for an entitlement review.
+
+>[!TIP]
+> 
 >For a centralized summary of entitlements, quotas, SLAs, and exception rules, refer to the [Quota reference guide](../api/quota.md).
-
-If your organization requires higher volumes, contact your Adobe representative to begin an entitlement review. Approved exceptions are tracked internally and subject to periodic review. -->
 
 ## Submit the request {#submit}
 
