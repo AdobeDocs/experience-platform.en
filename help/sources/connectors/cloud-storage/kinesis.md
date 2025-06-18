@@ -85,6 +85,10 @@ For more information on iterator types, see the following [[!DNL Kinesis] docume
 
 ## Connect [!DNL Amazon Kinesis] to [!DNL Experience Platform]
 
+>[!NOTE]
+>
+>After you create or update a streaming dataflow, a brief 5-minute pause in data ingestion is required to prevent any potential instances of data loss or data drops.
+
 The documentation below provides information on how to connect [!DNL Amazon Kinesis] to [!DNL Experience Platform] using APIs or the user interface:
 
 ### Using APIs

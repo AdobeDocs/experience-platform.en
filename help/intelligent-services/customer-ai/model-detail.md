@@ -1,9 +1,6 @@
 ---
 title: Customer AI Propensity Scoring Model Details
 description: Learn about the AI model used for Customer AI.
-hide: true
-hidefromtoc: true
-exl-id: b2eeb1d2-3c2b-40a0-b5cd-91e99d99a906
 ---
 # Customer AI Propensity Scoring Model Details
 
@@ -11,7 +8,7 @@ exl-id: b2eeb1d2-3c2b-40a0-b5cd-91e99d99a906
 
 * **Model name and version**: Customer AI Propensity Scoring Model
 * **Model purpose**: The model is designed to provide marketers and customer engagement teams with actionable insights by predicting the probability that a consumer will perform a given action, such as making a purchase, signing up for a subscription, or engaging with an email campaign. The outputs allow businesses to optimize audience segmentation and personalize consumer interactions based on predicted behaviors.
-* **Intended users**: The primary users of this model are marketing professionals, data analysts, and customer engagement teams who leverage [Real-Time CDP](../../../rtcdp/home.md) to drive data-driven marketing strategies.
+* **Intended users**: The primary users of this model are marketing professionals, data analysts, and customer engagement teams who leverage [Real-Time CDP](../../rtcdp/home.md) to drive data-driven marketing strategies.
 * **Use cases**: This model is primarily used for consumer segmentation, targeted marketing, and churn prediction. Businesses leverage this model to predict consumer purchase intent, optimize marketing campaigns, and enhance personalization efforts. For example, an e-commerce company might use the model to identify high-intent shoppers and offer them exclusive promotions.
 * **Pain points**: Marketers often struggle with identifying the right consumers to target and optimizing engagement efforts. This model reduces guesswork by providing a data-driven approach to consumer targeting, ensuring that marketing resources are allocated efficiently.
 * **Potential misuse**: The model should not be used for high-risk use cases, such as financial credit scoring, medical diagnostics, or legal assessments. Additionally, the model should not be used in predicting personally sensitive behaviors (such as health conditions, political preferences).
@@ -44,9 +41,10 @@ exl-id: b2eeb1d2-3c2b-40a0-b5cd-91e99d99a906
 
 ## Model training {#model-training}
 
-* **Training data and preprocessing**: The training dataset for each customer is sourced directly from their own data within Adobe Experience Platform. This includes customer's historical interactions, transactional records, behavioral engagement logs, and demographic information as collected and stored in their Adobe Experience Platform instance. The dataset leverages customer-specific data over their chosen timeframe, capturing their unique seasonal trends and engagement patterns. Before use, each customer's dataset undergoes preprocessing tailored to their data characteristics, including missing value handling, categorical encoding, feature scaling, outlier detection, and feature engineering to ensure optimal quality and usability for their specific use case
+* **Training data and preprocessing**: The training dataset for each customer is sourced directly from their own data within Adobe Experience Platform. This includes customer's historical interactions, transactional records, behavioral engagement logs, and demographic information as collected and stored in their Adobe Experience Platform instance. The dataset leverages customer-specific data over their chosen timeframe, capturing their unique seasonal trends and engagement patterns. Before use, each customer's dataset undergoes preprocessing tailored to their data characteristics, including missing value handling, categorical encoding, feature scaling, outlier detection, and feature engineering to ensure optimal quality and usability for their specific use case.
+  * Consumer data used for training is not used cross-customer.
 * **Training specifications**: The model leverages [!DNL LightGBM] using [!DNL GBM], optimized for structured data. It is trained on historical customer event sequences to identify predictive behavioral patterns.
-* **Training frameworks**: The model was developed using [!DNL LightGBM], and [!DNL scikit-learn], and is trained on Adobe AI cloud infrastructure.
+* **Training frameworks**: The model was developed using [!DNL LightGBM], and [!DNL scikit-learn], and is hosted on Adobe AI cloud infrastructure.
 * **Training infrastructure**: [!DNL Databricks] clusters.
 
 ## Model evaluation {#model-evaluation}
@@ -58,7 +56,7 @@ exl-id: b2eeb1d2-3c2b-40a0-b5cd-91e99d99a906
 
 * **Model deployment**: The model is hosted on Adobe Experience Platform AI services and integrated with various Adobe applications. It is available via API endpoints, allowing seamless access for real-time predictions and batch processing across marketing and consumer engagement workflows.
 * **Model monitoring**: The model is continuously monitored via model monitoring to see the drift from the training setup. Periodic retrains (once in 3 months) are automatically run.
-* **Model ipdate**: The model is retrained once in several months (utmost once in 6 months) using updated consumer interaction data to ensure continued relevance. Periodic retraining helps mitigate data drift and seasonal fluctuations that could impact predictive accuracy.
+* **Model update**: The model is retrained once in several months (utmost once in 6 months) using updated consumer interaction data to ensure continued relevance. Periodic retraining helps mitigate data drift and seasonal fluctuations that could impact predictive accuracy.
 
 ## Explainability {#explainability}
 
