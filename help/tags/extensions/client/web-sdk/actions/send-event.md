@@ -1,37 +1,38 @@
-## Send event {#send-event}
+---
+title: Send event
+description: Send data to the Adobe Experience Platform Edge Network.
+---
+# Send event
 
-Sends an event to Experience Platform so that Experience Platform can collect the data you send and act on that information. Any data that you want to send can be sent in the **[!UICONTROL XDM Data]** field. Use a [!DNL JSON] object that conforms to the structure of your [!DNL XDM] schema. This object can either be created on your page or through a **[!UICONTROL Custom Code]** **[!UICONTROL Data Element]**.
+The **[!UICONTROL Send event]** action sends a payload to a datastream on the Adobe Experience Platform Edge Network. It is a core feature of data collection and personalization; almost all organizations use this action as part of their Web SDK implementation.
 
-The **[!UICONTROL Send Event]** action type supports the fields and settings described below. These fields are all optional.
+1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
+1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
+1. Select the desired tag property.
+1. Navigate to **[!UICONTROL Rules]**, then select the desired rule.
+1. Under [!UICONTROL Actions], select an existing action or create an action.
+1. Set the [!UICONTROL Extension] dropdown field to **[!UICONTROL Adobe Experience Platform Web SDK]**, then set the [!UICONTROL Action type] to **[!UICONTROL Send event]**.
 
-### Instance settings {#instance}
+## General fields
 
-Use the **[!UICONTROL Instance]** selector to choose your Web SDK instance that you want to configure. If you have only one instance, it is preselected.
+![Experience Platform Tags UI image showing the instance settings for the Send Event action type.](../assets/instance-settings.png)
 
-![Experience Platform Tags UI image showing the instance settings for the Send Event action type.](assets/instance-settings.png)
+* **[!UICONTROL Instance]**: The SDK instance that the action applies to. This drop-down menu is disabled if your implementation uses a single SDK instance.
+* **[!UICONTROL Use guided events]**: Enable this option to automatically fill in or hide certain fields to enable a particular use case. This setting can help reduce noise of available options when setting up the action for each respective purpose, and follows Adobe's best practices of [Top/bottom page events](/help/collection/js/use-cases/top-bottom-page-events.md). Enabling this check box triggers the display of the following radio buttons:
+  * **[!UICONTROL Request personalization]**: Get the latest personalization decisions without recording an Adobe Analytics event. It is most commonly called at the top of the page. When selected, this radio button sets the following fields:
+    * [!UICONTROL Type] is locked to [!UICONTROL Decisioning Proposition Fetch]
+    * [!UICONTROL Render visual personalization decisions] is locked to enabled
+    * [!UICONTROL Automatically send a display event] is locked to disabled
+  * **[!UICONTROL Collect analytics]**: Record an event without getting personalization decisions. It is most commonly called at the bottom of the page. When selected, this radio button sets the following fields:
+    * [!UICONTROL Include rendered propositions] is locked to enabled
+   
+## Data fields
 
-* **[!UICONTROL Instance]**: Select the Web SDK instance that you want to configure. If you only have one instance, it will be preselected.
-* **[!UICONTROL Use guided events]**: Enable this option to automatically fill in or hide certain fields to enable a particular use case. Enabling this option triggers the display of the following settings.
-    * **[!UICONTROL Request personalization]**: This event is intended to be called at the top of page. When selected, this event sets the following fields:
-        * **[!UICONTROL Type]**: **[!UICONTROL Decisioning Proposition Fetch]**
-        * **[!UICONTROL Automatically send a display event]**: **[!UICONTROL false]**
-        * To automatically render personalization in this case, enable the **[!UICONTROL Render visual personalization decisions]** option.
-    * **[!UICONTROL Collect analytics]**: This event is intended to be called at the bottom of the page. When selected, this event sets the following fields:
-        * **[!UICONTROL Include rendered propositions]**: **[!UICONTROL true]**
-        * The **[!UICONTROL Personalization]** settings are hidden
+![Experience Platform Tags UI image showing the Data element settings for the Send Event action type.](../assets/data.png)
 
-    >[!NOTE]
-    >
-    >The guided events are related to [top and bottom of page events](../../../../web-sdk/use-cases/top-bottom-page-events.md).
-    
-
-### Data {#data}
-
-![Experience Platform Tags UI image showing the Data element settings for the Send Event action type.](assets/data.png)
-
-* **[!UICONTROL Type]**: This field allows you specify an event type that will be recorded in your XDM schema. See [`type`](/help/web-sdk/commands/sendevent/type.md) in the `sendEvent` command for more information.
-* **[!UICONTROL XDM]**:
-* **[!UICONTROL Data]**: Use this field to send data that does not match an XDM schema. This field is useful if you are trying to update an Adobe Target profile or send Target Recommendations attributes. See [`data`](/help/web-sdk/commands/sendevent/data.md) in the `sendEvent` command for more information.
+* **[!UICONTROL Type]**: The event type. You can select from a pre-defined set of values, or define your own value. See [Available values for `eventType`](/help/xdm/classes/experienceevent.md#accepted-values-for-eventtype) for more information. The JavaScript library equivalent to this field is [`eventType`](/help/collection/js/commands/sendevent/type.md).
+* **[!UICONTROL XDM]**: The XDM payload that you want to send to Adobe. You can use either an [XDM object](../data-element-types.md#xdm-object) or [Variable](../data-element-types.md#variable) in this field. If you have rules that populate multiple XDM objects, you can use [Merged objects](../../core/overview.md#merged-objects) to combine them.
+* **[!UICONTROL Data]**: The data payload that you want to send to Adobe. Some apps and services do not require adhering to an XDM schema, such as Adobe Analytics or Adobe Target. Use a [Variable](../data-element-types.md#variable) data element type for this field.
 * **[!UICONTROL Include rendered propositions]**: Enable this option to include all the propositions that have been rendered, but a display event has not been sent. Use this in tandem with **[!UICONTROL Automatically send a display event]** disabled. This setting updates the `_experience.decisioning` XDM field with information about the rendered propositions.
 * **[!UICONTROL Document will unload]**: Enable this option to make sure that the events reach the server even if the user navigates away from the page. This allows events to reach the server, but responses are ignored.
 * **[!UICONTROL Merge ID]**: **This field is deprecated**. This will populate the `eventMergeId` XDM field.
