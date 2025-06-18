@@ -390,3 +390,10 @@ Flexible audience evaluation runs that were created either using the API or the 
 
 +++
 
+### Do I need to evaluate all dependent audiences when evaluating the main audience with flexible audience evaluation?
+
++++ Answer
+
+No. Flexible audience evaluation will automatically evaluate all dependent audiences. For example, if Audience A depends on Audience B, you only need to evaluate Audience B. Flexible audience evaluation will automatically evaluate Audience A and then Audience B.
+
++++
