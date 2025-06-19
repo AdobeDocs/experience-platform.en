@@ -8,7 +8,7 @@ To improve transparency, Adobe provides a [monitoring service](../../../../obser
 
 >[!IMPORTANT]
 >
->If you have disabled public network access or configured your [!DNL Azure] Key Vault to allow only selected networks, you must add Adobe's static IP address to your allowlist. This step is required to ensure that Adobe services can continue to access your key vault without interruption. Without it, you may not be notified of access issues that could impact your Experience Platform instance.
+>If you have disabled public network access or configured your [!DNL Azure] Key Vault to allow only selected networks, you must add Adobe's static IP address to your allowlist. Without it, you may not be notified of access issues that could impact your Experience Platform instance.
 
 ## Allowlist Adobe's static IP in [!DNL Azure] Key Vault {#add-adobe-static-ip}
 
@@ -26,7 +26,7 @@ Next, in the **[!DNL Firewall]** section, select **[!DNL Add your current IP add
 
 >[!NOTE]
 >
->After you add or update the static IP address in your [!DNL Azure] Key Vault settings, allow up to 10 minutes for the change to take effect. Adobe services use the CMK App to verify key access status after the allowlist update.
+>After you add or update the static IP address in your [!DNL Azure] Key Vault settings, allow up to 10 minutes for the change to take effect. Once the IP has been added, the CMK app accesses the key vault to verify permissions.
 
 After allowlisting Adobe's static IP, Experience Platform can monitor access to your key vault and trigger alerts if issues arise. These alerts provide early warnings so you can act before service is impacted. The next section details the types of alerts you may receive and how to respond.
 
