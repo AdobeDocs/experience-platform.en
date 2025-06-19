@@ -1,6 +1,7 @@
 ---
 title: Configure Alerts and IP allowlist for Azure CMK
 description: Learn how to allowlist Adobe's static IP address in Azure Key Vault and understand how Experience Platform alerts help detect and resolve Customer Managed Key access issues.
+exl-id: 9b520a3f-9cf1-4ae3-b8c2-c71ac3a80201
 ---
 # Configure alerts and IP allowlist for [!DNL Azure] CMK
 
