@@ -130,7 +130,7 @@ Record Delete requests are subject to daily and monthly identifier submission li
 
 >[!NOTE]
 >
->You can submit up to **1,000,000 identifiers per day**, but this daily volume is still subject to the monthly caps outlined below.
+>You can submit up to **1,000,000 identifiers per day**, but only if your remaining monthly quota allows it. If your monthly cap is less than 1 million, your daily submissions cannot exceed that cap.
 
 ### Monthly submission entitlement by product {#quota-limits}
 
@@ -140,7 +140,7 @@ The table below outlines identifier submission limits by product and entitlement
 |----------|-------------------------|---------------------------------|
 | Real-Time CDP or Adobe Journey Optimizer | Without Privacy and Security Shield or Healthcare Shield add-on          | 2,000,000 identifiers or 5% of addressable audience                    |
 | Real-Time CDP or Adobe Journey Optimizer | With Privacy and Security Shield or Healthcare Shield add-on             | 15,000,000 identifiers or 10% of addressable audience                  |
-| Customer Journey Analytics               | Without Privacy and Security Shield or Healthcare Shield add-on          | 2,000,000 identifiers or 200 identifiers per million CJA rows of entitlement |
+| Customer Journey Analytics               | Without Privacy and Security Shield or Healthcare Shield add-on          | 2,000,000 identifiers or 100 identifiers per million CJA rows of entitlement |
 | Customer Journey Analytics               | With Privacy and Security Shield or Healthcare Shield add-on             | 15,000,000 identifiers or 200 identifiers per million CJA rows of entitlement |
 
 >[!NOTE]
