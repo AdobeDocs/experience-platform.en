@@ -3,6 +3,7 @@ title: Connect Azure Databricks To Experience Platform Using The UI
 description: Learn how to connect Azure Databricks to Experience Platform using the user interface.
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
+exl-id: 877e22c0-cb77-45bb-88c9-54fdde2d6905
 ---
 # Connect [!DNL Azure Databricks] to Experience Platform in the UI
 

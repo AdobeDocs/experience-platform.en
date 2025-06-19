@@ -51,6 +51,14 @@ If your Key Vault is configured to restrict public access to certain virtual net
 
 Select **[!DNL Networking]** in the left navigation. Under **[!DNL Firewalls and virtual networks]**, select the checkbox **[!DNL Allow trusted Microsoft services to bypass this firewall]**, then select **[!DNL Apply]**.
 
+>[!NOTE]
+>
+>If your key vault uses restricted network access, Adobe recommends that you add the following static IP address: `20.88.123.53`. Adding this IP address allows Adobe services to monitor connectivity more effectively and provide in-Platform alerts when access issues are detected.
+>
+>To learn more about when to allowlist Adobe's IP address, how alerts work, and how to respond to key access failure notifications, see [Configure Alerts and IP Access for Azure CMK](./alerts-and-ip-access.md).
+>
+>If your key vault is already configured to allow public network access, no further action is required.
+
 ![The [!DNL Networking] tab of [!DNL Microsoft Azure] with [!DNL Networking] and [!DNL Allow trusted Microsoft surfaces to bypass this firewall] exception highlighted.](../../../images/governance-privacy-security/customer-managed-keys/networking.png)
 
 ### Generate a key {#generate-a-key}
