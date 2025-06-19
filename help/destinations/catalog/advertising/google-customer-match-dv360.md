@@ -94,6 +94,19 @@ Before configuring this destination connector, you must link your Google account
 
 Data exports will fail if your Google account is not properly linked to Adobe's account ID.
 
+>[!NOTE]
+>
+>Adobe has updated the Google Partner Account ID from `6219889373` to `4641108541`. 
+>
+>**If your Google account is currently linked to the old Adobe Partner Account ID (`6219889373`) follow the steps below:**
+>
+>1. Unlink your Google account from the old Adobe Partner Account ID (`6219889373`)
+>2. Link your Google account to the new Adobe Partner Account ID (`4641108541`)
+>3. Remove all audiences from your existing dataflows
+>4. Create new dataflows to ensure your audiences are correctly mapped to the destination
+>
+>If your Google account is already linked to the new Adobe Partner Account ID (`4641108541`), no action is required from you.
+
 **For organizations with manager accounts:**
 
 If your organization uses a [manager [!DNL Google] account](https://support.google.com/google-ads/answer/6139186) to manage multiple client accounts, follow these specific linking requirements:
