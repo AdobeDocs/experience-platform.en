@@ -383,6 +383,7 @@ To select a merge policy for your segment definition, select the gear icon on th
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_estimatedprofiles"
+>title="Estimated profiles"
 >abstract="Estimated profiles indicates an approximate number of profiles, based off of the sample job, that would qualify for the segment definition's rules. This means the sample data is projected on the larger profile set, resulting in an estimated number that may differ from the actual number of qualified profiles. The estimated profile sample has a 95% confidence interval. <br><br>This number is updated when the sample job is updated, which occurs when there is a greater than 5% change in customer data or the last sample job is older than 7 days."
 
 When building a segment definition, the **[!UICONTROL Audience properties]** section on the right-hand side of the workspace displays an estimate of the size of the resulting segment definition, allowing you to adjust your segment definition as needed before building the audience itself.
