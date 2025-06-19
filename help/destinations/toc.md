@@ -85,7 +85,7 @@ role: Admin,User
         * [Google Ad Manager connection](./catalog/advertising/google-ad-manager.md)
         * [(Beta) Google Ad Manager 360 connection](./catalog/advertising/google-ad-manager-360-connection.md)
         * [Google Customer Match connection](./catalog/advertising/google-customer-match.md)
-        * [(Beta) Google Customer Match + DV360 connection](./catalog/advertising/google-customer-match-dv360.md)
+        * [Google Customer Match + DV360 connection](./catalog/advertising/google-customer-match-dv360.md)
         * [Google Display & Video 360 connection](./catalog/advertising/google-dv360.md)
         * [Google gtag extension](./catalog/advertising/gtag-advertising.md)
         * [LinkedIn Insight Tag extension](./catalog/advertising/linkedin.md)
