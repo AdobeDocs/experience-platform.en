@@ -126,10 +126,6 @@ To add more identities, select the plus icon (![A plus icon.](/help/images/icons
 
 ## Quotas and processing timelines {#quotas}
 
-Record delete requests are subject to quotas and service-level expectations based on your license entitlement. These limits apply to both UI- and API-based delete requests.
-
-## Quotas and processing timelines {#quotas}
-
 Record Delete requests are subject to daily and monthly identifier submission limits, determined by your organization's license entitlement. These limits apply to both UI- and API-based delete requests.
 
 >[!NOTE]
