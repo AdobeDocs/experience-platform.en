@@ -103,7 +103,7 @@ Data exports will fail if your Google account is not properly linked to Adobe's 
 >1. Unlink your Google account from the old Adobe Partner Account ID (`6219889373`)
 >2. Link your Google account to the new Adobe Partner Account ID (`4641108541`)
 >3. Remove all audiences from your existing dataflows
->4. Create new dataflows to ensure your audiences are correctly mapped to the destination
+>4. Create new dataflows and map your audiences
 >
 >If your Google account is already linked to the new Adobe Partner Account ID (`4641108541`), no action is required from you.
 
