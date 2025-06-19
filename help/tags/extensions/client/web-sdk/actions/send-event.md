@@ -18,7 +18,7 @@ The **[!UICONTROL Send event]** action sends a payload to a datastream on the Ad
 ![Experience Platform Tags UI image showing the instance settings for the Send Event action type.](../assets/instance-settings.png)
 
 * **[!UICONTROL Instance]**: The SDK instance that the action applies to. This drop-down menu is disabled if your implementation uses a single SDK instance.
-* **[!UICONTROL Use guided events]**: Enable this option to automatically fill in or hide certain fields to enable a particular use case. This setting can help reduce noise of available options when setting up the action for each respective purpose, and follows Adobe's best practices of [Top/bottom page events](/help/collection/js/use-cases/top-bottom-page-events.md). Enabling this check box triggers the display of the following radio buttons:
+* **[!UICONTROL Use guided events]**: Enable this option to automatically fill in or hide certain fields to enable a particular use case. This setting can help reduce noise of available options when setting up the action for each respective purpose, and follows Adobe's best practices of [Top/bottom page events](/help/collection/js/use-cases/top-bottom-page-events.md). Enabling this checkbox triggers the display of the following radio buttons:
   * **[!UICONTROL Request personalization]**: Get the latest personalization decisions without recording an Adobe Analytics event. It is most commonly called at the top of the page. When selected, this radio button sets the following fields:
     * [!UICONTROL Type] is locked to [!UICONTROL Decisioning Proposition Fetch]
     * [!UICONTROL Render visual personalization decisions] is locked to enabled
@@ -30,11 +30,11 @@ The **[!UICONTROL Send event]** action sends a payload to a datastream on the Ad
 
 ![Experience Platform Tags UI image showing the Data element settings for the Send Event action type.](../assets/data.png)
 
-* **[!UICONTROL Type]**: The event type. You can select from a pre-defined set of values, or define your own value. See [Available values for `eventType`](/help/xdm/classes/experienceevent.md#accepted-values-for-eventtype) for more information. The JavaScript library equivalent to this field is [`eventType`](/help/collection/js/commands/sendevent/type.md).
+* **[!UICONTROL Type]**: The event type. You can select from a pre-defined set of values, or define your own value. See [Accepted values for `eventType`](/help/xdm/classes/experienceevent.md#accepted-values-for-eventtype) for more information. The JavaScript library equivalent to this field is [`eventType`](/help/collection/js/commands/sendevent/type.md).
 * **[!UICONTROL XDM]**: The XDM payload that you want to send to Adobe. You can use either an [XDM object](../data-element-types.md#xdm-object) or [Variable](../data-element-types.md#variable) in this field. If you have rules that populate multiple XDM objects, you can use [Merged objects](../../core/overview.md#merged-objects) to combine them.
 * **[!UICONTROL Data]**: The data payload that you want to send to Adobe. Some apps and services do not require adhering to an XDM schema, such as Adobe Analytics or Adobe Target. Use a [Variable](../data-element-types.md#variable) data element type for this field.
-* **[!UICONTROL Include rendered propositions]**: Enable this option to include all the propositions that have been rendered, but a display event has not been sent. Use this in tandem with **[!UICONTROL Automatically send a display event]** disabled. This setting updates the `_experience.decisioning` XDM field with information about the rendered propositions.
-* **[!UICONTROL Document will unload]**: Enable this option to make sure that the events reach the server even if the user navigates away from the page. This allows events to reach the server, but responses are ignored.
+* **[!UICONTROL Include rendered propositions]**: Enable this checkbox to use this event as a display event, including the propositions that rendered when "automatically send a display event" was unchecked. The `_experience.decisioning` XDM field populates with information about rendered personalization.
+* **[!UICONTROL Document will unload]**: Enable this checkbox to make sure that the events reach the server even if the user navigates away from the page. This allows events to reach the server, but responses are ignored.
 * **[!UICONTROL Merge ID]**: **This field is deprecated**. This will populate the `eventMergeId` XDM field.
 
 ### Personalization {#personalization}

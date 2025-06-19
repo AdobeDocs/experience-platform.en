@@ -105,7 +105,7 @@ Select an option from the General section of the configuration page. The followi
 
 Enables or disables tracking based on the EU privacy cookie.
 
-When you check the EU Compliance check box, the [!UICONTROL Tracking Cookie Name] field appears. The Tracking Cookie overrides the default tracking cookie name. You can customize the name that tags uses to track your opt-out status for receiving other cookies.
+When you enable the EU Compliance checkbox, the [!UICONTROL Tracking Cookie Name] field appears. The Tracking Cookie overrides the default tracking cookie name. You can customize the name that tags uses to track your opt-out status for receiving other cookies.
 
 When a page is loaded, the system checks to see if a cookie called sat\_track is set (or the custom cookie name specified on the Edit Property page). Consider the following information:
 
