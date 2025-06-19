@@ -24,7 +24,7 @@ Record delete requests are subject to quotas and service-level expectations base
 
 >[!TIP]
 > 
->This document shows you how to query your usage against entitlement-based limits. For a full description of quota tiers, record delete entitlements, and SLA behavior, see the [UI-based record delete](./ui/record-delete.md#quotas) or[API-based record delete](./api/workorder.md#quotas) documents.
+>This document shows you how to query your usage against entitlement-based limits. For a full description of quota tiers, record delete entitlements, and SLA behavior, see the [UI-based record delete](../ui/record-delete.md#quotas) or[API-based record delete](./workorder#quotas) documents.
 
 ## List quotas {#list}
 
