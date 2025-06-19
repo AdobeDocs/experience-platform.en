@@ -1,8 +1,8 @@
 ---
 title: Algolia
 description: Use this connector to activate audiences to Algolia for personalization and use across search and recommendations. You can then use the Algolia User Profile source connector to import the profiles into Real-Time CDP to build rich audiences.
+exl-id: 116a051a-1b47-4789-826e-c8f0fee60def
 ---
-
 # [!DNL Algolia] connection
 
 ## Overview {#overview}

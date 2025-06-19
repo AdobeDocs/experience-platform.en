@@ -3,8 +3,8 @@ title: Experience Platform Pre-Release Notes
 description: A preview of the latest release notes for Adobe Experience Platform.
 hide: true
 hidefromtoc: true
+exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
 ---
-
 # Adobe Experience Platform pre-release notes
 
 >[!IMPORTANT]
