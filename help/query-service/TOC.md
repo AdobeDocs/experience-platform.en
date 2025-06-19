@@ -24,6 +24,7 @@ role: User,Developer
     - SQL Insights for extended app reporting {#sql-insights}
         - [Overview](data-distiller/sql-insights/overview.md)
         - [Query pro mode](data-distiller/sql-insights/query-pro-mode.md)
+        - [Accelerated Store overview](data-distiller/sql-insights/accelerated-store-overview.md)
         - [Send accelerated queries](data-distiller/sql-insights/send-accelerated-queries.md)
         - [Reporting insights data model guide](data-distiller/sql-insights/reporting-insights-data-model.md)
     - AI/ML feature pipelines {#ml-feature-pipelines}
@@ -103,6 +104,7 @@ role: User,Developer
     - [Query logs](ui/query-logs.md)
     - [Monitor scheduled queries](ui/monitor-queries.md)
     - [Credentials guide](ui/credentials.md)
+    - [Migrate JWT to OAuth credentials](ui/migrate-jwt-to-oauth.md)
     - [Generate output datasets from query results](ui/create-datasets.md)
 - Query Service API {#api}
     - [Getting started](api/getting-started.md)

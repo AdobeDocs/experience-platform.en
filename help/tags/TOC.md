@@ -127,6 +127,8 @@ role: Developer
     * [Advertising Cloud](https://exchange.adobe.com/apps/ec/100640)
     * [AEM Asset Insights](https://exchange.adobe.com/apps/ec/103406)
     * [Airbrake JS Notifier](https://exchange.adobe.com/apps/ec/103342)
+    * [!DNL Algolia] Insights {#algolia-insights}
+      * [Overview](./extensions/client/algolia/overview.md) 
     * [Amplitude](https://exchange.adobe.com/apps/ec/108010)
     * [Apollo QAX](https://exchange.adobe.com/apps/ec/105068)
     * [Awin Advertiser MasterTag](https://exchange.adobe.com/apps/ec/103176)
@@ -211,7 +213,14 @@ role: Developer
     * [Overview](./extensions/server/overview.md)
     * Adobe Experience Platform Cloud Connector {#cloud-connector}
       * [Overview](./extensions/server/cloud-connector/overview.md)
+      * [mTLS Certificates](./extensions/server/cloud-connector/mtls.md)
       * [Release notes](./extensions/server/cloud-connector/release-notes.md)
+    * [!DNL Adform] {#adform}
+      * [Overview](./extensions/server/adform/overview.md)
+    * [!DNL Algolia] {#algolia}
+      * [Overview](./extensions/server/algolia/overview.md)
+    * [!DNL Amazon] {#amazon}
+      * [Overview](./extensions/server/amazon/overview.md)
     * [!DNL AWS] {#aws}
       * [Overview](./extensions/server/aws/overview.md)
     * [!DNL Braze] {#braze}
@@ -237,6 +246,8 @@ role: Developer
     * [Pega Customer Decision Hub](https://exchange.adobe.com/apps/ec/107597)
     * [!DNL Pinterest] {#pinterest}
       * [Overview](./extensions/server/pinterest/overview.md)
+    * [!DNL Reddit] {#reddit}
+      * [Overview](./extensions/server/reddit/overview.md)
     * [!DNL Snapchat] {#snap}
       * [Overview](./extensions/server/snap/overview.md)
     * [!DNL Snowflake] {#snowflake}

@@ -10,6 +10,15 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 This document covers the release notes for the Adobe Experience Platform Web SDK.
 For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## Version 2.27.0 - May 20, 2025
+
+**Fixes and improvements**
+
+- Fixed an issue with in-app messages where the custom styling was not applied correctly.
+- Changed the format of event history. This will cause in-app messages and content cards to be re-shown as the old history data is deleted.
+- Fixed an issue where propositions would be reapplied in SPA use cases.
+- Fixed an issue with click tracking on shadow DOM elements.
+
 ## Version 2.26.0 - March 5, 2025
 
 **New features**
@@ -193,7 +202,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 - Added support for [Page by Page Full Migration](home.md#migrating-to-web-sdk). The Adobe Target profile will now be preserved as a visitor moves between at.js and Web SDK pages.
 - Added configurable support for [high entropy User-Agent Client Hints](/help/web-sdk/use-cases/client-hints.md).
-- Added support for the [`applyResponse`](/help/web-sdk/commands/applyresponse.md) command. This enables hybrid personalization via the [Edge Network Server API](../server-api/overview.md).
+- Added support for the [`applyResponse`](/help/web-sdk/commands/applyresponse.md) command. This enables hybrid personalization via the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/).
 - QA mode links now work across multiple pages.
 
 **Fixes and improvements**

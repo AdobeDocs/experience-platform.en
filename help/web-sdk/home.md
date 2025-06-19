@@ -22,7 +22,7 @@ The Experience Platform Web SDK is part of the Adobe Experience Platform Edge Ne
 
 * **[Experience Platform Web SDK](#overview)**: A JavaScript library and tag extension for simplifying Adobe technology deployment.
 * **[Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/home/)**: An extension to the v5 mobile SDK for the new deployment methodology.
-* **[Edge Network API](../server-api/overview.md)**: A server-side API for data collection, personalization, advertising, and marketing use cases. You can use it on servers, IoT devices, set-top boxes, and other devices.
+* **[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)**: A server-side API for data collection, personalization, advertising, and marketing use cases. You can use it on servers, IoT devices, set-top boxes, and other devices.
 
 The Edge Network provides low-latency data collection, pluggable computing, and rapid data activation across all addressable channels. It offers a single consolidated SDK for web, mobile, and server-side channels, sending data to a common Adobe domain (`adobedc.net`) and receiving a single payload for data and experience delivery.
 

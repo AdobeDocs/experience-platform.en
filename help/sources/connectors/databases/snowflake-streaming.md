@@ -81,6 +81,10 @@ For more information on role and privilege management, refer to the [[!DNL Snowf
 
 ## Next steps
 
+>[!NOTE]
+>
+>After you create or update a streaming dataflow, a brief 5-minute pause in data ingestion is required to prevent any potential instances of data loss or data drops.
+
 The following tutorial provides steps on how to connect your [!DNL Snowflake] streaming source to Experience Platform using the API:
 
 * [Stream data from a [!DNL Snowflake] database to Experience Platform using the Flow Service API](../../tutorials/api/create/databases/snowflake-streaming.md)

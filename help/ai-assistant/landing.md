@@ -36,6 +36,17 @@ Get started by reading the material in the links below to familiarize yourself w
     </tr>
 </table>
 
+### Hands-on guide to boost your productivity with AI Assistant
+
+>[!NOTE]
+>
+>This workbook was last updated on March 31, 2025. Since then, some capabilities may have evolved or expanded. Additionally, a few features referenced in this guide may still be in early access. If you encounter something that is not yet available in your environment and you are interested in exploring it, please reach out to your Adobe Account Team to request early access.
+
+Read the following for a hands-on guide on how to boost your productivity with AI Assistant.
+
+* [Supercharge your productivity with AI Assistant](./assets/landing/ai-assistant-lab-workbook.pdf)
+
+
 ## New features
 
 Get a glimpse of the newest enhancements in AI Assistant, including capabilities currently in the Alpha or Beta stages.
@@ -66,11 +77,11 @@ You can use AI Assistant to help your discover of Experience Data Model (XDM) fi
 
 [![image](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/xdm-field-discovery.md)
 
->[!TAB AI Assistant for Customer Support]
+>[!TAB Product Support Agent]
 
-### AI Assistant for Customer Support
+### Product Support Agent
 
-You can use AI Assistant for Customer Support to seamlessly troubleshoot without leaving your workflows. When needed, support administrators can now use AI Assistant for Customer Support to create customer support tickets, complete with context and session details from your interactions with AI Assistant.
+You can use Product Support Agent in AI Assistant to seamlessly troubleshoot without leaving your workflows. When needed, support administrators can now use Product Support Agent to create customer support tickets, complete with context and session details from your interactions with AI Assistant.
 
 [![image](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/customer-support.md)
 
@@ -379,12 +390,12 @@ Watch the following videos to learn about AI Assistant use cases.
             </div>
         </div>
     </div>
-    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Use AI Assistant for customer support">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Product Support Agent">
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3443183?learn=on" title="Use AI Assistant for customer support" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443183/?format=jpeg&nocache=1732633205785" alt="Use AI Assistant for customer support"
+                    <a href="https://video.tv.adobe.com/v/3443183?learn=on" title="Use Product Support Agent in AI Assistant" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443183/?format=jpeg&nocache=1732633205785" alt="Use Product Support Agent in AI Assistant"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -392,9 +403,9 @@ Watch the following videos to learn about AI Assistant use cases.
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3443183?learn=on" target="_blank" rel="referrer" title="Use AI Assistant for customer support">Use AI Assistant for customer support</a>
+                        <a href="https://video.tv.adobe.com/v/3443183?learn=on" target="_blank" rel="referrer" title="Use Product Support Agent in AI Assistant">Use Product Support Agent in AI Assistant</a>
                     </p>
-                    <p class="is-size-6">Watch this video to learn how you can use AI Assistant for Customer Support to seamlessly troubleshoot without leaving your workflows.</p>
+                    <p class="is-size-6">Watch this video to learn how you can use Product Support Agent to seamlessly troubleshoot without leaving your workflows.</p>
                 </div>
                 <div style="display: flex; flex-direction: row;">
                   <a href="https://video.tv.adobe.com/v/3443183?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
@@ -433,16 +444,6 @@ Watch the following videos for additional AI Assistant use case examples:
 * [Unlock operational insights with AI Assistant](https://www.youtube.com/watch?v=fGgFwAOZle8)
 
 >[!ENDTABS]
-
-### Boost your productivity with AI Assistant
-
->[!NOTE]
->
->This workbook was last updated on March 31, 2025. Since then, some capabilities may have evolved or expanded. Additionally, a few features referenced in this guide may still be in early access. If you encounter something that is not yet available in your environment and you are interested in exploring it, please reach out to your Adobe Account Team to request early access.
-
-Read the following for a hands-on guide on how to boost your productivity with AI Assistant.
-
-* [Supercharge your productivity with AI Assistant](./assets/landing/ai-assistant-lab-workbook.pdf)
 
 ## Next steps
 

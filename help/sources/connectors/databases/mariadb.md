@@ -1,29 +1,65 @@
 ---
-keywords: Experience Platform;home;popular topics;MariaDB;mariadb;Maria DB;maria db
-solution: Experience Platform
 title: MariaDB Source Connector Overview
 description: Learn how to connect MariaDB to Adobe Experience Platform using APIs or the user interface.
+last-substantial-update: 2025-04-29
 exl-id: 37b8f991-dca9-4f85-9bdd-4927a015e4c0
 ---
-# [!DNL MariaDB] connector
+# [!DNL MariaDB]
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Experience Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
 Experience Platform provides support for ingesting data from a third-party database. [!DNL Experience Platform] can connect to different types of databases such as relational, NoSQL, or data warehouses. Support for database providers include [!DNL MariaDB].
 
-## IP address allow list
+## Prerequisites {#prerequisites}
 
-A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
+Read the following sections to complete the prerequisite setup before you connect your [!DNL MariaDB] account to Experience Platform.
 
-The documentation below provides information on how to connect [!DNL MariaDB] to [!DNL Experience Platform] using APIs or the user interface:
+### IP address allowlist 
 
-## Connect [!DNL MariaDB] to [!DNL Experience Platform] using APIs
+You must add region-specific IP addresses to your allowlist prior to connecting your sources to Experience Platform. For more information, read the guide on [allowlisting IP addresses to connect to Experience Platform](../../ip-address-allow-list.md) for more information.
+
+### Authenticate to Experience Platform
+
+You must provide values for the following credentials to connect [!DNL MariaDB] to Experience Platform.
+
+>[!BEGINTABS]
+
+>[!TAB Account key authentication]
+
+To use account key authentication, provide the appropriate values for the following credentials.
+
+| Credential | Description |
+| --- | --- |
+| `connectionString` | The connection string associated with your [!DNL MariaDB] authentication. The [!DNL MariaDB] connection string pattern is: `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL MariaDB] is `3000eb99-cd47-43f3-827c-43caf170f015`. **Note**: This credential is only required when connecting through the [!DNL Flow Service] API. |
+
+For more information about obtaining a connection string, refer to this [[!DNL MariaDB] document](https://mariadb.com/kb/en/about-mariadb-connector-odbc/).
+
+>[!TAB Basic authentication]
+
+To use basic authentication, provide the appropriate values for the following credentials.
+
+| Credential | Description |
+| --- | --- |
+| `server` | The name or IP of your [!DNL MariaDB] database. |
+| `username` | The name of your database. |
+| `port` | The port number of the communication endpoint you are connecting to. |
+| `password` | The username that corresponds with your database. |
+| `database` | The password that corresponds with your database. |
+| `sslMode` | The method by which data is encrypted during data transfer. |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL MariaDB] is `3000eb99-cd47-43f3-827c-43caf170f015`. **Note**: This credential is only required when connecting through the [!DNL Flow Service] API. |
+
+For more information about obtaining a connection string, refer to this [[!DNL MariaDB] document](https://mariadb.com/kb/en/about-mariadb-connector-odbc/).
+
+>[!ENDTABS]
+
+## Connect [!DNL MariaDB] to Experience Platform using APIs
 
 - [Create a MariaDB base connection using the Flow Service API](../../tutorials/api/create/databases/mariadb.md)
 - [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
 - [Create a dataflow for a database source using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
-## Connect [!DNL MariaDB] to [!DNL Experience Platform] using the UI
+## Connect [!DNL MariaDB] to Experience Platform using the UI
 
 - [Create a MariaDB source connection in the UI](../../tutorials/ui/create/databases/mariadb.md)
 - [Create a dataflow for a database source connection in the UI](../../tutorials/ui/dataflow/databases.md)

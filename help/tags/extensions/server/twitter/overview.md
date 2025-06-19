@@ -39,7 +39,7 @@ In order to connect the Experience Platform to [!DNL Twitter], the following inp
 
 | Key Type | Description |
 | --- | --- |
-| Consumer Key |​ The app's API Key for accessing the [!DNL Twitter] API. Refer to the [!DNL Twitter] documentation on [api keys and secrets](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) for guidance. | |
+| Consumer Key |​ The app's API Key for accessing the [!DNL Twitter] API. Refer to the [!DNL Twitter] documentation on [api keys and secrets](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) for guidance. |
 | Consumer Secret | The API Secret allows your app to access the [!DNL Twitter] API. Refer to the [!DNL Twitter] documentation on [api keys and secrets](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) for guidance. |
 | Token Secret | The non-expiring token secret of your app, which is used for authenticating to the [!DNL Twitter] API via OAuth. Refer to the [!DNL Twitter] documentation on [obtaining use access tokens](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) for guidance. |
 | Access Token | The non-expiring access token of your app, which is used for authenticating to the [!DNL Twitter] API via OAuth. Refer to the [!DNL Twitter] documentation on [obtaining use access tokens](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) for guidance. |

@@ -190,6 +190,7 @@ role: Admin,User
         * [Adobe Target connection](./catalog/personalization/adobe-target-connection.md)
         * [Adobe Target extension](./catalog/personalization/adobe-target.md)
         * [Adobe Target v2 extension](./catalog/personalization/adobe-target-v2.md)
+        * [Algolia connection](./catalog/personalization/algolia.md)
         * [Beemray extension](./catalog/personalization/beemray.md)
         * [Custom personalization connection](./catalog/personalization/custom-personalization.md)
         * [D&B Visitor Intelligence extension](./catalog/personalization/dnb.md)
@@ -197,7 +198,8 @@ role: Admin,User
         * [Gainsight extension](./catalog/personalization/gainsight.md)
         * [KickFire extension](./catalog/personalization/kickfire.md)
         * [Marketo Web Personalization extension](./catalog/personalization/marketo-web-personalization.md)
-        * [Pega Customer Decision Hub connection](./catalog/personalization/pega.md)
+        * [Pega CDH Realtime Audience connection](./catalog/personalization/pega.md)
+        * [(V2) Pega CDH Realtime Audience connection](./catalog/personalization/pega-v2.md)
         * [Pega Profile connection](./catalog/personalization/pega-profile.md)
     * Social destinations{#social}
         * [Social destinations overview](./catalog/social/overview.md)
@@ -237,6 +239,7 @@ role: Admin,User
             * [Supported transformation functions](./destination-sdk/functionality/destination-server/supported-functions.md)
             * [File formatting configuration](./destination-sdk/functionality/destination-server/file-formatting.md)
         * Destination configuration components {#destination-configuration}
+            * [Configure audience data type](./destination-sdk/functionality/destination-configuration/audience-data-type.md)
             * [Customer authentication configuration](./destination-sdk/functionality/destination-configuration/customer-authentication.md)
             * [OAuth2 authorization](./destination-sdk/functionality/destination-configuration/oauth2-authorization.md)
             * [Customer data fields](./destination-sdk/functionality/destination-configuration/customer-data-fields.md)
