@@ -5,13 +5,14 @@ badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/le
 ---
 # B2B Architecture Upgrade
 
+>[!IMPORTANT]
+>
+>This document outlines the upgrades to the architecture of Real-Time CDP B2B Edition. The migration process will be seamless and there are no disruptions expected to your current workflows and integrations. **No action is required from you** at this point. Refer to this document for information on how the upgrades will impact existing features of Adobe Experience Platform. For any questions, contact your Adobe Account Team.
+
 To support the ongoing strategic enhancement of Adobe Experience Platform, the B2B architecture is undergoing a structural upgrade designed to improve system scalability, enable greater architectural flexibility, and accommodate increasingly sophisticated B2B use cases.
 
-## Reasons for the change
 
 To better support complex B2B data models and prepare for future innovations, Adobe is introducing a new relational segmentation engine. This engine is purpose-built to handle queries across linked B2B objects such as Accounts, Opportunities, and custom entities, adding to the existing segmentation engine already in use. The upgrade lays the foundation for more flexible and powerful segmentation capabilities in the future, including support for richer data relationships and custom object modeling.
-
-## Changes
 
 While the segmentation experience will remain familiar. There will be subtle changes in the segment authoring UI:
 
@@ -19,8 +20,6 @@ While the segmentation experience will remain familiar. There will be subtle cha
 * The segment builder will reflect this logic to help you preview and manage segment creation.
 
 This change in the back end allows Real-Time CDP to process different parts of the segment using the engine best suited to the data type, thereby ensuring better performance and accuracy.
-
-No action is required from you
 
 ## New features
 
@@ -48,43 +47,18 @@ Audience size estimation for B2B people segments will now be processed at the ti
 
 Read the following for details on the features impacted by the B2B architecture upgrade.
 
-### Segment migration
+| Feature | Details |
+| --- | --- |
+| **Segment migration** | <ul><li>Enhanced Segment Evaluation: Multi-Entity Person and Account segments with Experience Event conditions are now evaluated using the new relational segmentation engine for improved accuracy.</li><li>Updated Segment Creation: New segments of these types must follow a two-step definition process aligned with the updated segmentation model.</li><li>Expanded Historical Context: Segments can now leverage the full history of Person-level events, beyond the previous 30-day limit.</li></ul> |
+| **B2B audience evaluation** | <ul><li>Improved Accuracy: The new relational engine enhances segment evaluation for complex B2B relationships.</li><li>Richer Account Segmentation: Enables use of full Person-level event history, improving targeting across extended B2B buying cycles.</li><li>Future-Ready Architecture: Establishes a foundation for more advanced segmentation capabilities.</li></ul> |
+| **Identity resolution and merge process** | <ul><li>Daily Profile Refresh: Profile Access APIs return records merged via Entity Resolution, updated once daily.</li><li>Consistent Data Usage: Segmentation, activation, and analytics use daily ER-merged Account and Opportunity data, improving consistency with a slight delay.</li><li>Improved B2B Profiles: Account and Opportunity records are now resolved through Entity Resolution, enabling more accurate profiles and paving the way for future probabilistic resolution.</li></ul> |
+| **Support of merge policies in multi-entity B2B segments** | <ul><li>Default Merge Policy: All B2B Multi-Entity Person segments now use the Default (timestamp-based) merge policy.</li><li>Potential Segment Variance: Segments previously using Dataset Precedence may yield different results post-migration.</li><li>Impact on Workflows: Changes in segment qualification may affect audience activation, journey orchestration, and campaign targeting.</li></ul> |
+| **Lookup support for B2B classes** | <ul><li>Changes to the Entities API: Developers can no longer retrieve data from unsupported entities via the Entities API.</li><li>Integrations or tools that rely on direct lookups of deprecated entities, such as CampaignMember, Account-Person Relation, will need to be refactored.</li></ul> |
+| **Support for audience creation using linked B2B entities from experience events** | <ul><li>Developers are no longer able to create audiences using B2B entities that are linked from experience events.</li></ul> |
+| **Account and opportunity profile lookups** | <ul><li>Newly ingested Account and Opportunity data are no longer available immediately for lookups.</li><li>Downstream processes that depend on the immediate availability of this data may be impacted.</li></ul> |
+| **Support for multi-entity person segments with experience events conditions** | <ul><li>Segment Model Update: Experience Events predicates and Multi-Entity logic can no longer coexist in a single segment. This change increases the total number of segments due to the new segment-of-segments model.</li><li>Two-Step Segment Definition: To replicate previous logic, define two separate segments in the Segment Builder:</li><li>Event-Only Segment: Create a B2B Person segment using Experience Events (people who downloaded a white paper in the last 30 days).</li><li>Multi-Entity Segment: Build a separate B2B Person segment with Multi-Entity logic that references the event segment (accounts in CA with open opportunities).</li><li>Preserved Outcomes: This two-step approach ensures equivalent segment definitions under the new architecture.</li></ul> |
+| **Support for account segments with experience event conditions** | <ul><li>Separation of Conditions: Segments can no longer combine Person-level events with Account-level conditions in a single definition.</li><li>Builder Validation: The segment builder will display a validation message if this pattern is used, prompting users to refactor.</li><li>Two-Segment Approach: Users must now create separate segments—one for Person-level criteria and another for Account-level logic referencing the first.</li><li>Extended Event History: Segments can now access the full event history based on the customer's configured retention period, not just the past 30 days.</li></ul> |
+| **Segment creation via APIs** | <ul><li>To improve security and enforce best practices, Adobe will update these APIs to accept only service tokens. User tokens will no longer be supported. This means customers cannot interact with these APIs either directly.</li><li>Any existing processes, scripts, or tools that rely on these APIs will no longer work once the change takes effect.</li><li>This change ensures more secure and scalable API usage aligned with enterprise-grade automation and governance standards.</li></ul> |
+| **Sandbox tooling** | <ul><li>Importing previously exported segments from the legacy system will no longer be supported.</li><li>Segments must be rebuilt using the new architecture, re-exported using Sandbox tooling, and then imported into your target environment for use.</li></ul> |
 
-* **Enhanced Segment Evaluation**: Multi-Entity Person and Account segments with Experience Event conditions are now evaluated using the new relational segmentation engine for improved accuracy.
-* **Updated Segment Creation**: New segments of these types must follow a two-step definition process aligned with the updated segmentation model.
-* **Expanded Historical Context**: Segments can now leverage the full history of Person-level events, beyond the previous 30-day limit.
-
-### B2B audience evaluation
-
-* **Improved Accuracy**: The new relational engine enhances segment evaluation for complex B2B relationships.
-* **Richer Account Segmentation**: Enables use of full Person-level event history, improving targeting across extended B2B buying cycles.
-* **Future-Ready Architecture**: Establishes a foundation for more advanced segmentation capabilities.
-
-
-### Identity resolution and merge process
-
-* **Daily Profile Refresh**: Profile Access APIs return records merged via Entity Resolution, updated once daily.
-* **Consistent Data Usage**: Segmentation, activation, and analytics use daily ER-merged Account and Opportunity data, improving consistency with a slight delay.
-* **Improved B2B Profiles**: Account and Opportunity records are now resolved through Entity Resolution, enabling more accurate profiles and paving the way for future probabilistic resolution.
-
-### Support of merge policies in multi-entity B2B segments
-
-* **Default Merge Policy**: All B2B Multi-Entity Person segments now use the Default (timestamp-based) merge policy.
-* **Potential Segment Variance**: Segments previously using Dataset Precedence may yield different results post-migration.
-* **Impact on Workflows**: Changes in segment qualification may affect audience activation, journey orchestration, and campaign targeting.
-
-### Lookup support for B2B classes
-
-
-
-### Account and opportunity profile lookups
-
-### Support for multi-entity person segments with experience events conditions
-
-### Segment creation via APIs
-
-### Latency of segmentation results and activation
-
-### Segment migration for development sandboxes
-
-### Sandbox tooling
+{style="table-layout:auto"}
