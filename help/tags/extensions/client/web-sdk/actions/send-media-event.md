@@ -1,8 +1,14 @@
-## Send media event {#send-media-event}
+---
+title: Send media event
+description: Send media data to the Adobe Experience Platform Edge Network.
+---
+# Send media event
 
-Sends a media event to Adobe Experience Platform and/or Adobe Analytics. This action is useful when you are tracking media events on your website. Select an instance (if you have more than one). The action requires a `playerId` that represents a unique identifier for a tracked media session. It also requires a **[!UICONTROL Quality of Experience]** and a `playhead` data element when starting a media session.
+The **[!UICONTROL Send media event]** action sends media event to a datastream, which can then be used by apps and services like Adobe Experience Platform or Adobe Analytics. This action is useful when you track streaming media content on your property.
 
-![Experience Platform UI image showing the send media event screen.](assets/send-media-event.png)
+![Experience Platform UI image showing the send media event screen.](../assets/send-media-event.png)
+
+This action always requires a **[!UICONTROL Player ID]**, which is the Content Player Name.
 
 The **[!UICONTROL Send media event]** action type supports the following properties:
 

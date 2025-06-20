@@ -3,7 +3,6 @@ title: data
 description: Learn how to send non-XDM data to Adobe, through the data object.
 exl-id: 537fc34e-3cda-4aa7-ae0d-0d3ef4b89848
 ---
-
 # `data`
 
 The `data` object allows you to send a payload to Adobe that does not match an XDM schema. It is useful in non-XDM scenarios, such as sending data directly to Adobe Analytics, Adobe Target, or Adobe Audience Manager. When data arrives at the datastream, you can use [Data Prep mapping](/help/data-prep/ui/mapping.md) to assign XDM fields to each field in the `data` object.
