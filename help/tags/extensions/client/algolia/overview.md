@@ -78,7 +78,7 @@ Add the **[!UICONTROL Click]** action to your tag rule to send clicked events to
 
 >[!NOTE]
 >
->If both `queryID` and `position` are included, the event is classes as **Clicked object IDs after Search**. Otherwise, it's classed as a **Clicked object IDs** event.
+>If both `queryID` and `position` are included, the event is classed as **Clicked object IDs after Search**. Otherwise, it's classed as a **Clicked object IDs** event.
 ><br><br> 
 >If the Data Element does not provide an `indexName`, the **Default Index Name** will be used when the event is sent.
 
