@@ -3,8 +3,8 @@ title: Experience Platform Pre-Release Notes
 description: A preview of the latest release notes for Adobe Experience Platform.
 hide: true
 hidefromtoc: true
+exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
 ---
-
 # Adobe Experience Platform pre-release notes
 
 >[!IMPORTANT]
@@ -17,8 +17,8 @@ hidefromtoc: true
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/latest)
->- [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Release date: June 18, 2025**
@@ -32,7 +32,6 @@ New features and updates to existing features in Adobe Experience Platform:
 - [Destinations](#destinations)
 - [Federated Audience Composition](#fac)
 - [Privacy Service](#privacy-service)
-- [Query Service](#query-service)
 - [Sandboxes](#sandboxes)
 - [Sources](#sources)
 
@@ -129,27 +128,6 @@ Several legal and organizational regulations give users the right to access or d
 | Support for Tennessee and Minnesota Privacy Laws | Privacy Service now supports the Tennessee Information Protection Act (`tipa_tn_usa`) and the Minnesota Consumer Data Privacy Act (`mcdpa_mn_usa`). You can process access and delete requests in compliance with these new state-level regulations. See the [Regulations overview](https://experienceleague.adobe.com/en/docs/experience-platform/privacy/regulations/overview) for more details. |
 
 See the [Privacy Service overview](../privacy-service/home.md) for more information on the service.
-
-## Query Service {#query-service}
-
-Query data in the Adobe Experience Platform data lake using standard SQL with Query Service. Seamlessly combine datasets and generate new ones from your query results to power reporting, enable data science workflows, or facilitate ingestion into Real-Time Customer Profile.
-
-**New features**
-
-| Feature | Description |
-| --- | --- |
-| Advanced statistical functions | **Theta sketch intersection**: New function for computing set intersections using theta sketches for approximate distinct counting and set operations. **KLL histograms**: Enhanced histogram capabilities using KLL (Kth smallest, L largest, Large items) sketches for quantile estimation and distribution analysis. These functions are available for Data Distiller customers. |
-| SQL Template Library | A comprehensive library of SQL templates for common use cases is now available. This feature accelerates query development by providing best practice templates for frequent analytical patterns, helping Data Distiller customers implement complex analytics more efficiently. |
-
-**Updated features**
-
-| Feature | Description |
-| --- | --- |
-| RFM modeling example | Added a comprehensive Recency, Frequency, Monetary (RFM) modeling example for Data Distiller customers. This includes detailed documentation and implementation guides for customer segmentation and value analysis using RFM techniques. |
-
-{style="table-layout:auto"}
-
-For more information on [!DNL Query Service], please see the [[!DNL Query Service] overview](../query-service/home.md).
 
 ## Sandboxes {#sandboxes}
 
