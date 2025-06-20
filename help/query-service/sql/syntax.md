@@ -330,6 +330,10 @@ The following limitations apply when using `TRANSFORM` with `CREATE TABLE`. See 
 
 The `INSERT INTO` command is defined as follows:
 
+>[!IMPORTANT]
+>
+>Query Service supports **append-only operations** using the ITAS engine. `INSERT INTO` is the only supported data manipulation command, **update** and **delete** operations are not available. To reflect changes in your data, insert new records that represent the desired state.
+
 ```sql
 INSERT INTO table_name select_query
 ```

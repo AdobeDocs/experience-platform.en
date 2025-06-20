@@ -12,11 +12,6 @@ exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
 >title="Algorithm Configuration"
 >abstract="Configure unique namespace and namespace priority tailored to your ingested identities."
 
->[!NOTE]
->
->* "CRMID" and "loginID" are custom namespaces. In this document, "CRMID" is a person identifier and "loginID" is a login identifier associated with a given person.
->* To simulate the example graph scenarios outlined in this document, you must first create two custom namespaces, one with the identity symbol "CRMID" and another with the identity symbol "loginID". Identity symbols are case sensitive.
-
 Read this document to learn about different implementation types that you can configure using [!DNL Identity Graph Linking Rules].
 
 Customer graph scenarios can be grouped into three different categories.
@@ -36,6 +31,10 @@ Before diving in to the following document, ensure that you familiarize yourself
 * [Graph Simulation](graph-simulation.md)
 
 ## Basic implementations {#basic-implementations}
+
+>[!NOTE]
+>
+>To complete the implementations below, you must create a custom namespace with the identity symbol (case sensitive) of: `CRMID`.
 
 Read this section for basic implementations of [!DNL Identity Graph Linking Rules].
 
@@ -66,15 +65,11 @@ Configure the following settings in the Graph Simulation interface before you si
 
 **Simulated graph**
 
-+++Select to view simulated graph
-
-In this graph,  John (the end-user) is represented by the CRMID. {ECID: 123} represents the web browser that John used on his personal computer to visit your e-commerce platform. {ECID: 999} represents the browser that he used on his [!DNL iPhone] and {IDFA: a-b-c} represents his [!DNL iPhone].
+In this graph,  John (the end-user) is represented by the CRMID. `{ECID: 123}` represents the web browser that John used on his personal computer to visit your e-commerce platform. `{ECID: 999}` represents the browser that he used on his [!DNL iPhone] and `{IDFA: a-b-c}` represents his [!DNL iPhone].
 
 ![A simple implementation with one cross-device namespace..](../images/configs/basic/simple-implementation.png)
 
-+++
-
-### Exercise
+**Exercise**
 
 Simulate the following configuration in Graph Simulation. You can either create your own events, or copy and paste using text mode.
 
@@ -84,7 +79,7 @@ Simulate the following configuration in Graph Simulation. You can either create 
 
 **Shared device (PC)**
 
-**Text mode:**
+**Text mode**
 
 ```json
 CRMID: John, ECID: 111
@@ -93,24 +88,20 @@ CRMID: Jane, ECID: 111
 
 **Simulated graph**
 
-+++Select to view simulated graph
-
 In this graph, John and Jane are represented by their own respective CRMIDs:
 
-* {CRMID: John}
-* {CRMID: Jane}
+* `{CRMID: John}`
+* `{CRMID: Jane}`
 
-The browser on the desktop computer that they both use to visit your e-commerce platform is represented by {ECID: 111}. In this graph scenario, Jane is the last authenticated end-user, and therefore, the link between {ECID: 111} and {CRMID: John} is removed.
+The browser on the desktop computer that they both use to visit your e-commerce platform is represented by `{ECID: 111}`. In this graph scenario, Jane is the last authenticated end-user, and therefore, the link between `{ECID: 111}` and `{CRMID: John}` is removed.
 
 ![A simulated graph for a shared device (PC).](../images/configs/basic/shared-device-pc.png)
-
-+++
 
 >[!TAB Shared device (mobile)]
 
 **Shared device (mobile)**
 
-**Text mode:**
+**Text mode**
 
 ```json
 CRMID: John, ECID: 111, IDFA: a-b-c
@@ -119,31 +110,31 @@ CRMID: Jane, ECID: 111, IDFA: a-b-c
 
 **Simulated graph**
 
-+++Select to view simulated graph
-
-In this graph, John and Jane are both represented by their own respective CRMIDs. The browser that they use is represented by {ECID: 111} and the [!DNL iPad] that they share is represented by {IDFA: a-b-c}. In this graph scenario, Jane is the last authenticated end-user, and therefore, the links from {ECID: 111} and {IDFA: a-b-c} to {CRMID: John} are removed.
+In this graph, John and Jane are both represented by their own respective CRMIDs. The browser that they use is represented by `{ECID: 111}` and the [!DNL iPad] that they share is represented by `{IDFA: a-b-c}`. In this graph scenario, Jane is the last authenticated end-user, and therefore, the links from `{ECID: 111}` and `{IDFA: a-b-c}` to `{CRMID: John}` are removed.
 
 ![A simulated graph for a shared device (mobile).](../images/configs/basic/shared-device-mobile.png)
-
-+++
 
 >[!ENDTABS]
 
 ## Intermediate implementations {#intermediate-implementations}
 
+>[!TIP]
+>
+>A **non-unique identity** is an identity associated with a non-unique namespace.
+
 Read this section for intermediate implementations of [!DNL Identity Graph Linking Rules].
 
 ### Use case: Your data includes non-unique identities
 
->[!TIP]
+>[!NOTE]
 >
->* A **non-unique identity** is an identity associated with a non-unique namespace.
->
->* In the examples below, `CChash` is a custom namespace that represents a hashed credit card number.
+>To complete the implementations below, you must create the following custom namespaces with the identity symbols (case sensitive) of:
+>* `CRMID`
+>* `CCHash` (This is a custom namespace that represents a hashed credit card number.)
 
-You are a data architect working for a commercial bank that issues credit cards. Your marketing team has indicated that they want to include past credit card transaction history to a profile. This identity graph could look like the following.
+Imagine that you are a data architect working for a commercial bank that issues credit cards. Your marketing team has indicated that they want to include past credit card transaction history to a profile. This identity graph could look like the following.
 
-**Text mode:**
+**Text mode**
 
 ```json
 CRMID: John, CChash: 1111-2222 
@@ -165,27 +156,38 @@ Configure the following settings in the Graph Simulation interface before you si
 
 **Simulated graph**
 
-+++Select to view simulated graph
-
 ![Image of the simulated graph](../images/configs/basic/simple-implementation-non-unique.png)
-
-+++
 
 There are no guarantees that these credit card numbers, or any other non-unique namespaces, will always be associated to one single end-user. Two end-users may register with the same credit card, there may be non-unique placeholder values that erroneously ingested. Simply put, there is no guarantee that non-unique namespaces will not cause graph collapse.
 
 To solve this issue, Identity Service removes the oldest links and retains the most recent links. This ensures that you just have one CRMID in a graph, thereby preventing graph collapse.
 
-### Exercise
+**Exercise**
 
 Simulate the following configurations in Graph Simulation. You can either create your own events, or copy and paste using text mode.
 
 >[!BEGINTABS]
 
+>[!TAB Shared device]
+
+**Text mode**
+
+```json
+CRMID: John, CChash: 1111-2222
+CRMID: Jane, CChash: 3333-4444
+CRMID: John, ECID: 123
+CRMID: Jane, ECID:123
+```
+
+**Simulated graph**
+
+![An intermediate shared device graph with CChash.](../images/configs/intermediate/intermediate-shared-device.png)
+
 >[!TAB Two end-users with the same credit card]
 
 Two different end-users sign up for your e-commerce website with the same credit card. Your marketing team wants to prevent graph collapse by ensuring that the credit card is associated with just one single profile.
 
-**Text mode:**
+**Text mode**
 
 ```json
 CRMID: John, CChash: 1111-2222
@@ -196,17 +198,13 @@ CRMID: Jane, ECID:456
 
 **Simulated graph**
 
-+++Select to view simulated graph
-
 ![A graph where two end-users sign up with the same credit card.](../images/configs/intermediate/graph-with-same-credit-card.png)
-
-+++
 
 >[!TAB Invalid credit card number]
 
 Due to unclean data, an invalid credit card number is ingested into Experience Platform.
 
-**Text mode:**
+**Text mode**
 
 ```json
 CRMID: John, CChash: undefined
@@ -217,17 +215,19 @@ CRMID: Jill, CChash: undefined
 
 **Simulated graph**
 
-+++Select to view simulated graph
-
 ![A graph where a hashing issues results in an invalid credit card.](../images/configs/intermediate/graph-with-invalid-credit-card.png)
-
-+++
 
 >[!ENDTABS]
 
 ### Use case: Your data includes both hashed and unhashed CRMIDs
 
-Your are ingesting both an unhashed (offline) CRMID and a hashed (online) CRMID. They expect a direct relationship between both unhashed and hashed CRMIDs. When an end-user browses with an authenticated account, the hashed CRMID is sent along with the device ID (represented on Identity Service as an ECID).
+>[!NOTE]
+>
+>To complete the implementations below, you must create custom namespaces with the identity symbols (case sensitive) of:
+>* `CRMID`
+>* `CRMIDhash`
+
+You are ingesting both an unhashed (offline) CRMID and a hashed (online) CRMID. The expectation is that there is a direct relationship between both unhashed and hashed CRMIDs. When an end-user browses with an authenticated account, the hashed CRMID is sent along with the device ID (represented on Identity Service as an ECID).
 
 **Algorithm configuration (Identity Settings)**
 
@@ -246,11 +246,11 @@ Simulate the following configurations in Graph Simulation. You can either create
 
 >[!BEGINTABS]
 
->[!TAB Scenario 1: shared device]
+>[!TAB Shared device]
 
 John and Jane share a device.
 
-**Text mode:**
+**Text mode**
 
 ```json
 CRMID: John, CRMIDhash: John
@@ -259,13 +259,13 @@ CRMIDhash: John, ECID: 111
 CRMIDhash: Jane, ECID: 111
 ```
 
-![placeholder](../images/configs/intermediate/shared-device-hashed-crmid.png)
+![A shared device graph with hashed CRMID](../images/configs/intermediate/shared-device-hashed-crmid.png)
 
->[!TAB Scenario 2: bad data]
+>[!TAB Bad data]
 
 Due to errors in the hashing process, a non-unique hashed CRMID is generated and sent to Identity Service.
 
-**Text mode:**
+**Text mode**
 
 ```json
 CRMID: John, CRMIDhash: aaaa
@@ -337,6 +337,10 @@ Email: jane@g, ECID: 111
 
 ### Use case: Your data includes three unique namespaces
 
+>[!NOTE]
+>
+>To complete the implementations below, you must create a custom namespace with the identity symbol (case sensitive) of: `CRMID`.
+
 Your customer defines a single-person entity as follows:
 
 * An end-user with an assigned CRMID.
@@ -354,7 +358,7 @@ Simulate the following configurations in the graph simulation tool. You can eith
 
 >[!BEGINTABS]
 
->[!TAB Two end-users log in]
+>[!TAB Shared device]
 
 In this scenario, John and Jane both log in to an e-commerce website.
 
@@ -394,9 +398,15 @@ Read this section for advanced implementations of [!DNL Identity Graph Linking R
 
 ### Use case: You need support for multiple lines of businesses
 
+>[!NOTE]
+>
+>To complete the implementations below, you must create custom namespaces with the identity symbols (case sensitive) of:
+>* `CRMID`
+>* `loginID`
+
 Your end-users have two different accounts, a personal account and a business account. Each account is identified by a different ID. In this scenario, a typical graph would look like the following:
 
-**Text mode***
+**Text mode**
 
 ```json
 CRMID: John, loginID: JohnPersonal
@@ -418,12 +428,7 @@ Configure the following settings in the Graph Simulation interface before you si
 
 **Simulated graph**
 
-+++Select to view simulated graph
-
 ![An identity graph for an end-user with a business and a personal email.](../images/configs/advanced/advanced.png)
-
-+++
-
 
 **Exercise**
 
@@ -448,6 +453,8 @@ loginID: JanePersonal, ECID: 111
 
 >[!TAB Bad data is sent to Real-Time CDP]
 
+**Text mode**
+
 ```json
 CRMID: John, loginID: JohnPersonal
 CRMID: John, loginID: error
@@ -463,9 +470,18 @@ loginID: JanePersonal, ECID: 222
 
 ### Use case: You have complex implementations that require multiple namespaces
 
+>[!NOTE]
+>
+>To complete the implementations below, you must create custom namespaces with the identity symbols (case sensitive) of:
+>* `CRMID`
+>* `loyaltyID`
+>* `thirdPartyID`
+
 You are a media and entertainment company and your end-users have the following:
+
 * A CRMID
 * A loyalty ID
+
 Additionally, your end-users can make a purchase on the e-commerce website and this data is tied to their email address. User data is also enriched by a third-party database provider and is sent to Experience Platform in batches.
 
 **Text mode**
@@ -484,8 +500,8 @@ Configure the following settings in the Graph Simulation interface before you si
 | Display name | Identity symbol | Identity type | Unique per graph | Namespace priority |
 | --- | --- | --- | --- | --- |
 | CRMID | CRMID | CROSS_DEVICE |  ✔️  | 1 | 
-| loyaltyID | loyaltyID | CROSS_DEVICE | | 2 |
-| Email | Email | Email | | 3 |
+| loyaltyID | loyaltyID | CROSS_DEVICE |   ✔️  | 2 |
+| Email | Email | Email |  ✔️   | 3 |
 | thirdPartyID | thirdPartyID | CROSS_DEVICE | | 4 |
 | orderID | orderID | CROSS_DEVICE | | 5 |
 | ECID | ECID | COOKIE | | 6 |
