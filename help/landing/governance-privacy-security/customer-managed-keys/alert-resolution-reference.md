@@ -193,4 +193,4 @@ This alert appears when Adobe CMK detects an unknown, unsupported, or novel issu
 
 ## Next steps
 
-To understand how alerts are triggered and how to configure IP allowlisting for [!DNL Azure] CMK, see the [Configure alerts and IP allowlist for Azure CMK](./alerts-and-ip-access.md) guide.
+To understand how alerts are triggered and how to configure IP allowlisting for [!DNL Azure] CMK, see the [Configure alerts and IP allowlist for Azure CMK](./azure/alerts-and-ip-access.md) guide.
