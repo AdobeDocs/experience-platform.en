@@ -1,6 +1,7 @@
 ---
 title: CMK Alert Resolution Reference
 description: Identify, troubleshoot, and resolve common alerts triggered by Customer Managed Key (CMK) misconfigurations in Adobe Experience Platform. Use this guide to follow clear, step-by-step instructions and restore secure key access.
+exl-id: ffe2eadc-dfb5-418b-a201-2c20dcc9cfe4
 ---
 # CMK alert resolution reference
 
