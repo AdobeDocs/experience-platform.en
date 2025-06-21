@@ -79,7 +79,7 @@ Add the **[!UICONTROL Click]** action to your tag rule to send clicked events to
 >[!NOTE]
 >
 >If both `queryID` and `position` are included, the event is classed as **Clicked object IDs after Search**. Otherwise, it's classed as a **Clicked object IDs** event.
-><br><br> 
+><br>
 >If the Data Element does not provide an `indexName`, the **Default Index Name** will be used when the event is sent.
 
 ![](../../../images/extensions/client/algolia/clicked.png)
@@ -99,7 +99,7 @@ Add the **[!UICONTROL Converted]** action to your tag rule to send converted eve
 >[!NOTE]
 >
 >If the Data Element contains `queryId`, the event is classed as **Converted after Search**. Otherwise, it will be classed as a **Converted** event. 
-><br><br>
+><br>
 >If the Data Element does not provide an `indexName`, the **Default Index Name** will be used when the event is sent. 
 
 ![](../../../images/extensions/client/algolia/converted.png)
@@ -119,9 +119,9 @@ Add the **[!UICONTROL Added to Cart]** action to your tag rule to send added to 
 >[!NOTE]
 >
 >If the Data Element contains `queryId`, the event will be classed as **Added to cart object IDs after Search**. Otherwise, it will be classed as a **Added to cart object IDs** event. 
-><br><br>
+><br>
 >If the Data Element does not provide an `indexName`, the **Default Index Name** will be used when the event is sent. 
-><br><br>
+><br>
 >If the default Data Elements do not meet your requirements, a custom one Data Element can be created to return the desired event details.
 
 ![](../../../images/extensions/client/algolia/added-to-cart.png) 
@@ -141,9 +141,9 @@ Add the **[!UICONTROL Purchased]** action to your tag rule to send purchased eve
 >[!NOTE]
 >
 >If the Data Element contains `queryId`, the event will be classed as **Purchased object IDs after Search**. Otherwise it will be classed as a **Purchased object IDs** event. 
-><br><br>
+><br>
 >If the Data Element does not provide an `indexName`, the **Default Index Name** will be used when the event is sent. 
-><br><br>
+><br>
 >If the default Data Elements do not meet your requirements, a custom one Data Element can be created to return the desired event details.
 
 ![](../../../images/extensions/client/algolia/purchased.png) 
