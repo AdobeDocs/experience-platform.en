@@ -236,6 +236,7 @@ role: Developer
   - [Ingest encrypted data](tutorials/api/encrypt-data.md)
   - [Save a dataflow as a draft](tutorials/api/draft.md)
   - [Apply access labels to a dataflow](tutorials/api/labels.md)
+  - [Use private endpoints](tutorials/api/private-link.md)
 - UI tutorials {#ui-tutorials}
   - Create a source connection {#create}
     - Adobe applications {#adobe-applications}
@@ -286,6 +287,7 @@ role: Developer
       - [Amazon Redshift](tutorials/ui/create/databases/redshift.md)
       - [Apache Hive on Azure HDInsights](tutorials/ui/create/databases/hive.md)
       - [Apache Spark on Azure HDInsights](tutorials/ui/create/databases/spark.md)
+      - [Azure Databricks](tutorials/ui/create/databases/databricks.md)
       - [Azure Data Explorer](tutorials/ui/create/databases/data-explorer.md)
       - [Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
       - [Azure Table Storage](tutorials/ui/create/databases/ats.md)

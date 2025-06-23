@@ -103,6 +103,8 @@ This document provides definitions for key terms related to privacy regulations 
 
 **MHMDAa**: The [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&full=true) enhances privacy rights for consumers regarding their health data. It mandates disclosures, consumer consent, and deletion rights for health data, and prohibits the sale of health data without authorization. Additionally, the Act makes it unlawful to use geofencing around healthcare facilities.
 
+**[!DNL Minnesota Consumer Data Privacy Act]** (MCDPA): Effective July 31, 2025, the MCDPA gives Minnesota residents rights to access, correct, delete, and obtain their personal data, as well as opt out of data sales, targeted advertising, and certain profiling. It applies to businesses operating in or targeting Minnesota that process data of 100,000+ consumers annually (excluding payment-only data), or 25,000+ consumers if over 25% of revenue comes from data sales. Covered entities must implement reasonable data security measures and conduct risk assessments.The Minnesota Attorney General enforces the law and may issue fines of up to $7,500 per violation. However, businesses have until January 31, 2026, to fix any violations before penalties are applied.
+
 **[!DNL Montana Consumer Data Privacy Act]**: This law gives Montana residents rights to access, correct, delete, and request copies of their personal data. The MCDPA applies to businesses that process data for over 50,000 Montana consumers and emphasizes the protection of sensitive personal data, such as biometric and genetic information. It enforces transparency around data collection, sharing, and selling practices.
 
 ## N
@@ -163,6 +165,8 @@ This document provides definitions for key terms related to privacy regulations 
 ## T
 
 **TDPSA**: The Texas Data Privacy and Security Act (TDPSA) is a comprehensive legislation that protects Texas residents' personal data rights. It grants individuals the right to access, correct, delete, and obtain copies of their data and to opt out of data sales and targeted advertising. Businesses violating this legislation can face financial penalties.
+
+**[!DNL Tennessee Information Protection Act (TIPA)]**: Effective July 1, 2025, TIPA gives residents the right to access, correct, delete, and obtain their personal data. It also allows them to opt out of data sales, targeted advertising, and profiling used to make decisions that produce legal or similarly significant effects. It applies to businesses with over $25 million in annual revenue that process data of 175,000 or more consumers, or 25,000 if over half of revenue comes from selling personal data. Covered businesses must adopt reasonable security measures and conduct data protection assessments for certain high-risk processing activities. The Tennessee Attorney General enforces the law, with fines up to $7,500 per violation. Businesses have 60 days to fix violations before facing penalties, but intentional or knowing violations may result in triple damages.
 
 **Trilogues**: Trilogues are informal negotiations between the European Commission, the European Parliament, and the Council of the European Union. These negotiations are usually held following the first readings of proposed legislation to more quickly agree to a compromise text to be adopted.
 agree on the adoption of a compromise text more quickly.

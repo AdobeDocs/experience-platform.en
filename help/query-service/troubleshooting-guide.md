@@ -711,12 +711,18 @@ and timestamp < to_timestamp('2022-07-23');
 The MERGE INTO SQL construct is not supported by Data Distiller or Query Service.
 +++
 
-## ITAS Queries
+## ITAS Queries {#itas-queries}
 
 ### What are ITAS queries?
 
 +++Answer
 INSERT INTO queries are called ITAS queries. Note that CREATE TABLE queries are referred to as CTAS queries.
++++
+
+### Does Query Service support update and delete operations?
+
++++Answer
+No, Query Service does not support update or delete operations. It only supports append-only operations using ITAS.
 +++
 
 ## Third-party tools {#third-party-tools}

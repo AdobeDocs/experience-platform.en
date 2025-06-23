@@ -209,6 +209,10 @@ A successful response returns your source connection ID and its corresponding et
 
 ## Create a dataflow
 
+>[!NOTE]
+>
+>After you create or update a streaming dataflow, a brief 5-minute pause in data ingestion is required to prevent any potential instances of data loss or data drops.
+
 To create a dataflow to stream data from tour [!DNL Snowflake] account to Experience Platform, you must make a POST request to the `/flows` endpoint while providing the following values:
 
 >[!TIP]

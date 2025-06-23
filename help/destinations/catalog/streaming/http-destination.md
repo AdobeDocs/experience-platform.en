@@ -65,13 +65,11 @@ You can use [!DNL Mutual Transport Layer Security] ([!DNL mTLS]) to ensure enhan
 
 If you want to use [!DNL mTLS] with [!DNL HTTP API] destinations, the server address you put in the [destination details](#destination-details) page must have [!DNL TLS] protocols disabled and only [!DNL mTLS] enabled. If the [!DNL TLS] 1.2 protocol is still enabled on the endpoint, no certificate is sent for the client authentication. This means that to use [!DNL mTLS] with your [!DNL HTTP API] destination, your "receiving" server endpoint must be an [!DNL mTLS]-only enabled connection endpoint.
 
-### Download certificate {#certificate}
+### Retrieve and inspect certificate details {#certificate}
 
-If you want to check the [!DNL Common Name] (CN) and [!DNL Subject Alternative Names] (SAN) to do additional third-party validation, you can download the certificate below:
+If you want to inspect certificate details such as the [!DNL Common Name] (CN) and [!DNL Subject Alternative Names] (SAN) for additional third-party validation, use the API to retrieve the certificate and extract those fields from the response.
 
-* [HTTP API mTLS public certificate](../../../landing/images/governance-privacy-security/encryption/destinations-public-certificate.zip)
-
-You can also securely retrieve public certificates by making a GET request to the MTLS endpoint. See the [public certificate endpoint documentation](../../../data-governance/mtls-api/public-certificate-endpoint.md) for more information. 
+See the [public certificate endpoint documentation](../../../data-governance/mtls-api/public-certificate-endpoint.md) for more information. 
 
 ## IP address allowlist {#ip-address-allowlist}
 
@@ -240,7 +238,7 @@ Regarding the data that is exported for a given profile, it is important to unde
 
 |What determines a destination export | What is included in the destination export |
 |---------|----------|
-|<ul><li>Mapped attributes and audiences serve as the cue for a destination export. This means that if any mapped audiences change states (from `null` to `realized` or from `realized` to `exiting`) or any mapped attributes are updated, a destination export would be kicked off.</li><li>Since identities cannot currently be mapped to HTTP API destinations, changes in any identity on a given profile also determine destination exports.</li><li>A change for an attribute is defined as any update on the attribute, whether or not it is the same value. This means that an overwrite on an attribute is considered a change even if the value itself has not changed.</li></ul> | <ul><li>The `segmentMembership` object includes the audience mapped in the activation dataflow, for which the status of the profile has changed following a qualification or audience exit event. Note that other unmapped audiences for which the profile qualified for can be part of the destination export, if these audiences belong to the same [merge policy](/help/profile/merge-policies/overview.md) as the audience mapped in the activation dataflow. </li><li>All identities in the `identityMap` object are included as well (Experience Platform currently does not support identity mapping in the HTTP API destination).</li><li>Only the mapped attributes are included in the destination export.</li></ul> |
+|<ul><li>Mapped attributes and segments serve as the cue for a destination export. This means that if the `segmentMembership` status of a profile changes  to `realized` or `exiting` or any mapped attributes are updated, a destination export would be kicked off.</li><li>Since identities cannot currently be mapped to HTTP API destinations, changes in any identity on a given profile also determine destination exports.</li><li>A change for an attribute is defined as any update on the attribute, whether or not it is the same value. This means that an overwrite on an attribute is considered a change even if the value itself has not changed.</li></ul> | <ul><li>The `segmentMembership` object includes the segment mapped in the activation dataflow, for which the status of the profile has changed following a qualification or segment exit event. Note that other unmapped segments for which the profile qualified for can be part of the destination export, if these segments belong to the same [merge policy](/help/profile/merge-policies/overview.md) as the segment mapped in the activation dataflow. </li><li>All identities in the `identityMap` object are included as well (Experience Platform currently does not support identity mapping in the HTTP API destination).</li><li>Only the mapped attributes are included in the destination export.</li></ul> |
 
 {style="table-layout:fixed"}
 

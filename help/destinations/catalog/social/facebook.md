@@ -36,11 +36,20 @@ Next, they can use their offline data including associated membership IDs and cu
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-|GAID|Google Advertising ID|Select the GAID target identity when your source identity is a GAID namespace.|
-|IDFA|Apple ID for Advertisers|Select the IDFA target identity when your source identity is an IDFA namespace.|
-|phone_sha256|Phone numbers hashed with the SHA256 algorithm|Both plain text and SHA256 hashed phone numbers are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed phone numbers, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
-|email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed email addresses, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
-|extern_id|Custom user IDs|Select this target identity when your source identity is a custom namespace.|
+|`GAID`|Google Advertising ID|Select the GAID target identity when your source identity is a GAID namespace.|
+|`IDFA`|Apple ID for Advertisers|Select the IDFA target identity when your source identity is an IDFA namespace.|
+|`phone_sha256`|Phone numbers hashed with the SHA256 algorithm|Both plain text and SHA256 hashed phone numbers are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed phone numbers, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
+|`email_lc_sha256`|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed email addresses, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
+|`extern_id`|Custom user IDs|Select this target identity when your source identity is a custom namespace.|
+|`gender`|Gender | Accepted values: <ul><li>`m` for male</li><li>`f` for female</li></ul> Experience Platform **automatically hashes** this value before sending it to Facebook. This automatic hashing is required to comply with Facebook's security and privacy requirements. Do **not** provide pre-hashed values for this field, as this will cause the matching process to fail.|
+|`date_of_birth`|Date of birth | Accepted format: `yyyy-MM-DD`. <br>Experience Platform **automatically hashes** this value before sending it to Facebook. This automatic hashing is required to comply with Facebook's security and privacy requirements. Do **not** provide pre-hashed values for this field, as this will cause the matching process to fail.|
+|`last_name`|Last name| Accepted format: Lowercase, `a-z` characters only, no punctuation. Use UTF-8 encoding for special characters.  <br>Experience Platform **automatically hashes** this value before sending it to Facebook. This automatic hashing is required to comply with Facebook's security and privacy requirements. Do **not** provide pre-hashed values for this field, as this will cause the matching process to fail.|
+|`first_name`|First name|Accepted format: Lowercase, `a-z` characters only, no punctuation, no spaces. Use UTF-8 encoding for special characters.  <br>Experience Platform **automatically hashes** this value before sending it to Facebook. This automatic hashing is required to comply with Facebook's security and privacy requirements. Do **not** provide pre-hashed values for this field, as this will cause the matching process to fail.|
+|`first_name_initial`|First name initial| Accepted format: Lowercase, `a-z` characters only. Use UTF-8 encoding for special characters.  <br>Experience Platform **automatically hashes** this value before sending it to Facebook. This automatic hashing is required to comply with Facebook's security and privacy requirements. Do **not** provide pre-hashed values for this field, as this will cause the matching process to fail.|
+|`state`|State|Use the [2-character ANSI abbreviation code](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standard_state_code) in lowercase. For non-US states, use lowercase characters, no punctuation, no special characters, and no spaces.  <br>Experience Platform **automatically hashes** this value before sending it to Facebook. This automatic hashing is required to comply with Facebook's security and privacy requirements. Do **not** provide pre-hashed values for this field, as this will cause the matching process to fail.|
+|`city`|City|Accepted format: Lowercase, `a-z` characters only, no punctuation, no special characters, no spaces.  <br>Experience Platform **automatically hashes** this value before sending it to Facebook. This automatic hashing is required to comply with Facebook's security and privacy requirements. Do **not** provide pre-hashed values for this field, as this will cause the matching process to fail.|
+|`zip`|Zip code|Accepted format: Lowercase, no spaces. For US zip codes, use only the first 5 digits. For the UK, use the `Area/District/Sector` format.  <br>Experience Platform **automatically hashes** this value before sending it to Facebook. This automatic hashing is required to comply with Facebook's security and privacy requirements. Do **not** provide pre-hashed values for this field, as this will cause the matching process to fail.|
+|`country`|Country|Accepted format: Lowercase, 2-letter country codes in [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format.  <br>Experience Platform **automatically hashes** this value before sending it to Facebook. This automatic hashing is required to comply with Facebook's security and privacy requirements. Do **not** provide pre-hashed values for this field, as this will cause the matching process to fail.|
 
 ## Supported audiences {#supported-audiences}
 
@@ -87,6 +96,12 @@ Before you can send your audiences to [!DNL Facebook], make sure you meet the fo
 [!DNL Facebook] requires that no personally identifiable information (PII) is sent in clear. Therefore, the audiences activated to [!DNL Facebook] can be keyed off *hashed* identifiers, such as email addresses or phone numbers.
 
 Depending on the type of IDs that you ingest into Adobe Experience Platform, you must adhere to their corresponding requirements.
+
+## Maximizing audience match rates {#match-rates}
+
+To achieve the highest audience match rates in [!DNL Facebook], it is highly recommended to use the `phone_sha256` and `email_lc_sha256` target identities.
+
+These identifiers are the primary ones used by [!DNL Facebook] for matching audiences across their platforms. Ensure that your source data is properly mapped to these target identities and adheres to [!DNL Facebook's] hashing requirements.
 
 ## Phone number hashing requirements {#phone-number-hashing-requirements}
 
@@ -151,7 +166,15 @@ The video below also demonstrates the steps to configure a [!DNL Facebook] desti
 
 ### Refresh authentication credentials {#refresh-authentication-credentials}
 
-Facebook tokens expire every 60 days. Once the token is expired, data exports to the destination stop working. To prevent this situation, reauthenticate by performing the following steps:
+Facebook authentication tokens expire every 60 days. Once the token is expired, data exports to the destination stop working.
+
+You can monitor your token expiration dates from the **[!UICONTROL Account expiration date]** column in either the **[!UICONTROL Accounts]** or the **[!UICONTROL Browse]** tabs. 
+
+![Facebook account token expiration date column in the Browse tab](../../assets/catalog/social/facebook/account-expiration-browse.png)
+
+![Facebook account token expiration date column in the Accounts tab](../../assets/catalog/social/facebook/account-expiration-accounts.png)
+
+To prevent token expiration causing interruptions in your activation dataflows, reauthenticate by performing the following steps:
 
 1. Navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**
 2. (Optional) Use the available filters on the page to display Facebook accounts only.
