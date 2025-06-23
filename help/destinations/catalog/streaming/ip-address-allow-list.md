@@ -177,7 +177,6 @@ The IP range below applies to Experience Platform customers running on Amazon We
 
 ## IND2: India customers {#india}
 
-
 `4.213.40.145`
 `4.188.4.11`
 `20.244.79.80/28`
