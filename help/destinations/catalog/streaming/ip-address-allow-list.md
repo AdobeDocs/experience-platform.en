@@ -185,7 +185,7 @@ The IP range below applies to Experience Platform customers running on Amazon We
 `4.188.4.154`
 `20.244.79.16/28`
 `4.224.74.0/28`
-`20.244,78.208/28`
+`20.244.78.208/28`
 `20.244.74.112/28`
 `20.244.79.144/28`
 `20.244.79.48/28`
