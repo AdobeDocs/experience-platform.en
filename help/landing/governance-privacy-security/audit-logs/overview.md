@@ -26,6 +26,8 @@ In order to increase the transparency and visibility of activities performed in 
 
 In a basic sense, an audit log tells **who** performed **what** action, and **when**. Each action recorded in a log contains metadata that indicates the action type, date and time, the email ID of the user who performed the action, and additional attributes relevant to the action type.
 
+When a user performs an action, two types of audit events are recorded. A core event captures the authorization result of the action, allow or deny, while an enhanced event captures the result of executing the action, success or failure. Multiple enhanced events can be linked to same core event as seen while activating a destination: core event records authorization of Destination Update action, while the enhanced events may record multiple Segment Activate actions.
+
 >[!NOTE]
 >
 > The metadata for the actions **Add user** and **Remove user** within the **Role** resource will not contain the email ID of the user who performed the action. Instead, the logs will display the system generated email ID (system@adobe.com).
@@ -83,7 +85,7 @@ You can view audit logs for different Experience Platform features within the **
 
 Audit logs are retained for 365 days after which they will be deleted from the system. If you require data of more than 365 days, you should export logs at a regular cadence to meet your internal policy requirements.
 
-Your method of requesting audit logs changes the allowable time period and the number of records you will have access to. [Exporting logs](#export-audit-logs) allows you to go back 365 days (in 90 day intervals) to a maximum of 10,000 records, where as the [activity log UI](#filter-audit-logs) in Experience Platform displays the past 90 days to a maximum of 1000 records. 
+Your method of requesting audit logs changes the allowable time period and the number of records you will have access to. [Exporting logs](#export-audit-logs) allows you to go back 365 days (in 90 day intervals) to a maximum of 10,000 audit logs (flatenned, core and enhanced), where as the [activity log UI](#filter-audit-logs) in Experience Platform displays the past 90 days to a maximum of 1000 core events, each of them with the corresponding enhanced events.
 
 Select an event from the list to view its details in the right rail.
 
@@ -95,7 +97,7 @@ Select the funnel icon (![Filter icon](/help/images/icons/filter.png)) to displa
 
 >[!NOTE]
 >
->The Experience Platform UI only displays the past 90 days up a maximum of 1000 records, regardless of the applied filters. If you need logs past that (to a maximum of 365 days), you'll need to [export your audit logs](#export-audit-logs).
+>The Experience Platform UI only displays the past 90 days up a maximum of 1000 core events, each with the corresponding enhanced events, regardless of the applied filters. If you need logs past that (to a maximum of 365 days), you'll need to [export your audit logs](#export-audit-logs).
 
 ![The Audits dashboard with the filtered activity log highlighted.](../../images/audit-logs/filters.png)
 
@@ -131,7 +133,7 @@ To export the current list of audit logs, select **[!UICONTROL Download log]**.
 
 >[!NOTE]
 >
->Logs can be requested in 90 day intervals up to 365 days in the past. However, the maximum amount of logs that can be returned during a single export is 10,000.
+>Logs can be requested in 90 day intervals up to 365 days in the past. However, the maximum amount of logs that can be returned during a single export is 10,000 (flatenned, core or enhanced).
 
 ![The Audits dashboard with the [!UICONTROL Download log] highlighted.](../../images/audit-logs/download.png)
 
