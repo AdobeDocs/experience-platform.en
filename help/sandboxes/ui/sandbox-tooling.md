@@ -43,18 +43,17 @@ The following objects are imported but are in a draft or disabled status:
 
 The table below lists [!DNL Adobe Journey Optimizer] objects that are currently supported for sandbox tooling and limitations:
 
-| Platform | Object | Details |
-| --- | --- | --- |
-| [!DNL Adobe Journey Optimizer] | Audience | An audience can be copied as a dependent object of the journey object. You can select create a new audience or reuse an existing one in the target sandbox. |
-| [!DNL Adobe Journey Optimizer] | Schema | The schemas used in the journey can be copied as dependent objects. You can select create a new schema or reuse an existing one in the target sandbox. |
-| [!DNL Adobe Journey Optimizer] | Merge policy | The merge policies used in the journey can be copied as dependent objects. In the target sandbox, you **cannot** create a new merge policy, you can only utilize an already existing one. |
-| [!DNL Adobe Journey Optimizer] | Journey - canvas details | The representation of the journey on the canvas includes the objects in the journey, such as conditions, actions, events, read audiences, and so on, which are copied. The jump activity is excluded from the copy. |
-| [!DNL Adobe Journey Optimizer] | Event | The events and event details used in the journey are copied. It will always create a new version in the target sandbox. |
-| [!DNL Adobe Journey Optimizer] | Action | Email and push messages used in the journey can be copied as dependent objects. The channel action activities used in the journey fields, which are used for personalization in the message, are not checked for completeness. Content blocks are not copied.<br><br>The update profile action used in the journey can be copied. Custom actions and action details used in the journey are also copied. It will always create a new version in the target sandbox.|
-| [!DNL Adobe Journey Optimizer] | Journey | Adding an entire journey to a package, will copy the majority of the objects the journey depends on, including audiences, schemas, events, and actions. |
-| [!DNL Adobe Journey Optimizer] | Content template | A content template can be copied as a dependent object of the journey object. Standalone templates allow you to easily reuse custom content across Journey Optimizer campaigns and journeys. |
-| [!DNL Adobe Journey Optimizer] | Fragment | A fragment can be copied as a dependent object of the journey object. Fragments are reusable components that can be referenced in one or more emails across Journey Optimizer campaigns and journeys. |
-| [!DNL Adobe Journey Optimizer] | Campaigns |  Campaigns can be copied along with all items related to the profile, audience, schema, inline messages, and dependent objects. Some items are not copied, such as decision items, data usage labels, and language settings. For a complete list of objects that cannot be copied, refer the [exporting objects to another sandbox](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) guide. |
+| Platform | Object | Supported Dependent Objects | Details |
+| --- | --- | --- | --- |
+| [!DNL Adobe Journey Optimizer] | Audience | | An audience can be copied as a dependent object of the journey object. You can select create a new audience or reuse an existing one in the target sandbox. |
+| [!DNL Adobe Journey Optimizer] | Schema | | The schemas used in the journey can be copied as dependent objects. You can select create a new schema or reuse an existing one in the target sandbox. |
+| [!DNL Adobe Journey Optimizer] | Merge policy | | The merge policies used in the journey can be copied as dependent objects. In the target sandbox, you **cannot** create a new merge policy, you can only use an existing one. |
+| [!DNL Adobe Journey Optimizer] | Journey | The following objects used in the journey are copied as dependent objects. During the import workflow, you can select **[!UICONTROL Create new]** or **[!UICONTROL Use existing]** for each: <ul><li>Audiences</li><li>Schemas</li><li>Custom actions</li><li>Events</li><li>Fragments</li><li>Content templates</li><li>Canvas details</li></ul> | <ul><li>**[!UICONTROL Custom actions]**: When selecting **[!UICONTROL Use existing]** during the import process when copying a journey to another sandbox, the existing custom actions you select **must** be the same as the source custom action. If they are not the same, the new journey will have unresolvable errors.</li><li>The events and event details used in the journey are copied. It will always create a new version in the target sandbox.</li></ul> |
+| [!DNL Adobe Journey Optimizer] | Action | | Email and push messages used in the journey can be copied as dependent objects. The channel action activities used in the journey fields, which are used for personalization in the message, are not checked for completeness. Content blocks are not copied.<br><br>The update profile action used in the journey can be copied. Custom actions can be added to a package independently. Action details used in the journey are also copied. It will always create a new version in the target sandbox.|
+| [!DNL Adobe Journey Optimizer] | Custom Actions |  | Custom actions can be added to a package independently. Once a custom action is assigned to a journey, it can no longer be edited. To make updates to custom actions, you should: <ul><li>move custom actions prior to migrating a journey</li><li>update configurations (such as request headers, query parameters, and authentication) for custom actions post migration</li><li>migrate journey objects with the custom actions you added during the first step</li></ul> |
+| [!DNL Adobe Journey Optimizer] | Content template | | A content template can be copied as a dependent object of the journey object. Standalone templates allow you to easily reuse custom content across Journey Optimizer campaigns and journeys. |
+| [!DNL Adobe Journey Optimizer] | Fragment | All nested fragments. | A fragment can be copied as a dependent object of the journey object. Fragments are reusable components that can be referenced in one or more emails across Journey Optimizer campaigns and journeys.  |
+| [!DNL Adobe Journey Optimizer] | Campaigns | The following objects used in the campaign are copied as dependent objects: <ul><li>Campaigns</li><li>Audiences</li><li>Schemas</li><li>Content templates</li><li>Fragments</li><li>Message/Content</li><li>Channel configuration</li><li>Unified decision objects</li><li>Experiment settings/variants</li></ul>| <ul><li>Campaigns can be copied along with all items related to the profile, audience, schema, inline messages, and dependent objects. Some items are not copied, such as data usage labels and language settings. For a complete list of objects that cannot be copied, refer to the [exporting objects to another sandbox](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) guide.</li><li>The system will automatically detect and resuse an existing channel configuration object in the target sandbox if an identical configuration exists. If no matching configuration is found, the channel configuration is skipped during import, and users must manually update the channel settings in the target sandbox for this journey.</li><li>Users may reuse existing experiments and audiences in the target sandbox as dependent objects of selected campaigns.</li></ul> |
 
 Surfaces (for example, presets) are not copied over. The system automatically selects the closest possible match on the destination sandbox based on the message type and surface name. If there are no surfaces found on the target sandbox, then the surface copy will fail, causing the message copy to fail because a message requires a surface to be available for setup. In this case, at least one surface needs to be created for the right channel of the message in order for the copy to work.
 
@@ -247,6 +246,94 @@ The **[!UICONTROL Import summary]** dialog shows a breakdown of the imports with
 ![The [!UICONTROL Import details] dialog showing a detailed breakdown of the imports.](../images/ui/sandbox-tooling/import-details.png)
 
 When your import is complete, a notification is received in the Experience Platform UI. You can access these notifications from the alerts icon. You can navigate to troubleshooting from here if a job is unsuccessful.
+
+## Transfer iterative object configurations updates across sandboxes via sandbox tooling {#move-configs}
+
+You can use sandbox tooling to transfer object configurations between different sandboxes. Previously, configuration updates to your objects (such as schemas, field groups, and data types) had to be manually recreated or reimported in order to be transferred to other sandboxes. With this capability, you can use sandbox tooling to accelerate your workflows and reduce potential errors by seamlessly transferring your configuration updates across different sandboxes.
+
+![A diagram that displays how updates are moved across sandboxes.](../images/ui/sandbox-tooling/move-updates-diagram.png)
+
+>[!TIP]
+>
+> Ensure that you have the following prerequisites before attempting to transfer your object configurations across different sandboxes.
+>
+>- The appropriate permissions to access sandbox tooling.
+>- A newly created or updated object (such as a schema) in your source sandbox.
+
+>[!BEGINSHADEBOX]
+
+### Supported object types for update operation
+
+The following are supported object types for update:
+
+- Schemas
+- Field groups
+- Data types
+
+| Supported updates | Unsupported updates  |
+| --- | --- |
+| <ul><li>Adding new fields/field groups to the resource.</li><li>Making a required field optional.</li><li>Introducing new required fields.</li><li>Introducing a new relationship field.</li><li>Introducing a new identity field.</li><li>Changing the resource's display name and description.</li></ul> | <ul><li>Removing previously defined fields.</li><li>Redefining existing fields when schema is enabled for Real-Time Customer Profile.</li><li>Removing or restricting previously supported field values.</li><li>Moving existing fields to a different location in the schema tree – this will create a new field in the target sandbox, but the previous field will not be removed.</li><li>Enabling or disabling the schema to participate in Profile – this operation will be skipped in diff comparison.</li><li>Access control labels.</li></ul> |
+
+>[!ENDSHADEBOX]
+
+Follow the steps below to learn how to use sandbox tooling to transfer your object configurations across different sandboxes.
+
+### Previously imported objects
+
+Follow these steps if your use case involves existing objects in your source sandbox that require configuration updates, after having already been packaged and imported to other sandboxes.
+
+First, update the object in your source sandbox. For example, navigate to the **[!UICONTROL Schemas]** workspace, select your schema, and add a new field group.
+
+![The schema workspace with an updated schema.](../images/ui/sandbox-tooling/update-schema.png)
+
+Once you have updated your schema, navigate to **[!UICONTROL Sandboxes]**, select **[!UICONTROL Packages]**, and then locate your existing package.
+
+![The sandbox tooling interface with a package selected](../images/ui/sandbox-tooling/select-package.png)
+
+Use the packages interface to verify your changes. Select **[!UICONTROL Check for updates]** to view any changes to the artifacts in your package. Next, select **[!UICONTROL View diff]** to receive a detailed summary of all the changes conducted against your artifacts. 
+
+![The package interface with the view diff button selected.](../images/ui/sandbox-tooling/view-diff.png)
+
+The [!UICONTROL View diff] interface appears. Refer to this toll for information on your source and target artifacts, as well as the changes to be applied to them.
+
+![The summary of changes.](../images/ui/sandbox-tooling/summary-of-changes.png)
+
+During this step, you can also select [!UICONTROL Summarize with AI] for a step-by-step summary of all changes. 
+
+![The summary with AI-enabled.](../images/ui/sandbox-tooling/ai-summary.png)
+
+When ready, select **[!UICONTROL Update package]** and then select **[!UICONTROL Confirm]** in the pop up window that appears. Once the job is complete, you can refresh the page and select **[!UICONTROL View history]** to verify the version of your package.
+
+![The confirmation window.](../images/ui/sandbox-tooling/confirm-changes.png)
+
+To import your changes, navigate back to the [!UICONTROL Packages] directory and select the ellipses (`...`) beside your package, then select **[!UICONTROL Import package]**. Experience Platform auto-selects [!UICONTROL Update existing objects]. Verify the changes, and then select **[!UICONTROL Finish]**.
+
+>[!NOTE]
+>
+>All dependent objects are automatically updated in the target sandbox as part of this workflow.
+
+![The import objective interface.](../images/ui/sandbox-tooling/import-objective.png)
+
+To further validate your import process, navigate to your target sandbox and manually view the updated object from within that sandbox.
+
+### Objects created manually in target sandbox
+
+Follow these steps if your use case involves applying configuration changes to objects that were manually created in separate sandboxes.
+
+First, create and publish a new package with your updated object.
+
+Next, import your package to the target sandbox that contains the objects that you also want to update. During the import process, select **[!UICONTROL Update existing objects]** and then use the object navigator to manually select the target objects that you want your updates to apply to.
+
+>[!NOTE]
+>
+>- It is optional to select a target mapping in a different sandbox for dependent objects. If none is selected, a new one is created.
+>- For identity namespace, the system auto-detects if a new identity needs to be created if an existing one needs to be reused in the target sandbox.
+
+![The import objective interface with placeholders for the target objects to be updated.](../images/ui/sandbox-tooling/update-existing-objects.png)
+
+Once you have identified the target objects that you want to update, select **[!UICONTROL Finish]**.
+
+![The target objects selected.](../images/ui/sandbox-tooling/add-updated-objects.png)
 
 ## Video tutorial
 

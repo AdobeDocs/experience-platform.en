@@ -334,6 +334,14 @@ You can activate an audience using flexible audience evaluation immediately afte
 
 +++
 
+### How long does flexible audience evaluation take?
+
++++ Answer
+
+A flexible audience evaluation job can take up to four hours to complete.
+
++++
+
 ### Can I run scheduling with flexible audience evaluation?
 
 +++ Answer
@@ -382,3 +390,10 @@ Flexible audience evaluation runs that were created either using the API or the 
 
 +++
 
+### Do I need to evaluate all dependent audiences when evaluating the main audience with flexible audience evaluation?
+
++++ Answer
+
+No. Flexible audience evaluation will automatically evaluate all dependent audiences. For example, if Audience A depends on Audience B, you only need to evaluate Audience B. Flexible audience evaluation will automatically evaluate Audience A and then Audience B.
+
++++

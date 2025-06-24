@@ -31,6 +31,10 @@ Read the steps below for information on how to connect your [!DNL Snowflake] sou
 
 ### Gather required credentials
 
+>[!WARNING]
+>
+>Basic authentication (or account key authentication) for the [!DNL Snowflake] source will be deprecated on November 2025. You must move to key-pair based authentication in order to continue using the source and ingesting data from your database to Experience Platform. For more information on the deprecation, read the [[!DNL Snowflake] best practices guide on mitigating the risks of credential compromise](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
+
 You must provide values for the following credential properties to authenticate your [!DNL Snowflake] source.
 
 >[!BEGINTABS]

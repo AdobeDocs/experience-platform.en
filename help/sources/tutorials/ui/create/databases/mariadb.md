@@ -7,7 +7,7 @@ exl-id: 259ca112-01f1-414a-bf9f-d94caf4c69df
 
 Read this guide to learn how to connect your [!DNL MariaDB] account to Adobe Experience Platform using the sources workspace in the Experience Platform user interface.
 
-## Getting started
+## Get started
 
 This tutorial requires a working understanding of the following components of Experience Platform:
 
@@ -48,9 +48,9 @@ To create a new account, select **[!UICONTROL New account]** and then provide a 
 
 ![The new account interface in the sources workflow with an account name and optional description provided.](../../../../images/tutorials/create/maria-db/new.png)
 
-### Connect to Experience Platform on Azure {#azure}
+### Connect to Experience Platform
 
-You can connect your [!DNL MariaDB] account to Experience Platform on Azure using either account key or basic authentication.
+You can connect your [!DNL MariaDB] account to Experience Platform using either account key or basic authentication.
 
 >[!BEGINTABS]
 
@@ -67,17 +67,5 @@ To use basic authentication, select **[!UICONTROL Basic authentication]**, provi
 ![The new account interface in the sources workflow with "Basic authentication" selected.](../../../../images/tutorials/create/maria-db/basic-auth.png)
 
 >[!ENDTABS]
-
-### Connect to Experience Platform on Amazon Web Services (AWS) {#aws}
-
->[!AVAILABILITY]
->
->This section applies to implementations of Experience Platform running on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../../../../landing/multi-cloud.md).
-
-To create a new [!DNL MariaDB] account and connect to Experience Platform on AWS, ensure that you are in a VA6 sandbox and then provide the necessary [credentials for authentication](../../../../connectors/databases/mariadb.md#aws).
-
-![The new account interface in the sources workflow to connect to AWS.](../../../../images/tutorials/create/maria-db/basic-auth.png)
-
-## Next steps
 
 By following this tutorial, you have established a connection to your [!DNL MariaDB] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Experience Platform](../../dataflow/databases.md).
