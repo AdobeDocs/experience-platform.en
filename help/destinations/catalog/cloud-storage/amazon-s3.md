@@ -150,8 +150,9 @@ To do this, you need to create in the AWS console an assumed role for Adobe with
 2. Select **Trusted entity type** > **AWS account**
 3. Select **An AWS account** > **Another AWS account** and enter the Adobe account ID: `670664943635`
 4. Add permissions using the policy created earlier
-5. Provide a role name (e.g., `destinations-role-customer`). The name should be kept secret and handled similar to a password (Maximum 64 characters. Use alphanumeric and `+=,.@-_` characters.)
-6. Assign `FullAccess` permissions to the user role and add the Adobe user as a trusted entity.
+5. Enter a role name (for example, `destinations-role-customer`). The role name should be treated as confidential, similar to a password. It can be up to 64 characters long and can contain alphanumeric characters and the following special characters: `+=,.@-_`. Then verify that:
+    * The Adobe account ID `670664943635` is present in the **[!UICONTROL Select trusted entities]** section
+    * The policy created earlier is present in **[!UICONTROL Permissions policy summary]**
 
 **Provide the role for Adobe to assume**
 
