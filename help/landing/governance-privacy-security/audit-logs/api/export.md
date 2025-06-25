@@ -37,4 +37,4 @@ curl -X POST \
 
 **Response**
 
-The results are generated into a CSV file for export. A successful response returns HTTP 307 with no response body. A link to the export file is provided in the `Location` response header.
+The results are generated into a CSV file for export, each entry representing a Core or Enhanced audit event. A successful response returns HTTP 307 with no response body. A link to the export file is provided in the `Location` response header.

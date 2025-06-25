@@ -26,7 +26,7 @@ In order to increase the transparency and visibility of activities performed in 
 
 In a basic sense, an audit log tells **who** performed **what** action, and **when**. Each action recorded in a log contains metadata that indicates the action type, date and time, the email ID of the user who performed the action, and additional attributes relevant to the action type.
 
-When a user performs an action, two types of audit events are recorded. A core event captures the authorization result of the action, allow or deny, while an enhanced event captures the result of executing the action, success or failure. Multiple enhanced events can be linked to same core event as seen while activating a destination: core event records authorization of Destination Update action, while the enhanced events may record multiple Segment Activate actions.
+When a user performs an action, two types of audit events are recorded. A core event captures the authorization result of the action, allow or deny, while an enhanced event captures the result of executing the action, success or failure. Multiple enhanced events can be linked to same core event, for example when activating a destination: core event records authorization of Destination Update action, while the enhanced events may record multiple Segment Activate actions.
 
 >[!NOTE]
 >
