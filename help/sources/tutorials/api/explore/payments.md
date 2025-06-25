@@ -22,7 +22,10 @@ The following sections provide additional information that you will need to know
 
 ### Gather required credentials
 
-This tutorial requires you to have a valid connection with the third-party payments application you wish to ingest data from. A valid connection involves your application's connection specification ID and connection ID. More information about creating a payments connection and retrieving these values can be found in the [connect a payments source to Experience Platform](../../api/create/payments/paypal.md) tutorial.
+You must have an active connection with a payments application in order to explore your source's files and file structure. Read the following documents for more information:
+
+* [[!DNL Square]](../create/payments/square.md)
+* [[!DNL Stripe]](../create/payments/stripe.md)
 
 ### Reading sample API calls
 
