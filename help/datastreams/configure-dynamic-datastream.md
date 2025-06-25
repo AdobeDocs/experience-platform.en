@@ -31,11 +31,11 @@ Dynamic datastream configurations have specific limits and performance constrain
 
 | Guardrail | Limit | Limit type |
 |---------|------------|------|
-| Maximum number of dynamic datastream configurations per datastream for Experience Platform services (like Adobe Journey Optimizer, Edge Segmentation, etc.) | 5 | Performance guardrail |
+| Maximum number of dynamic datastream configurations per datastream for Experience Platform services | 5 | Performance guardrail |
 | Maximum number of dynamic datastream configurations per datastream for Adobe Analytics | 5 | Performance guardrail |
 | Maximum number of dynamic datastream configurations per datastream for Adobe Target | 5 | Performance guardrail |
 | Maximum number of dynamic datastream configurations per datastream for Adobe Audience Manager | 5 | Performance guardrail |
-| Maximum number of conditions (predicates) that you can combine within a single dynamic datastream configuration | 100 | Performance guardrail |
+| Maximum number of conditions (predicates) that you can combine within a single rule | 100 | Performance guardrail |
 | Maximum time allowed for evaluating all dynamic datastream configurations per datastream before timing out | 25 ms | System-enforced guardrail |
 
 ## Dynamic datastream configurations versus datastream configuration overrides {#dynamic-versus-overrides}
