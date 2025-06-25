@@ -32,6 +32,7 @@ Dynamic datastream configurations have specific limits and performance constrain
 | Guardrail | Limit | Limit type |
 |---------|------------|------|
 | Maximum number of dynamic datastream configurations per datastream for Experience Platform services | 5 | Performance guardrail |
+| Maximum number of dynamic datastream configurations per datastream for Event Forwarding | 5 | Performance guardrail |
 | Maximum number of dynamic datastream configurations per datastream for Adobe Analytics | 5 | Performance guardrail |
 | Maximum number of dynamic datastream configurations per datastream for Adobe Target | 5 | Performance guardrail |
 | Maximum number of dynamic datastream configurations per datastream for Adobe Audience Manager | 5 | Performance guardrail |
