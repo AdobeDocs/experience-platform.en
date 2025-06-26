@@ -80,29 +80,29 @@ A successful response returns an array of tables from your payments system. Find
 [
     {
         "type": "table",
-        "name": "PayPal.Billing_Plans",
-        "path": "PayPal.Billing_Plans",
+        "name": "Stripe.Billing_Plans",
+        "path": "Stripe.Billing_Plans",
         "canPreview": true,
         "canFetchSchema": true
     },
     {
         "type": "table",
-        "name": "PayPal.Billing_Plans_Payment_Definition",
-        "path": "PayPal.Billing_Plans_Payment_Definition",
+        "name": "Stripe.Billing_Plans_Payment_Definition",
+        "path": "Stripe.Billing_Plans_Payment_Definition",
         "canPreview": true,
         "canFetchSchema": true
     },
     {
         "type": "table",
-        "name": "PayPal.Billing_Plans_Payment_Definition_Charge_Models",
-        "path": "PayPal.Billing_Plans_Payment_Definition_Charge_Models",
+        "name": "Stripe.Billing_Plans_Payment_Definition_Charge_Models",
+        "path": "Stripe.Billing_Plans_Payment_Definition_Charge_Models",
         "canPreview": true,
         "canFetchSchema": true
     },
     {
         "type": "table",
-        "name": "PayPal.Catalog_Products",
-        "path": "PayPal.Catalog_Products",
+        "name": "Stripe.Catalog_Products",
+        "path": "Stripe.Catalog_Products",
         "canPreview": true,
         "canFetchSchema": true
     }

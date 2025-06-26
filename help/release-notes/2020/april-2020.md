@@ -30,7 +30,7 @@ Updates to existing features:
 |Feature|Description|
 |---|---|
 | [!DNL Customer AI] | [!DNL Customer AI] provides marketers with the power to generate customer predictions at the individual level with explanations. With the help of influential factors, [!DNL Customer AI] can tell you what a customer is likely to do and why. Additionally, marketers can benefit from [!DNL Customer AI] predictions and insights to personalize customer experiences by serving the most appropriate offers and messaging. |
-| [!DNL Attribution AI] | [!DNL Attribution AI] is a multi-channel, algorithmic attribution service that calculates the influence and incremental impact of customer interactions against specified outcomes. With [!DNL Attribution AI], marketers can measure and optimize marketing and advertising spend by understanding the impact of every individual customer interaction across each phase of the customers’ journeys.|
+| [!DNL Attribution AI] | [!DNL Attribution AI] is a multi-channel, algorithmic attribution service that calculates the influence and incremental impact of customer interactions against specified outcomes. With [!DNL Attribution AI], marketers can measure and optimize marketing and advertising spend by understanding the impact of every individual customer interaction across each phase of the customers' journeys.|
 
 **Known issues**
 
@@ -124,8 +124,7 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 | Feature | Description |
 | ------- | ----------- |
-| API and UI support for databases | New source connectors for [!DNL Apache Spark] (on HDInsights), [!DNL Azure Synapse Analytics], [!DNL Azure Table Storage], [!DNL Hive] (on HDInsights), and [!DNL Phoenix]. |
-| API and UI support for payments-based applications| New source connectors for [!DNL PayPal]. |
+| API and UI support for databases | New source connectors for [!DNL Apache Spark] (on HDInsights), [!DNL Azure Synapse Analytics], [!DNL Azure Table Storage], and [!DNL Hive]. |
 | API and UI support for protocols-based applications | New source connectors for [!DNL Generic OData]. |
 
 **Known issues**
