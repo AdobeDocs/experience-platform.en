@@ -49,7 +49,7 @@ To delete from a specific dataset, select **[!UICONTROL Select dataset]**, then 
 
 To delete from all datasets, select **[!UICONTROL All datasets]**. This option increases the scope of the operation and requires you to provide all relevant identity types.
 
-<!-- ![The [!UICONTROL Select dataset] dialog with the [!UICONTROL All datasets] option selected.](../images/ui/record-delete/all-datasets.png) -->
+![The [!UICONTROL Select dataset] dialog with the [!UICONTROL All datasets] option selected.](../images/ui/record-delete/all-datasets.png)
 
 >[!WARNING]
 >
@@ -93,7 +93,7 @@ There are two options to provide identities when deleting records:
 
 To upload a JSON file, you can drag and drop the file into the provided area, or select **[!UICONTROL Choose files]** to browse and select from your local directory.
 
-<!-- ![The request creation workflow with the choose files and drag and drop interface for uploading JSON files highlighted.](../images/ui/record-delete/upload-json.png) -->
+![The request creation workflow with the choose files and drag and drop interface for uploading JSON files highlighted.](../images/ui/record-delete/upload-json.png)
 
 The JSON file must be formatted as an array of objects, each object representing an identity.
 
@@ -121,15 +121,15 @@ Once the file is uploaded, you can continue to [submit the request](#submit).
 
 To enter identities manually, select **[!UICONTROL Add identity]**.
 
-<!-- ![The request creation workflow with the [!UICONTROL Add identity] option highlighted.](../images/ui/record-delete/add-identity.png) -->
+![The request creation workflow with the [!UICONTROL Add identity] option highlighted.](../images/ui/record-delete/add-identity.png)
 
 Controls appear that allow you to enter identities one at a time. Under **[!UICONTROL identity namespace]**, use the dropdown menu to select the identity type. Under **[!UICONTROL Primary Identity Value]**, provide the identity namespace value for the record.
 
-<!-- ![The request creation workflow with an identity field manually added.](../images/ui/record-delete/identity-added.png) -->
+![The request creation workflow with an identity field manually added.](../images/ui/record-delete/identity-added.png)
 
 To add more identities, select the plus icon (![A plus icon.](/help/images/icons/tree-expand-all.png)) next to one of the rows, or select **[!UICONTROL Add identity]**.
 
-<!-- ![The request creation workflow with the plus icon and the add identity icon highlighted.](../images/ui/record-delete/more-identities.png) -->
+![The request creation workflow with the plus icon and the add identity icon highlighted.](../images/ui/record-delete/more-identities.png)
 
 ## Quotas and processing timelines {#quotas}
 
@@ -185,7 +185,7 @@ Once you have finished adding identities to the request, under **[!UICONTROL Req
 >
 >You can submit up to 10,000 identities per request through the UI. To submit larger volumes (up to 100,000 IDs per request), use the [API method](../api/workorder.md#create).
 
-<!-- ![The request setting's [!UICONTROL Name] and [!UICONTROL Description] fields with [!UICONTROL Submit] highlighted.](../images/ui/record-delete/submit.png) -->
+![The request setting's [!UICONTROL Name] and [!UICONTROL Description] fields with [!UICONTROL Submit] highlighted.](../images/ui/record-delete/submit.png)
 
 A [!UICONTROL Confirm request] dialog appears to indicate that the identities cannot be recovered once deleted. Select **[!UICONTROL Submit]** to confirm the list of identities whose data you want to delete.
 
