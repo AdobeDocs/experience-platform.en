@@ -39,23 +39,28 @@ The request creation workflow appears. By default, the **[!UICONTROL Delete reco
 
 ## Select datasets {#select-dataset}
 
-The next step is to determine whether you want to delete records from a single dataset or all datasets. If this option is not available to you, continue to the [Provide identities](#provide-identities) section of the guide.
+The next step is to determine whether you want to delete records from a single dataset or all datasets. Depending on your organization's configuration, the dataset selection option may not be available. If you do not see this option, continue to the [Provide identities](#provide-identities) section of the guide.
 
-Under the **[!UICONTROL Record Details]** section, use the radio button to select between a specific dataset and all datasets.
+In the **[!UICONTROL Record Details]** section, select a radio button to choose either a specific dataset or all datasets.
 
-To delete from a specific dataset, select **[!UICONTROL Select dataset]**, then select the database icon (![The database icon](/help/images/icons/database.png)). A dialog opens that contains a list of available datasets. Choose the desired dataset from the list and select **[!UICONTROL Done]**.
+To delete from a specific dataset, select **[!UICONTROL Select dataset]**, then select the database icon (![The database icon](/help/images/icons/database.png)). In the dialog that appears, choose a dataset and select **[!UICONTROL Done]** to confirm.
 
 ![The [!UICONTROL Select dataset] dialog with a dataset selected and [!UICONTROL Done] highlighted.](../images/ui/record-delete/select-dataset.png)
 
-To delete from all datasets, select **[!UICONTROL All datasets]**.
+To delete from all datasets, select **[!UICONTROL All datasets]**. This option increases the scope of the operation and requires you to provide all relevant identity types.
 
 <!-- ![The [!UICONTROL Select dataset] dialog with the [!UICONTROL All datasets] option selected.](../images/ui/record-delete/all-datasets.png) -->
 
 >[!WARNING]
 >
->When you select **[!UICONTROL All datasets]**, the delete operation searches across all datasets in your organization. Because each dataset may use a different primary identity type, you must include **all relevant identity types** in your request. If any required identity type is missing, the system may not match records correctly. This can cause the delete operation to take longer and may result in **incomplete or inaccurate deletion**.
+>Selecting **[!UICONTROL All datasets]** expands the operation to all datasets in your organization. Each dataset may use a different primary identity type. You must provide **all required identity types** to ensure accurate matching.
+>
+>If any identity type is missing, some records may be skipped during deletion. This can slow processing and lead to **partial results**.
 
-If you are deleting records from a single dataset, all identities in your request must have the same type, since each dataset can only have one primary identity. When deleting from all datasets, you can include multiple identity types to match the differing schemas across datasets.
+Each dataset in Experience Platform supports only one primary identity type.
+
+* When deleting from a **single dataset**, all identities in your request must use the **same type**.
+* When deleting from **all datasets**, you can include **multiple identity types**, since different datasets may rely on different primary identities."
 
 ## Provide identities {#provide-identities}
 
