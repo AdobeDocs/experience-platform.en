@@ -18,7 +18,7 @@ The **[!UICONTROL Send event]** action sends a payload to a datastream on the Ad
 ![Experience Platform Tags UI image showing the instance settings for the Send Event action type.](../assets/instance-settings.png)
 
 * **[!UICONTROL Instance]**: The SDK instance that the action applies to. This drop-down menu is disabled if your implementation uses a single SDK instance.
-* **[!UICONTROL Use guided events]**: Enable this option to automatically fill in or hide certain fields to enable a particular use case. This setting can help reduce noise of available options when setting up the action for each respective purpose, and follows Adobe's best practices of [Top/bottom page events](/help/collection/js/use-cases/top-bottom-page-events.md). Enabling this checkbox triggers the display of the following radio buttons:
+* **[!UICONTROL Use guided events]**: Enable this option to automatically fill in or hide certain fields to enable a particular use case. This setting can help reduce noise of available options when setting up the action for each respective purpose, and follows Adobe's best practices of [Top/bottom page events](/help/collection/use-cases/top-bottom-page-events.md). Enabling this checkbox triggers the display of the following radio buttons:
   * **[!UICONTROL Request personalization]**: Get the latest personalization decisions without recording an Adobe Analytics event. It is most commonly called at the top of the page. When selected, this radio button sets the following fields:
     * [!UICONTROL Type] is locked to [!UICONTROL Decisioning Proposition Fetch]
     * [!UICONTROL Render visual personalization decisions] is locked to enabled

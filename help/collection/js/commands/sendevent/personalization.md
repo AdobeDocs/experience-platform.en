@@ -23,4 +23,5 @@ alloy("sendEvent", { personalization: { defaultPersonalizationEnabled: false } }
 defaultPersonalizationEnabled
 sendDisplayNotifications
 includePendingDisplayNotifications
+requestdefaultpersonalization
 -->
