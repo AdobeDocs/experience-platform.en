@@ -1,8 +1,6 @@
 ---
 title: Identity Graph Linking Rules Configurations Guide
 description: Learn about the different implementation types that you can configure using Identity Graph Linking Rules.
-hide: true
-hidefromtoc: true
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
 ---
 # [!DNL Identity Graph Linking Rules] configurations guide {#configurations-guide}
@@ -130,7 +128,7 @@ Read this section for intermediate implementations of [!DNL Identity Graph Linki
 >
 >To complete the implementations below, you must create the following custom namespaces with the identity symbols (case sensitive) of:
 >* `CRMID`
->* `CCHash` (This is a custom namespace that represents a hashed credit card number.)
+>* `CChash` (This is a custom namespace that represents a hashed credit card number.)
 
 Imagine that you are a data architect working for a commercial bank that issues credit cards. Your marketing team has indicated that they want to include past credit card transaction history to a profile. This identity graph could look like the following.
 
@@ -476,6 +474,7 @@ loginID: JanePersonal, ECID: 222
 >* `CRMID`
 >* `loyaltyID`
 >* `thirdPartyID`
+>* `orderID`
 
 You are a media and entertainment company and your end-users have the following:
 

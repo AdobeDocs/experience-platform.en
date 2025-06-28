@@ -65,6 +65,7 @@ The [!DNL Demandbase] schema is called **Company Intent Weekly**. It is the week
 | `duration_type` | STRING | TRUE | YES | The type of duration. Generally, this value may be daily, weekly, or monthly depending on the chosen roll-up duration. For this data sample, this value is `week`. |
 | `keyword_set_id` | STRING | TRUE | YES | The keyword set ID. This is unique per given customer. |
 | `keyword_set` | STRING | TRUE | YES | The keyword set name. |
+| `keyword` | STRING | TRUE | | The intent keyword. |
 | `is_trending` | STRING | TRUE | | The current state of a given trend. Trending state is measured as a burst in intent activity in the last week relative to averages for the prior seven weeks. |
 | `intent_strength` | ENUM[STRING] | TRUE | | A quantified measure of the intent strength. Accepted values include: `HIGH`, `MED`, and `LOW`. |
 | `num_people_researching` | INTEGER | TRUE | | The count of people belonging to the `company_id` researching the keyword in the last seven days. |
