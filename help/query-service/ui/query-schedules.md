@@ -15,9 +15,7 @@ You can automate query runs by creating query schedules. Scheduled queries run o
 
 Scheduled queries must be created by a **technical account user**. The technical account user's identity is established using OAuth Server-to-Server credentials, which enable secure, automated API access. This ensures that scheduled queries run reliably and securely within the Adobe Experience Platform environment.
 
-If the creator's permissions are revoked or the technical account is disabled, scheduled queries will stop running until access is restored.
-
-This applies even when using the Query Service UI; users must have a valid technical account to create or manage scheduled queries.
+If the creator's permissions are revoked or the technical account is disabled, scheduled queries will stop running until access is restored. This applies even when using the Query Service UI; users must have a valid technical account to create or manage scheduled queries.
 
 Before creating a technical account user, ensure you have the necessary developer and user roles assigned in Adobe Admin Console. For detailed information on setting up these roles and permissions, see the [Credentials guide prerequisites](./credentials.md#prerequisites).
 
