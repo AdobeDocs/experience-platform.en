@@ -13,11 +13,11 @@ You can automate query runs by creating query schedules. Scheduled queries run o
 
 ## Technical account requirements for scheduled queries {#technical-account-user-requirements}
 
-Scheduled queries must be created by a **technical account user** (which refers to an identity authenticated via OAuth Server-to-Server credentials). This ensures that scheduled queries run reliably and securely within the Adobe Experience Platform environment. 
+Scheduled queries must be created by a **technical account user**. The technical account user's identity is established using OAuth Server-to-Server credentials, which enable secure, automated API access. This ensures that scheduled queries run reliably and securely within the Adobe Experience Platform environment.
 
-If the user who creates the schedule loses permissions or access, the scheduled query will fail.
+If the creator's permissions are revoked or the technical account is disabled, scheduled queries will stop running until access is restored.
 
-This requirement applies even if you create scheduled queries through the Query Service UI. Only users with a technical account can create or manage scheduled queries.
+This applies even when using the Query Service UI; users must have a valid technical account to create or manage scheduled queries.
 
 Before creating a technical account user, ensure you have the necessary developer and user roles assigned in Adobe Admin Console. For detailed information on setting up these roles and permissions, see the [Credentials guide prerequisites](./credentials.md#prerequisites).
 
@@ -27,11 +27,12 @@ To create a technical account user and generate OAuth Server-to-Server credentia
 - [Developer Console setup and API usage](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman)  
 - [End-to-end technical account setup](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup)
 
-If you only use the UI, you must work with an administrator or engineer who has a technical account to create and manage scheduled queries. UI-only users cannot independently create scheduled queries. This collaboration helps avoid permission-related failures.
+If you only use the UI, coordinate with an administrator or engineer who has a technical account to create and manage scheduled queries. UI-only users cannot create scheduled queries independently. This collaboration helps prevent permission-related failures.
 
-Any scheduled queries are added to the list in the [!UICONTROL Scheduled queries] tab. From that workspace you can monitor the status of all scheduled query jobs through the UI. On the [!UICONTROL Scheduled queries] tab you can find important information about your query runs and subscribe to alerts. The available information includes the status, schedule details, and error messages/codes should a run fail. See the [Monitor scheduled queries document](./monitor-queries.md) for more information.
+Use the [!UICONTROL Scheduled queries] tab to manage and monitor all your scheduled query jobs in one place. From this workspace, you can view status, schedule details, error messages, and subscribe to alerts. See the [Monitor scheduled queries document](./monitor-queries.md) for more information.
 
-This workflow covers the scheduling process in the Query Service UI. To learn how to add schedules using the API, please read the [scheduled queries endpoint guide](../api/scheduled-queries.md). 
+This workflow covers the scheduling process in the Query Service UI. To learn how to add schedules using the API, please read the [scheduled queries endpoint guide](../api/scheduled-queries.md).
+
 
 ## Create a query schedule {#create-schedule}
 
