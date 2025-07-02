@@ -8,9 +8,23 @@ exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
 ---
 # Schedules endpoint
 
+This document provides detailed information and examples for using the Query Service schedules API to create, manage, and monitor scheduled queries programmatically.
+
+## Requirements and prerequisites
+
+Scheduled queries require creation and management by a **technical account user** authenticated via OAuth Server-to-Server credentials. This ensures uninterrupted, secure execution within Adobe Experience Platform. Loss of access, revoked permissions, or a disabled technical account user will cause scheduled query failures and data interruptions.
+
+To avoid failures, ensure the technical account user is correctly set up and maintains access at all times.
+
+>[!IMPORTANT]
+>
+>Important considerations when managing scheduled queries:<ul><li>Scheduled queries will fail if the technical account user loses access or permissions.</li><li>Scheduled queries **must be disabled before deletion** via the API or UI.</li><li>Scheduling indefinitely without an end date is not supported; an end date must always be specified.</li></ul>
+
+For detailed guidance on setting up technical account users, required permissions, and managing scheduled queries, including UI workflows and best practices, see the [Query schedules documentation](../ui/query-schedules.md#technical-account-user-requirements).
+
 ## Sample API calls
 
-Now that you understand what headers to use, you are ready to begin making calls to the [!DNL Query Service] API. The following sections walk through the various API calls you can make using the [!DNL Query Service] API. Each call includes the general API format, a sample request showing required headers, and a sample response.
+Once you have configured the necessary authentication headers (see the [API authentication guide](../../landing/api-authentication.md)), you can begin making calls to the [!DNL Query Service] API. The following sections demonstrate various API calls with general formats, example requests including required headers, and sample responses.
 
 ### Retrieve a list of scheduled queries
 
