@@ -11,20 +11,19 @@ You can automate query runs by creating query schedules. Scheduled queries run o
 >
 >You can only add a schedule to a query that has already been created, and saved.
 
-## Scheduled queries and technical account user requirements {#technical-account-user-requirements}
+## Technical account requirements for scheduled queries {#technical-account-user-requirements}
 
-Scheduled queries can only be created by a **technical account user**.Scheduled queries can only be created by a technical account user, an identity authenticated via OAuth Server-to-Server credentials to ensure consistent execution. If the user who creates the schedule loses permissions or access, the scheduled query will fail.
+Scheduled queries must be created by a **technical account user** (which refers to an identity authenticated via OAuth Server-to-Server credentials). This ensures that scheduled queries run reliably and securely within the Adobe Experience Platform environment. 
+
+If the user who creates the schedule loses permissions or access, the scheduled query will fail.
 
 This requirement applies even if you create scheduled queries through the Query Service UI. Only users with a technical account can create or manage scheduled queries.
 
-This requirement ensures that scheduled queries run reliably and securely within the Adobe Experience Platform environment."
+Before creating a technical account user, ensure you have the necessary developer and user roles assigned in Adobe Admin Console. For detailed information on setting up these roles and permissions, see the [Credentials guide prerequisites](./credentials.md#prerequisites).
 
-To create a technical account user and generate the required credentials, follow the step-by-step guide on setting up OAuth Server-to-Server authentication in the Adobe Developer Console:
+To create a technical account user and generate OAuth Server-to-Server credentials, follow the step-by-step guide on authenticating with Adobe Experience Platform APIs in the Adobe Developer Console:
 
-- [Create technical account (OAuth Server-to-Server) credentials](https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-apis/api-authentication)
-
-For a comprehensive workflow on project setup, permissions, and API usage, see:
-
+- [Authenticate and access Experience Platform APIs](../../landing/api-authentication.md)  
 - [Developer Console setup and API usage](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman)  
 - [End-to-end technical account setup](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup)
 
