@@ -116,7 +116,31 @@ This opens the preview window, where the hierarchical view of the schema for the
 
 Alternatively, from the **[!UICONTROL Dataset activity]** screen, select **[!UICONTROL Preview dataset]** near the top-right corner of your screen to preview up to 100 rows of data. 
 
+<!--  -->
+
 ![The Preview dataset button is highlighted.](../images/datasets/user-guide/select-preview.png)
+
+#### Dataset preview window {#dataset-preview-window}
+
+The dataset preview window has been enhanced to improve usability and provide additional context when exploring datasets.
+
+Key updates include:
+
+* **Object browser sidebar:** Replacing the previous hierarchical schema view, the new sidebar on the left allows easier navigation and filtering of dataset fields.
+* **Data type indicators:** Each column name now displays its data type with an icon, offering immediate insight into the structure of the dataset.
+* **SQL query display:** The SQL query that generated the dataset is shown at the top of the preview window. This helps validate the dataset and understand its origin.
+* **Formatted data table:** A clean, readable table view of up to 100 rows is shown in the lower right area, enabling efficient data review.
+* **Direct navigation to Query Editor:** Data Distiller users can jump directly from the preview window to the Query Editor, with the SQL query prepopulated for further exploration or modification.
+
+These improvements make dataset exploration faster and more transparent by combining schema details, query context, and data preview in one view.
+
+The interaction flow to open the preview window remains unchanged—select **[!UICONTROL Preview dataset]** from either the dataset's inline actions or the **[!UICONTROL Dataset activity]** screen.
+
+>[!NOTE]
+>
+>The new preview window continues to limit the sample size to 100 rows. Fields without data are still excluded from the display to maintain focus on relevant information.
+
+<!--  -->
 
 For more robust methods to access your data, [!DNL Experience Platform] provides downstream services such as [!DNL Query Service] and [!DNL JupyterLab] to explore and analyze data. See the following documents for more information:
 
