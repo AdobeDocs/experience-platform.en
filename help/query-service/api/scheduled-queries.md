@@ -8,7 +8,7 @@ exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
 ---
 # Schedules endpoint
 
-This document provides detailed information and examples for using the Query Service schedules API to create, manage, and monitor scheduled queries programmatically.
+Learn how to create, manage, and monitor scheduled queries programmatically using the Query Service schedules API with detailed information and examples.
 
 ## Requirements and prerequisites
 

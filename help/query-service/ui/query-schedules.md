@@ -17,7 +17,7 @@ Scheduled queries must be created by a **technical account user**. The technical
 
 If the creator's permissions are revoked or the technical account is disabled, scheduled queries will stop running until access is restored. This applies even when using the Query Service UI; users must have a valid technical account to create or manage scheduled queries.
 
-Before creating a technical account user, ensure you have the necessary developer and user roles assigned in Adobe Admin Console. For detailed information on setting up these roles and permissions, see the [Credentials guide prerequisites](./credentials.md#prerequisites).
+Before creating a technical account user, ensure you have the necessary developer and user roles assigned in [Adobe Admin Console](https://adminconsole.adobe.com). For detailed information on setting up these roles and permissions, see the [Credentials guide prerequisites](./credentials.md#prerequisites).
 
 To create a technical account user and generate OAuth Server-to-Server credentials, follow the step-by-step guide on authenticating with Adobe Experience Platform APIs in the Adobe Developer Console:
 
@@ -27,7 +27,7 @@ To create a technical account user and generate OAuth Server-to-Server credentia
 
 If you only use the UI, coordinate with an administrator or engineer who has a technical account to create and manage scheduled queries. UI-only users cannot create scheduled queries independently. This collaboration helps prevent permission-related failures.
 
-Use the [!UICONTROL Scheduled queries] tab to manage and monitor all your scheduled query jobs in one place. From this workspace, you can view status, schedule details, error messages, and subscribe to alerts. See the [Monitor scheduled queries document](./monitor-queries.md) for more information.
+Use the [!UICONTROL Scheduled queries] tab to manage and monitor all your scheduled query jobs in one place. From this workspace, you can view status, schedule details, error messages, and subscribe to alerts. See the [monitor scheduled queries document](./monitor-queries.md) for more information.
 
 This workflow covers the scheduling process in the Query Service UI. To learn how to add schedules using the API, please read the [scheduled queries endpoint guide](../api/scheduled-queries.md).
 

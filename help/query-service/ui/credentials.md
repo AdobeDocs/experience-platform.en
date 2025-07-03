@@ -92,7 +92,7 @@ Before you can generate non-expiring credentials, you must complete the followin
 5. [Add the user as a product profile admin](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html) to allow an account creation for any active product profile.
 6. [Add the user as a product profile developer](https://helpx.adobe.com/enterprise/using/manage-developers.html) in order to create an integration.
 
-After these steps, the required permissions are configured in Adobe Developer Console for you to generate OAuth Server-to-Server credentials and use the expiring or non-expiring credentials features.
+After these steps, the required permissions are configured in [Adobe Developer Console](https://developer.adobe.com/console/) for you to generate OAuth Server-to-Server credentials and use the expiring or non-expiring credentials features.
 
 For detailed information on assigning permissions, see the [access control documentation](../../access-control/home.md).
 
