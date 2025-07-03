@@ -436,13 +436,28 @@ A successful response returns HTTP status 200 with details of the external audie
 
 ## List audience ingestion statuses {#list-ingestion-statuses}
 
-You can retrieve all the ingestion statuses for the selected external audience by making a GET request to the following endpoint while providing the audience ID.
+You can retrieve all the ingestion statuses for the selected external audience by making a GET request to the following endpoint while providing the audience ID. Multiple parameters can be included, separated by ampersands (`&`). 
 
 **API format**
 
+The following endpoint supports several query parameters to help filter your results. While these parameters are optional, their use is strongly recommended to help focus your results.
+
 ```http
 GET /external-audience/{AUDIENCE_ID}/runs
+GET /external-audience/{AUDIENCE_ID}/runs?{QUERY_PARAMETERS}
 ```
+
+**Query parameters**
+
++++ A list of available query parameters. 
+
+| Parameter | Description | Example |
+| --------- | ----------- | ------- |
+| `limit` | The maximum number of items returned in the response. This value can range from 1 to 40. By default, the limit is set to 20. | `limit=30` |
+| `sortBy` | The order in which the returned items are sorted. You can sort by either `name` or by `ingestionTime`. Additionally, you can add a `-` sign to sort by **descending** order instead of **ascending** order. By default, the items are sorted by `ingestionTime` in descending order. | `sortBy=name` |
+| `property` | A filter to determine which audience ingestion runs are displayed. You can filter on the following properties: <ul><li>`name`: Lets you filter by the audience name. If using this property, you can compare by using `=`, `!=`, `=contains`, or `!=contains`. </li><li>`ingestionTime`: Lets you filter by the ingestion time. If using this property, you can compare by using `>=` or `<=`.</li><li>`status`: Lets you filter by the ingestion run's status. If using this property, you can compare by using `=`, `!=`, `=contains`, or `!=contains`. </li></ul>  | `property=ingestionTime<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
+
++++
 
 **Request**
 
@@ -466,6 +481,78 @@ A successful response returns HTTP status 200 with a list of ingestion statuses 
 
 +++ A sample response when you retrieve a list of the audience ingestion statuses.
 
+```json
+{
+    "runs": [
+        {
+            "audienceId": "60ccea95-1435-4180-97a5-58af4aa285ab",
+            "runId": "fb342311-725d-4b48-ab7d-c6105fbc2b8b",
+            "status": "SUCCESS",
+            "differentialIngestion": true,
+            "dataFilterStartTime": 764245635,
+            "dataFilterEndTime": 3456788568,
+            "ingestionTime": 1785678909,
+            "details": [
+                {
+                    "stage": "DATASET_INGEST",
+                    "status": "SUCCESS",
+                    "flowId" : "{FLOW_ID}",
+                    "flowRunId": "{FLOW_RUN_ID}"
+                },
+                {
+                    "stage": "PROFILE_STORE_INGEST",
+                    "status": "SUCCESS",
+                    "flowId" : "{FLOW_ID}",
+                    "flowRunId": "{FLOW_RUN_ID}"
+                }
+            ]
+        },
+        {
+            "audienceId": "60ccea95-1435-4180-97a5-58af4aa285ab",
+            "runId": "406e38e4-fbd5-43e1-8d0c-01ccb3f9ad10",
+            "status": "SUCCESS",
+            "differentialIngestion": true,
+            "dataFilterStartTime": 764245635,
+            "dataFilterEndTime": 3456788568,
+            "ingestionTime": 1989687631,
+            "details": [
+                {
+                    "stage": "DATASET_INGEST",
+                    "status": "SUCCESS",
+                    "flowId" : "{FLOW_ID}",
+                    "flowRunId": "{FLOW_RUN_ID}"
+                },
+                {
+                    "stage": "PROFILE_STORE_INGEST",
+                    "status": "SUCCESS",
+                    "flowId" : "{FLOW_ID}",
+                    "flowRunId": "{FLOW_RUN_ID}"
+                }
+            ]
+        }
+    ],
+    "_page": {
+        "limit": 20,
+        "count": 2,
+        "totalCount": 2
+    },
+    "_links": {
+        "next": {
+            "href": ""
+        },
+        "self": {
+            "href": ""
+        }
+    }
+}
+```
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `runs` | Object | An object that contains the list of ingestion runs that belongs to the audience. More information about this object can be found in the [retrieve ingestion status section](#retrieve-ingestion-status). |
+| `_page` | Object | An object that contains the pagination information about the list of results. |
+| `_links` | Object | An object that contains information on how to access other pages of results. |
+
 +++
 
 ## Delete an external audience {#delete-audience}
@@ -483,6 +570,14 @@ DELETE /external-audience/{AUDIENCE_ID}
 The following request deletes the specified external audience.
 
 +++ A sample request to delete the external audience.
+
+```shell
+curl -X DELETE https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/ \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
 
 +++
 
