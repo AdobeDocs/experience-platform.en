@@ -450,6 +450,14 @@ The following request retrieves all the ingestion statuses for the external audi
 
 +++ A sample request to get a list of audience ingestion statuses.
 
+```shell
+curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/runs \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
 +++
 
 **Response**
