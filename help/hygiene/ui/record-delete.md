@@ -1,18 +1,14 @@
 ---
-title: Delete Records
+title: Record Delete Requests (UI Workflow)
 description: Learn how to delete records in the Adobe Experience Platform UI.
-badgeBeta: label="Beta" type="Informative"
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 ---
-# Delete records {#record-delete}
+# Record delete requests (UI Workflow) {#record-delete}
  
 Use the [[!UICONTROL Data Lifecycle] workspace](./overview.md) to delete records in Adobe Experience Platform based on their primary identities. These records can be tied to individual consumers or any other entity that is included in the identity graph.
  
 >[!IMPORTANT] 
-> 
->The Record Delete feature is currently in Beta and available only in a **limited release**. It is not available to all customers. Record delete requests are only available for organizations in the limited release.
-> 
-> 
+>
 >Record deletions are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) instead.
 
 ## Prerequisites {#prerequisites}
@@ -43,19 +39,28 @@ The request creation workflow appears. By default, the **[!UICONTROL Delete reco
 
 ## Select datasets {#select-dataset}
 
-The next step is to determine whether you want to delete records from a single dataset or all datasets. If this option is not available to you, continue to the [Provide identities](#provide-identities) section of the guide. 
+The next step is to determine whether you want to delete records from a single dataset or all datasets. Depending on your organization's configuration, the dataset selection option may not be available. If you do not see this option, continue to the [Provide identities](#provide-identities) section of the guide.
 
-Under the **[!UICONTROL Record Details]** section, use the radio button to select between a specific dataset and all datasets. If you choose **[!UICONTROL Select dataset]**, proceed to select the database icon (![The database icon](/help/images/icons/database.png)) to open a dialog that provides a list of available datasets. Select the desired dataset from the list followed by **[!UICONTROL Done]**.  
+In the **[!UICONTROL Record Details]** section, select a radio button to choose either a specific dataset or all datasets.
 
-![The [!UICONTROL Select dataset] dialog with a dataset selected and [!UICONTROL Done] highlighted.](../images/ui/record-delete/select-dataset.png)  
+To delete from a specific dataset, select **[!UICONTROL Select dataset]**, then select the database icon (![The database icon](/help/images/icons/database.png)). In the dialog that appears, choose a dataset and select **[!UICONTROL Done]** to confirm.
 
-If you want to delete records from all datasets, select **[!UICONTROL All datasets]**.
+![The [!UICONTROL Select dataset] dialog with a dataset selected and [!UICONTROL Done] highlighted.](../images/ui/record-delete/select-dataset.png)
+
+To delete from all datasets, select **[!UICONTROL All datasets]**. This option increases the scope of the operation and requires you to provide all relevant identity types.
 
 ![The [!UICONTROL Select dataset] dialog with the [!UICONTROL All datasets] option selected.](../images/ui/record-delete/all-datasets.png)
 
->[!NOTE]
+>[!WARNING]
 >
->Selecting the **[!UICONTROL All datasets]** option can cause the delete operation to take longer and may not result in accurate record deletion.
+>Selecting **[!UICONTROL All datasets]** expands the operation to all datasets in your organization. Each dataset may use a different primary identity type. You must provide **all required identity types** to ensure accurate matching.
+>
+>If any identity type is missing, some records may be skipped during deletion. This can slow processing and lead to **partial results**.
+
+Each dataset in Experience Platform supports only one primary identity type.
+
+* When deleting from a **single dataset**, all identities in your request must use the **same type**.
+* When deleting from **all datasets**, you can include **multiple identity types**, since different datasets may rely on different primary identities."
 
 ## Provide identities {#provide-identities}
 
@@ -78,8 +83,6 @@ Like all identity fields in Experience Platform, an identity namespace is compos
 >If you don't know the identity namespace for a particular dataset, you can find it in the Experience Platform UI. In the **[!UICONTROL Datasets]** workspace, select the dataset in question from the list. On the details page for the dataset, hover over the name of the dataset's schema in the right rail. The identity namespace is displayed along with the schema name and description.
 >
 >![The Datasets dashboard with a dataset selected, and a schema dialog opened from the dataset details panel. The primary ID of the dataset is highlighted.](../images/ui/record-delete/dataset-primary-identity.png)
-
-If you are deleting records from a single dataset, all the identities you provide must have the same type, since a dataset can only have one identity namespace. If you are deleting from all datasets, you can include multiple identity types since different datasets may have different primary identities.
 
 There are two options to provide identities when deleting records:
 
@@ -128,13 +131,59 @@ To add more identities, select the plus icon (![A plus icon.](/help/images/icons
 
 ![The request creation workflow with the plus icon and the add identity icon highlighted.](../images/ui/record-delete/more-identities.png)
 
+## Quotas and processing timelines {#quotas}
+
+Record Delete requests are subject to daily and monthly identifier submission limits, determined by your organization's license entitlement. These limits apply to both UI- and API-based delete requests.
+
+>[!NOTE]
+>
+>You can submit up to **1,000,000 identifiers per day**, but only if your remaining monthly quota allows it. If your monthly cap is less than 1 million, your daily submissions cannot exceed that cap.
+
+### Monthly submission entitlement by product {#quota-limits}
+
+The table below outlines identifier submission limits by product and entitlement level. For each product, the monthly cap is the lesser of two values: a fixed identifier ceiling or a percentage-based threshold tied to your licensed data volume.
+
+| Product  | Entitlement Description | Monthly Cap (Whichever is Less) |
+|----------|-------------------------|---------------------------------|
+| Real-Time CDP or Adobe Journey Optimizer | Without Privacy and Security Shield or Healthcare Shield add-on          | 2,000,000 identifiers or 5% of addressable audience                    |
+| Real-Time CDP or Adobe Journey Optimizer | With Privacy and Security Shield or Healthcare Shield add-on             | 15,000,000 identifiers or 10% of addressable audience                  |
+| Customer Journey Analytics               | Without Privacy and Security Shield or Healthcare Shield add-on          | 2,000,000 identifiers or 100 identifiers per million CJA rows of entitlement |
+| Customer Journey Analytics               | With Privacy and Security Shield or Healthcare Shield add-on             | 15,000,000 identifiers or 200 identifiers per million CJA rows of entitlement |
+
+>[!NOTE]
+>
+> Most organizations will have lower monthly limits based on their actual addressable audience or CJA row entitlements.
+
+Quotas reset on the first day of each calendar month. Unused quota does **not** carry over.
+
+>[!NOTE]
+>
+>Quotas are based on your organization's licensed monthly entitlement for **submitted identifiers**. These are not enforced by system guardrails but may be monitored and reviewed.  
+>
+>Record Delete is a **shared service**. Your monthly cap reflects the highest entitlement across Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics, and any applicable Shield add-ons.
+
+### Processing timelines for identifier submissions {#sla-processing-timelines}
+
+After submission, record delete requests are queued and processed based on your entitlement level.
+
+| Product & Entitlement Description                                                  | Queue Duration      | Maximum Processing Time (SLA) |
+|------------------------------------------------------------------------------------|---------------------|-------------------------------|
+| Without Privacy and Security Shield or Healthcare Shield add-on                   | Up to 15 days       | 30 days                       |
+| With Privacy and Security Shield or Healthcare Shield add-on                      | Typically 24 hours  | 15 days                       |
+
+If your organization requires higher limits, contact your Adobe representative for an entitlement review.
+
+>[!TIP]
+>
+>To check your current quota usage or entitlement tier, see the [Quota reference guide](../api/quota.md).
+
 ## Submit the request {#submit}
 
 Once you have finished adding identities to the request, under **[!UICONTROL Request settings]**, provide a name and optional description for the request before selecting **[!UICONTROL Submit]**.
 
->[!IMPORTANT] 
-> 
->There are different limits for the total number of unique identity record deletes that can be submitted each month. These limits are based on your license agreement. Organizations who have purchased all editions of Adobe Real-Time Customer Data Platform or Adobe Journey Optimizer can submit up to 100,000 identity record deletes each month. Organizations who have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield** can submit up to 600,000 identity record deletes each month.<br>A single record delete request through the UI allows you to submit 10,000 IDs at one time. The [API method to delete records](../api/workorder.md#create) allows for the submission of 100,000 IDs at one time.<br>It is best practice to submit as many IDs per request as possible, up to your ID limit. When you intend to delete a high volume of IDs, submitting a low volume, or a single ID per record delete request should be avoided.
+>[!TIP]
+>
+>You can submit up to 10,000 identities per request through the UI. To submit larger volumes (up to 100,000 IDs per request), use the [API method](../api/workorder.md#create).
 
 ![The request setting's [!UICONTROL Name] and [!UICONTROL Description] fields with [!UICONTROL Submit] highlighted.](../images/ui/record-delete/submit.png)
 

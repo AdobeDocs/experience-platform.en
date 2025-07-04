@@ -17,9 +17,9 @@ Read this document for prerequisite steps that you need to complete in order to 
 
 Read this section for prerequisite steps that you must complete in order to successfully connect your [!DNL SFTP] source to Experience Platform.
 
-### IP address allow list
+### IP address allowlist
 
-A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
+A list of IP addresses must be added to an allowlist prior to working with source connectors. Failing to add your region-specific IP addresses to your allowlist may lead to errors or non-performance when using sources. See the [IP address allowlist](../../ip-address-allow-list.md) page for more information.
 
 ### Naming constraints for files and directories
 
@@ -177,7 +177,7 @@ Provide the appropriate values for the following credentials to authenticate you
 | `port` | The [!DNL SFTP] server port you're connecting to. If unprovided, the value defaults to `22`. |
 | `username` | The username with access to your [!DNL SFTP] server. |
 | `password` | The password for your [!DNL SFTP] server. |
-| `privateKeyContent` | The Base64 encoded SSH private key content. The type of OpenSSH key must be classified as either RSA or DSA. |
+| `privateKeyContent` | The Base64-encoded SSH private key content. The supported OpenSSH key types are `ed25519`, `RSA`, and `DSA`. |
 | `passPhrase` | The pass phrase or password to decrypt the private key if the key file or the key content is protected by a pass phrase. If PrivateKeyContent is password protected, this parameter needs to be used with the PrivateKeyContent's passphrase as value. |
 | `maxConcurrentConnections` | This parameter allows you to specify a maximum limit for the number of concurrent connections Experience Platform will create when connecting to your SFTP server. You must set this value to be less than the limit set by SFTP. **Note**: When this setting is enabled for an existing SFTP account, it will only affect future dataflows and not existing dataflows. |
 | `folderPath` | The path to the folder that you want to provide access to. [!DNL SFTP] source, you can provide the folder path to specify user access to the sub folder of your choice. |
