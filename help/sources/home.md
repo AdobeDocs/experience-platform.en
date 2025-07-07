@@ -106,13 +106,11 @@ CRM systems provide data that can help build customer relationships, which in tu
 - [[!DNL Salesforce]](connectors/crm/salesforce.md) [!BADGE Batch]{type=Informative}
 - [[!DNL SugarCRM]](connectors/crm/sugarcrm.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Veeva CRM]](connectors/crm/veeva.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Zoho CRM]](connectors/crm/zoho.md) [!BADGE Batch]{type=Informative}
 
 ### Customer Success {#customer-success}
 
 Experience Platform provides support for ingesting data from a third-party customer success application. See the following related documents for more information:
 
-- [[!DNL Oracle Service Cloud]](connectors/customer-success/oracle-service-cloud.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md) [!BADGE Batch]{type=Informative}
 - [[!DNL ServiceNow]](connectors/customer-success/servicenow.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Zendesk]](connectors/customer-success/zendesk.md) [!BADGE Batch]{type=Informative}
@@ -125,7 +123,6 @@ Experience Platform provides support for ingesting data from a third-party datab
 - [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Azure Table Storage]](connectors/databases/ats.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Couchbase]](connectors/databases/couchbase.md) [!BADGE Batch]{type=Informative}
 - [[!DNL GreenPlum]](connectors/databases/greenplum.md) [!BADGE Batch]{type=Informative}
 - [[!DNL HP Vertica]](connectors/databases/hp-vertica.md) [!BADGE Batch]{type=Informative}
 - [[!DNL IBM DB2]](connectors/databases/ibm-db2.md) [!BADGE Batch]{type=Informative}
@@ -133,7 +130,6 @@ Experience Platform provides support for ingesting data from a third-party datab
 - [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) [!BADGE Batch]{type=Informative}
 - [[!DNL MySQL]](connectors/databases/mysql.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Oracle]](connectors/databases/oracle.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Phoenix]](connectors/databases/phoenix.md) [!BADGE Batch]{type=Informative}
 - [[!DNL PostgreSQL]](connectors/databases/postgres.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) [!BADGE Batch]{type=Informative}
 
@@ -175,15 +171,11 @@ Experience Platform provides support for ingesting data from a third-party marke
 - [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) [!BADGE Batch]{type=Informative}
 - [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) [!BADGE Batch]{type=Informative}
-<!-- 
-- [[!DNL Oracle Responsys]](connectors/marketing-automation/oracle-responsys.md)
--->
 
 ### Payments {#payments}
 
 Experience Platform provides support for ingesting data from a third-party payments system. See the following related documents for more information on specific source connectors:
 
-- [[!DNL PayPal]](connectors/payments/paypal.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Square]](connectors/payments/square.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Stripe]](connectors/payments/stripe.md) [!BADGE Batch]{type=Informative}
 
