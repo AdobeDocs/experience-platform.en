@@ -9,17 +9,24 @@ badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/le
 >
 >This document outlines the upgrades to the architecture of Real-Time CDP B2B Edition. The migration process will be seamless and there are no disruptions expected to your current workflows and integrations. **No action is required from you** at this point. Refer to this document for information on how the upgrades will impact existing features of Adobe Experience Platform. For any questions, contact your Adobe Account Team.
 
-To support the ongoing strategic enhancement of Adobe Experience Platform, the B2B architecture is undergoing a structural upgrade designed to improve system scalability, enable greater architectural flexibility, and accommodate increasingly sophisticated B2B use cases.
+To better support complex B2B uses cases and prepare for future innovations, Adobe is introducing a new relational segmentation engine. This upgrade lays the foundation for more powerful segmentation capabilities, richer data relationships, and support for growing data volume. 
 
+After the change, a single customer audience may either contain filters on Experience Events or filters on other B2B data objects (accounts, opportunities) but not both. Audiences that require filters on both can still be created by first creating an audience on experience events, then creating another audience with filters on the B2B objects and a reference to the first audience.  
 
-To better support complex B2B data models and prepare for future innovations, Adobe is introducing a new relational segmentation engine. This engine is purpose-built to handle queries across linked B2B objects such as Accounts, Opportunities, and custom entities, adding to the existing segmentation engine already in use. The upgrade lays the foundation for more flexible and powerful segmentation capabilities in the future, including support for richer data relationships and custom object modeling.
+>[!BEGINSHADEBOX]
 
-While the segmentation experience will remain familiar. There will be subtle changes in the segment authoring UI:
+**Read the following example to help your understanding**
 
-* When building multi-entity segments, you will now need to split your segment into two.
-* The segment builder will reflect this logic to help you preview and manage segment creation.
+You need an audience of Adobe employees who downloaded the whitepaper *Generative AI in the Workplace* in the last week. To retrieve this information, you must:
 
-This change in the back end allows Real-Time CDP to process different parts of the segment using the engine best suited to the data type, thereby ensuring better performance and accuracy.
+1. Create an audience called **Downloaded GenAI Paper**. This selects everyone who downloaded the paper in the last week.
+2. Create a second audience called **At Adobe and downloaded whitepaper**. This selects people linked to an account with the account name "Adobe" an where the person is a member of the audience called **Downloaded GenAI Paper**.
+
+>[!ENDSHADEBOX]
+
+This upgrade also enables future enhancements, including support for custom objects, improved segment accuracy, and greater modeling flexibility—all designed to help you activate B2B audiences more effectively.
+
+The upgrade will be seamless, with no disruption to your current workflows or integrations. For any questions, contact your Adobe Account Team.
 
 ## New features
 
