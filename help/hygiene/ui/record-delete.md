@@ -39,19 +39,28 @@ The request creation workflow appears. By default, the **[!UICONTROL Delete reco
 
 ## Select datasets {#select-dataset}
 
-The next step is to determine whether you want to delete records from a single dataset or all datasets. If this option is not available to you, continue to the [Provide identities](#provide-identities) section of the guide. 
+The next step is to determine whether you want to delete records from a single dataset or all datasets. Depending on your organization's configuration, the dataset selection option may not be available. If you do not see this option, continue to the [Provide identities](#provide-identities) section of the guide.
 
-Under the **[!UICONTROL Record Details]** section, use the radio button to select between a specific dataset and all datasets. If you choose **[!UICONTROL Select dataset]**, proceed to select the database icon (![The database icon](/help/images/icons/database.png)) to open a dialog that provides a list of available datasets. Select the desired dataset from the list followed by **[!UICONTROL Done]**.  
+In the **[!UICONTROL Record Details]** section, select a radio button to choose either a specific dataset or all datasets.
 
-![The [!UICONTROL Select dataset] dialog with a dataset selected and [!UICONTROL Done] highlighted.](../images/ui/record-delete/select-dataset.png)  
+To delete from a specific dataset, select **[!UICONTROL Select dataset]**, then select the database icon (![The database icon](/help/images/icons/database.png)). In the dialog that appears, choose a dataset and select **[!UICONTROL Done]** to confirm.
 
-If you want to delete records from all datasets, select **[!UICONTROL All datasets]**.
+![The [!UICONTROL Select dataset] dialog with a dataset selected and [!UICONTROL Done] highlighted.](../images/ui/record-delete/select-dataset.png)
+
+To delete from all datasets, select **[!UICONTROL All datasets]**. This option increases the scope of the operation and requires you to provide all relevant identity types.
 
 ![The [!UICONTROL Select dataset] dialog with the [!UICONTROL All datasets] option selected.](../images/ui/record-delete/all-datasets.png)
 
->[!NOTE]
+>[!WARNING]
 >
->Selecting the **[!UICONTROL All datasets]** option can cause the delete operation to take longer and may not result in accurate record deletion.
+>Selecting **[!UICONTROL All datasets]** expands the operation to all datasets in your organization. Each dataset may use a different primary identity type. You must provide **all required identity types** to ensure accurate matching.
+>
+>If any identity type is missing, some records may be skipped during deletion. This can slow processing and lead to **partial results**.
+
+Each dataset in Experience Platform supports only one primary identity type.
+
+* When deleting from a **single dataset**, all identities in your request must use the **same type**.
+* When deleting from **all datasets**, you can include **multiple identity types**, since different datasets may rely on different primary identities."
 
 ## Provide identities {#provide-identities}
 
@@ -74,8 +83,6 @@ Like all identity fields in Experience Platform, an identity namespace is compos
 >If you don't know the identity namespace for a particular dataset, you can find it in the Experience Platform UI. In the **[!UICONTROL Datasets]** workspace, select the dataset in question from the list. On the details page for the dataset, hover over the name of the dataset's schema in the right rail. The identity namespace is displayed along with the schema name and description.
 >
 >![The Datasets dashboard with a dataset selected, and a schema dialog opened from the dataset details panel. The primary ID of the dataset is highlighted.](../images/ui/record-delete/dataset-primary-identity.png)
-
-If you are deleting records from a single dataset, all the identities you provide must have the same type, since a dataset can only have one identity namespace. If you are deleting from all datasets, you can include multiple identity types since different datasets may have different primary identities.
 
 There are two options to provide identities when deleting records:
 
