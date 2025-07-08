@@ -1,32 +1,74 @@
 ---
-title: Work Order API Endpoint
+title: Record Delete Requests (Workorder Endpoint)
 description: The /workorder endpoint in the Data Hygiene API allows you to programmatically manage deletion tasks for identities.
-badgeBeta: label="Beta" type="Informative"
 role: Developer
-badge: Beta
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
 ---
-# Work order endpoint {#work-order-endpoint}
+# Record delete requests (Workorder endpoint) {#work-order-endpoint}
 
 The `/workorder` endpoint in the Data Hygiene API allows you to programmatically manage record delete requests in Adobe Experience Platform.
 
 >[!IMPORTANT] 
 > 
->The Record Delete feature is currently in Beta and available only in a **limited release**. It is not available to all customers. Record delete requests are only available for organizations in the limited release.
->
 >Record deletes are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) instead.
 
 ## Getting started
 
 The endpoint used in this guide is part of the Data Hygiene API. Before continuing, please review the [overview](./overview.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
+## Quotas and processing timelines {#quotas}
+
+Record Delete requests are subject to daily and monthly identifier submission limits, determined by your organization's license entitlement. These limits apply to both UI- and API-based delete requests.
+
+>[!NOTE]
+>
+>You can submit up to **1,000,000 identifiers per day**, but only if your remaining monthly quota allows it. If your monthly cap is less than 1 million, your daily submissions cannot exceed that cap.
+
+### Monthly submission entitlement by product {#quota-limits}
+
+The table below outlines identifier submission limits by product and entitlement level. For each product, the monthly cap is the lesser of two values: a fixed identifier ceiling or a percentage-based threshold tied to your licensed data volume.
+
+| Product  | Entitlement Description | Monthly Cap (Whichever is Less) |
+|----------|-------------------------|---------------------------------|
+| Real-Time CDP or Adobe Journey Optimizer | Without Privacy and Security Shield or Healthcare Shield add-on          | 2,000,000 identifiers or 5% of addressable audience                    |
+| Real-Time CDP or Adobe Journey Optimizer | With Privacy and Security Shield or Healthcare Shield add-on             | 15,000,000 identifiers or 10% of addressable audience                  |
+| Customer Journey Analytics               | Without Privacy and Security Shield or Healthcare Shield add-on          | 2,000,000 identifiers or 100 identifiers per million CJA rows of entitlement |
+| Customer Journey Analytics               | With Privacy and Security Shield or Healthcare Shield add-on             | 15,000,000 identifiers or 200 identifiers per million CJA rows of entitlement |
+
+>[!NOTE]
+>
+> Most organizations will have lower monthly limits based on their actual addressable audience or CJA row entitlements.
+
+Quotas reset on the first day of each calendar month. Unused quota does **not** carry over.
+
+>[!NOTE]
+>
+>Quotas are based on your organization's licensed monthly entitlement for **submitted identifiers**. These are not enforced by system guardrails but may be monitored and reviewed.  
+>
+>Record Delete is a **shared service**. Your monthly cap reflects the highest entitlement across Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics, and any applicable Shield add-ons.
+
+### Processing timelines for identifier submissions {#sla-processing-timelines}
+
+After submission, record delete requests are queued and processed based on your entitlement level.
+
+| Product & Entitlement Description                                                  | Queue Duration      | Maximum Processing Time (SLA) |
+|------------------------------------------------------------------------------------|---------------------|-------------------------------|
+| Without Privacy and Security Shield or Healthcare Shield add-on                   | Up to 15 days       | 30 days                       |
+| With Privacy and Security Shield or Healthcare Shield add-on                      | Typically 24 hours  | 15 days                       |
+
+If your organization requires higher limits, contact your Adobe representative for an entitlement review.
+
+>[!TIP]
+>
+>To check your current quota usage or entitlement tier, see the [Quota reference guide](../api/quota.md).
+
 ## Create a record delete request {#create}
 
 You can delete one or more identities from a single dataset or all datasets by making a POST request to the `/workorder` endpoint.
 
->[!IMPORTANT] 
-> 
->There are different limits for the total number of unique identity record deletes that can be submitted each month. These limits are based on your license agreement. Organizations who have purchased all editions of Adobe Real-Time Customer Data Platform and Adobe Journey Optimizer can submit up to 100,000 identity record deletes each month. Organizations who have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield** can submit up to 600,000 identity record deletes each month.<br>A single [record delete request through the UI](../ui/record-delete.md) allows you to submit 10,000 IDs at one time. The API method to delete records allows for the submission of 100,000 IDs at one time.<br>It is best practice to submit as many IDs per request as possible, up to your ID limit. When you intend to delete a high volume of IDs, submitting a low volume, or a single ID per record delete request should be avoided.
+>[!TIP]
+>
+>Each record delete request submitted through the API can include up to **100,000 identities**. To maximize efficiency, submit as many identities per request as possible and avoid low-volume submissions such as single-ID work orders.
 
 **API format**
 

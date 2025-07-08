@@ -44,7 +44,7 @@ To create a base connection ID, make a POST request to the `/connections` endpoi
 
 >[!IMPORTANT]
 >
->The [!DNL SFTP] connector supports an RSA or DSA type OpenSSH key. Ensure that your key file content starts with `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` and ends with `"-----END [RSA/DSA] PRIVATE KEY-----"`. If the private key file is a PPK-format file, use the PuTTY tool to convert from PPK to OpenSSH format.
+>The [!DNL SFTP] connector supports `ed25519`, `RSA` or `DSA` type OpenSSH key. Ensure that your key file content starts with `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` and ends with `"-----END [RSA/DSA] PRIVATE KEY-----"`. If the private key file is a PPK-format file, use the PuTTY tool to convert from PPK to OpenSSH format.
 
 **API format**
 
@@ -154,7 +154,7 @@ curl -X POST \
 | `auth.params.host` | The host name of your [!DNL SFTP] server. |
 | `auth.params.port` | The port of the SFTP server. This integer value defaults to 22. |
 | `auth.params.username` | The username associated with your [!DNL SFTP] server. |
-| `auth.params.privateKeyContent` | The Base64 encoded SSH private key content. The type of OpenSSH key must be classified as either RSA or DSA.  |
+| `auth.params.privateKeyContent` | The Base64-encoded SSH private key content. The supported OpenSSH key types are `ed25519`, `RSA`, and `DSA`.  |
 | `auth.params.passPhrase` | The pass phrase or password to decrypt the private key if the key file or the key content is protected by a pass phrase. If PrivateKeyContent is password protected, this parameter needs to be used with the PrivateKeyContent's passphrase as value. |
 | `auth.params.maxConcurrentConnections` | The maximum number of concurrent connections specified when connecting Experience Platform to SFTP. When enabled, this value must be set to at least 1. |
 | `auth.params.folderPath` | The path to the folder that you want to provide access to. |
