@@ -138,7 +138,7 @@ The dataset preview window includes:
 
 These features support fast navigation, schema understanding, and transparent dataset validation.
 
-To open the preview window, select [!UICONTROL Preview dataset] from either the dataset's inline actions or the [!UICONTROL Dataset activity] screen.
+Select **[!UICONTROL Preview dataset]** from the inline actions or from the [!UICONTROL Dataset activity] screen to open the preview window.
 
 >[!NOTE]
 >
@@ -146,13 +146,13 @@ To open the preview window, select [!UICONTROL Preview dataset] from either the 
 
 #### Advanced Query Editor shortcut {#query-editor-shortcut}
 
-If your organization has the Data Distiller add-on, you can access the Advanced Query Editor directly from the dataset preview window.
+If your organization has a Data Distiller license, you can access the Advanced Query Editor directly from the dataset preview window.
 
 >[!AVAILABILITY]
 >
->Only users with the required Data Distiller license can access this functionality. Your UI may appear differently.
+>Only users with the required Data Distiller license can access this functionality. If your organization does not have Data Distiller, the [!UICONTROL Advanced query editor] option is not visible.
 
-Select **[!UICONTROL Advanced query editor]** in the upper right of the preview window, to open the Query Editor and preload the current preview query for immediate execution and further analysis.
+Select **[!UICONTROL Advanced query editor]** in the upper right of the preview window to open the Query Editor. The current preview query is preloaded and ready for execution or further analysis.
 
 ![Dataset preview window showing the Advanced query editor button in the upper right.](../images/datasets/user-guide/dataset-preview-advanced-query-editor.png)
 
