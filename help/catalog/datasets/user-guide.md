@@ -130,11 +130,11 @@ The following animation shows the dataset preview window with its navigation and
 
 The dataset preview window includes:
 
-- An object browser sidebar on the left for navigating and filtering dataset fields.
-- Data type indicators displayed next to each column name for quick insight into the structure of the dataset.
-- A SQL query display at the top of the window, showing the query used to generate the dataset.
-- A formatted table view of up to 100 rows in the lower right area for efficient data review.
-- Direct navigation to Query Editor for Data Distiller users, with the SQL query prepopulated for further exploration or modification.
+* An object browser sidebar on the left for navigating and filtering dataset fields.
+* Data type indicators displayed next to each column name for quick insight into the structure of the dataset.
+* A SQL query display at the top of the window, showing the query used to generate the dataset.
+* A formatted table view of up to 100 rows in the lower right area for efficient data review.
+* Direct navigation to Query Editor for Data Distiller users, with the SQL query prepopulated for further exploration or modification.
 
 These features support fast navigation, schema understanding, and transparent dataset validation.
 
@@ -143,6 +143,20 @@ To open the preview window, select [!UICONTROL Preview dataset] from either the 
 >[!NOTE]
 >
 >The preview window displays a sample of up to 100 rows. Fields without data are excluded from the view.
+
+#### Advanced Query Editor shortcut {#query-editor-shortcut}
+
+If your organization has the Data Distiller add-on, you can access the Advanced Query Editor directly from the dataset preview window.
+
+>[!AVAILABILITY]
+>
+>Only users with the required Data Distiller license can access this functionality. Your UI may appear differently.
+
+Select **[!UICONTROL Advanced query editor]** in the upper right of the preview window, to open the Query Editor and preload the current preview query for immediate execution and further analysis.
+
+![Dataset preview window showing the Advanced query editor button in the upper right.](../images/datasets/user-guide/dataset-preview-advanced-query-editor.png)
+
+This shortcut enables you to move seamlessly from previewing sample data to running and refining queries in Query Service without re-entering SQL or context.
 
 For additional data access and analysis, use downstream services such as [!DNL Query Service] and [!DNL JupyterLab]. See the following documents for more information:
 
