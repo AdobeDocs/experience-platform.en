@@ -85,16 +85,16 @@ You can use non-expiring credentials to set up a more permanent connection to an
 
 Before you can generate non-expiring credentials, you must complete the following steps in Adobe Admin Console:
 
-1. Log into [Adobe Admin Console](https://adminconsole.adobe.com/) and select the relevant Org from the top navigation bar.
+1. Log into [Adobe Admin Console](https://adminconsole.adobe.com/) and select the relevant organization from the top navigation bar.
 2. [Select a product profile.](../../access-control/ui/browse.md)
 3. [Configure both the **Sandboxes** and **Manage Query Service Integration** permissions](../../access-control/ui/permissions.md) for the product profile.
 4. [Add a new user to a product profile](../../access-control/ui/users.md) so they are granted its configured permissions.
 5. [Add the user as a product profile admin](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html) to allow an account creation for any active product profile.
 6. [Add the user as a product profile developer](https://helpx.adobe.com/enterprise/using/manage-developers.html) in order to create an integration.
 
-To learn more about how to assign permissions, please read the documentation on [access control](../../access-control/home.md).
+After these steps, the required permissions are configured in [Adobe Developer Console](https://developer.adobe.com/console/) for you to generate OAuth Server-to-Server credentials and use the expiring or non-expiring credentials features.
 
-All the required permissions are now configured in Adobe Developer Console for the user to use the expiring credentials feature.
+For detailed information on assigning permissions, see the [access control documentation](../../access-control/home.md).
 
 ### Generate credentials {#generate-credentials}
 
