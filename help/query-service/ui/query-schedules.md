@@ -28,7 +28,7 @@ This workflow covers the scheduling process in the Query Service UI. To learn ho
 
 >[!NOTE]
 >
->Using a technical account ensures scheduled queries continue to run even if users leave the organization or their roles change. Choose a technical account whenever possible for uninterrupted query automation.
+>Use a technical account to ensure scheduled queries continue to run even if users leave the organization or their roles change. Choose a technical account whenever possible for uninterrupted query automation.
 
 ## Create a query schedule {#create-schedule}
 
