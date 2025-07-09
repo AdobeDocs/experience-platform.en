@@ -1,6 +1,8 @@
 ---
 title: External Audiences API Endpoint
 description: Learn how to use the external audiences API to
+hide: yes
+hidefromtoc: yes
 ---
 
 # External audiences endpoint
@@ -88,7 +90,7 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/submit \
 
 **Response**
 
-A successful response returns HTTP status 200 with details of your submit request.
+A successful response returns HTTP status 202 with details of your submit request.
 
 +++ A sample response when creating a submit request.
 
@@ -183,6 +185,8 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/task/df8cd
 
 **Response**
 
+A successful response returns HTTP status 200 with details of the external audience's task status.
+
 +++ A sample response when you retrieve an external audience's task status.
 
 ```json
@@ -249,6 +253,8 @@ Additionally, you can update the following parameters:
 +++
 
 **Response**
+
+A successful response returns HTTP status 200 with details of the updated external audience.
 
 +++ A sample response when updating the external audience's description.
 
@@ -329,7 +335,7 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| `dataFilterStartTime` | Epoch timestamp | The range specifying the starting time which the flow will run to select which files will be processed. |
+| `dataFilterStartTime` | Epoch timestamp | **Required** The range specifying the starting time which the flow will run to select which files will be processed. |
 | `dataFilterEndTime` | Epoch timestamp | The range specifying the ending time which the flow will run to select which files will be processed. |
 | `differentialIngestion` | Boolean | A field that determines if the ingestion will be a partial ingestion based off of the difference since the last ingestion or a full audience ingestion. By default, this value is `true`. |
 
@@ -370,7 +376,7 @@ You can retrieve the status of an audience ingestion by making a GET request to 
 **API format**
 
 ```http
-GET /external-audience/{AUDIENCE_ID}/run/{RUN_ID}
+GET /external-audience/{AUDIENCE_ID}/runs/{RUN_ID}
 ```
 
 **Request**
@@ -380,7 +386,7 @@ The following request retrieves the ingestion status for the external audience.
 +++ A sample request to retrieve the external audience's ingestion status.
 
 ```shell
-curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/run/fb342311-725d-4b48-ab7d-c6105fbc2b8b \
+curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/runs/fb342311-725d-4b48-ab7d-c6105fbc2b8b \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
@@ -408,13 +414,11 @@ A successful response returns HTTP status 200 with details of the external audie
         {
             "stage": "DATASET_INGEST",
             "status": "SUCCESS",
-            "flowId" : "{FLOW_ID}",
             "flowRunId": "{FLOW_RUN_ID}"
         },
         {
             "stage": "PROFILE_STORE_INGEST",
             "status": "SUCCESS",
-            "flowId" : "{FLOW_ID}",
             "flowRunId": "{FLOW_RUN_ID}"
         }
     ]
@@ -430,7 +434,7 @@ A successful response returns HTTP status 200 with details of the external audie
 | `dataFilterStartTime` | Epoch timestamp | The range specifying the starting time the flow runs to select which files were processed. |
 | `dataFilterEndTime` | Epoch timestamp | The range specifying the ending time the flow runs to select which files were processed. |
 | `ingestionTime` | Epoch timestamp | The time which the ingestion run was triggered. |
-| `details` | Array of objects | An object containing the details of the ingestion run. <ul><li>`stage`: The stage of the ingestion run. This can either be `DATASET_INGEST` or `PROFILE_STORE_INGEST`, which represent the data lake ingestion and the profile ingestion.</li><li>`status`: The status of the ingestion on the stage. Possible statuses include `SUCCESS` and `FAILED`.</li><li>`flowId`: The ID of the corresponding flow for the audience.</li><li>`flowRunId`: The ID of the stage's ingestion flow run.</li></ul> |
+| `details` | Array of objects | An object containing the details of the ingestion run. <ul><li>`stage`: The stage of the ingestion run. This can either be `DATASET_INGEST` or `PROFILE_STORE_INGEST`, which represent the data lake ingestion and the profile ingestion.</li><li>`status`: The status of the ingestion on the stage. Possible statuses include `SUCCESS` and `FAILED`.</li><li>`flowRunId`: The ID of the stage's ingestion flow run.</li></ul> |
 
 +++
 
@@ -496,13 +500,11 @@ A successful response returns HTTP status 200 with a list of ingestion statuses 
                 {
                     "stage": "DATASET_INGEST",
                     "status": "SUCCESS",
-                    "flowId" : "{FLOW_ID}",
                     "flowRunId": "{FLOW_RUN_ID}"
                 },
                 {
                     "stage": "PROFILE_STORE_INGEST",
                     "status": "SUCCESS",
-                    "flowId" : "{FLOW_ID}",
                     "flowRunId": "{FLOW_RUN_ID}"
                 }
             ]
@@ -519,13 +521,11 @@ A successful response returns HTTP status 200 with a list of ingestion statuses 
                 {
                     "stage": "DATASET_INGEST",
                     "status": "SUCCESS",
-                    "flowId" : "{FLOW_ID}",
                     "flowRunId": "{FLOW_RUN_ID}"
                 },
                 {
                     "stage": "PROFILE_STORE_INGEST",
                     "status": "SUCCESS",
-                    "flowId" : "{FLOW_ID}",
                     "flowRunId": "{FLOW_RUN_ID}"
                 }
             ]
@@ -535,14 +535,6 @@ A successful response returns HTTP status 200 with a list of ingestion statuses 
         "limit": 20,
         "count": 2,
         "totalCount": 2
-    },
-    "_links": {
-        "next": {
-            "href": ""
-        },
-        "self": {
-            "href": ""
-        }
     }
 }
 ```
@@ -551,7 +543,6 @@ A successful response returns HTTP status 200 with a list of ingestion statuses 
 | -------- | ---- | ----------- |
 | `runs` | Object | An object that contains the list of ingestion runs that belongs to the audience. More information about this object can be found in the [retrieve ingestion status section](#retrieve-ingestion-status). |
 | `_page` | Object | An object that contains the pagination information about the list of results. |
-| `_links` | Object | An object that contains information on how to access other pages of results. |
 
 +++
 
@@ -583,8 +574,25 @@ curl -X DELETE https://platform.adobe.io/data/core/ais/external-audience/60ccea9
 
 **Response**
 
-A successful response returns HTTP status ??? with an empty response body.
+A successful response returns HTTP status 202 with an empty response body.
 
 ## Next steps {#next-steps}
 
 next steps blurb
+
+## Appendix {#appendix}
+
+The following section lists the available error codes when using the external audiences API.
+
+| Platform error code | Status code | Message | Description |
+| ------------------- | ----------- | ------- | ----------- |
+| 100910-400 | 400 | `BAD_REQUEST` | A bad request has occurred, due to a failure occurring while validating the requests. | 
+| 100911-400 | 400 | `BAD_REQUEST` | An invalid token is provided. |
+| 100920-401 | 401 | `UNAUTHORIZED` | A header is missing. |
+| 100921-401 | 401 | `UNAUTHORIZED` | An invalid `imsOrgId` is provided. |
+| 100922-401 | 401 | `UNAUTHORIZED` | You are not authorized to use the external audiences APIs. |
+| 100940-404 | 404 | `NOT_FOUND` | The requested audience was not found. |
+| 100950-409 | 409 | `DUPLICATE_RESOURCE` | The audience already exists. |
+| 100960-422 | 422 | `UNPROCESSABLE_ENTITY` | The request structure is valid, but it cannot be processed due to logical or semantic errors. |
+| 100970-500 | 500 | `INTERNAL_SERVER_ERROR` | There was an issue processing the request in the system. |
+| 100970-502 | 502 | `BAD_GATEWAY` | There are downstream dependency issues. |
