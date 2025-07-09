@@ -11,26 +11,22 @@ You can automate query runs by creating query schedules. Scheduled queries run o
 >
 >You can only add a schedule to a query that has already been created, and saved.
 
-## Technical account requirements for scheduled queries {#technical-account-user-requirements}
+## Account requirements for scheduled queries {#technical-account-user-requirements}
 
-Scheduled queries must be created by a **technical account user**. The technical account user's identity is established using OAuth Server-to-Server credentials, which enable secure, automated API access. This ensures that scheduled queries run reliably and securely within the Adobe Experience Platform environment.
+You can create scheduled queries with either a technical account or a personal user account. Adobe recommends using a technical account (with OAuth Server-to-Server credentials) to ensure scheduled queries continue running if user access changes.
 
-If the creator's permissions are revoked or the technical account is disabled, scheduled queries will stop running until access is restored. This applies even when using the Query Service UI; users must have a valid technical account to create or manage scheduled queries.
+Queries created with a personal user account stop running if that user's access is removed or disabled.
 
-Before creating a technical account user, ensure you have the necessary developer and user roles assigned in [Adobe Admin Console](https://adminconsole.adobe.com). For detailed information on setting up these roles and permissions, see the [Credentials guide prerequisites](./credentials.md#prerequisites).
+For details on setting up technical accounts and permissions, see the [Credentials guide prerequisites](./credentials.md#prerequisites) and [API authentication](../../landing/api-authentication.md).
 
-To create a technical account user and generate OAuth Server-to-Server credentials, follow the step-by-step guide on authenticating with Adobe Experience Platform APIs in the Adobe Developer Console:
+For more information on setting up a technical account and generating the required OAuth credentials, see:
 
-- [Authenticate and access Experience Platform APIs](../../landing/api-authentication.md)  
-- [Developer Console setup and API usage](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman)  
-- [End-to-end technical account setup](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup)
-
-If you only use the UI, coordinate with an administrator or engineer who has a technical account to create and manage scheduled queries. UI-only users cannot create scheduled queries independently. This collaboration helps prevent permission-related failures.
+- [Developer Console setup](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman): Step-by-step instructions for configuring the Adobe Developer Console and obtaining credentials.
+- [End-to-end technical account setup](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup): A comprehensive walkthrough for creating and configuring a technical account in Adobe Experience Platform.
 
 Use the [!UICONTROL Scheduled queries] tab to manage and monitor all your scheduled query jobs in one place. From this workspace, you can view status, schedule details, error messages, and subscribe to alerts. See the [monitor scheduled queries document](./monitor-queries.md) for more information.
 
 This workflow covers the scheduling process in the Query Service UI. To learn how to add schedules using the API, please read the [scheduled queries endpoint guide](../api/scheduled-queries.md).
-
 
 ## Create a query schedule {#create-schedule}
 
