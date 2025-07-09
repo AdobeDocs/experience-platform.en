@@ -12,15 +12,15 @@ Learn how to create, manage, and monitor scheduled queries programmatically usin
 
 ## Requirements and prerequisites
 
-Scheduled queries require creation and management by a **technical account user** authenticated via OAuth Server-to-Server credentials. This ensures uninterrupted, secure execution within Adobe Experience Platform. Loss of access, revoked permissions, or a disabled technical account user will cause scheduled query failures and data interruptions.
+You can create scheduled queries using either a technical account (authenticated via OAuth Server-to-Server credentials) or a personal user account (user token). However, Adobe strongly recommends using a technical account to ensure uninterrupted, secure execution of scheduled queries—especially for long-term or production workloads. 
 
-To avoid failures, ensure the technical account user is correctly set up and maintains access at all times.
+Queries created with a personal user account will fail if that user's access is revoked or their account is disabled. Technical accounts provide greater stability because they are not tied to an individual user's employment status or access rights.
 
 >[!IMPORTANT]
 >
->Important considerations when managing scheduled queries:<ul><li>Scheduled queries will fail if the technical account user loses access or permissions.</li><li>Scheduled queries **must be disabled before deletion** via the API or UI.</li><li>Scheduling indefinitely without an end date is not supported; an end date must always be specified.</li></ul>
+>Important considerations when managing scheduled queries:<ul><li>Scheduled queries will fail if the account (technical or user) used to create them loses access or permissions.</li><li>Scheduled queries must be disabled before deletion via the API or UI.</li><li>Scheduling indefinitely without an end date is not supported; an end date must always be specified.</li></ul>
 
-For detailed guidance on setting up technical account users, required permissions, and managing scheduled queries, including UI workflows and best practices, see the [Query schedules documentation](../ui/query-schedules.md#technical-account-user-requirements).
+For detailed guidance on account requirements, permission setup, and managing scheduled queries, see the [Query schedules documentation](../ui/query-schedules.md#technical-account-user-requirements). For step-by-step instructions on creating and configuring a technical account, refer to [Developer Console setup](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) and [End-to-end technical account setup](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup).
 
 ## Sample API calls
 

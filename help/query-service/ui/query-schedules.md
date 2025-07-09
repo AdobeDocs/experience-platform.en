@@ -22,7 +22,7 @@ For additional guidance on creating and configuring a technical account, refer t
 - [Developer Console setup](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman): Step-by-step instructions for configuring the Adobe Developer Console and obtaining OAuth credentials.
 - [End-to-end technical account setup](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup): A comprehensive walkthrough for creating and configuring a technical account in Adobe Experience Platform.
 
-If you use only the Query Service UI, ensure you have the necessary permissions or coordinate with an administrator who manages technical accounts. For more information, see the [monitor scheduled queries document](./monitor-queries.md).
+If you only use the Query Service UI, ensure you have the necessary permissions or coordinate with an administrator who manages technical accounts. Any scheduled queries are added to the list in the [!UICONTROL Scheduled queries] tab, where you can monitor the status, schedule details, and error messages for all scheduled query jobs, as well as subscribe to alerts. For more information on monitoring and managing your queries, see the [monitor scheduled queries document](./monitor-queries.md).
 
 This workflow covers the scheduling process in the Query Service UI. To learn how to add schedules using the API, refer to the [scheduled queries endpoint guide](../api/scheduled-queries.md).
 
@@ -172,7 +172,6 @@ The following table provides descriptions of each column available in the detail
 >[!NOTE]
 >
 >Compute Hours data is available from 08/15/2024. Data before this date appears as 'Not Available'.
-
 
 See the [monitor scheduled queried guide](./monitor-queries.md#inline-actions) for complete information on how to monitor the status of all query jobs through the UI. 
 
