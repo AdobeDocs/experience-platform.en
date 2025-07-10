@@ -102,7 +102,7 @@ More information on these available actions can be found in their respective sec
 
 ### Preview a dataset {#preview}
 
-You can preview dataset sample data from both the inline options of the [!UICONTROL Browse] tab and also the [!UICONTROL Dataset activity] view. A new dataset preview window is now available with additional navigation and context enhancements.
+You can preview dataset sample data from both the inline options of the [!UICONTROL Browse] tab and also the [!UICONTROL Dataset activity] view. A new dataset preview window is available with additional navigation and context enhancements.
 
 From the [!UICONTROL Browse] tab, select the ellipsis (...) next to the dataset name you want to preview. A list of options appears. Next, select [!UICONTROL Preview dataset] from the available options. If the dataset is empty, the preview link is deactivated and indicates that the preview is not available.
 
@@ -116,7 +116,7 @@ This opens the preview window, where the hierarchical schema view for the datase
 
 ![The dataset preview dialog with information about the structure, as well as sample values, for the dataset are shown.](../images/datasets/user-guide/preview-dataset.png)
 
-Alternatively, from the [!UICONTROL Dataset activity] screen, select [!UICONTROL Preview dataset] near the top-right corner of your screen to preview up to 100 rows of data.
+Alternatively, from the **[!UICONTROL Dataset activity]** screen, select **[!UICONTROL Preview dataset]** near the top-right corner of your screen to preview up to 100 rows of data.
 
 ![The Preview dataset button is highlighted.](../images/datasets/user-guide/select-preview.png)
 
