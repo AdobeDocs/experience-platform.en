@@ -17,6 +17,7 @@ role: User
     - [Getting started](api/getting-started.md)
     - [Audiences](api/audiences.md)
     - [Export jobs](api/export-jobs.md)
+    - [External audiences](api/external-audiences.md)
     - [Previews and estimates](api/previews-and-estimates.md)
     - [Schedules](api/schedules.md)
     - [Segment definitions](api/segment-definitions.md)

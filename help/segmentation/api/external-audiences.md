@@ -1,13 +1,13 @@
 ---
 title: External Audiences API Endpoint
-description: Learn how to use the external audiences API to
+description: Learn how to use the external audiences API to create, update, activate, and delete your external audiences from Adobe Experience Platform.
 hide: yes
 hidefromtoc: yes
 ---
 
 # External audiences endpoint
 
-intro blurb
+External audiences let you upload profile data from your external sources into Adobe Experience Platform. You can use the `/external-audience` endpoint in the Segmentation Service API to submit details about your external audience, activate an external audience to be ingested to Experience Platform, view details and update your external audiences, as well as delete your external audiences.
 
 ## Getting started
 
@@ -578,7 +578,7 @@ A successful response returns HTTP status 202 with an empty response body.
 
 ## Next steps {#next-steps}
 
-next steps blurb
+After reading this guide, you now have a better understanding of how to create, manage, and delete your external audiences using the Experience Platform APIs. To learn how to use external audiences with the Experience Platform UI, please read the [Audience Portal documentation](../ui/audience-portal.md).
 
 ## Appendix {#appendix}
 
