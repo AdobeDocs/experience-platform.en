@@ -396,7 +396,7 @@ The timestamp for qualified profiles indicates the most recent **batch** segment
 
 This number is updated in two scenarios:
 
-1. There is a greater than 5% change in customer data or the last sample job is older than 7 days.
+1. There is a greater than 5% change in customer data or the last sample job is older than seven days.
 2. The audience's rules have been modified or removed.
 
 Selecting the information bubble gives the error threshold and most recent sample job time.
