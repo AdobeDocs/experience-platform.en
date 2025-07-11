@@ -212,23 +212,31 @@ Use the [!UICONTROL Metrics] interface to view your license usage metrics. The i
 
 ![The license usage dashboard UI displaying your license usage metrics for a production sandbox.](../images/data-management/prod-sandbox.png)
 
->[!TAB Development]
+>[!TAB Development sandbox]
+
+Select [!UICONTROL Development] to view license usage metrics pertaining to your development sandboxes.
 
 ![The license usage dashboard UI displaying your license usage metrics for development sandboxes.](../images/data-management/dev-sandbox.png)
 
 >[!ENDTABS]
 
+For more information, read the documentation on [using the license usage dashboard](../../dashboards/guides/license-usage.md).
+
 **Analyze dataset-level storage usage**
 
-Use the **Dataset browse view** to review your dataset usage metrics for both data lake and Real-Time Customer Profile. Select the column headers for either [!UICONTROL Data Lake Storage] or [!UICONTROL Profile Storage] and then select **[!UICONTROL Sort Descending]** to sort datasets by storage size and identify the largest consumers of storage.
+Use the **Dataset browse view** to review your dataset usage metrics for both data lake and Real-Time Customer Profile. Select the column headers for either **[!UICONTROL Data Lake Storage]** or **[!UICONTROL Profile Storage]** and then select **[!UICONTROL Sort Descending]** from the pop up panel.
 
 >[!BEGINTABS]
 
 >[!TAB Data lake storage]
 
+Your datasets in data lake are sorted by storage size. Use this capability to identify the largest consumers of storage in data lake.
+
 ![The datasets in data lake sorted from largest to smallest.](../images/data-management/data-lake-storage.png)
 
 >[!TAB Profile storage]
+
+Your datasets in Profile are sorted by storage size. Use this capability to identify the largest consumers of storage in Profile.
 
 ![The datasets in Profile sorted from largest to smallest.](../images/data-management/profile-storage.png)
 
@@ -236,9 +244,9 @@ Use the **Dataset browse view** to review your dataset usage metrics for both da
 
 **Evaluate and configure retention rule**
 
-Next, determine if your datasets have the appropriate retention policies based on license limits and business requirements for Analytics and Segmentation. 
+Next, determine if your datasets have the appropriate retention policies based on license limits and business requirements for Analytics and Segmentation. To view a given dataset's retention policy, select the ellipses (`...`) beside your dataset and then select **[!UICONTROL Set data retention policy]**.
 
-![](../images/data-management/set-retention-policy.png)
+![The pop up panel with dataset options, including "Set data retention policy"](../images/data-management/set-retention-policy.png)
 
 During this step, you could also analyze the retention impact using the impact forecaster. If a dataset lacks a retention rule, select **[!UICONTROL Set Data Retention]** to configure TTL for both data lake and Profile.
 
