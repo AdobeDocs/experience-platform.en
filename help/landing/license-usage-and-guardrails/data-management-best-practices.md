@@ -204,30 +204,45 @@ Read through the sections below, which include links to further documentation, t
 
 First, navigate to the **license usage dashboard** and review your entitlement usage at the sandbox level.
 
-![The license usage dashboard UI.]
+>[!BEGINTABS]
+
+>[!TAB Production sandbox]
+
+Use the [!UICONTROL Metrics] interface to view your license usage metrics. The interface displays information on your production sandbox by default.
+
+![The license usage dashboard UI displaying your license usage metrics for a production sandbox.](../images/data-management/prod-sandbox.png)
+
+>[!TAB Development]
+
+![The license usage dashboard UI displaying your license usage metrics for development sandboxes.](../images/data-management/dev-sandbox.png)
+
+>[!ENDTABS]
 
 **Analyze dataset-level storage usage**
 
-Use the **Dataset browse view** to review your dataset usage metrics for both data lake and Real-Time Customer Profile. You can sort datasets by storage size to identify the largest consumers of storage.
-
-![The dataset browse view UI.]
+Use the **Dataset browse view** to review your dataset usage metrics for both data lake and Real-Time Customer Profile. Select the column headers for either [!UICONTROL Data Lake Storage] or [!UICONTROL Profile Storage] and then select **[!UICONTROL Sort Descending]** to sort datasets by storage size and identify the largest consumers of storage.
 
 >[!BEGINTABS]
 
 >[!TAB Data lake storage]
 
-![]
+![The datasets in data lake sorted from largest to smallest.](../images/data-management/data-lake-storage.png)
 
 >[!TAB Profile storage]
 
-![]
-
+![The datasets in Profile sorted from largest to smallest.](../images/data-management/profile-storage.png)
 
 >[!ENDTABS]
 
 **Evaluate and configure retention rule**
 
-Next, determine if your datasets have the appropriate retention policies based on license limits and business requirements for Analytics and Segmentation. During this step, you could also analyze the retention impact using the impact forecaster. If a dataset lacks a retention rule, select [!UICONTROL Set Data Retention] to configure TTL for both data lake and Profile.
+Next, determine if your datasets have the appropriate retention policies based on license limits and business requirements for Analytics and Segmentation. 
+
+![](../images/data-management/set-retention-policy.png)
+
+During this step, you could also analyze the retention impact using the impact forecaster. If a dataset lacks a retention rule, select **[!UICONTROL Set Data Retention]** to configure TTL for both data lake and Profile.
+
+![](../images/data-management/dataset-retention.png)
 
 **Validate retention changes**
 
