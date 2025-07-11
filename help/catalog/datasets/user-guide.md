@@ -102,11 +102,13 @@ More information on these available actions can be found in their respective sec
 
 ### Preview a dataset {#preview}
 
-You can preview dataset sample data from both the inline options of the [!UICONTROL Browse] tab and also the [!UICONTROL Dataset activity] view. From the [!UICONTROL Browse] tab, select the ellipses (...) next to the dataset name you wish to preview. A menu list of options appears. Next, select **[!UICONTROL Preview dataset]** from the list of available options. If the dataset is empty, the preview link is deactivated and instead indicates that the preview is not available.
+You can preview dataset sample data from both the inline options of the [!UICONTROL Browse] tab and also the [!UICONTROL Dataset activity] view. A new dataset preview window is available with additional navigation and context enhancements.
+
+From the [!UICONTROL Browse] tab, select the ellipsis (...) next to the dataset name you want to preview. A list of options appears. Next, select [!UICONTROL Preview dataset] from the available options. If the dataset is empty, the preview link is deactivated and indicates that the preview is not available.
 
 ![The Browse tab of the Datasets workspace with the ellipsis and Preview dataset option highlighted for the chosen dataset.](../images/datasets/user-guide/preview-dataset-option.png)
 
-This opens the preview window, where the hierarchical view of the schema for the dataset is shown on the right.
+This opens the preview window, where the hierarchical schema view for the dataset is shown on the left.
 
 >[!NOTE]
 >
@@ -114,11 +116,49 @@ This opens the preview window, where the hierarchical view of the schema for the
 
 ![The dataset preview dialog with information about the structure, as well as sample values, for the dataset are shown.](../images/datasets/user-guide/preview-dataset.png)
 
-Alternatively, from the **[!UICONTROL Dataset activity]** screen, select **[!UICONTROL Preview dataset]** near the top-right corner of your screen to preview up to 100 rows of data. 
+Alternatively, from the **[!UICONTROL Dataset activity]** screen, select **[!UICONTROL Preview dataset]** near the top-right corner of your screen to preview up to 100 rows of data.
 
 ![The Preview dataset button is highlighted.](../images/datasets/user-guide/select-preview.png)
 
-For more robust methods to access your data, [!DNL Experience Platform] provides downstream services such as [!DNL Query Service] and [!DNL JupyterLab] to explore and analyze data. See the following documents for more information:
+The dataset preview window provides a streamlined interface for exploring and validating datasets.
+
+#### Dataset preview window {#dataset-preview-window}
+
+The following animation shows the dataset preview window with its navigation and data exploration features:
+
+![Screen recording showing the dataset preview window. The recording highlights the object browser sidebar, data type indicators, SQL query display, and formatted data table.](../images/datasets/user-guide/dataset-preview-demo.gif)
+
+The dataset preview window includes:
+
+* An object browser sidebar on the left for navigating and filtering dataset fields.
+* Data type indicators displayed next to each column name for quick insight into the structure of the dataset.
+* A SQL query display at the top of the window, showing the query used to generate the dataset.
+* A formatted table view of up to 100 rows in the lower right area for efficient data review.
+* Direct navigation to Query Editor for Data Distiller users, with the SQL query prepopulated for further exploration or modification.
+
+These features support fast navigation, schema understanding, and transparent dataset validation.
+
+Select **[!UICONTROL Preview dataset]** from the inline actions or from the [!UICONTROL Dataset activity] screen to open the preview window.
+
+>[!NOTE]
+>
+>The preview window displays a sample of up to 100 rows. Fields without data are excluded from the view.
+
+#### Advanced Query Editor shortcut {#query-editor-shortcut}
+
+If your organization has a Data Distiller license, you can access the Advanced Query Editor directly from the dataset preview window.
+
+>[!AVAILABILITY]
+>
+>Only users with the required Data Distiller license can access this functionality. If your organization does not have Data Distiller, the [!UICONTROL Advanced query editor] option is not visible.
+
+Select **[!UICONTROL Advanced query editor]** in the upper right of the preview window to open the Query Editor. The current preview query is preloaded and ready for execution or further analysis.
+
+![Dataset preview window showing the Advanced query editor button in the upper right.](../images/datasets/user-guide/dataset-preview-advanced-query-editor.png)
+
+This shortcut enables you to move seamlessly from previewing sample data to running and refining queries in Query Service without re-entering SQL or context.
+
+For additional data access and analysis, use downstream services such as [!DNL Query Service] and [!DNL JupyterLab]. See the following documents for more information:
 
 * [Query Service overview](../../query-service/home.md)
 * [JupyterLab user guide](../../data-science-workspace/jupyterlab/overview.md)
