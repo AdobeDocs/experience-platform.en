@@ -15,22 +15,22 @@ External audiences let you upload profile data from your external sources into A
 >
 >The endpoints in this guide are prefixed with `/core/ais`, as opposed to `/core/ups`.
 
-## Create submit request {#create-submit}
+## Create external audience {#create-audience}
 
-You can create a submit request by making a POST request to the `/external-audience/submit` endpoint. A submit request is used to create the external audience, and contains details of the location of the external audience through the source specification.
+You can create an external audience by making a POST request to the `/external-audience/` endpoint. 
 
 **API format**
 
 ```http
-POST /external-audience/submit
+POST /external-audience/
 ```
 
 **Request**
 
-+++ A sample request to create a submit request.
++++ A sample request to create an external audience.
 
 ```shell
-curl -X POST https://platform.adobe.io/data/core/ais/external-audience/submit \
+curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -90,55 +90,54 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/submit \
 
 **Response**
 
-A successful response returns HTTP status 202 with details of your submit request.
+A successful response returns HTTP status 202 with details of your newly created external audience.
 
-+++ A sample response when creating a submit request.
++++ A sample response when creating an external audience.
 
 ```json
 {
-    "taskId": "df8cd82f-a214-4b72-b549-d6ee23f1ff1a",
-    "name": "Sample external audience",
-    "description": "A sample version of an external audience",
-    "fields": [
-        {
-            "name": "ppid",
-            "type": "string",
-            "identityNs": "Email"
-        },
-        {
-            "name": "list_id",
-            "type": "string",
-            "labels": ["core/C2", "custom/deep"]
-        },
-        {
-            "name": "delete",
-            "type": "number"
-        },
-        {
-            "name": "process_consent",
-            "type": "string"
-        }
-    ],
-    "sourceSpec": {
-        "path": "activation/sample-source/example.csv",
-        "type": "file",
-        "sourceType": "Cloud Storage",
-        "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
-        },
-    "ttlInDays": 40,
-    "labels": ["core/C1"],
-    "audienceType": "people",
-    "originName": "CUSTOM_UPLOAD",
-    "createdBy": "{USER_ID}",
-    "createdAt": 1749324248,
-    "updatedBy": "{USER_ID}",
-    "updatedAt": 1749324248
+    "operationId": "df8cd82f-a214-4b72-b549-d6ee23f1ff1a",
+    "operationDetails": {
+        "name": "Sample external audience",
+        "description": "A sample version of an external audience",
+        "fields": [
+            {
+                "name": "ppid",
+                "type": "string",
+                "identityNs": "Email"
+            },
+            {
+                "name": "list_id",
+                "type": "string",
+                "labels": ["core/C2", "custom/deep"]
+            },
+            {
+                "name": "delete",
+                "type": "number"
+            },
+            {
+                "name": "process_consent",
+                "type": "string"
+            }
+        ],
+        "sourceSpec": {
+            "path": "activation/sample-source/example.csv",
+            "type": "file",
+            "sourceType": "Cloud Storage",
+            "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+            },
+        "ttlInDays": 40,
+        "labels": ["core/C1"],
+        "audienceType": "people",
+        "originName": "CUSTOM_UPLOAD"
+    }   
 }
 ```
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| `taskId` | String | The ID of the submission request. You can subsequently use this ID to retrieve the status of your audience's submission request. |
+| `operationId` | String | The ID of the operation. You can subsequently use this ID to retrieve the status of your audience's creation. |
+| `operationDetails` | Object | An object that contains the details of your newly created external audience. |
 | `name` | String | The name for the external audience. |
 | `description` | String | The description for the external audience. |
 | `fields` | Array of objects | The list of fields and their data types. This array determines what fields you need in your external audience. |
@@ -148,33 +147,30 @@ A successful response returns HTTP status 202 with details of your submit reques
 | `originName` | String | **Required** The origin of the audience. This states where the audience comes from.  |
 | `namespace` | String | The namespace for the audience. |
 | `labels` | Array of strings | The access control labels that apply to the external audience. More information about the available access control labels can be found in the [data usage labels glossary](/help/data-governance/labels/reference.md). |
-| `createdBy` | String | The ID of the user who created the external audience. |
-| `createdAt` | Long epoch timestamp | The timestamp when the external audience was created. |
-| `updatedBy` | String | The ID of the user who last updated the audience. |
-| `updatedAt` | Long epoch timestamp | The timestamp when the audience was last updated. |
+
 
 +++
 
-## Retrieve audience task status {#retrieve-status}
+## Retrieve audience creation status {#retrieve-status}
 
-You can retrieve the status of your external audience submission by making a GET request to the `/external-audiences/task` endpoint and providing the ID of the task you received from the submit request response.
+You can retrieve the status of your external audience submission by making a GET request to the `/external-audiences/operations` endpoint and providing the ID of the operation you received from the create external audience response.
 
 **API format**
 
 ```http
-GET /external-audiences/task/{TASK_ID}
+GET /external-audiences/operations/{OPERATION_ID}
 ```
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{TASK_ID}` | The `id` value of the task you want to retrieve. |
+| `{OPERATION_ID}` | The `id` value of the operation you want to retrieve. |
 
 **Request**
 
-+++ A sample request to retrieve an external audience's task status.
++++ A sample request to retrieve an external audience's operation status.
 
 ```shell
-curl -X GET https://platform.adobe.io/data/core/ais/external-audience/task/df8cd82f-a214-4b72-b549-d6ee23f1ff1a \
+curl -X GET https://platform.adobe.io/data/core/ais/external-audience/operations/df8cd82f-a214-4b72-b549-d6ee23f1ff1a \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
@@ -191,17 +187,61 @@ A successful response returns HTTP status 200 with details of the external audie
 
 ```json
 {
-    "taskId": "df8cd82f-a214-4b72-b549-d6ee23f1ff1a",
+    "operationId": "df8cd82f-a214-4b72-b549-d6ee23f1ff1a",
+    "operationDetails": {
+        "name": "Sample external audience",
+        "description": "A sample version of an external audience",
+        "fields": [
+            {
+                "name": "ppid",
+                "type": "string",
+                "identityNs": "Email"
+            },
+            {
+                "name": "list_id",
+                "type": "string",
+                "labels": ["core/C2", "custom/deep"]
+            },
+            {
+                "name": "delete",
+                "type": "number"
+            },
+            {
+                "name": "process_consent",
+                "type": "string"
+            }
+        ],
+        "sourceSpec": {
+            "path": "activation/sample-source/example.csv",
+            "type": "file",
+            "sourceType": "Cloud Storage",
+            "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+            },
+        "ttlInDays": 40,
+        "labels": ["core/C1"],
+        "audienceType": "people",
+        "originName": "CUSTOM_UPLOAD"
+    },
+    "audienceName": "Sample external audience",
     "audienceId": "60ccea95-1435-4180-97a5-58af4aa285ab",
-    "status": "SUCCESS"
+    "status": "SUCCESS",
+    "createdBy": "{USER_ID}",
+    "createdAt": 1749324248,
+    "updatedBy": "{USER_ID}",
+    "updatedAt": 1749624273
 }
 ```
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| `taskId` | String | The ID of the task you're retrieving. |
+| `operationId` | String | The ID of the operation you're retrieving. |
+| `operationDetails` | Object | An object containing details of the audience. |
 | `audienceId` | String | The ID of the external audience that is being submitted by the task. |
 | `status` | String | The status of the task. This can be one of the following values: `SUCCESS`, `FAILED`, `PROCESSING`. |
+| `createdBy` | String | The ID of the user who created the external audience. |
+| `createdAt` | Long epoch timestamp | The timestamp when the external audience was created. |
+| `updatedBy` | String | The ID of the user who last updated the audience. |
+| `updatedAt` | Long epoch timestamp | The timestamp when the audience was last updated. |
 
 +++
 
