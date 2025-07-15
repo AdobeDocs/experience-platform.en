@@ -21,7 +21,7 @@ Use the Didomi source to centralize and act on consent data within Experience Pl
 > This documentation page was created by the _Didomi_ team. For any inquiries or update requests, please contact them directly at _support@didomi.io_.
 > For step-by-step instructions on generating the connection, refer to the [Didomi Adobe source connector documentation](https://developers.didomi.io/integrations/third-party-apps/preference-management-platform-integrations/Adobe-source-connector).
 
-![flux](./images/flux.png)
+![flux](../../../../images/tutorials/create/didomi/flux.png)
 
 ## Prerequisites
 
@@ -56,7 +56,7 @@ For full instructions on how to retrieve these values, refer to the official [Ad
 6. Ensure that at least one field is tagged as an **identity** so Adobe can recognize the primary value.
 7. Enable **Profile** for the schema — this is essential for storing data.
 
-![create-schema](./images/create-schema.png)
+![create-schema](../../../../images/tutorials/create/didomi/create-schema.png)
 
 ---
 
@@ -66,7 +66,7 @@ For full instructions on how to retrieve these values, refer to the official [Ad
 2. Select the option to create a dataset using the previously created schema.
 3. Once the dataset is created, you can proceed with configuring the source connector.
 
-![create-dataset](./images/create-dataset.png)
+![create-dataset](../../../../images/tutorials/create/didomi/create-dataset.png)
 
 ## Configure the HTTP Webhook on the Didomi Console
 
@@ -74,7 +74,7 @@ Webhooks allow you to subscribe to events triggered on the Didomi platform when 
 
 To ensure compatibility with Adobe Experience Platform, your webhook must meet the following requirements:
 
-![didomi-console](./images/didomi-console.png)
+![didomi-console](../../../../images/tutorials/create/didomi/didomi-console.png)
 
 1. Navigate to the **Didomi Marketplace**.
 2. Select the option to **Configure Webhook**.
@@ -114,7 +114,7 @@ In the Experience Platform UI:
 1. Select **Sources** from the left navigation to access the catalog of sources available in Experience Platform.
 2. Find the **Didomi** source card and click on **Add data**.
 
-![source-connector](./images/source-connector.png)
+![source-connector](../../../../images/tutorials/create/didomi/source-connector.png)
 
 ---
 
@@ -122,7 +122,7 @@ In the Experience Platform UI:
 
 In the Experience Platform UI, add the schema for the source data using the file downloaded in the previous step.
 
-![add-data-schema](./images/add-data-schema.png)
+![add-data-schema](../../../../images/tutorials/create/didomi/add-data-schema.png)
 
 ---
 
@@ -133,7 +133,7 @@ In the Experience Platform UI:
 1. Select the **dataset** created in the previous step.
 2. Make sure the **Profile dataset** option is enabled.
 
-![dataflow-details](./images/dataflow-details.png)
+![dataflow-details](../../../../images/tutorials/create/didomi/dataflow-details.png)
 
 ---
 
@@ -145,7 +145,7 @@ In the Adobe Experience Platform UI:
 2. The mapping is used specifically to transfer **purpose data** from Didomi into the Adobe Experience Platform dataset. These purposes represent the user's consent choices (e.g., for analytics, personalization, advertising, etc.) and are the only accepted mapping fields in this integration.
 3. Use the sample webhook payload downloaded from the Didomi webhook settings to map each Didomi purpose to the appropriate fields in your Adobe dataset.
 
-![mapping-details](./images/mapping-details.png)
+![mapping-details](../../../../images/tutorials/create/didomi/mapping-details.png)
 
 ---
 
@@ -156,7 +156,7 @@ In the Experience Platform UI:
 1. After completing the configuration, review the configuration parameters that were missing from the initial webhook setup.
 2. Once these values are available, return to Didomi and update the webhook configuration.
 
-![configuration-done](./images/configuration-done.png)
+![configuration-done](../../../../images/tutorials/create/didomi/configuration-done.png)
 
 ---
 
