@@ -7,7 +7,7 @@ hidefromtoc: yes
 
 # External audiences endpoint
 
-External audiences let you upload profile data from your external sources into Adobe Experience Platform. You can use the `/external-audience` endpoint in the Segmentation Service API to submit details about your external audience, activate an external audience to be ingested to Experience Platform, view details and update your external audiences, as well as delete your external audiences.
+External audiences let you upload profile data from your external sources into Adobe Experience Platform. You can use the `/external-audience` endpoint in the Segmentation Service API to ingest an external audience to Experience Platform, view details and update your external audiences, as well as delete your external audiences.
 
 ## Getting started
 
@@ -76,15 +76,15 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
 | -------- | ---- | ----------- |
 | `name` | String | The name for the external audience. |
 | `description` | String | An optional description for the external audience. |
-| `fields` | Array of objects | The list of fields and their data types. When creating the list of fields, you can add the following items: <ul><li>`name`: **Required** The name of the field that is part of the external audience specification.</li><li>`type`: **Required** The type of data that goes into the field. Supported values include `string`, `number`, `long`, `integer`, `date`, `datetime`, and `boolean`.</li>`identityNs`: **Required for identity field** The namespace that is used by the identity field. Supported values include ???.<li><li>`labels`: *Optional* An array of access control labels for the field. More information about the available access control labels can be found in the [data usage labels glossary](/help/data-governance/labels/reference.md). </li></ul> |
-| `sourceSpec` | Object | An object that contains the information where the external audience is located. When using this object, you **must** include the following information: <ul><li>`path`: **Required**: The location of the external audience or the folder that contains the external audience within the source.</li><li>`type`: **Required** The type of the object you're retrieving from the source. This value can either be `file` or `folder`.</li><li>`sourceType`: **Required** The type of source you're retrieving from. Currently, the only supported value is `Cloud Storage`.</li><li>`baseConnectionId`: **Required** The ID of the base connection. This is provided from your source provider. For more information, please read ???</li></ul> |
+| `customAudienceId` | String | An optional identifier for your external audience. |
+| `fields` | Array of objects | The list of fields and their data types. When creating the list of fields, you can add the following items: <ul><li>`name`: **Required** The name of the field that is part of the external audience specification.</li><li>`type`: **Required** The type of data that goes into the field. Supported values include `string`, `number`, `long`, `integer`, `date` (`2025-05-13`), `datetime` (`2025-05-23T20:19:00+00:00`), and `boolean`.</li>`identityNs`: **Required for identity field** The namespace that is used by the identity field. Supported values include all valid namespaces, such as `ECID` or `email`.li><li>`labels`: *Optional* An array of access control labels for the field. More information about the available access control labels can be found in the [data usage labels glossary](/help/data-governance/labels/reference.md). </li></ul> |
+| `sourceSpec` | Object | An object that contains the information where the external audience is located. When using this object, you **must** include the following information: <ul><li>`path`: **Required**: The location of the external audience or the folder that contains the external audience within the source.</li><li>`type`: **Required** The type of the object you're retrieving from the source. This value can either be `file` or `folder`.</li><li>`sourceType`: *Optional* The type of source you're retrieving from. Currently, the only supported value is `Cloud Storage`.</li><li>`cloudType`: *Optional* The type of cloud storage, based off of the source type. Supported values include `S3`, `DLZ`, `GCS`, and `SFTP`.</li><li>`baseConnectionId`: The ID of the base connection, and is provided from your source provider. This value is **required** if using a `cloudType` value of `S3`, `GCS`, or `SFTP`. For more information, please read the [source connectors overview](../../sources/home.md)li></ul> |
 | `ttlInDays` | Integer | The data expiration for the external audience, in days. This value can be set from 1 to 90. By default, the data expiration is set to 30 days. |
 | `audienceType` | String | The audience type for the external audience. Currently, only `people` is supported. |
 | `originName` | String | **Required** The origin of the audience. This states where the audience comes from. For external audiences, you should use `CUSTOM_UPLOAD`. |
 | `namespace` | String | The namespace for the audience. By default, this value is set to `CustomerAudienceUpload`. |
 | `labels` | Array of strings | The access control labels that apply to the external audience. More information about the available access control labels can be found in the [data usage labels glossary](/help/data-governance/labels/reference.md). |
 | `tags` | Array of strings | The tags you want to apply to the external audience. More information about tags can be found in the [managing tags guide](/help/administrative-tags/ui/managing-tags.md). |
-| `profileIngestion` | Boolean | A boolean value that determines if the external audience will be ingested into Segmentation Service. By default, this value is set to `true`. |
 
 +++
 
@@ -137,7 +137,7 @@ A successful response returns HTTP status 202 with details of your newly created
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | `operationId` | String | The ID of the operation. You can subsequently use this ID to retrieve the status of your audience's creation. |
-| `operationDetails` | Object | An object that contains the details of your newly created external audience. |
+| `operationDetails` | Object | An object that contains the details of the request you submitted to create the external audience. |
 | `name` | String | The name for the external audience. |
 | `description` | String | The description for the external audience. |
 | `fields` | Array of objects | The list of fields and their data types. This array determines what fields you need in your external audience. |
@@ -188,6 +188,7 @@ A successful response returns HTTP status 200 with details of the external audie
 ```json
 {
     "operationId": "df8cd82f-a214-4b72-b549-d6ee23f1ff1a",
+    "status": "SUCCESS",
     "operationDetails": {
         "name": "Sample external audience",
         "description": "A sample version of an external audience",
@@ -224,7 +225,6 @@ A successful response returns HTTP status 200 with details of the external audie
     },
     "audienceName": "Sample external audience",
     "audienceId": "60ccea95-1435-4180-97a5-58af4aa285ab",
-    "status": "SUCCESS",
     "createdBy": "{USER_ID}",
     "createdAt": 1749324248,
     "updatedBy": "{USER_ID}",
@@ -235,17 +235,21 @@ A successful response returns HTTP status 200 with details of the external audie
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | `operationId` | String | The ID of the operation you're retrieving. |
+| `status` | String | The status of the operation. This can be one of the following values: `SUCCESS`, `FAILED`, `PROCESSING`. |
 | `operationDetails` | Object | An object containing details of the audience. |
-| `audienceId` | String | The ID of the external audience that is being submitted by the task. |
-| `status` | String | The status of the task. This can be one of the following values: `SUCCESS`, `FAILED`, `PROCESSING`. |
+| `audienceId` | String | The ID of the external audience that is being submitted by the operation. |
 | `createdBy` | String | The ID of the user who created the external audience. |
-| `createdAt` | Long epoch timestamp | The timestamp when the external audience was created. |
+| `createdAt` | Long epoch timestamp | The timestamp, in seconds, when the request to create the external audience was submitted. |
 | `updatedBy` | String | The ID of the user who last updated the audience. |
-| `updatedAt` | Long epoch timestamp | The timestamp when the audience was last updated. |
+| `updatedAt` | Long epoch timestamp | The timestamp, in seconds, when the audience was last updated. |
 
 +++
 
 ## Update an external audience {#update-audience}
+
+>[!NOTE]
+>
+>To use the following endpoint, you need to have the `audienceId` of your external audience. You can get your `audienceId` from a successful call to the `GET /external-audiences/operations/{OPERATION_ID}` endpoint.
 
 You can update fields of your external audience by making a PATCH request to the `/external-audience` endpoint and providing the ID Of the audience in the request path.
 
@@ -301,7 +305,7 @@ A successful response returns HTTP status 200 with details of the updated extern
 ```json
 {
     "audienceId": "60ccea95-1435-4180-97a5-58af4aa285ab",
-    "name": "Sample external audience",
+    "audienceName": "Sample external audience",
     "description": "New sample description",
     "fields": [
         {
@@ -348,6 +352,10 @@ A successful response returns HTTP status 200 with details of the updated extern
 >
 >You will **not** be able to start a new ingestion for the external audience if a previous audience ingestion is already in progress.
 
+>[!NOTE]
+>
+>To use the following endpoint, you need to have the `audienceId` of your external audience. You can get your `audienceId` from a successful call to the `GET /external-audiences/operations/{OPERATION_ID}` endpoint.
+
 You can start an audience ingestion by making a POST request to the following endpoint while providing the audience ID.
 
 **API format**
@@ -389,23 +397,27 @@ A successful response returns HTTP status 200 with details about the ingestion r
 
 ```json
 {
-    "name": "Sample external audience",
+    "audienceName": "Sample external audience",
     "audienceId": "60ccea95-1435-4180-97a5-58af4aa285ab",
     "runId": "fb342311-725d-4b48-ab7d-c6105fbc2b8b",
     "differentialIngestion": true,
     "dataFilterStartTime": 764245635,
-    "dataFilterEndTime": 4565657575
+    "dataFilterEndTime": 4565657575,
+    "createdAt": 4565657575,
+    "createdBy:" "{USER_ID}"
 }
 ```
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| `name` | String | The name of the audience you're starting an ingestion run for. |
+| `audienceName` | String | The name of the audience you're starting an ingestion run for. |
 | `audienceId` | String | The ID of the audience. |
 | `runId` | String | The ID of the ingestion run you started. |
 | `differentialIngestion` | Boolean | A field that determines if the ingestion is a partial ingestion based off of the difference since the last ingestion or a full audience ingestion. |
 | `dataFilterStartTime` | Epoch timestamp | The range specifying the starting time the flow runs to select which files were processed. |
 | `dataFilterEndTime` | Epoch timestamp | The range specifying the ending time the flow runs to select which files were processed. |
+| `createdAt` | Long epoch timestamp | The timestamp, in seconds, when the request to create the external audience was submitted. |
+| `createdBy` | String | The ID of the user who created the external audience. |
 
 +++
 
@@ -443,13 +455,15 @@ A successful response returns HTTP status 200 with details of the external audie
 
 ```json
 {
+    "audienceName": "Sample external audience",
     "audienceId": "60ccea95-1435-4180-97a5-58af4aa285ab",
     "runId": "fb342311-725d-4b48-ab7d-c6105fbc2b8b",
     "status": "SUCCESS",
     "differentialIngestion": true,
     "dataFilterStartTime": 764245635,
     "dataFilterEndTime": 3456788568,
-    "ingestionTime": 1785678909,
+    "createdAt": 1749324248,
+    "createdBy": "{USER_ID}",
     "details": [
         {
             "stage": "DATASET_INGEST",
@@ -467,13 +481,15 @@ A successful response returns HTTP status 200 with details of the external audie
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
+| `audienceName` | String | The name of the audience. |
 | `audienceId` | String | The ID of the audience. |
 | `runId` | String | The ID of the ingestion run. |
 | `status` | String | The status of the ingestion run. Possible statuses include `SUCCESS` and `FAILED`. |
 | `differentialIngestion` | Boolean | A field that determines if the ingestion is a partial ingestion based off of the difference since the last ingestion or a full audience ingestion. |
 | `dataFilterStartTime` | Epoch timestamp | The range specifying the starting time the flow runs to select which files were processed. |
 | `dataFilterEndTime` | Epoch timestamp | The range specifying the ending time the flow runs to select which files were processed. |
-| `ingestionTime` | Epoch timestamp | The time which the ingestion run was triggered. |
+| `createdAt` | Long epoch timestamp | The timestamp, in seconds, when the request to create the external audience was submitted. |
+| `createdBy` | String | The ID of the user who created the external audience. |
 | `details` | Array of objects | An object containing the details of the ingestion run. <ul><li>`stage`: The stage of the ingestion run. This can either be `DATASET_INGEST` or `PROFILE_STORE_INGEST`, which represent the data lake ingestion and the profile ingestion.</li><li>`status`: The status of the ingestion on the stage. Possible statuses include `SUCCESS` and `FAILED`.</li><li>`flowRunId`: The ID of the stage's ingestion flow run.</li></ul> |
 
 +++
@@ -529,13 +545,15 @@ A successful response returns HTTP status 200 with a list of ingestion statuses 
 {
     "runs": [
         {
+            "audienceName": "Sample external audience",
             "audienceId": "60ccea95-1435-4180-97a5-58af4aa285ab",
             "runId": "fb342311-725d-4b48-ab7d-c6105fbc2b8b",
             "status": "SUCCESS",
             "differentialIngestion": true,
             "dataFilterStartTime": 764245635,
             "dataFilterEndTime": 3456788568,
-            "ingestionTime": 1785678909,
+            "createdAt": 1785678909,
+            "createdBy": "{USER_NAME}",
             "details": [
                 {
                     "stage": "DATASET_INGEST",
@@ -550,13 +568,15 @@ A successful response returns HTTP status 200 with a list of ingestion statuses 
             ]
         },
         {
+            "audienceName": "Sample external audience 2",
             "audienceId": "60ccea95-1435-4180-97a5-58af4aa285ab",
             "runId": "406e38e4-fbd5-43e1-8d0c-01ccb3f9ad10",
             "status": "SUCCESS",
             "differentialIngestion": true,
             "dataFilterStartTime": 764245635,
             "dataFilterEndTime": 3456788568,
-            "ingestionTime": 1989687631,
+            "createdAt": 1749324248,
+            "createdBy": "{USER_ID}",
             "details": [
                 {
                     "stage": "DATASET_INGEST",
@@ -614,7 +634,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ais/external-audience/60ccea9
 
 **Response**
 
-A successful response returns HTTP status 202 with an empty response body.
+A successful response returns HTTP status 204 with an empty response body.
 
 ## Next steps {#next-steps}
 
