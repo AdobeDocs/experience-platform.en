@@ -14,7 +14,7 @@ Didomi provides a leading Consent and Preference Management Platform that helps 
 
 The Didomi Source Connector enables you to stream real-time user consent and preference data from the Didomi Consent & Preference Management Platform into Adobe Experience Platform (AEP).
 Adobe Experience Platform supports ingesting data from a wide range of external systems including cloud storage, databases, and applications like Didomi through a system of source connectors. These connectors let you authenticate external systems, manage data flow into Adobe, and ensure consistent and structured ingestion of customer data.
-Use the Didomi source to centralize and act on consent data within Experience Platform — keeping customer profiles enriched with consent signals and ensuring downstream workflows remain compliant and up to date.
+Use the Didomi source to centralize and act on consent data in Experience Platform, keeping your customer profiles and downstream workflows compliant and up to date.
 
 > [!IMPORTANT]
 >
