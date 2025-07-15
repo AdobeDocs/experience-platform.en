@@ -21,7 +21,7 @@ Use the Didomi source to centralize and act on consent data within Experience Pl
 > This documentation page was created by the _Didomi_ team. For any inquiries or update requests, please contact them directly at _support@didomi.io_.
 > For step-by-step instructions on generating the connection, refer to the [Didomi Adobe source connector documentation](https://developers.didomi.io/integrations/third-party-apps/preference-management-platform-integrations/Adobe-source-connector).
 
-![flux](../../../../images/tutorials/create/didomi/flux.png)
+![flux](../../../../images/tutorials/create/didomi/flux.jpeg)
 
 ## Prerequisites
 
