@@ -248,14 +248,21 @@ Next, determine if your datasets have the appropriate retention policies based o
 
 ![The pop up panel with dataset options, including "Set data retention policy"](../images/data-management/set-retention-policy.png)
 
-During this step, you could also analyze the retention impact using the impact forecaster. If a dataset lacks a retention rule, select **[!UICONTROL Set Data Retention]** to configure TTL for both data lake and Profile.
 
-![](../images/data-management/dataset-retention.png)
+The *[!UICONTROL Set dataset retention]* interface appears. Use this interface to configure a retention policy for your dataset. You can also use this interface to gather information on the on the amount of storage space that your dataset is using in either data lake or profile.
+
+![The "set dataset retention" interface.](../images/data-management/dataset-retention.png)
+
+You can further analyze the retention impact of your dataset using the impact forecaster. Select **[!UICONTROL View ExperienceEvent data distribution]** to viw a chart that displays your retention window and the total percentage of storage that is set to expire.
+
+When finished, select **[!UICONTROL Save]**
+
+![The impact forecaster from within the dataset retention interface.](../images/data-management/impact-forecaster.png)
 
 **Validate retention changes**
 
-Once you have applied your retention policies, you can validate your retention changes using the following tools:
+Once you have applied your retention policies, you can use the following tools to validate your retention changes:
 
-* Use **dataset usage metrics** in the dataset browse view.
-* Use **retention impact** through the [!UICONTROL Monitoring dasbhoard].
-* Use the **license usage dashboard**.
+* Use [dataset usage metrics](../../catalog/datasets/user-guide.md#enhanced-visibility-of-retention-periods-and-storage-metrics) in the dataset browse view.
+* Use the [monitoring dashboard](../../dataflows/ui/monitor.md) to view and analyze retention impact.
+* Use the [license usage dashboard](../../dashboards/guides/license-usage.md).
