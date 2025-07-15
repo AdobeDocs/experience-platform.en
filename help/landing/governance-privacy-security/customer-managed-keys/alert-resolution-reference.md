@@ -17,11 +17,7 @@ The following sections outline the types of alerts that may be triggered by Cust
 
 ## Key access disabled {#key-access-disabled}
 
-This alert indicates that Adobe Experience Platform is unable to access the configured CMK due to the key being disabled or rendered inaccessible by related key configuration issues.
-
->[!IMPORTANT]
->
->In this event, Adobe CMK treats the access failure as a purposeful removal and will purge all data associated with your organization, based on your SLA.
+This alert indicates that Adobe Experience Platform is unable to access the configured CMK because the key is disabled or inaccessible due to its configuration. In such cases, the system treats the condition as an intentional removal of key access.
 
 ### When it occurs
 
