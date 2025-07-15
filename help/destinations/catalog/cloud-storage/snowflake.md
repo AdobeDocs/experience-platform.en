@@ -14,7 +14,7 @@ exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
 
 ## Overview {#overview}
 
-Use the Snowflake destination connector to export data to Adobe's Snowflake instance, then share it with your instance through [private listings](https://other-docs.snowflake.com/en/collaboration/collaboration-listings-about).
+Use the Snowflake destination connector to export data to Adobe's Snowflake instance, which is then shared with your instance through [private listings](https://other-docs.snowflake.com/en/collaboration/collaboration-listings-about).
 
 Read the following sections to understand how the Snowflake destination works and how data is transferred between Adobe and Snowflake.
 
@@ -45,12 +45,12 @@ Before configuring your Snowflake connection, make sure you meet the following p
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which types of audiences you can export to this destination.
+This section describes which types of audiences you can export to this destination. The two tables below indicate which audiences this connector supports, by _audience origin_ and _profile types included in the audience_:
 
 | Audience origin | Supported | Description | 
 |---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files. |
+| All other audience origins | ✓ | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
