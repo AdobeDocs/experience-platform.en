@@ -114,7 +114,7 @@ In the Experience Platform UI:
 1. Select **Sources** from the left navigation to access the catalog of sources available in Experience Platform.
 2. Find the **Didomi** source card and click on **Add data**.
 
-![source-connector](../../../../images/tutorials/create/didomi/source-connector.png)
+![source-connector-list](../../../../images/tutorials/create/didomi/source-connector-list.png)
 
 ---
 
