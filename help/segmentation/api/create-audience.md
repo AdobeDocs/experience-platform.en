@@ -1,13 +1,13 @@
 ---
 title: Create Audience API Endpoint
-description: Learn how to create a Policy-Enforcement-Service-only audience.
+description: Learn how to create the metadata for an external audience using the API.
 hide: yes
 hidefromtoc: yes
 ---
 
 # Create audience endpoint
 
-You can use this endpoint to create an external audience that can interact with Policy Enforcement Service.
+The POST `/audiences` endpoint can be used create the metadata for an external audience. You should use this endpoint if the audience ingestion will be managed in a separate service, such as batch ingestion.
 
 ## Getting started
 
