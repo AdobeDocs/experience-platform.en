@@ -76,7 +76,7 @@ To ensure compatibility with Adobe Experience Platform, your webhook must meet t
 
 ![didomi-console](../../../../images/tutorials/create/didomi/didomi-console.png)
 
-1. Navigate to the **Didomi Marketplace**.
+1. Navigate to the **[Didomi Marketplace](https://console.didomi.io/)**.
 2. Select the option to **Configure Webhook**.
 3. Add the webhook configuration.
 
