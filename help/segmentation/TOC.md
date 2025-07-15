@@ -15,6 +15,7 @@ role: User
 - Segmentation API {#api}
     - [Overview](api/overview.md)
     - [Getting started](api/getting-started.md)
+    - [Create audience metadata](api/create-audience.md)
     - [Audiences](api/audiences.md)
     - [Export jobs](api/export-jobs.md)
     - [External audiences](api/external-audiences.md)

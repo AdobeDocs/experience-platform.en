@@ -15,6 +15,20 @@ External audiences let you upload profile data from your external sources into A
 >
 >The endpoints in this guide are prefixed with `/core/ais`, as opposed to `/core/ups`.
 
+In order to use Experience Platform APIs, you must have completed the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in Experience Platform API calls, as shown below:
+
+- Authorization: `Bearer {ACCESS_TOKEN}`
+- x-api-key: `{API_KEY}`
+- x-gw-ims-org-id: `{ORG_ID}`
+
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Experience Platform] APIs require a header that specifies the name of the sandbox in which the operation will take place:
+
+- x-sandbox-name: `{SANDBOX_NAME}`
+  
+>[!NOTE]
+>
+>For more information on working with sandboxes in [!DNL Experience Platform], see the [sandboxes overview documentation](../../sandboxes/home.md).
+
 ## Create external audience {#create-audience}
 
 You can create an external audience by making a POST request to the `/external-audience/` endpoint. 
