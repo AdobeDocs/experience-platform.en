@@ -39,7 +39,7 @@ This section describes which types of audiences you can export to this destinati
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
+| ---------|----------|---------|
 | Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the mapping screen of the [destination activation workflow](../../ui/activate-segment-streaming-destinations.md#mapping).|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
@@ -52,6 +52,7 @@ To use the HTTP API destination to export data out of Experience Platform, you m
 * You must have an HTTP endpoint that supports REST API.
 * Your HTTP endpoint must support the Experience Platform profile schema. No transformation to a 3rd-party payload schema is supported in the HTTP API destination. Refer to the [exported data](#exported-data) section for an example of the Experience Platform output schema.
 * Your HTTP endpoint must support headers.
+* Your HTTP endpoint must respond within 2 seconds to ensure proper data processing and avoid timeout errors.
 
 >[!TIP]
 >
@@ -358,3 +359,7 @@ Below are further examples of exported data, depending on the UI settings you se
 In 95 percent of the time, Experience Platform attempts to offer a throughput latency of less than 10 minutes for successfully sent messages with a rate of less than 10 thousand requests per second for each dataflow to an HTTP destination.
 
 In case of failed requests to your HTTP API destination, Experience Platform stores the failed requests and retries twice to send the requests to your endpoint.
+
+## Troubleshooting {#troubleshooting}
+
+To ensure reliable data delivery and avoid timeout issues make sure that your HTTP endpoint responds within 2 seconds to Experience Platform requests, as specified in the [prerequisites](#prerequisites) section. Responses which take longer will result in timeout errors.
