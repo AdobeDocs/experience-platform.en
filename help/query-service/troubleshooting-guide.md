@@ -641,6 +641,12 @@ Compute hours for a query can fluctuate due to multiple factors. These include t
 Backend infrastructure is constantly improved to optimize Compute Hour utilization and processing time. As a result, you may notice changes over time as performance enhancements are implemented.
 +++
 
+### Does Data Distiller performance differ between development and production sandboxes?
+
++++Answer
+You can expect similar performance when you run queries in both development and production sandboxes, as both environments use the same backend resources. However, you may notice some differences in compute hours consumed. These differences are usually due to the amount of data processed and the available compute resources at the time you run your query.
++++
+
 ## Queries UI
 
 ### The "Create query" is stuck "Initializing connection..." when trying to connect to Query Service. How do I fix the issue?
