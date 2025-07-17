@@ -5,23 +5,23 @@ keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 ---
 
-# Release notes
+# Web SDK Release notes
 
 This document covers the release notes for the Adobe Experience Platform Web SDK.
 For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
 ## Version 2.28.0 - July 17, 2025
 
-**New features**
+<!-- **New features**
 
-- Added support for AJO disqualification rules. (a feature yet to be released in Adobe Journey Optimizer)
+- Added support for Adobe Journey Optimizer disqualification rules. (a feature yet to be released in Adobe Journey Optimizer) -->
 
 **Fixes and improvements**
 
-- Fixed an error where the media analytics legacy object allowed the wrong data type for the length property.
-- Fixed identity management code to handle promise rejections for identity not found errors.
-- Fixed an issue where HTML content items failed to render due to missing renderStatusHandler.
-- Fixed activity map url collection for non-http URLs.
+- Fixed an error in the [Media Analytics tracker](commands/getmediaanalyticstracker.md) where the `length` property of the media object incorrectly accepted invalid data types.
+- Improved [identity management](identity/overview.md) error handling to properly process promise rejections when identity lookup fails.
+- Resolved an issue where [personalization content](personalization/rendering-personalization-content.md) with HTML content items failed to render due to a missing renderStatusHandler.
+- Fixed activity map [URL collection](commands/configure/clickcollectionenabled.md) to properly handle non-HTTP URLs.
 
 ## Version 2.27.0 - May 20, 2025
 

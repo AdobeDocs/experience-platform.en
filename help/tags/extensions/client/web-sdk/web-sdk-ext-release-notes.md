@@ -4,7 +4,7 @@ description: Adobe Experience Platform Web SDK Tag Extension
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 ---
 
-# Adobe Experience Platform Web SDK extension release notes
+# Web SDK extension release notes
 
 This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Experience Platform Web SDK release notes](/help/web-sdk/release-notes.md).
 
@@ -16,8 +16,8 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 
 **Fixes and improvements**
 
-- Fixed an issue where an error is thrown when a datastream override is "enabled" via data element.
-- Fixed an issue where empty idSyncContainerId overrides would throw an error.
+- Fixed an issue where an error is thrown when a datastream override is enabled via a data element.
+- Fixed an issue where empty `idSyncContainerId` overrides would throw an error.
 
 ## Version 2.30.1 - May 27, 2025
 
