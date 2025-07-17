@@ -139,7 +139,7 @@ Select **[!UICONTROL Export full files]** to trigger the export of a file contai
 
     >[!NOTE]
     >
-    > Weekly and monthly scheduling options are currently supported only for the following file-based cloud storage destinations, and only when activating **people audiences** and **prospect audiences**.
+    > Weekly and monthly scheduling options are currently supported only for the following file-based cloud storage destinations, and only when activating [people audiences](../../segmentation/types/overview.md#people-audience) and [prospect audiences](../../segmentation/types/overview.md#prospect-audience).
     > 
     > * Amazon S3
     > * Azure Blob Storage
