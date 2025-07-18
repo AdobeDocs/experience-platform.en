@@ -375,7 +375,7 @@ You can start an audience ingestion by making a POST request to the following en
 **API format**
 
 ```http
-POST /external-audience/{AUDIENCE_ID}/run
+POST /external-audience/{AUDIENCE_ID}/runs
 ```
 
 **Request**
@@ -385,7 +385,7 @@ The following request triggers an ingestion run for the external audience.
 +++ A sample request to start an audience ingestion.
 
 ```shell
-curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/run \
+curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/runs \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
@@ -436,6 +436,10 @@ A successful response returns HTTP status 200 with details about the ingestion r
 +++
 
 ## Retrieve specific audience ingestion status {#retrieve-ingestion-status}
+
+>[!NOTE]
+>
+>To use the following endpoint, you need to have the `audienceId` of your external audience. You can get your `audienceId` from a successful call to the `GET /external-audiences/operations/{OPERATION_ID}` endpoint.
 
 You can retrieve the status of an audience ingestion by making a GET request to the following endpoint while providing both the audience and run IDs.
 
@@ -510,6 +514,10 @@ A successful response returns HTTP status 200 with details of the external audie
 
 ## List audience ingestion statuses {#list-ingestion-statuses}
 
+>[!NOTE]
+>
+>To use the following endpoint, you need to have the `audienceId` of your external audience. You can get your `audienceId` from a successful call to the `GET /external-audiences/operations/{OPERATION_ID}` endpoint.
+
 You can retrieve all the ingestion statuses for the selected external audience by making a GET request to the following endpoint while providing the audience ID. Multiple parameters can be included, separated by ampersands (`&`). 
 
 **API format**
@@ -567,19 +575,7 @@ A successful response returns HTTP status 200 with a list of ingestion statuses 
             "dataFilterStartTime": 764245635,
             "dataFilterEndTime": 3456788568,
             "createdAt": 1785678909,
-            "createdBy": "{USER_NAME}",
-            "details": [
-                {
-                    "stage": "DATASET_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                },
-                {
-                    "stage": "PROFILE_STORE_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                }
-            ]
+            "createdBy": "{USER_NAME}"
         },
         {
             "audienceName": "Sample external audience 2",
@@ -590,19 +586,7 @@ A successful response returns HTTP status 200 with a list of ingestion statuses 
             "dataFilterStartTime": 764245635,
             "dataFilterEndTime": 3456788568,
             "createdAt": 1749324248,
-            "createdBy": "{USER_ID}",
-            "details": [
-                {
-                    "stage": "DATASET_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                },
-                {
-                    "stage": "PROFILE_STORE_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                }
-            ]
+            "createdBy": "{USER_ID}"
         }
     ],
     "_page": {
@@ -621,6 +605,10 @@ A successful response returns HTTP status 200 with a list of ingestion statuses 
 +++
 
 ## Delete an external audience {#delete-audience}
+
+>[!NOTE]
+>
+>To use the following endpoint, you need to have the `audienceId` of your external audience. You can get your `audienceId` from a successful call to the `GET /external-audiences/operations/{OPERATION_ID}` endpoint.
 
 You can delete an external audience by making a DELETE request to the following endpoint while providing the audience ID.
 
