@@ -137,6 +137,18 @@ Select **[!UICONTROL Export full files]** to trigger the export of a file contai
     * **[!UICONTROL Weekly]**: select the start date and subsequent exports will occur on that day of the week until the selected end date.
     * **[!UICONTROL Monthly]**: select the start date and subsequent exports will occur on that date of the month until the selected end date. For months with fewer than 30 or 31 days, the export occurs on the last day of the month.
 
+    >[!NOTE]
+    >
+    > Weekly and monthly scheduling options are currently supported only for the following file-based cloud storage destinations, and only when activating [people audiences](../../segmentation/types/overview.md#people-audience) and [prospect audiences](../../segmentation/types/overview.md#prospect-audience).
+    > 
+    > * [Amazon S3](../catalog/cloud-storage/amazon-s3.md)
+    > * [Azure Blob Storage](../catalog/cloud-storage/azure-blob.md)
+    > * [Data Landing Zone](../catalog/cloud-storage/data-landing-zone.md)
+    > * [Google Cloud Storage](../catalog/cloud-storage/google-cloud-storage.md)
+    > * [SFTP](../catalog/cloud-storage/sftp.md)
+    > 
+    > Weekly and monthly scheduling options are not available for other destination types.
+
 2. Use the **[!UICONTROL Time]** toggle to select whether the export should happen immediately after audience evaluation or on a scheduled basis, at a specified time. When selecting the **[!UICONTROL Scheduled]** option, you can use the selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
 
     Use the **[!UICONTROL After segment evaluation]** option to have the activation job run immediately after the daily Experience Platform batch segmentation job completes. This option ensures that when the activation job runs, the most up-to-date profiles are exported to your destination. This might result in an audience being exported multiple times a day, based on your actions.
