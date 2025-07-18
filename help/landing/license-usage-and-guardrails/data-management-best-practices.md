@@ -189,7 +189,7 @@ Consider the following prerequisites in your planning process:
 
 ### UI functionality, Experience Platform components, and Experience Cloud products that you will use
 
-To successfully implement this use case, you must use multiple areas of Adobe Experience Platform. Ensure you have the necessary attribute-based access control permissions for all these areas, or ask your system administrator to grant you the necessary permissions.
+To successfully implement this use case, you must use multiple areas of Adobe Experience Platform. Ensure you have the necessary attribute-based access control permissions for all these areas, or ask your system administrator to grant them.
 
 * License usage dashboard - View your current entitlement usage at the sandbox level.
 * Dataset management - Monitor and manage dataset-level retention policies.
@@ -208,13 +208,13 @@ First, navigate to the **license usage dashboard** and review your entitlement u
 
 >[!TAB Production sandbox]
 
-Use the [!UICONTROL Metrics] interface to view your license usage metrics. The interface displays information on your production sandbox by default.
+Use the [!UICONTROL Metrics] interface to view your license usage metrics. The interface displays information for your production sandbox by default.
 
 ![The license usage dashboard UI displaying your license usage metrics for a production sandbox.](../images/data-management/prod-sandbox.png)
 
 >[!TAB Development sandbox]
 
-Select [!UICONTROL Development] to view license usage metrics pertaining to your development sandboxes.
+Select [!UICONTROL Development] to view license usage metrics related to your development sandboxes.
 
 ![The license usage dashboard UI displaying your license usage metrics for development sandboxes.](../images/data-management/dev-sandbox.png)
 
@@ -224,19 +224,19 @@ For more information, read the documentation on [using the license usage dashboa
 
 **Analyze dataset-level storage usage**
 
-Use the **Dataset browse view** to review your dataset usage metrics for both data lake and Real-Time Customer Profile. Select the column headers for either **[!UICONTROL Data Lake Storage]** or **[!UICONTROL Profile Storage]** and then select **[!UICONTROL Sort Descending]** from the pop up panel.
+Use the **Dataset browse view** to review your dataset usage metrics for both data lake and Real-Time Customer Profile. Select the column headers for either **[!UICONTROL Data Lake Storage]** or **[!UICONTROL Profile Storage]**, then select **[!UICONTROL Sort Descending]** from the pop up panel.
 
 >[!BEGINTABS]
 
 >[!TAB Data lake storage]
 
-Your datasets in data lake are sorted by storage size. Use this capability to identify the largest consumers of storage in data lake.
+Your datasets in data lake are sorted by storage size. Use this feature to identify the largest consumers of storage in data lake.
 
 ![The datasets in data lake sorted from largest to smallest.](../images/data-management/data-lake-storage.png)
 
 >[!TAB Profile storage]
 
-Your datasets in Profile are sorted by storage size. Use this capability to identify the largest consumers of storage in Profile.
+Your datasets in Profile are sorted by storage size. Use this feature to identify the largest consumers of storage in Profile.
 
 ![The datasets in Profile sorted from largest to smallest.](../images/data-management/profile-storage.png)
 
@@ -244,16 +244,15 @@ Your datasets in Profile are sorted by storage size. Use this capability to iden
 
 **Evaluate and configure retention rule**
 
-Next, determine if your datasets have the appropriate retention policies based on license limits and business requirements for Analytics and Segmentation. To view a given dataset's retention policy, select the ellipses (`...`) beside your dataset and then select **[!UICONTROL Set data retention policy]**.
+Next, determine if your datasets have the appropriate retention policies based on license limits and business requirements for Analytics and Segmentation. To view a dataset's retention policy, select the ellipses (`...`) beside your dataset, then select **[!UICONTROL Set data retention policy]**.
 
 ![The pop up panel with dataset options, including "Set data retention policy"](../images/data-management/set-retention-policy.png)
 
-
-The *[!UICONTROL Set dataset retention]* interface appears. Use this interface to configure a retention policy for your dataset. You can also use this interface to gather information on the on the amount of storage space that your dataset is using in either data lake or profile.
+The *[!UICONTROL Set dataset retention]* interface appears. Use this interface to configure a retention policy for your dataset. You can also use it to view how much storage space your dataset is consuming in either the data lake or Profile.
 
 ![The "set dataset retention" interface.](../images/data-management/dataset-retention.png)
 
-You can further analyze the retention impact of your dataset using the impact forecaster. Select **[!UICONTROL View ExperienceEvent data distribution]** to viw a chart that displays your retention window and the total percentage of storage that is set to expire.
+You can further analyze the retention impact of your dataset using the impact forecaster. Select **[!UICONTROL View ExperienceEvent data distribution]** to view a chart that displays your retention window and the total percentage of storage that is set to expire.
 
 When finished, select **[!UICONTROL Save]**
 
@@ -261,8 +260,8 @@ When finished, select **[!UICONTROL Save]**
 
 **Validate retention changes**
 
-Once you have applied your retention policies, you can use the following tools to validate your retention changes:
+Once you have applied your retention policies, you can use the following tools to validate your changes:
 
-* Use [dataset usage metrics](../../catalog/datasets/user-guide.md#enhanced-visibility-of-retention-periods-and-storage-metrics) in the dataset browse view.
-* Use the [monitoring dashboard](../../dataflows/ui/monitor.md) to view and analyze retention impact.
-* Use the [license usage dashboard](../../dashboards/guides/license-usage.md).
+* [Dataset usage metrics](../../catalog/datasets/user-guide.md#enhanced-visibility-of-retention-periods-and-storage-metrics) in the dataset browse view.
+* The [monitoring dashboard](../../dataflows/ui/monitor.md) to view and analyze impact of retention.
+* The [license usage dashboard](../../dashboards/guides/license-usage.md) to view daily snapshots, predictive trends, and sandbox-level insights.
