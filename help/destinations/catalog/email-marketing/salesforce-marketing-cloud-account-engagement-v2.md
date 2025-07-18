@@ -2,6 +2,7 @@
 title: (V2) Salesforce Marketing Cloud Account Engagement
 description: Learn how to use the (V2) Salesforce Marketing Cloud Account Engagement (formerly known as Pardot) destination to export your profile data and activate it within Salesforce Marketing Cloud Account Engagement using batch processing for your business needs.
 badge: label="Alpha" type="Informative"
+
 exl-id: new-id-placeholder-v2
 ---
 # [!DNL (V2) Salesforce Marketing Cloud Account Engagement] connection
@@ -73,9 +74,9 @@ If a match is found using one of these identifiers, the existing Account Engagem
 
 | Target identity | Description | Considerations |
 |---|---|---|
-| `matchId` | Prospect ID in Account Engagement | Optional |
-| `matchSalesforceId` | Salesforce Lead/Contact ID of the prospect | Optional |
-| `matchEmail` | Email address of the prospect | Optional |
+| `matchId` | Prospect ID in Account Engagement | At least one of these three identities is required |
+| `matchSalesforceId` | Salesforce Lead/Contact ID of the prospect | At least one of these three identities is required |
+| `matchEmail` | Email address of the prospect | At least one of these three identities is required |
 
 {style="table-layout:auto"}
 
@@ -100,9 +101,13 @@ To connect to this destination, follow the steps described in the [destination c
 
 ### Authenticate to destination {#authenticate}
 
-To authenticate to the destination, select **[!UICONTROL Connect to destination]**. You will be redirected to the [!DNL Salesforce] login page. Enter your [!DNL Marketing Cloud Account Engagement] account credentials and select [!DNL Log In].
+To authenticate to the destination, select **[!UICONTROL Connect to destination]**.
 
 ![Salesforce Marketing Cloud Account Engagement V2 destination connection workflow](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/connect-to-destination.png "Salesforce Marketing Cloud Account Engagement V2 destination connection workflow")
+
+You will be redirected to the [!DNL Salesforce] login page. Enter your [!DNL Marketing Cloud Account Engagement] account credentials and select **[!UICONTROL Log In]**.
+
+![Salesforce login page](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/salesforce-auth.png "Salesforce login page.")
 
 If the details provided are valid, the UI displays a message: *You successfully connected to (V2) Salesforce Marketing Cloud Account Engagement account* and a **[!UICONTROL Connected]** status with a green check mark.
 
@@ -114,7 +119,7 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 * **[!UICONTROL Account Engagement Business Unit ID]**: Your [!DNL Salesforce] `Account Engagement Business Unit ID`.
 * **[!UICONTROL Pardot API]**: Select whether you want to use the production or demo endpoints of the Pardot API.
-* **[!UICONTROL Account Engagement Campaign ID]**: 
+* **[!UICONTROL Account Engagement Campaign ID]**: Every [!DNL Account Engagement] prospect must be associated with a campaign. If you do not set a campaign ID, Account Engagement will attempt to assign one automatically, if a default exists in your Salesforce account. If you do not provide a campaign ID and you do not have a default campaign in Account Engagement,
 
 ### Enable alerts {#enable-alerts}
 
@@ -133,54 +138,41 @@ Read [Activate audience data to batch profile export destinations](/help/destina
 
 ### Mapping considerations and example {#mapping-considerations-example}
 
-To correctly send your audience data from Adobe Experience Platform to the [!DNL (V2) Marketing Cloud Account Engagement] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Experience Platform account and their corresponding equivalents from the target destination.
+To send audience data from Adobe Experience Platform to the [!DNL (V2) Marketing Cloud Account Engagement] destination, you must map your Experience Data Model (XDM) schema fields to the corresponding fields in the destination.
 
-When mapping fields to the [!DNL (V2) Marketing Cloud Account Engagement] destination, refer to the [Salesforce Prospect API v5 documentation](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html) for the complete Pardot prospect schema and field specifications.
+Refer to the [Salesforce Prospect API v5 documentation](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html) for a complete list of supported fields. Note that [custom fields](https://developer.salesforce.com/docs/marketing/pardot/guide/custom-field-v5.html) are not supported in the Alpha release.
 
->[!IMPORTANT]
->
->[Custom fields](https://developer.salesforce.com/docs/marketing/pardot/guide/custom-field-v5.html) in Pardot are not supported in the Alpha release of this destination.
+#### Required mappings {#required-mappings}
 
-To correctly map your XDM fields to the [!DNL (V2) Marketing Cloud Account Engagement] destination fields, follow the steps below.
+Before you begin mapping your data, review the required field mappings below.
+
+| Target field | Type |Required|
+|---|---|---|
+| `email` | XDM attribute | Always required |
+| `matchId` | Identity | At least one of these three identities is required |
+| `matchSalesforceId` | Identity | At least one of these three identities is required |
+| `matchEmail` | Identity | At least one of these three identities is required |
+
+Follow the steps below to map the correct fields.
 
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** category and select the XDM attribute or choose the **[!UICONTROL Select identity namespace]** and select an identity.
 1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** and select an identity or choose **[!UICONTROL Select custom attributes]** category and specify from the list of standard Account Engagament prospect fields.
 
->[!IMPORTANT]
->
->The `email` target attribute is a mandatory mapping for this destination.
-
 ![Mapping XDM fields and identities to Salesforce Marketing Cloud Account Engagement V2 fields](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/mapping.png "Example of mapping XDM fields and identities to Salesforce Marketing Cloud Account Engagement V2 fields")
-
-#### Matching and upsert behavior {#matching-upsert}
-
-When exporting data to [!DNL (V2) Marketing Cloud Account Engagement], Adobe Experience Platform performs an upsert operation using a match column. The following matching columns are supported:
-
-* **matchId**: Prospect ID in Pardot
-* **matchSalesforceId**: Prospect's Salesforce Lead/Contact ID  
-* **matchEmail**: Prospect's Email address
-
-* Example mappings between your XDM profile schema and [!DNL (V2) Marketing Cloud Account Engagement]:
-
-| Source Field | Target Field | Mandatory |
-| --- | --- | --- |
-|`IdentityMap: Email`|`Identity: matchEmail`| Yes (when other match fields not provided) |
-|`xdm: person.name.firstName`|`Attribute: firstName`| |
-|`xdm: person.name.lastName`|`Attribute: lastName`| |
-|`xdm: workAddress.city`|`Attribute: city`| |
-
-When you have finished providing the mappings for your destination connection, select **[!UICONTROL Next]**.
 
 ## Validate data export {#exported-data}
 
 To validate that you have correctly set up the destination, follow the steps below:
 
-1. Navigate to one of the audiences you had selected for activation. The export will begin according to the fixed schedule (initial full export followed by incremental exports every 3 hours).
+1. Navigate to one of the audiences you had selected. Select the **[!DNL Activation data]** tab. The **[!UICONTROL Mapping ID]** column displays the name of the custom field which is generated within the [!DNL Marketing Cloud Account Engagement Prospects] page.
+![Experience Platform UI screenshot example showing the Mapping ID for a selected segment.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/selected-segment-mapping-id.png)
 
-1. Log in to the [[!DNL Salesforce]](https://login.salesforce.com/) website. Then navigate to the **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** page and check if the prospects from the audience have been added or updated. Alternatively you can also access [[!DNL Salesforce Pardot]](https://pi.pardot.com/) and access the **[!DNL Prospects]** page.
+1. Log in to the [[!DNL Salesforce]](https://login.salesforce.com/) website. Then navigate to the **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** page and check if the prospects from the audience have been added / updated. Alternatively you can also access [[!DNL Salesforce Pardot]](https://pi.pardot.com/) and access the **[!DNL Prospects]** page.
+![Salesforce UI screenshot showing the Prospects page.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/prospects.png)
 
-1. To check if the prospects have been updated, select a prospect and verify if the prospect fields have been updated with the data from Experience Platform.
+1. To check if the prospects have been updated, select a prospect and verify if the custom prospect field has been updated with the Experience Platform audience status.
+![Salesforce UI screenshot showing the selected Prospect page, the custom prospect field is updated with the audience status.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/prospect.png)
 
 ## Data usage and governance {#data-usage-governance}
 
