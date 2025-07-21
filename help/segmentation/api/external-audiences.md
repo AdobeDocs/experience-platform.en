@@ -375,7 +375,7 @@ You can start an audience ingestion by making a POST request to the following en
 **API format**
 
 ```http
-POST /external-audience/{AUDIENCE_ID}/run
+POST /external-audience/{AUDIENCE_ID}/runs
 ```
 
 **Request**
@@ -385,7 +385,7 @@ The following request triggers an ingestion run for the external audience.
 +++ A sample request to start an audience ingestion.
 
 ```shell
-curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/run \
+curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/runs \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
@@ -436,6 +436,10 @@ A successful response returns HTTP status 200 with details about the ingestion r
 +++
 
 ## Retrieve specific audience ingestion status {#retrieve-ingestion-status}
+
+>[!NOTE]
+>
+>To use the following endpoint, you need to have both the `audienceId` of your external audience and the `runId` of your ingestion run ID. You can get your `audienceId` from a successful call to the `GET /external-audiences/operations/{OPERATION_ID}` endpoint and your `runId` from a previous successful call of the `POST /external-audience/{AUDIENCE_ID}/runs` endpoint.
 
 You can retrieve the status of an audience ingestion by making a GET request to the following endpoint while providing both the audience and run IDs.
 
@@ -508,9 +512,13 @@ A successful response returns HTTP status 200 with details of the external audie
 
 +++
 
-## List audience ingestion statuses {#list-ingestion-statuses}
+## List audience ingestion runs {#list-ingestion-runs}
 
-You can retrieve all the ingestion statuses for the selected external audience by making a GET request to the following endpoint while providing the audience ID. Multiple parameters can be included, separated by ampersands (`&`). 
+>[!NOTE]
+>
+>To use the following endpoint, you need to have the `audienceId` of your external audience. You can get your `audienceId` from a successful call to the `GET /external-audiences/operations/{OPERATION_ID}` endpoint.
+
+You can retrieve all the ingestion runs for the selected external audience by making a GET request to the following endpoint while providing the audience ID. Multiple parameters can be included, separated by ampersands (`&`). 
 
 **API format**
 
@@ -528,16 +536,16 @@ GET /external-audience/{AUDIENCE_ID}/runs?{QUERY_PARAMETERS}
 | Parameter | Description | Example |
 | --------- | ----------- | ------- |
 | `limit` | The maximum number of items returned in the response. This value can range from 1 to 40. By default, the limit is set to 20. | `limit=30` |
-| `sortBy` | The order in which the returned items are sorted. You can sort by either `name` or by `ingestionTime`. Additionally, you can add a `-` sign to sort by **descending** order instead of **ascending** order. By default, the items are sorted by `ingestionTime` in descending order. | `sortBy=name` |
-| `property` | A filter to determine which audience ingestion runs are displayed. You can filter on the following properties: <ul><li>`name`: Lets you filter by the audience name. If using this property, you can compare by using `=`, `!=`, `=contains`, or `!=contains`. </li><li>`ingestionTime`: Lets you filter by the ingestion time. If using this property, you can compare by using `>=` or `<=`.</li><li>`status`: Lets you filter by the ingestion run's status. If using this property, you can compare by using `=`, `!=`, `=contains`, or `!=contains`. </li></ul>  | `property=ingestionTime<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
+| `sortBy` | The order in which the returned items are sorted. You can sort by either `name` or by `createdAt`. Additionally, you can add a `-` sign to sort by **descending** order instead of **ascending** order. By default, the items are sorted by `createdAt` in descending order. | `sortBy=name` |
+| `property` | A filter to determine which audience ingestion runs are displayed. You can filter on the following properties: <ul><li>`name`: Lets you filter by the audience name. If using this property, you can compare by using `=`, `!=`, `=contains`, or `!=contains`. </li><li>`createdAt`: Lets you filter by the ingestion time. If using this property, you can compare by using `>=` or `<=`.</li><li>`status`: Lets you filter by the ingestion run's status. If using this property, you can compare by using `=`, `!=`, `=contains`, or `!=contains`. </li></ul>  | `property=createdAt<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
 
 +++
 
 **Request**
 
-The following request retrieves all the ingestion statuses for the external audience.
+The following request retrieves all the ingestion runs for the external audience.
 
-+++ A sample request to get a list of audience ingestion statuses.
++++ A sample request to get a list of audience ingestion runs.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/runs \
@@ -551,9 +559,9 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1
 
 **Response**
 
-A successful response returns HTTP status 200 with a list of ingestion statuses for the specified external audience.
+A successful response returns HTTP status 200 with a list of ingestion runs for the specified external audience.
 
-+++ A sample response when you retrieve a list of the audience ingestion statuses.
++++ A sample response when you retrieve a list of the audience ingestion runs.
 
 ```json
 {
@@ -567,19 +575,7 @@ A successful response returns HTTP status 200 with a list of ingestion statuses 
             "dataFilterStartTime": 764245635,
             "dataFilterEndTime": 3456788568,
             "createdAt": 1785678909,
-            "createdBy": "{USER_NAME}",
-            "details": [
-                {
-                    "stage": "DATASET_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                },
-                {
-                    "stage": "PROFILE_STORE_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                }
-            ]
+            "createdBy": "{USER_NAME}"
         },
         {
             "audienceName": "Sample external audience 2",
@@ -590,19 +586,7 @@ A successful response returns HTTP status 200 with a list of ingestion statuses 
             "dataFilterStartTime": 764245635,
             "dataFilterEndTime": 3456788568,
             "createdAt": 1749324248,
-            "createdBy": "{USER_ID}",
-            "details": [
-                {
-                    "stage": "DATASET_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                },
-                {
-                    "stage": "PROFILE_STORE_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                }
-            ]
+            "createdBy": "{USER_ID}"
         }
     ],
     "_page": {
@@ -621,6 +605,10 @@ A successful response returns HTTP status 200 with a list of ingestion statuses 
 +++
 
 ## Delete an external audience {#delete-audience}
+
+>[!NOTE]
+>
+>To use the following endpoint, you need to have the `audienceId` of your external audience. You can get your `audienceId` from a successful call to the `GET /external-audiences/operations/{OPERATION_ID}` endpoint.
 
 You can delete an external audience by making a DELETE request to the following endpoint while providing the audience ID.
 
