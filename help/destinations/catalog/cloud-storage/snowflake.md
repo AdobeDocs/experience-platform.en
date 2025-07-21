@@ -24,6 +24,8 @@ This destination uses a [!DNL Snowflake] data share, which means that no data is
 
 The first time you share data from Adobe's Snowflake instance to yours, you are prompted to accept the private listing from Adobe.
 
+![Screenshot showing the Snowflake private listing acceptance screen](../../assets/catalog/cloud-storage/snowflake/snowflake-accept-listing.png)
+
 ### Data retention and Time-to-Live (TTL) {#ttl}
 
 All data shared through this integration has a fixed Time-to-Live (TTL) of seven days. Seven days after the last export, the shared table automatically expires and becomes inaccessible, regardless of whether the dataflow is still active. If you need to retain the data for longer than seven days, you must copy the contents into a table that you own in your own Snowflake instance before the TTL expires.
