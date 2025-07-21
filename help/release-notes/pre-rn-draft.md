@@ -113,7 +113,7 @@ Experience Platform is built to enrich digital experience applications on a glob
 
 | Feature | Description |
 | --- | --- |
-| Changes to multi-entity audience imports | Sandbox tooling has been updated to support the new B2B architecture upgrade. Multi-Entity auidences with B2B entities and Experience Events must be re-exported after the architecture upgrades before importing into target sandboxes via sandbox tooling. Importing pre-upgrade versions will fail validation. |
+| Changes to multi-entity audience imports | Sandbox tooling has been updated to support the new B2B architecture upgrade. Multi-entity audiences containing B2B entities and Experience Events must be re-exported after the architecture upgrade before being imported into target sandboxes via sandbox tooling. Importing pre-upgrade versions will fail validation. |
 
 For more information on sandboxes, read the [sandboxes overview](../sandboxes/home.md).
 
