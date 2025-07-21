@@ -31,7 +31,7 @@ For example, the Marketing Operations department at a global financial services 
 
 ## Supported Destinations {#supported-destinations}
 
-[!DNL Acxiom’s Audience Distribution] destination currently supports audience activation to the following platforms.<br> 
+[!DNL Acxiom’s Audience Connection] destination currently supports audience activation to the following platforms.<br> 
 	
 - [!DNL Altice]
 - [!DNL Ampersand]
