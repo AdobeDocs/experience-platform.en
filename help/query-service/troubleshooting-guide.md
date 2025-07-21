@@ -754,6 +754,12 @@ The value for non-expiring credentials are the concatenated arguments from the `
 See the documentation for more information on how to [connect to external clients with credentials](./ui/credentials.md#using-credentials-to-connect-to-external-clients).
 +++
 
+### Are there any restrictions on special characters for non-expiring credentials passwords?
+
++++Answer
+Yes. When you set a password for non-expiring credentials, you must include at least one number, one lowercase letter, one uppercase letter, and one special character. The dollar sign ($) is not supported. Use special characters such as !, @, #, ^, or & instead.
++++
+
 ### What kind of third-party SQL editors can I connect to Query Service Editor?
 
 +++Answer
