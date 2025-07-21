@@ -31,7 +31,7 @@ For example, the Marketing Operations department at a global financial services 
 
 ## Supported Destinations {#supported-destinations}
 
-[!DNL Acxiom’s Audience Distribution] destination currently supports audience activation to the following platforms.<br> 
+[!DNL Acxiom’s Real ID Audience Connection] destination currently supports audience activation to the following platforms.<br> 
 	
 - [!DNL Altice]
 - [!DNL Ampersand]
@@ -80,7 +80,7 @@ For the [!DNL Acxiom Real ID Audience Connection] destination to correctly recei
 
 | Field Name | Description|Required | Field Order |
 |--------------------|------------|--------|-------------| 
-|Real ID|A Real ID is a unique alpha-numeric identifier (ID) from Acxiom's proprietary identity resolution graph, similar to a primary key for a relational database. It's an identifier that represents a person, household or address. |Yes|1|
+|Real ID|A Real ID is a unique 36 byte alpha-numeric identifier (ID) from Acxiom's proprietary identity resolution graph, similar to a primary key for a relational database. It's an identifier that represents a person, household or address. |Yes|1|
 
 
 
