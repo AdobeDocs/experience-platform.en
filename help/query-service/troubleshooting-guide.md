@@ -644,7 +644,9 @@ Backend infrastructure is constantly improved to optimize Compute Hour utilizati
 ### Does Data Distiller performance differ between development and production sandboxes?
 
 +++Answer
-You can expect similar performance when you run queries in both development and production sandboxes, as both environments use the same backend resources. However, you may notice some differences in compute hours consumed. These differences are usually due to the amount of data processed and the available compute resources at the time you run your query.
+You can expect similar performance when you run queries in both development and production sandboxes. Both environments are designed to provide the same level of processing capability. However, differences in compute hours can occur, depending on the amount of data you process and overall system activity at the time you run your query.
+
+Track your compute hour usage in the [License Usage dashboard](../dashboards/guides/license-usage.md) in the Experience Platform UI.
 +++
 
 ## Queries UI
