@@ -281,6 +281,10 @@ For more information on backfill, live data, and their respective latencies, rea
 
 ## Delete your dataflow {#delete-dataflow}
 
+>[!NOTE]
+>
+>You cannot disable an Analytics dataflow. To stop the flow of Analytics data, you must **delete** the dataflow entirely.
+
 To delete your Analytics dataflow, select **[!UICONTROL Dataflows]** from the top header of the sources workspace. Use the dataflows page to locate the Analytics dataflow that you want to delete and then select the ellipses (`...`) beside it. Next, use the dropdown menu and select **[!UICONTROL Delete]**.
 
 * Deleting the live Analytics dataflow will also delete its underlying dataset.
