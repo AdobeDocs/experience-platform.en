@@ -14,7 +14,7 @@ exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
 
 ## Overview {#overview}
 
-Use the Snowflake destination connector to export data to Adobe's Snowflake instance, which is then shared with your instance through [private listings](https://other-docs.snowflake.com/en/collaboration/collaboration-listings-about).
+Use the Snowflake destination connector to export data to Adobe's Snowflake instance, which Adobe then shares with your instance through [private listings](https://other-docs.snowflake.com/en/collaboration/collaboration-listings-about).
 
 Read the following sections to understand how the Snowflake destination works and how data is transferred between Adobe and Snowflake.
 
