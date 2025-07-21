@@ -79,10 +79,8 @@ Adobe Experience Platform Query Service provides a robust SQL interface for data
 | Feature | Description |
 | ------- | ----------- |
 | Enhanced session management | Data Distiller now includes enhanced session management capabilities, providing better control over user sessions and improved performance monitoring across development and production environments. |
-| Support for non-expiring credentials | Data Distiller now supports non-expiring credentials with specific character restrictions. While passwords require at least one number, one lowercase letter, one uppercase letter, and one special character, the dollar sign ($) is not supported. Recommended special characters include `!, @, #, ^, or &`. |
+| Support for non-expiring credentials password character restrictions | Data Distiller now supports non-expiring credentials with specific character restrictions. While passwords require at least one number, one lowercase letter, one uppercase letter, and one special character, the dollar sign ($) is not supported. Recommended special characters include `!, @, #, ^, or &`. |
 | Improved performance consistency across environments | Data Distiller performance is now consistent between development and production sandboxes, with similar backend resources available in both environments. Compute hours consumed may vary based on data volume and available backend compute resources at processing time. |
-| Updates to the schema primary identity field | Updated documentation clarifies that primary identity fields on enabled schemas cannot be changed. This ensures data integrity and prevents potential issues with profile unification and identity resolution. |
-
 
 For more information, read the [Query Service overview](../query-service/home.md).
 
