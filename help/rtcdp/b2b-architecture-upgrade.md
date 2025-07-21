@@ -21,7 +21,7 @@ Use the enhanced architecture for the following benefits:
 
 Read the following for key enhancements included in the architectural upgrade.
 
-### Audience membership for account snapshots
+### Account snapshots for audience membership
 
 With the new B2B architecture, audience membership details will be included for account entities in snapshot exports. You can use this feature to access account-level audience status, timestamps, and membership indicators.
 
@@ -29,8 +29,6 @@ With this upgrade, you can now:
 
 * Enable marketing and operations teams to directly validated account audience membership.
 * Bring feature parity between your profile (person) and account segmentation models, thereby ensuring consistent experience across entities.
-
-For more information, read...
 
 ### Audience counts for audiences that include B2B entities
 
@@ -42,8 +40,6 @@ With this upgrade, you can now:
 * Confidently design complex B2B audiences, with knowledge of more accurate audience estimation.
 * Allow for smarter campaign planning, more precise targeting, and better resource allocation.
 
-For more information, read...
-
 ### Full lookback for person-level events in account audiences
 
 Account audiences can now leverage the full history of person-level events, expanding the 30-day lookback window.
@@ -54,8 +50,6 @@ With this upgrade, you can now:
 * Enable richer and more accurate audience definitions by leveraging long-term behavioral data.
 * Identify high-value accounts based on deeper engagement patterns over time.
 * Support use cases that require insights from historical actions, such as those involving long sale cycles or delayed buying signals.
-
-For more information, read...
 
 ## Upgrades to existing features
 
@@ -72,8 +66,6 @@ Use the segment-of-segment approach to achieve the same audience logic:
 
 Once the upgrade is complete, any new multi-entity audiences with B2B attributes and Experience Events must be created using the segment-of-segment approach. Additionally, you must validate audience membership to ensure expected behavior.
 
-For more information, read...
-
 ### Entity Resolution and time-precedence merging in B2B audiences
 
 As part of the architecture upgrade, Adobe is introducing Entity Resolution for accounts and opportunities, which runs once a day. With this enhancement, Experience Platform can identify and consolidate multiple records that represent the same real-world entity, thereby improving data consistency and enabling more accurate audience segmentation.
@@ -83,15 +75,11 @@ With this upgrade, you can now:
 * Use the [!DNL Profile Access] APIs to view the latest merge profiles once the daily Entity Resolution jobs are complete.
 * Utilize the improved accuracy and consistency of your account and opportunity data for segmentation, activation, and analytics.
 
-For more information, read...
-
 ### Support of merge policies in multi-entity B2B audiences
 
 Multi-entity audiences with B2B attributes will now support a single merge policy - the default merge policy that you configure - instead of multiple merge policies.
 
 Audiences that previously relied on a non-default merge policy may produce different results. To understand the potential changes in audience composition, review and test any of your audiences that rely on a non-default merge policy. Additionally, monitor activation results to detect any shifts in audience composition due to the merge policy change. 
-
-For more information, read...
 
 ### Deprecation of B2B entity lookup and delete in the [!DNL Profile Access] API
 
@@ -114,8 +102,6 @@ Delete requests for the following B2B entities using the [!DNL Profile Access] A
 * Campaign Member  
 * Marketing List  
 * Marketing List Members  
-
-For more information, read...
 
 ### Account and opportunity profile lookups
 
