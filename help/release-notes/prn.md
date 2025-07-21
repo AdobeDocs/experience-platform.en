@@ -41,9 +41,9 @@ Data Distiller provides advanced analytics capabilities for Adobe Experience Pla
 
 | Feature | Description |
 | ------- | ----------- |
-| Session Management | Data Distiller now includes enhanced session management capabilities, providing better control over user sessions and improved performance monitoring across development and production environments. |
-| Non-Expiring Credentials Support | Data Distiller now supports non-expiring credentials with specific character restrictions. While passwords require at least one number, one lowercase letter, one uppercase letter, and one special character, the dollar sign ($) is not supported. Recommended special characters include `!, @, #, ^, or &`. |
-| Performance Consistency Across Environments | Data Distiller performance is now consistent between development and production sandboxes, with similar backend resources available in both environments. Compute hours consumed may vary based on data volume and available backend compute resources at processing time. |
+| Enhanced session management | Data Distiller now includes enhanced session management capabilities, providing better control over user sessions and improved performance monitoring across development and production environments. |
+| Support for non-expiring credentials | Data Distiller now supports non-expiring credentials with specific character restrictions. While passwords require at least one number, one lowercase letter, one uppercase letter, and one special character, the dollar sign ($) is not supported. Recommended special characters include `!, @, #, ^, or &`. |
+| Improved performance consistency across environments | Data Distiller performance is now consistent between development and production sandboxes, with similar backend resources available in both environments. Compute hours consumed may vary based on data volume and available backend compute resources at processing time. |
 
 For more information, read the [Data Distiller overview](../query-service/data-distiller/overview.md).
 
@@ -55,7 +55,7 @@ For more information, read the [Data Distiller overview](../query-service/data-d
 
 | Destination | Description |
 | --- | --- |
-| Snowflake Batch | The Snowflake Batch destination enables you to export data to Snowflake in batch mode, providing an alternative to the existing streaming connector for scenarios requiring batch processing capabilities. |
+| Support for Snowflake Batch | The Snowflake Batch destination enables you to export data to Snowflake in batch mode, providing an alternative to the existing streaming connector for scenarios requiring batch processing capabilities. |
 
 **Updated destinations**
 
@@ -81,7 +81,7 @@ Experience Platform provides a comprehensive data ingestion framework that suppo
 
 | Feature | Description |
 | ------- | ----------- |
-| Streaming Profile Ingestion Monitoring | Real-time monitoring for streaming profile ingestion is now available, providing transparency into throughput, latency, and data quality metrics. This supports proactive alerting and actionable insights to help data engineers identify capacity violations and ingestion issues. |
+| Support for monitoring streaming profile ingestion | Real-time monitoring for streaming profile ingestion is now available, providing transparency into throughput, latency, and data quality metrics. This supports proactive alerting and actionable insights to help data engineers identify capacity violations and ingestion issues. |
 
 For more information, read the [data ingestion overview](../ingestion/home.md).
 
@@ -93,7 +93,7 @@ Adobe Experience Platform Query Service provides a robust SQL interface for data
 
 | Feature | Description |
 | ------- | ----------- |
-| Schema Primary Identity Field Updates | Updated documentation clarifies that primary identity fields on enabled schemas cannot be changed. This ensures data integrity and prevents potential issues with profile unification and identity resolution. |
+| Updates to the schema primary identity field | Updated documentation clarifies that primary identity fields on enabled schemas cannot be changed. This ensures data integrity and prevents potential issues with profile unification and identity resolution. |
 
 For more information, read the [Query Service overview](../query-service/home.md).
 
@@ -136,13 +136,13 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Source | Description |
 | --- | --- |
-| Didomi Source (Streaming SDK) | The Didomi source connector enables you to ingest consent management data from Didomi's platform, supporting compliance with privacy regulations and consent-based marketing strategies. |
+| Support for Didomi (Streaming SDK) | The Didomi source connector enables you to ingest consent management data from Didomi's platform, supporting compliance with privacy regulations and consent-based marketing strategies. |
 
 **New or updated functionality**
 
 | Feature | Description |
 | --- | --- |
 | Support for change data capture in select sources | You can now create dataflows that enable change data capture for incremental ingestion using source connectors. This capability allows customers to bring change data type for incremental ingestion, improving data freshness and reducing processing overhead. |
-| Salesforce Soft Deleted Records Support | The Salesforce source connector now supports including soft deleted records through an optional `includeDeletedObjects` parameter. When set to true, customers can include soft deleted records in their Salesforce queries and bring these records into Experience Platform. |
+| Support for soft deletion of records in Salesforce | The Salesforce source now supports including soft deleted records through an optional `includeDeletedObjects` parameter. When set to true, customers can include soft deleted records in their Salesforce queries and bring these records into Experience Platform. |
 
 For more information, read the [sources overview](../sources/home.md).
