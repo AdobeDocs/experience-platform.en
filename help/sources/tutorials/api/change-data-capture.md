@@ -1,8 +1,8 @@
 ---
-title: Change data capture in Experience Platform Sources
-description: Learn about change data capture in Experience Platform sources.
+title: Enable change data capture for source connections in the API
+description: Learn how to enable change data capture for source connections in the API
 ---
-# Change data capture in sources
+# Enable change data capture for source connections in the API
 
 Change data capture in Adobe Experience Platform sources is a capability that you can use to maintain real-time data synchronization between your source and destination systems.
 
@@ -23,8 +23,8 @@ If `_change_request_type` is not present in your file, then the default value of
 
 Read the following documentation for steps on how to enable change data capture for your [!DNL Amazon S3] source connection:
 
-* [Create a [!DNL Amazon S3] base connection](./tutorials/api/create/cloud-storage/s3.md).
-* [Create a source connection for a cloud storage](./tutorials/api/collect/cloud-storage.md#create-a-source-connection).
+* [Create a [!DNL Amazon S3] base connection](../api/create/cloud-storage/s3.md).
+* [Create a source connection for a cloud storage](../api/collect/cloud-storage.md#create-a-source-connection).
 
 ## [!DNL Azure Blob]
 
@@ -37,8 +37,8 @@ If `_change_request_type` is not present in your file, then the default value of
 
 Read the following documentation for steps on how to enable change data capture for your [!DNL Azure Blob] source connection:
 
-* [Create a [!DNL Azure Blob] base connection](./tutorials/api/create/cloud-storage/blob.md).
-* [Create a source connection for a cloud storage](./tutorials/api/collect/cloud-storage.md#create-a-source-connection).
+* [Create a [!DNL Azure Blob] base connection](../api/create/cloud-storage/blob.md).
+* [Create a source connection for a cloud storage](../api/collect/cloud-storage.md#create-a-source-connection).
 
 ## [!DNL Azure Databricks]
 
@@ -74,8 +74,8 @@ For more information, read the [[!DNL Azure Databricks] guide on enabling change
 
 Read the following documentation for steps on how to enable change data capture for your [!DNL Azure Databricks] source connection:
 
-* [Create a [!DNL Azure Databricks] base connection](./tutorials/api/create/databases/databricks.md).
-* [Create a source connection for a database](./tutorials/api/collect/database-nosql.md#create-a-source-connection).
+* [Create a [!DNL Azure Databricks] base connection](../api/create/databases/databricks.md).
+* [Create a source connection for a database](../api/collect/database-nosql.md#create-a-source-connection).
 
 ## [!DNL Data Landing Zone]
 
@@ -85,8 +85,8 @@ Use the following commands to explicitly enable the change data feed option in [
 
 Read the following documentation for steps on how to enable change data capture for your [!DNL Data Landing Zone] source connection:
 
-* [Create a [!DNL Data Landing Zone] base connection](./tutorials/api/create/cloud-storage/data-landing-zone.md).
-* [Create a source connection for a cloud storage](./tutorials/api/collect/cloud-storage.md#create-a-source-connection).
+* [Create a [!DNL Data Landing Zone] base connection](../api/create/cloud-storage/data-landing-zone.md).
+* [Create a source connection for a cloud storage](../api/collect/cloud-storage.md#create-a-source-connection).
 
 ## [!DNL Google BigQuery]
 
@@ -96,8 +96,8 @@ For more information, read the guide on [data definition language statements in 
 
 Read the following documentation for steps on how to enable change data capture for your [!DNL Google BigQuery] source connection:
 
-* [Create a [!DNL Google BigQuery] base connection](./tutorials/api/create/databases/bigquery.md).
-* [Create a source connection for a database](./tutorials/api/collect/database-nosql.md#create-a-source-connection).
+* [Create a [!DNL Google BigQuery] base connection](../api/create/databases/bigquery.md).
+* [Create a source connection for a database](../api/collect/database-nosql.md#create-a-source-connection).
 
 ## [!DNL Google Cloud Storage]
 
@@ -110,8 +110,8 @@ If `_change_request_type` is not present in your file, then the default value of
 
 Read the following documentation for steps on how to enable change data capture for your [!DNL Google Cloud Storage] source connection:
 
-* [Create a [!DNL Google Cloud Storage] base connection](./tutorials/api/create/cloud-storage/google.md).
-* [Create a source connection for a cloud storage](./tutorials/api/collect/cloud-storage.md#create-a-source-connection).
+* [Create a [!DNL Google Cloud Storage] base connection](../api/create/cloud-storage/google.md).
+* [Create a source connection for a cloud storage](../api/collect/cloud-storage.md#create-a-source-connection).
 
 
 ## [!DNL SFTP]
@@ -125,8 +125,8 @@ If `_change_request_type` is not present in your file, then the default value of
 
 Read the following documentation for steps on how to enable change data capture for your [!DNL SFTP] source connection:
 
-* [Create a [!DNL SFTP] base connection](./tutorials/api/create/cloud-storage/sftp.md).
-* [Create a source connection for a cloud storage](./tutorials/api/collect/cloud-storage.md#create-a-source-connection).
+* [Create a [!DNL SFTP] base connection](../api/create/cloud-storage/sftp.md).
+* [Create a source connection for a cloud storage](../api/collect/cloud-storage.md#create-a-source-connection).
 
 
 ## [!DNL Snowflake]
@@ -143,6 +143,6 @@ For more information, read the [[!DNL Snowflake] guide on using the changes clau
 
 Read the following documentation for steps on how to enable change data capture for your [!DNL Snowflake] source connection:
 
-* [Create a [!DNL Snowflake] base connection](./tutorials/api/create/databases/snowflake.md).
-* [Create a source connection for a database](./tutorials/api/collect/database-nosql.md#create-a-source-connection).
+* [Create a [!DNL Snowflake] base connection](../api/create/databases/snowflake.md).
+* [Create a source connection for a database](../api/collect/database-nosql.md#create-a-source-connection).
 

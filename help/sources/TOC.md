@@ -225,6 +225,7 @@ role: Developer
   - [Save a dataflow as a draft](tutorials/api/draft.md)
   - [Apply access labels to a dataflow](tutorials/api/labels.md)
   - [Use private endpoints](tutorials/api/private-link.md)
+  - [Enable change data capture](tutorials/api/change-data-capture.md)
 - UI tutorials {#ui-tutorials}
   - Create a source connection {#create}
     - Adobe applications {#adobe-applications}
