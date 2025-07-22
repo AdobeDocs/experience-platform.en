@@ -48,7 +48,7 @@ Before you can send audience data to a destination, you must set up a connection
 >[!CONTEXTUALHELP]
 >id="platform_destinations_account_name"
 >title="Account name"
->abstract="Enter a name for this connection that will help you easily identify this destination in the future."
+>abstract="Enter a name that will help you easily identify this destination account in the future. This is especially useful if you have multiple connections to the same destination type (for example, different Amazon S3 buckets)."
 
 The first step in connecting to a destination is to authenticate to the destination platform. 
 
@@ -56,7 +56,7 @@ Depending on the destination that you are connecting to, you might be taken to t
 
 When setting up a new destination connection, you must provide an **[!UICONTROL Account name]** and, optionally, a **[!UICONTROL Description]**. These fields are available for all destinations.
 
-* **[!UICONTROL Account name]**: Enter a name that will help you easily identify this destination account in the future. This is especially useful if you have multiple connections to the same destination type (for example, different d buckets).
+* **[!UICONTROL Account name]**: Enter a name that will help you easily identify this destination account in the future. This is especially useful if you have multiple connections to the same destination type (for example, different [!DNL Amazon S3] buckets).
 * **[!UICONTROL Description]** (optional): Add any additional details that will help you or your team distinguish between accounts, such as the purpose of the connection or relevant business context.
 
 Providing clear and descriptive information in these fields makes it easier for you to manage and select the correct destination account when activating audiences.
