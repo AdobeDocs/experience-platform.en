@@ -63,15 +63,15 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "PayPal source connection",
+        "name": "Stripe source connection",
         "baseConnectionId": "24151d58-ffa7-4960-951d-58ffa7396097",
-        "description": "PayPal source connection",
+        "description": "Stripe source connection",
         "data": {
             "format": "tabular",
             }
         },
         "params": {
-            "tableName": "PayPal.Catalog_Products",
+            "tableName": "Stripe.Catalog_Products",
             "columns": [
                 {
                     "name": "Product_Id",

@@ -61,7 +61,7 @@ This section describes which types of audiences you can export to this destinati
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_custom_personalization_datastream"
->title="About datastream IDs"
+>title="About datastreams"
 >abstract="This option determines in which data collection datastream the audiences will be included in the response to the page. The drop-down menu shows only datastreams that have the destination configuration enabled. You must configure a datastream before you can configure your destination."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html" text="Learn how to configure a datastream"
 
@@ -78,7 +78,7 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 *  **[!UICONTROL Name]**: Fill in the preferred name for this destination.
 *  **[!UICONTROL Description]**: Enter a description for your destination. For example, you can mention which campaign you are using this destination for. This field is optional.
 *  **[!UICONTROL Integration alias]**: This value is sent to the Experience Platform Web SDK as a JSON object name. 
-*  **[!UICONTROL Datastream ID]**: This determines in which Data Collection datastream the audiences will be included in the response to the page. The drop-down menu shows only datastreams that have the destination configuration enabled. See [Configuring a datastream](../../../datastreams/overview.md) for more details.
+*  **[!UICONTROL Datastream]**: This determines in which Data Collection datastream the audiences will be included in the response to the page. The drop-down menu shows only datastreams that have the destination configuration enabled. See [Configuring a datastream](../../../datastreams/overview.md) for more details.
 
 ### Enable alerts {#enable-alerts}
 

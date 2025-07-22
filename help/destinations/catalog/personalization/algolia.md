@@ -1,15 +1,15 @@
 ---
 title: Algolia
 description: Use this connector to activate audiences to Algolia for personalization and use across search and recommendations. You can then use the Algolia User Profile source connector to import the profiles into Real-Time CDP to build rich audiences.
+exl-id: 116a051a-1b47-4789-826e-c8f0fee60def
 ---
-
 # [!DNL Algolia] connection
 
 ## Overview {#overview}
 
 >[!IMPORTANT]
 >
->The [!DNL Algolia] destination connector and documentation page are created and maintained by the Algolia Integration Services team. For inquiries or update requests, contact them at [adobe-algolia-solutions@algolia.com](adobe-algolia-solutions@algolia.com).
+>The [!DNL Algolia] destination connector and documentation page are created and maintained by the Algolia Integration Services team. For inquiries or update requests, contact them at [adobe-algolia-solutions@algolia.com](mailto:adobe-algolia-solutions@algolia.com).
 
 Use the [!DNL Algolia] destination connection to send Adobe Experience Platform audiences to Algolia for personalized search and recommendations. Before you can use the [!DNL Algolia] destination connector, you must first set up the [[!DNL Algolia User Profiles]](/help/sources/connectors/data-partners/algolia-user-profiles.md) source connector. During the source connector setup tutorial, you will create the Algolia User Token identity. This identity is required for mapping when you configure the destination connector.
 

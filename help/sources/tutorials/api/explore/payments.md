@@ -22,7 +22,10 @@ The following sections provide additional information that you will need to know
 
 ### Gather required credentials
 
-This tutorial requires you to have a valid connection with the third-party payments application you wish to ingest data from. A valid connection involves your application's connection specification ID and connection ID. More information about creating a payments connection and retrieving these values can be found in the [connect a payments source to Experience Platform](../../api/create/payments/paypal.md) tutorial.
+You must have an active connection with a payments application in order to explore your source's files and file structure. Read the following documents for more information:
+
+* [[!DNL Square]](../create/payments/square.md)
+* [[!DNL Stripe]](../create/payments/stripe.md)
 
 ### Reading sample API calls
 
@@ -77,29 +80,29 @@ A successful response returns an array of tables from your payments system. Find
 [
     {
         "type": "table",
-        "name": "PayPal.Billing_Plans",
-        "path": "PayPal.Billing_Plans",
+        "name": "Stripe.Billing_Plans",
+        "path": "Stripe.Billing_Plans",
         "canPreview": true,
         "canFetchSchema": true
     },
     {
         "type": "table",
-        "name": "PayPal.Billing_Plans_Payment_Definition",
-        "path": "PayPal.Billing_Plans_Payment_Definition",
+        "name": "Stripe.Billing_Plans_Payment_Definition",
+        "path": "Stripe.Billing_Plans_Payment_Definition",
         "canPreview": true,
         "canFetchSchema": true
     },
     {
         "type": "table",
-        "name": "PayPal.Billing_Plans_Payment_Definition_Charge_Models",
-        "path": "PayPal.Billing_Plans_Payment_Definition_Charge_Models",
+        "name": "Stripe.Billing_Plans_Payment_Definition_Charge_Models",
+        "path": "Stripe.Billing_Plans_Payment_Definition_Charge_Models",
         "canPreview": true,
         "canFetchSchema": true
     },
     {
         "type": "table",
-        "name": "PayPal.Catalog_Products",
-        "path": "PayPal.Catalog_Products",
+        "name": "Stripe.Catalog_Products",
+        "path": "Stripe.Catalog_Products",
         "canPreview": true,
         "canFetchSchema": true
     }
