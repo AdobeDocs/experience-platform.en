@@ -127,7 +127,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 ### Authenticate to destination {#authenticate}
 
-To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
+To authenticate to the destination, select **[!UICONTROL Connect to destination]**.
 
 ![Sample screenshot showing how to authenticate to the destination](../assets/docs-framework/authenticate-destination.png)
 
@@ -139,9 +139,16 @@ To configure details for the destination, fill in the required and optional fiel
 
 ![Sample screenshot showing how to fill in details for your destination](../assets/docs-framework/configure-destination-details.png)
 
-*  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
-*  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Account ID]**: Your *YourDestination* account ID.
+* **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
+* **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
+* **[!UICONTROL Munchkin ID]**: Select the Marketo Munchkin ID that you want to use for this destination. 
+* **[!UICONTROL Workspace ID]**: Select your Marketo workspace ID.
+* **[!UICONTROL Sync Action]**: Select the Marketo Sync Action that you want to use for this destination:
+    * **[!UICONTROL Profile Only]**
+    * **[!UICONTROL Audience Only]**
+    * **[!UICONTROL Audience and Profile]**
+* **[!UICONTROL Partition]**: 
+* Field to dedupe Marketo leads
 
 ### Enable alerts {#enable-alerts}
 
