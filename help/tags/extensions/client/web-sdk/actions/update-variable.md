@@ -1,4 +1,8 @@
-## Update variable {#update-variable}
+---
+title: Update variable
+description: Modifies the contents of a variable data element.
+---
+# Update variable
 
 Use this action to modify an XDM object as a result of an event. This action is intended to build up an object that can later be referenced from a **[!UICONTROL Send event]** action, to record the event XDM object.
 

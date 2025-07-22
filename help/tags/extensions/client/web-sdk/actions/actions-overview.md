@@ -17,13 +17,12 @@ This page lists all supported actions within a tag rule. To create or edit the a
 
 The Web SDK tag extension offers the following actions:
 
-* [[!UICONTROL Apply propositions]](apply-propositions.md)
-* [[!UICONTROL Apply response]](apply-response.md)
-* [[!UICONTROL Evaluate rulesets]](evaluate-rulesets.md)
-* [[!UICONTROL Get Media Analytics tracker]](get-media-analytics-tracker.md)
-* [[!UICONTROL Redirect with identity]](redirect-with-identity.md)
-* [[!UICONTROL Reset event merge ID]](reset-event-merge-id.md)
-* [[!UICONTROL Send event]](send-event.md)
-* [[!UICONTROL Send media event]](send-media-event.md)
-* [[!UICONTROL Set consent]](set-consent.md)
-* [[!UICONTROL Update variable]](update-variable.md)
+* [**[!UICONTROL Apply propositions]**](apply-propositions.md): Render propositions in single-page applications without incrementing metrics.
+* [**[!UICONTROL Apply response]**](apply-response.md): Perform an action based on a response from the Edge Network.
+* [**[!UICONTROL Evaluate rulesets]**](evaluate-rulesets.md): Manually trigger a rulset evaluation.
+* [**[!UICONTROL Get Media Analytics tracker]**](get-media-analytics-tracker.md): Export the legacy Media API to a window object.
+* [**[!UICONTROL Redirect with identity]**](redirect-with-identity.md): Allows the sharing of a visitor identifier across domains that you own.
+* [**[!UICONTROL Send event]**](send-event.md): Sends event data to the Edge Network.
+* [**[!UICONTROL Send media event]**](send-media-event.md): Sends media data to the Edge Network.
+* [**[!UICONTROL Set consent]**](set-consent.md): Sets the desired consent for the visitor.
+* [**[!UICONTROL Update variable]**](update-variable.md): Modifies a [variable](../data-element-types.md#variable) data element.

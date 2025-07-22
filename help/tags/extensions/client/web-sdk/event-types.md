@@ -6,20 +6,20 @@ exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
 ---
 # Event types
 
-This page describes the Adobe Experience Platform event types provided by the Adobe Experience Platform Web SDK tag extension. These are used to [build rules](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html) and should not be confused with the `eventType` field in the [`xdm` object](/help/web-sdk/commands/sendevent/xdm.md).
+This page describes the Adobe Experience Platform event types provided by the Adobe Experience Platform Web SDK tag extension. These are used to [build rules](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html) and should not be confused with the `eventType` field in the [`xdm` object](/help/collection/js/commands/sendevent/xdm.md).
 
 ## Monitoring hook triggered {#monitoring-hook-triggered}
 
 The Adobe Experience Platform Web SDK includes monitoring hooks which you can use to monitor various system events. These tools are useful for developing your own debugging tools and to capture Web SDK logs.
 
-For complete details about what parameters each monitoring hook event contains, see the [Web SDK monitoring hooks documentation](../../../../web-sdk/monitoring-hooks.md).
+For complete details about what parameters each monitoring hook event contains, see the [Web SDK monitoring hooks documentation](/help/collection/js/monitoring-hooks.md).
 
 ![Tags user interface image showing the monitoring hook event type](assets/monitoring-hook-triggered.png)
 
 The Web SDK tag extension supports the following monitoring hooks:
 
 * **[!UICONTROL onInstanceCreated]**: This monitoring hook event is triggered when you have successfully created a new Web SDK instance.
-* **[!UICONTROL onInstanceConfigured]**: This monitoring hook event is triggered by the Web SDK when the [`configure`](../../../../web-sdk/commands/configure/overview.md) command is successfully resolved
+* **[!UICONTROL onInstanceConfigured]**: This monitoring hook event is triggered by the Web SDK when the [`configure`](/help/collection/js/commands/configure/overview.md) command is successfully resolved
 * **[!UICONTROL onBeforeCommand]**: This monitoring hook event is triggered by Web SDK before any other command is executed. You can use this monitoring hook to retrieve the configuration options of a specific command.
 * **[!UICONTROL onCommandResolved]**: This monitoring hook event is triggered before resolving command promise. You can use this function to see the command options and result.
 * **[!UICONTROL onCommandRejected]**: This monitoring hook event is triggered when a command promise is rejected and it contains information about the cause of the error.

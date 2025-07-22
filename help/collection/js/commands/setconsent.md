@@ -52,28 +52,11 @@ The following cookies are set when the consent configuration allows:
 | Name | Max age | Description |
 |---|---|---|
 | **AMCV_###@AdobeOrg** | 34128000 (395 days) | Present when [`idMigrationEnabled`](configure/idmigrationenabled.md) is enabled. It helps when transitioning to Web SDK while some parts of the site are still using `visitor.js`. |
-| **Demdex cookie** | 15552000 (180 days) | Present if ID synchronization is enabled. Audience Manager sets this cookie to assign a unique ID to a site visitor. The demdex cookie helps Audience Manger perform basic functions, such as visitor identification, ID synchronization, segmentation, modeling, reporting, and so on.|
+| **Demdex cookie** | 15552000 (180 days) | Present if ID synchronization is enabled. Audience Manager sets this cookie to assign a unique ID to a site visitor. The demdex cookie helps Audience Manger perform basic functions, such as visitor identification, ID synchronization, segmentation, modeling, reporting, and so on. |
 | **kndctr_orgid_cluster** | 1800 (30 minutes) | Stores the Edge Network region that serves the current user's requests. The region is used in the URL path so that the Edge Network can route the request to the correct region. If a user connects with a different IP address or in a different session, the request is again routed to the closest region. |
 | **kndct_orgid_identity** | 34128000 (395 days) | Stores the ECID, as well as other information related to the ECID. |
 | **kndctr_orgid_consent** | 15552000 (180 days) | Stores the users consent preference for the website. |
-|**s_ecid**|63115200 (2 years)|Contains a copy of the Experience Cloud ID ([!DNL ECID]) or MID. The MID is stored in a key-value pair that follows this syntax, `s_ecid=MCMID\|<ECID>`.|
-
-## Set consent using the Web SDK tag extension
-
-Setting consent is performed as an action within a rule in the Adobe Experience Platform Data Collection tags interface.
-
-1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
-1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
-1. Select the desired tag property.
-1. Navigate to **[!UICONTROL Rules]**, then select the desired rule.
-1. Under [!UICONTROL Actions], select an existing action or create an action.
-1. Set the [!UICONTROL Extension] dropdown field to **[!UICONTROL Adobe Experience Platform Web SDK]**, and set the [!UICONTROL Action Type] to **[!UICONTROL Set consent]**.
-1. Set the desired fields on the right, including **[!UICONTROL Standard]** and **[!UICONTROL General consent]**.
-1. Click **[!UICONTROL Keep Changes]**, then run your publishing workflow.
-
-You can include multiple consent objects within this action.
-
-## Set consent using the Web SDK JavaScript library
+|**s_ecid**|63115200 (2 years) | Contains a copy of the Experience Cloud ID ([!DNL ECID]) or MID. The MID is stored in a key-value pair that follows this syntax, `s_ecid=MCMID\|<ECID>`.|
 
 Run the `setConsent` command when calling your configured instance of the Web SDK. You can include the following objects in this command:
 
@@ -87,7 +70,7 @@ Run the `setConsent` command when calling your configured instance of the Web SD
 
 ### Adobe 2.0 standard `consent` object
 
-If you are using Adobe Experience Platform, you will need include a privacy schema field group in your profile schema. See [Governance, privacy, and security in Adobe Experience Platform](../../landing/governance-privacy-security/overview.md) for more information on the Adobe 2.0 standard. You can add data inside the value object below corresponding to the schema of the `consents` field of the [!UICONTROL Consents and Preferences] profile field group.
+If you are using Adobe Experience Platform, you will need include a privacy schema field group in your profile schema. See [Governance, privacy, and security in Adobe Experience Platform](/help/landing/governance-privacy-security/overview.md) for more information on the Adobe 2.0 standard. You can add data inside the value object below corresponding to the schema of the `consents` field of the [!UICONTROL Consents and Preferences] profile field group.
 
 * **`standard`**: The consent standard that you choose. Set this property to `"Adobe"` for the Adobe 2.0 standard.
 * **`version`**: A string representing the version of the consent standard. Set this property to `"2.0"` for the Adobe 2.0 standard.
@@ -179,7 +162,7 @@ alloy("setConsent", {
                 val: "y"
             },
             metadata: {
-                time: "2021-03-17T15:48:42-07:00"
+                time: "YYYY-03-17T15:48:42-07:00"
             }
         }
     }, {
