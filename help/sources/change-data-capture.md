@@ -65,6 +65,10 @@ For more information, read the [[!DNL Azure Databricks] guide on enabling change
 
 ## [!DNL Data Landing Zone]
 
+You must enable **change data feed** in your [!DNL Data Landing Zone] table in order to use change data capture in your source connection.
+
+Use the following commands to explicitly enable the change data feed option in [!DNL Data Landing Zone].
+
 ## [!DNL Google BigQuery]
 
 To use change data capture in your [!DNL Google BigQuery] source connection. Navigate to your [!DNL Google BigQuery] page in the [!DNL Google Cloud] console and set `enable_change_history` to `TRUE`. This property enables change history for your data table.
