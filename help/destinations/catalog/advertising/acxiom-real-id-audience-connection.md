@@ -76,7 +76,7 @@ Read ![Activate audience data to batch profile export destinations](https://expe
 ### Map attributes and identities {#map}
 For the [!DNL Acxiom Real ID Audience Connection] destination to correctly receive the audience data, you must map the source field from Experience Platform to the correct [!DNL Acxiom Real ID Audience Connection] target field.
 
-[!DNL Acxiom Real ID Audience Connection] only allows mapping to the following target field. The target field described in the table below must be mapped in the order shown below. 
+[!DNL Acxiom Real ID Audience Connection] only allows mapping to the following target field.  
 
 | Field Name | Description|Required | Field Order |
 |--------------------|------------|--------|-------------| 
