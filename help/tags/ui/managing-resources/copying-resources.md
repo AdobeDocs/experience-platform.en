@@ -39,7 +39,7 @@ When you make a copy of a full property, there are a few things that you should 
 
 >[!IMPORTANT]
 >
->Resources using the data element update variable type will require additional steps after copying. You will need to edit each update variable, choose the correct data element, and then click save.
+>Resources using the data element update variable type will require additional steps after copying. You will need to edit each update variable action, choose a different data element (preferably one that uses the same schema), save the changes, edit the update variable action again selecting the originial data element, then save the changes. 
 
 * The property settings will be copied exactly as they are (domains, advanced settings, etc)
 * Rules, data elements, and extensions from within the origin property will be copied to the new target property.  Adapters, environments, and libraries will not be copied.
