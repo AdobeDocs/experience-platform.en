@@ -94,7 +94,7 @@ curl -X POST \
           }
         }
       ],
-      "cdcEnabled": "true"
+      "cdcEnabled": true
     },
     "connectionSpec": {
       "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",

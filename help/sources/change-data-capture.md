@@ -21,6 +21,11 @@ Ensure that `_change_request_type` is present in the [!DNL Amazon S3] file that 
 
 If `_change_request_type` is not present in your file, then the default value of `u` will be used.
 
+Read the following documentation for steps on how to enable change data capture for your [!DNL Amazon S3] source connection:
+
+* [Create a [!DNL Amazon S3] base connection](./tutorials/api/create/cloud-storage/s3.md).
+* [Create a source connection for a cloud storage](./tutorials/api/collect/cloud-storage.md#create-a-source-connection).
+
 ## [!DNL Azure Blob]
 
 Ensure that `_change_request_type` is present in the [!DNL Azure Blob] file that you intend to ingest to Experience Platform. Additionally, you must ensure that the following valid values are included in the file:
@@ -30,6 +35,10 @@ Ensure that `_change_request_type` is present in the [!DNL Azure Blob] file that
 
 If `_change_request_type` is not present in your file, then the default value of `u` will be used.
 
+Read the following documentation for steps on how to enable change data capture for your [!DNL Azure Blob] source connection:
+
+* [Create a [!DNL Azure Blob] base connection](./tutorials/api/create/cloud-storage/blob.md).
+* [Create a source connection for a cloud storage](./tutorials/api/collect/cloud-storage.md#create-a-source-connection).
 
 ## [!DNL Azure Databricks]
 
@@ -63,17 +72,32 @@ set spark.databricks.delta.properties.defaults.enableChangeDataFeed = true;
 
 For more information, read the [[!DNL Azure Databricks] guide on enabling change data feed](https://docs.databricks.com/aws/en/delta/delta-change-data-feed#enable-change-data-feed).
 
+Read the following documentation for steps on how to enable change data capture for your [!DNL Azure Databricks] source connection:
+
+* [Create a [!DNL Azure Databricks] base connection](./tutorials/api/create/databases/databricks.md).
+* [Create a source connection for a database](./tutorials/api/collect/database-nosql.md#create-a-source-connection).
+
 ## [!DNL Data Landing Zone]
 
 You must enable **change data feed** in your [!DNL Data Landing Zone] table in order to use change data capture in your source connection.
 
 Use the following commands to explicitly enable the change data feed option in [!DNL Data Landing Zone].
 
+Read the following documentation for steps on how to enable change data capture for your [!DNL Data Landing Zone] source connection:
+
+* [Create a [!DNL Data Landing Zone] base connection](./tutorials/api/create/cloud-storage/data-landing-zone.md).
+* [Create a source connection for a cloud storage](./tutorials/api/collect/cloud-storage.md#create-a-source-connection).
+
 ## [!DNL Google BigQuery]
 
 To use change data capture in your [!DNL Google BigQuery] source connection. Navigate to your [!DNL Google BigQuery] page in the [!DNL Google Cloud] console and set `enable_change_history` to `TRUE`. This property enables change history for your data table.
 
-For more information, read the guide on [data definition language statements in [!DNL GoogleSQL]](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#table_option_list)
+For more information, read the guide on [data definition language statements in [!DNL GoogleSQL]](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#table_option_list).
+
+Read the following documentation for steps on how to enable change data capture for your [!DNL Google BigQuery] source connection:
+
+* [Create a [!DNL Google BigQuery] base connection](./tutorials/api/create/databases/bigquery.md).
+* [Create a source connection for a database](./tutorials/api/collect/database-nosql.md#create-a-source-connection).
 
 ## [!DNL Google Cloud Storage]
 
@@ -84,6 +108,12 @@ Ensure that `_change_request_type` is present in the [!DNL Google Cloud Storage]
 
 If `_change_request_type` is not present in your file, then the default value of `u` will be used.
 
+Read the following documentation for steps on how to enable change data capture for your [!DNL Google Cloud Storage] source connection:
+
+* [Create a [!DNL Google Cloud Storage] base connection](./tutorials/api/create/cloud-storage/google.md).
+* [Create a source connection for a cloud storage](./tutorials/api/collect/cloud-storage.md#create-a-source-connection).
+
+
 ## [!DNL SFTP]
 
 Ensure that `_change_request_type` is present in the [!DNL SFTP] file that you intend to ingest to Experience Platform. Additionally, you must ensure that the following valid values are included in the file:
@@ -92,6 +122,11 @@ Ensure that `_change_request_type` is present in the [!DNL SFTP] file that you i
 * `d`: for deletions.
 
 If `_change_request_type` is not present in your file, then the default value of `u` will be used.
+
+Read the following documentation for steps on how to enable change data capture for your [!DNL SFTP] source connection:
+
+* [Create a [!DNL SFTP] base connection](./tutorials/api/create/cloud-storage/sftp.md).
+* [Create a source connection for a cloud storage](./tutorials/api/collect/cloud-storage.md#create-a-source-connection).
 
 
 ## [!DNL Snowflake]
@@ -105,4 +140,9 @@ ALTER TABLE mytable SET CHANGE_TRACKING = TRUE
 ```
 
 For more information, read the [[!DNL Snowflake] guide on using the changes clause](https://docs.snowflake.com/en/sql-reference/constructs/changes#usage-notes).
+
+Read the following documentation for steps on how to enable change data capture for your [!DNL Snowflake] source connection:
+
+* [Create a [!DNL Snowflake] base connection](./tutorials/api/create/databases/snowflake.md).
+* [Create a source connection for a database](./tutorials/api/collect/database-nosql.md#create-a-source-connection).
 
