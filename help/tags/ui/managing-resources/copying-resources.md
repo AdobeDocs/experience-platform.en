@@ -39,7 +39,7 @@ When you make a copy of a full property, there are a few things that you should 
 
 >[!IMPORTANT]
 >
->Resources using the data element update variable type will require additional steps after copying. You will need to edit each update variable action, choose a different data element (preferably one that uses the same schema), save the changes, edit the update variable action again selecting the originial data element, then save the changes. 
+>Resources using the data element update variable type will require additional steps after copying. You will need to edit each update variable action, make an edit to any value in the data or xdm object, save the changes and the published library should work as expected. Please reach out to support if you have questions with this process. 
 
 * The property settings will be copied exactly as they are (domains, advanced settings, etc)
 * Rules, data elements, and extensions from within the origin property will be copied to the new target property.  Adapters, environments, and libraries will not be copied.
