@@ -104,7 +104,7 @@ Real-Time CDP B2B Edition provides comprehensive B2B customer data management ca
 | B2B Entity API deprecations | Audience creation via API for B2B entities (Account, Opportunity, Account-Person Relation, Opportunity-Person Relation, Campaign, Campaign Member, Marketing List, and Marketing List Member) is now deprecated. Additionally, Profile Access API lookup and delete operations for these B2B entities are also deprecated. |
 | Updates to identity namespace for Entity Resolution  | Account and Opportunity entities now use time-precedence based merging with specific identity namespaces (`b2b_account` for Account, `b2b_opportunity` for Opportunity). All other entities are unified with primary identity overlaps merged using time-precedence based merging. |
 
-For more information, read the [Real-Time CDP B2B Edition overview](../rtcdp/b2b/overview.md).
+For more information, read the [Real-Time CDP B2B Edition overview](../rtcdp/b2b-overview.md).
 
 ## Sandboxes {#sandboxes}
 
