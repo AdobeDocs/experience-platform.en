@@ -51,7 +51,7 @@ GET /ttl?{QUERY_PARAMETERS}
 | Parameter | Description |
 | --- | --- |
 | `{QUERY_PARAMETERS}` | A list of optional query parameters, with multiple parameters separated by `&` characters. Common parameters include `limit` and `page` for pagination purposes. For a full list of supported query parameters, refer to the [appendix section](#query-params) a full list of supported query parameters. The most commonly used parameters are included below as well as in the appendix. |
-| `author`     | Filter by the user who most recently updated or created the dataset expiration. Supports SQL-like patterns (e.g., `LIKE %john%`). |
+| `author`     | Filter by the user who most recently updated or created the dataset expiration. Supports SQL-like patterns (for example, `LIKE %john%`). |
 | `datasetId`  | Filter expirations by a specific dataset ID. |
 | `datasetName`| A case-insensitive filter for dataset name matches. |
 | `status`     | Filter by a comma-separated list of statuses: `pending`, `executing`, `cancelled`, `completed`. |
@@ -127,23 +127,23 @@ A successful response lists the resulting dataset expirations. The following exa
 
 ## Look up a dataset expiration {#lookup}
 
-To lookup a dataset expiration, make a GET request with either the `{DATASET_ID}` or the `{DATASET_EXPIRATION_ID}`. 
+Retrieve the details for a specific dataset expiration configuration by making a GET request with either the dataset expiration ID or the dataset ID as the path parameter.
 
 >[!IMPORTANT]
 >
->The `{DATASET_EXPIRATION_ID}` is referred to as the `ttlId` in the response. They both refer to the unique identifier for the dataset expiration.
+>You may provide either a dataset expiration ID (for exampe, `SD-xxxxxx-xxxx`) or a dataset ID in the path. The `ttlId` in the response is the unique identifier for the dataset expiration.
 
 **API format**
 
 ```http
-GET /ttl/{DATASET_ID}?include=history
-GET /ttl/{DATASET_EXPIRATION_ID}
+GET /ttl/{ID}
+GET /ttl/{ID}?include=history
 ```
 
 | Parameter | Description |
 | --- | --- |
-| `{DATASET_ID}` | The ID of the dataset whose expiration you want to look up. |
-| `{DATASET_EXPIRATION_ID}` | The ID of the dataset expiration. |
+| `{ID}` | The unique identifier for the dataset expiration configuration. You may provide either a dataset expiration ID or a dataset ID. |
+| `include` | (Optional) If set to `history`, the response includes a `history` array with change events for the configuration.|
 
 {style="table-layout:auto"}
 
@@ -170,33 +170,31 @@ A successful response returns the details of the dataset expiration.
     "datasetId": "62759f2ede9e601b63a2ee14",
     "datasetName": "XtVRwq9-38734",
     "sandboxName": "prod",
-    "imsOrg": "A2A5*EF06164773A8A49418C@AdobeOrg",
-    "status": "pending",
-    "expiry": "2024-12-31T23:59:59Z",
-    "updatedAt": "2024-05-11T15:12:40.393115Z",
-    "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
     "displayName": "Delete Acme Data before 2025",
-    "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
+    "description": "The Acme information in this dataset is licensed for our use through the end of 2024.",
+    "imsOrg": "885737B25DC460C50A49411B@AdobeOrg",
+    "status": "pending",
+    "expiry": "2035-09-25T00:00:00Z",
+    "updatedAt": "2025-05-01T19:00:55.000Z",
+    "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
 }
 ```
 
 | Property | Description |
 | --- | --- |
-| `ttlId` | The ID of the dataset expiration. |
-| `datasetId` | The ID of the dataset that this expiration applies to. |
-| `datasetName` | The display name for the dataset this expiration applies to. |
-| `sandboxName` | The name of the sandbox that the target dataset is located under. |
-| `imsOrg` | Your organization's ID. |
-| `status` | The current status of the dataset expiration. |
-| `expiry` | The scheduled date and time when the dataset will be deleted. |
-| `updatedAt` | A timestamp of when the expiration was last updated. |
-| `updatedBy` | The user who last updated the expiration. |
-| `displayName` | The display name for the expiration request. |
-| `description` | A description for the expiration request. |
+| `ttlId`       | The unique identifier for the dataset expiration configuration. |
+| `datasetId`   | The unique identifier for the dataset. |
+| `datasetName` | The name of the dataset. |
+| `sandboxName` | The sandbox in which the dataset expiration is configured. |
+| `displayName` | A human-readable name for the dataset expiration configuration. |
+| `description` | A description of the dataset expiration configuration. |
+| `imsOrg`      | Your unique organization identifier associated with this configuration. |
+| `status`      | The current status of the dataset expiration configuration.<br>One of: `pending`, `executing`, `cancelled`, `completed`. |
+| `expiry`      | The scheduled expiration timestamp for the dataset (ISO 8601 format). |
+| `updatedAt`   | Timestamp for the most recent update. |
+| `updatedBy`   | The identifier and email of the user or service that last updated the dataset expiration. |
 
 {style="table-layout:auto"}
-
-<!--  -->
 
 ### Catalog expiry tags
 
