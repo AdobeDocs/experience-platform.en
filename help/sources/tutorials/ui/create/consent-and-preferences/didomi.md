@@ -22,15 +22,11 @@ In the Experience Platform UI:
 
 ![source-connector-list](../../../../images/tutorials/create/didomi/source-connector-list.png)
 
----
-
 ## Add the Source Data Schema
 
 In the Experience Platform UI, add the schema for the source data using the file downloaded in the previous step.
 
 ![add-data-schema](../../../../images/tutorials/create/didomi/add-data-schema.png)
-
----
 
 ## Configure the Dataflow Details
 
@@ -40,8 +36,6 @@ In the Experience Platform UI:
 2. Make sure the **Profile dataset** option is enabled.
 
 ![dataflow-details](../../../../images/tutorials/create/didomi/dataflow-details.png)
-
----
 
 ## Configure the Mapping
 
@@ -53,8 +47,6 @@ In the Adobe Experience Platform UI:
 
 ![mapping-details](../../../../images/tutorials/create/didomi/mapping-details.png)
 
----
-
 ## Finish the Configuration on Adobe
 
 In the Experience Platform UI:
@@ -64,14 +56,12 @@ In the Experience Platform UI:
 
 ![configuration-done](../../../../images/tutorials/create/didomi/configuration-done.png)
 
----
-
 ## Update the Webhook Configuration
 
 After finishing the configuration on Adobe:
 
 1. Update the webhook configuration with the following values:
-   - **Endpoint URL:** The streaming endpoint provided by Adobe.
-   - **Adobe Flow ID:** The flow ID shown during the final step of the Adobe setup.
+**Endpoint URL:** The streaming endpoint provided by Adobe.
+**Adobe Flow ID:** The flow ID shown during the final step of the Adobe setup.
 
 Once this is complete, Didomi will begin sending PMP/CMP events through the integration, and the data will be stored in your Adobe dataset.
