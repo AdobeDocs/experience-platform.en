@@ -162,8 +162,10 @@ To configure details for the destination, fill in the required and optional fiel
     * **[!UICONTROL Audience Only]**: select this option to sync audience data.
     * **[!UICONTROL Audience and Profile]**: select this option to sync both profile and audience data.
 * **[!UICONTROL Partition]**: Select a Marketo lead partition ID associated with your chosen workspace. This allows you to specify which lead partition in Marketo will receive the exported audience data.
-* **[!UICONTROL Marketo deduplication field]**:
-* **[!UICONTROL Action]**:
+* **[!UICONTROL Marketo deduplication field]**: Select the Marketo deduplication field that you want to use. This selector shows the fields that you marked as deduplication fields in Marketo.
+* **[!UICONTROL Action]**: Select the Marketo action that you want to perform when exporting audiences:
+    * **[!UICONTROL Update persons only]**: Select this option to only update the audiences that have a match in Marketo.
+    * **[!UICONTROL Create and update persons]**: Select this option to update the audiences that have a match in Marketo and create matching ones for the rest.
 
 ### Enable alerts {#enable-alerts}
 
