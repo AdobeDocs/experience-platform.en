@@ -46,17 +46,33 @@ The destination enables marketers to push audiences created in Adobe Experience 
 
 To help you better understand how and when you should use the [!DNL Marketo Engage] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
-### Use case #1 {#use-case-1}
+### Audience sync use cases {#audience-sync-use-cases}
 
-*For mobile messaging platforms:*
+**Re-engage known leads only**
 
-*A home rental and sales platform wants to push mobile notifications to customers' Android and iOS devices to let them know that there are 100 updated listings in the area where they previously searched for a rental.*
+The marketing team wants to run a win-back campaign targeting leads who have not engaged in 90+ days but already exist in Marketo. They want to avoid adding any new people.
 
-### Use case #2 {#use-case-2}
+They can activate the audiences to Marketo Engage and use the **[!UICONTROL Audience Only]** sync type combined with the **[!UICONTROL Update persons only]** action to make sure they target only the audiences that already exist in Marketo.
 
-*For social network platforms:*
+**Engage new and existing leads**
 
-*An athletic apparel brand wants to reach existing customers through their social media accounts. The apparel brand can ingest email addresses from their own CRM to Adobe Experience Platform, build audiences from their own offline data, and send these audiences to YourDestination, to display ads in their customers' social media feeds.*
+The marketing team wants to launch a targeted campaign based on product interest targeting existing leads and new leads that do not exist in Marketo.
+
+They can activate their audiences in Marketo Engage and use the **[!UICONTROL Audience Only]** sync type combined with the **[!UICONTROL Create and update persons]** action to make sure they target existing leads from Marketo and create new ones for the new audiences exported from Real-Time CDP.
+
+### Audience and profile sync use cases {#audience-profile-sync-use-cases}
+
+**Re-engage known leads and update leads**
+
+The marketing team wants to launch a re-engagement campaign for existing Marketo contacts who have shown interest based on website visits. They also want to update the leads information (like preferences, demographics information), but not create any new people.
+
+They can activate the audiences to Marketo Engage and use the **[!UICONTROL Audience and Profile]** sync type combined with the **[!UICONTROL Update persons only]** action to make sure they target only the audiences that already exist in Marketo.
+
+**Re-engage and expand reach with full profile sync**
+
+The marketing team wants to activate a product interest audience for a new campaign. While many of the profiles already exist in Marketo, some are new and only present in Real-Time CDP. For the existing people, they want to make sure they update those people in Marketo, but also create new profiles.
+
+They can activate their audiences in Marketo Engage and use the **[!UICONTROL Audience and Profile]** sync type combined with the **[!UICONTROL Create and update persons]** action to make sure they target existing leads from Marketo and create new ones for the new audiences exported from Real-Time CDP.
 
 ## Prerequisites {#prerequisites}
 
@@ -147,6 +163,7 @@ To configure details for the destination, fill in the required and optional fiel
     * **[!UICONTROL Audience and Profile]**: select this option to sync both profile and audience data.
 * **[!UICONTROL Partition]**: Select a Marketo lead partition ID associated with your chosen workspace. This allows you to specify which lead partition in Marketo will receive the exported audience data.
 * **[!UICONTROL Marketo deduplication field]**:
+* **[!UICONTROL Action]**:
 
 ### Enable alerts {#enable-alerts}
 
