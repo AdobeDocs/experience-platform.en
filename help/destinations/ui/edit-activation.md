@@ -94,8 +94,6 @@ The activation workflow differs slightly depending on destination type. For more
 * [Activate audiences to batch profile export destinations](./activate-batch-profile-destinations.md) (for example, Amazon S3 or Oracle Eloqua);
 * [Activate audiences to streaming profile export destinations](./activate-streaming-profile-destinations.md) (for example, HTTP API or Amazon Kinesis).
 
-
-
 ## Add datasets to an activation dataflow {#add-datasets}
 
 Select **[!UICONTROL Export datasets]** in the right rail to select additional datasets to export to your destination. This option takes you to the [dataset export workflow](export-datasets.md).
@@ -106,6 +104,20 @@ Select **[!UICONTROL Export datasets]** in the right rail to select additional d
 
 ![Experience Platform UI image showing the Export datasets dataflow run option.](../assets/ui/edit-activation/export-datasets.png)
 
+
+## Edit marketing actions {#edit-marketing-actions}
+
+>[!NOTE]
+>
+>This feature is currently in **beta**. To request access to it, contact your Adobe representative.
+
+Select **[!UICONTROL Edit marketing actions]** in the right rail to open the marketing actions selection screen.
+
+![Experience Platform UI image showing the edit marketing actions option.](../assets/ui/edit-activation/edit-marketing-actions.png)
+
+Select the applicable marketing actions and then select **[!UICONTROL Save]** to apply the changes.
+
+![Experience Platform UI image showing the edit marketing actions screen.](../assets/ui/edit-activation/edit-marketing-actions-screen.png)
 
 
 <!-- ## Apply access labels {#apply-access-labels}

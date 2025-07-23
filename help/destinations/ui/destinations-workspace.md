@@ -86,16 +86,17 @@ The **[!UICONTROL Browse]** tab displays the destinations with which you have es
 
 >[!TIP]
 >
-> * Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![Activate audiences control](/help/images/icons/data-add.png)**[!UICONTROL Activate]** control to export audiences or datasets to that destination.
-> * Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![Delete control](/help/images/icons/delete.png)**[!UICONTROL Delete]** control to [remove](delete-destinations.md) an existing connection to a destination.
-> * Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![View in monitoring control](/help/images/icons/monitoring.png)**[!UICONTROL View in monitoring]** control to view activation information for this destination in the [monitoring dashboard](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
-> * Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![Subscribe to alerts ](/help/images/icons/alert-add.png)**[!UICONTROL Subscribe to alerts]** control to subscribe to destination dataflow alerts. You can subscribe to alerts to receive messages regarding the status, success, or failure of your flow run. See [Subscribe to in-context destination alerts](alerts.md) for detailed information on destination dataflow alerts..
+> * Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![Activate audiences control](/help/images/icons/data-add.png) **[!UICONTROL Activate audiences]** control to export audiences or datasets to that destination.
+> * Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![Edit marketing actions control](/help/images/icons/edit-marketing-actions.svg) **[!UICONTROL Edit marketing actions]** control to change the marketing actions for the selected destination.
+> * Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![Delete control](/help/images/icons/delete.png) **[!UICONTROL Delete]** control to [remove](delete-destinations.md) an existing connection to a destination.
+> * Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![View in monitoring control](/help/images/icons/monitoring.png) **[!UICONTROL View in monitoring]** control to view activation information for this destination in the [monitoring dashboard](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
+> * Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![Subscribe to alerts ](/help/images/icons/alert-add.png) **[!UICONTROL Subscribe to alerts]** control to subscribe to destination dataflow alerts. You can subscribe to alerts to receive messages regarding the status, success, or failure of your flow run. See [Subscribe to in-context destination alerts](alerts.md) for detailed information on destination dataflow alerts..
 
 ![Browse Tab](../assets/ui/workspace/browse-tab.png)
 
 |Element | Description |
 |---------|----------|
-|Name | The name you provided for your activation flow to this destination. The same column includes two controls: [!UICONTROL Activate ] and [!UICONTROL Delete destination].|
+|Name | The name you provided for your activation flow to this destination.|
 |Data Type | The type of data supported by the destination connection. Supported data types: <ul><li>**[!UICONTROL Customers]**</li><li>**[!UICONTROL Prospects]**</li><li>**[!UICONTROL Accounts]**</li><li>**[!UICONTROL Datasets]**</li></ul> |
 |[!UICONTROL Last Dataflow Run Status] | The status of the last dataflow run. See [View destination details](destination-details-page.md) for more information about dataflow runs.|
 |[!UICONTROL Last Dataflow Run Date] | Time and date when the last dataflow run has occurred. See [View destination details](destination-details-page.md) for more information about dataflow runs.|
