@@ -97,10 +97,10 @@ Supported audiences by audience data type:
 
 | Audience data type | Supported | Description | Use cases |
 |--------------------|-----------|-------------|-----------|
-| [People audiences](/help/segmentation/types/people-audiences.md) | ✓ | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
-| [Account audiences](/help/segmentation/types/account-audiences.md) | ✓ | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
-| [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | ✓ | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | ✓ | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
+| [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
+| [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -129,26 +129,24 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, select **[!UICONTROL Connect to destination]**.
 
-![Sample screenshot showing how to authenticate to the destination](../assets/docs-framework/authenticate-destination.png)
-
-* **[!UICONTROL Bearer token]**: Fill in the bearer token to authenticate to the destination.
+![Screenshot showing how to authenticate to the destination](../../assets/catalog/adobe/marketo-engage/connect-destination.png)
 
 ### Fill in destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Sample screenshot showing how to fill in details for your destination](../assets/docs-framework/configure-destination-details.png)
+![Sample screenshot showing how to fill in details for your destination](../../assets/catalog/adobe/marketo-engage/destination-details.png)
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 * **[!UICONTROL Munchkin ID]**: Select the Marketo Munchkin ID that you want to use for this destination. 
 * **[!UICONTROL Workspace ID]**: Select your Marketo workspace ID.
-* **[!UICONTROL Sync Action]**: Select the Marketo Sync Action that you want to use for this destination:
-    * **[!UICONTROL Profile Only]**
-    * **[!UICONTROL Audience Only]**
-    * **[!UICONTROL Audience and Profile]**
-* **[!UICONTROL Partition]**: 
-* Field to dedupe Marketo leads
+* **[!UICONTROL Sync Type]**: Select the sync type that you want to use for this destination:
+    * **[!UICONTROL Profile Only]**: select this option to sync profile data.
+    * **[!UICONTROL Audience Only]**: select this option to sync audience data.
+    * **[!UICONTROL Audience and Profile]**: select this option to sync both profile and audience data.
+* **[!UICONTROL Partition]**: Select a Marketo lead partition ID associated with your chosen workspace. This allows you to specify which lead partition in Marketo will receive the exported audience data.
+* **[!UICONTROL Marketo deduplication field]**:
 
 ### Enable alerts {#enable-alerts}
 
