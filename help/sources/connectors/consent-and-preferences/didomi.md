@@ -87,7 +87,9 @@ Next, configure the following options for your [!DNL webhook].
 | Flatten   | This property must be checked as it ensures that the [!DNL webhook] data is sent as a flat object. | Enabled  |
 | Event Types  | Select the specific group of [!DNL Didomi] events (`event.*` or `user.*`) that should trigger the [!DNL webhook]. Use `event.*` to track consent or preference changes, and use `user.*` to track user profile updates. This selection is required to ensure that only compatible events are sent to Adobe. Adobe supports only one schema per dataflow, so selecting both event types can cause ingestion errors. | The list of supported event types are: <ul><li>`Event.created`</li><li>`Event.updated`</li><li>`Event.deleted`</li><li>`User.created`</li><li>`User.updated`</li><li>`User.deleted`</li></ul> |
 
-Based on your selected event group, download the appropriate **sample payload file** directly from the [!DNL Didomi]cConsole. This file represents the structure of the data and will be used during the schema and mapping steps in Adobe.
+### Download the sample payload file {#download-the-sample-payload-file}
+
+Based on your selected event group, download the appropriate **sample payload file** directly from the [!DNL Didomi] Console. This file represents the structure of the data and will be used during the schema and mapping steps in Adobe.
 
 | **Event Group** | **Sample File to Download** | **Filtering Option**|
 | --- | ---| --- |
