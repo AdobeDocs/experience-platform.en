@@ -6,7 +6,7 @@ exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
 ---
 # Dataset expiration endpoint
 
-The `/ttl` endpoint in the Data Hygiene API allows you to schedule expiration dates for datasets in Adobe Experience Platform.
+Use the `/ttl` endpoint in the Data Hygiene API to schedule expiration dates for datasets in Adobe Experience Platform.
 
 A dataset expiration is only a timed-delayed delete operation. The dataset is not protected in the interim, so it may be be deleted by other means before its expiry is reached.
 
@@ -38,7 +38,9 @@ The endpoint used in this guide is part of the Data Hygiene API. Before continui
 
 ## List dataset expirations {#list}
 
-You can list all dataset expirations for your organization by making a GET request. Query parameters can be used to filter the response for appropriate results.
+You can list all dataset expirations configured for your organization by making a GET request to the `/ttl` endpoint.
+
+Filter results using query parameters to return only the expirations that meet your criteria. Each result includes status and configuration details for each dataset expiration.
 
 **API format**
 
@@ -48,11 +50,20 @@ GET /ttl?{QUERY_PARAMETERS}
 
 | Parameter | Description |
 | --- | --- |
-| `{QUERY_PARAMETERS}` | A list of optional query parameters, with multiple parameters separated by `&` characters. Common parameters include `limit` and `page` for pagination purposes. For a full list of supported query parameters, refer to the [appendix section](#query-params). |
+| `{QUERY_PARAMETERS}` | A list of optional query parameters, with multiple parameters separated by `&` characters. Common parameters include `limit` and `page` for pagination purposes. For a full list of supported query parameters, refer to the [appendix section](#query-params) a full list of supported query parameters. The most commonly used parameters are included below as well as in the appendix. |
+| `author`     | Filter by the user who most recently updated or created the dataset expiration. Supports SQL-like patterns (e.g., `LIKE %john%`). |
+| `datasetId`  | Filter expirations by a specific dataset ID. |
+| `datasetName`| A case-insensitive filter for dataset name matches. |
+| `status`     | Filter by a comma-separated list of statuses: `pending`, `executing`, `cancelled`, `completed`. |
+| `expiryDate` | Filter for expirations with a specific expiration date. |
+| `limit`      | Stipulate the maximum number of results to return (1–100, default: 25). |
+| `page`       | Paginate results with a zero-based index (default page size: 50, max: 100). |
 
 {style="table-layout:auto"}
 
 **Request**
+
+The following request retrieves all dataset expirations updated before August 1, 2021, and last updated by a user whose name matches "Jane Doe".
 
 ```shell
 curl -X GET \
@@ -75,15 +86,17 @@ A successful response lists the resulting dataset expirations. The following exa
 {
   "results": [
     {
-      "ttlId": "SD-b16c8b48-a15a-45c8-9215-587ea89369bf",
-      "datasetId": "629bd9125b31471b2da7645c",
-      "datasetName": "Sample Acme dataset",
-      "sandboxName": "hygiene-beta",
-      "imsOrg": "A2A5*EF06164773A8A49418C@AdobeOrg",
+      "ttlId": "SD-c9f113f2-d751-44bc-bc20-9d5ca0b6ae15",
+      "datasetId": "3e9f815ae1194c65b2a4c5ea",
+      "datasetName": "Acme_Profile_Engagements",
+      "sandboxName": "acme-beta",
+      "displayName": "Engagement Data Retention Policy",
+      "description": "Scheduled expiry for Acme marketing data",
+      "imsOrg": "C9D8E7F6A5B41234567890AB@AcmeOrg",
       "status": "pending",
-      "expiry": "2050-01-01T00:00:00Z",
-      "updatedAt": "2023-06-09T16:52:44.136028Z",
-      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
+      "expiry": "2027-01-12T17:15:31.000Z",
+      "updatedAt": "2026-12-15T12:40:20.000Z",
+      "updatedBy": "t.lannister@acme.com <t.lannister@acme.com> 3E9F815AE1194C65B2A4C5EA@acme.com"
     }
   ],
   "current_page": 0,
@@ -94,8 +107,21 @@ A successful response lists the resulting dataset expirations. The following exa
 
 | Property | Description |
 | --- | --- |
-| `total_count` | The count of dataset expirations that matched the listing call's parameters. |
-| `results` | Contains the details of the returned dataset expirations. For more details on the properties of a dataset expiration, see the response section for making a [lookup call](#lookup). |
+| `results`      | An array of dataset expiration configurations.|
+| `ttlId`        | The unique identifier for the dataset expiration configuration. |
+| `datasetId`    | The unique identifier of the dataset associated with this configuration. |
+| `datasetName`  | The name of the dataset. |
+| `sandboxName`  | The sandbox in which this dataset expiration is configured. |
+| `displayName`  | A human-readable name for the expiration configuration.|
+| `description`  | A description of the expiration configuration. |
+| `imsOrg`       | Your unique organization identifier.         |
+| `status`       | The current status of the expiration. One of: `pending`, `executing`, `cancelled`, `completed`. |
+| `expiry`       | The scheduled expiration date and time (ISO 8601 format). |
+| `updatedAt`    | The timestamp of the last update to this configuration. |
+| `updatedBy`    | The identifier and email of the user or service who last updated the configuration. |
+| `current_page` | The index of the current results page (zero-based). |
+| `total_pages`  | The total number of result pages available.      |
+| `total_count`  | The total number of dataset expiration configuration records returned. |
 
 {style="table-layout:auto"}
 
@@ -169,6 +195,8 @@ A successful response returns the details of the dataset expiration.
 | `description` | A description for the expiration request. |
 
 {style="table-layout:auto"}
+
+<!--  -->
 
 ### Catalog expiry tags
 
