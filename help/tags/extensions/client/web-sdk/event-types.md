@@ -38,7 +38,7 @@ The Web SDK tag extension supports the following monitoring hooks:
 
 ## [!UICONTROL Send event complete]
 
-Typically, your property would have one or more rules using the [[!UICONTROL Send event] action](action-types.md#send-event) to send events to Adobe Experience Platform Edge Network. Each time an event is sent to Edge Network, a response is returned to the browser with useful data. Without the [!UICONTROL Send event complete] event type, you wouldn't have access to this returned data.
+Typically, your property would have one or more rules using the [[!UICONTROL Send event]](actions/send-event.md) action to send events to Adobe Experience Platform Edge Network. Each time an event is sent to Edge Network, a response is returned to the browser with useful data. Without the [!UICONTROL Send event complete] event type, you wouldn't have access to this returned data.
 
 To access the returned data, create a separate rule, then add a [!UICONTROL Send event complete] event to the rule. This rule is triggered each time a successful response is received from the server as a result of a [!UICONTROL Send event] action.
 

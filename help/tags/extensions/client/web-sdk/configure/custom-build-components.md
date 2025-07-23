@@ -24,9 +24,9 @@ Adobe offers the ability to disable the following Web SDK build components:
 | --- | --- | --- |
 | **[!UICONTROL Activity collector]** | Allows automatic link collection and Activity Map tracking. | |
 | **[!UICONTROL Audiences]** | Supports the integration with Adobe Audience Manager, such as ID syncs. | |
-| **[!UICONTROL Consent]** | Allows the ability to use consent features. | [[!UICONTROL Set consent]](../action-types.md#set-consent) action |
-| **[!UICONTROL Event merge]** | Deprecated. | [[!UICONTROL Event merge ID]](../action-types.md#data) data element<br>[!UICONTROL Reset event merge ID] action |
-| **[!UICONTROL Media Analytics bridge]** | Supports the integration with legacy Media Analytics. | [[!UICONTROL Get media analytics tracker]](../action-types.md#get-media-analytics-tracker) action |
-| **[!UICONTROL Personalization]** | Supports integrations with Adobe Target and Adobe Journey Optimizer. | [[!UICONTROL Apply propositions]](../action-types.md#apply-propositions) | 
-| **[!UICONTROL Rules engine]** | Enables device decisioning with Adobe Journey Optimizer. | [[!UICONTROL Evaluate rulsets]](../action-types.md#evaluate-rulesets) action<br> [[!UICONTROL Subscribe ruleset items]](../event-types.md#subscribe-ruleset-items) event |
-| **[!UICONTROL Streaming media]** | Supports the integration with streaming media collection. | [[!UICONTROL Send media event]](../action-types.md#send-media-event) action |
+| **[!UICONTROL Consent]** | Allows the ability to use consent features. | [[!UICONTROL Set consent]](../actions/set-consent.md) action |
+| **[!UICONTROL Event merge]** | Deprecated. | [[!UICONTROL Event merge ID]](../data-element-types.md) data element (deprecated)<br>[[!UICONTROL Reset event merge ID]](../actions/reset-event-merge-id.md) action (deprecated) |
+| **[!UICONTROL Media Analytics bridge]** | Supports the integration with legacy Media Analytics. | [[!UICONTROL Get media analytics tracker]](../actions/get-media-analytics-tracker.md) action |
+| **[!UICONTROL Personalization]** | Supports integrations with Adobe Target and Adobe Journey Optimizer. | [[!UICONTROL Apply propositions]](../actions/apply-propositions.md) |
+| **[!UICONTROL Rules engine]** | Enables device decisioning with Adobe Journey Optimizer. | [[!UICONTROL Evaluate rulsets]](../actions/evaluate-rulesets.md) action<br> [[!UICONTROL Subscribe ruleset items]](../event-types.md#subscribe-ruleset-items) event |
+| **[!UICONTROL Streaming media]** | Supports the integration with streaming media collection. | [[!UICONTROL Send media event]](../actions/send-media-event.md) action |

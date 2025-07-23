@@ -13,7 +13,7 @@ The **[!UICONTROL Apply response]** action type lets you perform various actions
 1. Under [!UICONTROL Actions], select an existing action or create an action.
 1. Set the [!UICONTROL Extension] dropdown field to **[!UICONTROL Adobe Experience Platform Web SDK]**, then set the [!UICONTROL Action type] to **[!UICONTROL Apply response]**.
 
-![Image of the Experience Platform user interface showing the Apply response action type.](assets/apply-response.png)
+![Image of the Experience Platform user interface showing the Apply response action type.](../assets/apply-response.png)
 
 ## Use cases
 

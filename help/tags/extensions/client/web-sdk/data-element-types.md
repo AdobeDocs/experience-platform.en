@@ -3,7 +3,6 @@ title: Data element types in the Adobe Experience Platform Web SDK Extension
 description: Learn about the different data element types provided by the Adobe Experience Platform Web SDK tag extension.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
 ---
-
 # Data element types
 
 After you set your [action types](actions/actions-overview.md) in the tag extension, you must configure your data element types. This page describes the available data element types.

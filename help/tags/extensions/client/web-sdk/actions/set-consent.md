@@ -4,7 +4,7 @@ description: Sets the desired consent for the visitor.
 ---
 # Set consent
 
-The **[!UICONTROL Set consent]** command determines if the tag extension should send data (opt in), discard data (opt out), or use [Default consent](../configure/consent.md) (consent unknown). When a user allows or denies consent on your site, you can use this action to sync their preferences with the tag extension. The JavaScript library equivalent of this action is the [`setConsent`](/help/collection/js/commands/setconsent.md) command.
+The **[!UICONTROL Set consent]** action determines if the tag extension should send data (opt in), discard data (opt out), or use [default consent](../configure/consent.md) (consent unknown). When a user allows or denies consent on your site, you can use this action to sync their preferences with the tag extension. The JavaScript library equivalent of this action is the [`setConsent`](/help/collection/js/commands/setconsent.md) command.
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.

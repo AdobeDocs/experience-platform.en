@@ -87,7 +87,7 @@ If you use device lookups when [configuring your datastream](/help/datastreams/c
 | Browser name | The browser used. The low entropy hint `Sec-CH-UA` also collects this element. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | `Chrome` |
 | Browser version | The significant version of the browser. The low entropy hint `Sec-CH-UA` also collects this element. Exact browser version is not automatically collected. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` |
 
-See [User agent client hints](../../use-cases/client-hints.md) under Experience Platform use cases for more information.
+See [User agent client hints](../../../use-cases/client-hints.md) for more information.
 
 ## Code example
 

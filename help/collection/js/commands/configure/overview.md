@@ -40,7 +40,3 @@ alloy("configure", {
   thirdPartyCookiesEnabled: false
 });
 ```
-
-## Configure the Web SDK tag extension
-
-See [Configuration settings overview](/help/tags/extensions/client/web-sdk/configure/config-overview.md) in the Web SDK tag extension documentation to learn how to perform each of these configuration settings using tags.

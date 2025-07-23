@@ -4,7 +4,7 @@ description: Configure datastream overrides for your implementation.
 ---
 # `edgeConfigOverrides` (`configure` command)
 
-The `edgeConfigOverrides` object allows you to override configuration settings for commands run on the current page. This object is useful when you have different websites or subdomains for different countries, or if you have multiple Experience Platform sandboxes to store data specific to different business units. If you want to override configuration settings for only a single command on the page, consider using the [`edgeConfigOverrides` object in the `sendEvent` command](../sendevent/edgeconfigoverrides.md). The tag equivalent to this object is [Datastream configuration overrides](/help/tags/extensions/client/web-sdk/configure/configuration-overrides.md).
+The `edgeConfigOverrides` object allows you to override configuration settings for commands run on the current page. This object is useful when you have different websites or subdomains for different countries, or if you have multiple Experience Platform sandboxes to store data specific to different business units. If you want to override configuration settings for only a single command on the page, consider using the [`edgeConfigOverrides` object in the `sendEvent` command](../sendevent/edgeconfigoverrides.md).
 
 The datastream configuration override process consists of two main steps:
 
@@ -88,3 +88,7 @@ alloy("configure", {
 | `com_adobe_target.enabled` | `boolean` | Determines if the event is sent to Adobe Target. |
 | `com_adobe_target.propertyToken` | `string` | The token for the Adobe Target destination property. |
 | `com_adobe_launch_ssf` | `boolean` | Determines if the event is sent to Server-side forwarding. |
+
+## Configuration overrides using the Web SDK tag extension
+
+The Web SDK tag extension equivalent of this field is under [Configuration overrides](/help/tags/extensions/client/web-sdk/configure/configuration-overrides.md) when configuring the tag extension.

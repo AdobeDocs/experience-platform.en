@@ -41,3 +41,7 @@ If you decide to [handle responses](../command-responses.md) with this command, 
 * **`propositions`**: An array of propositions returned by the Edge Network. Propositions that are automatically rendered include the flag `renderAttempted` set to `true`.
 * **`inferences`**: An array of inference objects, which contain machine learning information about this user.
 * **`destinations`**: An array of destination objects returned by the Edge Network.
+
+## Send event using the Web SDK tag extension
+
+The Web SDK tag extension equivalent of this command is the [**[!UICONTROL Send event]**](/help/tags/extensions/client/web-sdk/actions/send-event.md#data-fields) action.

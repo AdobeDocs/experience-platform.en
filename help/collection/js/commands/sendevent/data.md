@@ -27,3 +27,7 @@ alloy("sendEvent", {
 ## Use the `data` object with Adobe Analytics {#analytics}
 
 You can use the `data` object with Adobe Analytics to send data to a report suite without an XDM schema. Variables are configured to use the same syntax as AppMeasurement variables, simplifying the upgrade process to the Web SDK. See [Data object variable mapping to Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping) in the Adobe Analytics implementation guide for more information.
+
+## Use the `data` object using the Web SDK tag extension
+
+The `data` object is available as a [Variable data element](/help/tags/extensions/client/web-sdk/data-element-types.md#variable) when using the Web SDK tag extension.
