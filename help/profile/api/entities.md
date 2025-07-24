@@ -18,6 +18,22 @@ Adobe Experience Platform enables you to access [!DNL Real-Time Customer Profile
 
 The API endpoint used in this guide is part of the [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
 
+>[!BEGINSHADEBOX]
+
+## Entity resolution
+
+As part of the upgrades to the Real-Time CDP B2B Edition architecture, Adobe is introducing entity resolution for Accounts and Opportunities. Entity resolution jobs run once per day. This enhancement allows to Experience Platform to identify and consolidated multiple records that represent the same real-world entity, improving data consistency and providing you with more accurate audience segmentation.
+
+The Account and Opportunity entities are resolved through time-precedence-based merging. If multiple records for the same Account or Opportunity exist, then the version with the most recent update is retained.
+
+Two dedicated B2B namespaces are used to handle entity resolution:
+* Account: Account entities are resolved using the `b2b_account` namespace.
+* Opportunity: Opportunity entities are resolved using the `b2b_opportunity` namespace.
+
+As a result of this update, the [!DNL Profile Access] API now reflects the latest merge profile view after an entity resolution job cycle completes. Additionally, the consistent data provides use cases such as segmentation, activation, and analytics with improved data accuracy and consistency.
+
+>[!ENDSHADEBOX]
+
 ## Retrieve an entity {#retrieve-entity}
 
 You can retrieve a Profile entity by making a GET request to the `/access/entities` endpoint along with the required query parameters.
