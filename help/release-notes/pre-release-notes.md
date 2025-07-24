@@ -21,144 +21,128 @@ exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
 >- [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
-**Release date: June 18, 2025**
+**Release date: July 29, 2025**
 
 New features and updates to existing features in Adobe Experience Platform:
 
-- [Access control](#access-control)
-- [Advanced data lifecycle management](#advanced-data-lifecycle-management)
-- [Dashboards](#dashboards)
-- [Data Governance](#data-governance)
 - [Destinations](#destinations)
-- [Federated Audience Composition](#fac)
-- [Privacy Service](#privacy-service)
+- [Data Ingestion](#ingestion)
+- [Query Service](#query-service)
+- [Real-Time CDP B2B Edition](#b2b)
 - [Sandboxes](#sandboxes)
+- [Segmentation Service](#segmentation)
 - [Sources](#sources)
-
-## Access control {#access-control}
-
-Experience Platform leverages [Adobe Admin Console](https://adminconsole.adobe.com) product profiles to link users with permissions and sandboxes. Permissions control access to a variety of Experience Platform capabilities, including data modeling, profile management, and sandbox administration.
-
-**Key features**
-
-| Feature | Description |
-| ------- | ----------- |
-| Export Dashboard Data permission | The **[!UICONTROL Download CSV]** and **[!UICONTROL Send as email]** options in dashboards now require the **[!UICONTROL Export Dashboard Data]** permission. This permission ensures that only authorized users can export tabulated insight data, supporting tighter governance and data access control policies. |
-
-For more information, please see the [access control overview](../access-control/home.md). 
-
-## Advanced data lifecycle management {#advanced-data-lifecycle-management}
-
-Experience Platform provides a suite of data hygiene capabilities that allow you to manage your stored data through programmatic deletions of consumer records and datasets. Using either the Data Lifecycle workspace in the UI or through calls to the Data Hygiene API, you can effectively manage your data stores. Use these capabilities to ensure that information is used as expected, is updated when incorrect data needs fixing, and is deleted when organizational policies deem it necessary.
-
-**New documentation**
-
-| New documentation | Description |
-| --- | --- |
-| Record Delete General Availability | You can now delete individual records based on identity fields using the UI or API. This feature helps reduce storage, enforce governance, and improve data hygiene by allowing deletions from a single dataset or across all datasets. Volume limits and entitlement requirements apply. |
-
-For more information, read the [advanced data lifecycle management overview](../hygiene/home.md).
-
-## Dashboards {#dashboards}
-
-Experience Platform provides multiple dashboards through which you can view important insights about your organization's data, as captured during daily snapshots.
-
-**New or updated features**
-
-| Feature | Description |
-| ------- | ----------- |
-| Send as Email Export Option | You can now export up to 10,000 records from Query Pro mode dashboards by selecting **[!UICONTROL Send as email]** from the **[!UICONTROL View more]** menu. This option securely sends a download link to your Adobe-associated email for larger exports. |
-
-For more information on dashboards, including how to grant access permissions and create custom widgets, begin by reading the [dashboards overview](../dashboards/home.md).
-
-## Data Governance {#data-governance}
-
-Adobe Experience Platform Data Governance is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data usage. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
-
-**New features**
-
-| Feature | Description |
-| --- | --- |
-| Azure CMK Alerts and IP Allowlist Configuration | You can now allowlist Adobe's static IP address in Azure Key Vault to ensure continued access when network restrictions are enabled. This helps prevent disruptions to Platform services due to restricted key access. |
-| CMK Configuration Alerts and Resolutions  | Experience Platform now triggers alerts when Adobe services lose access to your Azure Key Vault (for example, due to removed IP allowlist entries or disabled keys). A new guide helps you understand each alert and take corrective action. |
-
-For more information, read the [data governance overview](../data-governance/home.md).
 
 ## Destinations {#destinations}
 
 [!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
-**New destinations**
+**Updated destinations**
 
 | Destination | Description |
 | --- | --- |
-| Algolia User Segments | The Algolia User Segments destination enables marketing professionals to deliver consistent personalization across sites from home page to search. Build rich audiences from multiple data sources and share them across various channels for improved targeting strategies and campaign personalization. |
+| Marketo Destination Cards Consolidation | Marketo V2 and Marketo Engage Person Sync destination cards have been consolidated into a single, unified destination card. This consolidation simplifies the destination selection process and provides a more streamlined experience for Marketo integrations. |
 
 **New or updated functionality**
 
 | Feature | Description |
 | --- | --- |
-| LinkedIn account expiration information | Account expiration information for LinkedIn destinations is now available directly in the [!UICONTROL Browse] and [!UICONTROL Accounts] views. Previously, this information was only available in documentation. This enhancement provides better visibility into LinkedIn authentication status and credential management. |
-| Google Customer Match + DV360 general availability and enhancement | The Google Customer Match + DV360 destination is now available for all Experience Platform users. The documentation now includes detailed guidance for account linking between Adobe and Google advertising accounts. |
-| Data Landing Zone (DLZ) destination encryption support | Added encryption support for the Data Landing Zone destination. You can now attach RSA-formatted public keys to add encryption to your exported files. |
-| Audience-level monitoring for enterprise destinations | Audience-level monitoring is now available for the following enterprise destinations: [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), [[!DNL HTTP API]](/help/destinations/catalog/streaming/http-destination.md), [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md).|
+| Enhanced datastream information for edge destinations | Improved right-rail information for Adobe Target and Custom Personalization destinations now displays the datastream name, providing clearer visibility into associated datastream configurations and reducing confusion when reviewing existing dataflows. The **[!UICONTROL Datastream ID]** selector in the destination configuration screen has been updated to **[!UICONTROL Datastream]** for improved clarity in the user interface. |
+| Marketing actions visibility in destination selection | Marketing actions are now displayed in the right rail of the destination **[!UICONTROL Browse]** tab and in the **[!UICONTROL Dataflow runs]** page, providing immediate visibility of marketing action changes without requiring navigation to the view page. This improvement enhances the user experience by making it easier to verify marketing action configurations during destination setup. |
+|(Limited beta) Edit marketing actions for destinations | You can now edit marketing actions for existing destinations. This functionality is in limited beta. To request access to it, contact your Adobe representative. |
+|(Limited beta) Edit destinations | You can now edit your destination configuration after creating it. This functionality is in limited beta. To request access to it, contact your Adobe representative. |
+| Account names and descriptions for destination connections | You can now add account names and descriptions when connecting to destinations, enabling better management of destinations with multiple accounts. |
 
-{style="table-layout:auto"}
+**Fixes**
+
+| Issue | Description |
+| --- | --- |
+| Categories scroll functionality | Fixed an issue where the categories side menu in the destinations and sources catalog did not scroll properly on mouseover, improving navigation usability for users browsing destination categories. |
 
 For more information, read the [Destinations overview](../destinations/home.md).
 
-## Federated Audience Composition {#fac}
+## Data Ingestion {#ingestion}
 
-Federated Audience Composition allows enterprises to compose data for better application across various use cases. With this new approach, as an Adobe Real-Time Customer Data Platform and/or Adobe Journey Optimizer user, you can federate datasets directly from your existing data warehouse to create and enrich Adobe Experience Platform audiences and attributes all in one system.
-
-| New feature | Description |
-| ----------- | ----------- |
-| HIPAA readiness | Federated Audience Composition is now HIPAA compliant. For more information on Federated Audience Composition's privacy and security measures, read the [privacy and security in Federated Audience Composition overview](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/privacy-security). For more information on HIPAA compliance for Experience Platform products in general, read the [HIPAA and Adobe Products and Services overview](https://www.adobe.com/trust/compliance/hipaa-ready.html). |
-
-For more information, read the [Federated Audience Composition documentation](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
-
-## [!DNL Privacy Service] {#privacy}
-
-Several legal and organizational regulations give users the right to access or delete their personal data from your data stores upon request. Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface to help you manage these data requests from your customers. With [!DNL Privacy Service], you can submit requests to access and delete private or personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
+Experience Platform provides a comprehensive data ingestion framework that supports both batch and streaming data ingestion from various sources.
 
 **New features**
 
-|Feature | Description|
-|--- | ---|
-| Support for Tennessee and Minnesota Privacy Laws | Privacy Service now supports the Tennessee Information Protection Act (`tipa_tn_usa`) and the Minnesota Consumer Data Privacy Act (`mcdpa_mn_usa`). You can process access and delete requests in compliance with these new state-level regulations. See the [Regulations overview](https://experienceleague.adobe.com/en/docs/experience-platform/privacy/regulations/overview) for more details. |
+| Feature | Description |
+| ------- | ----------- |
+| Support for monitoring streaming profile ingestion | Real-time monitoring for streaming profile ingestion is now available, providing transparency into throughput, latency, and data quality metrics. This supports proactive alerting and actionable insights to help data engineers identify capacity violations and ingestion issues. |
 
-See the [Privacy Service overview](../privacy-service/home.md) for more information on the service.
+For more information, read the [data ingestion overview](../ingestion/home.md).
+
+## Query Service {#query-service}
+
+Adobe Experience Platform Query Service provides a robust SQL interface for data analysis and exploration across the platform.
+
+**New or updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Enhanced session management | Data Distiller now includes enhanced session management capabilities, providing better control over user sessions and improved performance monitoring across development and production environments. |
+| Support for non-expiring credentials password character restrictions | Data Distiller now supports non-expiring credentials with specific character restrictions. While passwords require at least one number, one lowercase letter, one uppercase letter, and one special character, the dollar sign ($) is not supported. Recommended special characters include `!, @, #, ^, or &`. |
+| Improved performance consistency across environments | Data Distiller performance is now consistent between development and production sandboxes, with similar backend resources available in both environments. Compute hours consumed may vary based on data volume and available backend compute resources at processing time. |
+
+For more information, read the [Query Service overview](../query-service/home.md).
+
+## Real-Time CDP B2B Edition {#b2b}
+
+Real-Time CDP B2B Edition provides comprehensive B2B customer data management capabilities, enabling organizations to build unified customer profiles, create sophisticated B2B audiences, and activate data across various marketing channels.
+
+**New or updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| B2B architecture upgrade | Experience Platform is upgrading to a new B2B architecture that introduces significant improvements to multi-entity audiences with B2B attributes. This upgrade consolidates merge policy support, enhances audience counts accuracy, and improves entity resolution capabilities. |
+| Merge policy Consolidation for multi-entity Audiences | Multi-entity audiences with B2B attributes now support only a single merge policy — the default merge policy — instead of supporting multiple merge policies. This change ensures consistent audience composition and simplifies merge logic management. |
+| Updates to account audience constraints | Account audiences no longer have the previous constraints of a 30 day lookback window for Experience Events, custom entity restrictions, or limitations on using `inSegment` events. These updates provide greater flexibility in creating complex B2B audience definitions. |
+| Enhanced audience counts for B2B entities | Audience size estimates for audiences with B2B entities like Accounts and Opportunities are now exact, based on real-time segmentation results. This improvement provides more accurate and reliable estimates for audiences involving complex B2B relationships. |
+| Account snapshots for audience membership | Audience membership details are now included for Account entities in snapshot exports, enabling access to account-level audience status, timestamps, and membership indicators. This brings feature parity between Profile (Person) and Account segmentation models. |
+| Sandbox tooling changes for multi-entity audiences | Importing multi-entity audiences with B2B entities and Experience Events exported before migration is no longer supported. These audiences will fail import validation and cannot be automatically converted to the new architecture. Audiences must be re-exported after migration before importing into target sandboxes. |
+| B2B Entity API deprecations | Audience creation via API for B2B entities (Account, Opportunity, Account-Person Relation, Opportunity-Person Relation, Campaign, Campaign Member, Marketing List, and Marketing List Member) is now deprecated. Additionally, Profile Access API lookup and delete operations for these B2B entities are also deprecated. |
+| Updates to identity namespace for Entity Resolution  | Account and Opportunity entities now use time-precedence based merging with specific identity namespaces (`b2b_account` for Account, `b2b_opportunity` for Opportunity). All other entities are unified with primary identity overlaps merged using time-precedence based merging. |
+
+For more information, read the [Real-Time CDP B2B Edition overview](../rtcdp/b2b-overview.md).
 
 ## Sandboxes {#sandboxes}
 
-Adobe Experience Platform is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater for the development, testing, and deployment of these applications while ensuring operational compliance.
+Experience Platform is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater for the development, testing, and deployment of these applications while ensuring operational compliance.
 
 **New or updated features**
 
 | Feature | Description |
 | --- | --- |
-| Object configuration updates migration | You can now migrate iterative object configuration updates across sandboxes after the initial replication. This enhancement supports development workflows where configurations need to be updated and propagated across environments without recreating the entire sandbox setup. |
-
-{style="table-layout:auto"}
+| Changes to multi-entity audience imports | Sandbox tooling has been updated to support the new B2B architecture upgrade. Multi-entity audiences containing B2B entities and Experience Events must be re-exported after the architecture upgrade before being imported into target sandboxes via sandbox tooling. Importing pre-upgrade versions will fail validation. |
 
 For more information on sandboxes, read the [sandboxes overview](../sandboxes/home.md).
+
+## Segmentation Service {#segmentation-service}
+
+[!DNL Segmentation Service] defines a particular subset of profiles by describing the criteria that distinguishes a marketable group of people within your customer base. Audiences can be based on record data (such as demographic information) or time series events representing customer interactions with your brand.
+
+**New or updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| External audience API | You can use the external audiences API to programmatically import externally generated audiences into Adobe Experience Platform. |
 
 ## Sources {#sources}
 
 Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 
-**Updated features**
+**New sources**
+
+| Source | Description |
+| --- | --- |
+| Support for [!DNL Didomi] (Streaming SDK) | The [!DNL Didomi] source connector enables you to ingest consent management data from [!DNL Didomi]'s platform, supporting compliance with privacy regulations and consent-based marketing strategies. |
+
+**New or updated functionality**
 
 | Feature | Description |
 | --- | --- |
-| Support for new authentication type for [!DNL Azure Synapse Analytics] | The [!DNL Azure Synapse Analytics] will now also support service principal authentication, in addition to the existing connection string authentication. |
-
-**Important authentication updates**
-
-| Update | Description |
-| --- | --- |
-| [!DNL Salesforce] Basic Authentication deprecation | Basic Authentication for Salesforce CRM and Salesforce Service Cloud will be deprecated by January 2026. Customers must migrate to OAuth 2.0 authentication to maintain connectivity. This change affects both source connectors and ensures improved security and compliance with Salesforce's authentication standards. |
-
-{style="table-layout:auto"}
+| Support for change data capture in select sources | You can now create dataflows that enable change data capture for incremental ingestion using source connectors. This capability allows customers to bring change data type for incremental ingestion, improving data freshness and reducing processing overhead. |
+| Support for soft deletion of records in [!DNL Salesforce] | The [!DNL Salesforce] source now supports including soft deleted records through an optional `includeDeletedObjects` parameter. When set to true, customers can include soft deleted records in their [!DNL Salesforce] queries and bring these records into Experience Platform. |
 
 For more information, read the [sources overview](../sources/home.md).

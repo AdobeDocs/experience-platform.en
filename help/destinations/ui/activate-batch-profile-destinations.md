@@ -279,6 +279,10 @@ In this step, you must select the profile attributes that you want to add to the
 
 1. The field you selected for export now appears in the mapping view. If you wish, you can edit the name of the header in the exported file. To do this, select the icon on the target field.
 
+    >[!NOTE]
+    >
+    >Dots (`.`) are not supported in field names in exported files. If a field name includes dots (such as `person.name.firstName`), each dot will be replaced with an underscore (`_`) in the exported column name. For example, `person.name.firstName` will become `person_name_firstName` in your exported file.
+
     ![Modal window showing profile attributes that can be exported to the destination.](../assets/ui/activate-batch-profile-destinations/mapping-step-select-target-field.png)
 
 1. In the **[!UICONTROL Select target field]** page, type in the desired name of the header in your exported file, then choose **[!UICONTROL Select]**.
