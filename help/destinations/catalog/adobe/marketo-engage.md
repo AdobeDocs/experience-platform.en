@@ -11,7 +11,7 @@ Adobe is consolidating the **[!UICONTROL (V2) Marketo Engage]** and **[[!UICONTR
 
 >[!IMPORTANT]
 >
->The current **[!UICONTROL (V2) Marketo Engage]** destination card will be deprecated in **December 2025**.
+>The current **[!UICONTROL (V2) Marketo Engage]** and **[!UICONTROL Marketo Engage Person Sync]** destination cards will be deprecated in **December 2025**.
 
 This new destination offers all features from both previous versions, making it easier to manage your Marketo integrations with a single, streamlined workflow:
 
@@ -74,29 +74,15 @@ The marketing team wants to activate a product interest audience for a new campa
 
 They can activate their audiences in Marketo Engage and use the **[!UICONTROL Audience and Profile]** sync type combined with the **[!UICONTROL Create and update persons]** action to make sure they target existing leads from Marketo and create new ones for the new audiences exported from Real-Time CDP.
 
-## Prerequisites {#prerequisites}
-
-
-## Supported identities and attributes {#supported-identities-attributes}
-
->[!NOTE]
->
->In the [mapping step](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) of the activate destination workflow, it is *mandatory* to map identities and *optional* to map attributes. Mapping Email and/or ECID from the Identity Namespace tab is the most important thing to do to ensure the person is matched in Marketo. Mapping Email ensures the highest match rate.
-
-### Supported identities {#supported-identities}
+## Supported identities {#supported-identities}
 
 [!DNL Marketo Engage] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-|ECID|Experience Cloud ID|A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID". Read the following document on [ECID](/help/identity-service/features/ecid.md) for more information.|
-|Email|Email address|A namespace that represents an email address. This type of namespace is often associated to a single person and therefore can be used to identify that person across different channels.|
+| `DedupeField` | The field used to identify and match existing leads in Marketo. This field must be mapped during the attribute mapping step for the matching to work properly. | Map any source field that serves as a unique identifier, such as `ECID`, `Email`, or other custom identifiers. For best results, choose a field that is consistently available and unique across all your customer profiles. |
 
 {style="table-layout:auto"}
-
-### Supported attributes {#supported-attributes}
-
-You can map attributes from Experience Platform to any of the attributes that your organization has access to in Marketo. In Marketo, you can use the [Describe API request](https://developers.marketo.com/rest-api/lead-database/leads/#describe) to retrieve the attribute fields that your organization has access to.
 
 ## Supported audiences {#supported-audiences}
 
@@ -173,24 +159,6 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-
-
-The video below also demonstrates the steps to configure a Marketo destination and activate audiences.
-
->[!IMPORTANT]
->
->The video does not entirely reflect current capability. For the most up-to-date information, please refer to the guide linked above. The following parts of the video are outdated:
-> 
->* The destination card that you should use in the Experience Platform UI is **[!UICONTROL Marketo V2]**.
->* The video does not show the new **[!UICONTROL Person creation]** selector field in the connect to destination workflow. To use that field, you must map both first name and last name during the attribute mapping step.
->* The two limitations called out in the video do not apply anymore. You can now map many other profile attribute fields in addition to the audience membership information that was supported at the time the video was recorded. You can also export audience members to Marketo who do not yet exist in your Marketo static lists, and these will be added to the lists.
->* In the **[!UICONTROL Schedule audience step]** of the activation workflow, in Marketo V1, you needed to manually add a **[!UICONTROL Mapping ID]** to successfully export data to Marketo. This manual step is not required anymore in Marketo V2.
-
->[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
-
-
-
-
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
@@ -198,22 +166,21 @@ The video below also demonstrates the steps to configure a Marketo destination a
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
-*Delete as appropriate - If you are documenting a new streaming destination, keep the first paragraph below. If you are documenting a new file-based destination, keep the second paragraph. If you are documenting a destination that exports datasets, keep the third paragraph.*
-
 Read [Activate profiles and audiences to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
-
-Read [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md) for instructions on activating audiences to this destination.
-
-Read [(Beta) Export datasets](/help/destinations/ui/export-datasets.md) for extensive instructions on exporting datasets to this destination.
 
 ### Map attributes and identities {#map}
 
-*Add information about supported mappings between source and target fields in the Mapping step of the activation workflow. Your destination might support exporting profile attributes, identity namespaces, or both. Some fields might be mandatory. Target attributes might be predefined or custom. Call out the important caveats and use examples, preferably with screenshots. Two examples of destination pages which you can use as reference are:* 
+During the mapping step, map any source field or identity that serves as a unique identifier, such as `ECID`, `Email`, or other custom identifiers to the `DedupeField` target identity.
 
-* *[Pega](/help/destinations/catalog/personalization/pega.md#mapping-example)*
-* *[Medallia](/help/destinations/catalog/voice/medallia-connector.md#map)*
+For best results, choose a field that is consistently available and unique across all your customer profiles.
+
+![Experience Platform screenshot showing the identity mapping in Marketo Engage.](../../assets/catalog/adobe/marketo-engage/marketo-mapping.png)
 
 ## Exported data / Validate data export {#exported-data}
+
+After exporting audiences to Marketo Engage, you should log in to your Marketo account to verify that the audiences have been activated as expected. Check the relevant lead partitions and workspaces in Marketo to confirm that the audience data appears correctly and that the intended actions (such as updating or creating persons) have been performed. 
+
+If you do not see the expected data, review your mapping and export settings in Adobe Experience Platform and try the export again.
 
 ## Data usage and governance {#data-usage-governance}
 
