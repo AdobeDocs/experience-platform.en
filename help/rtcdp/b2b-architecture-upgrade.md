@@ -74,7 +74,7 @@ To achieve the same audience logic, use the segment-of-segment approach:
 
 Once the upgrade is complete, any new multi-entity audiences with B2B attributes and Experience Events must be created using the segment-of-segment approach. Additionally, you must validate audience membership to ensure expected behavior.
 
-### entity resolution and time-precedence merging in B2B audiences
+### Entity resolution and time-precedence merging in B2B audiences
 
 As part of the architecture upgrade, Adobe has introduced entity resolution for accounts and opportunities, which runs daily. This enhancement enables Experience Platform to identify and consolidate multiple records that represent the same real-world entity, thereby improving data consistency and enables more accurate audience segmentation.
 
@@ -82,6 +82,8 @@ With this upgrade, you can now:
 
 * Use the [!DNL Profile Access] APIs to view the latest merge profiles once the daily entity resolution jobs are complete.
 * Utilize the improved accuracy and consistency of your account and opportunity data for segmentation, activation, and analytics.
+
+Read the [[!DNL Profile Access] API](../profile/api/entities.md) for more information.
 
 ### Support of merge policies in multi-entity B2B audiences
 
