@@ -1,6 +1,8 @@
 ---
 title: Monitor streaming profile ingestion
 description: Learn how to use the monitoring dashboard to monitor streaming profile ingestion
+hide: true
+hidefromtoc: true
 ---
 # Monitor streaming profile ingestion
 
@@ -25,6 +27,12 @@ You can use three different metric categories in the monitoring dashboard for st
 ## Monitoring metrics for streaming profile ingestion {#streaming-profile-metrics}
 
 >[!CONTEXTUALHELP]
+>id="platform_monitoring_streaming_profile"
+>title="Monitor streaming profile ingestion"
+>abstract="The monitoring dashboard for streaming profiles displays information on throughput, ingestion rates, and latency. Use this dashboard to view, understand, and analyze the data processing metrics. of your streaming profiles into Experience Platform."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_profile_request_throughput"
 >title="Request throughput"
 >abstract="This metric represents the number of events entering the ingestion system per second."
@@ -40,6 +48,12 @@ You can use three different metric categories in the monitoring dashboard for st
 >id="platform_monitoring_streaming_profile_p95_ingestion_latency"
 >title="P95 ingestion latency"
 >abstract="This metric measures the 95th percentile latency from the moment an event arrives in Experience Platform to when it is successfully ingested into the Profile store."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_streaming_profile_max_throughput"
+>title="Max throughput"
+>abstract="This metric represents the maximum number of inbound requests per second entering streaming profile ingestion."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -71,6 +85,7 @@ You can use three different metric categories in the monitoring dashboard for st
 | Request throughput | This metric represents the number of events entering the ingestion system per second. |Sandbox/Dataflow | Real-time monitoring with a data refresh every 60 seconds. |
 | Processing throughput | This metric represents the number of events that are successfully ingested by the system each second. |Sandbox/Dataflow | Real-time monitoring with a data refresh every 60 seconds. |
 | P95 ingestion latency | This metric measures the 95th percentile latency from the moment an event arrives in Experience Platform to when it is successfully ingested into the Profile store. | Sandbox/Dataflow | Real-time monitoring with a data refresh every 60 seconds. |
+| Max throughput | 
 | Records ingested | This metric represents the total number of records ingested to the Profile store within a configured time window. | <ul><li>Sandbox/Dataflow</li><li>Dataflow run</li></ul> | <ul><li>Sandbox/Dataflow: Real-time monitoring with a data refresh every 60 seconds.</li><li>Dataflow run: Grouped in 15 minutes.</li></ul>  |
 | Records failed | This metric represents the total number of records that failed ingestion into the Profile store, within a configured time window, due to errors. | <ul><li>Sandbox/Dataflow</li><li>Dataflow run</li></ul> |<ul><li>Sandbox/Dataflow: Real-time monitoring with a data refresh every 60 seconds.</li><li>Dataflow run: Grouped in 15 minutes.</li></ul>  |
 | Records skipped | This metric represents the total number of records that were dropped within a configured time window, due to configuration or capacity breaches. | <ul><li>Sandbox/Dataflow</li><li>Dataflow run</li></ul> | <ul><li>Sandbox/Dataflow: Real-time monitoring with a data refresh every 60 seconds.</li><li>Dataflow run: Grouped in 15 minutes.</li></ul>  |
