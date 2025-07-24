@@ -11,7 +11,7 @@ Adobe Real-Time Customer Data Platform B2B Edition provides several standard [Ex
 
 >[!IMPORTANT]
 >
->You must have access to Real-Time CDP B2B Edition in order for B2B schemas to participate in [Real-Time Customer Profile](../../profile/home.md).
+>B2B schemas are available to use in Experience Platform applications (for example, in[Customer Journey Analytics B2B Edition](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-b2b/cja-b2b-edition)). <br/>However, you must have access to Real-Time CDP B2B Edition in order for (profiles in) B2B schemas to participate in [Real-Time Customer Profile](../../profile/home.md).
 
 The following standard classes are provided in Real-Time CDP B2B Edition:
 
