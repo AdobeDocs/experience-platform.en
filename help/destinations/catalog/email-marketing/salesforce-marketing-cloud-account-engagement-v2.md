@@ -2,8 +2,8 @@
 title: (V2) Salesforce Marketing Cloud Account Engagement
 description: Learn how to use the (V2) Salesforce Marketing Cloud Account Engagement (formerly known as Pardot) destination to export your profile data and activate it within Salesforce Marketing Cloud Account Engagement using batch processing for your business needs.
 badge: label="Alpha" type="Informative"
-
-exl-id: new-id-placeholder-v2
+hide: yes
+hidefromtoc: yes
 ---
 # [!DNL (V2) Salesforce Marketing Cloud Account Engagement] connection
 
@@ -51,7 +51,7 @@ A [!DNL Marketing Cloud Account Engagement] account with a subscription to the [
 
 #### Gather [!DNL Marketing Cloud Account Engagement] credentials {#gather-credentials}
 
-Note down the items below before you authenticate to the [!DNL (V2) Marketing Cloud Account Engagement] destination.
+Write down the items below before you authenticate to the [!DNL (V2) Marketing Cloud Account Engagement] destination.
 
 | Credential | Description |
 | --- | --- |
@@ -148,7 +148,7 @@ Before you begin mapping your data, review the required field mappings below.
 
 | Target field | Type |Required|
 |---|---|---|
-| `email` | XDM attribute | Always required |
+| `email` | Attribute | Always required |
 | `matchId` | Identity | At least one of these three identities is required |
 | `matchSalesforceId` | Identity | At least one of these three identities is required |
 | `matchEmail` | Identity | At least one of these three identities is required |
