@@ -12,7 +12,7 @@ Read the following guide to learn how you can use the monitoring dashboard to mo
 
 You can use three different metric categories in the monitoring dashboard for streaming profile ingestion: [!UICONTROL Throughput], [!UICONTROL Ingestion], and [!UICONTROL Latency].
 
-* **Throughput**: Select **[UICONTROL Throughput]** to view information on the amount of data that Experience Platform is processing given a configured period of time. Refer to this metric to evaluate the efficiency and capacity of your system.
+* **Throughput**: Select **[!UICONTROL Throughput]** to view information on the amount of data that Experience Platform is processing given a configured period of time. Refer to this metric to evaluate the efficiency and capacity of your system.
   * **Capacity**: The maximum amount of data that your sandbox can process under defined conditions.
   * **Request throughput**: The rate at which events are received by the ingestion system, measured in events per second.
   * **Processing throughput**: The rate at which the system successfully ingests and processes incoming event payloads, measured in events per second.
