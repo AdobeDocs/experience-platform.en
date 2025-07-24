@@ -4,7 +4,6 @@ description: Export data to your Snowflake account using private listings.
 hide: yes
 hidefromtoc: yes
 badgeBeta: label="Beta" type="Informative"
-exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
 ---
 # Snowflake Batch connection {#snowflake-destination}
 
@@ -24,7 +23,7 @@ This destination uses a [!DNL Snowflake] data share, which means that no data is
 
 The first time you share data from Adobe's Snowflake instance to yours, you are prompted to accept the private listing from Adobe.
 
-![Screenshot showing the Snowflake private listing acceptance screen](../../assets/catalog/cloud-storage/snowflake/snowflake-accept-listing.png)
+![Screenshot showing the Snowflake private listing acceptance screen](../../assets/catalog/cloud-storage/snowflake-batch/snowflake-accept-listing.png)
 
 ### Data retention and Time-to-Live (TTL) {#ttl}
 
@@ -79,7 +78,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, select **[!UICONTROL Connect to destination]**.
 
-![Sample screenshot showing how to authenticate to the destination](../../assets/catalog/cloud-storage/snowflake/authenticate-destination.png)
+![Sample screenshot showing how to authenticate to the destination](../../assets/catalog/cloud-storage/snowflake-batch/authenticate-destination.png)
 
 ### Fill in destination details {#destination-details}
 
@@ -90,7 +89,7 @@ To authenticate to the destination, select **[!UICONTROL Connect to destination]
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Sample screenshot showing how to fill in details for your destination](../../assets/catalog/cloud-storage/snowflake/configure-destination-details.png)
+![Sample screenshot showing how to fill in details for your destination](../../assets/catalog/cloud-storage/snowflake-batch/configure-destination-details.png)
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -116,13 +115,13 @@ When you are finished providing details for your destination connection, select 
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
-Read [Activate profiles and audiences to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
+Read [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md) for instructions on activating audiences to this destination.
 
 ### Map attributes {#map}
 
-The Snowflake destination supports the mapping of profile attributes to custom attributes.
+The [!DNL Snowflake Batch] destination supports the mapping of identities and profile attributes to custom attributes.
 
-![Experience Platform user interface image showing the mapping screen for the Snowflake destination.](../../assets/catalog/cloud-storage/snowflake/mapping.png)
+![Experience Platform user interface image showing the mapping screen for the Snowflake destination.](../../assets/catalog/cloud-storage/snowflake-batch/mapping.png)
 
 The target attributes are automatically created in Snowflake using the attribute name that you provide in the **[!UICONTROL Attribute name]** field.
 
