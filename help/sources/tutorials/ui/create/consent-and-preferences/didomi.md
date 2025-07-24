@@ -89,7 +89,7 @@ Mapping is used specifically to transfer **purpose data** from [!DNL Didomi] int
 
 Use the [sample webhook payload downloaded](../../../../connectors/consent-and-preferences/didomi.md#download-the-sample-payload-file) from the [!DNL Didomi] webhook settings to map each [!DNL Didomi] purpose to the appropriate fields in your Adobe dataset.
 
-When finished, select **[UICONTROL Next]**.
+When finished, select **[!UICONTROL Next]**.
 
 ![mapping-details](../../../../images/tutorials/create/didomi/mapping-details.png)
 
