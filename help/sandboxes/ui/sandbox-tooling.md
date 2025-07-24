@@ -19,6 +19,10 @@ The sandbox tooling feature provides you with the ability to export [!DNL Adobe 
 
 ### Real-time Customer Data Platform objects {#real-time-cdp-objects}
 
+>[!IMPORTANT]
+>
+>As part of the upgrades to the Real-Time CDP B2B Edition architecture, you will no longer be able to import multi-entity audiences with B2B attributes and Experiences Events that were exported before the upgrade. These audiences will fail import validation and cannot be automatically converted to the new architecture. <br>You must first re-export these audiences and import them into their respective target sandboxes using sandbox tooling.</br>
+
 The table below lists [!DNL Adobe Real-Time Customer Data Platform] objects that are currently supported for sandbox tooling:
 
 | Platform | Object | Details |
