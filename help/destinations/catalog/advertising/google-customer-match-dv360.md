@@ -8,7 +8,7 @@ exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
 
 >[!NOTE]
 >
->**Limited availability of the Google Customer Match + DV360 connector**<br>As we're going through the full lifecycle of maturity on this integration with Google, we're seeing data that points to weaknesses in implementation that need to be corrected before wider adoption can happen. Given these concerns, Adobe has reduced the visibility of this destination to a limited number of customers. We are in active conversations with Google to improve the product experience. We understand this may be disappointing news, but we believe it's the responsible approach to ensure a high-quality, reliable experience for our customers.</br>
+>**Limited availability of the Google Customer Match + Display & Video 360 connector**<br>As we're going through the full lifecycle of maturity on this integration with Google, we're seeing data that points to weaknesses in implementation that need to be corrected before wider adoption can happen. Given these concerns, Adobe has reduced the visibility of this destination to a limited number of customers. We are in active conversations with Google to improve the product experience. We understand this may be disappointing news, but we believe it's the responsible approach to ensure a high-quality, reliable experience for our customers.</br>
 
 Use this destination to activate your first-party PII-based [[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) lists directly to [!DNL Google Display & Video 360] properties such as [!DNL Search], [!DNL YouTube], [!DNL Gmail], and the [!DNL Google Display Network].
 
@@ -101,16 +101,16 @@ Data exports will fail if your Google account is not properly linked to Adobe's 
 
 >[!NOTE]
 >
->Adobe has updated the Google Partner Account ID from `6219889373` to `4641108541`. 
+>For customers who were part of the beta program for this connector: Adobe has updated the Google Partner Account ID from `6219889373` to `4641108541`. 
 >
->**If your Google account is currently linked to the old Adobe Partner Account ID (`6219889373`) follow the steps below:**
+>**If you were part of the beta program for the Google Customer Match + Display & Video 360 connector and if your Google account is currently linked to the old Adobe Partner Account ID (`6219889373`) follow the steps below:**
 >
 >1. Unlink your Google account from the old Adobe Partner Account ID (`6219889373`)
 >2. Link your Google account to the new Adobe Partner Account ID (`4641108541`)
 >3. Remove all audiences from your existing dataflows
 >4. Create new dataflows and map your audiences
 >
->If your Google account is already linked to the new Adobe Partner Account ID (`4641108541`), no action is required from you.
+>If your Google account is already linked to the new Adobe Partner Account ID (`4641108541`), no action is required from you to use this connector.
 
 **For organizations with manager accounts:**
 
