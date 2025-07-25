@@ -300,13 +300,13 @@ A successful response returns an HTTP 201 (Created) status and the new dataset e
 
 A 400 (Bad Request) HTTP status occurs if a dataset expiration already exists for the dataset. A 404 (Not Found) HTTP status occurs if no such dataset exists or you do not have access to the dataset.
 
-## Update a dataset expiration {#update}
+## Update a dataset expiration configuration {#update}
 
-To update an expiration date for a dataset, use a PUT request and the `ttlId`. You can update the `displayName`, `description`, and/or `expiry` information. 
+To update an existing dataset expiration configuration, make a PUT request to `/ttl/DATASET_EXPIRATION_ID`. You can only update the `displayName`, `description`, and `expiry` fields of the configuration. Updates are only allowed when the expiration status is `pending`.
 
 >[!NOTE]
 >
->If you change the expiration date and time, it must be at least 24 hours in the future. This enforced delay provides an opportunity for you to cancel or re-schedule the expiration and avoid any accidental loss of data.
+>The `expiry` field accepts a date (YYYY-MM-DD) or date and time (YYYY-MM-DDTHH:MM:SSZ). If only a date is provided, the system uses midnight UTC (00:00:00Z) on that day. The expiry **must be at least 24 hours in the future**.
 
 **API format**
 
@@ -316,62 +316,70 @@ PUT /ttl/{DATASET_EXPIRATION_ID}
 
 | Parameter | Description |
 | --- | --- |
-| `{DATASET_EXPIRATION_ID}` | The ID of the dataset expiration that you want to change. Note: This is referred to as the `ttlId` in the response. | 
+| `{DATASET_EXPIRATION_ID}` | The unique identifier for the dataset expiration configuration. Note: This is referred to as the `ttlId` in the response. | 
 
 **Request**
 
-The following request reschedules a dataset expiration `SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` to occur at the end of 2024 (Greenwich Mean Time). If the existing dataset expiration is found, that expiration is updated with the new `expiry` value.
+The following request updates the expiration, display name, and description for dataset expiration `SD-c1f902aa-57cb-412e-bb2b-c70b8e1a5f45`:
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/core/hygiene/ttl/SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f \
+  https://platform.adobe.io/data/core/hygiene/ttl/SD-c1f902aa-57cb-412e-bb2b-c70b8e1a5f45 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-        "expiry": "2024-12-31T23:59:59Z",
-        "displayName": "Delete Acme Data before 2025",
-        "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
+        "displayName": "Customer Dataset Expiry Rule",
+        "description": "Updated description for Acme customer dataset",
+        "expiry": "2031-06-15"
       }'
 ```
 
 | Property | Description |
 | --- | --- |
-| `expiry` | **Required** A date and time in ISO 8601 format. If the string has no explicit time zone offset, the time zone is assumed to be UTC. The lifespan of data within the system is set according to the provided expiry value. Any previous expiration timestamp for the same dataset is to be replaced by the new expiration value you have provided. This date and time must be at least **24 hours in the future**. |
-| `displayName` | A display name for the expiration request. |
-| `description` | An optional description for the expiration request. |
+| `displayName` | (Optional) A new human-readable name for the dataset expiration configuration. |
+| `description` | (Optional) A new description for the dataset expiration configuration. |
+| `expiry`      | (Optional) A new expiry date or date and time in ISO 8601 format. If only a date is provided, defaults to midnight UTC. The expiry must be **at least 24 hours in the future**. |
 
-{style="table-layout:auto"}
+>[!NOTE]
+>
+>At least one of these fields must be provided in the request.
 
 **Response**
 
-A successful response returns the new state of the dataset expiration and an HTTP status 200 (OK) if a pre-existing expiration was updated.
+A successful response returns HTTP status 200 (OK) and the updated dataset expiration configuration.
 
 ```json
 {
-    "ttlId": "SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f",
-    "datasetId": "5b020a27e7040801dedbf46e",
-    "imsOrg": "A2A5*EF06164773A8A49418C@AdobeOrg",
-    "status": "pending",
-    "expiry": "2024-12-31T23:59:59Z",
-    "updatedAt": "2022-05-09T22:38:40.393115Z",
-    "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
-    "displayName": "Delete Acme Data before 2025",
-    "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
+  "ttlId": "SD-c1f902aa-57cb-412e-bb2b-c70b8e1a5f45",
+  "datasetId": "3e9f815ae1194c65b2a4c5ea",
+  "datasetName": "Acme_Customer_Data",
+  "sandboxName": "acme-prod",
+  "displayName": "Customer Dataset Expiry Rule",
+  "description": "Updated description for Acme customer dataset",
+  "imsOrg": "C9D8E7F6A5B41234567890AB@AcmeOrg",
+  "status": "pending",
+  "expiry": "2031-06-15T00:00:00Z",
+  "updatedAt": "2031-05-01T14:11:12.000Z",
+  "updatedBy": "b.tarth@acme.com <b.tarth@acme.com> 3E9F815AE1194C65B2A4C5EA@acme.com"
 }
 ```
 
 | Property | Description |
 | --- | --- |
-| `ttlId` | The ID of the dataset expiration. |
-| `datasetId` | The ID of the dataset that this expiration applies to. |
-| `imsOrg` | Your organization's ID. |
-| `status` | The current status of the dataset expiration. |
-| `expiry` | The scheduled date and time when the dataset will be deleted. |
-| `updatedAt` | A timestamp of when the expiration was last updated. |
-| `updatedBy` | The user who last updated the expiration. |
+| `ttlId`       | The unique identifier for the updated dataset expiration configuration. |
+| `datasetId`   | The unique identifier for the dataset. |
+| `datasetName` | The name of the dataset. |
+| `sandboxName` | The sandbox in which this dataset expiration is configured. |
+| `displayName` | The display name for the dataset expiration configuration. |
+| `description` | A description of the dataset expiration configuration. |
+| `imsOrg`      | The organization ID associated with this configuration. |
+| `status`      | The current status of the dataset expiration configuration.<br>One of: `pending`, `executing`, `cancelled`, `completed`. |
+| `expiry`      | The scheduled expiration timestamp for the dataset. |
+| `updatedAt`   | The timestamp for the most recent update. |
+| `updatedBy`   | The identifier and email of the user or service that last updated the dataset expiration configuration. |
 
 {style="table-layout:auto"}
 
