@@ -132,18 +132,11 @@ The following animation shows the dataset preview window with its navigation and
 The dataset preview window includes:
 
 * An object browser sidebar on the left for navigating and filtering dataset fields.
-* Data type indicators displayed next to each column name for quick insight into the structure of the dataset.
+* Data type indicators next to each column name for insight into the structure of the dataset.
 * A SQL query display at the top of the window, showing the query used to generate the dataset.
-* A formatted table view of up to 100 rows in the lower right area for efficient data review.
-* Direct navigation to Query Editor for Data Distiller users, with the SQL query prepopulated for further exploration or modification.
+* A formatted table view of up to 100 rows for efficient data review.
 
-These features support fast navigation, schema understanding, and transparent dataset validation.
-
-Select **[!UICONTROL Preview dataset]** from the inline actions or from the [!UICONTROL Dataset activity] screen to open the preview window.
-
->[!NOTE]
->
->The preview window displays a sample of up to 100 rows. Fields without data are excluded from the view.
+These features help you navigate, understand schema details, and validate sample data efficiently.
 
 #### Advanced Query Editor shortcut {#query-editor-shortcut}
 
