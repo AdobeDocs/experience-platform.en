@@ -26,7 +26,7 @@ The Web In-app messaging functionality requires the latest version of the Web SD
 
 ### Configure a CSP for Web In-app Messaging {#csp}
 
-When you configure [Web In-App Messaging](../personalization/web-in-app-messaging.md), you must inclde the following directive in your CSP:
+When you configure [Web In-App Messaging](../personalization/web-in-app-messaging.md), you must include the following directive in your CSP:
 
 ```
 default-src  blob:;
