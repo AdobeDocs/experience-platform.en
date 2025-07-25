@@ -111,6 +111,7 @@ For OAuth 2 Client Credential, select **[!UICONTROL OAuth2 Client Credential]** 
 * Client ID
 * Client secret
 * API version
+* Include delete objects
 
 When finished, select **[!UICONTROL Connect to source]**.
 
