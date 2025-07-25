@@ -5,10 +5,23 @@ keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 ---
 
-# Release notes
+# Web SDK Release notes
 
 This document covers the release notes for the Adobe Experience Platform Web SDK.
 For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Version 2.28.0 - July 24, 2025
+
+**New features**
+
+- Added support for Adobe Journey Optimizer disqualification rules.
+
+**Fixes and improvements**
+
+- Fixed an error in the [Media Analytics tracker](commands/getmediaanalyticstracker.md) where the `length` property of the media object incorrectly accepted invalid data types.
+- Improved [identity management](identity/overview.md) error handling to properly process promise rejections when identity lookup fails.
+- Resolved an issue where [personalization content](personalization/rendering-personalization-content.md) with HTML content items failed to render with an error relating to a missing `renderStatusHandler`.
+- Fixed activity map [URL collection](commands/configure/clickcollectionenabled.md) to properly handle non-HTTP URLs.
 
 ## Version 2.27.0 - May 20, 2025
 
@@ -62,9 +75,9 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 - When multiple in-app messages are returned, only the one with the highest priority is shown. The others are recorded as suppressed.
 - Empty datastream overrides are no longer sent to the Edge Network, reducing potential conflicts with server side routing configurations.
 - Renamed the following logging message component names, to align with other Adobe SDKs:
-    - `DecisioningEngine` has been renamed to `RulesEngine`
-    - `LegacyMediaAnalytics`  has been renamed to `MediaAnalyticsBridge`
-    - `Privacy` has been renamed to `Consent`
+  - `DecisioningEngine` has been renamed to `RulesEngine`
+  - `LegacyMediaAnalytics` has been renamed to `MediaAnalyticsBridge`
+  - `Privacy` has been renamed to `Consent`
 - Fixed an error that occurred when default content items were rendered via [`applyPropositions`](../web-sdk/commands/applypropositions.md).
 - Fixed a CSS error in Adobe Target move and resize actions.
 - Removed the `machineLearning` key from [`sendEvent`](../web-sdk/commands/sendevent/overview.md) responses.
