@@ -11,7 +11,7 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 ## Version 2.31.0 - July 24, 2025
 
 **Warning**
-After releasing 2.31.0 we discovered an issue with excluding custom build components. Regardless of what you exclude from the build, the full build is included in the Tags build. We are working on a fix. Consider waiting for the next release if you are excluding build components.
+After releasing v2.31.0, an issue with the custom components build process was discovered. Custom builds will still function, but no components are excluded, meaning a full-sized build is included in the Tags build. A fix is in progress. Consider waiting for the next release if you utilize a custom selection of your components to reduce the size of your build.
 
 **New features**
 
