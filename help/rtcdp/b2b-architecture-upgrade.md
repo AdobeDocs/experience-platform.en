@@ -10,7 +10,7 @@ exl-id: d958a947-e195-4dd4-a04c-63ad82829728
 
 >[!IMPORTANT]
 >
->This document outlines architectural upgrades to Real-Time CDP B2B and B2P Editions. **No action is required from you** at this point. Refer to this document for information on how the upgrades will impact existing features of Adobe Experience Platform. If you have any questions, contact your Adobe Account Team.
+>This document outlines architectural upgrades to Real-Time CDP B2B and B2P Editions. The upgrades will require no actions from most customers. However, there are audiences that cannot be upgraded automatically. Adobe will work directly with you to address these scenarios. Refer to this document for information on how the upgrades will impact existing features of Adobe Experience Platform. If you have any questions, contact your Adobe Account Team.
 
 Adobe has redesigned the Real-Time CDP B2B and B2P Editions to enhance scalability, performance, and reliability, while also supporting more advanced B2B use cases. To ensure all customers benefit from these improvements, Adobe will upgrade all existing B2B and B2P customers to the new architecture.
 
@@ -47,19 +47,6 @@ With this upgrade, you can now:
 
 Read the documentation on [account audiences](../segmentation/types/account-audiences.md) for more information.
 
-### Full lookback for person-level events in account audiences
-
-Account audiences can now leverage the full history of person-level events, expanding beyond the previous 30-day lookback window.
-
-With this upgrade, you can now: 
-
-* Create more comprehensive audiences based on the full history of associated person-level events.
-* Enable richer and more accurate audience definitions by leveraging long-term behavioral data.
-* Identify high-value accounts based on deeper engagement patterns over time.
-* Support use cases that require insights from historical actions, such as those involving long sale cycles or delayed buying signals.
-
-Read the documentation on [account audiences](../segmentation/types/account-audiences.md) for more information.
-
 ## Upgrades to existing features
 
 The following features have been updated as part of the B2B architectural upgrades.
@@ -68,16 +55,33 @@ The following features have been updated as part of the B2B architectural upgrad
 
 As part of the new architecture upgrade, Experience Event filters can no longer be used within a single multi-entity audience that includes B2B attributes.
 
-To achieve the same audience logic, use the segment-of-segment approach:
+To achieve the same audience logic, you can use the segment builder to [add audiences and reference audiences](../segmentation/ui/segment-builder.md#adding-audiences)
 
-1. Create an Experience Event audience: Define the behavioral condition separately. For example: "People who visited the pricing page in the last three days."
-2. Create a multi-entity audience with B2B attributes: Reference the Experience Event audience as part of this audience's criteria. For example: "People who are a **'Decision Maker'** of any opportunity where the account is in the **'Finance'** industry and member of the people audience who visited the pricing page in the last three days.  
+For example:
 
-Once the upgrade is complete, any new multi-entity audiences with B2B attributes and Experience Events must be created using the segment-of-segment approach. Additionally, you must validate audience membership to ensure expected behavior.
+* Create an Experience Event audience
+  * Define the behavioral condition separately. For example: "People who visited the pricing page in the last three days."
+* Create a multi-entity audience with B2B attributes.
+  * From here, you can reference the Experience Event audience as part of this audience's criteria. For example: "People who are a **'Decision Maker'** of any opportunity where the account is in the **'Finance'** industry and member of the people audience who visited the pricing page in the last three days. 
+
+Once the upgrade is complete, any new multi-entity audiences with B2B attributes and Experience Events must be created using the [segment-of-segment](../segmentation/methods/edge-segmentation.md#edge-segmentation-query-types) approach. 
+
+>[!TIP]
+>
+>A **segment of segments** is any segment definition that contains one or more batch or edge segments. **Note**: if you use a segment of segments, profile disqualification will happen **every 24 hours**.
 
 ### Entity resolution and time-precedence merging in B2B audiences
 
-As part of the architecture upgrade, Adobe has introduced entity resolution for accounts and opportunities, which runs daily. This enhancement enables Experience Platform to identify and consolidate multiple records that represent the same real-world entity, thereby improving data consistency and enables more accurate audience segmentation.
+As part of the architecture upgrade, Adobe is introducing entity resolution for Accounts and Opportunities. Entity resolution is based on deterministic ID matching and based on the latest data. Entity resolution job runs daily during batch segmentation, prior to evaluating multi-entity audiences with B2B attributes.
+
+>[!BEGINSHADEBOX]
+
+#### How does entity resolution work?
+
+* **Before**: If a Data Universal Numbering System (DUNS) number was used as an additional identity and account's DUNS number was updated in a source system like CRM, the account ID is linked to both old and new DUNS numbers.
+* **After**: If the DUNS number was used as an additional identity and the account's DUNS number was updated in a source system like a CRM, the account ID is only linked to the new DUNS number, thereby reflecting the current state of account more accurately.
+
+>[!ENDSHADEBOX]
 
 With this upgrade, you can now: 
 
@@ -89,8 +93,6 @@ Read the [[!DNL Profile Access] API](../profile/api/entities.md) for more inform
 ### Support of merge policies in multi-entity B2B audiences
 
 Multi-entity audiences with B2B attributes now support a single merge policy - the default merge policy that you configure - instead of multiple merge policies.
-
-Audiences that previously relied on a non-default merge policy may produce different results. To understand the potential changes in audience composition, review and test any of your audiences that rely on a non-default merge policy. Additionally, monitor activation results to detect any shifts in audience composition due to the merge policy change. 
 
 Read the [segmentation use case guide for Real-Time CDP B2B Edition](./segmentation/b2b.md) for more information.
 
@@ -122,9 +124,7 @@ Read the [[!DNL Profile Access] API](../profile/api/entities.md) for more inform
 
 You can now retrieve account and opportunity schemas as lookup dimension entities only after they have completed the daily entity resolution process. Newly ingested records will not be available for profile enrichment or segment definitions until the next entity resolution cycle completes (typically every 24 hours).
 
-You are recommended to review any use cases that require real-time access to account and opportunity data. Additionally, you are recommended to plan for up to a 24-hour latency period when designing or updating workflows that depend on lookup-based segmentation or personalization with account and opportunity entities.
-
-### Deprecation of audience creation via API for B2B entities
+<!-- ### Deprecation of audience creation via API for B2B entities
 
 Creation of audiences using B2B entities via API is being deprecated. The list of affected B2B entities include:
 
@@ -137,10 +137,12 @@ Creation of audiences using B2B entities via API is being deprecated. The list o
 * Marketing List
 * Marketing List Member
 
-Read the [segment definitions endpoint API guide](../segmentation/api/segment-definitions.md) for more information.
+Read the [segment definitions endpoint API guide](../segmentation/api/segment-definitions.md) for more information. -->
 
 ### Changes to multi-entity audience imports in sandbox tooling
 
-With the architecture upgrades, you will no longer be able to import multi-entity audiences with B2B attributes and Experience Events if they were exported before the upgrade. These audiences will fail to import and cannot be automatically converted to the new architecture. To work around this limitation, you must re-export these audiences and then import them into their respective target sandboxes using sandbox tooling.
+With the architecture upgrades, you will no longer be able to import multi-entity audiences with B2B attributes and Experience Events if a package that included these audiences were published before the upgrade. These audiences will fail to import and cannot be automatically converted to the new architecture. To work around this limitation, you must create a new package with the updated audiences and then import them into their respective target sandboxes using sandbox tooling.
+
+Development sandboxes will be upgraded to the new architecture. Audiences that can be auto-updated will be upgraded; those that cannot will be disabled. Disabled audiences must be re-created after the upgrade.
 
 Read the [sandbox tooling guide](../sandboxes/ui/sandbox-tooling.md) for more information.
