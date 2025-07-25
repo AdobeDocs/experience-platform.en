@@ -140,19 +140,17 @@ These features help you navigate, understand schema details, and validate sample
 
 #### Advanced Query Editor shortcut {#query-editor-shortcut}
 
-You can access the Advanced Query Editor directly from the dataset preview window if your organization has a Data Distiller license. Use this shortcut to move seamlessly between previewing sample data to running and refining queries in Query Service
+If your organization has a Data Distiller license, you can access the [!UICONTROL Advanced Query Editor] directly from the dataset preview window. Use this shortcut to move seamlessly from previewing sample data to running and refining queries in Query Service.
 
 >[!AVAILABILITY]
 >
 >Access to the [!UICONTROL Advanced Query Editor] is limited to organizations with a Data Distiller SKU license. If your organization does not have the required license, this option does not appear in the dataset preview window.
 
-Select [!UICONTROL Advanced Query Editor] in the upper right of the preview window to open the Query Editor. The previewed query is automatically loaded and executed, allowing you to continue analysis or modify the SQL directly in Query Service without re-entering the query.
+Select [!UICONTROL Advanced Query Editor] in the upper right of the preview window to open Query Service with your current SQL query pre-loaded and executed. You can continue analyzing or modify the SQL without re-entering the query.
 
 ![Dataset preview window showing the Advanced Query Editor button in the upper right.](../images/datasets/user-guide/dataset-preview-advanced-query-editor.png)
 
-This shortcut enables seamless movement from previewing sample data to running and refining queries in Query Service.
-
-For additional data access and analysis, use downstream services such as [!DNL Query Service] and [!DNL JupyterLab]. See the following documents for more information:
+For additional analysis, use downstream services such as [!DNL Query Service] and [!DNL JupyterLab]. See the following documents for more information:
 
 * [Query Service overview](../../query-service/home.md)
 * [JupyterLab user guide](../../data-science-workspace/jupyterlab/overview.md)
