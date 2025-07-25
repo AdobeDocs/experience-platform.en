@@ -36,7 +36,7 @@ Run the `getIdentity` command when calling your configured instance of the Web S
 
   You can request [!DNL ECID] and [!DNL CORE ID] at the same time. Example: `"namespaces": ["ECID","CORE"]`.
 
-* **`edgeConfigOverrides`**: A [datastream configuration override object](datastream-overrides.md).
+* **`edgeConfigOverrides`**: A [datastream configuration override object](configure/edgeconfigoverrides.md).
 
 ```js
 alloy("getIdentity",{

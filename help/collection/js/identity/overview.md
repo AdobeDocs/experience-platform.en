@@ -6,7 +6,7 @@ exl-id: 03060cdb-becc-430a-b527-60c055c2a906
 
 # Identity data in Web SDK
 
-The Adobe Experience Platform Web SDK uses [Adobe Experience Cloud IDs (ECIDs)](../../identity-service/features/ecid.md) to track visitor behavior. Using [!DNL ECIDs], you can ensure that each device has a unique identifier that can persist across multiple sessions, tying all the hits that occur during and across web sessions to a specific device.
+The Adobe Experience Platform Web SDK uses [Adobe Experience Cloud IDs (ECIDs)](/help/identity-service/features/ecid.md) to track visitor behavior. Using [!DNL ECIDs], you can ensure that each device has a unique identifier that can persist across multiple sessions, tying all the hits that occur during and across web sessions to a specific device.
 
 This document provides an overview of how to manage [!DNL ECIDs] and [!DNL CORE IDs] using the Web SDK.
 
@@ -14,7 +14,7 @@ This document provides an overview of how to manage [!DNL ECIDs] and [!DNL CORE 
 
 The Web SDK assigns and tracks [!DNL ECIDs] by using cookies, with multiple available methods for configuring how these cookies are generated.
 
-When a new user arrives on your website, the [Adobe Experience Cloud Identity Service](../../identity-service/home.md) attempts to set a device identification cookie for that user.
+When a new user arrives on your website, the [Adobe Experience Cloud Identity Service](/help/identity-service/home.md) attempts to set a device identification cookie for that user.
 
 * For first-time visitors, an [!DNL ECID] is generated and returned in the first response from the Experience Platform Edge Network.
 * For returning visitors, the [!DNL ECID] is retrieved from the `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` cookie and added to the request payload by the Edge Network.
@@ -69,7 +69,7 @@ Depending on your use case, there are two ways in which you can access the [!DNL
 
 ### Retrieve the [!DNL ECID] through Data Prep for Data Collection {#retrieve-ecid-data-prep}
 
-Use [Data Prep for Data Collection](../../datastreams/data-prep.md) to map the [!DNL ECID] to an [!DNL XDM] field. This is the recommended way to access the [!DNL ECID].
+Use [Data Prep for Data Collection](/help/datastreams/data-prep.md) to map the [!DNL ECID] to an [!DNL XDM] field. This is the recommended way to access the [!DNL ECID].
 
 To do this, set the source field to the following path:
 
@@ -79,7 +79,7 @@ xdm.identityMap.ECID[0].id
 
 Then, set the target field to an XDM path where the field is of type `string`.
 
-![](../../tags/extensions/client/web-sdk/assets/access-ecid-data-prep.png)
+![](/help/tags/extensions/client/web-sdk/assets/access-ecid-data-prep.png)
 
 
 ### Retrieve the [!DNL ECID] through the `getIdentity()` command {#retrieve-ecid-getidentity}
@@ -120,7 +120,7 @@ alloy("getIdentity",{
 
 ## Using `identityMap` {#using-identitymap}
 
-Using an XDM [`identityMap` field](../../xdm/schema/composition.md#identityMap), you can identify a device/user using multiple identities, set their authentication state, and decide which identifier is considered the primary one. If no identifier has been set as `primary`, the primary defaults to be the `ECID`.
+Using an XDM [`identityMap` field](/help/xdm/schema/composition.md#identityMap), you can identify a device/user using multiple identities, set their authentication state, and decide which identifier is considered the primary one. If no identifier has been set as `primary`, the primary defaults to be the `ECID`.
 
 `identityMap` fields are updated using the `sentEvent` command.
 
@@ -145,7 +145,7 @@ alloy("sendEvent", {
 >Adobe recommends sending namespaces which represent a person, such as `CRMID`, as the primary identity.
 
 
-Each property within `identityMap` represents identities belonging to a particular [identity namespace](../../identity-service/features/namespaces.md). The property name should be the identity namespace symbol, which you can find listed in the Adobe Experience Platform user interface under "[!UICONTROL Identities]". The property value should be an array of identities pertaining to that identity namespace.
+Each property within `identityMap` represents identities belonging to a particular [identity namespace](/help/identity-service/features/namespaces.md). The property name should be the identity namespace symbol, which you can find listed in the Adobe Experience Platform user interface under "[!UICONTROL Identities]". The property value should be an array of identities pertaining to that identity namespace.
 
 >[!IMPORTANT]
 >
@@ -175,4 +175,4 @@ When XDM-formatted data is sent into Audience Manager this data must be converte
 
 ## Use in event forwarding
 
-If you currently have [event forwarding](../../tags/ui/event-forwarding/overview.md) enabled and are using `appmeasurement.js` and `visitor.js`, you can keep the event-forwarding feature enabled and this won't cause any issues. On the back end, Adobe fetches any AAM segments and adds them to the call to Analytics. If the call to Analytics contains those segments, Analytics won't call Audience Manager to forward any data, so there isn't any double data collection. There is also no need for Location Hint when using the Web SDK because the same segmentation endpoints are called in the backend.
+If you currently have [event forwarding](/help/tags/ui/event-forwarding/overview.md) enabled and are using `appmeasurement.js` and `visitor.js`, you can keep the event-forwarding feature enabled and this won't cause any issues. On the back end, Adobe fetches any AAM segments and adds them to the call to Analytics. If the call to Analytics contains those segments, Analytics won't call Audience Manager to forward any data, so there isn't any double data collection. There is also no need for Location Hint when using the Web SDK because the same segmentation endpoints are called in the backend.

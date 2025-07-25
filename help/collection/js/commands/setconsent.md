@@ -62,7 +62,7 @@ Run the `setConsent` command when calling your configured instance of the Web SD
 
 * **`consent[]`**: An array of `consent` objects. The consent object is formatted differently depending on the standard and version that you choose. See the tabs below for examples of each consent object, depending on the consent standard.
 * **`identityMap`**: An object that controls how an ECID is generated and which IDs consent information is tied to. Adobe recommends including this object when `setConsent` is run before other commands, such as [`sendEvent`](sendevent/overview.md).
-* **`edgeConfigOverrides`**: An object that contains [datastream configuration overrides](datastream-overrides.md).
+* **`edgeConfigOverrides`**: An object that contains [datastream configuration overrides](configure/edgeconfigoverrides.md).
 
 >[!BEGINTABS]
 
@@ -104,7 +104,7 @@ To record user consent preferences provided through the Interactive Advertising 
 
 When the consent is set in this way, the Real-Time Customer Profile is updated with the consent information. For this to work, the profile XDM schema needs to contain the [Profile Privacy schema field group](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md). When sending events, the IAB consent information needs to be added manually to the event XDM object. The Web SDK does not automatically include the consent information in the events.
 
-To send the consent information in events, you must add the Experience Event Privacy field group to your [!DNL Profile]-enabled [!DNL XDM ExperienceEvent] schema. See the section on [updating the ExperienceEvent schema](../../landing/governance-privacy-security/consent/iab/dataset.md#event-schema) in the dataset preparation guide for steps on how to configure this.
+To send the consent information in events, you must add the Experience Event Privacy field group to your [!DNL Profile]-enabled [!DNL XDM ExperienceEvent] schema. See the section on [updating the ExperienceEvent schema](/help/landing/governance-privacy-security/consent/iab/dataset.md#event-schema) in the dataset preparation guide for steps on how to configure this.
 
 * **`standard`**: The consent standard that you choose. Set this property to `"IAB TCF"` for the IAB TCF 2.0 standard.
 * **`version`**: A string representing the version of the consent standard. Set this property to `"2.0"` for the IAB TCF 2.0 standard.
