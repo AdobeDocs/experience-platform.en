@@ -3,6 +3,7 @@ title: Monitor streaming profile ingestion
 description: Learn how to use the monitoring dashboard to monitor streaming profile ingestion
 hide: true
 hidefromtoc: true
+exl-id: da7bb08d-2684-45a1-b666-7580f2383748
 ---
 # Monitor streaming profile ingestion
 
