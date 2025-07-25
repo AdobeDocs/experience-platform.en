@@ -69,7 +69,7 @@ A successful response returns HTTP status 200 and lists the public certificates 
 {
    "results":[
       {
-         "certCommonName":"Adobe Experience Platform",
+         "certCommonName":"mtls-service.aep-mtls.adobe.com",
          "publicCertificate":"-----BEGIN CERTIFICATE-----\nMIIDQTCCAimgAwIBAgITBmyfACAfma......KJY5u89CjAwj\n-----END CERTIFICATE-----",
          "expiryDate":"2024-07-17T21:27:57.434Z"
       }
