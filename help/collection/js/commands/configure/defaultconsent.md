@@ -66,6 +66,22 @@ The following cookies are set when the consent configuration allows:
 | **`kndctr_orgid_consent`** | 15552000 (180 days) | Stores the users consent preference for the website. |
 |**`s_ecid`** | 63115200 (2 years) | Contains a copy of the Experience Cloud ID (ECID) or MID. The MID is stored in a key-value pair that follows the syntax `s_ecid=MCMID\|<ECID>`. |
 
+## Setting default consent based on `gdprApplies`
+
+Some CMPs provide the ability to determine whether General Data Protection Regulation (GDPR) applies to the customer. If you want to assume consent for customers where GDPR does not apply, you can use the `gdprApplies` flag in a TCF API call. For example:
+
+```js
+var alloyConfiguration = { ... };
+window.__tcfapi('getTCData', 2, function (tcData, success) {
+  if (success) {
+    alloyConfiguration.defaultConsent = tcData.gdprApplies ? "pending" : "in";
+    window.alloy("configure", alloyConfiguration);
+  }
+});
+```
+
+In the above code block, the `configure` command is called after the `tcData` is obtained from the TCF API. If `gdprApplies` is true, default consent is set to `pending`. If `gdprApplies` is false, default consent is set to `in`. Be sure to fill in the `alloyConfiguration` variable with your configuration.
+
 ## Default consent using the Web SDK tag extension
 
 See [Consent settings](/help/tags/extensions/client/web-sdk/configure/consent.md) in the Web SDK tag extension documentation to learn how to perform these actions using tags.

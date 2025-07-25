@@ -70,7 +70,7 @@ Run the `setConsent` command when calling your configured instance of the Web SD
 
 ### Adobe 2.0 standard `consent` object
 
-If you are using Adobe Experience Platform, you will need include a privacy schema field group in your profile schema. See [Governance, privacy, and security in Adobe Experience Platform](/help/landing/governance-privacy-security/overview.md) for more information on the Adobe 2.0 standard. You can add data inside the value object below corresponding to the schema of the `consents` field of the [!UICONTROL Consents and Preferences] profile field group.
+If you send data to Adobe Experience Platform, you will want to include a privacy schema field group in your profile schema. See [Governance, privacy, and security in Adobe Experience Platform](/help/landing/governance-privacy-security/overview.md) for more information on the Adobe 2.0 standard. You can add data inside the value object below corresponding to the schema of the `consents` field of the [!UICONTROL Consents and Preferences] profile field group.
 
 * **`standard`**: The consent standard that you choose. Set this property to `"Adobe"` for the Adobe 2.0 standard.
 * **`version`**: A string representing the version of the consent standard. Set this property to `"2.0"` for the Adobe 2.0 standard.
@@ -124,6 +124,29 @@ alloy("setConsent", {
   }]
 });
 ```
+
+The IAB TCF 2.0 API provides an event for when the consent is updated by the customer. This occurs when the customer initially sets their preferences and when the customer updates their preferences. You can add an event listener to run the `setConsent` command:
+
+```js
+const identityMap = { ... };
+window.__tcfapi('addEventListener', 2, function (tcData, success) {
+  if (success && tcData.eventStatus === 'useractioncomplete') {
+    window.alloy("setConsent", {
+      identityMap,
+      consent: [
+        {
+          standard: "IAB TCF",
+          version: "2.0",
+          value: tcData.tcString,
+          gdprApplies: tcData.gdprApplies
+        }
+      ]
+    });
+  }
+});
+```
+
+The above code block listens for the `useractioncomplete` event and then sets the consent, passing the consent string and the `gdprApplies` flag. If you have custom identities for your customers, be sure to fill in the `identityMap` variable.
 
 >[!TAB Adobe 1.0]
 

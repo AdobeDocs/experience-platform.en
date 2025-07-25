@@ -32,3 +32,59 @@ This action type supports the following configuration options:
 * **[!UICONTROL Standard]**: The consent standard that you want to use. Available options include '[!UICONTROL Adobe]' and '[!UICONTROL IAB TCF]'.
 * **[!UICONTROL Version]**: The version of the consent standard that you want to use.
 * **[!UICONTROL Datastream configuration overrides]**: This command supports datastream configuration overrides, giving you control over which apps and services receive this data. When you set a datastream configuration override in both an individual command and within the tag extension configuration settings, the individual command takes precedence. See [Datastream configuration overrides](../configure/configuration-overrides.md) for more information.
+
+## Creating a rule that updates consent information
+
+An ideal time to use this action is when a customer's consent preferences have changed. You can create a tag rule to listen for this change.
+
+1. Within a tag property, navigate to **[!UICONTROL Rules]** and select **[!UICONTROL Add rule]**.
+1. Give the rule a desired name, then select the '`+`' icon next to **[!UICONTROL Events]**.
+1. Set the following properties on the left:
+   * **[!UICONTROL Extension]**: [!UICONTROL Core]
+   * **[!UICONTROL EVent type]**: [!UICONTROL Custom code]
+1. Open the editor on the right and use the following code as a template:
+
+  ```javascript
+  // Wait for window.__tcfapi to be defined, then trigger when the customer has completed their consent and preferences.
+  function addEventListener() {
+    if (window.__tcfapi) {
+      window.__tcfapi("addEventListener", 2, function (tcData, success) {
+        if (success && tcData.eventStatus === "useractioncomplete") {
+          // save the tcData.tcString in a data element
+          _satellite.setVar("IAB TCF Consent String", tcData.tcString);
+          _satellite.setVar("IAB TCF Consent GDPR", tcData.gdprApplies);
+          trigger();
+        }
+      });
+    } else {
+      // window.__tcfapi wasn't defined. Check again in 100 milliseconds
+      setTimeout(addEventListener, 100);
+    }
+  }
+  addEventListener();
+  ```
+
+1. Select **[!UICONTROL Keep changes]**.
+
+The above custom code block does two things:
+
+* Triggers the rule when the consent preferences have changed.
+* Sets two data elements: **IAB TCF Consent String** and **IAB TCF Consent GDPR**.
+
+These data elements are useful when setting the '[!UICONTROL Set Consent]' action:
+
+1. Select the '`+`' icon next to **[!UICONTROL Actions]**.
+1. Set the following properties on the left:
+   * **[!UICONTROL Extension]**: [!UICONTROL Adobe Experience Platform Web SDK]
+   * **[!UICONTROL Action type]**: [!UICONTROL Set consent]
+1. Set the following properties on the right:
+   * **[!UICONTROL Standard]**: [!UICONTROL IAB TCF]
+   * **[!UICONTROL Version]**: [!UICONTROL 2.0]
+   * **[!UICONTROL Value]**: `%IAB TCF Consent String%`
+   * **[!UICONTROL Does GDPR apply to this consent value]**: [!UICONTROL Provide a data element], with the value `%IAB TCF Consent GDPR%`
+
+![IAB Set Consent Action](../assets/iab-action.png)
+
+>[!NOTE]
+>
+>You cannot choose these data elements using the data element selector because they were created through custom code. You must type in the data element name with the percent signs.

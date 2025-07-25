@@ -23,7 +23,7 @@ default-src 'self';
 connect-src 'self' EDGE-DOMAIN
 ```
 
-In the above example, `EDGE-DOMAIN` should be replaced with the first-party domain. The first-party domain is configured for the [edgeDomain](../commands/configure/edgedomain.md) setting. If no first-party domain has been configured, `EDGE-DOMAIN` should be replaced with `*.adobedc.net`. If visitor migration is turned on using [idMigrationEnabled](../commands/configure/idmigrationenabled.md), the `connect-src` directive also needs to include `*.demdex.net`.
+In the above example, `EDGE-DOMAIN` should be replaced with the first-party domain. The first-party domain is configured for the [edgeDomain](../js/commands/configure/edgedomain.md) setting. If no first-party domain has been configured, `EDGE-DOMAIN` should be replaced with `*.adobedc.net`. If visitor migration is turned on using [idMigrationEnabled](../js/commands/configure/idmigrationenabled.md), the `connect-src` directive also needs to include `*.demdex.net`.
 
 ### Use NONCE to allow inline script and style elements
 
@@ -33,9 +33,9 @@ In the above example, `EDGE-DOMAIN` should be replaced with the first-party doma
 default-src 'nonce-SERVER-GENERATED-NONCE'
 ```
 
-In addition the CSP nonce needs to be added as an attribute to the [!DNL Experience Platform Web SDK] [base code](../install/library.md) script tag. [!DNL Experience Platform Web SDK] will then use that nonce when adding inline script or style tags to the page:
+In addition the CSP nonce needs to be added as an attribute to the [!DNL Experience Platform Web SDK] [base code](../js/install/library.md) script tag. [!DNL Experience Platform Web SDK] will then use that nonce when adding inline script or style tags to the page:
 
-```
+```html
 <script nonce="SERVER-GENERATED-NONCE">
   !function(n,o){o.forEach(function(o){n[o]||((n.__alloyNS=n.__alloyNS||
   []).push(o),n[o]=function(){var u=arguments;return new Promise(
