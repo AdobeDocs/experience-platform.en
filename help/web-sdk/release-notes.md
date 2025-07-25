@@ -12,6 +12,9 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 ## Version 2.28.0 - July 24, 2025
 
+**Warning**
+After releasing 2.28.0, we discovered the custom build script no longer works. We are currently working on a fix. The built javascript file on the CDN works correctly. This is only a problem when running `npx @adobe/alloy`.
+
 **New features**
 
 - Added support for Adobe Journey Optimizer disqualification rules.
