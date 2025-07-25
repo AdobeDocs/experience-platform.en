@@ -146,17 +146,17 @@ Select **[!UICONTROL Preview dataset]** from the inline actions or from the [!UI
 
 #### Advanced Query Editor shortcut {#query-editor-shortcut}
 
-If your organization has a Data Distiller license, you can access the Advanced Query Editor directly from the dataset preview window.
+You can access the Advanced Query Editor directly from the dataset preview window if your organization has a Data Distiller license. Use this shortcut to move seamlessly between previewing sample data to running and refining queries in Query Service
 
 >[!AVAILABILITY]
 >
->Only users with the required Data Distiller license can access this functionality. If your organization does not have Data Distiller, the [!UICONTROL Advanced query editor] option is not visible.
+>Access to the [!UICONTROL Advanced Query Editor] is limited to organizations with a Data Distiller SKU license. If your organization does not have the required license, this option does not appear in the dataset preview window.
 
-Select **[!UICONTROL Advanced query editor]** in the upper right of the preview window to open the Query Editor. The current preview query is preloaded and ready for execution or further analysis.
+Select [!UICONTROL Advanced Query Editor] in the upper right of the preview window to open the Query Editor. The previewed query is automatically loaded and executed, allowing you to continue analysis or modify the SQL directly in Query Service without re-entering the query.
 
-![Dataset preview window showing the Advanced query editor button in the upper right.](../images/datasets/user-guide/dataset-preview-advanced-query-editor.png)
+![Dataset preview window showing the Advanced Query Editor button in the upper right.](../images/datasets/user-guide/dataset-preview-advanced-query-editor.png)
 
-This shortcut enables you to move seamlessly from previewing sample data to running and refining queries in Query Service without re-entering SQL or context.
+This shortcut enables seamless movement from previewing sample data to running and refining queries in Query Service.
 
 For additional data access and analysis, use downstream services such as [!DNL Query Service] and [!DNL JupyterLab]. See the following documents for more information:
 
