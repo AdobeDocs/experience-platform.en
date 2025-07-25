@@ -156,3 +156,10 @@ Dataflow runs represent an instance of dataflow execution. For example, if a dat
 Use the dataflow run details page to view metrics and information of your selected run iteration.
 
 ![The dataflow run activities interface.](../assets/ui/streaming-profiles/flow-runs.png)
+
+## Next steps {#next-steps}
+
+By following this tutorial, you learned how to monitor streaming profile ingestion jobs in your organization. Read the following documents for additional information on monitoring data for Real-Time Customer Profile.
+
+* [Use the monitoring dashboard](./monitor.md).
+* [Monitor profile data](./monitor-profiles.md).
