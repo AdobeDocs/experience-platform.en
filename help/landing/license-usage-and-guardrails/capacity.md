@@ -11,6 +11,21 @@ For more information about guardrails in Experience Platform, please read the [R
 
 ## Capacity behavior
 
+>[!CONTEXTUALHELP]
+>id="platform_capacity_streamingthroughput"
+>title="Streaming throughput"
+>abstract="The streaming throughput value measures the combined peak inbound events per second, across your production and development sandboxes."
+
+>[!CONTEXTUALHELP]
+>id="platform_capacity_streamingaudiences"
+>title="Streaming audience count"
+>abstract="The maximum number of streaming audiences per sandbox. This number is inclusive of the number of edge audiences you have in your sandbox."
+
+>[!CONTEXTUALHELP]
+>id="platform_capacity_edgeaudiences"
+>title="Edge audiences"
+>abstract="The maximum number of edge audiences per sandbox."
+
 Currently, Capacity supports the following services:
 
 - Streaming segmentation
@@ -20,11 +35,11 @@ Within these services, the following guardrails are tracked:
 
 - Maximum number of streaming audiences is 500
   - Of these 500 streaming audiences, the maximum number of edge audiences is 150
-- Maximum combined throughput for streaming segmentation is 1650 records per second (rps)
+- Maximum combined throughput for streaming segmentation is 1500 records per second (rps)
 
 The audience capacity is at a **sandbox** level. This means that, for every sandbox you have in your organization, you can have 500 streaming audiences, of which 150 of those can be edge audiences.
 
-The throughput capacity is at an **organization** level and can be distributed to your individual sandboxes. For example, with the 1650 rps for streaming segmentation throughput, you can set your production sandbox to be at 1500 rps and your development sandbox to be at 150 rps.
+The throughput capacity is at an **organization** level and can be distributed to your individual sandboxes. For example, with the 1500 rps for streaming segmentation throughput, you can set your production sandbox to be at 1500 rps and your development sandbox to be at 150 rps.
 
 Experience Platform calculates the sandbox's throughput in 15 minute rolling intervals. This throughput is measured in real-time, with the data refreshing every 60 seconds.
 
