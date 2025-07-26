@@ -1,6 +1,8 @@
 ---
 title: License Usage and Capacity
 description: Learn about your license usage and capacity limits within Adobe Experience Platform. 
+hide: true
+hidefromtoc: true
 ---
 
 # License usage and capacities
@@ -14,7 +16,7 @@ For more information about guardrails in Experience Platform, please read the [R
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingthroughput"
 >title="Streaming throughput"
->abstract="The streaming throughput value measures the combined peak inbound events per second, across your production and development sandboxes."
+>abstract="The streaming throughput value measures the combined peak inbound events per second for streaming ingestion into Profile service, across your production and development sandboxes."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingaudiences"
@@ -68,5 +70,26 @@ This depends on which capacity is exceeded.
 Currently, if you exceed the maximum number of allowed audiences, your excessive audiences will not be affected. However, the ability to create new audiences may be restricted in the future.
 
 If you exceed your streaming throughput, you will experience performance latency in your ingestion and segmentation. 
+
++++
+
+### Why should I adhere to my maximum capacities?
+
++++ Answer
+
+Working within your maximum capacities ensures your data remains consistent and keeps your data integrity intact.
+
+You ensure consistent performance during peak events, avoiding technical issues that could adversely affect system performance and impact your downstream customer experiences, ultimately improving your data hygiene and overall system performance.
+
++++
+
+### What are best practices to manage streaming segmentation throughput?
+
++++ Answer
+
+To best manage your streaming segmentation throughput, you should evaluate your datasets to ensure they are prioritizing data necessary for personalization. 
+
+
+If real-time processing is not required, you should use batch ingestion instead of streaming ingestion.
 
 +++
