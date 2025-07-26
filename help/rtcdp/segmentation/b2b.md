@@ -76,9 +76,11 @@ Find all the people who are directly assigned to any opportunities where the acc
 
 Find all the people who are a "Decision Maker" of any opportunity where the account is in the "Finance" industry, and visited the pricing page in the last three days. 
 
-To create this audience, you must use "segments of segments" by creating a base audience of all the people who visited the pricing page in the last three days, and combine that with another audience of people who are a "Decision Maker" of any opportunity where the account is in the "Finance" industry.
+To create this audience, you must use "segments of segments" by creating a base audience of all the people who visited the pricing page in the last three days. 
 
-This audience requires a link between the [!UICONTROL XDM Individual Profile] class, [!UICONTROL XDM Business Opportunity Person Relation] class, [!UICONTROL XDM Business Opportunity] class, and [!UICONTROL XDM Business Account] class, and [!UICONTROL XDM ExperienceEvent] class.
+![Segment Builder displaying the base audience.](../assets/segmentation/b2b/example-4-base.png)
+
+After creating the first audience, you can combine that with another audience of people who are a "Decision Maker" of any opportunity where the account is in the "Finance" industry.
 
 ![UI displaying example 4 settings](../assets/segmentation/b2b/example-4.png)
 
@@ -98,9 +100,11 @@ Find all the people whose job title is Vice President and have any account with 
 
 Find all the people who are a "Decision Maker" of any closed-lost opportunity, and visited the pricing page in the last three days. 
 
+To create this audience, you must use "segments of segments" by creating a base audience of all the people who visited the pricing page in the last three days. 
 
+![Segment Builder displaying the base audience.](../assets/segmentation/b2b/example-7-base.png)
 
-This audience requires a link between the [!UICONTROL XDM Individual Profile] class, [!UICONTROL XDM Business Opportunity Person Relation] class, [!UICONTROL XDM Business Opportunity] class, and [!UICONTROL XDM ExperienceEvent] class.
+After creating the first audience, you can combine that with another audience of people who are a "Decision Maker" of any opportunity where both the "Closed Flag" is set to true and the "Lost Flag" is set to false.
 
 ![UI displaying example 7 settings](../assets/segmentation/b2b/example-7.png)
 
@@ -139,6 +143,18 @@ Find all the people who are targeted for campaigns where the actualCost exceeded
 Find all the people belonging to the Marketo Static list "Anniversary users" where isDeleted=false.
 
 ![UI displaying segmentation parent org](../assets/segmentation/b2b/example-13.png)
+
+### Example 14: Find "decision makers" by opportunity status for personalization {#find-decision-makers-personalization}
+
+Find all the people who are a "Decision Maker" of any closed-lost opportunity and visited the pricing page in the last 24 hours. This example can be evaluated using streaming or edge segmentation, to support more real-time use cases.
+
+To create this audience, you must use "segment of segments" by creating a base audience of all the people who visited the pricing page in the last 24 hours.
+
+![Segment Builder displaying the base audience.](../assets/segmentation/b2b/example-14-base.png)
+
+After creating the first audience, you can combine that with another audience of  people who are a "Decision Maker" of any opportunity where both the "Closed Flag" is set to true and the "Lost Flag" is set to false.
+
+![UI displaying example 14 settings](../assets/segmentation/b2b/example-14.png)
 
 ## Next steps {#next-steps}
 
