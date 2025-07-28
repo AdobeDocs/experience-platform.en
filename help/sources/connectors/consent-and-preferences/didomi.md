@@ -3,6 +3,7 @@ title: Didomi Source Overview
 description: Learn how to connect Didomi to Adobe Experience Platform using the user interface.
 hide: true
 hidefromtoc: true
+exl-id: c59bcfb8-e831-4a13-8b0e-4c6d538f1059
 ---
 # [!DNL Didomi]
 
