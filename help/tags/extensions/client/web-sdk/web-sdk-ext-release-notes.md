@@ -10,9 +10,6 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 
 ## Version 2.31.0 - July 24, 2025
 
-**Warning**
-After releasing v2.31.0, an issue with the custom components build process was discovered. Custom builds will still function, but no components are excluded, meaning a full-sized build is included in the Tags build. A fix is in progress. Consider waiting for the next release if you utilize a custom selection of your components to reduce the size of your build.
-
 **New features**
 
 - Contains [version 2.28.0](../../../../web-sdk/release-notes.md#2-28-0) of the Adobe Experience Platform Web SDK.
@@ -22,6 +19,11 @@ After releasing v2.31.0, an issue with the custom components build process was d
 - Fixed an issue where an error is thrown when a datastream override is enabled via a data element.
 - Fixed an issue where empty `idSyncContainerId` overrides would throw an error.
 - When resolving media data elements, the event object is now included.
+
+**Known issues**
+
+- Following the release of v2.31.0, a problem was identified with the [custom components build](/help/web-sdk/install/create-custom-build.md) process. While custom builds continue to operate, all components are currently included in the build, resulting in a full-sized package regardless of component selection. A fix for this issue is being developed. If you rely on custom component selection to minimize build size, it is recommended to wait for a future release.
+
 
 ## Version 2.30.1 - May 27, 2025
 

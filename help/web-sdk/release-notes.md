@@ -12,9 +12,6 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 ## Version 2.28.0 - July 24, 2025
 
-**Warning**
-After releasing 2.28.0, we discovered the custom build script no longer works. We are currently working on a fix. The built javascript file on the CDN works correctly. This is only a problem when running `npx @adobe/alloy`.
-
 **New features**
 
 - Added support for Adobe Journey Optimizer disqualification rules.
@@ -25,6 +22,10 @@ After releasing 2.28.0, we discovered the custom build script no longer works. W
 - Improved [identity management](identity/overview.md) error handling to properly process promise rejections when identity lookup fails.
 - Resolved an issue where [personalization content](personalization/rendering-personalization-content.md) with HTML content items failed to render with an error relating to a missing `renderStatusHandler`.
 - Fixed activity map [URL collection](commands/configure/clickcollectionenabled.md) to properly handle non-HTTP URLs.
+
+**Known issues**
+
+- The [custom build](/help/web-sdk/install/create-custom-build.md) process using `npx @adobe/alloy` is currently not functioning as expected in version 2.28.0. All components are included in the generated build, regardless of the selected modules. This issue does not affect the standard JavaScript file available on the CDN. A fix is in progress.
 
 ## Version 2.27.0 - May 20, 2025
 
