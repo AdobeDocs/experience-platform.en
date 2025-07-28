@@ -7,17 +7,17 @@ exl-id: da7bb08d-2684-45a1-b666-7580f2383748
 ---
 # Monitor streaming profile ingestion
 
-You can use the monitoring dashboard in the Adobe Experience Platform UI to conduct real-time monitoring of streaming profile ingestion rates in your organization. Use this feature for better transparency of throughput, latency, and data quality metrics surrounding your streaming data. Additionally, you can use this feature for proactive alerting and retrieval of actionable insights to identify potential capacity violations and data ingestion issues.
+You can use the monitoring dashboard in the Adobe Experience Platform UI to conduct real-time monitoring of streaming profile ingestion rates within your organization. Use this feature to access greater transparency into throughput, latency, and data quality metrics related to your streaming data. Additionally, use this feature for proactive alerting and the retrieval of actionable insights to help identify potential capacity violations and data ingestion issues.
 
-Read the following guide to learn how you can use the monitoring dashboard to monitor rates and metrics of streaming profile ingestion jobs in your organization.
+Read the following guide to learn how to use the monitoring dashboard to track rates and metrics for streaming profile ingestion jobs in your organization.
 
 ## Get started
 
 This guide requires a working understanding of the following components of Experience Platform:
 
-* [Dataflows](../home.md): Dataflows are a representation of data jobs that move data across Experience Platform. Dataflows are configured across different services, helping move data from source connectors to target datasets, to [!DNL Identity] and [!DNL Profile], and to [!DNL Destinations].
+* [Dataflows](../home.md): DDataflows represent data jobs that transfer information across Experience Platform. They are configured across various services to facilitate the movement of data from source connectors to target datasets, as well as to Identity Service, Real-Time Customer Profile, and Destinations.
 * [Real-Time Customer Profile](../../profile/home.md): Real-Time Customer Profile combines data from multiple sources—online, offline, CRM, and third-party—into a single, actionable view of each customer, enabling consistent and personalized experiences across all touch points.
-* [Streaming ingestion](../../ingestion/streaming-ingestion/overview.md): Streaming ingestion is the process of continuously sending data—such as customer interactions, events, or signals—from various sources (websites, mobile apps, CRM, ERP, etc.) into Experience Platform in real time. This data is immediately available for use in the Real-Time Customer Profile, enabling instant personalization and decision-making.
+* [Streaming ingestion](../../ingestion/streaming-ingestion/overview.md): Streaming ingestion is the continuous process of sending real-time data—such as customer interactions, events, or signals—from various sources into Experience Platform. This data becomes immediately available in Real-Time Customer Profile, enabling instant personalization and data-driven decision-making.
 
 ## Use the monitoring dashboard for streaming profile ingestion 
 
