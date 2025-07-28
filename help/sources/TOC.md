@@ -53,6 +53,7 @@ role: Developer
     - [SFTP connector](connectors/cloud-storage/sftp.md)
     - [Amazon S3 and Azure Blob connector](connectors/cloud-storage/blob-s3.md)
   - Consent & Preferences {#consent}
+    - [Didomi](connectors/consent-and-preferences/didomi.md)
     - [OneTrust Integration](connectors/consent-and-preferences/onetrust.md)
   - CRM {#crm}
     - [Microsoft Dynamics connector](connectors/crm/ms-dynamics.md)
@@ -259,6 +260,7 @@ role: Developer
       - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
       - [Amazon S3 and Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
     - Consent & Preferences {#consent}
+      - [Didomi](tutorials/ui/create/consent-and-preferences/didomi.md)
       - [OneTrust Integration](tutorials/ui/create/consent-and-preferences/onetrust.md)
     - CRM {#crm}
       - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
