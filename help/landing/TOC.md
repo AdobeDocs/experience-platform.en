@@ -76,6 +76,7 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
 * License usage and guardrails {#license}
   * [Data management license entitlement best practices](./license-usage-and-guardrails/data-management-best-practices.md)    
   * [License usage dashboard](./license-usage-and-guardrails/license-usage-dashboard.md)
+  * [License usage and capacity](./license-usage-and-guardrails/capacity.md)    
   * [Total data volume](./license-usage-and-guardrails/total-data-volume.md)
   * [Adobe Journey Optimizer guardrails](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html)
   * [Customer Journey Analytics guardrails](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
