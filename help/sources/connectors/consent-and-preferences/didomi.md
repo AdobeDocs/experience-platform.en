@@ -1,17 +1,19 @@
 ---
 title: Didomi Source Overview
 description: Learn how to connect Didomi to Adobe Experience Platform using the user interface.
+hide: true
+hidefromtoc: true
 ---
 # [!DNL Didomi]
 
 
-[!DNL Didomi] provides a leading Consent and Preference Management Platform that helps organizations collect, manage, and enforce user choices regarding personal data across websites, apps, and internal tools.
+[!DNL Didomi] is a consent and preference management platform that helps organizations collect, manage, and enforce user choices regarding personal data across websites, apps, and internal tools.
 
-Experience Platform supports ingesting data from a wide range of external systems including cloud storage, databases, and applications like [!DNL Didomi] through a system of source connectors. These sources let you authenticate external systems, manage data flow into Adobe, and ensure consistent and structured ingestion of customer data.
+Adobe Experience Platform supports ingesting data from a wide range of external systems including cloud storage, databases, and applications like [!DNL Didomi] through a system of source connectors. Use sources to authenticate external systems, manage data flow into Experience Platform, and ensure consistent and structured ingestion of your customer data.
 
-Use the [!DNL Didomi] source to stream real-time user consent and preferences data from the [!DNL Didomi] Consent & Preference Management Platform into Adobe Experience Platform. Through the [!DNL Didomi] source, you can centralize and act on consent data in Experience Platform, thereby keeping your customer profiles and downstream workflows compliant and up to date.
+Use the [!DNL Didomi] source to stream real-time user consent and preferences data from the [!DNL Didomi] consent and preference management platform into Experience Platform. Through the [!DNL Didomi] source, you can centralize and act on consent data in Experience Platform, thereby keeping your customer profiles and downstream workflows compliant and up to date.
 
-![flux](../../images/tutorials/create/didomi/flux.jpeg)
+![The "Didomi" data processing architecture.](../../images/tutorials/create/didomi/flux.jpeg)
 
 ## Prerequisites 
 
@@ -83,7 +85,7 @@ Next, configure the following options for your [!DNL webhook].
 
 | Field | Description | Value  |
 | ---| --- | --- | 
-| Request Headers | The custom headers for the [!DNL webhook]. Ensure that you include the `x-adobe-flow-id` (This value is retrieved during the dataflow creation step).  | `{"Content-Type": "application/json", "Cache-Control": "no-cache", "x-adobe-flow-id": "your-flow-id"}` |
+| Request Headers | The custom headers for the [!DNL webhook]. Ensure that you include the `x-adobe-flow-id`. You can retrieve this value after your [dataflow is created](../../tutorials/ui/create/consent-and-preferences/didomi.md#retrieve-the-streaming-endpoint-url).  | `{"Content-Type": "application/json", "Cache-Control": "no-cache", "x-adobe-flow-id": "{DATAFLOW_ID}"}` |
 | Flatten   | This property must be checked as it ensures that the [!DNL webhook] data is sent as a flat object. | Enabled  |
 | Event Types  | Select the specific group of [!DNL Didomi] events (`event.*` or `user.*`) that should trigger the [!DNL webhook]. Use `event.*` to track consent or preference changes, and use `user.*` to track user profile updates. This selection is required to ensure that only compatible events are sent to Adobe. Adobe supports only one schema per dataflow, so selecting both event types can cause ingestion errors. | The list of supported event types are: <ul><li>`Event.created`</li><li>`Event.updated`</li><li>`Event.deleted`</li><li>`User.created`</li><li>`User.updated`</li><li>`User.deleted`</li></ul> |
 

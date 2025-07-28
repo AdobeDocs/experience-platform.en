@@ -1,6 +1,8 @@
 ---
 title: Connect Didomi to Experience Platform
 description: Learn how to connect your Didomi account to Experience Platform using the UI.
+hide: true
+hidefromtoc: true
 ---
 # Connect [!DNL Didomi] to Experience Platform
 
