@@ -22,13 +22,16 @@ The API endpoint used in this guide is part of the [[!DNL Real-Time Customer Pro
 
 ## Entity resolution
 
-As part of the upgrades to the Real-Time CDP B2B Edition architecture, Adobe is introducing entity resolution for Accounts and Opportunities. Entity resolution jobs run once per day. This enhancement allows to Experience Platform to identify and consolidated multiple records that represent the same real-world entity, improving data consistency and providing you with more accurate audience segmentation.
+As part of the architecture upgrade, Adobe is introducing entity resolution for Accounts and Opportunities, using deterministic ID matching based on the latest data. Entity resolution job runs daily during batch segmentation, prior to evaluating multi-entity audiences with B2B attributes.
 
-The Account and Opportunity entities are resolved through time-precedence-based merging. If multiple records for the same Account or Opportunity exist, then the version with the most recent update is retained.
+This enhancement enables Experience Platform to identify and unify multiple records that represent the same entity, improving data consistency and enabling more accurate audience segmentation.
 
-Two dedicated B2B namespaces are used to handle entity resolution:
-* Account: Account entities are resolved using the `b2b_account` namespace.
-* Opportunity: Opportunity entities are resolved using the `b2b_opportunity` namespace.
+Previously, Accounts and Opportunities relied on identity graph-based resolution that connected identities, including all historical ingestions. In the new entity-resolution approach, identities are linked based on the latest data only
+
+### How does entity resolution work?
+
+- **Before**: If a Data Universal Numbering System (DUNS) number was used as an additional identity and account's DUNS number was updated in a source system like CRM, the account ID is linked to both old and new DUNS numbers.
+- **After**: If the DUNS number was used as an additional identity and the account's DUNS number was updated in a source system like a CRM, the account ID is only linked to the new DUNS number, thereby reflecting the current state of account more accurately.
 
 As a result of this update, the [!DNL Profile Access] API now reflects the latest merge profile view after an entity resolution job cycle completes. Additionally, the consistent data provides use cases such as segmentation, activation, and analytics with improved data accuracy and consistency.
 

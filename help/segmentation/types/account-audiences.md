@@ -17,7 +17,7 @@ Account audiences can be used as an input for account-based destinations, allowi
 
 >[!NOTE]
 >
->As part of the B2B architecture upgrade, audience size estimates for audiences with B2B entities are now calculated with exact precision. These estimates are available during preview and provide more accurate and reliable insights for audiences that involve complex B2B relationships. <br>For more information, read the [Real-Time CDP B2B Edition architecture upgrades overview]().
+>As part of the B2B architecture upgrade, audience size estimates for audiences with B2B entities are now calculated with exact precision. These estimates are available during preview and provide more accurate and reliable insights for audiences that involve complex B2B relationships. <br>For more information, read the [Real-Time CDP B2B Edition architecture upgrades overview](../../rtcdp/b2b-architecture-upgrade.md).
 
 ## Terminology {#terminology}
 

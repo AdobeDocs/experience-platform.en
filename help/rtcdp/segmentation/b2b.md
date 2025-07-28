@@ -17,11 +17,11 @@ This document provides examples of segment definitions in Adobe Real-Time Custom
 
 ## Merge policy change
 
-As part of the upgrades to the Real-Time CDP B2B Edition architecture, multi-entity audiences with B2B attributes now support only a single merge policy (the default merge policy), instead of multiple merge policies. Audiences that previously relied on non-default merge policies may produce unexpected results. Additionally, the changes in which profiles can qualify for audiences may affect downstream workflows such as activation, journey orchestration, and campaign targeting. You are recommended to conduct the following to ensure that your data is working as expected:
+As part of the upgrades to the Real-Time CDP B2B Edition architecture, multi-entity audiences with B2B attributes now support only a single merge policy (the default merge policy), instead of multiple merge policies. Additionally, the changes in which profiles can qualify for audiences may affect downstream workflows such as activation, journey orchestration, and campaign targeting. You are recommended to conduct the following to ensure that your data is working as expected:
 
-- Review and test any audiences that rely on non-default merge logic to understand potential impacts to the audience composition.
+- Review and test any audiences that rely on non-default merge logic to understand potential impacts of this update.
 - Re-evaluate audience qualification criteria for key audiences to understand if the changes in the merge logic may impact qualifications.
-- Monitor  your activation results to detect any shifts in audience composition caused by the change in merge policy.
+- Monitor  your activation results to detect any shifts in audience results caused by the change in merge policy.
 
 >[!ENDSHADEBOX]
 
