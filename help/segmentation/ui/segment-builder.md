@@ -121,6 +121,12 @@ Once the report suites have been mapped, you can use these newly mapped fields w
 >title="Complex evaluation"
 >abstract="The following expression is too complicated to be expressed as a single audience. In order to use both B2B-rules and people-based-events in the same segment definition, please follow the steps below.<ol><li>Create a segment definition that only refers to the people-based-events, and save it as its own segment definition.</li><li>In a new segment definition, import the previously created segment definition while referring to the B2B-rules.</li></ol>"
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_externalaudiences"
+>title="External audiences"
+>abstract="Audiences imported through the Audiences tab will now automatically be surfaced through Audience Portal. Audiences ingested from Audience Manager, Customer Journey Analytics, Segment Match, and other custom integrations will be readily available, without configuring in Segment Builder first. The existing workflow will be supported until September 1, 2025. You can choose to use the existing workflow until that time or turn on the new experience."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/audience-portal#list" text="Audience Portal"
+
 >[!NOTE]
 >
 >For audiences created within Experience Platform, only audiences that have the **same** merge policy will be displayed.
