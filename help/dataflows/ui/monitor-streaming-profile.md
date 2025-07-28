@@ -18,6 +18,7 @@ This guide requires a working understanding of the following components of Exper
 * [Dataflows](../home.md): Dataflows represent data jobs that transfer information across Experience Platform. They are configured across various services to facilitate the movement of data from source connectors to target datasets, as well as to Identity Service, Real-Time Customer Profile, and Destinations.
 * [Real-Time Customer Profile](../../profile/home.md): Real-Time Customer Profile combines data from multiple sources—online, offline, CRM, and third-party—into a single, actionable view of each customer, enabling consistent and personalized experiences across all touch points.
 * [Streaming ingestion](../../ingestion/streaming-ingestion/overview.md): Streaming ingestion for Experience Platform provides users a method to send data from client and server-side devices to Experience Platform in real-time.Experience Platform enables you to drive coordinated, consistent, and relevant experiences by generating a Real-Time Customer Profile for each of your individual customers. ​Streaming ingestion plays a key role in building these profiles with as little latency as possible.
+* [Capacities](../../landing/license-usage-and-guardrails/capacity.md): In Experience Platform, capacities let you know if your organization has exceeded any of your guardrails and gives you information on how to fix these issues.
 
 >[!NOTE]
 >
@@ -124,7 +125,7 @@ Select **[!UICONTROL Throughput]** to view information on the amount of data tha
 
 ![The dashboard with the display set to "throughput".](../assets/ui/streaming-profiles/throughput.png)
 
-* **Capacity**: The maximum amount of data that your sandbox can process under defined conditions.
+* **[Capacity](../../landing/license-usage-and-guardrails/capacity.md)**: The maximum amount of data that your sandbox can process under defined conditions.
 * **Request throughput**: The rate at which events are received by the ingestion system, measured in events per second.
 * **Processing throughput**: The rate at which the system successfully ingests and processes incoming event payloads, measured in events per second.
 
