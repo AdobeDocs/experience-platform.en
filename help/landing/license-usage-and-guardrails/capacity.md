@@ -11,7 +11,7 @@ In Adobe Experience Platform, capacities let you know if your organization has e
 
 For more information about guardrails in Experience Platform, please read the [Real-Time CDP guardrails overview](../../rtcdp/guardrails/overview.md).
 
-## Capacity behavior
+## Capacity behavior {#behavior}
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingthroughput"
