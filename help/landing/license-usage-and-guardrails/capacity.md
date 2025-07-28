@@ -1,8 +1,6 @@
 ---
 title: License Usage and Capacity
 description: Learn about your license usage and capacity limits within Adobe Experience Platform. 
-hide: true
-hidefromtoc: true
 ---
 
 # License usage and capacities
