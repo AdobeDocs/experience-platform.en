@@ -14,6 +14,7 @@ In Adobe Experience Platform, you can configure various components of existing a
 * [Edit mapped attributes and identities](#edit-mapped-attributes)
 * [Edit the activation schedule and export frequency](#edit-schedule-frequency)
 * [Add additional datasets](#add-datasets) to activation workflow
+* [Edit marketing actions](#edit-marketing-actions) for your activation dataflows
 * [Apply access labels](#apply-access-labels) to exported data
 * [Edit names and descriptions](#edit-names-descriptions) for your activation dataflows
 
@@ -108,6 +109,8 @@ Select **[!UICONTROL Export datasets]** in the right rail to select additional d
 >[!NOTE]
 >
 >This feature is currently in **beta**. To request access to it, contact your Adobe representative.
+
+You can add or remove marketing actions that you set up when initially connecting to the destination.
 
 Select **[!UICONTROL Edit marketing actions]** in the right rail to open the marketing actions selection screen.
 
