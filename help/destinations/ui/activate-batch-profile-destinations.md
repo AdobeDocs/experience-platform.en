@@ -137,6 +137,18 @@ Select **[!UICONTROL Export full files]** to trigger the export of a file contai
     * **[!UICONTROL Weekly]**: select the start date and subsequent exports will occur on that day of the week until the selected end date.
     * **[!UICONTROL Monthly]**: select the start date and subsequent exports will occur on that date of the month until the selected end date. For months with fewer than 30 or 31 days, the export occurs on the last day of the month.
 
+    >[!NOTE]
+    >
+    > Weekly and monthly scheduling options are currently supported only for the following file-based cloud storage destinations, and only when activating [people audiences](../../segmentation/types/overview.md#people-audience) and [prospect audiences](../../segmentation/types/overview.md#prospect-audience).
+    > 
+    > * [Amazon S3](../catalog/cloud-storage/amazon-s3.md)
+    > * [Azure Blob Storage](../catalog/cloud-storage/azure-blob.md)
+    > * [Data Landing Zone](../catalog/cloud-storage/data-landing-zone.md)
+    > * [Google Cloud Storage](../catalog/cloud-storage/google-cloud-storage.md)
+    > * [SFTP](../catalog/cloud-storage/sftp.md)
+    > 
+    > Weekly and monthly scheduling options are not available for other destination types.
+
 2. Use the **[!UICONTROL Time]** toggle to select whether the export should happen immediately after audience evaluation or on a scheduled basis, at a specified time. When selecting the **[!UICONTROL Scheduled]** option, you can use the selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
 
     Use the **[!UICONTROL After segment evaluation]** option to have the activation job run immediately after the daily Experience Platform batch segmentation job completes. This option ensures that when the activation job runs, the most up-to-date profiles are exported to your destination. This might result in an audience being exported multiple times a day, based on your actions.
@@ -267,6 +279,10 @@ In this step, you must select the profile attributes that you want to add to the
 
 1. The field you selected for export now appears in the mapping view. If you wish, you can edit the name of the header in the exported file. To do this, select the icon on the target field.
 
+    >[!NOTE]
+    >
+    >Dots (`.`) are not supported in field names in exported files. If a field name includes dots (such as `person.name.firstName`), each dot will be replaced with an underscore (`_`) in the exported column name. For example, `person.name.firstName` will become `person_name_firstName` in your exported file.
+
     ![Modal window showing profile attributes that can be exported to the destination.](../assets/ui/activate-batch-profile-destinations/mapping-step-select-target-field.png)
 
 1. In the **[!UICONTROL Select target field]** page, type in the desired name of the header in your exported file, then choose **[!UICONTROL Select]**.
@@ -342,7 +358,7 @@ Let's consider the following two profiles.
   "identityMap": {
     "Email": [
       {
-        "id": "johndoe_1@example.com"
+        "id": "johndoe@example.com"
       },
       {
         "id": "doejohn_1@example.com"
@@ -376,7 +392,7 @@ Let's consider the following two profiles.
   "identityMap": {
     "Email": [
       {
-        "id": "johndoe_2@example.com"
+        "id": "johndoe@example.com"
       },
       {
         "id": "doejohn_2@example.com"
@@ -419,7 +435,7 @@ Assuming deduplication by the [!DNL Email] namespace, the export file would cont
 
 |Email*|personalEmail|firstName|lastName|
 |---|---|---|---|
-|johndoe_2@example.com|johndoe@example.com|John|D|
+|johndoe@example.com|johndoe@example.com|John|D|
 |doejohn_2@example.com|johndoe@example.com|John|D|
 
 ### Deduplication use case 3: deduplication based on a single profile attribute {#deduplication-use-case-3}
@@ -548,9 +564,10 @@ For profile-based destinations, you must select the profile attributes that you 
 >
 >Due to a known limitation, you cannot currently use the **[!UICONTROL Select field]** window to add `segmentMembership.seg_namespace.seg_id.status` to your file exports. Instead, you must manually paste the value `xdm: segmentMembership.seg_namespace.seg_id.status` into the schema field, as shown below.
 >
->![Screen recording showing the audience membership workaround in the mapping step of the activation workflow.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
+>![Screen recording showing the audience membership workaround in the mapping step of the activation workflow.](../assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
 File exports vary in the following ways, depending on whether `segmentMembership.seg_namespace.seg_id.status` is selected:
+
 * If the `segmentMembership.seg_namespace.seg_id.status` field is selected, exported files include **[!UICONTROL Active]** members in the initial full snapshot and **[!UICONTROL Active]** and **[!UICONTROL Expired]** members in subsequent incremental exports.
 * If the `segmentMembership.seg_namespace.seg_id.status` field is not selected, exported files include only **[!UICONTROL Active]** members in the initial full snapshot and in subsequent incremental exports.
 
@@ -626,7 +643,7 @@ If you are satisfied with your selection and no policy violations have been dete
 
 ## Verify audience activation {#verify}
 
-When exporting audiences to cloud storage destinations, Adobe Experience Platform creates a `.csv`, `.json`, or `.parquet` file in the storage location that you provided. Expect a new file to be created in your storage location according to the schedule you set in the workflow. The default file format is shown below, but you can [edit the components of the file name](#file-names):
+When exporting audiences to cloud storage destinations, Adobe Experience Platform creates a `.csv`, `.json`, or `.parquet` file in the storage location that you provided. Expect a new file to be created in your storage location according to the schedule you set in the workflow. The default file format is shown below, but you can [edit the components of the file name](#configure-file-names):
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 For example, if you selected a daily export frequency, the files you would receive on three consecutive days could look like this:
