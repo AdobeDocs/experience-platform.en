@@ -13,10 +13,9 @@ In Adobe Experience Platform, you can configure various components of existing a
 * [Add additional audiences](#add-audiences) to activation dataflows
 * [Edit mapped attributes and identities](#edit-mapped-attributes)
 * [Edit the activation schedule and export frequency](#edit-schedule-frequency)
-* [Add additional datasets](#add-datasets) to activation workflows
+* [Add additional datasets](#add-datasets) to activation workflow
+* [Apply access labels](#apply-access-labels) to exported data
 * [Edit names and descriptions](#edit-names-descriptions) for your activation dataflows
-
-<!-- * [Apply access labels](#apply-access-labels) to exported data; -->
 
 ## Browse activation dataflows {#browse-activation-dataflows}
 
@@ -94,8 +93,6 @@ The activation workflow differs slightly depending on destination type. For more
 * [Activate audiences to batch profile export destinations](./activate-batch-profile-destinations.md) (for example, Amazon S3 or Oracle Eloqua);
 * [Activate audiences to streaming profile export destinations](./activate-streaming-profile-destinations.md) (for example, HTTP API or Amazon Kinesis).
 
-
-
 ## Add datasets to an activation dataflow {#add-datasets}
 
 Select **[!UICONTROL Export datasets]** in the right rail to select additional datasets to export to your destination. This option takes you to the [dataset export workflow](export-datasets.md).
@@ -106,13 +103,11 @@ Select **[!UICONTROL Export datasets]** in the right rail to select additional d
 
 ![Experience Platform UI image showing the Export datasets dataflow run option.](../assets/ui/edit-activation/export-datasets.png)
 
-
-
-<!-- ## Apply access labels {#apply-access-labels}
+## Apply access labels {#apply-access-labels}
 
 Select **[!UICONTROL Apply access labels]** to edit the data usage labels for the exported data. See the [data usage labels documentation](../../data-governance/labels/overview.md) to learn more.
 
-![Experience Platform UI image showing the Export datasets dataflow run option.](../assets/ui/edit-activation/apply-access-labels.png) -->
+![Experience Platform UI image showing the Export datasets dataflow run option.](../assets/ui/edit-activation/apply-access-labels.png)
 
 ## Edit activation dataflow names and descriptions {#edit-names-descriptions}
 
