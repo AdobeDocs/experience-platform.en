@@ -144,7 +144,11 @@ Find all the people belonging to the Marketo Static list "Anniversary users" whe
 
 ![UI displaying segmentation parent org](../assets/segmentation/b2b/example-13.png)
 
-### Example 14: Find "decision makers" by opportunity status for personalization {#find-decision-makers-personalization}
+### Example 14: Find "decision makers" by opportunity status using streaming or edge segmentation {#find-decision-makers-personalization}
+
+>[!NOTE]
+>
+>This example uses **streaming or edge** segmentation, as opposed to batch segmentation.
 
 Find all the people who are a "Decision Maker" of any closed-lost opportunity and visited the pricing page in the last 24 hours. This example can be evaluated using streaming or edge segmentation, to support more real-time use cases.
 
