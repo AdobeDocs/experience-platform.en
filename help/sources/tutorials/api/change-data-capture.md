@@ -1,6 +1,7 @@
 ---
 title: Enable change data capture for source connections in the API
 description: Learn how to enable change data capture for source connections in the API
+exl-id: 362f3811-7d1e-4f16-b45f-ce04f03798aa
 ---
 # Enable change data capture for source connections in the API
 
@@ -145,4 +146,3 @@ Read the following documentation for steps on how to enable change data capture 
 
 * [Create a [!DNL Snowflake] base connection](../api/create/databases/snowflake.md).
 * [Create a source connection for a database](../api/collect/database-nosql.md#create-a-source-connection).
-
