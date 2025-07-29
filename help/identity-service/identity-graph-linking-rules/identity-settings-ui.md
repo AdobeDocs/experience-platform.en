@@ -79,7 +79,7 @@ From here, you must confirm the following before proceeding to the final step:
 >
 >* There will be no changes to your data until you save your identity settings.
 
-![The confirmation window that displays a warning about a six-hour delay before configurations get processed.](../images/rules/complete.png)
+![The confirmation window that displays a warning about a 24-hour delay before configurations get processed.](../images/rules/complete.png)
 
 ## Next steps
 
