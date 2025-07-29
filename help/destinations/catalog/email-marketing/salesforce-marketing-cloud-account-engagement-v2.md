@@ -59,13 +59,6 @@ Write down the items below before you authenticate to the [!DNL (V2) Marketing C
 
 {style="table-layout:auto"}
 
-### Guardrails {#guardrails}
-
-This destination has a fixed export schedule that cannot be customized in the Alpha version:
-
-* **Initial export**: A full export of all profiles in the selected audience occurs immediately after mapping the audience to the destination.
-* **Subsequent exports**: Incremental exports (containing only changed profiles) occur automatically every 3 hours.
-
 ## Supported identities {#supported-identities}
 
 [!DNL (V2) Marketing Cloud Account Engagement] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
