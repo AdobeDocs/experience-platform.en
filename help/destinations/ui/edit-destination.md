@@ -21,10 +21,7 @@ To edit various components of an existing destination connection:
 1. Navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**.
 2. Select the desired destination that you want to edit.
 3. Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![Edit destination control](/help/images/icons/edit.png)**[!UICONTROL Edit destination]** control to edit existing destination connections.
-4. In the modal window, edit any desired settings. Select **[!UICONTROL Next]** when done. 
-5. If desired, update any of the marketing actions associated with this destination connection. Select **[!UICONTROL Save]** when done.
-
-![Screen recording showing the process to edit existing destination connections.](/help/destinations/assets/ui/edit-destinations/edit-destinations-recording.gif)
+4. In the modal window, edit any desired settings. Select **[!UICONTROL Save]** when done.
 
 In the edit destination window, you can update any settings that you configured when you initialy connected to the destination. These settings are different based on the destination platform that you are updating.
 
