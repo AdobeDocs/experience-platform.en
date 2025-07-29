@@ -30,13 +30,23 @@ In the edit destination window, you can update any settings that you configured 
 
 Depending on how the destination was configured, some fields might be read-only and cannot be edited. To change the value of read-only fields, you must [create a new destination connection](../ui/connect-destination.md) with the new field values.
 
+![Screenshot showing a read-only field.](../assets/ui/edit-destinations/read-only.png)
+
 Below are some examples of the settings that you can update for [Amazon S3](../catalog/cloud-storage/amazon-s3.md), [Azure Event Hubs](../catalog/cloud-storage/azure-event-hubs.md), and [Google Ads](../catalog/advertising/google-ads-destination.md) destinations.
 
-![Edit destination screen for the Amazon S3 destination.](/help/destinations/assets/ui/edit-destinations/edit-amazon-s3-connection.png){width="100" zoomable="yes"}
-
-![Edit destination screen for the Azure EventHubs destination.](/help/destinations/assets/ui/edit-destinations/edit-eventhubs-connection.png){width="100" zoomable="yes"}
-
-![Edit destination screen for the Google Ads destination.](/help/destinations/assets/ui/edit-destinations/edit-google-ads-connection.png){width="100" zoomable="yes"}
+<table style="width:100%; table-layout:fixed; border-collapse:separate; border-spacing:16px 0;">
+  <tr>
+    <td align="center" style="vertical-align:top;">
+      <img src="../assets/ui/edit-destinations/edit-amazon-s3-connection.png" alt="Edit destination screen for the Amazon S3 destination." width="100" data-zoomable="yes" />
+    </td>
+    <td align="center" style="vertical-align:top;">
+      <img src="../assets/ui/edit-destinations/edit-eventhubs-connection.png" alt="Edit destination screen for the Azure EventHubs destination." width="100" data-zoomable="yes" />
+    </td>
+    <td align="center" style="vertical-align:top;">
+      <img src="../assets/ui/edit-destinations/edit-google-ads-connection.png" alt="Edit destination screen for the Google Ads destination." width="100" data-zoomable="yes" />
+    </td>
+  </tr>
+</table>
 
 >[!SUCCESS]
 >
