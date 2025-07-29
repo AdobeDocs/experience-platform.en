@@ -45,6 +45,11 @@ Before you can send audience data to a destination, you must set up a connection
 
 ## Authenticate to destination {#authenticate}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_account_name"
+>title="Account name"
+>abstract="Enter a name that will help you easily identify this destination account in the future. This is especially useful if you have multiple connections to the same destination type."
+
 The first step in connecting to a destination is to authenticate to the destination platform. 
 
 Depending on the destination that you are connecting to, you might be taken to the destination partner's page to authenticate, or you might be asked to input authentication credentials directly in the Experience Platform workflow. Below is an example of required input to authenticate to an [!DNL Amazon S3] destination. Detailed instructions about the required input is provided in each destination documentation page (see, for example, the authentication section for [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) and for [[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate)).

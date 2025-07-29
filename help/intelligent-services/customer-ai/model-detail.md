@@ -1,6 +1,7 @@
 ---
 title: Customer AI Propensity Scoring Model Details
 description: Learn about the AI model used for Customer AI.
+exl-id: 08210982-10fe-43ef-a54e-e701241ac175
 ---
 # Customer AI Propensity Scoring Model Details
 

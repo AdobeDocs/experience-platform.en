@@ -7,15 +7,6 @@ exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
 ---
 # [!DNL Braze] connection
 
->[!IMPORTANT]
->
->* Starting June 19, 2025, you can see two **[!DNL Braze]** cards side-by-side in the destinations catalog. This is due to an internal upgrade to the destinations service. The existing [!DNL Braze] destination connector has been renamed to **[!UICONTROL (Deprecated) Braze]** and a new card with the name **[!UICONTROL Braze]** is now available to you. 
->* Use the **[!UICONTROL Braze]** connection in the catalog for new activation data flows. If you have any active dataflows to the **[!UICONTROL (Deprecated) Braze]** destination, they will be updated automatically, so no action is required from you.
->* If you are creating dataflows through the [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/), you must update your [!DNL flow spec ID] and [!DNL connection spec ID] to the following values:
->   * Flow spec ID: `cb7919bd-69aa-462d-bcc0-db7cdc7fdf51`
->   * Connection spec ID: `ab957205-5a78-4393-b901-b930ed548220`
-
-
 ## Overview {#overview}
 
 The [!DNL Braze] destination helps you send profile data to [!DNL Braze].
