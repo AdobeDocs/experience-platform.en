@@ -32,12 +32,15 @@ As a marketer, I want to be able to use audiences built off of [!DNL Trade Desk 
 
 Below are the identities supported by [!DNL The Trade Desk] destination. These identities can be used to activate audiences to [!DNL The Trade Desk].
 
+All identities in the table below are mandatory mappings.
+
 |Target identity|Description|Considerations|
 |---|---|---|
 |GAID|Google Advertising ID|Select the GAID target identity when your source identity is a GAID namespace.|
 |IDFA|Apple ID for Advertisers|Select the IDFA target identity when your source identity is an IDFA namespace.|
-|ECID|Experience Cloud ID|A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID". Read the following document on [ECID](/help/identity-service/features/ecid.md) for more information.|
+|ECID|Experience Cloud ID|This identity is mandatory for the Trade Desk integration to work correctly but is not used for audience activation.|
 |The Trade Desk ID|Advertiser ID in The Trade Desk platform|Use this identity when activating audiences based on The Trade Desk's proprietary ID.|
+
 
 {style="table-layout:auto"}
 
@@ -111,9 +114,18 @@ In the [Audience schedule](../../ui/activate-segment-streaming-destinations.md#s
 
 When mapping audiences, Adobe recommends that you use the Experience Platform audience name or a shorter form of it, for ease of use. However, the audience ID or name in your destination does not need to match the one in your Experience Platform account. Any value you insert in the mapping field will be reflected by the destination.
 
-If you are using multiple device mappings (cookie IDs, [!DNL IDFA], [!DNL GAID]), make sure to use the same mapping value for all three mappings. [!DNL The Trade Desk] will aggregate all of them into a single segment, with a device-level breakdown.
+### Mandatory mappings {#mandatory-mappings}
 
-![Segment Mapping ID](../../assets/common/segment-mapping-id.png)
+All target identities described in the [supported identities](#supported-identities) section are mandatory and must be mapped during the audience activation process. This includes:
+
+* **GAID** (Google Advertising ID)
+* **IDFA** (Apple ID for Advertisers) 
+* **ECID** (Experience Cloud ID)
+* **The Trade Desk ID**
+
+Failure to map all required identities will prevent successful audience activation to [!DNL The Trade Desk]. Each identity serves a specific purpose in the integration, and all are required for the destination to work correctly.
+
+![Screenshot showing the mandatory mappings](../../assets/catalog/advertising/tradedesk/mandatory-mappings.png)
 
 ## Exported data {#exported-data}
 
