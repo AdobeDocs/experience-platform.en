@@ -1,8 +1,6 @@
 ---
 title: External Audiences API Endpoint
 description: Learn how to use the external audiences API to create, update, activate, and delete your external audiences from Adobe Experience Platform.
-hide: yes
-hidefromtoc: yes
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
 ---
 # External audiences endpoint
