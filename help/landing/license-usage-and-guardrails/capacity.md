@@ -1,8 +1,8 @@
 ---
 title: License Usage and Capacity
-description: Learn about your license usage and capacity limits within Adobe Experience Platform. 
+description: Learn about your license usage and capacity limits within Adobe Experience Platform.
+exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
 ---
-
 # License usage and capacities
 
 In Adobe Experience Platform, capacities let you know if your organization has exceeded any of your guardrails and gives you information on how to fix these issues. 
