@@ -13,10 +13,9 @@ In Adobe Experience Platform, you can configure various components of existing a
 * [Add additional audiences](#add-audiences) to activation dataflows
 * [Edit mapped attributes and identities](#edit-mapped-attributes)
 * [Edit the activation schedule and export frequency](#edit-schedule-frequency)
-* [Add additional datasets](#add-datasets) to activation workflows
+* [Add additional datasets](#add-datasets) to activation workflow
+* [Apply access labels](#apply-access-labels) to exported data
 * [Edit names and descriptions](#edit-names-descriptions) for your activation dataflows
-
-<!-- * [Apply access labels](#apply-access-labels) to exported data; -->
 
 ## Browse activation dataflows {#browse-activation-dataflows}
 
@@ -104,7 +103,6 @@ Select **[!UICONTROL Export datasets]** in the right rail to select additional d
 
 ![Experience Platform UI image showing the Export datasets dataflow run option.](../assets/ui/edit-activation/export-datasets.png)
 
-
 ## Edit marketing actions {#edit-marketing-actions}
 
 >[!NOTE]
@@ -120,11 +118,11 @@ Select the applicable marketing actions and then select **[!UICONTROL Save]** to
 ![Experience Platform UI image showing the edit marketing actions screen.](../assets/ui/edit-activation/edit-marketing-actions-screen.png)
 
 
-<!-- ## Apply access labels {#apply-access-labels}
+## Apply access labels {#apply-access-labels}
 
 Select **[!UICONTROL Apply access labels]** to edit the data usage labels for the exported data. See the [data usage labels documentation](../../data-governance/labels/overview.md) to learn more.
 
-![Experience Platform UI image showing the Export datasets dataflow run option.](../assets/ui/edit-activation/apply-access-labels.png) -->
+![Experience Platform UI image showing the Export datasets dataflow run option.](../assets/ui/edit-activation/apply-access-labels.png)
 
 ## Edit activation dataflow names and descriptions {#edit-names-descriptions}
 
