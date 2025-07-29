@@ -1,8 +1,6 @@
 ---
 title: Monitor streaming profile ingestion
 description: Learn how to use the monitoring dashboard to monitor streaming profile ingestion
-hide: true
-hidefromtoc: true
 exl-id: da7bb08d-2684-45a1-b666-7580f2383748
 ---
 # Monitor streaming profile ingestion
@@ -135,9 +133,9 @@ Select **[!UICONTROL Throughput]** to view information on the amount of data tha
 
 ![The dashboard with the display set to "ingestion".](../assets/ui/streaming-profiles/ingestion.png)
 
-* **Records created**: The total amount of records created within a given time period. This metric represents successful data ingestion processes in your sandbox.
-* **Failed records**: The total number of records that did not get ingested due to errors.
-* **Dropped records**: The total number of records that were dropped due to violation of capacity limits.
+* **Records ingested**: The total amount of records created within a given time period. This metric represents successful data ingestion processes in your sandbox.
+* **Records skipped**: The total number of records that did not get ingested due to errors.
+* **Records skipped**: The total number of records that were dropped due to violation of capacity limits.
 
 >[!TAB Latency]
 
