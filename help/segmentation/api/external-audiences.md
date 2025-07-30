@@ -276,6 +276,7 @@ When using this endpoint, you can update the following fields:
 - Audience description
 - Field-level access control labels
 - Audience-level access control labels
+- The audience's data expiration
 
 Updating the field using this endpoint **replaces** the content of the field you requested.
 
