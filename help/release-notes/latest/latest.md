@@ -20,15 +20,14 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 
 New features and updates to existing features in Adobe Experience Platform:
 
-- [Adobe Experience Platform release notes](#adobe-experience-platform-release-notes)
-  - [Capacity {#capacity}](#capacity-capacity)
-  - [Destinations {#destinations}](#destinations-destinations)
-  - [Data Ingestion {#ingestion}](#data-ingestion-ingestion)
-  - [Query Service {#query-service}](#query-service-query-service)
-  - [Real-Time CDP B2B Edition {#b2b}](#real-time-cdp-b2b-edition-b2b)
-  - [Sandboxes {#sandboxes}](#sandboxes-sandboxes)
-  - [Segmentation Service {#segmentation-service}](#segmentation-service-segmentation-service)
-  - [Sources {#sources}](#sources-sources)
+- [Capacity](#capacity)
+- [Destinations](#destinations)
+- [Data Ingestion](#data-ingestion)
+- [Query Service](#query-service
+- [Real-Time CDP B2B Edition](#b2b)
+- [Sandboxes](#sandboxes)
+- [Segmentation Service](#segmentation-service)
+- [Sources](#sources)
 
 ## Capacity {#capacity}
 
