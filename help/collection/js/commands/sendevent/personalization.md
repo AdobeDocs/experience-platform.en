@@ -55,7 +55,7 @@ This property is foundationally used with Adobe Journey Optimizer, as it matches
 
 ## `personalization.schemas`
 
-The `schemas` property is an array of strings that filter the types of personalization content requested from the Edge Network. Setting this property restricts the response that you receive from Adobe to only include offers that match the content type definitions that you specify. If omitted, the library requests offers of all available schemas for the matched scopes or surfaces.
+The `schemas` property is an array of schema URI strings that filter the types of personalization content requested from the Edge Network. Setting this property restricts the response that you receive from Adobe to only include offers that match the content type definitions that you specify. If omitted, the library requests offers of all available schemas for the matched scopes or surfaces.
 
 This property helps optimize response size and makes sure that your web site or application only receives offer types that it can handle. It is also helpful when used with single-page applications that renders personalized content in a specific way (such as using only DOM actions or only JSON objects).
 
