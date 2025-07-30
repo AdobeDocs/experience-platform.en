@@ -1,8 +1,7 @@
 ---
 title: Connect Didomi to Experience Platform
 description: Learn how to connect your Didomi account to Experience Platform using the UI.
-hide: true
-hidefromtoc: true
+last-substantial-update: 2025-07-29
 exl-id: 1374574f-c8ba-4cf5-bad0-94a884f5c0a6
 ---
 # Connect [!DNL Didomi] to Experience Platform
