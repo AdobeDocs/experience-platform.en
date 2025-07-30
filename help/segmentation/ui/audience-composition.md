@@ -305,6 +305,10 @@ Additionally, you can limit the number of profiles returned by enabling the **[!
 >title="Other profiles"
 >abstract="The Other profiles toggle lets you create an additional path with the remaining profiles that do not match any of the other paths' specified conditions."
 
+>[!NOTE]
+>
+>In order to use the **[!UICONTROL Split]** block, you **must** have at least 10 profiles in your audience.
+
 The **[!UICONTROL Split]** block type allows you to split your new audience into various sub-audiences. You can either split this audience based on percentage or by an attribute.
 
 To add a **[!UICONTROL Split]** block, select the **+** icon, followed by **[!UICONTROL Split]**.
