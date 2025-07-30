@@ -124,7 +124,7 @@ Once the report suites have been mapped, you can use these newly mapped fields w
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_externalaudiences"
 >title="External audiences"
->abstract="Audiences imported through the Audiences tab will now automatically be surfaced through Audience Portal. Audiences ingested from Audience Manager, Customer Journey Analytics, Segment Match, and other custom integrations will be readily available, without configuring in Segment Builder first. The existing workflow will be supported until September 1, 2025. You can choose to use the existing workflow until that time or turn on the new experience."
+>abstract="Audiences imported through the Audiences tab are now automatically be surfaced through Audience Portal. Audiences ingested from Audience Manager, Customer Journey Analytics, Segment Match, and other custom integrations are readily available, without configuring in Segment Builder first. As of September 1, 2025, all audiences are retrieved exclusively through Unified Search, and the previous workflow is no longer supported."
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/audience-portal#list" text="Audience Portal"
 
 >[!NOTE]
