@@ -1,8 +1,6 @@
 ---
 title: License Usage and Capacity
 description: Learn about your license usage and capacity limits within Adobe Experience Platform.
-hide: true
-hidefromtoc: true
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
 ---
 # License usage and capacities
@@ -35,9 +33,9 @@ Currently, Capacity supports the following services:
 
 Within these services, the following guardrails are tracked:
 
-- Maximum number of streaming audiences is 500
+- The maximum number of streaming audiences is 500
   - Of these 500 streaming audiences, the maximum number of edge audiences is 150
-- Maximum combined throughput for streaming segmentation is 1500 records per second (rps)
+- The maximum combined throughput for streaming segmentation is 1500 records per second (rps)
 
 The audience capacity is at a **sandbox** level. This means that, for every sandbox you have in your organization, you can have 500 streaming audiences, of which 150 of those can be edge audiences.
 
