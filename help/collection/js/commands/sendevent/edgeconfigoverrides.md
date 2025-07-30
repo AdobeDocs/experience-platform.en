@@ -45,7 +45,7 @@ alloy("sendEvent", {
     },
     com_adobe_analytics: {
       enabled: false,
-      reportSuites: ["ujslconfigoverrides3"],
+      reportSuites: ["examplersid3"],
     },
     com_adobe_identity: {
       idSyncContainerId: 34374,

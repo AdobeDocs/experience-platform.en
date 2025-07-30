@@ -18,7 +18,7 @@ When you set the `edgeConfigOverrides` object in the `configure` command, it app
 * [`getIdentity`](../getidentity.md)
 * [`appendIdentityToUrl`](../appendidentitytourl.md)
 
-Setting `edgeConfigOverrides` in any of the above commands takes precedence over the `edgeConfigOverrides` object in the `configure` command if both are set.
+Setting `edgeConfigOverrides` in any of the above commands takes precedence over the `edgeConfigOverrides` object in the `configure` command if both are set. If any of these commands do not contain an `edgeConfigOverrides` object, then the `edgeConfigOverrides` object in the `configure` command is used.
 
 ## Example
 
@@ -72,22 +72,22 @@ alloy("configure", {
 
 | Parameter | Type | Description |
 | --- | --- | --- |
-| `orgId` | `string` | Your company's IMS org ID. |
-| `datastreamId` | `string` | The datastream ID to send data to. |
-| `com_adobe_experience_platform` | `object` | Defines the dynamic datastream configuration for Adobe Experience Platform services. |
-| `com_adobe_experience_platform.enabled` | `boolean` | Determines if the event is sent to Adobe Experience Platform. |
-| `com_adobe_experience_platform.datasets` | `object` | Defines the datasets used for the event. |
-| `com_adobe_experience_platform.com_adobe_edge_ode.enabled` | `boolean` | Determines if the event is sent to Offer Decisioning. |
-| `com_adobe_experience_platform.com_adobe_edge_segmentation.enabled` | `boolean` | Determines if the event is sent to Edge Segmentation. |
-| `com_adobe_experience_platform.com_adobe_edge_destinations.enabled` | `boolean` | Determines if the event is sent to Edge Destinations. |
-| `com_adobe_experience_platform.com_adobe_edge_ajo.enabled` | `boolean` | Determines if the event is sent Adobe Journey Optimizer. |
-| `com_adobe_analytics.enabled` | `boolean` | Determines if the event is sent to Adobe Analytics. |
-| `com_adobe_analytics.reportSuites[]` | `string[]` | An array of strings that determines which report suites to send Analytics data to. |
-| `com_adobe_audience_manager.enabled` | `boolean` | Determines if the event is sent to Adobe Audience Manager. |
-| `com_adobe_identity.idSyncContainerId` | `integer` | The third-party ID sync container that you want to use in Audience Manager. Requires `com_adobe_audience_manager.enabled` set to `true`. Otherwise, the Audience Manager service is disabled. |
-| `com_adobe_target.enabled` | `boolean` | Determines if the event is sent to Adobe Target. |
-| `com_adobe_target.propertyToken` | `string` | The token for the Adobe Target destination property. |
-| `com_adobe_launch_ssf` | `boolean` | Determines if the event is sent to Server-side forwarding. |
+| **`orgId`** | `string` | Your company's IMS org ID. |
+| **`datastreamId`** | `string` | The datastream ID to send data to. |
+| **`com_adobe_experience_platform`** | `object` | Defines the dynamic datastream configuration for Adobe Experience Platform services. |
+| **`com_adobe_experience_platform.enabled`** | `boolean` | Determines if the event is sent to Adobe Experience Platform. |
+| **`com_adobe_experience_platform.datasets`** | `object` | Defines the datasets used for the event. |
+| **`com_adobe_experience_platform.com_adobe_edge_ode.enabled`** | `boolean` | Determines if the event is sent to Offer Decisioning. |
+| **`com_adobe_experience_platform.com_adobe_edge_segmentation.enabled`** | `boolean` | Determines if the event is sent to Edge Segmentation. |
+| **`com_adobe_experience_platform.com_adobe_edge_destinations.enabled`** | `boolean` | Determines if the event is sent to Edge Destinations. |
+| **`com_adobe_experience_platform.com_adobe_edge_ajo.enabled`** | `boolean` | Determines if the event is sent Adobe Journey Optimizer. |
+| **`com_adobe_analytics.enabled`** | `boolean` | Determines if the event is sent to Adobe Analytics. |
+| **`com_adobe_analytics.reportSuites[]`** | `string[]` | An array of strings that determines which report suites to send Analytics data to. |
+| **`com_adobe_audience_manager.enabled`** | `boolean` | Determines if the event is sent to Adobe Audience Manager. |
+| **`com_adobe_identity.idSyncContainerId`** | `integer` | The third-party ID sync container that you want to use in Audience Manager. Requires `com_adobe_audience_manager.enabled` set to `true`. Otherwise, the Audience Manager service is disabled. |
+| **`com_adobe_target.enabled`** | `boolean` | Determines if the event is sent to Adobe Target. |
+| **`com_adobe_target.propertyToken`** | `string` | The token for the Adobe Target destination property. |
+| **`com_adobe_launch_ssf`** | `boolean` | Determines if the event is sent to Server-side forwarding. |
 
 ## Configuration overrides using the Web SDK tag extension
 

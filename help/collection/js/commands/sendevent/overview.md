@@ -25,12 +25,13 @@ Run the `sendEvent` command when calling your configured instance of the Web SDK
 
 ```js
 alloy("sendEvent", {
-  "data": dataObject,
-  "documentUnloading": false,
-  "edgeConfigOverrides": { "datastreamId": "0dada9f4-fa94-4c9c-8aaf-fdbac6c56287" },
-  "renderDecisions": true,
-  "type": "commerce.purchases",
-  "xdm": adobeDataLayer.getState(reference)
+  data: dataObject,
+  documentUnloading: false,
+  edgeConfigOverrides: { datastreamId: "0dada9f4-fa94-4c9c-8aaf-fdbac6c56287" },
+  personalization: { decisionScopes: ["__view__", "hero-banner"]},
+  renderDecisions: true,
+  type: "commerce.purchases",
+  xdm: adobeDataLayer.getState(reference)
 });
 ```
 
