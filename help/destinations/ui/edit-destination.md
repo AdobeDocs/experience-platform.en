@@ -32,11 +32,11 @@ Depending on how the destination was configured, some fields might be read-only 
 
 Below are some examples of the settings that you can update for [Amazon S3](../catalog/cloud-storage/amazon-s3.md), [Azure Event Hubs](../catalog/cloud-storage/azure-event-hubs.md), and [Google Ads](../catalog/advertising/google-ads-destination.md) destinations.
 
-<p>
-  <img class="modal-image" src="../assets/ui/edit-destinations/edit-amazon-s3-connection.png" alt="Edit destination screen for the Amazon S3 destination." style="display:inline-block; max-width:32%; margin-right:1%;">
-  <img class="modal-image" src="../assets/ui/edit-destinations/edit-eventhubs-connection.png" alt="Edit destination screen for the Azure EventHubs destination." style="display:inline-block; max-width:32%; margin-right:1%;">
-  <img class="modal-image" src="../assets/ui/edit-destinations/edit-google-ads-connection.png" alt="Edit destination screen for the Google Ads destination." style="display:inline-block; max-width:32%;">
-</p>
+<div style="display: flex; gap: 12px; justify-content: flex-start; align-items: flex-start;">
+  <img class="modal-image" src="../assets/ui/edit-destinations/edit-amazon-s3-connection.png" alt="Edit destination screen for the Amazon S3 destination." style="max-width: 200px; height: auto; border: 1px solid #ccc;">
+  <img class="modal-image" src="../assets/ui/edit-destinations/edit-eventhubs-connection.png" alt="Edit destination screen for the Azure EventHubs destination." style="max-width: 200px; height: auto; border: 1px solid #ccc;">
+  <img class="modal-image" src="../assets/ui/edit-destinations/edit-google-ads-connection.png" alt="Edit destination screen for the Google Ads destination." style="max-width: 200px; height: auto; border: 1px solid #ccc;">
+</div>
 
 >[!SUCCESS]
 >
