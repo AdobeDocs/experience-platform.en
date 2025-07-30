@@ -197,7 +197,11 @@ Once you have a better idea of how you want your graph to behave, navigate to th
 
 ![The identities browse page with the settings button highlighted.](../images/implementation/settings.png "The identities browse page with the settings button highlighted."){zoomable="yes"}
 
-Use the identity settings UI to designate your unique namespaces and configure your namespaces by order of priority. Once you are finished with applying your settings, you must wait at least six hours before you can proceed to ingest data, as it takes at least six hours for new settings to be reflected in Identity Service.
+Use the identity settings UI to designate your unique namespaces and configure your namespaces by order of priority. 
+
+>[!IMPORTANT]
+>
+>Once you are finished with applying your settings, you must wait at least 24 hours before you can proceed to ingest data, as it takes at least 24 hours for new settings to be reflected in Identity Service.
 
 For more information, read the [identity settings UI guide](./identity-settings-ui.md).
 
