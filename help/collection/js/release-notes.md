@@ -23,6 +23,10 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 - Resolved an issue where [personalization content](personalization/rendering-personalization-content.md) with HTML content items failed to render with an error relating to a missing `renderStatusHandler`.
 - Fixed activity map [URL collection](commands/configure/clickcollectionenabled.md) to properly handle non-HTTP URLs.
 
+**Known issues**
+
+- The [custom build](/help/web-sdk/install/create-custom-build.md) process using `npx @adobe/alloy` is currently not functioning as expected in version 2.28.0. All components are included in the generated build, regardless of the selected modules. This issue does not affect the standard JavaScript file available on the CDN. A fix is in progress.
+
 ## Version 2.27.0 - May 20, 2025
 
 **Fixes and improvements**
