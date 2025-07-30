@@ -104,7 +104,7 @@ Select **[!UICONTROL Export datasets]** in the right rail to select additional d
 
 ![Experience Platform UI image showing the Export datasets dataflow run option.](../assets/ui/edit-activation/export-datasets.png)
 
-## Edit marketing actions {#edit-marketing-actions}
+## [!BADGE Beta]{type=Informative} Edit marketing actions {#edit-marketing-actions}
 
 >[!NOTE]
 >
