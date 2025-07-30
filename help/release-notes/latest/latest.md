@@ -22,11 +22,11 @@ New features and updates to existing features in Adobe Experience Platform:
 
 - [Capacity](#capacity)
 - [Destinations](#destinations)
-- [Data Ingestion](#ingestion)
-- [Query Service](#query-service)
+- [Data Ingestion](#data-ingestion)
+- [Query Service](#query-service
 - [Real-Time CDP B2B Edition](#b2b)
 - [Sandboxes](#sandboxes)
-- [Segmentation Service](#segmentation)
+- [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
 
 ## Capacity {#capacity}
@@ -149,5 +149,6 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | Feature | Description |
 | --- | --- |
 | Support for change data capture in select sources using the [!DNL Flow Service] API | You can now create dataflows that enable change data capture for incremental ingestion using source connectors. This capability allows customers to bring change data type for incremental ingestion, improving data freshness and reducing processing overhead. For more information, read the documentation on [using change data capture for sources](../../sources/tutorials/api/change-data-capture.md) |
+| Support for soft deletion of records in [!DNL Salesforce] | The [!DNL Salesforce] source now supports including soft deleted records through an optional `includeDeletedObjects` parameter. When set to true, customers can include soft deleted records in their [!DNL Salesforce] queries and bring these records into Experience Platform. Read the [[!DNL Salesforce] source documentation](../../sources/connectors/crm/salesforce.md) for more information. |
 
 For more information, read the [sources overview](../../sources/home.md).
