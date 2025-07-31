@@ -245,19 +245,19 @@ A successful response returns the details of the delete operation, including its
 | `datasetId` | The ID of the dataset that is subject to the request. If the request is for all datasets, the value will be set to `ALL`. |
 | `productStatusDetails` | An array that lists the current status of downstream processes related to the request. Each array object contains the following properties:<ul><li>`productName`: The name of the downstream service.</li><li>`productStatus`: The current processing status of the request from the downstream service.</li><li>`createdAt`: A timestamp of when the most recent status was posted by the service.</li></ul> |
 
-## Update a record delete request
+## Update a record delete work order
 
-You can update the `displayName` and `description` for a record delete by making a PUT request.
+Update the `name` and `description` for a work order by making a PUT request to the `/workorder/{WORKORDER_ID}` endpoint.
 
 **API format**
 
 ```http
-PUT /workorder{WORK_ORDER_ID}
+PUT /workorder/{WORKORDER_ID}
 ```
 
 | Parameter | Description |
 | --- | --- |
-| `{WORK_ORDER_ID}` | The `workorderId` of the record delete you are looking up. |
+| `{WORK_ORDER_ID}` | The unique identifier for the work order you want to update. |
 
 {style="table-layout:auto"}
 
@@ -265,79 +265,68 @@ PUT /workorder{WORK_ORDER_ID}
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/core/hygiene/workorder/BN-35c1676c-3b4f-4195-8d6c-7cf5aa21efdd \
+  https://platform.adobe.io/data/core/hygiene/workorder/DI-893a6b1d-47c2-41e1-b3f1-2d7c2956aabb \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
   -d '{
-        "displayName" : "Update - displayName",
-        "description" : "Update - description"
+        "name": "Updated Marketing Identity Delete Request",
+        "description": "Updated deletion request for marketing data"
       }'
 ```
 
 | Property | Description |
 | --- | --- |
-| `displayName` | An updated display name for the record delete request. |
-| `description` | An updated description for the record delete request. |
+| Property      | Description                                          |
+| ------------- | ---------------------------------------------------- |
+| `name`        | The updated human-readable label for the record delete work order. |
+| `description` | The updated description for the record delete work order.  |
 
 {style="table-layout:auto"}
 
 **Response**
 
-A successful response returns the details of the record delete.
+A successful response returns the updated work order request.
 
 ```json
 {
-    "workorderId": "DI-61828416-963a-463f-91c1-dbc4d0ddbd43",
-    "orgId": "{ORG_ID}",
-    "bundleId": "BN-aacacc09-d10c-48c5-a64c-2ced96a78fca",
-    "action": "identity-delete",
-    "createdAt": "2024-06-12T20:02:49.398448Z",
-    "updatedAt": "2024-06-13T21:35:01.944749Z",
-    "operationCount": 1,
-    "status": "ingested",
-    "createdBy": "{USER_ID}",
-    "datasetId": "666950e6b7e2022c9e7d7a33",
-    "datasetName": "Acme_Dataset_E2E_Identity_Map_Schema_5_1718178022379",
-    "displayName": "Updated Display Name",
-    "description": "Updated Description",
-    "productStatusDetails": [
-        {
-            "productName": "Data Management",
-            "productStatus": "waiting",
-            "createdAt": "2024-06-12T20:11:18.447747Z"
-        },
-        {
-            "productName": "Identity Service",
-            "productStatus": "success",
-            "createdAt": "2024-06-12T20:36:09.020832Z"
-        },
-        {
-            "productName": "Profile Service",
-            "productStatus": "waiting",
-            "createdAt": "2024-06-12T20:11:18.447747Z"
-        },
-        {
-            "productName": "Journey Orchestrator",
-            "productStatus": "success",
-            "createdAt": "2024-06-12T20:12:19.843199Z"
-        }
-    ]
+  "workorderId": "DI-893a6b1d-47c2-41e1-b3f1-2d7c2956aabb",
+  "orgId": "7D4E2AC143214567890ABCDE@AcmeOrg",
+  "bundleId": "BN-12abcf45-32ea-45bc-9d1c-8e7b321cabc8",
+  "action": "identity-delete",
+  "createdAt": "2038-04-15T12:14:29.210Z",
+  "updatedAt": "2038-04-15T12:30:29.442Z",
+  "operationCount": 2,
+  "targetServices": [
+    "profile",
+    "datalake"
+  ],
+  "status": "in-progress",
+  "createdBy": "b.tarth@acme.com <b.tarth@acme.com> 8E7B321CABC8@acme.com",
+  "datasetId": "1a2b3c4d5e6f7890abcdef12",
+  "datasetName": "Acme_Marketing_2024",
+  "displayName": "Updated Marketing Identity Delete Request",
+  "description": "Updated deletion request for marketing data"
 }
 ```
 
-| Property | Description |
-| --- | --- |
-| `workorderId` | The ID of the deletion order. This can be used to look up the status of the deletion later. |
-| `orgId` | Your organization ID. |
-| `bundleId` | The ID of the bundle this deletion order is associated with, used for debugging purposes. Multiple deletion orders are bundled together to be processed by downstream services. |
-| `action` | The action being performed by the work order. For record deletes, the value is `identity-delete`. |
-| `createdAt` | A timestamp of when the deletion order was created. |
-| `updatedAt` | A timestamp of when the deletion order was last updated. |
-| `status` | The current status of the deletion order. |
-| `createdBy` | The user that created the deletion order. |
-| `datasetId` | The ID of the dataset that is subject to the request. If the request is for all datasets, the value will be set to `ALL`. |
-| `productStatusDetails` | An array that lists the current status of downstream processes related to the request. Each array object contains the following properties:<ul><li>`productName`: The name of the downstream service.</li><li>`productStatus`: The current processing status of the request from the downstream service.</li><li>`createdAt`: A timestamp of when the most recent status was posted by the service.</li></ul> |
+| Property         | Description                                                                               |
+| ---------------- | ----------------------------------------------------------------------------------------- |
+| `workorderId`    | The ID of the deletion order. This can be used to look up the status of the deletion later.|
+| `orgId`          | Your organization's unique identifier.                                                    |
+| `bundleId`       | The ID of the bundle this deletion order is associated with, used for debugging purposes. |
+| `action`         | The action type requested in the work order.                                              |
+| `createdAt`      | The timestamp when the work order was created.                                            |
+| `updatedAt`      | The timestamp when the work order was last updated.                                       |
+| `operationCount` | The number of operations included in the work order.                                      |
+| `targetServices` | A list of target services impacted by this work order.                                    |
+| `status`         | The current status of the work order.                                                     |
+| `createdBy`      | The email and identifier of the user who created the work order.                          |
+| `datasetId`      | The unique identifier for the dataset associated with the work order.                     |
+| `datasetName`    | A name of the dataset associated with the work order.                                     |
+| `displayName`    | A human-readable label for the work order.                                                |
+| `description`    | A description of the work order request.                                                  |
 
 {style="table-layout:auto"}
