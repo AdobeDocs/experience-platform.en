@@ -41,7 +41,6 @@ All identities in the table below are mandatory mappings.
 |ECID|Experience Cloud ID|This identity is mandatory for the integration to work correctly but is not used for audience activation.|
 |The Trade Desk ID|Advertiser ID in the [!DNL The Trade Desk] platform|Use this identity when activating audiences based on The Trade Desk's proprietary ID.|
 
-
 {style="table-layout:auto"}
 
 ## Supported audiences {#supported-audiences}
