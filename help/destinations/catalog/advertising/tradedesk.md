@@ -1,7 +1,7 @@
 ---
 keywords: advertising; the trade desk; advertising trade desk
 title: The Trade Desk connection
-description: The Trade Desk is a self-service platform for ad buyers to execute retargeting and audience targeted digital campaigns across display, video, and mobile inventory sources.
+description: The Trade Desk is a self-service platform for ad buyers to execute retargeting and audience-targeted digital campaigns across display, video, and mobile inventory sources.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
 ---
 # [!DNL The Trade Desk] connection
@@ -10,7 +10,7 @@ exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
 
 >[!IMPORTANT]
 >
->* Starting July 29, 2025, you can see two **[!DNL The Trade Desk]** cards side-by-side in the destinations catalog. This is due to an internal upgrade to the destinations service. The existing **[!DNL The Trade Desk]** destination connector has been renamed to **[!UICONTROL (Deprecated) The Trade Desk]** and a new card with the name **[!UICONTROL The Trade Desk]** is now available to you. 
+>* Starting July 31, 2025, you can see two **[!DNL The Trade Desk]** cards side-by-side in the destinations catalog. This is due to an internal upgrade to the destinations service. The existing **[!DNL The Trade Desk]** destination connector has been renamed to **[!UICONTROL (Deprecated) The Trade Desk]** and a new card with the name **[!UICONTROL The Trade Desk]** is now available to you. 
 >* Use the new **[!UICONTROL The Trade Desk]** connection in the catalog for new activation data flows. If you have any active dataflows to the **[!UICONTROL (Deprecated) The Trade Desk]** destination, they will be updated automatically, so no action is required from you.
 >* If you are creating dataflows through the [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/), you must update your [!DNL flow spec ID] and [!DNL connection spec ID] to the following values:
 >   * Flow spec ID: `86134ea1-b014-49e8-8bd3-689f4ce70578`
@@ -20,7 +20,7 @@ Use this destination connector to send profile data to [!DNL The Trade Desk]. Th
 
 [!DNL The Trade Desk] is a self-service platform for ad buyers to execute retargeting and audience-targeted digital campaigns across display, video, and mobile inventory sources.
 
-To send profile data to [!DNL Trade Desk], you must first connect to the destination, as described in the following sections of this page.
+To send profile data to [!DNL The Trade Desk], you must first connect to the destination, as described in the following sections of this page.
 
 ## Use cases {#use-cases}
 
@@ -38,8 +38,8 @@ All identities in the table below are mandatory mappings.
 |---|---|---|
 |GAID|Google Advertising ID|Select the GAID target identity when your source identity is a GAID namespace.|
 |IDFA|Apple ID for Advertisers|Select the IDFA target identity when your source identity is an IDFA namespace.|
-|ECID|Experience Cloud ID|This identity is mandatory for the Trade Desk integration to work correctly but is not used for audience activation.|
-|The Trade Desk ID|Advertiser ID in The Trade Desk platform|Use this identity when activating audiences based on The Trade Desk's proprietary ID.|
+|ECID|Experience Cloud ID|This identity is mandatory for the integration to work correctly but is not used for audience activation.|
+|The Trade Desk ID|Advertiser ID in the [!DNL The Trade Desk] platform|Use this identity when activating audiences based on The Trade Desk's proprietary ID.|
 
 
 {style="table-layout:auto"}
@@ -86,8 +86,9 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-* **[!UICONTROL Account ID]**: Your [!DNL Trade Desk] [!UICONTROL Account ID].
-* **[!UICONTROL Server Location]**: Ask your [!DNL Trade Desk] representative which regional server you should use. Below are the available regional servers that you can choose from:
+* **[!UICONTROL Account ID]**: Your [!DNL The Trade Desk] [!UICONTROL Account ID].
+* **[!UICONTROL Server Location]**: Ask your [!DNL The Trade Desk] representative which regional server you should use. Below are the available regional servers that you can choose from:
+
   * **[!UICONTROL APAC]**
   * **[!UICONTROL China]**
   * **[!UICONTROL Tokyo]**
@@ -129,4 +130,4 @@ Failure to map all required identities will prevent successful audience activati
 
 ## Exported data {#exported-data}
 
-To verify if data has been exported successfully to the [!DNL The Trade Desk] destination, check your [!DNL Trade Desk] account. If activation was successful, audiences are populated in your account.
+To verify if data has been exported successfully to the [!DNL The Trade Desk] destination, check your [!DNL The Trade Desk] account. If activation was successful, audiences are populated in your account.
