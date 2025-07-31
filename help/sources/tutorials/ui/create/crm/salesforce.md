@@ -5,7 +5,7 @@ exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
 ---
 # Connect your [!DNL Salesforce] account to Experience Platform using the UI
 
-This tutorial provides steps on how to connect your [!DNL Salesforce] account and bring your CRM data to Adobe Experience Platform using the Experience Platform user interface.
+Read this guide to learn how to connect your [!DNL Salesforce] account and bring your CRM data into Adobe Experience Platform using the Experience Platform user interface.
 
 ## Getting started
 
@@ -52,6 +52,7 @@ You must provide values for the following credentials to connect your [!DNL Sale
 | Client ID | The client ID is used in tandem with the client secret as part of OAuth2 authentication. Together, the client ID and client secret enable your application to operate on behalf of your account by identifying your application to [!DNL Salesforce]. |
 | Client secret | The client secret is used in tandem with the client ID as part of OAuth2 authentication. Together, the client ID and client secret enable your application to operate on behalf of your account by identifying your application to [!DNL Salesforce]. |
 | API version | The REST API version of the [!DNL Salesforce] instance that you are using. The value for the API version must be formatted with a decimal. For example, if you are using API version `52`, then you must input the value as `52.0`. If this field is left blank, then Experience Platform will automatically use the latest available version. |
+| Include deleted objects |  A boolean value used to determine whether to include soft deleted records. If set to true, soft-deleted records can be included in your [!DNL Salesforce] query and ingested from your account into Experience Platform If you do not specify your configuration, this value defaults to `false`. |
 
 For more information on using OAuth for [!DNL Salesforce], read the [[!DNL Salesforce] guide on OAuth Authorization Flows](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5).
 
@@ -61,13 +62,13 @@ Once you have gathered your required credentials, you can follow the steps below
 
 ## Connect your [!DNL Salesforce] account
 
-In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
+In the Experience Platform UI, navigate to **[!UICONTROL Sources]** from the left menu to open the [!UICONTROL Sources] workspace. Use the catalog on the left to browse categories, or use the search bar to quickly find the source you want to connect.
 
 Select **[!DNL Salesforce]** under the *[!UICONTROL CRM]* category, and then select **[!UICONTROL Add data]**.
 
 >[!TIP]
 >
->Sources in the sources catalog display the **[!UICONTROL Set up]** option when a given source does not yet have an authenticated account. Once an authenticated account exists, this option changes to **[!UICONTROL Add data]**.
+>In the sources catalog, you'll see **[!UICONTROL Set up]** if no account is connected, or **[!UICONTROL Add data]** if an account is already authenticated.
 
 ![The sources catalog on the Experience Platform UI with the Salesforce source card selected.](../../../../images/tutorials/create/salesforce/catalog.png)
 
@@ -110,10 +111,11 @@ For OAuth 2 Client Credential, select **[!UICONTROL OAuth2 Client Credential]** 
 * Client ID
 * Client secret
 * API version
+* Include delete objects
 
 When finished, select **[!UICONTROL Connect to source]**.
 
-![The OAuth interface for Salesforce account creation.](../../../../images/tutorials/create/salesforce/oauth2.png)
+![The OAuth interface for Salesforce account creation.](../../../../images/tutorials/create/salesforce/oauth.png)
 
 >[!ENDTABS]
 
