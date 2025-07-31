@@ -438,6 +438,20 @@ A successful response returns HTTP status 200 (OK) and the cancelled dataset exp
 }
 ```
 
+| Property      | Description |
+|---|---|
+| `ttlId`       | The unique identifier for the deleted dataset expiration configuration.|
+| `datasetId`   | The unique identifier for the dataset.                                 |
+| `datasetName` | The name of the dataset.                                               |
+| `sandboxName` | The sandbox where this dataset expiration is configured.               |
+| `displayName` | The display name for the dataset expiration configuration.             |
+| `description` | A description of the dataset expiration configuration.                 |
+| `imsOrg`      | Your unique organization identifier associated with this configuration.|
+| `status`      | The current status of the dataset expiration configuration.<br>One of: `pending`, `executing`, `cancelled`, `completed`. |
+| `expiry`      | The scheduled expiration timestamp for the dataset.                    |
+| `updatedAt`   | The timestamp for the most recent update.                              |
+| `updatedBy`   | The identifier and email of the user or service that last updated the dataset expiration configuration. |
+
 ## Appendix
 
 ### Accepted query parameters {#query-params}
