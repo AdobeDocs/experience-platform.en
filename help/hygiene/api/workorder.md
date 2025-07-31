@@ -168,19 +168,20 @@ A successful response returns the details of the new record delete work order.
 
 {style="table-layout:auto"}
 
-## Retrieve the status of a record delete {#lookup}
+## Retrieve details for a specific record delete work order {#lookup}
 
-After you [create a record delete request](#create), you can check on its status using a GET request.
+Retrieve information for a specific work order request by making a GET request to `/workorder/{WORKORDER_ID}`.  
+The response includes action type, status, associated dataset and user information, and audit metadata.
 
 **API format**
 
 ```http
-GET /workorder/{WORK_ORDER_ID}
+GET /workorder/{WORKORDER_ID}
 ```
 
 | Parameter | Description |
 | --- | --- |
-| `{WORK_ORDER_ID}` | The `workorderId` of the record delete you are looking up. |
+| `{WORK_ORDER_ID}` | The unique identifier for the work order you are looking up. |
 
 {style="table-layout:auto"}
 
@@ -188,7 +189,7 @@ GET /workorder/{WORK_ORDER_ID}
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/workorder/BN-35c1676c-3b4f-4195-8d6c-7cf5aa21efdd \
+  https://platform.adobe.io/data/core/hygiene/workorder/DI-6fa98d52-7bd2-42a5-bf61-fb5c22ec9427 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -197,53 +198,48 @@ curl -X GET \
 
 **Response**
 
-A successful response returns the details of the delete operation, including its current status.
+A  successful response returns the details of the specified work order request.
 
 ```json
 {
-  "workorderId": "a15345b8-a2d6-4d6f-b33c-5b593e86439a",
-  "orgId": "{ORG_ID}",
-  "bundleId": "BN-35c1676c-3b4f-4195-8d6c-7cf5aa21efdd",
+  "workorderId": "DI-6fa98d52-7bd2-42a5-bf61-fb5c22ec9427",
+  "orgId": "3C7F2AC143214567890ABCDE@AcmeOrg",
+  "bundleId": "BN-dbe3ffad-cb0b-401f-91ae-01c189f8e7b2",
   "action": "identity-delete",
-  "createdAt": "2022-07-21T18:05:28.316029Z",
-  "updatedAt": "2022-07-21T17:59:43.217801Z",
+  "createdAt": "2037-01-21T08:25:45.119Z",
+  "updatedAt": "2037-01-21T08:30:45.233Z",
+  "operationCount": 3,
+  "targetServices": [
+    "ajo",
+    "profile",
+    "datalake",
+    "identity"
+  ],
   "status": "received",
-  "createdBy": "{USER_ID}",
-  "datasetId": "c48b51623ec641a2949d339bad69cb15",
-  "displayName": "Example Record Delete Request",
-  "description": "Cleanup identities required by Jira request 12345.",
-  "productStatusDetails": [
-    {
-        "productName": "Data Management",
-        "productStatus": "success",
-        "createdAt": "2022-08-08T16:51:31.535872Z"
-    },
-    {
-        "productName": "Identity Service",
-        "productStatus": "success",
-        "createdAt": "2022-08-08T16:43:46.331150Z"
-    },
-    {
-        "productName": "Profile Service",
-        "productStatus": "waiting",
-        "createdAt": "2022-08-08T16:37:13.443481Z"
-    }
-  ]
+  "createdBy": "g.baratheon@acme.com <g.baratheon@acme.com> C189F8E7B2@acme.com",
+  "datasetId": "d2f1c8a4b8f747d0ba3521e2",
+  "datasetName": "Acme_Marketing_Events",
+  "displayName": "Marketing Identity Delete Request",
+  "description": "Scheduled identity deletion for marketing compliance"
 }
 ```
 
 | Property | Description |
 | --- | --- |
-| `workorderId` | The ID of the deletion order. This can be used to look up the status of the deletion later. |
-| `orgId` | Your organization ID. |
-| `bundleId` | The ID of the bundle this deletion order is associated with, used for debugging purposes. Multiple deletion orders are bundled together to be processed by downstream services. |
-| `action` | The action being performed by the work order. For record deletes, the value is `identity-delete`. |
-| `createdAt` | A timestamp of when the deletion order was created. |
-| `updatedAt` | A timestamp of when the deletion order was last updated. |
-| `status` | The current status of the deletion order. |
-| `createdBy` | The user that created the deletion order. |
-| `datasetId` | The ID of the dataset that is subject to the request. If the request is for all datasets, the value will be set to `ALL`. |
-| `productStatusDetails` | An array that lists the current status of downstream processes related to the request. Each array object contains the following properties:<ul><li>`productName`: The name of the downstream service.</li><li>`productStatus`: The current processing status of the request from the downstream service.</li><li>`createdAt`: A timestamp of when the most recent status was posted by the service.</li></ul> |
+| `workorderId`    | The unique identifier for the work order.|
+| `orgId`          | Your organization's unique identifier.   |
+| `bundleId`       | The unique identifier of the bundle containing this deletion order. Bundling allows multiple deletion orders to be grouped and processed together by downstream services. |
+| `action`         | The action type requested in the work order. |
+| `createdAt`      | The timestamp when the work order was created. |
+| `updatedAt`      | The timestamp when the work order was last updated. |
+| `operationCount` | The number of operations included in the work order. |
+| `targetServices` | A list of target services impacted by this work order. |
+| `status`         | The current status of the work order.    |
+| `createdBy`      | The email and identifier of the user who created the work order. |
+| `datasetId`      | The unique identifier for the dataset associated with the work order. |
+| `datasetName`    | The name of the dataset associated with the work order.          |
+| `displayName`    | A human-readable label for the work order.                       |
+| `description`    | A description of the work order request. |
 
 ## Update a record delete work order
 
