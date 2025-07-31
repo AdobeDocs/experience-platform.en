@@ -51,8 +51,8 @@ Quotas reset on the first day of each calendar month. Unused quota does **not** 
 
 After submission, record delete requests are queued and processed based on your entitlement level.
 
-| Product & Entitlement Description                                                  | Queue Duration      | Maximum Processing Time (SLA) |
-|------------------------------------------------------------------------------------|---------------------|-------------------------------|
+| Product & Entitlement Description  | Queue Duration      | Maximum Processing Time (SLA) |
+|------------------------------------|---------------------|-------------------------------|
 | Without Privacy and Security Shield or Healthcare Shield add-on                   | Up to 15 days       | 30 days                       |
 | With Privacy and Security Shield or Healthcare Shield add-on                      | Typically 24 hours  | 15 days                       |
 
@@ -61,6 +61,135 @@ If your organization requires higher limits, contact your Adobe representative f
 >[!TIP]
 >
 >To check your current quota usage or entitlement tier, see the [Quota reference guide](../api/quota.md).
+
+## List record delete work orders {#list}
+
+Retrieve a paginated list of record delete work orders for data hygiene operations in your organization.  
+You can filter results using query parameters. Each work order record includes the action type, status, related dataset and user information, and audit metadata.
+
+**API format**
+
+```http
+GET /workorder
+```
+
+| Query Parameter | Description |
+| --------------- | ------------|
+| `search`        | Case-insensitive partial match (wildcard search) across fields: author, displayName, description, or datasetName. Also matches exact expiration ID.             |
+| `type`          | Filter results by work order type (e.g., `identity-delete`). |
+| `status`        | Comma-separated list of work order statuses. Status values are case-sensitive.<br>Enum: `received`, `validated`, `submitted`, `ingested`, `completed`, `failed` |
+| `author`        | Find the person who most recently updated the work order (or original creator). Accepts literal or SQL pattern.                                                 |
+| `displayName`   | Case-insensitive match for the work order display name. |
+| `description`   | Case-insensitive match for work order description. |
+| `workorderId`   | Exact match for work order ID. |
+| `sandboxName`   | Exact match for sandbox name used in the request, or use `*` to include all sandboxes. |
+| `fromDate`      | Filter by work orders created on or after this date. Requires `toDate` to be set. |
+| `toDate`        | Filter by work orders created on or before this date. Requires `fromDate` to be set. |
+| `filterDate`    | Returns only work orders created, updated, or changed status on this date. |
+| `page`          | Page index to return (starts at 0). |
+| `limit`         | Maximum results per page (1–100, default: 25). |
+| `orderBy`       | Sort order for results. Use `+` or `-` prefix for ascending/descending. Example: `orderBy=-datasetName`. |
+| `properties`    | Comma-separated list of additional fields to include per result. Optional. |
+
+**Request**
+
+The following request retrieves all completed work order requests, limited to two per page:
+
+```shell
+curl -X GET \
+  "https://platform.adobe.io/data/core/hygiene/workorder?status=completed&limit=2" \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Response**
+
+A successful response returns a paginated list of record delete work orders.
+
+```json
+{
+  "results": [
+    {
+      "workorderId": "DI-1729d091-b08b-47f4-923f-6a4af52c93ac",
+      "orgId": "9C1F2AC143214567890ABCDE@AcmeOrg",
+      "bundleId": "BN-4cfabf02-c22a-45ef-b21f-bd8c3d631f41",
+      "action": "identity-delete",
+      "createdAt": "2034-03-15T11:02:10.935Z",
+      "updatedAt": "2034-03-15T11:10:10.938Z",
+      "operationCount": 3,
+      "targetServices": [
+        "profile",
+        "datalake",
+        "identity"
+      ],
+      "status": "received",
+      "createdBy": "a.stark@acme.com <a.stark@acme.com> BD8C3D631F41@acme.com",
+      "datasetId": "a7b7c8f3a1b8457eaa5321ab",
+      "datasetName": "Acme_Customer_Exports",
+      "displayName": "Customer Identity Delete Request",
+      "description": "Scheduled identity deletion for compliance"
+    },
+    {
+      "workorderId": "DI-2a4c6a3d-dbb9-45e4-b37c-11203e4dbb6e",
+      "orgId": "9C1F2AC143214567890ABCDE@AcmeOrg",
+      "bundleId": "BN-4cfabf02-c22a-45ef-b21f-bd8c3d631f41",
+      "action": "identity-delete",
+      "createdAt": "2034-03-16T10:32:00.101Z",
+      "updatedAt": "2034-03-16T10:40:00.204Z",
+      "operationCount": 2,
+      "targetServices": [
+        "profile",
+        "datalake"
+      ],
+      "status": "in-progress",
+      "createdBy": "t.lannister@acme.com <t.lannister@acme.com> BD8C3D631F41@acme.com",
+      "datasetId": "5c7a6b8f3b9b455eac9321cd",
+      "datasetName": "Acme_Loyalty_Events",
+      "displayName": "Loyalty Identity Delete Request",
+      "description": "Scheduled deletion for loyalty dataset"
+    }
+  ],
+  "total": 2,
+  "count": 2,
+  "_links": {
+    "next": {
+      "href": "https://platform.adobe.io/workorder?page=1&limit=2",
+      "templated": false
+    },
+    "page": {
+      "href": "https://platform.adobe.io/workorder?limit={limit}&page={page}",
+      "templated": true
+    }
+  }
+}
+```
+
+| Property | Description |
+| --- | --- |
+| `results`        | Array of work order objects. Each object contains the fields below.|
+| `workorderId`    | The unique identifier for the work order.                          |
+| `orgId`          | Your unique organization identifier.                               |
+| `bundleId`       | The unique identifier of the bundle containing this deletion order.|
+| `action`         | The action type requested in the work order.                       |
+| `createdAt`      | The timestamp when the work order was created.                     |
+| `updatedAt`      | The timestamp when the work order was last updated.                |
+| `operationCount` | The number of operations included in the work order.               |
+| `targetServices` | List of target services for the work order.                        |
+| `status`         | Current status of the work order.                                  |
+| `createdBy`      | The email and identifier of the user who created the work order.   |
+| `datasetId`      | The unique identifier for the dataset associated with the work order. If the request applies to all datasets, this field will be set to ALL. |
+| `datasetName`    | The name of the dataset associated with the work order.            |
+| `displayName`    | A human-readable label for the work order.                         |
+| `description`    | A description of the work order's purpose.                         |
+| `total`          | Total number of work order requests.                               |
+| `count`          | Number of work orders in the current page.                         |
+| `_links`         | Pagination and navigation links.                                   |
+| `next`           | Object with `href` (string) for the next page.  |
+| `page`           | Object with `href` (string) for the previous page.|
+
+{style="table-layout:auto"}
 
 ## Create a record delete work order request {#create}
 
