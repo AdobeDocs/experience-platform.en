@@ -22,11 +22,10 @@ New features and updates to existing features in Adobe Experience Platform:
 
 - [Capacity](#capacity)
 - [Destinations](#destinations)
-- [Data Ingestion](#ingestion)
-- [Query Service](#query-service)
+- [Data Ingestion](#data-ingestion)
 - [Real-Time CDP B2B Edition](#b2b)
 - [Sandboxes](#sandboxes)
-- [Segmentation Service](#segmentation)
+- [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
 
 ## Capacity {#capacity}
@@ -78,19 +77,6 @@ Experience Platform provides a comprehensive data ingestion framework that suppo
 | Support for monitoring streaming profile ingestion | Real-time monitoring for streaming profile ingestion is now available, providing transparency into throughput, latency, and data quality metrics. This supports proactive alerting and actionable insights to help data engineers identify capacity violations and ingestion issues. Read the guide on [monitoring streaming profile ingestion](../../dataflows/ui/monitor-streaming-profile.md) for more information. |
 
 For more information, read the [data ingestion overview](../../ingestion/home.md).
-
-## Query Service {#query-service}
-
-Query data in the Adobe Experience Platform data lake using standard SQL with Query Service. Seamlessly combine datasets and generate new ones from your query results to power reporting, enable data science workflows, or facilitate ingestion into Real-Time Customer Profile. For example, you can merge customer transaction data with behavioral data to identify high-value audiences for targeted marketing campaigns.
-
-**New or updated features**
-
-| Feature | Description |
-|--------|-------------|
-| Support for non-expiring credentials password character restrictions | Data Distiller now supports [non-expiring credentials with specific character restrictions](../../query-service/ui/credentials.md#non-expiring-credentials). While passwords require at least one number, one lowercase letter, one uppercase letter, and one special character, the dollar sign ($) is not supported. Recommended special characters include `!, @, #, ^, or &`. |
-| Improved performance consistency across environments | Data Distiller [performance is now consistent between development and production sandboxes](../../query-service/troubleshooting-guide.md#data-distiller), with similar backend resources available in both environments. Compute hours consumed may vary based on data volume and available backend compute resources at the time of processing. |
-
-For more information on [!DNL Query Service], please see the [[!DNL Query Service] overview](../../query-service/home.md).
 
 ## Real-Time CDP B2B Edition {#b2b}
 
@@ -149,5 +135,6 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | Feature | Description |
 | --- | --- |
 | Support for change data capture in select sources using the [!DNL Flow Service] API | You can now create dataflows that enable change data capture for incremental ingestion using source connectors. This capability allows customers to bring change data type for incremental ingestion, improving data freshness and reducing processing overhead. For more information, read the documentation on [using change data capture for sources](../../sources/tutorials/api/change-data-capture.md) |
+| Support for soft deletion of records in [!DNL Salesforce] | The [!DNL Salesforce] source now supports including soft deleted records through an optional `includeDeletedObjects` parameter. When set to true, customers can include soft deleted records in their [!DNL Salesforce] queries and bring these records into Experience Platform. Read the [[!DNL Salesforce] source documentation](../../sources/connectors/crm/salesforce.md) for more information. |
 
 For more information, read the [sources overview](../../sources/home.md).
