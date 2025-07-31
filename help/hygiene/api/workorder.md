@@ -62,13 +62,15 @@ If your organization requires higher limits, contact your Adobe representative f
 >
 >To check your current quota usage or entitlement tier, see the [Quota reference guide](../api/quota.md).
 
-## Create a record delete request {#create}
+## Create a record delete work order request {#create}
 
-You can delete one or more identities from a single dataset or all datasets by making a POST request to the `/workorder` endpoint.
+To delete records associated with one or more identities from a single dataset or all datasets, make a POST request to the `/workorder` endpoint.
+
+Work orders are processed asynchronously and appear in the work order list after submission.
 
 >[!TIP]
 >
->Each record delete request submitted through the API can include up to **100,000 identities**. To maximize efficiency, submit as many identities per request as possible and avoid low-volume submissions such as single-ID work orders.
+>Each record delete work order submitted through the API can include up to **100,000 identities**. Submit as many identities per request as possible to maximize efficiency. Avoid low-volume submissions such as single-ID work orders.
 
 **API format**
 
@@ -78,11 +80,11 @@ POST /workorder
 
 >[!NOTE]
 >
->Data Lifecycle requests can only modify datasets based on primary identities or an identity map. A request must either specify the primary identity, or provide an identity map.
+>Data Hygiene API requests can only modify datasets based on primary identities or an identity map. The dataset's associated XDM schema must have a primary identity or identity map defined.
 
 **Request**
 
-Depending on the value of the `datasetId` provided in the request payload, the API call will delete identities from all datasets or a single dataset that you specify. The following request deletes three identities from a specific dataset.
+The following request deletes all records associated with specified email addresses from a particular dataset.
 
 ```shell
 curl -X POST \
@@ -93,28 +95,20 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-        "action": "delete_identity",
-        "datasetId": "c48b51623ec641a2949d339bad69cb15",
-        "displayName": "Example Record Delete Request",
-        "description": "Cleanup identities required by Jira request 12345.",
-        "identities": [
+        "displayName": "Acme Loyalty - Customer Data Deletion",
+        "description": "Delete all records associated with the specified email addresses from the Acme_Loyalty_2023 dataset.",
+        "action": "delete-identity",
+        "datasetId": "7eab61f3e5c34810a49a1ab3",
+        "namespacesIdentities": [
           {
             "namespace": {
               "code": "email"
             },
-            "id": "poul.anderson@example.com"
-          },
-          {
-            "namespace": {
-              "code": "email"
-            },
-            "id": "cordwainer.smith@gmail.com"
-          },
-          {
-            "namespace": {
-              "code": "email"
-            },
-            "id": "cyril.kornbluth@yahoo.com"
+            "IDs": [
+              "alice.smith@acmecorp.com",
+              "bob.jones@acmecorp.com",
+              "charlie.brown@acmecorp.com"
+            ]
           }
         ]
       }'
@@ -122,45 +116,55 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `action` | The action to be performed. The value must be set to `delete_identity` for record deletes. |
-| `datasetId` | If you are deleting from a single dataset, this value must be the ID of the dataset in question. If you are deleting from all datasets, set the value to `ALL`.<br><br>If you are specifying a single dataset, the dataset's associated Experience Data Model (XDM) schema must have a primary identity defined. If the dataset does not have a primary identity, then it must have an identity map in order to be modified by a Data Lifecycle request.<br>If an identity map exists, it will be present as a top-level field named `identityMap`.<br>Note that a dataset row may have many identities in its identity map, but only one can be marked as primary. `"primary": true` must be included to force the `id` to match a primary identity. |
-| `displayName` | The display name for the record delete request. |
-| `description` | A description for the record delete request. |
-| `identities` | An array containing the identities of at least one user whose information you would like to delete. Each identity is comprised of an [identity namespace](../../identity-service/features/namespaces.md) and a value:<ul><li>`namespace`: Contains a single string property, `code`, which represents the identity namespace. </li><li>`id`: The identity value.</ul>If `datasetId` specifies a single dataset, each entity under `identities` must use the same identity namespace as the schema's primary identity.<br><br>If `datasetId` is set to `ALL`, the `identities` array is not constrained to any single namespace since each dataset might be different. However, your requests are still constrained the namespaces available to your organization, as reported by [Identity Service](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
-
-{style="table-layout:auto"}
+| `displayName` | A human-readable label for this work order. |
+| `description` | A description of the work order request. |
+| `action`      | The action requested for the work order. To delete records associated with a given identity, use `delete-identity`. |
+| `datasetId`   | The unique identifier for the dataset. Use the dataset ID for a specific dataset, or `ALL` to target all datasets. Datasets must have a primary identity or identity map. If an identity map exists, it will be present as a top-level field named `identityMap`.<br>Note that a dataset row may have many identities in its identity map, but only one can be marked as primary. `"primary": true` must be included to force the `id` to match a primary identity. |
+| `namespacesIdentities` | An array of objects, each containing:<br><ul><li> `namespace`: An object with a `code` property specifying the identity namespace (e.g., "email").</li><li> `IDs`: An array of identity values to delete for this namespace.</li></ul><br>Identity namespaces provide context to identity data. You can create and manage custom namespaces or use standard namespaces provided by Experience Platform. See the [identity namespace documentation](../../identity-service/features/namespaces.md) to learn more about identity namespaces.  |
 
 **Response**
 
-A successful response returns the details of the record delete.
+A successful response returns the details of the new record delete work order.
 
 ```json
 {
-  "workorderId": "a15345b8-a2d6-4d6f-b33c-5b593e86439a",
-  "orgId": "{ORG_ID}",
-  "bundleId": "BN-35c1676c-3b4f-4195-8d6c-7cf5aa21efdd",
+  "workorderId": "DI-95c40d52-6229-44e8-881b-fc7f072de63d",
+  "orgId": "8B1F2AC143214567890ABCDE@AcmeOrg",
+  "bundleId": "BN-c61bec61-5ce8-498f-a538-fb84b094adc6",
   "action": "identity-delete",
-  "createdAt": "2022-07-21T18:05:28.316029Z",
-  "updatedAt": "2022-07-21T17:59:43.217801Z",
+  "createdAt": "2035-06-02T09:21:00.000Z",
+  "updatedAt": "2035-06-02T09:21:05.000Z",
+  "operationCount": 1,
+  "targetServices": [
+    "profile",
+    "datalake",
+    "identity"
+  ],
   "status": "received",
-  "createdBy": "{USER_ID}",
-  "datasetId": "c48b51623ec641a2949d339bad69cb15",
-  "displayName": "Example Record Delete Request",
-  "description": "Cleanup identities required by Jira request 12345."
+  "createdBy": "c.lannister@acme.com <c.lannister@acme.com> 7EAB61F3E5C34810A49A1AB3@acme.com",
+  "datasetId": "7eab61f3e5c34810a49a1ab3",
+  "datasetName": "Acme_Loyalty_2023",
+  "displayName": "Loyalty Identity Delete Request",
+  "description": "Schedule deletion for Acme loyalty program dataset"
 }
 ```
 
 | Property | Description |
 | --- | --- |
-| `workorderId` | The ID of the deletion order. This can be used to look up the status of the deletion later. |
-| `orgId` | Your organization ID. |
-| `bundleId` | The ID of the bundle this deletion order is associated with, used for debugging purposes. Multiple deletion orders are bundled together to be processed by downstream services. |
-| `action` | The action being performed by the work order. For record deletes, the value is `identity-delete`. |
-| `createdAt` | A timestamp of when the deletion order was created. |
-| `updatedAt` | A timestamp of when the deletion order was last updated. |
-| `status` | The current status of the deletion order. |
-| `createdBy` | The user that created the deletion order. |
-| `datasetId` | The ID of the dataset that is subject to the request. If the request is for all datasets, the value will be set to `ALL`. |
+| `workorderId`    | The unique identifier for the work order. Use this value to look up the status or details of the deletion request. |
+| `orgId`          | Your unique organization identifier. |
+| `bundleId`       | The unique identifier of the bundle containing this deletion order. Bundling allows multiple deletion orders to be grouped and processed together. |
+| `action`         | The action type requested in the work order. Note that the response lists currently the action as `identity-delete` instead of `delete-identity`. |
+| `createdAt`      | The timestamp when the work order was created. |
+| `updatedAt`      | The timestamp when the work order was last updated. |
+| `operationCount` | The number of operations included in the work order. |
+| `targetServices` | A list of target services for the work order. |
+| `status`         | Current status of the work order. |
+| `createdBy`      | The email and identifier of the user who created the work order. |
+| `datasetId`      | The unique identifier for the dataset. If the request is for all datasets, the value will be set to `ALL`. |
+| `datasetName`    | The name of the dataset for this work order. |
+| `displayName`    | A human-readable label for this work order. |
+| `description`    | A description of the work order request. |
 
 {style="table-layout:auto"}
 
