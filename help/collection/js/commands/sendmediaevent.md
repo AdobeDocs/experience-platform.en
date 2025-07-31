@@ -18,7 +18,6 @@ Web SDK can handle media events based on the type of media session tracking:
 
 Select the tabs below to see examples of event type handling for each event type and session tracking method (automatic or manual).
 
-
 ### Play {#play}
 
 The `media.play` event type is used to track when media playback starts. This event should be sent when the player changes state to "playing" from another state. Other states from which the player moves to "playing" include "buffering", the user resuming from "paused", the player recovering from an error, or autoplay.
@@ -54,7 +53,6 @@ sessionPromise.then(sessionID => {
 
 >[!ENDTABS]
 
-
 ### Pause {#pause}
 
 The `media.pauseStart` event type is used to track when a media playback is paused. This event should be sent when the user presses **[!UICONTROL Pause]**. There is no resume event type. A resume is inferred when you send a `media.play` event after a `media.pauseStart`.
@@ -71,7 +69,6 @@ alloy("sendMediaEvent", {
     }
 });
 ```
-
 >[!TAB Manual session tracking]
 
 ```javascript
@@ -89,7 +86,6 @@ sessionPromise.then(sessionID => {
 ```
 
 >[!ENDTABS]
-
 
 ### Error {#error}
 
@@ -136,7 +132,6 @@ sessionPromise.then(sessionID => {
 
 >[!ENDTABS]
 
-
 ### Ad break start {#ad-break-start}
 
 The `media.adBreakStart` event type is used to track when an ad break starts. This event should be sent when an ad break starts.
@@ -160,7 +155,6 @@ alloy("sendMediaEvent", {
     }
 });
 ```
-
 >[!TAB Manual session tracking]
 
 ```javascript
@@ -183,7 +177,6 @@ sessionPromise.then(sessionID => {
 ```
 
 >[!ENDTABS]
-
 
 ### Ad break complete {#ad-break-complete}
 
@@ -219,7 +212,6 @@ sessionPromise.then(sessionID => {
 ```
 
 >[!ENDTABS]
-
 
 ### Ad start {#ad-start}
 
@@ -310,7 +302,6 @@ sessionPromise.then(sessionID => {
 
 >[!ENDTABS]
 
-
 ### Ad complete {#ad-complete}
 
 The `media.adComplete` event type is used to track when an ad completes. This event should be sent when an ad completes.
@@ -346,7 +337,6 @@ sessionPromise.then(sessionID => {
 
 >[!ENDTABS]
 
-
 ### Ad skip {#ad-skip}
 
 The `media.adSkip` event type is used to track when an ad is skipped. This event should be sent when an ad is skipped.
@@ -381,7 +371,6 @@ sessionPromise.then(sessionID => {
 ```
 
 >[!ENDTABS]
-
 
 ### Chapter start {#chapter-start}
 
@@ -460,7 +449,6 @@ sessionPromise.then(sessionID => {
 
 >[!ENDTABS]
 
-
 ### Chapter complete {#chapter-complete}
 
 The `media.chapterComplete` event type is used to track when a chapter completes. This event should be sent when a chapter completes.
@@ -495,7 +483,6 @@ sessionPromise.then(sessionID => {
 ```
 
 >[!ENDTABS]
-
 
 ### Chapter skip {#chapter-skip}
 
@@ -532,7 +519,6 @@ sessionPromise.then(sessionID => {
 
 >[!ENDTABS]
 
-
 ### Buffer start {#buffer-start}
 
 The `media.bufferStart` event type is used to track when buffering starts. This event should be sent when buffering starts. There is no `bufferResume` event type. A `bufferResume` is inferred when you send a play event after `bufferStart`.
@@ -567,7 +553,6 @@ sessionPromise.then(sessionID => {
 ```
 
 >[!ENDTABS]
-
 
 ### Bitrate change {#bitrate-change}
 
@@ -616,7 +601,6 @@ sessionPromise.then(sessionID => {
 ```
 
 >[!ENDTABS]
-
 
 ### State updates {#state-updates}
 
@@ -675,7 +659,6 @@ sessionPromise.then(sessionID => {
 
 >[!ENDTABS]
 
-
 ### Session end {#session-end}
 
 The `media.sessionEnd` event type is used to notify the Media Analytics backend to immediately close the session when the user has abandoned their viewing of the content and they are unlikely to return.
@@ -713,7 +696,6 @@ sessionPromise.then(sessionID => {
 
 >[!ENDTABS]
 
-
 ### Session complete {#session-complete}
 
 The `media.sessionComplete` event type is used to track when a media session completes. This event should be sent when the end of the main content is reached.
@@ -748,3 +730,7 @@ sessionPromise.then(sessionID => {
 ```
 
 >[!ENDTABS]
+
+## Send media event using the Web SDK tag extension
+
+The Web SDK tag extension equivalent to this command is the [**[!UICONTROL Send media event]**](/help/tags/extensions/client/web-sdk/actions/send-media-event.md) action.

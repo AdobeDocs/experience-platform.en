@@ -1,7 +1,6 @@
 ---
 title: Manage Flicker for Personalized Experiences Using the Adobe Experience Platform Web SDK
 description: Learn how to use the Adobe Experience Platform Web SDK to manage flicker on user experiences.
-keywords: target;flicker;prehidingStyle;asynchronously;asynchronous;
 exl-id: f4b59109-df7c-471b-9bd6-7082e00c293b
 ---
 # Manage flicker
@@ -32,7 +31,7 @@ Synchronous flicker management is split into three phases:
 1. Preprocessing
 1. Rendering
 
-During the **prehiding phase**, the SDK uses the [`prehidingStyle`](../commands/configure/prehidingstyle.md) configuration property to create an HTML style tag and append it to the DOM to make sure that the desired sections of the page are hidden. If you are unsure which portions of the page will be personalized, it is recommended to set `prehidingStyle` to `body { opacity: 0 !important }`. This ensures that the whole page is hidden. This, however has the downside of leading to worse page rendering performance reported by tools like Lighthouse, Web Page Tests, etc. To have the best page rendering performance, it is recommended to set `prehidingStyle` to a list of container elements that contain the portions of the page that will be personalized.
+During the **prehiding phase**, the SDK uses the [`prehidingStyle`](../../js/commands/configure/prehidingstyle.md) configuration property to create an HTML style tag and append it to the DOM to make sure that the desired sections of the page are hidden. If you are unsure which portions of the page will be personalized, it is recommended to set `prehidingStyle` to `body { opacity: 0 !important }`. This ensures that the whole page is hidden. This, however has the downside of leading to worse page rendering performance reported by tools like Lighthouse, Web Page Tests, etc. To have the best page rendering performance, it is recommended to set `prehidingStyle` to a list of container elements that contain the portions of the page that will be personalized.
 
 Assuming you have an HTML page like the one below and you know that only `bar` and `bazz` container elements will be ever personalized:
 

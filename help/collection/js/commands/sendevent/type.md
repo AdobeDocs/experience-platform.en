@@ -11,21 +11,6 @@ Adobe provides some predefined event types that you can use. See [Available valu
 
 If you set both `type` here and `xdm.eventType` in the [`xdm`](xdm.md) object, the value in this field takes priority.
 
-## Configure event type using the Web SDK tag extension
-
-Set the **[!UICONTROL Type]** dropdown field within the actions of a tag rule.
-
-1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
-1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
-1. Select the desired tag property.
-1. Navigate to **[!UICONTROL Rules]**, then select the desired rule.
-1. Under [!UICONTROL Actions], select an existing action or create an action.
-1. Set the [!UICONTROL Extension] dropdown field to **[!UICONTROL Adobe Experience Platform Web SDK]**, and set the [!UICONTROL Action Type] to **[!UICONTROL Send event]**.
-1. Use the dropdown under the **[!UICONTROL Type]** field, or enter your own value.
-1. Click **[!UICONTROL Keep Changes]**, then run your publishing workflow.
-
-## Configure event type using the Web SDK JavaScript library
-
 Set the `eventType` string property when running the `sendEvent` command.
 
 ```js
@@ -34,3 +19,7 @@ alloy("sendEvent", {
   "type": "commerce.purchases"
 });
 ```
+
+## Event type using the Web SDK tag extension
+
+The Web SDK tag extension equivalent of this property is the [**[!UICONTROL Type]**](/help/tags/extensions/client/web-sdk/actions/send-event.md#data-fields) drop-down menu when configuring a '[!UICONTROL Send event]' action.

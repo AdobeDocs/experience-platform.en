@@ -119,3 +119,7 @@ This property uses the following logic depending on how it is set:
 * **Not set**: Request default personalization when it has not yet been requested. Default personalization is typically requested on the first `sendEvent` after a page load, then not requested again on subsequent `sendEvent` calls on the same page. Setting this property overrides this behavior.
 * **`true`**: Explicitly request the page scope and default surface, even if this `sendEvent` command is not the first after a page load. Ideal times to set this property to `true` are when you need to force a default personalization request, such as in single-page application scenarios.
 * **`false`**: Explicitly suppress the request for the page scope and default surface, even if this `sendEvent` command is the first after a page load. Ideal times to set this property to `false` are when you want a given `sendEvent` command to not request new offers and instead just send data to Analytics or send a display event.
+
+## Personalization components using the Web SDK tag extension
+
+The Web SDK tag extension equivalent of this property is the [**Personalization**](/help/tags/extensions/client/web-sdk/actions/send-event.md#personalization-fields) section when configuring a '[!UICONTROL Send event]' action.

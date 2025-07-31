@@ -22,3 +22,46 @@ The **[!UICONTROL Redirect with identity]** action type allows you to share a vi
 
 * **[!UICONTROL Instance]**: The SDK instance that the action applies to. This drop-down menu is disabled if your implementation uses a single SDK instance.
 * **[!UICONTROL Datastream configuration overrides]**: This command supports datastream configuration overrides, giving you control over which apps and services receive this data. When you set a datastream configuration override in both an individual command and within the tag extension configuration settings, the individual command takes precedence. See [Datastream configuration overrides](../configure/configuration-overrides.md) for more information.
+
+## Example rule
+
+This command is typically used with a specific rule that listens for clicks and checks desired domains.
+
++++Rule event criteria
+
+Triggers when an anchor tag with an `href` property is clicked.
+
+* **[!UICONTROL Extension]**: Core
+* **[!UICONTROL Event type]**: Click
+* **[!UICONTROL When the user clicks on]**: Specific elements
+* **[!UICONTROL Elements matching the CSS selector]**: `a[href]`
+
+![Rule event](../assets/id-sharing-event-configuration.png)
+
++++
+
++++Rule condition
+
+Triggers only on desired domains.
+
+* **[!UICONTROL Logic type]**: Regular
+* **[!UICONTROL Extension]**: Core
+* **[!UICONTROL Condition Type]**: Value Comparison
+* **[!UICONTROL Left Operand]**: `%this.hostname%`
+* **[!UICONTROL Operator]**: Matches Regex
+* **[!UICONTROL Right Operand]**: A regular expression that matches the desired domains. For example, `adobe.com$|behance.com$`
+
+![Rule condition](../assets/id-sharing-condition-configuration.png)
+
++++
+
++++Rule action
+
+Append the identity to the URL.
+
+* **[!UICONTROL Extension]**: Adobe Experience Platform Web SDK
+* **[!UICONTROL Action Type]**: Redirect with identity
+
+![Rule action](../assets/id-sharing-action-configuration.png)
+
++++

@@ -13,6 +13,21 @@ Any time rulesets are evaluated, the callback function receives a `result` objec
 >
 >The `subscribeRulesetItems` command is the only way to get propositions that come from rulesets, since they are not returned alongside [`sendEvent`](sendevent/overview.md) results.
 
+
+```js
+alloy("subscribeRulesetItems", {
+  surfaces: ["web://example.com/#welcome"],
+  schemas: ["https://ns.adobe.com/personalization/message/content-card"],
+  callback: (result, collectEvent) => {
+    const { propositions = [] } = result;
+    renderMyPropositions(propositions);
+    collectEvent("display", propositions);    
+  },
+});
+```
+
+The above code subscribes to the `web://example.com/#welcome` surface for content cards and uses the `collectEvent` convenience method to emit `display` events for all propositions.
+
 ## Comand options {#command-options}
 
 This command takes an `options` object with the following properties:
@@ -41,31 +56,6 @@ The `collectEvent` function is a convenience function which you can use to send 
 | Event type   | String | A string indicating which proposition event type to emit. Supported event types are `display`, `interact`, or `dismiss`. |
 | `propositions` | Array | An array of propositions corresponding to the event. |
 
-## Subscribe to content cards using the Web SDK tag extension {#tag-extension}
+## Subscribe to content cards using the Web SDK tag extension
 
-Follow the steps below to subscribe to content cards through the Tags user interface.
-
-1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
-1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
-1. Select the desired tag property.
-1. Navigate to **[!UICONTROL Rules]**, then select the desired rule.
-1. Under [!UICONTROL Events], select an existing event or create a new one.
-1. Set the [!UICONTROL Extension] dropdown field to **[!UICONTROL Adobe Experience Platform Web SDK]**, and set the **[!UICONTROL Event Type]** to **[!UICONTROL Subscribe ruleset items]**.
-1. Select the schemas and surfaces for which you want to subscribe to content cards, on the right side of the screen.
-1. Select **[!UICONTROL Keep Changes]**, then run your publishing workflow.
-
-## Subscribe to content cards using the Web SDK JavaScript library {#library}
-
-The following sample code subscribes to the `web://example.com/#welcome` surface for content cards and uses the `collectEvent` convenience method to emit `display` events for all propositions.
-
-```js
-alloy("subscribeRulesetItems", {
-  surfaces: ["web://example.com/#welcome"],
-  schemas: ["https://ns.adobe.com/personalization/message/content-card"],
-  callback: (result, collectEvent) => {
-    const { propositions = [] } = result;
-    renderMyPropositions(propositions);
-    collectEvent("display", propositions);    
-  },
-});
-```
+The Web SDK tag extension equivalent to command responses is a rule that subscribes to the [**[!UICONTROL Subscribe ruleset items]**](/help/tags/extensions/client/web-sdk/event-types.md#subscribe-ruleset-items) event. The event allows you to provide the desired schemas and surfaces.

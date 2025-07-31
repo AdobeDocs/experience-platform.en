@@ -9,9 +9,8 @@ This Web SDK command retrieves a Media Analytics Tracker. You can use this comma
 
 The `getMediaAnalyticsTracker` command returns the Legacy Media Analytics API.
 
-
-| Method name|Description| Syntax |
-|-----------------|---|----------------|
+| Method name | Description | Syntax |
+|---|---|---|
 | `getInstance` | Creates an instance of media to track the playback session. | `Media.getInstance()`|
 |`createMediaObject` | Creates an object containing media information. Returns empty object if invalid parameters are passed. | `Media.createMediaObject(name, id, length, streamType, mediaType)` |
 |`createAdBreakObject` | Creates an object containing adbreak information. Returns empty object if invalid parameters are passed.| `Media.createAdBreakObject(name, position, startTime)`|
@@ -23,7 +22,7 @@ The `getMediaAnalyticsTracker` command returns the Legacy Media Analytics API.
 ## Instance Methods
 
 | Method name|Description|Syntax|
-|---|---|----|
+|---|---|---|
 |`trackSessionStart` | Track the intention to start playback. This starts a tracking session on the media tracker instance. | `trackerInstance.trackSessionStart(mediaInfo, contextData)`|
 |`trackPlay` | Track media play or resume after a previous pause. | `trackerInstance.trackPlay()`|
 |`trackPause` | Track media pause. | `trackerInstance.trackPause()`|
@@ -36,8 +35,8 @@ The `getMediaAnalyticsTracker` command returns the Legacy Media Analytics API.
 
 ## Constants
 
-| Constant name|Description| Value |
-|-----------------|--|-----------------|
+| Constant name | Description | Value |
+|---|---|---|
 |`MediaType`| Media type | `Video`, `Audio` |
 |`StreamType` | Stream type | `VOD`, `Live`, `Linear`, `Podcast`, `Audiobook`, `AOD` |
 |`VideoMetadataKeys` | This defines the standard metadata keys for video streams | `Show`, `Season`, `Episode`, `AssetId`, `Genre`, `FirstAirDate`, `FirstDigitalDate`, `Rating`, `Originator`, `Network`, `ShowType`, `AdLoad`, `MVPD`, `Authorized`, `DayPart`, `Feed`, `StreamFormat` |
@@ -45,3 +44,7 @@ The `getMediaAnalyticsTracker` command returns the Legacy Media Analytics API.
 | `AdMetadataKeys` |  This defines the standard metadata keys for ads. | `Advertiser`, `CampaignId`, `CreativeId`, `PlacementId`, `SiteId`, `CreativeUrl` |
 | `Event` | This defines the type of a tracking event.| `AdBreakStart`, `AdBreakComplete`, `AdStart`, `AdComplete`, `AdSkip`, `ChapterStart`, `ChapterComplete`, `ChapterSkip`, `SeekStart`, `SeekComplete`, `BufferStart`, `BufferComplete`, `BitrateChange`, `StateStart`, `StateEnd` |
 | `PlayerState` | This defines standard values for tracking player state. | `FullScreen`, `ClosedCaption`, `Mute`, `PictureInPicture`, `InFocus` |
+
+## Get Media Analytics tracker using the Web SDK tag extension
+
+The Web SDK tag extension equivalent of this command is the [**[!UICONTROL Get Media Analytics tracker]**](/help/tags/extensions/client/web-sdk/actions/get-media-analytics-tracker.md) action.

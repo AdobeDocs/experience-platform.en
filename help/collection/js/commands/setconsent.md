@@ -35,7 +35,7 @@ When used together, these settings can lead to different data collection and coo
 
 See the table below to understand when data collection occurs and when cookies are set, based on consent settings.
 
-|defaultConsent | setConsent | Data collection occurs | Web SDK sets browser cookies |
+| `defaultConsent` | `setConsent` | Data collection occurs | Web SDK sets browser cookies |
 |---------|----------|---------|---------|
 | `in` | `in` | Yes |  Yes |
 | `in` | `out` | No | Yes |
@@ -51,12 +51,12 @@ The following cookies are set when the consent configuration allows:
 
 | Name | Max age | Description |
 |---|---|---|
-| **AMCV_###@AdobeOrg** | 34128000 (395 days) | Present when [`idMigrationEnabled`](configure/idmigrationenabled.md) is enabled. It helps when transitioning to Web SDK while some parts of the site are still using `visitor.js`. |
-| **Demdex cookie** | 15552000 (180 days) | Present if ID synchronization is enabled. Audience Manager sets this cookie to assign a unique ID to a site visitor. The demdex cookie helps Audience Manger perform basic functions, such as visitor identification, ID synchronization, segmentation, modeling, reporting, and so on. |
-| **kndctr_orgid_cluster** | 1800 (30 minutes) | Stores the Edge Network region that serves the current user's requests. The region is used in the URL path so that the Edge Network can route the request to the correct region. If a user connects with a different IP address or in a different session, the request is again routed to the closest region. |
-| **kndct_orgid_identity** | 34128000 (395 days) | Stores the ECID, as well as other information related to the ECID. |
-| **kndctr_orgid_consent** | 15552000 (180 days) | Stores the users consent preference for the website. |
-|**s_ecid**|63115200 (2 years) | Contains a copy of the Experience Cloud ID ([!DNL ECID]) or MID. The MID is stored in a key-value pair that follows this syntax, `s_ecid=MCMID\|<ECID>`.|
+| **`AMCV_###@AdobeOrg`** | 34128000 (395 days) | Present when [`idMigrationEnabled`](configure/idmigrationenabled.md) is enabled. It helps when transitioning to Web SDK while some parts of the site are still using `visitor.js`. |
+| **`Demdex cookie`** | 15552000 (180 days) | Present if ID synchronization is enabled. Audience Manager sets this cookie to assign a unique ID to a site visitor. The demdex cookie helps Audience Manger perform basic functions, such as visitor identification, ID synchronization, segmentation, modeling, reporting, and so on. |
+| **`kndctr_orgid_cluster`** | 1800 (30 minutes) | Stores the Edge Network region that serves the current user's requests. The region is used in the URL path so that the Edge Network can route the request to the correct region. If a user connects with a different IP address or in a different session, the request is again routed to the closest region. |
+| **`kndct_orgid_identity`** | 34128000 (395 days) | Stores the ECID, as well as other information related to the ECID. |
+| **`kndctr_orgid_consent`** | 15552000 (180 days) | Stores the users consent preference for the website. |
+| **`s_ecid`** | 63115200 (2 years) | Contains a copy of the Experience Cloud ID ([!DNL ECID]) or MID. The MID is stored in a key-value pair that follows this syntax, `s_ecid=MCMID\|<ECID>`.|
 
 Run the `setConsent` command when calling your configured instance of the Web SDK. You can include the following objects in this command:
 
@@ -202,3 +202,7 @@ alloy("setConsent", {
 After you have communicated user preferences to the Web SDK using the `setConsent` command, the SDK persists user preferences to a cookie. The next time the user loads your website in the browser, the Web SDK retrieves and use these persisted preferences to determine whether or not events can be sent to Adobe.
 
 Store the user's preferences independently so you can show the consent dialog with the current preferences. There is no way to retrieve the user preferences from the Web SDK. To make sure that the user preferences stay in sync with the SDK, you can call the `setConsent` command on every page load. The Web SDK only makes a server call if the preferences change.
+
+## Set consent using the Web SDK tag extension
+
+The Web SDK tag extension equivalent to this command is the [**[!UICONTROL Set consent]**](/help/tags/extensions/client/web-sdk/actions/set-consent.md) action.

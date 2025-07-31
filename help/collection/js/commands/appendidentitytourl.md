@@ -13,61 +13,6 @@ The query string generated and appended to the URL is `adobe_mc`. If the Web SDK
 >
 >If consent has not been provided, the URL from this method is returned unchanged. This command runs immediately; it does not wait for a consent update.
 
-## Append identity to URL using the Web SDK extension {#extension}
-
-Appending an identity to a URL is performed as an action within a rule in the Adobe Experience Platform Data Collection tags interface.
-
-1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
-1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
-1. Select the desired tag property.
-1. Navigate to **[!UICONTROL Rules]**, then select the desired rule.
-1. Under [!UICONTROL Actions], select an existing action or create an action.
-1. Set the [!UICONTROL Extension] dropdown field to **[!UICONTROL Adobe Experience Platform Web SDK]**, and set the [!UICONTROL Action Type] to **[!UICONTROL Redirect with identity]**.
-1. Click **[!UICONTROL Keep Changes]**, then run your publishing workflow.
-
-This command is typically used with a specific rule that listens for clicks and checks desired domains.
-
-+++Rule event criteria
-
-Triggers when an anchor tag with an `href` property is clicked.
-
-* **[!UICONTROL Extension]**: Core
-* **[!UICONTROL Event type]**: Click
-* **[!UICONTROL When the user clicks on]**: Specific elements
-* **[!UICONTROL Elements matching the CSS selector]**: `a[href]`
-
-![Rule event](../assets/id-sharing-event-configuration.png)
-
-+++
-
-+++Rule condition
-
-Triggers only on desired domains.
-
-* **[!UICONTROL Logic type]**: Regular
-* **[!UICONTROL Extension]**: Core
-* **[!UICONTROL Condition Type]**: Value Comparison
-* **[!UICONTROL Left Operand]**: `%this.hostname%`
-* **[!UICONTROL Operator]**: Matches Regex
-* **[!UICONTROL Right Operand]**: A regular expression that matches the desired domains. For example, `adobe.com$|behance.com$`
-
-![Rule condition](../assets/id-sharing-condition-configuration.png)
-
-+++
-
-+++Rule action
-
-Append the identity to the URL.
-
-* **[!UICONTROL Extension]**: Adobe Experience Platform Web SDK
-* **[!UICONTROL Action Type]**: Redirect with identity
-
-![Rule action](../assets/id-sharing-action-configuration.png)
-
-+++
-
-## Append identity to URL using the Web SDK JavaScript library
-
 Run the `appendIdentityToUrl` command with a URL as a parameter. The method returns a URL with the identifier appended as a query string.
 
 ```js
@@ -96,8 +41,12 @@ document.addEventListener("click", event => {
 });
 ```
 
-This command supports the `edgeConfigOverrides` object.
+This command supports the [`edgeConfigOverrides`](configure/edgeconfigoverrides.md) object.
 
 ## Response object
 
 If you decide to [handle responses](command-responses.md) with this command, the response object contains **`url`**, the new URL with identity information added as a query string parameter.
+
+## Append identity to URL using the Web SDK tag extension
+
+The Web SDK tag extension equivalent to this command is the [Redirect with identity](/help/tags/extensions/client/web-sdk/actions/redirect-with-identity.md) action.

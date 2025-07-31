@@ -7,7 +7,7 @@ exl-id: 8c73cb25-2648-4cf7-b160-3d06aecde9b4
 
 >[!IMPORTANT]
 >
->This callback is deprecated. Use [`filterClickDetails`](clickcollection.md) instead.
+>This callback is deprecated. Use [`clickCollection.filterClickDetails`](clickcollection.md) instead.
 
 The `onBeforeLinkClickSend` callback allowed you to register a JavaScript function that can alter link tracking data you send just before that data is sent to Adobe. This callback allows you to manipulate the `xdm` or `data` object, including the ability to add, edit, or remove elements. You can also conditionally cancel the sending of data altogether, such as with detected client-side bot traffic.
 

@@ -64,3 +64,6 @@ alloy("sendEvent", {
 });
 ```
 
+## Datastream configuration overrides using the Web SDK tag extension
+
+The Web SDK tag extension equivalent of this object is the [Datastream configuration overrides](/help/tags/extensions/client/web-sdk/actions/send-event.md#datastream-configuration-overrides) section when configuring the '[!UICONTROL Send event]' action.

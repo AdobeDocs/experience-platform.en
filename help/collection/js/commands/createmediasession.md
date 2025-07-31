@@ -43,13 +43,12 @@ To start tracking a media session automatically, call the `createMediaSession` m
     });
 ```
 
-|Property | Type | Required | Description |
+| Property | Type | Required | Description |
 |---------|----------|---------|---------|
 | `playerId` | String | Yes | The player ID, an unique identifier representing the media session.|
 | `getPlayerDetails` | Function | Yes | A function that returns the player details. This callback function will be called by the Web SDK before every media event for the `playerId` provided. |
 | `xdm.eventType ` | Object | No | The media event type. If not provided, this is automatically set to `media.sessionStart`. |
-| `xdm.mediaCollection.sessionDetails` | Object | Yes| The session details object. The `sessionDetails` object should contain the session details properties. See the [Media Collection schema](/help/xdm/data-types/media-collection-details.md) documentation for more information.|
-
+| `xdm.mediaCollection.sessionDetails` | Object | Yes | The session details object. The `sessionDetails` object should contain the session details properties. See [Media Collection schema](/help/xdm/data-types/media-collection-details.md) for more information. |
 
 ## Create a manually-tracked media session {#manual}
 
@@ -75,9 +74,13 @@ const sessionPromise = alloy("createMediaSession", {
 });
 ```
 
-|Property | Type | Requred | Description |
+| Property | Type | Requred | Description |
 |---------|----------|---------|---------|
-| `xdm.eventType` | Object  | No | The media event type. If not provided, it is automatically set to `media.sessionStart`. |
-| `xdm.mediaCollection.sessionDetails` | Object  | Yes | The session details object. The `sessionDetails` object should contain the session details properties. See the [Media Collection schema](/help/xdm/data-types/media-collection-details.md) documentation for more information. |
+| `xdm.eventType` | Object | No | The media event type. If not provided, it is automatically set to `media.sessionStart`. |
+| `xdm.mediaCollection.sessionDetails` | Object | Yes | The session details object. The `sessionDetails` object should contain the session details properties. See the [Media Collection schema](/help/xdm/data-types/media-collection-details.md) documentation for more information. |
 | `xdm.mediaCollection.playhead` | Integer | Yes | The current playhead. |
-| `xdm.mediaCollection.qoeDataDetails` | Object  | No | The quality of experience data details. See the [Media Collection schema](/help/xdm/data-types/media-collection-details.md) documentation for more information. |
+| `xdm.mediaCollection.qoeDataDetails` | Object | No | The quality of experience data details. See the [Media Collection schema](/help/xdm/data-types/media-collection-details.md) documentation for more information. |
+
+## Create media session using the Web SDK tag extension
+
+The Web SDK tag extension equivalent to this command is the [**[!UICONTROL Session start]**](/help/tags/extensions/client/web-sdk/actions/send-media-event.md#session-start) event type within the '[!UICONTROL Send media event]' action.

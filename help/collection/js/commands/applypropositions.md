@@ -16,21 +16,6 @@ This command supports the following fields:
   * Selector
   * Action type
 
-## Apply propositions using the Web SDK tag extension
-
-Applying propositions is performed as an action within a rule in the Adobe Experience Platform Data Collection tags interface.
-
-1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
-1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
-1. Select the desired tag property.
-1. Navigate to **[!UICONTROL Rules]**, then select the desired rule.
-1. Under [!UICONTROL Actions], select an existing action or create an action.
-1. Set the [!UICONTROL Extension] dropdown field to **[!UICONTROL Adobe Experience Platform Web SDK]**, and set the [!UICONTROL Action Type] to **[!UICONTROL Apply propositions]**.
-1. Set the desired fields on the right.
-1. Click **[!UICONTROL Keep Changes]**, then run your publishing workflow.
-
-## Apply propositions using the Web SDK JavaScript library
-
 Run the `applyPropositions` command when calling your configured instance of the Web SDK. The object containing configuration options supports the following fields:
 
 * **`propositions`**: An array of proposition objects that you want to re-render. This object typically isn't used, as the `propositionScopes` field usually determines which scopes or surfaces that you want to re-render.
@@ -46,3 +31,7 @@ alloy("applyPropositions",{
   "viewName": ""
 });
 ```
+
+## Apply propositions using the Web SDK tag extension
+
+The Web SDK tag extension equivalent to this command is the [**[!UICONTROL Apply propositions]**](/help/tags/extensions/client/web-sdk/actions/apply-propositions.md) action.

@@ -5,9 +5,9 @@ exl-id: 05ba98ae-c004-4b7b-b55b-38290ca62cfa
 ---
 # Configure the Adobe Experience Platform Web SDK
 
-Configuration for the Web SDK is done with the **`configure`** command. This command is required before you call any other Web SDK commands, such as [`sendEvent`](../sendevent/overview.md).
+Configuration for the Web SDK is done with the **`configure`** command. This command is required on every page load before you call any other Web SDK commands, such as [`sendEvent`](../sendevent/overview.md).
 
-The [`datastreamId`](datastreamid.md) and [`orgId`](orgid.md) properties are required. All other properties are optional, depending on your organization's implementation requirements. The following example shows a configuration object using most available properties:
+**The [`datastreamId`](datastreamid.md) and [`orgId`](orgid.md) properties are required.** All other properties are optional, depending on your organization's implementation requirements. The following example shows a configuration object using most available properties:
 
 ```js
 alloy("configure", {

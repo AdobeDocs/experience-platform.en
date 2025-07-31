@@ -12,24 +12,24 @@ Every time a web browser makes a request to a web server, the header of the requ
 
 Here is an example of what a user agent string looks like on a request coming from a Chrome browser running on a [!DNL Mac OS] device.
 
->[!NOTE]
->
->Over the years, the amount of browser and device information included in the user agent string has grown and modified multiple times. The example below shows a selection of the most common user agent information.
-
 ```shell
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36`
 ```
 
-|Field|Value|
+>[!NOTE]
+>
+>Over the years, the amount of browser and device information included in the user agent string has grown and modified multiple times. The example above shows a selection of the most common user agent information.
+
+| Field | Value |
 |---|---|
-|Software name| Chrome |
-|Software version| 105|
-|Full software version|105.0.0.0|
-|Layout engine name|AppleWebKit|
-|Layout engine version|537.36|
-|Operating system|Mac OS X|
-|Operating system version|10.15.7|
-|Device|Intel Mac OS X 10_15_7|
+| Software name | `Chrome` |
+| Software version | `105` |
+| Full software version | `105.0.0.0` |
+| Layout engine name | `AppleWebKit` |
+| Layout engine version | `537.36` |
+| Operating system | `Mac OS X` |
+| Operating system version | `10.15.7` |
+| Device | `Intel Mac OS X 10_15_7` |
 
 ## Use cases {#use-cases}
 
@@ -58,7 +58,7 @@ When modern browsers send a user to a web server, the entire user agent string i
 
 ## Browser support {#browser-support}
 
-[User agent client hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/) were introduced with [!DNL Google Chrome ]version 89.
+[User agent client hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/) were introduced with [!DNL Google Chrome] version 89.
 
 Additional Chromium-based browsers support the Client Hints API, such as:
 
@@ -82,25 +82,25 @@ Low entropy client hints include basic information which cannot be used to finge
 
 Low entropy client hints are enabled by default in Web SDK, and are passed on every request.
 
-|HTTP header|JavaScript|Included in User-Agent by default| Included in client hints by default|
+| HTTP header  |JavaScript | Included in User-Agent by default | Included in client hints by default |
 |---|---|---|---|
-|`Sec-CH-UA`|`brands`|Yes|Yes|
-|`Sec-CH-UA-Platform`|`platform`|Yes|Yes|
-|`Sec-CH-UA-Mobile`|`mobile`|Yes|Yes|
+| `Sec-CH-UA` | `brands` | Yes | Yes |
+| `Sec-CH-UA-Platform` | `platform` |Yes | Yes |
+| `Sec-CH-UA-Mobile` | `mobile` | Yes | Yes |
 
 ### High entropy client hints {#high-entropy}
 
 High entropy client hints are more detailed information about the client device, such as platform version, architecture, model, bitness (64 bit or 32 bit platforms), or full operating system version. This information could potentially be used in fingerprinting.
 
-| Property | Description | HTTP header | XDM path | Example |Included in user agent by default| Included in client hints by default|
+| Property | Description | HTTP header | XDM path | Example | Included in user agent by default | Included in client hints by default |
 | --- | --- | --- | --- | --- |---|---|
 | Operating system version | The version of the operating system. | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | `10.15.7` | Yes | No |
-| Architecture | The underlying CPU architecture. | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | `x86` | Yes | No|
-| Device model | The name of the device used. | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | `Intel Mac OS X 10_15_7` | Yes | No|
+| Architecture | The underlying CPU architecture. | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | `x86` | Yes | No |
+| Device model | The name of the device used. | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | `Intel Mac OS X 10_15_7` | Yes | No |
 | Bitness | The number of bits that the underlying CPU architecture supports. | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | `64` | Yes | No |
-| Browser vendor | The company that created the browser. The low entropy hint `Sec-CH-UA` also collects this element. | `Sec-CH-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.vendor`  | `Google` | Yes|No|
-| Browser name | The browser used. The low entropy hint `Sec-CH-UA` also collects this element. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | `Chrome` | Yes|No|
-| Browser version | The significant version of the browser. The low entropy hint `Sec-CH-UA` also collects this element. Exact browser version is not automatically collected. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` | Yes|No|
+| Browser vendor | The company that created the browser. The low entropy hint `Sec-CH-UA` also collects this element. | `Sec-CH-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.vendor`  | `Google` | Yes| No |
+| Browser name | The browser used. The low entropy hint `Sec-CH-UA` also collects this element. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | `Chrome` | Yes| No |
+| Browser version | The significant version of the browser. The low entropy hint `Sec-CH-UA` also collects this element. Exact browser version is not automatically collected. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` | Yes| No |
 
 
 High entropy client hints are disabled by default in Web SDK. To enable them you must manually configure the Web SDK to request high entropy client hints.
