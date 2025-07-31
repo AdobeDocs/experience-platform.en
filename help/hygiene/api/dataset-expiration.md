@@ -387,31 +387,31 @@ An unsuccessful response returns a 404 (Not Found) HTTP status if no such datase
 
 ## Cancel a dataset expiration {#delete}
 
-You can cancel a dataset expiration by making a DELETE request.
+Cancel a pending dataset expiration configuration by making a DELETE request to `/ttl/{ID}`.
 
 >[!NOTE]
 >
->Only dataset expirations that have a status of `pending` can be canceled. Attempting to cancel an expiration that has executed or is already canceled returns an HTTP 404 error.
+>Only dataset expirations in `pending` status can be cancelled. Attempting to cancel an expiration that is already executing, completed, or cancelled returns an HTTP 404 error.
 
 **API format**
 
 ```http
-DELETE /ttl/{EXPIRATION_ID}
+DELETE /ttl/{ID}
 ```
 
 | Parameter | Description |
 | --- | --- |
-| `{EXPIRATION_ID}` | The `ttlId` of the dataset expiration that you want to cancel. |
+| `{ID}` | The unique identifier for the dataset expiration configuration. You may provide either a dataset expiration ID or a dataset ID. |
 
 {style="table-layout:auto"}
 
 **Request**
 
-The following request cancels a dataset expiration with ID `SD-b16c8b48-a15a-45c8-9215-587ea89369bf`:
+The following request cancels a dataset expiration with ID `SD-d4a7d918-283b-41fd-bfe1-4e730a613d21`:
 
 ```shell
 curl -X DELETE \
-  https://platform.adobe.io/data/core/hygiene/ttl/SD-b16c8b48-a15a-45c8-9215-587ea89369bf \
+  https://platform.adobe.io/data/core/hygiene/ttl/SD-d4a7d918-283b-41fd-bfe1-4e730a613d21 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -420,7 +420,23 @@ curl -X DELETE \
 
 **Response**
 
-A successful response returns HTTP status 204 (No Content), and the expiration's `status` attribute is set to `cancelled`.
+A successful response returns HTTP status 200 (OK) and the cancelled dataset expiration configuration. Not that the expiration's `status` attribute is set to `cancelled`.
+
+```json
+{
+  "ttlId": "SD-d4a7d918-283b-41fd-bfe1-4e730a613d21",
+  "datasetId": "5a9e2c68d3b24f03b55a91ce",
+  "datasetName": "Acme_Customer_Data",
+  "sandboxName": "acme-prod",
+  "displayName": "Customer Dataset Expiry Rule",
+  "description": "Cancelled expiry configuration for Acme customer dataset",
+  "imsOrg": "C9D8E7F6A5B41234567890AB@AcmeOrg",
+  "status": "cancelled",
+  "expiry": "2032-02-28T00:00:00Z",
+  "updatedAt": "2032-01-15T08:27:31.000Z",
+  "updatedBy": "s.clegane@acme.com <s.clegane@acme.com> 5A9E2C68D3B24F03B55A91CE@acme.com"
+}
+```
 
 ## Appendix
 
