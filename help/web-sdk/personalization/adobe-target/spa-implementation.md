@@ -13,7 +13,7 @@ Traditional websites worked on "Page-to-Page" navigation models, otherwise known
 
 Modern web applications, such as single-page applications, have instead adopted a model that propels rapid use of browser UI rendering, which is often independent of page reloads. These experiences can be triggered by customer interactions, such as scrolls, clicks, and cursor movements. As the paradigms of the modern web have evolved, the relevance of traditional generic events, such as a page load, to deploy personalization and experimentation no longer work.   
 
-![Diagram showing the SPA lifecycle compared to traiditional page lifecycle.](assets/spa-vs-traditional-lifecycle.png)
+![Diagram showing the SPA lifecycle compared to traditional page lifecycle.](assets/spa-vs-traditional-lifecycle.png)
 
 ## Benefits of Experience Platform Web SDK for SPAs
 
@@ -31,23 +31,23 @@ To further explain what Views are, the following example uses a hypothetical onl
 
 After navigating to the home site, a hero image promotes an Easter sale as well as the newest products available on the site. In this case, a View could be defined for the entire home screen. This View could simply be called "home".
 
-![Sample image of a singl-page application in a browser window.](assets/example-views.png)
+![Sample image of a single-page application in a browser window.](assets/example-views.png)
 
 As the customer becomes more interested in the products that the business is selling, they decide to click the **Products** link. Similar to the home site, the entirety of the products site can be defined as a View. This View could be named "products-all". 
 
-![Sample image of a singl-page application in a browser window, with all products displayed.](assets/example-products-all.png)
+![Sample image of a single-page application in a browser window, with all products displayed.](assets/example-products-all.png)
 
 Since a View can be defined as a whole site or a group of visual elements on a site, the four products shown on the products site could be grouped and considered as a View. This view could be named "products." 
 
-![Sample image of a singl-page application in a browser window, with example products displayed.](assets/example-products.png)
+![Sample image of a single-page application in a browser window, with example products displayed.](assets/example-products.png)
 
 When the customer decides to click the **Load More** button to explore more products on the site, the website URL does not change in this case, but a View can be created here to represent only the second row of products that are shown. The View name could be "products-page-2". 
 
-![Sample image of a singl-page application in a browser window, with example products displayed on an additional page.](assets/example-load-more.png)
+![Sample image of a single-page application in a browser window, with example products displayed on an additional page.](assets/example-load-more.png)
 
 The customer decides to purchase a few products from the site and proceeds to the checkout screen. On the checkout site the customer is given options to choose normal delivery or express delivery. A View can be any group of visual elements on a site, so a View could be created for delivery preferences and be called, "Delivery Preferences". 
 
-![Sample image of a singl-page application checkout page in a browser window.](assets/example-check-out.png)
+![Sample image of a single-page application checkout page in a browser window.](assets/example-check-out.png)
 
 The concept of Views can be extended much further than this. These are just a few examples of Views that can be defined on a site.
 
@@ -84,7 +84,7 @@ This section outlines three examples showing how to invoke the `sendEvent()` fun
 
 The marketing team want to run A/B tests on the entire home page.
 
-![Sample image of a singl-page application in a browser window.](assets/use-case-1.png)
+![Sample image of a single-page application in a browser window.](assets/use-case-1.png)
 
 To run A/B tests on the whole home site, `sendEvent()` must be invoked with the XDM `viewName` set to `home`: 
 
