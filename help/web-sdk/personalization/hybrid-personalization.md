@@ -8,7 +8,7 @@ exl-id: 506991e8-701c-49b8-9d9d-265415779876
 
 ## Overview {#overview}
 
-Hybdrid personalization describes the process of retrieving personalization content server-side, using the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/), and rendering it client-side, using the [Web SDK](../home.md).
+Hybrid personalization describes the process of retrieving personalization content server-side, using the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/), and rendering it client-side, using the [Web SDK](../home.md).
 
 You can use hybrid personalization with personalization solutions like Adobe Target, Adobe Journey Optimizer, or Offer Decisioning, the difference being the contents of the [!UICONTROL Edge Network API] payload.
 
@@ -86,7 +86,7 @@ If no location hint (i.e. no cookie) is present, use the default host: `server.a
 
 >[!TIP]
 >
->As a best practice, you should use a list of allowed locations. This prevents the location hint from being tempered with, as it is provided via client side cookies.
+>As a best practice, you should use a list of allowed locations. This prevents the location hint from being tampered with, as it is provided via client side cookies.
 
 ## Analytics implications {#analytics}
 
