@@ -22,11 +22,10 @@ New features and updates to existing features in Adobe Experience Platform:
 
 - [Capacity](#capacity)
 - [Destinations](#destinations)
-- [Data Ingestion](#ingestion)
-- [Query Service](#query-service)
+- [Data Ingestion](#data-ingestion)
 - [Real-Time CDP B2B Edition](#b2b)
 - [Sandboxes](#sandboxes)
-- [Segmentation Service](#segmentation)
+- [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
 
 ## Capacity {#capacity}
@@ -56,8 +55,8 @@ For more information, please read the [Capacity overview](../../landing/license-
 | Account names and descriptions for destination connections | You can now [add account names and descriptions](/help/destinations/ui/connect-destination.md) when connecting to destinations, enabling better management of destinations with multiple accounts. |
 | Enhanced datastream information for edge destinations | The right-rail information for [Adobe Target](/help/destinations/catalog/personalization/adobe-target-v2.md) and [Custom Personalization](/help/destinations/catalog/personalization/custom-personalization.md) destinations has been improved to display the datastream name, offering clearer visibility into associated datastream configurations and helping reduce confusion when reviewing existing dataflows. The **[!UICONTROL Datastream ID]** selector in the destination configuration screen has been updated to **[!UICONTROL Datastream]** for improved clarity in the user interface. |
 | Marketing actions visibility in destination selection | Marketing actions are now displayed in the right rail of the **[[!UICONTROL Browse]](/help/destinations/ui/destinations-workspace.md#browse)**  tab in the Destinations workspace and on the **[[!UICONTROL Dataflow runs]](/help/dataflows/ui/monitor-destinations.md)** page, providing immediate visibility into marketing action changes without needing to navigate to the view page. This enhancement improves the user experience by making it easier to verify marketing action configurations during destination setup. |
-|[!BADGE Limited beta]{type=Informative} Edit marketing actions for destinations | You can now edit marketing actions for existing destinations. This feature is currently in limited beta. To request access, contact your Adobe representative. |
-|[!BADGE Limited beta]{type=Informative} Edit destinations | You can now edit your destination configuration after it has been created. This feature is currently in limited beta. To request access, contact your Adobe representative. |
+|[!BADGE Limited beta]{type=Informative} Edit marketing actions for destinations | You can now [edit marketing actions](/help/destinations/ui/edit-activation.md#edit-marketing-actions) for existing destinations. This feature is currently in limited beta. To request access, contact your Adobe representative. |
+|[!BADGE Limited beta]{type=Informative} Edit destinations | You can now [edit your destination configuration](/help/destinations/ui/edit-destination.md) after it has been created. This feature is currently in limited beta. To request access, contact your Adobe representative. |
 
 **Fixes**
 
@@ -78,19 +77,6 @@ Experience Platform provides a comprehensive data ingestion framework that suppo
 | Support for monitoring streaming profile ingestion | Real-time monitoring for streaming profile ingestion is now available, providing transparency into throughput, latency, and data quality metrics. This supports proactive alerting and actionable insights to help data engineers identify capacity violations and ingestion issues. Read the guide on [monitoring streaming profile ingestion](../../dataflows/ui/monitor-streaming-profile.md) for more information. |
 
 For more information, read the [data ingestion overview](../../ingestion/home.md).
-
-## Query Service {#query-service}
-
-Query data in the Adobe Experience Platform data lake using standard SQL with Query Service. Seamlessly combine datasets and generate new ones from your query results to power reporting, enable data science workflows, or facilitate ingestion into Real-Time Customer Profile. For example, you can merge customer transaction data with behavioral data to identify high-value audiences for targeted marketing campaigns.
-
-**New or updated features**
-
-| Feature | Description |
-|--------|-------------|
-| Support for non-expiring credentials password character restrictions | Data Distiller now supports [non-expiring credentials with specific character restrictions](../../query-service/ui/credentials.md#non-expiring-credentials). While passwords require at least one number, one lowercase letter, one uppercase letter, and one special character, the dollar sign ($) is not supported. Recommended special characters include `!, @, #, ^, or &`. |
-| Improved performance consistency across environments | Data Distiller [performance is now consistent between development and production sandboxes](../../query-service/troubleshooting-guide.md#data-distiller), with similar backend resources available in both environments. Compute hours consumed may vary based on data volume and available backend compute resources at the time of processing. |
-
-For more information on [!DNL Query Service], please see the [[!DNL Query Service] overview](../../query-service/home.md).
 
 ## Real-Time CDP B2B Edition {#b2b}
 
@@ -149,5 +135,6 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | Feature | Description |
 | --- | --- |
 | Support for change data capture in select sources using the [!DNL Flow Service] API | You can now create dataflows that enable change data capture for incremental ingestion using source connectors. This capability allows customers to bring change data type for incremental ingestion, improving data freshness and reducing processing overhead. For more information, read the documentation on [using change data capture for sources](../../sources/tutorials/api/change-data-capture.md) |
+| Support for soft deletion of records in [!DNL Salesforce] | The [!DNL Salesforce] source now supports including soft deleted records through an optional `includeDeletedObjects` parameter. When set to true, customers can include soft deleted records in their [!DNL Salesforce] queries and bring these records into Experience Platform. Read the [[!DNL Salesforce] source documentation](../../sources/connectors/crm/salesforce.md) for more information. |
 
 For more information, read the [sources overview](../../sources/home.md).
