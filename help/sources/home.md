@@ -120,6 +120,7 @@ You can use the following sources to ingest consent and preferences data to Expe
 
 | Source | Ingestion type | Cloud |
 | --- | --- | --- |
+| [[!DNL Didomi]](../sources/connectors/consent-and-preferences/didomi.md) | Streaming | Azure |
 | [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md) | Batch | Azure |
 
 {style="table-layout:auto"}

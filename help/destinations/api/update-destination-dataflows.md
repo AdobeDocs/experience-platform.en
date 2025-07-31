@@ -16,7 +16,7 @@ This tutorial requires you to have a valid flow ID. If you do not have a valid f
 
 >[!NOTE]
 >
-> The terms *flow* and *dataflow* are used interchangeably in this tutorial. In the context of this tutorial, the have the same meaning.
+> The terms *flow* and *dataflow* are used interchangeably in this tutorial. In the context of this tutorial, they have the same meaning.
 
 This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 
