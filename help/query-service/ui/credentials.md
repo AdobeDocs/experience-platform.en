@@ -73,6 +73,10 @@ See the [BI extension guide](https://experienceleague.adobe.com/en/docs/analytic
 
 You can use non-expiring credentials to set up a more permanent connection to an external client.
 
+>[!IMPORTANT]
+>
+>The first time you create or migrate a non-expiring credential to OAuth Server-to-Server, you must use a System Admin account. Only a System Admin can perform this action for your organization. If a non-System Admin attempts this step, the process will fail with an authorization error. After the initial setup, subsequent non-expiring credentials can be created or migrated by users with the required permissions.
+
 >[!NOTE]
 >
 >Non-expiring credentials have the following limitations:
