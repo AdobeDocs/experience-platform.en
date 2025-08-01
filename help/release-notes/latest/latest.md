@@ -3,7 +3,6 @@ title: Adobe Experience Platform Release Notes July 2025
 description: The July 2025 release notes for Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 ---
-
 # Adobe Experience Platform release notes
 
 >[!TIP]
@@ -28,6 +27,7 @@ New features and updates to existing features in Adobe Experience Platform:
 - [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
 
+
 ## Capacity {#capacity}
 
 >[!AVAILABILITY]
@@ -47,6 +47,7 @@ For more information, please read the [Capacity overview](../../landing/license-
 | Destination | Description |
 | --- | --- |
 | Limited availability of the [Google Customer Match + Display & Video 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md) connection | After being briefly available to all customers in June, Adobe has returned this integration to limited availability. Currently, access to this destination is restricted to customers who are already enabled, while Adobe and Google work to resolve implementation issues. If you're interested in using this integration once the broader rollout resumes, please contact your Adobe representative to express your intent. |
+| [[!DNL The Trade Desk]](../../destinations/catalog/advertising/tradedesk.md) internal upgrade | Starting July 31, 2025, you can see two [!DNL The Trade Desk] cards side-by-side in the destinations catalog. This is due to an internal upgrade to the destinations service. <br><br>The existing [!DNL The Trade Desk] destination connector has been renamed to **[!UICONTROL (Deprecated) The Trade Desk]** and a new card with the name **[!UICONTROL The Trade Desk]** is now available. Use the new **[!UICONTROL The Trade Desk]** connection in the catalog for new activation data flows. <br><br>If you have any active dataflows to the **[!UICONTROL (Deprecated) The Trade Desk]** destination, they will be updated automatically, so no action is required from you. <br><br>If you are creating dataflows through the [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/), you must update your [!DNL flow spec ID] and [!DNL connection spec ID] to the following values:<ul><li>Flow spec ID: `86134ea1-b014-49e8-8bd3-689f4ce70578`</li><li>Connection spec ID: `1029798b-a97f-4c21-81b2-e0301471166e`</li></ul> |
 
 **New or updated functionality**
 
