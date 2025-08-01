@@ -6,17 +6,17 @@ exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
 ---
 # Dataset expiration endpoint
 
-Use the `/ttl` endpoint in the Data Hygiene API to schedule expiration dates for datasets in Adobe Experience Platform.
+Use the `/ttl` endpoint in the Data Hygiene API to schedule when datasets in Adobe Experience Platform should be deleted.
 
-A dataset expiration is only a timed-delayed delete operation. The dataset is not protected in the interim, so it may be be deleted by other means before its expiry is reached.
+A dataset expiration is a delayed delete operation. The dataset is not protected in the interim and may be deleted by other means before its scheduled expiration.
 
 >[!NOTE]
 >
 >Although the expiry is specified as a specific instant in time, there may be up to 24 hours of delay after the expiry before the actual deletion is initiated. Once the delete is initiated, it can take up to seven days before all traces of the dataset have been removed from Experience Platform systems.
 
-At any time before the dataset-delete is actually initiated, you can cancel the expiration or modify its trigger time. After cancelling a dataset expiration, you can reopen it by setting a new expiry.
+Before deletion begins, you can cancel the expiration or change its scheduled time. To reopen a cancelled expiration, set a new expiry.
 
-Once the dataset deletion is initiated, its expiration job will be marked as `executing`, and it may not be further altered. The dataset itself may be recoverable for up to seven days, but only through a manual process initiated through an Adobe service request. As the request executes, the data lake, Identity Service, and Real-Time Customer Profile begin separate processes to remove the dataset's contents from their respective services. Once the data is deleted from all three services, the expiration is marked as `completed`.
+Once deletion begins, the expiration job is marked as `executing` and can no longer be modified. The dataset may be recoverable for up to seven days, but only through a manual Adobe service request. During deletion, the data lake, Identity Service, and Real-Time Customer Profile each remove the dataset contents separately. When deletion is complete, the expiration is marked as `completed`.
 
 >[!WARNING]
 >
@@ -200,7 +200,7 @@ A successful response returns the details of the dataset expiration.
 
 When using the [Catalog API](../../catalog/api/getting-started.md) to look up dataset details, if the dataset has an active expiration it will be listed under `tags.adobe/hygiene/ttl`.
 
-The following JSON represents a truncated response for a dataset's details from Catalog, which an expiration value of `32503680000000`. The tag's value  encodes the expiry as an integer number of milliseconds since the beginning of the Unix epoch.
+The following JSON shows a truncated Catalog API response for a dataset with an expiration value of `32503680000000`. The tag encodes the expiry as the number of milliseconds since the Unix epoch.
 
 ```json
 {
