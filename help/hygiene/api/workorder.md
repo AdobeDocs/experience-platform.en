@@ -6,7 +6,7 @@ exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
 ---
 # Record delete work orders {#work-order-endpoint}
 
-Use the `/workorder` endpoint in the Data Hygiene API to manage record delete work orders in Adobe Experience Platform. Use work orders to control, monitor, and track the removal of data from Experience Platform. Work orders help you maintain data quality and support your organization's data governance standards.
+Use the `/workorder` endpoint in the Data Hygiene API to create, view, and manage record delete work orders in Adobe Experience Platform. Work orders let you control, monitor, and track data removal across datasets to help you maintain data quality and support your organization's data governance standards.
 
 >[!IMPORTANT] 
 >
@@ -14,7 +14,7 @@ Use the `/workorder` endpoint in the Data Hygiene API to manage record delete wo
 
 ## Getting started
 
-Review the [overview](./overview.md) before continuing. The overview provides related documentation links, a guide to reading sample API calls, and important information about required headers for making calls to Experience Platform APIs.
+Before you begin, see the [overview](./overview.md) to learn about required headers, how to read sample API calls, and where to find related documentation.
 
 ## Quotas and processing timelines {#quotas}
 
@@ -45,7 +45,7 @@ The following table shows identifier submission limits by product and entitlemen
 
 >[!NOTE]
 >
->Quotas are based on your organization's licensed monthly entitlement for **submitted identifiers**. These are not enforced by system guardrails but may be monitored and reviewed.  
+>Quota usage is based on your organization's licensed monthly entitlement for **submitted identifiers**. Quotas are not enforced by system guardrails but may be monitored and reviewed.  
 >Record delete work order capacity is a **shared service**. Your monthly cap reflects the highest entitlement across Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics, and any applicable Shield add-ons.
 
 ### Processing timelines for identifier submissions {#sla-processing-timelines}
@@ -65,7 +65,7 @@ If your organization requires higher limits, contact your Adobe representative f
 
 ## List record delete work orders {#list}
 
-Retrieve a paginated list of record delete work orders for data hygiene operations in your organization. Filter results using query parameters. Each work order record includes action type, status, related dataset and user information, and audit metadata.
+Retrieve a paginated list of record delete work orders for data hygiene operations in your organization. Filter results using query parameters. Each work order record includes the action type (such as `identity-delete`), status, related dataset and user details, and audit metadata.
 
 **API format**
 
@@ -195,7 +195,7 @@ POST /workorder
 
 >[!NOTE]
 >
->You can only delete records from datasets that have a primary identity or an identity map defined in their associated XDM schema.
+>You can only delete records from datasets whose associated XDM schema defines a primary identity or identity map.
 
 **Request**
 
@@ -237,7 +237,7 @@ The following table describes the properties for creating a record delete work o
 | `description`          | A description of the record delete work order. |
 | `action`               | The action requested for the record delete work order. To delete records associated with a given identity, use `delete-identity`. |
 | `datasetId`            | The unique identifier for the dataset. Use the dataset ID for a specific dataset, or `ALL` to target all datasets. Datasets must have a primary identity or identity map. If an identity map exists, it will be present as a top-level field named `identityMap`.<br>Note that a dataset row may have many identities in its identity map, but only one can be marked as primary. `"primary": true` must be included to force the `id` to match a primary identity. |
-| `namespacesIdentities` | An array of objects, each containing:<br><ul><li> `namespace`: An object with a `code` property specifying the identity namespace (e.g., "email").</li><li> `IDs`: An array of identity values to delete for this namespace.</li></ul>Identity namespaces provide context to identity data. You can create and manage custom namespaces or use standard namespaces provided by Experience Platform. See the [identity namespace documentation](../../identity-service/features/namespaces.md) or the [Identity Service API specification](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces) to learn more. |
+| `namespacesIdentities` | An array of objects, each containing:<br><ul><li> `namespace`: An object with a `code` property specifying the identity namespace (e.g., "email").</li><li> `IDs`: An array of identity values to delete for this namespace.</li></ul>Identity namespaces provide context to identity data. You can use standard namespaces provided by Experience Platform or create your own. To learn more, see the [identity namespace documentation](../../identity-service/features/namespaces.md) and the [Identity Service API specification](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
 **Response**
 
@@ -403,8 +403,6 @@ The following table describes the properties you can update.
 
 | Property | Description |
 | --- | --- |
-| Property      | Description                                          |
-| ------------- | ---------------------------------------------------- |
 | `name`        | The updated human-readable label for the record delete work order. |
 | `description` | The updated description for the record delete work order.  |
 
