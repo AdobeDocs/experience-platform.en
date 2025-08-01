@@ -228,9 +228,9 @@ onContentHiding(data) {
 | `data.componentName` | String | The name of the component that generated the log message. |
 | `data.status` | String | The `personalization` component notifies the Web SDK of the status of rendering. Supported values: <ul><li>`hide-containers`</li><li>`show-containers`</ul> |
 
-## How to specify monitoring hooks when using the NPM package {#specify-monitoris-npm}
+## How to specify monitoring hooks when using the NPM package {#specify-monitoring-npm}
 
-If you are using the Web SDK through the [NPM package](install/npm.md), you can specify monitoring hooks in the `createInstasnce` function, as shown below.
+If you are using the Web SDK through the [NPM package](install/npm.md), you can specify monitoring hooks in the `createInstance` function, as shown below.
 
 ```js
 var monitor = {

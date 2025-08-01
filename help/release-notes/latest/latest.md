@@ -1,6 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes July 2025
 description: The July 2025 release notes for Adobe Experience Platform.
+exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 ---
 # Adobe Experience Platform release notes
 
@@ -138,4 +139,3 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | Support for soft deletion of records in [!DNL Salesforce] | The [!DNL Salesforce] source now supports including soft deleted records through an optional `includeDeletedObjects` parameter. When set to true, customers can include soft deleted records in their [!DNL Salesforce] queries and bring these records into Experience Platform. Read the [[!DNL Salesforce] source documentation](../../sources/connectors/crm/salesforce.md) for more information. |
 
 For more information, read the [sources overview](../../sources/home.md).
-
