@@ -6,7 +6,7 @@ exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
 ---
 # Quota endpoint
 
-Use the `/quota` endpoint in the Data Hygiene API to monitor your organization's usage and limits for data hygiene operations. Quota amounts may differ based on your organization's entitlements, such as Privacy and Security Shield or Health Care Shield.
+Use the `/quota` endpoint in the Data Hygiene API to check your organization's current usage and limits. Quotas vary based on entitlements, such as Privacy and Security Shield or Healthcare Shield.
 
 Monitor your current quota consumption to ensure compliance with organizational limits for each job type.
 
@@ -14,9 +14,9 @@ Monitor your current quota consumption to ensure compliance with organizational 
 
 The endpoint used in this guide is part of the Data Hygiene API. Before continuing, please review the [overview](./overview.md) for the following information:
 
-* Links to related documentation
-* A guide to reading the sample API calls in this document
-* Important information regarding the required headers that are needed to make calls to any Experience Platform API
+* Related documentation links
+* How to read sample API calls
+* Required headers for Experience Platform API calls
 
 ## Quotas and processing timelines {#quotas}
 
@@ -39,13 +39,13 @@ GET /quota?quotaType={QUOTA_TYPE}
 
 >[!NOTE]
 >
->The consumed quota resets on the 1st of each month at 00:00 GMT and 00:00 GMT for daily quota. 
+>Quota consumption resets daily and monthly on the 1st of each month at 00:00 GMT. 
 >
->Only accepted requests are counted. If a work order is rejected because it fails validation, those identity deletions do not count against your quota.
+>Only accepted requests count toward your quota. Rejected work orders do not reduce your quota.
 
 | Parameter | Description |
 | --- | --- |
-| `{QUOTA_TYPE}` | An optional query parameter that specifies the type of quota to retrieve. If no `quotaType` parameter is provided, all quota values are returned in the API response. Accepted type values include:<ul><li>`datasetExpirationQuota`: This object shows the number of concurrently active dataset expirations for your organization, and your total allowance of expirations. </li><li>`dailyConsumerDeleteIdentitiesQuota`: This object shows the total number of record delete requests made by your organization today and your total daily allowance.</li><li>`monthlyConsumerDeleteIdentitiesQuota`: This object shows the total number of record delete requests made by your organization this month and your total monthly allowance.</li></ul> |
+| `{QUOTA_TYPE}` | An optional query parameter that specifies the type of quota to retrieve. If no `quotaType` parameter is provided, all quota values are returned in the API response. Accepted values include:<ul><li>`datasetExpirationQuota`: The number of active dataset expirations and your total allowance.</li><li>`dailyConsumerDeleteIdentitiesQuota`: The number of record deletes today and your daily quota.</li><li>`monthlyConsumerDeleteIdentitiesQuota`: The. number of record deletes this month and your monthly quota.</li></ul> |
 
 **Request**
 
