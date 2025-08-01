@@ -92,7 +92,7 @@ The Web SDK is currently available to the general public and can be used to send
 
 There is no charge for the SDK, and it is hosted by Adobe for free. If required, you can download it and host it on your own servers at no cost.
 
-The Web SDK requires access to [datastream configurations](../datastreams/overview.md) and the Experience Platform [XDM schema builder](../xdm/tutorials/create-schema-ui.md), in order for Adobe's servers to properly handle inbound data coming from the SDK. If you would like to get access, contact your Adobe account team to start the request process.
+The Web SDK requires access to [datastream configurations](/help/datastreams/overview.md) and the Experience Platform [XDM schema builder](/help/xdm/tutorials/create-schema-ui.md), in order for Adobe's servers to properly handle inbound data coming from the SDK. If you would like to get access, contact your Adobe account team to start the request process.
 
 ## What use cases are currently supported by the Web SDK?
 
@@ -110,7 +110,7 @@ In other words, if you decide to use Adobe Experience Platform Web SDK for non-s
 
 ## Can I migrate the ECIDs when I start using Web SDK so my website visitors don't start showing up as new visitors?
 
-Yes, Adobe Experience Platform Web SDK provides an Identity Migration feature. Follow the instructions for ID migration in the [Experience Platform Web SDK identity documentation](/help/web-sdk/identity/overview.md#id-migration) for more details.
+Yes, Adobe Experience Platform Web SDK provides an Identity Migration feature. Follow the instructions for ID migration in the [Experience Platform Web SDK identity documentation](/help/collection/use-cases/identity/id-overview.md#migrating-visitor-api-ecid) for more details.
 
 ## How is the Web SDK different than tags?
 
@@ -152,7 +152,7 @@ Yes, currently the Web SDK uses anywhere between one to seven cookies depending 
 |**kndctr_orgid_cluster**|1800|30 minutes|This cookie stores the Edge Network region that is serving the current user's requests. The region is used in the URL path so that the Edge Network can route the request to the correct region. This cookie has a 30 minutes lifetime, so that if a user connects with a different IP address, the request can be routed to the closest region.|
 |**mbox**|63072000|2 years|This cookie appears when the Target migration setting is set to true. This will allow the Target [mbox cookie](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/) to be set by the Web SDK.|
 |**mboxEdgeCluster**|1800|30 minutes|This cookie appears when the Target migration setting is set to true. This cookie allows the Web SDK to communicate the correct edge cluster to at.js so that Target profiles can stay in sync as users navigate across a site.|
-|**AMCV_###@AdobeOrg**|34128000|395 days|This cookie only appears when ID migration on the Adobe Experience Platform Web SDK is enabled. This cookie helps when transitioning to Web SDK while some parts of the site are still using visitor.js. See [`idMigrationEnabled`](/help/web-sdk/commands/configure/idmigrationenabled.md) for more information.|
+|**AMCV_###@AdobeOrg**|34128000|395 days|This cookie only appears when ID migration on the Adobe Experience Platform Web SDK is enabled. This cookie helps when transitioning to Web SDK while some parts of the site are still using visitor.js. See [`idMigrationEnabled`](/help/collection/js/commands/configure/idmigrationenabled.md) for more information.|
 
 When using the Web SDK, the Edge Network sets one or more of the cookies above. The Edge Network sets all the cookies with the `secure` and `sameSite="none"` attributes.
 
@@ -162,7 +162,6 @@ If you currently have both secure and non-secure sections on your website, this 
 
 The Adobe Experience Platform Web SDK is designed to work optimally in the latest versions of Google Chrome, Safari, Firefox, and Microsoft Edge Chromium. You may have trouble using certain features on older versions of browsers or deprecated browsers, such as Internet Explorer.
 
-## Where can I get more info about Adobe Experience Platform Web SDK?
+## Where can I get the source code to the Web SDK?
 
-* [Documentation](/help/web-sdk/home.md)
-* [Source Code](https://github.com/adobe/alloy)
+See the [Alloy](https://github.com/adobe/alloy) repository on GitHub.

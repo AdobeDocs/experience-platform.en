@@ -22,7 +22,7 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 
 **Known issues**
 
-- Following the release of v2.31.0, a problem was identified with the [custom components build](/help/web-sdk/install/create-custom-build.md) process. While custom builds continue to operate, all components are currently included in the build, resulting in a full-sized package regardless of component selection. A fix for this issue is being developed. If you rely on custom component selection to minimize build size, it is recommended to wait for a future release.
+- Following the release of v2.31.0, a problem was identified with the [custom components build](/help/collection/js/install/create-custom-build.md) process. While custom builds continue to operate, all components are currently included in the build, resulting in a full-sized package regardless of component selection. A fix for this issue is being developed. If you rely on custom component selection to minimize build size, it is recommended to wait for a future release.
 
 
 ## Version 2.30.1 - May 27, 2025

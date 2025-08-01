@@ -17,7 +17,7 @@ The Adobe Experience Platform Web SDK assigns [Adobe Experience Cloud IDs (ECIDs
 
 ## Prerequisites {#prerequisites}
 
-Before you start, ensure you are familiar with how identity data works in the Web SDK, including ECIDs and `identityMap`. See the overview on [identity data in the Web SDK](./overview.md) for more information.
+Before you start, ensure you are familiar with how identity data works in the Web SDK, including ECIDs and `identityMap`. See the overview on [identity data in the Web SDK](id-overview.md) for more information.
 
 ## First-party device ID formatting requirements {#formatting-requirements}
 
@@ -60,11 +60,11 @@ Regardless of the setting you choose for the initial expiration of a cookie, you
 
 There are various cookie flags that impact how cookies are treated across different browsers:
 
-* [`HTTPOnly`](#http-only)
+* [`HTTPOnly`](#httponly)
 * [`Secure`](#secure)
-* [`SameSite`](#same-site)
+* [`SameSite`](#samesite)
 
-### `HTTPOnly` {#http-only}
+### `HTTPOnly`
 
 Cookies set using the `HTTPOnly` flag cannot be accessed using client-side scripts. This means that if you set an `HTTPOnly` flag when setting the [!DNL FPID], you must use a server-side scripting language to read the cookie value for inclusion in the `identityMap`.
 
@@ -74,11 +74,11 @@ If you choose to have the Edge Network read the value of the [!DNL FPID] cookie,
 >
 >Use of the `HTTPOnly` flag does not have an impact on the cookie policies that may restrict cookie lifetime. However, it is still something you should consider as you set and read the value of the [!DNL FPID].
 
-### `Secure` {#secure}
+### `Secure`
 
 Cookies set with the `Secure` attribute are only sent to the server with an encrypted request over the [!DNL HTTPS] protocol. Using this flag can help ensure that man-in-the-middle attackers cannot easily access the value of the cookie. When possible, it is always a good idea to set the `Secure` flag.
 
-### `SameSite` {#same-site}
+### `SameSite`
 
 The `SameSite` attribute lets servers determine whether cookies are sent with cross-site requests. The attribute provides some protection against cross-site forgery attacks. Three possible values exist: `Strict`, `Lax`, and `None`. Consult your internal team to determine which setting is right for your organization.
 
@@ -101,7 +101,7 @@ If you are migrating to first-party device IDs from a previous implementation, i
 
 To help illustrate this process, consider a scenario that involves a customer who has previously visited your site and what impact an [!DNL FPID] migration would have on how that customer is identified in Adobe solutions. 
 
-![Diagram showing how a customer's ID values are updated between visits after migrating to FPIDs](../assets/identity/tracking/visits.png)
+![Diagram showing how a customer's ID values are updated between visits after migrating to FPIDs](/help/collection/js/assets/identity/tracking/visits.png)
 
 >[!IMPORTANT]
 >
@@ -146,7 +146,7 @@ A [!DNL CNAME] record in your DNS allows you to create an alias from one domain 
 
 Let's consider you want to implement Web SDK on your website `example.com`. The Web SDK sends data to the Edge Network to the `edge.adobedc.net` domain.
 
-|Without [!DNL CNAME] | With [!DNL CNAME] |
+| Without [!DNL CNAME] | With [!DNL CNAME] |
 |---------|----------|
 | <ul><li>Your website `example.com` uses the Web SDK domain `edge.adobedc.net` to send data to the Edge Network.</li><li>Cookies set by `edge.adobedc.net` are considered third-party cookies, since they do not come from your `example.com` domain. Depending on your users browsers, third party cookies might be blocked, and your data does not reach the Edge Network.</li></ul> | <ul><li>You create a subdomain where you deploy Web SDK, such as `metrics.example.com`.</li><li>You set a [!DNL CNAME] record in your DNS system so that `metrics.example.com` points to `edge.adobedc.net`.</li><li>When your website sets cookies through `metrics.example.com`, to the browser they will appear to come from `example.com` (first-party) instead of `edge.adobedc.net` (third-party). This makes the first-party ID cookie less likely to be blocked, ensuring more accurate data collection.</li></ul> |
 
@@ -162,11 +162,11 @@ To use this functionality, you need to set the [!DNL FPID] cookie at the top lev
 
 After you have configured your CNAME, you must enable **[!UICONTROL First Party ID Cookie]** option for your datastream. This setting tells the Edge Network to refer to a specified cookie when looking up a first-party device ID, instead of looking up this value in the [identity map](#identityMap).
 
-See the [datastream configuration documentation](../../datastreams/configure.md#advanced-options) to learn how to set up your datastream.
+See the [datastream configuration documentation](/help/datastreams/configure.md#advanced-options) to learn how to set up your datastream.
 
 See the documentation on [first-party cookies](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html) for more details on how they work with Adobe Experience Cloud.
 
-![Platform UI image showing the datastream configuration highlighting the First Party ID Cookie setting](../assets/first-party-id-datastreams.png)
+![Platform UI image showing the datastream configuration highlighting the First Party ID Cookie setting](/help/collection/js/assets/first-party-id-datastreams.png)
 
 When enabling this setting, you must provide the name of the cookie where the [!DNL FPID] is expected to be stored.
 

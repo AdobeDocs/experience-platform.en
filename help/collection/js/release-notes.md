@@ -19,13 +19,13 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 **Fixes and improvements**
 
 - Fixed an error in the [Media Analytics tracker](commands/getmediaanalyticstracker.md) where the `length` property of the media object incorrectly accepted invalid data types.
-- Improved [identity management](identity/overview.md) error handling to properly process promise rejections when identity lookup fails.
-- Resolved an issue where [personalization content](personalization/rendering-personalization-content.md) with HTML content items failed to render with an error relating to a missing `renderStatusHandler`.
+- Improved [identity management](../use-cases/identity/id-overview.md) error handling to properly process promise rejections when identity lookup fails.
+- Resolved an issue where personalization content with HTML content items failed to render with an error relating to a missing `renderStatusHandler`.
 - Fixed activity map [URL collection](commands/configure/clickcollectionenabled.md) to properly handle non-HTTP URLs.
 
 **Known issues**
 
-- The [custom build](/help/web-sdk/install/create-custom-build.md) process using `npx @adobe/alloy` is currently not functioning as expected in version 2.28.0. All components are included in the generated build, regardless of the selected modules. This issue does not affect the standard JavaScript file available on the CDN. A fix is in progress.
+- The [custom build](/help/collection/js/install/create-custom-build.md) process using `npx @adobe/alloy` is currently not functioning as expected in version 2.28.0. All components are included in the generated build, regardless of the selected modules. This issue does not affect the standard JavaScript file available on the CDN. A fix is in progress.
 
 ## Version 2.27.0 - May 20, 2025
 
@@ -70,7 +70,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 **New features**
 
-- [Datastream overrides](../datastreams/overrides.md) are now supported when starting media sessions.
+- [Datastream overrides](/help/datastreams/overrides.md) are now supported when starting media sessions.
 
 - Added support for Adobe Target response tokens in the [`onContentRendering`](monitoring-hooks.md#onContentRendering)monitoring hook.
 
@@ -82,15 +82,15 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
   - `DecisioningEngine` has been renamed to `RulesEngine`
   - `LegacyMediaAnalytics` has been renamed to `MediaAnalyticsBridge`
   - `Privacy` has been renamed to `Consent`
-- Fixed an error that occurred when default content items were rendered via [`applyPropositions`](../web-sdk/commands/applypropositions.md).
+- Fixed an error that occurred when default content items were rendered via [`applyPropositions`](commands/applypropositions.md).
 - Fixed a CSS error in Adobe Target move and resize actions.
-- Removed the `machineLearning` key from [`sendEvent`](../web-sdk/commands/sendevent/overview.md) responses.
+- Removed the `machineLearning` key from [`sendEvent`](commands/sendevent/overview.md) responses.
 
 ## Version 2.23.0 - September 19, 2024
 
 **New features**
 
-- Added support for requesting the [CORE ID](identity/overview.md#tracking-coreid-web-sdk) in the [getIdentity](commands/getidentity.md#get-identity-using-the-web-sdk-javascript-library) command.
+- Added support for requesting the [CORE ID](/help/collection/use-cases/identity/id-overview.md) in the [getIdentity](commands/getidentity.md) command.
 
 **Fixes and improvements**
 
@@ -128,7 +128,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 **New features**
 
-- Added support for [Streaming Media Collection](../web-sdk/commands/configure/streamingmedia.md).
+- Added support for [Streaming Media Collection](commands/configure/streamingmedia.md).
 
 **Fixes and improvements**
 
@@ -153,7 +153,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 **New features**
 
 - Added support for rendering in-app messages from Adobe Journey Optimizer.
-- Added support for [top and bottom of page events](use-cases/top-bottom-page-events.md).
+- Added support for [top and bottom of page events](../use-cases/personalization/top-bottom-page-events.md).
 - Added [`defaultPersonalizationEnabled`](commands/sendevent/personalization.md) option to the `sendEvent` command to control requesting the page-wide scope and default surface.
 
 **Fixes and improvements**
@@ -166,7 +166,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 **New features**
 
-- Added support for [per-command overrides of the datastream ID](../datastreams/overrides.md).
+- Added support for [per-command overrides of the datastream ID](/help/datastreams/overrides.md).
 
 **Fixes and improvements**
 
@@ -183,13 +183,13 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 **New features**
 
-- Added support for [datastream configuration overrides](../datastreams/overrides.md).
+- Added support for [datastream configuration overrides](/help/datastreams/overrides.md).
 
 ## Version 2.15.0 - March 30, 2023
 
 **New features**
 
-- Added support for [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) link click callback.
+- Added support for [`onBeforeLinkClickSend`](commands/configure/onbeforelinkclicksend.md) link click callback.
 - Added support for Adobe Journey Optimizer click tracking.
 
 **Fixes and improvements**
@@ -205,7 +205,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 - Fixed an issue with Adobe Target VEC custom code actions where the code was injected into an alternate location than with [!DNL at.js].
 - Fixed an issue where in some edge cases the "referer" header was not set properly on requests to the Edge Network.
-- Fixed an issue where [user agent client hint](/help/web-sdk/use-cases/client-hints.md) properties could be set to an incorrect type.
+- Fixed an issue where [user agent client hint](../use-cases/client-hints.md) properties could be set to an incorrect type.
 - Fixed an issue where `placeContext.localTime` did not match the schema.
 
 ## Version 2.13.1 - October 13, 2022
@@ -217,9 +217,9 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 **New features**
 
-- Added support for [Page by Page Full Migration](home.md#migrating-to-web-sdk). The Adobe Target profile will now be preserved as a visitor moves between at.js and Web SDK pages.
-- Added configurable support for [high entropy User-Agent Client Hints](/help/web-sdk/use-cases/client-hints.md).
-- Added support for the [`applyResponse`](/help/web-sdk/commands/applyresponse.md) command. This enables hybrid personalization via the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/).
+- Added support for [Page by Page Full Migration](home.md). The Adobe Target profile will now be preserved as a visitor moves between at.js and Web SDK pages.
+- Added configurable support for [high entropy User-Agent Client Hints](../use-cases/client-hints.md).
+- Added support for the [`applyResponse`](commands/applyresponse.md) command. This enables hybrid personalization via the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/).
 - QA mode links now work across multiple pages.
 
 **Fixes and improvements**
@@ -239,8 +239,8 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 **New features**
 
-- You can now deliver personalized experiences more accurately, by sharing visitor IDs between mobile apps and mobile web content, and across domains. See the [dedicated documentation](identity/id-sharing.md) to learn more.
-- You can now render or execute an array of propositions from [!DNL Adobe Target] into single-page applications, without incrementing the analytics metrics. This reduces reporting errors and increases analytics accuracy. See the [dedicated documentation](personalization/rendering-personalization-content.md#applypropositions) to learn more.
+- You can now deliver personalized experiences more accurately, by sharing visitor IDs between mobile apps and mobile web content, and across domains. See the [dedicated documentation](../use-cases/identity/id-sharing.md) to learn more.
+- You can now render or execute an array of propositions from [!DNL Adobe Target] into single-page applications, without incrementing the analytics metrics. This reduces reporting errors and increases analytics accuracy. See the [dedicated documentation](../use-cases/personalization/rendering-personalization-content.md) to learn more.
 - Added additional information to the `getLibraryInfo` command including available commands and the final configuration for the instance.
 
 **Fixes and improvements**
@@ -296,7 +296,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 ## Version 2.6.0 - July 27, 2021
 
-- Provides more personalization content in the `sendEvent` resolved promise, including Adobe Target response tokens. When the `sendEvent` command is executed, a promise is returned, which is eventually resolved with a `result` object containing information received from the server. Previously, this result object included a property named `decisions`. This `decisions` property has been deprecated. A new property, `propositions`, has been added. This new property provides customers with access to more personalization content, including [response tokens](/help/web-sdk/personalization/adobe-target/accessing-response-tokens.md).
+- Provides more personalization content in the `sendEvent` resolved promise, including Adobe Target response tokens. When the `sendEvent` command is executed, a promise is returned, which is eventually resolved with a `result` object containing information received from the server. Previously, this result object included a property named `decisions`. This `decisions` property has been deprecated. A new property, `propositions`, has been added. This new property provides customers with access to more personalization content, including response tokens.
 
 ## Version 2.5.0 - June 2021
 
@@ -307,13 +307,13 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 ## Version 2.4.0 - March 2021
 
-- The SDK can now be installed as an [NPM package](/help/web-sdk/install/npm.md).
-- Added support for an `out` option when [configuring default consent](/help/web-sdk/commands/configure/defaultconsent.md), which drops all events until consent is received (the existing `pending` option queues events and sends them once consent is received).
-- The [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) callback can now be used to prevent an event from being sent.
+- The SDK can now be installed as an [NPM package](install/npm.md).
+- Added support for an `out` option when [configuring default consent](commands/configure/defaultconsent.md), which drops all events until consent is received (the existing `pending` option queues events and sends them once consent is received).
+- The [`onBeforeEventSend`](commands/configure/onbeforeeventsend.md) callback can now be used to prevent an event from being sent.
 - Now uses an XDM schema field group instead of `meta.personalization` when sending events about personalized content being rendered or clicked.
-- The [`getIdentity`](/help/web-sdk/commands/getidentity.md) command now returns the edge region ID alongside the identity.
+- The [`getIdentity`](commands/getidentity.md) command now returns the edge region ID alongside the identity.
 - Warnings and errors received from the server have been improved and are handled in a more appropriate fashion.
-- Added support for Adobe's Consent 2.0 standard for the [`setConsent`](/help/web-sdk/commands/setconsent.md) command.
+- Added support for Adobe's Consent 2.0 standard for the [`setConsent`](commands/setconsent.md) command.
 - Consent preferences, when received, are hashed and stored in local storage for an optimized integration among CMPs, Experience Platform Web SDK, and Experience Platform Edge Network. If you are collecting consent preferences, we now encourage you to call `setConsent` on every page load.
 - Two [monitoring hooks](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` and `onCommandRejected`, have been added.
 - Bug Fix: Personalization interaction notification events would contain duplicate information about the same activity when a user navigated to a new single-page app view, back to the original view, and clicked an element qualifying for conversion.

@@ -5,7 +5,7 @@ exl-id: 3693542a-69d3-4ad8-bea4-4cabf7d80563
 ---
 # `prehidingStyle`
 
-The `prehidingStyle` property allows you to define a CSS selector to hide personalized content until it loads. This property is valuable in synchronous Web SDK implementations to avoid flickering. Adobe recommends using the [prehiding snippet](../../personalization/manage-flicker.md) for asynchronous Web SDK implementations.
+The `prehidingStyle` property allows you to define a CSS selector to hide personalized content until it loads. This property is valuable in synchronous Web SDK implementations to avoid flickering. Adobe recommends using the [prehiding snippet](/help/collection/use-cases/personalization/manage-flicker.md) for asynchronous Web SDK implementations.
 
 The CSS selectors that you define in this property begin hiding content when you run the first [`sendEvent`](../sendevent/overview.md) command on a page. Content is unhidden when a response from Adobe is received, which typically includes personalized content. Content is also unhidden if the `sendEvent` command fails or times out.
 

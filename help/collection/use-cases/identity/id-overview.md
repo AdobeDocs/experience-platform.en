@@ -78,7 +78,7 @@ xdm.identityMap.ECID[0].id
 
 Then, set the target field to an XDM path where the field is of type `string`.
 
-![](/help/tags/extensions/client/web-sdk/assets/access-ecid-data-prep.png)
+![Datastream mapping screenshot](/help/tags/extensions/client/web-sdk/assets/access-ecid-data-prep.png)
 
 
 ### Retrieve the [!DNL ECID] through the `getIdentity()` command {#retrieve-ecid-getidentity}
@@ -108,14 +108,13 @@ alloy("getIdentity")
 
 ## Retrieve the CORE ID for the current user {#retrieve-coreid}
 
-To retrieve the CORE ID for a user, you can use the [`getIdentity()`](../commands/getidentity.md) command, as shown below.
+To retrieve the CORE ID for a user, you can use the [`getIdentity()`](/help/collection/js/commands/getidentity.md) command, as shown below.
 
 ```js
 alloy("getIdentity",{
   "namespaces": ["CORE"]
 });
 ```
-
 
 ## Using `identityMap` {#using-identitymap}
 
@@ -142,7 +141,6 @@ alloy("sendEvent", {
 >[!NOTE]
 >
 >Adobe recommends sending namespaces which represent a person, such as `CRMID`, as the primary identity.
-
 
 Each property within `identityMap` represents identities belonging to a particular [identity namespace](/help/identity-service/features/namespaces.md). The property name should be the identity namespace symbol, which you can find listed in the Adobe Experience Platform user interface under "[!UICONTROL Identities]". The property value should be an array of identities pertaining to that identity namespace.
 
