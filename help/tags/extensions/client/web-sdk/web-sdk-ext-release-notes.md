@@ -11,13 +11,13 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 ## Version 2.31.1 - July 31, 2025
 
 - Fixed an issue that prevented custom builds from running.
-- Contains [version 2.28.1](../../../../web-sdk/release-notes.md#2-28-1) of the Adobe Experience Platform Web SDK.
+- Contains [version 2.28.1](/help/collection/js/release-notes.md#2-28-1) of the Adobe Experience Platform Web SDK.
 
 ## Version 2.31.0 - July 24, 2025
 
 **New features**
 
-- Contains [version 2.28.0](//release-notes.md#2-28-0) of the Adobe Experience Platform Web SDK.
+- Contains [version 2.28.0](/help/collection/js/release-notes.md#2-28-0) of the Adobe Experience Platform Web SDK.
 
 **Fixes and improvements**
 
