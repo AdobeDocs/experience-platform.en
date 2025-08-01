@@ -15,7 +15,7 @@ This tutorial provides instructions to create an [!DNL Acxiom Real ID Audience C
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the [!DNL Acxiom Real ID Audience Connection] destination, here is a sample use case that [!DNL Adobe Experience Platform] customers can solve by using this connector.
+This connector supports clients who have Acxiom Real Identity loaded into Real-Time CDP (RTCDP) as an identifier. To help you better understand how and when you should use the [!DNL Acxiom Real ID Audience Connection] destination, here is a sample use case that [!DNL Adobe Experience Platform] customers can solve by using this connector.
 
 ### Send audiences from Experience Platform to your Acxiom account {#send-audiences}
 
@@ -27,6 +27,7 @@ For example, the Marketing Operations department at a global financial services 
 ## Prerequisites {#prerequisites}
 - **Confirm Terms of Use:** Before you can configure a new [!DNL Acxiom Real ID Audience Connection] destination, you must read and sign [!DNL Acxiom’s] Terms of Use Agreement. You will receive the link to the agreement once your executed sales order is complete. Until you sign the agreement, you will not see the [!DNL Acxiom Real ID Audience Connection] destination card in the Experience Platform destination catalog. After you accept and sign the agreement, [!DNL Adobe] will complete your onboarding process and you will see the [!DNL Acxiom Real ID Audience Connection] destination card.
 - **Know your Adobe organization ID:** Your [!DNL Adobe] organization ID is needed to complete your Terms of User Agreement. See [!DNL Adobe's] *Organizations in Experience Cloud* topic for details on how to [view your organization ID](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255).
+- **Obtain License for [DNL! Acxiom's Real ID] product:** Once a license is obtained, make Acxiom's Real ID available within RTCDP. See [Acxiom Data Enhancement](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement) for more information.
 
 
 ## Supported Destinations {#supported-destinations}
