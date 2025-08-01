@@ -129,7 +129,7 @@ The subsections below describe the configuration options for each service.
 
 ### Adobe Analytics settings {#analytics}
 
-This service controls whether and how data is sent to Adobe Analytics. See [Sending data to Adobe Analytics]().
+This service controls whether and how data is sent to Adobe Analytics.
 
 ![Adobe Analytics datastream settings.](assets/configure/analytics-config.png)
 
@@ -138,6 +138,8 @@ This service controls whether and how data is sent to Adobe Analytics. See [Send
 | [!UICONTROL Report Suite ID] | **(Required)** The ID of the Analytics report suite that you want to send data to. This ID can be found in the Adobe Analytics UI under [!UICONTROL Admin] > [!UICONTROL ReportSuites]. If multiple report suites are specified, then data is copied to each report suite. |
 | [!UICONTROL Visitor ID namespace] | (Optional) The namespace you want to use for the Adobe Analytics [visitorID](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitorid.html). When you send an event with a value specified for this namespace, it will be automatically used as the `visitorID` in Analytics. |
 | [!UICONTROL Report Suite Overrides]| In this section, you can add additional report suite IDs that you can use to override the default one. |
+
+See [Implement Adobe Analytics with the Edge Network](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/overview) in the Analytics implementation guide for more information.
 
 ### Adobe Audience Manager settings {#audience-manager}
 

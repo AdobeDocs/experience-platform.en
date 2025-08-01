@@ -65,9 +65,9 @@ This callback is the tag equivalent to [`onBeforeEventSend`](/help/collection/js
 
 A checkbox that enables the collection of link tracking data internal to your site or property. This checkbox is the tag equivalent to [`clickCollection.internalLinkEnabled`](/help/collection/js/commands/configure/clickcollection.md) in the JavaScript library. When you enable this checkbox, event grouping options appear:
 
-  * **[!UICONTROL No event grouping]**: Link tracking data is sent to Adobe in separate events. Link clicks sent in separate events can increase the contractual usage of data sent to Adobe Experience Platform.
-  * **[!UICONTROL Event grouping using session storage]**: Store link tracking data in session storage until the next page event. On the following page, the stored link tracking data and page view data is sent to Adobe at the same time. Adobe recommends enabling this setting when tracking internal links.
-  * **[!UICONTROL Event grouping using local object]**: Store link tracking data in a local object until the next page event. If a visitor navigates to a new page, link tracking data is lost. This setting is most beneficial in context of single-page applications.
+* **[!UICONTROL No event grouping]**: Link tracking data is sent to Adobe in separate events. Link clicks sent in separate events can increase the contractual usage of data sent to Adobe Experience Platform.
+* **[!UICONTROL Event grouping using session storage]**: Store link tracking data in session storage until the next page event. On the following page, the stored link tracking data and page view data is sent to Adobe at the same time. Adobe recommends enabling this setting when tracking internal links.
+* **[!UICONTROL Event grouping using local object]**: Store link tracking data in a local object until the next page event. If a visitor navigates to a new page, link tracking data is lost. This setting is most beneficial in context of single-page applications.
 
 >[!TIP]
 >
@@ -91,15 +91,15 @@ A regular expression that qualifies a link URL as a download link. This string i
 
 A callback function to evaluate and modify click-related properties before collection. This function runs before the [!UICONTROL On before event send callback], and is the tag equivalent to [`clickCollection.filterClickDetails`](/help/collection/js/commands/configure/clickcollection.md) in the JavaScript library. Within the code editor, you have access to the following variables:
 
-  * **`content.clickedElement`**: The DOM element that was clicked.
-  * **`content.pageName`**: The page name when the click happened.
-  * **`content.linkName`**: The name of the clicked link.
-  * **`content.linkRegion`**: The region of the clicked link.
-  * **`content.linkType`**: The type of link (exit, download, or other).
-  * **`content.linkURL`**: The destination URL of the clicked link.
-  * **`return true`**: Immediately exit the callback with the current variable values.
-  * **`return false`**: Immediately exit the callback and abort collecting data.
-  * Any variables defined outside of `content` can be used, but are not included in the payload sent to Adobe.
+* **`content.clickedElement`**: The DOM element that was clicked.
+* **`content.pageName`**: The page name when the click happened.
+* **`content.linkName`**: The name of the clicked link.
+* **`content.linkRegion`**: The region of the clicked link.
+* **`content.linkType`**: The type of link (exit, download, or other).
+* **`content.linkURL`**: The destination URL of the clicked link.
+* **`return true`**: Immediately exit the callback with the current variable values.
+* **`return false`**: Immediately exit the callback and abort collecting data.
+* Any variables defined outside of `content` can be used, but are not included in the payload sent to Adobe.
 
 >[!TIP]
 >
@@ -109,8 +109,8 @@ A callback function to evaluate and modify click-related properties before colle
 
 Automatically collect visitor information, which populates specific XDM fields for you. You can choose **[!UICONTROL All default context information]** or **[!UICONTROL Specific context information]**. It is the tag equivalent to [`context`](/help/collection/js/commands/configure/context.md) in the JavaScript library.
 
-  * **[!UICONTROL Web]**: Collects information about the current page.
-  * **[!UICONTROL Device]**: Collects information about the user's device. 
-  * **[!UICONTROL Environment]**: Collects information about the user's browser.
-  * **[!UICONTROL Place context]**: Collects information about the user's location.
-  * **[!UICONTROL High entropy user-agent hints]**: Collects more detailed information about the user's device.
+* **[!UICONTROL Web]**: Collects information about the current page.
+* **[!UICONTROL Device]**: Collects information about the user's device. 
+* **[!UICONTROL Environment]**: Collects information about the user's browser.
+* **[!UICONTROL Place context]**: Collects information about the user's location.
+* **[!UICONTROL High entropy user-agent hints]**: Collects more detailed information about the user's device.

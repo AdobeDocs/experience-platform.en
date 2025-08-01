@@ -69,6 +69,7 @@ alloy("sendMediaEvent", {
     }
 });
 ```
+
 >[!TAB Manual session tracking]
 
 ```javascript
@@ -155,6 +156,7 @@ alloy("sendMediaEvent", {
     }
 });
 ```
+
 >[!TAB Manual session tracking]
 
 ```javascript
