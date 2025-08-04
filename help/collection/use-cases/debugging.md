@@ -22,7 +22,7 @@ alloy("configure", {
 });
 ```
 
-See [`debugEnabled`](../commands/configure/debugenabled.md) for more information.
+See [`debugEnabled`](../js/commands/configure/debugenabled.md) for more information.
 
 ## Use the `setDebug` command
 
@@ -32,7 +32,7 @@ Similarly to the above boolean, this command enables debugging across all visito
 alloy("setDebug", {"enabled": true});
 ```
 
-See the [`setDebug`](../commands/setdebug.md) command for more information.
+See the [`setDebug`](../js/commands/setdebug.md) command for more information.
 
 ## Set a query string parameter
 
@@ -46,6 +46,6 @@ This method only applies to your local machine, allowing you to debug production
 
 The Adobe Experience Platform Debugger is a powerful tool that examines your web pages and helps you debug your implementation of Experience Cloud products. You can enable debugging from the configuration tab of the AEP Web SDK section.
 
-![Enable debugger](../assets/enable-debugging.png)
+![Enable debugger](../js/assets/enable-debugging.png)
 
 See [Adobe Experience Platform Debugger overview](/help/debugger/home.md) for more information.

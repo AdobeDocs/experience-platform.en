@@ -46,4 +46,4 @@ The contents of this `result` object depend on a combination of what command tha
 
 ## Command responses using the Web SDK tag extension
 
-The Web SDK tag extension equivalent to command responses is a rule that subscribes to the [**[!UICONTROL Send event complete]**](/help/tags/extensions/client/web-sdk/event-types.md#send-event-complete) event. You can then include the actions such as [**[!UICONTROL Apply propositions]**](/help/tags/extensions/client/web-sdk/actions/apply-propositions.md) or [**[!UICONTROL Apply response]**](/help/tags/extensions/client/web-sdk/actions/apply-response.md) to this rule.
+The Web SDK tag extension equivalent to command responses is a rule that subscribes to the [**[!UICONTROL Send event complete]**](/help/tags/extensions/client/web-sdk/event-types.md#send-event-complete) event. You can then include actions such as [**[!UICONTROL Apply propositions]**](/help/tags/extensions/client/web-sdk/actions/apply-propositions.md) or [**[!UICONTROL Apply response]**](/help/tags/extensions/client/web-sdk/actions/apply-response.md) to this rule.
