@@ -26,7 +26,7 @@ The Web In-app messaging functionality requires the latest version of the Web SD
 
 ### Configure a CSP for Web In-app Messaging {#csp}
 
-When you configure [Web In-App Messaging](../personalization/web-in-app-messaging.md), you must inclde the following directive in your CSP:
+When you configure [Web In-App Messaging](../personalization/web-in-app-messaging.md), you must include the following directive in your CSP:
 
 ```
 default-src  blob:;
@@ -99,7 +99,7 @@ Select the tag property which contains your Web SDK extension, and [create a new
 
 1. **[!UICONTROL Extension]**: [!UICONTROL Core]
 2. **[!UICONTROL Event Type]**: [!UICONTROL Click]
-3. Set the trigger for a specific element on the page, identifier by a CSS selector of your choosing.
+3. Set the trigger for a specific element on the page, identified by a CSS selector of your choosing.
 
     ![Image showing the event configuration screen.](assets/web-in-app-messaging/event-configuration-manual.png)
 

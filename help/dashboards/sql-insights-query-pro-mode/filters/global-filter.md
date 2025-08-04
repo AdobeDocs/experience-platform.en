@@ -19,9 +19,13 @@ The [!UICONTROL Create a global filter] dialog opens. Creating a global filter f
 
 >[!IMPORTANT]
 >
->You must include an ID and a value when you create a global filter. The sample values allow you to execute the SQL statement and build the chart. Note that the sample values you provide when composing your statement are replaced by the actual values you select for the date or global filter at runtime. 
+>You must include an ID and a value when you create a global filter. The sample values allow you to execute the SQL statement and build the chart. Note that the sample values you provide when composing your statement are replaced by the actual values you select for the date or global filter at runtime.
 
 After successfully running the query, the results tab displays the results. Select **[!UICONTROL Next]**.
+
+>[!NOTE]
+>
+>Query results are limited to 100 rows by default. To return more rows, add a LIMIT clause to your SQL query with the desired row count. To retrieve all rows and remove the default limit, use LIMIT 0 in your query.
 
 ![The [!UICONTROL Create a global filter dialog] with the dataset dropdown menu, the run icon and Next highlighted.](../../images/sql-insights-query-pro-mode/global-filter.png)
 

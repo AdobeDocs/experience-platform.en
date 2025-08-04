@@ -77,7 +77,7 @@ The [!UICONTROL Dataflow run details] page appears. The upper half of the screen
 
 ![UI image showing the dataflow run details page.](../assets/ui/alerts/dataflow-overview.png)
 
-The lower half of the page displays any [!UICONTROL Dataflow run errors] that ocurred during the dataflow run stage. From here, you can preview error diagnostics or use the [[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) to download error diagnostics or the file manifest that corresponds to your dataflow.
+The lower half of the page displays any [!UICONTROL Dataflow run errors] that occurred during the dataflow run stage. From here, you can preview error diagnostics or use the [[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) to download error diagnostics or the file manifest that corresponds to your dataflow.
 
 ![UI image showing the dataflow run details page, with a highlight on the errors section.](../assets/ui/alerts/dataflow-run-error.png)
 
