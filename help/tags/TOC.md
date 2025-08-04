@@ -101,6 +101,7 @@ role: Developer
       * [Overview](extensions/client/web-sdk/overview.md)
       * Configure {#configure}
         * [Overview](extensions/client/web-sdk/configure/config-overview.md)
+        * [SDK instance](extensions/client/web-sdk/configure/general.md)
         * [Datastreams](extensions/client/web-sdk/configure/datastreams.md)
         * [Consent](extensions/client/web-sdk/configure/consent.md)
         * [Identity](extensions/client/web-sdk/configure/identity.md)
@@ -108,6 +109,7 @@ role: Developer
         * [Data collection](extensions/client/web-sdk/configure/data-collection.md)
         * [Streaming media](extensions/client/web-sdk/configure/streaming-media.md)
         * [Configuration overrides](extensions/client/web-sdk/configure/configuration-overrides.md)
+        * [Advanced settings](extensions/client/web-sdk/configure/advanced-settings.md)
       * [Event types](./extensions/client/web-sdk/event-types.md)
       * Action types {#actions}
         * [Overview](extensions/client/web-sdk/actions/actions-overview.md)

@@ -11,6 +11,7 @@ role: Developer
 # Data collection {#collection}
 
 + [Overview](home.md)
++ [Permissions](permissions.md)
 + BrightScript {#brightscript}
   + [BrightScript overview](brightscript/brs-overview.md)
 + JavaScript {#js}
@@ -66,3 +67,22 @@ role: Developer
     + [Command responses](js/commands/command-responses.md)
   + [Monitoring hooks](js/monitoring-hooks.md)
   + [FAQ](js/faq.md)
++ Use cases {#use-cases}
+  + [Overview](use-cases/overview.md)
+  + [Client hints](use-cases/client-hints.md)
+  + [Client state](use-cases/client-state.md)
+  + [Collect commerce data](use-cases/collect-commerce-data.md)
+  + [Configure a CSP](use-cases/configuring-a-csp.md)
+  + [Debugging](use-cases/debugging.md)
+  + [Event deduplication](use-cases/event-duplication.md)
+  + Identity {#identity}
+    + [Overview](use-cases/identity/id-overview.md)
+    + [First-party device IDs](use-cases/identity/first-party-device-ids.md)
+    + [ID sharing](use-cases/identity/id-sharing.md)
+  + [Multiple SDK instances](use-cases/multiple-instances.md)
+  + Personalization {#personalization}
+    + [Overview](use-cases/personalization/pers-overview.md)
+    + [Display events](use-cases/personalization/display-events.md)
+    + [Manage flicker](use-cases/personalization/manage-flicker.md)
+    + [Rendering personalized content](use-cases/personalization/rendering-personalization-content.md)
+    + [Top and bottom page events](use-cases/personalization/top-bottom-page-events.md)
