@@ -26,4 +26,4 @@ When this option is enabled, the Web SDK attempts to store a user identifier in 
 
 >[!IMPORTANT]
 >
->Third-party cookies are not compatible with the [first-party device ID](/help/collection/js/identity/first-party-device-ids.md) functionality in Web SDK. You can either use first-party device IDs or you can use third-party cookies; you cannot use both features simultaneously.
+>Third-party cookies are not compatible with the [first-party device ID](/help/collection/use-cases/identity/first-party-device-ids.md) functionality in Web SDK. You can either use first-party device IDs or you can use third-party cookies; you cannot use both features simultaneously.

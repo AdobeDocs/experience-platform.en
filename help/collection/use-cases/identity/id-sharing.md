@@ -51,4 +51,7 @@ For more information on how to pass visitor IDs from a mobile app to a WebView, 
 
 ## Implement cross-domain ID sharing {#cross-domain-sharing}
 
-See the [`appendIdentityToUrl`](../commands/appendidentitytourl.md) command for implementation instructions using both the Web SDK tag extension and the Web SDK JavaScript library.
+See the following links, depending on how you have configured the Web SDK:
+
+* **JavaScript library**: [`appendIdentityToUrl`](../../js/commands/appendidentitytourl.md) command
+* **Tag extension**: [Redirect with identity](/help/tags/extensions/client/web-sdk/actions/redirect-with-identity.md) action

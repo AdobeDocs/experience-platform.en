@@ -8,7 +8,7 @@ exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
 
 There are three supported ways to use Adobe Experience Platform Web SDK:
 
-1. **[Web SDK tag extension](extension.md)**: Adobe recommends using this method. Install a tag loader on your site, then use the Adobe Experience Platform Data Collection UI to configure your implementation.
+1. **[Web SDK tag extension](/help/tags/extensions/client/web-sdk/overview.md)**: Adobe recommends using this method. Install a tag loader on your site, then use the Adobe Experience Platform Data Collection UI to configure your implementation.
 1. **[Web SDK JavaScript library](library.md)**: Reference a CDN-hosted library file, or host the library file using your own infrastructure. Make calls to the library within code on your site.
 1. **[NPM](npm.md)**: Install the Web SDK on your site using the NPM package manager .
 

@@ -223,7 +223,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 **New features**
 
-- Added support for [Page by Page Full Migration](home.md). The Adobe Target profile will now be preserved as a visitor moves between at.js and Web SDK pages.
+- Added support for Page by Page Full Migration. The Adobe Target profile will now be preserved as a visitor moves between at.js and Web SDK pages.
 - Added configurable support for [high entropy User-Agent Client Hints](../use-cases/client-hints.md).
 - Added support for the [`applyResponse`](commands/applyresponse.md) command. This enables hybrid personalization via the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/).
 - QA mode links now work across multiple pages.

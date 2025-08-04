@@ -9,7 +9,7 @@ exl-id: 798ecc52-1af1-4480-a2a3-3198a83538f8
 
 The Edge Network itself is stateless (it does not maintain its own session). However, there are certain use-cases which require client-side state persistency, such as:
 
-* Consistent device identification (see [visitor identification](visitor-identification.md))
+* Consistent device identification
 * Collect and enforce user consent
 * Keeping personalization session ID
 
@@ -141,4 +141,4 @@ All secure cookies have the [SameSite attribute](https://developer.mozilla.org/e
 * For the first-party cookies (`kndcrt_*`), the `Secure` flag is only set when the request context is secure (HTTPS) and when referrer ([Referer HTTP Header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer)) is also HTTPS. If the referrer is not secure (HTTP), the `Secure` flag is omitted to permit the Web SDK to read them. A secure cookie cannot be read from an unsecure context.
 * For the third-party cookie (demdex), the `Secure` flag is always set, since all requests are HTTPS, so the request context is secure, and this cookie is never read from JavaScript.
 
-The `Secure` flag is not present in the [metadata representation of cookies](#state-as-metadata). Only the `SameSite` attribute is included. In this case, it is the client's responsibility to correctly set the `Secure` flag whenever the `SameSite` attribute is present. Cookies with `SameSite=None` must also specify the `Secure` attribute, since they require a secure context (HTTPS).
+The `Secure` flag is not present in the metadata representation of cookies. Only the `SameSite` attribute is included. In this case, it is the client's responsibility to correctly set the `Secure` flag whenever the `SameSite` attribute is present. Cookies with `SameSite=None` must also specify the `Secure` attribute, since they require a secure context (HTTPS).
