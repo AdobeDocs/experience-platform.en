@@ -20,6 +20,18 @@ Dataset export dataflows created prior to November 2024 will automatically stop 
 
 If you need the dataflows to keep exporting data after **September 1st, 2025**, follow the steps in this guide to extend their schedules. You must do this for each destination that you are exporting datasets to.
 
+## Affected destinations {#affected-destinations}
+
+The information in this page applies to dataset export dataflows to the following destinations:
+
+* [[!DNL Azure Data Lake Storage Gen2]](../catalog/cloud-storage/adls-gen2.md)
+* [[!DNL Data Landing Zone]](../catalog/cloud-storage/data-landing-zone.md)
+* [[!DNL Google Cloud Storage]](../catalog/cloud-storage/google-cloud-storage.md)
+* [[!DNL Amazon S3]](../catalog/cloud-storage/amazon-s3.md#changelog)
+* [[!DNL Azure Blob]](../catalog/cloud-storage/azure-blob.md#changelog) 
+* [[!DNL SFTP]](../catalog/cloud-storage/sftp.md#changelog)
+* [[!DNL Marketo Measure Ultimate]](../catalog/adobe/marketo-measure-ultimate.md)
+
 ## Step 1: Identify affected dataflows {#identify-dataflows}
 
 Before extending the export schedule for your dataset export dataflows, you first need to identify which dataflows are affected by the upcoming expiration date. Follow the steps below to locate dataflows that require action.
@@ -60,6 +72,14 @@ Now you can modify the export schedule to extend beyond September 1st, 2025.
     >[!TIP]
     >
     >Check the [dataset export documentation](export-datasets.md#scheduling) for detailed guidance on how to configure dataset export schedules.
+
+## What happens if I miss the September 1st, 2025 deadline? {#missed-deadline}
+
+If your dataset export dataflows expire on September 1st, 2025 and you haven't extended their schedules, there is a **30 days grace period** where you can contact Adobe to re-enable your dataflows without any data loss.
+
+>[!IMPORTANT]
+>
+>While Adobe provide this grace period, we strongly recommend extending your schedules before the September 1st, 2025 deadline to ensure uninterrupted data exports and avoid any potential service disruptions.
 
 ## Video tutorial {#video}
 
