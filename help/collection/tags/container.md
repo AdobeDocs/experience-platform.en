@@ -52,8 +52,8 @@ The `buildInfo` object contains information around the build itself. This object
 
 * **`buildInfo.minified`**: A boolean that indicates if the library is minified. Production builds are typically minified (`true`), while development and staging builds are typically not (`false`).
 * **`buildInfo.buildDate`**: The date and time that your JavaScript file was built and published.
-* **`buildInfo.turbineBuildDate`**: The date and time of the build used to publish your JavaScript file.
-* **`buildInfo.turbineVersion`**: The version of the tool used to build and publish your JavaScript file.
+* **`buildInfo.turbineBuildDate`**: The date and time of the build used to publish your tag property's JavaScript file.
+* **`buildInfo.turbineVersion`**: The version of the tool used to build and publish your tag property's JavaScript file.
 
 ## `_container.company`
 
@@ -67,14 +67,14 @@ The `company` object displays information around the IMS organization that owns 
 
 The `dataElements` object provides a reference of all data elements within your tag property. Each data element contains the following:
 
-* **`dataElements.modulePath`**: The JavaScript file that determines the logic of the data element type.
+* **`dataElements.modulePath`**: The path of the JavaScript file that determines the logic of that data element type.
 * **`dataElements.settings`**: The settings of the data element. Properties within this object depend on the data element type.
 
 ## `_container.environment`
 
 The `environment` object states which build environment that the tag property currently is using.
 
-* **`environment.id`**: The unique identifier for the environment. You can use this ID when making API calls against this tag property. You can also locate the environment ID by selecting the **[!UICONTROL Install]** icon under [[!UICONTROL Environments]](/help/tags/ui/publishing/environments.md) in the tags UI.
+* **`environment.id`**: The unique identifier for the environment. You can locate the environment ID by selecting the **[!UICONTROL Install]** icon under [[!UICONTROL Environments]](/help/tags/ui/publishing/environments.md) in the tags UI.
 * **`environment.stage`**: The environment type. Valid values include `development`, `staging`, and `production`.
 
 ## `_container.extensions`
