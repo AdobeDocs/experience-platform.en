@@ -45,7 +45,7 @@ GET /quota?quotaType={QUOTA_TYPE}
 
 | Parameter | Description |
 | --- | --- |
-| `{QUOTA_TYPE}` | An optional query parameter that specifies the type of quota to retrieve. If no `quotaType` parameter is provided, all quota values are returned in the API response. Accepted values include:<ul><li>`datasetExpirationQuota`: The number of active dataset expirations and your total allowance.</li><li>`dailyConsumerDeleteIdentitiesQuota`: The number of record deletes today and your daily quota.</li><li>`monthlyConsumerDeleteIdentitiesQuota`: The. number of record deletes this month and your monthly quota.</li></ul> |
+| `{QUOTA_TYPE}` | An optional query parameter that specifies the type of quota to retrieve. If no `quotaType` parameter is provided, all quota values are returned in the API response. Accepted values include:<ul><li>`datasetExpirationQuota`: The number of active dataset expirations and your total allowance.</li><li>`dailyConsumerDeleteIdentitiesQuota`: The number of record deletes today and your daily quota.</li><li>`monthlyConsumerDeleteIdentitiesQuota`: The number of record deletes this month and your monthly quota.</li></ul> |
 
 **Request**
 
