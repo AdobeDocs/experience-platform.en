@@ -391,7 +391,7 @@ Cancel a pending dataset expiration configuration by making a DELETE request to 
 
 >[!NOTE]
 >
->Only dataset expirations in `pending` status can be cancelled. Attempting to cancel an expiration that is already executing, completed, or cancelled returns an HTTP 404 error.
+>Only dataset expirations in the `pending` status can be cancelled. Attempting to cancel an expiration that is already `executing`, `completed`, or `cancelled` returns HTTP 404 (Not Found). If the dataset already has an active expiration (status `pending` or `executing`), the request returns HTTP 400 (Bad Request).
 
 **API format**
 
@@ -451,6 +451,42 @@ A successful response returns HTTP status 200 (OK) and the cancelled dataset exp
 | `expiry`      | The scheduled expiration timestamp for the dataset.                    |
 | `updatedAt`   | The timestamp for the most recent update.                              |
 | `updatedBy`   | The identifier and email of the user or service that last updated the dataset expiration configuration. |
+
+**Example 400 (Bad Request) response**
+
+A 400 error occurs when attempting to cancel a dataset that already has an active expiration.
+
+<!-- "type": "http://ns.adobe.com/aep/errors/HYGN-3102-400", -->
+
+```json
+{
+  "type": "Experience Platform Data Hygiene Error",
+  "title": "The requested dataset already has an existing expiration. Additional detail: A TTL already exists for datasetId=686e9ca25ef7462aefe72c93",
+  "status": 400,
+  "report": {
+    "tenantInfo": {
+      "sandboxName": "prod",
+      "sandboxId": "not-applicable",
+      "imsOrgId": "{IMS_ORG_ID}}"
+    },
+    "additionalContext": {
+      "Invoking Client ID": "acp_privacy_hygiene"
+    }
+  },
+  "error-chain": [
+    {
+      "serviceId": "HYGN",
+      "errorCode": "HYGN-3102-400",
+      "invokingServiceId": "acp_privacy_hygiene",
+      "unixTimeStampMs": 1754408150394
+    }
+  ]
+}
+```
+
+>[!NOTE]
+>
+>A 404 error occurs when attempting to cancel a dataset expiration that is already `completed` or `cancelled`.  
 
 ## Appendix
 
