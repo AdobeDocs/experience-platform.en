@@ -157,13 +157,13 @@ The following table describes the properties in the response.
 | `results`        | Array of record delete work order objects. Each object contains the fields below.|
 | `workorderId`    | The unique identifier for the record delete work order.                          |
 | `orgId`          | Your unique organization identifier.                                             |
-| `bundleId`       | The unique identifier of the bundle containing this work order.                  |
+| `bundleId`       | The unique identifier of the bundle containing this record delete work order. Bundling allows multiple deletion orders to be grouped and processed together by downstream services.  |
 | `action`         | The action type requested in the work order.                                     |
 | `createdAt`      | The timestamp when the work order was created.                                   |
 | `updatedAt`      | The timestamp when the work order was last updated.                              |
 | `operationCount` | The number of operations included in the work order.                             |
 | `targetServices` | List of target services for the work order.                                      |
-| `status`         | Current status of the work order.                                                |
+| `status`         | Current status of the work order. Possible values are: `received`,`validated`, `submitted`, `ingested`, `completed`, and `failed`.|
 | `createdBy`      | The email and identifier of the user who created the work order.                 |
 | `datasetId`      | The unique identifier for the dataset associated with the work order. If the request applies to all datasets, this field will be set to ALL. |
 | `datasetName`    | The name of the dataset associated with the work order.                          |
@@ -212,7 +212,7 @@ curl -X POST \
   -d '{
         "displayName": "Acme Loyalty - Customer Data Deletion",
         "description": "Delete all records associated with the specified email addresses from the Acme_Loyalty_2023 dataset.",
-        "action": "delete-identity",
+        "action": "delete_identity",
         "datasetId": "7eab61f3e5c34810a49a1ab3",
         "namespacesIdentities": [
           {
@@ -235,7 +235,7 @@ The following table describes the properties for creating a record delete work o
 | --- | --- |
 | `displayName`          | A human-readable label for this record delete work order. |
 | `description`          | A description of the record delete work order. |
-| `action`               | The action requested for the record delete work order. To delete records associated with a given identity, use `delete-identity`. |
+| `action`               | The action requested for the record delete work order. To delete records associated with a given identity, use `delete_identity`. |
 | `datasetId`            | The unique identifier for the dataset. Use the dataset ID for a specific dataset, or `ALL` to target all datasets. Datasets must have a primary identity or identity map. If an identity map exists, it will be present as a top-level field named `identityMap`.<br>Note that a dataset row may have many identities in its identity map, but only one can be marked as primary. `"primary": true` must be included to force the `id` to match a primary identity. |
 | `namespacesIdentities` | An array of objects, each containing:<br><ul><li> `namespace`: An object with a `code` property specifying the identity namespace (e.g., "email").</li><li> `IDs`: An array of identity values to delete for this namespace.</li></ul>Identity namespaces provide context to identity data. You can use standard namespaces provided by Experience Platform or create your own. To learn more, see the [identity namespace documentation](../../identity-service/features/namespaces.md) and the [Identity Service API specification](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
@@ -272,7 +272,7 @@ The following table describes the properties in the response.
 | --- | --- |
 | `workorderId`    | The unique identifier for the record delete work order. Use this value to look up the status or details of the deletion. |
 | `orgId`          | Your unique organization identifier.  |
-| `bundleId`       | The unique identifier of the bundle containing this record delete work order. Bundling allows multiple deletion orders to be grouped and processed together. |
+| `bundleId`       | The unique identifier of the bundle containing this record delete work order. Bundling allows multiple deletion orders to be grouped and processed together by downstream services. |
 | `action`         | The action type requested in the record delete work order. |
 | `createdAt`      | The timestamp when the work order was created.             |
 | `updatedAt`      | The timestamp when the work order was last updated.        |
@@ -289,7 +289,7 @@ The following table describes the properties in the response.
 
 >[!NOTE]
 >
->The action property for record delete work orders is currently `identity-delete` in API responses. If the API changes to use a different value (such as `delete-identity`), this documentation will be updated accordingly.
+>The action property for record delete work orders is currently `identity-delete` in API responses. If the API changes to use a different value (such as `delete_identity`), this documentation will be updated accordingly.
 
 ## Retrieve details for a specific record delete work order {#lookup}
 
@@ -425,12 +425,34 @@ A successful response returns the updated work order request.
     "profile",
     "datalake"
   ],
-  "status": "in-progress",
+  "status": "received",
   "createdBy": "b.tarth@acme.com <b.tarth@acme.com> 8E7B321CABC8@acme.com",
   "datasetId": "1a2b3c4d5e6f7890abcdef12",
   "datasetName": "Acme_Marketing_2024",
   "displayName": "Updated Marketing Identity Delete Request",
-  "description": "Updated deletion request for marketing data"
+  "description": "Updated deletion request for marketing data",
+  "productStatusDetails": [
+        {
+            "productName": "Data Management",
+            "productStatus": "waiting",
+            "createdAt": "2024-06-12T20:11:18.447747Z"
+        },
+        {
+            "productName": "Identity Service",
+            "productStatus": "success",
+            "createdAt": "2024-06-12T20:36:09.020832Z"
+        },
+        {
+            "productName": "Profile Service",
+            "productStatus": "waiting",
+            "createdAt": "2024-06-12T20:11:18.447747Z"
+        },
+        {
+            "productName": "Journey Orchestrator",
+            "productStatus": "success",
+            "createdAt": "2024-06-12T20:12:19.843199Z"
+        }
+    ]
 }
 ```
 
@@ -438,17 +460,18 @@ A successful response returns the updated work order request.
 | ---------------- | ----------------------------------------------------------------------------------------- |
 | `workorderId`    |   The unique identifier for the record delete work order.|
 | `orgId`           |   Your organization's unique identifier.|
-| `bundleId`        |   The unique identifier of the bundle this record delete work order is associated with, used for debugging purposes.|
+| `bundleId`        |  The unique identifier of the bundle containing this record delete work order. Bundling allows multiple deletion orders to be grouped and processed together by downstream services.|
 | `action`          |   The action type requested in the record delete work order.|
 | `createdAt`       |   The timestamp when the work order was created.|
 | `updatedAt`       |   The timestamp when the work order was last updated.|
 | `operationCount`  |   The number of operations included in the work order.|
 | `targetServices`  |   A list of target services impacted by this record delete work order.|
-| `status`          |   The current status of the record delete work order.|
+| `status`          |   The current status of the record delete work order. Possible values are: `received`,`validated`, `submitted`, `ingested`, `completed`, and `failed`.|
 | `createdBy`       |   The email and identifier of the user who created the record delete work order.|
 | `datasetId`       |   The unique identifier for the dataset associated with the record delete work order.|
 | `datasetName`    |   The name of the dataset associated with the record delete work order.|
 | `displayName`    |   A human-readable label for the record delete work order.|
 | `description`    |   A description of the record delete work order.|
+| `productStatusDetails` | An array that lists the current status of downstream processes related to the request. Each array object contains the following properties:<ul><li>`productName`: The name of the downstream service.</li><li>`productStatus`: The current processing status of the request from the downstream service.</li><li>`createdAt`: A timestamp of when the most recent status was posted by the service.</li></ul> The `productStatusDetails` property becomes available once the workorder is submitted to downstream services to begin their work. |
 
 {style="table-layout:auto"}
