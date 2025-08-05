@@ -1,42 +1,107 @@
 ---
-keywords: Experience Platform;home;popular topics;Oracle;oracle
-solution: Experience Platform
-title: Create an Oracle Base Connection Using the Flow Service API
-type: Tutorial
-description: Learn how to connect Oracle to Experience Platform using the Flow Service API.
+title: Connect Oracle DB To Experience Platform Using The Flow Service API
+description: Learn how to connect Oracle DB to Experience Platform using APIs.
 exl-id: b1cea714-93ff-425f-8e12-6061da97d094
 ---
-# Create an [!DNL Oracle] base connection using the [!DNL Flow Service] API
+# Connect [!DNL Oracle DB] to Experience Platform using the [!DNL Flow Service] API
 
-A base connection represents the authenticated connection between a source and Adobe Experience Platform.
-
-This tutorial walks you through the steps to create a base connection for [!DNL Oracle] using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Read this guide to learn how to connect your [!DNL Oracle DB] account to Adobe Experience Platform using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Getting started
 
-This guide requires a working understanding of the following components of Adobe Experience Platform:
+This guide requires a working understanding of the following components of Experience Platform:
 
-* [Sources](../../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Experience Platform] services.
-* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Experience Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to successfully connect to [!DNL Oracle] using the [!DNL Flow Service] API.
-
-| Credential | Description |
-| ---------- | ----------- |
-| `connectionString` | The connection string used to connect to [!DNL Oracle]. The [!DNL Oracle] connection string pattern is: `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
-| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Oracle] is `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
-
-For more information about getting started refer to this [[!DNL Oracle] document](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199).
 
 ### Using Experience Platform APIs
 
 For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../../../landing/api-guide.md).
 
-## Create a base connection
+### Gather required credentials
 
-A base connection retains information between your source and Experience Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
+Read the [[!DNL Oracle DB] overview](../../../../connectors/databases/oracle.md#prerequisites) for information on authentication.
 
-To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Oracle] authentication credentials as part of the request parameters.
+## Connect [!DNL Oracle DB] to Experience Platform on Azure {#azure}
+
+Read the steps below for information on how to connect your [!DNL Oracle DB] account to Experience Platform on Azure.
+
+### Create a base connection for [!DNL Oracle DB] on Experience Platform on Azure {#azure-base}
+
+A base connection links your source to Experience Platform, storing authentication details, connection status, and a unique ID. Use this ID to browse source files and identify specific items to ingest, including their data types and formats.
+
+**API format**
+
+```https
+POST /connections
+```
+
+To create a base connection ID, make a POST request to the `/connections` endpoint and provide your [!DNL Oracle DB] authentication credentials as part of the request parameters.
+
+**Request**
+
+The following request creates a base connection for [!DNL Oracle DB] using connection string authentication.
+
++++View request
+
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "Oracle DB base connection",
+    "description": "A base connection to connect Oracle DB to Experience Platform on Azure",
+    "auth": {
+      "specName": "ConnectionString",
+      "params": {
+        "connectionString": "Host={HOST};Port={PORT};Sid={SID};UserId={USERNAME};Password={PASSWORD}"
+      }
+    },
+    "connectionSpec": {
+      "id": "d6b52d86-f0f8-475f-89d4-ce54c8527328",
+      "version": "1.0"
+    }
+  }'
+```
+
+| Parameter | Description |
+| --------- | ----------- |
+| `auth.params.connectionString` | The connection string used to connect to [!DNL Oracle DB]. The [!DNL Oracle DB] connection string pattern is: `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
+| `connectionSpec.id` | The [!DNL Oracle] connection specification ID: `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
+
++++
+
+**Response**
+
+A successful response returns details of the newly created base connection, including its unique identifier (`id`).
+
++++View response
+
+```json
+{
+    "id": "f088e4f2-2464-480c-88e4-f22464b80c90",
+    "etag": "\"43011faa-0000-0200-0000-5ea740cd0000\""
+}
+```
+
++++
+
+## Connect [!DNL Oracle DB] to Experience Platform on Amazon Web Services {#aws}
+
+>[!AVAILABILITY]
+>
+>This section applies to implementations of Experience Platform running on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../../../../landing/multi-cloud.md).
+
+Read the steps below for information on how to connect your [!DNL Oracle DB] account to Experience Platform on AWS.
+
+### Create a base connection for [!DNL Oracle DB] on Experience Platform on AWS {#aws-base}
 
 **API format**
 
@@ -46,51 +111,69 @@ POST /connections
 
 **Request**
 
-The following request creates a base connection for [!DNL Oracle]:
+The following request creates a base connection for [!DNL Oracle DB] to connect to Experience Platform on AWS.
+
++++View request
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Oracle connection",
-        "description": "A connection for Oracle",
-        "auth": {
-            "specName": "ConnectionString",
-            "params": {
-                    "connectionString": "Host={HOST};Port={PORT};Sid={SID};UserId={USERNAME};Password={PASSWORD}"
-                }
-        },
-        "connectionSpec": {
-            "id": "d6b52d86-f0f8-475f-89d4-ce54c8527328",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Oracle DB on Experience Platform AWS",
+      "description": "Oracle DB on Experience Platform AWS",
+      "auth": {
+          "specName": "Basic Authentication",
+          "params": {
+              "server": "diy.us-dawkins-1.oraclecloud.com",
+              "port": "1521",
+              "database": "mcmg_profits_diy.oraclecloud.com",
+              "username": "Admin",
+              "password": "xxxx",
+              "schema": "ADMIN",
+              "sslMode": "true"
+          }
+      },
+      "connectionSpec": {
+          "id": "26d738e0-8963-47ea-aadf-c60de735468a",
+          "version": "1.0"
+      }
+  }'
 ```
 
-| Parameter | Description |
-| --------- | ----------- |
-| `auth.params.connectionString` | The connection string used to connect to your [!DNL Oracle] database. The [!DNL Oracle] connection string pattern is: `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
-| `connectionSpec.id` | The [!DNL Oracle] connection specification ID: `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
+| Property | Description |
+| --- | --- |
+| `auth.params.server` | The IP address or host name of your [!DNL Oracle DB] server. |
+| `auth.params.port` | The port number of your [!DNL Oracle DB] server. |
+| `auth.params.database` | The name of the [!DNL Oracle DB] instance that you are connecting to. |
+| `auth.params.username` | The user account associated with your [!DNL Oracle DB] instance. |
+| `auth.prams.password` | The password that corresponds with your [!DNL Oracle DB] user account. |
+| `auth.params.schema` | The schema that contains your database objects. |
+| `auth.params.sslMode` | A boolean value that indicates whether SSL measures are enforced or not. |
+| `connectionSpec.id` | The connection spec ID that corresponds with the [!DNL Oracle DB] source. This ID value is fixed as: `d6b52d86-f0f8-475f-89d4-ce54c8527328.` |
+
++++
 
 **Response**
 
-A successful response returns details of the newly created connection, including its unique identifier (`id`). This ID is required to explore your data in the next tutorial.
+A successful response returns details of the newly created base connection, including its unique identifier (`id`).
+
++++View response]
 
 ```json
 {
-    "id": "f088e4f2-2464-480c-88e4-f22464b80c90",
-    "etag": "\"43011faa-0000-0200-0000-5ea740cd0000\""
+    "id": "f847950c-1c12-4568-a550-d5312b16fdb8",
+    "etag": "\"0c0099f4-0000-0200-0000-67da91710000\""
 }
 ```
 
-## Next steps
++++
 
-By following this tutorial, you have created an [!DNL Oracle] base connection using the [!DNL Flow Service] API. You can use this base connection ID in the following tutorials:
 
-* [Explore the structure and contents of your data tables using the [!DNL Flow Service] API](../../explore/tabular.md)
-* [Create a dataflow to bring database data to Experience Platform using the [!DNL Flow Service] API](../../collect/database-nosql.md)
+## Create a dataflow for [!DNL Oracle DB] data
+
+Now that you have successfully connected your [!DNL Oracle DB] account, you can now [create a dataflow and ingest data from your database into Experience Platform](../../collect/database-nosql.md).
