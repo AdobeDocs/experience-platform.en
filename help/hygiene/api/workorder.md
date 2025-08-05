@@ -197,6 +197,10 @@ POST /workorder
 >
 >You can only delete records from datasets whose associated XDM schema defines a primary identity or identity map.
 
+>[!NOTE]
+>
+>If you try to create a record delete work order for a dataset that already has an active expiration, the request returns HTTP 400 (Bad Request).An active expiration is any scheduled delete that has not yet completed.
+
 **Request**
 
 The following request deletes all records associated with specified email addresses from a particular dataset.
@@ -472,6 +476,6 @@ A successful response returns the updated work order request.
 | `datasetName`    |   The name of the dataset associated with the record delete work order.|
 | `displayName`    |   A human-readable label for the record delete work order.|
 | `description`    |   A description of the record delete work order.|
-| `productStatusDetails` | An array that lists the current status of downstream processes related to the request. Each array object contains the following properties:<ul><li>`productName`: The name of the downstream service.</li><li>`productStatus`: The current processing status of the request from the downstream service.</li><li>`createdAt`: A timestamp of when the most recent status was posted by the service.</li></ul> The `productStatusDetails` property becomes available once the workorder is submitted to downstream services to begin their work. |
+| `productStatusDetails` | An array listing the current status of downstream processes for the request. Each object contains:<ul><li>`productName`: The name of the downstream service.</li><li>`productStatus`: The current processing status from the downstream service.</li><li>`createdAt`: The timestamp when the most recent status was posted by the service.</li></ul>This property is available after the work order is submitted to downstream services to begin processing. |
 
 {style="table-layout:auto"}
