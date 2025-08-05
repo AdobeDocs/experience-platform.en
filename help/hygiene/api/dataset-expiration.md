@@ -391,7 +391,7 @@ Cancel a pending dataset expiration configuration by making a DELETE request to 
 
 >[!NOTE]
 >
->Only dataset expirations in the `pending` status can be cancelled. Attempting to cancel an expiration that is already `executing`, `completed`, or `cancelled` returns HTTP 404 (Not Found). If the dataset already has an active expiration (status `pending` or `executing`), the request returns HTTP 400 (Bad Request).
+>Only dataset expirations in the `pending` status can be cancelled. Attempting to cancel an expiration that is already `executing`, `completed`, or `cancelled` returns HTTP 400 (Bad Request).
 
 **API format**
 
@@ -454,7 +454,7 @@ A successful response returns HTTP status 200 (OK) and the cancelled dataset exp
 
 **Example 400 (Bad Request) response**
 
-A 400 error occurs when attempting to cancel a dataset that already has an active expiration.
+A 400 error occurs when attempting to cancel a dataset that has an `executing`, `completed`, or `cancelled` expiration configuration.
 
 ```json
 {
