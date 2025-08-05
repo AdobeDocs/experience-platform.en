@@ -108,7 +108,7 @@ The following filters are available for audit events in the UI:
 | [!UICONTROL Category] | Use the dropdown menu to filter displayed results by [category](#category). |
 | [!UICONTROL Action] | Filter by action. The actions available for each service can be seen in the resource table above. |
 | [!UICONTROL User] | Enter the complete user ID (for example, `johndoe@acme.com`) to filter by user. |
-| [!UICONTROL Status] | Filter by whether the action was allowed (completed) or denied due to lack of [access control](../../../access-control/home.md) permissions. |
+| [!UICONTROL Status] | Filter by whether the action was allowed, successful, failed or denied due to lack of [access control](../../../access-control/home.md) permissions. Core events may result in Deny or Allow, having attached Success or Failure enhanced events (for example, for a successfully executed user action, you will see Allow on core event and Success on the attached enhanced event). |
 | [!UICONTROL Date] | Select a start date and/or an end date to define a date range to filter results by. Data can be exported with a 90-day lookback period (for example, 2021-12-15 to 2022-03-15). This can differ by event type. |
 
 To remove a filter, select the "X" on the pill icon for the filter in question, or select **[!UICONTROL Clear all]** to remove all filters.
