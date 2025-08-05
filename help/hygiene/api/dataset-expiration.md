@@ -456,11 +456,9 @@ A successful response returns HTTP status 200 (OK) and the cancelled dataset exp
 
 A 400 error occurs when attempting to cancel a dataset that already has an active expiration.
 
-<!-- "type": "http://ns.adobe.com/aep/errors/HYGN-3102-400", -->
-
 ```json
 {
-  "type": "Experience Platform Data Hygiene Error",
+  "type": "http://ns.adobe.com/aep/errors/HYGN-3102-400",
   "title": "The requested dataset already has an existing expiration. Additional detail: A TTL already exists for datasetId=686e9ca25ef7462aefe72c93",
   "status": 400,
   "report": {
