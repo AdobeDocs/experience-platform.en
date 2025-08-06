@@ -48,7 +48,11 @@ If your usage reaches 80% and 90% of your licensed capacity, Experience Platform
 
 If your usage goes to above 100% of your licensed capacity, you will be considered in breach of your capacity. At this point, you will experience performance latency, and your service level targets (SLTs) will **not** be guaranteed.
 
-## Frequently asked questions
+## Access {#access}
+
+## Suggestions {#suggestions}
+
+## Frequently asked questions {#faq}
 
 The following section outlines frequently asked questions about the capabilities of Capacity.
 
