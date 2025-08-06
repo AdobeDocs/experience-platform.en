@@ -25,7 +25,7 @@ Provide a connection string to authenticate and connect your [!DNL Oracle DB] ac
 | Credential | Description |
 | --- | --- |
 | Connection string | A connection string is a string of text used by applications to connect to a database. The [!DNL Oracle DB] connection string pattern is: `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
-| Connection spec ID | The connection spec ID returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection spec ID for [!DNL Oracle] is `d6b52d86-f0f8-475f-89d4-ce54c8527328`. **Note**: This credential is only required when connecting through the [!DNL Flow Service] API.|
+| Connection spec ID | The connection spec ID returns a source's connector properties, including authentication specs related to creating the base and source connections. The connection spec ID for [!DNL Oracle] is `d6b52d86-f0f8-475f-89d4-ce54c8527328`. **Note**: This credential is only required when connecting through the [!DNL Flow Service] API.|
 
 ### Authenticate to Experience Platform on Amazon Web Services {#aws}
 
@@ -44,7 +44,7 @@ Provide values for the following credentials to authenticate and connect your [!
 | Database | The specific [!DNL Oracle] database instance that you want to connect to. |
 | Schema | The container for database objects, such as tables, views, or procedures. |
 | SSL Mode | A boolean value that controls whether SSL is enforced or not. This configuration depends on your server support and defaults to `false`. |
-| Connection spec ID | The connection spec ID returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection spec ID for [!DNL Oracle] is `d6b52d86-f0f8-475f-89d4-ce54c8527328`. **Note**: This credential is only required when connecting through the [!DNL Flow Service] API.|
+| Connection spec ID | The connection spec ID returns a source's connector properties, including authentication specs related to creating the base and source connections. The connection spec ID for [!DNL Oracle] is `d6b52d86-f0f8-475f-89d4-ce54c8527328`. **Note**: This credential is only required when connecting through the [!DNL Flow Service] API.|
 
 
 ## Connect [!DNL Oracle] to [!DNL Experience Platform] using APIs

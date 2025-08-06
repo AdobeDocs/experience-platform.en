@@ -30,7 +30,7 @@ To connect to [!DNL Oracle DB], go to the *[!UICONTROL Databases]* category, sel
 
 >[!TIP]
 >
->Sources in the sources catalog display the **[!UICONTROL Set up]** option when a given source does not yet have an authenticated account. Once an authenticated account is created, this option changes to **[!UICONTROL Add data]**.
+>Sources show **[!UICONTROL Set up]** for new connections and **[!UICONTROL Add data]** if an account already exists.
 
 ![The sources catalog with "Oracle DB" selected.](../../../../images/tutorials/create/oracle/catalog.png)
 
@@ -60,7 +60,7 @@ To use connection string authentication, provide your [connection string](../../
 
 To create a new [!DNL Oracle DB] account and connect to Experience Platform on AWS, ensure that you are in a VA6 sandbox and then provide the necessary [credentials for authentication](../../../../connectors/databases/oracle.md#aws).
 
-![The new account interface in the sources workflow to connect to AWS](../../../../images/tutorials/create/oracle/aws.png)
+![The new account interface in the sources workflow to connect to AWS.](../../../../images/tutorials/create/oracle/aws.png)
 
 ## Create a dataflow for [!DNL Oracle DB] data
 

@@ -160,7 +160,7 @@ curl -X POST \
 
 **Response**
 
-A successful response returns details of the newly created base connection, including its unique identifier (`id`).
+A successful response returns details of the newly created base connection, including its unique identifier (`id`) and corresponding. You can use the ID to [create source connection](../../collect/database-nosql.md#create-a-source-connection) and the `etag` to [update your account](../../update.md).
 
 +++View response
 
