@@ -26,7 +26,7 @@ In order to increase the transparency and visibility of activities performed in 
 
 In a basic sense, an audit log tells **who** performed **what** action, and **when**. Each action recorded in a log contains metadata that indicates the action type, date and time, the email ID of the user who performed the action, and additional attributes relevant to the action type.
 
-When a user performs an action, two types of audit events are recorded. A core event captures the authorization result of the action, allow or deny, while an enhanced event captures the result of executing the action, success or failure. Multiple enhanced events can be linked to same core event, for example when activating a destination: core event records authorization of Destination Update action, while the enhanced events may record multiple Segment Activate actions.
+When a user performs an action, two types of audit events are recorded. A core event captures the authorization result of the action, [!UICONTROL allow] or [!UICONTROL deny], while an enhanced event captures the execution result, [!UICONTROL success] or [!UICONTROL failure]. Multiple enhanced events can be linked to the same core event. For example, when activating a destination, the core event records the authorization of the [!UICONTROL Destination Update] action, while the enhanced events record multiple [!UICONTROL Segment Activate] actions.
 
 >[!NOTE]
 >
@@ -85,7 +85,7 @@ You can view audit logs for different Experience Platform features within the **
 
 Audit logs are retained for 365 days after which they will be deleted from the system. If you require data of more than 365 days, you should export logs at a regular cadence to meet your internal policy requirements.
 
-Your method of requesting audit logs changes the allowable time period and the number of records you will have access to. [Exporting logs](#export-audit-logs) allows you to go back 365 days (in 90 day intervals) to a maximum of 10,000 audit logs (flatenned, core and enhanced), where as the [activity log UI](#filter-audit-logs) in Experience Platform displays the past 90 days to a maximum of 1000 core events, each of them with the corresponding enhanced events.
+Your method of requesting audit logs changes the allowable time period and the number of records you will have access to. [Exporting logs](#export-audit-logs) allows you to go back 365 days (in 90 day intervals) to a maximum of 10,000 audit logs (either core or enhanced), where as the [activity log UI](#filter-audit-logs) in Experience Platform displays the past 90 days to a maximum of 1000 core events, each of them with the corresponding enhanced events.
 
 Select an event from the list to view its details in the right rail.
 
@@ -108,7 +108,7 @@ The following filters are available for audit events in the UI:
 | [!UICONTROL Category] | Use the dropdown menu to filter displayed results by [category](#category). |
 | [!UICONTROL Action] | Filter by action. The actions available for each service can be seen in the resource table above. |
 | [!UICONTROL User] | Enter the complete user ID (for example, `johndoe@acme.com`) to filter by user. |
-| [!UICONTROL Status] | Filter by whether the action was allowed, successful, failed or denied due to lack of [access control](../../../access-control/home.md) permissions. Core events may result in Deny or Allow, having attached Success or Failure enhanced events (for example, for a successfully executed user action, you will see Allow on core event and Success on the attached enhanced event). |
+| [!UICONTROL Status] | Filter audit events by outcome: successful, failed, allowed or denied due to lack of [access control](../../../access-control/home.md) permissions. For an executed action, core events show **[!UICONTROL Allow]** or **[!UICONTROL Deny]** and may have attached enhanced events showing **[!UICONTROL Success]** or **[!UICONTROL Failure]**. For example, a successful action shows Allow on the core event and Success on the attached enhanced event. |
 | [!UICONTROL Date] | Select a start date and/or an end date to define a date range to filter results by. Data can be exported with a 90-day lookback period (for example, 2021-12-15 to 2022-03-15). This can differ by event type. |
 
 To remove a filter, select the "X" on the pill icon for the filter in question, or select **[!UICONTROL Clear all]** to remove all filters.
@@ -133,7 +133,7 @@ To export the current list of audit logs, select **[!UICONTROL Download log]**.
 
 >[!NOTE]
 >
->Logs can be requested in 90 day intervals up to 365 days in the past. However, the maximum amount of logs that can be returned during a single export is 10,000 (flatenned, core or enhanced).
+>Logs can be requested in 90 day intervals up to 365 days in the past. However, the maximum amount of logs that can be returned during a single export is 10,000 audit events (either core or enhanced).
 
 ![The Audits dashboard with the [!UICONTROL Download log] highlighted.](../../images/audit-logs/download.png)
 
