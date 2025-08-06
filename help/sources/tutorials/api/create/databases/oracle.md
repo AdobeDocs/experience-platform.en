@@ -162,7 +162,7 @@ curl -X POST \
 
 A successful response returns details of the newly created base connection, including its unique identifier (`id`).
 
-+++View response]
++++View response
 
 ```json
 {
