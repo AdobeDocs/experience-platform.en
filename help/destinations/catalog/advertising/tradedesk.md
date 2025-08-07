@@ -12,17 +12,15 @@ exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
 >[!IMPORTANT]
 >
 > Following the [internal upgrade](../../../release-notes/2025/july-2025.md#destinations) to the destinations service from July 2025, you may experience a **drop in the number of activated profiles** in your dataflows to [!DNL The Trade Desk].
-> This drop is caused by the **ECID mapping now being mandatory** for all activations to this destination platform.
+> This drop is caused by the introduction of the **ECID mapping requirement** for all activations to this destination platform. See the [mandatory mapping](#mandatory-mappings) section in this page for detailed information.
 >
 >**What changed:**
 >
->* ECID (Experience Cloud ID) mapping is now **required** for all profile activations.
->* Profiles without ECID mapping will be **dropped** from the activation dataflow.
->* This affects both new and existing dataflows.
+>* ECID (Experience Cloud ID) mapping is now **mandatory** for all profile activations.
+>* Profiles without ECID mapping will be **dropped** from existing activation dataflows.
 >
 >**What you need to do:**
 >
->* Ensure all your activation dataflows include **ECID mapping** in the identity mapping step. See the [mandatory mapping](#mandatory-mappings) section in this page for detailed information.
 >* Review your audience data to confirm profiles have valid ECID values.
 >* Monitor your activation metrics to verify expected profile counts.
 
@@ -134,7 +132,7 @@ All target identities described in the [supported identities](#supported-identit
 * **ECID** (Experience Cloud ID)
 * **The Trade Desk ID**
 
-Failure to map all required identities will prevent successful audience activation to [!DNL The Trade Desk]. Each identity serves a specific purpose in the integration, and all are required for the destination to work correctly.
+Failure to map all required identities prevents you from completing the activation workflow. Each identity serves a specific purpose in the integration, and all are required for the destination to work correctly.
 
 ![Screenshot showing the mandatory mappings](../../assets/catalog/advertising/tradedesk/mandatory-mappings.png)
 
