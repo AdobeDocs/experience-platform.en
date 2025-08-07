@@ -129,7 +129,7 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Source | Description |
 | --- | --- |
-| Support for [!DNL Didomi] (Streaming SDK) | Use the [!DNL Didomi] source to ingest consent and preference management data from [!DNL Didomi], supporting compliance with privacy regulations and consent-based marketing strategies. Read the [[!DNL Didomi] source overview](../../sources/connectors/consent-and-preferences/didomi.md) for information on how to get setup. For steps on creating a source connection, read the [[!DNL Didomi] source connection guide](../../sources/tutorials/ui/create/consent-and-preferences/didomi.md).|
+| [!BADGE Beta]{type=Informative} Support for [!DNL Didomi] (Streaming SDK) | Use the [!DNL Didomi] source to ingest consent and preference management data from [!DNL Didomi], supporting compliance with privacy regulations and consent-based marketing strategies. Read the [[!DNL Didomi] source overview](../../sources/connectors/consent-and-preferences/didomi.md) for information on how to get setup. For steps on creating a source connection, read the [[!DNL Didomi] source connection guide](../../sources/tutorials/ui/create/consent-and-preferences/didomi.md).|
 
 **New or updated functionality**
 

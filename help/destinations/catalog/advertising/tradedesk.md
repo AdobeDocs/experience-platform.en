@@ -8,14 +8,6 @@ exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
 
 ## Overview {#overview}
 
->[!IMPORTANT]
->
->* Starting July 31, 2025, you can see two **[!DNL The Trade Desk]** cards side-by-side in the destinations catalog. This is due to an internal upgrade to the destinations service. The existing **[!DNL The Trade Desk]** destination connector has been renamed to **[!UICONTROL (Deprecated) The Trade Desk]** and a new card with the name **[!UICONTROL The Trade Desk]** is now available to you. 
->* Use the new **[!UICONTROL The Trade Desk]** connection in the catalog for new activation data flows. If you have any active dataflows to the **[!UICONTROL (Deprecated) The Trade Desk]** destination, they will be updated automatically, so no action is required from you.
->* If you are creating dataflows through the [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/), you must update your [!DNL flow spec ID] and [!DNL connection spec ID] to the following values:
->   * Flow spec ID: `86134ea1-b014-49e8-8bd3-689f4ce70578`
->   * Connection spec ID: `1029798b-a97f-4c21-81b2-e0301471166e`
-
 Use this destination connector to send profile data to [!DNL The Trade Desk]. This connector sends data to the [!DNL The Trade Desk] first-party endpoint. The integration between Adobe Experience Platform and [!DNL The Trade Desk] does not support exporting data to the [!DNL The Trade Desk] third-party endpoint.
 
 [!DNL The Trade Desk] is a self-service platform for ad buyers to execute retargeting and audience-targeted digital campaigns across display, video, and mobile inventory sources.
