@@ -170,7 +170,7 @@ You can use the following sources to ingest data from your database to Experienc
 | [[!DNL MariaDB]](connectors/databases/mariadb.md) | Batch | Azure |
 | [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) | Batch | Azure |
 | [[!DNL MySQL]](connectors/databases/mysql.md) | Batch | Azure, AWS |
-| [[!DNL Oracle]](connectors/databases/oracle.md) | Batch | Azure |
+| [[!DNL Oracle]](connectors/databases/oracle.md) | Batch | Azure, AWS |
 | [[!DNL PostgreSQL]](connectors/databases/postgres.md) | Batch | Azure, AWS |
 | [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) | Batch | Azure |
 
