@@ -30,6 +30,25 @@ For example, the Marketing Operations department at a global financial services 
 - **Obtain license for [DNL! Acxiom's Real ID] product:** Once a license is obtained, make Acxiom's Real ID available within Real-Time CDP. See [Acxiom Data Enhancement](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement) for more information.
 
 
+## Supported identities {#supported-identities}
+
+[!DNL Acxiom’s Real ID Audience Connection] destination supports the activation of identities described in the table below. Learn more about [identities](https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/namespaces).
+
+|Target Identity |Description |Considerations |
+|---------------|----------------|----------------|
+|Real ID|[!DNL Acxiom Real ID]|Select this target identity when your source identity is an Acxiom Real ID namespace.|
+|extern_id|Custom user IDs|Select this target identity when your source identity is a custom namespace.|
+
+## Supported audiences {#supported-audiences}
+
+This section describes which types of audiences you can export to this destination.
+
+|Audience origin |Supported |Description |
+|---------------|----------------|----------------|
+|Segmentation Service|✓|Audiences generated through the Experience Platform [Segmentation Service](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home).|
+|Custom uploads|✓|Audiences [imported](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/audience-portal#import-audience) into Experience Platform from CSV files.|
+
+
 ## Supported destinations {#supported-destinations}
 
 [!DNL Acxiom’s Real ID Audience Connection] destination currently supports audience activation to the following platforms. 
@@ -85,10 +104,9 @@ For the [!DNL Acxiom Real ID Audience Connection] destination to correctly recei
 
 
 
-In the **[!UICONTROL Source Field]** column, enter the name of the source attribute that you want to map to the corresponding target field, or select the arrow icon to open the **[!UICONTROL  Select source field]** screen.
+In the **[!UICONTROL Source Field]** column, enter the name of the source attribute that you want to map to the corresponding target field, or select the arrow icon to open the **[!UICONTROL  Select source field]** screen. Then, select **[!UICONTROL Next]**.
 ![Mapping screen](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_mapping_screen.png)
 
-Select **[!UICONTROL Next]**.
 
 If you are not using [!DNL Adobe’s] standard schema, see the [Query Service UI guide](../../../query-service/ui/overview.md) documentation for information on how to use the query service to populate the [!DNL Adobe] standard schema with your field names. 
 
@@ -118,6 +136,7 @@ You will need to provide the following information to your [!DNL Adobe] represen
 ## Next steps {#next-steps}
 
 By following this tutorial, you have successfully activated an audience to the selected destination platform. Next, contact your destination platform representative to begin setting up your campaign.
+
 
 
 
