@@ -3,9 +3,31 @@ title: Adobe Experience Platform Web SDK Extension Release Notes
 description: Adobe Experience Platform Web SDK Tag Extension
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 ---
-# Adobe Experience Platform Web SDK extension release notes
+
+# Web SDK extension release notes
 
 This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Experience Platform Web SDK release notes](/help/web-sdk/release-notes.md).
+
+## Version 2.31.1 - July 31, 2025
+
+- Fixed an issue that prevented custom builds from running.
+- Contains [version 2.28.1](../../../../web-sdk/release-notes.md#2-28-1) of the Adobe Experience Platform Web SDK.
+
+## Version 2.31.0 - July 24, 2025
+
+**New features**
+
+- Contains [version 2.28.0](../../../../web-sdk/release-notes.md#2-28-0) of the Adobe Experience Platform Web SDK.
+
+**Fixes and improvements**
+
+- Fixed an issue where an error is thrown when a datastream override is enabled via a data element.
+- Fixed an issue where empty `idSyncContainerId` overrides would throw an error.
+- When resolving media data elements, the event object is now included.
+
+**Known issues**
+
+- Following the release of v2.31.0, a problem was identified with the [custom components build](/help/web-sdk/install/create-custom-build.md) process. While custom builds continue to operate, all components are currently included in the build, resulting in a full-sized package regardless of component selection. A fix for this issue is being developed. If you rely on custom component selection to minimize build size, it is recommended to wait for a future release.
 
 
 ## Version 2.30.1 - May 27, 2025
