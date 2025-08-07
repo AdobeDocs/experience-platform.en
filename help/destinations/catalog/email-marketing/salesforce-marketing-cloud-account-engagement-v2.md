@@ -13,9 +13,13 @@ This integration enables seamless data synchronization between your customer pro
 
 This destination uses the [[!DNL Salesforce Import API v5]](https://developer.salesforce.com/docs/marketing/pardot/guide/import-v5.html) to efficiently process batch data exports.
 
->[!NOTE]
->
->This is the V2 Alpha version of the Salesforce Marketing Cloud Account Engagement destination. This destination supports batch export of profile data and is currently in Alpha release. For the streaming version, see the [[!DNL Salesforce Marketing Cloud Account Engagement]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) page.
+
+>[!IMPORTANT]
+> 
+> This is the V2 version of the [Salesforce Marketing Cloud Account Engagement](help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) destination. This version replaces the previous destination and is currently in Alpha release.
+> <br>
+> If you are currently using the previous version of the  [Salesforce Marketing Cloud Account Engagement](help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) destination, you must migrate to this V2 version before **January 2026**. After January 2026, Adobe will decommission the previous version and it will no longer be available.
+
 
 ## Use cases {#use-cases}
 
