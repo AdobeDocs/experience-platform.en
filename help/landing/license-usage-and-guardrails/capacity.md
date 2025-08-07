@@ -50,7 +50,95 @@ If your usage goes to above 100% of your licensed capacity, you will be consider
 
 ## Access {#access}
 
+To access the Capacity overview, select **[!UICONTROL License usage]** followed by **[!UICONTROL Capacity]**. 
+
+![The method to access the Capacity section is highlighted.](/help/landing/images/capacity/access-capacity.png)
+
+The Capacity overview page is displayed, showing information including a history of alerts as well as details of your organization's capacities.
+
+![The Capacity overview page is displayed in full, showing the alert history and the capacity details sections.](/help/landing/images/capacity/capacity-overview.png) {zoomable="yes" width="80%"}
+
+### Alert history {#alert-history}
+
+The **[!UICONTROL Alert history]** section displays a list of the most recent capacity breaches within your organization.
+
+![The Alert history section is displayed.](/help/landing/images/capacity/alert-history.png)
+
+| Column name | Description |
+| ----------- | ----------- |
+| Sandbox | The name of the sandbox where the capacity violation occurred. |
+| Alert | The capacity that has been breached in the sandbox. |
+| Timestamp | The data and time the violation occurred. |
+
+To view a full history of the alerts for your organization, select the ![three dots icon](/help/images/icons/more.png), followed by **[!UICONTROL View all]**. 
+
+IMAGE
+
+### Capacity details {#capacity-details}
+
+The Capacity details section outlines information about your organization's capacities. In this section, you can filter per sandbox and change the lookback period.
+
+IMAGE
+
+Currently, this displays capacity information about streaming throughput, streaming audiences, and edge audiences.
+
+#### Streaming throughput {#streaming-throughput}
+
+The streaming throughput section displays information about the streaming throughput throughout your organization's sandboxes. The streaming throughput value measures the combined peak inbound events per second for streaming ingestion into Profile service.
+
+IMAGE
+
+| Column name | Description |
+| ----------- | ----------- |
+| Sandbox | The name of the sandbox. |
+| Services | The service that is used by the sandbox. Currently, the only supported value is Profile. |
+| Usage (Peak) | The peak streaming throughput of data in the sandbox within the selected lookback period. |
+| Capacity | The maximum peak streaming throughput for the sandbox. |
+| Violation | If a violation has occurred, the type of violation for streaming throughput. |
+| Recommended actions | A column that describes the recommended action to alleviate the violation. |
+
+You can select the individual sandbox to see a more detailed view of the sandbox's streaming throughput.
+
+IMAGE
+
+The Streaming throughput details page is displayed. You can see a graph that displays the request throughput compared to the capacity limit, a list of the sandboxes and their throughputs, as well as a button to allocate your organization's capacities.
+
+IMAGE
+
+To update the organization's streaming throughput capacities, select **[!UICONTROL Allocate capacities]**. 
+
+IMAGE
+
+The allocation page appears. On this page, you can set your capacities for your different sandboxes. The sum of all the capacities **must** equal to the organization's capacity total.
+
+IMAGE
+
+>[!NOTE]
+>
+>You can only increment and decrement the new capacity in orders of **100**. For example, you can set the value of the sandbox's new capacity to 300 or 500, but you **cannot** set this value to 450.
+
+After updating the capacity allocations, select **Save** to finish the updates. Please note, it may take up to 10 minutes for the changes to be reflected on your organization.
+
+#### Audience count {#audience-count}
+
+The **Streaming audience count** and **Edge audience count** sections display the number of streaming and edge audiences within the sandbox as well as the maximum number of streaming and edge audiences allowed within the sandbox.
+
+IMAGE
+
+| Column name | Description |
+| ----------- | ----------- |
+| Sandbox | The name of the sandbox. |
+| Services | The service that is in use for the sandbox. |
+| Usage | The number of audiences of the listed type that are in the sandbox. |
+| Capacity | The maximum number of audiences of the listed type that are allowed in the sandbox. |
+
 ## Suggestions {#suggestions}
+
+You can resolve your streaming throughput violations by adopting one of the following recommendations:
+
+1. Increase the allocated capacity for the sandbox.
+2. Identify high throughput dataflows in the monitoring dashboard and apply throttling or filtering against these dataflows if needed.
+3. Optimize your ingestion by using batch ingestion for lower latency use cases.
 
 ## Frequently asked questions {#faq}
 
