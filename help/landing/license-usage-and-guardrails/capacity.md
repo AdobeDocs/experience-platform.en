@@ -115,7 +115,9 @@ IMAGE
 
 >[!NOTE]
 >
->You can only increment and decrement the new capacity in orders of **100**. For example, you can set the value of the sandbox's new capacity to 300 or 500, but you **cannot** set this value to 450.
+>You can only set the new capacity in orders of **100**. For example, you can set the value of the sandbox's new capacity to 300 or 500, but you **cannot** set this value to 450.
+>
+>If the value is not in the order of 100, it will be rounded up or down accordingly.
 
 After updating the capacity allocations, select **Save** to finish the updates. Please note, it may take up to 10 minutes for the changes to be reflected on your organization.
 
