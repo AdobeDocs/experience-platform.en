@@ -11,8 +11,8 @@ exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
 
 >[!IMPORTANT]
 >
-> Following the [internal upgrade](../../../release-notes/2025/july-2025.md#destinations) to the destinations service from July 2025, you may experience a **drop in the number of activated profiles** in your [!DNL The Trade Desk] dataflows.
-> This is due to **ECID mapping now being mandatory** for all activations to this destination platform.
+> Following the [internal upgrade](../../../release-notes/2025/july-2025.md#destinations) to the destinations service from July 2025, you may experience a **drop in the number of activated profiles** in your dataflows to [!DNL The Trade Desk].
+> This drop is caused by the **ECID mapping now being mandatory** for all activations to this destination platform.
 >
 >**What changed:**
 >
