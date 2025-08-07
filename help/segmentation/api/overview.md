@@ -24,6 +24,12 @@ Export jobs are asynchronous processes that are used to persist audience segment
 
 For more information on using this endpoint, please read the [export jobs endpoint guide](./export-jobs.md).
 
+## External audiences
+
+You can import external audiences into Experience Platform, retrieve an audience's creation status, update an external audience, start an audience ingestion run, retrieve an external audience ingestion status, list audience ingestion runs, and delete an external audience by using the `/core/ais/external-audiences` endpoint. 
+
+For more information on using this endpoint, please read the [external audiences endpoint guide](./external-audiences.md).
+
 ## Previews and estimates
 
 Previews provide a paginated list of qualifying profiles for a segment definition, allowing you to compare the results against what you expect. You can use the `/preview` endpoint to create a new preview job or look up results of a specific preview job.
