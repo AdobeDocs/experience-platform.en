@@ -89,7 +89,8 @@ A successful response returns the details of your data lifecycle quotas.
 
 | Property | Description |
 | -------- | ------- |
-| `quotas`      | Lists the quota information for each data lifecycle job type. Each quota object contains the following properties: |
+| `quotas`      | Lists the quota information for each data lifecycle job type. Each quota object contains the following properties:
+<ul><li>`name`</li><li>`description`</li><li>`consumed`</li><li>`quota`</li></ul> |
 | `name`        | The quota type identifier.  |
 | `description` | A description of what this quota limits. |
 | `consumed`    | The amount of quota currently consumed. The consumed amount resets on the 1st of the month at 00:00 GMT and 00:00 GMT for daily quota. |

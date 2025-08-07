@@ -260,7 +260,7 @@ curl -X POST \
 | Property | Description |
 | --- | --- |
 | `datasetId`   | **Required.** The unique identifier for the dataset to apply the expiration. |
-| `expiry`      | **Required.** The expiry date and time in ISO 8601 format. This defines the lifespan of data within the system. If only a date is provided, defaults to midnight UTC (00:00:00Z). The expiry **must be at least 24 hours in the future**. <br>Note:<ul><li>The request will fail if a dataset expiration already exists for the dataset.</li> |
+| `expiry`      | **Required.** The expiry date and time in ISO 8601 format. This defines the lifespan of data within the system. If only a date is provided, defaults to midnight UTC (00:00:00Z). The expiry **must be at least 24 hours in the future**. <br>**NOTE**:<ul><li>The request will fail if a dataset expiration already exists for the dataset.</li></ul> |
 | `displayName` | **Required.** A human-readable name for the dataset expiration configuration. |
 | `description` | An optional description for the dataset expiration configuration. |
 
@@ -316,7 +316,7 @@ PUT /ttl/{DATASET_EXPIRATION_ID}
 
 | Parameter | Description |
 | --- | --- |
-| `{DATASET_EXPIRATION_ID}` | The unique identifier for the dataset expiration configuration. Note: This is referred to as the `ttlId` in the response. | 
+| `{DATASET_EXPIRATION_ID}` | The unique identifier for the dataset expiration configuration. **NOTE**: This is referred to as the `ttlId` in the response. | 
 
 **Request**
 
@@ -465,7 +465,7 @@ A 400 error occurs when attempting to cancel a dataset that has an `executing`, 
     "tenantInfo": {
       "sandboxName": "prod",
       "sandboxId": "not-applicable",
-      "imsOrgId": "{IMS_ORG_ID}}"
+      "imsOrgId": "{IMS_ORG_ID}"
     },
     "additionalContext": {
       "Invoking Client ID": "acp_privacy_hygiene"
