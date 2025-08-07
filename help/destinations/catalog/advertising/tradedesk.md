@@ -8,6 +8,25 @@ exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
 
 ## Overview {#overview}
 
+
+>[!IMPORTANT]
+>
+> Following the [internal upgrade](../../../release-notes/2025/july-2025.md#destinations) to the destinations service from July 2025, you may experience a **drop in the number of activated profiles** in your [!DNL The Trade Desk] dataflows.
+> This is due to **ECID mapping now being mandatory** for all activations to this destination platform.
+>
+>**What changed:**
+>
+>* ECID (Experience Cloud ID) mapping is now **required** for all profile activations.
+>* Profiles without ECID mapping will be **dropped** from the activation dataflow.
+>* This affects both new and existing dataflows.
+>
+>**What you need to do:**
+>
+>* Ensure all your activation dataflows include **ECID mapping** in the identity mapping step. See the [mandatory mapping](#mandatory-mappings) section in this page for detailed information.
+>* Review your audience data to confirm profiles have valid ECID values.
+>* Monitor your activation metrics to verify expected profile counts.
+
+
 Use this destination connector to send profile data to [!DNL The Trade Desk]. This connector sends data to the [!DNL The Trade Desk] first-party endpoint. The integration between Adobe Experience Platform and [!DNL The Trade Desk] does not support exporting data to the [!DNL The Trade Desk] third-party endpoint.
 
 [!DNL The Trade Desk] is a self-service platform for ad buyers to execute retargeting and audience-targeted digital campaigns across display, video, and mobile inventory sources.
