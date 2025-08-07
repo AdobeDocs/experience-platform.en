@@ -15,7 +15,7 @@ This tutorial provides instructions to create an [!DNL Acxiom Real ID Audience C
 
 ## Use cases {#use-cases}
 
-This connector supports clients who have Acxiom Real Identity loaded into Real-Time CDP (RTCDP) as an identifier. To help you better understand how and when you should use the [!DNL Acxiom Real ID Audience Connection] destination, here is a sample use case that [!DNL Adobe Experience Platform] customers can solve by using this connector.
+This connector supports clients who have Acxiom Real Identity loaded into Real-Time CDP as an identifier. To help you better understand how and when you should use the [!DNL Acxiom Real ID Audience Connection] destination, here is a sample use case that [!DNL Adobe Experience Platform] customers can solve by using this connector.
 
 ### Send audiences from Experience Platform to your Acxiom account {#send-audiences}
 
@@ -27,12 +27,12 @@ For example, the Marketing Operations department at a global financial services 
 ## Prerequisites {#prerequisites}
 - **Confirm Terms of Use:** Before you can configure a new [!DNL Acxiom Real ID Audience Connection] destination, you must read and sign [!DNL Acxiom’s] Terms of Use Agreement. You will receive the link to the agreement once your executed sales order is complete. Until you sign the agreement, you will not see the [!DNL Acxiom Real ID Audience Connection] destination card in the Experience Platform destination catalog. After you accept and sign the agreement, [!DNL Adobe] will complete your onboarding process and you will see the [!DNL Acxiom Real ID Audience Connection] destination card.
 - **Know your Adobe organization ID:** Your [!DNL Adobe] organization ID is needed to complete your Terms of User Agreement. See [!DNL Adobe's] *Organizations in Experience Cloud* topic for details on how to [view your organization ID](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255).
-- **Obtain License for [DNL! Acxiom's Real ID] product:** Once a license is obtained, make Acxiom's Real ID available within RTCDP. See [Acxiom Data Enhancement](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement) for more information.
+- **Obtain license for [DNL! Acxiom's Real ID] product:** Once a license is obtained, make Acxiom's Real ID available within Real-Time CDP. See [Acxiom Data Enhancement](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement) for more information.
 
 
-## Supported Destinations {#supported-destinations}
+## Supported destinations {#supported-destinations}
 
-[!DNL Acxiom’s Real ID Audience Connection] destination currently supports audience activation to the following platforms.<br> 
+[!DNL Acxiom’s Real ID Audience Connection] destination currently supports audience activation to the following platforms. 
 	
 - [!DNL Altice]
 - [!DNL Ampersand]
@@ -60,14 +60,14 @@ To configure details for the destination, fill in the fields below.
 ## Activate audiences to this destination {#activate} 
 >[!IMPORTANT]
 >
->- To activate data, you need the **View Destinations**, **Activate Destinations**, **View Profiles**, and **View Segments** ![access control permissions](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). Read the ![access control overview](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) or contact your product administrator to obtain the required permissions.<br>
+>- To activate data, you need the **View Destinations**, **Activate Destinations**, **View Profiles**, and **View Segments** ![access control permissions](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). Read the ![access control overview](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) or contact your product administrator to obtain the required permissions.
 >- To export identities, you need the **View Identity Graph** ![access control permission](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions).
 
-<br>
+
 
 Read ![Activate audience data to batch profile export destinations](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) for instructions on activating audiences to this destination.
 
-<br>
+
 
 >[!NOTE]
 >
@@ -79,16 +79,16 @@ For the [!DNL Acxiom Real ID Audience Connection] destination to correctly recei
 
 [!DNL Acxiom Real ID Audience Connection] only allows mapping to the following target field.  
 
-| Field Name | Description|Required | Field Order |
-|--------------------|------------|--------|-------------| 
-|Real ID|A Real ID is a unique 36 byte alpha-numeric identifier (ID) from Acxiom's proprietary identity resolution graph, similar to a primary key for a relational database. It's an identifier that represents a person, household or address. |Yes|1|
+| Field Name | Description|Required |
+|--------------------|------------|--------| 
+|Real ID|A Real ID is a unique 36 byte alpha-numeric identifier (ID) from Acxiom's proprietary identity resolution graph, similar to a primary key for a relational database. It's an identifier that represents a person, household or address. |Yes|
 
 
 
-In the **[!UICONTROL Source Field]** column, enter the name of the source attribute that you want to map to the corresponding target field, or select the arrow icon to open the **[!UICONTROL  Select source field]** screen.<br>
+In the **[!UICONTROL Source Field]** column, enter the name of the source attribute that you want to map to the corresponding target field, or select the arrow icon to open the **[!UICONTROL  Select source field]** screen.
 ![Mapping screen](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_mapping_screen.png)
 
-After you have mapped all the fields, select **[!UICONTROL Next]**.
+Select **[!UICONTROL Next]**.
 
 If you are not using [!DNL Adobe’s] standard schema, see the [Query Service UI guide](../../../query-service/ui/overview.md) documentation for information on how to use the query service to populate the [!DNL Adobe] standard schema with your field names. 
 
@@ -101,6 +101,9 @@ If you are happy with the results, select **[!UICONTROL Finish]** to activate yo
 ![Review your audience](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_review_audience.png)
 
 
+## Data usage and governance {#data-usage-governance}
+
+All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).
 
 ## Troubleshooting {#troubleshooting}
 If your destination representative is unable to locate your audience, contact your [!DNL Adobe] representative for assistance. 
@@ -116,8 +119,7 @@ You will need to provide the following information to your [!DNL Adobe] represen
 
 By following this tutorial, you have successfully activated an audience to the selected destination platform. Next, contact your destination platform representative to begin setting up your campaign.
 
-## Data usage and governance {#data-usage-governance}
 
-All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).
+
 
 
