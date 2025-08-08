@@ -72,13 +72,13 @@ The **[!UICONTROL Alert history]** section displays a list of the most recent ca
 
 To view a full history of the alerts for your organization, select the ![three dots icon](/help/images/icons/more.png), followed by **[!UICONTROL View all]**. 
 
-IMAGE
+![The full alert history is displayed for an organization.](/help/landing/images/capacity/full-alert-history.png)
 
 ### Capacity details {#capacity-details}
 
 The Capacity details section outlines information about your organization's capacities. In this section, you can filter per sandbox and change the lookback period.
 
-IMAGE
+![The sandbox selector and the date picker for the lookback period are highlighted.](/help/landing/images/capacity/filter-sandbox-and-date.png)
 
 Currently, this displays capacity information about streaming throughput, streaming audiences, and edge audiences.
 
@@ -86,7 +86,7 @@ Currently, this displays capacity information about streaming throughput, stream
 
 The streaming throughput section displays information about the streaming throughput throughout your organization's sandboxes. The streaming throughput value measures the combined peak inbound events per second for streaming ingestion into Profile service.
 
-IMAGE
+![The streaming throughput section within the capacity details page is displayed.](/help/landing/images/capacity/streaming-throughput-section.png)
 
 | Column name | Description |
 | ----------- | ----------- |
@@ -99,19 +99,19 @@ IMAGE
 
 You can select the individual sandbox to see a more detailed view of the sandbox's streaming throughput.
 
-IMAGE
+![A sandbox is highlighted within the streaming throughput section.](/help/landing/images/capacity/select-sandbox.png)
 
 The Streaming throughput details page is displayed. You can see a graph that displays the request throughput compared to the capacity limit, a list of the sandboxes and their throughputs, as well as a button to allocate your organization's capacities.
 
-IMAGE
+![The streaming throughput page is displayed, showing detailed information about the streaming throughput for the selected sandbox.](/help/landing/images/capacity/streaming-capacity-allocation.png)
 
 To update the organization's streaming throughput capacities, select **[!UICONTROL Allocate capacities]**. 
 
-IMAGE
+![The Allocate capacities button is highlighted within the streaming throughput details page.](/help/landing/images/capacity/select-allocate.png)
 
 The allocation page appears. On this page, you can set your capacities for your different sandboxes. The sum of all the capacities **must** equal to the organization's capacity total.
 
-IMAGE
+![The capacity allocation page is displayed.](/help/landing/images/capacity/allocate-capacity.png)
 
 >[!NOTE]
 >
@@ -123,9 +123,9 @@ After updating the capacity allocations, select **Save** to finish the updates. 
 
 #### Audience count {#audience-count}
 
-The **Streaming audience count** and **Edge audience count** sections display the number of streaming and edge audiences within the sandbox as well as the maximum number of streaming and edge audiences allowed within the sandbox.
+The **[!UICONTROL Streaming audience count]** and **[!UICONTROL Edge audience count]** sections display the number of streaming and edge audiences within the sandbox as well as the maximum number of streaming and edge audiences allowed within the sandbox.
 
-IMAGE
+![The Audience counts sections are displayed.](/help/landing/images/capacity/audience-count.png)
 
 | Column name | Description |
 | ----------- | ----------- |
