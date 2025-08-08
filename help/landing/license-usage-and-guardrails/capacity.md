@@ -119,7 +119,7 @@ The allocation page appears. On this page, you can set your capacities for your 
 >
 >If the value is not in the order of 100, it will be rounded up or down accordingly.
 
-After updating the capacity allocations, select **Save** to finish the updates. Please note, it may take up to 10 minutes for the changes to be reflected on your organization.
+After updating the capacity allocations, select **[!UICONTROL Save]** to finish the updates. Please note, it may take up to 10 minutes for the changes to be reflected on your organization.
 
 #### Audience count {#audience-count}
 
@@ -139,7 +139,7 @@ The **[!UICONTROL Streaming audience count]** and **[!UICONTROL Edge audience co
 You can resolve your streaming throughput violations by adopting one of the following recommendations:
 
 1. Increase the allocated capacity for the sandbox.
-2. Identify high throughput dataflows in the monitoring dashboard and apply throttling or filtering against these dataflows if needed.
+2. Identify high throughput dataflows in the [monitoring dashboard](/help/dataflows/ui/monitor-streaming-profile.md) and apply throttling or filtering against these dataflows if needed.
 3. Optimize your ingestion by using batch ingestion for lower latency use cases.
 
 Additionally, you can look at your dataflows and see if you can optimize your data strategy.
