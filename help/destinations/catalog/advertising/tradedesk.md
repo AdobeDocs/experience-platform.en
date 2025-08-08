@@ -8,13 +8,22 @@ exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
 
 ## Overview {#overview}
 
+
 >[!IMPORTANT]
 >
->* Starting July 31, 2025, you can see two **[!DNL The Trade Desk]** cards side-by-side in the destinations catalog. This is due to an internal upgrade to the destinations service. The existing **[!DNL The Trade Desk]** destination connector has been renamed to **[!UICONTROL (Deprecated) The Trade Desk]** and a new card with the name **[!UICONTROL The Trade Desk]** is now available to you. 
->* Use the new **[!UICONTROL The Trade Desk]** connection in the catalog for new activation data flows. If you have any active dataflows to the **[!UICONTROL (Deprecated) The Trade Desk]** destination, they will be updated automatically, so no action is required from you.
->* If you are creating dataflows through the [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/), you must update your [!DNL flow spec ID] and [!DNL connection spec ID] to the following values:
->   * Flow spec ID: `86134ea1-b014-49e8-8bd3-689f4ce70578`
->   * Connection spec ID: `1029798b-a97f-4c21-81b2-e0301471166e`
+> Following the [internal upgrade](../../../release-notes/2025/july-2025.md#destinations) to the destinations service from July 2025, you may experience a **drop in the number of activated profiles** in your dataflows to [!DNL The Trade Desk].
+> This drop is caused by the introduction of the **ECID mapping requirement** for all activations to this destination platform. See the [mandatory mapping](#mandatory-mappings) section in this page for detailed information.
+>
+>**What changed:**
+>
+>* ECID (Experience Cloud ID) mapping is now **mandatory** for all profile activations.
+>* Profiles without ECID mapping will be **dropped** from existing activation dataflows.
+>
+>**What you need to do:**
+>
+>* Review your audience data to confirm profiles have valid ECID values.
+>* Monitor your activation metrics to verify expected profile counts.
+
 
 Use this destination connector to send profile data to [!DNL The Trade Desk]. This connector sends data to the [!DNL The Trade Desk] first-party endpoint. The integration between Adobe Experience Platform and [!DNL The Trade Desk] does not support exporting data to the [!DNL The Trade Desk] third-party endpoint.
 
@@ -123,7 +132,7 @@ All target identities described in the [supported identities](#supported-identit
 * **ECID** (Experience Cloud ID)
 * **The Trade Desk ID**
 
-Failure to map all required identities will prevent successful audience activation to [!DNL The Trade Desk]. Each identity serves a specific purpose in the integration, and all are required for the destination to work correctly.
+Failure to map all required identities prevents you from completing the activation workflow. Each identity serves a specific purpose in the integration, and all are required for the destination to work correctly.
 
 ![Screenshot showing the mandatory mappings](../../assets/catalog/advertising/tradedesk/mandatory-mappings.png)
 
