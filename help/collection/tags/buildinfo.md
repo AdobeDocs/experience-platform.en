@@ -1,31 +1,31 @@
-## `buildInfo`
+---
+title: buildInfo
+description: Obtain information around the tag build implemented on your site.
+---
+# `buildInfo`
 
-**Code**
+The `_satellite.buildInfo` object contains information around the build of the tag property implemented. This object is most useful when debugging frequent builds to ensure that you're using the latest version.
 
-```javascript
+```js
 _satellite.buildInfo
 ```
 
-This object contains information about the build of the current tag runtime library. The object contains the following properties:
+## Available fields
 
-### `turbineVersion`
+The following fields are available when calling this object.
 
-This provides the [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) version used inside the current library.
-
-### `turbineBuildDate`
-
-The ISO 8601 date when the version of [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) used inside the container was built.
-
-### `buildDate`
-
-The ISO 8601 date when the current library was built.
-
-This example demonstrates the object values:
-
-```javascript
+```json
 {
-  turbineVersion: "14.0.0",
-  turbineBuildDate: "2016-07-01T18:10:34Z",
-  buildDate: "2016-03-30T16:27:10Z"
+  "minified": true,
+  "buildDate": "YYYY-06-13T01:22:12Z",
+  "turbineBuildDate": "2024-08-22T17:32:44Z",
+  "turbineVersion": "28.0.0"
 }
 ```
+
+* **`buildInfo.minified`**: A boolean that indicates if the library is minified. Production builds are typically minified (`true`), while development and staging builds are typically not (`false`).
+* **`buildInfo.buildDate`**: The date and time that your JavaScript file was built and published in ISO-8601 format.
+* **`buildInfo.turbineBuildDate`**: [Turbine](https://github.com/adobe/reactor-turbine) is Adobe's engine that processes tag rules and delegates logic to tag extensions. This field contains the date and time of the Turbine build used to publish your tag property in ISO-8601 format.
+* **`buildInfo.turbineVersion`**: The version of Turbine used to build and publish your tag property.
+
+Similar information is also contained in `_satellite._container.buildInfo`. See [`_container`](container.md) for more information.

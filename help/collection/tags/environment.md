@@ -1,23 +1,25 @@
-## `environment`
+---
+title: environment
+description: The build environment that the tag property currently uses.
+---
+# `environment`
 
-This object contains information about the environment that the current tag runtime library is deployed on.
+The `_satellite.environment` object states which build environment that the tag property currently is using.
 
-**Code**
-
-```javascript
+```js
 _satellite.environment
 ```
 
-The object contains the following properties:
+## Available fields
 
-```javascript
+The following fields are available when calling this object.
+
+```json
 {
-  id: "ENbe322acb4fc64dfdb603254ffe98b5d3",
-  stage: "development"
+  "id": "EN6b2...d6ff2",
+  "stage": "production"
 }
 ```
 
-| Property | Description |
-| --- | --- |
-| `id` | The id of the environment. |
-| `stage` | The environment for which this library was built. The possible values are `development`, `staging`, and `production`. |
+* **`environment.id`**: The unique identifier for the environment. You can locate the environment ID by selecting the **[!UICONTROL Install]** icon under [[!UICONTROL Environments]](/help/tags/ui/publishing/environments.md) in the tags UI.
+* **`environment.stage`**: The environment type. Valid values include `development`, `staging`, and `production`.

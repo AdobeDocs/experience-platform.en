@@ -1,121 +1,86 @@
-## `cookie` {#cookie}
+---
+title: cookie
+description: Manually write, edit, or delete cookies for the tag property.
+---
+# `cookie`
 
-`_satellite.cookie` contains functions for reading and writing cookies. It is an exposed copy of the third-party library js-cookie. For details on more advanced usage of this library, please review the [js-cookie documentation](https://www.npmjs.com/package/js-cookie#basic-usage).
+The `_satellite.cookie` object contains methods that allow you to write, edit, or delete cookies that your tag rules can reference. It is a partial copy of [`js-cookie`](https://github.com/js-cookie/js-cookie), containing many core features of that library.
 
-### Set a cookie {#cookie-set}
+## `cookie.set()`
 
-To set a cookie, use `_satellite.cookie.set()`.
+The `set()` method writes a cookie that your tag property can reference.
 
-**Code**
+```js
+// Sets a cookie valid across the entire site, expires on session close
+_satellite.cookie.set('Simple session cookie', 'Cookie value');
 
-```javascript
-_satellite.cookie.set(name: string, value: string[, attributes: Object])
+// Sets a cookie that expires 7 days from now, valid across the entire site
+_satellite.cookie.set('Seven-day cookie', 'Cookie value', { expires: 7 });
+
+// Sets a cookie that expires 14 days from now, valid only on the current page
+_satellite.cookie.set('Page-specific cookie', 'Cookie value', { expires: 14, path: '' });
+
+// Sets a secure cookie with sameSite set to 'strict'
+_satellite.cookie.set('Secure cookie', 'Cookie value', { secure: true, sameSite: 'strict' });
 ```
 
->[!NOTE]
+The following method parameters are available:
+
+* **`name`**: The name of the cookie.
+* **`value`**: The value of the cookie.
+* **`attributes`**: Additional attributes that you want the cookie to have. Valid attributes include:
+  * `expires`: The number of days that you want the cookie to expire. A [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object is also allowed. If this attribute is omitted, the cookie expires at the end of a browser session.
+  * `path`: A string that indicates where the cookie is visible. If omitted, the cookie is visible site-wide.
+  * `domain`: A string that indicates a valid domain (or subdomain) where the cookie is visible. If a domain is included without a subdomain, the cookie is visible to all subdomains under that domain. If omitted, the cookie is visible to the domain where the cookie was created.
+  * `secure`: A boolean that determines if the cookie requires a secure protocol (`https://). If omitted, there is no secure protocol requirement.
+  * `sameSite`: A string that lets you set a cookie's [`sameSite`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) attribute. Valid values include `strict`, `lax`, and `none`. If omitted, the attribute is not set.
+
+>[!TIP]
 >
->In the old [`setCookie`](#setCookie) method of setting cookies, the third (optional) argument to this function call was an integer that indicated the cookie's expiration time in days. In this new method, an "attributes" object is accepted as a third argument instead. In order to set an expiration for a cookie using the new method, you must provide an `expires` property in the attributes object and set it to the desired value. This is demonstrated in the example below.
+>Previous versions of the tag object used `_satellite.setCookie()`. The `setCookie()` method is deprecated in favor of `_satellite.cookie.set()`.
 
-**Example**
+## `cookie.get()`
 
-The following function call writes a cookie that expires in one week.
+The `get()` method returns a cookie value. The only parameter is a string containing the cookie name that you want to retrieve the value from. Cookie names are case-sensitive. Retrieving a value from a cookie that does not exist returns the value `undefined`.
 
-```javascript
-_satellite.cookie.set('product', 'Circuit Pro', { expires: 7 });
+```js
+_satellite.cookie.get('Example cookie');
 ```
 
-### Retrieve a cookie {#cookie-get}
+>[!TIP]
+>
+>Previous versions of the tag object used `_satellite.getCookie()`. The `getCookie()` method is deprecated in favor of `_satellite.cookie.get()`.
 
-To retrieve a cookie, use `_satellite.cookie.get()`.
+## `cookie.remove()`
 
-**Code**
-
-```javascript
-_satellite.cookie.get(name: string) => string
-```
-
-**Example**
-
-The following function call reads a previously set cookie.
-
-```javascript
-var product = _satellite.cookie.get('product');
-```
-
-### Remove a cookie {#cookie-remove}
-
-To remove a cookie, use `_satellite.cookie.remove()`.
-
-**Code**
-
-```javascript
-_satellite.cookie.remove(name: string)
-```
-
-**Example**
-
-The following function call removes a previously set cookie.
-
-```javascript
-_satellite.cookie.remove('product');
-```
-
-## `setCookie` {#setCookie}
+The `remove()` method deletes a cookie that you have set.
 
 >[!IMPORTANT]
 >
->This method has been deprecated. Please use [`_satellite.cookie.set()`](#cookie-set) instead.
+>If you set a cookie using attributes, make sure that you include those same attributes when removing a cookie.
 
-**Code**
+```js
+// Creates a session cookie
+_satellite.cookie.set('Session cookie', 'Cookie value');
 
-```javascript
-_satellite.setCookie(name: string, value: string, days: number)
+// Removes the above cookie
+_satellite.cookie.remove('Session cookie');
+
+// Creates a cookie that is only visible on the current page
+_satellite.cookie.set('Page-specific cookie', 'Cookie value', { path: '' });
+
+// This remove method does nothing because it does not match the attributes of the cookie set
+_satellite.cookie.remove('Page-specific cookie');
+
+// This remove method works correctly for the page-specific cookie
+_satellite.cookie.remove('Page-specific cookie', { path: '' });
 ```
 
-**Example**
+Available fields include:
 
-```javascript
-_satellite.setCookie('product', 'Circuit Pro', 3);
-```
+* **`name`**: The name of the cookie you want to remove.
+* **`attributes`**: The attributes matching the cookie that you want to remove. See [`cookie.set()`](#cookieset) above.
 
-This sets a cookie in the user's browser. The cookie will persist for the number of days specified.
-
-## `readCookie`
-
->[!IMPORTANT]
+>[!TIP]
 >
->This method has been deprecated. Please use [`_satellite.cookie.get()`](#cookie-get) instead.
-
-**Code**
-
-```javascript
-_satellite.readCookie(name: string) => string
-```
-
-**Example**
-
-```javascript
-var product = _satellite.readCookie('product');
-```
-
-This reads a cookie from the user's browser.
-
-## `removeCookie`
-
->[!NOTE]
->
->This method has been deprecated. Please use [`_satellite.cookie.remove()`](#cookie-remove) instead.
-
-**Code**
-
-```javascript
-_satellite.removeCookie(name: string)
-```
-
-**Example**
-
-```javascript
-_satellite.removeCookie('product');
-```
-
-This removes a cookie from the user's browser.
+>Previous versions of the tag object used `_satellite.removeCookie()`. The `removeCookie()` method is deprecated in favor of `_satellite.cookie.remove()`.

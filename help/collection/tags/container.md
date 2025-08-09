@@ -4,13 +4,19 @@ description: See the entire tag container in a single object.
 ---
 # `_container`
 
-The `_container` object contains the full configuration and runtime context of the tag property loaded on the page. All information, such as rules, data elements, extensions, and environments are available within this object. Its primary use is to assist with debugging your implementation so that you can see exactly what logic is exposed or published.
+The `_satellite._container` object contains the full configuration and runtime context of the tag property loaded on the page. All information, such as rules, data elements, extensions, and environments are available within this object. Its primary use is to assist with debugging your implementation so that you can see exactly what logic is exposed or published.
 
 >[!IMPORTANT]
 >
 >This object is for debugging purposes only. Do not tie production logic to this object, reference this object in your implementation, or edit values within this object. The availability of properties or names within this object can be changed by Adobe at any time.
 
 ```js
+_satellite._container
+```
+
+The following objects are available for reference:
+
+```json
 {
   "buildInfo": {
     "minified": true,
@@ -44,24 +50,13 @@ The `_container` object contains the full configuration and runtime context of t
 }
 ```
 
-The following objects are available for reference:
-
 ## `_container.buildInfo`
 
-The `buildInfo` object contains information around the build itself. This object is most useful when debugging frequent builds to ensure that you're using the latest version.
-
-* **`buildInfo.minified`**: A boolean that indicates if the library is minified. Production builds are typically minified (`true`), while development and staging builds are typically not (`false`).
-* **`buildInfo.buildDate`**: The date and time that your JavaScript file was built and published.
-* **`buildInfo.turbineBuildDate`**: The date and time of the build used to publish your tag property's JavaScript file.
-* **`buildInfo.turbineVersion`**: The version of the tool used to build and publish your tag property's JavaScript file.
+The `buildInfo` object contains a copy of [`_satellite.buildInfo`](buildinfo.md).
 
 ## `_container.company`
 
-The `company` object displays information around the IMS organization that owns the tag property.
-
-* **`company.orgId`**: A string that represents the IMS org ID of the tag property.
-* **`company.dynamicCdnEnabled`**: A boolean that determines if your tag property uses Adobe's dynamic CDN switching feature. If set to `true`, it auto-switches the CDN that a visitor requests your tag from based on their location.
-* **`company.cdnAllowList`**: An array of strings that represent permitted CDN's to load your tag property from.
+The `company` object contains a copy of [`_satellite.company`](company.md).
 
 ## `_container.dataElements`
 
@@ -72,10 +67,7 @@ The `dataElements` object provides a reference of all data elements within your 
 
 ## `_container.environment`
 
-The `environment` object states which build environment that the tag property currently is using.
-
-* **`environment.id`**: The unique identifier for the environment. You can locate the environment ID by selecting the **[!UICONTROL Install]** icon under [[!UICONTROL Environments]](/help/tags/ui/publishing/environments.md) in the tags UI.
-* **`environment.stage`**: The environment type. Valid values include `development`, `staging`, and `production`.
+The `environment` object contains a copy of [`_satellite.environment`](environment.md).
 
 ## `_container.extensions`
 
@@ -91,16 +83,16 @@ The `property` object provides information around the tag property itself.
 
 * **`property.id`**: The unique identifier for the tag property.
 * **`property.name`**: The friendly name for the tag property.
-* **`property.settings.domains`**: An array of strings that represent the configured domains for the property, as set when [configuring a tag property](/help/tags/ui/administration/companies-and-properties.md).
+* **`property.settings.domains[]`**: An array of strings that represent the configured domains for the property, as set when [configuring a tag property](/help/tags/ui/administration/companies-and-properties.md).
 * **`property.settings.ruleComponentSequencingEnabled`**: A boolean that determines if the checkbox **[!UICONTROL Run rule components in sequence]** is enabled when configuring the tag property.
 * **`property.settings.undefinedVarsReturnEmpty`**: A boolean that determines if the checkbox **[!UICONTROL Return an empty string for undefined data elements]** is enabled when configuring the tag property.
 
-## `_container.rules`
+## `_container.rules[]`
 
-The `rules` object array provides a reference of all rules within your tag property. Each rule contains the following:
+The `rules[]` object array provides a reference of all rules within your tag property. Each rule contains the following:
 
-* **`id`**: The unique identifier for the rule.
-* **`name`**: The friendly name of the rule.
-* **`events`**: An array of events that you have configured to trigger the rule.
-* **`conditions`**: An array of conditions that you have configured to trigger the rule.
-* **`actions`**: An array of actions that you have configured to execute when the rule is triggered.
+* **`rules[].id`**: The unique identifier for the rule.
+* **`rules[].name`**: The friendly name of the rule.
+* **`rules[].events[]`**: An array of events that you have configured to trigger the rule.
+* **`rules[].conditions[]`**: An array of conditions that you have configured to trigger the rule.
+* **`rules[].actions[]`**: An array of actions that you have configured to execute when the rule is triggered.
