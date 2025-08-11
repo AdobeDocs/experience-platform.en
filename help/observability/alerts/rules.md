@@ -121,7 +121,7 @@ The following alert rules are specific to [Audit events](../../landing/governanc
 
 ## Capacity {#capacity}
 
-The following alert rules are specific to [streaming throughput capacity](../../landing/license-usage-and-guardrails/capacity.md):
+The following alert rules are specific to [capacity management](../../landing/license-usage-and-guardrails/capacity.md):
 
 | I/O Event subscription | Alert rule | Description | Payload Schema |
 | --- | --- | --- | --- |
