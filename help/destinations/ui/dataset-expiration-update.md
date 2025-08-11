@@ -36,7 +36,7 @@ Your organization may have active dataset export dataflows sending data to the d
 
 ## Video tutorial {#video}
 
-Watch the video below for a step-by-step demonstration of how to extend the export schedule for your dataset exports.
+Watch the video below for a step-by-step demonstration of how to identify dataset exports with upcoming end dates and extend the export schedule for the dataflows that you want to keep.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3470518/)
 
@@ -72,7 +72,7 @@ For each dataflow that you want to keep, you need to access the export datasets 
 
 Now you can modify the export schedule to extend beyond September 1st, 2025.
 
-1. Select each dataset for which you want to extend the export schedule and select **[!UICONTROL Edit schedule]**.
+1. Select **[!UICONTROL Edit schedule]**.
 ![Screenshot of the Scheduling step showing the Edit schedule button.](/help/destinations/assets/ui/export-datasets/edit-schedule.png)
 2. Select a new export schedule, then select **[!UICONTROL Save]**.
 ![Screenshot of the Scheduling step showing the scheduling options.](/help/destinations/assets/ui/export-datasets/edit-schedule-calendar.png)

@@ -42,7 +42,7 @@ role: Admin,User
         * [Activate account audiences to destinations](./ui/activate-account-audiences.md)
         * [Export files on-demand to batch destinations using the Experience Platform UI](./ui/export-file-now.md)
         * [Export datasets using the Experience Platform UI](./ui/export-datasets.md)
-        * [Update dataset export default expiration date](./ui/dataset-expiration-update.md)
+        * [Extend dataset export schedules for dataflows created prior to November 2024](./ui/dataset-expiration-update.md)
         * [(Beta) Use the last qualification time XDM attribute in the new beta cloud storage destinations](./ui/activate-last-qualification-time.md)
         * [Export arrays, maps, and objects](/help/destinations/ui/export-arrays-maps-objects.md)
         * [Perform transformations on data exported to cloud storage destinations](/help/destinations/ui/data-transformations-calculated-fields.md)
