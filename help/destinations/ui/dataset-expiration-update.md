@@ -4,8 +4,8 @@ description: Learn how to extend the export schedule for dataset export dataflow
 type: Tutorial
 hide: true
 hidefromtoc: true
+exl-id: a756886b-3f4b-4427-bd26-817221ba68aa
 ---
-
 # Extend dataset export schedules for dataflows created prior to November 2024
 
 >[!IMPORTANT]
