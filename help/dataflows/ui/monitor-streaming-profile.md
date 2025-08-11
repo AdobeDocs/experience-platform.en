@@ -200,7 +200,7 @@ Read this section for answers to frequently asked questions about the monitoring
 
 +++Answer
 
-The [!UICONTROL Monitoring] dashboard shows real-time metrics for ingestion and processing. These numbers are exact metrics recorded at the time of activity. Conversely, the [!UICONTROL Capacity] dashboard uses a 15-minute rolling window of smoothing for throughput. This mechanism helps reduce short-lived spikes from instantly qualifying as violations and ensures that capacity alerts focus on sustained trends, rather than momentary bursts.
+The [!UICONTROL Monitoring] dashboard shows real-time metrics for ingestion and processing. These numbers are exact metrics recorded at the time of activity. Conversely, the [!UICONTROL Capacity] dashboard uses a smoothing mechanism for throughput capacity calculation. This mechanism helps reduce short-lived spikes from instantly qualifying as violations and ensures that capacity alerts focus on sustained trends, rather than momentary bursts.
 
 Due to the smoothing mechanism, you may notice:
 
