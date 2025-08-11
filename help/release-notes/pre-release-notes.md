@@ -41,7 +41,7 @@ Experience Platform allows you to subscribe to event-based alerts for various Ex
 | ------- | ----------- |
 | Streaming throughput capacity alerts | Stay ahead of capacity issues with proactive alerts. You can now set up alerts to notify you when your streaming throughput reaches 80%, 90%, or exceeds capacity limits. This gives you early warning so you can take action before performance is impacted. |
 
-For more information about alerts, read the [[!DNL Observability Insights] overview](../../observability/home.md).
+For more information about alerts, read the [[!DNL Observability Insights] overview](../observability/home.md).
 
 ## Destinations {#destinations}
 
