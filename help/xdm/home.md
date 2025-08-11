@@ -89,8 +89,63 @@ See the [[!UICONTROL XDM ExperienceEvent] reference guide](./classes/experiencee
 
 Experience Platform is schema-agnostic, meaning that any schema that conforms to the XDM standard is made available to Experience Platform services. The ways in which different Experience Platform services use schemas are outlined in more detail below.
 
-<!-- TODO: PLAT-240919 Add Model-Based Schema overview here - brief explanation of model-based schemas, supported applications (Campaign Orchestration, Data Distiller, B2B), and how they differ from standard XDM schemas -->
+<!-- TODO: PLAT-240919 Add Model-Based Schema overview integration
 
+### Model-based schemas
+
+In addition to standard XDM schemas, Experience Platform supports model-based schemas that enable structured, relational-style data patterns. Model-based schemas provide primary key enforcement, version descriptors, and support for relationships between schemas through primary and foreign key mappings.
+
+Model-based schemas are designed to support multiple data models beyond standard XDM, including:
+
+- **Campaign Orchestration**: Structured campaign and customer data
+- **Data Distiller**: Advanced analytics and data processing workflows  
+- **B2B**: Business-to-business relationship data and account hierarchies
+
+Key differences from standard XDM schemas:
+
+- **Required fields**: Primary key and version descriptor fields are mandatory
+- **Relationships**: Native support for schema-to-schema relationships via primary/foreign keys
+- **Data ingestion**: Optimized for Sources with change data capture (CDC) workflows
+- **Control columns**: Support for ingestion-time control columns like `_change_request_type` that are not stored in the target schema
+
+>[!NOTE]
+>
+>Model-based schemas are available with appropriate Experience Platform entitlements and feature enablement.
+
+For detailed information on creating and using model-based schemas, see [Model-Based Schema overview](./schema/model-based.md).
+-->
+<!-- Update suggestions provided by Cursor:
+### Catalog Service, Data Ingestion, and data lake {#ingestion-catalog-and-storage}
+
+Catalog Service is the system of record for Experience Platform assets and their related schemas.schemas enable structured, relational-style data support with primary key enforcement and schema relationships. Select the **[!UICONTROL Model-Based]** option when you need to:
+
+- Support primary key enforcement and version tracking
+- Create relationships between schemas via primary and foreign keys
+- Ingest data using Sources with change data capture (CDC)
+- Support multiple data models for Campaign Orchestration, Data Distiller, or B2B use cases
+
+#### Creating a model-based schema
+
+1. In the **[!UICONTROL Create a schema]** dialog, select **[!UICONTROL Model-Based]** from the available options.
+
+2. Choose your base class (**[!UICONTROL Record]** or **[!UICONTROL Time-series]**) depending on your data type.
+
+3. In the schema editor, add the required fields for model-based schemas:
+   - **Primary key field**: Add a field and mark it as the primary key using the **[!UICONTROL Primary Key]** checkbox in field properties
+   - **Version descriptor field**: Add a field and mark it as the version descriptor using the **[!UICONTROL Version Descriptor]** checkbox
+   - **Timestamp descriptor field**: Required only for time-series schemas - add a timestamp field and mark it as the timestamp descriptor
+
+4. Configure additional fields and field groups as needed for your data model.
+
+5. To create relationships with other model-based schemas, use the **[!UICONTROL Add Relationship]** option to define primary and foreign key connections.
+
+>[!NOTE]
+>
+>Control columns used during ingestion (such as `_change_request_type` for CDC workflows) are read at ingestion time and are not stored in the schema or mapped to XDM fields.
+
+For comprehensive information on model-based schema concepts, see [Model-Based Schema overview](../../schema/model-based.md). For CDC configuration with Sources, see [Enable change data capture](../../../sources/tutorials/api/change-data-capture.md).
+
+-->
 ### Catalog Service, Data Ingestion, and data lake {#ingestion-catalog-and-storage}
 
 Catalog Service is the system of record for Experience Platform assets and their related schemas. Catalog does not contain the actual data files or directories, but rather it holds the metadata and descriptions of those files and directories.

@@ -196,7 +196,83 @@ The schema composition process begins by assigning a class. The class defines ke
 >
 >The example call below is only a baseline example of how to create a schema in the API, with the minimal composition requirements of a class and no field groups. For complete steps on how to create a schema in the API, including how to assign fields using field groups and data types, see the [schema creation tutorial](../tutorials/create-schema-api.md).
 
-<!-- TODO: PLAT-240919 Add Model-Based Schema API documentation here - include required fields (primary key, version descriptor, timestamp descriptor), API payload examples, and model-based schema type parameter -->
+<!-- TODO: PLAT-240919 Add Model-Based Schema API documentation here - include required fields (primary key, version descriptor, timestamp descriptor), API payload examples, and model-based schema type parameter - Have asked Madeline if this is possible and if so for Request and Response examples.-->
+
+<!-- This comment is a suggestion from Cursor DO NOT ADD. Confirm with Madeline
+TODO: PLAT-240919 Add Model-Based Schema API documentation
+
+## Creating model-based schemas {#model-based-schemas}
+
+Model-based schemas enable structured, relational-style data support in Experience Platform with primary key enforcement, version descriptors, and optional timestamp descriptors for time-series data. These schemas support multiple data models beyond standard XDM, including Campaign Orchestration, Data Distiller, and B2B use cases.
+
+### Required fields for model-based schemas
+
+When creating model-based schemas via the API, ensure the following required fields are included:
+
+- **Primary key**: Uniquely identifies each record in the dataset
+- **Version descriptor**: Tracks schema version changes and ensures data consistency
+- **Timestamp descriptor**: Required only for time-series schemas to track when events occurred
+
+### API example: Creating a model-based schema
+
+**API format**
+
+```http
+POST /tenant/schemas
+```
+
+**Request**
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "type": "object",
+    "title": "Customer Data Model-Based Schema",
+    "description": "Schema for customer data with model-based structure",
+    "allOf": [
+      {
+        "$ref": "https://ns.adobe.com/xdm/context/record"
+      }
+    ],
+    "meta:modelType": "model-based",
+    "properties": {
+      "customerId": {
+        "type": "string",
+        "meta:isPrimaryKey": true,
+        "description": "Unique customer identifier"
+      },
+      "_version": {
+        "type": "integer",
+        "meta:isVersionDescriptor": true,
+        "description": "Schema version descriptor"
+      },
+      "timestamp": {
+        "type": "string",
+        "format": "date-time",
+        "meta:isTimestampDescriptor": true,
+        "description": "Timestamp for time-series data"
+      }
+    }
+  }'
+```
+
+>[!NOTE]
+>
+>The `meta:modelType` property set to `"model-based"` indicates this schema supports structured data patterns with primary key enforcement and relationships. The `meta:isTimestampDescriptor` is only required for time-series schemas.
+
+### Model-based schema relationships
+
+Model-based schemas support relationships between schemas through primary and foreign key mappings, enabling normalized data structures across multiple related datasets.
+
+For comprehensive information on model-based schema concepts and use cases, see [Model-Based Schema overview](../schema/model-based.md).
+
+-->
 
 **API format**
 

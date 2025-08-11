@@ -30,19 +30,52 @@ In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in 
 ![The Schemas workspace with [!UICONTROL Create Schema] highlighted.](../../images/ui/resources/schemas/create-schema.png)
 
 The [!UICONTROL Create a schema] dialog appears. In this dialog, you can choose to either manually create a schema by adding fields and field groups, or you can upload a CSV file and use ML algorithms to generate a schema. Select a schema creation workflow from the dialog.
-
+<!-- Screenshot blow likely needs update ... -->
 ![The Create a schema dialog with the workflow options and select highlighted.](../../images/ui/resources/schemas/create-a-schema-dialog.png)
 
 ### [!BADGE Beta]{type=Informative} Manual or ML-assisted schema creation {#manual-or-assisted}
 
 To learn how you can use a ML algorithm to recommend a schema structure based on a csv file, see the [machine learning-assisted schema creation guide](../ml-assisted-schema-creation.md). This UI guide focusses on the manual creation workflow. 
 
-<!-- TODO: PLAT-240919 Add Model-Based Schema UI workflow section here - document the "Model-Based" option users will see in schema creation UI, including step-by-step workflow for creating model-based schemas -->
+<!-- TODO: PLAT-240919 Add Model-Based Schema UI workflow section 
+- document the "Model-Based" option users will see in schema creation UI, including step-by-step workflow for creating model-based schemas 
+
+### Model-based schema creation {#model-based-creation}
+
+Model-based schemas enable structured, relational-style data support with primary key enforcement and schema relationships. Select the **[!UICONTROL Model-Based]** option when you need to:
+
+- Support primary key enforcement and version tracking
+- Create relationships between schemas via primary and foreign keys
+- Ingest data using Sources with change data capture (CDC)
+- Support multiple data models for Campaign Orchestration, Data Distiller, or B2B use cases
+
+#### Creating a model-based schema
+
+1. In the **[!UICONTROL Create a schema]** dialog, select **[!UICONTROL Model-Based]** from the available options.
+
+2. Choose your base class (**[!UICONTROL Record]** or **[!UICONTROL Time-series]**) depending on your data type.
+
+3. In the schema editor, add the required fields for model-based schemas:
+   - **Primary key field**: Add a field and mark it as the primary key using the **[!UICONTROL Primary Key]** checkbox in field properties
+   - **Version descriptor field**: Add a field and mark it as the version descriptor using the **[!UICONTROL Version Descriptor]** checkbox
+   - **Timestamp descriptor field**: Required only for time-series schemas - add a timestamp field and mark it as the timestamp descriptor
+
+4. Configure additional fields and field groups as needed for your data model.
+
+5. To create relationships with other model-based schemas, use the **[!UICONTROL Add Relationship]** option to define primary and foreign key connections.
+
+>[!NOTE]
+>
+>Control columns used during ingestion (such as `_change_request_type` for CDC workflows) are read at ingestion time and are not stored in the schema or mapped to XDM fields.
+
+For comprehensive information on model-based schema concepts, see [Model-Based Schema overview](../../schema/model-based.md). For CDC configuration with Sources, see [Enable change data capture](../../../sources/tutorials/api/change-data-capture.md).
+
+-->
 
 ### Manual schema creation {#manual-creation}
 
 The [!UICONTROL Create schema] workflow appears. You can choose a base class for the schema by selecting either **[!UICONTROL Individual Profile]**, **[!UICONTROL Experience Event]**, or **[!UICONTROL Other]**, followed by **[!UICONTROL Next]** to confirm your choice. See the [[!UICONTROL XDM individual profile]](../../classes/individual-profile.md) and [[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md) documentation for more information on these classes.
-
+<!-- Screenshot blow likely needs update ... -->
 ![The [!UICONTROL Create schema] workflow with the three class options and [!UICONTROL Next] highlighted.](../../images/ui/resources/schemas/schema-class-options.png)
 
 When choosing **[!UICONTROL Other]**, a list of available classes appears. From here you can browse and filter pre-existing classes.
