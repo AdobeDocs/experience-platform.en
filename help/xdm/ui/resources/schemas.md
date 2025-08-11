@@ -37,6 +37,8 @@ The [!UICONTROL Create a schema] dialog appears. In this dialog, you can choose 
 
 To learn how you can use a ML algorithm to recommend a schema structure based on a csv file, see the [machine learning-assisted schema creation guide](../ml-assisted-schema-creation.md). This UI guide focusses on the manual creation workflow. 
 
+<!-- TODO: PLAT-240919 Add Model-Based Schema UI workflow section here - document the "Model-Based" option users will see in schema creation UI, including step-by-step workflow for creating model-based schemas -->
+
 ### Manual schema creation {#manual-creation}
 
 The [!UICONTROL Create schema] workflow appears. You can choose a base class for the schema by selecting either **[!UICONTROL Individual Profile]**, **[!UICONTROL Experience Event]**, or **[!UICONTROL Other]**, followed by **[!UICONTROL Next]** to confirm your choice. See the [[!UICONTROL XDM individual profile]](../../classes/individual-profile.md) and [[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md) documentation for more information on these classes.

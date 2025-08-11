@@ -199,6 +199,8 @@ After the request is submitted, a work order is created and appears on the [!UIC
 
 ![The [!UICONTROL Record] tab of the [!UICONTROL Data Lifecycle] workspace with the new request highlighted.](../images/ui/record-delete/request-log.png)
 
+<!-- TODO: PLAT-240919 Add Model-Based Schema hygiene section here - document how to delete records from model-based datasets without deleting from source, include considerations for _change_request_type column and CDC workflows -->
+
 ## Next steps
 
 This document covered how to delete records in the Experience Platform UI. For information on how to perform other data lifecycle management tasks in the UI, refer to the [Data Lifecycle UI overview](./overview.md).

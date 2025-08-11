@@ -196,6 +196,8 @@ The schema composition process begins by assigning a class. The class defines ke
 >
 >The example call below is only a baseline example of how to create a schema in the API, with the minimal composition requirements of a class and no field groups. For complete steps on how to create a schema in the API, including how to assign fields using field groups and data types, see the [schema creation tutorial](../tutorials/create-schema-api.md).
 
+<!-- TODO: PLAT-240919 Add Model-Based Schema API documentation here - include required fields (primary key, version descriptor, timestamp descriptor), API payload examples, and model-based schema type parameter -->
+
 **API format**
 
 ```http

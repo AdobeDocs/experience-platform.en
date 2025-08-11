@@ -89,6 +89,8 @@ See the [[!UICONTROL XDM ExperienceEvent] reference guide](./classes/experiencee
 
 Experience Platform is schema-agnostic, meaning that any schema that conforms to the XDM standard is made available to Experience Platform services. The ways in which different Experience Platform services use schemas are outlined in more detail below.
 
+<!-- TODO: PLAT-240919 Add Model-Based Schema overview here - brief explanation of model-based schemas, supported applications (Campaign Orchestration, Data Distiller, B2B), and how they differ from standard XDM schemas -->
+
 ### Catalog Service, Data Ingestion, and data lake {#ingestion-catalog-and-storage}
 
 Catalog Service is the system of record for Experience Platform assets and their related schemas. Catalog does not contain the actual data files or directories, but rather it holds the metadata and descriptions of those files and directories.
