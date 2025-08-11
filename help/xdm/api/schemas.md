@@ -274,6 +274,205 @@ For comprehensive information on model-based schema concepts and use cases, see 
 
 -->
 
+<!-- 
+Actual request and response examples from Madeline:
+
+**Request**
+
+```json
+curl --request POST \
+  --url https://platform-stage.adobe.io/data/foundation/schemaregistry/tenant/schemas/ \
+  --header 'Accept: application/vnd.adobe.xdm+json' \
+  --header 'Authorization: Bearer eyJ...' \
+  --header 'Content-Type: application/json' \
+  --header 'x-api-key: acp_xql_gateway' \
+  --header 'x-gw-ims-org-id: 1F1F026D5FF613230A494038@AdobeOrg' \
+  --header 'x-sandbox-name: prod' \
+  --data '{
+    "title": "mbernard obj in obj relational",
+    "type": "object",
+    "description": "",
+  "definitions": {
+    "customFields": {
+      "type": "object",
+      "properties": {
+        "objectField": {
+          "title": "I am an object field",
+          "description": "this field has primitive fields inside it",
+          "type": "object",
+          "properties": {
+            "fieldBooleanInObj": {
+              "type": "boolean",
+              "description": "",
+              "title": "field Boolean In Object"
+            },
+            "fieldStringInObj": {
+              "minLength": 1,
+              "type": "string",
+              "description": "",
+              "title": "field String In Object"
+            },
+            "objectInsideObject": {
+              "type": "object",
+              "description": "",
+              "title": "object Inside Object",
+              "properties": {
+                "fieldStringInObjInObj": {
+                  "type": "string",
+                                    "minLength": 1,
+                  "description": "",
+                  "title": "field String In Object In Object"
+                }
+              }
+            }
+          }
+        },
+        "name": {
+          "minLength": 1,
+          "type": "string",
+          "description": "",
+          "title": "name"
+        },
+        "fieldDateTime": {
+          "format": "date-time",
+          "type": "string",
+          "description": "",
+          "title": "fieldDateTime"
+        },
+        "fieldBoolean": {
+          "type": "boolean",
+          "description": "",
+          "title": "fieldBoolean"
+        }
+      }
+    }
+  },
+    "allOf": [
+        {
+            "$ref": "#/definitions/customFields",
+            "meta:xdmType": "object"
+        }
+    ],
+    "imsOrg": "2398391F5B4E0B150A494124@AdobeOrg",
+    "meta:extends": ["https://ns.adobe.com/xdm/data/adhoc-v2"],
+    "meta:behaviorType": "record",
+    "required": []
+}'
+```
+
+>[!NOTE]
+>
+>The trick is
+>"meta:extends": ["https://ns.adobe.com/xdm/data/adhoc-v2"],
+>"definitions": {    "customFields": {      "properties": {      .... at root
+
+**Response**
+
+```json
+{
+    "$id": "https://ns.adobe.com/marketob2bacctgrpstage/schemas/fb1bea1a09ffb72f61c62985c3a64707d14d383e6a06a00a",
+    "meta:altId": "_marketob2bacctgrpstage.schemas.fb1bea1a09ffb72f61c62985c3a64707d14d383e6a06a00a",
+    "meta:resourceType": "schemas",
+    "version": "1.0",
+    "title": "mbernard obj in obj relational",
+    "type": "object",
+    "description": "",
+    "definitions": {
+        "customFields": {
+            "type": "object",
+            "properties": {
+                "objectField": {
+                    "title": "I am an object field",
+                    "description": "this field has primitive fields inside it",
+                    "type": "object",
+                    "properties": {
+                        "fieldBooleanInObj": {
+                            "type": "boolean",
+                            "description": "",
+                            "title": "field Boolean In Object",
+                            "meta:xdmType": "boolean"
+                        },
+                        "fieldStringInObj": {
+                            "minLength": 1,
+                            "type": "string",
+                            "description": "",
+                            "title": "field String In Object",
+                            "meta:xdmType": "string"
+                        },
+                        "objectInsideObject": {
+                            "type": "object",
+                            "description": "",
+                            "title": "object Inside Object",
+                            "properties": {
+                                "fieldStringInObjInObj": {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "description": "",
+                                    "title": "field String In Object In Object",
+                                    "meta:xdmType": "string"
+                                }
+                            },
+                            "meta:xdmType": "object"
+                        }
+                    },
+                    "meta:xdmType": "object"
+                },
+                "name": {
+                    "minLength": 1,
+                    "type": "string",
+                    "description": "",
+                    "title": "name",
+                    "meta:xdmType": "string"
+                },
+                "fieldDateTime": {
+                    "format": "date-time",
+                    "type": "string",
+                    "description": "",
+                    "title": "fieldDateTime",
+                    "meta:xdmType": "date-time"
+                },
+                "fieldBoolean": {
+                    "type": "boolean",
+                    "description": "",
+                    "title": "fieldBoolean",
+                    "meta:xdmType": "boolean"
+                }
+            },
+            "meta:xdmType": "object"
+        }
+    },
+    "allOf": [
+        {
+            "$ref": "#/definitions/customFields",
+            "meta:xdmType": "object",
+            "type": "object"
+        }
+    ],
+    "refs": [],
+    "required": [],
+    "imsOrg": "1F1F026D5FF613230A494038@AdobeOrg",
+    "meta:extends": [
+        "https://ns.adobe.com/xdm/data/adhoc-v2"
+    ],
+    "meta:xdmType": "object",
+    "meta:registryMetadata": {
+        "repo:createdDate": 1744839427314,
+        "repo:lastModifiedDate": 1744839427314,
+        "xdm:createdClientId": "acp_xql_gateway",
+        "xdm:lastModifiedClientId": "acp_xql_gateway",
+        "xdm:createdUserId": "CE92198B5F173A740A494021@AdobeID",
+        "xdm:lastModifiedUserId": "CE92198B5F173A740A494021@AdobeID",
+        "eTag": "f3078d9bb02a3d1febe37729b523cc13cda6df1f414d1d7d253a184daa39d1ca",
+        "meta:globalLibVersion": "1.59.1"
+    },
+    "meta:containerId": "tenant",
+    "meta:sandboxId": "befc7023-ed76-42d9-bc70-23ed7632d94e",
+    "meta:sandboxType": "production",
+    "meta:behaviorType": "record"
+}
+```
+ -->
+
 **API format**
 
 ```http
