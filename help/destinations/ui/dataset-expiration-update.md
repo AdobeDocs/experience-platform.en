@@ -10,19 +10,21 @@ hidefromtoc: true
 
 >[!IMPORTANT]
 >
->**Action required**: If your organization has dataset export dataflows created prior to November 2024, these dataflows will stop working on September 1st, 2025. This guide explains how to extend the export schedule beyond this date for the dataflows that you want to keep.
+>**Action required**: If your organization has [dataset export dataflows](export-datasets.md) created prior to November 2024, these dataflows will stop working on September 1st, 2025. This guide explains how to extend the export schedule beyond this date for the dataflows that you want to keep.
 
-## Overview
+## Overview {#overview}
 
-In the [September 2024 release of Experience Platform](/help/release-notes/2024/september-2024.md#destinations), Adobe introduced a default end date of **May 1st, 2025** for all dataset export dataflows created prior to the September 2024 release. **This date has since been updated to September 1st, 2025** for all dataset export dataflows that were created **prior to November 2024**.
+In the [September 2024 release of Experience Platform](/help/release-notes/2024/september-2024.md#destinations), Adobe introduced a default end date of **May 1st, 2025** for all dataset export dataflows created prior to the September 2024 release.
 
-Dataset export dataflows created prior to November 2024 will automatically stop exporting data on **September 1st, 2025** unless you manually extend their expiration date.
+**This date has since been updated to September 1st, 2025** for all dataset export dataflows that were created **prior to November 2024**.
 
-If you need the dataflows to keep exporting data after **September 1st, 2025**, follow the steps in this guide to extend their schedules. You must do this for each destination that you are exporting datasets to.
+Dataset export dataflows created prior to November 2024 will stop exporting data on **September 1st, 2025** unless you manually extend their expiration date.
+
+If you need the dataflows to keep exporting data after **September 1st, 2025**, you must extend their schedules for each destination to which you are exporting datasets, by following the steps in this guide.
 
 ## Affected destinations {#affected-destinations}
 
-The information in this page applies to dataset export dataflows to the following destinations:
+Your organization may have active dataset export dataflows sending data to the destinations listed below. Follow the steps in the next sections and watch the walkthrough video to learn how to identify which datasets are set to expire.
 
 * [[!DNL Azure Data Lake Storage Gen2]](../catalog/cloud-storage/adls-gen2.md)
 * [[!DNL Data Landing Zone]](../catalog/cloud-storage/data-landing-zone.md)
@@ -31,6 +33,12 @@ The information in this page applies to dataset export dataflows to the followin
 * [[!DNL Azure Blob]](../catalog/cloud-storage/azure-blob.md#changelog) 
 * [[!DNL SFTP]](../catalog/cloud-storage/sftp.md#changelog)
 * [[!DNL Marketo Measure Ultimate]](../catalog/adobe/marketo-measure-ultimate.md)
+
+## Video tutorial {#video}
+
+Watch the video below for a step-by-step demonstration of how to extend the export schedule for your dataset exports.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3470518/)
 
 ## Step 1: Identify affected dataflows {#identify-dataflows}
 
@@ -75,12 +83,8 @@ Now you can modify the export schedule to extend beyond September 1st, 2025.
 
 ## What happens if I miss the September 1st, 2025 deadline? {#missed-deadline}
 
-If your dataset export dataflows expire on September 1st, 2025 and you haven't extended their schedules, there is a **30 days grace period** where you can contact Adobe to re-enable your dataflows without any data loss.
+If your dataset export dataflows expire on September 1st, 2025 and you haven't extended their schedules, there is a **30 days grace period** where you can contact Adobe to re-enable your dataflows without any data loss. This includes data that was not exported between September 1st and the date when you contacted Adobe.
 
 >[!IMPORTANT]
 >
->While Adobe provide this grace period, we strongly recommend extending your schedules before the September 1st, 2025 deadline to ensure uninterrupted data exports and avoid any potential service disruptions.
-
-## Video tutorial {#video}
-
-Watch the video below for a step-by-step demonstration of how to extend the export schedule for your dataset exports.
+>While Adobe provides this grace period, we strongly recommend extending your schedules before the September 1st, 2025 deadline to ensure uninterrupted data exports and avoid any potential service disruptions.
