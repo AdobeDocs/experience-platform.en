@@ -28,7 +28,6 @@ New features and updates to existing features in Adobe Experience Platform:
 - [Alerts](#alerts)
 - [Destinations](#destinations)
 - [Experience Data Model (XDM)](#cdm)
-- [Query Service](#query-service)
 - [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
 
@@ -61,6 +60,7 @@ For more information about alerts, read the [[!DNL Observability Insights] overv
 | Feature | Description |
 | --- | --- |
 | [!DNL Marketo] destination cards consolidation | Simplify your [!DNL Marketo] destination setup with our unified destination card. We've consolidated [!DNL Marketo] V2 and V3 cards into one streamlined option, making it easier to choose the right destination and get started quickly. |
+| Dataset Export endTime updates | Get more precise timing information for your data exports. You'll now receive more accurate endTime data, helping you better track when your exports complete and plan your data workflows more effectively. |
 
 For more information, read the [Destinations overview](../destinations/home.md).
 
@@ -75,19 +75,6 @@ XDM is an open-source specification that provides common structures and definiti
 | Model-Based Schemas | Simplify your data modeling with Model-Based Schemas. You can now create schemas more easily with comprehensive how-to examples and guidance. This feature is currently available to Campaign Orchestration license holders and will expand to Data Distiller customers at GA, making data modeling more accessible and efficient. |
 
 For more information, read the [XDM overview](../xdm/home.md).
-
-## Query Service {#query-service}
-
-Adobe Experience Platform Query Service provides a robust SQL interface for data analysis and exploration across the platform.
-
-**New or updated features**
-
-| Feature | Description |
-| ------- | ----------- |
-| Data Distiller Session Management | Take control of your data analysis sessions with enhanced session management. You can now monitor and manage your sessions more effectively across development and production environments, giving you better visibility into your query performance and resource usage. |
-| Dataset Export endTime updates | Get more precise timing information for your data exports. You'll now receive more accurate endTime data, helping you better track when your exports complete and plan your data workflows more effectively. |
-
-For more information, read the [Query Service overview](../query-service/home.md).
 
 ## Segmentation Service {#segmentation-service}
 
@@ -115,6 +102,19 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 For more information, read the [sources overview](../sources/home.md).
 
 <!--
+
+## Query Service {#query-service}
+
+Adobe Experience Platform Query Service provides a robust SQL interface for data analysis and exploration across the platform.
+
+**New or updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Data Distiller Session Management | Take control of your data analysis sessions with enhanced session management. You can now monitor and manage your sessions more effectively across development and production environments, giving you better visibility into your query performance and resource usage. |
+
+For more information, read the [Query Service overview](../query-service/home.md).
+
 ## B2B CDP {#b2b-cdp}
 
 Real-Time CDP B2B Edition provides comprehensive B2B customer data management capabilities, enabling organizations to build unified customer profiles, create sophisticated B2B audiences, and activate data across various marketing channels.
