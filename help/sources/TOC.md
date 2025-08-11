@@ -227,6 +227,7 @@ role: Developer
   - [Apply access labels to a dataflow](tutorials/api/labels.md)
   - [Use private endpoints](tutorials/api/private-link.md)
   - [Enable change data capture](tutorials/api/change-data-capture.md)
+  <!-- TODO: Add Model-Based Schema Cross-Reference in Navigation Requirements for update: - Add sub-bullet under "Enable change data capture" section - Add: "  - [Model-Based Schema CDC integration](../xdm/schema/model-based.md#cdc-integration)" - Ensure proper indentation to maintain TOC hierarchy - Link should point to the CDC section within the model-based schema documentation -->
 - UI tutorials {#ui-tutorials}
   - Create a source connection {#create}
     - Adobe applications {#adobe-applications}

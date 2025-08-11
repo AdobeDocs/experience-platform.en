@@ -108,7 +108,12 @@ curl -X POST \
 | -------- | ----------- |
 | `baseConnectionId`| The connection ID of your database source. |
 | `params.tableName`| The path of the source file. |
-| `params.cdcEnabled` | A boolean value that indicates whether change history capture is enabled or not. This property is supported by the following database sources: <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> For more information, read the guide on using [change data capture in sources](../change-data-capture.md). |
+<!-- | `params.cdcEnabled` | A boolean value that indicates whether change history capture is enabled or not. This property is supported by the following database sources: <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> For more information, read the guide on using [change data capture in sources](../change-data-capture.md). | -->
+<!-- TODO: PLAT-240919 Update Database CDC Parameter for Model-Based Schema Support
+Requirements for update:
+- Replace existing line 111 parameter description for params.cdcEnabled
+- New description: "A boolean value that indicates whether change history capture is enabled or not. When enabled with model-based schemas, CDC tracks changes including inserts, updates, and deletes while ensuring the target dataset remains synchronized with the source. This property is supported by the following database sources: <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> For more information, read the guide on using [change data capture in sources](../change-data-capture.md) and [Model-Based Schema overview](../../../xdm/schema/model-based.md)."
+-->
 | `connectionSpec.id`| The connection specification ID of your database source. See the [Appendix](#appendix) for a list of database spec IDs. |
 
 **Response**

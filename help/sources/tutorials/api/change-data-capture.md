@@ -13,6 +13,51 @@ With change data capture, a given flow captures and applies all changes, includi
 
 You can use change data capture for the following sources:
 
+<!-- TODO: PLAT-240919 Add Model-Based Schema CDC Integration Section
+Requirements for update:
+
+1. ADD NEW SECTION with heading "## Using CDC with model-based schemas"
+
+2. ADD OVERVIEW PARAGRAPH:
+"Change data capture works seamlessly with model-based schemas to maintain data synchronization between source systems and Experience Platform datasets. Model-based schemas enable support for multiple data models beyond standard XDM, including Campaign Orchestration, Data Distiller, and B2B use cases."
+
+3. ADD REQUIREMENTS SUBSECTION with heading "### Model-based schema requirements"
+Content: "When using CDC with model-based schemas, ensure your schema includes the following required fields:
+- **Primary key**: Uniquely identifies each record
+- **Version descriptor**: Tracks schema version changes  
+- **Timestamp descriptor**: Required only for time-series schemas to track when events occurred"
+
+4. ADD CONTROL COLUMN BEHAVIOR SUBSECTION with heading "### Control column handling"
+Content: "Model-based schemas use the `_change_request_type` control column for CDC operations:
+- The column contains values `u` (upsert) or `d` (delete) 
+- This control column is read during ingestion time only
+- The `_change_request_type` column is NOT stored in the target XDM schema
+- The column is NOT mapped to any XDM fields in model-based schemas
+- If the column is missing from source data, the default value `u` (upsert) is applied"
+
+5. ADD RELATIONSHIPS SUBSECTION with heading "### Schema relationships"
+Content: "Model-based schemas support relationships between schemas through primary and foreign key mappings, enabling normalized data structures across multiple related datasets."
+
+6. ADD DATASET REQUIREMENTS SUBSECTION with heading "### Target dataset requirements"
+Content: "When configuring CDC with model-based schemas:
+- The target dataset must be based on a model-based schema
+- Verify that all required fields (primary key, version descriptor) are present in your schema
+- Ensure proper field mappings from source to target schema"
+
+7. ADD CROSS-REFERENCE: "For comprehensive information on creating and configuring model-based schemas, see [Model-Based Schema overview](../../../xdm/schema/model-based.md)."
+
+8. ADD AVAILABILITY NOTE: "Model-based schemas are available with appropriate Experience Platform entitlements."
+
+9. FORMATTING REQUIREMENTS:
+- Use sentence case for all headings
+- Apply imperative voice for instructional content
+- Follow Adobe Style Guide v3 principles
+- Maintain consistent terminology: "model-based schemas" (not "Model-Based Schemas")
+- Use "dataset" not "data set"
+
+10. POSITION: Insert this entire section immediately after line 14, before the first source-specific section (## [!DNL Amazon S3])
+-->
+
 ## [!DNL Amazon S3]
 
 Ensure that `_change_request_type` is present in the [!DNL Amazon S3] file that you intend to ingest to Experience Platform. Additionally, you must ensure that the following valid values are included in the file:

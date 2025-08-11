@@ -34,6 +34,17 @@ For partner-authored and maintained connectors, this means that issues with the 
 
 Read the following sections for a list of all sources available in the sources catalog.
 
+<!-- TODO: Add Model-Based Schema Overview Integration
+Requirements for update:
+- Add brief paragraph explaining that Sources can ingest data into model-based datasets
+- Mention that model-based schemas support multiple data models beyond standard AEP (Campaign Orchestration, Data Distiller, B2B)
+- Note the workflow: "Create model-based schema → create dataset → configure Sources → enable CDC (when needed)"
+- Reference that model-based schemas have specific requirements (primary key, version descriptor, timestamp descriptor for time-series)
+- Cross-link to XDM model-based schema documentation: "[Model-Based Schema overview](../xdm/schema/model-based.md)"
+- Keep wording neutral about entitlements/feature flags
+- Use sentence case heading if adding subheading
+-->
+
 ### Adobe applications {#adobe-applications}
 
 Experience Platform allows data to be ingested from other Adobe applications, including Adobe Analytics, and Adobe Audience Manager. Read the following related documents for more information:
@@ -291,7 +302,15 @@ With attribute-based access control, you can apply mapping configurations to fie
 
 - Apply labels to schema fields to define access to specific schema fields in your organization. Once access to specific schema fields are established, users will only be able to create mappings for the fields that they have access to.
 - Users without the appropriate roles will not be able to create or update dataflows with mappings that involve inaccessible schema fields. Furthermore, unauthorized users cannot update, delete, enable, or disable existing dataflows with inaccessible schema fields.
+  <!-- replace list item below -->
 - Additionally, a dataflow must have the exact same schema ID and version in its mapping, target dataset, and target connection.
+
+<!-- TODO: Update Schema Requirement Language for Model-Based Schemas
+Requirements for update:
+- Replace existing line 294: "Additionally, a dataflow must have the exact same schema ID and version in its mapping, target dataset, and target connection."
+- New text should read: "Additionally, a dataflow must have the exact same schema ID and version in its mapping, target dataset, and target connection. This applies to both standard XDM schemas and model-based schemas."
+- Add note: "Model-based schemas have additional requirements including primary key and version descriptor fields. For more information, see [Model-Based Schema overview](../xdm/schema/model-based.md)."
+-->
 
 For more information on attribute-based access control, read the [attribute-based access control overview](../access-control/abac/overview.md).
 
