@@ -6,6 +6,19 @@ exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
 
 # License usage and capacities
 
+>[!AVAILABILITY]
+>
+>To use this feature, you must have the following permissions:
+>
+>- **View License Usage Dashboard**
+>   - This permission lets you **view** the capacity home.
+>- **Manage Sandboxes**
+>   - This permission lets you **edit** your capacity allocations.
+>
+>More information about permissions within Experience Platform can be found in the [access control overview](/help/access-control/home.md#permissions)
+>
+>Additionally, if you have purchased High Throughput Streaming Segmentation, you will **not** be able to allocate your capacities using Capacity. To update your capacities, please contact Adobe Customer Care.
+
 In Adobe Experience Platform, capacities let you know if your organization has exceeded any of your guardrails and gives you information on how to fix these issues. 
 
 For more information about guardrails in Experience Platform, please read the [Real-Time CDP guardrails overview](../../rtcdp/guardrails/overview.md).
