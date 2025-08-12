@@ -47,20 +47,28 @@ For more information about alerts, read the [[!DNL Observability Insights] overv
 
 [!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
+**New destinations**
+
+| Destination | Description |
+| --- | --- |
+| [!DNL Acxiom Real ID Audience] destination  | Use the [!DNL Acxiom Real ID Audience Connection] destination to enhance audiences with [!DNL Acxiom's] [Real ID&trade;](https://www.acxiom.com/real-id/real-id/) technology and activate audiences to multiple platforms, such as [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], and more. |
+
+
 **Updated destinations**
 
 | Destination | Description |
 | --- | --- |
-| [!DNL Google Ad Manager 360] | Your [!DNL Google Ad Manager 360] destination is now production-ready with General Availability (GA). All beta notices have been removed, and prerequisites have been updated to ensure you have everything you need for successful production deployment. |
-| [!DNL LinkedIn] destination | Never worry about expired credentials again. Account expiry information is now visible directly in the product interface, so you can see when your [!DNL LinkedIn] authentication will expire and renew it before it causes any disruptions to your data flows. |
-| [!DNL Data Landing Zone] destination | Protect your exported data with encryption. You can now attach RSA-formatted public keys to encrypt your exported files, giving you the same level of security that other cloud storage destinations provide for your sensitive information. |
+| Authentication expiration details for [!DNL LinkedIn] destinations | Never worry about expired credentials again. Account expiration information is now visible directly in the Experience Platform interface, so you can see when your [!DNL LinkedIn] authentication will expire and renew it before it causes any disruptions to your dataflows. |
+| Encryption support for [!DNL Data Landing Zone] destinations | Protect your exported data with encryption. You can now attach RSA-formatted public keys to encrypt your exported files, giving you the same level of security that other cloud storage destinations provide for your sensitive information. |
+| [[!DNL Microsoft Bing]](../destinations/catalog/advertising/bing.md) internal upgrade | Starting August 11, 2025, you can see two **[!DNL Microsoft Bing]** cards side-by-side in the destinations catalog. This is due to an internal upgrade to the destinations service. The existing **[!DNL Microsoft Bing]** destination connector has been renamed to **[!UICONTROL (Deprecated) Microsoft Bing]** and a new card with the name **[!UICONTROL Microsoft Bing]** is now available to you. Use the new **[!UICONTROL Microsoft Bing]** connection in the catalog for new activation data flows. If you have any active dataflows to the **[!UICONTROL (Deprecated) Microsoft Bing]** destination, they will be updated automatically, so no action is required from you. <br><br>If you are creating dataflows through the [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/), you must update your [!DNL flow spec ID] and [!DNL connection spec ID] to the following values:<ul><li>Flow spec ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>Connection spec ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> Following this upgrade, you may experience a **drop in the number of activated profiles** in your dataflows to [!DNL Microsoft Bing]. This drop is caused by the introduction of the **ECID mapping requirement** for all activations to this destination platform.|
+| Additional identifiers for [!DNL Amazon Ads] destinations | The Amazon Ads destination now supports new identities (`firstName`, `lastName`, `street`, `city`, `state`, `zip`, `country`). These fields are intended to improve audience match rates and are passed in plain text, with optional SHA256 hashing. |
+| [!DNL Marketo] destination cards consolidation | Simplify your [!DNL Marketo] destination setup with our unified destination card. We've consolidated [!DNL Marketo] V2 and V3 cards into one streamlined option, making it easier to choose the right destination and get started quickly. |
 
 **New or updated functionality**
 
 | Feature | Description |
 | --- | --- |
-| [!DNL Marketo] destination cards consolidation | Simplify your [!DNL Marketo] destination setup with our unified destination card. We've consolidated [!DNL Marketo] V2 and V3 cards into one streamlined option, making it easier to choose the right destination and get started quickly. |
-| Dataset Export endTime updates | Get more precise timing information for your data exports. You'll now receive more accurate endTime data, helping you better track when your exports complete and plan your data workflows more effectively. |
+| Extend dataset export schedules for dataflows created prior to November 2024 | If your organization has dataset export dataflows created prior to November 2024, these dataflows will stop working on September 1st, 2025. If you need the dataflows to keep exporting data after September 1st, 2025, you must extend their schedules for each destination to which you are exporting datasets, by following the steps in [this guide](../destinations/ui/dataset-expiration-update.md).|
 
 For more information, read the [Destinations overview](../destinations/home.md).
 
