@@ -69,6 +69,7 @@ For more information about alerts, read the [[!DNL Observability Insights] overv
 | Feature | Description |
 | --- | --- |
 | Extend dataset export schedules for dataflows created prior to November 2024 | If your organization has dataset export dataflows created prior to November 2024, these dataflows will stop working on September 1st, 2025. If you need the dataflows to keep exporting data after September 1st, 2025, you must extend their schedules for each destination to which you are exporting datasets, by following the steps in [this guide](../destinations/ui/dataset-expiration-update.md).|
+| Enhanced search, filtering, and tagging capabilities for destinations | Improve your destination management workflow with enhanced search, filtering, and tagging capabilities across the Browse and Accounts tabs. You can now search for specific dataflows and accounts by name, filter by various criteria including destination platform, data type, status, and dates, and create custom tags to organize your destinations. Column sorting is also available for key fields like last dataflow run time and account expiration dates, making it easier to identify and manage your destination connections. |
 
 For more information, read the [Destinations overview](../destinations/home.md).
 
