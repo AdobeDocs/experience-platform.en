@@ -46,12 +46,23 @@ Select **[!UICONTROL Create private endpoint]** and select the source that you w
 
 When finished, select **[!UICONTROL Submit]**.
 
-Initially, the newly created endpoint will be pending until 
-
-* Endpoint status is pending and must be approved from within the storage account.
-* Once the endpoint is approved, the status will update to enabled.
+Initially, the newly created endpoint will be pending until approved by an administrator... Once approved, the endpoint status updates to [!UICONTROL Enabled].
 
 ## Create an account with a private endpoint
+
+Navigate to the sources catalog and select a source that support private endpoints. Next, create a new account with your source and during account authentication, select the **[!UICONTROL Private endpoint]** toggle. Provide your source's authentication credentials and then select **[!UICONTROL Connect to source]**. It may take a few minutes for your connection to be established with the private endpoint.
+
+![]
+
+Next, navigate to the [!UICONTROL Existing account] interface of your source. Use this interface to view a list of your existing accounts and their corresponding statuses. You can select the filter icon ![filter icon](../../../images/icons/filter.png) to quickly identify any existing accounts that are connected through a private endpoint. 
+
+![]
+
+Once your account is enabled, select the account and then select **[!UICONTROL Interactive authoring]** to enable the toggle.
+
+>[!TIP]
+>
+>**Interactive Authoring** is an [!DNL Azure] capability used to test connections, browse folder lists, and preview data. This is required in order to use private endpoints.
 
 * Select a source, create a new account and enable the private endpoint toggle
 * You must provide the correct details in order to connect via private endpoint
