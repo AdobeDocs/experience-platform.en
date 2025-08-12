@@ -74,7 +74,7 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
       * [Use the UI to set up CMK on AWS](./governance-privacy-security/customer-managed-keys/aws/ui-set-up.md)
     * [CMK alert resolution reference](./governance-privacy-security/customer-managed-keys/alert-resolution-reference.md)
 * License usage and guardrails {#license}
-  * [Data management license entitlement best practices](./license-usage-and-guardrails/data-management-best-practices.md)    
+  * [Data management license entitlement best practices](./license-usage-and-guardrails/data-management-best-practices.md)
   * [License usage dashboard](./license-usage-and-guardrails/license-usage-dashboard.md)
   * [License usage and capacity](./license-usage-and-guardrails/capacity.md)    
   * [Total data volume](./license-usage-and-guardrails/total-data-volume.md)
