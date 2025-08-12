@@ -25,17 +25,22 @@ This guide requires a working understanding of XDM System. Refer to the [XDM ove
 >
 >This section covers how to manually create a new schema in the UI. If you are ingesting CSV data into Experience Platform, you can use Machine Learning (ML) algorithms to **generate a schema from sample CSV data**. This workflow matches your data format and automatically creates a new schema based on the structure and content of your CSV file. See the [ML-Assisted schema creation guide](../ml-assisted-schema-creation.md) for more information on this workflow.
 
-In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in the top-right corner.
+In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in the top-right corner. The 'Select schema type' dropdown menu appears. The options are 'Standard' or 'Model-based'. 
+<!-- update image below -->
+![The Schemas workspace with [!UICONTROL Create Schema] highlighted and the 'Select schema type' dropdown displayed](../../images/ui/resources/schemas/create-schema.png).
 
-![The Schemas workspace with [!UICONTROL Create Schema] highlighted.](../../images/ui/resources/schemas/create-schema.png)
+## Model-based schema creation {#model-based-creation}
 
-The [!UICONTROL Create a schema] dialog appears. In this dialog, you can choose to either manually create a schema by adding fields and field groups, or you can upload a CSV file and use ML algorithms to generate a schema. Select a schema creation workflow from the dialog.
-<!-- Screenshot blow likely needs update ... -->
-![The Create a schema dialog with the workflow options and select highlighted.](../../images/ui/resources/schemas/create-a-schema-dialog.png)
+From the dropdown menu select 'Model-based'. The Create a model-based schema dialog appears. You can either do it manually, or you can do it by uploading a DDL file. 
 
-### [!BADGE Beta]{type=Informative} Manual or ML-assisted schema creation {#manual-or-assisted}
+Select 'Create manually', then 'Next'. The Model-based schema details page appears. Enter a display name for your schema and an optional description. 
 
-To learn how you can use a ML algorithm to recommend a schema structure based on a csv file, see the [machine learning-assisted schema creation guide](../ml-assisted-schema-creation.md). This UI guide focusses on the manual creation workflow. 
+Note; Currently model-based schemas only support record schema behaviour.
+And select 'Finish' to confirm your settings.
+
+The Schema Editor canvas appears with a completely empty schema.
+
+The existing Schema Editor process/experience is used to add fields to the empty schema. [LINK TO ADD FIELDS section/guide](#add-field-groups)
 
 <!-- TODO: PLAT-240919 Add Model-Based Schema UI workflow section 
 - document the "Model-Based" option users will see in schema creation UI, including step-by-step workflow for creating model-based schemas 
@@ -71,6 +76,16 @@ Model-based schemas enable structured, relational-style data support with primar
 For comprehensive information on model-based schema concepts, see [Model-Based Schema overview](../../schema/model-based.md). For CDC configuration with Sources, see [Enable change data capture](../../../sources/tutorials/api/change-data-capture.md).
 
 -->
+
+## Standard schema creation {#standard-based-creation}
+
+If you select 'Standard schema type from the 'Select schema type' dropdown menu, the [!UICONTROL Create a schema] dialog appears. In this dialog, you can choose to either manually create a schema by adding fields and field groups, or you can upload a CSV file and use ML algorithms to generate a schema. Select a schema creation workflow from the dialog.
+<!-- Screenshot blow likely needs update ... -->
+![The Create a schema dialog with the workflow options and select highlighted.](../../images/ui/resources/schemas/create-a-schema-dialog.png)
+
+### [!BADGE Beta]{type=Informative} Manual or ML-assisted schema creation {#manual-or-assisted}
+
+To learn how you can use a ML algorithm to recommend a schema structure based on a csv file, see the [machine learning-assisted schema creation guide](../ml-assisted-schema-creation.md). This UI guide focusses on the manual creation workflow. 
 
 ### Manual schema creation {#manual-creation}
 
