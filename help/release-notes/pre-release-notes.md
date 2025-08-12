@@ -27,7 +27,7 @@ New features and updates to existing features in Adobe Experience Platform:
 
 - [Alerts](#alerts)
 - [Destinations](#destinations)
-- [Experience Data Model (XDM)](#cdm)
+- [Experience Data Model (XDM)](#xdm)
 - [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
 
@@ -39,7 +39,7 @@ Experience Platform allows you to subscribe to event-based alerts for various Ex
 
 | Feature | Description |
 | ------- | ----------- |
-| Streaming throughput capacity alerts | Stay ahead of capacity issues with proactive alerts. You can now set up alerts to notify you when your streaming throughput reaches 80%, 90%, or exceeds capacity limits. This gives you early warning so you can take action before performance is impacted. |
+| Streaming throughput capacity alerts | Three new alerts allow users to subscribe to and configure alerts to proactively manage and monitor performance of streaming throughput capacity. New alerts include when streaming throughput reached 80%, 90%, or exceeds capacity limits. For more information, read the [capacity alert rules](../observability/alerts/rules.md#capacity) guide. |
 
 For more information about alerts, read the [[!DNL Observability Insights] overview](../observability/home.md).
 
@@ -105,7 +105,8 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Feature | Description |
 | --- | --- |
-| Azure Private Link Support in the UI (Beta) | Keep your data secure with private network connections. You can now create private endpoints and set up dataflows that bypass the public internet, giving you enhanced security and network isolation for your sensitive data. |
+| [!BADGE Beta]{type=Informative} Azure Private Link Support in the UI | Keep your data secure with private network connections. You can now create private endpoints and set up dataflows that bypass the public internet, giving you enhanced security and network isolation for your sensitive data. |
+| [!DNL Marketo] source documentation updates | Get complete visibility into how your [!DNL Marketo] data is transformed when it enters Experience Platform. All field mappings now include detailed explanations of data transformations, so you can understand exactly how your `PersonID` becomes `leadID` and `eventType` becomes `activityType`. |
 | Support for service principal authentication for [!DNL Azure Blob Storage] | You can now connect your [!DNL Azure Blob Storage] account to Experience Platform with service principal authentication. |
 
 For more information, read the [sources overview](../sources/home.md).
