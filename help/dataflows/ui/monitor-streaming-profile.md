@@ -192,6 +192,28 @@ If your current limit of **1,500 events per second** is insufficient, consider o
 
 {style="table-layout:auto"}
 
+### Frequently asked questions {#faq}
+
+Read this section for answers to frequently asked questions about the monitoring for streaming profile ingestion.
+
+#### Why do my metrics look different between the Capacity and Monitoring dashboards for request throughput?
+
++++Answer
+
+The [!UICONTROL Monitoring] dashboard shows real-time metrics for ingestion and processing. These numbers are exact metrics recorded at the time of activity. Conversely, the [!UICONTROL Capacity] dashboard uses a smoothing mechanism for throughput capacity calculation. This mechanism helps reduce short-lived spikes from instantly qualifying as violations and ensures that capacity alerts focus on sustained trends, rather than momentary bursts.
+
+Due to the smoothing mechanism, you may notice:
+
+* Small spikes in [!UICONTROL Monitoring] that do not appear in [!UICONTROL Capacity].
+* Slightly lower values in [!UICONTROL Capacity] compared to [!UICONTROL Monitoring] at the same timestamp.
+
+The two dashboards are accurate, but are designed for different purposes.
+
+* [!UICONTROL Monitoring]: Detailed, moment-by-moment operational visibility.
+* [!UICONTROL Capacity]: Strategic view for identifying usage and violation patterns.
+
++++
+
 ## Next steps {#next-steps}
 
 By following this tutorial, you learned how to monitor streaming profile ingestion jobs in your organization. Read the following documents for additional information on monitoring data for Real-Time Customer Profile.
