@@ -1,78 +1,102 @@
 ---
 keywords: Experience Platform;home;popular topics;model-based schema; schema;Schema;xdm;experience data model;
 solution: Experience Platform
-title: Model-based Schemas
-description: Learn how to create and use model-based schemas in Adobe Experience Platform, including required fields, ingestion methods, supported applications, and limitations.
+title: Model-based schemas
+description: Learn about model-based schemas in Adobe Experience Platform, including features, required fields, relationships, ingestion methods, and limitations.
 ---
 # Model-based schemas
 
-A model-based schema is a type of schema in Adobe Experience Platform designed for structured, relational-style data stored in the Data Lake. It supports primary key enforcement, version tracking, and relationships between datasets.
+A model-based schema is a type of schema in Adobe Experience Platform (AEP) designed for structured, relational-style data stored in the Data Lake. Model-based schemas simplify schema creation by reducing complexity, enforcing key constraints, and supporting relationships between datasets. They are designed to overcome limitations in standard XDM schemas by removing dependency on union schemas, streamlining evolution, and allowing more flexibility in field definitions.
 
 >[!AVAILABILITY]
 >
->Currently, model-based schemas are **record-based only** and available based on your license or feature enablement. This includes customers with **Campaign Orchestration**, **Data Distiller**, and **B2B** capabilities.
+>Currently, model-based schemas are **record-based only** and available based on your license or feature enablement. This includes Adobe Journey Optimizer **Campaign Orchestration**, **Data Distiller**, and Real-Time CDP **B2B** editions.
+
+## Background
+
+Standard XDM schemas in Experience Platform are classified into three behaviors:
+
+* **Record** – Describes attributes of a subject, such as a person or organization.  
+* **Time-series** – Captures a snapshot of the system when an event occurs, including both the event and the time it happened.  
+* **Ad-hoc** – Captures namespaced fields for single-dataset use cases, such as CSV ingestion or temporary query results.
+
+In the traditional model, record and time-series schemas participate in union views, auto-evolve when shared field groups change, and require custom fields to be nested under a tenant namespace. This model is powerful, but it adds complexity, increases schema size over time, and can slow down ingestion workflows.
+
+Model-based schemas address these challenges by:
+
+* Removing union schema participation.
+* Eliminating auto-evolution from shared field groups.
+* Allowing custom fields to be defined directly without tenant namespace restrictions.
+* Providing simpler control over required fields and relationships.
+
+<!-- CONFLICT: KT wiki frames background around technical constraints and union schema removal; Adam emphasized a UI terminology change from "relational" to "model-based" and licensing scope. -->
+
+## Features of model-based schemas
+
+Model-based schemas offer the following capabilities:
+
+* Support for both record and time-series schema behaviors.
+<!-- CONFLICT: KT wiki states both record and time-series are supported; Adam stated only record-based schemas are currently available. -->
+* Primary key enforcement to ensure uniqueness of each record.
+* Version control using a version descriptor to correctly apply updates, even if data arrives out of order.
+* Timestamp tracking for time-series data to distinguish event time from processing time.
+* Support for one-to-many and many-to-one relationships between schemas.
+* Flexible custom field creation without tenant-id namespacing.
+* Simplified schema evolution, with no automatic updates when unrelated field groups change.
 
 ## Required fields
 
-Model-based schemas require specific fields to support primary key enforcement and record-level changes:
+Model-based schemas include specific descriptors to ensure reliable data operations:
 
-* **Primary key** – Required to ensure uniqueness of records.
-* **Version descriptor** – Required to handle out-of-order updates.  
-  >[!NOTE]
-  >
-  > In some UI versions, this field may appear as "version identifier."
-* **Timestamp descriptor** – Required for time-series schemas only; tracks event time versus update time.
+* **Primary key** – Ensures each record is uniquely identified. Supports single-field and composite keys. For time-series schemas, the composite key must include the timestamp column identified by the timestamp descriptor.
+<!-- CONFLICT: KT wiki supports single and composite PKs; Adam indicated only a single primary key field is required, with timestamp handled separately for time-series. -->
+* **Version descriptor** – Required to manage out-of-order updates and maintain correct record state. May appear as "version identifier" in some UI versions.
+* **Timestamp descriptor** – Required for time-series schemas to distinguish event time from ingestion or update time.
 
-For detailed guidance on adding these fields when creating a schema, see [Create a schema in the UI](PLACEHOLDER).
+For more detail on creating descriptors in the API, see [PLACEHOLDER].
 
 ## Relationship support
 
-You can define primary/foreign key relationships between schemas to enable one-to-many and many-to-one relationships. These relationships are enforced at the schema level and improve query accuracy and data integrity across linked datasets.
+Model-based schemas allow you to define relationships between datasets, improving join operations and maintaining referential integrity:
 
-For step-by-step instructions on adding relationships, see [Define a schema relationship in the UI](PLACEHOLDER).
+* One-to-many relationships.
+* Many-to-one relationships.
+
+These relationships can exist between two model-based schemas or between a model-based schema and a standard schema.  
+For workflow details, see [PLACEHOLDER] in the Schema Editor documentation.
 
 ## Ingestion methods
 
-The following are supported methods for writing data to model-based datasets:
+You can write data to model-based schema datasets using:
 
-* **Sources with change data capture (CDC)** – Requires a `_change_request_type` column:
-  * `U` = upsert (default if the column is missing)
+* **Sources with change data capture (CDC)** – The incoming data must include a `_change_request_type` column:
+  * `U` = upsert (default if column is missing)
   * `D` = delete
 
 >[!NOTE]
 >
-> `_change_request_type` is read during ingestion only and is **not stored or mapped** in XDM.
+> `_change_request_type` is evaluated during ingestion only and is not stored or mapped in XDM.
 
-For detailed instructions on using CDC during ingestion, see [Create a dataflow with CDC in the Sources UI](PLACEHOLDER).
+* **Data Distiller** – Supports ingestion using SQL queries. See [PLACEHOLDER].
+* **Local file upload** – Supports ingestion via manual file uploads to datasets. See [PLACEHOLDER].
 
-### Other available methods
+<!-- CONFLICT: KT wiki lists CDC, Data Distiller, and local file upload as options; Adam stated CDC is currently the primary supported workflow for model-based schemas. -->
 
-These methods are supported but are not the primary ingestion workflows:
+## Hygiene considerations
 
-* **Data Distiller** — See [Ingest data with Data Distiller](PLACEHOLDER).
-* **Local file upload** — See [Upload a file to the Data Lake](PLACEHOLDER).
+When deleting records in Adobe while retaining them in the source system, you can:
 
-## Workflow
+* Send a CDC delete operation (`_change_request_type = D`).
+* Use a safe-copy dataset and apply deletes there.
+* Upload a batch containing only deletes.
 
-Follow these steps to create and use a model-based schema:
-
-1. In the [Schema Editor UI](PLACEHOLDER), select **Model-Based** as the schema type.
-2. Assign the required fields (Primary key, Version descriptor, and Timestamp descriptor if applicable).
-3. *(Optional)* Define relationships with other schemas as described in [Define a schema relationship in the UI](PLACEHOLDER).
-4. Create a dataset from the schema.
-5. In the [Sources UI](PLACEHOLDER), configure a dataflow to write to this dataset.
-6. If using CDC, include a `_change_request_type` column in the incoming data.
-
->[!NOTE]
->
-> Use a consistent naming convention for your schemas and datasets to ensure they can be easily identified later in the workflow.
-
-For information on how to delete records from model-based datasets while retaining them in the source, see [Record delete hygiene for model-based datasets](PLACEHOLDER).
+For complete guidance, see [PLACEHOLDER] in the Record Delete documentation.
 
 ## Limitations and considerations
 
-* Only record-based schemas are currently supported for model-based schemas.
-* Availability depends on your license or feature enablement.
-* CDC is required for core ingestion workflows.
+* Model-based schemas do not participate in union schemas.
+* Schema evolution is manual; they do not auto-update when field groups change.
+* Composite primary keys are required for time-series schemas.
 * Relationships are currently limited to one-to-many and many-to-one.
-* Hygiene considerations apply when deleting records in Adobe while retaining them in the source.
+* Availability depends on your license or feature enablement.
+<!-- CONFLICT: KT wiki supports both record and time-series; Adam stated only record-based schemas are currently available. -->
