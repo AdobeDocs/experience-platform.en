@@ -13,7 +13,7 @@ This document explains how to configure the tag extension in the Tags UI.
 
 ## Install the Adobe Content Analytics tag extension {#install}
 
-The Adobe Content Analytics tag extension is automatically installed as part of the tag property that is automatically created when using the [Content Analytics guided configuration wizard](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided){target="_blank"}. 
+The Adobe Content Analytics tag extension is automatically installed as part of the tag property that is automatically created when using the [Content Analytics guided configuration wizard](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided). 
 
 <!-->
 ### Manual installation
