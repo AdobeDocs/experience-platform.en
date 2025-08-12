@@ -1,8 +1,8 @@
 ---
-title: Private Link Support in the UI
+title: Azure Private Link Support in the UI
 description:
 ---
-# Private Link Support in the UI
+# Azure Private Link Support in the UI
 
 
 The problem:
@@ -28,10 +28,26 @@ Current support includes:
 
 ## Create a private endpoint
 
-* Select **[!UICONTROL Private endpoints]** from the menu of tabs in the sources workspace.
-* Use the interface to view existing private endpoints.
-* Select **[!UICONTROL Create private endpoint]** and then select the source that you want to use.
-* Provide values for the required fields and then select **[!UICONTROL Submit]**.
+Select **[!UICONTROL Private endpoints]** from the menu of tabs in the sources workspace.
+
+Use the interface to view existing private endpoints. Here you can view information on existing private endpoints, such as their ID, corresponding source, and status.
+
+Select **[!UICONTROL Create private endpoint]** and select the source that you want to use. Next, provide values for the following properties:
+
+| Property | Description |
+| --- | --- |
+| `name` | The name of your private endpoint. |
+| `subscriptionId` | The ID associated with your [!DNL Azure] subscription. For more information, read the [!DNL Azure] guide on [retrieving your subscription and tenant IDs from the [!DNL Azure Portal]](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id). |
+| `resourceGroupName` | The name of your resource group on [!DNL Azure]. A resource group contains related resources for an [!DNL Azure] solution. For more information, read the [!DNL Azure] guide on [managing resource groups](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal). | 
+| `resourceGroup` | The name of your resource. In [!DNL Azure], a resource refers to instances like virtual machines, web apps, and databases. For more information, read the [!DNL Azure] guide on [understanding the [!DNL Azure] resource manager](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview). |
+| `fqdns` | The fully-qualified domain names for your source. **NOTE**: This property is required only when using the [!DNL Snowflake] source. |
+
+{style="table-layout:auto"}
+
+When finished, select **[!UICONTROL Submit]**.
+
+Initially, the newly created endpoint will be pending until 
+
 * Endpoint status is pending and must be approved from within the storage account.
 * Once the endpoint is approved, the status will update to enabled.
 
