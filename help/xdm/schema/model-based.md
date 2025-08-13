@@ -6,7 +6,25 @@ description: Learn about model-based schemas in Adobe Experience Platform, inclu
 ---
 # Model-based schemas
 
-Use model-based schemas in Adobe Experience Platform to model structured, relational-style data in the data lake, using primary keys and relationships without full relational database constraints. Define enforced primary keys to maintain data integrity and prevent duplicates, enable row- and record-level change tracking for precise updates and deletes, and create schema-level relationships you can reference across applications. Work with multiple data models beyond the standard Experience Platform schema to avoid duplicating modeling work, define relationships once and reuse them, and maintain consistent data structures across Adobe applications. Remove dependencies on union schemas, streamline schema evolution, and configure fields with greater flexibility to match your data needs.
+Use model-based schemas in Adobe Experience Platform to represent structured, relational-style data in the data lake, using primary keys and relationships without the constraints of a full relational database. 
+
+<!-- Define enforced primary keys to maintain data integrity and prevent duplicates, enable row- and record-level change tracking for precise updates and deletes, and create schema-level relationships you can reference across applications. Work with multiple data models beyond the standard Experience Platform schema to avoid duplicating modeling work, define relationships once and reuse them, and maintain consistent data structures across Adobe applications. 
+
+or  -->
+
+With model-based schemas, you can:
+
+* Define enforced primary keys to maintain data integrity and prevent duplicates.
+* Enable row- and record-level change tracking for precise updates and deletes.
+* Create schema-level relationships that can be referenced across applications.
+
+Model-based schemas also let you:
+
+* Work with multiple data models beyond the standard Experience Platform schema to avoid duplicating modeling work.
+* Define relationships once and reuse them across projects.
+* Maintain consistent data structures across Adobe applications.
+
+This approach removes dependencies on union schemas, streamlines schema evolution, and gives you more flexibility when configuring fields to match your data needs.
 
 >[!AVAILABILITY]
 >
