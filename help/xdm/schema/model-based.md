@@ -33,27 +33,99 @@ Model-based schemas address these challenges by:
 
 ## Features of model-based schemas
 
-Model-based schemas offer the following capabilities:
+Model-based schemas are designed to simplify the process of modeling structured, relational-style data in the Data Lake while retaining essential capabilities for data governance, data integrity, and interoperability.
 
-* Support for both record and time-series schema behaviors.
+The key features include:
+
+* **Schema behavior support** – Can be configured with either:
+  * **Record behavior** – Captures the current state of an entity, such as a customer, account, or campaign.
+  * **Time-series behavior** – Captures events and the time they occur, useful for tracking sequences or changes over time.
 <!-- CONFLICT: KT wiki states both record and time-series are supported; Adam stated only record-based schemas are currently available. -->
-* Primary key enforcement to ensure uniqueness of each record.
-* Version control using a version descriptor to correctly apply updates, even if data arrives out of order.
-* Timestamp tracking for time-series data to distinguish event time from processing time.
-* Support for one-to-many and many-to-one relationships between schemas.
-* Flexible custom field creation without tenant-id namespacing.
-* Simplified schema evolution, with no automatic updates when unrelated field groups change.
+
+* **Primary key enforcement** – Ensures that each record in the dataset is uniquely identifiable. This constraint prevents duplicate records from being created during ingestion.
+
+* **Version control** – The **version descriptor** allows the system to correctly apply updates to existing records, even if updates arrive out of order. For example, if an earlier update is received after a later one, the system can use the version descriptor to determine which is the most recent.
+
+* **Event-time ordering** – For time-series schemas, the **timestamp descriptor** allows ingestion and queries to order events based on the actual time of occurrence rather than ingestion time.
+
+* **Relationship mapping** – Supports both one-to-many and many-to-one relationships. These can be:
+  * Between two model-based schemas.
+  * Between a model-based schema and a standard schema.
+  Relationships are stored as descriptors within the schema and allow linked datasets to be joined more efficiently.
+
+* **Simplified evolution** – Model-based schemas are excluded from union views and are not automatically updated when a shared field group changes. This prevents unexpected changes in downstream workflows.
+
+* **Flexible field definition** – Fields can be added directly to the schema without tenant-id namespacing, reducing complexity for custom modeling.
+
+* **No dependency on union schemas** – Improves query performance and reduces the operational overhead of managing global schema views.
 
 ## Required fields
 
-Model-based schemas include specific descriptors to ensure reliable data operations:
+Model-based schemas require specific descriptors to be defined. These descriptors are metadata elements in the schema definition that inform the system about key behaviors and constraints.
 
-* **Primary key** – Ensures each record is uniquely identified. Supports single-field and composite keys. For time-series schemas, the composite key must include the timestamp column identified by the timestamp descriptor.
-<!-- CONFLICT: KT wiki supports single and composite PKs; Adam indicated only a single primary key field is required, with timestamp handled separately for time-series. -->
-* **Version descriptor** – Required to manage out-of-order updates and maintain correct record state. May appear as "version identifier" in some UI versions.
-* **Timestamp descriptor** – Required for time-series schemas to distinguish event time from ingestion or update time.
+### Primary key descriptor
 
-For more detail on creating descriptors in the API, see [PLACEHOLDER].
+* **Purpose** – Uniquely identifies each record within a dataset.
+* **Supported configurations**:
+  * **Single-field primary key** – One field contains a unique value for each record.
+  * **Composite primary key** – Combines multiple fields to form a unique identifier.  
+    For time-series schemas, the composite key must include the timestamp field identified by the timestamp descriptor.
+<!-- CONFLICT: KT wiki supports both single and composite primary keys; Adam stated only a single primary key field is required, with timestamp handled separately for time-series. -->
+**Example**
+
+```json
+    {
+    "xdm:descriptor": "xdm:descriptorPrimaryKey",
+    "xdm:sourceProperty": "customerId"
+    }
+```
+
+**Composite key example for time-series**:
+
+```json
+{
+  "xdm:descriptor": "xdm:descriptorPrimaryKey",
+  "xdm:sourceProperty": ["customerId", "eventTimestamp"]
+}
+```
+
+### Version descriptor
+
+Purpose – Maintains correct record state by determining the most recent update for a given primary key.
+
+Behavior – When multiple records with the same primary key are ingested, the record with the highest version value is considered the latest. This allows updates to be applied even if ingestion order is incorrect.
+
+**Example**:
+
+```json
+{
+  "xdm:descriptor": "xdm:descriptorVersion",
+  "xdm:sourceProperty": "lastModified"
+}
+```
+
+<!-- NOTE: unsure whether this descriptor is labeled as "version identifier." -->
+
+### Timestamp descriptor 
+
+Purpose – Used for time-series schemas to establish the event time for ordering.
+
+Behavior – Ingestion and query operations can use this value to sort events chronologically, independent of ingestion time.
+
+**Example**:
+
+```json
+{
+  "xdm:descriptor": "xdm:descriptorTimestamp",
+  "xdm:sourceProperty": "eventTimestamp"
+}
+```
+
+>[!NOTE]
+>
+>These descriptors are not stored in data rows; they are part of the schema definition metadata.
+
+For instructions on creating descriptors in the Schema Editor, see [PLACEHOLDER for UI doc](). For API-based creation, see [PLACEHOLDER for API doc]().
 
 ## Relationship support
 
