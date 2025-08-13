@@ -20,7 +20,7 @@ Standard XDM schemas in Experience Platform are classified into three behaviors:
 * **Time-series** – Captures a snapshot of the system when an event occurs, including both the event and the time it happened.  
 * **Ad-hoc** – Captures namespaced fields for single-dataset use cases, such as CSV ingestion or temporary query results.
 
-In the traditional model, record and time-series schemas participate in union views, auto-evolve when shared field groups change, and require custom fields to be nested under a tenant namespace. This model is powerful, but it adds complexity, increases schema size over time, and can slow down ingestion workflows.
+In the traditional model, record and time-series schemas participate in union views, auto-evolve when shared field groups change, and require custom fields to be nested under a tenant namespace. For more information, see [union views](PLACEHOLDER.md) and [field groups](PLACEHOLDER.md) in the XDM overview. This model is powerful, but it adds complexity, increases schema size over time, and can slow down ingestion workflows.
 
 Model-based schemas address these challenges by:
 
@@ -56,6 +56,10 @@ The key features include:
 * **Simplified evolution** – Model-based schemas are excluded from union views and are not automatically updated when a shared field group changes. This prevents unexpected changes in downstream workflows.
 
 * **Flexible field definition** – Fields can be added directly to the schema without tenant-id namespacing, reducing complexity for custom modeling.
+
+    >[!NOTE]
+    >
+    > You can still use existing XDM field groups in a model-based schema, but you are not required to. Changes to those field groups do not automatically propagate to your schema.
 
 * **No dependency on union schemas** – Improves query performance and reduces the operational overhead of managing global schema views.
 
@@ -184,11 +188,19 @@ In this example:
 For step-by-step instructions on creating relationships in the Schema Editor UI, see [PLACEHOLDER].
 For API-based relationship creation, see [PLACEHOLDER for API doc].
 
+>[!IMPORTANT]
+>
+> Relationship cardinality is not enforced at the time of ingestion. It is only applied when relationships are resolved during query or analysis.
+
+>[!NOTE]
+>
+> Model-based schemas can link to standard schemas, but cannot link to ad-hoc schemas.
+
 <!-- CONFLICT: KT wiki describes both model-based to model-based and model-based to standard schema relationships; Adam's notes only mention primary/foreign key relationships in general without detailing interoperability. -->
 
 ## Ingestion methods
 
-You can write data to model-based schema datasets using:
+For most current implementations, change data capture (CDC) is the primary workflow used to keep model-based datasets synchronized with source systems. Other ingestion options are also supported. You can write data to model-based schema datasets using:
 
 * **Sources with change data capture (CDC)** – The incoming data must include a `_change_request_type` column:
   * `U` = upsert (default if column is missing)
@@ -246,6 +258,10 @@ For complete data hygiene instructions, see [PLACEHOLDER for Record Delete docum
 
 * Model-based schemas do not participate in union schemas.
 * Schema evolution is manual; they do not auto-update when field groups change.
+  
+    >[!IMPORTANT]
+    >
+    > Schema evolution for model-based schemas is additive only. Once a schema is published, you can add new fields but you cannot remove or alter existing fields.
 * Composite primary keys are required for time-series schemas.
 * Relationships are currently limited to one-to-many and many-to-one.
 * Availability depends on your license or feature enablement.
