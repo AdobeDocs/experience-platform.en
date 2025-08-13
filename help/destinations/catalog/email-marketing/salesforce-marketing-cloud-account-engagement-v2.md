@@ -31,7 +31,7 @@ Synchronize lead data from Adobe Experience Platform to Pardot for comprehensive
 
 ### Campaign automation {#use-case-campaign-automation}
 
-You can trigger marketing campaigns in [!DNL Salesforce Marketing Cloud Account Engagement] by using audiences that you define in Adobe Experience Platform. After you export your targeted audiences to Pardot, you can use them to run email campaigns and manage your leads through nurturing, scoring, and campaign segmentation.
+You can trigger marketing campaigns in [!DNL Salesforce Marketing Cloud Account Engagement] by using audiences that you define in Adobe Experience Platform. After you export your targeted audiences to [!DNL Salesforce], you can use them to run email campaigns and manage your leads through nurturing, scoring, and campaign segmentation.
 
 ### Profile enrichment {#use-case-profile-enrichment}
 
@@ -59,7 +59,7 @@ Write down the items below before you authenticate to the [!DNL (V2) Marketing C
 
 | Credential | Description |
 | --- | --- |
-| **[!UICONTROL Account Engagement Business Unit ID]** | Your [!DNL Salesforce] Account Engagement Business Unit ID. |
+| **[!UICONTROL Account Engagement Business Unit ID]** | Your [!DNL Salesforce] Account Engagement Business Unit ID. Refer to the Salesforce [documentation](https://help.salesforce.com/s/articleView?id=000381973&type=1) to learn how to find the ID. |
 
 {style="table-layout:auto"}
 
@@ -106,6 +106,10 @@ You will be redirected to the [!DNL Salesforce] login page. Enter your [!DNL Mar
 
 ![Salesforce login page](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/salesforce-auth.png "Salesforce login page.")
 
+Next, Select **[!UICONTROL Allow]** to give permissions to the **Adobe Experience Platform** app to access your [!DNL Salesforce Marketing Cloud Account Engagement] account. *You need to do this only once*.
+
+![Salesforce App screenshot confirmation popup to give permissions to the Experience Platform app access to Marketing Cloud Account Engagement.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/allow-app.png)
+
 If the details provided are valid, the UI displays a message: *You successfully connected to (V2) Salesforce Marketing Cloud Account Engagement account* and a **[!UICONTROL Connected]** status with a green check mark.
 
 ### Fill in destination details {#destination-details}
@@ -139,16 +143,34 @@ To send audience data from Adobe Experience Platform to the [!DNL (V2) Marketing
 
 Refer to the [Salesforce Prospect API v5 documentation](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html) for a complete list of supported fields. Note that [custom fields](https://developer.salesforce.com/docs/marketing/pardot/guide/custom-field-v5.html) are not supported in the Alpha release.
 
+#### Supported attributes {#supported-attributes}
+
+The Salesforce Marketing Cloud Account Engagement destination supports the target attributes described in the table below.
+
+| Attribute | Type | Description |
+|---------|----------|----------|
+| `salesforceId` | String | The Salesforce ID of the prospect |
+| `salesforceOwnerId` | Integer | The Salesforce user ID of the prospect owner |
+| `salutation` | String | The prospect's salutation (e.g., Mr., Ms., Dr.) |
+| `score` | Integer | The prospect's score in Account Engagement |
+| `source` | String | The source of the prospect record |
+| `state` | String | The state/province of the prospect |
+| `territory` | String | The territory assigned to the prospect |
+| `userId` | Integer | The user ID associated with the prospect |
+| `website` | String | The prospect's website URL |
+| `yearsInBusiness` | String | The number of years the prospect has been in business |
+| `zip` | String | The ZIP/postal code of the prospect |
+
 #### Required mappings {#required-mappings}
 
 Before you begin mapping your data, review the required field mappings below.
 
-| Target field | Type |Required|
-|---|---|---|
-| `email` | Attribute | Always required |
-| `matchId` | Identity | At least one of these three identities is required |
-| `matchSalesforceId` | Identity | At least one of these three identities is required |
-| `matchEmail` | Identity | At least one of these three identities is required |
+| Target field | Type | Required | When to use |
+|---|---|---|---|
+| `email` | Attribute | Always required | The prospect's email address. This is the primary identifier for finding and matching prospect records in Account Engagement when you don't have a `matchId` or `matchSalesforceId`. <br> **Note:** With Account Engagement's "Allow Multiple Prospects with the Same Email Address" feature, relying solely on email can lead to ambiguity if there are multiple prospects with the same email. Account Engagement will usually default to updating the prospect with the most recent activity in such cases. |
+| `matchId` | Identity | At least one of these three identities is required | A unique identifier generated by Account Engagement for each individual prospect record. Use this when you already have the Account Engagement prospect ID and want to ensure updates are applied to the correct prospect, especially when multiple prospects share the same email address. |
+| `matchSalesforceId` | Identity | At least one of these three identities is required | The Salesforce ID of a lead or contact in Salesforce. Use this when a prospect is already synced with Salesforce to maintain data consistency between Account Engagement and Salesforce. |
+| `matchEmail` | Identity | At least one of these three identities is required | The prospect's email address used for matching. Use this as an alternative identifier when you don't have the specific Account Engagement prospect ID or Salesforce ID. Note: If multiple prospects share the same email address, Account Engagement will usually default to updating the prospect with the most recent activity. |
 
 Follow the steps below to map the correct fields.
 
