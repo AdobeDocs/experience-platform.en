@@ -13,11 +13,9 @@ This document explains how to configure the tag extension in the Tags UI.
 
 ## Install the Adobe Content Analytics tag extension {#install}
 
->[!NOTE]
->
->The Adobe Content Analytics tag extension is automatically installed as part of the tag property that is automatically created when using the [Content Analytics guided configuration wizard](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided){target="_blank"}. 
+The Adobe Content Analytics tag extension is automatically installed as part of the tag property that is automatically created when using the [Content Analytics guided configuration wizard](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided). 
 
-
+<!--
 ### Manual installation
 
 In case of a manual configuration, the Adobe Content Analytics tag extension needs a property to be installed on. If you have not done so already, see the documentation on [creating a tag property](https://experienceleague.adobe.com/en/docs/platform-learn/implement-in-websites/configure-tags/create-a-property).
@@ -29,7 +27,7 @@ Select the **[!UICONTROL Catalog]** tab. From the list of available extensions, 
 ![Image showing the Tags UI with the Web SDK extension selected](assets/aca-tag-install.png)
 
 After selecting **[!UICONTROL Install]**, you must configure the Adobe Content Analytics tag extension and save the configuration.
-
+-->
 
 <!--
 ## Configure schema
