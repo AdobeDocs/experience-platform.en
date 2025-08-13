@@ -11,13 +11,8 @@ exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
 
 >[!IMPORTANT]
 >
->* Starting August 11, 2025, you can see two **[!DNL Microsoft Bing]** cards side-by-side in the destinations catalog. This is due to an internal upgrade to the destinations service. The existing **[!DNL Microsoft Bing]** destination connector has been renamed to **[!UICONTROL (Deprecated) Microsoft Bing]** and a new card with the name **[!UICONTROL Microsoft Bing]** is now available to you. 
->* Use the new **[!UICONTROL Microsoft Bing]** connection in the catalog for new activation data flows. If you have any active dataflows to the **[!UICONTROL (Deprecated) Microsoft Bing]** destination, they will be updated automatically, so no action is required from you.
->* If you are creating dataflows through the [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/), you must update your [!DNL flow spec ID] and [!DNL connection spec ID] to the following values:
->   * Flow spec ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`
->   * Connection spec ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`
+>Following an internal upgrade to the destinations service from August 2025, you may experience a **drop in the number of activated profiles** in your dataflows to [!DNL Microsoft Bing].
 >
-> Following this upgrade, you may experience a **drop in the number of activated profiles** in your dataflows to [!DNL Microsoft Bing].
 > This drop is caused by the introduction of the **ECID mapping requirement** for all activations to this destination platform. See the [mandatory mapping](#mandatory-mappings) section in this page for detailed information.
 >
 >**What changed:**
