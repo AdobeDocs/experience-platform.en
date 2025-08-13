@@ -203,15 +203,44 @@ You can write data to model-based schema datasets using:
 
 <!-- CONFLICT: KT wiki lists CDC, Data Distiller, and local file upload as options; Adam stated CDC is currently the primary supported workflow for model-based schemas. -->
 
-## Hygiene considerations
+## Data hygiene considerations
 
-When deleting records in Adobe while retaining them in the source system, you can:
+Hygiene in model-based schemas refers to processes for removing, updating, or otherwise maintaining the accuracy of records in the Data Lake without unintended data loss in the source systems.
 
-* Send a CDC delete operation (`_change_request_type = D`).
-* Use a safe-copy dataset and apply deletes there.
-* Upload a batch containing only deletes.
+When deleting records in Adobe while retaining them in the source system, you can use one of the following supported workflows:
 
-For complete guidance, see [PLACEHOLDER] in the Record Delete documentation.
+* **CDC delete operation** – Include a `_change_request_type` column with the value `D` in the incoming dataset.  
+  * `U` = upsert (default if the column is missing).  
+  * `D` = delete.  
+  This column is read during ingestion only and is **not stored or mapped** in XDM.  
+  Example:
+
+```json
+  {
+    "_change_request_type": "D",
+    "customerId": "12345"
+  }
+```
+
+* **Safe-copy dataset** – Create a duplicate of the production dataset (a "safe copy") and apply deletes to the copy only. This allows testing and auditing of deletes without altering the primary dataset.
+
+* **Deletes-only batch upload** – Upload a batch file containing only delete operations for specific primary keys. This method is useful for large-scale, targeted hygiene tasks.
+
+### Descriptor relevance to hygiene
+
+Model-based schema hygiene processes depend on the primary key descriptor to identify the records affected by deletes or updates.
+
+If the version descriptor is present, the system uses it to ensure that deletes or updates are applied in the correct order. For example, if a delete arrives with a lower version value than an existing record, it will be ignored to prevent reverting to stale data.
+
+For time-series schemas (when supported), the timestamp descriptor ensures that deletes are aligned with event occurrence times, preventing deletion of more recent related events by mistake.
+
+>[!NOTE]
+>
+>Hygiene processes operate at the dataset level. For profile-enabled datasets, deleting records may also require profile-specific workflows.
+
+For complete data hygiene instructions, see [PLACEHOLDER for Record Delete documentation]().
+
+<!-- CONFLICT: KT wiki describes hygiene in relation to all schema behaviors; Adam emphasized hygiene guidance in the context of record-based model-based schemas and CDC deletes as the main supported approach. -->
 
 ## Limitations and considerations
 
