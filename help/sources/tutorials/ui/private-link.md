@@ -55,7 +55,7 @@ Navigate to the sources catalog and select a source that supports private endpoi
 >
 >If the [!UICONTROL Private endpoint] option is enabled, Experience Platform will check whether an approved private endpoint exists for the selected source. If no approved endpoint is found, you will not be able to establish a connection.
 
-<!--- ![The new account authentication step with private endpoints enabled.] --->
+![The new account authentication step with private endpoints enabled.](../../images/tutorials/private-links/new-account.png)
 
 Next, navigate to the [!UICONTROL Existing account] interface of your source. Use this interface to view a list of your existing accounts and their corresponding statuses. You can select the filter icon ![filter icon](../../../images/icons/filter.png) to display only the accounts that have been enabled to connect with a private endpoint.
 
