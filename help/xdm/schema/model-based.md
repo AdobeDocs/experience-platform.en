@@ -264,5 +264,5 @@ For complete data hygiene instructions, see [PLACEHOLDER for Record Delete docum
     > Schema evolution for model-based schemas is additive only. Once a schema is published, you can add new fields but you cannot remove or alter existing fields.
 * Composite primary keys are required for time-series schemas.
 * Relationships are currently limited to one-to-many and many-to-one.
-* Availability depends on your license or feature enablement.
+* Availability depends on your license or feature enablement.  
 <!-- CONFLICT: KT wiki supports both record and time-series; Adam stated only record-based schemas are currently available. -->
