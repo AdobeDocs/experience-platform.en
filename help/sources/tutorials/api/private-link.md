@@ -1,12 +1,12 @@
 ---
-title: Private Link Support in Sources
-description: Learn how to create and use private links for Adobe Experience Platform Sources
+title: Azure Private Link Support in Sources
+description: Learn how to create and use Azure private links for Adobe Experience Platform Sources
 badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: 9b7fc1be-5f42-4e29-b552-0b0423a40aa1
 ---
-# Private Link Support in Sources
+# [!DNL Azure ]Private Link Support in Sources
 
 >[!AVAILABILITY]
 >
@@ -813,3 +813,18 @@ A successful response returns all connections that are tied to private endpoints
 ```
 
 +++
+
+## Appendix
+
+Read this section for additional information using [!DNL Azure] private links in the API.
+
+### Configure your [!DNL Snowflake] account to connect to private links
+
+You must complete the following prerequisite steps in order to use the [!DNL Snowflake] source with private links.
+
+First, you must raise a support ticket in [!DNL Snowflake] and request for the **endpoint service resource ID** of the [!DNL Azure] region of your [!DNL Snowflake] account. Follow the steps below to raise a [!DNL Snowflake] ticket:
+
+1. Navigate to the [[!DNL Snowflake] UI](https://app.snowflake.com) and sign in with your email account. During this step, you must ensure that your email is verified in profile settings.
+2. Select your **user menu** and then select **support** to access [!DNL Snowflake] support.
+3. To create a support case, select **[!DNL + Support Case]**. Then, fill out the form with relevant details and attach any necessary files.
+4. When finished, submit the case.
