@@ -119,7 +119,7 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 * **[!UICONTROL Account Engagement Business Unit ID]**: Your [!DNL Salesforce] `Account Engagement Business Unit ID`.
-* **[!UICONTROL Account Engagement API]**: Select whether you want to use the production or demo endpoints of the Account Engagement API.
+* **[!UICONTROL Account Engagement API]**: Select whether you want to use the production (`https://pi.pardot.com`) or demo (`https://pi.demo.pardot.com`) endpoints of the Account Engagement API.
 * **[!UICONTROL Account Engagement Campaign ID]**: Every [!DNL Account Engagement] prospect must be associated with a campaign. If you do not set a campaign ID, Account Engagement will attempt to assign one automatically, if a default exists in your Salesforce account. If you do not provide a campaign ID and you do not have a default campaign in Account Engagement,
 
 ### Enable alerts {#enable-alerts}
