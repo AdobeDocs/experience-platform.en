@@ -6,13 +6,12 @@ description: Learn about model-based schemas in Adobe Experience Platform, inclu
 ---
 # Model-based schemas
 
-A model-based schema is a type of schema in Adobe Experience Platform designed for structured, relational-style data stored in the data lake. These schemas reduce complexity, enforce key constraints, and support relationships between datasets. They remove dependencies on union schemas, streamline schema evolution, and allow greater flexibility in defining fields.
-
-Model-based schemas are designed to model structured data in the Data Lake with three core capabilities: enforced primary keys to maintain data integrity and prevent duplicates, built-in row- and record-level change tracking for precise updates and deletes, and schema-level relationships that can be referenced across applications. By supporting multiple data models beyond the standard Adobe Experience Platform schema, model-based schemas eliminate the need to duplicate modeling work in different products, allow relationships to be defined once and reused, and support consistent data structures across Adobe applications.
+Model-based schemas in Adobe Experience Platform are designed for structured, relational-style data stored in the Data Lake. They provide three core capabilities: enforced primary keys to maintain data integrity and prevent duplicates, built-in row- and record-level change tracking for precise updates and deletes, and schema-level relationships that can be referenced across applications. By supporting multiple data models beyond the standard Adobe Experience Platform schema, model-based schemas eliminate the need to duplicate modeling work in different products, allow relationships to be defined once and reused, and support consistent data structures across Adobe applications. They also remove dependencies on union schemas, streamline schema evolution, and give you greater flexibility in defining fields.
 
 >[!AVAILABILITY]
 >
 >Currently, model-based schemas are **record-based only** and available based on your license or feature enablement. This includes Adobe Journey Optimizer **Campaign Orchestration**, **Data Distiller**, and **Real-Time CDP B2B** editions.
+
 
 ## Background
 
