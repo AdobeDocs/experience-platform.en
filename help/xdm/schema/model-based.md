@@ -6,7 +6,7 @@ description: Learn about model-based schemas in Adobe Experience Platform, inclu
 ---
 # Model-based schemas
 
-Use model-based schemas in Adobe Experience Platform to represent structured, relational-style data in the data lake, using primary keys and relationships without the constraints of a full relational database. 
+Use model-based schemas in Adobe Experience Platform to represent structured, relational-style data in the data lake, with enforced primary keys and relationships without the constraints of a full relational database. 
 
 <!-- Define enforced primary keys to maintain data integrity and prevent duplicates, enable row- and record-level change tracking for precise updates and deletes, and create schema-level relationships you can reference across applications. Work with multiple data models beyond the standard Experience Platform schema to avoid duplicating modeling work, define relationships once and reuse them, and maintain consistent data structures across Adobe applications. 
 
@@ -31,7 +31,9 @@ This approach removes dependencies on union schemas, streamlines schema evolutio
 
 Standard XDM schemas in Experience Platform follow one of three data behaviors: Record, Time-series, or Ad-hoc. For definitions and details, see [XDM data behaviors](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home#data-behaviors).
 
-In the traditional model, Record and Time-series schemas participate in [union views](PLACEHOLDER.md), automatically evolve when shared [field groups](PLACEHOLDER.md) change, and require custom fields to be nested under a tenant namespace. While powerful, this approach can slow onboarding, produce overly complex schemas with unused fields, and require additional data mapping or transformation. These factors increase the learning curve and ongoing maintenance effort.
+In the traditional model, Record and Time-series schemas participate in [union views](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/api/unions).md), automatically evolve when shared [field groups](./composition.md#field-group) change, and require custom fields to be nested under a tenant namespace. While powerful, this approach can slow onboarding, produce overly complex schemas with unused fields, and require additional data mapping or transformation. These factors increase the learning curve and ongoing maintenance effort.
+
+<!-- Also see the [Union Schema UI guide](../../profile/ui/union-schema.md). -->
 
 Model-based schemas remove union schema dependencies, eliminate auto-evolution from shared field groups, and allow direct field definitions without tenant namespace restrictions. This gives you explicit control over primary keys, relationships, and schema evolution, making it easier to model data to fit your needs.
 
@@ -133,7 +135,7 @@ For time-series schemas, define a timestamp descriptor to set the event time for
 >
 > Descriptors are part of the schema definition metadata and are not stored in data rows.
 
-For instructions on creating descriptors in the Schema Editor, see [Create descriptors in the Schema Editor](link-to-ui-doc/PLACEHOLDER.md). For API-based creation, see [Create descriptors using the API](link-to-api-doc/PLACEHOLDER.md).
+For instructions on creating descriptors in the Schema Editor, see [Create descriptors in the Schema Editor](../tutorials/relationship-ui.md). For API-based creation, see [Create descriptors using the API](../tutorials/relationship-api.md).
 
 ## Relationship support
 
@@ -171,6 +173,8 @@ You can define relationships between:
 }
 ```
 
+For a full list of relationship descriptor types and syntax, see the [relationship descriptors reference](../api/descriptors.md) and the [tutorial for defining a one-to-one relationship between two schemas using the Schema Registry API](../tutorials/relationship-api.md) or the [UI](../tutorials/relationship-ui.md).
+
 >[!NOTE]
 >
 >As relationships are defined at the schema level, make sure to explicitly join related datasets in your queries. Use a tool like Data Distiller to resolve these relationships during query time.
@@ -189,7 +193,9 @@ For UI instructions, see [Create relationships in the Schema Editor](link-to-ui-
 
 ## Ingestion methods
 
-Use change data capture (CDC) to synchronize model-based datasets with source systems. You can also use SQL ingestion via Data Distiller or manual file upload.
+Use [change data capture](../../sources/tutorials/api/change-data-capture.md) in your dataflow to keep model-based datasets synchronized with source systems. You can also ingest data using SQL via Data Distiller or upload files manually.
+
+Change data capture in Experience Platform captures and applies all changes—inserts, updates, and deletes—in real time, ensuring full alignment between source and destination data. Unlike incremental copy, which only tracks new or updated records using a timestamp column (such as `LastModified`) and cannot detect deletions, change data capture provides a complete change history.
 
 **Supported ingestion methods:**
 
@@ -228,8 +234,8 @@ Use these methods to maintain accurate records in the data lake without unwanted
 >
 > Hygiene processes operate at the dataset level. For profile-enabled datasets, additional profile workflows may be required.
 
-For complete hygiene instructions, see [Record Delete documentation](link-to-doc).
-
+For complete hygiene instructions, see Record Delete [UI](../../hygiene/ui/record-delete.md) and [API documentation](../../hygiene/api/workorder.md).
+Alternatively, see the guide on how to [Manage Experience Event Dataset Retention in the data lake using TTL](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md).
 <!-- CONFLICT: KT wiki describes hygiene in relation to all schema behaviors; Adam emphasized hygiene guidance in the context of record-based model-based schemas and CDC deletes as the main supported approach. -->
 
 ## Limitations and considerations
