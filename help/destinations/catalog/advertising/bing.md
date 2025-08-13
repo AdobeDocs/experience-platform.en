@@ -8,6 +8,28 @@ exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
 
 ## Overview {#overview}
 
+
+>[!IMPORTANT]
+>
+>* Starting August 11, 2025, you can see two **[!DNL Microsoft Bing]** cards side-by-side in the destinations catalog. This is due to an internal upgrade to the destinations service. The existing **[!DNL Microsoft Bing]** destination connector has been renamed to **[!UICONTROL (Deprecated) Microsoft Bing]** and a new card with the name **[!UICONTROL Microsoft Bing]** is now available to you. 
+>* Use the new **[!UICONTROL Microsoft Bing]** connection in the catalog for new activation data flows. If you have any active dataflows to the **[!UICONTROL (Deprecated) Microsoft Bing]** destination, they will be updated automatically, so no action is required from you.
+>* If you are creating dataflows through the [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/), you must update your [!DNL flow spec ID] and [!DNL connection spec ID] to the following values:
+>   * Flow spec ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`
+>   * Connection spec ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`
+>
+> Following this upgrade, you may experience a **drop in the number of activated profiles** in your dataflows to [!DNL Microsoft Bing].
+> This drop is caused by the introduction of the **ECID mapping requirement** for all activations to this destination platform. See the [mandatory mapping](#mandatory-mappings) section in this page for detailed information.
+>
+>**What changed:**
+>
+>* ECID (Experience Cloud ID) mapping is now **mandatory** for all profile activations.
+>* Profiles without ECID mapping will be **dropped** from existing activation dataflows.
+>
+>**What you need to do:**
+>
+>* Review your audience data to confirm profiles have valid ECID values.
+>* Monitor your activation metrics to verify expected profile counts.
+
 Use the [!DNL Microsoft Bing] destination to send profile data to the entire [!DNL Microsoft Advertising Network], including [!DNL Display Advertising], [!DNL Search], and [!DNL Native]. 
 
 The [!DNL Microsoft Bing] destination creates *[!DNL Custom Audiences]* in Microsoft. Those are available both in the [!DNL Microsoft Search Network] and [!DNL Audience Network] ([!DNL Native] /[!DNL Display] /[!DNL Programmatic]) as listed in the [Microsoft Advertising documentation](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500).
@@ -25,6 +47,7 @@ As a marketer, I want to be able to use audiences built off of [!DNL Microsoft A
 |Identity|Description|
 |---|---|
 |MAID|Microsoft Advertising ID|
+|ECID|Experience Cloud ID. This identity is mandatory for the integration to work correctly but is not used for audience activation.|
 
 {style="table-layout:auto"}
 
@@ -100,6 +123,15 @@ See [Activate audience data to streaming audience export destinations](../../ui/
 In the [Audience schedule](../../ui/activate-segment-streaming-destinations.md#scheduling) step, you must manually map the audience name in the [!UICONTROL Mapping ID] field. This ensures that audience metadata is correctly passed through to [!DNL Bing]. 
 
 ![UI image showing the audience schedule screen with an example of how to map the audience name to the Bing Mapping ID.](../../assets/catalog/advertising/bing/mapping-id.png)
+
+### Mandatory mappings {#mandatory-mappings}
+
+All target identities described in the [supported identities](#supported-identities) section are mandatory and must be mapped during the audience activation process. This includes:
+
+* **MAID** (Microsoft Advertising ID)
+* **ECID** (Experience Cloud ID)
+
+Failure to map all required identities prevents you from completing the activation workflow. Each identity serves a specific purpose in the integration, and all are required for the destination to work correctly.
 
 ## Exported data {#exported-data}
 
