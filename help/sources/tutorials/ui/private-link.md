@@ -1,17 +1,20 @@
 ---
-title: Azure Private Link Support in the UI
-description:
+title: Azure Private Endpoint Support in the UI
+description: Learn how to create private endpoints using the sources workspace in the Experience Platform UI.
+badge: Beta
 ---
 # Create an [!DNL Azure] private endpoint in the UI
 
+>[!AVAILABILITY]
+>
+>This feature is in beta and is currently only supported for the following sources:
+>
+>* [[!DNL Azure Blob Storage]](../../connectors/cloud-storage/blob.md)
+>* [[!DNL ADLS Gen2]](../../connectors/cloud-storage/adls-gen2.md)
+>* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
+>* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
+
 You can use the [!DNL Azure] private endpoint feature of Adobe Experience Platform sources to establish a private endpoint in which your source can connect to. With this feature, you can ensure security and additional data protection when creating ingestion jobs and dataflows between your source and Experience Platform.
-
-Support for [!DNL Azure] private endpoints are available for the following sources:
-
-* [[!DNL Azure Blob Storage]](../../connectors/cloud-storage/blob.md)
-* [[!DNL ADLS Gen2]](../../connectors/cloud-storage/adls-gen2.md)
-* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
-* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 
 Read this guide to learn how you can use the sources workspace in the Experience Platform UI to create and use a private endpoint.
 
