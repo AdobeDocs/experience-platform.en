@@ -129,13 +129,62 @@ For instructions on creating descriptors in the Schema Editor, see [PLACEHOLDER 
 
 ## Relationship support
 
-Model-based schemas allow you to define relationships between datasets, improving join operations and maintaining referential integrity:
+Model-based schemas support relationship descriptors that define how datasets connect to each other. These descriptors enable more efficient joins, improve referential integrity, and allow related records to be queried as a connected set.
 
-* One-to-many relationships.
-* Many-to-one relationships.
+Relationships can be:
 
-These relationships can exist between two model-based schemas or between a model-based schema and a standard schema.  
-For workflow details, see [PLACEHOLDER] in the Schema Editor documentation.
+* **One-to-many** – A single record in one schema relates to multiple records in another schema.  
+* **Many-to-one** – Multiple records in one schema relate to a single record in another schema.
+
+You can define relationships between:
+
+* Two model-based schemas.
+* A model-based schema and a standard schema.
+
+Each relationship is defined in the schema as a **relationship descriptor**. The descriptor specifies the **source field** in the referencing schema and the **target field** in the referenced schema.
+
+**Example: One-to-many relationship**
+
+```json
+{
+  "xdm:descriptor": "xdm:descriptorRelationship",
+  "xdm:sourceProperty": "accountId",
+  "xdm:destinationSchema": "https://ns.adobe.com/xdm/context/account",
+  "xdm:destinationProperty": "accountId"
+}
+```
+
+In this example:
+
+* The source schema contains the accountId field, which links to the accountId field in the destination schema.
+
+* Multiple records in the source schema can reference the same account in the destination schema.
+
+**Example: Many-to-one relationship**
+
+```json
+{
+  "xdm:descriptor": "xdm:descriptorRelationship",
+  "xdm:sourceProperty": "customerId",
+  "xdm:destinationSchema": "https://ns.adobe.com/xdm/context/customer",
+  "xdm:destinationProperty": "customerId"
+}
+```
+
+In this example:
+
+* Multiple records in the source schema share the same customerId that exists in the destination schema.
+
+* This allows queries to aggregate information about the customer from multiple related records.
+
+>[!NOTE]
+>
+>Relationships are defined at the schema level and are enforced in the data model. They do not automatically create joins at query time, but they allow query tools such as Data Distiller to resolve relationships more easily.
+
+For step-by-step instructions on creating relationships in the Schema Editor UI, see [PLACEHOLDER].
+For API-based relationship creation, see [PLACEHOLDER for API doc].
+
+<!-- CONFLICT: KT wiki describes both model-based to model-based and model-based to standard schema relationships; Adam's notes only mention primary/foreign key relationships in general without detailing interoperability. -->
 
 ## Ingestion methods
 
