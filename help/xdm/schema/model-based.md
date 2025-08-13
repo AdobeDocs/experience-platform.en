@@ -8,9 +8,13 @@ description: Learn about model-based schemas in Adobe Experience Platform, inclu
 
 A model-based schema is a type of schema in Adobe Experience Platform designed for structured, relational-style data stored in the data lake. These schemas reduce complexity, enforce key constraints, and support relationships between datasets. They remove dependencies on union schemas, streamline schema evolution, and allow greater flexibility in defining fields.
 
+Model-based schemas are designed to model structured data in the Data Lake with three core capabilities: enforced primary keys to maintain data integrity and prevent duplicates, built-in row- and record-level change tracking for precise updates and deletes, and schema-level relationships that can be referenced across applications. By supporting multiple data models beyond the standard Adobe Experience Platform schema, model-based schemas eliminate the need to duplicate modeling work in different products, allow relationships to be defined once and reused, and support consistent data structures across Adobe applications.
+
 >[!AVAILABILITY]
 >
 >Currently, model-based schemas are **record-based only** and available based on your license or feature enablement. This includes Adobe Journey Optimizer **Campaign Orchestration**, **Data Distiller**, and **Real-Time CDP B2B** editions.
+
+## Background
 
 ## Background
 
@@ -20,14 +24,18 @@ Standard XDM schemas in Experience Platform have three behaviors:
 * **Time-series** – Captures a snapshot of the system when an event occurs, including the event and its timestamp.  
 * **Ad-hoc** – Captures namespaced fields for single-dataset use cases, such as CSV ingestion or temporary query results.
 
-In the traditional model, record and time-series schemas participate in union views, automatically evolve when shared field groups change, and require custom fields to be nested under a tenant namespace. For more information, see [union views](PLACEHOLDER.md) and [field groups](PLACEHOLDER.md) in the XDM overview. While powerful, this model increases complexity, expands schema size over time, and can slow ingestion workflows.
+In the traditional model, record and time-series schemas participate in [union views](PLACEHOLDER.md), automatically evolve when shared [field groups](PLACEHOLDER.md) change, and require custom fields to be nested under a tenant namespace. While powerful, this approach can make onboarding data time-consuming and error-prone. It can lead to larger, more complex schemas that project unused fields, impose strict structural constraints, and require data transformation or mapping before ingestion. These factors increase the learning curve, slow ingestion workflows, and add ongoing maintenance overhead.
+
+<!-- 
+While powerful, this model increases complexity, expands schema size over time, and can slow ingestion workflows.
+-->
 
 Model-based schemas address these challenges by:
 
 * Removing union schema participation.
 * Eliminating auto-evolution from shared field groups.
 * Allowing custom fields to be defined directly without tenant namespace restrictions.
-* Providing simpler control over required fields and relationships.
+* Providing simpler, explicit control over required fields and relationships.
 
 <!-- CONFLICT: KT wiki frames background around technical constraints and union schema removal; Adam emphasized a UI terminology change from "relational" to "model-based" and licensing scope. -->
 
