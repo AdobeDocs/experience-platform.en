@@ -6,7 +6,7 @@ description: Learn about model-based schemas in Adobe Experience Platform, inclu
 ---
 # Model-based schemas
 
-A model-based schema is a type of schema in Adobe Experience Platform designed for structured, relational-style data stored in the Data Lake. These schemas reduce complexity, enforce key constraints, and support relationships between datasets. They remove dependencies on union schemas, streamline schema evolution, and allow greater flexibility in defining fields.
+A model-based schema is a type of schema in Adobe Experience Platform designed for structured, relational-style data stored in the data lake. These schemas reduce complexity, enforce key constraints, and support relationships between datasets. They remove dependencies on union schemas, streamline schema evolution, and allow greater flexibility in defining fields.
 
 >[!AVAILABILITY]
 >
@@ -33,7 +33,7 @@ Model-based schemas address these challenges by:
 
 ## Features of model-based schemas
 
-Model-based schemas simplify the process of modeling structured data in the Data Lake while retaining essential capabilities for governance, integrity, and interoperability.
+Model-based schemas simplify the process of modeling structured data in the data lake while retaining essential capabilities for governance, integrity, and interoperability.
 
 **Key features:**
 
@@ -68,6 +68,7 @@ Model-based schemas require certain descriptors—metadata in the schema definit
 Use a primary key descriptor to ensure each record is uniquely identifiable.
 
 **Supported configurations:**
+
 * **Single-field primary key** – Use one field with a unique value for each record.
 * **Composite primary key** – Use multiple fields to form a unique identifier.  
   For time-series schemas, the composite key must include the timestamp field identified by the timestamp descriptor.
@@ -81,7 +82,7 @@ Use a primary key descriptor to ensure each record is uniquely identifiable.
   "xdm:descriptor": "xdm:descriptorPrimaryKey",
   "xdm:sourceProperty": "customerId"
 }
-````
+```
 
 **Composite key example for time-series:**
 
@@ -205,7 +206,7 @@ Use change data capture (CDC) to synchronize model-based datasets with source sy
 
 ## Data hygiene considerations
 
-Use these methods to maintain accurate records in the Data Lake without unwanted source data deletion:
+Use these methods to maintain accurate records in the data lake without unwanted source data deletion:
 
 * **CDC delete operation** – Include `_change_request_type` with `D` in the incoming dataset.
 * **Safe-copy dataset** – Duplicate the production dataset and apply deletes to the copy.
