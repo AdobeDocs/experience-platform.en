@@ -27,7 +27,7 @@ To help you better understand how and when you should use the [!DNL (V2) Marketi
 
 ### B2B Lead management {#use-case-lead-management}
 
-Synchronize lead data from Adobe Experience Platform to Pardot for comprehensive lead nurturing and scoring. Your marketing team can build rich audience profiles in Experience Platform and export them to [!DNL Salesforce Marketing Cloud Account Engagement] for automated B2B marketing campaigns.
+Synchronize lead data from Adobe Experience Platform to [!DNL Salesforce Marketing Cloud Account Engagement] for comprehensive lead nurturing and scoring. Your marketing team can build rich audience profiles in Experience Platform and export them to [!DNL Salesforce Marketing Cloud Account Engagement] for automated B2B marketing campaigns.
 
 ### Campaign automation {#use-case-campaign-automation}
 
@@ -119,7 +119,7 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 * **[!UICONTROL Account Engagement Business Unit ID]**: Your [!DNL Salesforce] `Account Engagement Business Unit ID`.
-* **[!UICONTROL Account Engagement API]**: Select whether you want to use the production or demo endpoints of the Pardot API.
+* **[!UICONTROL Account Engagement API]**: Select whether you want to use the production or demo endpoints of the Account Engagement API.
 * **[!UICONTROL Account Engagement Campaign ID]**: Every [!DNL Account Engagement] prospect must be associated with a campaign. If you do not set a campaign ID, Account Engagement will attempt to assign one automatically, if a default exists in your Salesforce account. If you do not provide a campaign ID and you do not have a default campaign in Account Engagement,
 
 ### Enable alerts {#enable-alerts}
@@ -187,7 +187,7 @@ To validate that you have correctly set up the destination, follow the steps bel
 1. Navigate to one of the audiences you had selected. Select the **[!DNL Activation data]** tab. The **[!UICONTROL Mapping ID]** column displays the name of the custom field which is generated within the [!DNL Marketing Cloud Account Engagement Prospects] page.
 ![Experience Platform UI screenshot example showing the Mapping ID for a selected segment.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/selected-segment-mapping-id.png)
 
-1. Log in to the [[!DNL Salesforce]](https://login.salesforce.com/) website. Then navigate to the **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** page and check if the prospects from the audience have been added / updated. Alternatively you can also access [[!DNL Salesforce Pardot]](https://pi.pardot.com/) and access the **[!DNL Prospects]** page.
+1. Log in to the [[!DNL Salesforce]](https://login.salesforce.com/) website. Then navigate to the **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** page and check if the prospects from the audience have been added / updated. Alternatively you can also access [[!DNL Account Engagement]](https://pi.pardot.com/) and access the **[!DNL Prospects]** page.
 ![Salesforce UI screenshot showing the Prospects page.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/prospects.png)
 
 1. To check if the prospects have been updated, select a prospect and verify if the custom prospect field has been updated with the Experience Platform audience status.
