@@ -103,7 +103,7 @@ Click on a destination row to bring up more information about the destination in
 
 Select the destination name to see information about the audiences activated to this destination. Click **[!UICONTROL Edit destination]** to [modify the destination settings](/help/destinations/ui/edit-destination.md) or **[!UICONTROL Activate audiences]** to add new audiences to the dataflow.
  
-### Filter destinations in the Browse tab {#filter-browse}
+### Filter dataflows in the Browse tab {#filter-browse}
 
 The **[!UICONTROL Browse]** tab includes enhanced filtering and search capabilities to help you quickly find and manage your destination dataflows. Use the left sidebar to apply filters, and the search bar to find specific dataflows by name.
 
