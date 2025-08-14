@@ -24,15 +24,15 @@ readonly _satellite.logger: {
 
 ## Methods
 
-All `_satellite.logger` methods are forwarded to their corresponding JavaScript `console` method when debugging is enabled. Any `console` arguments or objects are supported using `_satellite.logger`:
+All `_satellite.logger` methods are forwarded to their corresponding JavaScript `console` method when debugging is enabled. Most `console` arguments or objects are supported using `_satellite.logger`:
 
 | Method | Corresponding `console` level | Recommended uses |
 |---|---|---|
-| `_satellite.logger.debug()` | `console.debug` | Verbose diagnostics; some browsers might require verbose logging to see it. |
-| `_satellite.logger.log()` | `console.log` | General messages. |
-| `_satellite.logger.info()` | `console.info` | High-level informational events. |
-| `_satellite.logger.warn()` | `console.warn` | Recoverable issues. The console entry is highlighted yellow. |
-| `_satellite.logger.error()` | `console.error` | Failures. The console entry is highlighted red. |
+| `_satellite.logger.debug()` | `console.debug()` | Verbose diagnostics; some browsers might require verbose logging to see it. |
+| `_satellite.logger.log()` | `console.log()` | General messages. |
+| `_satellite.logger.info()` | `console.info()` | High-level informational events. |
+| `_satellite.logger.warn()` | `console.warn()` | Recoverable issues. The console entry is highlighted yellow. |
+| `_satellite.logger.error()` | `console.error()` | Failures. The console entry is highlighted red. |
 
 ```js
 // First enable debugging mode
@@ -60,7 +60,7 @@ The library appends the following in all console output messages:
 
 * **🚀**: Helps you easily detect which console messages originate from your tag implementation.
 * **\[Origin\]**: The rule, action, extension, or data element name where the log originated from. If you call a logger method outside of your implementation (such as through the browser console), `[Custom Script]` is used.
-* **Message text**: The message text included when invoking the method.
+* **Message output**: The message output included when invoking the method.
 
 >[!NOTE]
 >
