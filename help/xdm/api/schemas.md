@@ -281,9 +281,14 @@ Create a model-based schema by making a POST request to the `/schemas` endpoint.
 
 >[!IMPORTANT]
 >
->To create a model-based schema, set `meta:extends` to `"https://ns.adobe.com/xdm/data/adhoc-v2"`. This is a **logical behavior identifier** (not a physical behavior or class). Do **not** reference classes or field groups in `allOf`.
+>To create a model-based schema, set `meta:extends` to `"https://ns.adobe.com/xdm/data/adhoc-v2"`. This is a **logical behavior identifier** (not a physical behavior or class). Do **not** reference classes or field groups in `allOf`, and do **not** include classes or field groups in `meta:extends`.
 
-Create the schema first with `POST /tenant/schemas`. Then add the required descriptors with the [Descriptors API (`POST /tenant/descriptors`)](../api/descriptors.md). Add a [primary key descriptor](../api/descriptors.md#primary-key-descriptor), a [relationship descriptor](../api/descriptors.md#relationship-descriptor), a [version descriptor](../api/descriptors.md#version-descriptor), and (for time-series) a [timestamp descriptor](../api/descriptors.md#timestamp-descriptor). Primary-key fields must be **root-level** and **required**. When you add a **primary key**, a **version** descriptor is required. For time-series schemas, define a **composite** key that includes the timestamp field.
+Create the schema first with `POST /tenant/schemas`. Then add the required descriptors with the [Descriptors API (`POST /tenant/descriptors`)](../api/descriptors.md):
+
+- [Primary key descriptor](../api/descriptors.md#primary-key-descriptor) - Primary-key fields are **required** and must be **root-level**. 
+- [Version descriptor](../api/descriptors.md#version-descriptor) — **required** when a primary key exists. 
+- [Relationship descriptor](../api/descriptors.md#relationship-descriptor) — optional, defines joins; cardinality not enforced at ingestion. 
+- [Timestamp descriptor](../api/descriptors.md#timestamp-descriptor) - For time-series schemas, the primary key must be a **composite** key that includes the timestamp field.
 
 >[!AVAILABILITY]
 >
