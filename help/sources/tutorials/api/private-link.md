@@ -392,9 +392,13 @@ curl -X GET \
 
 +++
 
-## Enable interactive authoring {#enable-interactive-authoring}
+## Enable [!DNL Interactive Authoring] {#enable-interactive-authoring}
 
-Interactive authoring is used for functionalities like exploring a connection or account and previewing data. To enable interactive authoring, make a POST request to `/privateEndpoints/interactiveAuthoring` and specify `enable` as an operator in your query parameters.
+>[!IMPORTANT]
+>
+>You must enable [!DNL Interactive Authoring] before creating or updating a flow, and before creating, updating, or exploring a connection.
+
+[!DNL Interactive Authoring] is used for functionalities like exploring a connection or account and previewing data. To enable [!DNL Interactive Authoring], make a POST request to `/privateEndpoints/interactiveAuthoring` and specify `enable` as an operator in your query parameters.
 
 **API format**
 
@@ -404,11 +408,11 @@ POST /privateEndpoints/interactiveAuthoring?op=enable
 
 | Query parameter | Description |
 | --- | --- |
-| `op` | The operation that you want to perform. To enable interactive authoring, set the `op` value to `enable`. |
+| `op` | The operation that you want to perform. To enable [!DNL Interactive Authoring], set the `op` value to `enable`. |
 
 **Request**
 
-The following request enables interactive authoring for your private endpoint and sets the TTL to 60 minutes.
+The following request enables [!DNL Interactive Authoring] for your private endpoint and sets the TTL to 60 minutes.
 
 +++Select to view request example
 
@@ -427,7 +431,7 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `autoTerminationMinutes` | The interactive authoring TTL (time-to-live) in minutes. Interactive authoring is used for functionalities like exploring a connection or account and previewing data. You can set a maximum TTL of 120 minutes. The default TTL is 60 minutes. |
+| `autoTerminationMinutes` | The [!DNL Interactive Authoring] TTL (time-to-live) in minutes. [!DNL Interactive Authoring] is used for functionalities like exploring a connection or account and previewing data. You can set a maximum TTL of 120 minutes. The default TTL is 60 minutes. |
  
 +++
 
@@ -435,9 +439,9 @@ curl -X POST \
 
 A successful response returns HTTP status 202 (Accepted).
 
-## Retrieve interactive authoring status {#retrieve-interactive-authoring-status}
+## Retrieve [!DNL Interactive Authoring] status {#retrieve-interactive-authoring-status}
 
-To view the current status of interactive authoring for your private endpoint, make a GET request to `/privateEndpoints/interactiveAuthoring`.
+To view the current status of [!DNL Interactive Authoring] for your private endpoint, make a GET request to `/privateEndpoints/interactiveAuthoring`.
 
 **API format**
 
@@ -447,7 +451,7 @@ GET /privateEndpoints/interactiveAuthoring
 
 **Request**
 
-The following request retrieves the status of interactive authoring:
+The following request retrieves the status of [!DNL Interactive Authoring]:
 
 +++Select to view request example
 
@@ -475,7 +479,7 @@ curl -X GET \
 
 | Property | Description |
 | --- | --- |
-| `status` | The status of interactive authoring. Valid values include: `disabled`, `enabling`, `enabled`. |
+| `status` | The status of [!DNL Interactive Authoring]. Valid values include: `disabled`, `enabling`, `enabled`. |
 
 +++
 
@@ -828,3 +832,67 @@ First, you must raise a support ticket in [!DNL Snowflake] and request for the *
 2. Select your **user menu** and then select **support** to access [!DNL Snowflake] support.
 3. To create a support case, select **[!DNL + Support Case]**. Then, fill out the form with relevant details and attach any necessary files.
 4. When finished, submit the case.
+
+Once you receive the endpoint service resource ID, run the following on [!DNL Snowflake]:
+
+```shell
+subscriptions/{SUBSCRIPTION_ID}/resourceGroups/az{REGION}-privatelink/providers/microsoft.network/privatelinkservices/sf-pvlinksvc-az{REGION}
+```
+
+| Parameter | Description | Example |
+| --- | --- | --- |
+| `{SUBSCRIPTION_ID}` | The unique ID that identifies your [!DNL Azure] subscription. | `a1b2c3d4-5678-90ab-cdef-1234567890ab` |
+| `{REGION}` | The [!DNL Azure] region of your [!DNL Snowflake] account. | `azwestus2` |
+
+### Retrieve your private link configuration details
+
+To retrieve your private link configuration details, you must run the following command in [!DNL Snowflake]:
+
+```sql
+USE ROLE accountadmin;
+SELECT key, value::varchar
+FROM TABLE(FLATTEN(input => PARSE_JSON(SYSTEM$GET_PRIVATELINK_CONFIG())));
+```
+
+Next, retrieve values for the following properties:
+
+* `privatelink-account-url`
+* `regionless-privatelink-account-url`
+* `privatelink_ocsp-url`
+
+Once you have retrieved the values, you can make the following call to create a private link for [!DNL Snowflake].
+
+**Request**
+
+The following request creates a private endpoint for [!DNL Snowflake]:
+
++++Select to view request example
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/connectors/privateEndpoints/' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "Azure Private Link for Snowflake",
+    "subscriptionId": "{AZURE_SUBSCRIPTION_ID}",
+    "resourceGroupName": "{RESOURCE_GROUP_NAME}",
+    "resourceName": "{SNOWFLAKE_ENDPOINT_SERVICE_NAME}",
+    "fqdns": [
+      "{PRIVATELINK_ACCOUNT_URL}",
+      "{REGIONLESS_PRIVATELINK_ACCOUNT_URL}",
+      "{PRIVATELINK_OCSP_URL}"
+    ],
+    "connectionSpec": {
+      "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
+      "version": "1.0"
+    }
+  }'
+```
+
+### Approve a private endpoint for [!DNL Azure Blob] and [!DNL Azure Data Lake Gen2]
+
+To approve a private endpoint request for the [!DNL Azure Blob] and [!DNL Azure Data Lake Gen2] sources, log in to the [!DNL Azure Portal]. In the left navigation, select **[!DNL Data storage]**, then go to the **[!DNL Security + networking]** tab and choose **[!DNL Networking]**. Next, select **[!DNL Private endpoints]** to see a list of private endpoints associated with your account and their current connection states. To approve a pending request, select the desired endpoint and click **[!DNL Approve]**.
