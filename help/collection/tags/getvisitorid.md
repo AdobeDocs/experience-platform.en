@@ -12,8 +12,8 @@ The `_satellite.getVisitorId()` method returns an instance of the [Adobe Experie
 
 If you call this method with the ID service extension installed and published, an object is returned similar to the object obtained after calling the [`Visitor.getInstance()`](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/getinstance) method. If you call this method when the ID service extension is not installed or published, the method returns `null`.
 
-```js
-_satellite.getVisitorId();
+```ts
+_satellite.getVisitorId(): Visitor | null
 ```
 
 ## Available fields and methods

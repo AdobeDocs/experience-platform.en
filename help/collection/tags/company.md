@@ -6,13 +6,13 @@ description: Obtain information around the IMS organization that owns the implem
 
 The `_satellite.company` object displays information around the IMS organization that owns the tag property.
 
-```js
-_satellite.company
+```ts
+readonly _satellite.company: Company
 ```
 
 ## Available fields
 
-The following objects are available for reference:
+The following fields are available when calling this object:
 
 ```json
 {
@@ -25,8 +25,10 @@ The following objects are available for reference:
 }
 ```
 
-* **`company.orgId`**: A string that represents the IMS org ID of the tag property.
-* **`company.dynamicCdnEnabled`**: A boolean that determines if your tag property uses Adobe's dynamic CDN switching feature. If set to `true`, it auto-switches the CDN that a visitor requests your tag from based on their location.
-* **`company.cdnAllowList[]`**: An array of strings that represent permitted CDN's to load your tag property from.
+| Name | Type | Description |
+| --- | --- | --- |
+| **`orgId`** | `string` | The IMS org ID of the tag property. |
+| **`dynamicCdnEnabled`** | `boolean` | Determines if your tag property uses Adobe's dynamic CDN switching feature. If set to `true`, it auto-switches the CDN that a visitor requests your tag from based on their location. |
+| **`cdnAllowList`** | `string[]` | The permitted CDNs to load your tag property from. |
 
 Similar information is also contained in `_satellite._container.company`. See [`_container`](container.md) for more information.

@@ -6,13 +6,23 @@ description: See the entire tag container in a single object.
 
 The `_satellite._container` object contains the full configuration and runtime context of the tag property loaded on the page. All information, such as rules, data elements, extensions, and environments are available within this object. Its primary use is to assist with debugging your implementation so that you can see exactly what logic is exposed or published.
 
+```ts
+readonly _satellite._container: {
+  buildInfo: BuildInfo;
+  company: Company;
+  dataElements: Record<string, DataElement>;
+  environment: Environment;
+  extensions: Record<string, Extension>;
+  property: Property;
+  rules: Rule[];
+}
+```
+
 >[!IMPORTANT]
 >
 >This object is for debugging purposes only. Do not tie production logic to this object, reference this object in your implementation, or edit values within this object. The availability of properties or names within this object can be changed by Adobe at any time.
 
-```js
-_satellite._container
-```
+## Available fields
 
 The following objects are available for reference:
 
@@ -50,49 +60,132 @@ The following objects are available for reference:
 }
 ```
 
-## `_container.buildInfo`
+## `buildInfo`
 
-The `buildInfo` object contains a copy of [`_satellite.buildInfo`](buildinfo.md).
+The `_satellite._container.buildInfo` object contains a copy of [`_satellite.buildInfo`](buildinfo.md).
 
-## `_container.company`
+```ts
+readonly _satellite._container.buildInfo: {
+  minified: boolean;
+  buildDate: string;
+  turbineBuildDate: string;
+  turbineVersion: string;
+}
+```
 
-The `company` object contains a copy of [`_satellite.company`](company.md).
+## `company`
 
-## `_container.dataElements`
+The `_satellite._container.company` object contains a copy of [`_satellite.company`](company.md).
 
-The `dataElements` object provides a reference of all data elements within your tag property. Each data element contains the following:
+```ts
+readonly _satellite._container.company: {
+  orgId: string;
+  dynamicCdnEnabled: boolean;
+  cdnAllowList: string[];
+}
+```
 
-* **`dataElements.modulePath`**: The path of the JavaScript file that determines the logic of that data element type.
-* **`dataElements.settings`**: The settings of the data element. Properties within this object depend on the data element type.
+## `dataElements`
 
-## `_container.environment`
+The `_satellite._container.dataElements` object provides a reference of all data elements within your tag property.
 
-The `environment` object contains a copy of [`_satellite.environment`](environment.md).
+```ts
+readonly _satellite._container.dataElements: {
+  [name: string]: {
+    modulePath: string;
+    settings: Settings; // Varies by data element type
+  }
+}
+```
 
-## `_container.extensions`
+Each data element includes the following properties:
 
-The `extensions` object lists all extensions published to the tag property. Each extension includes the following properties:
+| Name | Type | Description |
+|---|---|---|
+| **`modulePath`** | `string` | The path of the JavaScript file that determines the logic of that data element type. |
+| **`settings`** | `Settings` | The settings of the data element. Properties within this object depend on the data element type. |
 
-* **`extensions.displayName`**: The friendly name of the extension.
-* **`extensions.hostedLibFilesUrl`**: The location on the CDN where the extension resides.
-* **`extensions.modules`**: The JavaScript logic for all events, actions, conditions, and data elements that the extension uses.
+## `environment`
 
-## `_container.property`
+The `_satellite._container.environment` object contains a copy of [`_satellite.environment`](environment.md).
 
-The `property` object provides information around the tag property itself.
+```ts
+readonly _satellite._container.environment: {
+  id: string;
+  stage: string;
+}
+```
 
-* **`property.id`**: The unique identifier for the tag property.
-* **`property.name`**: The friendly name for the tag property.
-* **`property.settings.domains[]`**: An array of strings that represent the configured domains for the property, as set when [configuring a tag property](/help/tags/ui/administration/companies-and-properties.md).
-* **`property.settings.ruleComponentSequencingEnabled`**: A boolean that determines if the checkbox **[!UICONTROL Run rule components in sequence]** is enabled when configuring the tag property.
-* **`property.settings.undefinedVarsReturnEmpty`**: A boolean that determines if the checkbox **[!UICONTROL Return an empty string for undefined data elements]** is enabled when configuring the tag property.
+## `extensions`
 
-## `_container.rules[]`
+The `_satellite._container.extensions` object lists all extensions published to the tag property.
 
-The `rules[]` object array provides a reference of all rules within your tag property. Each rule contains the following:
+```ts
+readonly _satellite._container.extensions: {
+  [name: string]: {
+    displayName: string;
+    hostedLibFilesUrl: string;
+    modules: Modules; // Extension-specific module definitions
+  }
+}
+```
 
-* **`rules[].id`**: The unique identifier for the rule.
-* **`rules[].name`**: The friendly name of the rule.
-* **`rules[].events[]`**: An array of events that you have configured to trigger the rule.
-* **`rules[].conditions[]`**: An array of conditions that you have configured to trigger the rule.
-* **`rules[].actions[]`**: An array of actions that you have configured to execute when the rule is triggered.
+Each extension includes the following properties:
+
+| Name | Type | Description |
+|---|---|---|
+| **`displayName`** | `string` | The friendly name of the extension. |
+| **`hostedLibFilesUrl`** | `string` | The location on the CDN where the extension resides. |
+| **`modules`** | `Modules` | The JavaScript logic for all events, actions, conditions, and data elements that the extension uses. The contents of this object is different for each extension. |
+
+## `property`
+
+The `_satellite._container.property` object provides information about the tag property itself.
+
+```ts
+readonly _satellite._container.property: {
+  id: string;
+  name: string;
+  settings: {
+    domains: string[];
+    ruleComponentSequencingEnabled: boolean;
+    undefinedVarsReturnEmpty: boolean;
+  };
+}
+```
+
+| Name | Type | Description |
+|---|---|---|
+| **`id`** | `string` | The unique identifier for the tag property. |
+| **`name`** | `string` | The friendly name for the tag property. |
+| **`settings`** | `PropertySettings` | Settings for this property. See the below table. |
+
+| Setting name | Type | Description |
+|---|---|---|
+| **`domains`** | `string[]` | The configured domains for the property, as set when [configuring a tag property](/help/tags/ui/administration/companies-and-properties.md). |
+| **`ruleComponentSequencingEnabled`** | `boolean` | Determines if the checkbox **[!UICONTROL Run rule components in sequence]** is enabled when configuring the tag property. |
+| **`undefinedVarsReturnEmpty`** | `boolean` | Determines if the checkbox **[!UICONTROL Return an empty string for undefined data elements]** is enabled when configuring the tag property. |
+
+## `_container.rules`
+
+The `rules` object array provides a reference of all rules within your tag property.
+
+```ts
+readonly _satellite._container.rules: [{
+  id: string;
+  name: string;
+  events: Event[]; // Rule-specific events
+  conditions: Condition[]; // Rule-specific conditions
+  actions: Action[]; // Rule-specific actions
+}]
+```
+
+Each rule contains the following fields:
+
+| Name | Type | Description |
+|---|---|---|
+| **`id`** | `string` | The unique identifier for the rule. |
+| **`name`** | `string` | The friendly name of the rule. |
+| **`events`** | `Event[]` | An array of events that you have configured to trigger the rule. |
+| **`conditions`** | `Condition[]` | An array of conditions that you have configured to trigger the rule. |
+| **`actions`** | `Action[]` | An array of actions that you have configured to execute when the rule is triggered. |

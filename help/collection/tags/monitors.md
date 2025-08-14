@@ -1,18 +1,21 @@
-### `monitor`
+---
+title: _monitors
+description: Add event listeners to debug your tag implementation.
+---
+# `_monitors`
 
-**Code**
-
-```javascript
-_satellite._monitors
-```
-
-**Example**
+The `_satellite._monitors` object allows you to create event listeners and execute custom code when the library detects a rule triggering. Its primary use is to assist with debugging your implementation so that you can focus on if certain rules trigger correctly.
 
 >[!IMPORTANT]
 >
->This function should not be accessed from the production code. It is intended only for debugging purposes and will change over time as needed.
+>This object is for debugging purposes only. Do not tie production logic to this object. The availability of properties or names within this object can be changed by Adobe at any time.
 
-**Sample**
+```js
+_satellite._monitors
+```
+
+
+
 
 On your web page running a tag library, add a snippet of code to your HTML. Typically, the code is inserted into the `<head>` element before the `<script>` element that loads the tag library. This allows the monitor to catch the earliest system events that occur in the tag library. For example:
 
