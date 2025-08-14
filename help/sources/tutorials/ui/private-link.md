@@ -20,7 +20,7 @@ Read this guide to learn how you can use the sources workspace in the Experience
 
 ## Create a private endpoint
 
-To get started with [!DNL Azure] private endpoints, navigate to the *[!UICONTROL Sources]* catalog of the Experience Platform UI and select **[!UICONTROL Private endpoints]** from the menu of tabs in the sources workspace.
+To get started with [!DNL Azure Private Link], navigate to the *[!UICONTROL Sources]* catalog of the Experience Platform UI and select **[!UICONTROL Private endpoints]** from the menu of tabs in the sources workspace.
 
 ![The sources catalog with "Private endpoints".](../../images/tutorials/private-links/catalog.png)
 
@@ -44,7 +44,13 @@ When finished, select **[!UICONTROL Submit]**.
 
 ![The authentication window for creating a new private endpoint in the sources UI workspace.](../../images/tutorials/private-links/create-private-endpoint.png)
 
+### Approve a private endpoint
+
 Initially, the newly created endpoint will be pending until approved by an administrator. Once approved, the endpoint status updates to [!UICONTROL Enabled].
+
+To approve a private endpoint request for the [!DNL Azure Blob] and [!DNL Azure Data Lake Gen2] sources, log in to the [!DNL Azure Portal]. In the left navigation, select **[!DNL Data storage]**, then go to the **[!DNL Security + networking]** tab and choose **[!DNL Networking]**. Next, select **[!DNL Private endpoints]** to see a list of private endpoints associated with your account and their current connection states. To approve a pending request, select the desired endpoint and click **[!DNL Approve]**.
+
+![The Azure portal with a list of pending private endpoints.](../../images/tutorials/private-links/azure.png)
 
 ## Create an account with a private endpoint
 
