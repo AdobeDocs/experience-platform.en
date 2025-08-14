@@ -102,7 +102,7 @@ You can use the following sources to ingest cloud storage data to Experience Pla
 | Source | Ingestion type | Cloud |
 | --- | --- | --- |
 | [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) | Batch | Azure |
-| [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) | Batch | Azure |
+| [[!DNL Azure Blob Storage]](connectors/cloud-storage/blob.md) | Batch | Azure |
 | [[!DNL Amazon S3]](connectors/cloud-storage/s3.md) | Batch | Azure, AWS |
 | [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md) | Batch | Azure |
 | [[!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md) | Batch | Azure |
