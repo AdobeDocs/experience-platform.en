@@ -2,6 +2,8 @@
 title: Use Azure Private Link for sources in the UI
 description: Learn how to use Azure Private Links for sources in the Experience Platform UI.
 badge: Beta
+hide: true
+hidefromtoc: true
 ---
 # Use [!DNL Azure Private Link] for sources in the UI
 
