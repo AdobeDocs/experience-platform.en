@@ -196,283 +196,6 @@ The schema composition process begins by assigning a class. The class defines ke
 >
 >The example call below is only a baseline example of how to create a schema in the API, with the minimal composition requirements of a class and no field groups. For complete steps on how to create a schema in the API, including how to assign fields using field groups and data types, see the [schema creation tutorial](../tutorials/create-schema-api.md).
 
-<!-- TODO: PLAT-240919 Add Model-Based Schema API documentation here - include required fields (primary key, version descriptor, timestamp descriptor), API payload examples, and model-based schema type parameter - Have asked Madeline if this is possible and if so for Request and Response examples.-->
-
-<!-- This comment is a suggestion from Cursor DO NOT ADD. Confirm with Madeline
-TODO: PLAT-240919 Add Model-Based Schema API documentation
-
-## Creating model-based schemas {#model-based-schemas}
-
-Model-based schemas enable structured, relational-style data support in Experience Platform with primary key enforcement, version descriptors, and optional timestamp descriptors for time-series data. These schemas support multiple data models beyond standard XDM, including Campaign Orchestration, Data Distiller, and B2B use cases.
-
-### Required fields for model-based schemas
-
-When creating model-based schemas via the API, ensure the following required fields are included:
-
-- **Primary key**: Uniquely identifies each record in the dataset
-- **Version descriptor**: Tracks schema version changes and ensures data consistency
-- **Timestamp descriptor**: Required only for time-series schemas to track when events occurred
-
-### API example: Creating a model-based schema
-
-**API format**
-
-```http
-POST /tenant/schemas
-```
-
-**Request**
-
-```shell
-curl -X POST \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-    "type": "object",
-    "title": "Customer Data Model-Based Schema",
-    "description": "Schema for customer data with model-based structure",
-    "allOf": [
-      {
-        "$ref": "https://ns.adobe.com/xdm/context/record"
-      }
-    ],
-    "meta:modelType": "model-based",
-    "properties": {
-      "customerId": {
-        "type": "string",
-        "meta:isPrimaryKey": true,
-        "description": "Unique customer identifier"
-      },
-      "_version": {
-        "type": "integer",
-        "meta:isVersionDescriptor": true,
-        "description": "Schema version descriptor"
-      },
-      "timestamp": {
-        "type": "string",
-        "format": "date-time",
-        "meta:isTimestampDescriptor": true,
-        "description": "Timestamp for time-series data"
-      }
-    }
-  }'
-```
-
->[!NOTE]
->
->The `meta:modelType` property set to `"model-based"` indicates this schema supports structured data patterns with primary key enforcement and relationships. The `meta:isTimestampDescriptor` is only required for time-series schemas.
-
-### Model-based schema relationships
-
-Model-based schemas support relationships between schemas through primary and foreign key mappings, enabling normalized data structures across multiple related datasets.
-
-For comprehensive information on model-based schema concepts and use cases, see [Model-Based Schema overview](../schema/model-based.md).
-
--->
-
-<!-- 
-Actual request and response examples from Madeline:
-
-**Request**
-
-```json
-curl --request POST \
-  --url https://platform-stage.adobe.io/data/foundation/schemaregistry/tenant/schemas/ \
-  --header 'Accept: application/vnd.adobe.xdm+json' \
-  --header 'Authorization: Bearer eyJ...' \
-  --header 'Content-Type: application/json' \
-  --header 'x-api-key: acp_xql_gateway' \
-  --header 'x-gw-ims-org-id: 1F1F026D5FF613230A494038@AdobeOrg' \
-  --header 'x-sandbox-name: prod' \
-  --data '{
-    "title": "mbernard obj in obj relational",
-    "type": "object",
-    "description": "",
-  "definitions": {
-    "customFields": {
-      "type": "object",
-      "properties": {
-        "objectField": {
-          "title": "I am an object field",
-          "description": "this field has primitive fields inside it",
-          "type": "object",
-          "properties": {
-            "fieldBooleanInObj": {
-              "type": "boolean",
-              "description": "",
-              "title": "field Boolean In Object"
-            },
-            "fieldStringInObj": {
-              "minLength": 1,
-              "type": "string",
-              "description": "",
-              "title": "field String In Object"
-            },
-            "objectInsideObject": {
-              "type": "object",
-              "description": "",
-              "title": "object Inside Object",
-              "properties": {
-                "fieldStringInObjInObj": {
-                  "type": "string",
-                                    "minLength": 1,
-                  "description": "",
-                  "title": "field String In Object In Object"
-                }
-              }
-            }
-          }
-        },
-        "name": {
-          "minLength": 1,
-          "type": "string",
-          "description": "",
-          "title": "name"
-        },
-        "fieldDateTime": {
-          "format": "date-time",
-          "type": "string",
-          "description": "",
-          "title": "fieldDateTime"
-        },
-        "fieldBoolean": {
-          "type": "boolean",
-          "description": "",
-          "title": "fieldBoolean"
-        }
-      }
-    }
-  },
-    "allOf": [
-        {
-            "$ref": "#/definitions/customFields",
-            "meta:xdmType": "object"
-        }
-    ],
-    "imsOrg": "2398391F5B4E0B150A494124@AdobeOrg",
-    "meta:extends": ["https://ns.adobe.com/xdm/data/adhoc-v2"],
-    "meta:behaviorType": "record",
-    "required": []
-}'
-```
-
->[!NOTE]
->
->The trick is
->"meta:extends": ["https://ns.adobe.com/xdm/data/adhoc-v2"],
->"definitions": {    "customFields": {      "properties": {      .... at root
-
-**Response**
-
-```json
-{
-    "$id": "https://ns.adobe.com/marketob2bacctgrpstage/schemas/fb1bea1a09ffb72f61c62985c3a64707d14d383e6a06a00a",
-    "meta:altId": "_marketob2bacctgrpstage.schemas.fb1bea1a09ffb72f61c62985c3a64707d14d383e6a06a00a",
-    "meta:resourceType": "schemas",
-    "version": "1.0",
-    "title": "mbernard obj in obj relational",
-    "type": "object",
-    "description": "",
-    "definitions": {
-        "customFields": {
-            "type": "object",
-            "properties": {
-                "objectField": {
-                    "title": "I am an object field",
-                    "description": "this field has primitive fields inside it",
-                    "type": "object",
-                    "properties": {
-                        "fieldBooleanInObj": {
-                            "type": "boolean",
-                            "description": "",
-                            "title": "field Boolean In Object",
-                            "meta:xdmType": "boolean"
-                        },
-                        "fieldStringInObj": {
-                            "minLength": 1,
-                            "type": "string",
-                            "description": "",
-                            "title": "field String In Object",
-                            "meta:xdmType": "string"
-                        },
-                        "objectInsideObject": {
-                            "type": "object",
-                            "description": "",
-                            "title": "object Inside Object",
-                            "properties": {
-                                "fieldStringInObjInObj": {
-                                    "type": "string",
-                                    "minLength": 1,
-                                    "description": "",
-                                    "title": "field String In Object In Object",
-                                    "meta:xdmType": "string"
-                                }
-                            },
-                            "meta:xdmType": "object"
-                        }
-                    },
-                    "meta:xdmType": "object"
-                },
-                "name": {
-                    "minLength": 1,
-                    "type": "string",
-                    "description": "",
-                    "title": "name",
-                    "meta:xdmType": "string"
-                },
-                "fieldDateTime": {
-                    "format": "date-time",
-                    "type": "string",
-                    "description": "",
-                    "title": "fieldDateTime",
-                    "meta:xdmType": "date-time"
-                },
-                "fieldBoolean": {
-                    "type": "boolean",
-                    "description": "",
-                    "title": "fieldBoolean",
-                    "meta:xdmType": "boolean"
-                }
-            },
-            "meta:xdmType": "object"
-        }
-    },
-    "allOf": [
-        {
-            "$ref": "#/definitions/customFields",
-            "meta:xdmType": "object",
-            "type": "object"
-        }
-    ],
-    "refs": [],
-    "required": [],
-    "imsOrg": "1F1F026D5FF613230A494038@AdobeOrg",
-    "meta:extends": [
-        "https://ns.adobe.com/xdm/data/adhoc-v2"
-    ],
-    "meta:xdmType": "object",
-    "meta:registryMetadata": {
-        "repo:createdDate": 1744839427314,
-        "repo:lastModifiedDate": 1744839427314,
-        "xdm:createdClientId": "acp_xql_gateway",
-        "xdm:lastModifiedClientId": "acp_xql_gateway",
-        "xdm:createdUserId": "CE92198B5F173A740A494021@AdobeID",
-        "xdm:lastModifiedUserId": "CE92198B5F173A740A494021@AdobeID",
-        "eTag": "f3078d9bb02a3d1febe37729b523cc13cda6df1f414d1d7d253a184daa39d1ca",
-        "meta:globalLibVersion": "1.59.1"
-    },
-    "meta:containerId": "tenant",
-    "meta:sandboxId": "befc7023-ed76-42d9-bc70-23ed7632d94e",
-    "meta:sandboxType": "production",
-    "meta:behaviorType": "record"
-}
-```
- -->
-
 **API format**
 
 ```http
@@ -549,6 +272,184 @@ A successful response returns HTTP status 201 (Created) and a payload containing
 Performing a GET request to [list all schemas](#list) in the tenant container would now include the new schema. You can perform a [lookup (GET) request](#lookup) using the URL-encoded `$id` URI to view the new schema directly.
 
 To add additional fields to a schema, you can perform a [PATCH operation](#patch) to add field groups to the schema's `allOf` and `meta:extends` arrays.
+
+<!-- ... -->
+
+## Create a model-based schema
+
+Create a model-based schema by making a POST request to the `/schemas` endpoint. Model-based schemas store structured, relational-style data **without** classes or field groups. Define fields directly on the schema, and identify the schema as model-based using a logical behavior tag.
+
+>[!IMPORTANT]
+>
+>To create a model-based schema, set `meta:extends` to `"https://ns.adobe.com/xdm/data/adhoc-v2"`. This is a **logical behavior identifier** (not a physical behavior or class). Do **not** reference classes or field groups in `allOf`.
+
+Create the schema first with `POST /tenant/schemas`. Then add the required descriptors with the [Descriptors API (`POST /tenant/descriptors`)](../api/descriptors.md). Add a [primary key descriptor](../api/descriptors.md#primary-key-descriptor), a [relationship descriptor](../api/descriptors.md#relationship-descriptor), a [version descriptor](../api/descriptors.md#version-descriptor), and (for time-series) a [timestamp descriptor](../api/descriptors.md#timestamp-descriptor). Primary-key fields must be **root-level** and **required**. When you add a **primary key**, a **version** descriptor is required. For time-series schemas, define a **composite** key that includes the timestamp field.
+
+>[!AVAILABILITY]
+>
+>Although `meta:behaviorType` supports `record` and `time-series`, current availability may be limited. Set `meta:behaviorType` to `"record"` unless time-series is enabled for your organization.
+
+>[!CAUTION]
+>
+>Model-based schemas **do not participate in union schemas**. Do not add a `union` tag to `meta:immutableTags`. See the [unions endpoint guide](./unions.md) for details on union behavior in standard XDM.
+
+**API format**
+
+```http
+POST /tenant/schemas
+```
+
+**Request**
+
+```shell
+curl --request POST \
+  --url https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas \
+  -H 'Accept: application/vnd.adobe.xed+json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+  "title": "marketing.customers",
+  "type": "object",
+  "description": "Schema of the Marketing Customers table.",
+  "definitions": {
+    "marketing_customers": {
+      "type": "object",
+      "properties": {
+        "customer_id": {
+          "title": "Customer ID",
+          "description": "Primary key of the customer table.",
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "title": "Name",
+          "description": "Name of the customer.",
+          "type": "string"
+        },
+        "email": {
+          "title": "Email",
+          "description": "Email of the customer.",
+          "type": "string",
+          "format": "email",
+          "minLength": 1
+        }
+      },
+      "required": ["customer_id"]
+    }
+  },
+  "allOf": [
+    { "$ref": "#/definitions/marketing_customers" }
+  ],
+  "meta:extends": ["https://ns.adobe.com/xdm/data/adhoc-v2"],
+  "meta:behaviorType": "record"
+}
+'
+```
+
+>[!NOTE]
+>
+> This example uses a local `definitions` object referenced via `allOf` to keep fields flat and avoid tenant namespaces. You can also define fields directly under root `properties` for simplified/model-based schemas.
+
+### Request body properties
+
+| Property                        | Type   | Description                                               |
+| ------------------------------- | ------ | --------------------------------------------------------- |
+| `title`                         | String | Display name of the schema.                               |
+| `description`                   | String | Short explanation of the schema's purpose.                |
+| `type`                          | String | Must be `"object"` for model-based schemas.               |
+| `definitions`                   | Object | Contains the root-level object(s) that define your schema fields. |
+| `definitions.<name>.properties` | Object | Field names and data types.                               |
+| `allOf`                         | Array  | References the root-level object definition (for example, `#/definitions/marketing_customers`). |
+| `meta:extends`                  | Array  | Must include `"https://ns.adobe.com/xdm/data/adhoc-v2"` to identify the schema as model-based.  |
+| `meta:behaviorType`             | String | Set to `"record"`. Use `"time-series"` only when enabled and appropriate. |
+
+>[!IMPORTANT]
+>
+>Schema evolution for model-based schemas is additive only. Add new fields with PATCH. Do not remove, rename, or change the type of existing fields.
+
+**Response**
+
+A successful request returns **HTTP 201 (Created)** and the created schema.
+
+>[!NOTE]
+>
+>Model-based schemas do not inherit pre-seeded fields (for example, id, timestamp, or eventType). Define all required fields explicitly in your schema.
+
+**Example response**
+
+```json
+{
+  "$id": "https://ns.adobe.com/<TENANT_ID>/schemas/<SCHEMA_UUID>",
+  "meta:altId": "_<SCHEMA_ALT_ID>",
+  "meta:resourceType": "schemas",
+  "version": "1.0",
+  "title": "marketing.customers",
+  "description": "Schema of the Marketing Customers table.",
+  "type": "object",
+  "definitions": {
+    "marketing_customers": {
+      "type": "object",
+      "properties": {
+        "customer_id": {
+          "title": "Customer ID",
+          "description": "Primary key of the customer table.",
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "title": "Name",
+          "description": "Name of the customer.",
+          "type": "string"
+        },
+        "email": {
+          "title": "Email",
+          "description": "Email of the customer.",
+          "type": "string",
+          "format": "email",
+          "minLength": 1
+        }
+      },
+      "required": ["customer_id"]
+    }
+  },
+  "allOf": [
+    { "$ref": "#/definitions/marketing_customers" }
+  ],
+  "meta:extends": ["https://ns.adobe.com/xdm/data/adhoc-v2"],
+  "meta:behaviorType": "record",
+  "meta:containerId": "tenant"
+}
+```
+
+### Response body properties
+
+| Property            | Type   | Description                |
+| ------------------- | ------ | -------------------------- |
+| `$id`               | String | Unique URL of the created schema. Use in subsequent API calls. |
+| `meta:altId`        | String | Alternate identifier for the schema.                        |
+| `meta:resourceType` | String | Resource type (always `"schemas"`).                         |
+| `version`           | String | Schema version assigned on create.                          |
+| `title`             | String | Display name of the schema.                                 |
+| `description`       | String | Short explanation of the schema's purpose.                  |
+| `type`              | String | Schema type.                                                |
+| `definitions`       | Object | Field definitions of the schema.                            |
+| `allOf`             | Array  | Reference to the root-level object definition (for example, `#/definitions/marketing_customers`). |
+| `meta:extends`      | Array  | Identifies the schema as model-based (`adhoc-v2`).          |
+| `meta:behaviorType` | String | Behavior type (`record` or `time-series`, when enabled).    |
+| `meta:containerId`  | String | Container in which the schema is stored (e.g., `tenant`).   |
+
+To add fields to a model-based schema after it's been created, make a[PATCH request](#patch). Model-based schemas do not inherit or auto-evolve and support **additive changes only**. 
+
+You can add new root-level fields (within the root definition or root `properties`), but you cannot remove, rename, or change the type of existing fields.
+
+>[!CAUTION]
+>
+>Schema evolution is **append-only**. Plan field names and types carefully before publishing. Once in use, fields cannot be deleted or modified.
+
+<!-- ... -->
 
 ## Update a schema {#put}
 
