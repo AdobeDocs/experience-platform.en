@@ -15,11 +15,10 @@ or  -->
 With model-based schemas, you can:
 
 * Define enforced primary keys to maintain data integrity and prevent duplicates.
-* Enable row- and record-level change tracking for precise updates and deletes.
+* Enable precise change tracking with with row- and record-level updates and deletes.
 * Create schema-level relationships that can be referenced across applications.
-* Work with multiple data models beyond the standard Experience Platform schema to avoid duplicating modeling work.
-* Define relationships once and reuse them across projects.
-* Maintain consistent data structures across Adobe applications.
+* Support multiple data models beyond standard XDM to avoid duplicating modeling work.
+* Reuse relationship definitions across projects to maintain consistent data structures across Adobe applications.
 
 This approach removes dependencies on union schemas, streamlines schema evolution, and gives you more flexibility when configuring fields to match your data needs.
 
@@ -31,59 +30,42 @@ This approach removes dependencies on union schemas, streamlines schema evolutio
 
 Standard XDM schemas in Experience Platform follow one of three data behaviors: Record, Time-series, or Ad-hoc. For definitions and details, see [XDM data behaviors](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home#data-behaviors).
 
-In the traditional model, Record and Time-series schemas participate in [union views](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/api/unions).md), automatically evolve when shared [field groups](./composition.md#field-group) change, and require custom fields to be nested under a tenant namespace. While powerful, this approach can slow onboarding, produce overly complex schemas with unused fields, and require additional data mapping or transformation. These factors increase the learning curve and ongoing maintenance effort.
+In the traditional model, Record and Time-series schemas participate in [union schemas](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/api/unions).md) (also see the [union schema UI guide](../../profile/ui/union-schema.md)), automatically evolve when shared [field groups](./composition.md#field-group) change, and require custom fields to be nested under a tenant namespace. While powerful, this model can slow onboarding, produce overly complex schemas with unused fields, and require additional data mapping or transformation. These factors increase the learning curve and ongoing maintenance effort.
 
-<!-- Also see the [Union Schema UI guide](../../profile/ui/union-schema.md). -->
-
-Model-based schemas remove union schema dependencies, eliminate auto-evolution from shared field groups, and allow direct field definitions without tenant namespace restrictions. This gives you explicit control over primary keys, relationships, and schema evolution, making it easier to model data to fit your needs.
+Model-based schemas remove union schema dependencies, eliminate auto-evolution from shared field groups, and allow direct field definitions without tenant namespace restrictions. You gain explicit control over primary keys, relationships, and schema evolution, making it easier to model data to fit your needs.
 
 <!-- CONFLICT: KT wiki frames background around technical constraints and union schema removal; Adam emphasized a UI terminology change from "relational" to "model-based" and licensing scope. -->
 
 ## Features of model-based schemas
 
-Model-based schemas simplify the process of modeling structured data in the data lake while retaining essential capabilities for governance, integrity, and interoperability.
+Use the following capabilities to model structured data in the data lake while maintaining governance, integrity, and interoperability.
 
-**Key features:**
-
-* **Schema behavior support** – Configure with:
-  * **Record behavior** – Captures the current state of an entity, such as a customer, account, or campaign.
-  * **Time-series behavior** – Captures events and the time they occur, useful for tracking sequences or changes over time.
+* **Schema behavior support**: Configure with:
+  * **Record behavior**: Captures the current state of an entity, such as a customer, account, or campaign.
+  * **Time-series behavior**: Captures events and the time they occur, useful for tracking sequences or changes over time.
 <!-- CONFLICT: KT wiki states both record and time-series are supported; Adam stated only record-based schemas are currently available. -->
-
-* **Primary key enforcement** – Define a primary key to uniquely identify each record in the dataset. This prevents duplicate records during ingestion.
-
-* **Version control** – Use a **version descriptor** to ensure updates are applied in the correct order, even if records arrive out of sequence.
-
-* **Event-time ordering** – For time-series schemas, use a **timestamp descriptor** to order events by occurrence time instead of ingestion time.
-
-* **Relationship mapping** – Create one-to-many or many-to-one relationships:
-  * Between two model-based schemas.
-  * Between a model-based schema and a standard schema.
-  Relationships are stored as descriptors to enable efficient joins.
-
-* **Simplified evolution** – Model-based schemas do not participate in union views and are not updated when shared field groups change, preventing unexpected downstream changes.
-
-* **Flexible field definition** – Add fields directly without tenant-id namespacing. You may still use existing XDM field groups, but changes to them do not automatically propagate to your schema.
-
-* **No dependency on union schemas** – Improves query performance and reduces the operational overhead of managing global schema views.
+* **Primary key enforcement**: Define a primary key to uniquely identify each record and prevent duplicates during ingestion.
+* **Version control**: Use a **version descriptor** to ensure updates are applied in the correct order, even if records arrive out of sequence.
+* **Event-time ordering**: For time-series schemas, use a **timestamp descriptor** to order events by occurrence time instead of ingestion time.
+* **Relationship mapping**: Create one-to-many or many-to-one relationships between model-based schemas or between model-based and standard schemas. Relationship definitions are stored as descriptors to enable efficient joins.
+* **Simplified evolution**: Model-based schemas do not participate in union views and are not updated when shared field groups change, preventing unexpected downstream changes.
+* **Flexible field definition**: Add fields directly without tenant-id namespacing. You may still use existing XDM field groups, but changes to them do not automatically propagate to your schema.
+* **No dependency on union schemas**: Improves query performance and reduces the operational overhead of managing global schema views.
 
 ## Required fields
 
-Model-based schemas require certain descriptors—metadata in the schema definition that controls key behaviors and constraints.
+Model-based schemas require certain descriptors—metadata in the schema definition that controls key behaviors and constraints. Add the following descriptors as part of your schema definition.
 
 ### Primary key descriptor
 
-Use a primary key descriptor to ensure each record is uniquely identifiable.
+Use a primary key descriptor to ensure each record is uniquely identifiable. The supported configurations are:
 
-**Supported configurations:**
-
-* **Single-field primary key** – Use one field with a unique value for each record.
-* **Composite primary key** – Use multiple fields to form a unique identifier.  
-  For time-series schemas, the composite key must include the timestamp field identified by the timestamp descriptor.
+* **Single-field primary key**: Use one field with a unique value for each record.
+* **Composite primary key**: Use multiple fields to form a unique identifier. For time-series schemas, the composite key must include the timestamp field identified by the timestamp descriptor.
 
 <!-- CONFLICT: KT wiki supports both single and composite primary keys; Adam stated only a single primary key field is required, with timestamp handled separately for time-series. -->
 
-**Example:**
+**Example (single-field):**
 
 ```json
 {
@@ -92,7 +74,7 @@ Use a primary key descriptor to ensure each record is uniquely identifiable.
 }
 ```
 
-**Composite key example for time-series:**
+**Example (composite for time-series)**
 
 ```json
 {
@@ -103,9 +85,7 @@ Use a primary key descriptor to ensure each record is uniquely identifiable.
 
 ### Version descriptor
 
-Define a version descriptor to maintain correct record state and ensure the latest update is applied.
-
-When multiple records share the same primary key, the record with the highest version value is considered the most recent.
+Define a version descriptor to maintain correct record state and ensure the latest update is applied. When multiple records share the same primary key, the record with the highest version value is considered the most recent.
 
 **Example:**
 
@@ -133,23 +113,22 @@ For time-series schemas, define a timestamp descriptor to set the event time for
 
 >[!NOTE]
 >
-> Descriptors are part of the schema definition metadata and are not stored in data rows.
+>Descriptors are part of the schema definition metadata and are not stored in data rows.
 
 For instructions on creating descriptors in the Schema Editor, see [Create descriptors in the Schema Editor](../tutorials/relationship-ui.md). For API-based creation, see [Create descriptors using the API](../tutorials/relationship-api.md).
 
 ## Relationship support
 
-Model-based schemas support relationship descriptors that define dataset connections. These improve referential integrity and enable connected queries.
+Model-based schemas support relationship descriptors that define how datasets connect. Use relationships to improve referential integrity and enable connected queries across entities.
 
-**Relationship types:**
+Before you add relationship descriptors, decide the relationship type and target:
 
 * **One-to-many** – One record in a schema relates to multiple records in another schema.
 * **Many-to-one** – Multiple records in a schema relate to one record in another schema.
 
-You can define relationships between:
-
-* Two model-based schemas.
-* A model-based schema and a standard schema.
+>[!NOTE]
+>
+>You can define relationships between either two model-based schemas, or a model-based schema and a standard schema.
 
 **Example: One-to-many relationship**
 
@@ -173,13 +152,13 @@ You can define relationships between:
 }
 ```
 
-For a full list of relationship descriptor types and syntax, see the [relationship descriptors reference](../api/descriptors.md) and the [tutorial for defining a one-to-one relationship between two schemas using the Schema Registry API](../tutorials/relationship-api.md) or the [UI](../tutorials/relationship-ui.md).
+For a list of relationship descriptor types and syntax, see the [descriptors API reference](../api/descriptors.md). For step-by-step guidance, see [Define a relationship in the API](../tutorials/relationship-api.md) or [Create a relationship in the UI](../tutorials/relationship-ui.md).
 
 >[!NOTE]
 >
 >As relationships are defined at the schema level, make sure to explicitly join related datasets in your queries. Use a tool like Data Distiller to resolve these relationships during query time.
 
-For UI instructions, see [Create relationships in the Schema Editor](link-to-ui-doc/PLACEHOLDER.md). For API instructions, see [Create relationships using the API](link-to-api-doc/PLACEHOLDER.md).
+<!-- For UI instructions, see [Create relationships in the Schema Editor](link-to-ui-doc/PLACEHOLDER.md). For API instructions, see [Create relationships using the API](link-to-api-doc/PLACEHOLDER.md). -->
 
 >[!IMPORTANT]
 >
@@ -193,16 +172,17 @@ For UI instructions, see [Create relationships in the Schema Editor](link-to-ui-
 
 ## Ingestion methods
 
-Use [change data capture](../../sources/tutorials/api/change-data-capture.md) in your dataflow to keep model-based datasets synchronized with source systems. You can also ingest data using SQL via Data Distiller or upload files manually.
+Use [change data capture](../../sources/tutorials/api/change-data-capture.md) in your data connections to keep model-based datasets synchronized with source systems. You can also ingest data using SQL via Data Distiller or upload files manually. Choose the path that aligns with your operational model, then apply the CDC rules consistently.
 
 Change data capture in Experience Platform captures and applies all changes—inserts, updates, and deletes—in real time, ensuring full alignment between source and destination data. Unlike incremental copy, which only tracks new or updated records using a timestamp column (such as `LastModified`) and cannot detect deletions, change data capture provides a complete change history.
 
-**Supported ingestion methods:**
+<!-- Maybe make this below into a table: -->
+Supported ingestion methods include:
 
 * **Sources with CDC** – Include a `_change_request_type` column in the source data to indicate how each row should be processed:
   * `U` = upsert (default if column is missing)  
   * `D` = delete  
-    This column is evaluated during ingestion only and is not stored in XDM.
+    This column is evaluated during ingestion only and is not stored in XDM or mapped to XDM fields.
 
   >[!IMPORTANT]
   >
@@ -210,29 +190,32 @@ Change data capture in Experience Platform captures and applies all changes—in
 
   For step-by-step instructions on enabling CDC in the Sources workflow, see [Enable change data capture for source connections](link-to-sources-doc/PLACEHOLDER.md).
 
-* **Data Distiller** – Ingest using SQL queries.
-
-* **Local file upload** – Upload files manually to datasets.
+* **Data Distiller**: Ingest using SQL queries to write into model-based datasets.
+* **Local file upload**: Upload files manually when needed for non-source ingestion workflows.
 
 <!-- CONFLICT: KT wiki lists CDC, Data Distiller, and local file upload as options; Adam stated CDC is currently the primary supported workflow for model-based schemas. -->
 
 ## Data hygiene considerations
 
-Use these methods to maintain accurate records in the data lake without unwanted source data deletion:
+When you need to remove records from model-based datasets while keeping source systems intact, select a method that aligns with your governance and reconciliation processes. Then apply the relevant descriptors to ensure deterministic behavior.
 
-* **CDC delete operation** – Include `_change_request_type` with `D` in the incoming dataset.
-* **Safe-copy dataset** – Duplicate the production dataset and apply deletes to the copy.
-* **Deletes-only batch upload** – Upload a file containing only deletes for targeted hygiene.
+<!-- Use these methods to maintain accurate records in the data lake without unwanted source data deletion: -->
 
-**Descriptor relevance to hygiene:**
+* **Change data capture delete operation**: Include `_change_request_type` with `D` in the incoming data to delete matching records.
+* **Safe-copy dataset**: Duplicate the production dataset and apply deletes to the copy for controlled testing or reconciliation.
+* **Deletes-only batch upload**: Upload a file containing only deletes for targeted hygiene.
 
-* **Primary key descriptor** – Identifies records for updates or deletes.
-* **Version descriptor** – Ensures deletes/updates apply in the correct order.
-* **Timestamp descriptor (time-series)** – Aligns deletes with event occurrence times.
+The following list of descriptors indicate their relevance to hygiene operations:
+
+* **Primary key descriptor**: Identifies records for updates or deletes.
+* **Version descriptor**: Ensures deletes and updates apply in the correct order.
+* **Timestamp descriptor (time-series)**: Aligns deletes with event occurrence times.
 
 >[!NOTE]
 >
-> Hygiene processes operate at the dataset level. For profile-enabled datasets, additional profile workflows may be required.
+>Hygiene processes operate at the dataset level. For profile-enabled datasets, additional profile workflows may be required.
+
+<!-- For UI steps, see [Record delete requests](../../hygiene/ui/record-delete.md). For API calls, see the [workorder endpoint](../../hygiene/api/workorder.md). For scheduled row-level retention in the data lake, see [Manage Experience Event dataset retention (TTL)](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md). -->
 
 For complete hygiene instructions, see Record Delete [UI](../../hygiene/ui/record-delete.md) and [API documentation](../../hygiene/api/workorder.md).
 Alternatively, see the guide on how to [Manage Experience Event Dataset Retention in the data lake using TTL](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md).
