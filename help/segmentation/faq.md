@@ -288,7 +288,11 @@ Yes! You can use audiences from Audience Composition in Adobe Journey Optimizer 
 
 ### Are there any guardrails on the number of compositions?
 
-At this point in time, you can only have **10** published compositions per sandbox. This guardrail is planned to be increased in a future release.
+>[!IMPORTANT]
+>
+>This guardrail only applies to compositions created with Audience Composition and does **not** apply to compositions created with Federated Audience Composition.
+
+At this point in time, you can only have **10** published compositions per sandbox. This guardrail is planned to be increased in a future release. 
 
 ### What are the workflow guardrails for Audience Composition?
 
