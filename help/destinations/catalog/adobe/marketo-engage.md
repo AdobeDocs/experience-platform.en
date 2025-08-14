@@ -27,14 +27,8 @@ To ensure a smooth transition to the new destination, review the following key p
 
 **To preserve your current sync behavior after migration:**
 
-* If you only use **[!UICONTROL Audience Sync]** in the old **[!UICONTROL (V2) Marketo Engage]** and do not want to use **[!UICONTROL Profile Sync]**, make sure to disable **[!UICONTROL Profile Sync]** in your new destination setup.
-* If you use **[!UICONTROL Profile Sync]** in the [[!UICONTROL Marketo Engage Person Sync]](marketo-engage-person-sync.md) destination and do not want to use **[!UICONTROL Audience Sync]**, make sure to disable **[!UICONTROL Audience Sync]** in your new destination setup.
-
-<!-- 
-Improvements in the Marketo V2 destination include:
-
-* In the **[!UICONTROL Schedule segment]** step of the activation workflow, in Marketo V1, you needed to manually add a **Mapping ID** to successfully export data to Marketo. This manual step is not required anymore in Marketo V2.
-* In the **[!UICONTROL Mapping]** step of the activation workflow, in Marketo V1, you were able to map XDM fields to only three target fields in Marketo: `firstName`, `lastName`, and `companyName`. With the Marketo V2 release, you can now map XDM fields to many more fields in Marketo. For more information, read the [supported attributes](#supported-attributes) section further below. -->
+* If you only use **[!UICONTROL Audience Sync]** in the old **[!UICONTROL (V2) Marketo Engage]** and do not want to use **[!UICONTROL Profile Sync]**, select the **[!UICONTROL Audience Only]** sync type in your new destination setup.
+* If you use **[!UICONTROL Profile Sync]** in the [[!UICONTROL Marketo Engage Person Sync]](marketo-engage-person-sync.md) destination and do not want to use **[!UICONTROL Audience Sync]**, select the **[!UICONTROL Profile Only]** sync type in your new destination setup.
 
 ## Overview {#overview}
 
@@ -52,13 +46,13 @@ To help you better understand how and when you should use the [!DNL Marketo Enga
 
 The marketing team wants to run a win-back campaign targeting leads who have not engaged in 90+ days but already exist in Marketo. They want to avoid adding any new people.
 
-They can activate the audiences to Marketo Engage and use the **[!UICONTROL Audience Only]** sync type combined with the **[!UICONTROL Update persons only]** action to make sure they target only the audiences that already exist in Marketo.
+They can activate the audiences to Marketo Engage and use the **[!UICONTROL Audience Only]** sync type combined with the **[!UICONTROL Update existing persons only]** action to make sure they target only the audiences that already exist in Marketo.
 
 **Engage new and existing leads**
 
 The marketing team wants to launch a targeted campaign based on product interest targeting existing leads and new leads that do not exist in Marketo.
 
-They can activate their audiences in Marketo Engage and use the **[!UICONTROL Audience Only]** sync type combined with the **[!UICONTROL Create and update persons]** action to make sure they target existing leads from Marketo and create new ones for the new audiences exported from Real-Time CDP.
+They can activate their audiences in Marketo Engage and use the **[!UICONTROL Audience Only]** sync type combined with the **[!UICONTROL Update existing and create new persons]** action to make sure they target existing leads from Marketo and create new ones for the new audiences exported from Real-Time CDP.
 
 ### Audience and profile sync use cases {#audience-profile-sync-use-cases}
 
@@ -66,13 +60,13 @@ They can activate their audiences in Marketo Engage and use the **[!UICONTROL Au
 
 The marketing team wants to launch a re-engagement campaign for existing Marketo contacts who have shown interest based on website visits. They also want to update the leads information (like preferences, demographics information), but not create any new people.
 
-They can activate the audiences to Marketo Engage and use the **[!UICONTROL Audience and Profile]** sync type combined with the **[!UICONTROL Update persons only]** action to make sure they target only the audiences that already exist in Marketo.
+They can activate the audiences to Marketo Engage and use the **[!UICONTROL Audience and Profile]** sync type combined with the **[!UICONTROL Update existing persons only]** action to make sure they target only the audiences that already exist in Marketo.
 
 **Re-engage and expand reach with full profile sync**
 
 The marketing team wants to activate a product interest audience for a new campaign. While many of the profiles already exist in Marketo, some are new and only present in Real-Time CDP. For the existing people, they want to make sure they update those people in Marketo, but also create new profiles.
 
-They can activate their audiences in Marketo Engage and use the **[!UICONTROL Audience and Profile]** sync type combined with the **[!UICONTROL Create and update persons]** action to make sure they target existing leads from Marketo and create new ones for the new audiences exported from Real-Time CDP.
+They can activate their audiences in Marketo Engage and use the **[!UICONTROL Audience and Profile]** sync type combined with the **[!UICONTROL Update existing and create new persons]** action to make sure they target existing leads from Marketo and create new ones for the new audiences exported from Real-Time CDP.
 
 ## Supported identities {#supported-identities}
 
@@ -80,7 +74,7 @@ They can activate their audiences in Marketo Engage and use the **[!UICONTROL Au
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-| `DedupeField` | The field used to identify and match existing leads in Marketo. This field must be mapped during the attribute mapping step for the matching to work properly. | Map any source field that serves as a unique identifier, such as `ECID`, `Email`, or other custom identifiers. For best results, choose a field that is consistently available and unique across all your customer profiles. |
+| `DedupeField` | The field used to identify and match existing leads in Marketo. | During the [mapping](#mapping) step, map any source field (such as `Email` or other custom identifiers) that you want to use as the deduplication field to this target identity. For best results, choose a field that is consistently available and unique across all your customer profiles. |
 
 {style="table-layout:auto"}
 
@@ -144,14 +138,14 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Munchkin ID]**: Select the Marketo Munchkin ID that you want to use for this destination. 
 * **[!UICONTROL Workspace ID]**: Select your Marketo workspace ID.
 * **[!UICONTROL Sync Type]**: Select the sync type that you want to use for this destination:
-    * **[!UICONTROL Profile Only]**: select this option to sync profile data.
-    * **[!UICONTROL Audience Only]**: select this option to sync audience data.
-    * **[!UICONTROL Audience and Profile]**: select this option to sync both profile and audience data.
-* **[!UICONTROL Partition]**: Select a Marketo lead partition ID associated with your chosen workspace. This allows you to specify which lead partition in Marketo will receive the exported audience data.
+    * **[!UICONTROL Profile Only]**: Select this option to sync profile data.
+    * **[!UICONTROL Audience Only]**: Select this option to sync audience data.
+    * **[!UICONTROL Audience and Profile]**: Select this option to sync both profile and audience data.
+* **[!UICONTROL Partition]**: Optional. Select a Marketo lead partition ID associated with your chosen workspace. This allows you to specify which lead partition in Marketo will receive the exported audience data.
 * **[!UICONTROL Marketo deduplication field]**: Select the Marketo deduplication field that you want to use. This selector shows the fields that you marked as deduplication fields in Marketo.
 * **[!UICONTROL Action]**: Select the Marketo action that you want to perform when exporting audiences:
-    * **[!UICONTROL Update persons only]**: Select this option to only update the audiences that have a match in Marketo.
-    * **[!UICONTROL Create and update persons]**: Select this option to update the audiences that have a match in Marketo and create matching ones for the rest.
+    * **[!UICONTROL Update existing persons only]**: Select this option to only update the audiences that have a match in Marketo.
+    * **[!UICONTROL Update existing and create new persons]**: Select this option to update the audiences that have a match in Marketo and create matching ones for the rest.
 
 ### Enable alerts {#enable-alerts}
 
@@ -168,11 +162,9 @@ When you are finished providing details for your destination connection, select 
 
 Read [Activate profiles and audiences to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
-### Map attributes and identities {#map}
+### Map attributes and identities {#mapping}
 
-During the mapping step, map any source field or identity that serves as a unique identifier, such as `ECID`, `Email`, or other custom identifiers to the `DedupeField` target identity.
-
-For best results, choose a field that is consistently available and unique across all your customer profiles.
+During the mapping step, map any source field (such as `Email` or other custom identifiers) that you want to use as the deduplication field to this target identity. For best results, choose a field that is consistently available and unique across all your customer profiles.
 
 ![Experience Platform screenshot showing the identity mapping in Marketo Engage.](../../assets/catalog/adobe/marketo-engage/marketo-mapping.png)
 
