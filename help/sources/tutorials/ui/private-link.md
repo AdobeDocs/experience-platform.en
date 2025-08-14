@@ -1,9 +1,9 @@
 ---
-title: Azure Private Endpoint Support in the UI
-description: Learn how to create private endpoints using the sources workspace in the Experience Platform UI.
+title: Use Azure Private Link for sources in the UI
+description: Learn how to use Azure Private Links for sources in the Experience Platform UI.
 badge: Beta
 ---
-# Create an [!DNL Azure] private endpoint in the UI
+# Use [!DNL Azure Private Link] for sources in the UI
 
 >[!AVAILABILITY]
 >
@@ -14,7 +14,7 @@ badge: Beta
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 
-You can use the [!DNL Azure] private endpoint feature of Adobe Experience Platform sources to establish a private endpoint in which your source can connect to. With this feature, you can ensure security and additional data protection when creating ingestion jobs and dataflows between your source and Experience Platform.
+You can use the [!DNL Azure Private Link] feature to create private endpoints for your Adobe Experience Platform sources to connect to. Use [!DNL Azure Private Link], to securely connect to services from your virtual network using private IP addresses, eliminating the need for public IPs and reducing your attack surface. Use this approach to protect your data by ensuring traffic only reaches approved services. Additionally, it also simplifies your network setup by removing the need for complex firewall or Network Address Translation configurations.
 
 Read this guide to learn how you can use the sources workspace in the Experience Platform UI to create and use a private endpoint.
 
@@ -27,7 +27,6 @@ To get started with [!DNL Azure] private endpoints, navigate to the *[!UICONTROL
 Use the interface to view information about existing private endpoints, such as their ID, associated source, and current status. To create a new private endpoint, select **[!UICONTROL Create private endpoint]**.
 
 ![The Private endpoints interface with "Create private endpoint" selected.](../../images/tutorials/private-links/private-endpoints.png)
-
 
 Next, choose your desired source, and then enter values for the following properties:
 
