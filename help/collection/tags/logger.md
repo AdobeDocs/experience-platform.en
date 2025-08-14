@@ -6,7 +6,7 @@ description: Output information to the browser console when debugging.
 
 The `_satellite.logger` object contains methods that allow you to output diagnostic or informational messages to the browser console when [Debugging](../use-cases/debugging.md) is enabled. If debugging is not enabled, all `logger` method calls do nothing.
 
-These methods allow developers, technical marketers, and testers easily see what triggers within a tag property and when. Since these console messages only appear when debugging is enabled, you can leave `logger` messages in deployments to production without impacting the browser console of visitors to your site.
+These methods allow developers, technical marketers, and testers to easily see what triggers within a tag property and when. Since these console messages only appear when debugging is enabled, you can leave `logger` messages in deployments to production without impacting the browser console of visitors to your site.
 
 ```ts
 readonly _satellite.logger: {
@@ -24,15 +24,15 @@ readonly _satellite.logger: {
 
 ## Methods
 
-All `_satellite.logger` methods are forwarded to their corresponding JavaScript `console` method when debugging is enabled. Most `console` arguments or objects are supported using `_satellite.logger`:
+All `_satellite.logger` methods are forwarded to their corresponding JavaScript `console.*` method when debugging is enabled. Most `console` arguments or objects are supported using `_satellite.logger`:
 
-| Method | Corresponding `console` level | Recommended uses |
+| Method | Forwards to | Recommended uses |
 |---|---|---|
 | `_satellite.logger.debug()` | `console.debug()` | Verbose diagnostics; some browsers might require verbose logging to see it. |
 | `_satellite.logger.log()` | `console.log()` | General messages. |
 | `_satellite.logger.info()` | `console.info()` | High-level informational events. |
 | `_satellite.logger.warn()` | `console.warn()` | Recoverable issues. The console entry is highlighted yellow. |
-| `_satellite.logger.error()` | `console.error()` | Failures. The console entry is highlighted red. |
+| `_satellite.logger.error()` | `console.error()` | Failures. The console entry is highlighted red. Adobe recommends using `error` objects for stacks. |
 
 ```js
 // First enable debugging mode
@@ -64,4 +64,4 @@ The library appends the following in all console output messages:
 
 >[!NOTE]
 >
->Browser formatting tokens like `%c` are not applied due to the logger applying the `🚀 [Origin]` prefix.
+>Browser formatting tokens like `%c`, `%s`, and `%d` are not applied due to the logger applying the `🚀 [Origin]` prefix.
