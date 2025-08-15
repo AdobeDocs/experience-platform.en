@@ -192,6 +192,8 @@ A successful response returns the details of the schema. The fields that are ret
 
 The schema composition process begins by assigning a class. The class defines key behavioral aspects of the data (record or time series), as well as the minimum fields that are required to describe the data that will be ingested.
 
+For instructions on creating a schema without classes or field groups (model-based schema), see [Create a model-based schema](#create-a-model-based-schema).
+
 >[!NOTE]
 >
 >The example call below is only a baseline example of how to create a schema in the API, with the minimal composition requirements of a class and no field groups. For complete steps on how to create a schema in the API, including how to assign fields using field groups and data types, see the [schema creation tutorial](../tutorials/create-schema-api.md).
@@ -273,8 +275,6 @@ Performing a GET request to [list all schemas](#list) in the tenant container wo
 
 To add additional fields to a schema, you can perform a [PATCH operation](#patch) to add field groups to the schema's `allOf` and `meta:extends` arrays.
 
-<!-- ... -->
-
 ## Create a model-based schema
 
 Create a model-based schema by making a POST request to the `/schemas` endpoint. Model-based schemas store structured, relational-style data **without** classes or field groups. Define fields directly on the schema, and identify the schema as model-based using a logical behavior tag.
@@ -285,10 +285,10 @@ Create a model-based schema by making a POST request to the `/schemas` endpoint.
 
 Create the schema first with `POST /tenant/schemas`. Then add the required descriptors with the [Descriptors API (`POST /tenant/descriptors`)](../api/descriptors.md):
 
-- [Primary key descriptor](../api/descriptors.md#primary-key-descriptor) - Primary-key fields are **required** and must be **root-level**. 
-- [Version descriptor](../api/descriptors.md#version-descriptor) — **required** when a primary key exists. 
-- [Relationship descriptor](../api/descriptors.md#relationship-descriptor) — optional, defines joins; cardinality not enforced at ingestion. 
-- [Timestamp descriptor](../api/descriptors.md#timestamp-descriptor) - For time-series schemas, the primary key must be a **composite** key that includes the timestamp field.
+- [Primary key descriptor](../api/descriptors.md#primary-key-descriptor): Primary-key fields are **required** and must be **root-level**. 
+- [Version descriptor](../api/descriptors.md#version-descriptor): **Required** when a primary key exists. 
+- [Relationship descriptor](../api/descriptors.md#relationship-descriptor): Optional, defines joins; cardinality not enforced at ingestion. 
+- [Timestamp descriptor](../api/descriptors.md#timestamp-descriptor): For time-series schemas, the primary key must be a **composite** key that includes the timestamp field.
 
 >[!AVAILABILITY]
 >
@@ -453,8 +453,6 @@ You can add new root-level fields (within the root definition or root `propertie
 >[!CAUTION]
 >
 >Schema evolution is **append-only**. Plan field names and types carefully before publishing. Once in use, fields cannot be deleted or modified.
-
-<!-- ... -->
 
 ## Update a schema {#put}
 
