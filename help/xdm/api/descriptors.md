@@ -374,7 +374,7 @@ Relationship descriptors describe a relationship between two schemas. Use them t
 - `xdm:descriptorOneToOne` — legacy/standard 1:1 relationship.
 - `xdm:descriptorRelationship` — general pattern for new work and model-based schemas (supports cardinality, naming, and non‑PK targets).
 
-##### Legacy one-to-one relationship (standard pattern)
+##### One-to-one relationship (standard schemas)
 
 Use this when maintaining existing standard-schema integrations that already rely on `xdm:descriptorOneToOne`.
 
@@ -390,7 +390,7 @@ Use this when maintaining existing standard-schema integrations that already rel
 }
 ```
 
-##### General relationship (model-based and new work)
+##### General relationship (model-based and recommended for new projects)
 
 Use this descriptor for all new implementations and for model-based (adhoc-v2) schemas. It allows you to define the relationship's cardinality (such as one-to-one or many-to-one), specify relationship names, and link to a destination field that is not the primary key (non-PK).
 
