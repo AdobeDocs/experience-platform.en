@@ -39,7 +39,7 @@ You can connect your [!DNL Azure Blob Storage] account to Experience Platform us
 * **Account key authentication**: Uses the storage account's access key to authenticate and connect to your [!DNL Azure Blob Storage] account.
 * **Shared access signature (SAS)**: Uses a SAS URI to provide delegated, time-limited access to resources in your [!DNL Azure Blob Storage] account.
 * **Service principal based authentication**: Uses an Azure Active Directory (AAD) service principal (client ID and secret) to securely authenticate to your Azure Blob Storage account.
-* 
+  
 **API format**
 
 ```https
@@ -51,6 +51,8 @@ To create a base connection ID, make a POST request to the `/connections` endpoi
 >[!BEGINTABS]
 
 >[!TAB Account key authentication]
+
+To use account key authentication, provide values for your `connectionString`, `container`, and `folderPath`.
 
 ```shell
 curl -X POST \
@@ -78,7 +80,16 @@ curl -X POST \
   }'
 ```
 
+| Parameter | Description |
+| --- | --- |
+| `connectionString` | The connection string for your [!DNL Azure Blob Storage] account. The connection string pattern is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY};EndpointSuffix=core.windows.net`. |
+| `container` | The name of the [!DNL Azure Blob Storage] container where your data files are stored. |
+| `folderPath` | The path within the specified container where your files are located. |
+| `connectionSpec.id` | The connection spec ID of the [!DNL Azure Blob Storage] source. This ID is fixed as: `4c10e202-c428-4796-9208-5f1f5732b1cf`. |
+
 >[!TAB Shared access signature]
+
+To use shared access signature, provide values for your `sasUri`, `container`, and `folderPath`.
 
 ```shell
 curl -X POST \
@@ -106,7 +117,16 @@ curl -X POST \
   }'
 ```
 
+| Parameter | Description |
+| --- | --- |
+| `sasUri` | The shared access signature URI that you can use as an alternative authentication type to connect your account. The SAS URI pattern is: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv={STORAGE_VERSION}&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}`. |
+| `container` | The name of the [!DNL Azure Blob Storage] container where your data files are stored. |
+| `folderPath` | The path within the specified container where your files are located. |
+| `connectionSpec.id` | The connection spec ID of the [!DNL Azure Blob Storage] source. This ID is fixed as: `4c10e202-c428-4796-9208-5f1f5732b1cf`. |
+
 >[!TAB Service principal based authentication]
+
+To connect via service principal based authentication, provide values for your: `serviceEndpoint`, `servicePrincipalId`, `servicePrincipalKey`, `accountKind`, `tenant`, `container`, and `folderPath`.
 
 ```shell
 curl -X POST \
@@ -138,7 +158,18 @@ curl -X POST \
   }'
 ```
 
-+++Response
+| Parameter | Description |
+| --- | --- |
+| `serviceEndpoint` | The endpoint URL of your [!DNL Azure Blob Storage] account. Typically in the format: `https://{ACCOUNT_NAME}.blob.core.windows.net`. |
+| `servicePrincipalId` | The client/application ID of the Azure Active Directory (AAD) service principal used for authentication. |
+| `servicePrincipalKey` | The client secret or password associated with the Azure service principal. |
+| `accountKind` | The type of your [!DNL Azure Blob Storage] account. Common values include `StorageV2`, `BlobStorage`, or `Storage`. |
+| `tenant` | The Azure Active Directory (AAD) tenant ID where the service principal is registered. |
+| `container` | The name of the [!DNL Azure Blob Storage] container where your data files are stored. |
+| `folderPath` | The path within the specified container where your files are located. |
+| `connectionSpec.id` | The connection spec ID of the [!DNL Azure Blob Storage] source. This ID is fixed as: `4c10e202-c428-4796-9208-5f1f5732b1cf`. |
+
+>[!ENDTABS]
 
 A successful response returns details of the newly created base connection, including its unique identifier (`id`). This ID is required in the next step to create a source connection.
 
@@ -149,9 +180,7 @@ A successful response returns details of the newly created base connection, incl
 }
 ```
 
-+++
 
->[!ENDTABS]
 
 ## Next steps
 
