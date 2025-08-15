@@ -466,7 +466,7 @@ Follow these requirements and recommendations when defining a general relationsh
 - For model-based schemas, place the source field (foreign key) at the root level. This is a current technical limitation for ingestion, not just a best-practice recommendation.
 - If `xdm:destinationProperty` is absent, the destination's primary key is assumed.
 - Ensure that data types are compatible by group (numeric, date, boolean, string).
-- Remember that cardinality is informational; storage does not enforce it.
+- Remember that cardinality is informational; storage does not enforce it. Specify cardinality in `<source>:<destination>` format. Accepted values are: `1:1`, `1:0`, `M:1`, or `M:0`.
 - For interoperability, add `xdm:descriptorIdentity` to the destination and `xdm:descriptorReferenceIdentity` to the source when the destination uses an identity or primary identity. This ensures that namespaces align.
 
 #### Primary Key descriptor {#primary-key-descriptor}
@@ -485,7 +485,8 @@ The **Primary Key** descriptor (`xdm:descriptorPrimaryKey`) enforces uniqueness 
 | -------------------- | ----------------------------------------------------------------------------- |
 | `@type`              | Must be `xdm:descriptorPrimaryKey`.                                           |
 | `xdm:sourceSchema`   | `$id` URI of the schema.                                                      |
-| `xdm:sourceProperty` | JSON Pointer(s) to the primary key field(s). Use an array for composite keys. |
+| `xdm:sourceProperty` | JSON Pointer(s) to the primary key field(s). Use an array for composite keys. For time-series schemas, the composite key must include the timestamp field to ensure uniqueness across event records. |
+
 
 #### Version descriptor {#version-descriptor}
 
@@ -558,7 +559,7 @@ The Real-Time CDP B2B Edition introduces an alternative way to define relationsh
 | `xdm:cardinality` | The joining relationship between the schemas. This value should be set to `M:1`, referring to a many-to-one relationship. |
 
 {style="table-layout:auto"}
-<!-- ... -->
+
 #### Reference identity descriptor
 
 Reference identity descriptors provide a reference context to the primary identity of a schema field, allowing it to be referenced by fields in other schemas. The reference schema must already have a primary identity field defined before it can be referred to by other schemas through this descriptor.
