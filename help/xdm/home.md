@@ -122,33 +122,37 @@ To begin ingesting data into Experience Platform, you can use Catalog Service to
 
 See the [Catalog Service overview](../catalog/home.md) for more information. See the [Data Ingestion overview](../ingestion/home.md) for more information on Adobe Experience Platform Data Ingestion.
 
-schemas enable structured, relational-style data support with primary key enforcement and schema relationships. Select the **[!UICONTROL Model-Based]** option when you need to:
+### Model-based schemas
 
-- Support primary key enforcement and version tracking
-- Create relationships between schemas via primary and foreign keys
-- Ingest data using Sources with change data capture (CDC)
-- Support multiple data models for Campaign Orchestration, Data Distiller, or B2B use cases
+Model-based schemas are a schema type designed for structured, relational-style data patterns. They enforce primary keys, support version descriptors, and define schema-to-schema relationships using primary and foreign keys. Unlike standard XDM schemas, they do not require classes or field groups and are optimized for ingestion through change data capture (CDC) workflows.
 
-#### Creating a model-based schema
+Use a model-based schema when you need to:
 
-1. In the **[!UICONTROL Create a schema]** dialog, select **[!UICONTROL Model-Based]** from the available options.
+* Enforce primary keys and track record versions.
+* Create relationships between schemas with primary and foreign keys.
+* Ingest data through CDC-enabled sources.
+* Support multi-model use cases such as cross-channel campaign orchestration, advanced analytics with Data Distiller, or business-to-business relationship modeling.
 
-2. Choose your base class (**[!UICONTROL Record]** or **[!UICONTROL Time-series]**) depending on your data type.
+>[!NOTE]
+>
+>Model-based schemas are available with appropriate Experience Platform entitlements and feature enablement.
 
-3. In the schema editor, add the required fields for model-based schemas:
-   - **Primary key field**: Add a field and mark it as the primary key using the **[!UICONTROL Primary Key]** checkbox in field properties
-   - **Version descriptor field**: Add a field and mark it as the version descriptor using the **[!UICONTROL Version Descriptor]** checkbox
-   - **Timestamp descriptor field**: Required only for time-series schemas - add a timestamp field and mark it as the timestamp descriptor
+#### Create a model-based schema
 
-4. Configure additional fields and field groups as needed for your data model.
-
-5. To create relationships with other model-based schemas, use the **[!UICONTROL Add Relationship]** option to define primary and foreign key connections.
+1. In the **[!UICONTROL Create a schema]** dialog, select **[!UICONTROL Model-Based]**.
+2. Select a base class: **[!UICONTROL Record]** or **[!UICONTROL Time-series]**.
+3. In the schema editor, add the required fields:
+   * Primary key field: Add a field and mark it as the primary key in field properties.
+   * Version descriptor field: Add a field and mark it as the version descriptor.
+   * Timestamp descriptor field: For time-series schemas only, add a timestamp field and mark it as the timestamp descriptor.
+4. Add any additional fields required for your data model.
+5. To define relationships, select **[!UICONTROL Add Relationship]** and specify primary and foreign key connections.
 
 >[!NOTE]
 >
 >Control columns used during ingestion (such as `_change_request_type` for CDC workflows) are read at ingestion time and are not stored in the schema or mapped to XDM fields.
 
-For comprehensive information on model-based schema concepts, see [Model-Based Schema overview](../../schema/model-based.md). For CDC configuration with Sources, see [Enable change data capture](../../../sources/tutorials/api/change-data-capture.md).
+For more information, see the [model-based schema overview](../../schema/model-based.md) and the [guide to enable change data capture](../../../sources/tutorials/api/change-data-capture.md).
 
 ### Query Service {#query-service}
 
