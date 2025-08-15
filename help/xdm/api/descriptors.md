@@ -7,11 +7,11 @@ exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
 ---
 # Descriptors endpoint
 
-Schemas define a static view of data entities, but do not provide specific details on how data based on these schemas (datasets, for example) may relate to one another. Adobe Experience Platform allows you to describe these relationships and other interpretive metadata about a schema using descriptors. 
+Schemas define the structure of data entities, but not how datasets created from these schemas relate to each other. In [!DNL Adobe Experience Platform], you can use descriptors to describe these relationships and add interpretive metadata to a schema. 
 
 Schema descriptors are tenant-level metadata, meaning they are unique to your organization and all descriptor operations take place in the tenant container. 
 
-Each schema can have one or more schema descriptor entities applied to it. Each schema descriptor entity includes a descriptor `@type` and the `sourceSchema` to which it applies. Once applied, these descriptors will apply to all datasets created using the schema.
+A schema can have one or more descriptor entities. Each descriptor specifies a `@type` and the `sourceSchema` it applies to, and automatically applies to all datasets created from that schema.
 
 The `/descriptors` endpoint in the [!DNL Schema Registry] API allows you to programmatically manage descriptors within your experience application.
 
@@ -19,7 +19,7 @@ The `/descriptors` endpoint in the [!DNL Schema Registry] API allows you to prog
 
 The endpoint used in this guide is part of the [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
-In addition to standard descriptors, the [!DNL Schema Registry] also supports descriptor types used by model-based schemas, including **Primary Key**, **Version**, and **Timestamp** descriptors. These allow you to enforce uniqueness, control versioning, and define time-series fields at the schema level. If you are unfamiliar with model-based schemas, see the [model-based schemas overview](./model-based.md) before proceeding.
+In addition to standard descriptors, the [!DNL Schema Registry] supports descriptor types for model-based schemas, such as **Primary Key**, **Version**, and **Timestamp**. These enforce uniqueness, control versioning, and define time-series fields at the schema level. If you are unfamiliar with model-based schemas, review the [model-based schemas overview](./model-based.md) before continuing.
 
 See the [Appendix](#defining-descriptors) for details on all descriptor types.
 
@@ -84,7 +84,7 @@ When using the `link` `Accept` header, each descriptor is shown as an array item
 
 ## Look up a descriptor {#lookup}
 
-If you wish to view the details of a specific descriptor, you can look up (GET) an individual descriptor using its `@id`.
+To view the details of a specific descriptor, send a GET request using its `@id`.
 
 **API format**
 
@@ -369,10 +369,12 @@ Friendly name descriptors allow a user to modify the `title`, `description`, and
 
 #### Relationship descriptor {#relationship-descriptor}
 
-Relationship descriptors describe a relationship between two schemas. Use them to declare how a source field (foreign key) relates to a destination field (primary key or candidate key). The API supports two patterns:
+Relationship descriptors describe a relationship between two different schemas, keyed on the properties described in `xdm:sourceProperty` and `xdm:destinationProperty`. See the tutorial on [defining a relationship between two schemas](../tutorials/relationship-api.md) for more information. 
 
-- `xdm:descriptorOneToOne` — legacy/standard 1:1 relationship.
-- `xdm:descriptorRelationship` — general pattern for new work and model-based schemas (supports cardinality, naming, and non‑PK targets).
+Use these properties to declare how a source field (foreign key) relates to a destination field (primary key or candidate key). The API supports two patterns:
+
+- `xdm:descriptorOneToOne`: standard 1:1 relationship.
+- `xdm:descriptorRelationship`: general pattern for new work and model-based schemas (supports cardinality, naming, and non-primary key targets).
 
 ##### One-to-one relationship (standard schemas)
 
