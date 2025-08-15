@@ -10,9 +10,9 @@ The `_satellite._container` object contains the full configuration and runtime c
 readonly _satellite._container: {
   buildInfo: BuildInfo;
   company: Company;
-  dataElements: Record<string, DataElement>;
+  dataElements: { [name: string]: DataElement };
   environment: Environment;
-  extensions: Record<string, Extension>;
+  extensions: { [name: string]: Extension };
   property: Property;
   rules: Rule[];
 }
@@ -171,13 +171,13 @@ readonly _satellite._container.property: {
 The `rules` object array provides a reference of all rules within your tag property.
 
 ```ts
-readonly _satellite._container.rules: [{
+readonly _satellite._container.rules: {
   id: string;
   name: string;
   events: Event[]; // Rule-specific events
   conditions: Condition[]; // Rule-specific conditions
   actions: Action[]; // Rule-specific actions
-}]
+}[]
 ```
 
 Each rule contains the following fields:

@@ -4,90 +4,78 @@ description: Add event listeners to debug your tag implementation.
 ---
 # `_monitors`
 
-The `_satellite._monitors` object allows you to create event listeners and execute custom code when the library detects a rule triggering. Its primary use is to assist with debugging your implementation so that you can focus on if certain rules trigger correctly.
+The `_satellite._monitors` object allows you to create event listeners and execute custom code when the library detects a triggered rule. Its primary use is to assist with debugging your implementation to ensure that rules trigger correctly.
 
 >[!IMPORTANT]
 >
 >This object is for debugging purposes only. Do not tie production logic to this object. The availability of properties or names within this object can be changed by Adobe at any time.
 
-```js
-_satellite._monitors
+```ts
+_satellite._monitors?: {
+  ruleTriggered(event: { rule: Rule }): void;
+  ruleCompleted(event: { rule: Rule }): void;
+  ruleConditionFailed(event: { rule: Rule; condition: Condition }): void;
+}[];
 ```
 
+You can listen for the following event types:
 
+## `ruleTriggered`
 
+This callback function fires when an event triggers a rule before the rule's conditions and actions have been processed. If this function triggers, either `ruleCompleted` or `ruleConditionFailed` triggers shortly after (mutually exclusive).
 
-On your web page running a tag library, add a snippet of code to your HTML. Typically, the code is inserted into the `<head>` element before the `<script>` element that loads the tag library. This allows the monitor to catch the earliest system events that occur in the tag library. For example:
+## `ruleCompleted`
+
+The `ruleCompleted` callback function fires after `ruleTriggered` when the rule's condition criteria succeeds and all the rule's actions are executed.
+
+## `ruleConditionFailed`
+
+The `ruleConditionFailed` callback function fires after `ruleTriggered` when at least one of the rule's conditions fail.
+
+## `Rule` object
+
+Each callback function exposes a `Rule` object that provides information about the rule itself.
+
+```ts
+type Rule = {
+  id: string;
+  name: string;
+  events: Event[]; // Rule-specific events
+  conditions: Condition[]; // Rule-specific conditions
+  actions: Action[]; // Rule-specific actions
+}
+```
+
+| Name | Type | Description |
+|---|---|---|
+| **`id`** | `string` | The unique identifier for the rule. |
+| **`name`** | `string` | The friendly name of the rule. |
+| **`events`** | `Event[]` | An array of events that you have configured to trigger the rule. |
+| **`conditions`** | `Condition[]` | An array of conditions that you have configured to trigger the rule. |
+| **`actions`** | `Action[]` | An array of actions that you have configured to execute when the rule is triggered. |
+
+## Example
+
+Add the following snippet of code to your HTML in the `<head>` tag before calling your tag library loader:
 
 ```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-  <script>
-    window._satellite = window._satellite || {};
-    window._satellite._monitors = window._satellite._monitors || [];
-    window._satellite._monitors.push({
-      ruleTriggered: function (event) {
-        console.log(
-          'rule triggered',
-          event.rule
-        );
-      },
-      ruleCompleted: function (event) {
-        console.log(
-          'rule completed',
-          event.rule
-        );
-      },
-      ruleConditionFailed: function (event) {
-        console.log(
-          'rule condition failed',
-          event.rule,
-          event.condition
-        );
-      }
-    });
-  </script>
-  <script src="//assets.adobedtm.com/launch-EN5bfa516febde4b22b3e7c6f96f6b439f.min.js"
-          async></script>
-</head>
-<body>
-  <h1>Click me!</h1>
-</body>
-</html>
+<script>
+  window._satellite ??= {};
+  window._satellite._monitors ??= [];
+  window._satellite._monitors.push({
+    ruleTriggered(event) { console.log('Rule triggered', event.rule);},
+    ruleCompleted(event) { console.log('Rule completed', event.rule);},
+    ruleConditionFailed(event) { console.log('Rule condition failed', event.rule, event.condition);}
+  });
+</script>
+<script src="https://assets.adobedtm.com/.../launch-EN...js" async></script>
 ```
 
-In the first script element, because the tag library has not been loaded yet, the initial `_satellite` object is created and an array on `_satellite._monitors` is initialized. The script then adds a monitor object to that array. The monitor object can specify the following methods which will later be called by the tag library:
+Since the tag library is not yet loaded at this point on the page, the initial `_satellite` object is created and an array on `_satellite._monitors` is initialized. The script then adds a monitor object to that array. 
 
-### `ruleTriggered`
+Consider the following tips when using monitors:
 
-This function is called after an event triggers a rule but before the rule's conditions and actions have been processed. The event object passed to `ruleTriggered` contains information about the rule that was triggered.
-
-### `ruleCompleted`
-
-This function is called after a rule has been fully processed. In other words, the event has occurred, all conditions have passed, and all actions have been executed. The event object passed to `ruleCompleted` contains information about the rule that was completed.
-
-### `ruleConditionFailed`
-
-This function is called after a rule has been triggered and one of its conditions has failed. The event object passed to `ruleConditionFailed` contains information about the rule that was triggered and the condition that failed.
-
-If `ruleTriggered` is called, either `ruleCompleted` or `ruleConditionFailed` will be called shortly thereafter.
-
->[!NOTE]
->
->A monitor doesn't have to specify all three methods (`ruleTriggered`, `ruleCompleted`, and `ruleConditionFailed`). Tags in Adobe Experience Platform work with whatever supported methods have been provided by the monitor.
-
-### Testing the Monitor
-
-The example above specifies all three methods in the monitor. When they're called, the monitor logs out relevant information. To test this, set up two rules in the tag library:
-
-1. A rule that has a click event and a browser condition that passes only if the browser is [!DNL Chrome].
-1. A rule that has a click event and a browser condition that passes only if the browser is [!DNL Firefox].
-
-If you open the page in [!DNL Chrome], open the browser console, and select the page, the following appears in the console:
-
-![](../../images/debug.png)
-
-Additional hooks or additional information might be added to these handlers as needed.
+* Note that these debug messages use `console.log` instead of [`_satellite.logger`](logger.md) because the hooks are created before the tag library loads.
+* While the code example includes all three callback functions, they are not required fields. You can include only the desired hooks when debugging rules on your site.
+* Multiple monitors are allowed, even for the same events. If you use multiple monitors for a single event, call order is not guaranteed.
+* Make sure that you create `_monitors` _before_ loading the tag library. If you create these hooks after the library is loaded, only the rules that trigger from that point forward are caught.
