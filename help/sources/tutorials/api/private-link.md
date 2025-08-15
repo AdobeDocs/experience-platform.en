@@ -893,6 +893,10 @@ curl -X POST \
   }'
 ```
 
++++
+
 ### Approve a private endpoint for [!DNL Azure Blob] and [!DNL Azure Data Lake Gen2]
 
 To approve a private endpoint request for the [!DNL Azure Blob] and [!DNL Azure Data Lake Gen2] sources, log in to the [!DNL Azure Portal]. In the left navigation, select **[!DNL Data storage]**, then go to the **[!DNL Security + networking]** tab and choose **[!DNL Networking]**. Next, select **[!DNL Private endpoints]** to see a list of private endpoints associated with your account and their current connection states. To approve a pending request, select the desired endpoint and click **[!DNL Approve]**.
+
+![The Azure portal with a list of pending private endpoints.](../../images/tutorials/private-links/azure.png)
