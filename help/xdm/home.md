@@ -124,35 +124,27 @@ See the [Catalog Service overview](../catalog/home.md) for more information. See
 
 ### Model-based schemas
 
-Model-based schemas are a schema type designed for structured, relational-style data patterns. They enforce primary keys, support version descriptors, and define schema-to-schema relationships using primary and foreign keys. Unlike standard XDM schemas, they do not require classes or field groups and are optimized for ingestion through change data capture (CDC) workflows.
+Model-based schemas are designed for structured, relational-style data patterns. They enforce primary keys, support version descriptors, and define schema-to-schema relationships using primary and foreign keys. Unlike standard XDM schemas, they do not require classes or field groups and are optimized for ingestion through change data capture (CDC) workflows.
 
 Use a model-based schema when you need to:
 
 * Enforce primary keys and track record versions.
 * Create relationships between schemas with primary and foreign keys.
 * Ingest data through CDC-enabled sources.
-* Support multi-model use cases such as cross-channel campaign orchestration, advanced analytics with Data Distiller, or business-to-business relationship modeling.
+* Support use cases such as cross-channel campaign orchestration, advanced analytics with Data Distiller, or business-to-business relationship modeling.
+
+To create a model-based schema, select **[!UICONTROL Model-Based]** when creating a schema, choose the appropriate base class (**[!UICONTROL Record]** or **[!UICONTROL Time-series]**), and add the required primary key, version descriptor, and—if applicable—timestamp descriptor fields. You can then configure additional fields and define relationships with other schemas.  
 
 >[!NOTE]
 >
->Model-based schemas are available with appropriate Experience Platform entitlements and feature enablement.
+>Control columns used during ingestion (such as `_change_request_type` for CDC workflows) are read at ingestion time and are not stored in the schema or mapped to XDM fields. Model-based schemas are available with appropriate Experience Platform entitlements and feature enablement.
 
-#### Create a model-based schema
-
-1. In the **[!UICONTROL Create a schema]** dialog, select **[!UICONTROL Model-Based]**.
-2. Select a base class: **[!UICONTROL Record]** or **[!UICONTROL Time-series]**.
-3. In the schema editor, add the required fields:
-   * Primary key field: Add a field and mark it as the primary key in field properties.
-   * Version descriptor field: Add a field and mark it as the version descriptor.
-   * Timestamp descriptor field: For time-series schemas only, add a timestamp field and mark it as the timestamp descriptor.
-4. Add any additional fields required for your data model.
-5. To define relationships, select **[!UICONTROL Add Relationship]** and specify primary and foreign key connections.
-
->[!NOTE]
->
->Control columns used during ingestion (such as `_change_request_type` for CDC workflows) are read at ingestion time and are not stored in the schema or mapped to XDM fields.
-
-For more information, see the [model-based schema overview](../../schema/model-based.md) and the [guide to enable change data capture](../../../sources/tutorials/api/change-data-capture.md).
+For detailed steps, see:
+* [Model-based schema overview](./schema/model-based.md)
+* [UI tutorial](link-to-UI-guide.md)
+* [API tutorial](link-to-API-guide.md)
+* [Descriptor documentation](l./api/descriptors.md)
+* [Enable change data capture](../sources/tutorials/api/change-data-capture.md)
 
 ### Query Service {#query-service}
 
