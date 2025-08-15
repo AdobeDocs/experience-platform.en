@@ -8,7 +8,7 @@ The `_satellite.track()` method allows you to trigger a [Direct call rule](/help
 
 >[!IMPORTANT]
 >
->Adobe considers `_satellite.track()` a **legacy implementation method**. While it is still fully supported, Adobe strongly recommends using more modern implementation practices, such as the [Adobe Client Data Layer](/help/tags/extensions/client/client-data-layer/overview.md).
+>Adobe considers `_satellite.track()` a **legacy implementation method**. While it is still fully supported, Adobe strongly recommends using more modern implementation practices, such as the [Adobe Client Data Layer](/help/tags/extensions/client/client-data-layer/overview.md), which is the recommended approach for new implementations.
 >
 >If you opt to use `_satellite.track()` on your site, removing the tag property in the future causes all references to the `_satellite` object to throw errors. Your site is tightly coupled to the presence of Adobe tags.
 
@@ -16,7 +16,7 @@ The `_satellite.track()` method allows you to trigger a [Direct call rule](/help
 _satellite.track(identifier: string, detail?: unknown ): void;
 ```
 
-When you call `_satellite.track()` using the identifier configured in the tags UI, that rule is immediately triggered. Calling this method only acts as the rule event; the rule's conditions still apply before executing the rule's actions. Multiple direct call rules can use the same identifier, allowing you to trigger all of those rules at once using a single `_satellite.track()` call.
+When you call `_satellite.track()` using the identifier configured in the tags UI, that rule is immediately triggered. Calling this method only acts as the rule event; the rule's conditions still apply before executing the rule's actions. Multiple direct call rules can use the same identifier, allowing you to trigger all of those rules at once using a single `_satellite.track()` call. Each triggered rule still checks its own conditions before taking action, even if multiple rules share the same identifier.
 
 ## Available fields
 
