@@ -392,9 +392,21 @@ Use this when maintaining existing standard-schema integrations that already rel
 }
 ```
 
+The following table describes the fields required to define a one-to-one relationship descriptor.
+
+| Property | Description |
+| --- | --- |
+| `@type` | The type of descriptor being defined. For a relationship descriptor, this value must be set to `xdm:descriptorOneToOne`, unless you have access to Real-Time CDP B2B edition. With B2B edition you have the option to use `xdm:descriptorOneToOne` or [`xdm:descriptorRelationship`](#b2b-relationship-descriptor). |
+| `xdm:sourceSchema` | The `$id` URI of the schema where the descriptor is being defined. |
+| `xdm:sourceVersion` | The major version of the source schema. |
+| `xdm:sourceProperty` | Path to the field in the source schema where the relationship is being defined. Should begin with a "/" and not end with "/". Do not include "properties" in the path (for example, "/personalEmail/address" instead of "/properties/personalEmail/properties/address"). |
+| `xdm:destinationSchema` | The `$id` URI of the reference schema this descriptor is defining a relationship with. |
+| `xdm:destinationVersion` | The major version of the reference schema. |
+| `xdm:destinationProperty` | (Optional) Path to a target field within the reference schema. If this property is omitted, the target field is inferred by any fields that contain a matching reference identity descriptor (see below). |
+
 ##### General relationship (model-based and recommended for new projects)
 
-Use this descriptor for all new implementations and for model-based (adhoc-v2) schemas. It allows you to define the relationship's cardinality (such as one-to-one or many-to-one), specify relationship names, and link to a destination field that is not the primary key (non-PK).
+Use this descriptor for all new implementations and for model-based (adhoc-v2) schemas. It allows you to define the relationship's cardinality (such as one-to-one or many-to-one), specify relationship names, and link to a destination field that is not the primary key (non-primary key).
 
 The following examples show how to define a general relationship descriptor.
 
@@ -415,7 +427,7 @@ This minimal example includes only the required fields to define a many-to-one r
 
 **Example with all optional fields:**
 
-This example includes all optional fields, such as relationship names, display titles, and an explicit non-PK destination field.
+This example includes all optional fields, such as relationship names, display titles, and an explicit non-primary key destination field.
 
 ```json
 {
@@ -447,7 +459,7 @@ Use the following guidelines to decide which relationship descriptor to apply:
 
 >[!NOTE]
 >
->For existing `xdm:descriptorOneToOne` descriptors in standard schemas, continue using them unless you require features such as non-PK destination targets, naming, or expanded cardinality options.
+>For existing `xdm:descriptorOneToOne` descriptors in standard schemas, continue using them unless you need features such as non-primary key destination targets, custom naming, or expanded cardinality options.
 
 
 ##### Capabilities comparison
@@ -457,7 +469,7 @@ The following table compares the capabilities of the two descriptor types:
 | Capability         | `xdm:descriptorOneToOne` | `xdm:descriptorRelationship`                                             |
 | ------------------ | ------------------------ | ------------------------------------------------------------------------ |
 | Cardinality        | 1:1                      | 1:1, 1:0, M:1, M:0 (informational)                                       |
-| Destination target | Identity/explicit field  | Primary key by default, or non-PK via `xdm:destinationProperty`          |
+| Destination target | Identity/explicit field  | Primary key by default, or non-primary key via `xdm:destinationProperty`          |
 | Naming fields      | Not supported            | `xdm:sourceToDestinationName`, `xdm:destinationToSourceName`, and titles |
 | Model-based fit    | Limited                  | Primary pattern for model-based schemas                                  |
 
