@@ -19,7 +19,8 @@ The `/descriptors` endpoint in the [!DNL Schema Registry] API allows you to prog
 
 The endpoint used in this guide is part of the [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
-In addition to standard descriptors, the [!DNL Schema Registry] also supports additional descriptor types used by [model-based schemas](./model-based.md), including **Primary Key**, **Version**, and **Timestamp** descriptors. These allow you to enforce uniqueness, control versioning, and define time-series fields at the schema level.  
+In addition to standard descriptors, the [!DNL Schema Registry] also supports descriptor types used by model-based schemas, including **Primary Key**, **Version**, and **Timestamp** descriptors. These allow you to enforce uniqueness, control versioning, and define time-series fields at the schema level. If you are unfamiliar with model-based schemas, see the [model-based schemas overview](./model-based.md) before proceeding.
+
 See the [Appendix](#defining-descriptors) for details on all descriptor types.
 
 ## Retrieve a list of descriptors {#list}
@@ -365,7 +366,6 @@ Friendly name descriptors allow a user to modify the `title`, `description`, and
 | `meta:excludeMetaEnum` | If the field indicated by `xdm:sourceProperty` is a string field that has existing suggested values provided under a `meta:enum` field, you can include this object in a friendly name descriptor to exclude some or all of these values from segmentation. The key and value for each entry must match those included in the original `meta:enum` of the field in order for the entry to be excluded.  |
 
 {style="table-layout:auto"}
-<!-- ... -->
 
 #### Relationship descriptor {#relationship-descriptor}
 
@@ -463,7 +463,7 @@ The following table compares the capabilities of the two descriptor types:
 
 Follow these requirements and recommendations when defining a general relationship descriptor:
 
-- Place the source field (foreign key) at the root level in model-based schemas.
+- For model-based schemas, place the source field (foreign key) at the root level. This is a current technical limitation for ingestion, not just a best-practice recommendation.
 - If `xdm:destinationProperty` is absent, the destination's primary key is assumed.
 - Ensure that data types are compatible by group (numeric, date, boolean, string).
 - Remember that cardinality is informational; storage does not enforce it.
@@ -551,7 +551,7 @@ The Real-Time CDP B2B Edition introduces an alternative way to define relationsh
 | `xdm:sourceProperty` | Path to the field in the source schema where the relationship is being defined. Should begin with a "/" and not end with "/". Do not include "properties" in the path (for example, "/personalEmail/address" instead of "/properties/personalEmail/properties/address"). |
 | `xdm:destinationSchema` | The `$id` URI of the reference schema this descriptor is defining a relationship with. |
 | `xdm:destinationVersion` | The major version of the reference schema. |
-| `xdm:destinationProperty` | (Optional) Path to a target field within the reference schema, which must be the schema's primary ID. If this property is omitted, the target field is inferred by any fields that contain a matching reference identity descriptor (see below). |
+| `xdm:destinationProperty` | (Optional) Path to a target field within the reference schema. This must resolve to the schema's primary ID or to a field that has a matching reference identity descriptor. If omitted, the target field is inferred by any fields that contain a matching reference identity descriptor (see below). |
 | `xdm:destinationNamespace` | The namespace of the primary ID from the reference schema. |
 | `xdm:destinationToSourceTitle` | The display name of the relationship from the reference schema to the source schema. |
 | `xdm:sourceToDestinationTitle` | The display name of the relationship from the source schema to the reference schema. |
