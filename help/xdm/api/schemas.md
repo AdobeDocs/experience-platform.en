@@ -275,7 +275,7 @@ Performing a GET request to [list all schemas](#list) in the tenant container wo
 
 To add additional fields to a schema, you can perform a [PATCH operation](#patch) to add field groups to the schema's `allOf` and `meta:extends` arrays.
 
-## Create a model-based schema
+## Create a model-based schema {#create-model-based-schema}
 
 Create a model-based schema by making a POST request to the `/schemas` endpoint. Model-based schemas store structured, relational-style data **without** classes or field groups. Define fields directly on the schema, and identify the schema as model-based using a logical behavior tag.
 
