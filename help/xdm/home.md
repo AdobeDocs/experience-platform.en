@@ -89,8 +89,6 @@ See the [[!UICONTROL XDM ExperienceEvent] reference guide](./classes/experiencee
 
 Experience Platform is schema-agnostic, meaning that any schema that conforms to the XDM standard is made available to Experience Platform services. The ways in which different Experience Platform services use schemas are outlined in more detail below.
 
-<!-- TODO: PLAT-240919 Add Model-Based Schema overview integration
-
 ### Model-based schemas
 
 In addition to standard XDM schemas, Experience Platform supports model-based schemas that enable structured, relational-style data patterns. Model-based schemas provide primary key enforcement, version descriptors, and support for relationships between schemas through primary and foreign key mappings.
@@ -113,11 +111,18 @@ Key differences from standard XDM schemas:
 >Model-based schemas are available with appropriate Experience Platform entitlements and feature enablement.
 
 For detailed information on creating and using model-based schemas, see [Model-Based Schema overview](./schema/model-based.md).
--->
-<!-- Update suggestions provided by Cursor:
+
 ### Catalog Service, Data Ingestion, and data lake {#ingestion-catalog-and-storage}
 
-Catalog Service is the system of record for Experience Platform assets and their related schemas.schemas enable structured, relational-style data support with primary key enforcement and schema relationships. Select the **[!UICONTROL Model-Based]** option when you need to:
+Catalog Service is the system of record for Experience Platform assets and their related schemas. Catalog does not contain the actual data files or directories, but rather it holds the metadata and descriptions of those files and directories.
+
+Catalog data is stored in the data lake, a highly granular data store containing all data managed by Experience Platform, regardless of origin or file format. 
+
+To begin ingesting data into Experience Platform, you can use Catalog Service to create a dataset. The dataset references an XDM schema that describes the structure of the data to be ingested. If a dataset is created without a schema, Experience Platform derives an "observed schema" by inspecting the type and content of ingested data fields. Datasets are then tracked in the Catalog Service and stored in the data lake alongside the schemas and observed schemas on which they are based. 
+
+See the [Catalog Service overview](../catalog/home.md) for more information. See the [Data Ingestion overview](../ingestion/home.md) for more information on Adobe Experience Platform Data Ingestion.
+
+schemas enable structured, relational-style data support with primary key enforcement and schema relationships. Select the **[!UICONTROL Model-Based]** option when you need to:
 
 - Support primary key enforcement and version tracking
 - Create relationships between schemas via primary and foreign keys
@@ -144,17 +149,6 @@ Catalog Service is the system of record for Experience Platform assets and their
 >Control columns used during ingestion (such as `_change_request_type` for CDC workflows) are read at ingestion time and are not stored in the schema or mapped to XDM fields.
 
 For comprehensive information on model-based schema concepts, see [Model-Based Schema overview](../../schema/model-based.md). For CDC configuration with Sources, see [Enable change data capture](../../../sources/tutorials/api/change-data-capture.md).
-
--->
-### Catalog Service, Data Ingestion, and data lake {#ingestion-catalog-and-storage}
-
-Catalog Service is the system of record for Experience Platform assets and their related schemas. Catalog does not contain the actual data files or directories, but rather it holds the metadata and descriptions of those files and directories.
-
-Catalog data is stored in the data lake, a highly granular data store containing all data managed by Experience Platform, regardless of origin or file format. 
-
-To begin ingesting data into Experience Platform, you can use Catalog Service to create a dataset. The dataset references an XDM schema that describes the structure of the data to be ingested. If a dataset is created without a schema, Experience Platform derives an "observed schema" by inspecting the type and content of ingested data fields. Datasets are then tracked in the Catalog Service and stored in the data lake alongside the schemas and observed schemas on which they are based. 
-
-See the [Catalog Service overview](../catalog/home.md) for more information. See the [Data Ingestion overview](../ingestion/home.md) for more information on Adobe Experience Platform Data Ingestion.
 
 ### Query Service {#query-service}
 
