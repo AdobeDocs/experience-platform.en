@@ -140,10 +140,11 @@ To create a model-based schema, select **[!UICONTROL Model-Based]** when creatin
 >Control columns used during ingestion (such as `_change_request_type` for CDC workflows) are read at ingestion time and are not stored in the schema or mapped to XDM fields. Model-based schemas are available with appropriate Experience Platform entitlements and feature enablement.
 
 For detailed steps, see:
+
 * [Model-based schema overview](./schema/model-based.md)
 * [UI tutorial](link-to-UI-guide.md)
 * [API tutorial](link-to-API-guide.md)
-* [Descriptor documentation](l./api/descriptors.md)
+* [Descriptor documentation](l./api/descriptors.md#relationship-descriptor)
 * [Enable change data capture](../sources/tutorials/api/change-data-capture.md)
 
 ### Query Service {#query-service}

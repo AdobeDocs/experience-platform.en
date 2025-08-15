@@ -281,7 +281,7 @@ A successful response returns HTTP status 204 (No Content) and a blank body.
 
 To confirm the descriptor has been deleted, you can perform a [lookup request](#lookup) against the descriptor `@id`. The response returns HTTP status 404 (Not Found) because the descriptor has been removed from the [!DNL Schema Registry].
 
-## Appendix
+## Appendix {#appendix}
 
 The following section provides additional information regarding working with descriptors in the [!DNL Schema Registry] API.
 
@@ -297,7 +297,7 @@ The following sections provide an overview of available descriptor types, includ
 >
 >You cannot label the tenant namespace object, as the system would apply that label to every custom field across that sandbox. Instead, you must specify the leaf node under that object that you need to label.
 
-#### Identity descriptor
+#### Identity descriptor {#identity-descriptor}
 
 An identity descriptor signals that the "[!UICONTROL sourceProperty]" of the "[!UICONTROL sourceSchema]" is an [!DNL Identity] field as described by [Adobe Experience Platform Identity Service](../../identity-service/home.md).
 
