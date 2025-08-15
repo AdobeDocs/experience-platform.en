@@ -389,12 +389,16 @@ Use this when maintaining existing standard-schema integrations that already rel
   "xdm:destinationProperty": "/parentField/subField"
 }
 ```
-<!-- ...  -->
+
 ##### General relationship (model-based and new work)
 
-Use this descriptor for all new implementations and for model-based (adhoc‑v2) schemas. It supports cardinality, naming, and optional non‑PK destination fields.
+Use this descriptor for all new implementations and for model-based (adhoc-v2) schemas. It allows you to define the relationship's cardinality (such as one-to-one or many-to-one), specify relationship names, and link to a destination field that is not the primary key (non-PK).
+
+The following examples show how to define a general relationship descriptor.
 
 **Minimal example:**
+
+This minimal example includes only the required fields to define a many-to-one relationship between two schemas.
 
 ```json
 {
@@ -408,6 +412,8 @@ Use this descriptor for all new implementations and for model-based (adhoc‑v2)
 ```
 
 **Example with all optional fields:**
+
+This example includes all optional fields, such as relationship names, display titles, and an explicit non-PK destination field.
 
 ```json
 {
@@ -427,34 +433,42 @@ Use this descriptor for all new implementations and for model-based (adhoc‑v2)
 
 ##### When to use which
 
-* Use `xdm:descriptorRelationship` for new work and all model-based schemas.
-* Keep `xdm:descriptorOneToOne` where it already exists and you only need a simple 1:1 mapping.
-* Migrate to `xdm:descriptorRelationship` if you need:
+Use the following guidelines to decide which relationship descriptor to apply:
 
-  * Many‑to‑one or optional cardinalities (`1:1`, `1:0`, `M:1`, `M:0`).
-  * Relationship names/titles for UI and downstream readability.
-  * A destination target that is not the primary key (candidate key).
+| Situation                       | Descriptor to use             |
+| --------------------------------------------------------------------- | ----------------------------------------- |
+| New work or model-based schemas                                       | `xdm:descriptorRelationship`              |
+| Existing 1:1 mapping in standard schemas                              | Continue using `xdm:descriptorOneToOne` unless you need features supported only by `xdm:descriptorRelationship`.     |
+| Need many-to-one or optional cardinality (`1:1`, `1:0`, `M:1`, `M:0`) | `xdm:descriptorRelationship`              |
+| Need relationship names or titles for UI/downstream readability       | `xdm:descriptorRelationship`              |
+| Need a destination target that is not the primary key (candidate key) | `xdm:descriptorRelationship`              |
+
+>[!NOTE]
+>
+>For existing `xdm:descriptorOneToOne` descriptors in standard schemas, continue using them unless you require features such as non-PK destination targets, naming, or expanded cardinality options.
+
 
 ##### Capabilities comparison
 
-| Capability         | `xdm:descriptorOneToOne` | `xdm:descriptorRelationship`                                            |
-| ------------------ | ------------------------ | ----------------------------------------------------------------------- |
-| Cardinality        | 1:1                      | 1:1, 1:0, M:1, M:0 (informational)                                      |
-| Destination target | Identity/explicit field  | Primary key by default, or non‑PK via `xdm:destinationProperty`         |
-| Naming fields      | Not supported            | `xdm:sourceToDestinationName`, `xdm:destinationToSourceName` and titles |
-| Model-based fit    | Limited                  | Primary pattern for model‑based schemas                                 |
+The following table compares the capabilities of the two descriptor types:
+
+| Capability         | `xdm:descriptorOneToOne` | `xdm:descriptorRelationship`                                             |
+| ------------------ | ------------------------ | ------------------------------------------------------------------------ |
+| Cardinality        | 1:1                      | 1:1, 1:0, M:1, M:0 (informational)                                       |
+| Destination target | Identity/explicit field  | Primary key by default, or non-PK via `xdm:destinationProperty`          |
+| Naming fields      | Not supported            | `xdm:sourceToDestinationName`, `xdm:destinationToSourceName`, and titles |
+| Model-based fit    | Limited                  | Primary pattern for model-based schemas                                  |
 
 ##### Constraints and validation
 
-* Source field (foreign key) must be at the root level in model‑based schemas.
-* If `xdm:destinationProperty` is absent, the destination's primary key is assumed.
-* Data types must be compatible by group (numeric, date, boolean, string).
-* Cardinality is informational; storage does not enforce it.
-* For interop with standard schemas:
+Follow these requirements and recommendations when defining a general relationship descriptor:
 
-  * Standard destinations often use identity/primary identity; you may need `xdm:descriptorIdentity` on the destination and `xdm:descriptorReferenceIdentity` on the source to align namespaces.
+- Place the source field (foreign key) at the root level in model-based schemas.
+- If `xdm:destinationProperty` is absent, the destination's primary key is assumed.
+- Ensure that data types are compatible by group (numeric, date, boolean, string).
+- Remember that cardinality is informational; storage does not enforce it.
+- For interoperability, add `xdm:descriptorIdentity` to the destination and `xdm:descriptorReferenceIdentity` to the source when the destination uses an identity or primary identity. This ensures that namespaces align.
 
-<!-- ... -->
 #### Primary Key descriptor {#primary-key-descriptor}
 
 The **Primary Key** descriptor (`xdm:descriptorPrimaryKey`) enforces uniqueness and non-null constraints on one or more fields in a schema.
