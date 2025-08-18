@@ -89,29 +89,6 @@ See the [[!UICONTROL XDM ExperienceEvent] reference guide](./classes/experiencee
 
 Experience Platform is schema-agnostic, meaning that any schema that conforms to the XDM standard is made available to Experience Platform services. The ways in which different Experience Platform services use schemas are outlined in more detail below.
 
-### Model-based schemas
-
-In addition to standard XDM schemas, Experience Platform supports model-based schemas that enable structured, relational-style data patterns. Model-based schemas provide primary key enforcement, version descriptors, and support for relationships between schemas through primary and foreign key mappings.
-
-Model-based schemas are designed to support multiple data models beyond standard XDM, including:
-
-- **Campaign Orchestration**: Structured campaign and customer data
-- **Data Distiller**: Advanced analytics and data processing workflows  
-- **B2B**: Business-to-business relationship data and account hierarchies
-
-Key differences from standard XDM schemas:
-
-- **Required fields**: Primary key and version descriptor fields are mandatory
-- **Relationships**: Native support for schema-to-schema relationships via primary/foreign keys
-- **Data ingestion**: Optimized for Sources with change data capture (CDC) workflows
-- **Control columns**: Support for ingestion-time control columns like `_change_request_type` that are not stored in the target schema
-
->[!NOTE]
->
->Model-based schemas are available with appropriate Experience Platform entitlements and feature enablement.
-
-For detailed information on creating and using model-based schemas, see [Model-Based Schema overview](./schema/model-based.md).
-
 ### Catalog Service, Data Ingestion, and data lake {#ingestion-catalog-and-storage}
 
 Catalog Service is the system of record for Experience Platform assets and their related schemas. Catalog does not contain the actual data files or directories, but rather it holds the metadata and descriptions of those files and directories.
@@ -142,9 +119,9 @@ To create a model-based schema, select **[!UICONTROL Model-Based]** when creatin
 For detailed steps, see:
 
 * [Model-based schema overview](./schema/model-based.md)
-* [UI tutorial](link-to-UI-guide.md)
-* [API tutorial](link-to-API-guide.md)
-* [Descriptor documentation](l./api/descriptors.md#relationship-descriptor)
+* [UI tutorial](./ui/resources/schemas.md#model-based-creation)
+* [API tutorial](./api/schemas.md#create-model-based-schema)
+* [Descriptor documentation](./api/descriptors.md#relationship-descriptor)
 * [Enable change data capture](../sources/tutorials/api/change-data-capture.md)
 
 ### Query Service {#query-service}
