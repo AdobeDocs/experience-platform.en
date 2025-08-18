@@ -12,7 +12,7 @@ Use the [!DNL Azure Blob Storage] source to connect your account and ingest data
 
 ## Prerequisites {#prerequisites}
 
-Read the following sections to complete the prerequisite setup before you connect your [!DNL MySQl] account to Experience Platform.
+Read the following sections to complete the prerequisite setup before you connect your [!DNL Azure Blob Storage] account to Experience Platform.
 
 ### IP address allowlist 
 
@@ -94,11 +94,11 @@ The documentation below provides information on how to connect Azure Blob to Ado
 
 ### Using APIs
 
-- [Create an Azure Blob base connection using the Flow Service API](../../tutorials/api/create/cloud-storage/blob.md)
+- [Connect [!DNL Azure Blob Storage] to Experience Platform](../../tutorials/api/create/cloud-storage/blob.md)
 - [Explore the data structure and contents of a cloud storage source using the Flow Service API](../../tutorials/api/explore/cloud-storage.md)
 - [Create a dataflow for a cloud storage source using the Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
 ### Using the UI
 
-- [Create an Azure Blob source connection in the UI](../../tutorials/ui/create/cloud-storage/blob.md)
+- [CConnect [!DNL Azure Blob Storage] to Experience Platform](../../tutorials/ui/create/cloud-storage/blob.md)
 - [Create a dataflow for a cloud storage connection in the UI](../../tutorials/ui/dataflow/batch/cloud-storage.md)
