@@ -328,6 +328,8 @@ For example, if you apply a 30-day expiration policy on May 15th, the following 
 
 +++Answer
 Yes, you can set different retention policies for data lake and Profile services. The retention period for the Profile store can be shorter or longer than the data lake retention period, depending on your organization's needs.
+
+Please note that you can only update the retention period for Profile Service once every 30 days.
 +++
 
 ### How can I check my current dataset usage?

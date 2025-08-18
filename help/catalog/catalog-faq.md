@@ -24,6 +24,8 @@ You can set up retention policies on datasets created using the ExperienceEvent 
 
 Yes, you can apply different retention policies for the data lake and Profile Service.
 
+Please note that you can only set the retention policy for Profile Service once every 30 days.
+
 +++
 
 ## Retention job execution and timing {#retention-job-execution-and-timing}
