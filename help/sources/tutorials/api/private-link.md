@@ -833,11 +833,19 @@ First, you must raise a support ticket in [!DNL Snowflake] and request for the *
 3. To create a support case, select **[!DNL + Support Case]**. Then, fill out the form with relevant details and attach any necessary files.
 4. When finished, submit the case.
 
-Once you receive the endpoint service resource ID, run the following on [!DNL Snowflake]:
+The endpoint resource ID is formatted as follows:
 
 ```shell
 subscriptions/{SUBSCRIPTION_ID}/resourceGroups/az{REGION}-privatelink/providers/microsoft.network/privatelinkservices/sf-pvlinksvc-az{REGION}
 ```
+
++++Select to view example
+
+```shell
+/subscriptions/4575fb04-6859-4781-8948-7f3a92dc06a3/resourceGroups/azwestus2-privatelink/providers/microsoft.network/privatelinkservices/sf-pvlinksvc-azwestus2
+```
+
++++
 
 | Parameter | Description | Example |
 | --- | --- | --- |
@@ -866,7 +874,9 @@ Once you have retrieved the values, you can make the following call to create a 
 
 The following request creates a private endpoint for [!DNL Snowflake]:
 
-+++Select to view request example
+>[!BEGINTABS]
+
+>[!TAB Template]
 
 ```shell
 curl -X POST \
@@ -877,7 +887,7 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-    "name": "Azure Private Link for Snowflake",
+    "name": "{ENDPOINT_NAME}",
     "subscriptionId": "{AZURE_SUBSCRIPTION_ID}",
     "resourceGroupName": "{RESOURCE_GROUP_NAME}",
     "resourceName": "{SNOWFLAKE_ENDPOINT_SERVICE_NAME}",
@@ -893,7 +903,35 @@ curl -X POST \
   }'
 ```
 
-+++
+>[!TAB Example]
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/connectors/privateEndpoints/' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "TEST_Snowflake_PE",
+    "subscriptionId": "4575fb04-6859-4781-8948-7f3a92dc06a3",
+    "resourceGroupName": "azwestus2-privatelink",
+    "resourceName": "sf-pvlinksvc-azwestus2",
+    "fqdns": [
+        "hf06619.west-us-2.privatelink.snowflakecomputing.com",
+        "adobe-segmentationdbint.privatelink.snowflakecomputing.com",
+        "ocsp.hf06619.west-us-2.privatelink.snowflakecomputing.com"
+    ],
+    "connectionSpec": {
+        "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
+        "version": "1.0"
+    }
+} '
+```
+
+
+>[!ENDTABS]
 
 ### Approve a private endpoint for [!DNL Azure Blob] and [!DNL Azure Data Lake Gen2]
 
