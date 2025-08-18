@@ -17,7 +17,7 @@ To use the last qualification time (`lastQualificationTime`) XDM attribute, you 
 * [[!DNL ADLS Gen 2]](/help/destinations/catalog/cloud-storage/adls-gen2.md)
 * [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md)
 * [[!DNL Azure Blob]](/help/destinations/catalog/cloud-storage/azure-blob.md)
-* [[!DNL Data Landing Zon]e](/help/destinations/catalog/cloud-storage/data-landing-zone.md)
+* [[!DNL Data Landing Zone]](/help/destinations/catalog/cloud-storage/data-landing-zone.md)
 * [[!DNL Google Cloud Storage]](/help/destinations/catalog/cloud-storage/google-cloud-storage.md)
 * [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)
 

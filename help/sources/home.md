@@ -64,7 +64,7 @@ The following sources are available to [Adobe Real-Time Customer Data Platform U
 | [[!DNL Azure Databricks]](connectors/databases/databricks.md) | Database | Batch | Azure |
 | [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) | Cloud Storage | Streaming | Azure, AWS |
 | [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) | Database | Batch | Azure |
-| [[!DNL Google BigQuery]](connectors/databases/bigquery.md) | Database | Batch | Azure |
+| [[!DNL Google BigQuery]](connectors/databases/bigquery.md) | Database | Batch | Azure, AWS |
 | [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) | Cloud Storage | Streaming | Azure |
 | [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) | Database | Streaming | Azure, AWS |
 | [[!DNL Snowflake]](connectors/databases/snowflake.md) | Database | Batch | Azure, AWS |
@@ -120,6 +120,7 @@ You can use the following sources to ingest consent and preferences data to Expe
 
 | Source | Ingestion type | Cloud |
 | --- | --- | --- |
+| [[!DNL Didomi]](../sources/connectors/consent-and-preferences/didomi.md) | Streaming | Azure |
 | [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md) | Batch | Azure |
 
 {style="table-layout:auto"}
@@ -169,7 +170,7 @@ You can use the following sources to ingest data from your database to Experienc
 | [[!DNL MariaDB]](connectors/databases/mariadb.md) | Batch | Azure |
 | [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) | Batch | Azure |
 | [[!DNL MySQL]](connectors/databases/mysql.md) | Batch | Azure, AWS |
-| [[!DNL Oracle]](connectors/databases/oracle.md) | Batch | Azure |
+| [[!DNL Oracle]](connectors/databases/oracle.md) | Batch | Azure, AWS |
 | [[!DNL PostgreSQL]](connectors/databases/postgres.md) | Batch | Azure, AWS |
 | [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) | Batch | Azure |
 
