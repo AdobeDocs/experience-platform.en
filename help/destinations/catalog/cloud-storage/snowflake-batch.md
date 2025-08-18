@@ -1,8 +1,6 @@
 ---
 title: Snowflake Batch connection
 description: Export data to your Snowflake account using private listings.
-hide: yes
-hidefromtoc: yes
 badgeBeta: label="Beta" type="Informative"
 ---
 # Snowflake Batch connection {#snowflake-destination}
@@ -33,16 +31,38 @@ All data shared through this integration has a fixed Time-to-Live (TTL) of seven
 
 If your audience is evaluated in [batch mode](../../../segmentation/methods/batch-segmentation.md), the data in the shared table is refreshed every 24 hours. This means there may be a delay of up to 24 hours between changes in audience membership and when those changes are reflected in the shared table.
 
-### Incremental export logic {#incremental-export}
+### Batch data sharing logic {#batch-data-sharing}
 
-When a dataflow runs for an audience for the first time, it performs a backfill and shares all currently qualified profiles. After this initial backfill, only incremental updates are reflected in the shared table. This means profiles which are added to or removed from the audience. This approach ensures efficient updates and keeps the shared table up to date.
+When a dataflow runs for an audience for the first time, it performs a backfill and shares all currently qualified profiles. After this initial backfill, the destination provides periodic snapshots of the complete audience membership. Each snapshot replaces the previous data in the shared table, ensuring that consumers always see the latest complete view of the audience without historical data.
 
-## Prerequisites {#prerequisites}
+## Streaming versus batch data sharing {#batch-vs-streaming}
 
-Before configuring your Snowflake connection, make sure you meet the following prerequisites:
+Experience Platform provides two types of Snowflake destinations: [Snowflake Streaming](/help/destinations/catalog/cloud-storage/snowflake.md) and [Snowflake Batch](snowflake-batch.md).
 
-* You have access to a [!DNL Snowflake] account.
-* Your Snowflake account is subscribed to private listings. You or someone in your company who has account administrator privileges on Snowflake can configure this.
+The table below will help you decide which destination to use by outlining the scenarios where each data sharing method is most appropriate.
+
+|  | Choose [Snowflake Batch](snowflake-batch.md) when you need | Choose [Snowflake Streaming](/help/destinations/catalog/cloud-storage/snowflake.md) when you need |
+|--------|-------------------|----------------------|
+| **Update frequency** | Periodic snapshots | Continuous updates in real-time |
+| **Data presentation** | Complete audience snapshot that replaces previous data | Incremental updates based on profile changes |
+| **Use case focus** | Analytical/ML workloads where latency is not critical | Immediate action scenarios requiring real-time updates |
+| **Data management** | Always see latest complete snapshot | Incremental updates based on audience membership changes |
+| **Example scenarios** | Business reporting, data analysis, ML model training | Marketing campaign suppression, real-time personalization |
+
+For more information about streaming data sharing, see the [Snowflake Streaming connection](../cloud-storage/snowflake.md) documentation.
+
+## Use cases {#use-cases}
+
+Batch data sharing is ideal for scenarios where you need a complete snapshot of your audience and real-time updates are not required, such as:
+
+* **Analytical workloads**: When performing data analysis, reporting, or business intelligence tasks that require a complete view of audience membership
+* **Machine learning workflows**: For training ML models or running predictive analytics that benefit from complete audience snapshots
+* **Data warehousing**: When you need to maintain a current copy of audience data in your own Snowflake instance
+* **Periodic reporting**: For regular business reporting where you need the latest audience state without historical change tracking
+* **ETL processes**: When you need to transform or process audience data in batches
+
+Batch data sharing simplifies data management by providing complete snapshots, eliminating the need to manage incremental updates or merge changes manually.
+
 
 ## Supported audiences {#supported-audiences}
 
@@ -62,7 +82,7 @@ Refer to the table below for information about the destination export type and f
 | Item | Type | Notes |
 ---------|----------|---------|
 | Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience with the identifiers (name, phone number, or others) used in the [!DNL Snowflake] destination.|
-| Export frequency | **[!UICONTROL Batch]** | Batch destinations export files to downstream platforms in increments of three, six, eight, twelve, or twenty-four hours. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).|
+| Export frequency | **[!UICONTROL Batch]** | This destination provides periodic snapshots of complete audience membership through Snowflake data sharing. Each snapshot replaces the previous data, ensuring you always have the latest complete view of your audience.|
 
 {style="table-layout:auto"}
 
