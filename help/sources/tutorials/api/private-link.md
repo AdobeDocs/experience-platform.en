@@ -919,15 +919,15 @@ curl -X POST \
     "resourceGroupName": "azwestus2-privatelink",
     "resourceName": "sf-pvlinksvc-azwestus2",
     "fqdns": [
-        "hf06619.west-us-2.privatelink.snowflakecomputing.com",
-        "adobe-segmentationdbint.privatelink.snowflakecomputing.com",
-        "ocsp.hf06619.west-us-2.privatelink.snowflakecomputing.com"
+      "hf06619.west-us-2.privatelink.snowflakecomputing.com",
+      "adobe-segmentationdbint.privatelink.snowflakecomputing.com",
+      "ocsp.hf06619.west-us-2.privatelink.snowflakecomputing.com"
     ],
     "connectionSpec": {
-        "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
-        "version": "1.0"
+      "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
+      "version": "1.0"
     }
-} '
+  }'
 ```
 
 
