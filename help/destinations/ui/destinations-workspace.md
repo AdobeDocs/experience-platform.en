@@ -107,13 +107,17 @@ Select the destination name to see information about the audiences activated to 
 
 The **[!UICONTROL Browse]** tab includes enhanced filtering and search capabilities to help you quickly find and manage your destination dataflows. Use the left sidebar to apply filters, and the search bar to find specific dataflows by name.
 
-#### Search functionality {#search-browse}
+### Search functionality {#search-browse}
 
 Use the search bar at the top of the table to quickly find dataflows by name. As you type, the results automatically filter to show only matching dataflows.
 
+>[!NOTE]
+>
+> When searching for dataflows using the search box, the results may include dataflows which your [user access labels](/help/access-control/abac/apply-access-labels-destinations.md) restrict you from seeing. This behavior will be corrected in a future update. Selecting such dataflows does not display the information in the right rail.
+
 ![Animated demonstration of searching for a destination dataflow in the Browse tab](../assets/ui/workspace/search.gif)
 
-#### Filter options {#filter-options-browse}
+### Filter options {#filter-options-browse}
 
 Use the filters in the left sidebar to narrow down your search.
 
@@ -135,7 +139,7 @@ Use the filters in the left sidebar to narrow down your search.
     * **[!UICONTROL Start date]**: Set the beginning of the date range
     * **[!UICONTROL End date]**: Set the end of the date range
 
-#### Active filters {#active-filters-browse}
+### Active filters {#active-filters-browse}
 
 When you apply filters, they appear as tags below the search bar.
 
@@ -158,7 +162,7 @@ Type in the name of a new tag in the **[!UICONTROL Tags]** field and select **[!
 
 To remove a tag from a dataflow, select the ellipsis (`...`) in the **[!UICONTROL Name]** column and select **[!UICONTROL Manage tags]** from the context menu, then select the `X` icon on the tag that you want to remove.
 
-#### Tagging best practices {#tag-best-practices}
+### Tagging best practices {#tag-best-practices}
 
 Ensure that your destination dataflows remain organized, easy to find, and manageable by following the tagging guidelines below.
 
@@ -166,7 +170,6 @@ Ensure that your destination dataflows remain organized, easy to find, and manag
 * **Be consistent**: Use a consistent naming convention across your organization
 * **Keep it simple**: Avoid creating too many tags, as this can make filtering less effective
 * **Use hierarchical tags**: Consider using prefixes to group related tags (e.g., "Campaign-Q4", "Campaign-Q1")
-* **Review regularly**: Periodically review and clean up unused tags to maintain organization
 
 ## [!UICONTROL Accounts] {#accounts}
 
@@ -208,7 +211,7 @@ Use the filters in the left sidebar to narrow down your search.
 
 ![Account filters in the Accounts tab](../assets/ui/workspace/account-filters.png)
 
-* **[!UICONTROL Destination platform]**: Filter accounts by specific destination platforms (e.g., [!DNL Microsoft Bing], [!DNL Amazon S3], [!DNL Facebook Custom Audience], [!DNL LinkedIn Matched Audience], etc.). You can select multiple platforms simultaneously.
+* **[!UICONTROL Destination platform]**: Filter accounts by specific destination platforms (for example: [!DNL Microsoft Bing], [!DNL Amazon S3], [!DNL Facebook Custom Audiences], [!DNL LinkedIn Matched Audiences] and so on). You can select multiple platforms simultaneously.
 * **[!UICONTROL Created by]**: Filter accounts by the user who created them. Use this filter to find accounts created by specific team members.
 
 #### Active filters {#active-filters-accounts}
