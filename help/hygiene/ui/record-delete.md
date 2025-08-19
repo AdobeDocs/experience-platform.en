@@ -201,7 +201,7 @@ After the request is submitted, a work order is created and appears on the [!UIC
 
 ## Deleting records from relational datasets {#relational-record-delete}
 
-If the dataset you are deleting from is a relational (model-based) schema, review the following considerations to ensure records are removed correctly and not re-ingested due to mismatches between Experience Platform and your source system.
+If the dataset you are deleting from is a relational schema, review the following considerations to ensure records are removed correctly and not re-ingested due to mismatches between Experience Platform and your source system.
 
 ### Record deletion behavior
 
@@ -232,7 +232,7 @@ To avoid unintentional re-ingestion and maintain data consistency across systems
 * **Monitor change data capture flows**: After deleting records in Platform, monitor dataflows and confirm that the source system either removes the same records or includes them with `_change_request_type = 'd'`.
 * **Clean up the source**: For sources using full refresh ingestion or those that do not support deletes through change data capture, delete records directly from the source system to avoid re-ingestion.
 
-For more details on schema requirements, see [relational schema descriptor requirements](../../xdm/schema/relational.md#model-based-schema-requirements-for-cdc).  
+For more details on schema requirements, see [relational schema descriptor requirements](../../xdm/schema/relational.md#relational-schemas).  
 To learn how change data capture works with sources, see [Enable change data capture in sources](../../sources/tutorials/api/change-data-capture.md#using-change-data-capture-with-relational-schemas).
 
 ## Next steps

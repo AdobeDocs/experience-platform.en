@@ -19,7 +19,7 @@ You can use change data capture with the following sources:
 >
 >Currently, relational schemas are **record-based only** and available based on your license or feature enablement.
 
-Relational schemas extend Experience Platform to enforce primary keys, track row-level changes, and define schema-level relationships. With change data capture, they apply inserts, updates, and deletes directly in the data lake, reducing the need for ETL or manual reconciliation.
+Relational schemas extend Experience Platform to enforce primary keys, track row-level changes, and define schema-level relationships. With change data capture, they apply inserts, updates, and deletes directly in the data lake, reducing the need for Extract, Transform, Load (ETL) or manual reconciliation.
 
 ### Relational schema requirements for change data capture
 
@@ -42,21 +42,21 @@ This column is evaluated only during ingestion and is not stored or mapped to XD
 
 ### Workflow
 
-To enable change data capture with a model-based schema:
+To enable change data capture with a relational schema:
 
-1. [Create a model-based schema](link-placeholder).  
-2. Add the required descriptors:  
+1. [Create a relational schema](../../../xdm/ui/resources/schemas#create-a-relational-schema).  
+2. Add the [required descriptors](../../../xdm/api/descriptors.md#relationship-descriptor):  
    * Primary key  
    * Version descriptor  
    <!--For Sept:
    * Timestamp descriptor (time-series only) -->
 3. Create a dataset from the schema and enable change data capture.  
 4. Add the `_change_request_type` column to your source files or tables.  
-5. Complete the [source connection setup](../api/collect/) to enable ingestion.  
+5. Complete the source connection setup to enable ingestion.  
 
 ## File-based sources {#file-based-sources}
 
-For file-based sources (Amazon S3, Azure Blob, Google Cloud Storage, and SFTP), include a `_change_request_type` column in your files:
+For file-based sources ([!DNL Amazon S3], [!DNL Azure Blob], [!DNL Google Cloud Storage], and [!DNL SFTP]), include a `_change_request_type` column in your files:
 
 * `u`: upsert (default if omitted)  
 * `d`: delete  
