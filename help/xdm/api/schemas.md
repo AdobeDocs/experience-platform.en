@@ -192,7 +192,7 @@ A successful response returns the details of the schema. The fields that are ret
 
 The schema composition process begins by assigning a class. The class defines key behavioral aspects of the data (record or time series), as well as the minimum fields that are required to describe the data that will be ingested.
 
-For instructions on creating a schema without classes or field groups (relational schema), see the [Create a relational schema](#create-a-relational-schema) section.
+For instructions on creating a schema without classes or field groups, known as a relational schema, see the [Create a relational schema](#create-a-relational-schema) section.
 
 >[!NOTE]
 >
@@ -439,15 +439,15 @@ A successful request returns **HTTP 201 (Created)** and the created schema.
 
 | Property            | Type   | Description                |
 | ------------------- | ------ | -------------------------- |
-| `$id`               | String | Unique URL of the created schema. Use in subsequent API calls. |
-| `meta:altId`        | String | Alternate identifier for the schema.                        |
-| `meta:resourceType` | String | Resource type (always `"schemas"`).                         |
-| `version`           | String | Schema version assigned on create.                          |
-| `title`             | String | Display name of the schema.                                 |
-| `description`       | String | Short explanation of the schema's purpose.                  |
-| `type`              | String | Schema type.                                                |
-| `definitions`       | Object | Field definitions of the schema.                            |
-| `allOf`             | Array  | Reference to the root-level object definition (for example, `#/definitions/marketing_customers`). |
+| `$id`               | String | The unique URL of the created schema. Use in subsequent API calls. |
+| `meta:altId`        | String | An alternate identifier for the schema.                        |
+| `meta:resourceType` | String | The resource type (always `"schemas"`).                         |
+| `version`           | String | A schema version assigned at creation.                          |
+| `title`             | String | The display name of the schema.                                 |
+| `description`       | String | A short explanation of the schema's purpose.                  |
+| `type`              | String | The schema type.                                                |
+| `definitions`       | Object | Defines reusable objects or field groups used in the schema. This typically includes the main data structure and is referenced in the `allOf` array to define the schema root. |
+| `allOf`             | Array | Specifies the root object of the schema by referencing one or more definitions (for example, `#/definitions/marketing_customers`). |
 | `meta:extends`      | Array  | Identifies the schema as relational (`adhoc-v2`).          |
 | `meta:behaviorType` | String | Behavior type (`record` or `time-series`, when enabled).    |
 | `meta:containerId`  | String | Container in which the schema is stored (e.g., `tenant`).   |
