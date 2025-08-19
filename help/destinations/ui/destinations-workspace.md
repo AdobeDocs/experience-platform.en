@@ -113,7 +113,7 @@ Use the search bar at the top of the table to quickly find dataflows by name. As
 
 >[!NOTE]
 >
-> When searching for dataflows using the search box, the results may include dataflows which your [user access labels](/help/access-control/abac/apply-access-labels-destinations.md) restrict you from seeing. This behavior will be corrected in a future update. Selecting such dataflows does not display the information in the right rail.
+> When searching for dataflows using the search box, the results may include dataflows which your [user access labels](/help/access-control/abac/apply-access-labels-destinations.md) restrict you from seeing. This behavior will be corrected in a future update. Selecting such dataflows does not display the information in the right rail and users without access to the required labels are not able to perform any modifications such as mapping audiences to the dataflow or editing its schedule.
 
 ![Animated demonstration of searching for a destination dataflow in the Browse tab](../assets/ui/workspace/search.gif)
 
