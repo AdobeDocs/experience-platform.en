@@ -5,28 +5,41 @@ type: Documentation
 description: This page provides IP ranges that you can add to your allow list, to safely export data from Experience Platform to your HTTP REST API endpoint, Amazon Kinesis, or Azure Event Hubs instance.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
 ---
-# IP address allowlist for streaming destinations {#ip-address-allowlist}
+
+# IP address allowlist for streaming API-based destinations {#ip-address-allowlist}
 
 >[!IMPORTANT]
 >
 > * Adobe recommends that you bookmark this page and revisit it every three months to check for the latest IP addresses. Adobe does not provide notification of new IP ranges.
-> * The list of IPs documented here *does not* apply to any destinations you build using [[!DNL Destination SDK]](/help/destinations/destination-sdk/overview.md).
 
 ## Overview {#overview}
 
 The IP ranges documented here apply to the following destinations:
 
-* [HTTP API destination](./http-destination.md)
-* [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
-* [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+* [Advanced enterprise destinations](../destinations/destination-types.md#advanced-enterprise-destinations): [HTTP API destination](./http-destination.md), [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+* [Streaming audience export destinations](../destinations/destination-types.md#streaming-destinations), such as [Pega CDH Realtime Audience](/help/destinations/catalog/personalization/pega-v2.md), API-based integrations with [Salesforce Marketing Cloud](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) and [Oracle Eloqua](/help/destinations/catalog/email-marketing/oracle-eloqua-api.md)
+* Public or private destinations built through [Destination SDK](../destinations/destination-sdk/getting-started.md)
 
 Outbound traffic from Experience Platform to these destinations always goes through the IPs listed on this page.
 
-This page provides IP ranges that you can add to your allowlist, to safely export data from Experience Platform to your HTTP endpoint, [!DNL Amazon Kinesis], or [!DNL Azure Event Hubs] instance. This functionality is especially useful if your HTTP endpoint is located behind an enterprise firewall or if your company security and compliance standards require a list of IP ranges to be allowlisted.
+This page provides IP ranges that you can add to your allowlist, to safely export data from Experience Platform to the destinations listed above. This functionality is especially useful if your HTTP endpoint is located behind an enterprise firewall or if your company security and compliance standards require a list of IP ranges to be allowlisted.
 
 You can define network access controls through your network firewall. By specifying the appropriate IP range, you can allow traffic for the data transfer service.
 
-Adobe recommends that you add the following IP ranges to an allowlist prior to working with the destinations mentioned above on this page. Failing to add your region-specific IP range to your allowlist may lead to errors or non-performance when using these streaming destinations.
+If your organizational policy requires you to allowlist IPs for incoming traffic, Adobe recommends that you add the following IP ranges to an allowlist prior to working with the destinations mentioned above on this page. Failing to add your region-specific IP range to your allowlist may lead to errors or non-performance when using these streaming destinations.
+
+## Mandatory IP addresses {#mandatory}
+
+If your organization policy requires you to allowlist IPs for incoming traffic, you must allow traffic from the following IP addresses:
+
+* `3.209.222.108`
+* `3.211.230.204`
+* `35.169.227.49`
+* `66.117.18.133`
+* `66.117.18.134`
+* `66.117.18.135`  
+
+In addition to these mandatory IP addresses, you must allowlist the IP addresses for the region where your organization is provisioned from the list below.  
 
 ## VA7: US and Americas customers {#us-americas}
 
