@@ -20,16 +20,85 @@ This guide provides an overview of how to create, edit, and manage Experience Da
 This guide requires a working understanding of XDM System. Refer to the [XDM overview](../../home.md) for an introduction to the role of XDM within the Experience Platform ecosystem, and the [basics of schema composition](../../schema/composition.md) for an overview of how schemas are constructed.
 
 ## Create a new schema {#create}
-
+<!-- 
 >[!NOTE]
 >
->This section covers how to manually create a new schema in the UI. If you are ingesting CSV data into Experience Platform, you can use Machine Learning (ML) algorithms to **generate a schema from sample CSV data**. This workflow matches your data format and automatically creates a new schema based on the structure and content of your CSV file. See the [ML-Assisted schema creation guide](../ml-assisted-schema-creation.md) for more information on this workflow.
+>This section covers how to manually create a new schema in the UI. If you are ingesting CSV data into Experience Platform, you can use Machine Learning (ML) algorithms to **generate a schema from sample CSV data**. This workflow matches your data format and automatically creates a new schema based on the structure and content of your CSV file. See the [ML-Assisted schema creation guide](../ml-assisted-schema-creation.md) for more information on this workflow. -->
 
-In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in the top-right corner. The 'Select schema type' dropdown menu appears. The options are 'Standard' or 'Model-based'. 
+In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in the top-right corner. The 'Select schema type' dropdown menu appears. The options are [!UICONTROL Standard] or [!UICONTROL Model-based]. 
+
 <!-- update image below -->
 ![The Schemas workspace with [!UICONTROL Create Schema] highlighted and the 'Select schema type' dropdown displayed](../../images/ui/resources/schemas/create-schema.png).
 
-## Model-based schema creation {#model-based-creation}
+## Create a model-based schema {#create-model-based-schema}
+
+Use model-based schemas to define relational-style data structures in Experience Platform. This schema type supports features such as primary key enforcement, record-level version tracking, and schema relationships. Select **[!UICONTROL Model-based]** when your use case requires fine-grained control over records and relational modeling.
+
+![The Schemas workspace with [!UICONTROL Create schema] selected and the Select schema type dropdown displayed.](../../images/ui/resources/schemas/create-schema.png)
+
+If you select **[!UICONTROL Model-based]**, the **[!UICONTROL Create a model-based schema]** dialog appears. You can choose either **[!UICONTROL Create manually]** or [**[!UICONTROL Upload DDL file]**](#upload-ddl-file) to define the schema structure.
+
+### Create manually {#create-manually}
+
+In the **[!UICONTROL Create a model-based schema]** dialog, select **[!UICONTROL Create manually]**, then select **[!UICONTROL Next]**.  
+   
+![The Create a model-based schema dialog with [!UICONTROL Create manually] selected and [!UICONTROL Next] highlighted.](../../images/ui/schemas/model-based-dialog.png)
+
+On the **[!UICONTROL Model-based schema details]** page, enter a schema display name and an optional description, then select **[!UICONTROL Finish]** to create the schema.  
+   
+![The Model-based schema details view with [!UICONTROL Schema display name], [!UICONTROL Description], and [!UICONTROL Finish] highlighted.](../../images/ui/schemas/model-based-details-PLACEHOLDER.png)
+
+The Schema Editor opens with an empty canvas for defining the schema structure.
+
+![The Schema Editor canvas showing an empty model-based schema structure.](model-based-empty-canvas-PLACEHOLDER.png)
+
+#### Add a version descriptor field {#add-version-descriptor}
+
+To enable version tracking and support change data capture, you must designate a version descriptor field in your schema. In the Schema Editor, select the plus (**+**) icon next to the schema name to add a new field.
+
+Enter a field name such as `lastmodified`, and choose a data type of **[!UICONTROL DateTime]** or **[!UICONTROL Number]**.
+
+In the right rail, enable the **[!UICONTROL Version Identifier]** checkbox, then select **[!UICONTROL Apply]** to confirm the field.
+
+![The Schema Editor with a DateTime field named `lastmodified` added and the Version Identifier checkbox selected.](add-version-descriptor-PLACEHOLDER.png)
+
+>[!IMPORTANT]
+>
+>A model-based schema must include a version descriptor field to support record-level updates and change data capture ingestion.
+
+Next, proceed to [add additional fields](#add-field-groups), [define primary keys](../fields/identity.md#define-a-identity-field), [add schema-level relationships](../../tutorials/relationship-ui.md#relationship-field), and a [version descriptor](#add-version-descriptor) as needed.
+
+>[!NOTE]
+>
+>Model-based schemas currently support **record behavior** only. Time-series schemas are not supported in the UI.
+
+### Upload a DDL file {#upload-ddl-file}
+
+Use this workflow to define the schema by uploading a DDL file. In the **[!UICONTROL Create a model-based schema]** dialog, select **[!UICONTROL Upload DDL file]**, then select **[!UICONTROL Next]**.  
+
+![The Create a model-based schema dialog with [!UICONTROL Upload DDL file] selected and [!UICONTROL Next] highlighted.](PLACEHOLDER)
+
+The [!UICONTROL Select entities and fields to report] dialog appears. Select and drag a DDL file from your local system. Experience Platform validates the schema and displays a green checkmark if the file upload is succesful. Select **[!UICONTROL Next]** ot confirm the upload. The [!UICONTROL Select entities and fields to import] dialog appears.
+
+>[!NOTE]
+>
+>The maximum supported file size for a DDL upload is 10MB.
+
+![The Model-based schema review view with imported fields shown and [!UICONTROL Finish] highlighted.](../../images/ui/resources/schemas/entities-and-files-to-inport.png)
+
+>[!IMPORTANT]
+>
+>The table structure must contain a **primary key** and a **version identifier**, such as a `lastmodified` field of type datetime or number.
+>
+>For change data capture ingestion, a special column named `_change_request_type` of type String is also required to enable incremental processing. This field indicates the type of data change (for example,  `u` (upsert) or `d` (delete)).
+
+Review the schema structure and select the radio buttons and check boxes to ensure each schema has a primary key and version identifier specified. If the preview is correct, select **[!UICONTROL Next]** to create the schema.  
+   
+The schema opens in the Schema Editor, where you can adjust the structure before saving.
+
+Next, proceed to [add additional fields](#add-field-groups), [define primary keys](../fields/identity.md#define-a-identity-field), [add schema-level relationships](../../tutorials/relationship-ui.md#relationship-field), and a [version descriptor](#add-version-descriptor) as needed.
+
+<!-- ## Model-based schema creation {#model-based-creation}
 
 From the dropdown menu select 'Model-based'. The Create a model-based schema dialog appears. You can either do it manually, or you can do it by uploading a DDL file. 
 
@@ -40,7 +109,7 @@ And select 'Finish' to confirm your settings.
 
 The Schema Editor canvas appears with a completely empty schema.
 
-The existing Schema Editor process/experience is used to add fields to the empty schema. [LINK TO ADD FIELDS section/guide](#add-field-groups)
+The existing Schema Editor process/experience is used to add fields to the empty schema. [LINK TO ADD FIELDS section/guide](#add-field-groups) -->
 
 <!-- TODO: PLAT-240919 Add Model-Based Schema UI workflow section 
 - document the "Model-Based" option users will see in schema creation UI, including step-by-step workflow for creating model-based schemas 
@@ -74,7 +143,7 @@ Model-based schemas enable structured, relational-style data support with primar
 >Control columns used during ingestion (such as `_change_request_type` for CDC workflows) are read at ingestion time and are not stored in the schema or mapped to XDM fields.
 
 For comprehensive information on model-based schema concepts, see [Model-Based Schema overview](../../schema/model-based.md). For CDC configuration with Sources, see [Enable change data capture](../../../sources/tutorials/api/change-data-capture.md).
-
+ 
 -->
 
 ## Standard schema creation {#standard-based-creation}
