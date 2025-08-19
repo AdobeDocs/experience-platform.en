@@ -27,7 +27,7 @@ In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in 
 
 ## Create a model-based schema {#create-model-based-schema}
 
-Select [!UICONTROL Model-based] to define structured, relational-style schemas with fine-grained control over records. Model-based schemas support primary key enforcement, record-level versioning, and schema-level relationships through primary and foreign keys. They are also optimized for incremental ingestion using change data capture (CDC) and support multiple data models for Campaign Orchestration, Data Distiller, and B2B use cases.
+Select [!UICONTROL Model-based] to define structured, relational-style schemas with fine-grained control over records. Model-based schemas support primary key enforcement, record-level versioning, and schema-level relationships through primary and foreign keys. They are also optimized for incremental ingestion using change data capture (CDC), and support multiple data models used in Campaign Orchestration, Data Distiller, and B2B implementations.
 
 To learn more, see [Model-based schema overview](../../schema/model-based.png).
 
