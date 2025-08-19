@@ -81,14 +81,20 @@ When you are finished providing details to your dataflow, select **[!UICONTROL N
 The [!UICONTROL Mapping] step appears, providing you with an interface to map the source fields from your source schema to their appropriate target XDM fields in the target schema.
 
 Experience Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../data-prep/ui/mapping.md).
-<!-- TODO: PLAT-240919 Add relational schema mapping guidance
-Requirements for update:
-- Add note about relational schema mapping considerations
-- Text: "When mapping to relational schemas, ensure that required fields (primary key, version descriptor, and timestamp descriptor for time-series data) are properly mapped from your source data."
-- Add: "Control columns such as _change_request_type used for change data capture are read during ingestion but are not stored in the target schema."
-- Include: "Relational schemas support relationships between datasets through primary and foreign key mappings."
-- Cross-reference: "For more information on relational schema requirements, see [Relational Schema overview](../../../xdm/schema/relational.md)."
---> 
+
+>[!NOTE]
+>
+>When mapping to model-based schemas, make sure your source data includes the required fields, such as a primary key and a version descriptor. 
+
+<!-- For Sept:
+and, for time-series schemas, a timestamp descriptor. -->
+
+Control columns such as `_change_request_type`, used for change data capture, are read during ingestion but are not stored in the target schema.
+
+Model-based schemas also support relationships between datasets using primary and foreign key mappings.
+
+For more information, see the [Model-based schemas overview](../../../../xdm/schema/relationalss.md).
+
 Once your source data is successfully mapped, select **[!UICONTROL Next]**.
 
 ![mapping](../../../images/tutorials/dataflow/table-based/mapping.png)
