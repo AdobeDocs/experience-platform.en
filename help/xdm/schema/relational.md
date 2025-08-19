@@ -38,17 +38,27 @@ Relational schemas remove union schema dependencies, eliminate auto-evolution fr
 
 Use the following capabilities to model structured data in the data lake while maintaining governance, integrity, and interoperability.
 
-* **Schema behavior support**: Configure with:
+* **Schema behavior support**: Currently, relational schemas support:
   * **Record behavior**: Captures the current state of an entity, such as a customer, account, or campaign.
-  * **Time-series behavior**: Captures events and the time they occur, useful for tracking sequences or changes over time.
-<!-- CONFLICT: KT wiki states both record and time-series are supported; Adam stated only record-based schemas are currently available. -->
+
+  >[!NOTE]
+  >
+  > Support for **Time-series behavior** is not currently available in the UI or API.
+
 * **Primary key enforcement**: Define a primary key to uniquely identify each record and prevent duplicates during ingestion.
 * **Version control**: Use a **version descriptor** to ensure updates are applied in the correct order, even if records arrive out of sequence.
-* **Event-time ordering**: For time-series schemas, use a **timestamp descriptor** to order events by occurrence time instead of ingestion time.
 * **Relationship mapping**: Create one-to-many or many-to-one relationships between relational schemas or between relational and standard schemas. Relationship definitions are stored as descriptors to enable efficient joins.
 * **Simplified evolution**: Relational schemas do not participate in union views and are not updated when shared field groups change, preventing unexpected downstream changes.
 * **Flexible field definition**: Add fields directly without tenant-id namespacing. You may still use existing XDM field groups, but changes to them do not automatically propagate to your schema.
 * **No dependency on union schemas**: Improves query performance and reduces the operational overhead of managing global schema views.
+
+<!-- For Sept:
+* **Schema behavior support**: Configure with:
+  * **Record behavior**: Captures the current state of an entity, such as a customer, account, or campaign.
+  * **Time-series behavior**: Captures events and the time they occur, useful for tracking sequences or changes over time.
+
+* **Event-time ordering**: For time-series schemas, use a **timestamp descriptor** to order events by occurrence time instead of ingestion time. 
+-->
 
 ## Required fields
 
@@ -59,9 +69,11 @@ Relational schemas require certain descriptors—metadata in the schema definiti
 Use a primary key descriptor to ensure each record is uniquely identifiable. The supported configurations are:
 
 * **Single-field primary key**: Use one field with a unique value for each record.
-* **Composite primary key**: Use multiple fields to form a unique identifier. For time-series schemas, the composite key must include the timestamp field identified by the timestamp descriptor.
+* **Composite primary key**: Use multiple fields to form a unique identifier.
 
-<!-- CONFLICT: KT wiki supports both single and composite primary keys; Adam stated only a single primary key field is required, with timestamp handled separately for time-series. -->
+<!-- For Sept:
+* **Composite primary key**: Use multiple fields to form a unique identifier. For time-series schemas, the composite key must include the timestamp field identified by the timestamp descriptor. 
+-->
 
 **Example (single-field):**
 
@@ -72,6 +84,7 @@ Use a primary key descriptor to ensure each record is uniquely identifiable. The
 }
 ```
 
+<!-- To be included in September:
 **Example (composite for time-series)**
 
 ```json
@@ -79,7 +92,7 @@ Use a primary key descriptor to ensure each record is uniquely identifiable. The
   "xdm:descriptor": "xdm:descriptorPrimaryKey",
   "xdm:sourceProperty": ["customerId", "eventTimestamp"]
 }
-```
+``` -->
 
 ### Version descriptor
 
@@ -93,8 +106,6 @@ Define a version descriptor to maintain correct record state and ensure the late
   "xdm:sourceProperty": "lastModified"
 }
 ```
-
-<!-- NOTE: unsure whether this descriptor is labeled as "version identifier." -->
 
 ### Timestamp descriptor
 
@@ -115,7 +126,7 @@ For time-series schemas, define a timestamp descriptor to set the event time for
 
 For instructions on creating descriptors in the Schema Editor, see [Create descriptors in the Schema Editor](../tutorials/relationship-ui.md). For API-based creation, see [Create descriptors using the API](../tutorials/relationship-api.md).
 
-## Relationship support
+## Relationship support {#relationship-support}
 
 Relational schemas support relationship descriptors that define how datasets connect. Use relationships to improve referential integrity and enable connected queries across entities.
 
@@ -150,13 +161,11 @@ Before you add relationship descriptors, decide the relationship type and target
 }
 ```
 
-For a list of relationship descriptor types and syntax, see the [descriptors API reference](../api/descriptors.md). For step-by-step guidance, see [Define a relationship in the API](../tutorials/relationship-api.md) or [Create a relationship in the UI](../tutorials/relationship-ui.md).
+For a list of relationship descriptor types and syntax, see the [descriptors API reference](../api/descriptors.md).To learn how to apply these concepts in practice, follow the tutorials to [define a relationship in the API](../tutorials/relationship-api.md) or [create a relationship in the UI](../tutorials/relationship-ui.md).
 
 >[!NOTE]
 >
 >As relationships are defined at the schema level, make sure to explicitly join related datasets in your queries. Use a tool like Data Distiller to resolve these relationships during query time.
-
-<!-- For UI instructions, see [Create relationships in the Schema Editor](link-to-ui-doc/PLACEHOLDER.md). For API instructions, see [Create relationships using the API](link-to-api-doc/PLACEHOLDER.md). -->
 
 >[!IMPORTANT]
 >
@@ -166,15 +175,12 @@ For a list of relationship descriptor types and syntax, see the [descriptors API
 >
 > Relational schemas can link to standard schemas, but cannot link to ad-hoc schemas.
 
-<!-- CONFLICT: KT wiki describes both relational to relational and relational to standard schema relationships; Adam's notes only mention primary/foreign key relationships in general without detailing interoperability. -->
-
-## Ingestion methods
+## Ingestion methods {#ingestion-methods}
 
 Use [change data capture](../../sources/tutorials/api/change-data-capture.md) in your data connections to keep relational datasets synchronized with source systems. You can also ingest data using SQL via Data Distiller or upload files manually. Choose the path that aligns with your operational model, then apply the CDC rules consistently.
 
 Change data capture in Experience Platform captures and applies all changes—inserts, updates, and deletes—in real time, ensuring full alignment between source and destination data. Unlike incremental copy, which only tracks new or updated records using a timestamp column (such as `LastModified`) and cannot detect deletions, change data capture provides a complete change history.
 
-<!-- Maybe make this below into a table: -->
 Supported ingestion methods include:
 
 * **Sources with CDC** – Include a `_change_request_type` column in the source data to indicate how each row should be processed:
@@ -191,13 +197,11 @@ Supported ingestion methods include:
 * **Data Distiller**: Ingest using SQL queries to write into relational datasets.
 * **Local file upload**: Upload files manually when needed for non-source ingestion workflows.
 
-<!-- CONFLICT: KT wiki lists CDC, Data Distiller, and local file upload as options; Adam stated CDC is currently the primary supported workflow for relational schemas. -->
-
-## Data hygiene considerations
+## Data hygiene considerations {#data-hygiene-considerations}
 
 When you need to remove records from relational datasets while keeping source systems intact, select a method that aligns with your governance and reconciliation processes. Then apply the relevant descriptors to ensure deterministic behavior.
 
-<!-- Use these methods to maintain accurate records in the data lake without unwanted source data deletion: -->
+Use these methods to maintain accurate records in the data lake without unwanted source data deletion:
 
 * **Change data capture delete operation**: Include `_change_request_type` with `D` in the incoming data to delete matching records.
 * **Safe-copy dataset**: Duplicate the production dataset and apply deletes to the copy for controlled testing or reconciliation.
@@ -207,19 +211,17 @@ The following list of descriptors indicate their relevance to hygiene operations
 
 * **Primary key descriptor**: Identifies records for updates or deletes.
 * **Version descriptor**: Ensures deletes and updates apply in the correct order.
-* **Timestamp descriptor (time-series)**: Aligns deletes with event occurrence times.
+
+<!-- For September:
+* **Timestamp descriptor (time-series)**: Aligns deletes with event occurrence times. -->
 
 >[!NOTE]
 >
 >Hygiene processes operate at the dataset level. For profile-enabled datasets, additional profile workflows may be required.
 
-<!-- For UI steps, see [Record delete requests](../../hygiene/ui/record-delete.md). For API calls, see the [workorder endpoint](../../hygiene/api/workorder.md). For scheduled row-level retention in the data lake, see [Manage Experience Event dataset retention (TTL)](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md). -->
+To delete records associated with an identity, create a record delete work order. For complete hygiene instructions, see Record Delete [UI](../../hygiene/ui/record-delete.md) and [API documentation](../../hygiene/api/workorder.md). For scheduled row-level retention in the data lake, see [Manage Experience Event dataset retention (TTL)](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md).
 
-For complete hygiene instructions, see Record Delete [UI](../../hygiene/ui/record-delete.md) and [API documentation](../../hygiene/api/workorder.md).
-Alternatively, see the guide on how to [Manage Experience Event Dataset Retention in the data lake using TTL](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md).
-<!-- CONFLICT: KT wiki describes hygiene in relation to all schema behaviors; Adam emphasized hygiene guidance in the context of record-based relational schemas and CDC deletes as the main supported approach. -->
-
-## Limitations and considerations
+## Limitations and considerations {#limitations}
 
 Review the following limitations before using relational schemas:
 
@@ -228,9 +230,11 @@ Review the following limitations before using relational schemas:
 
   >[!IMPORTANT]
   >
-  > Schema evolution is additive only. You can add new fields after publication, but cannot remove or alter existing ones.
-* Composite primary keys are required for time-series schemas.
+  >Schema evolution is additive only. You can add new fields after publication, but cannot remove or alter existing ones.
+
 * Relationships are limited to one-to-many and many-to-one.
 * Availability depends on your license or feature enablement.
 
-<!-- CONFLICT: KT wiki supports both record and time-series; Adam stated only record-based schemas are currently available. -->
+<!-- For sept:
+* Composite primary keys are required for time-series schemas. -->
+

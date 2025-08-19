@@ -46,10 +46,10 @@ The following table outlines errors regarding internal validation in Flow Servic
 | `1423-400` | Invalid request | An unhandled field baseSpec was provided in ConnectionSpecFiltering. Please update the field {field} and try again. |
 | `1424-400` | Invalid request | OrderBy is not supported with cross sandbox query. |
 <!-- | `1425-400` | Invalid request | Error while matching schema in target dataset 64ef1a3c0ef with schema in mapping 91ac5a2c0eb. Schema with same id and version must be used in both mapping and target dataset. | -->
-<!-- TODO: Update Schema Matching Error for Model-Based Schema Context
+<!-- TODO: Update Schema Matching Error for Relational Schema Context
 Requirements for update:
-- Update existing error description to include model-based schema context
-- Change text to: "Error while matching schema in target dataset 64ef1a3c0ef with schema in mapping 91ac5a2c0eb. Schema with same id and version must be used in both mapping and target dataset. This applies to both standard XDM schemas and model-based schemas, with model-based schemas requiring additional validation of primary key and version descriptor fields."
+- Update existing error description to include relational schema context
+- Change text to: "Error while matching schema in target dataset 64ef1a3c0ef with schema in mapping 91ac5a2c0eb. Schema with same id and version must be used in both mapping and target dataset. This applies to both standard XDM schemas and relational schemas, with relational schemas requiring additional validation of primary key and version descriptor fields."
 -->
 | `1426-400` | Invalid request | The user token is unauthorized to create/update the connection spec. Please ensure that the user token is authorized and try again.|
 | `1427-400` | Invalid request | The user token is unauthorized to create/update flow runs. Please ensure that the user token is authorized and try again. |

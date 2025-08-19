@@ -192,7 +192,7 @@ A successful response returns the details of the schema. The fields that are ret
 
 The schema composition process begins by assigning a class. The class defines key behavioral aspects of the data (record or time series), as well as the minimum fields that are required to describe the data that will be ingested.
 
-For instructions on creating a schema without classes or field groups (relational schema), see the [Create a relational schema](#create-a-model-based-schema) section.
+For instructions on creating a schema without classes or field groups (relational schema), see the [Create a relational schema](#create-a-relational-schema) section.
 
 >[!NOTE]
 >
@@ -275,7 +275,11 @@ Performing a GET request to [list all schemas](#list) in the tenant container wo
 
 To add additional fields to a schema, you can perform a [PATCH operation](#patch) to add field groups to the schema's `allOf` and `meta:extends` arrays.
 
-## Create a relational schema {#create-model-based-schema}
+## Create a relational schema {#create-relational-schema}
+
+>[!AVAILABILITY]
+>
+>Relational schemas currently support record behavior only. Time-series behavior is not yet supported in the UI or API for relational schemas.
 
 Create a relational schema by making a POST request to the `/schemas` endpoint. Relational schemas store structured, relational-style data **without** classes or field groups. Define fields directly on the schema, and identify the schema as relational using a logical behavior tag.
 
@@ -288,11 +292,13 @@ Create the schema first with `POST /tenant/schemas`. Then add the required descr
 - [Primary key descriptor](../api/descriptors.md#primary-key-descriptor): Primary-key fields are **required** and must be **root-level**. 
 - [Version descriptor](../api/descriptors.md#version-descriptor): **Required** when a primary key exists. 
 - [Relationship descriptor](../api/descriptors.md#relationship-descriptor): Optional, defines joins; cardinality not enforced at ingestion. 
-- [Timestamp descriptor](../api/descriptors.md#timestamp-descriptor): For time-series schemas, the primary key must be a **composite** key that includes the timestamp field.
+
+<!-- For Sept
+- [Timestamp descriptor](../api/descriptors.md#timestamp-descriptor): For time-series schemas, the primary key must be a **composite** key that includes the timestamp field. -->
 
 >[!AVAILABILITY]
 >
->Although `meta:behaviorType` supports `record` and `time-series`, current availability may be limited. Set `meta:behaviorType` to `"record"` unless time-series is enabled for your organization.
+>Although `meta:behaviorType` technically accepts `time-series`, support is not currently available for relational schemas. Set `meta:behaviorType` to `"record"`.
 
 >[!CAUTION]
 >
@@ -368,7 +374,7 @@ curl --request POST \
 | `definitions`                   | Object | Contains the root-level object(s) that define your schema fields. |
 | `definitions.<name>.properties` | Object | Field names and data types.                               |
 | `allOf`                         | Array  | References the root-level object definition (for example, `#/definitions/marketing_customers`). |
-| `meta:extends`                  | Array  | Must include `"https://ns.adobe.com/xdm/data/adhoc-v2"` to identify the schema as model-based.  |
+| `meta:extends`                  | Array  | Must include `"https://ns.adobe.com/xdm/data/adhoc-v2"` to identify the schema as relational.  |
 | `meta:behaviorType`             | String | Set to `"record"`. Use `"time-series"` only when enabled and appropriate. |
 
 >[!IMPORTANT]

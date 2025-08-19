@@ -21,15 +21,19 @@ This guide requires a working understanding of XDM System. Refer to the [XDM ove
 
 ## Create a new schema {#create}
 
-In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in the top-right corner. The 'Select schema type' dropdown menu appears with options for [!UICONTROL Standard] or [!UICONTROL Model-based] schemas. 
+In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in the top-right corner. The 'Select schema type' dropdown menu appears with options for [!UICONTROL Standard] or [!UICONTROL Relational] schemas. 
 
 ![The Schemas workspace with [!UICONTROL Create Schema] highlighted and the 'Select schema type' dropdown displayed](../../images/ui/resources/schemas/create-schema.png).
 
-## Create a relational schema {#create-model-based-schema}
+## Create a relational schema {#create-relational-schema}
 
-Select [!UICONTROL Model-based] to define structured, relational-style schemas with fine-grained control over records. Relational schemas support primary key enforcement, record-level versioning, and schema-level relationships through primary and foreign keys. They are also optimized for incremental ingestion using change data capture (CDC), and support multiple data models used in Campaign Orchestration, Data Distiller, and B2B implementations.
+Select [!UICONTROL Relational] to define structured, relational-style schemas with fine-grained control over records. Relational schemas support primary key enforcement, record-level versioning, and schema-level relationships through primary and foreign keys. They are also optimized for incremental ingestion using change data capture (CDC), and support multiple data models used in Campaign Orchestration, Data Distiller, and B2B implementations.
 
-To learn more, see [Relational schema overview](../../schema/model-based.md).
+>[!NOTE]
+>
+>Relational schemas currently support record-based schemas only. Time-series schemas are not yet supported for relational modeling in either the UI or API.
+
+To learn more, see the [Relational schema overview](../../schema/relational.md).
 
 The **[!UICONTROL Create a relational schema]** dialog appears. You can choose either **[!UICONTROL Create manually]** or [**[!UICONTROL Upload DDL file]**](#upload-ddl-file) to define the schema structure.
 
@@ -37,15 +41,15 @@ The **[!UICONTROL Create a relational schema]** dialog appears. You can choose e
 
 In the **[!UICONTROL Create a relational schema]** dialog, select **[!UICONTROL Create manually]**, then select **[!UICONTROL Next]**.  
    
-![The Create a relational schema dialog with [!UICONTROL Create manually] selected and [!UICONTROL Next] highlighted.](../../images/ui/resources/schemas/model-based-dialog.png)
+![The Create a relational schema dialog with [!UICONTROL Create manually] selected and [!UICONTROL Next] highlighted.](../../images/ui/resources/schemas/relational-dialog.png)
 
 The **[!UICONTROL Relational schema details]** page appears. Enter a schema display name and an optional description, then select **[!UICONTROL Finish]** to create the schema.  
    
-![The Relational schema details view with [!UICONTROL Schema display name], [!UICONTROL Description], and [!UICONTROL Finish] highlighted.](../../images/ui/resources/schemas/model-based-details.png)
+![The Relational schema details view with [!UICONTROL Schema display name], [!UICONTROL Description], and [!UICONTROL Finish] highlighted.](../../images/ui/resources/schemas/relational-details.png)
 
 The Schema Editor opens with an empty canvas for defining the schema structure. The [!UICONTROL Type] field in the [!UICONTROL  Schema properties] sidebar indicates this is a [!UICONTROL Relational] schema.
 
-![The Schema Editor canvas showing an empty relational schema structure with Relational type highlighted.](../../images/ui/resources/schemas/model-based-empty-canvas.png)
+![The Schema Editor canvas showing an empty relational schema structure with Relational type highlighted.](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
 #### Add a version identifier field {#add-version-identifier}
 

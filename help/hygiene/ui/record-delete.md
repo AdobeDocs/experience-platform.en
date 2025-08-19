@@ -199,15 +199,15 @@ After the request is submitted, a work order is created and appears on the [!UIC
 
 ![The [!UICONTROL Record] tab of the [!UICONTROL Data Lifecycle] workspace with the new request highlighted.](../images/ui/record-delete/request-log.png)
 
-<!-- TODO: PLAT-240919 Add Model-Based Schema hygiene section 
+<!-- TODO: PLAT-240919 Add Relational Schema hygiene section  
 
-## Deleting records from model-based datasets {#model-based-record-delete}
+## Deleting records from relational datasets {#relational-record-delete}
 
-Model-based datasets support record deletion with specific considerations for change data capture (CDC) workflows and source data retention.
+Relational datasets support record deletion with specific considerations for change data capture (CDC) workflows and source data retention.
 
 ### Record deletion behavior
 
-When deleting records from model-based datasets:
+When deleting records from relational datasets:
 
 - **Platform deletion**: Records are removed from the Experience Platform dataset and data lake
 - **Source retention**: Records remain in the original source system unless explicitly deleted there
@@ -215,7 +215,7 @@ When deleting records from model-based datasets:
 
 ### CDC and control columns
 
-Model-based datasets that use Sources with change data capture rely on the `_change_request_type` control column:
+Relational datasets that use Sources with change data capture rely on the `_change_request_type` control column:
 
 - **Delete operations**: Records with `_change_request_type = 'd'` are automatically deleted during ingestion
 - **Control column behavior**: The `_change_request_type` column is read during ingestion but is not stored in the target schema or mapped to XDM fields
@@ -225,13 +225,13 @@ Model-based datasets that use Sources with change data capture rely on the `_cha
 >
 >Deleting records through the Data Lifecycle UI operates independently of CDC workflows. To delete records from both Platform and the source system, you must perform deletion operations in both locations.
 
-### Best practices for model-based record deletion
+### Best practices for relational record deletion
 
 - **Coordinate deletions**: Plan record deletions to align with your CDC and source data management strategies
 - **Monitor CDC flows**: After deleting records in Platform, monitor CDC dataflows to ensure deleted records are not re-ingested
 - **Source cleanup**: Consider whether records should also be deleted from source systems to prevent re-ingestion during full refreshes
 
-For more information on model-based schemas and CDC workflows, see [Model-Based Schema overview](../../xdm/schema/model-based.md) and [Enable change data capture](../../sources/tutorials/api/change-data-capture.md).
+For more information on relational schemas and CDC workflows, see [Relational Schema overview](../../xdm/schema/relational.md) and [Enable change data capture](../../sources/tutorials/api/change-data-capture.md).
 
 -->
 

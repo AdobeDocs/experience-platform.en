@@ -34,13 +34,13 @@ For partner-authored and maintained connectors, this means that issues with the 
 
 Read the following sections for a list of all sources available in the sources catalog.
 
-<!-- TODO: Add Model-Based Schema Overview Integration
+<!-- TODO: Add Relational Schema Overview Integration
 Requirements for update:
-- Add brief paragraph explaining that Sources can ingest data into model-based datasets
-- Mention that model-based schemas support multiple data models beyond standard AEP (Campaign Orchestration, Data Distiller, B2B)
-- Note the workflow: "Create model-based schema → create dataset → configure Sources → enable CDC (when needed)"
-- Reference that model-based schemas have specific requirements (primary key, version descriptor, timestamp descriptor for time-series)
-- Cross-link to XDM model-based schema documentation: "[Model-Based Schema overview](../xdm/schema/model-based.md)"
+- Add brief paragraph explaining that Sources can ingest data into relational datasets
+- Mention that relational schemas support multiple data models beyond standard AEP (Campaign Orchestration, Data Distiller, B2B)
+- Note the workflow: "Create relational schema → create dataset → configure Sources → enable CDC (when needed)"
+- Reference that relational schemas have specific requirements (primary key, version descriptor, timestamp descriptor for time-series)
+- Cross-link to XDM relational schema documentation: "[Relational Schema overview](../xdm/schema/relational.md)"
 - Keep wording neutral about entitlements/feature flags
 - Use sentence case heading if adding subheading
 -->
@@ -305,11 +305,11 @@ With attribute-based access control, you can apply mapping configurations to fie
   <!-- replace list item below -->
 - Additionally, a dataflow must have the exact same schema ID and version in its mapping, target dataset, and target connection.
 
-<!-- TODO: Update Schema Requirement Language for Model-Based Schemas
+<!-- TODO: Update Schema Requirement Language for Relational Schemas
 Requirements for update:
 - Replace existing line 294: "Additionally, a dataflow must have the exact same schema ID and version in its mapping, target dataset, and target connection."
-- New text should read: "Additionally, a dataflow must have the exact same schema ID and version in its mapping, target dataset, and target connection. This applies to both standard XDM schemas and model-based schemas."
-- Add note: "Model-based schemas have additional requirements including primary key and version descriptor fields. For more information, see [Model-Based Schema overview](../xdm/schema/model-based.md)."
+- New text should read: "Additionally, a dataflow must have the exact same schema ID and version in its mapping, target dataset, and target connection. This applies to both standard XDM schemas and relational schemas."
+- Add note: "relational schemas have additional requirements including primary key and version descriptor fields. For more information, see [Relational Schema overview](../xdm/schema/relational.md)."
 -->
 
 For more information on attribute-based access control, read the [attribute-based access control overview](../access-control/abac/overview.md).

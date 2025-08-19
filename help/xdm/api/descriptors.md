@@ -19,7 +19,14 @@ The `/descriptors` endpoint in the [!DNL Schema Registry] API allows you to prog
 
 The endpoint used in this guide is part of the [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
-In addition to standard descriptors, the [!DNL Schema Registry] supports descriptor types for relational schemas, such as **Primary Key**, **Version**, and **Timestamp**. These enforce uniqueness, control versioning, and define time-series fields at the schema level. If you are unfamiliar with relational schemas, review the [relational schemas overview](./model-based.md) before continuing.
+In addition to standard descriptors, the [!DNL Schema Registry] supports descriptor types for relational schemas, such as **Primary Key**, and **Version**. These enforce uniqueness, control versioning, and define time-series fields at the schema level. If you are unfamiliar with relational schemas, review the [relational schemas overview](./relational.md) before continuing.
+
+<!-- For Sept:
+add in timestamp descriptors to the paragraph above. -->
+
+>[!IMPORTANT]
+>
+>Relational schemas currently support **record behavior only**. Time-series behavior is **not supported** at this time, and descriptors such as **timestamp** cannot be used with relational schemas.
 
 See the [Appendix](#defining-descriptors) for details on all descriptor types.
 
@@ -499,7 +506,12 @@ The primary key descriptor (`xdm:descriptorPrimaryKey`) enforces uniqueness and 
 | -------------------- | ----------------------------------------------------------------------------- |
 | `@type`              | Must be `xdm:descriptorPrimaryKey`.                                           |
 | `xdm:sourceSchema`   | `$id` URI of the schema.                                                      |
-| `xdm:sourceProperty` | JSON Pointer(s) to the primary key field(s). Use an array for composite keys. For time-series schemas, the composite key must include the timestamp field to ensure uniqueness across event records. |
+| `xdm:sourceProperty` | JSON Pointer(s) to the primary key field(s). Use an array for composite keys. |
+
+<!-- For Sept:
+ Replace the above: 
+ | `xdm:sourceProperty` | JSON Pointer(s) to the primary key field(s). Use an array for composite keys. For time-series schemas, the composite key must include the timestamp field to ensure uniqueness across event records. |
+ -->
 
 
 #### Version descriptor {#version-descriptor}
@@ -520,6 +532,7 @@ The **Version** descriptor (`xdm:descriptorVersion`) designates a field to detec
 | `xdm:sourceSchema`   | `$id` URI of the schema.                                      |
 | `xdm:sourceProperty` | JSON Pointer to the version field. Must be marked `required`. |
 
+<!-- For Sept:
 #### Timestamp descriptor {#timestamp-descriptor}
 
 The **Timestamp** descriptor (`xdm:descriptorTimestamp`) designates a date-time field as the timestamp for schemas with `"meta:behaviorType": "time-series"`.
@@ -536,7 +549,7 @@ The **Timestamp** descriptor (`xdm:descriptorTimestamp`) designates a date-time 
 | -------------------- | ------------------------------------------------------------------------------------------ |
 | `@type`              | Must be `xdm:descriptorTimestamp`.                                                         |
 | `xdm:sourceSchema`   | `$id` URI of the schema.                                                                   |
-| `xdm:sourceProperty` | JSON Pointer to the timestamp field. Must be marked `required` and be of type `date-time`. |
+| `xdm:sourceProperty` | JSON Pointer to the timestamp field. Must be marked `required` and be of type `date-time`. | -->
 
 ##### B2B relationship descriptor {#B2B-relationship-descriptor}
 

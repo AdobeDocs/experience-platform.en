@@ -99,7 +99,11 @@ To begin ingesting data into Experience Platform, you can use Catalog Service to
 
 See the [Catalog Service overview](../catalog/home.md) for more information. See the [Data Ingestion overview](../ingestion/home.md) for more information on Adobe Experience Platform Data Ingestion.
 
-### Relational schemas
+### Relational schemas {#relational-schemas}
+
+>[!AVAILABILITY]
+>
+>Currently, relational schemas are **record-based only** and available based on your license or feature enablement. This includes Adobe Journey Optimizer **Campaign Orchestration**, **Data Distiller**, and **Real-Time CDP B2B** editions.
 
 Relational schemas are designed for structured, relational-style data patterns. They enforce primary keys, support version descriptors, and define schema-to-schema relationships using primary and foreign keys. Unlike standard XDM schemas, they do not require classes or field groups and are optimized for ingestion through change data capture (CDC) workflows.
 
@@ -110,7 +114,7 @@ Use a relational schema when you need to:
 * Ingest data through CDC-enabled sources.
 * Support use cases such as cross-channel campaign orchestration, advanced analytics with Data Distiller, or business-to-business relationship modeling.
 
-To create a relational schema, select **[!UICONTROL relational]** when creating a schema, choose the appropriate base class (**[!UICONTROL Record]** or **[!UICONTROL Time-series]**), and add the required primary key, version descriptor, and—if applicable—timestamp descriptor fields. You can then configure additional fields and define relationships with other schemas.  
+To create a relational schema, select **[!UICONTROL relational]** when creating a schema. Relational schemas do not use classes or field groups. Instead, you define the structure manually or by uploading a DDL file. Relational schemas require you to add a required primary key, version descriptor, and—if applicable—timestamp descriptor fields. You can then configure additional fields and define relationships with other schemas.
 
 >[!NOTE]
 >

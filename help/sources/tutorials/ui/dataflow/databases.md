@@ -81,13 +81,13 @@ When you are finished providing details to your dataflow, select **[!UICONTROL N
 The [!UICONTROL Mapping] step appears, providing you with an interface to map the source fields from your source schema to their appropriate target XDM fields in the target schema.
 
 Experience Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../data-prep/ui/mapping.md).
-<!-- TODO: PLAT-240919 Add Model-Based Schema Mapping Guidance
+<!-- TODO: PLAT-240919 Add relational schema mapping guidance
 Requirements for update:
-- Add note about model-based schema mapping considerations
-- Text: "When mapping to model-based schemas, ensure that required fields (primary key, version descriptor, and timestamp descriptor for time-series data) are properly mapped from your source data."
+- Add note about relational schema mapping considerations
+- Text: "When mapping to relational schemas, ensure that required fields (primary key, version descriptor, and timestamp descriptor for time-series data) are properly mapped from your source data."
 - Add: "Control columns such as _change_request_type used for change data capture are read during ingestion but are not stored in the target schema."
-- Include: "Model-based schemas support relationships between datasets through primary and foreign key mappings."
-- Cross-reference: "For more information on model-based schema requirements, see [Model-Based Schema overview](../../../xdm/schema/model-based.md)."
+- Include: "Relational schemas support relationships between datasets through primary and foreign key mappings."
+- Cross-reference: "For more information on relational schema requirements, see [Relational Schema overview](../../../xdm/schema/relational.md)."
 --> 
 Once your source data is successfully mapped, select **[!UICONTROL Next]**.
 
@@ -125,11 +125,11 @@ The **[!UICONTROL Review]** step appears, allowing you to review your new datafl
 
 * **[!UICONTROL Connection]**: Shows the source type, the relevant path of the chosen source file, and the amount of columns within that source file.
 * **[!UICONTROL Assign dataset & map fields]**: Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
-<!-- TODO: PLAT-240919 Add Model-Based Dataset Review Information
+<!-- TODO: PLAT-240919 Add Relational Dataset Review Information
 Requirements for update:
-- Update the "Assign dataset & map fields" description to include model-based schemas
-- Add text: "If using a model-based schema, verify that required fields (primary key, version descriptor) are properly mapped and that any CDC control columns are configured correctly."
-- Mention: "Model-based datasets enable support for multiple data models and change data capture workflows."
+- Update the "Assign dataset & map fields" description to include relational schemas
+- Add text: "If using a relational schema, verify that required fields (primary key, version descriptor) are properly mapped and that any CDC control columns are configured correctly."
+- Mention: "Relational datasets enable support for multiple data models and change data capture workflows."
 -->
 * **[!UICONTROL Scheduling]**: Shows the active period, frequency, and interval of the ingestion schedule.
 
