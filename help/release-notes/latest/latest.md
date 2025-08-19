@@ -103,6 +103,7 @@ For more information about Catalog Service, read the the [Catalog Service overvi
 | Feature | Description |
 | --- | --- |
 | Enhanced search, filtering, and tagging capabilities for destinations | Improve your destination management workflow with enhanced search, filtering, and tagging capabilities across the [Browse](../../destinations/ui/destinations-workspace.md#browse) and [Accounts](../../destinations/ui/destinations-workspace.md#accounts) tabs. You can now search for specific dataflows and accounts by name, filter by various criteria including destination platform, status, and dates, and create custom tags to organize your destinations. Column sorting is also available for key fields like last dataflow run time, making it easier to identify and manage your destination connections. |
+
 ## Experience Data Model (XDM) {#xdm}
 
 XDM is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
