@@ -138,6 +138,7 @@ role: Admin,User
         * [Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
         * [SFTP connection](./catalog/cloud-storage/sftp.md)
         * [(Beta) Snowflake Streaming connection](./catalog/cloud-storage/snowflake.md)
+        * [(Beta) Snowflake Batch connection](./catalog/cloud-storage/snowflake-batch.md)
         * [IP address allowlist for file-based cloud storage destinations](./catalog/cloud-storage/ip-address-allow-list.md)
     * Customer Relationship Management (CRM) destinations {#crm}
         * [Hubspot connection](./catalog/crm/hubspot.md)
