@@ -201,35 +201,39 @@ After the request is submitted, a work order is created and appears on the [!UIC
 
 ## Deleting records from relational datasets {#relational-record-delete}
 
-Relational datasets support record deletion with specific considerations for change data capture workflows and source data retention.
+Relational datasets support record deletion as part of data lifecycle management in Experience Platform. When used with change data capture, deletions must be handled carefully to prevent unintended re-ingestion or misalignment with the source system.
 
 ### Record deletion behavior
 
-When deleting records from relational datasets:
+The following table outlines how record deletions behave across Platform and source systems, depending on the ingestion method and change data capture configuration.
 
-* **Platform deletion**: Records are removed from the Experience Platform dataset and data lake.
-* **Source retention**: Records typically remain in the original source system unless explicitly deleted there. If using a full refresh ingestion method, these records may be re-ingested unless they are removed or flagged for deletion in the source.
-* **CDC impact**: If using Sources with CDC, future sync operations will not re-ingest deleted records unless they are recreated in the source or were not properly flagged with a delete indicator.
+| Aspect              | Behavior                                                                 |
+|---------------------|--------------------------------------------------------------------------|
+| Platform deletion   | Records are removed from the Experience Platform dataset and data lake. |
+| Source retention    | Records remain in the source system unless explicitly deleted there.     |
+| Full refresh impact | If using full refresh, deleted records may be re-ingested unless removed or excluded from the source. |
+| CDC behavior        | Records flagged with `_change_request_type = 'd'` are deleted during ingestion. Unflagged records may be re-ingested. |
 
-### Change data capture and control columns
+Use consistent deletion logic across your source and Platform datasets to avoid data mismatches and re-ingestion issues.
 
 Relational datasets that use Sources with change data capture can rely on the `_change_request_type` control column when supporting delete operations:
+### Change data capture and control columns
 
-* **Delete operations**: Records with `_change_request_type = 'd'` are automatically deleted during ingestion.
-* **Control column behavior**: The `_change_request_type` column is read during ingestion but is not stored in the target schema or mapped to XDM fields.
-* **Default behavior**: If the control column is missing, records default to upsert (`u`) operations.
+Model-based schemas that use Sources with change data capture can rely on the `_change_request_type` control column to distinguish between upserts and deletes. During ingestion, records flagged with `'d'` are deleted from the dataset, while those without the column—or with `'u'`—are treated as upserts. The `_change_request_type` column is read at ingestion time only and is not stored in the target schema or mapped to XDM fields.
 
 >[!NOTE]
 >
->Deleting records through the Data Lifecycle UI operates independently of CDC workflows. To delete records from both Platform and the source system, you must perform deletion operations in both locations.
+>Deleting records through the Data Lifecycle UI does not affect the source system. To remove data from both locations, delete it in both Platform and the source.
 
 ### Best practices for relational record deletion
 
-* **Coordinate deletions**: Plan record deletions to align with your CDC and source data management strategies.
-* **Monitor CDC flows**: After deleting records in Platform, monitor CDC dataflows and confirm that the records are either removed from the source system or included with `_change_request_type = 'd'` to avoid unintentional re-ingestion.
-* **Source cleanup**: For sources that use full refresh ingestion or don't support deletes through CDC, ensure records are also deleted from the source system to prevent them from being re-ingested.
+To prevent unintentional re-ingestion and ensure data consistency across systems, follow these best practices:
 
-For more information on relational schemas and CDC workflows, see the [Model-based schemas overview](../../xdm/schema/relational.md) and [Enable change data capture](../../sources/tutorials/api/change-data-capture.md).
+* **Coordinate deletions**: Align record deletions with your change data capture configuration and source data management strategy.
+* **Monitor CDC flows**: After deleting records in Platform, monitor dataflows and confirm that the source system either removes the same records or marks them with `_change_request_type = 'd'`.
+* **Clean up the source**: For sources using full refresh ingestion or lacking CDC delete support, delete records directly from the source system to avoid re-ingestion.
+
+To learn more about schema design and change data capture configuration, see the [Model-based schema requirements](../../xdm/schema/relational.md) and the guide to [Enabling change data capture in sources](../../sources/tutorials/api/change-data-capture.md).
 
 ## Next steps
 
