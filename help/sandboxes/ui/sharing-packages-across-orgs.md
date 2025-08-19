@@ -67,17 +67,34 @@ Use this workflow/process to share packages between your organization and the so
 >
 >Only packages with the status **Published** can be shared.
 
-To share a package to an approved partner organization, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Packages]** tab. Next, select the ellipsis (`...`) next to the package, and then select **[!UICONTROL Share package]** from the dropdown menu.
+#### Share multi-object packages {#multi-object-packages}
+
+To share a multi-object package to an approved partner organization, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Packages]** tab. Next, select the ellipsis (`...`) next to the package, and then select **[!UICONTROL Share package]** from the dropdown menu.
 
 ![List of packages showing the dropdown menu with Share package highlighted.](../images/ui/sandbox-tooling/private-share-package.png)
 
-In the **[!UICONTROL Share package]** dialog, select the package to share from the **[!UICONTROL Share settings]** dropdown, then select **[!UICONTROL Confirm]**.
+In the **[!UICONTROL Share package]** dialog, select the organizations to share the package with from the **[!UICONTROL Share settings]** dropdown, then select **[!UICONTROL Confirm]**.
 
 >[!TIP]
 >
 >It is possible to select more than one organization. Selected organizations will show up beneath the [!UICONTROL Share settings] dropdown.
 
 ![Share package dialog with Share settings and Confirm highlighted.](../images/ui/sandbox-tooling/private-share-package-confirm.png)
+
+#### Share entire sandbox packages {#entire-sandbox-packages}
+
+To share an entire sandbox package to an approved partner organization, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Packages]** tab. Next, select the ellipsis (`...`) next to the package, and then select **[!UICONTROL Share package]** from the dropdown menu.
+
+![Packages tab showing a list of packages, showing the drop down menu.](../images/ui/sandbox-tooling/private-share-entire-sandbox.png)
+
+In the **[!UICONTROL Share package]** dialog, select the organizations to share the package with from the **[!UICONTROL Share settings]** dropdown, then select **[!UICONTROL Confirm]**.
+
+>[!TIP]
+>
+>It is possible to select more than one organization. Selected organizations will show up beneath the [!UICONTROL Share settings] dropdown.
+
+![Share package dialog with Share settings and Confirm highlighted.](../images/ui/sandbox-tooling/private-share-entire-sandbox-confirm.png)
+
 
 ## Public packages {#public-packages}
 
@@ -130,3 +147,19 @@ To view the current status of your share request, navigate to the **[!UICONTROL 
 This document demonstrated how to use the Sandbox tooling feature to share packages across different organizations. For additional information, refer to the [sandbox tooling guide](../ui/sandbox-tooling.md).
 
 To learn how to perform different operations using the Sandbox API, see the [sandbox developer guide](../api/getting-started.md). For a high-level overview of sandboxes in Experience Platform, refer to the [overview documentation](../home.md).
+
+
+
+## Sandboxes {#sandboxes}
+
+Experience Platform is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater for the development, testing, and deployment of these applications while ensuring operational compliance.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| Dependency object de-duplication in importing workflow | Sandbox tooling will now always reuse existing objects if objects with the same name are detected, to avoid object proliferation. This change applies to the following objects: <ul><li>Schema</li><li>Field group</li><li>Audience</li><li>`decisioning_ranking`</li><li>`decisioning_rules`</li></ul> For more information, read the [guide on objects supported for sandbox tooling](../../sandboxes/ui/sandbox-tooling.md#objects-supported-for-sandbox-tooling). |
+
+| Entire sandbox support for across orgs package sharing | Sandbox tooling now supports **Entire sandbox** type in across org package sharing. You can now share both Entire sandbox and Multi-object packages across orgs. For more information, read the [guide on objects supported for sandbox tooling](../../sandboxes/ui/sharing-packages-across-orgs.md). |
+
+For more information on sandboxes, read the [sandboxes overview](../../sandboxes/home.md).
