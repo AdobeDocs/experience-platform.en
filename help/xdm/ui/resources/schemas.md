@@ -27,7 +27,9 @@ In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in 
 
 ## Create a model-based schema {#create-model-based-schema}
 
-Select **[!UICONTROL Model-based]** for fine-grained control over records and relational modeling. Model-based schemas let you define relational-style data structures in Experience Platform and support features such as primary key enforcement, record-level versioning, and schema-level relationships.
+Select [!UICONTROL Model-based] to define structured, relational-style schemas with fine-grained control over records. Model-based schemas support primary key enforcement, record-level versioning, and schema-level relationships through primary and foreign keys. They are also optimized for incremental ingestion using change data capture (CDC) and support multiple data models for Campaign Orchestration, Data Distiller, and B2B use cases.
+
+To learn more, see [Model-based schema overview](../../schema/model-based.png).
 
 The **[!UICONTROL Create a model-based schema]** dialog appears. You can choose either **[!UICONTROL Create manually]** or [**[!UICONTROL Upload DDL file]**](#upload-ddl-file) to define the schema structure.
 
@@ -59,7 +61,9 @@ In the right rail, enable the **[!UICONTROL Version Identifier]** checkbox, then
 >
 >A model-based schema must include a version identifier field to support record-level updates and change data capture ingestion.
 
-Next, proceed to [define primary keys](../fields/identity.md#define-a-identity-field), [add additional fields](#add-field-groups), [add schema-level relationships](../../tutorials/relationship-ui.md#relationship-field), and a [version identifier](#add-version-identifier) as needed.
+To define relationships, select **[!UICONTROL Add Relationship]** in the Schema Editor to create schema-level primary/foreign key relationships. See the tutorial on [adding schema-level relationships](../../tutorials/relationship-ui.md#relationship-field) for more information.
+
+Next, proceed to [define primary keys](../fields/identity.md#define-a-identity-field), and [add additional fields](#add-field-groups) as needed. For guidance on how to enable change data capture in Experience Platform Sources, see the [change data capture ingestion guide](../../../sources/tutorials/api/change-data-capture.md).
 
 >[!NOTE]
 >
@@ -71,13 +75,15 @@ Use this workflow to define the schema by uploading a DDL file. In the **[!UICON
 
 ![The Create a model-based schema dialog with [!UICONTROL Upload DDL file] selected and [!UICONTROL Next] highlighted.](../../images/ui/resources/schemas/upload-ddl-file.png)
 
-The [!UICONTROL Select entities and fields to import] dialog appears, allowing you to preview the schema. Review the schema structure, and use the radio buttons and checkboxes to ensure that each entity has a primary key and version identifier specified. If everything looks correct, select **[!UICONTROL Done]** to create the schema.
+The [!UICONTROL Select entities and fields to import] dialog appears, allowing you to preview the schema. Review the schema structure, and use the radio buttons and checkboxes to ensure that each entity has a primary key and version identifier specified.
 
 >[!IMPORTANT]
 >
 >The table structure must contain a **primary key** and a **version identifier**, such as a `lastmodified` field of type datetime or number.
 >
 >For change data capture ingestion, a special column named `_change_request_type` of type String is also required to enable incremental processing. This field indicates the type of data change (for example,  `u` (upsert) or `d` (delete)).
+
+Although required during ingestion, control columns like `_change_request_type` are not stored in the schema and do not appear in the final schema structure. If everything looks correct, select **[!UICONTROL Done]** to create the schema.
 
 >[!NOTE]
 >
@@ -90,6 +96,8 @@ The [!UICONTROL Select entities and fields to import] dialog appears, allowing y
 The schema opens in the Schema Editor, where you can adjust the structure before saving.
 
 Next, proceed to [add additional fields](#add-field-groups), [define primary keys](../fields/identity.md#define-a-identity-field), [add schema-level relationships](../../tutorials/relationship-ui.md#relationship-field), and a [version identifier](#add-version-identifier) as needed.
+
+For guidance on how to enable change data capture in Experience Platform Sources, see the [change data capture ingestion guide](../../../sources/tutorials/api/change-data-capture.md).
 <!-- ... -->
 <!-- ## Model-based schema creation {#model-based-creation}
 
