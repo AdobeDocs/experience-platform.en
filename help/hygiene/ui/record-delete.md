@@ -218,7 +218,7 @@ To prevent re-ingestion, apply the same deletion approach in both your source sy
 
 ### Change data capture and control columns
 
-Model-based schemas that use Sources with change data capture can use the `_change_request_type` control column when distinguishing deletes from upserts. During ingestion, records flagged with `'d'` are deleted from the dataset, while those flagged with `'u'` or without the column are treated as upserts. The `_change_request_type` column is read at ingestion time only and is not stored in the target schema or mapped to XDM fields.
+Relational schemas that use Sources with change data capture can use the `_change_request_type` control column when distinguishing deletes from upserts. During ingestion, records flagged with `'d'` are deleted from the dataset, while those flagged with `'u'` or without the column are treated as upserts. The `_change_request_type` column is read at ingestion time only and is not stored in the target schema or mapped to XDM fields.
 
 >[!NOTE]
 >

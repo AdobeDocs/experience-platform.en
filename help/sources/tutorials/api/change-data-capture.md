@@ -13,17 +13,17 @@ With change data capture, each flow captures and applies inserts, updates, and d
 
 You can use change data capture with the following sources:
 
-## Using change data capture with model-based schemas
+## Using change data capture with relational schemas
 
 >[!AVAILABILITY]
 >
 >Currently, relational schemas are **record-based only** and available based on your license or feature enablement.
 
-Model-based schemas extend Experience Platform to enforce primary keys, track row-level changes, and define schema-level relationships. With change data capture, they apply inserts, updates, and deletes directly in the data lake, reducing the need for ETL or manual reconciliation.
+Relational schemas extend Experience Platform to enforce primary keys, track row-level changes, and define schema-level relationships. With change data capture, they apply inserts, updates, and deletes directly in the data lake, reducing the need for ETL or manual reconciliation.
 
-### Model-based schema requirements for change data capture
+### Relational schema requirements for change data capture
 
-Before you use a model-based schema with change data capture, configure the following descriptors:
+Before you use a relational schema with change data capture, configure the following descriptors:
 
 * Uniquely identify each record with a primary key.  
 * Apply updates in sequence using a version descriptor.  

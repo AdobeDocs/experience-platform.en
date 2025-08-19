@@ -84,16 +84,16 @@ Experience Platform provides intelligent recommendations for auto-mapped fields 
 
 >[!NOTE]
 >
->When mapping to model-based schemas, make sure your source data includes the required fields, such as a primary key and a version descriptor. 
+>When mapping to relational schemas, make sure your source data includes the required fields, such as a primary key and a version descriptor. 
 
 <!-- For Sept:
 and, for time-series schemas, a timestamp descriptor. -->
 
 Control columns such as `_change_request_type`, used for change data capture, are read during ingestion but are not stored in the target schema.
 
-Model-based schemas also support relationships between datasets using primary and foreign key mappings.
+Relational schemas also support relationships between datasets using primary and foreign key mappings.
 
-For more information, see the [Model-based schemas overview](../../../../xdm/schema/relationalss.md).
+For more information, see the [relational schemas overview](../../../../xdm/schema/relationalss.md).
 
 Once your source data is successfully mapped, select **[!UICONTROL Next]**.
 
