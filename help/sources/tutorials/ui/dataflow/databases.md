@@ -130,13 +130,7 @@ See the table below for more information on scheduling configurations.
 The **[!UICONTROL Review]** step appears, allowing you to review your new dataflow before it is created. Details are grouped within the following categories:
 
 * **[!UICONTROL Connection]**: Shows the source type, the relevant path of the chosen source file, and the amount of columns within that source file.
-* **[!UICONTROL Assign dataset & map fields]**: Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
-<!-- TODO: PLAT-240919 Add Relational Dataset Review Information
-Requirements for update:
-- Update the "Assign dataset & map fields" description to include relational schemas
-- Add text: "If using a relational schema, verify that required fields (primary key, version descriptor) are properly mapped and that any CDC control columns are configured correctly."
-- Mention: "Relational datasets enable support for multiple data models and change data capture workflows."
--->
+* **[!UICONTROL Assign dataset & map fields]**: Displays the dataset that the source data will be ingested into, along with the associated schema. If you're using a model-based schema, verify that required fields—such as the primary key and version descriptor—are correctly mapped, and ensure that any CDC control columns are configured properly. Model-based datasets support multiple data models and enable [change data capture workflows](../../api/change-data-capture.md).
 * **[!UICONTROL Scheduling]**: Shows the active period, frequency, and interval of the ingestion schedule.
 
 Once you have reviewed your dataflow, select **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
