@@ -99,26 +99,26 @@ To begin ingesting data into Experience Platform, you can use Catalog Service to
 
 See the [Catalog Service overview](../catalog/home.md) for more information. See the [Data Ingestion overview](../ingestion/home.md) for more information on Adobe Experience Platform Data Ingestion.
 
-### Model-based schemas
+### Relational schemas
 
-Model-based schemas are designed for structured, relational-style data patterns. They enforce primary keys, support version descriptors, and define schema-to-schema relationships using primary and foreign keys. Unlike standard XDM schemas, they do not require classes or field groups and are optimized for ingestion through change data capture (CDC) workflows.
+Relational schemas are designed for structured, relational-style data patterns. They enforce primary keys, support version descriptors, and define schema-to-schema relationships using primary and foreign keys. Unlike standard XDM schemas, they do not require classes or field groups and are optimized for ingestion through change data capture (CDC) workflows.
 
-Use a model-based schema when you need to:
+Use a relational schema when you need to:
 
 * Enforce primary keys and track record versions.
 * Create relationships between schemas with primary and foreign keys.
 * Ingest data through CDC-enabled sources.
 * Support use cases such as cross-channel campaign orchestration, advanced analytics with Data Distiller, or business-to-business relationship modeling.
 
-To create a model-based schema, select **[!UICONTROL Model-Based]** when creating a schema, choose the appropriate base class (**[!UICONTROL Record]** or **[!UICONTROL Time-series]**), and add the required primary key, version descriptor, and—if applicable—timestamp descriptor fields. You can then configure additional fields and define relationships with other schemas.  
+To create a relational schema, select **[!UICONTROL relational]** when creating a schema, choose the appropriate base class (**[!UICONTROL Record]** or **[!UICONTROL Time-series]**), and add the required primary key, version descriptor, and—if applicable—timestamp descriptor fields. You can then configure additional fields and define relationships with other schemas.  
 
 >[!NOTE]
 >
->Control columns used during ingestion (such as `_change_request_type` for CDC workflows) are read at ingestion time and are not stored in the schema or mapped to XDM fields. Model-based schemas are available with appropriate Experience Platform entitlements and feature enablement.
+>Control columns used during ingestion (such as `_change_request_type` for CDC workflows) are read at ingestion time and are not stored in the schema or mapped to XDM fields. Relational schemas are available with appropriate Experience Platform entitlements and feature enablement.
 
 For detailed steps, see:
 
-* [Model-based schema overview](./schema/model-based.md)
+* [Relational schema overview](./schema/model-based.md)
 * [UI tutorial](./ui/resources/schemas.md#model-based-creation)
 * [API tutorial](./api/schemas.md#create-model-based-schema)
 * [Descriptor documentation](./api/descriptors.md#relationship-descriptor)

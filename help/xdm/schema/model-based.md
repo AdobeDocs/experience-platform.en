@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;home;popular topics;model-based schema; schema;Schema;xdm;experience data model;
+keywords: Experience Platform;home;popular topics;relational schema; schema;Schema;xdm;experience data model;
 solution: Experience Platform
-title: Model-based schemas
-description: Learn about model-based schemas in Adobe Experience Platform, including features, required fields, relationships, ingestion methods, and limitations.
+title: Relational schemas
+description: Learn about relational schemas in Adobe Experience Platform, including features, required fields, relationships, ingestion methods, and limitations.
 ---
-# Model-based schemas
+# Relational schemas
 
-Use model-based schemas in Adobe Experience Platform to represent structured, relational-style data in the data lake, with enforced primary keys and relationships without the constraints of a full relational database. 
+Use relational schemas in Adobe Experience Platform to represent structured, relational-style data in the data lake, with enforced primary keys and relationships without the constraints of a full relational database. 
 
 <!-- Define enforced primary keys to maintain data integrity and prevent duplicates, enable row- and record-level change tracking for precise updates and deletes, and create schema-level relationships you can reference across applications. Work with multiple data models beyond the standard Experience Platform schema to avoid duplicating modeling work, define relationships once and reuse them, and maintain consistent data structures across Adobe applications. 
 
 or  -->
 
-With model-based schemas, you can:
+With relational schemas, you can:
 
 * Define enforced primary keys to maintain data integrity and prevent duplicates.
 * Enable precise change tracking with with row- and record-level updates and deletes.
@@ -24,19 +24,17 @@ This approach removes dependencies on union schemas, streamlines schema evolutio
 
 >[!AVAILABILITY]
 >
->Currently, model-based schemas are **record-based only** and available based on your license or feature enablement. This includes Adobe Journey Optimizer **Campaign Orchestration**, **Data Distiller**, and **Real-Time CDP B2B** editions.
+>Currently, relational schemas are **record-based only** and available based on your license or feature enablement. This includes Adobe Journey Optimizer **Campaign Orchestration**, **Data Distiller**, and **Real-Time CDP B2B** editions.
 
-## How model-based schemas differ from standard XDM schemas
+## How relational schemas differ from standard XDM schemas
 
 Standard XDM schemas in Experience Platform follow one of three data behaviors: Record, Time-series, or Ad-hoc. For definitions and details, see [XDM data behaviors](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home#data-behaviors).
 
 In the traditional model, Record and Time-series schemas participate in [union schemas](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/api/unions).md) (also see the [union schema UI guide](../../profile/ui/union-schema.md)), automatically evolve when shared [field groups](./composition.md#field-group) change, and require custom fields to be nested under a tenant namespace. While powerful, this model can slow onboarding, produce overly complex schemas with unused fields, and require additional data mapping or transformation. These factors increase the learning curve and ongoing maintenance effort.
 
-Model-based schemas remove union schema dependencies, eliminate auto-evolution from shared field groups, and allow direct field definitions without tenant namespace restrictions. You gain explicit control over primary keys, relationships, and schema evolution, making it easier to model data to fit your needs.
+Relational schemas remove union schema dependencies, eliminate auto-evolution from shared field groups, and allow direct field definitions without tenant namespace restrictions. You gain explicit control over primary keys, relationships, and schema evolution, making it easier to model data to fit your needs.
 
-<!-- CONFLICT: KT wiki frames background around technical constraints and union schema removal; Adam emphasized a UI terminology change from "relational" to "model-based" and licensing scope. -->
-
-## Features of model-based schemas
+## Features of relational schemas
 
 Use the following capabilities to model structured data in the data lake while maintaining governance, integrity, and interoperability.
 
@@ -47,14 +45,14 @@ Use the following capabilities to model structured data in the data lake while m
 * **Primary key enforcement**: Define a primary key to uniquely identify each record and prevent duplicates during ingestion.
 * **Version control**: Use a **version descriptor** to ensure updates are applied in the correct order, even if records arrive out of sequence.
 * **Event-time ordering**: For time-series schemas, use a **timestamp descriptor** to order events by occurrence time instead of ingestion time.
-* **Relationship mapping**: Create one-to-many or many-to-one relationships between model-based schemas or between model-based and standard schemas. Relationship definitions are stored as descriptors to enable efficient joins.
-* **Simplified evolution**: Model-based schemas do not participate in union views and are not updated when shared field groups change, preventing unexpected downstream changes.
+* **Relationship mapping**: Create one-to-many or many-to-one relationships between relational schemas or between relational and standard schemas. Relationship definitions are stored as descriptors to enable efficient joins.
+* **Simplified evolution**: Relational schemas do not participate in union views and are not updated when shared field groups change, preventing unexpected downstream changes.
 * **Flexible field definition**: Add fields directly without tenant-id namespacing. You may still use existing XDM field groups, but changes to them do not automatically propagate to your schema.
 * **No dependency on union schemas**: Improves query performance and reduces the operational overhead of managing global schema views.
 
 ## Required fields
 
-Model-based schemas require certain descriptors—metadata in the schema definition that controls key behaviors and constraints. Add the following descriptors as part of your schema definition.
+Relational schemas require certain descriptors—metadata in the schema definition that controls key behaviors and constraints. Add the following descriptors as part of your schema definition.
 
 ### Primary key descriptor
 
@@ -119,7 +117,7 @@ For instructions on creating descriptors in the Schema Editor, see [Create descr
 
 ## Relationship support
 
-Model-based schemas support relationship descriptors that define how datasets connect. Use relationships to improve referential integrity and enable connected queries across entities.
+Relational schemas support relationship descriptors that define how datasets connect. Use relationships to improve referential integrity and enable connected queries across entities.
 
 Before you add relationship descriptors, decide the relationship type and target:
 
@@ -128,7 +126,7 @@ Before you add relationship descriptors, decide the relationship type and target
 
 >[!NOTE]
 >
->You can define relationships between either two model-based schemas, or a model-based schema and a standard schema.
+>You can define relationships between either two relational schemas, or a relational schema and a standard schema.
 
 **Example: One-to-many relationship**
 
@@ -166,13 +164,13 @@ For a list of relationship descriptor types and syntax, see the [descriptors API
 
 >[!NOTE]
 >
-> Model-based schemas can link to standard schemas, but cannot link to ad-hoc schemas.
+> Relational schemas can link to standard schemas, but cannot link to ad-hoc schemas.
 
-<!-- CONFLICT: KT wiki describes both model-based to model-based and model-based to standard schema relationships; Adam's notes only mention primary/foreign key relationships in general without detailing interoperability. -->
+<!-- CONFLICT: KT wiki describes both relational to relational and relational to standard schema relationships; Adam's notes only mention primary/foreign key relationships in general without detailing interoperability. -->
 
 ## Ingestion methods
 
-Use [change data capture](../../sources/tutorials/api/change-data-capture.md) in your data connections to keep model-based datasets synchronized with source systems. You can also ingest data using SQL via Data Distiller or upload files manually. Choose the path that aligns with your operational model, then apply the CDC rules consistently.
+Use [change data capture](../../sources/tutorials/api/change-data-capture.md) in your data connections to keep relational datasets synchronized with source systems. You can also ingest data using SQL via Data Distiller or upload files manually. Choose the path that aligns with your operational model, then apply the CDC rules consistently.
 
 Change data capture in Experience Platform captures and applies all changes—inserts, updates, and deletes—in real time, ensuring full alignment between source and destination data. Unlike incremental copy, which only tracks new or updated records using a timestamp column (such as `LastModified`) and cannot detect deletions, change data capture provides a complete change history.
 
@@ -190,14 +188,14 @@ Supported ingestion methods include:
 
   For step-by-step instructions on enabling CDC in the Sources workflow, see [Enable change data capture for source connections](link-to-sources-doc/PLACEHOLDER.md).
 
-* **Data Distiller**: Ingest using SQL queries to write into model-based datasets.
+* **Data Distiller**: Ingest using SQL queries to write into relational datasets.
 * **Local file upload**: Upload files manually when needed for non-source ingestion workflows.
 
-<!-- CONFLICT: KT wiki lists CDC, Data Distiller, and local file upload as options; Adam stated CDC is currently the primary supported workflow for model-based schemas. -->
+<!-- CONFLICT: KT wiki lists CDC, Data Distiller, and local file upload as options; Adam stated CDC is currently the primary supported workflow for relational schemas. -->
 
 ## Data hygiene considerations
 
-When you need to remove records from model-based datasets while keeping source systems intact, select a method that aligns with your governance and reconciliation processes. Then apply the relevant descriptors to ensure deterministic behavior.
+When you need to remove records from relational datasets while keeping source systems intact, select a method that aligns with your governance and reconciliation processes. Then apply the relevant descriptors to ensure deterministic behavior.
 
 <!-- Use these methods to maintain accurate records in the data lake without unwanted source data deletion: -->
 
@@ -219,13 +217,13 @@ The following list of descriptors indicate their relevance to hygiene operations
 
 For complete hygiene instructions, see Record Delete [UI](../../hygiene/ui/record-delete.md) and [API documentation](../../hygiene/api/workorder.md).
 Alternatively, see the guide on how to [Manage Experience Event Dataset Retention in the data lake using TTL](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md).
-<!-- CONFLICT: KT wiki describes hygiene in relation to all schema behaviors; Adam emphasized hygiene guidance in the context of record-based model-based schemas and CDC deletes as the main supported approach. -->
+<!-- CONFLICT: KT wiki describes hygiene in relation to all schema behaviors; Adam emphasized hygiene guidance in the context of record-based relational schemas and CDC deletes as the main supported approach. -->
 
 ## Limitations and considerations
 
-Review the following limitations before using model-based schemas:
+Review the following limitations before using relational schemas:
 
-* Model-based schemas do not participate in union schemas.
+* Relational schemas do not participate in union schemas.
 * Schema evolution is manual; they do not auto-update when field groups change.
 
   >[!IMPORTANT]

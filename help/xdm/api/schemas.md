@@ -192,7 +192,7 @@ A successful response returns the details of the schema. The fields that are ret
 
 The schema composition process begins by assigning a class. The class defines key behavioral aspects of the data (record or time series), as well as the minimum fields that are required to describe the data that will be ingested.
 
-For instructions on creating a schema without classes or field groups (model-based schema), see [Create a model-based schema](#create-a-model-based-schema).
+For instructions on creating a schema without classes or field groups (relational schema), see the [Create a relational schema](#create-a-model-based-schema) section.
 
 >[!NOTE]
 >
@@ -275,13 +275,13 @@ Performing a GET request to [list all schemas](#list) in the tenant container wo
 
 To add additional fields to a schema, you can perform a [PATCH operation](#patch) to add field groups to the schema's `allOf` and `meta:extends` arrays.
 
-## Create a model-based schema {#create-model-based-schema}
+## Create a relational schema {#create-model-based-schema}
 
-Create a model-based schema by making a POST request to the `/schemas` endpoint. Model-based schemas store structured, relational-style data **without** classes or field groups. Define fields directly on the schema, and identify the schema as model-based using a logical behavior tag.
+Create a relational schema by making a POST request to the `/schemas` endpoint. Relational schemas store structured, relational-style data **without** classes or field groups. Define fields directly on the schema, and identify the schema as relational using a logical behavior tag.
 
 >[!IMPORTANT]
 >
->To create a model-based schema, set `meta:extends` to `"https://ns.adobe.com/xdm/data/adhoc-v2"`. This is a **logical behavior identifier** (not a physical behavior or class). Do **not** reference classes or field groups in `allOf`, and do **not** include classes or field groups in `meta:extends`.
+>To create a relational schema, set `meta:extends` to `"https://ns.adobe.com/xdm/data/adhoc-v2"`. This is a **logical behavior identifier** (not a physical behavior or class). Do **not** reference classes or field groups in `allOf`, and do **not** include classes or field groups in `meta:extends`.
 
 Create the schema first with `POST /tenant/schemas`. Then add the required descriptors with the [Descriptors API (`POST /tenant/descriptors`)](../api/descriptors.md):
 
@@ -296,7 +296,7 @@ Create the schema first with `POST /tenant/schemas`. Then add the required descr
 
 >[!CAUTION]
 >
->Model-based schemas **do not participate in union schemas**. Do not add a `union` tag to `meta:immutableTags`. See the [unions endpoint guide](./unions.md) for details on union behavior in standard XDM.
+>Relational schemas **do not participate in union schemas**. Do not add a `union` tag to `meta:immutableTags`. See the [unions endpoint guide](./unions.md) for details on union behavior in standard XDM.
 
 **API format**
 
@@ -356,7 +356,7 @@ curl --request POST \
 
 >[!NOTE]
 >
-> This example uses a local `definitions` object referenced via `allOf` to keep fields flat and avoid tenant namespaces. You can also define fields directly under root `properties` for simplified/model-based schemas.
+> This example uses a local `definitions` object referenced via `allOf` to keep fields flat and avoid tenant namespaces. You can also define fields directly under root `properties` for simplified/relational schemas.
 
 ### Request body properties
 
@@ -364,7 +364,7 @@ curl --request POST \
 | ------------------------------- | ------ | --------------------------------------------------------- |
 | `title`                         | String | Display name of the schema.                               |
 | `description`                   | String | Short explanation of the schema's purpose.                |
-| `type`                          | String | Must be `"object"` for model-based schemas.               |
+| `type`                          | String | Must be `"object"` for relational schemas.               |
 | `definitions`                   | Object | Contains the root-level object(s) that define your schema fields. |
 | `definitions.<name>.properties` | Object | Field names and data types.                               |
 | `allOf`                         | Array  | References the root-level object definition (for example, `#/definitions/marketing_customers`). |
@@ -373,7 +373,7 @@ curl --request POST \
 
 >[!IMPORTANT]
 >
->Schema evolution for model-based schemas is additive only. Add new fields with PATCH. Do not remove, rename, or change the type of existing fields.
+>Schema evolution for relational schemas is additive only. Add new fields with PATCH. Do not remove, rename, or change the type of existing fields.
 
 **Response**
 
@@ -381,7 +381,7 @@ A successful request returns **HTTP 201 (Created)** and the created schema.
 
 >[!NOTE]
 >
->Model-based schemas do not inherit pre-seeded fields (for example, id, timestamp, or eventType). Define all required fields explicitly in your schema.
+>Relational schemas do not inherit pre-seeded fields (for example, id, timestamp, or eventType). Define all required fields explicitly in your schema.
 
 **Example response**
 
@@ -442,11 +442,11 @@ A successful request returns **HTTP 201 (Created)** and the created schema.
 | `type`              | String | Schema type.                                                |
 | `definitions`       | Object | Field definitions of the schema.                            |
 | `allOf`             | Array  | Reference to the root-level object definition (for example, `#/definitions/marketing_customers`). |
-| `meta:extends`      | Array  | Identifies the schema as model-based (`adhoc-v2`).          |
+| `meta:extends`      | Array  | Identifies the schema as relational (`adhoc-v2`).          |
 | `meta:behaviorType` | String | Behavior type (`record` or `time-series`, when enabled).    |
 | `meta:containerId`  | String | Container in which the schema is stored (e.g., `tenant`).   |
 
-To add fields to a model-based schema after it's been created, make a[PATCH request](#patch). Model-based schemas do not inherit or auto-evolve and support **additive changes only**. 
+To add fields to a relational schema after it's been created, make a[PATCH request](#patch). Relational schemas do not inherit or auto-evolve and support **additive changes only**.
 
 You can add new root-level fields (within the root definition or root `properties`), but you cannot remove, rename, or change the type of existing fields.
 
