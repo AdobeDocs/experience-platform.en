@@ -14,7 +14,7 @@ exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
 
 ## Overview {#overview}
 
-The IP ranges documented here apply to the following destinations:
+The IP ranges documented in this page apply to the following destinations:
 
 * [Advanced enterprise destinations](../destinations/destination-types.md#advanced-enterprise-destinations): [HTTP API destination](./http-destination.md), [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
 * [Streaming audience export destinations](../destinations/destination-types.md#streaming-destinations), such as [Pega CDH Realtime Audience](/help/destinations/catalog/personalization/pega-v2.md), API-based integrations with [Salesforce Marketing Cloud](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) and [Oracle Eloqua](/help/destinations/catalog/email-marketing/oracle-eloqua-api.md)
@@ -26,11 +26,14 @@ This page provides IP ranges that you can add to your allowlist, to safely expor
 
 You can define network access controls through your network firewall. By specifying the appropriate IP range, you can allow traffic for the data transfer service.
 
-If your organizational policy requires you to allowlist IPs for incoming traffic, Adobe recommends that you add the following IP ranges to an allowlist prior to working with the destinations mentioned above on this page. Failing to add your region-specific IP range to your allowlist may lead to errors or non-performance when using these streaming destinations.
+## When to allowlist the IPs in this page {#when-to-allowlist}
 
-## Mandatory IP addresses {#mandatory}
+If your organizational policy requires you to allowlist IPs for incoming traffic, you must add the IP ranges from the following categories to your allowlist prior to working with the destinations mentioned above on this page:
 
-If your organization policy requires you to allowlist IPs for incoming traffic, you must allow traffic from the following IP addresses:
+1. All the [global IP addresses](#global) 
+2. In addition to the global IP addresses, add the IP addresses corresponding to the region you are provisioned in, from the list further down the page. Failing to add your region-specific IP range to your allowlist may lead to errors or non-performance when using these streaming destinations.
+
+## Global IP addresses {#global}
 
 * `3.209.222.108`
 * `3.211.230.204`
@@ -39,7 +42,7 @@ If your organization policy requires you to allowlist IPs for incoming traffic, 
 * `66.117.18.134`
 * `66.117.18.135`  
 
-In addition to these mandatory IP addresses, you must allowlist the IP addresses for the region where your organization is provisioned from the list below.  
+In addition to these global IP addresses, you must allowlist the IP addresses for the region where your organization is provisioned from the list below.  
 
 ## VA7: US and Americas customers {#us-americas}
 
@@ -100,8 +103,7 @@ The IP range below applies to Experience Platform customers running on Amazon We
 * `51.105.144.1`
 * `51.105.144.81`
 * `51.124.70.4`
-* `51.144.184.248/29`
-* `52.142.236.87`
+* `51.144.184.248/29`* `52.142.236.87`
 * `108.141.12.47`  
 
 ## AUS5: APAC customers {#apac}
@@ -216,3 +218,4 @@ The IP range below applies to Experience Platform customers running on Amazon We
 * `20.244.79.192/28`
 * `20.244.79.208/28`
 * `20.244.79.224/28`  
+
