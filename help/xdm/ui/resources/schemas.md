@@ -29,8 +29,6 @@ In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in 
 
 Select **[!UICONTROL Model-based]** for fine-grained control over records and relational modeling. Model-based schemas let you define relational-style data structures in Experience Platform and support features such as primary key enforcement, record-level versioning, and schema-level relationships.
 
-<!-- ![The Schemas workspace with [!UICONTROL Create schema] selected and the Select schema type dropdown displayed.](../../images/ui/resources/schemas/create-schema.png) -->
-
 The **[!UICONTROL Create a model-based schema]** dialog appears. You can choose either **[!UICONTROL Create manually]** or [**[!UICONTROL Upload DDL file]**](#upload-ddl-file) to define the schema structure.
 
 ### Create manually {#create-manually}
