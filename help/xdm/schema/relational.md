@@ -6,21 +6,17 @@ description: Learn about relational schemas in Adobe Experience Platform, includ
 ---
 # Relational schemas
 
-Use relational schemas in Adobe Experience Platform to represent structured, relational-style data in the data lake, with enforced primary keys and relationships without the constraints of a full relational database. 
+Relational schemas provide a flexible, governed modeling pattern for representing structured data in the Adobe Experience Platform data lake. They support enforced primary keys, schema-level relationships, and fine-grained control over records—all without relying on union schemas or full relational database systems.
 
-<!-- Define enforced primary keys to maintain data integrity and prevent duplicates, enable row- and record-level change tracking for precise updates and deletes, and create schema-level relationships you can reference across applications. Work with multiple data models beyond the standard Experience Platform schema to avoid duplicating modeling work, define relationships once and reuse them, and maintain consistent data structures across Adobe applications. 
+Use relational schemas to:
 
-or  -->
+* Ensure data integrity with enforced single-field or composite primary keys.
+* Enable precise change tracking using versioning for inserts, updates, and deletes.
+* Define reusable schema-level relationships to model real-world entity connections.
+* Avoid duplicating schema structures across applications by supporting multiple data models.
+* Bypass union schema constraints to streamline onboarding, reduce schema bloat, and simplify evolution.
 
-With relational schemas, you can:
-
-* Define enforced primary keys to maintain data integrity and prevent duplicates.
-* Enable precise change tracking with with row- and record-level updates and deletes.
-* Create schema-level relationships that can be referenced across applications.
-* Support multiple data models beyond standard XDM to avoid duplicating modeling work.
-* Reuse relationship definitions across projects to maintain consistent data structures across Adobe applications.
-
-This approach removes dependencies on union schemas, streamlines schema evolution, and gives you more flexibility when configuring fields to match your data needs.
+Use this modeling approach for use cases such as change data capture (CDC), referential joins across datasets, and multi-entity campaign orchestration. With relational schemas you maintain explicit control over schema evolution, field structure, and data governance.
 
 >[!AVAILABILITY]
 >
@@ -128,16 +124,18 @@ For instructions on creating descriptors in the Schema Editor, see [Create descr
 
 ## Relationship support {#relationship-support}
 
-Relational schemas support relationship descriptors that define how datasets connect. Use relationships to improve referential integrity and enable connected queries across entities.
+Relational schemas support relationship descriptors that define how datasets connect across schemas. These relationships improve referential integrity, enable reusable modeling patterns, and support connected queries across applications—without embedding foreign keys directly in data rows.
 
-Before you add relationship descriptors, decide the relationship type and target:
+Relationship descriptors are defined at the schema level and resolved at query time. This allows for greater flexibility and governance across datasets.
 
-* **One-to-many** – One record in a schema relates to multiple records in another schema.
-* **Many-to-one** – Multiple records in a schema relate to one record in another schema.
+Before you add relationship descriptors, determine the appropriate type and target:
+
+* **One-to-many** – A single record in a schema maps to multiple related records in another schema.
+* **Many-to-one** – Multiple records in a schema map to a single record in another schema.
 
 >[!NOTE]
 >
->You can define relationships between either two relational schemas, or a relational schema and a standard schema.
+>You can define relationships between two relational schemas or between a relational schema and a standard schema. Relationships to ad-hoc schemas are not supported.
 
 **Example: One-to-many relationship**
 
