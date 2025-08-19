@@ -20,16 +20,11 @@ This guide provides an overview of how to create, edit, and manage Experience Da
 This guide requires a working understanding of XDM System. Refer to the [XDM overview](../../home.md) for an introduction to the role of XDM within the Experience Platform ecosystem, and the [basics of schema composition](../../schema/composition.md) for an overview of how schemas are constructed.
 
 ## Create a new schema {#create}
-<!-- 
->[!NOTE]
->
->This section covers how to manually create a new schema in the UI. If you are ingesting CSV data into Experience Platform, you can use Machine Learning (ML) algorithms to **generate a schema from sample CSV data**. This workflow matches your data format and automatically creates a new schema based on the structure and content of your CSV file. See the [ML-Assisted schema creation guide](../ml-assisted-schema-creation.md) for more information on this workflow. -->
 
 In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in the top-right corner. The 'Select schema type' dropdown menu appears with options for [!UICONTROL Standard] or [!UICONTROL Model-based] schemas. 
 
-<!-- update image below -->
 ![The Schemas workspace with [!UICONTROL Create Schema] highlighted and the 'Select schema type' dropdown displayed](../../images/ui/resources/schemas/create-schema.png).
-<!-- ... -->
+
 ## Create a model-based schema {#create-model-based-schema}
 
 Select **[!UICONTROL Model-based]** for fine-grained control over records and relational modeling. Model-based schemas let you define relational-style data structures in Experience Platform and support features such as primary key enforcement, record-level versioning, and schema-level relationships.
@@ -48,25 +43,25 @@ The **[!UICONTROL Model-based schema details]** page appears. Enter a schema dis
    
 ![The Model-based schema details view with [!UICONTROL Schema display name], [!UICONTROL Description], and [!UICONTROL Finish] highlighted.](../../images/ui/resources/schemas/model-based-details.png)
 
-The Schema Editor opens with an empty canvas for defining the schema structure.
+The Schema Editor opens with an empty canvas for defining the schema structure. The [!UICONTROL Type] field in the [!UICONTROL  Schema properties] sidebar indicates this is a [!UICONTROL Relational] schema
 
-![The Schema Editor canvas showing an empty model-based schema structure.](model-based-empty-canvas-PLACEHOLDER.png)
+![The Schema Editor canvas showing an empty model-based schema structure with Relational type highlighted.](../../images/ui/resources/schemas/model-based-empty-canvas.png)
 
-#### Add a version descriptor field {#add-version-descriptor}
+#### Add a version identifier field {#add-version-identifier}
 
-To enable version tracking and support change data capture, you must designate a version descriptor field in your schema. In the Schema Editor, select the plus (**+**) icon next to the schema name to add a new field.
+To enable version tracking and support change data capture, you must designate a version identifier field in your schema. In the Schema Editor, select the plus (**+**) icon next to the schema name to add a new field.
 
 Enter a field name such as `lastmodified`, and choose a data type of **[!UICONTROL DateTime]** or **[!UICONTROL Number]**.
 
 In the right rail, enable the **[!UICONTROL Version Identifier]** checkbox, then select **[!UICONTROL Apply]** to confirm the field.
 
-![The Schema Editor with a DateTime field named `lastmodified` added and the Version Identifier checkbox selected.](add-version-descriptor-PLACEHOLDER.png)
+![The Schema Editor with a DateTime field named `lastmodified` added and the Version Identifier checkbox selected.](../../images/ui/resources/schemas/add-version-identifier.png)
 
 >[!IMPORTANT]
 >
->A model-based schema must include a version descriptor field to support record-level updates and change data capture ingestion.
+>A model-based schema must include a version identifier field to support record-level updates and change data capture ingestion.
 
-Next, proceed to [add additional fields](#add-field-groups), [define primary keys](../fields/identity.md#define-a-identity-field), [add schema-level relationships](../../tutorials/relationship-ui.md#relationship-field), and a [version descriptor](#add-version-descriptor) as needed.
+Next, proceed to [define primary keys](../fields/identity.md#define-a-identity-field), [add additional fields](#add-field-groups), [add schema-level relationships](../../tutorials/relationship-ui.md#relationship-field), and a [version identifier](#add-version-identifier) as needed.
 
 >[!NOTE]
 >
@@ -74,17 +69,11 @@ Next, proceed to [add additional fields](#add-field-groups), [define primary key
 
 ### Upload a DDL file {#upload-ddl-file}
 
-Use this workflow to define the schema by uploading a DDL file. In the **[!UICONTROL Create a model-based schema]** dialog, select **[!UICONTROL Upload DDL file]**, then select **[!UICONTROL Next]**.  
+Use this workflow to define the schema by uploading a DDL file. In the **[!UICONTROL Create a model-based schema]** dialog, select **[!UICONTROL Upload DDL file]**, then either drag a local DDL file from your system or select **[!UICONTROL Choose files]**. Experience Platform validates the schema and displays a green checkmark if the file upload is succesful. Select **[!UICONTROL Next]** confirm the upload.  
 
-![The Create a model-based schema dialog with [!UICONTROL Upload DDL file] selected and [!UICONTROL Next] highlighted.](PLACEHOLDER)
+![The Create a model-based schema dialog with [!UICONTROL Upload DDL file] selected and [!UICONTROL Next] highlighted.](../../images/ui/resources/schemas/upload-ddl-file.png)
 
-The [!UICONTROL Select entities and fields to report] dialog appears. Select and drag a DDL file from your local system. Experience Platform validates the schema and displays a green checkmark if the file upload is succesful. Select **[!UICONTROL Next]** ot confirm the upload. The [!UICONTROL Select entities and fields to import] dialog appears.
-
->[!NOTE]
->
->The maximum supported file size for a DDL upload is 10MB.
-
-![The Model-based schema review view with imported fields shown and [!UICONTROL Finish] highlighted.](../../images/ui/resources/schemas/entities-and-files-to-inport.png)
+The [!UICONTROL Select entities and fields to import] dialog appears, allowing you to preview the schema. Review the schema structure, and use the radio buttons and checkboxes to ensure that each entity has a primary key and version identifier specified. If everything looks correct, select **[!UICONTROL Done]** to create the schema.
 
 >[!IMPORTANT]
 >
@@ -92,11 +81,17 @@ The [!UICONTROL Select entities and fields to report] dialog appears. Select and
 >
 >For change data capture ingestion, a special column named `_change_request_type` of type String is also required to enable incremental processing. This field indicates the type of data change (for example,  `u` (upsert) or `d` (delete)).
 
-Review the schema structure and select the radio buttons and check boxes to ensure each schema has a primary key and version identifier specified. If the preview is correct, select **[!UICONTROL Next]** to create the schema.  
-   
+>[!NOTE]
+>
+>The maximum supported file size for a DDL upload is 10MB.
+
+<!-- NOTE: Below is an AJO screenshot. I did not get access in time. I will confirm and update. -->
+
+![The Model-based schema review view with imported fields shown and [!UICONTROL Finish] highlighted.](../../images/ui/resources/schemas/entities-and-files-to-inport.png)
+    
 The schema opens in the Schema Editor, where you can adjust the structure before saving.
 
-Next, proceed to [add additional fields](#add-field-groups), [define primary keys](../fields/identity.md#define-a-identity-field), [add schema-level relationships](../../tutorials/relationship-ui.md#relationship-field), and a [version descriptor](#add-version-descriptor) as needed.
+Next, proceed to [add additional fields](#add-field-groups), [define primary keys](../fields/identity.md#define-a-identity-field), [add schema-level relationships](../../tutorials/relationship-ui.md#relationship-field), and a [version identifier](#add-version-identifier) as needed.
 <!-- ... -->
 <!-- ## Model-based schema creation {#model-based-creation}
 
@@ -131,7 +126,7 @@ Model-based schemas enable structured, relational-style data support with primar
 
 3. In the schema editor, add the required fields for model-based schemas:
    - **Primary key field**: Add a field and mark it as the primary key using the **[!UICONTROL Primary Key]** checkbox in field properties
-   - **Version descriptor field**: Add a field and mark it as the version descriptor using the **[!UICONTROL Version Descriptor]** checkbox
+   - **version identifier field**: Add a field and mark it as the version identifier using the **[!UICONTROL version identifier]** checkbox
    - **Timestamp descriptor field**: Required only for time-series schemas - add a timestamp field and mark it as the timestamp descriptor
 
 4. Configure additional fields and field groups as needed for your data model.
@@ -149,7 +144,7 @@ For comprehensive information on model-based schema concepts, see [Model-Based S
 ## Standard schema creation {#standard-based-creation}
 
 If you select 'Standard schema type from the 'Select schema type' dropdown menu, the [!UICONTROL Create a schema] dialog appears. In this dialog, you can choose to either manually create a schema by adding fields and field groups, or you can upload a CSV file and use ML algorithms to generate a schema. Select a schema creation workflow from the dialog.
-<!-- Screenshot blow likely needs update ... -->
+
 ![The Create a schema dialog with the workflow options and select highlighted.](../../images/ui/resources/schemas/create-a-schema-dialog.png)
 
 ### [!BADGE Beta]{type=Informative} Manual or ML-assisted schema creation {#manual-or-assisted}
@@ -159,7 +154,7 @@ To learn how you can use a ML algorithm to recommend a schema structure based on
 ### Manual schema creation {#manual-creation}
 
 The [!UICONTROL Create schema] workflow appears. You can choose a base class for the schema by selecting either **[!UICONTROL Individual Profile]**, **[!UICONTROL Experience Event]**, or **[!UICONTROL Other]**, followed by **[!UICONTROL Next]** to confirm your choice. See the [[!UICONTROL XDM individual profile]](../../classes/individual-profile.md) and [[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md) documentation for more information on these classes.
-<!-- Screenshot blow likely needs update ... -->
+
 ![The [!UICONTROL Create schema] workflow with the three class options and [!UICONTROL Next] highlighted.](../../images/ui/resources/schemas/schema-class-options.png)
 
 When choosing **[!UICONTROL Other]**, a list of available classes appears. From here you can browse and filter pre-existing classes.
