@@ -103,7 +103,8 @@ The IP range below applies to Experience Platform customers running on Amazon We
 * `51.105.144.1`
 * `51.105.144.81`
 * `51.124.70.4`
-* `51.144.184.248/29`* `52.142.236.87`
+* `51.144.184.248/29`
+* `52.142.236.87`
 * `108.141.12.47`  
 
 ## AUS5: APAC customers {#apac}
