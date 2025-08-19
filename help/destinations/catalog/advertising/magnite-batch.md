@@ -141,13 +141,15 @@ In the **[!UICONTROL Source field]**, you can select any attribute or identity f
 In the **[!UICONTROL Target field]**:
 The next step is mapping Source Field identifiers to the [!DNL Magnite] Device Type identifier of your choice, located in the Target Field.
 
-The current list of [!DNL Magnite] Supported Device Types will be available via a dropdown list, by clicking the Target Field's target attribute button.
+The current list of [!DNL Magnite] supported device types will be available via a dropdown list, by clicking the Target Field's target attribute button.
 
-![Choose desired device type attribute from target field dropdown](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png)
+In order to support a dynamic list of device types, the dropdown will provide a list of integers (from 0-50), each of which represents a specific device type in [!DNL Magnite]'s system. To understand which device type id in the list of integers corresponds to which [!DNL Magnite] device type, reach out to your [!DNL Magnite] account representative.
+
+![Choose desired device type integer attribute from target field dropdown](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png)
 
 See [Supported Identities](#supported-identities) for more information.
-In this example, we've selected the **[!UICONTROL Target field]**: Attribute: Unclassified, because our **[!UICONTROL Source field]** was defined as a custom IdentityMap: DeviceID.
-![Unclassified was selected](../../assets/catalog/advertising/magnite/destination-batch-active-audience-field-mapping.png)
+In this example, we've selected the **[!UICONTROL Target field]**: Attribute: "00".
+!["Attribute: 00" was selected](../../assets/catalog/advertising/magnite/destination-batch-active-audience-field-mapping.png)
 
 * You can add as many mappings as you want/need by selecting **[!UICONTROL Add new mapping]**.
 
