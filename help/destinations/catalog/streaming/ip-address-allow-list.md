@@ -16,9 +16,9 @@ exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
 
 The IP ranges documented in this page apply to the following destinations:
 
-* [Advanced enterprise destinations](../destinations/destination-types.md#advanced-enterprise-destinations): [HTTP API destination](./http-destination.md), [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
-* [Streaming audience export destinations](../destinations/destination-types.md#streaming-destinations), such as [Pega CDH Realtime Audience](/help/destinations/catalog/personalization/pega-v2.md), API-based integrations with [Salesforce Marketing Cloud](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) and [Oracle Eloqua](/help/destinations/catalog/email-marketing/oracle-eloqua-api.md)
-* Public or private destinations built through [Destination SDK](../destinations/destination-sdk/getting-started.md)
+* [Advanced enterprise destinations](../../destination-types.md#advanced-enterprise-destinations): [HTTP API destination](./http-destination.md), [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+* [Streaming audience export destinations](../../destination-types.md#streaming-destinations), such as [Pega CDH Realtime Audience](/help/destinations/catalog/personalization/pega-v2.md), API-based integrations with [Salesforce Marketing Cloud](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) and [Oracle Eloqua](/help/destinations/catalog/email-marketing/oracle-eloqua-api.md)
+* Public or private destinations built through [Destination SDK](../../destination-sdk/getting-started.md)
 
 Outbound traffic from Experience Platform to these destinations always goes through the IPs listed on this page.
 
