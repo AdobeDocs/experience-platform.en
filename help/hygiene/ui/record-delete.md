@@ -216,7 +216,6 @@ The following table outlines how record deletions behave across Platform and sou
 
 Use consistent deletion logic across your source and Platform datasets to avoid data mismatches and re-ingestion issues.
 
-Relational datasets that use Sources with change data capture can rely on the `_change_request_type` control column when supporting delete operations:
 ### Change data capture and control columns
 
 Model-based schemas that use Sources with change data capture can rely on the `_change_request_type` control column to distinguish between upserts and deletes. During ingestion, records flagged with `'d'` are deleted from the dataset, while those without the column—or with `'u'`—are treated as upserts. The `_change_request_type` column is read at ingestion time only and is not stored in the target schema or mapped to XDM fields.
@@ -231,7 +230,7 @@ To prevent unintentional re-ingestion and ensure data consistency across systems
 
 * **Coordinate deletions**: Align record deletions with your change data capture configuration and source data management strategy.
 * **Monitor CDC flows**: After deleting records in Platform, monitor dataflows and confirm that the source system either removes the same records or marks them with `_change_request_type = 'd'`.
-* **Clean up the source**: For sources using full refresh ingestion or lacking CDC delete support, delete records directly from the source system to avoid re-ingestion.
+* **Clean up the source**: For sources using full refresh ingestion or lacking change data capture delete support, delete records directly from the source system to avoid re-ingestion.
 
 To learn more about schema design and change data capture configuration, see the [Model-based schema requirements](../../xdm/schema/relational.md) and the guide to [Enabling change data capture in sources](../../sources/tutorials/api/change-data-capture.md).
 
