@@ -201,7 +201,7 @@ After the request is submitted, a work order is created and appears on the [!UIC
 
 ## Deleting records from relational datasets {#relational-record-delete}
 
-Relational datasets support record deletion as part of data lifecycle management in Experience Platform. When used with change data capture, deletions must be handled carefully to prevent unintended re-ingestion or misalignment with the source system.
+If the dataset you are deleting from is a relational (model-based) schema, review the following considerations to ensure records are removed correctly and not re-ingested due to mismatches between Platform and your source system.
 
 ### Record deletion behavior
 
@@ -212,13 +212,13 @@ The following table outlines how record deletions behave across Platform and sou
 | Platform deletion   | Records are removed from the Experience Platform dataset and data lake. |
 | Source retention    | Records remain in the source system unless explicitly deleted there.     |
 | Full refresh impact | If using full refresh, deleted records may be re-ingested unless removed or excluded from the source. |
-| CDC behavior        | Records flagged with `_change_request_type = 'd'` are deleted during ingestion. Unflagged records may be re-ingested. |
+| Change data capture behavior | Records flagged with `_change_request_type = 'd'` are deleted during ingestion. Unflagged records may be re-ingested. |
 
-Use consistent deletion logic across your source and Platform datasets to avoid data mismatches and re-ingestion issues.
+To prevent re-ingestion, apply the same deletion approach in both your source system and Experience Platform, either by removing records from both systems or including `_change_request_type = 'd'` for records you intend to delete.
 
 ### Change data capture and control columns
 
-Model-based schemas that use Sources with change data capture can rely on the `_change_request_type` control column to distinguish between upserts and deletes. During ingestion, records flagged with `'d'` are deleted from the dataset, while those without the column—or with `'u'`—are treated as upserts. The `_change_request_type` column is read at ingestion time only and is not stored in the target schema or mapped to XDM fields.
+Model-based schemas that use Sources with change data capture can use the `_change_request_type` control column when distinguishing deletes from upserts. During ingestion, records flagged with `'d'` are deleted from the dataset, while those flagged with `'u'` or without the column are treated as upserts. The `_change_request_type` column is read at ingestion time only and is not stored in the target schema or mapped to XDM fields.
 
 >[!NOTE]
 >
@@ -226,13 +226,14 @@ Model-based schemas that use Sources with change data capture can rely on the `_
 
 ### Best practices for relational record deletion
 
-To prevent unintentional re-ingestion and ensure data consistency across systems, follow these best practices:
+To avoid unintentional re-ingestion and maintain data consistency across systems, follow these best practices:
 
 * **Coordinate deletions**: Align record deletions with your change data capture configuration and source data management strategy.
-* **Monitor CDC flows**: After deleting records in Platform, monitor dataflows and confirm that the source system either removes the same records or marks them with `_change_request_type = 'd'`.
-* **Clean up the source**: For sources using full refresh ingestion or lacking change data capture delete support, delete records directly from the source system to avoid re-ingestion.
+* **Monitor change data capture flows**: After deleting records in Platform, monitor dataflows and confirm that the source system either removes the same records or includes them with `_change_request_type = 'd'`.
+* **Clean up the source**: For sources using full refresh ingestion or those that do not support deletes through change data capture, delete records directly from the source system to avoid re-ingestion.
 
-To learn more about schema design and change data capture configuration, see the [Model-based schema requirements](../../xdm/schema/relational.md) and the guide to [Enabling change data capture in sources](../../sources/tutorials/api/change-data-capture.md).
+For more details on schema requirements, see [Model-based schema descriptor requirements](../../xdm/schema/relational.md#model-based-schema-requirements-for-cdc).  
+To learn how change data capture works with sources, see [Enable change data capture in sources](../../sources/tutorials/api/change-data-capture.md#using-change-data-capture-with-relational-schemas).
 
 ## Next steps
 
