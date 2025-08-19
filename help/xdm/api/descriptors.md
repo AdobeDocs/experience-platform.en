@@ -19,7 +19,7 @@ The `/descriptors` endpoint in the [!DNL Schema Registry] API allows you to prog
 
 The endpoint used in this guide is part of the [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
-In addition to standard descriptors, the [!DNL Schema Registry] supports descriptor types for relational schemas, such as **Primary Key**, and **Version**. These enforce uniqueness, control versioning, and define time-series fields at the schema level. If you are unfamiliar with relational schemas, review the [relational schemas overview](./relational.md) before continuing.
+In addition to standard descriptors, the [!DNL Schema Registry] supports descriptor types for relational schemas, such as **primary key**, and **version**. These enforce uniqueness, control versioning, and define time-series fields at the schema level. If you are unfamiliar with relational schemas, review the [relational schemas overview](./relational.md) before continuing.
 
 <!-- For Sept:
 add in timestamp descriptors to the paragraph above. -->
@@ -413,7 +413,7 @@ The following table describes the fields required to define a one-to-one relatio
 
 ##### General relationship (relational schemas and recommended for new projects)
 
-Use this descriptor for all new implementations and for relational (adhoc-v2) schemas. It allows you to define the relationship's cardinality (such as one-to-one or many-to-one), specify relationship names, and link to a destination field that is not the primary key (non-primary key).
+Use this descriptor for all new implementations and for relational schemas. It allows you to define the relationship's cardinality (such as one-to-one or many-to-one), specify relationship names, and link to a destination field that is not the primary key (non-primary key).
 
 The following examples show how to define a general relationship descriptor.
 
@@ -452,7 +452,7 @@ This example includes all optional fields, such as relationship names, display t
 }
 ```
 
-##### When to use which
+##### Choosing a relationship descriptor
 
 Use the following guidelines to decide which relationship descriptor to apply:
 
@@ -516,7 +516,7 @@ The primary key descriptor (`xdm:descriptorPrimaryKey`) enforces uniqueness and 
 
 #### Version descriptor {#version-descriptor}
 
-The **Version** descriptor (`xdm:descriptorVersion`) designates a field to detect and prevent conflicts from out-of-order change events.
+The version descriptor (`xdm:descriptorVersion`) designates a field to detect and prevent conflicts from out-of-order change events.
 
 ```json
 {
@@ -535,7 +535,7 @@ The **Version** descriptor (`xdm:descriptorVersion`) designates a field to detec
 <!-- For Sept:
 #### Timestamp descriptor {#timestamp-descriptor}
 
-The **Timestamp** descriptor (`xdm:descriptorTimestamp`) designates a date-time field as the timestamp for schemas with `"meta:behaviorType": "time-series"`.
+The timestamp descriptor (`xdm:descriptorTimestamp`) designates a date-time field as the timestamp for schemas with `"meta:behaviorType": "time-series"`.
 
 ```json
 {
