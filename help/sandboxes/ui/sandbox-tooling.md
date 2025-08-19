@@ -35,9 +35,9 @@ The table below lists [!DNL Adobe Real-Time Customer Data Platform] objects that
 | Platform | Object | Details |
 | --- | --- | --- |
 | Customer Data Platform | Sources | The source account credentials are not replicated in the target sandbox for security reasons and will be required to be updated manually. The source dataflow is copied in a draft status by default. |
-| Customer Data Platform | Audiences | Only the **[!UICONTROL Customer Audience]** type **[!UICONTROL Segmentation service]** is supported. Existing labels for consent and governance will be copied over in the same import job. System will auto select default Merge Policy in target sandbox with same XDM class when checking merge policy dependencies. |
+| Customer Data Platform | Audiences | Only the **[!UICONTROL Customer Audience]** type **[!UICONTROL Segmentation service]** is supported. Existing labels for consent and governance will be copied over in the same import job. System will auto select default Merge Policy in target sandbox with same XDM class when checking merge policy dependencies. <br> If an existing object with the same name is detected when importing Audiences, Sandbox tooling will always reuse the existing object, to avoid object proliferation. |
 | Customer Data Platform | Identities | The system will auto-deduplicate Adobe standard identity namespaces when creating in the target sandbox. Audiences can only be copied when all attributes in audience rules are enabled in the union schema. The necessary schemas must be moved and enabled for unified profile first. |
-| Customer Data Platform | Schemas | Existing labels for consent and governance will be copied over in the same import job. User has the flexibility to import schemas without Unified Profile option enabled. The schema relationships edge case are not included in the package. |
+| Customer Data Platform | Schemas | Existing labels for consent and governance will be copied over in the same import job. User has the flexibility to import schemas without Unified Profile option enabled. The schema relationships edge case are not included in the package. <br> If an existing object with the same name is detected when importing Audiences, Sandbox tooling will always reuse the existing object, to avoid object proliferation. |
 | Customer Data Platform | Datasets | Datasets are copied with the unified profile setting disabled by default. |
 | Customer Data Platform | Consent and Governance Policies | Add custom policies created by a user to a package and move them across sandboxes. |
 
@@ -157,7 +157,7 @@ The [!UICONTROL Package object and dependencies] page provides a list of all ass
 >
 >Dependent objects can be replaced with existing ones in the target sandbox, which allow you to reuse existing objects rather than creating a new version. For example, when you import a package including schemas, you can reuse existing custom field group and identity namespaces in the target sandbox. Alternatively, when you import a package including Journeys, you can reuse existing segments in the target sandbox.
 >
->Sandbox tooling does not currently support updating or overwriting existing objects. You may choose to create a new object, or continue to use the existing object without modifications.
+>Sandbox tooling does not currently support updating or overwriting existing objects. You may choose to create a new object, or continue to use the existing object without modifications. If an existing object with the same name is detected, Sandbox tooling will always reuse the existing object, even if you select the [!UICONTROL Create new] option to avoid object proliferation.
 
 To use an existing object, select the pencil icon beside the dependent object.
 
