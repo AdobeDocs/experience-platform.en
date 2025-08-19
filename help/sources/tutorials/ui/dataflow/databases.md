@@ -130,7 +130,7 @@ See the table below for more information on scheduling configurations.
 The **[!UICONTROL Review]** step appears, allowing you to review your new dataflow before it is created. Details are grouped within the following categories:
 
 * **[!UICONTROL Connection]**: Shows the source type, the relevant path of the chosen source file, and the amount of columns within that source file.
-* **[!UICONTROL Assign dataset & map fields]**: Displays the dataset that the source data will be ingested into, along with the associated schema. If you're using a model-based schema, verify that required fields—such as the primary key and version descriptor—are correctly mapped, and ensure that any CDC control columns are configured properly. Model-based datasets support multiple data models and enable [change data capture workflows](../../api/change-data-capture.md).
+* **[!UICONTROL Assign dataset & map fields]**: Displays the dataset that the source data will be ingested into, along with the associated schema. If you're using a model-based schema, verify that required fields—such as the primary key and version descriptor—are correctly mapped, and ensure that any change data capture control columns are configured properly. Model-based datasets support multiple data models and enable [change data capture workflows](../../api/change-data-capture.md).
 * **[!UICONTROL Scheduling]**: Shows the active period, frequency, and interval of the ingestion schedule.
 
 Once you have reviewed your dataflow, select **[!UICONTROL Finish]** and allow some time for the dataflow to be created.

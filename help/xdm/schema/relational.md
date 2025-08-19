@@ -16,7 +16,7 @@ Use relational schemas to:
 * Avoid duplicating schema structures across applications by supporting multiple data models.
 * Bypass union schema constraints to streamline onboarding, reduce schema bloat, and simplify evolution.
 
-Use this modeling approach for use cases such as change data capture (CDC), referential joins across datasets, and multi-entity campaign orchestration. With relational schemas you maintain explicit control over schema evolution, field structure, and data governance.
+Use this modeling approach for use cases such as change data capture, referential joins across datasets, and multi-entity campaign orchestration. With relational schemas you maintain explicit control over schema evolution, field structure, and data governance.
 
 >[!AVAILABILITY]
 >
@@ -175,13 +175,13 @@ For a list of relationship descriptor types and syntax, see the [descriptors API
 
 ## Ingestion methods {#ingestion-methods}
 
-Use [change data capture](../../sources/tutorials/api/change-data-capture.md) in your data connections to keep relational datasets synchronized with source systems. You can also ingest data using SQL via Data Distiller or upload files manually. Choose the path that aligns with your operational model, then apply the CDC rules consistently.
+Use [change data capture](../../sources/tutorials/api/change-data-capture.md) in your data connections to keep relational datasets synchronized with source systems. You can also ingest data using SQL via Data Distiller or upload files manually. Choose the path that aligns with your operational model, then apply the change data capture rules consistently.
 
 Change data capture in Experience Platform captures and applies all changes—inserts, updates, and deletes—in real time, ensuring full alignment between source and destination data. Unlike incremental copy, which only tracks new or updated records using a timestamp column (such as `LastModified`) and cannot detect deletions, change data capture provides a complete change history.
 
 Supported ingestion methods include:
 
-* **Sources with CDC** – Include a `_change_request_type` column in the source data to indicate how each row should be processed:
+* **Sources with change data capture** – Include a `_change_request_type` column in the source data to indicate how each row should be processed:
   * `U` = upsert (default if column is missing)  
   * `D` = delete  
     This column is evaluated during ingestion only and is not stored in XDM or mapped to XDM fields.
@@ -190,7 +190,7 @@ Supported ingestion methods include:
   >
   > For **file-based sources only**, each row in the data file must include a `_change_request_type` column with either `U` (upsert) or `D` (delete). Without this column, the system will not recognize the data as supporting change tracking. As a result, options such as the **Orchestrated Campaign** toggle will not appear, and the dataset cannot be selected for targeting.
 
-  For step-by-step instructions on enabling CDC in the Sources workflow, see [Enable change data capture for source connections](link-to-sources-doc/PLACEHOLDER.md).
+  For step-by-step instructions on enabling change data capture in the Sources workflow, see [Enable change data capture for source connections](link-to-sources-doc/PLACEHOLDER.md).
 
 * **Data Distiller**: Ingest using SQL queries to write into relational datasets.
 * **Local file upload**: Upload files manually when needed for non-source ingestion workflows.

@@ -227,7 +227,7 @@ role: Developer
   - [Apply access labels to a dataflow](tutorials/api/labels.md)
   - [Use private endpoints](tutorials/api/private-link.md)
   - [Enable change data capture](tutorials/api/change-data-capture.md)
-  <!-- TODO: Add Relational Schema Cross-Reference in Navigation Requirements for update: - Add sub-bullet under "Enable change data capture" section - Add: "  - [Relational Schema CDC integration](../xdm/schema/relational.md#cdc-integration)" - Ensure proper indentation to maintain TOC hierarchy - Link should point to the CDC section within the relational schema documentation -->
+  <!-- TODO: Add Relational Schema Cross-Reference in Navigation Requirements for update: - Add sub-bullet under "Enable change data capture" section - Add: "  - [Relational Schema change data capture integration](../xdm/schema/relational.md#cdc-integration)" - Ensure proper indentation to maintain TOC hierarchy - Link should point to the change data capture section within the relational schema documentation -->
 - UI tutorials {#ui-tutorials}
   - Create a source connection {#create}
     - Adobe applications {#adobe-applications}

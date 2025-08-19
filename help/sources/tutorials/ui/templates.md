@@ -62,7 +62,7 @@ A pop-up window appears presenting you with the option to browse templates or us
 <!-- TODO: Add Relational Schema Template Support
 Requirements for update:
 - Add note about relational schema support in templates
-- Text: "Templates can auto-generate relational schemas when working with sources that require CDC workflows or support multiple data models."
+- Text: "Templates can auto-generate relational schemas when working with sources that require change data capture workflows or support multiple data models."
 - Add: "When using templates with relational schemas, the auto-generated assets will include the required primary key, version descriptor, and timestamp descriptor fields."
 - Include: "For more information on relational schemas, see [relational schema overview](../../../xdm/schema/relational.md)."
 -->

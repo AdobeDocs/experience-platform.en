@@ -38,7 +38,7 @@ Read the following sections for a list of all sources available in the sources c
 Requirements for update:
 - Add brief paragraph explaining that Sources can ingest data into relational datasets
 - Mention that relational schemas support multiple data models beyond standard AEP (Campaign Orchestration, Data Distiller, B2B)
-- Note the workflow: "Create relational schema → create dataset → configure Sources → enable CDC (when needed)"
+- Note the workflow: "Create relational schema → create dataset → configure Sources → enable change data capture (when needed)"
 - Reference that relational schemas have specific requirements (primary key, version descriptor, timestamp descriptor for time-series)
 - Cross-link to XDM relational schema documentation: "[Relational Schema overview](../xdm/schema/relational.md)"
 - Keep wording neutral about entitlements/feature flags

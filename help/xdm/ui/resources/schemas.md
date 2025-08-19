@@ -27,7 +27,7 @@ In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in 
 
 ## Create a relational schema {#create-relational-schema}
 
-Select [!UICONTROL Relational] to define structured, relational-style schemas with fine-grained control over records. Relational schemas support primary key enforcement, record-level versioning, and schema-level relationships through primary and foreign keys. They are also optimized for incremental ingestion using change data capture (CDC), and support multiple data models used in Campaign Orchestration, Data Distiller, and B2B implementations.
+Select [!UICONTROL Relational] to define structured, relational-style schemas with fine-grained control over records. Relational schemas support primary key enforcement, record-level versioning, and schema-level relationships through primary and foreign keys. They are also optimized for incremental ingestion using change data capture, and support multiple data models used in Campaign Orchestration, Data Distiller, and B2B implementations.
 
 >[!NOTE]
 >
