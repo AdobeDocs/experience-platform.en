@@ -26,7 +26,6 @@ You can set up retention policies on datasets created using the ExperienceEvent 
 >
 >The retention period for Profile Service can only be updated once every 30 days.
 
-
 Yes, you can apply different retention policies for the data lake and Profile Service.
 
 +++
