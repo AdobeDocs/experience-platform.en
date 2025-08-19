@@ -59,13 +59,15 @@ A pop-up window appears presenting you with the option to browse templates or us
 
 * **Browse templates**: Sources templates auto-creates schemas, identities, datasets, and dataflows with mapping rules for you. You can customize these assets as needed.
 * **Use my existing assets**: Ingest your data using existing datasets and schemas that you created. You can also create new datasets and schemas if needed.
-<!-- TODO: Add Relational Schema Template Support
-Requirements for update:
-- Add note about relational schema support in templates
-- Text: "Templates can auto-generate relational schemas when working with sources that require change data capture workflows or support multiple data models."
-- Add: "When using templates with relational schemas, the auto-generated assets will include the required primary key, version descriptor, and timestamp descriptor fields."
-- Include: "For more information on relational schemas, see [relational schema overview](../../../xdm/schema/relational.md)."
--->
+
+>[!NOTE]
+>
+>Templates can auto-generate relational schemas when working with sources that require change data capture workflows or support multiple data models.  
+>When using templates with relational schemas, the auto-generated assets will include the required primary key, and version descriptor.  
+>For more information on relational schemas, see [relational schema overview](../../../xdm/schema/relational.md).
+
+<!-- For Sept:
+Replace above with: >When using templates with relational schemas, the auto-generated assets will include the required primary key, version descriptor, and timestamp descriptor fields. -->
 
 To use auto-generated assets, select **[!UICONTROL Browse templates]** and then select **[!UICONTROL Select]**.
 
