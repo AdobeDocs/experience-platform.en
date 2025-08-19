@@ -1,6 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes August 2025
 description: The August 2025 release notes for Adobe Experience Platform.
+exl-id: d93e98f3-d165-4710-ad1d-2ad3857cd0f8
 ---
 # Adobe Experience Platform release notes
 
