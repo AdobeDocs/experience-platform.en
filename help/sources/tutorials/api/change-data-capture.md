@@ -15,6 +15,10 @@ You can use change data capture with the following sources:
 
 ## Using change data capture with model-based schemas
 
+>[!AVAILABILITY]
+>
+>Currently, relational schemas are **record-based only** and available based on your license or feature enablement.
+
 Model-based schemas extend Experience Platform to enforce primary keys, track row-level changes, and define schema-level relationships. With change data capture, they apply inserts, updates, and deletes directly in the data lake, reducing the need for ETL or manual reconciliation.
 
 ### Model-based schema requirements for change data capture
