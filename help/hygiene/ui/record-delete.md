@@ -199,27 +199,25 @@ After the request is submitted, a work order is created and appears on the [!UIC
 
 ![The [!UICONTROL Record] tab of the [!UICONTROL Data Lifecycle] workspace with the new request highlighted.](../images/ui/record-delete/request-log.png)
 
-<!-- TODO: PLAT-240919 Add Relational Schema hygiene section  
-
 ## Deleting records from relational datasets {#relational-record-delete}
 
-Relational datasets support record deletion with specific considerations for change data capture (CDC) workflows and source data retention.
+Relational datasets support record deletion with specific considerations for change data capture workflows and source data retention.
 
 ### Record deletion behavior
 
 When deleting records from relational datasets:
 
-- **Platform deletion**: Records are removed from the Experience Platform dataset and data lake
-- **Source retention**: Records remain in the original source system unless explicitly deleted there
-- **CDC impact**: If using Sources with CDC, future sync operations will not re-ingest deleted records unless they are recreated in the source
+* **Platform deletion**: Records are removed from the Experience Platform dataset and data lake.
+* **Source retention**: Records typically remain in the original source system unless explicitly deleted there. If using a full refresh ingestion method, these records may be re-ingested unless they are removed or flagged for deletion in the source.
+* **CDC impact**: If using Sources with CDC, future sync operations will not re-ingest deleted records unless they are recreated in the source or were not properly flagged with a delete indicator.
 
-### CDC and control columns
+### Change data capture and control columns
 
-Relational datasets that use Sources with change data capture rely on the `_change_request_type` control column:
+Relational datasets that use Sources with change data capture can rely on the `_change_request_type` control column when supporting delete operations:
 
-- **Delete operations**: Records with `_change_request_type = 'd'` are automatically deleted during ingestion
-- **Control column behavior**: The `_change_request_type` column is read during ingestion but is not stored in the target schema or mapped to XDM fields
-- **Default behavior**: If the control column is missing, records default to upsert (`u`) operations
+* **Delete operations**: Records with `_change_request_type = 'd'` are automatically deleted during ingestion.
+* **Control column behavior**: The `_change_request_type` column is read during ingestion but is not stored in the target schema or mapped to XDM fields.
+* **Default behavior**: If the control column is missing, records default to upsert (`u`) operations.
 
 >[!NOTE]
 >
@@ -227,13 +225,11 @@ Relational datasets that use Sources with change data capture rely on the `_chan
 
 ### Best practices for relational record deletion
 
-- **Coordinate deletions**: Plan record deletions to align with your CDC and source data management strategies
-- **Monitor CDC flows**: After deleting records in Platform, monitor CDC dataflows to ensure deleted records are not re-ingested
-- **Source cleanup**: Consider whether records should also be deleted from source systems to prevent re-ingestion during full refreshes
+* **Coordinate deletions**: Plan record deletions to align with your CDC and source data management strategies.
+* **Monitor CDC flows**: After deleting records in Platform, monitor CDC dataflows and confirm that the records are either removed from the source system or included with `_change_request_type = 'd'` to avoid unintentional re-ingestion.
+* **Source cleanup**: For sources that use full refresh ingestion or don't support deletes through CDC, ensure records are also deleted from the source system to prevent them from being re-ingested.
 
-For more information on relational schemas and CDC workflows, see [Relational Schema overview](../../xdm/schema/relational.md) and [Enable change data capture](../../sources/tutorials/api/change-data-capture.md).
-
--->
+For more information on relational schemas and CDC workflows, see the [Model-based schemas overview](../../xdm/schema/relational.md) and [Enable change data capture](../../sources/tutorials/api/change-data-capture.md).
 
 ## Next steps
 
