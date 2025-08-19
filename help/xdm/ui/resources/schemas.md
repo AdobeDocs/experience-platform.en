@@ -25,28 +25,28 @@ This guide requires a working understanding of XDM System. Refer to the [XDM ove
 >
 >This section covers how to manually create a new schema in the UI. If you are ingesting CSV data into Experience Platform, you can use Machine Learning (ML) algorithms to **generate a schema from sample CSV data**. This workflow matches your data format and automatically creates a new schema based on the structure and content of your CSV file. See the [ML-Assisted schema creation guide](../ml-assisted-schema-creation.md) for more information on this workflow. -->
 
-In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in the top-right corner. The 'Select schema type' dropdown menu appears. The options are [!UICONTROL Standard] or [!UICONTROL Model-based]. 
+In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in the top-right corner. The 'Select schema type' dropdown menu appears with options for [!UICONTROL Standard] or [!UICONTROL Model-based] schemas. 
 
 <!-- update image below -->
 ![The Schemas workspace with [!UICONTROL Create Schema] highlighted and the 'Select schema type' dropdown displayed](../../images/ui/resources/schemas/create-schema.png).
-
+<!-- ... -->
 ## Create a model-based schema {#create-model-based-schema}
 
-Use model-based schemas to define relational-style data structures in Experience Platform. This schema type supports features such as primary key enforcement, record-level version tracking, and schema relationships. Select **[!UICONTROL Model-based]** when your use case requires fine-grained control over records and relational modeling.
+Select **[!UICONTROL Model-based]** for fine-grained control over records and relational modeling. Model-based schemas let you define relational-style data structures in Experience Platform and support features such as primary key enforcement, record-level versioning, and schema-level relationships.
 
-![The Schemas workspace with [!UICONTROL Create schema] selected and the Select schema type dropdown displayed.](../../images/ui/resources/schemas/create-schema.png)
+<!-- ![The Schemas workspace with [!UICONTROL Create schema] selected and the Select schema type dropdown displayed.](../../images/ui/resources/schemas/create-schema.png) -->
 
-If you select **[!UICONTROL Model-based]**, the **[!UICONTROL Create a model-based schema]** dialog appears. You can choose either **[!UICONTROL Create manually]** or [**[!UICONTROL Upload DDL file]**](#upload-ddl-file) to define the schema structure.
+The **[!UICONTROL Create a model-based schema]** dialog appears. You can choose either **[!UICONTROL Create manually]** or [**[!UICONTROL Upload DDL file]**](#upload-ddl-file) to define the schema structure.
 
 ### Create manually {#create-manually}
 
 In the **[!UICONTROL Create a model-based schema]** dialog, select **[!UICONTROL Create manually]**, then select **[!UICONTROL Next]**.  
    
-![The Create a model-based schema dialog with [!UICONTROL Create manually] selected and [!UICONTROL Next] highlighted.](../../images/ui/schemas/model-based-dialog.png)
+![The Create a model-based schema dialog with [!UICONTROL Create manually] selected and [!UICONTROL Next] highlighted.](../../images/ui/resources/schemas/model-based-dialog.png)
 
-On the **[!UICONTROL Model-based schema details]** page, enter a schema display name and an optional description, then select **[!UICONTROL Finish]** to create the schema.  
+The **[!UICONTROL Model-based schema details]** page appears. Enter a schema display name and an optional description, then select **[!UICONTROL Finish]** to create the schema.  
    
-![The Model-based schema details view with [!UICONTROL Schema display name], [!UICONTROL Description], and [!UICONTROL Finish] highlighted.](../../images/ui/schemas/model-based-details-PLACEHOLDER.png)
+![The Model-based schema details view with [!UICONTROL Schema display name], [!UICONTROL Description], and [!UICONTROL Finish] highlighted.](../../images/ui/resources/schemas/model-based-details.png)
 
 The Schema Editor opens with an empty canvas for defining the schema structure.
 
@@ -97,7 +97,7 @@ Review the schema structure and select the radio buttons and check boxes to ensu
 The schema opens in the Schema Editor, where you can adjust the structure before saving.
 
 Next, proceed to [add additional fields](#add-field-groups), [define primary keys](../fields/identity.md#define-a-identity-field), [add schema-level relationships](../../tutorials/relationship-ui.md#relationship-field), and a [version descriptor](#add-version-descriptor) as needed.
-
+<!-- ... -->
 <!-- ## Model-based schema creation {#model-based-creation}
 
 From the dropdown menu select 'Model-based'. The Create a model-based schema dialog appears. You can either do it manually, or you can do it by uploading a DDL file. 
