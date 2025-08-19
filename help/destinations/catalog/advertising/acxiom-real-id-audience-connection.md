@@ -2,6 +2,7 @@
 title: Acxiom Real ID&trade; Audience Connection
 description: Use the [!DNL Acxiom Real ID&trade; Audience Connection] destination to enhance audiences with [!DNL Acxiom's Real ID] technology and activate audiences to multiple platforms, such as [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], and more.
 badge: label="Beta" type="Informative"
+exl-id: 5f1f0f7f-ac46-42bd-8002-be50fab5a76b
 ---
 # [!DNL Acxiom Real ID&trade; Audience Connection] destination 
 
@@ -139,9 +140,3 @@ You will need to provide the following information to your [!DNL Adobe] represen
 ## Next steps {#next-steps}
 
 By following this tutorial, you have successfully activated an audience to the selected destination platform. Next, contact your destination platform representative to begin setting up your campaign.
-
-
-
-
-
-
