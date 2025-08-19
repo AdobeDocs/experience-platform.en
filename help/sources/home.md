@@ -34,17 +34,6 @@ For partner-authored and maintained connectors, this means that issues with the 
 
 Read the following sections for a list of all sources available in the sources catalog.
 
-<!-- TODO: Add Relational Schema Overview Integration
-Requirements for update:
-- Add brief paragraph explaining that Sources can ingest data into relational datasets
-- Mention that relational schemas support multiple data models beyond standard AEP (Campaign Orchestration, Data Distiller, B2B)
-- Note the workflow: "Create relational schema → create dataset → configure Sources → enable change data capture (when needed)"
-- Reference that relational schemas have specific requirements (primary key, version descriptor, timestamp descriptor for time-series)
-- Cross-link to XDM relational schema documentation: "[Relational Schema overview](../xdm/schema/relational.md)"
-- Keep wording neutral about entitlements/feature flags
-- Use sentence case heading if adding subheading
--->
-
 ### Adobe applications {#adobe-applications}
 
 Experience Platform allows data to be ingested from other Adobe applications, including Adobe Analytics, and Adobe Audience Manager. Read the following related documents for more information:
@@ -302,15 +291,11 @@ With attribute-based access control, you can apply mapping configurations to fie
 
 - Apply labels to schema fields to define access to specific schema fields in your organization. Once access to specific schema fields are established, users will only be able to create mappings for the fields that they have access to.
 - Users without the appropriate roles will not be able to create or update dataflows with mappings that involve inaccessible schema fields. Furthermore, unauthorized users cannot update, delete, enable, or disable existing dataflows with inaccessible schema fields.
-  <!-- replace list item below -->
-- Additionally, a dataflow must have the exact same schema ID and version in its mapping, target dataset, and target connection.
+- Additionally, a dataflow must have the exact same schema ID and version in its mapping, target dataset, and target connection. This applies to both standard XDM schemas and relational schemas.
 
-<!-- TODO: Update Schema Requirement Language for Relational Schemas
-Requirements for update:
-- Replace existing line 294: "Additionally, a dataflow must have the exact same schema ID and version in its mapping, target dataset, and target connection."
-- New text should read: "Additionally, a dataflow must have the exact same schema ID and version in its mapping, target dataset, and target connection. This applies to both standard XDM schemas and relational schemas."
-- Add note: "relational schemas have additional requirements including primary key and version descriptor fields. For more information, see [Relational Schema overview](../xdm/schema/relational.md)."
--->
+>[!NOTE]
+>
+>Relational schemas have additional requirements including primary key and version descriptor fields. For more information, see [Relational Schema overview](../xdm/schema/relational.md).
 
 For more information on attribute-based access control, read the [attribute-based access control overview](../access-control/abac/overview.md).
 
