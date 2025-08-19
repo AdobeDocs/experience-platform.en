@@ -295,7 +295,7 @@ With attribute-based access control, you can apply mapping configurations to fie
 
 >[!NOTE]
 >
->Relational schemas have additional requirements including primary key and version descriptor fields. For more information, see [Relational Schema overview](../xdm/schema/relational.md).
+>Relational schemas have additional requirements including primary key and version descriptor fields. For more information, see the [relational schema overview](../xdm/schema/relational.md).
 
 For more information on attribute-based access control, read the [attribute-based access control overview](../access-control/abac/overview.md).
 
