@@ -13,50 +13,38 @@ With change data capture, a given flow captures and applies all changes, includi
 
 You can use change data capture for the following sources:
 
-<!-- TODO: PLAT-240919 Add Relational Schema CDC Integration Section
-Requirements for update: 
+## Using change data capture with model-based schemas
 
-1. ADD NEW SECTION with heading "## Using CDC with relational schemas"
+Model-based schemas extend Experience Platform to enforce primary keys, track changes at the row level, and define schema-level relationships. When used with change data capture (CDC), they apply inserts, updates, and deletes directly in the data lake. This approach keeps datasets synchronized with the source system and reduces the need for complex ETL or manual reconciliation.
 
-2. ADD OVERVIEW PARAGRAPH:
-"Change data capture works seamlessly with relational schemas to maintain data synchronization between source systems and Experience Platform datasets. Relational schemas enable support for multiple data models beyond standard XDM, including Campaign Orchestration, Data Distiller, and B2B use cases."
+### Model-based schema requirements for CDC
 
-3. ADD REQUIREMENTS SUBSECTION with heading "### Relational schema requirements"
-Content: "When using CDC with relational schemas, ensure your schema includes the following required fields:
-- **Primary key**: Uniquely identifies each record
-- **Version descriptor**: Tracks schema version changes  
-- **Timestamp descriptor**: Required only for time-series schemas to track when events occurred"
+Before you can use a model-based schema with CDC, configure the following descriptors:
 
-4. ADD CONTROL COLUMN BEHAVIOR SUBSECTION with heading "### Control column handling"
-Content: "Relational schemas use the `_change_request_type` control column for CDC operations:
-- The column contains values `u` (upsert) or `d` (delete) 
-- This control column is read during ingestion time only
-- The `_change_request_type` column is NOT stored in the target XDM schema
-- The column is NOT mapped to any XDM fields in relational schemas
-- If the column is missing from source data, the default value `u` (upsert) is applied"
+* Primary key: Uniquely identifies each record.  
+* Version: Ensures updates are applied in the correct sequence.  
+* Timestamp (time-series only): Required when the schema represents time-series data.  
 
-5. ADD RELATIONSHIPS SUBSECTION with heading "### Schema relationships"
-Content: "Relational schemas support relationships between schemas through primary and foreign key mappings, enabling normalized data structures across multiple related datasets."
+### Control column handling
 
-6. ADD DATASET REQUIREMENTS SUBSECTION with heading "### Target dataset requirements"
-Content: "When configuring CDC with relational schemas:
-- The target dataset must be based on a relational schema
-- Verify that all required fields (primary key, version descriptor) are present in your schema
-- Ensure proper field mappings from source to target schema"
+CDC with model-based schemas requires a control column, `_change_request_type`, that indicates how each row should be processed:
 
-7. ADD CROSS-REFERENCE: "For comprehensive information on creating and configuring relational schemas, see [Relational Schema overview](../../../xdm/schema/relational.md)."
+* Accepts `u` (upsert) and `d` (delete).  
+* Required only to capture deletes. If omitted, CDC treats rows as upserts.  
+* Evaluated only during ingestion—it is not stored in the dataset or mapped to any XDM field.  
 
-8. ADD AVAILABILITY NOTE: "Relational schemas are available with appropriate Experience Platform entitlements."
+### Workflow
 
-9. FORMATTING REQUIREMENTS:
-- Use sentence case for all headings
-- Apply imperative voice for instructional content
-- Follow Adobe Style Guide v3 principles
-- Maintain consistent terminology: "relational schemas" (not "Relational Schemas")
-- Use "dataset" not "data set"
+To enable CDC with a model-based schema:
 
-10. POSITION: Insert this entire section immediately after line 14, before the first source-specific section (## [!DNL Amazon S3])
--->
+1. [Create a model-based schema](link-placeholder).  
+2. Add the required descriptors:  
+   * Primary key  
+   * Version descriptor  
+   * Timestamp descriptor (time-series only)  
+3. Create a dataset from the schema and enable CDC.  
+4. Add the `_change_request_type` column to your source files or tables.  
+5. Complete the [source connection setup](../api/collect/) to finish ingestion.  
 
 ## [!DNL Amazon S3]
 
