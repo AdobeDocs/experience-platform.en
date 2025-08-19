@@ -29,7 +29,7 @@ In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in 
 
 Select [!UICONTROL Model-based] to define structured, relational-style schemas with fine-grained control over records. Model-based schemas support primary key enforcement, record-level versioning, and schema-level relationships through primary and foreign keys. They are also optimized for incremental ingestion using change data capture (CDC), and support multiple data models used in Campaign Orchestration, Data Distiller, and B2B implementations.
 
-To learn more, see [Model-based schema overview](../../schema/model-based.png).
+To learn more, see [Model-based schema overview](../../schema/model-based.md).
 
 The **[!UICONTROL Create a model-based schema]** dialog appears. You can choose either **[!UICONTROL Create manually]** or [**[!UICONTROL Upload DDL file]**](#upload-ddl-file) to define the schema structure.
 
@@ -43,7 +43,7 @@ The **[!UICONTROL Model-based schema details]** page appears. Enter a schema dis
    
 ![The Model-based schema details view with [!UICONTROL Schema display name], [!UICONTROL Description], and [!UICONTROL Finish] highlighted.](../../images/ui/resources/schemas/model-based-details.png)
 
-The Schema Editor opens with an empty canvas for defining the schema structure. The [!UICONTROL Type] field in the [!UICONTROL  Schema properties] sidebar indicates this is a [!UICONTROL Relational] schema
+The Schema Editor opens with an empty canvas for defining the schema structure. The [!UICONTROL Type] field in the [!UICONTROL  Schema properties] sidebar indicates this is a [!UICONTROL Relational] schema.
 
 ![The Schema Editor canvas showing an empty model-based schema structure with Relational type highlighted.](../../images/ui/resources/schemas/model-based-empty-canvas.png)
 
@@ -71,7 +71,7 @@ Next, proceed to [define primary keys](../fields/identity.md#define-a-identity-f
 
 ### Upload a DDL file {#upload-ddl-file}
 
-Use this workflow to define the schema by uploading a DDL file. In the **[!UICONTROL Create a model-based schema]** dialog, select **[!UICONTROL Upload DDL file]**, then either drag a local DDL file from your system or select **[!UICONTROL Choose files]**. Experience Platform validates the schema and displays a green checkmark if the file upload is succesful. Select **[!UICONTROL Next]** confirm the upload.  
+Use this workflow to define the schema by uploading a DDL file. In the **[!UICONTROL Create a model-based schema]** dialog, select **[!UICONTROL Upload DDL file]**, then either drag a local DDL file from your system or select **[!UICONTROL Choose files]**. Experience Platform validates the schema and displays a green checkmark if the file upload is successful. Select **[!UICONTROL Next]** to confirm the upload.  
 
 ![The Create a model-based schema dialog with [!UICONTROL Upload DDL file] selected and [!UICONTROL Next] highlighted.](../../images/ui/resources/schemas/upload-ddl-file.png)
 
@@ -95,57 +95,9 @@ Although required during ingestion, control columns like `_change_request_type` 
     
 The schema opens in the Schema Editor, where you can adjust the structure before saving.
 
-Next, proceed to [add additional fields](#add-field-groups), [define primary keys](../fields/identity.md#define-a-identity-field), [add schema-level relationships](../../tutorials/relationship-ui.md#relationship-field), and a [version identifier](#add-version-identifier) as needed.
+Next, proceed to [add additional fields](#add-field-groups), and [add additional schema-level relationships](../../tutorials/relationship-ui.md#relationship-field) as needed.
 
 For guidance on how to enable change data capture in Experience Platform Sources, see the [change data capture ingestion guide](../../../sources/tutorials/api/change-data-capture.md).
-<!-- ... -->
-<!-- ## Model-based schema creation {#model-based-creation}
-
-From the dropdown menu select 'Model-based'. The Create a model-based schema dialog appears. You can either do it manually, or you can do it by uploading a DDL file. 
-
-Select 'Create manually', then 'Next'. The Model-based schema details page appears. Enter a display name for your schema and an optional description. 
-
-Note; Currently model-based schemas only support record schema behaviour.
-And select 'Finish' to confirm your settings.
-
-The Schema Editor canvas appears with a completely empty schema.
-
-The existing Schema Editor process/experience is used to add fields to the empty schema. [LINK TO ADD FIELDS section/guide](#add-field-groups) -->
-
-<!-- TODO: PLAT-240919 Add Model-Based Schema UI workflow section 
-- document the "Model-Based" option users will see in schema creation UI, including step-by-step workflow for creating model-based schemas 
-
-### Model-based schema creation {#model-based-creation}
-
-Model-based schemas enable structured, relational-style data support with primary key enforcement and schema relationships. Select the **[!UICONTROL Model-Based]** option when you need to:
-
-- Support primary key enforcement and version tracking
-- Create relationships between schemas via primary and foreign keys
-- Ingest data using Sources with change data capture (CDC)
-- Support multiple data models for Campaign Orchestration, Data Distiller, or B2B use cases
-
-#### Creating a model-based schema
-
-1. In the **[!UICONTROL Create a schema]** dialog, select **[!UICONTROL Model-Based]** from the available options.
-
-2. Choose your base class (**[!UICONTROL Record]** or **[!UICONTROL Time-series]**) depending on your data type.
-
-3. In the schema editor, add the required fields for model-based schemas:
-   - **Primary key field**: Add a field and mark it as the primary key using the **[!UICONTROL Primary Key]** checkbox in field properties
-   - **version identifier field**: Add a field and mark it as the version identifier using the **[!UICONTROL version identifier]** checkbox
-   - **Timestamp descriptor field**: Required only for time-series schemas - add a timestamp field and mark it as the timestamp descriptor
-
-4. Configure additional fields and field groups as needed for your data model.
-
-5. To create relationships with other model-based schemas, use the **[!UICONTROL Add Relationship]** option to define primary and foreign key connections.
-
->[!NOTE]
->
->Control columns used during ingestion (such as `_change_request_type` for CDC workflows) are read at ingestion time and are not stored in the schema or mapped to XDM fields.
-
-For comprehensive information on model-based schema concepts, see [Model-Based Schema overview](../../schema/model-based.md). For CDC configuration with Sources, see [Enable change data capture](../../../sources/tutorials/api/change-data-capture.md).
- 
--->
 
 ## Standard schema creation {#standard-based-creation}
 
