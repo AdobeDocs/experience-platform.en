@@ -190,7 +190,7 @@ Supported ingestion methods include:
   >
   > For **file-based sources only**, each row in the data file must include a `_change_request_type` column with either `U` (upsert) or `D` (delete). Without this column, the system will not recognize the data as supporting change tracking. As a result, options such as the **Orchestrated Campaign** toggle will not appear, and the dataset cannot be selected for targeting.
 
-  For step-by-step instructions on enabling change data capture in the Sources workflow, see [Enable change data capture for source connections](link-to-sources-doc/PLACEHOLDER.md).
+  For step-by-step instructions on enabling change data capture in the Sources workflow, see [Enable change data capture for source connections](../../sources/tutorials/api/change-data-capture.md).
 
 * **Data Distiller**: Ingest using SQL queries to write into relational datasets.
 * **Local file upload**: Upload files manually when needed for non-source ingestion workflows.
