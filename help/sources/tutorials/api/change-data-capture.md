@@ -5,80 +5,101 @@ exl-id: 362f3811-7d1e-4f16-b45f-ce04f03798aa
 ---
 # Enable change data capture for source connections in the API
 
-Change data capture in Adobe Experience Platform sources is a capability that you can use to maintain real-time data synchronization between your source and destination systems.
+Use change data capture in Adobe Experience Platform sources to keep your source and destination systems synchronized in real time.
 
 Currently, Experience Platform supports **incremental data copy**, which ensures that newly created or updated records in the source system are periodically copied to the ingested datasets. This process relies on usage of the **timestamp column**, such as `LastModified` in order to track changes and capture **only the newly inserted or updated data**. However, this method does not account for deleted records, which can lead to data inconsistencies over time.
 
-With change data capture, a given flow captures and applies all changes, including inserts, updates, and deletes. Similarly, Experience Platform datasets remain fully synchronized with the source system.
+With change data capture, each flow captures and applies inserts, updates, and deletes. As a result, datasets remain aligned with the source system.
 
-You can use change data capture for the following sources:
+You can use change data capture with the following sources:
 
 ## Using change data capture with model-based schemas
 
-Model-based schemas extend Experience Platform to enforce primary keys, track changes at the row level, and define schema-level relationships. When used with change data capture (CDC), they apply inserts, updates, and deletes directly in the data lake. This approach keeps datasets synchronized with the source system and reduces the need for complex ETL or manual reconciliation.
+Model-based schemas extend Experience Platform to enforce primary keys, track row-level changes, and define schema-level relationships. With change data capture, they apply inserts, updates, and deletes directly in the data lake, reducing the need for ETL or manual reconciliation.
 
-### Model-based schema requirements for CDC
+### Model-based schema requirements for change data capture
 
-Before you can use a model-based schema with CDC, configure the following descriptors:
+Before you use a model-based schema with change data capture, configure the following descriptors:
 
-* Primary key: Uniquely identifies each record.  
-* Version: Ensures updates are applied in the correct sequence.  
-* Timestamp (time-series only): Required when the schema represents time-series data.  
+* Uniquely identify each record with a primary key.  
+* Apply updates in sequence using a version descriptor.  
+
+<!-- For Sept:
+ * For time-series schemas, add a timestamp descriptor.   -->
 
 ### Control column handling
 
-CDC with model-based schemas requires a control column, `_change_request_type`, that indicates how each row should be processed:
+Use the `_change_request_type` column to indicate how each row should be processed:
 
-* Accepts `u` (upsert) and `d` (delete).  
-* Required only to capture deletes. If omitted, CDC treats rows as upserts.  
-* Evaluated only during ingestion—it is not stored in the dataset or mapped to any XDM field.  
+* `u` = upsert (default if the column is absent)  
+* `d` = delete  
+
+This column is evaluated only during ingestion and is not stored or mapped to XDM fields.  
 
 ### Workflow
 
-To enable CDC with a model-based schema:
+To enable change data capture with a model-based schema:
 
 1. [Create a model-based schema](link-placeholder).  
 2. Add the required descriptors:  
    * Primary key  
    * Version descriptor  
-   * Timestamp descriptor (time-series only)  
-3. Create a dataset from the schema and enable CDC.  
+   <!--For Sept:
+   * Timestamp descriptor (time-series only) -->
+3. Create a dataset from the schema and enable change data capture.  
 4. Add the `_change_request_type` column to your source files or tables.  
-5. Complete the [source connection setup](../api/collect/) to finish ingestion.  
+5. Complete the [source connection setup](../api/collect/) to enable ingestion.  
 
-## [!DNL Amazon S3]
+## File-based sources {#file-based-sources}
 
-Ensure that `_change_request_type` is present in the [!DNL Amazon S3] file that you intend to ingest to Experience Platform. Additionally, you must ensure that the following valid values are included in the file:
+For file-based sources (Amazon S3, Azure Blob, Google Cloud Storage, and SFTP), include a `_change_request_type` column in your files:
 
-* `u`: for inserts and updates
-* `d`: for deletions.
+* `u`: upsert (default if omitted)  
+* `d`: delete  
 
-If `_change_request_type` is not present in your file, then the default value of `u` will be used.
+Follow the source-specific steps below.
+
+### [!DNL Amazon S3]
 
 Read the following documentation for steps on how to enable change data capture for your [!DNL Amazon S3] source connection:
 
-* [Create a [!DNL Amazon S3] base connection](../api/create/cloud-storage/s3.md).
-* [Create a source connection for a cloud storage](../api/collect/cloud-storage.md#create-a-source-connection).
+* [Create a [!DNL Amazon S3] base connection](../api/create/cloud-storage/s3.md).  
+* [Create a source connection for a cloud storage](../api/collect/cloud-storage.md#create-a-source-connection).  
 
-## [!DNL Azure Blob]
+See [File-based sources](#file-based-sources) for details on using `_change_request_type` with [!DNL Amazon S3].
 
-Ensure that `_change_request_type` is present in the [!DNL Azure Blob] file that you intend to ingest to Experience Platform. Additionally, you must ensure that the following valid values are included in the file:
-
-* `u`: for inserts and updates
-* `d`: for deletions.
-
-If `_change_request_type` is not present in your file, then the default value of `u` will be used.
+### [!DNL Azure Blob]
 
 Read the following documentation for steps on how to enable change data capture for your [!DNL Azure Blob] source connection:
 
-* [Create a [!DNL Azure Blob] base connection](../api/create/cloud-storage/blob.md).
+* [Create a [!DNL Azure Blob] base connection](../api/create/cloud-storage/blob.md).  
 * [Create a source connection for a cloud storage](../api/collect/cloud-storage.md#create-a-source-connection).
+
+See [File-based sources](#file-based-sources) for details on using `_change_request_type` with [!DNL Azure Blob].
+
+### [!DNL Google Cloud Storage]
+
+Read the following documentation for steps on how to enable change data capture for your [!DNL Google Cloud Storage] source connection:
+
+* [Create a [!DNL Google Cloud Storage] base connection](../api/create/cloud-storage/google.md).  
+* [Create a source connection for a cloud storage](../api/collect/cloud-storage.md#create-a-source-connection).
+
+See [File-based sources](#file-based-sources) for details on using `_change_request_type` with [!DNL Google Cloud Storage].
+
+### [!DNL SFTP]
+
+Read the following documentation for steps on how to enable change data capture for your [!DNL SFTP] source connection:
+
+* [Create a [!DNL SFTP] base connection](../api/create/cloud-storage/sftp.md).  
+* [Create a source connection for a cloud storage](../api/collect/cloud-storage.md#create-a-source-connection).
+
+See [File-based sources](#file-based-sources) for details on using `_change_request_type` with [!DNL SFTP].
 
 ## [!DNL Azure Databricks]
 
-You must enable **change data feed** in your [!DNL Azure Databricks] table in order to use change data capture in your source connection.
+You must enable **change data feed** in your [!DNL Azure Databricks] tables to use change data capture in your source connection.
 
-Use the following commands to explicitly enable the change data feed option in [!DNL Azure Databricks]
+Use the following commands to enable change data feed on your tables:
 
 **New table**
 
@@ -113,9 +134,7 @@ Read the following documentation for steps on how to enable change data capture 
 
 ## [!DNL Data Landing Zone]
 
-You must enable **change data feed** in your [!DNL Data Landing Zone] table in order to use change data capture in your source connection.
-
-Use the following commands to explicitly enable the change data feed option in [!DNL Data Landing Zone].
+You must enable **change data feed** in your [!DNL Data Landing Zone] tables to use change data capture in your source connection.
 
 Read the following documentation for steps on how to enable change data capture for your [!DNL Data Landing Zone] source connection:
 
@@ -133,39 +152,9 @@ Read the following documentation for steps on how to enable change data capture 
 * [Create a [!DNL Google BigQuery] base connection](../api/create/databases/bigquery.md).
 * [Create a source connection for a database](../api/collect/database-nosql.md#create-a-source-connection).
 
-## [!DNL Google Cloud Storage]
-
-Ensure that `_change_request_type` is present in the [!DNL Google Cloud Storage] file that you intend to ingest to Experience Platform. Additionally, you must ensure that the following valid values are included in the file:
-
-* `u`: for inserts and updates
-* `d`: for deletions.
-
-If `_change_request_type` is not present in your file, then the default value of `u` will be used.
-
-Read the following documentation for steps on how to enable change data capture for your [!DNL Google Cloud Storage] source connection:
-
-* [Create a [!DNL Google Cloud Storage] base connection](../api/create/cloud-storage/google.md).
-* [Create a source connection for a cloud storage](../api/collect/cloud-storage.md#create-a-source-connection).
-
-
-## [!DNL SFTP]
-
-Ensure that `_change_request_type` is present in the [!DNL SFTP] file that you intend to ingest to Experience Platform. Additionally, you must ensure that the following valid values are included in the file:
-
-* `u`: for inserts and updates
-* `d`: for deletions.
-
-If `_change_request_type` is not present in your file, then the default value of `u` will be used.
-
-Read the following documentation for steps on how to enable change data capture for your [!DNL SFTP] source connection:
-
-* [Create a [!DNL SFTP] base connection](../api/create/cloud-storage/sftp.md).
-* [Create a source connection for a cloud storage](../api/collect/cloud-storage.md#create-a-source-connection).
-
-
 ## [!DNL Snowflake]
 
-You must enable **change tracking** in your [!DNL Snowflake] tables in order to use change data capture in your source connections.
+You must enable **change tracking** in your [!DNL Snowflake] tables to use change data capture in your source connections.
 
 In [!DNL Snowflake], enable change tracking by using the `ALTER TABLE` and setting `CHANGE_TRACKING` to `TRUE`.
 
