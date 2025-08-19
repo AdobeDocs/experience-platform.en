@@ -122,11 +122,13 @@ Once the destination connection has been created, you can proceed to the audienc
 
 The next step is mapping Source Field identifiers to the [!DNL Magnite] Device Type identifier of your choice, located in the Target Field.
 
-The current list of [!DNL Magnite] Supported Device Types will be available via a dropdown list, by clicking the Target Field's target attribute button.
+The current list of [!DNL Magnite] supported device types will be available via a dropdown list, by clicking the Target Field's target attribute button.
 
-![Choose desired device type attribute from target field dropdown](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-target-dropdown.png)
+In order to support a dynamic list of device types, the dropdown will provide a list of integers (from 0-50), each of which represents a specific device type in [!DNL Magnite]'s system. To understand which device type id in the list of integers corresponds to which [!DNL Magnite] device type, reach out to your [!DNL Magnite] account representative. 
 
-This example using the Real-Time destination shows a row that contains a generic deviceId source identifier mapped to the [!DNL Magnite] Device Type: Idfa target attribute identifier. When you are satisfied with the mappings, select [!UICONTROL Next].
+![Choose desired device type integer from target field dropdown](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-target-dropdown.png)
+
+This example using the Real-Time destination shows a row that contains a generic deviceId source identifier mapped to the [!DNL Magnite] device type with integer id: "1". When you are satisfied with the mappings, select [!UICONTROL Next].
 
 ![Map desired data fields to the target field](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-field-mapping.png)
 
