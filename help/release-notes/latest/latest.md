@@ -35,7 +35,7 @@ Experience Platform allows you to subscribe to event-based alerts for various Ex
 **New features**
 
 | Feature | Description |
-| ------- | ----------- |
+| --- | --- |
 | Streaming throughput capacity alerts | Three new alerts allow users to subscribe to and configure alerts to proactively manage and monitor performance of streaming throughput capacity. New alerts include when streaming throughput reached 80%, 90%, or exceeds capacity limits. For more information, read the [capacity alert rules](../../observability/alerts/rules.md#capacity) guide. |
 
 For more information about alerts, read the [[!DNL Observability Insights] overview](../../observability/home.md).
