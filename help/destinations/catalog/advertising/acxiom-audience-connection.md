@@ -1,7 +1,7 @@
 ---
 title: Acxiom Audience Distribution
 description: Use the [!DNL Acxiom Audience Distribution] destination to enhance audiences with [!DNL Acxiom's Real ID] technology and activate audiences to multiple platforms, such as [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], and more.
-badge: Beta
+badge: label="Beta" type="Informative"
 exl-id: bac0f337-bfab-4779-acc8-f70239552666
 ---
 # [!DNL Acxiom Audience Distribution] destination 
@@ -110,6 +110,7 @@ If you are happy with the results, select **[!UICONTROL Finish]** to activate yo
 If your destination representative is unable to locate your audience, contact your [!DNL Adobe] representative for assistance. 
 
 You will need to provide the following information to your [!DNL Adobe] representative:
+
 * Audience name
 * Destination name
 * Audience activation date
