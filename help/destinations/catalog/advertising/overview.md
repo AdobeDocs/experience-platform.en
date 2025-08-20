@@ -20,7 +20,8 @@ To understand the difference between connections and extensions, see [Connection
 
 ### Connections
 
-* [(Beta) Acxiom Audience Distribution](acxiom-audience-distribution.md)
+* [(Beta) Acxiom Audience Distribution](acxiom-audience-connection.md)
+* [(Beta) Acxiom Real ID Audience Connection](acxiom-real-id-audience-connection.md)
 * [Adobe Advertising Cloud connection](adobe-advertising-cloud-connection.md)
 * [Amazon Ads connection](amazon-ads.md)
 * [Bombora connection](bombora.md)
