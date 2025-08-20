@@ -17,7 +17,7 @@ Adobe is consolidating the **[[!UICONTROL (V2) Marketo Engage]](marketo-engage.m
 
 >[!IMPORTANT]
 >
->The current **[!UICONTROL (V2) Marketo Engage]** and **[!UICONTROL Marketo Engage Person Sync]** destination cards will be deprecated in **December 2025**.
+>The current **[!UICONTROL (V2) Marketo Engage]** and **[!UICONTROL Marketo Engage Person Sync]** destination cards will be deprecated in **March 2026**.
 
 This new destination offers all features from both previous versions, making it easier to manage your Marketo integrations with a single, streamlined workflow:
 
@@ -28,7 +28,7 @@ This new destination offers all features from both previous versions, making it 
 
 To ensure a smooth transition to the new destination, review the following key points and required actions:
 
-* All users of the existing **[!UICONTROL (V2) Marketo Engage]** and **[!UICONTROL Marketo Engage Person Sync]** destinations must migrate to the new **[!UICONTROL Marketo Engage]** destination by December 2025.
+* All users of the existing **[!UICONTROL (V2) Marketo Engage]** and **[!UICONTROL Marketo Engage Person Sync]** destinations must migrate to the new **[!UICONTROL Marketo Engage]** destination by March 2026.
 * **Existing dataflows will not be migrated automatically.** You must [set up a new connection](../../ui/connect-destination.md) to the new **[!UICONTROL Marketo Engage]** destination and activate your audiences there. You can continue to use your existing audiences.
 
 **To preserve your current sync behavior after migration:**

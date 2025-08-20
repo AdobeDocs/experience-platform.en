@@ -11,7 +11,7 @@ Adobe is consolidating the **[!UICONTROL (V2) Marketo Engage]** and **[[!UICONTR
 
 >[!IMPORTANT]
 >
->The current **[!UICONTROL (V2) Marketo Engage]** and **[!UICONTROL Marketo Engage Person Sync]** destination cards will be deprecated in **December 2025**.
+>The current **[!UICONTROL (V2) Marketo Engage]** and **[!UICONTROL Marketo Engage Person Sync]** destination cards will be deprecated in **March 2026**.
 
 This new destination offers all features from both previous versions, making it easier to manage your Marketo integrations with a single, streamlined workflow:
 
@@ -22,7 +22,7 @@ This new destination offers all features from both previous versions, making it 
 
 To ensure a smooth transition to the new destination, review the following key points and required actions:
 
-* All users of the existing **[!UICONTROL (V2) Marketo Engage]** destination must migrate to the new **[!UICONTROL Marketo Engage]** destination by December 2025.
+* All users of the existing **[!UICONTROL (V2) Marketo Engage]** destination must migrate to the new **[!UICONTROL Marketo Engage]** destination by March 2026.
 * **Existing dataflows will not be migrated automatically.** You must [set up a new connection](../../ui/connect-destination.md) to the new **[!UICONTROL Marketo Engage]** destination and activate your audiences there. You can continue to use your existing audiences.
 
 **To preserve your current sync behavior after migration:**
@@ -44,21 +44,15 @@ To help you better understand how and when you should use the [!DNL Marketo Enga
 
 **Re-engage known leads only**
 
-The marketing team wants to run a win-back campaign targeting leads who have not engaged in 90+ days but already exist in Marketo. They want to avoid adding any new people.
+The marketing team wants to run a win-back campaign targeting leads who have not engaged in 90+ days but already exist in Marketo.
 
 They can activate the audiences to Marketo Engage and use the **[!UICONTROL Audience Only]** sync type combined with the **[!UICONTROL Update existing persons only]** action to make sure they target only the audiences that already exist in Marketo.
-
-**Engage new and existing leads**
-
-The marketing team wants to launch a targeted campaign based on product interest targeting existing leads and new leads that do not exist in Marketo.
-
-They can activate their audiences in Marketo Engage and use the **[!UICONTROL Audience Only]** sync type combined with the **[!UICONTROL Update existing and create new persons]** action to make sure they target existing leads from Marketo and create new ones for the new audiences exported from Real-Time CDP.
 
 ### Audience and profile sync use cases {#audience-profile-sync-use-cases}
 
 **Re-engage known leads and update leads**
 
-The marketing team wants to launch a re-engagement campaign for existing Marketo contacts who have shown interest based on website visits. They also want to update the leads information (like preferences, demographics information), but not create any new people.
+The marketing team wants to launch a re-engagement campaign for existing Marketo contacts who have shown interest based on website visits. They also want to update the leads information (like preferences, demographics information), but not create any new people in Marketo.
 
 They can activate the audiences to Marketo Engage and use the **[!UICONTROL Audience and Profile]** sync type combined with the **[!UICONTROL Update existing persons only]** action to make sure they target only the audiences that already exist in Marketo.
 
@@ -78,7 +72,7 @@ The user setting up the destination must have the [Edit Person](https://experien
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-| `DedupeField` | The field used to identify and match existing leads in Marketo. | During the [mapping](#mapping) step, map any source field (such as `Email` or other custom identifiers) that you want to use as the deduplication field to this target identity. For best results, choose a field that is consistently available and unique across all your customer profiles. |
+| `DedupeField` | The field used to identify and match existing leads in Marketo. | During the [mapping](#mapping) step, map any source field (such as `Email` or other custom identifiers) that you want to use as the deduplication field to this target identity. For best results, choose a field that is consistently available and unique across all your customer profiles. `ECID` is not supported as a deduplication field. |
 
 {style="table-layout:auto"}
 
@@ -143,13 +137,13 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Workspace ID]**: Select your Marketo workspace ID.
 * **[!UICONTROL Sync Type]**: Select the sync type that you want to use for this destination:
     * **[!UICONTROL Profile Only]**: Select this option to sync profile data.
-    * **[!UICONTROL Audience Only]**: Select this option to sync audience data.
+    * **[!UICONTROL Audience Only]**: Select this option to sync audience data. Profiles from Experience Platform will be matched against profiles from Marketo from the selected partition. Matching is based on the **[!UICONTROL Marketo deduplication field]** value.
     * **[!UICONTROL Audience and Profile]**: Select this option to sync both profile and audience data.
 * **[!UICONTROL Partition]**: Optional. Select a Marketo lead partition ID associated with your chosen workspace. This allows you to specify which lead partition in Marketo will receive the exported audience data.
 * **[!UICONTROL Marketo deduplication field]**: Select the Marketo deduplication field that you want to use. This selector shows the fields that you marked as deduplication fields in Marketo.
-* **[!UICONTROL Action]**: Select the Marketo action that you want to perform when exporting audiences:
-    * **[!UICONTROL Update existing persons only]**: Select this option to only update the audiences that have a match in Marketo.
-    * **[!UICONTROL Update existing and create new persons]**: Select this option to update the audiences that have a match in Marketo and create matching ones for the rest.
+* **[!UICONTROL Person Action]**: Select the Marketo action that you want to perform when exporting audiences:
+    * **[!UICONTROL Update existing persons only]**: Select this option to only update the persons that have a match in Marketo.
+    * **[!UICONTROL Update existing and create new persons]**: Select this option to update the persons that have a match in Marketo and create matching ones for the rest.
 
 ### Enable alerts {#enable-alerts}
 
