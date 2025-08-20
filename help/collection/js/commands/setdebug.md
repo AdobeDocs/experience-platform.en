@@ -15,4 +15,4 @@ alloy("setDebug", {"enabled": true});
 
 ## Set debug using the Web SDK tag extension
 
-The tag extension does not offer the ability to toggle debug options within the UI. You can either use the custom code editor using JavaScript syntax, or enter the JavaScript code within the browser console while on your site.
+Call [`_satellite.setDebug()`](/help/collection/tags/setdebug.md) within the browser console on a page where a tag library is implemented. The Web SDK tag extension does not offer the ability to toggle debug options within the tags UI itself.

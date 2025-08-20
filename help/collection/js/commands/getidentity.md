@@ -43,6 +43,13 @@ If you decide to [handle responses](command-responses.md) with this command, the
 * **`identity.CORE`**: A string containing the visitor's CORE ID.
 * **`edge.regionID`**: An integer that represents the Edge Network region that the browser hit when acquiring an identity. It is the same as the legacy Audience Manager location hint.
 
+```js
+// Get the visitor's ECID
+alloy('getIdentity').then(result => {
+  console.log(result.identity.ECID);
+});
+```
+
 ## Get identity using the Web SDK tag extension
 
 The Web SDK tag extension does not offer this command through the tag extension UI. Use the custom code editor using JavaScript library syntax.
