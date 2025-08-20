@@ -42,6 +42,7 @@ role: Admin,User
         * [Activate account audiences to destinations](./ui/activate-account-audiences.md)
         * [Export files on-demand to batch destinations using the Experience Platform UI](./ui/export-file-now.md)
         * [Export datasets using the Experience Platform UI](./ui/export-datasets.md)
+        * [Extend dataset export schedules for dataflows created prior to November 2024](./ui/dataset-expiration-update.md)
         * [(Beta) Use the last qualification time XDM attribute in the new beta cloud storage destinations](./ui/activate-last-qualification-time.md)
         * [Export arrays, maps, and objects](/help/destinations/ui/export-arrays-maps-objects.md)
         * [Perform transformations on data exported to cloud storage destinations](/help/destinations/ui/data-transformations-calculated-fields.md)
@@ -65,7 +66,8 @@ role: Admin,User
         * [Experience Platform audience sharing](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
         * [Federated Audience Composition connection](https://www.adobe.com/go/destinations-federated-audience-composition)
     * Advertising destinations{#advertising}
-        * [(Beta) Acxiom Audience Distribution](./catalog/advertising/acxiom-audience-distribution.md)
+        * [(Beta) Acxiom Audience Distribution](./catalog/advertising/acxiom-audience-connection.md)
+        * [(Beta) Acxiom RealID Audience Connection](./catalog/advertising/acxiom-real-id-audience-connection.md)
         * [Advertising destinations overview](./catalog/advertising/overview.md)
         * [Adobe Advertising Cloud connection](./catalog/advertising/adobe-advertising-cloud-connection.md)
         * [Adobe Advertising Cloud extension](./catalog/advertising/adobe-advertising-cloud.md)
@@ -136,7 +138,7 @@ role: Admin,User
         * [Data Landing Zone](./catalog/cloud-storage/data-landing-zone.md)
         * [Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
         * [SFTP connection](./catalog/cloud-storage/sftp.md)
-        * [Snowflake connection](./catalog/cloud-storage/snowflake.md)
+        * [(Beta) Snowflake Streaming connection](./catalog/cloud-storage/snowflake.md)
         * [IP address allowlist for file-based cloud storage destinations](./catalog/cloud-storage/ip-address-allow-list.md)
     * Customer Relationship Management (CRM) destinations {#crm}
         * [Hubspot connection](./catalog/crm/hubspot.md)
