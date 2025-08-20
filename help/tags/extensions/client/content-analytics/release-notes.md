@@ -1,6 +1,7 @@
 ---
 title: Release Notes for the Adobe Content Analytics Extension
 description: The latest release notes for the Content Analytics tag extension in Adobe Experience Platform.
+exl-id: 37b34915-655b-40de-b17b-43028c579e37
 ---
 # Adobe Content Analytics extension release notes
 
@@ -13,4 +14,3 @@ The following is a list of release notes for the Content Analytics tag extension
 | <p>1.0.45</p>   | <p>14 Apr 2025</p> | <ul><li>Addresses a few bugs in the configuration settings for when holding Content Analytics events when waiting for page view events. Now Content Analytics will wait by default to fire events until the FIRST page view event happens.</li></ul> |
 | <p>1.0.44</p>    | <p>31 Mar 2025</p> | <ul><li>First iteration of the AppMeasurement integration.</li><li>This version does not support filtering on specific requests (for example, page views) but might be added at a later date.  This also uses the first AppMeasurement instance found on the page.</li></ul> |
 | <p>1.0.43</p>    | <p>10 Mar 2025</p> | <ul><li>Initial extension release.</li></ul> |
-
