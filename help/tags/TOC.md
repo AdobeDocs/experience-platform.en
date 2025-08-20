@@ -44,7 +44,6 @@ role: Developer
 * Client-side information {#client-side}
   * [Overview](./ui/client-side/overview.md)
   * [Asynchronous deployment](./ui/client-side/asynchronous-deployment.md)
-  * [Satellite object reference](./ui/client-side/satellite-object.md)
   * [Deploy JavaScript tags to manage customer consent](./ui/client-side/consent.md)
   * [Content Security Policy (CSP) support](./ui/client-side/content-security-policy.md)
   * [Subresource Integrity (SRI) support](./ui/client-side/sri.md)
