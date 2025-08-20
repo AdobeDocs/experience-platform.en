@@ -10,7 +10,7 @@ The `_satellite.track()` method allows you to trigger a [Direct call rule](/help
 >
 >Adobe considers `_satellite.track()` a **legacy implementation method**. While it is still fully supported, Adobe strongly recommends using more modern implementation practices, such as the [Adobe Client Data Layer](/help/tags/extensions/client/client-data-layer/overview.md), which is the recommended approach for new implementations.
 >
->If you opt to use `_satellite.track()` on your site, removing the tag property in the future causes all references to the `_satellite` object to throw errors. Your site is tightly coupled to the presence of Adobe tags.
+>If you opt to use `_satellite.track()` on your site, **guard every call** so that your site is not tightly coupled to the tag library. If not guarded, removing the tag property in the future causes all references to the `_satellite` object to throw errors.
 
 ```ts
 _satellite.track(identifier: string, detail?: unknown ): void;
@@ -29,7 +29,9 @@ The `_satellite.track()` method supports two arguments:
 
 ```js
 // Trigger rules with the identifier 'example'
-_satellite.track('example');
+if (window._satellite?.track) {
+  _satellite.track('example');
+}
 
 // Trigger a direct call rule with an optional payload that your tag rule can use
 _satellite.track('contact_submit', { name: 'John Doe' });
