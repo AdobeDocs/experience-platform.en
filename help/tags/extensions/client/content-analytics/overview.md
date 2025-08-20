@@ -83,7 +83,7 @@ In the **[!UICONTROL Event Filtering]** section, you can modify the regular expr
 ### Examples
 
 * You want to exclude all documentation pages from Content Analytics.<br/>Use the following regular expression: `^(?!.*documentation).*`
-* You want to exclude all logo JPEG and SVG images from Content Analytics.<br/>Use the following regular expression: `^(?!.*(logo\.jpg|\.svg)).*$`
+* You want to exclude all logo JPEG and SVG images from Content Analytics.<br/>Use the following regular expression: `^(?!.*(logo\.jpg|)).*$`
 
 You can use **[!UICONTROL Test Regex]** to test your regular expression in the **[!UICONTROL Regular Expression Tester]**.
 
