@@ -163,7 +163,7 @@ curl -X POST \
 | `serviceEndpoint` | The endpoint URL of your [!DNL Azure Blob Storage] account. Typically in the format: `https://{ACCOUNT_NAME}.blob.core.windows.net`. |
 | `servicePrincipalId` | The client/application ID of the Azure Active Directory (AAD) service principal used for authentication. |
 | `servicePrincipalKey` | The client secret or password associated with the Azure service principal. |
-| `accountKind` | The type of your [!DNL Azure Blob Storage] account. Common values include `StorageV2`, `BlobStorage`, or `Storage`. |
+| `accountKind` | The type of your [!DNL Azure Blob Storage] account. Common values include `Storage` (general purpose V1), `StorageV2` (general purpose V2), `BlobStorage`, and `BlockBlobStorage`. |
 | `tenant` | The Azure Active Directory (AAD) tenant ID where the service principal is registered. |
 | `container` | The name of the [!DNL Azure Blob Storage] container where your data files are stored. |
 | `folderPath` | The path within the specified container where your files are located. |
