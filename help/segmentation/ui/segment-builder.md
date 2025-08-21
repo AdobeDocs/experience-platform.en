@@ -369,12 +369,12 @@ To select a merge policy for your segment definition, select the gear icon on th
 
 ![The merge policy selector is highlighted. This lets you choose which merge policy to select for your segment definition.](../images/ui/segment-builder/merge-policy-selector.png)
 
-## Segment definition properties {#segment-properties}
+## Audience properties {#audience-properties}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
->title="Segment definition properties"
->abstract="The segment definition properties section displays an estimate of the size of the resulting segment definition, displaying the number of qualified profiles in comparison to the total number of profiles. This allows you to adjust your segment definition as necessary before building the audience itself."
+>title="Audience properties"
+>abstract="The audience properties section displays an estimate of the size of the resulting audience, displaying the number of qualified profiles in comparison to the total number of profiles. This allows you to adjust your audience as necessary before building the audience itself."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
@@ -385,12 +385,12 @@ To select a merge policy for your segment definition, select the gear icon on th
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_qualifiedprofiles"
 >title="Qualified profiles"
->abstract="Qualified profiles indicates the actual number of profiles that match the segment definition's rules. This number updates every 24 hours, after the segment evaluation job has ran."
+>abstract="Qualified profiles indicates the actual number of profiles that match the audience's rules. This number updates every 24 hours, after the segment evaluation job has ran."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_estimatedprofiles"
 >title="Estimated profiles"
->abstract="Estimated profiles indicates an approximate number of profiles, based off of the sample job, that would qualify for the segment definition's rules."
+>abstract="Estimated profiles indicates an approximate number of profiles, based off of the sample job, that would qualify for the audience's rules."
 
 When building a segment definition, the **[!UICONTROL Audience properties]** section on the right-hand side of the workspace displays an estimate of the size of the resulting segment definition, allowing you to adjust your segment definition as needed before building the audience itself.
 
@@ -398,22 +398,22 @@ When building a segment definition, the **[!UICONTROL Audience properties]** sec
 
 The timestamp for qualified profiles indicates the most recent **batch** segment evaluation job and is **not** displayed for segment definitions evaluated using streaming or edge segmentation. If you edit the segment definition, the number of qualified profiles will remain the same until the next segment evaluation job is run. 
 
-**[!UICONTROL Estimated Profiles]** indicates an **approximate** number of profiles, based off of the **sample job**. This means the sample data is projected on the larger profile set, resulting in an estimated number that may differ from the actual number of qualified profiles. The estimated profile sample has a 95% confidence interval.
+**[!UICONTROL Estimated Profiles]** indicates an **approximate range** of profiles, based off of the **sample job**. This means the sample data is projected on the larger profile set, resulting in an estimated number that may differ from the actual number of qualified profiles. The estimated profile sample has a 95% confidence interval.
 
 This number is updated in two scenarios:
 
-1. There is a greater than 5% change in customer data or the last sample job is older than seven days.
+1. There is a greater than 3% change in customer data or the last sample job is older than three days.
 2. The audience's rules have been modified or removed.
 
-Selecting the information bubble gives the error threshold and most recent sample job time.
+Selecting the information bubble gives the date and time the last sample job was run.
 
 ![Qualified Profiles and Estimated Profiles are highlighted within the Audience properties section.](../images/ui/segment-builder/audience-estimates.png)
 
-The **[!UICONTROL Audience properties]** section is also where you can specify important information about your segment definition, including its name, description, and evaluation type. Segment definition names are used to identify your segment definition among those defined by your organization and should therefore be descriptive, concise, and unique. 
+The **[!UICONTROL Audience properties]** section is also where you can specify important information about your audience, including its name, description, and evaluation type. Names are used to identify your segment definition among those defined by your organization and should therefore be descriptive, concise, and unique. 
 
-As you continue to build your segment definition, you can view a paginated preview of the audience by selecting **[!UICONTROL View Profiles]**.
+As you continue to build your audience, you can view a paginated preview of the audience by selecting **[!UICONTROL View Profiles]**.
 
-![The segment definition properties section is highlighted. The segment definition properties include, but are not limited to, the segment definition name, description, and evaluation method.](../images/ui/segment-builder/segment-properties.png)
+![The audience properties section is highlighted. The audience properties include, but are not limited to, the name, description, and evaluation method.](../images/ui/segment-builder/segment-properties.png)
 
 >[!NOTE]
 >
@@ -447,4 +447,4 @@ Segment Builder provides a rich workflow allowing you to isolate marketable audi
 - Enable all segment definitions for scheduled segmentation.
 - Enable specified segment definitions for streaming segmentation.
   
-To learn more about [!DNL Segmentation Service], please continue reading the documentation and supplement your learning by watching the related videos. To learn more about the other parts of the [!DNL Segmentation Service] UI, please read the [[!DNL Segmentation Service] user guide](./overview.md)
+To learn more about [!DNL Segmentation Service], please continue reading the documentation and supplement your learning by watching the related videos. To learn more about the other parts of the [!DNL Segmentation Service] UI, please read the [[!DNL Segmentation Service] user guide](./overview.md).
