@@ -1,34 +1,24 @@
 ---
 title: Marketo Engage Destination
 description: Marketo Engage is the only end-to-end customer experience management (CXM) solution for marketing, advertising, analytics, and commerce. It lets you automate and manage activities from CRM lead management and customer engagement to account-based marketing and revenue attribution.
-exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
 ---
 # Marketo Engage destination {#beta-marketo-engage-destination}
 
-## Migration to unified Marketo Engage destination {#migration}
-
-Adobe is consolidating the **[!UICONTROL (V2) Marketo Engage]** and **[[!UICONTROL Marketo Engage Person Sync]](marketo-engage-person-sync.md)** destinations into a single, unified **[!UICONTROL Marketo Engage]** destination card.
+## Destination changelog {#changelog}
 
 >[!IMPORTANT]
 >
->The current **[!UICONTROL (V2) Marketo Engage]** and **[!UICONTROL Marketo Engage Person Sync]** destination cards will be deprecated in **March 2026**.
+>With the release of the [enhanced Marketo V2 destination connector](/help/release-notes/2022/july-2022.md#destinations), you are now seeing two Marketo cards in the destinations catalog.
+>
+>* If you are already activating data to the **[!UICONTROL Marketo V1]** destination: Please create new dataflows to the **[!UICONTROL Marketo V2]** destination and delete existing dataflows to the **[!UICONTROL Marketo V1]** destination by February 2023. As of that date, the **[!UICONTROL Marketo V1]** destination card will be removed.
+>* If you have not yet created any dataflows to the **[!UICONTROL Marketo V1]** destination, please use the new **[!UICONTROL Marketo V2]** card to connect to and export data to Marketo.
 
-This new destination offers all features from both previous versions, making it easier to manage your Marketo integrations with a single, streamlined workflow:
+![Image of the two Marketo destination cards in a side-by-side view.](../..//assets/catalog/adobe/marketo-side-by-side-view.png)
 
-* **Two sync actions in one place:** Both **[!UICONTROL Profile Sync]** and **[!UICONTROL Audience Sync]** are available and enabled by default. You can choose to use either or both, depending on your requirements.
-* **Simplified authentication:** You no longer need to provide a [!UICONTROL Client ID] or [!UICONTROL Client Secret]. Only your [!DNL Munchkin ID] and [!DNL Workspace ID] are required.
+Improvements in the Marketo V2 destination include:
 
-### Migration steps {#what-you-need-to-do}
-
-To ensure a smooth transition to the new destination, review the following key points and required actions:
-
-* All users of the existing **[!UICONTROL (V2) Marketo Engage]** destination must migrate to the new **[!UICONTROL Marketo Engage]** destination by March 2026.
-* **Existing dataflows will not be migrated automatically.** You must [set up a new connection](../../ui/connect-destination.md) to the new **[!UICONTROL Marketo Engage]** destination and activate your audiences there. You can continue to use your existing audiences.
-
-**To preserve your current sync behavior after migration:**
-
-* If you only use **[!UICONTROL Audience Sync]** in the old **[!UICONTROL (V2) Marketo Engage]** and do not want to use **[!UICONTROL Profile Sync]**, select the **[!UICONTROL Audience Only]** sync type in your new destination setup.
-* If you use **[!UICONTROL Profile Sync]** in the [[!UICONTROL Marketo Engage Person Sync]](marketo-engage-person-sync.md) destination and do not want to use **[!UICONTROL Audience Sync]**, select the **[!UICONTROL Profile Only]** sync type in your new destination setup.
+* In the **[!UICONTROL Schedule segment]** step of the activation workflow, in Marketo V1, you needed to manually add a **Mapping ID** to successfully export data to Marketo. This manual step is not required anymore in Marketo V2.
+* In the **[!UICONTROL Mapping]** step of the activation workflow, in Marketo V1, you were able to map XDM fields to only three target fields in Marketo: `firstName`, `lastName`, and `companyName`. With the Marketo V2 release, you can now map XDM fields to many more fields in Marketo. For more information, read the [supported attributes](#supported-attributes) section further below.
 
 ## Overview {#overview}
 
@@ -36,65 +26,33 @@ To ensure a smooth transition to the new destination, review the following key p
 
 The destination enables marketers to push audiences created in Adobe Experience Platform to Marketo where they will appear as static lists.
 
-## Use cases {#use-cases}
+## Supported identities and attributes {#supported-identities-attributes}
 
-To help you better understand how and when you should use the [!DNL Marketo Engage] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+>[!NOTE]
+>
+>In the [mapping step](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) of the activate destination workflow, it is *mandatory* to map identities and *optional* to map attributes. Mapping Email and/or ECID from the Identity Namespace tab is the most important thing to do to ensure the person is matched in Marketo. Mapping Email ensures the highest match rate.
 
-### Audience sync use cases {#audience-sync-use-cases}
+### Supported identities {#supported-identities}
 
-**Re-engage known leads only**
-
-The marketing team wants to run a win-back campaign targeting leads who have not engaged in 90+ days but already exist in Marketo.
-
-They can activate the audiences to Marketo Engage and use the **[!UICONTROL Audience Only]** sync type combined with the **[!UICONTROL Update existing persons only]** action to make sure they target only the audiences that already exist in Marketo.
-
-### Audience and profile sync use cases {#audience-profile-sync-use-cases}
-
-**Re-engage known leads and update leads**
-
-The marketing team wants to launch a re-engagement campaign for existing Marketo contacts who have shown interest based on website visits. They also want to update the leads information (like preferences, demographics information), but not create any new people in Marketo.
-
-They can activate the audiences to Marketo Engage and use the **[!UICONTROL Audience and Profile]** sync type combined with the **[!UICONTROL Update existing persons only]** action to make sure they target only the audiences that already exist in Marketo.
-
-**Re-engage and expand reach with full profile sync**
-
-The marketing team wants to activate a product interest audience for a new campaign. While many of the profiles already exist in Marketo, some are new and only present in Real-Time CDP. For the existing people, they want to make sure they update those people in Marketo, but also create new profiles.
-
-They can activate their audiences in Marketo Engage and use the **[!UICONTROL Audience and Profile]** sync type combined with the **[!UICONTROL Update existing and create new persons]** action to make sure they target existing leads from Marketo and create new ones for the new audiences exported from Real-Time CDP.
-
-## Prerequisites {#prerequisites}
-
-The user setting up the destination must have the [Edit Person](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) permission in their Marketo instance and partition.
-
-## Supported identities {#supported-identities}
-
-[!DNL Marketo Engage] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
-
-|Target Identity|Description|Considerations|
-|---|---|---|
-| `DedupeField` | The field used to identify and match existing leads in Marketo. | During the [mapping](#mapping) step, map any source field (such as `Email` or other custom identifiers) that you want to use as the deduplication field to this target identity. For best results, choose a field that is consistently available and unique across all your customer profiles. `ECID` is not supported as a deduplication field. |
+|Target Identity|Description|
+|---|---|
+|ECID|A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID". See the following document on [ECID](/help/identity-service/features/ecid.md) for more information.|
+|Email|A namespace that represents an email address. This type of namespace is often associated to a single person and therefore can be used to identify that person across different channels.|
 
 {style="table-layout:auto"}
 
+### Supported attributes {#supported-attributes}
+
+You can map attributes from Experience Platform to any of the attributes that your organization has access to in Marketo. In Marketo, you can use the [Describe API request](https://developers.marketo.com/rest-api/lead-database/leads/#describe) to retrieve the attribute fields that your organization has access to.
+
 ## Supported audiences {#supported-audiences}
 
-This section describes which types of audiences you can export to this destination. The two tables below indicate which audiences this connector supports, by _audience origin_ and _profile types included in the audience_:
+This section describes which types of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
 |---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| All other audience origins | ✓ | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> <br>|
-
-{style="table-layout:auto"}
-
-Supported audiences by audience data type:
-
-| Audience data type | Supported | Description | Use cases |
-|--------------------|-----------|-------------|-----------|
-| [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
-| [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
-| [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
@@ -109,69 +67,34 @@ Refer to the table below for information about the destination export type and f
 
 {style="table-layout:auto"}
 
-## Connect to the destination {#connect}
+## Set up destination and activate audiences {#set-up}
 
 >[!IMPORTANT]
 > 
 >* To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions).
->
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
+For detailed instructions on how to set up the destination and activate audiences, read [Push an Adobe Experience Platform Audience to a Marketo Static List](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html) in the Marketo documentation.
 
-### Authenticate to destination {#authenticate}
-
-To authenticate to the destination, select **[!UICONTROL Connect to destination]**.
-
-![Screenshot showing how to authenticate to the destination](../../assets/catalog/adobe/marketo-engage/connect-destination.png)
-
-### Fill in destination details {#destination-details}
-
-To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
-
-![Sample screenshot showing how to fill in details for your destination](../../assets/catalog/adobe/marketo-engage/destination-details.png)
-
-* **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
-* **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-* **[!UICONTROL Munchkin ID]**: Select the Marketo Munchkin ID that you want to use for this destination. 
-* **[!UICONTROL Workspace ID]**: Select your Marketo workspace ID.
-* **[!UICONTROL Sync Type]**: Select the sync type that you want to use for this destination:
-    * **[!UICONTROL Profile Only]**: Select this option to sync profile data.
-    * **[!UICONTROL Audience Only]**: Select this option to sync audience data. Profiles from Experience Platform will be matched against profiles from Marketo from the selected partition. Matching is based on the **[!UICONTROL Marketo deduplication field]** value.
-    * **[!UICONTROL Audience and Profile]**: Select this option to sync both profile and audience data.
-* **[!UICONTROL Partition]**: Optional. Select a Marketo lead partition ID associated with your chosen workspace. This allows you to specify which lead partition in Marketo will receive the exported audience data.
-* **[!UICONTROL Marketo deduplication field]**: Select the Marketo deduplication field that you want to use. This selector shows the fields that you marked as deduplication fields in Marketo.
-* **[!UICONTROL Person Action]**: Select the Marketo action that you want to perform when exporting audiences:
-    * **[!UICONTROL Update existing persons only]**: Select this option to only update the persons that have a match in Marketo.
-    * **[!UICONTROL Update existing and create new persons]**: Select this option to update the persons that have a match in Marketo and create matching ones for the rest.
-
-### Enable alerts {#enable-alerts}
-
-You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, read the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
-
-When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
-
-## Activate audiences to this destination {#activate}
+The video below also demonstrates the steps to configure a Marketo destination and activate audiences.
 
 >[!IMPORTANT]
+>
+>The video does not entirely reflect current capability. For the most up-to-date information, please refer to the guide linked above. The following parts of the video are outdated:
 > 
->* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
->* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
+>* The destination card that you should use in the Experience Platform UI is **[!UICONTROL Marketo V2]**.
+>* The video does not show the new **[!UICONTROL Person creation]** selector field in the connect to destination workflow. To use that field, you must map both first name and last name during the attribute mapping step.
+>* The two limitations called out in the video do not apply anymore. You can now map many other profile attribute fields in addition to the audience membership information that was supported at the time the video was recorded. You can also export audience members to Marketo who do not yet exist in your Marketo static lists, and these will be added to the lists.
+>* In the **[!UICONTROL Schedule audience step]** of the activation workflow, in Marketo V1, you needed to manually add a **[!UICONTROL Mapping ID]** to successfully export data to Marketo. This manual step is not required anymore in Marketo V2.
 
-Read [Activate profiles and audiences to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
+>[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
-### Map attributes and identities {#mapping}
+## Monitor destination {#monitor-destination}
 
-During the mapping step, map any source field (such as `Email` or other custom identifiers) that you want to use as the deduplication field to this target identity. For best results, choose a field that is consistently available and unique across all your customer profiles.
+After connecting to the destination and establishing a destination dataflow, you can use the [monitoring functionality](/help/dataflows/ui/monitor-destinations.md) in Real-Time CDP to get extensive information about the profile records activated to your destination in each dataflow run. 
 
-![Experience Platform screenshot showing the identity mapping in Marketo Engage.](../../assets/catalog/adobe/marketo-engage/marketo-mapping.png)
-
-## Exported data / Validate data export {#exported-data}
-
-After exporting audiences to Marketo Engage, you should log in to your Marketo account to verify that the audiences have been activated as expected. Check the relevant lead partitions and workspaces in Marketo to confirm that the audience data appears correctly and that the intended actions (such as updating or creating persons) have been performed. 
-
-If you do not see the expected data, review your mapping and export settings in Adobe Experience Platform and try the export again.
+The monitoring information for the [!DNL Marketo Engage] connection includes audience-level information related to activated, excluded, and failed identities in each dataflow and dataflow run. [Read more](/help/dataflows/ui/monitor-destinations.md#segment-level-view) about the functionality.
 
 ## Data usage and governance {#data-usage-governance}
 
-All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).
+All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, see the [data governance overview](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
