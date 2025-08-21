@@ -2,9 +2,18 @@
 title: Marketo Engage Destination
 description: Marketo Engage is the only end-to-end customer experience management (CXM) solution for marketing, advertising, analytics, and commerce. It lets you automate and manage activities from CRM lead management and customer engagement to account-based marketing and revenue attribution.
 ---
-# Marketo Engage destination {#beta-marketo-engage-destination}
+# (Legacy) Marketo Engage destination {#beta-marketo-engage-destination}
 
 ## Destination changelog {#changelog}
+
+>[!IMPORTANT]
+>
+>The current **[!UICONTROL (V2) Marketo Engage]** and **[[!UICONTROL Marketo Engage Person Sync]](marketo-engage-person-sync.md)** destination cards will be deprecated in **March 2026**.
+>
+>To ensure a smooth transition to the new **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)** destination, review the following key points and required actions:
+>
+>* All users of the existing **[!UICONTROL (V2) Marketo Engage]** and **[!UICONTROL Marketo Engage Person Sync]** destinations must migrate to the new **[!UICONTROL Marketo Engage]** destination by March 2026.
+>* **Existing dataflows will not be migrated automatically.** You must [set up a new connection](../../ui/connect-destination.md) to the new **[!UICONTROL Marketo Engage]** destination and activate your audiences there.
 
 >[!IMPORTANT]
 >

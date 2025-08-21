@@ -178,7 +178,7 @@ If you are using `email` as a deduplication field, you must also map the `firstN
 
 ![Screenshot showing required mapping when using Email as deduplication field](../../assets/catalog/adobe/marketo-engage-connection/required-mapping-email-dedupe.png)
 
-If you are not using Email as a deduplication field, you must manually map all three required attributes (`firstName`, `lastName`, `email`) as shown in the image below.
+If you are using a different deduplication field, you must manually map all three required attributes (`firstName`, `lastName`, `email`) as shown in the image below.
 
 ![Screenshot showing required mapping when not using Email as deduplication field](../../assets/catalog/adobe/marketo-engage-connection/required-mapping-email.png)
 

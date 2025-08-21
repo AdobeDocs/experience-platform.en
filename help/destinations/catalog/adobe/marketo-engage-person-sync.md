@@ -11,30 +11,15 @@ exl-id: 2c909633-b169-4ec8-9f58-276395cb8df2
 >
 >This destination connector is in beta and only available to select customers. To request access, contact your Adobe representative.
 
-## Migration to unified Marketo Engage destination {#migration}
-
-Adobe is consolidating the **[[!UICONTROL (V2) Marketo Engage]](marketo-engage.md)** and **[!UICONTROL Marketo Engage Person Sync]** destinations into a single, unified **[!UICONTROL Marketo Engage]** destination card.
-
 >[!IMPORTANT]
 >
->The current **[!UICONTROL (V2) Marketo Engage]** and **[!UICONTROL Marketo Engage Person Sync]** destination cards will be deprecated in **March 2026**.
+>The **[[!UICONTROL (Legacy) Marketo Engage]](marketo-engage.md)** and **[!UICONTROL Marketo Engage Person Sync]** destination cards will be deprecated in **March 2026**.
+>
+>To ensure a smooth transition to the new **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)** destination, review the following key points and required actions:
+>
+>* All users of the **[[!UICONTROL (Legacy) Marketo Engage]](marketo-engage.md)** and **[!UICONTROL Marketo Engage Person Sync]** destinations must migrate to the new **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)** destination by March 2026.
+>* **Existing dataflows will not be migrated automatically.** You must [set up a new connection](marketo-engage-connection.md#connect-to-the-destination) to the new **[!UICONTROL Marketo Engage]** destination and activate your audiences there.
 
-This new destination offers all features from both previous versions, making it easier to manage your Marketo integrations with a single, streamlined workflow:
-
-* **Two sync actions in one place:** Both **[!UICONTROL Profile Sync]** and **[!UICONTROL Audience Sync]** are available and enabled by default. You can choose to use either or both, depending on your requirements.
-* **Simplified authentication:** You no longer need to provide a [!UICONTROL Client ID] or [!UICONTROL Client Secret]. Only your [!DNL Munchkin ID] and [!DNL Workspace ID] are required.
-
-### Migration steps {#what-you-need-to-do}
-
-To ensure a smooth transition to the new destination, review the following key points and required actions:
-
-* All users of the existing **[!UICONTROL (V2) Marketo Engage]** and **[!UICONTROL Marketo Engage Person Sync]** destinations must migrate to the new **[!UICONTROL Marketo Engage]** destination by March 2026.
-* **Existing dataflows will not be migrated automatically.** You must [set up a new connection](../../ui/connect-destination.md) to the new **[!UICONTROL Marketo Engage]** destination and activate your audiences there. You can continue to use your existing audiences.
-
-**To preserve your current sync behavior after migration:**
-
-* If you only use **[!UICONTROL Audience Sync]** in the old **[!UICONTROL (V2) Marketo Engage]** and do not want to use **[!UICONTROL Profile Sync]**, make sure to disable **[!UICONTROL Profile Sync]** in your new destination setup.
-* If you use **[!UICONTROL Profile Sync]** in the [[!UICONTROL Marketo Engage Person Sync]](marketo-engage-person-sync.md) destination and do not want to use **[!UICONTROL Audience Sync]**, make sure to disable **[!UICONTROL Audience Sync]** in your new destination setup.
 
 ## Overview {#overview}
 
