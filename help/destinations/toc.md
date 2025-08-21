@@ -60,7 +60,8 @@ role: Admin,User
     * Adobe destinations{#adobe}
         * [Adobe destinations overview](./catalog/adobe/overview.md)
         * [Experience Cloud audiences](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
-        * [Marketo Engage connection](./catalog/adobe/marketo-engage.md)
+        * [(Legacy) Marketo Engage connection](./catalog/adobe/marketo-engage.md)
+        * [Marketo Engage connection](./catalog/adobe/marketo-engage-connection.md)
         * [(Beta) Marketo Engage Person Sync connection](./catalog/adobe/marketo-engage-person-sync.md)
         * [Marketo Measure Ultimate connection](./catalog/adobe/marketo-measure-ultimate.md)
         * [Experience Platform audience sharing](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
