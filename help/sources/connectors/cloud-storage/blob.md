@@ -76,7 +76,7 @@ Provide values for the following credentials to connect your [!DNL Azure Blob St
 | Credential | Description |
 | --- | --- |
 | `serviceEndpoint` | The endpoint URL of your [!DNL Azure Blob Storage] account. Typically in the format: `https://{ACCOUNT_NAME}.blob.core.windows.net`. |
-| `accountKind` | The type of your [!DNL Azure Blob Storage] account. Common values include `StorageV2`, `BlobStorage`, or `Storage`. |
+| `accountKind` | The type of your [!DNL Azure Blob Storage] account. Common values include `Storage` (general purpose V1), `StorageV2` (general purpose V2), `BlobStorage`, and `BlockBlobStorage`. |
 | `servicePrincipalId` | The client/application ID of the Azure Active Directory (AAD) service principal used for authentication. |
 | `servicePrincipalKey` | The client secret or password associated with the Azure service principal. |
 | `tenant` | The Azure Active Directory (AAD) tenant ID where the service principal is registered. |
