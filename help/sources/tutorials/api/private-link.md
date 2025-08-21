@@ -2,8 +2,6 @@
 title: Private Link Support in Sources
 description: Learn how to create and use private links for Adobe Experience Platform Sources
 badge: Beta
-hide: true
-hidefromtoc: true
 exl-id: 9b7fc1be-5f42-4e29-b552-0b0423a40aa1
 ---
 # Private Link Support in Sources
