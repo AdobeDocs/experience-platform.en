@@ -1,33 +1,9 @@
 ---
-title: Marketo Engage Destination
+title: Marketo Engage Connection
 description: Marketo Engage is the only end-to-end customer experience management (CXM) solution for marketing, advertising, analytics, and commerce. It lets you automate and manage activities from CRM lead management and customer engagement to account-based marketing and revenue attribution.
 ---
-# Marketo Engage destination {#beta-marketo-engage-destination}
 
-## Migration to unified Marketo Engage destination {#migration}
-
-Adobe is consolidating the **[!UICONTROL (V2) Marketo Engage]** and **[[!UICONTROL Marketo Engage Person Sync]](marketo-engage-person-sync.md)** destinations into a single, unified **[!UICONTROL Marketo Engage]** destination card.
-
->[!IMPORTANT]
->
->The current **[!UICONTROL (V2) Marketo Engage]** and **[!UICONTROL Marketo Engage Person Sync]** destination cards will be deprecated in **March 2026**.
-
-This new destination offers all features from both previous versions, making it easier to manage your Marketo integrations with a single, streamlined workflow:
-
-* **Two sync actions in one place:** Both **[!UICONTROL Profile Sync]** and **[!UICONTROL Audience Sync]** are available and enabled by default. You can choose to use either or both, depending on your requirements.
-* **Simplified authentication:** You no longer need to provide a [!UICONTROL Client ID] or [!UICONTROL Client Secret]. Only your [!DNL Munchkin ID] and [!DNL Workspace ID] are required.
-
-### Migration steps {#what-you-need-to-do}
-
-To ensure a smooth transition to the new destination, review the following key points and required actions:
-
-* All users of the existing **[!UICONTROL (V2) Marketo Engage]** destination must migrate to the new **[!UICONTROL Marketo Engage]** destination by March 2026.
-* **Existing dataflows will not be migrated automatically.** You must [set up a new connection](../../ui/connect-destination.md) to the new **[!UICONTROL Marketo Engage]** destination and activate your audiences there. You can continue to use your existing audiences.
-
-**To preserve your current sync behavior after migration:**
-
-* If you only use **[!UICONTROL Audience Sync]** in the old **[!UICONTROL (V2) Marketo Engage]** and do not want to use **[!UICONTROL Profile Sync]**, select the **[!UICONTROL Audience Only]** sync type in your new destination setup.
-* If you use **[!UICONTROL Profile Sync]** in the [[!UICONTROL Marketo Engage Person Sync]](marketo-engage-person-sync.md) destination and do not want to use **[!UICONTROL Audience Sync]**, select the **[!UICONTROL Profile Only]** sync type in your new destination setup.
+# Marketo Engage connection {#beta-marketo-engage-destination}
 
 ## Overview {#overview}
 
@@ -45,7 +21,7 @@ To help you better understand how and when you should use the [!DNL Marketo Enga
 
 The marketing team wants to run a win-back campaign targeting leads who have not engaged in 90+ days but already exist in Marketo.
 
-They can activate the audiences to Marketo Engage and use the **[!UICONTROL Audience Only]** sync type combined with the **[!UICONTROL Update existing persons only]** action to make sure they target only the audiences that already exist in Marketo.
+They can activate the audiences to Marketo Engage and use the **[!UICONTROL Audience Only]** sync type.
 
 ### Audience and profile sync use cases {#audience-profile-sync-use-cases}
 
@@ -108,6 +84,30 @@ Refer to the table below for information about the destination export type and f
 
 {style="table-layout:auto"}
 
+## Lead matching behavior {#lead-matching}
+
+Understanding how Marketo lead matching works helps you choose the right configuration for your use case. The matching behavior depends on your selected **[!UICONTROL Sync Type]** and **[!UICONTROL Person Action]** settings.
+
+Marketo uses the **[!UICONTROL Marketo deduplication field]** you select to match Experience Platform profiles with existing Marketo leads. The matching process searches across all partitions in your Marketo instance to find existing leads. Refer to the table below to understand how leads are created and updated in your Marketo instance depending on your selected configuration.
+
+| Sync Type | Person Action | Matching behavior |
+|-----------|---------------|-------------------|
+| **[!UICONTROL Profile Only]** | **[!UICONTROL Update existing and create new persons]** | <ul><li>Updates existing leads with new profile data</li><li>Creates new leads in selected partition for unmatched profiles</li></ul> |
+| **[!UICONTROL Profile Only]** | **[!UICONTROL Update existing persons only]** | <ul><li>Updates existing leads with new profile data</li><li>No new leads created for unmatched profiles</li></ul> |
+| **[!UICONTROL Audience Only]** | **[!UICONTROL Update existing and create new persons]** | <ul><li>Adds existing leads to audience lists</li><li>Creates new leads in selected partition for unmatched profiles</li><li>Adds new leads to audience lists</li></ul> |
+| **[!UICONTROL Audience Only]** | **[!UICONTROL Update existing persons only]** | <ul><li>Adds existing leads to audience lists</li><li>No new leads created for unmatched profiles</li></ul> |
+| **[!UICONTROL Audience and Profile]** | **[!UICONTROL Update existing and create new persons]** | <ul><li>Updates existing leads with new profile data</li><li>Adds existing leads to audience lists</li><li>Creates new leads in selected partition for unmatched profiles</li><li>Adds new leads to audience lists</li></ul> |
+| **[!UICONTROL Audience and Profile]** | **[!UICONTROL Update existing persons only]** | <ul><li>Updates existing leads with new profile data</li><li>Adds existing leads to audience lists</li><li>No new leads created for unmatched profiles</li></ul> |
+
+{style="table-layout:auto"}
+
+### Important considerations
+
+* **Deduplication field selection**: Choose a field that is consistently available and unique across your customer profiles (for example: email address, customer ID)
+* **Partition handling**: When creating new leads, they are placed in your selected partition (or **[!UICONTROL Default]** partition if you did not select a partition)
+* **Duplicate handling**: If multiple Marketo leads match the same profile, only the most recently updated lead will be updated
+* **Cross-partition matching**: The system searches across all partitions to find existing leads, regardless of which partition you've selected for new leads
+
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
@@ -122,28 +122,33 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, select **[!UICONTROL Connect to destination]**.
 
-![Screenshot showing how to authenticate to the destination](../../assets/catalog/adobe/marketo-engage/connect-destination.png)
+![Screenshot showing how to authenticate to the destination](../../assets/catalog/adobe/marketo-engage-connection/connect-destination.png)
 
 ### Fill in destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Sample screenshot showing how to fill in details for your destination](../../assets/catalog/adobe/marketo-engage/destination-details.png)
+![Sample screenshot showing how to fill in details for your destination](../../assets/catalog/adobe/marketo-engage-connection/destination-details.png)
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-* **[!UICONTROL Munchkin ID]**: Select the Marketo Munchkin ID that you want to use for this destination. 
+* **[!UICONTROL Munchkin ID]**: Select the [!DNL Marketo Munchkin ID] that you want to use for this destination. 
 * **[!UICONTROL Workspace ID]**: Select your Marketo workspace ID.
 * **[!UICONTROL Sync Type]**: Select the sync type that you want to use for this destination:
-    * **[!UICONTROL Profile Only]**: Select this option to sync profile data.
-    * **[!UICONTROL Audience Only]**: Select this option to sync audience data. Profiles from Experience Platform will be matched against profiles from Marketo from the selected partition. Matching is based on the **[!UICONTROL Marketo deduplication field]** value.
-    * **[!UICONTROL Audience and Profile]**: Select this option to sync both profile and audience data.
-* **[!UICONTROL Partition]**: Optional. Select a Marketo lead partition ID associated with your chosen workspace. This allows you to specify which lead partition in Marketo will receive the exported audience data.
-* **[!UICONTROL Marketo deduplication field]**: Select the Marketo deduplication field that you want to use. This selector shows the fields that you marked as deduplication fields in Marketo.
-* **[!UICONTROL Person Action]**: Select the Marketo action that you want to perform when exporting audiences:
-    * **[!UICONTROL Update existing persons only]**: Select this option to only update the persons that have a match in Marketo.
-    * **[!UICONTROL Update existing and create new persons]**: Select this option to update the persons that have a match in Marketo and create matching ones for the rest.
+    * **[!UICONTROL Profile Only]**: Select this option when you want to keep Marketo lead profiles up to date with the latest information from Experience Platform.
+    * **[!UICONTROL Audience Only]**: Select this option when you want to add audience members to Marketo lists without updating their profile information.
+    * **[!UICONTROL Audience and Profile]**: Select this option when you want to both add audience members to Marketo lists and keep their profile information current.
+* **[!UICONTROL Partition]**: *Partition selection is available only when choosing **[!UICONTROL Profile Only]** or **[!UICONTROL Audience and Profile]** sync types*. Select a Marketo partition ID associated with your chosen workspace. This allows you to specify which lead partition in Marketo will receive the exported data. If you don't choose a specific partition, your data will be sent to the **[!UICONTROL Default]** partition in Marketo.
+* **[!UICONTROL Marketo deduplication field]**: Select the Marketo deduplication field that you want to use when updating existing Marketo leads. This selector shows the fields that you marked as deduplication fields in Marketo. If you want a specific field from Marketo to show up as a deduplication field, you must mark the field as a [searchable field](https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/lead-database/lead-database) in Marketo.
+    
+    >[!NOTE]
+    >
+    >Marketo `Lead ID` and Experience Cloud IDs (`ECID`) are not supported for deduplication.
 
+* **[!UICONTROL Person Action]**: Select the Marketo action that you want to perform when exporting data.
+    * **[!UICONTROL Update existing and create new persons]**: Select this option to update existing Marketo leads and create new leads for audience members who aren't already in Marketo. New leads will be created in your selected partition. If you did not select a partition, new leads are created in the **[!UICONTROL Default]** partition.
+    * **[!UICONTROL Update existing persons only]**: Select this option when you only want to update existing Marketo leads without creating new ones. If multiple leads match the same profile, only the most recently updated Marketo lead will be updated with your Experience Platform data.
+ 
 ### Enable alerts {#enable-alerts}
 
 You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, read the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
@@ -159,11 +164,23 @@ When you are finished providing details for your destination connection, select 
 
 Read [Activate profiles and audiences to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
-### Map attributes and identities {#mapping}
+### Required mappings {#required-mappings}
 
-During the mapping step, map any source field (such as `Email` or other custom identifiers) that you want to use as the deduplication field to this target identity. For best results, choose a field that is consistently available and unique across all your customer profiles.
+During the mapping step, map any source field (such as `email` or other custom identifiers) that you want to use as the deduplication field to the `DedupeField` target identity. For best results, choose a field that is consistently available and unique across all your customer profiles.
 
-![Experience Platform screenshot showing the identity mapping in Marketo Engage.](../../assets/catalog/adobe/marketo-engage/marketo-mapping.png)
+For Marketo to successfully create leads, you must also map the following required target attributes:
+
+* `firstName`: The first name of the lead
+* `lastName`: The last name of the lead  
+* `email`: The email address of the lead
+
+If you are using `email` as a deduplication field, you must also map the `firstName` and `lastName` attributes as shown in the image below.
+
+![Screenshot showing required mapping when using Email as deduplication field](../../assets/catalog/adobe/marketo-engage-connection/required-mapping-email-dedupe.png)
+
+If you are not using Email as a deduplication field, you must manually map all three required attributes (`firstName`, `lastName`, `email`) as shown in the image below.
+
+![Screenshot showing required mapping when not using Email as deduplication field](../../assets/catalog/adobe/marketo-engage-connection/required-mapping-email.png)
 
 ## Exported data / Validate data export {#exported-data}
 
