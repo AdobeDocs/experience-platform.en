@@ -1,12 +1,10 @@
 ---
-title: Azure Private Link Support in Sources
-description: Learn how to create and use Azure private links for Adobe Experience Platform Sources
+title: Use Azure Private Link for Sources in the API
+description: Learn how to create and use private links for Adobe Experience Platform Sources
 badge: Beta
-hide: true
-hidefromtoc: true
 exl-id: 9b7fc1be-5f42-4e29-b552-0b0423a40aa1
 ---
-# [!DNL Azure ]Private Link Support in Sources
+# Use [!DNL Azure Private Link] for Sources in the API
 
 >[!AVAILABILITY]
 >
@@ -17,11 +15,13 @@ exl-id: 9b7fc1be-5f42-4e29-b552-0b0423a40aa1
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 
-Read this guide to learn how you can establish a private endpoint connection to Azure-based sources through a private link, and allow for a more secure transfer mechanism for your data. 
+You can use the [!DNL Azure Private Link] feature to create private endpoints for your Adobe Experience Platform sources to connect to. Securely connect your sources to  a virtual network using private IP addresses, eliminating the need for public IPs and reduce your attack surface.Simplify your network setup by removing the need for complex firewall or Network Address Translation configurations, while ensuring data traffic only reaches approved services.
+
+Read this guide to learn how you can use APIs to create and use a private endpoint.
 
 ## Get started 
 
-This guide requires a working understanding of the following components of Adobe Experience Platform:
+This guide requires a working understanding of the following components of Experience Platform:
 
 * [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
 * [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
