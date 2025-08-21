@@ -8,7 +8,7 @@ exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
 
 ## Overview
 
-This article provides an overview of the differences between the `at.js` library and the Experience Plaform Web SDK.
+This article provides an overview of the differences between the `at.js` library and the Experience Platform Web SDK.
 
 ## Installing the libraries
 
