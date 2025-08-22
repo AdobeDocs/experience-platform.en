@@ -1,7 +1,7 @@
 ---
 title: Amazon Ads
 description: Amazon Ads offers a range of options to help you achieve your advertising goals to registered sellers, vendors, book vendors, Kindle Direct Publishing (KDP) authors, app developers, and/or agencies. The Amazon Ads integration with Adobe Experience Platform provides turn-key integration to Amazon Ads products, including the Amazon DSP (ADSP). Using the Amazon Ads destination in Adobe Experience Platform, users are able to define advertiser audiences for targeting and activation on the Amazon DSP.
-last-substantial-update: 2025-07-29
+last-substantial-update: 2025-08-25
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
 ---
 # Amazon Ads connection {#amazon-ads}
@@ -130,7 +130,6 @@ The [!DNL Amazon Ads] connection supports hashed email address and hashed phone 
 * To map unhashed email addresses or phone numbers, select the corresponding identity namespaces as source fields, and check the `Apply Transformation` option to have Experience Platform hash the identities on activation.
 * *NEW starting with the September 2024 release*: Amazon Ads requires you to map a field containing a `countryCode` value in the 2-character ISO format in order to facilitate the identity resolution process (for example: US, GB, MX, CA, and so on). Connections without `countryCode` mappings will result in negative impact to identity match rates.
 
-* *NEW starting with the September 2025 release*: Amazon Ads now also supports additional personal identifiers such as `firstName`, `lastName`, `street`, `city`, `state`, `zip`, and `country`. Mapping these fields can improve audience match rates.
 > To use these fields:
 > - All identity values should be normalized before ingestion refer [normalization Guide](https://advertising.amazon.com/help/GCCXMZYCK4RXWS6C).
 > - SHA256 hashing is required either on the client side or by enabling Adobe's transformation setting.
@@ -174,13 +173,14 @@ This section captures the functionality and significant documentation updates ma
 
 +++ View changelog
 
-|Release month|Update type|Description|
-|---|---|---|
-|February 2025|Added the requirement to add **[!UICONTROL Amazon Ads Consent Signal]** to export dataflows and promoted the destination from beta to generally available. |
-|May 2024|Functionality and documentation update| Added the mapping option to export `countryCode` parameter into Amazon Ads. Use `countryCode` in the [mapping step](#map) to improve your identity match rates with Amazon. |
-|March 2024|Functionality and documentation update| Added the option to export audiences to be used in [!DNL Amazon Marketing Cloud] (AMC).|
-|May 2023|Functionality and documentation update| <ul><li>Added support for Advertiser Region selection in the [destination connection workflow](#destination-details).</li><li>Updated documentation to reflect the addition of Advertiser Region selection. For more information on selecting the correct Advertiser Region, see the [Amazon documentation](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
-|March 2023|Initial release|Initial destination release and documentation published.|
+| Release month | Update type                                                                                                                                                | Description                                                                                                                                                                                                                                                                                                                                                                                           |
+|---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| August 2025   | Added the support to additional identity fields                                                                                                            | Added additional personal identifiers support such as `firstName`, `lastName`, `street`, `city`, `state`, `zip`, and `country`. Mapping these fields can improve audience match rates.                                                                                                                                                                                                                |
+| February 2025 | Added the requirement to add **[!UICONTROL Amazon Ads Consent Signal]** to export dataflows and promoted the destination from beta to generally available. |
+| May 2024      | Functionality and documentation update                                                                                                                     | Added the mapping option to export `countryCode` parameter into Amazon Ads. Use `countryCode` in the [mapping step](#map) to improve your identity match rates with Amazon.                                                                                                                                                                                                                           |
+| March 2024    | Functionality and documentation update                                                                                                                     | Added the option to export audiences to be used in [!DNL Amazon Marketing Cloud] (AMC).                                                                                                                                                                                                                                                                                                               |
+| May 2023      | Functionality and documentation update                                                                                                                     | <ul><li>Added support for Advertiser Region selection in the [destination connection workflow](#destination-details).</li><li>Updated documentation to reflect the addition of Advertiser Region selection. For more information on selecting the correct Advertiser Region, see the [Amazon documentation](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
+| March 2023    | Initial release                                                                                                                                            | Initial destination release and documentation published.                                                                                                                                                                                                                                                                                                                                              |
 
 {style="table-layout:auto"}
 
