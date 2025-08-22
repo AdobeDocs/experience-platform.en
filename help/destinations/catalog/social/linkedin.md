@@ -115,7 +115,9 @@ The video below also demonstrates the steps to configure a [!DNL LinkedIn Matche
 
 ### Refresh authentication credentials {#refresh-authentication-credentials}
 
-LinkedIn tokens expire every 60 days. Once the token is expired, data exports to the destination stop working. To prevent this situation, reauthenticate by performing the following steps:
+LinkedIn tokens expire every 60 days. You can monitor your token expiration dates from the **[!UICONTROL Account expiration date]** column in either the **[[!UICONTROL Accounts]](../../ui/destinations-workspace.md#accounts)** or the **[[!UICONTROL Browse]](../../ui/destinations-workspace.md#browse)** tabs.
+
+Once the token is expired, data exports to the destination stop working. To prevent this situation, reauthenticate by performing the following steps:
 
 1. Navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**
 2. (Optional) Use the available filters on the page to display LinkedIn accounts only.
