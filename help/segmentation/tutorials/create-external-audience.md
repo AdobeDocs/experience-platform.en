@@ -60,6 +60,8 @@ When making this request, you'll need to specify the following information:
 - The source specification information
   - This includes the file path of the CSV file for ingestion
 
+For more detailed information on how to use this endpoint, read the [external audiences endpoint guide](/help/segmentation/api/external-audiences.md#create-audience)
+
 +++Request
 
 ```shell
@@ -108,4 +110,6 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
 ```
 
 +++
+
+## Retrieve audience ID {#retrieve-audience-id}
 
