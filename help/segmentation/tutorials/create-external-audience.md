@@ -42,3 +42,70 @@ Before you can create an external audience within Experience Platform, you'll ne
 
 Ensure your CSV file contains **at least** one column with an identity value such as an ECID, email ID, or CRM ID. Additionally, make sure contains all the enrichment attributes you'll need for segmentation and activation.
 
+You'l also need to make sure that the file conforms to your Experience Platform schema's requirements. For more information on creating a schema, read either the [tutorial on creating a schema using the API](/help/xdm/tutorials/create-schema-api.md) or the [tutorial on creating a schema using the UI](/help/xdm/tutorials/create-schema-ui.md).
+
+After you've confirmed your CSV file contains all the information you need and conforms to the schema, you'll need to upload the CSV file to your cloud storage provider so you can use sources to ingest the data into Experience Platform. For more information on using a cloud storage source, read either the [tutorial on exploring cloud storage options using the API](/help/sources/tutorials/api/explore/cloud-storage.md) or the [sources overview](/help/sources/home.md#cloud-storage).
+
+## Create an external audience {#create}
+
+After preparing your CSV file, you can now start the process of creating the external audience.
+
+You can create an external audience by making a POST request to the `/external-audience/` endpoint.
+
+When making this request, you'll need to specify the following information:
+
+- The name of the audience
+- A description for the audience
+- The corresponding fields between the CSV and the schema
+- The source specification information
+  - This includes the file path of the CSV file for ingestion
+
++++Request
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -d '{
+        "name": "Sample external audience",
+        "description": "A sample version of an external audience",
+        "fields": [
+            {
+                "name": "ppid",
+                "type": "string",
+                "identityNs": "email"
+            },
+            {
+                "name": "list_id",
+                "type": "string",
+                "labels": ["core/C2", "custom/deep"]
+            },
+            {
+                "name": "delete",
+                "type": "number"
+            },
+            {
+                "name": "process_consent",
+                "type": "string"
+            }
+        ],
+        "sourceSpec": {
+            "params": {
+                "path": "activation/sample-source/example.csv",
+                "type": "file",
+                "sourceType": "Cloud Storage",
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+            }
+        },
+        "ttlInDays": "40",
+        "labels": ["core/C1"],
+        "audienceType": "people",
+        "originName": "CUSTOM_UPLOAD"
+    }'
+```
+
++++
+
