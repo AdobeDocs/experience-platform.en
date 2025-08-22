@@ -8,6 +8,14 @@ exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
 
 ## Overview
 
+>[!IMPORTANT]
+>
+>* Starting August 21, 2025, you can see two **[!DNL Airship Tags]** cards side-by-side in the destinations catalog. This is due to an internal upgrade to the destinations service. The existing **[!DNL Airship Tags]** destination connector has been renamed to **[!UICONTROL (Deprecated) Airship Tags]** and a new card with the name **[!UICONTROL Airship Tags]** is now available to you. 
+>* Use the new **[!UICONTROL Airship Tags]** connection in the catalog for new activation data flows. If you have any active dataflows to the **[!UICONTROL (Deprecated) Airship Tags]** destination, they will be updated automatically, so no action is required from you.
+>* If you are creating dataflows through the [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/), you must update your [!DNL flow spec ID] and [!DNL connection spec ID] to the following values:
+>   * Flow spec ID: `0c7e71c8-4d60-4685-a216-77f57e37b04a`
+>   * Connection spec ID: `aec13e22-8226-4b5d-9961-6baa35b251d2`
+
 [!DNL Airship] is the leading Customer Engagement Platform, helping you deliver meaningful, personalized omnichannel messaging to your users at every stage of the customer lifecycle.
 
 This integration passes Adobe Experience Platform audience data into [!DNL Airship] as [Tags](https://docs.airship.com/guides/audience/tags/) for targeting or triggering.
