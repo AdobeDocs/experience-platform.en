@@ -13,11 +13,11 @@ exl-id: 2c909633-b169-4ec8-9f58-276395cb8df2
 
 >[!IMPORTANT]
 >
->The **[[!UICONTROL (Legacy) Marketo Engage]](marketo-engage.md)** and **[!UICONTROL Marketo Engage Person Sync]** destination cards will be deprecated in **March 2026**.
+>The **[!UICONTROL Marketo Engage Person Sync]** destination card will be deprecated in **March 2026**.
 >
 >To ensure a smooth transition to the new **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)** destination, review the following key points and required actions:
 >
->* All users of the **[[!UICONTROL (Legacy) Marketo Engage]](marketo-engage.md)** and **[!UICONTROL Marketo Engage Person Sync]** destinations must migrate to the new **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)** destination by March 2026.
+>* All users of **[!UICONTROL Marketo Engage Person Sync]** destinations must migrate to the new **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)** destination by March 2026.
 >* **Existing dataflows will not be migrated automatically.** You must [set up a new connection](marketo-engage-connection.md#connect-to-the-destination) to the new **[!UICONTROL Marketo Engage]** destination and activate your audiences there.
 
 

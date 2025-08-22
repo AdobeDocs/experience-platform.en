@@ -3,13 +3,13 @@ title: Marketo Engage Connection
 description: Marketo Engage is the only end-to-end customer experience management (CXM) solution for marketing, advertising, analytics, and commerce. It lets you automate and manage activities from CRM lead management and customer engagement to account-based marketing and revenue attribution.
 ---
 
-# Marketo Engage connection {#beta-marketo-engage-destination}
+# Marketo Engage connection
 
 ## Overview {#overview}
 
 [!DNL Marketo Engage] is the only end-to-end customer experience management (CXM) solution for marketing, advertising, analytics, and commerce. It lets you automate and manage activities from CRM lead management and customer engagement to account-based marketing and revenue attribution.
 
-The destination enables marketers to push audiences created in Adobe Experience Platform to Marketo where they will appear as static lists.
+Use this destination for real-time synchronization of audience data and profile attributes between Adobe Experience Platform and Marketo Engage.
 
 ## Use cases {#use-cases}
 
@@ -90,14 +90,13 @@ Understanding how Marketo lead matching works helps you choose the right configu
 
 Marketo uses the **[!UICONTROL Marketo deduplication field]** you select to match Experience Platform profiles with existing Marketo leads. The matching process searches across all partitions in your Marketo instance to find existing leads. Refer to the table below to understand how leads are created and updated in your Marketo instance depending on your selected configuration.
 
-| Sync Type | Person Action | Matching behavior |
+| Sync type | Person action | Matching behavior |
 |-----------|---------------|-------------------|
-| **[!UICONTROL Profile Only]** | **[!UICONTROL Update existing and create new persons]** | <ul><li>Updates existing leads with new profile data</li><li>Creates new leads in selected partition for unmatched profiles</li></ul> |
-| **[!UICONTROL Profile Only]** | **[!UICONTROL Update existing persons only]** | <ul><li>Updates existing leads with new profile data</li><li>No new leads created for unmatched profiles</li></ul> |
-| **[!UICONTROL Audience Only]** | **[!UICONTROL Update existing and create new persons]** | <ul><li>Adds existing leads to audience lists</li><li>Creates new leads in selected partition for unmatched profiles</li><li>Adds new leads to audience lists</li></ul> |
-| **[!UICONTROL Audience Only]** | **[!UICONTROL Update existing persons only]** | <ul><li>Adds existing leads to audience lists</li><li>No new leads created for unmatched profiles</li></ul> |
-| **[!UICONTROL Audience and Profile]** | **[!UICONTROL Update existing and create new persons]** | <ul><li>Updates existing leads with new profile data</li><li>Adds existing leads to audience lists</li><li>Creates new leads in selected partition for unmatched profiles</li><li>Adds new leads to audience lists</li></ul> |
-| **[!UICONTROL Audience and Profile]** | **[!UICONTROL Update existing persons only]** | <ul><li>Updates existing leads with new profile data</li><li>Adds existing leads to audience lists</li><li>No new leads created for unmatched profiles</li></ul> |
+| **[!UICONTROL Profile only]** | **[!UICONTROL Update existing and create new persons]** | <ul><li>Updates existing leads with new profile data</li><li>Creates new leads in selected partition for unmatched profiles</li></ul> |
+| **[!UICONTROL Profile only]** | **[!UICONTROL Update existing persons only]** | <ul><li>Updates existing leads with new profile data</li><li>No new leads created for unmatched profiles</li></ul> |
+| **[!UICONTROL Audience only]** | N/A | <ul><li>Adds existing leads to audience lists</li><li>No new leads created for unmatched profiles</li></ul> |
+| **[!UICONTROL Audience and profile]** | **[!UICONTROL Update existing and create new persons]** | <ul><li>Updates existing leads with new profile data</li><li>Adds existing leads to audience lists</li><li>Creates new leads in selected partition for unmatched profiles</li><li>Adds new leads to audience lists</li></ul> |
+| **[!UICONTROL Audience and profile]** | **[!UICONTROL Update existing persons only]** | <ul><li>Updates existing leads with new profile data</li><li>Adds existing leads to audience lists</li><li>No new leads created for unmatched profiles</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -134,11 +133,11 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 * **[!UICONTROL Munchkin ID]**: Select the [!DNL Marketo Munchkin ID] that you want to use for this destination. 
 * **[!UICONTROL Workspace ID]**: Select your Marketo workspace ID.
-* **[!UICONTROL Sync Type]**: Select the sync type that you want to use for this destination:
-    * **[!UICONTROL Profile Only]**: Select this option when you want to keep Marketo lead profiles up to date with the latest information from Experience Platform.
-    * **[!UICONTROL Audience Only]**: Select this option when you want to add audience members to Marketo lists without updating their profile information.
-    * **[!UICONTROL Audience and Profile]**: Select this option when you want to both add audience members to Marketo lists and keep their profile information current.
-* **[!UICONTROL Partition]**: *Partition selection is available only when choosing **[!UICONTROL Profile Only]** or **[!UICONTROL Audience and Profile]** sync types*. Select a Marketo partition ID associated with your chosen workspace. This allows you to specify which lead partition in Marketo will receive the exported data. If you don't choose a specific partition, your data will be sent to the **[!UICONTROL Default]** partition in Marketo.
+* **[!UICONTROL Sync type]**: Select the sync type that you want to use for this destination:
+    * **[!UICONTROL Audience and profile]**: Select this option when you want to both add audience members to Marketo lists and keep their profile information current.
+    * **[!UICONTROL Profile only]**: Select this option when you want to keep Marketo lead profiles up to date with the latest information from Experience Platform.
+    * **[!UICONTROL Audience only]**: Select this option when you want to add audience members to Marketo lists without updating their profile information.
+* **[!UICONTROL Partition]**: *Partition selection is available only when choosing **[!UICONTROL Profile only]** or **[!UICONTROL Audience and profile]** sync types*. Select a Marketo partition ID associated with your chosen workspace. This allows you to specify which lead partition in Marketo will receive the exported data. If you don't choose a specific partition, your data will be sent to the **[!UICONTROL Default]** partition in Marketo.
 * **[!UICONTROL Marketo deduplication field]**: Select the Marketo deduplication field that you want to use when updating existing Marketo leads. This selector shows the fields that you marked as deduplication fields in Marketo. If you want a specific field from Marketo to show up as a deduplication field, you must mark the field as a [searchable field](https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/lead-database/lead-database) in Marketo.
     
     >[!NOTE]
