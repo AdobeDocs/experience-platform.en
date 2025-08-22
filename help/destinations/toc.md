@@ -53,15 +53,15 @@ role: Admin,User
     * [Edit activation dataflows](./ui/edit-activation.md)
     * [Delete destinations](./ui/delete-destinations.md)
     * [Monitor dataflows](./ui/monitor-dataflows.md)
-    * [Configure file formatting options for file-based destinations](./ui/batch-destinations-file-formatting-options.md)
+    * [Configure file formatting options for file-based destinations](./ui/batch-destinations-file-formatting-options.md)marketo
     * [Subscribe to in-context destination alerts](ui/alerts.md)
 * Destinations catalog {#catalog}
     * [Destinations catalog overview](./catalog/overview.md)
     * Adobe destinations{#adobe}
         * [Adobe destinations overview](./catalog/adobe/overview.md)
         * [Experience Cloud audiences](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
-        * [(Legacy) Marketo Engage connection](./catalog/adobe/marketo-engage.md)
         * [Marketo Engage connection](./catalog/adobe/marketo-engage-connection.md)
+        * [(Legacy) (V2) Marketo Engage connection](./catalog/adobe/marketo-engage.md)
         * [(Beta) Marketo Engage Person Sync connection](./catalog/adobe/marketo-engage-person-sync.md)
         * [Marketo Measure Ultimate connection](./catalog/adobe/marketo-measure-ultimate.md)
         * [Experience Platform audience sharing](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
