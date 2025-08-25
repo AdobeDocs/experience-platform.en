@@ -407,8 +407,7 @@ Depending on whether you specify `"authenticationRule": "CUSTOMER_AUTHENTICATION
     * [SFTP authentication with SSH key](../functionality/destination-configuration/customer-authentication.md#sftp-ssh)
     * [SFTP authentication with password](../functionality/destination-configuration/customer-authentication.md#sftp-password)
 
-* If you selected `"authenticationRule": "PLATFORM_AUTHENTICATION"`, refer to the [credential configuration API documentation](../credentials-api/create-credential-configuration.md#when-to-use).
-
+* If you selected `"authenticationRule": "PLATFORM_AUTHENTICATION"`, you must create a [credentials configuration](../credentials-api/create-credential-configuration.md) and pass the credential object's ID in the `authenticationId` parameter in the [destination delivery](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) configuration.
 
 ## Step 5: Test your destination {#test-destination}
 
