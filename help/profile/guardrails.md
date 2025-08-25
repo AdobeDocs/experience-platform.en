@@ -13,6 +13,8 @@ Adobe Experience Platform enables you to deliver personalized cross-channel expe
 >[!IMPORTANT]
 >
 >Check your license entitlements in your Sales Order and corresponding [Product Description](https://helpx.adobe.com/legal/product-descriptions.html) on actual usage limits in addition to this guardrails page.
+>
+>Alternatively, you can use the [Capacity service](../landing/license-usage-and-guardrails/capacity.md) to monitor and set your streaming throughput and other within Experience Platform.
 
 This document provides default use and rate limits to help you model your Profile data for optimal system performance. When reviewing the following guardrails, it is assumed that you have modeled the data correctly. If you have questions on how to model your data, please contact your customer service representative.
 
