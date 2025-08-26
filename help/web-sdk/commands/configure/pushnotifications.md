@@ -6,7 +6,7 @@ exl-id:
 
 # `pushNotifications` {#push-notifications}
 
-> [!AVAILABILITY]
+>[!AVAILABILITY]
 >
 > Push notifications for the Web SDK are currently in **beta**. The functionality and documentation may change.
 
@@ -34,6 +34,7 @@ This generates a public and private key pair. Use the public key in your Web SDK
 ## Configure push notifications using the Web SDK tag extension
 
 Follow these steps to enable and configure push notifications:
+
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.

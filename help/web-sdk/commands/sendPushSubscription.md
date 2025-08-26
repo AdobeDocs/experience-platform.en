@@ -6,7 +6,7 @@ exl-id:
 
 # `sendPushSubscription` {#send-push-subscription}
 
-> [!AVAILABILITY]
+>[!AVAILABILITY]
 >
 > Push notifications for the Web SDK are currently in **beta**. The functionality and documentation may change.
 
