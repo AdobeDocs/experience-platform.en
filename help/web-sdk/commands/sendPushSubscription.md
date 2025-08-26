@@ -6,9 +6,9 @@ exl-id:
 
 # `sendPushSubscription` {#send-push-subscription}
 
->[!AVAILABILITY]
+> [!AVAILABILITY]
 >
->Push notifications for the Web SDK are currently in **beta**. The functionality and documentation may change.
+> Push notifications for the Web SDK are currently in **beta**. The functionality and documentation may change.
 
 The `sendPushSubscription` command registers push notification subscriptions with Adobe Experience Platform. This command handles the retrieval of push subscription details from the browser and sends them to your configured datastream.
 
@@ -40,7 +40,7 @@ Run the `sendPushSubscription` command when calling your configured instance of 
 ```js
 alloy("sendPushSubscription")
   .then(() => {
-    console.log("Push subscription sent successfully");
+    console.log("Push subscription recorded successfully");
   })
   .catch((error) => {
     console.error("Failed to send push subscription:", error);

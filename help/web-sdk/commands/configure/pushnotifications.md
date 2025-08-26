@@ -6,11 +6,11 @@ exl-id:
 
 # `pushNotifications` {#push-notifications}
 
->[!AVAILABILITY]
+> [!AVAILABILITY]
 >
->Push notifications for the Web SDK are currently in **beta**. The functionality and documentation may change.
+> Push notifications for the Web SDK are currently in **beta**. The functionality and documentation may change.
 
-The `pushNotifications` property enables you to configure push notifications for web applications. This feature allows your web app to receive messages pushed from a server, even when the app is not in the foreground or currently loaded.
+The `pushNotifications` property enables you to configure push notifications for web applications. This feature allows your web app to receive messages pushed from a server, even when the website is not in currently loaded in the browser or even when the browser is not running.
 
 ## Prerequisites
 
@@ -78,4 +78,3 @@ alloy("configure", {
 ## Next steps
 
 After configuring push notifications, use the [`sendPushSubscription`](../sendPushSubscription.md) command to register push subscriptions with Adobe Experience Platform.
-
