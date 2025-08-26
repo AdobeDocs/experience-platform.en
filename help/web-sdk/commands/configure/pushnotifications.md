@@ -44,7 +44,7 @@ Follow these steps to enable and configure push notifications:
 1. Enter your VAPID public key in the **[!UICONTROL VAPID Public Key]** field.
 1. Click **[!UICONTROL Save]**, then publish your changes.
 
-> [!NOTE]
+>[!NOTE]
 >
 > Push notifications must be explicitly enabled in the tag extension configuration. The feature is disabled by default.
 
