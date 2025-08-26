@@ -402,8 +402,8 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| `dataFilterStartTime` | Epoch timestamp | **Required** The range specifying the starting time which the flow will run to select which files will be processed. |
-| `dataFilterEndTime` | Epoch timestamp | The range specifying the ending time which the flow will run to select which files will be processed. |
+| `dataFilterStartTime` | Epoch timestamp | **Required** The range specifying the starting time to determine which files will be processed. This means that the files selected will be files **after** the specified time. |
+| `dataFilterEndTime` | Epoch timestamp | The range specifying the ending time which the flow will run to select which files will be processed. This means that the files selected will be files **before** the specified time. |
 
 +++
 

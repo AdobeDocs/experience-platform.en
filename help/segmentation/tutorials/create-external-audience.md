@@ -60,7 +60,7 @@ When making this request, you'll need to specify the following information:
 - The source specification information
   - This includes the file path of the CSV file for ingestion
 
-For more detailed information on how to use this endpoint, read the [external audiences endpoint guide](/help/segmentation/api/external-audiences.md#create-audience)
+For more detailed information on how to use this endpoint, read the [external audiences endpoint guide](/help/segmentation/api/external-audiences.md#create-audience).
 
 +++Request
 
@@ -111,5 +111,82 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
 
 +++
 
+After making this request, make sure to note the `operationId` you receive from the response so you can retrieve the audience ID.
+
 ## Retrieve audience ID {#retrieve-audience-id}
+
+Now that you've created the external audience, you'll need to get the audience ID so you can ingest the audience into Experience Platform.
+
+You can retrieve the audience ID by making a GET request to the `/external-audiences/operations` endpoint and providing the ID of the operation you previously received from the create external audience response.
+
+For more detailed information on how to use this endpoint, read the [external audience endpoint guide](/help/segmentation/api/external-audiences.md#retrieve-status).
+
++++ Request
+
+```shell
+curl -X GET https://platform.adobe.io/data/core/ais/external-audience/operations/{OPERATION_ID} \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
+
+After making this request, make sure you note the `audienceId` you receive from the response so you can trigger the ingestion job for the audience.
+
+## Start audience ingestion {#start-ingestion}
+
+Since you've got your `audienceId`, you can now trigger the ingestion of your external audience into Experience Platform.
+
+You can start an audience ingestion by making a POST request to the following endpoint while providing the audience ID. Additionally, you'll need to specify the starting time to determine which files will be processed.
+
+For more detailed information on how to use this endpoint, read the [external audiences endpoint guide](/help/segmentation/api/external-audiences.md#start-audience-ingestion)
+
++++ Request
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ais/external-audience/{AUDIENCE_ID}/runs \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -d '{
+    "dataFilterStartTime": 764245635
+ }' 
+```
+
++++
+
+After making this request, make sure to note the `runId` you receive from the response so you can monitor the ingestion status.
+
+## Monitor ingestion status {#monitor-ingestion}
+
+After you've triggered the audience ingestion, you can now monitor the ingestion's progress to confirm the ingestion's success and validate the audience's availability for downstream activation.
+
+You can retrieve the status of an audience ingestion by making a GET request to the following endpoint while providing both the audience and run IDs.
+
+For more detailed information on how to use this endpoint, read the [external audience endpoint guide](/help/segmentation/api/external-audiences.md#retrieve-ingestion-status).
+
++++ Request
+
+```shell
+curl -X GET https://platform.adobe.io/data/core/ais/external-audience/{AUDIENCE_ID}/runs/{RUN_ID} \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
+
+## Next steps {#next-steps}
+
+>[!IMPORTANT]
+>
+>In order to use the externally generated audience, you **must** wait until the daily segmentation job has been completed.
+
+Once you've confirmed that the external audience has been successfully ingested, you can see it in Audience Portal and use it in downstream services such as destinations.
+
+For more information about Audience Portal, read the [Audience Portal UI guide](/help/segmentation/ui/audience-portal.md). For more information on destinations, read the [destinations overview](/help/destinations/home.md).
 
