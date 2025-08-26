@@ -155,7 +155,7 @@ Find all the people who are targeted for campaigns where the actualCost exceeded
 Find all the people belonging to the Marketo Static list "Anniversary users" where isDeleted=false.
 
 ![UI displaying segmentation parent org](../assets/segmentation/b2b/example-13.png)
-
+<!-- 
 ### Example 14: Find "decision makers" by opportunity status using streaming or edge segmentation {#find-decision-makers-personalization}
 
 >[!NOTE]
@@ -170,7 +170,7 @@ To create this audience, you must use "segment of segments" by creating a base a
 
 After creating the first audience, you can combine that with another audience of  people who are a "Decision Maker" of any opportunity where both the "Closed Flag" is set to true and the "Lost Flag" is set to false.
 
-![UI displaying example 14 settings](../assets/segmentation/b2b/example-14.png)
+![UI displaying example 14 settings](../assets/segmentation/b2b/example-14.png) -->
 
 ## Next steps {#next-steps}
 

@@ -2,9 +2,14 @@
 title: Connect Didomi to Experience Platform
 description: Learn how to connect your Didomi account to Experience Platform using the UI.
 last-substantial-update: 2025-07-29
+badge: Beta
 exl-id: 1374574f-c8ba-4cf5-bad0-94a884f5c0a6
 ---
 # Connect [!DNL Didomi] to Experience Platform
+
+>[!AVAILABILITY]
+>
+>The [!DNL Didomi] source is in beta. Read the [terms and conditions](../../../../home.md#terms-and-conditions) in the sources overview for more information on using beta-labeled sources.
 
 Read this guide to learn how to connect your [!DNL Didomi] account to Adobe Experience Platform using the sources workspace in the UI.
 

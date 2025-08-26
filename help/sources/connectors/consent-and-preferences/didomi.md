@@ -2,10 +2,14 @@
 title: Didomi Source Overview
 description: Learn how to connect Didomi to Adobe Experience Platform using the user interface.
 last-substantial-update: 2025-07-29
+badge: Beta
 exl-id: c59bcfb8-e831-4a13-8b0e-4c6d538f1059
 ---
 # [!DNL Didomi]
 
+>[!AVAILABILITY]
+>
+>The [!DNL Didomi] source is in beta. Read the [terms and conditions](../../home.md#terms-and-conditions) in the sources overview for more information on using beta-labeled sources.
 
 [!DNL Didomi] is a consent and preference management platform that helps organizations collect, manage, and enforce user choices regarding personal data across websites, apps, and internal tools.
 
