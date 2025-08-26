@@ -123,7 +123,6 @@ Use the filters in the left sidebar to narrow down your search.
 
 ![Destination filters in the Browse tab](../assets/ui/workspace/destination-filters.png)
 
-
 * **[!UICONTROL Destination platform]**: Filter dataflows by specific destination platforms (e.g., [!DNL Amazon S3], [!DNL Facebook Custom Audience], [!DNL LinkedIn Matched Audience], etc.). You can select multiple platforms simultaneously.
 * **[!UICONTROL Has any tag]**: Filter dataflows that have specific tags assigned to them. This helps you organize and find dataflows based on your custom tagging.
 * **[!UICONTROL Status]**: Filter dataflows by their operational status:
@@ -191,7 +190,7 @@ The **[!UICONTROL Accounts]** tab shows you details about the connections that y
 |[!UICONTROL Username] | The username you selected in the [connect destination workflow](../catalog/email-marketing/overview.md#connect-destination).|
 |[!UICONTROL Connections] | Represents the number of unique successful destination dataflows connected with basic information created for a destination.|
 |[!UICONTROL Authorization date] | The date when the connection to this destination was authorized.|
-|[!UICONTROL Expiration date] | The date when the connection authorization to this destination will expire. <br>**Important**: This column is currently available only for the [Facebook](../catalog/social/facebook.md) connection.|
+|[!UICONTROL Expiration date] | The date when the connection authorization to this destination will expire. <br>**Important**: This column is currently available only for the [Facebook](../catalog/social/facebook.md), [LinkedIn](../catalog/social/linkedin.md), and [LinkedIn Matched Audiences](../catalog/social/linkedin-b2b.md)  onnections.|
 
 {style="table-layout:auto"}
 

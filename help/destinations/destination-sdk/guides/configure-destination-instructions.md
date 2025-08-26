@@ -269,7 +269,7 @@ Depending on whether you specify `"authenticationRule": "CUSTOMER_AUTHENTICATION
 
 If you selected `"authenticationRule": "CUSTOMER_AUTHENTICATION"` in the destination configuration and your destination supports the OAuth 2 authentication method, read [OAuth 2 authentication](../functionality/destination-configuration/oauth2-authorization.md).
 
-If you selected `"authenticationRule": "PLATFORM_AUTHENTICATION"`, you must create a [credentials configuration](../credentials-api/create-credential-configuration.md).
+If you selected `"authenticationRule": "PLATFORM_AUTHENTICATION"`, you must create a [credentials configuration](../credentials-api/create-credential-configuration.md) and pass the credential object's ID in the `authenticationId` parameter in the [destination delivery](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) configuration.
 
 ## Step 6: Test your destination {#test-destination}
 
