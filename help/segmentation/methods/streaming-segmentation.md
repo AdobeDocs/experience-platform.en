@@ -35,7 +35,7 @@ In order to evaluate an audience with streaming segmentation, it **must** be con
 
 >[!NOTE]
 >
->To keep streaming segmentation accurate when using batch data, make sure that the batch data is only kept within the batch audience and is referenced within the streaming audience.
+>To keep streaming segmentation accurate when using batch data, make sure that the batch data is **only** kept within the batch audience and is referenced within the streaming audience.
 
 Prior to this update, you could create a streaming audience definition that combined both batch and streaming data sources. However, with the latest update, creating an audience with both batch and streaming data sources will be evaluated using batch segmentation.
 
