@@ -10,7 +10,7 @@ exl-id:
 >
 > Push notifications for the Web SDK are currently in **beta**. The functionality and documentation may change.
 
-The `pushNotifications` property enables you to configure push notifications for web applications. This feature allows your web app to receive messages pushed from a server, even when the website is not in currently loaded in the browser or even when the browser is not running.
+The `pushNotifications` property enables you to configure push notifications for web applications. This feature allows your web app to receive messages pushed from a server, even when the website is not currently loaded in the browser or even when the browser is not running.
 
 ## Prerequisites
 
@@ -29,12 +29,11 @@ npm install web-push -g
 web-push generate-vapid-keys
 ```
 
-This generates a public and private key pair. Use the public key in your Web SDK configuration and store the private key inside the Adobe Journey Optimizer push notifications channel.
+This generates a public and private key pair. Use the public key in your Web SDK configuration and store the private key within the Adobe Journey Optimizer push notifications channel.
 
 ## Configure push notifications using the Web SDK tag extension
 
 Follow these steps to enable and configure push notifications:
-
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
