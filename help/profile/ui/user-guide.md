@@ -54,7 +54,7 @@ The profile count also includes both profiles with attributes (record data) as w
 
 #### Updating the profile count metric
 
-When the ingestion of records into the [!DNL Profile] store increases or decreases the count by more than 5%, a job is triggered to update the count. For streaming data workflows, a check is done on an hourly basis to determine if the 5% increase or decrease threshold has been met. If it has, a job is automatically triggered to update the profile count. For batch ingestion, within 15 minutes of successfully ingesting a batch into the Profile store, if the 5% increase or decrease threshold is met, a job is run to update the profile count.
+When the ingestion of records into the [!DNL Profile] store increases or decreases the count by more than 3%, a job is triggered to update the count. For streaming data workflows, a check is done on an hourly basis to determine if the 3% increase or decrease threshold has been met. If it has, a job is automatically triggered to update the profile count. For batch ingestion, within 15 minutes of successfully ingesting a batch into the Profile store, if the 3% increase or decrease threshold is met, a job is run to update the profile count.
 
 ### [!UICONTROL Profiles by namespace] {#profiles-by-namespace}
 
