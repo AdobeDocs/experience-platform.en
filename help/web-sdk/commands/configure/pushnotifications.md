@@ -1,7 +1,6 @@
 ---
 title: pushNotifications
 description: Configure push notifications for the Web SDK to enable browser-based push messaging.
-exl-id:
 ---
 
 # `pushNotifications` {#push-notifications}
