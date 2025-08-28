@@ -23,7 +23,6 @@ New features and updates to existing features in Adobe Experience Platform:
 - [Catalog Service](#catalog-service)
 - [Destinations](#destinations)
 - [Experience Data Model (XDM)](#xdm)
-- [Real-Time Customer Profile](#profile)
 - [Sandboxes](#sandboxes)
 - [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
@@ -119,6 +118,8 @@ XDM is an open-source specification that provides common structures and definiti
 
 For more information, read the [XDM overview](../../xdm/home.md).
 
+<!--
+
 ## Real-Time Customer Profile {#profile}
 
 Real-Time Customer Profile provides a unified, actionable view of each customer by consolidating data from all channels into a single profile.
@@ -130,6 +131,8 @@ Real-Time Customer Profile provides a unified, actionable view of each customer 
 | Enhanced lookup functionality in the Entities API | The Entities API now supports the following: <ul><li>Person (Profile)</li><li>Experience Events</li><li>Account</li><li>Opportunity</li></ul> This update simplifies API usage and helps ensure optimal performance and reliability. If you previously used lookups for other entity types—including join tables and custom Multi-Entity types—now is a great opportunity to review your API usage and take advantage of the improved experience. For more information, read the [Real-Time CDB B2B Edition architecture upgrade guide](../../rtcdp/b2b-architecture-upgrade.md). |
 
 For more information on Real-Time Customer Profile, read the [Profile overview](../../profile/home.md).
+
+-->
 
 ## Sandboxes {#sandboxes}
 
