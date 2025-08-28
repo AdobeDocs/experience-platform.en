@@ -1,9 +1,10 @@
 ---
-title: Create A Dataflow To Ingest Data From a CRM Into Experience Platform
+title: Create A Dataflow To Ingest Source Data Into Experience Platform
 description: Learn how to use the Flow Service API to create a dataflow and ingest source data into Experience Platform.
-exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
+hide: true
+hidefromtoc: true
 ---
-# Create a dataflow to ingest data from a CRM into Experience Platform
+# Create a dataflow to ingest data from a source
 
 Read this guide to learn how to create a dataflow and ingest data to Adobe Experience Platform using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
@@ -23,9 +24,9 @@ This guide requires a working understanding of the following components of Exper
 
 For information on how to successfully make calls to Experience Platform APIs, read the guide on [getting started with Experience Platform APIs](../../../../landing/api-guide.md).
 
-### Create base connection {#base}
+### Create base connection
 
-To successfully create a dataflow for your source, you need a fully authenticated source account and its corresponding base connection ID. If you do not have this ID, visit the [sources catalog](../../../home.md) to find a list of sources for which you can create a base connection.
+You must have a fully authenticated source account and it's corresponding base connection ID in order to successfully create a dataflow for your source. If you do not have this ID, visit the [sources catalog](../../../home.md) for a list of sources that you can create a base connection with.
 
 ### Create a target XDM schema {#target-schema}
 
@@ -100,7 +101,7 @@ A successful response returns your target dataset ID. This ID is required later 
 
 +++
 
-## Create a source connection {#source}
+## Create a source connection
 
 A source connection defines how data is brought into Experience Platform from an external source. It specifies both the source system and the format of the incoming data, and it references a base connection that contains authentication details. Each source connection is unique to your organization.
 
@@ -127,8 +128,8 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
     "name": "ACME source connection",
-    "description": "A source connection for ACME contact data",
     "baseConnectionId": "6990abad-977d-41b9-a85d-17ea8cf1c0e4",
+    "description": "A source connection for ACME contact data",
     "data": {
       "format": "tabular"
     },
@@ -158,7 +159,8 @@ curl -X POST \
             "format": "date-time"
           }
         }
-      ]
+      ],
+      "cdcEnabled": true
     },
     "connectionSpec": {
       "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
@@ -176,6 +178,7 @@ curl -X POST \
 | `data.format` | The format of your data. Set this value to `tabular` for table-based sources (such as databases, CRMs, and marketing automation providers).|
 | `params.tableName` | The name of the table in your source account that you want to ingest to Experience Platform. |
 | `params.columns` | The specific table columns of data that you want to ingest to Experience Platform. |
+| `params.cdcEnabled` | A boolean value that indicates whether change history capture is enabled or not. This property is supported by the following database sources: <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> For more information, read the guide on using [change data capture in sources](../change-data-capture.md). |
 | `connectionSpec.id` | The connection specification ID of the source you are using. |
 
 **Response**
@@ -189,9 +192,9 @@ A successful response returns the ID of your source connection. This ID is requi
 }
 ```
 
-## Create a target connection {#target}
+## Create a target connection {#target-connection}
 
-A target connection represents the connection to the destination where the ingested data lands in. To create a target connection, you must provide the fixed connection specification ID associated to the data lake. This connection specification ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+A target connection represents the connection to the destination where the ingested data lands in. To create a target connection, you must provide the fixed connection spec ID associated to the Data Lake. This connection spec ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 **API format**
 
@@ -309,7 +312,7 @@ A successful response returns details of the newly created mapping including its
 }
 ```
 
-## Retrieve dataflow specifications {#flow-specs}
+## Retrieve dataflow specifications
 
 Before you can create a dataflow, you must first retrieve the dataflow specifications that correspond with your source. To retrieve this information, make a GET request to the `/flowSpecs` endpoint of the [!DNL Flow Service] API.
 
@@ -337,7 +340,7 @@ curl -X GET \
 
 A successful response returns the details of the dataflow specification responsible for bringing data from your source into Experience Platform. The response includes the unique flow spec `id` required to create a new dataflow. 
 
-To ensure you are using the correct dataflow specification, check the `items.sourceConnectionSpecIds` array in the response. Confirm that the connection specification ID for your source is included in this list.
+To ensure you are using the correct dataflow specification, check the `items.sourceConnectionSpecIds` array in the response. Confirm that the connection spec ID for your source is included in this list.
 
 +++Select to view
 
@@ -626,16 +629,16 @@ To ensure you are using the correct dataflow specification, check the `items.sou
 
 +++
 
-## Create a dataflow {#dataflow}
+## Create a dataflow 
 
 A dataflow is a configured pipeline that transfers data across Experience Platform services. It defines how data is ingested from external sources (like databases, cloud storage, or APIs), processed, and routed to target datasets. These datasets are then used by services such as Identity Service, Real-Time Customer Profile, and Destinations for activation and analysis.
 
 To create a dataflow, you must have values for the following items:
 
-* [Source connection ID](#source)
-* [Target connection ID](#target)
-* [Mapping ID](#mapping)
-* [Dataflow specification ID](#flow-specs)
+* Source connection ID
+* Target connection ID
+* Mapping ID
+* Dataflow specification ID
 
 During this step, you can use the following parameters in `scheduleParams` to configure an ingestion schedule for your dataflow:
 
@@ -734,7 +737,7 @@ A successful response returns the ID (`id`) of the newly created dataflow.
 }
 ```
 
-### Use the UI to validate your API workflow {#validate-in-ui}
+### Use the UI to validate your API workflow
 
 You can use the Experience Platform user interface to validate the creation of your dataflow. Navigate to the *[!UICONTROL Sources]* catalog in the Experience Platform UI and then select **[!UICONTROL Dataflows]** from the header tabs. Next, use the [!UICONTROL Dataflow Name] column and locate the dataflow that you created using the [!DNL Flow Service] API. 
 
