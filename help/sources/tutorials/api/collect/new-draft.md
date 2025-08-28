@@ -24,7 +24,7 @@ For information on how to successfully make calls to Experience Platform APIs, r
 
 ### Create base connection
 
-You must have a fully authenticated source account and it's corresponding base connection ID in order to successfully create a dataflow for your source. If you do not have this ID, visit the [sources catalog](../../../home.md#database) for a list of sources that you can create a base connection with.
+You must have a fully authenticated source account and it's corresponding base connection ID in order to successfully create a dataflow for your source. If you do not have this ID, visit the [sources catalog](../../../home.md) for a list of sources that you can create a base connection with.
 
 ### Create a target XDM schema {#target-schema}
 
@@ -211,8 +211,8 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "Database target connection",
-      "description": "Database target connection",
+      "name": "ACME target connection",
+      "description": "ACME target connection",
       "data": {
           "schema": {
               "id": "https://ns.adobe.com/{TENANT_ID}/schemas/52b59140414aa6a370ef5e21155fd7a686744b8739ecc168",
