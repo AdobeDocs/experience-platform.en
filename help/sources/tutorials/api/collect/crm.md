@@ -25,7 +25,7 @@ For information on how to successfully make calls to Experience Platform APIs, r
 
 ### Create base connection {#base}
 
-You must have a fully authenticated source account and it's corresponding base connection ID in order to successfully create a dataflow for your source. If you do not have this ID, visit the [sources catalog](../../../home.md) for a list of sources that you can create a base connection with.
+To successfully create a dataflow for your source, you need a fully authenticated source account and its corresponding base connection ID. If you do not have this ID, visit the [sources catalog](../../../home.md) to find a list of sources for which you can create a base connection.
 
 ### Create a target XDM schema {#target-schema}
 
@@ -127,8 +127,8 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
     "name": "ACME source connection",
-    "baseConnectionId": "6990abad-977d-41b9-a85d-17ea8cf1c0e4",
     "description": "A source connection for ACME contact data",
+    "baseConnectionId": "6990abad-977d-41b9-a85d-17ea8cf1c0e4",
     "data": {
       "format": "tabular"
     },
@@ -191,7 +191,7 @@ A successful response returns the ID of your source connection. This ID is requi
 
 ## Create a target connection {#target}
 
-A target connection represents the connection to the destination where the ingested data lands in. To create a target connection, you must provide the fixed connection spec ID associated to the Data Lake. This connection spec ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+A target connection represents the connection to the destination where the ingested data lands in. To create a target connection, you must provide the fixed connection specification ID associated to the data lake. This connection specification ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 **API format**
 
@@ -337,7 +337,7 @@ curl -X GET \
 
 A successful response returns the details of the dataflow specification responsible for bringing data from your source into Experience Platform. The response includes the unique flow spec `id` required to create a new dataflow. 
 
-To ensure you are using the correct dataflow specification, check the `items.sourceConnectionSpecIds` array in the response. Confirm that the connection spec ID for your source is included in this list.
+To ensure you are using the correct dataflow specification, check the `items.sourceConnectionSpecIds` array in the response. Confirm that the connection specification ID for your source is included in this list.
 
 +++Select to view
 
@@ -734,7 +734,7 @@ A successful response returns the ID (`id`) of the newly created dataflow.
 }
 ```
 
-### Use the UI to validate your API workflow
+### Use the UI to validate your API workflow {#validate-in-ui}
 
 You can use the Experience Platform user interface to validate the creation of your dataflow. Navigate to the *[!UICONTROL Sources]* catalog in the Experience Platform UI and then select **[!UICONTROL Dataflows]** from the header tabs. Next, use the [!UICONTROL Dataflow Name] column and locate the dataflow that you created using the [!DNL Flow Service] API. 
 
