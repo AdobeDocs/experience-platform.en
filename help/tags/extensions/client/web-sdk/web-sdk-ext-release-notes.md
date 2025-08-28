@@ -18,7 +18,7 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 
 **Fixes and improvements**
 
-- Allow editing of XDM data elements with missing schemas or sandboxes. When migrating an organization to a new data center, the schema id may change. Previously, when this happened, the XDM Object data element or variable data element would just show an error and not allow editing.
+- Improved XDM data element editing when schemas or sandboxes are unavailable. You can now edit XDM Object and Variable data elements even when their referenced schemas cannot be found or when sandboxes are inaccessible. This resolves issues that commonly occur during organization migrations to new data centers, where schema IDs may change and previously caused editing interfaces to display errors and become unusable.
 
 ## Version 2.31.1 - July 31, 2025
 
