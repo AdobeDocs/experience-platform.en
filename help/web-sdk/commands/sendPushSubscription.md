@@ -11,7 +11,7 @@ description: Register push notification subscriptions with Adobe Experience Plat
 
 The `sendPushSubscription` command registers push notification subscriptions with Adobe Experience Platform. This command handles the retrieval of push subscription details from the browser and sends them to your configured datastream.
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 Before using `sendPushSubscription`, ensure you have:
 
@@ -20,7 +20,7 @@ Before using `sendPushSubscription`, ensure you have:
 3. **Service worker**: A registered service worker must be available on your site
 4. **Push Manager support**: The browser must support push notifications and have the PushManager API available
 
-## Register push subscription using the Web SDK tag extension
+## Register push subscription using the Web SDK tag extension {#register-push-subscription-tag-extension}
 
 Sending push subscription data is performed as an action within a rule in the Adobe Experience Platform Data Collection Tags interface.
 
@@ -32,7 +32,7 @@ Sending push subscription data is performed as an action within a rule in the Ad
 1. Set the [!UICONTROL Extension] dropdown field to **[!UICONTROL Adobe Experience Platform Web SDK]** and set the [!UICONTROL Action Type] to **[!UICONTROL Send Push Subscription]**.
 1. Click **[!UICONTROL Keep Changes]**, then run your publishing workflow.
 
-## Register push subscription using the Web SDK JavaScript library
+## Register push subscription using the Web SDK JavaScript library {#register-push-subscription-javascript}
 
 Run the `sendPushSubscription` command when calling your configured instance of the Web SDK. Make sure that you call the [`configure`](configure/overview.md) command with push notifications configured before calling the `sendPushSubscription` command.
 
@@ -46,7 +46,7 @@ alloy("sendPushSubscription")
   });
 ```
 
-## Recommended execution frequency
+## Recommended execution frequency {#recommended-execution-frequency}
 
 For optimal push notification functionality, Adobe recommends executing the `sendPushSubscription` command **once per day**. This ensures that:
 
@@ -68,7 +68,7 @@ if (lastSent !== today) {
 }
 ```
 
-## How it works
+## How it works {#how-it-works}
 
 The `sendPushSubscription` command performs the following actions:
 
@@ -79,7 +79,7 @@ The `sendPushSubscription` command performs the following actions:
 5. **Sends to datastream**: If changes are detected, transmits the subscription data to your configured Adobe Experience Platform datastream
 6. **Updates cache**: Stores the new subscription details for future comparison
 
-## Error handling
+## Error handling {#error-handling}
 
 Common error conditions and their messages:
 
@@ -92,7 +92,7 @@ Common error conditions and their messages:
 | `"No service worker registration was found."`  | No service worker is registered for the current origin    |
 | `"No VAPID public key was provided."`  | VAPID public key is missing from configuration  |
 
-## Data payload
+## Data payload {#data-payload}
 
 The command sends push notification data in the following format:
 
