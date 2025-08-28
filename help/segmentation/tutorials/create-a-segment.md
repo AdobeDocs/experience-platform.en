@@ -70,8 +70,8 @@ As data enabled for Real-Time Customer Profile is ingested into Experience Platf
 
 The way in which the sample is triggered depends on the type of ingestion being used:
 
-- For streaming data workflows, a check is done on an hourly basis to determine if the 5% increase or decrease threshold has been met. If this threshold has been met, a sample job is automatically triggered to update the count.
-- For batch ingestion, within 15 minutes of successfully ingesting a batch into the Profile store, if the 5% increase or decrease threshold is met, a job is run to update the count. Using the Profile API you can preview the latest successful sample job, as well as list profile distribution by dataset and by identity namespace.
+- For streaming data workflows, a check is done on an hourly basis to determine if the 3% increase or decrease threshold has been met. If this threshold has been met, a sample job is automatically triggered to update the count.
+- For batch ingestion, within 15 minutes of successfully ingesting a batch into the Profile store, if the 3% increase or decrease threshold is met, a job is run to update the count. Using the Profile API you can preview the latest successful sample job, as well as list profile distribution by dataset and by identity namespace.
 
 The sample size depends on the overall number of entities in your Profile store. These sample sizes are represented in the following table:
 
