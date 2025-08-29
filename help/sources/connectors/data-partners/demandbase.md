@@ -76,6 +76,11 @@ The [!DNL Demandbase] schema is called **Company Intent Weekly**. It is the week
 
 {style="table-layout:auto"}
 
+* Class - XDM [!DNL Demandbase Account Intent]
+* Namespace - B2B [!DNL Demandbase Account Intent]
+* Primary identity - `intentID`
+* Relationships - B2B Account
+
 
 | Field Name               | Data Type | Description                                                                                                 |
 |--------------------------|-----------|-------------------------------------------------------------------------------------------------------------|
