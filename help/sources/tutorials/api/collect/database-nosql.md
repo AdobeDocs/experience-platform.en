@@ -6,11 +6,11 @@ exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
 ---
 # Create a dataflow for database sources using the [!DNL Flow Service] API
 
-Read this tutorial to learn how to create a dataflow and ingest data from your database to Adobe Experience Platform using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+Read this tutorial to learn how to create a dataflow and ingest data from your database into Adobe Experience Platform using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
->* In order to create a dataflow, you must already have a valid base connection ID with a database source. If you do not have this ID, then visit the [sources catalog](../../../home.md#database) for a list of database sources that you can create a base connection with.
+>* In order to create a dataflow, you must already have a valid base connection ID with a database source. If you do not have this ID, then visit the [sources catalog](../../../home.md#database) to view a list of database sources that you can create a base connection with.
 >* For Experience Platform to ingest data, timezones for all table-based batch sources must be configured to UTC. The only time stamp that is supported for the [[!DNL Snowflake] source](../../../connectors/databases/snowflake.md) is TIMESTAMP_NTZ with UTC time.
 
 ## Getting started
