@@ -76,6 +76,28 @@ The [!DNL Demandbase] schema is called **Company Intent Weekly**. It is the week
 
 {style="table-layout:auto"}
 
+
+| Field Name               | Data Type | Description                                                                                                 |
+|--------------------------|-----------|-------------------------------------------------------------------------------------------------------------|
+| `extSourceSystemAudit`   | OBJECT    | This field contains system audit information from the external source.                                      |
+| `_id`                    | STRING    | This is the unique system identifier for the record.                                                        |
+| `accountDomain`          | STRING    | This field contains the account domain.                                                                     |
+| `accountID`              | STRING    | This is the B2B Account ID with which this intent record is associated.                                     |
+| `demandbaseAccountID`    | STRING    | This is the company's ID in [!DNL Demandbase].                                                                     |
+| `durationType`           | STRING    | This field specifies the intent validity period type, for example, "week."                                  |
+| `endDate`                | DATE      | This is the end date of the intent validity period.                                                         |
+| `intentID`               | STRING    | This is a system-generated unique value for the intent record.                                              |
+| `intentStrength`         | STRING    | This field specifies the intent validity period type, such as "DAY," "WEEK," or "MONTH."                    |
+| `isTrending`             | BOOLEAN   | This field indicates whether the keyword is trending, with possible values being Low, Medium, or High.      |
+| `keyword`                | STRING    | This field contains the keyword or phrase indicating intent from [!DNL Demandbase].                                |
+| `keywordSetID`           | STRING    | This is the identifier for the keyword set.                                                                 |
+| `keywordSetName`         | STRING    | This is the name of the keyword set.                                                                        |
+| `numTrendingDays`        | INTEGER   | This field indicates the number of days the keyword has been trending.                                      |
+| `partitionDate`          | DATE      | This is the partition date for the record.                                                                  |
+| `peopleResearchingCount` | INTEGER   | This field indicates the number of people researching the keyword.                                          |
+| `startDate`              | DATE      | This is the start date of the intent validity period.                                                       |
+| `trendingScore`          | INTEGER   | This field contains the trending score for the keyword.                                                     |
+
 >[!TIP]
 >
 >Any changes to the schema will be communicated to Adobe in advance. To support seamless schema evolution, maintaining backward compatibility is essential. Experience Platform enforces an additive-only versioning approach, ensuring that any updates to the schema are non-destructive. This means that breaking changes are strictly prohibited, and only changes that enhance or extend the existing schema are allowed. 

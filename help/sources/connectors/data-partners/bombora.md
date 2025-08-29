@@ -73,16 +73,20 @@ Read this section for information on the [!DNL Bombora] schema and data structur
 
 The [!DNL Bombora] schema is called **Account Intent Weekly**. It is the weekly intent information (anonymous B2B buyer research and content consumption) on specified accounts and topics. The data is in parquet format.
 
-| Field name | Datatype | Required | Business key | Notes |
-| --- | --- | --- | --- | --- |
-| `Account_Name` | STRING | TRUE | YES | The canonical name of the company. |
-| `Domain` | STRING | TRUE | YES | The domain of the identified account that is showing intent. |
-| `Topic_Id` | STRING | TRUE | YES | The [!DNL Bombora] topic ID. |
-| `Topic_Name` | STRING | TRUE | | The [!DNL Bombora] topic name. |
-| `Cluster_Name` | STRING | TRUE | | The cluster name on [!DNL Bombora] for a given topic. |
-| `Cluster_Id` | STRING | TRUE | | The cluster ID associated with a given topic. |
-| `Composite_Score` | INTEGER | TRUE | | The composite score represents a domain's consumption pattern for a given topic over a specified time period. The composite score is measured between 0 and 100, where 100 represents the highest possible score and 0 represents the lowest possible score. A composite score of over 60 represents an increase in interest in a particular topic by a domain. This is also referred to as a "surge". |
-| `Partition_Date` | DATE | TRUE | | The calendar date of a snapshot. This is done weekly, at the end-of-week, in `mm/dd/yyyy` format. |
+| Field name             | Data type | Description                                                                            |
+|------------------------|-----------|----------------------------------------------------------------------------------------|
+| `extSourceSystemAudit` | OBJECT    | This field is used by the system for source system auditing.                           |
+| `_id`                  | STRING    | This field is used by the system as a unique identifier.                               |
+| `accountDomain`        | STRING    | This field contains the account domain.                                                |
+| `accountID`            | STRING    | This field contains the B2B Account ID that this intent record is associated with.     |
+| `bomboraAccountName`   | STRING    | This field contains the company's ID in Bombora.                                       |
+| `clusterID`            | STRING    | This field contains the cluster ID.                                                    |
+| `clusterName`          | STRING    | This field contains the cluster name.                                                  |
+| `compositeScore`       | INTEGER   | This field contains the composite score of intent.                                     |
+| `intentID`             | STRING    | This field contains a system-generated unique value.                                   |
+| `partitionDate`        | DATE      | This field contains the partition date. This is done weekly, at the end-of-week, in `mm/dd/yyyy` format. |
+| `topicID`              | STRING    | This field contains the intent topic ID from Bombora.                                  |
+| `topicName`            | STRING    | This field contains the intent topic name from Bombora.                                |
 
 {style="table-layout:auto"}
 
