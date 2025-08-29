@@ -71,7 +71,7 @@ For more information on these credentials, read the [[!DNL Google Cloud Storage]
 
 Read this section for information on the [!DNL Bombora] schema and data structure. 
 
-The [!DNL Bombora] schema is called **Account Intent Weekly**. It is the weekly intent information (anonymous B2B buyer research and content consumption) on specified accounts and topics. The data is in parquet format.
+The [!DNL Bombora] schema is called **B2B Bombora Account Intent**. It is the weekly intent information (anonymous B2B buyer research and content consumption) on specified accounts and topics. The data is in parquet format.
 
 * Class - XDM [!DNL Bombora Account Intent]
 * Namespace - B2B [!DNL Bombora Account Intent]
