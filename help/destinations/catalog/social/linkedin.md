@@ -10,7 +10,7 @@ exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
 
 >[!IMPORTANT]
 >
->* Starting September 1st, 2025, you can see two **[!DNL LinkedIn Matched Audiences]** cards side-by-side in the destinations catalog. This is due to an internal upgrade to the destinations service. The existing **[!DNL LinkedIn Matched Audiences]** destination connector has been renamed to **[!UICONTROL (Deprecated) LinkedIn Matched Audiences]** and a new card with the name **[!UICONTROL LinkedIn Matched Audiences]** is now available to you. 
+>* Starting September 9, 2025, you can see two **[!DNL LinkedIn Matched Audiences]** cards side-by-side in the destinations catalog. This is due to an internal upgrade to the destinations service. The existing **[!DNL LinkedIn Matched Audiences]** destination connector has been renamed to **[!UICONTROL (Deprecated) LinkedIn Matched Audiences]** and a new card with the name **[!UICONTROL LinkedIn Matched Audiences]** is now available to you. 
 >* Use the new **[!UICONTROL LinkedIn Matched Audiences]** connection in the catalog for new activation data flows. If you have any active dataflows to the **[!UICONTROL (Deprecated) LinkedIn Matched Audiences]** destination, they will be updated automatically, so no action is required from you.
 >* The new **[!UICONTROL LinkedIn Matched Audiences]** connection no longer supports [!DNL IDFA] identities.
 >* If you are creating dataflows through the [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/), you must update your [!DNL flow spec ID] and [!DNL connection spec ID] to the following values:
