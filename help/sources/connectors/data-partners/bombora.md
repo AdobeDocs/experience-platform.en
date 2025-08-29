@@ -73,6 +73,11 @@ Read this section for information on the [!DNL Bombora] schema and data structur
 
 The [!DNL Bombora] schema is called **Account Intent Weekly**. It is the weekly intent information (anonymous B2B buyer research and content consumption) on specified accounts and topics. The data is in parquet format.
 
+* Class - XDM [!DNL Bombora Account Intent]
+* Namespace - B2B [!DNL Bombora Account Intent]
+* Primary identity - `intentID`
+* Relationships - B2B Account
+
 | Field name             | Data type | Description                                                                            |
 |------------------------|-----------|----------------------------------------------------------------------------------------|
 | `extSourceSystemAudit` | OBJECT    | This field is used by the system for source system auditing.                           |
