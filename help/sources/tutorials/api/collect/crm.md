@@ -5,14 +5,14 @@ exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
 ---
 # Create a dataflow to ingest data from a CRM into Experience Platform
 
-Read this guide to learn how to create a dataflow and ingest data to Adobe Experience Platform using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+Read this guide to learn how to create a dataflow and ingest data into Adobe Experience Platform using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Get started
 
 This guide requires a working understanding of the following components of Experience Platform:
 
-* [Batch ingestion](../../../../ingestion/batch-ingestion/overview.md): Discover how you can upload large volumes of data efficiently in batches.
-* [Catalog Service](../../../../catalog/datasets/overview.md): Organize and keep track of your datasets within Experience Platform.
+* [Batch ingestion](../../../../ingestion/batch-ingestion/overview.md): DDiscover how you can quickly and efficiently upload large volumes of data in batches.
+* [Catalog Service](../../../../catalog/datasets/overview.md): Organize and keep track of your datasets in Experience Platform.
 * [Data Prep](../../../../data-prep/home.md): Transform and map your incoming data to match your schema requirements.
 * [Dataflows](../../../../dataflows/home.md): Set up and manage the pipelines that move your data from sources to destinations.
 * [Experience Data Model (XDM) Schemas](../../../../xdm/home.md): Structure your data using XDM schemas so it's ready for use in Experience Platform.
@@ -25,13 +25,13 @@ For information on how to successfully make calls to Experience Platform APIs, r
 
 ### Create base connection {#base}
 
-To successfully create a dataflow for your source, you need a fully authenticated source account and its corresponding base connection ID. If you do not have this ID, visit the [sources catalog](../../../home.md) to find a list of sources for which you can create a base connection.
+To create a dataflow for your source, you will need a fully authenticated source account and its corresponding base connection ID. If you do not have this ID, visit the [sources catalog](../../../home.md) to find a list of sources for which you can create a base connection.
 
 ### Create a target XDM schema {#target-schema}
 
 An Experience Data Model (XDM) schema provides a standardized way to organize and describe customer experience data within Experience Platform. To ingest your source data into Experience Platform, you must first create a target XDM schema that defines the structure and types of data you want to ingest. This schema serves as the blueprint for the Experience Platform dataset where your ingested data will reside.
 
-A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Read the following guides for detailed on steps on how to create a target XDM schema:
+A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). For detailed steps on how to create a target XDM schema, read the following guides:
 
 * [Create a schema using the API](../../../../xdm/api/schemas.md).
 * [Create a schema using the UI](../../../../xdm/tutorials/create-schema-ui.md). 
@@ -40,7 +40,7 @@ Once created, the target XDM schema `$id` will be required later for your target
 
 ### Create a target dataset {#target-dataset}
 
-A dataset is a storage and management construct for a collection of data, typically a table, that contains a schema (columns) and fields (rows). Data that is successfully ingested into Experience Platform is stored within the data lake as datasets. During this step, you can create a new dataset or use an existing dataset.
+A dataset is a storage and management construct for a collection of data, typically structured like a table with columns (schema) and rows (fields). Data that is successfully ingested into Experience Platform is stored within the data lake as datasets. During this step, you can either create a new dataset or use an existing one.
 
 You can create a target dataset by making a POST request to the [Catalog Service API](https://developer.adobe.com/experience-platform-apis/references/catalog/), while providing the ID of the target schema within the payload. For detailed steps on how to create a target dataset, read the guide on [creating a dataset using the API](../../../../catalog/api/create-dataset.md).
 
@@ -58,7 +58,7 @@ POST /dataSets
 
 **Request**
 
-The following example shows how to create a target dataset that is enabled for Real-Time Customer Profile ingestion. In this request, the `unifiedProfile` property is set to `true` (under the `tags` object), which tells Experience Platform to include this dataset in Real-Time Customer Profile.
+The following example shows how to create a target dataset that is enabled for Real-Time Customer Profile ingestion. In this request, the `unifiedProfile` property is set to `true` (under the `tags` object), which tells Experience Platform to include the dataset in Real-Time Customer Profile.
 
 ```shell
 curl -X POST \
@@ -84,13 +84,13 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `name` | A descriptive name for your target dataset. Use a clear and unique name mto make it easier to identify and manage your dataset in future operations. |
+| `name` | A descriptive name for your target dataset. Use a clear and unique name to make it easier to identify and manage your dataset in future operations. |
 | `schemaRef.id` | The ID of your target XDM schema. |
-| `tags.unifiedProfile` | A boolean value that informs Experience Platform if the data should be ingested to Real-Time Customer Profile. |
+| `tags.unifiedProfile` | A boolean value that informs Experience Platform if the data should be ingested into Real-Time Customer Profile. |
 
 **Response**
 
-A successful response returns your target dataset ID. This ID is required later in order to create a target connection.
+A successful response returns the ID of your target dataset. This ID is required later to create a target connection.
 
 ```json
 [
@@ -170,12 +170,12 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `name` | A descriptive name for your source connection. Use a clear and unique name mto make it easier to identify and manage your connection in future operations. |
+| `name` | A descriptive name for your source connection. Use a clear and unique name to make it easier to identify and manage your connection in future operations. |
 | `description` | An optional description that you can add to provide additional information your source connection. |
 | `baseConnectionId` | The `id` of your base connection. You can retrieve this ID by authenticating your source to Experience Platform using the [!DNL Flow Service] API. |
 | `data.format` | The format of your data. Set this value to `tabular` for table-based sources (such as databases, CRMs, and marketing automation providers).|
 | `params.tableName` | The name of the table in your source account that you want to ingest to Experience Platform. |
-| `params.columns` | The specific table columns of data that you want to ingest to Experience Platform. |
+| `params.columns` | The specific table columns of data that you want to ingest into Experience Platform. |
 | `connectionSpec.id` | The connection specification ID of the source you are using. |
 
 **Response**
@@ -230,7 +230,7 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `name` | A descriptive name for your target connection. Use a clear and unique name mto make it easier to identify and manage your connection in future operations. |
+| `name` | A descriptive name for your target connection. Use a clear and unique name to make it easier to identify and manage your connection in future operations. |
 | `description` |  An optional description that you can add to provide additional information your target connection. |
 | `data.schema.id` | The ID of your target XDM schema. |
 | `params.dataSetId` | The ID of your target dataset. |
@@ -238,7 +238,7 @@ curl -X POST \
 
 ## Mapping {#mapping}
 
-Next, you must map your source data to the target schema that your target dataset adheres to. To create a mapping, make a POST request to the `mappingSets` endpoint of the [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/), provide your target XDM schema ID and the details of the mapping sets you want to create.
+Next, map your source data to the target schema that your target dataset adheres to. To create a mapping, make a POST request to the `mappingSets` endpoint of the [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/). Include your target XDM schema ID and the details of the mapping sets you want to create.
 
 **API format**
 
@@ -630,7 +630,7 @@ To ensure you are using the correct dataflow specification, check the `items.sou
 
 A dataflow is a configured pipeline that transfers data across Experience Platform services. It defines how data is ingested from external sources (like databases, cloud storage, or APIs), processed, and routed to target datasets. These datasets are then used by services such as Identity Service, Real-Time Customer Profile, and Destinations for activation and analysis.
 
-To create a dataflow, you must have values for the following items:
+o create a dataflow, you will need to provide values for the following items:
 
 * [Source connection ID](#source)
 * [Target connection ID](#target)
@@ -642,8 +642,8 @@ During this step, you can use the following parameters in `scheduleParams` to co
 | Scheduling parameter | Description |
 | --- | --- |
 | `startTime` | The epoch time (in seconds) when the dataflow should start. |
-| `frequency` | The frequency of ingestion. Configure frequency to indicate how often the dataflow should run. You can set your frequency to: <ul><li>`once`: Set your frequency to `once` to create a one-time ingestion. Configurations for interval and backfill are unavailable when creating a one-time ingestion dataflow. By default, the scheduling frequency is set to once.</li><li>`minute`: Set your frequency to `minute` to schedule your dataflow to ingest data on a per-minute basis.</li><li>`hour`: Set your frequency to `hour` to schedule your dataflow to ingest data on a per-hour basis.</li><li>`day`: Set your frequency to `day` to schedule your dataflow to ingest data on a per-day basis.</li><li>`week`: Set your frequency to `week` to schedule your dataflow to ingest data on a per-week basis.</li></ul> |
-| `interval` | The interval between consecutive ingestions (required for all frequencies except `once`). Configure the interval setting to establish the time frame between every ingestion. For example, if you set your frequency to day and configure the interval to 15, then your dataflow will run every 15 days. You cannot set the interval to zero. The minimum accepted interval value for each frequency is as follows:<ul><li>`once`: n/a</li><li>`minute`: 15</li><li>`hour`: 1</li><li>`day`: 1</li><li>`week`: 1</li></ul> |
+| `frequency` | The frequency of ingestion. Configure frequency to indicate how often the dataflow should run. You can set your frequency to: <ul><li>`once`: Set your frequency to `once` to create a one-time ingestion. Interval and backfill settings are not available for one-time ingestion jobs. By default, the scheduling frequency is set to once.</li><li>`minute`: Set your frequency to `minute` to schedule your dataflow to ingest data on a per-minute basis.</li><li>`hour`: Set your frequency to `hour` to schedule your dataflow to ingest data on a per-hour basis.</li><li>`day`: Set your frequency to `day` to schedule your dataflow to ingest data on a per-day basis.</li><li>`week`: Set your frequency to `week` to schedule your dataflow to ingest data on a per-week basis.</li></ul> |
+| `interval` | The interval between consecutive ingestions (required for all frequencies except `once`). Configure the interval setting to establish the time frame between every ingestion. For example, if your frequency is set to day and the interval is 15, the dataflow will run every 15 days. You cannot set the interval to zero. The minimum accepted interval value for each frequency is as follows:<ul><li>`once`: n/a</li><li>`minute`: 15</li><li>`hour`: 1</li><li>`day`: 1</li><li>`week`: 1</li></ul> |
 | `backfill` | Indicates whether to ingest historical data prior to the `startTime`. |
 
 {style="table-layout:auto"}
@@ -707,7 +707,7 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `name` | A descriptive name for your dataflow. Use a clear and unique name mto make it easier to identify and manage your dataflow in future operations.  |
+| `name` | A descriptive name for your dataflow. Use a clear and unique name to make it easier to identify and manage your dataflow in future operations.  |
 | `description` | An optional description that you can add to provide additional information your dataflow. |
 | `flowSpec.id` | The ID of the flow specification that corresponds to your source. |
 | `sourceConnectionIds` | The source connection ID that was generated in an earlier step. |
@@ -718,7 +718,7 @@ curl -X POST \
 | `transformations.params.mappingId` | The mapping ID that was generated in an earlier step. |
 | `scheduleParams.startTime` | The start time for the dataflow in epoch time (seconds since Unix epoch). Determines when the dataflow will begin its first run. |
 | `scheduleParams.frequency` | The frequency at which the dataflow will run. Acceptable values include: `once`, `minute`, `hour`, `day`, or `week`. |
-| `scheduleParams.interval` | The interval between consecutive dataflow runs, based on the selected frequency. Must be a non-zero integer. For example, an interval of `15` with frequency `minute` means the dataflow runs every 15 minutes. |
+| `scheduleParams.interval` | The interval between consecutive dataflow runs, based on the selected frequency. Must be a non-zero integer. For example, if your frequency is set to minute and the interval is 15, the dataflow will run every 15 minutes. |
 | `scheduleParams.backfill` | A boolean value (`true` or `false`) that determines whether to ingest historical data (backfill) when the dataflow is first created. |
 
 {style="table-layout:auto"}
@@ -750,11 +750,11 @@ This tutorial guided you through the process of creating a dataflow in Experienc
 
 ### Monitor your dataflow
 
-Once your dataflow has been created, you can monitor the data that is being ingested through it to view information on ingestion rates, success, and errors. For more information on how to monitor dataflow, visit the tutorial on [monitoring accounts and dataflows](../../../../dataflows/ui/monitor-sources.md).
+Once your dataflow is created, you can monitor its performance directly in the Experience Platform UI. This includes tracking ingestion rates, success metrics, and any errors that occur. For more information on how to monitor dataflow, visit the tutorial on [monitoring accounts and dataflows](../../../../dataflows/ui/monitor-sources.md).
 
 ### Update your dataflow
 
-To update configurations for your dataflows scheduling, mapping, and general information, visit the tutorial on [updating sources dataflows](../../api/update-dataflows.md).
+To update configurations for your dataflows scheduling, mapping, or general information, visit the tutorial on [updating sources dataflows](../../api/update-dataflows.md).
 
 ## Delete your dataflow
 
