@@ -7,6 +7,7 @@ exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
 
 ## Destination changelog {#changelog}
 
+<!--
 >[!IMPORTANT]
 >
 >The **[!UICONTROL (Legacy) (V2) Marketo Engage]** will be deprecated in **March 2026**.
@@ -15,6 +16,8 @@ exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
 >
 >* All users of the existing **[!UICONTROL (Legacy) (V2) Marketo Engage]** must migrate to the new **[!UICONTROL Marketo Engage]** destination by March 2026.
 >* **Existing dataflows will not be migrated automatically.** You must [set up a new connection](../../ui/connect-destination.md) to the new **[!UICONTROL Marketo Engage]** destination and activate your audiences there.
+
+-->
 
 ![Image of the two Marketo destination cards in a side-by-side view.](../..//assets/catalog/adobe/marketo-side-by-side-view.png)
 
