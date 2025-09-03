@@ -403,7 +403,7 @@ The timestamp for qualified profiles indicates the most recent **batch** segment
 This number is updated in two scenarios:
 
 1. There is a greater than 3% change in customer data or the last sample job is older than three days.
-2. The audience's rules have been modified or removed.
+2. You select the **[!UICONTROL Refresh estimate]** button.
 
 Selecting the information bubble gives the date and time the last sample job was run.
 
