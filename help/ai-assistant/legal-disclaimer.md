@@ -2,7 +2,7 @@
 title: Legal Disclaimer - Personal Data, Language Support, and Verifying Responses
 description: Learn about legal disclaimers regarding personal data, language support, and verifying responses when using AI Assistant.
 ---
-# Legal Disclaimer: pPersonal Data, Language Support, and Verifying Responses
+# Legal Disclaimer: Personal Data, Language Support, and Verifying Responses
 
 Read this document for information on legal disclaimers regarding personal data, language support, and verifying responses when using the Adobe Experience Platform AI Assistant.
 
