@@ -165,6 +165,9 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Feature | Description |
 | --- | --- |
+| General availability of the [!DNL Oracle NetSuite] source | The [!DNL Oracle NetSuite] source is now generally available. You can now connect your [!DNL Oracle NetSuite] account to Experience Platform to ingest activities and entities data for unified analysis and activation. For more information, read the [[!DNL Oracle NetSuite] overview](../../sources/connectors/marketing-automation/oracle-netsuite.md). |
+| General availability of the [!DNL PathFactory] source | The [!DNL PathFactory] source is now generally available. You can connect your [!DNL PathFactory] account to Experience Platform to ingest visitors, sessions, and page views data for unified analysis and activation. For more information, read the [[!DNL PathFactory] overview](../../sources/connectors/marketing-automation/pathfactory.md). |
+| General availability of the [!DNL Stripe] source | The [!DNL Stripe] source is now generally available. You can connect your [!DNL Stripe] account to Experience Platform to ingest payment and transaction data for unified analysis and activation. For more information, read the [[!DNL Stripe] overview](../../sources/connectors/payments/stripe.md). |
 | Enhanced authentication for [!DNL Azure Blob Storage] | You can now use service principal based authentication to connect your [!DNL Azure Blob Storage] source to Experience Platform. Use service principal based authentication for enhanced security, easier credential rotation, and a more granular access control for your account. For more information, read the [[!DNL Azure Blob Storage] overview](../../sources/connectors/cloud-storage/blob.md). |
 
 For more information, read the [sources overview](../../sources/home.md).
