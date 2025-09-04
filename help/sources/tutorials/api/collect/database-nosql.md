@@ -1,18 +1,16 @@
 ---
-keywords: Experience Platform;home;popular topics;database database;third party database
-solution: Experience Platform
 title: Create a Dataflow for Database Sources Using the Flow Service API
 type: Tutorial
-description: This tutorial covers the steps for retrieving data from a database and ingesting it into Experience Platform using source connectors and APIs.
+description: Learn how to use the Flow Service API to create a dataflow and ingest data from your database into Experience Platform.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
 ---
 # Create a dataflow for database sources using the [!DNL Flow Service] API
 
-This tutorial covers the steps for retrieving data from a database source and bringing them to Experience Platform using [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Read this tutorial to learn how to create a dataflow and ingest data from your database into Adobe Experience Platform using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
->* In order to create a dataflow, you must already have a valid base connection ID with a database source. If you do not have this ID, then see the [sources overview](../../../home.md#database) for a list of database sources that you can create a base connection with.
+>* In order to create a dataflow, you must already have a valid base connection ID with a database source. If you do not have this ID, then visit the [sources catalog](../../../home.md#database) to view a list of database sources that you can create a base connection with.
 >* For Experience Platform to ingest data, timezones for all table-based batch sources must be configured to UTC. The only time stamp that is supported for the [[!DNL Snowflake] source](../../../connectors/databases/snowflake.md) is TIMESTAMP_NTZ with UTC time.
 
 ## Getting started
@@ -56,58 +54,61 @@ POST /sourceConnections
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Database source connection",
-        "baseConnectionId": "6990abad-977d-41b9-a85d-17ea8cf1c0e4",
-        "description": "Database source connection",
-        "data": {
-            "format": "tabular"
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "Database source connection",
+    "baseConnectionId": "6990abad-977d-41b9-a85d-17ea8cf1c0e4",
+    "description": "Database source connection",
+    "data": {
+      "format": "tabular"
+    },
+    "params": {
+      "tableName": "test1.Mytable",
+      "columns": [
+        {
+          "name": "TestID",
+          "type": "string",
+          "xdm": {
+            "type": "string"
+          }
         },
-        "params": {
-            "tableName": "test1.Mytable",
-            "columns": [
-                {
-                    "name": "TestID",
-                    "type": "string",
-                    "xdm": {
-                        "type": "string"
-                    }
-                },
-                {
-                    "name": "Name",
-                    "type": "string",
-                    "xdm": {
-                        "type": "string"
-                    }
-                },
-                {
-                    "name": "Datefield",
-                    "type": "string",
-                    "meta:xdmType": "date-time",
-                    "xdm": {
-                        "type": "string",
-                        "format": "date-time"
-                    }
-                }
-            ]
+        {
+          "name": "Name",
+          "type": "string",
+          "xdm": {
+            "type": "string"
+          }
         },
-        "connectionSpec": {
-            "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
-            "version": "1.0"
+        {
+          "name": "Datefield",
+          "type": "string",
+          "meta:xdmType": "date-time",
+          "xdm": {
+            "type": "string",
+            "format": "date-time"
+          }
         }
-    }'
+      ],
+      "cdcEnabled": true
+    },
+    "connectionSpec": {
+      "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
+      "version": "1.0"
+    }
+  }'
+
 ```
 
 | Property | Description |
 | -------- | ----------- |
 | `baseConnectionId`| The connection ID of your database source. |
-| `params.path`| The path of the source file. |
+| `params.tableName`| The path of the source file. |
+| `params.cdcEnabled` | A boolean value that indicates whether change history capture is enabled or not. This property is supported by the following database sources: <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> For more information, read the guide on using [change data capture in sources](../change-data-capture.md). |
 | `connectionSpec.id`| The connection specification ID of your database source. See the [Appendix](#appendix) for a list of database spec IDs. |
 
 **Response**

@@ -11,6 +11,16 @@ exl-id: 2c909633-b169-4ec8-9f58-276395cb8df2
 >
 >This destination connector is in beta and only available to select customers. To request access, contact your Adobe representative.
 
+>[!IMPORTANT]
+>
+>The **[!UICONTROL Marketo Engage Person Sync]** destination card will be deprecated in **March 2026**.
+>
+>To ensure a smooth transition to the new **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)** destination, review the following key points and required actions:
+>
+>* All users of **[!UICONTROL Marketo Engage Person Sync]** destinations must migrate to the new **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)** destination by March 2026.
+>* **Existing dataflows will not be migrated automatically.** You must [set up a new connection](marketo-engage-connection.md#connect-to-the-destination) to the new **[!UICONTROL Marketo Engage]** destination and activate your audiences there.
+
+
 ## Overview {#overview}
 
 Use the Marketo Engage Person Sync connector to stream updates from person audiences to the corresponding records in your Marketo Engage instance.

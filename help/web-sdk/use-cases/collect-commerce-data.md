@@ -173,7 +173,7 @@ alloy("sendEvent",{
 
 +++
 
-+++`productListAdds` examplae
++++`productListAdds` example
 
 A Web SDK `sendEvent` call setting the `productListAdds` event for multiple products in the `productListItems` array:
 
