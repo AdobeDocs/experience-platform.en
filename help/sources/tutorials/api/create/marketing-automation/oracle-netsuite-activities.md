@@ -1,16 +1,9 @@
 ---
 title: Create a source connection and dataflow for Oracle NetSuite Activities using the Flow Service API
 description: Learn how to create a source connection and dataflow to bring Oracle NetSuite events data to Experience Platform using the Flow Service API.
-hide: true
-hidefromtoc: true
-badge: Beta
 exl-id: 4f695389-2261-469c-8d40-7bd29a4e7f77
 ---
 # Create a source connection and dataflow for [!DNL Oracle NetSuite Activities] using the Flow Service API
-
->[!NOTE]
->
->The [!DNL Oracle NetSuite Activities] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 Read the following tutorial to learn how to bring events data from your [!DNL Oracle NetSuite Activities] account to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
