@@ -153,7 +153,7 @@ For more information on sandboxes, read the [sandboxes overview](../../sandboxes
 
 | Feature | Description |
 | ------- | ----------- |
-| Audience estimates | Audience estimates are now automatically generated within Segment Builder. This value will be updated whenever you modify the audience, and always reflects the latest audience rules. Additionally, the estimate will now be displayed as a **range**, which is based on the confidence interval of the sampling data. |
+| Audience estimates | Audience estimates are now displayed as a **range**, which is based on the confidence interval of the sampling data. To learn more about estimates, read the [Segment Builder guide](/help/segmentation/ui/segment-builder.md#audience-properties). |
 
 For more information, read the [[!DNL Segmentation Service] overview](../../segmentation/home.md).
 

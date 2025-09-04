@@ -400,10 +400,7 @@ The timestamp for qualified profiles indicates the most recent **batch** segment
 
 **[!UICONTROL Estimated Profiles]** indicates an **approximate range** of profiles, based off of the **sample job**. This means the sample data is projected on the larger profile set, resulting in an estimated number that may differ from the actual number of qualified profiles. The estimated profile sample has a 95% confidence interval.
 
-This number is updated in two scenarios:
-
-1. There is a greater than 3% change in customer data or the last sample job is older than three days.
-2. The audience's rules have been modified or removed.
+When you make changes to the audience's rules, you can select the **[!UICONTROL Refresh estimate]** button to see an updated count of estimated profiles. However, this number is still based off of the previous sample job. The sample job is updated when there is a greater than 3% change in customer data or the last sample job is older than three days.
 
 Selecting the information bubble gives the date and time the last sample job was run.
 
