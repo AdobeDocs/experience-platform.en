@@ -1,10 +1,12 @@
 ---
-title: Use Azure Private Link for Sources in the API
+title: Private Link Support For Sources In The API
 description: Learn how to create and use private links for Adobe Experience Platform Sources
 badge: Beta
+hide: true
+hidefromtoc: true
 exl-id: 9b7fc1be-5f42-4e29-b552-0b0423a40aa1
 ---
-# Use [!DNL Azure Private Link] for Sources in the API
+# Private Link Support for Sources in the API
 
 >[!AVAILABILITY]
 >
@@ -15,7 +17,7 @@ exl-id: 9b7fc1be-5f42-4e29-b552-0b0423a40aa1
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 
-You can use the [!DNL Azure Private Link] feature to create private endpoints for your Adobe Experience Platform sources to connect to. Securely connect your sources to  a virtual network using private IP addresses, eliminating the need for public IPs and reduce your attack surface.Simplify your network setup by removing the need for complex firewall or Network Address Translation configurations, while ensuring data traffic only reaches approved services.
+You can use the Private Link feature to create private endpoints for your Adobe Experience Platform sources to connect to. Securely connect your sources to  a virtual network using private IP addresses, eliminating the need for public IPs and reduce your attack surface. Simplify your network setup by removing the need for complex firewall or Network Address Translation configurations, while ensuring data traffic only reaches approved services.
 
 Read this guide to learn how you can use APIs to create and use a private endpoint.
 
