@@ -410,3 +410,249 @@ Read the [XDM Individual Profile overview](../../../../xdm/classes/individual-pr
 ## Next steps
 
 By reading this document, you have gained insight on the mapping relationship between your [!DNL Marketo] datasets and their corresponding XDM fields. See the tutorial on [creating a [!DNL Marketo] source connection](../../../tutorials/ui/create/adobe-applications/marketo.md) to complete your [!DNL Marketo] dataflow.
+
+## Persons (new)
+
+| Source field | Target XDM field | Notes |
+|---|---|---|
+| `"${MUNCHKIN_ID}"` | `b2b.personKey.sourceInstanceID` | MUNCHKIN_ID will be replaced as part of explore API |
+| `"Marketo"` | `b2b.personKey.sourceType` | |
+| `address` | `workAddress.street1` | |
+| `city` | `workAddress.city` | |
+| `company` | `organizations` | |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `b2b.personKey.sourceKey` | Primary Identity. MUNCHKIN_ID will be replaced as part of explore API |
+| `country` | `workAddress.country` | |
+| `createdAt` | `extSourceSystemAudit.createdDate` | |
+| `dateOfBirth` | `person.birthDate` | |
+| `email` | `personComponents.workEmail.address` | |
+| `email` | `workEmail.address` | |
+| `fax` | `faxPhone.number` | |
+| `firstName` | `person.name.firstName` | |
+| `id` | `b2b.personKey.sourceID` | |
+| `iif(contactCompany != null && contactCompany != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", concat(contactCompany, ".mkto_org"), "sourceKey", concat(contactCompany, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `b2b.accountKey` | |
+| `iif(contactCompany != null && contactCompany != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", concat(contactCompany, ".mkto_org"), "sourceKey", concat(contactCompany, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `personComponents.sourceAccountKey` | |
+| <ul><li><code>iif(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null), "sourceKey", concat(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)</code></li><li><code>iif(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null), "sourceKey", concat(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)</code></li></ul> | `personComponents.sourceExternalKey` | |
+| <ul><li><code>iif(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null), "sourceKey", concat(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)</code></li><li><code>iif(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null), "sourceKey", concat(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)</code></li></ul> | `extSourceSystemAudit.externalKey` | `extSourceSystemAudit.externalKey.sourceKey` is secondary Identity |
+| `iif(ecids != null, to_object('ECID',arrays_to_objects('id',explode(ecids))), null)` | `identityMap` | This is a calculated field |
+| `iif(id != null && id != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", id, "sourceKey", concat(id,"@${MUNCHKIN_ID}.Marketo")), null)` | `personComponents.sourcePersonKey` | |
+| `iif(mktoCdpCnvContactPersonId != null && mktoCdpCnvContactPersonId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", mktoCdpCnvContactPersonId, "sourceKey", concat(mktoCdpCnvContactPersonId,"@${MUNCHKIN_ID}.Marketo")), null)` | `b2b.convertedContactKey` | This is a calculated field |
+| `iif(mktoCdpCnvContactPersonId != null && mktoCdpCnvContactPersonId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", mktoCdpCnvContactPersonId, "sourceKey", concat(mktoCdpCnvContactPersonId,"@${MUNCHKIN_ID}.Marketo")), null)` | `personComponents.sourceConvertedContactKey` | This is a calculated field |
+| `iif(unsubscribed == 'true', 'n', 'y' )` | `consents.marketing.email.val` | If unsubscribed is true (i.e. value = 1), then set consents.marketing.email.val as "n". If unsubscribed is false (i.e. value = 0), then set consents.marketing.email.val as null |
+| `iif(unsubscribedReason != null && unsubscribedReason != "", substr(unsubscribedReason, 0, 100), null)` | `consents.marketing.email.reason` | |
+| `lastName` | `person.name.lastName` | |
+| `leadPartitionId` | `b2b.personGroupID` | |
+| `leadPartitionId` | `personComponents.personGroupID` | |
+| `leadScore` | `b2b.personScore` | |
+| `leadScore` | `personComponents.personScore` | |
+| `leadSource` | `b2b.personSource` | |
+| `leadSource` | `personComponents.personSource` | |
+| `leadStatus` | `b2b.personStatus` | |
+| `leadStatus` | `personComponents.personStatus` | |
+| `marketingSuspended` | `b2b.isMarketingSuspended` | |
+| `marketingSuspendedCause` | `b2b.marketingSuspendedCause` | |
+| `marketoIsDeleted` | `isDeleted` | |
+| `middleName` | `person.name.middleName` | |
+| `mktoCdpConvertedDate` | `b2b.convertedDate` | |
+| `mktoCdpIsConverted` | `b2b.isConverted` | |
+| `mobilePhone` | `mobilePhone.number` | |
+| `personType` | `b2b.personType` | |
+| `personType` | `personComponents.personType` | |
+| `phone` | `workPhone.number` | |
+| `postalCode` | `workAddress.postalCode` | |
+| `salutation` | `person.name.courtesyTitle` | |
+| `state` | `workAddress.state` | |
+| `title` | `extendedWorkDetails.jobTitle` | |
+| `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` | |
+
+## Companies (new)
+
+| Source dataset | XDM target field | Notes |
+| -------------- | ---------------- | ----- |
+| `"Marketo"` | `accountKey.sourceType` | |
+| `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | MUNCHKIN_ID will be replaced as part of explore API |
+| `concat(id, ".mkto_org")` | `accountKey.sourceID` | |
+| `concat(id, ".mkto_org@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | Primary Identity. MUNCHKIN_ID will be replaced as part of explore API |
+| <ul><li><code>iif(mktoCdpExternalId != null && mktoCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", mktoCdpExternalId, "sourceKey", concat(mktoCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)</code></li><li><code>iif(msftCdpExternalId != null && msftCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", msftCdpExternalId, "sourceKey", concat(msftCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)</code></li></ul> | `extSourceSystemAudit.externalKey` | `extSourceSystemAudit.externalKey.sourceKey` is Secondary Identity. CRM_ORG_ID and CRM_TYPE will be replaced as part of explore API |
+| `createdAt` | `extSourceSystemAudit.createdDate` | |
+| `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` | |
+| `billingCity` | `accountBillingAddress.city` | |
+| `billingCountry` | `accountBillingAddress.country` | |
+| `billingPostalCode` | `accountBillingAddress.postalCode` | |
+| `billingState` | `accountBillingAddress.state` | |
+| `billingStreet` | `accountBillingAddress.street1` | |
+| `annualRevenue` | `accountOrganization.annualRevenue.amount` | |
+| `sicCode` | `accountOrganization.SICCode` | |
+| `industry` | `accountOrganization.industry` | |
+| `numberOfEmployees` | `accountOrganization.numberOfEmployees` | |
+| `website` | `accountOrganization.website` | |
+| `mainPhone` | `accountPhone.number` | |
+| `company` | `accountName` | |
+| `companyNotes` | `accountDescription` | |
+| `site` | `accountSite` | |
+| `iif(mktoCdpParentOrgId != null && mktoCdpParentOrgId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", concat(mktoCdpParentOrgId, ".mkto_org"), "sourceKey", concat(mktoCdpParentOrgId, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `accountParentKey` | |
+| `marketoIsDeleted` | `isDeleted` | |
+
+## Opportunities (new)
+
+| Source dataset | XDM target field | Notes |
+| -------------- | --------------- | ----- |
+| `"Marketo"` | `opportunityKey.sourceType` |  |
+| `"${MUNCHKIN_ID}"` | `opportunityKey.sourceInstanceID` | MUNCHKIN_ID will be replaced as part of explore API |
+| `id` | `opportunityKey.sourceID` |  |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityKey.sourceKey` | Primary Identity. MUNCHKIN_ID will be replaced as part of explore API |
+| `iif(externalOpportunityId != null && externalOpportunityId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", externalOpportunityId, "sourceKey", concat(externalOpportunityId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | `extSourceSystemAudit.externalKey.sourceKey` is Secondary Identity. CRM_TYPE and CRM_ORG_ID will be replaced as part of explore API |
+| `iif(mktoCdpAccountOrgId != null && mktoCdpAccountOrgId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", concat(mktoCdpAccountOrgId, ".mkto_org"), "sourceKey", concat(mktoCdpAccountOrgId, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `accountKey` | Relationship |
+| `description` | `opportunityDescription` |  |
+| `name` | `opportunityName` |  |
+| `stage` | `opportunityStage` |  |
+| `type` | `opportunityType` |  |
+| `createdAt` | `extSourceSystemAudit.createdDate` |  |
+| `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |  |
+| `expectedRevenue` | `expectedRevenue.amount` |  |
+| `amount` | `opportunityAmount.amount` |  |
+| `closeDate` | `expectedCloseDate` |  |
+| `fiscalQuarter` | `fiscalQuarter` |  |
+| `fiscalYear` | `fiscalYear` |  |
+| `forecastCategory` | `forecastCategory` |  |
+| `forecastCategoryName` | `forecastCategoryName` |  |
+| `isClosed` | `isClosed` |  |
+| `isWon` | `isWon` |  |
+| `quantity` | `opportunityQuantity` |  |
+| `probability` | `probabilityPercentage` |  |
+| `iif(mktoCdpSourceCampaignId != null && mktoCdpSourceCampaignId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", mktoCdpSourceCampaignId, "sourceKey", concat(mktoCdpSourceCampaignId,"@${MUNCHKIN_ID}.Marketo")), null)` | `campaignKey` | For customers with Salesforce Integration only |
+| `lastActivityDate` | `lastActivityDate` |  |
+| `leadSource` | `leadSource` |  |
+| `nextStep` | `nextStep` |  |
+| `marketoIsDeleted` | `isDeleted` |  |
+
+## Opportunity Contact Roles (new)
+
+
+| Source dataset | XDM target field | Notes |
+| -------------- | --------------- | ----- |
+| `"${MUNCHKIN_ID}"` | `opportunityPersonKey.sourceInstanceID` | MUNCHKIN_ID will be replaced as part of explore API |
+| `"Marketo"` | `opportunityPersonKey.sourceType` |  |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityPersonKey.sourceKey` | Primary Identity. MUNCHKIN_ID will be replaced as part of explore API |
+| `createdAt` | `extSourceSystemAudit.createdDate` |  |
+| `id` | `opportunityPersonKey.sourceID` |  |
+| `iif(leadId != null && leadId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", leadId, "sourceKey", concat(leadId,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | Relationship |
+| `iif(mktoCdpOpptyId != null && mktoCdpOpptyId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", mktoCdpOpptyId, "sourceKey", concat(mktoCdpOpptyId,"@${MUNCHKIN_ID}.Marketo")), null)` | `opportunityKey` | Relationship |
+| `iif(mktoCdpSfdcId != null && mktoCdpSfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", mktoCdpSfdcId, "sourceKey", concat(mktoCdpSfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | `extSourceSystemAudit.externalKey.sourceKey` is Secondary Identity. CRM_TYPE and CRM_ORG_ID will be replaced as part of explore API |
+| `isPrimary` | `isPrimary` |  |
+| `marketoIsDeleted` | `isDeleted` |  |
+| `role` | `personRole` |  |
+| `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |  |
+
+## Programs (new)
+
+**Note - For custom tag type, go to schema < create new mix-ins and add all the additional fileds name required to map source fileds with destination XDM fileds .
+
+| Source dataset | XDM target field | Notes |
+| -------------- | --------------- | ----- |
+| `"${MUNCHKIN_ID}"` | `campaignKey.sourceInstanceID` | MUNCHKIN_ID will be replaced as part of explore API |
+| `"Marketo"` | `campaignKey.sourceType` |  |
+| `channel` | `channelName` |  |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignKey.sourceKey` | Primary Identity. MUNCHKIN_ID will be replaced as part of explore API |
+| `cost` | `actualCost.amount` |  |
+| `createdAt` | `extSourceSystemAudit.createdDate` |  |
+| `description` | `campaignDescription` |  |
+| `endDate` | `campaignEndDate` |  |
+| `id` | `campaignKey.sourceID` |  |
+| `iif(parentProgramId != null && parentProgramId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", parentProgramId, "sourceKey", concat(parentProgramId,"@${MUNCHKIN_ID}.Marketo")), null)` | `parentCampaignKey` |  |
+| `iif(sfdcId != null && sfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", sfdcId, "sourceKey", concat(sfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | `extSourceSystemAudit.externalKey.sourceKey` is Secondary Identity. CRM_TYPE and CRM_ORG_ID will be replaced as part of explore API |
+| `integrationPartner` | `integrationPartnerName` |  |
+| `marketoIsDeleted` | `isDeleted` |  |
+| `name` | `campaignName` |  |
+| `startDate` | `campaignStartDate` |  |
+| `status` | `campaignStatus` |  |
+| `type` | `campaignType` |  |
+| `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |  |
+| `webinarHistorySyncDate` | `webinarHistorySyncDate` |  |
+| `webinarHistorySyncStatus` | `webinarHistorySyncStatus` |  |
+| `webinarSessionDescription` | `webinarSessionDescription` |  |
+| `webinarSessionName` | `webinarSessionName` |  |
+
+## Program Memberships (new)
+
+| Source dataset | XDM target field | Notes |
+| -------------- | --------------- | ----- |
+| `"Marketo"` | `campaignMemberKey.sourceType` |  |
+| `"${MUNCHKIN_ID}"` | `campaignMemberKey.sourceInstanceID` | MUNCHKIN_ID will be replaced as part of explore API |
+| `id` | `campaignMemberKey.sourceID` |  |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignMemberKey.sourceKey` | Primary Identity. MUNCHKIN_ID will be replaced as part of explore API |
+| `iif(programId != null && programId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", programId, "sourceKey", concat(programId,"@${MUNCHKIN_ID}.Marketo")), null)` | `campaignKey` | Relationship |
+| `iif(leadId != null && leadId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", leadId, "sourceKey", concat(leadId,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | Relationship |
+| `iif(acquiredByCampaignID != null && acquiredByCampaignID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", acquiredByCampaignID, "sourceKey", concat(acquiredByCampaignID,"@${MUNCHKIN_ID}.Marketo")), null)` | `acquiredByCampaignKey` |  |
+| `reachedSuccess` | `hasReachedSuccess` |  |
+| `isExhausted` | `isExhausted` |  |
+| `statusName` | `memberStatus` |  |
+| `statusReason` | `memberStatusReason` |  |
+| `membershipDate` | `membershipDate` |  |
+| `nurtureCadence` | `nurtureCadence` |  |
+| `trackName` | `nurtureTrackName` |  |
+| `webinarUrl` | `webinarConfirmationUrl` |  |
+| `registrationCode` | `webinarRegistrationID` |  |
+| `reachedSuccessDate` | `reachedSuccessDate` |  |
+| `iif(sfdc.crmId != null && sfdc.crmId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", sfdc.crmId, "sourceKey", concat(sfdc.crmId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | `extSourceSystemAudit.externalKey.sourceKey` is Secondary Identity. CRM_TYPE and CRM_ORG_ID will be replaced as part of explore API |
+| `sfdc.lastStatus` | `lastStatus` |  |
+| `sfdc.hasResponded` | `hasResponded` |  |
+| `sfdc.firstRespondedDate` | `firstRespondedDate` |  |
+| `createdAt` | `extSourceSystemAudit.createdDate` |  |
+| `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |  |
+| `marketoIsDeleted` | `isDeleted` |  |
+
+## Static Lists (new)
+
+| Source dataset | XDM target field | Notes |
+| -------------- | --------------- | ----- |
+| `"Marketo"` | `marketingListKey.sourceType` |  |
+| `"${MUNCHKIN_ID}"` | `marketingListKey.sourceInstanceID` | MUNCHKIN_ID will be replaced as part of explore API |
+| `id` | `marketingListKey.sourceID` |  |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `marketingListKey.sourceKey` | Primary Identity. MUNCHKIN_ID will be replaced as part of explore API |
+| `name` | `marketingListName` |  |
+| `description` | `marketingListDescription` |  |
+| `createdAt` | `extSourceSystemAudit.createdDate` |  |
+| `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |  |
+| `marketoIsDeleted` | `isDeleted` |  |
+
+## Static List Memberships (new)
+
+| Source dataset | XDM target field | Notes |
+| -------------- | --------------- | ----- |
+| `"Marketo"` | `marketingListMemberKey.sourceType` |  |
+| `"${MUNCHKIN_ID}"` | `marketingListMemberKey.sourceInstanceID` | MUNCHKIN_ID will be replaced as part of explore API |
+| `staticListMemberID` | `marketingListMemberKey.sourceID` |  |
+| `concat(staticListMemberID,"@${MUNCHKIN_ID}.Marketo")` | `marketingListMemberKey.sourceKey` | Primary Identity. MUNCHKIN_ID will be replaced as part of explore API |
+| `iif(staticListID != null && staticListID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", staticListID, "sourceKey", concat(staticListID,"@${MUNCHKIN_ID}.Marketo")), null)` | `marketingListKey` | Relationship |
+| `iif(personID != null && personID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", personID, "sourceKey", concat(personID,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | Relationship |
+| `createdAt` | `extSourceSystemAudit.createdDate` |  |
+| `marketoIsDeleted` | `isDeleted` |  |
+
+## Named Accounts (new)
+
+| Source dataset | XDM target field | Notes |
+| -------------- | --------------- | ----- |
+| `"Marketo"` | `accountKey.sourceType` |  |
+| `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | MUNCHKIN_ID will be replaced as part of explore API |
+| `concat(id, ".mkto_acct")` | `accountKey.sourceID` |  |
+| `concat(id, ".mkto_acct@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | Primary Identity. MUNCHKIN_ID will be replaced as part of explore API |
+| `iif(crmGuid != null && crmGuid != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", crmGuid, "sourceKey", concat(crmGuid,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | `extSourceSystemAudit.externalKey.sourceKey` is Secondary Identity. CRM_TYPE and CRM_ORG_ID will be replaced as part of explore API |
+| `createdAt` | `extSourceSystemAudit.createdDate` |  |
+| `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |  |
+| `city` | `accountBillingAddress.city` |  |
+| `country` | `accountBillingAddress.country` |  |
+| `state` | `accountBillingAddress.state` |  |
+| `annualRevenue` | `accountOrganization.annualRevenue.amount` |  |
+| `sicCode` | `accountOrganization.SICCode` |  |
+| `industry` | `accountOrganization.industry` |  |
+| `logoUrl` | `accountOrganization.logoUrl` |  |
+| `numberOfEmployees` | `accountOrganization.numberOfEmployees` |  |
+| `name` | `accountName` |  |
+| `iif(parentAccountId != null && parentAccountId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", concat(parentAccountId, ".mkto_acct"), "sourceKey", concat(parentAccountId, ".mkto_acct@${MUNCHKIN_ID}.Marketo")), null)` | `accountParentKey` |  |
+| `sourceType` | `accountSourceType` |  |
+| `marketoIsDeleted` | `isDeleted` |  |
+
+## Activities (new)
+
+| Marketo source field | Activity type ID | Source dataset | XDM target field | Notes |
+| -------------------- | ---------------- | -------------- | ---------------- | ----- |
