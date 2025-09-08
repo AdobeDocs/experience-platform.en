@@ -7,6 +7,10 @@ exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
 ---
 # Segmentation use cases for Real-Time Customer Data Platform B2B Edition
 
+>[!IMPORTANT]
+>
+>Audiences that include Experience Events referencing B2B entities (such as Campaigns and Marketing Lists) are no longer supported. For more information, read the overview of the [Real-Time CDP B2B Edition architecture upgrades](../../rtcdp/b2b-architecture-upgrade.md).
+
 This document provides examples of segment definitions in Adobe Real-Time Customer Data Platform B2B Edition and how different types of attributes can be combined for common B2B use cases. To understand how destinations fit into your B2B workflow, please see the [end-to-end tutorial](../b2b-tutorial.md#create-a-segment-to-evaluate-your-data).
 
 >[!NOTE]

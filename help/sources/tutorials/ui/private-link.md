@@ -1,10 +1,12 @@
 ---
-title: Use Azure Private Link for Sources in the UI
+title: Private Link Support For Sources In The UI
 description: Learn how to use Azure Private Links for Sources in the Experience Platform UI.
 badge: Beta
+hide: true
+hidefromtoc: true
 exl-id: 2882729e-2d46-48dc-9227-51dda5bf7dfb
 ---
-# Use [!DNL Azure Private Link] for Sources in the UI
+# Private Link Support for Sources in the UI
 
 >[!AVAILABILITY]
 >
@@ -15,13 +17,13 @@ exl-id: 2882729e-2d46-48dc-9227-51dda5bf7dfb
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 
-You can use the [!DNL Azure Private Link] feature to create private endpoints for your Adobe Experience Platform sources to connect to. Securely connect your sources to  a virtual network using private IP addresses, eliminating the need for public IPs and reduce your attack surface.Simplify your network setup by removing the need for complex firewall or Network Address Translation configurations, while ensuring data traffic only reaches approved services.
+You can use the Private Links feature to create private endpoints for your Adobe Experience Platform sources to connect to. Securely connect your sources to  a virtual network using private IP addresses, eliminating the need for public IPs and reduce your attack surface. Simplify your network setup by removing the need for complex firewall or Network Address Translation configurations, while ensuring data traffic only reaches approved services.
 
 Read this guide to learn how you can use the sources workspace in the Experience Platform UI to create and use a private endpoint.
 
 ## Create a private endpoint
 
-To get started with [!DNL Azure Private Link], navigate to the *[!UICONTROL Sources]* catalog of the Experience Platform UI and select **[!UICONTROL Private endpoints]** from the menu of tabs in the sources workspace.
+To get started with Private Links, navigate to the *[!UICONTROL Sources]* catalog of the Experience Platform UI and select **[!UICONTROL Private endpoints]** from the menu of tabs in the sources workspace.
 
 ![The sources catalog with "Private endpoints".](../../images/tutorials/private-links/catalog.png)
 

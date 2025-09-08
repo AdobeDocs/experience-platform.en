@@ -10,6 +10,19 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 This document covers the release notes for the Adobe Experience Platform Web SDK.
 For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## Version 2.29.0 - September 4, 2025
+
+**New Features**
+
+- Added support for collecting Adobe Advertisement data for Adobe Journey Analytics
+- Added support for recording push subscription details in user's profiles.
+
+**Fixes and improvements**
+
+- Fixed an issue where config override sections were being merged instead of replaced.
+- Fixed a case where link collection was sending the entire document contents as the link name.
+- Fixed an issue where certain propositions were not able to be re-rendered.
+
 ## Version 2.28.1 - July 31, 2025
 
 **Fixes and improvements**
