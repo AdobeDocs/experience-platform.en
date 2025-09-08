@@ -39,7 +39,9 @@ They can activate their audiences in Marketo Engage and use the **[!UICONTROL Au
 
 ## Prerequisites {#prerequisites}
 
-The user setting up the destination must have the [Edit Person](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) permission in their Marketo instance and partition.
+* The user setting up the destination must have the [Edit Person](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) permission in their Marketo instance and partition.
+* Only Marketo Engage instances on the same Adobe Real-Time CDP organization will be available when setting up this destination.
+* Only Marketo Engage instances that have their users managed in the Adobe Admin Console can utilize this destination. 
 
 ## Supported identities {#supported-identities}
 
