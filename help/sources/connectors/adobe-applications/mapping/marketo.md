@@ -656,3 +656,103 @@ By reading this document, you have gained insight on the mapping relationship be
 
 | Marketo source field | Activity type ID | Source dataset | XDM target field | Notes |
 | -------------------- | ---------------- | -------------- | ---------------- | ----- |
+| `_id` | n/a | `_id` | `_id` | n/a |
+| n/a | n/a | `"Marketo"` | `personKey.sourceType` | n/a |
+| n/a | n/a | `"${MUNCHKIN_ID}"` | `personKey.sourceInstanceID` | MUNCHKIN_ID will be replaced as part of explore API |
+| `leadId` | n/a | `personID` | `personKey.sourceID` | n/a |
+| n/a | n/a | `concat(personID,"@${MUNCHKIN_ID}.Marketo")` | `personKey.sourceKey` | Primary identity. MUNCHKIN_ID will be replaced as part of explore API |
+| `activityTypeId` | n/a | `eventType` | `eventType` | n/a |
+| <ul><li>If the <code>activityTypeId</code> is 1, 2, 3, 9, 10, or 11 &rarr; mark <code>producedBy</code> as <strong>self</strong>.</li><li>If the <code>activityTypeId</code> is 6, 7, 8, 12, 21, 22, 24, 25, 27, 32, 34, 35, 36, 46, 101, 104, 110, 113, 114, or 115 &rarr; mark <code>producedBy</code> as <strong>system</strong>.</li><li>For all other values &rarr; mark <code>producedBy</code> as <strong>self</strong>.</li></ul> | n/a | `producedBy` | `producedBy` | n/a |
+| `activityDate` | n/a | `timestamp` | `timestamp` | n/a | 
+| `attributes.Webpage URL` | n/a | `web.webPageDetails.URL`| `web.webPageDetails.URL` | n/a |  
+| `attributes.User Agent` | n/a | `environment.browserDetails.userAgent` | `environment.browserDetails.userAgent` | n/a |
+| `attributes.Client IP Address` | n/a | `environment.ipV4` | `environment.ipV4` | n/a |
+| `attributes.Search Query` | n/a | `search.keywords` | `search.keywords` | n/a |  
+| `attributes.Search Engine` | n/a | `search.searchEngine` | `search.searchEngine` | n/a |
+| `primaryAttributeValue when activityTypeId = 1` | 1 | `web.webPageDetails.webPageID` | `web.webPageDetails.webPageID` | n/a |
+| `primaryAttributeValue when activityTypeId = 1` | 1 | `web.webPageDetails.name` | `web.webPageDetails.name` | n/a |
+| `attributes.Personalized URL` | 1 | `web.webPageDetails.isPersonalizedURL` | `web.webPageDetails.isPersonalizedURL` | n/a |
+| `attributes.Query Parameters`| 1 | `web.webPageDetails.queryParameters` | `web.webPageDetails.queryParameters` | n/a |
+| `attributes.Referrer URL` | n/a | `web.webReferrer.URL` | `web.webReferrer.URL` | n/a |
+| `primaryAttributeValueId when activityTypeId in (24, 25)` | 24, 25 | `iif(${listOperations\.listID} != null && ${listOperations\.listID} != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", ${listOperations\.listID}, "sourceKey", concat(${listOperations\.listID},"@${MUNCHKIN_ID}.Marketo")), null)` | `listOperations.listKey` | n/a |
+| `attributes.Is Primary` | 34,35,36 | `opportunityEvent.isPrimary` | `opportunityEvent.isPrimary` | n/a |
+| primaryAttributeValueId when activityTypeId in (34, 35, 36) | 34, 35, 36 | `iif(${opportunityEvent\.opportunityID} != null && ${opportunityEvent\.opportunityID} != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID",${opportunityEvent\.opportunityID}, "sourceKey", concat(${opportunityEvent\.opportunityID},"@${MUNCHKIN_ID}.Marketo")), null)` | `opportunityEvent.opportunityKey` |  n/a |
+| `attributes.Role` | 34, 35, 36 | `opportunityEvent.role` | `opportunityEvent.role` | n/a |
+| `attributes.Created Date` | n/a | `leadOperation.newLead.createdDate` | `leadOperation.newLead.createdDate` | n/a |
+| `attributes.Form Name` | n/a | `leadOperation.newLead.formName` | `leadOperation.newLead.formName` | n/a |
+| `attributes.Lead Source` | n/a | `leadOperation.newLead.leadSource` | `leadOperation.newLead.leadSource` | n/a |
+| `attributes.List Name` | n/a | `leadOperation.newLead.listName` | `leadOperation.newLead.listName` | n/a |
+| `attributes.SFDC Type` | n/a | `leadOperation.newLead.sfdcType` | `leadOperation.newLead.sfdcType` | n/a |
+| `attributes.Source Type` | n/a | `leadOperation.newLead.sourceType` | `leadOperation.newLead.sourceType` |
+| primaryAttributeValue when activityTypeId = 21 | 21  | `leadOperation.convertLead.assignTo` | `leadOperation.convertLead.assignTo` | n/a |
+| `attributes.Converted Status` | 21 | `leadOperation.convertLead.convertedStatus` | `leadOperation.convertLead.convertedStatus` | n/a |
+| `attributes.Send Notification Email` | 21 | `leadOperation.convertLead.isSentNotificationEmail` | `leadOperation.convertLead.isSentNotificationEmail` |
+| primaryAttributeValueId when activityTypeId in (7, 8, 9, 10, 11, 27) | 7, 8, 9, 10, 11, 27 | `iif(${directMarketing\\.mailingID} != null && ${directMarketing\\.mailingID} != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\",\"sourceID\",${directMarketing\\.mailingID}, \"sourceKey\", concat(${directMarketing\\.mailingID},\"@${MUNCHKIN_ID}.Marketo\")), null)` | `directMarketing.mailingKey` | n/a |
+| primaryAttributeValueId when activityTypeId in (7, 8, 9, 10, 11, 27) | 7, 8, 9, 10, 11, 27 | `directMarketing.mailingName` | `directMarketing.mailingName` | n/a |
+| n/a | n/a | `directMarketing.testVariantName` | `directMarketing.testVariantName` | n/a |
+| `attributes.Test Variant` | n/a | `directMarketing.testVariantID` | `directMarketing.testVariantID` | n/a |
+| `attributes.Subcategory` <ul><li><strong>activityTypeId = 8</strong><ul><li>1099 &rarr; MESSAGE BLOCKED</li><li>1003 &rarr; SPAM BLOCKED ON SOURCE</li><li>1004 &rarr; SPAM BLOCKED ON MESSAGE</li><li>2003 &rarr; EMAIL ADDRESS INVALID</li><li>2001 &rarr; EMAIL ADDRESS ERROR</li><li>* &rarr; UNKNOWN REASON FOR BOUNCE</li></ul></li><li><strong>activityTypeId = 27</strong><ul><li>3999 &rarr; MESSAGE NOT ACCEPTED</li><li>3001 &rarr; MAILBOX FULL</li><li>3004 &rarr; TIMEOUT OCCURRED</li><li>4003 &rarr; DNS FAILURE</li><li>4002 &rarr; MESSAGE TOO LARGE</li><li>4006 &rarr; POLICY VIOLATION</li><li>4999 &rarr; TRANSIENT FAILURE</li><li>9999 &rarr; BAD RESPONSE RECEIVED</li><li>* &rarr; UNKNOWN REASON FOR SOFT BOUNCE</li></ul></li></ul> | 8, 27 | `directMarketing.emailBouncedCode` | `directMarketing.emailBouncedCode` | n/a |
+| `attributes.Details` | n/a | `directMarketing.emailBouncedDetails` | `directMarketing.emailBouncedDetails` | n/a |
+| `attributes.Email` | n/a | `directMarketing.email` | `directMarketing.email` | n/a |
+| `attributes.Is Mobile Device` | n/a | `device.isMobileDevice` | `device.isMobileDevice` | n/a |
+| `attributes.device` | n/a | `device.model` | `device.model` | n/a |
+| `attributes.Platform` | n/a | `environment.operatingSystem` | `environment.operatingSystem` | n/a |
+| `attributes.Link` | n/a | `directMarketing.linkURL` | `directMarketing.linkURL` | n/a |
+| primaryAttributeValueId when activityTypeId = 3 else attributes.Link ID | 3 | `iif(${web\\.webInteraction\\.linkID} != null && ${web\\.webInteraction\\.linkID} != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\",\"sourceID\",${web\\.webInteraction\\.linkID}, \"sourceKey\", concat(${web\\.webInteraction\\.linkID},\"@${MUNCHKIN_ID}.Marketo\")), null)` | `web.webInteraction.webInteractionKey` | n/a |
+| primaryAttributeValueId when activityTypeId = 2 else attributes.Webform ID | 2 | `iif(${web\\.fillOutForm\\.webFormID} != null && ${web\\.fillOutForm\\.webFormID} != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\",\"sourceID\",${web\\.fillOutForm\\.webFormID}, \"sourceKey\", concat(${web\\.fillOutForm\\.webFormID},\"@${MUNCHKIN_ID}.Marketo\")), null)` | `web.fillOutForm.webFormKey` | n/a |
+| primaryAttributeValueId when activityTypeId = 2 else null | 2 | `web.fillOutForm.webFormName` | `web.fillOutForm.webFormName` | n/a |
+| primaryAttributeValueId when activityTypeId = 3 else attributes.Link | 3 | `web.webInteraction.linkURL` | `web.webInteraction.linkURL` | n/a |
+| `attributes.Change Value` | 22 | `leadOperation.changeScore.changeValue` | `leadOperation.changeScore.changeValue` | n/a |
+| `attributes.New Value` | 22 | `leadOperation.changeScore.newValue` | `leadOperation.changeScore.newValue` | n/a |
+| `attributes.Old Value` | 22 | `leadOperation.changeScore.oldValue` | `leadOperation.changeScore.oldValue` | n/a |
+| `attributes.Priority` | 22 | `leadOperation.changeScore.priority` | `leadOperation.changeScore.priority` | n/a |
+| `attributes.Reason` | 22 | `leadOperation.changeScore.reason` | `leadOperation.changeScore.reason` | n/a |
+| `attributes.Relative Score` | 22 | `leadOperation.changeScore.relativeScore` | `leadOperation.changeScore.relativeScore` | n/a |
+| `attributes.Relative Urgency` | 22 | `leadOperation.changeScore.relativeUrgency` | `leadOperation.changeScore.relativeUrgency` | n/a |
+| primaryAttributeValueId when activityTypeId = 22 | 22 | `iif(${leadOperation\.changeScore\.scoreAttributeID} != null && ${leadOperation\.changeScore\.scoreAttributeID} != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID",${leadOperation\.changeScore\.scoreAttributeID}, "sourceKey", concat(${leadOperation\.changeScore\.scoreAttributeID},"@${MUNCHKIN_ID}.Marketo")), null)` | `leadOperation.changeScore.scoreAttributeKey` | n/a |
+| primaryAttributeValueId when activityTypeId = 22 | 22 | `leadOperation.changeScore.scoreAttributeName` | `leadOperation.changeScore.scoreAttributeName` | n/a |
+| `attributes.Urgency` | 22 | `leadOperation.changeScore.urgency` | `leadOperation.changeScore.urgency` | n/a |
+| `attributes.Data Value Changes` | n/a | `json_to_object(${opportunityEvent\.dataValueChanges})` | `opportunityEvent.dataValueChanges` | n/a |
+| primaryAttributeValueId when activityTypeId = 104 | 104 | `iif(${leadOperation\.campaignProgression\.campaignID} != null && ${leadOperation\.campaignProgression\.campaignID} != "" , to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", ${leadOperation\.campaignProgression\.campaignID}, "sourceKey", concat(${leadOperation\.campaignProgression\.campaignID},"@${MUNCHKIN_ID}.Marketo")), null)` | `leadOperation.campaignProgression.campaignKey` | n/a |
+| `attributes.Acquired By` | 104 | `leadOperation.campaignProgression.isAcquiredBy` | `leadOperation.campaignProgression.isAcquiredBy` | n/a |
+| `attributes.Success` | 104 | `leadOperation.campaignProgression.isSuccessful` | `leadOperation.campaignProgression.isSuccessful` | n/a |
+| `attributes.New Status ID` | 104 | `leadOperation.campaignProgression.newStatusID` | `leadOperation.campaignProgression.newStatusID` | n/a |
+| `attributes.New Status` | 104 | `leadOperation.campaignProgression.newStatusName` | `leadOperation.campaignProgression.newStatusName` | n/a |
+| `attributes.Old Status ID` | 104 | `leadOperation.campaignProgression.oldStatusID` | `leadOperation.campaignProgression.oldStatusID` | n/a |
+| `attributes.Old Status` | 104 | `leadOperation.campaignProgression.oldStatusName` | `leadOperation.campaignProgression.oldStatusName` | n/a |
+| `attributes.Reason` | 104 | `leadOperation.campaignProgression.reason` | `leadOperation.campaignProgression.reason` | n/a |
+| `attributes.Date` | 46 | `leadOperation.interestingMoment.date` | `leadOperation.interestingMoment.date` | n/a |
+| `attributes.Description` | 46 | `leadOperation.interestingMoment.description` | `leadOperation.interestingMoment.description` | n/a |
+| `attributes.Source` | 46 | `leadOperation.interestingMoment.source` | `leadOperation.interestingMoment.source` | n/a |
+| primaryAttributeValue when activityTypeId = 46 | 46 | `leadOperation.interestingMoment.type` | `leadOperation.interestingMoment.type` | n/a |
+| primaryAttributeValueId when activityTypeId = 110 | 110 | `iif(${leadOperation\\.callWebhook\\.webhookID} != null && ${leadOperation\\.callWebhook\\.webhookID} != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\", \"sourceID\", ${leadOperation\\.callWebhook\\.webhookID}, \"sourceKey\", concat(${leadOperation\\.callWebhook\\.webhookID},\"@${MUNCHKIN_ID}.Marketo\")), null)` | `leadOperation.callWebhook.webhookKey` | n/a |
+| primaryAttributeValueId when activityTypeId = 110 | 110 | `leadOperation.callWebhook.webhookName` | `leadOperation.callWebhook.webhookName` | n/a |
+| `attributes.Error Type` | 110 | `leadOperation.callWebhook.responseCode` | `leadOperation.callWebhook.responseCode` | n/a |
+| primaryAttributeValueId when activityTypeId = 115 | 115 | `iif(${leadOperation\\.changeCampaignCadence\\.campaignID} != null && ${leadOperation\\.changeCampaignCadence\\.campaignID} != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\", \"sourceID\", ${leadOperation\\.changeCampaignCadence\\.campaignID}, \"sourceKey\", concat(${leadOperation\\.changeCampaignCadence\\.campaignID},\"@${MUNCHKIN_ID}.Marketo\")), null)` | `leadOperation.changeCampaignCadence.campaignKey` | n/a |
+| `attributes.New Nurture Cadence`| 115 | `leadOperation.changeCampaignCadence.newCadence` | `leadOperation.changeCampaignCadence.newCadence` | n/a |
+| `attributes.Previous Nurture Cadence` | 115 | `leadOperation.changeCampaignCadence.previousCadence` | `leadOperation.changeCampaignCadence.previousCadence` | n/a |
+| primaryAttributeValueId when activityTypeId = 114 | 113 | `iif(${leadOperation\.addToCampaign\.campaignID} != null && ${leadOperation\.addToCampaign\.campaignID} != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID",${leadOperation\.addToCampaign\.campaignID}, "sourceKey", concat(${leadOperation\.addToCampaign\.campaignID},"@${MUNCHKIN_ID}.Marketo")), null)` | `leadOperation.addToCampaign.campaignKey` | n/a |
+| `attributes.Track ID` | 113 | `iif(${leadOperation\.addToCampaign\.streamID} != null && ${leadOperation\.addToCampaign\.streamID} != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID",${leadOperation\.addToCampaign\.streamID}, "sourceKey", concat(${leadOperation\.addToCampaign\.streamID},"@${MUNCHKIN_ID}.Marketo")), null)` | `leadOperation.addToCampaign.streamKey` | n/a |
+| `attributes.Stream Name` | 113 | `leadOperation.addToCampaign.streamName` | `leadOperation.addToCampaign.streamName` | n/a |
+| primaryAttributeValueId when activityTypeId = 115 | 115 | `iif(${leadOperation\.changeCampaignStream\.campaignID} != null && ${leadOperation\.changeCampaignStream\.campaignID} != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID",${leadOperation\.changeCampaignStream\.campaignID}, "sourceKey", concat(${leadOperation\.changeCampaignStream\.campaignID},"@${MUNCHKIN_ID}.Marketo")), null)` | `leadOperation.changeCampaignStream.campaignKey` | n/a |
+| `attributes.New Track ID` | 115 | `iif(${leadOperation\.changeCampaignStream\.newStreamID} != null && ${leadOperation\.changeCampaignStream\.newStreamID} != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID",${leadOperation\.changeCampaignStream\.newStreamID}, "sourceKey", concat(${leadOperation\.changeCampaignStream\.newStreamID},"@${MUNCHKIN_ID}.Marketo")), null)` | `leadOperation.changeCampaignStream.newStreamKey` | n/a |
+| `attributes.New Track Name` | 115 | `leadOperation.changeCampaignStream.newStreamName` | `leadOperation.changeCampaignStream.newStreamName` | n/a |
+| `attributes.Previous Track ID` | 115 | `iif(${leadOperation\.changeCampaignStream\.previousStreamID} != null && ${leadOperation\.changeCampaignStream\.previousStreamID} != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID",${leadOperation\.changeCampaignStream\.previousStreamID}, "sourceKey", concat(${leadOperation\.changeCampaignStream\.previousStreamID},"@${MUNCHKIN_ID}.Marketo")), null)` | `leadOperation.changeCampaignStream.previousStreamKey` | n/a |
+| `attributes.Previous Stream Name` | 115 | `leadOperation.changeCampaignStream.previousStreamName` | `leadOperation.changeCampaignStream.previousStreamName` | n/a |
+| primaryAttributeValueId when activityTypeId = 101 | 101 | `iif(${leadOperation\.changeRevenueStage\.modelID} != null && ${leadOperation\.changeRevenueStage\.modelID} != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID",${leadOperation\.changeRevenueStage\.modelID}, "sourceKey", concat(${leadOperation\.changeRevenueStage\.modelID},"@${MUNCHKIN_ID}.Marketo")), null)` | `leadOperation.changeRevenueStage.modelKey` | n/a |
+| primaryAttributeValueId when activityTypeId = 101 | 101 | `leadOperation.changeRevenueStage.modelName` | `leadOperation.changeRevenueStage.modelName` | n/a |
+| `attributes.New Stage ID` | 101 | `iif(${leadOperation\.changeRevenueStage\.newStageID} != null && ${leadOperation\.changeRevenueStage\.newStageID} != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID",${leadOperation\.changeRevenueStage\.newStageID}, "sourceKey", concat(${leadOperation\.changeRevenueStage\.newStageID},"@${MUNCHKIN_ID}.Marketo")), null)` | `leadOperation.changeRevenueStage.newStageKey` | n/a |
+| `attributes.New Stage` | 101 | `leadOperation.changeRevenueStage.newStageName` | `leadOperation.changeRevenueStage.newStageName` | n/a |
+| `attributes.Old Stage ID` | 101 | `iif(${leadOperation\\.changeRevenueStage\\.previousStageID} != null && ${leadOperation\\.changeRevenueStage\\.previousStageID} != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\",\"sourceID\",${leadOperation\\.changeRevenueStage\\.previousStageID}, \"sourceKey\", concat(${leadOperation\\.changeRevenueStage\\.previousStageID},\"@${MUNCHKIN_ID}.Marketo\")), null)` | `leadOperation.changeRevenueStage.previousStageKey` | n/a |
+| `attributes.Old Stage` | 101 | `leadOperation.changeRevenueStage.previousStageName` | `leadOperation.changeRevenueStage.previousStageName` | n/a |
+| `attributes.Reason` | 101 | `leadOperation.changeRevenueStage.reason` | `leadOperation.changeRevenueStage.reason` | n/a |
+| `attributes.Merge IDs` when activityTypeId = 32 | 32 | `json_to_object(${leadOperation\.mergeLeads\.mergeIDs})` | `leadOperation.mergeLeads.sourceKeys` | n/a |
+| `attributes.Master Updated` | 32 | `leadOperation.mergeLeads.targetUpdated` | `leadOperation.mergeLeads.targetUpdated` | n/a |
+| `attributes.Merged in Sales` | 32 | `leadOperation.mergeLeads.mergedInCRM` | `leadOperation.mergeLeads.mergedInCRM` | n/a |
+| `attributes.Merge Source` | 32 | `leadOperation.mergeLeads.mergeSource` | `leadOperation.mergeLeads.mergeSource` | n/a |
+| primaryAttributeValueId when activityTypeId = 6 | 6 | `iif(${directMarketing\.emailSent\.mailingID} != null && ${directMarketing\.emailSent\.mailingID} != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID",${directMarketing\.emailSent\.mailingID}, "sourceKey", concat(${directMarketing\.emailSent\.mailingID},"@${MUNCHKIN_ID}.Marketo")), null)` | `directMarketing.emailSent.mailingKey` | n/a |
+| primaryAttributeValueId when activityTypeId = 6 | 6 | `directMarketing.emailSent.mailingName` | `directMarketing.emailSent.mailingName` | n/a |
+| `attributes.Test Variant` | 6 | `directMarketing.emailSent.testVariantID` | `directMarketing.emailSent.testVariantID` | n/a |
+| Note - derived from secondary assets value | n/a | `directMarketing.emailSent.testVariantName` | `directMarketing.emailSent.testVariantName` | n/a |
+| `attributes.Campaign Run ID` | 6 | `directMarketing.emailSent.automationRunID` |  `directMarketing.emailSent.automationRunID` | n/a |  
+| n/a | n/a | `directMarketing.automationRunID` |  `directMarketing.automationRunID` | n/a |
