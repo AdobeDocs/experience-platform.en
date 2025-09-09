@@ -4542,7 +4542,7 @@ The response from the Flow Service API returns the ID of the updated dataflow.
 
 ![Steps to activate audiences highlighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/step7.png)
 
-To make any updates to your dataflow, use the `PATCH` operation. For example, you can add a marketing action to your dataflows. Or, you can update your dataflows to select fields as mandatory keys or deduplication keys.
+To make any updates to your dataflow, use the `PATCH` operation. For example, you can add a marketing action to your dataflows, update your dataflows to select fields as mandatory keys or deduplication keys, or add file manifest generation to existing destinations.
 
 ### Add a marketing action {#add-marketing-action}
 
@@ -4774,6 +4774,44 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 ```
 
 +++
+
+>[!ENDSHADEBOX]
+
+### Add file manifest generation to existing destination {#add-file-manifest}
+
+To add file manifest generation to an existing destination, you need to update the target connection parameters using the `PATCH` operation. This enables manifest file generation for your destination, which provides metadata about the exported files.
+
+>[!IMPORTANT]
+>
+>The `If-Match` header is required when making a `PATCH` request. The value for this header is the unique version of the target connection you want to update. The etag value updates with every successful update of a flow entity such as dataflow, target connection, and others.
+>
+> To get the latest version of the etag value, perform a GET request to the `https://platform.adobe.io/data/foundation/flowservice/targetConnections/{ID}` endpoint, where `{ID}` is the target connection ID that you are looking to update.
+>
+> Make sure to wrap the value of the `If-Match` header in double quotes like in the examples below when making `PATCH` requests.
+
+>[!BEGINSHADEBOX]
+
+**Request** 
+
++++Add file manifest to existing target connection - Request
+
+```shell
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/targetConnections/{TARGET_CONNECTION_ID}' \
+--header 'accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
+--data-raw '[
+  {
+    "op": "add",
+    "path": "/params/includeFileManifest",
+    "value": true
+  }
+]'
+```
 
 >[!ENDSHADEBOX]
 
