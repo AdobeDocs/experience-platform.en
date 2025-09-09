@@ -20,4 +20,4 @@ Currently, there is one option available.
 
 Use this field to change the base path that is used to interact with the Edge Network. Adobe might request that you change this field if you participate in certain alpha or beta tests; otherwise, Adobe recommends leaving it at the default value of `ee`.
 
-This field is the tag equivalent of [`edgeBasePath`](/help/collection/js/commands/configure/edgebasepath.md) when using the JavaScript library.
+This field is the tag equivalent of [`edgeBasePath`](/help/collection/js/commands/configure/edgebasepath.md) when configuring the JavaScript library.

@@ -23,10 +23,12 @@ Adobe offers the ability to disable the following Web SDK build components:
 | Build component | Description | Dependent features |
 | --- | --- | --- |
 | **[!UICONTROL Activity collector]** | Allows automatic link collection and Activity Map tracking. | |
+| **[!UICONTROL Advertising]** | Enables Adobe Advertising integration with Customer Journey Analytics. | |
 | **[!UICONTROL Audiences]** | Supports the integration with Adobe Audience Manager, such as ID syncs. | |
 | **[!UICONTROL Consent]** | Allows the ability to use consent features. | [[!UICONTROL Set consent]](../actions/set-consent.md) action |
 | **[!UICONTROL Event merge]** | Deprecated. | [[!UICONTROL Event merge ID]](../data-element-types.md) data element (deprecated)<br>[[!UICONTROL Reset event merge ID]](../actions/reset-event-merge-id.md) action (deprecated) |
 | **[!UICONTROL Media Analytics bridge]** | Supports the integration with legacy Media Analytics. | [[!UICONTROL Get media analytics tracker]](../actions/get-media-analytics-tracker.md) action |
-| **[!UICONTROL Personalization]** | Supports integrations with Adobe Target and Adobe Journey Optimizer. | [[!UICONTROL Apply propositions]](../actions/apply-propositions.md) |
+| **[!UICONTROL Personalization]** | Supports integrations with Adobe Target and Adobe Journey Optimizer. | [[!UICONTROL Apply propositions]](../actions/apply-propositions.md) action |
+| **[!UICONTROL Push notifications]** | Enables web push notifications for Adobe Journey Optimizer. | [[!UICONTROL Send push subscription]](../actions/send-push-subscription.md) action |
 | **[!UICONTROL Rules engine]** | Enables device decisioning with Adobe Journey Optimizer. | [[!UICONTROL Evaluate rulsets]](../actions/evaluate-rulesets.md) action<br> [[!UICONTROL Subscribe ruleset items]](../event-types.md#subscribe-ruleset-items) event |
 | **[!UICONTROL Streaming media]** | Supports the integration with streaming media collection. | [[!UICONTROL Send media event]](../actions/send-media-event.md) action |

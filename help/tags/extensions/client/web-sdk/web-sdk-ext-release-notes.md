@@ -12,7 +12,7 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 
 **New features**
 
-- Contains [version 2.29.0](../../../../web-sdk/release-notes.md#2-29-0) of the Adobe Experience Platform Web SDK.
+- Contains [version 2.29.0](/help/collection/js/release-notes.md#2-29-0) of the Adobe Experience Platform Web SDK.
 - Added support for Adobe Advertising as a new custom build component. Configure in the extension configuration and in send event calls.
 - Added support for recording push subscription details in Profile. This is through a new action, "Push subscription details"
 

@@ -50,6 +50,15 @@ The **[!UICONTROL Send event]** action sends a payload to a datastream on the Ad
   * **[!UICONTROL Disabled]**: Explicitly suppress the request for the page scope and default surface.
 * **[!UICONTROL Decision context]**: A key-value map that is used when evaluating Adobe Journey Optimizer rulesets for on-device decisioning. You can provide the decision context manually or through a data element.
 
+## Advertising fields
+
+![Experience Platform tags UI showing advertising settings for the Send event action](../assets/send-event-advertising.png)
+
+* **[!UICONTROL Request default advertising data]**: Determines when (or if) the library adds advertising information to the XDM payload. You can choose from the following options:
+  * **[!UICONTROL Automatic]**: Any advertising data available at the time of the event is added to the event payload.
+  * **[!UICONTROL Wait]**: Delay sending the event until advertising data is received.
+  * **[!UICONTROL Disabled]**: Do not add advertising data to the event payload. Select this option if your implementation does not use Adobe Analytics or Customer Journey Analytics.
+
 ## Datastream configuration overrides
 
 This command supports datastream configuration overrides, giving you control over which apps and services receive this data. When you set a datastream configuration override in both an individual command and within the tag extension configuration settings, the individual command takes precedence. See [Datastream configuration overrides](../configure/configuration-overrides.md) for more information.
