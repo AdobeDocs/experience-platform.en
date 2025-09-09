@@ -140,7 +140,7 @@ There are various reasons that contribute as to why your experience event fragme
   * For example, an experience event must contain both an `_id` and a `timestamp`.
   * Additionally, the `_id` must be unique for each event (record).
 
-In the context of namespace priority, Profile will reject any event that contains two or more identities with the highest namespace priority. For example, if GAID is not marked as a unique namespace and two identities both with a GAID namespace and different identity values came in, then Profile will not store any of the events.
+In the context of namespace priority, Profile will reject any event that contains two or more identities with the highest namespace priority in the given incoming event. For example, if GAID is not marked as a unique namespace and two identities both with a GAID namespace and different identity values came in, then Profile will not store any of the events.
 
 **Troubleshooting steps**
 
