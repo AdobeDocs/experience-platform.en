@@ -2418,7 +2418,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "bucketName": "your-bucket-name",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "4fce964d-3f37-408f-9778-e597338a21ee", // Amazon S3 connection spec id
@@ -2452,6 +2453,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2510,7 +2512,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "container": "your-container-name",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "6d6b59bf-fb58-4107-9064-4d246c0e5bb2", // Azure Blob Storage connection spec id
@@ -2544,6 +2547,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2601,7 +2605,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "Server-to-server",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "be2c3209-53bc-47e7-ab25-145db8b873e1", // Azure Data Lake Gen 2(ADLS Gen2) connection spec id
@@ -2635,6 +2640,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2692,7 +2698,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "Server-to-server",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "10440537-2a7b-4583-ac39-ed38d4b848e8", // Data Landing Zone connection spec id
@@ -2726,6 +2733,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2784,7 +2792,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "bucketName": "your-bucket-name",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "c5d93acb-ea8b-4b14-8f53-02138444ae99", // Google Cloud Storage connection spec id
@@ -2818,6 +2827,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2875,7 +2885,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "Server-to-server",
         "remotePath": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "36965a81-b1c6-401b-99f8-22508f1e6a26", // SFTP connection spec id
@@ -2909,6 +2920,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
