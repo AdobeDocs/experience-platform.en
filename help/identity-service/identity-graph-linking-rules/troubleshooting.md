@@ -142,6 +142,30 @@ There are various reasons that contribute as to why your experience event fragme
 
 In the context of namespace priority, Profile will reject any event that contains two or more identities with the highest namespace priority in the given incoming event. For example, if GAID is not marked as a unique namespace and two identities both with a GAID namespace and different identity values came in, then Profile will not store any of the events.
 
+| Namespace | Unique per graph | Priority |
+| --- | --- | --- |
+| CRMID |  ✔️  | 1 |
+| GAID | | 2 |
+| ECID | | 3 |
+
+scenario 1: 2 GAIDs, 1 ECID
+
+```json
+GAID: John, ECID: 123
+CRMID: John, ECID: 999, IDFA: a-b-c
+```
+
+scenario 2: 1 GAID, 2 ECIDs
+scenario 3: 2 CRMIDs
+
+
+
+| Namespace | Unique | Priority |
+| --- | --- | --- |
+| GAID | Yes | 1 |
+| GAID | Yes | 1 |
+| ECID | No | 2
+
 **Troubleshooting steps**
 
 If your data is sent to data lake, but not Profile, and you believe that this is due to sending two or more identities with the highest namespace priority in a single event, then you may run the following query to validate that there are two different identity values sent against the same namespace:
