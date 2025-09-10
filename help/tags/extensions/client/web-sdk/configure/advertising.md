@@ -22,5 +22,11 @@ Currently, there is one option available.
 
 A drop-down menu that enables or disables DSP functionality for Adobe Advertising.
 
-* **[!UICONTROL Enabled]**: DSP functionality is enabled.
-* **[!UICONTROL Disabled]**: DSP functionality is disabled.
+* **[!UICONTROL Enabled]**: Enables view-through tracking.
+* **[!UICONTROL Disabled]**: Disables view-through tracking.
+
+When enabled, the following settings are available:
+
+* **[!UICONTROL Advertisers]**: The advertisers for which to enable view-through tracking.
+* **[!UICONTROL ID5 partner ID]**: Optional. Your organization's ID5 partner ID. This setting allows the Web SDK to collect ID5 universal IDs.
+* **[!UICONTROL RampID JavaScript path]**: Optional. The path to your organization's [!DNL LiveRamp RampID] JavaScript code (`ats.js`).  This setting allows the Web SDK to collect [!DNL RampID] universal IDs.
