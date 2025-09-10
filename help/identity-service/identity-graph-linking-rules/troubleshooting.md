@@ -140,7 +140,7 @@ There are various reasons that contribute as to why your experience event fragme
   * For example, an experience event must contain both an `_id` and a `timestamp`.
   * Additionally, the `_id` must be unique for each event (record).
 
-In the context of namespace priority, Profile will reject any event that contains two or more identities with the highest namespace priority in the given incoming event. For example, if GAID is not marked as a unique namespace and two identities both with a GAID namespace and different identity values came in, then Profile will not store any of the events.
+In the context of namespace priority, Profile will reject any event that contains two or more identities with the highest namespace priority in the given incoming event. For example, assume that your identity settings are configured like the following:
 
 | Namespace | Unique per graph | Priority |
 | --- | --- | --- |
@@ -148,23 +148,14 @@ In the context of namespace priority, Profile will reject any event that contain
 | GAID | | 2 |
 | ECID | | 3 |
 
-scenario 1: 2 GAIDs, 1 ECID
-
-```json
-GAID: John, ECID: 123
-CRMID: John, ECID: 999, IDFA: a-b-c
-```
-
-scenario 2: 1 GAID, 2 ECIDs
-scenario 3: 2 CRMIDs
+* Scenario 1: 2 GAIDs, 1 ECID
+  * If two identities, each with a GAID namespace and different identity values came in, Profile will not store any of the events because GAID is not marked as a unique namespace.
+* Scenario 2: 1 GAID, 2 ECIDs
+  * 
+* Scenario 3: 2 CRMIDs
+  *
 
 
-
-| Namespace | Unique | Priority |
-| --- | --- | --- |
-| GAID | Yes | 1 |
-| GAID | Yes | 1 |
-| ECID | No | 2
 
 **Troubleshooting steps**
 
