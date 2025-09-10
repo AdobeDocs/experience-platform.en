@@ -148,14 +148,16 @@ In the context of namespace priority, Profile will reject any event that contain
 | GAID | | 2 |
 | ECID | | 3 |
 
+For each scenario, assume that Experience Events contains the following events:
+
 * Scenario 1: 2 GAIDs, 1 ECID
-  * If two identities, each with a GAID namespace and different identity values came in, Profile will not store any of the events because GAID is not marked as a unique namespace.
-* Scenario 2: 1 GAID, 2 ECIDs
-  * 
-* Scenario 3: 2 CRMIDs
-  *
+  * In this scenario, Profile does not store any Experience Events because there are multiple GAID namespaces in the incoming event. 
+* Scenario 2: 2 CRMIDs, 1 GAID
+  * In this scenario, Profile does not store any Experience Events because there are multiple CRMID namespaces in the incoming event.
+* Scenario 3: 1 CRMID, 2 GAIDs
+  * In this scenario, Profile does not store any Experience Events because there are multiple GAID namespaces in the incoming event.
 
-
+Essentially, incoming events that contain two or more identities with the highest namespace priorities are considered bad data and are not ingested into Profile and Identity Service.
 
 **Troubleshooting steps**
 
