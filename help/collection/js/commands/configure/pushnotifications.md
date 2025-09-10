@@ -62,4 +62,4 @@ The Web SDK tag extension equivalent to this property is the [[!UICONTROL Push n
 
 ## Next steps {#next-steps}
 
-After configuring push notifications, use the [`sendPushSubscription`](../sendpushsubscription.md) command to register push subscriptions with Adobe Experience Platform.
+After configuring push notifications, use the [`sendPushSubscription`](../sendpushsubscriptiona.md) command to register push subscriptions with Adobe Experience Platform.
