@@ -50,7 +50,7 @@ Within these services, the following guardrails are tracked:
 - The maximum number of streaming audiences is 500
   - Of these 500 streaming audiences, the maximum number of edge audiences is 150
 - The initial combined throughput for streaming ingestion is 1500 records per second (rps)
-  - This combined streaming throughput measures the combined peak inbound events per second for streaming ingestion into Profile Service across your production and development sandboxes.
+  - This combined streaming throughput measures the combined peak inbound events per second for streaming ingestion into Real-Time Customer Profile across your production and development sandboxes.
   - You can purchase additional streaming segmentation support of up to 13,500 records per second. More information about purchasing additional entitlements can be found in the [Real-Time CDP product description](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 The audience capacity is at a **sandbox** level. This means that, for every sandbox you have in your organization, you can have 500 streaming audiences, of which 150 of those can be edge audiences.
