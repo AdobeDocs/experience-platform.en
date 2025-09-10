@@ -22,7 +22,14 @@ alloy("configure", {
 });
 ```
 
-Possible values for each property are:
+Supported properties in this object include:
+
+| Property | Description |
+| --- | --- |
+| **`AJO`** | Adobe Journey Optimizer. |
+| **`TGT`** | Adobe Target. |
+
+Possible values for each property include:
 
 | Value | Description |
 | --- | --- |

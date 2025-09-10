@@ -37,7 +37,7 @@ document.addEventListener("click", event => {
 
   // Append the identity to the URL, then direct the user to the URL
   event.preventDefault();
-  alloy("appendIdentityToUrl", {url: anchor.href}).then(result => {document.location = result.url;});
+  alloy("appendIdentityToUrl", {url: anchor.href}).then(result => { window.open(result.url, anchor.target || "_self"); });
 });
 ```
 
@@ -45,7 +45,7 @@ This command supports the [`edgeConfigOverrides`](configure/edgeconfigoverrides.
 
 ## Response object
 
-If you decide to [handle responses](command-responses.md) with this command, the response object contains **`url`**, the new URL with identity information added as a query string parameter.
+When [handling responses](command-responses.md) with this command, the response object contains **`url`**, the new URL with identity information added as a query string parameter.
 
 ## Append identity to URL using the Web SDK tag extension
 

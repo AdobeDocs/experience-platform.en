@@ -5,9 +5,15 @@ exl-id: 5a128b4a-4727-4415-87b4-4ae87a7e1750
 ---
 # `clickCollection`
 
-The `clickCollection` object contains several variables that help you control automatically collected link data. Use these variables when you want to include or exclude types of links from data collection. It is supported on Web SDK 2.25.0 or later.
+The `clickCollection` object contains several variables that help you control automatically collected link data. Use these variables when you want to include or exclude types of links from data collection. It is supported on Web SDK versions 2.25.0 or later.
 
-This variable requires [`clickCollectionEnabled`](clickcollectionenabled.md) to be enabled. If `clickCollectionEnabled` is set to `false`, then this object does nothing.
+This variable requires all of the following:
+
+* [`clickCollectionEnabled`](clickcollectionenabled.md) must be enabled.
+* If you use `clickCollection.filterClickDetails`, the deprecated method [`onBeforeLinkClickSend`](onbeforelinkclicksend.md) must be empty.
+* The event payload must contain a value in `xdm.web.webPageDetails.name` at some point in the visitor's visit.
+
+If your implementation does not meet all of the above requirements, then this object does nothing.
 
 The following properties are available in the `clickCollection` object:
 

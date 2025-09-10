@@ -69,7 +69,7 @@ The `implementationDetails` keyword collects information about the SDK version u
 | --- | --- | --- | --- |
 | Name | The software development kit (SDK) identifier. This field uses a URI to improve uniqueness among identifiers provided by different software libraries. | `xdm.implementationDetails.name` | When the standalone library is used, the value is `https://ns.adobe.com/experience/alloy`. When the library is used as part of the tag extension, the value is `https://ns.adobe.com/experience/alloy+reactor`. |
 | Version | The software development kit (SDK) version. | `xdm.implementationDetails.version` | When the standalone library is used, the value is the library version. When the library is used as part of the tag extension, the value is the library version and the tag extension version joined with a `+`. For example, if the library version is `2.1.0` and the tag extension version is `2.1.3`, the value would be `2.1.0+2.1.3`. |
-| Environment | The environment where the data was collected. This field is always set to `browser`. | `xdm.implementationDetails.environment` | `browser` |
+| Environment | The environment where the data was collected. This field is always set to `browser` when using the JavaScript library. | `xdm.implementationDetails.environment` | `browser` |
 
 ### High entropy client hints {#high-entropy-client-hints}
 

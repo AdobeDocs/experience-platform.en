@@ -12,9 +12,9 @@ If you have a visitor that is not within the jurisdiction of General Data Protec
 
 Set the `defaultConsent` string property to the desired consent level when running the `configure` command. This property is case-sensitive, and supports only the following three values: `"in"`, `"out"`, and `"pending"`. If you attempt to use any other value, the library throws an error. If not set in the `configure` command, the default value is **`in`**.
 
->[!NOTE]
+>[!IMPORTANT]
 >
-> Consent data does not persist between page loads. Make sure that you send the desired consent every time that you call the `configure` command.
+>The `defaultConsent` value does not persist between page loads. Make sure that you set the desired default consent every time that you call the `configure` command.
 
 ```js
 alloy("configure", {

@@ -19,4 +19,4 @@ alloy("configure", {
   
 ## Enable debugging using the Web SDK tag extension
   
-There are no debugging options available natively using the Web SDK tag extension. Use an [alternate debugging method](/help/collection/use-cases/debugging.md).
+There are no debugging options available natively using the Web SDK tag extension. Use an [alternate debugging method](/help/collection/use-cases/debugging.md) when configuring your tag property.
