@@ -8,10 +8,6 @@ exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
 ---
 # Entities endpoint (Profile access)
 
->[!IMPORTANT]
->
->ExperienceEvent lookup using the Profile access API will be deprecated. Please use features such as computed attributes for use cases that require looking up ExperienceEvents. For more information about this change, contact Adobe Customer Care.
-
 Adobe Experience Platform enables you to access [!DNL Real-Time Customer Profile] data using RESTful APIs or the user interface. This guide outlines how to access entities, more commonly known as "profiles", using the API. For more information on accessing profiles using the [!DNL Experience Platform] UI, please refer to the [Profile user guide](../ui/user-guide.md). 
 
 ## Getting started
@@ -38,6 +34,12 @@ As a result of this update, the [!DNL Profile Access] API now reflects the lates
 >[!ENDSHADEBOX]
 
 ## Retrieve an entity {#retrieve-entity}
+
+>[!IMPORTANT]
+>
+>The following B2B entities are no longer supported for lookup requests via the API: **Account-Person Relation, Opportunity-Person Relation, Campaign, Campaign Member, Marketing List, and Marketing List Member**. 
+>
+>Support for these entities has been deprecated. If you have existing integrations or workflows that rely on accessing these entities, please update them to use supported entity types to ensure continued functionality.
 
 You can retrieve a Profile entity by making a GET request to the `/access/entities` endpoint along with the required query parameters.
 
@@ -1196,6 +1198,19 @@ A successful response returns the next page of results. This response does not h
 +++
 
 ## Delete an entity {#delete-entity}
+
+>[!IMPORTANT]
+>
+>Delete requests for the following B2B entities have been deprecated:
+>
+>- Account
+>- Account-Person Relation
+>- Opportunity
+>- Opportunity-Person Relation
+>- Campaign
+>- Campaign Member
+>- Marketing List
+>- Marketing List Members
 
 You can delete an entity from the Profile Store by making a DELETE request to the`/access/entities` endpoint along with the required query parameters.
 

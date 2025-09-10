@@ -155,6 +155,12 @@ fs.azure.sas.{CONTAINER_NAME}.{STORAGE-ACCOUNT}.blob.core.windows.net {SAS-TOKEN
 
 ![The Databricks UI on Azure.](../../images/tutorials/create/databricks/databricks-ui.png)
 
+If unprovided, the copy activity in the flow run fails and returns the following error:
+
+```shell
+Unable to access container '{CONTAINER_NAME}' in account '{STORAGE_ACCOUNT}.blob.core.windows.net' using anonymous credentials. No credentials found in the configuration. Public access is not permitted on this storage account.
+```
+
 ## Connect [!DNL Databricks] to Experience Platform 
 
 Now that you have completed the prerequisite steps, you can now proceed and connect your [!DNL Databricks] account to Experience Platform:

@@ -20,6 +20,8 @@ A query can be evaluated with edge segmentation if it meets any of the criteria 
 >[!NOTE]
 >
 >If the query matches any of the query types in the following table, it will automatically be evaluated using edge segmentation. The system determines this ability automatically based on the query expression.
+>
+>Additionally, if the audience **only** contains profile attributes, it will be evaluated daily. If you want your audience to be evaluated in real-time, you'll need to add event data to your audience.
 
 | Query type | Details | Query | Example |
 | ---------- | ------- | ----- | ------- |

@@ -3,7 +3,7 @@ title: Connect Oracle DB To Experience Platform Using The UI
 description: Learn how to connect your Oracle DB instance to Experience Platform using the UI.
 exl-id: 4ca6ecc6-0382-4cee-acc5-1dec7eeb9443
 ---
-# Create an [!DNL Oracle DB] source connection in the UI
+# Connect [!DNL Oracle DB] to Experience Platform using the UI
 
 Read this guide to learn how to connect your [!DNL Oracle DB] instance to Adobe Experience Platform using the sources workspace in the Experience Platform user interface.
 

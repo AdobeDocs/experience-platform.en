@@ -97,7 +97,7 @@ Currently, this displays capacity information about streaming throughput, stream
 
 #### Streaming throughput {#streaming-throughput}
 
-The streaming throughput section displays information about the streaming throughput throughout your organization's sandboxes. The streaming throughput value measures the combined peak inbound events per second for streaming ingestion into Profile service.
+The streaming throughput section displays information about the streaming throughput within your organization's sandboxes. The streaming throughput value measures the combined peak inbound events per second for streaming ingestion into Profile service.
 
 ![The streaming throughput section within the capacity details page is displayed.](/help/landing/images/capacity/streaming-throughput-section.png)
 
