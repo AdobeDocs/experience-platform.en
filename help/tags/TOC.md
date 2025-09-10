@@ -125,6 +125,7 @@ role: Developer
         * [Reset event merge ID](extensions/client/web-sdk/actions/reset-event-merge-id.md)
         * [Send event](extensions/client/web-sdk/actions/send-event.md)
         * [Send media event](extensions/client/web-sdk/actions/send-media-event.md)
+        * [Send push subscription](extensions/client/web-sdk/actions/send-push-subscription.md)
         * [Set consent](extensions/client/web-sdk/actions/set-consent.md)
         * [Update variable](extensions/client/web-sdk/actions/update-variable.md)
       * [Data element types](extensions/client/web-sdk/data-element-types.md)
