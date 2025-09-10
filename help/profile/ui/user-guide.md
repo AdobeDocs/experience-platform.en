@@ -116,11 +116,11 @@ After selecting an [!UICONTROL Identity namespace] and returning to the [!UICONT
 
 ![The identity value that you want to filter by is highlighted.](../images/user-guide/filter-identity-value.png)
 
-Once a value has been entered, select **[!UICONTROL View]** and a single profile matching the value is returned. Select the **[!UICONTROL Profile ID]** to view the profile details.
+Once a value has been entered, select **[!UICONTROL View]** and a single profile matching the value is returned. Select the **[!UICONTROL Profile ID]** to view a profile.
 
 ![The profile that matches the identity value is highlighted.](../images/user-guide/filtered-identity-value.png)
 
-## View profile details {#profile-detail}
+## View profile {#view-profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_201001_404"
@@ -128,6 +128,14 @@ Once a value has been entered, select **[!UICONTROL View]** and a single profile
 >abstract="This means that Experience Platform could not find the requested entity. To resolve this error, please try one of the following solutions:<ul><li>Ensure the correct profile ID is listed in the URL of the entity you're trying to access.</li><li>Ensure you have the correct Organization and sandbox combination for the entity you're trying to access.</li></ul>"
 
 After selecting a **[!UICONTROL Profile ID]**, the **[!UICONTROL Detail]** tab opens. The profile information displayed on the **[!UICONTROL Detail]** tab has been merged together from multiple profile fragments to form a single view of the individual customer. This includes customer details such as basic attributes, linked identities, and channel preferences. 
+
+Additionally, you can view other details about profiles such as its [attributes](#attributes), [events](#events), and [audience membership](#audience-membership).
+
+### Details tab {#profile-detail}
+
+The details tab displays 
+
+four sections - Customer profile insights, AI insight widgets, customizable widgets, and auto-classified widgets
 
 The default fields shown can also be changed at an organizational-level to display preferred Profile attributes. To learn more about customizing these fields, including step-by-step instructions for adding and removing attributes and resizing dashboard panels, please read the [profile detail customization guide](profile-customization.md).
 
@@ -139,7 +147,7 @@ You can also choose to toggle between viewing the attribute names as their displ
 
 To view additional information related to the individual customer profile, select one of the other available tabs. These tabs include attributes, events, and the audience membership tab that shows the audiences for which the profile is currently qualified.
 
-### Attributes tab
+### Attributes tab {#attributes}
 
 The **[!UICONTROL Attributes]** tab provides a list view summarizing all of the attributes related to a single profile, after the specified merge policy has been applied.
 
@@ -153,7 +161,7 @@ To view the attributes that are available on the Edge, select **[!UICONTROL Edge
 
 For more information on edge profiles, please read the [edge profiles documentation](../edge-profiles.md).
 
-### Events tab
+### Events tab {#events}
 
 The **[!UICONTROL Events]** tab contains data from the 100 most recent ExperienceEvents associated with the customer. This data could include email opens, cart activities, and page views. Selecting **[!UICONTROL View all]** for any individual event provides additional fields and values captures as part of the event.
 
@@ -161,7 +169,7 @@ Events can also be viewed as a JSON object by selecting to **[!UICONTROL View JS
 
 ![The Events tab is highlighted. The profile events are displayed.](../images/user-guide/events.png)
 
-### Audience membership tab
+### Audience membership tab {#audience-membership}
 
 The **[!UICONTROL Audience membership]** tab displays a list with the name and description of audiences to which the individual customer profile currently belongs. This list is updated automatically as the profile qualifies or expires from audiences. The total count of audiences for which the profile is currently qualified is shown on the right-hand side of the tab.
 
