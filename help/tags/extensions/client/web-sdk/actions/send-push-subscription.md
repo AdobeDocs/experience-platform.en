@@ -21,7 +21,7 @@ The action does not have any configuration settings beyond selecting an SDK inst
 
 Make sure that you set a valid [VAPID public key](../configure/push-notifications.md) when configuring the extension before you use this command.
 
-This action is the tag extension equivalent to the [`sendPushSubscription`](/help/collection/js/commands/sendpushsubscriptiona.md) command. See the linked page for information about prerequisites, recommended execution frequency, how the command works, and error handling.
+This action is the tag extension equivalent to the [`sendPushSubscription`](/help/collection/js/commands/sendpushsubscription.md) command. See the linked page for information about prerequisites, recommended execution frequency, how the command works, and error handling.
 
 >[!MORELIKETHIS]
 >

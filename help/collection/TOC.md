@@ -62,7 +62,7 @@ role: Developer
       + [renderDecisions](js/commands/sendevent/renderdecisions.md)
       + [xdm](js/commands/sendevent/xdm.md)
     + [sendMediaEvent](js/commands/sendmediaevent.md)
-    + [sendPushSubscription](js/commands/sendpushsubscriptiona.md)
+    + [sendPushSubscription](js/commands/sendpushsubscription.md)
     + [setConsent](js/commands/setconsent.md)
     + [setDebug](js/commands/setdebug.md)
     + [subscribeRulesetItems](js/commands/subscriberulesetitems.md)
