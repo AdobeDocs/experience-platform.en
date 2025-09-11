@@ -19,50 +19,6 @@ exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
 
 This article explains the workflow required to activate audiences in Adobe Experience Platform streaming destinations.
 
-## Audience name propagation behavior {#audience-name-propagation}
-
-When you activate an audience to a streaming destination, the audience name is sent to the destination during the initial activation. However, audience name update behavior varies by destination:
-
-* **Destinations that support audience name updates**: If you change an audience name in Experience Platform, the updated name will automatically propagate to these destinations.
-* **Destinations that do not support audience name updates**: If you change an audience name in Experience Platform, the destination will continue to use the original name from the initial activation.
-
-### Destinations which support audience name updates {#name-update-supported}
-
-The following streaming destinations support automatic audience name updates when you modify audience names in Experience Platform:
-
-* [Acxiom Audience Connection](../catalog/advertising/acxiom-audience-connection.md)
-* [Adobe Campaign Managed Cloud](../catalog/email-marketing/adobe-campaign-managed-services.md)
-* [Advertising Cloud DSP](../catalog/advertising/adobe-advertising-cloud-connection.md)
-* [Bombora](../catalog/advertising/bombora.md)
-* [Criteo](../catalog/advertising/criteo.md)
-* [Demandbase](../catalog/advertising/demandbase.md)
-* [Demandbase People](../catalog/advertising/demandbase-people.md)
-* [Experience Cloud Audiences](../catalog/adobe/experience-cloud-audiences.md)
-* [Facebook](../catalog/social/facebook.md)
-* [Gainsight PX](../catalog/analytics/gainsight-px.md)
-* [LINE](../catalog/mobile-engagement/line.md)
-* [(Companies) LinkedIn Matched Audience](../catalog/social/linkedin-b2b.md)
-* [LinkedIn Matched Audience](../catalog/social/linkedin.md)
-* [(Legacy) (V2) Marketo Engage](../catalog/adobe/marketo-engage.md)
-* [PubMatic Connect](../catalog/advertising/pubmatic.md)
-* [SendGrid](../catalog/email-marketing/sendgrid.md)
-* [Snap Inc](../catalog/advertising/snap-inc.md)
-* [TikTok](../catalog/social/tiktok.md)
-* [Twitter Custom Audiences](../catalog/social/twitter.md)
-* [Yahoo DataX](../catalog/advertising/datax.md)
-
-
-### Destinations which do not support audience name updates {#name-update-not-supported}
-
-For destinations not listed above, audience names remain static after the initial activation. If you need to update an audience name for these destinations, you must:
-
-1. Create a new audience in Experience Platform with the desired name
-2. Activate the new audience to the destination
-
->[!TIP]
->
->To avoid confusion, use descriptive names for your audiences from the initial activation, especially when activating to destinations that do not support audience name updates.
-
 ## Prerequisites {#prerequisites}
 
 To activate audiences to destinations, you must have successfully [connected to a destination](./connect-destination.md). If you haven't done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported destinations, and configure the destination that you want to use.
