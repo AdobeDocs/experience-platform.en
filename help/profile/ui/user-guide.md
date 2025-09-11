@@ -133,9 +133,19 @@ Additionally, you can view other details about profiles such as its [attributes]
 
 ### Details tab {#profile-detail}
 
-The details tab displays 
+The **[!UICONTROL Details]** tab provides more detailed information about the selected profile, and is separated into four sections:  Customer profile insights, AI insight widgets, customizable widgets, and auto-classified widgets.
 
-four sections - Customer profile insights, AI insight widgets, customizable widgets, and auto-classified widgets
+IMAGE
+
+#### Customer profile insights {#customer-profile-insights}
+
+The **Customer profile insights**
+
+#### AI insight widgets {#ai-insight-widgets}
+
+#### Customizable widgets {#customizable-widgets}
+
+#### Auto-classified widgets {#auto-classified-widgets}
 
 The default fields shown can also be changed at an organizational-level to display preferred Profile attributes. To learn more about customizing these fields, including step-by-step instructions for adding and removing attributes and resizing dashboard panels, please read the [profile detail customization guide](profile-customization.md).
 
