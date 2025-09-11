@@ -67,7 +67,7 @@ role: Admin,User
         * [Experience Platform audience sharing](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
         * [Federated Audience Composition connection](https://www.adobe.com/go/destinations-federated-audience-composition)
     * Advertising destinations{#advertising}
-        * [(Beta) Acxiom Audience Distribution](./catalog/advertising/acxiom-audience-connection.md)
+        * [(Beta) Acxiom Audience Connection](./catalog/advertising/acxiom-audience-connection.md)
         * [(Beta) Acxiom RealID Audience Connection](./catalog/advertising/acxiom-real-id-audience-connection.md)
         * [Advertising destinations overview](./catalog/advertising/overview.md)
         * [Adobe Advertising Cloud connection](./catalog/advertising/adobe-advertising-cloud-connection.md)
