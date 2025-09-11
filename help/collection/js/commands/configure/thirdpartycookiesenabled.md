@@ -5,7 +5,7 @@ exl-id: f241a9ae-a892-46a5-b0dd-5ac72a44d4ac
 ---
 # `thirdPartyCookiesEnabled`
 
-The `thirdPartyCookiesEnabled` property is a boolean that determines if the Web SDK sets cookies in a third-party context. Enabling this option is useful if you want to identify visitors between subdomains or domains that your organization owns. However, many modern browsers limit the setting and expiration of third-party cookies.
+The `thirdPartyCookiesEnabled` property is a boolean that determines if the Web SDK sets cookies in a third-party context. Enabling this option is useful if you want to identify visitors between subdomains or domains that your organization owns. However, many modern browsers limit the setting and expiration of third-party cookies. If a visitor's browser does not support third-party cookies, then this property does nothing.
 
 The `thirdPartyCookiesEnabled` property also controls whether a [`CORE ID`](/help/collection/use-cases/identity/id-overview.md#tracking-coreid-web-sdk) can be requested on [`getIdentity`](../getidentity.md) calls.
 

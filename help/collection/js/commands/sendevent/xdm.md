@@ -5,7 +5,7 @@ exl-id: 1d8ef191-aed6-4c8b-a1fd-614bd8ed73da
 ---
 # `xdm`
 
-The `xdm` object contains the data payload sent to Adobe. Fields set within this object map directly to elements defined in the dataset's schema. This object has a maximum limit of 32 KB.
+The `xdm` object contains the data payload sent to Adobe. Fields set within this object map directly to elements defined in the dataset's schema.
 
 Adobe Experience Platform uses schemas to describe the structure of data in a consistent and reusable way. By defining data consistently across systems, it becomes easier to retain meaning and, therefore, gain value from data.
 

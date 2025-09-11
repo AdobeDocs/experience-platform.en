@@ -246,7 +246,7 @@ alloy("sendEvent", {
   var discountHtml;
   if (discountProposition) {
     // Find the item from proposition that should be rendered.
-    // Rather than assuming there a single item that has HTML
+    // Rather than assuming there is a single item that has HTML
     // content, find the first item whose schema indicates
     // it contains HTML content.
     for (var j = 0; j < discountProposition.items.length; j++) {
@@ -257,7 +257,7 @@ alloy("sendEvent", {
         var dailySpecialElement = document.getElementById("daily-special");
         dailySpecialElement.innerHTML = discountHtml;
         
-        // For this example, we assume there is only a signle place to update in the HTML.
+        // For this example, we assume there is only a single place to update in the HTML.
         break;  
       }
     }
@@ -312,24 +312,24 @@ Next, when the view or a component gets updated, the `applyPropositions` command
 
 ```js
 var cartPropositions = alloy("sendEvent", {
-    "renderDecisions": true,
-    "xdm": {
-        "web": {
-            "webPageDetails": {
-                "viewName": "cart"
-            }
-        }
+  "renderDecisions": true,
+  "xdm": {
+    "web": {
+      "webPageDetails": {
+        "viewName": "cart"
+      }
     }
+  }
 }).then(function(result) {
-    var propositions = result.propositions;
+  var propositions = result.propositions;
 
-    // Collect response tokens, etc.
-    return propositions;
+  // Collect response tokens, etc.
+  return propositions;
 });
 
 // Call applyPropositions to re-render the view propositions from the previous sendEvent command.
 alloy("applyPropositions", {
-    "propositions": cartPropositions
+  "propositions": cartPropositions
 });
 ```
 
@@ -348,53 +348,53 @@ Supported `actionTypes` are:
 ```js
 // Retrieve propositions for salutation and discount scopes
 alloy("sendEvent", {
-    "decisionScopes": ["salutation", "discount"]
+  "decisionScopes": ["salutation", "discount"]
 }).then(function(result) {
-    var retrievedPropositions = result.propositions;
-    // Render propositions on the page by providing additional metadata
+  var retrievedPropositions = result.propositions;
+  // Render propositions on the page by providing additional metadata
 
-    return alloy("applyPropositions", {
-        "propositions": retrievedPropositions,
-        "metadata": {
-            "salutation": {
-                "selector": "#first-form-based-offer",
-                "actionType": "setHtml"
-            },
-            "discount": {
-                "selector": "#second-form-based-offer",
-                "actionType": "replaceHtml"
+  return alloy("applyPropositions", {
+    "propositions": retrievedPropositions,
+    "metadata": {
+      "salutation": {
+        "selector": "#first-form-based-offer",
+        "actionType": "setHtml"
+      },
+      "discount": {
+        "selector": "#second-form-based-offer",
+        "actionType": "replaceHtml"
+      }
+    }
+  }).then(function(applyPropositionsResult) {
+    var renderedPropositions = applyPropositionsResult.propositions;
+
+    // Send the display notifications via sendEvent command
+    function sendDisplayEvent(proposition) {
+      const {
+        id,
+        scope,
+        scopeDetails = {}
+      } = proposition;
+
+      alloy("sendEvent", {
+        "xdm": {
+          "eventType": "decisioning.propositionDisplay",
+          "_experience": {
+            "decisioning": {
+              "propositions": [{
+                "id": id,
+                "scope": scope,
+                "scopeDetails": scopeDetails
+              }],
+              "propositionEventType": {
+                "display": 1
+              }
             }
+          }
         }
-    }).then(function(applyPropositionsResult) {
-        var renderedPropositions = applyPropositionsResult.propositions;
-
-        // Send the display notifications via sendEvent command
-        function sendDisplayEvent(proposition) {
-            const {
-                id,
-                scope,
-                scopeDetails = {}
-            } = proposition;
-
-            alloy("sendEvent", {
-                "xdm": {
-                    "eventType": "decisioning.propositionDisplay",
-                    "_experience": {
-                        "decisioning": {
-                            "propositions": [{
-                                  "id": id,
-                                "scope": scope,
-                                  "scopeDetails": scopeDetails
-                            }],
-                            "propositionEventType": {
-                                "display": 1
-                            }
-                        }
-                    }
-                }
-            });
-        }
-    });
+      });
+    }
+  });
 });
 ```
 
