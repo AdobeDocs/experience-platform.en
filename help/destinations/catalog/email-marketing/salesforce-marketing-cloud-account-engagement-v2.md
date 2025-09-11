@@ -18,7 +18,7 @@ This destination uses the [[!DNL Salesforce Import API v5]](https://developer.sa
 > 
 > This is the V2 version of the [Salesforce Marketing Cloud Account Engagement](help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) destination. This version replaces the previous destination and is currently in Alpha release.
 > <br>
-> If you are currently using the previous version of the  [Salesforce Marketing Cloud Account Engagement](help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) destination, you must migrate to this V2 version before **January 2026**. After January 2026, Adobe will decommission the previous version and it will no longer be available.
+> If you are currently using the previous version of the [Salesforce Marketing Cloud Account Engagement](help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) destination, you must migrate to this V2 version before **January 2026**. After January 2026, Adobe will decommission the previous version and it will no longer be available.
 
 
 ## Use cases {#use-cases}
@@ -41,11 +41,11 @@ Enhance your [!DNL Salesforce Marketing Cloud Account Engagement] prospect profi
 
 Refer to the sections below for any prerequisites that you need to set up in Experience Platform and [!DNL Salesforce] and for information that you need to gather before working with the [!DNL (V2) Marketing Cloud Account Engagement] destination.
 
-### Prerequisites in Experience Platform {#prerequisites-in-experience-platform}
+### Experience Platform prerequisites {#prerequisites-in-experience-platform}
 
 Before activating data to the [!DNL (V2) Marketing Cloud Account Engagement] destination, you must have a [schema](/help/xdm/schema/composition.md), a [dataset](../../../catalog/datasets/overview.md), and [audiences](../../../segmentation/types/overview.md) created in [!DNL Experience Platform].
 
-### Prerequisites in [!DNL Salesforce Marketing Cloud Account Engagement] {#prerequisites-destination}
+### [!DNL Salesforce Marketing Cloud Account Engagement] prerequisites {#prerequisites-destination}
 
 Note the following prerequisites in order to export data from Experience Platform to your [!DNL Marketing Cloud Account Engagement] account:
 
@@ -106,7 +106,7 @@ You will be redirected to the [!DNL Salesforce] login page. Enter your [!DNL Mar
 
 ![Salesforce login page](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/salesforce-auth.png "Salesforce login page.")
 
-Next, Select **[!UICONTROL Allow]** to give permissions to the **Adobe Experience Platform** app to access your [!DNL Salesforce Marketing Cloud Account Engagement] account. *You need to do this only once*.
+Next, select **[!UICONTROL Allow]** to give permissions to the **Adobe Experience Platform** app to access your [!DNL Salesforce Marketing Cloud Account Engagement] account. *You need to do this only once*.
 
 ![Salesforce App screenshot confirmation popup to give permissions to the Experience Platform app access to Marketing Cloud Account Engagement.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/allow-app.png)
 
@@ -120,7 +120,7 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 * **[!UICONTROL Account Engagement Business Unit ID]**: Your [!DNL Salesforce] `Account Engagement Business Unit ID`.
 * **[!UICONTROL Account Engagement API]**: Select whether you want to use the production (`https://pi.pardot.com`) or demo (`https://pi.demo.pardot.com`) endpoints of the Account Engagement API.
-* **[!UICONTROL Account Engagement Campaign ID]**: Every [!DNL Account Engagement] prospect must be associated with a campaign. If you do not set a campaign ID, Account Engagement will attempt to assign one automatically, if a default exists in your Salesforce account. If you do not provide a campaign ID and you do not have a default campaign in Account Engagement,
+* **[!UICONTROL Account Engagement Campaign ID]**: Every [!DNL Account Engagement] prospect must be associated with a campaign. If you do not set a campaign ID, Account Engagement will attempt to assign one automatically, if a default exists in your Salesforce account.
 
 ### Enable alerts {#enable-alerts}
 
@@ -176,7 +176,7 @@ Follow the steps below to map the correct fields.
 
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** category and select the XDM attribute or choose the **[!UICONTROL Select identity namespace]** and select an identity.
-1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** and select an identity or choose **[!UICONTROL Select custom attributes]** category and specify from the list of standard Account Engagament prospect fields.
+1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** and select an identity or choose **[!UICONTROL Select custom attributes]** category and specify from the list of standard Account Engagement prospect fields.
 
 ![Mapping XDM fields and identities to Salesforce Marketing Cloud Account Engagement V2 fields](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/mapping.png "Example of mapping XDM fields and identities to Salesforce Marketing Cloud Account Engagement V2 fields")
 
@@ -187,7 +187,7 @@ To validate that you have correctly set up the destination, follow the steps bel
 1. Navigate to one of the audiences you had selected. Select the **[!DNL Activation data]** tab. The **[!UICONTROL Mapping ID]** column displays the name of the custom field which is generated within the [!DNL Marketing Cloud Account Engagement Prospects] page.
 ![Experience Platform UI screenshot example showing the Mapping ID for a selected segment.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/selected-segment-mapping-id.png)
 
-1. Log in to the [[!DNL Salesforce]](https://login.salesforce.com/) website. Then navigate to the **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** page and check if the prospects from the audience have been added / updated. Alternatively you can also access [[!DNL Account Engagement]](https://pi.pardot.com/) and access the **[!DNL Prospects]** page.
+1. Log in to the [[!DNL Salesforce]](https://login.salesforce.com/) website. Then navigate to the **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** page and check if the prospects from the audience have been added/updated. Alternatively you can also access [[!DNL Account Engagement]](https://pi.pardot.com/) and access the **[!DNL Prospects]** page.
 ![Salesforce UI screenshot showing the Prospects page.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/prospects.png)
 
 1. To check if the prospects have been updated, select a prospect and verify if the custom prospect field has been updated with the Experience Platform audience status.
