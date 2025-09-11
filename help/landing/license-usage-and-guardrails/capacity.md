@@ -49,11 +49,13 @@ Within these services, the following guardrails are tracked:
 
 - The maximum number of streaming audiences is 500
   - Of these 500 streaming audiences, the maximum number of edge audiences is 150
-- The maximum combined throughput for streaming segmentation is 1500 records per second (rps)
+- The initial combined throughput for streaming ingestion is 1500 records per second (rps)
+  - This combined streaming throughput measures the combined peak inbound events per second for streaming ingestion into Real-Time Customer Profile across your production and development sandboxes.
+  - You can purchase additional streaming segmentation support of up to 13,500 records per second. More information about purchasing additional entitlements can be found in the [Real-Time CDP product description](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 The audience capacity is at a **sandbox** level. This means that, for every sandbox you have in your organization, you can have 500 streaming audiences, of which 150 of those can be edge audiences.
 
-The throughput capacity is at an **organization** level and can be distributed to your individual sandboxes. For example, with the 1500 rps for streaming segmentation throughput, you can set your production sandbox to be at 1350 rps and your development sandbox to be at 150 rps.
+The streaming throughput capacity is at an **organization** level and can be distributed to your individual sandboxes. For example, with the 1500 rps for streaming ingestion throughput, you can set your production sandbox to be at 1300 rps and your development sandbox to be at 200 rps.
 
 Experience Platform calculates the sandbox's throughput in 15 minute rolling intervals. This throughput is measured in real-time, with the data refreshing every 60 seconds.
 
@@ -196,11 +198,11 @@ You ensure consistent performance during peak events, avoiding technical issues 
 
 +++
 
-### What are best practices to manage streaming segmentation throughput?
+### What are best practices to manage streaming ingestion throughput?
 
 +++ Answer
 
-To best manage your streaming segmentation throughput, you should evaluate your datasets to ensure they are prioritizing data necessary for personalization. 
+To best manage your streaming ingestion throughput, you should evaluate your datasets to ensure they are prioritizing data necessary for personalization. 
 
 
 If real-time processing is not required, you should use batch ingestion instead of streaming ingestion.
