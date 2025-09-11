@@ -5,7 +5,9 @@ description: Learn how audience changes from Experience Platform are reflected i
 
 # Audience lifecycle in streaming destinations
 
-This page explains how audience changes in Experience Platform are reflected in streaming destination platforms. When you activate audiences to streaming destinations, you can modify audience names and remove audience mappings. However, the behavior of these changes varies depending on the destination platform's capabilities.
+This page describes how audience changes in Experience Platform are synchronized with streaming destination platforms. When you modify audience names or remove audience mappings in Experience Platform, the behavior varies depending on the destination platform's capabilities.
+
+Understanding these differences is important for managing audience lifecycle operations and ensuring your destination platforms reflect the current state of your audiences in Experience Platform.
 
 ## Audience name propagation behavior {#audience-name-propagation}
 
