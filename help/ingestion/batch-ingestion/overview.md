@@ -176,7 +176,7 @@ curl -X PUT "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 | -------- | ----------- |
 | `{FILE_PATH_AND_NAME}` | The path and filename of the file to be uploaded into the dataset. |
 
-**Reponse**
+**Response**
 
 ```JSON
 #Status 200 OK, with empty response body
