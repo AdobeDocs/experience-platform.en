@@ -165,7 +165,7 @@ Once you've added a field group to a schema, you can either remove fields global
 
 >[!IMPORTANT]
 >
->Selecting **[!UICONTROL Remove]** deletes the field from the field group itself, affecting *all* schemas that use this group.  
+>Selecting **[!UICONTROL Remove]** deletes the field from the field group itself, affecting *all* schemas that use that field group.
 >Do not use this option unless you want to **remove the field from every schema that includes the field group**.
 
 To delete a field from the field group, select it in the canvas and select **[!UICONTROL Remove]** in the right rail. This example shows the `taxId` field from the **[!UICONTROL Demographic Details]** group.
