@@ -1,11 +1,11 @@
 ---
-title: Audience lifecycle in streaming destinations
-description: Learn how audience changes from Experience Platform are reflected in streaming destination platforms
+title: Audience lifecycle in Experience Platform and streaming destinations
+description: Learn how audience names and mappings from Experience Platform are reflected in streaming destination platforms.
 ---
 
 # Audience lifecycle in streaming destinations
 
-This page describes how audience changes in Experience Platform are synchronized with streaming destination platforms. When you modify audience names or remove audience mappings in Experience Platform, the behavior varies depending on the destination platform's capabilities.
+This page describes how audience name updates and mappings in Experience Platform are synchronized with streaming destination platforms. When you modify audience names or remove audience mappings in Experience Platform, the behavior varies depending on the destination platform's capabilities.
 
 Understanding these differences is important for managing audience lifecycle operations and ensuring your destination platforms reflect the current state of your audiences in Experience Platform.
 
@@ -50,7 +50,7 @@ For destinations not listed above, audience names remain static after the initia
 
 >[!TIP]
 >
->To avoid confusion, use descriptive names for your audiences from the initial activation, especially when activating to destinations that do not support audience name updates.
+>To avoid confusion, use descriptive audience names from the first activation, especially when activating to destinations that do not support audience name updates.
 
 ## Destinations which support audience removal {#support-removal}
 
