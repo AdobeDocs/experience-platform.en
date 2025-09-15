@@ -856,7 +856,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `params.bucketName`| For S3 connections, provide the name of the bucket where files will be exported. |
 | `params.path`| For S3 connections, provide the file path in your storage location where files will be exported. |
 | `params.format`| `CSV` is currently the only supported file export type. |
-| `params.includeFileManifest`| *Optional*. Set to `true` to enable manifest file generation for your destination. When enabled, a manifest file is created alongside your exported data files, providing metadata about the exported files. |
+| `params.includeFileManifest`| *Optional*. Set to `true` to enable manifest file generation for your destination. When enabled, a manifest file is created alongside your exported data files, providing metadata about the exported files. View a [sample manifest file](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). |
 
 {style="table-layout:auto"}
 
