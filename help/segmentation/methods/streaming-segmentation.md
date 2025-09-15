@@ -33,6 +33,10 @@ In order to evaluate an audience with streaming segmentation, it **must** be con
 
 ## Including batch data in streaming audiences {#include-batch-data}
 
+>[!NOTE]
+>
+>To keep streaming segmentation accurate when using batch data, make sure that the batch data is **only** kept within the batch audience and is referenced within the streaming audience.
+
 Prior to this update, you could create a streaming audience definition that combined both batch and streaming data sources. However, with the latest update, creating an audience with both batch and streaming data sources will be evaluated using batch segmentation.
 
 If you need to evaluate a segment definition using streaming or edge segmentation that matches the updated ruleset, you need to explicitly create a batch and streaming ruleset and combine them using segment of segments. This batch ruleset **must** be based on a profile schema.

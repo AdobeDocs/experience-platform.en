@@ -2,14 +2,9 @@
 title: PathFactory Source Overview
 description: Learn how to connect PathFactory to Adobe Experience Platform using APIs or the user interface.
 last-substantial-update: 2024-04-30
-badge: Beta
 exl-id: befb73c4-fd6a-4512-9124-d23a1c27e0e0
 ---
 # [!DNL PathFactory]
-
->[!NOTE]
->
->The [!DNL PathFactory] source is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 [[!DNL PathFactory]](https://www.pathfactory.com/) offers a cloud-based platform that helps businesses manage content journeys and drive engagement through intelligent content insights. This guide details how you can integrate data from PathFactory into Experience Platform, utilizing PathFactory's connectors for optimal data ingestion.
 
