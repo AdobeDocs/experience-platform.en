@@ -1,18 +1,16 @@
 ---
-keywords: Experience Platform;home;popular topics;database database;third party database
-solution: Experience Platform
 title: Create a Dataflow for Database Sources Using the Flow Service API
 type: Tutorial
-description: This tutorial covers the steps for retrieving data from a database and ingesting it into Experience Platform using source connectors and APIs.
+description: Learn how to use the Flow Service API to create a dataflow and ingest data from your database into Experience Platform.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
 ---
 # Create a dataflow for database sources using the [!DNL Flow Service] API
 
-This tutorial covers the steps for retrieving data from a database source and bringing them to Experience Platform using [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Read this tutorial to learn how to create a dataflow and ingest data from your database into Adobe Experience Platform using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
->* In order to create a dataflow, you must already have a valid base connection ID with a database source. If you do not have this ID, then see the [sources overview](../../../home.md#database) for a list of database sources that you can create a base connection with.
+>* In order to create a dataflow, you must already have a valid base connection ID with a database source. If you do not have this ID, then visit the [sources catalog](../../../home.md#database) to view a list of database sources that you can create a base connection with.
 >* For Experience Platform to ingest data, timezones for all table-based batch sources must be configured to UTC. The only time stamp that is supported for the [[!DNL Snowflake] source](../../../connectors/databases/snowflake.md) is TIMESTAMP_NTZ with UTC time.
 
 ## Getting started
@@ -56,58 +54,61 @@ POST /sourceConnections
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Database source connection",
-        "baseConnectionId": "6990abad-977d-41b9-a85d-17ea8cf1c0e4",
-        "description": "Database source connection",
-        "data": {
-            "format": "tabular"
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "Database source connection",
+    "baseConnectionId": "6990abad-977d-41b9-a85d-17ea8cf1c0e4",
+    "description": "Database source connection",
+    "data": {
+      "format": "tabular"
+    },
+    "params": {
+      "tableName": "test1.Mytable",
+      "columns": [
+        {
+          "name": "TestID",
+          "type": "string",
+          "xdm": {
+            "type": "string"
+          }
         },
-        "params": {
-            "tableName": "test1.Mytable",
-            "columns": [
-                {
-                    "name": "TestID",
-                    "type": "string",
-                    "xdm": {
-                        "type": "string"
-                    }
-                },
-                {
-                    "name": "Name",
-                    "type": "string",
-                    "xdm": {
-                        "type": "string"
-                    }
-                },
-                {
-                    "name": "Datefield",
-                    "type": "string",
-                    "meta:xdmType": "date-time",
-                    "xdm": {
-                        "type": "string",
-                        "format": "date-time"
-                    }
-                }
-            ]
+        {
+          "name": "Name",
+          "type": "string",
+          "xdm": {
+            "type": "string"
+          }
         },
-        "connectionSpec": {
-            "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
-            "version": "1.0"
+        {
+          "name": "Datefield",
+          "type": "string",
+          "meta:xdmType": "date-time",
+          "xdm": {
+            "type": "string",
+            "format": "date-time"
+          }
         }
-    }'
+      ],
+      "cdcEnabled": true
+    },
+    "connectionSpec": {
+      "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
+      "version": "1.0"
+    }
+  }'
+
 ```
 
 | Property | Description |
 | -------- | ----------- |
 | `baseConnectionId`| The connection ID of your database source. |
-| `params.path`| The path of the source file. |
+| `params.tableName`| The path of the source file. |
+| `params.cdcEnabled` | A boolean value that indicates whether change history capture is enabled or not. This property is supported by the following database sources: <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> For more information, read the guide on using [change data capture in sources](../change-data-capture.md). |
 | `connectionSpec.id`| The connection specification ID of your database source. See the [Appendix](#appendix) for a list of database spec IDs. |
 
 **Response**
@@ -701,7 +702,6 @@ The following section lists the different cloud storage source connectors and th
 | [!DNL Azure Data Explorer] | `0479cc14-7651-4354-b233-7480606c2ac3` |
 | [!DNL Azure Synapse Analytics] | `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
 | [!DNL Azure Table Storage] | `ecde33f2-c56f-46cc-bdea-ad151c16cd69` |
-| [!DNL Couchbase] | `1fe283f6-9bec-11ea-bb37-0242ac130002` |
 | [!DNL Google BigQuery] | `3c9b37f8-13a6-43d8-bad3-b863b941fedd` |
 | [!DNL Greenplum] | `37b6bf40-d318-4655-90be-5cd6f65d334b` |
 | [!DNL IBM DB2] | `09182899-b429-40c9-a15a-bf3ddbc8ced7` |
@@ -709,5 +709,4 @@ The following section lists the different cloud storage source connectors and th
 | [!DNL Microsoft SQL Server] | `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec` |
 | [!DNL MySQL] | `26d738e0-8963-47ea-aadf-c60de735468a` |
 | [!DNL Oracle] | `d6b52d86-f0f8-475f-89d4-ce54c8527328` |
-| [!DNL Phoenix] | `102706fb-a5cd-42ee-afe0-bc42f017ff43` |
 | [!DNL PostgreSQL] | `74a1c565-4e59-48d7-9d67-7c03b8a13137` |

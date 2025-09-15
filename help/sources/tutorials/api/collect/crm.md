@@ -1,50 +1,113 @@
 ---
-keywords: Experience Platform;home;popular topics;crm;CRM
-solution: Experience Platform
-title: Create a Dataflow for CRM Sources Using the Flow Service API
-type: Tutorial
-description: This tutorial covers the steps for retrieving data from a third-party CRM system and bringing them in to Experience Platform using source connectors and APIs.
+title: Create A Dataflow To Ingest Data From a CRM Into Experience Platform
+description: Learn how to use the Flow Service API to create a dataflow and ingest source data into Experience Platform.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
 ---
-# Create a dataflow for CRM sources using the [!DNL Flow Service] API
+# Create a dataflow to ingest data from a CRM into Experience Platform
 
-This tutorial covers the steps for retrieving data from a CRM source and bringing them to Experience Platform using [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Read this guide to learn how to create a dataflow and ingest data into Adobe Experience Platform using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
->[!NOTE]
+## Get started
+
+This guide requires a working understanding of the following components of Experience Platform:
+
+* [Batch ingestion](../../../../ingestion/batch-ingestion/overview.md): DDiscover how you can quickly and efficiently upload large volumes of data in batches.
+* [Catalog Service](../../../../catalog/datasets/overview.md): Organize and keep track of your datasets in Experience Platform.
+* [Data Prep](../../../../data-prep/home.md): Transform and map your incoming data to match your schema requirements.
+* [Dataflows](../../../../dataflows/home.md): Set up and manage the pipelines that move your data from sources to destinations.
+* [Experience Data Model (XDM) Schemas](../../../../xdm/home.md): Structure your data using XDM schemas so it's ready for use in Experience Platform.
+* [Sandboxes](../../../../sandboxes/home.md): Safely test and develop in isolated environments without affecting production data.
+* [Sources](../../../home.md): Learn how to connect your external data sources to Experience Platform.
+
+### Use Experience Platform APIs
+
+For information on how to successfully make calls to Experience Platform APIs, read the guide on [getting started with Experience Platform APIs](../../../../landing/api-guide.md).
+
+### Create base connection {#base}
+
+To create a dataflow for your source, you will need a fully authenticated source account and its corresponding base connection ID. If you do not have this ID, visit the [sources catalog](../../../home.md) to find a list of sources for which you can create a base connection.
+
+### Create a target XDM schema {#target-schema}
+
+An Experience Data Model (XDM) schema provides a standardized way to organize and describe customer experience data within Experience Platform. To ingest your source data into Experience Platform, you must first create a target XDM schema that defines the structure and types of data you want to ingest. This schema serves as the blueprint for the Experience Platform dataset where your ingested data will reside.
+
+A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). For detailed steps on how to create a target XDM schema, read the following guides:
+
+* [Create a schema using the API](../../../../xdm/api/schemas.md).
+* [Create a schema using the UI](../../../../xdm/tutorials/create-schema-ui.md). 
+
+Once created, the target XDM schema `$id` will be required later for your target dataset and mapping.
+
+### Create a target dataset {#target-dataset}
+
+A dataset is a storage and management construct for a collection of data, typically structured like a table with columns (schema) and rows (fields). Data that is successfully ingested into Experience Platform is stored within the data lake as datasets. During this step, you can either create a new dataset or use an existing one.
+
+You can create a target dataset by making a POST request to the [Catalog Service API](https://developer.adobe.com/experience-platform-apis/references/catalog/), while providing the ID of the target schema within the payload. For detailed steps on how to create a target dataset, read the guide on [creating a dataset using the API](../../../../catalog/api/create-dataset.md).
+
+>[!TIP]
 >
->* In order to create a dataflow, you must already have a valid base connection ID with a CRM source. If you do not have this ID, then see the [sources overview](../../../home.md#customer-relationship-management) for a list of CRM sources that you can create a base connection with.
->* For Experience Platform to ingest data, timezones for all table-based batch sources must be configured to UTC.
+>If you want to ingest your data to Real-Time Customer Profile, then you must ensure that both of your target XDM schemas and target dataset are enabled for Profile.
 
-## Getting started
++++Select to view example
 
-This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
+**API format**
 
-* [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
-  * [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
-  * [Schema Registry developer guide](../../../../xdm/api/getting-started.md): Includes important information that you need to know in order to successfully perform calls to the Schema Registry API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the Accept header and its possible values).
-* [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is the system of record for data location and lineage within Experience Platform.
-* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): The Batch Ingestion API allows you to ingest data into Experience Platform as batch files.
-* [Sandboxes](../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+```HTTP
+POST /dataSets
+```
 
-### Using Experience Platform APIs
+**Request**
 
-For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../../landing/api-guide.md).
+The following example shows how to create a target dataset that is enabled for Real-Time Customer Profile ingestion. In this request, the `unifiedProfile` property is set to `true` (under the `tags` object), which tells Experience Platform to include the dataset in Real-Time Customer Profile.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/catalog/dataSets' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "ACME Target Dataset",
+    "schemaRef": {
+      "id": "https://ns.adobe.com/{TENANT_ID}/schemas/719c4e19184402c27595e65b931a142b",
+      "contentType": "application/vnd.adobe.xed+json;version=1"
+    },
+    "tags": {
+      "unifiedProfile": [
+        "enabled: true"
+      ]
+    }
+  }'
+```
+
+| Property | Description |
+| --- | --- |
+| `name` | A descriptive name for your target dataset. Use a clear and unique name to make it easier to identify and manage your dataset in future operations. |
+| `schemaRef.id` | The ID of your target XDM schema. |
+| `tags.unifiedProfile` | A boolean value that informs Experience Platform if the data should be ingested into Real-Time Customer Profile. |
+
+**Response**
+
+A successful response returns the ID of your target dataset. This ID is required later to create a target connection.
+
+```json
+[
+    "@/dataSets/6889f4f89b982b2b90bc1207"
+]
+```
+
++++
 
 ## Create a source connection {#source}
 
-You can create a source connection by making a POST request to the [!DNL Flow Service] API. A source connection consists of a connection ID, a path to the source data file, and a connection spec ID.
+A source connection defines how data is brought into Experience Platform from an external source. It specifies both the source system and the format of the incoming data, and it references a base connection that contains authentication details. Each source connection is unique to your organization.
 
-To create a source connection, you must also define an enum value for the data format attribute.
+* For file-based sources (such as cloud storages), a source connection can include settings like column delimiter, encoding type, compression type, regular expressions for file selection, and whether to ingest files recursively. 
+* For table-based sources (such as databases, CRMs, and marketing automation providers), a source connection can specify details like the table name and column mappings. 
 
-Use the following the enum values for file-based connectors:
-
-| Data format | Enum value |
-| ----------- | ---------- |
-| Delimited | `delimited` |
-| JSON | `json` |
-| Parquet | `parquet` |
-
-For all table-based connectors, set the value to `tabular`.
+To create a source connection, make a POST request to the `/sourceConnections` endpoint of the [!DNL Flow Service] API and provide your base connection ID, connection specification ID, and path to the source data file.
 
 **API format**
 
@@ -56,88 +119,79 @@ POST /sourceConnections
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Salesforce source connection",
-        "baseConnectionId": "4cb0c374-d3bb-4557-b139-5712880adc55",
-        "description": "Salesforce source connection",
-        "data": {
-            "format": "tabular",
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "ACME source connection",
+    "description": "A source connection for ACME contact data",
+    "baseConnectionId": "6990abad-977d-41b9-a85d-17ea8cf1c0e4",
+    "data": {
+      "format": "tabular"
+    },
+    "params": {
+      "tableName": "Contact",
+      "columns": [
+        {
+          "name": "TestID",
+          "type": "string",
+          "xdm": {
+            "type": "string"
+          }
         },
-        "params": {
-            "tableName": "Accounts",
-            "columns": [
-                {
-                    "name": "first_name",
-                    "type": "string",
-                    "xdm": {
-                        "type": "String"
-                    }
-                },
-                {
-                    "name": "last_name",
-                    "type": "string",
-                    "xdm": {
-                        "type": "String"
-                    }
-                },
-                {
-                    "name": "email",
-                    "type": "string",
-                    "xdm": {
-                        "type": "String"
-                    }
-                }
-            ]
+        {
+          "name": "Name",
+          "type": "string",
+          "xdm": {
+            "type": "string"
+          }
         },
-        "connectionSpec": {
-            "id": "ccfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
-            "version": "1.0"
+        {
+          "name": "Datefield",
+          "type": "string",
+          "meta:xdmType": "date-time",
+          "xdm": {
+            "type": "string",
+            "format": "date-time"
+          }
         }
-    }'
+      ]
+    },
+    "connectionSpec": {
+      "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
+      "version": "1.0"
+    }
+  }'
+
 ```
 
 | Property | Description |
 | --- | --- |
-| `baseConnectionId` | The unique connection ID of the third-party CRM system you are accessing. |
-| `params.path` | The path of the source file. |
-| `connectionSpec.id` | The connection spec ID associated with your specific third-party CRM system. See the [appendix](#appendix) for a list of connection spec IDs. |
+| `name` | A descriptive name for your source connection. Use a clear and unique name to make it easier to identify and manage your connection in future operations. |
+| `description` | An optional description that you can add to provide additional information your source connection. |
+| `baseConnectionId` | The `id` of your base connection. You can retrieve this ID by authenticating your source to Experience Platform using the [!DNL Flow Service] API. |
+| `data.format` | The format of your data. Set this value to `tabular` for table-based sources (such as databases, CRMs, and marketing automation providers).|
+| `params.tableName` | The name of the table in your source account that you want to ingest to Experience Platform. |
+| `params.columns` | The specific table columns of data that you want to ingest into Experience Platform. |
+| `connectionSpec.id` | The connection specification ID of the source you are using. |
 
 **Response**
 
-A successful response returns the unique identifier (`id`) of the newly created source connection. This ID is required in a later step to create a dataflow.
+A successful response returns the ID of your source connection. This ID is required in order to create a dataflow and ingest your data.
 
 ```json
 {
-    "id": "9a603322-19d2-4de9-89c6-c98bd54eb184"
-    "etag": "\"4a00038b-0000-0200-0000-5ebc47fd0000\""
+    "id": "b7581b59-c603-4df1-a689-d23d7ac440f3",
+    "etag": "\"ef05d265-0000-0200-0000-6019e0080000\""
 }
 ```
 
-## Create a target XDM schema {#target-schema}
+## Create a target connection {#target}
 
-In order for the source data to be used in Experience Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create an Experience Platform dataset in which the source data is contained.
-
-A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
-
-For detailed steps on how to create a target XDM schema, see the tutorial on [creating a schema using the API](../../../../xdm/api/schemas.md).
-
-## Create a target dataset {#target-dataset}
-
-A target dataset can be created by performing a POST request to the [Catalog Service API](https://developer.adobe.com/experience-platform-apis/references/catalog/), providing the ID of the target schema within the payload.
-
-For detailed steps on how to create a target dataset, see the tutorial on [creating a dataset using the API](../../../../catalog/api/create-dataset.md).
-
-## Create a target connection
-
-A target connection represents the connection to the destination where the ingested data lands in. To create a target connection, you must provide the fixed connection spec ID associated to the Data Lake. This connection spec ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
-
-You now have the unique identifiers a target schema a target dataset and the connection spec ID to data lake. Using the [!DNL Flow Service] API, you can create a target connection by specifying these identifiers along with the dataset that will contain the inbound source data.
+A target connection represents the connection to the destination where the ingested data lands in. To create a target connection, you must provide the fixed connection specification ID associated to the data lake. This connection specification ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 **API format**
 
@@ -149,445 +203,451 @@ POST /targetConnections
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Salesforce target connection",
-        "description": "Salesforce target connection",
-        "data": {
-            "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/417a33eg81a221bd10495920574gfa2d",
-                "version": "application/vnd.adobe.xed-full+json;version=1"
-            }
-        },
-        "params": {
-            "dataSetId": "5c8c3c555033b814b69f947f"
-        },
-        "connectionSpec": {
-            "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
-            "version": "1.0"
-        }
+  'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "ACME target connection",
+      "description": "ACME target connection",
+      "data": {
+          "schema": {
+              "id": "https://ns.adobe.com/{TENANT_ID}/schemas/52b59140414aa6a370ef5e21155fd7a686744b8739ecc168",
+              "version": "application/vnd.adobe.xed-full+json;version=1"
+          }
+      },
+      "params": {
+          "dataSetId": "6889f4f89b982b2b90bc1207"
+      },
+      "connectionSpec": {
+          "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
+          "version": "1.0"
+      }
     }'
 ```
 
 | Property | Description |
-| -------- | ----------- |
-| `data.schema.id` | The `$id` of the target XDM schema. |
-|`data.schema.version` | The version of the schema. This value must be set `application/vnd.adobe.xed-full+json;version=1`, which returns the latest minor version of the schema. |
-| `params.dataSetId` | The ID of the target dataset generated in the previous step. **Note**: You must provide a valid dataset ID when creating a target connection. An invalid dataset ID will result in an error. |
-| `connectionSpec.id` | The connection spec ID used to connect to the data lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| --- | --- |
+| `name` | A descriptive name for your target connection. Use a clear and unique name to make it easier to identify and manage your connection in future operations. |
+| `description` |  An optional description that you can add to provide additional information your target connection. |
+| `data.schema.id` | The ID of your target XDM schema. |
+| `params.dataSetId` | The ID of your target dataset. |
+| `connectionSpec.id` | The connection specification ID of data lake. This ID is fixed: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
-```json
-{
-    "id": "4ee890c7-519c-4291-bd20-d64186b62da8",
-    "etag": "\"2a007aa8-0000-0200-0000-5e597aaf0000\""
-}
-```
+## Mapping {#mapping}
 
-## Create a mapping {#mapping}
-
-In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema that the target dataset adheres to.
-
-To create a mapping set, make a POST request to the `mappingSets` endpoint of the [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/) while providing your target XDM schema `$id` and the details of the mapping sets you want to create.
+Next, map your source data to the target schema that your target dataset adheres to. To create a mapping, make a POST request to the `mappingSets` endpoint of the [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/). Include your target XDM schema ID and the details of the mapping sets you want to create.
 
 **API format**
 
 ```http
-POST /conversion/mappingSets
+POST /mappingSets
 ```
 
 **Request**
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "version": 0,
-        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/417a33eg81a221bd10495920574gfa2d",
-        "xdmVersion": "1.0",
-        "id": null,
-        "mappings": [
-            {
-                "destinationXdmPath": "person.name.firstName",
-                "sourceAttribute": "first_name",
-                "identity": false,
-                "identityGroup": null,
-                "namespaceCode": null,
-                "version": 0
-            },
-            {
-                "destinationXdmPath": "person.name.lastName",
-                "sourceAttribute": "last_name",
-                "identity": false,
-                "identityGroup": null,
-                "namespaceCode": null,
-                "version": 0
-            },
-            {
-                "destinationXdmPath": "personalEmail.address",
-                "sourceAttribute": "email",
-                "identity": false,
-                "identityGroup": null,
-                "namespaceCode": null,
-                "version": 0
-            }
-        ]
-    }'
+  'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "version": 0,
+      "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/52b59140414aa6a370ef5e21155fd7a686744b8739ecc168",
+      "xdmVersion": "1.0",
+      "id": null,
+      "mappings": [
+          {
+              "destinationXdmPath": "_id",
+              "sourceAttribute": "TestID",
+              "identity": false,
+              "identityGroup": null,
+              "namespaceCode": null,
+              "version": 0
+          },
+          {
+              "destinationXdmPath": "person.name.fullName",
+              "sourceAttribute": "Name",
+              "identity": false,
+              "identityGroup": null,
+              "namespaceCode": null,
+              "version": 0
+          },
+          {
+              "destinationXdmPath": "person.birthDate",
+              "sourceAttribute": "Datefield",
+              "identity": false,
+              "identityGroup": null,
+              "namespaceCode": null,
+              "version": 0
+          }
+      ]
+  }'
 ```
 
 | Property | Description |
-| --- | --- |
-| `xdmSchema` | The ID of the target XDM schema. |
+| -------- | ----------- |
+| `xdmSchema` | The `$id` of the target XDM schema. |
 
 **Response**
 
-A successful response returns details of the newly created mapping including its unique identifier (`id`). This value is required in a later step to create a dataflow.
+A successful response returns details of the newly created mapping including its unique identifier (`id`). This ID is required in a later step to create a dataflow.
 
 ```json
 {
-    "id": "500a9b747fcf4908a21917d49bd61780",
+    "id": "93ddfa69c4864d978832b1e5ef6ec3b9",
     "version": 0,
-    "createdDate": 1591043336298,
-    "modifiedDate": 1591043336298,
+    "createdDate": 1612309018666,
+    "modifiedDate": 1612309018666,
     "createdBy": "{CREATED_BY}",
     "modifiedBy": "{MODIFIED_BY}"
 }
 ```
 
-## Retrieve dataflow specifications {#specs}
+## Retrieve dataflow specifications {#flow-specs}
 
-A dataflow is responsible for collecting data from sources, and bringing them into Experience Platform. In order to create a dataflow, you must first obtain the dataflow specifications that are responsible for collecting CRM data.
+Before you can create a dataflow, you must first retrieve the dataflow specifications that correspond with your source. To retrieve this information, make a GET request to the `/flowSpecs` endpoint of the [!DNL Flow Service] API.
 
 **API format**
 
 ```http
-GET /flowSpecs?property=name=="CRMToAEP"
+GET /flowSpecs?property=name=="{NAME}"
 ```
+
+| Query Parameter | Description |
+| --- | --- |
+| `property=name=="{NAME}"` | The name of your dataflow specification. <ul><li>For file-based sources (such as cloud storage), set this value to `CloudStorageToAEP`.</li><li>For table-based sources (such as databases, CRMs, and marketing automation providers), set this value to `CRMToAEP`.</li></ul> |
 
 **Request**
 
 ```shell
 curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/flowSpecs?property=name==%22CRMToAEP%22' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
+  'https://platform.adobe.io/data/foundation/flowservice/flowSpecs?property=name=="CRMToAEP"' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Response**
 
-A successful response returns the details of the dataflow specification responsible for bringing data from your source into Experience Platform. The response includes the unique flow spec `id` required to create a new dataflow.
+A successful response returns the details of the dataflow specification responsible for bringing data from your source into Experience Platform. The response includes the unique flow spec `id` required to create a new dataflow. 
 
->[!NOTE]
->
->The JSON response payload below is hidden for brevity. Select "payload" to see the response payload.
+To ensure you are using the correct dataflow specification, check the `items.sourceConnectionSpecIds` array in the response. Confirm that the connection specification ID for your source is included in this list.
 
-+++ View payload
++++Select to view
 
 ```json
 {
-  "id": "14518937-270c-4525-bdec-c2ba7cce3860",
-  "name": "CRMToAEP",
-  "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-  "version": "1.0",
-  "attributes": {
-    "isSourceFlow": true,
-    "flacValidationSupported": true,
-    "frequency": "batch",
-    "notification": {
-      "category": "sources",
-      "flowRun": {
-        "enabled": true
-      }
-    }
-  },
-  "sourceConnectionSpecIds": [
-    "3416976c-a9ca-4bba-901a-1f08f66978ff",
-    "38ad80fe-8b06-4938-94f4-d4ee80266b07",
-    "d771e9c1-4f26-40dc-8617-ce58c4b53702",
-    "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
-    "cc6a4487-9e91-433e-a3a3-9cf6626c1806",
-    "3000eb99-cd47-43f3-827c-43caf170f015",
-    "26d738e0-8963-47ea-aadf-c60de735468a",
-    "74a1c565-4e59-48d7-9d67-7c03b8a13137",
-    "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
-    "4f63aa36-bd48-4e33-bb83-49fbcd11c708",
-    "cb66ab34-8619-49cb-96d1-39b37ede86ea",
-    "eb13cb25-47ab-407f-ba89-c0125281c563",
-    "1f372ff9-38a4-4492-96f5-b9a4e4bd00ec",
-    "37b6bf40-d318-4655-90be-5cd6f65d334b",
-    "a49bcc7d-8038-43af-b1e4-5a7a089a7d79",
-    "221c7626-58f6-4eec-8ee2-042b0226f03b",
-    "a8b6a1a4-5735-42b4-952c-85dce0ac38b5",
-    "6a8d82bc-1caf-45d1-908d-cadabc9d63a6",
-    "aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f",
-    "8e6b41a8-d998-4545-ad7d-c6a9fff406c3",
-    "ecde33f2-c56f-46cc-bdea-ad151c16cd69",
-    "102706fb-a5cd-42ee-afe0-bc42f017ff43",
-    "09182899-b429-40c9-a15a-bf3ddbc8ced7",
-    "0479cc14-7651-4354-b233-7480606c2ac3",
-    "d6b52d86-f0f8-475f-89d4-ce54c8527328",
-    "a8f4d393-1a6b-43f3-931f-91a16ed857f4",
-    "1fe283f6-9bec-11ea-bb37-0242ac130002",
-    "fcad62f3-09b0-41d3-be11-449d5a621b69",
-    "ea1c2a08-b722-11eb-8529-0242ac130003",
-    "35d6c4d8-c9a9-11eb-b8bc-0242ac130003",
-    "ff4274f2-c9a9-11eb-b8bc-0242ac130003",
-    "ba5126ec-c9ac-11eb-b8bc-0242ac130003",
-    "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
-    "929e4450-0237-4ed2-9404-b7e1e0a00309",
-    "2acf109f-9b66-4d5e-bc18-ebb2adcff8d5",
-    "2fa8af9c-2d1a-43ea-a253-f00a00c74412"
-  ],
-  "targetConnectionSpecIds": [
-    "c604ff05-7f1a-43c0-8e18-33bf874cb11c"
-  ],
-  "permissionsInfo": {
-    "view": [
-      {
-        "@type": "lowLevel",
-        "name": "EnterpriseSource",
-        "permissions": [
-          "read"
-        ]
-      }
-    ],
-    "manage": [
-      {
-        "@type": "lowLevel",
-        "name": "EnterpriseSource",
-        "permissions": [
-          "write"
-        ]
-      }
+    "items": [
+        {
+            "id": "14518937-270c-4525-bdec-c2ba7cce3860",
+            "name": "CRMToAEP",
+            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
+            "version": "1.0",
+            "sourceConnectionSpecIds": [
+                "3416976c-a9ca-4bba-901a-1f08f66978ff",
+                "38ad80fe-8b06-4938-94f4-d4ee80266b07",
+                "d771e9c1-4f26-40dc-8617-ce58c4b53702",
+                "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
+                "cc6a4487-9e91-433e-a3a3-9cf6626c1806",
+                "3000eb99-cd47-43f3-827c-43caf170f015",
+                "26d738e0-8963-47ea-aadf-c60de735468a",
+                "74a1c565-4e59-48d7-9d67-7c03b8a13137",
+                "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
+                "4f63aa36-bd48-4e33-bb83-49fbcd11c708",
+                "cb66ab34-8619-49cb-96d1-39b37ede86ea",
+                "eb13cb25-47ab-407f-ba89-c0125281c563",
+                "1f372ff9-38a4-4492-96f5-b9a4e4bd00ec",
+                "37b6bf40-d318-4655-90be-5cd6f65d334b",
+                "a49bcc7d-8038-43af-b1e4-5a7a089a7d79",
+                "a8b6a1a4-5735-42b4-952c-85dce0ac38b5",
+                "6a8d82bc-1caf-45d1-908d-cadabc9d63a6",
+                "aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f",
+                "8e6b41a8-d998-4545-ad7d-c6a9fff406c3",
+                "ecde33f2-c56f-46cc-bdea-ad151c16cd69",
+                "09182899-b429-40c9-a15a-bf3ddbc8ced7",
+                "0479cc14-7651-4354-b233-7480606c2ac3",
+                "d6b52d86-f0f8-475f-89d4-ce54c8527328",
+                "a8f4d393-1a6b-43f3-931f-91a16ed857f4",
+                "fcad62f3-09b0-41d3-be11-449d5a621b69",
+                "ea1c2a08-b722-11eb-8529-0242ac130003",
+                "35d6c4d8-c9a9-11eb-b8bc-0242ac130003",
+                "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
+                "2acf109f-9b66-4d5e-bc18-ebb2adcff8d5",
+                "2fa8af9c-2d1a-43ea-a253-f00a00c74412",
+                "e9d7ec6b-0873-4e57-ad21-b3a7c65e310b"
+            ],
+            "targetConnectionSpecIds": [
+                "c604ff05-7f1a-43c0-8e18-33bf874cb11c"
+            ],
+            "optionSpec": {
+                "name": "OptionSpec",
+                "spec": {
+                    "$schema": "http://json-schema.org/draft-07/schema#",
+                    "type": "object",
+                    "properties": {
+                        "errorDiagnosticsEnabled": {
+                            "title": "Error diagnostics.",
+                            "description": "Flag to enable detailed and sample error diagnostics summary.",
+                            "type": "boolean",
+                            "default": false
+                        },
+                        "partialIngestionPercent": {
+                            "title": "Partial ingestion threshold.",
+                            "description": "Percentage which defines the threshold of errors allowed before the run is marked as failed.",
+                            "type": "number",
+                            "exclusiveMinimum": 0
+                        }
+                    }
+                }
+            },
+            "transformationSpecs": [
+                {
+                    "name": "Copy",
+                    "spec": {
+                        "$schema": "http://json-schema.org/draft-07/schema#",
+                        "type": "object",
+                        "properties": {
+                            "deltaColumn": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "dateFormat": {
+                                        "type": "string"
+                                    },
+                                    "timezone": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "name"
+                                ]
+                            }
+                        },
+                        "required": [
+                            "deltaColumn"
+                        ]
+                    }
+                },
+                {
+                    "name": "Mapping",
+                    "spec": {
+                        "$schema": "http://json-schema.org/draft-07/schema#",
+                        "type": "object",
+                        "description": "defines various params required for different mapping from source to target",
+                        "properties": {
+                            "mappingId": {
+                                "type": "string"
+                            },
+                            "mappingVersion": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            ],
+            "scheduleSpec": {
+                "name": "PeriodicSchedule",
+                "type": "Periodic",
+                "spec": {
+                    "$schema": "http://json-schema.org/draft-07/schema#",
+                    "type": "object",
+                    "properties": {
+                        "startTime": {
+                            "description": "epoch time",
+                            "type": "integer"
+                        },
+                        "frequency": {
+                            "type": "string",
+                            "enum": [
+                                "once",
+                                "minute",
+                                "hour",
+                                "day",
+                                "week"
+                            ]
+                        },
+                        "interval": {
+                            "type": "integer"
+                        },
+                        "backfill": {
+                            "type": "boolean",
+                            "default": true
+                        }
+                    },
+                    "required": [
+                        "startTime",
+                        "frequency"
+                    ],
+                    "if": {
+                        "properties": {
+                            "frequency": {
+                                "const": "once"
+                            }
+                        }
+                    },
+                    "then": {
+                        "allOf": [
+                            {
+                                "not": {
+                                    "required": [
+                                        "interval"
+                                    ]
+                                }
+                            },
+                            {
+                                "not": {
+                                    "required": [
+                                        "backfill"
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "else": {
+                        "required": [
+                            "interval"
+                        ],
+                        "if": {
+                            "properties": {
+                                "frequency": {
+                                    "const": "minute"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "interval": {
+                                    "minimum": 15
+                                }
+                            }
+                        },
+                        "else": {
+                            "properties": {
+                                "interval": {
+                                    "minimum": 1
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "runSpec": {
+                "name": "ProviderParams",
+                "spec": {
+                    "$schema": "http://json-schema.org/draft-07/schema#",
+                    "type": "object",
+                    "description": "defines various params required for creating flow run.",
+                    "properties": {
+                        "startTime": {
+                            "type": "integer",
+                            "description": "An integer that defines the start time of the run. The value is represented in Unix epoch time."
+                        },
+                        "windowStartTime": {
+                            "type": "integer",
+                            "description": "An integer that defines the start time of the window against which data is to be pulled. The value is represented in Unix epoch time."
+                        },
+                        "windowEndTime": {
+                            "type": "integer",
+                            "description": "An integer that defines the end time of the window against which data is to be pulled. The value is represented in Unix epoch time."
+                        },
+                        "deltaColumn": {
+                            "type": "object",
+                            "description": "The delta column is required to partition the data and separate newly ingested data from historic data.",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "dateFormat": {
+                                    "type": "string"
+                                },
+                                "timezone": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "startTime",
+                        "windowStartTime",
+                        "windowEndTime",
+                        "deltaColumn"
+                    ]
+                }
+            },
+            "attributes": {
+                "recordTypeEnabled": true,
+                "defaultRecordType": "profile",
+                "isSourceFlow": true,
+                "flacValidationSupported": true,
+                "isDraftModeSupported": true,
+                "frequency": "batch",
+                "notification": {
+                    "category": "sources",
+                    "flowRun": {
+                        "enabled": true
+                    }
+                }
+            },
+            "permissionsInfo": {
+                "manage": [
+                    {
+                        "@type": "lowLevel",
+                        "name": "EnterpriseSource",
+                        "permissions": [
+                            "write"
+                        ]
+                    }
+                ],
+                "view": [
+                    {
+                        "@type": "lowLevel",
+                        "name": "EnterpriseSource",
+                        "permissions": [
+                            "read"
+                        ]
+                    }
+                ]
+            }
+        }
     ]
-  },
-  "optionSpec": {
-    "name": "OptionSpec",
-    "spec": {
-      "$schema": "http://json-schema.org/draft-07/schema#",
-      "type": "object",
-      "properties": {
-        "errorDiagnosticsEnabled": {
-          "title": "Error diagnostics.",
-          "description": "Flag to enable detailed and sample error diagnostics summary.",
-          "type": "boolean",
-          "default": false
-        },
-        "partialIngestionPercent": {
-          "title": "Partial ingestion threshold.",
-          "description": "Percentage which defines the threshold of errors allowed before the run is marked as failed.",
-          "type": "number",
-          "exclusiveMinimum": 0
-        }
-      }
-    }
-  },
-  "scheduleSpec": {
-    "name": "PeriodicSchedule",
-    "type": "Periodic",
-    "spec": {
-      "$schema": "http://json-schema.org/draft-07/schema#",
-      "type": "object",
-      "properties": {
-        "startTime": {
-          "description": "epoch time",
-          "type": "integer"
-        },
-        "frequency": {
-          "type": "string",
-          "enum": [
-            "once",
-            "minute",
-            "hour",
-            "day",
-            "week"
-          ]
-        },
-        "interval": {
-          "type": "integer"
-        },
-        "backfill": {
-          "type": "boolean",
-          "default": true
-        }
-      },
-      "required": [
-        "startTime",
-        "frequency"
-      ],
-      "if": {
-        "properties": {
-          "frequency": {
-            "const": "once"
-          }
-        }
-      },
-      "then": {
-        "allOf": [
-          {
-            "not": {
-              "required": [
-                "interval"
-              ]
-            }
-          },
-          {
-            "not": {
-              "required": [
-                "backfill"
-              ]
-            }
-          }
-        ]
-      },
-      "else": {
-        "required": [
-          "interval"
-        ],
-        "if": {
-          "properties": {
-            "frequency": {
-              "const": "minute"
-            }
-          }
-        },
-        "then": {
-          "properties": {
-            "interval": {
-              "minimum": 15
-            }
-          }
-        },
-        "else": {
-          "properties": {
-            "interval": {
-              "minimum": 1
-            }
-          }
-        }
-      }
-    }
-  },
-  "transformationSpec": [
-    {
-      "name": "Copy",
-      "spec": {
-        "$schema": "http://json-schema.org/draft-07/schema#",
-        "type": "object",
-        "properties": {
-          "deltaColumn": {
-            "type": "object",
-            "properties": {
-              "name": {
-                "type": "string"
-              },
-              "dateFormat": {
-                "type": "string"
-              },
-              "timezone": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "name"
-            ]
-          }
-        },
-        "required": [
-          "deltaColumn"
-        ]
-      }
-    },
-    {
-      "name": "Mapping",
-      "spec": {
-        "$schema": "http://json-schema.org/draft-07/schema#",
-        "type": "object",
-        "description": "defines various params required for different mapping from source to target",
-        "properties": {
-          "mappingId": {
-            "type": "string"
-          },
-          "mappingVersion": {
-            "type": "string"
-          }
-        }
-      }
-    }
-  ],
-  "runSpec": {
-      "name": "ProviderParams",
-      "spec": {
-        "$schema": "http://json-schema.org/draft-07/schema#",
-        "type": "object",
-        "description": "defines various params required for creating flow run.",
-        "properties": {
-          "startTime": {
-            "type": "integer",
-            "description": "An integer that defines the start time of the run. The value is represented in Unix epoch time."
-          },
-          "windowStartTime": {
-            "type": "integer",
-            "description": "An integer that defines the start time of the window against which data is to be pulled. The value is represented in Unix epoch time."
-          },
-          "windowEndTime": {
-            "type": "integer",
-            "description": "An integer that defines the end time of the window against which data is to be pulled. The value is represented in Unix epoch time."
-          },
-          "deltaColumn": {
-            "type": "object",
-            "description": "The delta column is required to partition the data and separate newly ingested data from historic data.",
-            "properties": {
-              "name": {
-                "type": "string"
-              },
-              "dateFormat": {
-                "type": "string"
-              },
-              "timezone": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "name"
-            ]
-          }
-        },
-        "required": [
-          "startTime",
-          "windowStartTime",
-          "windowEndTime",
-          "deltaColumn"
-        ]
-      }
-    }
 }
 ```
 
 +++
 
-## Create a dataflow
+## Create a dataflow {#dataflow}
 
-The last step towards collecting CRM data is to create a dataflow. By now, you have the following required values prepared:
+A dataflow is a configured pipeline that transfers data across Experience Platform services. It defines how data is ingested from external sources (like databases, cloud storage, or APIs), processed, and routed to target datasets. These datasets are then used by services such as Identity Service, Real-Time Customer Profile, and Destinations for activation and analysis.
+
+o create a dataflow, you will need to provide values for the following items:
 
 * [Source connection ID](#source)
 * [Target connection ID](#target)
 * [Mapping ID](#mapping)
-* [Dataflow specification ID](#specs)
+* [Dataflow specification ID](#flow-specs)
 
-A dataflow is responsible for scheduling and collecting data from a source. You can create a dataflow by performing a POST request while providing the previously mentioned values within the payload.
+During this step, you can use the following parameters in `scheduleParams` to configure an ingestion schedule for your dataflow:
 
-To schedule an ingestion, you must first set the start time value to epoch time in seconds. Then, you must set the frequency value to one of the five options: `once`, `minute`, `hour`, `day`, or `week`. The interval value designates the period between two consecutive ingestions and creating a one-time ingestion does not require an interval to be set. For all other frequencies, the interval value must be set to equal or greater than `15`.
+| Scheduling parameter | Description |
+| --- | --- |
+| `startTime` | The epoch time (in seconds) when the dataflow should start. |
+| `frequency` | The frequency of ingestion. Configure frequency to indicate how often the dataflow should run. You can set your frequency to: <ul><li>`once`: Set your frequency to `once` to create a one-time ingestion. Interval and backfill settings are not available for one-time ingestion jobs. By default, the scheduling frequency is set to once.</li><li>`minute`: Set your frequency to `minute` to schedule your dataflow to ingest data on a per-minute basis.</li><li>`hour`: Set your frequency to `hour` to schedule your dataflow to ingest data on a per-hour basis.</li><li>`day`: Set your frequency to `day` to schedule your dataflow to ingest data on a per-day basis.</li><li>`week`: Set your frequency to `week` to schedule your dataflow to ingest data on a per-week basis.</li></ul> |
+| `interval` | The interval between consecutive ingestions (required for all frequencies except `once`). Configure the interval setting to establish the time frame between every ingestion. For example, if your frequency is set to day and the interval is 15, the dataflow will run every 15 days. You cannot set the interval to zero. The minimum accepted interval value for each frequency is as follows:<ul><li>`once`: n/a</li><li>`minute`: 15</li><li>`hour`: 1</li><li>`day`: 1</li><li>`week`: 1</li></ul> |
+| `backfill` | Indicates whether to ingest historical data prior to the `startTime`. |
+
+{style="table-layout:auto"}
+
 
 **API format**
 
@@ -599,62 +659,69 @@ POST /flows
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/flows' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Salesforce dataflow",
-        "description": "Salesforce dataflow",
-        "flowSpec": {
-            "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
-            "version": "1.0"
-        },
-        "sourceConnectionIds": [
-            "9a603322-19d2-4de9-89c6-c98bd54eb184"
-        ],
-        "targetConnectionIds": [
-            "4ee890c7-519c-4291-bd20-d64186b62da8"
-        ],
-        "transformations": [
-            {
-                "name": "Copy",
-                "params": {
-                    "deltaColumn": {
-                        "name": "updatedAt",
-                        "dateFormat": "YYYY-MM-DD",
-                        "timezone": "UTC"
-                    }
-                }
-            },
-            {
-                "name": "Mapping",
-                "params": {
-                    "mappingId": "500a9b747fcf4908a21917d49bd61780",
-                    "mappingVersion": 0
-                }
-            }
-        ],
-        "scheduleParams": {
-            "startTime": "1567411548",
-            "frequency":"minute",
-            "interval":"30"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/flows' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "ACME Contact Dataflow",
+      "description": "A dataflow for ACME contact data",
+      "flowSpec": {
+          "id": "14518937-270c-4525-bdec-c2ba7cce3860",
+          "version": "1.0"
+      },
+      "sourceConnectionIds": [
+          "b7581b59-c603-4df1-a689-d23d7ac440f3"
+      ],
+      "targetConnectionIds": [
+          "320f119a-5ac1-4ab1-88ea-eb19e674ea2e"
+      ],
+      "transformations": [
+          {
+              "name": "Copy",
+              "params": {
+                  "deltaColumn": {
+                      "name": "Datefield",
+                      "dateFormat": "YYYY-MM-DD",
+                      "timezone": "UTC"
+                  }
+              }
+          },
+          {
+              "name": "Mapping",
+              "params": {
+                  "mappingId": "93ddfa69c4864d978832b1e5ef6ec3b9",
+                  "mappingVersion": 0
+              }
+          }
+      ],
+      "scheduleParams": {
+          "startTime": "1612310466",
+          "frequency":"minute",
+          "interval":"15",
+          "backfill": "true"
+      }
+  }'
 ```
 
 | Property | Description |
-| -------- | ----------- |
-| `flowSpec.id` | The [flow spec ID](#specs) retrieved in the previous step. |
-| `sourceConnectionIds` | The [source connection ID](#source) retrieved in an earlier step. |
-| `targetConnectionIds` | The [target connection ID](#target-connection) retrieved in an earlier step. |
-| `transformations.params.mappingId` | The [mapping ID](#mapping) retrieved in an earlier step.|
-| `transformations.params.deltaColum` | The designated column used to differentiate between new and existing data. Incremental data will be ingested based on the timestamp of selected column. The supported format for `deltaColumn` is `yyyy-MM-dd HH:mm:ss`. If you are using Microsoft Dynamics, the supported format for `deltaColumn` is `yyyy-MM-ddTHH:mm:ssZ`. |
-| `transformations.params.mappingId`| The mapping ID associated with your database. |
-| `scheduleParams.startTime` | The start time for the dataflow in epoch time. |
-| `scheduleParams.frequency` | The frequency at which the dataflow will collect data. Acceptable values include: `once`, `minute`, `hour`, `day`, or `week`. |
-| `scheduleParams.interval` | The interval designates the period between two consecutive flow runs. The interval's value should be a non-zero integer. The minimum accepted interval value for each frequency is as follows:<ul><li>**Once**: n/a</li><li>**Minute**: 15</li><li>**Hour**: 1</li><li>**Day**: 1</li><li>**Week**: 1</li></ul>  |
+| --- | --- |
+| `name` | A descriptive name for your dataflow. Use a clear and unique name to make it easier to identify and manage your dataflow in future operations.  |
+| `description` | An optional description that you can add to provide additional information your dataflow. |
+| `flowSpec.id` | The ID of the flow specification that corresponds to your source. |
+| `sourceConnectionIds` | The source connection ID that was generated in an earlier step. |
+| `targetConnectionIds` | The target connection ID that was generated in an earlier step. |
+| `transformations.params.deltaColum` | The designated column used to differentiate between new and existing data. Incremental data will be ingested based on the timestamp of selected column. The supported format for `deltaColumn` is `yyyy-MM-dd HH:mm:ss`. For [!DNL Microsoft Dynamics], the supported format for `deltaColumn` is `yyyy-MM-ddTHH:mm:ssZ`. |
+| `transformations.params.deltaColumn.dateFormat` | The date format to follow for delta column. |
+| `transformations.params.deltaColumn.timeZone` | The time zone to use when interpreting the values in the delta column. |
+| `transformations.params.mappingId` | The mapping ID that was generated in an earlier step. |
+| `scheduleParams.startTime` | The start time for the dataflow in epoch time (seconds since Unix epoch). Determines when the dataflow will begin its first run. |
+| `scheduleParams.frequency` | The frequency at which the dataflow will run. Acceptable values include: `once`, `minute`, `hour`, `day`, or `week`. |
+| `scheduleParams.interval` | The interval between consecutive dataflow runs, based on the selected frequency. Must be a non-zero integer. For example, if your frequency is set to minute and the interval is 15, the dataflow will run every 15 minutes. |
+| `scheduleParams.backfill` | A boolean value (`true` or `false`) that determines whether to ingest historical data (backfill) when the dataflow is first created. |
+
+{style="table-layout:auto"}
 
 **Response**
 
@@ -662,30 +729,33 @@ A successful response returns the ID (`id`) of the newly created dataflow.
 
 ```json
 {
-    "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5"
-    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
-
+    "id": "ae0a9777-b322-4ac1-b0ed-48ae9e497c7e",
+    "etag": "\"770029f8-0000-0200-0000-6019e7d40000\""
 }
 ```
 
-## Monitor your dataflow
+### Use the UI to validate your API workflow {#validate-in-ui}
 
-Once your dataflow has been created, you can monitor the data that is being ingested through it to see information on flow runs, completion status, and errors. For more information on how to monitor dataflows, see the tutorial on [monitoring dataflows in the API ](../monitor.md)
+You can use the Experience Platform user interface to validate the creation of your dataflow. Navigate to the *[!UICONTROL Sources]* catalog in the Experience Platform UI and then select **[!UICONTROL Dataflows]** from the header tabs. Next, use the [!UICONTROL Dataflow Name] column and locate the dataflow that you created using the [!DNL Flow Service] API. 
+
+![The dataflows interface of the sources workspace in the Experience Platform UI](../../../images/tutorials/validations/dataflows-interface.png)
+
+You can further validate your dataflow through the [!UICONTROL Dataflow activity] interface. Use the right rail to view the [!UICONTROL API usage] information of your dataflow. This section displays the same dataflow ID, dataset ID, and mapping ID that was generated during the dataflow creation process in [!DNL Flow Service].
+
+![The dataflow view page of the sources workspace.](../../../images/tutorials/validations/api-usage.png)
 
 ## Next steps
 
-By following this tutorial, you have created a source connector to collect data from a CRM system on a scheduled basis. Incoming data can now be used by downstream Experience Platform services such as [!DNL Real-Time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
+This tutorial guided you through the process of creating a dataflow in Experience Platform using the [!DNL Flow Service] API. You learned how to create and configure the necessary components, including the target XDM schema, dataset, source connection, target connection, and the dataflow itself. By following these steps, you can automate the ingestion of data from external sources into Experience Platform, enabling downstream services such as Real-Time Customer Profile and Destinations to leverage your ingested data for advanced use cases.
 
-* [Real-Time Customer Profile overview](../../../../profile/home.md)
-* [Data Science Workspace overview](../../../../data-science-workspace/home.md)
+### Monitor your dataflow
 
-## Appendix
+Once your dataflow is created, you can monitor its performance directly in the Experience Platform UI. This includes tracking ingestion rates, success metrics, and any errors that occur. For more information on how to monitor dataflow, visit the tutorial on [monitoring accounts and dataflows](../../../../dataflows/ui/monitor-sources.md).
 
-The following section lists the different CRM source connectors and their connections specifications.
+### Update your dataflow
 
-### Connection specification
+To update configurations for your dataflows scheduling, mapping, or general information, visit the tutorial on [updating sources dataflows](../../api/update-dataflows.md).
 
-| Connector name | Connection spec |
-| -------------- | --------------- |
-| [!DNL Microsoft Dynamics] | `38ad80fe-8b06-4938-94f4-d4ee80266b07` |
-| [!DNL Salesforce] | `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5` |
+## Delete your dataflow
+
+You can delete dataflows that are no longer necessary or were incorrectly created using the **[!UICONTROL Delete]** function available in the **[!UICONTROL Dataflows]** workspace. For more information on how to delete dataflows, visit the tutorial on [deleting dataflows](../../api/delete.md).

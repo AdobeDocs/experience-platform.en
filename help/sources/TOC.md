@@ -53,15 +53,14 @@ role: Developer
     - [SFTP connector](connectors/cloud-storage/sftp.md)
     - [Amazon S3 and Azure Blob connector](connectors/cloud-storage/blob-s3.md)
   - Consent & Preferences {#consent}
+    - [Didomi](connectors/consent-and-preferences/didomi.md)
     - [OneTrust Integration](connectors/consent-and-preferences/onetrust.md)
   - CRM {#crm}
     - [Microsoft Dynamics connector](connectors/crm/ms-dynamics.md)
     - [Salesforce connector](connectors/crm/salesforce.md)
     - [SugarCRM connector](connectors/crm/sugarcrm.md)
     - [Veeva CRM connector](connectors/crm/veeva.md)
-    - [Zoho CRM connector](connectors/crm/zoho.md)
   - Customer success {#customer-success}
-    - [Oracle Service Cloud](connectors/customer-success/oracle-service-cloud.md)
     - [Salesforce Service Cloud connector](connectors/customer-success/salesforce-service-cloud.md)
     - [ServiceNow connector](connectors/customer-success/servicenow.md)
     - [Zendesk connector](connectors/customer-success/zendesk.md)
@@ -73,7 +72,6 @@ role: Developer
     - [Azure Data Explorer connector](connectors/databases/data-explorer.md)
     - [Azure Synapse Analytics connector](connectors/databases/synapse-analytics.md)
     - [Azure Table Storage connector](connectors/databases/ats.md)
-    - [Couchbase connector](connectors/databases/couchbase.md)
     - [Google BigQuery connector](connectors/databases/bigquery.md)
     - [GreenPlum connector](connectors/databases/greenplum.md)
     - [HP Vertica connector](connectors/databases/hp-vertica.md)
@@ -82,7 +80,6 @@ role: Developer
     - [Microsoft SQL Server connector](connectors/databases/sql-server.md)
     - [MySQL connector](connectors/databases/mysql.md)
     - [Oracle connector](connectors/databases/oracle.md)
-    - [Phoenix connector](connectors/databases/phoenix.md)
     - [PostgreSQL connector](connectors/databases/postgres.md)
     - [Snowflake Streaming connector](connectors/databases/snowflake-streaming.md)
     - [Snowflake connector](connectors/databases/snowflake.md)
@@ -108,11 +105,9 @@ role: Developer
     - [Mailchimp connector](connectors/marketing-automation/mailchimp.md)
     - [Oracle Eloqua connector](connectors/marketing-automation/oracle-eloqua.md)
     - [Oracle NetSuite](connectors/marketing-automation/oracle-netsuite.md)
-    - [Oracle Responsys connector](connectors/marketing-automation/oracle-responsys.md)
     - [PathFactory](connectors/marketing-automation/pathfactory.md)
     - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
   - Payments {#payments}
-    - [PayPal connector](connectors/payments/paypal.md)
     - [Square connector](connectors/payments/square.md)
     - [Stripe connector](connectors/payments/stripe.md)
   - Protocols {#protocols}
@@ -150,9 +145,7 @@ role: Developer
       - [SugarCRM Accounts & Contacts](tutorials/api/create/crm/sugarcrm-accounts-contacts.md)
       - [SugarCRM Events](tutorials/api/create/crm/sugarcrm-events.md)
       - [Veeva CRM](tutorials/api/create/crm/veeva.md)
-      - [Zoho CRM](tutorials/api/create/crm/zoho.md)
     - Customer success {#customer-success}
-      - [Oracle Service Cloud](tutorials/api/create/customer-success/oracle-service-cloud.md)
       - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
       - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
       - [Zendesk](tutorials/api/create/customer-success/zendesk.md)
@@ -164,7 +157,6 @@ role: Developer
       - [Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)
       - [Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
       - [Azure Table Storage](tutorials/api/create/databases/ats.md)
-      - [Couchbase](tutorials/api/create/databases/couchbase.md)
       - [Google BigQuery](tutorials/api/create/databases/bigquery.md)
       - [GreenPlum](tutorials/api/create/databases/greenplum.md)
       - [HP Vertica](tutorials/api/create/databases/hp-vertica.md)
@@ -172,7 +164,6 @@ role: Developer
       - [MariaDB](tutorials/api/create/databases/mariadb.md)
       - [MySQL](tutorials/api/create/databases/mysql.md)
       - [Oracle](tutorials/api/create/databases/oracle.md)
-      - [Phoenix](tutorials/api/create/databases/phoenix.md)
       - [PostgreSQL](tutorials/api/create/databases/postgres.md)
       - [Snowflake Streaming](tutorials/api/create/databases/snowflake-streaming.md)
       - [Snowflake](tutorials/api/create/databases/snowflake.md)
@@ -191,11 +182,9 @@ role: Developer
       - [Oracle Eloqua](tutorials/api/create/marketing-automation/oracle-eloqua.md)
       - [Oracle NetSuite Activities](tutorials/api/create/marketing-automation/oracle-netsuite-activities.md)
       - [Oracle NetSuite Entities](tutorials/api/create/marketing-automation/oracle-netsuite-entities.md)
-      - [Oracle Responsys](tutorials/api/create/marketing-automation/oracle-responsys.md)
       - [PathFactory](tutorials/api/create/marketing-automation/pathfactory.md)
       - [Salesforce Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
     - Payments {#payments}
-      - [PayPal](tutorials/api/create/payments/paypal.md)
       - [Square](tutorials/api/create/payments/square.md)
       - [Stripe](tutorials/api/create/payments/stripe.md)
     - Protocols {#protocols}
@@ -237,6 +226,7 @@ role: Developer
   - [Save a dataflow as a draft](tutorials/api/draft.md)
   - [Apply access labels to a dataflow](tutorials/api/labels.md)
   - [Use private endpoints](tutorials/api/private-link.md)
+  - [Enable change data capture](tutorials/api/change-data-capture.md)
 - UI tutorials {#ui-tutorials}
   - Create a source connection {#create}
     - Adobe applications {#adobe-applications}
@@ -270,6 +260,7 @@ role: Developer
       - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
       - [Amazon S3 and Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
     - Consent & Preferences {#consent}
+      - [Didomi](tutorials/ui/create/consent-and-preferences/didomi.md)
       - [OneTrust Integration](tutorials/ui/create/consent-and-preferences/onetrust.md)
     - CRM {#crm}
       - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
@@ -277,9 +268,7 @@ role: Developer
       - [SugarCRM Accounts & Contacts](tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)
       - [SugarCRM Events](tutorials/ui/create/crm/sugarcrm-events.md)
       - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
-      - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
     - Customer Success {#customer-success}
-      - [Oracle Service Cloud](tutorials/ui/create/customer-success/oracle-service-cloud.md)
       - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
       - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
       - [Zendesk](tutorials/ui/create/customer-success/zendesk.md)
@@ -287,10 +276,10 @@ role: Developer
       - [Amazon Redshift](tutorials/ui/create/databases/redshift.md)
       - [Apache Hive on Azure HDInsights](tutorials/ui/create/databases/hive.md)
       - [Apache Spark on Azure HDInsights](tutorials/ui/create/databases/spark.md)
+      - [Azure Databricks](tutorials/ui/create/databases/databricks.md)
       - [Azure Data Explorer](tutorials/ui/create/databases/data-explorer.md)
       - [Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
       - [Azure Table Storage](tutorials/ui/create/databases/ats.md)
-      - [Couchbase](tutorials/ui/create/databases/couchbase.md)
       - [Google Big Query](tutorials/ui/create/databases/bigquery.md)
       - [GreenPlum](tutorials/ui/create/databases/greenplum.md)
       - [HP Vertica](tutorials/ui/create/databases/hp-vertica.md)
@@ -299,7 +288,6 @@ role: Developer
       - [Microsoft SQL Server](tutorials/ui/create/databases/sql-server.md)
       - [MySQL](tutorials/ui/create/databases/mysql.md)
       - [Oracle](tutorials/ui/create/databases/oracle.md)
-      - [Phoenix](tutorials/ui/create/databases/phoenix.md)
       - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
       - [Snowflake](tutorials/ui/create/databases/snowflake.md)
       - [Snowflake Streaming](tutorials/ui/create/databases/snowflake-streaming.md)
@@ -327,11 +315,9 @@ role: Developer
       - [Oracle Eloqua](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
       - [Oracle NetSuite Activities](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
       - [Oracle NetSuite Entities](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
-      - [Oracle Responsys](tutorials/ui/create/marketing-automation/oracle-responsys.md)
       - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
       - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
     - Payments {#payments}
-      - [PayPal](tutorials/ui/create/payments/paypal.md)
       - [Square](tutorials/ui/create/payments/square.md)
       - [Stripe](tutorials/ui/create/payments/stripe.md)
     - Protocols {#protocols}
@@ -364,6 +350,7 @@ role: Developer
   - [Subscribe to sources alerts](tutorials/ui/alerts.md)
   - [Save a dataflow as a draft](tutorials/ui/draft.md)
   - [Apply access labels to a dataflow](tutorials/ui/labels.md)
+  - [Create an Azure private endpoint](tutorials/ui/private-link.md)
 - Self-Serve Sources (Batch SDK) {#sdk}
   - [Overview](sources-sdk/overview.md)
   - Configure your connection specification {#config}

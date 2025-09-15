@@ -3,10 +3,43 @@ title: Adobe Experience Platform Web SDK Extension Release Notes
 description: Adobe Experience Platform Web SDK Tag Extension
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 ---
-# Adobe Experience Platform Web SDK extension release notes
+
+# Web SDK extension release notes
 
 This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Experience Platform Web SDK release notes](/help/web-sdk/release-notes.md).
 
+## Version 2.32.0 - September 4, 2025
+
+**New features**
+
+- Contains [version 2.29.0](../../../../web-sdk/release-notes.md#2-29-0) of the Adobe Experience Platform Web SDK.
+- Added support for Adobe Advertising as a new custom build component. Configure in the extension configuration and in send event calls.
+- Added support for recording push subscription details in Profile. This is through a new action, "Push subscription details"
+
+**Fixes and improvements**
+
+- Improved XDM data element editing when schemas or sandboxes are unavailable. You can now edit XDM Object and Variable data elements even when their referenced schemas cannot be found or when sandboxes are inaccessible. This resolves issues that commonly occur during organization migrations to new data centers, where schema IDs may change and previously caused editing interfaces to display errors and become unusable.
+
+## Version 2.31.1 - July 31, 2025
+
+- Fixed an issue that prevented custom builds from running.
+- Contains [version 2.28.1](../../../../web-sdk/release-notes.md#2-28-1) of the Adobe Experience Platform Web SDK.
+
+## Version 2.31.0 - July 24, 2025
+
+**New features**
+
+- Contains [version 2.28.0](../../../../web-sdk/release-notes.md#2-28-0) of the Adobe Experience Platform Web SDK.
+
+**Fixes and improvements**
+
+- Fixed an issue where an error is thrown when a datastream override is enabled via a data element.
+- Fixed an issue where empty `idSyncContainerId` overrides would throw an error.
+- When resolving media data elements, the event object is now included.
+
+**Known issues**
+
+- Following the release of v2.31.0, a problem was identified with the [custom components build](/help/web-sdk/install/create-custom-build.md) process. While custom builds continue to operate, all components are currently included in the build, resulting in a full-sized package regardless of component selection. A fix for this issue is being developed. If you rely on custom component selection to minimize build size, it is recommended to wait for a future release.
 
 ## Version 2.30.1 - May 27, 2025
 

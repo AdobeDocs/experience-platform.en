@@ -187,7 +187,6 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | API support for filtering row-level data for Salesforce CRM source. | Use logical and comparison operators to filter row-level data for the Salesforce CRM source. Read the guide on [filtering data for a source using the API](../../sources/tutorials/api/filter.md) for more information. |
 | Beta availability of Shopify Streaming | The [Shopify Streaming source](../../sources/connectors/ecommerce/shopify-streaming.md) is now available in beta. Use the Shopify Streaming source to stream data from your Shopify partners account to Experience Platform. |
 | General availability of OneTrust Integration | The [OneTrust Integration source](../../sources/connectors/consent-and-preferences/onetrust.md) is now GA. Use the OneTrust Integration source to bring consent and preferences data from your OneTrust Integration account to Experience Platform. |
-| General availability of Oracle Service Cloud | The [Oracle Service Cloud source](../../sources/connectors/customer-success/oracle-service-cloud.md) is now GA. Use the Oracle Service Cloud source to bring your Oracle Service Cloud data to Experience Platform. |
 
 {style="table-layout:auto"}
 

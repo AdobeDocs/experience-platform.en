@@ -29,7 +29,7 @@ This section outlines prerequisite steps that you must complete prior to impleme
 
 #### Single person namespace requirement {#single-person-namespace-requirement}
 
-You must ensure that the unique namespace with the highest priority is always present in every profile. Doing so allows Identity Service to detect the appropriate person identifier in a given graph. 
+You must ensure that the unique namespace with the highest priority is always present in every known profile. Doing so allows Identity Service to detect the appropriate person identifier in a given graph. 
 
 +++Select to view an example of a graph without a singular person identifier namespace
 
@@ -197,7 +197,11 @@ Once you have a better idea of how you want your graph to behave, navigate to th
 
 ![The identities browse page with the settings button highlighted.](../images/implementation/settings.png "The identities browse page with the settings button highlighted."){zoomable="yes"}
 
-Use the identity settings UI to designate your unique namespaces and configure your namespaces by order of priority. Once you are finished with applying your settings, you must wait at least six hours before you can proceed to ingest data, as it takes at least six hours for new settings to be reflected in Identity Service.
+Use the identity settings UI to designate your unique namespaces and configure your namespaces by order of priority. 
+
+>[!IMPORTANT]
+>
+>Once you are finished with applying your settings, you must wait at least 24 hours before you can proceed to ingest data, as it takes at least 24 hours for new settings to be reflected in Identity Service.
 
 For more information, read the [identity settings UI guide](./identity-settings-ui.md).
 

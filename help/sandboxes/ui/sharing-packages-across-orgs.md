@@ -67,17 +67,34 @@ Use this workflow/process to share packages between your organization and the so
 >
 >Only packages with the status **Published** can be shared.
 
-To share a package to an approved partner organization, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Packages]** tab. Next, select the ellipsis (`...`) next to the package, and then select **[!UICONTROL Share package]** from the dropdown menu.
+#### Share multi-object packages {#multi-object-packages}
+
+To share a multi-object package to an approved partner organization, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Packages]** tab. Next, select the ellipsis (`...`) next to the package, and then select **[!UICONTROL Share package]** from the dropdown menu.
 
 ![List of packages showing the dropdown menu with Share package highlighted.](../images/ui/sandbox-tooling/private-share-package.png)
 
-In the **[!UICONTROL Share package]** dialog, select the package to share from the **[!UICONTROL Share settings]** dropdown, then select **[!UICONTROL Confirm]**.
+In the **[!UICONTROL Share package]** dialog, select the organizations to share the package with from the **[!UICONTROL Share settings]** dropdown, then select **[!UICONTROL Confirm]**.
 
 >[!TIP]
 >
 >It is possible to select more than one organization. Selected organizations will show up beneath the [!UICONTROL Share settings] dropdown.
 
 ![Share package dialog with Share settings and Confirm highlighted.](../images/ui/sandbox-tooling/private-share-package-confirm.png)
+
+#### Share entire sandbox packages {#entire-sandbox-packages}
+
+To share an entire sandbox package to an approved partner organization, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Packages]** tab. Next, select the ellipsis (`...`) next to the package, and then select **[!UICONTROL Share package]** from the dropdown menu.
+
+![Packages tab showing a list of packages, showing the drop down menu.](../images/ui/sandbox-tooling/private-share-entire-sandbox.png)
+
+In the **[!UICONTROL Share package]** dialog, select the organizations to share the package with from the **[!UICONTROL Share settings]** dropdown, then select **[!UICONTROL Confirm]**.
+
+>[!TIP]
+>
+>It is possible to select more than one organization. Selected organizations will show up beneath the [!UICONTROL Share settings] dropdown.
+
+![Share package dialog with Share settings and Confirm highlighted.](../images/ui/sandbox-tooling/private-share-entire-sandbox-confirm.png)
+
 
 ## Public packages {#public-packages}
 

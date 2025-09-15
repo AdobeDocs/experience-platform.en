@@ -6,10 +6,6 @@ exl-id: f20c5935-a7c0-4387-b29e-73e78cab4972
 ---
 # Ingest payments data from your [!DNL Stripe] account to Experience Platform using the user interface
 
->[!NOTE]
->
->The [!DNL Stripe] source is in beta. Read the [terms and conditions](../../../../home.md#terms-and-conditions) in the sources overview for more information on using beta-labeled sources.
-
 Read the following tutorial to learn how to ingest payments data from your [!DNL Stripe] account to Adobe Experience Platform using the user interface.
 
 ## Get started

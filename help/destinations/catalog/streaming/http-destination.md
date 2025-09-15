@@ -39,7 +39,7 @@ This section describes which types of audiences you can export to this destinati
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
+| ---------|----------|---------|
 | Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the mapping screen of the [destination activation workflow](../../ui/activate-segment-streaming-destinations.md#mapping).|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
@@ -52,6 +52,7 @@ To use the HTTP API destination to export data out of Experience Platform, you m
 * You must have an HTTP endpoint that supports REST API.
 * Your HTTP endpoint must support the Experience Platform profile schema. No transformation to a 3rd-party payload schema is supported in the HTTP API destination. Refer to the [exported data](#exported-data) section for an example of the Experience Platform output schema.
 * Your HTTP endpoint must support headers.
+* Your HTTP endpoint must respond within 2 seconds to ensure proper data processing and avoid timeout errors.
 
 >[!TIP]
 >
@@ -198,7 +199,7 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Headers]**: Enter any custom headers that you want to be included in the destination calls, following this format: `header1:value1,header2:value2,...headerN:valueN`.
 * **[!UICONTROL HTTP Endpoint]**: The URL of the HTTP endpoint where you want to send the profile data to.
 * **[!UICONTROL Query parameters]**: Optionally, you can add query parameters to the HTTP endpoint URL. Format the query parameters you use like this: `parameter1=value&parameter2=value`.
-* **[!UICONTROL Include Segment Names]**: Toggle if you want the data export to include the names of the audiences you are exporting. For an example of a data export with this option selected, refer to the [Exported data](#exported-data) section further below.
+* **[!UICONTROL Include Segment Names]**: Toggle if you want the data export to include the names of the audiences you are exporting. **Note**: Segment names are only included for segments that are mapped to the destination. Unmapped segments that appear in the export will not include the `name` field. For an example of a data export with this option selected, refer to the [Exported data](#exported-data) section further below.
 * **[!UICONTROL Include Segment Timestamps]**: Toggle if you want the data export to include the UNIX timestamp when the audiences were created and updated, as well as the UNIX timestamp when the audiences were mapped to the destination for activation. For an example of a data export with this option selected, refer to the [Exported data](#exported-data) section further below.
 
 ### Enable alerts {#enable-alerts}
@@ -238,7 +239,7 @@ Regarding the data that is exported for a given profile, it is important to unde
 
 |What determines a destination export | What is included in the destination export |
 |---------|----------|
-|<ul><li>Mapped attributes and segments serve as the cue for a destination export. This means that if the `segmentMembership` status of a profile changes  to `realized` or `exiting` or any mapped attributes are updated, a destination export would be kicked off.</li><li>Since identities cannot currently be mapped to HTTP API destinations, changes in any identity on a given profile also determine destination exports.</li><li>A change for an attribute is defined as any update on the attribute, whether or not it is the same value. This means that an overwrite on an attribute is considered a change even if the value itself has not changed.</li></ul> | <ul><li>The `segmentMembership` object includes the segment mapped in the activation dataflow, for which the status of the profile has changed following a qualification or segment exit event. Note that other unmapped segments for which the profile qualified for can be part of the destination export, if these segments belong to the same [merge policy](/help/profile/merge-policies/overview.md) as the segment mapped in the activation dataflow. </li><li>All identities in the `identityMap` object are included as well (Experience Platform currently does not support identity mapping in the HTTP API destination).</li><li>Only the mapped attributes are included in the destination export.</li></ul> |
+|<ul><li>Mapped attributes and segments serve as the cue for a destination export. This means that if the `segmentMembership` status of a profile changes  to `realized` or `exiting` or any mapped attributes are updated, a destination export would be kicked off.</li><li>Since identities cannot currently be mapped to HTTP API destinations, changes in any identity on a given profile also determine destination exports.</li><li>A change for an attribute is defined as any update on the attribute, whether or not it is the same value. This means that an overwrite on an attribute is considered a change even if the value itself has not changed.</li></ul> | <ul><li>The `segmentMembership` object includes the segment mapped in the activation dataflow, for which the status of the profile has changed following a qualification or segment exit event. Note that other unmapped segments for which the profile qualified for can be part of the destination export, if these segments belong to the same [merge policy](/help/profile/merge-policies/overview.md) as the segment mapped in the activation dataflow. <br> **Important**: When the **[!UICONTROL Include Segment Names]** option is enabled, segment names are only included for segments that are mapped to the destination. Unmapped segments that appear in the export will not include the `name` field, even if the option is enabled. </li><li>All identities in the `identityMap` object are included as well (Experience Platform currently does not support identity mapping in the HTTP API destination).</li><li>Only the mapped attributes are included in the destination export.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -327,10 +328,16 @@ Below are further examples of exported data, depending on the UI settings you se
             "mappingCreatedAt": 1649856570000,
             "mappingUpdatedAt": 1649856570000,
             "name": "First name equals John"
+          },
+          "354e086f-2e11-49a2-9e39-e5d9a76be683": {
+            "lastQualificationTime": "2020-04-15T02:41:50+0000",
+            "status": "realized"
           }
         }
       }
 ```
+
+**Note**: In this example, the first segment (`5b998cb9-9488-4ec3-8d95-fa8338ced490`) is mapped to the destination and includes the `name` field. The second segment (`354e086f-2e11-49a2-9e39-e5d9a76be683`) is not mapped to the destination and does not include the `name` field, even though the **[!UICONTROL Include Segment Names]** option is enabled.
 
 +++
 
@@ -358,3 +365,7 @@ Below are further examples of exported data, depending on the UI settings you se
 In 95 percent of the time, Experience Platform attempts to offer a throughput latency of less than 10 minutes for successfully sent messages with a rate of less than 10 thousand requests per second for each dataflow to an HTTP destination.
 
 In case of failed requests to your HTTP API destination, Experience Platform stores the failed requests and retries twice to send the requests to your endpoint.
+
+## Troubleshooting {#troubleshooting}
+
+To ensure reliable data delivery and avoid timeout issues make sure that your HTTP endpoint responds within 2 seconds to Experience Platform requests, as specified in the [prerequisites](#prerequisites) section. Responses which take longer will result in timeout errors.

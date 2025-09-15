@@ -33,6 +33,10 @@ In order to evaluate an audience with streaming segmentation, it **must** be con
 
 ## Including batch data in streaming audiences {#include-batch-data}
 
+>[!NOTE]
+>
+>To keep streaming segmentation accurate when using batch data, make sure that the batch data is **only** kept within the batch audience and is referenced within the streaming audience.
+
 Prior to this update, you could create a streaming audience definition that combined both batch and streaming data sources. However, with the latest update, creating an audience with both batch and streaming data sources will be evaluated using batch segmentation.
 
 If you need to evaluate a segment definition using streaming or edge segmentation that matches the updated ruleset, you need to explicitly create a batch and streaming ruleset and combine them using segment of segments. This batch ruleset **must** be based on a profile schema.
@@ -163,7 +167,7 @@ For example, let's say you have two audiences, with both audiences housing exper
 
 | Audience | Schema | Source type | Query definition | Audience ID | 
 | -------- | ------ | ----------- | ---------------- | ----------- |
-| Recent abandons | Experience event | Batch | Has at least one abandon event in the last 24 hours | `7deb246a-49b4-4687-95f9-6316df049948` |
+| Recent abandons | Experience event | Batch | Has at least one abandon event in the last 48 hours | `7deb246a-49b4-4687-95f9-6316df049948` |
 | Recent checkouts | Experience Event | Streaming | Has at least one checkout in the the last 24 hours | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
 
 In this situation, you'd need to create a third audience as follows:

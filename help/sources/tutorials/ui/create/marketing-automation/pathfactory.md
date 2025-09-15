@@ -1,7 +1,6 @@
 ---
 title: Connect Your PathFactory Account To Experience Platform Through the UI
 description: Learn how to connect your PathFactory account to Experience Platform through the UI.
-badge: Beta
 exl-id: 859dd0c1-8c4b-43e3-a87b-84c879460bc0
 ---
 # Connect your [!DNL PathFactory] account to Experience Platform through the UI

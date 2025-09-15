@@ -43,6 +43,7 @@ To create a custom Web SDK build by using the Web SDK tag extension, follow the 
 1. In the tag extension configuration page, expand the **[!UICONTROL Custom build components]** section.
 1. Enable or disable the components, based on your needs. You can select from the following components:
     * **[!UICONTROL Activity collector]**: This component enables automatic link collection and activity map tracking.
+    * **[!UICONTROL Advertising]**: This component includes all JavaScript code needed for Adobe Advertising. It also adds [!UICONTROL Adobe Advertising] settings in the [!UICONTROL SDK Instances] section and an [!UICONTROL Advertising] setting in tag rules, to define how advertising data is used for attribution measurement.
     * **[!UICONTROL Audiences]**: This components enables Audience Manager integration, including URL and cookie-based destinations, and ID syncs.
     * **[!UICONTROL Consent]**: This component enables consent integrations. Disabling this component disables the following elements:
       * [Set consent](action-types.md#set-consent) action type
@@ -69,6 +70,11 @@ The configuration options at the top of the page tell Adobe Experience Platform 
 * **[!UICONTROL Name]**: The Adobe Experience Platform Web SDK extension supports multiple instances on the page. The name is used to send data to multiple organizations with a tag configuration. The instance name defaults to `alloy`. However, you can change the instance name to any valid JavaScript object name.
 * **[!UICONTROL IMS organization ID]**: The ID of the organization that you would like the data sent to at Adobe. Most of the time, use the default value that is autopopulated. When you have multiple instances on the page, populate this field with the value of the second organization you want to send data to.
 * **[!UICONTROL Edge domain]**: The domain that the extension sends and receives data from. Adobe recommends using a 1st-party domain (CNAME) for this extension. The default 3rd-party domain works for development environments but is not suitable for production environments. Instructions on how to set up a first-party CNAME are listed [here](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html).
+* **[!UICONTROL Adobe Advertising]**: Available when the `Advertising` component is selected. Settings for organizations with Adobe Advertising DSP only:
+  * **[!UICONTROL Adobe Advertising DSP]**: Enables view-through tracking.
+  * **[!UICONTROL Advertisers]**: Available when [!UICONTROL Adobe Advertising DSP] is enabled. The advertisers for which to enable view-through tracking.
+  * **[!UICONTROL ID5 partner ID]**: Optional. Available when [!UICONTROL Adobe Advertising DSP] is enabled. Your organization's ID5 partner ID. This setting allows Web SDK to collect ID5 universal IDs.
+  * **[!UICONTROL RampID JavaScript path]**: Optional. Available when [!UICONTROL Adobe Advertising DSP] is enabled. The path to your organization's [!DNL LiveRamp RampID] JavaScript code (`ats.js`).  This setting allows Web SDK to collect [!DNL RampID] universal IDs.
 
 ## Configure datastream settings {#datastreams}
 
@@ -147,6 +153,11 @@ Manage data collection configuration settings. Similar settings in the JavaScrip
   * **[!UICONTROL No event grouping]**: Link tracking data is sent to Adobe in separate events. Link clicks sent in separate events can increase the contractual usage of data sent to Adobe Experience Platform.
   * **[!UICONTROL Event grouping using session storage]**: Store link tracking data in session storage until the next page event. On the following page, the stored link tracking data and page view data is sent to Adobe at the same time. Adobe recommends enabling this setting when tracking internal links.
   * **[!UICONTROL Event grouping using local object]**: Store link tracking data in a local object until the next page event. If a visitor navigates to a new page, link tracking data is lost. This setting is most beneficial in context of single-page applications.
+
+  When you choose event grouping with session storage or a local object, and you are sending data to Real-Time CDP, Customer Journey Analytics, Adobe Journey Optimizer, or Mix Modeler, you must update your tagging rules. Make sure that every page view event explicitly maps both the page name (as a string) and the page view value (as an integer, typically 1) to the XDM object before sending the data to Adobe.
+  
+  If you are sending data to Adobe Analytics, these values are included automatically and no additional configuration is needed.
+
 * **[!UICONTROL Collect external link clicks]**: A checkbox that enables the collection of external links.
 * **[!UICONTROL Collect download link clicks]**: A checkbox that enables the collection of download links.
 * **[!UICONTROL Download link qualifier]**: A regular expression that qualifies a link URL as a download link.
