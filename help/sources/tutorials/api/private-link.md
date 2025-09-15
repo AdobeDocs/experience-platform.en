@@ -1,32 +1,32 @@
 ---
 title: Private Link Support For Sources In The API
 description: Learn how to create and use private links for Adobe Experience Platform Sources
-badge: Beta
-hide: true
-hidefromtoc: true
 exl-id: 9b7fc1be-5f42-4e29-b552-0b0423a40aa1
 ---
 # Private Link Support for Sources in the API
 
 >[!AVAILABILITY]
 >
->This feature is in Limited Availability and is currently only supported by the following sources:
+>This feature is supported by the following sources:
 >
->* [[!DNL Azure Blob]](../../connectors/cloud-storage/blob.md)
+>* [[!DNL Azure Blob Storage]](../../connectors/cloud-storage/blob.md)
 >* [[!DNL Azure Data Lake Gen2]](../../connectors/cloud-storage/adls-gen2.md)
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
->* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 
 You can use the Private Link feature to create private endpoints for your Adobe Experience Platform sources to connect to. Securely connect your sources to  a virtual network using private IP addresses, eliminating the need for public IPs and reduce your attack surface. Simplify your network setup by removing the need for complex firewall or Network Address Translation configurations, while ensuring data traffic only reaches approved services.
 
 Read this guide to learn how you can use APIs to create and use a private endpoint.
 
+>[!NOTE]
+>
+>You can only have one private endpoint per source account for all development sandboxes in your organization.
+
 ## Get started 
 
 This guide requires a working understanding of the following components of Experience Platform:
 
-* [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
-* [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
+* [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ### Using Platform APIs
 
@@ -61,7 +61,6 @@ curl -X POST \
       "subscriptionId": "4281a16a-696f-4993-a7d3-a3da32b846f3",
       "resourceGroupName": "acme-sources-experience-platform",
       "resourceName": "acmeexperienceplatform",
-      "fqdns": [],
       "connectionSpec": {
           "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
           "version": "1.0"
@@ -75,7 +74,6 @@ curl -X POST \
 | `subscriptionId` | The ID associated with your [!DNL Azure] subscription. For more information, read the [!DNL Azure] guide on [retrieving your subscription and tenant IDs from the [!DNL Azure Portal]](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id). |
 | `resourceGroupName` | The name of your resource group on [!DNL Azure]. A resource group contains related resources for an [!DNL Azure] solution. For more information, read the [!DNL Azure] guide on [managing resource groups](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal). |
 | `resourceName` | The name of your resource. In [!DNL Azure], a resource refers to instances like virtual machines, web apps, and databases. For more information, read the [!DNL Azure] guide on [understanding the [!DNL Azure] resource manager](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview). |
-| `fqdns` | The fully-qualified domain names for your source. This property is required only when using the [!DNL Snowflake] source. |
 | `connectionSpec.id` | The connection spec ID of the source you are using. |
 | `connectionSpec.version` | The version of the connection spec ID that yo are using. |
 
@@ -94,7 +92,6 @@ A successful response returns the following:
   "subscriptionId": "4281a16a-696f-4993-a7d3-a3da32b846f3",
   "resourceGroupName": "acme-sources-experience-platform",
   "resourceName": "acmeexperienceplatform",
-  "fqdns": [],
   "connectionSpec": {
       "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
       "version": "1.0"
@@ -110,7 +107,6 @@ A successful response returns the following:
 | `subscriptionId` | The ID associated with your [!DNL Azure] subscription. For more information, read the [!DNL Azure] guide on [retrieving your subscription and tenant IDs from the [!DNL Azure Portal]](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id). |
 | `resourceGroupName` | The name of your resource group on [!DNL Azure]. A resource group contains related resources for an [!DNL Azure] solution. For more information, read the [!DNL Azure] guide on [managing resource groups](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal). |
 | `resourceName` | The name of your resource. In [!DNL Azure], a resource refers to instances like virtual machines, web apps, and databases. For more information, read the [!DNL Azure] guide on [understanding the [!DNL Azure] resource manager](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview). |
-| `fqdns` | The fully-qualified domain names for your source. This property is required only when using the [!DNL Snowflake] source. |
 | `connectionSpec.id` | The connection spec ID of the source you are using. |
 | `connectionSpec.version` | The version of the connection spec ID that yo are using. |
 | `state` | The current state of your private endpoint. Valid states include: <ul><li>`Pending`</li><li>`Failed`</li><li>`Approved`</li><li>`Rejected`</li></ul> |
@@ -537,7 +533,7 @@ POST /connections/
 
 **Request**
 
-The following request creates an authenticated base connection for [!DNL Snowflake], while also using a private endpoint.
+The following request creates an authenticated base connection for [!DNL Azure Blob Storage], while also using a private endpoint.
 
 +++Select to view request example
 
@@ -550,8 +546,8 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "Snowflake base connection",
-      "description": "A base connection for a Snowflake source that uses a private link.",
+      "name": "Azure Blob Storage base connection",
+      "description": "A base connection for a Azure Blob Storage source that uses a private link.",
       "auth": {
           "specName": "ConnectionString",
           "params": {
@@ -560,7 +556,7 @@ curl -X POST \
           }
       },
       "connectionSpec": {
-          "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
+          "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
           "version": "1.0"
       }
   }'
@@ -571,10 +567,10 @@ curl -X POST \
 | `name` | The name of your base connection. |
 | `description` | (Optional) A description that provides additional information on your connection. |
 | `auth.specName` | The authentication being used to connect your source to Experience Platform. |
-| `auth.params.connectionString` | The [!DNL Snowflake] connection string. For more information, read the [[!DNL Snowflake] API authentication guide](../api/create/databases/snowflake.md).  |
+| `auth.params.connectionString` | The [!DNL Azure Blob Storage] connection string. For more information, read the [[!DNL Azure Blob Storage] API authentication guide](../api/create/cloud-storage/blob.md).  |
 | `auth.params.usePrivateLink` | A boolean value that determines whether or not you are using a private endpoint. Set this value to `true` if you are using a private endpoint. |
-| `connectionSpec.id` | The connection spec ID of [!DNL Snowflake]. |
-| `connectionSpec.version` | The version of your [!DNL Snowflake] connection spec ID. |
+| `connectionSpec.id` | The connection spec ID of [!DNL Azure Blob Storage]. |
+| `connectionSpec.version` | The version of your [!DNL Azure Blob Storage] connection spec ID. |
 
 +++
 
@@ -824,6 +820,14 @@ A successful response returns all connections that are tied to private endpoints
 
 Read this section for additional information using [!DNL Azure] private links in the API.
 
+### Approve a private endpoint for [!DNL Azure Blob] and [!DNL Azure Data Lake Gen2]
+
+To approve a private endpoint request for the [!DNL Azure Blob] and [!DNL Azure Data Lake Gen2] sources, log in to the [!DNL Azure Portal]. In the left navigation, select **[!DNL Data storage]**, then go to the **[!DNL Security + networking]** tab and choose **[!DNL Networking]**. Next, select **[!DNL Private endpoints]** to see a list of private endpoints associated with your account and their current connection states. To approve a pending request, select the desired endpoint and click **[!DNL Approve]**.
+
+![The Azure portal with a list of pending private endpoints.](../../images/tutorials/private-links/azure.png)
+
+<!--
+
 ### Configure your [!DNL Snowflake] account to connect to private links
 
 You must complete the following prerequisite steps in order to use the [!DNL Snowflake] source with private links.
@@ -932,11 +936,6 @@ curl -X POST \
   }'
 ```
 
-
 >[!ENDTABS]
 
-### Approve a private endpoint for [!DNL Azure Blob] and [!DNL Azure Data Lake Gen2]
-
-To approve a private endpoint request for the [!DNL Azure Blob] and [!DNL Azure Data Lake Gen2] sources, log in to the [!DNL Azure Portal]. In the left navigation, select **[!DNL Data storage]**, then go to the **[!DNL Security + networking]** tab and choose **[!DNL Networking]**. Next, select **[!DNL Private endpoints]** to see a list of private endpoints associated with your account and their current connection states. To approve a pending request, select the desired endpoint and click **[!DNL Approve]**.
-
-![The Azure portal with a list of pending private endpoints.](../../images/tutorials/private-links/azure.png)
+-->
