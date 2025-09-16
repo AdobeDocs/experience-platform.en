@@ -175,6 +175,7 @@ role: Admin,User
         * [(API) Salesforce Marketing Cloud connection](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
         * [(Files) Salesforce Marketing Cloud connection](./catalog/email-marketing/salesforce-marketing-cloud.md)
         * [[!DNL Salesforce Marketing Cloud Account Engagement]](./catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md)
+        * [[!DNL (V2) Salesforce Marketing Cloud Account Engagement]](./catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2.md)
         * [SendGrid connection](./catalog/email-marketing/sendgrid.md)
     * Tag extensions {#launch-extensions}
         * [Tag extension overview](./catalog/launch-extensions/overview.md)
