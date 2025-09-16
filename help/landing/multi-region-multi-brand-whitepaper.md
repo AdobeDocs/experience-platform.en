@@ -276,6 +276,7 @@ A standardized data schema in Experience Platform that ensures consistent data s
 
 XDM Individual Profile Schema:
 
+```
 \- PII
 \- Germany
 	\- name --> Label: "Germany"
@@ -295,6 +296,7 @@ XDM Individual Profile Schema:
 \- Loyalty
 	\- member
 	\- registrationDate
+```
 
 ###### Audiences: Use attribute-based access control: Object level access control to control access to brand/country-specific audiences
 
@@ -374,7 +376,7 @@ In some scenarios, you may opt for deploying Experience Platform and platform-ba
 
 | Benefits | Considerations |
 | --- | ---- |
-| <ul><li>Provision individual sandboxes to create logical separation between business units within a deployed region</li><li>Single organization ID for IT to manage for users, provisioning, and so on.</li><li>No migration of Tags, Target, Analytics, and so on, if staying in same organization ID.</li><li>No reset required for existing ECIDs – prevents “cliffing” in Adobe Analytics data.</li><li>Single login for global marketing resources.</li><li>User access rights to control who has access to what sandboxes, with appropriate levels of role-based access control.</li><li>Leverage Global Analytics and Target instances and report suite data.</li></ul> | <ul><li>Data will be stored in a single region.</li><li>Potential need to consolidate data into a single organization ID.</li><li>All business units would be sharing the same infrastructure across applications (core Experience Platform, Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics).</li><li>Guardrails: Some are global per organization, such as streaming segmentation, which is 1.5k RPS.</li><li>GDPR requests operate at the organization-level and cannot be targeted to specific sandboxes.</li><li>Customer-Managed Keys are set at the organization ID level – all business unit sandboxes would share the same encryption key with this approach.</li><li>Will require clarity on enterprise licensing across DX and CC to ensure that applications are provisioned in the correct organization IDs.</ul></li> | 
+| <ul><li>Provision individual sandboxes to create logical separation between business units within a deployed region</li><li>Single organization ID for IT to manage for users, provisioning, and so on.</li><li>No migration of Adobe Tags, Target, Analytics, and more, if staying in same organization ID.</li><li>No reset required for existing ECIDs – prevents “cliffing” in Adobe Analytics data.</li><li>Single login for global marketing resources.</li><li>User access rights to control who has access to what sandboxes, with appropriate levels of role-based access control.</li><li>Leverage Global Analytics and Target instances and report suite data.</li></ul> | <ul><li>Data will be stored in a single region.</li><li>Potential need to consolidate data into a single organization ID.</li><li>All business units would be sharing the same infrastructure across applications (core Experience Platform, Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics).</li><li>Guardrails: Some are global per organization, such as streaming segmentation, which is 1.5k RPS.</li><li>GDPR requests operate at the organization-level and cannot be targeted to specific sandboxes.</li><li>Customer-Managed Keys are set at the organization ID level – all business unit sandboxes would share the same encryption key with this approach.</li><li>Will require clarity on enterprise licensing across DX and CC to ensure that applications are provisioned in the correct organization IDs.</ul></li> | 
 
 **Benefits and considerations**
 
