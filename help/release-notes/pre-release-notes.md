@@ -79,7 +79,7 @@ For more information about alerts, read the [[!DNL Observability Insights] overv
 
 | Feature | Description |
 | --- | --- |
-| Enhanced destination management capabilities in the Experience Platform UI | Improve your destination management workflow with new sorting capabilities across the [Browse](../destinations/ui/destinations-workspace.md#browse) and [Accounts](../destinations/ui/destinations-workspace.md#accounts) tabs. You can now also see a visual indicator when your account authentication is about to expire. |
+| Enhanced destination management capabilities in the Experience Platform UI | Improve your destination management workflow with new sorting capabilities across the [[!UICONTROL Browse]](../destinations/ui/destinations-workspace.md#browse) and [[!UICONTROL Accounts]](../destinations/ui/destinations-workspace.md#accounts) tabs. You can now also see a visual indicator when your account authentication is about to expire. |
 
 For more information, read the [Destinations overview](../destinations/home.md).
 
@@ -146,7 +146,7 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Feature | Description |
 | --- | --- |
-| New sources in General Availability | The following sources are now in General Availability: Several source connectors have been updated from Beta to GA: <ul><li>[Acxiom Data Ingestion](../sources/connectors/data-partners/acxiom-data-ingestion.md)</li><li>[Acxiom Prospect Data Ingestion](../sources/connectors/data-partners/acxiom-prospect-data-ingestion.md)</li><li>[Merkury Enterprise](../sources/connectors/data-partners/merkury-enterprise.md)</li><li>[SAP Commerce](../sources/connectors/ecommerce/sap-commerce.md)</li></ul>. These sources are now fully supported and ready for production use. |
+| New sources in General Availability | The following sources are now in General Availability: Several source connectors have been updated from Beta to GA: <ul><li>[Acxiom Data Ingestion](../sources/connectors/data-partners/acxiom-data-ingestion.md)</li><li>[Acxiom Prospect Data Ingestion](../sources/connectors/data-partners/acxiom-prospecting-data-import.md)</li><li>[Merkury Enterprise](../sources/connectors/data-partners/merkury.md)</li><li>[SAP Commerce](../sources/connectors/ecommerce/sap-commerce.md)</li></ul>. These sources are now fully supported and ready for production use. |
 | [!DNL Snowflake] key-pair authentication support | Enhanced security for Snowflake connections with support for key-pair authentication. Basic authentication (username/password) will be deprecated by November 2025, so customers are encouraged to migrate to key-pair authentication for improved security. |
 
 For more information, read the [sources overview](../sources/home.md).
