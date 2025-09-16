@@ -13,7 +13,7 @@ Experience Platform empowers you to represent structure, and govern your busines
 
 This whitepaper serves as a reference, offering a product point of view and a set of guidelines. Its primary aim is to empower you and your implementation teams with the tools and insights needed to navigate the intricacies of Experience Platform effectively. By providing a structured framework for evaluating your specific requirements, considerations, and real-world use cases, it equips you with the knowledge necessary to unlock the full potential of Experience Platform and platform-based applications. As you read the following sections, you will find invaluable insights and recommendations to streamline the implementation process and elevate your organization’s capability to deliver exceptional experiences to your audience while providing the governance and controls to maintain privacy and compliance.
 
-![CDP-Unified Profile](images/CDPoverview.png)
+![CDP-Unified Profile](./images/whitepaper/CDPoverview.png)
 
 ## Understanding the multi-brand, multi-region enterprise
 
@@ -39,7 +39,7 @@ A key architectural principle in Experience Platform is one where customer data 
 
 If your organization needs a singular data environment to operate your marketing experience at scale, you may prefer consolidating all your data into a single Experience Platform sandbox with minimal data isolation requirements. Within this set up, data is ingested into a sandbox, and all related identities are represented as a single unified profile, whether identified by a pseudonymous or known identity. This means your marketers can access all profile attributes and experience event data within Experience Platform across your enterprise. They can use this data with platform-based applications to create audiences and journeys with minimal need to restrict marketers from using all the data regardless of brand or region. This approach facilitates seamless segmentation and audience activation into the destinations supported by Experience Platform applications. This strategy works well if you aim to leverage your entire customer base, regardless of regional or brand-specific differences, for unified and cohesive marketing efforts.
 
-![CDP-Architecture Single Production Sandbox](images/Architecture-single-prod-sandbox.png) 
+![CDP-Architecture Single Production Sandbox](./images/whitepaper/Architecture-single-prod-sandbox.png) 
 
 #### How this works
 
@@ -61,7 +61,7 @@ Sandboxes are virtual partitions within a single instance of Experience Platform
 
 You can create multiple sandboxes of any type, and for this type of enterprise, we will use one production and one development sandbox to illustrate how to run and operate this type of enterprise.
   
-![CDP-Create a Sandbox](images/Create-sandbox.png) 
+![CDP-Create a Sandbox](./images/whitepaper/Create-sandbox.png) 
 
 In the production sandbox, we expect you to ingest your production profile and experience event data to build a unified profile for your marketing activities. For more details on how to combine known and anonymous data from multiple enterprise sources to create customer profiles that can be used to provide personalized customer experiences across all channels and devices in real-time, [visit our Experience League documentation](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/home).
 
@@ -73,7 +73,7 @@ Consider a data engineer who may not need access to all Experience Platform and 
 
 If desired, consider adding granular access controls to limit access to specific fields on the unified customer profile with attribute-based access control/ field-level access control capability. These are governance mechanisms in Experience Platform that allow you to restrict access to data attributes based on predefined labels. With field level access control, personally identifiable data can be governed, and access is restricted across all Experience Platform and application workflows. For more details on access control capabilities, [visit our Experience League documentation](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home).
 
-![CDP-Access Controls, Configure Role Permissions](images/Access-Controls-Configure-RolePermissions.png) 
+![CDP-Access Controls, Configure Role Permissions](./images/whitepaper/Access-Controls-Configure-RolePermissions.png) 
 
 **Development lifecycle with development sandboxes**
 
@@ -95,14 +95,14 @@ You have the option to use Experience Platform APIs to automate sandbox deployme
 
 For additional details on sandbox tooling, [visit our Experience League documentation](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sandbox-tooling).
   
-| ![CDP-Create a Package](images/create-package.png) | ![CDP-List Packages](images/list-packages.png) |
+| ![CDP-Create a Package](./images/whitepaper/create-package.png) | ![CDP-List Packages](./images/whitepaper/list-packages.png) |
 | --- | --- |
 
 ### 2. Region or brand-specific data isolation
 
 If you require complete isolation (e.g., regional or brand-based), you may operate under strict data access policies or legal requirements restricting your brand teams' access to data specific to their respective regions or brands. You define access patterns based on region or brand-specific data, ensuring compliance with internal, regulatory, and data governance protocols. This approach is crucial if you operate in highly regulated industries (e.g., handling PII data) or need to maintain distinct and segmented data for different geographic regions or brand identities.
 
-  ![CDP-Architecture Multiple Production Sandboxes](images/Architecture-multiple-prod-sandbox.png) 
+  ![CDP-Architecture Multiple Production Sandboxes](./images/whitepaper/Architecture-multiple-prod-sandbox.png) 
 
 #### How this works
 
@@ -206,7 +206,7 @@ When an enterprise operates with multiple production sandboxes, each representin
 
 **Dedicated global sandbox**
 
-![CDP-Dedicated Global Reporting Sandbox](images/dedicated-global-reporting-sandbox.png) 
+![CDP-Dedicated Global Reporting Sandbox](./images/whitepaper/dedicated-global-reporting-sandbox.png) 
 
 This sandbox acts as a central repository where data from individual regional or brand-specific sandboxes is consolidated. A common solution is to use Query Service within each sandbox to extract relevant customer data. This may include profiles and experience events that need to be analyzed across different regions or brands. Once data is prepared from each sandbox, it is ingested into the global reporting sandbox for analysis and audience creation.
 
@@ -228,7 +228,7 @@ Many multi-brand enterprises operate on a global scale and, as such, often seek 
 
 Recognizing these varying requirements, Experience Platform can be configured to provide you with a highly adaptable and flexible data management solution, ensuring that multi-brand, multi-region enterprises can effectively represent your business within the platform. Whether the goal is to maximize the collective customer data, maintain strict data isolation, or achieve a balance between the two, Experience Platform is equipped to meet the diverse needs of your enterprise.
 
-  ![CDP-Architecture A blend approach](images/Architecture-blend-sandbox.png) 
+  ![CDP-Architecture A blend approach](./images/whitepaper/Architecture-blend-sandbox.png) 
 
 #### How this works
 
@@ -305,7 +305,7 @@ XDM Individual Profile Schema:
 
 - Add labels to the proper role. For example, add the label "Germany" to the role "Marketer—Germany".
 
-![CDP-Label Audiences](images/label-audience.png) 
+![CDP-Label Audiences](./images/whitepaper/label-audience.png) 
 
 ###### Include a default audience as you create brand/country-specific audiences
 
@@ -317,7 +317,7 @@ XDM Individual Profile Schema:
 
 - There is no mechanism to auto-add one or more audiences at the time of composition.
 
-![CDP-Add a Default Audience](images/default-audience.png) 
+![CDP-Add a Default Audience](./images/whitepaper/default-audience.png) 
 
 ###### Activation and brand/country level profile filtering
 
@@ -335,7 +335,7 @@ This allows you to control or filter profiles at the time of activation:
 >
 > The Privacy and Security Shield SKU is required to create consent policies.  
 
-![CDP-Custom Consent Policy and Activation Filtering](images/custom-consent-policy.png) 
+![CDP-Custom Consent Policy and Activation Filtering](./images/whitepaper/custom-consent-policy.png) 
 
 Multi-Brand Activation and Consent Policy Complexity:
 
@@ -359,7 +359,7 @@ In some scenarios, you may opt for deploying Experience Platform and platform-ba
 
 - In general, an organization ID is deployed in a single geographical region.
 
-  ![CDP-Architecture Multiple IMS Orgs Option](images/Architecture-multi-imsorg.png) 
+  ![CDP-Architecture Multiple IMS Orgs Option](./images/whitepaper/Architecture-multi-imsorg.png) 
 
 **Multiple organization IDs: Benefits and considerations​**
 
@@ -369,7 +369,7 @@ In some scenarios, you may opt for deploying Experience Platform and platform-ba
 
 **Single organization ID: Benefits and considerations**
 
-![CDP-Architecture Multiple Production Sandboxes](images/Architecture-multiple-prod-sandbox.png)
+![CDP-Architecture Multiple Production Sandboxes](./images/whitepaper/Architecture-multiple-prod-sandbox.png)
 
 | Benefits | Considerations |
 | --- | ---- |
@@ -396,27 +396,27 @@ Experience Platform provides enterprises with a robust framework to centralize, 
 
 1. **Flexible deployment models**
 
-	- Enterprises can choose between **single-sandbox, multi-sandbox, or hybrid approaches** based on their operational, compliance, and governance requirements.
+    - Enterprises can choose between **single-sandbox, multi-sandbox, or hybrid approaches** based on their operational, compliance, and governance requirements.
 
-    - **Global organizations** may require multiple production sandboxes to comply with governance requirements while maintaining operational efficiency.
+    - **Global organizations** may require multiple production sandboxes to comply with governance requirements while maintaining operational efficiency.
 
 2. **Data governance and access control**
 
-    - **Attribute-based access control, field-level access control, and object-level access control** enable precise governance over data access.
+    - **Attribute-based access control, field-level access control, and object-level access control** enable precise governance over data access.
 
     - You must define **clear roles and permissions** for different personas (e.g., marketers, data architects, and IT teams) to ensure proper data usage.
 
 3. **Sandbox tooling and automation**
 
-    - **Sandbox tooling** simplifies configuration management, allowing teams to export and import settings efficiently.
+    - **Sandbox tooling** simplifies configuration management, allowing teams to export and import settings efficiently.
 
-    - **API-based automation** is an available option for enterprises looking to streamline sandbox deployments and governance at scale.
+    - **API-based automation** is an available option for enterprises looking to streamline sandbox deployments and governance at scale.
 
 4. **Global reporting and activation strategies**
 
-    - Enterprises leveraging **Customer Journey Analytics** must consider data synchronization and commercial implications when consolidating global reporting.
+    - Enterprises leveraging **Customer Journey Analytics** must consider data synchronization and commercial implications when consolidating global reporting.
 
-    - **Segment Match** provides a privacy-compliant mechanism for cross-sandbox audience sharing, ensuring seamless marketing activations.
+    - **Segment Match** provides a privacy-compliant mechanism for cross-sandbox audience sharing, ensuring seamless marketing activations.
 
 5. **Multi-organization IDs vs. multi-sandbox considerations**
 
