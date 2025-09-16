@@ -27,7 +27,7 @@ GET /audit/export
 
 ```shell
 curl -X POST \
-  https://platform.adobe.io/data/foundation/audit/events
+  https://platform.adobe.io/data/foundation/audit/export
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
