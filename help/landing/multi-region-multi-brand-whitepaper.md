@@ -63,7 +63,7 @@ You can create multiple sandboxes of any type, and for this type of enterprise, 
   
 ![CDP-Create a Sandbox](./images/whitepaper/Create-sandbox.png) 
 
-In the production sandbox, we expect you to ingest your production profile and experience event data to build a unified profile for your marketing activities. For more details on how to combine known and anonymous data from multiple enterprise sources to create customer profiles that can be used to provide personalized customer experiences across all channels and devices in real-time, [visit our Experience League documentation](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/home).
+In the production sandbox, we expect you to ingest your production profile and experience event data to build a unified profile for your marketing activities. For more details on how to combine known and anonymous data from multiple enterprise sources to create customer profiles that can be used to provide personalized customer experiences across all channels and devices in real-time, see the [Adobe Real-Time Customer Data Platform documentation](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/home).
 
 **Access controls**
 
@@ -71,13 +71,13 @@ You can define access controls with roles and permissions to control access to a
 
 Consider a data engineer who may not need access to all Experience Platform and platform-based application functionality. They are typically responsible for creating data definitions (schemas), configuring data sources to ingest data, and creating datasets. However, they may not be the same persona that creates and activates audiences for personalized customer experiences. For this persona, create a role, add the appropriate permissions, and grant access only to the required functionality. In contrast, a marketer persona would not be creating schemas and ingesting data but rather focusing on creating and activating audiences to enable personalized customer experiences.
 
-If desired, consider adding granular access controls to limit access to specific fields on the unified customer profile with attribute-based access control/ field-level access control capability. These are governance mechanisms in Experience Platform that allow you to restrict access to data attributes based on predefined labels. With field level access control, personally identifiable data can be governed, and access is restricted across all Experience Platform and application workflows. For more details on access control capabilities, [visit our Experience League documentation](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home).
+If desired, consider adding granular access controls to limit access to specific fields on the unified customer profile with attribute-based access control/ field-level access control capability. These are governance mechanisms in Experience Platform that allow you to restrict access to data attributes based on predefined labels. With field level access control, personally identifiable data can be governed, and access is restricted across all Experience Platform and application workflows. For more details on access control capabilities, see the [access control documentation](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home).
 
 ![CDP-Access Controls, Configure Role Permissions](./images/whitepaper/Access-Controls-Configure-RolePermissions.png) 
 
 **Development lifecycle with development sandboxes**
 
-A development sandbox behaves the same way as a production sandbox in all functional aspects. It’s different in that it will have some contractual guardrails to keep you within your license limits. It is designed exclusively for development and testing with non-production profiles, supporting up to 10% of your licensed profile commitment (measured cumulatively across all authorized development sandboxes). For additional details and guardrails, [visit our Experience League documentation](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/home) and the [product descriptions page](https://helpx.adobe.com/legal/product-descriptions.html) for entitlement details.
+A development sandbox behaves the same way as a production sandbox in all functional aspects. It’s different in that it will have some contractual guardrails to keep you within your license limits. It is designed exclusively for development and testing with non-production profiles, supporting up to 10% of your licensed profile commitment (measured cumulatively across all authorized development sandboxes). For additional details and guardrails, see the [sandboxes overview documentation](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/home) and the [product descriptions page](https://helpx.adobe.com/legal/product-descriptions.html) for entitlement details.
 
 You can have multiple development sandboxes (up to 4 in this enterprise example, since we are using one production sandbox) for the development and testing lifecycle.
 
@@ -93,7 +93,7 @@ With the sandbox tooling feature, you can select various objects and export them
 
 You have the option to use Experience Platform APIs to automate sandbox deployments and configuration tasks. APIs allow programmable control for repetitive tasks such as exporting, importing, or modifying sandbox configurations, providing flexibility if you prefer automated workflows.
 
-For additional details on sandbox tooling, [visit our Experience League documentation](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sandbox-tooling).
+For additional details on sandbox tooling, see the [sandbox tooling documentation](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sandbox-tooling).
   
 | ![CDP-Create a Package](./images/whitepaper/create-package.png) | ![CDP-List Packages](./images/whitepaper/list-packages.png) |
 | --- | --- |
@@ -220,7 +220,7 @@ Additionally, you can utilize Experience Platform Segment Match, a feature in Pl
 
 This segment-sharing service allows two or more users to exchange segment data in a secure, governed, and privacy-friendly manner.
 
-For additional details on the Segment Match feature, [visit our Experience League documentation](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/segment-match/overview).
+For additional details on the Segment Match feature, see the [Segment Match documentation](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/segment-match/overview).
 
 ### 3. A blend of approaches for global operations, regional, and brand-specific
 
@@ -367,7 +367,7 @@ In some scenarios, you may opt for deploying Experience Platform and platform-ba
 **Multiple organization IDs: Benefits and considerations​**
 
 | Benefits | Considerations |
-| --- | ---- |
+| --- | --- |
 | The following are a list of benefits of having multiple organization IDs: <ul><li>Flexibility to store data in particular global regions.</li><li>​Separate user logins per instance – i.e., Wholefoods can’t log in to Audible.​</li><li>Dedicated API endpoints that give each Market/BU the ability to build custom connections as needed into their own environment​.</li><li>Each business unit would have their own customer-managed keys​.</li><li>GDPR requests can be made per-business unit​.</li><li>Completely isolated storage and compute between business units​.</li><li>Alleviates some organization-level performance guardrails/limits​.</li><li>More flexibility with provisioning and mixing SKUs between business units. For example, one organization can have a different SKU of Adobe Journey Optimizer versus another organization.</li></ul> |​ The following are things to consider when having multiple organization IDs: <ul><li>Multiple organization IDs to manage, versus one.​</li><li>Multiple separate instances/environments to manage (integrations, data loads, and so on).</li><li>​ECIDs will be unique per organization, making it difficult to match data up between business units​.</li><li>Would need to migrate/reimplement Analytics and Target per organization – lose global roll-up (if currently being used).​</li><li>More orchestration required to make GDPR requests across business units​.</li><li>Some Experience Platform based application integrations store metadata at the organization level. Not everything is “sandboxed” by sandboxes.​</li><li>Organization ID is pinned to a region. The Adobe AWS hosting location is currently in the US only. Adobe does not support migrating from one hosting region to another.​</li><li>Edge is not sandbox aware (for event forwarding).</li></ul> |​
 
 **Single organization ID: Benefits and considerations**
@@ -375,8 +375,8 @@ In some scenarios, you may opt for deploying Experience Platform and platform-ba
 ![CDP-Architecture Multiple Production Sandboxes](./images/whitepaper/Architecture-multiple-prod-sandbox.png)
 
 | Benefits | Considerations |
-| --- | ---- |
-| <ul><li>Provision individual sandboxes to create logical separation between business units within a deployed region</li><li>Single organization ID for IT to manage for users, provisioning, and so on.</li><li>No migration of Adobe Tags, Target, Analytics, and more, if staying in same organization ID.</li><li>No reset required for existing ECIDs – prevents “cliffing” in Adobe Analytics data.</li><li>Single login for global marketing resources.</li><li>User access rights to control who has access to what sandboxes, with appropriate levels of role-based access control.</li><li>Leverage Global Analytics and Target instances and report suite data.</li></ul> | <ul><li>Data will be stored in a single region.</li><li>Potential need to consolidate data into a single organization ID.</li><li>All business units would be sharing the same infrastructure across applications (core Experience Platform, Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics).</li><li>Guardrails: Some are global per organization, such as streaming segmentation, which is 1.5k RPS.</li><li>GDPR requests operate at the organization-level and cannot be targeted to specific sandboxes.</li><li>Customer-Managed Keys are set at the organization ID level – all business unit sandboxes would share the same encryption key with this approach.</li><li>Will require clarity on enterprise licensing across DX and CC to ensure that applications are provisioned in the correct organization IDs.</ul></li> | 
+| --- | --- |
+| The following are a list of benefits of having a single organization ID: <ul><li>Provision individual sandboxes to create logical separation between business units within a deployed region</li><li>Single organization ID for IT to manage for users, provisioning, and so on.</li><li>No migration of Adobe Tags, Target, Analytics, and more, if staying in same organization ID.</li><li>No reset required for existing ECIDs – prevents “cliffing” in Adobe Analytics data.</li><li>Single login for global marketing resources.</li><li>User access rights to control who has access to what sandboxes, with appropriate levels of role-based access control.</li><li>Leverage Global Analytics and Target instances and report suite data.</li></ul> | The following are things to consider when having a single organization ID: <ul><li>Data will be stored in a single region.</li><li>Potential need to consolidate data into a single organization ID.</li><li>All business units would be sharing the same infrastructure across applications (core Experience Platform, Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics).</li><li>Guardrails: Some are global per organization, such as streaming segmentation, which is 1.5k RPS.</li><li>GDPR requests operate at the organization-level and cannot be targeted to specific sandboxes.</li><li>Customer-Managed Keys are set at the organization ID level – all business unit sandboxes would share the same encryption key with this approach.</li><li>Will require clarity on enterprise licensing across DX and CC to ensure that applications are provisioned in the correct organization IDs.</ul></li> | 
 
 **Benefits and considerations**
 
