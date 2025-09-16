@@ -95,19 +95,6 @@ XDM is an open-source specification that provides common structures and definiti
 
 For more information, read the [XDM overview](../xdm/home.md).
 
-## Query Service {#query-service}
-
-Adobe Experience Platform Query Service provides a robust SQL interface for data analysis and exploration across the platform.
-
-**New or updated features**
-
-| Feature | Description |
-| ------- | ----------- |
-| Data Distiller session management | Take control of your data analysis sessions with enhanced session management. You can now monitor and manage your sessions more effectively across development and production environments, giving you better visibility into your query performance and resource usage. |
-| Data Distiller IP address allowlist | Enhanced security for Data Distiller customers with IP allowlist functionality. You can now restrict access to your Query Service endpoints by configuring allowed IP addresses, providing an additional layer of security for your data analysis workflows. |
-
-For more information, read the [Query Service overview](../query-service/home.md).
-
 ## Real-Time Customer Profile {#profile}
 
 Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-Time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. Profile allows you to consolidate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
