@@ -52,7 +52,7 @@ For more information, read the [AI Assistant overview](../ai-assistant/home.md).
 
 Experience Platform allows you to subscribe to event-based alerts for various Experience Platform activities. You can subscribe to different alert rules through the [!UICONTROL Alerts] tab in the Experience Platform user interface, and can choose to receive alert messages within the UI itself or through email notifications.
 
-**New or updated features**
+**New features**
 
 | Feature | Description |
 | --- | --- |
@@ -142,7 +142,7 @@ For more information, read the [[!DNL Segmentation Service] overview](../segment
 
 Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 
-**New or updated functionality**
+**New or updated features**
 
 | Feature | Description |
 | --- | --- |
