@@ -228,7 +228,7 @@ Many multi-brand enterprises operate on a global scale and, as such, often seek 
 
 Recognizing these varying requirements, Experience Platform can be configured to provide you with a highly adaptable and flexible data management solution, ensuring that multi-brand, multi-region enterprises can effectively represent your business within the platform. Whether the goal is to maximize the collective customer data, maintain strict data isolation, or achieve a balance between the two, Experience Platform is equipped to meet the diverse needs of your enterprise.
 
-  ![CDP-Architecture A blend approach](./images/whitepaper/Architecture-blend-sandbox.png) 
+![CDP-Architecture A blend approach](./images/whitepaper/Architecture-blend-sandbox.png) 
 
 #### How this works
 
@@ -275,6 +275,7 @@ A standardized data schema in Experience Platform that ensures consistent data s
 - Add labels to the proper role. For example, add the label Germany to the role "Marketer—Germany".
 
 XDM Individual Profile Schema:
+
 \- PII
 \- Germany
 	\- name --> Label: "Germany"
@@ -359,7 +360,7 @@ In some scenarios, you may opt for deploying Experience Platform and platform-ba
 
 - In general, an organization ID is deployed in a single geographical region.
 
-  ![CDP-Architecture Multiple IMS Orgs Option](./images/whitepaper/Architecture-multi-imsorg.png) 
+![CDP-Architecture Multiple IMS Orgs Option](./images/whitepaper/Architecture-multi-imsorg.png) 
 
 **Multiple organization IDs: Benefits and considerations​**
 
