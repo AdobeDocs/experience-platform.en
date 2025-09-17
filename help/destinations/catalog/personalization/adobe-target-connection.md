@@ -117,11 +117,14 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 * **Name**: Fill in the preferred name for this destination.
 * **Description**: Enter a description for your destination. For example, you can mention which campaign you are using this destination for. This field is optional.
 * **Datastream**: This determines in which Data Collection datastream the audiences will be included. The drop-down menu shows only datastreams that have the Target and Adobe Experience Platform services enabled. See [configuring a datastream](../../../datastreams/configure.md#aep) for detailed information on how to configure a datastream for Adobe Experience Platform and Adobe Target.
-    
+
     >[!IMPORTANT]
     >
-    >The datastream is unique for each Adobe Target destination connection. You cannot use the same datastream for multiple Adobe Target destination connections.
-    >If you need to map the same audiences to multiple datastreams, you must [create a new destination connection](../../ui/connect-destination.md) for each datastream, and go through the [audience activation flow](#activate).
+    >**Datastream uniqueness per sandbox**: The combination of datastream ID and sandbox name must be unique for Adobe Target destination connections within an IMS Org. This means:
+    >
+    >* You can use the same datastream ID for different Adobe Target destination connections as long as they are in different sandboxes
+    >* You cannot use the same datastream ID for multiple Adobe Target destination connections within the same sandbox
+    >* This rule applies to all datastream selections, including when you select **[!UICONTROL None]**
 
     * **[!UICONTROL None]**: Select this option if you need to configure Adobe Target personalization but you cannot implement the [Experience Platform Web SDK](/help/web-sdk/home.md). When using this option, audiences exported from Experience Platform to Target only support next-session personalization, and edge segmentation is disabled. Reference the table in the [supported use cases](#supported-use-cases) section for a comparison of available use cases per implementation type.
 
