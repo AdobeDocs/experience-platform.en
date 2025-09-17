@@ -33,7 +33,7 @@ For more information on enabling a dataset for [!DNL Profile] and [!DNL Identity
 
 >[!IMPORTANT]
 >
->Guardrails for streaming ingestion are calculated at the organization level and not the sandbox level. This means that your data usage per sandbox is bound to the total license usage entitlement that corresponds with your entire organization. Additionally, data usage in development sandboxes are limited to 10% of your total profiles. For more information about license usage entitlement, read the [data management best practices guide](../../landing/license-usage-and-guardrails/data-management-best-practices.md).
+>Guardrails for streaming ingestion are bound to the total license usage entitlement that corresponds with your entire organization. Additionally, data usage in development sandboxes are limited to 10% of your total profiles. For more information about license usage entitlement, read the [data management best practices guide](../../landing/license-usage-and-guardrails/data-management-best-practices.md). To learn how to set limits to your streaming throughput, read the [Capacity overview](../../landing/license-usage-and-guardrails/capacity.md).
 
 | Destination | Expected latency | 
 | --------- | ---------------- |

@@ -1,12 +1,10 @@
 ---
-title: Snowflake connection
+title: Snowflake Streaming connection
 description: Export data to your Snowflake account using private listings.
-hide: yes
-hidefromtoc: yes
 badgeBeta: label="Beta" type="Informative"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
 ---
-# Snowflake connection {#snowflake-destination}
+# Snowflake Streaming connection {#snowflake-destination}
 
 >[!IMPORTANT]
 >
@@ -14,7 +12,7 @@ exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
 
 ## Overview {#overview}
 
-Use the Snowflake destination connector to export data to Adobe's Snowflake instance, then share it with your instance through [private listings](https://other-docs.snowflake.com/en/collaboration/collaboration-listings-about).
+Use the Snowflake destination connector to export data to Adobe's Snowflake instance, which Adobe then shares with your instance through [private listings](https://other-docs.snowflake.com/en/collaboration/collaboration-listings-about).
 
 Read the following sections to understand how the Snowflake destination works and how data is transferred between Adobe and Snowflake.
 
@@ -23,6 +21,8 @@ Read the following sections to understand how the Snowflake destination works an
 This destination uses a [!DNL Snowflake] data share, which means that no data is physically exported or transferred to your own Snowflake instance. Instead, Adobe grants you read-only access to a live table hosted within Adobe's Snowflake environment. You can query this shared table directly from your Snowflake account, but you do not own the table and cannot modify or retain it beyond the specified retention period. Adobe fully manages the lifecycle and structure of the shared table.
 
 The first time you share data from Adobe's Snowflake instance to yours, you are prompted to accept the private listing from Adobe.
+
+![Screenshot showing the Snowflake private listing acceptance screen](../../assets/catalog/cloud-storage/snowflake/snowflake-accept-listing.png)
 
 ### Data retention and Time-to-Live (TTL) {#ttl}
 
@@ -45,12 +45,12 @@ Before configuring your Snowflake connection, make sure you meet the following p
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which types of audiences you can export to this destination.
+This section describes which types of audiences you can export to this destination. The two tables below indicate which audiences this connector supports, by _audience origin_ and _profile types included in the audience_:
 
 | Audience origin | Supported | Description | 
 |---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files. |
+| All other audience origins | ✓ | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 

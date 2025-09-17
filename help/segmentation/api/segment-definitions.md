@@ -7,6 +7,10 @@ exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
 ---
 # Segment definitions endpoint
 
+>[!WARNING]
+>
+>Creation of audiences using B2B entities using the Segmentation Service API is deprecated. You can no longer create audiences using the following B2B entities: Account, Account-Person Relation, Campaign, Campaign Member, Marketing List, Marketing List Member, Opportunity, and Opportunity-Person Relation. For more information, read the guide on [Real-Time CDP B2B Edition architecture upgrades](../../rtcdp/b2b-architecture-upgrade.md).
+
 Adobe Experience Platform allows you to create segment definitions that define a group of specific attributes or behaviors from a group of profiles. A segment definition is an object that encapsulates a query written in [!DNL Profile Query Language] (PQL). Segment definitions are applied to profiles to create audiences. This object (segment definition) is also called a PQL predicate. PQL predicates define the rules for the segment definition based on conditions related to any record or time-series data you supply to [!DNL Real-Time Customer Profile]. See the [PQL guide](../pql/overview.md) for more information on writing PQL queries.
 
 This guide provides information to help you better understand segment definitions and includes sample API calls for performing basic actions using the API.

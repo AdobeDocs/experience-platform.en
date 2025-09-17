@@ -21,7 +21,7 @@ The IP range information on this page applies to the following file-based cloud 
 
 >[!IMPORTANT]
 >
->The IP ranges documented on this page are *not* supported for the following file-based cloud storage destinations: [!UICONTROL Azure Blob], [!UICONTROL Azure Data Lake Storage Gen2] and [!UICONTROL Data Landing Zone].
+>The IP ranges documented on this page are *not* supported for the following file-based cloud storage destinations: [!UICONTROL Azure Blob], [!UICONTROL Azure Data Lake Storage Gen2], [!UICONTROL Data Landing Zone], and SFTP servers hosted on Microsoft Azure.
 
 ## Overview {#overview}
 

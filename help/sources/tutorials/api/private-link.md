@@ -1,12 +1,12 @@
 ---
-title: Private Link Support in Sources
+title: Private Link Support For Sources In The API
 description: Learn how to create and use private links for Adobe Experience Platform Sources
 badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: 9b7fc1be-5f42-4e29-b552-0b0423a40aa1
 ---
-# Private Link Support in Sources
+# Private Link Support for Sources in the API
 
 >[!AVAILABILITY]
 >
@@ -17,11 +17,13 @@ exl-id: 9b7fc1be-5f42-4e29-b552-0b0423a40aa1
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 
-Read this guide to learn how you can establish a private endpoint connection to Azure-based sources through a private link, and allow for a more secure transfer mechanism for your data. 
+You can use the Private Link feature to create private endpoints for your Adobe Experience Platform sources to connect to. Securely connect your sources to  a virtual network using private IP addresses, eliminating the need for public IPs and reduce your attack surface. Simplify your network setup by removing the need for complex firewall or Network Address Translation configurations, while ensuring data traffic only reaches approved services.
+
+Read this guide to learn how you can use APIs to create and use a private endpoint.
 
 ## Get started 
 
-This guide requires a working understanding of the following components of Adobe Experience Platform:
+This guide requires a working understanding of the following components of Experience Platform:
 
 * [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
 * [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
@@ -392,9 +394,13 @@ curl -X GET \
 
 +++
 
-## Enable interactive authoring {#enable-interactive-authoring}
+## Enable [!DNL Interactive Authoring] {#enable-interactive-authoring}
 
-Interactive authoring is used for functionalities like exploring a connection or account and previewing data. To enable interactive authoring, make a POST request to `/privateEndpoints/interactiveAuthoring` and specify `enable` as an operator in your query parameters.
+>[!IMPORTANT]
+>
+>You must enable [!DNL Interactive Authoring] before creating or updating a flow, and before creating, updating, or exploring a connection.
+
+[!DNL Interactive Authoring] is used for functionalities like exploring a connection or account and previewing data. To enable [!DNL Interactive Authoring], make a POST request to `/privateEndpoints/interactiveAuthoring` and specify `enable` as an operator in your query parameters.
 
 **API format**
 
@@ -404,11 +410,11 @@ POST /privateEndpoints/interactiveAuthoring?op=enable
 
 | Query parameter | Description |
 | --- | --- |
-| `op` | The operation that you want to perform. To enable interactive authoring, set the `op` value to `enable`. |
+| `op` | The operation that you want to perform. To enable [!DNL Interactive Authoring], set the `op` value to `enable`. |
 
 **Request**
 
-The following request enables interactive authoring for your private endpoint and sets the TTL to 60 minutes.
+The following request enables [!DNL Interactive Authoring] for your private endpoint and sets the TTL to 60 minutes.
 
 +++Select to view request example
 
@@ -427,7 +433,7 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `autoTerminationMinutes` | The interactive authoring TTL (time-to-live) in minutes. Interactive authoring is used for functionalities like exploring a connection or account and previewing data. You can set a maximum TTL of 120 minutes. The default TTL is 60 minutes. |
+| `autoTerminationMinutes` | The [!DNL Interactive Authoring] TTL (time-to-live) in minutes. [!DNL Interactive Authoring] is used for functionalities like exploring a connection or account and previewing data. You can set a maximum TTL of 120 minutes. The default TTL is 60 minutes. |
  
 +++
 
@@ -435,9 +441,9 @@ curl -X POST \
 
 A successful response returns HTTP status 202 (Accepted).
 
-## Retrieve interactive authoring status {#retrieve-interactive-authoring-status}
+## Retrieve [!DNL Interactive Authoring] status {#retrieve-interactive-authoring-status}
 
-To view the current status of interactive authoring for your private endpoint, make a GET request to `/privateEndpoints/interactiveAuthoring`.
+To view the current status of [!DNL Interactive Authoring] for your private endpoint, make a GET request to `/privateEndpoints/interactiveAuthoring`.
 
 **API format**
 
@@ -447,7 +453,7 @@ GET /privateEndpoints/interactiveAuthoring
 
 **Request**
 
-The following request retrieves the status of interactive authoring:
+The following request retrieves the status of [!DNL Interactive Authoring]:
 
 +++Select to view request example
 
@@ -475,7 +481,7 @@ curl -X GET \
 
 | Property | Description |
 | --- | --- |
-| `status` | The status of interactive authoring. Valid values include: `disabled`, `enabling`, `enabled`. |
+| `status` | The status of [!DNL Interactive Authoring]. Valid values include: `disabled`, `enabling`, `enabled`. |
 
 +++
 
@@ -813,3 +819,124 @@ A successful response returns all connections that are tied to private endpoints
 ```
 
 +++
+
+## Appendix
+
+Read this section for additional information using [!DNL Azure] private links in the API.
+
+### Configure your [!DNL Snowflake] account to connect to private links
+
+You must complete the following prerequisite steps in order to use the [!DNL Snowflake] source with private links.
+
+First, you must raise a support ticket in [!DNL Snowflake] and request for the **endpoint service resource ID** of the [!DNL Azure] region of your [!DNL Snowflake] account. Follow the steps below to raise a [!DNL Snowflake] ticket:
+
+1. Navigate to the [[!DNL Snowflake] UI](https://app.snowflake.com) and sign in with your email account. During this step, you must ensure that your email is verified in profile settings.
+2. Select your **user menu** and then select **support** to access [!DNL Snowflake] support.
+3. To create a support case, select **[!DNL + Support Case]**. Then, fill out the form with relevant details and attach any necessary files.
+4. When finished, submit the case.
+
+The endpoint resource ID is formatted as follows:
+
+```shell
+subscriptions/{SUBSCRIPTION_ID}/resourceGroups/az{REGION}-privatelink/providers/microsoft.network/privatelinkservices/sf-pvlinksvc-az{REGION}
+```
+
++++Select to view example
+
+```shell
+/subscriptions/4575fb04-6859-4781-8948-7f3a92dc06a3/resourceGroups/azwestus2-privatelink/providers/microsoft.network/privatelinkservices/sf-pvlinksvc-azwestus2
+```
+
++++
+
+| Parameter | Description | Example |
+| --- | --- | --- |
+| `{SUBSCRIPTION_ID}` | The unique ID that identifies your [!DNL Azure] subscription. | `a1b2c3d4-5678-90ab-cdef-1234567890ab` |
+| `{REGION}` | The [!DNL Azure] region of your [!DNL Snowflake] account. | `azwestus2` |
+
+### Retrieve your private link configuration details
+
+To retrieve your private link configuration details, you must run the following command in [!DNL Snowflake]:
+
+```sql
+USE ROLE accountadmin;
+SELECT key, value::varchar
+FROM TABLE(FLATTEN(input => PARSE_JSON(SYSTEM$GET_PRIVATELINK_CONFIG())));
+```
+
+Next, retrieve values for the following properties:
+
+* `privatelink-account-url`
+* `regionless-privatelink-account-url`
+* `privatelink_ocsp-url`
+
+Once you have retrieved the values, you can make the following call to create a private link for [!DNL Snowflake].
+
+**Request**
+
+The following request creates a private endpoint for [!DNL Snowflake]:
+
+>[!BEGINTABS]
+
+>[!TAB Template]
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/connectors/privateEndpoints/' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "{ENDPOINT_NAME}",
+    "subscriptionId": "{AZURE_SUBSCRIPTION_ID}",
+    "resourceGroupName": "{RESOURCE_GROUP_NAME}",
+    "resourceName": "{SNOWFLAKE_ENDPOINT_SERVICE_NAME}",
+    "fqdns": [
+      "{PRIVATELINK_ACCOUNT_URL}",
+      "{REGIONLESS_PRIVATELINK_ACCOUNT_URL}",
+      "{PRIVATELINK_OCSP_URL}"
+    ],
+    "connectionSpec": {
+      "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
+      "version": "1.0"
+    }
+  }'
+```
+
+>[!TAB Example]
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/connectors/privateEndpoints/' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "TEST_Snowflake_PE",
+    "subscriptionId": "4575fb04-6859-4781-8948-7f3a92dc06a3",
+    "resourceGroupName": "azwestus2-privatelink",
+    "resourceName": "sf-pvlinksvc-azwestus2",
+    "fqdns": [
+      "hf06619.west-us-2.privatelink.snowflakecomputing.com",
+      "adobe-segmentationdbint.privatelink.snowflakecomputing.com",
+      "ocsp.hf06619.west-us-2.privatelink.snowflakecomputing.com"
+    ],
+    "connectionSpec": {
+      "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
+      "version": "1.0"
+    }
+  }'
+```
+
+
+>[!ENDTABS]
+
+### Approve a private endpoint for [!DNL Azure Blob] and [!DNL Azure Data Lake Gen2]
+
+To approve a private endpoint request for the [!DNL Azure Blob] and [!DNL Azure Data Lake Gen2] sources, log in to the [!DNL Azure Portal]. In the left navigation, select **[!DNL Data storage]**, then go to the **[!DNL Security + networking]** tab and choose **[!DNL Networking]**. Next, select **[!DNL Private endpoints]** to see a list of private endpoints associated with your account and their current connection states. To approve a pending request, select the desired endpoint and click **[!DNL Approve]**.
+
+![The Azure portal with a list of pending private endpoints.](../../images/tutorials/private-links/azure.png)
