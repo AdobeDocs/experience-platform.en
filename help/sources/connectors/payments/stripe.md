@@ -1,14 +1,9 @@
 ---
 title: Stripe
 description: Learn how to ingest payments data from your Stripe account to Adobe Experience Platform
-badge: Beta
 exl-id: 191d217e-036d-491a-b7dd-abcad74625ba
 ---
 # [!DNL Stripe]
-
->[!NOTE]
->
->The [!DNL Stripe] source is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 Thousands of businesses of all sizes utilize [!DNL Stripe] both online and in person to accept payments, generate new sources of revenue, and expand globally with the help of Adobe Experience Platform, Adobe Commerce, and [!DNL Magento Open Source].
 

@@ -60,13 +60,15 @@ role: Admin,User
     * Adobe destinations{#adobe}
         * [Adobe destinations overview](./catalog/adobe/overview.md)
         * [Experience Cloud audiences](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
-        * [Marketo Engage connection](./catalog/adobe/marketo-engage.md)
+        * [Marketo Engage connection](./catalog/adobe/marketo-engage-connection.md)
+        * [(Legacy) (V2) Marketo Engage connection](./catalog/adobe/marketo-engage.md)
         * [(Beta) Marketo Engage Person Sync connection](./catalog/adobe/marketo-engage-person-sync.md)
         * [Marketo Measure Ultimate connection](./catalog/adobe/marketo-measure-ultimate.md)
         * [Experience Platform audience sharing](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
         * [Federated Audience Composition connection](https://www.adobe.com/go/destinations-federated-audience-composition)
     * Advertising destinations{#advertising}
-        * [(Beta) Acxiom Audience Distribution](./catalog/advertising/acxiom-audience-distribution.md)
+        * [(Beta) Acxiom Audience Connection](./catalog/advertising/acxiom-audience-connection.md)
+        * [(Beta) Acxiom RealID Audience Connection](./catalog/advertising/acxiom-real-id-audience-connection.md)
         * [Advertising destinations overview](./catalog/advertising/overview.md)
         * [Adobe Advertising Cloud connection](./catalog/advertising/adobe-advertising-cloud-connection.md)
         * [Adobe Advertising Cloud extension](./catalog/advertising/adobe-advertising-cloud.md)
@@ -173,6 +175,7 @@ role: Admin,User
         * [(API) Salesforce Marketing Cloud connection](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
         * [(Files) Salesforce Marketing Cloud connection](./catalog/email-marketing/salesforce-marketing-cloud.md)
         * [[!DNL Salesforce Marketing Cloud Account Engagement]](./catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md)
+        * [[!DNL (V2) Salesforce Marketing Cloud Account Engagement]](./catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2.md)
         * [SendGrid connection](./catalog/email-marketing/sendgrid.md)
     * Tag extensions {#launch-extensions}
         * [Tag extension overview](./catalog/launch-extensions/overview.md)
