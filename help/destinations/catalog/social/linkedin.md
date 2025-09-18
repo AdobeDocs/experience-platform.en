@@ -22,6 +22,11 @@ A software company organizes a conference and wants to keep in touch with partic
 
 [!DNL LinkedIn Matched Audiences] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
+>[!IMPORTANT]
+>
+>Starting with September 2025, the [!DNL LinkedIn Matched Audiences] destination no longer supports [!DNL IDFA] (Identifier for Advertisers) identities.  This change is due to LinkedIn's requirements, and is not related to any Experience Platform destination service upgrades.
+
+
 |Target Identity|Description|Considerations|
 |---|---|---|
 |GAID|Google Advertising ID|Select this target identity when your source identity is a GAID namespace.|
