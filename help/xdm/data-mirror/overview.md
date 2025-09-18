@@ -3,8 +3,13 @@ keywords: Experience Platform;data mirror;model-based schema;change data capture
 solution: Experience Platform
 title: Data Mirror overview
 description: Learn how Data Mirror enables row-level change ingestion from external databases into Adobe Experience Platform using model-based schemas with enforced uniqueness, relationships, and versioning.
+badge: Limited Availability
 ---
 # Data Mirror overview
+
+>[!AVAILABILITY]
+>
+>Currently, Data Mirror is only available based on your license or feature enablement. This includes Adobe Journey Optimizer **Campaign Orchestration**, **Data Distiller**, and **Real-Time CDP B2B** editions. Contact your Adobe representative for inclusion in this limited release.
 
 Data Mirror is a capability in Adobe Experience Platform that enables row-level change ingestion from external databases into the data lake using model-based schemas. This capability preserves data relationships, enforces uniqueness, and supports versioning without requiring upstream ETL processes.
 
@@ -40,10 +45,10 @@ Data Mirror addresses common data integration challenges and unlocks new platfor
 
 Data Mirror operates through model-based schemas (flexible data structures with enforced constraints), which differ from standard XDM schemas by providing explicit control over data structure and relationships. To implement Data Mirror:
 
-1. **Schema definition**: Create model-based schemas with required descriptors (metadata that define primary key, version, and optionally timestamp).
-2. **Relationship mapping**: Define connections between datasets using relationship descriptors.
-3. **Source configuration**: Set up change data capture (CDC) connections with cloud data warehouses or other sources.
-4. **Change ingestion**: Ingest row-level changes while maintaining uniqueness and applying updates in correct order.
+1. **Schema definition**: Create model-based schemas with required descriptors (metadata that define schema behavior and constraints).
+1. **Relationship mapping**: Define connections between datasets using relationship descriptors.
+2. **Source configuration**: Set up change data capture (CDC) connections with cloud data warehouses or other sources.
+3. **Change ingestion**: Ingest row-level changes while maintaining uniqueness and applying updates in correct order.
 
 Unlike standard ingestion approaches, Data Mirror respects your database model structure within the Experience Platform data lake, eliminating the need for external preprocessing.
 
@@ -84,7 +89,7 @@ Sync time-series events such as web clicks, support interactions, product views,
 
 ### B2B relationship modeling
 
-Maintain critical relationships such as account-to-contact, opportunity-to-account, subscription-to-account, and contact-to-region hierarchies across datasets. These preserved relationships support B2B workflows including segmentation, lead scoring, opportunity pipeline tracking, and coordinated multichannel outreach across teams or territories. Unlike standard B2B data ingestion that flattens relationships, Data Mirror preserves them natively using primary and foreign key descriptors (metadata that define schema behavior), enabling more accurate and reusable data modeling in-platform.
+Maintain critical relationships such as account-to-contact, opportunity-to-account, subscription-to-account, and contact-to-region hierarchies across datasets. These preserved relationships support B2B workflows including segmentation, lead scoring, opportunity pipeline tracking, and coordinated multichannel outreach across teams or territories. Unlike standard B2B data ingestion that flattens relationships, Data Mirror preserves them natively using primary and foreign key descriptors (metadata that define schema behavior and constraints), enabling more accurate and reusable data modeling in-platform.
 
 ### Subscription management
 
@@ -122,8 +127,8 @@ Choose your implementation approach based on your specific requirements:
 ### Data ingestion
 
 * **Change data capture**: [Enable CDC in source connections](../../sources/tutorials/api/change-data-capture.md)
-* **SQL ingestion**: Use Data Distiller for SQL-based data loading
-* **File upload**: Manual upload for batch processing workflows
+* **SQL ingestion**: Use Data Distiller to ingest data using SQL queries to write into relational datasets
+* **File upload**: Upload files manually when needed for non-source ingestion workflows, particularly useful for batch processing or one-time data loads
 
 ### Relationship and data management
 

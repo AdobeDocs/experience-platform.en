@@ -224,6 +224,33 @@ Model-based schemas that use Sources with change data capture can use the `_chan
 >
 >Deleting records through the Data Lifecycle UI does not affect the source system. To remove data from both locations, delete it in both Experience Platform and the source.
 
+### Additional deletion methods for model-based schemas
+
+Beyond the standard record deletion workflow, model-based schemas support additional methods for specific use cases:
+
+* **Safe-copy dataset approach**: Duplicate the production dataset and apply deletes to the copy for controlled testing or reconciliation before applying changes to production data.
+* **Deletes-only batch upload**: Upload a file containing only delete operations for targeted hygiene when you need to remove specific records without affecting other data.
+
+### Descriptor support for hygiene operations
+
+Model-based schema descriptors provide essential metadata for precise hygiene operations:
+
+* **Primary key descriptor**: Identifies records uniquely for targeted updates or deletes, ensuring the correct records are affected.
+* **Version descriptor**: Ensures deletes and updates apply in the correct chronological order, preventing out-of-sequence operations.
+* **Timestamp descriptor (time-series schemas)**: Aligns delete operations with event occurrence times rather than ingestion times.
+
+>[!NOTE]
+>
+>Hygiene processes operate at the dataset level. For profile-enabled datasets, additional profile workflows may be required to maintain consistency across Real-Time Customer Profile.
+
+### Scheduled retention for model-based schemas
+
+For automated hygiene based on data age rather than specific identities, see [Manage Experience Event dataset retention (TTL)](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) for scheduled row-level retention in the data lake. 
+
+>[!NOTE]
+>
+>Row-level expiration is only supported for datasets that use time-series behavior.
+
 ### Best practices for model-based record deletion
 
 To avoid unintentional re-ingestion and maintain data consistency across systems, follow these best practices:

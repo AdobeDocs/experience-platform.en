@@ -7,9 +7,9 @@ exl-id: 362f3811-7d1e-4f16-b45f-ce04f03798aa
 
 Use change data capture in Adobe Experience Platform sources to keep your source and destination systems synchronized in real time.
 
-Currently, Experience Platform supports **incremental data copy**, which ensures that newly created or updated records in the source system are periodically copied to the ingested datasets. This process relies on usage of the **timestamp column**, such as `LastModified` in order to track changes and capture **only the newly inserted or updated data**. However, this method does not account for deleted records, which can lead to data inconsistencies over time.
+Experience Platform currently supports **incremental data copy**, which periodically transfers newly created or updated records from the source system to the ingested datasets. This method relies on a **timestamp column** to track changes, but it does not detect deletions, which can lead to data inconsistencies over time.
 
-With change data capture, each flow captures and applies inserts, updates, and deletes. As a result, datasets remain aligned with the source system.
+In contrast, change data capture (CDC) captures and applies inserts, updates, and deletes in real time. This ensures that datasets stay fully aligned with the source system and provides a complete change history, beyond what incremental copy supports.
 
 You can use change data capture with the following sources:
 
@@ -57,6 +57,10 @@ For file-based sources ([!DNL Amazon S3], [!DNL Azure Blob], [!DNL Google Cloud 
 
 * `u`— upsert (default if omitted)  
 * `d`— delete  
+
+>[!IMPORTANT]
+>
+>For **file-based sources only**, each row in the data file must include a `_change_request_type` column with either `u` (upsert) or `d` (delete). Without this column, the system will not recognize the data as supporting change tracking. As a result, options such as the **Orchestrated Campaign** toggle will not appear, and the dataset cannot be selected for targeting.
 
 Follow the source-specific steps below.
 

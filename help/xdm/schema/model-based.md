@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;model-based schema; schema;Schema;xdm;experience data model;
 solution: Experience Platform
 title: Model-based schemas
-description: Learn about model-based schemas in Adobe Experience Platform, including features, required fields, relationships, ingestion methods, and limitations.
+description: Learn about model-based schemas in Adobe Experience Platform, including features, required fields, relationships, and limitations.
 ---
 # Model-based schemas
 
@@ -16,11 +16,9 @@ Use model-based schemas to:
 * Avoid duplicating schema structures across applications by supporting multiple data models.
 * Bypass union schema constraints to streamline onboarding, reduce schema bloat, and simplify evolution.
 
-Use this modeling approach for use cases such as change data capture, referential joins across datasets, and multi-entity campaign orchestration. With model-based schemas you maintain explicit control over schema evolution, field structure, and data governance.
-
 >[!AVAILABILITY]
 >
->Currently, model-based schemas are **record-based only** and available based on your license or feature enablement. This includes Adobe Journey Optimizer **Campaign Orchestration**, **Data Distiller**, and **Real-Time CDP B2B** editions.
+>Currently, model-based schemas are available based on your license or feature enablement. This includes Adobe Journey Optimizer **Campaign Orchestration**, **Data Distiller**, and **Real-Time CDP B2B** editions. Contact your Adobe representative for inclusion in this limited release.
 
 ## How model-based schemas differ from standard XDM schemas
 
@@ -34,22 +32,15 @@ Model-based schemas remove union schema dependencies, eliminate auto-evolution f
 
 Use the following capabilities to model structured data in the data lake while maintaining governance, integrity, and interoperability.
 
-* **Schema behavior support**: Currently, model-based schemas support:
+* **Schema behavior support**: Configure with:
   * **Record behavior**: Captures the current state of an entity, such as a customer, account, or campaign.
-
-  >[!NOTE]
-  >
-  > Support for **Time-series behavior** is not currently available in the UI or API.
-
+  * **Time-series behavior**: Captures events and the time they occur, useful for tracking sequences or changes over time.
 * **Primary key enforcement**: Define a primary key to uniquely identify each record and prevent duplicates during ingestion.
 * **Version control**: Use a **version identifier** (a descriptor) to ensure updates are applied in the correct order, even if records arrive out of sequence.
 * **Relationship mapping**: Create one-to-one or many-to-one relationships between model-based schemas or between model-based and standard schemas. Relationship definitions are stored as descriptors to enable efficient joins.
 * **Simplified evolution**: Model-based schemas do not participate in union views and are not updated when shared field groups change, preventing unexpected downstream changes.
 * **Flexible field definition**: Add fields directly without tenant-id namespacing. Model-based schemas do not support XDM field groups.
 * **No dependency on union schemas**: Improves query performance and reduces the operational overhead of managing global schema views.
-* **Schema behavior support**: Configure with:
-  * **Record behavior**: Captures the current state of an entity, such as a customer, account, or campaign.
-  * **Time-series behavior**: Captures events and the time they occur, useful for tracking sequences or changes over time.
 * **Event-time ordering**: For time-series schemas, use a **timestamp identifier** to order events by occurrence time instead of ingestion time.
 
 ## Required fields
@@ -174,53 +165,11 @@ For a list of relationship descriptor types and syntax, see the [descriptors API
 >
 > Model-based schemas can link to standard schemas, but cannot link to ad-hoc schemas.
 
-## Ingestion methods {#ingestion-methods}
+## Data hygiene support {#data-hygiene-support}
 
-Use [change data capture](../../sources/tutorials/api/change-data-capture.md) in your data connections to keep relational datasets synchronized with source systems. You can also ingest data using SQL via Data Distiller or upload files manually. Choose the path that aligns with your operational model, then apply the change data capture rules consistently.
+<!-- Add intro sentence to integrate it into the existing limitations section. -->
 
-Change data capture in Experience Platform captures and applies all changes, including inserts, updates, and deletes, in real time, ensuring full alignment between source and destination data. Unlike incremental copy, which tracks only new or updated records using a timestamp column (such as `LastModified`) and cannot detect deletions, change data capture provides a complete change history.
-
-Supported ingestion methods include:
-
-* **Sources with change data capture** – Include a `_change_request_type` column in the source data to indicate how each row should be processed:
-  * `U` — upsert (default if column is missing)  
-  * `D` — delete  
-    This column is evaluated during ingestion only and is not stored in XDM or mapped to XDM fields.
-
->[!IMPORTANT]
->
-> For **file-based sources only**, each row in the data file must include a `_change_request_type` column with either `U` (upsert) or `D` (delete). Without this column, the system will not recognize the data as supporting change tracking. As a result, options such as the **Orchestrated Campaign** toggle will not appear, and the dataset cannot be selected for targeting.
-
-For step-by-step instructions on enabling change data capture in the Sources workflow, see [Enable change data capture for source connections](../../sources/tutorials/api/change-data-capture.md).
-
-* **Data Distiller**: Ingest using SQL queries to write into relational datasets.
-* **Local file upload**: Upload files manually when needed for non-source ingestion workflows.
-
-## Data hygiene considerations {#data-hygiene-considerations}
-
-When you need to remove records from relational datasets while keeping source systems intact, select a method that aligns with your governance and reconciliation processes. Then apply the relevant descriptors to ensure deterministic behavior.
-
-Use these methods to maintain accurate records in the data lake without unwanted source data deletion:
-
-* **Change data capture delete operation**: Include `_change_request_type` with `D` in the incoming data to delete matching records.
-* **Safe-copy dataset**: Duplicate the production dataset and apply deletes to the copy for controlled testing or reconciliation.
-* **Deletes-only batch upload**: Upload a file containing only deletes for targeted hygiene.
-
-The following list of descriptors indicate their relevance to hygiene operations:
-
-* **Primary key descriptor**: Identifies records for updates or deletes.
-* **Version descriptor**: Ensures deletes and updates apply in the correct order.
-* **Timestamp descriptor (time-series)**: Aligns deletes with event occurrence times.
-
-<!-- Q)
-Madeline commented:
-"We added the ability for there to be non-primary Identity descriptors for model-based schemas and I heard that was to serve the needs of hygiene. Not sure of the details, apologies" - can anyone clarify? -->
-
->[!NOTE]
->
->Hygiene processes operate at the dataset level. For profile-enabled datasets, additional profile workflows may be required.
-
-To delete records associated with an identity, create a record delete work order. For complete hygiene instructions, see Record Delete [UI](../../hygiene/ui/record-delete.md) and [API documentation](../../hygiene/api/workorder.md). For scheduled row-level retention in the data lake, see [Manage Experience Event dataset retention (TTL)](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md).
+Primary key, version, and timestamp descriptors enable precise record identification for hygiene operations. For detailed hygiene guidance, see [Deleting records from model-based datasets](../../hygiene/ui/record-delete.md#model-based-record-delete).
 
 ## Limitations and considerations {#limitations}
 
