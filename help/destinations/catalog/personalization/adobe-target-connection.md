@@ -120,10 +120,10 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 
     >[!IMPORTANT]
     >
-    >**Datastream uniqueness per sandbox**: The combination of datastream ID and sandbox name must be unique for Adobe Target destination connections within an IMS Org. This means:
+    >**Datastream uniqueness across organization**: The combination of datastream ID and sandbox name must be unique for Adobe Target destination connections within an IMS Org. This means:
     >
-    >* You can use the same datastream ID for different Adobe Target destination connections as long as they are in different sandboxes
-    >* You cannot use the same datastream ID for multiple Adobe Target destination connections within the same sandbox
+    >* The same combination of datastream ID + sandbox name cannot be used for multiple Adobe Target destination connections across the entire organization
+    >* You can use the same datastream ID for different destination connections as long as the connections are on different sandboxes
     >* This rule applies to all datastream selections, including when you select **[!UICONTROL None]**
 
     * **[!UICONTROL None]**: Select this option if you need to configure Adobe Target personalization but you cannot implement the [Experience Platform Web SDK](/help/web-sdk/home.md). When using this option, audiences exported from Experience Platform to Target only support next-session personalization, and edge segmentation is disabled. Reference the table in the [supported use cases](#supported-use-cases) section for a comparison of available use cases per implementation type.
