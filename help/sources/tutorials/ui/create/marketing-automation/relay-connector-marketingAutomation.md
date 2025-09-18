@@ -57,6 +57,8 @@ You can map your source fields to XDM schema fields using auto-map functionality
 
 ![mapping](../../../../images/tutorials/create/relay-connector/mapping.jpg)
 
+Refer to the *Relay Network* [Push Events](https://docs.relaynetwork.com/docs/push-events) documentation to understand which events are available and the values that Relay will send to the Source to build your **Experience Events Schema**.
+
 ### Review
 
 Finally, review all configurations including your **source, dataset, and mappings**. When finished, select **Finish** to create the dataflow.
@@ -68,6 +70,8 @@ Finally, review all configurations including your **source, dataset, and mapping
 After creating the dataflow, the *streaming endpoint URL* and other related properties can be found on the right side of the page within the **Properties** section.
 
 ![properties](../../../../images/tutorials/create/relay-connector/streaming%20endpoint.jpg)
+
+These values should be used to configure the webhook within **Relay console**. Please refer to the Relay's [Configuring the Push API](https://docs.relaynetwork.com/docs/configuring-the-push-api) documentation on how to configure the push.
 
 ## Additional resources
 
