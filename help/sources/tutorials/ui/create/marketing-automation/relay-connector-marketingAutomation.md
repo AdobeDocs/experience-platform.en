@@ -7,11 +7,13 @@ hidefromtoc: true
 ---
 # Create a *Relay Connector* source connection in the UI
 
+*Relay Connector helps companies create more educated, loyal, and profitable customers by delivering personalized experiences at the right points in your customers' journey.*
+
 This tutorial provides steps for creating a *Relay Connector* source using the Platform user interface.
 
 ## Overview
 
-*Relay Connector helps companies create more educated, loyal, and profitable customers by delivering personalized experiences at the right points in your customers' journey.*
+*Relay Connector helps to create an inbound connection to stream Events from your Relay Network integration into Adobe Experience Platform.*
 
 >[!IMPORTANT]
 >
@@ -31,8 +33,7 @@ The **[!UICONTROL Connect Relay Connector source]** page appears.
 
 ### Select data
 
-* Browse or specify the Source data schema. 
-* Upload sample JSON file to define source schema.
+Use the *Select data* interface to browse or specify the source data schema. Alternatively, you can upload a sample JSON file to define the source schema.
 
 >[!NOTE] 
 >
@@ -46,27 +47,27 @@ After the data is uploaded, the sample is visible in the **Preview sample data**
 
 ### Dataflow details
 
-**1.** Provide a **name** and **description** for the dataflow.
-
-**2.** Select the **target dataset** (either create a new dataset or use an existing one).
+Using the *Dataflow details* interface, provide a **name** and an **optional description** for your dataflow. Next, select the **target dataset** that you want to use. You can either create a new dataset or use an existing dataset.
 
 ![dataflow details](../../../../images/tutorials/create/relay-connector/dataflow.jpg)
 
 ### Mapping
 
-* Map the source fields → XDM schema fields.
-* You can use auto-map (based on field names) or create custom mappings.
-* Apply transformations (concatenate, format, rename, etc.) if needed.
+You can map your source fields to XDM schema fields using auto-map functionality that matches fields based on their names, or create custom mappings for more precise control. If needed, you can also apply transformations such as concatenation, formatting, or renaming to ensure your data fits perfectly into the target schema.
 
 ![mapping](../../../../images/tutorials/create/relay-connector/mapping.jpg)
 
 ### Review
 
-**1.** Review all configurations: **source, dataset, mapping**.
-
-**2.** Confirm and activate the dataflow.
+Finally, review all configurations including your **source, dataset, and mappings**. When finished, select **Finish** to create the dataflow.
 
 ![review](../../../../images/tutorials/create/relay-connector/review.jpg)
+
+### Properties
+
+After creating the dataflow, the *streaming endpoint URL* and other related properties can be found on the right side of the page within the **Properties** section.
+
+![properties](../../../../images/tutorials/create/relay-connector/streaming%20endpoint.jpg)
 
 ## Additional resources
 
