@@ -22,10 +22,14 @@ A software company organizes a conference and wants to keep in touch with partic
 
 [!DNL LinkedIn Matched Audiences] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
+>[!IMPORTANT]
+>
+>Starting with September 2025, the [!DNL LinkedIn Matched Audiences] destination no longer supports [!DNL IDFA] (Identifier for Advertisers) identities.  This change is due to LinkedIn's requirements, and is not related to any Experience Platform destination service upgrades.
+
+
 |Target Identity|Description|Considerations|
 |---|---|---|
 |GAID|Google Advertising ID|Select this target identity when your source identity is a GAID namespace.|
-|IDFA|Apple ID for Advertisers|Select this target identity when your source identity is an IDFA namespace.|
 |email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed emails, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
 
 {style="table-layout:auto"}
@@ -115,7 +119,9 @@ The video below also demonstrates the steps to configure a [!DNL LinkedIn Matche
 
 ### Refresh authentication credentials {#refresh-authentication-credentials}
 
-LinkedIn tokens expire every 60 days. Once the token is expired, data exports to the destination stop working. To prevent this situation, reauthenticate by performing the following steps:
+LinkedIn tokens expire every 60 days. You can monitor your token expiration dates from the **[!UICONTROL Account expiration date]** column in either the **[[!UICONTROL Accounts]](../../ui/destinations-workspace.md#accounts)** or the **[[!UICONTROL Browse]](../../ui/destinations-workspace.md#browse)** tabs.
+
+Once the token is expired, data exports to the destination stop working. To prevent this situation, reauthenticate by performing the following steps:
 
 1. Navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**
 2. (Optional) Use the available filters on the page to display LinkedIn accounts only.

@@ -2,8 +2,6 @@
 title: Extend dataset export schedules for dataflows created prior to November 2024
 description: Learn how to extend the export schedule for dataset export dataflows created prior to November 2024 that will stop working on September 1st, 2025.
 type: Tutorial
-hide: true
-hidefromtoc: true
 exl-id: a756886b-3f4b-4427-bd26-817221ba68aa
 ---
 # Extend dataset export schedules for dataflows created prior to November 2024
@@ -83,8 +81,6 @@ Now you can modify the export schedule to extend beyond September 1st, 2025.
 
 ## What happens if I miss the September 1st, 2025 deadline? {#missed-deadline}
 
-If your dataset export dataflows expire on September 1st, 2025 and you haven't extended their schedules, there is a **30 days grace period** where you can contact Adobe to re-enable your dataflows without any data loss. This includes data that was not exported between September 1st and the date when you contacted Adobe.
+If your dataset export dataflows expired on September 1st, 2025 and you still want to extend them, follow the steps in the sections above to extend their schedule.
 
->[!IMPORTANT]
->
->While Adobe provides this grace period, we strongly recommend extending your schedules before the September 1st, 2025 deadline to ensure uninterrupted data exports and avoid any potential service disruptions.
+If you extend the export schedule within 30-days (or less if the [time-to-live set on the exported dataset](/help/catalog/datasets/experience-event-dataset-retention-ttl-guide.md) is less than 30 days), you can still get a backfill of the data that was not exported between September 1st and the date you re-enable the export. When setting a new end time, there will *not* be a full file export first. Instead, exports will continue incrementally from where they left off on September 1st.

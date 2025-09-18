@@ -1,8 +1,6 @@
 ---
 title: Experience Platform Pre-Release Notes
 description: A preview of the latest release notes for Adobe Experience Platform.
-hide: true
-hidefromtoc: true
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
 ---
 # Adobe Experience Platform pre-release notes
@@ -21,102 +19,90 @@ exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
 >- [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
-**Release date: July 29, 2025**
+**Release date: September 2025**
 
 New features and updates to existing features in Adobe Experience Platform:
 
+- [AI Assistant](#ai-assistant)
+- [Alerts](#alerts)
 - [Destinations](#destinations)
-- [Data Ingestion](#ingestion)
+- [Experience Data Model (XDM)](#xdm)
 - [Query Service](#query-service)
-- [Real-Time CDP B2B Edition](#b2b)
-- [Sandboxes](#sandboxes)
-- [Segmentation Service](#segmentation)
+- [Real-Time Customer Profile](#profile)
+- [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
+
+## AI Assistant {#ai-assistant}
+
+Adobe Experience Platform AI Assistant is a conversational experience that you can use to accelerate and optimize workflows across Adobe Experience Cloud applications.
+
+**New features**
+
+| Feature | Description |
+| --- | --- |
+| Agent Orchestrator | Adobe Experience Platform Agent Orchestrator is the intelligent layer powering AI Assistant. When you ask questions or request help, Agent Orchestrator automatically calls upon specialized agents to get you the right answers. Agent Orchestrator remembers your conversation history, enabling you to build on previous questions naturally without repeating context, and combines insights from multiple agents to present you with clear, unified responses. |
+| Audience Agent | The Audience Agent lets you view insights about audiences, including detecting significant audience size changes, detecting duplicate audiences, explore your audience inventory, and retrieve your audiences' size. |
+
+For more information, read the [AI Assistant overview](../ai-assistant/home.md).
+
+## Alerts {#alerts}
+
+Experience Platform allows you to subscribe to event-based alerts for various Experience Platform activities. You can subscribe to different alert rules through the [!UICONTROL Alerts] tab in the Experience Platform user interface, and can choose to receive alert messages within the UI itself or through email notifications.
+
+**New features**
+
+| Feature | Description |
+| --- | --- |
+| Streaming profile ingestion alerts | You can now subscribe to two new alerts for streaming ingestion on a dataflow level: <ul><li>Streaming Ingestion Failure Rate Exceeded</li><li>Streaming Ingestion Skipped Rate Exceeded</li></ul> In-platform or email alerts will notify you when the thresholds are exceeded for the default threshold, or a custom threshold you define. For more information, read the [Profile alerts](../observability/alerts/rules.md#profile) guide. |
+
+{style="table-layout:auto"}
+
+For more information about alerts, read the [[!DNL Observability Insights] overview](../observability/home.md).
 
 ## Destinations {#destinations}
 
-[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
-**Updated destinations**
+**New or updated destinations**
 
 | Destination | Description |
 | --- | --- |
-| Marketo Destination Cards Consolidation | Marketo V2 and Marketo Engage Person Sync destination cards have been consolidated into a single, unified destination card. This consolidation simplifies the destination selection process and provides a more streamlined experience for Marketo integrations. |
+| [!BADGE Beta]{type=Informative} [!DNL Snowflake Batch] connector | A new [!DNL Snowflake Batch] connector is now available, providing an alternative to the streaming connector for specific use cases. |
+| [!DNL Adform] destination | [!DNL Adform] is a leading provider of programmatic media buying and selling solutions. By connecting Adform to the Adobe Experience Platform, you can activate your first party audiences through Adform, based on the Experience Cloud ID (ECID). |
+| [!DNL Data Landing Zone] encryption support | You can now attach RSA-formatted public keys to encrypt your exported files, giving you the same level of security that other cloud storage destinations provide for your sensitive information. |
+| Authentication expiration details for [!DNL Pinterest] destinations | Authentication expiration information for [!DNL Pinterest] destinations is now visible directly in the Experience Platform interface, so you can see when your authentication will expire and renew it before it causes any disruptions to your dataflows. You can monitor your token expiration dates from the **[!UICONTROL Account expiration date]** column in either the **[[!UICONTROL Accounts]](../destinations/ui/destinations-workspace.md#accounts)** or the **[[!UICONTROL Browse]](../destinations/ui/destinations-workspace.md#browse)** tabs.|
 
 **New or updated functionality**
 
 | Feature | Description |
 | --- | --- |
-| Enhanced datastream information for edge destinations | Improved right-rail information for Adobe Target and Custom Personalization destinations now displays the datastream name, providing clearer visibility into associated datastream configurations and reducing confusion when reviewing existing dataflows. The **[!UICONTROL Datastream ID]** selector in the destination configuration screen has been updated to **[!UICONTROL Datastream]** for improved clarity in the user interface. |
-| Marketing actions visibility in destination selection | Marketing actions are now displayed in the right rail of the destination **[!UICONTROL Browse]** tab and in the **[!UICONTROL Dataflow runs]** page, providing immediate visibility of marketing action changes without requiring navigation to the view page. This improvement enhances the user experience by making it easier to verify marketing action configurations during destination setup. |
-|(Limited beta) Edit marketing actions for destinations | You can now edit marketing actions for existing destinations. This functionality is in limited beta. To request access to it, contact your Adobe representative. |
-|(Limited beta) Edit destinations | You can now edit your destination configuration after creating it. This functionality is in limited beta. To request access to it, contact your Adobe representative. |
-| Account names and descriptions for destination connections | You can now add account names and descriptions when connecting to destinations, enabling better management of destinations with multiple accounts. |
-
-**Fixes**
-
-| Issue | Description |
-| --- | --- |
-| Categories scroll functionality | Fixed an issue where the categories side menu in the destinations and sources catalog did not scroll properly on mouseover, improving navigation usability for users browsing destination categories. |
+| Enhanced destination management capabilities in the Experience Platform UI | Improve your destination management workflow with new sorting capabilities across the [[!UICONTROL Browse]](../destinations/ui/destinations-workspace.md#browse) and [[!UICONTROL Accounts]](../destinations/ui/destinations-workspace.md#accounts) tabs. You can now also see a visual indicator when your account authentication is about to expire. |
 
 For more information, read the [Destinations overview](../destinations/home.md).
 
-## Data Ingestion {#ingestion}
+## Experience Data Model (XDM) {#xdm}
 
-Experience Platform provides a comprehensive data ingestion framework that supports both batch and streaming data ingestion from various sources.
+XDM is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
 
 **New features**
 
 | Feature | Description |
 | ------- | ----------- |
-| Support for monitoring streaming profile ingestion | Real-time monitoring for streaming profile ingestion is now available, providing transparency into throughput, latency, and data quality metrics. This supports proactive alerting and actionable insights to help data engineers identify capacity violations and ingestion issues. |
+| Model-based schemas | Simplify your data modeling with Model-Based Schemas. You can now create schemas more easily with comprehensive how-to examples and guidance. This feature is currently available to Campaign Orchestration license holders and will expand to Data Distiller customers at GA, making data modeling more accessible and efficient. The feature includes support for time-series data and change data capture capabilities. |
 
-For more information, read the [data ingestion overview](../ingestion/home.md).
+For more information, read the [XDM overview](../xdm/home.md).
 
-## Query Service {#query-service}
+## Real-Time Customer Profile {#profile}
 
-Adobe Experience Platform Query Service provides a robust SQL interface for data analysis and exploration across the platform.
+Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-Time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. Profile allows you to consolidate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
 
-**New or updated features**
-
-| Feature | Description |
-| ------- | ----------- |
-| Enhanced session management | Data Distiller now includes enhanced session management capabilities, providing better control over user sessions and improved performance monitoring across development and production environments. |
-| Support for non-expiring credentials password character restrictions | Data Distiller now supports non-expiring credentials with specific character restrictions. While passwords require at least one number, one lowercase letter, one uppercase letter, and one special character, the dollar sign ($) is not supported. Recommended special characters include `!, @, #, ^, or &`. |
-| Improved performance consistency across environments | Data Distiller performance is now consistent between development and production sandboxes, with similar backend resources available in both environments. Compute hours consumed may vary based on data volume and available backend compute resources at processing time. |
-
-For more information, read the [Query Service overview](../query-service/home.md).
-
-## Real-Time CDP B2B Edition {#b2b}
-
-Real-Time CDP B2B Edition provides comprehensive B2B customer data management capabilities, enabling organizations to build unified customer profiles, create sophisticated B2B audiences, and activate data across various marketing channels.
-
-**New or updated features**
+**Updated features**
 
 | Feature | Description |
 | ------- | ----------- |
-| B2B architecture upgrade | Experience Platform is upgrading to a new B2B architecture that introduces significant improvements to multi-entity audiences with B2B attributes. This upgrade consolidates merge policy support, enhances audience counts accuracy, and improves entity resolution capabilities. |
-| Merge policy Consolidation for multi-entity Audiences | Multi-entity audiences with B2B attributes now support only a single merge policy — the default merge policy — instead of supporting multiple merge policies. This change ensures consistent audience composition and simplifies merge logic management. |
-| Updates to account audience constraints | Account audiences no longer have the previous constraints of a 30 day lookback window for Experience Events, custom entity restrictions, or limitations on using `inSegment` events. These updates provide greater flexibility in creating complex B2B audience definitions. |
-| Enhanced audience counts for B2B entities | Audience size estimates for audiences with B2B entities like Accounts and Opportunities are now exact, based on real-time segmentation results. This improvement provides more accurate and reliable estimates for audiences involving complex B2B relationships. |
-| Account snapshots for audience membership | Audience membership details are now included for Account entities in snapshot exports, enabling access to account-level audience status, timestamps, and membership indicators. This brings feature parity between Profile (Person) and Account segmentation models. |
-| Sandbox tooling changes for multi-entity audiences | Importing multi-entity audiences with B2B entities and Experience Events exported before migration is no longer supported. These audiences will fail import validation and cannot be automatically converted to the new architecture. Audiences must be re-exported after migration before importing into target sandboxes. |
-| B2B Entity API deprecations | Audience creation via API for B2B entities (Account, Opportunity, Account-Person Relation, Opportunity-Person Relation, Campaign, Campaign Member, Marketing List, and Marketing List Member) is now deprecated. Additionally, Profile Access API lookup and delete operations for these B2B entities are also deprecated. |
-| Updates to identity namespace for Entity Resolution  | Account and Opportunity entities now use time-precedence based merging with specific identity namespaces (`b2b_account` for Account, `b2b_opportunity` for Opportunity). All other entities are unified with primary identity overlaps merged using time-precedence based merging. |
+| Profile viewer enhancements | The September 2025 release includes the following enhancements to the Profile viewer. <ul><li>**Combined view**: Attribute, events, and insights have been combined into a single view.</li><li>**AI-generated insights**: The profile details page now displays AI-generated insights, letting you know details generated from your profile. These insights can include information such as propensity scores and trend analysis.</li><li>**Style update**: The profile details page has been visually refreshed.</li><li>**Browse**: You can now explore your profiles through an interactive card-based carousel with search and customization.</li></ul> |
 
-For more information, read the [Real-Time CDP B2B Edition overview](../rtcdp/b2b-overview.md).
-
-## Sandboxes {#sandboxes}
-
-Experience Platform is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater for the development, testing, and deployment of these applications while ensuring operational compliance.
-
-**New or updated features**
-
-| Feature | Description |
-| --- | --- |
-| Changes to multi-entity audience imports | Sandbox tooling has been updated to support the new B2B architecture upgrade. Multi-entity audiences containing B2B entities and Experience Events must be re-exported after the architecture upgrade before being imported into target sandboxes via sandbox tooling. Importing pre-upgrade versions will fail validation. |
-
-For more information on sandboxes, read the [sandboxes overview](../sandboxes/home.md).
+For more information, read the [Real-Time Customer Profile overview](../profile/home.md).
 
 ## Segmentation Service {#segmentation-service}
 
@@ -126,23 +112,25 @@ For more information on sandboxes, read the [sandboxes overview](../sandboxes/ho
 
 | Feature | Description |
 | ------- | ----------- |
-| External audience API | You can use the external audiences API to programmatically import externally generated audiences into Adobe Experience Platform. |
+| Account audiences with experience events deprecation | After the B2B architecture upgrade, account audiences with experience events are no longer supported. Instead, use the new segment of segments approach: create a People audience with Experience Events, then refer to that People audience when creating an Account Audience. This provides a more flexible and maintainable approach to B2B audience creation. |
+
+**Important updates**
+
+| Update | Description |
+| ------- | ----------- |
+| Audience estimates auto-refresh revert | The auto-refresh enhancement for audience estimates has been reverted. Audience estimates will continue to be generated within Segment Builder, but the automatic refresh functionality has been removed. |
+
+For more information, read the [[!DNL Segmentation Service] overview](../segmentation/home.md).
 
 ## Sources {#sources}
 
 Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 
-**New sources**
-
-| Source | Description |
-| --- | --- |
-| Support for [!DNL Didomi] (Streaming SDK) | The [!DNL Didomi] source connector enables you to ingest consent management data from [!DNL Didomi]'s platform, supporting compliance with privacy regulations and consent-based marketing strategies. |
-
-**New or updated functionality**
+**New or updated features**
 
 | Feature | Description |
 | --- | --- |
-| Support for change data capture in select sources | You can now create dataflows that enable change data capture for incremental ingestion using source connectors. This capability allows customers to bring change data type for incremental ingestion, improving data freshness and reducing processing overhead. |
-| Support for soft deletion of records in [!DNL Salesforce] | The [!DNL Salesforce] source now supports including soft deleted records through an optional `includeDeletedObjects` parameter. When set to true, customers can include soft deleted records in their [!DNL Salesforce] queries and bring these records into Experience Platform. |
+| New sources in General Availability | The following sources are now in General Availability: Several source connectors have been updated from Beta to GA: <ul><li>[Acxiom Data Ingestion](../sources/connectors/data-partners/acxiom-data-ingestion.md)</li><li>[Acxiom Prospect Data Ingestion](../sources/connectors/data-partners/acxiom-prospecting-data-import.md)</li><li>[Merkury Enterprise](../sources/connectors/data-partners/merkury.md)</li><li>[SAP Commerce](../sources/connectors/ecommerce/sap-commerce.md)</li></ul>. These sources are now fully supported and ready for production use. |
+| [!DNL Snowflake] key-pair authentication support | Enhanced security for Snowflake connections with support for key-pair authentication. Basic authentication (username/password) will be deprecated by November 2025, so customers are encouraged to migrate to key-pair authentication for improved security. |
 
 For more information, read the [sources overview](../sources/home.md).
