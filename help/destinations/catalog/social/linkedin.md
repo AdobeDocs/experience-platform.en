@@ -8,15 +8,6 @@ exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
 
 ## Overview {#overview}
 
->[!IMPORTANT]
->
->* Starting September 9, 2025, you can see two **[!DNL LinkedIn Matched Audiences]** cards side-by-side in the destinations catalog. This is due to an internal upgrade to the destinations service. The existing **[!DNL LinkedIn Matched Audiences]** destination connector has been renamed to **[!UICONTROL (Deprecated) LinkedIn Matched Audiences]** and a new card with the name **[!UICONTROL LinkedIn Matched Audiences]** is now available to you. 
->* Use the new **[!UICONTROL LinkedIn Matched Audiences]** connection in the catalog for new activation data flows. If you have any active dataflows to the **[!UICONTROL (Deprecated) LinkedIn Matched Audiences]** destination, they will be updated automatically, so no action is required from you.
->* The new **[!UICONTROL LinkedIn Matched Audiences]** connection no longer supports [!DNL IDFA] identities.
->* If you are creating dataflows through the [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/), you must update your [!DNL flow spec ID] and [!DNL connection spec ID] to the following values:
->   * Flow spec ID: `963604d1-811d-4ce4-ac66-1fc78bde7c42`
->   * Connection spec ID: `393a7ce1-e527-4fdb-8d99-0b11dc910279`
-
 Activate profiles for your [!DNL LinkedIn] campaigns for audience targeting, personalization, and suppression, based on hashed emails and mobile IDs.
 
 ![LinkedIn destination in the Adobe Experience Platform UI](../../assets/catalog/social/linkedin/catalog.png)
@@ -30,6 +21,11 @@ A software company organizes a conference and wants to keep in touch with partic
 ## Supported identities {#supported-identities}
 
 [!DNL LinkedIn Matched Audiences] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
+
+>[!IMPORTANT]
+>
+>Starting with September 2025, the [!DNL LinkedIn Matched Audiences] destination no longer supports [!DNL IDFA] (Identifier for Advertisers) identities.  This change is due to LinkedIn's requirements, and is not related to any Experience Platform destination service upgrades.
+
 
 |Target Identity|Description|Considerations|
 |---|---|---|
