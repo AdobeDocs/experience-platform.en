@@ -401,7 +401,7 @@ More information about Data Distiller can be found in the [building audiences us
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_importaudience_dataexpiration"
 >title="Data expiration"
->abstract="The number of days that the audience membership will expire. This value can be set from 1 day to 180 days."
+>abstract="The number of days that the audience membership will expire. This value can be set from 1 day to 180 days. Once the audience membership expires, evaluation will stop and all the profiles will exit the audience membership. You can refresh the expiration window when there are less than 7 days remaining in audience membership. However, once there are 0 days remaining, you will not be able to refresh the expiration window."
 
 >[!IMPORTANT]
 >
