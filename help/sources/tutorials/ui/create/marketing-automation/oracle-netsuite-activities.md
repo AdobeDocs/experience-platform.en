@@ -1,16 +1,9 @@
 ---
 title: Create a [!DNL Oracle NetSuite Activities] source connection in the UI
 description: Learn how to create a Oracle NetSuite Activities source connection using the Adobe Experience Platform UI.
-hide: true
-hidefromtoc: true
-badge: Beta
 exl-id: 99ef0b50-c8d6-48d6-895f-46b7ade47520
 ---
 # Create a [!DNL Oracle NetSuite Activities] source connection in the UI
-
->[!NOTE]
->
->The [!DNL Oracle NetSuite Activities] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 Read the following tutorial to learn how to bring events data from your [!DNL Oracle NetSuite Activities] account to Adobe Experience Platform in the UI.
 

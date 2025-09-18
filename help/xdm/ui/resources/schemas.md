@@ -233,27 +233,43 @@ After adding a field group to a schema, you can optionally [remove existing fiel
 
 ### Remove fields added from field groups {#remove-fields}
 
-After you have added a field group to a schema, you can remove any fields that you do not need. 
+Once you've added a field group to a schema, you can either remove fields globally from the field group or hide them locally from the current schema. Understanding the difference between these actions is critical to avoid unintended schema changes.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Removing fields from a field group only affects the schema being worked on and does not affect the field group itself. If you remove fields in one schema, those fields are still available in all other schemas that employ the same field group.
+>Selecting **[!UICONTROL Remove]** deletes the field from the field group itself, affecting *all* schemas that use that field group.
+>Do not use this option unless you want to **remove the field from every schema that includes the field group**.
 
-In the following example, the standard field group **[!UICONTROL Demographic Details]** has been added to a schema. To remove a single field such as `taxId`, select the field in the canvas and then select **[!UICONTROL Remove]** in the right rail.
+To delete a field from the field group, select it in the canvas and select **[!UICONTROL Remove]** in the right rail. This example shows the `taxId` field from the **[!UICONTROL Demographic Details]** group.
 
 ![The [!DNL Schema Editor] with [!UICONTROL Remove] highlighted. This action removes a single field.](../../images/ui/resources/schemas/remove-single-field.png)
 
-If there are multiple fields you wish to remove, you can manage the field group as a whole. Select a field belonging to the group in the canvas, then select **[!UICONTROL Manage related fields]** in the right rail.
+To hide multiple fields from a schema without removing them from the field group itself, use the **[!UICONTROL Manage related fields]** option. Select any field from the group in the canvas, then select **[!UICONTROL Manage related fields]** in the right rail.
 
 ![The [!DNL Schema Editor] with [!UICONTROL Manage related fields] highlighted.](../../images/ui/resources/schemas/manage-related-fields.png)
 
-A dialog appears showing the structure of the field group in question. From here you can use the provided checkboxes to select or deselect the fields that you require. When you are satisfied, select **[!UICONTROL Confirm]**.
+A dialog appears showing the structure of the field group. Use the checkboxes to select or deselect the fields you want to include. 
 
 ![The [!UICONTROL Manage related fields] dialog with selected fields and [!UICONTROL Confirm] highlighted.](../../images/ui/resources/schemas/select-fields.png)
 
-The canvas reappears with only the selected fields present in the schema structure.
+Select **[!UICONTROL Confirm]** to update the canvas and reflect your selected fields.
+
 
 ![Fields added](../../images/ui/resources/schemas/fields-added.png)
+
+### Field behavior when removing or deprecating fields {#field-removal-deprecation-behavior}
+
+Use the table below to understand the scope of each action.
+
+| Action                   | Applies to current schema only | Modifies field group | Affects other schemas | Description |
+|--------------------------|--------------------------------|----------------------|-----------------------|-------------|
+| **Remove field**         | No                             | Yes                  | Yes                    | Deletes the field from the field group. This removes it from all schemas using that group. |
+| **Manage related fields**| Yes                            | No                   | No                     | Hides fields from the current schema only. The field group remains unchanged. |
+| **Deprecate field**      | No                             | Yes                  | Yes                    | Marks the field as deprecated in the field group. It is no longer available for use in any schema. |
+
+>[!NOTE]
+>
+>This behavior is consistent across both record-based and event-based schemas.
 
 ### Add custom fields to field groups {#add-fields}
 

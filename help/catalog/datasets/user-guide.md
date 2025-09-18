@@ -231,6 +231,8 @@ Configure your preferred retention period in the data retention settings dialog.
 >[!NOTE] 
 > 
 >The minimum retention period for the data lake is 30 days. The minimum retention period for Profile Service is one day.
+>
+>Additionally, you can only update the retention period for Profile Service once every 30 days.
 
 To support transparency and monitoring, timestamps are provided for the **last** and **next** data retention job executions. The timestamps help you understand when the last data cleanup occurred and when the next one is scheduled.
 
