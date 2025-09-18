@@ -35,14 +35,16 @@ A consolidated edge system lets you manage advertising, marketing, and personali
 
 ## Libraries replaced by the Web SDK {#sdks}
 
-The Web SDK is an open-source library built from scratch to integrate functionalities of existing libraries. It addresses issues with tag firing order, version inconsistencies, and dependency management, offering a way to implement many Experience Cloud products. The Web SDK replaces:
+The Web SDK is an open-source library built from scratch to integrate functionalities of existing libraries. It addresses issues with tag firing order, version inconsistencies, and dependency management, offering a way to implement many Experience Cloud products. The Web SDK replaces data collection for the following services:
 
-* `Visitor.js`
-* `AppMeasurement.js`
-* `AT.js`
-* `DIL.js`
+* Adobe Experience Platform Visitor ID service (`Visitor.js`)
+* Adobe Analytics (`AppMeasurement.js`)
+* Adobe Target (`AT.js`)
+* Adobe Audience Manager (`DIL.js`)
+* Adobe Media Analytics
+* Adobe Advertising
 
-It also introduces a new endpoint that streamlines HTTP requests to Adobe solutions. Previously, multiple calls were needed for `Visitor.js`, `AT.js`, `DIL.js`, and `AppMeasurement.js`. Now, a single call can retrieve an ID, fetch a [!DNL Target] experience, send data to [!DNL Audience Manager], and pass data to Adobe Experience Platform.
+It also introduces a new endpoint that streamlines HTTP requests to Adobe solutions. Previously, multiple calls were needed for each data collection library. Now, a single call can retrieve an ID, fetch a [!DNL Target] experience, send data to [!DNL Audience Manager], and pass data to Adobe Experience Platform.
 
 ## Migrating from existing libraries to Web SDK {#migrating-to-web-sdk}
 
