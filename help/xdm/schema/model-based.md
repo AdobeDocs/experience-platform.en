@@ -145,6 +145,7 @@ Madeline commented: "model-based schema to standard might only be offered for b2
   "xdm:destinationProperty": "accountId"
 }
 ```
+
 <!-- Q) 
 Should these be `@type: "xdm:descriptorRelationship",` This could be a copy-pasting error? -->
 
