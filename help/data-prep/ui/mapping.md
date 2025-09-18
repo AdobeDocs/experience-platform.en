@@ -146,6 +146,10 @@ When finished, select **[!UICONTROL Upload file]** and select the updated csv fi
 
 With your mappings complete, you can now select **[!UICONTROL Finish]** and proceed to the next step to complete your dataflow.
 
+>[!TIP]
+>
+>After you finish creating your mappings, wait up to 10 minutes before starting data ingestion. This waiting period ensures that your new mappings are fully saved and available in the system.
+
 ![The mapping interface with a complete set of mappings.](../images/ui/mapping/completed_mappings.png)
 
 ## Next steps
