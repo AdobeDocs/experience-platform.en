@@ -124,9 +124,9 @@ To create a model-based schema, select **[!UICONTROL model-based]** when creatin
 
 For detailed steps, see:
 
-* [Relational schema overview](./schema/relational.md)
-* [UI tutorial](./ui/resources/schemas.md#relational-creation)
-* [API tutorial](./api/schemas.md#create-relational-schema)
+* [Relational schema overview](./schema/model-based.md)
+* [UI tutorial](./ui/resources/schemas.md#create-model-based-schema)
+* [API tutorial](./api/schemas.md#create-model-based-schema)
 * [Descriptor (identifier) documentation](./api/descriptors.md#relationship-descriptor)
 * [Enable change data capture](../sources/tutorials/api/change-data-capture.md)
 

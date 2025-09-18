@@ -199,9 +199,9 @@ After the request is submitted, a work order is created and appears on the [!UIC
 
 ![The [!UICONTROL Record] tab of the [!UICONTROL Data Lifecycle] workspace with the new request highlighted.](../images/ui/record-delete/request-log.png)
 
-## Deleting records from relational datasets {#relational-record-delete}
+## Deleting records from model-based datasets {#model-based-record-delete}
 
-If the dataset you are deleting from is a relational schema, review the following considerations to ensure records are removed correctly and not re-ingested due to mismatches between Experience Platform and your source system.
+If the dataset you are deleting from is a model-based schema, review the following considerations to ensure records are removed correctly and not re-ingested due to mismatches between Experience Platform and your source system.
 
 ### Record deletion behavior
 
@@ -218,13 +218,13 @@ To prevent re-ingestion, apply the same deletion approach in both your source sy
 
 ### Change data capture and control columns
 
-Relational schemas that use Sources with change data capture can use the `_change_request_type` control column when distinguishing deletes from upserts. During ingestion, records flagged with `d` are deleted from the dataset, while those flagged with `u` or without the column are treated as upserts. The `_change_request_type` column is read at ingestion time only and is not stored in the target schema or mapped to XDM fields.
+Model-based schemas that use Sources with change data capture can use the `_change_request_type` control column when distinguishing deletes from upserts. During ingestion, records flagged with `d` are deleted from the dataset, while those flagged with `u` or without the column are treated as upserts. The `_change_request_type` column is read at ingestion time only and is not stored in the target schema or mapped to XDM fields.
 
 >[!NOTE]
 >
 >Deleting records through the Data Lifecycle UI does not affect the source system. To remove data from both locations, delete it in both Experience Platform and the source.
 
-### Best practices for relational record deletion
+### Best practices for model-based record deletion
 
 To avoid unintentional re-ingestion and maintain data consistency across systems, follow these best practices:
 
@@ -232,8 +232,8 @@ To avoid unintentional re-ingestion and maintain data consistency across systems
 * **Monitor change data capture flows**: After deleting records in Platform, monitor dataflows and confirm that the source system either removes the same records or includes them with `_change_request_type = 'd'`.
 * **Clean up the source**: For sources using full refresh ingestion or those that do not support deletes through change data capture, delete records directly from the source system to avoid re-ingestion.
 
-For more details on schema requirements, see [relational schema descriptor requirements](../../xdm/schema/relational.md#relational-schemas).  
-To learn how change data capture works with sources, see [Enable change data capture in sources](../../sources/tutorials/api/change-data-capture.md#using-change-data-capture-with-relational-schemas).
+For more details on schema requirements, see [model-based schema descriptor requirements](../../xdm/schema/model-based.md#model-based-schemas).  
+To learn how change data capture works with sources, see [Enable change data capture in sources](../../sources/tutorials/api/change-data-capture.md#using-change-data-capture-with-model-based-schemas).
 
 ## Next steps
 

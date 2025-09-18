@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;relational schema; schema;Schema;xdm;experience data model;
+keywords: Experience Platform;home;popular topics;model-based schema; schema;Schema;xdm;experience data model;
 solution: Experience Platform
-title: Relational schemas
-description: Learn about relational schemas in Adobe Experience Platform, including features, required fields, relationships, ingestion methods, and limitations.
+title: Model-based schemas
+description: Learn about model-based schemas in Adobe Experience Platform, including features, required fields, relationships, ingestion methods, and limitations.
 ---
-# Relational schemas
+# Model-based schemas
 
-Relational schemas provide a flexible, governed modeling pattern for representing structured data in the Adobe Experience Platform data lake. They support enforced primary keys, schema-level relationships, and fine-grained control over records—all without relying on union schemas or full relational database systems.
+Model-based schemas provide a flexible, governed modeling pattern for representing structured data in the Adobe Experience Platform data lake. They support enforced primary keys, schema-level relationships, and fine-grained control over records—all without relying on union schemas or full relational database systems.
 
-Use relational schemas to:
+Use model-based schemas to:
 
 * Ensure data integrity with enforced single-field or composite primary keys.
 * Enable precise change tracking using versioning for inserts, updates, and deletes.
@@ -16,25 +16,25 @@ Use relational schemas to:
 * Avoid duplicating schema structures across applications by supporting multiple data models.
 * Bypass union schema constraints to streamline onboarding, reduce schema bloat, and simplify evolution.
 
-Use this modeling approach for use cases such as change data capture, referential joins across datasets, and multi-entity campaign orchestration. With relational schemas you maintain explicit control over schema evolution, field structure, and data governance.
+Use this modeling approach for use cases such as change data capture, referential joins across datasets, and multi-entity campaign orchestration. With model-based schemas you maintain explicit control over schema evolution, field structure, and data governance.
 
 >[!AVAILABILITY]
 >
->Currently, relational schemas are **record-based only** and available based on your license or feature enablement. This includes Adobe Journey Optimizer **Campaign Orchestration**, **Data Distiller**, and **Real-Time CDP B2B** editions.
+>Currently, model-based schemas are **record-based only** and available based on your license or feature enablement. This includes Adobe Journey Optimizer **Campaign Orchestration**, **Data Distiller**, and **Real-Time CDP B2B** editions.
 
-## How relational schemas differ from standard XDM schemas
+## How model-based schemas differ from standard XDM schemas
 
 Standard XDM schemas in Experience Platform follow one of three data behaviors: Record, Time-series, or Ad-hoc. For definitions and details, see [XDM data behaviors](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home#data-behaviors).
 
 In the traditional model, record and time-series schemas participate in [union schemas](../api/unions.md) (also see the [union schema UI guide](../../profile/ui/union-schema.md)). These schemas automatically evolve as shared [field groups](./composition.md#field-group) are updated and custom fields must be nested under a tenant namespace. While powerful, this model can slow onboarding, produce overly complex schemas with unused fields, and require additional data mapping or transformation. These factors increase the learning curve and ongoing maintenance effort.
 
-Relational schemas remove union schema dependencies, eliminate auto-evolution from shared field groups, and allow direct field definitions without tenant namespace restrictions. You gain explicit control over primary keys, relationships, and schema evolution, making it easier to model data to fit your needs.
+Model-based schemas remove union schema dependencies, eliminate auto-evolution from shared field groups, and allow direct field definitions without tenant namespace restrictions. You gain explicit control over primary keys, relationships, and schema evolution, making it easier to model data to fit your needs.
 
-## Features of relational schemas
+## Features of model-based schemas
 
 Use the following capabilities to model structured data in the data lake while maintaining governance, integrity, and interoperability.
 
-* **Schema behavior support**: Currently, relational schemas support:
+* **Schema behavior support**: Currently, model-based schemas support:
   * **Record behavior**: Captures the current state of an entity, such as a customer, account, or campaign.
 
   >[!NOTE]
@@ -43,9 +43,9 @@ Use the following capabilities to model structured data in the data lake while m
 
 * **Primary key enforcement**: Define a primary key to uniquely identify each record and prevent duplicates during ingestion.
 * **Version control**: Use a **version identifier** (a descriptor) to ensure updates are applied in the correct order, even if records arrive out of sequence.
-* **Relationship mapping**: Create one-to-one or many-to-one relationships between relational schemas or between relational and standard schemas. Relationship definitions are stored as descriptors to enable efficient joins.
-* **Simplified evolution**: Relational schemas do not participate in union views and are not updated when shared field groups change, preventing unexpected downstream changes.
-* **Flexible field definition**: Add fields directly without tenant-id namespacing. Relational schemas do not support XDM field groups.
+* **Relationship mapping**: Create one-to-one or many-to-one relationships between model-based schemas or between model-based and standard schemas. Relationship definitions are stored as descriptors to enable efficient joins.
+* **Simplified evolution**: Model-based schemas do not participate in union views and are not updated when shared field groups change, preventing unexpected downstream changes.
+* **Flexible field definition**: Add fields directly without tenant-id namespacing. Model-based schemas do not support XDM field groups.
 * **No dependency on union schemas**: Improves query performance and reduces the operational overhead of managing global schema views.
 * **Schema behavior support**: Configure with:
   * **Record behavior**: Captures the current state of an entity, such as a customer, account, or campaign.
@@ -54,7 +54,7 @@ Use the following capabilities to model structured data in the data lake while m
 
 ## Required fields
 
-Relational schemas require certain descriptors—metadata in the schema definition that controls key behaviors and constraints. Add the following descriptors as part of your schema definition.
+Model-based schemas require certain descriptors—metadata in the schema definition that controls key behaviors and constraints. Add the following descriptors as part of your schema definition.
 
 ### Primary key descriptor
 
@@ -119,7 +119,7 @@ For instructions on creating descriptors in the Schema Editor, see [Create descr
 
 ## Relationship support {#relationship-support}
 
-Relational schemas support relationship descriptors, which define connections between datasets across schemas. These relationships improve referential integrity, enable reusable modeling patterns, and support connected queries across applications. This is done without embedding foreign keys directly in data rows.
+Model-based schemas support relationship descriptors, which define connections between datasets across schemas. These relationships improve referential integrity, enable reusable modeling patterns, and support connected queries across applications. This is done without embedding foreign keys directly in data rows.
 
 Define relationship descriptors at the schema level so they can be resolved dynamically at query time. Cardinality values (such as 1:1 or many-to-one) provide guidance but do not enforce data constraints during ingestion. This design supports flexible schema relationships and makes it easier to manage how data connects across datasets.
 
@@ -130,10 +130,10 @@ Before you add relationship descriptors, determine the appropriate type and targ
 
 >[!NOTE]
 >
->You can define relationships between two relational schemas or between a relational schema and a standard schema. Relationships to ad-hoc schemas are not supported.
+>You can define relationships between two model-based schemas or between a model-based schema and a standard schema. Relationships to ad-hoc schemas are not supported.
 
 <!-- Q) 
-Madeline commented: "relational to standard might only be offered for b2b customers; that's how it will be on the UI" - is that still accurate? -->
+Madeline commented: "model-based schema to standard might only be offered for b2b customers; that's how it will be on the UI" - is that still accurate? -->
 
 **Example: One-to-one relationship**
 
@@ -171,7 +171,7 @@ For a list of relationship descriptor types and syntax, see the [descriptors API
 
 >[!NOTE]
 >
-> Relational schemas can link to standard schemas, but cannot link to ad-hoc schemas.
+> Model-based schemas can link to standard schemas, but cannot link to ad-hoc schemas.
 
 ## Ingestion methods {#ingestion-methods}
 
@@ -213,7 +213,7 @@ The following list of descriptors indicate their relevance to hygiene operations
 
 <!-- Q)
 Madeline commented:
-"We added the ability for there to be non-primary Identity descriptors for relational schemas and I heard that was to serve the needs of hygiene. Not sure of the details, apologies" - can anyone clarify? -->
+"We added the ability for there to be non-primary Identity descriptors for model-based schemas and I heard that was to serve the needs of hygiene. Not sure of the details, apologies" - can anyone clarify? -->
 
 >[!NOTE]
 >
@@ -223,9 +223,9 @@ To delete records associated with an identity, create a record delete work order
 
 ## Limitations and considerations {#limitations}
 
-Review the following limitations before using relational schemas:
+Review the following limitations before using model-based schemas:
 
-* Relational schemas do not participate in union schemas.
+* Model-based schemas do not participate in union schemas.
 * Schema evolution is manual; they do not auto-update when field groups change.
 
 >[!IMPORTANT]

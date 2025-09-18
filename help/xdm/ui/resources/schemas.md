@@ -21,35 +21,31 @@ This guide requires a working understanding of XDM System. Refer to the [XDM ove
 
 ## Create a new schema {#create}
 
-In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in the top-right corner. The 'Select schema type' dropdown menu appears with options for [!UICONTROL Standard] or [!UICONTROL Relational] schemas. 
+In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in the top-right corner. The 'Select schema type' dropdown menu appears with options for [!UICONTROL Standard] or [!UICONTROL Model-based] schemas.
 
 ![The Schemas workspace with [!UICONTROL Create Schema] highlighted and the 'Select schema type' dropdown displayed](../../images/ui/resources/schemas/create-schema.png).
 
-## Create a relational schema {#create-relational-schema}
+## Create a model-based schema {#create-model-based-schema}
 
-Select [!UICONTROL Relational] to define structured, relational-style schemas with fine-grained control over records. Relational schemas support primary key enforcement, record-level versioning, and schema-level relationships through primary and foreign keys. They are also optimized for incremental ingestion using change data capture, and support multiple data models used in Campaign Orchestration, Data Distiller, and B2B implementations.
+Select [!UICONTROL Model-based] to define structured, model-based-style schemas with fine-grained control over records. Model-based schemas support primary key enforcement, record-level versioning, and schema-level relationships through primary and foreign keys. They are also optimized for incremental ingestion using change data capture, and support multiple data models used in Campaign Orchestration, Data Distiller, and B2B implementations.
 
->[!NOTE]
->
->Relational schemas currently support record-based schemas only. Time-series schemas are not yet supported for relational modeling in either the UI or API.
+To learn more, see the [Model-based schema overview](../../schema/model-based.md).
 
-To learn more, see the [Relational schema overview](../../schema/relational.md).
-
-The **[!UICONTROL Create a relational schema]** dialog appears. You can choose either **[!UICONTROL Create manually]** or [**[!UICONTROL Upload DDL file]**](#upload-ddl-file) to define the schema structure.
+The **[!UICONTROL Create a model-based schema]** dialog appears. You can choose either **[!UICONTROL Create manually]** or [**[!UICONTROL Upload DDL file]**](#upload-ddl-file) to define the schema structure.
 
 ### Create manually {#create-manually}
 
-In the **[!UICONTROL Create a relational schema]** dialog, select **[!UICONTROL Create manually]**, then select **[!UICONTROL Next]**.  
+In the **[!UICONTROL Create a model-based schema]** dialog, select **[!UICONTROL Create manually]**, then select **[!UICONTROL Next]**.  
    
-![The Create a relational schema dialog with Create manually selected and Next highlighted.](../../images/ui/resources/schemas/relational-dialog.png)
+![The Create a model-based schema dialog with Create manually selected and Next highlighted.](../../images/ui/resources/schemas/relational-dialog.png)
 
-The **[!UICONTROL Relational schema details]** page appears. Enter a schema display name and an optional description, then select **[!UICONTROL Finish]** to create the schema.  
+The **[!UICONTROL Model-based schema details]** page appears. Enter a schema display name and an optional description, then select **[!UICONTROL Finish]** to create the schema.  
    
-![The Relational schema details view with [!UICONTROL Schema display name], [!UICONTROL Description], and [!UICONTROL Finish] highlighted.](../../images/ui/resources/schemas/relational-details.png)
+![The Model-based schema details view with [!UICONTROL Schema display name], [!UICONTROL Description], and [!UICONTROL Finish] highlighted.](../../images/ui/resources/schemas/relational-details.png)
 
-The Schema Editor opens with an empty canvas for defining the schema structure. The [!UICONTROL Type] field in the [!UICONTROL  Schema properties] sidebar indicates this is a [!UICONTROL Relational] schema.
+The Schema Editor opens with an empty canvas for defining the schema structure. The [!UICONTROL Type] field in the [!UICONTROL  Schema properties] sidebar indicates this is a [!UICONTROL Model-based] schema.
 
-![The Schema Editor canvas showing an empty relational schema structure with Relational type highlighted.](../../images/ui/resources/schemas/relational-empty-canvas.png)
+![The Schema Editor canvas showing an empty model-based schema structure with Model-based type highlighted.](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
 #### Add a version identifier field {#add-version-identifier}
 
@@ -63,7 +59,7 @@ In the right rail, enable the **[!UICONTROL Version Identifier]** checkbox, then
 
 >[!IMPORTANT]
 >
->A relational schema must include a version identifier field to support record-level updates and change data capture ingestion.
+>A model-based schema must include a version identifier field to support record-level updates and change data capture ingestion.
 
 To define relationships, select **[!UICONTROL Add Relationship]** in the Schema Editor to create schema-level primary/foreign key relationships. See the tutorial on [adding schema-level relationships](../../tutorials/relationship-ui.md#relationship-field) for more information.
 
@@ -71,13 +67,13 @@ Next, proceed to [define primary keys](../fields/identity.md#define-a-identity-f
 
 >[!NOTE]
 >
->Relational schemas currently support **record behavior** only. Time-series schemas are not supported in the UI.
+>Model-based schemas currently support **record behavior** only. Time-series schemas are not supported in the UI.
 
 ### Upload a DDL file {#upload-ddl-file}
 
-Use this workflow to define the schema by uploading a DDL file. In the **[!UICONTROL Create a relational schema]** dialog, select **[!UICONTROL Upload DDL file]**, then either drag a local DDL file from your system or select **[!UICONTROL Choose files]**. Experience Platform validates the schema and displays a green checkmark if the file upload is successful. Select **[!UICONTROL Next]** to confirm the upload.  
+Use this workflow to define the schema by uploading a DDL file. In the **[!UICONTROL Create a model-based schema]** dialog, select **[!UICONTROL Upload DDL file]**, then either drag a local DDL file from your system or select **[!UICONTROL Choose files]**. Experience Platform validates the schema and displays a green checkmark if the file upload is successful. Select **[!UICONTROL Next]** to confirm the upload.  
 
-![The Create a relational schema dialog with [!UICONTROL Upload DDL file] selected and [!UICONTROL Next] highlighted.](../../images/ui/resources/schemas/upload-ddl-file.png)
+![The Create a model-based schema dialog with [!UICONTROL Upload DDL file] selected and [!UICONTROL Next] highlighted.](../../images/ui/resources/schemas/upload-ddl-file.png)
 
 The [!UICONTROL Select entities and fields to import] dialog appears, allowing you to preview the schema. Review the schema structure, and use the radio buttons and checkboxes to ensure that each entity has a primary key and version identifier specified.
 
@@ -95,7 +91,7 @@ Although required during ingestion, control columns like `_change_request_type` 
 
 <!-- NOTE: Below is an AJO screenshot. I did not get access in time. I will confirm and update. -->
 
-![The Relational schema review view with imported fields shown and [!UICONTROL Finish] highlighted.](../../images/ui/resources/schemas/entities-and-files-to-inport.png)
+![The Model-based schema review view with imported fields shown and [!UICONTROL Finish] highlighted.](../../images/ui/resources/schemas/entities-and-files-to-inport.png)
     
 The schema opens in the Schema Editor, where you can adjust the structure before saving.
 

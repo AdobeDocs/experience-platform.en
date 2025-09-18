@@ -15,7 +15,7 @@ role: Developer
   * [Best practices for data modeling](schema/best-practices.md)
   * [Sensitive and personal data](./schema/sensitive-and-personal-data.md)
   * [XDM field type constraints](schema/field-constraints.md)
-  * [Relational schema](./schema/relational.md)
+  * [Model-based schema](./schema/model-based.md)
   * [Namespacing in XDM](./schema/namespaces.md)
   * Industry data models {#industries}
     * [Overview](./schema/industries/overview.md)
